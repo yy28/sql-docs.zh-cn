@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - earlier versions [SQL Server], import and export data formats
 - -V switch
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93407bb4fbca1091fcab4f5e8ce23f6e07c9da09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 15fad4d86582f2e5b98f24be1ac7e8b807202013
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191847"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过将 **bcp** 与 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开关一起使用，从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 中导入本机和字符格式数据。 **-V** 开关将使 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中的数据类型，并且数据文件格式与早期版本中的格式相同。  
@@ -56,15 +55,15 @@ ms.locfileid: "36124778"
  <sup>1</sup> UDT 表示用户定义的类型。  
   
 ## <a name="exporting-using-v-80"></a>使用 –V 80 进行导出  
- 当你通过大容量导出数据使用 **– V80**切换， `nvarchar(max)`， `varchar(max)`， `varbinary(max)`，XML，以及在纯模式下的 UDT 数据都存储利用 4 字节前缀，如`text`， `image`，和`ntext`数据，而不是 8 字节前缀，这是默认设置[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更高版本。  
+ 当你使用大容量导出数据 **– V80**切换，请`nvarchar(max)`， `varchar(max)`， `varbinary(max)`，XML，并使用 4 个字节的前缀，如存储在纯模式下的 UDT 数据`text`， `image`，和`ntext`数据，而不是使用 8 个字节的前缀，这是默认设置[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更高版本。  
   
 ## <a name="copying-date-values"></a>复制日期值  
  **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
   
- **Bcp**命令将导出字符格式数据文件使用 ODBC 默认格式为`datetime`和`smalldatetime`值。 例如，包含日期 `12 Aug 1998` 的 `datetime` 列将以字符串 `1998-08-12 00:00:00.000` 的形式大容量复制到数据文件中。  
+ **Bcp**命令将使用 ODBC 默认格式的字符格式数据文件导出`datetime`和`smalldatetime`值。 例如，包含日期 `12 Aug 1998` 的 `datetime` 列将以字符串 `1998-08-12 00:00:00.000` 的形式大容量复制到数据文件中。  
   
 > [!IMPORTANT]  
->  导入到的数据时`smalldatetime`字段使用**bcp**，请确保秒数值为 00.000，否则操作将失败。 `smalldatetime`数据类型仅支持最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
+>  导入到的数据时`smalldatetime`字段使用**bcp**，请确保秒数值为 00.000，否则操作将失败。 `smalldatetime`数据类型仅包含最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **使用数据格式进行大容量导入或大容量导出**  

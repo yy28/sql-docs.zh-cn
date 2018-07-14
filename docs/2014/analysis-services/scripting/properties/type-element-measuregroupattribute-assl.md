@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (MeasureGroupAttribute) (ASSL) |Microsoft 文档
+title: Type 元素 (MeasureGroupAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254849"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Type 元素 (MeasureGroupAttribute) (ASSL)
-  包含的一种[MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)元素。  
+  包含的类型[MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,12 +69,12 @@ ms.locfileid: "36027755"
 |*正则*|表示常规特性。|  
 |*粒度*|表示粒度属性。|  
   
- 对应于的允许值为枚举`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>。  
+ 与允许的值相对应的枚举`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>。  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
- [属性元素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Attributes 元素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [RegularMeasureGroupDimension 数据类型&#40;ASSL&#41;](../data-type/dimension-data-type-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   

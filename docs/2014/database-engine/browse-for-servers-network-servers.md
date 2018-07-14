@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.browseservers.network.f1
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db0e235abb91181ac2090000b9d307181f720768
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: af846a1348d67acbb1b1d5776a357baaf99bf07e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176494"
 ---
 # <a name="browse-for-servers-network-servers"></a>查找服务器（网络服务器）
   如果要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件但不知道 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的确切名称，请在“服务器名称”框中单击“浏览更多”，以打开“查找服务器”对话框。  

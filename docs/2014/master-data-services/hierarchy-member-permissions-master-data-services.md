@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac17b8e72209a25c1e8e213d775012e800ca35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 762006e2e5e6292fc17519894d74e6ca8f250472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239097"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
   层次结构成员权限是可选的，仅当您希望某个用户对特定成员具有受限的访问权限时才应使用。 如果您未在 **“层次结构成员”** 选项卡上分配权限，则用户的权限仅基于在 **“模型”** 选项卡上分配的权限。  
@@ -34,13 +34,13 @@ ms.locfileid: "36026361"
 > [!NOTE]  
 >  如果向层次结构中的节点分配权限，则处于同一级别或更高级别的其他节点中的所有成员都将被隐式拒绝。  
   
- 在 **“资源管理器”** 中，将成员权限应用到显示成员的任何位置。 例如，一个具有成员**只读**权限是在其所属任何实体、 层次结构和集合以只读的。  
+ 在 **“资源管理器”** 中，将成员权限应用到显示成员的任何位置。 例如，使用成员**只读**权限是在其所属任何实体、 层次结构和集合以只读的。  
   
  层次结构权限应用于您向其分配权限的模型版本，并应用于版本的任何将来副本。 它们不应用于比您向其分配权限的版本更早的版本。  
   
 |权限|Description|  
 |----------------|-----------------|  
-|**只读**|显示成员，但是用户不能更改它们。 用户也无法在成员所属的任何显式层次结构或集合中移动成员。<br /><br /> 注意： 如果将分配**只读**权限**根**下的成员**根**是只读的; 但是，在显式层次结构和集合中，用户可以移动到成员**根**和可以添加新成员**根**。|  
+|**只读**|显示成员，但是用户不能更改它们。 用户也无法在成员所属的任何显式层次结构或集合中移动成员。<br /><br /> 注意： 如果将分配**只读**权**根**下的成员**根**是只读的; 但是，在显式层次结构和集合中，用户可以移动到成员**根**，并可以添加到新成员**根**。|  
 |**Update**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
 |**拒绝**|不显示成员。|  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36026361"
 ### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>成员属于多个层次结构时  
  两个或多个层次结构可以包含同一成员。  
   
--   如果给一个层次结构节点分配**更新**分配权限，另一个**只读**，则节点中的成员将**只读**。  
+-   如果给一个层次结构节点分配**更新**分配权限，另一个**只读**，则在节点中的成员**只读**。  
   
--   如果给一个层次结构节点分配**更新**或**只读**分配权限，另一个节点**拒绝**，则不会显示节点中的成员。  
+-   如果给一个层次结构节点分配**更新**或**只读**分配权限，另一个节点**拒绝**，则不显示节点中的成员。  
   
 ## <a name="see-also"></a>请参阅  
  [分配层次结构成员权限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

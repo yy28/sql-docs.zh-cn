@@ -1,5 +1,5 @@
 ---
-title: 类型元素 （操作） (ASSL) |Microsoft 文档
+title: 键入元素 (Action) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249077"
 ---
 # <a name="type-element-action-assl"></a>Type 元素 (Action) (ASSL)
-  包含的一种[操作](../objects/action-element-assl.md)元素。  
+  包含的类型[操作](../objects/action-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36026623"
 |*Url*|在 Internet 浏览器中显示可变页。|  
 |*Html*|在 Internet 浏览器中执行 HTML 脚本。|  
 |*Statement*|执行 OLE DB 命令。|  
-|*钻取*|检索钻取的行集。<br /><br /> 此值等同于*行集*和标识钻取操作。 它仅可以在操作上使用其[TargetType](targettype-element-assl.md)值设置为*单元格*。|  
+|*钻取*|检索钻取的行集。<br /><br /> 此值等同于*行集*，可标识钻取操作。 它只能是在操作上使用它的[TargetType](targettype-element-assl.md)值设置为*单元格*。|  
 |*数据集*|检索数据集。|  
 |*Rowset*|检索行集。|  
 |*命令行*|在命令提示符处执行命令。|  
 |*专有*|使用与此表中前面列出的接口不同的一个接口执行操作。|  
-|*报告*|在 Internet 浏览器中显示可变页。<br /><br /> 此值等同于*Url*和标识报表操作。|  
+|*报告*|在 Internet 浏览器中显示可变页。<br /><br /> 此值等同于*Url*和标识报告操作。|  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>请参阅  
  [DrillThroughAction 数据类型&#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

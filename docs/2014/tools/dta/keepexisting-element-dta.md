@@ -1,5 +1,5 @@
 ---
-title: KeepExisting 元素 (DTA) |Microsoft 文档
+title: KeepExisting 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - KeepExisting element
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a74552aa4cf5b18273c42250f85bc48a794e1731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 62f81fd7ebdd4cee35c09b685273bba2d14d135b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269873"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 元素 (DTA)
   指定数据库引擎优化顾问在生成建议时必须保留的物理设计结构（索引、索引视图或分区）。  
@@ -45,7 +45,7 @@ ms.locfileid: "36028479"
 |**数据类型和长度**|`string`，服务器强制执行的长度限制。|  
 |**允许的值**|**NONE**<br /> 无现有结构。<br /><br /> **ALL**<br /> 所有现有结构。<br /><br /> **ALIGNED**<br /> 所有分区对齐结构。<br /><br /> **CL_IDX**<br /> 表中的所有聚集索引。<br /><br /> **IDX**<br /> 表中的所有聚集索引和非聚集索引。<br /><br /> 只能将这些值中的一个用于此元素。|  
 |**默认值**|无。|  
-|**出现次数**|可选。 只能使用一次每个`TuningOptions`元素。|  
+|**出现次数**|可选。 可以使用仅一次为每个`TuningOptions`元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

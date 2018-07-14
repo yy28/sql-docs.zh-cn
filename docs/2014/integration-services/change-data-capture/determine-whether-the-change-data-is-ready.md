@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0fab127f224ba313e37e0bde49a0677514bb203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63014b261a38078a209fc6fb08585b7aa1b7182b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233863"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  
@@ -203,7 +203,7 @@ ms.locfileid: "36029077"
         > [!NOTE]  
         >  `Thread.Sleep` 方法要求指定参数时以毫秒为单位。  
   
-7.  离开代码它将返回的默认行`DtsExecResult.Success`从执行脚本。  
+7.  保留默认行代码来返回`DtsExecResult.Success`从执行脚本。  
   
 8.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "36029077"
   
 6.  在 **“脚本任务编辑器”** 的 **“脚本”** 页上，单击 **“编辑脚本”** 以打开脚本开发环境。  
   
-7.  在 Main 过程中，输入代码来记录错误，通过调用`Dts.Log`方法，或通过调用的方法之一来引发事件`Dts.Events`接口。 通过返回 `Dts.TaskResult = Dts.Results.Failure`向包发出错误通知。  
+7.  在 Main 过程中，输入代码通过调用记录的错误`Dts.Log`方法，或通过调用的方法之一引发一个事件`Dts.Events`接口。 通过返回 `Dts.TaskResult = Dts.Results.Failure`向包发出错误通知。  
   
      下面的示例显示如何将消息写入日志。 有关详细信息，请参阅 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)、 [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md)和 [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
   

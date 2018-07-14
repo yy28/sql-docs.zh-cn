@@ -1,5 +1,5 @@
 ---
-title: 报表管理器的 F1 帮助 |Microsoft 文档
+title: 报表管理器的 F1 帮助 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: da311acc4787c077fd4ad33637b46507a2979f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208437"
 ---
 # <a name="report-manager-f1-help"></a>报表管理器的 F1 帮助
   下列主题提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器的页级帮助。 该应用程序中的每一页都有一个对应的主题。 并非所有页面都可用。 安全设置确定了您可以访问的页面。 若要从报表管理器中访问这些主题，请在主工具栏上单击 **“帮助”** 。  
@@ -52,9 +52,9 @@ ms.locfileid: "36028286"
   
 -   [常规属性页 （报表）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
--   [常规属性页 （资源）](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
+-   [属性常规页 （资源）](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
   
--   [常规属性页 （共享的数据源）](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
+-   [属性常规页 （共享的数据源）](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
   
 -   [“模型项安全性”页](../../2014/reporting-services/model-item-security-page-report-manager.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36028286"
   
 -   [新计划 / 编辑计划页](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
--   [新订阅 / 编辑订阅页](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
+-   [新的订阅 / 编辑订阅页](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
 -   [新建系统角色分配 / 编辑系统角色分配页](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
@@ -88,11 +88,11 @@ ms.locfileid: "36028286"
   
 -   [“安全性”页（站点设置）](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
--   [安全属性页 （项目）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+-   [安全属性页 （项）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
 -   [“计划”页](../../2014/reporting-services/schedules-page-report-manager.md)  
   
--   [站点设置页面](../../2014/reporting-services/site-settings-page-report-manager.md)  
+-   [站点设置页](../../2014/reporting-services/site-settings-page-report-manager.md)  
   
 -   [“快照选项”属性页](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36028286"
   
 -   [视图页 （报表）](../../2014/reporting-services/view-page-reports-report-manager.md)  
   
--   [（资源） 中的视图页](../../2014/reporting-services/view-page-resources-report-manager.md)  
+-   [视图页 （资源）](../../2014/reporting-services/view-page-resources-report-manager.md)  
   
  有关报表管理器和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的详细信息，请参阅 MSDN 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  
   

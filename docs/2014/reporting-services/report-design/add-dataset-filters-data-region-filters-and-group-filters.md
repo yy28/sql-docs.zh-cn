@@ -1,5 +1,5 @@
 ---
-title: 添加数据集筛选器、 数据区域筛选器和组筛选器 （报表生成器和 SSRS） |Microsoft 文档
+title: 添加数据集筛选器、 数据区域筛选器和组筛选器 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c92a62b97f4f0af7985afbc20c5dd1e9c6a85ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7f133be198e7a141d13f0fded3ec17388308d44c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200807"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）
   在报表中，筛选器是创建的数据集、数据区域或数据区域组的一部分，用于限制报表中使用的数据。 如果无法更改数据集查询（例如，如果您使用的是共享数据集），则可使用筛选器帮助您控制报表数据。  
@@ -65,7 +65,7 @@ ms.locfileid: "36028948"
  以下部分介绍筛选器公式的每个部分。  
   
 ### <a name="expression"></a>表达式  
- 当运行时报表处理器计算筛选器公式时，表达式和值的数据类型必须相同。 为 **“表达式”** 所选的字段的数据类型由从数据源检索数据时所用的数据处理扩展插件或数据访问接口确定。 你输入的表达式的数据类型`Value`由[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认值。 所选数据类型由报表定义支持的数据类型确定。 来自数据库的值可能由数据访问接口转换为 CLR 类型。  
+ 当运行时报表处理器计算筛选器公式时，表达式和值的数据类型必须相同。 为 **“表达式”** 所选的字段的数据类型由从数据源检索数据时所用的数据处理扩展插件或数据访问接口确定。 您输入的表达式的数据类型`Value`由[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认值。 所选数据类型由报表定义支持的数据类型确定。 来自数据库的值可能由数据访问接口转换为 CLR 类型。  
   
 ### <a name="data-type"></a>数据类型  
  为使报表处理器能比较两个值，值的数据类型必须相同。 下表列出了 CLR 数据类型和报表定义数据类型之间的映射。 从数据源中检索的数据可能转换为与作为报表数据时不同的数据类型。  

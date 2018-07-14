@@ -1,5 +1,5 @@
 ---
-title: 发现方法 (XMLA) |Microsoft 文档
+title: Discover 方法 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
 caps.latest.revision: 36
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ead875bbe88ea71c8741450f8a3127efcf4b313d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196017"
 ---
 # <a name="discover-method-xmla"></a>Discover 方法 (XMLA)
-  从实例中检索信息，例如的可用数据库或针对特定对象的详细信息列表[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用 `Discover` 方法检索到的数据取决于传递给该方法的参数的值。  
+  实例中检索信息，如可用数据库或针对特定对象的详细信息的列表[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用 `Discover` 方法检索到的数据取决于传递给该方法的参数的值。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   

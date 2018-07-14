@@ -1,5 +1,5 @@
 ---
-title: 功能规则 （升级） |Microsoft 文档
+title: 功能规则 （升级） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb47e8f74b54daef890940587f8b0544a1795361
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c4a14e6c82ac731bed6fe5097a27d9be01fc04f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257793"
 ---
 # <a name="feature-rules-upgrade"></a>功能规则（升级）
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在安装程序操作完成前，安装程序将验证您的计算机配置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间，系统会扫描将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机，并检查是否有妨碍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功安装的任何情况。 在安装程序启动升级向导之前，系统会检索每一项的状态。 然后，将检索结果与所需条件进行比较并提供如何排除妨碍性问题的指导。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将安装操作完成前验证您的计算机配置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间，系统会扫描将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机，并检查是否有妨碍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功安装的任何情况。 在安装程序启动升级向导之前，系统会检索每一项的状态。 然后，将检索结果与所需条件进行比较并提供如何排除妨碍性问题的指导。  
   
  系统配置检查将会生成一个报告，该报告包含有关每个执行规则的简短说明以及执行状态。 系统配置检查报告位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\。  
   

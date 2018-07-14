@@ -1,5 +1,5 @@
 ---
-title: 脚本转换编辑器 （输入的列页） |Microsoft 文档
+title: 脚本转换编辑器 （输入的列页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.inputcolumn.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 456f1abba1045da01c162dfb23738bcb989a9341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a08f02fec89079e50842de83ec79061e31d83f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256763"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>脚本转换编辑器（“输入列”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“输入列”** 页设置输入列的属性。  

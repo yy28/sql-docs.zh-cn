@@ -1,5 +1,5 @@
 ---
-title: 支持的数据源 (SSAS 表格) |Microsoft 文档
+title: 支持的数据源 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 360a0d7d556589947d312deab1f2ff485afb85d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185294"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>支持的数据源（SSAS 表格）
   本主题介绍可用于表格模型的数据源的类型。  
@@ -39,7 +39,7 @@ ms.locfileid: "36028658"
 |-|-|-|-|  
 |数据源|版本|文件类型|提供程序<sup>1</sup>|  
 |Access 数据库|Microsoft Access 2003、2007、2010。|.accdb 或 .mdb|ACE 14 OLE DB 访问接口|  
-|SQL Server 关系数据库|Microsoft SQL Server2005、 2008、 2008 R2;SQL Server 2012，Microsoft SQL Azure 数据库<sup>2</sup>|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 10.0 Client OLE DB 提供程序<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
+|SQL Server 关系数据库|Microsoft SQL Server2005，2008、 2008 R2;SQL Server 2012 中，Microsoft SQL Azure 数据库<sup>2</sup>|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 10.0 Client OLE DB 提供程序<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
 |SQL Server 并行数据仓库 (PDW) <sup>3</sup>|2008 R2|（不适用）|OLE DB provider for SQL Server PDW|  
 |Oracle 关系数据库|Oracle 9i、10g、11g。|（不适用）|Oracle OLE DB 访问接口<br /><br /> 用于 Oracle 客户端的 .NET Framework 数据访问接口<br /><br /> 用于 SQL Server 的 .NET Framework 数据访问接口<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 关系数据库|Teradata V2R6、V12|（不适用）|TDOLEDB OLE DB 访问接口<br /><br /> Teradata 的 .NET 数据访问接口|  
@@ -54,13 +54,13 @@ ms.locfileid: "36028658"
 |数据馈送<br /><br /> （用于从 Reporting Services 报表、Atom 服务文档、Microsoft Azure 市场 DataMarket 和单个数据馈送导入数据）|Atom 1.0 格式<br /><br /> 作为 Windows Communication Foundation (WCF) Data Service（以前称作 ADO.NET Data Services）公开的任何数据库或文档。|服务文档的可定义一个或多个馈送的 .atomsvc<br /><br /> Atom Web 馈送文档的 .atom|Microsoft 数据馈送提供程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework 数据馈送数据提供程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office 数据库连接文件||.odc||  
   
- <sup>1</sup>可以还使用 ODBC 的 OLE DB 访问接口。  
+ <sup>1</sup>可以还使用用于 ODBC 的 OLE DB 访问接口。  
   
- <sup>2</sup>有关 SQL Azure 的详细信息，请参阅网站[SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)。  
+ <sup>2</sup>有关 SQL Azure 的详细信息，请参阅 web 站点[SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)。  
   
- <sup>3</sup>有关 SQL Server PDW 的详细信息，请参阅网站[SQL Server 2008 R2 并行数据仓库](http://go.microsoft.com/fwlink/?LinkId=150895)。  
+ <sup>3</sup>有关 SQL Server PDW 的详细信息，请参阅 web 站点[SQL Server 2008 R2 并行数据仓库](http://go.microsoft.com/fwlink/?LinkId=150895)。  
   
- <sup>4</sup>在某些情况下，使用 MSDAORA OLE DB 提供程序可能导致连接错误，尤其是对于 Oracle 的较新版本。 如果您遇到任何错误，我们建议您使用为 Oracle 列出的其他访问接口之一。  
+ <sup>4</sup>在某些情况下，使用 MSDAORA OLE DB 提供程序可能导致连接错误，特别是对于 Oracle 的较新版本。 如果您遇到任何错误，我们建议您使用为 Oracle 列出的其他访问接口之一。  
   
 ##  <a name="bkmk_unsupported_ds"></a> 不支持的源  
  目前不支持以下数据源：  
@@ -77,7 +77,7 @@ ms.locfileid: "36028658"
   
 3.  不同数据源中包含类似数据的列是在模型设计器中创建关系的基础。 在使用异类数据源时，应选择包含这样的列的表：这些列可以映射到其他数据源中包含相同或类似数据的表。  
   
-4.  OLE DB 访问接口有时可为大型数据提供更快的性能。 在为同一数据源选择不同访问接口时，应首先尝试 OLE DB 访问接口。  
+4.  {0}OLE DB 访问接口有时可为大型数据提供更快的性能。{0} 在为同一数据源选择不同访问接口时，应首先尝试 OLE DB 访问接口。  
   
 ## <a name="see-also"></a>请参阅  
  [数据源&#40;SSAS 表格&#41;](../data-sources-ssas-tabular.md)   

@@ -1,5 +1,5 @@
 ---
-title: 通用属性 |Microsoft 文档
+title: 通用属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf48911196d3bb96fa54a6d912fbf5a5646516f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169316"
 ---
 # <a name="common-properties"></a>通用属性
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
@@ -113,7 +113,7 @@ ms.locfileid: "36028425"
 |Description|String|输入的说明。|  
 |ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
-|HasSideEffects|Boolean|指示它未附加到下游组件和时，是否可以从数据流的执行计划中删除该组件`RunInOptimizedMode`是`true`。|  
+|HasSideEffects|Boolean|指示当未附加到下游组件和时，是否可以从数据流的执行计划中删除该组件`RunInOptimizedMode`是`true`。|  
 |ID|Integer|用于唯一标识输入的值。|  
 |IdentificationString|String|用于标识输入的字符串。|  
 |IsSorted|Boolean|指示输入中的数据是否已排序。|  
@@ -162,12 +162,12 @@ ms.locfileid: "36028425"
 |ID|Integer|用于唯一标识输出的值。|  
 |IdentificationString|String|用于标识输出的字符串。|  
 |IsErrorOut|Boolean|指示输出是否为错误输出。|  
-|IsSorted|Boolean|指示输出是否已排序。 默认值是 `False`。<br /><br /> **\*\* 重要\* \*** 的值设置`IsSorted`属性`True`数据不排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsSorted|Boolean|指示输出是否已排序。 默认值是 `False`。<br /><br /> **\*\* 重要\* \*** 的值设置`IsSorted`属性设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |“属性”|String|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
   
-###  <a name="outputcolumns"></a> 输出列属性  
+###  <a name="outputcolumns"></a> 输出列的属性  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型中，输出包含输出列集合。 数据流中的组件的输出列实现了 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 接口。  
   
  下表描述了数据流中的组件的输出列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  

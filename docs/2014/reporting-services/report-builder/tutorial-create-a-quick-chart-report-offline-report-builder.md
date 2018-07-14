@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216807"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
   在本教程中，将使用向导创建饼图，然后将对其稍作修改以了解都能执行哪些操作。 您可以通过两种不同的方式学习本教程。 两种方法具有相同的结果，都将得到与下图其中之一类似的饼图：  
   
- !["我第一个饼图"中运行查看](../media/rs-my1stpierunview.gif""我第一个饼图"在运行中查看"）  
+ ![查看"我第一个饼图"运行中](../media/rs-my1stpierunview.gif""my First Pie Chart"运行中查看"）  
   
 ## <a name="prerequisites"></a>必要條件  
- 无论您是使用 XML 数据还是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询，都需要有权访问 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 报表生成器。 可以运行独立版本，也可以运行 ClickOnce 版本（可从报表管理器或 SharePoint 站点获取）。 仅第一步，如何打开报表生成器的 ClickOnce 版本。 有关详细信息，请参阅[安装、 卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)。  
+ 无论您是使用 XML 数据还是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询，都需要有权访问 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 报表生成器。 可以运行独立版本，也可以运行 ClickOnce 版本（可从报表管理器或 SharePoint 站点获取）。 仅第一步，如何打开报表生成器的 ClickOnce 版本不同的。 有关详细信息，请参阅[安装、 卸载、 和报表生成器支持](../install-uninstall-and-report-builder-support.md)。  
   
 ##  <a name="TwoWays"></a> 用于完成本教程的两种方法  
   
@@ -45,18 +45,18 @@ ms.locfileid: "36027884"
  [使用 XML 数据创建饼图](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>使用包含本教程数据的 Transact-SQL 查询  
- 可以复制本主题中包含数据的查询，并将其粘贴到向导中。 你将需要的实例的名称[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和凭据不足以对任何数据库的只读访问权限。 本教程中的数据集查询使用文字数据，但必须由 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例处理查询以返回报表数据集所必需的元数据。  
+ 可以复制本主题中包含数据的查询，并将其粘贴到向导中。 你将需要的实例的名称[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和足以对任何数据库的只读访问权限的凭据。 本教程中的数据集查询使用文字数据，但必须由 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例处理查询以返回报表数据集所必需的元数据。  
   
  使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询的优势在于，其他所有报表生成器教程均使用相同的方法，这样，在您学习其他教程时，您已经提前知道了该做什么。  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]查询要求几个其他先决条件。 有关详细信息，请参阅[教程先决条件&#40;报表生成器&#41;](../report-builder-tutorials.md)。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]查询要求其他几个先决条件。 有关详细信息，请参阅[教程先决条件&#40;报表生成器&#41;](../report-builder-tutorials.md)。  
   
  [使用包含数据的 Transact-SQL 查询创建饼图](#CreatePieQueryData)  
   
 ## <a name="also-in-this-article"></a>此外会在这篇文章  
  [在运行向导后](#AfterWizard)  
   
- [后续步骤](#WhatsNext)  
+ [什么是下一步](#WhatsNext)  
   
 ##  <a name="CreatePieChartXML"></a> 使用 XML 数据创建饼图  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36027884"
      此时将显示 **“入门”** 对话框。  
   
     > [!NOTE]  
-    >  如果**入门**未显示对话框中，从**报表生成器**菜单上，单击**新建**。  
+    >  如果**Getting Started**对话框不会出现，从**报表生成器**按钮，再单击**新建**。  
   
-2.  在左窗格中，验证**报表**选择。  
+2.  在左窗格中，确认**报表**处于选中状态。  
   
 3.  在右窗格中，单击 **“图表向导”**，然后单击 **“创建”**。  
   
@@ -81,13 +81,13 @@ ms.locfileid: "36027884"
   
 6.  可以将数据源命名为任何名称。 在 **“名称”** 框中，键入 **MyPieChart**。  
   
-7.  在**选择连接类型**框中，单击**XML。**  
+7.  在中**选择连接类型**框中，单击**XML。**  
   
-8.  单击“凭据”选项卡，选择“使用当前 Windows 用户。**可能需要 Kerberos 委派**，然后单击**确定**。  
+8.  单击“凭据”选项卡，选择“使用当前 Windows 用户。**可能需要 Kerberos 委托**，然后单击**确定**。  
   
 9. 在 **“选择数据源的连接”** 页中，单击 **MyPieChart**，然后单击 **“下一步”**。  
   
-10. 将以下文本复制并将其粘贴在中心的大型框**设计查询**页。  
+10. 复制以下文本并将其粘贴在中心位置的大型框**设计查询**页。  
   
     ```  
     <Query>  
@@ -126,7 +126,7 @@ ms.locfileid: "36027884"
   
 15. 将“FullName”字段从“可用字段”框拖到“类别”框（或双击它，它将转到“类别”框），然后单击“下一步”。  
   
-16. 在**选择样式**页上，**海洋**默认处于选中状态。 单击其他样式查看其外观。  
+16. 在中**选择一种样式**页上，**海洋**默认处于选中状态。 单击其他样式查看其外观。  
   
 17. 单击 **“完成”**。  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36027884"
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> 创建与饼图[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询  
+##  <a name="CreatePieQueryData"></a> 创建具有的饼图[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>使用包含数据的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询创建饼图  
   
 1.  单击 **“开始”**，依次指向 **“程序”**、 **Microsoft SQL Server 2012 Report Builder**，再单击 **“报表生成器”**。  
   
-2.  在**新报表或数据集**对话框框中，确认**报表**的左窗格中选择。  
+2.  在中**新报表或数据集**对话框框中，确保**报表**在左窗格中选择。  
   
 3.  在右窗格中，单击 **“图表向导”**，然后单击 **“创建”**。  
   
@@ -200,22 +200,22 @@ ms.locfileid: "36027884"
   
 ##### <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>在饼图上显示百分比值  
   
-1.  在饼图上右键单击并选择**显示数据标签**。 数据标签应显示在饼图上的每个切片上。  
+1.  右键单击饼图并选择**显示数据标签**。 数据标签应显示在饼图上的每个切片上。  
   
 2.  右键单击标签并选择**序列标签属性**。 此时将显示 **“序列标签属性”** 对话框。  
   
-3.  类型`#PERCENT{P0}`为**标记数据**选项。  
+3.  类型`#PERCENT{P0}`有关**标签数据**选项。  
   
-     `{P0}`为你提供没有小数位的百分比。 如果你只需键入`#PERCENT`，编号将具有两位小数。 `#PERCENT` 是为您; 执行计算或函数的关键字还有许多其他。  
+     `{P0}`提供没有小数位的百分比。 如果只是键入`#PERCENT`，则数字将有两个小数位。 `#PERCENT` 是执行计算或函数的; 一个关键字还有许多其他。  
   
  有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> 下一步是什么？  
- 既然你已经在报表生成器中创建第一个报表，你已准备就绪尝试其他教程，若要开始从你自己的数据创建报表。 若要运行报表生成器，你需要权限与访问数据源，例如数据库、*连接字符串*，这使你实际连接到数据源。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
+ 现在，已在报表生成器中创建了第一个报表，你就可以尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行报表生成器，您需要权限以访问数据源，例如数据库、*连接字符串*，它实际上使你连接到数据源。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
   
- 若要通过其他教程，你需要的实例的名称[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和凭据不足以对任何数据库的只读访问权限。 系统管理员也可以为您设置该权限。  
+ 若要完成其他教程，你需要的实例的名称[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和足以对任何数据库的只读访问权限的凭据。 系统管理员也可以为您设置该权限。  
   
  最后，若要将报表保存到报表服务器或与报表服务器集成的 SharePoint 站点，需要具有 URL 和相应权限。 可以直接从您的计算机运行您创建的任何报表，但如果从报表服务器或 SharePoint 站点运行报表，则报表会有更多功能。 您需要有一定权限才能运行您的报表或报表服务器或 SharePoint 站点上发布的其他报表。 请与系统管理员联系以获取访问权限。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72d4217370ab913eb094af946fc5870412ea2023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f4591615a01d43d0fe2aa6f734f854a24119187d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181174"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>创建新的数据库关系图 (Visual Database Tools)
   您可以使用服务器资源管理器创建新的数据库关系图。 数据库关系图以图形方式显示数据库的结构。 使用数据库关系图可以创建和修改表、列、关系和键。 此外，还可以修改索引和约束。  
@@ -42,7 +42,7 @@ ms.locfileid: "36028704"
  您可以继续添加或删除表，修改现有表或更改表关系，直到新的数据库关系图完成为止。  
   
 ## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [了解数据库关系图所有权 (Visual Database Tools)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

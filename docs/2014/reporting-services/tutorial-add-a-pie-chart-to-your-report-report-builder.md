@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236237"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
-  饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成了一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。  
+  饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。  
   
  如果饼图上有太多数据点，这些数据点就可能挤在一起，这会降低图表的可读性。 在此情况下，应考虑使用折线图。 仅在已经将数据聚合到少量数据点之后，才能考虑使用饼图。  
   
@@ -30,18 +30,18 @@ ms.locfileid: "36028069"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将学习如何执行以下操作：  
   
-1.  [从图表向导创建饼图](#Chart)  
+1.  [使用图表向导创建饼图](#Chart)  
   
 2.  [选择图表类型](#ChartType)  
   
-3.  [在每个切片中显示百分比](#Percentages)  
+3.  [每个切片中显示百分比](#Percentages)  
   
-4.  [将小切片组合到一个切片](#CombineSlices)  
+4.  [将小切片合并为一个切片](#CombineSlices)  
   
-5.  [自定义绘制效果](#DrawingEffect)  
+5.  [自定义绘图效果](#DrawingEffect)  
   
 6.  [添加报表标题](#Title)  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36028069"
   
 3.  单击“下一步” 。  
   
-4.  上**选择样式**页上，在样式窗格中，选择一种样式。  
+4.  上**选择一种样式**页上，在样式窗格中，选择一种样式。  
   
      样式指定字形、颜色集和边框样式。 选择样式时，“预览”窗格将显示具有该样式的图表的示例。  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36028069"
   
 2.  右键单击饼图，然后单击“显示数据标签”。 数据标签会显示在图表上。  
   
-3.  右击标签，并依次**序列标签属性**。  
+3.  右击标签，然后依次**序列标签属性**。  
   
-4.  在标签的数据，从下拉列表框中，选择 **#PERCENT**。  
+4.  在标签数据，从下拉列表框中，选择 **#PERCENT**。  
   
      若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”对话框中单击“是”。  
   
-5.  （可选）若要指定多少小数放置标签显示，请键入`#PERCENT{Pn}`其中*n*是要显示的小数数字。 例如，若要显示没有小数位，键入`#PERCENT{P0}`。  
+5.  （可选）若要指定标签显示的小数位数，请键入`#PERCENT{Pn}`其中*n*是要显示的小数位数数字。 例如，若要不显示小数位数，请键入`#PERCENT{P0}`。  
   
     > [!NOTE]  
     >  设置百分比格式时，“序列标签属性”对话框中的“数字格式”不起作用。 它将标签的格式设置为百分比，但不会计算每一切片占饼图的百分比。  
@@ -192,7 +192,7 @@ ms.locfileid: "36028069"
 5.  设置**PieDrawingStyle**到**SoftEdge**。  
   
     > [!NOTE]  
-    >  绘图效果和三维效果是相互排斥的选项。 如果图表具有三维效果应用， **PieDrawingStyle**在属性窗格上不可用。  
+    >  绘图效果和三维效果是相互排斥的选项。 如果图表应用了三维效果， **PieDrawingStyle**属性窗格上不可用。  
   
 6.  单击 **“运行”** 以预览报表。  
   
@@ -212,9 +212,9 @@ ms.locfileid: "36028069"
   
      **As a Percentage of Total Sales**  
   
-3.  选择**相机和摄录机销售**，然后单击**加粗**按钮从**字体**部分**主页**功能区选项卡。  
+3.  选择**Camera and Camcorder Sales**，然后单击**加粗**按钮**字体**一部分**主页**功能区选项卡。  
   
-4.  选择**作为百分比的总销售额**，然后在**字体**节**主页**选项卡上，将字体大小设置为**10**。  
+4.  选择**作为 a Percentage of Total Sales**，然后在**字体**部分**主页**选项卡上，将字号设置为**10**。  
   
 5.  （可选）您可能需要使“标题”文本框更高一些，以容纳两行文本。  
   

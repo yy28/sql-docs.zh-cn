@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_COMMAND_OBJECTS 行集 |Microsoft 文档
+title: DISCOVER_COMMAND_OBJECTS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,30 +14,30 @@ helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53fccdecc824bd123312a881c1ddcdbcae6060a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261193"
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 行集
   提供引用的命令使用的对象的资源使用情况和活动信息。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_COMMAND_OBJECTS`行集包含以下各列。  
+ `DISCOVER_COMMAND_OBJECTS`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |`SESSION_SPID`|`DBTYPE_I4`|是|会话 ID。|  
 |`SESSION_ID`|`DBTYPE_WSTR`|是|会话的唯一标识符，以 GUID 形式表示。|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||命令的序列号。|  
-|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|是|当前对象的父路径。|  
+|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|是|指向当前对象的父对象的路径。|  
 |`OBJECT_ID`|`DBTYPE_WSTR`|是|创建时定义的对象 ID。|  
 |`OBJECT_VERSION`|`DBTYPE_I4`||对象的元数据版本号；每次更改对象时，此编号随之发生变化。|  
 |`OBJECT_DATA_VERSION`|`DBTYPE_I4`||对象中数据的沿袭编号。 每次处理对象时，此编号随之递增。|  

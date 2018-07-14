@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
@@ -16,13 +16,13 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24be62a990b92b522d6bf4d0bb04873b743fa99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef7898589335192022fa83095f19a72ee4549798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253909"
 ---
 # <a name="preload-the-cache-report-manager"></a>预加载缓存（报表管理器）
   您可以通过为共享数据集创建缓存刷新计划，为共享数据集预加载缓存。  

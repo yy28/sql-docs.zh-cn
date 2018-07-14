@@ -1,5 +1,5 @@
 ---
-title: ReadSourceData 元素 (ASSL) |Microsoft 文档
+title: ReadSourceData 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ReadSourceData element
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dcbb6ce5b9cda3b17b69558cd60f6030f9e097b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e24d324a6f29b55cfb8bf0b55289e2139bfb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194187"
 ---
 # <a name="readsourcedata-element-assl"></a>ReadSourceData 元素 (ASSL)
-  确定如何唯一的名称中包含的层次结构生成[CubePermission](../objects/cubepermission-element-assl.md)。  
+  确定如何唯一名称中包含的层次结构生成[CubePermission](../objects/cubepermission-element-assl.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36124425"
 |*允许*|允许访问计算传递 0 上可用的数据。|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`ReadSourceData`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.CubePermission>。  
+ 父级对应的元素`ReadSourceData`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CubePermission>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

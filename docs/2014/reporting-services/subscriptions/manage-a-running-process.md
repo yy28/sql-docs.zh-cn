@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -30,13 +30,13 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1c1ff34dde99394f39a9636c6deac3d6c1fbc64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4571c7e76057339658220075276f7b5a791f4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187714"
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可监视报表服务器上正在运行的作业的状态。 报表服务器会定期扫描正在进行的作业，并将状态信息写入到报表服务器数据库或针对 SharePoint 模式的服务应用程序数据库中。 如果正在执行以下任意进程，则表明正在处理作业：对远程或本地数据库服务器的查询执行、报表处理以及报表呈现。  
@@ -57,7 +57,7 @@ ms.locfileid: "36123556"
   
 -   各用户拥有的标准订阅。  
   
- 取消作业时，取消的仅仅是运行在报表服务器上的进程。 由于报表服务器不管理其他计算机上发生的数据处理，因此必须手动取消其他系统上后来孤立的查询进程。 可以考虑指定查询超时值以自动关闭执行时间过长的查询。 有关详细信息，请参阅[为报表和共享数据集处理设置超时值 (SSRS)](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。 有关暂时暂停报表的详细信息，请参阅[Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)。  
+ 取消作业时，取消的仅仅是运行在报表服务器上的进程。 由于报表服务器不管理其他计算机上发生的数据处理，因此必须手动取消其他系统上后来孤立的查询进程。 可以考虑指定查询超时值以自动关闭执行时间过长的查询。 有关详细信息，请参阅[为报表和共享数据集处理设置超时值 (SSRS)](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。 有关临时暂停报表的详细信息，请参阅[暂停报表和订阅处理](disable-or-pause-report-and-subscription-processing.md)。  
   
 > [!NOTE]  
 >  在极少数情况下，可能需要重新启动服务器才能取消进程。 对于 SharePoint 模式，您可能需要重新启动承载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的应用程序池。 有关详细信息，请参阅 [启动和停止报表服务器服务](../report-server/start-and-stop-the-report-server-service.md)。  
@@ -79,7 +79,7 @@ ms.locfileid: "36123556"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>如何取消报表处理或订阅  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，连接到报表服务器。 有关说明，请参阅[连接到报表服务器在 Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，连接到报表服务器。 有关说明，请参阅[连接到 Management Studio 中的报表服务器](../tools/connect-to-a-report-server-in-management-studio.md)。  
   
 2.  打开 **“作业”** 文件夹。  
   
@@ -97,12 +97,12 @@ ms.locfileid: "36123556"
   
 5.  在报表管理器中，从报表的“订阅”选项卡或从“我的订阅”中删除数据驱动订阅。  
   
-6.  删除订阅，在 RSReportServer.config 文件中后, 找到`IsNotificationService`和将其设置为`True`。  
+6.  删除订阅，请在 RSReportServer.config 文件中后, 找到`IsNotificationService`并将其设置为`True`。  
   
 7.  保存该文件。  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>配置检索作业状态的频率设置  
- 正在运行的作业存储在报表服务器的临时数据库中。 您可以修改 RSReportServer.config 文件中的配置设置，以控制报表服务器扫描正在进行的作业的频率，以及正在运行的作业的状态在多长时间间隔后从“新”更改为“正在运行”。 `RunningRequestsDbCycle`设置指定报表服务器扫描正在运行的进程的频率。 默认情况下，每隔 60 秒记录一次状态信息。 `RunningRequestsAge`设置指定的间隔从该处的作业状态从新到正在运行。  
+ 正在运行的作业存储在报表服务器的临时数据库中。 您可以修改 RSReportServer.config 文件中的配置设置，以控制报表服务器扫描正在进行的作业的频率，以及正在运行的作业的状态在多长时间间隔后从“新”更改为“正在运行”。 `RunningRequestsDbCycle`设置指定报表服务器扫描正在运行的进程的频率。 默认情况下，每隔 60 秒记录一次状态信息。 `RunningRequestsAge`设置指定的时间间隔，作业的状态从新到正在运行。  
   
 ##  <a name="bkmk_sharepoint"></a> 查看和取消作业（SharePoint 模式）  
  使用 SharePoint 管理中心为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序完成 SharePoint 模式部署中作业的管理。  

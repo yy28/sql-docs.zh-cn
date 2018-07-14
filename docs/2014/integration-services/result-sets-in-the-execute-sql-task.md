@@ -1,5 +1,5 @@
 ---
-title: 中的结果集执行 SQL 任务 |Microsoft 文档
+title: 中的结果集执行 SQL 任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217557"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>执行 SQL 任务中的结果集
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中，结果集是否返回到执行 SQL 任务取决于该任务使用的 SQL 命令的类型。 例如，SELECT 语句通常返回结果集，而 INSERT 语句通常不返回结果集。  
@@ -59,20 +59,20 @@ ms.locfileid: "36028830"
   
  如果结果集类型为“完整结果集”  或 **XML**，则必须使用 0 作为结果集名称。  
   
- 当您将一个变量映射到结果集类型为“单行”  的结果集时，该变量的数据类型必须与该结果集包含的列的数据类型兼容。 例如，如果结果集包含 `String` 数据类型的列，则它不能映射到 numeric 数据类型的变量。 当你将设置**TypeConversionMode**属性`Allowed`，执行 SQL 任务将尝试将转换输出参数和查询结果的变量类型的数据的结果分配给。  
+ 当您将一个变量映射到结果集类型为“单行”  的结果集时，该变量的数据类型必须与该结果集包含的列的数据类型兼容。 例如，如果结果集包含 `String` 数据类型的列，则它不能映射到 numeric 数据类型的变量。 当您将设置**TypeConversionMode**属性设置为`Allowed`、 执行 SQL 任务将尝试将输出参数和查询结果的变量的类型的数据的结果分配给。  
   
- XML 结果集只能映射到数据类型为 `String` 或 `Object` 的变量。 如果该变量具有`String`执行 SQL 任务数据类型，返回一个字符串，并且 XML 源可以使用 XML 数据。 如果该变量具有`Object`数据类型，则执行 SQL 任务返回的文档对象模型 (DOM) 对象。  
+ XML 结果集只能映射到数据类型为 `String` 或 `Object` 的变量。 如果该变量`String`执行 SQL 任务数据类型，返回一个字符串，并且 XML 源可以使用 XML 数据。 如果该变量`Object`数据类型，执行 SQL 任务返回的文档对象模型 (DOM) 对象。  
   
- A**完整结果集**必须映射到的变量`Object`数据类型。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](http://go.microsoft.com/fwlink/?LinkId=157863)。  
+ 一个**完整结果集**必须映射到的变量`Object`数据类型。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](http://go.microsoft.com/fwlink/?LinkId=157863)。  
   
  下表总结了可以映射到结果集的变量数据类型。  
   
 |结果集类型|变量的数据类型|对象的类型|  
 |---------------------|---------------------------|--------------------|  
 |“单行”|与结果集中的类型列兼容的任意类型。|不适用|  
-|完整结果集|`Object`|如果任务使用本机连接管理器，包括 ADO、 OLE DB、 Excel 和 ODBC 连接管理器，返回的对象为 ADO `Recordset`。<br /><br /> 如果任务使用托管的连接管理器，如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器，则返回的对象是`System.Data.DataSet`。<br /><br /> 你可以使用脚本任务访问`System.Data.DataSet`对象，如下面的示例中所示。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|完整结果集|`Object`|如果任务使用本机连接管理器，包括 ADO、 OLE DB、 Excel 和 ODBC 连接管理器，返回的对象为 ADO `Recordset`。<br /><br /> 如果任务使用托管的连接管理器中，如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器，则返回的对象是`System.Data.DataSet`。<br /><br /> 可以使用脚本任务访问`System.Data.DataSet`对象，如以下示例所示。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|如果任务使用本机连接管理器，包括 ADO、 OLE DB、 Excel 和 ODBC 连接管理器，返回的对象是`MSXML6.IXMLDOMDocument`。<br /><br /> 如果任务使用托管的连接管理器，如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器中，返回的对象是`System.Xml.XmlDocument`。|  
+|XML|`Object`|如果任务使用本机连接管理器，包括 ADO、 OLE DB、 Excel 和 ODBC 连接管理器，返回的对象是`MSXML6.IXMLDOMDocument`。<br /><br /> 如果任务使用托管的连接管理器中，如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器，返回的对象是`System.Xml.XmlDocument`。|  
   
  您可在执行 SQL 任务作用域或包作用域内定义变量。 如果变量的作用域为包，则结果集可用于包中的其他任务和容器，并可用于执行包或执行 DTS 2000 包任务所运行的所有包。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36028830"
 ##  <a name="Configure_result_sets"></a> 中配置结果集执行 SQL 任务  
  有关可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置的结果集的属性的详细信息，请单击下列主题：  
   
--   [执行 SQL 任务编辑器&#40;结果设置页&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+-   [执行 SQL 任务编辑器&#40;结果集页&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   

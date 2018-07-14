@@ -1,5 +1,5 @@
 ---
-title: 交叉验证 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 交叉验证 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86d7c0aeec81133a2bfdc8e5d30bd962a5c7cce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236007"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉验证（Analysis Services – 数据挖掘）
   交叉验证是分析中的一个标准工具，同时也是一项重要的功能，有助于开发和优化数据挖掘模型。 在创建了一个挖掘结构及其关联的挖掘模型之后，可使用交叉验证来确定该模型的有效性。  交叉验证具有以下应用：  
@@ -86,7 +86,7 @@ ms.locfileid: "36027572"
 ### <a name="choosing-models-and-columns-to-validate"></a>选择要验证的模型和列  
  在使用数据挖掘设计器中的 **“交叉验证”** 选项卡时，必须首先从列表中选择可预测列。 通常，一个挖掘结构可以支持许多挖掘模型，但这些挖掘模型并不使用同一可预测列。 在运行交叉验证时，只有使用同一可预测列的那些模型可以包括在报表中。  
   
- 若要选择可预测属性，请单击 **“目标属性”** 并从列表中选择列。 如果目标属性是嵌套的列或嵌套表中的列，则必须键入使用格式嵌套列的名称\<嵌套表名 > （键）。\<嵌套列 >。 如果使用嵌套表中的唯一列是键列，则可以使用\<嵌套表名 > （键）。  
+ 若要选择可预测属性，请单击 **“目标属性”** 并从列表中选择列。 如果目标属性是嵌套的列或嵌套表中的列，则必须键入使用以下格式的嵌套列的名称\<嵌套表名称 > （键）。\<嵌套列 >。 如果使用嵌套表的唯一列是键列，则可以使用\<嵌套表名称 > （键）。  
   
  选择可预测属性后， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动测试使用同一可预测属性的所有模型。 如果目标属性包含离散值，则在选择可预测列后，您可以根据需要键入目标状态（如果有要预测的特定值）。  
   

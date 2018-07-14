@@ -1,5 +1,5 @@
 ---
-title: 配置 Windows 防火墙以允许 Analysis Services 访问 |Microsoft 文档
+title: 配置 Windows 防火墙以允许 Analysis Services 访问 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 076d8fdde6d26872ba1323b0091b4c5060a9dd46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187b3de9fe21bae7636939e6d222e99006cc3194
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282253"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>将 Windows 防火墙配置为允许 Analysis Services 访问
   使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 可在网络上使用的至关重要的第一步是确定您是否需要在防火墙中取消阻止端口。 大多数安装都要求您至少创建一个允许连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站防火墙规则。  
@@ -40,7 +40,7 @@ ms.locfileid: "36027810"
   
 -   对于运行在 Windows Azure 虚拟机上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，请使用其他说明来配置服务器访问。 请参阅 [Windows Azure 虚拟机中的 SQL Server 商业智能](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx)。  
   
- 尽管的默认实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]侦听 TCP 端口 2383年，你可以配置服务器以侦听不同的固定端口，连接到此格式中的服务器： \<servername >:\<端口号 >。  
+ 尽管的默认实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]侦听 TCP 端口 2383年，但你可以配置服务器以侦听其他固定端口，连接到此格式中的服务器：\<服务器名 >:\<端口号 >。  
   
  一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例只能使用一个 TCP 端口。 在具有多个网卡或多个 IP 地址的计算机上， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在一个 TCP 端口上侦听分配给或化名为该计算机的所有 IP 地址。 如果您有特定多端口要求，请考虑配置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以实现 HTTP 访问。 然后您可以在选择的任意端口上设置多个 HTTP 端点。 请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36027810"
   
 -   [Analysis Services 群集的端口配置](#bkmk_cluster)  
   
--   [针对 PowerPivot for SharePoint 的端口配置](#bkmk_powerpivot)  
+-   [Powerpivot for SharePoint 的端口配置](#bkmk_powerpivot)  
   
 -   [将固定端口用于 Analysis Services 的默认实例或命名实例](#bkmk_fixed)  
   
@@ -63,15 +63,15 @@ ms.locfileid: "36027810"
 ##  <a name="bkmk_checkport"></a> 检查 Analysis Services 的端口和防火墙设置。  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的 Microsoft Windows 操作系统上，Windows 防火墙默认处于打开状态并阻止远程连接。 必须手动在防火墙中开放某一端口，以便允许对 Analysis Services 的入站请求。 SQL Server 安装程序不自动为您执行此步骤。  
   
- 在 msmdsrv.ini file 文件以及 SQL Server Management Studio 的 Analysis Services 实例的“常规”属性页中，指定端口设置。 如果`Port`设置为正整数，该服务正在侦听固定端口上。 如果`Port`设置为 0，该服务正在侦听端口 2383，如果它是默认实例或动态分配的端口上如果它是命名的实例。  
+ 在 msmdsrv.ini file 文件以及 SQL Server Management Studio 的 Analysis Services 实例的“常规”属性页中，指定端口设置。 如果`Port`设置为一个正整数，该服务正在侦听固定端口。 如果`Port`设置为 0，该服务正在侦听端口 2383，如果它是默认实例或动态分配端口如果它是命名的实例。  
   
  动态端口分配仅由命名实例使用。 `MSOLAP$InstanceName` 服务确定在它启动时要使用的端口。 您可以通过执行以下操作确定某一命名实例正在使用的实际端口号：  
   
--   启动任务管理器，然后单击**服务**若要获取的 PID `MSOLAP$InstanceName`。  
+-   启动任务管理器，然后单击**Services**若要获取的 PID `MSOLAP$InstanceName`。  
   
 -   从命令行运行 `netstat –ao –p TCP`，以便查看该 PID 的 TCP 端口信息。  
   
--   验证端口通过使用 SQL Server Management Studio 并连接到 Analysis Services 服务器按以下格式： \<ip 地址 >:\<端口号 >。  
+-   通过使用 SQL Server Management Studio 验证该端口并连接到 Analysis Services 服务器按以下格式： \<ip 地址 >:\<端口号 >。  
   
  尽管应用程序可能在侦听某一特定端口，但如果防火墙正在阻止访问，则连接将不会成功。 为了实现与某一命名 Analysis Services 实例的连接，您必须取消阻止对 msmdsrv.exe 或者该实例在防火墙中所侦听的固定端口的访问。 本主题中的其余部分将说明如何取消阻止。  
   
@@ -95,15 +95,15 @@ ms.locfileid: "36027810"
   
 2.  右键单击“入站规则”，然后选择“新建规则”。  
   
-3.  在规则类型，单击`Port`，然后单击**下一步**。  
+3.  在规则类型中单击`Port`，然后单击**下一步**。  
   
-4.  在协议和端口，选择**TCP**然后键入`2383`中**特定本地端口**。  
+4.  在协议和端口，选择**TCP** ，然后键入`2383`中**特定本地端口**。  
   
 5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”**。  
   
 6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”**。  
   
-7.  在名称中，键入此规则的描述性名称 (例如， `SQL Server Analysis Services (tcp-in) 2383`)，然后单击**完成**。  
+7.  在名称中，键入此规则的说明性名称 (例如， `SQL Server Analysis Services (tcp-in) 2383`)，然后单击**完成**。  
   
 8.  若要确认远程连接已启用，请在另一台计算机上打开 SQL Server Management Studio 或 Excel，然后通过在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “服务器名称” **中指定服务器的网络名称来连接到**。  
   
@@ -125,9 +125,9 @@ ms.locfileid: "36027810"
   
  选择以下方法之一可以启用对 Analysis Services 的命名实例的远程访问：  
   
--   使用动态端口分配和 SQL Server Browser 服务。 在 Windows 防火墙中取消阻止 SQL Server Browser 服务使用的端口。 连接到此格式中的服务器： \<servername >\\< instancename\>。  
+-   使用动态端口分配和 SQL Server Browser 服务。 在 Windows 防火墙中取消阻止 SQL Server Browser 服务使用的端口。 连接到服务器按以下格式：\<服务器名称 >\\< 实例名\>。  
   
--   一起使用固定端口和 SQL Server Browser 服务。 此方法允许你连接使用此格式： \<servername >\\< instancename\>、 相同的动态端口分配方法，只不过在这种情况下，该服务器会侦听固定端口。 在此方案中，SQL Server Browser 服务提供对在固定端口上侦听的 Analysis Services 实例的名称解析。 若要使用此方法，请将服务器配置为侦听固定端口，取消阻止对该端口的访问，并且取消阻止对 SQL Server Browser 服务使用的端口的访问。  
+-   一起使用固定端口和 SQL Server Browser 服务。 此方法可让你连接使用此格式：\<服务器名称 >\\< 实例名\>，不同之处在于服务器侦听固定端口的这种情况下，动态端口分配方法相同。 在此方案中，SQL Server Browser 服务提供对在固定端口上侦听的 Analysis Services 实例的名称解析。 若要使用此方法，请将服务器配置为侦听固定端口，取消阻止对该端口的访问，并且取消阻止对 SQL Server Browser 服务使用的端口的访问。  
   
  SQL Server Browser 服务仅用于命名实例，不能用于默认实例。 只要您将任何 SQL Server 功能作为命名实例安装，就将自动安装和启用该服务。 如果您选择要求 SQL Server Browser 服务的方法，请确保该服务在您的服务器上保持启用和启动。  
   
@@ -148,17 +148,17 @@ ms.locfileid: "36027810"
   
 2.  若要取消阻止对 SQL Server Browser 服务的访问，请右键单击“入站规则”，然后选择“新建规则”。  
   
-3.  在规则类型，单击`Port`，然后单击**下一步**。  
+3.  在规则类型中单击`Port`，然后单击**下一步**。  
   
-4.  在协议和端口，选择**TCP**然后键入`2382`中**特定本地端口**。  
+4.  在协议和端口，选择**TCP** ，然后键入`2382`中**特定本地端口**。  
   
 5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”**。  
   
 6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”**。  
   
-7.  在名称中，键入此规则的描述性名称 (例如， `SQL Server Browser Service (tcp-in) 2382`)，然后单击**完成**。  
+7.  在名称中，键入此规则的说明性名称 (例如， `SQL Server Browser Service (tcp-in) 2382`)，然后单击**完成**。  
   
-8.  若要确认已启用远程连接，在另一台计算机上打开 SQL Server Management Studio 或 Excel 并连接到 Analysis Services 通过按以下格式指定服务器的网络名称和实例名称：\<服务器名 >\\< instancename\>。 例如，在具有 **Finance** 的命名实例的名为 **AW-SRV01** 的服务器上，服务器名称为 **AW-SRV01\Finance**。  
+8.  若要确认远程连接已启用，另一台计算机上打开 SQL Server Management Studio 或 Excel 并连接到 Analysis Services 通过按以下格式指定服务器的网络名称和实例名称：\<服务器名 >\\< 实例名\>。 例如，在具有 **Finance** 的命名实例的名为 **AW-SRV01** 的服务器上，服务器名称为 **AW-SRV01\Finance**。  
   
  **选项 2：将固定端口用于命名实例**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36027810"
   
 2.  若要取消阻止对 Analysis Services 的访问，请右键单击“入站规则”，然后选择“新建规则”。  
   
-3.  在规则类型，单击`Port`，然后单击**下一步**。  
+3.  在规则类型中单击`Port`，然后单击**下一步**。  
   
 4.  在“协议和端口”中，选择 **“TCP”** ，然后在 **“特定本地端口”** 中键入固定端口。  
   
@@ -180,9 +180,9 @@ ms.locfileid: "36027810"
   
 6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”**。  
   
-7.  在名称中，键入此规则的描述性名称 (例如， `SQL Server Analysis Services on port 54321`)，然后单击**完成**。  
+7.  在名称中，键入此规则的说明性名称 (例如， `SQL Server Analysis Services on port 54321`)，然后单击**完成**。  
   
-8.  若要验证是否已启用远程连接，在另一台计算机上打开 SQL Server Management Studio 或 Excel 并连接到 Analysis Services 通过按以下格式指定服务器和端口号的网络名称： \<servername >:\<端口号 >。  
+8.  若要确认远程连接已启用，另一台计算机上打开 SQL Server Management Studio 或 Excel，并通过按以下格式指定服务器和端口号的网络名称连接到 Analysis Services:\<服务器名 >:\<端口号 >。  
   
 #### <a name="netsh-advfirewall-syntax"></a>Netsh AdvFirewall 语法  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36027810"
   
  请注意，使用固定端口将通过要求您将端口号追加到服务器名称后，更改默认实例的连接语法。 例如，在连接到在 SQL Server Management Studio 中侦听端口 54321 的本地默认 Analysis Services 实例时，将要求您在 Management Studio 的“连接到服务器”对话框中键入 localhost:54321 作为服务器名称。  
   
- 如果你使用的命名的实例，可以将任何更改的固定的端口分配给如何指定服务器名称 (具体而言，你可以使用\<servername\instancename > 连接到命名实例侦听固定端口)。 这仅适用于 SQL Server Browser 服务正在运行并且您已取消阻止了该服务正在侦听的端口的情况。 SQL Server Browser 服务将提供重定向到基于的固定端口\<servername\instancename >。 只要您为 SQL Server Browser 服务以及侦听固定端口的 Analysis Services 的命名实例开放端口，SQL Server Browser 服务就会解析与命名实例的连接。  
+ 如果使用的命名的实例，可以将固定的端口，无需更改分配到指定服务器名称的方式 (具体而言，可以使用\<servername\instancename > 若要连接到侦听固定端口的命名实例)。 这仅适用于 SQL Server Browser 服务正在运行并且您已取消阻止了该服务正在侦听的端口的情况。 SQL Server Browser 服务将提供重定向到基于的固定端口\<servername\instancename >。 只要您为 SQL Server Browser 服务以及侦听固定端口的 Analysis Services 的命名实例开放端口，SQL Server Browser 服务就会解析与命名实例的连接。  
   
 1.  确定要使用的可用 TCP/IP 端口。  
   
@@ -215,12 +215,12 @@ ms.locfileid: "36027810"
   
 4.  配置 Windows 防火墙以便取消阻止您指定的 TCP 端口。 或者，如果您在将固定端口用于命名实例，则取消阻止您为该实例指定的 TCP 端口以及为 SQL Server Browser 服务指定的 TCP 端口 2382。  
   
-5.  通过先进行本地连接（在 Management Studio 中），然后从其他计算机上的客户端应用程序进行远程连接，进行验证。 若要使用 Management Studio，连接到 Analysis Services 默认实例通过按以下格式指定服务器名称： \<servername >:\<端口号 >。 对于命名实例，指定服务器名称，例如\<servername >\\< instancename\>。  
+5.  通过先进行本地连接（在 Management Studio 中），然后从其他计算机上的客户端应用程序进行远程连接，进行验证。 若要使用 Management Studio，连接到 Analysis Services 默认实例通过按以下格式指定服务器名称：\<服务器名 >:\<端口号 >。 对于命名实例，指定服务器名称，例如\<服务器名称 >\\< 实例名\>。  
   
 ##  <a name="bkmk_cluster"></a> Analysis Services 群集的端口配置  
  无论安装为默认实例还是命名实例， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 故障转移群集始终在 TCP 端口 2383 上进行侦听。 安装在 Windows 故障转移群集上时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不使用动态端口分配。 请务必在群集中运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的所有节点上开放 TCP 2383。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]群集的详细信息，请参阅 [如何安装群集 SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)。  
   
-##  <a name="bkmk_powerpivot"></a> 针对 PowerPivot for SharePoint 的端口配置  
+##  <a name="bkmk_powerpivot"></a> Powerpivot for SharePoint 的端口配置  
  根据您使用的 SharePoint 版本， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的服务器体系结构会有本质区别。  
   
  **SharePoint 2013**  

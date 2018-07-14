@@ -1,5 +1,5 @@
 ---
-title: 将属性绑定到名称列 |Microsoft 文档
+title: 将属性绑定到名称列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1503b9659e244033b1feb67e327030cd3bdd85aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b53f89aa74772efbd714ee7b23d31444535d485
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282033"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>将属性绑定到名称列
   此过程介绍如何使用维度设计器的 **“属性”** 窗格以及 **“对象绑定”** 对话框将属性手动绑定到名称列。  

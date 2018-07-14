@@ -1,5 +1,5 @@
 ---
-title: 工具和 Analysis Services 中使用的应用程序 |Microsoft 文档
+title: 工具和 Analysis Services 中使用的应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb258b1d1cc9466d1b1c88255e6edbbb854b5aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b91b8628fe9c12af7bb1c5ab74a079aa52401398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282043"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>在 Analysis Services 中使用的工具和应用程序
   找到您将需要用于生成 Analysis Services 模型以及用于在 Analysis Services 实例上管理关联数据库的工具和应用程序。  
@@ -30,9 +30,9 @@ ms.locfileid: "36027316"
 ### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>下载 SQL Server Data Tools for Business Intelligence (SSDT-BI)  
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI)（以前称为 Business Intelligence Development Studio (BIDS)）用于创建 Analysis Services 模型、Reporting Services 报表和 Integration Services 包。 您可以从以下位置下载 SSDT-BI：  
   
--   [下载 SSDT BI for Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [下载 SSDT-BI for Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [下载 SSDT BI for Visual Studio 2012](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [下载 SSDT-BI for Visual Studio 2012](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  如果计算机上装有旧版 SSDT-BI 或 BIDS，则新版与旧版并行安装。 在一个工作站上同时运行新版和旧版的设计工具是很常见的，这样可以修改与特定服务器版本关联的项目和解决方案。  
   

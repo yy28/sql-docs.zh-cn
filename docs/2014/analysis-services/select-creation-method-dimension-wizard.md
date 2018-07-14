@@ -1,5 +1,5 @@
 ---
-title: 选择创建方法 （维度向导） |Microsoft 文档
+title: 选择创建方法 （维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267153"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>选择创建方法（维度向导）
   可以使用 **“选择创建方法”** 页选择如何创建维度。  
@@ -36,7 +36,7 @@ ms.locfileid: "36028024"
   
  有关详细信息，请参阅 [使用现有表创建维度](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)。  
   
- **在数据源中生成时间表**  
+ **数据源中生成时间表**  
  在基础数据源中创建时间表，然后使用该表创建时间维度。 不存在这类表，并且不想使用脚本创建表时，可使用此选项。 新的时间表将包含日期范围数据、属性和在向导中指定的日历。  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "36028024"
   
  有关详细信息，请参阅 [通过生成时间表来创建时间维度](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)。  
   
- **在数据源中生成非时间表**  
+ **数据源中生成非时间表**  
  在没有基础关系数据源的情况下设计维度，然后为数据源生成必要的架构。 这种方法称为自上而下的建模。  
   
 > [!NOTE]  

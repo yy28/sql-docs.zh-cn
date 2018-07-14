@@ -1,5 +1,5 @@
 ---
-title: 关联模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 关联模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9ea8207778697b10b0be844dbb8ca5d1c8f72fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d65a79697d42d5d91168edfb211ecb57d1e3229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267596"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>关联模型的挖掘模型内容（Analysis Services – 数据挖掘）
   本主题讲述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅[挖掘模型内容 （Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "36027849"
 ## <a name="understanding-the-structure-of-an-association-model"></a>了解关联模型的结构  
  关联模型结构非常简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有项集和规则的平面列表。 项集和规则不是按树组织的，它们的顺序是项集在先、规则在后，如下面的关系图所示。  
   
- ![关联模型的模型内容的结构](../media/modelcontentstructure-assoc.gif "关联模型的模型内容的结构")  
+ ![关联模型的模型内容的结构](../media/modelcontentstructure-assoc.gif "的关联模型的模型内容结构")  
   
  每个项集均包含在其自己的节点中 (NODE_TYPE = 7)。 “节点  ”包含项集定义、含有此项集的事例的数目以及其他信息。  
   

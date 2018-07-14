@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193329"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
   不支持对内存优化表执行 ALTER 操作。 其中包括更改 bucket_count、添加或删除索引、添加或删除列等操作。 本主题指导如何更新内存优化表。  
@@ -73,7 +73,7 @@ ms.locfileid: "36029034"
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     如果没有足够的可用内存，`T_copy`可能是内存优化表，它使更快地复制的数据。<sup>2</sup>  
+     如果没有足够的可用内存`T_copy`可能是内存优化表，这会使数据复制更快。<sup>2</sup>  
   
 5.  删除引用原始表的架构绑定对象。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "36029034"
   
 10. 启动 `T` 上的工作负荷。  
   
- <sup>1</sup>请注意，`T_copy`保持不变到在此示例中的磁盘。 如果 `T` 的备份可用，`T_copy` 可以为临时表或非持久表。  
+ <sup>1</sup>请注意，`T_copy`持久保存到在此示例中的磁盘。 如果 `T` 的备份可用，`T_copy` 可以为临时表或非持久表。  
   
- <sup>2</sup>必须有足够的内存`T_copy`。 执行 `DROP TABLE` 后，不立即释放内存。 如果 `T_copy` 进行内存优化，需要有足够的内存用于新增的两个 `T` 副本。 如果 `T_copy` 是基于磁盘的表，仅需要有足够的内存用于新增的一个 `T` 副本，因为在删除旧版本的 `T` 后垃圾收集器需要同步。  
+ <sup>2</sup>必须有足够的内存用于`T_copy`。 执行 `DROP TABLE` 后，不立即释放内存。 如果 `T_copy` 进行内存优化，需要有足够的内存用于新增的两个 `T` 副本。 如果 `T_copy` 是基于磁盘的表，仅需要有足够的内存用于新增的一个 `T` 副本，因为在删除旧版本的 `T` 后垃圾收集器需要同步。  
   
 ## <a name="changing-schema-powershell"></a>更改架构 (PowerShell)  
  以下 PowerShell 脚本通过对表和相关权限编写脚本来为架构更改做准备和生成。  

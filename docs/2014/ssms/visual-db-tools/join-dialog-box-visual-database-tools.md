@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.ppg.joinline
 - vdtsql.chm:69638
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6adb9f0f9ee0d265124e0c3648279516018eb92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57490e0592f11e78ffddf44f0d3c3f60d90925a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238167"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>“联接”对话框 (Visual Database Tools)
   使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 **(…)**。  
@@ -41,7 +41,7 @@ ms.locfileid: "36027365"
 |**中的所有行\<table1 >**|指定即使右表中没有相应的匹配行，左表中的所有行也都显示在输出中。 右表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 LEFT OUTER JOIN。|  
 |**中的所有行\<table2 >**|指定即使左表中没有相应的匹配行，右表中的所有行也都显示在输出中。 左表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 RIGHT OUTER JOIN。|  
   
- 选择全部**行从\<table1 >** 和**中的所有行\<table2 >** 等效于指定的 SQL 语句中的 FULL OUTER JOIN。  
+ 同时选择**从行\<table1 >** 并**中的所有行\<table2 >** 等效于在 SQL 语句中指定 FULL OUTER JOIN。  
   
  当选择创建外部联接的选项时，联接线中的菱形图会随之改变，以指示联接是左外部联接、右外部联接还是完全外部联接。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36027365"
 >  文中的“左”和“右”并不一定与表在“关系图”窗格中的位置相对应。 “左”指的是其名称显示在 SQL 语句中 JOIN 关键字左侧的表，而“右”指的是其名称显示在 JOIN 关键字右侧的表。 在“关系图”窗格中移动表时不会更改表原有的“左”或“右”顺序。  
   
 ## <a name="see-also"></a>请参阅  
- [查询与联接&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用联接查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 报表服务器执行日志和 ExecutionLog3 视图 |Microsoft 文档
+title: 报表服务器执行日志和 ExecutionLog3 视图 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255689"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>报告服务器执行日志和 ExecutionLog3 视图
   报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|用于检索数据的毫秒数。|  
 |TimeProcessing|用于处理报表的毫秒数。|  
 |TimeRendering|用于呈现报表的毫秒数。|  
-|数据源|报表执行的源。 可能的值：<br /><br /> **实时**<br /><br /> **缓存**： 指示缓存的执行，例如，不实时执行查询的数据集。<br /><br /> **快照**<br /><br /> **历史记录**<br /><br /> **即席**： 指示动态生成的报表基于模型的钻取报表或在客户端利用用于处理和呈现的报表服务器上预览的报表生成器报表。<br /><br /> **会话**： 指示跟进请求已建立的会话中。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**： 指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
+|数据源|报表执行的源。 可能的值：<br /><br /> **实时**<br /><br /> **缓存**： 指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **历史记录**<br /><br /> **即席**： 指示动态生成的报表基于的模型的钻取报表或使用报表服务器进行处理和呈现在客户端上预览的报表生成器报表。<br /><br /> **会话**： 指示请求已建立的会话内的跟进。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**： 指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
 |“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
@@ -226,13 +226,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- 下面介绍一些你将在 AdditionalInfo 字段中看到的属性：  
+ 下面介绍的某些属性将在 AdditionalInfo 字段中看到：  
   
--   **ProcessingEngine**: 1 = SQL Server 2005 中，2 = 新的按需处理引擎。 如果您的大多数报表仍在显示值 1，则可以研究如何对它们进行重新设计，以便利用更新且效率更高的按需处理引擎。  
+-   **ProcessingEngine**: 1 = SQL Server 2005，2 = 新的按需处理引擎。 如果您的大多数报表仍在显示值 1，则可以研究如何对它们进行重新设计，以便利用更新且效率更高的按需处理引擎。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**： 执行所用的毫秒数的处理引擎中的扩展相关的操作。 值为 0 指示没有额外的时间用于进制运算，值为 0 还指示请求没有处于内存不足的状态。  
+-   **ScalabilityTime**： 执行所用的毫秒数在处理引擎中缩放相关的操作。 值为 0 指示没有额外的时间用于进制运算，值为 0 还指示请求没有处于内存不足的状态。  
   
     ```  
     <ScalabilityTime>  
@@ -240,7 +240,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**： 以千字节为单位，在特定请求过程中使用的每个组件的内存峰值的估计值。  
+-   **EstimatedMemoryUsageKB**: 峰值的内存量，以千字节为单位，在特定的请求消耗的每个组件的估计值。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -248,7 +248,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**： 的数据扩展插件或报表中使用的数据源的类型。 该数目是特定数据源出现的次数。  
+-   **DataExtension**： 数据扩展插件或数据源报表中使用的类型。 该数目是特定数据源出现的次数。  
   
     ```  
     <DataExtension>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**值处于毫秒。 此数据可用于诊断性能问题。 从外部 Web 服务器检索图像所需的时间可能使总体报表执行速度变慢。 中添加[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **ExternalImages**的值是以毫秒计。 此数据可用于诊断性能问题。 从外部 Web 服务器检索图像所需的时间可能使总体报表执行速度变慢。 在添加了[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
     ```  
     <ExternalImages>  
@@ -266,7 +266,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **连接**： 多调配的结构。 中添加[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **连接**： 多级别结构。 在添加了[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
     ```  
     <Connections>  
@@ -362,7 +362,7 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|查询返回的结果行数。|  
   
 ## <a name="see-also"></a>请参阅  
- [打开 SharePoint 跟踪日志的 Reporting Services 事件&#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [启用为 SharePoint 跟踪日志的 Reporting Services 事件&#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
  [错误和事件参考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 了解数据库架构 |Microsoft 文档
+title: 了解数据库架构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
 - database schema [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf611a2ae8e2c2275fc59d3abc124d8fa202d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282243"
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
   架构生成向导为基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的维度和度量值组的主题区域数据库生成一个非规范化的关系架构。 该向导为每个维度生成一个用于存储维度数据的关系表（该表称为维度表）；为每个度量值组生成一个用于存储事实数据的关系表（该表称为事实数据表）。 该向导在生成这些关系表时，会忽略链接维度、链接度量值组以及服务器时间维度。  
@@ -48,7 +48,7 @@ ms.locfileid: "36026881"
  对于每个维度，架构生成向导都会生成一个要包含在主题区域数据库中的维度表。 维度表的结构取决于在设计它所基于的维度时所做的选择。  
   
  “列”  
- 该向导将生成一列以在其的维度表所基于的维度，例如，对于绑定中的每个属性关联的绑定进行`KeyColumns`， `NameColumn`， `ValueColumn`， `CustomRollupColumn`， `CustomRollupPropertiesColumn`，和`UnaryOperatorColumn`的每个属性的属性。  
+ 该向导都会生成一列到维度的维度表所基于的例如，为绑定中的每个属性关联的绑定`KeyColumns`， `NameColumn`， `ValueColumn`， `CustomRollupColumn`， `CustomRollupPropertiesColumn`，和`UnaryOperatorColumn`每个属性的属性。  
   
  关系  
  向导将生成每个父属性的列与维度表的主键之间的关系。  
@@ -68,7 +68,7 @@ ms.locfileid: "36026881"
  对于多维数据集中的每个度量值组，架构生成向导都会生成一个要包含在主题区域数据库中的事实数据表。 事实数据表的结构取决于在设计它所基于的度量值组时所做的选择，以及在度量值组和任何包含的维度之间建立的关系。  
   
  “列”  
- 该向导将生成一列对应每个度量值，但使用的度量值除外`Count`聚合函数。 此类度量值在事实数据表中不需要对应的列。  
+ 该向导生成的每个度量值，除了使用的度量值的一列`Count`聚合函数。 此类度量值在事实数据表中不需要对应的列。  
   
  如果适用，向导还会为度量值组中每个常规维度关系的每个粒度属性列生成一列；为与维度（与该表基于的度量值组具有事实维度关系）的每个属性关联的绑定生成一列或多列。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36026881"
  向导会生成一个单独的表以保存度量值组中需要翻译列的任意属性的翻译值。 向导还会为每种所需的语言创建一个单独的列。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>数据类型转换和默认长度  
- 架构生成向导会忽略在所有情况下使用的列除外的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`数据类型。 `wchar`数据大小直接翻译为`nvarchar`数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
+ 架构生成向导会忽略在所有情况下使用的列以外的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`数据类型。 `wchar`数据大小直接翻译为`nvarchar`数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
   
  如果数据项（如属性的绑定）没有指定的长度，则针对该列使用下表中列出的默认长度。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 编程概念 |Microsoft 文档
+title: SQLXML 4.0 编程概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ab9bd2ff6cfddcf96e4844eb9ea14eea414b650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5d745284f575feb39f488f0667f5ab976144392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227067"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 编程概念
   SQLXML 3.0 作为 Web 版本提供，以提供附加客户端 XML 功能和现有功能的增强功能，例如带批注的 XSD 架构、XML 大容量加载、Web 服务 (SOAP) 支持和 updategram。  

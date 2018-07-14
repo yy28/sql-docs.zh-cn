@@ -1,5 +1,5 @@
 ---
-title: 同步订阅使用 Windows 同步管理器 （Windows 同步管理器） |Microsoft 文档
+title: 同步订阅使用 Windows 同步管理器 （Windows 同步管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
 - Windows Synchronization Manager
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a51020379a56f56465bb7b252a65de5323e39ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 774399103f4ea92e0415c5a5222c7a74644c9d8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276263"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅（Windows 同步管理器）
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
@@ -50,7 +50,7 @@ ms.locfileid: "36026101"
   
     -   单击 **“开始”**，指向 **“程序”** 或 **“所有程序”**，然后指向 **“附件”**，再单击 **“同步”**。  
   
-    -   单击 **“开始”**，再单击 **“运行”** 在**运行**对话框中，键入`mobsync.exe`中**打开**字段，然后再单击**确定**。  
+    -   单击 **“开始”**，再单击 **“运行”** 在中**运行**对话框中，键入`mobsync.exe`中**打开**字段，，然后单击**确定**。  
   
 2.  在 **“要同步的项”** 对话框中，选择要同步的订阅。 将在计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例下列出订阅。  
   

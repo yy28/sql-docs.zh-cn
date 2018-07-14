@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b67903b59934fb8d43d8dafe2bfc8392ab56462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e46bd0278b782c85189416b8d452b5148a3ed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187164"
 ---
 # <a name="execute-process-task"></a>执行进程任务
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
@@ -68,7 +68,7 @@ ms.locfileid: "36123455"
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
--   如果你使用 Microsoft Visual Basic 编写的应用程序，设置`My.Application.CommandLineArgs`属性。 下面的示例设置 `My.Application.CommandLineArgs` 属性以检索两个参数：  
+-   如果您使用 Microsoft Visual Basic 编写应用程序，请设置`My.Application.CommandLineArgs`属性。 下面的示例设置 `My.Application.CommandLineArgs` 属性以检索两个参数：  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  

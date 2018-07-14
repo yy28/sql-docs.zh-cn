@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286693"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
-  开头[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，报表部件可以发布到报表服务器和重新使用在其他报表和其他用户，如果他们具有合适权限。  
+  开头[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，报表部件可以发布到报表服务器和重复使用在其他报表中以及由其他用户，如果他们具有适当的权限。  
   
  报表部件可由多个用户重用，并且可以在多个报表中重用。 用户可以搜索服务器上的报表部件并将其添加到报表中。  用户还可以接收服务器上的报表部件更新通知，以及重新发布报表部件的新版本。 这些报表创作操作可能受 Reporting Services 安全权限的影响和控制。  本主题介绍报表部件在位于服务器上后的属性和行为。  
   
 ## <a name="managing-report-parts"></a>管理报表部件  
- 若要管理报表部件，可以在纯模式下或处于 SharePoint 集成模式下的报表服务器的应用程序页中的报表服务器使用报表管理器。  
+ 若要管理报表部件，可以在本机模式或 SharePoint 集成模式下的报表服务器的应用程序页中为报表服务器使用报表管理器。  
   
 ### <a name="server-side-interaction-and-search"></a>服务器端交互和搜索  
  报表部件可在本机模式或 SharePoint 集成模式下发布到报表服务器上。 用户可以使用报表创作应用程序（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报表生成器）中的报表部件库功能来查找报表部件以及将报表部件添加到其报表中。 当用户搜索报表部件时，搜索将查找报表服务器目录，而与安装服务器时采用的模式无关。  
@@ -96,10 +96,10 @@ ms.locfileid: "36027156"
   
 ## <a name="see-also"></a>请参阅  
  [报表部件和报表生成器中的数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [常规属性页中，报表部件&#40;报表管理器&#41;](../general-properties-page-report-parts-report-manager.md)   
+ [报表部件的常规属性页&#40;报表管理器&#41;](../general-properties-page-report-parts-report-manager.md)   
  [移动项页&#40;报表管理器&#41;](../move-items-page-report-manager.md)   
  [报表服务器内容管理&#40;SSRS 本机模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [解决报表部件&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [报表设计器中的报表部件 (SSRS)](report-parts-in-report-designer-ssrs.md)  
   
   

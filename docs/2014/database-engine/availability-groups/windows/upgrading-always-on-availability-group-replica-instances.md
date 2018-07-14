@@ -1,30 +1,29 @@
 ---
-title: 升级和最小停机时间和数据丢失的可用性组服务器的更新 |Microsoft 文档
+title: 升级和更新可用性组服务器停机时间最短和数据丢失 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 7
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a0e2c87919337ebfec117e4696185b4fe8705218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db74916aa24c1dcd3f94fa163ae0ef87697a8fa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247019"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
   将服务器实例从 SQL Server 2012 更新或升级到 Service Pack 或更高版本时，您可以通过执行顺序更新或升级将可用性组的停机时间降低到一个手动故障转移所需的时间。 对于升级 SQL Server 版本，它称为“滚动升级”；对于使用修复程序或 Service Pack 更新当前 SQL Server 版本，它称为“滚动更新”。  
   
- 此主题仅讨论 SQL Server 升级/更新。 有关操作系统相关升级/更新高可用的 SQL Server 实例上运行，请参阅[跨群集迁移的 AlwaysOn 可用性组的操作系统升级](http://msdn.microsoft.com/library/jj873730.aspx)  
+ 此主题仅讨论 SQL Server 升级/更新。 与操作系统相关升级/更新的高度可用的 SQL Server 实例上运行，请参阅[跨群集迁移的 AlwaysOn 可用性组以进行操作系统升级](http://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 可用性组的滚动升级/更新最佳做法  
  在执行服务器升级/更新时应遵循以下最佳做法以尽量减小可用性组的停机时间和数据丢失量：  

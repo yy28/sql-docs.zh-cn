@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 连接类型 (SSRS) |Microsoft 文档
+title: PowerPivot 连接类型 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234747"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint PowerPivot 库中发布的 PowerPivot 工作簿检索数据。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  PowerPivot 数据源必须发布在 SharePoint 站点上的 PowerPivot 库中。  
   
- 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库随 PowerPivot for Excel，但如果使用不具有此应用程序的计算机，你必须下载和安装 ADOMD.NET 从[SQL Server 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=192565)。  
+ 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 PowerPivot for Excel 一起安装，但如果使用不具有此应用程序的计算机，必须下载并安装从 ADOMD.NET [SQL Server 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=192565)。  
   
 ## <a name="data-source-type"></a>数据源类型  
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
   
 ## <a name="connection-string"></a>连接字符串  
- 连接字符串是到 PowerPivot 工作簿中 PowerPivot 库或其他库，例如，SharePoint 上发布的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx。  
+ 连接字符串是指向 PowerPivot 库或其他库，例如，在 SharePoint 上发布的 PowerPivot 工作簿的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx。  
   
 ## <a name="credentials"></a>凭据  
  指定您访问 PowerPivot 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  

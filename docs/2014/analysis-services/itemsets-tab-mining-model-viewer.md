@@ -1,5 +1,5 @@
 ---
-title: 项集选项卡 （挖掘模型查看器） |Microsoft 文档
+title: 项集选项卡 （挖掘模型查看器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.itemsets.f1
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4fb7491a8c9fd4a3ee4656bac9c45f0f8a365b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2069f5355629c1ac82889e56b11a9a35023edfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247617"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>“项集”选项卡（挖掘模型查看器）
   可以使用 **“项集”** 窗格查看关联规则挖掘模型包含的频繁项集。 由于关联模型可包含多个项集，因此，查看器中提供了一些控件，帮助您筛选在查看器中显示的项集。  
@@ -38,7 +38,7 @@ ms.locfileid: "36027550"
  **查看器**  
  选择用于查看所选挖掘模型的查看器。 可以对关联模型使用自定义查看器，也可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 一般内容树查看器。 还可以使用插件查看器（如果有）。  
   
- **最小支持**  
+ **最低支持**  
  更改此值可设置项集要显示在查看器中所必须具有的最低支持。 模型将计算您在首次打开它时显示的默认值，但您可以更改该值以查看更多或更少项集。  
   
  **最小项集大小**  

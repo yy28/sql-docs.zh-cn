@@ -24,13 +24,13 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 246ee644377bf1e0da6e368e9bbb943d333dc992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5434546f2a6d392cb8eed82704d8164c31620e91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271643"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的体系结构是将数据移动和转换与包控制流和管理分开。 有两个截然不同的引擎定义此体系结构，对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程可以扩展这两个引擎并使其自动化。 运行时引擎实现控制流和包管理基础结构，该基础结构使开发人员能够控制执行流并为日志记录、事件处理程序和变量设置选项。 数据流引擎是一个专用高性能引擎，专用于提取、转换和加载数据。 对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程时，将针对这两个引擎进行编程。  
@@ -47,12 +47,13 @@ ms.locfileid: "36026179"
 ## <a name="integration-services-data-flow-engine"></a>Integration Services 数据流引擎  
  数据流引擎管理数据流任务，是一个专门用于从不同源移动和转换数据的专用高性能任务。 不像其他任务，数据流任务包含称为数据流组件的其他对象，可以是源、转换或目标。 这些组件是移动任务组成部分的核心。 它们定义数据的移动和转换。 开发人员对数据流引擎进行编程可自动化数据流任务中组件的创建和配置，并可创建自定义组件。  
   
- 有关详细信息，请参阅 [扩展与脚本组件的数据流] (extending-packages-scripting/data-flow-script-component/extending-the-数据-flow-with-the-script-component.md，[开发自定义数据流组件](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)，和[以编程方式生成包](building-packages-programmatically/building-packages-programmatically.md)。  
+ 有关详细信息，请参阅 [扩展使用脚本组件的数据流] (extending-packages-scripting/data-flow 的脚本的 component/extending-the 的数据-flow-with-the 的脚本-component.md，[开发自定义数据流组件](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)，并[以编程方式生成包](building-packages-programmatically/building-packages-programmatically.md)。  
   
 ## <a name="supported-languages"></a>支持的语言  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 完全支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 这使开发人员可以自主选择符合 .NET 的语言来对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程。 尽管运行时引擎和数据流引擎都是用本机代码编写的，但是都可以通过完全托管对象模型来使用。  
   
- 可以用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或者另一种代码或文本编辑器对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包、自定义任务和组件进行编程。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 为开发人员提供了许多工具和功能以简化和加速编码、调试和测试的迭代周期。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 还使部署更加容易。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编译和生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 代码项目。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包括 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 编译器和相关工具。  
+ 可以用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或者另一种代码或文本编辑器对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包、自定义任务和组件进行编程。 
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 为开发人员提供了许多工具和功能以简化和加速编码、调试和测试的迭代周期。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 还使部署更加容易。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编译和生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 代码项目。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包括 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 编译器和相关工具。  
   
 > [!IMPORTANT]  
 >  默认情况下，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安装，但不安装 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非 SDK 已安装在计算机上，并且 SDK 文档包含在联机丛书集中，否则本部分中指向 SDK 内容的链接将无效。 安装 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 后，可以按照[添加或删除 SQL Server 的产品文档](../2014-toc/books-online-for-sql-server-2014.md)中的说明将 SDK 文档添加到联机丛书集和目录中。  
@@ -79,6 +80,6 @@ ms.locfileid: "36026179"
   
 ||  
 |-|  
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

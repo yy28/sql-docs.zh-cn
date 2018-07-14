@@ -1,5 +1,5 @@
 ---
-title: 清除 Analysis Services 缓存 |Microsoft 文档
+title: 清除 Analysis Services 缓存 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02a7a6620927472b0019cb4d23a3695f02dd7138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211847"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 缓存
   Analysis Services 通过缓存数据来提高查询性能。 本主题提供关于使用 XMLA ClearCache 命令来清除为响应 MDX 查询而创建的缓存的建议。 根据您使用的表格模型还是多维模型，运行 ClearCache 的影响有所不同。  
@@ -36,7 +36,7 @@ ms.locfileid: "36029136"
   
  运行 ClearCache 也将清除 xVelocity 内存中分析引擎 (VertiPaq) 中的内存中缓存。 xVelocity 引擎保持着较小的一组缓存结果。 运行 ClearCache 将使 xVelocity 引擎中的这些缓存失效。  
   
- 最后，运行 ClearCache 将还剩余时删除数据保留在内存中表格模型重新配置为使用`DirectQuery`模式。 这在模型包含需要严格控制的敏感数据时尤为重要。 在这种情况下，运行 ClearCache 是一项预防措施，可确保敏感数据不会存放在不当位置。 如果正在使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型并更改查询模式，则必须手动清除缓存。 相反，若使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 对模型和分区指定 `DirectQuery`，则可以在将模型切换为使用该查询模式时自动清除缓存。  
+ 最后，运行 ClearCache 还将删除残留的数据保留在内存中的重新配置表格模型时`DirectQuery`模式。 这在模型包含需要严格控制的敏感数据时尤为重要。 在这种情况下，运行 ClearCache 是一项预防措施，可确保敏感数据不会存放在不当位置。 如果正在使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型并更改查询模式，则必须手动清除缓存。 相反，若使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 对模型和分区指定 `DirectQuery`，则可以在将模型切换为使用该查询模式时自动清除缓存。  
   
  与清除性能测试期间的多维模型缓存的建议相比，清除表格模型缓存并没有更多的建议。 如果并未管理包含敏感数据的表格模型的部署，则不需要执行特定的管理任务来调用清除缓存操作。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36029136"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个数据库，指向“新建查询”，然后选择 XMLA。  
   
-2.  将以下代码示例复制到 XMLA 查询窗口中。 更改`DatabaseID`上当前连接的数据库的 id。  
+2.  将以下代码示例复制到 XMLA 查询窗口中。 更改`DatabaseID`到当前连接上的数据库的 ID。  
   
     ```  
     <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -92,7 +92,7 @@ ms.locfileid: "36029136"
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)   
  [监视 Analysis Services 实例](monitor-an-analysis-services-instance.md)  
   
   

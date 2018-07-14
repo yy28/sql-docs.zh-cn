@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,13 +21,13 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265330"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
@@ -64,9 +64,9 @@ ms.locfileid: "36027976"
 |DT_UI4|四字节无符号整数。|  
 |DT_UI8|八字节无符号整数。|  
 |DT_WSTR|以 Null 值结束的 Unicode 字符串，最大长度为 4000 个字符。 （如果列值包含其他 Null 终止符，则字符串将在第一个 Null 值出现的位置截断。）|  
-|DT_IMAGE|具有的最大大小为 2 的二进制值<sup>31</sup>-1 (2,147,483,647) 个字节。 实例时都提供 SQL Server 登录名。|  
-|DT_NTEXT|Unicode 字符字符串，最大长度为 2<sup>30</sup> -1 (1,073,741,823) 个字符。|  
-|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 字符，最大长度为 2 的字符串<sup>31</sup>-1 (2,147,483,647) 个字符。|  
+|DT_IMAGE|二进制值的最大大小为 2<sup>31</sup>-1 (2,147,483,647) 个字节。 实例时都提供 SQL Server 登录名。|  
+|DT_NTEXT|Unicode 字符串，最大长度为 2<sup>30</sup> -1 (1,073,741,823) 个字符。|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 字符串，最大长度为 2<sup>31</sup>-1 (2,147,483,647) 个字符。|  
   
 ## <a name="conversion-of-data-types"></a>数据类型的转换  
  如果列中的数据不必是源数据类型分配的全角形式，那么最好更改列的数据类型。 使每个数据行尽可能窄有助于优化传输数据时的性能，因为每行越窄，数据从源移动到目标就越快。  
@@ -228,7 +228,7 @@ ms.locfileid: "36027976"
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
 |DT_CY|smallmoney、money|smallmoney、money|货币||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[日期&#40;Transact SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期&#40;Transact SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
+|DT_DBDATE|[日期&#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期&#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql) (p)|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
 |DT_DBTIMESTAMP|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  

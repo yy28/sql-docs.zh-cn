@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee64eeed2e6508fc31cac544e6ba4f2617b8a24b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48075a70eba052e6996fa096cde9f8f3b5f946e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213537"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  
@@ -58,7 +58,7 @@ ms.locfileid: "36027958"
 |列长度分布配置文件|报告所选列中各个字符串值的不同长度，以及每个长度表示的行在表中的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的值。 例如，美国州代码列应以两个字符来表示，但在对其进行事件探查时却发现有超过两个字符的值。|  
 |列 Null 比率配置文件|报告所选列中 Null 值的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如列中 null 值的比率意外偏高。 例如，您对邮政编码列进行事件探查，却发现缺失的邮政编码所占的比例超出允许的范围。|  
 |列模式配置文件|报告一组正则表达式，其中涵盖字符串列中指定百分比的值。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的字符串。 它还可以建议可用于以后验证新值的正则表达式。 例如，美国邮政编码列的模式配置文件可能会生成正则表达式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他正则表达式，则数据可能包含无效或格式不正确的值。|  
-|列统计信息配置文件|报告的统计信息，如最小值、 最大值、 平均值和标准偏差数字列和最小值和最大值`datetime`列。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的日期。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。|  
+|列统计信息配置文件|报告的统计信息，例如最小值、 最大值、 平均值和标准偏差数字列，以及最小值和最大值`datetime`列。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的日期。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。|  
 |列值分布配置文件|报告选定列中所有的非重复值以及每个值所表示的行在表中的百分比。 还可以报告一些表示该表中的行超过指定百分比的值。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，例如列中非重复值的数目不正确。 例如，您对应该包含美国的各州的列进行事件探查，却发现 50 多个非重复值。|  
   
  以下三个配置文件分析多个列或列与表之间的关系。  
@@ -79,14 +79,14 @@ ms.locfileid: "36027958"
 |-------------|------------------------|  
 |列统计信息配置文件|numeric 类型或 `datetime` 类型的列（`mean` 列无 `stddev` 和 `datetime`）|  
 |列 Null 比率配置文件|所有列**|  
-|列值分布配置文件|列的`integer`类型，`char`类型，和`datetime`类型|  
+|列值分布配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
 |列长度分布配置文件|列的`char`类型|  
 |列模式配置文件|列的`char`类型|  
-|候选键配置文件|列的`integer`类型，`char`类型，和`datetime`类型|  
-|函数依赖关系配置文件|列的`integer`类型，`char`类型，和`datetime`类型|  
-|包含配置文件|列的`integer`类型，`char`类型，和`datetime`类型|  
+|候选键配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
+|函数依赖关系配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
+|包含配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
   
- \* 有效的数据类型与上表中`integer`， `char`， `datetime`，和`numeric`类型包括以下特定的数据类型：  
+ \* 在上述有效的数据类型的表`integer`， `char`， `datetime`，和`numeric`类型包括以下特定的数据类型：  
   
  Integer 类型包括 `bit`、`tinyint`、`smallint`、`int` 和 `bigint`。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "36027958"
   
  Date 和 time 类型包括 `datetime`、`smalldatetime` 和 `timestamp`。  
   
- 数值类型包括`integer`类型 (除`bit`)， `money`， `smallmoney`， `decimal`， `float`， `real`，和`numeric`。  
+ 数值类型包括`integer`类型 (除了`bit`)， `money`， `smallmoney`， `decimal`， `float`， `real`，和`numeric`。  
   
- \*\* `image``text`， `XML`， `udt`，和`variant`不支持列 Null 比率配置文件以外的配置文件的类型。  
+ \*\* `image``text`， `XML`， `udt`，和`variant`不支持除列 Null 比率配置文件以外的配置文件的类型。  
   
 ### <a name="valid-tables-and-columns"></a>有效的表和列  
  如果表或列为空，则数据事件探查将执行以下操作：  

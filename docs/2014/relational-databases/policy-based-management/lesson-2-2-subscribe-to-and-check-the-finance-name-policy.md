@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6387825abc2b2eb3426bbbd19f05674615f9e7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8a564533f26faea5330da3c45cd8e00cd7e2c12d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253949"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>订阅和检查 Finance Name 策略
   在本任务中，将 Finance 数据库配置为订阅 Finance 策略类别。 然后，测试 Finance Name 策略。  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>订阅 Finance 策略类别  
   
-1.  在对象资源管理器，展开**数据库**，右键单击`Finance`，指向**策略**，然后单击**类别**。  
+1.  在对象资源管理器，展开**数据库**，右键单击`Finance`，依次指向**策略**，然后单击**类别**。  
   
-2.  选择**已订阅**复选框`Finance`类别。  
+2.  选择**已订阅**对应的复选框`Finance`类别。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36026978"
 ## <a name="next"></a>Next  
  现已学完了本教程。 若要返回到开始位置，请单击 [教程：使用基于策略的管理来管理服务器](tutorial-administering-servers-by-using-policy-based-management.md)。  
   
- 教程的列表，请参阅[用于 SQL Server 2014 的教程](../../tutorials/tutorials-for-sql-server-2014.md)。  
+ 有关教程的列表，请参阅[有关 SQL Server 2014 教程](../../tutorials/tutorials-for-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)  

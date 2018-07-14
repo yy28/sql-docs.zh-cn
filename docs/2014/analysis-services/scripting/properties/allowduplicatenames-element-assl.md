@@ -1,5 +1,5 @@
 ---
-title: AllowDuplicateNames 元素 (ASSL) |Microsoft 文档
+title: AllowDuplicateNames 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowDuplicateNames element
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6fe55bdf9dde0906a43fa46745e22179dba9e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9358092125e5be7c7c0ec555cb29db4d7f714c99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180886"
 ---
 # <a name="allowduplicatenames-element-assl"></a>AllowDuplicateNames 元素 (ASSL)
-  确定是否允许重复的名称在[层次结构](../objects/hierarchy-element-assl.md)元素。  
+  确定是否在允许重复的名称[层次结构](../objects/hierarchy-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36123486"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`AllowDuplicateNames`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Hierarchy>。  
+ 父级对应的元素`AllowDuplicateNames`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Hierarchy>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

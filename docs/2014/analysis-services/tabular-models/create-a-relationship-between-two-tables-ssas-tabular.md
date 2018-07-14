@@ -1,5 +1,5 @@
 ---
-title: 创建两个表 (SSAS 表格) 之间的关系 |Microsoft 文档
+title: 创建两个表 (SSAS 表格) 之间的关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.managereldb.f1
 - sql12.asvs.bidtoolset.createrelatdb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 626bc8153e73e038a26f936d40d814333ebaa0d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3caaf25043cc72246cd173711711ff3ec4ee33f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167248"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>创建两个表之间的关系（SSAS 表格）
-  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用的关系的信息，请参阅[关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)。  
+  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的信息，请参阅[关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>创建两个表之间的关系  
   

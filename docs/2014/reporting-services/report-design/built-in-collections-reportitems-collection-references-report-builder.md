@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80d5e835700a6ac411c035856ff7c10b49e0c79b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264463"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems 集合引用（报表生成器和 SSRS）
-  `ReportItems` 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 `ReportItems`集合包括页眉、 页脚或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 你可以使用`ReportItems`内置集合以生成每一页显示的第一个和最后一个项的字典式页眉。  
+  `ReportItems` 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 `ReportItems`集合包括页眉、 页脚或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 可以使用`ReportItems`内置集合中生成每个页面显示的第一个和最后一个项的字典样式页眉。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "36028070"
   
      `=ReportItems!Textbox1.Value`  
   
--   此表达式放置在`ReportItem`文本框颜色属性显示黑色文本的值时 > 0; 否则，将值显示为红色：  
+-   此表达式放置在`ReportItem`文本框 Color 属性中，以黑色显示文本时的值为 > 0; 否则，以红色显示值：  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -50,14 +50,14 @@ ms.locfileid: "36028070"
  在表头或表尾部分，只有当前页中的文本框才能作为 `ReportItems` 集合的成员。 例如，在多页数据区域中，如果 `ReportItems!textboxLastName.Value` 引用一个只显示在首页的文本框，则可以在首页看到一个值，其他页则显示 **#Error** ，表明该表达式不能按本文所述进行计算。  
   
 ## <a name="scope-for-the-reportitems-collection"></a>ReportItems 集合的作用域  
- 处理报表时，文本框所在数据集、数据区域和组关联的上下文将计算表体或数据区域中的所有文本框。 对引用的作用域`ReportItems`集合是当前的作用域或高于当前作用域的任何点。  
+ 处理报表时，文本框所在数据集、数据区域和组关联的上下文将计算表体或数据区域中的所有文本框。 到引用的作用域`ReportItems`集合是当前作用域或高于当前作用域的任何点。  
   
  例如，位于父组行的文本框不能包含引用子组行的文本框名称的表达式。 此类表达式不会解析报表中的值，因为子行文本框超出了作用域。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [在表达式中的内置集合&#40;报表生成器和 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [表达式中的内置集合&#40;报表生成器和 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [筛选、 分组和排序数据&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

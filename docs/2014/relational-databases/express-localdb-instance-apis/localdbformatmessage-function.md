@@ -1,5 +1,5 @@
 ---
-title: LocalDBFormatMessage 函数 |Microsoft 文档
+title: LocalDBFormatMessage 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d2fbc72ef5f3b54e1a9889150ebc27b08520ba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a48c5d0ef42c2109aebeadf77a6e666e4407093f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246800"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函数
   返回指定的 SQL Server Express LocalDB 错误的本地化文本说明。  
@@ -64,7 +64,7 @@ HRESULT LocalDBFormatMessage(
  [输出] 要存储 LocalDB 错误消息的缓冲区。  
   
  *lpcchMessage*  
- [输入/输出]输入包含大小的*wszMessage*以字符为单位的缓冲区。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符数表示，包括任何尾随空格）。 如果函数成功，则包含消息中的字符数（任何尾随空格除外）。  
+ [输入/输出]在输入中包含的大小*wszMessage*以字符为单位的缓冲区。 输出时，如果给定的缓冲区太小，则包含所需的缓冲区大小（以字符数表示，包括任何尾随空格）。 如果函数成功，则包含消息中的字符数（任何尾随空格除外）。  
   
 ## <a name="returns"></a>返回  
  S_OK  
@@ -89,7 +89,7 @@ HRESULT LocalDBFormatMessage(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>Remarks  
- 使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b56892d08db64ee49dd31eeb46359d523d1fca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238777"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
   “审核”[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
@@ -65,7 +64,7 @@ ms.locfileid: "36027895"
 > [!IMPORTANT]  
 >  任何经过身份验证的用户可以读取和写入到 Windows 应用程序事件日志。 应用程序事件日志要求的权限比 Windows 安全事件日志低，安全性低于 Windows 安全事件日志。  
   
- 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]或 Windows Server 2008 中，你可以设置管理更精细**生成的应用程序**策略从命令行使用审核策略程序 (`AuditPol.exe)`。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](http://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](http://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
+ 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在中[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]或 Windows Server 2008 中，可以设置更精细**生成应用程序**策略从命令行通过使用审核策略程序 (`AuditPol.exe)`。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](http://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](http://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
   
  在您将审核信息保存到某一文件时，为了帮助避免被篡改，可以通过以下方式限制对文件位置的访问：  
   
@@ -123,14 +122,14 @@ ms.locfileid: "36027895"
 ### <a name="database-mirroring-and-sql-server-audit"></a>数据库镜像和 SQL Server 审核  
  已定义了数据库审核规范并使用数据库镜像的数据库将包括此数据库审核规范。 若要对已镜像的 SQL 实例进行正确的处理，必须配置下列项：  
   
--   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID 配置`=`*\<从源服务器审核的 GUID*>。  
+-   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID 配置`=`*\<GUID from source Server Audit*>。  
   
 -   对于二进制文件目标，镜像服务器服务帐户对要写入审核记录的位置必须具有相应的权限。  
   
 -   对于 Windows 事件日志目标，镜像服务器所在计算机上的安全策略必须允许服务帐户访问安全事件日志或应用程序事件日志。  
   
 ### <a name="auditing-administrators"></a>审核管理员  
- 成员`sysadmin`固定的服务器角色被标识为**dbo**每个数据库中的用户。 若要审核管理员的操作，请审核 **dbo** 用户的操作。  
+ 成员`sysadmin`固定的服务器角色标识为**dbo**每个数据库中的用户。 若要审核管理员的操作，请审核 **dbo** 用户的操作。  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>使用 Transact-SQL 创建和管理审核  
  可以使用 DDL 语句、动态管理视图和函数以及目录视图来实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的所有方面。  

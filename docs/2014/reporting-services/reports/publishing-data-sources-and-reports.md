@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing data sources [Reporting Services]
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cc6610ad05fceb4ccfa51e7e383f9bb286e9a6b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 147892370a3cb93831ae2d99cf77906eca67ca5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214507"
 ---
 # <a name="publishing-data-sources-and-reports"></a>发布数据源和报表
   在发布报表之前，您应预览报表以查看其运行时的外观。 您可以继续改进设计，直到对结果满意为止。  
@@ -39,7 +39,7 @@ ms.locfileid: "36028946"
  [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)  
  说明如何将报表发布到报表服务器。  
   
- [在 SharePoint 模式下的报表服务器上的已发布的报表项的 URL 示例&#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [在 SharePoint 模式下报表服务器上的已发布的报表项的 URL 示例&#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  说明如何将报表发布到 SharePoint 站点。  
   
 ## <a name="see-also"></a>请参阅  

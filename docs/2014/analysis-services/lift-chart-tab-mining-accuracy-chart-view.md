@@ -1,5 +1,5 @@
 ---
-title: 提升图选项卡 （挖掘准确性图表视图） |Microsoft 文档
+title: 提升图选项卡 （挖掘准确性图表视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 480f224d3948b88117b5b708900639539cfdffab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09b0acd6bb7a4d079476b866a56f47029192db47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224647"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>“提升图”选项卡（“挖掘准确性图表”视图）
   可以使用 **“提升图”** 窗格，查看比较所选挖掘结构中的所有选定挖掘模型的图表。  

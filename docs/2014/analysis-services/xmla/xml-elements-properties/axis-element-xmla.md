@@ -1,5 +1,5 @@
 ---
-title: 轴元素 (XMLA) |Microsoft 文档
+title: Axis 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263223"
 ---
 # <a name="axis-element-xmla"></a>Axis 元素 (XMLA)
-  包含一组用于表示单个坐标轴中包含的多维数据集的元组[轴](axes-element-xmla.md)用元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[执行](../xml-elements-methods-execute.md)方法。  
+  包含一组用于表示在多维数据集中所包含的单个轴的元组[轴](axes-element-xmla.md)使用的元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,18 +71,18 @@ ms.locfileid: "36028186"
  `Axis` 元素的内容因 `AxisFormat` 方法所使用的`Execute` XMLA 属性的值而异。  
   
 ## <a name="tupleformat"></a>TupleFormat  
- 当客户端应用程序设置`AxisFormat`属性*TupleFormat*，轴表示为一组元组。 每个 `Axis` 元素都包含有一个表示该轴上的元组集的 `Tuples` 元素。 每个元组都是通过使用 `Tuple` 元素来表示的，该元素包含轴上每个层次结构中的 `Member` 元素。  
+ 当客户端应用程序设置`AxisFormat`属性设置为*TupleFormat*，则轴将表示为一组元组。 每个 `Axis` 元素都包含有一个表示该轴上的元组集的 `Tuples` 元素。 每个元组都是通过使用 `Tuple` 元素来表示的，该元素包含轴上每个层次结构中的 `Member` 元素。  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- 当客户端应用程序设置`AxisFormat`属性*ClusterFormat*，每个轴上的成员被划分到其中的每个群集都表示之间的每个层次结构中的成员的有序集的叉积的群集。 每个 `Axis` 元素都包含一个或多个 `CrossProduct` 元素。 每个 `CrossProduct` 元素都包含轴上每个层次结构中的 `Members` 元素。  
+ 当客户端应用程序设置`AxisFormat`属性设置为*ClusterFormat*，每个轴上的成员被划分到其中的每个群集表示之间的每个层次结构中成员的有序集的叉积的群集。 每个 `Axis` 元素都包含一个或多个 `CrossProduct` 元素。 每个 `CrossProduct` 元素都包含轴上每个层次结构中的 `Members` 元素。  
   
 ## <a name="customformat"></a>CustomFormat  
- 当客户端应用程序设置`AxisFormat`属性*CustomFormat*，值被视为相同*TupleFormat* Analysis Services 实例的值。  
+ 当客户端应用程序设置`AxisFormat`属性设置为*CustomFormat*，处理值与相同*TupleFormat* Analysis Services 实例的值。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="description"></a>Description  
- 下面的示例演示的结构`Axis`元素时客户端指定*TupleFormat*或*CustomFormat*为`AxisFormat`给定以下 XMLA 属性轴的成员：  
+ 下面的示例演示了结构`Axis`时客户端指定的元素*TupleFormat*或*CustomFormat*为`AxisFormat`给出以下 XMLA 属性轴的成员：  
   
 |||||  
 |-|-|-|-|  
@@ -132,7 +132,7 @@ ms.locfileid: "36028186"
 ```  
   
 ### <a name="description"></a>Description  
- 下面的示例演示的结构`Axis`元素时客户端指定*ClusterFormat*为`AxisFormat`XMLA 属性，为轴提供的以下成员：  
+ 下面的示例演示了结构`Axis`时客户端指定的元素*ClusterFormat*为`AxisFormat`XMLA 属性的以下成员的轴：  
   
 ||||||  
 |-|-|-|-|-|  

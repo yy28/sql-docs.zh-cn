@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - expressions [Integration Services], functions
@@ -19,13 +19,13 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65c272c738877eef0d8f931c7ed3a9262eeeae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171028"
 ---
 # <a name="functions-ssis-expression"></a>函数（SSIS 表达式）
   表达式语言包含一组用于表达式的函数。 表达式可以使用单个函数。但是，通常一个表达式可以通过运算符将多个函数组合起来，从而使用多个函数。  
@@ -62,19 +62,19 @@ ms.locfileid: "36027290"
 |--------------|-----------------|  
 |[码位&#40;SSIS 表达式&#41;](codepoint-ssis-expression.md)|返回字符表达式最左端字符的 Unicode 代码值。|  
 |[FINDSTRING &#40;SSIS 表达式&#41;](findstring-ssis-expression.md)|返回表达式中指定出现的字符串从 1 开始的索引。|  
-|[十六进制&#40;SSIS 表达式&#41;](hex-ssis-expression.md)|返回一个表示整数的十六进制值的字符串。|  
+|[HEX &#40;SSIS 表达式&#41;](hex-ssis-expression.md)|返回一个表示整数的十六进制值的字符串。|  
 |[LEN &#40;SSIS 表达式&#41;](len-ssis-expression.md)|返回字符表达式中的字符数。|  
 |[左&#40;SSIS 表达式&#41;](left-ssis-expression.md)|返回从给定字符表达式最左侧开始的指定数量的字符。|  
-|[较低&#40;SSIS 表达式&#41;](lower-ssis-expression.md)|返回将大写字符转换为小写字符后得到的字符表达式。|  
+|[低&#40;SSIS 表达式&#41;](lower-ssis-expression.md)|返回将大写字符转换为小写字符后得到的字符表达式。|  
 |[LTRIM &#40;SSIS 表达式&#41;](trim-ssis-expression.md)|返回删除了前导空格的字符表达式。|  
-|[替换&#40;SSIS 表达式&#41;](replace-ssis-expression.md)|返回用不同字符串或空字符串替换表达式中字符串后的字符表达式。|  
+|[替换为&#40;SSIS 表达式&#41;](replace-ssis-expression.md)|返回用不同字符串或空字符串替换表达式中字符串后的字符表达式。|  
 |[复制&#40;SSIS 表达式&#41;](replicate-ssis-expression.md)|返回复制了指定次数后的字符表达式。|  
 |[反向&#40;SSIS 表达式&#41;](reverse-ssis-expression.md)|按相反顺序返回字符表达式。|  
 |[右&#40;SSIS 表达式&#41;](right-ssis-expression.md)|返回从给定字符表达式最右侧开始的指定数量的字符。|  
 |[RTRIM &#40;SSIS 表达式&#41;](rtrim-ssis-expression.md)|返回删除了尾随空格的字符表达式。|  
 |[子字符串&#40;SSIS 表达式&#41;](substring-ssis-expression.md)|返回字符表达式的一部分。|  
-|[TRIM &#40;SSIS 表达式&#41;](trim-ssis-expression.md)|返回删除了前导空格和尾随空格的字符表达式。|  
-|[上部&#40;SSIS 表达式&#41;](upper-ssis-expression.md)|返回将小写字符转换为大写字符后得到的字符表达式。|  
+|[剪裁&#40;SSIS 表达式&#41;](trim-ssis-expression.md)|返回删除了前导空格和尾随空格的字符表达式。|  
+|[上限&#40;SSIS 表达式&#41;](upper-ssis-expression.md)|返回将小写字符转换为大写字符后得到的字符表达式。|  
   
  表达式计算器提供了下列日期和时间函数。  
   

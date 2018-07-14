@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.querydesigner
 - vdt.pane.diagram
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ec0aafb394d43fa55fa940ca5ce23cca798b3ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df346757d4fca96b17b2287fe614d4db95319e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168112"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>查询和视图设计器工具 (Visual Database Tools)
   在设计查询、视图、内嵌函数或单语句存储过程时，所使用的设计器由四个窗格组成：“关系图”窗格、“条件”窗格、SQL 窗格和“结果”窗格。  
@@ -52,8 +52,8 @@ ms.locfileid: "36028926"
  若要隐藏窗格或显示不可见的窗格，请右键单击设计图面，指向“窗格”，再单击窗格的名称。 如果在查询设计器模式下打开了查询和视图设计器，则不会显示“结果”窗格。  
   
 ## <a name="see-also"></a>请参阅  
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [打开查询和视图设计器&#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [打开查询和视图设计器&#40;可视化数据库工具&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [SQL 编辑器 (Visual Database Tools)](sql-editor-visual-database-tools.md)  
   
   

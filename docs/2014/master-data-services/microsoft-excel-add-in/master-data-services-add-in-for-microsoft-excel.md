@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273083"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
-  与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以将引用数据的主列表分发到你的组织使用 Excel 中的每个人。 可通过安全权限来确定用户可以查看和更新的数据。  
+  与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以将引用数据的主列表分发给你组织中使用 Excel 的每个人。 可通过安全权限来确定用户可以查看和更新的数据。  
   
  可以将筛选过的数据列表从 MDS 加载到 Excel 中，从中按照处理任何其他数据的方式来处理加载的数据。 处理完成后，您可以将数据发布回 MDS，这是集中存储数据的位置。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36026363"
  在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以先使用 Data Quality Services (DQS) 来匹配数据，然后再将其加载到 MDS 中。 这有助于防止 MDS 中的数据重复。  
   
 > [!IMPORTANT]  
->  在将 Master Data Services 和 Data Quality Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 你可以下载[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版本的主数据服务外接程序从 excel[此处](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+>  在将 Master Data Services 和 Data Quality Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 您可以下载[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版本的 Master Data Services 外接程序从 excel[此处](http://go.microsoft.com/fwlink/?LinkId=328664)。  
   
 ## <a name="terms"></a>术语  
  使用该外接程序时，您可能会遇到以下术语。  
@@ -58,7 +58,7 @@ ms.locfileid: "36026363"
 |与他人共享快捷方式。|[通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |查看对成员所做的所有更改。|[查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
 |在发布新数据之前，确定是否存在重复。|[匹配相似数据（用于 Excel 的 MDS 外接程序）](match-similar-data-mds-add-in-for-excel.md)|  
-|将数据从工作表发布到 MDS 存储库中。|[发布到 MDS 数据从 Excel &#40;MDS add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|将数据从工作表发布到 MDS 存储库中。|[数据从 Excel 发布到 MDS &#40;MDS add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |在工作表中创建包含数据的新实体。 （仅限管理员）|[创建实体（用于 Excel 的 MDS 外接程序）](create-an-entity-mds-add-in-for-excel.md)|  
 |创建基于域的属性（也称为约束列表）。 （仅限管理员）|[创建基于域的属性（用于 Excel 的 MDS 外接程序）](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |设置用于在用于 Excel 的 Master Data Services 外接程序中加载和发布数据的属性。 （仅限管理员）|[设置用于 Excel 的 Master Data Services 外接程序的属性](setting-properties-for-master-data-services-add-in-for-excel.md)|  
@@ -73,7 +73,7 @@ ms.locfileid: "36026363"
   
 -   [用于 Excel 的 MDS 外接程序中的数据质量匹配](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
--   [将数据发布&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [生成模型（用于 Excel 的 MDS 外接程序）](building-a-model-mds-add-in-for-excel.md)  
   

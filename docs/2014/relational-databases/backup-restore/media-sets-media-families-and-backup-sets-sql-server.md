@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
 - backup media [SQL Server], about backup media
@@ -24,21 +23,21 @@ helpviewer_keywords:
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06ebab2fa2db5be88f30b228d209318469788ff4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231417"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不熟悉的读者。 本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于备份介质的格式、备份介质和备份设备之间的对应关系、备份介质上备份的组织结构，以及介质集和介质簇的若干注意事项。 本主题还介绍在第一次使用备份介质或在使用新介质集替代旧介质集之前对备份介质进行初始化和格式化的步骤，如何覆盖介质集中的旧备份集，以及如何将新备份集追加到介质集。  
   
 > [!NOTE]  
->  有关详细信息 SQL Server 备份到 Windows Azure Blob 存储服务，请参阅， [SQL Server Backup and Restore with Windows Azure Blob 存储服务](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  有关详细信息，SQL Server 备份到 Windows Azure Blob 存储服务、 查看，请[Windows Azure Blob 存储服务使用 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
@@ -93,7 +92,7 @@ ms.locfileid: "36027289"
 -   介质说明中是包含 MTF 介质标签还是包含介质说明。  
   
     > [!NOTE]  
-    >  用于备份或还原操作的所有媒体都使用的标准备份格式称为[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]保留由另一个应用程序写入任何 MTF 介质标签，但不会写入 MTF 介质标签。  
+    >  用于备份或还原操作的所有媒体都使用名为的标准备份格式[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]保留编写另一个应用程序的任何 MTF 介质标签，但不会写入 MTF 介质标签。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 磁带格式介质标签或介质说明（自由格式文本）。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36027289"
 ### <a name="backup-sets"></a>备份集  
  成功的备份操作将向介质集中添加一个“备份集”  。 从备份所属的介质集方面对备份集进行说明。 如果备份介质只包含一个介质簇，则该簇包含整个备份集。 如果备份介质包含多个介质簇，则备份集分布在各个介质簇之间。 在每个介质上，备份集都包含说明备份集的标头。  
   
- 下面的示例演示[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建的媒体集调用`MyAdvWorks_MediaSet_1`为[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库使用三个磁带机作为备份设备：  
+ 下面的示例演示[!INCLUDE[tsql](../../includes/tsql-md.md)]创建介质集被调用的语句`MyAdvWorks_MediaSet_1`为[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库使用三个磁带机作为备份设备：  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -223,7 +222,7 @@ GO
  对于磁带标头，适当地保留标头还是很有帮助的。 对于磁盘备份介质，只覆盖备份操作中指定的备份设备所使用的文件；磁盘上的其他文件不受影响。 覆盖备份时，保留现有的所有介质标头，同时将新的备份创建为备份设备中的第一个备份。 如果没有现有的介质标头，将自动编写一个带相关介质名称和介质描述的有效介质标头。 如果现有的介质标头无效，备份操作将终止。 如果介质为空，则使用给定的 MEDIANAME、MEDIAPASSWORD 和 MEDIADESCRIPTION（如果存在）生成新的介质标头。  
   
 > [!IMPORTANT]  
->  开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，MEDIAPASSWORD 选项不再可用于创建备份。 但仍可以还原使用密码创建的备份。  
+>  从[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，MEDIAPASSWORD 选项不再可用于创建备份。 但仍可以还原使用密码创建的备份。  
   
  存在下列任一条件时不覆盖备份介质：  
   
@@ -263,7 +262,7 @@ GO
      对于任何从磁盘备份进行的还原以及任何联机还原，必须同时装入全部介质簇。 对于从磁带备份进行的脱机还原，可以在数量少于介质簇的备份设备中处理介质簇。 必须在每一介质簇已完全处理之后才能开始处理另一个介质簇。 介质簇总是并行处理的，除非使用单个设备还原介质簇。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
- **创建新介质集**  
+ **若要创建新介质集**  
   
 -   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”选项）  
   
@@ -271,7 +270,7 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.FormatMedia%2A>  
   
- **若要将新的备份追加到现有介质**  
+ **若要在现有介质上追加新的备份**  
   
 -   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“追加到现有备份集”选项）  
   

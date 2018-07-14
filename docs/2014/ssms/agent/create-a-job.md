@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb9d6f15c9819a9c5653130664b340931a9a5d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d161129b14da33645c1a9238307c0eefe9539097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181534"
 ---
 # <a name="create-a-job"></a>创建作业
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建 SQL Server 代理作业。  
@@ -75,17 +75,17 @@ ms.locfileid: "36028494"
   
 3.  右键单击“作业”文件夹，然后选择“新建作业…”。  
   
-4.  在 **“新建作业”** 对话框的 **“常规”** 页上，修改作业的常规属性。 有关此页上的可用选项的详细信息，请参阅[作业属性和新作业&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  在 **“新建作业”** 对话框的 **“常规”** 页上，修改作业的常规属性。 有关此页上的可用选项的详细信息，请参阅[作业属性和新的作业&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  在 **“步骤”** 页上，组织作业步骤。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新的作业&#40;步骤页&#41;](job-properties-new-job-steps-page.md)  
+5.  在 **“步骤”** 页上，组织作业步骤。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](job-properties-new-job-steps-page.md)  
   
-6.  在 **“计划”** 页上，组织作业的计划。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新的作业&#40;计划页&#41;](job-properties-new-job-schedules-page.md)  
+6.  在 **“计划”** 页上，组织作业的计划。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;计划页&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  在 **“警报”** 页上，组织作业的警报。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新的作业&#40;警报页&#41;](job-properties-new-job-alerts-page.md)  
+7.  在 **“警报”** 页上，组织作业的警报。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;警报页&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  在 **“通知”** 页上，设置在作业完成时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的操作。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新的作业&#40;通知页&#41;](job-properties-new-job-notifications-page.md)。  
+8.  在 **“通知”** 页上，设置在作业完成时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要执行的操作。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;通知页&#41;](job-properties-new-job-notifications-page.md)。  
   
-9. 在 **“目标”** 页上，管理作业的目标服务器。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新的作业&#40;目标页&#41;](job-properties-new-job-targets-page.md)。  
+9. 在 **“目标”** 页上，管理作业的目标服务器。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;目标页&#41;](job-properties-new-job-targets-page.md)。  
   
 10. 完成后，单击 **“确定”**。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36028494"
   
 -   [sp_attach_schedule (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 ##  <a name="SMOProcedure"></a> 使用 SQL Server 管理对象  
  **创建 SQL Server 代理作业**  

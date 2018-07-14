@@ -1,5 +1,5 @@
 ---
-title: Property 元素 (CSDLBI) |Microsoft 文档
+title: Property 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a4d1ab0082c4b5475e0fc54127e7b80f63a9b983
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e056baf1edf447b0ed321406af12f9260dfcdd12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280033"
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
   CSDLBI 中的 Property 元素是一种复杂类型，它向 CSDL 中的 Property 元素提供附加内容，以便支持商业智能数据模型。  

@@ -1,5 +1,5 @@
 ---
-title: 安装或卸载 Reporting Services 外接程序为 SharePoint （SharePoint 2010 和 SharePoint 2013） |Microsoft 文档
+title: 安装或卸载 Reporting Services 外接程序的 SharePoint （SharePoint 2010 和 SharePoint 2013） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: b1f412ef2d381a7ef005f56172e902fa63c5527b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb82a321cc6110211a0c4e5f84fd049323b3aa7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224867"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序（SharePoint 2010 和 SharePoint 2013）
   在 SharePoint 服务器上运行用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装包 (rsSharePoint.msi)，以在 SharePoint 部署中启用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 这些功能包括 Power View、一个报表查看器 Web 部件、一个 URL 代理端点、一些内容类型和一些应用程序页，使用它们可以创建、查看及管理 SharePoint 站点上的报表、报表模型、数据源和其他报表服务器内容。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是在 SharePoint 模式下运行的报表服务器的必需组件。 可以从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导或通过从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包下载 rsSharePoint.msi 来安装此外接程序。 有关外接程序和下载页的版本列表，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "36028960"
   
 -   [先决条件](#bkmk_prereq)  
   
--   [外接程序安装是什么？](#bkmk_whatinstalled)  
+-   [外接程序安装什么？](#bkmk_whatinstalled)  
   
 -   [安装方法概述](#bkmk_3ways_to_install)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36028960"
 -   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
 ##  <a name="bkmk_prereq"></a> 先决条件  
- 将报表服务器与 SharePoint 产品的实例集成需要若干步骤，安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是其中的一步。 有关使用 SharePoint 模式下的要求的完整集的详细信息，请参阅[的硬件和软件要求在 SharePoint 模式下的 Reporting Services](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)。 有关详细信息安装和配置[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[安装 Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
+ 将报表服务器与 SharePoint 产品的实例集成需要若干步骤，安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是其中的一步。 有关使用 SharePoint 模式下的要求的完整集合的详细信息，请参阅[的硬件和软件要求 SharePoint 模式下的 Reporting Services](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)。 有关安装和配置的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
   
 -   如果将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与具有多个 Web 前端应用程序的 SharePoint 场集成，则将该外接程序安装到场中每台具有 Web 服务器前端的计算机上。 仅对将要用于访问报表服务器内容的 Web 前端执行此操作。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36028960"
   
 -   您必须是网站集管理员才能激活 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成功能。  
   
--   与外接程序的示例部署的关系图，请参阅[SharePoint 中的 SQL Server BI 功能的部署拓扑](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。  
+-   有关的示例部署使用外接程序的关系图，请参阅[在 SharePoint 中的 SQL Server BI 功能的部署拓扑](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。  
   
 ##  <a name="bkmk_whatinstalled"></a> 外接程序安装执行哪些操作？  
  外接程序安装过程由两个阶段组成，完成标准安装时将自动完成这两个阶段：  
@@ -80,20 +80,20 @@ ms.locfileid: "36028960"
   
 -   SharePoint 2010 产品准备工具安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 外接程序的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能所需的外接程序的新版本。  
   
-     如果运行 SharePoint 产品准备工具，你仍需要安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。  
+     如果您运行 SharePoint 产品准备工具，仍需要安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。  
   
--   如果你安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序第一次，则当你运行 SharePoint 产品准备工具，你将看到以下对话框，该值指示准备工具未安装为较新的外接程序的较旧版本检测到版本。 这是预期行为  
+-   如果您在安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序第一次，则在运行 SharePoint 产品准备工具，你将看到以下对话框，该值指示准备工具未安装为较新的外接程序的较旧版本检测到的版本。 这是预期行为  
   
      ![已安装 SSRS 外接程序。](../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "已安装 SSRS 外接程序。")  
   
  **SharePoint 2013**  
   
- 该 SharePoint 20103 产品准备工具将执行**不**安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用于 SharePoint 产品外接程序。  
+ SharePoint 20103 产品准备工具的功能**不**安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用于 SharePoint 产品外接程序。  
   
 ##  <a name="bkmk_3ways_to_install"></a> 安装方法概述  
  使用以下两种方法之一可以安装用于 SharePoint 产品的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序：  
   
--   **安装向导：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")新增[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]外, 接程序可以安装通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
+-   **安装向导：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")的新增功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]外, 接程序可以安装通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
   
 -   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -111,7 +111,7 @@ Rssharepoint.msi /?
   
 1.  下载安装程序 (`rsSharepoint.msi`) 为[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
-2.  作为管理员，运行`rsSharepoint.msi`以运行安装向导。 向导将显示“欢迎”页、软件许可条款和注册信息页。 安装程序将在以下路径下创建文件夹，并将文件复制到该文件夹中：  
+2.  以管理员身份运行`rsSharepoint.msi`以运行安装向导。 向导将显示“欢迎”页、软件许可条款和注册信息页。 安装程序将在以下路径下创建文件夹，并将文件复制到该文件夹中：  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
@@ -119,7 +119,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  在 SharePoint 管理中心配置报表服务器设置和功能激活。 实例时都提供 SQL Server 登录名。 有关详细信息安装和配置[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式，请参阅[安装 Reporting Services SharePoint 模式用于 SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
+3.  在 SharePoint 管理中心配置报表服务器设置和功能激活。 实例时都提供 SQL Server 登录名。 有关安装和配置的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式下，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
 ###  <a name="bkmk_files_only_installation"></a> “仅文件”安装  
  若要安装文件但跳过自定义操作安装阶段，则可以从命令行中使用 SKIPCA 选项来运行 rssharepoint.msi：  
@@ -141,7 +141,7 @@ Rssharepoint.msi /?
   
 2.  运行自定义操作可执行文件：  
   
-    1.  导航到包含文件的文件夹`rsCustomAction.exe`。 此文件通过外接程序的“仅文件”安装复制到您的计算机。 `rsCustomAction.exe` 位于 **%temp%** 目录。 要导航到此文件，请从命令提示符键入以下信息：  
+    1.  导航到包含文件的文件夹`rsCustomAction.exe`。 此文件通过外接程序的“仅文件”安装复制到您的计算机。 `rsCustomAction.exe` 中位于 **%temp%** 目录。 要导航到此文件，请从命令提示符键入以下信息：  
   
          **CD %temp%**。  
   
@@ -180,7 +180,7 @@ Rssharepoint.msi /?
   
  卸载外接程序会删除用于在报表服务器上处理报表的服务器集成功能。 它还将从 SharePoint 管理中心删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页和其他自定义 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页。 您可能还想删除在受影响的 SharePoint 站点上不再使用的所有报表和其他报表服务器项。 在删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序后，它们不会再运行。  
   
- 若要卸载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序，你必须具有[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]安装仍在运行。 如果先卸载 SharePoint 2010，则必须重新安装该产品才能卸载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。  
+ 若要卸载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序，必须具有[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]安装仍在运行。 如果先卸载 SharePoint 2010，则必须重新安装该卸载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。  
   
  卸载外接程序的步骤与卸载独立服务器和服务器场的步骤相同。 安装程序将删除在安装过程中添加的程序文件和所有配置设置。  
   
@@ -307,7 +307,7 @@ Rssharepoint.msi /?
 |t|仅限 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005。 此开关测试报表服务器与报表服务器数据库之间是否具有有效的连接。|  
   
 ## <a name="configuring-reporting-services"></a>配置 Reporting Services  
- 在所有所需计算机上都安装了外接程序之后，您需要从 SharePoint 管理中心来配置报表服务器。 所需步骤取决于安装不同技术的顺序。 有关详细信息，请参阅[安装 Reporting Services SharePoint 模式用于 SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)和[Reporting Services 报表服务器&#40;SharePoint 模式&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
+ 在所有所需计算机上都安装了外接程序之后，您需要从 SharePoint 管理中心来配置报表服务器。 所需步骤取决于安装不同技术的顺序。 有关详细信息，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)并[Reporting Services 报表服务器&#40;SharePoint 模式&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
   
 ## <a name="see-also"></a>请参阅  
  [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)   

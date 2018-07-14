@@ -1,5 +1,5 @@
 ---
-title: 创建会话作用域的命名集 (MDX) |Microsoft 文档
+title: 创建会话作用域的命名集 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE SET statement
 - session-scoped named sets [MDX]
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 101109dce04d6a31c4b78a47573ccb54f2c80f0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a3d6a1fd35c91733b32ecc3244f0fd3bafe6a07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167688"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>创建会话作用域的命名集 (MDX)
   若要创建在整个多维表达式 (MDX) 会话期间都可用的命名集，请使用 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) 语句。 直到 MDX 会话关闭后才会删除使用 CREATE SET 语句创建的命名集。  

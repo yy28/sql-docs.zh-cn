@@ -1,5 +1,5 @@
 ---
-title: 筛选值使用 sql:limit-字段和 sql:limit-值 (SQLXML 4.0) |Microsoft 文档
+title: 筛选值使用 sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260553"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
   可以基于某些限制值来限制从数据库查询返回的行。 `sql:limit-field` 和 `sql:limit-value` 批注用于标识包含限制值的数据库列和指定用于筛选返回的数据的特定限制值。  
@@ -58,7 +58,7 @@ ms.locfileid: "36028315"
   
  一个客户可以具有发货地址和/或开票地址。 AddressType 列值是 Shipping 和 Billing。  
   
- 这是在其中的映射架构**ShipTo**架构属性映射到的地址关系中的 StreetAddress 列。 为此属性返回的值是限制为仅通过指定传送地址`sql:limit-field`和`sql:limit-value`批注。 同样，**帐单寄往**架构属性返回仅客户的帐单邮寄地址。  
+ 这是在其中的映射架构**ShipTo**架构属性映射到 Addresses 关系中的 StreetAddress 列。 此属性的返回值被限制为仅通过指定发货地址`sql:limit-field`和`sql:limit-value`批注。 同样， **BillTo**架构属性返回只客户的开票地址。  
   
  以下是架构：  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36028315"
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 查询使用 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  结果如下：  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36028315"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 这是在其中的映射架构**OrderID**订单详细信息上的属性映射到订单关系中的 OrderID 列。 为此属性返回的值仅限于仅在那些具有值为 2.0000000e-001 (0.2) 为指定**折扣**属性使用`sql:limit-field`和`sql:limit-value`批注。  
+ 这是在其中的映射架构**OrderID**订单详细信息属性映射到 orders 关系中的 OrderID 列。 此属性的返回值被限制为仅显示那些具有值 2.0000000e-001 (0.2) 为指定**折扣**属性使用`sql:limit-field`和`sql:limit-value`批注。  
   
  以下是架构：  
   
@@ -311,8 +311,8 @@ ms.locfileid: "36028315"
   
 ## <a name="see-also"></a>请参阅  
  [float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar 和 nvarchar &#40;Transact SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+ [nchar 和 nvarchar &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [使用批注在查询中的 XSD 架构&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [使用带批注的 XSD 架构在查询中的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

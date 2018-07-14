@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200827"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
   本教程教您如何创建两种报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 下图显示了将创建的报表。  
@@ -31,39 +31,39 @@ ms.locfileid: "36028743"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>学习内容  
- **钻取报表中你将学习如何：**  
+ **钻取报表中您将学习如何：**  
   
 1.  [从表或矩阵向导创建钻取矩阵报表和数据集](#DMatrixAndDataset)  
   
-    1.  [指定的数据连接](#DConnection)  
+    1.  [指定数据连接](#DConnection)  
   
     2.  [创建 MDX 查询](#DMDXQuery)  
   
-    3.  [将数据组织成组样式](#DLayout)  
+    3.  [按组样式组织数据](#DLayout)  
   
     4.  [添加小计和总计](#DTotals)  
   
     5.  [选择样式](#DStyle)  
   
-2.  [为货币的格式数据](#DFormat)  
+2.  [数据格式设置为货币](#DFormat)  
   
-3.  [将列添加到迷你图中显示销售值](#DSparkline)  
+3.  [将列添加到在迷你图中显示销售值](#DSparkline)  
   
-4.  [添加报表标题与 Product Category Name](#DReportTitle)  
+4.  [添加包含产品类别名称的报表标题](#DReportTitle)  
   
 5.  [更新参数属性](#DParameter)  
   
 6.  [将报表保存到 SharePoint 库](#DSave)  
   
- **主报表中你将学习如何：**  
+ **在主报表中您将学习如何：**  
   
 1.  [从表或矩阵向导创建主矩阵报表和数据集](#MMatrixAndDataset)  
   
-    1.  [指定的数据连接](#MConnection)  
+    1.  [指定数据连接](#MConnection)  
   
     2.  [创建 MDX 查询](#MMDXQuery)  
   
-    3.  [将数据组织成组](#MLayout)  
+    3.  [将数据组织到组](#MLayout)  
   
     4.  [添加小计和总计](#MTotals)  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36028743"
   
 2.  [删除总计行](#MGrandTotal)  
   
-3.  [配置用于钻取的文本中操作](#MDrillthrough)  
+3.  [配置用于钻取的文本框操作](#MDrillthrough)  
   
-4.  [将数字的值替换为指示器](#MIndicators)  
+4.  [使用指示器替换数值](#MIndicators)  
   
 5.  [更新参数属性](#MParameter)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36028743"
   
 7.  [将报表保存到 SharePoint 库](#MSave)  
   
-8.  [运行 Main 和钻取报表](#MRunReports)  
+8.  [运行主报表和钻取报表](#MRunReports)  
   
  本教程的预计学时：30 分钟。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "36028743"
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
-1.  单击**启动**，指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
+1.  单击**启动**，依次指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
   
-     **入门**对话框随即打开。 如果未出现，从**报表生成器**菜单上，单击**新建**。  
+     **Getting Started**对话框随即打开。 如果未显示，从**报表生成器**按钮，再单击**新建**。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36028743"
     > [!NOTE]  
     >  该参数包含产品类别的名称。 单击主报表中的产品类别名称时，通过使用此参数将它的名称传递给钻取报表。  
   
-###  <a name="DSkip"></a> 创建数据集  
+###  <a name="DSkip"></a> 若要创建数据集  
   
 1.  从“Channel”维度将“Channel Name”拖到数据窗格。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36028743"
   
 #### <a name="to-specify-a-style"></a>指定样式  
   
-1.  上**选择样式**页上，在样式窗格中，选择静态图像。  
+1.  上**选择一种样式**页上，在样式窗格中，选择静态图像。  
   
 2.  单击 **“完成”**。  
   
@@ -398,7 +398,7 @@ ms.locfileid: "36028743"
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
-1.  单击**启动**，指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
+1.  单击**启动**，依次指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
   
 2.  在“入门”对话框中，确认已选中“新建报表”，然后单击“表或矩阵向导”。  
   
@@ -523,7 +523,7 @@ ms.locfileid: "36028743"
   
 8.  在“名称”框中，键入 **Net Sales**，然后单击“确定”。“计算成员”窗格将列出“Net Sales”计算成员。  
   
-###  <a name="MSkip"></a> 创建数据集  
+###  <a name="MSkip"></a> 若要创建数据集  
   
 1.  从“Channel”维度将“Channel Name”拖到数据窗格。  
   
@@ -574,7 +574,7 @@ ms.locfileid: "36028743"
   
 #### <a name="to-specify-a-style"></a>指定样式  
   
-1.  上**选择样式**页上，在样式窗格中，选择静态图像。  
+1.  上**选择一种样式**页上，在样式窗格中，选择静态图像。  
   
 2.  单击 **“完成”**。  
   

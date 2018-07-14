@@ -1,5 +1,5 @@
 ---
-title: LogFileAppend 元素 (ASSL) |Microsoft 文档
+title: LogFileAppend 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileAppend element
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d337d4110afc07d8aa211bc17685bc0fc2e8d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4cd2f873b3d7394dac45a1a40b9b98483118f44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190907"
 ---
 # <a name="logfileappend-element-assl"></a>LogFileAppend 元素 (ASSL)
-  确定是否[跟踪](../objects/trace-element-assl.md)元素将其日志记录输出追加到现有的日志文件，或者覆盖它。  
+  确定是否[跟踪](../objects/trace-element-assl.md)元素将其日志记录输出追加到现有日志文件，或将其覆盖。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36124868"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`LogFileAppend`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Trace>。  
+ 父级对应的元素`LogFileAppend`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>请参阅  
  [跟踪元素&#40;ASSL&#41;](../collections/traces-element-assl.md)   

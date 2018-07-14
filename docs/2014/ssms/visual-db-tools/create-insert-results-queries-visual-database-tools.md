@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - result sets [SQL Server], queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 033e1e1f49a8d08b782e1a349ea43e388b9073b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34e1fb7b3744cd07f58f47dd68b8055908bdeb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216487"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>创建插入结果查询 (Visual Database Tools)
   您可以使用“插入结果”查询将行从一个表复制到另一个表或在同一个表内复制行。 例如，在 `titles` 表中，您可使用“插入结果”查询将某个出版商的所有书名信息复制到另一个可用于该出版商的表中。 “插入结果”查询与“生成表”查询类似，但前者是将行复制到现有表中。  
@@ -84,7 +84,7 @@ WHERE (pub_id = '0766')
   
      查询和视图设计器会将选择的列添加到“条件”窗格的“列”列中。  
   
-5.  在“条件”窗格的“追加”列中，为要复制的每个列选择目标表中的相应目标列。 选择*tablename。\** 如果您要复制整个行。 目标表中的列必须与源表中的列具有相同（或兼容）的数据类型。  
+5.  在“条件”窗格的“追加”列中，为要复制的每个列选择目标表中的相应目标列。 选择*tablename。\** 如果要复制整行。 目标表中的列必须与源表中的列具有相同（或兼容）的数据类型。  
   
 6.  如果希望按特定顺序复制行，请指定排序顺序。 有关详细信息，请参阅[对查询结果进行排序和分组 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)。  
   
@@ -100,7 +100,7 @@ WHERE (pub_id = '0766')
  在执行“插入结果”查询时，不会在[“结果”窗格](results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指出已复制的行数。  
   
 ## <a name="see-also"></a>请参阅  
- [类型的查询&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [类型的查询&#40;可视化数据库工具&#41;](types-of-queries-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

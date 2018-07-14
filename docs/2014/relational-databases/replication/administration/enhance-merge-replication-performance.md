@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4fd41d63d0086ac582cf0ca033453bf0d9bc7776
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 78221050ed5832f76843a57d20ed3a518b1ebea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256326"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
   在考虑 [增强事务复制性能](enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于合并复制的其他几个方面。  
@@ -45,7 +45,7 @@ ms.locfileid: "36026755"
   
 -   考虑过度规范包括大型对象 (LOB) 数据类型的表。  
   
-     发生同步时，合并代理可能需要从分发服务器或订阅服务器读取和传输整个数据行。 如果该行包含使用 LOB 的列，即使这些列可能尚未更新，此过程也会要求增加内存分配并可能对性能产生负面影响。 为减少对性能产生负面影响的可能性，可考虑将 LOB 列放在一个单独的表中并对其余的行数据采用一对一关系。 数据类型`text`， `ntext`，和`image`已弃用。 如果包含 Lob，我们建议你使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分别。  
+     发生同步时，合并代理可能需要从分发服务器或订阅服务器读取和传输整个数据行。 如果该行包含使用 LOB 的列，即使这些列可能尚未更新，此过程也会要求增加内存分配并可能对性能产生负面影响。 为减少对性能产生负面影响的可能性，可考虑将 LOB 列放在一个单独的表中并对其余的行数据采用一对一关系。 数据类型`text`， `ntext`，和`image`不推荐使用。 如果确实要包括 Lob，建议使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分别。  
   
 ## <a name="publication-design"></a>发布设计  
   

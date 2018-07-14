@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 caps.latest.revision: 47
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ba7042030a88a616d5d4b23df4475111a63ee76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9e828696135d13263a68219c1a248325a14676d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196787"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
   向“教程”项目添加报表之后，需要定义数据源，它是报表从关系数据库、多维数据库或其他资源访问数据所使用的连接信息。  
@@ -33,7 +33,7 @@ ms.locfileid: "36028517"
     > [!NOTE]  
     >  如果“报表数据”窗格不可见，请单击“视图”菜单上的“报表数据”。  
   
-2.  在**名称**，类型[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
+2.  在中**名称**，类型[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
   
 3.  确保已选中“嵌入连接”。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36028517"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  有关连接字符串的详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)和[数据源属性对话框中，常规](data-source-properties-dialog-box-general.md)。  
+    >  有关连接字符串的详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)并[数据源属性对话框，常规](data-source-properties-dialog-box-general.md)。  
   
 6.  在左窗格中单击“凭据”，然后单击“使用 Windows 身份验证(集成安全性)”。  
   

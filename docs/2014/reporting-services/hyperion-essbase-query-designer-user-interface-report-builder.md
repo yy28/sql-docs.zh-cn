@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase 查询设计器用户界面 （报表生成器） |Microsoft 文档
+title: Hyperion Essbase 查询设计器用户界面 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 27dd20fae08317cd58fd9ca9b5084fda000906c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3653c8bf79c3c7527f72d01282fe7af961fbbec8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208587"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 查询设计器用户界面（报表生成器）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个图形查询设计器，用于为 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动在数据源中定义的多维数据集的成员，以生成可在处理报表时检索数据的 MDX 查询。  
@@ -35,7 +35,7 @@ ms.locfileid: "36027882"
  本节介绍每种模式的图形查询设计器中的工具栏按钮和查询设计器窗格。  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>设计模式下的图形查询设计器  
- 当您编辑 MDX 查询使用的数据集[!INCLUDE[extEssbase](../includes/extessbase-md.md)]在设计模式下打开的数据源的图形查询设计器。 下图列出了设计模式的窗格。  
+ 编辑使用的数据集的 MDX 查询时[!INCLUDE[extEssbase](../includes/extessbase-md.md)]数据源，在设计模式下打开图形查询设计器。 下图列出了设计模式的窗格。  
   
  ![用于 Hyperion Essbase 数据源的查询设计器](media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
   

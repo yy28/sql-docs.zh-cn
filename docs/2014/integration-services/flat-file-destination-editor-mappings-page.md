@@ -1,5 +1,5 @@
 ---
-title: 平面文件目标编辑器 （映射页） |Microsoft 文档
+title: 平面文件目标编辑器 （映射页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d7c94ee04df34919f40a0369d60592fe975b6bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83d22f24c737a84a55bef27b2150e2032deccb9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213407"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  

@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261359"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
   AlwaysOn 可用性组是预定义的 SQL Server 关系数据库集合；当有条件触发任一个数据库进行故障转移时，这些数据库将执行集体故障转移，使请求重定向到同一可用性组中其他实例上的镜像数据库。 如果将可用性组用作高可用性解决方案，您可以将该组中的数据库用作 Analysis Services 表格或多维解决方案中的数据源。 使用可用性数据库时，以下所有 Analysis Services 操作都能按预期工作：处理或导入数据、直接查询关系数据（使用 ROLAP 存储或 DirectQuery 模式）以及写回。  
@@ -134,7 +133,7 @@ ms.locfileid: "36028218"
   
      要确定可用性组侦听器的名称，您可以询问数据库管理员，或连接到可用性组中的某个实例并查看其 AlwaysOn 可用性配置。 在下面的屏幕截图中，可用性组侦听器为 **AdventureWorks2**。  
   
-     ![在 Management Studio 中的 AlwaysOn 可用性文件夹](../../media/ssas-alwaysoninfoinssms.png "在 Management Studio 中的 AlwaysOn 可用性文件夹")  
+     ![在 Management Studio 中的 AlwaysOn 可用性文件夹](../../media/ssas-alwaysoninfoinssms.png "Management Studio 中的 AlwaysOn 可用性文件夹")  
   
 4.  还是在连接管理器中，单击左侧导航窗格中的 **“全部”** ，查看数据访问接口的属性网格。  
   
@@ -159,7 +158,7 @@ ms.locfileid: "36028218"
   
 1.  启动 SQL Server Profiler 并连接到承载辅助副本的 SQL Server 实例。  
   
-     当跟踪运行，则`SQL:BatchStarting`和`SQL:BatchCompleting`事件将显示从数据库引擎实例执行的 Analysis Services 发出的查询。 这些事件已默认选定，您只需启动跟踪即可。  
+     当跟踪运行，则`SQL:BatchStarting`和`SQL:BatchCompleting`事件将显示从数据库引擎实例执行的 Analysis Services 中发出的查询。 这些事件已默认选定，您只需启动跟踪即可。  
   
 2.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中，打开 Analysis Services 项目或包含要测试的数据源连接的解决方案。 确保数据源指定的是可用性组侦听器而不是组中的实例。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "36028218"
   
 4.  部署该解决方案，并在部署完成后停止跟踪。  
   
-     在跟踪窗口中，您应能看到来自应用程序 **Microsoft SQL Server Analysis Services**的事件。 你应该会看到`SELECT`从承载辅助副本，证明连接通过该侦听器到辅助副本的服务器实例上的数据库中检索数据的语句。  
+     在跟踪窗口中，您应能看到来自应用程序 **Microsoft SQL Server Analysis Services**的事件。 应会看到`SELECT`从承载辅助副本，证明该连接通过对辅助副本侦听器的服务器实例上的数据库中检索数据的语句。  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>第 2 步：执行计划的故障转移以测试配置  
   

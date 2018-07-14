@@ -1,5 +1,5 @@
 ---
-title: 链接度量值组 |Microsoft 文档
+title: 链接度量值组 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251469"
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
   链接度量值组基于同一数据库内不同多维数据集中的另一度量值组，或基于一个不同的 Analysis Services 数据库。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
   
- Microsoft 建议原始和链接度量值组驻留于在同一台服务器上运行的解决方案中。 将链接到远程服务器上的度量值组计划为未来版本中不推荐使用 (请参阅[Deprecated Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
+ Microsoft 建议原始和链接度量值组驻留于在同一台服务器上运行的解决方案中。 链接到远程服务器上的度量值组计划为在将来的版本中不推荐使用 (请参阅[SQL Server 2014 中不推荐使用 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
   
 > [!IMPORTANT]  
 >  链接度量值组为只读的。 要获得最新更改，您必须基于已修改的源对象删除并重新创建所有链接度量值组。 因此，在以后需要修改度量值组时，应考虑是否可以采用在两个项目间复制和粘贴度量值组这个替代方法。  
@@ -72,7 +72,7 @@ ms.locfileid: "36028890"
 ## <a name="secure-a-linked-measure"></a>保护链接度量值  
  定义了链接之后，在管理对链接度量值组中度量值的访问时，将采用与管理对其他度量值组的访问相同的方式。 链接对象与其非链接对等对象一起出现在角色设计器中。 有关管理度量值组安全性的详细信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
   
- 若要定义或使用链接度量值组，Windows 服务帐户中的为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例必须属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库角色具有`ReadDefinition`和`Read`访问源上的权限[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]到实例源多维数据集和度量值组，或者必须属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员角色的源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。  
+ 为了定义或使用链接度量值组，Windows 服务帐户中的为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例必须属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库角色具有`ReadDefinition`并`Read`访问源上的权限[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例源多维数据集和度量值组，或必须属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员角色的源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。  
   
 ## <a name="see-also"></a>请参阅  
  [定义链接维度](define-linked-dimensions.md)  

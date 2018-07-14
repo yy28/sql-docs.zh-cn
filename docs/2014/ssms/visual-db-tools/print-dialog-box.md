@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.Print
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f4f500ac657ac775277b8d625d3cb3a3d98259c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 01564150ef8ba4ff8834d7bab7dd10f78e79b019
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175076"
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
   可通过选择“打印”对话框中的选项来指定打印文档的方式。  

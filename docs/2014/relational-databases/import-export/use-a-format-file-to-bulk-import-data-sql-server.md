@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f46357975476ac301c28f639a3508edc992e5e5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3eb895440cc6680acd719b47a88200d6c92eff4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289053"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件大容量导入数据 (SQL Server)
   本主题说明如何在大容量导入操作中使用格式化文件。 格式化文件将数据文件的各字段映射到表的各列。  当使用 **bcp** 命令、BULK INSERT 或 INSERT ...SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令时，可以使用非 XML 或 XML 格式化文件大容量导入数据。  
@@ -31,7 +30,7 @@ ms.locfileid: "36027674"
 >  对于用于 Unicode 字符数据文件的格式化文件，所有输入字段必须为 Unicode 文本字符串（即固定大小 Unicode 字符串或字符终止 Unicode 字符串）。  
   
 > [!NOTE]  
->  如果你不了解格式化文件，请参阅[非 XML 格式化文件&#40;SQL Server&#41; ](xml-format-files-sql-server.md)和[XML 格式化文件&#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
+>  如果您不了解格式化文件，请参阅[非 XML 格式化文件&#40;SQL Server&#41; ](xml-format-files-sql-server.md)并[XML 格式化文件&#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>大容量导入命令的格式化文件选项  
  下表汇总了各个大容量导入命令的格式化文件选项。  

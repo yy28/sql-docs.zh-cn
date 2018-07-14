@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249747"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   共享数据集设计窗口有助于您创建可与他人共享的数据集查询。 通过该窗口，您可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 有关使用报表中数据的详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
+ 有关使用报表中的数据的详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
   
 ##  <a name="Ribbon"></a> 功能区  
  功能区可帮助您快速查找完成任务所需的命令。 命令通过以下逻辑组进行组织：连接、数据集和查询设计器。  
@@ -35,7 +35,7 @@ ms.locfileid: "36027172"
  在“连接”组中使用 **“选择”** 按钮可以选择报表中的共享数据源，或浏览到报表服务器上的共享数据源。  
   
 > [!NOTE]  
->  共享数据集必须基于共享数据源。 如果您需要的数据源不可用，那么您必须在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、 删除或修改共享数据源&#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)中的 Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)。  
+>  共享数据集必须基于共享数据源。 如果您需要的数据源不可用，那么您必须在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、 删除或修改共享数据源&#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)。  
   
  有关详细信息，请参阅[数据连接、 数据源和报表生成器中的连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
@@ -56,12 +56,12 @@ ms.locfileid: "36027172"
   
  有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
- 有关缓存刷新计划的详细信息，请参阅[缓存共享数据集&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md)中的 Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)。  
+ 有关缓存刷新计划的详细信息，请参阅[缓存共享数据集&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)。  
   
 ### <a name="query-designer"></a>查询设计器  
  使用查询设计器工具栏可以帮助您生成用于指定要通过数据连接检索的数据的查询。 您看到的工具栏取决于与通过数据连接获得的数据源类型相关联的查询设计器。  
   
- 有关详细信息，请参阅中的数据源类型相对应的主题[从外部数据源添加数据&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)和[查询设计器&#40;报表生成器&#41;](../query-designers-report-builder.md).  
+ 有关详细信息，请参阅中的数据源类型相对应的主题[从外部数据源中添加数据&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)并[查询设计器&#40;报表生成器&#41;](../query-designers-report-builder.md).  
   
 
   
@@ -72,7 +72,7 @@ ms.locfileid: "36027172"
   
  有些数据源类型支持基于文本的查询设计器，你可以使用此类查询设计器粘贴已在其他工具（例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]）中创建的查询。  
   
- 每种数据源类型都对将针对外部数据源进行的查询有特定的要求。 有关详细信息，请参阅中的数据源类型相对应的主题[从外部数据源添加数据&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)和[Reporting services 支持的数据源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)中的 Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)。  
+ 每种数据源类型都对将针对外部数据源进行的查询有特定的要求。 有关详细信息，请参阅中的数据源类型相对应的主题[从外部数据源中添加数据&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)并[支持的 Reporting Services 数据源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services 文档中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)。  
   
 
   

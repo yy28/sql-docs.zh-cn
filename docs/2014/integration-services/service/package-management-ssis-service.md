@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
 - packages [Integration Services], managing
@@ -27,13 +27,13 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e792b995e73ba4a964bd5076134af8c9817642ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172958"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
   包的管理涉及的任务包括以下任务：  
@@ -48,7 +48,7 @@ ms.locfileid: "36028615"
 >  本主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
 ## <a name="package-store"></a>包存储区  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用于访问的两个顶级文件夹[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包：**正在运行的包**和**存储的包**。 **“正在运行的包”** 文件夹列出当前正在服务器上运行的包。 **“已存储的包”** 文件夹列出包存储区中保存的包。 这些只是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所管理的包。 包存储区可以同时包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置文件中列出的 msdb 数据库和文件系统文件夹或只包含其中的一项。 配置文件指定要管理的 msdb 数据库和文件系统文件夹。 您也可以将包存储在文件系统中不受 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理的其他位置。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用于访问两个顶级文件夹[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包：**正在运行的包**并**存储的包**。 **“正在运行的包”** 文件夹列出当前正在服务器上运行的包。 **“已存储的包”** 文件夹列出包存储区中保存的包。 这些只是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所管理的包。 包存储区可以同时包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置文件中列出的 msdb 数据库和文件系统文件夹或只包含其中的一项。 配置文件指定要管理的 msdb 数据库和文件系统文件夹。 您也可以将包存储在文件系统中不受 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理的其他位置。  
   
  保存到 msdb 的包存储在名为 sysssispackages 的表中。 将包保存到 msdb 时，也可以按逻辑文件夹对包分组。 使用逻辑文件夹可以帮助你按目的组织包，或者筛选 sysssispackages 表中的包。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来创建新的逻辑文件夹。 默认情况下，任何添加到 msdb 的逻辑文件夹将自动包括在包存储区中。  
   

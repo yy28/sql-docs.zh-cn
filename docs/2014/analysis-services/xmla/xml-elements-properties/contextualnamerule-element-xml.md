@@ -1,5 +1,5 @@
 ---
-title: ContextualNameRule 元素 (XML) |Microsoft 文档
+title: ContextualNameRule 元素 (XML) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6b3d4e8f8023814fb0080b5ba7d9196aad81afee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c93e14e122dbe3e0905e25e56570c67c3fa769a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193897"
 ---
 # <a name="contextualnamerule-element-xml"></a>ContextualNameRule 元素 (XML)
   提供有关为属性构建复合名称的最佳方法的提示。  

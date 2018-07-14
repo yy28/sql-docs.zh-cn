@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing joins
 - joins [SQL Server], removing
 - deleting joins
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75ee172ba9dcdb5761e7dd1eefe5722441c9983a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dab1cccfd160a4dc3ed69b24700873d0bc2839f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244127"
 ---
 # <a name="remove-joins-visual-database-tools"></a>删除联接 (Visual Database Tools)
   如果您不希望表通过内部联接或外部联接进行联接，则可移除它们之间的联接。 例如，希望删除 [查询和视图设计器](visual-database-tools.md) 在两个表之间自动创建的联接。  
@@ -40,8 +40,8 @@ ms.locfileid: "36026446"
  查询和视图设计器将删除联接线并相应地更改 [SQL 窗格](sql-pane-visual-database-tools.md)中的语句。  
   
 ## <a name="see-also"></a>请参阅  
- [自动联接表&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [手动联接表&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [自动联接表&#40;可视化数据库工具&#41;](join-tables-automatically-visual-database-tools.md)   
+ [手动联接表&#40;可视化数据库工具&#41;](join-tables-manually-visual-database-tools.md)   
  [使用联接进行查询 (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

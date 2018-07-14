@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7209dc323011663a9ce07d50fb940941ba4c4a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27fe1e6f8ba6663cc6401fbff082edfe6b702a3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207237"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 事件类
   当尝试获取锁的操作因属于死锁的一部分且已被选为死锁牺牲品而被取消时，将发生 Lock:Deadlock 事件类。  

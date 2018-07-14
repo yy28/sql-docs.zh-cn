@@ -1,5 +1,5 @@
 ---
-title: 选择表和视图 （数据源视图向导） (Analysis Services) |Microsoft 文档
+title: 选择表和视图 （数据源视图向导） (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf3897fe2466b00c0346590147884696b632b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279503"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>选择表和视图（数据源视图向导）(Analysis Services)
   可以使用 **“选择表和视图”** 页，从要包含在数据源视图中的数据源选择表或视图。  
@@ -32,7 +32,7 @@ ms.locfileid: "36027534"
   
  若要按照升序或降序顺序对列表重新排序，请单击 **“名称”** 或 **“类型”**。  
   
- **包括的对象**  
+ **包含的对象**  
  列出要包含在数据源视图中的表和视图。  
   
  若要按照升序或降序顺序对列表重新排序，请单击 **“名称”** 或 **“类型”**。  

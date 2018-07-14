@@ -1,5 +1,5 @@
 ---
-title: AttributeAllMemberName 元素 (ASSL) |Microsoft 文档
+title: AttributeAllMemberName 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberName element
 ms.assetid: 5ede46a7-d8b0-40be-98d7-b01047b27d2e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9014fb486a11dc5b35f8fcab394032f26408b338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 425e9c092dff8cc3c303672b6bfb1e2b3a8096ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208047"
 ---
 # <a name="attributeallmembername-element-assl"></a>AttributeAllMemberName 元素 (ASSL)
   包含以默认语言显示的维度的“全部”成员的标题。  
@@ -62,10 +62,10 @@ ms.locfileid: "36027319"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`AttributeAllMemberName`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素`AttributeAllMemberName`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
- [配置&#40;所有&#41;属性层次结构级别](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
+ [配置&#40;所有&#41;属性层次结构的级别](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

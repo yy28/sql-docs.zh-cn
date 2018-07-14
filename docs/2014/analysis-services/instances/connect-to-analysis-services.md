@@ -1,5 +1,5 @@
 ---
-title: 连接到 Analysis Services |Microsoft 文档
+title: 连接到 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, connections
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 564ca915bf24dbdb04829eb6815dbd7fc23135be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5daf8d36d648298343d8989db01aa5fabcf3168d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255729"
 ---
 # <a name="connect-to-analysis-services"></a>连接到 Analysis Services
   使用本部分中的信息，了解连接字符串属性、用于连接的客户端库、Analysis Services 支持哪些身份验证方法以及如何在使用脱机服务器前设置或清除连接。  
@@ -38,15 +38,15 @@ ms.locfileid: "36027558"
 |[从客户端应用程序连接&#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|如果您不熟悉 Analysis Services，请查看本主题以开始了解最常与 Analysis Services 一起使用的工具和应用程序。|  
 |[连接字符串属性&#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services 包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库是如何配置的。|  
 |[Analysis Services 支持的身份验证方法](authentication-methodologies-supported-by-analysis-services.md)|本主题简要介绍了 Analysis Services 使用的身份验证方法。|  
-|[为 Kerberos 约束委派配置 Analysis Services](configure-analysis-services-for-kerberos-constrained-delegation.md)|很多商业智能解决方案需要模拟以确保仅将授权的数据返回给每个用户。 在本主题中，您将了解使用模拟的要求。 本主题还介绍配置 Analysis Services 以使用 Kerberos 约束委托的步骤。|  
+|[针对 Kerberos 约束委派配置 Analysis Services](configure-analysis-services-for-kerberos-constrained-delegation.md)|很多商业智能解决方案需要模拟以确保仅将授权的数据返回给每个用户。 在本主题中，您将了解使用模拟的要求。 本主题还介绍配置 Analysis Services 以使用 Kerberos 约束委托的步骤。|  
 |[针对 Analysis Services 实例的 SPN 注册](spn-registration-for-an-analysis-services-instance.md)|Kerberos 身份验证要求在多服务器解决方案中模拟或委托用户标识的服务具有有效的服务主体名称 (SPN)。 使用本主题中的信息以了解如何进行 Analysis Services 的 SPN 注册。|  
 |[在 Internet Information Services 上配置对 Analysis Services 的 HTTP 访问&#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|基本身份验证或跨域边界是针对 HTTP 访问配置 Analysis Services 的两个重要原因。|  
-|[数据提供程序用于 Analysis Services 连接](data-providers-used-for-analysis-services-connections.md)|Analysis Services 提供用于访问服务器操作或 Analysis Services 数据的三个客户端库。 本主题简要介绍了 ADOMD.NET、Analysis Services 管理对象 (AMO) 和 Analysis Services OLE DB 访问接口 (MSOLAP)。|  
-|[用户和 Analysis Services 服务器上的会话断开连接](disconnect-users-and-sessions-on-analysis-services-server.md)|在使服务器脱机或执行基线性能测试前清除现有连接和会话。|  
+|[用于 Analysis Services 连接的数据提供程序](data-providers-used-for-analysis-services-connections.md)|Analysis Services 提供用于访问服务器操作或 Analysis Services 数据的三个客户端库。 本主题简要介绍了 ADOMD.NET、Analysis Services 管理对象 (AMO) 和 Analysis Services OLE DB 访问接口 (MSOLAP)。|  
+|[断开用户和 Analysis Services 服务器上的会话的连接](disconnect-users-and-sessions-on-analysis-services-server.md)|在使服务器脱机或执行基线性能测试前清除现有连接和会话。|  
   
 ## <a name="see-also"></a>请参阅  
  [安装后配置&#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
- [Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)   
- [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [在 Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)   
+ [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)  
   
   

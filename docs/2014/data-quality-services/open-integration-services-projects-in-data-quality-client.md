@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 534bbcada8b7db3d6a96d57b4f2d4be867676469
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c3763ac1fa89ae69d905510944e75ec2a10116d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217987"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
-  [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ，你可以在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
+  [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ，可在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36027766"
 ####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色，才能打开 Integration Services 项目。  
   
- ![用于回顶部链接的箭头图标](../2014-toc/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[中此主题](#Intro)  
+ ![使用顶部的链接的箭头图标](../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此主题](#Intro)  
   
 ##  <a name="Open"></a> 打开 Integration Services 项目  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36027766"
   
 6.  导出数据后，单击 **“完成”** 以关闭 Integration Services 项目。  
   
- ![用于回顶部链接的箭头图标](../2014-toc/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[中此主题](#Intro)  
+ ![使用顶部的链接的箭头图标](../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此主题](#Intro)  
   
 ## <a name="see-also"></a>请参阅  
  [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   

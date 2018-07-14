@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77564d3f8d13242af8b457ef96eb80ca14ff2780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 306f73588ed837771bbb5852d9107e44c28f1f0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276063"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
   您可以通过选择预定义调色板或定义自定义调色板来更改图表的调色板。 自定义调色板是针对具体报表而言。  
@@ -46,7 +46,7 @@ ms.locfileid: "36027874"
   
 2.  在设计图面上，单击该图表。 图表对象的属性将显示在“属性”窗格中。  
   
-3.  在**图表**部分中，为`Palette`属性中，选择**自定义**。  
+3.  在中**图表**部分中，对于`Palette`属性中，选择**自定义**。  
   
 4.  在 CustomPaletteColors 属性中，单击“编辑集合”(**…**) 按钮。 将打开 **“ReportColorExpression 集合编辑器”** 。  
   

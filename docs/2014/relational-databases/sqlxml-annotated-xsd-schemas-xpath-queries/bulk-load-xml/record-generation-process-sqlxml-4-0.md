@@ -1,5 +1,5 @@
 ---
-title: 记录生成过程 (SQLXML 4.0) |Microsoft 文档
+title: 记录生成过程 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 066dd7d143c57f06240a74aa058dec3588db0f55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 60daad1df3838e7c35af82887da3449a74267753
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262413"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>记录生成过程 (SQLXML 4.0)
   XML 大容量加载处理 XML 输入数据并为 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的相应表准备记录。 XML 大容量加载中的逻辑确定何时生成新记录、要将哪些子元素或属性值复制到记录的字段以及何时完成记录并可以发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  
@@ -47,7 +47,7 @@ ms.locfileid: "36028321"
  XML 大容量加载处理常见映射架构批注，包括列和表映射（通过使用批注显式指定或通过默认映射隐式指定）以及联接关系。  
   
 > [!NOTE]  
->  此处假定您熟悉带批注的 XSD 或 XDR 映射架构。 有关架构的详细信息，请参阅[简介批注 XSD 架构&#40;SQLXML 4.0&#41; ](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)或[批注 XDR 架构&#40;SQLXML 4.0 中弃用&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  此处假定您熟悉带批注的 XSD 或 XDR 映射架构。 有关架构的详细信息，请参阅[带批注的 XSD 架构简介&#40;SQLXML 4.0&#41; ](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)或[带批注的 XDR 架构&#40;SQLXML 4.0 中不推荐使用&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
  了解记录生成需要了解以下概念：  
   
@@ -59,8 +59,8 @@ ms.locfileid: "36028321"
   
 -   记录生成规则的例外情况  
   
-## <a name="scope-of-a-node"></a>节点范围内  
- XML 文档中的节点 （一个元素或属性） 进入*纳入范围*XML 大容量加载在遇到时它在 XML 输入的数据流中。 对于元素节点，元素的开始标记使该元素进入作用域。 对于属性节点，属性名称使该属性进入作用域。  
+## <a name="scope-of-a-node"></a>节点作用域  
+ XML 文档中的节点 （元素或属性） 进入*纳入范围*XML 大容量加载在遇到时它在 XML 输入的数据流中。 对于元素节点，元素的开始标记使该元素进入作用域。 对于属性节点，属性名称使该属性进入作用域。  
   
  当在结束标记（对于元素节点）或属性值结尾（对于属性节点）没有更多数据用于节点时，则表示节点离开作用域。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36028321"
 </xsd:schema>  
 ```  
   
- 该架构指定**\<客户 >** 具有元素**CustomerID**和**CompanyName**属性。 `sql:relation`批注地图**\<客户 >** 到 Customers 表的元素。  
+ 该架构指定**\<客户 >** 具有元素**CustomerID**并**CompanyName**属性。 `sql:relation`批注映射**\<客户 >** 到 Customers 表的元素。  
   
  考虑 XML 文档的以下片段：  
   
@@ -93,18 +93,18 @@ ms.locfileid: "36028321"
   
  将前文中所述的架构提供给 XML 大容量加载并使用 XML 数据作为输入，XML 大容量加载按以下方式处理源数据中的节点（元素和属性）：  
   
--   第一个开始标记**\<客户 >** 元素会为该元素提供在作用域。 将此节点映射到 Customers 表。 因此，XML 大容量加载为 Customers 表生成一个记录。  
+-   第一个开始标记**\<客户 >** 元素使该元素进入作用域。 将此节点映射到 Customers 表。 因此，XML 大容量加载为 Customers 表生成一个记录。  
   
--   在架构中的所有属性， **\<客户 >** 元素映射到的客户表的列。 这些属性进入作用域时，XML 大容量加载将它们的值复制到父作用域已生成的客户记录。  
+-   在架构中的所有属性， **\<客户 >** 元素映射到 Customers 表的列。 这些属性进入作用域时，XML 大容量加载将它们的值复制到父作用域已生成的客户记录。  
   
--   XML 大容量加载在到达的结束标记**\<客户 >** 元素，超出范围的元素。 这将导致 XML 大容量加载认为该记录已完成并将其发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   当 XML 大容量加载到达的结束标记**\<客户 >** 元素，该元素离开作用域。 这将导致 XML 大容量加载认为该记录已完成并将其发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- XML 大容量加载遵循此过程为每个后续**\<客户 >** 元素。  
+ XML 大容量加载执行此过程为每个后续**\<客户 >** 元素。  
   
 > [!IMPORTANT]  
 >  在此模型中，由于是在到达结束标记（或节点离开作用域）时插入记录，因此必须定义节点作用域内与该记录相关的所有数据。  
   
-## <a name="record-subset-and-the-key-ordering-rule"></a>记录的子集和排序规则的密钥  
+## <a name="record-subset-and-the-key-ordering-rule"></a>记录子集和键排序规则  
  指定使用 `<sql:relationship>` 的映射架构时，“子集”一词指针对关系的外键关系生成的记录集。 在下面的示例中，CustOrder 记录是针对外键关系 `<sql:relationship>` 生成的。  
   
  例如，假定一个数据库包含以下各表：  
@@ -151,19 +151,19 @@ ms.locfileid: "36028321"
   
  下面给出了示例 XML 数据和创建工作示例的步骤。  
   
--   当**\<客户 >** XML 数据文件中的元素节点就会进入作用域时，XML 大容量加载生成 Cust 表的记录。 XML 大容量加载然后必要的列的值 （CustomerID、 CompanyName 和 City） 将从复制 **\<CustomerID >**，  **\<CompanyName >**，和**\<城市 >** 作为这些元素的子元素输入到作用域。  
+-   当**\<客户 >** XML 数据文件中的元素节点进入作用域，则 XML 大容量加载将生成 Cust 表的记录。 然后，XML 大容量加载将必要的列值 （CustomerID、 CompanyName 和 City） 复制从 **\<CustomerID >**， **\<公司名称 >**，和**\<城市 >** 与这些元素的子元素进入作用域。  
   
--   当**\<顺序 >** 元素节点就会进入作用域时，XML 大容量加载生成 CustOrder 表的记录。 XML 大容量加载操作将的值复制**OrderID**属性设为此记录。 从获取 CustomerID 列所需的值 **\<CustomerID >** 的子元素**\<客户 >** 元素。 XML 大容量加载使用中指定的信息`<sql:relationship>`来获取此记录的 CustomerID 外密钥值，除非**CustomerID**中指定的属性**\<顺序 >** 元素。 一般规则是：如果子元素显式指定外键属性的值，则 XML 大容量加载使用该值，而不通过使用指定的 `<sql:relationship>` 来获取父元素的值。 与此**\<顺序 >** 元素节点号超出范围时，XML 大容量加载发送到记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，然后处理所有后续**\<顺序 >** 元素节点相同的方式。  
+-   当**\<顺序 >** 元素节点进入作用域，则 XML 大容量加载将生成 CustOrder 表的记录。 XML 大容量加载将复制的值**OrderID**属性为此记录。 从获取客户 id 列所需的值 **\<CustomerID >** 的子元素**\<客户 >** 元素。 XML 大容量加载使用中指定的信息`<sql:relationship>`若要获取此记录的 CustomerID 外密钥值，除非**CustomerID**中指定的属性**\<顺序 >** 元素。 一般规则是：如果子元素显式指定外键属性的值，则 XML 大容量加载使用该值，而不通过使用指定的 `<sql:relationship>` 来获取父元素的值。 与此**\<顺序 >** 元素节点离开作用域中，XML 大容量加载将记录发送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]然后再处理所有后续**\<顺序 >** 元素节点相同的方式。  
   
--   最后， **\<客户 >** 元素节点号超出范围。 此时，XML 大容量加载将客户记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 XML 大容量加载为 XML 数据流中的所有后续客户执行此过程。  
+-   最后， **\<客户 >** 元素节点离开作用域。 此时，XML 大容量加载将客户记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 XML 大容量加载为 XML 数据流中的所有后续客户执行此过程。  
   
  以下是有关映射架构的两点结论：  
   
--   当架构满足"包含"规则 (例如，关联的作用域内定义的所有数据与客户和订单的**\<客户 >** 和 **\<顺序 >** 元素节点)，大容量加载成功。  
+-   当架构满足"包容"规则 (例如，与客户和订单相关联的所有数据在关联的范围内都定义**\<客户 >** 和 **\<顺序 >** 元素节点)，大容量加载成功。  
   
--   在描述**\<客户 >** 元素、 其子元素指定适当的顺序。 在这种情况下，  **\<CustomerID >** 之前指定子元素**\<顺序 >** 子元素。 这意味着，在输入的 XML 数据文件中，  **\<CustomerID >** 元素值是可用作外键时值**\<顺序 >** 元素进入到作用域。 首先指定键属性，此即“键排序规则”。  
+-   在描述**\<客户 >** 元素，以适当顺序指定了元素及其子项目。 在这种情况下，  **\<CustomerID >** 子元素指定之前**\<顺序 >** 子元素。 这意味着，在输入 XML 数据文件中，  **\<CustomerID >** 元素的值是可用作外键时值**\<顺序 >** 元素进入作用域。 首先指定键属性，此即“键排序规则”。  
   
-     如果指定 **\<CustomerID >** 子元素的后面**\<顺序 >** 子元素，则这不可用 **\<顺序 >** 元素进入到作用域。 当 **\</order >** 然后读取结束标记，CustOrder 表的记录被视为完成，并使用 NULL 值不是所需的结果的 CustomerID 列的 CustOrder 表中插入。  
+     如果指定 **\<CustomerID >** 子元素的后面**\<顺序 >** 子元素，值不可用 **\<顺序 >** 元素进入作用域。 当 **\</o >** 然后读取结束标记、 CustOrder 表的记录视为完成并使用 NULL 值作为 CustomerID 列，这不是所需的结果在 CustOrder 表中插入。  
   
 #### <a name="to-create-a-working-sample"></a>创建工作示例  
   
@@ -223,7 +223,7 @@ ms.locfileid: "36028321"
 ## <a name="exceptions-to-the-record-generation-rule"></a>记录生成规则的例外情况  
  如果节点属于 IDREF 或 IDREFS 类型，则在它进入作用域时，XML 大容量加载不为该节点生成记录。 您必须确保在架构的同一位置存在记录的完整描述。 忽略 `dt:type="nmtokens"` 批注，就像忽略 IDREFS 类型一样。  
   
- 例如，考虑下面的 XSD 架构描述**\<客户 >** 和**\<顺序 >** 元素。 **\<客户 >** 元素包括**OrderList** IDREFS 类型的属性。 `<sql:relationship>` 标记指定客户和订单列表之间的一对多关系。  
+ 例如，考虑下面的 XSD 架构描述**\<客户 >** 并**\<顺序 >** 元素。 **\<客户 >** 元素包含**OrderList** IDREFS 类型的属性。 `<sql:relationship>` 标记指定客户和订单列表之间的一对多关系。  
   
  以下是架构：  
   
@@ -264,9 +264,9 @@ ms.locfileid: "36028321"
 </xsd:schema>  
 ```  
   
- 因为大容量加载将忽略 IDREFS 类型的节点，则不记录生成时**OrderList**属性节点就会进入作用域。 如果要将订单记录添加到 Orders 表，必须在架构中的某个地方描述这些订单。 在此架构中，指定**\<顺序 >** 元素可确保 XML 大容量加载将订单记录添加到订单表。 **\<顺序 >** 元素描述填充 CustOrder 表的记录所需的所有属性。  
+ 因为大容量加载忽略 IDREFS 类型的节点，则不生成记录时**OrderList**属性节点进入作用域。 如果要将订单记录添加到 Orders 表，必须在架构中的某个地方描述这些订单。 在此架构中，指定**\<顺序 >** 元素可确保 XML 大容量加载将订单记录添加到订单表。 **\<顺序 >** 元素描述填充 CustOrder 表的记录所需的所有属性。  
   
- 你必须确保**CustomerID**和**OrderID**中值**\<客户 >** 元素中的值匹配 **\<顺序 >** 元素。 由您负责维护引用完整性。  
+ 您必须确保**CustomerID**并**OrderID**中的值**\<客户 >** 元素中的值匹配 **\<顺序 >** 元素。 由您负责维护引用完整性。  
   
 #### <a name="to-test-a-working-sample"></a>测试工作示例  
   

@@ -1,5 +1,5 @@
 ---
-title: 查看更改过的文件的列表 |Microsoft 文档
+title: 查看已修改的文件的列表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckinWindow
 helpviewer_keywords:
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - checking in files
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affad7b7830088a955794f4825a68e72f12fca96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228237"
 ---
 # <a name="view-a-list-of-modified-files"></a>查看已修改的文件列表
-  你可以使用**挂起签入**窗口以显示在所有时间在当前解决方案中，签出文件的列表和签入这些文件与单个按钮单击。  
+  可以使用**挂起的签入**窗口随时显示时间在当前解决方案中，签出文件的列表和签入这些文件一次按钮单击。  
   
-### <a name="to-view-a-list-of-modified-files"></a>若要查看已修改文件的列表  
+### <a name="to-view-a-list-of-modified-files"></a>若要查看的已修改的文件列表  
   
-1.  上**视图**菜单上，单击**挂起签入**。  
+1.  上**视图**菜单上，单击**挂起的签入**。  
   
-2.  若要签入所选的文件时，请单击**签入**。 或者，你可以将停靠**挂起签入**窗口的右侧[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境，以便在完成时，你可以检查在文件中使用。  
+2.  若要检查所选文件中，单击**签入**。 或者，可以停靠**挂起的签入**窗口的右侧[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境，以便您可以签入文件时已完成工作。  
   
      **登记**  
      签入解决方案。  
@@ -43,7 +43,7 @@ ms.locfileid: "36028180"
      将纯文本注释与挂起的签入相关联。 对于项目的每一个版本，都会创建一个与之关联的注释，该注释存储在源代码管理数据库中。  
   
      **选项**  
-     指定当你单击时，源代码管理应采取的操作**签入**按钮。  
+     指定当您单击时，应执行源代码管理操作**签入**按钮。  
   
     -   **保持所有签出**  
   
@@ -59,13 +59,13 @@ ms.locfileid: "36028180"
      显示要签入的解决方案或项目的文件夹和文件层次结构。  
   
      **平面视图**  
-     要签入的文件显示为其源控件连接下的平面列表。  
+     正在签入的文件显示为其源代码管理连接下的平面列表。  
   
-     **对版本进行比较**  
-     打开 Visual SourceSafe**差异选项**对话框中，这将所选的文件中任何其他所选文件到你的开发环境项目比较，并显示你的差异，如果有的话。  
+     **比较版本**  
+     打开 Visual SourceSafe**差异选项**对话框中，该比较所选的任何其他文件在开发环境项目中所选的文件，并显示不同的内容，如果有的话。  
   
      **撤消签出**  
-     反转中选定的所有项目的签出**挂起签入**窗口。  
+     反转对选择中的所有项的签出**挂起的签入**窗口。  
   
      **名称**  
      显示可签入的项的列表。 这些项旁边所显示的复选框将处于选中状态。 如果您不希望签入特定项，请清除其旁边的复选框。  

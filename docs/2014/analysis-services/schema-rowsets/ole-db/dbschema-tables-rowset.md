@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_TABLES 行集 |Microsoft 文档
+title: DBSCHEMA_TABLES 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9033dc2f48b74bc13268d06f66a084f4ada22cfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83537dc9159331342ae344e5003d9c04fd8980eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211827"
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES 行集
   标识的度量值组和维度中的表作为公开[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DBSCHEMA_TABLES`行集包含以下各列。  
+ `DBSCHEMA_TABLES`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "36029323"
  行集按 `TABLE_TYPE`、`TABLE_CATALOG`、`TABLE_SCHEMA` 和 `TABLE_NAME` 排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DBSCHEMA_TABLES`行集可限制在下表中列出的列。  
+ `DBSCHEMA_TABLES`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

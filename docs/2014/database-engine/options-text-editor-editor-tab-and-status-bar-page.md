@@ -1,5 +1,5 @@
 ---
-title: 选项 (文本编辑器： 编辑器选项卡和状态栏页) |Microsoft 文档
+title: 选项 (文本编辑器： 编辑器选项卡和状态栏页) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267263"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项（“文本编辑器: 编辑器选项卡和状态栏”页）
   在 **“编辑器选项卡和状态栏”** 页上，您可以自定义 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查询编辑器显示的信息。 您可以指定在“查询编辑器”窗口的选项卡和状态栏中显示的信息级别，以及状态栏是显示在编辑器窗口的顶部还是底部。  
@@ -56,7 +56,7 @@ ms.locfileid: "36028195"
  **包括行计数**  
  包括当前正在执行的脚本已处理过的行的计数。  
   
- **包括服务器名称**  
+ **包含服务器名称**  
  包括服务器名称。 对于本地连接，这是实例名称。 对于远程连接，这是远程计算机名称和实例名。  
   
 ## <a name="status-bar-layout-and-colors"></a>状态栏布局和颜色  
@@ -83,7 +83,7 @@ ms.locfileid: "36028195"
  **包括数据库名称**  
  包含用于连接的当前数据库的名称。 当首次打开查询编辑器时，这是登录名默认登录的数据库。 之后，可以使用 Transact-SQL USE 语句来更改数据库上下文。  
   
- **包括文件名**  
+ **包含文件名称**  
  包含在其中存储脚本的文件的名称。  
   
  **包括文件夹名称**  
@@ -92,11 +92,11 @@ ms.locfileid: "36028195"
  **包括登录名**  
  包括登录名。  
   
- **包括服务器名称**  
+ **包含服务器名称**  
  包括服务器名称。 对于本地连接，这是实例名称。 对于远程连接，这是远程计算机名称和实例名。  
   
 ## <a name="see-also"></a>请参阅  
- [选项&#40;环境： 字体和颜色页&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [选项&#40;环境： 字体和颜色页面&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [查询编辑器中的颜色编码](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

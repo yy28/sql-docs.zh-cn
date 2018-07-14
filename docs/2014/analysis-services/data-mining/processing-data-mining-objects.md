@@ -1,5 +1,5 @@
 ---
-title: 处理数据挖掘对象 |Microsoft 文档
+title: 处理数据挖掘对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52caf01ea2f82b2d566b41ba402fa31b81283638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f62e8f3b9abcde430557641beb92a1f7566f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257463"
 ---
 # <a name="processing-data-mining-objects"></a>处理数据挖掘对象
   数据挖掘对象在处理之前只是一个空容器。 “处理 ”数据挖掘模型也称为“定型 ”。  
@@ -37,7 +37,7 @@ ms.locfileid: "36026441"
   
  下图说明了处理挖掘结构和挖掘模型时的数据流。  
   
- ![处理的数据： 源模型的结构到](../media/dmcon-modelarch.gif "处理的数据： 源到模型的结构")  
+ ![处理数据： 源到结构到模型](../media/dmcon-modelarch.gif "处理的数据： 源到结构到模型")  
   
 ## <a name="viewing-the-results-of-processing"></a>查看处理结果  
  处理了挖掘结构后，此挖掘结构包含数据的简洁表示形式，以用于统计分析。 如果尚未清除缓存，则可以用以下几种方式访问此缓存中的数据：  

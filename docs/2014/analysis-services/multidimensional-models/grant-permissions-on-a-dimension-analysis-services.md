@@ -1,5 +1,5 @@
 ---
-title: 授予维度 (Analysis Services) 的权限 |Microsoft 文档
+title: 授予权限的维度 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 212f89372b510b7a3a1d73702ee231d641fd465b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 553416d7dd8395e53ca5bbf4be5cdfa9b9d2fc5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177044"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授予维度的权限 (Analysis Services)
   维度安全用于设置维度对象（而非其数据）的权限。 通常，允许或拒绝访问处理操作是在设置维度权限时的主要目标。  
@@ -64,7 +64,7 @@ ms.locfileid: "36123923"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
-2.  在**维度**窗格中，更改维度设置为\<多维数据集名称 >**多维数据集维度**。  
+2.  在中**维度**窗格中，维度集更改为\<多维数据集名称 >**多维数据集维度**。  
   
      默认情况下，权限继承自相应的数据库维度。 清除“继承”复选框，将权限从“读取”更改为“读/写”。 在使用“读/写”权限之前，请务必阅读上一节中的备注。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "36123923"
 ## <a name="see-also"></a>请参阅  
  [角色和权限&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授予对数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [授予对维度数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予对单元数据的自定义访问权限&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [授予对单元数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

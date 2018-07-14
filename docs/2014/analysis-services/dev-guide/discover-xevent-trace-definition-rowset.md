@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_XEVENT_TRACE_DEFINITION 行集 |Microsoft 文档
+title: DISCOVER_XEVENT_TRACE_DEFINITION 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2994ce526ff0f8035d16485bf99b146e2366389e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bfb6747562f5f0c64d77aaceec1baa4f1bd6d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237687"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行集
   提供有关服务器上当前活动的 XEvent 跟踪的信息。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_XEVENT_TRACE_DEFINITION`行集包含以下各列。  
+ `DISCOVER_XEVENT_TRACE_DEFINITION`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "36026029"
   
 ## <a name="see-also"></a>请参阅  
  [XML for Analysis 架构行集](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
- [使用 SQL Server 扩展事件&#40;XEvents&#41;监视 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [使用动态管理视图&#40;Dmv&#41;监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用 SQL Server 扩展事件&#40;XEvents&#41;若要监视 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [使用动态管理视图&#40;Dmv&#41;若要监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findresults1
 - findresultswindow
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb713255228083fb18ff1e338b26ab8f90b06311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0df41e184e2a1efe3b74d3feb541e7e0ce3bf43c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251759"
 ---
 # <a name="find-results-windows"></a>“查找结果”窗口
   两个“查找结果”窗口显示通过使用 **“查找和替换”** 对话框中的 **“在文件中查找”** 或 **“在文件中替换”** 选项卡找到的匹配项。 **“在文件中查找”** 和 **“在文件中替换”** 选项卡中的 **“结果选项”** 命令允许您选择“查找结果”窗口，其中显示找到的所有匹配项。  

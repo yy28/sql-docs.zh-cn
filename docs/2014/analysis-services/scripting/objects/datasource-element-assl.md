@@ -1,5 +1,5 @@
 ---
-title: 数据源元素 (ASSL) |Microsoft 文档
+title: DataSource 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: 113fba1c-2679-4d06-9339-90a4a76f9b31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c87b21c6a9b291728704d3e624c386d59b820ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ddee14c487f9e28d3bbeb83c419bcda548d5a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281923"
 ---
 # <a name="datasource-element-assl"></a>DataSource 元素 (ASSL)
   定义中的数据源[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [数据库](database-element-assl.md)元素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36027528"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DataSource>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DataSource>。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库元素&#40;ASSL&#41;](database-element-assl.md)   

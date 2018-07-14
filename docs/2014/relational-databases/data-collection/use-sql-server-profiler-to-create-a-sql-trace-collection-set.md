@@ -1,5 +1,5 @@
 ---
-title: SQL Server 事件探查器用于创建 SQL 跟踪收集组 (SQL Server Management Studio) |Microsoft 文档
+title: 使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260853"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用一般 SQL 跟踪收集器类型的收集组。 此过程分为两个部分：  
@@ -76,7 +76,7 @@ ms.locfileid: "36028610"
   
     1.  在筛选器列表中，单击 **“持续时间”**。  
   
-    2.  在布尔运算符窗口中，展开**大于或等于**节点，键入`80`作为值，然后单击**确定**。  
+    2.  在布尔运算符窗口中，展开**大于或等于**节点中，键入`80`作为值，然后单击**确定**。  
   
 9. 单击 **“运行”** 以启动跟踪。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "36028610"
   
 3.  滚动查看脚本并进行以下替换（在脚本注释文本中注明）：  
   
-    -   将 **SQLTrace Collection Set Name Here** 替换为要为收集组使用的名称。 对于此示例中，命名为收集组`SPROC_CollectionSet`。  
+    -   将 **SQLTrace Collection Set Name Here** 替换为要为收集组使用的名称。 对于此示例中，命名该收集组`SPROC_CollectionSet`。  
   
-    -   将 **SQLTrace Collection Item Name Here** 替换为要为收集项使用的名称。 对于此示例中，将收集项`SPROC_Collection_Item`。  
+    -   将 **SQLTrace Collection Item Name Here** 替换为要为收集项使用的名称。 对于此示例中，命名收集项`SPROC_Collection_Item`。  
   
 4.  单击 **“执行”** 运行查询并创建收集组。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36028610"
   
     2.  展开 **“管理”**，然后展开 **“数据收集”**。  
   
-     `SPROC_CollectionSet`收集组将显示在与相同的级别**系统数据收集组**节点。 默认情况下，将禁用该收集组。  
+     `SPROC_CollectionSet`收集组将显示在相同的级别**系统数据收集组**节点。 默认情况下，将禁用该收集组。  
   
 6.  使用对象资源管理器编辑 SPROC_CollectionSet 的属性，如收集模式和上载计划。 按照针对与数据收集器一起提供的系统数据收集组的过程进行操作。  
   

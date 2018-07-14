@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244017"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
   本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  
@@ -74,11 +74,11 @@ ms.locfileid: "36027362"
   
 1.  右键单击现有表外部的关系图设计器并选择“新建表”。  
   
-2.  在**选择名称**对话框中，单击**确定**以接受默认名称`Table1`。  
+2.  在中**选择名称**对话框中，单击**确定**以接受默认名称`Table1`。  
   
      将显示具有以下三列的新表网格：“列名”、“数据类型”和“允许 Null 值”。  
   
-3.  添加以下信息`Table1`:  
+3.  添加以下信息到`Table1`:  
   
     |**列名**|**数据类型**|**允许 Null 值**|  
     |---------------------|-------------------|---------------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "36027362"
   
 5.  从“文件”菜单，单击“保存 Diagram1”。  
   
-6.  在**选择名称**对话框中，单击**确定**以接受默认名称`Diagram1`。  
+6.  在中**选择名称**对话框中，单击**确定**以接受默认名称`Diagram1`。  
   
 7.  将显示“保存”对话框和一条指出 `Table1` 将保存到数据库的消息。 单击 **“是”**。  
   
@@ -211,12 +211,12 @@ ms.locfileid: "36027362"
 -   将关系图复制到位图  
   
 ## <a name="see-also"></a>请参阅  
- [自定义关系图中显示的信息量&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [设置数据库关系图设计器&#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [将表添加到关系图&#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [创建关系图上的表之间的关系&#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [自定义关系图中显示的信息量&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [设置数据库关系图设计器&#40;可视化数据库工具&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+ [将表添加到关系图&#40;可视化数据库工具&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [创建关系图上的表之间的关系&#40;可视化数据库工具&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [创建 XML 索引](../../relational-databases/xml/create-xml-indexes.md)   
- [将数据库关系图的映像复制到剪贴板&#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [将数据库关系图复制到剪贴板&#40;可视化数据库工具&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [使用关系图布局 (Visual Database Tools)](work-with-diagram-layout-visual-database-tools.md)  
   
   

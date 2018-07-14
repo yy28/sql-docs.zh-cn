@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9121fe3ca4067ec8a5817121ac136bef61e993b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d4d145d63acba86422222ff9fca401933230fece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260823"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件类
   将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 **Audit Add DB User** 事件类。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess****sp_adduser** 和 **sp_dropuser** 存储过程。  

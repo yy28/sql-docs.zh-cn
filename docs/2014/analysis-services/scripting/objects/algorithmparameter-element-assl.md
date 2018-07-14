@@ -1,5 +1,5 @@
 ---
-title: AlgorithmParameter 元素 (ASSL) |Microsoft 文档
+title: AlgorithmParameter 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AlgorithmParameter element
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e9e3619eb5f96ff2e64c87855b2bd33063aaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd5ee9ceb1c8d2455d7e9c087e12e2f59625b5ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178854"
 ---
 # <a name="algorithmparameter-element-assl"></a>AlgorithmParameter 元素 (ASSL)
   定义了一个参数使用的算法[MiningModel](miningmodel-element-assl.md)元素。  
@@ -65,13 +65,13 @@ ms.locfileid: "36028231"
 ## <a name="remarks"></a>Remarks  
  `AlgorithmParameter` 是挖掘模型算法的参数。 `AlgorithmParameter` 将此参数表示为名称/值对。 `AlgorithmParameter` 可表示的适用参数集依算法而定。 有关给定算法的算法参数的详细信息，请参阅该算法的相应文档。  
   
- 可用的算法参数，包括验证和显示信息，可以从检索[DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)架构行集。  
+ 可用算法参数，包括验证和显示信息可以从检索[DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)架构行集。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AlgorithmParameter>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AlgorithmParameter>。  
   
 ## <a name="see-also"></a>请参阅  
  [MiningModel 元素&#40;ASSL&#41;](miningmodel-element-assl.md)   
- [算法元素&#40;ASSL&#41;](../properties/algorithm-element-assl.md)   
+ [Algorithm 元素&#40;ASSL&#41;](../properties/algorithm-element-assl.md)   
  [对象&#40;ASSL&#41;](objects-assl.md)  
   
   

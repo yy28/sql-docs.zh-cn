@@ -1,5 +1,5 @@
 ---
-title: 多平面文件连接管理器编辑器 （预览页） |Microsoft 文档
+title: 多平面文件连接管理器编辑器 （预览页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.preview.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae19c8cff5700f4c665522f4235d79b1cae45cf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038724a68f190f50b8a0c0621fc6d850c12e784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195577"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多平面文件连接管理器编辑器（“预览”页）
   可以使用“多平面文件连接管理器编辑器”对话框的“预览”页，查看选择的第一个源文件在按定义的样式划分为多列后的显示情况。  

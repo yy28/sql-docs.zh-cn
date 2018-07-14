@@ -1,5 +1,5 @@
 ---
-title: 获取对话框中 （源代码管理） |Microsoft 文档
+title: 获取对话框 （源代码管理） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.GetVersionDialog
 helpviewer_keywords:
 - Get dialog box
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de0c8be0ee4c5aa37e8ce72d2b1499c10ab5adbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54f349916d429c7872b479077043608d53a16bde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193947"
 ---
 # <a name="get-dialog-box-source-control"></a>“获取”对话框（源代码管理）
   将所选项的只读副本从源代码管理数据库提取到您的工作文件夹或者指定的其他文件夹。  
@@ -39,7 +39,7 @@ ms.locfileid: "36124399"
  指定对要提取的项执行的操作。  
   
  **“列”**  
- 标识列显示以及它们的显示顺序。  
+ 标识列显示以及所显示的顺序。  
   
  **平面视图**  
  将提取的文件在其源代码管理连接下显示为平面列表。  

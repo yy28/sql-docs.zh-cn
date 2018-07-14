@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a00a8295904d8fdc5a1ad87c6ac60dbf70ce6fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b05612ac34e4c2e7eb412d59eb9dcf5f28e99c78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213477"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 连接管理器
   SMTP 连接管理器使包可以连接到简单邮件传输协议 (SMTP) 服务器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的发送邮件任务使用 SMTP 连接管理器。  
@@ -31,7 +31,7 @@ ms.locfileid: "36027720"
  如果将 Microsoft Exchange 用作 SMTP 服务器，则可能需要配置 SMTP 连接管理器才能使用 Windows 身份验证。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
   
 ## <a name="configuration-the-smtp-connection-manager"></a>SMTP 连接管理器的配置  
- 当将一个 SMTP 连接管理器添加到包，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建连接管理器，它将解析为在运行时的 SMTP 连接、 设置连接管理器属性，并添加的连接管理器`Connections`上的集合包。 `ConnectionManagerType`的连接管理器的属性设置为`SMTP`。  
+ 当将一个 SMTP 连接管理器添加到包中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器，将 SMTP 连接在运行时解析、 设置连接管理器属性，并将连接管理器`Connections`集合包。 `ConnectionManagerType`连接管理器属性设置为`SMTP`。  
   
  可以使用下列方式配置 SMTP 连接管理器：  
   
@@ -50,6 +50,6 @@ ms.locfileid: "36027720"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [SMTP 连接管理器编辑器](../smtp-connection-manager-editor.md)。  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[添加连接以编程方式](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
   

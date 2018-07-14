@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - access controls [SQL Server replication]
 - security [SQL Server replication], identity and access control
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - identity [Replication]
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88eab53d0d0d65397ce92182275a1dfbd27d0370
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3d70a32a443f47d4b0adf1a72637d00e3ca94026
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179704"
 ---
 # <a name="identity-and-access-control-replication"></a>标识和访问控制（复制）
   身份验证是指一个实体（在此上下文中通常是计算机）验证另一实体（也称“主体” ，通常是另一计算机或用户）是否与其自称的身份相符的过程。 授权是给予通过身份验证的主体对资源（例如，文件系统中的文件或数据库中的表）的访问权限的过程。  

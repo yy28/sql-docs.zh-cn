@@ -1,5 +1,5 @@
 ---
-title: 警告 （数据库设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 警告 （数据库设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e00890be8fac0fb97f0887034d5c7b04c049ebd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44fddc4c62bc9d0fddc71cf2b4249c3fab8d0d68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233847"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>警告（数据库设计器）（Analysis Services - 多维数据）
   使用“警告”选项卡可以全局查看和解除规则，并可以查看和重新启用已解除的警告的特定实例。 **“警告”** 选项卡显示两个网格： **“设计警告规则”** 和 **“解除的警告”**。  
@@ -73,7 +73,7 @@ ms.locfileid: "36027516"
 >  如果对象包含警告，但是该对象处于无效状态或已从项目中手动删除，则列表中该警告的旁边会出现错误图标。 若要解除该警告，请选择它，然后单击“重新启用”。  
   
 ## <a name="see-also"></a>请参阅  
- [解除警告对话框&#40;Analysis Services-多维数据&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [关闭警告对话框&#40;Analysis Services-多维数据&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
  [常规&#40;数据库设计器&#41; &#40;Analysis Services-多维数据&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   

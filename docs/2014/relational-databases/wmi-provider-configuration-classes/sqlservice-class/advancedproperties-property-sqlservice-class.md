@@ -1,5 +1,5 @@
 ---
-title: AdvancedProperties 属性 （SqlService 类） |Microsoft 文档
+title: AdvancedProperties 属性 （SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38b009295a8b53e7b1bdc756916f74cbba337f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f477d7d7c385a717b292820049698c21cc834955
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194397"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 属性（SqlService 类）
   获取一组包含 `SqlService` 对象的高级属性的对象引用。  
@@ -46,7 +46,7 @@ object
  一个表示服务的 [SqlService 类](sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 数组[SqlServiceAdvancedProperty 类](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)包含的高级的属性的对象`SqlService`对象。  
+ 一个数组[SqlServiceAdvancedProperty 类](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)包含的高级的属性的对象`SqlService`对象。  
   
 ## <a name="remarks"></a>Remarks  
   

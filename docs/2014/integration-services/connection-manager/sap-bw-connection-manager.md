@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61106ce6c6eca051f6ad762577d0b4ea72d021a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a541988192c0233426a8f08a79743b822d3f3709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223746"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 连接管理器
   SAP BW 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的连接管理器组件。 因此，SAP BW 连接管理器提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件和目标组件所需的与 SAP Netweaver BW 版本 7 系统连接的能力。 （SAP BW 源组件和目标组件作为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 包的一部分，是唯一采用 SAP BW 连接管理器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。）  
@@ -27,7 +27,7 @@ ms.locfileid: "36029074"
 > [!IMPORTANT]  
 >  针对 Microsoft Connector 1.1 for SAP BW 的文档假定您熟悉 SAP Netweaver BW 环境。 有关 SAP NetWeaver BW 的详细信息，或者有关如何配置 SAP Netweaver BW 对象和过程的信息，请参阅您的 SAP 文档。  
   
- 当将 SAP BW 连接管理器添加到包，`ConnectionManagerType`的连接管理器的属性设置为`SAPBI`。  
+ 当将 SAP BW 连接管理器添加到包中，`ConnectionManagerType`连接管理器属性设置为`SAPBI`。  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>配置 SAP BW 连接管理器  
  可以按下列方式配置 SAP BW 连接管理器：  

@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 caps.latest.revision: 61
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4f8b3f60d82a94fa7289054d0028ab539abade64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196807"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
-  本教程旨在帮助你创建基本表报表基于[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库使用报表设计器。 您还可以使用报表生成器或报表向导创建报表。 在本教程中，您将执行以下操作：创建报表项目、设置连接信息、定义查询、添加表数据区域、对某些字段进行分组和汇总以及预览报表。  
+  本教程旨在帮助您创建基本表报表基于[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库使用报表设计器。 您还可以使用报表生成器或报表向导创建报表。 在本教程中，您将执行以下操作：创建报表项目、设置连接信息、定义查询、添加表数据区域、对某些字段进行分组和汇总以及预览报表。  
   
 > [!NOTE]  
->  若要完成此教程，您必须在本机模式下运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 如果在 SharePoint 集成模式下运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，则使用报表服务器 URL 的步骤无效。 有关详细信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]模式，请参阅[Reporting Services 报表服务器](reporting-services-report-server.md)。  
+>  若要完成此教程，您必须在本机模式下运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 如果在 SharePoint 集成模式下运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，则使用报表服务器 URL 的步骤无效。 有关详细信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]模式，请参见[Reporting Services 报表服务器](reporting-services-report-server.md)。  
   
 ## <a name="requirements"></a>要求  
  若要使用本教程，您的系统必须安装以下组件：  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库引擎。  
   
--   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。  有关详细信息，请参阅[Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).。 有关支持的详细信息[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]示例数据库和示例代码的[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，请参阅[数据库和示例概述](http://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 网站上。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。  有关详细信息，请参阅[Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).。 有关支持的详细信息[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]示例数据库和示例代码[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，请参阅[数据库和示例概述](http://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 网站上。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的用户。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36028969"
     > [!NOTE]  
     >  [!INCLUDE[ssNote64Samp](../includes/ssnote64samp-md.md)]  
   
- 你还必须要从中检索数据的只读权限[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 您还必须要从中检索数据的只读权限[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
 ## <a name="tasks"></a>“任务”  
  [第 1 课： 创建报表服务器项目&#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
@@ -54,14 +54,14 @@ ms.locfileid: "36028969"
   
  [第 3 课： 为表报表定义数据集&#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
- [第 4 课： 将表添加到报表&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+ [第 4 课： 向报表添加表&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
  [第 5 课： 设置报表格式&#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
   
  [第 6 课： 添加分组和总计&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  时查看教程，我们建议你添加**下一步**和**上一步**到文档查看器工具栏按钮。 有关详细信息，请参阅  
+>  阅读教程时，我们建议您将添加**下一步**并**上一步**到文档查看器工具栏按钮。 有关详细信息，请参阅  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 教程 (SSRS)](reporting-services-tutorials-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: KeyErrorLimitAction 元素 (ASSL) |Microsoft 文档
+title: KeyErrorLimitAction 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyErrorLimitAction element
 ms.assetid: a2a01aae-0571-499f-9025-b61c741f3ddb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73c903190a0cc982a75227be6ff1adeb5081c0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6001901e7613099eff2856905b88452870f7f2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247267"
 ---
 # <a name="keyerrorlimitaction-element-assl"></a>KeyErrorLimitAction 元素 (ASSL)
-  指定的操作[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定键错误计数时采用[KeyErrorLimit](keyerrorlimit-element-assl.md)达到元素。  
+  指定的操作[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定的键错误数时， [KeyErrorLimit](keyerrorlimit-element-assl.md)到达元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36027520"
 |*StopProcessing*|停止处理对象。|  
 |*StopLogging*|继续处理对象，但停止处理过程中遇到的记录错误。|  
   
- 对应于的允许值为枚举`KeyErrorLimitAction`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.KeyErrorLimitAction>。  
+ 与允许的值相对应的枚举`KeyErrorLimitAction`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.KeyErrorLimitAction>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

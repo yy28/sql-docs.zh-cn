@@ -1,5 +1,5 @@
 ---
-title: 工具栏 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 工具栏 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32d1dd432ea374a7e1d0452ab9ba786b74dbc26c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b596dc89e9e5f00f70bee5687d15a1da08071e20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252989"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器中的 **“计算”** 选项卡上的常规操作。  
@@ -32,14 +32,14 @@ ms.locfileid: "36028879"
 |**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
 |**重新连接**|如果 **“计算”** 选项卡会话由于连接丢失或超时而断开，单击此项可将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] “计算” **选项卡重新连接到包含多维数据集的** 实例和数据库。|  
 |**新的计算的成员**|单击此项可显示 **计算成员窗体编辑器** 并创建新的计算成员。 只有在窗体视图中才会启用此选项。|  
-|**新的命名的集**|单击此项可显示 **命名集窗体编辑器** 并创建新的命名集。 只有在窗体视图中才会启用此选项。|  
+|**新建命名的集**|单击此项可显示 **命名集窗体编辑器** 并创建新的命名集。 只有在窗体视图中才会启用此选项。|  
 |**新的脚本命令**|单击此项可显示 **脚本编辑器** 并创建新的脚本命令。 只有在窗体视图中才会启用此选项。|  
 |**删除**|删除在窗体视图的 **“脚本组织程序”** 窗格中选择的计算，或在脚本视图中选择的脚本。|  
 |**上移**|在窗体视图中，将在 **“脚本组织程序”** 窗格中选择的计算向上移动一个位置。|  
 |**“下移”**|在窗体视图中，将在 **“脚本组织程序”** 窗格中选择的计算向下移动一个位置。|  
 |**窗体视图**|选择此选项可在窗体视图中使用 **“计算”** 选项卡。|  
 |**脚本视图**|选择此选项可在脚本视图中使用 **“计算”** 选项卡。|  
-|**请检查语法**|单击此项可在多维数据集脚本中检查语法。|  
+|**检查语法**|单击此项可在多维数据集脚本中检查语法。|  
 |**字体**|单击此项可显示“字体”对话框，并在多维数据集脚本中的选择点位置插入一组有效的字体相关单元属性值。 只有在脚本视图中才会启用此选项。|  
 |**Color**|单击此项可显示“颜色”对话框，并在多维数据集脚本中的选择点位置插入有效的 RGB（红-绿-蓝）值。 只有在脚本视图中才会启用此选项。|  
 |**计算属性**|单击此项可显示 **“计算属性”** 对话框，并编辑多维数据集脚本中计算的计算属性值。|  

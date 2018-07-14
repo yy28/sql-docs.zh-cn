@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28ccf2d9e3c039086a182466d6d93fd5b2606e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 356121b8980d41a3abf3124d5249164d6d23b4e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247733"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
   当您在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  
@@ -87,7 +87,7 @@ ms.locfileid: "36028060"
  指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
   
 ## <a name="see-also"></a>请参阅  
- [带参数查询&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用参数查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

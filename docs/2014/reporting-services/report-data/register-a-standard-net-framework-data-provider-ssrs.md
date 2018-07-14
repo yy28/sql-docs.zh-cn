@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - .NET Framework data providers for Reporting Services
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fcfaa1e1459df5bd3a399ce80b29dfd6a721e991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94e37e8c947074d23b208ebdfc18f21220c1f0de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200867"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  
@@ -48,7 +48,7 @@ ms.locfileid: "36028520"
   
 1.  在 bin 目录的 ReportServer 父目录中备份 RSReportServer.config 文件。  
   
-2.  打开 RSReportServer.config。你可以打开具有的配置文件[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或诸如记事本之类的简单文本编辑器。  
+2.  打开 RSReportServer.config。您可以打开配置文件与[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或诸如记事本之类的简单文本编辑器。  
   
 3.  找到`Data`RSReportServer.config 文件中的元素。 应当在以下位置为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口生成一个条目：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36028520"
   
 3.  在 rssrvpolicy.config 文件中找到 `CodeGroup` 元素。  
   
-4.  添加的代码组的数据提供程序程序集的授予`FullTrust`权限。 该代码组应如下所示：  
+4.  添加一个代码组的数据提供程序程序集的授予`FullTrust`权限。 该代码组应如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -162,7 +162,7 @@ ms.locfileid: "36028520"
     </Extensions>  
     ```  
   
-6.  将以下条目添加到 RSReportDesigner.config 文件在下`Designer`元素。 你需要更换仅`Name`具有你在以前的条目中提供的名称属性。  
+6.  将以下条目添加到下的 RSReportDesigner.config 文件`Designer`元素。 你需要仅替换`Name`属性与在之前条目中提供的名称。  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -195,7 +195,7 @@ ms.locfileid: "36028520"
  URL 成员身份仅是您可能为数据访问接口选择的多个成员身份条件之一。  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>在报表设计器客户端上验证部署和注册  
- 必须先关闭本地计算机上的所有 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 实例，然后才能验证部署。 已结束所有当前会话之后，你可以验证是否数据提供程序已成功部署到报表设计器创建新的报表项目中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 为报表创建新的数据集时，该数据访问接口应当包含在可用数据源类型列表中。  
+ 必须先关闭本地计算机上的所有 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 实例，然后才能验证部署。 结束所有当前会话之后，可以验证是否在数据提供程序已成功部署到报表设计器通过创建新的报表项目中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 为报表创建新的数据集时，该数据访问接口应当包含在可用数据源类型列表中。  
   
 ## <a name="platform-considerations"></a>平台注意事项  
  在 64 位 (x64) 平台上，[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 在 32 位 WOW 模式下运行。 在 x64 平台上创作报表时，需要在报表创作客户端上安装 32 位数据访问接口，以便预览报表。 如果在同一系统上发布报表，则需要 x64 数据访问接口，以便使用报表管理器查看报表。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e10d0022fc6c21ad2d2833c8a465711bb106672e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 76590a7a3837a710be5442710e0c0cf3124d97f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167028"
 ---
 # <a name="view-and-modify-article-properties"></a>查看和修改项目属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改项目属性。  
@@ -160,11 +160,11 @@ ms.locfileid: "36026976"
   
 4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的项目属性中定义不正确或不存在项目。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的项目属性定义不正确或此项目不存在。  
   
 6.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.TransArticle> 属性中的一个设置新值。  
   
-7.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+7.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>查看或修改属于合并发布的项目的属性  
   
@@ -176,11 +176,11 @@ ms.locfileid: "36026976"
   
 4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的项目属性中定义不正确或不存在项目。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的项目属性定义不正确或此项目不存在。  
   
 6.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 属性中的一个设置新值。  
   
-7.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+7.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  此示例更改一个合并项目来指定该项目所使用的业务逻辑处理程序。  

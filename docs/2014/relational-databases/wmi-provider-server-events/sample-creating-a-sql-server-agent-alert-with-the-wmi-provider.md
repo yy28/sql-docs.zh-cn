@@ -1,5 +1,5 @@
 ---
-title: 示例： 通过使用 WMI Provider for Server Events 创建 SQL Server 代理警报 |Microsoft 文档
+title: 示例： 通过使用 WMI Provider for Server Events 创建 SQL Server 代理警报 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f109802dccbe7698f713f61ce7ba1f26efb1449
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186214"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>示例：使用 WMI Provider for Server Events 创建 SQL Server 代理警报
   WMI 事件提供程序的一个常见用法是创建响应特定事件的 SQL Server 代理警报。 以下示例提供一个在表中保存 XML 死锁图形事件以供以后分析的简单警报。 SQL Server 代理提交 WQL 请求、接收 WMI 事件并运行作业以响应该事件。 请注意，尽管在处理通知消息中涉及几个 Service Broker 对象，WMI 事件提供程序将处理创建和管理这些对象的详细信息。  
@@ -34,7 +34,7 @@ ms.locfileid: "36123840"
   
  然后，创建警报。 脚本首先创建将运行警报的作业，将作业步骤添加到作业，然后指定作业目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例。 然后，脚本创建警报。  
   
- 作业步骤检索**TextData**属性 WMI 事件实例并插入该值插入**DeadlockGraph**列**DeadlockEvents**表。 请注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将该字符串隐式转换为 XML 格式。 因为作业步骤使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系统，因此它不指定代理。  
+ 作业步骤检索**TextData**属性的 WMI 事件实例并将该值插入**DeadlockGraph**的列**DeadlockEvents**表。 请注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将该字符串隐式转换为 XML 格式。 因为作业步骤使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系统，因此它不指定代理。  
   
  每当记录死锁图形跟踪事件时，警报都将运行该作业。 对于 WMI 警报，SQL Server 代理使用指定的命名空间和 WQL 语句创建一个通知查询。 对于此警报，SQL Server 代理监视本地计算机上的默认实例。 WQL 语句请求默认实例中的任何 `DEADLOCK_GRAPH` 事件。 若要更改警报监视的实例，请替换该警报的 `MSSQLSERVER` 中 `@wmi_namespace` 的实例名称。  
   
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>测试示例  
- 若要查看作业运行情况，请造成死锁。 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，打开两个**SQL 查询**tab 键移动，这两个查询连接到同一实例。 在其中一个查询选项卡中运行以下脚本。 此脚本生成一个结果集，然后结束。  
+ 若要查看作业运行情况，请造成死锁。 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，打开两个**SQL 查询**选项卡，然后连接到同一个实例的两个查询。 在其中一个查询选项卡中运行以下脚本。 此脚本生成一个结果集，然后结束。  
   
 ```  
 USE AdventureWorks ;  

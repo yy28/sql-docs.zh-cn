@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3a1e5ed2aa8ee73ceefd0d58ddc3c1f06869be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 52db8610999add505d5aa5e524a2d68b72886ce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271063"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件。 XEvent 子文件夹位于 SQLSERVER 驱动器下。 您可以使用以下任意一种方法访问该文件夹：  
   
--   在命令提示符处，键入`sqlps`，然后按 ENTER。 键入 `cd xevent`，然后按 Enter。 在这里，你可以使用**cd**和`dir`命令 (或**Set-location**和**Get-childitem** cmdlet) 导航到的服务器名称和实例名称。  
+-   在命令提示符处，键入`sqlps`，然后按 ENTER。 键入 `cd xevent`，然后按 Enter。 在这里，可以使用**cd**和`dir`命令 (或**Set-location**并**Get-childitem** cmdlet) 导航到的服务器名称和实例名称。  
   
 -   在对象资源管理器中，展开实例名称，展开“管理”，右键单击“扩展事件”，然后单击“启动 PowerShell”。 这将在以下路径中启动 PowerShell：  
   
@@ -37,22 +37,22 @@ ms.locfileid: "36026772"
     > [!NOTE]  
     >  您可以从 **“扩展事件”** 下的任意节点启动 PowerShell。 例如，你可以右键单击“会话”，然后单击“启动 PowerShell”。 这将在下一级别（即“会话”文件夹）启动 PowerShell。  
   
- 您可以浏览 XEvent 文件夹树以查看现有的扩展事件会话及其关联的事件、目标和谓词。 例如，从在 PS sqlserver: \xevent\\*ServerName*\\*InstanceName*> 路径，如果键入`cd sessions`，按 ENTER，键入`dir`，，然后按 ENTER，你可以看到该实例存储的会话的列表。 您还可以查看会话是否正在运行（如果正在运行，那么可以查看运行了多长时间），以及会话是否配置为在实例启动时启动。  
+ 您可以浏览 XEvent 文件夹树以查看现有的扩展事件会话及其关联的事件、目标和谓词。 例如，从 PS sqlserver: \xevent\\*ServerName*\\*InstanceName*> 路径下，如果您键入`cd sessions`，再按 ENTER，键入`dir`，，然后按 ENTER，可以看到该实例存储的会话的列表。 您还可以查看会话是否正在运行（如果正在运行，那么可以查看运行了多长时间），以及会话是否配置为在实例启动时启动。  
   
- 若要查看与会话关联的事件、它们的谓词以及目标，您可以将目录更改为该会话的名称，然后查看事件或目标文件夹。 例如，若要查看的事件以及它们与默认的系统运行状况会话，在 PS sqlserver: \xevent 关联的谓词\\*ServerName*\\*InstanceName*\Sessions> > 路径下，键入`cd system_health\events,`按 ENTER，键入`dir`，然后按 ENTER。  
+ 若要查看与会话关联的事件、它们的谓词以及目标，您可以将目录更改为该会话的名称，然后查看事件或目标文件夹。 例如，若要查看的事件以及它们与默认系统运行状况会话，在 PS sqlserver: \xevent 关联的谓词\\*ServerName*\\*InstanceName*\Sessions> > 路径下，键入`cd system_health\events,`按 ENTER，键入`dir`，然后按 ENTER。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序是一种非常强大的工具，您可以用其创建、更改和管理扩展事件会话。 下面一节提供将 PowerShell 脚本与扩展事件结合使用的一些基本示例。  
   
 ## <a name="examples"></a>示例  
  在下面的示例中，请注意以下事项：  
   
--   必须从 PS SQLSERVER 运行脚本：\\> 提示符 (可通过键入`sqlps`在命令提示符)。  
+-   脚本必须在运行从 PS SQLSERVER:\\> 提示符 (可通过键入`sqlps`在命令提示符下)。  
   
 -   脚本使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例。  
   
 -   脚本必须使用 .ps1 扩展名保存。  
   
--   PowerShell 执行策略必须允许脚本运行。 若要设置执行策略，请使用 **Set-Executionpolicy** cmdlet。 (有关详细信息，键入`get-help set-executionpolicy -detailed`，然后按 ENTER。)  
+-   PowerShell 执行策略必须允许脚本运行。 若要设置执行策略，请使用 **Set-Executionpolicy** cmdlet。 (详细信息，请键入`get-help set-executionpolicy -detailed`，然后按 ENTER。)  
   
  下面的脚本将创建一个名为“TestSession”的新会话。  
   

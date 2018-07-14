@@ -1,5 +1,5 @@
 ---
-title: XML for Analysis 遵从性 (XMLA) |Microsoft 文档
+title: XML for Analysis 遵从性 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - extending XML for Analysis
 ms.assetid: d987d320-5581-4454-ad45-68e3a22175b6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fb4279ab8c516f4db18310a03e7b85e389f2bc2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc7a8da77b72f25a68764636fbe15bc2d9e4ae04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267083"
 ---
 # <a name="xml-for-analysis-compliance-xmla"></a>XML for Analysis 遵从性 (XMLA)
-  XML for Analysis 1.1 规范描述了一种开放标准，该标准支持对位于万维网上的数据源的数据访问。 本主题详细介绍与支持的 XML for Analysis 1.1 规范的符合度[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  XML for Analysis 1.1 规范描述了一种开放标准，该标准支持对位于万维网上的数据源的数据访问。 本主题详细介绍与 XML for Analysis 1.1 规范支持的符合性的级别[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="compliant-items"></a>符合项  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 符合 XML for Analysis 1.1 规范中列出的所有必须遵循的内容。 此外，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还实现了 XML for Analysis 1.1 规范中描述的下列可选项。  
@@ -44,9 +44,9 @@ ms.locfileid: "36026404"
   
 |项|规范|实现|  
 |----------|-------------------|--------------------|  
-|协议协商|XML for Analysis 1.1 规范中不包含相关信息|[ProtocolCapabilities](xml-elements-headers/protocolcapabilities-element-xmla.md)通过添加标头元素[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以支持的协议功能协商。|  
-|Discover 方法支持的 XML for Analysis (XMLA) 命令|XML for Analysis 1.1 规范支持下列命令：<br /><br /> -   [语句元素&#40;XMLA&#41;](xml-elements-commands/statement-element-xmla.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下列命令：<br /><br /> -   [Alter 元素&#40;XMLA&#41;](xml-elements-commands/alter-element-xmla.md)<br />-   [备份元素&#40;XMLA&#41;](xml-elements-commands/backup-element-xmla.md)<br />-   [批处理元素&#40;XMLA&#41;](xml-elements-commands/batch-element-xmla.md)<br />-   [BeginTransaction 元素&#40;XMLA&#41;](xml-elements-commands/begintransaction-element-xmla.md)<br />-   [取消元素&#40;XMLA&#41;](xml-elements-commands/cancel-element-xmla.md)<br />-   [ClearCache 元素&#40;XMLA&#41;](xml-elements-commands/clearcache-element-xmla.md)<br />-   [CommitTransaction 元素&#40;XMLA&#41;](xml-elements-commands/committransaction-element-xmla.md)<br />-   [创建元素&#40;XMLA&#41;](xml-elements-commands/create-element-xmla.md)<br />-   [删除元素&#40;XMLA&#41;](xml-elements-commands/delete-element-xmla.md)<br />-   [DesignAggregations 元素&#40;XMLA&#41;](xml-elements-commands/designaggregations-element-xmla.md)<br />-   [删除元素&#40;XMLA&#41;](xml-elements-commands/drop-element-xmla.md)<br />-   [插入元素&#40;XMLA&#41;](xml-elements-commands/insert-element-xmla.md)<br />-   [锁定元素&#40;XMLA&#41;](xml-elements-commands/lock-element-xmla.md)<br />-   [撰写 MergePartitions 元素&#40;XMLA&#41;](xml-elements-commands/mergepartitions-element-xmla.md)<br />-   [NotifyTableChange 元素&#40;XMLA&#41;](xml-elements-commands/notifytablechange-element-xmla.md)<br />-   [处理元素&#40;XMLA&#41;](xml-elements-commands/process-element-xmla.md)<br />-   [Restore 元素&#40;XMLA&#41;](xml-elements-commands/restore-element-xmla.md)<br />-   [RollbackTransaction 元素&#40;XMLA&#41;](xml-elements-commands/rollbacktransaction-element-xmla.md)<br />-SetPasswordEncryptionKey 元素<br />-   [语句元素&#40;XMLA&#41;](xml-elements-commands/statement-element-xmla.md)<br />-   [Subscribe 元素&#40;XMLA&#41;](xml-elements-commands/subscribe-element-xmla.md)<br />-   [同步元素&#40;XMLA&#41;](xml-elements-commands/synchronize-element-xmla.md)<br />-   [解除锁定元素&#40;XMLA&#41;](xml-elements-commands/unlock-element-xmla.md)<br />-   [更新元素&#40;XMLA&#41;](xml-elements-commands/update-element-xmla.md)<br />-   [UpdateCells 元素&#40;XMLA&#41;](xml-elements-commands/updatecells-element-xmla.md)|  
-|表格行集中的列错误|未在 XML for Analysis 1.1 规范中列出。|[错误](xml-elements-properties/error-element-xmla.md)元素由[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]列元素中包含的报告错误[行](xml-elements-properties/error-element-xmla.md)元素。|  
+|协议协商|XML for Analysis 1.1 规范中不包含相关信息|[ProtocolCapabilities](xml-elements-headers/protocolcapabilities-element-xmla.md)由添加的标头元素[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以支持协议协商功能。|  
+|Discover 方法支持的 XML for Analysis (XMLA) 命令|XML for Analysis 1.1 规范支持下列命令：<br /><br /> -   [Statement 元素&#40;XMLA&#41;](xml-elements-commands/statement-element-xmla.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下列命令：<br /><br /> -   [Alter 元素&#40;XMLA&#41;](xml-elements-commands/alter-element-xmla.md)<br />-   [备份元素&#40;XMLA&#41;](xml-elements-commands/backup-element-xmla.md)<br />-   [批处理元素&#40;XMLA&#41;](xml-elements-commands/batch-element-xmla.md)<br />-   [BeginTransaction 元素&#40;XMLA&#41;](xml-elements-commands/begintransaction-element-xmla.md)<br />-   [Cancel 元素&#40;XMLA&#41;](xml-elements-commands/cancel-element-xmla.md)<br />-   [ClearCache 元素&#40;XMLA&#41;](xml-elements-commands/clearcache-element-xmla.md)<br />-   [CommitTransaction 元素&#40;XMLA&#41;](xml-elements-commands/committransaction-element-xmla.md)<br />-   [创建元素&#40;XMLA&#41;](xml-elements-commands/create-element-xmla.md)<br />-   [删除元素&#40;XMLA&#41;](xml-elements-commands/delete-element-xmla.md)<br />-   [DesignAggregations 元素&#40;XMLA&#41;](xml-elements-commands/designaggregations-element-xmla.md)<br />-   [Drop 元素&#40;XMLA&#41;](xml-elements-commands/drop-element-xmla.md)<br />-   [插入元素&#40;XMLA&#41;](xml-elements-commands/insert-element-xmla.md)<br />-   [锁定元素&#40;XMLA&#41;](xml-elements-commands/lock-element-xmla.md)<br />-   [MergePartitions 元素&#40;XMLA&#41;](xml-elements-commands/mergepartitions-element-xmla.md)<br />-   [NotifyTableChange 元素&#40;XMLA&#41;](xml-elements-commands/notifytablechange-element-xmla.md)<br />-   [处理元素&#40;XMLA&#41;](xml-elements-commands/process-element-xmla.md)<br />-   [Restore 元素&#40;XMLA&#41;](xml-elements-commands/restore-element-xmla.md)<br />-   [RollbackTransaction 元素&#40;XMLA&#41;](xml-elements-commands/rollbacktransaction-element-xmla.md)<br />-SetPasswordEncryptionKey 元素<br />-   [Statement 元素&#40;XMLA&#41;](xml-elements-commands/statement-element-xmla.md)<br />-   [Subscribe 元素&#40;XMLA&#41;](xml-elements-commands/subscribe-element-xmla.md)<br />-   [Synchronize 元素&#40;XMLA&#41;](xml-elements-commands/synchronize-element-xmla.md)<br />-   [Unlock 元素&#40;XMLA&#41;](xml-elements-commands/unlock-element-xmla.md)<br />-   [Update 元素&#40;XMLA&#41;](xml-elements-commands/update-element-xmla.md)<br />-   [UpdateCells 元素&#40;XMLA&#41;](xml-elements-commands/updatecells-element-xmla.md)|  
+|表格行集中的列错误|未在 XML for Analysis 1.1 规范中列出。|[错误](xml-elements-properties/error-element-xmla.md)所使用的元素[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]列中包含的元素的报告错误[行](xml-elements-properties/error-element-xmla.md)元素。|  
   
 ## <a name="see-also"></a>请参阅  
  [XML for Analysis &#40;XMLA&#41;引用](xml-for-analysis-xmla-reference.md)  

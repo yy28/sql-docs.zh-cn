@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251319"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控件
   若要查看部署到报表服务器的报表或在本地文件系统上存在的报表，您可以在 Web 应用程序中使用 WebForms ReportViewer 控件来呈现它们。  
@@ -66,7 +66,7 @@ ms.locfileid: "36027881"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>在远程处理模式下查看报表  
  下面的示例演示如何呈现已部署到报表服务器的报表。 此示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例报表项目随附的 Sales Order Detail 报表。  
   
- 该示例使用集成的 Windows 身份验证，因此您首先必须启用模拟。 若要执行此插入以下行到`web.config`文件：  
+ 该示例使用集成的 Windows 身份验证，因此您首先必须启用模拟。 若要执行此插入以下行`web.config`文件：  
   
 ```  
 <!-- Web.config file. -->  

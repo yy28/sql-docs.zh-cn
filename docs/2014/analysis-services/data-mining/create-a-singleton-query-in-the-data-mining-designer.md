@@ -1,5 +1,5 @@
 ---
-title: 在数据挖掘设计器中创建单独查询 |Microsoft 文档
+title: 在数据挖掘设计器中创建单独查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c4e815c2bdf5ad0f3c3eaa2bceaed03b09bc77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 917efe321e2e43779e28cb7f707a9dadaeb8a7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284233"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在数据挖掘设计器中创建单独查询
   如果需要为单个事例创建预测，单独查询是非常有用的。 有关单独查询的详细信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
@@ -61,7 +61,7 @@ AS [t]
   
 4.  在 **“单独查询输入”** 表中，选择 **“值”** 列中的值，用以说明要为其创建预测的事例。  
   
-     例如，选择**2**为**Number Children At Home**，然后键入`45`为**年龄**。  
+     例如，选择**2**有关**Number Children At Home**，然后键入`45`有关**年龄**。  
   
 5.  将一个可预测列从 **“挖掘模型”** 表拖到该选项卡底部的 **“源”** 列中。还可以根据需要键入该列的别名。  
   

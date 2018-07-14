@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
 - run-time [Integration Services]
@@ -24,13 +24,13 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a2004083f5d5c5ce2262e5ca1c1286c9cfb2cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0df91ac6e5742a5326b98238ec81b31fddc62854
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227797"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
   在运行时，可执行文件（包以及 Foreach 循环容器、For 循环容器、序列容器和任务宿主容器）会引发事件。 例如，错误发生时会引发 OnError 事件。 可以为这些事件创建自定义事件处理程序，以扩展包的功能并使包在运行时更容易管理。 事件处理程序可以执行诸如下列任务：  
@@ -49,7 +49,7 @@ ms.locfileid: "36028836"
   
  ![包、For 循环、任务主机和执行 SQL 任务](media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
- 只有包具有事件处理程序，用于处理其 `OnError` 事件。 如果执行 SQL 任务运行时，发生错误`OnError`包的事件处理程序运行。 下图显示导致的调用序列`OnError`要执行的包的事件处理程序。  
+ 只有包具有事件处理程序，用于处理其 `OnError` 事件。 如果执行 SQL 任务运行时，发生错误`OnError`包事件处理程序运行。 下图显示了将导致的调用序列`OnError`要执行的包的事件处理程序。  
   
  ![事件处理程序流](media/mw-dts-eventhandlers.gif "Event handler flow")  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36028836"
 |**OnProgress**|**OnProgress** 事件的事件处理程序。 此事件由可执行文件在其完成可度量的进度时引发。|  
 |**OnQueryCancel**|**OnQueryCancel** 事件的事件处理程序。 此事件由可执行文件引发，以确定它是否应停止运行。|  
 |**OnTaskFailed**|**OnTaskFailed** 事件的事件处理程序。 此事件由任务在其失败时引发。|  
-|**OnVariableValueChanged**|**OnVariableValueChanged** 事件的事件处理程序。 此事件在变量值更改时由可执行文件引发。 此事件由此变量的可执行文件引发。 如果你设置，则不会引发此事件**RaiseChangeEvent**变量属性`False`。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)。|  
+|**OnVariableValueChanged**|**OnVariableValueChanged** 事件的事件处理程序。 此事件在变量值更改时由可执行文件引发。 此事件由此变量的可执行文件引发。 如果设置不会引发此事件**RaiseChangeEvent**到变量的属性`False`。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)。|  
 |**OnWarning**|**OnWarning** 事件的事件处理程序。 此事件在发生警告时由可执行文件引发。|  
   
 ## <a name="configuration-of-an-event-handler"></a>事件处理程序的配置  

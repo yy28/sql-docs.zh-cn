@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ffeac246442f3ee291975902bcacd12104e77f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265673"
 ---
 # <a name="select-objects-object-explorer"></a>选择对象（对象资源管理器）
   使用“选择对象”对话框可以向另一个对话框的列表中添加对象。 对话框的标题以及对话框中可用的选项取决于该对话框的打开方式。 只显示可用的选项，例如，当您为新对象选择所有者时，只有登录名选项可用。  

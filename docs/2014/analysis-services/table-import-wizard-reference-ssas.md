@@ -1,5 +1,5 @@
 ---
-title: 表导入向导参考 (SSAS) |Microsoft 文档
+title: 表导入向导参考 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbd2caf29b53fe6bdb8313dc11645068ff65c64f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267243"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>表导入向导参考 (SSAS)
   本节提供有关 **“表导入向导”** 的帮助。 此向导可用于从各种数据源导入数据。 若要从模型设计器中访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
@@ -80,7 +80,7 @@ ms.locfileid: "36028221"
   
 -   [选择表和视图&#40;SSAS&#41;](select-tables-and-views-ssas.md)  
   
--   [选择表和视图&#40;数据馈送&#41; &#40;SSAS&#41;](select-tables-and-views-data-feeds-ssas.md)  
+-   [选择表和视图&#40;数据源&#41; &#40;SSAS&#41;](select-tables-and-views-data-feeds-ssas.md)  
   
 -   [设置高级属性&#40;SSAS&#41;](set-advanced-properties-ssas.md)  
   
