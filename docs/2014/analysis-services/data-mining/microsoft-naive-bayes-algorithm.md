@@ -1,5 +1,5 @@
 ---
-title: Microsoft Naive Bayes 算法 |Microsoft 文档
+title: Microsoft Naive Bayes 算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196607"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种分类算法基于 Bayes 的定理，以及由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于预测性建模。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种基于贝叶斯定理，并由提供的分类算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于预测性建模。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。  
   
  和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法相比，此算法所需运算量较少，因而有助于快速生成挖掘模型，从而发现输入列与可预测列之间的关系。 可以使用该算法进行初始数据探测，然后根据该算法的结果使用其他运算量较大、更加精确的算法创建其他挖掘模型。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36026035"
   
  若要了解其工作原理，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Naive Bayes 查看器（如下图所示）来直观地查看该算法分布状态的方式。  
   
- ![Naive bayes 分发的状态](../media/naive-bayes.gif "Naive bayes 分发的状态")  
+ ![状态的 naive bayes 分布](../media/naive-bayes.gif "状态的 Naive bayes 分布")  
   
  此处， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器可列出数据集中的每个输入列。如果提供了可预测列的每种状态，它还会显示每一列中状态的分布情况。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36026035"
   
 -   **单键列** 每个模型都必须包含一个用于唯一标识每条记录的数值列或文本列。 不允许复合键。  
   
--   **输入列**中 Naive Bayes 模型中，所有列必须都是离散或离散化列。 有关 discretizing 列的信息，请参阅[离散化方法&#40;数据挖掘&#41;](discretization-methods-data-mining.md)。  
+-   **输入列**在 Naive Bayes 模型的所有列必须都是离散或离散化列。 有关离散化列的信息，请参阅[离散化方法&#40;数据挖掘&#41;](discretization-methods-data-mining.md)。  
   
      对于 Naive Bayes 模型，确保输入属性相互独立也很重要。 这在使用该模型进行预测时尤为重要。  
   

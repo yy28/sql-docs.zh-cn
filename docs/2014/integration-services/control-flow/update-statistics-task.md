@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.updatestatisticstask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45e4cc5b9e27b08d226dd59114aa9cee48356f2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c81bd46453a8f34d5428808361ed2be31c3f5c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274983"
 ---
 # <a name="update-statistics-task"></a>“更新统计信息”任务
   “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  

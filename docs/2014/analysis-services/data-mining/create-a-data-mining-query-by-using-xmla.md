@@ -1,5 +1,5 @@
 ---
-title: 使用 XMLA 创建数据挖掘查询 |Microsoft 文档
+title: 使用 XMLA 创建数据挖掘查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2421d501ea5040a177cb1d52aea1c3a56b59e107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 220d9b284175e9427a28a886e46ffe91b277fe3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226593"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 创建数据挖掘查询
   可以使用 AMO、DMX 或 XML/A 创建针对数据挖掘对象的各种查询。  
@@ -48,9 +48,9 @@ ms.locfileid: "36024228"
   
      **“结果”** 窗格中将显示返回的架构行集列表，该列表中包含当前实例中可用的所有行集的名称和行集列。  
   
-2.  在**查询**窗格中，将光标后的**\<限制列表 >** 然后按 ENTER 以添加新行。  
+2.  在中**查询**窗格中，将后的光标**\<限制列表 >** 然后按 ENTER 以添加新行。  
   
-3.  将光标放在空行和类型上 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  将光标置于空行和类型 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      完整的限制部分应如下所示：  
   

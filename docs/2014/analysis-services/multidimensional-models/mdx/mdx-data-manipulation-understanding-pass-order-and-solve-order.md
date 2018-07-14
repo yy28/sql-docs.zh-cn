@@ -1,5 +1,5 @@
 ---
-title: 理解传递次序和求解次序 (MDX) |Microsoft 文档
+title: 理解传递次序和求解次序 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196527"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>理解传递次序和求解次序 (MDX)
   当某个多维数据集是 MDX 脚本的计算结果时，该多维数据集可能会经历许多计算阶段，具体取决于与计算有关的各种功能的使用情况。 每个阶段称为一个计算传递。  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  第一个查询与第二个查询在结果集方面的差异来自计算成员位置的不同。 在第一个查询中，计算成员是 ROWS 轴的一部分，而在第二个查询中，计算成员是 COLUMNS 轴的一部分。 下一个查询将两个计算成员合并到一个 MDX 查询中，这种位置上的不同在这个查询中就会变得非常重要。  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>查询 3 - 合并后的年差额和净收益计算  
- 在最后这个查询中，将上面两个示例合并成一个 MDX 查询，此时由于要同时对列和行进行计算，因此求解次序变得重要起来。 若要确保以正确的顺序进行计算，定义其中的计算通过使用出现的序列`SOLVE_ORDER`关键字。  
+ 在最后这个查询中，将上面两个示例合并成一个 MDX 查询，此时由于要同时对列和行进行计算，因此求解次序变得重要起来。 若要确保正确的顺序进行计算，定义使用进行计算的顺序`SOLVE_ORDER`关键字。  
   
- `SOLVE_ORDER` 关键字指定 MDX 查询或 `CREATE MEMBER` 命令中计算成员的求解次序。 与使用的整数值`SOLVE_ORDER`关键字是相对的不需要以起始于零，而不需要是连续的。 该值只是告诉 MDX 基于通过计算具有较大求解次序值的成员得出的值来计算成员。 如果未定义计算的成员`SOLVE_ORDER`关键字，默认值的计算成员为零。  
+ `SOLVE_ORDER` 关键字指定 MDX 查询或 `CREATE MEMBER` 命令中计算成员的求解次序。 使用整数值`SOLVE_ORDER`关键字是相对的不需要以零开始，也不需要是连续的。 该值只是告诉 MDX 基于通过计算具有较大求解次序值的成员得出的值来计算成员。 如果未定义计算的成员`SOLVE_ORDER`关键字，默认值的计算成员将为零。  
   
  例如，如果合并前面两个查询示例中使用的计算，则两个计算成员 `Year Difference` 和 `Profit Margin`将相交于 MDX 查询示例的结果数据集中的一个单元中。 确定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 如何计算此单元的唯一方式是通过求解次序。 根据两个计算成员的求解次序，用于构造此单元的公式将生成不同的结果。  
   
@@ -219,7 +219,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>请参阅  
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
- [创建成员语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [CREATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [操作数据&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

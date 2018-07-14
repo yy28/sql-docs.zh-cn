@@ -1,5 +1,5 @@
 ---
-title: 挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 418b4eb1e4e3d6dcc188a139ad3552fba5038e1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282423"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
   使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
@@ -163,9 +163,9 @@ ms.locfileid: "36018751"
   
  如果属性名称为列，则在最简单的事例中，ATTRIBUTE_VALUE 包含该列的离散值之一。  
   
- 具体取决于如何算法处理值，ATTRIBUTE_VALUE 还可以包含一个标志，指示属性是否存在值 (`Existing`)，或是否的值为 null (`Missing`)。  
+ 根据算法处理值的方式，ATTRIBUTE_VALUE 还可能包含一个标志来指示该属性是否存在某个值 (`Existing`)，还是值为 null (`Missing`)。  
   
- 例如，如果你的模型设置为查找客户已购买特定项目至少一次，ATTRIBUTE_NAME 列可能包含如定义感兴趣的项的属性 / 值对`Model = 'Water bottle'`，和 ATTRIBUTE_VALUE 列将包含仅关键字`Existing`或`Missing`。  
+ 例如，如果您的模型设置为查找至少一次购买某个特定商品的客户，ATTRIBUTE_NAME 列可能包含定义感兴趣的项，如属性-值对`Model = 'Water bottle'`，并且 ATTRIBUTE_VALUE 列将仅包含关键字`Existing`或`Missing`。  
   
  Support  
  具有此属性/值对或包含此项集或规则的事例的计数。  

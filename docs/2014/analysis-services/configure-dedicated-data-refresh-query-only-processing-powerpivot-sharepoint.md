@@ -1,5 +1,5 @@
 ---
-title: 配置专用的数据刷新或仅限查询的处理 (PowerPivot for SharePoint) |Microsoft 文档
+title: 配置专用的数据刷新或仅限查询的处理 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d84528c4d4db768ba58f125e15175604aed7af0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222297"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>配置专用数据刷新或仅限查询的处理 (PowerPivot for SharePoint)
   在 SharePoint 集成模式下，可以将 Analysis Services 服务器实例配置为支持特定类型的处理请求，如数据刷新或仅限查询的处理。 默认情况下，支持这两种类型的负载请求。 您可以关闭任一类型，以创建专用查询引擎或数据刷新服务器。  
@@ -33,7 +33,7 @@ ms.locfileid: "36024460"
   
  [配置处理模式](#config)  
   
- [更改可以并行运行的数据刷新作业的数目](#change)  
+ [更改可并行运行的数据刷新作业数](#change)  
   
 ##  <a name="config"></a> 配置处理模式  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36024460"
   
 5.  在“服务实例使用情况”中，执行以下操作之一：  
   
-    1.  清除的复选框**启用加载只读数据库**关闭每当用户打开工作簿包含 PowerPivot 数据时发生的按需查询处理。  
+    1.  清除的复选框**启用加载只读数据库**以关闭只要用户打开包含 PowerPivot 数据的工作簿就会发生的按需查询处理。  
   
-    2.  清除的复选框**的刷新数据库启用加载**关闭计划的数据刷新。  
+    2.  清除的复选框**启用加载数据库以进行刷新**以禁用计划的数据刷新。  
   
     > [!NOTE]  
     >  关闭数据刷新并不会从 SharePoint 站点中删除数据刷新选项。 拥有 PowerPivot 工作簿的用户仍可以创建数据刷新计划，但该服务器上不会发生数据刷新。  
@@ -58,14 +58,14 @@ ms.locfileid: "36024460"
   
 7.  保存更改。 在发生处理事件之前，服务器将不验证您的条目。 如果您输入的并发作业数目无效，则在处理下一个请求时，系统将检测到并记录此错误。  
   
-##  <a name="change"></a> 更改可以并行运行的数据刷新作业的数目  
+##  <a name="change"></a> 更改可并行运行的数据刷新作业数  
  数据刷新作业是一项计划的任务，它添加到由 PowerPivot 服务应用程序维护和监视的处理队列中。 作业由 PowerPivot 工作簿中一个或多个数据源的计划信息组成。 将为每个定义的计划创建一个单独的作业。 如果工作簿所有者为所有数据源定义了一个计划，则将只为整个数据刷新操作创建一个作业。 如果工作簿所有者为外部数据源创建单独的计划，则将创建和运行多个作业，以完成该工作簿的完全数据刷新。  
   
  如果系统有能力支持额外负载，则可以增加可同时运行的数据刷新作业数目。  
   
 |设置|有效值|Description|  
 |-------------|------------------|-----------------|  
-|默认值|基于 RAM 进行计算。|默认值基于可用内存量除以 4 GB 后的结果。 默认值由公式计算得出，以便可以根据系统的容量调整设置。<br /><br /> 注意： 4 千兆字节除数已选择根据实际的 PowerPivot 数据源的大型采样的内存使用情况。 而不依据 PowerPivot 物理或逻辑体系结构。|  
+|默认值|基于 RAM 进行计算。|默认值基于可用内存量除以 4 GB 后的结果。 默认值由公式计算得出，以便可以根据系统的容量调整设置。<br /><br /> 注意： 根据大型实际 PowerPivot 数据源的示例的 RAM 使用情况选择 4 千兆字节除数。 而不依据 PowerPivot 物理或逻辑体系结构。|  
 |最大值|基于 CPU 数量进行计算。|您可以指定的最大并发作业数目基于计算机上的处理器数量。 例如，在 4 插槽四核计算机上，您可以并行运行的最大作业数目为 16。|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>提高默认值  

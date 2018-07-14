@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4ab1a7fdd56bf4586d3009c9c45bb29ecac0497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a855a78a6c37fa2327a88e0a052adbbc4ce85b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179104"
 ---
 # <a name="create-a-job-category"></a>创建作业类别
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理对象在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建作业类别。  
@@ -62,7 +62,7 @@ ms.locfileid: "36025850"
   
 8.  在“管理作业类别server_name” 对话框中，单击“刷新”，确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   
- 有关这些对话框的详细信息，请参阅[作业类别： 管理作业类别](job-categories-manage-job-categories.md)和[作业类别属性和新作业类别](job-categories-properties-new-job-category.md)。  
+ 有关这些对话框的详细信息，请参阅[作业类别： 管理作业类别](job-categories-manage-job-categories.md)并[作业类别属性和新的作业类别](job-categories-properties-new-job-category.md)。  
   
  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36025850"
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **创建作业类别**  
   
- 调用`JobCategory`通过使用一种选择，如 Visual Basic、 Visual C# 或 PowerShell 编程语言的类。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  
+ 调用`JobCategory`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  
   
  
   

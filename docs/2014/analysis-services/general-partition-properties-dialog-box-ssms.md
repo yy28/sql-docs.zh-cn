@@ -1,5 +1,5 @@
 ---
-title: 常规 （分区属性对话框） (SSMS) |Microsoft 文档
+title: 常规 （分区属性对话框) (SSMS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.general.f1
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0008344f56afefca65c9c94b1b4446b5d84455dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 54ef8ce15795f8744b8ab7d368c05892a2dc850a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170148"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>常规（“分区属性”对话框）(SSMS)
   对于 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集，可以在 SQL Server Management Studio 中使用“分区属性”对话框的“常规”页，为其度量值组中的分区设置常规属性。  
@@ -35,7 +35,7 @@ ms.locfileid: "36018057"
 |**创建时间戳**|显示分区的创建日期和时间。|  
 |**当前存储模式**|显示分区的当前存储模式。<br /><br /> 注意：根据分区的主动缓存设置的不同，此模式可能有所不同。 有关主动缓存的详细信息，请参阅[主动缓存（分区）](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。|  
 |**Description**|键入内容即可更改分区的说明。|  
-|**估计的行数**|键入在基础数据源中由该分区表示的估计行数。 在处理期间将使用此值来估计处理分区所需的时间和存储空间。|  
+|**估计行数**|键入在基础数据源中由该分区表示的估计行数。 在处理期间将使用此值来估计处理分区所需的时间和存储空间。|  
 |**估计的大小**|显示分区的估计大小。|  
 |**ID**|显示分区的标识符。|  
 |**上次处理**|显示上次处理分区的日期和时间。|  
@@ -52,9 +52,9 @@ ms.locfileid: "36018057"
 ## <a name="see-also"></a>请参阅  
  [分区&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [远程分区](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [分区属性对话框中&#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
- [选择&#40;分区属性对话框中&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   
- [主动缓存&#40;分区属性对话框中&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
+ [分区属性对话框&#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
+ [选择&#40;分区属性对话框&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   
+ [主动缓存&#40;分区属性对话框&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
  [多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

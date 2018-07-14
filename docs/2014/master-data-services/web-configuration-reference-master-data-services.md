@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1163e8575562c5a81fea3bfef65c89a77b1ce5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9c345312ddadab6c5efd689d36f36f09cc2d0a41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250217"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 配置参考 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 使用 Web.config 文件来包含使 Internet Information Services (IIS) 能够承载 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务的配置设置。 此 Web.config 文件位于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安装路径的 WebApplication 文件夹。 有关路径和权限的详细信息，请参阅[文件夹和文件权限 (Master Data Services)](folder-and-file-permissions-master-data-services.md)。  
@@ -59,10 +59,10 @@ ms.locfileid: "36024848"
 |项|Description|  
 |----------|-----------------|  
 |`instance`|子元素。 包含指定 Web 服务和数据库连接字符串信息的属性。|  
-|`virtualPath`|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 这对应于`path`属性**\<应用程序 >** 元素下的**\<站点 >** IIS ApplicationHost.config 文件中的元素。|  
-|`siteName`|属性。 指定承载 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的站点的名称。 这对应于`name`属性**\<站点 >** 元素下的**\<站点 >** IIS ApplicationHost.config 文件中。|  
-|`connectionName`|属性。 指定要使用的连接的名称。 这对应于`name`属性**\<添加 >** 元素下的 **\<connectionStrings >** 在 Web.config 中的元素。|  
-|`serviceName`|属性。 指定 Web 服务的名称。 这对应于`name`属性**\<服务 >** 元素下的**\<服务 >** 在 Web.config 中的元素。|  
+|`virtualPath`|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 这对应于`path`的属性**\<应用程序 >** 元素下的**\<站点 >** IIS ApplicationHost.config 文件中的元素。|  
+|`siteName`|属性。 指定承载 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的站点的名称。 这对应于`name`的属性**\<站点 >** 元素下的**\<站点 >** IIS ApplicationHost.config 文件中。|  
+|`connectionName`|属性。 指定要使用的连接的名称。 这对应于`name`的属性**\<添加 >** 元素下的 **\<connectionStrings >** 在 Web.config 中的元素。|  
+|`serviceName`|属性。 指定 Web 服务的名称。 这对应于`name`的属性**\<服务 >** 元素下的**\<服务 >** 在 Web.config 中的元素。|  
   
 ### <a name="example"></a>示例  
  下面的示例演示了 Contoso 站点上一个名为 MDS1 的服务和使用由 MDSDB 指定的连接字符串的 /MDS 路径。  

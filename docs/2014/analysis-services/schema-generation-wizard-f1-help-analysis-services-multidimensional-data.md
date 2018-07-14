@@ -1,5 +1,5 @@
 ---
-title: 架构生成向导的 F1 帮助 (Analysis Services-多维数据) |Microsoft 文档
+title: 架构生成向导的 F1 帮助 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52536b8132a0c42b67439a45e6a808a7674b008b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca4ce364da49d35e7f9e901937196f3dbad63af7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218167"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>架构生成向导的 F1 帮助（Analysis Services - 多维数据）
   可以使用架构生成向导，自动为基于现有多维数据集和维度的主题区域数据库生成相关架构。 此外，您可以为时间维度填充向导所生成的表，并为主题区域数据库管理命名约定和选项。  

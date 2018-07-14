@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 24f9f05c17c218729a6d64d3c9dfe5e7e5d990f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2746ab437d1fa64e50da83a335d3fef9639b9f9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193277"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>更改派生层次结构名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改派生层次结构的名称。  
@@ -37,7 +37,7 @@ ms.locfileid: "36025945"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  上**模型视图**页上，从菜单栏中，指向**管理**单击**派生层次结构**。  
+2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**派生层次结构**。  
   
 3.  在 **“派生层次结构维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   

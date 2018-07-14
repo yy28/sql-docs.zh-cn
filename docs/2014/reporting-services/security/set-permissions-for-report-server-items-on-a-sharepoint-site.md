@@ -1,5 +1,5 @@
 ---
-title: SharePoint 站点 (在 SharePoint 集成模式下的 Reporting Services) 上为报表服务器项设置权限 |Microsoft 文档
+title: SharePoint 站点 (SharePoint 集成模式下的 Reporting Services) 上为报表服务器项设置权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -16,13 +16,13 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6d66fc292fe1af7f20e55eee6b8d1fdf9e6151a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a0f1e98fc1837acbf995a2a68376cd4dd8bd02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282603"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）
   如果默认安全设置未提供您需要的访问权限级别，则可以创建新的权限级别以提供对特定报表服务器项或操作的访问权限。 如果希望限制对特定报表的访问权限，则自定义安全设置非常有用。  
@@ -76,10 +76,10 @@ ms.locfileid: "36024739"
 12. 单击“确定” 。 用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
   
 ## <a name="see-also"></a>请参阅  
- [报表服务器项的 Windows SharePoint Services 中使用内置的安全](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
+ [在报表服务器项的 Windows SharePoint Services 中使用内置的安全](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [在 SharePoint Web 应用程序中设置报表服务器操作的权限](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Reporting Services to SharePoint Groups and Permissions 中比较角色和任务](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint 站点和列表权限参考为报表服务器项](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Reporting Services 与 SharePoint 组和权限中的角色和任务比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [SharePoint 站点和列表权限参考，为报表服务器项](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

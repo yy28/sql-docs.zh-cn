@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65556
 - vdt.dlgbox.validationwarnings
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 524344212a1f81c07835bf9f967ff34bfeade928
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 202881aef2ae0fc8aa5daa4f01d625a9e2a26860
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214307"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>“验证警告”对话框 (Visual Database Tools)
   如果尝试保存的修改具有潜在的破坏性副作用，或者数据库提交操作很可能会失败，则会显示此对话框。 此对话框可指示这些副作用可能会是什么或提交操作可能失败的原因。 使用此对话框可以选择继续修改还是取消操作。  
@@ -57,7 +57,7 @@ ms.locfileid: "36025153"
  显示“另存为”对话框，可以在其中为包含警告列表的文本文件指定位置。  
   
 ## <a name="see-also"></a>请参阅  
- [设计表&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [设计表&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

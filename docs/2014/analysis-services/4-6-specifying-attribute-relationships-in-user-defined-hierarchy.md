@@ -1,5 +1,5 @@
 ---
-title: 指定用户定义的层次结构中的属性之间的属性关系 |Microsoft 文档
+title: 指定用户定义层次结构中属性之间的属性关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0c17514fda839a155dbe2f58f1e6b8c653b65ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cae7505f4ff135b9b1939dba39359feaed9458b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204627"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>指定用户定义层次结构中属性之间的属性关系
   您已了解本教程中的内容，现在可以将属性层次结构组织到用户层次结构内的级别中，以便在多维数据集中为用户提供导航路径。 用户层次结构可以表示自然层次结构（如市/县、州/省/自治区和国家/地区），或者可以只表示导航路径（如雇员姓名、职务和部门名称）。 对于在层次结构中导航的用户而言，这两类用户层次结构应相同。  

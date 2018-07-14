@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22d9e7f6a9d78093287c146f007a9a722343baea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5bc369f74b77db20a9f7766f8bce0bc93e510bc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242857"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>匹配相似数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用 Data Quality Services (DQS) 功能查找数据中的相似性。  
@@ -32,7 +32,7 @@ ms.locfileid: "36018461"
   
 ## <a name="prerequisites"></a>必要條件  
   
--   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅[负载到 Excel 的 MDS 数据](export-data-to-excel-from-master-data-services.md)。  
+-   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅[将数据加载到 Excel 的 mds](export-data-to-excel-from-master-data-services.md)。  
   
 -   可选。 您可以在检查是否存在相似性之前将其他数据和 MDS 管理的数据合并在一起。 有关详细信息，请参阅[合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36018461"
 -   查看其他信息以便确定哪些数据是类似的。 有关详细信息，请参阅[数据质量匹配列（用于 Excel 的 MDS 外接程序）](data-quality-matching-columns-mds-add-in-for-excel.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据质量匹配中的 MDS 外接 for Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [数据质量匹配中的 MDS 外接程序 excel](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [数据匹配](../../data-quality-services/data-matching.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 46d0ee10acb57e4553c176be34572fc7f6dd02d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 954da454e2953f14cf61f1d49794829c385a6df3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206687"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的联合。  
@@ -36,7 +36,7 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`SqlGeometry`或`SqlGeography`) 在其上执行聚合表达式。  
+ (`SqlGeometry`或`SqlGeography`) 对其执行聚合的表达式。  
   
  *作用域*  
  (`String`) 可选。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
@@ -45,7 +45,7 @@ Union(expression, scope, recursive)
  (**Enumerated Type**) 可选。 `Simple` （默认值） 或`RdlRecursive`。 指定是否以递归方式执行聚合。  
   
 ## <a name="return"></a>返回  
- 返回的空间对象，或者`SqlGeometry`或`SqlGeography`、 基于表达式类型。 有关详细信息`SqlGeometry`和`SqlGeography`空间数据类型，请参阅[空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)。  
+ 返回空间对象`SqlGeometry`或`SqlGeography`、 基于表达式类型。 有关详细信息`SqlGeometry`并`SqlGeography`空间数据类型，请参阅[空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
 ## <a name="remarks"></a>Remarks  
  表达式中指定的数据集必须具有相同的数据类型。  
@@ -67,7 +67,7 @@ Union(expression, scope, recursive)
  有关递归聚合的详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 ## <a name="example"></a>示例  
- 下表显示的示例`SqlGeometry`表达式和`Union`导致表达式，空间数据的 WKT （熟知文本） 格式中所示。  
+ 下表显示的示例`SqlGeometry`表达式和`Union`结果表达式，以空间数据的 WKT （熟知文本） 格式显示。  
   
 |具有空间数据的字段|示例|UNION 结果|  
 |-----------------------------|-------------|------------------|  

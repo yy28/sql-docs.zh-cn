@@ -5,23 +5,22 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 13
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: f31c40f012c72d87e932032a80ee00bb1f0afe75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 29b53d91b1d60752a9e7ecea5d9d020ab6ab3d70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237407"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性副本属性（“常规”页）
   使用此对话框可以查看可用性副本的属性。  
@@ -91,7 +90,7 @@ ms.locfileid: "36024411"
  **是**  
  允许与此副本的辅助数据库的所有连接，但仅限读访问。 辅助数据库全都可用于读访问。  
   
- 有关详细信息，请参阅[活动辅助副本： 可读辅助副本 （AlwaysOn 可用性组）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 有关详细信息，请参阅[活动次要副本： 可读辅助副本 （AlwaysOn 可用性组）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **会话超时(秒)**  
  超时期限（秒）。 超时期限是指副本接收来自其他副本的消息而等待的最长时间，超过此时间，将主副本和辅助副本之间的连接视为已失败。 会话超时检测辅助副本是否与主副本相连接。 在检测到与辅助副本的连接失败时，主副本将辅助副本视为 NOT_SYNCHRONIZED。 在检测到与辅助副本的连接失败时，辅助副本只会尝试重新连接。  

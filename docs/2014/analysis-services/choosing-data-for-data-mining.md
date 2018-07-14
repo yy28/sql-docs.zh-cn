@@ -1,5 +1,5 @@
 ---
-title: 为数据挖掘中选择数据 |Microsoft 文档
+title: 选择用于数据挖掘数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
 - nested tables
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - discretized
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 014c39cea8baea721c51308e65f894e8216ae7e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d9466397115e3562deebb91b5b3e7506bae09c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170284"
 ---
 # <a name="choosing-data-for-data-mining"></a>为数据挖掘选择数据
   开始数据挖掘时，你可能会问“我需要多少数据？” 或“在清理数据或设置数据格式时，我是否应了解一些特殊要求？”  
   
  具体而言，刚接触数据挖掘的人通常会遇到与 Excel 数据有关的问题，如需要在列中一致地设置数据格式、清除缺失值或对数字装箱。 本节还会列出特定模型类型的数据要求。  
   
- [选择的数据](#bkmk_ChoosingData)  
+ [选择数据](#bkmk_ChoosingData)  
   
  [常见数据问题](#bkmk_CommonDataProblems)  
   
  [其他数据要求](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a> 选择的数据  
+##  <a name="bkmk_ChoosingData"></a> 选择数据  
  选择分析数据可能是数据挖掘过程中最重要的部分，甚至比算法选择更重要。 原因在于，数据挖掘通常不是由假设驱动，而是由数据驱动。 数据挖掘可以接收数据并发现新关联（否则完全无法发现任何模式），而不是提前选择和测试变量（传统统计建模可能会这样做）。 数据的质量和数量可能会显著影响结果。  
   
  一般而言，请遵守以下规则：  
@@ -67,7 +67,7 @@ ms.locfileid: "36018112"
   
 -   创建多个版本的数据，生成多个模型。  
   
- 有关如何选择的其他提示修改和查看数据，，请参阅[清单的准备工作数据挖掘](checklist-of-preparation-for-data-mining.md)。  
+ 其他提示如何选择、 修改和查看数据，请参阅[清单的准备用于数据挖掘](checklist-of-preparation-for-data-mining.md)。  
   
 ### <a name="how-much-data-do-i-need"></a>我需要多少数据？  
  经验法则是，对于最简单的模型类型和方案，数据行数不小于 50-100 行。 例如，如果使用 Naïve Bayes 模型预测单个属性，并且数据集格式正确，使用 50-100 行数据就可能生成相当准确的预测。  
@@ -77,7 +77,7 @@ ms.locfileid: "36018112"
  如果数据集大小合理，应更注重数据质量而不是添加越来越多的数据。 达到一定数据量后，会发现统计上有效的所有模式，添加更多数据不会提高其有效性。 相反，添加更多数据，有时可能引入意外关联。  
   
 ### <a name="discrete-vs-continuous-numbers"></a>离散数值与连续数值  
- A*离散*列包含有限数量的值。 例如，文本通常被视为离散值。  
+ 一个*离散*列包含有限数量的值。 例如，文本通常被视为离散值。  
   
  离散值有一些重要属性。 例如，如果将数字视为离散值，则它们之间不隐含任何顺序，您无法对数字计算平均值或总和。 电话区号就是离散数值数据，不会用来执行数学运算。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36018112"
   
  **将数字转换为分类变量**  
   
- 因为列包含数值并不意味着您应该将它们视作连续数值。 *离散化*有很多优点以进行分析。 好处之一是缩小了问题空间。 另一好处是数字有时不适合表示结果。  
+ 因为列包含数值并不意味着您应该将它们视作连续数值。 *离散化*为分析提供了很多优势。 好处之一是缩小了问题空间。 另一好处是数字有时不适合表示结果。  
   
  例如，一个家庭的孩子数既可视为连续值，也可视为离散值。 因为家庭中不可能有 2.5 个孩子，有 3 个或更多孩子的家庭的行为方式可能与有 2 个孩子的家庭非常不同，所以将此数字视为类别可以获得更好的结果。 但是，如果要生成回归模型或由于其他原因需要平均值（如每个家庭 1.357 个孩子），则可使用连续数字数据类型。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "36018112"
   
  诸如男性和女性之类的应该是离散的非常常见的值表示为数值数据（如使用标签 1 和 2）。 通常执行此编码是为了简化数据输入或者节省数据库的存储空间，不过此编码可能导致值的性质和意义不明确。 此外，由于离散值以数字形式存储，当您在应用程序之间移动数据时，可能会遇到数据类型转换错误，这些值可能被计算或被视为连续值。 若要避免此类问题，应该在开始数据挖掘之前，将数值标签转换回离散的文本标签。  
   
- **装箱的数字**  
+ **对数字装箱**  
   
- 尽管主体中的所有数字无限并因而连续的当你对信息进行建模时你可能会发现它更有效地*离散化*或*bin*可用值。  
+ 虽然原则上的所有数字都是无限，因此不间断的信息进行建模时您可能会发现更有效地*离散化*或*bin*可用值。  
   
  您可以通过许多方式将数据装箱：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36018112"
   
 -   通过创建某些分组集合（具有业务上的意义或者易于使用），自己预先对值进行分组。 使用此方法，您常常会丧失值的真正分布，但范围更易于用户读取。  
   
--   让算法确定存储桶的最佳数目以及值的分布。 这是大多数工具中的默认值，但您可以覆盖这些默认值在**数据挖掘**工具栏向导。  
+-   让算法确定存储桶的最佳数目以及值的分布。 这是大多数工具中的默认值，但可以重写这些默认值在**数据挖掘**工具栏向导。  
   
 -   将值逼近中心平均值或代表值。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "36018112"
   
  默认情况下，在将数值数据导入 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 时，这些数字会存储为带两位小数的小数格式。 如果此数字格式不符合您的要求，您应该将其更改为其他数值格式，也可更改小数位数。  
   
- 一个选项是使用[重新标记发生](relabel-sql-server-data-mining-add-ins.md)工具来更改数字中显示或分组的方式。  
+ 一种选择是使用[重新标记](relabel-sql-server-data-mining-add-ins.md)工具更改数字显示或分组的方式。  
   
- 但是，如果你的数据太过复杂，与处理**重新标记发生**工具，你可以使用在 Excel 中数值的函数将你的数据转换为离散范围，保存到一个单独的列，该结果，然后使用的离散化的列分类相反。  
+ 但是，如果数据太复杂，无法处理与**重新标记**工具，您可以使用 Excel 中的数值函数将数据转换为离散范围，保存到单独一列，该结果，然后使用的离散化的列分类相反。  
   
  例如，如果要分析赛跑结果并希望按照完成时间（以分钟为单位）对赛跑者进行分组，则您可以向上舍入为最接近的分钟数并将该舍入值保存到新列中。 您还可以使用 `MINUTE` 函数仅提取分钟值，然后将该值保存到新列以供分析使用。  
   
@@ -138,14 +138,14 @@ ms.locfileid: "36018112"
   
 2.  右键单击并选择**设置单元格格式**从快捷菜单。  
   
-3.  在**类别**列表中，选择**数**。  
+3.  在中**类别**列表中，选择**数**。  
   
 4.  增加小数位数的个数。 以科学记数法表示的概率通常非常小。  
   
      只有数字的显示方式会发生变化，基础值不会变化。  
   
 ### <a name="working-with-dates-and-times"></a>处理日期和时间  
- 如果您的 Excel 表中包含日期，并且您将该列用于输入或预测，则您可能会收到意外结果，具体取决于日期信息或时间信息的格式设置。 例如，当使用**检测类别**或**分类**和包含一列以包含日期，日期归类为具有的小数位数的数字。 这并不是错误；这是基础数据的精确表示形式。 数据挖掘算法使用的是基础存储格式，而不是显示格式。  
+ 如果您的 Excel 表中包含日期，并且您将该列用于输入或预测，则您可能会收到意外结果，具体取决于日期信息或时间信息的格式设置。 例如，使用**检测类别**或**分类**并包含一列以包含日期，日期将被归类为带有多位小数的数字。 这并不是错误；这是基础数据的精确表示形式。 数据挖掘算法使用的是基础存储格式，而不是显示格式。  
   
  如果您在使用日期时遇到困难，希望使用如月或天这样的常规分组方式来分析日期，则可使用 Excel 中的 DATE 函数，将年、月或日提取到单独一列中，然后使用该列进行分类。  
   
@@ -154,19 +154,19 @@ ms.locfileid: "36018112"
 ### <a name="requirements-by-algorithm-type"></a>算法类型要求  
  某些在外接程序中使用的算法需要特定的数据类型或内容类型才能创建模型。  
   
- **Naïve Bayes 模型**  
+ **朴素贝叶斯模型**  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法不能使用连续列作为输入。 这意味着，您必须对数字装箱，或者如果值足够少，可以按离散值处理。  
   
 -   此类模型也不能预测连续值。 因此，如果要预测连续数字（如收入），应先将值装箱到有意义的范围中。 如果不确定合适的范围，可以使用聚类分析算法确定数据中的数字聚类。  
   
--   当你使用基于此算法向导 (如[分析关键影响因素&#40;for Excel 表分析工具&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md))，将由向导装箱是连续的列你。  
+-   当使用基于此算法的向导 (如[分析关键影响因素&#40;Excel 表分析工具&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md))，向导会对连续列装箱你。  
   
--   如果你要构建 Naive Bayes 模型使用[高级建模&#40;for Excel 的数据挖掘外接&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)选项，将从模型中删除数字列。 如果你想要避免这种情况，使用[重新标记发生&#40;SQL Server 数据挖掘外接程序&#41;](relabel-sql-server-data-mining-add-ins.md)工具以创建新列，其中装箱的值。  
+-   如果生成 Naive Bayes 模型中使用[高级建模&#40;数据挖掘的 Excel 外接程序&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)选项，将从模型中删除数值列。 如果你想要避免这种情况，使用[重新标记&#40;SQL Server 数据挖掘外接程序&#41;](relabel-sql-server-data-mining-add-ins.md)工具来创建包含装箱值的新列。  
   
  **聚类分析模型**  
   
--   聚类分析工具 ([群集向导&#40;for Excel 的数据挖掘外接&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)和[检测类别&#40;for Excel 表分析工具&#41;](detect-categories-table-analysis-tools-for-excel.md)) 也不能使用连续数字，但这两种工具将自动装箱数字列为你。  
+-   聚类分析工具 ([群集向导&#40;数据挖掘的 Excel 外接程序&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)并[检测类别&#40;Excel 表分析工具&#41;](detect-categories-table-analysis-tools-for-excel.md)) 也不能使用连续数字，但这两种工具将自动对数字列装箱为您。  
   
 -   这两种工具都向您提供选项以便可以选择结果中输出类别的数目，但是，如果您想要控制对单独列中的值进行分组的方式，则应该通过所需分组来创建新列。  
   
@@ -179,11 +179,11 @@ ms.locfileid: "36018112"
 -   如果要创建回归模型的散点图，则输入变量也必须是连续数字（表示为合适的数据类型）。  
   
 ### <a name="using-content-types-to-make-better-models"></a>使用内容类型生成更好的模型  
- A*内容类型*是应用于列中以指定应使用模型的列数据的方式的属性。 执行分析时，算法可以使用内容类型作为说明或提示。  
+ 一个*内容类型*是应用于列，指定列数据模型的使用方式的属性。 执行分析时，算法可以使用内容类型作为说明或提示。  
   
- 例如，如果列包含重复在特定时间段内，以指示星期几的数字，则可以指定作为该列的内容类型`Cyclical`。  
+ 例如，如果列包含重复特定的间隔来指示一周中的天的数字，则可以指定作为该列的内容类型`Cyclical`。  
   
- 如果您使用在此外接程序中提供的向导和工具，则不必担心内容类型。但是，如果你使用[添加到结构的模型&#40;for Excel 的数据挖掘外接&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)建模选项可向现有数据中添加新模型，你可能会与内容类型相关的错误。  
+ 如果您使用在此外接程序中提供的向导和工具，则不必担心内容类型。但是，如果您使用[将模型添加到结构&#40;数据挖掘的 Excel 外接程序&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)建模选项将一个新的模型添加到现有数据，您可能会遇到与内容类型相关的错误。  
   
  得到错误的原因是，某些类型的模型要求某种类型的数据（例如时间戳）。 这些工具根据特定要求处理这些列，并且还添加内容类型属性。 因此，如果对完全不同的算法重复使用数据，则可能需要更改数据类型或内容类型。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36018112"
  `Continuous` 内容类型可用于以下数据类型：`Date`、`Double` 和 `Long`。  
   
  `Discretized`  
- 该列包含表示值组的值，这些值是从连续列派生的值。 Bucket 被视为**排序**和离散值。  
+ 该列包含表示值组的值，这些值是从连续列派生的值。 存储桶被视为**排序**和离散值。  
   
  `Discretized` 内容类型可用于以下数据类型：`Date`、`Double`、`Long`。  
   
@@ -209,16 +209,16 @@ ms.locfileid: "36018112"
   
  通常，键列是数值或文本标识符，不应该用于分析，只应用于跟踪记录。 时序键和序列键是例外。  
   
- **嵌套表键**仅从外部数据源获取数据时已定义为使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源视图。 有关嵌套表的详细信息，请参阅[ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **嵌套表键**从外部数据源获取数据时已定义为仅使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源视图。 有关嵌套表的详细信息，请参阅[ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
   
  此内容类型可用于以下数据类型：`Date`、`Double`、`Long` 和 `Text`。  
   
  **键序列**  
  该列包含表示事件序列的值。 这些值是有序值，但不必按等差排列。  
   
- 此内容类型支持以下数据类型： `Double`， `Long`， `Text`，和`Date`。  
+ 以下数据类型支持此内容类型： `Double`， `Long`， `Text`，和`Date`。  
   
- **Key Time**  
+ **关键时间**  
  该列包含按顺序排列并表示时间刻度的值。 仅当模型为时序模型或顺序分析和聚类分析模型时才能使用键时间内容类型。  
   
  以下数据类型支持此内容类型：`Double`、`Long` 和 `Date`。  
@@ -228,7 +228,7 @@ ms.locfileid: "36018112"
   
  这意味着，数据的每一行都实际包含嵌套数据表，并且具有一个或多个列以及一个或多个行。  
   
- 嵌套的表会很有用，但你可以使用它们仅与[高级建模&#40;for Excel 的数据挖掘外接&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)建模选项。 例如，为示例数据[关联向导&#40;for Excel 数据挖掘客户端&#41;](associate-wizard-data-mining-client-for-excel.md)向导和[购物篮分析&#40;for Excel 表 AnalysisTools&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md)工具包含已平展嵌套表中的数据。  
+ 嵌套的表是非常方便，但你可以使用它们仅与[高级建模&#40;数据挖掘的 Excel 外接程序&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)建模选项。 例如，对于示例数据[关联向导&#40;Excel 数据挖掘客户端&#41;](associate-wizard-data-mining-client-for-excel.md)向导并[购物篮分析&#40;Excel 表分析工具&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)工具包含已平展嵌套表中的数据。  
 
   
   

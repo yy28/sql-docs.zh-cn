@@ -1,5 +1,5 @@
 ---
-title: ProtocolName 属性 （ServerNetworkProtocolIPAddress 类） |Microsoft 文档
+title: ProtocolName 属性 （ServerNetworkProtocolIPAddress 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c74a4177be994d890a5cc30bdf85f5778b6c008e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7f76b2e3cbb713a99e3e6d531e0afcad4572b5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197077"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName 属性（ServerNetworkProtocolIPAddress 类）
   获取引用 IP 地址的服务器网络协议的名称。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)表示的实例上的网络协议的 IP 地址的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象，表示的实例上的网络协议 IP 地址[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器网络协议名称的字符串值。  

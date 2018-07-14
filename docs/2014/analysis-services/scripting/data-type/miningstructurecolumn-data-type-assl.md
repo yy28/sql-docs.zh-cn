@@ -1,5 +1,5 @@
 ---
-title: MiningStructureColumn 数据类型 (ASSL) |Microsoft 文档
+title: MiningStructureColumn 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructureColumn data type
 ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b1fc3d4f25bb5aa261179904939a271774de446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f30ccbc909db5197423c680e1e27b4ec55b97b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272073"
 ---
 # <a name="miningstructurecolumn-data-type-assl"></a>MiningStructureColumn 数据类型 (ASSL)
-  定义表示列中的相关信息的抽象基元数据类型[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
+  定义表示列中的相关信息的抽象的基元数据类型[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,11 +60,11 @@ ms.locfileid: "36018724"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
-|子元素|[批注](../collections/annotations-element-assl.md)，[说明](../properties/description-element-assl.md)， [ID](../properties/id-element-assl.md)，[名称](../properties/name-element-assl.md)，[类型](../properties/type-element-miningstructurecolumn-assl.md)|  
-|派生元素|[列](../objects/column-element-assl.md)([列](../collections/columns-element-assl.md)集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
+|子元素|[批注](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)， [ID](../properties/id-element-assl.md)，[名称](../properties/name-element-assl.md)，[类型](../properties/type-element-miningstructurecolumn-assl.md)|  
+|派生元素|[列](../objects/column-element-assl.md)([列](../collections/columns-element-assl.md)的集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructureColumn>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructureColumn>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

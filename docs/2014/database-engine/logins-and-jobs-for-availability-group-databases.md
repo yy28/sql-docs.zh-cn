@@ -1,14 +1,13 @@
 ---
-title: 管理可用性组 (SQL Server) 的数据库的登录名和作业 |Microsoft 文档
+title: 管理登录名和作业的数据库的可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], failover
@@ -17,13 +16,13 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: 14
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 0a1229f999cc4fc5a1b4ffa1426e2c4f3597674c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63e50f50613f8be8ddbf3969d538521f3aa3b126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196077"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>管理可用性组中数据库的登录名和作业 (SQL Server)
   您应当定期维护 AlwaysOn 可用性组的每个主数据库及其相应的辅助数据库上的同一组用户登录名和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业。 在为可用性组承载可用性副本的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上，必须重新生成这些登录名和作业。  
@@ -34,7 +33,7 @@ ms.locfileid: "36026841"
   
      承载可用性组的可用性副本的服务器实例的配置可能有所不同，如具有不同的磁带机号等。 每个可用性副本的作业必须允许可能存在的此类差异。  
   
-     请注意，备份作业可以使用 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函数根据可用性组备份首选项，标识本地副本是否为用于备份的首选副本。 使用 [维护计划向导](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 创建的备份作业默认使用此函数。 对于其他备份作业，我们建议您将此函数用作您的备份作业中的一个条件，以便仅在首选副本上执行它们。 有关详细信息，请参阅[活动辅助副本： 辅助副本 （AlwaysOn 可用性组） 上的备份](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+     请注意，备份作业可以使用 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函数根据可用性组备份首选项，标识本地副本是否为用于备份的首选副本。 使用 [维护计划向导](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 创建的备份作业默认使用此函数。 对于其他备份作业，我们建议您将此函数用作您的备份作业中的一个条件，以便仅在首选副本上执行它们。 有关详细信息，请参阅[活动次要副本： 辅助副本 （AlwaysOn 可用性组） 上备份](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **登录名**  
   

@@ -1,5 +1,5 @@
 ---
-title: 重播至光标处 （SQL Server 事件探查器） |Microsoft 文档
+title: 重播到光标处 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replaying cursors
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 90dd5a922aa0f4363dc73bf88989daec05568944
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 41ea37154bc03428b0e16a2101ca8f71e3852251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196687"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重播至光标处 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播到光标处即暂停的跟踪文件或表。 在光标处暂停跟踪可支持调试，因为您可以将长跟踪脚本的重播分成较短的段，以便逐步进行分析。  
@@ -47,7 +47,7 @@ ms.locfileid: "36026042"
 6.  重复步骤 5 到跟踪的末尾。  
   
 ## <a name="see-also"></a>请参阅  
- [重播到断点&#40;SQL Server 事件探查器&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
+ [重播到断点&#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
  [重播跟踪](replay-traces.md)   
  [SQL Server 事件探查器](sql-server-profiler.md)  
   

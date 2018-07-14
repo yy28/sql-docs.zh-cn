@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_LOCKS 行集 |Microsoft 文档
+title: DISCOVER_LOCKS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_LOCKS rowset
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41af6b328b9083151bd3ef51bfc7df1d2986c1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4458d9dac98fd35d54ff35c0d1d524a92b576ba5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167592"
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 行集
   提供有关服务器上的当前持续锁定的信息。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_LOCKS`行集包含以下各列。  
+ `DISCOVER_LOCKS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "36024199"
 |`LOCK_GRANT_TIME`|`DBTYPE_DBTIMESTAMP`||对资源授予锁时的 UTC 服务器时间。|  
 |`LOCK_ID`|`DBTYPE_GUID`||锁的唯一标识符，以 GUID 形式表示。|  
 |`LOCK_OBJECT_ID`|`DBTYPE_WSTR`||被锁定的对象的唯一标识符。|  
-|`LOCK_STATUS`|`DBTYPE_I4`||锁定状态中。<br /><br /> 0 表示“等待锁定对象”。<br /><br /> 1 表示“已授予锁”。|  
+|`LOCK_STATUS`|`DBTYPE_I4`||锁定状态。<br /><br /> 0 表示“等待锁定对象”。<br /><br /> 1 表示“已授予锁”。|  
 |`LOCK_TRANSACTION_ID`|`DBTYPE_GUID`||事务的唯一标识符，以 GUID 形式表示。|  
 |`LOCK_TYPE`|`DBTYPE_I4`||锁类型的位掩码；有关详细信息，请参阅本主题的“备注”部分。|  
 |`SPID`|`DBTYPE_I4`||会话 ID。|  
@@ -44,7 +44,7 @@ ms.locfileid: "36024199"
  未对此架构行集进行排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_LOCKS`行集可限制在下表中列出的列。  
+ `DISCOVER_LOCKS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

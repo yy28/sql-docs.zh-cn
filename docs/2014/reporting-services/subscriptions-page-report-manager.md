@@ -1,5 +1,5 @@
 ---
-title: 订阅页 （报表管理器） |Microsoft 文档
+title: 订阅页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6b6a3befb6794327af0fd5fa2ef92a48b67529a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181574"
 ---
 # <a name="subscriptions-page-report-manager"></a>“订阅”页（报表管理器）
   使用“订阅”页可以列出当前报表或共享数据源的所有订阅。 如果有足够的权限（指“管理所有订阅”任务），则可以查看所有用户的订阅。 否则，此页仅显示您所拥有的订阅。  
   
 > [!NOTE]  
->  其他页也包含订阅信息。 有关详细信息，请参阅[我的订阅网页&#40;报表管理器&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md)访问你在一个位置的所有订阅或[新订阅或编辑订阅页&#40;报表管理器&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)若要创建或编辑订阅。  
+>  其他页也包含订阅信息。 有关详细信息，请参阅[我的订阅页&#40;报表管理器&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md)来访问你在一个位置的所有订阅或[新订阅或编辑订阅页&#40;报表管理器&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)若要创建或编辑订阅。  
   
  某些选项只有在存在要处理的现有订阅时才可见。 如果在没有定义任何订阅的情况下从报表访问此页，则此页上仅显示 **“新建订阅”** 和 **“新建数据驱动订阅”** 选项。  
   
  必须确认报表数据源使用的是存储凭据，才能创建新订阅。 使用“数据源”属性页可以存储凭据。 有关详细信息，请参阅[数据源属性页&#40;报表管理器&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  
@@ -54,7 +54,7 @@ ms.locfileid: "36026068"
  **新的订阅**  
  单击此选项可创建当前报表的新订阅。 此按钮在报表使用存储的凭据或不使用凭据时启用。 当通过共享数据源打开订阅页时，此按钮不可用。  
   
- **新数据驱动订阅**  
+ **新建数据驱动订阅**  
  单击此选项可通过命令或查询针对包含此信息的数据存储区生成订阅服务器列表和传递选项。 此按钮在报表使用存储的凭据或不使用凭据时启用。 当通过共享数据源打开订阅页时，此按钮不可用。  
   
  **编辑**  
@@ -84,7 +84,7 @@ ms.locfileid: "36026068"
   
 ## <a name="see-also"></a>请参阅  
  [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [创建、 修改和删除标准订阅&#40;的 Reporting Services 本机模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [创建、 修改和删除标准订阅&#40;Reporting Services 本机模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [创建、修改和删除计划](subscriptions/create-modify-and-delete-schedules.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   

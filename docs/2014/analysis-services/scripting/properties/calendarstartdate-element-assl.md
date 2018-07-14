@@ -1,5 +1,5 @@
 ---
-title: CalendarStartDate 元素 (ASSL) |Microsoft 文档
+title: CalendarStartDate 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarStartDate element
 ms.assetid: f6204107-9123-41f0-acbd-52134fe36e37
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e0fd15c7fa6336c1fb1ea245eb400079e95e76d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 650ccdab8099ec80b6a526671bb01f0ad2d5ea32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249377"
 ---
 # <a name="calendarstartdate-element-assl"></a>CalendarStartDate 元素 (ASSL)
-  定义开始日期的日历时间段[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
+  定义的日历周期的开始日期[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36018721"
 ## <a name="remarks"></a>Remarks  
  `CalendarEndDate` 必须在 `CalendarStartDate` 之后。  
   
- 对应于的父元素`CalendarStartDate`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 父级对应的元素`CalendarStartDate`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

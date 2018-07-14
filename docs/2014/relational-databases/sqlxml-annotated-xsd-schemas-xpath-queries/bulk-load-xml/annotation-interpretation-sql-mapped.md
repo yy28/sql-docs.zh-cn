@@ -1,5 +1,5 @@
 ---
-title: sql： 映射 (SQLXML 4.0) |Microsoft 文档
+title: sql： 映射 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177854"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML 大容量加载进程`sql:mapped`中按预期方式的 XSD 架构的批注 — 也就是说，如果映射架构指定`sql:mapped="false"`对于任何元素或属性，XML 大容量加载不会尝试将相关联的数据存储在相应的列。  
+  XML 大容量加载进程`sql:mapped`按预期的 XSD 架构中批注 — 也就是说，如果映射架构指定`sql:mapped="false"`任何元素或属性，XML 大容量加载不会尝试在相应列中存储相关联的数据。  
   
  XML 大容量加载忽略未映射的元素和属性（这可能因为该架构未对它们进行描述，也可能因为它们在 XSD 架构中批注有 `sql:mapped="false"`）。 所有未映射的数据将转到溢出列（如果已使用 `sql:overflow-field` 指定了这样的列）。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36025878"
 </xsd:schema>  
 ```  
   
- 因为**HomePhone**属性指定`sql:mapped="false"`，XML 大容量加载未映射到相应的列的此属性。 XSD 架构标识一个溢出列 (**OverflowColumn**) XML 大容量加载在其中存储此未用完的数据。  
+ 因为**HomePhone**特性指定`sql:mapped="false"`，XML 大容量加载不映射到相应的列的此属性。 XSD 架构标识一个溢出列 (**OverflowColumn**) XML 大容量加载在其中存储此未用完的数据。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36025878"
     set objBL=Nothing  
     ```  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  

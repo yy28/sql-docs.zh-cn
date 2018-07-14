@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
 - precedence [SQL Server], Criteria pane
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aeecaae8a8186a94e748b4ad176bd96ea595fa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dd05831ace669f1d71bb1a46819b1220a766ce27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234377"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>在 AND 优先时组合条件 (Visual Database Tools)
   若要使用 AND 组合条件，应向查询中添加两次列，一个条件一次。 若要使用 OR 组合条件，可将第一个条件放在“筛选器”列中，并将其他条件放在“或...”列中。  
@@ -62,9 +62,9 @@ ms.locfileid: "36025635"
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [合并时的条件或优先级&#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [组合的约定条件窗格中的搜索条件&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
- [规则用于输入搜索值&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [OR 时组合条件具有优先级&#40;可视化数据库工具&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [组合的约定条件窗格中的搜索条件&#40;可视化数据库工具&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [输入规则搜索值&#40;可视化数据库工具&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

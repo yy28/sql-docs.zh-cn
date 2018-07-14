@@ -25,13 +25,13 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 354420f069357b7a8d350049cbddb04d25caf627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d86350195a980f87e5e67ea4634ebadd0116355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217627"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>为自定义任务开发用户界面
   自定义任务开发人员使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型可以轻松地为任务创建自定义用户界面，该任务随后可以集成并显示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中。 用户界面可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户提供有用的信息，并指导用户正确配置自定义任务的属性和设置。  
@@ -202,7 +202,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [创建自定义任务](creating-a-custom-task.md)   

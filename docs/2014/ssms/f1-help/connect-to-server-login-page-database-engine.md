@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5febecdb07be72a154605b7e66bce8f4d9ad87f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7f8c761a052bc3c82789087bb955c760e9a1b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181234"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>连接到服务器（“登录”页）数据库引擎
   连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 时，使用此选项卡可查看或指定选项。  
   
 > [!NOTE]  
->  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证和 Windows 身份验证模式下配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关如何确定身份验证模式以及如何更改身份验证模式的详细信息，请参阅[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
+>  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证和 Windows 身份验证模式下配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关如何确定身份验证模式，以及如何更改身份验证模式的详细信息，请参阅[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="options"></a>“常规”  
  **服务器类型**  

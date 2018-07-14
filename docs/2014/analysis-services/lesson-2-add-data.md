@@ -1,5 +1,5 @@
 ---
-title: 第 2 课： 添加数据 |Microsoft 文档
+title: 第 2 课： 添加数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165508"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
   在本课程中，您将使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“表导入向导”连接到 AdventureWorksDW SQL 数据库，选择数据，预览并筛选数据，然后将数据导入到模型工作区中。  
@@ -43,7 +43,7 @@ ms.locfileid: "36024452"
   
 2.  在“表导入向导”的“关系数据库”下，单击“Microsoft SQL Server”，然后单击“下一步”。  
   
-3.  在**连接到 Microsoft SQL Server 数据库**页上，在**友好连接名称**，类型`Adventure Works DB from SQL`。  
+3.  在中**连接到 Microsoft SQL Server 数据库**页上，在**友好的连接名称**，类型`Adventure Works DB from SQL`。  
   
 4.  在“服务器名称”中，键入安装了 AdventureWorksDW 数据库的服务器的名称。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36024452"
   
  现在已连接到数据库，选择了要导入的表，并向表提供了友好名称，请转到下一部分：[导入之前对表数据进行筛选](#FilterData)。  
   
-##  <a name="FilterData"></a> 筛选的表数据  
+##  <a name="FilterData"></a> 表数据进行筛选  
  您正在从数据库中导入的 DimCustomer 表包含来自原始 SQL Server Adventure Works 数据库的数据子集。 您将从 DimCustomer 表中筛选掉一些不必要的列。 如果可能，您希望筛选掉将不使用的数据，以便节省模型使用的内存中空间。  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>导入之前对表数据进行筛选  

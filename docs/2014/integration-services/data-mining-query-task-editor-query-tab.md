@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务编辑器 （查询选项卡） |Microsoft 文档
+title: 数据挖掘查询任务编辑器 （查询选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.query.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f42a411985780b7c6fe8fa77cb0b7391eed88921
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6721e47efbbff4e7e6abd39b8cc895411a54aa1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281793"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“查询”** 选项卡，基于挖掘模式创建预测查询。 在此对话框中还可以将参数和结果集绑定到变量。  

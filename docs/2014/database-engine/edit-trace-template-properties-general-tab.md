@@ -1,5 +1,5 @@
 ---
-title: 编辑跟踪模板属性 （常规选项卡） |Microsoft 文档
+title: 编辑跟踪模板属性 （常规选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.edittracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 384979b0a5a6377102c53ea9843dd84e96adc4d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 01e568b91050e3f42dd8788d5cc46d4deebd0fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257033"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>编辑“跟踪模板属性”（“常规”选项卡）
   通过使用下列选项，使用 **“跟踪模板属性”** 的 **“常规”** 选项卡可以查看或编辑现有跟踪模板。 要访问此对话框，请在[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“编辑模板”。  

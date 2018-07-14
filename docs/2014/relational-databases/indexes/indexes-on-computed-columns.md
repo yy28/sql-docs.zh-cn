@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279113"
 ---
 # <a name="indexes-on-computed-columns"></a>计算列上的索引
   只要满足下列要求就可以为计算列定义索引：  
@@ -74,7 +73,7 @@ ms.locfileid: "36024327"
   
 -   表达式的数据类型不是 `float` 或 `real`。  
   
--   它不使用`float`或`real`在其定义中的数据类型。 例如，在下面的语句中，列`y`是`int`和确定性但不是精确。  
+-   它不使用`float`或`real`在其定义中的数据类型。 例如，在下面的语句中，列`y`是`int`和具有确定性，但不是精确。  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -86,15 +85,15 @@ ms.locfileid: "36024327"
     ```  
   
 > [!NOTE]  
->  任何`float`或`real`表达式被视为不精确，并且不能作为索引键;`float`或`real`在索引视图，但不是作为键，则可以使用表达式。 对于计算列同样如此。 任何函数、 表达式或用户定义函数被视为不精确，如果它包含任何`float`或`real`表达式。 这也包括逻辑表达式（比较）。  
+>  任何`float`或`real`表达式被视为不精确，不能为索引键;`float`或`real`索引视图中，但不是作为键，可以使用表达式。 对于计算列同样如此。 任何函数、 表达式或用户定义函数被视为不精确，如果它包含任何`float`或`real`表达式。 这也包括逻辑表达式（比较）。  
   
  COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression* 是否精确。  
   
  **Data Type Requirements**  
   
--   *Computed_column_expression*为计算的列不能计算结果为定义`text`， `ntext`，或`image`数据类型。  
+-   *Computed_column_expression*为计算的列的值不能为定义`text`， `ntext`，或`image`数据类型。  
   
--   从派生的计算列`image`， `ntext`， `text`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`，和`xml`可索引数据类型，只要计算的列数据类型不允许作为索引键列。  
+-   从派生的计算列`image`， `ntext`， `text`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`，和`xml`可索引数据类型，只要计算的列数据类型作为索引键列。  
   
 -   从派生的计算列`image`， `ntext`，和`text`数据类型可以是在非聚集索引的键 （包含） 列，只要计算的列数据类型作为非键索引列。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36024327"
      当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。  
   
 ##  <a name="BKMK_persisted"></a> 对持久化计算列创建索引  
- 如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]对列创建了索引并且该索引引用在查询中使用这些持久的值。 此选项可以对计算列创建索引时[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]，确定性又精确。  
+ 如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]对列创建索引时和在查询中引用的索引时使用这些持久的值。 此选项可以对计算列创建索引时[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]，是具有确定性并精确。  
   
 ## <a name="related-content"></a>相关内容  
  [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql)  

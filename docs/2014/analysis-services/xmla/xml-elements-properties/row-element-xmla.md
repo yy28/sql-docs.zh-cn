@@ -1,5 +1,5 @@
 ---
-title: 行元素 (XMLA) |Microsoft 文档
+title: row 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223987"
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)
-  包含的数据的单个行[根](root-element-xmla.md)包含返回的表格数据元素[发现](../xml-elements-methods-discover.md)或[执行](../xml-elements-methods-execute.md)方法调用。  
+  包含的数据的单个行[根](root-element-xmla.md)元素，其中包含返回的表格数据[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36024893"
 </row>  
 ```  
   
- 有关详细信息列命名和表格数据的架构信息，请参阅[行集数据类型&#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md)。  
+ 有关列命名和表格数据的架构信息，请参阅[行集的数据类型&#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

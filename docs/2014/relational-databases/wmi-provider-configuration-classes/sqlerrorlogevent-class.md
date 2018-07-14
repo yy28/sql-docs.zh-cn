@@ -1,5 +1,5 @@
 ---
-title: SqlErrorLogEvent 类 |Microsoft 文档
+title: SqlErrorLogEvent 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95588b82a36bb5d7d5d520a5f54ca968a9198112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 65c2eb3758524788d0c65645d3b5736c930d58ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204888"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 类
   提供用于查看指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件中的事件的属性。  
@@ -62,7 +62,7 @@ class SQLErrorLogEvent
 |命名空间|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>示例  
- 下面的示例显示如何检索指定的日志文件中所有记录的事件的值。 若要运行该示例，请替换\< *Instance_Name*> 的实例的名称与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如 Instance1 和文件名同名的错误日志文件，如 ERRORLOG.1 替换。  
+ 下面的示例显示如何检索指定的日志文件中所有记录的事件的值。 若要运行该示例，请替换\< *Instance_Name*> 的实例的名称与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如 Instance1 和替换 File_Name 错误日志文件的名称，例如 ERRORLOG.1。  
   
 ```  
 on error resume next  
@@ -83,7 +83,7 @@ Next
 ```  
   
 ## <a name="comments"></a>注释  
- 当*InstanceName*或*FileName*查询将返回的默认实例和当前信息在 WQL 语句中，未提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件。 例如，以下 WQL 语句将从默认实例 (MSSQLSERVER) 上的当前日志文件 （错误日志） 返回所有日志事件。  
+ 当*InstanceName*或*FileName*未提供在 WQL 语句中，该查询将返回默认实例和当前信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件。 例如，以下 WQL 语句将从默认实例 (MSSQLSERVER) 上的当前日志文件 (ERRORLOG) 返回所有日志事件。  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
@@ -94,11 +94,11 @@ Next
   
 -   读取访问权限**Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。  
   
--   包含错误日志的文件夹的读取权限。 默认情况下，错误日志文件位于以下路径 (其中\<*驱动器 >* 代表你的安装位置的驱动器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和\< *InstanceName*> 是实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   包含错误日志的文件夹的读取权限。 默认情况下，错误日志位于以下路径中 (其中\<*驱动器 >* 表示您安装的驱动器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并\< *InstanceName*> 是实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<驱动器 >: files\microsoft SQL Server\MSSQL12** **。\<InstanceName > \MSSQL\Log**  
+     **\<驱动器 >: \Program Files\Microsoft SQL Server\MSSQL12** **。\<实例名 > \MSSQL\Log**  
   
- 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅[连接到 WMI 远程从 Windows Vista 开始](http://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅[连接到 WMI 远程启动 Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848)。  
   
 ## <a name="see-also"></a>请参阅  
  [SqlErrorLogFile 类](sqlerrorlogfile-class.md)   

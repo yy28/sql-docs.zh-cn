@@ -1,5 +1,5 @@
 ---
-title: KeyColumn 元素 (ASSL) |Microsoft 文档
+title: KeyColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247757"
 ---
 # <a name="keycolumn-element-assl"></a>KeyColumn 元素 (ASSL)
   包含某个列的定义，该列用作属性键或属性键的一部分。  

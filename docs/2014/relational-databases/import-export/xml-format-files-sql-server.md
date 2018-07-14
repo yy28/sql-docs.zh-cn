@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e0607febc04aec78a7310bd069b3af4c19cc8ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 06ba4a93e79d9b2a602101b25944d251ea9c5b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203547"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”（用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
@@ -177,7 +176,7 @@ ms.locfileid: "36018879"
   
 |FIELD 属性|说明|可选/<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="*`fieldID`*"**|指定数据文件中的字段的逻辑名称。 字段的 ID 是用于引用字段的键。<br /><br /> < 字段 ID **="*`fieldID`*"**/ > 映射到 < 列源 **="*`fieldID`*"**/>|Required|  
+|ID **="*`fieldID`*"**|指定数据文件中的字段的逻辑名称。 字段的 ID 是用于引用字段的键。<br /><br /> < 字段 ID **="*`fieldID`*"**/ > 将映射到 < 列源 **="*`fieldID`*"**/>|Required|  
 |xsi: type **="*`fieldType`*"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的类型。 *fieldType* 的值决定了给定实例中需要下面哪个可选属性。|必需（取决于数据类型）|  
 |LENGTH =""***`n`***|此属性定义固定长度的数据类型实例的长度。<br /><br /> *n* 值必须是正整数。|除非是 xsi:type 值所必需，否则可选。|  
 |PREFIX_LENGTH **="*`p`*"**|此属性定义二进制数据表示形式的前缀的长度。 PREFIX_LENGTH 值、 *p*必须是下列值之一：1、2、4 或 8。|除非是 xsi:type 值所必需，否则可选。|  
@@ -230,12 +229,12 @@ ms.locfileid: "36018879"
   
 |COLUMN 属性|Description|可选/<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|源 **="*`fieldID`*"**|指定映射到列的字段 ID。<br /><br /> < 列源 **="*`fieldID`*"**/ > 映射到 < 字段 ID **="*`fieldID`*"**/>|Required|  
+|源 **="*`fieldID`*"**|指定映射到列的字段 ID。<br /><br /> < COLUMN SOURCE **="*`fieldID`*"**/ > 将映射到 < 字段 ID **="*`fieldID`*"**/>|Required|  
 |NAME = "*columnName*"|指定格式化文件所表示的行集中的列名。 此列名用于标识结果集中的列，并且该列不需要与目标表中使用的列名相对应。|Required|  
 |xsi **:** 类型 **="*`ColumnType`*"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的数据类型。 *ColumnType* 的值决定了给定实例中需要下面哪个可选属性。<br /><br /> 注意： 可能的值的*ColumnType*和下一个表中列出其关联的属性。|可选|  
 |LENGTH =""***`n`***|定义固定长度的数据类型实例的长度。 仅当 xsi:type 为字符串数据类型时，才使用 LENGTH。<br /><br /> *n* 值必须是正整数。|可选（仅当 xsi:type 是字符串数据类型时才可用）|  
 |PRECISION =""***`n`***|指示数字的位数。 例如，数 123.45 精度为 5。<br /><br /> 该值必须是正整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
-|缩放 **="*`int`*"**|指示数字中小数点右边的位数。 例如，数字 123.45 的小数位数为 2。<br /><br /> 该值必须为整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
+|规模 **="*`int`*"**|指示数字中小数点右边的位数。 例如，数字 123.45 的小数位数为 2。<br /><br /> 该值必须为整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|指示列是否可以接受 NULL 值。 此属性与 FIELDS 完全无关。 但是，如果列不可为空值，而字段指定为 NULL（未指定任何值），将产生运行时错误。<br /><br /> NULLABLE 属性仅在您只执行普通 SELECT FROM OPENROWSET(BULK...) 语句时才使用。|可选（任何数据类型均可用）|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> \<COLUMN> 元素的 Xsi:type 值  

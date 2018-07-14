@@ -1,5 +1,5 @@
 ---
-title: 指定挖掘模型列用法 （数据挖掘向导） |Microsoft 文档
+title: 指定挖掘模型列用法 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycolumnusage.f1
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dd71b1a79471a2738a3779f644c73c01771b1a57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfe0b051e2fe3a961065a9c89d1b1b202d3b063d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254959"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>指定挖掘模型列用法（数据挖掘向导）
   可以使用 **“指定挖掘模型列用法”** 页，指定使用挖掘模型列的方式以及添加嵌套表。  
@@ -49,7 +49,7 @@ ms.locfileid: "36024181"
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘向导的 F1 帮助&#40;Analysis Services-数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [选择案例级别列&#40;数据挖掘向导&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [选择 Case 级别列&#40;数据挖掘向导&#41;](select-case-level-columns-data-mining-wizard.md)   
  [指定列的内容和数据类型&#40;数据挖掘向导&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

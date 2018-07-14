@@ -1,5 +1,5 @@
 ---
-title: DimensionBinding 数据类型 (ASSL) |Microsoft 文档
+title: DimensionBinding 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionBinding data type
 ms.assetid: 6163d86b-0f6c-4237-b07b-47bc7e2962c4
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac0dfce6e5c21ee901e065561b161c2d66cdd8c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6da2c5696654bf019ac139f8de6ff11507f3701a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252899"
 ---
 # <a name="dimensionbinding-data-type-assl"></a>DimensionBinding 数据类型 (ASSL)
   定义一个派生的数据类型，表示数据源之间的绑定和一个[维度](../objects/dimension-element-assl.md)元素。  
@@ -65,11 +65,11 @@ ms.locfileid: "36024198"
 |派生元素|请参阅[绑定](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 有关其他信息`Binding`类型，包括表的 Analysis Services 脚本语言 (ASSL) 对象`Binding`类型和继承层次结构的`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41; ](binding-data-type-assl.md)元素。  
+ 有关其他信息`Binding`类型，包括 Analysis Services 脚本语言 (ASSL) 对象的表`Binding`类型和继承层次结构`Binding`类型，请参阅[&#40;ASSL&#41; ](binding-data-type-assl.md)元素。  
   
- ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionBinding>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

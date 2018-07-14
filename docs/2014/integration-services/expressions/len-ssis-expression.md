@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LEN function
 - number of characters
@@ -16,13 +16,13 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a857b198ea18282e6d59d9a0e75d2ec2c692921c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e0158fef91845d189e9caa0647e23999ab27900
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195597"
 ---
 # <a name="len-ssis-expression"></a>LEN（SSIS 表达式）
   返回字符表达式中的字符数。 如果字符串中包含前导空格和尾随空格，则函数会将它们包含在计数内。 LEN 对相同的单字节和双字节字符串返回相同的值。  

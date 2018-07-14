@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time-out period [SQL Server database mirroring]
 - soft errors [SQL Server]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cfd7fc9120dfef0ce8136f622976e995020df2aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 12be64f3df6173e47bb59a4bcbc52a03e9d82a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193937"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
   物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障都可能导致数据库镜像会话失败。 数据库镜像不会定期检查 Sqlservr.exe 所依赖的组件来验证组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 ”。 为了检测可能未被注意的其他故障，数据库镜像采用了自己的超时机制。 发生镜像超时时，数据库镜像假定已发生故障并声明一个“软错误”。 然而，某些在 SQL Server 实例级别发生的故障不会导致镜像超时，并且检测不到。  

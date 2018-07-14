@@ -1,5 +1,5 @@
 ---
-title: 处理错误和警告 (XMLA) |Microsoft 文档
+title: 处理错误和警告 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - inline warnings [XMLA]
 ms.assetid: ab895282-098d-468e-9460-032598961f45
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c59e6b0e5744fc118b23666a31f7300675ac115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4d145d9f64c7a8b0761b6006aab9ede1184aa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226347"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>处理错误和警告 (XMLA)
-  错误处理时是必需的 XML 有关 Analysis (XMLA)[发现](../xmla/xml-elements-methods-discover.md)或[执行](../xmla/xml-elements-methods-execute.md)方法调用不会运行、 任务成功运行，但生成错误或警告，或任务成功运行，但返回的结果包含错误。  
+  错误处理时是必需的 XML for Analysis (XMLA) [Discover](../xmla/xml-elements-methods-discover.md)或[Execute](../xmla/xml-elements-methods-execute.md)方法调用不会运行，成功运行，但将生成错误或警告，或成功运行，但返回的结果包含错误的。  
   
 |错误|报表|  
 |-----------|---------------|  
-|XMLA 方法调用不能运行|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 返回 SOAP 错误消息包含失败的详细信息。<br /><br /> 有关详细信息，请参阅明[处理 SOAP 错误](#handling_soap_faults)。|  
-|方法调用运行成功，但生成了错误或警告|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括[错误](../xmla/xml-elements-properties/error-element-xmla.md)或[警告](../xmla/xml-elements-properties/warning-element-xmla.md)每个错误或警告，元素分别在[消息](../xmla/xml-elements-properties/messages-element-xmla.md)属性[根](../xmla/xml-elements-properties/root-element-xmla.md)元素包含方法调用的结果。<br /><br /> 有关详细信息，请参阅明[处理错误和警告](#handling_errors_and_warnings)。|  
-|方法调用运行成功，但结果中包含错误|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括内联`error`或`warning`的错误或警告，元素分别中相应[单元格](../xmla/xml-elements-properties/cell-element-xmla.md)或[行](../xmla/xml-elements-properties/row-element-xmla.md)方法调用的结果的元素。<br /><br /> 有关详细信息，请参阅明[处理内联错误和警告](#handling_inline_errors_and_warnings)。|  
+|XMLA 方法调用不能运行|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 返回 SOAP 错误消息包含失败的详细信息。<br /><br /> 有关详细信息，请参阅部分中，[处理 SOAP 错误](#handling_soap_faults)。|  
+|方法调用运行成功，但生成了错误或警告|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括[错误](../xmla/xml-elements-properties/error-element-xmla.md)或[警告](../xmla/xml-elements-properties/warning-element-xmla.md)元素的每个错误或警告，分别在[消息](../xmla/xml-elements-properties/messages-element-xmla.md)属性的[根](../xmla/xml-elements-properties/root-element-xmla.md)元素包含方法调用的结果。<br /><br /> 有关详细信息，请参阅部分中，[处理错误和警告](#handling_errors_and_warnings)。|  
+|方法调用运行成功，但结果中包含错误|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括内联`error`或`warning`元素的错误或警告，分别在适当[单元格](../xmla/xml-elements-properties/cell-element-xmla.md)或[行](../xmla/xml-elements-properties/row-element-xmla.md)元素的方法调用的结果。<br /><br /> 有关详细信息，请参阅部分中，[处理内联错误和警告](#handling_inline_errors_and_warnings)。|  
   
 ##  <a name="handling_soap_faults"></a> 处理 SOAP 错误  
  出现以下情况时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会返回 SOAP 错误：  
@@ -63,7 +63,7 @@ ms.locfileid: "36024693"
 |`Source`|`String`|生成错误或警告的组件的名称。|是|  
 |`HelpFile`|`String`|指向介绍错误或警告的“帮助”文件或主题的路径或 URL。|是|  
   
- <sup>1</sup>指示是否数据是必需的并且必须返回，或是否数据是可选的如果列不适用于允许 null 字符串。  
+ <sup>1</sup>指示是否将数据是必需的并且必须返回，或是否数据是可选的如果列不适用于允许使用 null 字符串。  
   
  下面列出了一个由于方法调用失败而出现的 SOAP 错误示例：  
   
@@ -96,17 +96,17 @@ HelpFile="" />
   
  `Messages` 属性出现在 `root` 元素中包含的所有其他属性之后，该属性可包含一个或多个 `Message` 元素。 而每个 `Message` 元素又可以包含一个 `error` 或 `warning` 元素，这些元素分别描述了指定命令产生的所有错误或警告。  
   
- 有关错误和警告中包含的详细信息`Messages`属性，请参阅[消息元素&#40;XMLA&#41;](../xmla/xml-elements-properties/messages-element-xmla.md)。  
+ 有关错误和警告中包含的详细信息`Messages`属性，请参阅[Messages 元素&#40;XMLA&#41;](../xmla/xml-elements-properties/messages-element-xmla.md)。  
   
 ### <a name="handling-errors-during-serialization"></a>处理序列化期间发生的错误  
- 如果错误发生后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例是否已经开始序列化的成功运行命令的输出[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]返回[异常](../xmla/xml-elements-properties/exception-element-xmla.md)错误在不同的命名空间中的元素。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例随后会关闭所有已打开的元素，以确保发送到客户端的 XML 文档为有效文档。 该实例还会返回包含错误说明的 `Messages` 元素。  
+ 如果错误发生后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例已开始序列化的成功运行的命令，输出[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]返回[异常](../xmla/xml-elements-properties/exception-element-xmla.md)错误在不同的命名空间中的元素。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例随后会关闭所有已打开的元素，以确保发送到客户端的 XML 文档为有效文档。 该实例还会返回包含错误说明的 `Messages` 元素。  
   
 ##  <a name="handling_inline_errors_and_warnings"></a> 处理内联错误和警告  
  如果 XMLA 方法本身没有失败，但在 XMLA 方法调用成功后，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上出现了特定于该方法返回结果中的数据元素的错误，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为命令返回内联 `error` 或 `warning`。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供内联`error`和`warning`元素问题特定的单元格或其他数据是否包含在`root`元素使用[MDDataSet](../xmla/xml-data-types/mddataset-data-type-xmla.md)发生数据类型，如安全错误或格式设置该单元格的错误。 在这类情况下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在包含错误或警告的 `error` 或 `warning` 元素中返回 `Cell` 或 `row` 元素。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供内联`error`并`warning`元素问题特定于的单元格或其他数据是否包含在`root`元素使用[MDDataSet](../xmla/xml-data-types/mddataset-data-type-xmla.md)发生数据类型，如安全错误或格式设置该单元格的错误。 在这类情况下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在包含错误或警告的 `error` 或 `warning` 元素中返回 `Cell` 或 `row` 元素。  
   
- 下面的示例演示包含中返回的行集的错误的结果集`Execute`方法使用[语句](../xmla/xml-elements-commands/statement-element-xmla.md)命令。  
+ 下面的示例说明了结果集，其中包含在返回的行集时出错`Execute`方法使用[语句](../xmla/xml-elements-commands/statement-element-xmla.md)命令。  
   
 ```  
 <return>  

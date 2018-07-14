@@ -1,14 +1,13 @@
 ---
-title: 通过使用 OPENROWSET 大容量行集提供程序 (SQL Server) 大容量导入大型对象数据 |Microsoft 文档
+title: 通过使用 OPENROWSET Bulk 行集提供程序 (SQL Server) 大容量导入大型对象数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SINGLE_NCLOB option
 - bulk rowset providers [SQL Server]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - SINGLE_BLOB option
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59fcfef241b00f2a4c080e5496b7d58b41aa5869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d48b0af070e67ff1c77b8e5e2b0d32ce6e3aba4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223427"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>通过使用 OPENROWSET BULK 行集提供程序大容量导入大型对象数据 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET 大容量行集提供程序使您可以将数据文件作为大型对象数据大容量导入。  

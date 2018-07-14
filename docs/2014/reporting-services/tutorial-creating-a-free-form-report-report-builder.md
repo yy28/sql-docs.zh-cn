@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 763df160d03f3f26824559b2068e3e241bb66d23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202807"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
   本教程教你如何创建一个与书信格式类似的 SSRS 自由格式报表。 你可以排列报表项来创建一个具有文本框、图像和其他数据区域的窗体。  
   
  你在本教程中创建的报表是基于教程中包括的示例销售数据创建的。 该报表按地区对信息进行分组，并且显示该地区的销售经理的姓名以及详细和汇总销售信息。 您将使用列表数据区域作为自由格式的报表的基础，然后添加具有图像的装饰性面板、插入了数据的静态文本、用于显示详细信息的表以及可选的用于显示汇总信息的饼图和柱形图。  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将了解如何执行下列操作：  
   
 -   [创建空白报表、 数据源和数据集](#BlankReport)  
@@ -35,11 +35,11 @@ ms.locfileid: "36024288"
   
 -   [添加图形](#Graphics)  
   
--   [添加自由格式的文本](#Text)  
+-   [添加自由格式文本](#Text)  
   
--   [添加用于显示详细信息的表](#Table)  
+-   [添加一个表以显示详细信息](#Table)  
   
--   [格式数据](#Format)  
+-   [数据格式](#Format)  
   
 -   [保存报表](#Save)  
   
@@ -74,13 +74,13 @@ ms.locfileid: "36024288"
   
 1.  在“报表数据”窗格中，单击 **“新建”**，然后单击 **“数据源”**。  
   
-2.  在`Name`框中，键入： **ListDataSource**  
+2.  在中`Name`框中，键入： **ListDataSource**  
   
 3.  单击 **“使用我的报表中嵌入的连接”**。  
   
 4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = \<servername>  
   
-     \<服务器名称 >，对于示例 Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 因为报表数据不是从 SQL Server 数据库提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库用于对查询进行分析。  
+     \<服务器名称 >，例如，Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 因为报表数据不是从 SQL Server 数据库提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库用于对查询进行分析。  
   
 5.  单击 **“凭据”**，然后输入连接至 SQL Server 数据库引擎实例所需的凭据。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36024288"
   
 1.  在“报表数据”窗格中，单击 **“新建”**，然后单击 **“数据集”**。  
   
-2.  在`Name`框中，键入： **ListDataset。**  
+2.  在中`Name`框中，键入： **ListDataset。**  
   
 3.  单击“使用在我的报表中嵌入的数据集” ，然后验证数据源是否为 **ListDataSource**。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36024288"
 ##  <a name="List"></a> 2.添加并配置列表  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供三个数据区域模板：表、矩阵和列表。 这些模板全都基于 Tablix 数据区域。  
   
- 在本教程中，你将使用一个列表来显示一个类似新闻稿的报表中各销售区域的销售信息。 这些信息按地区分组。 您将添加一个按地区对数据进行分组的新行组，然后删除内置的“详细信息”行组。 该列表模板是创建自由格式报表的理想工具。 有关详细信息，请参阅[列出&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+ 在本教程中，你将使用一个列表来显示一个类似新闻稿的报表中各销售区域的销售信息。 这些信息按地区分组。 您将添加一个按地区对数据进行分组的新行组，然后删除内置的“详细信息”行组。 该列表模板是创建自由格式报表的理想工具。 有关详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  此报表使用纸张大小 Letter (8.5 X11) 以及 1 英寸的边距。 高于 9 英寸或宽于 6 1/2 英寸的报表页可能会生成空白页。  
@@ -187,7 +187,7 @@ ms.locfileid: "36024288"
   
 5.  单击 **“仅删除列”**。  
   
-     ![删除列对话框](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "删除列的对话框")  
+     ![删除列对话框](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "删除列对话框")  
   
 6.  在“行组”窗格中，右键单击 **“详细信息”** 组，然后单击 **“删除组”**。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36024288"
   
 4.  将 Territory 字段拖到该文本框，然后将其置于您在步骤 3 中键入的文本之后。  
   
-     ![添加地域字段](../../2014/tutorials/media/tutorial-addterritorialfield.png "添加地域字段")  
+     ![添加 Territorial 字段](../../2014/tutorials/media/tutorial-addterritorialfield.png "添加 Territorial 字段")  
   
 5.  选择所有文本，右键单击，然后单击 **“文本属性”**。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36024288"
   
 10. 将 FullName 字段拖到该文本框，将其置于您在步骤 9 中键入的文本之后，然后键入一个逗号 (,)。  
   
-     ![添加全名字段](../../2014/tutorials/media/tutorial-addfullnamefield.png "添加全名字段")  
+     ![添加完整的名称字段](../../2014/tutorials/media/tutorial-addfullnamefield.png "添加完整名称字段")  
   
 11. 选择您在步骤 9 和 10 中添加的文本，右键单击，然后单击 **“文本属性”**。  
   
@@ -280,7 +280,7 @@ ms.locfileid: "36024288"
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![添加时事通讯文本](../../2014/tutorials/media/tutorial-newslettertext.png "添加时事通讯文本")  
+     ![添加新闻稿文本](../../2014/tutorials/media/tutorial-newslettertext.png "添加新闻稿文本")  
   
 20. 将光标置于您在步骤 15 中粘贴的文本的下方，然后键入： **Congratulations on your total sales of** 。  
   
@@ -299,7 +299,7 @@ ms.locfileid: "36024288"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![将表达式添加到销售字段](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "将表达式添加到销售字段")  
+     ![将表达式添加到销售字段](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "向 sales 字段添加表达式")  
   
 25. 选择您在步骤 20 到 23 中添加的文本，右键单击，然后单击 **“文本属性”**。  
   
@@ -321,7 +321,7 @@ ms.locfileid: "36024288"
   
  报表将显示静态文本，并且每个报表页都包括属于某个地区的数据。 销售额的格式设为货币。  
   
- ![预览版的新闻稿](../../2014/tutorials/media/tutorial-newsletters.png "时事通讯的预览")  
+ ![新闻稿预览](../../2014/tutorials/media/tutorial-newsletters.png "新闻稿预览")  
   
 ##  <a name="Table"></a> 5.添加一个表以显示销售详细信息  
  使用新建表和矩阵向导可以将表添加到自由格式的报表。 完成向导后，您将手动添加一个合计行。  
@@ -357,13 +357,13 @@ ms.locfileid: "36024288"
   
 12. 确认表已选，然后在“行组”窗格中，右键单击“详细信息”，指向 **“添加总计”**，然后单击 **“之后”**。  
   
-     ![添加报表总](../../2014/tutorials/media/tutorial-addtotal.png "添加总的报表")  
+     ![添加报表总数](../../2014/tutorials/media/tutorial-addtotal.png "添加报表总数")  
   
 13. 单击 **“运行”** 以预览报表。  
   
  该报表将显示具有销售详细信息和总计的一个表。  
   
- ![在报表中的销售总额](../../2014/tutorials/media/tutorial-reportsalestotals.png "报表中的销售额总计")  
+ ![在报表中的销售总额](../../2014/tutorials/media/tutorial-reportsalestotals.png "报表中的销售总额")  
   
 ##  <a name="Format"></a> 6.设置数据格式  
  将数字数据的格式设为货币，将日期格式设为仅限天和时间。  
@@ -374,7 +374,7 @@ ms.locfileid: "36024288"
   
 2.  单击包含 `[Sum(SalesSales)]` 的表单元，然后在 **“主文件夹”** 选项卡上的 **“数字”** 组中，单击 **“货币”** 按钮。  
   
-     ![添加到总和销售的货币符号](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "添加到总和销售的货币符号")  
+     ![向总销售额添加货币符号](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "向总销售额添加货币符号")  
   
 3.  单击包含 `[SalesDate]` 的单元，然后在 **“数字”** 组上，从下拉列表中选择 **“日期”**。  
   
@@ -382,7 +382,7 @@ ms.locfileid: "36024288"
   
  报表现在将显示设置了格式的数据并且更易于阅读。  
   
- ![设置报表中的总销售额的格式](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "设置报表中的总销售额的格式")  
+ ![设置格式在报表中的销售总额](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "格式在报表中的销售总额")  
   
 ##  <a name="Save"></a> 7.保存报表  
  您可以将报表保存到报表服务器、SharePoint 库或本地计算机。 你还可以运行报表并从  “导出”菜单选择格式，将报表以各种格式导出（如 Word 和 PDF）。  
@@ -399,7 +399,7 @@ ms.locfileid: "36024288"
   
      此时将显示“正在连接到报表服务器”消息。 当连接完成时，您将看到报表服务器管理员指定为报表默认位置的报表文件夹的内容。  
   
-4.  在`Name`，将默认名称替换**SalesInformationByTerritory**。  
+4.  在中`Name`，替换默认名称**SalesInformationByTerritory**。  
   
 5.  单击 **“保存”**。  
   
@@ -411,7 +411,7 @@ ms.locfileid: "36024288"
   
 2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
-3.  在`Name`，将默认名称替换**SalesInformationByTerritory**。  
+3.  在中`Name`，替换默认名称**SalesInformationByTerritory**。  
   
 4.  单击 **“保存”**。  
   
@@ -432,7 +432,7 @@ ms.locfileid: "36024288"
   
 6.  在 **“边框”** 区域中，对于宽度选择 **4 1/2** pt，对于颜色选择 **“红色”**。  
   
-     ![将行添加到报表](../../2014/tutorials/media/tutorial-reportwithline.png "将行添加到报表")  
+     ![向报表添加线条](../../2014/tutorials/media/tutorial-reportwithline.png "将行添加到报表")  
   
 ##  <a name="Visualization"></a> 9。（可选）添加汇总数据可视化  
  矩形有助于控制报表的呈现方式。 将饼图和柱形图放置于矩形内，可以确保报表以您所需的方式呈现。  
@@ -455,7 +455,7 @@ ms.locfileid: "36024288"
   
 4.  在“排列图表字段”页上，将“Product”拖到“类别”中。  
   
-5.  拖动 Quantity to**值**，然后单击**下一步**。  
+5.  将 Quantity 拖到**值**，然后单击**下一步**。  
   
 6.  在 **“选择样式”** 页的 **“样式”** 窗格中，选择 **“石板”**。  
   
@@ -483,7 +483,7 @@ ms.locfileid: "36024288"
   
 3.  单击 **“柱形”**，然后单击 **“下一步”**。  
   
-4.  在排列图表的字段页上，产品将字段拖动到**类别**。  
+4.  在排列图表字段页上，拖动到产品字段**类别**。  
   
 5.  将“Sales”拖到“值”中，然后单击“下一步”。  
   
@@ -516,21 +516,21 @@ ms.locfileid: "36024288"
     > [!NOTE]  
     >  删除轴标题和图例将在图表为较小大小时更容易阅读。  
   
- ![更改图表标题，并删除轴标题](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "更改图表标题，并删除轴标题")  
+ ![更改图表标题并删除轴标题](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "更改图表标题并删除轴标题")  
   
 #### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>确认图表位于矩形内  
   
 1.  单击你在本课程前面部分添加的矩形。  
   
-     在属性窗格中，`Name`属性显示矩形的名称。  
+     在属性窗格中`Name`属性显示矩形的名称。  
   
-     ![矩形的名称](../../2014/tutorials/media/tutorial-rectanglename.png "的矩形的名称")  
+     ![矩形的名称](../../2014/tutorials/media/tutorial-rectanglename.png "矩形的名称")  
   
 2.  单击饼图。  
   
-3.  在**属性**窗格中，验证`Parent`属性包含矩形的名称。  
+3.  在中**属性**窗格中，验证`Parent`属性包含矩形的名称。  
   
-     ![父属性饼图](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "父饼图的属性")  
+     ![父属性有关饼图](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "父饼形图的属性")  
   
 4.  单击柱形图，重复执行步骤 2 和 3。  
   
@@ -552,10 +552,10 @@ ms.locfileid: "36024288"
   
  报表现在将在饼图和柱形图中显示汇总销售数据。  
   
- ![SSRS 教程，自由格式报表](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS 教程，自由格式的报表")  
+ ![SSRS 教程，自由格式的报表](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS 教程，自由格式的报表")  
   
 ## <a name="more-information"></a>详细信息  
- 关于列表的详细信息，请参阅[表、 矩阵和列表&#40;报表生成器和 SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)，[列出&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)， [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)，和[Tablix 数据区域单元、 行和列&#40;报表生成器&#41;和 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
+ 有关列表的详细信息，请参阅[表、 矩阵和列表&#40;报表生成器和 SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)，[列出了&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)， [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)，并[Tablix 数据区域单元、 行和列&#40;报表生成器&#41;和 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
  有关查询设计器的详细信息，请参阅[查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)和[基于文本的查询设计器用户界面（报表生成器）](report-data/text-based-query-designer-user-interface-report-builder.md)。  
   

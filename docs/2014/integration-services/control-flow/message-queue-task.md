@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269663"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
@@ -55,9 +55,9 @@ ms.locfileid: "36018681"
   
 -   `String` 消息以字符串形式指定的消息。 在接收消息时，可以将任务配置为比较接收到的字符串和用户定义字符串，并根据对比结果执行操作。 字符串比较可以是完全匹配、区分大小写或不区分大小写，或者使用子字符串。  
   
--   `String message to variable` 将源消息指定作为发送到目标变量的字符串。 可以将任务配置为使用完全匹配、不区分大小写或子字符串的比较方式来比较接收到的字符串和用户定义字符串。 这种消息类型只能在任务接收消息时使用。  
+-   `String message to variable` 源消息指定发送到目标变量的字符串。 可以将任务配置为使用完全匹配、不区分大小写或子字符串的比较方式来比较接收到的字符串和用户定义字符串。 这种消息类型只能在任务接收消息时使用。  
   
--   `Variable` 指定该消息包含一个或多个变量。 可以将任务配置为指定消息中所包含变量的名称。 在接收消息时，可以将任务配置为指定任务从中接收消息的包和作为消息目标的变量。  
+-   `Variable` 指定消息包含一个或多个变量。 可以将任务配置为指定消息中所包含变量的名称。 在接收消息时，可以将任务配置为指定任务从中接收消息的包和作为消息目标的变量。  
   
 ## <a name="sending-messages"></a>发送消息  
  配置消息队列任务以发送消息时，可以使用消息队列技术当前支持的加密算法（RC2 和 RC4）之一来加密消息。 与较新的算法相比，这两种加密算法都被视为加密性很弱的算法，但消息队列技术尚不支持较新的算法。 因此，在使用消息队列任务发送消息时，应考虑您的加密需要。  
@@ -73,7 +73,7 @@ ms.locfileid: "36018681"
   
 -   如果消息存储在 `Data file` 中，则覆盖现有文件。  
   
--   将消息文件保存到不同的文件名称，如果消息使用`Data file message`类型。  
+-   消息文件另存为不同的文件名称，如果消息使用`Data file message`类型。  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>消息队列任务可用的自定义日志记录消息  
  下表列出了消息队列任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  

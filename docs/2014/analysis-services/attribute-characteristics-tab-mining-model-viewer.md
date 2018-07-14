@@ -1,5 +1,5 @@
 ---
-title: 属性特征选项卡 （挖掘模型查看器） |Microsoft 文档
+title: 属性特征选项卡 （挖掘模型查看器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a2e67e05ac9129bd667f50bc4b6acbe673d8729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc627e45bdf57b956dd55795b48dde642eed4bf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234257"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>“属性特征”选项卡（挖掘模型查看器）
   可以使用 **“属性特征”** 窗格浏览 Naïve Bayes 模型中结果和输入属性之间的关系。 可以选择目标属性的值，然后查看对结果产生的影响最大的输入属性的列表。  
@@ -44,7 +44,7 @@ ms.locfileid: "36026043"
  **ReplTest1**  
  选择在“属性”中设置的可预测属性的状态。 由于 Naïve Bayes 模型不支持连续变量，因此，所有目标属性都包含离散或离散化结果。 始终会自动将 Missing 属性添加到列表。  
   
- **特征\<可预测的状态 >**  
+ **特征\<可预测状态 >**  
  图形包含以下列，这些列对输入属性状态与所选可预测属性状态之间的关系进行了说明：  
   
 |ReplTest1|Description|  

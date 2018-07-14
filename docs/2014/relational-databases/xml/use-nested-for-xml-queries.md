@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e8ce91a3ee069562a6a4d3f9d6aa3c02999e4dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cf9e0d63af7283dfbb36a12d34224a6c379c111f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249657"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用嵌套 FOR XML 查询
-  `xml`数据类型和[FOR XML 查询中的 TYPE 指令](type-directive-in-for-xml-queries.md)实现服务器以及客户端上处理由 FOR XML 查询返回的 XML。  
+  `xml`数据类型和[FOR XML 查询中的 TYPE 指令](type-directive-in-for-xml-queries.md)实现在服务器上以及在客户端上处理由 FOR XML 查询返回的 XML。  
   
 ## <a name="processing-with-xml-type-variables"></a>使用 xml 类型变量进行处理  
  您可以将 FOR XML 查询结果分配给 `xml` 类型变量，或使用 XQuery 查询结果，将该结果分配给 `xml` 类型变量以进行进一步处理。  
@@ -43,7 +43,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- 此外，你可以处理在变量中，返回的 XML `@x`，通过使用之一`xml`数据类型方法。 例如，可以使用 `ProductModelID` value() 方法 [检索](/sql/t-sql/xml/value-method-xml-data-type)属性值。  
+ 此外，您可以处理在变量中返回的 XML `@x`，通过使用其中一个`xml`数据类型方法。 例如，可以使用 `ProductModelID` value() 方法 [检索](/sql/t-sql/xml/value-method-xml-data-type)属性值。  
   
 ```  
 DECLARE @i int;  
@@ -87,7 +87,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>将内部 FOR XML 查询的结果以 xml 类型实例的形式返回到外部查询  
- 您可以编写嵌套`FOR XML`查询其中内部查询的结果返回为`xml`到外部查询的类型。 例如：  
+ 您可以编写嵌套`FOR XML`查询，其中内部查询的结果返回为`xml`到外部查询的类型。 例如：  
   
 ```  
 SELECT Col1,   

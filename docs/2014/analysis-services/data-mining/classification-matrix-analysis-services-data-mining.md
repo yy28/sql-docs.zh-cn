@@ -1,5 +1,5 @@
 ---
-title: 分类矩阵 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 分类矩阵 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], validating
 - validating data mining models
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8f403c4945a3b31c1cfda3439ddb1452c043c9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: adcbb1472464bbad29125eead495cd0408d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216077"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分类矩阵（Analysis Services - 数据挖掘）
   “分类矩阵”  通过确定预测值是否与实际值匹配，将模型中的所有事例分为不同的类别。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” 。  
@@ -82,7 +82,7 @@ ms.locfileid: "36018749"
   
 |主题|链接|  
 |------------|-----------|  
-|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试准确性，但提升图&#40;数据挖掘基础教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试提升图的准确性&#40;数据挖掘基础教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |说明相关的图表类型。|[提升图&#40;Analysis Services-数据挖掘&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图&#40;Analysis Services-数据挖掘&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图&#40;Analysis Services-数据挖掘&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |说明如何将交叉验证用于挖掘模型和挖掘结构。|[交叉验证&#40;Analysis Services-数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
 |说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南&#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  

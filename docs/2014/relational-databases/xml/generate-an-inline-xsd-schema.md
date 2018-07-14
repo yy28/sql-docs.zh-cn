@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194771"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>生成内联 XSD 架构
   在 FOR XML 子句中，可以请求在查询返回查询结果的同时返回一个内联架构。 如果需要 XDR 架构，可以在 FOR XML 子句中使用 XMLDATA 关键字。 如果需要 XSD 架构，可以使用 XMLSCHEMA 关键字。  
@@ -36,7 +36,7 @@ ms.locfileid: "36026733"
   
 -   只能在 RAW 和 AUTO 模式中，而不能在 EXPLICIT 模式中指定 XMLSCHEMA。  
   
--   如果嵌套的 FOR XML 查询指定了 TYPE 指令，查询结果则属于`xml`类型，并且此结果将被视为非类型化的 XML 数据的实例。 有关详细信息，请参阅 [XML 数据 (SQL Server)](xml-data-sql-server.md)。  
+-   如果嵌套的 FOR XML 查询指定了 TYPE 指令，查询结果是`xml`类型，并且此结果将被视为非类型化 XML 数据的实例。 有关详细信息，请参阅 [XML 数据 (SQL Server)](xml-data-sql-server.md)。  
   
  在 FOR XML 查询中指定 XMLSCHEMA 后，查询结果中便同时包含架构和 XML 数据。 数据的每个顶级元素都通过使用默认命名空间声明来引用前一个架构，而默认命名空间又引用内联架构的目标命名空间。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36026733"
   
 -   另一个是说明 FOR XML 查询结果形状的架构文档。  
   
- 此外，如果任何类型化`xml`在查询结果中，与这些类型化相关联的架构包含数据类型`xml`会包括数据类型是。  
+ 此外，如果任何类型化`xml`数据类型包括在查询结果中，与这些类型化相关联的架构`xml`数据类型。  
   
  说明 FOR XML 结果形状的架构文档的目标命名空间包含一个固定部分和一个自动递增的数值部分。 此命名空间的格式如下所示，其中 *n* 是一个正整数。 例如，在前一个查询中，urn:schemas-microsoft-com:sql:SqlRowSet1 是目标命名空间。  
   

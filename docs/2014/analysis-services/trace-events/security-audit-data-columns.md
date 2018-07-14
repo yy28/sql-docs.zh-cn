@@ -1,5 +1,5 @@
 ---
-title: Security Audit Data Columns |Microsoft 文档
+title: 安全审核数据列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf737330922500f8e9b33c7645fdd5e6b8b6b244
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0decf6588f44b6026608254fa1a196a310e37ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171558"
 ---
 # <a name="security-audit-data-columns"></a>安全审核数据列
   “安全审核”事件类别具有以下事件类：  
@@ -118,7 +118,7 @@ ms.locfileid: "36018100"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 1： 备份<br /><br /> 2： 还原<br /><br /> 3： 同步<br /><br /> 4： 分离<br /><br /> 5： 附加<br /><br /> 6: imageLoad<br /><br /> 7: ImageSave|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 1： 备份<br /><br /> 2： 还原<br /><br /> 3： 同步<br /><br /> 4： 分离<br /><br /> 5： 将附加<br /><br /> 6: imageLoad<br /><br /> 7: ImageSave|  
 |Severity|22|@shouldalert|异常的严重级别。|  
 |成功|23|@shouldalert|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|  
 |错误|24|@shouldalert|给定事件的错误号。|  

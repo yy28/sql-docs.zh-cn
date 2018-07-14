@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) 参数 |Microsoft 文档
+title: Integration Services (SSIS) 参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d477f12cdce1063f765c9b6be2f39ba1fe30a505
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172940"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) 参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
@@ -86,7 +86,7 @@ ms.locfileid: "36024361"
   
  您还可以使用 **中的** “执行包” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框修改参数值。 有关详细信息，请参阅[Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)。  
   
- 你还可以使用 dtexec`/Parameter`选项可修改参数值。 有关详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md)。  
+ 您还可以使用 dtexec`/Parameter`选项修改参数值。 有关详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md)。  
   
 ### <a name="parameter-validation"></a>参数验证  
  如果无法解析参数值，则相应的包执行将失败。 为了帮助避免失败，您可以使用 **中的** “验证” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框来验证项目和包。 通过验证，您可以确认所有参数都具有必需的值或者可以使用特定的环境引用解析必需的值。 验证还检查是否存在其他常见的包问题。  

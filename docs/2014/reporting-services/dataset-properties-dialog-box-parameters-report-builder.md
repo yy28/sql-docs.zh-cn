@@ -1,5 +1,5 @@
 ---
-title: 数据集属性对话框中，参数 （报表生成器） |Microsoft 文档
+title: 数据集属性对话框，参数 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0b2d38e3cb08d0fd3370557e3c3ad1aa53e97fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50ee6db4cd7e8d16da89f234a67c437390260364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232457"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&gt;“参数”（报表生成器）
-  选择**参数**上**数据集属性**对话框中添加、 更改和删除查询参数。  
+  选择**参数**上**数据集属性**对话框可以添加、 更改和删除查询参数。  
   
  对于嵌入数据集，选项应用于报表定义中的数据集。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36024755"
   
  选择此选项可允许 Null 值。  
   
- **从查询中忽略**  
+ **从查询中省略**  
  仅限共享数据集。  
   
  当对报表参数的引用位于共享数据集筛选器的表达式中而非查询中时，选择此选项。 在您选择此选项后，无需在查询运行时为此参数指定默认值。  

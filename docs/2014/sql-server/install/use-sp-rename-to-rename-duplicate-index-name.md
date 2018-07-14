@@ -1,5 +1,5 @@
 ---
-title: 使用 sp_rename 重命名重复的索引名称 |Microsoft 文档
+title: 使用 sp_rename 重命名重复的索引名称 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
 - duplicate table names
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - duplicate index names
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b47cb1000c4b427f8780c8a3f3ba57ef73fef9bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 522fcd712882d031a5febe4766946a31d5696859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232507"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>使用 sp_rename 重命名重复的索引名称
   升级顾问检测到重复的表或视图索引名称。 请先重命名重复的索引以消除重复，然后再升级。  
@@ -46,7 +46,7 @@ ms.locfileid: "36024479"
           AND i.name = o.name and i.indid < o.indid);  
     ```  
   
-2.  使用**sp_rename**若要更改的索引名称之一。 由于索引名称相同，因此无法确定哪个索引将被重命名。 可通过此步骤区分索引。  
+2.  使用**sp_rename**更改其中一个索引名称。 由于索引名称相同，因此无法确定哪个索引将被重命名。 可通过此步骤区分索引。  
   
     ```  
     EXEC sp_rename N'table_name.index_name', N'new_index_name', N'INDEX'  
@@ -62,7 +62,7 @@ ms.locfileid: "36024479"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  如有必要，使用**sp_rename**再次更正的索引名称。  
+4.  如有必要，使用**sp_rename**再次以更正索引名称。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

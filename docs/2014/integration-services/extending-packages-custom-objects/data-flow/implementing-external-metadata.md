@@ -27,13 +27,13 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18a4e657b4b4e0b434656f6a03538ec4a8f89957
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8e43702349bae9dd5f3eb89bb6454fb62b05816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169192"
 ---
 # <a name="implementing-external-metadata"></a>实现外部元数据
   组件与其数据源断开连接后，可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> 接口，针对组件的外部数据源中的列验证输入和输出列集合中的列。 使用此接口可以保留一份外部数据源中的列的快照，并可以将这些列映射到组件的输入和输出列集合中的列。  
@@ -82,7 +82,7 @@ End Sub
 ### <a name="connected-validation"></a>连接下的验证  
  组件与外部数据源处于连接状态时，输入或输出集合中的列是直接与外部数据源相验证的。 另外，还必须验证外部元数据集合中的列。 如此要求的原因是，外部元数据集合可使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的“高级编辑器”来修改，而且对该集合所做的更改是无法检测的。 因此，处于连接状态时，组件必须确保外部元数据列集合中的列始终反映外部数据源中的列。  
   
- 你可以选择隐藏中的外部元数据集合**高级编辑器**通过设置<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>属性集合的`false`。 但这也会隐藏编辑器的“列映射”选项卡，该选项卡允许用户将输入或输出集合中的列映射到外部元数据列集合中的列。 将此属性设置为 `false` 不会阻止开发人员以编程方式修改外部元数据列集合，而会为在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中独占使用的组件的外部元数据列集合提供一定程度的保护。  
+ 您可以选择隐藏外部元数据集合中的**高级编辑器**通过设置<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>到集合的属性`false`。 但这也会隐藏编辑器的“列映射”选项卡，该选项卡允许用户将输入或输出集合中的列映射到外部元数据列集合中的列。 将此属性设置为 `false` 不会阻止开发人员以编程方式修改外部元数据列集合，而会为在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中独占使用的组件的外部元数据列集合提供一定程度的保护。  
   
 ### <a name="disconnected-validation"></a>断开连接下的验证  
  组件与外部数据源断开连接后，验证即可简化，因为输入或输出集合中的列将直接与外部元数据集合中的列相验证，而不会验证外部源。 如果组件与其外部数据源之间的连接尚未建立，或者 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为 `false`，则组件应执行断开连接下的验证。  
@@ -113,7 +113,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [数据流](../../data-flow/data-flow.md)  

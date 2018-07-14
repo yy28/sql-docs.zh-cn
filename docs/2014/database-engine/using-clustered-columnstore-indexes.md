@@ -1,30 +1,29 @@
 ---
-title: 使用聚集列存储索引 |Microsoft 文档
+title: 使用聚集列存储索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 caps.latest.revision: 6
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 527905bc0b0be07c178c873ae22fd06a0166b963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a439826920b98098d1ed8a30540c39509b7083d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254599"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用聚集列存储索引
   用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用聚集列存储索引的任务。  
   
- 列存储索引的概述，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)。  
+ 有关列存储索引的概述，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
  有关聚集列存储索引的信息，请参阅[使用聚集列存储索引](../relational-databases/indexes/indexes.md)。  
   
@@ -36,14 +35,14 @@ ms.locfileid: "36018927"
   
 -   [将数据加载到聚集列存储索引](#load)  
   
--   [聚集列存储索引中的变更数据](#change)  
+-   [更改聚集列存储索引中的数据](#change)  
   
 -   [重新生成聚集列存储索引](#rebuild)  
   
--   [重新组织非聚集列存储索引](#reorganize)  
+-   [重新组织聚集列存储索引](#reorganize)  
   
 ##  <a name="create"></a> 创建聚集列存储索引  
- 若要创建聚集列存储索引，首先将行存储表创建为堆或聚集的索引，以及如何将[创建聚集列存储索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)语句将表转换为簇状列存储索引。 如果您想要让该聚集列存储索引具有与聚集索引相同的名称，则使用 DROP_EXISTING 选项。  
+ 要创建聚集列存储索引，请首先作为堆或聚集的索引，创建行存储表，然后使用[创建聚集列存储索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)语句，以将表转换为聚集列存储索引。 如果您想要让该聚集列存储索引具有与聚集索引相同的名称，则使用 DROP_EXISTING 选项。  
   
  此示例将一个表作为堆创建，然后将其转换为名为 cci_Simple 的聚集列存储索引。 这会将整个表的存储从行存储转换为列存储。  
   
@@ -58,7 +57,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_T1 ON T1;
 GO  
 ```  
   
- 有关更多示例，请参阅中的示例部分[创建聚集列存储索引&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)。  
+ 有关更多示例，请参阅中的示例部分[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)。  
   
 ##  <a name="drop"></a> 删除聚集列存储索引  
  使用[DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)语句删除聚集列存储索引。 此操作将删除该索引并将列存储表转换为行存储堆。  
@@ -101,7 +100,7 @@ SELECT * FROM sys.column_store_row_groups
   
 
   
-##  <a name="change"></a> 聚集列存储索引中的变更数据  
+##  <a name="change"></a> 更改聚集列存储索引中的数据  
  聚集列存储索引支持插入、更新和删除 DML 操作。  
   
  使用[插入&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)插入行。 该行将添加到增量存储中。  
@@ -119,7 +118,7 @@ SELECT * FROM sys.column_store_row_groups
 -   如果该行在增量存储中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在增量存储中更新它。  
   
 ##  <a name="rebuild"></a> 重新生成聚集列存储索引  
- 使用[创建聚集列存储索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql)执行完全重新生成现有聚集列存储索引。 此外，你也可以使用 ALTER INDEX... REBUILD，用于重新生成特定分区。  
+ 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;-&#41; ](/sql/t-sql/statements/alter-index-transact-sql)执行完全重新生成现有聚集列存储索引。 此外，你也可以使用 ALTER INDEX... REBUILD，用于重新生成特定分区。  
   
 ### <a name="rebuild-process"></a>重新生成过程  
  若要重新生成聚集列存储索引，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将：  
@@ -149,8 +148,8 @@ SELECT * FROM sys.column_store_row_groups
   
      这可确保所有数据都存储于列存储中。 如果同时发生多个加载，每个分区可能最终有多个增量存储。 重新生成会将所有增量存储行都移到列存储中。  
   
-##  <a name="reorganize"></a> 重新组织非聚集列存储索引  
- 重新组织聚集列存储索引会将所有已关闭行组都移到列存储中。 若要执行重新组织，使用[ALTER INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)与的 REORGANIZE 选项。  
+##  <a name="reorganize"></a> 重新组织聚集列存储索引  
+ 重新组织聚集列存储索引会将所有已关闭行组都移到列存储中。 若要执行重新组织，使用[ALTER INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)具有 REORGANIZE 选项。  
   
  为了将关闭的行组移到列存储中，不需要重新组织索引。 元组搬运者进程最终将找到所有关闭的行组并且移动它们。 但是，tuple-mover 是单线程的，因此，对于您的工作负荷来说它移动行组的速度可能不够快。  
   

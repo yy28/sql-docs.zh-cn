@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a341b5aa6ced85e6d96a886cfe5944c4b32f960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 43e08fb5675fc5b393d5346564a1241288cda055
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256446"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
   包是用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件对象的容器。 扩展事件包有三种类型，它们是：  
@@ -83,7 +83,7 @@ ms.locfileid: "36024334"
 |管理员|管理员事件主要针对的是最终用户、管理员和支持人员。 管理员通道中包含的事件指示定义好的解决方案出现问题，管理员可以对该问题进行处理。 例如，应用程序无法连接到打印机就是一个管理员事件。 这些事件可能在文档中有详细描述，或者有与之关联的消息告诉读者如何纠正这一问题。|  
 |操作|操作事件用于分析和诊断问题或匹配项。 它们可用于基于问题或匹配项来触发工具或任务。 操作事件的一个示例是从系统中添加或删除打印机。|  
 |分析|分析事件的发布量是很大的。 它们对程序操作进行说明并且通常用于性能调查。|  
-|调试|调试事件仅由开发人员用来诊断问题以进行调试。<br /><br /> 注意： 调试渠道中的事件返回内部的特定于实现的状态数据。 这些事件返回的架构和数据可能在 SQL Server 的将来版本中更改或失效。 因此，调试渠道中的事件在 SQL Server 的将来版本中可能更改或删除且不事先通知。|  
+|调试|调试事件仅由开发人员用来诊断问题以进行调试。<br /><br /> 注意： 调试通道中的事件返回特定于实现的内部状态数据。 这些事件返回的架构和数据可能在 SQL Server 的将来版本中更改或失效。 因此，调试渠道中的事件在 SQL Server 的将来版本中可能更改或删除且不事先通知。|  
   
  **关键字**  
   

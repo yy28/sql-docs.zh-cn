@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 35
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ed753691683719dae20802f80e4ae635a79c4338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268413"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教程 (SSRS)
-  本部分包含有关教程[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
+  本部分包含有关的教程[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
   
  [创建数据驱动订阅（SSRS 教程）](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供数据驱动订阅功能，这样，你便可根据将接收报表的订阅服务器的动态列表，自定义报表的分发。 数据驱动订阅通常由报表服务器管理员创建和维护。 要创建数据驱动订阅，必须要具备生成查询的专业技术，了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
@@ -33,10 +33,10 @@ ms.locfileid: "36018338"
  按照本教程中的步骤来学习如何创建第一个报表。 本教程将向您演示如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 来创建数据连接（数据源）、定义简单查询（数据集）和配置包含您的数据的数据区域。  
   
  [访问报表服务器 Web 服务使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教程&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
- 按照本教程，若要了解如何访问中的步骤[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]Web 服务从应用程序使用创建[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]。  
+ 按照本教程，了解如何访问中的步骤[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]Web 服务与创建的应用程序[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]。  
   
- [更新报表使用生成的 RDL 架构类&#40;SSRS 教程&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
- 按照本教程，若要了解如何使用 XML 架构定义工具 (Xsd.exe) 生成的类，可用于序列化和反序列化报表定义文件 （.rdl 和.rdlc） 的步骤使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。  
+ [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ 按照本教程，若要了解如何使用 XML 架构定义工具 (Xsd.exe) 生成的类，可用于序列化和反序列化报表定义文件 （.rdl 和.rdlc） 与[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。  
   
  [创建钻取&#40;RDLC&#41;带有参数使用 ReportViewer 报表&#40;SSRS 教程&#41;](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
  按照本教程中的步骤来学习如何使用 ReportViewer 控件来创建包含参数的钻取报表和筛选器。  

@@ -1,5 +1,5 @@
 ---
-title: 分区属性对话框 (SSMS) |Microsoft 文档
+title: 分区属性对话框 (SSMS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionpropertiesdialog.f1
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 31d7ea8727ce11ef52e23b1dc580e6ba706ae12d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30192ebd1ac739612e36f6895e22e455419a7449
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241667"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>“分区属性”对话框 (SSMS)
   在 SQL Server Management Studio 中，可以使用 **“分区属性”** 对话框设置 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集的分区属性。  

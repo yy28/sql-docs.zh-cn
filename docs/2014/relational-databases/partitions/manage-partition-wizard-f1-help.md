@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
 - sql12.swb.managepartition.selectoutput.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58fb07069d831020fac201e9a63b12f316105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0d07d35db7a6604c98646cc15a9d892bb230407b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197557"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
   使用 **管理分区向导** 可以通过分区切换或实现可调窗口应用场景来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
@@ -41,7 +40,7 @@ ms.locfileid: "36026767"
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，选择数据库，右键单击要在其中创建分区的表，指向“存储”，然后单击“管理分区”。  
   
-     `Note` 如果**管理分区**是不可用，你可能已选择不包含分区的表。 在 **“存储”** 子菜单上单击 **“创建分区”** ，然后使用 **创建分区向导** 在表中创建分区。  
+     `Note` 如果**管理分区**是不可用，您可能选择不包含分区的表。 在 **“存储”** 子菜单上单击 **“创建分区”** ，然后使用 **创建分区向导** 在表中创建分区。  
   
  有关分区和索引的一般信息，请参阅 [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)。  
   

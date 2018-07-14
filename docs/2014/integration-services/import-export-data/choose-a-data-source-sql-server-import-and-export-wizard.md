@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c814b8d89686c635fd0479576eeda982a8b7b957
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266833"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
-  使用**选择数据源**页后，可以指定要复制的数据源。  
+  使用**选择数据源**页可指定要复制的数据源。  
   
- 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关启动向导，选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关用于启动向导，选项以及已成功运行该向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
- 用途[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ 用途[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导，将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="options"></a>“常规”  
  **数据源**  
- 选择与源的数据存储格式相匹配的数据访问接口。 可用于数据源的访问接口可能不止一个。 例如，对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端、 SQL Server.NET Framework 数据提供程序或 Microsoft OLE DB Provider for SQL Server。  
+ 选择与源的数据存储格式相匹配的数据访问接口。 可用于数据源的访问接口可能不止一个。 例如，对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework 数据提供程序的 SQL Server 或 Microsoft OLE DB Provider for SQL Server。  
   
  根据计算机上安装的访问接口的不同， **“数据源”** 属性的选项数也会不同。 下表列出了一些常用目标的选项。 有关其他访问接口的信息，请参阅访问接口特定的文档。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "36324611"
  指定包是否应使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证登录数据库。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
  **Use SQL Server Authentication**  
- 指定包是否应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录到数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
+ 指定包是否应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证来登录到数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
  **用户名**  
- 指定数据库连接的用户名称，当你使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+ 指定数据库连接的用户名称，在使用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
   
  **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
@@ -71,20 +71,20 @@ ms.locfileid: "36324611"
  键入源数据库的名称。  
   
  **Integrated Security**  
- 指定`True`连接使用 Windows 集成身份验证，这我们建议，或`False`通过连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值是 `False`。  
+ 指定`True`若要使用 Windows 集成身份验证连接，建议这样做，或`False`若要使用连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值是 `False`。  
   
  **用户 ID**  
- 指定数据库连接的用户名称，当你使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+ 指定数据库连接的用户名称，在使用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
   
  **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
   
- 选择此访问接口时所列出的其他选项并不是成功连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源数据库所必需。 有关这些附加选项的说明，请参阅的文档[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据提供程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]软件开发工具包。  
+ 选择此访问接口时所列出的其他选项并不是成功连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源数据库所必需。 这些附加选项的说明，请参阅的文档[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的数据提供程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]软件开发工具包。  
   
 ### <a name="data-source--microsoft-excel"></a>数据源 = Microsoft Excel  
   
 > [!NOTE]  
->  选择**Microsoft Excel**仅当你想要连接到数据源使用 Excel 2003 或更早版本。 若要连接到数据源使用 Excel 2007，选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 提供程序**，单击**属性**，然后在**所有**选项卡**数据链接属性**对话框框中，输入`Excel 12.0`的值作为**扩展属性**。  
+>  选择**Microsoft Excel**仅当你想要连接到数据源使用 Excel 2003 或更早版本。 若要连接到数据源使用 Excel 2007，选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口**，单击**属性**，然后在**所有**选项卡**数据链接属性**对话框框中，输入`Excel 12.0`的值作为**扩展属性**。  
   
  **Excel 文件路径**  
  指定要从其中导入数据的电子表格的路径和文件名。 例如， **C:\MyData.xls， \\\Sales\Database\Northwind.xls**。 或单击 **“浏览”**。  
@@ -101,7 +101,7 @@ ms.locfileid: "36324611"
 ### <a name="data-source--microsoft-access"></a>数据源 = Microsoft Access  
   
 > [!NOTE]  
->  选择**Microsoft Access**仅当你想要连接到数据库使用 Access 2003 或更早版本。 若要连接到使用 Access 2007 的数据库，选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 提供程序**相反。  
+>  选择**Microsoft Access**仅当你想要连接到使用 Access 2003 的数据库，或更早版本。 若要连接到使用 Access 2007 数据库，请选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口**相反。  
   
  **文件名**  
  指定要从其中导入数据的数据库文件的路径和文件名。 例如，**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb**。 或单击 **“浏览”**。  
@@ -116,7 +116,7 @@ ms.locfileid: "36324611"
  当工作组信息文件与数据库关联时，为数据库连接提供相应的用户密码。 但是，如果对于所有用户都使用一个密码保护数据库，则必须在 **“数据链接属性”** 对话框（可通过单击 **“高级”** 访问）中提供此值。  
   
  **高级**  
- 你可能想要通过指定高级的选项，例如数据库密码或非默认工作组信息文件，**数据链接属性**对话框。 有关 OLE DB 提供程序属性的详细信息，搜索中的数据访问部分[MSDN 库](http://go.microsoft.com/fwlink/?linkid=62553)。  
+ 您可能想要指定高级的选项，例如数据库密码或非默认工作组信息文件，通过使用**数据链接属性**对话框。 有关 OLE DB 访问接口属性的详细信息，搜索中的数据访问部分[MSDN 库](http://go.microsoft.com/fwlink/?linkid=62553)。  
   
 ### <a name="data-source--flat-file-source"></a>数据源 = 平面文件源  
  有关平面文件数据源的选项的信息，请参阅以下主题：  

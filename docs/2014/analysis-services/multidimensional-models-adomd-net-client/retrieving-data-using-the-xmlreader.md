@@ -1,5 +1,5 @@
 ---
-title: 检索数据使用 XmlReader |Microsoft 文档
+title: 使用 XmlReader 检索数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 257777c40c829921680b8fce333bd6e44f6f57fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267563"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>使用 XmlReader 检索数据
   `XmlReader` 类是 Microsoft .NET Framework 类库的 `System.Xml` 命名空间的一部分。由于 `XmlReader` 类还提供对数据的快速、非缓存、只进访问，因而与 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 类相似。 如果不需要使用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象获取数据的内存中分析视图，则 `XmlReader` 对象将是检索 XML 数据工具（尤其是大量数据）的最佳选择。 由于 `XmlReader` 用于传入数据，所以 `XmlReader` 在向调用方公开数据之前无需检索并缓存所有数据，如果使用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象将 XML for Analysis 响应转换为分析对象模型表示形式，则需要检索并缓存数据。  
@@ -52,8 +52,8 @@ ms.locfileid: "36024448"
  [!code-csharp[Adomd.NetClient#OutputDataWithXML](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#outputdatawithxml)]  
   
 ## <a name="see-also"></a>请参阅  
- [从分析数据源检索数据](retrieving-data-from-an-analytical-data-source.md)   
- [使用单元集中检索数据](retrieving-data-using-the-cellset.md)   
+ [从分析数据源中检索数据](retrieving-data-from-an-analytical-data-source.md)   
+ [使用 CellSet 检索数据](retrieving-data-using-the-cellset.md)   
  [使用 AdomdDataReader 检索数据](retrieving-data-using-the-adomddatareader.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf9d4775b776c0766e05b39d8cd271bff9fccbd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274623"
 ---
 # <a name="examples-using-path-mode"></a>示例：使用 PATH 模式
   下面的示例演示如何使用 PATH 模式通过 SELECT 查询生成 XML。 这些查询中有许多都是针对 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
@@ -190,7 +190,7 @@ GO
   
  `</Root>`  
   
- 除了产品型号 ID 和名称以外，以下查询还将检索产品型号的生产说明位置。 由于 Instructions 列是`xml`类型，`query()`方法`xml`数据类型指定要检索其位置。  
+ 除了产品型号 ID 和名称以外，以下查询还将检索产品型号的生产说明位置。 由于 Instructions 列是`xml`类型，`query()`方法的`xml`指定数据类型来检索该位置。  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -248,7 +248,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- 请注意，在 `MI` 中也定义了 `WITH XMLNAMESPACES`前缀。 因此，`query()`方法`xml`指定的类型未在查询 prolog 中定义前缀。 结果如下：  
+ 请注意，在 `MI` 中也定义了 `WITH XMLNAMESPACES`前缀。 因此，`query()`方法的`xml`指定类型不会在查询 prolog 中定义此前缀。 结果如下：  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   

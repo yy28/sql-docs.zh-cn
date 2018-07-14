@@ -1,5 +1,5 @@
 ---
-title: 常规属性页中，共享数据源 （报表管理器） |Microsoft 文档
+title: 常规属性页上，共享数据源 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0a570567691692f008f6f71966b5ee0b01921dab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b729c41bf0ed0950c20b465bd1f0c70ebbee4a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162278"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>共享数据源的“常规”属性页（报表管理器）
   使用“常规”属性页可以查看或修改共享数据源项的属性。 单击 **“应用”** 后，对属性所做的任何更改对于引用该项的所有报表都将生效。  
@@ -49,7 +49,7 @@ ms.locfileid: "36024513"
  选择此选项可以启用或禁用共享数据源。 您可以禁用共享数据源，以防止对引用该项的所有报表、报表模型以及数据驱动订阅进行处理。  
   
  **数据源类型**  
- 指定用于处理数据源中数据的数据处理扩展插件。 报表服务器包含数据处理扩展插件[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，Oracle、 XML、 SAP、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，ODBC 和 OLE DB。 其他数据处理扩展插件可能由第三方供应商提供。  
+ 指定用于处理数据源中数据的数据处理扩展插件。 报表服务器包括数据处理扩展插件[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，Oracle、 XML、 SAP、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，ODBC 和 OLE DB。 其他数据处理扩展插件可能由第三方供应商提供。  
   
  请注意，如果您使用具有高级服务的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition，则只能选择 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据源。  
   
@@ -66,15 +66,15 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
 > [!IMPORTANT]  
 >  如果连接字符串中提供了凭据，则忽略此部分中提供的选项和值。 请注意，如果在连接字符串中指定了凭据，则会向浏览此页的所有用户以明文显示这些值。  
   
- **运行报表的用户提供的凭据**  
+ **运行该报表的用户提供的凭据**  
  每一名用户都必须键入用户名和密码以访问数据源。 可以定义请求用户凭据的提示文本。 默认的文本字符串为“输入用户名和密码以访问数据源”。  
   
  如果用户提供的凭据为 Windows 身份验证凭据，请选择“在与数据源建立连接时用作 Windows 凭据”  。 如果使用数据库身份验证（例如 SQL Server 身份验证），请不要选中此复选框。  
   
- **安全存储在报表服务器中的凭据**  
- 在报表服务器数据库中存储加密的用户名和密码。 选择此选项可在无人参与的模式下运行报表（例如，通过计划或事件而不是用户操作来启动报表）。 如果使用默认安全性，则用户名必须为 Windows 域帐户。 按以下格式指定的帐户：\<域 >\\< 用户名\>。 指定的帐户对于用来承载报表所用数据源的计算机必须具有本地登录权限。  
+ **在报表服务器中安全地存储凭据**  
+ 在报表服务器数据库中存储加密的用户名和密码。 选择此选项可在无人参与的模式下运行报表（例如，通过计划或事件而不是用户操作来启动报表）。 如果使用默认安全性，则用户名必须为 Windows 域帐户。 按以下格式指定帐户：\<域 >\\< 用户名\>。 指定的帐户对于用来承载报表所用数据源的计算机必须具有本地登录权限。  
   
- 如果凭据为 Windows 身份验证凭据，请选中 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果你使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
+ 如果凭据为 Windows 身份验证凭据，请选中 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
   
  如果使用数据库身份验证，请选中 **“与数据源建立连接之后模拟经过身份验证的用户(连接方式)”** ，以便允许委托数据库凭据，但是只有当数据库服务器支持模拟时才能这样做。 有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库，此选项将设置 SETUSER 函数。  
   

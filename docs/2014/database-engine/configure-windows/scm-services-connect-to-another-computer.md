@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147e23e4b2c717d36bf2774f0e3e1d049a46f9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c0878b7cfa2ca6d77d5d43f6d0642d5ecaf42586
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167218"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>连接到其他计算机（SQL Server 配置管理器）
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中连接到其他计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。  
@@ -49,7 +49,7 @@ ms.locfileid: "36018013"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
-2.  在**打开**框中，键入`mmc -a`以打开[!INCLUDE[msCoName](../../includes/msconame-md.md)]在作者模式下的管理控制台。  
+2.  在中**打开**框中，键入`mmc -a`以打开[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台以作者模式。  
   
 3.  在“文件”  菜单上，单击“添加/删除管理单元” 。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36018013"
   
 11. 在 **“窗口”** 菜单上，单击 **“控制台根节点”**，切换回第一个窗口，并删除该窗口。  
   
-12. 上**文件**菜单上，单击**另存为**，将文件保存在所需的文件夹中，使用的相应文件名`.msc`文件扩展名。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。  
+12. 上**文件**菜单上，单击**另存为**，并将该文件保存在所需的文件夹，使用的相应文件名`.msc`文件扩展名。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。  
   
 13. 若要打开目标计算机中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请双击此文件。 如果需要，则在桌面上或 **“开始”** 菜单中保存到此文件的链接。  
   

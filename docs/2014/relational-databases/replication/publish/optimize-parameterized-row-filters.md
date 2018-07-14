@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - filters [SQL Server replication], parameterized
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - parameterized filters [SQL Server replication], optimizing
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13c5a3ca9324b79c6c8844534ce5eff8b495eeed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95cd675d8c774b7b0321eb3ffc15e1c15a213f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242257"
 ---
 # <a name="optimize-parameterized-row-filters"></a>优化参数化行筛选器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中优化参数化行筛选器。  
@@ -124,7 +124,7 @@ ms.locfileid: "36018847"
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>创建新发布时指定合并筛选器的优化  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)。 指定**@publication**和的值`true`个以下参数：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)。 指定**@publication**并将值`true`个以下参数：  
   
     -   **@use_partition_groups**：最高级别的性能优化（如果项目符合预计算分区的要求）。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
@@ -152,9 +152,9 @@ ms.locfileid: "36018847"
   
 1.  （可选）在发布服务器上，对发布数据库执行 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)，并指定 **@publication**中优化参数化行筛选器。 请注意结果集中 **keep_partition_changes** 和 **use_partition_groups** 的值。  
   
-2.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 指定的值**use_partition_groups**为**@property**和任一`true`或`false`为**@value**。  
+2.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 指定的值**use_partition_groups**有关**@property**并将`true`或`false`对于**@value**。  
   
-3.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 指定的值**keep_partition_changes**为**@property**和任一`true`或`false`为**@value**。  
+3.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 指定的值**keep_partition_changes**有关**@property**并将`true`或`false`对于**@value**。  
   
     > [!NOTE]  
     >  当启用 **keep_partition_changes**时，必须首先禁用 **use_partition_groups** ，并将值 **1** 指定给 **@force_reinit_subscription**中优化参数化行筛选器。  

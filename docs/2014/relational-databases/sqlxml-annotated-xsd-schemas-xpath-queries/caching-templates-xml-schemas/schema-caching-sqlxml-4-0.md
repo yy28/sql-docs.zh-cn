@@ -1,5 +1,5 @@
 ---
-title: 架构缓存 (SQLXML 4.0) |Microsoft 文档
+title: 架构缓存 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - schemas [SQLXML]
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6ddf2b95f9b72a0def960f6159cd8646a6b4439c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bf1398a83badd1ea52fd15484b4e2cda8ec8b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186194"
 ---
 # <a name="schema-caching-sqlxml-40"></a>架构缓存 (SQLXML 4.0)
-  与通过并行安装的 Microsoft SQL Server 2000 Web 版本 1、 Microsoft SQLXML 2.0 和 SQLXML 3.0 的 XML，你可以显式控制缓存在所有版本中使用以下注册表项的架构：  
+  与通过并行安装的 Microsoft SQL Server 2000 Web Release 1、 Microsoft SQLXML 2.0 和 SQLXML 3.0 的 XML，可以显式控制的架构缓存在所有版本中，通过使用以下注册表项：  
   
  Web Release 1：  
   
@@ -56,9 +56,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
   
  可以通过在注册表中添加以上注册表项来设置架构缓存大小。  
   
- 应基于可用内存大小和要使用的架构数量来设置架构缓存大小。 默认值**SchemaCacheSize**大小为 31。 如果你设置**SchemaCacheSize**更高版本，使用更多内存。 因此，如果架构访问较慢，可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
+ 应基于可用内存大小和要使用的架构数量来设置架构缓存大小。 默认值**SchemaCacheSize**大小为 31。 如果您设置**SchemaCacheSize**更高版本，使用更多的内存。 因此，如果架构访问较慢，可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
   
- 出于性能原因，建议你设置**SchemaCacheSize**高于您通常使用的映射架构的数。 当架构数目增加时，如果**SchemaCacheSize**小于比架构必须数，在性能降低。  
+ 出于性能原因，建议您设置**SchemaCacheSize**大于您通常使用的映射架构的数。 随着架构数量的增加，如果**SchemaCacheSize**小于您拥有的架构的数量，在性能下降。  
   
 > [!NOTE]  
 >  在开发期间，建议不缓存架构，因为这样会使对架构的更改在大约两分钟后才会反映在缓存中。  

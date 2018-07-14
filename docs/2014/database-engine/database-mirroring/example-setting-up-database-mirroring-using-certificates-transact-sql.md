@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - certificates [SQL Server], database mirroring
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c61db45a0b4a6b1326c74472158423bdabd05d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 046d73e4317696c579bbcc6e2ad512227b12f37e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248867"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>示例：使用证书设置数据库镜像 (Transact-SQL)
   此示例演示了使用基于证书的身份验证创建数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 建议您对数据库镜像连接进行加密，除非您能够保证网络的安全。  
@@ -261,7 +260,7 @@ ms.locfileid: "36018011"
     ```  
   
     > [!NOTE]  
-    >  如果你想要在具有自动故障转移的高安全性模式下运行，将事务安全性设置为 FULL （默认设置），并在执行第二个 SET PARTNER 后尽快添加见证服务器***`partner_server`*** 语句。 注意，必须首先为出站连接和入站连接配置见证服务器。  
+    >  如果你想要在具有自动故障转移功能的高安全性模式下运行，将事务安全性设置为 FULL （默认设置） 和执行第二个 SET PARTNER 后尽快添加见证服务器 **'*`partner_server`*'** 语句。 注意，必须首先为出站连接和入站连接配置见证服务器。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -278,7 +277,7 @@ ms.locfileid: "36018011"
 -   [数据库镜像配置故障排除 (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
 ## <a name="see-also"></a>请参阅  
- [针对数据库镜像和 AlwaysOn 可用性组传输安全&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)   
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
  [使用数据库镜像终结点证书 (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   

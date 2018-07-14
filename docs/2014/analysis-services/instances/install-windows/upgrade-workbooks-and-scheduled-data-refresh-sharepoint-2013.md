@@ -1,5 +1,5 @@
 ---
-title: 升级工作簿和计划的数据刷新 (SharePoint 2013) |Microsoft 文档
+title: 升级工作簿和计划的数据刷新 (SharePoint 2013) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd35257533c7cbf639ea1c1fecadcf3bcff4acd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216177"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
   本主题说明在以前的 PowerPivot 环境中创建的工作簿的用户体验，以及如何升级 PowerPivot 工作簿以便您可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [PowerPivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
@@ -87,7 +87,7 @@ ms.locfileid: "36018743"
   
      然后保存该工作簿并将其重新发布到 SharePoint 服务器。  
   
- 更改对 Analysis Services 功能的详细信息，请参阅[到 Analysis Services Features in SQL Server 2014 的行为更改](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ 更改 Analysis Services 功能的详细信息，请参阅[中 SQL Server 2014 Analysis Services 功能的行为更改](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
  有关刷新历史记录的详细信息，请参阅[查看数据刷新历史记录&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "36018743"
   
  可以使用两种方法进行升级：  
   
-1.  通过在 Excel 中打开具有的计算机上手动升级各工作簿[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]新版 PowerPivot for Excel，然后将其重新发布到服务器。 当您在外接程序的较新版本中打开此工作簿时，将发生以下内部操作：工作簿数据连接字符串中的数据访问接口将更新为 MSOLAP.5，更新元数据，并重新创建关系以符合较新的实现。  
+1.  通过在 Excel 中打开具有的计算机上手动升级每个工作簿[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本的 PowerPivot for Excel，然后将其重新发布到服务器。 当您在外接程序的较新版本中打开此工作簿时，将发生以下内部操作：工作簿数据连接字符串中的数据访问接口将更新为 MSOLAP.5，更新元数据，并重新创建关系以符合较新的实现。  
   
-2.  或者，SharePoint 管理员可以启用 SharePoint 场中的 PowerPivot 系统服务，以自动升级该自动升级功能[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]PowerPivot 工作簿计划数据刷新运行 （只有工作簿时配置了计划的数据刷新升级）。  
+2.  或者，SharePoint 管理员可以启用自动升级功能，以便在 SharePoint 场中 PowerPivot 系统服务，自动升级为[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]PowerPivot 工作簿计划数据刷新运行 （唯一的工作簿时配置计划的数据刷新升级）。  
   
     > [!NOTE]  
     >  自动升级是一种服务器配置功能；您不能为特定的工作簿、库或网站集启用或禁用该自动升级功能。  
@@ -136,7 +136,7 @@ ms.locfileid: "36018743"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- Get-PowerPivotSystemService 的输出是属性和相应值的列表。 你应该会看到`WorkbookUpgradeOnDataRefresh`在属性列表。 如果启用自动升级，该属性将设置为 **true** 。 如果该属性为 **false**，则继续执行下一步，启用自动工作簿升级。  
+ Get-PowerPivotSystemService 的输出是属性和相应值的列表。 应会看到`WorkbookUpgradeOnDataRefresh`属性列表中。 如果启用自动升级，该属性将设置为 **true** 。 如果该属性为 **false**，则继续执行下一步，启用自动工作簿升级。  
   
  若要启用自动工作簿升级，请运行以下命令：  
   

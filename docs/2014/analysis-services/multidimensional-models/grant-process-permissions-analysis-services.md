@@ -1,5 +1,5 @@
 ---
-title: 授予处理权限 (Analysis Services) |Microsoft 文档
+title: 授予处理权限 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1024a8dfbd7bd84db7e452018829b506565badf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b718fab80ad85ee52cadcc9547c11848de0ee9a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187284"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
   作为管理员，你可以创建专用于 Analysis Services 处理操作的角色，从而可以委派特定任务到其他用户，或者委派到用于无人参与的预定处理的应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
@@ -30,9 +30,9 @@ ms.locfileid: "36026028"
  权限通过角色授予，将对象与权限以及 Windows 用户或组帐户进行关联。 请记住，权限是可以累加的。 如果一个角色授予处理多维数据集的权限，同时另一个角色授予同一用户处理维度的权限，那么两个不同角色的权限会合并以授予用户在该数据库内的处理多维数据集和处理特定维度的权限。  
   
 > [!IMPORTANT]  
->  其角色只有处理权限的用户将不能够使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 来连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和处理对象。 这些工具要求`Read Definition`对象元数据的访问权。 没有功能使用任一工具时，则必须使用 XMLA 脚本来执行处理操作。  
+>  其角色只有处理权限的用户将不能够使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 来连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和处理对象。 这些工具需要`Read Definition`访问对象元数据的权限。 没有功能使用任一工具时，则必须使用 XMLA 脚本来执行处理操作。  
 >   
->  我们建议同时授予`Read Definition`出于测试目的的权限。 用户同时`Read Definition`和`Process Database`权限可以处理中的对象[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 以交互方式。 有关详细信息，请参阅 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
+>  我们建议同时授予`Read Definition`出于测试目的的权限。 用户具有`Read Definition`并`Process Database`权限可以处理中的对象[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 以交互方式。 有关详细信息，请参阅 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>设置数据库级别的处理权限  
  此部分解释了如何通过非管理员为数据库中的所有多维数据集、维度、挖掘结构和挖掘模型启用处理。  
@@ -41,7 +41,7 @@ ms.locfileid: "36026028"
   
 2.  右键单击**角色** | **新角色**。 输入名称和说明。  
   
-3.  在**常规**窗格中，选择`Process Database`复选框。 此外，选择`Read Definition`还要启用交互式处理通过其中一个 SQL Server 工具中，如[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+3.  在中**常规**窗格中，选择`Process Database`复选框。 此外，选择`Read Definition`同时启用交互式处理通过其中一个 SQL Server 工具，如[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 4.  在“成员身份”  窗格，添加有权限处理此数据库中的任何对象的 Windows 用户和组帐户。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36026028"
   
 2.  右键单击**角色** | **新角色**。 输入名称和说明。  
   
-3.  在**常规**窗格中，清除`Process Database`复选框。 数据库权限通过使角色选项显示为灰色或不可选来覆盖在更低级别对象上设置权限的功能。  
+3.  在中**常规**窗格中，清除`Process Database`复选框。 数据库权限通过使角色选项显示为灰色或不可选来覆盖在更低级别对象上设置权限的功能。  
   
-     技术上来说，专用处理角色不需要数据库权限。 但不是`Read Definition`在数据库级别，您不能查看中的数据库[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，这会让测试更加困难。  
+     技术上来说，专用处理角色不需要数据库权限。 但如果没有`Read Definition`在数据库级别，无法查看中的数据库[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，这会让测试更加困难。  
   
 4.  选择单个对象来处理：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36026028"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>设置数据挖掘结构的处理权限  
  你可以创建一个授予处理数据挖掘结构权限的角色。 这包括处理所有挖掘模型。  
   
- **钻取**和`Read Definition`用于浏览挖掘模型和结构的权限是原子性的可以添加到同一角色，或划分为不同的角色。  
+ **钻取**和`Read Definition`用于浏览挖掘模型和结构的权限是原子，可添加到相同的角色，或被分隔到不同的角色。  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，打开“数据库”文件夹，并选择一个数据库。  
   

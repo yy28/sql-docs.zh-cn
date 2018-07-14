@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5ccad4480d09fad1aab6b406cbd3a42ad9083b9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b4125342c0c85f053d3f7e85124be79766a06c3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238377"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
   使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“*\<报表项目名称>*属性”。  
@@ -57,28 +57,28 @@ ms.locfileid: "36018106"
  选择 **True** 可在发布报表时使用项目中的数据源覆盖服务器上的数据源。 选择 **False** 可保留服务器上的现有数据源。  
   
  **TargetServerVersion**  
- 选择[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]或选择**检测版本**就能够自动确定标识的服务器上安装的版本**TargetServer URL**属性。 默认值为 **SQL Server 2008 R2**。  
+ 选择任一[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]新版[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]或选择**检测版本**来自动确定标识的服务器上安装的版本**TargetServer URL**属性。 默认值为 **SQL Server 2008 R2**。  
   
  **TargetDataSourceFolder**  
  要在其中存储已发布共享数据源的文件夹的名称。 如果您没有指定文件夹，那么数据源将发布到与报表所在文件夹相同的文件夹。 如果报表服务器上没有该文件夹，则报表设计器将在发布报表时创建该文件夹。  
   
  发布到在本机模式下运行的报表服务器时，指定文件夹层次结构的完整路径（从根文件夹开始）。 例如，Folder1/Folder2/Folder3。  
   
- 发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 库的 URL。 例如，http://*\<服务器名 > /\<站点 >*  /文档/myfolder 文件夹。  
+ 发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 库的 URL。 例如，http://*\<服务器名 > /\<站点 >*/documents/myfolder。  
   
  **TargetReportFolder**  
  要在其中存储已发布报表的文件夹的名称。 默认情况下，此名称即为报表项目的名称。 如果报表服务器上没有该文件夹，则报表设计器将在发布报表时创建该文件夹。  
   
  发布到在本机模式下运行的报表服务器时，指定文件夹层次结构的完整路径（从根文件夹开始）。 如果文件夹位于另一个文件夹内，则包括从根目录开始的到该文件夹的路径，如 Folder1/Folder2/Folder3。  
   
- 发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 库的 URL。 例如，http://*\<servername >*/*\<站点 >*  /文档/myfolder 文件夹。  
+ 发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 库的 URL。 例如，http://*\<服务器名 >*/*\<站点 >*/documents/myfolder。  
   
  **TargetServerURL**  
  目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。  
   
  发布到在本机模式下运行的报表服务器时，请使用此报表服务器的虚拟目录 URL。 例如，http://\<服务器 > / reportserver。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。 默认情况下，报表服务器安装在名为“reportserver”的虚拟目录中。  
   
- 发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如，http://\<*servername >*，http://&lt*servername*/\<*站点 >* 或 http://\< *servername >*/\<*站点 >*/\<*子站点 >*。  
+ 发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如，http://\<*服务器名 >*，http://&lt*servername*/\<*站点 >* 或 http://\<*服务器名称 >*/\<*站点 >*/\<*子站点 >*。  
   
 ## <a name="see-also"></a>请参阅  
  [发布报表](../publish-reports.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e137d3e03594cda0a799f066ac175f78c194514
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 36f31c211affa12e7db9988200e3d04040ec227e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261793"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令行选项（分布式重播实用工具）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是一个命令行工具，可用来与分布式的重播控制器进行通信。 可使用此管理工具在控制器上启动、监视和取消操作。  
@@ -63,13 +63,13 @@ Usage:
   
  对于包含命令参数和示例的详细语法信息，请参阅下列主题：  
   
--   [Preprocess 选项&#40;分布式重播管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [预处理选项&#40;分布式重播管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
 -   [重播选项&#40;分布式重播管理工具&#41;](replay-option-distributed-replay-administration-tool.md)  
   
 -   [状态选项&#40;分布式重播管理工具&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Cancel 选项&#40;分布式重播管理工具&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [取消选项&#40;分布式重播管理工具&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  RPC 将作为 RPC 而非语言事件进行重播。  
   

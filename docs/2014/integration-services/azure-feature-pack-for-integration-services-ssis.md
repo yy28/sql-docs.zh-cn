@@ -1,5 +1,5 @@
 ---
-title: Azure 功能包 |Microsoft 文档
+title: Azure 功能包 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281733"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能包
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
@@ -69,7 +69,7 @@ ms.locfileid: "36018684"
     
     -   [Azure Data Lake Store 目标](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 枚举器 （&) ADLS 文件枚举器。 请参阅 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
+-   Azure Blob 枚举器和 ADLS 文件枚举器。 请参阅 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
   
  
 ## <a name="download-the-feature-pack"></a>下载功能包  

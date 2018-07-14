@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: da8b4e9e642fcaa7585041102422f05832e6ded3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f0443443f4863ed788aa22a4aeb1ca717ee891d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200737"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>设置报表项的格式（报表生成器和 SSRS）
   对报表中的项进行格式设置可以使报表更赏心悦目并增强其可读性。 在报表设计模式下，可以对文本框、文本框中的各项、图像、表达式以及数据进行格式设置。  
@@ -42,16 +42,16 @@ ms.locfileid: "36025441"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>本节内容  
- [格式文本和占位符&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  介绍如何设置文本的格式以及如何自定义文本框中不同文本块的格式选项。  
   
- [将 HTML 导入报表&#40;报表生成器和 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [将 HTML 报表导入&#40;报表生成器和 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  介绍如何在报表中插入和使用 HTML。  
   
  [设置数字和日期格式&#40;报表生成器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  介绍如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持的标准和自定义格式设置字符串。  
   
- [格式设置线条、 颜色和图像&#40;报表生成器和 SSRS&#41;](images-report-builder-and-ssrs.md)  
+ [设置线条、 颜色和图像的格式&#40;报表生成器和 SSRS&#41;](images-report-builder-and-ssrs.md)  
  介绍如何设置报表项和数据区域中的线条、网格线、颜色和图像的格式。  
   
  [设置报表或文本框的区域设置&#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  

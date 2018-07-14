@@ -1,5 +1,5 @@
 ---
-title: tablediff 实用工具 |Microsoft 文档
+title: tablediff 实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
 - tablediff utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 851ba198020abf234c793ad65acf3f5dbbcd8e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6d073e95d896429e1827009c249b940ade2e7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180964"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
   **tablediff** 实用工具用于比较两个非收敛表中的数据，它对于排除复制拓扑中的非收敛故障非常有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
@@ -129,7 +129,7 @@ ms.locfileid: "36025841"
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定目标表。  
   
  **-b** *large_object_bytes*  
- 是的字节数进行比较对于大型对象数据类型列，其中包括： `text`， `ntext`， `image`， `varchar(max)`，`nvarchar(max)`和`varbinary(max)`。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
+ 是字节数进行比较的大型对象数据类型列，其中包括： `text`， `ntext`， `image`， `varchar(max)`，`nvarchar(max)`和`varbinary(max)`。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
   
  **-bf**  *number_of_statements*  
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 选项时要写入到当前 **脚本文件中的** 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements*时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
@@ -175,7 +175,7 @@ ms.locfileid: "36025841"
 ## <a name="remarks"></a>Remarks  
  **tablediff** 实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
- 与表`sql_variant`不支持数据类型列。  
+ 使用表`sql_variant`不支持数据类型列。  
   
  默认情况下， **tablediff** 实用工具支持源列和目标列之间的以下数据类型映射。  
   

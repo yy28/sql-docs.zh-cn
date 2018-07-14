@@ -1,5 +1,5 @@
 ---
-title: 核心 SQLXML 安全注意事项 |Microsoft 文档
+title: 核心 SQLXML 的安全注意事项 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7b89745551ba3f4d82272387149bca21466e9813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 972ece66513dcc8784ed40e9757ec6114684f10e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255959"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 核心安全性注意事项
   以下是使用 SQLXML 进行数据访问的安全性准则。  
   
--   SQLXMLOLEDB 访问接口公开 `StreamFlags` 属性，您可以使用该属性设置指示应针对每个特定实例启用或禁用哪些 SQLXML 功能的标志。 您可以使用此属性自定义对 SQLXML 的使用，并确保只启用所需组件。 有关详细信息，请参阅[SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)。  
+-   SQLXMLOLEDB 访问接口公开 `StreamFlags` 属性，您可以使用该属性设置指示应针对每个特定实例启用或禁用哪些 SQLXML 功能的标志。 您可以使用此属性自定义对 SQLXML 的使用，并确保只启用所需组件。 有关详细信息，请参阅[sqlxmloledb 访问接口&#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)。  
   
 -   当出现 SQLXML 错误并返回这些错误时，它们可以包含有关数据库架构的信息，如表名、列名或类型信息。 处理这些错误时应非常小心，以使用户无法轻易发现不打算使用或不需要使用的有关您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装的信息。  
   

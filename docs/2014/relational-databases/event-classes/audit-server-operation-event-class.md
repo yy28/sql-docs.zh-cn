@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Operation event class
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 247e345674681c6093f2605474c3ae60ab77dea8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27a4e9b29c1b7a14618fd97b373ae77896c9749b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186574"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation 事件类
   当执行更改设置、资源、外部访问或授权等安全审核操作时，会发生 **Audit Server Operation** 事件类。  

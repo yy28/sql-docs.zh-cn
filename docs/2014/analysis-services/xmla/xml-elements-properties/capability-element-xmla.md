@@ -1,5 +1,5 @@
 ---
-title: 功能元素 (XMLA) |Microsoft 文档
+title: Capability 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Capability element
 ms.assetid: 544a733e-77fc-48a0-8f92-9cd1fdbcf824
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7fd495ff0abf921b377526f6030d5207d962e1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5b14b43b41f74c05d433c599b18486c5737b27c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201887"
 ---
 # <a name="capability-element-xmla"></a>Capability 元素 (XMLA)
-  指示支持的协议功能的父代中[ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md)标头元素。  
+  指示父代中的协议功能的支持[ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md)标头元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36018930"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Capability`元素指示包含的任一应用程序支持特定功能，如二进制或压缩， `ProtocolCapabilities` SOAP 标头的 SOAP 请求中，或由的实例中的标头元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含`ProtocolCapabilities`SOAP 响应的 SOAP 标头中的标头元素。 `Capability` 元素的值为所支持的功能的名称。  
+ `Capability`元素指示一个特定的功能，如二进制或压缩，受包含的任一应用程序`ProtocolCapabilities`SOAP 标头的 SOAP 请求，或由的实例中的标头元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含`ProtocolCapabilities`SOAP 响应的 SOAP 标头中的标头元素。 `Capability` 元素的值为所支持的功能的名称。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持下表所列出的功能。  
   

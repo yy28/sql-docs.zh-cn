@@ -21,13 +21,13 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d118ff880ad3209cd348794b90aeac8ad76318aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03a12904a08c964a122f0658ccb53a4f5f0bd4ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245187"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
   企业数据处理应用程序（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包）通常需要根据 Active Directory 中存储的雇员的级别、职务或其他特征来以不同方式处理数据。 Active Directory 是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目录服务，它不仅提供集中存储有关用户的元数据，还可以提供集中存储有关其他组织资产（如计算机和打印机）的元数据。 Microsoft .NET Framework 中的 `System.DirectoryServices` 命名空间提供使用 Active Directory 的类，以帮助您根据 Active Directory 中存储的信息来定向数据处理工作流。  
@@ -42,7 +42,7 @@ ms.locfileid: "36018893"
   
 1.  创建三个字符串变量：`email`、`name` 和 `title`。 输入一个有效的企业电子邮件地址作为 `email` 变量的值。  
   
-2.  上**脚本**页**脚本任务编辑器**，添加`email`变量`ReadOnlyVariables`属性。  
+2.  上**脚本**页**脚本任务编辑器**，将添加`email`变量`ReadOnlyVariables`属性。  
   
 3.  将 `name` 和 `title` 变量添加到 `ReadWriteVariables` 属性中。  
   
@@ -115,6 +115,6 @@ public void Main()
   
 -   social.technet.microsoft.com 上的技术文章，[在 SSIS 中处理 Active Directory 信息](http://go.microsoft.com/fwlink/?LinkId=199588)。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

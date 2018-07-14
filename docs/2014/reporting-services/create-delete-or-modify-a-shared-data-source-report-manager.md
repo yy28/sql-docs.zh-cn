@@ -1,5 +1,5 @@
 ---
-title: 创建、 删除或修改共享的数据源 （报表管理器） |Microsoft 文档
+title: 创建、 删除或修改共享的数据源 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - removing shared data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 caps.latest.revision: 47
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0f5f9b5397d1f50e460f4f8f483daa7a9b3ef23f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202687"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>创建、删除或修改共享数据源（报表管理器）
   共享数据源指定数据源的连接属性。 如果数据源供大量的报表、模型或数据驱动订阅使用，则可考虑创建共享数据源，以消除必须在多个位置维护相同连接信息的开销。  
@@ -51,7 +51,7 @@ ms.locfileid: "36024274"
   
 7.  对于 **“连接字符串”**，指定报表服务器用于连接数据源的连接字符串。 建议您不要在连接字符串中指定凭据。  
   
-     下面的示例演示连接到本地的连接字符串[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库：  
+     下面的示例演示用于连接到本地的连接字符串[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库：  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  

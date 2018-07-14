@@ -18,13 +18,13 @@ ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eb3fb74525f98ffc919694b59235da2f0da90e91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b055244216ef6bc84f0a7448ba3938c1cb1c3bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213377"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>开发自定义 ForEach 枚举器
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用 Foreach 枚举器可循环访问集合中的项并为每个元素执行相同的任务。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括支持常用集合的各种 Foreach 枚举器，例如文件夹中的所有文件、数据库中的所有表或包变量中存储的所有列表元素。 如果提供的 Foreach 枚举器和集合不能完全满足您的需要，您可以创建自定义 Foreach 枚举器。  
@@ -72,6 +72,6 @@ ms.locfileid: "36018902"
  [开发自定义数据流组件](../data-flow/developing-a-custom-data-flow-component.md)  
  讨论如何对自定义数据流源、转换和目标进行编程。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

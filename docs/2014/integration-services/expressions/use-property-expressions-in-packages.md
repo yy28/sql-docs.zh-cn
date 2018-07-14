@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289373"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
@@ -56,7 +56,7 @@ ms.locfileid: "36018676"
   
  一个属性只能使用一个属性表达式，一个属性表达式只能应用于一个属性。 但是，您可以生成多个相同的属性表达式，并将它们分配给不同的属性。  
   
- 某些属性是通过使用来自枚举器的值来设置的。 在属性表达式中引用枚举器成员时，必须使用与枚举器成员的友好名称等价的数值。 例如，如果属性表达式设置`LoggingMode`属性，使用来自值`DTSLoggingMode`枚举，属性表达式必须使用 0、 1 或 2 而不是友好名称`Enabled`， `Disabled`，或`UseParentSetting`。 有关详细信息，请参阅 [属性表达式中的枚举常量](enumerated-constants-in-property-expressions.md)。  
+ 某些属性是通过使用来自枚举器的值来设置的。 在属性表达式中引用枚举器成员时，必须使用与枚举器成员的友好名称等价的数值。 例如，如果属性表达式设置`LoggingMode`属性，它使用来自值`DTSLoggingMode`枚举，属性表达式必须使用 0、 1 或 2 而不是友好名称`Enabled`， `Disabled`，或`UseParentSetting`。 有关详细信息，请参阅 [属性表达式中的枚举常量](enumerated-constants-in-property-expressions.md)。  
   
 ## <a name="property-expression-user-interface"></a>属性表达式用户界面  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一套工具，用于构建和管理属性表达式。  
@@ -96,7 +96,7 @@ ms.locfileid: "36018676"
  属性表达式将在加载包配置之后加载。 例如，变量首先由它们的配置进行更新，然后计算并加载使用这些变量的属性表达式。 这意味着属性表达式始终使用由配置所设置的变量的值。  
   
 > [!NOTE]  
->  不能使用`Set`选项**dtexec**实用程序来填充属性表达式。  
+>  不能使用`Set`的选项**dtexec**实用程序来填充属性表达式。  
   
  下表总结了何时计算并加载 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的属性表达式。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36018676"
 |Foreach 枚举器|加载配置之后<br /><br /> 验证之前<br /><br /> 执行之前<br /><br /> 每个循环枚举之前|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>在 Foreach 循环中使用属性表达式  
- 通常需要实现属性表达式来设置 Foreach 循环容器内部使用的连接管理器的 `ConnectionString` 属性值。 属性表达式枚举数将其当前值映射到循环的每个迭代上的变量后，可以使用此变量的值更新的值`ConnectionString`属性动态。  
+ 通常需要实现属性表达式来设置 Foreach 循环容器内部使用的连接管理器的 `ConnectionString` 属性值。 枚举器将其当前值映射到循环的每个迭代上的变量后，属性表达式可以使用此变量的值更新值的`ConnectionString`属性动态。  
   
- 如果希望将属性表达式与 Foreach 循环所使用的文件、多个文件、平面文件和多平面文件连接管理器的 `ConnectionString` 属性一起使用，则应当考虑以下情况。 通过将 `MaxConcurrentExecutables` 属性设置为大于 1 的值或值 -1，可以将包配置为同时运行多个可执行文件。 值为 -1 将使得可同时运行的可执行文件最大数目等于处理器数加 2。 若要避免并行执行可执行文件时出现负面结果，值 `MaxConcurrentExecutables` 应设置为 1。 如果`MaxConcurrentExecutables`未设置为 1，则值`ConnectionString`属性不能保证，并且结果是不可预知。  
+ 如果希望将属性表达式与 Foreach 循环所使用的文件、多个文件、平面文件和多平面文件连接管理器的 `ConnectionString` 属性一起使用，则应当考虑以下情况。 通过将 `MaxConcurrentExecutables` 属性设置为大于 1 的值或值 -1，可以将包配置为同时运行多个可执行文件。 值为 -1 将使得可同时运行的可执行文件最大数目等于处理器数加 2。 若要避免并行执行可执行文件时出现负面结果，值 `MaxConcurrentExecutables` 应设置为 1。 如果`MaxConcurrentExecutables`未设置为 1，则值`ConnectionString`属性不能保证，结果是不可预测。  
   
  例如，请考虑使用一个 Foreach 循环枚举文件夹中的文件，检索文件名，然后使用“执行 SQL 任务”将每个文件名插入表中。 如果 `MaxConcurrentExecutables` 不设置为 1，那么如果两个“执行 SQL 任务”实例试图同时写入表中，则会发生写入冲突。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36018676"
  下列示例表达式说明如何在属性表达式中使用系统变量、运算符、函数和字符串文字。  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>包的 LoggingMode 属性的属性表达式  
- 下面的属性表达式可用于设置包的 LoggingMode 属性。 表达式使用 DAY 和 GETDATE 函数来获得日期中表示“日”日期部分的整数。 如果日是 1 号或 15 号，则启用日志记录；否则，禁用日志记录。 值 1 是整数的 LoggingMode 枚举器成员等效`Enabled`，和的数值 2 是整数的成员等效`Disabled`。 在表达式中，必须使用数值而不是枚举器成员名称。  
+ 下面的属性表达式可用于设置包的 LoggingMode 属性。 表达式使用 DAY 和 GETDATE 函数来获得日期中表示“日”日期部分的整数。 如果日是 1 号或 15 号，则启用日志记录；否则，禁用日志记录。 值 1 是整数等效 LoggingMode 枚举器成员`Enabled`，并且的值为 2 的整数成员的等效`Disabled`。 在表达式中，必须使用数值而不是枚举器成员名称。  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

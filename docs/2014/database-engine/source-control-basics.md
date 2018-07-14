@@ -1,5 +1,5 @@
 ---
-title: 源控件基础知识 |Microsoft 文档
+title: 源控件基础知识 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], providers
 - source controls [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], clients
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8bd18f4ae5e62e5b9177a3ba76ac446bc1a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217847"
 ---
 # <a name="source-control-basics"></a>源代码管理基础
   源代码管理是指以下系统：在该系统中，使用中心服务器软件存储和跟踪文件版本，并控制对文件的访问。 典型的源代码管理系统包括源代码管理提供程序以及两个或多个源代码管理客户端。  
@@ -57,7 +57,7 @@ ms.locfileid: "36024638"
 |-|-|  
 |**任务**|**主题**|  
 |设置源代码管理选项|[设置源代码管理选项](../../2014/database-engine/set-source-control-options.md)|  
-|更改源控件连接|[更改源代码管理连接](../../2014/database-engine/change-source-control-connections.md)|  
+|更改源代码管理连接|[更改源代码管理连接](../../2014/database-engine/change-source-control-connections.md)|  
 |从源代码管理中排除文件|[从源代码管理中排除文件](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

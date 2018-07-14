@@ -1,5 +1,5 @@
 ---
-title: 多维模型中的操作 |Microsoft 文档
+title: 多维模型中的操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196537"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
   操作是指最终用户针对所选多维数据集或其个部分启动的操作。 操作可以通过将所选项目作为参数来启动应用程序，也可以检索有关所选项目的信息。 有关操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](actions-analysis-services-multidimensional-data.md)。  
@@ -56,7 +56,7 @@ ms.locfileid: "36026437"
  选择目标对象类型后，请在 **“目标对象”** 下面选择指定类型的多维数据集对象。  
   
  **条件(可选)**  
- 指定其结果为布尔值的可选“多维表达式 (MDX)”表达式。 如果值为`True`，在指定的目标上执行操作。 如果值为`False`，则不执行操作。  
+ 指定其结果为布尔值的可选“多维表达式 (MDX)”表达式。 如果值为`True`，对指定目标执行该操作。 如果值为`False`，则不执行操作。  
   
  **操作内容**  
  选择操作的类型。 下表总结了可用的类型。  
@@ -79,8 +79,8 @@ ms.locfileid: "36026437"
 |**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> 批处理<br /><br /> 交互<br /><br /> 处于打开状态|  
 |**应用程序**|说明操作的应用程序。|  
 |**Description**|说明操作。|  
-|**Caption**|提供为操作显示的标题。 如果标题是 MDX，指定`True`为**标题是 MDX**。|  
-|**True**|指定`True`如果标题是 MDX 或`False`如果它不是。|  
+|**Caption**|提供为操作显示的标题。 如果标题是 MDX，指定`True`有关**标题是 MDX**。|  
+|**True**|指定`True`如果标题是 MDX 或`False`如果不是。|  
   
 > [!NOTE]  
 >  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](../scripting/objects/action-element-assl.md)、[Type 元素 (Action) (ASSL)](../scripting/properties/type-element-action-assl.md) 和 [AMO OLAP 高级对象的编程](analysis-management-objects/programming-amo-olap-advanced-objects.md)。  

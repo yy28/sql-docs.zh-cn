@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201497"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作迟缓提交）。  
@@ -66,13 +65,13 @@ ms.locfileid: "36025207"
   
  适合使用延迟事务持续性的部分情况如下：  
   
- **你可以容忍丢失某些数据。**  
+ **可以容忍丢失部分数据。**  
  如果可以容忍一定的数据丢失，例如只要有大部分数据即可，个别记录不是非常重要，就值得考虑延迟持续性。 如果无法容忍任何数据丢失，则不要使用延迟事务持续性。  
   
- **在事务日志写入遇到瓶颈。**  
+ **在事务日志写入时遭遇瓶颈。**  
  如果性能问题是由于事务日志写入延迟造成的，则应用程序可能适合使用延迟事务持续性。  
   
- **你的工作负载具有高的争用率。**  
+ **你的工作负荷具有大量争用率。**  
  如果系统工作负载争用级别很高，则会花费大量时间等待锁释放。 延迟事务持续性会缩短提交时间，因此能够更快地释放锁，从而实现更大的吞吐量。  
   
  **延迟事务持续性保证**  
@@ -163,8 +162,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |提交设置/数据库设置|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|`DELAYED_DURABILITY = OFF` 数据库级别事务。|事务是完全持久事务。|事务是完全持久事务。|事务是延迟持久事务。|  
-|`DELAYED_DURABILITY = ON` 数据库级别事务。|事务是完全持久事务。|事务是延迟持久事务。|事务是延迟持久事务。|  
+|`DELAYED_DURABILITY = OFF` 数据库级事务。|事务是完全持久事务。|事务是完全持久事务。|事务是延迟持久事务。|  
+|`DELAYED_DURABILITY = ON` 数据库级事务。|事务是完全持久事务。|事务是延迟持久事务。|事务是延迟持久事务。|  
 |`DELAYED_DURABILITY = OFF` 跨数据库或分布式的事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
 |`DELAYED_DURABILITY = ON` 跨数据库或分布式的事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
   
@@ -185,7 +184,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **跨数据库和 DTC**  
  如果事务跨数据库或是分布式事务，则无论数据库或事务提交设置如何，它都是完全持久事务。  
   
- **Always On 可用性组和镜像**  
+ **Alwayson 可用性组和镜像**  
  延迟持久事务并不能保证主数据库或任何辅助数据库的持续性。 此外，它们也不保证了解辅助数据库的事务。 提交后，在从同步辅助数据接收到任何确认之前，控制权就会归还客户端。  
   
  **故障转移群集**  

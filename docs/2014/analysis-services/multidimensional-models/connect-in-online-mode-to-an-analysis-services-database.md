@@ -1,5 +1,5 @@
 ---
-title: In Online Mode to an Analysis Services Database 连接 |Microsoft 文档
+title: 以联机模式连接到 Analysis Services 数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, connecting
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4233f9d50cb64bb3827e4dec49251e382ca3c4b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74aaef89542270af7be03d4e391a538d3ee33d09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286123"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在联机模式下连接到 Analysis Services 数据库
   可以直接连接到现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并直接修改该数据库中的对象。 直接连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库时，会立即更改对象并且不在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中创建 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。  
@@ -43,7 +43,7 @@ ms.locfileid: "36024926"
      现在可以直接编辑 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的所有对象。  
   
 ## <a name="see-also"></a>请参阅  
- [使用 Analysis Services 项目和数据库的开发阶段](work-with-analysis-services-projects-and-databases-in-development.md)   
- [创建多维模型使用 SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [使用 Analysis Services 在开发阶段项目和数据库](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [创建多维模型使用的 SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 多维模型数据库 (SSAS) |Microsoft 文档
+title: 多维模型数据库 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
 - SQL Server Analysis Services, databases
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97d7364cd9a0fe7901e2357f916d8683dc3b147c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241677"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多维模型数据库 (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库是数据源、数据源视图、多维数据集、维度以及角色的集合。 此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库可以选择包含数据挖掘的结构以及一些自定义程序集，通过这些程序集，您可以将用户定义函数添加到数据库。  
@@ -55,7 +55,7 @@ ms.locfileid: "36024222"
   
  [重命名多维数据库&#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [设置兼容性级别的多维数据库&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [设置的兼容级别多维数据库的&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
  [设置多维数据库属性&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36024222"
  [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>请参阅  
- [In Online Mode to Analysis Services 数据库连接](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [以联机模式连接到 Analysis Services 数据库](connect-in-online-mode-to-an-analysis-services-database.md)   
  [创建 Analysis Services 项目&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [使用 MDX 查询多维数据](mdx/querying-multidimensional-data-with-mdx.md)  
   

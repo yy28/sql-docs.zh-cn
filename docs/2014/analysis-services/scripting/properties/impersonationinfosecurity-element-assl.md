@@ -1,5 +1,5 @@
 ---
-title: ImpersonationInfoSecurity 元素 (ASSL) |Microsoft 文档
+title: ImpersonationInfoSecurity 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 331ee3440a3cab5959f83880a08a4ef0d589cddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189184"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity 元素 (ASSL)
-  包含只读的值，该值指示是否已对中提供的安全凭据进行任何更改[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)数据类型。  
+  包含一个只读的值，指示是否对中提供的安全凭据进行了任何更改[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36025806"
 |*PasswordRemoved*|密码信息已从提供的安全凭据中删除。|  
 |*保持不变*|未对提供的安全凭据进行更改。|  
   
- 对应于的允许值为枚举`ImpersonationInfoSecurity`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ImpersonationInfoSecurity>。  
+ 与允许的值相对应的枚举`ImpersonationInfoSecurity`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ImpersonationInfoSecurity>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

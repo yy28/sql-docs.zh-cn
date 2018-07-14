@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - scheduling synchronization [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 444277abadee330f410e0b1e7db4042acc5fcccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b0c837ec8abafa79f6ed27303a69fad62e1c36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215357"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步计划。 在创建订阅时，可以定义同步计划以控制何时运行订阅的复制代理。 如果没有指定计划参数，则订阅将使用默认计划。  
@@ -82,7 +82,7 @@ ms.locfileid: "36025210"
   
 3.  右键单击订阅，然后单击 **“查看详细信息”**。  
   
-4.  在**订阅\<SubscriptionName >** 窗口中，单击**操作**，然后单击**\<代理名称 > 作业属性**。  
+4.  在中**订阅\<SubscriptionName >** 窗口中，单击**操作**，然后单击**\<代理名称 > 作业属性**。  
   
 5.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。  
   

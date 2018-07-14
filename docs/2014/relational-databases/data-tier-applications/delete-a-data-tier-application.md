@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deletedacwizard.introduction.f1
 - sql12.swb.deletedacwizard.deletedac.f1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5afc38b9c3864790888a41496261adeed76661
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e3613ce8ccee33accac25dc702d70fea9536587e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166918"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
@@ -144,14 +144,14 @@ ms.locfileid: "36017760"
   
 5.  根据适合的删除选项，使用以下三个代码集之一：  
   
-    -   若要删除 DAC 注册但保持数据库不变，使用`Unmanage()`方法。  
+    -   若要删除 DAC 注册但保持数据库不变，请使用`Unmanage()`方法。  
   
     -   若要删除 DAC 注册并分离数据库，请使用 `Uninstall()` 方法并指定 `DetachDatabase`。  
   
-    -   若要删除 DAC 注册并删除数据库，使用`Uninstall()`方法并指定`DropDatabase`。  
+    -   若要删除 DAC 注册并删除数据库，请使用`Uninstall()`方法并指定`DropDatabase`。  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>删除 DAC 但保留数据库的示例 (PowerShell)  
- 下面的示例删除名为 MyApplication 使用的 DAC`Unmanage()`方法删除 DAC 但保持数据库不变。  
+ 以下示例删除名为 MyApplication 使用的 DAC`Unmanage()`方法删除 DAC 但保持数据库不变。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -175,7 +175,7 @@ $dacstore.Unmanage($dacName)
 ```  
   
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>删除 DAC 并且分离数据库的示例 (PowerShell)  
- 下面的示例删除名为 MyApplication 使用的 DAC`Uninstall()`方法删除 DAC 并分离数据库。  
+ 以下示例删除名为 MyApplication 使用的 DAC`Uninstall()`方法删除 DAC 并分离数据库。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

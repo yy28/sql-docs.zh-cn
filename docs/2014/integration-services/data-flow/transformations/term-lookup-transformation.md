@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 546acdba2996b4264e946b052af18cf6574868a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b98ce551e69f64a515f58d2b4a0588dabc742ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225827"
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
   字词查找转换将从转换输入列的文本中提取的字词与引用表中的字词进行匹配， 然后计算出查找表中的字词在输入数据集中出现的次数，并将计数与引用表中的此字词一并写入转换输出的列中。 此转换对于创建基于输入文本并带有词频统计信息的自定义词列表很有用。  
@@ -82,7 +82,7 @@ ms.locfileid: "36018904"
   
  InputColumnType 属性设置为 0 或 2 的转换输出列包含列的 CustomLineageID 属性，该属性包含由上游数据流组件分配给列的沿袭标识符。  
   
- 字词查找转换将两列添加到转换输出中，默认情况下名为`Term`和`Frequency`。 `Term` 包含查找表中的字词，而 `Frequency` 包含引用表中的字词在输入数据集中出现的次数。 这些列不包含 CustomLineageID 属性。  
+ 字词查找转换将两列添加到转换输出，默认情况下名为`Term`和`Frequency`。 `Term` 包含查找表中的字词，而 `Frequency` 包含引用表中的字词在输入数据集中出现的次数。 这些列不包含 CustomLineageID 属性。  
   
  查找表必须是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 数据库中的表。 如果将字词提取转换的输出保存到表，则可以使用此表作为引用表，但也可以使用其他表。 必须先将平面文件中、Excel 工作簿或其他源的文本导入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库或 Access 数据库，然后才能使用字词查找转换。  
   

@@ -1,5 +1,5 @@
 ---
-title: 服务器配置实用工具 （数据挖掘外接程序 excel） |Microsoft 文档
+title: 服务器配置实用工具 （Excel 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c51ea6b4e492bc238fee5ea3fea763f0fd5cb439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178924"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>服务器配置实用工具（Excel 数据挖掘外接程序）
   在安装 Excel 数据挖掘外接程序时，还会安装服务器配置实用工具，当您打开外接程序时将首次运行该工具。本主题说明如何使用该实用工具连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的实例并设置使用数据挖掘模型的数据库。  
@@ -42,7 +42,7 @@ ms.locfileid: "36026414"
 ##  <a name="bkmk_step2"></a> 步骤 2： 允许临时模型  
  在您可以使用外接程序前，必须更改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器属性以允许创建临时挖掘模型。  
   
- 也称为临时挖掘模型*会话模型*。 这是因为只能在当前会话处于打开状态时存储模型。 关闭到服务器的连接后，将结束会话，会话期间所使用的所有模型都会被删除。  
+ 临时挖掘模型也称为*会话模型*。 这是因为只能在当前会话处于打开状态时存储模型。 关闭到服务器的连接后，将结束会话，会话期间所使用的所有模型都会被删除。  
   
  使用会话挖掘模型不会影响服务器上的存储空间，不过创建数据挖掘模型所需的开销可能会影响服务器的性能。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36026414"
  选择此选项将授予所列用户对数据库的管理访问权限。  
   
 > [!NOTE]  
->  这些权限仅适用于数据库中列出**数据库名称**框。  
+>  这些权限仅应用于数据库中列出**数据库名称**框。  
   
  **数据库名称**  
  显示所选数据库的名称。  

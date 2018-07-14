@@ -1,5 +1,5 @@
 ---
-title: 优化工作负荷 |Microsoft 文档
+title: 优化工作负荷 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a414a8fac51b52549982ef08456288981b1c9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172088"
 ---
 # <a name="tuning-a-workload"></a>优化工作负荷
   可以使用数据库引擎优化顾问，针对您选择进行优化的数据库和表来找到查询性能最佳的物理数据库设计。  
@@ -30,7 +30,7 @@ ms.locfileid: "36017854"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>优化工作负荷 Transact-SQL 脚本文件  
   
-1.  从  [SELECT 示例 (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql) 中的“A. 使用 SELECT 检索行和列”复制示例 SELECT 语句或语句，并将语句粘贴到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中。 将文件另存**MyScript.sql**在哪里，你可以轻松地找到的目录中。  
+1.  从  [SELECT 示例 (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql) 中的“A. 使用 SELECT 检索行和列”复制示例 SELECT 语句或语句，并将语句粘贴到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中。 将该文件作为**MyScript.sql**其中，您可以轻松地找到的目录中。  
   
 2.  启动数据库引擎优化顾问。 请参阅[启动数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 常规属性页中，文件夹 （报表管理器） |Microsoft 文档
+title: 常规属性页上，文件夹 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69330b9a1a65ed147d716d47d9a2cc68e34bab6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255819"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>文件夹的“常规”属性页（报表管理器）
   使用文件夹的“常规”属性页可以查看和设置所创建文件夹的属性。 有关创建或修改文件夹的用户以及修改文件夹的时间的信息显示在“常规属性”页面顶部。  
   
- 文件夹属性也包括安全性设置。 有关文件夹的安全性的详细信息，请参阅[安全文件夹](security/secure-folders.md)。  
+ 文件夹属性也包括安全性设置。 有关文件夹安全性的详细信息，请参阅[保护文件夹](security/secure-folders.md)。  
   
  不能在报表服务器命名空间中重命名或移动专用文件夹，例如主文件夹、我的报表和用户文件夹。 这些文件夹的“常规”属性页不可用。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36024277"
   
 ## <a name="options"></a>“常规”  
  **名称**  
- 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : @ & = +，$ * \< > |"或 / 指定一个名称。  
+ 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : @ & = +，$ * \< > |"或 / 指定名称时。  
   
  **Description**  
  键入对文件夹内容的说明。 有权访问该文件夹的用户可以在“内容”页中查看此说明。  

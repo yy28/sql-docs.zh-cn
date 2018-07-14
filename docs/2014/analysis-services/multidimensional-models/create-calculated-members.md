@@ -1,5 +1,5 @@
 ---
-title: 创建计算的成员 |Microsoft 文档
+title: 创建计算的成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated members [Analysis Services]
 - custom measures [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d12f7ef55272960d8e120fd46dec4039ca036cbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b55ab5f489ce9a8b24f6ad39dde643f30c3712f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228357"
 ---
 # <a name="create-calculated-members"></a>创建计算成员
   可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  

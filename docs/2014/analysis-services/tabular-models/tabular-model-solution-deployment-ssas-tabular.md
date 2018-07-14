@@ -1,5 +1,5 @@
 ---
-title: 表格模型解决方案部署 (SSAS 表格) |Microsoft 文档
+title: 表格模型解决方案部署 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220037"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格模型解决方案部署（SSAS 表格）
   在创作某一表格模型项目后，您必须部署此项目，以便用户通过使用报表客户端应用程序浏览该模型。 本主题介绍在您的环境中部署表格模型解决方案时可使用的各种属性和方法。  
@@ -65,7 +65,7 @@ ms.locfileid: "36024417"
 |--------------|---------------------|-----------------|  
 |**“服务器”**<br /><br /> 在创建项目时设置。|**localhost**|此属性（在创建项目时设置）按名称指定模型将部署到的 Analysis Services 实例。 默认情况下，模型将部署到本地计算机上 Analysis Services 的默认实例。 但是，您可以更改此设置以便指定本地计算机上的命名实例，或指定您有权创建 Analysis Services 对象的任何远程计算机上的任何实例。|  
 |**版本(Edition)**|与工作区服务器所在是实例的版本相同。|此属性指定模型将部署到的 Analysis Services 服务器的版本。 该服务器版本定义可纳入项目中的不同功能。 默认情况下，该版本将为本地 Analysis Services 服务器。 如果您指定其他 Analysis Services 服务器，例如生产 Analysis Services 服务器，则请确保指定该 Analysis Services 服务器的版本。|  
-|**“数据库”**|**\<projectname>**|此属性指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称也将在报表客户端数据连接或 .bism 数据连接文件中指定。<br /><br /> 您可以在创作模型时随时更改该名称。 如果您在部署了模型后更改该名称，则在部署后进行的更改将不会影响以前已部署的模型。 例如，如果你打开一个名为`TestDB`和部署解决方案的默认模型数据库名称模型，然后修改该解决方案和重命名模型数据库`Sales`，这些解决方案部署的 Analysis Services 的实例若要将显示单独的数据库、 一个命名的模型和一个名为 Sales。|  
+|**“数据库”**|**\<projectname>**|此属性指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称也将在报表客户端数据连接或 .bism 数据连接文件中指定。<br /><br /> 您可以在创作模型时随时更改该名称。 如果您在部署了模型后更改该名称，则在部署后进行的更改将不会影响以前已部署的模型。 例如，如果您打开一个名为解决方案`TestDB`和部署你的解决方案使用默认的模型数据库名称 Model，然后修改该解决方案和模型数据库重命名为`Sales`，这些解决方案部署的 Analysis Services 的实例若要将显示单独的数据库、 一个名为的 Model 和一个名为 Sales。|  
 |**多维数据集名称**|**Model**|此属性指定在客户端工具（如 Excel）和 AMO（分析管理对象）中显示的多维数据集名称。|  
   
 ### <a name="directquery-options-properties"></a>DirectQuery 选项属性  

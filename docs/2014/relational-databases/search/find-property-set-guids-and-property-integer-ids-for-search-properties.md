@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 966ec6aaf9a5cf0367dfc8d1b2e0f7895e4eb46c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: bd3deed243e921ea7c15065b127f455d30cad0a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236687"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
   本主题讨论在将属性添加到搜索属性列表且使其可由全文搜索进行搜索之前，如何获取所需的值。 这些值包括文档属性的属性集 GUID 和属性整数标识符。  
   
- 文档由 Ifilter 从二进制数据 – 即从提取中存储的数据的属性`varbinary`， `varbinary(max)` (包括`FILESTREAM`)，或`image`数据类型列 – 可用于全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)。  
+ 文档提取由 Ifilter 从二进制数据 – 即，从存储中的数据的属性`varbinary`， `varbinary(max)` (包括`FILESTREAM`)，或`image`可以进行数据类型列 – 可用于全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)。  
   
  在向属性列表添加可用属性之前，必须找到有关该属性的 2 段信息：  
   

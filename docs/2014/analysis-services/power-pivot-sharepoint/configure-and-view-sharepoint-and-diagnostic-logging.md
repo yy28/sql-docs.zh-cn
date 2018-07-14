@@ -1,5 +1,5 @@
 ---
-title: 配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint) |Microsoft 文档
+title: 配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d78836a24938511939c65e127425439aa59f1fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255839"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器操作、 事件和消息会记录在 SharePoint 日志文件中。 使用此主题中的信息可配置日志记录级别和查看日志文件信息。 您可以控制要将哪些 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器事件记录到文件中。 还可以控制所记录的消息的严重性。 有关详细信息，请参阅[配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器操作、 事件和消息记录在 SharePoint 日志文件中。 使用此主题中的信息可配置日志记录级别和查看日志文件信息。 您可以控制要将哪些 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器事件记录到文件中。 还可以控制所记录的消息的严重性。 有关详细信息，请参阅[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
  本主题内容：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36024998"
   
 4.  展开类别，然后选择单独类别。  
   
-     **应用程序页面请求**指定查找时由服务应用程序触发的事件[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]进行加载 PowerPivot 数据源以及与场中的其他服务器通信。  
+     **应用程序页请求**指定定位时触发的服务应用程序事件[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]以便加载 PowerPivot 数据源以及与场中的其他服务器通信。  
   
      **“请求处理”** 根据场中服务器上加载的 PowerPivot 数据库指定查询请求触发的事件。  
   
@@ -123,14 +123,14 @@ ms.locfileid: "36024998"
 |处理|区域|类别|级别|消息|详细信息|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|“PowerPivot 服务”|“使用情况”|“详细”|不存在当前请求统计信息，无信息可供记录。|按照预定义的间隔，服务将查询响应统计信息作为使用情况事件向使用情况数据收集系统报告。 此消息指示没有查询统计信息可供报告。|  
-|w3wp.exe|PowerPivot 服务|Web 前端|“详细”|找到数据源的应用程序服务器开始 =\<*路径*>|收到连接请求时， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务确定可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 以处理该请求。 如果场中只有一个服务器，则在所有情况下都是本地服务器接受请求。|  
+|w3wp.exe|PowerPivot 服务|Web 前端|“详细”|开始定位数据源的应用程序服务器 =\<*路径*>|收到连接请求时， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务确定可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 以处理该请求。 如果场中只有一个服务器，则在所有情况下都是本地服务器接受请求。|  
 |w3wp.exe|PowerPivot 服务|Web 前端|“详细”|定位应用程序服务器成功。|请求已分配到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。|  
-|w3wp.exe|PowerPivot 服务|Web 前端|“详细”|重定向请求\< *PowerPivotdata 源*> 到[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|请求已转发给 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
-|w3wp.exe|“PowerPivot 服务”|“请求处理”|“详细”|重定向请求用户名\<*SharePoint 用户*> 到数据库|已代表 SharePoint 用户创建了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源的模拟连接。|  
+|w3wp.exe|PowerPivot 服务|Web 前端|“详细”|请求重定向\< *PowerPivotdata 源*> 到[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|请求已转发给 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
+|w3wp.exe|“PowerPivot 服务”|“请求处理”|“详细”|用户名的请求重定向\<*SharePoint 用户*> 到数据库|已代表 SharePoint 用户创建了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源的模拟连接。|  
   
 ## <a name="see-also"></a>请参阅  
  [PowerPivot 使用情况数据收集](power-pivot-usage-data-collection.md)   
  [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [配置为使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

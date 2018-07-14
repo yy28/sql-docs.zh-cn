@@ -1,5 +1,5 @@
 ---
-title: 属性元素 (ASSL) |Microsoft 文档
+title: 属性元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a9dfd4e3db4b84df6a64e8c0fe6de80bca19ca3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e94fcb4fdffacfad0bbf735bfc2fe3c7b19b798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171458"
 ---
 # <a name="attribute-element-assl"></a>Attribute 元素 (ASSL)
   包含对属性的说明。  
@@ -63,7 +63,7 @@ ms.locfileid: "36024197"
 ## <a name="element-characteristics"></a>元素特征  
  默认值： 无  
   
- 基数： 0-1： 一次，并且一次可以发生的可选元素。  
+ 基数： 0-1： 可出现一次且仅一次出现的可选元素。  
   
 |祖先或父级|数据类型|  
 |------------------------|---------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "36024197"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>， <xref:Microsoft.AnalysisServices.AggregationAttribute>， <xref:Microsoft.AnalysisServices.CubeAttribute>， <xref:Microsoft.AnalysisServices.DimensionAttribute>， <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>，和<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>， <xref:Microsoft.AnalysisServices.AggregationAttribute>， <xref:Microsoft.AnalysisServices.CubeAttribute>， <xref:Microsoft.AnalysisServices.DimensionAttribute>， <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>，并<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [对象&#40;ASSL&#41;](objects-assl.md)  

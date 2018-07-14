@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3e0b19e3069ff540903f22e79dabb0d2646e7f79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d913d41b9a94e0dbc407b64f23c382bdbded6c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187166"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本地 CDC 服务
   本过程介绍如何使用 CDC 服务配置控制台来管理特定的 CDC 服务。  

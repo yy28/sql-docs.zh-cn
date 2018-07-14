@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8ea218a0b7b201d929fd03a1a208a2eb6019ebb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2f23be5833220535cc5e53e5fa5fc1eb965f3a35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258053"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>股价图（报表生成器和 SSRS）
   股价图是为每个数据点使用多达四个值的财务或科学数据而专门设计的。 这些值与用于绘制财务股价数据的高、低、开盘和收盘值相对应。 这种图表类型通过使用标记（通常为线条或三角形）来显示开盘值和收盘值。 在下例中，开盘值由左侧的标记表示，收盘值由右侧的标记表示。  
@@ -44,7 +44,7 @@ ms.locfileid: "36018800"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了许多用于股价图的计算公式，包括价格指标、相对强弱指数、MACD 等。  
   
 ## <a name="see-also"></a>请参阅  
- [范围图&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [全距图&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [轴属性对话框中，轴选项&#40;报表生成器和 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  

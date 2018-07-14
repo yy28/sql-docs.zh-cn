@@ -1,5 +1,5 @@
 ---
-title: HierarchyID 元素 (ASSL) |Microsoft 文档
+title: HierarchyID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HierarchyID element
 ms.assetid: 6effe47d-e598-41f8-993a-b2bce49fd7dd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96fd95f6853f5edd7f7eaa5d6aa9627cc322a1bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c10b01b17c8ceb6cb3e550d07fe78d6469526fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220007"
 ---
 # <a name="hierarchyid-element-assl"></a>HierarchyID 元素 (ASSL)
   包含标识符 (ID) [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)， [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md)，或[PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md)元素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36024898"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`HierarchyID`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.CubeHierarchy>和<xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
+ 父级对应的元素`HierarchyID`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.CubeHierarchy>和<xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

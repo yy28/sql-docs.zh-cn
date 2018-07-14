@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器的所有语言的常规页） |Microsoft 文档
+title: 选项 （文本编辑器-所有语言-常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189074"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>选项（“文本编辑器”-“所有语言”-“常规”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的所有五个编辑器的常规编辑选项。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择 **“文本编辑器”** 文件夹，展开 **“所有语言”** 文件夹，再单击 **“常规”**。  
@@ -45,7 +45,7 @@ ms.locfileid: "36026394"
  在编辑器中，当前声明或过程的完整语法会显示在插入点的左侧，并显示其所有可用参数。 下一个可分配参数以粗体显示。  
   
 ## <a name="settings"></a>“设置”  
- **启用虚拟空间**  
+ **启用虚空格**  
  注释在代码旁的位置将保持不变。 选中此复选框之后，可以将光标放置在行中的最后一个字符之外。 键入内容时，将自动添加制表符和空格以结束到插入点的行。  
   
  **自动换行**  

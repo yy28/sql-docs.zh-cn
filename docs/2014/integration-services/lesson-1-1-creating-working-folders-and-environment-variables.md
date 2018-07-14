@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b28c191bb07ca9898c594de82dee6b27592786f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e35294a2a98d71c67553791732520cb8c710c29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246889"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>步骤 1：创建工作文件夹和环境变量
   在此任务中，您将创建工作文件夹 (C:\DeploymentTutorial) 和新的系统环境变量（`DataTransfer` 和 `LoadXMLData`），在后面的教程任务中您将使用它们。  
@@ -52,11 +52,11 @@ ms.locfileid: "36018668"
   
 4.  在“环境变量”对话框的“系统变量”框架中，单击“新建”。  
   
-5.  在**新建系统变量**对话框中，键入`DataTransfer`中**变量名称**框中，和`C:\DeploymentTutorial\datatransferconfig.dtsconfig`中**变量值**框。  
+5.  在中**新建系统变量**对话框中，键入`DataTransfer`中**变量名**框中，和`C:\DeploymentTutorial\datatransferconfig.dtsconfig`中**变量值**框。  
   
 6.  单击“确定” 。  
   
-7.  单击**新建**试，并键入`LoadXMLData`中**变量名称**框中，和`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`中**变量值**框。  
+7.  单击**新建**同样，然后键入`LoadXMLData`中**变量名**框中，和`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`中**变量值**框。  
   
 8.  单击“确定”退出“环境变量”对话框。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36018668"
   
 4.  在“环境变量”对话框的“系统变量”框架中，单击“新建”。  
   
-5.  在**新系统变量**对话框中，键入`DataTransfer`中**变量名称**框中，和`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`中**变量值**框。  
+5.  在中**新建系统变量**对话框中，键入`DataTransfer`中**变量名**框中，和`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`中**变量值**框。  
   
 6.  单击“确定” 。  
   
-7.  单击**新建**试，并键入`LoadXMLData`中**变量名称**框中，和`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`中**变量值**框。  
+7.  单击**新建**同样，然后键入`LoadXMLData`中**变量名**框中，和`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`中**变量值**框。  
   
 8.  单击“确定”退出“环境变量”对话框。  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36018668"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 2：创建部署项目](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

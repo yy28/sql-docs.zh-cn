@@ -1,5 +1,5 @@
 ---
-title: FormatString 元素 (ASSL) |Microsoft 文档
+title: FormatString 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0760432767a8f7fb1dcdec99c2ca7d76722ddb38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273193"
 ---
 # <a name="formatstring-element-assl"></a>FormatString 元素 (ASSL)
-  描述的显示格式[CalculationProperty](../objects/calculationproperty-element-assl.md)元素或[度量值](../objects/measure-element-assl.md)元素。  
+  介绍用于的显示格式[CalculationProperty](../objects/calculationproperty-element-assl.md)元素或[度量值](../objects/measure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,14 +62,14 @@ ms.locfileid: "36024194"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `FormatString` 属性包含一个多维表达式 (MDX) 表达式。 情况下`CalculationProperty`元素，它适用于具有元素[CalculationType](calculationtype-element-assl.md)的*成员*或*单元格*。  
+ `FormatString` 属性包含一个多维表达式 (MDX) 表达式。 情况下`CalculationProperty`元素，它适用于具有的元素[CalculationType](calculationtype-element-assl.md)的*成员*或*单元格*。  
   
- 对应的父级的元素`FormatString`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
+ 父级对应的元素`FormatString`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
   
 ## <a name="see-also"></a>请参阅  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [MdxScript 元素&#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Mdxscript 被元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [MdxScripts 元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 数据源视图 （多维数据集结构选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 数据源视图 （多维数据集结构选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185304"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>数据源视图（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“数据源视图”** 窗格，查看与所选多维数据集关联的数据源视图中的表和列。 此窗格用于创建度量值组和度量值，方法是将列从 **“数据源视图”** 窗格拖动到 **“度量值”** 窗格中。  
@@ -30,7 +30,7 @@ ms.locfileid: "36026668"
  **数据源视图**  
  显示与所选多维数据集关联的数据源视图。  
   
- **（移动角度来看）**  
+ **（移动视点）**  
  单击窗格右下角滚动条之间的位置，即可选择要查看的“数据源视图”窗格区域。  
   
 ## <a name="diagram-context-menu"></a>关系图上下文菜单  
@@ -72,7 +72,7 @@ ms.locfileid: "36026668"
  **编辑数据源视图**  
  显示与对象关联的数据源视图的数据源视图设计器。 有关数据源视图设计器的详细信息，请参阅[数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
- **显示在数据源视图**  
+ **数据源视图中显示**  
  通过选择下列选项之一，可以在“数据源视图”窗格的以下查看模式之间切换：  
   
 -   关系图  

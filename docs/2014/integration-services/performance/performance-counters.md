@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
 - performance counters [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bdc7ec8be368cdb6bd361e17fde9fcf2c8711879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25ce27eae1909535a8dbddc642d032df1ddd5c32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245007"
 ---
 # <a name="performance-counters"></a>性能计数器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  

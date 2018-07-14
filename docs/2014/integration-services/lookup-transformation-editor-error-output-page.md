@@ -1,5 +1,5 @@
 ---
-title: 查找转换编辑器 （错误输出页） |Microsoft 文档
+title: 查找转换编辑器 （错误输出页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.erroroutput.f1
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: da3d61def0ce6787aeaf019bb09d51b1adde47ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfae0d88fe226b0c937ccdbbe36209ec2cc4c58e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227697"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>查找转换编辑器（“错误输出”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“错误输出”** 页指定错误处理选项。  

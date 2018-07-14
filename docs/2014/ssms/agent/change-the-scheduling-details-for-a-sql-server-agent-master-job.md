@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dc41b403419ee3b1eb6734e5fa658dc7950fd6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d5654908f9decdf0ead70a2b4182fe43129511a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262063"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>更改 SQL Server 代理主作业计划的详细信息
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改作业定义计划的详细信息。  
@@ -60,7 +60,7 @@ ms.locfileid: "36025157"
   
 4.  右键单击要编辑其计划的作业，然后选择“属性”。  
   
-5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“计划”。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新的作业&#40;计划页&#41;](job-properties-new-job-schedules-page.md)。  
+5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“计划”。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;计划页&#41;](job-properties-new-job-schedules-page.md)。  
   
 6.  完成后，单击 **“确定”**。  
   

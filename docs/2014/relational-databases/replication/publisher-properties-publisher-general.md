@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.general.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11cd7e8c8d4759a9c49c631284622846297e9652
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b50a28dd6faaa4731ec9c0af952b88dce487627c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202998"
 ---
 # <a name="publisher-properties---publisher-general"></a>发布服务器属性 - 发布服务器，常规
   **“发布服务器属性”** 对话框的 **“常规”** 页显示有关发布服务器使用的分发服务器和分发数据库的只读信息。 若要更改发布服务器的分发服务器或分发数据库，请执行以下操作：  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fcff2e593b3b1eb5f235f56b398294b0bf2edf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7122dbdf0f99e7bf490487cd98abb3f4d4e7c81a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184734"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
   传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中一种或多种类型的对象。 例如，该任务可以复制表和存储过程。 可以复制的对象的类型会因用作源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而异。 例如，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库包括架构和用户定义聚合。  
@@ -83,7 +83,7 @@ ms.locfileid: "36025504"
  传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务并不报告对象传输的进度；它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 中存储的执行值`ExecutionValue`该任务的属性返回的传输对象数。 通过将用户定义的变量分配给传输 SQL Server 对象任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关对象传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 中存储的执行值`ExecutionValue`该任务的属性将返回传输的对象数。 通过将用户定义的变量分配给传输 SQL Server 对象任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关对象传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输 SQL Server 对象任务包括下列自定义日志项：  
@@ -92,7 +92,7 @@ ms.locfileid: "36025504"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects    此日志项报告传输已经完成。 日志项包括结束时间。  
   
- 此外，`OnInformation` 事件的日志项报告属于为传输所选的对象类型的对象数、已经传输的对象数以及随表传输数据时截断表这样的操作。 日志项`OnWarning`针对每个对象将被覆盖目标上写入事件。  
+ 此外，`OnInformation` 事件的日志项报告属于为传输所选的对象类型的对象数、已经传输的对象数以及随表传输数据时截断表这样的操作。 日志项`OnWarning`事件是每个对象写入会覆盖目标上。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  用户必须具有浏览源服务器上的对象的权限，同时必须具有在目标服务器上删除和创建对象的权限，此外用户还必须具有访问指定数据库和数据库对象的权限。  

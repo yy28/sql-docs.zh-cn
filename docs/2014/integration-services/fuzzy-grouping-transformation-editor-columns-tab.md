@@ -1,5 +1,5 @@
 ---
-title: 模糊分组转换编辑器 （列选项卡） |Microsoft 文档
+title: 模糊分组转换编辑器 （列选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.columns.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9557b9e2b4da35540fad923152532c506513f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b393e0a2807a002f1805b5c2664f9ae2b3e527a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172988"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“列”** 选项卡，指定用于对带有重复值的行进行分组的列。  

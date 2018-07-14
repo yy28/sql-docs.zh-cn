@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (XMLA) |Microsoft 文档
+title: Type 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 38b4442afe95f06d9a6f437e906c01b7386d91ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193777"
 ---
 # <a name="type-element-xmla"></a>Type 元素 (XMLA)
-  确定要执行的处理的类型[过程](../xml-elements-commands/process-element-xmla.md)元素。  
+  确定要由执行的处理类型[进程](../xml-elements-commands/process-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36026622"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关处理提供给对象的实例上的选项的详细信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[多维模型对象处理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
+ 详细了解可用的处理选项对象的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[多维模型对象处理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  `Type` 元素的值限定为下表中列出的字符串之一。  
   

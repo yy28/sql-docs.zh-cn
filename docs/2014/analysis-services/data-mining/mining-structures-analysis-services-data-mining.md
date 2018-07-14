@@ -1,5 +1,5 @@
 ---
-title: 挖掘结构 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 挖掘结构 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining structures [Analysis Services], about mining structures
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 caps.latest.revision: 76
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd363ece9193f05bf3cb9026b8520b027023b015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288493"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
   挖掘结构定义生成挖掘模型时依据的数据：它指定源数据视图、列数量和类型以及分为定型集和测试集的可选分区。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
   
- ![处理的数据： 源模型的结构到](../media/dmcon-modelarch.gif "处理的数据： 源到模型的结构")  
+ ![处理数据： 源到结构到模型](../media/dmcon-modelarch.gif "处理的数据： 源到结构到模型")  
   
  关系图中的挖掘结构基于包含多个表或视图的数据源，它们按 CustomerID 字段进行联接。 一个表包含有关客户的信息，例如地理区域、年龄、收入和性别，而相关嵌套表包含每个客户的多行其他相关信息，例如客户已购买的产品。 此关系图显示根据一个挖掘结构可以生成多个模型，并且这些模型可以使用该结构中的不同列。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36018505"
 ### <a name="processing-mining-structures"></a>处理挖掘结构  
  挖掘结构在处理之前只是一个元数据容器。 当您处理挖掘结构时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会创建一个缓存，用于存储有关数据的统计信息、如何离散化任何连续属性的信息以及挖掘模型以后要使用的其他信息。 挖掘模型本身不存储此摘要信息，而是在处理挖掘结构时引用缓存的信息。 因此，您不必在每次向现有结构中添加新模型时重新处理结构；可以只处理模型。  
   
- 如果缓存很大或您要删除详细数据，可以选择在处理后丢弃此缓存。 如果您不希望缓存数据，则可以将挖掘结构的 `CacheMode` 属性更改为 `ClearAfterProcessing`。 这将导致在处理所有模型之后销毁缓存。 设置`CacheMode`属性`ClearAfterProcessing`将禁用从挖掘模型的钻取。  
+ 如果缓存很大或您要删除详细数据，可以选择在处理后丢弃此缓存。 如果您不希望缓存数据，则可以将挖掘结构的 `CacheMode` 属性更改为 `ClearAfterProcessing`。 这将导致在处理所有模型之后销毁缓存。 设置`CacheMode`属性设置为`ClearAfterProcessing`将禁止从挖掘模型的钻取。  
   
  但是，在破坏缓存后，将无法向挖掘结构添加新模型。 如果向该结构中添加新的挖掘模型或更改现有模型的属性，将需要首先重新处理挖掘结构。 有关详细信息，请参阅[处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)。  
   

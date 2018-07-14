@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - report server database
@@ -17,13 +17,13 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5cd23aaa93b60a2af7212ca8c98025a51f92d4c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 913ec99d330f1eb62cbc1a27572296856c28f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172208"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>创建报表服务器数据库（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **本机模式** 使用两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库存储报表服务器元数据和对象。 一个数据库用于主存储，另一个数据库用于存储临时数据。 这两个数据库一起创建，并按名称绑定。 通过默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，将这两个数据库命名为 `reportserver` 和 `reportservertempdb`。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”。  
@@ -50,9 +50,9 @@ ms.locfileid: "36018793"
   
  **SharePoint 模式：** “报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项 **“仅安装”**。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
   
--   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅的"服务应用程序"部分[步骤 3： 创建 Reporting Services 服务应用程序](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)。  
+-   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅的"服务应用程序"部分[第 3 步： 创建 Reporting Services 服务应用程序](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)。  
   
--   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 创建服务应用程序和报表服务器数据库。 有关详细信息，请参阅用于创建服务应用程序主题中的示例[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 创建服务应用程序和报表服务器数据库。 有关详细信息，请参阅主题中创建服务应用程序示例[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="database-server-version-requirements"></a>数据库服务器版本要求  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用来承载报表服务器数据库。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例可以是本地或远程实例。 以下是可用于承载报表服务器数据库的支持的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本：  
@@ -73,7 +73,7 @@ ms.locfileid: "36018793"
 >  报表服务器和用于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可位于不同的域中。 对于 Internet 部署，通常的做法是使用防火墙后的服务器。 如果要配置用于 Internet 访问的报表服务器，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据连接到位于防火墙后的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并使用 IPSEC 保护连接的安全。  
   
 ## <a name="database-server-edition-requirements"></a>数据库服务器版本类别要求  
- 创建报表服务器数据库时，请注意并非所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 均可用来承载数据库。 有关详细信息，请参阅的"报表服务器数据库服务器版本要求"部分[支持的 SQL Server 2014 的版本功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 创建报表服务器数据库时，请注意并非所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 均可用来承载数据库。 有关详细信息，请参阅的"报表服务器数据库服务器版本要求"部分[SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 配置管理器&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  

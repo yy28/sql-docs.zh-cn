@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 57
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a65acdb83f7a9bccc36751a760d61133597caf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ecdadef4e49f3630c78fc33c1c6f490deda26b5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274743"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>在报表中使用表达式（报表生成器和 SSRS）
   可以在整个报表定义中使用表达式来指定或计算以下各项的值：参数、查询、筛选器、报表项属性、分组和排序定义、文本框属性、书签、文档结构图、动态页眉和页脚内容、图像以及动态数据源定义。 本主题提供了一些可在其中使用表达式更改报表内容或外观的示例。 此列表并不全面。 可以在显示表达式 (fx) 按钮的对话框中或在显示“\<Expression...>”的下拉列表中设置表达式的任何属性。  
@@ -83,7 +83,7 @@ ms.locfileid: "36018806"
  [筛选器公式示例&#40;报表生成器和 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [格式文本和占位符&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [隐藏项（报表生成器和 SSRS）](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

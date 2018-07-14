@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 126c696da22e2b3e483ae7fb4692469d617f125a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9a31c9d497b94836bb6a41e707e3285f337f7985
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203477"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>刷新数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，当你要从 MDS 存储库中获取最新信息但不想打开新工作表时，可刷新数据。 您可以刷新所有单元，也可以刷新所选单元。 如果您插入的列中包含自定义公式或其他不由 MDS 管理但您想要保留的数据，这样做会很有帮助。  
@@ -59,6 +59,6 @@ ms.locfileid: "36025209"
   
 -   [加载数据&#40;MDS add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Master Data Services 外接程序 Microsoft excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

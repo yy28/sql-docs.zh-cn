@@ -19,13 +19,13 @@ ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f043459fc065c69ac8ee613e6c007c98709be145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f5b6e73501e4b047e7f61fe6f256a6f215cb583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206017"
 ---
 # <a name="creating-a-custom-log-provider"></a>创建自定义日志提供程序
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时环境具有广泛的日志记录功能。 日志可使您捕获在包执行期间发生的事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各种日志提供程序，可用于创建日志并以诸如 XML、文本、数据库或 Windows 事件日志的格式存储这些日志。 如果这些提供程序或输出格式不能满足您的需要，您可以创建自定义日志提供程序。  
@@ -51,7 +51,7 @@ ms.locfileid: "36025499"
 >  许多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并用已筛选的可用连接管理器下拉列表替换“配置 SSIS 日志”对话框中的“配置”文本框。 但是，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>应用 DtsLogProvider 属性  
- 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于您创建的类以将其标识为日志提供程序。 此属性提供设计时信息，如日志提供程序的名称和说明。 `DisplayName`和`Description`的属性的属性对应于**名称**和`Description`中显示的列**配置 SSIS 日志**编辑器，它是显示时配置中的包的日志记录[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
+ 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于您创建的类以将其标识为日志提供程序。 此属性提供设计时信息，如日志提供程序的名称和说明。 `DisplayName`并`Description`特性的属性对应于**名称**并`Description`中显示的列**配置 SSIS 日志**编辑器，它是后显示配置中的包的日志记录[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
   
 > [!IMPORTANT]  
 >  不使用此特性的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> 属性。 但是，必须为该属性输入一个值，否则自定义日志提供程序将不会显示在可用日志提供程序列表中。  
@@ -78,7 +78,7 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>生成、部署和调试自定义日志提供程序  
  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义日志提供程序的步骤与其他自定义对象类型所需的步骤非常相似。 有关详细信息，请参阅[生成、部署和调试自定义对象](../building-deploying-and-debugging-custom-objects.md)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [编写自定义日志提供程序代码](coding-a-custom-log-provider.md)   

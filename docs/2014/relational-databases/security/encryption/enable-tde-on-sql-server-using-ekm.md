@@ -1,14 +1,13 @@
 ---
-title: 使用 EKM 启用 TDE |Microsoft 文档
+title: 使用 EKM 启用 TDE |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
 - TDE, EKM how to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a498859f53efb6c70d57c0ed5cb19d202a8e1149
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: f9b31103c887986210e96d39ffdfb00da0d6bac7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202887"
 ---
 # <a name="enable-tde-using-ekm"></a>使用 EKM 启用 TDE
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中启用透明数据加密 (TDE)，以便通过结合使用存储在可扩展密钥管理 (EKM) 模块中的非对称密钥和 [!INCLUDE[tsql](../../../includes/tsql-md.md)]来保护数据库加密密钥。  
@@ -39,7 +38,7 @@ ms.locfileid: "36025456"
   
      [Security](#Security)  
   
--   [若要启用 TDE 使用 EKM、 使用 TRANSACT-SQL](#TsqlProcedure)  
+-   [若要启用 TDE 使用 EKM 和 TRANSACT-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

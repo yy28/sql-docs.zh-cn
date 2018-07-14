@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 018d1dd25b8b7d593582d47038c90464ece09abd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c66643e7a6f442207c87f531d1e01f9cd07af816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261853"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>向 Management Studio 添加自定义报表
   本主题介绍如何创建简单的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表并将其保存为 .rdl 文件，然后将该 rdl 文件作为自定义报表添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 可以创建各式各样的复杂报表。 若要根据本主题创建报表，计算机上必须安装有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。 不必在 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]运行自定义报表。  
@@ -74,8 +74,8 @@ ms.locfileid: "36025155"
   
 ## <a name="see-also"></a>请参阅  
  [Management Studio 中的自定义报表](custom-reports-in-management-studio.md)   
- [使用对象资源管理器节点属性的自定义报告](use-custom-reports-with-object-explorer-node-properties.md)   
- [解除隐含运行自定义报告警告](unsuppress-run-custom-report-warnings.md)   
+ [与对象资源管理器节点属性一起使用的自定义报表](use-custom-reports-with-object-explorer-node-properties.md)   
+ [启用运行自定义报表警告](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services (SSRS)](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

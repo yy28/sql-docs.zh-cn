@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
 - merge replication [SQL Server replication], dynamic filters
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 74cb3cd9631e0b709b7eb5cf0cb0856bc3b830af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225410"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   参数化行筛选器允许将不同分区的数据发送到不同的订阅服务器，而无需创建多个发布（在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，参数化筛选器称为“动态筛选器”）。 分区是表中行的子集；根据创建参数化行筛选器时选择的设置，已发布表中的每一行可以仅属于一个分区（生成不重叠的分区），也可以属于两个或多个分区（生成重叠分区）。  
@@ -98,7 +98,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  例如，为雇员 Pamela Ansman-Wolfe 分配的雇员 ID 为 280。 为此雇员创建订阅时，为 HOST_NAME() 值指定雇员 ID 值（在此例中为 280）。 合并代理连接到发布服务器时，会将 HOST_NAME() 返回的值与表中的值进行比较，并仅下载 **EmployeeID** 列中值为 280 的行。  
   
 > [!IMPORTANT]  
->  Host_name （） 函数返回`nchar`值，因此你必须使用 CONVERT 如果筛选器子句中的列的数值数据类型，因为它是在上面的示例。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于**@subset_filterclause**参数[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，但它通常不能在新建发布向导 （向导执行验证，将筛选器子句这将失败，因为计算机名称不能转换为`int`)。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+>  Host_name （） 函数返回`nchar`值，因此您必须使用 CONVERT 如果筛选器子句中的列的数值数据类型，因为它是在上面的示例。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于**@subset_filterclause**参数[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，但它通常不能在新建发布向导中 （该向导会执行筛选子句以验证它，这会失败，因为计算机名称无法转换为`int`)。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆盖 HOST_NAME() 值**  
   
@@ -123,7 +123,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  若要设置筛选选项，请参阅 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>设置“use partition groups”和“keep partition changes”  
- **use partition groups** 选项和 **keep partition changes** 选项通过在发布数据库中存储其他元数据提高具有筛选项目的发布的同步性能。 **use partition groups** 选项通过使用预计算分区功能进一步提高性能。 此选项设置为`true`默认情况下，如果你发布中的项目符合一组的要求。 有关这些要求的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](parameterized-filters-optimize-for-precomputed-partitions.md)。 如果你的项目不符合使用预计算的分区的要求**保留分区更改**选项设置为`true`。  
+ **use partition groups** 选项和 **keep partition changes** 选项通过在发布数据库中存储其他元数据提高具有筛选项目的发布的同步性能。 **use partition groups** 选项通过使用预计算分区功能进一步提高性能。 此选项设置为`true`默认情况下，如果在发布中的项目符合一组的要求。 有关这些要求的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](parameterized-filters-optimize-for-precomputed-partitions.md)。 如果项目不符合使用预计算的分区的要求**保留分区更改**选项设置为`true`。  
   
 ### <a name="setting-partition-options"></a>设置“partition options”  
  创建项目时，根据订阅服务器共享已筛选表中的数据的方式，指定 **partition options** 属性的值。 可以使用 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)和 **“项目属性”** 对话框，将该属性设置为四个值中的一个。 可以使用 **“添加筛选器”** 或 **“编辑筛选器”** 对话框（可以通过新建发布向导和 **“发布属性”** 对话框访问），将该属性设置为两个值中的一个。 下表总结了可用的值：  
@@ -135,9 +135,9 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |分区中的数据不重叠，并且数据由所有订阅共享。 订阅服务器无法更新参数化筛选器中引用的列。|N/A<sup>1</sup>|**不重叠，由所有订阅共享**|**2**|  
 |分区中的数据不重叠，每个分区只有一个订阅。 订阅服务器无法更新参数化筛选器中引用的列。<sup>2</sup>|**此表中的行将仅转到一个订阅**|**不重叠，一个订阅**|**3**|  
   
- <sup>1</sup>如果基础的筛选选项设置为**0**，或**1**，或**2**、**添加筛选器**和**编辑筛选器**对话框将显示**此表中的行将转到多个订阅**。  
+ <sup>1</sup>如果基础筛选选项设置为**0**，或**1**，或**2**，则**添加筛选器**和**编辑筛选器**对话框中将显示**此表中的行将转到多个订阅**。  
   
- <sup>2</sup>如果指定此选项时，只能有该文章中的数据为每个分区的单个订阅。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。  
+ <sup>2</sup>如果指定此选项，可以仅有的那篇文章中的数据为每个分区一个订阅。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。  
   
 > [!IMPORTANT]  
 >  必须根据订阅服务器共享数据的方式来设置 **partition options** 值。 例如，如果指定分区不重叠，每个分区一个订阅，但数据随后在另一台订阅服务器上被更新，则合并代理在同步期间会失败，且可能无法收敛。  

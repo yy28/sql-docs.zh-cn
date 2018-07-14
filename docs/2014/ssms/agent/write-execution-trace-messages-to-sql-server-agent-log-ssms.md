@@ -1,5 +1,5 @@
 ---
-title: 将执行跟踪消息写入到 SQL Server 代理错误日志 (SQL Server Management Studio) |Microsoft 文档
+title: 将执行跟踪消息写入到 SQL Server 代理错误日志 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
 - writing trace messages
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - errors [SQL Server Agent]
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30eb7385ccfb3f72d302a921a22e9d119f9d355f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c81c12dfd9797d822e5c7b4ec6e560432c8e7170
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254139"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为在其错误日志中包含执行跟踪消息。  
@@ -38,7 +38,7 @@ ms.locfileid: "36025369"
   
      [Security](#Security)  
   
--   [若要执行跟踪消息写入到使用 SQL Server Management Studio SQL Server 代理错误日志](#SSMSProcedure)  
+-   [若要执行跟踪消息写入到使用 SQL Server Management Studio 在 SQL Server 代理错误日志](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

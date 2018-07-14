@@ -1,5 +1,5 @@
 ---
-title: 在 XPath 查询 (SQLXML 4.0) 中指定的布尔函数 |Microsoft 文档
+title: 在 XPath 查询 (SQLXML 4.0) 中指定布尔函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b35c5a8e2e7e6e03c0fd943572b25b30bf017e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 86a05a23577eefa1231a4a5f4bdf8447e4f6b285
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232997"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔函数 (SQLXML 4.0)
-  以下示例说明如何在 XPath 查询中指定布尔函数。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[有关 XPath 示例的示例批注 XSD 架构&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例说明如何在 XPath 查询中指定布尔函数。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布尔函数  
- 此查询返回所有**\<客户 >** 的上下文节点的子元素，而没有**\<顺序 >** 子元素：  
+ 此查询返回所有**\<客户 >** 的上下文节点的子元素不具有**\<顺序 >** 子元素：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -48,7 +48,7 @@ ms.locfileid: "36025453"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件。 将该文件另存为 SampleSchema1.xml。  
+1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (BooleanFunctionsA.xml) 并将其保存到保存 SampleSchema1.xml 的目录中。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36025453"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是执行该模板的部分结果集：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36025453"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布尔函数  
- 此查询返回所有**\<客户 >** 的上下文节点的元素子级，而没有**\<顺序 >** 子元素。 就关系而言，此查询返回未下订单的所有客户。  
+ 此查询返回所有**\<客户 >** 上下文节点不具有元素子级**\<顺序 >** 子元素。 就关系而言，此查询返回未下订单的所有客户。  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -114,7 +114,7 @@ ms.locfileid: "36025453"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件。 将该文件另存为 SampleSchema1.xml。  
+1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (BooleanFunctionsB.xml) 并将其保存到保存 SampleSchema1.xml 的目录中。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36025453"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是执行该模板的部分结果集：  
   

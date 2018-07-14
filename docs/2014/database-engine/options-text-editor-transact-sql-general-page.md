@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器的 Transact SQL 常规页） |Microsoft 文档
+title: 选项 （文本编辑器-Transact SQL 常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257203"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>选项 （文本编辑器的 Transact SQL 常规页）
+# <a name="options-text-editor---transact-sql--general-page"></a>选项 （文本编辑器-Transact SQL 常规页）
   使用 **“常规”** 选项对话框可以更改用于编辑 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本的 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询编辑器的常规编辑行为。 若要显示这些设置，请在“工具”菜单上单击“选项”，展开 **Transact-SQL** 子文件夹，再单击“常规”。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多个位置设置选项  
@@ -42,7 +42,7 @@ ms.locfileid: "36024384"
  在该复选框处于选中状态时，将显示紧挨在插入点（光标）左侧的存储过程或函数的参数信息。 这些信息包括可用参数及其名称和数据类型的列表。  
   
 ## <a name="settings"></a>“设置”  
- **启用虚拟空间**  
+ **启用虚空格**  
  选中此复选框后，您可以单击代码行结束处后面的任意位置，然后键入。 如果选中此复选框，可将注释始终定位在代码旁的同一位置。 选中此复选框将禁用 **“自动换行”** 复选框。  
   
  **自动换行**  

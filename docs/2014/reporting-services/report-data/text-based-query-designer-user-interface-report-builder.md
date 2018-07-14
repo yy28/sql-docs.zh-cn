@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162118"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>基于文本的查询设计器用户界面（报表生成器）
   使用基于文本的查询设计器可以用数据源支持的查询语言来指定查询，还可以运行查询并在运行时查看结果。 您可以指定多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，为自定义数据处理扩展插件指定查询或命令语法，还可以指定指定为表达式的查询。 因为基于文本的查询设计器不会对查询进行预处理，并且能适应任何类型的查询语法，所以成为了众多数据源类型的默认查询设计器工具。  
@@ -60,7 +60,7 @@ ms.locfileid: "36018347"
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  
   
 #### <a name="example"></a>示例  
- 下面的查询返回的最后一个名称，从列表[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**数据库`ContactType`表`Person`架构。  
+ 下面的查询返回的最后一个名称的列表[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**数据库`ContactType`表`Person`架构。  
   
 ```  
 SELECT Name FROM Person.ContactType  

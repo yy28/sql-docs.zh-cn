@@ -1,5 +1,5 @@
 ---
-title: 行为更改到数据库引擎的 SQL Server 2014 中的功能 |Microsoft 文档
+title: 引擎行为更改数据库的 SQL Server 2014 中的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 caps.latest.revision: 134
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b91a84ac2973ee5569ff9a9f4b3fa54737492068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193957"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的行为更改
   本主题介绍[!INCLUDE[ssDE](../includes/ssde-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
@@ -34,12 +34,12 @@ ms.locfileid: "36025776"
 ## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>中的行为更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>元数据发现  
- 中的改进[!INCLUDE[ssDE](../includes/ssde-md.md)]开头[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]允许 SQLDescribeCol 以获取更准确描述预期的结果比在早期版本中的返回 SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../relational-databases/native-client/features/metadata-discovery.md)。  
+ 中的改进[!INCLUDE[ssDE](../includes/ssde-md.md)]开头[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]允许 SQLDescribeCol 以获取更准确描述的预期的结果比在以前版本的返回 SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../relational-databases/native-client/features/metadata-discovery.md)。  
   
- The [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql)选项用于确定响应的格式，而不实际运行查询将被替换[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)， [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)， [sys.dm_exec_describe_first_result_set &#40;-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)，和[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)。  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>有关为 SQL Server 代理任务编写脚本的行为的更改  
- 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您通过复制现有作业中的脚本来创建新作业，则新作业可能会无意中影响现有作业。 若要创建使用来自现有作业的脚本的新作业，请手动删除参数*@schedule_uid*通常是将现有的作业中创建作业计划部分的最后一个参数。 这将为新作业创建新的独立计划而不影响现有作业。  
+ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您通过复制现有作业中的脚本来创建新作业，则新作业可能会无意中影响现有作业。 若要创建新的作业使用现有作业中的脚本，请手动删除参数*@schedule_uid*通常是最后一个参数的部分中的现有作业中创建作业计划。 这将为新作业创建新的独立计划而不影响现有作业。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 用户定义函数和方法的常量折叠  
  在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，以下用户定义的 CLR 对象现已可折叠：  
@@ -75,10 +75,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
- 若要确定空间的对象是否为空，请调用[STIsEmpty &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)方法。  
+ 若要确定空间对象是否为空，请调用[STIsEmpty &#40;geometry 数据类型&#41;](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)方法。  
   
 ### <a name="log-function-has-new-optional-parameter"></a>LOG 函数具有新的可选参数  
- `LOG`函数现在具有可选*基*参数。 有关详细信息，请参阅[日志&#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/log-transact-sql)。  
+ `LOG`函数现在具有一个可选*基*参数。 有关详细信息，请参阅[日志&#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/log-transact-sql)。  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>已分区索引操作期间的统计信息计算已更改  
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，当创建或重新生成已分区索引时，并非通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 在升级具有已分区索引的数据库后，您可以在直方图数据中注意到针对这些索引的差异。 此行为更改可能不会影响查询性能。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 CREATE STATISTICS 或 UPDATE STATISTICS 以及 FULLSCAN 子句。  
@@ -105,12 +105,12 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  如果在执行 SELECT * from T FOR XML … 时通过 XML 模式（:XML ON 命令）使用 sqlcmd.exe，则会出现行为更改。  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 修改了消息  
- 在[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，DBCC CHECKIDENT 命令返回的消息已更改仅当它用于进行种子重新设定*new_reseed_value*若要更改当前标识值。 新的消息是"正在检查标识信息： 当前标识值\<当前标识值 >。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”  
+ 在中[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，由 DBCC CHECKIDENT 命令返回的消息已更改仅当它用于重新设定种子*new_reseed_value*若要更改当前标识值。 新的消息是"正在检查标识信息： 当前标识值 '\<当前标识值 >。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”  
   
- 消息已在早期版本中，"正在检查标识信息： 当前标识值\<当前标识值 >，当前列值 '\<当前列的值 >。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。” 在使用 NORESEED 指定 DBCC CHECKIDENT 时（没有第二个参数或没有重设种子值），该消息保持不变。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
+ 在早期版本中，消息是"正在检查标识信息： 当前标识值\<当前标识值 >'，当前列值 '\<当前列的值 >。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。” 在使用 NORESEED 指定 DBCC CHECKIDENT 时（没有第二个参数或没有重设种子值），该消息保持不变。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML 数据类型的 exist() 函数的行为已更改  
- 行为**exist （)** 函数已更改时将具有 null 值为 0 （零） 的 XML 数据类型进行比较。 请参考如下示例：  
+ 行为**exist （)** 比较 XML 数据类型为 0 （零） 值为 null 时，函数已更改。 请参考如下示例：  
   
 ```xml  
 DECLARE @test XML;  
@@ -130,8 +130,8 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 中的数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2014 中不推荐使用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2014 中数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2014 中弃用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2014 中废止的数据库引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

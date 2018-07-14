@@ -1,5 +1,5 @@
 ---
-title: 修改或删除 Analysis Services 数据库 |Microsoft 文档
+title: 修改或删除 Analysis Services 数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], modifying
 - removing databases
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b13c74449b5a56d956d6043736801a86a7ce5c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 949767979720880225431bb2e0c928623822ee23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206287"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或删除 Analysis Services 数据库
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中部署之前以及在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中部署之后，可以更改 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]数据库的名称和说明。 您还可以调整 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库上的其他设置，这取决于环境。  
@@ -38,7 +38,7 @@ ms.locfileid: "36025528"
  一旦 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的部署完成，您就可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在连接到该数据库包含的数据源时使用的模拟模式。 模拟模式允许您指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在试图连接到某个数据源进行处理、浏览或钻取时使用的安全上下文。  
   
 ## <a name="modifying-databases-using-sql-server-data-tools"></a>使用 SQL Server Data Tools 修改数据库  
- 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在项目模式下修改用于定义数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的标题和说明的翻译。 有关使用中的翻译详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库，请参阅[Analysis Services Multiidimensional 的全球化方案](../globalization-scenarios-for-analysis-services-multiidimensional.md)。  
+ 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在项目模式下修改用于定义数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的标题和说明的翻译。 有关使用中的翻译[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库，请参阅[Analysis Services Multiidimensional 的全球化方案](../globalization-scenarios-for-analysis-services-multiidimensional.md)。  
   
  您还可以设置与由数据库中包含的维度的帐户属性使用的帐户类型相关联的别名和聚合函数。 别名允许您为帐户图表中的帐户类型选择您的组织使用的特定于业务的术语。 帐户属性的成员使用帐户类型来指示如何使用为数据库中包含的各个帐户类型指定的聚合函数来针对各个成员聚合度量值。 有关帐户属性的详细信息，请参阅 [属性和属性层次结构](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 文本框属性对话框中，对齐方式 （报表生成器和 SSRS） |Microsoft 文档
+title: 文本属性对话框对齐方式 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf6aec0a4375c495f49d4ad0484c1893ef4ccdc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c981605bf2f7473fdd24ba10e167f970c1aac8b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214647"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>“文本框属性”对话框 -&gt;“对齐”（报表生成器和 SSRS）
   在 **“文本框属性”** 对话框中选择 **“对齐”** 可以在选定的单元或数据区域内按一定方式放置值。  
@@ -34,10 +34,10 @@ ms.locfileid: "36024276"
  **垂直**  
  指定在选定单元或数据区域中垂直放置值的位置。 默认情况下选择的是 **“默认值”** 。 “默认值”表示的值是 **“靠上”**。 单击“表达式” (*fx*) 按钮可编辑表达式。  
   
- **左**  
+ **左侧**  
  指定单元左边缘与单元中显示值之间的填充量或间距大小。 默认值为 2 磅。 单击“表达式” (*fx*) 按钮可编辑表达式。  
   
- **右**  
+ **右侧**  
  指定单元右边缘与单元中显示值之间的填充量或间距大小。 默认值为 2 磅。 单击“表达式” (*fx*) 按钮可编辑表达式。  
   
  **Top**  

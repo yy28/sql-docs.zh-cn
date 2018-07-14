@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264203"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
   当您创作报表时，务必了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 呈现器的行为，以确保所呈现的报表显示为您需要的方式，包括页面布局和分页符。 您还可能希望确保所呈现的报表适合您或贵组织常用的纸张大小。  
@@ -57,7 +57,7 @@ ms.locfileid: "36018545"
     > [!NOTE]  
     >  尽管它没有提供直接导出到其他格式的功能，但 Atom 呈现从报表中生成数据文件。  
   
--   **软分页呈现器** ：软分页呈现器保留报表的布局和格式设置。 对所产生的文件进行优化，以便满足基于屏幕的查看和传递（例如在网页上）的需要。 可用软分页呈现器是： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 Web 档案 (MHTML) 和 HTML。  
+-   **软分页呈现器** ：软分页呈现器保留报表的布局和格式设置。 对所产生的文件进行优化，以便满足基于屏幕的查看和传递（例如在网页上）的需要。 可用的软分页符呈现器有： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 Web 存档 (MHTML) 和 HTML。  
   
 -   **硬分页呈现器** ：硬分页呈现器保留报表的布局和格式设置。 对所产生的文件进行了优化，以便提供一致的打印体验或以书本格式联机查看报表。 支持的可用硬分页呈现器：TIFF 和 PDF。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36018545"
 ##  <a name="HowTo"></a> 操作指南主题  
  本节列出的过程分步向您介绍如何在报表中使用分页。  
   
--   [添加分页符&#40;报表生成器和 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [添加一个分页符&#40;报表生成器和 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
 -   [在多个页中显示行标题和列标题&#40;报表生成器和 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36018545"
  [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  提供有关如何在报表中使用页眉和页脚以及如何使用它们来控制分页的信息。  
   
- [控制页中断，标题、 列和行&#40;报表生成器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [控制分页符、 标题、 列和行&#40;报表生成器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  提供有关使用分页符的信息。  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
 - tracking data changes [SQL Server]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - data [SQL Server], changing
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62309ba34829657eee57398c48df90a232ae4f11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 8953f24d60b3007ab2fee218507cdd77c69561ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276143"
 ---
 # <a name="about-change-tracking-sql-server"></a>关于更改跟踪 (SQL Server)
-  更改跟踪是一种轻量型解决方案，它为应用程序提供了一种有效的更改跟踪机制。 通常，若要使应用程序能够查询对数据库中的数据所做的更改和访问与这些更改相关的信息，应用程序开发人员必须实现自定义更改跟踪机制。 创建这些机制通常涉及大量工作和经常涉及使用触发器、 组合`timestamp`列和新表来存储跟踪信息和自定义清除过程。  
+  更改跟踪是一种轻量型解决方案，它为应用程序提供了一种有效的更改跟踪机制。 通常，若要使应用程序能够查询对数据库中的数据所做的更改和访问与这些更改相关的信息，应用程序开发人员必须实现自定义更改跟踪机制。 创建这些机制通常涉及多项工作的和经常涉及到使用的触发器，组合`timestamp`列和新表来存储跟踪信息和自定义清除过程。  
   
  不同类型的应用程序对其所需的有关更改的信息量有不同的要求。 应用程序可以使用更改跟踪来回答以下有关对用户表所做更改的问题：  
   
