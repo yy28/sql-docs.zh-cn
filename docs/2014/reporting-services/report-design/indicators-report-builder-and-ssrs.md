@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6f01f4c20446507bd63c8bd1c82d6c32355582b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 30938348fcb78d1afeeeacaead3bb02362a28574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168308"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
   指示器是以直观的形式提供单个数据值的状态的最小化仪表。 表示指示器及其状态的图标十分简单，并且即使在以小尺寸使用时也保持有效的外观。  
@@ -107,7 +107,7 @@ ms.locfileid: "36016768"
   
  在您首次向报表添加一个指示器时，该指示器配置为使用默认值。 然后，您可以更改这些默认值，以便指示器以您所需的方式描绘数据。 您可以更改指示器图标的外观、指示器选择要使用的图标的方式，并可以更改指示器集使用的图标。 有关详细信息，请参阅[更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
   
- 默认情况下，指示器配置为使用百分比作为度量单位，并且自动检测数据中的最小值和最大值。 指示器集中的每个图标都具有百分比范围。 百分比范围的数目依赖于图标集中图标的数目，但这些范围具有相同的大小和顺序。 例如，如果图标集具有五个图标，则有五个百分比范围，每个范围占总大小的 20%。 第一个范围以 0 开始、以 20 结束，第二个范围以 20 开始、以 40 结束，依此类推。 报表上的指示器使用的图标来自其百分比范围在指示器数据值处于的范围内的指示器集。 对于图标集中的每个图标，您可以更改百分比范围。 可以通过提供值或表达式来显式设置最小值和最大值。 您可以将度量单位更改为数值。 在此情况下，不要为数据指定最小值或最大值。 而是为指示器使用的每个图标仅提供开始值和结束值。 有关详细信息，请参阅[组和配置度量单位&#40;报表生成器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
+ 默认情况下，指示器配置为使用百分比作为度量单位，并且自动检测数据中的最小值和最大值。 指示器集中的每个图标都具有百分比范围。 百分比范围的数目依赖于图标集中图标的数目，但这些范围具有相同的大小和顺序。 例如，如果图标集具有五个图标，则有五个百分比范围，每个范围占总大小的 20%。 第一个范围以 0 开始、以 20 结束，第二个范围以 20 开始、以 40 结束，依此类推。 报表上的指示器使用的图标来自其百分比范围在指示器数据值处于的范围内的指示器集。 对于图标集中的每个图标，您可以更改百分比范围。 可以通过提供值或表达式来显式设置最小值和最大值。 您可以将度量单位更改为数值。 在此情况下，不要为数据指定最小值或最大值。 而是为指示器使用的每个图标仅提供开始值和结束值。 有关详细信息，请参阅[集和配置度量单位&#40;报表生成器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
   
  指示器通过同步指定作用域内的指示器数据值，提供数据值。 默认情况下，作用域是指示器的父容器，例如包含指示器的表或矩阵。 您可以通过根据报表的布局选择不同的作用域，更改指示器的同步。 指示器可以忽略同步。 有关详细信息，请参阅[设置同步作用域（报表生成器和 SSRS）](set-synchronization-scope-report-builder-and-ssrs.md)。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36016768"
 ##  <a name="SizingIndicatators"></a> 调整指示器的大小以便提供最佳的视觉效果  
  除了颜色、方向和形状外，您还可以使用大小来提供最佳的指示器视觉效果。 假定某一报表使用指示器来显示客户对不同类型自行车的满意度。 指示器使用的图标可以根据客户满意度配置为不同的大小。 满意度越高，在报表中出现的图标就越大。 下图显示了自行车的销售报表以及反映销售额的图标大小。  
   
- 您可以使用表达式基于指示器使用的字段值动态设置星形的大小。 有关详细信息，请参阅[指定指示器使用表达式的大小&#40;报表生成器和 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
+ 您可以使用表达式基于指示器使用的字段值动态设置星形的大小。 有关详细信息，请参阅[指定大小的指示器使用表达式&#40;报表生成器和 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
   
  若要了解有关编写和使用表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "36016768"
   
 -   [设置同步作用域&#40;报表生成器和 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [指定使用表达式指示器的大小&#40;报表生成器和 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [指定使用表达式的指示器的大小&#40;报表生成器和 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
 -   [在仪表面板中包括指示器和仪表&#40;报表生成器和 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   

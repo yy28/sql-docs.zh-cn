@@ -1,5 +1,5 @@
 ---
-title: 编程特定任务 |Microsoft 文档
+title: 编程特定的任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00bd816625c9f4aa4116c1c3810957f8a95bc12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 114cc7d651318a0c3892427a54fefb3c5f6bb781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274403"
 ---
 # <a name="programming-specific-tasks"></a>编程特定的任务
   使用 SMO 对象的编程特定的任务包含一些复杂主题，只有具有特定函数的程序才需要这些主题，例如，备份、监视统计信息、复制、管理实例对象以及设置配置选项。  

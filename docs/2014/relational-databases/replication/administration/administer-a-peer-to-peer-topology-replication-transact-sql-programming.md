@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e6919c6f6b470f1888e5eb27c81f764fa7c101e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e289d9b26ac4aaf1879bc75fad0bfb1a8004295
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217447"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理对等拓扑（复制 Transact-SQL 编程）
   管理对等拓扑类似于管理典型的事务复制拓扑，但有许多需要特别注意的地方。 管理对等拓扑的主要区别在于，有些更改需要让系统“停止” 。 为了停止系统，需要停止对所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](quiesce-a-replication-topology-replication-transact-sql-programming.md)。  

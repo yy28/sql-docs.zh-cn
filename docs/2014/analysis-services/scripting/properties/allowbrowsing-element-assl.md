@@ -1,5 +1,5 @@
 ---
-title: AllowBrowsing 元素 (ASSL) |Microsoft 文档
+title: AllowBrowsing 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 722923cff6a839b6882c5a44de67ca075d0ea46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c93ea360fb7036179375ff62aa6f182c9b790f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282003"
 ---
 # <a name="allowbrowsing-element-assl"></a>AllowBrowsing 元素 (ASSL)
-  定义是否的成员[角色](../objects/role-element-assl.md)元素具有浏览权限[MiningModel](../objects/miningmodel-element-assl.md)元素。  
+  定义是否的成员[角色](../objects/role-element-assl.md)元素有浏览权限[MiningModel](../objects/miningmodel-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36018294"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`AllowBrowsing`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MiningModelPermission>。  
+ 父级对应的元素`AllowBrowsing`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MiningModelPermission>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

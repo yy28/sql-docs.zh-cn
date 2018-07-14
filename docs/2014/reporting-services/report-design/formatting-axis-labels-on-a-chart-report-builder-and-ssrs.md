@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10148"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e33900e5dbc81d65d6304e82ba87f56cbcdcc89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 66ea4ea030bc3c80d9155a25737ec1828c97982c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181694"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  
@@ -116,16 +116,16 @@ ms.locfileid: "36025179"
 -   在 **“序列属性”** 对话框的 **“类别字段”** 选项中选择一个字段或键入一个表达式。 图表将为您指定的类别字段中的所有值添加轴间隔。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>在类别轴中添加或删除侧边距  
- 在条形图、柱形图和散点图中，图表会自动在 x 轴结尾处添加侧边距。 您无法更改该边距的大小。 在所有其他图表类型中，图表都不会添加侧边距。 有关详细信息，请参阅[添加或删除从图表的边距&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  
+ 在条形图、柱形图和散点图中，图表会自动在 x 轴结尾处添加侧边距。 您无法更改该边距的大小。 在所有其他图表类型中，图表都不会添加侧边距。 有关详细信息，请参阅[添加或删除边距从图表&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [轴标签的格式设置为日期或货币&#40;报表生成器和 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [设置轴标签的格式为日期或货币&#40;报表生成器和 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
  [在图表中放置标签&#40;报表生成器和 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [指定轴间隔&#40;报表生成器和 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [添加或从图表中删除边距&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [添加或删除边距在图表中&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
  [指定对数刻度&#40;报表生成器和 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   

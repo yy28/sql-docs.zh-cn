@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 扩展时序模型 |Microsoft 文档
+title: 第 5 课： 扩展时序模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fe6a783cef802e9b68a063cf80016e7f31011cfa
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194387"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>第 5 课：扩展时序模型
   在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 中，可以向时序模型中添加新数据，并自动将新数据合并到模型中。 您可以通过下列两种方式之一向时序挖掘模型添加新数据：  
@@ -53,7 +53,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>针对时序模型创建单独预测查询  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**。  
+1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -142,11 +142,11 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+7.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-8.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`Singleton_TimeSeries_Query.dmx`。  
+8.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Singleton_TimeSeries_Query.dmx`。  
   
-9. 在工具栏上，单击**执行**按钮。  
+9. 在工具栏上，单击**Execute**按钮。  
   
      该查询将返回 Europe 和 Pacific 地区 M200 自行车的销售量预测。  
   
@@ -171,7 +171,7 @@ PREDICTION JOIN <source query>
 |M200 Europe|11/25/2008 12:00:00 AM|56|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|74|89|  
   
- **产品和区域： M200 太平洋**  
+ **产品和区域： M200 Pacific**  
   
 |||||  
 |-|-|-|-|  
@@ -196,7 +196,7 @@ PREDICTION JOIN <source query>
   
 -   请求对四个时间段进行预测，其中起点是时间片 3，终点是时间片 6。  
   
- 换而言之，如果新数据包含 n 时间段，并请求时间步骤 1 到 n 的预测，预测将作为新的数据相同期间将保持一致。 若要获取对数据未覆盖的时间段的新预测，您必须从新数据序列之后的时间段 n+1 处开始预测，或者确保您请求了其他的时间段。  
+ 换而言之，如果您的新数据包含 n 个时间段，并请求对时间步长 1 至 n，则预测将与新数据的时间段一致。 若要获取对数据未覆盖的时间段的新预测，您必须从新数据序列之后的时间段 n+1 处开始预测，或者确保您请求了其他的时间段。  
   
 > [!NOTE]  
 >  添加新数据时不能进行历史预测。  
@@ -234,10 +234,10 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>使用 REPLACE_MODEL_CASES 进行预测  
- 如果您想对一组事例的某个模型定型，然后将该模型应用到不同的数据序列，则替换模型事例非常有用。 中提供此方案的详细的演练[第 2 课： 生成预测方案&#40;中间 Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+ 如果您想对一组事例的某个模型定型，然后将该模型应用到不同的数据序列，则替换模型事例非常有用。 此方案的详细的演练所示[第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [时间时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

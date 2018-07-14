@@ -1,5 +1,5 @@
 ---
-title: 实用工具面板 （SQL Server 实用工具） |Microsoft 文档
+title: 实用工具面板 （SQL Server 实用工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a19036826aff3afdb31904318d52929b628441eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c37387c3a5a47a624cdcac57d73552c8eeda9b3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192137"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>实用工具面板（SQL Server 实用工具）
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具仪表板中查看数据，请在标有“Utility<UCP_Name>\\(ComputerName\UCP)”的实用工具资源管理器树中选择顶端节点。 该面板包括来自 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有托管实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具中所有数据层应用程序的摘要和详细信息数据。 若要刷新仪表板中的数据，请在实用工具资源管理器树中右键单击该顶端节点，然后选择“刷新”。  
@@ -108,7 +108,7 @@ ms.locfileid: "36025252"
   
 ## <a name="see-also"></a>请参阅  
  [使用实用工具资源管理器管理 SQL Server 实用工具](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [SQL Server 的实例注册&#40;SQL Server 实用工具&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [注册 SQL Server 实例&#40;SQL Server 实用工具&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [修改资源运行状况策略定义（SQL Server 实用工具）](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

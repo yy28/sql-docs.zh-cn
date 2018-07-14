@@ -1,5 +1,5 @@
 ---
-title: 连接到表格模型数据库 (SSAS) |Microsoft 文档
+title: 连接到表格模型数据库 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71bfa13950656ea662ba91532abf765bd1b126c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190917"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
   在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  
@@ -85,7 +85,7 @@ ms.locfileid: "36024996"
   
 2.  选择 **“从 Analysis Services”**。  
   
-3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器作为命名实例安装，你必须按以下格式指定名称： \<servername >\\< instancename\>。  
+3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器已作为命名实例安装，则必须按以下格式指定名称：\<服务器名称 >\\< 实例名\>。  
   
      必须为独立的表格部署配置服务器实例，并且该服务器实例必须具有允许访问的入站规则。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36024996"
  在建立连接后，您可以使用数据来创建数据透视表或数据透视图。 有关详细信息，请参阅[在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)。  
   
 ##  <a name="bkmk_sharepoint"></a> 从 SharePoint 进行连接  
- 如果使用的是 PowerPivot for SharePoint，则可在 SharePoint 中创建一个 BI 语义模型连接文件，通过该文件，可重定向到在 Analysis Services 表格模式服务器上运行的数据库。 BI 语义模型连接提供指向数据库的 HTTP 端点。 对于经常要使用 SharePoint 站点上的文档的知识工作者，该连接还简化了表格模型访问。 知识工作者只需要知道 BI 语义模型连接文件的位置或其 URL 就可以访问表格模型数据库。 与服务器位置或数据库名称有关的详细信息封装在 BI 语义模型连接中。 有关创建和使用 BI 语义模型连接文件的详细信息，请参阅[PowerPivot BI 语义模型连接&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)和[创建 BI 语义模型连接到表格模型数据库](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
+ 如果使用的是 PowerPivot for SharePoint，则可在 SharePoint 中创建一个 BI 语义模型连接文件，通过该文件，可重定向到在 Analysis Services 表格模式服务器上运行的数据库。 BI 语义模型连接提供指向数据库的 HTTP 端点。 对于经常要使用 SharePoint 站点上的文档的知识工作者，该连接还简化了表格模型访问。 知识工作者只需要知道 BI 语义模型连接文件的位置或其 URL 就可以访问表格模型数据库。 与服务器位置或数据库名称有关的详细信息封装在 BI 语义模型连接中。 有关创建和使用 BI 语义模型连接文件的详细信息，请参阅[PowerPivot BI 语义模型连接&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)并[创建 BI 语义模型连接到表格模型数据库](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
 ##  <a name="bkmk_Tshoot"></a> 解决连接问题  
  本节介绍在连接到表格模型数据库时发生的问题的原因和解决方法步骤。  
@@ -105,7 +105,7 @@ ms.locfileid: "36024996"
   
  在导入数据时，如果您尝试使用该向导连接到远程 Analysis Services 服务器上的表格模型数据库，而您不具有足够的权限，则会发生此 Microsoft Excel 错误。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   
- **在尝试建立与外部数据源的连接的过程中出现错误。以下连接刷新失败：\<模型名称 > 沙盒**  
+ **在尝试建立与外部数据源的连接的过程中出现错误。以下连接无法刷新：\<模型名称 > Sandbox**  
   
  在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是您对远程 Analysis Services 服务器没有足够的权限。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   

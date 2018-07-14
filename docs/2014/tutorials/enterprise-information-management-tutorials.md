@@ -1,5 +1,5 @@
 ---
-title: 企业信息管理教程 |Microsoft 文档
+title: 企业信息管理教程 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bf0662a624fac18b83c1bb0d41e4c532d15ad00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2dc3dae5fa4bd7bb0186c325f65cccc2030fe7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202107"
 ---
 # <a name="enterprise-information-management-tutorials"></a>企业信息管理教程
   本节包含通过使用在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中随附的企业信息管理 (EIM) 技术在企业中管理信息的教程。 企业信息管理 (EIM) 提供一组解决方案，使组织能够信任其数据的可信性和一致性，以便组织可以作出关键业务决策。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 具有以下技术，帮助您在企业中实现 EIM 解决方案。  
@@ -32,7 +32,7 @@ ms.locfileid: "36018754"
   
 -   SQL Server Master Data Services (MDS)。 MDS 提供一个集中的数据中心，确保信息的完整性和数据的一致性在不同应用程序中是不变的。  
   
- [使用 SSIS、 MDS，以及 DQS 组合在一起的企业信息管理&#91;教程&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
+ [使用 SSIS、 MDS 和 DQS 一起执行企业信息管理&#91;教程&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
  在本教程中，您将学习如何一起使用 SSIS、MDS 和 DQS 来实现一个示例企业信息管理 (EIM) 解决方案。 首先，您将使用 DQS 创建一个包含与供应商数据（元数据）有关的知识的知识库，根据该知识库清理一个 Excel 文件中的数据，并且对数据进行匹配以便标识并删除数据中的重复项。 接下来，您将使用用于 Excel 的 MDS 外接程序将已清理和匹配的数据上载到 MDS。 然后，您通过使用一个 SSIS 解决方案自动化整个过程。  
   
 ## <a name="see-also"></a>请参阅  

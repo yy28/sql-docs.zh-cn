@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1b01246166c6d7e75f1083fc23b9bd15502c731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286713"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 课：创建示例订阅服务器数据库
   定义数据驱动的订阅前，必须具有可提供订阅数据的数据源。 在此步骤中，您将创建一个小型数据库，以存储本教程中使用的订阅数据。 稍后在处理订阅时，报表服务器将检索此数据并使用它来自定义报表输出、传递选项和报表表示格式。  
   
- 本课假定你在使用[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]创建[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]数据库。  
+ 本课程假定您使用[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]若要创建[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]数据库。  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>创建示例订阅服务器数据库  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36017272"
   
 2.  右键单击“数据库”，选择“新建数据库”。  
   
-3.  数据库名称，在新数据库对话框中键入*订阅服务器*。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  在新的数据库对话框中的数据库名称中，键入*订户*。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  在工具栏中，单击“新建查询”按钮。  
   

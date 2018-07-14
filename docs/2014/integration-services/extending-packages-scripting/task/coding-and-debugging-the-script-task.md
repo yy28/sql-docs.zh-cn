@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184714"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
   在“脚本任务编辑器”中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
@@ -54,9 +54,9 @@ ms.locfileid: "36025230"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>脚本任务项目中的项目项和类  
  默认情况下，显示在 VSTA 项目资源管理器窗口中的脚本任务项目包含单个项：`ScriptMain`。 `ScriptMain` 项又包含单个类，名称也为 `ScriptMain`。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：  
   
--   在脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言，`ScriptMain`类具有公共子例程， `Main`。 `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。  
+-   如果脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言中，`ScriptMain`类具有一个公共子例程`Main`。 `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。  
   
-     默认情况下，新脚本的 `Main` 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 `Dts.TaskResult`属性已在[Returning Results from the Script Task](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
+     默认情况下，新脚本的 `Main` 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 `Dts.TaskResult`中讨论属性[从脚本任务返回结果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
   
 -   如果脚本任务配置为 Visual C# 编程语言，则 `ScriptMain` 类有一个公共方法：`Main`。 此方法在脚本任务运行时调用。  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](http://go.microsoft.com/fwlink/?LinkId=215661)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 有关最新的下载、 文章、 示例和视频从[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及在社区中的所选的解决方案访问[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 有关最新的下载、 文章、 示例和视频[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及从社区获得所选的解决方案访问[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的页面：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)   

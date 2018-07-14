@@ -20,18 +20,18 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61a029231238a0ac47e9a1863f3d4bebeec66eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32e91ff81e333a15bd13a3db13aabf0e1340d21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221707"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的目标组件用于将从上游源和转换接收的数据保存到数据源。 目标组件通常通过现有连接管理器连接数据源。  
   
- 脚本组件的概述，请参阅 [扩展 the Data Flow with Script Component] (.../ extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md。  
+ 有关脚本组件的概述，请参阅 [扩展使用脚本组件数据流] (../ extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md。  
   
  脚本组件及其生成的基础结构代码可以大大简化自定义数据流组件的开发过程。 但是，若要了解脚本组件的工作方式，通读[开发自定义数据流组件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)部分，特别是[开发自定义目标组件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)部分中的自定义数据流组件开发步骤很有帮助。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36018672"
  有关“脚本转换编辑器”的“输入和输出”页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
- 如果你想要在脚本中使用现有的变量，则可以添加在`ReadOnlyVariables`和`ReadWriteVariables`属性字段上**脚本**页**脚本转换编辑器**。  
+ 如果你想要在脚本中使用现有变量，则可以添加在`ReadOnlyVariables`并`ReadWriteVariables`属性字段上**脚本**页**脚本转换编辑器**。  
   
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 此外可以选择多个变量，通过单击省略号 (**...**) 按钮旁边`ReadOnlyVariables`和`ReadWriteVariables`属性字段，然后选择中的变量**选择变量**对话框。  
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 此外可以选择多个变量，通过单击省略号 (**...**) 按钮旁边`ReadOnlyVariables`并`ReadWriteVariables`属性字段，然后选择中的变量**选择变量**对话框。  
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36018672"
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码  
  创建并配置目标组件后打开 VSTA IDE 时，可编辑的 `ScriptMain` 类将显示在代码编辑器中，其中有 `ProcessInputRow` 方法的存根。 在 `ScriptMain` 类中可编写自定义代码，`ProcessInputRow` 是目标组件中最重要的方法。  
   
- 如果你打开**项目资源管理器**在 VSTA 中的窗口中，你可以看到，脚本组件也具有生成只读`BufferWrapper`和`ComponentWrapper`项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。  
+ 如果您打开**项目资源管理器**在 VSTA 中的窗口，可以看到，脚本组件还生成了只读`BufferWrapper`和`ComponentWrapper`项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。  
   
  在运行时，数据流引擎调用 `ProcessInput` 类中的 `UserComponent` 方法，该方法重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 而 `ProcessInput` 方法遍历输入缓冲区中的所有行并为每一行调用一次 `ProcessInputRow` 方法。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36018672"
  下面的示例演示在 `ScriptMain` 类中创建目标组件所需的代码。  
   
 > [!NOTE]  
->  这些示例使用**Person.Address**表中`AdventureWorks`示例数据库并将传递其第一个和第四个列， **int * AddressID*** 和**nvarchar (30) 城市**列，该数据工作流中的。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
+>  这些示例使用**Person.Address**表中`AdventureWorks`示例数据库和传递它的第一个和第四个列**int * AddressID*** 和**nvarchar (30) 市/县**列，在数据通过数据流。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目标示例  
  本示例演示了使用现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器将数据流中的数据保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的目标组件。  
@@ -124,7 +124,7 @@ ms.locfileid: "36018672"
   
 3.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供从数据**Person.Address**表`AdventureWorks`包含的示例数据库至少**AddressID**和**城市**列。  
+4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供中的数据**Person.Address**表的`AdventureWorks`示例数据库包含至少**AddressID**并**城市**列。  
   
 5.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 输入列。  
   
@@ -241,7 +241,7 @@ public class ScriptMain:
   
 2.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供从数据**Person.Address**表`AdventureWorks`示例数据库，并且应包含至少**AddressID**和**城市**列。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供中的数据**Person.Address**表的`AdventureWorks`示例数据库，并且应包含至少**AddressID**并**城市**列。  
   
 4.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 列。  
   
@@ -354,7 +354,7 @@ public class ScriptMain:
 }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [使用脚本组件创建源](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   

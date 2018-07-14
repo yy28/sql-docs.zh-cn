@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260393"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
   若要在报表中包含来自 Microsoft SharePoint 列表的数据，您必须添加或创建一个基于 Microsoft SharePoint 列表类型的报表数据源的数据集。 此内置数据源类型是基于 Microsoft SQL Server Reporting Services SharePoint 列表数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 站点，并从中检索列表数据。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ##  <a name="Connection"></a> 连接字符串  
  SharePoint 列表的连接字符串是指向 SharePoint 站点或子站点（例如， `http://MySharePointWeb/MySharePointSite` 或 `http://MySharePointWeb/MySharePointSite/Subsite`）的 URL。  
@@ -45,24 +45,24 @@ ms.locfileid: "36017896"
 ||受支持的凭据|经典模式 Windows 身份验证|<sup>3</sup>声明身份验证|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
-||存储，提示，无 (使用 Windows 凭据<sup>1</sup>)|是|“否”|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|是|“否”|  
 |远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|不<sup>2</sup>|  
-||存储，提示，无 (使用 Windows 凭据<sup>1</sup>)|是|不<sup>2</sup>|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|是|不<sup>2</sup>|  
   
  **表 2**  
   
 ||受支持的凭据|经典模式 Windows 身份验证|<sup>3</sup>声明身份验证|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
-||存储，提示，无 (使用 Windows 凭据<sup>1</sup>)|“否”|“否”|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|“否”|“否”|  
 |远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|不<sup>2</sup>|  
-||存储，提示，无 (使用 Windows 凭据<sup>1</sup>)|“否”|不<sup>2</sup>|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|“否”|不<sup>2</sup>|  
   
  <sup>1</sup>不支持存储和使用非 Windows 凭据的提示凭据。  
   
  <sup>2</sup>远程 SharePoint 列表不支持基于窗体的身份验证和声明的身份验证。  
   
- <sup>3</sup> Windows 身份验证、 基于窗体身份验证 (FBA)、 安全应用程序标记语言 (SAML) 令牌，其他标识提供程序或多个以上的组合提到身份验证提供程序。  
+ <sup>3</sup> Windows 身份验证、 基于窗体身份验证 (FBA)、 安全应用程序标记语言 (SAML) 令牌、 其他标识提供者或组合的多个以上提到的身份验证提供程序。  
   
  **Windows 身份验证**  
  对于配置为在“可信帐户”模式下与报表服务器一起使用的 SharePoint 技术，不支持此选项。 仅适用于 SQL Server 2012 Reporting Services 之前的版本。  
@@ -163,7 +163,7 @@ ms.locfileid: "36017896"
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
- [添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   

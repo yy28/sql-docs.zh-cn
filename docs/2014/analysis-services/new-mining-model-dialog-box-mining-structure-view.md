@@ -1,5 +1,5 @@
 ---
-title: 新挖掘模型对话框 （挖掘结构视图） |Microsoft 文档
+title: 新建挖掘模型对话框 （挖掘结构视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.createrelatedmodel.f1
 ms.assetid: 7729e98e-6296-4ad9-b73c-fb0f29f4c54e
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c09aa012c7630a10ea97b7d2d7702208ac9a7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c03d62fb6196cadb79cb5e16c06483e7efbe174e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204485"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>“新建挖掘模型”对话框（“挖掘结构”视图）
   可以使用 **“新建挖掘模型”** 对话框在挖掘结构中添加新的挖掘模型。  

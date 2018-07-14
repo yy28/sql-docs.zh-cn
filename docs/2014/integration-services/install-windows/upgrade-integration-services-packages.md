@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d975c0ee5764ca0e7038b51392309b52bf17641
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233437"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
-  当你升级的实例[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到当前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，现有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]包不会自动升级到当前版本的包格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用。 您必须选择一种升级方法并手动升级包。  
+  当升级的实例[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到最新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您的现有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]包不会自动升级到的当前版本的包格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用。 您必须选择一种升级方法并手动升级包。  
   
  在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会将任何脚本任务和脚本组件中的脚本迁移到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，脚本任务或脚本组件中的脚本使用的是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。 有关在迁移之前可能需要进行的脚本更改以及脚本转换失败的详细信息，请参阅[将脚本迁移到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36018463"
 ## <a name="custom-applications-and-custom-components"></a>自定义应用程序和自定义组件  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 自定义组件将不与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本一起使用。  
   
- 你可以使用当前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]工具来运行和管理包中包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]自定义组件。 我们已向下列文件添加了四个绑定限制规则以帮助将版本 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) 中的运行时程序集定向到版本 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ 可以使用最新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]工具运行和管理包包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]并[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]自定义组件。 我们已向下列文件添加了四个绑定限制规则以帮助将版本 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) 中的运行时程序集定向到版本 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 -   DTExec.exe.config  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36018463"
   
 -   DTExecUI.exe.config  
   
- 若要使用[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]设计包中包括到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自定义组件，你需要修改位于的 devenv.exe.config 文件*\<驱动器 >*: files\Microsoft Visual Studio 10.0\Common7\IDE。  
+ 若要使用[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]来设计包，包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]并[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自定义组件，您需要修改 devenv.exe.config 文件位于*\<驱动器 >*: files\Microsoft Visual Studio 10.0\Common7\IDE。  
   
  若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向至版本 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](http://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "36018463"
   
 |组件或功能|升级结果|  
 |--------------------------|---------------------|  
-|连接字符串|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> -使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择“更新连接字符串以使用新的提供程序名称”选项。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，在“选项”对话框的“常规”页上，选择“更新连接字符串以使用新的提供程序名称”选项。 有关此选项的详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意： 你无法使用在前面的过程更新连接字符串或表达式设置时的连接字符串存储在配置文件或数据源文件中，`ConnectionString`属性。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅[数据源](../connection-manager/data-sources.md)。|  
-|查找转换|有关[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]包，升级过程将自动升级查找转换到当前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 不过，此组件的当前版本有一些您可能想要利用的额外功能。<br /><br /> 有关详细信息，请参阅 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
+|连接字符串|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> -使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择“更新连接字符串以使用新的提供程序名称”选项。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，在“选项”对话框的“常规”页上，选择“更新连接字符串以使用新的提供程序名称”选项。 有关此选项的详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意： 您不能使用上述过程更新连接字符串或表达式设置时的连接字符串存储在配置文件或数据源文件，`ConnectionString`属性。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅[数据源](../connection-manager/data-sources.md)。|  
+|查找转换|有关[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]包，升级过程会自动升级查找转换为当前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 不过，此组件的当前版本有一些您可能想要利用的额外功能。<br /><br /> 有关详细信息，请参阅 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
 |脚本任务和脚本组件|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 包，升级过程会自动将脚本任务和脚本组件中的脚本从 VSA 迁移到 VSTA。<br /><br /> 有关在迁移之前可能需要进行的脚本更改以及脚本转换失败的详细信息，请参阅[将脚本迁移到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>依赖于 ADODB.dll 的脚本  

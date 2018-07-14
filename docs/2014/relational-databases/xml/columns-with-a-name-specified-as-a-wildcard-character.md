@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6245d194882e680cfab4841ac5a4f307e58510f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 298eebb3066f7ef7b6eeee3db118d715d26ba443
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218917"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名称指定为通配符的列
-  如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列为非`xml`类型列，则列内容将作为一个文本节点，插入，如下面的示例中所示：  
+  如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列为非`xml`类型列，则列内容将插入作为文本节点，如下面的示例中所示：  
   
 ```  
 USE AdventureWorks2012;  

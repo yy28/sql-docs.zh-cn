@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 8
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c2912564cb2866090f428cd96a2adc9d83faf9cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d6b390a88a652da41623e49437fb2c022b7e3b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198177"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
   通过使用“添加 Azure 副本向导”，您可以在混合 IT 环境中创建新的 Windows Azure 虚拟机，将它配置为新的或现有 AlwaysOn 可用性组的辅助副本。  
@@ -35,7 +34,7 @@ ms.locfileid: "36025255"
 -   **要添加副本，请使用：**  [添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 如果你从未向可用性组添加任何可用性副本，请参阅"服务器实例"和"可用性组和副本"中的部分[先决条件、 限制和建议的 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 如果您从未向可用性组添加任何可用性副本，请参阅"服务器实例"和"可用性组和副本"部分中的[先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36025255"
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

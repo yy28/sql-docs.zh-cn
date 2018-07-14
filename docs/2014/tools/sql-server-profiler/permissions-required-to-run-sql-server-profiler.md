@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
 - traces [SQL Server], replaying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 981305998f4526f10accfd7a4787a6854c6c910d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a03ef4f76007dc4d3366b2ac78b3df02dbebb206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274223"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>运行 SQL Server Profiler 所需的权限
   默认情况下，用户运行 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 所需的权限与执行用于创建跟踪的 Transact-SQL 存储过程所需的权限相同。 若要运行 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]，用户必须拥有 ALTER TRACE 权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql)。  
@@ -71,8 +71,8 @@ ms.locfileid: "36016988"
 ## <a name="see-also"></a>请参阅  
  [SQL Server Profiler 存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [重播跟踪](replay-traces.md)   
- [创建跟踪&#40;SQL Server 事件探查器&#41;](create-a-trace-sql-server-profiler.md)   
- [重播跟踪表&#40;SQL Server 事件探查器&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [创建跟踪&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
+ [重播跟踪表&#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [重播跟踪文件 (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)  
   
   

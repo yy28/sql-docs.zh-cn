@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
 - connections [Reporting Services], report server
@@ -18,13 +18,13 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34145968707e6ccc2a531fdddead84ba805aadb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172148"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了对象资源管理器，可用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何服务器，并以图形方式浏览其内容。 对于 Reporting Services，可以使用对象资源管理器执行以下操作：  
@@ -63,7 +63,7 @@ ms.locfileid: "36017033"
   
 2.  单击“连接”查看服务器类型列表，然后选择 **Reporting Services**。  
   
-3.  在 **“连接到服务器”** 对话框中，输入指向 SharePoint 站点的 URL。 下面的示例说明了语法： http://\<web 服务器 > /sites/\<站点 >。  
+3.  在 **“连接到服务器”** 对话框中，输入指向 SharePoint 站点的 URL。 下面的示例说明了该语法： http://\<web 服务器 > /sites/\<站点 >。  
   
 4.  选择身份验证类型。 如果使用的是 Windows 身份验证，则必须使用凭据进行连接。 如果选择“基本身份验证”或“窗体身份验证”，请键入帐户和密码。  
   

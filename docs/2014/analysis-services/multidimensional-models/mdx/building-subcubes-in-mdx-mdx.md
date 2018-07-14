@@ -1,5 +1,5 @@
 ---
-title: 生成 MDX (MDX) 中的子多维数据集 |Microsoft 文档
+title: 构建 MDX (MDX) 中的子多维数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
 - subcubes [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8369d07c18f6f79359a12423c4668642d66727db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f63c776a1b5d095a7ae17c9e568c827bd660db88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178934"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中生成子多维数据集 (MDX)
   子多维数据集是多维数据集的子集，用于表示基础数据的筛选视图。 通过将多维数据集限制为一个子多维数据集，可以改善查询的性能。  

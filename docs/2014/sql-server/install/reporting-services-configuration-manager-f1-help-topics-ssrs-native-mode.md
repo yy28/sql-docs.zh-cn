@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 配置管理器的 F1 帮助主题 （SSRS 本机模式） |Microsoft 文档
+title: Reporting Services 配置管理器 F1 帮助主题 （SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e38b7d703fb91c0f03f2db55b3f8a82fa4c5b4cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 874c69dcef4dd0704fa0c6fe59e96edfbffe9743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177244"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 配置管理器 F1 帮助主题（SSRS 本机模式）
   本节提供 Reporting Services 配置管理器的 F1 帮助。  
@@ -58,7 +58,7 @@ ms.locfileid: "36024475"
   
 -   [还原加密密钥](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [向外扩展部署](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [横向扩展部署](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 配置管理器&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  

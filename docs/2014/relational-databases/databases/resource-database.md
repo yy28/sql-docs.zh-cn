@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system objects [SQL Server]
 - read-only databases
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 09f29b5bb3a4c5bf51aa802cd002443168fbaa4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1d88dd26f9e83978c7e2906543b31a108742e713
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266733"
 ---
 # <a name="resource-database"></a>Resource 数据库
   Resource 数据库为只读数据库，它包含了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的所有系统对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统对象（如 sys.objects）在物理上保留在 Resource 数据库中，但在逻辑上却显示在每个数据库的 sys 架构中。 Resource 数据库不包含用户数据或用户元数据。  

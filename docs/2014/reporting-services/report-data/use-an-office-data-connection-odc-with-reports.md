@@ -1,5 +1,5 @@
 ---
-title: 将 Office 数据连接 (.odc) 用于报表 (Reporting Services SharePoint 集成模式下) |Microsoft 文档
+title: 将 Office 数据连接 (.odc) 用于报表 (SharePoint 集成模式下，Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177204"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）
   对于局限性方案而言，可以使用现有 Office 数据连接 (.odc) 文件来为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表提供连接信息。 在创建共享数据源时，可用 .odc 文件替代 .rsds 文件。 报表服务器使用 .odc 文件的方式与使用 .rsds 文件的方式相同；它读取文件以获得数据源类型、连接字符串以及凭据信息。  
@@ -38,7 +38,7 @@ ms.locfileid: "36024509"
   
 -   .odc 文件必须指定一个连接字符串。  
   
--   凭据可以设置为`None`， `Stored`，或`Integrated`。 如果将凭据方法设置为`Stored`，报表服务器将提示用户输入凭据而不是使用存储的凭据。 报表服务器不能按照 .odc 文件中的定义使用已存储凭据。  
+-   凭据可以设置为`None`， `Stored`，或`Integrated`。 如果将凭据方法设置为`Stored`，报表服务器将提示用户输入凭据而不是使用已存储的凭据。 报表服务器不能按照 .odc 文件中的定义使用已存储凭据。  
   
 -   数据源所具有的架构必须与创建报表时使用的架构相同。 如果数据结构不同，报表将无法运行。  
   

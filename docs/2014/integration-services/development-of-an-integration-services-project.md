@@ -1,5 +1,5 @@
 ---
-title: 开发的集成服务项目 |Microsoft 文档
+title: 开发 Integration Services 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2eab6834047938a908cc9ca034ad64ad8c7082cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cb43470f1f426e52c9258cd7759b291e85546d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263283"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services 项目的开发
   您将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包添加到项目。 若要创建和使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，必须安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 环境。 有关详细信息，请参阅 [安装 Integration Services](install-windows/install-integration-services.md)。  

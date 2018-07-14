@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教程的情况下 |Microsoft 文档
+title: Analysis Services 教程方案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 916cb59e0d6a5621e0cefe41d74b3c5d10c9caf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7694bdc07e602f9ed93cee5419e51f9c7083d26a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275773"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教程方案
   本教程基于 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，这是一家虚构的公司。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨国制造公司，生产金属复合材料的自行车，产品远销北美、欧洲和亚洲市场。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 公司总部设在华盛顿州的伯瑟尔市，雇佣了 500 名工人。 此外，在 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场中还活跃着一些地区销售团队。  
@@ -67,6 +67,6 @@ ms.locfileid: "36017632"
  Analysis Services 教程中的课程提供生成满足上述所有目标的多维数据集数据库的指南。 若要开始，请继续第一课： [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [多维建模&#40;通恒教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多维建模&#40;Adventure Works 教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

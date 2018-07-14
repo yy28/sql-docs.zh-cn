@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d23bc563a36fe894271546bd642b94dd3ab402f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a1f2e84ca089699eb0ad980cdce93ca26e9df499
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251799"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 课：使用合并复制发布数据
   在本课中，你将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建合并复制以在 **示例数据库中发布**Employee **、** SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。 本教程要求你完成上一个教程， [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)的学习。  

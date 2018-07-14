@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2e2d3940aed13a6225bceb6f8e28e53cbbfeee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214787"
 ---
 # <a name="report-data-ssrs"></a>报表数据 (SSRS)
   报表数据可以来自您的组织中的多种数据源。 设计报表的第一步是创建表示基础报表数据的数据源和数据集。 每个数据源都包含数据连接信息。 每个数据集都包含一个查询命令，该命令定义要用作来自数据源的数据的字段集。 若要展现来自各数据集的数据，请添加表、矩阵、图表或地图之类的数据区域。 处理报表时，将对数据源运行查询，并且每个数据区域都可以根据需要进行扩展，以便显示数据集的查询结果。  
   
 ##  <a name="BkMk_ReportDataTerms"></a> 术语  
- If you are unfamiliar with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
+ 如果您不熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，查看中的以下条款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*数据连接*，*嵌入的数据源*，*共享数据源*，*嵌入数据集*，*共享数据集*，*数据集查询**报表部件*，并*数据警报*。  
   
 ##  <a name="BkMk_ReportDataTips"></a> 用于指定报表数据的提示  
  使用以下信息可以设计您的报表数据策略。  
@@ -38,7 +38,7 @@ ms.locfileid: "36018115"
   
 -   **筛选数据** 可以在查询中或报表中筛选报表数据。 您可以使用数据集和查询变量来创建级联参数，并且使用户能够将成千上万种选择缩减为更为可控的数目。 您可以基于参数值或者您指定的其他值来筛选表或图表中的数据。  
   
--   **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要面向特定受众的自定义报表数据，你可以使用不同的默认值链接到相同的报表定义中，创建的报表参数集，或使用内置`UserID`字段。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
+-   **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，可以使用不同的默认值链接到相同的报表定义中，创建的报表参数集，或使用内置`UserID`字段。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 -   **数据警报** 在发布报表后，您可以基于报表数据创建警报，并且在警报满足您指定的规则时接收电子邮件。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36018115"
   
 -   了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 客户端/服务器体系结构和工具。 例如，在报表设计器中，您在使用内置数据源类型的客户端计算机上创作报表。 在您发布报表时，在报表服务器或 SharePoint 站点上必须支持数据源类型。  有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
--   数据源和数据集在报表中创作，并且从客户端创作工具发布到报表服务器或 SharePoint 站点。 可以直接在报表服务器上创建数据源。 在发布后，您可以在报表服务器上配置凭据和其他属性。 有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)和[Reporting Services 工具](../tools/reporting-services-tools.md)。  
+-   数据源和数据集在报表中创作，并且从客户端创作工具发布到报表服务器或 SharePoint 站点。 可以直接在报表服务器上创建数据源。 在发布后，您可以在报表服务器上配置凭据和其他属性。 有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)并[Reporting Services 工具](../tools/reporting-services-tools.md)。  
   
 -   您可以使用的数据源取决于所安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据扩展插件。 对数据源的支持可能会因客户端创作工具、报表服务器版本和报表服务器平台而异。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   

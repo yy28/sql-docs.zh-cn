@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: de909a10f9a0a76b8cf9c505120fa75ca1ff0a07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35ddaed3e6735e11fe3fd0e3f39435516e8bb851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177274"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>聚合函数引用（报表生成器和 SSRS）
   若要在报表中包含聚合值，您可以在表达式中使用内置聚合函数。 数值字段的默认聚合函数是 SUM。 您可以编辑表达式，并使用其他内置聚合函数或指定不同的作用域。 作用域标识要用于计算的一组数据。  
@@ -64,7 +64,7 @@ ms.locfileid: "36024515"
 |[Max](report-builder-functions-max-function.md)|返回在给定作用域上下文中由表达式指定的所有非 Null 数值的最大值。 可以使用此函数指定图表轴最大值以控制刻度。|  
 |[Min](report-builder-functions-min-function.md)|返回在给定作用域上下文中由表达式指定的所有非 Null 数值的最小值。 可以使用此函数指定图表轴最小值以控制刻度。|  
 |[StDev](report-builder-functions-stdev-function.md)|返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的标准偏差。|  
-|[Stdevp 函数](report-builder-functions-stdevp-function.md)|返回在给定作用域上下文中计算的，由表达式指定的所有非 Null 数值的总体标准偏差。|  
+|[StDevP](report-builder-functions-stdevp-function.md)|返回在给定作用域上下文中计算的，由表达式指定的所有非 Null 数值的总体标准偏差。|  
 |[Sum](report-builder-functions-sum-function.md)|返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的和。|  
 |[Union](report-builder-functions-union-function.md)|返回在给定作用域中计算的、由表达式指定的 `SqlGeometry` 类型或 `SqlGeography` 类型的所有非 Null 的空间数据值的联合。|  
 |[Var](report-builder-functions-var-function.md)|返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的方差。|  
@@ -125,7 +125,7 @@ ms.locfileid: "36024515"
   
 |**函数**|**Description**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|返回指定作用域内行数的运行计数。 `RowNumber`函数开始重新计数 1，而不是 0。|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|返回指定作用域内行数的运行计数。 `RowNumber`函数 1 开始重新计数，而不是 0。|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。|  
   
 ##  <a name="RetrievingRowCounts"></a> 检索行计数  
@@ -145,7 +145,7 @@ ms.locfileid: "36024515"
 |[Multilookup 函数](report-builder-functions-multilookup-function.md)|从包含名称/值对的数据集中返回一组名称的第一个匹配值的集合。|  
   
 ##  <a name="RetrievingPostsortValues"></a> 检索依赖排序的值  
- 下列内置函数返回给定作用域内第一个、最后一个或以前的值。 这些函数依赖数据值的排序顺序。 例如，可以使用这些函数查找页上的第一个和最后一个值来创建字典样式页眉。 使用`Previous`例如为某个特定范围内的上一行的值的一个行中的值进行比较，以通过年份值的表中查找百分比年。  
+ 下列内置函数返回给定作用域内第一个、最后一个或以前的值。 这些函数依赖数据值的排序顺序。 例如，可以使用这些函数查找页上的第一个和最后一个值来创建字典样式页眉。 使用`Previous`例如为特定作用域内的上一行的值的一个行中的值进行比较，以百分比年查出表中的年份值。  
   
 |**函数**|**Description**|  
 |------------------|---------------------|  
@@ -168,7 +168,7 @@ ms.locfileid: "36024515"
 |[InScope](report-builder-functions-inscope-function.md)|指示项的当前实例是否在指定的作用域内。|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> 检索递归级别  
- 下列内置函数检索处理递归层次结构时的当前级别。 使用与此函数的结果`Padding`在文本框中，若要控制递归组可视层次结构的缩进级别的属性。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
+ 下列内置函数检索处理递归层次结构时的当前级别。 使用与此函数的结果`Padding`在文本框中，可以控制递归组可视层次结构的缩进级别的属性。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 |函数|Description|  
 |--------------|-----------------|  

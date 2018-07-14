@@ -1,5 +1,5 @@
 ---
-title: 从安装向导 （安装程序） 安装 SQL Server 2014 |Microsoft 文档
+title: 从安装向导 （安装程序） 安装 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250617"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server 2014（安装程序）
-  本主题提供了使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序的安装向导来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的分步过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样您就不必分别安装这些组件了。 可以安装的各种组件的详细信息，请参阅[安装 SQL Server 2014](installation-for-sql-server.md)。  有关如何安装详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件的单独进行，请参阅[安装 SQL Server 2014](install-sql-server.md)。  
+  本主题提供了使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序的安装向导来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的分步过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样您就不必分别安装这些组件了。 可以安装的各种组件的详细信息，请参阅[安装 SQL Server 2014](installation-for-sql-server.md)。  有关如何安装详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件，请参阅[安装 SQL Server 2014](install-sql-server.md)。  
   
  以下附加主题介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他安装方法：  
   
@@ -36,9 +36,9 @@ ms.locfileid: "36018481"
   
 -   [使用 SysPrep 安装 SQL Server 2014](install-sql-server-using-sysprep.md)  
   
--   [创建新的 SQL Server 故障转移群集&#40;安装&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。  
+-   [创建新的 SQL Server 故障转移群集&#40;安装程序&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。  
   
--   [升级到 SQL Server 2014 使用安装向导&#40;安装&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+-   [升级到 SQL Server 2014 使用安装向导&#40;安装程序&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，请查阅 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。  
@@ -52,7 +52,7 @@ ms.locfileid: "36018481"
   
 2.  安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，请单击左侧导航区域中的“安装”，然后单击“全新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装或向现有安装添加功能”。  
   
-3.  在“产品密钥”页上，选择某个选项以指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅[版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+3.  在“产品密钥”页上，选择某个选项以指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
      若要继续，请单击 **“下一步”**。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36018481"
   
 9. 在“设置角色”页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”**，然后单击 **“下一步”** 以继续进入“功能选择”页。  
   
-10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后， **“功能说明”** 窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅[版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后， **“功能说明”** 窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)并[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
      **“所选功能的必备组件”** 窗格中将显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
@@ -114,14 +114,14 @@ ms.locfileid: "36018481"
   
     -   安全模式 - 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例选择 Windows 身份验证或混合模式身份验证。 如果选择“混合模式身份验证”，则必须为内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户提供一个强密码。  
   
-         在设备与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户设置](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+         在设备与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员 - 您必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。  
   
      使用“ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”**。  
   
     > [!IMPORTANT]  
-    >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的目录共享。 此外，将附带数据目录的 SQL Server 安装在驱动器的根文件夹或装入点上将失败。 有关详细信息，请查看[已装入卷的 SQL Server 支持。](http://support.microsoft.com/kb/819546/en-us)  
+    >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的目录共享。 此外，将附带数据目录的 SQL Server 安装在驱动器的根文件夹或装入点上将失败。 有关详细信息，请查看[已装载的卷的 SQL Server 支持。](http://support.microsoft.com/kb/819546/en-us)  
   
      有关详细信息，请参阅 [数据库引擎配置 - 数据目录](../../sql-server/install/database-engine-configuration-data-directories.md)。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36018481"
      使用“ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”**。  
   
     > [!IMPORTANT]  
-    >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的目录共享。 此外，将附带数据目录的 SQL Server 安装在驱动器的根文件夹或装入点上将失败。 有关详细信息，请查看[已装入卷的 SQL Server 支持。](http://support.microsoft.com/kb/819546/en-us)  
+    >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的目录共享。 此外，将附带数据目录的 SQL Server 安装在驱动器的根文件夹或装入点上将失败。 有关详细信息，请查看[已装载的卷的 SQL Server 支持。](http://support.microsoft.com/kb/819546/en-us)  
   
      有关详细信息，请参阅 [Analysis Services 配置 - 数据目录](../../sql-server/install/analysis-services-configuration-data-directories.md)。  
   

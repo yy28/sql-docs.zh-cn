@@ -18,13 +18,13 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9dfad0b1ed2daa45a967b074982ba80653e84bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df53d355babd082cba4b67404c91b7d4c33bec28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186684"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
   若要从未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包，请启动这些包，以便它们可在安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的远程计算机上运行。 为此，可在本地计算机上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、Web 服务或远程组件来启动远程计算机上的包。 如果尝试直接从本地计算机启动远程包，则这些包将加载到本地计算机上，并尝试在本地计算机上运行。 如果本地计算机未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，这些包将不会运行。  
@@ -41,7 +41,7 @@ ms.locfileid: "36025221"
   
 -   [使用 Web 服务或远程组件以编程方式运行远程包](#service)  
   
- 本主题中使用的几乎所有加载和保存包的方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 例外情况是执行本主题中演示的 ADO.NET 方法**sp_start_job**存储过程，其中需要仅引用`System.Data`。 在新项目中添加对 `Microsoft.SqlServer.ManagedDTS` 程序集的引用后，请使用 `using` 或 `Imports` 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
+ 本主题中使用的几乎所有加载和保存包的方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 例外情况是用于执行本主题中演示的 ADO.NET 方法**sp_start_job**存储过程，只需引用`System.Data`。 在新项目中添加对 `Microsoft.SqlServer.ManagedDTS` 程序集的引用后，请使用 `using` 或 `Imports` 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ###  <a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
  下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
@@ -169,7 +169,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  打开 Visual Studio，并使用首选的编程语言创建一个 Web 服务项目。 示例代码将该项目命名为 LaunchSSISPackageService。  
   
-2.  添加对的引用`Microsoft.SqlServer.ManagedDTS`并添加`Imports`或`using`语句的代码文件与**Microsoft.SqlServer.Dts.Runtime**命名空间。  
+2.  添加对的引用`Microsoft.SqlServer.ManagedDTS`并添加`Imports`或`using`语句的代码文件**Microsoft.SqlServer.Dts.Runtime**命名空间。  
   
 3.  将 LaunchPackage Web 服务方法的示例代码粘贴到类中。 （该示例显示了代码窗口的全部内容。）  
   
@@ -427,7 +427,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   technet.microsoft.com 上的视频：[如何使用 SQL Server 代理自动执行 SSIS 包（SQL Server 视频）](http://technet.microsoft.com/sqlserver/ff686764.aspx)  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [了解本地和远程执行之间的区别](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d9dcc09b04614851fb9c07116be84be0e249742c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: abcd7a3ba58bd80c8fb14605d76764a7357f960c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279193"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>堆（没有聚集索引的表）
   堆是不含聚集索引的表。 可在存储为堆的表上创建一个或多个非聚集索引。 数据存储于堆中并且无需指定顺序。 通常，数据最初以行插入表时的顺序存储，但 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可能会在堆中四处移动数据，以便高效地存储行；因此，无法预测数据顺序。 若要确保从堆返回的行的顺序，必须使用`ORDER BY`子句。 若要指定用于存储行的顺序，请对表创建聚集索引，以便表不是堆。  

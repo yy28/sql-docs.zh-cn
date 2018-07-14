@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d59d600d78aaf70a601382df1cacdea560db1073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: add8f27df3830fb474f849aa54e21fc4963ab115
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235257"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   合并联接转换提供了一个输出，该输出是通过使用 FULL、LEFT 或 INNER 联接将两个已排序数据集进行联接而生成的。 例如，可使用 LEFT 联接来联接包含产品信息的表与列出产品的制造国家/地区的表。 结果是一个列出所有产品及其产地国家/地区的表。  
@@ -52,7 +52,7 @@ ms.locfileid: "36018669"
  合并联接转换要求被联接的列具有匹配的元数据。 例如，不能将具有数值数据类型的列和具有字符数据类型的列相联接。 如果数据为字符串数据类型，第二个输入中列的长度必须小于或等于被合并的第一个输入中列的长度。  
   
 ## <a name="buffer-throttling"></a>缓冲区中止  
- 不再需要的值配置`MaxBuffersPerInput`属性因为 Microsoft 已进行更改，减少合并联接转换将会占用过多内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
+ 不再需要的值配置`MaxBuffersPerInput`属性因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多的内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  

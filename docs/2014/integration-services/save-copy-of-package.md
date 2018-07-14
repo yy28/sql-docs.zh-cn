@@ -1,5 +1,5 @@
 ---
-title: 保存包的副本 |Microsoft 文档
+title: 保存包的副本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b42f6861aadb98d97d1b95f688f9dcb891c01697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: acbeb63fb7e816d432609a56bf6ba72463a5ea48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260973"
 ---
 # <a name="save-copy-of-package"></a>保存包的副本
   可以使用 **中的** “保存包的副本” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的副本从 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 保存到其他位置，并根据需要修改包的保护级别。  

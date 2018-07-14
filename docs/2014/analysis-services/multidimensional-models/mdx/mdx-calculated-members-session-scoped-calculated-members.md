@@ -1,5 +1,5 @@
 ---
-title: 创建会话作用域的计算成员 (MDX) |Microsoft 文档
+title: 创建会话作用域的计算成员 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e51a2fa5d8179134ac2654f55e9da7ff5ced67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79e6466c7f514b3453f8840a72dc0028a215259b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249857"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>创建会话作用域的计算成员 (MDX)
   若要创建在整个多维表达式 (MDX) 会话中都可用的计算成员，请使用 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 语句。 直到 MDX 会话关闭才会删除使用 CREATE MEMBER 语句创建的计算成员。  

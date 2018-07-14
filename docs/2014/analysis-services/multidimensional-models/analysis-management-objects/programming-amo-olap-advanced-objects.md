@@ -1,5 +1,5 @@
 ---
-title: 编程 AMO OLAP 高级对象 |Microsoft 文档
+title: 编程 AMO OLAP 高级对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254919"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 高级对象的编程
   本主题介绍 OLAP 高级对象的分析管理对象 (AMO) 编程详细信息。 本主题包含以下各节：  
@@ -34,11 +34,11 @@ ms.locfileid: "36018310"
   
 -   [Kpi 对象](#KPI)  
   
--   [透视对象](#Persp)  
+-   [Perspective 对象](#Persp)  
   
 -   [ProactiveCaching 对象](#PC)  
   
--   [转换对象](#Transl)  
+-   [Translation 对象](#Transl)  
   
 ##  <a name="Action"></a> 操作对象  
  操作类用于在浏览多维数据集的某些区域时创建活动响应。 Action 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。 操作可为不同类型，因而也就必须根据其类型进行创建。 操作可为：  
@@ -347,7 +347,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a> 透视对象  
+##  <a name="Persp"></a> Perspective 对象  
  <xref:Microsoft.AnalysisServices.Perspective> 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。  
   
  创建 <xref:Microsoft.AnalysisServices.Perspective> 对象需要执行下列步骤：  
@@ -423,7 +423,7 @@ static public void CreatePerspectives(Cube cube)
   
 |规范|Description|  
 |-------------------|-----------------|  
-|AggregationStorage|用于聚合的存储类型。<br /><br /> 仅适用于分区。 它必须是对维度 `Regular.`|  
+|AggregationStorage|用于聚合的存储类型。<br /><br /> 仅适用于分区。 它必须是维度 `Regular.`|  
 |SilenceInterval|MOLAP 图像处理启动之前在缓存中存在的最短时间。|  
 |滞后时间|最早通知与 MOLAP 图像被破坏时刻之间的时间长度。|  
 |SilenceOverrideInterval|在接收初始通知之后，经过多长时间再无条件启动 MOLAP 图像处理。|  
@@ -467,7 +467,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a> 转换对象  
+##  <a name="Transl"></a> Translation 对象  
  Translation 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。 Translation 对象是易于编码的简单对象。 对象标题的翻译由区域设置标识符和翻译后的标题对提供。 对于任何标题，都可以启用多个翻译。 可以为多数 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象（例如维度、属性、层次结构、多维数据集、度量值组、度量值以及其他对象）提供翻译。  
   
  下面的代码示例为属性“产品名称”的名称提供了西班牙语翻译。  
@@ -488,7 +488,7 @@ static public void CreateTranslations(Database db)
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [AMO OLAP 类](amo-olap-classes.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   

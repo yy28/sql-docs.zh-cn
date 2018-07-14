@@ -1,5 +1,5 @@
 ---
-title: AggregationDesignDimension 数据类型 (ASSL) |Microsoft 文档
+title: AggregationDesignDimension 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0828fb652833b84948552ffe1802af77e0d1e83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247247"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>AggregationDesignDimension 数据类型 (ASSL)
-  定义一个基元数据类型，表示多维数据集维度之间的关系和[AggregationDesign](../objects/aggregationdesign-element-assl.md)元素。  
+  定义一个基元数据类型表示多维数据集维度之间的关系，并[AggregationDesign](../objects/aggregationdesign-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36017820"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
-|子元素|[批注](../collections/annotations-element-assl.md)，[属性](../collections/attributes-element-assl.md)， [CubeDimensionID](../properties/id-element-assl.md)|  
-|派生元素|[维度](../objects/dimension-element-assl.md)([维度](../collections/dimensions-element-assl.md)集合[AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
+|子元素|[批注](../collections/annotations-element-assl.md)，[特性](../collections/attributes-element-assl.md)， [CubeDimensionID](../properties/id-element-assl.md)|  
+|派生元素|[维度](../objects/dimension-element-assl.md)([维度](../collections/dimensions-element-assl.md)的集合[AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignDimension>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [AggregationDesign 元素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: 序列聚类分析模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 序列聚类分析模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb03523f20468a24cb901f08dd0eff9a368aa8cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208147"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 顺序分析和聚类分析算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅[挖掘模型内容 （Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -158,7 +158,7 @@ ms.locfileid: "36018093"
 ###  <a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION 表  
  NODE_DISTRIBUTION 表提供特定分类的转换和序列的概率和支持详细信息。  
   
- 将始终向转换表添加一行，表示可能的 `Missing` 值。 有关内容信息`Missing`值表示，以及它如何影响计算，请参阅[缺失值&#40;Analysis Services-数据挖掘&#41;](missing-values-analysis-services-data-mining.md)。  
+ 将始终向转换表添加一行，表示可能的 `Missing` 值。 有关内容信息`Missing`值的含义以及它如何影响计算，请参阅[缺失值&#40;Analysis Services-数据挖掘&#41;](missing-values-analysis-services-data-mining.md)。  
   
  支持和概率的计算各不相同，这取决于计算是应用于定型事例还是完成的模型。 其原因在于默认聚类分析方法 Expectation Maximization (EM) 假定任何事例均可以属于多个分类。 计算模型中事例的支持时，可以使用原始计数和原始概率。 但是，分类中任何特定序列的概率必须通过所有可能的序列和分类组合之和进行权衡。  
   
@@ -266,7 +266,7 @@ ORDER BY Count(*) DESC
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft 序列聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
  [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)  
   
   

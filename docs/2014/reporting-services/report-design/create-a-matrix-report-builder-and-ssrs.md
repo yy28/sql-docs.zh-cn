@@ -1,5 +1,5 @@
 ---
-title: 矩阵 （报表生成器和 SSRS） |Microsoft 文档
+title: 矩阵 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6eb4386030029c9f644b049a3c900e49ffc5894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0ea7d7f6512cf006ef246ad34698da3b71478b15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214657"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>矩阵（报表生成器和 SSRS）
   使用矩阵可显示分组数据和摘要信息。 您可以按行组和列组中的多个字段或表达式对数据进行分组。 矩阵所提供的功能与交叉表和透视表的功能类似。 在运行时，由于报表数据和数据区域是组合在一起的，所以矩阵在页面上沿水平和垂直方向增长。 矩阵单元中的值显示仅限于单元所属行组和列组的交集的聚合值。 您可以设置行和列的格式以突出显示要强调的数据。 您也可以包括最初隐藏详细信息数据的明细切换，然后用户便可单击该切换以根据需要显示更多或更少的详细信息。  
@@ -96,7 +96,7 @@ ms.locfileid: "36018346"
  若要为相邻列组添加一个总计列，请单击列组定义单元并使用 **“添加总计”** 命令。 将向列组旁添加一个新的静态列，包含现有行中每个数值字段的默认聚合总数。 若要更改表达式，请手动编辑默认聚合，例如 `Avg([Sales])`。 有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [聚合函数引用&#40;报表生成器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [聚合函数参考&#40;报表生成器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  
   
   

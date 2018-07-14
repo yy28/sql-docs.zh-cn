@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c934556e1b402de4ecd013bf821c17fdd36b4b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1af418d7b8c21b640d738659cc3c4603b43ad29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286793"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 选项
   如果查询中指定了 BINARY BASE64 选项，则以 base64 编码格式返回二进制数据。 默认情况下，如果未指定 BINARY BASE64 选项，则 AUTO 模式支持二进制数据的 URL 编码。 也就是说，不返回二进制数据，而返回执行查询的数据库的虚拟根目录的相对 URL 的引用。 通过使用 SQLXML ISAPI dbobject 查询，可在后续操作中利用此引用访问实际二进制数据。 查询必须提供足够的信息（如主键列），才能标识图像。  

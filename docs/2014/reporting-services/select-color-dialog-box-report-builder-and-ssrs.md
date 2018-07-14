@@ -1,5 +1,5 @@
 ---
-title: 选择颜色对话框 （报表生成器和 SSRS） |Microsoft 文档
+title: 选择颜色对话框 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185760"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>“选择颜色”对话框（报表生成器和 SSRS）
   使用 **“选择颜色”** 对话框可以为数据区域或文本框中单个或多个单元的背景指定颜色选项，或为图表指定颜色选项。  
@@ -83,6 +83,6 @@ ms.locfileid: "36025161"
   
 ## <a name="see-also"></a>请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式文本和占位符&#40;报表生成器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

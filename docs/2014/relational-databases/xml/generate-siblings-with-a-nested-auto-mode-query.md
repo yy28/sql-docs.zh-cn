@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93626d4db9c82360369e0f94bd91574e77274c4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d0248cb60068c86c641046b4d80deda1b78f95da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168218"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用嵌套 AUTO 模式查询生成同级
   以下示例显示了如何使用嵌套 AUTO 模式查询来生成同级。 生成此类 XML 的其他方式只有这一种，即使用 EXPLICIT 模式。 但是，这样做可能会很麻烦。  
@@ -70,7 +70,7 @@ FOR XML AUTO, TYPE
   
 -   查询在 `SalesOrder` 子句中指定的行集 `FROM`。 结果是包含一个或多个 <`SalesOrder`> 元素的 XML。  
   
--   指定 `AUTO` 模式和 `TYPE` 指令。 `AUTO` 模式将查询结果转换为 XML，和`TYPE`指令将结果作为返回`xml`类型。  
+-   指定 `AUTO` 模式和 `TYPE` 指令。 `AUTO` 模式将查询结果转换为 XML，并`TYPE`指令将返回结果作为`xml`类型。  
   
 -   包括两个以逗号分隔的嵌套 `SELECT` 语句。 第一个嵌套 `SELECT` 语句检索销售订单信息、表头和详细信息，第二个嵌套 `SELECT` 语句检索销售人员信息。  
   
@@ -148,7 +148,7 @@ FOR XML AUTO, TYPE
   
 -   将先前的查询添加到 `FROM` 子句。 查询结果返回为表。 注意添加的 `XmlCol` 别名。  
   
--   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 `query()`方法`xml`数据类型用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
+-   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 `query()`方法的`xml`数据类型用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

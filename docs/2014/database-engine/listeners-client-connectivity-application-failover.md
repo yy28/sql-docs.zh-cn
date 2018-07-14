@@ -1,14 +1,13 @@
 ---
-title: 可用性组侦听器、 客户端连接和应用程序故障转移 (SQL Server) |Microsoft 文档
+title: 可用性组侦听器、 客户端连接和应用程序故障转移 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197867"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)
   本主题包含有关 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
@@ -122,13 +121,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在此连接字符串示例中，客户端尝试连接到端口 1433 上名为 `AGListener` 的可用性组侦听器（如果可用性组侦听器正在侦听 1433，您也可以忽略端口）。  连接字符串具有`ApplicationIntent`属性设置为`ReadOnly`，此时使*读意向连接字符串*。  如果没有此设置，服务器将不会尝试该连接的只读路由。  
+ 在此连接字符串示例中，客户端尝试连接到端口 1433 上名为 `AGListener` 的可用性组侦听器（如果可用性组侦听器正在侦听 1433，您也可以忽略端口）。  在连接字符串有`ApplicationIntent`属性设置为`ReadOnly`，因此这*读意向连接字符串*。  如果没有此设置，服务器将不会尝试该连接的只读路由。  
   
  可用性组的主数据库处理传入的只读路由请求，并尝试找到联接到主副本并配置为进行只读路由的只读副本。  客户端收回来自主副本服务器的连接信息，并连接到确定的只读副本。  
   
  请注意，可以将应用程序意向从客户端驱动程序发送到 SQL Server 下级实例。  在此情况下，将忽略只读的应用程序意向，并且连接将照常继续。  
   
- 你可以绕过只读路由通过不将 application intent 连接属性设置为`ReadOnly`(时未指定，默认设置是`ReadWrite`在登录期间) 或通过直接连接到 SQL Server 的主副本实例而不使用可用性组侦听器名称。  如果您直接连接到只读副本，也不会发生只读路由。  
+ 你可以跳过只读路由通过不将应用程序意向连接属性设置为`ReadOnly`(不指定时，默认值是`ReadWrite`在登录期间) 或通过直接连接到 SQL Server 的主要副本实例而不使用可用性组侦听器名称。  如果您直接连接到只读副本，也不会发生只读路由。  
   
 ####  <a name="RelatedTasksApps"></a> 相关任务  
   
@@ -161,7 +160,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  对于到可用性组侦听器以及到 SQL Server 故障转移群集实例名称的单个和多子网连接，建议使用此设置。  启用此选项将添加额外的优化，即使对于单子网方案也不例外。  
   
- `MultiSubnetFailover`连接选项仅适用于使用 TCP 网络协议，并且仅支持当连接到可用性组侦听程序时且针对任何虚拟网络名称连接到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+ `MultiSubnetFailover`连接选项仅适用于 TCP 网络协议，仅当连接到可用性组侦听器时且针对任何虚拟网络名称连接到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
   
  如下所示是针对实现多子网故障转移的 ADO.NET 访问接口 (System.Data.SqlClient) 连接字符串的一个示例：  
   
@@ -210,11 +209,11 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [可用性组侦听程序简介](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx)（SQL Server AlwaysOn 团队博客）  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: StandardAction 数据类型 (ASSL) |Microsoft 文档
+title: StandardAction 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267543"
 ---
 # <a name="standardaction-data-type-assl"></a>StandardAction 数据类型 (ASSL)
   定义一个派生的数据类型，表示任何[操作](../objects/action-element-assl.md)以外的其他元素[DrillThroughAction](action-data-type-assl.md)元素或[ReportAction](reportaction-data-type-assl.md)元素。  
@@ -58,10 +58,10 @@ ms.locfileid: "36017824"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[表达式](../properties/expression-element-assl.md)|  
-|派生元素|[操作](../objects/action-element-assl.md)([操作](../collections/actions-element-assl.md)集合[多维数据集](../objects/cube-element-assl.md)或[透视](../objects/perspective-element-assl.md))|  
+|派生元素|[操作](../objects/action-element-assl.md)([操作](../collections/actions-element-assl.md)的集合[多维数据集](../objects/cube-element-assl.md)或[角度来看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.StandardAction>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.StandardAction>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

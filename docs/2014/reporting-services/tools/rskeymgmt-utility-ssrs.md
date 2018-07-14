@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -24,13 +24,13 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 46b2afdb0687586761160397b1af197cdba8cd0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214827"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
   提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  
@@ -68,7 +68,7 @@ ms.locfileid: "36017885"
  **-a**  
  使用受密码保护的备份文件中提供的副本替换现有对称密钥。 这将会更新对称密钥的所有实例。  
   
- 此参数不带值。 但是，您必须在命令行中包含其他参数，才能选择包含要应用的密钥的文件。 你可以指定自变量包括`-f`和`-p`。  
+ 此参数不带值。 但是，您必须在命令行中包含其他参数，才能选择包含要应用的密钥的文件。 您可以指定的参数包括`-f`和`-p`。  
   
  **-d**  
  删除报表服务器数据库中的所有对称密钥实例和所有加密数据。 此参数不带值。  
@@ -105,7 +105,7 @@ ms.locfileid: "36017885"
  指定要加入扩展部署的远程计算机上的管理员帐户。 如果未指定帐户，则使用当前用户的凭据。  
   
  `-v`  *密码*  
- (所需的`-u`) 指定你想要将联接到扩展部署的远程计算机上的管理员帐户的密码。  
+ (所需的`-u`) 将其联接到扩展部署的远程计算机上指定的管理员帐户的密码。  
   
  **-t**  *trace*  
  将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。  
@@ -151,7 +151,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  报表服务器扩展部署是指多个报表服务器实例共享同一报表服务器数据库的部署模型。 任何报表服务器实例，只要将其对称密钥存储在一个报表服务器数据库中，就可以使用该数据库。 例如，如果报表服务器数据库包含三个报表服务器实例的密钥信息，则所有这三个实例均被视为同一扩展部署的成员。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>联接同一台计算机上的报表服务器实例  
- 可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 未设置`-u`和`-v`自变量，如果你要加入报表服务器实例以本地方式安装。 仅当联接远程计算机中的实例时才需使用 `-u` 和 `-v` 参数。 如果指定这些参数，您将收到以下错误：“用户凭据不能用于本地连接”。  
+ 可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 未设置`-u`和`-v`参数，如果要联接的报表服务器实例以本地方式安装。 仅当联接远程计算机中的实例时才需使用 `-u` 和 `-v` 参数。 如果指定这些参数，您将收到以下错误：“用户凭据不能用于本地连接”。  
   
  以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，<`initializedinstance`> 是已经初始化以使用报表服务器数据库的实例的名称，<`newinstance`> 是要添加到部署中的实例的名称：  
   
@@ -162,7 +162,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>删除扩展部署中单个报表服务器的加密密钥  
  此示例显示如何删除报表服务器扩展部署中单个报表服务器的加密密钥。 将从报表服务器数据库中删除密钥。 一旦报表服务器实例的密钥被删除，该报表服务器实例便不再能访问该数据库中的加密数据，这就意味着已将其从扩展部署中有效删除。  
   
- 从扩展部署中删除报表服务器实例要求您指定安装 ID。 安装 ID 是 GUID，它存储在要删除其加密密钥的报表服务器实例的 RSReportserver.config 文件中。 您必须在要从扩展部署中删除的计算机上运行以下命令。 如果报表服务器作为命名实例安装，使用`-i`参数指定的实例。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
+ 从扩展部署中删除报表服务器实例要求您指定安装 ID。 安装 ID 是 GUID，它存储在要删除其加密密钥的报表服务器实例的 RSReportserver.config 文件中。 您必须在要从扩展部署中删除的计算机上运行以下命令。 如果报表服务器作为命名实例安装，可使用`-i`参数指定的实例。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
 ```  
 rskeymgmt -r <installationID>  

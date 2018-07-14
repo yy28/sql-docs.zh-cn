@@ -1,5 +1,5 @@
 ---
-title: 将事件处理程序添加到包 |Microsoft 文档
+title: 向包中添加一个事件处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68d5ed9e638c03b1a34f221ff7e61d8a0df1a454
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89240c561643d277481f6680da55f68aa582895f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265434"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>在包中添加事件处理程序
   在运行时，容器和任务引发事件。 您可以创建自定义事件处理程序，这些程序在事件被引发时运行工作流，以对事件做出响应。 例如，您可创建一个事件处理程序，在任务失败时发送电子邮件。  

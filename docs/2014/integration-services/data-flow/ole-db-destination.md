@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243087"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
@@ -49,7 +49,7 @@ ms.locfileid: "36324701"
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)。  
   
- 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任意一种快速加载访问模式：“表或视图”–“快速加载”或“表名称或视图名称变量”–“快速加载”。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程时[!INCLUDE[ssIS](../../includes/ssis-md.md)]对象模型，应将 AccessMode 属性设置为`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
+ 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任意一种快速加载访问模式：“表或视图”–“快速加载”或“表名称或视图名称变量”–“快速加载”。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程时[!INCLUDE[ssIS](../../includes/ssis-md.md)]对象模型中，应将 AccessMode 属性设置为`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
   
 > [!NOTE]  
 >  如果用 **设计器中的** “OLE DB 目标编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对话框创建 OLE DB 目标要向其插入数据的目标表，可能需要手动选择新创建的表。 当 OLE DB 访问接口（如 OLE DB Provider for DB2）自动将架构标识符添加到表名称时，需要进行手动选择。  
@@ -80,7 +80,7 @@ ms.locfileid: "36324701"
   
 -   指定批中的行数和提交大小。  
   
- 某些快速加载选项存储在 OLE DB 目标的特定属性中。 例如，FastLoadKeepIdentity 指定是否保持标识值，FastLoadKeepNulls 指定是否保持 Null 值，而 FastLoadMaxInsertCommitSize 则指定作为批提交的行数。 其他快速加载选项则存储在 FastLoadOptions 属性内的以逗号分隔的列表中。 如果 OLE DB 目标使用存储在 FastLoadOptions 和中列出的快速加载选项**OLE DB 目标编辑器**对话框中，属性的值设置为`TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`。 值 1000 指示已将目标配置为使用 1000 行组成的批。  
+ 某些快速加载选项存储在 OLE DB 目标的特定属性中。 例如，FastLoadKeepIdentity 指定是否保持标识值，FastLoadKeepNulls 指定是否保持 Null 值，而 FastLoadMaxInsertCommitSize 则指定作为批提交的行数。 其他快速加载选项则存储在 FastLoadOptions 属性内的以逗号分隔的列表中。 如果 OLE DB 目标使用存储于 FastLoadOptions 中和中列出的所有快速加载选项**OLE DB 目标编辑器**对话框中，该属性的值设置为`TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`。 值 1000 指示已将目标配置为使用 1000 行组成的批。  
   
 > [!NOTE]  
 >  目标中任何约束失败都将导致 FastLoadMaxInsertCommitSize 所定义的整批行失败。  

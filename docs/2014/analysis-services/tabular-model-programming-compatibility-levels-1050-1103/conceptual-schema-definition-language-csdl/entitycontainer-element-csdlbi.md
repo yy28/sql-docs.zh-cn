@@ -1,5 +1,5 @@
 ---
-title: EntityContainer 元素 (CSDLBI) |Microsoft 文档
+title: EntityContainer 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 3c357a61a238c10244dd9f1941cdaa9483ef9d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3e7b477c8f972f277db921c7adb6f9511efb065c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275203"
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
   EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContainer，用于定义单个数据模型中的实体集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
