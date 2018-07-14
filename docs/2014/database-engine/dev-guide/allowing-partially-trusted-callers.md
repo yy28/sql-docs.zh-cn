@@ -1,5 +1,5 @@
 ---
-title: 允许部分受信任调用方 |Microsoft 文档
+title: 允许部分受信任调用方 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ef6354d8dee0373af005d7da782bffc3a90eb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265301"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允许部分可信任的调用方
   对于公共语言运行时 (CLR) 集成而言，共享代码库是一种常见方案。其中包含用户定义类型、存储过程、用户定义函数、用户定义聚合、触发器或实用工具类的程序集通常可由另一个程序集或应用程序进行访问。 要由多个应用程序共享的代码库必须使用强名称进行签名。  
@@ -65,7 +65,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  此示例还说明如何使用“允许部分受信任的调用方”属性来指示结果集程序集是可以安全地从其他程序集进行调用的库。 与使用不安全的权限注册调用程序集相比，此方法稍微复杂一些，但要安全许多。 该方法更安全的原因是：它将调用程序集注册为安全的程序集，调用程序集将限制相关资源脱离服务器并防止对服务器的完整性造成损害。  
   
- 此示例的生成说明假定源代码文件位于名为 c:\samples 的目录中。  如果您使用另一个目录，则必须修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 [!INCLUDE[tsql](../../includes/tsql-md.md)]脚本还需要 AdventureWorks 数据库。 你可以下载 AdventureWorks 示例数据库从[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例的生成说明假定源代码文件位于名为 c:\samples 的目录中。  如果您使用另一个目录，则必须修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 [!INCLUDE[tsql](../../includes/tsql-md.md)]脚本还需要 AdventureWorks 数据库。 您可以下载的 AdventureWorks 示例数据库[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
   
  若要生成和运行该示例，将第一个代码列表粘贴到名为 ResultSet.cs 的文件中，并使用 csc /target:library ResultSet.cs 进行编译。  
   

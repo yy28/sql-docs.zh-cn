@@ -1,5 +1,5 @@
 ---
-title: QueryDefinition 元素 (ASSL) |Microsoft 文档
+title: QueryDefinition 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - QueryDefinition element
 ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8dc7a5407514bbe212aa7425fe9fc886ac3c7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcfe589a233d17f51220db3a46bc5e69b42a5bb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231877"
 ---
 # <a name="querydefinition-element-assl"></a>QueryDefinition 元素 (ASSL)
   包含关联的查询的不透明表达式[数据源](../objects/datasource-element-assl.md)中的元素[QueryBinding](../data-type/binding-data-type-assl.md)元素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36018026"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`QueryDefinition`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.QueryBinding>。  
+ 父级对应的元素`QueryDefinition`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.QueryBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

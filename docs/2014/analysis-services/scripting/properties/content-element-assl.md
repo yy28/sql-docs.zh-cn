@@ -1,5 +1,5 @@
 ---
-title: 内容元素 (ASSL) |Microsoft 文档
+title: 内容元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98d2de4a0ce93e857a63ebd9fe79dd18d0f9a86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267473"
 ---
 # <a name="content-element-assl"></a>Content 元素 (ASSL)
-  描述中的列内容[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
+  描述中的列的内容[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,24 +73,24 @@ ms.locfileid: "36017616"
 |*离散化*|该列中的值表示数组（或数桶）从连续列派生的值。|  
 |*排序*|该列的值定义有序集。|  
 |*循环*|该列的值定义循环有序集。|  
-|*概率*|列的值指定概率中包含的列的[ClassifiedColumns](../collections/columns-element-assl.md)元素的父`ScalarMiningStructureColumn`。|  
+|*概率*|列的值指定中包含的列的概率[ClassifiedColumns](../collections/columns-element-assl.md)父元素`ScalarMiningStructureColumn`。|  
 |*Variance*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的方差。|  
 |*标准偏差*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的概率标准偏差。|  
 |*ProbabilityVariance*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的概率方差。|  
 |*ProbabilityStdDev*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的标准偏差。|  
-|*支持*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的支持信息。 **注意：** 此列用作第三方挖掘算法提供标准的一部分。 **注意：** Microsoft 提供的算法没有任何使用此列。 <br /><br /> 实例时都提供 SQL Server 登录名。|  
-|*Key*|该列为键列。 **注意：** 此内容类型功能仅适用于键列，在其中`IsKey`元素设置为`True`。|  
+|*支持*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的支持信息。 **注意：** 此列作为标准的一部分提供的第三方挖掘算法提供程序。 **注意：** Microsoft 提供的算法没有任何使用此列。 <br /><br /> 实例时都提供 SQL Server 登录名。|  
+|*Key*|该列为键列。 **注意：** 此内容类型是仅适用于在其中的键列`IsKey`元素设置为`True`。|  
   
- 除了这些标准的值，挖掘算法提供程序附带[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持下表中的值。  
+ 除了这些标准值挖掘算法提供程序附带[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持下表中的值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*键序列*|该列为键列，并且该列的值表示一个事件序列。 **注意：** 此内容类型功能仅适用于键列，在其中`IsKey`元素设置为`True`。|  
-|*Key Time*|该列为键列，并且该列的值表示时间度量单位。 **注意：** 此内容类型功能仅适用于键列，在其中`IsKey`元素设置为`True`。|  
+|*键序列*|该列为键列，并且该列的值表示一个事件序列。 **注意：** 此内容类型是仅适用于在其中的键列`IsKey`元素设置为`True`。|  
+|*关键时间*|该列为键列，并且该列的值表示时间度量单位。 **注意：** 此内容类型是仅适用于在其中的键列`IsKey`元素设置为`True`。|  
 |*序列*|该列的值表示一个事件序列。|  
 |*Time*|该列的值表示时间度量单位。|  
   
- 对应的允许值为枚举`Content`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 对应的允许值的枚举`Content`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>请参阅  
  [ClassifiedColumns 元素&#40;ASSL&#41;](../collections/columns-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: 设置分区写回 |Microsoft 文档
+title: 设置分区写回 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
 - partitions [Analysis Services], writeback
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2e5bc7b9c4a09d2a5a3df82586cc9fb9f856b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c58dea5dd30f32b9b137903103448ade4678c87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250937"
 ---
 # <a name="set-partition-writeback"></a>设置分区写回
   如果对度量值组执行写启用操作，则最终用户可在浏览多维数据集数据时对其进行更改，所做的更改保存在一个称为“写回表”的单独表中，而不是多维数据集数据或源数据中。 浏览已启用写操作的分区的最终用户将看到对该分区在这个写回表中所做的全部更改的实际结果。  
@@ -64,8 +64,8 @@ ms.locfileid: "36018040"
  若要将写回数据转换为分区，请使用“转换到分区”对话框，可以通过右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可写入的分区的写回表来访问该对话框。 您将指定分区的名称，并指定是在以后为分区设计聚合，还是在创建分区时为其设计聚合。 若要在选择分区时创建聚合，则必须选择复制现有分区中的聚合设计。 这通常（但不必须）是当前的写回分区。 还可以选择在创建分区时对其进行处理。  
   
 ## <a name="see-also"></a>请参阅  
- [写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [启用回写到 OLAP 多维数据集在 Excel 2010 中的单元格级别](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [启用和保护具有 Analysis Services 写回的数据项](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [启用写操作的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [启用写回到 OLAP 多维数据集在 Excel 2010 中的单元格级别](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [启用并保护使用 Analysis Services 写回数据输入](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

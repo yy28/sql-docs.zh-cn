@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - republishing data
 - publishing [SQL Server replication], Subscribers
 - Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7348025d382a3de048906aa79fa43fe25ae35649
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 25f0e7c61ea0b45df386f5bc13a04370e278b7c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204937"
 ---
 # <a name="republish-data"></a>重新发布数据
   在重新发布模式中，发布服务器将数据发送到订阅服务器，后者将数据重新发布到任意数目的其他订阅服务器。 当发布服务器必须通过低速或昂贵的通信链接向订阅服务器发送数据时，这很有用。 如果在链接的远端有许多订阅服务器，那么使用重新发布服务器可将大量分发负荷转移到链接的远端。  
@@ -64,7 +64,7 @@ ms.locfileid: "36015861"
 |发布服务器|发布订阅服务器|订阅服务器|  
 |---------------|---------------------------|----------------|  
 |事务发布|事务订阅/事务发布|事务订阅|  
-|事务发布|事务的订阅合并发布<sup>1</sup>|合并订阅|  
+|事务发布|事务订阅/合并发布<sup>1</sup>|合并订阅|  
 |合并发布|合并订阅/合并发布|合并订阅|  
 |合并发布|合并订阅/事务发布|事务订阅|  
   

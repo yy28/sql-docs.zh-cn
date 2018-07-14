@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: dbcb69181150f1dd6003ff868e4a1b6909ee8990
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8080c3d0825104019f1e3156d39348b5676d8159
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257443"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>监视可用性组 (SQL Server)
   若要监视 AlwaysOn 可用性组的属性和状态，您可以使用以下工具。  
@@ -44,15 +43,15 @@ ms.locfileid: "36017599"
   
      [AlwaysOn 运行状况模型第 2 部分-扩展运行状况模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
-     [监视 AlwaysOn 运行状况和 PowerShell-第 1 部分： 基本 Cmdlet 概述](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+     [监视 AlwaysOn 运行状况，使用 PowerShell-第 1 部分： 基本 Cmdlet 概述](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
-     [监视 AlwaysOn 运行状况和 PowerShell-第 2 部分： 高级 Cmdlet 用法](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [监视 AlwaysOn 运行状况，使用 PowerShell-第 2 部分： 高级 Cmdlet 用法](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
-     [监视 AlwaysOn 运行状况和 PowerShell-第 3 部分： 简单的监视应用程序](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+     [监视 AlwaysOn 运行状况，使用 PowerShell-第 3 部分： 简单的监视应用程序](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
-     [监视 AlwaysOn 运行状况和 PowerShell-第 4 部分： 与 SQL Server 代理集成](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+     [监视 AlwaysOn 运行状况，使用 PowerShell-第 4 部分： 与 SQL Server 代理集成](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
   

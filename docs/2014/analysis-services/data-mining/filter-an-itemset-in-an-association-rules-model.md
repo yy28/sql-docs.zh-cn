@@ -1,5 +1,5 @@
 ---
-title: 筛选项集在关联规则模型 |Microsoft 文档
+title: 筛选项集在关联规则模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - filtering itemsets [Analysis Services]
 - Mining Model Viewer [Analysis Services], itemsets
 ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7bee45242d761b87d4cae3c112fe67a3b17509e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 150575298dd25b282af845303e3e4ae206888d1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185374"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>在关联规则模型中筛选项集
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以筛选 **关联规则查看器的** “项集” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 选项卡中显示的项集。  

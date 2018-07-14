@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b36b06422cf2e88cfd68fd640f562204a40dde6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: badabfd899f3e4bad719f5c3c731cbc768cfe645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225637"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>版本管理功能区域（主数据管理器）
   在“版本管理”功能区域中，管理员可以验证数据，查看和撤消事务，创建数据的受版本控制的副本，以及为订阅系统标记数据版本。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  

@@ -1,5 +1,5 @@
 ---
-title: SkippedLevelsColumn 元素 (ASSL) |Microsoft 文档
+title: SkippedLevelsColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SkippedLevelsColumn element
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ae469982f39e1274759eaaea992fe456330d8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c04dea8c63d71483de9a8194a15bc4e4d7be5b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196027"
 ---
 # <a name="skippedlevelscolumn-element-assl"></a>SkippedLevelsColumn 元素 (ASSL)
     
@@ -66,14 +66,14 @@ ms.locfileid: "36024425"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `SkippedLevelsColumn`元素是仅适用于父属性 (换而言之，值[用法](../properties/usage-element-dimensionattribute-assl.md)元素`DimensionAttribute`父组设置为*父*)。 `SkippedLevelsColumn` 元素包含父属性的列或属性，该列或属性存储每个成员及其父成员之间跳过的级别数。 这将允许基于父属性的父子层次结构跳过成员之间的级别。 此列或属性中包含的值必须是非负整数；否则会引发处理错误。 如果 `SkippedLevelsColumn` 元素未指定或不包含任何值，则当前成员比其父成员深一级。  
+ `SkippedLevelsColumn`元素是仅适用于父属性 (换而言之，值[用法](../properties/usage-element-dimensionattribute-assl.md)元素`DimensionAttribute`父级设置为*父*)。 `SkippedLevelsColumn` 元素包含父属性的列或属性，该列或属性存储每个成员及其父成员之间跳过的级别数。 这将允许基于父属性的父子层次结构跳过成员之间的级别。 此列或属性中包含的值必须是非负整数；否则会引发处理错误。 如果 `SkippedLevelsColumn` 元素未指定或不包含任何值，则当前成员比其父成员深一级。  
   
- 有关详细信息`DataItem`类型，包括 Analysis Services 脚本语言 (ASSL) 对象和属性表`DataItem`表，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
+ 有关详细信息`DataItem`类型，包括 Analysis Services 脚本语言 (ASSL) 对象和属性表`DataItem`表中，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 对应于的父元素`SkippedLevelsColumn`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 父级对应的元素`SkippedLevelsColumn`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
- [属性元素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Attributes 元素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [维度元素&#40;ASSL&#41;](dimension-element-assl.md)   
  [对象&#40;ASSL&#41;](objects-assl.md)  
   

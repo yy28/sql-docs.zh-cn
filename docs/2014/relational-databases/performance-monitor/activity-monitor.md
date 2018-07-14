@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1c41e6f0edb45cd7c0da1b52622818d441b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1e82e9c32d7b3c31b22fc22338733003ea7fba5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219197"
 ---
 # <a name="activity-monitor"></a>活动监视器
   活动监视器显示有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例。  
   
 ## <a name="benefits-of-activity-monitor"></a>活动监视器的优点  
- 活动监视器是一个具有以下可展开和折叠窗格的选项卡式的文档窗口：**概述**，**活动用户任务**，**资源等待**， **数据文件 I/O**，和**最近昂贵的查询**。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 还可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
+ 活动监视器是一个选项卡式的文档窗口，有以下可展开和折叠窗格：**概述**，**活动用户任务**，**资源等待**， **数据文件 I/O**，并**最近消耗资源的查询**。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 还可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
   
- 中包含的列**活动用户任务**，**资源等待**，**数据文件 I/O**，和**最近昂贵的查询**窗格中，你可以自定义显示通过以下方式：  
+ 中包含的列**活动用户任务**，**资源等待**，**数据文件 I/O**，以及**最近消耗资源的查询**窗格中，您可以自定义显示在以下方面：  
   
 1.  若要重排列的顺序，请单击列标题，并将其拖到标题功能区中的另一位置。  
   

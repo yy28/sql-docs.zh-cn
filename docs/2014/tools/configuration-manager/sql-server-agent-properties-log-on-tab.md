@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a5cfc683639e418a6fab6720fe3aa5b00f6e5767
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d69d6f159e0e1597fdc6b59c0ba4aadf80b3748
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234387"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>SQL Server 代理属性（“登录”选项卡）
   使用 **“SQL Server 代理属性”** 对话框中的 **“登录”** 选项卡，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务使用的帐户，还可以启动和停止该服务。 对帐户密码的更改立即生效，无需重新启动服务。  

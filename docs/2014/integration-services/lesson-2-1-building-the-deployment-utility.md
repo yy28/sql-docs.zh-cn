@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd219231d2c3933ac480f2a5fb3a56207db61eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225587"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步骤 1：生成部署实用工具
   在此任务中，将为 Deployment Tutorial 项目配置和生成部署实用工具。  
@@ -38,7 +38,7 @@ ms.locfileid: "36017765"
   
 4.  在“Deployment Tutorial 属性页”对话框中，展开“配置属性”，再单击“部署实用工具”。  
   
-5.  在右窗格中**部署教程属性页面**对话框框中，确认`AllowConfigurationChanges`设置为`true`，将其设置`CreateDeploymentUtility`到`true`，（可选） 更新的默认值和`DeploymentOutputPath`。  
+5.  在右窗格中**Deployment Tutorial 属性页**对话框框中，确保`AllowConfigurationChanges`设置为`true`，将`CreateDeploymentUtility`到`true`，并根据需要更新的默认值`DeploymentOutputPath`。  
   
 6.  单击“确定” 。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36017765"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 2：验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [创建部署实用工具](../../2014/integration-services/create-a-deployment-utility.md)  

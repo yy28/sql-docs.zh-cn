@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0375361f4fa794045ab51d65cadada49b73a39dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f8c467de25ce8b8aac74c659b6109c3969f9f0d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276113"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授予对 XML 架构集合的权限
   您可以授予创建 XML 架构集合的权限，也可以授予对 XML 架构集合对象的某些操作权限。  

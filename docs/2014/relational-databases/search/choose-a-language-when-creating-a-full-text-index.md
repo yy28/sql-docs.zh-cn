@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268673"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
   创建全文索引时，需要为索引列指定列级语言。 所指定语言的 [断字符和词干分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md) 将由针对相应列的全文查询使用。 如果要在创建全文索引时选择列语言，有几个事项需要注意。 这些注意事项均与全文引擎如何对文本进行词汇切分再编制其索引有关。  
@@ -40,7 +39,7 @@ ms.locfileid: "36015260"
  本节简单介绍了断字符和词干分析器，并讨论了全文搜索是如何使用列级语言的 LCID 的。  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>断字符和词干分析器简介  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本包含一系列全新的断字符和词干分析器要明显优于与以前在中可用的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本包含一系列全新的断字符和词干分析器要明显优于这些以前可在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
 >  Microsoft 自然语言组 (MS NLG) 已实现并支持这些新语言组件。  
@@ -53,7 +52,7 @@ ms.locfileid: "36015260"
   
 -   Security  
   
-     默认情况下，在启用新的断字符[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]感谢语言组件的安全性得到改进。 我们极力建议对诸如断字符和筛选器之类的外部组件进行签名以提高 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的整体安全性和可靠性。 可以按如下方式配置全文查询以验证是否对这些组件进行了签名：  
+     默认情况下已启用新的断字符[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由于语言组件的安全性得到改进。 我们极力建议对诸如断字符和筛选器之类的外部组件进行签名以提高 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的整体安全性和可靠性。 可以按如下方式配置全文查询以验证是否对这些组件进行了签名：  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -63,9 +62,9 @@ ms.locfileid: "36015260"
   
      断字符已经过重新设计，测试表明这些新断字符能够提供比以往断字符更好的语义质量。 这提高了恢复准确性。  
   
--   对于 vast 的语言来说，断字符都将纳入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]出的框中，默认情况下启用。  
+-   有关 vast 的语言列表，断字符已包含在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]来说，默认情况下启用。  
   
- 有关针对哪些语言的列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括断字符和词干分析器，请参阅[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
+ 有关哪些语言的一系列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括断字符和词干分析器，请参阅[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
   
 
   
@@ -73,7 +72,7 @@ ms.locfileid: "36015260"
  创建全文索引时，需要为每一列指定有效的语言名称。 如果语言名称有效但却未由 [sys.fulltext_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) 目录视图返回，则全文搜索将退而使用相同语系中最接近的可用语言名称（如果有）。 否则，全文搜索将退而使用非特定语言断字符。 这种回退行为可能会影响恢复的准确性。 因此，我们极力建议您在创建全文索引时为每一列指定有效且可用的语言名称。  
   
 > [!NOTE]  
->  将对可创建全文索引的所有数据类型（例如，`char` 或 `nchar`）使用 LCID。 如果你有的排序顺序`char`， `varchar`，或`text`在全文索引和查询这些列的过程中是否仍要使用类型列设置为设置不同于 LCID，LCID 所标识语言的语言。  
+>  将对可创建全文索引的所有数据类型（例如，`char` 或 `nchar`）使用 LCID。 如果你具有的排序顺序`char`， `varchar`，或`text`在全文索引和查询这些列的过程中是否仍要使用类型的列设置为不同于 LCID、 LCID 所标识语言的语言设置。  
   
 
   
@@ -100,7 +99,7 @@ ms.locfileid: "36015260"
   
 -   对于纯文本内容  
   
-     当你的内容为纯文本时，你可以将其转换为`xml`数据类型，并添加用来表示与每个特定文档或文档部分相对应的语言的语言标记。 不过，若要使此方法可行，您需要在创建全文索引之前知道相应的语言。  
+     当内容为纯文本时，您可以将其转换为`xml`数据类型，并添加用来表示与每个特定文档或文档部分相对应的语言的语言标记。 不过，若要使此方法可行，您需要在创建全文索引之前知道相应的语言。  
   
 
   
@@ -110,7 +109,7 @@ ms.locfileid: "36015260"
 
   
 ##  <a name="type"></a> 列类型对全文搜索的影响  
- 选择语言时的另一个注意事项与数据的表示方式有关。 数据未存储在`varbinary(max)`执行列，没有特殊的筛选。 而一般通过断字组件按原样传递该文本。  
+ 选择语言时的另一个注意事项与数据的表示方式有关。 不会存储在数据`varbinary(max)`执行列，任何特殊过滤。 而一般通过断字组件按原样传递该文本。  
   
  此外，断字符主要用于处理书面文本。 因此，如果文本中包含任何类型的标记（例如 HTML），则在索引和搜索过程中可能无法获得很好的语言准确性。 在这种情况下，您有两个选择 - 首选方法是只将文本数据存储在 `varbinary(max)` 列中，并指示数据的文档类型，以便对其进行筛选。 如果不能使用此方法，那么可以考虑使用非特定语言断字符，并且（如果可能）将标记数据（例如 HTML 中的“br”）添加到干扰词列表中。  
   

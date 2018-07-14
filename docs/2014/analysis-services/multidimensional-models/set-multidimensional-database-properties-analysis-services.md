@@ -1,5 +1,5 @@
 ---
-title: 设置多维数据库属性 (Analysis Services) |Microsoft 文档
+title: 设置多维数据库属性 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200227"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>设置多维数据库属性 (Analysis Services)
   可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据库设计器中配置许多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库属性。  
@@ -32,7 +32,7 @@ ms.locfileid: "36015801"
   
 -   您可以提供向用户显示的数据库的说明。 还可以查看数据库的名称，但不能进行更改。 若要更改数据库名称，必须编辑项目的属性。  
   
--   您可以提供数据库名称的翻译以及一种或多种语言的说明。 有关详细信息，请参阅[多维数据集翻译](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)，[维度翻译](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)，和[翻译&#40;Analysis Services&#41;](../translations-analysis-services.md)。  
+-   您可以提供数据库名称的翻译以及一种或多种语言的说明。 有关详细信息，请参阅[多维数据集翻译](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)，[维度翻译](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)，并[翻译&#40;Analysis Services&#41;](../translations-analysis-services.md)。  
   
 -   您可以查看并修改默认的帐户类型映射。 当一个或多个度量值使用 *ByAccount* 聚合函数时，会使用帐户类型映射。 对于每个帐户类型，您可以指定别名并修改与此帐户类型关联的默认聚合函数。 有关修改默认聚合的详细信息，请参阅 [定义半累加行为](define-semiadditive-behavior.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36015801"
 |MasterDataSource ID|用于远程分区。 有关详细信息，请参阅 [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据库属性对话框中&#40;SSAS-多维&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [数据库属性对话框&#40;SSAS-多维&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
  [配置 Analysis Services 项目属性&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

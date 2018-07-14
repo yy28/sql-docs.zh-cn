@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.newgroup.f1
 - sql12.swb.dmf.policy.f1
 - sql12.swb.dmf.policy.filter.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b753425a0fc3b2a8439d2048158e158e229d8f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5ec53eafaf8c3b44816adbd807ecc6d281e1dfd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215347"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>“创建新策略”或“打开策略”对话框，“常规”页
   使用此对话框可创建新的基于策略的管理策略，或者修改现有策略。 可以将 **“针对目标”** 和 **“服务器限制”** 区域作为筛选器，将策略限制为所有可能的目标的子集。 对于要用作目标筛选器的条件，必须在物理方面中对其进行定义，并且不能包含函数和 LIKE 运算符。 在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  

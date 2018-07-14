@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 创建计算的列 |Microsoft 文档
+title: 第 6 课： 创建计算的列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228407"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 课：创建计算列
   在本课中，您将通过添加计算列在模型中创建新数据。 计算列基于模型中的现有数据。 了解详细信息，请参阅[计算列（SSAS 表格）](tabular-models/ssas-calculated-columns.md)。  
@@ -41,9 +41,9 @@ ms.locfileid: "36017634"
   
 2.  在模型设计器中，单击“Date”表（选项卡）。  
   
-3.  右键单击**日历季度**列，，然后单击**插入列**。  
+3.  右键单击**日历季度**列中，并单击**插入列**。  
   
-     一个名为的新列**CalculatedColumn1**的左侧插入**日历季度**列。  
+     名为的新列**CalculatedColumn1**插入到的左侧**日历季度**列。  
   
 4.  在表上面的编辑栏中，键入以下公式。 自动完成功能将帮助您键入列和表的完全限定名称，并且列出可用的函数。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36017634"
     > [!NOTE]  
     >  如果收到错误提示，请验证确保公式中的列名与在[第 3 课：重命名列](rename-columns.md)中更改的列名是否匹配。  
   
-5.  该列重命名为`Month Calendar`。  
+5.  为此列重命名`Month Calendar`。  
   
  Month Calendar 计算列提供可排序的月份名称。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36017634"
   
      在您完成公式的建立后，按 Enter。  
   
-3.  重命名为列`Day of Week`。  
+3.  列重命名为`Day of Week`。  
   
 4.  单击列标题，然后将此列拖到“Day Name”列与“Day of Month”列之间。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36017634"
   
      在您完成公式的建立后，按 Enter。  
   
-4.  重命名为列`Product Subcategory Name`。  
+4.  列重命名为`Product Subcategory Name`。  
   
  Product Subcategory Name 计算列用于在 Product 表中创建一个层次结构，其中包括来自 Product Subcategory 表中 Product Subcategory Name 列的数据。 层次结构不能跨多个表。 您将在第 7 课中创建层次结构。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36017634"
   
      在您完成公式的建立后，按 Enter。  
   
-3.  重命名为列`Product Category Name`。  
+3.  列重命名为`Product Category Name`。  
   
  Product Category Name 计算列用于在 Product 表中创建一个层次结构，其中包括来自 Product Category 表中 Product Category Name 列的数据。 层次结构不能跨多个表。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36017634"
   
      在您完成公式的建立后，按 Enter。  
   
-4.  重命名为列`Margin`。  
+4.  列重命名为`Margin`。  
   
 5.  将此列拖到“Sales Amount”列与“Tax Amt”列之间。  
   

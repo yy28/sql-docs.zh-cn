@@ -1,5 +1,5 @@
 ---
-title: 要求和注意事项 Analysis Services 部署 |Microsoft 文档
+title: 要求和注意事项 Analysis Services 部署 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
 - scalability [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c77a12ddc9a5be49fbdcd531f0485bbdf5f4055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b81c5125f8d4f0e9dd2e0760a072d655f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247767"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的要求和注意事项
   解决方案的性能和可用性取决于许多因素，包括基础硬件的性能、服务器部署的拓扑结构、您的解决方案特性（例如，具有跨多个服务器分布的分区或者使用要求对关系引擎的直接访问权限的 ROLAP 存储区）、服务级别协议和您的数据模型的复杂程度。  

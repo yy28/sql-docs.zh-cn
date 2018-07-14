@@ -1,5 +1,5 @@
 ---
-title: 定义和浏览 Kpi |Microsoft 文档
+title: 定义和浏览 Kpi |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243727"
 ---
 # <a name="defining-and-browsing-kpis"></a>定义和浏览 KPI
   若要定义关键绩效指标 (KPI)，应该先定义与 KPI 关联的 KPI 名称和度量值组。 KPI 可以与所有度量值组或与单个度量值组关联。 然后定义以下 KPI 元素：  
@@ -63,15 +63,15 @@ ms.locfileid: "36015147"
   
      下图显示了多维数据集设计器的“KPI”选项卡。  
   
-     ![Kpi 选项卡，多维数据集设计器](../../2014/tutorials/media/l7-kpi-1.gif "Kpi 选项卡，多维数据集设计器")  
+     ![多维数据集设计器的 Kpi 选项卡](../../2014/tutorials/media/l7-kpi-1.gif "Kpi 选项卡，多维数据集设计器")  
   
 2.  在“KPI”选项卡的工具栏上，单击“新建 KPI”按钮。  
   
      显示窗格中将出现空白 KPI 模板，如下图所示。  
   
-     ![在显示窗格中的空白 KPI 模板](../../2014/tutorials/media/l7-kpi-2.gif "在显示窗格中的空白 KPI 模板")  
+     ![在显示窗格中的空白 KPI 模板](../../2014/tutorials/media/l7-kpi-2.gif "显示窗格中的空白 KPI 模板")  
   
-3.  在**名称**框中，键入`Reseller Revenue`，然后选择**分销商销售**中**关联度量值组**列表。  
+3.  在中**名称**框中，键入`Reseller Revenue`，然后选择**分销商销售**中**关联的度量值组**列表。  
   
 4.  在“计算工具”窗格中的“元数据”选项卡上，展开“度量值”，再展开“分销商销售”，然后将“分销商销售额”度量值拖到“值表达式”框中。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36015147"
   
 1.  在“KPI”选项卡的工具栏上单击“窗体视图”按钮，然后单击“新建 KPI”按钮。  
   
-2.  在**名称**框中，键入`Product Gross Profit Margin`，然后确认**\<所有 >** 出现在**关联度量值组**列表。  
+2.  在中**名称**框中，键入`Product Gross Profit Margin`，然后确认**\<所有 >** 将出现在**关联的度量值组**列表。  
   
 3.  在“计算工具”窗格内的“元数据”选项卡中，将“总 GPM”度量值拖到“值表达式”框中。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36015147"
   
 2.  成功完成部署后，在“KPI”选项卡的工具栏上单击“重新连接”，然后单击“浏览器视图”。  
   
-     `Product Gross Profit Margin` KPI 随即出现并显示的 KPI 值**年第 3 季度 CY 2007**和**北美**销售区域。  
+     `Product Gross Profit Margin` KPI 随即出现并显示的 KPI 值**Q3 CY 2007**并且**北美**销售区域。  
   
 3.  在“筛选器”窗格中，依次选择“维度”列表中的“产品”、“层次结构”列表中的“类别”、“运算符”列表中的“等于”和“筛选表达式”列表中的“自行车”，然后单击“确定”。  
   

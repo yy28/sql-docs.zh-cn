@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
 - Reporting Services, tutorials
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 caps.latest.revision: 54
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 980a68939fa6b2970df820f6dd202865966ad9c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f76df07880af743623692ffcff924093e0ce9ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276927"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
-  该教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建与发布报表的工具。 本教程旨在于帮助新用户了解如何查找和打开各个工具。 如果你已熟悉的工具，你可以转到其他教程，可帮助你了解使用的重要技能[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 有关其他教程的详细信息，请参阅[Reporting Services 教程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
+  该教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建与发布报表的工具。 本教程旨在于帮助新用户了解如何查找和打开各个工具。 如果你已熟悉这些工具，你可以转到其他教程，可帮助了解有关使用的重要技能[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 有关其他教程的详细信息，请参阅[Reporting Services 教程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
   
  本主题内容：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36014242"
   
 -   [Management Studio](#bkmk_managements_studio)  
   
--   [使用报表设计器和报表向导的 SQL Server Data Tools](#bkmk_ssdt)  
+-   [具有报表设计器和报表向导的 SQL Server Data Tools](#bkmk_ssdt)  
   
 -   [报表生成器](#bkmk_report_builder)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36014242"
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>启动 Reporting Services 配置管理器  
   
-1.  在 Windows 开始屏幕中，键入`reporting`并在**应用**搜索结果中，单击**Reporting Services 配置管理器**。  
+1.  在 Windows 开始屏幕上，键入`reporting`然后在**应用程序**搜索结果中，单击**Reporting Services 配置管理器**。  
   
      ![正在启动的 Reporting Services 配置管理器](../media/bi-ssrs-configmanager-win8-startscreen.gif "正在启动的 Reporting Services 配置管理器")  
   
@@ -91,9 +91,9 @@ ms.locfileid: "36014242"
  **后续步骤：**[配置和管理报表服务器（SSRS 本机模式）](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ##  <a name="bkmk_report_manager"></a> 报表管理器 （本机模式）  
- 使用[报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)可以设置权限、 管理订阅和计划，并使用报表。 也可以使用报表管理器来查看报表。  
+ 使用[报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)可设置权限、 管理订阅和计划，以及处理报表。 也可以使用报表管理器来查看报表。  
   
- **安装：** 报表管理器你安装时安装[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]本机模式：[安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **安装：** 安装时安装报表管理器[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]本机模式：[安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  必须拥有足够的权限才能打开报表管理器（最初，只有本地 Administrators 组的成员拥有访问报表管理器功能的权限）。 报表管理器根据当前用户的角色分配提供不同的页和选项。 没有权限的用户将得到一个空页。 拥有查看报表权限的用户将获得链接，用户点击这些链接可以打开报表。 若要了解有关权限的详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)。  
   
@@ -105,16 +105,16 @@ ms.locfileid: "36014242"
   
 3.  报表管理器将在浏览器窗口中打开。 引导页为主文件夹。 根据权限，您可能看到引导页中的其他文件夹、指向报表的超链接和资源文件。 也可能在工具栏上看到其他按钮和命令。  
   
-4.  如果你在本地报表服务器上运行报表管理器，请参阅[为本地管理配置本机模式报表服务器&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+4.  如果本地报表服务器上运行报表管理器，请参阅[为本地管理配置本机模式报表服务器&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
- **下一步：** [配置报表管理器&#40;纯模式&#41;](../report-server/configure-web-portal.md)。  
+ **下一步：** [配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)。  
   
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
  报表服务器管理员可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理报表服务器及其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件服务器。 有关详细信息，请参阅 [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)。  
   
 #### <a name="to-start-sql-server-management-studio"></a>启动 SQL Server Management Studio  
   
-1.  从 Windows 开始屏幕类型`sql server`并在**应用**搜索结果中，单击**SQL Server Management Studio**。  
+1.  从 Windows 开始屏幕上，键入`sql server`然后在**应用程序**搜索结果中，单击**SQL Server Management Studio**。  
   
      ![Windows“开始”屏幕中的 Managment Studio](../media/bi-ssms-win8-startscreen.gif "Windows“开始”屏幕中的 Managment Studio")  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36014242"
   
      **Or**  
   
-     单击**启动**，指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，然后单击**SQL Server Data Tools (SSDT)**。  
+     单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，然后单击**SQL Server Data Tools (SSDT)**。  
   
 2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
   
@@ -153,12 +153,12 @@ ms.locfileid: "36014242"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ，并显示 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 起始页。 解决方案资源管理器提供用来创建报表和数据源的类别。 可以使用这些类别来创建新的报表和数据源。 创建报表定义时将显示选项卡式窗口。 选项卡式窗口包括“数据”、“布局”和“预览”。  
   
- 若要掌握有关创建报表的入门知识，请参阅[创建基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。 若要了解有关可以在报表设计器中使用的查询设计器的详细信息，请参阅[报表设计器 SQL Server Data Tools 中的查询设计工具&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)。  
+ 若要掌握有关创建报表的入门知识，请参阅[创建基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。 若要了解有关您可以使用报表设计器中的查询设计器的详细信息，请参阅[报表设计器 SQL Server Data Tools 中的查询设计工具&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)。  
   
 ##  <a name="bkmk_report_builder"></a> 报表生成器  
- 使用[报表生成器&#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)若要创建报表中的[!INCLUDE[msCoName](../../includes/msconame-md.md)]Office 类似的创作环境。 您可以自定义和更新所有的现有报表，无论这些报表是在报表设计器中还是在早期版本的报表生成器中创建的。 请与管理员联系，以获得在本地计算机上安装报表生成器所要运行的 ReportBuilder3.msi 文件的位置。  
+ 使用[报表生成器&#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)中创建报表[!INCLUDE[msCoName](../../includes/msconame-md.md)]类似 Office 的创作环境。 您可以自定义和更新所有的现有报表，无论这些报表是在报表设计器中还是在早期版本的报表生成器中创建的。 请与管理员联系，以获得在本地计算机上安装报表生成器所要运行的 ReportBuilder3.msi 文件的位置。  
   
- **安装：** 单击-通过以下任一方式安装后的报表生成器版本[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]本机模式或 SharePoint 模式。 报表生成器的独立版是一个单独的下载包。  请参阅[安装报表生成器的独立版本&#40;报表生成器&#41;](../install-windows/install-report-builder.md)  
+ **安装：** 单击-后版本的报表生成器安装通过[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]本机模式或 SharePoint 模式。 报表生成器的独立版是一个单独的下载包。  请参阅[安装报表生成器的独立版本&#40;报表生成器&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>从报表管理器启动 ClickOnce 版报表生成器（本机模式）  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36014242"
   
 1.  在 Web 浏览器的地址栏中，键入以下 URL：  
   
-     **http://\<servername > /reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
+     **http://\<服务器名 > /reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
   
 2.  按 Enter。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "36014242"
   
 ## <a name="see-also"></a>请参阅  
  [安装、 卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
- [Reporting Services SharePoint 模式安装&#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-reporting-services-sharepoint-mode.md)   
+ [Reporting Services SharePoint 模式下安装&#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-reporting-services-sharepoint-mode.md)   
  [Reporting Services 报表服务器](../reporting-services-report-server.md)   
  [查询设计工具在报表设计器的 SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Reporting Services 教程 (SSRS)](../reporting-services-tutorials-ssrs.md)  

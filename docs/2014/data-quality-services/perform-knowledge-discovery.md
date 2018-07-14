@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
 - sql12.dqs.kb.viewselectcd.f1
@@ -18,13 +18,13 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 638df34ff6b4fd96df3ca76e860b336b00784415
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 172dfee131d4452e2d3adae7a3e8854591a8c0a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206177"
 ---
 # <a name="perform-knowledge-discovery"></a>执行知识发现
   本主题描述如何通过知识发现生成知识库。 在发现过程中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 将通过计算机辅助进程对示例数据源中的数据进行分析，并且将获取的知识添加到知识库中。 可以在知识发现活动的 **“管理域值”** 步骤中或在域管理活动中修改和增强此知识。  

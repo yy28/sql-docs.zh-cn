@@ -1,5 +1,5 @@
 ---
-title: 数据浏览选项对话框 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 数据浏览选项对话框 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dataexplorationoptionsdialog.f1
 helpviewer_keywords:
 - Data Exploration Options dialog box
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb1785ea312e588c9c2246af6f33c8cebc7905b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 956c8ad82cc1675dd2e5838327a8300c3ffb22b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254969"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>“数据浏览选项”对话框（Analysis Services - 数据挖掘）
   可以使用 **中的** “数据浏览选项” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为 **“浏览数据”** 对话框设置抽样和图表选项。 通过单击 **“浏览数据”** 对话框中的 **“抽样选项”** ，可以显示 **“数据浏览选项”** 对话框。  

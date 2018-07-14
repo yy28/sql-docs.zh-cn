@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 7316d93d197a64b7b9f7a7f6675e92c7cc5be613
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 17424e5a629a4161760c35d5dcc24b80aaf9c2bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205837"
 ---
 # <a name="database-engine-powershell-reference"></a>数据库引擎 PowerShell 参考
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包含一组 Windows PowerShell 2.0 cmdlet，用于在[!INCLUDE[ssDE](../includes/ssde-md.md)]中执行常见操作。 此外，查询表达式和统一资源名称 (URN) 可以转换为 SQL Server PowerShell 路径，或用于指定 [!INCLUDE[ssDE](../includes/ssde-md.md)]中的一个或多个对象。  
@@ -38,7 +38,7 @@ ms.locfileid: "36015945"
 |评估数据库引擎对象是否符合基于策略的管理策略。|[Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>有关其他 Cmdlet 的信息  
- `Encode-Sqlname`和`Decode-Sqlname`cmdlet 帮助你指定包含 PowerShell 路径中不支持的字符的 SQL Server 标识符。 有关详细信息，请参阅 [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md)。  
+ `Encode-Sqlname`和`Decode-Sqlname`cmdlet 帮助指定包含 PowerShell 路径中不支持的字符的 SQL Server 标识符。 有关详细信息，请参阅 [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md)。  
   
  使用 `Convert-UrnToPath` cmdlet 将[!INCLUDE[ssDE](../includes/ssde-md.md)]对象的统一资源名称转换为 SQL Server PowerShell 提供程序的路径。 有关详细信息，请参阅 [Convert URNs to SQL Server Provider Paths](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)。  
   

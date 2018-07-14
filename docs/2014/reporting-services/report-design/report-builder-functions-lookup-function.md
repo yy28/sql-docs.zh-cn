@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e2617d9704db585e4f8ac3558941a957876fc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222907"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函数（报表生成器和 SSRS）
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  
@@ -42,7 +42,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如， `=Fields!ProductID.Value`。  
   
  *result_expression*  
- (`Variant`) 计算数据集中的行的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如， `=Fields!ProductName.Value`。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如， `=Fields!ProductName.Value`。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Products”。  
@@ -51,9 +51,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  返回`Variant`，或`Nothing`如果没有匹配项。  
   
 ## <a name="remarks"></a>Remarks  
- 使用`Lookup`从指定的名称/值对的数据集中检索值 1 对 1 关系的情况。 例如，对于表中的 ID 字段，可以使用 `Lookup` 从未绑定到该数据区域的数据集检索对应的名称字段。  
+ 使用`Lookup`从名称/值对的指定数据集中检索值的 1 对 1 关系。 例如，对于表中的 ID 字段，可以使用 `Lookup` 从未绑定到该数据区域的数据集检索对应的名称字段。  
   
- `Lookup` 执行以下任务：  
+ `Lookup` 执行以下操作：  
   
 -   计算当前作用域中源表达式的结果。  
   
@@ -63,7 +63,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   返回结果表达式值。  
   
- 若要为单个名称或键字段检索多个值（具有 1 对多关系），请使用[LookupSet 函数（报表生成器和 SSRS）](report-builder-functions-lookupset-function.md)。 若要调用`Lookup`获取的值集，可使用[Multilookup 函数&#40;报表生成器和 SSRS&#41;](report-builder-functions-lookup-function.md)。  
+ 若要为单个名称或键字段检索多个值（具有 1 对多关系），请使用[LookupSet 函数（报表生成器和 SSRS）](report-builder-functions-lookupset-function.md)。 若要调用`Lookup`对于一组值，使用[Multilookup 函数&#40;报表生成器和 SSRS&#41;](report-builder-functions-lookup-function.md)。  
   
  存在下列限制：  
   
@@ -75,7 +75,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   源、目标和结果表达式不能包含对报表或组变量的引用。  
   
--   `Lookup` 不能用作表达式以下报表项：  
+-   `Lookup` 不能用作表达式的以下报表项：  
   
     -   数据源的动态连接字符串。  
   

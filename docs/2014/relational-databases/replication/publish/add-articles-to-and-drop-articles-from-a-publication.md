@@ -1,5 +1,5 @@
 ---
-title: 将项目添加到和从发布 (SQL Server Management Studio) 中删除文章 |Microsoft 文档
+title: 添加和删除项目从发布 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
 - deleting articles
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea3c32da50b3ec5e2a2eb3d3bf58fad1e0323f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: da55583a9d883d14a7baffea7ecf72a0128e196e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260373"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>将项目添加到发布中以及从发布中删除项目 (SQL Server Management Studio)
   在新建发布向导中创建项目时，首次将其添加到发布中。 有关使用此向导的详细信息，请参阅[创建发布](create-a-publication.md)。  

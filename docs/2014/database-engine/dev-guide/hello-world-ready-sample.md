@@ -1,5 +1,5 @@
 ---
-title: Hello World 准备示例 |Microsoft 文档
+title: Hello World Ready 示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4fed72859ff91a9a0056529893c7f5664fe6254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235597"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 示例
   Hello World Ready 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单且全球通用存储过程所涉及的基本操作。 不用更改全球通用组件的源代码就可以将它轻松地本地化为全世界各个市场的各种语言。 此示例还说明了如何通过输出参数和记录返回由存储过程动态构建并返回到客户端的数据。此示例与 Hello World 示例基本相同，只不过在对此应用程序进行本地化时，此示例更容易且更安全。 更改已本地化的文本需要执行下列操作：  
@@ -65,7 +65,7 @@ ms.locfileid: "36018934"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，你必须`ALTER SETTINGS`服务器级别权限，该权限的成员隐式具有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36018934"
   
 3.  在 c:\MySample 中，创建 `HelloWorld.vb`（用于 Visual Basic 示例）或 `HelloWorld.cs`（用于 C# 示例），并将相应的 Visual Basic 或 C# 示例代码（如下所示）复制到该文件中。  
   
-4.  在 c:\MySample，创建文件`messages.resx`并将示例代码复制到文件。  
+4.  在 c:\MySample，创建文件`messages.resx`和示例代码复制到的文件。  
   
-5.  在 c:\MySample，创建文件`messages.de.resx`将文件保存`messages.resx`作为`messages.de.resx`后更改的行  
+5.  在 c:\MySample，创建在文件`messages.de.resx`将文件保存`messages.resx`作为`messages.de.resx`后将行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36018934"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  在 c:\MySample，创建文件`messages.es.resx`将文件保存`messages.resx`作为`messages.es.resx`后更改的行  
+6.  在 c:\MySample，创建在文件`messages.es.resx`将文件保存`messages.resx`作为`messages.es.resx`后将行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36018934"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  在 c:\MySample，创建文件`messages.fr.resx`将文件保存`messages.resx`作为`messages.fr.resx`后更改的行  
+7.  在 c:\MySample，创建在文件`messages.fr.resx`将文件保存`messages.resx`作为`messages.fr.resx`后将行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36018934"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  在 c:\MySample，创建文件`messages.fr-FR.resx`将文件保存`messages.resx`作为`messages.fr-FR.resx`后更改的行  
+8.  在 c:\MySample，创建在文件`messages.fr-FR.resx`将文件保存`messages.resx`作为`messages.fr-FR.resx`后将行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36018934"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. 在 c:\MySample，创建文件`messages.it.resx`将文件保存`messages.resx`作为`messages.it.resx`后更改的行  
+9. 在 c:\MySample，创建在文件`messages.it.resx`将文件保存`messages.resx`作为`messages.it.resx`后将行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36018934"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. 在 c:\MySample，创建文件`messages.ja.resx`将文件保存`messages.resx`作为`messages.ja.resx`后更改的行  
+10. 在 c:\MySample，创建在文件`messages.ja.resx`将文件保存`messages.resx`作为`messages.ja.resx`后将行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36018934"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]测试到文件的命令脚本并将其保存为`test.sql`示例目录中。  
+16. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
   
 17. 使用以下命令执行测试脚本：  
   

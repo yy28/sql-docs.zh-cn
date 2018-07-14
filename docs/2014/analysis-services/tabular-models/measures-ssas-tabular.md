@@ -1,5 +1,5 @@
 ---
-title: 度量值 (SSAS 表格) |Microsoft 文档
+title: 度量值 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d5690f488c5cb0119c62be819e1cfece41d2fda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217997"
 ---
 # <a name="measures-ssas-tabular"></a>度量值（SSAS 表格）
   在表格模型中，度量值是使用 DAX 公式创建的计算，以便用于报表客户端中。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  

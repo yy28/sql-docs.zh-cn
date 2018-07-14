@@ -1,5 +1,5 @@
 ---
-title: 报表管理器 URL （SSRS 本机模式） |Microsoft 文档
+title: 报表管理器 URL （SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.reportmanagervirtualdirectory.f1
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1469d877b992638119ad60bafadc1023a4ed5fc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 363978d6b8f86610a5fb64c65cb6a53ca6d059ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220707"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>报表管理器 URL（SSRS 本机模式）
-  使用报表管理器 URL 页可配置或修改用于访问报表管理器的 URL。 默认情况下，报表管理器 URL 继承报表服务器 Web 服务 URL 的前缀、IP 地址和端口。 这是因为报表管理器提供了对于运行在相同报表服务器服务中的 Web 服务的前端访问。 如果您正在隔离服务应用程序并使用报表管理器访问其他计算机上的报表服务器 Web 服务，则必须编辑 RSReportServer.config 文件以将报表管理器指向不同的实例。 有关配置报表管理器连接到远程报表服务器的详细信息，请参阅[Reporting Services 配置管理器&#40;纯模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+  使用报表管理器 URL 页可配置或修改用于访问报表管理器的 URL。 默认情况下，报表管理器 URL 继承报表服务器 Web 服务 URL 的前缀、IP 地址和端口。 这是因为报表管理器提供了对于运行在相同报表服务器服务中的 Web 服务的前端访问。 如果您正在隔离服务应用程序并使用报表管理器访问其他计算机上的报表服务器 Web 服务，则必须编辑 RSReportServer.config 文件以将报表管理器指向不同的实例。 有关配置报表管理器连接到远程报表服务器的详细信息，请参阅[Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
  如果您打算将报表服务器配置为在 SharePoint 集成模式下运行，请不要创建报表管理器 URL。 在 SharePoint 集成模式下运行的报表服务器不支持报表管理器。 如果报表管理器已存在一个 URL，则将报表服务器配置为在 SharePoint 集成模式下运行后，该 URL 将不可用。  
   
- 若要打开此页，请启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 和单击**报表管理器 URL**在导航窗格中。 有关如何启动配置管理器的详细信息，请参阅[Reporting Services 配置管理器&#40;纯模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开此页上，启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器并单击**报表管理器 URL**在导航窗格中。 有关如何启动配置管理器的详细信息，请参阅[Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 > [!NOTE]  
->  如果报表管理器未启用，则将无法设置此页上的选项。 有关启用报表管理器的详细信息，请参阅[Reporting Services 配置管理器&#40;纯模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+>  如果报表管理器未启用，则将无法设置此页上的选项。 有关启用报表管理器的详细信息，请参阅[Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ## <a name="options"></a>“常规”  
  **虚拟目录**  
@@ -47,7 +47,7 @@ ms.locfileid: "36017666"
   
 ## <a name="see-also"></a>请参阅  
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [在配置文件中的 Url &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
+ [配置文件中的 Url &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

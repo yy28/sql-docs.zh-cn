@@ -1,5 +1,5 @@
 ---
-title: 条件元素 (ASSL) |Microsoft 文档
+title: 条件元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Condition element
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2edc8a241e92987c4cde54c58576c60abb257c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b4b15f7b354b858ba1dfd91fff18963b288615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212327"
 ---
 # <a name="condition-element-assl"></a>Condition 元素 (ASSL)
-  包含的多维表达式 (MDX) 表达式，它确定是否[操作](../objects/action-element-assl.md)父元素将应用到目标。  
+  包含多维表达式 (MDX) 表达式，用于确定是否[操作](../objects/action-element-assl.md)父元素应用于目标。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36015526"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Condition` 包含计算结果为布尔值的 MDX 表达式。 如果表达式返回`True`，则`Action`适用于中指定的目标[目标](target-element-assl.md)元素。 否则，不应用 `Action`。  
+ `Condition` 包含计算结果为布尔值的 MDX 表达式。 如果该表达式返回`True`，则`Action`适用于中指定的目标[目标](target-element-assl.md)元素。 否则，不应用 `Action`。  
   
- 对应于的父元素`Condition`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
+ 父级对应的元素`Condition`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

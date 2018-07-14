@@ -1,5 +1,5 @@
 ---
-title: 数据源选择页 （报表管理器） |Microsoft 文档
+title: 数据源选择页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800b6fdbe63ca1c7adb5f79367e317a4a2a62167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 528e30c885150e3d9fc422449987ba211e77161b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256476"
 ---
 # <a name="data-source-selection-page-report-manager"></a>“选择数据源”页（报表管理器）
   使用“选择数据源”页，可以选择用于报表或报表模型的现有共享数据源项， 还可以选择其他数据源。 若要查看数据源类型或连接字符串，必须导航到共享数据源并打开属性页。  

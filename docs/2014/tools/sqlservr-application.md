@@ -1,5 +1,5 @@
 ---
-title: sqlservr 应用程序 |Microsoft 文档
+title: sqlservr 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
 - command prompt [SQL Server], pausing/resuming instance of SQL Server
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: be73654766cc1ab6418ca88bbc83d332f1aa144b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f5c43b08b444813f64eb94a751a633a7a90d20de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214287"
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
   **sqlservr** 应用程序可以在命令提示符下启动、停止、暂停和继续 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.historycleanup.f1
 helpviewer_keywords:
 - History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5961b946e660e20088b8319590435d31336ef1d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2936fe8e1cc5a8d85ba0e03c1a3e8188fa28d156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242519"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>“清除历史记录”任务（维护计划）
   使用 **“清除历史记录”** 对话框，可以放弃 msdb 数据库表中旧的历史信息。 此任务支持删除备份和还原历史记录、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录和维护计划历史记录。  

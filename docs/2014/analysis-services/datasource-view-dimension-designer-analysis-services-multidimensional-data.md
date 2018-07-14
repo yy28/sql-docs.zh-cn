@@ -1,5 +1,5 @@
 ---
-title: 数据源视图 （维度结构选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 数据源视图 （维度结构选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246157"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>数据源视图（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“数据源视图”** 窗格，查看与所选维度关联的数据源视图中的表和列。 使用此窗格，可以通过将列从 **“数据源视图”** 窗格中拖动到 **“属性”** 窗格或 **“层次结构和级别”** 窗格中，来创建特性、成员属性、层次结构和级别。  
@@ -30,7 +30,7 @@ ms.locfileid: "36016983"
  **数据源视图**  
  显示与所选维度相关联的数据源视图。  
   
- **（移动角度来看）**  
+ **（移动视点）**  
  单击窗格右下角滚动条之间的位置，即可选择要查看的“数据源视图”窗格区域。  
   
 ## <a name="diagram-context-menu"></a>关系图上下文菜单  
@@ -72,7 +72,7 @@ ms.locfileid: "36016983"
  **编辑数据源视图**  
  显示与维度关联的数据源视图的**数据源视图设计器**。 有关**数据源视图设计器**的详细信息，请参阅[数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)。  
   
- **显示在数据源视图**  
+ **数据源视图中显示**  
  通过选择下列选项之一，可以在“数据源视图”窗格的以下查看模式之间切换：  
   
 -   关系图  

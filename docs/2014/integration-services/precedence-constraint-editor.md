@@ -1,5 +1,5 @@
 ---
-title: 优先约束编辑器 |Microsoft 文档
+title: 优先约束编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1753bb3469b5909bfd74728eca1f3a49fd4f2ba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 573ce289579e0d239585f5f4b0f6292a6145b0ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209347"
 ---
 # <a name="precedence-constraint-editor"></a>优先约束编辑器
   可以使用 **“优先约束编辑器”** 对话框配置优先约束。  

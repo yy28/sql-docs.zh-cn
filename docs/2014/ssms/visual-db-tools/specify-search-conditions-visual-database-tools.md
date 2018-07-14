@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - choosing search criteria
 - search conditions [SQL Server], specifying
 - search criteria [SQL Server], specifying conditions
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f912c7998bf2922ad2967376ba51b752d012bfb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 13936176974b38e9a69da0bf6a38c95b81700bc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202067"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜索条件 (Visual Database Tools)
   通过指定搜索条件可以指定在查询中出现的数据行。 例如，若要查询 `employee` 表，则可以指定仅查找在特定区域工作的雇员。  
@@ -51,7 +51,7 @@ ms.locfileid: "36016024"
  查询和视图设计器通过添加或修改 WHERE 子句来更新 [SQL 窗格](sql-pane-visual-database-tools.md) 中的 SQL 语句。  
   
 ## <a name="see-also"></a>请参阅  
- [规则用于输入搜索值&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [输入规则搜索值&#40;可视化数据库工具&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

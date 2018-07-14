@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.tutorialstart.ssms.f1
 helpviewer_keywords:
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: db49f89a454fe5b8d736353fd5b212ac0a65c2c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1d0c5e3193c343e43a01b64e5197fdd1d73b2e9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238157"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>教程：SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 教程向您介绍用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的图形界面。 此外，它还允许您部署、监视和升级应用程序使用的数据层组件，如数据库和数据仓库。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 还提供用于编辑和调试脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 语言编辑器。  

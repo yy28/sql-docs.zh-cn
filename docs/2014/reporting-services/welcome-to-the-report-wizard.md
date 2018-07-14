@@ -1,5 +1,5 @@
 ---
-title: 欢迎使用报表向导 |Microsoft 文档
+title: 欢迎使用报表向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.welcome.f1
 ms.assetid: d78d0bfb-143e-4442-99c3-8e7cfef06c25
 caps.latest.revision: 23
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 62343498dd188ddacfa545bf0befba70cc0a61d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d60abea8c0842a69eb6786b012afae5c420e943
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268073"
 ---
 # <a name="welcome-to-the-report-wizard"></a>欢迎使用报表向导
   使用报表向导的此页可以查看要执行的任务的摘要信息。  

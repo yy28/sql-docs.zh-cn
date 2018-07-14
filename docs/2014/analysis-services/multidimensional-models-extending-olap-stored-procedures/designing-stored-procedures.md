@@ -1,5 +1,5 @@
 ---
-title: 设计存储的过程 |Microsoft 文档
+title: 设计存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 ms.assetid: af4e7bd5-041b-4a40-9942-0ef6a3af46c6
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 245d02d18fdaf9fdce5d1b63b965525642bebcc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8311f5a4762e016fc0fae7d5594a3453aac601fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271933"
 ---
 # <a name="designing-stored-procedures"></a>设计存储过程
   管理对象模型 Analysis Management Objects (AMO) 和面向客户端的对象模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® 数据对象（多维）(ADO MD) 在存储过程中都可用。  

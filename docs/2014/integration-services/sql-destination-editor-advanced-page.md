@@ -1,5 +1,5 @@
 ---
-title: SQL 目标编辑器 （高级页） |Microsoft 文档
+title: SQL 目标编辑器 （高级页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f793be2507c1d390cbf955cce200b8edcf4d8bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fa256ff2a160572f91ea4d885d572341f4357b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207717"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目标编辑器（“高级”页）
   可以使用 **“SQL 目标编辑器”** 对话框的 **“高级”** 页指定大容量插入高级选项。  

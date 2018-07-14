@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
 - SSIS packages, connections
@@ -23,13 +23,13 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 caps.latest.revision: 90
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa0a870cd1a5e48849b81d392f3d34bdeb7d308e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a226221234b6668a50f6feef2e61e3b5a38f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273283"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -55,7 +55,7 @@ ms.locfileid: "36017993"
  为了创建这些连接， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用了连接管理器，如下一部分所述。  
   
 ## <a name="connection-managers"></a>连接管理器  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包括`ConnectionString`在设计时; 在运行时设置的属性，创建物理连接的连接字符串属性中使用的值。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包括`ConnectionString`在设计时; 在运行时设置的属性，创建物理连接使用连接字符串属性中的值。  
   
  包可以使用一种连接管理器类型的多个实例，您可以在每个实例上设置这些属性。 在运行时，一种连接管理器类型的每个实例创建具有不同属性的连接。  
   

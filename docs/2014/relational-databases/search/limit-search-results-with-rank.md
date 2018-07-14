@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row ranking [full-text search]
 - relevance ranking values [full-text search]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cef510acee74d2ce261a1e000761f214571c16ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4452b79dda89affda2d964b1d1dc8fb844a3f82b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233087"
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 函数返回名为 RANK 的列，该列包含从 0 到 1000 的序数值（排名值）。 这些值用来根据返回的行与选择条件的匹配程度对这些行进行排名。 排名值仅表示结果集中各行相关性的相对顺序，值越小，表示相关性越低。 实际的值并不重要，并且每次运行查询时实际值通常都不同。  
@@ -145,7 +144,7 @@ GO
 ### <a name="rank-computation-issues"></a>排名计算问题  
  计算排名的过程，取决于一系列因素。  不同语言的断字符对文本进行的词汇切分也不同。 例如，字符串“dog-house”可以被一种断字符断为“dog”和“house”而被另一种断字符断为“dog-house”。 这意味着匹配和排名将根据所指定语言而有所不同，因为不仅词不同，而且文档长度也不同。 文档长度的差异可能会影响所有查询的排名。  
   
- 统计信息，如`IndexRowCount`可能差别很大。 例如，如果一个目录的主索引有二十亿行，那么对一个新文档的索引将被编制为内存中的中间索引，而基于该内存中索引内的文档数对该文档的排名可能与主索引中的文档排名不同。 因此，建议在完成产生大量要创建索引或重新创建索引的行的任意填充后，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这些索引合并为一个主索引。 全文引擎也会根据参数（例如中间索引的数目和大小）自动合并索引。  
+ 统计信息，如`IndexRowCount`差异很大。 例如，如果一个目录的主索引有二十亿行，那么对一个新文档的索引将被编制为内存中的中间索引，而基于该内存中索引内的文档数对该文档的排名可能与主索引中的文档排名不同。 因此，建议在完成产生大量要创建索引或重新创建索引的行的任意填充后，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这些索引合并为一个主索引。 全文引擎也会根据参数（例如中间索引的数目和大小）自动合并索引。  
   
  `MaxOccurrence` 值被规范化到 32 个范围的其中一个内。 举例来说，这意味着 50 个字长的文档与 100 个字长的文档的处理方式相同。 下面是用于规范化的表。 由于这两个文档的长度位于相邻表值 32 与 128 之间的范围内，因此将认为它们具有相同的有效长度 128 (32 < `docLength` <= 128)。  
   

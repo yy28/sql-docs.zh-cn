@@ -1,5 +1,5 @@
 ---
-title: 使用数据源视图设计器 (Analysis Services) 中的关系图 |Microsoft 文档
+title: 使用的关系图中的数据源视图设计器 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.diagramorganizerpane.f1
 - sql12.asvs.dsvdesigner.findtable.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - diagrams [Analysis Services]
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b1a5a11bd381687612641d218c9a4dd04b26c8cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4bf8063097028c39dce47f2be36520b675679dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211857"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>使用数据源视图设计器中的关系图 (Analysis Services)
   数据源视图 (DSV) 关系图是 DSV 中对象的直观表示形式。 您可以交互使用该关系图以添加、隐藏、删除或修改特定对象。 还可以对同一 DSV 创建多个关系图以特别关注对象的某个子集。  
@@ -50,16 +50,16 @@ ms.locfileid: "36018506"
   
  若要创建新关系图，请右键单击“关系图组织程序”窗格中的任意地方，再单击“新建关系图”。  
   
- 当最初在 Analysis Services 项目中定义数据源视图 (DSV) 时，则会将所有表和视图都添加到数据源视图都添加到\<所有表 > 关系图。 在数据源视图设计器的“关系图组织程序”窗格中将显示此关系图，在“表”窗格中将列出此关系图中的表及其列和关系，并在架构窗格中将以图形方式显示此关系图中的表及其列和关系。 但是，当你将添加表、 视图和命名的查询到\<所有表 > 关系图中，此关系图中的对象的大量很难直观显示关系 — 特别是多个事实表添加到关系图中，和维度表关联到多个事实表。  
+ 当 Analysis Services 项目中最初定义数据源视图 (DSV) 时，则会将所有表和视图都添加到数据源视图都添加到\<所有表 > 关系图。 在数据源视图设计器的“关系图组织程序”窗格中将显示此关系图，在“表”窗格中将列出此关系图中的表及其列和关系，并在架构窗格中将以图形方式显示此关系图中的表及其列和关系。 但是，为您添加表、 视图和命名的查询到\<所有表 > 关系图中，在此图中的对象数量较多很难使关系可视化，尤其是多个事实数据表添加到关系图中，并且维度表与多个事实数据表相关。  
   
  当您只需要在数据源视图中查看表的子集时，若要减少视觉混乱，可以定义由数据源视图中所选表、视图和命名查询的子集组成的子关系图（简称为关系图）。 根据业务或解决方案的需要，可以使用关系图对数据源视图中的项进行分组。  
   
- 您可以将相关表和命名查询分组到单独的关系图中以便用于业务，这样可以使包含许多表、视图和命名查询的数据源视图更易于理解。 同一个表或命名的查询可以包含在多个关系图除\<所有表 > 关系图。 在\<所有表 > 关系图中，数据源视图中包含的所有对象将都显示一次。  
+ 您可以将相关表和命名查询分组到单独的关系图中以便用于业务，这样可以使包含许多表、视图和命名查询的数据源视图更易于理解。 同一个表或命名的查询可以包含在多个关系图除外\<所有表 > 关系图。 在\<所有表 > 关系图中，数据源视图中包含的所有对象都只都显示一次。  
   
 ##  <a name="bkmk_edit"></a> 编辑或删除关系图  
  使用关系图时，要特别注意用于添加和删除对象的命令。 例如，从关系图中删除对象时会将它从 DSV 中删除。 如果您只想将其从关系图中删除，请改用 **“隐藏表”** 。  
   
- ![屏幕快照的关系图工作区中，右键单击菜单](../media/ssas-olapdsv-diagram.gif "屏幕截图的关系图工作区中，右键单击菜单")  
+ ![屏幕截图的关系图工作区中，右键单击菜单](../media/ssas-olapdsv-diagram.gif "屏幕截图的关系图工作区中，右键单击菜单")  
   
  尽管您可以逐个隐藏对象，但是使用“显示相关表”命令可将所有相关对象重新显示在关系图中。 若要控制将哪些对象返回到工作区，请从“表”窗格中拖动它们。  
   

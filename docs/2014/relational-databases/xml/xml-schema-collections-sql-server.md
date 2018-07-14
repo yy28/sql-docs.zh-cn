@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - xml_schema_namespace function
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 707cb288e9c0ba85454493024350e378ae66e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221087"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
-  本主题中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供的 XML 数据进行本机存储`xml`数据类型。 你可以根据需要将与变量或列关联 XSD 架构`xml`通过 XML 架构集合的类型。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
+  主题中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供的 XML 数据进行本机存储`xml`数据类型。 您可以选择将与变量或列的关联的 XSD 架构`xml`通过 XML 架构集合的类型。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
   
 -   验证 XML 实例  
   
@@ -45,14 +45,14 @@ ms.locfileid: "36018577"
   
  查询处理引擎也使用该架构进行类型检查并优化查询和数据修改。  
   
- 此外，SQL Server 使用相关联的 XML 架构集合中，类型化的情况下`xml`，来验证 XML 实例。 如果 XML 实例符合架构，则数据库允许该实例存储在包含其类型信息的系统中。 否则，它将拒绝该实例。  
+ 此外，SQL Server 使用相关联的 XML 架构集合的情况下键入`xml`，来验证 XML 实例。 如果 XML 实例符合架构，则数据库允许该实例存储在包含其类型信息的系统中。 否则，它将拒绝该实例。  
   
  可以使用内部函数 XML_SCHEMA_NAMESPACE 检索数据库中存储的架构集合。 有关详细信息，请参阅 [查看存储 XML 架构集合](../xml/view-a-stored-xml-schema-collection.md)。  
   
  还可以使用 XML 架构集合类型化 XML 变量、参数和列。  
   
 ##  <a name="ddl"></a> 用于管理架构集合的 DDL  
- 你可以在数据库中创建 XML 架构集合，并将它们关联的变量和列`xml`类型。 为了管理数据库中的架构集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 语句：  
+ 可以在数据库中创建 XML 架构集合并将其关联的变量和列与`xml`类型。 为了管理数据库中的架构集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 语句：  
   
 -   [CREATE XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) 可将架构组件导入到数据库。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36018577"
   
 -   [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) 删除整个 XML 架构集合及其所有组件。  
   
- 若要使用 XML 架构集合及其包含的架构，必须首先使用 CREATE XML SCHEMA COLLECTION 语句创建架构集合及其包含的架构。 架构集合在创建后，你可以创建的变量和列`xml`键入和将其与关联的架构集合。 注意，创建架构集合之后，各种架构组件存储在元数据中。 还可以使用 ALTER XML SCHEMA COLLECTION 向现有架构添加更多组件或向现有集合添加新架构。  
+ 若要使用 XML 架构集合及其包含的架构，必须首先使用 CREATE XML SCHEMA COLLECTION 语句创建架构集合及其包含的架构。 创建架构集合后，您可以创建的变量和列`xml`键入并将其与关联的架构集合。 注意，创建架构集合之后，各种架构组件存储在元数据中。 还可以使用 ALTER XML SCHEMA COLLECTION 向现有架构添加更多组件或向现有集合添加新架构。  
   
  若要删除架构集合，请使用 DROP XML SCHEMA COLLECTION 语句。 它将删除包含在集合中的所有架构并删除集合对象。 请注意，只有在满足 [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) 中所述的条件时，才能删除架构集合。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36018577"
   
 -   删除 XML 架构集合  
   
--   使用 XML 架构集合类型`xml`类型列、 变量和参数，或者在表或列约束中使用它  
+-   使用 XML 架构集合来键入`xml`类型列、 变量和参数，或在表或列约束中使用它  
   
  SQL Server 安全模式允许对每个对象使用 CONTROL 权限。 此权限的被授权者将获得对象的其他所有权限。 对象的所有者也拥有对象的所有权限。  
   
@@ -165,13 +165,13 @@ ms.locfileid: "36018577"
 ##  <a name="info"></a> 获取有关 XML 架构和架构集合的信息  
  XML 架构集合在目录视图 sys.xml_schema_collections 中枚举出来。 XML 架构集合“sys”由系统定义。 它包含无需显式加载即可在所有用户定义的 XML 架构集合中使用的预定义命名空间。 此列表包含 xml、xs、xsi、fn 和 xdt 的命名空间。 另外两个目录视图是 sys.xml_schema_namespaces（它枚举每个 XML 架构集合中的所有命名空间）和 sys.xml_components（它枚举每个 XML 架构中的所有 XML 架构组件）。  
   
- 内置函数**XML_SCHEMA_NAMESPACE**， *schemaName、 XmlSchemacollectionName、 命名空间 uri*，生成`xml`数据类型实例... 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
+ 内置函数**XML_SCHEMA_NAMESPACE**， *schemaName、 XmlSchemacollectionName、 命名空间 uri*，将生成`xml`数据类型实例... 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
   
  可以按下列方式枚举 XML 架构集合的内容：  
   
 -   编写对 XML 架构集合的相应目录视图的 Transact-SQL 查询。  
   
--   使用内置函数 **XML_SCHEMA_NAMESPACE()**。 你可以将应用`xml`数据类型方法对此函数的输出。 但不能修改基础 XML 架构。  
+-   使用内置函数 **XML_SCHEMA_NAMESPACE()**。 您可以将应用`xml`数据类型方法对此函数的输出。 但不能修改基础 XML 架构。  
   
  这些在下列示例中进行了说明。  
   
@@ -192,7 +192,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 集合中的单个 XML 架构可以获取作为`xml`通过指定的目标命名空间作为第三个参数的数据类型实例**xml_schema_namespace （)**。 下面的示例说明了这一点。  
+ 可以为获取集合中的单个 XML 架构`xml`数据类型实例作为第三个参数指定的目标命名空间**xml_schema_namespace （)**。 下面的示例说明了这一点。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>示例：从 XML 架构集合输出指定的架构  
  以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“http://www.microsoft.com/books”的 XML 架构。  
@@ -207,7 +207,7 @@ N'http://www.microsoft.com/books')
   
 -   编写对 XML 架构命名空间的目录视图的 Transact-SQL 查询。  
   
--   创建包含 `xml` 数据类型列的表以存储 XML 架构并将它们加载到 XML 类型系统。 你可以使用查询 XML 列`xml`数据类型方法。 另外，还可以对此列生成 XML 索引。 但是，使用此方法时，应用程序必须保持 XML 列中存储的 XML 架构和 XML 类型系统之间的一致性。 例如，如果从 XML 类型系统中删除 XML 架构命名空间，还必须从表中删除它以保持一致性。  
+-   创建包含 `xml` 数据类型列的表以存储 XML 架构并将它们加载到 XML 类型系统。 可以通过使用查询 XML 列`xml`数据类型方法。 另外，还可以对此列生成 XML 索引。 但是，使用此方法时，应用程序必须保持 XML 列中存储的 XML 架构和 XML 类型系统之间的一致性。 例如，如果从 XML 类型系统中删除 XML 架构命名空间，还必须从表中删除它以保持一致性。  
   
 ## <a name="see-also"></a>请参阅  
  [查看存储 XML 架构集合](../xml/view-a-stored-xml-schema-collection.md)   

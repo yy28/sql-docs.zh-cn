@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c8dded85621d3e53fb7831725eed240b8501b072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3a46a42c3891080b601350ded50ca77c4d94fdd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222927"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分页符、标题、列和行（报表生成器和 SSRS）
   分页符可将报表划分为单独的页，以便于查看和打印。 预览报表或将其导出为其他文件格式时，分页符可确定报表内容适合报表页的方式，以获得最佳查看效果。  
@@ -37,6 +37,6 @@ ms.locfileid: "36017688"
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [“分组”窗格（报表生成器）](grouping-pane-report-builder.md)   
- [显示标头和组尾与组&#40;报表生成器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [显示组头和组尾&#40;报表生成器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

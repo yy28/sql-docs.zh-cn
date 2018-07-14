@@ -1,5 +1,5 @@
 ---
-title: 事件处理程序选项卡 |Microsoft 文档
+title: 事件处理程序选项卡 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49b6145f29fac5088d44e6e82f6dcd3eb491556a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83fb3a3e736e91b1c47fa3dffff5bbe9bfa4a940
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203887"
 ---
 # <a name="event-handlers-tab"></a>“事件处理程序”选项卡
   可以使用 **设计器的** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中生成控制流。 事件处理程序可因响应由包、包中的任务或容器所引发的事件而运行。  
@@ -36,7 +36,7 @@ ms.locfileid: "36016158"
  **删除**  
  选择一个事件处理程序，再通过单击“删除”将其从包中删除。  
   
- **单击此处创建\<事件处理程序名称 > 的可执行文件\<可执行文件名称 >**  
+ **单击此处可创建\<事件处理程序名称 > 的可执行文件\<可执行文件名称 >**  
  单击此项可创建事件处理程序。  
   
  通过将代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 任务和容器的图形对象从 **“工具箱”** 拖至 **“事件处理程序”** 选项卡的设计图面，再通过使用优先约束定义其运行顺序来连接这些对象，即可创建控制流。  

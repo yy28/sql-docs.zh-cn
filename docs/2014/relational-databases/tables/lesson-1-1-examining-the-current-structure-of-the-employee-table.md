@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c99b17d6c3b88f7dacdc99437ece36f0d242166f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 16f66dceaa4ff44658d86319d28a7bf068a2ff64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227158"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>检查 Employee 表的当前结构
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库包含基于 **HumanResources** 架构的 **Employee**表。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询**HumanResources.EmployeeDemo**表以查看这些数据将如何不使用在表中组织`hierarchyid`数据类型。  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库包含基于 **HumanResources** 架构的 **Employee**表。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询**HumanResources.EmployeeDemo**表以查看数据的方式在表中而无需使用`hierarchyid`数据类型。  
   
 ### <a name="to-copy-the-employee-table"></a>复制 Employee 表  
   

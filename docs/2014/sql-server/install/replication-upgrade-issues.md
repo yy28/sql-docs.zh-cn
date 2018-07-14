@@ -1,5 +1,5 @@
 ---
-title: 复制升级问题 |Microsoft 文档
+title: 复制升级问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication upgrade issues
 - upgrading replication
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb8c06e6103283e1781a8e43c481a21528ed3d32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 41fb3b0a4176f6b069f5e651616e4a0b1bfe6279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257773"
 ---
 # <a name="replication-upgrade-issues"></a>复制升级问题
   下面的主题介绍可能会影响您升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的复制问题。 这些主题介绍了您可以为减小这些更改对环境的影响而采取的措施。  

@@ -1,29 +1,28 @@
 ---
-title: 可用性组属性： 新建可用性组 （备份首选项页） |Microsoft 文档
+title: 可用性组属性： 新建可用性组 （备份首选项页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroupproperties.backuppreferences.f1
 helpviewer_keywords:
 - read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: 6
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9b6e5c1753a7d627e482029fc416928545efc05b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1ef3e0183202428e8c3bb6d8785a357406fec338
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193917"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性组属性：新建可用性组（“备份首选项”页）
   使用此对话框可以查看和更改所选可用性组的备份首选项。  
@@ -48,7 +47,7 @@ ms.locfileid: "36025246"
  指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
 > [!IMPORTANT]  
->  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动辅助副本： 辅助副本 （AlwaysOn 可用性组） 上的备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动次要副本： 辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ## <a name="replica-backup-priorities"></a>副本备份优先级  
  此网格将显示每个承载可用性组的副本的服务器实例的当前备份优先级。 使用此网格可以更改一个或多个可用性副本的备份优先级。  

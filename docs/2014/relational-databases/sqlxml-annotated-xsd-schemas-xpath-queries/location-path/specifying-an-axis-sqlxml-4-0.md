@@ -1,5 +1,5 @@
 ---
-title: 指定轴 (SQLXML 4.0) |Microsoft 文档
+title: 指定轴 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3b9f58369cea876bc345300a945f85260b4326a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b97dc99b7de5d8829f88faad6a6df282e9cecd5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234777"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定轴 (SQLXML 4.0)
     
@@ -38,7 +38,7 @@ ms.locfileid: "36018153"
   
      包含上下文节点的子级。  
   
-     下面的 XPath 表达式 （位置路径） 选择从当前上下文节点所有**\<客户 >** 子级：  
+     以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 子级：  
   
     ```  
     child::Customer  
@@ -62,7 +62,7 @@ ms.locfileid: "36018153"
   
      包含上下文节点的属性。  
   
-     下面的 XPath 表达式选择**CustomerID**的上下文节点的属性：  
+     以下 XPath 表达式选择**CustomerID**上下文节点的属性：  
   
     ```  
     attribute::CustomerID  
@@ -72,7 +72,7 @@ ms.locfileid: "36018153"
   
      包含上下文节点本身。  
   
-     下面的 XPath 表达式选择当前节点是否**\<顺序 >** 节点：  
+     下面的 XPath 表达式选择当前节点，如果它是**\<顺序 >** 节点：  
   
     ```  
     self::Order  

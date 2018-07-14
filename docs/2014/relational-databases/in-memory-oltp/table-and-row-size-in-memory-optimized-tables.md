@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5c35ff979ce6d5e37d8eaba1942da681d3a73470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231087"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
   内存优化表由行和索引的集合组成，其中包含行的指针。 在一个内存优化表中，行不能长于 8,060 字节。 了解内存优化表的大小将帮助您了解计算机是否具有足够的内存。  
@@ -76,7 +76,7 @@ ms.locfileid: "36015684"
   
 |部分|Size|注释|  
 |-------------|----------|--------------|  
-|浅表类型列|SUM([浅表类型的大小])<br /><br /> **各类型的大小是，如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 数字 (精度 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|浅表类型列|SUM([浅表类型的大小])<br /><br /> **各类型的大小如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (精度 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |浅表列填充|可能的值有：<br /><br /> 如果存在深表类型列并且浅表列的总数据大小是奇数，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |深表类型列的偏移数组|可能的值有：<br /><br /> 如果没有深表类型列，则为 0<br /><br /> 否则为 2 + 2 * [深表类型列数]|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |NULL 数组|[可以为 Null 的列数] / 8，舍入为完整字节。|数组每个可以为 Null 的列有一位。 这舍入为完整字节。|  

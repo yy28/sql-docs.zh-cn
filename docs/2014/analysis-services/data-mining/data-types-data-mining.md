@@ -1,5 +1,5 @@
 ---
-title: 数据类型 （数据挖掘） |Microsoft 文档
+title: 数据类型 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [data mining]
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2aab17ed95f87fd64b1bb55ee9ec26ffdfb002ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e13002a2cd4fd8cd0690968733eacffa74020cab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191177"
 ---
 # <a name="data-types-data-mining"></a>数据类型（数据挖掘）
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建挖掘模型或挖掘结构时，必须为挖掘结构中的每一列定义数据类型。 数据类型告知数据挖掘引擎数据源中的数据是数值还是文本以及应如何处理数据。 例如，如果数据源中包含数值数据，则可以指定是将数字作为整数处理还是使用小数位数来处理。  

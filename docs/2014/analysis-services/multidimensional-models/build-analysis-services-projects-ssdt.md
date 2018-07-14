@@ -1,5 +1,5 @@
 ---
-title: 生成 Analysis Services 项目 (SSDT) |Microsoft 文档
+title: 生成 Analysis Services 项目 (SSDT) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 697a550dccaf5e89414825efaa137ce146d52cf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e3b552234ff34333b8566bdb741b28f2e56d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196167"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>生成 Analysis Services 项目 (SSDT)
   可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中生成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，就像在 Visual Studio 中生成任何编程项目一样。 生成项目时，会在输出目录中创建一组 XML 文件。 这些 XML 文件使用 Analysis Services 脚本语言 (ASSL)，此脚本语言是 XML 方言，可供包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在内的客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例进行通信以创建或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。 这些 XML 文件用于将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
@@ -57,7 +57,7 @@ ms.locfileid: "36025530"
 |-----------------------------|-----------------|  
 |\<配置名称 > \LastBuilt.xml|包含用来标识 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的上次生成时间的时间戳和哈希代码。|  
   
- 这些 XML 文件不包含\<创建 > 和\<Alter > 标记，在部署过程中构造。  
+ 这些 XML 文件不包含\<创建 > 和\<Alter > 标记中，在部署过程中构造的。  
   
  还会将被引用程序集（不包括标准系统和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集）复制到输出目录。 引用解决方案中的其他项目时，首先使用相应的项目配置以及由项目引用建立的生成依赖项生成这些项目，然后将这些项目复制到项目输出文件夹。  
   

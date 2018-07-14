@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a7f9b00eec64ae93fdb60fa0f7f6e591087d039a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 394ca7eec9223b694aedb59ead6a35faee74f003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251169"
 ---
 # <a name="design-view"></a>“设计”视图
   使用“设计”视图可以排列报表中的报表项。 设计视图有时称为设计图面或布局视图。  

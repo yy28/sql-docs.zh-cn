@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - cache [SQL Server], replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Replication Monitor, refreshing
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fdab5a8ddc71821fb445e9225e40322b656faf85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0816ea29b873777c54d77e34d691c909c8e6208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256129"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>缓存、刷新和复制监视器性能
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器旨在有效地监视生产系统中的大量计算机。 系统定期对复制监视器用来执行计算和收集数据的查询进行缓存和刷新。 缓存可减少在复制监视器中查看不同页时所需的查询和计算次数，并可很好地满足多个用户的监视需要。  

@@ -1,5 +1,5 @@
 ---
-title: 不同报表呈现扩展插件 （报表生成器和 SSRS） 的交互功能 |Microsoft 文档
+title: 不同报表呈现扩展插件 （报表生成器和 SSRS） 的交互功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 12aba044c373c9a75c9be3754ece6703eae0e5a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a61442deaf2ca75bd3fb85f5eb8c83f6f58c4fee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238487"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供允许你在运行时处理报表的交互式报表功能。 并非所有的报表呈现格式都支持整套交互功能。 您可以通过下表了解每项交互功能在处理特定格式时的工作原理。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了可用于在运行时处理报表的交互式报表功能。 并非所有的报表呈现格式都支持整套交互功能。 您可以通过下表了解每项交互功能在处理特定格式时的工作原理。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
 - View Designer
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2913a032f6013678042901dc7fdff6954522da7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: afd7f3ca3f39d2c416eeb0e4f05b9dac28a99b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269853"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 设计器
   Visual Database Tools 包含可用来处理数据源的多种设计工具。 您可以使用这些工具创建查询，设计或修改数据库结构，或者更新数据。 这些工具包括数据库关系图设计器、表设计器以及查询和视图设计器。  
@@ -91,8 +91,8 @@ ms.locfileid: "36017860"
 >  此版本的 Visual Database Tools 不支持 Microsoft SQL Server version 7 及更早版本。  
   
 ## <a name="see-also"></a>请参阅  
- [设计数据库关系图&#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
- [设计表&#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
+ [设计数据库关系图&#40;可视化数据库工具&#41;](design-database-diagrams-visual-database-tools.md)   
+ [设计表&#40;可视化数据库工具&#41;](design-tables-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

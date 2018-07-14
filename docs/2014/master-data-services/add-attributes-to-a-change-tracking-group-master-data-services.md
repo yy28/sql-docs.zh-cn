@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235177"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>向更改跟踪组添加属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您想要跟踪对属性值的更改时向更改跟踪组添加属性。  
@@ -44,7 +44,7 @@ ms.locfileid: "36015472"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  上**模型资源管理器**页上，从菜单栏中，指向**管理**单击**实体**。  
+2.  上**模型资源管理器**页上，从菜单栏中，依次指向**管理**然后单击**实体**。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36015472"
   
 6.  在 **“编辑实体”** 页上：  
   
-    -   如果属性是针对叶成员，则在**叶属性**窗格中，选择的属性，然后单击**编辑叶属性**。  
+    -   如果属性是针对叶成员，在**叶属性**窗格中，选择该属性，并单击**编辑叶属性**。  
   
-    -   如果属性是针对合并成员，则在**合并属性**窗格中，选择的属性，然后单击**编辑合并属性**。  
+    -   如果属性是针对合并成员，在**合并属性**窗格中，选择该属性，并单击**编辑合并属性**。  
   
-    -   如果属性是对于集合，则在**集合属性**窗格中，选择的属性，然后单击**编辑集合属性**。  
+    -   如果属性是针对集合，在**集合属性**窗格中，选择该属性，并单击**编辑集合属性**。  
   
 7.  选中 **“启用更改跟踪”** 复选框。  
   

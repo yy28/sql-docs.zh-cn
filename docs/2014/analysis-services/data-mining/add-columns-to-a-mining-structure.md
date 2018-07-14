@@ -1,5 +1,5 @@
 ---
-title: 将列添加到挖掘结构 |Microsoft 文档
+title: 将列添加到挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], columns
 - columns [data mining], mining structure columns
 - adding columns
 ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a13e3216ff7d4209331fb5cbc062b62908283140
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9e7ffb3efc1ba8e9a1182c1232bf397760a88f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271973"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>向挖掘结构中添加列
   在数据挖掘向导中定义了挖掘结构后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器在挖掘结构中添加列。 您可以添加用于定义挖掘结构的数据源视图中存在的任何列。  

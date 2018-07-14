@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225897"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>创建或配置可用性组侦听器 (SQL Server)
   本主题说明如何通过在 *中使用* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 为 AlwaysOn 可用性组创建或配置单个“可用性组侦听器” [!INCLUDE[tsql](../../../includes/tsql-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
@@ -164,7 +163,7 @@ ms.locfileid: "36024190"
      `New-SqlAvailabilityGroupListener`  
      创建一个新的可用性组侦听器，并将其附加到一个现有可用性组。  
   
-     例如，以下`New-SqlAvailabilityGroupListener`命令创建名为可用性组侦听器`MyListener`为可用性组`MyAg`。 该侦听器将使用 IPv4 地址传递给`-StaticIp`参数作为其虚拟 IP 地址。  
+     例如，以下`New-SqlAvailabilityGroupListener`命令创建名为可用性组侦听器`MyListener`可用性组`MyAg`。 此侦听器将使用传递给的 IPv4 地址`-StaticIp`参数作为其虚拟 IP 地址。  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -207,14 +206,14 @@ ms.locfileid: "36024190"
 ###  <a name="ADQuotas"></a> 因 Active Directory 配额未能创建可用性组侦听器  
  新的可用性组侦听器可能在创建时失败，因为您已经达到参与群集节点计算机帐户的 Active Directory 配额。  有关详细信息，请参阅以下文章：  
   
--   [超链接"http://support.microsoft.com/kb/307532"如何解决的群集服务帐户修改计算机对象时](http://support.microsoft.com/kb/307532)  
+-   [超链接"http://support.microsoft.com/kb/307532"如何对群集服务帐户修改计算机对象时进行故障排除](http://support.microsoft.com/kb/307532)  
   
 -   [超链接"http://technet.microsoft.com/library/cc904295(WS.10).aspx"Active Directory 配额](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 跟进：在创建可用性组侦听器之后  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover 关键字和相关功能  
- `MultiSubnetFailover` 新的连接字符串关键字用于启用更快的故障转移与 AlwaysOn 可用性组和 SQL Server 2012 中的 AlwaysOn 故障转移群集实例。 在连接字符串中设置 `MultiSubnetFailover=True` 时，将启用以下三个子功能：  
+ `MultiSubnetFailover` 新的连接字符串关键字用于允许使用 AlwaysOn 可用性组和 SQL Server 2012 中的 AlwaysOn 故障转移群集实例的速度更快故障转移。 在连接字符串中设置 `MultiSubnetFailover=True` 时，将启用以下三个子功能：  
   
 -   更快进行多子网故障转移到 AlwaysOn 可用性组或故障转移群集实例的多子网侦听器。  
   
@@ -242,14 +241,14 @@ ms.locfileid: "36024190"
   
      **优点：** 你无需增加客户端连接超时值。  
   
-     **缺点：** 如果发生跨子网故障转移，客户端恢复时间可能是 15 分钟或更长，具体取决于你`HostRecordTTL`设置以及你跨站点 DNS/AD 复制计划的设置。  
+     **缺点：** 如果发生跨子网故障转移，则客户端恢复时间可能为 15 分钟或更长，具体取决于你`HostRecordTTL`设置以及您的跨站点 DNS/AD 复制计划的设置。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 设置  
- 当你使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或在 WSFC 中创建 PowerShell 创建可用性组侦听器，客户端访问点`RegisterAllProvidersIP`属性设置为 1 (true)。 此属性值的影响取决于客户端连接字符串，如下所示：  
+ 当你使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或 PowerShell 创建可用性组侦听器时，客户端访问点在 WSFC 中创建`RegisterAllProvidersIP`属性设置为 1 (true)。 此属性值的影响取决于客户端连接字符串，如下所示：  
   
 -   将 `MultiSubnetFailover` 设置为 true 的连接字符串  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 设置`RegisterAllProvidersIP`属性设置为 1，从而缩短其客户端连接字符串指定的客户端的故障转移后的重新连接时间`MultiSubnetFailover = True`，如建议。 请注意，为了利用侦听器多子网功能，您的客户端可能会要求支持 `MultiSubnetFailover` 关键字的数据访问接口。 有关针对多子网故障转移的驱动程序支持的信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](always-on-client-connectivity-sql-server.md)。  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 设置`RegisterAllProvidersIP`属性设置为 1 才能为其客户端连接字符串指定的客户端减少故障转移后的重新连接时间`MultiSubnetFailover = True`，如建议。 请注意，为了利用侦听器多子网功能，您的客户端可能会要求支持 `MultiSubnetFailover` 关键字的数据访问接口。 有关针对多子网故障转移的驱动程序支持的信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](always-on-client-connectivity-sql-server.md)。  
   
      有关多子网群集的信息，请参阅 [SQL Server 多子网群集 (SQL Server)](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)。  
   
@@ -265,10 +264,10 @@ ms.locfileid: "36024190"
      在 `RegisterAllProvidersIP = 1`时，其连接字符串未使用 `MultiSubnetFailover = True`的任何客户端都将会经历高延迟的连接。 发生这种情况的原因是这些客户端将按顺序尝试与所有 IP 的连接。 相反，如果将 `RegisterAllProvidersIP` 更改为 0，将在 WSFC 群集中的客户端接入点注册活动 IP 地址，从而缩短旧客户端的延迟时间。 因此，如果您具有需要连接到某一可用性组侦听器并且不能使用 `MultiSubnetFailover` 属性的旧客户端，我们建议您将 `RegisterAllProvidersIP` 更改为 0。  
   
     > [!IMPORTANT]  
-    >  当你创建可用性组侦听器 WSFC 群集 (故障转移群集管理器 GUI)，通过`RegisterAllProvidersIP`将为 0 (false) 默认情况下的。  
+    >  创建通过 WSFC 群集 (故障转移群集管理器 GUI) 的可用性组侦听器时`RegisterAllProvidersIP`将为 0 (false) 默认情况下。  
   
 ###  <a name="HostRecordTTL"></a> HostRecordTTL 设置  
- 默认情况下，客户端缓存 20 分钟的群集 DNS 记录。  通过减少`HostRecordTTL`，时间 (TTL)，对于缓存的记录，旧客户端可能更快地重新连接。  但是，减小`HostRecordTTL`设置还可能导致到 DN 服务器的流量增加。  
+ 默认情况下，客户端缓存 20 分钟的群集 DNS 记录。  通过减少`HostRecordTTL`，时间 (TTL)，缓存记录的旧客户端可能会更快地重新连接。  但是，减小`HostRecordTTL`设置还可能导致到 DN 服务器的流量增加。  
   
 ###  <a name="SampleScript"></a> 用于禁用 RegisterAllProvidersIP 和减少 TTL 的示例 PowerShell 脚本  
  下面的 PowerShell 示例演示如何同时配置两者`RegisterAllProvidersIP`和`HostRecordTTL`群集为侦听器资源的参数。  DNS 记录将缓存 5 分钟，而不是默认的 20 分钟。  同时修改两个群集参数可以缩短无法使用 `MultiSubnetFailover` 参数的旧客户端在故障转移后连接到正确 IP 地址的时间。  使用您要更改的侦听器名称替换 `yourListenerName` 。  

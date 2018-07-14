@@ -1,14 +1,13 @@
 ---
-title: 全文非索引字表属性 |Microsoft 文档
+title: 全文非索引字表属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
@@ -16,13 +15,13 @@ ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1b052e1987c120bb621da34c6f56d915333baf83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3802396c3b2ff6d64aa439af07e7dba2f9b30c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241287"
 ---
 # <a name="full-text-stoplist-properties"></a>全文非索引字表属性
   使用该对话框可以添加或删除单个非索引字、删除特定语言的所有非索引字或者清除当前的非索引字表。 非索引字是指包括在非索引字表中的常用字。 非索引字表中的非索引字将从使用非索引字表的表的全文索引中省略。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)。  

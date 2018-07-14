@@ -1,5 +1,5 @@
 ---
-title: 代理帐户属性和新的代理帐户 （常规页） |Microsoft 文档
+title: 代理帐户属性和新的代理帐户 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.proxy.general.f1
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ec665f80304740049b0eec0a706ba09eaa62261e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 275ef2bbb5caa00bb954e3d0d225c615fbf2ad53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288263"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>代理帐户属性和新的代理帐户 （常规页）
   使用此页可以查看或更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的属性。  

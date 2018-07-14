@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf60290c4946ef6f45bccba32632ed81dfaf650b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a90dfbac3006f7dfbf27b38a8ab584ebb9e5d710
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249627"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>将 HTML 导入报表（报表生成器和 SSRS）
   可以使用文本框向报表中插入从数据集字段中检索到的 HTML 格式的文本。 文本可以来自于其计算结果为正确格式的 HTML 的任何简单或复杂表达式。 格式化文本可以呈现为支持的所有输出格式，包括 PDF。  
@@ -39,7 +39,7 @@ ms.locfileid: "36016759"
 ## <a name="supported-html-tags"></a>支持的 HTML 标记  
  以下是作为占位符文本定义时将呈现为 HTML 标记的完整列表：  
   
--   标头、 样式和块元素： \<H {n} >， \<DIV >，\<跨度 >，\<P >， \<L >  
+-   标头、 样式和块元素： \<H {n} >， \<d i V >， \<s p a N >，\<P >， \<l I >  
   
  在报表处理期间，将忽略任何其他 HTML 标记。 如果占位符文本中表达式所表示的 HTML 格式不正确，则将占位符呈现为纯文本。 所有 HTML 标记都不区分大小写。  
   

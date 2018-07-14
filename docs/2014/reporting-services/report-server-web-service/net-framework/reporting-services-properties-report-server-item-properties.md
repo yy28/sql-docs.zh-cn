@@ -17,15 +17,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f4d96b577c82797d408813a90b8b9a8e7dd7455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6f4c94f85e4dad79f03963a300ada3fabd8a9cfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190014"
 ---
 # <a name="report-server-item-properties"></a>报表服务器项属性
   项属性是特定于报表服务器数据库中的项的属性。 此类属性包括报表、链接报表、文件夹、资源、模型和数据源。  
@@ -63,7 +63,7 @@ ms.locfileid: "36016534"
 |“属性”|Description|  
 |--------------|-----------------|  
 |**语言**|在报表中使用的语言。 该值是在 Internet 工程任务组 (IETF) RFC1766 规范中定义的语言代码。 第一部分由两个字符构成，指定基本语言。 第二部分由连字符分隔，指定语言的变化形式或变体。 如果未在与报表定义中的 `Style` 元素相关联的 `Body` 元素中指定某一值，则默认值是该报表服务器的语言。|  
-|`ReportProcessingTimeout`|以秒为单位的单独报表的超时值。 如果设置了该值，则经过指定时间后报表服务器会尝试停止处理报表。 有效值为`-1`通过`2`，`147`，`483`，`647`。 如果值为 `-1`，则处理期间报表不会超时。 如果值为 `null`，则系统属性 `ReportProcessingTimeout` 的值用于报表处理超时。默认值是 `null`。 有关详细信息，请参阅[报表服务器系统属性](reporting-services-properties-report-server-system-properties.md)。|  
+|`ReportProcessingTimeout`|以秒为单位的单独报表的超时值。 如果设置了该值，则经过指定时间后报表服务器会尝试停止处理报表。 有效的值为`-1`通过`2`，`147`，`483`，`647`。 如果值为 `-1`，则处理期间报表不会超时。 如果值为 `null`，则系统属性 `ReportProcessingTimeout` 的值用于报表处理超时。默认值是 `null`。 有关详细信息，请参阅[报表服务器系统属性](reporting-services-properties-report-server-system-properties.md)。|  
 |ExecutionDate|为报表最后创建报表快照的日期和时间。|  
 |CanRunUnattended|一个值，指示报表是否可按照时间表以无人参与的方式运行。 如果该属性设置为 `true`，则定义报表参数的默认值，并且数据源凭据将与报表一起存储，或者凭据检索选项设置为 `None`。 如果该属性设置为 `false`，则未满足以无人参与的方式运行报表的先决条件。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
 |HasParameterDefaultValues|一个值，指示报表是否为所有报表参数都设置了有效的默认值。 如果某一报表没有报表参数，该值也是 `true`。 如果该属性设置为 `false`，则一个或多个报表参数没有有效的默认值。|  

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202597"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器 HTTP 日志文件记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
   
- 默认情况下，不启用 HTTP 日志记录。 若要启用 HTTP 日志记录，修改**ReportingServicesService.exe.config**要在安装过程中使用此功能配置文件。  
+ 默认情况下，不启用 HTTP 日志记录。 若要启用 HTTP 日志记录，修改**ReportingServicesService.exe.config**配置文件以在安装中使用此功能。  
   
 ## <a name="viewing-log-information"></a>查看日志信息  
  该日志为 ASCII 文本文件。 可以使用任何文本编辑器查看该文件。 报表服务器 HTTP 日志文件等同于 IIS 中的 W3C 扩展日志文件，并且使用与其类似的字段，因此可以使用现有的 IIS 日志文件查看器来读取报表服务器 HTTP 日志文件。 下表提供有关 HTTP 日志文件的其他信息：  
@@ -58,7 +58,7 @@ ms.locfileid: "36018117"
 ```  
   
 ## <a name="log-file-fields"></a>日志文件字段  
- 下表对在日志中可用的字段进行了说明： 字段列表是可配置;你可以指定要通过包括哪些字段`HTTPTraceSwitches`配置设置。 **默认**列指定是否字段将包含在日志文件中自动是否不指定`HTTPTraceSwitches`。  
+ 下表对在日志中可用的字段进行了说明： 字段列表是可配置;可以指定要通过包括哪些字段`HTTPTraceSwitches`配置设置。 **默认**列指定是否在字段将自动包含在日志文件是否未指定`HTTPTraceSwitches`。  
   
 |字段|Description|，则“默认”|  
 |-----------|-----------------|-------------|  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
 - sql12.swb.login.databaseaccess.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27f80c34522042794bae5fee9a99bfd95bb15d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274663"
 ---
 # <a name="create-a-login"></a>创建一个登录名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
@@ -114,7 +113,8 @@ ms.locfileid: "36017535"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“登录名 – 新建”** 对话框还在四个其他页面上提供了选项： **“服务器角色”**、“用户映射” 、 **“安全对象”** 和“状态” 。  
+ 
+  **“登录名 – 新建”** 对话框还在四个其他页面上提供了选项： **“服务器角色”**、“用户映射” ****、 **“安全对象”** 和“状态” ****。  
   
 ### <a name="server-roles"></a>“服务器角色”  
  **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项包括：  
@@ -183,7 +183,7 @@ ms.locfileid: "36017535"
 2.  在“添加对象”对话框中，选择以下选项之一：“特定对象…”、“特定类型的所有对象…”或“服务器 server_name”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  选择 **服务器 * * * server_name*自动用该服务器的安全对象的所有填充上部网格。  
+    >  选择 **服务器 * * * server_name*使用所有该服务器的安全对象自动填充上部网格。  
   
 3.  如果您选择 **“特定对象…”**：  
   

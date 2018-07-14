@@ -1,5 +1,5 @@
 ---
-title: PropertyValType 属性 （ServerNetworkProtocolProperty 类） |Microsoft 文档
+title: PropertyValType 属性 （ServerNetworkProtocolProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyValType property
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca660a1c991e11a15a6968eb539c36cbb63c223b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 52331d787707fbd4882055023ba289a60b2dc250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201117"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>PropertyValType 属性（ServerNetworkProtocolProperty 类）
   获取存储在所引用属性中的值的数据类型。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ServerNetworkProtocolProperty 类](servernetworkprotocolproperty-class.md)表示的实例上的网络协议的属性的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个[ServerNetworkProtocolProperty 类](servernetworkprotocolproperty-class.md)表示的实例上的网络协议的属性的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定属性值的数据类型的 `uint32` 值。 如果是字符串值类型，则返回 0；如果是数值类型，则返回 1。  

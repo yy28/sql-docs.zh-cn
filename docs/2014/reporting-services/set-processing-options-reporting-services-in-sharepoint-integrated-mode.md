@@ -1,5 +1,5 @@
 ---
-title: 设置处理选项 (Reporting Services SharePoint 集成模式下) |Microsoft 文档
+title: 设置处理选项 (SharePoint 集成模式下的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b1d308718d1bfd1b9215cfe9595439f5657b95e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b04adc1d53fd4c41732a753cca5d7be1a3919c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255649"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
   可以对 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表设置处理选项，以决定何时进行数据处理。 还可以为报表处理设置超时值和用于决定是否为当前报表启用报表历史记录的选项。  

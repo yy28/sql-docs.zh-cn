@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ab809f5f3c271faa37129aa55cbf44b0cb70c87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2f768030b110a85d9c2c230bc06d2c9e42e85aa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212907"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
@@ -48,7 +48,7 @@ ms.locfileid: "36017947"
  ETW 目标不支持来自外部 ETW 控制器（例如 Logman.exe）的控制。 若要生成 ETW 跟踪，必须使用 ETW 目标创建事件会话。 有关详细信息，请参阅 [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)。  
   
 > [!NOTE]  
->  启用 ETW 目标将创建一个名为 XE_DEFAULT_ETW_SESSION 的 ETW 会话。 如果名为 XE_DEFAULT_ETW_SESSION 的会话已经存在，则使用该会话而不修改现有会话的任何属性。 XE_DEFAULT_ETW_SESSION 由所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例共享。 启动了 XE_DEFAULT_ETW_SESSION 后，必须使用 ETW 控制器（如 Logman 工具）停止它。 例如，可以在命令提示符下运行以下命令： `logman stop XE_DEFAULT_ETW_SESSION -ets`。  
+>  启用 ETW 目标将创建一个名为 XE_DEFAULT_ETW_SESSION 的 ETW 会话。 如果名为 XE_DEFAULT_ETW_SESSION 的会话已经存在，则使用该会话而不修改现有会话的任何属性。 XE_DEFAULT_ETW_SESSION 由所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例共享。 启动了 XE_DEFAULT_ETW_SESSION 后，必须使用 ETW 控制器（如 Logman 工具）停止它。 例如，可以在命令提示符处运行以下命令： `logman stop XE_DEFAULT_ETW_SESSION -ets`。  
   
  下表介绍了配置 ETW 目标时可用的选项。  
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_JOBS 行集 |Microsoft 文档
+title: DISCOVER_JOBS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_JOBS rowset
 ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6bc9574f76d1e14ad887efdd2b5654b4439c69df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a23a3e3dae0a03bf31a7b73b8cb505e834cff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246057"
 ---
 # <a name="discoverjobs-rowset"></a>DISCOVER_JOBS 行集
   提供有关在服务器上执行的活动作业的信息。 作业是命令的一部分，代表命令执行特定任务。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_JOBS`行集包含以下各列。  
+ `DISCOVER_JOBS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "36016687"
  未对此架构行集进行排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_JOBS`行集可限制在下表中列出的列。  
+ `DISCOVER_JOBS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

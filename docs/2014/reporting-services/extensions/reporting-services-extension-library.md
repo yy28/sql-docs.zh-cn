@@ -17,15 +17,15 @@ helpviewer_keywords:
 - library [Reporting Services]
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4f7ec58e860d75a24eea2162639ba458a067f73b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ea7edf14017fc8f382705397ce5bd5763b7c02bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246417"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 扩展插件库
   Reporting Services 扩展插件库是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含的一系列类、接口和值类型。 该库提供对系统功能的访问，它是可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序来扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件的基础。  
