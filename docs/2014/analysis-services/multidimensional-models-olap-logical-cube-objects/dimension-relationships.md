@@ -1,5 +1,5 @@
 ---
-title: 维度关系 |Microsoft 文档
+title: 维度关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - relationships [Analysis Services], dimensions
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9987657641baa18bf4e5c378e146136287e5a64c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dd25cb785bf22e6d7a3fb6ddb5e899a0f3f16b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207987"
 ---
 # <a name="dimension-relationships"></a>维度关系
-  维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 当你将数据库维度或度量值组添加到多维数据集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尝试通过检查多维数据集的数据源视图中的事实数据表与维度表之间的关系和通过检查确定维度用法维度中的属性之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
+  维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 在将数据库维度或度量值组添加到多维数据集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尝试确定维度用法，通过检查维度表和多维数据集的数据源视图中的事实数据表之间的关系，并检查在维度中属性之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
   
  维度与度量值组之间的关系包括参与该关系的维度和事实数据表以及一个指定特定度量值组中维度粒度的粒度属性。  
   
@@ -45,26 +45,26 @@ ms.locfileid: "36016003"
   
  ![逻辑关系图、 引用的维度关系](../../../2014/analysis-services/dev-guide/media/as-refdimension1.gif "逻辑关系图、 引用的维度关系")  
   
- 引用维度关系表示雪花型架构设计中的维度表与事实数据表之间的关系。 当雪花型架构中的各维度表进行连接时，可以使用多个表中的列定义一个维度，也可以根据单独的维度表定义单独的维度，然后使用引用维度关系设置定义这些维度之间的链接。 下图显示了一个名为的事实数据表**InternetSales**，和两个维度表称为**客户**和**Geography**，雪花型架构中。  
+ 引用维度关系表示雪花型架构设计中的维度表与事实数据表之间的关系。 当雪花型架构中的各维度表进行连接时，可以使用多个表中的列定义一个维度，也可以根据单独的维度表定义单独的维度，然后使用引用维度关系设置定义这些维度之间的链接。 下图显示了一个名为的事实数据表**InternetSales**，和两个维度表称为**客户**并**Geography**，雪花型架构中。  
   
  ![逻辑架构、 引用的维度关系](../../../2014/analysis-services/dev-guide/media/as-refdim-schema1.gif "逻辑架构、 引用的维度关系")  
   
- 你可以创建一个维度采用**客户**表作为维度主表和**Geography**包含为相关表的表。 然后在维度与 InternetSales 度量值组之间定义常规关系。  
+ 可以创建具有的维度**客户**表作为维度主表和**Geography**表包含为相关表。 然后在维度与 InternetSales 度量值组之间定义常规关系。  
   
- 或者，可以创建两个维度与 InternetSales 度量值组相关： 维度基于**客户**表和基于的维度**Geography**表。 然后通过使用“客户”维度的引用维度关系将“地域”维度与“Internet 销售”度量值组进行关联。 在这种情况下，当按“地域”维度创建 InternetSales 度量值组中事实数据的维度时，也就是按客户和地域创建这些数据的维度。 如果多维数据集还包含一个名为“分销商销售额”的度量值组，则可能无法按“地域”创建“分销商销售额”度量值组中事实数据的维度，因为“分销商销售额”与“地域”之间没有任何关系。  
+ 或者，可以创建两个与 InternetSales 度量值组相关的维度： 基于**客户**表和基于的维度**Geography**表。 然后通过使用“客户”维度的引用维度关系将“地域”维度与“Internet 销售”度量值组进行关联。 在这种情况下，当按“地域”维度创建 InternetSales 度量值组中事实数据的维度时，也就是按客户和地域创建这些数据的维度。 如果多维数据集还包含一个名为“分销商销售额”的度量值组，则可能无法按“地域”创建“分销商销售额”度量值组中事实数据的维度，因为“分销商销售额”与“地域”之间没有任何关系。  
   
  对于可相互链接的引用维度的数量没有限制，如下图所示。  
   
  ![逻辑关系图、 引用的维度关系](../../../2014/analysis-services/dev-guide/media/as-refdimension2.gif "逻辑关系图、 引用的维度关系")  
   
- 有关被引用关系的详细信息，请参阅[定义被引用关系和引用关系属性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
+ 有关被引用关系的详细信息，请参阅[定义引用关系和被引用关系属性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="fact-dimension-relationships"></a>事实维度关系  
- 事实维度（通常称为退化维度）是通过事实数据表而非维度表中的属性列构造的标准维度。 有用的维度数据有时存储在事实数据表中以减少重复。 例如，下面的关系图显示**FactResellerSales**事实数据表，从[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例数据库。  
+ 事实维度（通常称为退化维度）是通过事实数据表而非维度表中的属性列构造的标准维度。 有用的维度数据有时存储在事实数据表中以减少重复。 例如，以下关系图显示**FactResellerSales**事实数据表中，从[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例数据库。  
   
- ![列中的事实表可以支持维度](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "列中的事实表可以支持维度")  
+ ![列实际上表可以支持维度](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "列实际上表可以支持维度")  
   
- 该表不仅包含分销商所发出订单的每一行的属性信息，而且还包含有关订单本身的属性信息。 上图中带圆圈属性标识中的信息**FactResellerSales**无法用作维度中的属性的表。 在本例中，CarrierTrackingNumber 和 CustomerPONumber 属性列表示两条附加信息，即承运人跟踪号以及分销商发出的采购订单号。 该信息很有用，例如，用户很有可能希望看到聚合信息，如单个跟踪号下将要发货的所有订单的产品总成本。 但是，如果没有维度，则无法组织或聚合这两个属性的数据。  
+ 该表不仅包含分销商所发出订单的每一行的属性信息，而且还包含有关订单本身的属性信息。 在上图中的属性标识中的信息**FactResellerSales**无法用作维度中的属性的表。 在本例中，CarrierTrackingNumber 和 CustomerPONumber 属性列表示两条附加信息，即承运人跟踪号以及分销商发出的采购订单号。 该信息很有用，例如，用户很有可能希望看到聚合信息，如单个跟踪号下将要发货的所有订单的产品总成本。 但是，如果没有维度，则无法组织或聚合这两个属性的数据。  
   
  理论上，您可以创建与 FactResellerSales 表使用相同密钥信息的维度表，并将另外两个属性列 CarrierTrackingNumber 和 CustomerPONumber 移到该维度表。 但是，为了只将这两个属性作为单独的维度表示，您可能会复制大部分数据并为数据仓库增加不必要的复杂性。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36016003"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 你可以定义维度和事实数据表之间的多对多关系。  
   
 > [!NOTE]  
->  为了支持多对多维度关系，数据源视图必须在所涉及的所有表之间建立外键关系，如上面的关系图所示。 否则，你将无法建立的关系时选择正确的中间度量值组**维度用法**维度设计器选项卡。  
+>  为了支持多对多维度关系，数据源视图必须在所涉及的所有表之间建立外键关系，如上面的关系图所示。 否则，你将无法选择正确的中间度量值组中建立关系时**维度用法**维度设计器选项卡。  
   
  有关多对多关系的详细信息，请参阅[定义多对多关系和多对多关系属性](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   

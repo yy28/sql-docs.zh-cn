@@ -1,5 +1,5 @@
 ---
-title: 运行 SQLXML 示例要求 |Microsoft 文档
+title: 运行 SQLXML 示例的要求 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - examples [SQLXML], requirements
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0accbe193a3402e7935914a3a91a91a54f6bc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 567abfcd0ed51fafb16f7152d505b2f9afd6b454
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191617"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>运行 SQLXML 示例的要求
-  [SQLXML 4.0 编程](sqlxml-4-0-programming-concepts.md)部分提供了许多示例。 本主题列出根据这些示例创建工作示例的要求。  
+  [SQLXML 4.0 编程](sqlxml-4-0-programming-concepts.md)部分提供了大量示例。 本主题列出根据这些示例创建工作示例的要求。  
   
  若要使用 SQLXML 4.0 示例创建工作示例，需要安装以下产品。  
   
@@ -38,6 +38,6 @@ ms.locfileid: "36018831"
   
 -   MDAC 2.6 或更高版本  
   
- 在许多示例中，使用模板来指定针对映射 XSD 架构的 XPath 查询。 有关详细信息，请参阅[在查询中使用批注 XSD 架构&#40;SQLXML 4.0&#41;](annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)。  
+ 在许多示例中，使用模板来指定针对映射 XSD 架构的 XPath 查询。 有关详细信息，请参阅[查询中使用带批注的 XSD 架构&#40;SQLXML 4.0&#41;](annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)。  
   
   

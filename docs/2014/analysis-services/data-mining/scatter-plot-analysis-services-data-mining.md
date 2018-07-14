@@ -1,5 +1,5 @@
 ---
-title: 散点图 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 散点图 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
 - mining models [Analysis Services], validating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d087d615a5e2852cdc8d7a72a9facc5df4f33b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ae52af8c9449b5636d799d306e3ab317cea9d6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251549"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>散点图（Analysis Services - 数据挖掘）
   “散点图”  以图形方式对照显示数据中的实际值与模型预测的值。 其沿 X 轴显示实际值，沿 Y 轴显示预测值。 该图还显示一条显示完美预测的线，在这条线上预测值和实际值完全匹配。 某个点与该条理想 45 度角线的距离指示进行的预测的准确程度。  
@@ -35,7 +35,7 @@ ms.locfileid: "36017441"
 ## <a name="interpreting-the-results"></a>解释结果  
  下面的关系图显示散点图的一个示例，该图是为刚刚说明的应用场景而创建的。  
   
- ![线性回归散点图的示例](../media/scatterplot-callctr.gif "的线性回归散点图示例")  
+ ![用于线性回归的散点图的示例](../media/scatterplot-callctr.gif "的线性回归的散点图示例")  
   
  将鼠标悬停在散布在该直线周围的任一点上方即可在工具提示中查看预测值和实际值。 散点图没有 **“挖掘图例”** ，但该图表本身包含一个显示与该模型关联的分数的图例。 有关解释分数的详细信息，请参阅[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36017441"
   
 |主题|链接|  
 |------------|-----------|  
-|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试准确性，但提升图&#40;数据挖掘基础教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试提升图的准确性&#40;数据挖掘基础教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |说明相关的图表类型。|[提升图&#40;Analysis Services-数据挖掘&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图&#40;Analysis Services-数据挖掘&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [分类矩阵&#40;Analysis Services-数据挖掘&#41;](classification-matrix-analysis-services-data-mining.md)|  
 |说明如何将交叉验证用于挖掘模型和挖掘结构。|[交叉验证&#40;Analysis Services-数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
 |说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南&#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  

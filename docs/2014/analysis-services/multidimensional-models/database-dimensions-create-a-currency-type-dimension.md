@@ -1,5 +1,5 @@
 ---
-title: 创建货币类型维度 |Microsoft 文档
+title: 创建货币类型维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232017"
 ---
 # <a name="create-a-currency-type-dimension"></a>创建货币类型维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，货币类型的维度是指其属性表示一组货币以用于财务报表用途的维度。  
@@ -37,14 +37,14 @@ ms.locfileid: "36016487"
   
  商业智能向导将根据此信息设计货币换算进程，该进程可以标识相应的目标货币维度（表示目标货币的货币维度）。 根据商业智能解决方案需要的货币换算的数量，商业智能向导可以定义多个目标货币维度。 有关定义货币换算的详细信息，请参阅[货币换算 (Analysis Services)](../currency-conversions-analysis-services.md)。  
   
- 若要标识为货币维度的维度，设置`Type`到维度属性`Currency`。  
+ 若要标识为货币维度的维度，请设置`Type`属性的维度与`Currency`。  
   
 ## <a name="dimension-structure"></a>维度结构  
  一个货币维度必须在货币维度的维度表中至少包含一个用于标识单个货币的键特性。 源货币维度和目标货币维度中的键特性的值不相同：  
   
 -   若要将某个特性标识为源货币维度的键特性，请将该特性的 `Type` 属性设置为 `CurrencySource`。  
   
--   若要某个特性标识为目标货币维度，将设置`Type`属性的特性的`CurrencyDestination`。  
+-   若要标识为目标货币维度特性，请设置`Type`将属性的属性`CurrencyDestination`。  
   
  用于报表时，源货币维度和目标货币维度都可以包含以下特性（可选）：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36016487"
   
 -   货币的国际标准组织 (ISO) 代码。  
   
-     若要某个特性标识为货币的 ISO 代码特性，将设置`Type`属性的特性的`CurrencyIsoCode`。  
+     若要将特性标识为货币的 ISO 代码特性，将设置`Type`将属性的属性`CurrencyIsoCode`。  
   
  有关属性类型的详细信息，请参阅 [配置属性类型](attribute-properties-configure-attribute-types.md)。  
   

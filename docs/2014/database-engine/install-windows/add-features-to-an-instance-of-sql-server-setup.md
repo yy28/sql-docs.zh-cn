@@ -1,5 +1,5 @@
 ---
-title: 将功能添加到 SQL Server 2014 （安装程序） 的实例 |Microsoft 文档
+title: 向 SQL Server 2014 （安装程序） 的实例添加功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf44b5cd848a3a315290e88e00b49a2e0156024a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c3bdfd58db40fe34cc107b412c531bc8a3e75ebe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225948"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>向 SQL Server 2014 的实例添加功能（安装程序）
-  本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 若要将功能添加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从命令提示符，请参阅[从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
+ 若要将功能添加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从命令提示符下，请参阅[从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  继续之前，请查阅 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。  
@@ -57,7 +57,7 @@ ms.locfileid: "36017810"
   
 7.  在“安装类型”页上，选择“向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例中添加功能”选项，然后选择要更新的实例。  
   
-8.  在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅[版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 每个组件都只能在给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上安装一次。 若要安装多个组件，则必须安装其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
+8.  在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 每个组件都只能在给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上安装一次。 若要安装多个组件，则必须安装其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "36017810"
   
     -   安全模式 - 为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例选择 Windows 身份验证或混合模式身份验证。 如果选择“混合模式身份验证”，则必须为内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户提供一个强密码。  
   
-         在设备与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户设置](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+         在设备与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员 - 您必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户设置](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员 - 您必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
      完成对该列表的编辑后，请单击 **“确定”**。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
   

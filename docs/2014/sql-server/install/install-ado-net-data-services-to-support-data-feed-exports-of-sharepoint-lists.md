@@ -1,5 +1,5 @@
 ---
-title: 安装 ADO.NET Data Services 以支持数据源的 SharePoint 列表导出 |Microsoft 文档
+title: 安装 ADO.NET Data Services 以支持数据馈送导出 SharePoint 列表的 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d4241d56aa3257bd0ec2cddf4b439a4939f8ab9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3bcf01f3cbb33ae11a3961a6d492040afb1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187724"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出
   ADO.NET Data Services 是 SharePoint 列表的数据馈送导出所必需的。 SharePoint 2010 在 SharePoint Prerequisite Installer 程序中不包括此组件，因此您必须手动安装它。  
@@ -30,9 +30,9 @@ ms.locfileid: "36018512"
   
 ### <a name="download-and-install-adonet-data-services"></a>下载和安装 ADO.NET Data Services  
   
-1.  转到 SharePoint 2010 的硬件和软件要求文档[硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  转到针对 SharePoint 2010 的硬件和软件要求文档[硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
   
-2.  在**适用的软件访问**，找出有关 ADO.NET Data Services 3.5 对应于操作系统 （Windows Server 2008 SP2 或 Windows Server 2008 R2） 使用的链接。  
+2.  在中**访问适用软件**，找到有关使用 ADO.NET Data Services 3.5 的对应于操作系统 （Windows Server 2008 SP2 或 Windows Server 2008 R2） 的链接。  
   
 3.  单击该链接并且运行安装该服务的安装程序。  
   

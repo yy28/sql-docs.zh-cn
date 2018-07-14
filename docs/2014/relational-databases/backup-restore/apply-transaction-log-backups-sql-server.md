@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab3a27eea48c0d34d2cf994c29fff99f91f3ef37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289113"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
   本主题只与完整恢复模式或大容量日志恢复模式相关。  
@@ -38,7 +37,7 @@ ms.locfileid: "36017124"
   
 -   [恢复和事务日志](#RecoveryAndTlogs)  
   
--   [使用日志备份来还原到故障点](#PITrestore)  
+-   [使用日志备份还原到故障点](#PITrestore)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "36017124"
 > [!NOTE]  
 >  某些情况下可以在日志还原期间显式添加文件。  
   
-##  <a name="PITrestore"></a> 使用日志备份来还原到故障点  
+##  <a name="PITrestore"></a> 使用日志备份还原到故障点  
  假设有下列事件顺序。  
   
 |Time|事件|  

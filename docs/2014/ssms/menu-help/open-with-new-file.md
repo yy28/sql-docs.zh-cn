@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57aa51909a5fe1c3bb0488ce4bc05bcceab37d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272093"
 ---
 # <a name="open-with-new-file"></a>打开方式（新建文件）
   通过在“文件”菜单上单击“打开”再单击“文件”，可以在一个或多个编辑器中打开文档。 在“打开文件”对话框中，选择文件，单击“打开”箭头，再单击“打开方式”。 在“打开方式”对话框中的“选择要打开的程序”列表中，单击要使用的程序，再单击“打开”。  

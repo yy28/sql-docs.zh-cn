@@ -1,5 +1,5 @@
 ---
-title: 配置报表管理器以便传递自定义身份验证 Cookie |Microsoft 文档
+title: 配置报表管理器以便传递自定义身份验证 Cookie |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - authentication [Reporting Services]
 - extensions [Reporting Services], custom security
@@ -16,19 +16,19 @@ ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 65524c714361a7a43531a778121231a8ff2013a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391326882d3eaa0170bee0aa075e9d9b6c15abcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266113"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>配置报表管理器以便传递自定义身份验证 Cookie
   如果使用的是自定义身份验证扩展插件，则应配置报表管理器以传输自定义身份验证 Cookie。 否则，报表管理器通过特定的 HTTP 请求将 Cookie 传输到报表服务器。 如果要传输其他 Cookie，则必须修改 RSReportServer.Config 文件。  
   
 ## <a name="modifying-the-rsreportserverconfig-file"></a>修改 RSReportServer.Config 文件  
- 你可以启用报表管理器，以通过添加传输其他 cookie 通过到报表服务器 <`PassThroughCookies`> RSReportServer.config 文件中的报表管理器配置设置的元素。 在单一登录身份验证解决方案中，传输其他 Cookie 十分有用，因为此类解决方案不仅需要报表服务器身份验证 Cookie，而且还需要第三方身份验证系统中的 Cookie。  
+ 可以启用报表管理器将其他 cookie 传输到报表服务器通过添加 <`PassThroughCookies`> 到 RSReportServer.config 文件中的报表管理器配置设置的元素。 在单一登录身份验证解决方案中，传输其他 Cookie 十分有用，因为此类解决方案不仅需要报表服务器身份验证 Cookie，而且还需要第三方身份验证系统中的 Cookie。  
   
  使用报表服务器时，为了使其他 Cookie 可以通过 HTTP 请求进行传输，请在 RSReportServer.config 文件中设置下列元素：  
   

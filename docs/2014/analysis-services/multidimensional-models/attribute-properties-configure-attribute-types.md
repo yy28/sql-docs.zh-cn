@@ -1,5 +1,5 @@
 ---
-title: 配置属性类型 |Microsoft 文档
+title: 配置属性类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - attributes [Analysis Services], types
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf258defa832969e438863038a4e0d6f0111c59d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5708b4f404bcd2487cfdd651df43234d4baa3af0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267733"
 ---
 # <a name="configure-attribute-types"></a>配置属性类型
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，特性类型可用于按业务功能对特性进行分类。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  

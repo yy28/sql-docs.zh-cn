@@ -1,5 +1,5 @@
 ---
-title: NamingTemplateTranslations 元素 (ASSL) |Microsoft 文档
+title: NamingTemplateTranslations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e22eaea2ab6d19bf1da5620321f0d2002ed382d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204397"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>NamingTemplateTranslations 元素 (ASSL)
-  提供的本地化翻译的集合[NamingTemplate](../properties/namingtemplate-element-assl.md)元素的父代、 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)。  
+  提供的本地化翻译的集合[NamingTemplate](../properties/namingtemplate-element-assl.md)元素的父[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36017208"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[属性](../objects/attribute-element-assl.md)类型的[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|子元素|[NamingTemplateTranslation](../objects/translation-element-assl.md)类型的[转换](translations-element-assl.md)|  
+|父元素|[特性](../objects/attribute-element-assl.md)类型的[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|子元素|[NamingTemplateTranslation](../objects/translation-element-assl.md)类型的[翻译](translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 值`NamingTemplateTranslation`元素仅由父属性 (换而言之，值[用法](../properties/usage-element-dimensionattribute-assl.md)元素的父`DimensionAttribute`设置为*父*。)  
+ 值`NamingTemplateTranslation`元素仅供父属性 (换而言之，值[用法](../properties/usage-element-dimensionattribute-assl.md)父元素`DimensionAttribute`设置为*父*。)  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

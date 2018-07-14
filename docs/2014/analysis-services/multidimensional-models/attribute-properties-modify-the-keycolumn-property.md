@@ -1,5 +1,5 @@
 ---
-title: 修改特性的 KeyColumn 属性 |Microsoft 文档
+title: 修改特性的 KeyColumn 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
 - attributes [Analysis Services], binding
 - key columns [Analysis Services]
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a1759aa5a527037c87efc6763ac81e40958d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b3735131b85bd071b8f8333bc663f1ed4e109a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185344"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>修改某个特性的 KeyColumn 属性
   可以修改特性的 **KeyColumns** 属性。 例如，您可能需要指定组合键以作为该特性的键，而不是指定单个键。  
@@ -38,7 +38,7 @@ ms.locfileid: "36016479"
   
          — 或 —  
   
-    -   在多维数据集设计器上**多维数据集结构**选项卡上，展开中的多维数据集维度**维度**窗格中，然后单击**编辑\<维度 >**。  
+    -   在多维数据集设计器上**多维数据集结构**选项卡上，展开中的多维数据集维度**维度**窗格，然后单击**编辑\<维度 >**。  
   
 3.  在 **“维度结构”** 选项卡的 **“属性”** 窗格中，单击要修改其 **KeyColumns** 属性的特性。  
   

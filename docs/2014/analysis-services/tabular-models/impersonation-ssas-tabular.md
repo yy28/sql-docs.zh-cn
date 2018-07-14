@@ -1,5 +1,5 @@
 ---
-title: 模拟 (SSAS 表格) |Microsoft 文档
+title: 模拟 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176484"
 ---
 # <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
@@ -71,12 +71,12 @@ ms.locfileid: "36017177"
   
 |选项|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**特定 Windows 用户名和密码** <sup>2</sup>|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 域和用户帐户名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
+|**特定 Windows 用户名和密码** <sup>2</sup>|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 域和用户帐户的名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
 |**服务帐户**|ImpersonateServiceAccount|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
- <sup>1</sup>ImpersonationMode 指定的值[DataSourceImpersonationInfo 元素&#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md)对数据源的属性。  
+ <sup>1</sup>ImpersonationMode 指定的值[DataSourceImpersonationInfo 元素&#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md)上的数据源的属性。  
   
- <sup>2</sup>时使用此选项，如果工作区数据库删除从内存，由于重新启动或**工作区保持期**属性设置为**从内存卸载**或**从工作区中删除**，并将模型项目关闭，请在后续的会话中，如果你尝试处理表数据，则系统将提示输入每个数据源的凭据。 同样，如果从内存中删除某个已部署的模型数据库，则系统将会提示您输入为每个数据源输入凭据。  
+ <sup>2</sup>时使用此选项时，如果从内存中，由于重新启动中删除工作区数据库或**工作区保持期**属性设置为**从内存中的卸载**或**从工作区中删除**，并且由该模型项目已关闭，在后续会话中，如果你尝试处理表数据，系统会提示输入每个数据源的凭据。 同样，如果从内存中删除某个已部署的模型数据库，则系统将会提示您输入为每个数据源输入凭据。  
   
 ##  <a name="bkmk_impers_sec"></a> Security  
  用于模拟的凭据由与 Analysis Services 服务器相关联的 xVelocity 内存中分析引擎 (VertiPaq)™ 保持在内存中（该服务器管理工作区数据库或已部署的模型）。  任何时候都不要将凭据写入磁盘中。 如果在部署模型时工作区数据库不在内存中，则系统将提示用户输入用于连接到数据源和提取数据的凭据。  
@@ -94,7 +94,7 @@ ms.locfileid: "36017177"
 ##  <a name="bkmk_conf_imp_info"></a> 配置模拟  
  模型所处的环境将确定配置模拟信息的方式。 对于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作的模型，您可以在“表导入向导”的 **“模拟信息”** 页中配置模拟信息，也可以通过在 **“现有连接”** 对话框上编辑数据源连接来配置模拟信息。 若要查看现有连接，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单中单击 **“现有连接”**。  
   
- 对于部署到 Analysis Services 服务器的模型，可以通过单击省略号 （...） 的配置模拟信息**数据源模拟信息**中的属性**数据库属性**对话框[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 对于部署到 Analysis Services 服务器的模型，可以通过单击省略号 （...） 的配置模拟信息**数据源模拟信息**属性中的**数据库属性**对话框中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="see-also"></a>请参阅  
  [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)   

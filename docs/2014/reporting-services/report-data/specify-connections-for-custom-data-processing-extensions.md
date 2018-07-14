@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
 - IDbConnection interface, connection strings
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a1577c387561a74356bc31e9ce8058cf804b0235
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a0d1026ad56474a974d261c85adf86145671c414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222957"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>指定用于自定义数据处理扩展插件的连接
   您可以在报表服务器上创建或使用第三方自定义数据处理扩展插件来增强支持的数据源的数据处理能力，或者支持默认 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中不可用的其他类型的数据源。 对连接的处理会因实现方式的不同而有所不同。 数据处理扩展插件可能具有下列实现方式：  
@@ -54,29 +54,29 @@ ms.locfileid: "36016093"
   
 |凭据|连接|  
 |-----------------|-----------------|  
-|集成安全性|如果您的数据访问接口支持 Windows 集成安全性，则可以使用该安全性。 这种情况下将使用当前用户的凭据来发送请求。<br /><br /> 在定义连接字符串时，请务必包括指定集成的安全性的自变量 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`连接字符串上)。|  
-|Windows 身份验证|如果您的数据访问接口支持 Windows 域用户帐户，则可以使用该帐户。 在调用数据处理扩展插件之前，报表服务器将模拟该用户帐户。<br /><br /> 在定义连接字符串时，请务必包括指定集成的安全性的自变量 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`连接字符串上)。|  
+|集成安全性|如果您的数据访问接口支持 Windows 集成安全性，则可以使用该安全性。 这种情况下将使用当前用户的凭据来发送请求。<br /><br /> 在定义的连接字符串时，请确保包括指定集成的安全性的参数 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`上的连接字符串)。|  
+|Windows 身份验证|如果您的数据访问接口支持 Windows 域用户帐户，则可以使用该帐户。 在调用数据处理扩展插件之前，报表服务器将模拟该用户帐户。<br /><br /> 在定义的连接字符串时，请确保包括指定集成的安全性的参数 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`上的连接字符串)。|  
 |数据库凭据|通过自定义 .NET 数据访问接口建立的连接不支持数据库身份验证。 在任何情况下，报表服务器都将无法进行连接。|  
 |无凭据|您可以将无凭据选项用于自定义 .NET 数据访问接口。 如果指定了无人参与的执行帐户，则连接字符串将确定使用的凭据。 报表服务器将模拟无人参与的执行帐户来建立连接。<br /><br /> 如果未定义无人参与的执行帐户，则报表服务器将无法进行连接。 有关定义帐户的详细信息，请参阅[配置无人参与的执行帐户&#40;SSRS 配置管理器&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
   
 ## <a name="connections-for-idbconnection"></a>IDbConnection 连接  
  如果要使用仅支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>的自定义数据处理扩展插件，则必须按以下方式指定连接：  
   
-1.  配置无人参与的执行帐户。 配置此帐户的连接都需要使用建立`IDbConnection`。 建立连接时，报表服务器将模拟此帐户。  
+1.  配置无人参与的执行帐户。 配置此帐户是使用建立的连接所必需的`IDbConnection`。 建立连接时，报表服务器将模拟此帐户。  
   
 2.  将报表上的数据源属性配置为使用 **“无凭据”**。  
   
 3.  将用于连接到数据源的凭据放置在连接字符串中。  
   
- 使用时`IDbConnection`，不支持以下的凭据类型： 集成安全性、 Windows 用户帐户和数据库凭据。 如果数据源连接使用这些选项，则无法在报表服务器中进行连接。  
+ 当使用`IDbConnection`，不支持下列凭据类型： 集成安全性、 Windows 用户帐户，以及数据库凭据。 如果数据源连接使用这些选项，则无法在报表服务器中进行连接。  
   
 ## <a name="connections-for-idbconnectionextension"></a>IDbConnectionExtension 连接  
  如果要使用支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>的自定义数据处理扩展插件，则必须按以下方式指定连接：  
   
 |凭据|连接|  
 |-----------------|-----------------|  
-|集成安全性|如果你的数据提供程序支持它，则可以使用 Windows 集成的安全性，与使用的自定义数据处理扩展插件`IDbConnectionExtension`。<br /><br /> 在定义连接字符串时，请务必包括指定集成的安全性的自变量 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`连接字符串上)。|  
-|Windows 身份验证|如果你的数据提供程序支持它，你可以使用 Windows 域用户帐户使用的自定义数据处理扩展的`IDbConnectionExtension`。<br /><br /> 在调用数据处理扩展插件之前，报表服务器将模拟该用户帐户。 在定义连接字符串时，请务必包括指定集成的安全性的自变量 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`连接字符串上)。|  
+|集成安全性|如果您的数据访问接口支持它，则可以与使用的自定义数据处理扩展插件使用 Windows 集成的安全性`IDbConnectionExtension`。<br /><br /> 在定义的连接字符串时，请确保包括指定集成的安全性的参数 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`上的连接字符串)。|  
+|Windows 身份验证|如果数据提供程序支持，可以使用的自定义数据处理扩展插件使用 Windows 域用户帐户`IDbConnectionExtension`。<br /><br /> 在调用数据处理扩展插件之前，报表服务器将模拟该用户帐户。 在定义的连接字符串时，请确保包括指定集成的安全性的参数 (例如，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源可能包括`Integrated Security=SSPI`上的连接字符串)。|  
 |数据库凭据|您可以使用数据库身份验证针对使用 `IDbConnectionExtension` 的自定义数据处理扩展插件配置连接。|  
 |无凭据|如果指定了无人参与的执行帐户，则连接字符串将确定使用的凭据。<br /><br /> 如果未定义无人参与的执行帐户，则报表服务器将无法进行连接。|  
   

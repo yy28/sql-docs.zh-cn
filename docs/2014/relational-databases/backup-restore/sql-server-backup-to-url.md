@@ -5,21 +5,20 @@ ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92af4cfa0c3ea71693932b7301feed71d1fc1327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264873"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
   本主题介绍使用 Windows Azure Blob 存储服务作为备份目标所需的概念、要求和组件。 备份和还原功能与使用磁盘或磁带时相同，或类似但区别不大。 区别均为显著的例外，并且本主题中包括少量代码示例。  
@@ -56,18 +55,18 @@ ms.locfileid: "36016871"
 -   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”权限的 **db_backup 操作员**数据库角色。  
   
 ###  <a name="intorkeyconcepts"></a> 关键组件和概念简介  
- 以下两节介绍了 Windows Azure Blob 存储服务，与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份到或从 Windows Azure Blob 存储服务还原时使用的组件。 了解这些组件和它们之间的交互对于执行备份到 Windows Azure Blob 存储服务或从中还原很重要。  
+ 以下两节介绍了 Windows Azure Blob 存储服务，和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份到或从 Windows Azure Blob 存储服务还原时使用的组件。 了解这些组件和它们之间的交互对于执行备份到 Windows Azure Blob 存储服务或从中还原很重要。  
   
- 首先需要创建 Windows Azure 帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**Windows Azure 存储帐户名称**及其**访问密钥**值进行身份验证和写入和读取 blob 存储服务。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据存储此身份验证信息并在备份或还原操作期间使用它。 有关创建存储帐户和执行简单还原的完整演练，请参阅 [将 Windows Azure 存储服务用于 SQL Server 备份和还原的教程](http://go.microsoft.com/fwlink/?LinkId=271615)。  
+ 首先需要创建 Windows Azure 帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**Windows Azure 存储帐户名称**并将其**访问密钥**值来写入和读取 blob 存储服务进行身份验证。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据存储此身份验证信息并在备份或还原操作期间使用它。 有关创建存储帐户和执行简单还原的完整演练，请参阅 [将 Windows Azure 存储服务用于 SQL Server 备份和还原的教程](http://go.microsoft.com/fwlink/?LinkId=271615)。  
   
- ![将存储帐户映射到 sql 凭据](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "映射到 sql 凭据的存储帐户")  
+ ![存储帐户映射到 sql 凭据](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "映射到 sql 凭据的存储帐户")  
   
 ###  <a name="Blob"></a> Windows Azure Blob 存储服务  
  **存储帐户：** 存储帐户是所有存储服务的起始点。 要访问 Windows Azure Blob 存储服务，请首先创建一个 Windows Azure 存储帐户。 需要使用 **storage account name** 和 **access key** 属性来向 Windows Azure Blob 存储服务及其组件进行身份验证。  
   
  **容器：** 一个容器提供一组 Blob，可以存储无限数目的 Blob。 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入 Windows Azure Blob 服务，您必须至少创建根容器。  
   
- **Blob：** 任意类型和大小的文件。 Windows Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份使用页 Blob 作为 Blob 类型。 Blob 是可寻址的使用以下 URL 格式： https://\<存储帐户 >.blob.core.windows.net/\<容器 > /\<blob >  
+ **Blob：** 任意类型和大小的文件。 Windows Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份将页 Blob 作为 Blob 类型。 Blob 是可使用以下 URL 格式寻址： https://\<存储帐户 >.blob.core.windows.net/\<容器 > /\<blob >  
   
  ![Azure Blob 存储](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob 存储")  
   
@@ -83,9 +82,9 @@ ms.locfileid: "36016871"
   
  下面是一个示例 URL 值： http[s]://ACCOUNTNAME.Blob.core.windows.net/\<容器 > /\<FILENAME.bak >。 HTTPS 不是必需的，但建议这样做。  
   
- **凭据：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份和还原进程使用凭据向 Windows Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、 复制或重新生成存储帐户的详细信息**访问密钥**，请参阅[存储帐户访问密钥](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+ **凭据：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份和还原进程使用凭据向 Windows Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、 复制或重新生成存储帐户详细信息**访问密钥**，请参阅[存储帐户访问密钥](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
- 有关分步说明有关如何创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]凭据，请参阅[创建凭据](#credential)本主题中后面的示例。  
+ 有关如何创建的分步说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]凭据，请参阅[创建凭据](#credential)本主题后面的示例。  
   
  有关凭据的一般信息，请参阅 [凭据](http://msdn.microsoft.com/en-us/library/ms161950.aspx)  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36016871"
   
     ```  
   
--   指定块大小与`BACKUP`不支持。  
+-   指定块大小与`BACKUP`不受支持。  
   
 -   不支持指定 `MAXTRANSFERSIZE`。  
   
@@ -218,7 +217,7 @@ ms.locfileid: "36016871"
   
  以下步骤介绍为了能够备份到 Windows Azure 存储而对“备份数据库”任务作出的更改：  
   
-1.  启动 SQL Server Management Studio 并连接到 SQL Server 实例。  选择你想要备份，然后右键单击的数据库**任务**，然后选择**备份...**.此操作将打开“备份数据库”对话框。  
+1.  启动 SQL Server Management Studio 并连接到 SQL Server 实例。  选择你想要备份，请右键单击一个的数据库**任务**，然后选择**备份...**.此操作将打开“备份数据库”对话框。  
   
 2.  在“常规”页上， **“URL”** 用于向 Windows Azure 存储创建备份。 选择此选项后，将看到此页上启用其他选项：  
   
@@ -383,7 +382,7 @@ ms.locfileid: "36016871"
   
     ```  
   
-###  <a name="databaselog"></a> 将数据库和日志备份  
+###  <a name="databaselog"></a> 备份数据库和日志  
  下面的示例备份 AdventureWorks2012 示例数据库，默认情况下，该数据库使用简单恢复模式。 若要支持日志备份，请将 AdventureWorks2012 数据库改为使用完整恢复模式。 然后，该示例对 Windows Azure Blob 创建完整数据库备份，并在一段更新活动过后备份日志。 此示例将创建具有日期时间戳的备份文件名。  
   
 1.  **Tsql**  

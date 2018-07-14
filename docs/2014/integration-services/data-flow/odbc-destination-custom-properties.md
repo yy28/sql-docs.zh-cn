@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1ebe163af6adfc2bd59c95ac6d2ab76b9f886df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cb5db1c9d39a136973d372bcf7e918a1487970b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225867"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   下表介绍了 ODBC 目标的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  

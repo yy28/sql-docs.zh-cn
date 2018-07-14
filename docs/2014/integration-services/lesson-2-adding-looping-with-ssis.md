@@ -1,5 +1,5 @@
 ---
-title: 第 2 课： 添加循环 |Microsoft 文档
+title: 第 2 课： 添加循环 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 31
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f67531366ef7ff91e3afcc4b8d55b7cc08635e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1d67ffcac889a49de14f628cf7eb996895cf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281473"
 ---
 # <a name="lesson-2-adding-looping"></a>第 2 课：添加循环
-  在[第 1 课： 创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建从单个平面文件源提取数据、 转换使用查找转换的数据和最后加载到数据的包**FactCurrency**的事实数据表**AdventureWorksDW2012**示例数据库。  
+  在中[第 1 课： 创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建一个包，从单个平面文件源提取数据、 转换使用 Lookup 转换的数据，最后将数据加载到**FactCurrency**事实数据表**AdventureWorksDW2012**示例数据库。  
   
  但是，提取、转换和加载 (ETL) 过程很少使用单个平面文件。 典型的 ETL 过程从多个平面文件源提取数据。 从多个源提取数据需要采用迭代控制流。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最可能出现的功能之一是可以方便快捷地向包中添加迭代或循环。  
   

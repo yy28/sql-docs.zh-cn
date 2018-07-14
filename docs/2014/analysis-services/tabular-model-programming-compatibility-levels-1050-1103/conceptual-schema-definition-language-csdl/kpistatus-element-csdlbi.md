@@ -1,5 +1,5 @@
 ---
-title: KpiStatus 元素 (CSDLBI) |Microsoft 文档
+title: KpiStatus 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 003dd6f1458266b4f58b1445fc70e2030d0f0ea6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6a72905e91bb27ffb8acff7fb391e38d59e14209
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271663"
 ---
 # <a name="kpistatus-element-csdlbi"></a>KpiStatus 元素 (CSDLBI)
   KpiStatus 元素定义对某列的引用，该列包含用作关键绩效指标 (KPI) 中的状态指示器的值。  

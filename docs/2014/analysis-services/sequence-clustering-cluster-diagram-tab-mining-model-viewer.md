@@ -1,5 +1,5 @@
 ---
-title: 序列聚类分析群集关系图选项卡 (挖掘模型查看器 |Microsoft 文档
+title: 序列聚类分析群集关系图选项卡 (挖掘模型查看器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56c384e39ae4ef364f608cef8fa507d20bb746ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 862dca35dcec3c1113117cf472b3866fb9df0be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257235"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类关系图”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类关系图”** 选项卡提供顺序分析和聚类分析模型包含的所有分类的图形化视图。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], updating
 - queries [SQL Server], types
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updating tables
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 666c467a44692db34e5996435efd7eb61b8b62bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34948672400c119a4ebaee4b39308e186bfbb1f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179154"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>创建更新查询 (Visual Database Tools)
   可以使用“更新”查询在一次操作中更改多个行中的内容。 例如，在 `titles` 表中，可以使用“更新”查询将特定出版商出版的所有书籍都加价 10%。  
@@ -76,8 +76,8 @@ WHERE (pub_id = '0766')
  在执行“更新”查询时，不会在 [“结果”窗格](results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指示已更改的行数。  
   
 ## <a name="see-also"></a>请参阅  
- [支持的查询类型&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [支持的查询类型&#40;可视化数据库工具&#41;](supported-query-types-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

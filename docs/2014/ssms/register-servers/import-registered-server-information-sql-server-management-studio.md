@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importregisteredservers.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71d4174e159f84b7596600d1e4f8b5b4b99eb2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14c42bbfb8bab13d074914ce8c1de37d4c35a133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247957"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>导入已注册服务器信息 (SQL Server Management Studio)
   本主题说明如何导入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中保存的已注册服务器信息。 通过导出再导入已注册服务器的相关文件，可以便捷地为多台计算机配置与“已注册的服务器”中相同服务器之间的连接。 当从不同位置的计算机管理大量服务器，或希望为不熟练的用户配置基本的连接设置时，这非常有用。  
@@ -56,7 +56,7 @@ ms.locfileid: "36016454"
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的服务器注册按用户来存储密码。 在导入服务器注册信息后，用户在首次连接时必须输入每台服务器的密码，以便将密码存储在该用户的已注册服务器列表中。 对于通过 Windows 身份验证进行注册的服务器，则不需要如此操作。  
   
 ## <a name="see-also"></a>请参阅  
- [更改服务器注册&#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [导出已注册的服务器信息&#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
+ [更改服务器的注册&#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [导出已注册的服务器信息&#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [创建新的已注册的服务器 (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

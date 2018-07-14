@@ -1,5 +1,5 @@
 ---
-title: 计算工具 （Kpi 选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 计算工具 （Kpi 选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c03f8506de2a1f0744fcc9fcebd025443ffafaa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b0602c765368e96cc97f47591e372c4bdec8427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228327"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>计算工具（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集中的“KPI”选项卡上的“计算工具”窗格，浏览在关键绩效指标 (KPI) 中可用的元数据、函数和模板。  

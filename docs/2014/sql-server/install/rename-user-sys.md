@@ -1,5 +1,5 @@
 ---
-title: 重命名用户 sys |Microsoft 文档
+title: 重命名用户 sys |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 959eb9877fa4b73ff9bd307019976a05514b8f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cfb55c4199935d7d859cdc9144f5a29dc34eff9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202557"
 ---
 # <a name="rename-user-sys"></a>重命名 sys 用户
-  升级顾问检测到的用户名称**sys**数据库中。 该名称为保留名称。 在升级之前，请重命名该用户。 如果未重命名该用户，则数据库在升级过程结束之后将处于可疑状态并且将不可用，直至将数据库联机为止。  
+  升级顾问检测到的用户名称**sys**在数据库中。 该名称为保留名称。 在升级之前，请重命名该用户。 如果未重命名该用户，则数据库在升级过程结束之后将处于可疑状态并且将不可用，直至将数据库联机为止。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -39,7 +39,7 @@ ms.locfileid: "36017022"
   
 1.  创建一个新用户。  
   
-2.  使用以下语句显示授予的用户的所有权限**sys**和授予用户**sys**。  
+2.  使用以下语句显示由用户授予的所有权限**sys** ，并向用户授予**sys**。  
   
     ```  
     -- Return permissions granted by user sys.  
@@ -48,7 +48,7 @@ ms.locfileid: "36017022"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  要传输的所有对象拥有的所有权**sys**对新用户来说，使用**sp_changeobjectowner**。  
+3.  将拥有的所有对象的所有权转让**sys**对新用户来说，使用**sp_changeobjectowner**。  
   
 4.  删除用户**sys**。  
   

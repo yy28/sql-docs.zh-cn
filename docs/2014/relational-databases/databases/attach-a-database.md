@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.attachdatabase.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77d1a66f1cf5ee746e24ac278849b9a8f2816df6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1cbf5e35d6bab800cfc025be9a7ca2bc4bc1b0e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239047"
 ---
 # <a name="attach-a-database"></a>附加数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加数据库。 可以使用此功能来复制、移动或升级 SQL Server 数据库。  
@@ -39,13 +39,13 @@ ms.locfileid: "36015907"
   
      [Security](#Security)  
   
--   **通过使用附加数据库：**  
+-   **若要使用附加一个数据库：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在升级数据库之后  ](#FollowUp)  
+-   **跟进：**[升级数据库后  ](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

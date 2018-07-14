@@ -1,5 +1,5 @@
 ---
-title: 数据源视图 (Analysis Services) 中定义命名的查询 |Microsoft 文档
+title: 数据源视图 (Analysis Services) 中定义命名的查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - named queries [Analysis Services], creating
 - modifying named queries
 - data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81155cc3036fb0e71a1d56515c7218e2f106664b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aacf40665a651436c159aeb67a6514c6647883e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263813"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
   命名查询是以表的形式表示的 SQL 表达式。 在命名查询中，可以指定一个 SQL 表达式以选择从一个或多个数据源的一个或多个表返回的行和列。 命名查询基于一个表达式，除此之外，它在行和关系方面都与数据源视图 (DSV) 中的其他表相似。  
@@ -66,6 +66,6 @@ ms.locfileid: "36016693"
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [在数据源视图中定义命名的计算&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [数据源视图中定义命名的计算&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218947"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用报表设计器设计报表 (SSRS)
   使用报表设计器可以创建功能齐全的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和报表解决方案。 报表设计器提供可在其中定义数据源、数据集和查询的图形界面，用于数据区域和字段的报表布局位置，以及交互功能（例如一起使用的参数和报表集）。  
@@ -42,7 +42,7 @@ ms.locfileid: "36015639"
 ##  <a name="bkmk_SharedDataSources"></a> 共享数据源  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可为报表解决方案定义和部署共享数据源。 可通过使用 **OverwriteDataSources** 和 **TargetDataSourceFolder** 属性，脱离项目中的其他项而单独部署共享数据源。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](set-deployment-properties-reporting-services.md)。  
   
- 在报表设计器中，您可以使用“报表数据”窗格和解决方案资源管理器来定义在报表中使用的数据源。 有关详细信息，请参阅 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 不能使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 打开已发布到某一报表服务器或 SharePoint 站点、但不包括在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 解决方案中的数据源。 对于该功能，而使用[报表生成器&#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)。  
+ 在报表设计器中，您可以使用“报表数据”窗格和解决方案资源管理器来定义在报表中使用的数据源。 有关详细信息，请参阅 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 不能使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 打开已发布到某一报表服务器或 SharePoint 站点、但不包括在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 解决方案中的数据源。 对于该功能，使用[报表生成器&#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)。  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一个客户端工具。 您可以在您的计算机上在本地测试报表解决方案，将其部署到测试环境以便测试服务器解决方案，然后将其部署到生产环境。 在部署后，验证为报表服务器环境配置了数据源处理扩展插件和数据源凭据。 您可以使用配置管理器来帮助管理不同部署的属性。 有关详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md)。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36015639"
 ##  <a name="bkmk_SharedDatasets"></a> 共享数据集  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可为报表解决方案定义和部署共享数据集。 可通过使用 **OverwriteDatasets** 和 **TargetDatasetFolder** 属性，脱离项目中的其他项而单独部署共享数据集。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](set-deployment-properties-reporting-services.md)。  
   
- 在报表设计器中，您可以使用“报表数据”窗格和解决方案资源管理器来定义在报表中使用的共享数据集。 有关详细信息，请参阅 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 不能使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 从报表服务器或 SharePoint 站点直接打开已发布的数据集。 对于该功能，而使用[报表生成器&#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)在共享数据集模式下。  
+ 在报表设计器中，您可以使用“报表数据”窗格和解决方案资源管理器来定义在报表中使用的共享数据集。 有关详细信息，请参阅 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 不能使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 从报表服务器或 SharePoint 站点直接打开已发布的数据集。 对于该功能，使用[报表生成器&#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)在共享数据集模式。  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一个客户端工具。 您可以使用查询设计器在本地以预览方式创建和测试您的查询结果。 在部署后，您可以独立于共享数据集所依赖的共享数据源和报表来单独管理共享数据集。 有关详细信息，请参阅[报表嵌入数据集和共享数据集&#40;报表生成器和 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)，[报表设计器 SQL Server Data Tools 中的查询设计工具&#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md)，和[管理共享数据集](../report-data/manage-shared-datasets.md)。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一个客户端工具。 您可以使用查询设计器在本地以预览方式创建和测试您的查询结果。 在部署后，您可以独立于共享数据集所依赖的共享数据源和报表来单独管理共享数据集。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集&#40;报表生成器和 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)，[报表设计器 SQL Server Data Tools 中的查询设计工具&#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md)，并[管理共享数据集](../report-data/manage-shared-datasets.md)。  
   
   
 ##  <a name="bkmk_Reports"></a> 报表  
@@ -121,10 +121,10 @@ ms.locfileid: "36015639"
   
     -   按 F5。  
   
-     如果你使用的项目配置，生成报表但不部署它，报表中指定`StartItem`当前配置属性，将在单独的预览窗口中打开。  
+     如果您使用项目配置，生成报表但不部署该报表中指定，`StartItem`当前配置的属性将在单独的预览窗口中打开。  
   
     > [!NOTE]  
-    >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器，右键单击报表项目，单击**属性**，然后在`StartItem`，选择要显示的报表的名称。  
+    >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器中右键单击报表项目中，单击**属性**，然后在`StartItem`，选择要显示的报表的名称。  
   
      若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”**。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "36015639"
 |3|很小的生成问题，以轻微的方式更改报表布局，您可能注意不到所发生的更改。|  
 |4|仅用于发布警告。|  
   
- 当你尝试预览或部署报表，其中包含报表项中的新增功能[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，如地图和数据条，可以在报告中删除这些报表项。 默认情况下，此配置的 ErrorLevel 属性设置为 2，这样，当删除地图时，将导致报表生成过程失败。 然而，如果将 ErrorLevel 属性的值更改为 0 或 1，则将删除地图，发出警告，但生成过程继续进行。  
+ 当你尝试预览或部署报表包含报表项中的新增功能[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，如地图和数据条，可以从报表删除这些报表项。 默认情况下，此配置的 ErrorLevel 属性设置为 2，这样，当删除地图时，将导致报表生成过程失败。 然而，如果将 ErrorLevel 属性的值更改为 0 或 1，则将删除地图，发出警告，但生成过程继续进行。  
   
   
 ## <a name="see-also"></a>请参阅  

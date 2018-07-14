@@ -1,5 +1,5 @@
 ---
-title: Kpi 元素 (ASSL) |Microsoft 文档
+title: Kpi 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Kpi element
 ms.assetid: 1979a58f-97a8-4c1a-aa65-dcfb6d2404cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6205e1a14a992ed8bd0fc05f91d162e90be3346c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27b0bcbe2ddaabcc7b3f9ef16f3fa620a8c2db38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235637"
 ---
 # <a name="kpi-element-assl"></a>Kpi 元素 (ASSL)
-  在定义关键绩效指标 (KPI)[多维数据集](cube-element-assl.md)元素或[透视](perspective-element-assl.md)元素。  
+  在定义关键绩效指标 (KPI)[多维数据集](cube-element-assl.md)元素或[角度来看](perspective-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36015996"
   
 |祖先或父级|子元素|  
 |------------------------|--------------------|  
-|[Cube](../collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../properties/id-element-assl.md), [CurrentTimeMember](member-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Goal](../properties/goal-element-assl.md), [ID](../properties/id-element-assl.md), [Name](../properties/name-element-assl.md), [Status](../properties/status-element-assl.md), [StatusGraphic](../properties/statusgraphic-element-assl.md), [Translations](../collections/translations-element-assl.md), [Trend](../properties/trend-element-assl.md), [TrendGraphic](../properties/trendgraphic-element-assl.md), [Value](../properties/value-element-assl.md)|  
+|[多维数据集](../collections/annotations-element-assl.md)， [AssociatedMeasureGroupID](../properties/id-element-assl.md)， [CurrentTimeMember](member-element-assl.md)，[说明](../properties/description-element-assl.md)， [DisplayFolder](../properties/displayfolder-element-assl.md)， [目标](../properties/goal-element-assl.md)， [ID](../properties/id-element-assl.md)，[名称](../properties/name-element-assl.md)，[状态](../properties/status-element-assl.md)， [StatusGraphic](../properties/statusgraphic-element-assl.md)，[翻译](../collections/translations-element-assl.md)，[趋势](../properties/trend-element-assl.md)， [TrendGraphic](../properties/trendgraphic-element-assl.md)，[值](../properties/value-element-assl.md)|  
 |[透视](perspective-element-assl.md)|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

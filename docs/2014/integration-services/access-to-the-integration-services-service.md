@@ -1,5 +1,5 @@
 ---
-title: 访问 Integration Services 服务 |Microsoft 文档
+title: 访问 Integration Services 服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - viewing packages while running
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, security
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fdae3756442b1af660095fe53cbc8e4e3db82da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eac9b692732d11903e358ef5e53e59a4a81bf6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180404"
 ---
 # <a name="access-to-the-integration-services-service"></a>访问 Integration Services 服务
   包保护级别可以限制允许谁来编辑和执行包。 需要其他保护来限制谁可以查看当前正在服务器上运行的包列表以及谁可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中停止当前正在执行的包。  

@@ -1,5 +1,5 @@
 ---
-title: 配置 Reporting Services 使用使用者可选名称 |Microsoft 文档
+title: 配置 Reporting Services 以使用使用者可选名称 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 4
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3826590033cfd21bc12fa623633f88d9fa11d76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2890cea5f4c39d27ce89d4d9c5bcc3efe7384039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284783"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>配置 Reporting Services 使用使用者备用名称
   本主题说明了如何通过修改 rsreportserver.config 文件和使用 Netsh.exe 工具配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) 以使用使用者可选名称 (SAN)。  
@@ -34,7 +34,7 @@ ms.locfileid: "36014042"
   
  中的 Url[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]可以配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是证书中的附加字段，允许 SSL 服务进行侦听，对许多 URL 有效，并与其他应用程序共享 SSL 端口。 SAN 的形式如下：www.s2.com。  
   
- 有关详细信息有关的 SSL 设置[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，请参阅[配置本机模式报表服务器上的 SSL 连接](security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 有关 SSL 设置的详细信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，请参阅[本机模式报表服务器上配置 SSL 连接](security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>将 SSRS 配置为使用适用于 Web 服务 URL 的使用者备用名称  
   

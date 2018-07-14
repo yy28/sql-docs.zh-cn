@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f882bcd5aeead1dea06619598d868ded6c717167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f570016f39dab2b62276dc3b64ad2c135b05460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197437"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>合并数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，当你在发布前想要比较数据时，合并来自两个工作表的数据。 在此过程中，您将来自两个工作表中的数据合并到一个工作表中。 然后可以进行进一步的比较，并确定哪些数据（如果有）将发布到 MDS 存储库。  
   
 ## <a name="prerequisites"></a>必要條件  
   
--   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅[负载到 Excel 的 MDS 数据](export-data-to-excel-from-master-data-services.md)。  
+-   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅[将数据加载到 Excel 的 mds](export-data-to-excel-from-master-data-services.md)。  
   
 -   必须具有包含要与 MDS 管理的数据合并的数据的工作表。 此工作表必须具有标题行。  
   

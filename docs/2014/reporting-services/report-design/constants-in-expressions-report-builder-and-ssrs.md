@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 227ddf4abd66480d130ac4d2c46fd7b20e97796f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d3e519395ddd1a1dc444906cc2a718d3719ef413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266123"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>表达式中的常量（报表生成器和 SSRS）
   常量由文字文本或预定义文本构成。 报表处理器具有对预定义常量的访问权限，所以当表达式中包含常量时，这些常量所代表的值会在计算之前进行替换。  
@@ -45,7 +45,7 @@ ms.locfileid: "36016758"
 |BorderStyle|添加到报表的行的有效值。|Default、None、Dotted、Dashed、Solid、Double、DashDot、DashDotdot|  
   
 ## <a name="visual-basic-constants"></a>Visual Basic 常量  
- 您可以在表达式中使用在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库定义的常量。 例如，你可以使用常量`DateInterval.Day`。 对于日期 2008 年 1 月 10 日，以下表达式会返回数字 10：  
+ 您可以在表达式中使用在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库定义的常量。 例如，可以使用常量`DateInterval.Day`。 对于日期 2008 年 1 月 10 日，以下表达式会返回数字 10：  
   
  `=DatePart("d",Globals!ExecutionTime)`  
   

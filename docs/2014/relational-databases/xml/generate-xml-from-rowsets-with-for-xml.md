@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201107"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 从行集生成 XML
-  你可以生成`xml`通过使用带有新的 FOR XML 行集的数据类型实例**类型**指令。  
+  您可以生成`xml`通过使用带有新的 FOR XML 行集的数据类型实例**类型**指令。  
   
  可以将结果赋给`xml`数据类型列、 变量或参数。 同样，可以嵌套 FOR XML 以生成任意层次结构。 这使嵌套的 FOR XML 在编写上比 FOR XML EXPLICIT 更为方便，但是对于深层次的结构，它的执行效果不如后者。 FOR XML 还引入了新的 PATH 模式。 这个新模式指定某个列的值在 XML 树中的路径。  
   
@@ -40,7 +40,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- V 视图包含与单个 columnxmlVal XML 类型的单行`.`其能够与普通查询`xml`数据类型实例。 例如，下面的查询返回名字为“David”的作者：  
+ V 视图只包含 XML 类型的单个行与单一 columnxmlVal`.`其能够与普通查询`xml`数据类型实例。 例如，下面的查询返回名字为“David”的作者：  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

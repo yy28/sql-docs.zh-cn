@@ -1,5 +1,5 @@
 ---
-title: CubePermission 元素 (ASSL) |Microsoft 文档
+title: CubePermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubePermission element
 ms.assetid: b144b623-ff20-4ead-91ad-4c718f3b140b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 557fd858a02ed3e0d05679dca56740d2d8eb2128
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15009d244d0c110d15f1c7dc62e66dec76ce859b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253159"
 ---
 # <a name="cubepermission-element-assl"></a>CubePermission 元素 (ASSL)
-  定义的特定成员的权限[角色](role-element-assl.md)中特定元素[多维数据集](cube-element-assl.md)元素。  
+  定义一个特定成员的权限[角色](role-element-assl.md)元素中特定[多维数据集](cube-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36016685"
 |子元素|[CellPermissions](../collections/cellpermissions-element-assl.md)， [DimensionPermissions](../collections/dimensionpermissions-element-assl.md)， [ReadSourceData](data-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CubePermission>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CubePermission>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](cube-element-assl.md)   

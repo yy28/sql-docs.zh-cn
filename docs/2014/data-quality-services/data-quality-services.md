@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8a9ad0b05ced1a4ebc747d8f70eaf2b3bb4b5b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc8b0b1ed01ef85fc28bf73fe8fcfb0316f41bea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207637"
 ---
 # <a name="data-quality-services"></a>“数据库引擎服务”
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是知识驱动型数据质量产品。 DQS 使您可以生成知识库，然后使用它执行各种关键数据质量任务，包括数据的更正、充实、标准化和消除重复。 DQS 通过使用引用数据访问接口提供的基于云的 Reference Data Services，使您可以执行数据清理。 DQS 还可以提供集成到数据质量任务的事件探查功能，使您可以分析数据的完整性。  

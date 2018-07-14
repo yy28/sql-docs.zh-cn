@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
 - Queue Reader Agent, alerts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d388688f07e27f71d2654e8745a8a7d1befa405
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 798cad5ea58d94d8194b823c8b3940d3f79ccaae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251849"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理提供了使用警报监视事件（如复制代理事件）的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括一组预定义的复制代理警报，您可以配置这些警报以执行某项任务和/或通知某个操作员。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
@@ -49,7 +49,7 @@ ms.locfileid: "36017066"
 |20578|**复制：代理自定义关闭**|||  
 |22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|是|  
   
- 除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅[Set Thresholds and Warnings in Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)警报基础结构。 有关详细信息，请参阅[创建用户定义事件](../../../ssms/agent/create-a-user-defined-event.md)。  
+ 除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅[设置阈值和警告在复制监视器中的](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)警报基础结构。 有关详细信息，请参阅[创建用户定义事件](../../../ssms/agent/create-a-user-defined-event.md)。  
   
  **配置预定义的复制警报**  
   

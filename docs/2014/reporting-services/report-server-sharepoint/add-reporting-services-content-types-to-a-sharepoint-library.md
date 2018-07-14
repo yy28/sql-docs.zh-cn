@@ -1,5 +1,5 @@
 ---
-title: 将报表查看器 Web 部件添加到网页 (SharePoint 集成模式下的 Reporting Services) |Microsoft 文档
+title: 将报表查看器 Web 部件添加到网页 (SharePoint 集成模式下的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1c6e7c2900595c99518f5ea43aa298a37f3bc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c351c37c9666c3b0f5723fa8ea049efe788e6a02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172048"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）
   可以使用报表查看器 Web 部件查看在报表服务器（配置为在 SharePoint 集成模式下运行）上运行的报表。 可以使用 Web 部件显示您在报表生成器或报表设计器中创建并上载到库中的报表定义 (.rdl) 文件。  
@@ -63,6 +63,6 @@ ms.locfileid: "36015416"
  [在 SharePoint 站点上的报表查看器 Web 部件](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [自定义报表查看器 Web 部件](../customize-the-report-viewer-web-part.md)   
  [授予对 SharePoint 站点上的报表服务器项的权限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [安装或卸载 Reporting Services 外接程序为 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

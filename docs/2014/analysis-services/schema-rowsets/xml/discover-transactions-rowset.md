@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_TRANSACTIONS 行集 |Microsoft 文档
+title: DISCOVER_TRANSACTIONS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,27 +12,27 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3869d4f8cd3adf96bd006a8669d7d82778b02450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 979067978855e8aa1012deb8df39bea61862fdeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204547"
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS 行集
   返回系统上当前挂起的一组事务。  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_TRANSACTIONS`行集包含以下各列。  
+ `DISCOVER_TRANSACTIONS`行集包含以下列。  
   
 |列名|类型指示符|Description|  
 |-----------------|--------------------|-----------------|  
-|`TRANSACTION_ID`|`DBTYPE_WSTR`|事务唯一标识符，作为 GUID。|  
+|`TRANSACTION_ID`|`DBTYPE_WSTR`|事务唯一标识符，以 GUID 形式表示。|  
 |`TRANSACTION_SESSION_ID`|`DBTYPE_WSTR`|事务会话的唯一标识符，以 GUID 形式表示。|  
 |`TRANSACTION_START_TIME`|`DBTYPE_DBTIMESTAMP`|事务开始时的服务器 UTC 日期和时间。|  
 |`TRANSACTION_ELAPSED_TIME_MS`|`DBTYPE_I8`|自事务开始起经过的时间（毫秒）。|  
@@ -41,7 +41,7 @@ ms.locfileid: "36016254"
  未对此架构行集进行排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_TRANSACTIONS`行集可限制在下表中列出的列。  
+ `DISCOVER_TRANSACTIONS`行集可以限制下表中列出的列。  
   
 |**列名**|**类型指示符**|**限制状态**|  
 |---------------------|------------------------|---------------------------|  

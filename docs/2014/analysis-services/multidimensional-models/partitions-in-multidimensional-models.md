@@ -1,5 +1,5 @@
 ---
-title: 多维模型中的分区 |Microsoft 文档
+title: 多维模型中的分区 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 884f8cbf2157dcf06958c81437a1a177ac2ae282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7491322b775cca1a6cf65b667ffd979aa723af0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270253"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多维模型中的分区
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，“分区”  提供加载到度量值组中的事实数据的物理存储。 对于每个度量值组都会自动创建一个分区，但是，常见的情况是创建更多分区以进一步对数据进行分段，从而使处理更高效，查询性能更佳。  
@@ -44,7 +44,7 @@ ms.locfileid: "36015989"
  聚合是预先计算的多维数据集数据的汇总，可帮助启用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速的查询响应。 您可以通过设置存储限制、性能提升，或在聚合生成进程运行一段时间之后随意停止该进程来控制为度量值组创建的聚合数。 聚合并不一定越多越好。 每增加一个聚合都会带来一定成本，包括硬盘空间和处理时间方面的成本。 我们建议以提升 30% 的性能为标准来创建聚合，然后仅当有测试或体验保证时才增加聚合数量。有关详细信息，请参阅[设计聚合（Analysis Services - 多维）](designing-aggregations-analysis-services-multidimensional.md)。  
   
 ## <a name="partition-merging-and-editing"></a>分区合并和编辑  
- 如果两个分区使用同样的聚合设计，则可以将两个分区合并为一个。 例如，如果有一个按月分区的库存维度，则在每个日历月月末，可以将该月分区与现有的年初至今分区合并。 这样一来，就可对当前月分区进行快速处理和分析，而该年剩下的月只需要在合并时重新处理。 此类重新处理需要较长的处理时间，运行效率也可能较低。 有关管理分区合并过程的详细信息，请参阅[Analysis Services 中合并分区&#40;SSAS-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)。 使用编辑多维数据集分区**分区**在多维数据集设计器选项卡上，请参阅[编辑或删除分区&#40;Analysis Services-多维&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)。  
+ 如果两个分区使用同样的聚合设计，则可以将两个分区合并为一个。 例如，如果有一个按月分区的库存维度，则在每个日历月月末，可以将该月分区与现有的年初至今分区合并。 这样一来，就可对当前月分区进行快速处理和分析，而该年剩下的月只需要在合并时重新处理。 此类重新处理需要较长的处理时间，运行效率也可能较低。 有关管理分区合并过程的详细信息，请参阅[Analysis Services 中合并分区&#40;SSAS-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)。 若要通过编辑多维数据集分区**分区**选项卡中多维数据集设计器，请参阅[编辑或删除分区&#40;Analysis Services-多维&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36015989"
 |[创建和管理本地分区&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|包含有关如何使用筛选器或不含重复数据的不同事实表对数据分区的信息。|  
 |[设置分区存储&#40;Analysis Services-多维&#41;](set-partition-storage-analysis-services-multidimensional.md)|说明如何为分区配置存储。|  
 |[编辑或删除分区&#40;Analysis Services-多维&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|说明如何查看和编辑分区。|  
-|[在 Analysis Services 中合并分区&#40;SSAS-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含有关如何合并分区的信息，这些分区具有不同的事实表或数据切片而不含重复数据。|  
+|[Analysis Services 中合并分区&#40;SSAS-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含有关如何合并分区的信息，这些分区具有不同的事实表或数据切片而不含重复数据。|  
 |[设置分区写回](set-partition-writeback.md)|提供有关对分区启用写操作的说明。|  
 |[创建和管理远程分区&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|说明如何创建和管理远程分区。|  
   

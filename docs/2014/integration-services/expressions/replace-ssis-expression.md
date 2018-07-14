@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replacing string expression
 - REPLACE function
@@ -16,13 +16,13 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7888b72ed7193a1c2910db06a70496ee30761903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2750412c9024263f4e576a883a23b4ffb430924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188414"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE（SSIS 表达式）
   将表达式中的一个字符串替换为另一个字符串或空字符串后，返回一个字符表达式。  

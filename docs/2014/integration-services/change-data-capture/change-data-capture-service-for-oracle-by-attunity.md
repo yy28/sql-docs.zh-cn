@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a4c7665e301797481c2af9866e3c6f7d24374d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c050d048d6d0f6439eac7fb9f3fb42d85d1dc4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193927"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity
   Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日志并将对有关 Oracle 表的更改捕获到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改表中。 存储从 Oracle 捕获的更改的 SQL 更改表具有与本机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 变更数据捕获功能使用的更改表相同的类型。 这使得使用这些更改就像使用对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库进行的更改一样简单。  
@@ -29,7 +29,7 @@ ms.locfileid: "36016176"
   
  用于 Oracle 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 服务的安装会将服务配置 UI 和服务程序放置于所选位置中。 使用 Oracle CDC 服务配置控制台单独配置 Oracle CDC 服务。 有关配置 Oracle CDC 服务的详细信息，请参阅 [Change Data Capture Service for Oracle by Attunity F1 帮助](change-data-capture-service-for-oracle-by-attunity-f1-help.md)。  
   
- 若要安装 Oracle CDC 服务，请从 SQL Server 安装介质手动运行 **AttunityOracleCdcService.msi** 。 X86 和 x64 的安装包位于 **.\Tools\AttunityCDCOracle\\**  SQL Server 安装介质上。  
+ 若要安装 Oracle CDC 服务，请从 SQL Server 安装介质手动运行 **AttunityOracleCdcService.msi** 。 用于 x86 和 x64 安装包位于 **.\Tools\AttunityCDCOracle\\**  SQL Server 安装介质上。  
   
  Oracle CDC 服务可以安装在安装了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client 的任何支持的 Windows 计算机上；它无需安装在安装有目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的那一台计算机上。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36016176"
 -   Oracle 数据库 10x，任意版本  
   
 ### <a name="target-sql-server-database"></a>目标 SQL Server 数据库  
- 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="running-the-installation-program"></a>运行安装程序  
  若要安装 Oracle CDC 服务，请打开针对您正使用的 Windows 平台（32/64 位）的安装向导，并且按照屏幕上的指示执行。  

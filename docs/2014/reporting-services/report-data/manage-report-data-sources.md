@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8be62bb127d6d3fed0f3156f1dc58fc276e51431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c49a666894fd4811de2405f22da111298b019b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244307"
 ---
 # <a name="manage-report-data-sources"></a>管理报表数据源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表、报表模型以及数据驱动订阅都从外部数据源检索数据。 若要连接到外部数据源，报表服务器可以使用报表、模型或订阅中定义的或从中引用的数据源连接信息。 数据源连接属性始终在创建报表或模型时通过该报表或模型进行定义，但是可以在将报表或模型发布到报表服务器后对这些属性进行单独管理。  
@@ -56,9 +56,9 @@ ms.locfileid: "36015420"
  若要发布数据源属性嵌入其中的报表，请考虑切换到共享数据源属性。 共享数据源更易于管理，因为您可以在一页中更新凭据和连接字符串。 使用该数据源的所有报表、模型和数据驱动订阅会立即拾取这些更改。 还可以使共享数据源处于离线状态，从而有效暂停报表或订阅，以便您在排除故障或调查任何出现的问题时能够阻止报表或订阅运行。  
   
 ## <a name="controlling-access-data-source-properties"></a>控制访问数据源属性  
- 默认情况下，有权管理报表的任何用户都可以设置报表上的任何属性，包括确定数据源类型、连接字符串、凭据的属性以及确定报表获取连接信息的来源是嵌入数据源还是共享数据源。 有关哪些任务和权限控制对本机模式报表服务器上的数据源属性的访问的详细信息，请参阅[保护共享数据源项](../security/secure-shared-data-source-items.md)和[保护报表和资源](../security/secure-reports-and-resources.md)。  
+ 默认情况下，有权管理报表的任何用户都可以设置报表上的任何属性，包括确定数据源类型、连接字符串、凭据的属性以及确定报表获取连接信息的来源是嵌入数据源还是共享数据源。 有关哪些任务和权限控制对本机模式报表服务器上的数据源属性的访问权限的详细信息，请参阅[保护共享数据源项](../security/secure-shared-data-source-items.md)并[保护报表和资源](../security/secure-reports-and-resources.md)。  
   
- 查看和编辑 SharePoint 库中项属性的权限由站点管理员确定。 有关哪些权限控制对数据源连接属性的访问的详细信息，请参阅[SharePoint 站点和列表权限参考为报表服务器项](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)。  
+ 查看和编辑 SharePoint 库中项属性的权限由站点管理员确定。 有关哪些权限可控制对数据源连接属性的访问权限的详细信息，请参阅[SharePoint 站点和列表权限参考，为报表服务器项](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)。  
   
 ## <a name="how-to-work-with-data-source-properties-on-a-report-server"></a>如何在报表服务器上处理数据源属性  
  可以使用多种工具创建和修改数据源属性。 下表汇总了这些方法和工具，并提供指向其他说明的链接。  
@@ -74,7 +74,7 @@ ms.locfileid: "36015420"
 |将凭据存储为用于创建订阅或报表快照的必备组件。|报表管理器|[在 Reporting Services 数据源中存储凭据](store-credentials-in-a-reporting-services-data-source.md)|  
 |编辑已发布报表的数据源连接属性。|报表管理器|[配置报表的数据源属性&#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |在报表服务器上创建共享数据源项。|SharePoint 站点|[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
-|在报表中使用现有 .odc 连接信息。|SharePoint 站点|[将 Office 数据连接&#40;.odc&#41;与报表&#40;的 Reporting Services SharePoint 集成模式&#41;](use-an-office-data-connection-odc-with-reports.md)|  
+|在报表中使用现有 .odc 连接信息。|SharePoint 站点|[将 Office 数据连接&#40;.odc&#41;报表&#40;的 Reporting Services SharePoint 集成模式下&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  管理数据源和报表数据源之间的连接与管理报表服务器和报表服务器数据库之间的连接并不一样。 有关将报表服务器连接到内部数据存储的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  

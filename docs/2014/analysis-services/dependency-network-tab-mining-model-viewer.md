@@ -1,5 +1,5 @@
 ---
-title: 依赖关系网络选项卡 （挖掘模型查看器） |Microsoft 文档
+title: 依赖关系网络选项卡 （挖掘模型查看器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3f8b993490c349cab5a6f25c722f83719b844af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01b3535c7a6c2547bdef9a4f74956ff647f1b864
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279983"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>“依赖关系网络”选项卡（挖掘模型查看器）
   **“依赖关系网络”** 选项卡提供挖掘模型所包含的所有属性的图形视图，并显示这些属性之间的关系。  

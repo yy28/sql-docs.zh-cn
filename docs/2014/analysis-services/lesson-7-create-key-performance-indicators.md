@@ -1,5 +1,5 @@
 ---
-title: 第 8 课： 创建关键绩效指标 |Microsoft 文档
+title: 第 8 课： 创建关键绩效指标 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fd135a37a4fe2721ca6aaa70d25e869b9a83733e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0895fe1e699dc7ae53cb278087d43643cbdbf84c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187244"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 课：创建关键绩效指标
   在本课中，您将创建关键绩效指标 (KPI)。 KPI 用于根据“目标”值度量由“基础”度量值定义的值（也可以是由度量值或绝对值定义的值）的性能。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅 [KPI（SSAS 表格）](tabular-models/kpis-ssas-tabular.md)。  
@@ -51,9 +51,9 @@ ms.locfileid: "36016955"
   
 5.  在“关键绩效指标”对话框的“定义目标值”中，选择“绝对值”选项。  
   
-6.  在**绝对值**字段中，键入`1.1`，然后按 ENTER。  
+6.  在中**绝对值**字段中，键入`1.1`，然后按 ENTER。  
   
-7.  在**定义状态阈值**，在左 （低） 滑块字段中，键入`1`，然后在右 （高） 滑块字段中，键入`1.07`。  
+7.  在中**定义状态阈值**，在左侧 （低） 滑块字段中，键入`1`，然后在右侧 （高） 滑块字段中，键入`1.07`。  
   
 8.  在“选择图标样式”中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36016955"
   
 4.  在“关键绩效指标”对话框的“定义目标值”中，选择“绝对值”选项。  
   
-5.  在**绝对值**字段中，键入`1.25`。  
+5.  在中**绝对值**字段中，键入`1.25`。  
   
 6.  在“定义状态阈值”中，滑动左侧（低）滑块字段，直到此字段显示 **0.8**，然后滑动右侧（高）滑块字段，直到此字段显示 **1.03**。  
   

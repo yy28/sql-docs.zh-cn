@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1864b580a681cb3c9e7fca612140f21548d2c96a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235277"
 ---
 # <a name="data-collector-security"></a>数据收集器的安全性
   数据收集器使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实现的基于角色的安全模式。 在此模式下，数据库管理员能够在只拥有执行相应任务所需的权限的安全上下文中运行各种数据收集器任务。 执行涉及内部表的操作时也采用这种方法，内部表只能通过存储过程或视图进行访问。 不会向内部表授予任何权限。 但是，还要对使用存储过程或视图访问表的用户进行权限检查。  
@@ -52,13 +52,13 @@ ms.locfileid: "36017550"
   
  这些角色存储在 msdb 数据库中。 默认情况下，任何用户都不是这些数据库角色的成员。 这些角色的用户成员资格必须显式授予。  
   
- 成员的用户的`sysadmin`固定的服务器角色具有完全访问权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理对象和数据收集器视图。 但是，需要将这些用户显式添加到数据收集器角色中。  
+ 成员用户的`sysadmin`固定的服务器角色具有完全访问权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理对象和数据收集器视图。 但是，需要将这些用户显式添加到数据收集器角色中。  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。  
   
 ### <a name="dcadmin-role"></a>dc_admin 角色  
- 分配给用户`dc_admin`角色具有完全权限管理员访问权限 （创建、 读取、 更新和删除） 数据收集器配置服务器实例上。 此角色的成员可执行以下操作：  
+ 分配给用户`dc_admin`角色具有完全管理员访问权限 （创建、 读取、 更新和删除） 数据收集器配置服务器实例上。 此角色的成员可执行以下操作：  
   
 -   设置收集器级别的属性。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36017550"
 -   **SQLAgentUserRole**。 创建计划和运行作业时需要此角色。  
   
     > [!NOTE]  
-    >  创建的数据收集器必须授予访问权限的代理`dc_admin`若要创建它们，并在需要通过代理的任何作业步骤中使用它们。  
+    >  创建数据收集器必须授予访问权限的代理`dc_admin`来创建和使用任何需要代理的作业步骤中。  
   
 -   **dc_operator**。 成员`dc_admin`继承授予的权限**dc_operator**。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36017550"
   
  这些角色存储在 msdb 数据库中。 默认情况下，任何用户都不是这些数据库角色的成员。 这些角色的用户成员资格必须显式授予。  
   
- 成员的用户的`sysadmin`固定的服务器角色具有对数据收集器视图的完全访问权限。 但是，需要将这些用户显式添加到数据库角色以执行其他操作。  
+ 成员用户的`sysadmin`固定的服务器角色具有对数据收集器视图的完全访问权限。 但是，需要将这些用户显式添加到数据库角色以执行其他操作。  
   
 ### <a name="mdwadmin-role"></a>mdw_admin 角色  
  **mdw_admin** 角色的成员对管理数据仓库拥有读取、写入、更新和删除访问权限。  
@@ -138,7 +138,7 @@ ms.locfileid: "36017550"
 -   在需要时更改管理数据仓库的架构（例如在安装新的收集类型时添加新表）。  
   
     > [!NOTE]  
-    >  ： 架构更改，用户还必须是属于`dc_admin`角色来安装新的收集器类型，因为此操作需要更新 msdb 中的数据收集器配置的权限。  
+    >  架构更改时，用户还必须是属于`dc_admin`角色来安装新的收集器类型，因为此操作需要拥有更新 msdb 中的数据收集器配置权限。  
   
 -   对管理数据仓库运行维护作业（例如存档或清除）。  
   

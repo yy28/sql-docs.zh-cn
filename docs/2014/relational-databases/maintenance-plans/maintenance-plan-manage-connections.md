@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.connections.f1
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20f9f809f7ac04cd0e4f8c2975e23d42571b0f77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b94e775e9127827f9b469fcd3241c685bf6585f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227467"
 ---
 # <a name="maintenance-plan-manage-connections"></a>维护计划（管理连接）
   使用 **“管理连接”** 对话框可以指定由维护计划使用的连接的属性。 在创建某个维护计划时，将会与创建该计划所在的服务器建立本地连接。 使用此连接，可以创建在此本地连接上执行工作的任务。 如果需要的话，请使用 **“管理连接”** 对话框添加任务。 配置其他连接后，它们将出现在每个任务的连接框中。  

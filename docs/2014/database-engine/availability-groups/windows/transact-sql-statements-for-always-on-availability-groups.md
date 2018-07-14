@@ -1,28 +1,27 @@
 ---
-title: AlwaysOn 可用性组 (SQL Server) 的 TRANSACT-SQL 语句概述 |Microsoft 文档
+title: 为 AlwaysOn 可用性组 (SQL Server) 的 TRANSACT-SQL 语句概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 20
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 3df6192a476847b1e40ebfb6ac1d3321979a3c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 651f340e323dd793a831ccb54d29ec875d40dc83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225937"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组的 Transact-SQL 语句概述 (SQL Server)
   本主题介绍支持部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 以及创建和管理指定的可用性组、可用性副本和可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 语句。  
@@ -36,7 +35,7 @@ ms.locfileid: "36016673"
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql) 可以创建新的可用性组，还可以创建可用性组侦听器（此为可选项）。 必须至少指定您的本地服务器实例，该实例将成为初始主副本。 还可以选择指定最多四个辅助副本。  
   
- 在要承载新可用性组的初始主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上执行 CREATE AVAILABILITY GROUP。 此服务器实例必须驻留在节点的 Windows Server 故障转移群集 (WSFC) (有关详细信息，请参阅[先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 在要承载新可用性组的初始主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上执行 CREATE AVAILABILITY GROUP。 此服务器实例必须驻留在节点的 Windows Server 故障转移群集 (WSFC) (有关详细信息，请参阅[的先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ##  <a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 支持更改现有可用性组或可用性组侦听器以便故障转移可用性组。  

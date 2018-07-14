@@ -1,5 +1,5 @@
 ---
-title: AllMemberTranslation 元素 (ASSL) |Microsoft 文档
+title: AllMemberTranslation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberTranslation element
 ms.assetid: 31ec0c44-8f1d-457c-9e8b-61dd5bc468f7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4124f8e9b8af1d9203e1b9dc877598880da348b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f001f32cae974d8bc22de635e7776ba3b94451e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231847"
 ---
 # <a name="allmembertranslation-element-assl"></a>AllMemberTranslation 元素 (ASSL)
-  包含的转换是为标题的所有成员的[层次结构](hierarchy-element-assl.md)元素。  
+  包含的所有成员的标题的翻译[层次结构](hierarchy-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36017617"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|[转换](translation-element-assl.md)|  
+|数据类型和长度|[翻译](translation-element-assl.md)|  
 |默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
@@ -64,8 +64,8 @@ ms.locfileid: "36017617"
  在 Analysis Management Objects (AMO) 对象模型中，与 `AllMemberTranslations` 集合的父级对应的元素为 <xref:Microsoft.AnalysisServices.Hierarchy>。  
   
 ## <a name="see-also"></a>请参阅  
- [转换元素&#40;ASSL&#41;](translation-element-assl.md)   
- [层次结构元素&#40;ASSL&#41;](hierarchy-element-assl.md)   
+ [Translation 元素&#40;ASSL&#41;](translation-element-assl.md)   
+ [Hierarchy 元素&#40;ASSL&#41;](hierarchy-element-assl.md)   
  [对象&#40;ASSL&#41;](objects-assl.md)  
   
   

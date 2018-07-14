@@ -1,5 +1,5 @@
 ---
-title: ReportingFirstMonth 元素 (ASSL) |Microsoft 文档
+title: ReportingFirstMonth 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportingFirstMonth element
 ms.assetid: cdce83ab-ac22-4f4a-b8f2-1739883be8dd
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 227793bb2de61aa38166ee9cca0d0d01d0f5f6a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d7e17e35e334e982ba3a230af5b1506f3d071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275213"
 ---
 # <a name="reportingfirstmonth-element-assl"></a>ReportingFirstMonth 元素 (ASSL)
-  定义报表的第一个月[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
+  定义的第一个报表月[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36016468"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|整数 (1 到 12，其中，1 = 年 1 月和 12 = 年 12 月)|  
+|数据类型和长度|整数 (1 到 12，其中 1 = 年 1 月和 12 = 年 12 月)|  
 |默认值|`1`|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36016468"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`ReportingFirstMonth`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 父级对应的元素`ReportingFirstMonth`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

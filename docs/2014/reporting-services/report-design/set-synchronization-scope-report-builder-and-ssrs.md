@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 02ff1a63d0d629b4da008d2a42bc5326857d1e77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 73751e253c70964419d0691525a920f63e125637
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274163"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>设置同步作用域（报表生成器和 SSRS）
   指示器通过同步指定范围内指示器值的范围，提供数据值。 默认情况下，作用域是指示器的父容器，例如包含指示器的表或矩阵。 您可以根据报表的布局，更改指示器的同步。 例如，如果表之类的数据区域具有某一行组，则您可以将该组指定为指示器作用域。 指示器还可以忽略同步。  

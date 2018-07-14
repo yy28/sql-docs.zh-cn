@@ -1,5 +1,5 @@
 ---
-title: 日期和时间格式 |Microsoft 文档
+title: 日期和时间格式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data types [Integration Services]
 - fast parse [Integration Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 caps.latest.revision: 52
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5c223189964ee9c9bdcd471d64275838ba65d70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7c54b3ee399043d752efb9e55ce9c2f8fed488d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289383"
 ---
 # <a name="date-and-time-formats"></a>日期和时间格式
   快速分析提供一组快速、简单的数据分析例程。 快速分析支持下列日期和时间数据类型格式。  

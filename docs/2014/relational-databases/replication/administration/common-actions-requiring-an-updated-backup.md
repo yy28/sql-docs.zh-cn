@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], actions requiring a backup
 - restoring [SQL Server replication], actions requiring a backup
 - backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1d66e27240a8de48e9f2a023a679e5f770bc5204
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5d6065f17d65fc12a0c688625d4210b991c8fad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203047"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>需要已更新备份的常用操作
   如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，就要在修改复制架构或拓扑之后，对发布、分发、订阅、 **msdb**数据库和 **master** 数据库执行备份。  

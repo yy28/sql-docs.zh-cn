@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182304"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 块
   `BEGIN ATOMIC` 属于 ANSI SQL 标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在本机编译存储过程的顶级支持原子块。  
@@ -33,7 +33,7 @@ ms.locfileid: "36018177"
 ## <a name="transactions-and-error-handling"></a>事务和错误处理  
  如果某个事务已在会话上存在（因为某一批处理执行了 `BEGIN TRANSACTION` 语句并且该事务保持活动状态），则开始一个原子块将在该事务中创建一个保存点。 如果该原子块退出且没有异常，将创建用于块提交的保存点，但在该事务在会话级别提交前该事务将不提交。 如果该块引发一个异常，则该块的影响将被回滚，但处于会话级别的事务将继续，除非该异常是注定事务终止的。 例如，写入冲突是注定事务终止的，但不是类型转换错误。  
   
- 如果在会话上没有处于活动状态的事务，则 `BEGIN ATOMIC` 将开始一个新事务。 如果在该块的作用域外未引发异常，则在该块的末尾将提交该事务。 如果该块引发异常（也就是说，未在该块内捕获和处理异常），则该事务将被回滚。 对于跨单个原子块 （单个本机编译存储的过程） 的事务，你不需要编写显式`BEGIN TRANSACTION`和`COMMIT`或`ROLLBACK`语句。  
+ 如果在会话上没有处于活动状态的事务，则 `BEGIN ATOMIC` 将开始一个新事务。 如果在该块的作用域外未引发异常，则在该块的末尾将提交该事务。 如果该块引发异常（也就是说，未在该块内捕获和处理异常），则该事务将被回滚。 对于跨单个原子块 （单个本机编译存储的过程） 的事务，您不需要编写显式`BEGIN TRANSACTION`并`COMMIT`或`ROLLBACK`语句。  
   
  本机编译存储的过程支持`TRY`， `CATCH`，和`THROW`构造进行错误处理。 `RAISERROR` 不支持。  
   
@@ -130,7 +130,7 @@ GO
  以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332 和 41333。  
   
 ## <a name="session-settings"></a>会话设置  
- 在编译存储过程时原子块中的会话设置是固定的。 某些设置可以指定与`BEGIN ATOMIC`而其他设置则始终固定为相同的值。  
+ 在编译存储过程时原子块中的会话设置是固定的。 可以使用指定的某些设置`BEGIN ATOMIC`而其他设置则始终固定为相同的值。  
   
  以下选项对于 `BEGIN ATOMIC` 而言是必需的：  
   
@@ -143,7 +143,7 @@ GO
   
 |可选设置|Description|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 如果指定，`DATEFORMAT`将覆盖与关联的默认日期格式`LANGUAGE`。|  
+|`DATEFORMAT`|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定时，`DATEFORMAT`重写与关联的默认日期格式`LANGUAGE`。|  
 |`DATEFIRST`|指定后，`DATEFIRST` 将取代与 `LANGUAGE` 相关联的默认设置。|  
 |`DELAYED_DURABILITY`|支持的值为`OFF`和`ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持久性](../logs/control-transaction-durability.md)。|  
   

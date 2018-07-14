@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7ab632914299e22b4ac153ca8431455c273651d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82b5df9c4ee132a313b822da4aadc0bc5f90fd75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272824"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING（SSIS 表达式）
   返回一个字符串的指定出现在字符表达式中的位置。 返回结果是该出现的索引（索引从 1 开始）。 字符串参数的取值必须为字符表达式，而 occurrence 参数的取值必须为整数。 如果找不到字符串，则返回值是 0。 如果字符串的出现次数少于所指定的 occurrence 参数，则返回值为 0。  
@@ -81,7 +81,7 @@ FINDSTRING(Name,Size,1)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [替换&#40;SSIS 表达式&#41;](replace-ssis-expression.md)   
+ [替换为&#40;SSIS 表达式&#41;](replace-ssis-expression.md)   
  [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
   
   

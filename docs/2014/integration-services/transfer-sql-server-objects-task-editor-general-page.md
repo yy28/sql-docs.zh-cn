@@ -1,5 +1,5 @@
 ---
-title: 传输 SQL Server 对象任务编辑器 （常规页） |Microsoft 文档
+title: 传输 SQL Server 对象任务编辑器 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.general.f1
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25f5ab6042083cb3a1280239f84acb67f0ec578e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25997b954a31c1c9326e53c409a9926e85a846fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217577"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>传输 SQL Server 对象任务编辑器（“常规”页）
   可以使用 **“传输 SQL Server 对象任务编辑器”** 对话框的 **“常规”** 页，对传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象任务进行命名和说明。 有关此任务的详细信息，请参阅 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)。  

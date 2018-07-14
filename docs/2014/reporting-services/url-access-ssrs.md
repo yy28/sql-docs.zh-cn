@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
 - links [Reporting Services], URL access
@@ -20,13 +20,13 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1e969deea2a5a2ca99af25a763adf324818ce741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216467"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
   通过 SQL Server Reporting Services (SSRS) 中报表服务器的 URL 访问，您可以通过 URL 请求将命令发送到报表服务器。 例如，您可以自定义报表在本机模式报表服务器上或 SharePoint 库中的呈现。 您可能已经使用了一组特定的报表参数值查看了报表，或者可能正在查看报表中感兴趣的特定页。 您可以使用预定义的 URL 访问参数在 URL 中封装这些信息。 您可以通过为呈现格式嵌入参数，或者为报表查看器的外观嵌入参数，进一步自定义报表服务器处理报表的方式。 然后，您可以将此 URL 直接粘贴到电子邮件或网页中，让他人在浏览器中采用相同的方式访问您的报表。  
@@ -43,7 +43,7 @@ ms.locfileid: "36017025"
   
 -   管理报表会话  
   
- 有关通过 URL 访问可用的命令和设置的完整列表，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。  
+ 有关命令和设置可通过 URL 访问提供的完整列表，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。  
   
 ## <a name="url-access-concepts"></a>URL 访问概念  
  对报表服务器的 URL 请求包含报表服务器处理的参数。 报表服务器处理 URL 请求的方式取决于在 URL 中包括的参数、参数前缀和项的类型。 报表服务器 URL 符合万维网联合会 W3C/IETF 标准草案建议的 URL 格式准则。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL 功能与支持标准 URL 寻址的大多数 Internet 浏览器或应用程序兼容。  
@@ -108,7 +108,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *值*  
  与要使用的参数值相对应的 URL 文本。  
   
- **注意：** 可用 URL 访问参数的列表，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。 有关在 url 中传递报表参数的示例，请参阅[传递报表 Parameter Within a URL](pass-a-report-parameter-within-a-url.md)。  
+ **注意：** 有关可用 URL 访问参数的列表，请参阅[URL 访问参数引用](url-access-parameter-reference.md)。 有关在 url 中传递报表参数的示例，请参阅[报表参数在 URL 内传递](pass-a-report-parameter-within-a-url.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -123,7 +123,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |呈现特定的报表历史记录快照。|[使用 URL 访问呈现报表历史记录快照](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [传递 URL 中的报表参数](pass-a-report-parameter-within-a-url.md)   
+ [通过在 URL 中的报表参数](pass-a-report-parameter-within-a-url.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)   
  [使用 URL 访问集成 Reporting Services](application-integration/integrating-reporting-services-using-url-access.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  

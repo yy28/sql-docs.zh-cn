@@ -1,5 +1,5 @@
 ---
-title: 在尝试建立与外部数据源的连接的过程中出现错误。 以下连接刷新失败： PowerPivot 数据 |Microsoft 文档
+title: 在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新： PowerPivot 数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36c9846ec1af5589f7fb29d3486ef11632eb01fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8d31afd4bb907256fc548c8102cdfaa8a927f174
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206217"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot 数据
   如果您在未安装 PowerPivot for SharePoint 的服务器上查询 PowerPivot 数据，将发生此错误。 如果停止 SQL Server Analysis Services (PowerPivot) 服务，或是您试图查看以前版本的 PowerPivot 数据，此时也会发生此错误。  

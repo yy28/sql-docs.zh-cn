@@ -1,5 +1,5 @@
 ---
-title: 指定标记为日期表用于时间智能 （SSAS 表格） |Microsoft 文档
+title: 指定标记为日期表，以便用于时间智能 （SSAS 表格） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c26114e9b2624a3216afaf4c1deb45af9492eb9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 882bf7a047cdd4251c9da60696c6e5707598e054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207677"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>指定“标记为日期表”以便用于时间智能（SSAS 表格）
   要在 DAX 公式中使用时间智能函数，必须指定一个日期表和一个数据类型为 Date 的唯一标识符 (datetime) 列。 将日期表中的某列指定为唯一标识符后，您可以在日期表中各列与任何事实数据表之间创建关系。  

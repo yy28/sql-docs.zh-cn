@@ -1,5 +1,5 @@
 ---
-title: 层次结构 (SSAS 表格) |Microsoft 文档
+title: 层次结构 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196c71a5fd1202e2c9cfb28934257c847b9fd5eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b371d1baecb2e9e7dea4aa81ac2d2e716d04a651
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180954"
 ---
 # <a name="hierarchies-ssas-tabular"></a>层次结构（SSAS 表格）
   在表格模型中，层次结构是定义表中两个或更多列之间的关系的元数据。 层次结构可与报表客户端字段列表中的其他列单独出现，使客户端用户可以更方便地在报表中导航和包含数据。  

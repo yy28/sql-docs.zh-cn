@@ -1,5 +1,5 @@
 ---
-title: 操作 （多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 操作 （多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.f1
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ded2ebea0129c7402e805b9c4b35ee9d9138ae5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c338840ee08404d9d8ed797bb8468bcd9f06ed67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165748"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>操作（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡，查看和编辑所选多维数据集的操作，包括钻取操作和报表操作。  

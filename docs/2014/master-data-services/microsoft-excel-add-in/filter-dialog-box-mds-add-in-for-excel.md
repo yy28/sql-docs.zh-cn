@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a01425734f0d3182a90481cb2641bb55e6611d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1118f3a7ee1e9bbace60dc2ac36c813d5b147edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178064"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用“筛选器”  对话框可以先筛选 MDS 管理的数据列表，然后再将其加载到 Excel 中。  
@@ -35,9 +35,9 @@ ms.locfileid: "36018887"
 |显式层次结构|如果您选择 **“已合并”** 属性类型，请选择已合并成员所属的层次结构。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../explicit-hierarchies-master-data-services.md)。|  
 |属性组|属性组是对属性子集进行分组的方式。 如果您想要显示可用属性的子集，请选择属性组。 有关属性组的详细信息，请参阅[属性组 (Master Data Services)](../attribute-groups-master-data-services.md)。|  
 |全选|单击此选项可选择列表中显示的所有属性。|  
-|全部清除|单击此选项可清除列表中显示的选定属性。<br /><br /> 注意： 无法清除**名称**和**代码**。|  
+|全部清除|单击此选项可清除列表中显示的选定属性。<br /><br /> 注意： 您不能清除**名称**并**代码**。|  
 |向上键|单击此选项可在列表中向上移动所选属性。 从上到下的顺序对应于列在工作表中从左到右的显示顺序。|  
-|向下箭头|单击此选项可在列表中向下移动所选的属性。 从上到下的顺序对应于列在工作表中从左到右的显示顺序。|  
+|向下键|单击此选项可在列表中向下移动所选的属性。 从上到下的顺序对应于列在工作表中从左到右的显示顺序。|  
   
 ## <a name="rows"></a>“行”  
  使用“行”  部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
@@ -64,7 +64,7 @@ ms.locfileid: "36018887"
 |“列”|基于在 **“列”** 部分中所选的属性要加载到 Excel 中的列数。|  
   
 ## <a name="see-also"></a>请参阅  
- [筛选数据，再加载&#40;MDS add-in for Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
+ [加载前筛选数据&#40;MDS add-in for Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
  [加载数据&#40;MDS add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

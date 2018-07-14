@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除表 |Microsoft 文档
+title: 创建、 更改和删除表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1498ac39d8ebf69a406fc37d8aa41319386e8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb1760bb19f6f32b93e8ee1b62546d7c615ae9f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177864"
 ---
 # <a name="creating-altering-and-removing-tables"></a>创建、更改和删除表
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，表通过 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象来表示。 在 SMO 对象层次结构中，<xref:Microsoft.SqlServer.Management.Smo.Table> 对象位于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象的下方。  

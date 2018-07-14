@@ -1,5 +1,5 @@
 ---
-title: 选择案例级别列 （数据挖掘向导） |Microsoft 文档
+title: 选择 Case 级别列 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcaselevelcolumn.f1
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b80369e13d26b4bdb68f1b32dbf58179ec19f29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b57cf4ff913210c8a0fc7fd48593914c76a315dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241317"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>选择事例级别列（数据挖掘向导）
   可以使用 **“选择事例级别列”** 页，从基础源多维数据集维度中选择要作为挖掘结构的事例级别列的属性和度量值。  

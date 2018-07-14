@@ -1,5 +1,5 @@
 ---
-title: 主动缓存 （分区属性对话框） (SSMS) |Microsoft 文档
+title: 主动缓存 （分区属性对话框) (SSMS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9fd673862cb7443a69a3a1bb91b070914bfc455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af6d5134b697b2554170695d2e87824d961f090b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237647"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>主动缓存（“分区属性”对话框）(SSMS)
   对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集，可以在 SQL Server Management Studio 中使用“分区属性”对话框的“主动缓存”页，为其度量值组中的分区设置存储和主动缓存属性。  
@@ -38,7 +38,7 @@ ms.locfileid: "36015799"
 |**实时 ROLAP**|选择此设置可以使用以下的存储和主动缓存设置：<br /><br /> ROLAP 存储模式。<br /><br /> 启用主动缓存。<br /><br /> 放弃过时缓存，滞后期为 0 秒。<br /><br /> 使对象立即联机。|  
 |**实时 HOLAP**|选择此设置可以使用以下的存储和主动缓存设置：<br /><br /> HOLAP 存储模式。<br /><br /> 启用主动缓存。<br /><br /> 放弃过时缓存，滞后期为 0 秒。<br /><br /> 当数据更改时更新缓存，静默间隔为 0 秒，没有静默覆盖间隔。<br /><br /> 使对象立即联机。|  
 |**低滞后时间 MOLAP**|选择此设置可以使用以下的存储和主动缓存设置：<br /><br /> MOLAP 存储模式。<br /><br /> 启用主动缓存。<br /><br /> 放弃过时缓存，滞后期为 30 分钟。<br /><br /> 当数据更改时更新缓存，静默间隔为 10 秒，静默覆盖间隔为 10 分钟。<br /><br /> 当数据更改时更新缓存，静默间隔为 10 秒，静默覆盖间隔为 10 分钟。<br /><br /> 使对象立即联机。|  
-|**中等滞后时间 MOLAP**|立即选择 useBrings 对象联机。<br /><br /> 以下存储和主动缓存设置：<br /><br /> MOLAP 存储模式。<br /><br /> 启用主动缓存。<br /><br /> 放弃过时缓存，滞后期为 4 小时。<br /><br /> 当数据更改时更新缓存，静默间隔为 10 秒，静默覆盖间隔为 10 分钟。<br /><br /> 使对象立即联机。|  
+|**中等滞后时间 MOLAP**|立即选择联机 useBrings 对象。<br /><br /> 以下存储和主动缓存设置：<br /><br /> MOLAP 存储模式。<br /><br /> 启用主动缓存。<br /><br /> 放弃过时缓存，滞后期为 4 小时。<br /><br /> 当数据更改时更新缓存，静默间隔为 10 秒，静默覆盖间隔为 10 分钟。<br /><br /> 使对象立即联机。|  
 |**自动 MOLAP**|选择此设置可以使用以下的存储和主动缓存设置：<br /><br /> MOLAP 存储模式。<br /><br /> 启用主动缓存。<br /><br /> 当数据更改时更新缓存，静默间隔为 0 秒，没有静默覆盖间隔。|  
 |**预定的 MOLAP**|选择此设置可以使用以下的存储和主动缓存设置：<br /><br /> MOLAP 存储模式<br /><br /> 启用主动缓存<br /><br /> 定期更新缓存，重新生成间隔为 1 天|  
 |**MOLAP**|选择此设置可以使用以下的存储和主动缓存设置：<br /><br /> MOLAP 存储模式。|  
@@ -51,9 +51,9 @@ ms.locfileid: "36015799"
   
 ## <a name="see-also"></a>请参阅  
  [主动缓存&#40;分区&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
- [分区属性对话框中&#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
- [选择&#40;分区属性对话框中&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   
- [常规&#40;分区属性对话框中&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
+ [分区属性对话框&#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
+ [选择&#40;分区属性对话框&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   
+ [常规&#40;分区属性对话框&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
  [多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

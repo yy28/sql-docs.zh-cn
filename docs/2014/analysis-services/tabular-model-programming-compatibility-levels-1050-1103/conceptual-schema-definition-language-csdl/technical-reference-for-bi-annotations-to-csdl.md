@@ -1,5 +1,5 @@
 ---
-title: BI 批注的 CSDL 的技术参考 |Microsoft 文档
+title: 商业智能的 CSDL 注释技术参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27ed1339d64dd3c4035288a96b31ae163a304733
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192374"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>用于商业智能的 CSDL 注释技术参考
   本部分列出了 CSDL 中用于表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 表格模型的元素、特性和属性。 某些元素是新增的：其他属性已添加批注或扩展，以支持商业智能建模。  
   
- 表格模型和实体、 关系和公式 CSDL 中的表示方式的概述，请参阅[商业智能的 CSDL 批注&#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md)。  
+ 有关表格模型和在 CSDL 中如何表示实体、 关系和公式的概述，请参阅[用于商业智能的 CSDL 批注&#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md)。  
   
 ## <a name="extended-csdl-elements-complex-types"></a>扩展的 CSDL 元素：复杂类型  
  已添加或扩展以下 CSDL 元素，以支持商业智能数据模型（表格和多维）。  
@@ -44,7 +44,7 @@ ms.locfileid: "36018485"
   
 -   [EntityType 元素&#40;CSDLBI&#41;](entitytype-element-csdlbi.md)  
   
--   [层次结构元素&#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)  
+-   [Hierarchy 元素&#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)  
   
 -   [KPI 元素&#40;CSDLBI&#41;](kpi-element-csdlbi.md)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36018485"
   
 -   [KpiStatus 元素&#40;CSDLBI&#41;](kpistatus-element-csdlbi.md)  
   
--   [级别元素&#40;CSDLBI&#41;](level-element-csdlbi.md)  
+-   [Level 元素&#40;CSDLBI&#41;](level-element-csdlbi.md)  
   
--   [测量元素&#40;CSDLBI&#41;](measure-element-csdlbi.md)  
+-   [度量值元素&#40;CSDLBI&#41;](measure-element-csdlbi.md)  
   
--   [成员元素&#40;CSDLBI&#41;](member-element-csdlbi.md)  
+-   [Member 元素&#40;CSDLBI&#41;](member-element-csdlbi.md)  
   
 -   [MemberRef 元素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36018485"
 |Alignment|[BaseProperty 元素&#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |CompareOptions|[EntityContainer 元素&#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
 |目录|[EntityType 元素&#40;CSDLBI&#41;](entitytype-element-csdlbi.md)|  
-|ContextualNameRule|[成员元素&#40;CSDLBI&#41;](member-element-csdlbi.md)|  
+|ContextualNameRule|[Member 元素&#40;CSDLBI&#41;](member-element-csdlbi.md)|  
 |DefaultAggregationFunction|[属性元素&#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |DirectQueryMode|[EntityContainer 元素&#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
 |GroupingBehavior|[属性元素&#40;CSDLBI&#41;](property-element-csdlbi.md)|  

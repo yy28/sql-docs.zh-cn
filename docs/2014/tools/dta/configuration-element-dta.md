@@ -1,5 +1,5 @@
 ---
-title: 配置元素 (DTA) |Microsoft 文档
+title: 配置元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cca142282c59539d54d5e1d42d5d2269ac41635
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0383bc1c8bef5a84b77c8b63fb424995a2181ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241747"
 ---
 # <a name="configuration-element-dta"></a>配置元素 (DTA)
   指定一个用户指定的配置（由现有和假想的物理设计结构组成），以便数据库引擎优化顾问在优化工作负荷时进行分析。  
@@ -54,14 +54,14 @@ ms.locfileid: "36015825"
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**出现次数**|可选。 可以使用上一次每个`DTAInput`元素。|  
+|**出现次数**|可选。 可以使用上一次为每个`DTAInput`元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[DTAInput 元素&#40;DTA&#41;](dtainput-element-dta.md)|  
-|**子元素**|[配置的服务器元素&#40;DTA&#41;](server-element-for-configuration-dta.md)|  
+|**子元素**|[用于配置的服务器元素&#40;DTA&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[用户指定配置 (DTA) 的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

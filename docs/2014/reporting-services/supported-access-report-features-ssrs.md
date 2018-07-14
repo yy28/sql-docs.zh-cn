@@ -1,5 +1,5 @@
 ---
-title: 支持访问报表功能 (SSRS) |Microsoft 文档
+title: 支持的 Access 报表功能 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268473"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支持的 Access 报表功能 (SSRS)
   将报表导入报表设计器时，导入过程会将 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 报表转换为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持多项 Access 功能；但是，由于 Access 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之间存在差异，因此某些功能会略有修改或不受支持。 本主题介绍如何将 Access 报表功能转换为 RDL。  
@@ -35,7 +35,7 @@ ms.locfileid: "36016547"
 ## <a name="importing-access-reports"></a>导入 Access 报表  
  某些查询包含专用于 Access 的代码。 Access 代码不随报表导入。 另外，如果查询包含嵌入的字符串，则相应的报表可能无法正确导入。 若要解决此问题，请使用字符代码来替代这些字符串。 例如，使用 CHAR(34) 来替代逗号 (,) 字符。  
   
- 导入过程不能正确通过分号 （;） 或 XML 标记字符 (\<，> 等) 在连接字符串信息。 如果连接字符串包含分号或 XML 标记字符，则在导入报表后，必须手动设置新报表中的密码。  
+ 导入过程不能正确地传递分号 （;） 或 XML 标记字符 (\<，> 等) 中的连接字符串信息。 如果连接字符串包含分号或 XML 标记字符，则在导入报表后，必须手动设置新报表中的密码。  
   
  导入过程不会导入连接字符串中的连接设置或常规超时设置。 导入报表后，您可能必须调整这些设置。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36016547"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持 OLE DB 数据源，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如果您是从 Access 项目 (.adp) 文件导入报表，则数据源的连接字符串将从 .adp 文件的连接字符串中获取。 如果您是从 Access 数据库（.mdb 或 .accdb）文件导入报表，则连接字符串可能会指向 Access 数据库，并且您在导入报表后可能需要更正该字符串。 如果 Access 报表的数据源是一个查询，则无需在 RDL 中进行修改即可存储此查询信息。 如果 Access 报表的数据源是一个表，则转换过程将根据表名和该表中的字段创建一个查询。  
   
 ## <a name="reports-with-custom-modules"></a>带有自定义模块的报表  
- 如果没有自定义[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]代码包含在模块，它不会转换。 如果报表设计器在导入过程中遇到代码，一条警告是生成并显示在**任务列表**窗口。  
+ 如果没有自定义[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]代码包含在模块，它不会转换。 如果报表设计器导入过程中遇到代码，生成并显示在一条警告**任务列表**窗口。  
   
 ## <a name="report-controls"></a>报表控件  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持下列 Access 控件，并在转换后的报表定义中包含这些控件。  
@@ -61,7 +61,7 @@ ms.locfileid: "36016547"
 |||||  
 |-|-|-|-|  
 |图像|标签|行|Rectangle|  
-|SubForm|SubReport<br /><br /> **请注意**主报表中转换时的子报表控件，因此单独转换子报表本身。|TextBox||  
+|SubForm|SubReport<br /><br /> **请注意**虽然 SubReport 控件主报表中的转换，但子报表本身将单独转换。|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不支持以下控件：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36016547"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- 如果报表设计器将遇到的任何这些控件在导入过程，生成并显示在一条警告**任务列表**窗口。  
+ 如果报表设计器在导入过程中遇到上述任何一个控件，生成并显示在一条警告**任务列表**窗口。  
   
  诸如 ActiveX 和 Office Web 组件等之类的其他控件将不导入。 例如，如果 Access 报表包含 OWC 图表控件，则在导入报表时将不对其进行转换。  
   

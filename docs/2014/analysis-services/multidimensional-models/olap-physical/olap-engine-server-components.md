@@ -1,5 +1,5 @@
 ---
-title: OLAP 引擎服务器组件 |Microsoft 文档
+title: OLAP 引擎服务器组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - server architecture [Analysis Services]
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a3486ed70d6da2d2091da02cf7e2a55fcd2b1d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2471838c89fa2cfb6ded22c9daa8ad9ca6e1cfd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224113"
 ---
 # <a name="olap-engine-server-components"></a>OLAP 引擎服务器组件
   服务器组件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]是**msmdsrv.exe**作为 Windows 服务运行的应用程序。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
@@ -56,7 +56,7 @@ ms.locfileid: "36016957"
  ![Analysis Services 系统体系结构关系图](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services 系统体系结构关系图")  
   
 ## <a name="xmla-listener"></a>XMLA 侦听器  
- XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 文件中的配置设置可以用于指定在其上的端口[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例所侦听。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
+ XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 文件中的配置设置可用于在其上指定端口[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例所侦听。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
   
 |端口|Description|  
 |----------|-----------------|  
@@ -64,10 +64,10 @@ ms.locfileid: "36016957"
 |2382|其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
 |在服务器启动时动态分配|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的命名实例。|  
   
- 请参阅[Configure Windows Firewall to Allow Analysis Services Access](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)有关详细信息。  
+ 请参阅[配置 Windows 防火墙以允许 Analysis Services 访问](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)的更多详细信息。  
   
 ## <a name="see-also"></a>请参阅  
- [命名规则的对象&#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
+ [对象命名规则&#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
  [物理体系结构&#40;Analysis Services-多维数据&#41;](understanding-microsoft-olap-physical-architecture.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   

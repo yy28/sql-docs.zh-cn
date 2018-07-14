@@ -1,5 +1,5 @@
 ---
-title: 值元素 (XMLA) |Microsoft 文档
+title: 值元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263243"
 ---
 # <a name="value-element-xmla"></a>Value 元素 (XMLA)
-  包含所需的值的[属性](attribute-element-xmla.md)要添加的元素[插入](../xml-elements-commands/insert-element-xmla.md)命令，或[单元格](cell-element-xmla.md)元素更新[UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)命令。  
+  包含所需的值[特性](attribute-element-xmla.md)要添加的元素[插入](../xml-elements-commands/insert-element-xmla.md)命令，或[单元格](cell-element-xmla.md)元素更新[UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36015310"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[属性](attribute-element-xmla.md)，[单元格](cell-element-xmla.md)|  
+|父元素|[特性](attribute-element-xmla.md)，[单元格](cell-element-xmla.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

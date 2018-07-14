@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264323"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
   将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
@@ -38,9 +37,9 @@ ms.locfileid: "36017059"
   
 -   [有关选择全文升级注意事项选项](#Choosing_Upgade_Option)  
   
--   [升级到 SQL Server 2014 数据库时迁移全文检索](#Upgrade_Db)  
+-   [将数据库升级到 SQL Server 2014 时迁移全文检索](#Upgrade_Db)  
   
--   [还原到 SQL Server 2014 的 SQL Server 2005 全文目录的注意事项](#Considerations_for_Restore)  
+-   [有关 SQL Server 2005 全文目录还原到 SQL Server 2014 的注意事项](#Considerations_for_Restore)  
   
 -   [将 SQL Server 2005 数据库附加到 SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
@@ -132,7 +131,7 @@ ms.locfileid: "36017059"
   
  对于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]导入的全文目录，该全文目录在其自己的文件组中仍然是数据库文件。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中除不存在 MSFTESQL 服务以外，全文目录的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份进程仍然适用。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 进程的信息，请参阅 SQL Server 2005 联机丛书中的 [备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkId=209154) 。  
   
-##  <a name="Upgrade_Db"></a> 升级到数据库时迁移全文检索 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Upgrade_Db"></a> 升级到数据库时迁移全文索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  使用附加、还原或复制数据库向导可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中的数据库文件和全文目录升级到现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入、重置或重新生成全文检索（如果有）。 **upgrade_option** 服务器属性控制在升级这些数据库期间服务器实例使用哪个全文升级选项。  
   
  将任何 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，将升级选项设置为“导入”时，如果全文目录不可用，则会重新生成关联的全文检索。  

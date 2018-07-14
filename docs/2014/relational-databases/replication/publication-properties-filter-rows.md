@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a31d710caec8ee0e8d8e66a511cdaaf5c2ae5d53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a322caebeafa5973db878971014b12b32248379e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188584"
 ---
 # <a name="publication-properties-filter-rows"></a>发布属性，筛选行
   可以使用 **“发布属性”** 对话框的 **“筛选行”** 页，执行添加、编辑或删除操作：  

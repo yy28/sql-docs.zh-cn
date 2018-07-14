@@ -1,5 +1,5 @@
 ---
-title: 基于文本的查询设计器用户界面 |Microsoft 文档
+title: 基于文本的查询设计器用户界面 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 - sql12.rtp.rptdesigner.dataview.genericquerydesigner.f1
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 caps.latest.revision: 25
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e7fa6d6f2d3ae55d6a01ffdfcaa541e1d29e34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e24396a7b851bf3e210bd31318f52b757f15a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177084"
 ---
 # <a name="text-based-query-designer-user-interface"></a>基于文本的查询设计器用户界面
   使用基于文本的查询设计器可以用数据源支持的查询语言来指定查询，还可以运行查询并在运行时查看结果。 您可以指定多个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，为自定义数据处理扩展插件指定查询或命令语法，还可以指定指定为表达式的查询。 因为基于文本的查询设计器不会对查询进行预处理，并且能适应任何类型的查询语法，所以成为了众多数据源类型的默认查询设计器工具。  
   
  基于文本的查询设计器将显示工具栏和以下两个窗格：  
   
--   **查询**显示查询文本、 表名或存储的过程名称。  
+-   **查询**显示查询文本、 表名或存储的过程的名称。  
   
 -   **结果** ：在设计时，显示查询的运行结果。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36017029"
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![运行查询](../analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“结果”窗格中显示结果集。|  
-|**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。 请注意，是否存储的过程返回多个结果集，仅使用第一个结果集用于填充数据集。<br /><br /> 所支持的命令类型因数据源类型而异。 例如，仅 OLE DB 和 ODBC 支持 **TableDirect**。|  
+|**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。 请注意，是否存储的过程返回多个结果集，只将第一个结果集用于填充数据集。<br /><br /> 所支持的命令类型因数据源类型而异。 例如，仅 OLE DB 和 ODBC 支持 **TableDirect**。|  
   
 ### <a name="command-type-text"></a>命令类型 Text  
  创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据集时，默认情况下，报表设计器会显示图形查询设计器。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
@@ -65,7 +65,7 @@ ms.locfileid: "36017029"
 SELECT LastName FROM Person.Person;  
 ```  
   
- 您可以对命令类型文本使用任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，包括 `EXEC` 语句。 以下查询将调用[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]存储过程`uspGetEmployeeManagers`，并返回具有标识号 1 员工命令链。  
+ 您可以对命令类型文本使用任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，包括 `EXEC` 语句。 以下查询将调用[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]存储过程`uspGetEmployeeManagers`，并为标识号为 1 的雇员返回命令链。  
   
 ```  
 EXEC uspGetEmployeeManagers 1;  
@@ -91,7 +91,7 @@ uspGetEmployeeManagers;
   
  `Sales.Customer`  
   
- 当你输入的表名称 Sales.Customer 时，它是创建的等效项[!INCLUDE[tsql](../includes/tsql-md.md)]语句`SELECT * FROM Sales.Customer;`。  
+ 如果输入表名 Sales.Customer，则创建的等同[!INCLUDE[tsql](../includes/tsql-md.md)]语句`SELECT * FROM Sales.Customer;`。  
   
 ## <a name="see-also"></a>请参阅  
  [查询设计工具在报表设计器的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

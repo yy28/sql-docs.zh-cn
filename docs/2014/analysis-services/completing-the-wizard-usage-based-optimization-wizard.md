@@ -1,5 +1,5 @@
 ---
-title: 完成向导 （基于使用情况的优化向导） |Microsoft 文档
+title: 完成向导 （基于使用情况的优化向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24a18018d6ac3a1ec7c493f49bef6f261f353492
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45f284fd0c7d6aecbe3a07bb4694164192ff8289
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187624"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>完成向导（基于使用情况的优化向导）
   可以使用 **“完成向导”** 页保存聚合设计，以及将其分配给所选的分区。 您也可以在基于使用情况的优化向导完成设计并保存聚合之后，处理所选分区。  

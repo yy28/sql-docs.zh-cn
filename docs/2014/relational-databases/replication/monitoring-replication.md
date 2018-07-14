@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
 - transactional replication, monitoring
@@ -21,13 +21,13 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 caps.latest.revision: 38
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7434a211de780ab5a363aeec97b8914bb587f5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1276429c773656e04a3ce15f277d08c3b3e52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162298"
 ---
 # <a name="monitoring-replication"></a>监视（复制）
   监视复制拓扑是部署复制的一个重要方面。 因为复制活动是分布式的，所以跟踪复制过程中涉及的所有计算机的活动和状态非常有必要。 以下工具可用于监视复制：  

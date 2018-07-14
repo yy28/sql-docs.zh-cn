@@ -1,5 +1,5 @@
 ---
-title: 创建包配置 |Microsoft 文档
+title: 创建包配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, configurations
 - Package Configurations Organizer dialog box
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 caps.latest.revision: 71
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be150c6e13e1e677539e19fd96398eaa659bc26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec353414e9b910285152ed3f391ca4dc1970ed45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266783"
 ---
 # <a name="create-package-configurations"></a>创建包配置
   使用 **“包配置组织程序”** 对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
@@ -122,7 +122,7 @@ ms.locfileid: "36016890"
   
 ## <a name="see-also"></a>请参阅  
  [包配置](../../2014/integration-services/package-configurations.md)   
- [包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [以编程方式使用变量](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

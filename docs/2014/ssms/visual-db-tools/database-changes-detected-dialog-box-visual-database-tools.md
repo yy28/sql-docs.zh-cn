@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.schema.databasechangesdetected
 - vdtsql.chm:65543
 - vdtsql.chm:65554
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fbb34856b414a561126b977360eb8b8337c7ce4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 958f892df463533138b722e16a61eeccd0e06b19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244033"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>“检测到数据库更改”对话框 (Visual Database Tools)
   如果尝试保存数据库关系图或选定的表，但某些将受保存操作影响的数据库对象对于数据库已经过期，则会显示此对话框。 如果接受对话框中显示的更改，则将更新数据库以匹配关系图并改写其他用户所做的更改。  
@@ -48,7 +48,7 @@ ms.locfileid: "36014702"
  显示“另存为”对话框，用于为包含数据库更改列表的文本文件指定位置。  
   
 ## <a name="see-also"></a>请参阅  
- [对帐数据库关系图与修改的数据库&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [协调数据库关系图与已修改的数据库&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [多用户环境 (Visual Database Tools)](multiuser-environments-visual-database-tools.md)  
   
   

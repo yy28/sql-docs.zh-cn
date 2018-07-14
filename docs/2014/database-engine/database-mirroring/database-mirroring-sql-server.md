@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
 - standby servers [SQL Server]
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 121
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f70a95e9ef5bf0bc01687728fd5cac7641867759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233887"
 ---
 # <a name="database-mirroring-sql-server"></a>数据库镜像 (SQL Server)
     
@@ -61,7 +60,7 @@ ms.locfileid: "36016680"
   
 -   提高生产数据库在升级期间的可用性。  
   
-     为了尽量减少镜像服务器的停机时间，您可以按顺序升级承载故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这样只会导致一个故障转移的停机时间。 这种形式的升级称为“滚动升级 ”。 有关详细信息，请参阅[镜像数据库了停机时间最短的系统上安装的 Service Pack](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
+     为了尽量减少镜像服务器的停机时间，您可以按顺序升级承载故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这样只会导致一个故障转移的停机时间。 这种形式的升级称为“滚动升级 ”。 有关详细信息，请参阅[为镜像数据库停机时间最短的系统上安装 Service Pack](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
   
 ##  <a name="TermsAndDefinitions"></a> 数据库镜像术语和定义  
  自动故障转移 (automatic failover)  

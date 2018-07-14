@@ -1,5 +1,5 @@
 ---
-title: 管理事务 (XMLA) |Microsoft 文档
+title: 管理事务 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84ec16569d7e4118c159b7a611cba9d711b9d761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fefda354d9f596c92a06673e7692bb840f582071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167608"
 ---
 # <a name="managing-transactions-xmla"></a>管理事务 (XMLA)
-  每个 XML for Analysis (XMLA) 命令发送到的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上当前的隐式或显式会话事务的上下文中运行。 若要管理每个这些事务，你可以使用[BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md)， [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md)，和[RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)命令。 通过使用这些命令，可创建隐式或显式事务，更改事务引用计数以及启动、提交或回滚事务。  
+  每个 XML for Analysis (XMLA) 命令发送到的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上当前的隐式或显式会话的事务的上下文中运行。 若要管理每个这些事务，您可以使用[BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md)， [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md)，并[RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)命令。 通过使用这些命令，可创建隐式或显式事务，更改事务引用计数以及启动、提交或回滚事务。  
   
 ## <a name="implicit-and-explicit-transactions"></a>隐式和显式事务  
  事务可以是隐式的或显式的：  
   
  **隐式事务**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建*隐式*事务的 XMLA 命令如果`BeginTransaction`命令未指定启动事务。 如果此命令成功，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将始终提交隐式事务，如果此命令失败，则将回滚隐式事务。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建*隐式*为 xmla 命令的命令`BeginTransaction`命令未指定启动事务。 如果此命令成功，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将始终提交隐式事务，如果此命令失败，则将回滚隐式事务。  
   
  **显式事务**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建*显式*事务如果`BeginTransaction`命令启动的事务。 但是，如果发送 `CommitTransaction` 命令，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅提交显式事务，如果发送 `RollbackTransaction` 命令，则将回滚显式事务。  

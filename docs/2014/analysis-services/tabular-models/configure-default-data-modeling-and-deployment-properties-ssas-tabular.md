@@ -1,5 +1,5 @@
 ---
-title: 配置默认数据建模和部署属性 (SSAS 表格) |Microsoft 文档
+title: 配置默认数据建模和部署属性 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171468"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>配置默认数据建模和部署属性（SSAS 表格）
   本主题介绍如何配置可为在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建的每个新表格模型项目预定义的默认兼容级别、部署和工作区数据库属性设置。 在创建新项目之后，根据您的特定需求，仍可以更改这些属性。  
@@ -39,7 +39,7 @@ ms.locfileid: "36016688"
   
     |“属性”|默认设置|Description|  
     |--------------|---------------------|-----------------|  
-    |**新项目的默认兼容级别**|SQL Server 2012 (1100)|此设置指定在创建新的表格模型项目时要使用的默认兼容级别。 如果要部署到未应用 SP1 的 Analysis Services 实例，则可以选择 SQL Server 2012 RTM (1100)；如果您的部署实例已应用 SP1，则可以选择 SQL Server 2012 SP1 或 SQL Server 2014。 有关详细信息，请参阅[兼容性级别&#40;SSAS 表格 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)。|  
+    |**新项目的默认兼容级别**|SQL Server 2012 (1100);|此设置指定在创建新的表格模型项目时要使用的默认兼容级别。 如果要部署到未应用 SP1 的 Analysis Services 实例，则可以选择 SQL Server 2012 RTM (1100)；如果您的部署实例已应用 SP1，则可以选择 SQL Server 2012 SP1 或 SQL Server 2014。 有关详细信息，请参阅[兼容性级别&#40;SSAS 表格 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)。|  
     |**兼容级别选项**|全选中|为新的表格模型项目和在部署到其他 Analysis Services 实例时指定兼容级别选项。|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>为新模型项目配置默认的部署服务器属性设置  

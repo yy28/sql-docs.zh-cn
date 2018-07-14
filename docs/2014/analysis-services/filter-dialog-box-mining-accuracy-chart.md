@@ -1,5 +1,5 @@
 ---
-title: 筛选器对话框 （挖掘准确性图表） |Microsoft 文档
+title: 筛选对话框 （挖掘准确性图表） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328ebd3f09037c3288450b75b4acd011481c40a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272603"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>“筛选器”对话框（挖掘准确性图表）
   **“筛选器”** 对话框有助于生成可应用于数据集的条件。 数据集可以是用于测试的外部数据集，也可以是定型挖掘模型所使用的事例数据。 此对话框有助于生成可在 **“数据集筛选器”** 对话框或 **“模型筛选器”** 对话框中作为较复杂筛选条件的一部分进行保存的条件。  

@@ -1,5 +1,5 @@
 ---
-title: 更改 SQL Server （SQL Server 配置管理器） 使用的帐户的密码 |Microsoft 文档
+title: 更改 SQL Server （SQL Server 配置管理器） 使用的帐户的密码 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expired password [SQL Server], SQL Server Agent
 - passwords [SQL Server], SQL Server Agent service
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - modifying passwords
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3e1e028266d7c260652f361da13c51d81b9197fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 37e989b7849cf3d3168df81b51733a49beaa8915
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207567"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>更改 SQL Server 使用的帐户的密码（SQL Server 配置管理器）
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 代理使用的帐户的密码。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作为服务在计算机上运行，并使用最初在设置期间提供的凭据。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例使用域帐户运行但此帐户的密码已更改，则必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的密码更新为新密码。 如果不更新密码， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能无法访问某些域资源；如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止，则在更新密码后才能重新启动该服务。  
@@ -53,9 +53,9 @@ ms.locfileid: "36017398"
     >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
     >   
     >  -   **Windows 10**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager，请在**起始页**，键入 SQLServerManager12.msc (有关[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 对于早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将 12 替换为较小的数字。 单击 SQLServerManager12.msc 打开配置管理器。 要固定配置管理器起始页或任务栏中，右键单击 SQLServerManager12.msc，，然后单击**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**固定到任务栏**。  
+    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，然后在**起始页**，键入 SQLServerManager12.msc (对于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 对于早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]12 替换为较小的数字。 单击 SQLServerManager12.msc 会打开配置管理器。 若要固定到起始页或任务栏配置管理器，右键单击 SQLServerManager12.msc，然后依次**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**锁定到任务栏**。  
     > -   **Windows 8**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager，请在**搜索**超级按钮下**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
+    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，请在**搜索**超级按钮**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
   
 2.  在 SQL Server 配置管理器中，单击 **“SQL Server 服务”**。  
   

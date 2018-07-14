@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - report-specific schedules [Reporting Services]
@@ -21,13 +21,13 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 68971d1dfd25f7e2e15be0007e1aaf5efb19099f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83e1a89611e4d40e1d987e666d14b61f31f1e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255559"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暂停和恢复共享计划
   您可以暂停和恢复正在使用的共享计划。 通过暂停共享计划，可以暂时冻结用于触发报表处理和订阅的计划。 您只能暂停和恢复共享计划。 不能暂停报表特定计划。  

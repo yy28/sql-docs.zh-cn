@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -44,13 +44,13 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d73b7d0b58742998a0c30f58399e8deaceb1f3ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243187"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -105,7 +105,7 @@ ms.locfileid: "36016211"
 |AggregationType|Integer（枚举）|该值用于指定要对列执行的聚合操作。 此属性可以具有下列值之一：<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Group by** (0)|  
 |CountDistinctKeys|Integer|该值用于指定聚合类型为 **Count distinct**时聚合可以写入的键的精确数目。 如果指定了 CountDistinctScale 值，则 CountDistinctKeys 中的值优先。|  
 |CountDistinctScale|Integer（枚举）|该值用于指定聚合类型为 **Count distinct**时聚合可以写入的键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) — 指示最多 500,000 个键值，<br /><br /> **中** (2) — 指示最多 500 万个键值，<br /><br /> **高** (3) — 指示超过 2500 万个键值。<br /><br /> **未指定** (0) — 指示未使用 CountDistinctScale 值。|  
-|IsBig|Boolean|该值用于指示列是包含大于 40 亿的值还是精度超过双精度浮点值的值。 该值可以是 0 或 1。 0 指示 IsBig`False`和列不包含较大的值或精确值。 此属性的默认值为 1。|  
+|IsBig|Boolean|该值用于指示列是包含大于 40 亿的值还是精度超过双精度浮点值的值。 该值可以是 0 或 1。 0 指示 IsBig 为`False`和列不包含大值或精确值。 此属性的默认值为 1。|  
   
  聚合转换的输入和输入列不包含自定义属性。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36016211"
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |Connectionmanager|String|指定连接管理器的名称。|  
-|ValidateExternalMetadata|Boolean|指示在设计时是否已使用外部数据源对缓存转换进行了验证。 如果将该属性设置为 `False`，则会在运行时针对外部数据源进行验证。<br /><br /> 默认值为它`True`。|  
+|ValidateExternalMetadata|Boolean|指示在设计时是否已使用外部数据源对缓存转换进行了验证。 如果将该属性设置为 `False`，则会在运行时针对外部数据源进行验证。<br /><br /> 默认值`True`。|  
 |AvailableInputColumns|String|可用输入列的列表。|  
 |InputColumns|String|选定输入列的列表。|  
 |CacheColumnName|String|指定映射到选定输入列的列名称。<br /><br /> CacheColumnName 属性中的列名称必须与“缓存连接管理器编辑器”的“列”页中列出的对应列的名称相匹配。<br /><br /> 有关详细信息，请参阅 [Cache Connection Manager Editor](../../cache-connection-manager-editor.md)|  
@@ -188,7 +188,7 @@ ms.locfileid: "36016211"
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值是`False`。 有关详细信息，请参阅 [Fast Parse](../../fast-parse.md) 和 [Standard Parse](../../standard-parse.md)。 实例时都提供 SQL Server 登录名。<br /><br /> 注意：此属性在“数据转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
-|SourceInputColumnLineageId|Integer|`LineageID`的源的输出列的输入列。|  
+|SourceInputColumnLineageId|Integer|`LineageID`源的输出列的输入列。|  
   
  数据转换的输入、输入列和输出不包含自定义属性。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36016211"
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|该值用于指定转换是否向现有文件追加数据。 此属性的默认值是`False`。|  
 |ForceTruncate|Boolean|该值用于指定转换是否在写入数据之前截断现有文件。 此属性的默认值是`False`。|  
-|FileDataColumnID|Integer|该值用于标识包含转换插入到文件中的数据的列。 在提取列中，此属性具有的值**0**; 在文件路径列中，此属性包含`LineageID`提取列。|  
+|FileDataColumnID|Integer|该值用于标识包含转换插入到文件中的数据的列。 在提取列中，此属性的值为**0**; 在文件路径列中，此属性包含`LineageID`提取列。|  
 |WriteBOM|Boolean|该值用于指定是否将字节顺序标记 (BOM) 写入文件中。|  
   
  导出列转换的输入、输出和输出列不包含自定义属性。  
@@ -251,7 +251,7 @@ ms.locfileid: "36016211"
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Boolean|该值用于指定导入列转换是否需要使用字节顺序标记 (BOM)。 仅当数据为 DT_NTEXT 数据类型时才需要 BOM。|  
-|FileDataColumnID|Integer|该值用于标识包含转换插入到数据流中的数据的列。 要插入数据的列，此属性具有值为 0;在包含源文件的路径的列，则此属性包含`LineageID`待插入数据的列。|  
+|FileDataColumnID|Integer|该值用于标识包含转换插入到数据流中的数据的列。 要插入数据的列，此属性的值为 0;在包含源文件路径的列，此属性包含`LineageID`要插入数据的列。|  
   
  导入列转换的输入、输出和输出列不包含自定义属性。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "36016211"
 ##  <a name="flookup"></a> 模糊查找转换自定义属性  
  模糊查找转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
- 下表介绍模糊查找转换的自定义属性。 以外的所有属性`ReferenceMetadataXML`读/写。  
+ 下表介绍模糊查找转换的自定义属性。 除之外的所有属性`ReferenceMetadataXML`读/写。  
   
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
@@ -323,7 +323,7 @@ ms.locfileid: "36016211"
  下表介绍模糊查找转换的输出列的自定义属性。 所有属性均可读/写。  
   
 > [!NOTE]  
->  对于包含相应的输入列中的传递值的输出列，CopyFromReferenceColumn 为空并且 SourceInputColumnLineageID 包含`LineageID`对应的输入列。 对于包含查找结果的输出列，CopyFromReferenceColumn 包含查找列的名称，SourceInputColumnLineageID 为空。  
+>  对于包含来自对应输入列的传递值的输出列，CopyFromReferenceColumn 为空，SourceInputColumnLineageID 包含`LineageID`的对应输入列。 对于包含查找结果的输出列，CopyFromReferenceColumn 包含查找列的名称，SourceInputColumnLineageID 为空。  
   
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
@@ -338,7 +338,7 @@ ms.locfileid: "36016211"
 ##  <a name="lookup"></a> 查找转换自定义属性  
  查找转换既包含自定义属性，也包含对所有数据流组件通用的属性。  
   
- 下表介绍查找转换的自定义属性。 以外的所有属性`ReferenceMetadataXML`读/写。  
+ 下表介绍查找转换的自定义属性。 除之外的所有属性`ReferenceMetadataXML`读/写。  
   
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
@@ -346,7 +346,7 @@ ms.locfileid: "36016211"
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的默认代码页。|  
 |MaxMemoryUsage|Integer|查找表的最大缓存大小。 此属性的默认值为 **25**，表示缓存没有大小限制。|  
 |MaxMemoryUsage64|Integer|64 位计算机上的查找表的最大缓存大小。|  
-|NoMatchBehavior|Integer（枚举）|该值用于指定是否将引用数据集中不包含匹配项的行视为错误。<br /><br /> 如果将该属性设置为 `Treat rows with no matching entries as errors` (0)，则不包含匹配项的行将被视为错误。 使用 **“查找转换编辑器”** 对话框的 **“错误输出”** 页可以指定当发生此类错误时会发生什么情况。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../lookup-transformation-editor-error-output-page.md)。<br /><br /> 当属性设置为`Send rows with no matching entries to the no match output`(1)，行不 treaded 视为错误。<br /><br /> 默认值为 `Treat rows with no matching entries as errors` (0)。|  
+|NoMatchBehavior|Integer（枚举）|该值用于指定是否将引用数据集中不包含匹配项的行视为错误。<br /><br /> 如果将该属性设置为 `Treat rows with no matching entries as errors` (0)，则不包含匹配项的行将被视为错误。 使用 **“查找转换编辑器”** 对话框的 **“错误输出”** 页可以指定当发生此类错误时会发生什么情况。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../lookup-transformation-editor-error-output-page.md)。<br /><br /> 当属性设置为`Send rows with no matching entries to the no match output`(1)，则行不视为错误。<br /><br /> 默认值为 `Treat rows with no matching entries as errors` (0)。|  
 |ParameterMap|String|映射到 `SqlCommand` 语句中所使用的参数、以分号分隔的沿袭 ID 列表。|  
 |ReferenceMetadataXML|String|转换复制到其输出的查找表中的列的元数据。|  
 |SqlCommand|String|用于填充查找表的 SELECT 语句。|  
@@ -377,7 +377,7 @@ ms.locfileid: "36016211"
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |JoinType|Integer（枚举）|指定联接是内部联接 (2)、左外部联接 (1) 还是完整联接 (0)。|  
-|MaxBuffersPerInput|Integer|不再需要的值配置`MaxBuffersPerInput`属性因为 Microsoft 已进行更改，减少合并联接转换将会占用过多内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。|  
+|MaxBuffersPerInput|Integer|不再需要的值配置`MaxBuffersPerInput`属性因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多的内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。|  
 |NumKeyColumns|Integer|联接所使用的列数。|  
 |TreatNullsAsEqual|Boolean|该值用于指定转换是否将 null 值处理为相等的值。 此属性的默认值是`True`。 如果属性值为 `False`，则转换处理 null 值的方式与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的处理方式相同。|  
   
@@ -385,7 +385,7 @@ ms.locfileid: "36016211"
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|InputColumnID|Integer|`LineageID`从中数据复制到此输出列的输入列。|  
+|InputColumnID|Integer|`LineageID`从中将数据复制到此输出列的输入列。|  
   
  合并联接转换的输入、输入列和输出不包含自定义属性。  
   
@@ -426,7 +426,7 @@ ms.locfileid: "36016211"
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|所选|Boolean|指定已抽样的行定向到的输出。 所选的输出中，所选设置为`True`，和未选定的输出中，所选设置为`False`。|  
+|所选|Boolean|指定已抽样的行定向到的输出。 在选定的输出中，Selected 设置为`True`，并在未选定的输出中，Selected 设置为`False`。|  
   
  百分比抽样转换的输入、输入列和输出列不包含自定义属性。  
   
@@ -443,14 +443,14 @@ ms.locfileid: "36016211"
   
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Integer（枚举）|透视数据集时指定的列的角色的以下值之一：<br /><br /> **0**: 列不透视，和的列的值将传递到转换输出。<br /><br /> **1**: 列是标识为一个集的一部分的一个或多个行设置键的一部分。 将所有具有同一设置键的输入行组合到一个输出行。<br /><br /> **2**： 列为透视列。 从每个列值至少创建一列。<br /><br /> **3**： 来自此列的值都将置于作为透视结果创建的列。|  
+|PivotUsage|Integer（枚举）|透视数据集时指定列的角色的以下值之一：<br /><br /> **0**: 列未经透视，和的列的值将传递到转换输出。<br /><br /> **1**： 列为设置键的一部分的一个或多个行标识为一个集的一部分。 将所有具有同一设置键的输入行组合到一个输出行。<br /><br /> **2**： 列为透视列。 从每个列值至少创建一列。<br /><br /> **3**： 此列中的值将放入作为透视结果创建的列中。|  
   
  下表介绍透视转换的输出列的自定义属性。 所有属性均可读/写。  
   
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|列中由其 PivotUsage 属性的值标记为透视键的可能值之一。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
-|SourceColumn|Integer|`LineageID`的输入列包含透视的值，则为-1。 值 -1 表示透视操作中未使用该列。|  
+|SourceColumn|Integer|`LineageID`包含透视的值，则为-1 的输入列。 值 -1 表示透视操作中未使用该列。|  
   
  有关详细信息，请参阅 [Pivot Transformation](pivot-transformation.md)。  
   
@@ -481,7 +481,7 @@ ms.locfileid: "36016211"
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|所选|Boolean|指定已抽样的行定向到的输出。 所选的输出中，所选设置为`True`，和未选定的输出中，所选设置为`False`。|  
+|所选|Boolean|指定已抽样的行定向到的输出。 在选定的输出中，Selected 设置为`True`，并在未选定的输出中，Selected 设置为`False`。|  
   
  下表介绍行抽样转换的输出列的自定义属性。 所有属性均可读/写。  
   
@@ -516,7 +516,7 @@ ms.locfileid: "36016211"
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|SELECT 语句中的 WHERE 子句，用于在具有相同业务键的行中选择当前行。|  
 |EnableInferredMember|Boolean|该值用于指定是否检测推断成员更新。 此属性的默认值是`True`。|  
-|FailOnFixedAttributeChange|Boolean|该值用于指定当具有固定属性的行列包含更改或维度表中的查找失败时，转换是否失败。 如果你预计传入的行包含新记录，则将此值设置为`True`使转换的继续后查找失败，因为转换将使用失败来标识新记录。 此属性的默认值是`False`。|  
+|FailOnFixedAttributeChange|Boolean|该值用于指定当具有固定属性的行列包含更改或维度表中的查找失败时，转换是否失败。 如果期望传入行包含新记录，请将此值设置为`True`，使转换失败后继续查找，因为转换将使用该失败来标识新记录。 此属性的默认值是`False`。|  
 |FailOnLookupFailure|Boolean|该值用于指定当查找现有记录失败时转换是否失败。 此属性的默认值是`False`。|  
 |IncomingRowChangeType|Integer|该值用于指定是否所有传入的行均为新行，或者转换是否应检测更改类型。|  
 |InferredMemberIndicator|String|推断成员的列名称。|  
@@ -601,7 +601,7 @@ ms.locfileid: "36016211"
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|Integer|`LineageID`相应的输入列的如果`InputColumnType`该列是 0 或 2。|  
+|CustomLineageID|Integer|`LineageID`对应的输入列的如果`InputColumnType`该列为 0 或 2。|  
   
  字词查找转换的输入和输出不包含自定义属性。  
   
@@ -624,7 +624,7 @@ ms.locfileid: "36016211"
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|PivotKey|Boolean|指示是否中的值`PivotKeyValue`的输入列的属性写入到此输出列。<br /><br /> 在 [Unpivot Transformation](unpivot-transformation.md)中所述的逆透视应用场景中，透视值列名称为 **Product** ，并指定了将 Ham、Coke、Milk、Beer 和 Chips 列逆透视到其中的新的 **Product** 列。|  
+|PivotKey|Boolean|指示是否在值`PivotKeyValue`输入列的属性写入到此输出列。<br /><br /> 在 [Unpivot Transformation](unpivot-transformation.md)中所述的逆透视应用场景中，透视值列名称为 **Product** ，并指定了将 Ham、Coke、Milk、Beer 和 Chips 列逆透视到其中的新的 **Product** 列。|  
   
  逆透视转换的输入和输出不包含自定义属性。  
   

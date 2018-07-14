@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200817"
 ---
 # <a name="dta-utility"></a>dta 实用工具
   **dta** 实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  如果指定多个数据库名称， **dta** 将返回错误。 **-d** 参数是可选的。  
   
- 如果使用 XML 输入的文件，你可以指定的第一个数据库**dta**使用连接`DatabaseToConnect`位于下的元素`TuningOptions`元素。 有关详细信息，请参阅 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)。  
+ 如果使用 XML 输入的文件，可以指定到的第一个数据库**dta**使用连接`DatabaseToConnect`元素下的`TuningOptions`元素。 有关详细信息，请参阅 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)。  
   
  如果只优化一个数据库，则 **-d** 参数的功能将类似于 **sqlcmd** 实用工具中的 **-d** 参数的功能，但不执行 USE *database_name* 语句。 有关详细信息，请参阅 [sqlcmd Utility](../sqlcmd-utility.md)。  
   
@@ -153,7 +153,7 @@ dta -d AdventureWorks2012 ...
 |参数|默认值|  
 |---------------|-------------------|  
 |*database_name*|使用*database_name* 选项指定的 **database_name** |  
-|*owner_name*|**dbo**<br /><br /> 注意： *owner_name*必须**dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
+|*owner_name*|**dbo**<br /><br /> 注意： *owner_name*必须是**dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
 |*table_name*|InclusionThresholdSetting|  
   
  如果使用文件，则指定 .xml 作为其扩展名。 例如，TuningLog.xml。  
@@ -165,7 +165,7 @@ dta -d AdventureWorks2012 ...
  允许 **dta** 覆盖现有的输出文件。 如果已经存在同名输出文件，并且没有指定 **-F** ，则 **dta**将返回错误。 你可以使用具有 **-of** 、 **-or**或 **-ox**的 **-F**。  
   
  **-fa** *physical_design_structures_to_add*  
- 指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 当未不指定任何值时， **dta**使用默认 **-fa**`IDX`。  
+ 指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 当未不指定任何值时， **dta**将使用默认 **-fa**`IDX`。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

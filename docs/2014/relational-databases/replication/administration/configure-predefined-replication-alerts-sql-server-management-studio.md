@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
 - predefined replication alerts [SQL Server replication]
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af638b1ce1def8725a8a47d997e62890ac717fe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 385f18cdec2ef672bd1be5bafcff0ee5d0efe5f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287133"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>配置预定义的复制警报 (SQL Server Management Studio)
   复制提供了下列预定义警报，可以配置这些警报以响应复制事件：  
@@ -45,7 +45,7 @@ ms.locfileid: "36013847"
   
  在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 有关访问此选项卡的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   
- 除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅[Set Thresholds and Warnings in Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)警报基础结构。 有关详细信息，请参阅[创建用户定义事件](../../../ssms/agent/create-a-user-defined-event.md)。  
+ 除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅[设置阈值和警告在复制监视器中的](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)警报基础结构。 有关详细信息，请参阅[创建用户定义事件](../../../ssms/agent/create-a-user-defined-event.md)。  
   
 ### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>在 Management Studio 中配置预定义复制警报  
   

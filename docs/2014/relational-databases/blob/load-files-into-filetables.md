@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169098"
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
   说明如何将文件加载或迁移到 FileTable 中。  
@@ -48,11 +47,11 @@ ms.locfileid: "36015047"
 ###  <a name="HowToMigrateFiles"></a> 示例：将文件从文件系统迁移到 FileTable  
  在这种情况下，您的文件存储在文件系统中，并且您具有包含指向这些文件的指针的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的元数据表。 您要将文件移入 FileTable，然后用 FileTable UNC 路径替换元数据中每个文件的原始 UNC 路径。 [GetPathLocator (Transact-SQL)](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 函数帮助你实现这一目标。  
   
- 对于此示例，假定有一个现有的数据库表， `PhotoMetadata`，其中包含有关照片的数据。 此表中有列`UNCPath`类型的`varchar`(512) 其中包含指向.jpg 文件的实际 UNC 路径。  
+ 此示例中，假设没有现有的数据库表`PhotoMetadata`，其中包含有关照片的数据。 此表具有列`UNCPath`类型的`varchar`(512) 其中包含指向.jpg 文件的实际 UNC 路径。  
   
  要将图像文件从文件系统迁移到 FileTable，必须执行以下操作：  
   
-1.  创建新的 FileTable 来保存文件。 此示例使用表名， `dbo.PhotoTable`，但不显示用于创建表的代码。  
+1.  创建新的 FileTable 来保存文件。 此示例使用表名`dbo.PhotoTable`，但不显示用于创建表的代码。  
   
 2.  使用 xcopy 或类似的工具将 .jpg 文件连同目录结构一起复制到 FileTable 的根目录下。  
   

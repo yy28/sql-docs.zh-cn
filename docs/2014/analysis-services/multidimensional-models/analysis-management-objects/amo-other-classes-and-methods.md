@@ -1,5 +1,5 @@
 ---
-title: AMO 其他类和方法 |Microsoft 文档
+title: AMO 其他类和方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,24 +21,24 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180874"
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他类和方法
-  本部分包含公共类，并不特定于 olap 数据或数据挖掘，并且在管理或管理中的对象时，很有帮助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 它们包括诸如存储过程、跟踪、异常、备份和还原等功能。  
+  本部分包含公共类不是特定于 OLAP 或数据挖掘，并且有助于管理中管理对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 它们包括诸如存储过程、跟踪、异常、备份和还原等功能。  
   
  本主题包含以下各节：  
   
 -   [程序集对象](#Assembly)  
   
--   [备份和还原方法](#Backup)  
+-   [Backup 和 Restore 方法](#Backup)  
   
 -   [跟踪对象](#Traces)  
   
@@ -55,12 +55,12 @@ ms.locfileid: "36016961"
   
  若要删除<xref:Microsoft.AnalysisServices.Assembly>对象时，它具有要使用的 Drop 方法删除<xref:Microsoft.AnalysisServices.Assembly>对象。 从数据库的程序集集合中删除 <xref:Microsoft.AnalysisServices.Assembly> 对象不会删除程序集，只会使您在下次运行应用程序之前在应用程序中看不到它。  
   
- 有关可用方法和属性的详细信息，请参阅<xref:Microsoft.AnalysisServices.Assembly>中<xref:Microsoft.AnalysisServices>。  
+ 有关可用方法和属性的详细信息，请参阅<xref:Microsoft.AnalysisServices.Assembly>在<xref:Microsoft.AnalysisServices>。  
   
 > [!IMPORTANT]  
 >  COM 程序集可能会造成安全风险。 由于此风险和其他注意事项， [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]中不推荐使用 COM 程序集。 未来版本可能不支持 COM 程序集。  
   
-##  <a name="Backup"></a> 备份和还原方法  
+##  <a name="Backup"></a> Backup 和 Restore 方法  
  Backup 和 Restore 方法分别用于创建 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库的副本及使用副本恢复数据库。 Backup 方法属于 <xref:Microsoft.AnalysisServices.Database> 对象，Restore 方法属于 <xref:Microsoft.AnalysisServices.Server> 对象。  
   
  只有服务器管理员和数据库管理员可以执行数据库的备份。 只有服务器管理员可以将数据库还原到与其备份之前所在服务器不同的服务器中。 数据库管理员只有在拥有某个现有数据库时，才可以通过覆盖该数据库来还原数据库。 如果数据库还原时带有其原始安全定义，则还原之后，数据库管理员可能会失去对还原后的数据库的访问权限。  
@@ -153,11 +153,11 @@ ms.locfileid: "36016961"
 6.  继续执行应用程序。  
   
 ##  <a name="CaptureLog"></a> CaptureLog 类和 CaptureXML 属性  
- AMO 要执行的所有操作都会作为 XMLA 消息发送到服务器。 AMO 提供捕获所有这些没有 SOAP 标头的消息的方法。 有关详细信息，请参阅[简介 AMO 类](amo-classes-introduction.md)。 CaptureLog 是 AMO 中用于编写对象和操作脚本的机制；对象和操作脚本将以 XMLA 编写。  
+ AMO 要执行的所有操作都会作为 XMLA 消息发送到服务器。 AMO 提供捕获所有这些没有 SOAP 标头的消息的方法。 有关详细信息，请参阅[引入了 AMO 类](amo-classes-introduction.md)。 CaptureLog 是 AMO 中用于编写对象和操作脚本的机制；对象和操作脚本将以 XMLA 编写。  
   
  若要开始捕获 XML，CaptureXML 服务器对象属性需要设置为 `true`。 然后，将开始在 CaptureLog 类中捕获所有要发送到服务器的操作，不包括正在向服务器进行发送的操作。 CaptureLog 之所以被视为类，是因为它有一个 Clear 方法，该方法用于清除捕获日志。  
   
- 若要读取该日志，请获取字符串集合并开始循环访问这些字符串。 此外，还可以使用服务器对象方法 ConcatenateCaptureLog 将所有日志串联到一个字符串中。 ConcatenateCaptureLog 要求有三个参数，其中两个是必需的。 必需的参数*事务*，为 Boolean 类型和*并行*，为 Boolean 类型。 如果*事务*设置为`true`，它指示 XML 批处理文件在由于而不是每个命令在单个事务视为分隔的事务将会创建。 如果*并行*设置为`true`，它指示与记录将并发执行，而不是按顺序记录批处理文件中的所有命令。  
+ 若要读取该日志，请获取字符串集合并开始循环访问这些字符串。 此外，还可以使用服务器对象方法 ConcatenateCaptureLog 将所有日志串联到一个字符串中。 ConcatenateCaptureLog 要求有三个参数，其中两个是必需的。 所需的参数是*事务性*，属于布尔类型，并*并行*的布尔值类型。 如果*事务性*设置为`true`，它表示为作为一个单独的事务处理而不是每个命令在单个事务，将创建 XML 批处理文件。 如果*并行*设置为`true`，它指示记录将并发执行，而不是按顺序记录批处理文件中的所有命令。  
   
 ##  <a name="AMO"></a> AMOException 异常类  
  可以使用 AMOException 异常类轻松地捕获应用程序中由 AMO 引发的异常。  
@@ -174,7 +174,7 @@ ms.locfileid: "36016961"
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

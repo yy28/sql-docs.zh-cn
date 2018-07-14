@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, non-administrators access
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f8b98f90d41174bb2a58cd1bf96b8b4f08e83f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4a5a83c12acbe24290b28edd5c494ea988ae00f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286998"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>允许非管理员使用复制监视器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中允许非管理员使用复制监视器。 属于下列角色成员的用户可以使用复制监视器：  
@@ -51,7 +51,7 @@ ms.locfileid: "36016333"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 若要允许非管理员使用复制监视器，属于**sysadmin**固定的服务器角色必须将用户添加到分发数据库并分配到该用户`replmonitor`角色。  
+ 若要允许非管理员使用复制监视器，隶属**sysadmin**固定的服务器角色必须将用户添加到分发数据库并向该用户分配`replmonitor`角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36016333"
   
 4.  输入用户名和用户的登录名。  
   
-5.  选择的默认架构的`replmonitor`。  
+5.  选择的默认架构`replmonitor`。  
   
 6.  选择`replmonitor`中的复选框**数据库角色成员身份**网格。  
   
@@ -75,16 +75,16 @@ ms.locfileid: "36016333"
   
 #### <a name="to-add-a-user-to-the-replmonitor-fixed-database-role"></a>将用户添加到 replmonitor 固定数据库角色  
   
-1.  在分发服务器上，对分发数据库执行 [sp_helpuser &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpuser-transact-sql)。 如果用户未列在`UserName`在结果集中，用户必须被授予对分发数据库的访问[CREATE USER &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-user-transact-sql)语句。  
+1.  在分发服务器上，对分发数据库执行 [sp_helpuser &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpuser-transact-sql)。 如果用户未列在`UserName`中的结果集，用户必须被授予对分发数据库使用的访问[CREATE USER &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-user-transact-sql)语句。  
   
-2.  在分发数据库上分发服务器上，执行[sp_helprolemember &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)，将值指定为`replmonitor`为**@rolename**参数。 如果用户被列入`MemberName`在结果集中，用户已属于此角色。  
+2.  在分发数据库上分发服务器上，执行[sp_helprolemember &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)，将值指定为`replmonitor`有关**@rolename**参数。 如果列出此用户`MemberName`在结果集中，用户已属于此角色。  
   
-3.  如果用户不属于`replmonitor`角色，执行[sp_addrolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)在分发数据库上分发服务器上。 指定的值`replmonitor`为**@rolename**和数据库用户的名称或[!INCLUDE[msCoName](../../../includes/msconame-md.md)]正在为添加的 Windows 登录名**@membername**。  
+3.  如果用户不属于`replmonitor`角色，执行[sp_addrolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)分发服务器上分发数据库。 指定的值`replmonitor`有关**@rolename**和数据库用户的名称或[!INCLUDE[msCoName](../../../includes/msconame-md.md)]所添加的 Windows 登录名**@membername**。  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>从 replmonitor 固定数据库角色中删除用户  
   
-1.  若要验证用户是否属于`replmonitor`角色，执行[sp_helprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)在分发服务器上分发数据库中，并指定的值`replmonitor`为**@rolename**. 如果在结果集中的 `MemberName` 中未列出此用户，则此用户当前不属于此角色。  
+1.  若要验证是否为该用户所属`replmonitor`角色，执行[sp_helprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)分发服务器上，对分发数据库和指定的值`replmonitor`为**@rolename**. 如果在结果集中的 `MemberName` 中未列出此用户，则此用户当前不属于此角色。  
   
-2.  如果用户确实属于`replmonitor`角色，执行[sp_droprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)在分发数据库上分发服务器上。 指定的值`replmonitor`为**@rolename**和数据库用户或正在删除的 Windows 登录名的名称**@membername**。  
+2.  如果用户属于`replmonitor`角色，执行[sp_droprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)分发服务器上分发数据库。 指定的值`replmonitor`有关**@rolename**和数据库用户或为要删除的 Windows 登录名的名称**@membername**。  
   
   

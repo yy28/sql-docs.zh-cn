@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08040fafaa66570d3c0f2023bc1a66d0f82c1d4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2ae32c1e29ec8252326e353e6b62f8b6b6f12b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227817"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>用于 Excel 的 MDS 外接程序中的数据质量匹配
   随着时间的推移，您将会想要向 MDS 存储库中添加更多的数据。 在添加数据前，将新数据与已在 MDS 中进行管理的数据进行比较可能会很有用，因为这样可以确保不会添加重复数据或不正确的数据。  
@@ -57,7 +57,7 @@ ms.locfileid: "36016644"
   
 ## <a name="related-content"></a>相关内容  
   
--   [将数据发布&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [数据匹配](../../data-quality-services/data-matching.md)  
   

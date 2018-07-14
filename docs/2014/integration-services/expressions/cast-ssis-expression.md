@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CAST function
 - cast operator
@@ -19,13 +19,13 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f8d34f009bfd4f013029b63fdf567dfdc43af616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31c1adf6d76bfa399e199aa67f5bf4f97392505d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192127"
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
   将表达式从一种数据类型显式转换为另一种数据类型。 转换运算符还可以用作截断运算符。  

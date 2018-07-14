@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event start times [SQL Server]
 - filters [SQL Server], traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f52726d45b27dfc9a4a7f86f4a0261219e26c7e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f72628b01609d055971bcf6446f5afcb0879776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204537"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>基于事件开始时间筛选事件 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]来基于事件开始时间筛选跟踪事件。  
@@ -46,7 +46,7 @@ ms.locfileid: "36016715"
   
 5.  在“事件选择”选项卡上，单击“StartTime”列标题。 也可以右键单击列标题，然后单击“编辑列筛选器”打开“编辑筛选器”对话框。  
   
-6.  展开**大于**或**小于**，然后输入`datetime`比较运算符下方的字段中的值。  
+6.  展开**大于**或**小于**，然后输入`datetime`比较运算符下显示的字段中的值。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 事件探查器](sql-server-profiler.md)  

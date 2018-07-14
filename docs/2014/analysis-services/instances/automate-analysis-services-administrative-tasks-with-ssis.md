@@ -1,5 +1,5 @@
 ---
-title: 自动执行 Analysis Services Administrative Tasks with SSIS |Microsoft 文档
+title: 自动执行 Analysis Services Administrative Tasks with SSIS |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a06a04c50dbb1548ac28902dcfb2f7f7a2883232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35ba767c2c6d0b230a3515a8e5df48d6f126284a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251139"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>使用 SSIS 自动执行 Analysis Services 管理任务
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持您自动执行 DDL 脚本、多维数据集和挖掘模型处理任务以及数据挖掘查询任务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可被视为控制流和维护任务（这些任务可链接起来以形成顺序和并行执行的数据处理作业）的集合。  
@@ -46,6 +46,6 @@ ms.locfileid: "36015589"
  [维度处理目标](../../integration-services/data-flow/dimension-processing-destination.md)   
  [数据挖掘查询转换](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [多维模型对象处理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)  
   
   

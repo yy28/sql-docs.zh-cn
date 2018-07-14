@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
 - traces [Reporting Services]
@@ -18,19 +18,19 @@ ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5473021393acf02a3910b4eb8090486d838e0770
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270273"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]报表服务器跟踪日志是 ASCII 文本文件，其中包含报表服务器服务操作的详细的信息，包括操作由报表服务器 Web 服务，报表管理器和后台处理。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息可能非常有用。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]报表服务器跟踪日志是 ASCII 文本文件，其中包含有关报表服务器服务操作的详细的信息，包括操作执行的报表服务器 Web 服务、 报表管理器和后台处理。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息可能非常有用。  
   
 > [!NOTE]  
->  在早期版本中，每个应用程序都具有一个跟踪日志文件，因此具有多个跟踪日志文件。 以下文件已过时，且不再在中创建[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本： ReportServerWebApp_*\<时间戳 >*.log，ReportServer_*\<时间戳 >*.log 和 ReportServerService_main_*\<时间戳 >*。 日志。  
+>  在早期版本中，每个应用程序都具有一个跟踪日志文件，因此具有多个跟踪日志文件。 以下文件已过时，并在中不再创建[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本： ReportServerWebApp_*\<时间戳 >*.log、 ReportServer_*\<时间戳 >*.log 和 ReportServerService_main_*\<时间戳 >*。 日志。  
   
  **本主题内容：**  
   
@@ -51,14 +51,14 @@ ms.locfileid: "36015846"
   
  查看演示使用 Microsoft Power Query 查看 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 日志文件的简短视频。  
   
- ![查看有关 Power Query 和 SSRS 日志视频](../media/generic-video-thumbnail.png "查看有关 Power Query 和 SSRS 日志视频")  
+ ![查看有关 Power Query 和 SSRS 日志的视频](../media/generic-video-thumbnail.png "查看有关 Power Query 和 SSRS 日志的视频")  
   
 ##  <a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置  
  在配置文件 **ReportingServicesrService.exe.config**中管理跟踪日志行为。可在以下文件夹路径中找到该配置文件：  
   
  `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`的用户。  
   
- 下面的示例演示 `RStrace` 设置的 XML 结构。 值`DefaultTraceSwitch`确定添加到日志的信息的类型。 除`Components`属性的值`RStrace`是相同的各个配置文件。  
+ 下面的示例演示 `RStrace` 设置的 XML 结构。 值为`DefaultTraceSwitch`确定添加到日志的信息种类。 除`Components`属性的值`RStrace`是相同的各个配置文件。  
   
 ```  
 <system.diagnostics>  
@@ -89,7 +89,7 @@ ms.locfileid: "36015846"
 |`Prefix`|指定一个生成的值，该值可将日志实例彼此区分开。 默认情况下，跟踪日志文件名后面将附加时间戳值。 此值设置为“ tid, time ”。 请不要修改此设置。|  
 |**TraceListeners**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。 有效值包括：<br /><br /> DebugWindow<br /><br /> File（默认值）<br /><br /> StdOut|  
 |**TraceFileMode**|指定跟踪日志是否包含 24 小时时段内的数据。 每天应当为每个组件设置唯一的跟踪日志。 此值设置为“Unique”（默认值）。 不要修改此值。|  
-|`Components`|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<component category>:\<tracelevel><br /><br /> 组件类别可以设置为：<br />`All` 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br />`RunningJobs` 用于跟踪正在报表或订阅操作。<br />`SemanticQueryEngine` 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br />`SemanticModelGenerator` 用于跟踪模型生成。<br />`http` 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅[报表服务器 HTTP 日志](report-server-http-log.md)。<br /><br /> <br /><br /> 有效的跟踪级别值包括：<br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。<br /><br /> 你可以指定所有或部分组件 (`all`， `RunningJobs`， `SemanticQueryEngine`， `SemanticModelGenerator`)。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 `all` 的跟踪。<br /><br /> 如果您不对组件追加跟踪级别，将使用为 `DefaultTraceSwitch` 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
+|`Components`|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<component category>:\<tracelevel><br /><br /> 组件类别可以设置为：<br />`All` 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br />`RunningJobs` 用于跟踪正在进行中的报表或订阅操作。<br />`SemanticQueryEngine` 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br />`SemanticModelGenerator` 用于跟踪模型生成。<br />`http` 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅[报表服务器 HTTP 日志](report-server-http-log.md)。<br /><br /> <br /><br /> 有效的跟踪级别值包括：<br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。<br /><br /> 您可以指定所有或部分组件 (`all`， `RunningJobs`， `SemanticQueryEngine`， `SemanticModelGenerator`)。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 `all` 的跟踪。<br /><br /> 如果您不对组件追加跟踪级别，将使用为 `DefaultTraceSwitch` 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> 添加自定义配置设置以指定转储文件位置  
  可以添加自定义设置来设置 Dr. Watson for Windows 工具用于存储转储文件的位置。 自定义设置为 `Directory`。 下例提供了如何在 `RStrace` 部分中指定此配置设置的说明：  
@@ -117,7 +117,7 @@ ms.locfileid: "36015846"
   
 -   HTTP 标头、堆栈跟踪和调试跟踪信息。  
   
- 通过查阅跟踪日志信息，可以确定是否进行了报表传递、谁接收了报表以及进行了多少次传递尝试。 跟踪日志还会记录报表执行活动以及报表处理过程中的有效环境变量。 错误和异常也会记入跟踪日志中。 例如，可能会发现超时错误报表 (指示为`ThreadAbortExceptions`条目)。  
+ 通过查阅跟踪日志信息，可以确定是否进行了报表传递、谁接收了报表以及进行了多少次传递尝试。 跟踪日志还会记录报表执行活动以及报表处理过程中的有效环境变量。 错误和异常也会记入跟踪日志中。 例如，你可能会发现报表超时错误 (如`ThreadAbortExceptions`条目)。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - notifications [Master Data Services]
 - notifications [Master Data Services], about notifications
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8213976a69f360fe13fa9d085919992e3daadf4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7ff9bcb9009c28a400c92c75a8dbed34ceec727
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248897"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 可以配置为发送电子邮件通知时业务规则验证失败或模型版本更改的状态。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 可以配置为发送电子邮件通知业务规则验证失败时或在模型版本发生更改的状态。  
   
 ## <a name="how-notifications-are-sent"></a>如何发送通知  
  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中配置通知。 通过使用承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例上的“数据库邮件”，在邮件中发送通知。 有关数据库邮件的详细信息，请参阅 [机丛书中的](../relational-databases/database-mail/database-mail-configuration-objects.md) 数据库邮件配置对象 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 部分。  

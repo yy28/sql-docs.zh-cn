@@ -1,14 +1,13 @@
 ---
-title: 自动页修复 （针对可用性组和数据库镜像） |Microsoft 文档
+title: 自动页修复 （适用于可用性组和数据库镜像） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
 - Availability Groups [SQL Server], automatic page repair
@@ -16,17 +15,17 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d84c8eb5470ee6ef54dfdc1327ea40fafb961e41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 91d4d9a3c2efa2bfcb8e3b1db44f43d525f0b067
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257933"
 ---
-# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>自动页修复 （针对可用性组和数据库镜像）
+# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>自动页修复 （适用于可用性组和数据库镜像）
   数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 支持自动页修复。 在某些类型的错误导致页损坏，使其无法读取后，数据库镜像伙伴（主体或镜像）或可用性副本（主副本或辅助副本）将尝试自动修复该页。 无法读取该页的伙伴/副本将从其伙伴或从其他副本请求该页的新副本。 如果此请求成功，则将以可读副本替换不可读的页，并且这通常会解决该错误。  
   
  一般来说，数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 以等效方式处理 I/O 错误。 下面将具体介绍几个差异。  

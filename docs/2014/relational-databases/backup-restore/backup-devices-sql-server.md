@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237177"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个介质集。  
@@ -49,7 +48,7 @@ ms.locfileid: "36016377"
   
 -   [使用逻辑备份设备](#LogicalBackupDevice)  
   
--   [镜像备份介质集](#MirroredMediaSets)  
+-   [镜像备份媒体集](#MirroredMediaSets)  
   
 -   [SQL Server 备份数据存档](#Archiving)  
   
@@ -70,7 +69,7 @@ ms.locfileid: "36016377"
 ##  <a name="DiskBackups"></a> 使用磁盘备份设备  
  **本节内容：**  
   
--   [通过使用物理名称 (Transact SQL) 指定备份文件](#BackupFileUsingPhysicalName)  
+-   [指定备份文件的使用物理名称 (Transact SQL)](#BackupFileUsingPhysicalName)  
   
 -   [指定磁盘备份文件的路径](#BackupFileDiskPath)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "36016377"
 > [!IMPORTANT]  
 >  我们建议备份磁盘应不同于数据库数据和日志的磁盘。 这是数据或日志磁盘出现故障时访问备份数据必不可少的。  
   
-###  <a name="BackupFileUsingPhysicalName"></a> 通过使用物理名称 (Transact SQL) 指定备份文件  
+###  <a name="BackupFileUsingPhysicalName"></a> 指定备份文件的使用物理名称 (Transact SQL)  
  使用物理设备名称指定备份文件的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语法为：  
   
  BACKUP DATABASE *database_name*  
@@ -159,7 +158,7 @@ GO
   
 -   [通过使用物理名称 (Transact SQL) 指定备份磁带](#BackupTapeUsingPhysicalName)  
   
--   [磁带专用的 BACKUP 和 RESTORE 选项 (TRANSACT-SQL)](#TapeOptions)  
+-   [磁带专用的 BACKUP 选项和 RESTORE 选项 (Transact SQL)](#TapeOptions)  
   
 -   [管理打开的磁带](#OpenTapes)  
   
@@ -194,7 +193,7 @@ GO
   
  FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
-###  <a name="TapeOptions"></a> 磁带专用的 BACKUP 和 RESTORE 选项 (TRANSACT-SQL)  
+###  <a name="TapeOptions"></a> 磁带专用的 BACKUP 选项和 RESTORE 选项 (Transact SQL)  
  为了便于磁带管理，BACKUP 语句提供了下列磁带专用的选项：  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -242,7 +241,7 @@ GO
   
 2.  定义新的逻辑备份设备，新设备使用原来的逻辑设备名称，但映射到不同的物理备份设备。 逻辑备份设备对于标识磁带备份设备尤为有用。  
   
-##  <a name="MirroredMediaSets"></a> 镜像备份介质集  
+##  <a name="MirroredMediaSets"></a> 镜像备份媒体集  
  镜像备份介质集可减小备份设备故障的影响。 由于备份是防止数据丢失的最后防线，因此备份设备出现故障的后果是非常严重的。 随着数据库不断增大，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供物理备份设备冗余来提高备份的可靠性。 有关详细信息，请参阅[镜像备份媒体集 (SQL Server)](mirrored-backup-media-sets-sql-server.md)。  
   
 > [!NOTE]  

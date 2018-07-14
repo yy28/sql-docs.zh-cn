@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10513c14e2d9c65a210eee837ce3c23b21ff77aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f4e9adafb6fa7311ca246e2ce4233ed03e073df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282623"
 ---
 # <a name="scheduling-methods"></a>计划方法
   可以使用这些方法来创建和管理用于报表执行和传递的共享计划，还可以使用这些方法来缓存报表服务器使用的刷新计划。  

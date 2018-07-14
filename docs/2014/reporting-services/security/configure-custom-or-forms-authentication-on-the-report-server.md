@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b9c600939f5f3fb0a6febd76371d95e3ab91b4fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6308b2b3da495518fb2c377e7a0994a27f14dbcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206507"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
   Reporting Services 提供了可扩展的体系结构，该体系结构允许您插入自定义的或基于窗体的身份验证模块。 如果部署要求不包含 Windows 集成安全性或基本身份验证，则可考虑实现自定义的身份验证扩展插件。 使用自定义身份验证的最常见情形是支持对 Web 应用程序的 Internet 或 Extranet 访问。 使用自定义身份验证扩展插件替换默认的 Windows 身份验证扩展插件，可更好地控制如何授予外部用户访问报表服务器的权限。  
@@ -38,7 +38,7 @@ ms.locfileid: "36017492"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-2.  找到 <`Authentication`>。  
+2.  查找 <`Authentication`>。  
   
 3.  复制以下 XML 结构：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36017492"
     </Authentication>  
     ```  
   
-4.  将其粘贴上的现有条目 <`Authentication`>。  
+4.  将它粘贴到的现有条目 <`Authentication`>。  
   
      请注意，不能将 `Custom` 与其他身份验证类型一起使用。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36017492"
     <authentication mode = "Forms" />  
     ```  
   
-8.  查找`identity impersonate`和将其设置为`False`。  
+8.  查找`identity impersonate`并将其设置为`False`。  
   
     ```  
     <identity impersonate = "false" />  
@@ -79,7 +79,7 @@ ms.locfileid: "36017492"
     <authentication mode = "Forms" />  
     ```  
   
-11. 查找`identity impersonate`和将其设置为`False`。  
+11. 查找`identity impersonate`并将其设置为`False`。  
   
     ```  
     <identity impersonate = "false" />  

@@ -1,5 +1,5 @@
 ---
-title: 从挖掘模型钻取到事例数据 |Microsoft 文档
+title: 从挖掘模型钻取到事例数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86a8cc832572d7a1c2e296c72d9bcd9a0a4d1969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272163"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>从挖掘模型钻取到事例数据
   如果挖掘模型已配置为允许钻取到模型事例，在浏览此模型时，可以检索与用于创建此模型的事例的详细信息。 此外，如果基础挖掘结构已配置为允许钻取到结构事例，并且您具备相应的权限，则可返回挖掘结构的信息。 其中可以包括挖掘模型中未包含的列。  
@@ -35,7 +35,7 @@ ms.locfileid: "36015998"
   
 |查看器名称|窗格或选项卡名称|选择节点|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft 树查看器**|**“决策树”** 选项卡|单击树节点。<br /><br /> **请注意**避免使用钻取`All`节点，因为它可能要花费很长时间才能返回结果。|  
+|**Microsoft 树查看器**|**“决策树”** 选项卡|单击树节点。<br /><br /> **请注意**避免使用钻取`All`节点，因为它可能要花费很长的时间才能返回结果。|  
 |**Microsoft 分类查看器**|**分类关系图**|单击群集节点。|  
 |**Microsoft 分类查看器**|**分类剖面图**|单击分类列中的任意位置。|  
 |**Microsoft 关联查看器**|**“规则”** 选项卡|单击包含一组规则的行。|  

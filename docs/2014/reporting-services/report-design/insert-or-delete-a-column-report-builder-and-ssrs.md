@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b451497fce19920ed229e921cb96d90152688e92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 68e62139ecdb6c3a7fe3547add9a0332b5792372
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234757"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或删除列（报表生成器和 SSRS）
   可以在 Tablix 数据区域中添加或删除列。 Tablix 数据区域可以是一个表、矩阵或列表。 下面的过程不适用于图表和仪表数据区域。  
@@ -33,7 +33,7 @@ ms.locfileid: "36016300"
   
 -   在“设计”视图中，单击 Tablix 数据区域的左上角，以使数据区域的上方和旁边显示列控点和行控点。  
   
-     有关数据区域的详细信息，请参阅[列出&#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+     有关数据区域的详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ### <a name="to-insert-a-column-in-a-selected-data-region"></a>在所选数据区域中插入列  
   

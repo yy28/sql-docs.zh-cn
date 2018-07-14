@@ -1,5 +1,5 @@
 ---
-title: 针对电子邮件传递 （SSRS 配置管理器） 配置报表服务器 |Microsoft 文档
+title: 报表服务器配置为电子邮件传递 （SSRS 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], distributing
 - report servers [Reporting Services], e-mail delivery
@@ -25,13 +25,13 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a8954f5ea5c2e38991868734a6347596883bd7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e189890845bad34153ebef4231465c260b538848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179194"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>针对电子邮件传递配置报表服务器（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括电子邮件传递扩展插件，以便可以通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。  
@@ -57,7 +57,7 @@ ms.locfileid: "36017257"
   
  
   
-##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a> 将报表服务器配置为本地或远程 SMTP 服务  
+##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a> 报表服务器配置为本地或远程 SMTP 服务  
  可以使用本地 SMTP 服务或远程 SMTP 服务器或转发器来支持电子邮件传递。 如果具有现有远程 SMTP 服务器的访问权限，则应该考虑使用该服务器。 若没有可用的 SMTP 服务器或随后由于计算机连接失败而遇到报表传递错误，则应该进行切换以使用本地 SMTP 服务。 有关如何为本地或远程服务配置报表服务器的详细信息，将稍后在本主题中进一步说明。  
   
   
@@ -67,7 +67,7 @@ ms.locfileid: "36017257"
   
  若要针对电子邮件传递配置报表服务器，请执行下列操作：  
   
--   如果要仅指定一个 SMTP 服务器和一个具有发送电子邮件权限的用户帐户，则使用 Reporting Services 配置管理器。 以下是配置报表服务器电子邮件传递扩展插件所需的最低设置。 有关详细信息，请参阅[电子邮件设置-Configuration Manager &#40;SSRS 本机模式&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)和[Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
+-   如果要仅指定一个 SMTP 服务器和一个具有发送电子邮件权限的用户帐户，则使用 Reporting Services 配置管理器。 以下是配置报表服务器电子邮件传递扩展插件所需的最低设置。 有关详细信息，请参阅[电子邮件设置-配置管理器&#40;SSRS 本机模式&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)并[Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 -   （可选）使用文本编辑器在 RSreportserver.config 文件中指定其他设置。 此文件包含报表服务器电子邮件传递的所有配置设置。 如果要使用本地 SMTP 服务器或将电子邮件限定传递到特定主机，则需要在这些文件中指定其他设置。 有关查找和修改配置文件的详细信息，请参阅[修改 Reporting Services 配置文件&#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server 联机丛书中。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36017257"
   
 
   
-##  <a name="bkmk_example_config_file"></a> 报表服务器电子邮件配置示例  
+##  <a name="bkmk_example_config_file"></a> 示例报表服务器电子邮件配置  
  下面的示例说明了远程 SMTP 服务器的 RSreportserver.config 文件中的设置： 若要了解设置说明及有效值，请参阅[RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书或 CDO 产品文档。  
   
 ```  
@@ -120,7 +120,7 @@ ms.locfileid: "36017257"
   
 2.  设置`SendEmailToUserAlias`到`False`。  
   
-3.  设置`DefaultHostName`的域名系统 (DNS) 名称或 IP 地址的 SMTP 服务器或转发器。  
+3.  设置`DefaultHostName`到域名系统 (DNS) 名称或 IP 地址的 SMTP 服务器或转发器。  
   
 4.  保存该文件。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36017257"
 ##  <a name="bkmk_options_remote_SMTP"></a> 远程 SMTP 服务的配置选项  
  报表服务器与 SMTP 服务器或转发器之间的连接是由下列配置设置决定的：  
   
--   `SendUsing` 指定用于发送消息的方法。 您可以选择网络 SMTP 服务或本地 SMTP 服务拾取目录。 若要使用远程 SMTP 服务，必须在 RSReportServer.config 文件中将此值设置为 **2** 。  
+-   `SendUsing` 指定发送消息的方法。 您可以选择网络 SMTP 服务或本地 SMTP 服务拾取目录。 若要使用远程 SMTP 服务，必须在 RSReportServer.config 文件中将此值设置为 **2** 。  
   
 -   `SMTPServer` 指定远程 SMTP 服务器或转发器。 如果使用远程 SMTP 服务器或转发器，则必须指定此值。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36017257"
 
   
 ##  <a name="bkmk_options_local_SMTP"></a> 本地 SMTP 服务的配置选项  
- 若要测试报表服务器电子邮件传递或解决所遇到的疑难问题，则配置本地 SMTP 服务会很有用。 默认情况下，不启用本地 SMTP 服务。 有关如何启用它的说明，请参阅[针对电子邮件传递 （SSRS 配置管理器） 配置报表服务器](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)和[电子邮件设置-Configuration Manager &#40;SSRS 本机模式&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
+ 若要测试报表服务器电子邮件传递或解决所遇到的疑难问题，则配置本地 SMTP 服务会很有用。 默认情况下，不启用本地 SMTP 服务。 有关如何启用它的说明，请参阅[报表服务器配置为电子邮件传递 （SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)并[电子邮件设置-配置管理器&#40;SSRS 本机模式&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  报表服务器与本地 SMTP 服务器或转发器之间的连接是由下列配置设置决定的：  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36017257"
   
 8.  保存该文件。  
   
-     报表服务器将自动使用新的设置；不需要重新启动该服务。 您可以指定其他 SMTP 设置，以进一步配置如何将 SMTP 服务器用于报表服务器电子邮件传递。 有关详细信息，请参阅[为电子邮件传递配置报表服务器](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)和[RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+     报表服务器将自动使用新的设置；不需要重新启动该服务。 您可以指定其他 SMTP 设置，以进一步配置如何将 SMTP 服务器用于报表服务器电子邮件传递。 有关详细信息，请参阅[报表服务器配置为电子邮件传递](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)并[RSReportServer 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 
   

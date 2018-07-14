@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonType
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 30c6961f915789c358ba8d38ad0d18e164e072cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 001eee372f6c35a6938f3e5c99b9e82524285d25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166128"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonType 属性 (WMI MSReportServer_ConfigurationSetting)
   指定报表服务器是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服务帐户、Windows 用户帐户还是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名访问报表服务器数据库。 只读。  
@@ -57,9 +57,9 @@ public int DatabaseLogonType;
   
 -   2 表示以服务身份登录  
   
- 如果指定 0 (Windows)，你必须设置的值[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)到对应的有效的 Windows 用户帐户的属性。  
+ 如果指定 0 (Windows)，则必须设置值[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)到对应的有效 Windows 用户帐户的属性。  
   
- 如果指定 1 (SQL Server)，请确保值[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)对应于有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。  
+ 如果指定 1 (SQL Server)，请确保的值[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)对应于有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。  
   
  如果指定 2（Windows 服务），则报表服务器使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户和 Windows 服务帐户来访问报表服务器数据库。 DatabaseLogonAccount 属性被忽略。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, backward compatibility
 - backward compatibility [SQL Server replication]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4d9ff68b927b410fd4cdc42d05e5507b59b73cbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa422646c6d5badb04e05aa11f073263819b3485
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186146"
 ---
 # <a name="replication-backward-compatibility"></a>复制的向后兼容性
   向后兼容性部分中的主题说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制各版本之间的行为更改。 如果要升级或者在复制拓扑中有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个版本，则了解向后兼容性是十分重要的。  

@@ -1,5 +1,5 @@
 ---
-title: 配置 OLE DB 命令转换 |Microsoft 文档
+title: 配置 OLE DB 命令转换 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43024686011ed5c1dea232e397df988b97a35a78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a29642a667d4d22ecf5c7f6d3de0848b4725df91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254479"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换
   若要添加和配置 OLE DB 命令转换，包必须已包含至少一个数据流任务和一个源（如平面文件源或 OLE DB 源）。 这种转换通常用于运行参数化查询。  

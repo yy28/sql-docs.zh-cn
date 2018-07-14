@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_SCHEMA_ROWSETS 行集 |Microsoft 文档
+title: DISCOVER_SCHEMA_ROWSETS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_SCHEMA_ROWSETS rowset
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8071da248e9c7d69a76a22f7c339fad0a217295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa16f7ff677efd8e39367b9e618bdc95d778b405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220237"
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS 行集
   返回 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口支持的所有枚举值以及任何其他特定于访问接口的枚举值的名称、限制、说明以及其他信息。  
   
- 如果调用[发现](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_SCHEMA_ROWSETS`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法返回`DISCOVER_SCHEMA_ROWSETS`行集。  
+ 如果您调用[Discover](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_SCHEMA_ROWSETS`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法将返回`DISCOVER_SCHEMA_ROWSETS`行集。  
   
 ## <a name="rowset-columns"></a>行集列  
  DISCOVER_SCHEMA_ROWSETS 行集包含以下列。  
@@ -57,7 +57,7 @@ ms.locfileid: "36015977"
 ```  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_SCHEMA_ROWSETS`行集可限制在下表中列出的列。  
+ `DISCOVER_SCHEMA_ROWSETS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

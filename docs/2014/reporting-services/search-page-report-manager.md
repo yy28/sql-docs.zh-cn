@@ -1,5 +1,5 @@
 ---
-title: 搜索页 （报表管理器） |Microsoft 文档
+title: 搜索页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4bc093b32a6fe3b5311bba109a7f4e672dc1fc9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192987"
 ---
 # <a name="search-page-report-manager"></a>“搜索”页（报表管理器）
   使用“搜索结果”页可以查看为报表、链接报表、报表模型、共享数据源、文件夹或资源指定的搜索操作的结果。 搜索结果按字母顺序列出。 您可以按照类型、名称或说明进行排序。  

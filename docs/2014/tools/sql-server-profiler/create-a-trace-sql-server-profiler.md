@@ -1,5 +1,5 @@
 ---
-title: 创建跟踪 （SQL Server 事件探查器） |Microsoft 文档
+title: 创建跟踪 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f8aa0ba1d8445a2da5e7ffeb8836848875e8db5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4cdec05ce4abc1a6bfd3585bdd4215ce15be7b39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241799"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>创建跟踪 (SQL Server Profiler)
   本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建跟踪。  
@@ -59,7 +59,7 @@ ms.locfileid: "36014447"
 7.  单击 **“运行”** 以启动跟踪。  
   
 ## <a name="see-also"></a>请参阅  
- [运行 SQL Server 事件探查器所需的权限](permissions-required-to-run-sql-server-profiler.md)   
+ [运行 SQL Server Profiler 所需的权限](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 事件探查器](sql-server-profiler.md)   
  [将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  

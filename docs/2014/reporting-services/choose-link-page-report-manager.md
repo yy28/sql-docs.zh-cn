@@ -1,5 +1,5 @@
 ---
-title: 选择链接页 （报表管理器） |Microsoft 文档
+title: 选择链接页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ec09219d146affcceda8194c8e7a60d8e128ef12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242277"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
   使用“选择链接”页可为当前所选链接报表选择要基于的不同报表。 链接报表基于已发布到报表服务器的其他报表。 链接报表使用基础报表的布局和数据，但是其属性页与基础报表不同，以便您可以自定义参数属性、安全设置、名称、说明和位置。  

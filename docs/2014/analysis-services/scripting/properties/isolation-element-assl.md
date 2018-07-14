@@ -1,5 +1,5 @@
 ---
-title: Isolation 元素 (ASSL) |Microsoft 文档
+title: Isolation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Isolation element
 ms.assetid: 28c98c6f-668e-4547-8d25-127cc3995a7d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcbf79ccd1281c9f3dbaa109b3c77214ced22bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a21593d360342dc703e1da45d50b4ddff74241a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257223"
 ---
 # <a name="isolation-element-assl"></a>Isolation 元素 (ASSL)
-  该值指示元素派生自的隔离级别[数据源](../data-type/datasource-data-type-assl.md)数据类型。  
+  指示派生自的元素的隔离级别[数据源](../data-type/datasource-data-type-assl.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   

@@ -1,5 +1,5 @@
 ---
-title: 文件元素 (ASSL) |Microsoft 文档
+title: 文件元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Files element
 ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f7556009881e1d4155e47a368bcff4b49aa7988
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d4ed9199f5b715c00e70da39e1742a2638cf67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196037"
 ---
 # <a name="files-element-assl"></a>Files 元素 (ASSL)
   包含的集合[文件](../objects/file-element-assl.md)构成元素[ClrAssembly](../data-type/assembly-data-type-assl.md)元素。  
@@ -64,16 +64,16 @@ ms.locfileid: "36018300"
 |子元素|[文件](../objects/file-element-assl.md)类型的[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ClrAssemblyFileCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ClrAssemblyFileCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [服务器元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [数据库元素&#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Assemblies 元素&#40;ASSL&#41;](assemblies-element-assl.md)   
+ [程序集元素&#40;ASSL&#41;](assemblies-element-assl.md)   
  [数据元素&#40;ASSL&#41;](../objects/data-element-assl.md)   
  [DataBlock 数据类型&#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
  [阻止元素&#40;ASSL&#41;](blocks-element-assl.md)   
- [阻止元素&#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [Block 元素&#40;ASSL&#41;](../objects/block-element-assl.md)   
  [ComAssembly 数据类型&#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
  [集合&#40;ASSL&#41;](collections-assl.md)  
   

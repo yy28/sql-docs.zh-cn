@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216727"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>如何向报表设计器部署数据处理扩展插件
   报表设计器在您设计报表时使用数据处理扩展插件检索和处理数据。 您应将数据处理扩展插件程序集作为专用程序集部署到报表设计器。 还需要在报表设计器配置文件 RSReportDesigner.config 中生成一个条目。  
@@ -44,13 +44,13 @@ ms.locfileid: "36016760"
     </Extensions>  
     ```  
   
-4.  为你的数据处理扩展插件，其中包括添加一个条目**扩展**元素替换为值`Name`， `Type`，和`Visible`属性。 您的条目可能如下所示：  
+4.  为将数据处理扩展插件，其中包括添加一个条目**扩展**元素替换为值`Name`， `Type`，和`Visible`属性。 您的条目可能如下所示：  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     `Name` 的值为数据处理扩展插件的唯一名称。 `Type` 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要隐藏用户界面，如报表设计器中，从扩展插件将添加`Visible`属性设为**扩展**元素，并将其设置为`false`。  
+     `Name` 的值为数据处理扩展插件的唯一名称。 `Type` 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要隐藏扩展插件从用户界面，如报表设计器中，添加`Visible`归于**扩展**元素，并将其设置为`false`。  
   
 5.  最后，为自定义程序集添加一个代码组，以便为扩展插件授予 FullTrust 权限。 要完成该操作，将该代码组添加到 rspreviewpolicy.config 文件中即可，该文件在默认情况下位于 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中。 代码组可能如下所示：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36016760"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>为自定义扩展插件启用通用查询设计器  
   
--   将以下条目添加到 RSReportDesigner.config 文件在下**设计器**元素，替换`Name`具有你在以前的条目中提供的名称属性。  
+-   将以下条目添加到下的 RSReportDesigner.config 文件**设计器**元素中，替换`Name`属性与在之前条目中提供的名称。  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

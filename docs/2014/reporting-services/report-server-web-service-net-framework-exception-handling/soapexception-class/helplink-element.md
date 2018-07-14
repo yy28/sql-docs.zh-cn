@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aec03e032cdd0af46666ca76f49bb2034c5312d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ff6f2e619f0e4b7c447ee53b31e1a52c3ed9e9b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224807"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
   Detail 属性的 HelpLink 元素是报表服务器生成的 URL 字符串。 此 URL 指向由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 帮助和支持管理的一个网页，并针对在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中出现的特定错误提供附加帮助和知识库文章。 此 URL 具有以下语法：  
@@ -39,7 +39,7 @@ ms.locfileid: "36017266"
 |ProdName|“Microsoft SQL%20Server%20Reporting%20Services”。 产品名称的值已进行 URL 编码。|  
 |ProdVer|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的版本号。 值为“8.00”指示 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。|  
   
- 下面的示例演示**HelpLink**返回错误代码的 URL `rsReservedItem`。 当用户尝试修改或删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留项时，将出现此错误。  
+ 下面的示例阐释**HelpLink**返回的错误代码的 URL `rsReservedItem`。 当用户尝试修改或删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留项时，将出现此错误。  
   
 ```  
 http://www.microsoft.com/products/ee/transform.aspx?  

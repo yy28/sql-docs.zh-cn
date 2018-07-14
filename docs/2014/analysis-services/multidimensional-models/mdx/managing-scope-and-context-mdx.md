@@ -1,5 +1,5 @@
 ---
-title: 管理作用域和上下文 (MDX) |Microsoft 文档
+title: 管理作用域和上下文 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [MDX], context
 - scope [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - scripts [MDX], scope
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a712947ef820a573eed7839bb20329ee15180f23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28d50024f2419ab3ee135aede45abc7243ec5084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288033"
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理作用域和上下文 (MDX)
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多维表达式 (MDX) 脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
@@ -34,7 +34,7 @@ ms.locfileid: "36015805"
 > [!NOTE]  
 >  有关计算传递如何影响计算的详细信息，请参阅[理解传递次序和求解次序 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)。  
   
- 若要控制计算传递、 范围和 MDX 脚本中的上下文，你明确使用 CACULATE 语句、`This`函数和 SCOPE 语句。  
+ 若要控制计算传递、 作用域和 MDX 脚本中的上下文，可以明确使用 CACULATE 语句、`This`函数以及 SCOPE 语句。  
   
 ## <a name="using-the-calculate-statement"></a>使用 CALCULATE 语句  
  CALCULATE 语句用聚合数据填充多维数据集中的每个单元。 例如，默认 MDX 脚本在脚本的开始处有一个 CALCULATE 语句。  
@@ -45,13 +45,13 @@ ms.locfileid: "36015805"
 >  如果脚本包含含有 CALCULATE 语句的 SCOPE 语句，MDX 将在由 SCOPE 语句定义的子多维数据集的上下文内计算 CALCULATE 语句，而不是针对整个多维数据集进行计算。  
   
 ## <a name="using-the-this-function"></a>使用 This 函数  
- `This` 函数使您可以在 MDX 脚本内检索当前的子多维数据集。 你可以使用`This`函数快速将当前子多维数据集内的单元格的值设置为一个 MDX 表达式。 通常使用`This`结合要更改特定计算传递过程中的特定子多维数据集的内容的 SCOPE 语句的函数。  
+ `This` 函数使您可以在 MDX 脚本内检索当前的子多维数据集。 可以使用`This`函数快速将当前子多维数据集内的单元值设置为 MDX 表达式。 通常使用`This`函数结合使用 SCOPE 语句以在特定计算传递过程中更改的特定子多维数据集内容。  
   
 > [!NOTE]  
->  如果脚本包含包含的作用域语句`This`函数，MDX 计算结果`This`在由 SCOPE 语句，不是针对整个多维数据集定义的子多维数据集的上下文中的函数。  
+>  如果脚本包含包含的作用域语句`This`函数，MDX 将在计算`This`由 SCOPE 语句，不是针对整个多维数据集定义子多维数据集的上下文中的函数。  
   
 ### <a name="this-function-example"></a>This 函数的示例  
- 下面的 MDX 脚本命令示例使用`This`函数的财务度量值组中的 Amount 度量值增加到[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例多维数据集，更高版本的客户维度中 Redmond 成员的子级的 10%到：  
+ 下面的 MDX 脚本命令示例使用`This`函数中的 Finance 度量值组的 Amount 度量值的值增加[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例多维数据集，在客户维度中 Redmond 成员的子级的 10%:  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -62,7 +62,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- 有关详细信息的语法`This`函数中，请参阅[这&#40;MDX&#41;](/sql/mdx/this-mdx)。  
+ 有关详细信息的语法`This`函数中，请参阅[此&#40;MDX&#41;](/sql/mdx/this-mdx)。  
   
 ## <a name="using-the-scope-statement"></a>使用 SCOPE 语句  
  SCOPE 语句定义包含 MDX 脚本内其他 MDX 表达式和语句并指定这些表达式和语句的作用域的当前子多维数据集。 MDX 在该子多维数据集的上下文内计算其他 MDX 表达式和语句，包括 `This` 函数和 CALCULATE 语句。  

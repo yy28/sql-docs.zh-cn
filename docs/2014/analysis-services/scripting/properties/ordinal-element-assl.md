@@ -1,5 +1,5 @@
 ---
-title: 序号元素 (ASSL) |Microsoft 文档
+title: Ordinal 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c9328a33db828af8bb7b0b129574d8ba855433e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195937"
 ---
 # <a name="ordinal-element-assl"></a>Ordinal 元素 (ASSL)
   指示要绑定到集合（如键和翻译）中的序号。  
@@ -62,9 +62,9 @@ ms.locfileid: "36016203"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `AttributeBinding` 和`CubeAttributeBinding`元素在其中[类型](type-element-binding-assl.md)属性设置为*密钥*或*转换*可以绑定到反过来绑定到的集合属性列在数据源视图。 `Ordinal` 元素的值确定该集合中 `AttributeBinding` 或 `CubeAttributeBinding` 所指向的列。  
+ `AttributeBinding` 并`CubeAttributeBinding`中的元素[类型](type-element-binding-assl.md)属性设置为*密钥*或*翻译*可以绑定到某个属性，又绑定到的集合列中数据源视图。 `Ordinal` 元素的值确定该集合中 `AttributeBinding` 或 `CubeAttributeBinding` 所指向的列。  
   
- 对应的父级的元素`Ordinal`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
+ 父级对应的元素`Ordinal`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

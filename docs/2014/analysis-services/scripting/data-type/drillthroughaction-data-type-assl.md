@@ -1,5 +1,5 @@
 ---
-title: DrillThroughAction 数据类型 (ASSL) |Microsoft 文档
+title: DrillThroughAction 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DrillThroughAction data type
 ms.assetid: e212d575-a0d7-4548-92b4-33542ef59034
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dfdaf05f2e35c41d99ca61f3cac3624ba28cc82d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8142fd9978ae456b03b4a0381e2ab9261cdc8c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241437"
 ---
 # <a name="drillthroughaction-data-type-assl"></a>DrillThroughAction 数据类型 (ASSL)
   定义表示钻取操作的派生数据类型。  
@@ -59,10 +59,10 @@ ms.locfileid: "36016255"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[列](../collections/columns-element-assl.md)，[默认](../properties/default-element-assl.md)|  
-|派生元素|[操作](../objects/action-element-assl.md)([操作](../collections/actions-element-assl.md)，集合[多维数据集](../objects/cube-element-assl.md)，或[透视](../objects/perspective-element-assl.md))|  
+|派生元素|[操作](../objects/action-element-assl.md)([操作](../collections/actions-element-assl.md)，系列[多维数据集](../objects/cube-element-assl.md)，或[角度来看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DrillThroughAction>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DrillThroughAction>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

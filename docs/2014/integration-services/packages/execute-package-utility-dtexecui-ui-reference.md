@@ -1,5 +1,5 @@
 ---
-title: 执行包实用工具 (DtExecUI) UI 参考 |Microsoft 文档
+title: 执行包实用工具 (DtExecUI) UI 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
 - sql12.dts.dtexecui.executionoptions.f1
@@ -26,16 +26,16 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6213873f823c8b4cb89a7db03c612971845b75a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256843"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>执行包实用工具 (DtExecUI) UI 参考
-  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面，可从中打开该界面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或通过键入`dtexecui`在命令提示符下，是通过使用正在运行的包的替代**DTExec**命令提示工具。  
+  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 可以从打开此用户界面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或通过键入`dtexecui`在命令提示符，是通过使用在运行包的替代方法**DTExec**命令提示工具。  
   
  包与 **dtexecui.exe** 实用工具在同一个进程中执行。 由于此实用工具为 32 位工具，因此，在 64 位环境中使用 **dtexecui.exe** 运行的包是在 Windows on Win32 (WOW) 中运行的。 当在 64 位计算机上使用 dtexecui.exe 实用工具开发和测试命令时，应该首先在 64 位模式下使用 64 位版本的 **dtexec.exe** 测试该命令，然后在生产服务器中部署或安排这些命令。  
   

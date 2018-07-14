@@ -1,5 +1,5 @@
 ---
-title: NumberOfFlags 属性 （SInstance 类） |Microsoft 文档
+title: NumberOfFlags 属性 （SInstance 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e60c65a8acfbcbf3d3961815b5096d8b7e6df2c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 543d708cc90c9b7911ad3603e53446f172bccc64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262394"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 属性（SInstance 类）
-  获取的实例数标志[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  获取实例的标志数[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- [SInstance 类](sinstance-class.md)表示的服务器实例的对象。  
+ [SInstance 类](sinstance-class.md)对象，表示服务器实例。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的标志数的 `uint32` 值。  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 线性回归算法技术参考 |Microsoft 文档
+title: Microsoft 线性回归算法技术参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9655abda58057343b67ef16dd62fcb7a0faa048
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181064"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 线性回归算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 Microsoft 决策树算法的特殊版本，该线性回归算法针对连续属性的建模对进行了优化。 本主题说明该算法的实现，介绍如何自定义该算法的行为，并提供指向有关模型查询的其他信息的链接。  
@@ -68,7 +68,7 @@ ms.locfileid: "36018312"
 ### <a name="regressors-in-linear-regression-models"></a>线性回归模型中的回归量  
  线性回归模型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 但是，即使不使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法，任何决策树模型也都可以包含表示连续属性的回归的树或节点。  
   
- 您无需指定连续列表示回归量。 即使不对列设置 REGRESSOR 标志， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法也会将数据集分区成具有有意义模式的区域。 区别是设置建模标志时，算法将尝试查找窗体的回归等式 * C1 + b\*C2 +...以适合的树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
+ 您无需指定连续列表示回归量。 即使不对列设置 REGRESSOR 标志， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法也会将数据集分区成具有有意义模式的区域。 不同之处是： 如果设置建模标志，该算法将尝试查找窗体的回归等式 * C1 + b\*C2 +...以适合树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
   
  例如，如果是将 **Income** 用作属性来预测客户购买行为，并对该列设置了 REGRESSOR 建模标志，则该算法将使用标准回归公式先尝试适合 **Income** 值。 如果偏差过大，则放弃使用回归公式，并根据其他一些属性对树进行拆分。 拆分后，决策树算法将尝试在每个分支中拟合收入的回归量。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36018312"
 |可预测属性|Continuous、Cyclical 和 Ordered|  
   
 > [!NOTE]  
->  `Cyclical` 和`Ordered`支持内容类型，但该算法会将它们视为离散值，不会执行特殊处理。  
+>  `Cyclical` 和`Ordered`支持内容类型，但算法会将它们视为离散值，不执行特别处理。  
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)   

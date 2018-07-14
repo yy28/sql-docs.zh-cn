@@ -1,5 +1,5 @@
 ---
-title: 应用程序元素 (ASSL) |Microsoft 文档
+title: 应用程序元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 363f72b39a48e1606861168461abc3e19cb8b5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279493"
 ---
 # <a name="application-element-assl"></a>Application 元素 (ASSL)
-  标识与关联的应用程序[操作](../objects/action-element-assl.md)元素。  
+  标识关联的应用程序[操作](../objects/action-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36014913"
 ## <a name="remarks"></a>Remarks  
  客户端应用程序可以使用 `Application` 元素确定哪些操作适用于给定的应用程序。 客户端应用程序负责计算此元素的值。  
   
- 对应于的父元素`Application`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
+ 父级对应的元素`Application`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>请参阅  
- [操作元素&#40;ASSL&#41;](../collections/actions-element-assl.md)   
+ [Actions 元素&#40;ASSL&#41;](../collections/actions-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

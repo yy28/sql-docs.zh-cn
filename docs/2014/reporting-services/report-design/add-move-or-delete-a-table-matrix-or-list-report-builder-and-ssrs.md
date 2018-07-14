@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 737083dfc08633789edc7bac78fb2d7301a9c74e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8b6154cae9ce3fcc2878797bce63ccf1e1f59edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284583"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）
   数据区域可显示来自报表数据集的数据。 数据区域包括表、矩阵、列表、图表和仪表。 若要将一个数据区域嵌套到另一个数据区域中，请分别添加每个数据区域，然后将子数据区域拖到父数据区域中。  
@@ -36,7 +36,7 @@ ms.locfileid: "36014032"
   
 1.  在 **“插入”** 选项卡上，单击 **“表”** 或 **“矩阵”**，然后单击 **“表向导”** 或 **“矩阵向导”**。  
   
-2.  按照中的步骤**新表**或**新矩阵**向导。  
+2.  按照中的步骤**NewTable**或**新矩阵**向导。  
   
 3.  在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   

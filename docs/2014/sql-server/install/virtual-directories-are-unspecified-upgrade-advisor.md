@@ -1,5 +1,5 @@
 ---
-title: 虚拟目录是未指定 （升级顾问） |Microsoft 文档
+title: 未指定虚拟目录 （升级顾问） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 56e42c309a59d103ffb4d8193e6563cf298b55bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eba1359cc34a7b8e5fec19a71282d6b862b93102
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265766"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>未指定虚拟目录（升级顾问）
   升级顾问检测不到报表服务器 Web 服务或报表管理器的虚拟目录设置。 升级完成后，你必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器为报表服务器配置 URL 预留。  

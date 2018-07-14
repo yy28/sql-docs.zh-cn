@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 146e3dfe8853967678710149b6bc669cc794fd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: eeab692abbcbd9ec3434c776ad812d833d3d040b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234457"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>从正在运行的跟踪中派生模板 (SQL Server Profiler)
   本主题将介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]从正在运行的现有跟踪创建跟踪模板。  
@@ -40,7 +40,7 @@ ms.locfileid: "36014924"
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Profiler 模板和权限](sql-server-profiler-templates-and-permissions.md)   
- [创建跟踪模板&#40;SQL Server 事件探查器&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [创建跟踪模板&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [修改跟踪模板 (SQL Server Profiler)](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [SQL Server 事件探查器](sql-server-profiler.md)  
   

@@ -24,13 +24,13 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a8179cd44f9cb9bb2c97971ca2c347eb76b3f82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a9e2fac6ad07c177dc3f3247207dc3d6224d9d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193517"
 ---
 # <a name="using-variables-in-the-script-task"></a>在脚本任务中使用变量
   通过变量，脚本任务可以与包中的其他对象交换数据。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services-ssis-variables.md)。  
@@ -51,10 +51,10 @@ ms.locfileid: "36017382"
   
  Foreach 循环容器与脚本任务之间的这种通信可以通过变量实现。 在“Foreach 循环编辑器”的“变量映射”页中，可以向单个枚举项返回的每个数据项分配变量。 例如，Foreach 文件枚举器仅返回索引 0 处的一个文件名，因此只需要一个变量映射，而在每行中返回多个数据列的枚举器需要将不同的变量映射到要在脚本任务中使用的每一列。  
   
- 枚举的项映射到变量后，然后必须添加到映射的变量`ReadOnlyVariables`属性**脚本**页**脚本任务编辑器**要提供给你脚本。 有关在 Foreach 循环容器中处理文件夹中的图像文件的脚本任务示例，请参阅[使用脚本任务处理图像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
+ 已向变量映射完枚举的项后，则必须添加到映射的变量`ReadOnlyVariables`上的属性**脚本**页**脚本任务编辑器**以使其可供你脚本。 有关在 Foreach 循环容器中处理文件夹中的图像文件的脚本任务示例，请参阅[使用脚本任务处理图像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
   
 ## <a name="variables-example"></a>变量示例  
- 下面的示例演示如何在脚本任务中访问并使用变量，以确定包工作流的路径。 该示例假定你已创建了名为的整数变量`CustomerCount`和`MaxRecordCount`和路由添加到`ReadOnlyVariables`中的集合**脚本任务编辑器**。 `CustomerCount` 变量包含要导入的客户记录的数目。 如果其值大于 `MaxRecordCount` 的值，则脚本任务将报告失败。 如果因超过 `MaxRecordCount` 阈值而导致失败，则工作流的错误路径可实现任何所需的清除操作。  
+ 下面的示例演示如何在脚本任务中访问并使用变量，以确定包工作流的路径。 该示例假定你已创建名为的整型变量`CustomerCount`并`MaxRecordCount`并它们添加到`ReadOnlyVariables`中的集合**脚本任务编辑器**。 `CustomerCount` 变量包含要导入的客户记录的数目。 如果其值大于 `MaxRecordCount` 的值，则脚本任务将报告失败。 如果因超过 `MaxRecordCount` 阈值而导致失败，则工作流的错误路径可实现任何所需的清除操作。  
   
  若要成功编译该示例，需要添加对 Microsoft.SqlServer.ScriptTask 程序集的引用。  
   
@@ -119,7 +119,7 @@ public class ScriptMain
   
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services &#40;SSIS&#41;变量](../../integration-services-ssis-variables.md)   

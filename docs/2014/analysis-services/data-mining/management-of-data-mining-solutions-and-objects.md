@@ -1,5 +1,5 @@
 ---
-title: 管理数据挖掘解决方案和对象 |Microsoft 文档
+title: 管理数据挖掘解决方案和对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218297"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
@@ -34,18 +34,19 @@ ms.locfileid: "36016984"
   
  [处理要求和注意事项&#40;数据挖掘&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [使用 SQL Server 事件探查器监视数据挖掘&#40;Analysis Services-数据挖掘&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [使用 SQL Server Profiler 监视数据挖掘&#40;Analysis Services-数据挖掘&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>数据挖掘对象的位置  
  已处理的挖掘结构和挖掘模型通常存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例中。  
   
- 如果你创建的连接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库中`Immediate`模式时开发自己的数据挖掘对象时，工作时，你创建的任何对象会立即添加到服务器。 但是，如果在 **“脱机”** 模式下设计数据挖掘对象，这也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中工作时的默认设置，则您创建的挖掘对象在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之前只是一些元数据容器。 因此，无论任何时候，只要对对象进行了更改，则就必须将对象重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 有关数据挖掘体系结构的详细信息，请参阅[物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)。  
+ 如果您创建的连接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库中`Immediate`模式时开发自己的数据挖掘对象时，工作时，您创建任何对象都会立即添加到服务器。 但是，如果在 **“脱机”** 模式下设计数据挖掘对象，这也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中工作时的默认设置，则您创建的挖掘对象在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之前只是一些元数据容器。 因此，无论任何时候，只要对对象进行了更改，则就必须将对象重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 有关数据挖掘体系结构的详细信息，请参阅[物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  诸如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 数据挖掘外接程序之类的客户端还可用于创建会话挖掘模型和挖掘结构，它们使用到实例的连接，但只在会话期间在服务器中存储挖掘结构和挖掘模型。 您仍然可以通过客户端管理这些模型，就如同管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中存储的结构和模型一样，但断开与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的连接后，不会持久化这些对象。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中管理数据挖掘对象  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供便于创建、浏览和编辑数据挖掘对象的功能。  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供便于创建、浏览和编辑数据挖掘对象的功能。  
   
  以下链接提供有关如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]修改数据挖掘对象的信息：  
   
@@ -66,7 +67,7 @@ ms.locfileid: "36016984"
 > [!WARNING]  
 >  所有对挖掘结构或挖掘模型的更改，包括对元数据（如名称或说明）的更改，都要求重新处理结构或模型。  
   
- 如果你没有用于创建数据挖掘项目或对象的解决方案文件，你可以使用 Analysis Services 导入向导从服务器导入现有的项目，对对象，进行修改，然后重新部署使用`Incremental`选项。 有关详细信息，请参阅 [使用 Analysis Services 导入向导导入数据挖掘项目](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
+ 如果没有用于创建数据挖掘项目或对象的解决方案文件，可以使用 Analysis Services 导入向导从服务器导入现有项目、 对对象进行修改，然后重新部署使用`Incremental`选项。 有关详细信息，请参阅 [使用 Analysis Services 导入向导导入数据挖掘项目](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中管理数据挖掘对象  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，可以编写挖掘结构和挖掘模型的脚本、处理或删除挖掘结构和挖掘模型。 使用对象资源管理器仅可以查看有限的一组属性；但是，您可以通过打开 **“DMX 查询”** 窗口并选择挖掘结构，以查看有关挖掘模型的其他元数据。  

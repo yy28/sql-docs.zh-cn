@@ -1,5 +1,5 @@
 ---
-title: 常规属性页中，报表部件 （报表管理器） |Microsoft 文档
+title: 常规属性页上，报表部件 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238503"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>报表部件的“常规”属性页（报表管理器）
   使用该属性页可以查看和管理报表部件的常规属性。  
@@ -72,7 +72,7 @@ ms.locfileid: "36015860"
  从报表服务器数据库中删除报表部件。 从服务器删除报表部件时，将不阻止已具有该报表部件的现有报表的呈现。  
   
  **“移动”**  
- 单击以打开“移动项”页，在报表服务器文件夹层次结构中移动报表部件。 有关详细信息，请参阅[移动项页面&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ 单击以打开“移动项”页，在报表服务器文件夹层次结构中移动报表部件。 有关详细信息，请参阅[移动项页&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
  **下载**  
  提取要以 .rsc 文件形式保存的报表部件定义的副本。 .rsc 文件可以上载到报表服务器文件夹，或用于替换报表服务器文件夹中现有的报表部件。  
@@ -84,7 +84,7 @@ ms.locfileid: "36015860"
  [管理报表部件](report-design/managing-report-parts.md)   
  [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [报表部件&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [报表部件的&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [报表生成器中的报表部件和数据集](report-data/report-parts-and-datasets-in-report-builder.md)  
   

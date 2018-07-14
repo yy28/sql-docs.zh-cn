@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: dd4ae8ef0eb99859885dfbd33af284c843c282d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: Minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f59e24f7028dd54b39ea7b27ab98ad85c149cadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245247"
 ---
 # <a name="upgrade-analysis-services"></a>升级 Analysis Services
-  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关升级的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 SharePoint 模式下，请参阅[升级 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)。 有关升级现有的 SQL Server 实例，请参阅[使用升级到 SQL Server 2014 安装向导&#40;安装&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关升级的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 SharePoint 模式下，请参阅[升级 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)。 有关升级现有的 SQL Server 实例，请参阅[升级到使用 SQL Server 2014 安装向导&#40;安装程序&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
 ## <a name="known-upgrade-issues"></a>已知升级问题  
  升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之前，请先查看以下内容：  
   
 -   [SQL Server 2014 发行说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
   
--   若要了解其[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]特性和功能已停止使用，已弃用，或更改请参阅[Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)。  
+-   若要了解哪些[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]特性和功能已停止使用，不推荐使用，或更改请参阅[Analysis Services 向后兼容性](../../analysis-services/analysis-services-backward-compatibility.md)。  
   
 ## <a name="pre-upgrade-checklist"></a>升级准备一览表  
  升级之前，请先查看以下信息：  
@@ -59,9 +59,9 @@ ms.locfileid: "36016425"
 ## <a name="upgrading-analysis-services"></a>升级 Analysis Services  
  您可以选择几种方法之一来升级服务器和数据：  
   
--   **的就地升级**替换现有的程序文件都具有[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]程序文件。 数据库保持在相同的位置中。 程序文件夹将更新以反映新名称。  
+-   **就地升级**替换现有的程序文件与[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]程序文件。 数据库保持在相同的位置中。 程序文件夹将更新以反映新名称。  
   
--   A **-并排升级**是新安装的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]都有一个现有的 Analysis Services 实例在同一计算机上。 可以将数据库移动到同一台计算机的新实例上，然后卸载旧版本（如果您不再继续使用这个旧版本）。  
+-   一个 **-并行升级**是新安装的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]具有现有 Analysis Services 实例在同一计算机上。 可以将数据库移动到同一台计算机的新实例上，然后卸载旧版本（如果您不再继续使用这个旧版本）。  
   
 -   可以也在新的硬件上安装 Analysis Services，然后将现有数据库迁移到该服务器。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36016425"
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   
  [了解 Microsoft OLAP 体系结构](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)   
  [升级 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)   

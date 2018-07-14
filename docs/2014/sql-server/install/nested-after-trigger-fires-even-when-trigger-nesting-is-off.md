@@ -1,5 +1,5 @@
 ---
-title: 嵌套的 AFTER 触发器将激发即使触发器嵌套处于 OFF |Microsoft 文档
+title: 即使触发器嵌套时 OFF 就会激发嵌套 AFTER 触发器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DML triggers, nested
 - nested triggers option
 - triggers [SQL Server], nested
 ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f53e478c212793c6798f0fcabbf00cb1486134d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 683ffcfa3bb4715b25fb912fa12808be3b0873ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247827"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>即使触发器嵌套功能设置为 OFF，也会触发嵌套的 AFTER 触发器
   升级顾问检测到一个嵌套在一个或多个表中定义的 INSTEAD OF 触发器中的 AFTER 触发器。 即使在 `nested triggers` 服务器配置选项设置为 0 时，也可能会激发嵌套 AFTER 触发器。  

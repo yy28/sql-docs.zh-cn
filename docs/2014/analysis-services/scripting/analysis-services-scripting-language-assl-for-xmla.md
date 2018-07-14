@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 脚本语言 (ASSL) 参考 |Microsoft 文档
+title: Analysis Services 脚本语言 (ASSL) 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99ae3057baf60cda23fdce68289d07c213e89d3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd9fbcce8769deb49168e734542fe5296c5672f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234237"
 ---
 # <a name="analysis-services-scripting-language-assl-reference"></a>Analysis Services 脚本语言 (ASSL) 参考
   应用程序与通信[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用 XML 命令和对象说明。 Analysis Services 脚本语言 (ASSL) 表示此 XML 方言的对象定义语言部分。  

@@ -28,13 +28,13 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 616cf63a80e78449b730f7d9036a3d07afd47115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7bfcdd2bf1fd1efe17a0fba93fca3f10b04381e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162978"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>引用脚本解决方案中的其他程序集
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库为脚本开发人员提供了一组强大的工具，用于在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中实现自定义功能。 脚本任务和脚本组件还可以使用自定义托管程序集。  
@@ -69,25 +69,25 @@ ms.locfileid: "36015074"
   
 -   `System.Data` 包含 ADO.NET 体系结构。  
   
--   `System.IO` 提供对文件系统和流的接口。  
+-   `System.IO` 提供文件系统和流的接口。  
   
 -   `System.Windows.Forms` 提供窗体创建。  
   
--   `System.Text.RegularExpressions` 提供用于使用正则表达式类。  
+-   `System.Text.RegularExpressions` 提供用于处理正则表达式类。  
   
 -   `System.Environment` 返回有关本地计算机、 当前用户和计算机和用户设置的信息。  
   
 -   `System.Net` 提供网络通信。  
   
--   `System.DirectoryServices` 显示 Active Directory。  
+-   `System.DirectoryServices` 公开 Active Directory。  
   
--   `System.Drawing` 提供了大量图像操作库。  
+-   `System.Drawing` 提供丰富的图像处理库。  
   
--   `System.Threading` 使多线程的编程。  
+-   `System.Threading` 启用多线程的编程。  
   
  有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的详细信息，请参阅 MSDN Library。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [用脚本扩展包](extending-packages-with-scripting.md)  

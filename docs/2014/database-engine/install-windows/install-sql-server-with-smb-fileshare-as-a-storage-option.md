@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200027"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>安装 SQL Server，并使用 SMB 文件共享作为存储选项
-  启动[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，系统数据库 （Master、 模型、 MSDB 和 TempDB） 和[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用服务器消息块 (SMB) 文件服务器作为存储选项安装用户数据库。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
+  正在启动[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，系统数据库 （Master、 模型、 MSDB 和 TempDB） 和[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用服务器消息块 (SMB) 文件服务器作为存储选项安装的用户数据库。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
   
 > [!NOTE]  
 >  当前 SMB 文件共享上不支持 Filestream。  
@@ -83,7 +83,7 @@ ms.locfileid: "36015759"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     有关详细信息的使用情况中的各种命令行参数选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，请参阅[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
+     有关使用情况的中的不同命令行参数选项的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，请参阅[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>操作系统注意事项（SMB 协议与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）  
  不同的 Windows 操作系统具有不同的 SMB 协议版本，并且 SMB 协议版本对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言是透明的。 您可以就 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]而言发现不同 SMB 协议版本的好处。  
@@ -116,9 +116,9 @@ ms.locfileid: "36015759"
   
 -   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 该问题在[此知识库文章](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321) 中定义。 若要解决此问题，请参阅该知识库文章中的 **详细信息** 部分。  
   
--   有些第三方（如 NetApp）设备并不支持所有 SQL Server API 调用。 使用这些可能会出现：   
-    2015-06-04 上午 13:14:19.97 spid9s 错误： 17053，严重性： 16，状态： 1。  
-    2015-06-04 上午 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult()： 遇到操作系统错误 1 （不正确函数。）。  
+-   有些第三方（如 NetApp）设备并不支持所有 SQL Server API 调用。 有了这些可能会看到：   
+    2015-06-04 13:14:19.97 spid9s 错误： 17053，严重性： 16，状态： 1。  
+    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult()： 遇到操作系统错误 1 （不正确函数。）。  
   
      对于 NTFS，该错误不会产生任何影响。  但对于 ReFS，该错误则可能会导致性能明显下降。  
   

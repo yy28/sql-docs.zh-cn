@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279703"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
   本主题讨论您可以在 **“对象资源管理器”** 中执行的将影响扩展事件的操作：  
@@ -40,7 +40,7 @@ ms.locfileid: "36016139"
  有关创建扩展事件会话的详细信息，请参阅 [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md)。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>开始或停止扩展事件会话  
- 你可以启动或停止扩展事件会话通过**查询编辑器**使用`ALTER EVENT SESSION`语句，或通过使用**扩展事件**节点**对象资源管理器**.  
+ 可以启动或停止扩展事件会话通过**查询编辑器**使用`ALTER EVENT SESSION`语句，或使用**扩展事件**节点**对象资源管理器**.  
   
  在你停止某一事件会话后，该会话在 sys.dm_xe_sessions 动态管理视图 (DMV) 中不再作为活动会话列出。 但是，会话定义保持不变，并且您可以重新启动该会话。 若要完全删除某一会话定义，您必须删除该会话。  
   
@@ -86,7 +86,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>导入扩展事件会话模板  
  通过使用 **“对象资源管理器”**，您可导入扩展事件会话的模板。 例如，您可能希望执行此操作以利用从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他实例导出的模板创建会话。  
   
- 要导入扩展事件会话，则您必须具有必要`ALTER ANY EVENT SESSION`权限。  
+ 要导入扩展事件会话，必须具有必要`ALTER ANY EVENT SESSION`权限。  
   
  在您导入模板文件之前，确保该文件来自受信任的源。 应将模板文件保存到一个使用 NTFS 文件系统的位置，并限制只有获得授权查看信息的用户才可以访问该位置。  
   
@@ -132,7 +132,7 @@ STATE = STOP
  在你删除某一事件会话时，所有配置信息都将被删除，并且会话定义不再在 sys.server_event_sessions 目录视图中出现。  
   
 > [!NOTE]  
->  附带 system_health 和 AlwaysOn_health 了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 不要删除这些文件。 默认情况下，将启用 system_health（有关详细信息，请参阅 [使用 system_health 会话](use-the-ssms-xe-profiler.md)）。 默认情况下，AlwaysOn_health 处于关闭状态。 这些会话将收集可用于诊断性能问题的数据。  
+>  system_health 和 AlwaysOn_health 是附带[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 不能删除它们。 默认情况下，将启用 system_health（有关详细信息，请参阅 [使用 system_health 会话](use-the-ssms-xe-profiler.md)）。 默认情况下，AlwaysOn_health 处于关闭状态。 这些会话将收集可用于诊断性能问题的数据。  
   
  若要删除某一扩展事件会话，您必须具有 ALTER ANY EVENT SESSION 权限。  
   

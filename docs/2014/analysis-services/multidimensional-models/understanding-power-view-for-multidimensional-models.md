@@ -1,5 +1,5 @@
 ---
-title: 了解多维模型的 Power View |Microsoft 文档
+title: 了解多维模型的 Power View |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288053"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
   本文介绍 Microsoft SQL Server 2014 中用于多维模型的 Power View 功能，并为希望在组织中实现多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
@@ -30,7 +30,7 @@ ms.locfileid: "36015144"
   
  **多维模型体系结构的 Power View**  
   
- ![Power View 多维模型体系结构](../media/daxmd-architecture.gif "的 Power View 多维模型体系结构")  
+ ![Power View 的多维模型体系结构](../media/daxmd-architecture.gif "的 Power View 的多维模型体系结构")  
   
 ## <a name="prerequisites"></a>必要條件  
  **服务器要求**  
@@ -80,7 +80,7 @@ ms.locfileid: "36015144"
   
  **Power View 字段列表中的度量值组**  
   
- ![字段列表中 Power View](../media/daxmd-powerviewfieldlist.gif "字段在 Power View 中的列表")  
+ ![字段列表中的 Power View](../media/daxmd-powerviewfieldlist.gif "字段在 Power View 中的列表")  
   
  度量值组内的度量值显示为度量值。 如果存在不具有相关度量值组的计算度量值，则会将它们分组在名为 Measures 的特定表下。  
   
@@ -88,14 +88,14 @@ ms.locfileid: "36015144"
   
  **度量值组中的度量值和 KPI**  
   
- ![在 Power View 字段列表中的度量值组](../media/daxmd-fieldlist-group.gif "Power View 字段列表中的度量值组")  
+ ![Power View 字段列表中的度量值组](../media/daxmd-fieldlist-group.gif "Power View 字段列表中的度量值组")  
   
 ### <a name="measures-as-variants"></a>作为变体的度量值  
  多维模型中的度量值是变体。 这意味着度量值不强类型化，可以具有不同的数据类型。 例如，在下图中，默认情况下 Financial Reporting 表中的 Amount 度量值为 Currency 数据类型，但是对于“Statistical Accounts”的小计还具有字符串值“NA”，这属于 String 数据类型。 Power View 识别某些作为变体的度量值并在不同可视化对象中显示正确的值和格式。  
   
  **作为变体的度量值**  
   
- ![在 Power View 中的非聚合层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中的非聚合层次结构")  
+ ![在 Power View 中不可聚合的层次](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
 ### <a name="implicit-measures"></a>隐式度量值  
   表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据以不同方式存储，查询隐式度量值可能需要很长时间。 因此，在 Power View 中不提供隐式度量值。  
@@ -129,7 +129,7 @@ ms.locfileid: "36015144"
   
  **具有计算成员的 Power View 报表**  
   
- ![在 Power View 中计算成员](../media/daxmd-calcmembersinpowerview.gif "在 Power View 中计算成员")  
+ ![在 Power View 中计算成员](../media/daxmd-calcmembersinpowerview.gif "Power View 中的计算成员")  
   
 ### <a name="default-members"></a>默认成员  
  多维模型支持维度属性的默认成员。 当为查询聚合数据时，Analysis Services 使用默认成员。 维度属性的默认成员显示为表格元数据中相应列的默认值或筛选器。  
@@ -144,7 +144,7 @@ ms.locfileid: "36015144"
   
  **Power View 中不可聚合的层次结构**  
   
- ![在 Power View 中的非聚合层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中的非聚合层次结构")  
+ ![在 Power View 中不可聚合的层次](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
 ## <a name="images"></a>映像  
  Power View 可呈现图像。 在多维模型中，您向 Power View 提供图像的方式之一是公开图像的包含 URL（统一资源定位符）的列。 在此版本中，Analysis Services 支持将维度属性标记为类型 ImageURL。 然后通过表格元数据将此数据类型提供给 Power View。 Power View 然后可以下载并在可视化对象内显示 URL 中指定的图像。  

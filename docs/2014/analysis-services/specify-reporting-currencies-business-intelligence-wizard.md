@@ -1,5 +1,5 @@
 ---
-title: 指定报表货币 （商业智能向导） |Microsoft 文档
+title: 指定报表货币 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa25c4dcac782d67675888679efd1700097b4e7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cda6eecd004b4e437552f3db07b7487c7529594
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243527"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>指定报表货币（商业智能向导）
   使用“定义报表货币”页为货币换算功能定义报表货币，该功能涵盖“选择换算类型”页中指定的多对多或一对多换算类型。 （报表货币是换算“选择度量值”页中所选度量值时使用的货币。）从货币维度中选择的成员可以为商业智能向导所生成的货币换算定义报表货币维度_。  

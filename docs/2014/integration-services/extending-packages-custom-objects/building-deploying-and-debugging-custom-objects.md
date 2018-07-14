@@ -16,13 +16,13 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0264b74acc5d4665dbbbe48678ad75538002d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f6377df95d5cb8ade98e7a83b04b7920fe87a62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209367"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>生成、部署和调试自定义对象
   在为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的自定义对象编写代码后，必须生成和部署程序集，将该程序集集成到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使其可在包中使用，然后对其进行测试和调试。  
@@ -75,7 +75,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> 部署程序集  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时创建的一系列文件夹中的文件进行枚举，从而查找可在包中使用的自定义对象。 当默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装设置，则该文件夹集合中的位于**C:\Program Files\Microsoft SQL Server\120\DTS**。 不过如果你自定义对象创建的安装程序，你应该检查的值**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath**注册表项以验证此位置文件夹。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时创建的一系列文件夹中的文件进行枚举，从而查找可在包中使用的自定义对象。 当默认值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用安装设置，这一系列文件夹位于下**C:\Program Files\Microsoft SQL Server\120\DTS**。 但是如果为自定义对象创建安装程序，则应检查的值**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath**注册表项以验证此位置文件夹。  
   
  可以通过下面两种方式将程序集放入文件夹中：  
   
@@ -83,7 +83,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 -   直接在相应的文件夹中生成程序集。  
   
- 下的以下部署文件夹**C:\Program Files\Microsoft SQL Server\120\DTS**各种类型的自定义对象的使用：  
+ 下的下列部署文件夹**C:\Program Files\Microsoft SQL Server\120\DTS**用于各种类型的自定义对象：  
   
 |自定义对象|部署文件夹|  
 |-------------------|-----------------------|  
@@ -120,7 +120,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing"></a> 测试并调试代码  
  若要调试自定义对象的运行时方法，最简单的方法是在生成自定义对象后从 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 启动 dtexec.exe，然后运行使用该组件的包。  
   
- 如果你想要调试的组件的设计时方法，例如`Validate`方法中，打开它的第二个实例中使用的组件中的包[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，并附加到其**devenv.exe**过程。  
+ 如果你想要调试组件的设计时方法，如`Validate`方法中，打开第二个实例中使用该组件的包[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，并将附加到其**devenv.exe**过程。  
   
  如果还希望在包已打开并在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中运行时调试组件的运行时方法，必须在包的执行过程中强制暂停，以便还能够附加到 DtsDebugHost.exe 进程。  
   
@@ -156,7 +156,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  返回到暂停的包，并继续通过断点，或单击“确定”来关闭脚本任务引发的消息框，并继续包的执行和调试。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [开发 Integration Services 的自定义对象](developing-custom-objects-for-integration-services.md)   

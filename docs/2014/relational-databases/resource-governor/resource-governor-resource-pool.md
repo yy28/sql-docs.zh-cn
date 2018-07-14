@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28ba9512021e149bc5861e968ad2f4a977dd7644
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 062ac00c7bf4e884f3f066549bed39dc938d1209
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280873"
 ---
 # <a name="resource-governor-resource-pool"></a>资源调控器资源池
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器中，资源池表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的部分物理资源。 通过资源调控器，您可以指定针对传入应用程序请求可在资源池内使用的 CPU、物理 IO 和内存的使用量的限制。 每个资源池均可包含一个或多个工作负荷组。 在某个会话启动时，资源调控器分类器会将此会话分配给一个特定的工作负荷组，并且此会话必须使用分配给该工作负荷组的资源运行。  

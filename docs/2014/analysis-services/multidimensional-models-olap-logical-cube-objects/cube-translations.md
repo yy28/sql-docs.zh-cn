@@ -1,5 +1,5 @@
 ---
-title: 多维数据集翻译 |Microsoft 文档
+title: 多维数据集翻译 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - translations [Analysis Services], cubes
 ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7bc7d1a6b35b093e9f5fabab41138dc90b9c10ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f894d45dffbf1c6eb746e3674127c75c4e59a81e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163308"
 ---
 # <a name="cube-translations"></a>多维数据集翻译
   翻译是将显示的标签和标题从一种语言更改为另一种语言的简单机制。 每个翻译都被定义为一对值：带已翻译文本的字符串和带语言 ID 的数字。 翻译可用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有对象。 还可以翻译维度的属性值。 客户端应用程序不但要负责查找用户定义的语言设置，还要将所有标题和标签都切换为以该语言显示。 根据您的需要，一个对象可有多种翻译。  
   
  一个简单的 <xref:Microsoft.AnalysisServices.Translation> 对象由语言 ID 号和翻译后的标题组成。 语言 ID 号是带语言 ID 的 `Integer`。 翻译后的标题是已翻译的文本。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，多维数据集转换为的特定于语言的表示形式的多维数据集对象，如标题或显示文件夹的名称。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持维度和成员名称的翻译。  
+ 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，多维数据集翻译是多维数据集对象，如标题或显示文件夹的名称的特定于语言的表示形式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持维度和成员名称的翻译。  
   
  翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通常，来自不同国家/地区的用户会查看多维数据集数据。 将多维数据集的各种元素翻译为其他语言很有用，因为这样这些用户才能查看并了解多维数据集的元数据。 例如，法国的业务用户可以通过采用了法语区域设置的工作站来访问多维数据集，查看以法语显示的对象属性值。 同样，德国的业务用户可以通过采用了德语区域设置的工作站来访问相同的多维数据集，查看以德语显示的对象属性值。  
   

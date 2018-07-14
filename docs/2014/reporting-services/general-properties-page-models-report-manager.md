@@ -1,5 +1,5 @@
 ---
-title: 常规属性页中，模型 （报表管理器） |Microsoft 文档
+title: 常规属性页中，模型 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 12eda8ffbf8183f5992c2e149c4b2e9bd44b1912
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280663"
 ---
 # <a name="general-properties-page-models-report-manager"></a>模型的“常规”属性页（报表管理器）
   使用报表模型的“常规”属性页可以重命名、删除、移动或替换模型定义 (.smdl) 文件。 页面顶部显示了有关创建或修改模型的用户以及发生更改的时间等详细信息。  
@@ -47,7 +47,7 @@ ms.locfileid: "36015173"
  键入模型的说明。 有权访问该模型的用户可以在“内容”页中查看此说明。  
   
  **在列表视图中隐藏**  
- 在将文件夹设置为列表视图时，选中此复选框可以隐藏项。 列表视图是报表管理器支持的一种查看文件夹内容的模式。 你可以在中设置此选项[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]来定义如何在报表管理器查看此项。 有关视图模式在报表管理器的详细信息，请参阅[内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)。  
+ 在将文件夹设置为列表视图时，选中此复选框可以隐藏项。 列表视图是报表管理器支持的一种查看文件夹内容的模式。 此选项设置[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]来定义如何在报表管理器查看此项。 有关视图模式在报表管理器的详细信息，请参阅[内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)。  
   
  **应用**  
  单击此选项可保存所做的更改。  
@@ -56,14 +56,14 @@ ms.locfileid: "36015173"
  单击此选项可从报表服务器数据库中删除模型。 删除模型时，不会删除可提供连接信息的依赖共享数据源，也不会删除将该模型作为数据源的报表。 但是，在删除该模型后，使用该模型的报表将不再运行。  
   
  **“移动”**  
- 单击此选项可在报表服务器文件夹层次结构中重新定位模型。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。 有关详细信息，请参阅[移动项页面&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ 单击此选项可在报表服务器文件夹层次结构中重新定位模型。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。 有关详细信息，请参阅[移动项页&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
  **保存**  
  单击此选项可保存模型定义的只读副本。 根据计算机上所定义的文件关联，文件将在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他应用程序中打开。 大多数情况下，模型将以 XML 文件形式打开。  
   
  您打开的副本与最初发布到报表服务器的原始模型定义相同。 在模型发布后对其设置的任何属性（如数据源属性）不会反映在您打开的文件中。  
   
- 您可以修改模型定义并将其保存为共享文件夹中的新文件，再将模型定义作为新项上载到报表服务器。 在中打开时对模型定义所做的修改[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]（或另一个应用程序） 不会保存到报表服务器直接。 您必须上载文件以将修改后的模型发布到报表服务器上。  
+ 您可以修改模型定义并将其保存为共享文件夹中的新文件，再将模型定义作为新项上载到报表服务器。 在中打开时对模型定义进行的修改[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]（或另一个应用程序） 会不直接保存到报表服务器。 您必须上载文件以将修改后的模型发布到报表服务器上。  
   
  请注意，如果要在模型设计器中打开报表模型，则应当将该模型另存为 .smdl 文件，然后在模型设计器中将该 .smdl 文件添加到项目中。  
   

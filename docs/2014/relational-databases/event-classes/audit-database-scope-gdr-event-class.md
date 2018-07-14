@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Scope GDR event class
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e1fa782ef8802041d6563ba6611f02403e61115f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1ba228ac5c586fa806f9347a7786d82ffaeffd8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231183"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件类
   每当  中的用户发出针对语句权限的 GRANT、REVOKE 或 DENY 时（仅限于数据库操作，例如针对某个数据库授予权限），都会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for database-only actions such as granting permissions on a database.  

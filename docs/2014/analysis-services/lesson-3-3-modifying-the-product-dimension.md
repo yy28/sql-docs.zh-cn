@@ -1,5 +1,5 @@
 ---
-title: 修改产品维度 |Microsoft 文档
+title: 修改产品维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6d0fca02684392aaba37565d4b06b7cc0f1e265f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1163fdaf3e76734217fc8c2cca13a124e30f3b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171728"
 ---
 # <a name="modifying-the-product-dimension"></a>修改“产品”维度
   在本主题下的任务中，将使用命名计算为产品系列提供更具说明性的名称，在“产品”维度中定义一个层次结构，并为该层次结构指定“(全部)”成员名称。 还可以按显示文件夹组合各个属性。  
@@ -33,7 +33,7 @@ ms.locfileid: "36016010"
   
 2.  在关系图窗格的底部，右键单击“Product”表标题，然后单击“新建命名计算”。  
   
-3.  在**创建命名计算**对话框中，键入`ProductLineName`中**列名**框。  
+3.  在中**创建命名计算**对话框中，键入`ProductLineName`中**列名**框。  
   
 4.  在“表达式”框中，键入或复制并粘贴下面的 **CASE** 语句：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36016010"
   
      此 **CASE** 语句可以为多维数据集内的每个产品系列创建用户友好的名称。  
   
-5.  单击**确定**创建`ProductLineName`命名的计算。 您可能需要等待。  
+5.  单击**确定**若要创建`ProductLineName`命名计算。 您可能需要等待。  
   
 6.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36016010"
   
      “NameColumn”字段现包含 **Product.EnglishProductName (WChar)** 文本。  
   
-8.  在属性窗口中，向上滚动，单击**名称**属性字段，然后键入`Product Name`。  
+8.  在属性窗口中，向上滚动，单击**名称**属性字段中，并键入`Product Name`。  
   
 ## <a name="creating-a-hierarchy"></a>创建层次结构  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36016010"
   
 1.  将“产品系列”属性从“属性”窗格拖到“层次结构”窗格中。  
   
-2.  拖动**模型名称**属性从**属性**到窗格**\<新级别 >** 中的单元格**层次结构**窗格中，在**产品线**级别。  
+2.  拖动**模型名称**属性从**特性**到窗格**\<新级别 >** 中的单元格**层次结构**窗格中，下方**产品系列**级别。  
   
-3.  拖动`Product Name`属性从**属性**到窗格**\<新级别 >** 中的单元格**层次结构**下窗格中**Model Name**级别。 （您已在先前的章节中将 Product Key 重命名为 Product Name。）  
+3.  拖动`Product Name`属性从**特性**到窗格**\<新级别 >** 中的单元格**层次结构**下窗格**模型名称**级别。 （您已在先前的章节中将 Product Key 重命名为 Product Name。）  
   
-4.  在**层次结构**窗格**维度结构**选项卡上，右键单击的标题栏**层次结构**层次结构中，单击**重命名**然后键入`Product Model Lines`。  
+4.  在中**层次结构**窗格**维度结构**选项卡上，右键单击的标题栏**层次结构**层次结构中，单击**重命名**然后键入`Product Model Lines`。  
   
      层次结构的名称现在是`Product Model Lines`。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36016010"
   
     -   **Weight**  
   
-2.  在**AttributeHierarchyDisplayFolder**在属性窗口中，类型的属性字段`Stocking`。  
+2.  在中**AttributeHierarchyDisplayFolder**在属性窗口中，类型的属性字段`Stocking`。  
   
      此时即将这些属性分组放到单独的显示文件夹中。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36016010"
   
     -   **标准成本**  
   
-4.  在**AttributeHierarchyDisplayFolder**属性在属性窗口中，类型的单元格`Financial`。  
+4.  在中**AttributeHierarchyDisplayFolder**属性单元中属性窗口中，键入`Financial`。  
   
      此时即将这些属性分组放到第二个显示文件夹中。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "36016010"
   
     -   **“状态”**  
   
-6.  在**AttributeHierarchyDisplayFolder**属性在属性窗口中，类型的单元格`History`。  
+6.  在中**AttributeHierarchyDisplayFolder**属性单元中属性窗口中，键入`History`。  
   
      此时即将这些属性分组放到第三个显示文件夹中。  
   
-7.  选择`Product Model Lines`层次结构中的**层次结构**窗格中，，然后在各个**AllMemberName**到属性窗口中的属性`All Products`。  
+7.  选择`Product Model Lines`中的层次结构**层次结构**窗格中，然后再更改**AllMemberName**在属性窗口中的属性`All Products`。  
   
-8.  单击打开的区域**层次结构**窗格中，，然后在各个**AttributeAllMemberName**顶部的属性窗口属性`All Products`。  
+8.  单击空白区域**层次结构**窗格中，，然后将更改**AttributeAllMemberName**顶部的属性窗口属性`All Products`。  
   
      单击空白区域，即可修改“产品”维度自身的属性。 还可以单击“属性”窗格中位于属性列表顶部的“产品”。  
   
@@ -178,16 +178,16 @@ ms.locfileid: "36016010"
   
 2.  在收到“部署成功完成”消息后，单击“产品”维度的“维度设计器”的“浏览器”选项卡，然后单击设计器工具栏上的“重新连接”按钮。  
   
-3.  验证`Product Model Lines`中选择**层次结构**列表，，然后展开`All Products`。  
+3.  确认`Product Model Lines`中选定**层次结构**列表，然后再展开`All Products`。  
   
-     请注意，名称**所有**成员显示为`All Products`。 这是因为你更改**AllMemberName**到层次结构的属性`All Products`前面的课程。 另请注意，“产品系列”级别的成员现在具有用户友好名称，而不是单字母缩写形式。  
+     请注意的名称**所有**成员显示为`All Products`。 这是因为您更改了**AllMemberName**属性层次结构与`All Products`前面的课程。 另请注意，“产品系列”级别的成员现在具有用户友好名称，而不是单字母缩写形式。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [修改“日期”维度](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>请参阅  
- [在数据源视图中定义命名的计算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [数据源视图中定义命名的计算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [创建用户定义的层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
- [配置&#40;所有&#41;属性层次结构级别](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [配置&#40;所有&#41;属性层次结构的级别](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

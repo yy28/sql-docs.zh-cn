@@ -1,5 +1,5 @@
 ---
-title: Custom Messages for Logging |Microsoft 文档
+title: 自定义日志记录的消息 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
 - writing log entries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80086e7a946ad9d5457e95646bcd9c8bce3e3df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221837"
 ---
 # <a name="custom-messages-for-logging"></a>日志记录的自定义消息
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供有关编写包和很多任务的日志项的一组丰富的自定义事件。 使用这些项可以记录预定义的事件或用户定义的消息，供随后分析时使用，从而将有关执行进度、结果和问题的详细信息保存下来。 例如，可以记录大容量插入的开始和结束时间，从而找出包运行时的性能问题。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一组丰富的自定义事件来写入包和很多任务的日志项。 使用这些项可以记录预定义的事件或用户定义的消息，供随后分析时使用，从而将有关执行进度、结果和问题的详细信息保存下来。 例如，可以记录大容量插入的开始和结束时间，从而找出包运行时的性能问题。  
   
  与对包和所有容器及任务可用的标准日志记录事件集相比，自定义日志项是一组不同的项。 您可以根据需要使用自定义日志项来捕获有关包中特定任务的有用信息。 例如，执行 SQL 任务的一个自定义日志项可以在日志中记录该任务所执行的 SQL 语句。  
   
- 所有日志项都包括日期和时间信息，包括在包开始和完成时自动写入的日志项。 很多日志事件都会在日志中写入多个项。 这通常发生在事件有不同阶段时。 例如，`ExecuteSQLExecutingQuery`日志事件写入三个项： 一个条目后在任务获得与数据库，另一个任务后的连接开始准备 SQL 语句中，以及一个其他的 SQL 语句执行完成后。  
+ 所有日志项都包括日期和时间信息，包括在包开始和完成时自动写入的日志项。 很多日志事件都会在日志中写入多个项。 这通常发生在事件有不同阶段时。 例如，`ExecuteSQLExecutingQuery`日志事件写入三项： 在任务获得与数据库，另一个任务后的连接之后的一个条目开始准备 SQL 语句和多一个 SQL 语句的执行完成后。  
   
  以下 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象有自定义日志项：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36017142"
 |---------------|-----------------|  
 |`PackageStart`|指示包开始运行。<br /><br /> 注意：此日志项自动写入日志。 无法排除它。|  
 |`PackageEnd`|指示包已完成。<br /><br /> 注意：此日志项自动写入日志。 无法排除它。|  
-|`Diagnostic`|提供影响包执行的系统配置的相关信息，例如，可并发运行的可执行文件数。<br /><br /> `Diagnostic`日志项还包括之前和之后的项对外部数据访问接口的调用。 有关详细信息，请参阅 [对包连接进行故障排除的工具](troubleshooting/troubleshooting-tools-for-package-connectivity.md)。|  
+|`Diagnostic`|提供影响包执行的系统配置的相关信息，例如，可并发运行的可执行文件数。<br /><br /> `Diagnostic`日志项还包括之前和之后调用外部数据访问接口的条目。 有关详细信息，请参阅 [对包连接进行故障排除的工具](troubleshooting/troubleshooting-tools-for-package-connectivity.md)。|  
   
 ###  <a name="BulkInsert"></a> 大容量插入任务  
  下表列出了大容量插入任务的自定义日志项。  
@@ -103,9 +103,9 @@ ms.locfileid: "36017142"
 |日志项|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|指示数据流任务更改了缓冲区的大小。 日志条目描述了大小更改的原因，并列出了临时的新缓冲区大小。|  
-|`OnPipelinePostEndOfRowset`|表示一个组件已被授予其结束的行集信号，这设置的最后一次调用`ProcessInput`方法。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
-|`OnPipelinePostPrimeOutput`|指示组件已完成其最后一次调用`PrimeOutput`方法。 取决于数据流，可能写入多个日志条目。 如果组件是源组件，这意味着该组件已经完成对行的处理。|  
-|`OnPipelinePreEndOfRowset`|指示要接收其结束的行集信号，同时会设置的最后一次调用该组件`ProcessInput`方法。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
+|`OnPipelinePostEndOfRowset`|表示组件已被授予其行集结束信号，设置的最后一次调用`ProcessInput`方法。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
+|`OnPipelinePostPrimeOutput`|指示组件已经完成其最后一次调用`PrimeOutput`方法。 取决于数据流，可能写入多个日志条目。 如果组件是源组件，这意味着该组件已经完成对行的处理。|  
+|`OnPipelinePreEndOfRowset`|指示组件将要接收它的最后一次调用设置的行集结束信号`ProcessInput`方法。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
 |`OnPipelinePrePrimeOutput`|指示组件将从 `PrimeOutput` 方法接收它的调用。 取决于数据流，可能写入多个日志条目。|  
 |`OnPipelineRowsSent`|报告对 `ProcessInput` 方法的调用为组件输入所提供的行数。 此日志条目包括组件名。|  
 |`PipelineBufferLeak`|提供在缓冲区管理器退出之后使缓冲区保持活动状态的任何组件的相关信息。 这意味着缓冲区资源未释放，并且可能导致内存泄漏。 日志条目提供组件的名称和缓冲区的 ID。|  
@@ -172,7 +172,7 @@ ms.locfileid: "36017142"
   
 |日志项|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|报告在脚本中实现日志记录的结果。 每次调用将写入日志项`Log`方法`Dts`对象。 代码运行时将写入日志项。 有关详细信息，请参阅 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)。|  
+|`ScriptTaskLogEntry`|报告在脚本中实现日志记录的结果。 每次调用时将写入日志项`Log`方法的`Dts`对象。 代码运行时将写入日志项。 有关详细信息，请参阅 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
 ###  <a name="SendMail"></a> 发送邮件任务  
  下表列出了发送邮件任务的自定义日志项。  

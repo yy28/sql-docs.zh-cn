@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW |Microsoft 文档
+title: Microsoft Connector 1.1 for SAP BW |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1ab02cdbf8a92814728d7a4adbaeb1e9d229cdbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74b106e4d40cdc079a21ae3345b96ad4489e1286
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283583"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 由一组让你到 SAP Netweaver BW 版本 7 系统提取数据或加载数据的三个组件组成。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 由一组三个组件，以便您到 SAP Netweaver BW 版本 7 系统提取数据或将数据加载。  
   
 > [!IMPORTANT]  
 >  针对 Microsoft Connector 1.1 for SAP BW 的文档假定您熟悉 SAP Netweaver BW 环境。 有关 SAP NetWeaver BW 的详细信息，或者有关如何配置 SAP Netweaver BW 对象和过程的信息，请参阅您的 SAP 文档。  
@@ -51,6 +51,6 @@ ms.locfileid: "36016136"
  介绍每个组件[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW。  
   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](microsoft-connector-for-sap-bw-f1-help.md)  
- 介绍的每个组件的用户界面[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW。  
+ 描述的每个组件的用户界面[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW。  
   
   

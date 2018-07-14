@@ -1,5 +1,5 @@
 ---
-title: 修改筛选器 （SQL Server 事件探查器） |Microsoft 文档
+title: 修改筛选器 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], modifying
 - modifying filters, modifying
 - filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf53cb678e4069a6efe02719c3e03b47489b9e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef43f5f4c479866b945b284ce95370b06d1dcc1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264123"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改筛选器 (SQL Server Profiler)
   可以通过将筛选器添加到包含跟踪定义的跟踪模板，来限制跟踪所收集的事件数。 限制收集的事件数能够减少跟踪对性能的影响。 如果已设置了跟踪模板的筛选器，并发现该跟踪没有收集所需类型的信息，则可以对该筛选器进行编辑。  

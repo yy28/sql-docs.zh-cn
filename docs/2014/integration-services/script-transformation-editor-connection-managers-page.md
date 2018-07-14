@@ -1,5 +1,5 @@
 ---
-title: 脚本转换编辑器 （连接管理器页） |Microsoft 文档
+title: 脚本转换编辑器 （连接管理器页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.connections.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 29eecbed7fe8d51886167de4b8a05e96ed2884a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02729cf5e1b1fbc96e6cee87fdcc072380d7ea87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221633"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
   可以使用 **脚本转换编辑器** 的 **“连接管理器”** 页指定脚本将使用的任何连接。  

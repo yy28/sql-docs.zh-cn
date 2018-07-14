@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268663"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36014983"
   
  若要启用事务发布的可更新订阅，请参阅 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)。  
   
- 若要创建事务发布的可更新订阅，请参阅[Create an Updatable Subscription to Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ 若要创建事务发布的可更新订阅，请参阅[创建事务发布的可更新订阅](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## <a name="switching-between-update-modes"></a>在更新模式之间切换  
  使用可更新订阅时，可以指定订阅使用一种更新模式，然后在应用程序需要时再切换到另一种更新模式。 例如，可以指定订阅使用立即更新，但如果因系统故障而导致网络连接断开，则切换到排队更新。  
@@ -68,7 +68,7 @@ ms.locfileid: "36014983"
   
 -   不支持重新发布数据。  
   
--   出于跟踪的目的，复制将在已发布的表中添加 **msrepl_tran_version** 列。 由于此附加列，所有`INSERT`语句应包含列的列表。  
+-   出于跟踪的目的，复制将在已发布的表中添加 **msrepl_tran_version** 列。 由于此附加列，所有`INSERT`语句都应包括一个列的列表。  
   
 -   若要在支持更新订阅的发布中的表上进行架构更改，必须在发布服务器和订阅服务器中停止该表上的所有活动，还必须将挂起的数据更改传播到所有节点，然后才能进行架构更改。 这可以确保未完成的事务不会与挂起的架构更改发生冲突。 架构更改传播到所有节点后，可以在已发布的表上恢复活动。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "36014983"
   
 -   即使订阅过期或处于不活动状态，订阅服务器中的更新仍会传播到发布服务器中。 请确保删除或重新初始化此类订阅。  
   
--   如果`TIMESTAMP`或`IDENTITY`使用的列时，它们被复制为其基本数据类型，不应在订阅服务器上更新这些列中的值。  
+-   如果`TIMESTAMP`或`IDENTITY`使用了列，并且它们按其基本数据类型进行复制，不应在订阅服务器上更新这些列中的值。  
   
--   订阅服务器无法更新或插入`text`，`ntext`或`image`值，因为不能从复制更改跟踪触发器内部的插入或删除表中读取。 同样，订阅服务器无法更新或插入`text`或`image`值使用`WRITETEXT`或`UPDATETEXT`因为数据会被发布服务器覆盖。 相反，你无法分区`text`和`image`到单独的列的表和修改在事务中的两个表。  
+-   订阅服务器不能更新或插入`text`，`ntext`或`image`值，因为不能从复制更改跟踪触发器内部插入或删除表中读取。 同样，订阅服务器不能更新或插入`text`或`image`使用值`WRITETEXT`或`UPDATETEXT`因为数据会被发布服务器覆盖。 相反，可以划分`text`和`image`到单独的列的表和修改在事务中的两个表。  
   
-     若要更新在订阅服务器的大型对象，使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`而不是`text`， `ntext`，和`image`分别数据类型。  
+     若要更新订阅服务器上的大型对象，使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`而不是`text`， `ntext`，并`image`分别数据类型。  
   
--   不允许对唯一键（包括主键）进行生成重复项的更新（例如，格式为 `UPDATE <column> SET <column> =<column>+1` 的更新），这些更新将因为违反唯一性而被拒绝。 这是因为在订阅服务器所做的设置更新传播作为单独的复制`UPDATE`语句为每个受影响的行。  
+-   不允许对唯一键（包括主键）进行生成重复项的更新（例如，格式为 `UPDATE <column> SET <column> =<column>+1` 的更新），这些更新将因为违反唯一性而被拒绝。 这是因为在订阅服务器上所做的设置更新作为单独的复制进行传播`UPDATE`语句为每个受影响的行。  
   
 -   如果订阅服务器数据库进行了水平分区，且分区中有在订阅服务器上存在而在发布服务器中不存在的行，那么订阅服务器将无法更新这些预先存在的行。 试图更新这些行将返回错误。 应当先从表中删除这些行，然后再插入这些行。  
   
@@ -110,11 +110,11 @@ ms.locfileid: "36014983"
   
 -   使用排队更新时，建议不要对主键列进行更新，因为主键被用作所有查询的记录定位器。 当冲突解决策略设置为“订阅服务器入选”时，更新主键时应小心。 如果同时在发布服务器和订阅服务器中更新主键，将获得具有不同主键的两行。  
   
--   有关数据类型的列`SQL_VARIANT`： 时插入或更新订阅服务器上的数据，它按以下方式的映射队列读取器代理从订阅服务器复制到队列时：  
+-   对于数据类型的列`SQL_VARIANT`： 插入或更新订阅服务器上的数据后，它映射如下所示由队列读取器代理从订阅服务器复制到队列时：  
   
     -   `BIGINT``DECIMAL`， `NUMERIC`， `MONEY`，和`SMALLMONEY`映射到`NUMERIC`。  
   
-    -   `BINARY` 和`VARBINARY`映射到`VARBINARY`数据。  
+    -   `BINARY` 并`VARBINARY`映射到`VARBINARY`数据。  
   
 ### <a name="conflict-detection-and-resolution"></a>冲突检测和解决  
   

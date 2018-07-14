@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
 - View Designer, Criteria pane
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b690cc4fd041673e0d46ecfc4afe123063305c45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d14127f643e1e5bf496fd012ca58290e7671e2cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177104"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>“条件”窗格 (Visual Database Tools)
   “条件”窗格用于指定查询选项（例如要显示哪些数据列、如何对结果进行排序以及选择哪些行等），您可以通过将选择输入到一个类似电子表格的网格中来进行指定。 在“条件”窗格中，可以指定：  
@@ -74,11 +74,11 @@ ms.locfileid: "36016504"
 |新值|UPDATE 和 INSERT INTO|指定要放入关联列中的值。 请输入文本值或表达式。|  
   
 ## <a name="see-also"></a>请参阅  
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [关系图窗格&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [规则用于输入搜索值&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
- [排序和分组查询结果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [结果窗格中&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [关系图窗格&#40;可视化数据库工具&#41;](diagram-pane-visual-database-tools.md)   
+ [输入规则搜索值&#40;可视化数据库工具&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [结果窗格&#40;可视化数据库工具&#41;](results-pane-visual-database-tools.md)   
  [SQL 窗格 (Visual Database Tools)](sql-pane-visual-database-tools.md)  
   
   

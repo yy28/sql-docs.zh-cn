@@ -1,5 +1,5 @@
 ---
-title: 更改源控件连接 |Microsoft 文档
+title: 更改源代码管理连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], source controls
 - source controls [SQL Server Management Studio], connections
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb9453806d27f55cf081eb1196e886cecf1789c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3d158c2a0981b6174bcb83948b10bacd1a97d1f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188944"
 ---
 # <a name="change-source-control-connections"></a>更改源代码管理连接
   第一次从源代码管理中添加或打开解决方案时，源代码管理提供程序会在本地解决方案目录的根文件夹与对应的服务器文件夹之间创建一个关联。  
@@ -35,10 +35,10 @@ ms.locfileid: "36017180"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>从 Studio 环境中打开源代码管理用户界面  
   
-1.  上**文件**菜单上，指向**源代码管理**，然后单击**启动 Microsoft Visual SourceSafe**。  
+1.  上**文件**菜单，依次指向**源代码管理**，然后单击**启动 Microsoft Visual SourceSafe**。  
   
 ## <a name="see-also"></a>请参阅  
- [源控件基础知识](../../2014/database-engine/source-control-basics.md)   
+ [源代码管理基础知识](../../2014/database-engine/source-control-basics.md)   
  [设置源代码管理选项](../../2014/database-engine/set-source-control-options.md)   
  [从源代码管理中排除文件](../../2014/database-engine/exclude-files-from-source-control.md)  
   

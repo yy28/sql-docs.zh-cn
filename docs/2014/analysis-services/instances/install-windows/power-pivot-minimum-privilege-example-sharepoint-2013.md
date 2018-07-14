@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint 2013 的最低权限配置示例 |Microsoft 文档
+title: PowerPivot for SharePoint 2013 的最低权限配置示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 7
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2bc19d704534c36aebcef3618a2c6fc8dfe7ab04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec782dab7b86b17f06a22bebf2e8549a08a55085
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200337"
 ---
-# <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013 的最低权限配置的示例
+# <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013 的最低权限配置示例
   本主题介绍具有最低权限的 PowerPivot for SharePoint 2013 配置示例。 该配置将不同的帐户用于三个组件中的每个组件，并且每个帐户都具有最低的权限级别。  
   
 ## <a name="summary-of-accounts"></a>帐户摘要  
@@ -36,7 +36,7 @@ ms.locfileid: "36016264"
 |Analysis Services 服务帐户|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>SharePoint 管理员帐户 (SpAdmin)  
- **SPAdmin** 是您用来安装和配置场的域帐户。 它是用于运行 SharePoint 配置向导和用于 SharePoint 2013.The 的 PowerPivot 配置工具的帐户**SPAdmin**帐户是要求本地管理员权限的唯一帐户。 在运行 PowerPivot 配置工具时之前, 授予**SPAdmin**帐户权限 SharePoint 在其中创建内容和配置数据库的 SQL Server 数据库实例。 若要在最低权限情况下配置 SPAdmin 帐户，该帐户应该是角色 **securityadmin** 和 **dbcreator**的成员。  
+ **SPAdmin** 是您用来安装和配置场的域帐户。 它是用于运行 SharePoint 配置向导以及适用于 SharePoint 2013 的 PowerPivot 配置工具的帐户**SPAdmin**帐户是唯一要求本地管理员权限的帐户。 在运行 PowerPivot 配置工具时之前, 授予**SPAdmin**帐户 SharePoint 在其中创建内容和配置数据库的 SQL Server 数据库实例的权限。 若要在最低权限情况下配置 SPAdmin 帐户，该帐户应该是角色 **securityadmin** 和 **dbcreator**的成员。  
   
 ### <a name="the-farm-account-spfarm"></a>场帐户 (SPFarm)  
  **SPFarm** 是 SharePoint Timer 服务以及用于管理中心的 Web 应用程序用来访问 SharePoint 内容数据库的域帐户。 该帐户无需是本地管理员。 SharePoint 配置向导在后端 SQL Server 数据库中授予正确的最低权限。最低 SQL Server 权限配置是角色 **securityadmin** 和 **dbcreator**中的成员身份。  
@@ -66,7 +66,7 @@ ms.locfileid: "36016264"
   
 1.  在 SharePoint 管理中心内，单击**安全**。  
   
-2.  单击**配置服务帐户**。  
+2.  单击**服务帐户配置**。  
   
 3.  选择 PowerPivot 服务应用程序使用的服务应用程序池。 然后选择 SPSvc 帐户。  
   

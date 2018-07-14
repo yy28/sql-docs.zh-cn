@@ -1,5 +1,5 @@
 ---
-title: XML 任务编辑器 （常规页） |Microsoft 文档
+title: XML 任务编辑器 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 67d02b183ab38ec046bf3fc0004c8d8f9de7e1d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae95fb2d0db4d052c241fb4b1968102b1bbe268c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237157"
 ---
 # <a name="xml-task-editor-general-page"></a>XML 任务编辑器（“常规”页）
   可以使用 **“XML 任务编辑器”** 对话框的 **“常规节点”** ，指定操作类型以及配置操作。  
@@ -316,11 +316,11 @@ ms.locfileid: "36016417"
 |**IgnoreXMLDeclaration**|指定是否比较 XML 声明。|  
 |**IgnoreDTD**|指定是否忽略文档类型定义 (DTD)。|  
 |**IgnoreWhite Spaces**|指定比较文档时是否忽略空格数量的不同。|  
-|**IgnoreNamespaces**|指定是否比较元素及其属性名称的命名空间统一资源标识符 (URI)。<br /><br /> 注意： 如果此选项设置为`True`，两个元素具有相同的本地名称但不同命名空间被视为相同。|  
+|**IgnoreNamespaces**|指定是否比较元素及其属性名称的命名空间统一资源标识符 (URI)。<br /><br /> 注意： 如果此选项设置为`True`，两个元素具有相同的本地名称但具有不同命名空间将被视为相同。|  
 |**IgnoreProcessingInstructions**|指定是否比较处理指令。|  
-|**IgnoreOrderOf ChildElements**|指定是否比较子元素的顺序。<br /><br /> 注意： 如果此选项设置为`True`，二者在列表中的同级的位置中仅不同的子元素将被视为相同。|  
+|**IgnoreOrderOf ChildElements**|指定是否比较子元素的顺序。<br /><br /> 注意： 如果此选项设置为`True`，仅在列表中的同级的位置不同的子元素将被视为相同。|  
 |**IgnoreComments**|指定是否比较注释节点。|  
-|**IgnorePrefixes**|指定是否比较元素及属性名称的前缀。<br /><br /> 注意： 如果将此选项设置为`True`，本地名称相同，但不同的命名空间 Uri 和前缀的两个元素将被视为相同。|  
+|**IgnorePrefixes**|指定是否比较元素及属性名称的前缀。<br /><br /> 注意： 如果此选项设置为`True`，本地名称相同，但不同的命名空间 Uri 和前缀的两个元素将被视为相同。|  
   
  **FailOnDifference**  
  指定在 Diff 运算失败时任务是否失败。  

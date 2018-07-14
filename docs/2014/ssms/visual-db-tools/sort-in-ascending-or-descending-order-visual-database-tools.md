@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descending sorts
 - ascending sorts
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62263168add17a8a31145a8fe4552bab0b9d6691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d33fb5389b4f8307222735b237a1080cb4383792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165758"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>按升序或降序进行排序 (Visual Database Tools)
   通过在 `ASC` 子句中使用 `DESC` 或 `ORDER BY` 关键字，可以按结果集中的一列或多列以升序或降序对查询结果进行排序。  
@@ -44,8 +44,8 @@ ms.locfileid: "36016508"
 >  按多列对结果进行排序时，可使用“排序顺序”列指定要搜索的各列的相对顺序。 有关详细信息，请参阅[对查询中的多个列进行排序 (Visual Database Tools)](sort-multiple-columns-in-queries-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [排序和分组查询结果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [汇总查询结果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

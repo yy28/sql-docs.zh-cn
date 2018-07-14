@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_DIMENSIONS 行集 |Microsoft 文档
+title: MDSCHEMA_DIMENSIONS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273393"
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 行集
   介绍数据库中的共享维度和专用维度。  
@@ -52,12 +52,12 @@ ms.locfileid: "36016484"
 |`IS_READWRITE`|`DBTYPE_BOOL`||一个布尔值，指示维度是否已启用写操作。<br /><br /> 如果已对维度启用了写操作，则为 `TRUE`。|  
 |`DIMENSION_UNIQUE_SETTINGS`|`DBTYPE_I4`||如果维度只包含具有唯一名称的成员，则为指定包含唯一值的列的位图。 下列位值常量是在此位图的 Msmd.h 中定义的：<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE`|  
 |`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||始终为 `NULL`。|  
-|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||始终为 `TRUE`。 **注意：** 维度不可见，除非是可见的维度中的一个或多个层次结构。|  
+|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||始终为 `TRUE`。 **注意：** 维度不可见，除非在维度中的一个或多个层次结构是可见。|  
   
  行集按 `CATALOG_NAME`、`SCHEMA_NAME`、`CUBE_NAME`、`DIMENSION_NAME` 排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `MDSCHEMA_DIMENSIONS`行集可限制在下表中列出的列。  
+ `MDSCHEMA_DIMENSIONS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
@@ -66,8 +66,8 @@ ms.locfileid: "36016484"
 |`CUBE_NAME`|`DBTYPE_WSTR`|可选。|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|可选。|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|可选。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）位图，并使用以下有效的值之一：<br /><br /> -1 的多维数据集<br />-2 的维度<br /><br /> 默认限制的值为 1。|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|（可选）位图，并使用以下有效的值之一：<br /><br /> -1 的可见性<br />-2 不可见<br /><br /> 默认限制的值为 1。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）使用以下有效值之一位图：<br /><br /> -1 的多维数据集<br />-2 个维度<br /><br /> 默认限制的值为 1。|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|（可选）使用以下有效值之一位图：<br /><br /> -1 的可见性<br />-2 不可见<br /><br /> 默认限制的值为 1。|  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB for OLAP 架构行集](ole-db-for-olap-schema-rowsets.md)  

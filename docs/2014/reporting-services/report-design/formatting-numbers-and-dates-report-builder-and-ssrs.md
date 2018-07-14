@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.number.f1
 - sql12.rtp.rptdesigner.serieslabelproperties.number.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6b274656ac656933053a6b246acdd21cff77e875
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bf89915223f0ee141b77aacc8eec2a87191bfcca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288333"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>设置数字和日期的格式（报表生成器和 SSRS）
   通过从相应数据区域的 **“属性”** 对话框的 **“数字”** 页选择格式，可以在数据区域中设置数字和日期的格式。  
@@ -61,10 +61,10 @@ ms.locfileid: "36015848"
 -   如果选择 **“类别”** 下的 **“货币”** 并选中 **“值的显示位置”**，则可以选择 **“千”**、 **“百万”** 或 **“十亿”** 使用财务格式显示数字。 例如，如果字段值为 1,789,905,394，且您选择 **“十亿”** 并指定 2 个小数位，则该值在报表中显示为 1.78。  
   
 ## <a name="see-also"></a>请参阅  
- [格式文本和占位符&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [设置线条、颜色和图像的格式（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [格式设置仪表上的刻度&#40;报表生成器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [设置仪表上的刻度的格式&#40;报表生成器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

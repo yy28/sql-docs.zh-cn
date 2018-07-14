@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
 - row counts [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41a1b6010d0a1542811d9bbbec9a3e94ac4d943f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d55f9112a4015ead999ca88f7b3b55555fabf324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269953"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>计算表中的行数 (Visual Database Tools)
   您可对表中的行进行计数以确定以下信息：  
@@ -47,7 +47,7 @@ ms.locfileid: "36014941"
   
 2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”。 [查询和视图设计器](visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”列。  
   
-3.  选择 **\* （所有列）** 表示表值的对象的矩形中。  
+3.  选择 **\* （所有列）** 表示表值对象的矩形中。  
   
      查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36014941"
   
 2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”列。  
   
-3.  选择 **\*（所有列）** 表示表结构化对象的矩形中。  
+3.  选择 **\*（所有列）** 表示表结构对象的矩形中。  
   
      查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36014941"
 5.  运行查询。  
   
 ## <a name="see-also"></a>请参阅  
- [排序和分组查询结果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [汇总查询结果 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

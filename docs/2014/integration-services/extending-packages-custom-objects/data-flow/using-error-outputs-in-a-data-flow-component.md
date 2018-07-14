@@ -27,13 +27,13 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4531bc740b72fd0fc7c5376ad7931c4394330435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86fa4cf15230423809acb2afdeaa88ee12c1d60b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225907"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>在数据流组件中使用错误输出
   称为错误输出的特殊的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 对象可添加到组件中，以使组件重定向无法在执行期间处理的行。 组件可能遇到的问题通常分为错误或截断，这些问题特定于每个组件。 提供错误输出的组件为组件用户处理错误条件提供了灵活性，既可以筛选出结果集中的错误行，也可以在出现问题时中止组件运行，还可以忽略错误并继续。  
@@ -435,7 +435,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [数据中的错误处理](../../data-flow/error-handling-in-data.md)   

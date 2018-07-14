@@ -1,5 +1,5 @@
 ---
-title: 多维数据集元素 (XMLA) |Microsoft 文档
+title: 多维数据集元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: 2e8662f4-fb2e-43af-b70a-9e0b5872c9b9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 3627c62dd8277ff0c86d66f453afd66ad01005c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e56bc3b206069265fe21329edf688dfae9254e2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228127"
 ---
 # <a name="cube-element-xmla"></a>Cube 元素 (XMLA)
-  标识包含由父维度的多维数据集[对象](object-element-dimension-xmla.md)元素。  
+  标识包含父对象表示的维度的多维数据集[对象](object-element-dimension-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

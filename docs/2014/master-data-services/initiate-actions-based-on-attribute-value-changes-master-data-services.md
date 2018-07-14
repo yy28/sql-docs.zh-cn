@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], tracking attribute changes
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d27195abb30fe68b0fe515da479849dbc2019021
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2f66a7e91bcb475fe72d6abbe9f6007c8b9d668b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275533"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>基于属性值更改启动操作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便基于对属性值的更改启动操作。 例如，在某个特定的属性值发生更改时，您可能需要更改值、发送通知或启动外部工作流。  
@@ -58,7 +58,7 @@ ms.locfileid: "36013875"
   
 10. 在 **“值比较”** 节点下，将 **“已更改”** 拖到 **IF** 窗格的 **“条件”** 标签。  
   
-11. 在**属性**窗格中，单击某一属性，并将其拖到**编辑条件**窗格的**选择属性**标签。 此属性对规则没有影响，因此，可选择任何可用属性。  
+11. 在中**特性**窗格中，单击某一属性，并将其拖到**编辑条件**窗格的**选择属性**标签。 此属性对规则没有影响，因此，可选择任何可用属性。  
   
 12. 在 **“编辑条件”** 窗格的 **“更改跟踪组”** 框中，键入您作为必备组件的一部分分配的更改跟踪组的编号。  
   

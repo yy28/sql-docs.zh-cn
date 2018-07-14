@@ -1,5 +1,5 @@
 ---
-title: SQL Server 分布式重播 |Microsoft 文档
+title: SQL Server 分布式重播 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232627"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 优化的影响。  
@@ -30,16 +30,16 @@ ms.locfileid: "36017457"
 ## <a name="benefits-of-distributed-replay"></a>分布式重播的优点  
  与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]类似，您可以使用分布式重播针对升级后的测试环境重播捕获的跟踪。 与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]不同的是，分布式重播并不仅限于从单台计算机重播工作负荷。  
   
- 与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播，您可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
+ 与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播，您可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负荷。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
   
 ## <a name="when-to-use-distributed-replay"></a>何时使用分布式重播  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 和分布式重播提供一些重叠的功能。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 和分布式重播某种重叠的功能。  
   
  您可以使用 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 针对已升级的测试环境重播捕获的跟踪。 还可以分析重播结果以查找潜在的功能和性能不兼容问题。 但是， [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 只能从单台计算机重播工作负荷。 重播具有许多活动的并发连接或较高吞吐量的密集型 OLTP 应用程序时， [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可能会成为资源瓶颈。  
   
- 与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
+ 与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
   
  下表介绍了适当使用每种工具的情况。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36017457"
 ## <a name="distributed-replay-concepts"></a>分布式重播概念  
  以下组件组成分布式重播环境：  
   
--   **分布式的重播管理工具**： 一个控制台应用程序中， `DReplay.exe`，可用来与分布式的重播控制器进行通信。 使用管理工具可控制分布式的重播。  
+-   **分布式的重播管理工具**： 一个控制台应用程序， `DReplay.exe`，可用来与分布式的重播控制器进行通信。 使用管理工具可控制分布式的重播。  
   
 -   **分布式重播控制器**：运行名为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。  
   

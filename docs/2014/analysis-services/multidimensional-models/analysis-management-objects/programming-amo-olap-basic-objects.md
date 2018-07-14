@@ -1,5 +1,5 @@
 ---
-title: 编程 AMO OLAP Basic Objects |Microsoft 文档
+title: AMO OLAP 基本对象的编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228247"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本对象的编程
   创建复杂 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象是一个简单直接的过程，但需要注意细节。 本主题介绍 OLAP 基本对象的编程详细信息。 本主题包含以下各节：  
@@ -34,11 +34,11 @@ ms.locfileid: "36017221"
   
 -   [多维数据集对象](#Cub)  
   
--   [度量值组对象](#MG)  
+-   [MeasureGroup 对象](#MG)  
   
--   [分区对象](#Part)  
+-   [Partition 对象](#Part)  
   
--   [聚合对象](#AD)  
+-   [Aggregation 对象](#AD)  
   
 ##  <a name="Dim"></a> 维度对象  
  若要管理或处理维度，需要对 <xref:Microsoft.AnalysisServices.Dimension> 对象进行编程。  
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>处理维度  
  处理维度非常简单，使用 <xref:Microsoft.AnalysisServices.Dimension> 对象的 Process 方法即可。  
   
- 处理某个维度会影响使用该维度的所有多维数据集。 有关处理选项的详细信息，请参阅[处理对象&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)和[多维模型对象处理](../processing-a-multidimensional-model-analysis-services.md)。  
+ 处理某个维度会影响使用该维度的所有多维数据集。 有关处理选项的详细信息，请参阅[处理对象&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)并[多维模型对象处理](../processing-a-multidimensional-model-analysis-services.md)。  
   
  以下代码对所提供数据库中的所有维度执行增量更新：  
   
@@ -262,7 +262,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG"></a> 度量值组对象  
+##  <a name="MG"></a> MeasureGroup 对象  
  若要管理或处理度量值组，需要对 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>创建、删除和查找 MeasureGroup  
@@ -431,7 +431,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a> 分区对象  
+##  <a name="Part"></a> Partition 对象  
  若要管理或处理分区，需要对 <xref:Microsoft.AnalysisServices.Partition> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>创建、删除和查找分区  
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> 处理分区  
  处理分区非常简单，使用 <xref:Microsoft.AnalysisServices.Partition> 对象的 Process 方法即可。  
   
- 有关处理选项的详细信息，请参阅[处理对象&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)和[多维模型对象处理](../processing-a-multidimensional-model-analysis-services.md)。  
+ 有关处理选项的详细信息，请参阅[处理对象&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)并[多维模型对象处理](../processing-a-multidimensional-model-analysis-services.md)。  
   
  下面的代码示例对指定度量值组中的所有分区进行完整处理。  
   
@@ -510,7 +510,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   这些分区驻留在同一服务器上；同一服务器上的远程分区可以合并。  
   
- 与早期版本中，不同中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]不需要所有源分区都具有相同的聚合设计。  
+ 与早期版本中，在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]不需要所有源分区都具有相同的聚合设计。  
   
  为目标分区生成的聚合集与运行合并命令前的聚合集相同。  
   
@@ -530,7 +530,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD"></a> 聚合对象  
+##  <a name="AD"></a> Aggregation 对象  
  若要设计一个聚合并将其应用于一个或多个分区，需要对 <xref:Microsoft.AnalysisServices.Aggregation> 对象进行编程。  
   
 ### <a name="creating-and-dropping-aggregations"></a>创建和删除聚合  
@@ -568,7 +568,7 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [AMO OLAP 类](amo-olap-classes.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   

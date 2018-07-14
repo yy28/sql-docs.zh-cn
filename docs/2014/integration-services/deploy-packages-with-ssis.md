@@ -1,5 +1,5 @@
 ---
-title: SSIS 教程： 部署包 |Microsoft 文档
+title: SSIS 教程： 部署包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f01cb3f126267a5ebef2cf0d4862440732bb1766
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a9e0c00bc51d7bee4c083a8ccc4f65b85d4880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213427"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教程：部署包
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供将包轻松部署到其他计算机的工具。 部署工具还管理任何依赖项，如包需要的配置和文件。 在本教程中，您将了解如何使用这些工具在目标计算机上安装包及其依赖项。  
@@ -50,11 +50,11 @@ ms.locfileid: "36015288"
  熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新工具、控件和功能的最好方法，就是使用它们。 本教程将引导您完成创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目再将包和其他所需文件添加到项目的步骤。 完成项目后，将创建部署捆绑，将该捆绑复制到目标计算机，然后在目标计算机上安装包。  
   
 ## <a name="requirements"></a>要求  
- 本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的新功能认识有限的用户。 若要更好地了解基本[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]将在本教程中使用的概念，你可能会发现它很有用，以便首先完成以下[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教程：[运行 SQL Server 导入和导出向导](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教程： 创建简单的 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。  
+ 本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的新功能认识有限的用户。 若要更好地了解基本[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]将在本教程中使用的概念，您可能会很有帮助首先完成下列[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教程：[运行 SQL Server 导入和导出向导](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教程： 创建简单的 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。  
   
  **源计算机** 将在其上创建部署捆绑的计算机必须安装下列组件：  
   
--   带有 AdventureWorks 数据库的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 为了增强安全性，默认情况下不会安装示例数据库。 你可以下载示例数据库从[CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550)。  
+-   带有 AdventureWorks 数据库的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 为了增强安全性，默认情况下不会安装示例数据库。 您可以下载示例数据库从[CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550)。  
   
 -   您必须具有在 AdventureWorks 中创建和删除表的权限。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36015288"
   
 -   必须具有在 AdventureWorks 中创建和删除表的权限以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中运行包的权限。  
   
--   你必须具有读取和写入权限，在 msdb 中对 sysssispackages 表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系统数据库。  
+-   您必须具有读取和写入权限在 msdb 中的 sysssispackages 表上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系统数据库。  
   
  如果您计划将包部署到在其上创建部署捆绑的计算机，则该计算机必须同时满足源计算机和目标计算机的要求。  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36015288"
  [第 3 课：安装包](../integration-services/lesson-3-install-ssis-package.md)  
  在本课中，将部署捆绑复制到目标计算机，安装包，再运行包。  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

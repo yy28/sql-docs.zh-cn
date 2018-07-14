@@ -1,5 +1,5 @@
 ---
-title: 执行方法 (XMLA) |Microsoft 文档
+title: Execute 方法 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235557"
 ---
 # <a name="execute-method-xmla"></a>Execute 方法 (XMLA)
-  将 XML Analysis (XMLA) 命令发送到的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 这包括涉及数据传输的请求，如检索或更新服务器上的数据。  
+  将 XML for Analysis (XMLA) 命令发送到的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 这包括涉及数据传输的请求，如检索或更新服务器上的数据。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36016893"
 |子元素|[命令](xml-elements-properties/command-element-xmla.md)，[参数](xml-elements-properties/parameters-element-xmla.md)，[属性](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Execute`方法执行 XMLA 命令中提供`Command`元素并返回任何生成的数据使用 XMLA[行集](xml-data-types/rowset-data-type-xmla.md)（适用于表格结果集） 的数据类型或 XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md)数据类型 （对于多维结果集。）  
+ `Execute`方法执行 XMLA 命令中提供`Command`元素，并返回任何生成的数据使用 XMLA[行集](xml-data-types/rowset-data-type-xmla.md)数据类型 （适用于表格结果集） 或 XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md)数据类型 （用于多维结果集。）  
   
 ## <a name="example"></a>示例  
  下面的代码示例是一个包含多维表达式 (MDX) SELECT 语句的 `Execute` 方法调用的示例。  

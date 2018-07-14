@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying subscriptions
 - viewing replication properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modifying subscriptions, SQL Server Management Studio
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e9e276a97e8b56278d9516b59ce20d9eb4cbc01b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6bffdbc7778d6819009873599b7a196f580b86e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201177"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>查看和修改请求订阅属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改请求订阅属性。  
@@ -136,7 +136,7 @@ ms.locfileid: "36017518"
   
 4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的订阅属性中定义不正确或服务器上不存在订阅。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的订阅属性定义不正确或服务器上不存在订阅。  
   
 6.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 属性中的一个设置新值，然后再调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36017518"
   
 4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的订阅属性中定义不正确或服务器上不存在订阅。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的订阅属性定义不正确或服务器上不存在订阅。  
   
 6.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 属性中的一个设置新值，然后再调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   

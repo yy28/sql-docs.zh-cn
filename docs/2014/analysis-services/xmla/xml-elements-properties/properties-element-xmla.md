@@ -1,5 +1,5 @@
 ---
-title: Properties 元素 (XMLA) |Microsoft 文档
+title: Properties 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Properties element
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 66accb9aab2c970c1fd09b1e14408b5585269d7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 99cb1b43ad7629fd87759d5ea724e068319152b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237227"
 ---
 # <a name="properties-element-xmla"></a>properties 元素 (XMLA)
-  包含用于分析 (XMAL) 属性使用的 XML[发现](../xml-elements-methods-discover.md)和[执行](../xml-elements-methods-execute.md)方法。  
+  通过使用 Analysis (XMAL) 属性中包含的 XML [Discover](../xml-elements-methods-discover.md)并[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36015771"
 ## <a name="remarks"></a>Remarks  
  `Properties` 元素表示用于控制 `Discover` 和 `Execute` 方法各个方面的 XMLA 属性，如定义连接至数据源所需的信息、指定结果集的返回格式或指定设置数据格式时应使用的区域设置。  
   
- 可以通过使用具有的 DISCOVER_PROPERTIES 请求类型获得可用的属性和它们的值`Discover`方法。  
+ 可以通过使用与 DISCOVER_PROPERTIES 请求类型获取可用属性和其值`Discover`方法。  
   
 ## <a name="example"></a>示例  
   

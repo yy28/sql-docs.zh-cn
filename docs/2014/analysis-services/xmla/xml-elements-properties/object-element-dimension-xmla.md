@@ -1,5 +1,5 @@
 ---
-title: 对象元素 （维度） (XMLA) |Microsoft 文档
+title: 对象元素 (Dimension) (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f0a80bcd26e5a54a0c45adff7667b4cfebdc467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 652e5b2b42df856c7668e690b6595ecd41f8d8a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228147"
 ---
 # <a name="object-element-dimension-xmla"></a>Object 元素 (Dimension) (XMLA)
-  包含在其上的维度对象引用父[插入](../xml-elements-commands/insert-element-xmla.md)，[更新](../xml-elements-commands/update-element-xmla.md)，或[删除](../xml-elements-commands/drop-element-xmla.md)执行命令。  
+  包含的维度的对象引用父[插入](../xml-elements-commands/insert-element-xmla.md)，[更新](../xml-elements-commands/update-element-xmla.md)，或[删除](../xml-elements-commands/drop-element-xmla.md)执行命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36016907"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[删除](../xml-elements-commands/drop-element-xmla.md)，[插入](../xml-elements-commands/insert-element-xmla.md)，[更新](../xml-elements-commands/update-element-xmla.md)|  
+|父元素|[Drop](../xml-elements-commands/drop-element-xmla.md)，[插入](../xml-elements-commands/insert-element-xmla.md)，[更新](../xml-elements-commands/update-element-xmla.md)|  
 |子元素|[多维数据集](cube-element-xmla.md)，[数据库](database-element-xmla.md)，[维度](dimension-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

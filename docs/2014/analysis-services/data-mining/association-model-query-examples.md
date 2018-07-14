@@ -1,5 +1,5 @@
 ---
-title: 关联模型查询示例 |Microsoft 文档
+title: 关联模型查询示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b0c7f81123188af9b929dcdcc33f6cf44ed4aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173608"
 ---
 # <a name="association-model-query-examples"></a>关联模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可创建预测查询。内容查询提供有关在分析过程中发现的规则和项集的详细信息，预测查询使用在数据中发现的关联来做出预测。 对于关联模型来说，预测通常基于规则且可用来给出建议，而内容查询通常用于浏览项集之间的关系。 此外，还可检索有关模型的元数据。  
@@ -77,7 +77,7 @@ WHERE NODE_TYPE = 1
 |CHILDREN_CARDINALITY|942|  
 |NODE_DESCRIPTION|Association Rules Model; ITEMSET_COUNT=679; RULE_COUNT=263; MIN_SUPPORT=14; MAX_SUPPORT=4334; MIN_ITEMSET_SIZE=0; MAX_ITEMSET_SIZE=3; MIN_PROBABILITY=0.400390625; MAX_PROBABILITY=1; MIN_LIFT=0.14309369632511; MAX_LIFT=1.95758227647523|  
   
- 有关这些列关联模型中的含义的定义，请参阅[挖掘模型内容关联模型的&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)。  
+ 有关这些列在关联模型中的含义的定义，请参阅[关联模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)。  
   
  [返回页首](#bkmk_top2)  
   

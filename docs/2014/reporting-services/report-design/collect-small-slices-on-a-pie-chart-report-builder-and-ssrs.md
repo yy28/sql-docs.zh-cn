@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af1a270524d91621cdeb15b56ace7c07ad4a4df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 91b6e5492566c2ada0857c8708ddc786560ee387
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177184"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集饼图上的小切片（报表生成器和 SSRS）
   饼图显示太多数据点时，这些数据点会显得混乱。 若要解决此问题，可以将低于特定值的所有数据显示为饼图的一个切片。  
   
- 若要将若干小切片收集到一个切片中，请先确定用于收集小切片的阈值以饼图的百分比度量或为固定值。 然后设置 CollectedThreshold 和 CollectedThresholdUsePercent 属性。将 CollectedThreshold 属性设置为某个值必须低至可以进行收集的图表百分比，或者设置为用于收集的实际阈值数据值。 将 CollectedThresholdUsePercent 属性设置为`True`使用百分比或`False`使用实际值。  
+ 若要将若干小切片收集到一个切片中，请先确定用于收集小切片的阈值以饼图的百分比度量或为固定值。 然后设置 CollectedThreshold 和 CollectedThresholdUsePercent 属性。将 CollectedThreshold 属性设置为某个值必须低至可以进行收集的图表百分比，或者设置为用于收集的实际阈值数据值。 将 CollectedThresholdUsePercent 属性设置为`True`以使用百分比或`False`以使用实际值。  
   
  还可以将小切片收集到第一个饼图的收集切片标注的辅助饼图中。 该辅助饼图绘制在原始饼图的右侧。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36018114"
          将 CollectedThreshold 属性设置为 **10**。  
   
         > [!NOTE]  
-        >  如果 CollectedStyle 设置为**SingleSlice**，为值大于 CollectedThreshold **100**，并且 CollectedThresholdUsePercent `True`，图表将引发异常，因为它不能来计算百分比。 若要解决此问题，请将 CollectedThreshold 设置为小于 **100** 的值。  
+        >  如果将 CollectedStyle 设置为**SingleSlice**，collectedthreshold 设置为大于**100**，并且 CollectedThresholdUsePercent 为`True`，因为它不能则图表将引发异常计算百分比。 若要解决此问题，请将 CollectedThreshold 设置为小于 **100** 的值。  
   
     -   **按数据值。** 例如，若要将饼图上少于 5000 的切片收集到一个切片：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36018114"
   
 2.  将 CollectedStyle 属性设置为 **CollectedPie**。  
   
-3.  将 CollectedThreshold 属性设置为一个值，该值表示将小切片收集成一个切片的阈值。 当 CollectedStyle 属性设置为**CollectedPie**，CollectedThresholdUsePercentproperty 始终设置为`True`，和收集的阈值始终测量以百分比表示。  
+3.  将 CollectedThreshold 属性设置为一个值，该值表示将小切片收集成一个切片的阈值。 如果将 CollectedStyle 属性设置为**CollectedPie**，collectedthresholdusepercent 属性始终设置为`True`，并收集的阈值也始终以百分比度量。  
   
 4.  （可选）设置 CollectedColor、CollectedLabel、CollectedLegendText 和 CollectedToolTip 属性。 所有名为“Collected”的其他属性都不适用于收集的切片。  
   
@@ -81,8 +81,8 @@ ms.locfileid: "36018114"
   
 ## <a name="see-also"></a>请参阅  
  [饼图&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [格式设置图表上的数据点&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [饼图外显示数据点标签&#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [在饼图外显示数据点标签&#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [向图表添加三维效果（报表生成器和 SSRS）](chart-effects-add-3d-effects-report-builder.md)  
   
