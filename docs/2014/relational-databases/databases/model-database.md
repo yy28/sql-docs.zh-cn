@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242877"
 ---
 # <a name="model-database"></a>model 数据库
   **model** 数据库用作在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建的所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
@@ -39,7 +39,7 @@ ms.locfileid: "36026783"
  如果修改 **model** 数据库，之后创建的所有数据库都将继承这些修改。 例如，可以设置权限或数据库选项或者添加对象，例如，表、函数或存储过程。 **model** 数据库的文件属性是一个例外且会被忽略（数据文件的初始大小除外）。  
   
 ## <a name="physical-properties-of-model"></a>model 的物理属性  
- 下表列出了 **model** 数据和日志文件的初始配置值。 这些文件的大小可以为不同版本的略[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 下表列出了 **model** 数据和日志文件的初始配置值。 这些文件的大小可以为不同版本的略有不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 |文件|逻辑名称|物理名称|文件增长|  
 |----------|------------------|-------------------|-----------------|  
@@ -77,12 +77,12 @@ ms.locfileid: "36026783"
 |PARAMETERIZATION|SIMPLE|是|  
 |QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|是|  
-|RECOVERY|依赖于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本<sup>1</sup>|是|  
+|RECOVERY|取决于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edition<sup>1</sup>|是|  
 |RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 选项|DISABLE_BROKER|“否”|  
 |TRUSTWORTHY|OFF|“否”|  
   
- <sup>1</sup>若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模型&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;-&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   

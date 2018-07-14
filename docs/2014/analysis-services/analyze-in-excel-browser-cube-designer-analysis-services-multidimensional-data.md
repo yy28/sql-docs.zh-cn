@@ -1,5 +1,5 @@
 ---
-title: Analyze in Excel （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 在 Excel （浏览器选项卡，多维数据集设计器） 中分析 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6e20d95fc7d1a097f50eb5cca4937cc62580ef3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196697"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中分析（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   **“在 Excel 中分析”** 为多维数据集开发人员提供了一种快速检查项目将如何呈现给最终用户的方式。 使用 **“在 Excel 中分析”** 功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接，以及自动将数据透视表添加到工作表。 此功能将取代 Office Web Control，后者在以前版本的“浏览器”选项卡中提供了一个嵌入的数据透视表。  
@@ -50,7 +50,7 @@ ms.locfileid: "36124026"
   
  [在 Excel 中分析&#40;SSAS 表格&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [分析在 Excel 中的表格模型&#40;SSAS 表格&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [分析 Excel 中的表格模型&#40;SSAS 表格&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [浏览多维数据集中的数据和元数据](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

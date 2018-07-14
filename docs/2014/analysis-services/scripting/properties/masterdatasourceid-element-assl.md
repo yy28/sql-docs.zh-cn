@@ -1,5 +1,5 @@
 ---
-title: MasterDatasourceID 元素 (ASSL) |Microsoft 文档
+title: MasterDatasourceID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MasterDatasourceID element
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35f3090a10dd175d507dec4a109f04d36644cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70258c84b128c879406a8c0cdda837d9f0475789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228457"
 ---
 # <a name="masterdatasourceid-element-assl"></a>MasterDatasourceID 元素 (ASSL)
   包含主数据源标识符 (ID)[数据库](../objects/database-element-assl.md)元素。  
@@ -62,9 +62,9 @@ ms.locfileid: "36026013"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 远程实例上的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含远程分区，`MasterDatasourceID`元素包含数据源的数据源 ID 用于标识的主实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，管理远程分区。  
+ 远程实例上的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含远程分区`MasterDatasourceID`元素中包含的数据源 ID 用于标识的主实例的数据源[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]管理远程分区。  
   
- 对应于的父元素`MasterDatasourceID`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Database>。  
+ 父级对应的元素`MasterDatasourceID`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Database>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

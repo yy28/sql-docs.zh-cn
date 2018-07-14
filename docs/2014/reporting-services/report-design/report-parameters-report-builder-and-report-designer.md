@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 f1_keywords:
@@ -20,15 +20,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: 36
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c936c8e8eaac37c18e402206d9ca7bc6e6f0bd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 26fdc20f897d904319c9080120aa5770b53145bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168288"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
   本主题介绍 SSRS 报表参数、可设置的属性以及更多有关参数的常规用法。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。  
@@ -68,19 +68,19 @@ ms.locfileid: "36025457"
      有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](built-in-collections-parameters-collection-references-report-builder.md)。  
   
 ##  <a name="UserInterface"></a> 参数窗格  
- 查看报表时，报表查看器工具栏将显示每个参数，以便用户可以通过交互方式指定值。 下图显示了具有参数的报表参数区域@StartDate， @EndDate， @Subcategory，和@ShowAllRows。  
+ 查看报表时，报表查看器工具栏将显示每个参数，以便用户可以通过交互方式指定值。 下图显示了具有参数的报表的参数区域@StartDate， @EndDate， @Subcategory，和@ShowAllRows。  
   
  ![rs_ParameterStory](../media/rs-parameterstory.gif "rs_ParameterStory")  
   
 1.  **“参数”窗格** 报表查看器工具栏显示各个参数的提示和默认值。 系统将自动设置工具栏上的参数布局。 显示顺序由参数在“报表数据”窗格中的显示顺序决定。  
   
-2.  **@StartDate 和@EndDate参数**参数@StartDate是数据类型`DateTime`。 文本框旁边会显示“开始日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
+2.  **@StartDate 并@EndDate参数**参数@StartDate数据类型是`DateTime`。 文本框旁边会显示“开始日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
   
-     参数@EndDate旁边将出现@StartDate。  
+     将参数@EndDate旁边显示@StartDate。  
   
-3.  **@Subcategory 参数**参数@Subcategory是数据类型`Text`。 因为@Subcategory具有可用值列表，有效的值出现在下拉列表。 您必须从此列表中选择值。 因为@Subcategory多个值，**选择所有**选项将显示，以便你可以清除或选择列表中的所有值。  
+3.  **@Subcategory 参数**参数@Subcategory数据类型是`Text`。 因为@Subcategory具有可用值列表，有效的值显示在下拉列表中。 您必须从此列表中选择值。 因为@Subcategory多个值， **Select All** ，可用于清除或选择列表中的所有值将显示选项。  
   
-4.  **@ShowAllRows 参数**参数@ShowAllRows是数据类型`Boolean`。 使用单选按钮指定`True`或`False`。  
+4.  **@ShowAllRows 参数**参数@ShowAllRows数据类型是`Boolean`。 使用单选按钮指定`True`或`False`。  
   
 5.  **“显示或隐藏参数区域”控点** 在报表查看器工具栏上，单击此箭头可显示或隐藏参数窗格。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36025457"
   
      下图来自报表生成器，它显示了包含变量 (1) 的数据集查询，以及相应的数据集参数 (2) 和报表参数 (3)。  
   
-     ![数据集属性对话框中和报表窗格](../media/datasetquery-parameters.png "数据集属性对话框中和报表窗格")  
+     ![数据集属性对话框和报表窗格](../media/datasetquery-parameters.png "数据集属性对话框和报表窗格")  
   
     > **注意！** 并非所有的数据源都支持参数。  
   
@@ -136,23 +136,23 @@ ms.locfileid: "36025457"
 |--------------|-----------------|  
 |“属性”|键入区分大小写的参数名称。 名称必须以字母开头，可以包含字母、数字、下划线 (_)。 名称中不能包含空格。 对于自动生成的参数，其名称会与数据集查询中的参数相匹配。 默认情况下，手动创建的参数与 ReportParameter1 相类似。|  
 |提示|在报表查看器工具栏上的参数旁边显示的文本。|  
-|数据类型|即使在数据类型时为参数定义可用值，用户可从下拉列表中选择值`DateTime`。 报表参数必须为以下数据类型之一：<br /><br /> `Boolean`的用户。 用户通过单选按钮选择 True 或 False。<br /><br /> `DateTime`的用户。 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> `Text`的用户。 用户在文本框中键入值。<br /><br /> 有关报表的数据类型的详细信息，请参阅[RDL 数据类型](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
+|数据类型|即使数据类型是时为参数定义可用值，用户可从下拉列表中选择值`DateTime`。 报表参数必须为以下数据类型之一：<br /><br /> `Boolean`的用户。 用户通过单选按钮选择 True 或 False。<br /><br /> `DateTime`的用户。 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> `Text`的用户。 用户在文本框中键入值。<br /><br /> 有关报表的数据类型的详细信息，请参阅[RDL 数据类型](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
 |允许空值|如果参数的值可为空字符串或为空白，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将空白值作为有效值之一，则必须在指定的值中包含空白值。 选择此选项并不会自动在可用值中包含空白值。|  
 |允许 Null 值|如果参数的值可为 Null，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将 Null 作为有效值之一，则必须在指定的值中包含 Null。 选择此选项并不会自动在可用值中包含 Null。|  
 |允许多个值|提供可用值以创建下拉列表，供用户从中选择。 这是确保只在数据集查询中提交有效值的好方法。<br /><br /> 如果参数值可为下拉列表中显示的多个值，请选择此选项。 不允许为 Null 值。 选择此选项后，将向参数下拉列表中的可用值列表添加复选框。 列表的顶部包括 **“全选”** 复选框。 用户可以选中所需的值。<br /><br /> 如果用于提供值的数据快速更改，则用户看到的列表可能不是最新列表。|  
 |Visible|选择此选项可在报表运行时在其顶部显示报表参数。 此选项允许用户在运行时选择参数值。|  
 |Hidden|选择此选项可隐藏已发布报表中的报表参数。 报表参数值仍可在报表 URL、订阅定义或报表服务器中进行设置。|  
 |内部|选择此选项可以隐藏报表参数。 在已发布报表中，只能在报表定义中查看报表参数。|  
-|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果你提供可用值`DateTime`参数，而不是月历控件的参数窗格中显示的日期的下拉列表。 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **\*\* 安全说明\* \*** 任何包含数据类型的参数的报表中`Text`，请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户只有在报表中查看的数据所需的权限。 有关详细信息，请参阅[安全性（报表生成器）](../report-builder/security-report-builder.md)。|  
+|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果你提供可用值`DateTime`参数，而不是日历控件在参数窗格中显示日期下拉列表。 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **\*\* 安全说明\* \*** 包含的数据类型的参数的任何报表中`Text`请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户仅具有查看报表中的数据所需的权限。 有关详细信息，请参阅[安全性（报表生成器）](../report-builder/security-report-builder.md)。|  
 |默认值|设置来自查询或静态列表的默认值。<br /><br /> 如果每个参数均具有默认值，则报表将在第一次查看时自动运行。|  
-|高级|设置报表定义属性 `UsedInQuery`，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 `True`。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 `UsedInQuery` 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项设置`UsedInQuery`为 False。<br /><br /> **\*\* 警告： \* \*** 使用**永远不会刷新**时要格外小心。 在报表服务器上，`UsedInQuery`用于帮助控制报表数据和呈现的报表的缓存选项和快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../reports/report-definition-language-ssrs.md)。|  
+|高级|设置报表定义属性 `UsedInQuery`，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 `True`。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 `UsedInQuery` 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项设置`UsedInQuery`为 False。<br /><br /> **\*\* 谨慎\* \*** 使用**永远不会刷新**谨慎使用。 在报表服务器上，`UsedInQuery`用于帮助控制缓存选项为报表数据和呈现的报表，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../reports/report-definition-language-ssrs.md)。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> 数据集查询  
  若要筛选数据集查询中的数据，可以通过指定结果集中要包含或排除的值，来包含一个限制检索到的数据的限制子句。  
   
  使用数据源的查询设计器来帮助生成参数化查询。  
   
--   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅主题中的特定的外部数据源类型[向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../report-data/relational-query-designer-user-interface-report-builder.md)。  
+-   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅主题中的特定外部数据源类型[向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../report-data/relational-query-designer-user-interface-report-builder.md)。  
   
 -   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计器（报表生成器）](../query-designers-report-builder.md)中与数据扩展插件对应的查询设计器主题。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36025457"
  另一种将参数用于雇员或个人数据的安全方法是：基于包含 Users 集合中的 **UserID** 字段的表达式选择数据。 Users 集合提供了获取报表运行用户的标识的方法，并使用该标识检索用户特定的数据。  
   
 > [!IMPORTANT]  
->  包含类型的参数的任何报表中`String`，请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户具有仅在报表中查看的数据所必需的权限。 在定义类型的参数`String`，则用户会看到文本框中，可以使用任何值。 可用值列表限制可以输入的值。 如果报表参数与数据集参数关联，并但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
+>  包含类型参数的任何报表中`String`请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户具有查看报表中的数据所需的权限。 定义类型的参数时`String`，则用户会看到与可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与数据集参数关联，并但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
 >   
 >  如果报表参数与数据集参数无关联，并且参数值包含在报表中，则报表用户可能会在参数值中键入表达式语法或 URL，并将报表呈现为 Excel 或 HTML 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
 >   
@@ -212,7 +212,7 @@ ms.locfileid: "36025457"
   
 -   [添加、 更改或删除报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [添加、 更改或删除报表参数的可用值&#40;报表生成器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
+-   [添加、 更改或删除可用值为报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
 -   [添加、 更改或删除报表参数的默认值&#40;报表生成器和 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
@@ -232,9 +232,9 @@ ms.locfileid: "36025457"
 ##  <a name="bkmk_Related_Topics"></a> 相关内容  
  [配置 SSRS 报表参数（测验）](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [教程： 将参数添加到您的报表&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教程： 向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [突然意外出现 InvalidReportParameterException 的报表服务中](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [爆发宇宙的 InvalidReportParameterException 报告服务中](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [报表示例（报表生成器和 SSRS）](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
@@ -242,7 +242,7 @@ ms.locfileid: "36025457"
   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   
- [筛选、 分组和排序数据&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  [安全&#40;报表生成器&#41;](../report-builder/security-report-builder.md)  
   

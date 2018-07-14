@@ -1,5 +1,5 @@
 ---
-title: 检索使用单元集的数据 |Microsoft 文档
+title: 使用 CellSet 检索数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cda35dc6151d17e1dad2d341337d67ef39d9f839
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178894"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>使用 CellSet 检索数据
   在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象提供了最大的交互功能和灵活性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象是分层数据和元数据的内存缓存，用于保留数据的原始维数。 还可以在连接或断开连接状态中对 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象进行遍历。 由于此断开连接的功能，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象还可用于以任何顺序查看数据和元数据，并为数据检索提供最全面的对象模型。 此断开连接的功能还会导致 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象有最大的开销，并成为要填充的最慢的 ADOMD.NET 数据检索对象模型。  
@@ -44,7 +44,7 @@ ms.locfileid: "36026658"
   
      每个 <xref:Microsoft.AnalysisServices.AdomdClient.Axis> 对象包含 <xref:Microsoft.AnalysisServices.AdomdClient.Position> 对象的集合，这些对象表示可用于该轴的元组集。 每个 <xref:Microsoft.AnalysisServices.AdomdClient.Position> 对象表示一个包含一个或多个成员的元组，这些成员由 <xref:Microsoft.AnalysisServices.AdomdClient.Member> 对象的集合表示。  
   
-3.  **从单元集集合中检索数据。**  
+3.  **从单元集集合检索数据。**  
   
      除了检索元数据，ADOMD.NET 还将检索单元集的数据。 在该命令运行了查询并返回 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 后，即可使用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.Cells%2A> 的 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 集合检索数据。 此集合包含为查询中的所有轴的交点计算出的值。 因此，有多个可用于访问每个交点或单元的索引器。 有关索引器的列表，请参阅 <xref:Microsoft.AnalysisServices.AdomdClient.CellCollection.Item%2A>。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36026658"
  [!code-csharp[Adomd.NetClient#DemonstrateDisconnectedCellset](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#demonstratedisconnectedcellset)]  
   
 ## <a name="see-also"></a>请参阅  
- [从分析数据源检索数据](retrieving-data-from-an-analytical-data-source.md)   
+ [从分析数据源中检索数据](retrieving-data-from-an-analytical-data-source.md)   
  [使用 AdomdDataReader 检索数据](retrieving-data-using-the-adomddatareader.md)   
  [使用 XmlReader 检索数据](retrieving-data-using-the-xmlreader.md)  
   

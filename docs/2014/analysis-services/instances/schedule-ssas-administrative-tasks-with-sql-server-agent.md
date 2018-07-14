@@ -1,5 +1,5 @@
 ---
-title: 计划 SSAS Administrative Tasks with SQL Server 代理 |Microsoft 文档
+title: 来计划 SSAS 管理任务使用 SQL Server 代理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b94fa6a5c38b08d9756581063c497e4440105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e02a5f91994d0002873984a6e77db53169d024e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243677"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
   使用 SQL Server 代理服务，你可以根据所需顺序和时间来计划要运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理任务。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
@@ -31,7 +31,7 @@ ms.locfileid: "36026905"
 ## <a name="prerequisites"></a>必要條件  
  必须安装 SQL Server 代理服务。  
   
- 默认情况下，作业在服务帐户下运行。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQL Server 代理的默认帐户是 NT Service\SQLAgent$\<实例名 >。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅[授予服务器管理员权限&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
+ 默认情况下，作业在服务帐户下运行。 在中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQL Server 代理的默认帐户是 NT Service\SQLAgent$\<实例名 >。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅[授予服务器管理员权限&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
  您还应拥有要使用的测试数据库。 可以部署 AdventureWorks 多维示例数据库或 Analysis Services 多维教程中的项目以在本演练中使用。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../install-sample-data-and-projects.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36026905"
   
 7.  在“服务器”中，为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认实例键入“localhost”，并为命名实例键入“localhost”\\\<实例名称>。  
   
-     如果您将从远程计算机运行作业，请使用将运行作业的服务器和实例的名称。 使用格式\<*服务器名称*> 对于默认实例，和\<*服务器名称*>\\<*实例名称*> 对于命名实例。  
+     如果您将从远程计算机运行作业，请使用将运行作业的服务器和实例的名称。 使用格式\<*服务器名称*> 对于默认实例，并\<*服务器名称*>\\<*实例名称*> 对于命名实例。  
   
 8.  在 **“类型”** 中，选择 **“SQL Server Analysis Services 命令”**。  
   
@@ -227,6 +227,6 @@ ms.locfileid: "36026905"
   
 ## <a name="see-also"></a>请参阅  
  [处理选项和设置&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)  
   
   

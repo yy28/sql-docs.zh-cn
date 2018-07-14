@@ -1,5 +1,5 @@
 ---
-title: ProtocolName 属性 （ServerNetworkProtocolProperty 类） |Microsoft 文档
+title: ProtocolName 属性 （ServerNetworkProtocolProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecc6cba52a1be8e2be3a9c9ca4ca3f2e80a11b8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: d8c32bc056a1cdd0957a76bf68b200254fdf3536
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232647"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>ProtocolName 属性（ServerNetworkProtocolProperty 类）
   获取具有所引用属性的协议的名称。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ServerNetworkProtocolProperty 类](servernetworkprotocolproperty-class.md)表示的实例上的网络协议的属性的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个[ServerNetworkProtocolProperty 类](servernetworkprotocolproperty-class.md)表示的实例上的网络协议的属性的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定具有该属性的协议名称的字符串值。  

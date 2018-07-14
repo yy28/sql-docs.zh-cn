@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
 - role-based security [Reporting Services], permissions
@@ -21,13 +21,13 @@ ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0740292a3aefe1a9570bd614014c81bc58e11fd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e0063f336ef7c2cb7a7bcfc33c0026259b4c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177194"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“任务”  是指用户或管理员可以执行的操作。 任务是预定义的。 您不能创建自定义任务，也不能以编程方式或通过工具修改所提供的任务。 总共有二十五个任务。 这些任务组成了基于角色的安全性中可用的完整操作集。 部分任务示例包括：“查看报表”、“管理报表”和“管理报表服务器属性”。  

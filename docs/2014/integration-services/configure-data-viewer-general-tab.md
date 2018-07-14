@@ -1,5 +1,5 @@
 ---
-title: 配置数据查看器 （常规选项卡） |Microsoft 文档
+title: 配置数据查看器 （常规选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a58a85deedb322ce43a5b1d4881e457097abda0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35458ecc9e5c7482365ce53fefd32558d04872ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274993"
 ---
 # <a name="configure-data-viewer-general-tab"></a>配置数据查看器（“常规”选项卡）
   在包执行过程中，数据查看器显示流过连接两个数据流组件的路径的数据。  

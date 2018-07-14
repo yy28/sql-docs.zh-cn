@@ -1,5 +1,5 @@
 ---
-title: BeginTransaction 元素 (XMLA) |Microsoft 文档
+title: BeginTransaction 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BeginTransaction command
 ms.assetid: fca122fc-b57c-4ba6-849b-ca8c93cf64e9
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e85979e1e791dcd3c2bb5b19ef5c615f73975e07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1685c1c61c248cf37672cab17ccf3144e7d5e7ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253039"
 ---
 # <a name="begintransaction-element-xmla"></a>BeginTransaction 元素 (XMLA)
-  开始一项事务上与的实例的当前会话[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  实例的当前会话上开始一个事务[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36027314"
  如果当前会话上不存在显式指定的活动事务，则在隐式定义的事务内执行从当前会话发出的所有命令。 如果命令成功执行，则提交隐式事务；如果命令失败，则回滚。  
   
 ## <a name="see-also"></a>请参阅  
- [取消元素&#40;XMLA&#41;](cancel-element-xmla.md)   
+ [Cancel 元素&#40;XMLA&#41;](cancel-element-xmla.md)   
  [CommitTransaction 元素&#40;XMLA&#41;](committransaction-element-xmla.md)   
  [RollbackTransaction 元素&#40;XMLA&#41;](rollbacktransaction-element-xmla.md)   
  [命令&#40;XMLA&#41;](xml-elements-commands.md)  

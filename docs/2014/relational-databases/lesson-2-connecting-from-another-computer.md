@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209167"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
   为了增强安全性， [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在初始安装时不能从其他计算机对其进行访问。 本课介绍如何启用协议，配置端口以及配置 Windows 防火墙，以便从其他计算机进行连接。  
@@ -48,7 +48,7 @@ ms.locfileid: "36025921"
     > [!NOTE]  
     >  您可能同时拥有 32 位和 64 位选项。  
   
-2.  在**SQL Server 配置管理器**，展开**SQL Server 网络配置**，然后单击**协议**  *\<InstanceName>*。  
+2.  在中**SQL Server 配置管理器**，展开**SQL Server 网络配置**，然后单击**协议**  *\<InstanceName>*。  
   
      默认实例（未命名实例）作为 **MSSQLSERVER**列出。 如果您已经安装了某个命名实例，则您提供的名称将会列出。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 作为 **SQLEXPRESS**安装，除非你在安装过程中更改了该名称。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36025921"
   
 6.  在左窗格中，单击 **“SQL Server 服务”**。  
   
-7.  在右窗格中，右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，再单击“重新启动”。 当[!INCLUDE[ssDE](../includes/ssde-md.md)]重新启动后，它将在端口上侦听`49172`。  
+7.  在右窗格中，右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，再单击“重新启动”。 当[!INCLUDE[ssDE](../includes/ssde-md.md)]重新启动时，它将侦听端口`49172`。  
   
 ##  <a name="firewall"></a> 在防火墙中打开端口  
  防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要在防火墙打开时从其他计算机连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，必须打开防火墙的端口。  
@@ -95,7 +95,7 @@ ms.locfileid: "36025921"
   
 3.  在 **“规则类型”** 对话框中，选择 **“端口”**，然后单击 **“下一步”**。  
   
-4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”，然后键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的端口号。 为默认实例键入 1433。 类型`49172`如果要配置的命名的实例，且在上一任务中配置固定的端口。 单击“下一步” 。  
+4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”，然后键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的端口号。 为默认实例键入 1433。 类型`49172`如果要配置命名的实例，并在上一任务中配置了固定的端口。 单击“下一步” 。  
   
 5.  在 **“操作”** 对话框中，选择 **“允许连接”**，然后单击 **“下一步”**。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36025921"
     > [!NOTE]  
     >  如果你在“服务器名称”框中省略 **tcp:**，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  
   
-4.  在**身份验证**框中，确认**窗口身份验证**，然后单击**连接**。  
+4.  在中**身份验证**框中，确认**Window 身份验证**，然后单击**Connect**。  
   
 ##  <a name="browser"></a> 使用 SQL Server Browser 服务进行连接  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服务侦听对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 资源的传入请求，并提供有关计算机中安装的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的信息。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服务运行时，用户可以通过提供计算机名称和实例名（而不是计算机名称和端口号）连接到命名实例。 由于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 会接收未经身份验证的 UDP 请求，因此，不会在安装过程中始终处于打开状态。 有关该服务及其启用时间的说明，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。  

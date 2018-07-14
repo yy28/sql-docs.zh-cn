@@ -1,5 +1,5 @@
 ---
-title: 参数和返回代码中执行 SQL 任务 |Microsoft 文档
+title: 参数和返回代码中执行 SQL 任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
 - parameters [Integration Services]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 949fefc6beb432eaee882b3a842279a9531f3fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252329"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>执行 SQL 任务中的参数和返回代码
-  SQL 语句和存储的过程常常使用`input`参数，`output`参数和返回代码。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 你使用`Input`类型用于输入参数，`Output`对于输出参数，和`ReturnValue`返回代码的。  
+  SQL 语句和存储的过程常常使用`input`参数，`output`参数和返回代码。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 您使用`Input`类型用于输入参数`Output`输出参数和`ReturnValue`返回代码的。  
   
 > [!NOTE]  
 >  只有数据访问接口支持这些参数时，才可在执行 SQL 任务中使用它们。  
@@ -79,29 +79,29 @@ ms.locfileid: "36027291"
  连接管理器使用的访问接口不同时，某些 OLE DB 数据类型可能不受支持。 例如，Excel 驱动程序只识别有限的一组数据类型。 有关带有 Excel 驱动程序的 Jet 访问接口的行为的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。  
   
 #### <a name="using-parameters-with-ole-db-connection-managers"></a>在 OLE DB 连接管理器中使用参数  
- 如果执行 SQL 任务使用 OLE DB 连接管理器，则该任务的 BypassPrepare 属性可用。 应将此属性设置为`true`如果执行 SQL 任务使用参数使用 SQL 语句。  
+ 如果执行 SQL 任务使用 OLE DB 连接管理器，则该任务的 BypassPrepare 属性可用。 应将此属性设置为`true`如果执行 SQL 任务使用带有参数的 SQL 语句。  
   
  使用 OLE DB 连接管理器时，不能使用参数化的子查询，这是因为执行 SQL 任务不能通过 OLE DB 访问接口得到参数信息。 但是，您可以使用表达式将参数值串联到查询字符串中，并设置该任务的 SqlStatementSource 属性。  
   
-##  <a name="Date_and_time_data_types"></a> 使用日期和时间数据类型的参数  
+##  <a name="Date_and_time_data_types"></a> 日期和时间数据类型中使用参数  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>在 ADO.NET 和 ADO 连接管理器中使用日期和时间参数  
- 读取的数据时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]类型，`time`和`datetimeoffset`，执行 SQL 任务，使用[!INCLUDE[vstecado](../includes/vstecado-md.md)]或 ADO 连接管理器具有以下附加要求：  
+ 读取的数据时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]类型，`time`并`datetimeoffset`，使用一个执行 SQL 任务[!INCLUDE[vstecado](../includes/vstecado-md.md)]或 ADO 连接管理器具有以下附加要求：  
   
--   有关`time`数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器要求其参数类型的参数中存储此数据`Input`或`Output`，并且数据类型为`string`。  
+-   有关`time`数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器要求此数据存储在其参数类型的参数`Input`或`Output`，并且数据类型为`string`。  
   
--   有关`datetimeoffset`数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器需要此数据存储在以下参数之一：  
+-   有关`datetimeoffset`数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器要求此数据存储在以下参数之一：  
   
     -   参数类型为 `Input` 并且数据类型为 `string` 的参数。  
   
-    -   参数类型的参数`Output`或`ReturnValue`，并且数据类型为`datetimeoffset`， `string`，或`datetime2`。 如果选择了其数据类型为一个参数`string`或`datetime2`，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]将数据转换为字符串或 datetime2。  
+    -   参数类型的参数`Output`或`ReturnValue`，并且数据类型为`datetimeoffset`， `string`，或`datetime2`。 如果选择了其数据类型为一个参数`string`或`datetime2`，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]将数据转换为 string 或 datetime2。  
   
 -   ADO 连接管理器要求 `time` 或 `datetimeoffset` 数据存储在参数类型为 `Input` 或 `Output` 并且数据类型为 `adVarWchar` 的参数中。  
   
  有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型和它们如何映射到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) 和 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>在 OLE DB 连接管理器中使用日期和时间参数  
- 执行 SQL 任务时使用的 OLE DB 连接管理器，具有特定的存储要求的数据的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据类型， `date`， `time`， `datetime`， `datetime2`，和`datetimeoffset`。 您必须用下列参数类型之一来存储此数据：  
+ 执行 SQL 任务时使用的 OLE DB 连接管理器，具有数据的特定的存储要求[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据类型`date`， `time`， `datetime`， `datetime2`，并`datetimeoffset`。 您必须用下列参数类型之一来存储此数据：  
   
 -   NVARCHAR 数据类型的输入参数。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "36027291"
  如果数据未存储在相应的输入或输出参数中，包将失败。  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>在 ODBC 连接管理器中使用日期和时间参数  
- 在使用 ODBC 连接管理器，执行 SQL 任务具有数据的其中一条特定的存储要求[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据类型， `date`， `time`， `datetime`， `datetime2`，或`datetimeoffset`。 您必须用下列参数类型之一来存储此数据：  
+ 执行 SQL 任务在使用 ODBC 连接管理器，具有含之一的数据的特定的存储要求[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据类型`date`， `time`， `datetime`， `datetime2`，或`datetimeoffset`。 您必须用下列参数类型之一来存储此数据：  
   
 -   SQL_WVARCHAR 数据类型的 `input` 参数  
   
--   `output`与为下表中列出的适当的数据类型的参数。  
+-   `output`具有适当的数据类型下, 表中列出的参数。  
   
     |`Output` 参数类型|Date 数据类型|  
     |-------------------------------|--------------------|  
@@ -153,10 +153,10 @@ ms.locfileid: "36027291"
   
 -   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接类型使用参数名称 @parmMinProductID 和 @parmMaxProductID。  
   
-##  <a name="Stored_procedures"></a> 存储过程中使用参数  
+##  <a name="Stored_procedures"></a> 使用参数的存储过程  
  运行存储过程的 SQL 命令也可以使用参数映射。 与参数化查询的规则一样，参数标记和参数名称的使用规则取决于执行 SQL 所使用的连接管理器的类型。  
   
- 下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 存储的过程使用`@StartProductID`和`@CheckDate``input`参数。  
+ 下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 使用存储的过程`@StartProductID`并`@CheckDate``input`参数。  
   
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
@@ -170,9 +170,9 @@ ms.locfileid: "36027291"
  有关在 Transact-SQL 存储过程中使用输入和输出参数的详细信息，请参阅 [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)。  
   
 ##  <a name="Return_codes"></a> 获取返回代码的值  
- 存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，你使用的参数`ReturnValue`类型。  
+ 存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要执行 SQL 任务中实现返回代码，您使用的参数`ReturnValue`类型。  
   
- 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 `input` 参数。 有关如何使用参数标记和参数名称的规则是相同的所有参数类型-`Input`， `Output`，和`ReturnValue`。  
+ 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 `input` 参数。 有关如何使用参数标记和参数名称的规则是相同的所有参数类型 —`Input`， `Output`，和`ReturnValue`。  
   
  某些语法不支持参数文字。 在此情况下，必须通过使用变量来提供参数值。  
   
@@ -181,9 +181,9 @@ ms.locfileid: "36027291"
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
 |ADO|如果 IsQueryStoreProcedure 设置为`False`， `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 设置为`True`， `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|集 IsQueryStoreProcedure 设置为`True`。<br /><br /> `myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|将 IsQueryStoreProcedure 设置为`True`。<br /><br /> `myStoredProcedure`|  
   
- 如上表中语法所示，执行 SQL 任务使用 **“直接输入”** 源类型来运行存储过程。 执行 SQL 任务还可以使用 **“文件连接”** 源类型来运行存储过程。 无论是否执行 SQL 任务使用**直接输入**或**文件连接**源类型，使用的参数`ReturnValue`类型来实现返回代码。 有关如何配置执行 SQL 任务运行的 SQL 语句的源类型的详细信息，请参阅[执行 SQL 任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)。  
+ 如上表中语法所示，执行 SQL 任务使用 **“直接输入”** 源类型来运行存储过程。 执行 SQL 任务还可以使用 **“文件连接”** 源类型来运行存储过程。 无论执行 SQL 任务是使用**直接输入**或**文件连接**源类型，请使用参数的`ReturnValue`类型来实现返回代码。 有关如何配置执行 SQL 任务运行的 SQL 语句的源类型的详细信息，请参阅[执行 SQL 任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)。  
   
  有关在 Transact-SQL 存储过程中使用返回代码的详细信息，请参阅 [RETURN (Transact-SQL)](/sql/t-sql/language-elements/return-transact-sql)。  
   

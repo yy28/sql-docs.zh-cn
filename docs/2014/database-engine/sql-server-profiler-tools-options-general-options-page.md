@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-工具选项 （常规选项页） |Microsoft 文档
+title: SQL Server Profiler-工具选项 （常规选项页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
 helpviewer_keywords:
 - General Options dialog box
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fed3aec717b21b3c3486d5fd25b27892969de44c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 695c1fc16604c4ce0e0a49da67016acbaa663d50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243067"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-工具选项 （常规选项页）
   使用 **“常规选项”** 对话框可以查看或指定以下选项：  
@@ -77,12 +77,12 @@ ms.locfileid: "36027051"
  指定重播过程中的 Health Monitor 轮询间隔（秒）。 默认值为 60 秒。 使用此值，用户可以配置 Health Monitor 对终止候选项的轮询频率。  
   
 ## <a name="see-also"></a>请参阅  
- [连接到服务器后自动启动跟踪&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [设置跟踪显示默认值&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [重播跟踪表&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [连接到服务器后自动启动跟踪&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [设置跟踪显示默认值&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [重播跟踪表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重播跟踪文件 (SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [重播跟踪](../tools/sql-server-profiler/replay-traces.md)   
- [设置全局跟踪选项&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
+ [设置全局跟踪选项&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 事件探查器](../tools/sql-server-profiler/sql-server-profiler.md)  
   

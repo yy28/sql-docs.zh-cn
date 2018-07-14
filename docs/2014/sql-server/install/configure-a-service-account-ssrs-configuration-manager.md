@@ -1,5 +1,5 @@
 ---
-title: 配置服务帐户 （SSRS 配置管理器） |Microsoft 文档
+title: 配置服务帐户 （SSRS 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
 - service accounts [Reporting Services]
@@ -18,18 +18,18 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f680cf4f291bed7a82bb3b7aadd0e8c1871ef17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234487"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>配置服务帐户（SSRS 配置管理器）
-  在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装、 报表服务器 Web 服务、 报表管理器和后台处理应用程序在单个服务中运行。 在其下运行服务时则会定义在安装过程中的服务标识页中，指定的帐户，但你可以使用的帐户[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具，如果您希望使用其他帐户或更新的密码。  
+  在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装、 报表服务器 Web 服务、 报表管理器和后台处理应用程序在单个服务内运行。 定义的帐户在其下运行该服务是在安装过程时在服务标识页中指定的帐户，但你可以使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具，如果您希望使用其他帐户或更新密码。  
   
- 如果你必须配置为使用 SharePoint 集成模式下的报表服务器，使用更改服务帐户[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具也必须打开 SharePoint 管理中心，并使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授予数据库访问权限**页后，可以将报表服务器和实例设置重新应用。 此步骤将授予新服务帐户访问 SharePoint 数据库，这是集成所必需的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
+ 如果已配置为使用 SharePoint 集成模式下的报表服务器并通过更改服务帐户[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具中，您还必须打开 SharePoint 管理中心并使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授予数据库访问权限**页后，可以重新应用报表服务器和实例设置。 此步骤将新服务帐户授予访问 SharePoint 数据库所需的集成[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
   
  请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来更新服务帐户，以便可以同时更新依赖服务标识的其他设置。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36027869"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器。  
   
-2.  在“服务帐户”页上，选择描述您要使用的帐户类型的选项。 有关包含帐户类型的指定，请参阅建议[配置报表服务器服务帐户&#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+2.  在“服务帐户”页上，选择描述您要使用的帐户类型的选项。 有关如何指定，请参阅哪些帐户类型的建议[配置报表服务器服务帐户&#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 3.  如果选择了一个 Windows 用户帐户，请指定新的帐户名和密码。 帐户名不能超过 20 个字符。  
   

@@ -1,5 +1,5 @@
 ---
-title: CurrentStorageMode 元素 (ASSL) |Microsoft 文档
+title: CurrentStorageMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233817"
 ---
 # <a name="currentstoragemode-element-assl"></a>CurrentStorageMode 元素 (ASSL)
   确定父元素的当前存储模式。  
@@ -68,7 +68,7 @@ ms.locfileid: "36026213"
 |-----------|-----------------|  
 |*MOLAP*|父级使用多维 OLAP (MOLAP) 存储。|  
 |*ROLAP*|父级使用关系 OLAP (ROLAP) 存储。|  
-|*HOLAP*|父级使用混合 OLAP (HOLAP) 存储。 **注意：** 此值才有效的[分区](../objects/partition-element-assl.md)父元素。|  
+|*HOLAP*|父级使用混合 OLAP (HOLAP) 存储。 **注意：** 此值时才有效[分区](../objects/partition-element-assl.md)父元素。|  
   
  在 Analysis Management Objects (AMO) 对象模型中，与 `CurrentStorageMode` 的允许值对应的枚举为 <xref:Microsoft.AnalysisServices.StorageMode>。  
   

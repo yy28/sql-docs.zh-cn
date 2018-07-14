@@ -1,5 +1,5 @@
 ---
-title: 多维数据集、 分区和维度处理 (SSAS-多维) 的错误配置 |Microsoft 文档
+title: 多维数据集、 分区和维度处理 (SSAS-多维) 的错误配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79c0d187bf2da7d44c257cd9d6087b27086f4779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3edb4e923424def48ff3cacdd9eb8967f8cb6579
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275913"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>多维数据集、分区和维度处理的错误配置 (SSAS - Multidimensional)
   有关多维数据集、分区或维度对象的错误配置属性决定了当处理过程中出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
@@ -53,26 +53,26 @@ ms.locfileid: "36025001"
 -   [下一步](#bkmk_next)  
   
 ##  <a name="bkmk_exec"></a> 执行顺序  
- 服务器执行速度始终都`NullProcessing`规则，再`ErrorConfiguration`为每个记录的规则。 了解这一点十分重要，因为当两个或更多错误记录在键列中具有零值时，将 Null 值转换为零值的 Null 值处理属性可能会在随后引入重复键错误。  
+ 服务器始终会执行`NullProcessing`规则之前`ErrorConfiguration`为每个记录的规则。 了解这一点十分重要，因为当两个或更多错误记录在键列中具有零值时，将 Null 值转换为零值的 Null 值处理属性可能会在随后引入重复键错误。  
   
 ##  <a name="bkmk_default"></a> 默认行为  
  默认情况下，处理会在涉及键列的第一个错误出现时停止。 此行为由错误限制和停止处理指令控制，其中错误限制将允许错误数指定为零，而停止处理指令告知服务器在达到错误限制时停止处理。  
   
  由于 null 值、缺失值或重复值而触发错误的记录会转换为未知成员或被弃用。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不会导入违反数据完整性约束的数据。  
   
--   转换为未知成员默认情况下，由于`ConvertToUnknown`设置`KeyErrorAction`。 分配给未知成员的记录会在数据库中进行隔离，作为您在处理完成之后可能要调查的问题证据。  
+-   转换为未知成员默认情况下，由于`ConvertToUnknown`设置为`KeyErrorAction`。 分配给未知成员的记录会在数据库中进行隔离，作为您在处理完成之后可能要调查的问题证据。  
   
-     未知的成员排除从查询工作负荷，但它们将显示在某些客户端应用程序如果`UnknownMember`设置为**可见**。  
+     未知的成员会从查询工作负荷中排除，但是它们会显示在某些客户端应用程序如果`UnknownMember`设置为**Visible**。  
   
      若要跟踪转换为未知成员的 null 值数目，可以修改 `NullKeyConvertedToUnknown` 属性以便向日志或在“处理”窗口中报告这些错误。  
   
--   手动设置时，会`KeyErrorAction`属性`DiscardRecord`。  
+-   手动设置时，会`KeyErrorAction`属性设置为`DiscardRecord`。  
   
  通过错误配置属性，可以确定在出现错误时服务器的响应方式。 选项包括立即停止处理、继续处理但停止日志记录或继续处理并记录错误。 默认设置因错误严重性而异。  
   
  错误计数可跟踪出现的错误数。 设置上限时，服务器响应会在达到该限制时更改。 默认情况下，服务器在达到限制之后停止处理。 默认限制是 0，从而导致处理在出现进行计数的第一个错误时停止。  
   
- 高影响错误（如键字段中缺失键或存在 null 值）应尽快解决。 默认情况下，这些错误遵守`ReportAndContinue`服务器行为，服务器可以捕捉到错误，将其添加到错误计数，然后继续处理 （除了错误限制为零，因此处理立即停止）。  
+ 高影响错误（如键字段中缺失键或存在 null 值）应尽快解决。 默认情况下，这些错误遵循`ReportAndContinue`服务器行为，在服务器捕获错误，将其添加到错误计数，然后继续处理 （错误限制为零时除外，因此处理会立即停止）。  
   
  其他错误会生成，但是默认情况下不进行计数或记录（这是 `IgnoreError` 设置），因为错误不一定造成数据完整性问题。  
   
@@ -87,23 +87,23 @@ ms.locfileid: "36025001"
   
 |“属性”|，则“默认”|其他值|  
 |--------------|-------------|------------------|  
-|`CalculationError`<br /><br /> 当初始化错误配置时发生。|`IgnoreError` 既不进行记录和计数错误;处理过程继续，只要错误计数低于最大限制。|`ReportAndContinue` 记录和计数错误。<br /><br /> `ReportAndStop` 报告错误并立即停止处理，而不考虑错误限制。|  
-|`KeyNotFound`<br /><br /> 当事实数据表中的外键在相关维度表中没有匹配主键时（例如，“销售量”事实数据表的某个记录的产品 ID 在“产品”维度表中不存在）发生。 此错误可能会在分区处理或雪花状维度的维度处理过程中发生。|`ReportAndContinue` 记录和计数错误。|`ReportAndStop` 报告错误并立即停止处理，而不考虑错误限制。<br /><br /> `IgnoreError` 既不进行记录和计数错误;处理过程继续，只要错误计数低于最大限制。 触发此错误的记录在默认情况下会转换为未知成员，但是您通过更改 `KeyErrorAction` 属性弃用这些记录。|  
-|`KeyDuplicate`<br /><br /> 当在维度中发现重复属性键时发生。 在大多数情况下，存在重复属性键是可接受的，但是此错误会向您告知存在重复项，以便您可以检查维度中是否存在可能导致属性之间关系不一致的设计缺陷。|`IgnoreError` 既不进行记录和计数错误;处理过程继续，只要错误计数低于最大限制。|`ReportAndContinue` 记录和计数错误。<br /><br /> `ReportAndStop` 报告错误并立即停止处理，而不考虑错误限制。|  
-|`NullKeyNotAllowed`<br /><br /> 发生时`NullProcessing`  =  `Error`设置维度属性上或用于唯一标识成员的属性键列中存在 null 值。|`ReportAndContinue` 记录和计数错误。|`ReportAndStop` 报告错误并立即停止处理，而不考虑错误限制。<br /><br /> `IgnoreError` 既不进行记录和计数错误;处理过程继续，只要错误计数低于最大限制。 触发此错误的记录将转换为未知成员，默认情况下，但您可以设置`KeyErrorAction`属性弃用这些。|  
-|`NullKeyConvertedToUnknown`<br /><br /> 当 null 值随后转换为未知成员时发生。 设置`NullProcessing`  =  `ConvertToUnknown`对维度属性将触发此错误。|`IgnoreError` 既不进行记录和计数错误;处理过程继续，只要错误计数低于最大限制。|如果您将此错误视为参考信息，请保留默认值。 否则，可以选择 `ReportAndContinue` 以向“处理”窗口报告错误并针对错误限制对错误计数。<br /><br /> `ReportAndStop` 报告错误并立即停止处理，而不考虑错误限制。|  
+|`CalculationError`<br /><br /> 当初始化错误配置时发生。|`IgnoreError` 既不进行记录和计数错误;只要错误计数低于最大限制，继续进行处理。|`ReportAndContinue` 记录和计数错误。<br /><br /> `ReportAndStop` 报告该错误并立即停止处理，而不管错误限制如何。|  
+|`KeyNotFound`<br /><br /> 当事实数据表中的外键在相关维度表中没有匹配主键时（例如，“销售量”事实数据表的某个记录的产品 ID 在“产品”维度表中不存在）发生。 此错误可能会在分区处理或雪花状维度的维度处理过程中发生。|`ReportAndContinue` 记录和计数错误。|`ReportAndStop` 报告该错误并立即停止处理，而不管错误限制如何。<br /><br /> `IgnoreError` 既不进行记录和计数错误;只要错误计数低于最大限制，继续进行处理。 触发此错误的记录在默认情况下会转换为未知成员，但是您通过更改 `KeyErrorAction` 属性弃用这些记录。|  
+|`KeyDuplicate`<br /><br /> 当在维度中发现重复属性键时发生。 在大多数情况下，存在重复属性键是可接受的，但是此错误会向您告知存在重复项，以便您可以检查维度中是否存在可能导致属性之间关系不一致的设计缺陷。|`IgnoreError` 既不进行记录和计数错误;只要错误计数低于最大限制，继续进行处理。|`ReportAndContinue` 记录和计数错误。<br /><br /> `ReportAndStop` 报告该错误并立即停止处理，而不管错误限制如何。|  
+|`NullKeyNotAllowed`<br /><br /> 发生时`NullProcessing`  =  `Error`设置对维度属性或当用于唯一标识成员的属性键列中存在 null 值。|`ReportAndContinue` 记录和计数错误。|`ReportAndStop` 报告该错误并立即停止处理，而不管错误限制如何。<br /><br /> `IgnoreError` 既不进行记录和计数错误;只要错误计数低于最大限制，继续进行处理。 触发此错误的记录将转换为未知成员，默认情况下，但可以设置`KeyErrorAction`属性弃用这些记录。|  
+|`NullKeyConvertedToUnknown`<br /><br /> 当 null 值随后转换为未知成员时发生。 设置`NullProcessing`  =  `ConvertToUnknown`对维度属性会触发此错误。|`IgnoreError` 既不进行记录和计数错误;只要错误计数低于最大限制，继续进行处理。|如果您将此错误视为参考信息，请保留默认值。 否则，可以选择 `ReportAndContinue` 以向“处理”窗口报告错误并针对错误限制对错误计数。<br /><br /> `ReportAndStop` 报告该错误并立即停止处理，而不管错误限制如何。|  
   
  **常规属性**  
   
 |**属性**|**值**|  
 |------------------|----------------|  
-|`KeyErrorAction`|这是服务器执行的操作时`KeyNotFound`发生错误。 与此错误的有效响应包括`ConvertToUnknown`或`DiscardRecord`。|  
+|`KeyErrorAction`|这是服务器所执行的操作时`KeyNotFound`发生错误。 此错误的有效响应包括`ConvertToUnknown`或`DiscardRecord`。|  
 |`KeyErrorLogFile`|这是用户定义的文件名，必须具有 .log 文件扩展名，位于服务帐户拥有读/写权限的文件夹中。 此日志文件仅包含处理期间生成的错误。 如果您需要详细信息，请使用网络流量记录器。|  
 |`KeyErrorLimit`|这是在处理失败前服务器将允许的最大数据完整性错误数目。 值为 -1 表示没有限制。 默认值为 0，表示处理在发生第一个错误时停止。 您还可以将其设置为整数。|  
 |`KeyErrorLimitAction`|这是键错误数达到上限时服务器执行的操作。 设置为 **“停止处理”** 时，处理立即终止。 设置为 **“停止日志记录”** 时，处理继续进行，但是错误不再进行报告或计数。|  
   
 ##  <a name="bkmk_tools"></a> 在何处设置错误配置属性  
- 使用部署数据库之后的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的属性页，或是 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目中的属性页。 两个工具中有相同的属性。 你还可以设置错误配置属性更改服务器默认值对于错误配置，并在 msmdrsrv.ini 文件中`Batch`和`Process`如果处理作为脚本操作运行的命令。  
+ 使用部署数据库之后的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的属性页，或是 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目中的属性页。 两个工具中有相同的属性。 您还可以设置错误配置属性以更改针对错误配置，并在服务器默认值在 msmdrsrv.ini 文件中`Batch`和`Process`如果处理作为脚本操作运行的命令。  
   
  可以对可作为独立操作处理的任何对象设置错误配置。  
   
@@ -117,19 +117,19 @@ ms.locfileid: "36025001"
   
 1.  在解决方案资源管理器中，双击某个维度或多维数据集。 `ErrorConfiguration` 下面的窗格中显示在属性。  
   
-2.  或者，只有单个维度，右键单击解决方案资源管理器中的维度中，选择`Process`，然后选择**更改设置**处理维度对话框中。 错误配置选项随即出现在“维度键错误”选项卡上。  
+2.  或者，对于只有单个维度，右键单击解决方案资源管理器中的维度，选择`Process`，然后选择**更改设置**处理维度对话框中。 错误配置选项随即出现在“维度键错误”选项卡上。  
   
 ##  <a name="bkmk_missing"></a> 缺失键 (KeyNotFound)  
  缺失键值的记录无法添加到数据库中，即使在忽略错误或错误限制是无限时也是如此。  
   
- 服务器生成`KeyNotFound`分区处理，当表中的事实记录包含外键值，但是外键在相关的维度表中有没有对应记录时出错。 当处理的相关或雪花状维度表中一个维度中的记录指定的外键在相关维度中不存在时，也会发生此错误。  
+ 服务器生成`KeyNotFound`分区处理，在事实数据表的记录包含外键值，但外键在相关的维度表中有没有对应记录时出错。 当处理的相关或雪花状维度表中一个维度中的记录指定的外键在相关维度中不存在时，也会发生此错误。  
   
- 发生 `KeyNotFound` 错误时，会将有问题的记录分配给未知成员。 通过控制此行为**密钥操作**、 设置为`ConvertToUnknown`，以便你可以查看分配的记录，以开展进一步调查。  
+ 发生 `KeyNotFound` 错误时，会将有问题的记录分配给未知成员。 通过控制此行为**键操作**、 设置为`ConvertToUnknown`，以便可以查看分配的记录做进一步调查。  
   
 ##  <a name="bkmk_nullfact"></a> 事实数据表中的 Null 外键 (KeyNotFound)  
  默认情况下，事实数据表的外键列中的 Null 值转换为零。 假设零不是有效的外键值，`KeyNotFound` 错误会进行记录并针对错误限制（默认情况下是零）进行计数。  
   
- 要允许处理继续进行，可以在转换 Null 值并检查是否存在错误之前处理 Null 值。 若要执行此操作，将设置`NullProcessing`到`Error`。  
+ 要允许处理继续进行，可以在转换 Null 值并检查是否存在错误之前处理 Null 值。 若要执行此操作，设置`NullProcessing`到`Error`。  
   
 #### <a name="set-nullprocessing-property-on-a-measure"></a>对度量值设置 NullProcessing 属性  
   
@@ -137,20 +137,20 @@ ms.locfileid: "36025001"
   
 2.  在“度量值”窗格中右键单击某个度量值，然后选择“属性”。  
   
-3.  在属性中，展开**源**查看`NullProcessing`属性。 它在默认情况下设置为 **“Automatic”** ，这对于 OLAP 项，会将包含数字数据的字段的 null 值转换为零。  
+3.  在属性中，展开**源**若要查看`NullProcessing`属性。 它在默认情况下设置为 **“Automatic”** ，这对于 OLAP 项，会将包含数字数据的字段的 null 值转换为零。  
   
-4.  将值更改`Error`排除具有 null 值，避免 null 到数字 （零） 转换的任何记录。 此修改，可以避免重复键错误与具有零键列中的多个记录，并还能避免`KeyNotFound`零值的外键等效相关的维度表中没有主键时的错误。  
+4.  将值更改为`Error`以排除任何具有 null 值，从而避免 null 到数字 （零） 转换的记录。 此修改可以避免多个记录的键列中具有零个相关的重复键错误，并还避免`KeyNotFound`零值外键没有主键等效项相关的维度表中时的错误。  
   
 ##  <a name="bkmk_nulldim"></a> 维度中的 Null 键  
- 若要继续处理雪花状维度中的外键中发现 null 值时，处理 null 值第一次通过设置`NullProcessing`上`KeyColumn`的维度属性。 这会在 `KeyNotFound` 错误发生之前弃用或转换记录。  
+ 若要在雪花状维度中的外键中发现 null 值时继续处理，处理 null 值首先通过设置`NullProcessing`上`KeyColumn`的维度属性。 这会在 `KeyNotFound` 错误发生之前弃用或转换记录。  
   
  有两个选项用于对维度属性处理 null 值：  
   
--   设置`NullProcessing` = `UnknownMember`以将具有 null 值的记录分配给未知成员。 这会生成默认情况下忽略的 `NullKeyConvertedToUnknown` 错误。  
+-   设置`NullProcessing` = `UnknownMember`若要将具有 null 值的记录分配给未知成员。 这会生成默认情况下忽略的 `NullKeyConvertedToUnknown` 错误。  
   
--   设置`NullProcessing` = `Error`排除具有 null 值的记录。 这将生成`NullKeyNotAllowed`错误，记录和计数接近键错误限制。 可以设置错误配置属性**不允许 Null 键**到`IgnoreError`以允许处理继续。  
+-   设置`NullProcessing` = `Error`要排除具有 null 值的记录。 这将产生`NullKeyNotAllowed`错误，要进行记录和计数针对键错误限制。 可以设置错误配置属性**不允许 Null 键**到`IgnoreError`以允许处理继续进行。  
   
- Null 值对于非键字段可能是个问题，因为 MDX 查询根据 Null 值是解释为零值还是空值返回不同结果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供 Null 值处理选项，使您可以预定义所需的转换行为。 请参阅[定义 Unknown Member and Null Processing Properties](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)和<xref:Microsoft.AnalysisServices.NullProcessing>有关详细信息。  
+ Null 值对于非键字段可能是个问题，因为 MDX 查询根据 Null 值是解释为零值还是空值返回不同结果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供 Null 值处理选项，使您可以预定义所需的转换行为。 请参阅[定义未知成员和 Null 处理属性](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)和<xref:Microsoft.AnalysisServices.NullProcessing>有关详细信息。  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>对维度属性设置 NullProcessing 属性  
   
@@ -158,21 +158,21 @@ ms.locfileid: "36025001"
   
 2.  在“属性”窗格中右键单击某个属性，然后选择“属性”。  
   
-3.  在属性中，展开**KeyColumns**查看`NullProcessing`属性。 它在默认情况下设置为 **“Automatic”** ，这会将包含数字数据的字段的 null 值转换为零。 将值更改为`Error`或`UnknownMember`。  
+3.  在属性中，展开**KeyColumns**若要查看`NullProcessing`属性。 它在默认情况下设置为 **“Automatic”** ，这会将包含数字数据的字段的 null 值转换为零。 将值更改为任一`Error`或`UnknownMember`。  
   
-     此修改将移除触发的基本条件`KeyNotFound`通过弃用或转换记录之前对其进行检查是否有错误。  
+     此修改会删除基础条件来触发`KeyNotFound`通过弃用或转换记录之前检查是否有错误。  
   
-     根据错误配置，这些操作中的任意一个都可以导致进行报告和计数的错误。 你可能需要调整其他属性，例如设置`KeyNotFound`到`ReportAndContinue`或`KeyErrorLimit`为非零值，以允许处理继续时这些错误报告和计数。  
+     根据错误配置，这些操作中的任意一个都可以导致进行报告和计数的错误。 可能需要调整其他属性，如设置`KeyNotFound`到`ReportAndContinue`或`KeyErrorLimit`为非零值，以允许处理继续进行时这些错误报告和计数。  
   
 ##  <a name="bkmk_dupe"></a> 导致不一致关系的重复键 (KeyDuplicate)  
  默认情况下，存在重复键不会停止处理，但是会忽略该错误，并从数据库中排除重复记录。  
   
- 若要更改此行为，设置`KeyDuplicate`到`ReportAndContinue`或`ReportAndStop`报告此错误。 随后可以检查错误以确定维度设计中的潜在缺陷。  
+ 若要更改此行为，请设置`KeyDuplicate`到`ReportAndContinue`或`ReportAndStop`以报告错误。 随后可以检查错误以确定维度设计中的潜在缺陷。  
   
 ##  <a name="bkmk_limit"></a> 更改错误限制或错误限制操作  
- 可以提高错误限制以允许处理过程中出现更多错误。 没有有关提高错误限制的指南；合适的值因具体情况而异。 错误限制指定为`KeyErrorLimit`中`ErrorConfiguration`中的属性[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，或被**错误**在维度的属性的错误配置选项卡，多维数据集，or measure groups 中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 可以提高错误限制以允许处理过程中出现更多错误。 没有有关提高错误限制的指南；合适的值因具体情况而异。 错误限制指定为`KeyErrorLimit`中`ErrorConfiguration`中的属性[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，或被**错误数**维度属性错误配置选项卡，多维数据集或度量值组中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- 达到错误限制之后，便可以指定处理停止或日志记录停止。 例如，假设将操作设置为`StopLogging`上一个错误限制为 100。 出现第 101 个错误时，处理继续进行，但是错误不再进行记录或计数。 错误限制操作指定为`KeyErrorLimitAction`中`ErrorConfiguration`中的属性[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，或被**错误操作**在维度的属性的错误配置选项卡，多维数据集，or measure groups 中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ 达到错误限制之后，便可以指定处理停止或日志记录停止。 例如，假设将操作设置为`StopLogging`错误限制 100。 出现第 101 个错误时，处理继续进行，但是错误不再进行记录或计数。 错误限制操作指定为`KeyErrorLimitAction`中`ErrorConfiguration`中的属性[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，或被**错误要执行的操作**维度属性错误配置选项卡，多维数据集或度量值组中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="bkmk_log"></a> 设置错误日志路径  
  可以指定文件以存储在处理过程中报告的键相关错误消息。 默认情况下，错误在交互处理过程中在“处理”窗口中可见，随后会在关闭窗口或会话时被弃用。 日志仅包含与键相关的错误信息，与处理对话框中报告的错误相同。  

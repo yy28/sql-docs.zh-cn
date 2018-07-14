@@ -1,5 +1,5 @@
 ---
-title: 确认卸载选项 |Microsoft 文档
+title: 确认卸载选项 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Uninstall options, verify
 ms.assetid: a5f353fa-1bb4-495c-bf86-77cfa5bc6c78
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9df30304c2451673e119e2f6f97f7c2ea737b0a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 183f3fc370672662df5b84b5314ea461ea9c3c94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175013"
 ---
 # <a name="verify-uninstall-options"></a>确认卸载选项
   确认您的选择，然后单击 **“下一步”** 继续。  

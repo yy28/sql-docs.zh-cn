@@ -1,5 +1,5 @@
 ---
-title: 报表生成器中 SQL Server 2014 |Microsoft 文档
+title: SQL Server 2014 中的报表生成器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261923"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的报表生成器
-  报表生成器是报表创作环境的业务用户想使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]机构环境。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 您可以在报表生成器中预览报表，也可以将报表发布到报表服务器或处于 SharePoint 集成模式下的报表服务器，让其他人可以运行它。  
+  报表生成器是一种报表创作环境的业务用户更愿意[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office 环境。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 您可以在报表生成器中预览报表，也可以将报表发布到报表服务器或处于 SharePoint 集成模式下的报表服务器，让其他人可以运行它。  
   
  本图中的报表包含一个矩阵，带有行组和列组、迷你图、指示器，以及角单元中的摘要饼图，还附带一个地图，有两组地理数据，以颜色和圆圈大小表示。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "36027393"
   
 ##  <a name="JumpStartReptCreation"></a> 快速开始报表创建  
   
--   **启动报表 withreport 部件**由团队其他人创建。 报表部件是已单独发布到报表服务器或与报表服务器集成的 SharePoint 站点上的报表项。 它们可以在其他报表中重用。 表、矩阵、图表和图像等报表项可以作为报表部件发布。  
+-   **开始将报表 withreport 部件**由你的团队中的其他人创建的。 报表部件是已单独发布到报表服务器或与报表服务器集成的 SharePoint 站点上的报表项。 它们可以在其他报表中重用。 表、矩阵、图表和图像等报表项可以作为报表部件发布。  
   
--   **使用共享数据集启动**由团队其他人创建。 共享数据集是基于保存到报表服务器或与报表服务器集成的 SharePoint 站点上的共享数据源的查询。  
+-   **共享数据集开始**由你的团队中的其他人创建的。 共享数据集是基于保存到报表服务器或与报表服务器集成的 SharePoint 站点上的共享数据源的查询。  
   
 -   **使用表、矩阵或图表向导创建报表**。 选择数据源连接，拖放字段以创建数据集查询，选择布局和样式并自定义报表。  
   
--   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是来自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的空间数据。 你还可以添加[!INCLUDE[msCoName](../../../includes/msconame-md.md)]必应地图图块背景。  
+-   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是来自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的空间数据。 您还可以添加[!INCLUDE[msCoName](../../../includes/msconame-md.md)]必应地图图块背景。  
   
 
   
@@ -51,9 +51,9 @@ ms.locfileid: "36027393"
   
 -   **可基于各种数据源生成报表。** 使用具有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]托管数据提供程序、OLE DB 提供程序或 ODBC 数据源的任何数据源类型的数据生成报表。 可以创建使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion 及其他数据库中的关系数据和多维数据的报表。 您可以使用 XML 数据处理扩展插件从任何 XML 数据源检索数据。 可以使用表值函数来设计自定义数据源。  
   
--   **修改现有报表。** 通过使用报表生成器，您可以自定义和更新在中创建的报表[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器。  
+-   **修改现有报表。** 通过使用报表生成器，您可以自定义和更新中创建的报表[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器。  
   
--   **修改数据**通过筛选、 分组和排序数据，或添加公式或表达式。  
+-   **修改数据**通过筛选、 分组和排序数据，或通过添加公式或表达式。  
   
 -   **添加图表、仪表、迷你图和指示器** ，以直观的形式汇总数据，使大量聚合信息一目了然。  
   

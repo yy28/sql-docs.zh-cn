@@ -1,5 +1,5 @@
 ---
-title: 解决升级问题 |Microsoft 文档
+title: 解决升级问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
 - Upgrade Advisor [SQL Server], reference
@@ -31,22 +31,22 @@ helpviewer_keywords:
 - fixing upgrade issues [Upgrade Advisor]
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6072fb3c1d52048832bd6d07f34828c84eb2d491
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a428ddc49d047e9aac42f506917176eee977d0d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244058"
 ---
 # <a name="resolving-upgrade-issues"></a>解决升级问题
   本节主题介绍可以检测到的升级问题以及虽然检测不到但可能会对升级和升级后的使用造成影响的问题。 这些问题按 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件编排。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [最新升级问题](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
+-   [最新的升级问题](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
   
 -   [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36027135"
   
 -   [分离数据库 ID 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
--   [重命名登录名与固定的服务器角色名称匹配](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
+-   [重命名与固定服务器角色名称匹配的登录名](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
 -   [重命名用户 sys](../../../2014/sql-server/install/rename-user-sys.md)  
   

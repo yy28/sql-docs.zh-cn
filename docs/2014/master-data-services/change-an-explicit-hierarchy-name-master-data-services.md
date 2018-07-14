@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4b9ae4e9db2e2d48def332b337ff9788e26464e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e56e52948282d49db948b76fd1b3837f656fd8de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267073"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>更改显式层次结构名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改显式层次结构的名称。  
@@ -45,11 +45,11 @@ ms.locfileid: "36024596"
   
 5.  单击 **“编辑所选实体”**。  
   
-6.  上**编辑实体**页上，单击你想要重命名此显式层次结构。  
+6.  上**编辑实体**页上，单击你想要重命名的显式层次结构。  
   
 7.  单击**编辑所选层次结构**。  
   
-8.  在**显式层次结构名称**框中，键入层次结构的更新的名称。  
+8.  在中**显式层次结构名称**框中，键入层次结构的更新的名称。  
   
 9. 单击**保存层次结构**。  
   

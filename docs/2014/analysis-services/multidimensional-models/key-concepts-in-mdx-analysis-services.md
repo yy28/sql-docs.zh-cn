@@ -1,5 +1,5 @@
 ---
-title: MDX (Analysis Services) 中的重要概念 |Microsoft 文档
+title: MDX (Analysis Services) 中的重要概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272013"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 中的重要概念 (Analysis Services)
   在使用多维表达式 (MDX) 查询多维数据或创建多维数据集中的 MDX 表达式之前，有必要了解多维的概念和术语。  
   
  最好从已了解的数据汇总示例开始，然后查看 MDX 如何与之相关。 这是一个在 Excel 中创建的数据透视表，由 Analysis Services 示例多维数据集中的数据填充。  
   
- ![数据透视表的度量值和维度调出](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "的度量值和维度调出的数据透视表")  
+ ![数据透视表的度量值和维度标注](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "度量值和维度调出的数据透视表")  
   
 ## <a name="measures-and-dimensions"></a>度量值和维度  
  Analysis Services 多维数据集包含度量值、维度和维度属性，所有这些在数据透视表示例中都显而易见。  
@@ -65,11 +65,11 @@ ms.locfileid: "36024444"
   
  像这样的聚合是预先计算并提前存储好的，这就是 Analysis Services 快速查询性能的秘密之一。  
   
- ![具有标注的所有成员的数据透视表](../media/ssas-keyconcepts-pivot2-allmember.png "调出的所有成员包含数据透视表")  
+ ![调出的所有成员的 PivotTable](../media/ssas-keyconcepts-pivot2-allmember.png "调出的所有成员的数据透视表")  
   
  展开层次结构，最终会看到最低级别。 这称为 **叶成员**。 叶成员是层次结构中不包含子级的成员。 在此示例中，“澳大利亚”是叶成员。  
   
- ![包含叶成员杨柳 dout 数据透视表](../media/ssas-keyconcepts-pivot3-leafparent.PNG "包含叶成员杨柳 dout 数据透视表")  
+ ![数据透视表的叶成员杨柳 dout](../media/ssas-keyconcepts-pivot3-leafparent.PNG "包含叶成员杨柳 dout 数据透视表")  
   
  其上的任何成员称为 **父成员**。 “太平洋地区”是“澳大利亚”的父级。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36024444"
   
 |||  
 |-|-|  
-|![具有标注的平衡层次结构的数据透视表](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "调出的均衡层次结构包含数据透视表")|**均衡层次结构** 是顶级成员与任何叶成员之间存在相同级别数的层次结构。<br /><br /> **自然层次结构** 是从基础数据中自然产生的层次结构。 常见的示例是“国家/地区-区域-城市”、“年-月-日”或“类别-子类别-模型”，每个从属级别都以可预测的方式从父级中流出。<br /><br /> 在多维模型中，大多数层次结构都是均衡层次结构，其中许多也属于自然层次结构。<br /><br /> 另一个相关建模术语是`user-defined hierarchy`，通常会因使用作为属性层次结构与对比度。 它仅仅表示由 BI 开发人员创建的层次结构，与 Analysis Services 在您定义属性时自动生成的属性层次结构相反。|  
+|![调出平衡层次结构的 PivotTable](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "调出平衡层次结构的 PivotTable")|**均衡层次结构** 是顶级成员与任何叶成员之间存在相同级别数的层次结构。<br /><br /> **自然层次结构** 是从基础数据中自然产生的层次结构。 常见的示例是“国家/地区-区域-城市”、“年-月-日”或“类别-子类别-模型”，每个从属级别都以可预测的方式从父级中流出。<br /><br /> 在多维模型中，大多数层次结构都是均衡层次结构，其中许多也属于自然层次结构。<br /><br /> 另一个相关的建模术语是`user-defined hierarchy`，常用于与属性层次结构形成对比。 它仅仅表示由 BI 开发人员创建的层次结构，与 Analysis Services 在您定义属性时自动生成的属性层次结构相反。|  
   
  **不均衡层次结构**  
   
 |||  
 |-|-|  
-|![具有标注的不规则层次结构的数据透视表](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "调出的不规则层次结构包含数据透视表")|**不规则层次结构** 或 **不均衡层次结构** 是顶级与叶成员之间存在不同级别数的层次结构。 同样，这也是由 BI 开发人员创建的层次结构，但在这种情况下数据中存在间隔。<br /><br /> 在 AdventureWorks 示例模型中，“销售区域”阐释了不规则层次结构，因为在本示例中，美国具有其他国家/地区不存在的额外的级别 (“区域”)。<br /><br /> 如果客户端应用程序不能以较好的方式来处理不规则层次结构，则该层次结构对于 BI 开发人员是一个挑战。 在 Analysis Services 模型中，可以创建一个显式定义多级别数据间的关系的 **父子层次结构** ，以便消除一个级别与下一个级别的关联方式的不明确性。 请参阅[父-子层次结构](parent-child-dimension.md)有关详细信息。|  
+|![调出不规则层次结构的 PivotTable](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "调出不规则层次结构的 PivotTable")|**不规则层次结构** 或 **不均衡层次结构** 是顶级与叶成员之间存在不同级别数的层次结构。 同样，这也是由 BI 开发人员创建的层次结构，但在这种情况下数据中存在间隔。<br /><br /> 在 AdventureWorks 示例模型中，“销售区域”阐释了不规则层次结构，因为在本示例中，美国具有其他国家/地区不存在的额外的级别 (“区域”)。<br /><br /> 如果客户端应用程序不能以较好的方式来处理不规则层次结构，则该层次结构对于 BI 开发人员是一个挑战。 在 Analysis Services 模型中，可以创建一个显式定义多级别数据间的关系的 **父子层次结构** ，以便消除一个级别与下一个级别的关联方式的不明确性。 请参阅[父-子层次结构](parent-child-dimension.md)有关详细信息。|  
   
 ## <a name="key-attributes"></a>键属性  
  模型是依赖键和索引进行关联的相关对象的集合。 Analysis Services 模型也是如此。 每个维度（等同于关系模型中的表）均存在一个键属性。 **键属性** 用于事实数据表（度量值组）的外键关系。 维度中的所有非键属性均（直接或间接）链接至键属性。  
@@ -112,7 +112,7 @@ ms.locfileid: "36024444"
   
  若要设置粒度属性，请使用 SQL Server Data Tools 中多维数据集设计器的“维度用法”选项卡。 在 AdventureWorks 示例模型中，“日期”维度的键属性是“日期”键。 对于“销售订单”，粒度属性等同于键属性。 对于“销售目标”，粒度级别是季度，因此粒度属性相应地设置为“日历季度”。  
   
- ![模型显示粒度属性](../media/ssas-keyconcepts-granularityattrib.png "模型显示粒度属性")  
+ ![显示粒度属性的模型](../media/ssas-keyconcepts-granularityattrib.png "显示粒度属性的模型")  
   
 > [!NOTE]  
 >  如果粒度属性与键属性不同，则所有非键属性都必须直接或间接地链接到粒度属性。 在多维数据集中，粒度属性定义维度的粒度。  
@@ -146,7 +146,7 @@ ms.locfileid: "36024444"
   
 -   [基本 MDX 脚本&#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
   
--   [多维建模&#40;通恒教程&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
+-   [多维建模&#40;Adventure Works 教程&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集空间](mdx/cube-space.md)   

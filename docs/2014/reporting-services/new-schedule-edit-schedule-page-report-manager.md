@@ -1,5 +1,5 @@
 ---
-title: 新的计划： 编辑计划页 （报表管理器） |Microsoft 文档
+title: '新计划: 编辑计划页 （报表管理器） |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262003"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新的计划： 编辑计划页 （报表管理器）
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>新计划: 编辑计划页 （报表管理器）
   使用“新建计划”/“编辑计划”页可为报表创建计划。 您可以与订阅一起使用计划，以刷新缓存的报表，以及按独立项的形式创建快照或在报表历史记录中创建快照。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  您只能为以无人参与的方式运行的报表创建计划。 若要以无人参与方式运行报表，您需要将报表数据源凭据存储到报表服务器数据库中。 有关详细信息，请参阅[数据源属性页&#40;报表管理器&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36025165"
   
 -   **“小时”** 可定义以每小时为间隔运行的计划。 使用 **“开始日期和结束日期”** 部分可以指定运行计划的日期。  
   
--   **“天”** 可以定义在所选日的特定时分运行的计划。 你可以通过以下方式指定天数： 每个\<*天*>，每个工作日，每个\<*数*> 天。 选择一个选项会禁用其他选项，即使其他天已显示为选中状态也是如此。  
+-   **“天”** 可以定义在所选日的特定时分运行的计划。 您可以按以下方式指定日期： 每个\<*天*>、 每个工作日和每个\<*数*> 天。 选择一个选项会禁用其他选项，即使其他天已显示为选中状态也是如此。  
   
 -   **“周”** 可定义以每周为间隔在特定时分运行的计划。 时间间隔可以是完整的周（例如，每两周）或一周中的几天。  
   

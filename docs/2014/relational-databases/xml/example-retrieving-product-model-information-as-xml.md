@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c6eead2a8016572cf8fe2491463fb396218e58f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f79b3c047edccbf53a7b5f1ba4b6116703792e1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262253"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>示例：以 XML 形式检索产品型号信息
   下面的查询将返回产品型号信息。 `RAW` 子句中指定了 `FOR XML` 模式。  
@@ -69,7 +69,7 @@ GO
 </row>  
 ```  
   
- 你可以选择指定`TYPE`指令来检索作为结果`xml`类型。 `TYPE` 指令不会更改结果的内容。 只影响结果的数据类型。  
+ 您可以选择指定`TYPE`指令检索将结果作为`xml`类型。 `TYPE` 指令不会更改结果的内容。 只影响结果的数据类型。  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: 配置或修复 PowerPivot for SharePoint 2010 （PowerPivot 配置工具） |Microsoft 文档
+title: 配置或修复 PowerPivot for SharePoint （PowerPivot 配置工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aad2530c6f8506dd3da6224c9d91f5ae46f9f27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284263"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）
-  要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]安装向导正在安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。  
+  要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]安装向导安装 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36025003"
 ##  <a name="bkmk_before"></a> 开始之前  
  PowerPivot for SharePoint 2010 配置工具扫描程序文件、注册表设置和可用端口。 若要充分利用该工具，请先查看以下内容。  
   
--   运行配置工具中，常规要求[PowerPivot 配置工具](power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
+-   若要运行配置工具的一般要求[PowerPivot 配置工具](power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
 -   PowerPivot for SharePoint 2010 需要配置为使用经典模式身份验证的 Web 应用程序。 如果 PowerPivot for SharePoint 2010 配置工具为您创建了应用程序，则该应用程序将配置为经典模式。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36025003"
  该工具的第一页提供了用于配置 SharePoint 场的输入值汇总。 除了您提供的输入值之外，将使用默认值来配置系统。 默认名称用于服务应用程序、服务应用程序数据库和服务应用程序属性。  
   
 > [!TIP]  
->  如果 PowerPivot 配置工具扫描计算机并在左窗格中返回一个空白任务列表，则无需配置任何功能和设置。 若要修改 SharePoint 或 PowerPivot 配置，请使用 Windows PowerShell 或 SharePoint 管理中心的管理页。 有关详细信息，请参阅[管理中心在 PowerPivot 服务器管理和配置](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
+>  如果 PowerPivot 配置工具扫描计算机并在左窗格中返回一个空白任务列表，则无需配置任何功能和设置。 若要修改 SharePoint 或 PowerPivot 配置，请使用 Windows PowerShell 或 SharePoint 管理中心的管理页。 有关详细信息，请参阅[PowerPivot 服务器管理和配置在管理中心内](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
  服务帐户的值将用于多个服务。 例如，PowerPivot 配置工具使用第一页上的默认帐户来设置所有应用程序池标识。 可以通过在管理中心中修改服务应用程序属性在以后更改这些帐户。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36025003"
 ##  <a name="bkmk_steps"></a> 配置步骤  
  只有在本地服务器上安装了 PowerPivot for SharePoint 2010 后，才会显示指向该配置工具的链接。  
   
-1.  上**启动**菜单上，指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot 配置工具**.  
+1.  上**启动**菜单，依次指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot 配置工具**.  
   
 2.  单击 **“配置或修复 PowerPivot for SharePoint”**。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36025003"
   
 10. 单击 **“运行”** 来处理该任务列表中的所有操作。 **“运行”** 按钮将在您验证操作之后启用。 如果 **“运行”** 未启用，请首先单击 **“验证”** 。  
   
-11. [Verify a PowerPivot for SharePoint 安装](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)。  
+11. [验证 PowerPivot for SharePoint 安装](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)。  
   
 ##  <a name="bkmk_input"></a> 用于配置服务器的输入值  
  PowerPivot 配置工具组合使用您键入的输入值以及它检测到或自动使用的默认值。  
@@ -111,7 +111,7 @@ ms.locfileid: "36025003"
 ||Web 应用程序数据库服务器|默认值（如果需要）|将预先选择默认数据库实例以便存储应用程序数据库，但您可以在该工具中指定不同的 SQL Server 实例。|  
 ||Web 应用程序数据库名称|默认值（如果需要）|该数据库名称基于 SharePoint 的文件命名约定，但您可以选择其他名称。|  
 |**部署 Web 应用程序解决方案**|URL|默认值（如果需要）|默认 URL 来自默认的 Web 应用程序。|  
-||最大文件大小(MB)|默认值（如果需要）|默认设置为 2047。 SharePoint 文档库也有一个最大大小，且 PowerPivot 设置不应超过此文档库设置。 有关详细信息，请参阅[配置最大文件上载大小&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。|  
+||最大文件大小(MB)|默认值（如果需要）|默认设置为 2047。 SharePoint 文档库也有一个最大大小，且 PowerPivot 设置不应超过此文档库设置。 有关详细信息，请参阅[配置最大文件上传大小&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。|  
 |**创建网站集**|网站管理员|默认值（如果需要）|此工具将使用默认帐户。 您可以在 **“创建网站集”** 页中覆盖默认帐户。|  
 ||联系人电子邮件|默认值（如果需要）|如果在服务器上配置了 Microsoft Outlook，则该工具将使用当前用户的电子邮件地址。 否则，将使用占位符值。|  
 ||网站 URL|默认值（如果需要）|该工具将创建网站 URL，并且使用与 SharePoint 相同的 URL 命名约定。|  
@@ -182,7 +182,7 @@ ms.locfileid: "36025003"
  您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 PowerPivot 数据的站点上改变权限和配置设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ### <a name="add-servers-or-applications"></a>添加服务器或应用程序  
- 一段时间后，如果您确定需要附加的数据存储和处理能力，则可以将第二个 PowerPivot for SharePoint 服务器实例添加到场中。 有关说明，请参阅[部署清单： 横向扩展通过将 PowerPivot 服务器添加到 SharePoint 2010 场](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
+ 一段时间后，如果您确定需要附加的数据存储和处理能力，则可以将第二个 PowerPivot for SharePoint 服务器实例添加到场中。 有关说明，请参阅[部署核对清单： 通过向 SharePoint 2010 场添加 PowerPivot 服务器来进行扩展](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="additional-resources"></a>其他资源  
  ![SharePoint 设置](media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,25 +20,25 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b8de78b135245c36d11f4dfb96a993fd0bbc4dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd6b99c23bd2a8ef82597025c402f0f881c13982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170984"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包括功能和工具，可用于排除中的控制流[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 并[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包括功能和工具，可用来进行故障排除中的控制流[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包。  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支持在容器和任务上的断点。  
+-   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支持容器和任务上的断点。  
   
 -   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器在运行时提供进度报告。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 提供了调试窗口。  
   
 ## <a name="breakpoints"></a>断点  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器提供**设置断点**对话框中，在其中你可以通过启用中断条件设置断点并挂起指定的断点可以在包的执行之前发生的次数。 断点可在包级或单个组件级启用。 如果在任务或容器级上启用中断条件，则在 **“控制流”** 选项卡的设计图面上，相应的任务或容器旁边会显示断点图标。如果在包一级启用中断条件，则在 **“控制流”** 选项卡的标签上显示断点图标。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器提供了**设置断点**对话框，在其中你可以通过启用中断条件设置断点并挂起指定的包的执行之前可以发生断点的次数。 断点可在包级或单个组件级启用。 如果在任务或容器级上启用中断条件，则在 **“控制流”** 选项卡的设计图面上，相应的任务或容器旁边会显示断点图标。如果在包一级启用中断条件，则在 **“控制流”** 选项卡的标签上显示断点图标。  
   
  在命中断点时，断点图标将会发生改变以帮助识别断点源。 包运行时，可以添加、删除和更改断点。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36024601"
 |当任务或容器收到`OnTaskFailed`事件。|任务宿主失败时由其调用。|  
 |当任务或容器收到`OnProgress`事件。|要更新任务执行的进度时调用。|  
 |当任务或容器收到`OnQueryCancel`事件。|在可以取消执行的任务处理中，随时可以调用。|  
-|当任务或容器收到`OnVariableValueChanged`事件。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 变量的 RaiseChangeEvent 必须设置为`true`引发此事件。<br /><br /> **\*\* 警告 \*\*** 必须在 **容器** 作用域定义与此断点关联的变量。 如果在包作用域定义变量，则不会命中断点。|  
+|当任务或容器收到`OnVariableValueChanged`事件。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 变量的 RaiseChangeEvent 必须设置为`true`才能引发此事件。<br /><br /> **\*\* 警告 \*\*** 必须在 **容器** 作用域定义与此断点关联的变量。 如果在包作用域定义变量，则不会命中断点。|  
 |当任务或容器收到`OnCustomEvent`事件。|由任务调用，用于引发自定义的任务定义事件。|  
   
  除了对所有任务和容器可用的中断条件外，有些任务和容器还包含用来设置断点的特殊中断条件。 例如，可以在 For 循环容器上启用中断条件，设置一个在循环的每个迭代开始时挂起执行的断点。  

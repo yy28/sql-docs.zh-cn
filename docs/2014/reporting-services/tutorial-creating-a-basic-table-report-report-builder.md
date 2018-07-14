@@ -8,42 +8,42 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186054"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
   本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将了解如何执行下列操作：  
   
-1.  [从入门创建新报表](#CreateTable)  
+1.  [从入门中创建新的报表](#CreateTable)  
   
     1.  [在表向导中指定的数据连接](#DataConnection)  
   
     2.  [在表向导中创建查询](#Query)  
   
-    3.  [将数据组织成表向导中的组](#Groups)  
+    3.  [将数据组织到表向导中的组](#Groups)  
   
     4.  [在表向导中添加小计和总计行](#Subtotals)  
   
     5.  [在表向导中选择样式](#Style)  
   
-2.  [为货币的格式数据](#FormatCurrency)  
+2.  [数据格式设置为货币](#FormatCurrency)  
   
-3.  [为日期的格式数据](#FormatDate)  
+3.  [数据格式设置为日期](#FormatDate)  
   
 4.  [更改列宽](#Width)  
   
@@ -59,16 +59,16 @@ ms.locfileid: "36028953"
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
 ##  <a name="CreateTable"></a> 1.从“入门”创建新的报表  
- 创建的表报表从**入门**对话框。 有两类模式：报表设计模式和共享数据集设计模式。 在报表设计模式中，您可以在“报表数据”窗格中指定数据，在设计图面上指定报表布局。 在共享数据集设计模式中，可以创建与他人共享的数据集查询。 在本教程中，您将使用报表设计模式。  
+ 创建表报表从**Getting Started**对话框。 有两类模式：报表设计模式和共享数据集设计模式。 在报表设计模式中，您可以在“报表数据”窗格中指定数据，在设计图面上指定报表布局。 在共享数据集设计模式中，可以创建与他人共享的数据集查询。 在本教程中，您将使用报表设计模式。  
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
 1.  单击 **“开始”**，依次指向 **“程序”**、 **Microsoft SQL Server 2012 Report Builder**，再单击 **“报表生成器”**。  
   
-     **入门**对话框随即打开。  
+     **Getting Started**对话框随即打开。  
   
     > [!NOTE]  
-    >  如果**入门**未显示对话框中，从**报表生成器**菜单上，单击**新建**。  
+    >  如果**Getting Started**对话框不会出现，从**报表生成器**按钮，再单击**新建**。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -85,11 +85,11 @@ ms.locfileid: "36028953"
   
 2.  单击 **“新建”**。 此时将打开 **“数据源属性”** 对话框。  
   
-3.  在**名称**，类型**Product Sales**数据源的名称。  
+3.  在中**名称**，类型**Product Sales**数据源的名称。  
   
 4.  在“选择连接类型”中，确认已选择“Microsoft SQL Server”。  
   
-5.  在**连接字符串**，键入以下文本，其中 *\<servername >* 是实例的名称[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  在中**连接字符串**，键入以下文本，其中*\<服务器名称 >* 的实例的名称[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -224,7 +224,7 @@ ms.locfileid: "36028953"
   
 #### <a name="to-specify-a-table-style"></a>指定表样式  
   
-1.  上**选择样式**页上，在样式窗格中，选择海洋。  
+1.  上**选择一种样式**页上，在样式窗格中，选择 Ocean。  
   
      “预览”窗格将显示具有该样式的表的示例。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "36028953"
   
 3.  在“开始”选项卡上的“数字”组中，单击“货币”按钮。 单元会更改为显示已设置好格式的货币。  
   
-     如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果看不到一个示例货币值，请单击**占位符样式**中**数字**分组，并依次**示例值**。  
+     如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果您看不到示例货币值，请单击**占位符样式**中**数字**组，然后依次**示例值**。  
   
 4.  单击 **“运行”** 以预览报表。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "36028953"
   
 2.  单击包含 `[SalesDate]`的单元格。  
   
-3.  在功能区中，在**主页**选项卡上，在**数**组中，从下拉列表中，选择**日期**。  
+3.  在功能区中，在**主页**选项卡上，在**数量**组中，从下拉列表中，选择**日期**。  
   
      单元格会显示示例日期 **[2000/1/31]**。 如果看不到示例日期，请单击“数字”组中的“占位符样式”，然后单击“示例值”。  
   
@@ -370,10 +370,10 @@ ms.locfileid: "36028953"
   
 2.  单击该报表的外部。  
   
-3.  .在属性窗格中，找到的 InitialPageName 属性和类型**产品销售 Excel**。  
+3.  .在属性窗格中，找到 InitialPageName 属性并键入**Product Sales Excel**。  
   
     > [!NOTE]  
-    >  如果属性窗格不可见，单击功能区上的视图选项卡，然后单击**属性**。  
+    >  如果属性窗格不可见，请单击功能区上的视图选项卡，然后单击**属性**。  
   
 #### <a name="to-export-a-report-to-excel"></a>将报表导出为 Excel 格式  
   
@@ -385,15 +385,15 @@ ms.locfileid: "36028953"
   
 3.  浏览到**文档**文件夹。  
   
-4.  在**文件名**文本框中，键入**产品销售 Excel**。  
+4.  在中**文件名**文本框中，键入**Product Sales Excel**。  
   
-5.  验证文件类型是否为**Excel 工作簿**。  
+5.  确认文件类型为**Excel 工作簿**。  
   
 6.  单击 **“保存”**。  
   
 #### <a name="to-view-the-report-in-excel"></a>在 Excel 中查看报表  
   
-1.  打开**文档**文件夹，然后双击**产品销售 Excel.xlsx**。  
+1.  打开**文档**文件夹并双击**Product Sales Excel.xlsx**。  
   
 2.  验证工作簿选项卡的名称是否为 **Product Sales Excel**。  
   

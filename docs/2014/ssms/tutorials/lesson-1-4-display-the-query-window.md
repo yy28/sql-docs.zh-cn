@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d3aecc41-4d79-49b2-a11c-7b2203fa79bc
-caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 519369771686fcb3c6d03a7f419ab07c2cd7b521
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b828c70c0ca604277366cdff356f2e6e297a751c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216317"
 ---
 # <a name="display-the-query-window"></a>显示查询窗口
   打开多个查询窗口时，它们显示为选项卡式文档窗口。  
   
-## <a name="viewing-multiple-query-windows"></a>查看多个查询窗口  
+## <a name="viewing-multiple-query-windows"></a>查看多个查询 Windows  
   
 #### <a name="to-view-multiple-query-windows"></a>查看多个查询窗口  
   

@@ -1,5 +1,5 @@
 ---
-title: 将迭代添加到控制流 |Microsoft 文档
+title: 将迭代添加到控制流 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
 - adding iterations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7727dafeee728347511e91723ae9674fe9fd089e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273413"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>将迭代添加到控制流
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 For 循环容器，此控制流元素使得可以更简便地包含按条件重复包中控制流的循环。 有关详细信息，请参阅 [For Loop Container](control-flow/for-loop-container.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "36024880"
   
  表达式中可以包含变量。 使用变量的优点是变量可在运行时更新，使得包管理起来更灵活、更容易。 表达式的最大长度为 4000 个字符。  
   
- 在表达式中指定变量时，必须在其前面加符号 @。 例如，对于一个名为变量`Counter`，输入@Counter，For 循环容器使用的表达式中。 如果变量上包含了命名空间属性，则您必须用方括号将变量和命名空间括起来。 例如，对于`Counter`变量中`MyNamespace`命名空间、 类型 [@MyNamespace::Counter]。  
+ 在表达式中指定变量时，必须在其前面加符号 @。 例如，对于名为的变量`Counter`，输入@CounterFor 循环容器使用的表达式中。 如果变量上包含了命名空间属性，则您必须用方括号将变量和命名空间括起来。 例如，对于`Counter`变量中`MyNamespace`命名空间、 类型 [@MyNamespace::Counter]。  
   
  For 循环容器使用的变量必须在 For 循环容器的范围内定义，或者在包容器层次结构中较高层次容器的范围内定义。 例如，For 循环容器可使用在其范围内定义的变量，也可使用在包范围内定义的变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)和[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36024880"
 4.  配置 For 循环容器。 有关详细信息，请参阅[配置 For 循环容器](../../2014/integration-services/configure-a-for-loop-container.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [添加或删除任务或控制流中的容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [添加或删除任务或容器控制流中](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [组或取消分组的组件](group-or-ungroup-components.md)   
  [使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [将枚举添加到控制流](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

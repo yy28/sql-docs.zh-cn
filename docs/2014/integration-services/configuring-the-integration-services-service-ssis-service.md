@@ -1,5 +1,5 @@
 ---
-title: 配置 Integration Services 服务 （SSIS 服务） |Microsoft 文档
+title: 配置 Integration Services 服务 （SSIS 服务） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - configuration files [Integration Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 caps.latest.revision: 70
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d934191b491d4e8d348b7bd91004afc8f8f9545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71a0436edf57e820b7e6b559814f65823d4390eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283673"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>配置 Integration Services 服务（SSIS 服务）
     
 > [!IMPORTANT]  
 >  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用某个配置文件中的设置。 默认情况下，此配置文件的名称为 MsDtsSrvr.ini.xml，，并且该文件位于在文件夹中，%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用某个配置文件中的设置。 默认情况下，此配置文件的名称为 MsDtsSrvr.ini.xml，并且该文件位于文件夹 %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn 中。  
   
  通常，您不必对此配置文件进行任何更改，也不必更改文件的默认位置。 但是，如果包存储在 [!INCLUDE[ssDE](../includes/ssde-md.md)]的某个命名实例或远程实例中，或存储在 [!INCLUDE[ssDE](../includes/ssde-md.md)]的多个实例中，则必须修改该配置文件。 此外，如果您将配置文件移到默认位置之外的位置，则必须修改指定该文件位置的注册表项。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36027296"
   
 -   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的对象资源管理器中为 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示的根文件夹是 MSDB 和“文件系统”文件夹。  
   
--   文件系统中的包，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务管理位于 %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages。  
+-   文件系统中的包的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务管理位于 %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages 中。  
   
  此配置文件还指定哪个 msdb 数据库包含将由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的包。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]同时安装。 如果未同时安装 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例，则 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例的 msdb 数据库中的包。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36027296"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>配置文件位置的修改  
-注册表项**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile**指定的位置和名称的配置文件[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务使用。 注册表项的默认值是**C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**。 可以更新该注册表项的值，以使配置文件使用其他名称和位置。 请注意，在路径中的版本号 (SQL Server 的 120 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) 的 SQL Server 版本而异。 
+注册表项**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile**指定文件的位置和配置名称[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务使用。 注册表项的默认值是**C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**。 可以更新该注册表项的值，以使配置文件使用其他名称和位置。 请注意，在路径中的版本号 (适用于 SQL Server 的 120 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) 将 SQL Server 版本而异。 
   
   
 > [!CAUTION]  

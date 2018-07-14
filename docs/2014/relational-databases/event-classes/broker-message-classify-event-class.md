@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Message Classify event class
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5cfb54eb1ce98b899b4745009725b8301fdc2921
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6097a06f1a239dc6e3af181ba983c5575567cbbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225607"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将生成 **Broker:Message Classify** 事件。  
@@ -37,7 +37,7 @@ ms.locfileid: "36026175"
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 **Broker:Message Classify** 始终为 **141**。|27|“否”|  
 |**EventSequence**|**int**|此事件的序列号。|51|“否”|  
-|**EventSubClass**|**nvarchar**|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> **Local**：所选路由具有 LOCAL 地址。<br /><br /> **远程**： 所选路由具有非 LOCAL 地址。<br /><br /> **延迟**： 延迟消息，因为禁止转发或者没有出现匹配的路由。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> **Local**：所选路由具有 LOCAL 地址。<br /><br /> **远程**： 所选路由具有非 LOCAL 地址。<br /><br /> **延迟**: 消息被延迟，因为禁止转发或者没有匹配的路由。|21|是|  
 |**FileName**|**nvarchar**|消息定向到的服务名称。|36|“否”|  
 |**GUID**|**uniqueidentifier**|对话的会话 ID。 此标识符将作为消息的一部分进行传输，并在会话双方之间共享。|54|“否”|  
 |**HostName**|**nvarchar**|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  

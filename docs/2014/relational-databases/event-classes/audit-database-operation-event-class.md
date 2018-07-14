@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Operation event class
 ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57e322acca2568f615a6586e359c3ebf3a5d3047
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5450a5891e7847c117118e12df2e8e823197040f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276863"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation 事件类
   当数据库中发生各种操作（如检查点操作或订阅查询通知）时，会发生 **Audit Database Operation** 事件类。  

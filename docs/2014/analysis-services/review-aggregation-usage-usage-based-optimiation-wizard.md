@@ -1,5 +1,5 @@
 ---
-title: 查看聚合使用情况 （基于使用情况的优化向导） |Microsoft 文档
+title: 查看聚合使用情况 （基于使用情况的优化向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235677"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>查看聚合使用情况（基于使用情况的优化向导）
   可以使用 **“查看聚合使用情况”** 页配置聚合使用情况设置。  
@@ -39,7 +39,7 @@ ms.locfileid: "36027762"
  **不受限制**  
  选择此选项可以将属性的聚合使用情况设置设置为无限制。 使用此设置后，聚合设计器将不会受到任何限制。 但是仍必须估算属性以确定它是否是一个有价值的聚合候选项。  
   
- **设置所有为默认值**  
+ **全部设为默认值**  
  选择此选项可以将所有属性的聚合使用情况设置设置为默认设置。  
   
 ## <a name="see-also"></a>请参阅  

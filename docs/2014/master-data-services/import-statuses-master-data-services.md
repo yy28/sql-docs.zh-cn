@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6a5bf66d379db8e459f63d5e0595b007cef2dccb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d2d9255978078af9b23c4b00e4e3fec2a8f57c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209357"
 ---
 # <a name="import-statuses-master-data-services"></a>导入状态 (Master Data Services)
   在 **“集成管理”** 功能区域中的 **“临时批处理”** 页上，以下状态可能会出现。  
@@ -33,7 +33,7 @@ ms.locfileid: "36025942"
 |已清除|批处理已清除。|5|  
   
 ## <a name="see-also"></a>请参阅  
- [加载或通过使用临时过程中更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
+ [加载或使用临时过程更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
  [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

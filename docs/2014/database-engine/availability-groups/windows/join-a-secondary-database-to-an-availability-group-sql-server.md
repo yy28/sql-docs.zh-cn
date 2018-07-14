@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.joindbs.f1
 helpviewer_keywords:
@@ -19,18 +18,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 63a6421ede7afbae66b80fda01e50223e732a27a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 21218bdd04922de0da35511c0d93f4770d5d6b30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269493"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>将辅助数据库联接到可用性组 (SQL Server)
-  本主题说明如何将辅助数据库联接到 AlwaysOn 可用性组中，通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或 PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
+  本主题说明如何通过将辅助数据库联接到 AlwaysOn 可用性组[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或在 PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
   
 -   **开始之前：**  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36027065"
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  有关辅助数据库联接到该组后会发生什么情况的信息，请参阅[的 AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
+>  有关辅助数据库联接到该组后，会发生什么情况的信息，请参阅[AlwaysOn 可用性组的概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -102,7 +101,7 @@ ms.locfileid: "36027065"
   
 1.  将目录更改 (`cd`) 到承载辅助副本的服务器实例。  
   
-2.  使用`Add-SqlAvailabilityDatabase`cmdlet 来将一个或多个辅助数据库联接到可用性组。  
+2.  使用`Add-SqlAvailabilityDatabase`cmdlet 将一个或多个辅助数据库联接到可用性组。  
   
      例如，以下命令将辅助数据库 `Db1`联接到一个承载辅助副本的服务器实例上的可用性组 `MyAG` 。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "36027065"
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请使用`Get-Help`中的 cmdlet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

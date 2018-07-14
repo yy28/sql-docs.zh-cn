@@ -1,5 +1,5 @@
 ---
-title: 创建和配置在管理中心的 PowerPivot 服务应用程序 |Microsoft 文档
+title: 创建并在管理中心配置 PowerPivot 服务应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f4ca893af9665d1c8862b35361f1ed23d60dce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13e41850c466a62c2e4e7ae07821e3ff96692cd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263703"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>在管理中心中创建和配置 PowerPivot 服务应用程序
   PowerPivot 服务应用程序是 PowerPivot 系统服务的共享服务实例。 每个服务应用程序都具有自己的应用程序标识、配置设置、属性和内部数据存储。  
@@ -32,7 +32,7 @@ ms.locfileid: "36024446"
   
  [配置 PowerPivot 服务应用程序](#ConfigApp)  
   
- [将分配一个 PowerPivot 服务应用程序到 Web 应用程序](#AssignGSA)  
+ [将分配到 Web 应用程序的 PowerPivot 服务应用程序](#AssignGSA)  
   
  [编辑服务应用程序属性](#EditGSA)  
   
@@ -61,13 +61,13 @@ ms.locfileid: "36024446"
   
 3.  选择**SQL Server PowerPivot 服务应用程序**。 如果该服务未在列表中出现，则表示 PowerPivot for SharePoint 未安装或者配置不正确。  
   
-4.  在**创建新 PowerPivot 服务应用程序**页上，输入应用程序的名称。 默认值是 PowerPivotServiceApplication\<编号 >。 如果您创建多个 PowerPivot 服务应用程序，则说明性的名称将有助于其他管理员理解应用程序的使用方式。  
+4.  在中**创建新 PowerPivot 服务应用程序**页上，输入应用程序的名称。 默认值是 PowerPivotServiceApplication\<编号 >。 如果您创建多个 PowerPivot 服务应用程序，则说明性的名称将有助于其他管理员理解应用程序的使用方式。  
   
 5.  在“应用程序池”中，为该应用程序创建一个新的应用程序池（推荐）。 为该应用程序池选择或创建一个托管帐户。 请确保指定一个域用户帐户。 通过域用户帐户，可以使用 SharePoint 的托管帐户功能，从而使您可以在一个位置中更新密码和帐户信息。 如果您计划扩展部署以便包括将在同一标识下运行的附加服务实例，则域帐户是必需的。  
   
 6.  在 **“数据库服务器”** 中，默认值是承载场配置数据库的 SQL Server 数据库引擎实例。 您可以使用该服务器或者选择其他的 SQL Server。  
   
-7.  在**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 您必须为每个 PowerPivot 服务应用程序都创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
+7.  在中**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 您必须为每个 PowerPivot 服务应用程序都创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
   
 8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "36024446"
   
 3.  在面板右上角的 **“操作”** 列表中，单击 **“配置服务应用程序设置”**。  
   
-4.  在**数据库加载超时**，增加或减少值可以更改 PowerPivot 服务等待来自数据加载请求转发到的 SQL Server Analysis Services (PowerPivot) 实例的响应的时长。 因为非常大的数据集需要花时间在线路上移动，所以必须确保 PowerPivot 服务实例有充裕的时间检索 Excel 工作簿并将 PowerPivot 数据移到 Analysis Services 实例以便进行查询处理。 因为 PowerPivot 数据可能会非常大，所以默认值为 30 分钟。  
+4.  在中**数据库加载超时**，增加或减少值可以更改 PowerPivot 服务等待来自它将加载数据请求转发到 SQL Server Analysis Services (PowerPivot) 实例的响应的时间长度。 因为非常大的数据集需要花时间在线路上移动，所以必须确保 PowerPivot 服务实例有充裕的时间检索 Excel 工作簿并将 PowerPivot 数据移到 Analysis Services 实例以便进行查询处理。 因为 PowerPivot 数据可能会非常大，所以默认值为 30 分钟。  
   
-5.  在 **“连接池超时”** 中，增加或减少值可以更改空闲数据连接保持打开状态的分钟数。 默认值为 30 分钟。 在此期间中，对于来自相同 PowerPivot 数据的同一 SharePoint 用户的只读请求，PowerPivot 服务将重用空闲数据连接。 如果在指定的时段中没有收到针对该数据的进一步的请求，则从池中删除该连接。 有效值为 1 至 3600 秒。 有关连接池的详细信息，请参阅[配置设置引用&#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)。  
+5.  在 **“连接池超时”** 中，增加或减少值可以更改空闲数据连接保持打开状态的分钟数。 默认值为 30 分钟。 在此期间中，对于来自相同 PowerPivot 数据的同一 SharePoint 用户的只读请求，PowerPivot 服务将重用空闲数据连接。 如果在指定的时段中没有收到针对该数据的进一步的请求，则从池中删除该连接。 有效值为 1 至 3600 秒。 有关连接池的详细信息，请参阅[配置设置参考&#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)。  
   
-6.  在**最大用户连接池大小**，增加或减少要更改的 PowerPivot 服务将在单独的连接池中为每个 SharePoint 用户、 PowerPivot 数据集创建的空闲连接的最大数目的值和版本组合。  
+6.  在中**最大用户连接池大小**，增加或减少值可以更改 PowerPivot 服务将在单独的连接池中为每个 SharePoint 用户、 PowerPivot 数据集创建的空闲连接的最大数目和版本组合。  
   
      默认值为 1000 个空闲连接。 有效值为 -1（无限制）、0（禁用用户连接池）或 1 到 10000。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "36024446"
   
      请注意，更改对连接池大小的限制（包括将其设置为 0）不会导致删除连接。 连接池存在的目的是减少连接数据时需要等待的时间。 PowerPivot 服务将永远不会拒绝基于连接池设置的连接。  
   
-7.  在**最大管理连接池大小**，增加或减少值可以更改连接池中为 PowerPivot 服务连接到 Analysis Services 创建的打开连接数。 每个 PowerPivot 服务实例都打开与同一计算机上的 Analysis Services 实例的单独管理连接。 PowerPivot 服务创建一个单独的池以便出于检查空闲连接和监视服务器运行状况的目的而重用管理连接。 默认值为 200 个连接。 有效值为 -1（无限制）、0（禁用管理连接池）或 1 到 100。 如果您选择 0，将重新创建每个连接。  
+7.  在中**最大管理连接池大小**，增加或减少值可以更改连接池中为 PowerPivot 服务连接到 Analysis Services 创建的打开连接的数目。 每个 PowerPivot 服务实例都打开与同一计算机上的 Analysis Services 实例的单独管理连接。 PowerPivot 服务创建一个单独的池以便出于检查空闲连接和监视服务器运行状况的目的而重用管理连接。 默认值为 200 个连接。 有效值为 -1（无限制）、0（禁用管理连接池）或 1 到 100。 如果您选择 0，将重新创建每个连接。  
   
-8.  在**分配方法**，你可以指定负载平衡 PowerPivot 系统服务用来选择负载平衡的初始请求特定 PowerPivot 服务应用程序的架构。 默认设置为 **“基于运行状况”**，可基于服务器状态分配请求，服务器状态根据可用内存量和处理器使用率进行度量。 或者，您可以选择 **“循环”** ，以便无论服务器是正忙还是空闲，都按相同的重复顺序分配对服务器的请求。  
+8.  在中**分配方法**，可以指定负载平衡 PowerPivot 系统服务使用来选择负载平衡的初始请求的特定 PowerPivot 服务应用程序的架构。 默认设置为 **“基于运行状况”**，可基于服务器状态分配请求，服务器状态根据可用内存量和处理器使用率进行度量。 或者，您可以选择 **“循环”** ，以便无论服务器是正忙还是空闲，都按相同的重复顺序分配对服务器的请求。  
   
 9. 在“数据刷新”的 **“工作时间”** 中，您可以指定用于定义工作日的小时范围。 数据刷新计划可以在下班后运行，以便选取在正常工作时间中生成的事务数据。  
   
-10. 在**PowerPivot 无人参与数据刷新帐户**，你可以指定的预定义的 Secure Store Service 目标应用程序存储用于运行 PowerPivot 数据刷新作业的预定义的帐户。 请确保指定目标应用程序名称而不是 ID。 如果您在 SQL Server 安装程序中使用了“新服务器”选项来安装 PowerPivot for SharePoint，则会自动创建用于无人参与的数据刷新的目标应用程序。 否则，您必须手动创建目标应用程序。 有关如何配置帐户的说明，请参阅[配置 PowerPivot 无人参与数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
+10. 在中**PowerPivot 无人参与数据刷新帐户**，可以指定一个预定义的 Secure Store Service 目标应用程序以便存储用于运行 PowerPivot 数据刷新作业的预定义的帐户。 请确保指定目标应用程序名称而不是 ID。 如果您在 SQL Server 安装程序中使用了“新服务器”选项来安装 PowerPivot for SharePoint，则会自动创建用于无人参与的数据刷新的目标应用程序。 否则，您必须手动创建目标应用程序。 有关如何配置帐户的说明，请参阅[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
 11. 在 **“允许用户输入自定义 Windows 凭据”** 中，您可以选中或取消选中复选框以便指定计划所有者是否可以输入任意的 Windows 凭据以便运行数据刷新计划。 如果您选中此复选框，PowerPivot 服务应用程序将为每组存储凭据都创建和管理目标应用程序。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36024446"
   
      对加载超时或分配方法的更改只应用于新的传入请求。 已在进行中的请求将受到接收请求时有效的值的影响。  
   
-##  <a name="AssignGSA"></a> 将分配一个 PowerPivot 服务应用程序到 Web 应用程序  
+##  <a name="AssignGSA"></a> 将分配到 Web 应用程序的 PowerPivot 服务应用程序  
  在您配置 PowerPivot 服务应用程序后，可以通过将其添加到 Web 应用程序的服务应用程序连接列表，将其分配给该 Web 应用程序。 完成这项工作的方法有两种：  
   
 -   将它添加到“默认”  连接组。 “默认连接组”  是可用于引用它的任何 Web 应用程序的服务应用程序连接的集合。 您必须将 PowerPivot 服务应用程序添加到此列表。  
@@ -143,7 +143,7 @@ ms.locfileid: "36024446"
   
 4.  在“编辑以下关联组”中，选择“默认值”或“[自定义]”。  
   
-5.  对于“[自定义]”，选中要使用的每个服务应用程序连接旁边的复选框。 如果你有多个 PowerPivot 服务应用程序 (由类型设置为指示`PowerPivot Service Application Proxy`)，请务必请只选择一个。  
+5.  对于“[自定义]”，选中要使用的每个服务应用程序连接旁边的复选框。 如果有多个 PowerPivot 服务应用程序 (由类型设置为指示`PowerPivot Service Application Proxy`)，确保仅选择一个。  
   
 6.  单击“确定” 。  
   

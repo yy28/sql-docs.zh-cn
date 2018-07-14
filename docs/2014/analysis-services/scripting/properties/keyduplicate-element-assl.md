@@ -1,5 +1,5 @@
 ---
-title: KeyDuplicate 元素 (ASSL) |Microsoft 文档
+title: KeyDuplicate 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 353c8d1eac5803db6f76014519d1c812813f535d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192434"
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate 元素 (ASSL)
-  确定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]如果遇到一个处理过程中处理重复键错误。  
+  确定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]处理处理期间遇到的重复键错误。  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36027317"
 |*ReportAndContinue*|处理应报告错误并继续。|  
 |*ReportAndStop*|处理应报告错误并停止。|  
   
- 对应于的允许值为枚举`KeyDuplicate`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ErrorOption>。  
+ 与允许的值相对应的枚举`KeyDuplicate`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ErrorOption>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

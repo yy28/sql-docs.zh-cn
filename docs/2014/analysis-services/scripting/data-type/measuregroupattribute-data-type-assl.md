@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupAttribute 数据类型 (ASSL) |Microsoft 文档
+title: MeasureGroupAttribute 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 05dfd16d5e1f3cb5a2af3926cca398678b649675
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43177fe7c63c241f4a66b326af2eca94bcd5d600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261323"
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>MeasureGroupAttribute 数据类型 (ASSL)
   定义一个基元数据类型，该类型表示属性和度量值组之间的关系。  
@@ -60,10 +60,10 @@ ms.locfileid: "36027074"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[批注](../collections/annotations-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [KeyColumns](../collections/columns-element-assl.md)，[类型](../properties/type-element-measuregroupattribute-assl.md)|  
-|派生元素|[属性](../objects/attribute-element-assl.md)([属性](../collections/attributes-element-assl.md)集合[RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
+|派生元素|[特性](../objects/attribute-element-assl.md)([特性](../collections/attributes-element-assl.md)的集合[RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

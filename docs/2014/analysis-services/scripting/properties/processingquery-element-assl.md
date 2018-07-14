@@ -1,5 +1,5 @@
 ---
-title: ProcessingQuery 元素 (ASSL) |Microsoft 文档
+title: ProcessingQuery 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingQuery element
 ms.assetid: d18e6f4b-c24c-4f73-8b85-4b6e8a82a695
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4ade6950de95029d3eea4105bd34f636fd3632a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01d9ccc0e5e5c376e0d5e7ee08aa42eb0e062b97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250887"
 ---
 # <a name="processingquery-element-assl"></a>ProcessingQuery 元素 (ASSL)
   包含要为增量处理状态通知执行的查询的参数化文本。  
@@ -60,9 +60,9 @@ ms.locfileid: "36025517"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 中的表[DataSourceView](../objects/datasourceview-element-assl.md)引用`ProcessingQuery`的同级元素，由标识[TableID](id-element-assl.md)。  
+ 中的表[DataSourceView](../objects/datasourceview-element-assl.md)引用`ProcessingQuery`同级元素，标识[TableID](id-element-assl.md)。  
   
- 对应于的父元素`ProcessingQuery`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>。  
+ 父级对应的元素`ProcessingQuery`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

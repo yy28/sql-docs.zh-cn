@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ef7be1ca170df9efb0a4b76ab4b7f451b6742dbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ad61c1d762a412d9a314b5e41cc2908c0cca704f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188494"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>用于对内存优化表进行分区的应用程序模式
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持将有限数量的活动数据保存在内存优化表中而将不常访问的数据在磁盘上进行处理的模式。 通常，这是存储数据的方案基于`datetime`密钥。  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持将有限数量的活动数据保存在内存优化表中而将不常访问的数据在磁盘上进行处理的模式。 通常情况下，这是存储数据的方案基于`datetime`密钥。  
   
  通过维护架构相同的已分区表和内存优化表，可以用内存优化表模拟已分区表。 当前数据会插入到内存优化表中并进行更新，而不常访问的数据会在传统的已分区表中进行维护。  
   

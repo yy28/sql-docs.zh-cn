@@ -1,5 +1,5 @@
 ---
-title: 配置 Power View 报表 (SSAS 表格) 的默认字段集 |Microsoft 文档
+title: 配置 Power View 报表 (SSAS 表格) 的默认字段集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - ql12.asvs.bidtoolset.deffieldset.f1
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3349a5a427df9a4d65505b157d2e38f9ecc29758
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0eba29031af4265c1850ed6a3ecf0241b60ac808
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263263"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>配置 Power View 报表的默认字段集（SSAS 表格）
   默认字段集是一个列和度量值的预定义列表，当您选择报表字段列表中的表时，这些列和度量值会自动添加到 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表画布中。 表格模型作者可以创建默认字段集，使得将模型用于其报表的报表作者无需执行冗余步骤。 例如，如果您知道大多数使用客户联系信息的报表作者总是希望查看联系人姓名、主要电话号码、电子邮件地址和公司名称，您可以预先选择这些列，以便在作者单击客户联系表时，这些列总是会添加到报表画布中。  

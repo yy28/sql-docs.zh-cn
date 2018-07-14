@@ -1,5 +1,5 @@
 ---
-title: 级别和成员 （浏览器选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 级别和成员 （浏览器选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193967"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>级别和成员（“浏览器”选项卡，维度设计器）（Analysis Services - 多维数据）
-  可以使用此窗格浏览当前选择的层次结构和语言的成员。 若要选择要浏览的层次结构或语言，请使用 **“工具栏”** 窗格上的 **“层次结构”** 和 **“语言”** 选项。 有关在工具栏窗格的详细信息，请参阅[工具栏&#40;浏览器选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
+  可以使用此窗格浏览当前选择的层次结构和语言的成员。 若要选择要浏览的层次结构或语言，请使用 **“工具栏”** 窗格上的 **“层次结构”** 和 **“语言”** 选项。 有关工具栏窗格的详细信息，请参阅[工具栏&#40;浏览器选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="writeback-mode"></a>写回模式  
- 如果启用了写回模式，此窗格的功能将会更改。 所选的维度必须是已启用写入 (换而言之，`WriteEnabled`的维度属性必须设置为 true) 和维度必须部署到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，以启用写回模式。  
+ 如果启用了写回模式，此窗格的功能将会更改。 所选的维度必须启用写操作的 (即，`WriteEnabled`维度的属性必须设置为 true) 和维度必须部署到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，以便启用写回模式。  
   
  若要启用写回模式，可以从“工具栏”窗格中选择“写回”，或者右键单击“级别和成员”窗格，从上下文菜单中选择“写回”。  
   

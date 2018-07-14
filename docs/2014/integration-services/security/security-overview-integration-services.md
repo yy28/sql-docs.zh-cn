@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - Integration Services, security
@@ -23,13 +23,13 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f48f1805052debe3d7120fb55cb2777cb3e5c735
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167128"
 ---
 # <a name="security-overview-integration-services"></a>安全性概述 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含多层，这些层提供了丰富灵活的安全环境。 这些安全层使用数字签名、包属性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色和操作系统权限。 其中的大部分安全功能属于标识和访问控制类别。  

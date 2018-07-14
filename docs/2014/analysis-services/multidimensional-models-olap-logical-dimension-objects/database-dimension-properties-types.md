@@ -1,5 +1,5 @@
 ---
-title: 维度类型 |Microsoft 文档
+title: 维度类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,18 +29,18 @@ helpviewer_keywords:
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fe0311a992f0f8c067ba6e7096698f96f8bc4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189044"
 ---
 # <a name="dimension-types"></a>维度类型
-  `Type` 属性设置为服务器和客户端应用程序提供有关维度内容的信息。 在某些情况下，`Type` 设置只为客户端应用程序提供指导信息，并且为可选项。 在其他情况下，例如 `Accounts` 维度或 `Time` 维度，维度及其特性的 `Type` 属性设置可以确定基于服务器的特定行为，并且实现多维数据集中的某些行为也可能需要该属性设置。 例如，维度的 `Type` 属性可以设置为 `Accounts`，从而向客户端应用程序指示标准维度包含帐户特性。 有关时间、 帐户和货币维度的详细信息，请参阅[创建日期类型维度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[创建父-子类型维度的财务帐户](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[创建一种货币键入维度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
+  `Type` 属性设置为服务器和客户端应用程序提供有关维度内容的信息。 在某些情况下，`Type` 设置只为客户端应用程序提供指导信息，并且为可选项。 在其他情况下，例如 `Accounts` 维度或 `Time` 维度，维度及其特性的 `Type` 属性设置可以确定基于服务器的特定行为，并且实现多维数据集中的某些行为也可能需要该属性设置。 例如，维度的 `Type` 属性可以设置为 `Accounts`，从而向客户端应用程序指示标准维度包含帐户特性。 有关时间、 帐户和货币维度的详细信息，请参阅[创建日期类型维度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[创建父子类型维度的财务帐户](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[创建一种货币键入维度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
   
  维度类型的默认设置为 `Regular`，该设置不对维度内容进行任何假设。 当您初始定义维度时，该设置为所有维度的默认设置，除非您在使用维度向导定义维度时指定了 `Time`。 如果维度向导没有为维度类型列出合适的类型，则还应当将 `Regular` 继续用做维度类型。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36123504"
 |Promotion|一种其属性表示营销促销信息的维度。|  
   
 ## <a name="see-also"></a>请参阅  
- [通过使用现有表创建维度](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [使用现有表创建维度](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [维度&#40;Analysis Services-多维数据&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

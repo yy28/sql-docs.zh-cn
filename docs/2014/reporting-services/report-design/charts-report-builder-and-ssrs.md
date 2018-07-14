@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280473"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
-  如果要以可视格式汇总数据，请使用图表数据区域。 使用图表，您可以一眼就能看到大量的聚合信息。 创建图表前需仔细准备和了解数据，这一点很重要，因为这样做有助于您快速高效地设计图表。 有关详细信息，请参阅[向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要开始立即使用一个图表，请参阅栏、 列、 迷你图和中的饼图教程[教程&#40;报表生成器&#41;](../report-builder-tutorials.md)或的条形图和中的饼图教程[Reporting Services 教程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
+  如果要以可视格式汇总数据，请使用图表数据区域。 使用图表，您可以一眼就能看到大量的聚合信息。 创建图表前需仔细准备和了解数据，这一点很重要，因为这样做有助于您快速高效地设计图表。 有关详细信息，请参阅[向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要开始立即使用图表，请参阅栏、 列、 迷你图和饼图中的教程[教程&#40;报表生成器&#41;](../report-builder-tutorials.md)或条形图和饼图教程中的[ &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
   
  下图显示了图表中使用的多种不同元素。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36024741"
   
   
 ##  <a name="AggregateValues"></a> 聚合图表上数据字段中的值  
- 默认情况下，将字段添加到图表的“值”区域中时， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 如果将某一字段拖到图表上，但未将该字段拖到特定区域中，则图表将基于字段的数据类型来确定该字段是属于类别 (x) 轴还是属于值 (y) 轴。 使用 SUM 函数可聚合拖放到“值”区域中的数值字段。 如果值字段的数据类型是“值”区域中的字符串，则图表将无法显示数值，即使字段中有数字，因此图表会显示 COUNT 函数。 若要避免该行为，请确保使用的字段是数值数据类型的，而不是包含格式化数字的字符串。 你可以使用 Visual Basic 表达式将字符串值转换为数值数据类型使用`CDbl`或`CInt`常量。 例如，以下复杂表达式会转换名为 `MyField` 且包含格式为字符串的数值的字段。  
+ 默认情况下，将字段添加到图表的“值”区域中时， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 如果将某一字段拖到图表上，但未将该字段拖到特定区域中，则图表将基于字段的数据类型来确定该字段是属于类别 (x) 轴还是属于值 (y) 轴。 使用 SUM 函数可聚合拖放到“值”区域中的数值字段。 如果值字段的数据类型是“值”区域中的字符串，则图表将无法显示数值，即使字段中有数字，因此图表会显示 COUNT 函数。 若要避免该行为，请确保使用的字段是数值数据类型的，而不是包含格式化数字的字符串。 可以使用 Visual Basic 表达式以将字符串值转换为数值数据类型使用`CDbl`或`CInt`常量。 例如，以下复杂表达式会转换名为 `MyField` 且包含格式为字符串的数值的字段。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -130,13 +130,13 @@ ms.locfileid: "36024741"
  [设置图表格式&#40;报表生成器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  使用格式设置可以改进整体外观，并突出显示您的图表的关键数据点。  
   
- [空和 Null 图表中的数据点&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [空和 Null 数据点在图表中的&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
  介绍在使用基于具有空值或 Null 值的字段的图表时需注意的事项。  
   
- [在图表上显示具有多个数据区域的系列&#40;报表生成器和 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [在图表中显示包含多个数据区域的序列&#40;报表生成器和 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  介绍如何向包含多个数据范围的序列添加刻度分隔线。  
   
- [在图表上的多个序列&#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [图表上的多个序列&#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  介绍在同一图表中显示多个序列的若干方法，包括组合图表类型、使用辅助轴、指定不同图表类型和使用多个图表区域。  
   
  [将多个数据区域链接到同一数据集&#40;报表生成器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
@@ -152,7 +152,7 @@ ms.locfileid: "36024741"
  介绍用于处理图表的技巧。  
   
 ## <a name="see-also"></a>请参阅  
- [图像、 文本框、 矩形和行&#40;报表生成器和 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [图像、 文本框、 矩形和线条&#40;报表生成器和 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)   
  [教程：向报表添加柱形图（报表生成器）](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   

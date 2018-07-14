@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8eb2cc1bcfa9528eccd2764af954fb165b74daa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208539"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
   每个报表服务器实例都需要连接到存储由服务器管理的报表、报表模型、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库并配置连接的分步说明，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48fed7d15bf32ccaa91ce86b5b20442b194c004f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ca9e1fcd805fb2148219b469a1230b10019497cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202707"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 列表查询设计器（报表生成器）
-  报表生成器提供了图形查询设计器和基于文本的查询设计器可帮助你创建指定要从报表数据集的 SharePoint 站点检索数据的查询。 使用图形查询设计器可以浏览 SharePoint 列表元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询、修改查询或键入查询命令。 您还可以从文件或报表中导入现有的查询。  
+  报表生成器提供了图形查询设计器和基于文本的查询设计器可帮助您创建查询，以指定要从 SharePoint 站点中为报表数据集检索的数据。 使用图形查询设计器可以浏览 SharePoint 列表元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询、修改查询或键入查询命令。 您还可以从文件或报表中导入现有的查询。  
   
 > [!IMPORTANT]  
 >  用户创建和运行查询时访问数据源。 您应授予对数据源的最小权限（如只读权限）。  

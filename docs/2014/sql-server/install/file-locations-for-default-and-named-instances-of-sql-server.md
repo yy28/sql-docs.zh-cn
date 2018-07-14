@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b20fee2459dfb9273abe4e43b79ff76fdfe2dfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8e9d6e3ae9596ff87a5d07f4b60dfcc2e7b658ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175409"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 的默认实例和命名实例的文件位置
   安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将安装一个或多个单独的实例。 无论是默认实例还是命名实例都有自己的一组程序文件和数据文件，同时还有在计算机上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间共享的一组公共文件。  
@@ -111,7 +111,7 @@ ms.locfileid: "36026929"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器服务、WMI 提供程序|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共享\|固定的路径|  
 |所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]共享\|固定的路径|  
   
- <sup>1</sup>对 \Program Files，请确保\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ 文件夹进行保护具有有限权限。  
+ <sup>1</sup>确保对 \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ 文件夹进行保护具有有限权限。  
   
  <sup>2</sup>这些位置的默认驱动器*systemdrive*，通常驱动器 c。  
   
@@ -119,19 +119,19 @@ ms.locfileid: "36026929"
   
  <sup>4</sup>之间共享单个安装路径[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和客户端组件。 更改一个组件的安装路径会同时更改其他组件的安装路径。 后续安装将组件安装到与原始安装相同的位置。  
   
- <sup>5</sup>的所有实例使用此目录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上。 如果对计算机上的任一实例应用更新，则对此文件夹中的文件所做的任何更改都将影响计算机上的所有实例。 向现有安装添加功能时，不能更改以前安装的功能的位置，也不能为新功能指定该位置。 必须将其他功能安装到安装程序已建立的目录，或者卸载并重新安装产品。  
+ <sup>5</sup>的所有实例都使用此目录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上。 如果对计算机上的任一实例应用更新，则对此文件夹中的文件所做的任何更改都将影响计算机上的所有实例。 向现有安装添加功能时，不能更改以前安装的功能的位置，也不能为新功能指定该位置。 必须将其他功能安装到安装程序已建立的目录，或者卸载并重新安装产品。  
   
 > [!NOTE]  
 >  对于群集配置，必须选择在该群集的每个节点上都可用的本地驱动器。  
   
  当在安装过程中为服务器组件或数据文件指定安装路径时，安装程序除了为程序和数据文件使用指定的位置外，还使用实例 ID。 安装程序不会将实例 ID 用于工具和其他共享文件。 安装程序也不会将任何实例 ID 用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序和数据文件，尽管它会将实例 ID 用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储库。  
   
- 如果为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能设置了安装路径，则对于此次安装， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会将该路径用作所有特定于实例的文件夹（包括 SQL 数据文件）的根目录。 在此情况下，如果将根目录设置"C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceName > \MSSQL\\"，特定于实例的目录添加到该路径的末尾。  
+ 如果为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能设置了安装路径，则对于此次安装， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会将该路径用作所有特定于实例的文件夹（包括 SQL 数据文件）的根目录。 在此情况下，如果将根目录设置"C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<实例名 > \MSSQL\\"，特定于实例的目录将添加到路径的末尾。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导（安装程序用户界面模式）中选择使用 USESYSDB 升级功能的客户会很容易将产品安装到递归文件夹结构中。 例如， \< *SQLProgramFiles*> \MSSQL12\MSSQL\MSSQL10_50\MSSQL\Data\\。 这时，为了使用 USESYSDB 功能，请为 SQL 数据文件功能而非 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能设置安装路径。  
   
 > [!NOTE]  
->  数据文件始终应位于名为 Data 的子目录中。 例如，指定 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<实例名 > \ 若要在升级过程中指定系统数据库的数据目录的根路径时数据文件位于 C:\Program Files 下\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceName > \MSSQL\Data。  
+>  数据文件始终应位于名为 Data 的子目录中。 例如，指定 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<实例名 > \ 时数据文件位于 C:\Program Files 下，在升级过程中指定的系统数据库的数据目录的根路径\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<实例名 > \MSSQL\Data。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎配置 - 数据目录](../../../2014/sql-server/install/database-engine-configuration-data-directories.md)   

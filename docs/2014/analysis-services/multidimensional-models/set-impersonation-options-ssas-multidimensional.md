@@ -1,5 +1,5 @@
 ---
-title: 设置模拟选项 (SSAS-多维) |Microsoft 文档
+title: 设置模拟选项 (SSAS-多维) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
 helpviewer_keywords:
 - Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58fa3381106f354d810ccbf6b6253ebb20bb55bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c41bd2f5f17ac90053f397b6bfd73cf4b346fd6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176984"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>设置模拟选项（SSAS - 多维）
   在 Analysis Services 模型中创建 `data source` 对象时，您必须配置的一个设置是模拟选项。 此选项确定 Analysis Services 在执行与连接相关的本地操作（如加载 OLE DB 数据访问接口或在支持漫游配置文件的环境中解析用户配置文件信息）时是否采用特定 Windows 用户帐户的标识。  
@@ -53,7 +53,7 @@ ms.locfileid: "36026640"
  对话框中的所有选项都可用，但并非所有选项都适合每种情况。 使用以下信息来确定最适合于您的情况的选项。  
   
  **使用特定用户名和密码**  
- 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用此格式中指定的 Windows 用户帐户的安全凭据： *\<域名 >***\\***\<用户帐户名称 >*。  
+ 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用按以下格式指定的 Windows 用户帐户的安全凭据： *\<域名 >***\\***\<用户帐户名称 >*。  
   
  选择此选项可使用一个专用的最小权限的 Windows 用户标识，该用户标识是您为数据访问目的而专门创建的。 例如，如果您定期创建用于检索在报表中使用的数据的通用帐户，则可以在此处指定该帐户。  
   

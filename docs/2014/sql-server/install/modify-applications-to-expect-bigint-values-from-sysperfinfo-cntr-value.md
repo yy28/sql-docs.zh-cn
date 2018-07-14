@@ -1,5 +1,5 @@
 ---
-title: 修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值 |Microsoft 文档
+title: 修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sysperfinfo
 - bigint values [SQL Server]
 ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 436e4d7dc8f1e4a98cfab2b0f2ce2c77576950f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 303faa85853825b07eab52043929b92cbc601326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249677"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值
   sysperfinfo 返回`bigint`cntr_value 列的值。  
@@ -34,7 +34,7 @@ ms.locfileid: "36024490"
  请修改使用 sysperfinfo 的应用程序，确保它们可以处理 cntr_value 列的 `bigint` 值。  
   
 > [!NOTE]  
->  sysperfinfo 是兼容性视图。 应改用 sys.dm_os_performance_counter 动态管理视图。  
+>  sysperfinfo 是一个兼容性视图。 应改用 sys.dm_os_performance_counter 动态管理视图。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

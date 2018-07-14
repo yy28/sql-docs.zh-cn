@@ -1,5 +1,5 @@
 ---
-title: 导入从 PowerPivot (SSAS 表格) |Microsoft 文档
+title: 从 PowerPivot (SSAS 表格) 导入 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4636578c435ac158f92ef4968072e374af7fb4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f6480cf0b577a0faa48691a85248efb77a84531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245737"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>从 PowerPivot 导入（SSAS 表格）
-  本主题介绍如何通过使用导入元数据和数据从 PowerPivot 工作簿导入从 PowerPivot 中的项目模板创建新的表格模型项目[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+  本主题介绍如何通过使用导入元数据和数据从 PowerPivot 工作簿中 PowerPivot 项目模板中的导入来创建新的表格模型项目[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ## <a name="create-a-new-tabular-model-from-a-powerpivot-for-excel-file"></a>从 PowerPivot for Excel 文件创建新的表格模型  
  在通过从 PowerPivot 工作簿中导入来创建新的表格模型项目时，将使用定义工作簿结构的元数据来创建和定义 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的表格模型项目的结构。 表、列、度量值和关系之类的对象将与它们处于 PowerPivot 工作簿中一样保留并出现在表格模型项目中。 不对 .xlsx 工作簿文件进行任何更改。  
@@ -44,7 +44,7 @@ ms.locfileid: "36027080"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。  
   
-2.  在**新项目**对话框中，在**已安装的模板**，单击**Business Intelligence**，然后单击**导入从 PowerPivot**.  
+2.  在中**新的项目**对话框中的**已安装的模板**，单击**商业智能**，然后单击**从 PowerPivot导入**.  
   
 3.  在  “名称”中，键入项目的名称，然后指定位置和解决方案名称，再单击 “确定”。  
   

@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务编辑器 （挖掘模型选项卡） |Microsoft 文档
+title: 数据挖掘查询任务编辑器 （挖掘模型选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 78d1021d5ac6aa2c4d8452394cd69d298b76cdaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9069acf132c048f07f8e27cb956032100f53a9eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261493"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>数据挖掘查询任务编辑器（“挖掘模型”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“挖掘模型”** 选项卡指定要使用的挖掘结构和挖掘模型。  

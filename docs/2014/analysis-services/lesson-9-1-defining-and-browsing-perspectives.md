@@ -1,5 +1,5 @@
 ---
-title: 定义和浏览透视 |Microsoft 文档
+title: 定义和浏览透视 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208187"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定义和浏览透视
   透视可以出于特定目的简化多维数据集的视图。 默认情况下，用户可以查看多维数据集内对其具有查看权限的所有元素。 用户查看整个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集时所看到的内容是该多维数据集的默认透视。 对于导航视图的用户，尤其对于只需与多维数据集的一小部分交互就能满足其商业智能和报表需求的用户来说，整个多维数据集的视图将是非常复杂的。  
@@ -37,15 +37,15 @@ ms.locfileid: "36028264"
   
      所有对象和它们的对象类型都将出现在“透视”窗格中，如下图所示。  
   
-     ![透视的多维数据集设计器的窗格中](../../2014/tutorials/media/l9-perspectives-1.gif "透视窗格中的多维数据集设计器")  
+     ![多维数据集设计器的透视窗格](../../2014/tutorials/media/l9-perspectives-1.gif "透视多维数据集设计器窗格")  
   
 2.  在“透视”选项卡的工具栏上，单击“新建透视”按钮。  
   
      新透视将显示在“透视名称”列中，其默认名称为“透视”，如下图所示。 注意，每个对象的复选框均已选中；除非您清除了对象的复选框，否则此透视与此多维数据集的默认透视是相同的。  
   
-     ![透视名称列中的新透视](../../2014/tutorials/media/l9-perspectives-2.gif "透视名称列中的新透视")  
+     ![透视名称列中的新建透视](../../2014/tutorials/media/l9-perspectives-2.gif "透视名称列中的新建透视")  
   
-3.  透视名称更改为`Internet Sales`。  
+3.  将透视名称更改为`Internet Sales`。  
   
 4.  在下一行中，将 DefaultMeasure 设置为“Internet 销售额”。  
   
@@ -174,25 +174,25 @@ ms.locfileid: "36028264"
   
 4.  当您在 Excel 中浏览模型时，“在 Excel 中分析”将会提示选择您要使用的透视，如下图中所示。  
   
-     ![为 Internet Sales 透视对象](../../2014/tutorials/media/l9-perspectives-3.gif "Internet Sales 透视的对象")  
+     ![对象的 Internet 销售透视](../../2014/tutorials/media/l9-perspectives-3.gif "对象的 Internet 销售透视")  
   
 5.  或者，您可以从 Windows 的“开始”菜单启动 Excel，定义与本地主机上 Analysis Services 教程数据库的连接，并且在数据连接向导中选择某一透视，如下图中所示。  
   
      ![在 Excel 中的数据连接向导](../../2014/tutorials/media/l9-perspectives-3b.gif "在 Excel 中的数据连接向导")  
   
-6.  选择`Internet Sales`中**透视**列表，然后查看度量值和维度元数据窗格的。  
+6.  选择`Internet Sales`中**角度来看**列表，然后查看度量值和元数据窗格中的维度。  
   
      请注意，只那些为“Internet 销售”透视指定的对象才会出现。  
   
 7.  在元数据窗格中，展开“度量值”。  
   
-     请注意，只有`Internet Sales`度量值组将出现，在一起并**Internet GPM**和**Internet 到所有产品的销售额之比**计算成员。  
+     请注意，只有`Internet Sales`度量值组将出现，一起**Internet GPM**并**Internet Sales Ratio to All Products**计算成员。  
   
 8.  在模型中，再次选择 Excel。 选择 `Sales Summary`。  
   
      注意，在每个度量值组中，只出现单个度量值，如下图所示。  
   
-     ![Internet 销售和分销商销售的度量值](../../2014/tutorials/media/l9-perspectives-4.gif "Internet 销售和分销商销售的度量值")  
+     ![Internet 销售和分销商销售度量值](../../2014/tutorials/media/l9-perspectives-4.gif "Internet Sales 和分销商销售度量值")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义和浏览翻译](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  

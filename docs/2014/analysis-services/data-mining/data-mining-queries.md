@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询 |Microsoft 文档
+title: 数据挖掘查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170194"
 ---
 # <a name="data-mining-queries"></a>数据挖掘查询
   数据挖掘查询可用于多种目的。 您可以：  
@@ -99,14 +99,14 @@ ms.locfileid: "36028267"
   
  以下列表汇总了可在查询中使用的函数：  
   
--   **通用预测函数：** `Predict`函数是多态的这意味着它可以用于所有模型类型。 该函数将自动检测要使用的模型类型，并提示您输入其他参数。 有关详细信息，请参阅[预测 (DMX)](/sql/dmx/predict-dmx)。  
+-   **通用预测函数：** `Predict`函数是多态的这意味着它可以处理所有模型类型。 该函数将自动检测要使用的模型类型，并提示您输入其他参数。 有关详细信息，请参阅[预测 (DMX)](/sql/dmx/predict-dmx)。  
   
     > [!WARNING]  
     >  并非所有模型都用于进行预测。 例如，可以创建不具有可预测属性的聚类分析模型。 但是，即使模型不具有可预测属性，您也可以创建返回模型中其他类型的有用信息的预测查询。  
   
 -   **自定义预测函数：** 每种模型类型都提供了一组用于处理该算法所创建的模式的预测函数。  
   
-     例如，为时序模型提供了 `Lag` 函数，可使用此函数查看该模型使用的历史数据。 聚类分析模型，函数如`ClusterDistance`更有意义。  
+     例如，为时序模型提供了 `Lag` 函数，可使用此函数查看该模型使用的历史数据。 用于聚类分析模型，函数如`ClusterDistance`更有意义。  
   
      有关每种模型类型支持的函数的详细信息，请参阅以下链接：  
   
@@ -122,13 +122,13 @@ ms.locfileid: "36028267"
   
 -   **常规统计信息：** 有多个函数可用于几乎所有模型类型，这些函数将返回一组标准说明性统计信息（如标准差）。  
   
-     例如，`PredictHistogram`函数返回一个表，其中列出了指定列的所有状态。  
+     例如，`PredictHistogram`函数返回一个表，列出了指定列的所有状态。  
   
      有关详细信息，请参阅[通用预测函数 (DMX)](/sql/dmx/general-prediction-functions-dmx)。  
   
 -   **自定义统计信息：** 为每种模型类型提供了附加支持函数，以便生成与特定分析任务相关的统计信息。  
   
-     例如，当你使用聚类分析模型时，你可以使用函数， `PredictCaseLikelihood`，则返回与某个特定事例和群集关联的可能性分数。 但是，如果您创建了线性回归模型，则可能更愿意检索系数和截距，可使用内容查询做到这一点。  
+     例如，当您正在使用聚类分析模型，可以使用函数， `PredictCaseLikelihood`，以返回与特定事例和分类关联的可能性分数。 但是，如果您创建了线性回归模型，则可能更愿意检索系数和截距，可使用内容查询做到这一点。  
   
 -   **模型内容函数：** 所有模型的 *内容* 都以标准化格式表示，以便您能使用简单查询检索信息。 可以使用 DMX 创建针对模型内容的查询。 还可以通过使用数据挖掘架构行集来获取某种类型的模型内容。  
   

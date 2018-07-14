@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dbfa449e19f77b7537232e0fc8689a47f30ea1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dee016784a438de226877d94d7271048749a859c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170318"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建发布。  
@@ -49,7 +49,7 @@ ms.locfileid: "36028329"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   发布和项目名称不能包括下列任何字符：%、\*、[ , ]、|、:、"、? '，\，/， \< ，>。 如果数据库中的对象包括任意上述字符，并且你希望复制它们，那么必须在“项目属性 - \<项目>”对话框（可从向导中的“项目”页获得）中指定一个不同于相应对象名称的项目名称。  
+-   发布和项目名称不能包括下列任何字符：%、\*、[ , ]、|、:、"、? '、 \、 /、 \< ，>。 如果数据库中的对象包括任意上述字符，并且你希望复制它们，那么必须在“项目属性 - \<项目>”对话框（可从向导中的“项目”页获得）中指定一个不同于相应对象名称的项目名称。  
   
 ###  <a name="Security"></a> 安全性  
  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （加密服务）。  
@@ -114,7 +114,7 @@ ms.locfileid: "36028329"
   
     -   如果结果集为空，则创建日志读取器代理作业。 在发布服务器上，执行[sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)。 将运行该代理时所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 **@job_name** 和 **@password**中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password**。 继续执行步骤 3。  
   
-3.  在发布服务器上，执行[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定的发布名称**@publication**，而且，对于**@repl_freq**参数，将值指定为`snapshot`为快照发布或值`continuous`为事务发布。 指定任何其他发布选项。 这便定义了发布。  
+3.  在发布服务器上，执行[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定发布名称**@publication**，并且对于**@repl_freq**参数，将值指定为`snapshot`为快照发布或值`continuous`为事务发布。 指定任何其他发布选项。 这便定义了发布。  
   
     > [!NOTE]  
     >  发布名称不能包括下列字符：  
@@ -166,13 +166,13 @@ ms.locfileid: "36028329"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类建立与发布服务器的连接。  
   
-2.  为发布数据库创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例，将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的实例，然后调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果<xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>返回`false`，请验证数据库是否存在。  
+2.  为发布数据库创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例，将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的实例，然后调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果<xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>返回`false`，验证数据库是否存在。  
   
 3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 属性为 `false`，请将其设置为 `true`。  
   
 4.  对于事务发布，请检查 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 属性的值。 如果此属性为`true`，日志读取器代理作业已存在此数据库。 如果此属性为`false`，执行以下操作：  
   
-    -   设置<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>和<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>字段<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>提供的凭据[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Windows 帐户下运行日志读取器代理。  
+    -   设置<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>并<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>的字段<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>提供的凭据[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Windows 帐户下运行日志读取器代理。  
   
         > [!NOTE]  
         >  设置<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>的成员创建发布时不需要`sysadmin`固定的服务器角色。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](../security/replication-agent-security-model.md)。  
@@ -213,7 +213,7 @@ ms.locfileid: "36028329"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  为发布数据库创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例，将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的实例，然后调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果<xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>返回`false`，请验证数据库是否存在。  
+2.  为发布数据库创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例，将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的实例，然后调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果<xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>返回`false`，验证数据库是否存在。  
   
 3.  如果<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>属性是`false`，将其设置为`true`，并调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
   

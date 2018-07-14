@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
 - security [SQL Server Agent], about security
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a291112a8c6113d479ef46632cafa374340fd0c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0a965834f326c3d29f2f3e1b03f91227aa08798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249717"
 ---
 # <a name="implement-sql-server-agent-security"></a>实现 SQL Server 代理安全性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使数据库管理员能够在一个安全上下文中运行每个作业步骤，这个安全上下文只具有执行该作业步骤所需的权限，这是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理决定的。 若要为某个特定的作业步骤设置权限，可以创建一个具有所需权限的代理，然后将该代理分配给该作业步骤。 一个代理可以指定给多个作业步骤。 对于需要相同权限的作业步骤，可以使用同一个代理。  
@@ -80,7 +80,7 @@ ms.locfileid: "36026689"
 ## <a name="see-also"></a>请参阅  
  [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [sp_addrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
- [sp_droprolemember &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
+ [sp_droprolemember &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

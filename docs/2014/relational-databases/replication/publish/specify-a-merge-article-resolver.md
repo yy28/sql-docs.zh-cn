@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fab64e66ea1a38131c4edf7e14f4ea7fb1a0fd62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b5899d62f5d9293a21c875a2ae9de5016a2efb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280983"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合并项目冲突解决程序
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合并项目冲突解决程序。  
@@ -91,7 +91,7 @@ ms.locfileid: "36025198"
   
 2.  若要确定所需冲突解决程序是否已注册，请在发布服务器上对任意数据库执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)。 这将显示自定义冲突解决程序的说明以及在分发服务器上注册的每个基于 COM 的冲突解决程序的类标识符 (CLSID)，或者显示在分发服务器上注册的每个业务逻辑处理程序的托管程序集相关信息。  
   
-3.  如果尚未注册所需的自定义解决程序，请在分发服务器上执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 为 **@article_resolver**指定冲突解决程序的名称；对于业务逻辑处理程序，此为程序集的友好名称。 对于基于 COM 的冲突解决程序指定的 DLL 的 CLSID **@resolver_clsid**，对于业务逻辑处理程序，指定的值和`true`为**@is_dotnet_assembly**，为程序集的名称**@dotnet_assembly_name**，和完全限定名称的类，并重写<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>为**@dotnet_class_name**。  
+3.  如果尚未注册所需的自定义解决程序，请在分发服务器上执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 为 **@article_resolver**指定冲突解决程序的名称；对于业务逻辑处理程序，此为程序集的友好名称。 对于基于 COM 的冲突解决程序，指定的 dll 的 CLSID **@resolver_clsid**，并为业务逻辑处理程序，指定的值`true`有关 **@is_dotnet_assembly**的程序集的名称**@dotnet_assembly_name**，并替代的类的完全限定名称<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>有关**@dotnet_class_name**。  
   
     > [!NOTE]  
     >  如果业务逻辑处理程序程序集与合并代理可执行文件不是部署在同一目录中，与同步启动合并代理的应用程序不是部署在同一目录中，或者不是部署在全局程序集缓存 (GAC) 中，则需要为 **@dotnet_assembly_name**中指定合并项目冲突解决程序。  

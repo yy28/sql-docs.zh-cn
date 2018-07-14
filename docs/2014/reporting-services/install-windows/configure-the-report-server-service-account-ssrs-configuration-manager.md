@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bd5da35233834eb0f57482e7f7faef11f977debe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f13a9693615fd55d1cd9fed60398ab78374963e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282763"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是作为单个服务实现的，其中包含报表服务器 Web 服务、报表管理器以及用于计划的报告处理和订阅传递的后台处理应用程序。 本主题说明最初如何配置服务帐户以及如何使用 Reporting Services 配置工具修改帐户或密码。  
   
 ## <a name="initial-configuration"></a>初始配置  
- 报表服务器服务帐户是在安装过程中定义的。 你可以运行在域用户帐户或内置服务，如`NetworkService`帐户。 没有默认帐户;在中指定所用的帐户[服务器配置-服务帐户](../../sql-server/install/server-configuration-service-accounts.md)安装向导页将成为报表服务器服务的初始帐户。  
+ 报表服务器服务帐户是在安装过程中定义的。 您可以运行下一个域用户帐户或内置的服务，如`NetworkService`帐户。 没有默认帐户;在中指定所用的帐户[服务器配置-服务帐户](../../sql-server/install/server-configuration-service-accounts.md)安装向导页将成为报表服务器服务的初始帐户。  
   
 > [!IMPORTANT]  
->  尽管报表服务器 Web 服务和报表管理器是[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]应用程序，它们未运行下[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]帐户。 由单个服务体系结构在同一个报表服务器进程标识下运行这两个 ASP.NET 应用程序。 与先前版本相比，这是一个重大的更改，在先前版本中，报表服务器 Web 服务和报表管理器均在 IIS 中指定的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 辅助进程标识下运行。  
+>  尽管报表服务器 Web 服务和报表管理器是[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]应用程序，它们不会运行下[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]帐户。 由单个服务体系结构在同一个报表服务器进程标识下运行这两个 ASP.NET 应用程序。 与先前版本相比，这是一个重大的更改，在先前版本中，报表服务器 Web 服务和报表管理器均在 IIS 中指定的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 辅助进程标识下运行。  
   
 ## <a name="changing-the-service-account"></a>更改服务帐户  
  若要查看和重新配置服务帐户信息，请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。 服务标识信息在内部存储在多个位置上。 使用该工具可确保在更改帐户或密码的同时相应地更新所有引用。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将执行以下附加步骤以确保报表服务器仍然可用：  
@@ -59,7 +59,7 @@ ms.locfileid: "36025177"
   
 -   LocalService  
   
- 没有用来选择帐户类型的唯一最佳方法。 每个帐户都有优点和缺点，选择时必须予以考虑。 如果你要部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在生产服务器上，最佳做法建议你配置服务在域用户帐户下运行，以便如果共享的帐户遭恶意用户，则可避免大范围的损害。 这样做还能更轻松地审核该帐户的登录活动。 使用 Windows 用户帐户折中的方案是，如果你部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在网络中使用 Kerberos 身份验证，你必须使用注册服务的用户帐户。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
+ 没有用来选择帐户类型的唯一最佳方法。 每个帐户都有优点和缺点，选择时必须予以考虑。 如果要部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在生产服务器上，最佳做法建议将配置服务在域用户帐户下运行，以便如果共享的帐户遭恶意用户，则可避免大范围的损害。 这样做还能更轻松地审核该帐户的登录活动。 使用 Windows 用户帐户的折中方案是，如果要部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在网络中使用 Kerberos 身份验证，您必须使用注册服务的用户帐户。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
  本部分中的下列指南和链接可以帮助您确定部署的最佳方法。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36025177"
   
  若要重置密码，请执行下列操作：  
   
-1.  上**启动**菜单上，指向**控制面板**，指向**管理员工具**，然后单击**服务**。  
+1.  上**启动**菜单，依次指向**控制面板**，指向**管理工具**，然后单击**服务**。  
   
 2.  右键单击**SQL Server Reporting Services**，选择**属性**。  
   
-3.  单击**Log On**，键入新密码。  
+3.  单击**Log On**，然后键入新密码。  
   
 4.  更新密码后，启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并在“服务帐户”页中更新密码。 若要更新由报表服务器存储在内部的帐户信息，必须执行此附加步骤。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36025177"
 ## <a name="configuring-the-report-server-service-for-a-sharepoint-integrated-report-server"></a>为 SharePoint 集成报表服务器配置报表服务器服务  
  如果在 SharePoint 集成模式下运行报表服务器，且符合下列条件之一，则必须更新存储在 SharePoint 配置数据库中的服务帐户信息。  
   
--   修改[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务帐户 （例如，从 NetworkService 切换到的域用户帐户）。  
+-   修改[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务帐户 （例如，从 NetworkService 帐户切换为域用户帐户）。  
   
 -   扩展 SharePoint 场以包含其他 SharePoint Web 应用程序。 如果服务器场是针对报表服务器集成配置的，且配置的用于运行新添加的应用程序的用户帐户与用于运行该场中其他应用程序的用户帐户不同，则必须更新数据库访问信息。  
   
  重置数据库访问信息后，应当重新启动 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 服务以确保不再使用旧连接。  
   
-1.  在**管理工具**，单击**SharePoint 2010 管理中心**。  
+1.  在中**管理工具**，单击**SharePoint 2010 管理中心**。  
   
 2.  单击**应用程序管理**。  
   

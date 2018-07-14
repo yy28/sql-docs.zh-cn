@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b989637b5c16d57aaf6d33fc033229fd08028dc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bd46103f4810564317c5072be78b297150c1f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190054"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>从 Oracle 数据库创建发布
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中从 Oracle 数据库创建发布。  
@@ -118,7 +118,7 @@ ms.locfileid: "36123853"
   
 2.  如果不存在远程分发服务器，请配置远程分发服务器。 有关详细信息，请参阅 [Configure Publishing and Distribution](../configure-publishing-and-distribution.md)。  
   
-3.  在 Oracle 发布服务器将使用的远程分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 指定的 Oracle 数据库实例的透明网络底层 (TNS) 名称**@publisher**和的值`ORACLE`或`ORACLE GATEWAY`为**@publisher_type**。 `Specify` 从 Oracle 发布服务器连接到远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时使用的以下安全模式之一：  
+3.  在 Oracle 发布服务器将使用的远程分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 指定 Oracle 数据库实例的透明网络底层 (TNS) 名称**@publisher**并将值`ORACLE`或`ORACLE GATEWAY`有关**@publisher_type**。 `Specify` 从 Oracle 发布服务器连接到远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时使用的以下安全模式之一：  
   
     -   若要使用 Oracle 标准身份验证（默认值），请将 **@security_mode** 指定值 **@security_mode**，并将 **@login**和 **@password**中从 Oracle 数据库创建发布。  
   

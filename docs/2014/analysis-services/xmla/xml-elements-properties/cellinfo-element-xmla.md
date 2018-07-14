@@ -1,5 +1,5 @@
 ---
-title: CellInfo 元素 (XMLA) |Microsoft 文档
+title: CellInfo 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 803640fe83ccc3137b4597b8c1b78850abeb55c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176384"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 元素 (XMLA)
-  表示单元格元数据包含由容器的父[OlapInfo](olapinfo-element-xmla.md)元素。  
+  表示单元格元数据包含在父[OlapInfo](olapinfo-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36029308"
 <CellPropertyDefinition name="string" type"string" />  
 ```  
   
- 可以通过使用具有的 DISCOVER_PROPERTIES 请求类型获得可用的属性和它们的值`Discover`方法。 `PropertyList` 元素中列出的属性对顺序没有要求。  
+ 可以通过使用与 DISCOVER_PROPERTIES 请求类型获取可用属性和其值`Discover`方法。 `PropertyList` 元素中列出的属性对顺序没有要求。  
   
- 访问接口可选择在 `AxisInfo` 部分或 `CellInfo` 部分中指定单个成员或单元属性的默认值。 如果属性总是或几乎总是具有相同的值，则默认值可缩减结果。 若要指示属性的默认值`Default`元素可根据需要指定为一个单元格属性定义元素的子元素。 因此，当结果中缺少某个成员或单元属性时指示声明的默认值是该单元属性的值。  
+ 访问接口可选择在 `AxisInfo` 部分或 `CellInfo` 部分中指定单个成员或单元属性的默认值。 如果属性总是或几乎总是具有相同的值，则默认值可缩减结果。 若要指示某个属性，默认值`Default`元素可根据需要指定作为一个单元属性定义元素的子元素。 因此，当结果中缺少某个成员或单元属性时指示声明的默认值是该单元属性的值。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何在 `CellInfo` 元素中表示 VALUE、FORMATTED_VALUE 和 FORMAT_STRING 单元属性。  

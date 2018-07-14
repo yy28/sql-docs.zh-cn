@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Object:Deleted event class
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3878a6432a35e0749b37da1e7a6e4b330f12eea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bc5d8458889b809f583457514c37d1d65ce4860b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182284"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 事件类
   Object:Deleted 事件类指示对象已删除，例如由 DROP INDEX 和 DROP TABLE 语句删除。 此事件类可用于确定是否正在删除对象，例如由通常创建临时存储过程的 ODBC 应用程序删除。  

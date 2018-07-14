@@ -25,16 +25,16 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 58795723cbe892fe607bdc768dec4fca6b7ae7ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd26b3cdda5ae3e851c01824f62d91a763557afd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246937"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>使用脚本任务查找已安装的打印机
-  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包转换的数据的最终目的通常是打印成一份报表。 `System.Drawing.Printing`中的命名空间[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供用于使用打印机的类。  
+  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包转换的数据的最终目的通常是打印成一份报表。 `System.Drawing.Printing`中的命名空间[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供用于处理打印机的类。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "36024612"
   
 3.  在脚本项目中，添加对 System.Drawing 命名空间的引用。  
   
-4.  在代码中，使用`Imports`语句以导入**System.Collections**和`System.Drawing.Printing`命名空间。  
+4.  在代码中，使用`Imports`语句导入**System.Collections**和`System.Drawing.Printing`命名空间。  
   
 ### <a name="code"></a>代码  
   
@@ -146,7 +146,7 @@ public void Main()
         }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [脚本任务示例](../extending-packages-scripting-task-examples/script-task-examples.md)  

@@ -1,5 +1,5 @@
 ---
-title: 选择项位置页 （报表管理器） |Microsoft 文档
+title: 选择项位置页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bf08188225c10d72230eea781ac9ebbff3d7c5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260513"
 ---
 # <a name="choose-item-location-page-report-manager"></a>“选择项位置”页（报表管理器）
   使用“选择项位置”页可以为新链接报表或新模型选择文件夹。 如果要为特定的用户组创建链接报表或模型，则最好将该项放在包含这组用户所使用的其他报表和模型的文件夹中。 必须选择一个已经存在并且有权对其添加内容的文件夹。  
