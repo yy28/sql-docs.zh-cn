@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: 22
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cee2e73f65f0b6a70829ac91ce3c86be9ed5b6ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cbcbb6c64ef5a11db341d1a49c5d966991661a84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181864"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>关系查询设计器用户界面（报表生成器）
-  报表生成器提供了图形查询设计器和基于文本的查询设计器可帮助你创建指定要从检索的数据的查询[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]关系数据库和[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]报表数据集。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
+  报表生成器提供了图形查询设计器和基于文本的查询设计器可帮助您创建查询，以指定要检索的数据[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]关系数据库和[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]报表数据集。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
   
 > [!NOTE]  
 >  在报表生成器中，必须使用基于文本的查询设计器才能为 Oracle、OLE DB、ODBC 和 Teradata 等数据源类型指定查询。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](text-based-query-designer-user-interface-report-builder.md)。  
@@ -93,7 +93,7 @@ ms.locfileid: "36024758"
   
  聚合功能可对数据进行汇总，并且数据也会进行分组，以支持传递汇总数据的聚合。 在查询中使用聚合时，查询返回的其他字段将自动进行分组，并且查询包括 SQL GROUP BY 子句。 可以通过仅在 **“分组和聚合”** 列表中使用 **“分组依据”** 选项来汇总数据，而不必添加聚合。 许多聚合都包括使用 DISTINCT 关键字的版本。 包括 DISTINCT 可消除重复的值。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]和[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]并[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
   
  有关 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36024758"
 -   **自动检测** ：切换可自动在表之间创建关系的自动检测功能。 如果启用自动检测，则查询设计器将根据表中的外键创建关系；否则，您必须手动创建关系。 当您在 **“数据库视图”** 窗格中选择表时，自动检测将尝试自动创建关系。 如果您在手动创建联接后启用自动检测，则这些联接将被丢弃。  
   
     > [!IMPORTANT]  
-    >  与一起使用时[!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]不提供创建联接所需的元数据和无法自动检测关系。 如果您的查询从 [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 中检索数据，则必须手动创建所有表联接。  
+    >  与一起使用时[!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]未提供创建联接所需的元数据，而又不能自动检测到关系。 如果您的查询从 [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 中检索数据，则必须手动创建所有表联接。  
   
 -   **添加关系** ：向 **“关系”** 列表中添加关系。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36024758"
   
 -   **左表** ：显示联接关系中第一个表的名称。  
   
--   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关类型的联接的详细信息，请参阅"加入基础知识"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)msdn.microsoft.com 上...  
+-   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 Join 的类型的详细信息，请参阅"JOIN 基础知识"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)msdn.microsoft.com 上...  
   
 -   **右表** ：显示联接关系中第二个表的名称。  
   

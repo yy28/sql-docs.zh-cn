@@ -1,5 +1,5 @@
 ---
-title: 性能计数器 (SSAS) |Microsoft 文档
+title: 性能计数器 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e342f3b64994065f4bff728c69c6b9d43b71dbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4061f96d79faebb2f9c61af62f1c171cb328be4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167628"
 ---
 # <a name="performance-counters-ssas"></a>性能计数器 (SSAS)
   使用性能监视器，您可以通过性能计数器监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  

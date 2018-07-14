@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
 - exporting data
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: 198
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16db4c61fb00746265744a1a91d9d1aaee3d90a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170308"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
-  **Bcp**实用程序大容量复制数据的实例之间[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式数据文件。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
+  **Bcp**大容量复制数据的实例之间[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式的数据文件。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
   
  ![主题链接图标](../../2014/database-engine/media/topic-link.gif "主题链接图标")有关 bcp 语法中使用的语法约定，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "36017018"
  *database_name*  
  指定的表或视图所在数据库的名称。 如果未指定，则使用用户的默认数据库。  
   
- 你还可显式指定数据库名加上`d-`。  
+ 您还可显式指定数据库名称与`d-`。  
   
- **在** *data_file* | **出 * * * data_file* | **queryout * * * data_file* | **格式 nul**  
+ **在中** *data_file* | **出 * * * data_file* | **queryout * * * data_file* | **格式 nul**  
  指定大容量复制的方向，具体如下：  
   
 -   **in** 从文件复制到数据库表或视图。  
@@ -103,7 +103,7 @@ ms.locfileid: "36017018"
   
 -   **queryout** 从查询中复制，仅当从查询大容量复制数据时才必须指定此选项。  
   
--   **格式**创建格式化文件基于指定的选项 (**-n**， `-c`， `-w`，或 **-N**) 以及表或视图分隔符。 大容量复制数据时， **bcp** 命令可以引用一个格式化文件，从而避免以交互方式重复输入格式信息。 **format** 选项要求指定 **-f** 选项；创建 XML 格式化文件时还需要指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。 必须将 **nul** 指定为值 (**format nul**)。  
+-   **格式**创建格式化文件基于指定的选项 (**-n**， `-c`， `-w`，或 **-N**) 以及表或视图的分隔符。 大容量复制数据时， **bcp** 命令可以引用一个格式化文件，从而避免以交互方式重复输入格式信息。 **format** 选项要求指定 **-f** 选项；创建 XML 格式化文件时还需要指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。 必须将 **nul** 指定为值 (**format nul**)。  
   
  *所有者*  
  表或视图的所有者的名称。 如果执行该操作的用户拥有指定的表或视图，则*owner* 是可选的。 如果未指定 *owner*，并且执行该操作的用户不是指定的表或视图的所有者，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将返回错误消息，而且该操作将取消。  
@@ -130,12 +130,12 @@ ms.locfileid: "36017018"
  不使用此选项结合 **-h"** ROWS_PER_BATCH  **= *`bb`*"** 选项。  
   
  `-c`  
- 使用字符数据类型执行该操作。 此选项不提示输入每个字段;它使用`char`作为存储类型，没有前缀; 使用**\t** （制表符） 作为字段分隔符和**\r\n** （换行符） 作为行终止符。 `-c` 与不兼容`-w`。  
+ 使用字符数据类型执行该操作。 此选项不提示输入每个字段;它使用`char`作为存储类型，不带前缀; 使用**\t** （制表符） 作为字段分隔符以及**\r\n** （换行符） 作为行终止符。 `-c` 与不兼容`-w`。  
   
  有关详细信息，请参阅[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-C** { **ACP** | **OEM** | **RAW** | *code_page* }  
- 指定该数据文件中数据的代码页。 *code_page*只适用情况的数据包含`char`， `varchar`，或`text`列的字符值大于 127 或小于 32。  
+ 指定该数据文件中数据的代码页。 *code_page*仅当数据含有相关`char`， `varchar`，或`text`字符值大于 127 或小于 32 列。  
   
 > [!NOTE]  
 >  建议在格式化文件中为每个列指定一个排序规则名称。  
@@ -145,10 +145,10 @@ ms.locfileid: "36017018"
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|客户端使用的默认代码页。 未指定 **-C** 时使用的默认代码页。|  
 |RAW|不进行代码页间的转换。 因为不进行转换，所以这是最快的选项。|  
-|*code_page*|特定的代码页编号，例如 850。<br /><br /> **\*\* 重要\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持代码页 65001 （utf-8 编码）。|  
+|*code_page*|特定的代码页编号，例如 850。<br /><br /> **\*\* 重要\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持代码页 65001(utf-8 编码）。|  
   
  `-d` *database_name*  
- 指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果`-d` *database_name*和三个部分组成的名称 (*database_name.schema.table*传递的第一个参数的 bcp.exe) 指定，则会发生错误，因为你不能指定两次的数据库名称。如果*database_name*开始连字符 （-） 或正斜杠 （/），不要添加之间留一个空格`-d`和数据库名称。  
+ 指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果`-d` *database_name*和三个部分构成的名称 (*database_name.schema.table*，作为第一个参数传递给 bcp.exe) 指定，将发生错误，因为不能指定两次数据库名称。如果*database_name*开始使用连字符 （-） 或正斜杠 （/），不要添加之间有空格`-d`和数据库名称。  
   
  **-e** *err_file*  
  指定错误文件的完整路径，此文件用于存储 **bcp** 实用工具无法从文件传输到数据库的所有行。 **bcp** 命令产生的错误消息将被发送到用户的工作站。 如果不使用此选项，则不会创建错误文件。  
@@ -170,14 +170,14 @@ ms.locfileid: "36017018"
 -   如果与 **in** 或 **out** 选项一起使用，则 **-f** 需要一个现有的格式化文件。  
   
     > [!NOTE]  
-    >  与 **in** 或 **out** 选项一起使用时，格式化文件是可选的。 在缺少 **-f**选项，如果 **-n**， `-c`， `-w`，或 **-N**未指定，则该命令将提示输入格式信息，可以在保存在格式化文件 （其默认的文件名为 Bcp.fmt） 响应。  
+    >  与 **in** 或 **out** 选项一起使用时，格式化文件是可选的。 如果没有 **-f**选项时，如果 **-n**， `-c`， `-w`，或者 **-N**未指定，则该命令将提示输入格式信息，并允许您保存做的响应的格式化文件 （默认文件名为 Bcp.fmt）。  
   
  如果 *format_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-f** 与 *format_file* 值之间包含空格。  
   
  **-F** *first_row*  
- 指定要从表中导出或从数据文件导入的第一行的编号。 此参数需要大于 (>) 0 的值但小于 (\<) 或等于 （=） 的总的数字行。 如果未指定此参数，则默认为文件的第一行。  
+ 指定要从表中导出或从数据文件导入的第一行的编号。 此参数需要大于 (>) 0 的值但小于 (\<) 或总的行数等于 （=）。 如果未指定此参数，则默认为文件的第一行。  
   
- *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F * * * first_row*是基于 1 的。  
+ *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F * * * first_row* 1 开始。  
   
  **-h"** *hint*[ **,**... *n*] **"**  
  指定向表或视图中大容量导入数据时要用到的提示。  
@@ -214,7 +214,7 @@ ms.locfileid: "36017018"
  与 **in** 参数一同指定，在目标表中定义的任何插入触发器都将在大容量复制操作期间运行。 如果未指定 FIRE_TRIGGERS，将不运行任何插入触发器。 对于 **out**、**queryout** 和 **format** 参数，将忽略 FIRE_TRIGGERS。  
   
  **-i** *input_file*  
- 指定正在使用交互模式下执行大容量复制时将包含每个数据字段的命令提示问题的响应的响应文件的名称 (**-n**， `-c`， `-w`，或 **-N**未指定)。  
+ 指定包含每个数据字段的命令提示问题的响应，使用交互模式下执行大容量复制时的响应文件的名称 (**-n**， `-c`， `-w`，或 **-N**未指定)。  
   
  如果 *input_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-i** 与 *input_file* 值之间包含空格。  
   
@@ -222,10 +222,10 @@ ms.locfileid: "36017018"
  指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  **-K** *application_intent*  
- 连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K**，bcp 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动辅助副本： 可读辅助副本 （AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K**，bcp 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本： 可读辅助副本 （AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **-L** *last_row*  
- 指定要从表中导出或从数据文件中导入的最后一行的编号。 此参数需要大于 (>) 0 的值但小于 (\<) 或等于 （=） 最后一行的行数。 如果未指定此参数，则默认为文件的最后一行。  
+ 指定要从表中导出或从数据文件中导入的最后一行的编号。 此参数需要大于 (>) 0 的值但小于 (\<) 或最后一行的行数等于 （=）。 如果未指定此参数，则默认为文件的最后一行。  
   
  *last_row* 可以是一个最大为 2^63-1 的正整数值。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "36017018"
   
  有关详细信息信息，请参阅 [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。  
   
- 如果导出并通过使用 bcp.exe 和，然后导入相同的表架构数据 **-N**，你可能会看到截断警告，如果没有固定的长度的非 Unicode 字符列 (例如， `char(10)`)。  
+ 如果导出，然后使用数据导入到同一表架构与 bcp.exe **-N**，可能会显示截断警告，则在存在固定的长度的非 Unicode 字符列 (例如， `char(10)`)。  
   
  可忽略该警告。 解决此警告的一个方法是使用 **-n** 来替代 **-N**。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "36017018"
   
  如果您在 bcp.exe 命令中以十六进制表示法指定字段终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
   
- 如果*field_term*开始连字符 （-） 或正斜杠 （/），不包括之间留一个空格`-t`和*field_term*值。  
+ 如果*field_term*开始使用连字符 （-） 或正斜杠 （/），不包括之间有空格`-t`并且*field_term*值。  
   
  **-T**  
  指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 不需要网络用户的安全凭据 login_id 和 password。 如果你未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。  
@@ -323,15 +323,15 @@ ms.locfileid: "36017018"
  有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  `-w`  
- 使用 Unicode 字符执行大容量复制操作。 此选项不提示输入每个字段;它使用`nchar`作为存储类型，不带前缀**\t** （制表符） 作为字段分隔符和**\n** （换行符） 作为行终止符。 `-w` 与不兼容`-c`。  
+ 使用 Unicode 字符执行大容量复制操作。 此选项不提示输入每个字段;它使用`nchar`作为存储类型，不带前缀**\t** （制表符） 作为字段分隔符，和**\n** （换行符） 作为行终止符。 `-w` 与不兼容`-c`。  
   
  有关详细信息，请参阅 [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-x**  
- 与使用**格式**和 **-f * * * format_file*选项时，将生成一个基于 XML 的格式文件，而不是默认非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 将生成错误，如果不使用**格式**和 **-f * * * format_file*。  
+ 用于**格式**和 **-f * * * format_file*选项、 生成基于 XML 的格式化文件，而不是默认非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 如果不使用它将生成错误**格式**和 **-f * * * format_file*。  
   
 ## <a name="remarks"></a>Remarks  
- **Bcp** 12.0 客户端你安装时安装[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]工具。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的工具，使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 12.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 **bcp /v** 命令。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅 Windows 帮助。  
+ **Bcp** 12.0 客户端安装在安装时[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]工具。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的工具，使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 12.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 **bcp /v** 命令。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅 Windows 帮助。  
   
  只有当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
   
@@ -347,7 +347,7 @@ ms.locfileid: "36017018"
 ## <a name="computed-columns-and-timestamp-columns"></a>计算列和 timestamp 列  
  为计算列或 `timestamp` 列导入的数据文件中的值将被忽略，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动分配值。 如果数据文件不包含表中的计算列或 `timestamp` 列的值，则可使用格式化文件指定应在导入数据时忽略表中的计算列或 `timestamp` 列；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动为列分配值。  
   
- 计算和`timestamp`列是大容量复制从[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到数据文件像往常一样。  
+ 计算并`timestamp`列是大容量复制从[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到数据文件像往常一样。  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>指定包含空格或引号的标识符  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符可以包含嵌入的空格和引号等字符。 此类标识符必须按以下方式处理：  
@@ -371,7 +371,7 @@ ms.locfileid: "36017018"
 ## <a name="data-validation"></a>数据验证  
  **bcp** 现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。 例如， **bcp** 现在可以验证：  
   
--   本机表示形式`float`或`real`数据类型是有效的。  
+-   本机表示形式`float`或`real`数据类型均有效。  
   
 -   Unicode 数据的字节数是否为偶数。  
   

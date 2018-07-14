@@ -1,5 +1,5 @@
 ---
-title: 初始配置 (PowerPivot for SharePoint) |Microsoft 文档
+title: 初始配置 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 301b02d68848e76032fd62c95a14a7ccab9a0acd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fb91e2ed29300f3d85b9376b725c95694c2da1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172228"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初始安装 (PowerPivot for SharePoint)
   使用本主题中的步骤可以配置 PowerPivot for SharePoint 的初始安装。 配置初始安装的最简单方法是使用 PowerPivot 配置工具。 该工具自动完成下述所有配置步骤。  
@@ -47,7 +47,7 @@ ms.locfileid: "36014473"
   
  在以前的版本中，SQL Server 安装程序安装和部署了场解决方案。 在此版本中，您必须使用 PowerPivot 配置工具或 PowerShell 脚本部署场解决方案。 不能使用管理中心部署场解决方案。 这是 PowerPivot for SharePoint 配置中不能在管理中心中执行的唯一步骤。 在部署场解决方案后，您可以使用管理中心和本文中的步骤配置 PowerPivot for SharePoint 安装。  
   
- 在此步骤中，您将运行 PowerShell 以便安装和部署场解决方案。 有关详细信息，请参阅[PowerPivot 配置使用 Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
+ 在此步骤中，您将运行 PowerShell 以便安装和部署场解决方案。 有关详细信息，请参阅[使用 Windows PowerShell 配置 PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
   
 1.  使用 **“以管理员身份运行”** 选项打开 SharePoint 2010 Management Shell。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36014473"
   
  **将 web 应用程序解决方案部署**  
   
-1.  单击开始按钮，选择**所有程序**，选择**Microsoft SharePoint 产品 2010年**，然后选择**SharePoint 2010 管理中心**。  
+1.  单击开始按钮，选择**所有程序**，选择**Microsoft SharePoint Products 2010**，然后选择**SharePoint 2010 管理中心**。  
   
 2.  在 SharePoint 2010 管理中心的“系统设置”中，单击 **“管理场解决方案”**。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36014473"
   
 4.  单击**部署解决方案。**  
   
-5.  在**部署到？**，选择你想要添加 PowerPivot 功能支持的 SharePoint web 应用程序。  
+5.  在中**部署到？**，选择你想要添加 PowerPivot 功能支持的 SharePoint web 应用程序。  
   
 6.  单击“确定” 。  
   
@@ -107,13 +107,13 @@ ms.locfileid: "36014473"
   
 3.  选择**SQL Server PowerPivot 服务应用程序**。 如果该服务应用程序未在列表中出现，则 PowerPivot for SharePoint 未安装或者解决方案未部署。  
   
-4.  在**创建新 PowerPivot 服务应用程序**页上，输入应用程序的名称。 默认值是 PowerPivotServiceApplication\<编号 >。 如果您创建多个 PowerPivot 服务应用程序，则说明性的名称将有助于其他管理员理解应用程序的使用方式。  
+4.  在中**创建新 PowerPivot 服务应用程序**页上，输入应用程序的名称。 默认值是 PowerPivotServiceApplication\<编号 >。 如果您创建多个 PowerPivot 服务应用程序，则说明性的名称将有助于其他管理员理解应用程序的使用方式。  
   
 5.  在“应用程序池”中，创建一个新的应用程序池并且为其选择一个安全帐户。 域用户帐户是必需的。  
   
-6.  在**数据库服务器**，选择要在其中创建服务应用程序数据库的数据库服务器。 默认值是承载场配置数据库的 SQL Server 数据库引擎实例。  
+6.  在中**数据库服务器**，选择要在其中创建服务应用程序数据库的数据库服务器。 默认值是承载场配置数据库的 SQL Server 数据库引擎实例。  
   
-7.  在**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
+7.  在中**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
   
 8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
   
@@ -144,13 +144,13 @@ ms.locfileid: "36014473"
   
 9. 单击您刚创建的 Excel Services 应用程序。  
   
-10. 单击**受信任文件位置**并在此页上，选择你的受信任的位置。 (通常情况下，这被列为**http://** 地址列中。)若要确保 Excel Services 和 PowerPivot 服务均有权访问该工作簿，您必须将 SharePoint 作为 Excel Services 受信任位置包括。 PowerPivot 系统服务无法访问在 SharePoint 场的外部存储的工作簿。  
+10. 单击**受信任文件位置**并在此页上，选择您信任的位置。 (通常情况下，这被列为**http://** 地址列中。)若要确保 Excel Services 和 PowerPivot 服务均有权访问该工作簿，您必须将 SharePoint 作为 Excel Services 受信任位置包括。 PowerPivot 系统服务无法访问在 SharePoint 场的外部存储的工作簿。  
   
 11. 在工作簿属性区域中，设置**最大工作簿大小**为 50。  
   
-12. 在外部数据设置**允许外部数据**到**受信任数据连接库和嵌入**。 此设置是工作簿中 PowerPivot 数据访问所必需的。  
+12. 在外部数据设置**允许外部数据**到**受信任的数据连接库和嵌入**。 此设置是工作簿中 PowerPivot 数据访问所必需的。  
   
-13. 清除**数据刷新时警告**复选框可允许的 PowerPivot 库中的各个工作表的预览图像。 如果您选择保留该警告并且工作簿设置指定在打开时刷新，则可能得到的是警告的单个预览图像，而非工作簿中的页面。  
+13. 清除**数据刷新时警告**复选框可允许 PowerPivot 库中的各工作表的预览图像。 如果您选择保留该警告并且工作簿设置指定在打开时刷新，则可能得到的是警告的单个预览图像，而非工作簿中的页面。  
   
 14. 单击“确定” 。  
   
@@ -168,21 +168,21 @@ ms.locfileid: "36014473"
   
 2.  在服务应用程序功能区中的在中，单击**新建**。  
   
-3.  选择**Secure Store Service**。  
+3.  选择**安全存储区服务**。  
   
-4.  在**创建安全应用商店应用程序**页上，输入应用程序的名称。  
+4.  在中**创建安全存储应用程序**页上，输入应用程序的名称。  
   
-5.  在**数据库**，指定将承载此服务应用程序的数据库的 SQL Server 实例。 默认值是承载场配置数据库的 SQL Server 数据库引擎实例。  
+5.  在中**数据库**，指定将承载此服务应用程序数据库的 SQL Server 实例。 默认值是承载场配置数据库的 SQL Server 数据库引擎实例。  
   
-6.  在**数据库名称**，输入服务应用程序数据库的名称。 默认值是 Secure_Store_Service_DB_\<guid >。 该默认名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
+6.  在中**数据库名称**，输入服务应用程序数据库的名称。 默认值是 Secure_Store_Service_DB_\<guid >。 该默认名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
   
 7.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择“SQL 身份验证”，请参考 SharePoint 管理员指南中有关如何在场中使用该身份验证类型的说明。  
   
-8.  在应用程序池选择**创建新的应用程序池。** 请指定一个说明性名称，这将帮助其他服务器管理员标识使用此应用程序池的方式。  
+8.  在应用程序池选择**创建新应用程序池。** 请指定一个说明性名称，这将帮助其他服务器管理员标识使用此应用程序池的方式。  
   
 9. 为应用程序池选择一个安全帐户。 指定要使用域用户帐户的托管帐户。  
   
-10. 接受其他默认值，，然后单击**确定。** 服务应用程序将在场的服务应用程序列表中与其他托管服务显示在一起。  
+10. 接受其他默认值，并单击**确定。** 服务应用程序将在场的服务应用程序列表中与其他托管服务显示在一起。  
   
 ##### <a name="part-2-generate-the-master-key"></a>第二部分：生成主密钥  
   
@@ -199,26 +199,26 @@ ms.locfileid: "36014473"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>第三部分：配置无人参与的 PowerPivot 数据刷新帐户  
  为 PowerPivot 数据访问创建无人参与的数据刷新帐户通常是数据刷新期间外部数据访问所必需的。 例如，如果未启用 Kerberos，则您必须创建 PowerPivot 服务可用于连接到外部数据源的无人参与的帐户。  
   
- 说明有关如何创建无人参与的 PowerPivot 数据刷新帐户或其他存储的凭据中使用数据刷新，请参阅[配置 PowerPivot 无人参与数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)和[为 PowerPivot 数据刷新配置存储的凭据&#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
+ 说明如何创建无人参与的 PowerPivot 数据刷新帐户或其他存储的凭据中使用的数据刷新，请参阅[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)并[为 PowerPivot 数据刷新配置存储的凭据&#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
 ##  <a name="Usage"></a> 步骤 6： 启用使用情况数据收集  
- PowerPivot for SharePoint 使用 SharePoint 使用情况数据收集基础结构来收集与 PowerPivot 在整个场中的使用情况有关的信息。 尽管使用情况数据始终是 SharePoint 安装的一部分，但可能需要首先启用它，然后才能使用它。 有关说明，请参阅[配置使用情况数据收集&#40;PowerPivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
+ PowerPivot for SharePoint 使用 SharePoint 使用情况数据收集基础结构来收集与 PowerPivot 在整个场中的使用情况有关的信息。 尽管使用情况数据始终是 SharePoint 安装的一部分，但可能需要首先启用它，然后才能使用它。 有关说明，请参阅[配置使用情况数据收集的&#40;PowerPivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="Upload"></a> SharePoint Web 应用程序和 Excel Services 的步骤 7： 增加最大上载大小  
- 因为 PowerPivot 工作簿可能很大，所以，您可能要增加最大文件大小。 有两个要配置的文件大小设置：针对 Web 应用程序的“最大上载大小”和 Excel Services 中的“最大工作簿大小”。 在这两个应用程序中，最大文件大小应该设置为相同值。 有关说明，请参阅[配置最大文件上载大小&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。  
+ 因为 PowerPivot 工作簿可能很大，所以，您可能要增加最大文件大小。 有两个要配置的文件大小设置：针对 Web 应用程序的“最大上载大小”和 Excel Services 中的“最大工作簿大小”。 在这两个应用程序中，最大文件大小应该设置为相同值。 有关说明，请参阅[配置最大文件上传大小&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="activatePP"></a> 步骤 8： 激活针对网站集的 PowerPivot 功能集成  
  网站集级别的功能激活使应用程序页和模板可用于您的站点，包括用于计划的数据刷新的配置页以及用于 PowerPivot 库和数据馈送库的应用程序页。  
   
 1.  在 SharePoint 站点上，单击 **“网站操作”**。  
   
-     默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着，通常可以通过输入 http:// 访问 SharePoint 站点\<计算机名称 > 若要打开根网站集。  
+     默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着，通常可以通过输入 http:// 访问 SharePoint 站点\<计算机名 > 打开根网站集。  
   
 2.  单击 **“网站设置”**。  
   
 3.  在“网站集管理”中，单击 **“网站集功能”**。  
   
-4.  向下页面，直至你找到滚动**PowerPivot 集成网站集功能**。  
+4.  滚动页面，直到找到**PowerPivot 集成网站集功能**。  
   
 5.  单击 **“激活”**。  
   
@@ -231,22 +231,22 @@ ms.locfileid: "36014473"
   
  安装该访问接口后，将允许在数据连接字符串中引用 MSOLAP.4 的工作簿在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 服务器上按预期方式工作。 安装 SQL Server 2008 R2 OLE DB 访问接口是升级在 PowerPivot for Excel 的早期版本中创建的工作簿的另一种方法。  
   
- 你可以下载提供程序从[SQL Server 2008 R2 功能包页](http://go.microsoft.com/fwlink/?LinkId=159570)。 查找**Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**，然后下载 x64 包`SQLServer2008_ASOLEDB10.msi`安装程序。  
+ 您可以下载提供程序从[SQL Server 2008 R2 功能包页](http://go.microsoft.com/fwlink/?LinkId=159570)。 寻找**Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**，然后下载 x64 程序包的`SQLServer2008_ASOLEDB10.msi`安装程序。  
   
- 有关安装提供程序，包括验证步骤的详细信息请参阅[在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
+ 有关安装提供程序，包括验证步骤的详细信息请参阅[SharePoint 服务器上安装 Analysis Services OLE DB 访问接口](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   
 ##  <a name="verifyinstall"></a> 步骤 10： 验证安装  
  当用户或应用程序打开包含 PowerPivot 数据的 Excel 工作簿时，在场中发生 PowerPivot 查询处理。 至少，您可以检查 SharePoint 网站上的页面以便确认 PowerPivot 功能可用。 但是，若要完全验证某一安装，您必须具有可发布到 SharePoint 并从库中访问的 PowerPivot 工作簿。 出于测试目的，您可以发布已包含 PowerPivot 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
   
  若要验证 PowerPivot 与 SharePoint 网站的集成，请执行以下操作：  
   
-1.  在浏览器中，打开您创建的 Web 应用程序。 如果你使用默认值，则可以指定 http://\<您的计算机名称 > 在 URL 地址。  
+1.  在浏览器中，打开您创建的 Web 应用程序。 如果你使用默认值，则可以指定 http://\<您的计算机名称 > 中的 URL 地址。  
   
 2.  验证 PowerPivot 数据访问和处理功能在应用程序中可用。 您可以通过验证 PowerPivot 提供的库模板是否存在来验证此可用性：  
   
     1.  在站点操作，单击**更多选项...**.  
   
-    2.  在库中，你应看到**数据馈送库**和**PowerPivot 库**。 这些库模板由 PowerPivot 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
+    2.  在库中，你应看到**数据馈送库**并**PowerPivot 库**。 这些库模板由 PowerPivot 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
   
  若要验证服务器上的 PowerPivot 数据访问，请执行以下操作：  
   
@@ -260,11 +260,11 @@ ms.locfileid: "36014473"
   
 5.  在“服务器类型”中，选择 **“Analysis Services”**。  
   
-6.  在服务器名称，输入**\<服务器名称 > \powerpivot**，其中**\<服务器名称 >** 是 PowerPivot for SharePoint 安装的计算机的名称。  
+6.  在服务器名称，输入**\<服务器名称 > \powerpivot**，其中**\<服务器名称 >** 是具有 PowerPivot for SharePoint 安装的计算机的名称。  
   
 7.  单击 **“连接”**。  
   
-8.  在对象资源管理器，单击**数据库**若要查看加载的 PowerPivot 数据文件的列表。  
+8.  在对象资源管理器，单击**数据库**查看加载的 PowerPivot 数据文件的列表。  
   
 9. 在计算机文件系统上，检查以下文件夹以便确定文件是否已缓存到磁盘。 存在缓存文件将进一步证实您的部署正常工作。 若要查看文件缓存，请转到 \Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup 文件夹。  
   
@@ -275,32 +275,32 @@ ms.locfileid: "36014473"
  如果启用了刷新数据，则服务器将需要通过 PowerPivot 客户端应用程序用来导入原始数据的相同数据访问接口来进行外部数据访问（例如，如果最初导入数据时使用的是 32 位访问接口，则当服务器端数据刷新访问相同的外部数据源时，也需要 32 位访问接口）。 有关详细信息，请参阅[使用 SharePoint 2010 的 PowerPivot 数据刷新](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)。  
   
 ### <a name="install-adonet-data-services"></a>安装 ADO.NET Data Services  
- 如果您想要将 SharePoint 列表作为数据馈送导出，则必须安装 ADO.NET Data Services 3.5 SP1。 有关说明，请参阅[安装 ADO.NET Data Services 以支持数据源的 SharePoint 列表导出](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  
+ 如果您想要将 SharePoint 列表作为数据馈送导出，则必须安装 ADO.NET Data Services 3.5 SP1。 有关说明，请参阅[安装 ADO.NET Data Services 以支持数据馈送导出 SharePoint 列表的](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  
   
 ### <a name="create-a-powerpivot-gallery"></a>创建 PowerPivot 库  
- PowerPivot 库是包括预览和展示选项以便在 SharePoint 网站上查看 PowerPivot 工作簿的一种库。 使用 PowerPivot 库可以发布和查看为其预览功能推荐的 PowerPivot 工作簿。 此外，如果您还将 Reporting Services 部署到了同一 SharePoint 服务器上，则 PowerPivot 库将简化创建报表的工作。 您可以从 PowerPivot 库内启动报表生成器，以便在已发布的 PowerPivot 工作簿的基础上创建新的报表。 有关创建和使用库的详细信息，请参阅[创建和自定义 PowerPivot 库](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)和[使用 PowerPivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)。  
+ PowerPivot 库是包括预览和展示选项以便在 SharePoint 网站上查看 PowerPivot 工作簿的一种库。 使用 PowerPivot 库可以发布和查看为其预览功能推荐的 PowerPivot 工作簿。 此外，如果您还将 Reporting Services 部署到了同一 SharePoint 服务器上，则 PowerPivot 库将简化创建报表的工作。 您可以从 PowerPivot 库内启动报表生成器，以便在已发布的 PowerPivot 工作簿的基础上创建新的报表。 有关创建和使用库的详细信息，请参阅[创建和自定义 PowerPivot 库](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)并[使用 PowerPivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>在 Excel Services 中创建其他可信站点  
  您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 PowerPivot 数据的站点上改变权限和配置设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ### <a name="tune-configuration-settings"></a>优化配置设置  
- PowerPivot 服务应用程序使用默认属性和值创建。 您可以修改单独服务应用程序的配置设置，以便更改分配请求所采用的方法、设置服务器超时、更改查询响应报告事件的阈值或者指定保留多长时间的使用情况数据。 有关在管理中心的配置或使用 SharePoint Web 应用程序中的 PowerPivot 功能的详细信息，请参阅[管理中心在 PowerPivot 服务器管理和配置](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
+ PowerPivot 服务应用程序使用默认属性和值创建。 您可以修改单独服务应用程序的配置设置，以便更改分配请求所采用的方法、设置服务器超时、更改查询响应报告事件的阈值或者指定保留多长时间的使用情况数据。 有关管理中心中配置或在 SharePoint Web 应用程序中使用 PowerPivot 功能的详细信息，请参阅[PowerPivot 服务器管理和配置在管理中心内](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
 ### <a name="install-powerpivot-for-excel-and-build-a-powerpivot-workbook"></a>安装 PowerPivot for Excel 和生成 PowerPivot 工作簿  
  在您在场中安装了服务器组件后，可以创建使用嵌入的 PowerPivot 数据的第一个 Excel 2010 工作簿，然后将其发布到 Web 应用程序中的 SharePoint 库。 在您可以生成包含 PowerPivot 数据的 Excel 工作簿前，必须从安装 Excel 2010 开始，然后安装 PowerPivot for Excel 外接程序，该外接程序扩展 Excel 以便支持 PowerPivot 数据导入和内容丰富。  
   
 ### <a name="add-servers-or-applications"></a>添加服务器或应用程序  
- 在您部署 PowerPivot 解决方案时，对于 Web 应用程序中的所有网站集，将在网站集级别激活功能集成。 一段时间后在您创建新的 Web 应用程序时，必须将 powerpivotwebapp 解决方案部署到各应用程序。 有关说明，请参阅[部署到 SharePoint 的 PowerPivot 解决方案](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)。  
+ 在您部署 PowerPivot 解决方案时，对于 Web 应用程序中的所有网站集，将在网站集级别激活功能集成。 一段时间后在您创建新的 Web 应用程序时，必须将 powerpivotwebapp 解决方案部署到各应用程序。 有关说明，请参阅[部署 PowerPivot 解决方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)。  
   
  根据您配置 PowerPivot 服务应用程序的方式，PowerPivot 系统服务将添加到默认的连接组中，并且它将可用于使用默认连接的所有 Web 应用程序。 但是，如果您配置了 Web 应用程序以便使用自定义服务应用程序连接列表，则需要将 PowerPivot 服务应用程序添加到您想要为其启用 PowerPivot 数据处理的各 SharePoint Web 应用程序中。 有关详细信息，请参阅[PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
- 一段时间后，如果您确定需要附加的数据存储和处理能力，则可以将第二个 PowerPivot for SharePoint 服务器实例添加到场中。 安装过程与您添加第一个服务器所执行的步骤几乎完全相同，只有在对如何指定实例名称和服务帐户信息的要求方面除外。 有关说明，请参阅[部署清单： 横向扩展通过将 PowerPivot 服务器添加到 SharePoint 2010 场](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
+ 一段时间后，如果您确定需要附加的数据存储和处理能力，则可以将第二个 PowerPivot for SharePoint 服务器实例添加到场中。 安装过程与您添加第一个服务器所执行的步骤几乎完全相同，只有在对如何指定实例名称和服务帐户信息的要求方面除外。 有关说明，请参阅[部署核对清单： 通过向 SharePoint 2010 场添加 PowerPivot 服务器来进行扩展](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 的版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [配置 PowerPivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [创建和配置在管理中心的 PowerPivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [部署到 SharePoint 的 PowerPivot 解决方案](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)   
+ [创建并在管理中心配置 PowerPivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
+ [将 PowerPivot 解决方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)   
  [针对在管理中心网站集激活 PowerPivot 功能集成](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [PowerPivot for SharePoint 2010 安装](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

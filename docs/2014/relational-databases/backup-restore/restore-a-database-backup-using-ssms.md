@@ -1,14 +1,13 @@
 ---
-title: 还原数据库备份 (SQL Server Management Studio) |Microsoft 文档
+title: 还原数据库备份 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.locatebackupfileazure.f1
 - sql12.swb.specifybackup.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6388416e41fac400d6b77ad603a305fad50e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d765859981e2390c408a33b1a77965804519a587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184744"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>还原数据库备份 (SQL Server Management Studio)
   本主题说明如何还原完整数据库备份。  
@@ -44,7 +43,7 @@ ms.locfileid: "36024602"
   
 2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.  右键单击数据库，指向**任务**，指向**还原**，然后单击**数据库**，这将打开**Restore Database**对话框。  
+3.  右键单击该数据库，指向**任务**，依次指向**还原**，然后单击**数据库**，这将打开**Restore Database**对话框。  
   
 4.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36024602"
         >  此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
          **备份介质**  
-         选择用于还原操作介质：**文件**，**磁带**， **URL**或**备份设备**。 只有在计算机上装有磁带机时，才会显示 **“磁带”** 选项，只有至少存在一个备份设备时，才会显示 **“备份设备”** 选项。  
+         选择还原操作的介质：**文件**，**磁带**， **URL**或者**备份设备**。 只有在计算机上装有磁带机时，才会显示 **“磁带”** 选项，只有至少存在一个备份设备时，才会显示 **“备份设备”** 选项。  
   
          **备份位置**  
          查看、添加或删除还原操作使用的介质。 列表最多可以包含 64 个文件、磁带或备份设备。  
@@ -80,7 +79,7 @@ ms.locfileid: "36024602"
         |**File**|**定位备份文件**|在此对话框中，您可以从树中选择一个本地文件，或使用完全限定的通用命名约定 (UNC) 名称指定一个远程文件。 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
         |**设备**|**选择备份设备**|在此对话框中，您可以从服务器实例中定义的逻辑备份设备列表中进行选择。|  
         |**磁带**|**选择备份磁带**|在此对话框中，您可以从与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机物理连接的磁带机列表中进行选择。|  
-        |**URL**|这会按以下顺序启动两个对话框：<br /><br /> 1)**连接到 Windows Azure 存储空间**<br /><br /> 2)**在 Windows Azure 中定位备份文件**|在 **“连接到 Windows Azure 存储”**  对话框中，选择存储有 Windows Azure 存储帐户名称和访问密钥信息的现有 SQL 凭据，或通过指定存储帐户名称和存储访问密钥信息创建新的 SQL 凭据。 有关详细信息，请参阅[连接到 Windows Azure 存储&#40;还原&#41;](connect-to-microsoft-azure-storage-restore.md)。<br /><br /> 在 **“查找备份文件”** 对话框中，您可以从左边框架显示的容器列表中选择一个文件。|  
+        |**URL**|这会按以下顺序启动两个对话框：<br /><br /> 1)**连接到 Windows Azure 存储**<br /><br /> 2)**在 Windows Azure 中查找备份文件**|在 **“连接到 Windows Azure 存储”**  对话框中，选择存储有 Windows Azure 存储帐户名称和访问密钥信息的现有 SQL 凭据，或通过指定存储帐户名称和存储访问密钥信息创建新的 SQL 凭据。 有关详细信息，请参阅[连接到 Windows Azure 存储&#40;还原&#41;](connect-to-microsoft-azure-storage-restore.md)。<br /><br /> 在 **“查找备份文件”** 对话框中，您可以从左边框架显示的容器列表中选择一个文件。|  
   
          如果列表已满，此 **“添加”** 按钮将不可用。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "36024602"
   
 9. 若要查看或选择高级选项，在 **“选项”** 页的 **“还原选项”** 面板中，可以根据您的实际情况选择下列任意选项：  
   
-    1.  `WITH` （不是必需的） 的选项：  
+    1.  `WITH` 选项 （可选）：  
   
         -   **覆盖现有数据库(WITH REPLACE)**  
   

@@ -1,5 +1,5 @@
 ---
-title: 创建和自定义 PowerPivot 库 |Microsoft 文档
+title: 创建和自定义 PowerPivot 库 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180990"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>创建和自定义 PowerPivot 库
   PowerPivot 库是一种特殊类型的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
@@ -54,12 +54,12 @@ ms.locfileid: "36016951"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库不能在受限站点中。 包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的父站点必须添加到可信站点或本地 Intranet 区域。  
   
--   必须已为应用程序部署了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 应用程序解决方案，并且必须已为网站集激活了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 有关详细信息，请参阅[部署到 SharePoint 的 PowerPivot 解决方案](deploy-power-pivot-solutions-to-sharepoint.md)和[针对在管理中心网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+-   必须已为应用程序部署了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 应用程序解决方案，并且必须已为网站集激活了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 有关详细信息，请参阅[部署 PowerPivot 解决方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)并[针对在管理中心网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 -   若要查看或创建基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 Reporting Services 报表，工作簿和报表都必须处于同一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中。 该报表必须使用包含嵌入数据的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，或者工作簿必须包含最多一个是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的外部数据源。  
   
 ##  <a name="overview"></a> 概述  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是您在 SharePoint 服务器上安装 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 时提供的库模板。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库将文件内容的准确预览与关于文档来源的事实信息结合起来。 您可以立即看到文档的创建者和最近修改时间。 为了创建预览图像[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库使用可以读取的快照服务[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿和 Reporting Services 报表包含 PowerPivot 数据。 如果快照服务无法读取发布的文件，则该文件没有可用的预览图像。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是您在 SharePoint 服务器上安装 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 时提供的库模板。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库将文件内容的准确预览与关于文档来源的事实信息结合起来。 您可以立即看到文档的创建者和最近修改时间。 为了创建预览图像[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库使用可以读取的快照服务[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿和包含 PowerPivot 数据的 Reporting Services 报表。 如果快照服务无法读取发布的文件，则该文件没有可用的预览图像。  
   
  预览图像基于 Excel Services 呈现工作簿的方式。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的表示形式应该与在浏览器中查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时看到的内容完全一致。 然而，预览的图面区域有限， 所以可能要对工作簿或报表各部分进行剪裁以适应可用空间。 您可能需要打开工作簿或报表才能查看完整的文档。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36016951"
   
 3.  单击 **“创建”**。  
   
-4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅[在管理中心中创建 PowerPivot 站点的受信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
  当前网站的导航“快速启动”窗格中将出现指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的链接。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36016951"
 ## <a name="see-also"></a>请参阅  
  [对 PowerPivot for SharePoint 安装进行故障排除](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
  [使用 PowerPivot 库](use-power-pivot-gallery.md)   
- [在管理中心中创建 PowerPivot 站点的受信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [删除 PowerPivot 库](delete-power-pivot-gallery.md)  
   
   

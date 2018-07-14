@@ -1,5 +1,5 @@
 ---
-title: 如何： 将报表导出 |Microsoft 文档
+title: 如何： 将报表导出 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flat-file report versions [Upgrade Advisor]
 - exporting reports, steps
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - distributing reports
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ef0c376f329d0249a2ef61cd83078c859e27898f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7884d6bac743cbbd46ee87cb97769e885ba8db7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181484"
 ---
 # <a name="how-to-export-reports"></a>如何： 导出报表
   升级顾问报表查看器使您能够导出平面文件版本的报表。 这样便可处理电子表格或文字处理文档中的信息，或者将这些信息用电子邮件发送给其他人。  
@@ -37,9 +37,9 @@ ms.locfileid: "36017135"
   
 2.  若要筛选报表，请选择一个介于**按筛选**框。  
   
-3.  单击**导出报表**。  
+3.  单击**将报表导出**。  
   
-4.  在**导出报表文件**对话框中，键入文件的名称，选择一个目标，然后单击**确定**。 文件以 CSV（逗号分隔的值）格式保存。 可以使用 Microsoft Excel 或类似应用程序打开文件。 如果希望数据为其他格式，则可以将信息从 Excel 复制到 Microsoft Word 或其他应用程序中。  
+4.  在中**导出报表文件**对话框中，键入文件名称，选择一个目标，，然后单击**确定**。 文件以 CSV（逗号分隔的值）格式保存。 可以使用 Microsoft Excel 或类似应用程序打开文件。 如果希望数据为其他格式，则可以将信息从 Excel 复制到 Microsoft Word 或其他应用程序中。  
   
 ## <a name="see-also"></a>请参阅  
  [如何： 启动升级顾问](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   

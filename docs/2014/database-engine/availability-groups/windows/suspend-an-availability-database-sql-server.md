@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.suspenddatamove.f1
 helpviewer_keywords:
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 56cb86d8d749848b3e10a2bbfbca2765be77cd78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f84be22ffdfe9375edd632c34e832d18488fea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173368"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中挂起可用性数据库。 请注意，挂起命令需要对承载要挂起或恢复的数据库的服务器实例发出。  
@@ -111,9 +110,9 @@ ms.locfileid: "36014606"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **挂起数据库**  
   
-1.  将目录更改 (`cd`) 到承载要挂起其数据库的副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
+1.  将目录更改 (`cd`) 到承载要挂起其数据库副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
   
-2.  使用`Suspend-SqlAvailabilityDatabase`cmdlet 来挂起可用性组。  
+2.  使用`Suspend-SqlAvailabilityDatabase`cmdlet 挂起可用性组。  
   
      例如，以下命令为可用性数据库 `MyDb3` （位于 `MyAg` 服务器实例上的可用性组 `Computer\Instance`中）暂停数据同步。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "36014606"
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请使用`Get-Help`中的 cmdlet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

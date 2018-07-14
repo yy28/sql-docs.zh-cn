@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e74c60145c768c83070213b7e42054b98bac8327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e81e3c821c6d166c42c830604fd25a037e56cd04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168034"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 属性（“高级”选项卡）
   默认情况下， **“高级”** 选项卡中会显示下列属性。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  

@@ -1,5 +1,5 @@
 ---
-title: 通过生成时间表来创建时间维度 |Microsoft 文档
+title: 通过生成时间表来创建时间维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184d2d276abeb835b578d7c1f3ef26ea36ab60e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb6230863b9e898f50ab30c6fc4288998024e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180934"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用的时间表时，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
@@ -39,13 +39,13 @@ ms.locfileid: "36016950"
  创建时间维度时，需要指定时间段以及维度的开始日期和结束日期。 向导将使用指定的时间段创建时间属性。 处理维度时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会生成并存储支持指定日期和时间段所需的数据。 向导使用为时间维度创建的属性来建议维度的层次结构。 层次结构反映了不同时间段之间的关系，并且考虑了不同的日历。 例如，在标准日历层次结构中，“周”级别在“年”级别下显示，而不是在“月”级别下显示，因为各个年份中包含的周数非常平均，而各个月中包含的周数并不平均。 相反，在生产日历或报表日历层次结构中，各个月中包含的周数非常平均，因此“周”级别在“月”级别下显示。  
   
 ## <a name="define-time-periods"></a>定义时间段  
- 使用向导的 **“定义时间段”** 页来指定要包含在维度中的日期范围。 例如，您可以选择一个从数据中最早年份的 1 月 1 日开始，并在当前年份过后的一或两年结束（允许执行更多事务）的范围。 事务范围外的请勿显示，或者显示为未知的成员在维度中，具体取决于`UnknownMemberVisible`维度的属性设置。 您也可以更改数据所使用的周的第一天（默认值为星期日）。  
+ 使用向导的 **“定义时间段”** 页来指定要包含在维度中的日期范围。 例如，您可以选择一个从数据中最早年份的 1 月 1 日开始，并在当前年份过后的一或两年结束（允许执行更多事务）的范围。 不在范围内的事务不是显示还是显示为未知的成员在维度中，具体取决于`UnknownMemberVisible`维度的属性设置。 您也可以更改数据所使用的周的第一天（默认值为星期日）。  
   
  选择在向导创建应用于您的数据的层次结构时要使用的时间段，如“年”、“半年”、“季度”、“四个月”、“月”、“十天”、“周”或“日期”。 您始终必须至少选择“日期”时间段。 “日期”属性是维度的键属性，因此，没有该属性，维度不能发挥作用。  
   
  在 **“时间成员名称所用的语言”** 旁边，选择要用于标记维度成员的语言。  
   
- 创建完基于日期范围的时间维度之后，您可以使用维度设计器添加或删除时间属性。 由于“日期”属性是维度的键属性，因此，不能将该属性从维度中删除。 若要隐藏用户从日期属性，可以更改`AttributeHierarchyVisible`属性与属性`False`。  
+ 创建完基于日期范围的时间维度之后，您可以使用维度设计器添加或删除时间属性。 由于“日期”属性是维度的键属性，因此，不能将该属性从维度中删除。 若要隐藏用户从日期属性，可以更改`AttributeHierarchyVisible`属性为`False`。  
   
 ## <a name="select-calendars"></a>选择日历  
  当您创建时间维度时，所用日历始终包括标准（公历） 12 个月日历（从 1 月 1 日开始，到 12 月 31 日结束）。 在向导的 **“选择日历”** 页中，您可以指定维度中的层次结构所基于的其他日历。 有关日历类型的说明，请参阅 [创建日期类型维度](database-dimensions-create-a-date-type-dimension.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36016950"
  [创建日期类型维度](database-dimensions-create-a-date-type-dimension.md)   
  [数据库维度属性](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [维度关系](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [通过使用现有表创建维度](create-a-dimension-by-using-an-existing-table.md)   
+ [使用现有表创建维度](create-a-dimension-by-using-an-existing-table.md)   
  [通过在数据源中生成非时间表来创建维度](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

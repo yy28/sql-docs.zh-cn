@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint 服务和服务应用程序 |Microsoft 文档
+title: Reporting Services SharePoint 服务和服务应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c3d32e750728e1b427b7c33179d4dcf3de6eb395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f612ac92f6741f83a92f29987cea03f662815e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181494"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服务和服务应用程序
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的体系 SharePoint 服务体系结构，并利用 SharePoint 服务和一对多服务应用程序。 创建服务应用程序将使该服务可用并生成服务应用程序数据库。 您可以创建多个 Reporting Services 服务应用程序，但一个服务应用程序已足以用于大多数部署方案。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式下的 SharePoint 服务体系结构体系，并利用 SharePoint 服务和一对多服务应用程序。 创建服务应用程序将使该服务可用并生成服务应用程序数据库。 您可以创建多个 Reporting Services 服务应用程序，但一个服务应用程序已足以用于大多数部署方案。  
   
  本主题涵盖以下信息：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36025447"
   
 2.  在“服务应用程序关联”页中，将视图更改为 **“服务应用程序”**。  
   
-3.  找到然后单击的新名称[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
+3.  找到并单击将新的名称[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
   
 4.  在 **“编辑以下连接组”** 选择框中，选择 **自定义**。  
   

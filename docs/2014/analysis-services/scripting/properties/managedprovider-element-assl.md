@@ -1,5 +1,5 @@
 ---
-title: ManagedProvider 元素 (ASSL) |Microsoft 文档
+title: ManagedProvider 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe2bb53abd8a528fa9ca5e1b685591bc57f162e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180844"
 ---
 # <a name="managedprovider-element-assl"></a>ManagedProvider 元素 (ASSL)
-  包含派生自元素所使用的托管提供程序的名称[数据源](../data-type/datasource-data-type-assl.md)数据类型。  
+  包含派生自的元素使用的托管访问接口名称[数据源](../data-type/datasource-data-type-assl.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   

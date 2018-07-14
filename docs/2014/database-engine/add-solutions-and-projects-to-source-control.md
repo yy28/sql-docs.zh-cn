@@ -1,5 +1,5 @@
 ---
-title: 添加到源代码管理解决方案和项目 |Microsoft 文档
+title: 将解决方案和项目添加到源代码管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], source controls
 - solutions [SQL Server Management Studio], source controls
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57e6ec237aa980732b4a096f7198c0d272677959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8365cf854d78f30be02ad3e15cd5d29c49205ce6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171435"
 ---
-# <a name="add-solutions-and-projects-to-source-control"></a>添加到源代码管理解决方案和项目
+# <a name="add-solutions-and-projects-to-source-control"></a>将解决方案和项目添加到源代码管理
   将解决方案添加到源代码管理中时，该解决方案会成为由源代码管理提供程序创建并维护的动态版本控制存档的一部分。 每次有人在解决方案的新版本中执行检查时，该版本都会成为存档的一部分，并可供其他源代码管理用户使用。  
   
  将解决方案添加到源代码管理中还会启动集中文件管理系统。 源代码管理提供程序（例如 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe）用于控制对受源代码控制项的访问；源代码管理客户端在签出之前，不能写入受源代码控制文件的本地副本。  

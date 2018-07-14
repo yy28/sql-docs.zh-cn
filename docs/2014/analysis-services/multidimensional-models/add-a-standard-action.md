@@ -1,5 +1,5 @@
 ---
-title: 添加标准操作 |Microsoft 文档
+title: 添加标准操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d0540fc8cee3dff44cd7e2baf9115cf817e3ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165528"
 ---
 # <a name="add-a-standard-action"></a>添加标准操作
   您可以通过在多维数据集设计器中使用“操作”视图，向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](processing-analysis-services-objects.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "36016716"
         > [!NOTE]  
         >  专有操作将不返回到服务器，除非客户端应用程序显式将架构行级限制为仅返回与“应用程序”中指定的名称匹配的操作。  
   
-    -   在**操作内容**，如果你使用的 URL 类型，例如，将 Internet 地址括在引号中，"http://www.adventure-works.com"。  
+    -   在中**操作内容**，如果在使用 URL 类型，例如，将 Internet 地址括在引号中，"http://www.adventure-works.com"。  
   
     -   在 **“说明”** 中，键入操作的说明。  
   
