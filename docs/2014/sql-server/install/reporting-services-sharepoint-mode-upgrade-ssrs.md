@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint 模式升级 (SSRS) |Microsoft 文档
+title: Reporting Services SharePoint 模式升级 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint Mode [Reporting Services]
 - Upgrade SharePoint Mode [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 5f73fb9d-86bb-4d9e-8a8e-37b59d735df3
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 0875f400ad0ce0a6387d32f6f7bbd3f65ee2acc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ae9d6861e1f559718821cade823e7bbd63acf18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234427"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Reporting Services SharePoint 模式升级 (SSRS)
   使用 **Reporting Services SharePoint 模式** 页可以确认是否升级了所有共享功能。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能，将随所有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能一起升级。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导不支持只升级一个共享功能。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能将同时升级。  

@@ -1,5 +1,5 @@
 ---
-title: 使用连接和会话 in ADOMD.NET |Microsoft 文档
+title: 使用连接和会话在 ADOMD.NET 中 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07c17333b58d34a99e8d393a1dbc8ec00d75f60e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef7c679aa0f295c486836763158a89a1f593ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176954"
 ---
 # <a name="working-with-connections-and-sessions-in-adomdnet"></a>使用 ADOMD.NET 中的连接和会话
-  在 XML for Analysis (XMLA) 中，会话在分析数据访问期间为有状态操作提供支持。 会话为分析数据源构成命令和事务的作用域和上下文。 用于管理会话的 XMLA 元素是[BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md)，[会话](../xmla/xml-elements-headers/session-element-xmla.md)，和[EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md)。  
+  在 XML for Analysis (XMLA) 中，会话在分析数据访问期间为有状态操作提供支持。 会话为分析数据源构成命令和事务的作用域和上下文。 用于管理会话的 XMLA 元素是[BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md)，[会话](../xmla/xml-elements-headers/session-element-xmla.md)，并[EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md)。  
   
  当您开始会话、在会话过程中执行查询或检索数据，以及关闭会话时，ADOMD.NET 将使用这三个 XMLA 会话元素。  
   
@@ -45,12 +45,12 @@ ms.locfileid: "36124218"
 ## <a name="working-in-a-session"></a>在会话中工作  
  在 ADOMD.NET 将 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象连接到有效会话后，ADOMD.NET 将向访问接口发送 XMLA `Session` 标头，以及应用程序对数据或元数据的每个请求。 每个请求都将会话 ID 设置为 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A> 属性的值。  
   
- 会话 ID 不能保证会话保持有效。 如果会话过期（例如，会话超时或者连接中断），访问接口可以选择结束和回滚该会话的操作。 如果发生此情况，从 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象的所有后续方法调用都将引发异常。 因为只有当下一个请求发送到访问接口而不是会话过期时才引发异常，所以应用程序必须能够随时处理这些异常，才能够从访问接口检索数据或元数据。  
+ 会话 ID 不保证会话保持有效。 如果会话过期（例如，会话超时或者连接中断），访问接口可以选择结束和回滚该会话的操作。 如果发生此情况，从 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象的所有后续方法调用都将引发异常。 因为只有当下一个请求发送到访问接口而不是会话过期时才引发异常，所以应用程序必须能够随时处理这些异常，才能够从访问接口检索数据或元数据。  
   
 ## <a name="closing-a-session"></a>关闭会话  
- 如果<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>方法调用而不指定的值*endSession*参数，或者如果*endSession*参数设置为 True，这两个连接到会话和会话与关联<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象已关闭。 为了关闭会话，ADOMD.NET 将向访问接口发送 XMLA `EndSession` 标头，且将会话 ID 设置为 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A> 属性的值。  
+ 如果<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>无需指定的值调用方法*endSession*参数，或者如果*endSession*参数设置为 True，这两个连接到该会话和会话与关联<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象已关闭。 为了关闭会话，ADOMD.NET 将向访问接口发送 XMLA `EndSession` 标头，且将会话 ID 设置为 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A> 属性的值。  
   
- 如果<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>方法调用与*endSession*参数设置为 False，与关联的会话<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象保持活动状态，但与会话连接已关闭。  
+ 如果<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>与调用方法*endSession*参数设置为 False，与关联的会话<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象保持活动状态，但与会话连接已关闭。  
   
 ## <a name="example-of-managing-a-session"></a>管理会话的示例  
  下面的示例演示如何打开连接、创建会话以及关闭连接，同时保持会话在 ADOMD.NET 中处于打开状态：  

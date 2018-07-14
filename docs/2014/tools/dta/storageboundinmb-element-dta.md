@@ -1,5 +1,5 @@
 ---
-title: StorageBoundInMB 元素 (DTA) |Microsoft 文档
+title: StorageBoundInMB 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c2a7b28ef7f6c5f6853d8b5fad0fb4a5706face
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20e289a5920dba9ab2567a07841010ceaeaa2666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218377"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
   指定数据库引擎优化顾问优化建议（索引和分区集）可用的最大空间 (MB)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36124676"
   
  默认存储大小不包括非聚集索引和索引视图。  
   
- 如果指定的值`StorageBoundInMB`元素超出了实际磁盘空间，数据库引擎优化顾问会返回一个错误，但继续进行优化。 优化完成之后，如果决定实现建议，则可增加磁盘空间。  
+ 如果指定的值`StorageBoundInMB`元素超过了实际磁盘空间，数据库引擎优化顾问会返回一个错误消息，但继续进行优化。 优化完成之后，如果决定实现建议，则可增加磁盘空间。  
   
 ## <a name="example"></a>示例  
   

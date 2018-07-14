@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254539"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步骤 2：添加和配置平面文件连接管理器
   在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -66,13 +66,13 @@ ms.locfileid: "36123669"
   
 2.  在属性窗格中，进行如下更改：  
   
-    -   更改**列 0** name 属性到`AverageRate`。  
+    -   更改**第 0 列**命名属性设置为`AverageRate`。  
   
-    -   更改**第一列**name 属性到`CurrencyID`。  
+    -   更改**Column 1**命名属性设置为`CurrencyID`。  
   
-    -   更改**第 2 列**name 属性到`CurrencyDate`。  
+    -   更改**第 2 列**命名属性设置为`CurrencyDate`。  
   
-    -   更改**列 3** name 属性到`EndOfDayRate`。  
+    -   更改**Column 3**命名属性设置为`EndOfDayRate`。  
   
     > [!NOTE]  
     >  默认情况下，所有四个列最初都设置为字符串数据类型 [DT_STR]，其 `OutputColumnWidth` 为 50。  
@@ -94,11 +94,11 @@ ms.locfileid: "36123669"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     数据类型建议针对`CurrencyID`列是与目标表中的字段的数据类型不兼容。 因为数据类型的`DimCurrency.CurrencyAlternateKey`是 nchar (3)、`CurrencyID`必须从字符串 [DT_STR] 更改为字符串 [DT_WSTR]。 此外，字段`DimDate.FullDateAlternateKey`定义为日期数据类型; 因此，`CurrencyDate`需要从日期 [DT_Date] 更改为数据库日期 [DT_DBDATE]。  
+     有关建议的数据类型`CurrencyID`列是与目标表中的字段的数据类型不兼容。 因为的数据类型`DimCurrency.CurrencyAlternateKey`为 nchar (3)、`CurrencyID`必须从字符串 [DT_STR] 改为 string [DT_WSTR]。 另外，字段`DimDate.FullDateAlternateKey`定义为日期数据类型; 因此，`CurrencyDate`需要更改从日期 [dt_date 改] 为数据库 date [DT_DBDATE]。  
   
-2.  在列表中，选择 CurrencyID 列，然后在属性窗格中，更改列的数据类型`CurrencyID`从字符串 [DT_STR] 为 Unicode 字符串 [DT_WSTR]。  
+2.  在列表中，选择 CurrencyID 列，并在属性窗格中，将更改列的数据类型`CurrencyID`从字符串 [DT_STR] 为 Unicode 字符串 [DT_WSTR]。  
   
-3.  在属性窗格中，更改列的数据类型`CurrencyDate`从日期 [DT_DATE] 与数据库日期 [DT_DBDATE]。  
+3.  在属性窗格中，更改列的数据类型`CurrencyDate`从日期 [dt_date 改] 为数据库 date [DT_DBDATE]。  
   
 4.  单击“确定” 。  
   

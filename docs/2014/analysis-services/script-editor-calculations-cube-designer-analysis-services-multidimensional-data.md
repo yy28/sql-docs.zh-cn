@@ -1,5 +1,5 @@
 ---
-title: 脚本编辑器 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 脚本编辑器 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.freeform.f1
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 23c6c0deaca334533c42f5bc64d721c228634aa2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcb5e21c87abffa0d757b0a4eb667c34ae28a57b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247337"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>脚本编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器中，可以使用“计算”选项卡上的“脚本编辑器”窗格修改脚本命令的表达式（在窗体视图中），或修改整个多维数据集脚本（在脚本视图中）。  

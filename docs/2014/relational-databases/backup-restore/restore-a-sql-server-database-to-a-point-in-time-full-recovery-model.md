@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62676ecbbe57529a2f1eeec4448ef91a4ebf6d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 504810285ca79879e2442526747d40bbf0ed50bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203557"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将数据库还原到 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的某个时间点。 本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库有关。  
@@ -136,9 +135,9 @@ ms.locfileid: "36027773"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG *database_name*从 < backup_device > WITH STOPAT  **= *`time`*，** 恢复...  
+ RESTORE LOG *database_name* FROM < 备份设备 > WITH STOPAT  **= *`time`*，** 恢复...  
   
- 恢复点是或之前发生的最新的事务提交`datetime`由指定的值*时间*。  
+ 恢复点是最新或之前发生的事务提交`datetime`由指定的值*时间*。  
   
  若要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT **=** *time* 。 这样确保了不会超出目标时间。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "36027773"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  应用每个事务日志备份的顺序在其中创建了它们，指定想要停止还原日志的时间 (RESTORE DATABASE *database_name*从 < backup_device > WITH STOPAT **= *`time`*，** 恢复)。  
+4.  应用每个事务日志备份中相同的顺序在其中创建了它们，指定想要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM < 备份设备 > WITH STOPAT **= *`time`*，** 恢复)。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  

@@ -1,5 +1,5 @@
 ---
-title: NameColumn 元素 (ASSL) |Microsoft 文档
+title: NameColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NameColumn element
 ms.assetid: 9ff79f2e-26d7-4ab9-a166-14c2c2d1fc07
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41a290275de98b460d16115a2c99774bbf6ede9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b2a0ae2308c14caaf46edaed876a31e04b82e46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213937"
 ---
 # <a name="namecolumn-element-assl"></a>NameColumn 元素 (ASSL)
   标识提供父元素名称的列。  
@@ -66,11 +66,11 @@ ms.locfileid: "36124651"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 如果[KeyColumns](../collections/columns-element-assl.md)集合`DimensionAttribute`包含单个[KeyColumn](column-element-assl.md)元素表示与字符串数据类型相同的键列`DataItem`值用作默认值`NameColumn`元素。  
+ 如果[KeyColumns](../collections/columns-element-assl.md)系列`DimensionAttribute`包含一个[KeyColumn](column-element-assl.md)表示键列的字符串数据类型，该元素`DataItem`值用作默认值`NameColumn`元素。  
   
  有关详细信息`DataItem`类型，包括 Analysis Services 脚本语言 (ASSL) 对象和属性表`DataItem`类型，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 对应的父级的元素`NameColumn`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.DimensionAttribute>和<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 父级对应的元素`NameColumn`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.DimensionAttribute>和<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>请参阅  
  [对象&#40;ASSL&#41;](objects-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 程序集的数据类型 (ASSL) |Microsoft 文档
+title: 程序集的数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3fd706974b0cb4a897a7ef75e147dcd35ac91481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233827"
 ---
 # <a name="assembly-data-type-assl"></a>Assembly 数据类型 (ASSL)
-  定义表示的抽象基元数据类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]程序集或 COM 动态链接库 (DLL) 与关联[服务器](../objects/server-element-assl.md)或[数据库](../objects/database-element-assl.md)元素。  
+  定义表示一个抽象的基元数据类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]程序集或 COM 动态链接库 (DLL) 与相关联[服务器](../objects/server-element-assl.md)或[数据库](../objects/database-element-assl.md)元素。  
   
 > [!IMPORTANT]  
 >  COM 程序集可能会造成安全风险。 由于此风险和其他注意事项， [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]中不推荐使用 COM 程序集。 未来版本可能不支持 COM 程序集。  
@@ -69,7 +69,7 @@ ms.locfileid: "36123915"
 ## <a name="remarks"></a>Remarks  
  `Assembly` 数据类型可作为 `ComAssembly` 元素的基本数据类型，该元素表示与实例或数据库关联的 COM 库；还可作为 `ClrAssembly` 元素的基本数据类型，该元素表示与实例或数据库关联的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集。 有关程序集的详细信息，请参阅[多维模型程序集管理](../../multidimensional-models/multidimensional-model-assemblies-management.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Assembly>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Assembly>。  
   
 ## <a name="see-also"></a>请参阅  
  [服务器元素&#40;ASSL&#41;](../objects/server-element-assl.md)   

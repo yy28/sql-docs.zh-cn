@@ -1,5 +1,5 @@
 ---
-title: 透视元素 (ASSL) |Microsoft 文档
+title: Perspectives 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Perspectives element
 ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8df6386c14d3c7219826e7df156b6343a92fc1f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35a1667a7df5f33bd4d6b3aa4f0621882b8819f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224107"
 ---
 # <a name="perspectives-element-assl"></a>Perspectives 元素 (ASSL)
-  包含的集合[透视](../objects/perspective-element-assl.md)与关联的元素[多维数据集](../objects/cube-element-assl.md)元素。  
+  包含的集合[角度来看](../objects/perspective-element-assl.md)与关联的元素[多维数据集](../objects/cube-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36123716"
 |子元素|[透视](../objects/perspective-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 修改度量值 |Microsoft 文档
+title: 修改度量值 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f95003c329dc121c3a743f1f4447a3aa8a9a506a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447032ab32e222f3827c34020aef612e8125a518
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232377"
 ---
 # <a name="modifying-measures"></a>修改度量值
   可以使用“FormatString”属性定义控制如何向用户显示度量值的格式设置。 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
@@ -60,9 +60,9 @@ ms.locfileid: "36123739"
   
 7.  在“属性”窗口顶部（标题栏正下方）的下拉列表中，选择“Unit Price Discount Pct”度量值，然后在“FormatString”列表中选择“Percent”。  
   
-8.  在属性窗口中，更改**名称**属性**单元价格折扣 Pct**测量到`Unit Price Discount Percentage`。  
+8.  在属性窗口中更改**名称**属性**Unit Price Discount Pct**度量值添加到`Unit Price Discount Percentage`。  
   
-9. 在**度量值**窗格中，单击**税务 Amt**并更改到此度量值名称`Tax Amount`。  
+9. 在中**度量值**窗格中，单击**Tax Amt**更改为此度量值的名称和`Tax Amount`。  
   
 10. 在“属性”窗口中，单击“自动隐藏”图标隐藏“属性”窗口，然后在“多维数据集结构”选项卡的工具栏上单击“显示度量值树”。  
   

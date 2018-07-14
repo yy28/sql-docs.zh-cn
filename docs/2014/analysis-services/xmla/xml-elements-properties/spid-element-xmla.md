@@ -1,5 +1,5 @@
 ---
-title: SPID 元素 (XMLA) |Microsoft 文档
+title: SPID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d203225045314115604a8b99d82ab291c5960376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167018"
 ---
 # <a name="spid-element-xmla"></a>SPID 元素 (XMLA)
-  标识对其执行父活动服务器进程标识符 (SPID)[取消](../xml-elements-commands/cancel-element-xmla.md)元素。  
+  活动服务器进程标识符 (SPID) 标识要对其执行父[取消](../xml-elements-commands/cancel-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36123697"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `SPID`元素表示服务器进程 ID (SPID) 用于指定会话的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+ `SPID`元素表示的服务器进程 ID (SPID) 用于给定会话的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="see-also"></a>请参阅  
  [CancelAssociated 元素&#40;XMLA&#41;](cancelassociated-element-xmla.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0c87d8492bb06a3e1cf5eb46d4e13683d652413e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c71e1ce5498c76baf3a27eff9fbcdbdfc29360
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214977"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 错误的原因和解决方法
   本主题包含与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相关的多个错误的原因和解决方法信息。 本节中的错误消息主题提供对错误消息、可能的原因以及为更正问题可以采取的所有措施的说明。  
@@ -38,7 +38,7 @@ ms.locfileid: "36124476"
 |[rsProcessingError - Reporting Services 错误](rsprocessingerror-reporting-services-error.md)|处理报表时出错。|  
 |[rsServerConfigurationError - Reporting Services 错误](rsserverconfigurationerror-reporting-services-error.md)|报表服务器遇到配置错误。|  
 |[rrRenderingError - Reporting Services 错误](rrrenderingerror-reporting-services-error.md)|呈现报表时出错。 (rrRenderingError) %1。|  
-|[报表服务器 Windows 服务&#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|报表服务器 Windows 服务 (MSSQLSERVER) 无法与报表服务器数据库建立连接。|  
+|[报表服务器 Windows 服务&#40;MSSQLServer&#41;第 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|报表服务器 Windows 服务 (MSSQLSERVER) 无法与报表服务器数据库建立连接。|  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   

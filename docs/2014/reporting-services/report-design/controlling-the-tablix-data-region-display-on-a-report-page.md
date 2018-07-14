@@ -1,5 +1,5 @@
 ---
-title: 控制 Tablix 数据区域显示在报表页 （报表生成器和 SSRS） |Microsoft 文档
+title: 控制 Tablix 数据区域显示在报表页 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179234"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）
   本主题介绍 Tablix 数据区域的属性，您可以修改这些属性以便更改在报表中查看 Tablix 数据区域时该数据区域的显示方式。  
@@ -38,7 +38,7 @@ ms.locfileid: "36125271"
   
 -   **在不包含数据时显示一则信息**。 如果在运行时报表数据集中没有任何数据，则可以编写并显示您自己的消息来取代数据区域。 有关详细信息，请参阅[为数据区域设置“无数据”消息（报表生成器和 SSRS）](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
   
--   **有条件地隐藏数据**。 若要有条件地控制是否显示或隐藏数据区域或数据区域的部分，你可以将 Hidden 属性设置为`True`或表达式。 表达式可以包括对报表参数的引用。 还可以指定切换项，以使用户可以决定是否显示详细信息数据。 有关详细信息，请参阅[深化操作（报表生成器和 SSRS）](drilldown-action-report-builder-and-ssrs.md)。  
+-   **有条件地隐藏数据**。 若要根据条件控制是显示还是隐藏数据区域或数据区域的部分，可以将 Hidden 属性设置为`True`或表达式。 表达式可以包括对报表参数的引用。 还可以指定切换项，以使用户可以决定是否显示详细信息数据。 有关详细信息，请参阅[深化操作（报表生成器和 SSRS）](drilldown-action-report-builder-and-ssrs.md)。  
   
 -   **合并单元。** 您可以将表内多个连续单元合并为一个单元。 这称作列跨越（即单元合并）。 单元只能以水平方式或垂直方式合并。 当您合并单元后，只保留第一个单元中的数据， 而删除其他单元中的数据。 合并后的单元可以拆分为原来的列。 有关详细信息，请参阅[合并数据区域中的单元（报表生成器和 SSRS）](merge-cells-in-a-data-region-report-builder-and-ssrs.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36125271"
  [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)   
  [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [控制页中断，标题、 列和行&#40;报表生成器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [控制分页符、 标题、 列和行&#40;报表生成器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   

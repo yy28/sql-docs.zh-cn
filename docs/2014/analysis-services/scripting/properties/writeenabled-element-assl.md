@@ -1,5 +1,5 @@
 ---
-title: WriteEnabled 元素 (ASSL) |Microsoft 文档
+title: WriteEnabled 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WriteEnabled element
 ms.assetid: 681290b3-ae8f-4659-9b17-a26d401a3fb0
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f78be490a8d171dbdbbf6fddbd9ffb1d4289f050
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 900aa5be98245eeaef4b40cb9e8492182604499d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243617"
 ---
 # <a name="writeenabled-element-assl"></a>WriteEnabled 元素 (ASSL)
   指示维度写回是否可用（视安全权限而定）。  
@@ -62,7 +62,7 @@ ms.locfileid: "36028445"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`WriteEnabled`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素`WriteEnabled`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

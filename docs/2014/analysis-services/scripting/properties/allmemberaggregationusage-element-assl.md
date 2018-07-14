@@ -1,5 +1,5 @@
 ---
-title: AllMemberAggregationUsage 元素 (ASSL) |Microsoft 文档
+title: AllMemberAggregationUsage 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1da20a067a1f293bafbca858623ab477aacac6b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252949"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>AllMemberAggregationUsage 元素 (ASSL)
   控件如何聚合设计器中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]设计聚合。  
@@ -68,11 +68,11 @@ ms.locfileid: "36123706"
 |-----------|-----------------|  
 |*Full*|多维数据集的每个聚合都必须包括所有成员。|  
 |*无*|多维数据集的任何聚合都不应包括“全部”成员。|  
-|*不受限制*|未设置任何限制聚合设计器上。|  
+|*不受限制*|聚合设计器不作任何限制。|  
 |*默认*|与相同*不受限制*。|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`AllMemberAggregationUsage`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.CubeDimension>。  
+ 父级对应的元素`AllMemberAggregationUsage`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CubeDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
@@ -16,13 +16,13 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9526a1e0a65ee5e9ca04245d7e1ef76d6cc6b2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 851585a6e7c5ea33d5faa90ba356399341d8954a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201557"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;=（小于或等于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  

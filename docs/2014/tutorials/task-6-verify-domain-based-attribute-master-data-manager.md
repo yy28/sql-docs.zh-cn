@@ -1,5 +1,5 @@
 ---
-title: 任务 6： 验证是否已创建基于域的属性，使用主数据管理器 |Microsoft 文档
+title: 任务 6： 验证是否已创建基于域的属性，使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12764af6fbebf8c0fa82d38059cc64ea9bbc2c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f607a6faaf8a6891ff2d7191142f11dbaa55f961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191297"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>任务 6：验证通过使用主数据管理器创建了基于域的属性
   在本任务中，将使用“主数据管理器”验证在 **MDS** 中创建了 **State** 实体并且 **Supplier** 实体的 **State** 属性是依赖 **State** 实体的基于域的属性。  
@@ -34,7 +34,7 @@ ms.locfileid: "36126200"
   
 4.  将鼠标悬浮在菜单栏的“实体”上，请注意现在有两个实体：**Supplier** 和 **State**。  
   
-     ![使用状态和供应商的实体菜单](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "使用状态和供应商的实体菜单")  
+     ![实体菜单中使用的状态和供应商](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "实体使用的状态和供应商的菜单")  
   
 5.  如果 **State** 实体未打开，则单击该实体。  
   

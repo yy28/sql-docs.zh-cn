@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_COLUMNS 行集 |Microsoft 文档
+title: DBSCHEMA_COLUMNS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267573"
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 行集
   提供满足给定限制条件的所有列的列信息。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DBSCHEMA_COLUMNS`行集包含以下各列。  
+ `DBSCHEMA_COLUMNS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "36123494"
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||列的位置，从 1 开始。|  
 |`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||不提供支持。|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||不提供支持。|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||指示列属性的 `DBCOLUMNFLAGS` 位掩码。 请参阅中的 DBCOLUMNFLAGS 枚举类型[IColumnsInfo::GetColumnInfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||指示列属性的 `DBCOLUMNFLAGS` 位掩码。 请参阅中的 DBCOLUMNFLAGS 枚举类型[icolumnsinfo:: Getcolumninfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||始终返回`false`。|  
 |`DATA_TYPE`|`DBTYPE_WSTR`<br /><br /> `DBTYPE_VARIANT`||列的数据类型。 返回维度列的字符串和度量值的变量。|  
 |`TYPE_GUID`|`DBTYPE_GUID`||不提供支持。|  
@@ -69,7 +69,7 @@ ms.locfileid: "36123494"
  行集按 `TABLE_CATALOG`、`TABLE_SCHEMA`、`TABLE_NAME` 排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DBSCHEMA_COLUMNS`行集可限制在下表中列出的列。  
+ `DBSCHEMA_COLUMNS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
@@ -16,18 +16,18 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6a00014c901eab5a1ec2254ccb2bd04b609f7232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a19c05387c61e96573ec9525d8e0cab2eb7c8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255549"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
   RSReportDesigner.config 文件存储有关可用于报表设计器的呈现扩展插件和数据处理扩展插件的设置。 数据处理扩展插件信息存储在`Data`元素。 呈现扩展插件信息存储在 `Render` 元素中。 `Designer` 元素可枚举报表设计器中所用的查询生成器。  
   
- 报表设计器使用嵌入的报表服务器功能来预览报表。 您可以指定服务器相关设置，以支持预览操作的本地服务器端处理过程。 有关报表服务器配置设置的详细信息，请参阅[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)。  
+ 报表设计器使用嵌入的报表服务器功能来预览报表。 您可以指定服务器相关设置，以支持预览操作的本地服务器端处理过程。 有关报表服务器配置设置的详细信息，请参阅[RSReportServer 配置文件](rsreportserver-config-configuration-file.md)。  
   
 ## <a name="file-location"></a>文件位置  
  此文件位于 \Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies 中。  
@@ -65,9 +65,9 @@ ms.locfileid: "36028950"
 |`SessionCookies`|指定报表服务器是否使用浏览器 cookie 维持会话信息。 有效的值包括`true`和`false`。 默认值为 `true`。 如果将此值设置为 False，会话数据将存储在 **reportservertempdb** 数据库中。|  
 |`SessionTimeoutMinutes`|指定会话 cookie 的有效期。 默认为 3 分钟。|  
 |`PolicyLevel`|指定安全策略配置文件。 有效的值为 Rspreviewpolicy.config。有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|  
-|`CacheDataForPreview`|当设置为`True`，报表设计器将数据存储在本地计算机上的缓存文件。 有效值为`True`（默认值） 和`False`。 有关详细信息，请参阅 [Previewing Reports](../reports/previewing-reports.md)。|  
-|`Render`|枚举报表设计器可用于进行预览操作的呈现扩展插件。 用于预览的呈现扩展插件组应该与随报表服务器安装的呈现扩展插件组相同。<br /><br /> `Name` 指定呈现扩展插件。 如果您通过代码调用呈现扩展插件，请使用该值来调用特定的扩展插件。<br /><br /> `Type` 指定扩展类中，完全限定的类名以及库名，以逗号分隔。<br /><br /> `Visible` 指定是否在相应的用户界面中显示该名称。 此值可为`True`（默认值） 或`False`。 如果为 `True`，则该名称将在相应的用户界面中显示。|  
-|`Data`|枚举报表设计器可用于连接为报表提供数据的数据源的数据处理扩展插件。 在报表设计器中使用的数据处理扩展插件组可能与随报表服务器安装的数据处理扩展插件组相同。 如果你添加或删除自定义扩展，请参阅[部署数据处理扩展插件](../extensions/data-processing/deploying-a-data-processing-extension.md)。<br /><br /> `Name` 指定数据处理扩展插件。<br /><br /> `Type` 指定扩展类中，完全限定的类名以及库名，以逗号分隔。|  
+|`CacheDataForPreview`|如果设置为`True`，报表设计器将数据存储在本地计算机上的缓存文件中。 有效的值为`True`（默认值） 和`False`。 有关详细信息，请参阅 [Previewing Reports](../reports/previewing-reports.md)。|  
+|`Render`|枚举报表设计器可用于进行预览操作的呈现扩展插件。 用于预览的呈现扩展插件组应该与随报表服务器安装的呈现扩展插件组相同。<br /><br /> `Name` 指定呈现扩展插件。 如果您通过代码调用呈现扩展插件，请使用该值来调用特定的扩展插件。<br /><br /> `Type` 指定扩展类的完全限定的类名以及库名，以逗号分隔。<br /><br /> `Visible` 指定是否在相应的用户界面中显示该名称。 此值可以是`True`（默认值） 或`False`。 如果为 `True`，则该名称将在相应的用户界面中显示。|  
+|`Data`|枚举报表设计器可用于连接为报表提供数据的数据源的数据处理扩展插件。 在报表设计器中使用的数据处理扩展插件组可能与随报表服务器安装的数据处理扩展插件组相同。 如果正在添加或删除自定义扩展插件，请参阅[部署数据处理扩展插件](../extensions/data-processing/deploying-a-data-processing-extension.md)。<br /><br /> `Name` 指定数据处理扩展插件。<br /><br /> `Type` 指定扩展类的完全限定的类名以及库名，以逗号分隔。|  
 |`Designer`|枚举报表设计器可用的查询生成器。 查询生成器提供了一个用户界面，用于构造检索在报表中使用的数据的查询。 查询生成器因数据处理扩展插件的不同而有所不同。 默认情况下，Reporting Services 为产品中包含的所有数据处理扩展插件提供了一个直观数据工具用户界面。 不过，如果您生成或使用第三方数据处理扩展插件，可能要应用其他查询生成器界面。|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|指定在显示错误消息前等待预览处理服务启动的时间。 默认值为 15 秒。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 配置服务帐户 (Analysis Services) |Microsoft 文档
+title: 配置服务帐户 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], logon accounts
 - logon accounts [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5093e78a7f2505588f5362ee0943b3660fc61be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206537"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
   产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
@@ -49,7 +49,7 @@ ms.locfileid: "36123740"
   
  对于内部操作，Analysis Services 中的权限持有者不是登录帐户，而是安装程序创建的包含 Per-service SID 的本地 Windows 安全组。 向安全组分配权限与以前版本的 Analysis Services 一致。 此外，登录帐户可能随时间而变化，但是 Per-service SID 和本地安全组在服务器安装的生存期内保持不变。 对于 Analysis Services，这使得安全组（而不是登录帐户）成为持有权限的更好选择。 只要手动向服务实例授予权限（无论是文件系统权限还是 Windows 特权），请务必将权限授予为服务器实例创建的本地安全组。  
   
- 安全组的名称遵循某种模式。 前缀始终是`SQLServerMSASUser$`后, 跟结束实例同名的计算机名称。 默认实例是`MSSQLSERVER`。 命名实例是在设置过程中提供的名称。  
+ 安全组的名称遵循某种模式。 前缀始终是`SQLServerMSASUser$`后, 跟计算机名称，实例名结尾。 默认实例是`MSSQLSERVER`。 命名实例是在设置过程中提供的名称。  
   
  可以在本地安全设置中查看此安全组：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36123740"
 |-|-|  
 |**增加进程工作集** (SeIncreaseWorkingSetPrivilege)|默认情况下，此特权通过 **用户** 安全组对所有用户可用。 如果你通过移除此组的特权来锁定服务器，Analysis Services 可能无法启动，并且将记录此错误：“客户端没有所需的特权。” 此错误发生后，通过将特权授予正确的 Analysis Services 安全组，将特权还原到 Analysis Services。|  
 |**调整进程的内存配额** (SeIncreaseQuotaSizePrivilege)|此特权用于当进程因受制于为实例建立的内存阀值而没有足够资源来完成其执行时请求更多内存。|  
-|**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但可以通过设置使用 Windows 分页阻止它`VertiPaqPagingPolicy`为 0。<br /><br /> `VertiPaqPagingPolicy` 为 1 （默认值），指示要使用 Windows 分页文件的表格服务器实例。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置 (其中`VertiPaqPagingPolicy`= 1)，不需要授予**锁定内存页**特权仅授予对表格实例。<br /><br /> `VertiPaqPagingPolicy` 为 0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 Analysis Services 依赖于**锁定内存页**权限作为后面强制`VertiPaqPagingPolicy`= 0。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 请参阅[内存属性](../server-properties/memory-properties.md)有关详细信息`VertiPaqPagingPolicy`。|  
+|**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但您可以通过设置使用 Windows 分页阻止它`VertiPaqPagingPolicy`为 0。<br /><br /> `VertiPaqPagingPolicy` 为 1 （默认值），指示表格服务器实例使用 Windows 分页文件。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置 (其中`VertiPaqPagingPolicy`= 1)，不需要授予**锁定内存页**特权仅授予对表格实例。<br /><br /> `VertiPaqPagingPolicy` 为 0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 Analysis Services 依赖**锁定内存页**后的强制执行权限`VertiPaqPagingPolicy`= 0。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 请参阅[Memory Properties](../server-properties/memory-properties.md)有关详细信息`VertiPaqPagingPolicy`。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>若要在服务账户上查看或添加 Windows 特权  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36123740"
   
  数据文件、程序可执行文件、配置文件、日志文件和临时文件上的权限持有者是由 SQL Server 安装程序创建的一个本地安全组。  
   
- 有一个安全组是为你安装的每个实例而创建的。 安全组命名实例 ─ 或者**SQLServerMSASUser$ MSSQLSERVER**对于默认实例中，或`SQLServerMSASUser$` \<servername >$\<instancename > 对于命名实例。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果您检查 \MSAS12.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
+ 有一个安全组是为你安装的每个实例而创建的。 安全组或者命名实例**SQLServerMSASUser$ MSSQLSERVER**对于默认实例中，或`SQLServerMSASUser$`\<服务器名 >$\<实例名 > 对于命名实例。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果您检查 \MSAS12.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
   
  该安全组仅包含一个成员： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例启动帐户的 per-service 安全标识符 (SID)。 安装程序将 Per-service SID 添加到本地安全组。 与部署 Database Engine 相比， SQL Server 安装程序部署 Analysis Services 小而明显的不同之处在于使用了本地安全组及其 SID 成员身份。  
   
@@ -122,14 +122,14 @@ ms.locfileid: "36123740"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  使用**计算机管理器** | **本地用户和组** | **组**若要检查的成员身份的 SQLServerMSASUser$\<servername >$\<instancename > 安全组。  
+2.  使用**计算机管理器** | **本地用户和组** | **组**检查 SQLServerMSASUser$的成员身份\<服务器名 >$\<实例名 > 安全组。  
   
      成员 SID 应与步骤 1 的 per-service SID 匹配。  
   
 3.  使用“计算机管理器”  |  |  |“MSASxx.MSSQLServer”|“”  |  验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
   
 > [!NOTE]  
->  切勿删除或修改 SID。 若要还原无意中删除每个服务 SID，请参阅[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
+>  切勿删除或修改 SID。 若要还原无意删除的每个服务 SID，请参阅[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
   
  **了解关于 per-service SID 的详细信息**  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28573e955ff50d32a19ef003c23fc8c68f21e0f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4b695be014eb0576373513fd8f1d176a50b74adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187586"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中编辑行 (Visual Database Tools)
   在许多情况下，都可以在 [“结果”](visual-database-tools.md)窗格中编辑数据。 有关更改数据的详细信息，请参阅 [更新结果的规则 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md) 和 [使用“结果”窗格中的数据 (Visual Database Tools)](work-with-data-in-the-results-pane-visual-database-tools.md)窗格中编辑数据。  
@@ -45,7 +45,7 @@ ms.locfileid: "36125499"
 4.  鼠标移出该行即可保存更改。  
   
 ## <a name="see-also"></a>请参阅  
- [在结果窗格中处理数据&#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
+ [使用结果窗格中的数据&#40;可视化数据库工具&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
  [更新结果的规则 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md)  
   
   

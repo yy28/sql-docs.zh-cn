@@ -1,5 +1,5 @@
 ---
-title: EstimatedPerformanceGain 元素 (ASSL) |Microsoft 文档
+title: EstimatedPerformanceGain 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedPerformanceGain element
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e2c8ffa997c46b6d4587a971de436c25792694
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b4b9c2c80bbeadf716313756470d1f8d7994152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267403"
 ---
 # <a name="estimatedperformancegain-element-assl"></a>EstimatedPerformanceGain 元素 (ASSL)
   包含估计的分区性能提升的只读百分比。  
@@ -62,7 +62,7 @@ ms.locfileid: "36026636"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对父级的对应的元素`EstimatedPerformanceGain`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AggregationDesign>。  
+ 父级对应的元素`EstimatedPerformanceGain`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AggregationDesign>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

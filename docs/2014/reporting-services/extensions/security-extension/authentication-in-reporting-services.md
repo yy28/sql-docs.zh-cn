@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df847dc70d13d61a43b6ba3554280cece774b49a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235017"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的身份验证
   身份验证是确立用户对某一身份的权限的过程。 您可以使用多种方法来验证某一用户的身份。 最常见的方法是使用密码。 例如，在实现窗体身份验证时，您希望某一实现查询用户的凭据（通常通过请求提供登录名和密码的某些界面），然后根据数据存储区（例如数据库表或配置文件）验证用户。 如果无法验证凭据，该身份验证过程将失败，并且用户将假定匿名身份。  
@@ -33,7 +33,7 @@ ms.locfileid: "36027622"
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services 中的自定义身份验证  
  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Windows 操作系统通过集成的安全性或通过用户凭据的显式接受和验证，处理用户的身份验证。 可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中开发自定义身份验证，以支持附加的身份验证架构。 这可以通过安全扩展插件接口 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 实现。 所有扩展插件都继承自报表服务器部署和使用的任何扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 基接口。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 以及 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 是 <xref:Microsoft.ReportingServices.Interfaces> 命名空间的成员。  
   
- 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中对报表服务器进行身份验证的主要方式是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 此 Reporting Services Web 服务成员可用于将用户凭据传递到某一报表服务器以进行验证。 你的基础安全扩展实现**IAuthenticationExtension.LogonUser**其中包含自定义身份验证代码。 在窗体身份验证示例 LogonUser 中，对提供的凭据和数据库中的自定义用户存储执行身份验证检查。 LogonUser 的实现的示例如下：  
+ 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中对报表服务器进行身份验证的主要方式是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 此 Reporting Services Web 服务成员可用于将用户凭据传递到某一报表服务器以进行验证。 在基础安全扩展插件实现**IAuthenticationExtension.LogonUser**其中包含自定义身份验证代码。 在窗体身份验证示例 LogonUser 中，对提供的凭据和数据库中的自定义用户存储执行身份验证检查。 LogonUser 的实现的示例如下：  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -113,7 +113,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  客户端应用程序调用 Web 服务 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法以便验证某一用户的身份。  
   
-2.  Web 服务方法调用了<xref:ReportService2010.ReportingService2010.LogonUser%2A>方法的安全扩展，具体而言，实现的类**IAuthenticationExtension**。  
+2.  Web 服务方法调用了<xref:ReportService2010.ReportingService2010.LogonUser%2A>方法的安全扩展插件，具体而言，实现的类**IAuthenticationExtension**。  
   
 3.  您的 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 实现验证用户存储或安全机构中的用户名和密码。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c01067a787782649b415343a9d4c70911ebe1b57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a09771deaff3f6996250840920675159209daf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255379"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>错误和事件参考 (Reporting Services)
   本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的错误和事件的信息。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件中也包含错误信息。 有关可用的日志文件以及如何查看日志类型的详细信息，请参阅[Reporting Services 日志文件和源](../report-server/reporting-services-log-files-and-sources.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "36029180"
 |--------------|----------|--------------|------------|-----------------|  
 |106|错误|计划|报表服务器|在定义计划操作（如报表订阅和传递）时，SQL Server 代理必须处于运行状态。|  
 |[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|错误|启动/关闭|报表服务器<br /><br /> 计划和传递处理器|\<Source> 无法连接到报表服务器数据库。 有关详细信息，请参阅[报表服务器 Windows 服务 (MSSQLServer) 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)。|  
-|108|错误|扩展名|报表服务器<br /><br /> 报表管理器|\<Source> 无法加载传递扩展插件、数据处理扩展插件或呈现扩展插件。<br /><br /> 这很可能是部署不完全或删除扩展插件的结果。 有关详细信息，请参阅[部署数据处理扩展插件](../extensions/data-processing/deploying-a-data-processing-extension.md)和[Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md)。|  
+|108|错误|扩展名|报表服务器<br /><br /> 报表管理器|\<Source> 无法加载传递扩展插件、数据处理扩展插件或呈现扩展插件。<br /><br /> 这很可能是部署不完全或删除扩展插件的结果。 有关详细信息，请参阅[部署数据处理扩展插件](../extensions/data-processing/deploying-a-data-processing-extension.md)并[部署传递扩展插件](../extensions/delivery-extension/deploying-a-delivery-extension.md)。|  
 |109|信息|管理|报表服务器<br /><br /> 报表管理器|配置文件已修改。 有关详细信息，请参阅[Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md)。|  
 |110|警告|管理|报表服务器<br /><br /> 报表管理器|其中一个配置文件中的设置已修改，导致该设置不再有效。 此时将使用默认值。 有关详细信息，请参阅[Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md)。|  
 |111|错误|日志记录|报表服务器<br /><br /> 报表管理器|\<Source> 无法创建跟踪日志。 有关详细信息，请参阅 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
@@ -54,8 +54,8 @@ ms.locfileid: "36029180"
 |119|错误|激活|报表服务器<br /><br /> 计划和传递处理器|\<Source> 未获取访问报表服务器数据库内容的权限。|  
 |120|错误|激活|报表服务器|无法解密对称密钥。 运行该服务所使用的帐户很可能已更改。 有关详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |121|错误|启动/关闭|报表服务器|远程过程调用 (RPC) 服务无法启动。|  
-|122|警告|传递|计划和传递处理器|计划和传递处理器无法连接到用于电子邮件传递的 SMTP 服务器。 有关 SMTP 服务器连接的详细信息，请参阅[针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
-|123|警告|日志记录|报表服务器<br /><br /> 报表管理器|报表服务器无法对跟踪日志进行写入操作。 有关跟踪日志的详细信息，请参阅[Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
+|122|警告|传递|计划和传递处理器|计划和传递处理器无法连接到用于电子邮件传递的 SMTP 服务器。 有关 SMTP 服务器连接的详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
+|123|警告|日志记录|报表服务器<br /><br /> 报表管理器|报表服务器无法对跟踪日志进行写入操作。 有关跟踪日志的详细信息，请参阅[报表服务器服务跟踪日志](../report-server/report-server-service-trace-log.md)。|  
 |124|信息|激活|报表服务器|报表服务器服务已初始化。 有关详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。|  
 |125|信息|激活|报表服务器|用于加密数据的密钥已成功提取。 有关密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |126|信息|激活|报表服务器|用于加密数据的密钥已成功应用。 有关密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  

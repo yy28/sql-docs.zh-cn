@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
 - estimating heap size
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 49e8f426443784cd84a226fd1bce79f9042b87ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd6d7c46c1f1aed62f0196640175bb566bca7471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203328"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估计堆的大小
   可以使用以下步骤估计在堆中存储数据所需的空间量：  
@@ -61,7 +61,7 @@ ms.locfileid: "36029260"
      添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
-    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`使总定义的表的宽度超过 8,060 字节的列。 每个这些列的长度必须仍在范围内的 8000 个字节的限制`varchar`， `nvarchar,``varbinary`，或`sql_variant`列。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`导致总定义的表的宽度超过 8,060 字节的列。 每一列的长度仍必须在 8,000 个字节的限制内`varchar`， `nvarchar,``varbinary`，或`sql_variant`列。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
      如果没有可变长度列，请将 ***Variable_Data_Size*** 设置为 0。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36029260"
   
 -   大型对象 (LOB) 值  
   
-     要确定完全多少空间将用于存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， **ntextxml**，和`image`值很复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
+     要确定将完全使用多少空间来存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， **ntextxml**，和`image`值很复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
   
 -   压缩  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 14 课： 部署 |Microsoft 文档
+title: 第 14 课： 部署 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181034"
 ---
 # <a name="lesson-14-deploy"></a>第 14 课：部署
   在本课中，您将配置部署属性；同时指定在表格模式下运行的 Analysis Services 的部署服务器实例以及为您要部署的模型指定名称。 然后，将模型部署到该实例。 部署此模型之后，用户可以使用报表客户端应用程序连接到该模型。 若要了解详细信息，请参阅[表格模型解决方案部署（SSAS 表格）](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
@@ -40,14 +40,14 @@ ms.locfileid: "36125471"
     > [!IMPORTANT]  
     >  您必须对远程 Analysis Services 实例具有管理员权限，才能将模型部署到该实例。  
   
-3.  验证**查询模式**属性设置为**内存中**。  
+3.  验证是否**查询模式下**属性设置为**内存中**。  
   
     > [!NOTE]  
     >  在 DirectQuery 模式下，不支持使用本教程创建的模型。  
   
-4.  在**数据库**属性中，键入`Adventure Works Internet Sales Model`。  
+4.  在中**数据库**属性中，键入`Adventure Works Internet Sales Model`。  
   
-5.  在**多维数据集**名称属性中，键入`Adventure Works Internet Sales Model`。  
+5.  在中**多维数据集**名称属性中，键入`Adventure Works Internet Sales Model`。  
   
 6.  验证所做的选择，然后单击“确定”。  
   

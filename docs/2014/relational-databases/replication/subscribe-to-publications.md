@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
 helpviewer_keywords:
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 715fd5e5e88542b0f70ac0917a0931960f6f9c7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: afb416dad396a55040f8534d76638143bd6dc18d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221337"
 ---
 # <a name="subscribe-to-publications"></a>订阅发布
   订阅是对发布中的数据和数据库对象的副本的请求。 订阅定义将接收哪个发布以及接收的时间和位置。 在计划订阅时，请考虑代理处理发生的位置。 所选择的订阅类型将控制代理运行的位置。 对于推送订阅，合并代理或分发代理在分发服务器上运行；对于请求订阅，代理在订阅服务器上运行。 创建订阅后，将无法更改其类型。  

@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (MeasureGroup) (ASSL) |Microsoft 文档
+title: Type 元素 (MeasureGroup) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1e583e8debf2f8416ac46574e8c4f5dbc8d4453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8e8bab8b822ccb4cf8a17fe4759519eeefb974a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226367"
 ---
 # <a name="type-element-measuregroup-assl"></a>Type 元素 (MeasureGroup) (ASSL)
-  指定的一种[MeasureGroup](../objects/group-element-assl.md)。  
+  指定的类型[MeasureGroup](../objects/group-element-assl.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,12 +71,12 @@ ms.locfileid: "36123912"
 |*销售*|包含销售度量值。|  
 |*预算*|包含预算度量值。|  
 |*FinancialReporting*|包含财务报表度量值。|  
-|*营销*|包含营销度量值。|  
+|*市场营销*|包含营销度量值。|  
 |*清单*|包含库存度量值。|  
   
- 对应于的允许值为枚举`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroupType>。  
+ 与允许的值相对应的枚举`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MeasureGroupType>。  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroup>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

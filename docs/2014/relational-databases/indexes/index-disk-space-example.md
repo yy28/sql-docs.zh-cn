@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online index disk space
 - disk space [SQL Server], indexes
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b371198e36cc2e8047ab88275331dab076e0b97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6e2fc74a9134a03c69e6d436c11de84ef2867b1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182264"
 ---
 # <a name="index-disk-space-example"></a>索引磁盘空间示例
   无论什么时候创建、重新生成或删除索引，在相应的文件和文件组中都需要用于存储旧（源）结构和新（目标）结构的磁盘空间。 旧的结构只有在提交索引创建事务后才会释放。 还可能需要附加临时磁盘空间以进行排序操作。 有关详细信息，请参阅 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)。  
@@ -100,7 +99,7 @@ ms.locfileid: "36124323"
   
 -   确定临时映射索引的空间。  
   
-     在此示例中，旧书签是堆 （8 字节） 的行 ID (RID)，新书签是聚集键 (24 字节包括`uniqueifier`)。 在新旧书签之间没有重叠的列。  
+     在此示例中，旧书签是堆 （8 个字节） 的行 ID (RID)，新书签是聚集键 (24 字节，包含`uniqueifier`)。 在新旧书签之间没有重叠的列。  
   
      临时映射索引大小 = 1 百万 * (8 字节 + 24 字节) / 80% ~ 40 MB。  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36124323"
 |---------------------|---------------------------------------------------------------------------|  
 |SORT_IN_TEMPDB = ON 时的脱机索引操作|操作期间的总空间： 1018 MB:<br /><br /> - 现有表和索引：363 MB\*<br /><br /> -<br />                    **tempdb**：202 MB*<br /><br /> - 新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
 |SORT_IN_TEMPDB = OFF 时的脱机索引操作|操作期间的总空间： 816 MB:<br /><br /> - 现有表和索引：363 MB*<br /><br /> - 新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
-|SORT_IN_TEMPDB = ON 时的联机索引操作|操作期间的总空间： 1058 MB:<br /><br /> - 现有表和索引：363 MB\*<br /><br /> -**tempdb** （包括映射索引）： 242 MB *<br /><br /> - 新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
+|SORT_IN_TEMPDB = ON 时的联机索引操作|操作期间的总空间： 1058 MB:<br /><br /> - 现有表和索引：363 MB\*<br /><br /> -**tempdb** （包含映射索引）： 242 MB *<br /><br /> - 新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
 |SORT_IN_TEMPDB = OFF 时的联机索引操作|操作期间的总空间： 856 MB:<br /><br /> - 现有表和索引：363 MB*<br /><br /> - 临时映射索引：40 MB\*<br /><br /> - 新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
   
  *索引操作提交后将释放此空间。  

@@ -1,5 +1,5 @@
 ---
-title: 工具栏 （属性关系设计器选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 工具栏 （属性关系设计器选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5bfd406eb54451cd6e3b68b5463172f796cd82e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2426c4c39c68e553782d1b9e1a28e3993f180eb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216017"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器的 **“属性关系”** 选项卡上的工具栏执行以下操作：  

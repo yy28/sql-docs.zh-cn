@@ -1,5 +1,5 @@
 ---
-title: 总计、 聚合和内置集合 （报表生成器和 SSRS） 的表达式作用域 |Microsoft 文档
+title: 总计、 聚合和内置集合 （报表生成器和 SSRS） 的表达式作用域 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253509"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）
   在编写表达式时，您会发现在很多情况下都会使用“作用域”  一词。 作用域可以指定要用于计算表达式的数据、呈现的页面上的文本框集、可基于切换显示或隐藏的报表项集。 “作用域”  一词出现在与表达式计算、聚合函数语法和条件可见性相关的主题中以及有关这些范畴的错误消息中。 使用以下说明有助于区分“作用域”  适用的含义：  
@@ -166,7 +166,7 @@ ms.locfileid: "36026726"
   
   
 ##  <a name="Nulls"></a> 取消单元中的 Null 值或零值  
- 对于大多数报表，计算的作用域为组时可以创建多个具有零 (0) 或 Null 值的单元。 若要减少报表中的混乱，请添加在聚合值为 0 时返回空白的表达式。 有关详细信息，请参见"示例，禁止显示 Null 或零值"[表达式示例&#40;报表生成器和 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
+ 对于大多数报表，计算的作用域为组时可以创建多个具有零 (0) 或 Null 值的单元。 若要减少报表中的混乱，请添加在聚合值为 0 时返回空白的表达式。 详细信息，请参阅"示例取消 Null 或零值的"中[表达式示例&#40;报表生成器和 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
   
   
   
@@ -175,6 +175,6 @@ ms.locfileid: "36026726"
  [组表达式示例（报表生成器和 SSRS）](group-expression-examples-report-builder-and-ssrs.md)   
  [创建递归层次结构组&#40;报表生成器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [格式文本和占位符&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

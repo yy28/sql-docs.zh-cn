@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236357"
 ---
 # <a name="create-xml-indexes"></a>创建 XML 索引
   本主题介绍如何创建主 XML 索引和辅助 XML 索引。  
@@ -48,9 +48,9 @@ ms.locfileid: "36027626"
   
 -   主 XML 索引名称与视图名称有相同的限制。  
   
- 无法创建 XML 索引`xml`列在视图中，键入上**表**值的变量与`xml`类型列，或`xml`类型变量。  
+ 无法创建 XML 索引`xml`列在视图中，键入上**表**值的变量`xml`类型的列，或`xml`类型变量。  
   
--   若要更改`xml`类型列从非类型化到类型化的 XML，或反之，通过使用 ALTER TABLE ALTER COLUMN 选项，没有对列应存在 XML 索引。 如果确实存在，则在尝试更改列类型之前必须删除该索引。  
+-   若要更改`xml`类型列从非类型化到类型化的 XML，或反之，通过使用 ALTER TABLE ALTER COLUMN 选项，不存在 XML 索引的列上应。 如果确实存在，则在尝试更改列类型之前必须删除该索引。  
   
 -   创建 XML 索引时必须将选项 ARITHABORT 设置为 ON。 若要使用 XML 数据类型方法查询、删除、更新 XML 列中的值或向 XML 列中插入值，则必须对连接设置相同的选项。 如果没有设置，则 XML 数据类型方法将会失败。  
   

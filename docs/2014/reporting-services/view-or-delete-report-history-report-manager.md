@@ -1,5 +1,5 @@
 ---
-title: 查看或删除报表历史记录 （报表管理器） |Microsoft 文档
+title: 查看或删除报表历史记录 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], viewing snapshots
 - report history [Reporting Services], creating snapshots
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c32b60bf255351a93771dcc34c9b18de55e652fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a972408c7e21995f9b1c28482bcb74eea1e7f495
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192963"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>查看或删除报表历史记录（报表管理器）
   报表历史记录与关联的报表一起保存。 有权查看报表的所有用户都可以查看相应的历史记录。  
@@ -45,7 +45,7 @@ ms.locfileid: "36125268"
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要创建或查看其历史记录快照的报表，单击该报表以打开它。  
   
-3.  单击 **“历史记录”** 选项卡。历史记录快照将显示在**时运行**列。  
+3.  单击 **“历史记录”** 选项卡。历史记录快照显示在**时运行**列。  
   
 4.  若要查看历史记录快照，请单击相应的快照。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "36125268"
   
 1.  在报表管理器中，导航到 **“内容”** 页。 导航到要删除其历史记录快照的报表，再单击该报表以打开它。  
   
-2.  单击 **“历史记录”** 选项卡。历史记录快照将显示在**时运行**列。  
+2.  单击 **“历史记录”** 选项卡。历史记录快照显示在**时运行**列。  
   
 3.  选择你想要删除，然后单击历史记录快照旁边的复选框**删除**。  
   
 ## <a name="see-also"></a>请参阅  
- [向报表历史记录添加快照&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [将快照添加到报表历史记录&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表历史记录页&#40;报表管理器&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [设置报表处理属性](report-server/set-report-processing-properties.md)   
  [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

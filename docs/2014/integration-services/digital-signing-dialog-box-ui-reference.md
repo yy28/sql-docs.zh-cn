@@ -1,5 +1,5 @@
 ---
-title: 数字签名对话框 UI 参考 |Microsoft 文档
+title: 数字签名对话框 UI 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.digitalsigning.f1
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9a1d691a87df5e307fcf19d7ec8c246d7df286c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87c24975549416e09ad73e8528dee3e74f1925cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173088"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>“数字签名”对话框 UI 参考
   使用 **“数字签名”** 对话框可以使用数字签名对包进行签名或删除签名。 在 **中，** SSIS **菜单的** “数字签名” **选项中提供了** “数字签名” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框。  
@@ -38,6 +38,6 @@ ms.locfileid: "36027714"
  单击此项将删除数字签名。  
   
 ## <a name="see-also"></a>请参阅  
- [安全概述&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)  
   
   

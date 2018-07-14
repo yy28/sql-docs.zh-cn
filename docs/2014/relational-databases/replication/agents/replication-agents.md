@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ac3b9ce0f6b5961a8d6829b8f01dbeb23cda9497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c8c7c1f0d0e7044e39d24c6acb9f7abfbc1f3e90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205357"
 ---
 # <a name="replication-agents"></a>复制代理
   复制使用许多称为“代理”的独立程序来执行与跟踪更改和分发数据相关的任务。 本部分文档包含针对以下复制代理的参数参考。  

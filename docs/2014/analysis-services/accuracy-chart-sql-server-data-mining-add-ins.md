@@ -1,5 +1,5 @@
 ---
-title: 准确性图表 （SQL Server 数据挖掘外接程序） |Microsoft 文档
+title: 准确性图表 （SQL Server 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - mining models, validating
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - lift [data mining]
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16d669001ae0842c91853e28aae587dd5f4ebb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d331c1acb84b67a19eba2c6aacebfe68b947b217
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222317"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>准确性图表（SQL Server 数据挖掘外接程序）
-  ![在功能区中数据挖掘准确性图表按钮](media/dmc-accchart.gif "数据挖掘功能区中的准确性图表按钮")  
+  ![在功能区中数据挖掘准确性图表按钮](media/dmc-accchart.gif "在功能区中数据挖掘准确性图表按钮")  
   
- 通过准确性图表，可以将模型应用于新的数据集，然后评估该模型的性能。 此向导创建准确性图表是*提升图*，这是一种经常用于度量数据挖掘模型的准确性的图表类型。 这种类型的准确性图表以图形方式显示以下改善：即在使用指定数据挖掘模型时，准确性为 100％ 的理想预测与随机预测相比之间的改善。 您可以在一个图表中比较多个模型。  
+ 通过准确性图表，可以将模型应用于新的数据集，然后评估该模型的性能。 此向导创建准确性图表是*提升图*，这是一种常用于衡量数据挖掘模型的准确性的图表。 这种类型的准确性图表以图形方式显示以下改善：即在使用指定数据挖掘模型时，准确性为 100％ 的理想预测与随机预测相比之间的改善。 您可以在一个图表中比较多个模型。  
   
 ## <a name="example"></a>示例  
  假设 Adventure Works Cycles 的市场部要开展一次定向邮寄活动。 从以往的活动中，他们推算应有 10% 的答复率。 在数据库的一个表中，存储了一个包含 10,000 名潜在客户的列表。 按照正常答复率计算，预计将有 1,000 名客户答复。  
@@ -45,29 +45,29 @@ ms.locfileid: "36124225"
 ## <a name="using-the-accuracy-chart-wizard"></a>使用准确性图表向导  
  若要创建准确性图表，必须参考现有数据挖掘结构。 对于基于该数据挖掘结构的多个模型，只要它们的预测对象相同，就可以衡量它们的准确性。  
   
- 如果无法确定哪个结构可用，则可浏览服务器。 有关详细信息，请参阅[Excel 中浏览模型&#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)。  
+ 如果无法确定哪个结构可用，则可浏览服务器。 有关详细信息，请参阅[在 Excel 中浏览模型&#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)。  
   
 #### <a name="to-create-an-accuracy-chart"></a>创建准确性图表  
   
 1.  单击**数据挖掘客户端**功能区。  
   
-2.  在**准确性和验证**组中，单击**准确性图表**。  
+2.  在中**准确性和验证**组中，单击**准确性图表**。  
   
-3.  在**选择结构或模型**对话框框中，选择你想要评估的模型。 单击“下一步” 。  
+3.  在中**选择结构或模型**对话框框中，选择想要评估的模型。 单击“下一步” 。  
   
     > [!NOTE]  
     >  必须选择与要测试的数据最相匹配的模型。  
   
-4.  在**指定列预测和预测的值**对话框框中，选择你想要预测的列和一个目标值，如果适用。 单击“下一步” 。  
+4.  在中**Predict 和预测的值指定列**对话框框中，选择你想要预测的列和一个目标值，如果适用。 单击“下一步” 。  
   
      例如，在上面的示例中，您可以选择用来建立顾客答复模型的列，并将目标值指定为“可能购买”。  
   
     > [!NOTE]  
     >  不能预测连续值。 但是，可通过将值分割为不同的离散范围，来离散化该列。 在创建数据挖掘模型之前，就必须完成此操作。  
   
-5.  在**选择源数据**对话框框中，指定将通过模型通过才能创建预测的数据源。  
+5.  在中**选择源数据**对话框框中，指定你将传递给模型来创建预测的数据源。  
   
-6.  如果你使用的数据，并不存储模型中，在测试数据的外部源**指定关系**对话框中，映射数据挖掘模型中使用新的源数据与列中的列。  
+6.  如果使用外部的数据，并不是存储模型中，在测试数据源**指定关系**对话框中，映射在数据挖掘模型中使用新的源数据与列中的列。  
   
      如果列名称类似，向导将自动映射它们。 虽然输入数据中的某些列可能与分析无关，可以忽略，但某些列是数据挖掘模型处理输入所必需的。 这样的列可能包括事务 ID、目标值或用于预测的列。 如果无法映射所需的列，向导将提供一则警告消息。  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36124225"
  有关提升图工作原理以及如何基于随机预测线和理想预测线计算准确性的详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书中的主题“提升图”。  
   
 ## <a name="see-also"></a>请参阅  
- [验证模型和使用预测模型&#40;数据挖掘的 Excel 外接程序&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [验证模型和使用模型进行预测&#40;Excel 数据挖掘外接程序&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

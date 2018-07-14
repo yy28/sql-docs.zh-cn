@@ -1,5 +1,5 @@
 ---
-title: 导出报表 （报表生成器和 SSRS） |Microsoft 文档
+title: 导出报表 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54625bc927cd187b40c146b7bfdc4093645711c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4760d57cec11c6955e1ad87d4278d6c22a55ee7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255799"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
   运行报表后，可以将其导出为其他格式（如 Excel 或 PDF），也可以通过生成 Atom 服务文档，列出可从报表获得的与 Atom 兼容的数据馈送来导出报表。  
@@ -40,7 +40,7 @@ ms.locfileid: "36123837"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供多个呈现扩展插件，以支持将报表导出为常见文件格式。 呈现扩展插件支持带软分页的文件格式（如 Word 或 Excel）、带硬分页的文件格式（如 PDF 或 TIFF）或仅带数据的文件格式（如 CSV 或与 Atom 兼容的 XML）。  
   
- 若要快速开始使用导出报表和从报表生成 Atom 兼容数据馈送，请参阅[将报表导出为其他文件类型&#40;报表生成器和 SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)和[从生成数据馈送报表&#40;报表生成器和 SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
+ 若要快速开始使用导出报表并从报表生成 Atom 兼容的数据馈送，请参阅[将报表导出为其他文件类型&#40;报表生成器和 SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)并[从生成数据馈送报表&#40;报表生成器和 SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,8 +68,8 @@ ms.locfileid: "36123837"
 |“格式”|呈现扩展插件类型|Description|  
 |------------|------------------------------|-----------------|  
 |CSV|data|逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。<br /><br /> 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](exporting-to-a-csv-file-report-builder-and-ssrs.md)。|  
-|“导出”|软分页|Excel 呈现扩展插件将报表呈现为 Excel 文档与兼容[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2007年-2010，以及[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003 用于 Word、 Excel 和 PowerPoint 安装 Microsoft Office 兼容包。 将报表导出至 Excel 工作表时，将会去掉一些布局和原始设计元素。可以设置报表属性和报表内的组以便在将报表导出到 Excel 时启用工作表选项卡的命名。 此呈现器生成的文件的文件扩展名为 xlsx。<br /><br /> 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](exporting-to-microsoft-excel-report-builder-and-ssrs.md)。<br /><br /> 注意： 的 Excel 2003 呈现扩展插件呈现为本机格式的[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003年位于某些报告方案。|  
-|Word|软分页|Word 呈现扩展插件将报表呈现为 Word 文档与兼容[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010，以及[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003年[!INCLUDE[msCoName](../../includes/msconame-md.md)]用于 Word、 Excel 和 PowerPoint 安装 Office 兼容包。 报表导出为 Word 文档后，可以更改报表内容并设计文档样式的报表，例如邮件标签、采购订单或套用信函。 此呈现器生成的文件的文件扩展名为 docx。<br /><br /> 有关详细信息，请参阅[导出到 Microsoft Word（报表生成器和 SSRS）](exporting-to-microsoft-word-report-builder-and-ssrs.md)。<br /><br /> 注意： 的 Word 2003 呈现扩展插件呈现为本机格式的[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003年位于某些报告方案。|  
+|“导出”|软分页|Excel 呈现扩展插件将报表呈现为与兼容的 Excel 文档[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2007年-2010，以及[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003 的 Word、 Excel 和 PowerPoint 安装的 Microsoft Office 兼容包。 将报表导出至 Excel 工作表时，将会去掉一些布局和原始设计元素。可以设置报表属性和报表内的组以便在将报表导出到 Excel 时启用工作表选项卡的命名。 此呈现器生成的文件的文件扩展名为 xlsx。<br /><br /> 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](exporting-to-microsoft-excel-report-builder-and-ssrs.md)。<br /><br /> 注意： Excel 2003 呈现扩展插件呈现的本机格式为[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003年是在某些报告方案中。|  
+|Word|软分页|Word 呈现扩展插件将报表呈现为与兼容的 Word 文档[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010，以及[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003年[!INCLUDE[msCoName](../../includes/msconame-md.md)]针对 Word、 Excel 和 PowerPoint 安装 Office 兼容包。 报表导出为 Word 文档后，可以更改报表内容并设计文档样式的报表，例如邮件标签、采购订单或套用信函。 此呈现器生成的文件的文件扩展名为 docx。<br /><br /> 有关详细信息，请参阅[导出到 Microsoft Word（报表生成器和 SSRS）](exporting-to-microsoft-word-report-builder-and-ssrs.md)。<br /><br /> 注意： Word 2003 呈现扩展插件呈现的本机格式为[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003年是在某些报告方案中。|  
 |Web 存档|软分页|HTML 呈现扩展插件以 HTML 格式呈现报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。<br /><br /> 对于在报表生成器中预览并在浏览器中查看的报表（包括在报表管理器中运行时），HTML 呈现扩展插件都是默认的呈现扩展插件。<br /><br /> 有关详细信息，请参阅[以 HTML 格式呈现（报表生成器和 SSRS）](rendering-to-html-report-builder-and-ssrs.md)。|  
 |Acrobat (PDF) 文件|硬分页|PDF 呈现扩展插件可将报表呈现为特定格式的文件，以便在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 6 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。<br /><br /> 有关详细信息，请参阅[导出到 PDF 文件（报表生成器和 SSRS）](exporting-to-a-pdf-file-report-builder-and-ssrs.md)。|  
 |TIFF 文件|硬分页|图像呈现扩展插件可以将报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。<br /><br /> 图像呈现扩展插件可以生成 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]支持的以下任意格式的文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。<br /><br /> 有关详细信息，请参阅[导出到图像文件（报表生成器和 SSRS）](exporting-to-an-image-file-report-builder-and-ssrs.md)。|  
@@ -105,9 +105,9 @@ ms.locfileid: "36123837"
   
  与特定呈现器有关的主题介绍报表项和数据区域是如何呈现的以及对于每种呈现器的限制和解决方法。  
   
--   [将导出到 CSV 文件&#40;报表生成器和 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)  
+-   [导出到 CSV 文件&#40;报表生成器和 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)  
   
--   [将导出到 Microsoft Excel&#40;报表生成器和 SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)  
+-   [导出到 Microsoft Excel&#40;报表生成器和 SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)  
   
 -   [导出到 Microsoft Word&#40;报表生成器和 SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)  
   
@@ -115,11 +115,11 @@ ms.locfileid: "36123837"
   
 -   [导出到 PDF 文件&#40;报表生成器和 SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)  
   
--   [将导出到图像文件&#40;报表生成器和 SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)  
+-   [导出到图像文件&#40;报表生成器和 SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)  
   
 -   [导出到 XML&#40;报表生成器和 SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)  
   
--   [基于报表生成数据馈送&#40;报表生成器和 SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [从报表生成数据馈送&#40;报表生成器和 SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供附加的功能来帮助您创建采用其他格式可以很好地工作的报表。 Tablix 数据区域（表、矩阵和列表）、组和矩形上的分页符使您可以更好地控制报表分页。 由分页符分隔的报表页可以具有不同的页名称和重置页码编号。 通过使用表达式，可以在报表运行时动态更新页名称和页码。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36123837"
 ##  <a name="OtherWaysExportingReports"></a> 导出报表的其他方式  
  导出报表是在报表管理器或报表生成器中打开报表时可以根据需要执行的一项任务。 若要自动执行导出操作（例如，根据重复执行的计划，将报表以特定文件类型导出到共享文件夹中），请创建一个订阅，将报表传递到共享文件夹。 有关详细信息，请参阅 [File Share Delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md)。  
   
- 在报告工具中预览或在浏览器应用程序（如报表管理器）中打开的报表始终首先以 HTML 格式呈现。 不能将其他呈现扩展插件指定为用于查看的默认扩展插件。 但是，可以创建一个订阅，使用该订阅按所需呈现格式生成报表，然后再传递到电子邮件收件箱或共享文件夹。 有关详细信息，请参阅[Create，Modify，and 删除标准订阅&#40;在纯模式下的 Reporting Services&#41; ](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)和[创建、 修改和删除数据驱动订阅](../subscriptions/data-driven-subscriptions.md)。  
+ 在报告工具中预览或在浏览器应用程序（如报表管理器）中打开的报表始终首先以 HTML 格式呈现。 不能将其他呈现扩展插件指定为用于查看的默认扩展插件。 但是，可以创建一个订阅，使用该订阅按所需呈现格式生成报表，然后再传递到电子邮件收件箱或共享文件夹。 有关详细信息，请参阅[创建、 修改和删除标准订阅&#40;本机模式下的 Reporting Services&#41; ](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)并[创建、 修改和删除数据驱动订阅](../subscriptions/data-driven-subscriptions.md)。  
   
  您也可以通过将呈现扩展插件指定为 URL 参数的 URL 来访问报表，并直接将报表呈现为指定格式，而不先将报表呈现为 HTML 格式。 下面的示例将报表呈现为 Excel 格式：  
   
@@ -139,7 +139,7 @@ http://<Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:C
  有关详细信息，请参阅 [Export a Report Using URL Access](../export-a-report-using-url-access.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [控制页中断，标题、 列和行&#40;报表生成器和 SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [控制分页符、 标题、 列和行&#40;报表生成器和 SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [打印报表（报表生成器和 SSRS）](print-reports-report-builder-and-ssrs.md)   
  [保存报表&#40;报表生成器&#41;](saving-reports-report-builder.md)  

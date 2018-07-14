@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
 - displaying log files
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 464719261c375f01b2831f37481c330e9b00a246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 365c5dca84514169082859900a1a3e065770f358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163348"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
-  每次执行的安装程序创建的日志文件用新的时间戳的日志文件夹在 %programfiles%创建\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下运行安装程序时，将在 % temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
+  每次执行安装程序中创建的日志文件与新的时间戳的日志文件夹位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下运行安装程序时，将在 % temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
   
  一个典型的安装请求将经历以下三个执行阶段：  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36124147"
 ## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
 ### <a name="overview"></a>概述  
- 本配置文件包含安装过程中提供的输入设置。 该文件可用于在无需手动输入设置的情况下重新启动安装。 但是，帐户的密码、PID 和某些参数不保存在该配置文件中。 可以将这些设置添加到该文件中，也可通过使用命令行或安装程序用户界面提供这些设置。 有关详细信息，请参阅[安装使用 SQL Server 2014 配置文件](install-sql-server-using-a-configuration-file.md)。  
+ 本配置文件包含安装过程中提供的输入设置。 该文件可用于在无需手动输入设置的情况下重新启动安装。 但是，帐户的密码、PID 和某些参数不保存在该配置文件中。 可以将这些设置添加到该文件中，也可通过使用命令行或安装程序用户界面提供这些设置。 有关详细信息，请参阅[使用安装 SQL Server 2014 配置文件](install-sql-server-using-a-configuration-file.md)。  
   
 ### <a name="location"></a>位置  
  位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\。  

@@ -1,5 +1,5 @@
 ---
-title: 浏览器 （多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 浏览器 （多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f431abab7f69c957b64d83f2f06c7675c566b2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236167"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>浏览器（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集中的维度、度量值和 KPI。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集浏览器已与 MDX 查询设计器集成，并提供图形用户界面来帮助您创建 MDX 查询、筛选器和多维数据集切片，以及在层次结构中深化。  
@@ -34,7 +34,7 @@ ms.locfileid: "36123327"
   
  ![Analysis Services MDX 查询设计器，设计视图](media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
   
- 如果在图形设计模式下工作时**自动执行**(![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")) 选择工具栏上的切换按钮时，**浏览器**运行查询每次拖放到数据窗格上的元数据对象。 你也可以手动运行查询使用**执行查询**(![运行查询](media/rsqdicon-run.gif "运行查询")) 在工具栏上的按钮。  
+ 如果在图形设计模式下工作时**AutoExecute** (![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")) 工具栏上的切换按钮处于选中状态，**浏览器**运行查询每次拖放到数据窗格上的元数据对象。 您也可以手动运行查询使用**执行查询**(![运行查询](media/rsqdicon-run.gif "运行查询")) 工具栏上的按钮。  
   
  若要将图形查询设计器更改为 **“查询”** 模式并处理 MDX 语句的文本，请单击工具栏上的 **“设计模式”** 按钮。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36123327"
   
  **“元数据”** 窗格将显示 **“元数据”** 选项卡和 **“函数”** 选项卡。 通过 **“元数据”** 选项卡，可将维度、层次结构、KPI 和度量值拖到查询设计区域。 从 **“函数”** 选项卡上，您可以将函数拖至查询设计区域。 执行查询时，查询设计区域会显示 MDX 查询的结果。 还可以单击 **“工具栏”** 上的 **“在 Excel 中分析”** ，将数据导出到 Microsoft Office Excel，并像用户那样在数据透视表中查看结果。以下几节详细介绍每种模式的 **“浏览器”** 中的工具栏按钮和所有窗格。  
   
- 请注意，在文本模式下工作时**自动执行**(![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")) 在工具栏上的切换按钮不可用。 但是，你可以手动运行查询通过使用**执行查询**(![运行查询](media/rsqdicon-run.gif "运行查询")) 在工具栏上的按钮。  
+ 请注意，在文本模式下工作时**AutoExecute** (![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")) 工具栏上的切换按钮不可用。 但是，您可以通过手动运行查询**执行查询**(![运行查询](media/rsqdicon-run.gif "运行查询")) 工具栏上的按钮。  
   
 ## <a name="sections"></a>部分  
  **工具栏**  

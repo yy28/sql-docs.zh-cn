@@ -1,5 +1,5 @@
 ---
-title: 消息元素 (XMLA) |Microsoft 文档
+title: 消息元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Message element
 ms.assetid: 028911e2-9779-43b1-824d-6d7fb2295885
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b88f9304c8d05863844c171f4c1efe5bcaf8073d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1fbeb2085c41e239e764621a89f34b4f17661584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241267"
 ---
 # <a name="message-element-xmla"></a>Message 元素 (XMLA)
-  包含从实例返回一条消息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]通过[发现](../xml-elements-methods-discover.md)或[执行](../xml-elements-methods-execute.md)方法调用。  
+  包含返回的实例中的消息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]通过[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36028856"
 |子元素|[错误](error-element-xmla.md)，[警告](warning-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 在 `Discover` 方法调用中的单个 XMLA 命令或 `Execute` 方法调用成功完成，但是带有错误或警告的情况下使用此元素。 在这种情况下，`Messages` 元素（包含一个或多个 `Message` 元素）将添加到根元素中所有其他元素之后。 每个`Message`元素表示单个消息，出现错误或警告，由[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
+ 在 `Discover` 方法调用中的单个 XMLA 命令或 `Execute` 方法调用成功完成，但是带有错误或警告的情况下使用此元素。 在这种情况下，`Messages` 元素（包含一个或多个 `Message` 元素）将添加到根元素中所有其他元素之后。 每个`Message`元素表示一个返回消息，出现错误或警告，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

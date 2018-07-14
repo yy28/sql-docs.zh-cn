@@ -1,5 +1,5 @@
 ---
-title: 启用加密的连接到数据库引擎 （SQL Server 配置管理器） |Microsoft 文档
+title: 启用加密的连接到数据库引擎 （SQL Server 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275443"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>启用数据库引擎的加密连接（SQL Server 配置管理器）
   本主题介绍如何通过使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 配置管理器为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指定证书来启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的加密连接。 服务器计算机必须具有提供的证书，客户端计算机必须设置为信任该证书的根颁发机构。 提供是指通过将证书导入 Windows 来安装证书的过程。  
@@ -47,7 +47,7 @@ ms.locfileid: "36026400"
   
 -   **若要启用加密的连接：**  
   
-     [设置 （安装） 服务器上的证书](#Provision)  
+     [提供 （安装） 在服务器上的证书](#Provision)  
   
      [导出服务器证书](#Export)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36026400"
   
 ###  <a name="Provision"></a> 在服务器中提供（安装）证书  
   
-1.  上**启动**菜单上，单击**运行**，然后在**打开**框中，键入`MMC`单击**确定**。  
+1.  上**启动**菜单上，单击**运行**，然后在**打开**框中，键入`MMC`然后单击**确定**。  
   
 2.  在 MMC 控制台的“文件”菜单上，单击“添加/删除管理单元”。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36026400"
   
 1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”右键单击“\<server instance> 的协议”，然后选择“属性”。  
   
-2.  在 **协议 * * *\<实例名称 >* **属性**对话框中，在**证书**选项卡上，列表中选择的下拉中所需的证书有关**证书**框中，并依次**确定**。  
+2.  在 **协议 * * *\<实例名称 >* **属性**对话框在**证书**选项卡上，所需的证书，从下拉列表中选择有关**证书**框中，然后依次**确定**。  
   
 3.  在 **“标志”** 选项卡的 **“ForceEncryption”** 框中，选择 **“是”**，然后单击 **“确定”** 关闭该对话框。  
   

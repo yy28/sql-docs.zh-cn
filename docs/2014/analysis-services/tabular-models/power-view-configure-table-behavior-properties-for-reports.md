@@ -1,5 +1,5 @@
 ---
-title: Power View 报表 (SSAS 表格) 的配置表行为属性 |Microsoft 文档
+title: Power View 报表 (SSAS 表格) 的配置表行为属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267193"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>为 Power View 报表配置表行为属性（SSAS 表格）
   如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
@@ -96,7 +96,7 @@ ms.locfileid: "36123324"
 ### <a name="images-are-missing"></a>图像缺失  
  您在模型中设置的属性将决定图像是直观显示在报表中，还是在报表中显示为文本值。  
   
- ![图像 Url 显示为在报表中的文本](../media/ssas-rptprop-noimageurl.gif "图像 Url 显示为在报表中的文本")  
+ ![图像 Url 显示为报表中的文本](../media/ssas-rptprop-noimageurl.gif "图像 Url 显示为报表中的文本")  
   
  默认情况下，模型中的文本将被解释为报表中的文本。 如果文本列是指向报表图像的 URL 地址，请别忘记设置 **“图像 URL”** 属性，以便 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 检索图像文件。 对于二进制图像，请记住要设置 **“行标识符”** 属性。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "36123324"
   
  但是，请考虑一个不同的示例：您可能需要显示某行的多个实例，因为事实上，基础行包含有关不同实体的数据。 在此示例中，假定你有两个名为 **Jon Yang**的客户。 如果使用默认分组行为，则在报表中将只显示一个 **Jon Yang** 实例。 而且，因为列表中只显示一个实例，所以，度量值“年收入”是这两个客户的年收入值的总和  。  
   
- ![默认组将 2 集中到 1](../media/ssas-jonyang-norowid.gif "默认组将 2 集中到 1")  
+ ![默认组将 2 合并为 1](../media/ssas-jonyang-norowid.gif "默认组将 2 合并为 1")  
   
  若要更改默认分组行为，请设置 **“行标识符”** 和 **“保留唯一行”** 属性。 在 **“保留唯一行”** 中，选择“姓氏”列，这样，此值将对某行重复，即使它已出现在不同行中。 当你更改属性并重新发布工作簿之后，你可以创建同一个报表，只有在此时，你才能看到这两个名为 **Jon Yang**的客户，且 **年收入** 正确地分配给其中每个人。  
   
- ![行数据包含重复项基于行 ID](../media/ssas-jonyang.gif "行包含基于行 ID 的重复项的数据")  
+ ![行数据包含基于行 ID 的重复项](../media/ssas-jonyang.gif "行数据包含基于行 ID 的重复项")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>矩阵布局太拥挤  
  当您在矩阵中显示详细信息表时，默认分组提供每列的汇总值。 根据您的目标，这种汇总值可能比您需要的更多。 要更改此行为，您可以设置 **“行标识符”**。 不需要设置其他属性；设置行标识符就足以更改分组，以便基于每行的唯一行标识符对该行计算汇总值。  
@@ -118,11 +118,11 @@ ms.locfileid: "36123324"
   
  **之前：默认分组基于矩阵中的字段**  
   
- ![矩阵布局分组在行标识符上](../media/ssas-rptprop-matrixrowid.gif "矩阵布局分组在行标识符上")  
+ ![按行标识符分组的矩阵布局](../media/ssas-rptprop-matrixrowid.gif "按行标识符分组的矩阵布局")  
   
  **之后：基于行标识符进行分组**  
   
- ![矩阵布局分组在行标识符上](../media/ssas-rptprop-matrixrowid.gif "矩阵布局分组在行标识符上")  
+ ![按行标识符分组的矩阵布局](../media/ssas-rptprop-matrixrowid.gif "按行标识符分组的矩阵布局")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>图表在轴上显示的项和级别过多  
  显示详细信息数据的图表报表应将行标识符用作轴。 如果没有行标识符，则轴是不确定的，这会导致最佳猜测的布局，而这种布局可能没有意义。 要更改此行为，您可以设置 **“行标识符”**。 不需要设置其他属性；设置行标识符就足以更改分组，以便基于每行的唯一行标识符对该行计算汇总值。  
@@ -131,11 +131,11 @@ ms.locfileid: "36123324"
   
  **之前：默认分组基于图表中的字段**  
   
- ![图表，根据默认分组在字段级别](../media/ssas-rptprop-chartfieldgroup.gif "图表，根据默认分组在字段级别")  
+ ![图表，按默认在字段级别分组](../media/ssas-rptprop-chartfieldgroup.gif "图表，按默认在字段级别分组")  
   
  **之后：基于行标识符进行分组（行标识符变成轴）**  
   
- ![图表，根据行 ID 分组](../media/ssas-rptprop-chartrowid.gif "图表，根据行 ID 分组")  
+ ![基于行 ID 分组的图表](../media/ssas-rptprop-chartrowid.gif "图表，按行 ID 分组")  
   
 ## <a name="next-steps"></a>后续步骤  
  在计算模型中的表并对包含详细信息行（这些行应始终显示为单独项）的表设置表行为属性之后，您可以通过其他属性或设置来进一步优化模型。  

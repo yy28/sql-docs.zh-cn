@@ -1,5 +1,5 @@
 ---
-title: 定义关系对话框 (Analysis Services-多维数据) |Microsoft 文档
+title: 定义关系对话框 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb46c19a45b85e90a0484a5f0ac33eff0077298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165494"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>“定义关系”对话框（Analysis Services - 多维数据）
   使用 **“定义关系”** 对话框，可以定义多维数据集设计器中的多维数据集维度与度量值组之间的关系。 在多维数据集设计器的 **“维度用法”** 选项卡上，单击 **“网格”** 窗格中单元上的 **...** ，可以显示 **“定义关系”** 对话框。  
@@ -42,13 +42,13 @@ ms.locfileid: "36027559"
   
 |关系类型|Description|选项|  
 |-----------------------|-----------------|------------|  
-|**没有关系**|没有定义任何关系，并且 **“详细信息”** 窗格中也不显示任何选项。||  
+|**任何关系**|没有定义任何关系，并且 **“详细信息”** 窗格中也不显示任何选项。||  
 |**Regular**|指定常规维度关系。 **“详细信息”** 窗格中显示以下选项：|**粒度属性**: <br />                      选择定义与维度有关的度量值组粒度的属性。 此属性通常为维度的键属性。|  
 |||**维度表**：显示维度的主表。|  
 |||**度量值组表**：显示度量值组的事实数据表。|  
 |||“关系”：显示关系所基于的维度列和度量值组列的网格。 该网格包含以下列：<br /><br /> **维度列**：显示与所选粒度属性相关联的列。 注意：如果尚未生成维度，则此选项将设置为“生成” 。<br />**度量值组列**：<br />                              选择度量值组中与维度列相关的列。|  
 |||**高级**：<br />                      单击此项可显示“度量值组绑定”对话框，并可以编辑特性和度量值组列之间的关系的高级属性，如空值处理。 有关“度量值组绑定”对话框的详细信息，请参阅[“度量值组绑定”对话框（Analysis Services - 多维数据）](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md)。|  
-|**事实**|指定事实维度关系。 **“详细信息”** 窗格中显示以下选项：|**粒度属性**：选择定义与维度有关的度量值组粒度的属性。 此属性通常为维度的键属性。|  
+|**这一事实**|指定事实维度关系。 **“详细信息”** 窗格中显示以下选项：|**粒度属性**：选择定义与维度有关的度量值组粒度的属性。 此属性通常为维度的键属性。|  
 |||**维度表**：显示主维度表。|  
 |||**度量值组表**： <br />                      显示度量值组所基于的表。|  
 |**引用**|指定引用的维度关系。 **“详细信息”** 窗格中显示以下选项：|**引用维度**: <br />                      显示所选维度。|  

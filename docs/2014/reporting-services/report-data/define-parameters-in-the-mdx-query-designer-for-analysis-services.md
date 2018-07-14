@@ -1,5 +1,5 @@
 ---
-title: Analysis Services （报表生成器和 SSRS） 的 MDX 查询设计器中定义参数 |Microsoft 文档
+title: Analysis Services （报表生成器和 SSRS） 的 MDX 查询设计器中定义参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
 - Multidimensional Expressions [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0ed9044a9d9719ec67cff1f79d21882a7578129f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179574"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）
   若要参数化 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的 MDX 查询，则必须向查询添加查询参数。 在 MDX 查询设计器中，在设计模式和查询模式下都可以通过指定筛选器来添加查询参数。 使用查询参数定义查询后，Reporting Services 会自动创建报表参数和数据集，以提供有效值的列表。 这样用户就可以指定要直接传递给查询的值。  
@@ -35,7 +35,7 @@ ms.locfileid: "36124500"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>在设计模式下的 MDX 中定义查询参数  
   
-1.  在报表数据窗格中，右键单击数据集从创建[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源类型，并依次**查询**。 此时将在设计模式下打开 MDX 查询设计器。  
+1.  在报表数据窗格中，右键单击从创建的数据集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源类型，，然后单击**查询**。 此时将在设计模式下打开 MDX 查询设计器。  
   
 2.  将维度拖至筛选区域，然后将其放入 **“维度”** 列的第一个单元格中。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36124500"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>在查询模式下的 MDX 中定义查询参数  
   
-1.  在报表数据窗格中，右键单击数据集从创建[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源类型，并依次**查询**。 此时将在设计模式下打开 MDX 查询设计器。  
+1.  在报表数据窗格中，右键单击从创建的数据集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源类型，，然后单击**查询**。 此时将在设计模式下打开 MDX 查询设计器。  
   
 2.  在工具栏上单击 **“设计”** 以切换到查询模式。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36124500"
      若要查看为报表参数提供可用值的数据集，请右键单击“报表数据”窗格中的任意空白区域，然后单击“ **显示隐藏的数据集**”。 此时“报表数据”窗格将显示报表中的所有数据集。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 连接类型为 MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [针对 MDX 的 analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 查询设计器用户界面](analysis-services-mdx-query-designer-user-interface.md)  
   
   

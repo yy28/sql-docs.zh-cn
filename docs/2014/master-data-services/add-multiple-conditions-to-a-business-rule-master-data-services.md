@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275173"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>向业务规则添加多个条件 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您想要采用更复杂的规则时，可以向业务规则添加多个 **AND** 或 **OR** 条件。  
@@ -56,24 +56,24 @@ ms.locfileid: "36123439"
   
 8.  单击 **“编辑所选业务规则”**。  
   
-9. 在**组件**窗格中，展开**逻辑运算符**节点。  
+9. 在中**组件**窗格中，展开**逻辑运算符**节点。  
   
 10. 单击**AND**或**OR**将其拖到**如果**窗格的**AND**标签。  
   
 11. 在 **“组件”** 窗格中，展开 **“条件”** 节点。  
   
-12. 单击一个条件，将其拖到**如果**窗格中，到**AND**或**OR**步骤 10 中的标签。  
+12. 单击某一条件并将其拖到**IF**窗格中，为**AND**或**OR**步骤 10 中的标签。  
   
-13. 在**属性**窗格中，单击某一属性，并将其拖到**编辑条件**窗格的**选择属性**标签。  
+13. 在中**特性**窗格中，单击某一属性，并将其拖到**编辑条件**窗格的**选择属性**标签。  
   
-14. 在**编辑条件**窗格中，完成所有必填的字段。  
+14. 在中**编辑条件**窗格中，完成必填的字段。  
   
 15. 在 **“编辑条件”** 窗格中，单击 **“保存项”**。  
   
 16. （可选） 若要添加更多条件，从**组件**窗格中，拖动**AND**或**OR**到任何**AND**或**OR**中**如果**窗格。 然后执行步骤 13-15。  
   
     > [!TIP]  
-    >  若要删除条件，单击名称的条件并在**编辑条件**窗格中，单击**删除项**。  
+    >  若要删除条件，单击名称条件的然后在**编辑条件**窗格中，单击**删除项**。  
   
 ## <a name="see-also"></a>请参阅  
  [业务规则&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   

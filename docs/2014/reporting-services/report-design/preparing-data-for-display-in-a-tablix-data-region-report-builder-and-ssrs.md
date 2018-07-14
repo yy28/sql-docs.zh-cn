@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bde345380c4fbf8531a74005d307d0b319183760
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 03edb5eb94194afecb4974604101b1ebaae26be8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204877"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>准备要在 Tablix 数据区域中显示的数据（报表生成器和 SSRS）
   Tablix 数据区域显示来自数据集的数据。 您可以查看从数据集中检索的所有数据，也可以创建筛选器以便仅查看数据子集。 还可以添加条件表达式，以便填充 Null 值或修改对数据集的查询，使其包括定义现有列的排序顺序的列。  
@@ -28,7 +28,7 @@ ms.locfileid: "36124042"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="working-with-nulls-and-blanks-in-field-values"></a>处理字段值中的 Null 值和空白  
- 数据集中的字段集合的数据包含在运行时从数据源中检索到的所有值，包括 Null 值和空白。 通常 Null 值和空白是无法区分的。 在大多数情况下，这是所需行为。 例如，数值聚合函数如[总和](report-builder-functions-sum-function.md)和[Avg](report-builder-functions-avg-function.md)忽略 null 值。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
+ 数据集中的字段集合的数据包含在运行时从数据源中检索到的所有值，包括 Null 值和空白。 通常 Null 值和空白是无法区分的。 在大多数情况下，这是所需行为。 例如，等数值聚合函数[总和](report-builder-functions-sum-function.md)并[Avg](report-builder-functions-avg-function.md)忽略 null 值。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
   
  如果希望以不同方式处理 Null 值，则可以使用条件表达式或自定义代码替换 Null 值的自定义值。 例如，只要 `Null` 字段显示 Null 值，以下表达式则替换 `[Size]`文本。  
   
@@ -61,6 +61,6 @@ FROM Production.Product p
 ## <a name="see-also"></a>请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [筛选、 分组和排序数据&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

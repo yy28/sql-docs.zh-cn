@@ -1,5 +1,5 @@
 ---
-title: 标准分析 |Microsoft 文档
+title: 标准分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard parse [Integration Services]
 - locales [Integration Services]
 ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bc6640c561110ec24e737d20adc55ab025f67a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a7a6a55dbd3f6c7003a14da7a9b8065b652fac8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203850"
 ---
 # <a name="standard-parse"></a>Standard Parse
   标准分析是一组受区域设置影响的分析例程，这些例程支持 Oleaut32.dll 和 Ole2dsip.dll 中可用的自动数据类型转换 API 所提供的全部数据类型转换。 标准分析相当于 OLE DB 分析 API。  

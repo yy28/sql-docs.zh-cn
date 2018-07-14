@@ -1,5 +1,5 @@
 ---
-title: 编程 AMO 数据挖掘对象 |Microsoft 文档
+title: AMO 数据挖掘对象的编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62ef444d7fa112267a4a272553834e24fe5b0df9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176944"
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 数据挖掘对象的编程
   使用 AMO 对数据挖掘对象进行编程非常简单直接。 第一步是创建数据结构模型以支持挖掘项目。 然后创建数据挖掘模型，该模型支持您要用于预测或查找数据下未看到的关系的挖掘算法。 创建挖掘项目（包括结构和算法）后，可以处理挖掘模型以获取定型的模型，稍后从客户端应用程序进行查询和预测时将使用该模型。  
   
- 请记住 AMO 不用于查询，而是用于管理挖掘结构和模型。 若要查询你的数据，使用[使用 ADOMD.NET 开发](../adomd-net/developing-with-adomd-net.md)。  
+ 请记住 AMO 不用于查询，而是用于管理挖掘结构和模型。 若要查询你的数据，请使用[使用 ADOMD.NET 进行开发](../adomd-net/developing-with-adomd-net.md)。  
   
  本主题包含以下各节：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36125728"
   
      可对挖掘结构进行处理，处理挖掘结构时，会对子挖掘模型进行处理和重新定型。  
   
- 下面的示例代码创建挖掘结构来预测一段时序中的销售情况。 运行示例代码之前，确保数据库*db*作为参数传递`CreateSalesForecastingMiningStructure`，包含在`db.DataSourceViews[0]`对视图的引用*dbo.vTimeSeries*中[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例数据库。  
+ 下面的示例代码创建挖掘结构来预测一段时序中的销售情况。 运行示例代码之前，请确保数据库*db*，作为参数传递`CreateSalesForecastingMiningStructure`，在包含`db.DataSourceViews[0]`对视图的引用*dbo.vTimeSeries*中[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例数据库。  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  
@@ -143,8 +143,8 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [AMO 基础类](amo-fundamental-classes.md)   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO Fundamental 类](amo-fundamental-classes.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [AMO 数据挖掘类](amo-data-mining-classes.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  

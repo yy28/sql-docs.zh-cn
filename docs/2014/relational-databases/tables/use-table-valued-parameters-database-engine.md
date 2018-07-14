@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DECLARE
 - CREATE TYPE
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bbc9653a596eb6c046700fbf3e0a643b1b311656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ce96eb2e0cad45e15e03f48bbb27afb5cb61938b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223195"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
   表值参数是使用用户定义的表类型来声明的。 使用表值参数，可以不必创建临时表或许多参数，即可向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或例程（如存储过程或函数）发送多行数据。  
   
- 表值参数与 OLE DB 和 ODBC 中的参数数组类似，但具有更高的灵活性，且与 [!INCLUDE[tsql](../../includes/tsql-md.md)]的集成更紧密。 表值参数的另一个优势是能够参与基于数据集的操作。  
+ 表值参数与 OLE DB 和 ODBC 中的参数数组类似，但具有更高的灵活性，且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 表值参数的另一个优势是能够参与基于数据集的操作。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 通过引用向例程传递表值参数，以避免创建输入数据的副本。 可以使用表值参数创建和执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程，并且可以使用任何托管语言从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码、托管客户端以及本机客户端调用它们。  
   

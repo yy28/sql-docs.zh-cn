@@ -1,5 +1,5 @@
 ---
-title: DataSourceID 元素 (XMLA) |Microsoft 文档
+title: DataSourceID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231817"
 ---
 # <a name="datasourceid-element-xmla"></a>DataSourceID 元素 (XMLA)
-  标识使用的数据源[位置](location-element-xmla.md)期间元素[备份](../xml-elements-commands/backup-element-xmla.md)，[还原](../xml-elements-commands/restore-element-xmla.md)，或[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
+  标识使用的数据源[位置](location-element-xmla.md)期间[备份](../xml-elements-commands/backup-element-xmla.md)，[还原](../xml-elements-commands/restore-element-xmla.md)，或者[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36123700"
 ## <a name="remarks"></a>Remarks  
  `DataSourceID` 元素包含标识远程实例的源实例上的数据源名称，将在该远程实例上备份、还原或同步远程分区信息。  
   
- 有关备份和还原远程分区的详细信息，请参阅[Backing Up、 正在还原，和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 有关备份和还原远程分区的详细信息，请参阅[备份、 还原和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [ConnectionString 元素&#40;XMLA&#41;](connectionstring-element-xmla.md)   

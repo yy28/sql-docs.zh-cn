@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1eb4bd97f6e008dbc84e7d7882b80cfff5c88f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8eee4ca485f4bb48a4f2cb42ec728f20a7848509
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192527"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled 服务器配置选项
   可以使用 clr enabled 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否可以运行用户程序集。 clr enabled 选项提供下列值。  
@@ -38,7 +38,7 @@ ms.locfileid: "36126149"
 >  运行 RECONFIGURE 时，clr enabled 选项的运行值将从 1 更改为 0，所有包含用户程序集的应用程序域将立即被卸载。  
   
 > [!NOTE]  
->  轻型池不支持执行公共语言运行时 (CLR)。 禁用以下两个选项中的一个：“clr enabled”或“lightweight pooling”。 依赖于 CLR 并且的工作不正常在纤程模式的功能包括`hierarchy`数据类型、 复制和基于策略的管理。  
+>  轻型池不支持执行公共语言运行时 (CLR)。 禁用以下两个选项中的一个：“clr enabled”或“lightweight pooling”。 依赖于 CLR 并且的工作不正常纤程模式中的功能包括`hierarchy`数据类型、 复制和基于策略的管理。  
   
 ## <a name="example"></a>示例  
  下面的示例首先显示 clr enabled 选项的当前设置，然后通过将选项值设置为 1 启用该选项。 若要禁用该选项，请将此值设置为 0。  

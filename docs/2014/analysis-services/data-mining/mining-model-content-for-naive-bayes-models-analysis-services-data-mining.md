@@ -1,5 +1,5 @@
 ---
-title: Naive Bayes 模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: Naive Bayes 模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216117"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "36124021"
 > [!NOTE]  
 >  由于 Naive Bayes 模型不允许使用连续数据类型，因此，输入列的所有值均被视为离散或离散化值。 您可以指定值的离散化方式。 有关详细信息，请参阅 [更改挖掘模型中列的离散化](change-the-discretization-of-a-column-in-a-mining-model.md)。  
   
- ![结构的 naïve bayes 模型内容](../media/modelcontentstructure-nb.gif "的 naïve bayes 模型内容的结构")  
+ ![结构的模型内容朴素贝叶斯](../media/modelcontentstructure-nb.gif "的朴素贝叶斯的模型内容结构")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Native Bayes 模型的模型内容  
  本节提供的详细信息和示例仅针对挖掘模型内容中与 Naive Bayes 模型有特殊关系的列。  
@@ -289,7 +289,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  在 Naive Bayes 模型中，没有连续属性；因此，所有数值数据均表示为离散 (VALUE_TYPE = 4) 或离散化 (VALUE_TYPE = 5) 的值。  
   
- A`Missing`值 (VALUE_TYPE = 1) 添加到每个输入和输出的属性，表示未定型数据中存在的潜在值。 你必须注意区分字符串和默认值为"缺少"`Missing`值。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
+ 一个`Missing`值 (VALUE_TYPE = 1) 添加到每个输入和输出属性，以表示定型数据中未提供的潜在值。 您必须注意区分字符串和默认"missing"`Missing`值。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   

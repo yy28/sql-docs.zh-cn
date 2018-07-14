@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0d5e7c55b8040496e0714acd98bb81d37c602bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255789"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>“数据集属性”对话框 -&gt;“选项”（报表生成器）
   在“数据集属性”对话框中选择“选项”可更改查询的数据选项，如排序规则选项和将小计视为详细数据进行处理。 有关排序规则的详细信息，请参阅 [SQL Server 联机丛书](../../relational-databases/collations/collation-and-unicode-support.md) 中的 [排序规则和 Unicode 支持](http://go.microsoft.com/fwlink/?linkid=98335)。  
@@ -49,7 +49,7 @@ ms.locfileid: "36123565"
  选择一个用于决定是否区分全半角的值。 此选项指示数据是否区分全半角；可设置为 True、False 或“自动”。默认值为“自动”，指示报表服务器应在报表运行时尝试从数据提供程序派生该值。 如果数据访问接口不支持区分全半角的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
   
  **将小计解释为详细信息行**  
- 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值，**自动**，指示小计行应视为与详细信息行中，是否报表不使用`Aggregate`（） 函数，就可以访问在数据集中的任何字段。 如果希望将小计行解释为聚合行，请选择 **False**。 如果你想要被解释为详细信息行的小计行并且你知道它们不使用`Aggregate`（) 函数中，选择**True**。  
+ 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值**自动**，指示是否报表不使用，应将小计行视为为详细信息行`Aggregate`（） 函数来访问数据集中的任何字段。 如果希望将小计行解释为聚合行，请选择 **False**。 如果希望将小计行解释为详细信息行，并且知道它们不使用`Aggregate`（) 函数中，选择**True**。  
   
 ## <a name="see-also"></a>请参阅  
  [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

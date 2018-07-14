@@ -1,5 +1,5 @@
 ---
-title: '更改为类型 xs: datetime、 xs: date 和 xs: time 的存储格式 |Microsoft 文档'
+title: '将更改为类型 xs: datetime、 xs: date 和 xs: time 的存储格式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222517"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime、xs:date 和 xs:time 类型的存储格式发生更改
   XMLDATETIME 规则可确定您的数据库是否包含在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后将变为无效的类型化 XML 数据。  
@@ -33,7 +33,7 @@ ms.locfileid: "36028066"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- 中的存储格式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]类型 xs: datetime、 xs: date 和 xs: time 已更改为支持带有或不带时区信息的值并允许保留的时区。  
+ 中的存储格式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]类型 xs: datetime、 xs: date 和 xs: time 已更改以支持值，带有或不含时区信息并允许保留时区。  
   
  如果一个 XML 架构集合引用了上述某一类型，则在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，将会禁用与此集合关联的所有列的 XML 索引。 您将可以使用 SELECT 和/或 XQUERIES 查询它们，但无法使用相应的 XML 索引。 如果遇到负年份值，将会造成运行时错误。  
   

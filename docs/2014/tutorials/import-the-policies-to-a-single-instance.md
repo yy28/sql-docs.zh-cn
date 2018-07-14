@@ -1,5 +1,5 @@
 ---
-title: 将策略导入到单个实例 |Microsoft 文档
+title: 这些策略导入到单个实例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 945cd03bb574bc180af5567888a6d171966bccf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 4c45508880948c3ce1cb4814eca918278a66aacb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177144"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>将策略导入到单个实例
   在此任务中，您将要计划的最佳实践策略导入到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的单个实例上的基于策略的管理中。  
@@ -35,20 +35,20 @@ ms.locfileid: "36125485"
   
 3.  右键单击**策略**，然后单击**导入策略**。  
   
-4.  在**导入**对话框旁边**要导入文件**框中，单击省略号 (**...**) 按钮。  
+4.  在中**导入**对话框旁边**要导入文件**框中，单击省略号 (**...**) 按钮。  
   
-5.  在**查找**列表中，浏览到以下文件夹，其中包含最佳实践策略：  
+5.  在中**查找**列表中，浏览到包含最佳实践策略的以下文件夹：  
   
      **C:\Program 文件 (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
     > [!NOTE]  
     >  文件路径可能各不相同，具体取决于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序文件的安装位置、运行的操作系统是 32 位还是 64 位以及语言标识符。  
   
-6.  在**选择策略**对话框中，选择一个或多个策略文件。  
+6.  在中**选择策略**对话框中，选择一个或多个策略文件。  
   
      若要选择多个不相邻的文件，请单击一个文件，按住 Ctrl 键，然后单击各个其他文件。 若要选择多个相邻的文件，请单击序列中的第一个文件，按住 Shift 键，然后单击最后一个文件。  
   
-7.  在完成选择文件，请单击**打开**。  
+7.  完成选择文件后，单击**打开**。  
   
 8.  在**导入**对话框框中，请确保**策略状态**列表设置为**保留导入时的策略状态**（默认值），然后单击**确定**.  
   

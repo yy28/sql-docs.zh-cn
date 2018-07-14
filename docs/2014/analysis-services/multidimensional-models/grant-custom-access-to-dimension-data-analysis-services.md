@@ -1,5 +1,5 @@
 ---
-title: 授予对维度数据 (Analysis Services) 的自定义访问权限 |Microsoft 文档
+title: 授予对维度数据 (Analysis Services) 的自定义访问权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 509cc6dc34ce5c62bcf56f38fe3f229d2a081731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215967"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
   启用对多维数据集的读取访问权限后，可以设置明确允许或拒绝访问维度成员的其他权限（包括包含在度量值维度中的度量值，此维度包含在多维数据集中使用的全部度量值）。 例如，假设有多个经销商类别，您可能想要设置权限以排除某个具体业务类型的数据。 下图是拒绝访问“经销商”维度中“仓库”业务类型的前后对比效果。  
   
- ![数据透视表使用和不使用的维度成员](../media/ssas-permsdimdenied.png "数据透视表使用和不使用的维度成员")  
+ ![数据透视表不包含维度成员与](../media/ssas-permsdimdenied.png "数据透视表使用和不使用的维度成员")  
   
  默认情况下，如果可以读取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中的数据，则自动拥有对该多维数据集关联的所有度量值和维度成员的读取权限。 虽然这种行为可能足够应对许多方案，但有时安全要求需要一个更细化的授权策略，不同用户在同一维度的访问权限级别不同。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36124666"
   
  **检查对维度安全性的阻碍：默认度量值、默认成员和度量值表达式中使用的度量值**  
   
-1.  在 SQL Server Management Studio，右键单击多维数据集，然后选择**脚本多维数据集作为** | **ALTER To** | **新查询编辑器窗口**。  
+1.  在 SQL Server Management Studio 中，右键单击多维数据集，然后选择**作为多维数据集脚本** | **ALTER To** | **新查询编辑器窗口**。  
   
 2.  搜索 `DefaultMeasure`。 应发现一个针对多维数据集的度量值和一个针对每个透视的度量值。 定义维度安全性时，避免限制访问默认度量值。  
   
@@ -72,15 +72,15 @@ ms.locfileid: "36124666"
   
      或者，你可以“取消选择所有成员”  以撤消所有访问权限，然后选择要允许的成员。 在未来处理操作中，新成员将不可见，直到手动编辑维度数据安全性以允许对其进行访问。  
   
-5.  （可选） 单击**高级**启用`Visual Totals`该属性层次结构。 此选项根据通过该角色可用的成员重新计算聚合。  
+5.  （可选） 单击**高级**若要启用`Visual Totals`该属性层次结构。 此选项根据通过该角色可用的成员重新计算聚合。  
   
     > [!NOTE]  
-    >  应用剪裁维度成员的权限时，不会自动重新计算聚合合计。 假设`All`属性层次结构成员在应用权限之前返回 200 的计数。 在应用对某些成员，拒绝访问的权限后`All`仍返回 200，即使对用户可见的成员值要少很多。 为了避免混淆以下多维数据集的使用者，你可以配置`All`成员是哪些角色的成员，仅对这些成员的聚合，而不是所有的属性层次结构成员的聚合。 若要调用此操作，可以启用`Visual Totals`上**高级**选项卡上配置维度安全性时。 启用后，将在查询时间计算聚合，而不是从预先计算的聚合中检索。 这对查询性能有显著影响，因此仅在必要时使用。  
+    >  应用剪裁维度成员的权限时，不会自动重新计算聚合合计。 假设`All`在应用权限之前，属性层次结构成员返回 200 的计数。 应用拒绝访问某些成员的权限之后`All`仍然会返回 200，即使对用户可见的成员值是要少得多。 为了避免混淆多维数据集的使用者，您可以配置`All`成员为角色成员，仅对这些成员的聚合，而不是所有的属性层次结构成员的聚合。 若要调用此操作，可以启用`Visual Totals`上**高级**选项卡上配置维度安全性时。 启用后，将在查询时间计算聚合，而不是从预先计算的聚合中检索。 这对查询性能有显著影响，因此仅在必要时使用。  
   
 ## <a name="hiding-measures"></a>隐藏度量值  
  在 [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)中，已介绍了完全隐藏度量值的所有可视方面（不只其单元数据）要求具有对维度成员的权限。 本节将介绍如何拒绝访问度量值的对象元数据。  
   
-1.  上**维度数据** | **基本**，向下的滚动直到多维数据集维度，然后选择维度列表**度量值维度**。  
+1.  上**维度数据** | **基本**，向下的滚动维度列表直到到达多维数据集维度，然后选择**度量值维度**。  
   
 2.  从度量值列表中，清除不应对通过该角色连接的用户显示的度量值复选框。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36124666"
  创建 AllowedSet 会在该属性加入多层层次结构时产生波纹效果。 例如，假设角色允许访问“华盛顿州”（假设这样一个场景：角色为公司华盛顿州销售部门授予权限）。 对于通过该角色连接的用户，包括上级（美国）或下级（西雅图和雷德蒙德）的查询将只能查看包括华盛顿州在内的链中的成员。 由于其他州未获得显式允许，因此效果将如同其被拒绝访问一样。  
   
 > [!NOTE]  
->  如果定义一个空集 ({}) 的属性成员属性的任何成员都将可见到数据库角色。 缺少允许集不会被解释为空集。  
+>  如果定义了一个空集 ({}) 的属性成员的属性的任何成员都将对数据库角色可见。 缺少允许集不会被解释为空集。  
   
  **拒绝的成员集**  
  DeniedSet 属性可以解析为“无成员”、“全部成员”（默认）或“部分属性成员”。 当拒绝集只包含一组特定属性成员时，将仅对那些特定成员和下级（如果该属性位于多层层次结构中）拒绝访问数据库角色。 以华盛顿州销售部门为例。 如果“华盛顿”位于 DeniedSet，则通过该角色连接的用户可以看到除华盛顿及其下级属性以外的所有其他州。  
@@ -124,15 +124,15 @@ ms.locfileid: "36124666"
   
  但是，如果用户可以使用聚合集单元值来推导用户的数据库角色无权访问的特性成员的值，则禁用 VisualTotals 属性可能产生安全性问题。 例如， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用三个特性成员的值来计算一个聚合单元值。 数据库角色有权限查看这三个特性成员中的两个。 如果使用聚合单元值，此数据库角色的成员将能推导第三个特性成员的值。  
   
- VisualTotals 属性设置为`True`可以消除此风险。 如果启用了 VisualTotals 属性，则数据库角色只能查看该角色有权访问的维度成员的聚合合计值。  
+ 将 VisualTotals 属性设置为`True`可以消除此风险。 如果启用了 VisualTotals 属性，则数据库角色只能查看该角色有权访问的维度成员的聚合合计值。  
   
  **检查**  
  单击以测试此页面上定义的 MDX 语法。  
   
 ## <a name="see-also"></a>请参阅  
  [授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授予对单元数据的自定义访问权限&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [授予对数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予对数据源对象的权限&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予对单元数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [授予数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予数据源对象上的权限&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

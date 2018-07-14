@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 处理的时序结构和模型 |Microsoft 文档
+title: 第 3 课： 处理时序结构和模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 652d88a0c977b45f6c1628020ae4e6fd8fae4ad9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f69c21f87a56a65fabd781c18612e6b475ca85c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271983"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>第 3 课：准备时序结构和模型
-  在本课程中，你将使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句来处理挖掘结构和挖掘模型创建时间序列。  
+  在本课程中，您将使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句处理挖掘结构和挖掘模型创建的时序。  
   
  处理挖掘结构时，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将读取源数据并生成支持挖掘模型的结构。 您必须始终在首次创建挖掘模型和结构时对它进行处理。 如果使用 INSERT INTO 指定挖掘结构，该语句将处理挖掘结构及其关联的所有挖掘模型。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36312645"
  有关处理挖掘模型的详细信息，请参阅[处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   
 ## <a name="insert-into-statement"></a>INSERT INTO 语句  
- 若要训练时序挖掘结构及其所有关联的挖掘模型，使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句。 可以将该语句中的代码分为下列几部分。  
+ 为了定型时序挖掘结构及其所有关联的挖掘模型，请使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句。 可以将该语句中的代码分为下列几部分。  
   
 -   标识挖掘结构  
   
@@ -69,7 +69,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY (<source data definition>)  
 ```  
   
- 在本课中，您将使用 `OPENQUERY` 来定义源数据。 对源数据定义查询的其他方法的详细信息，请参阅[&#60;源数据查询&#62;](/sql/dmx/source-data-query)。  
+ 在本课中，您将使用 `OPENQUERY` 来定义源数据。 有关针对源数据定义查询的其他方法的详细信息，请参阅[&#60;源数据查询&#62;](/sql/dmx/source-data-query)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
  在本课程中，将执行以下任务：  
@@ -82,7 +82,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>使用 INSERT INTO 处理挖掘结构和相关的挖掘模型  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**。  
+1.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -126,7 +126,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     源查询引用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]IntermediateTutorial 示例项目中定义的数据源。 它使用此数据源来访问视图 vTimeSeries。 此视图包含将用于定型挖掘模型的源数据。 如果你不熟悉此项目或此视图，请参阅[第 2 课： 生成预测方案&#40;中间 Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+     源查询引用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]中级教程示例项目中定义的数据源。 它使用此数据源来访问视图 vTimeSeries。 此视图包含将用于定型挖掘模型的源数据。 如果您不熟悉此项目或此视图，请参阅[第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
      现在，完整的语句应该如下所示：  
   
@@ -141,11 +141,11 @@ OPENQUERY (<source data definition>)
     )   
     ```  
   
-6.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+6.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-7.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`ProcessForecastingAll.dmx`。  
+7.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`ProcessForecastingAll.dmx`。  
   
-8.  在工具栏上，单击**执行**按钮。  
+8.  在工具栏上，单击**Execute**按钮。  
   
  在该查询完成运行之后，可以使用处理过的挖掘模型创建预测。 在下一课中，您将基于创建的挖掘模型创建多个预测。  
   

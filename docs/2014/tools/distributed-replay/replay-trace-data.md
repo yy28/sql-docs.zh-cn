@@ -1,5 +1,5 @@
 ---
-title: 重播跟踪数据 |Microsoft 文档
+title: 重播跟踪数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a53224c1618434ff9a7db2dda4ffc8a71f2ad1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8be27c06c27688ad38339ea911bbe0f165658e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220507"
 ---
 # <a name="replay-trace-data"></a>重播跟踪数据
   准备好输入跟踪数据之后，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能启动分布式重播。 有关详细信息，请参阅 [准备输入跟踪数据](prepare-the-input-trace-data.md)。  
   
  使用管理工具 **replay** 选项启动分布式重播的事件重播阶段。 此阶段包含两个部分：跟踪数据调度和分布式重播的启动与同步。  
   
- ![分布式重播对事件](../../database-engine/media/eventreplay.gif "分布式重播事件")  
+ ![分布式事件重播](../../database-engine/media/eventreplay.gif "分布式事件重播")  
   
  您可以以两种顺序模式之一重播跟踪数据：压力模式或同步模式。 默认行为是在压力模式下重播跟踪数据。 有关事件重播阶段和顺序模式的详细信息，请参阅 [SQL Server Distributed Replay](sql-server-distributed-replay.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36124244"
   
 2.  **启动事件重播阶段**：若要启动分布式重播，必须使用 **replay** 选项运行管理工具。 有关详细信息，请参阅[重播选项（分布式重播管理工具）](replay-option-distributed-replay-administration-tool.md)。  
   
-    1.  打开 Windows 命令提示符实用工具 (`CMD.exe`)，并导航到 Distributed Replay 管理工具的安装位置 (`DReplay.exe`)。  
+    1.  打开 Windows 命令提示实用工具 (`CMD.exe`)，并导航到分布式重播管理工具的安装位置 (`DReplay.exe`)。  
   
     2.  （可选）如果控制器服务不是在运行管理工具的计算机上运行，则使用 *controller* 参数 **-m**指定控制器。  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 AMO 的管理任务进行编程 |Microsoft 文档
+title: 编程使用 AMO 管理任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95267e9d51a0c7908c49bb91d0f02cf5a882fa28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1563187c936c76c41759d94a6af2949094e83cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197837"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>使用 AMO 对管理任务进行编程
   分析管理对象 (AMO) 是在客户端应用程序中用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的编程库。 在本节中，您将了解如何使用 AMO 对象进行编程。  
@@ -42,7 +42,7 @@ ms.locfileid: "36125465"
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

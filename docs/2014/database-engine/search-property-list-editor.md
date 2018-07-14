@@ -1,33 +1,32 @@
 ---
-title: 搜索属性列表编辑器 |Microsoft 文档
+title: 搜索属性列表编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231527"
 ---
 # <a name="search-property-list-editor"></a>搜索属性列表编辑器
   使用此对话框可以在搜索属性列表中添加或删除搜索属性。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>使用 SQL Server Management Studio 管理搜索属性列表  
- 有关如何创建、 查看或删除搜索属性列表，以及有关如何配置用于属性搜索的全文索引的信息，请参阅[使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 有关如何创建、 查看或删除搜索属性列表，以及有关如何配置为属性搜索的全文索引的信息，请参阅[使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
 ## <a name="options"></a>“常规”  
  **属性名称**  
@@ -52,7 +51,7 @@ ms.locfileid: "36123890"
   
  属性说明是可选的。  
   
- **若要配置的全文索引的搜索属性列表**  
+ **若要配置全文索引的搜索属性列表**  
   
 -   [使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   

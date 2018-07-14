@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.facet.dependentpolicies.f1
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bc8a4ffcab43b9d06b1141580165c967c9c3daf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a95c6b4cafe8d5a0bde34d67b9d7a2b579cee5de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175408"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>“方面属性”对话框，“依赖策略”页
   此对话框用于显示当前引用此基于策略的管理方面的策略的列表。  

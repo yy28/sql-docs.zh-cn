@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163028"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
@@ -42,7 +41,7 @@ ms.locfileid: "36124803"
   
 -   [备份压缩](#BackupCompression)  
   
--   [SQL Server 中的备份操作的限制](#Restrictions)  
+-   [对 SQL Server 中的备份操作的限制](#Restrictions)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36124803"
 ##  <a name="BackupCompression"></a> 备份压缩  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持压缩备份，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本可以还原压缩后的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](backup-compression-sql-server.md)。  
   
-##  <a name="Restrictions"></a> SQL Server 中的备份操作的限制  
+##  <a name="Restrictions"></a> 对 SQL Server 中的备份操作的限制  
  可以在数据库在线并且正在使用时进行备份。 但是，存在下列限制。  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>无法备份脱机数据  

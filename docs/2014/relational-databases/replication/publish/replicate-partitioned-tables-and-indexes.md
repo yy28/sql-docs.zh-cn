@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
 - partitioned tables [SQL Server], replicating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d38ef8cb96408db96a04184a30d7a803b00a0239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9764adf620688c4fa5335a65d9cba5d70480ed8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253879"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
   由于使用分区可以快速而有效地管理和访问数据子集，并同时保持数据集合的完整性，因而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)。 复制支持分区，提供了一组属性来指定如何处理已分区表和索引。  
@@ -41,7 +41,7 @@ ms.locfileid: "36028995"
   
  与分区相关的第一组属性是项目架构选项，用于决定是否应将分区对象复制到订阅服务器。 可以按下列方式设置这些架构选项：  
   
--   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上表中列出的对象，指定的值`true`属性**复制表分区方案**和**复制索引分区方案**。 有关如何访问“项目属性”页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+-   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，指定的值`true`的属性**复制表分区方案**并**复制索引分区方案**。 有关如何访问“项目属性”页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36028995"
 ### <a name="enabling-partition-switching"></a>启用分区切换  
  使用事务发布的下列属性，用户可以控制已复制环境中分区切换的行为。  
   
--   **@allow_partition_switch**当设置为`true`，可以对发布数据库执行 SWITCH PARTITION。  
+-   **@allow_partition_switch**如果设置为`true`，可以对发布数据库执行 SWITCH PARTITION。  
   
 -   **@replicate_partition_switch** 确定 SWITCH PARTITION DDL 语句是否应复制到订阅服务器。 此选项是仅当**@allow_partition_switch**设置为`true`。  
   

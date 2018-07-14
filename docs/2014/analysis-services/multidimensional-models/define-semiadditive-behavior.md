@@ -1,5 +1,5 @@
 ---
-title: 定义半累加性行为 |Microsoft 文档
+title: 定义半累加性行为 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265413"
 ---
 # <a name="define-semiadditive-behavior"></a>定义半累加性行为
   在很多业务方案中，半累加性度量值是非常常见的，它不在所有维度中统一进行聚合。 每个基于余额快照的多维数据集都会随着时间的推移而出现此问题。 您可以在用于处理证券、帐户余额、预算、人力资源、保险策略和法律事务以及很多其他业务领域的应用程序中找到这些快照。  
@@ -38,7 +38,7 @@ ms.locfileid: "36028669"
  在向导的 **“定义半累加性行为”** 页上，通过选择下列选项之一来选择如何定义半累加性：  
   
  **关闭半累加性行为**  
- 从先前定义了半累加性行为的多维数据集中删除半累加性行为。 此选择会重置到度量值`SUM`如果设置为任何以下聚合函数类型：  
+ 从先前定义了半累加性行为的多维数据集中删除半累加性行为。 选择此选项将重置度量值到`SUM`如果设置为任何以下聚合函数类型：  
   
 -   By Account  
   
@@ -54,16 +54,16 @@ ms.locfileid: "36028669"
   
 -   InclusionThresholdSetting  
   
- 此选项不会更改具有正则聚合函数的度量值： `Sum`， `Min`， `Max`， `Count`，或`Distinct``Count`。  
+ 此选项不会更改使用下列常规聚合函数的度量值： `Sum`， `Min`， `Max`， `Count`，或`Distinct``Count`。  
   
- **向导检测到包含半累加性成员的“账户”帐户维度。服务器将聚合根据为每个帐户类型指定的半累加性行为此维度的成员。**  
+ **向导检测到包含半累加性成员的“账户”帐户维度。服务器将聚合此维度根据为每个帐户类型指定的半累加性行为的成员。**  
  导致系统将按“帐户”类型维度进行维度化的度量值组中的所有度量值设置为“按帐户”聚合函数，并且服务器将根据为每个帐户类型指定的半累加性行为聚合此维度的成员。  
   
 > [!NOTE]  
 >  如果向导检测到“帐户”类型维度，则默认情况下选择此选项。  
   
  **定义各个度量值的半累加性行为**  
- 逐个选择每个度量值的半累加性行为。 默认设置是`SUM`（完全累加性）。  
+ 逐个选择每个度量值的半累加性行为。 默认设置是`SUM`（完全累加）。  
   
 > [!NOTE]  
 >  如果向导没有检测到“帐户”类型维度，则默认情况下选择此选项。  

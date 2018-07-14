@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181668"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署呈现扩展插件
   在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表呈现扩展插件并将其编译为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，需要使其变得可供报表服务器和报表设计器发现。 为此，请将此扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目。  
@@ -37,8 +37,8 @@ ms.locfileid: "36125071"
 |---------------|-----------------|  
 |**名称**|扩展插件的唯一名称。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extensions** 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |**类型**|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
-|**Visible**|值为 `false` 指示在用户界面中将不显示该呈现扩展插件。 如果不包括该属性，则默认值是`true`。|  
-|**LogAllExecutionRequests**|值 `false` 表示在一个会话中只对第一次报表执行记录一个条目。 如果不包括该属性，则默认值是`true`。<br /><br /> 例如，此设置决定着是只对报表中呈现的第一页记录一个条目（设为 `false` 时），还是对报表中呈现的每一页都记录一个条目（设为 `true` 时）。|  
+|**Visible**|值为 `false` 指示在用户界面中将不显示该呈现扩展插件。 如果未包括该属性，则默认值是`true`。|  
+|**LogAllExecutionRequests**|值 `false` 表示在一个会话中只对第一次报表执行记录一个条目。 如果未包括该属性，则默认值是`true`。<br /><br /> 例如，此设置决定着是只对报表中呈现的第一页记录一个条目（设为 `false` 时），还是对报表中呈现的每一页都记录一个条目（设为 `true` 时）。|  
   
  有关详细信息，请参阅 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36125071"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** 的值必须是呈现扩展插件的唯一名称。 Type 的值是一个以逗号分隔的列表，它包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 实现的完全限定命名空间的一个条目，后跟程序集的名称（不包含 .dll 文件扩展名）。 默认情况下，呈现扩展插件是可见的。 若要隐藏用户界面，如报表管理器中，从扩展插件将添加**可见**属性设为`Extension`元素，并将其设置为`false`。  
+     **Name** 的值必须是呈现扩展插件的唯一名称。 Type 的值是一个以逗号分隔的列表，它包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 实现的完全限定命名空间的一个条目，后跟程序集的名称（不包含 .dll 文件扩展名）。 默认情况下，呈现扩展插件是可见的。 若要隐藏扩展插件从用户界面，如报表管理器中，添加**Visible**归于`Extension`元素，并将其设置为`false`。  
   
 ## <a name="verifying-the-deployment"></a>验证部署  
  还可以打开报表管理器，并验证您的扩展插件是否包括在报表的可用导出类型列表中。  

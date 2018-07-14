@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70dcc1e8f35f288b4693bd87308d7f2abcff0136
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 94507eb6cae0db3206a02b43062871140d5f21c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223639"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>使属性组对用户可见 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要用户在 **“资源管理器”** 功能区域中将选项卡置于网格上方时，使属性组对于用户或组是可见的。  
@@ -39,21 +39,21 @@ ms.locfileid: "36123429"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  上**模型视图**页上，从菜单栏中，指向**管理**单击**属性组**。  
+2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**属性组**。  
   
 3.  从 **“模型”** 列表中，选择某一模型。  
   
 4.  从 **“实体”** 列表中，选择某一实体。  
   
-5.  单击加号以便展开**叶组**，**合并组**，或**集合组**，具体取决于你想要使可见的组的类型。  
+5.  单击加号以展开**叶组**，**合并组**，或**集合组**，具体取决于你想要使可见的组的类型。  
   
 6.  单击加号以便展开要使其可见的组。  
   
-7.  单击**用户**或**组**，取决于是否要进行组对用户或组可见。  
+7.  单击任一**用户**或**组**，取决于您要使组对用户或组可见。  
   
-8.  单击**编辑选定的项**。  
+8.  单击**编辑所的选项**。  
   
-9. 单击用户或中的组**可用**框中，单击**添加**箭头。 若要全部添加，请单击 **“全部添加”** 箭头。  
+9. 单击用户或中的组**可用**框，然后单击**添加**箭头。 若要全部添加，请单击 **“全部添加”** 箭头。  
   
 10. 单击 **“保存”**。  
   

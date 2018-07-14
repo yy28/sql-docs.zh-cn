@@ -1,5 +1,5 @@
 ---
-title: 配置设置参考 (PowerPivot for SharePoint) |Microsoft 文档
+title: 配置设置参考 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 340800620360ed34ab8bcc2aaee7d71118e451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173558"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>配置设置参考 (PowerPivot for SharePoint)
   本主题提供有关 SharePoint 场中的 PowerPivot 服务应用程序使用的配置设置的参考文档。 如果您使用 PowerShell 脚本来配置服务器，或如果您要查找特定设置的信息，则本主题中的信息可提供详细的说明。  
@@ -40,7 +40,7 @@ ms.locfileid: "36123724"
   
  [使用情况数据收集](#UsageData)  
   
- 有关如何创建 PowerPivot 服务应用程序的说明，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心](create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 有关如何创建 PowerPivot 服务应用程序的说明，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心内](create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ##  <a name="LoadingData"></a> 数据加载超时  
  PowerPivot 数据由场中的 Analysis Services 服务器实例检索并加载。 可以从内容库或从本地文件缓存加载数据，具体取决于上次访问数据的方式和时间。 只要收到查询或处理请求，就会将数据加载到内存中。 若要最大限度地提高服务器的总体可用性，您可以设置一个超时值以指示服务器在分配的时间内无法完成加载时停止数据加载请求。  
@@ -67,7 +67,7 @@ ms.locfileid: "36123724"
 |最大管理连接池大小|200|-1、0 或 1 到 10000。<br /><br /> -1 指定空闲连接数量不受限制。|为 PowerPivot 服务应用程序与 Analysis Services 服务器实例之间的连接创建的所有管理连接池中的最大空闲服务器连接数目。 服务器连接用于请求加载数据库以及将更改保存回 SharePoint 数据库。|  
   
 ##  <a name="AllocationScheme"></a> 负载平衡  
- PowerPivot 服务执行的功能之一是确定在可用的 PowerPivot 服务实例之间加载 Analysis Services 数据的位置。 `AllocationMethod`设置指定的服务实例选择依据的条件。  
+ PowerPivot 服务执行的功能之一是确定在可用的 PowerPivot 服务实例之间加载 Analysis Services 数据的位置。 `AllocationMethod`设置指定的服务实例选择所依据的条件。  
   
 |“属性”|，则“默认”|有效值|Description|  
 |----------|-------------|------------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "36123724"
 |----------|-------------|------------------|-----------------|  
 |开始时间|上午 04:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的下限。|  
 |结束时间|晚上 08:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的上限。|  
-|PowerPivot 无人参与的数据刷新帐户|InclusionThresholdSetting|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅[配置 PowerPivot 无人参与数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。|  
+|PowerPivot 无人参与的数据刷新帐户|InclusionThresholdSetting|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。|  
 |允许用户输入自定义 Windows 凭据|已启用|Boolean|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
 |最大处理历史记录长度|365|1 到 5000 天|确定数据刷新历史记录在 PowerPivot 服务应用程序数据库中保留多长的时间。 有关详细信息，请参阅[PowerPivot 使用情况数据收集](power-pivot-usage-data-collection.md)。|  
   
@@ -97,9 +97,9 @@ ms.locfileid: "36123724"
 |长时间响应上限|10000（以毫秒为单位）|1 到 n 毫秒，其中 n 是任何有效的整数。|默认情况下，长请求的阈值为十秒。<br /><br /> 这些请求的运行时间比预期时间要长，但仍在可接受的范围内。|  
   
 ## <a name="see-also"></a>请参阅  
- [创建和配置在管理中心的 PowerPivot 服务应用程序](create-and-configure-power-pivot-service-application-in-ca.md)   
+ [创建并在管理中心配置 PowerPivot 服务应用程序](create-and-configure-power-pivot-service-application-in-ca.md)   
  [使用 SharePoint 2010 的 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)   
- [配置为使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
+ [配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [配置 PowerPivot 服务帐户](configure-power-pivot-service-accounts.md)   
  [PowerPivot 管理仪表板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)  
   

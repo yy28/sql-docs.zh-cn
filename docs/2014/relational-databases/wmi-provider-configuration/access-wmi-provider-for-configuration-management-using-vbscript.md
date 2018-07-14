@@ -1,5 +1,5 @@
 ---
-title: 修改 SQL Server 服务高级属性使用 VBScript |Microsoft 文档
+title: 修改 SQL Server 服务高级属性使用 VBScript |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 003755ca5366a8571cdcb63f0c59c51a8012bb11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b54407bb2481e6e7e697b94631d9920bba3a3290
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198767"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>使用 VBScript 修改 SQL Server 服务高级属性
-  本部分介绍如何创建列出的已安装实例的版本的 VBScript 程序[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上运行。  
+  本部分介绍如何创建 VBScript 程序，以列出已安装实例的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上运行。  
   
  代码示例列出了运行在计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例及其版本。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36125303"
   
 5.  保存该文件。  
   
-6.  通过键入运行该脚本`cscript test.vbs`在命令提示符。  
+6.  通过键入运行该脚本`cscript test.vbs`在命令提示符处。  
   
 ## <a name="example"></a>示例  
   

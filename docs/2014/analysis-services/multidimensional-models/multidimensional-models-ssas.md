@@ -1,5 +1,5 @@
 ---
-title: 多维建模 (SSAS) |Microsoft 文档
+title: 多维建模 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9300e8e8aefbe436ca3acba141f8800779e6e637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171668"
 ---
 # <a name="multidimensional-modeling-ssas"></a>多维建模 (SSAS)
   Analysis Services 多维解决方案使用多维数据集结构来分析多个维度之间的业务数据。 多维模式是 Analysis Services 的默认服务器模式。 它包括针对 OLAP 数据的查询和计算引擎，并且具有 MOLAP、ROLAP 和 HOLAP 存储模式以便在性能和数据可伸缩性要求之间进行权衡。 Analysis Services OLAP 引擎是行业领先的 OLAP 服务器，能够与多种 BI 工具很好地配合使用。 大多数 Analysis Services 部署都作为典型的 OLAP 服务器进行安装。  

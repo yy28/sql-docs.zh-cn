@@ -1,5 +1,5 @@
 ---
-title: 版本元素 (ASSL) |Microsoft 文档
+title: Edition 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Edition element
 ms.assetid: 521e1286-097e-494f-b036-61047096e87e
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9d801f2055513323f473a73662337349207ea6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a94ed085a345100579b3305fa43e7e360fe8258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245654"
 ---
 # <a name="edition-element-assl"></a>Edition 元素 (ASSL)
-  包含的实例的只读版本[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由[服务器](../objects/server-element-assl.md)元素。  
+  包含的实例的只读版本[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由此[Server](../objects/server-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,24 +67,24 @@ ms.locfileid: "36028899"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |*Standard*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于 32 位处理器的 standard edition。|  
-|*企业*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 32 位处理器的 Enterprise edition。|  
+|*企业版*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 32 位处理器的 Enterprise edition。|  
 |*EnterpriseCore*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise edition： 基于内核授予许可。 32 位处理器。|  
 |*BusinessIntelligence*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 32 位处理器的商业智能版。|  
 |*开发人员*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 32 位处理器的开发人员版|  
 |*评估*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位处理器的评估版。|  
-|*本地*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 32 位处理器的本地版本。|  
+|*本地*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于 32 位处理器的本地版本。|  
 |*Standard64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于 64 位处理器的 standard edition。|  
 |*Enterprise64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位处理器的 Enterprise edition。|  
 |*EnterpriseCore64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise edition： 基于内核授予许可。 64 位处理器。|  
 |*BusinessIntelligence64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位处理器的商业智能版。|  
-|*Developer64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位处理器的开发人员版|  
+|*Developer64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于 64 位处理器的开发人员版|  
 |*Evaluation64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位处理器的评估版。|  
-|*Local64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 适用于 64 位处理器的本地版本。|  
+|*Local64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于 64 位处理器的本地版本。|  
   
- 对应的允许值为枚举`ServerEdition`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ServerEdition>。  
+ 对应的允许值的枚举`ServerEdition`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ServerEdition>。  
   
 ## <a name="see-also"></a>请参阅  
- [版本元素&#40;ASSL&#41;](version-element-assl.md)   
+ [Version 元素&#40;ASSL&#41;](version-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

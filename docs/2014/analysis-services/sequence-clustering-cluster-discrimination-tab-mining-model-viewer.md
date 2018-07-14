@@ -1,5 +1,5 @@
 ---
-title: 序列聚类分析群集对比选项卡 （挖掘模型查看器） |Microsoft 文档
+title: 序列聚类分析群集对比选项卡 （挖掘模型查看器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.discrimination.f1
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34ae165b87eed53b68ae4e1bd5264f1b500d0f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4debc43286ffb3fe4f87115ed15e9b4c3f74b06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187144"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类对比”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类对比”** 选项卡将比较顺序分析和聚类分析模型中的所选分类。  
@@ -48,7 +48,7 @@ ms.locfileid: "36124195"
   
  如果您不选择其他分类，则默认情况下，所选分类将会与其补数进行比较，这表示模型中不属于分类 1 的所有事例。  
   
- **对比得分\<群集 1 > 和\<分类 2 >**  
+ **对比分数\<聚类 1 > 和\<分类 2 >**  
  此图表提供所选分类的详细比较。 一般情况下，聚类分析模型很少以独占方式为单个分类分配状态或值。 因此，查看器仅指示特定属性或状态 *倾向于* 某个特定分类。  
   
  总体上而言，某个特定分类可能包含多个状态：例如，常见状态可能为依次购买 Water Bottle 和 Water Bottle Cage。 但是，相应的顺序可能存在于包含更重要的定义特征的其他分类中。 例如，另一个分类最主要的特点可能是事务时间非常短，并且分析表明，Water Bottle 和 Water Bottle Cage 项可能通常分组到此分类中，但并不总是这样。  
@@ -57,7 +57,7 @@ ms.locfileid: "36124195"
 |-----------|-----------------|  
 |**变量**|挖掘模型中的属性。|  
 |**值**|**“变量”** 中列出的属性的状态。|  
-|**优先\<群集 1 >**|包含一个阴影条，指示 **“变量”** 和 **“值”** 中列出的属性和状态倾向于 **“分类 1”** 中的所选分类的程度。|  
+|**倾向于\<聚类 1 >**|包含一个阴影条，指示 **“变量”** 和 **“值”** 中列出的属性和状态倾向于 **“分类 1”** 中的所选分类的程度。|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

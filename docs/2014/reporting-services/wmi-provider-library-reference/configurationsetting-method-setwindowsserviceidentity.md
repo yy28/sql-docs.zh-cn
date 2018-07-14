@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fc3dfeafab01480fde7eb195363f46946de30ddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bc53a516da25d81c1532ea1418b4f846f37597ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268453"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity 方法 (WMI MSReportServer_ConfigurationSetting)
   将报表服务器 Windows 服务作为指定的 Windows 用户运行，并授予此帐户足够的文件系统权限以允许操作报表服务器。  
@@ -61,9 +61,9 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>Remarks  
- 当*UseBuiltInAccount*参数设置为`true`和报表服务器运行在 Microsoft 上[!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]或 Windows XP 中，值*名称*，*域*，和*密码*参数将被忽略，并且使用本地系统帐户。  
+ 当*UseBuiltInAccount*参数设置为`true`并且报表服务器正在运行 microsoft[!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]或 Windows XP，则*名称*，*域*，并*密码*参数将被忽略，并使用本地系统帐户。  
   
- 当*UseBuiltInAccount*参数设置为`true`和报表服务器正在运行 Windows Server 2003 上*域*和*密码*属性忽略，并且名称字段必须包含"Builtin\NetworkService"或"Builtin\System"或"Builtin\LocalService"。  
+ 当*UseBuiltInAccount*参数设置为`true`并且报表服务器正在运行 Windows Server 2003 上*域*并*密码*属性被忽略，并且名称字段必须包含"Builtin\NetworkService"或"Builtin\System"或"Builtin\LocalService"。  
   
  SetWindowsServiceIdentity 方法可对报表服务器安装目录中的文件和文件夹设置文件权限。  
   

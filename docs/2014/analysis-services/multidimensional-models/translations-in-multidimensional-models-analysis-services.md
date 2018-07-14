@@ -1,5 +1,5 @@
 ---
-title: 多维模型中的翻译 |Microsoft 文档
+title: 多维模型中的翻译 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb58addda246c716224b578aad3713812708476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e018bf778a877ed62612e631951ca92258aaec0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275563"
 ---
 # <a name="translations-in-multidimensional-models"></a>多维模型中的翻译
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以通过翻译实现对多语言的支持。 翻译包含一个语言标识符，以及可以以多种语言显示的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象属性的绑定。 例如，您可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义一种翻译，从而以指定的语言显示数据库的标题和说明。 有关翻译的详细信息，请参阅[多维数据集翻译](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)。  
   
 ## <a name="defining-translations"></a>定义翻译  
- 可以通过使用要翻译的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 对象的相应设计器，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义翻译。 定义翻译创建`Translation`关联具有相应对象[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]具有指定的显式文字值，在指定的语言中，关联的属性对象[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
+ 可以通过使用要翻译的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 对象的相应设计器，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义翻译。 定义翻译将创建`Translation`对象与相应关联[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象中指定的语言，为关联的属性具有指定的显式文字值，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的以下对象和属性可以有与之关联的翻译：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36028678"
 |层次结构|`Caption`, `AllMemberName`|[翻译&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |级别|`Caption`|[翻译&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
- <sup>1</sup> `CaptionColumn`特性的属性可以绑定到数据源视图中的列，并且可以使用 Windows 排序规则指定的实例，与其他翻译不同。  
+ <sup>1</sup> `CaptionColumn`特性的属性可以绑定到数据源视图中的列，并可以使用 Windows 排序规则指定的实例，像其他翻译一样。  
   
 ### <a name="defining-attribute-translations"></a>定义属性翻译  
  与数据库维度中的属性关联的翻译在以下方面与其他翻译的处理方式不同：  

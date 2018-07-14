@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236177"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
   有两种列属性集：可在表设计器的“列属性”选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  
@@ -183,12 +183,12 @@ ms.locfileid: "36124053"
  显示是否在其他位置复制此列。  
   
  **是 RowGuid**  
- 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否将该列用作 ROWGUID。 你可以将此值设置为**是**仅对具有的数据类型的列`uniqueidentifier`。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
+ 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否将该列用作 ROWGUID。 可以将此值设置为**是**仅对具有的数据类型的列的`uniqueidentifier`。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
   
  **Size**  
  显示该列的数据类型所允许的大小（字节）。 例如，某个 `nchar` 数据类型的长度为 10（字符数），但在 Unicode 字符集中，该数据类型的大小为 20。  
   
 > [!NOTE]  
->  `varchar(max)`  数据类型的长度对于每一行都会有所不同。 sp_help 形式的长度返回 (-1)`varchar(max)`列。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示 -1 作为列大小。  
+>  `varchar(max)`  数据类型的长度对于每一行都会有所不同。 sp_help 返回 (-1) 的长度作为`varchar(max)`列。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示 -1 作为列大小。  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201847"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
   传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
@@ -50,7 +50,7 @@ ms.locfileid: "36123681"
  传输错误消息任务并不报告错误消息传输的进度，它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在该任务的 `ExecutionValue` 属性中定义的执行值返回已传输的错误消息数。 通过分配的用户定义变量`ExecValueVariable`传输错误消息任务，有关错误消息传输的信息的属性可提供对其他对象的包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 在该任务的 `ExecutionValue` 属性中定义的执行值返回已传输的错误消息数。 通过将用户定义的变量分配`ExecValueVariable`传输错误消息任务，有关错误消息传输的信息的属性可提供给其他对象在包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输错误消息任务包括下列自定义日志项：  
@@ -59,7 +59,7 @@ ms.locfileid: "36123681"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects   此日志项报告传输已经完成。 日志项包括结束时间。  
   
- 此外的日志项`OnInformation`事件报告已传输的错误消息和的日志项的数量`OnWarning event`写入会覆盖目标上的每个错误消息。  
+ 此外，一个日志条目`OnInformation`事件报告已传输的错误消息和日志项的数量`OnWarning event`为每个错误消息将被覆盖目标上编写的。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  若要新建错误消息，运行该包的用户必须是目标服务器上 sysadmin 的成员或 serveradmin 服务器角色。  

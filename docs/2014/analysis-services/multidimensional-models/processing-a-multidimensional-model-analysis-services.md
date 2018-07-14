@@ -1,5 +1,5 @@
 ---
-title: 多维模型对象处理 |Microsoft 文档
+title: 多维模型对象处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180974"
 ---
 # <a name="multidimensional-model-object-processing"></a>多维模型对象处理
   处理是 Analysis Services 将数据从关系数据源加载到多维模型的一个步骤或一系列步骤。 对于使用 MOLAP 存储的对象，数据将保存到磁盘的数据库文件所在文件夹中。 对于 ROLAP 存储，按需执行处理，以响应对象的 MDX 查询。 对于使用 ROLAP 存储的对象，处理是指在返回查询结果之前更新缓存。  

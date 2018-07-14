@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d63332e69e42b3f8631d37fe24626e108dde14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: aeb662c9457c2f07bda1541c5d21a59cd5cca8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258013"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting)
   配置报表服务器用来发送电子邮件的电子邮件传递扩展插件。  
@@ -63,7 +63,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>Remarks  
- 当*SendUsingSMTPServer*参数设置为`true`、 **SendUsing**报表服务器配置文件中的条目将设置为 1。 当*SendUsingSMTPServer*设置为`false`、 **SendUsing**不配置条目。  
+ 当*SendUsingSMTPServer*参数设置为`true`，则**SendUsing**报表服务器配置文件中的条目将设置为 1。 当*SendUsingSMTPServer*设置为`false`，则**SendUsing**未配置条目。  
   
  此方法并不适合用户将报表服务器配置文件中的 **SendUsing** 条目设置为 1 以外的其他值。 若要为报表服务器配置除 SMTP 邮件以外的其他设置，必须手动编辑配置文件。  
   

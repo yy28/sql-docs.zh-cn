@@ -1,5 +1,5 @@
 ---
-title: 选择维度属性 （维度向导） |Microsoft 文档
+title: 选择维度属性 （维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionattributes.f1
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6af0f81a3b356427d4279bfcdcb88f1c7b14ba57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08e54b933094b86c68af60277ff73b701bb5e4f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263443"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>选择维度属性（维度向导）
   可以使用 **“选择维度属性”** 页选择和修改要创建的维度的属性。  
@@ -52,15 +52,15 @@ ms.locfileid: "36026420"
  **启用浏览**  
  选中此项可使最终用户能够浏览并筛选属性。 对于键属性，必须选中 **“启用浏览”** 。 对于非键属性，默认未选中“启用浏览”，这将导致非键属性只显示为成员属性。  
   
- 在大多数情况下，该属性由可用或不可用于通过设置浏览`AttributeHierarchyEnabled`属性`True`或`False`分别。 但是，在下列三种情况中，向导使用不同的设置。  
+ 在大多数情况下，该属性由可用或不可用的浏览通过设置`AttributeHierarchyEnabled`属性设置为`True`或`False`分别。 但是，在下列三种情况中，向导使用不同的设置。  
   
 |情况|“设置”|  
 |----------|--------------|  
-|维度包含父子层次结构并且没有选中“启用浏览”|向导将保持`AttributeHierarchyEnabled`属性设置为`True`，并将设置`AttributeHierarchyVisible`属性设为`False`的键属性。|  
+|维度包含父子层次结构并且没有选中“启用浏览”|向导将保持`AttributeHierarchyEnabled`属性设置为`True`，并设置`AttributeHierarchyVisible`属性为`False`的键属性。|  
 |维度中的表包含指向维度中没有的表的外键|向导选择该外键作为要包含的属性，但不选中 **“启用浏览”**。 如果保留这些设置，则特性的 `AttributeHiearchyEnabled` 属性将设置为 `True`，而 `AttributeHieararchyVisible` 属性将设置为 `False`。|  
-|维度包含通过可为空值的外键列访问的雪花型表<br /><br /> —并且—<br /><br /> 对于基于雪花型表键的属性，不选中“启用浏览”|向导将创建新属性，其`AttributeHiearchyEnabled`属性设置为`True`，和`AttributeHieararchyVisible`属性设置为`False`。|  
+|维度包含通过可为空值的外键列访问的雪花型表<br /><br /> —并且—<br /><br /> 对于基于雪花型表键的属性，不选中“启用浏览”|该向导将创建新属性，其`AttributeHiearchyEnabled`属性设置为`True`，并`AttributeHieararchyVisible`属性设置为`False`。|  
   
- **特性类型**  
+ **属性类型**  
  （可选）设置属性的类型。 默认值为 **Regular**。 属性类型向客户端应用程序提供属性中可能包含的信息类型的指南。  
   
 ## <a name="see-also"></a>请参阅  

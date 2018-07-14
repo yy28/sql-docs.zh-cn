@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO 执行 SQLXML 4.0 查询 |Microsoft 文档
+title: 使用 ADO 执行 SQLXML 4.0 查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a53e88a28a7be770b1bc6541f9118ca64e3fc7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91ccb8afcc1de50498695da442ba1f20a0942d27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201187"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 执行 SQLXML 4.0 查询
   在 SQLXML 的早期版本中，使用 SQLXML IIS 虚拟目录和 SQLXML ISAPI 筛选器支持基于 HTTP 的查询执行。 在 SQLXML 4.0 中，由于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，本机 XML Web 服务提供了类似的重叠功能，因此已删除上述组件。  
@@ -117,14 +117,14 @@ ms.locfileid: "36124063"
   
 1.  验证是否安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，如下所示：  
   
-    1.  从**启动**菜单上，指向**设置**，然后单击**控制面板**。  
+    1.  从**启动**菜单，依次指向**设置**，然后单击**控制面板**。  
   
-    2.  在 Control Panel 中，打开**添加或删除程序**  
+    2.  在控制面板中，打开**添加或删除程序**  
   
     3.  在当前安装的程序列表中，确认**Microsoft SQL Server Native Client**出现在列表中。  
   
         > [!NOTE]  
-        >  如果你需要安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端，请参阅[安装 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果你需要安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client，请参阅[安装 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
   
 2.  验证客户端计算机上安装的 MDAC 版本是否为 2.6 版或更高版本。 如果需要验证 MDAC 版本信息，您可以使用 MDAC 组件检查器工具，可从 Microsoft 网站 (www.microsoft.com) 免费下载该工具。 有关详细信息，请在此 Microsoft 网站中搜索“MDAC Component 检查器”。  
   

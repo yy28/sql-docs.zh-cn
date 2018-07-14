@@ -1,5 +1,5 @@
 ---
-title: 升级到 SQL Server 2014 使用安装向导 （安装程序） |Microsoft 文档
+title: 升级到 SQL Server 2014 使用安装向导 （安装程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b56fc3323fcd29b19f43d63c054a9cd844944bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219787"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安装向导升级到 SQL Server 2014（安装程序）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树。 也可以将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与早期版本并行安装，或从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移已有的数据库和配置设置，然后将它们应用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例。  
@@ -40,7 +40,7 @@ ms.locfileid: "36028204"
 -   [使用复制数据库向导](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  早期版本的升级[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]正在运行的计算机上不支持[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]Server Core SP1。 在服务器核心安装的详细信息，请参阅[在 Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
+>  早期版本升级[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]正在运行的计算机上不支持[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]Server Core SP1。 在服务器核心安装的详细信息，请参阅[Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您必须以管理员身份运行安装程序。 如果从远程共享位置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用对该远程共享位置具有读取和执行权限的域帐户且是本地管理员。  
@@ -58,7 +58,7 @@ ms.locfileid: "36028204"
 -   [SQL Server 数据库引擎的后向兼容性](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 有关如何为升级实例添加功能的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级操作完成后，请参阅[向 SQL Server 2014 实例添加功能&#40;安装&#41;](add-features-to-an-instance-of-sql-server-setup.md)。  
+>  请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 有关如何将功能添加到已升级实例的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级操作完成后，请参阅[到 SQL Server 2014 实例添加功能&#40;安装&#41;](add-features-to-an-instance-of-sql-server-setup.md)。  
   
 ## <a name="procedure"></a>过程  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36028204"
   
 2.  安装向导启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要对现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例进行升级，请单击左侧导航区域中的“安装”，然后单击“从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升级”。  
   
-3.  在“产品密钥”页上单击相应的选项，以指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
+3.  在“产品密钥”页上单击相应的选项，以指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)并[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
   
 4.  在“许可条款”页上查看许可协议，如果同意，请选中 **“我接受许可条款”** 复选框，然后单击 **“下一步”**。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   

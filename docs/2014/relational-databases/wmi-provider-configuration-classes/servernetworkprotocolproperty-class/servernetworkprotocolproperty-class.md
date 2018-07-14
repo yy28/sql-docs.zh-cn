@@ -1,5 +1,5 @@
 ---
-title: ServerNetworkProtocolProperty 类 |Microsoft 文档
+title: ServerNetworkProtocolProperty 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ServerNetworkProtocolProperty class
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23ea90f40ca4bf3721dc4a80a59e7c276c3b77ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7554cdae2dd8c7c6276f51feb75d9fb6edb0511b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260383"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 类
-  [ServerNetworkProtocolProperty 类] servernetworkprotocolproperty-class.md) 表示的服务器网络协议的属性。  
+  [ServerNetworkProtocolProperty 类] servernetworkprotocolproperty class.md) 表示服务器网络协议的属性。  
   
- 使用方法是 [ServerNetworkProtocolProperty 类] servernetworkprotocolproperty-class.md)，你可以执行以下任务：  
+ 使用方法是 [ServerNetworkProtocolProperty 类] servernetworkprotocolproperty-class.md)，可以执行以下任务：  
   
 -   检查当前属性所属的协议。  
   

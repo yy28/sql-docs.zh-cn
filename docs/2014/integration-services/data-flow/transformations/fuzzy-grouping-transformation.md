@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a50b92570ad8cf28c537ce5fe657223058ac7d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d5c49bcf93c7b80ab60341136dbcae4e16c94a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209377"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
@@ -73,7 +73,7 @@ ms.locfileid: "36123679"
  此转换有一个输入和一个输出。 它不支持错误输出。  
   
 ## <a name="row-comparison"></a>行比较  
- 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果 Exhaustive 属性设置为`true`，转换将输入中的所有其他行的输入中的每一行进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 若要避免性能问题，则最好将详尽属性设置为`true`仅在包开发阶段。  
+ 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果将 Exhaustive 属性设置为`true`，转换将输入中的所有其他行的输入中的每一行进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 若要避免性能问题，是建议将 Exhaustive 属性设置为`true`仅在包开发过程。  
   
 ## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊分组转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引，这些表和索引可能会非常大。 表和索引的大小与转换输入中的行数和模糊分组转换所创建的标记数成比例。  

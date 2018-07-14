@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e68b94ce70e24d16ac1cc94274b9dac05974dbe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246892"
 ---
 # <a name="the-memory-optimized-filegroup"></a>内存优化的文件组
   若要创建内存优化表，必须首先创建内存优化的文件组。 内存优化的文件组容纳一个或多个容器。 每个容器都包含数据文件或差异文件，或是同时包含两者。  
@@ -61,7 +61,7 @@ ms.locfileid: "36028129"
   
  在具有多个容器和多个驱动器的情况下，采用循环法将数据和差异文件分配到容器中。 从第一个容器中分配第一个数据文件，并从下一个容器中分配差异文件，随后按此分配模式重复操作。 如果您有奇数个驱动器，并且每个驱动器均映射到一个容器，则此分配方案将跨容器均匀分配数据和差异文件。 但是，如果您有偶数个驱动器，并且每个驱动器均映射到一个容器，则可能会导致存储不均衡，其中数据文件映射到奇数个驱动器，而差异文件映射到偶数个驱动器。 若要在恢复时获得平衡 IO 流，可考虑将数据和差异文件对放在相同的主轴/存储上，如以下示例所述。  
   
- **示例：** 考虑两个容器使用的内存优化文件组： 在驱动器 X 和 Y 的驱动器上的容器 2 上的容器 1。由于数据和差异文件的分配都是在轮循机制方式，容器 1 将只有数据文件和容器 2 只有差异文件，这会导致的不平衡持久性存储，以及每秒，为数据文件的输入/输出操作将显著大于差异文件。 若要在驱动器 X 和 Y 之间均匀分发数据和差异文件，创建而不是两个四个容器，并映射到驱动器 X 和到驱动器 Y 接下来的两个容器的前两个容器。使用轮循机制分配的第一个数据和第一个增量文件将从分配容器 1 和容器 2 分别映射到驱动器 X。同样，将从容器 3 和容器-4 映射到驱动器 Y 分配的下一步的数据和差异文件。这允许将数据和差异文件均匀分布到两个驱动器。  
+ **示例：** 考虑内存优化文件组包含两个容器： 容器 1 位于驱动器 X 上，容器 2 位于驱动器 Y 上的。由于数据和差异文件的分配都是以轮循机制方式，容器 1 将只包含数据文件和容器 2 将只包含差异文件，这会导致不均衡的持久性存储，以及每秒，为数据文件的输入/输出操作较大比差异文件。 若要跨驱动器 X 和 Y 统一分发数据和差异文件，创建而不是两个四个容器，并将前两个容器映射到驱动器 X，接下来两个容器到驱动器 Y。使用轮循机制分配的第一个数据和第一个差异文件将从分配容器 1 和容器 2 分别映射到驱动器 X。同样，将从容器 3 和容器 4 中分别映射到驱动器 Y 分配下一个数据和差异文件。这允许跨两个驱动器中均匀分配数据和差异文件。  
   
 ## <a name="see-also"></a>请参阅  
  [创建和管理用于内存优化的对象的存储](creating-and-managing-storage-for-memory-optimized-objects.md)  

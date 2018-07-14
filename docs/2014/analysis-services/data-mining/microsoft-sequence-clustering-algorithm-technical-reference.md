@@ -1,5 +1,5 @@
 ---
-title: Microsoft 顺序分析算法技术参考 |Microsoft 文档
+title: Microsoft 序列聚类分析算法技术参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7e1e11074e74a228be0d49a5d8c76196bf5c4463
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29cb245c65976e517aad12ecae636df264dda9d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242007"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
   Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Markov 链分析来识别有序序列，并会综合利用此分析结果和聚类分析技术基于模型中的序列和其他属性生成分类。 本主题介绍该算法的实现以及如何自定义算法，最后还对顺序分析和聚类分析模型的特殊要求进行了说明。  
@@ -103,7 +103,7 @@ ms.locfileid: "36028905"
  默认值为 64。  
   
  MAXIMUM_STATES  
- 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，算法将使用此属性的最常见状态并将剩余状态视为不`Missing`。  
+ 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，算法将使用该属性的最常见状态并将剩余状态视为`Missing`。  
   
  默认值为 100。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36028905"
 ## <a name="requirements"></a>要求  
  事例表必须具有事例 ID 列。 此外，事例表还可以包含其他存储事例属性的列。  
   
- Microsoft 顺序分析和聚类分析算法要求序列信息以嵌套表的形式存储。 该嵌套表必须包含一个 Key Sequence 列。 A`Key Sequence`列可以包含任何类型的数据进行排序，其中包括字符串数据类型，但此列必须包含每个用例唯一值。 而且，在处理模型之前，您必须确保事例表和嵌套表要按与其相关的键的升序存储。  
+ Microsoft 顺序分析和聚类分析算法要求序列信息以嵌套表的形式存储。 该嵌套表必须包含一个 Key Sequence 列。 一个`Key Sequence`列可以包含任何类型的数据进行排序，其中包括字符串数据类型，还必须包含每个事例的唯一值。 而且，在处理模型之前，您必须确保事例表和嵌套表要按与其相关的键的升序存储。  
   
 > [!NOTE]  
 >  如果创建使用 Microsoft 顺序分析算法、但却不使用序列的模型，则生成的模型将不包含任何序列，而仅会基于模型中包含的其他属性对事例进行分类。  
@@ -140,15 +140,15 @@ ms.locfileid: "36028905"
   
 ## <a name="remarks"></a>Remarks  
   
--   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支持序列预测，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持序列预测，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持钻取，支持使用 OLAP 挖掘模型和数据挖掘维度。  
   
 ## <a name="see-also"></a>请参阅  
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [序列聚类分析模型查询示例](clustering-model-query-examples.md)   
+ [Microsoft 序列聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
+ [顺序聚类分析模型查询示例](clustering-model-query-examples.md)   
  [序列聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sqlmaint 实用工具 |Microsoft 文档
+title: sqlmaint 实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
 - sqlmaint utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba7788006e5b44ac7ad6c4adf1bf9f9bc43542ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236119"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
   如果成功运行，则**sqlmaint** 实用工具可以对一个或多个数据库执行一组指定的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
@@ -206,7 +206,8 @@ dbname_log_yyyymmddhhmm.BAK
  对于磁盘备份，指定如果创建备份后的时间间隔超出了 \<time_period>，则删除备份目录中的所有备份文件。  
   
  **-CrBkSubDir**  
- 对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
+ 对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 
+  **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
   
  **backup_path**  
  对于磁盘备份，指定在默认的备份目录中创建备份文件。 如果同时指定两者，则**UseDefDir** 将覆盖 *backup_path* 。 在默认 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装中，默认备份目录为 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup。  
@@ -267,7 +268,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. 备份到默认 x:\Program Files\Microsoft SQL Server\MSSQL12 的数据库。MSSQLSERVER\MSSQL\Backup 目录。 \  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. 将数据库备份到默认 x:\Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Backup 目录。 \  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234887"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”和“非对称”。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公钥），使用另一个密码来解密数据（称为私钥）。  
@@ -37,7 +36,7 @@ ms.locfileid: "36124065"
   
  当创建主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。 若要启用数据库主密钥的自动解密，请使用 SMK 对此密钥的副本进行加密。 使用它的位置以及在这两个数据库中存储`master`系统数据库。  
   
- 存储中的 DMK 副本`master`每当更改 DMK 以无提示方式更新系统数据库。 但是，可以通过更改此默认设置`DROP ENCRYPTION BY SERVICE MASTER KEY`选项`ALTER MASTER KEY`语句。 必须使用 `OPEN MASTER KEY` 语句和密码打开未使用服务主密钥进行加密的 DMK。  
+ 存储中的 dmk 副本`master`每当更改 DMK 时，以无提示方式更新系统数据库。 但是，可以通过更改此默认值`DROP ENCRYPTION BY SERVICE MASTER KEY`的选项`ALTER MASTER KEY`语句。 必须使用 `OPEN MASTER KEY` 语句和密码打开未使用服务主密钥进行加密的 DMK。  
   
 ## <a name="managing-sql-server-and-database-keys"></a>管理 SQL Server 和数据库密钥  
  对加密密钥的管理包括创建新数据库密钥，创建服务器和数据库密钥的备份以及了解还原、删除或更改密钥的条件和方式。  

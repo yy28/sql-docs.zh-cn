@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
 - uninstalling instances of SQL Server
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ab65ffdd02979695fed79211cb02411b4095f85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 42cf94bc46fd8cb31eb11f6afeb9813bc256d657
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187604"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
   本文介绍如何卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。 使用本主题中提供的步骤，您还可以准备系统以便重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -70,7 +70,7 @@ ms.locfileid: "36125765"
   
     -   Templog.ldf  
   
-    -   `ReportServer[$InstanceName]` (这[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认数据库。)  
+    -   `ReportServer[$InstanceName]` (Thisis[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认数据库。)  
   
     -   ReportServer[$InstanceName]TempDB（这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的默认临时数据库。）  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36125765"
   
 1.  若要开始卸载过程，请转到 **“控制面板”** ，然后选择 **“程序和功能”**。  
   
-2.  右键单击**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 和选择**卸载**。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
+2.  右键单击**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ，然后选择**卸载**。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
   
      将运行安装程序支持规则以验证您的计算机配置。 若要继续，请单击 **“下一步”**。  
   

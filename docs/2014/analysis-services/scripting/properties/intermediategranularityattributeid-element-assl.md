@@ -1,5 +1,5 @@
 ---
-title: IntermediateGranularityAttributeID 元素 (ASSL) |Microsoft 文档
+title: IntermediateGranularityAttributeID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IntermediateGranularityAttributeID element
 ms.assetid: 49895ff0-cb0d-4bcc-ab73-8cb3d5961e12
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 680104347b19e1a7b541ab2eae84f9a6587d1d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 419656660544840ab6bdad9f82d7609f20ec9dee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200097"
 ---
 # <a name="intermediategranularityattributeid-element-assl"></a>IntermediateGranularityAttributeID 元素 (ASSL)
   包含中间多维数据集维度中的粒度属性的标识符 (ID)，该标识符用于将引用维度与中间维度相关联。  
@@ -63,7 +63,7 @@ ms.locfileid: "36124427"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`IntermediateGranularityAttributeID`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
+ 父级对应的元素`IntermediateGranularityAttributeID`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

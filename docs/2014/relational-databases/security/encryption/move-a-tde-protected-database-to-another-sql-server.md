@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266303"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
   本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
@@ -51,11 +50,11 @@ ms.locfileid: "36123858"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   在移动 TDE 保护的数据库时，您还必须移动用于打开 DEK 的证书或非对称密钥。 该证书或非对称密钥必须安装在`master`数据库的目标服务器上，以便[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以访问的数据库文件。 有关详细信息，请参阅[透明数据加密 (TDE)](transparent-data-encryption.md)。  
+-   在移动 TDE 保护的数据库时，您还必须移动用于打开 DEK 的证书或非对称密钥。 该证书或非对称密钥必须安装在`master`目标服务器的数据库，以便[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以访问数据库文件。 有关详细信息，请参阅[透明数据加密 (TDE)](transparent-data-encryption.md)。  
   
 -   您必须保留证书文件和私钥文件的备份，以便还原证书。 用于私钥的密码不必与数据库主密钥密码相同。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将在此处创建这些文件存储**C:\Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\DATA**默认情况下。 您的文件名和位置可能会有所不同。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将存储在此处创建的文件**C:\Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\DATA**默认情况下。 您的文件名和位置可能会有所不同。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -63,9 +62,9 @@ ms.locfileid: "36123858"
   
 -   需要`CONTROL DATABASE`权限`master`数据库创建数据库主密钥。  
   
--   需要`CREATE CERTIFICATE`权限`master`数据库，才能创建保护 DEK 的证书。  
+-   需要`CREATE CERTIFICATE`权限`master`数据库来创建保护 DEK 的证书。  
   
--   需要`CONTROL DATABASE`已加密数据库的权限和`VIEW DEFINITION`上的证书或非对称密钥用于加密数据库加密密钥的权限。  
+-   需要`CONTROL DATABASE`已加密数据库的权限和`VIEW DEFINITION`证书或非对称密钥用于加密数据库加密密钥的权限。  
   
 ##  <a name="SSMSProcedure"></a> 创建由透明数据加密保护的数据库  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36123858"
   
 1.  创建数据库主密钥和证书中`master`数据库。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
-2.  创建的服务器证书的备份`master`数据库。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
+2.  创建服务器证书中的备份`master`数据库。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
 3.  在对象资源管理器中，右键单击 **“数据库”** 文件夹，并选择 **“新建数据库”**。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "36123858"
      **“管理数据库加密”** 对话框中提供了以下选项。  
   
      **加密算法**  
-     显示或设置要用于数据库加密的算法。 `AES128` 是默认的算法。 此字段不能为空。 有关加密算法的详细信息，请参阅 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)。  
+     显示或设置要用于数据库加密的算法。 `AES128` 为默认算法。 此字段不能为空。 有关加密算法的详细信息，请参阅 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)。  
   
      **使用服务器证书**  
      将加密设置为由证书提供保护。 从列表中选择一个。 如果没有服务器证书的 `VIEW DEFINITION` 权限，此列表将为空。 如果选择使用证书进行加密，则此值不能为空。 有关证书的详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)。  

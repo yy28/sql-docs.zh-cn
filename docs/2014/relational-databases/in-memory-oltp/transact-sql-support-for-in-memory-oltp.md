@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 caps.latest.revision: 52
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f5c7dd02a31a466e5e6e96a815ed27795f62f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2900d6cd155faf29dbd3ecb398320c0e5311d747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242547"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>对内存中 OLTP 的 Transact-SQL 支持
   可以使用任何 Transact-SQL 查询或 DML 语句（SELECT、INSERT、UPDATE 或 DELETE）、即席语句和 SQL 模块（如存储过程、表值函数、标量函数、触发器和视图）来访问内存优化表。 有关详细信息请参阅[访问内存优化表使用解释型 TRANSACT-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。  
@@ -30,17 +30,17 @@ ms.locfileid: "36026343"
   
 -   [ALTER DATABASE 文件和文件组选项&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (请参阅`MEMORY_OPTIMIZED_DATA`)  
   
--   [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-database-sql-server-transact-sql) (请参阅`MEMORY_OPTIMIZED_DATA`)  
+-   [创建数据库&#40;SQL Server TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-database-sql-server-transact-sql) (请参阅`MEMORY_OPTIMIZED_DATA`)  
   
--   [CREATE PROCEDURE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-procedure-transact-sql) (请参阅`NATIVE_COMPILATION`， `SCHEMABINDING`， `EXECUTE AS`，和`BEGIN ATOMIC`)  
+-   [CREATE PROCEDURE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-procedure-transact-sql) (请参阅`NATIVE_COMPILATION`， `SCHEMABINDING`， `EXECUTE AS`，并且`BEGIN ATOMIC`)  
   
--   [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) (请参阅`MEMORY_OPTIMIZED`， `DURABILITY`， `BUCKET_COUNT`， `INDEX`，和`HASH`)  
+-   [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) (请参阅`MEMORY_OPTIMIZED`， `DURABILITY`， `BUCKET_COUNT`， `INDEX`，以及`HASH`)  
   
--   [CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (请参阅`MEMORY_OPTIMIZED`， `BUCKET_COUNT`， `INDEX`，和`HASH`)  
+-   [创建类型&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (请参阅`MEMORY_OPTIMIZED`， `BUCKET_COUNT`， `INDEX`，并且`HASH`)  
   
 -   [声明@local_variable &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (请参阅`NULL`  |  `NOT NULL`)  
   
- 内存优化表支持 `PRIMARY KEY` 和 `NOT NULL` 约束。 有关实现不受支持的约束的信息，请参阅[迁移检查 and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)。  
+ 内存优化表支持 `PRIMARY KEY` 和 `NOT NULL` 约束。 有关实现不支持的约束的信息，请参阅[迁移检查和外键约束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。  
   
  有关不支持的功能的信息，请参阅[内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   

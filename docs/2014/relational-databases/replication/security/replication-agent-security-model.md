@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
 - agents [SQL Server replication], security
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f8b227f4b5e1ea7cd48bd9be530e492bf1b7127a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c093e7605e4adb86b3b1f42e12f90db83b962aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204987"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
   可以使用复制代理安全模式，对复制代理运行和建立连接所用的帐户进行精细粒度的控制：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[管理复制中的登录名和密码](manage-logins-and-passwords-in-replication.md)。  
@@ -59,11 +59,11 @@ ms.locfileid: "36123852"
 |代理|权限|  
 |-----------|-----------------|  
 |快照代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -对快照共享具有读取、写入和修改权限。<br /><br /> <br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。|  
-|日志读取器代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 选择时`sync_type`选项*复制仅支持 32 位*，*使用备份初始化*，或*从 lsn 初始化*，日志读取器代理必须运行执行`sp_addsubscription`，以便设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 当`sync_type`选项设置为*自动*，任何特殊的日志读取器代理的操作是必需的。|  
-|推送订阅的分发代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -是 PAL 的成员。<br /><br /> -对快照共享拥有读取权限。<br /><br /> -如果订阅针对非 SQL Server 订阅服务器，则具备对订阅服务器的 OLE DB 访问接口的安装目录的访问权限。<br /><br /> -当复制 LOB 数据时，分发代理必须对复制 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 具有编写权限，其中 XX 表示实例 ID。<br /><br /> <br /><br /> 用于连接到订阅服务器的帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员（或者如果订阅针对于非 SQL Server 订阅服务器，则必须具有同等权限）。<br /><br /> 注意： 当使用`-subscriptionstreams >= 2`还必须授予对分发代理`View Server State`订阅服务器上的权限，来检测死锁。|  
-|请求订阅的分发代理|与订阅服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。 用于连接到分发服务器的帐户必须：<br /><br /> -是 PAL 的成员。<br /><br /> -对快照共享拥有读取权限。<br /><br /> -当复制 LOB 数据时，分发代理必须对复制 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 具有编写权限，其中 XX 表示实例 ID。<br /><br /> <br /><br /> 注意： 当使用`-subscriptionstreams >= 2`还必须授予对分发代理`View Server State`订阅服务器上的权限，来检测死锁。|  
+|日志读取器代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 选择时`sync_type`选项*仅支持复制*，*用备份初始化*，或*从 lsn 初始化*，日志读取器代理必须运行执行`sp_addsubscription`，以便将设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 当`sync_type`选项设置为*自动*，所需执行任何特殊日志读取器代理操作。|  
+|推送订阅的分发代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -是 PAL 的成员。<br /><br /> -对快照共享拥有读取权限。<br /><br /> -如果订阅针对非 SQL Server 订阅服务器，则具备对订阅服务器的 OLE DB 访问接口的安装目录的访问权限。<br /><br /> -当复制 LOB 数据时，分发代理必须对复制 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 具有编写权限，其中 XX 表示实例 ID。<br /><br /> <br /><br /> 用于连接到订阅服务器的帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员（或者如果订阅针对于非 SQL Server 订阅服务器，则必须具有同等权限）。<br /><br /> 注意： 使用时`-subscriptionstreams >= 2`还必须授予对分发代理`View Server State`对订阅服务器的权限来检测死锁。|  
+|请求订阅的分发代理|与订阅服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。 用于连接到分发服务器的帐户必须：<br /><br /> -是 PAL 的成员。<br /><br /> -对快照共享拥有读取权限。<br /><br /> -当复制 LOB 数据时，分发代理必须对复制 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 具有编写权限，其中 XX 表示实例 ID。<br /><br /> <br /><br /> 注意： 使用时`-subscriptionstreams >= 2`还必须授予对分发代理`View Server State`对订阅服务器的权限来检测死锁。|  
 |推送订阅的合并代理|与发布服务器和分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -是 PAL 的成员。<br /><br /> -是与发布数据库中的某个用户关联的登录名。<br /><br /> -对快照共享拥有读取权限。<br /><br /> <br /><br /> 用于连接到订阅服务器的帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。|  
-|请求订阅的合并代理|与订阅服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。 用于连接到发布服务器和分发服务器的帐户必须：<br /><br /> -是 PAL 的成员。<br /><br /> -是与发布数据库中的某个用户关联的登录名。<br /><br /> -是与分发数据库中的某个用户关联的登录名。 可以对用户进行`Guest`用户。<br /><br /> -对快照共享拥有读取权限。|  
+|请求订阅的合并代理|与订阅服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。 用于连接到发布服务器和分发服务器的帐户必须：<br /><br /> -是 PAL 的成员。<br /><br /> -是与发布数据库中的某个用户关联的登录名。<br /><br /> -是与分发数据库中的某个用户关联的登录名。 用户可以为`Guest`用户。<br /><br /> -对快照共享拥有读取权限。|  
 |队列读取器代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到订阅服务器的帐户必须至少是订阅数据库中的 **db_owner** 固定数据库角色的成员。|  
   
 ## <a name="agent-security-under-sql-server-agent"></a>SQL Server 代理下的代理安全性  
@@ -81,9 +81,9 @@ ms.locfileid: "36123852"
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|  
   
- <sup>1</sup>对于 Oracle 发布的推送订阅，作业名称是**\<发布服务器 >-\<发布服务器**> 而不是**\<发布服务器 >-\<PublicationDatabase >**。  
+ <sup>1</sup>对于 Oracle 发布的推送订阅，作业名称是**\<发布服务器 >-\<发布者**> 而不是**\<发布服务器 >-\<发布数据库 >**。  
   
- <sup>2</sup>对于 Oracle 发布的请求订阅，作业名称是**\<发布服务器 >-\<DistributionDatabase**> 而不是**\<发布服务器 >-\<PublicationDatabase >**。  
+ <sup>2</sup>对于 Oracle 发布的请求订阅，作业名称是**\<发布服务器 >-\<分发数据库**> 而不是**\<发布服务器 >-\<发布数据库 >**。  
   
  配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理 ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
   

@@ -1,5 +1,5 @@
 ---
-title: 表格建模 (SSAS 表格) |Microsoft 文档
+title: 表格建模 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df693d141f3a91c1c0b9b023a89d39c5f2c171ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fe54f13fb065b099983ae58934851af1a3f49a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257213"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>表格建模（SSAS 表格）
   表格模型是 Analysis Services 中的内存中数据库。 使用最先进的压缩算法和多线程查询处理器，xVelocity 内存中分析引擎 (VertiPaq) 可通过报表客户端应用程序（如 Microsoft Excel 和 Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]）来快速访问表格模型对象和数据。  

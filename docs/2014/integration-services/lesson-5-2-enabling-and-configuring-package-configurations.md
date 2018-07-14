@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd88de02a035e041c887d7505cc8b2f35805e577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274843"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>步骤 2：启用和配置包配置
   在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 您将使用该向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 `Directory` 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  
@@ -45,7 +45,7 @@ ms.locfileid: "36028155"
   
 8.  在“Foreach 循环编辑器”的“集合”页上，依次单击“表达式”和省略号按钮 **(…)**。  
   
-9. 在**属性表达式编辑器**，在单击**属性**列表，然后选择`Directory`。  
+9. 在中**属性表达式编辑器**，在单击**属性**列表，然后选择`Directory`。  
   
 10. 在“表达式”框中，单击省略号按钮 **(…)**。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36028155"
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>创建并填充新的示例数据文件夹  
   
-1.  在 Windows 资源管理器，在你的驱动器的根级别 (例如，c:\\)，创建一个名为的新文件夹`New Sample Data`。  
+1.  在 Windows 资源管理器中的驱动器的根级别 (例如，c:\\)，创建名为的新文件夹`New Sample Data`。  
   
 2.  找到计算机上的示例文件并从文件夹复制其中的三个文件。  
   

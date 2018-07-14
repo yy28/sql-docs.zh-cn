@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
 - REBUILDDATABASE parameter
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b1991dc8af140ee21089f9bd4096923d8e84742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219427"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
   必须重新生成系统数据库才能修复 [master](master-database.md)、 [mode](model-database.md)l、 [msdb](msdb-database.md)或 [resource](resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
@@ -108,8 +108,8 @@ ms.locfileid: "36124363"
     |/QUIET 或 /Q|指定在没有任何用户界面的情况下运行安装程序。|  
     |/ACTION=REBUILDDATABASE|指定安装程序将重新创建系统数据库。|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到的 Windows 组或单个帐户`sysadmin`固定的服务器角色。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入`NT AUTHORITY\SYSTEM`。|  
-    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明\* \***  `sa`帐户是一个广为人知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]帐户，并且经常成为恶意用户的目标。 它是你使用的强密码非常重要`sa`登录名。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到 Windows 组或单个帐户`sysadmin`固定的服务器角色。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入`NT AUTHORITY\SYSTEM`。|  
+    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明\* \***  `sa`帐户是一个广为人知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]帐户，并且经常成为恶意用户的攻击目标。 使用的强密码非常重要`sa`登录名。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
     |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数可选。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要\* \*** 更改服务器级排序规则不会更改现有用户数据库的排序规则。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../collations/set-or-change-the-server-collation.md)。|  
   
 3.  在安装程序完成系统数据库重新生成后，它将返回到命令提示符，而且不显示任何消息。 请检查 Summary.txt 日志文件以验证重新生成过程是否成功完成。 此文件位于 C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs。  
@@ -151,7 +151,7 @@ ms.locfileid: "36124363"
 6.  在 **“准备修复”** 页上，单击 **“修复”**。 “完成”页指示修复操作已完成。  
   
 ##  <a name="CreateMSDB"></a> 创建新的 msdb 数据库  
- 如果`msdb`数据库已损坏，你还没有的备份`msdb`数据库，您可以新建`msdb`使用**instmsdb**脚本。  
+ 如果`msdb`数据库已损坏且不具有的备份`msdb`数据库中，您可以新建`msdb`通过**instmsdb**脚本。  
   
 > [!WARNING]  
 >  重新生成`msdb`数据库使用**instmsdb**脚本将消除存储中的所有信息`msdb`例如作业、 警报、 运算符、 维护计划、 备份历史记录、 基于策略的管理设置数据库邮件、 性能数据仓库，等等。  
@@ -162,7 +162,7 @@ ms.locfileid: "36124363"
   
      有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一个命令行窗口中，分离`msdb`通过执行以下命令，数据库替换 *\<servername >* 与的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在另一个命令行窗口中，分离`msdb`数据库通过执行以下命令，替换*\<服务器名 >* 的实例与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  使用 Windows 资源管理器，重命名`msdb`数据库文件。 默认情况下，这些文件位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 DATA 子文件夹中。  
   

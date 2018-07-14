@@ -1,5 +1,5 @@
 ---
-title: CellPermissions 元素 (ASSL) |Microsoft 文档
+title: CellPermissions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176454"
 ---
 # <a name="cellpermissions-element-assl"></a>CellPermissions 元素 (ASSL)
   包含的单元格关联的权限的集合[多维数据集](../objects/cube-element-assl.md)元素。  
@@ -64,12 +64,12 @@ ms.locfileid: "36125463"
 |子元素|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 集合可以包含最多一个`CellPermission`对象每个允许的值[访问](../properties/access-element-assl.md)元素。  
+ 集合可以包含最多一个`CellPermission`对象的每个允许的值[访问](../properties/access-element-assl.md)元素。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CellPermissionCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CellPermissionCollection>。  
   
 ## <a name="see-also"></a>请参阅  
- [权限数据类型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
+ [Permission 数据类型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [集合&#40;ASSL&#41;](collections-assl.md)  
   
   

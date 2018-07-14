@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], reactivating
 - consolidated members [Master Data Services], reactivating
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - leaf members [Master Data Services], reactivating
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7d0d997f6583a629fbb4f3c81c9d66187197e18a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d8892f13095ab2b8a586acdecdfbed3b6c39073d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190487"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以重新激活以下成员：  
@@ -67,7 +67,7 @@ ms.locfileid: "36125903"
 7.  在确认对话框中，单击 **“确定”**。 添加新事务，在 **“新值”** 列中显示 **“活动”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [停用或通过使用临时过程中删除成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
+ [停用或通过使用临时过程删除成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [删除成员或集合&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  

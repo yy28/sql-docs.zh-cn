@@ -1,5 +1,5 @@
 ---
-title: ErrorConfiguration 元素 (XMLA) |Microsoft 文档
+title: ErrorConfiguration 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ErrorConfiguration element
 ms.assetid: 5e350f5f-3a14-49b4-80c0-208c61f336d5
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1ce9cf2dc862f187c1a9f9cb9e3403e01ade0cfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a93464ed9f6d2708246e8d04c833b9261b7c71fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169278"
 ---
 # <a name="errorconfiguration-element-xmla"></a>ErrorConfiguration 元素 (XMLA)
-  指定有关的处理过程中可能出现的错误设置[批处理](../xml-elements-commands/batch-element-xmla.md)或[过程](../xml-elements-commands/process-element-xmla.md)操作。  
+  指定的设置过程中可能出现的错误处理[批处理](../xml-elements-commands/batch-element-xmla.md)或[进程](../xml-elements-commands/process-element-xmla.md)操作。  
   
 ## <a name="syntax"></a>语法  
   

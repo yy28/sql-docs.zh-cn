@@ -1,5 +1,5 @@
 ---
-title: 常规属性 |Microsoft 文档
+title: 常规属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IdleConnectionTimeout property
 - InstanceVisible property
@@ -39,15 +39,15 @@ helpviewer_keywords:
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42b6dcdd7407faff8dace8ac7d63bd8bce50c337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c01a4282dbdc0e212068bd3f6d2da41b96d069
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216027"
 ---
 # <a name="general-properties"></a>常规属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
@@ -80,12 +80,12 @@ ms.locfileid: "36123909"
  `CoordinatorCancelCount`  
  有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。  
   
- `CoordinatorCancelCount` 在表格服务器模式下将被忽略。  
+ `CoordinatorCancelCount` 在表格服务器模式被忽略。  
   
  `CoordinatorExecutionMode`  
  有符号 32 位整数属性，用于定义服务器将尝试的最大并行操作（包括处理操作和查询操作）数。 零 (0) 指示服务器将基于内部算法来决定。 正数指示最大操作总数。 如果是符号相反的负数，则指示每个处理器的最大操作数。  
   
- `CoordinatorExecutionMode` 在表格服务器模式下将被忽略。  
+ `CoordinatorExecutionMode` 在表格服务器模式被忽略。  
   
  此属性的默认值为 -4，指示将服务器限制为每个处理器 4 个并行操作。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36123909"
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
+ [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

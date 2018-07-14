@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 10c79cc0750843f75d5c479562af470aa622a65c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a41599128d6b0f9bbceaa47a30d851e312f39e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168128"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 报表服务器（SharePoint 模式）
-  为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 **配置的** 报表服务器可在 SharePoint 产品的部署中运行。 在 SharePoint 模式下的报表服务器可以使用 SharePoint 的协作和管理功能，针对报表和其他[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型。 SharePoint 模式要求在 SharePoint Web 前端上安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序的适当版本。  
+  为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 **配置的** 报表服务器可在 SharePoint 产品的部署中运行。 在 SharePoint 模式下的报表服务器可以使用 SharePoint 的协作和管理功能对报表和其他[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型。 SharePoint 模式要求在 SharePoint Web 前端上安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序的适当版本。  
   
  有关安装和配置的详细信息，请参阅下面的内容：  
   
@@ -30,9 +30,9 @@ ms.locfileid: "36027591"
   
 -   [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
--   [将另一个报表服务器添加到场&#40;SSRS 扩展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+-   [向场中添加另一个报表服务器&#40;SSRS 横向扩展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
   
- 有关什么是此发行版中新增的信息，请参阅中的 SharePoint 部分[新增&#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)。  
+ 什么是此版本中的新增功能的信息，请参阅中的 SharePoint 部分[What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)。  
   
  **本主题内容：**  
   
@@ -80,12 +80,12 @@ ms.locfileid: "36027591"
 ##  <a name="bkmk_connectedandlocal"></a> 连接模式和本地模式  
  SQL Server 2008 R2 版本引入了新的“本地模式”，可用于从安装了用于 SharePoint 2010 产品的 Microsoft SQL Server 2008 R2 或更高版本的 Reporting Services 外接程序的 SharePoint 2010 服务器查看报表。  
   
--   *本地模式*： 本地模式允许从 SharePoint 文档库中，而无需与集成本地呈现报表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表服务器。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序是必需的，但 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式和连接模式报表在报表查看器&#40;在 SharePoint 模式下的 Reporting Services&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)和[在哪里可以找到 Reporting Services 外接程序用于 SharePoint 产品](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   *本地模式下*： 本地模式允许从 SharePoint 文档库中，而无需与集成从本地呈现报表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表服务器。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序是必需的，但 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式和连接模式下的报表在报表查看器中&#40;SharePoint 模式下的 Reporting Services&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)并[在哪里可以找到 Reporting Services 外接程序用于 SharePoint 产品](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   *连接模式*： 连接的模式支持通过集成[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]到 SharePoint 场中使用 SharePoint 管理中心的报表服务器。 这一与报表服务器的集成可以实现完全的端到端报告，并且提供 SharePoint 2010 的协作功能以及基于服务器的报表服务器功能，包括订阅、快照和基于服务器的处理。  
+-   *连接模式*： 通过集成支持连接的模式[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]到 SharePoint 场中使用 SharePoint 管理中心的报表服务器。 这一与报表服务器的集成可以实现完全的端到端报告，并且提供 SharePoint 2010 的协作功能以及基于服务器的报表服务器功能，包括订阅、快照和基于服务器的处理。  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> 不支持的 SharePoint 功能  
- 并非所有的 SharePoint 功能对于集成操作都可用。 以下是 SharePoint 功能的列表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]不直接集成：  
+ 并非所有的 SharePoint 功能对于集成操作都可用。 以下是 SharePoint 功能的列表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]未直接集成：  
   
 -   Secure Store Service。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36027591"
      文档库版本历史记录是在“库设置”的“版本控制设置”页面上配置的。  
   
 ##  <a name="bkmk_supportedcombinations"></a> 支持的 SharePoint 外接程序与报表服务器之间的组合  
- 在报表服务器、SharePoint 的 Reporting Services 外接程序和 SharePoint 产品的所有组合中，并非所有功能都受支持。 有关详细信息，请参阅[支持的 SharePoint 的组合和 Reporting Services 服务器以及外接程序&#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ 在报表服务器、SharePoint 的 Reporting Services 外接程序和 SharePoint 产品的所有组合中，并非所有功能都受支持。 有关详细信息，请参阅[支持组合的 SharePoint 和 Reporting Services 服务器与外接程序&#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  必须将 Reporting Services 外接程序的正确版本与 SharePoint 产品的对应版本结合使用。  
@@ -110,19 +110,19 @@ ms.locfileid: "36027591"
 ##  <a name="bkmk_components"></a> 提供集成的组件  
  若要在单个部署中组合服务器，可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的安装与 SharePoint 产品的实例集成  
   
- 通过提供集成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 产品的外接程序。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序是一个免费分发组件，可下载该组件，然后安装在运行 SharePoint 适当版本的服务器上。  
+ 通过提供集成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用于 SharePoint 产品外接程序。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序是一个免费分发组件，可下载该组件，然后安装在运行 SharePoint 适当版本的服务器上。  
   
 > [!TIP]  
->  在报表服务器、SharePoint 的 Reporting Services 外接程序和 SharePoint 产品的所有组合中，并非所有功能都受支持。 有关详细信息，请参阅[支持的 SharePoint 的组合和 Reporting Services 服务器以及外接程序&#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
+>  在报表服务器、SharePoint 的 Reporting Services 外接程序和 SharePoint 产品的所有组合中，并非所有功能都受支持。 有关详细信息，请参阅[支持组合的 SharePoint 和 Reporting Services 服务器与外接程序&#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
--   在 SharePoint 中，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]外接程序提供了 ReportServer 代理端点、 报表查看器 Web 部件中，和应用程序页，以便你可以查看、 存储和管理 SharePoint 站点或场上的报表服务器内容。  
+-   在 SharePoint 上，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]外接程序提供 ReportServer 代理终结点，一个报表查看器 Web 部件和应用程序页，以便可以查看存储和管理 SharePoint 站点或场上的报表服务器内容。  
   
--   上[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供更新的程序文件、 SOAP 终结点，以及自定义安全和传递扩展插件。 必须将报表服务器配置为在 SharePoint 集成模式下运行，该模式专门支持通过 SharePoint 站点实现报表访问和传递。  
+-   在[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供更新后的程序文件、 SOAP 端点以及自定义安全性和传递扩展插件。 必须将报表服务器配置为在 SharePoint 集成模式下运行，该模式专门支持通过 SharePoint 站点实现报表访问和传递。  
   
  在 SharePoint 上安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序并将这两个服务器进行集成配置后，您可以将报表服务器内容类型上载或发布到 SharePoint 库，然后从 SharePoint 站点查看和管理这些文档。 上传或发布报表服务器内容是至关重要的第一步。选择 SharePoint 站点中的报表定义 (.rdl)、报表模型 (.smdl) 及共享数据源 (.rsds) 后，才可以访问 Web 部件和页面。  
   
 ##  <a name="bkmk_language"></a> 语言注意事项  
- [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 和[!INCLUDE[SPS2010](../includes/sps2010-md.md)]产品可以在许多语言数超过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 和[!INCLUDE[SPS2010](../includes/sps2010-md.md)]产品都比很多更多语言支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  如果将报表服务器配置为在部署的 SharePoint 产品之内运行，则可能会出现混合使用多种语言的情况。 用户界面、文档和消息将以下列语言显示：  
   
@@ -132,21 +132,21 @@ ms.locfileid: "36027591"
   
 -   SharePoint 站点、SharePoint 管理中心、联机帮助和消息可使用 Office Server 产品支持的语言。  
   
- 如果你的 SharePoint 产品或技术的语言不同于报表服务器语言，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]将尝试使用同一语言系列提供最接近的匹配项的语言。 如果无法找到最接近的替代语言，报表服务器将使用英语。  
+ 如果 SharePoint 产品或技术的语言不同于报表服务器语言，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]将尝试使用同一语言系列的最接近的匹配语言。 如果无法找到最接近的替代语言，报表服务器将使用英语。  
   
 ##  <a name="bkmk_relatedtasks"></a> 相关任务  
  下表汇总了与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式报表服务器有关的任务：  
   
 |**任务**|**链接**|  
 |--------------|--------------|  
-|在 SharePoint 模式下安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的详细步骤。|[安装 Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)和[将另一个报表服务器添加到场&#40;SSRS 扩展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
-|横向扩展你[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]通过添加其他报表服务器的 SharePoint 部署。|[将另一个报表服务器添加到场&#40;SSRS 扩展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和[SharePoint 中的 SQL Server BI 功能的部署拓扑](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。|  
+|在 SharePoint 模式下安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的详细步骤。|[安装 Reporting Services SharePoint 模式下用于 SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)并[向场中添加另一个报表服务器&#40;SSRS 横向扩展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
+|向外扩展您[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]通过添加其他报表服务器的 SharePoint 部署。|[向场中添加另一个报表服务器&#40;SSRS 横向扩展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)并[SharePoint 中的 SQL Server BI 功能的部署拓扑](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。|  
 |添加安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件用于查看报表项的其他 SharePoint Web 前端。|[向场中添加另一个 Reporting Services Web 前端](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报和订阅功能配置电子邮件。|[Reporting services 服务应用程序配置电子邮件&#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报和订阅功能配置电子邮件。|[为 Reporting Services 服务应用程序配置电子邮件&#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |有关此版本的最新信息，位于 TechNet Wiki 上。|[SQL Server 2012 Reporting Services 提示、技巧和故障排除](http://go.microsoft.com/fwlink/?LinkId=221297)。|  
   
 ## <a name="see-also"></a>请参阅  
- [安装或卸载 Reporting Services 外接程序为 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [硬件和软件要求的 Reporting Services SharePoint 模式下的](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
  [在 SharePoint 站点上的报表查看器 Web 部件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [小测验：针对 SharePoint 集成配置 SSRS 2012](http://go.microsoft.com/fwlink/?LinkId=306443)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2690d8684bd244ecc671168d9648832a5a2ca9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198817"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>创建本机模式报表服务器数据库（SSRS 配置管理器）
   本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用于内部存储。 该数据库是必需的，它用于存储已发布的报表、模型、共享数据源、会话数据、资源和服务器元数据。  
@@ -36,7 +36,7 @@ ms.locfileid: "36123833"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>何时创建或配置报表服务器数据库  
  如果在“仅文件”模式下安装报表服务器，则必须创建和配置报表服务器数据库。  
   
- 如果你安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在默认配置为纯模式，报表服务器数据库创建和自动配置的报表服务器实例的安装。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器查看或修改安装程序为您配置的设置。  
+ 如果您安装了[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在默认配置为纯模式，报表服务器数据库创建和安装报表服务器实例时会自动配置。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器查看或修改安装程序为您配置的设置。  
   
 ##  <a name="rsdbrequirements"></a> 开始之前  
  创建或配置报表服务器数据库是一个多步骤过程。 创建报表服务器数据库之前，请考虑要如何指定下列各项：  
@@ -71,7 +71,7 @@ ms.locfileid: "36123833"
   
 4.  选择实例。  
   
-5.  右键单击**TCP/IP**单击**已启用**。  
+5.  右键单击**TCP/IP**然后单击**已启用**。  
   
 6.  重新启动服务。  
   

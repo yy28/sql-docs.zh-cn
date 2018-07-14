@@ -1,5 +1,5 @@
 ---
-title: 审核元素 (ASSL) |Microsoft 文档
+title: Audit 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Audit element
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc059cfde938bebe2503108faf835271786c3150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d87e0c58dd944c140e57f89894cb98a32d9230d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163318"
 ---
 # <a name="audit-element-assl"></a>Audit 元素 (ASSL)
-  指定[跟踪](../objects/trace-element-assl.md)元素无法删除任何事件，即使这会导致服务器上的性能下降。  
+  指定的[跟踪](../objects/trace-element-assl.md)元素不能删除任何事件，即使这会导致服务器的性能下降。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36124201"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`Audit`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Trace>。  
+ 父级对应的元素`Audit`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>请参阅  
  [跟踪元素&#40;ASSL&#41;](../collections/traces-element-assl.md)   

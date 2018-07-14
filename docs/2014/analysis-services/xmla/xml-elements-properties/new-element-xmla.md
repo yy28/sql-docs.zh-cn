@@ -1,5 +1,5 @@
 ---
-title: 新元素 (XMLA) |Microsoft 文档
+title: 新元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 983c32cc19ebbc876d53d46865f81b0d37e10d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203977"
 ---
 # <a name="new-element-xmla"></a>New 元素 (XMLA)
-  包含新的文件系统存储位置由[文件夹](folder-element-xmla.md)元素。  
+  包含使用的新文件系统存储位置[文件夹](folder-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36124180"
  [原始元素&#40;XMLA&#41;](original-element-xmla.md)   
  [Restore 元素&#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   
  [StorageLocation 元素&#40;ASSL&#41;](../../scripting/properties/storagelocation-element-assl.md)   
- [同步元素&#40;XMLA&#41;](../xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize 元素&#40;XMLA&#41;](../xml-elements-commands/synchronize-element-xmla.md)   
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

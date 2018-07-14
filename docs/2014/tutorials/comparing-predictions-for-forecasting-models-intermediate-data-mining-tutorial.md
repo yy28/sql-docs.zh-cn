@@ -1,5 +1,5 @@
 ---
-title: 用于预测模型 （数据挖掘中级教程） 比较预测 |Microsoft 文档
+title: 比较预测的预测模型 （数据挖掘中级教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: de7605f1dbb65987e147069e32e19e36b99956a6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: a8ff27b38e2268ead42a1238250902b6ebf9cf18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165768"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>比较预测模型的预测（数据挖掘中级教程）
   在本教程前面的步骤中，您已经创建了多个时序模型：  
@@ -47,7 +47,7 @@ ms.locfileid: "36313085"
   
 -   第三列显示基于扩展数据的预测。  
   
-|**M200 太平洋**|更新的实际销售额数据|添加数据之前的预测|扩展的预测|  
+|**M200 Pacific**|更新的实际销售额数据|添加数据之前的预测|扩展的预测|  
 |----------------------|-----------------------------|------------------------------------|-------------------------|  
 |7-25-2008|**65**|32|**65**|  
 |8-25-2008|**54**|37|**54**|  
@@ -60,16 +60,16 @@ ms.locfileid: "36313085"
   
  通常，算法给予新数据中的更改的权重比模型开始就有的数据更改的权重大。 但是，在这种情况下，新销售额数字表示仅相对前一阶段增长了 20-30％，因此仅对预测的销售额稍有增加，在销售预测再次向下后，与新数据之前的月份的趋势更为一致。  
   
-##  <a name="bkmk_REPLACE"></a> 比较原始和跨预测结果  
+##  <a name="bkmk_REPLACE"></a> 比较原始和交叉预测结果  
  请记住，原始挖掘模型揭示在区域之间以及产品系列之间存在较大的差异。 例如，M200 型号的销售很强，而 T1000 型号的销售在所有区域中都比较弱。 而且，一些序列的数据不多。 序列不规则，这表示它们没有相同的起点。  
   
- ![序列预测 M200 和 T1000 数量](../../2014/tutorials/media/6series-defaultforecasting.gif "序列预测 M200 和 T1000 数量")  
+ ![时序预测 M200 和 T1000 数量](../../2014/tutorials/media/6series-defaultforecasting.gif "时序预测 M200 和 T1000 数量")  
   
  因此，当您基于通用模型进行预测时预测如何变化，该模型基于全球范围内的销售额而非原始数据集？ 为了确保您没有丢失任何信息或进行错误预测，可以将结果存储到一个表中，将预测表与历史记录数据表联接，然后用图形表示两组历史记录数据和预测数据。  
   
  以下关系图仅基于一个产品系列（M200）。 该图比较了初始挖掘模型的预测值和使用聚合挖掘模型的预测值。  
   
- ![Excel 图表比较预测](../../2014/tutorials/media/m200-predictions-compared.gif "Excel 图表比较预测")  
+ ![比较预测的 Excel 图表](../../2014/tutorials/media/m200-predictions-compared.gif "比较预测的 Excel 图表")  
   
  从此关系图中，您可以看到聚合挖掘模型在使得各个数据序列中的波动尽量最小的同时保持整体范围和值的趋势。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36313085"
  您学习了通过使用 REPLACE_MODEL_CASES 参数和将模型应用到不同数据序列，创建可用于交叉预测的模型。  
   
 ## <a name="see-also"></a>请参阅  
- [中间数据挖掘教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [数据挖掘中级教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   
