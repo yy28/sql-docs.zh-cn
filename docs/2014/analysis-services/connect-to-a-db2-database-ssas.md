@@ -1,5 +1,5 @@
 ---
-title: 连接到 DB2 数据库 (SSAS) |Microsoft 文档
+title: 连接到 DB2 数据库 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndb2db.f1
 ms.assetid: eeef3697-a4fd-4263-ba7e-f86afa1f46cc
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1106ee743e36299846f1ac3d503f5b748f633944
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3952978ea68e1df54772f6a6065afd9fcb8d10b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200567"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>连接到 DB2 数据库 (SSAS)
   **“表导入向导”** 的这一页可用于指定用于连接到 DB2 数据库的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

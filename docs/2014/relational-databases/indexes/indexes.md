@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b501af28b1c9fbfb8f8fbdca9099aa11d4f2e3db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 007728b4f429cd0857a2131fb25c9de53b2258db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177744"
 ---
 # <a name="indexes"></a>索引
   下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的索引类型，并提供了指向其他信息的链接。  
@@ -38,7 +37,7 @@ ms.locfileid: "36027274"
 |计算列上的索引|从一个或多个其他列的值或某些确定的输入值派生的列上的索引。|[计算列上的索引](indexes-on-computed-columns.md)|  
 |筛选|一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。|[创建筛选索引](create-filtered-indexes.md)|  
 |空间|利用空间索引，可以更高效地对*几何*数据类型的列中的空间对象（ **空间数据** ）执行某些操作。 空间索引可减少需要应用开销相对较大的空间操作的对象数。|[空间索引概述](../spatial/spatial-indexes-overview.md)|  
-|XML|XML 二进制大型对象 (Blob) 中的已拆分和持久的表示`xml`数据类型列。|[XML 索引 (SQL Server)](../xml/xml-indexes-sql-server.md)|  
+|XML|XML 二进制大型对象 (Blob) 中的已拆分持久表示`xml`数据类型列。|[XML 索引 (SQL Server)](../xml/xml-indexes-sql-server.md)|  
 |全文|一种特殊类型的基于标记的功能性索引，由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护。 用于帮助在字符串数据中搜索复杂的词。|[填充全文索引](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

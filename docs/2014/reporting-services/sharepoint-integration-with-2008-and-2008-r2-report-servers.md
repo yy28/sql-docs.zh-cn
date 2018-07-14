@@ -1,5 +1,5 @@
 ---
-title: SharePoint 集成 2008年和 2008 R2 报表服务器 |Microsoft 文档
+title: SharePoint 集成与 2008年和 2008 R2 报表服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 807978ec516f065f8bb2e219c33863e89c7fa2c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05f67d9ab20df69a7d2232cbbad49f7a16b9db5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168049"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint 与 2008 和 2008 R2 报表服务器集成
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本引入了一种体系结构，在此体系结构中，SharePoint 模式现在基于 SharePoint 共享服务。 在 SharePoint 管理中心上完成的新功能的管理**管理服务**和**管理器服务应用程序**页。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前为 SharePoint 集成的体系结构仍支持使用[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用于 SharePoint 2010 产品以使你可以与以前版本的报表服务器集成 SharePoint 2010 外接程序。  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本引入了一种体系结构，在此体系结构中，SharePoint 模式现在基于 SharePoint 共享服务。 在 SharePoint 管理中心中上完成新功能的管理**管理服务**并**管理器服务应用程序**页。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前为 SharePoint 集成的体系结构仍支持[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用于 SharePoint 2010 产品，与以前版本的报表服务器集成 SharePoint 2010 外接程序。  
   
  您将用于管理旧体系结构的“SharePoint 管理中心”页在以下位置提供：  
   
 1.  在 SharePoint 管理中心内单击**常规应用程序设置**。  
   
-2.  组**SQL Server Reporting Services （2008年和 2008 R2）** 包含的链接和较旧的体系结构的管理页  
+2.  该组**SQL Server Reporting Services （2008年和 2008 R2）** 包含的链接和较旧的体系结构的管理页面  
   
 ## <a name="server-integration-architecture"></a>服务器集成体系结构  
  将报表服务器与 SharePoint 产品的实例集成后，项和属性将存储在 SharePoint 内容数据库中。 这在影响内容存储、保护及访问方式的各种服务器技术之间提供了更深层次的集成。  

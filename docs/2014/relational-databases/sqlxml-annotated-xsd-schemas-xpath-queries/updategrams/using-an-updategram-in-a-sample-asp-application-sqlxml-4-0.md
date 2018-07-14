@@ -1,5 +1,5 @@
 ---
-title: 示例 ASP 应用程序 (SQLXML 4.0) 中使用属的 Updategram |Microsoft 文档
+title: 在示例 ASP 应用程序 (SQLXML 4.0) 中使用 Updategram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 851d82413ec1959487132ec277d50e3f0a771b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 037b7fc64a53bdba26154933a19b3f147b8c1b3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260413"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在示例 ASP 应用程序中使用 Updategram (SQLXML 4.0)
   使用此 Active Server Pages (ASP) 应用程序，您可以更新 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 AdventureWorks 示例数据库的 Person.Contact 表中的客户信息。 应用程序执行以下操作：  
@@ -164,6 +164,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

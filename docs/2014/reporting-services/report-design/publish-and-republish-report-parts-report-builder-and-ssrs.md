@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220788"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>发布和重新发布报表部件（报表生成器和 SSRS）
   您可以使用默认设置将报表部件发布到默认位置中，或者，您可以编辑名称和说明之类的报表部件元数据，并且将其保存在报表服务器上的其他位置。 如果您具有正确的权限，还可以将报表部件保存到与报表服务器集成的 SharePoint 站点上。  
@@ -61,10 +61,10 @@ ms.locfileid: "36027146"
 >  如果您将其作为新的报表部件发布，则该报表部件将具有新的唯一 ID。 如果原始报表部件发生更改，它将不再接收更新。  
   
 ## <a name="see-also"></a>请参阅  
- [报表部件&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [报表部件的&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [报表部件和报表生成器中的数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [解决报表部件&#40;报表生成器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [检查更新或关闭更新&#40;报表生成器和 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [查找报表部件和设置默认文件夹&#40;报表生成器和 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [浏览查找报表部件和设置默认文件夹&#40;报表生成器和 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

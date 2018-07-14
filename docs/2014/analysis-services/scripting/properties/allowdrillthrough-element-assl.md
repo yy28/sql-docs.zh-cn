@@ -1,5 +1,5 @@
 ---
-title: AllowDrillThrough 元素 (ASSL) |Microsoft 文档
+title: AllowDrillThrough 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowDrillThrough element
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5ee132903b98c616ce756b423455302ca6e65f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f98b16569c3a7f4ab136be291d7bfd45698b5b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178864"
 ---
 # <a name="allowdrillthrough-element-assl"></a>AllowDrillThrough 元素 (ASSL)
   确定是否允许在父元素上执行钻取操作。  
@@ -62,10 +62,10 @@ ms.locfileid: "36026872"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`AllowDrillThrough`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.MiningModel>， <xref:Microsoft.AnalysisServices.MiningModelPermission>，和<xref:Microsoft.AnalysisServices.MiningStructurePermission>。  
+ 父级对应的元素`AllowDrillThrough`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.MiningModel>， <xref:Microsoft.AnalysisServices.MiningModelPermission>，和<xref:Microsoft.AnalysisServices.MiningStructurePermission>。  
   
 ## <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能  
- 在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，你可以定义`AllowDrillthrough`为挖掘结构和挖掘模型的权限。 当将此权限分配给某个角色后，任一该角色的成员即可查询数据挖掘模型，然后返回未包含在该模型中的结构列。 例如，您创建了一个只使用客户键列、客户收入列和客户采购列的模型。 如果对该模型启用钻取功能，则用户可返回挖掘结构其他列中的信息，如客户电子邮件或客户名称。  
+ 在中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，可以定义`AllowDrillthrough`为挖掘结构和挖掘模型的权限。 当将此权限分配给某个角色后，任一该角色的成员即可查询数据挖掘模型，然后返回未包含在该模型中的结构列。 例如，您创建了一个只使用客户键列、客户收入列和客户采购列的模型。 如果对该模型启用钻取功能，则用户可返回挖掘结构其他列中的信息，如客户电子邮件或客户名称。  
   
  因此，为了保护敏感数据，将列添加到挖掘结构时一定要谨慎。 另外，请仅在需要时才对某个结构授予 `AllowDrillthrough` 权限。  
   

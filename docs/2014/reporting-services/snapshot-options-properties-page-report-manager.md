@@ -1,5 +1,5 @@
 ---
-title: 快照选项属性页 （报表管理器） |Microsoft 文档
+title: 快照选项属性页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b89de53a1e17413f8ebe6869122ea9d4b61af6dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218867"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
   使用“快照选项”属性页可以计划将报表快照添加到报表历史记录的时间，以及设置报表历史记录中存储的报表快照的数量限制。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[其他数据库服务](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[其他数据库服务](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  
@@ -44,7 +44,7 @@ ms.locfileid: "36027151"
  **允许手动创建报表历史记录**  
  选中此复选框可以根据需要将快照添加到报表历史记录中。 选中此复选框后，“历史记录”页上将显示 **“新建快照”** 按钮。  
   
- **报表历史记录中存储所有报表执行快照**  
+ **在报表历史记录中存储所有报表执行快照**  
  选中此复选框可以根据报表执行属性将您生成的报表快照添加到报表历史记录中。 您可以设置报表执行属性以便从生成的快照运行报表。 设置此报表历史记录属性后，您可以将一段时间内生成的所有报表快照的副本放置在报表历史记录中，以跟踪这些报表快照。  
   
  **使用以下计划将快照添加到报表历史记录**  
@@ -65,7 +65,7 @@ ms.locfileid: "36027151"
  单击此选项可保存所做的更改。  
   
 ## <a name="see-also"></a>请参阅  
- [向报表历史记录添加快照&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [将快照添加到报表历史记录&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [创建、 修改和删除报表历史记录中的快照](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -1,5 +1,5 @@
 ---
-title: 嵌入和共享数据连接或数据源 （报表生成器和 SSRS） |Microsoft 文档
+title: 嵌入和共享的数据连接或数据源 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c75ca2d608e54df537ec5bc37f7f84312d5955c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83f7b150fb709e4b6716f8a49d802949a62e9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282633"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>嵌入和共享的数据连接或数据源（报表生成器和 SSRS）
   当运行查询或处理报表时，报表使用数据连接来检索报表的数据。 您可以从内置数据连接类型的列表中进行选择，以连接到关系数据库、多维数据库、Web 服务或一些其他数据源。 当描述数据连接时，需要使用以下术语。  
@@ -69,13 +69,13 @@ ms.locfileid: "36025659"
 |对于组件，要求这么做||![可用](media/greencheck.gif "Available")|  
   
 ## <a name="data-source-credentials"></a>数据源凭据  
- 凭据用于创建嵌入数据源、运行查询或在报表处理过程中检索数据。 数据源所有者确定您在访问数据时必须使用的凭据。 凭据在报表服务器、SharePoint 站点或报表创作环境中的本地计算机上独立于数据连接进行管理。 根据数据源的类型，可以保存凭据以避免提醒，也可以将其设置为提醒每个用户。 根据您是从计算机连接到数据源，还是从报表服务器连接到数据源，您需要的凭据可能不同。 有关详细信息，请参阅[在报表生成器中指定凭据](../../2014/reporting-services/specify-credentials-in-report-builder.md)和[数据连接、 数据源和 Reporting Services 中的连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+ 凭据用于创建嵌入数据源、运行查询或在报表处理过程中检索数据。 数据源所有者确定您在访问数据时必须使用的凭据。 凭据在报表服务器、SharePoint 站点或报表创作环境中的本地计算机上独立于数据连接进行管理。 根据数据源的类型，可以保存凭据以避免提醒，也可以将其设置为提醒每个用户。 根据您是从计算机连接到数据源，还是从报表服务器连接到数据源，您需要的凭据可能不同。 有关详细信息，请参阅[在报表生成器中指定凭据](../../2014/reporting-services/specify-credentials-in-report-builder.md)并[数据连接、 数据源和 Reporting Services 中的连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [报表创作概念&#40;报表生成器和 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Reporting Services 支持的数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

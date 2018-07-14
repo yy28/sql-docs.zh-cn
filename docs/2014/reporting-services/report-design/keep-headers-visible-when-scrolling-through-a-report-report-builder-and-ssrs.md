@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 42f5ca4942dc6d4a3e1d25805fffc2cd3e959860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 1248a6f7bb78fcea96cad08f379a30502e45f8a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175374"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
   呈现报表之后，为防止行和列标签滚动出视野之外，可以冻结行或列标题。  
@@ -64,7 +64,7 @@ ms.locfileid: "36027160"
   
      ![Tablix 成员属性](../media/grouppane-tablixmember-updated.png "Tablix Member properties")  
   
-4.  在属性窗格中，设置**FixedData**到`True`。  
+4.  在属性窗格中设置**FixedData**到`True`。  
   
 5.  对所有要在滚动时保持可见的相邻成员重复此过程。  
   

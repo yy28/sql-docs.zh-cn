@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aaeb492e40a17d274fa706431ee49243c88976da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c9e05afd85b4a16d97885d52cf35d96b54462f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180885"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
@@ -44,14 +44,14 @@ ms.locfileid: "36027545"
 -   [安装后任务](#PostInstallationTasks)：使用 SQL Server 安装程序完成安装 DQS 后执行这些任务。  
   
 > [!NOTE]  
->  本主题不包括有关从命令行运行安装程序的说明。 有关用于安装的命令行选项信息[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和客户端，请参阅[功能参数](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)中[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
+>  本主题不包括有关从命令行运行安装程序的说明。 有关命令行选项可用于安装信息[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和客户端，请参阅[功能参数](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)中[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ##  <a name="PreInstallationTasks"></a> 安装前任务  
  在安装 DQS 之前，确保您的计算机满足最低系统要求。 下表提供有关 DQS 组件的最低系统要求的信息：  
   
 |DQS 组件|最低系统要求|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：<br />-最小值： 2 GB<br />建议： 4 GB 或更多<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库引擎。 有关详细信息，请参阅[有关 SQL Server 数据库引擎](../../database-engine/sql-server-database-engine-overview.md)。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：<br />的最小： 2 GB<br />建议： 4 GB 或更多<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库引擎。 有关详细信息，请参阅[有关 SQL Server 数据库引擎](../../database-engine/sql-server-database-engine-overview.md)。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0（如果尚未安装，则在 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 安装期间安装）<br /><br /> Internet Explorer 6.0 SP1 或更高版本|  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ ms.locfileid: "36027545"
 > -   使用当前或以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 DQS 清除转换，您可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 版本的 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 有关升级现有 DQS 版本到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的信息，请参阅 [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
 > -   尽管 Microsoft Excel 不是用于安装数据质量客户端的先决条件，但 Microsoft Excel 2003 或更高版本必须安装在数据质量客户端计算机上以在客户端应用程序中执行各种操作，例如从某一 Excel 文件导入域值，或者映射到 Excel 文件中的源数据以便进行知识发现、清理或匹配活动。  
   
- 有关安装的最低系统要求的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，请参阅[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 有关安装的最低系统要求的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，请参阅[硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ##  <a name="DQSInstallation"></a> Data Quality Services 安装任务  
  您必须使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序安装 DQS 组件。 运行 SQL Server 安装程序时，必须完成一系列的安装向导页面，以根据您的要求选择适当的选项。 下表仅列出了安装向导页面中供选择的选项将对 DQS 安装产生影响的那些页面：  
@@ -75,7 +75,7 @@ ms.locfileid: "36027545"
 |操作|Description|相关主题|  
 |------------|-----------------|--------------------|  
 |完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装|运行 DQSInstaller.exe 文件。 在运行 DQSInstaller.exe 文件后：<br /><br /> 创建 DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。<br /><br /> 创建 ##MS_dqs_db_owner_login## 和 ##MS_dqs_service_login## 登录名。<br /><br /> dqs_administrator、dqs_kb_editor 和 dqs_kb_operator 角色在 DQS_MAIN 数据库中创建。<br /><br /> DQInitDQS_MAIN 存储过程在 master 数据库中创建。<br /><br /> DQS_install.log 文件通常在 C:\Program Files\Microsoft SQL Server\MSSQL12 中创建。*< 实例名称 >* \MSSQL\Log 文件夹。 该文件包含与对 DQSInstaller.exe 文件执行的操作有关的信息。<br /><br /> 如果 Master Data Services 数据库与 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]处于相同的 SQL Server 实例中，则会创建一个映射到 Master Data Services 登录名的用户，并向该用户授予对 DQS_MAIN 数据库的 dqs_administrator 角色。<br /><br /> <br /><br /> 此时就完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安装。|[运行 DQSInstaller.exe 以完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
-|将 DQS 角色授予用户|若要登录到[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]使用[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，用户必须对 DQS_MAIN 数据库具有任何以下三个角色： **dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_运算符**。 默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../dqs-security.md)。<br /><br /> 注意： 三个 DQS 角色不可用于 DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。|[向用户授予 DQS 角色](grant-dqs-roles-to-users.md)|  
+|将 DQS 角色授予用户|若要登录到[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]使用[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，用户必须对 DQS_MAIN 数据库具有任何以下三种角色： **dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_运算符**。 默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../dqs-security.md)。<br /><br /> 注意： 三个 DQS 角色不可用于 DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。|[向用户授予 DQS 角色](grant-dqs-roles-to-users.md)|  
 |使数据可供 DQS 操作使用|确保您可以访问用于 DQS 操作的源数据，并且可以将已处理的数据导出到数据库中的某个表。|[访问 DQS 操作数据](access-data-for-the-dqs-operations.md)|  
   
 ## <a name="see-also"></a>请参阅  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 125bcb31a9edb23e4ffe3ba05cdc46227da33cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201617"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
   数据流组件将转换应用到列数据、从源提取数据或将数据加载到目标中时，可能会发生错误。 错误常因意外数据值而发生。 例如，如果列包含字符串而不是数字，数据转换将失败；在数据库列中执行插入操作时，如果数据是日期而列的数据类型为数值，此操作将失败；如果因列值为零而导致数学运算无效，表达式将无法计算。  
@@ -72,7 +72,7 @@ ms.locfileid: "36026165"
 ## <a name="adding-the-error-description"></a>添加错误说明  
  默认情况下，错误输出提供了数值错误代码，并且通常包含发生错误的列的标识符。 通过使用脚本的单独一行来调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，可以使用脚本组件来包括其他列中的错误说明。  
   
- 可以将脚本组件添加到数据流的错误段中希望捕获其错误的数据流组件下游的任何位置，但通常在错误行被写入目标之前立即将其放入。 这样，脚本只查找已写入的错误行的说明。 例如，数据流的错误段可能纠正某些错误，并且不将这些行写入错误目标。 有关详细信息，请参阅[Enhancing an Error Output with Script Component](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+ 可以将脚本组件添加到数据流的错误段中希望捕获其错误的数据流组件下游的任何位置，但通常在错误行被写入目标之前立即将其放入。 这样，脚本只查找已写入的错误行的说明。 例如，数据流的错误段可能纠正某些错误，并且不将这些行写入错误目标。 有关详细信息，请参阅[增强错误输出使用脚本组件](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
 ### <a name="to-configure-an-error-output"></a>配置错误输出  
   

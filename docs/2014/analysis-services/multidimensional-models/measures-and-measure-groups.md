@@ -1,5 +1,5 @@
 ---
-title: 度量值和度量值组 |Microsoft 文档
+title: 度量值和度量值组 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
 - measures [Analysis Services], about measures
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74904af589aee642d0c83524f3a6dd71b3390371
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba5a5c5b9ebf6bf7dcbf3b5340db941c7f662cf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255629"
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
   多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
@@ -50,11 +50,11 @@ ms.locfileid: "36026431"
   
  每个多维数据集必须至少具有一个度量值，不过大多数都有很多个度量值，有时达到数百个。 从结构上来说，度量值通常映射到事实数据表中的源列，该列提供用于加载度量值的值。 或者，你还可以用 MDX 定义度量值。  
   
- 度量值与上下文相关，在上下文的数值数据上运行，该上下文由碰巧包含在查询中的任何维度成员确定。 例如，计算的度量值**分销商销售**将由`Sum`运算符，并且将添加查询中包含每个维度成员的销售总额。 无论查询指定单个产品、 汇总到一个类别，还是按时间或地域进行切分，该度量值都应生成对查询中所含维度有效的操作。  
+ 度量值与上下文相关，在上下文的数值数据上运行，该上下文由碰巧包含在查询中的任何维度成员确定。 例如，计算的度量值**分销商销售**将受`Sum`运算符，并且将每个维度成员包括在查询中添加的销售额。 无论查询指定单个产品、 汇总到一个类别，还是按时间或地域进行切分，该度量值都应生成对查询中所含维度有效的操作。  
   
  在此示例中，“分销商销售”沿“销售区域”层次结构聚合为各种级别。  
   
- ![数据透视表的度量值和维度调出](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "的度量值和维度调出的数据透视表")  
+ ![数据透视表的度量值和维度标注](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "度量值和维度调出的数据透视表")  
   
  当包含数值源数据的事实数据表也包含查询中使用的维度表的指针时，度量值将产生有效结果。 使用分销商销售示例时，如果存储了销售额的各行还存储了产品表、日期表或销售区域表的指针，则包含这些维度的成员的查询将会正确解析。  
   

@@ -1,5 +1,5 @@
 ---
-title: 地图视区属性对话框中，中心和缩放 |Microsoft 文档
+title: 地图视区属性对话框中，中心和缩放 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c3c75a22ee1a367f752cd310a19aebdb241c90eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33fb01fb1383edd45200f6d803960ff72c981a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255779"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>“地图视区属性”对话框 -&gt;“中心和缩放”
   选择 **“地图视区属性”** 对话框中的 **“中心和缩放”** 可以设置地图的中心视图和缩放系数。 指定地图数据源和要在报表中包含的地图的边界后，可以指定视图中心和缩放系数以进一步控制地图的显示。 根据用于指定中心和缩放值的不同方法，选项也会不同。 单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
@@ -56,10 +56,10 @@ ms.locfileid: "36025657"
  **缩放级别 （%）**  
  缩放系数。 默认值 100% 表示不放大。  
   
- **在此层上的中心视图**  
+ **此层上将视图居中**  
  指定层的名称。  
   
- **与此条件匹配，使地图元素的中心视图**  
+ **与此条件匹配的地图元素上将视图居中**  
  显示的只读字段用于将地图数据与分析数据匹配。 指定要匹配的值。 视图将自动在此地图元素上居中。 例如，NAME = TEXAS。 默认情况下，条件的数据类型是 String 且匹配区分大小写。  
   
  若要匹配具有不同数据类型的字段，必须编写一个计算结果为该数据类型的表达式。 例如，如果匹配字段为存储为整数的 5 个数字的邮政编码，则若要指定邮政编码 98053，必须使用表达式 =98053。  

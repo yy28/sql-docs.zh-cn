@@ -1,5 +1,5 @@
 ---
-title: 查询选项执行 （常规页） |Microsoft 文档
+title: 查询选项执行 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 63ce901d2b1e0bd91cdfedd54880c386abcfbe68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269803"
 ---
 # <a name="query-options-execution-general-page"></a>“查询选项”中的“执行”（“常规”页）
   使用此页可指定用于运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 若要访问此对话框，请右键单击“查询编辑器”窗口的主体，再单击“查询选项”。  

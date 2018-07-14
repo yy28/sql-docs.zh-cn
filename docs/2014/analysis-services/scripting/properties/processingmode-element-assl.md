@@ -1,5 +1,5 @@
 ---
-title: ProcessingMode 元素 (ASSL) |Microsoft 文档
+title: ProcessingMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4f302608db355a639d9fb82e024a7a72cf560b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273783"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode 元素 (ASSL)
   指示该实例应该在处理期间还是处理后进行索引和聚合。  
@@ -71,7 +71,7 @@ ms.locfileid: "36024900"
 |*正则*|该实例在处理过程中进行索引和聚合。|  
 |*LazyOptimizations*|该实例在处理后进行索引和聚合。|  
   
- 对应于的允许值为枚举`ProcessingMode`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ProcessingMode>。  
+ 与允许的值相对应的枚举`ProcessingMode`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ProcessingMode>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

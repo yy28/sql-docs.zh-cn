@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio.NET 中创建 Visual C# SMO 项目 |Microsoft 文档
+title: 在 Visual Studio.NET 中创建 Visual C# SMO 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,36 +14,36 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96b2f52b1d993c02536b70e39ba7d1868643a04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c63f02cc9496a09744f403eaac9ec8dd84cc38b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270663"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中创建 Visual C# SMO 项目
   本节介绍了如何生成简单的 SMO 控制台应用程序。  
   
  此示例导入命名空间，这样，程序即可以引用 SMO 类型。 可以选择导入 `Agent` 命名空间。 当编写使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的程序时使用此命名空间。 需要使用 `Common` 命名空间来建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的安全连接。 使用 `SqlClient` 命名空间处理 SQL 异常错误。  
   
-### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>在 Visual Studio.NET 中创建 Visual C# SMO 项目  
+### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>在 Visual studio.net 中创建 Visual C# SMO 项目  
   
 1.  启动 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]（或 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]）。  
   
 2.  在“文件”菜单中，单击“新建项目”。 此时将显示“新建项目”  对话框。  
   
-3.  在**项目类型**对话框中，选择**Visual C#**，然后选择**Windows**。 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板窗格中，选择**Windows 应用程序**。  
+3.  在中**项目类型**对话框中，选择**Visual C#**，然后选择**Windows**。 在中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板窗格中，选择**Windows 应用程序**。  
   
-4.  （可选）在**名称**字段中，键入新的应用程序的名称  
+4.  （可选）在中**名称**字段中，键入新应用程序的名称  
   
-5.  选择 Visual C# 应用程序类型。 有关示例，请按照，选择**控制台应用程序**。  
+5.  选择 Visual C# 应用程序类型。 有关示例，请执行中，选择**控制台应用程序**。  
   
 6.  在“项目”菜单中，选择“添加引用”。 此时将显示“添加引用”对话框。  
   
-7.  单击**浏览**，查找中的 SMO 程序集[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]文件夹，，然后选择以下文件。 这些文件是构建一个 SMO 应用程序至少需要的文件：  
+7.  单击**浏览**，找到中的 SMO 程序集[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]文件夹，，然后选择以下文件。 这些文件是构建一个 SMO 应用程序至少需要的文件：  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7159085aacfe569af079c9f7c457a460df960189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb55b8db046e3d4fd76143f37f883b458e8bab64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244997"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自动创建代码 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以为 Code 属性或任何其他数值属性自动生成数值。 自动生成代码时，不会阻止您输入其他代码值；实际上只是自动设置初始值。  
@@ -37,9 +37,9 @@ ms.locfileid: "36025717"
 ## <a name="deleting-automatically-generated-values"></a>删除自动生成的值  
  在管理员启用为 Code 属性自动生成值之后，用户可能会意外删除具有要重复使用的 Code 值的成员。 此时将显示错误消息“该成员代码已被某个已删除的成员使用”。 下面是两种可能的解决方案：  
   
--   在**版本管理**功能区域中，管理员可以撤消此事务已删除的成员时发生。 但是，这意味着将还原前一个成员的所有属性以及在层次结构和集合中的成员身份。 有关详细信息，请参阅[撤消事务&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。  
+-   在中**版本管理**功能区域中，管理员可以撤消删除成员时发生的事务。 但是，这意味着将还原前一个成员的所有属性以及在层次结构和集合中的成员身份。 有关详细信息，请参阅[撤消事务&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。  
   
--   管理员可以使用临时过程永久删除成员。 有关详细信息，请参阅[停用或删除成员通过使用临时过程&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
+-   管理员可以使用临时过程永久删除成员。 有关详细信息，请参阅[停用或通过使用临时过程删除成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

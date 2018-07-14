@@ -1,5 +1,5 @@
 ---
-title: 在结构数据 （数据挖掘基础教程） 上使用钻取 |Microsoft 文档
+title: 对结构数据 （数据挖掘基础教程） 中使用钻取 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 71a8fa3ac449c8d9427ea138206fbd0c1ea8f1ef
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: ec32e6f46f63c6de342b6b4cab63bb8e6556bfb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198347"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>对结构数据使用钻取（数据挖掘基础教程）
-  属于其广告活动，[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]发送一封邮件给潜在的客户在 34-40 时代人口统计。 市场部已决定，它们还想要将电子邮件发送到客户购买自行车从[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]五年以上。 在本课中，您将标识拥有旧自行车的客户并检索其联系信息。 模型中不包括此信息，但结构中包括此信息。 若要检索联系信息，您需要首先确保已对结构启用了钻取，然后使用钻取来显示目标客户的姓名和地址。  
+  作为其广告活动，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]发送邮寄给潜在的客户在 34 至 40 时代人口统计。 市场部已决定，他们还想要将电子邮件发送到客户购买自行车从[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]五年以上。 在本课中，您将标识拥有旧自行车的客户并检索其联系信息。 模型中不包括此信息，但结构中包括此信息。 若要检索联系信息，您需要首先确保已对结构启用了钻取，然后使用钻取来显示目标客户的姓名和地址。  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>对挖掘模型启用钻取  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]上**挖掘模型**选项卡上的数据挖掘设计器中，右键单击**TM_Decision_Tree**模型，并选择**属性**。  
+1.  在中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然后在**挖掘模型**选项卡上的数据挖掘设计器中，右键单击**TM_Decision_Tree**模型并选择**属性**。  
   
 2.  在“属性”窗口中，单击 **AllowDrillthrough**，再选择 **True**。  
   
-3.  挖掘模型选项卡中，右键单击该模型，然后选择**进程模型**。  
+3.  在挖掘模型选项卡中，右键单击该模型，并选择**过程模型**。  
   
  有关详细信息，请参阅[钻取查询&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
@@ -40,9 +40,9 @@ ms.locfileid: "36312455"
   
 2.  选择**TM_Decision_Tree**模型从**挖掘模型**列表。  
   
-3.  更改**后台**值赋给`1`。 这样做之后，您将只显示与购买了自行车的客户相关的模型部分。  
+3.  更改**背景**值设为`1`。 这样做之后，您将只显示与购买了自行车的客户相关的模型部分。  
   
-4.  从 **“查看器”** 列表中，选择“Microsoft 树查看器”。 这将强制使用新的筛选条件刷新查看器。 然后，找到**Age > = 34 和 < 41**节点并右击节点。  
+4.  从 **“查看器”** 列表中，选择“Microsoft 树查看器”。 这将强制使用新的筛选条件刷新查看器。 然后，找到**Age > = 34 和 < 41**节点，右键单击该节点。  
   
 5.  选择 **“钻取”**，然后选择 **“模型和结构列”** 以打开 **“钻取”** 窗口。  
   

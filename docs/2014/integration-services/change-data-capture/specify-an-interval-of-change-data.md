@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50b8ca15207eaa89726ed2abe90bb8d862b2f266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ecc113b3ed38461a277996497f73bca7cd83a4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267233"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
-  在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些终结点是`datetime`值并将存储在包变量中以更高版本在包中使用。  
+  在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些终结点`datetime`值，将存储在包变量中以更高版本在包中使用。  
   
 > [!NOTE]  
 >  有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
@@ -38,20 +38,20 @@ ms.locfileid: "36025500"
   
 2.  在 **“变量”** 窗口中创建以下变量：  
   
-    1.  创建的变量`datetime`数据类型，以保存间隔的起始点。  
+    1.  创建具有变量`datetime`数据类型，以保存间隔的起始点。  
   
          以下示例使用变量名 ExtractStartTime。  
   
-    2.  创建与另一个变量`datetime`要保存间隔的结束点的数据类型。  
+    2.  创建与另一个变量`datetime`数据类型，以保存间隔的结束点。  
   
          以下示例使用变量名 ExtractEndTime。  
   
  如果在执行多个子包的主包中计算端点，则可使用父包变量配置将这些变量的值传递给各个子包。 有关详细信息，请参阅 [执行包任务](../control-flow/execute-package-task.md) 和 [在子包中使用变量和参数的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>计算变更数据的起始点和结束点  
- 为间隔端点设置包变量之后，即可计算这些端点的实际值并将这些值映射到相应的包变量中。 因为这些端点为 `datetime` 值，所以您必须使用可以计算或处理 `datetime` 值的函数。 这两个[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言和 TRANSACT-SQL 具有使用的函数`datetime`值：  
+ 为间隔端点设置包变量之后，即可计算这些端点的实际值并将这些值映射到相应的包变量中。 因为这些端点为 `datetime` 值，所以您必须使用可以计算或处理 `datetime` 值的函数。 这两个[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言和 TRANSACT-SQL 都具有使用的函数`datetime`值：  
   
- 函数中[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的表达式语言`datetime`值  
+ 中的函数[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的表达式语言`datetime`值  
  -   [DATEADD &#40;SSIS 表达式&#41;](../expressions/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF &#40;SSIS 表达式&#41;](../expressions/datediff-ssis-expression.md)  
@@ -75,9 +75,9 @@ ms.locfileid: "36025500"
   
  在了解变更间隔是固定的还是随机的之后，即可计算端点：  
   
--   **计算起始日期和时间**。 将上一次加载的结束日期和时间作为当前的起始日期和时间。 如果对增量加载使用固定的时间间隔，则可以通过使用计算此值`datetime`函数的 TRANSACT-SQL 或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言。 否则，您可能需要保持两个执行之间的端点，并使用执行 SQL 任务或脚本任务来加载上一个端点。  
+-   **计算起始日期和时间**。 将上一次加载的结束日期和时间作为当前的起始日期和时间。 如果对增量加载使用固定的时间间隔，则可以通过使用计算该值`datetime`函数的 TRANSACT-SQL 或的[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言。 否则，您可能需要保持两个执行之间的端点，并使用执行 SQL 任务或脚本任务来加载上一个端点。  
   
--   **计算结束日期和时间**。 如果对增量加载使用固定间隔，则可将当前的结束日期和时间作为起始日期和时间的偏移量来计算。 同样，您可以通过使用计算此值`datetime`函数的 TRANSACT-SQL 或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言。  
+-   **计算结束日期和时间**。 如果对增量加载使用固定间隔，则可将当前的结束日期和时间作为起始日期和时间的偏移量来计算。 同样，您可以通过使用计算此值`datetime`函数的 TRANSACT-SQL 或的[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言。  
   
  在下面的过程中，变更间隔使用固定间隔，并假定无例外的情况下增量加载包每天运行。 否则，缺失间隔的变更数据会丢失。 此间隔的起始点是前天午夜，即 24 小时和 48 小时之前。 此间隔的结束点是昨天午夜，即，昨天晚上，0 和 24 小时之前。  
   

@@ -1,5 +1,5 @@
 ---
-title: 层次结构元素 (CSDLBI) |Microsoft 文档
+title: Hierarchy 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f2846424fdf7104c95cb4a56ac836b57583bf0cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250787"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 元素 (CSDLBI)
   Hierarchy 元素是表中可彼此链接以形成层次结构的各个字段的逻辑容器。 Hierarchy 元素派生自 CSDL 的 Member 元素，并已扩展为支持在商业智能数据模型中创建的层次结构。  
@@ -87,7 +87,7 @@ ms.locfileid: "36025512"
   
 ## <a name="see-also"></a>请参阅  
  [了解表格对象模型](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [了解 DAX 中的父-子层次结构函数](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
- [配置&#40;所有&#41;属性层次结构级别](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [了解 DAX 中父子层次结构的函数](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
+ [配置&#40;所有&#41;属性层次结构的级别](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

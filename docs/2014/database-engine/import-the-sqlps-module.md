@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 8c20daf51270931609fb876b9a7035da343d19f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c64ba9da7884b1ccb82dd31480d60638c8d952ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192467"
 ---
 # <a name="import-the-sqlps-module"></a>导入 SQLPS 模块
   从 PowerShell 管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的建议的方法是将 `sqlps` 模块导入到 Windows PowerShell 2.0 环境中。 该模块将加载并注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理单元和可管理性程序集。  
@@ -42,7 +42,7 @@ ms.locfileid: "36027730"
 -   使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可管理性对象模型（例如 Microsoft.SqlServer.Management.Smo）管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象。  
   
 > [!NOTE]  
->  在两个 SQL Server cmdlet（`Encode-Sqlname` 和 `Decode-Sqlname`）的名称中使用的动词与 Windows PowerShell 2.0 的批准的动词不匹配。 这不会影响其操作，但 Windows PowerShell 将引发警告时`sqlps`模块导入到会话。  
+>  在两个 SQL Server cmdlet（`Encode-Sqlname` 和 `Decode-Sqlname`）的名称中使用的动词与 Windows PowerShell 2.0 的批准的动词不匹配。 这没有任何影响对其操作，但 Windows PowerShell 将引发警告时`sqlps`模块导入到会话。  
   
 ###  <a name="Security"></a> 安全性  
  默认情况下，Windows PowerShell 会在脚本执行策略设置为 **Restricted**（即，禁止运行任何 Windows PowerShell 脚本）的情况下运行。 若要加载 `sqlps` 模块，您可以使用 `Set-ExecutionPolicy` cmdlet 来运行已签名脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 Windows PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx)（运行 Windows PowerShell 脚本）。  

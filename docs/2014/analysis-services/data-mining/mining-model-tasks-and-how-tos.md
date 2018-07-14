@@ -1,5 +1,5 @@
 ---
-title: 挖掘模型任务和操作指南 |Microsoft 文档
+title: 挖掘模型任务和操作指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1ce8f3b6441c7b1ac09a2c4e5de9b151a14112c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80f6f7d87f1e7ae3ffaf9fc7b17254a42675b192
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178914"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>挖掘模型任务和操作指南
   可以使用 **中的数据挖掘设计器的** “挖掘模型” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡，管理和处理挖掘结构中的挖掘模型。  

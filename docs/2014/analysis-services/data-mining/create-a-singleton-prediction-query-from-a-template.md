@@ -1,5 +1,5 @@
 ---
-title: 从模板创建单独预测查询 |Microsoft 文档
+title: 从模板创建单独预测查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224587"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
   如果您具有一个要用于预测的模型，但不希望将该模型映射到外部输入数据集或生成大容量预测，则单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  
@@ -73,26 +73,26 @@ AS [t]
   
 5.  在 **“挖掘模型”** 行，键入显示在 **“对象资源管理器”** 中的挖掘模型列表中的挖掘模型的名称。  
   
-     本主题中，启动时显示的代码示例**挖掘模型**行设置为该名称， `TM_Decision_Tree`。  
+     对于本主题中，开始时显示的示例代码**挖掘模型**行设置名称，为`TM_Decision_Tree`。  
   
 6.  在 **“值”** 行中，键入您要对其进行预测的新数据值。  
   
-     本主题中，启动时显示的代码示例**值**行设置为`2`来预测自行车购买行为根据家庭子女数。  
+     对于本主题中，开始时显示的示例代码**值**行设置为`2`来预测自行车购买行为根据家庭子女数。  
   
 7.  在 **“列”** 行中，键入新数据映射到的挖掘模型中列的名称。  
   
-     本主题中，启动时显示的代码示例**列**行设置为`Number Children at Home`。  
+     对于本主题中，开始时显示的示例代码**列**行设置为`Number Children at Home`。  
   
     > [!NOTE]  
     >  使用 **“指定模板参数的值”** 对话框时，不必将列名称用方括号括起来。 括号会自动添加。  
   
-8.  保留**输入的别名**作为`t`。  
+8.  将保留**输入的别名**作为`t`。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. 在查询文本窗格中，查找指示语法错误的逗号和省略号下的红色波形曲线。 删除省略号，并添加任何其他想要的查询条件。 如果不需要添加任何其他条件，请删除逗号。  
   
-     对于本主题开头显示的示例代码，其他查询条件设置为`'45' as [Age]`。  
+     在本主题开头所示的示例代码，对于其他查询条件设置为`'45' as [Age]`。  
   
 11. 单击 **“执行”**。  
   

@@ -1,5 +1,5 @@
 ---
-title: 报表查看器 Web 部件在 SharePoint 站点上 |Microsoft 文档
+title: 在 SharePoint 站点上的报表查看器 Web 部件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,16 +18,16 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6be315ce2da4f17ab821a97c3a82f615e84cc181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87498b7eca136eba037a8454416b875f5690cae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198477"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 站点上的报表查看器 Web 部件
-  报表查看器 Web 部件是由用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序安装的自定义 Web 部件。 您可以使用该 Web 部件查看、导航、打印和导出配置为在 SharePoint 集成模式下运行的报表服务器上的报表。 报表查看器 Web 部件是由处理的报表定义 (.rdl) 文件与关联[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表服务器。 不能将该部件与在其他软件产品中创建的其他报表文档一起使用。  
+  报表查看器 Web 部件是由用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序安装的自定义 Web 部件。 您可以使用该 Web 部件查看、导航、打印和导出配置为在 SharePoint 集成模式下运行的报表服务器上的报表。 报表查看器 Web 部件是由处理的报表定义 (.rdl) 文件与相关联[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表服务器。 不能将该部件与在其他软件产品中创建的其他报表文档一起使用。  
   
  若要安装该 Web 部件，必须运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序的安装程序。 您不应单独安装或卸载该 Web 部件。 它是外接程序的一部分，只能通过外接程序安装包进行安装。 报表查看器 Web 部件文件名为 ReportViewer.dwp。 该文件位于 Program Files\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver 文件夹，并且不应移到其他文件夹中。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36028292"
  **“操作”** 菜单上的 **“导出”** 显示与报表服务器上所部署的呈现扩展插件相关联的应用程序格式。 若要确定特定格式的可用性，可以在报表服务器上添加或删除呈现扩展插件，也可以修改配置设置以删除列表中的特定导出格式。 还可以在报表服务器上指定配置设置以控制哪些格式可用。 通过添加和修改某一特定呈现扩展插件的配置设置，可以修改相应格式的默认行为。  
   
 ### <a name="print-action-on-the-report-toolbar"></a>报表工具栏上的打印操作  
- **打印**上**操作**菜单是通过提供的自定义打印功能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 当你单击**打印**，ActiveX 客户端打印控件下载到客户端计算机。 大多数情况下，单击 **“打印”** 的用户必须拥有本地计算机的管理员权限。 常见的做法是仅允许拥有管理员权限的用户下载 ActiveX 控件。 可以使用 SharePoint 管理中心启用或禁用客户端打印控件的下载。  
+ **打印**上**操作**菜单，通过提供的自定义打印功能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 当您单击**打印**，ActiveX 客户端打印控件将下载到客户端计算机。 大多数情况下，单击 **“打印”** 的用户必须拥有本地计算机的管理员权限。 常见的做法是仅允许拥有管理员权限的用户下载 ActiveX 控件。 可以使用 SharePoint 管理中心启用或禁用客户端打印控件的下载。  
   
 ### <a name="find-action-on-the-report-toolbar"></a>报表工具栏上的查找操作  
  **“操作”** 菜单上的 **“查找”** 提供移动到报表中的目标位置的方法。 可以通过键入要查找的词或短语搜索报表内容。 搜索项的最大值为 256 个字符。 搜索在报表中查找匹配值时，焦点将移动到包含该值的报表部分。  
@@ -73,7 +73,7 @@ ms.locfileid: "36028292"
  默认情况下，报表以整页模式打开。 整页模式将显示可提供页面导航、搜索以及其他功能的工具栏。 您可以自定义 Web 部件来更改外观或默认行为。  
   
 ## <a name="see-also"></a>请参阅  
- [安装或卸载 Reporting Services 外接程序为 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [将报表查看器 Web 部件添加到 Web 页&#40;的 Reporting Services SharePoint 集成模式&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [将报表查看器 Web 部件添加到 Web 页&#40;Reporting Services SharePoint 集成模式下&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177824"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![哈希联接基于磁盘的表的查询计划。](../../database-engine/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
 哈希联接基于磁盘的表的查询计划。  
   
- 在此查询中，Order 表的行是使用聚集索引检索的。 `Hash Match`物理运算符现在用于`Inner Join`。 Order 的聚集的索引不按 CustomerID，排序的因此`Merge Join`需要一个排序运算符，这会影响性能。 请注意 `Hash Match` 运算符的相对开销 (75%) 和上一示例中 `Merge Join` 运算符的开销 (46%)。 优化器考虑`Hash Match`运算符还在前面的示例中，但结论`Merge Join`运算符可以提供更好的性能。  
+ 在此查询中，Order 表的行是使用聚集索引检索的。 `Hash Match`物理运算符现在用于`Inner Join`。 Order 的聚集的索引不按 CustomerID，排序，因此`Merge Join`需要一个排序运算符，这会影响性能。 请注意 `Hash Match` 运算符的相对开销 (75%) 和上一示例中 `Merge Join` 运算符的开销 (46%)。 优化器考虑`Hash Match`运算符还在上一示例中，但结论`Merge Join`运算符可以提供更好的性能。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
  下图显示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中针对即席查询的查询处理流程：  
@@ -174,7 +174,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   内存优化表不支持聚集索引。 相反，每个内存优化表必须至少有一个非聚集索引，因此内存优化表上的所有索引可高效访问表中的所有列，而不必将其存储在索引中或引用聚集索引。  
   
--   此计划包含 `Hash Match` 而不是 `Merge Join`。 Order 和 Customer 表的索引均为哈希索引，因此没有顺序。 A`Merge Join`会要求排序运算符，这会降低性能。  
+-   此计划包含 `Hash Match` 而不是 `Merge Join`。 Order 和 Customer 表的索引均为哈希索引，因此没有顺序。 一个`Merge Join`会要求排序运算符，这会降低性能。  
   
 ## <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程  
  本机编译存储过程是编译为机器代码的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程，而不是由查询执行引擎解释。 以下脚本创建一个本机编译存储过程来运行示例查询（来自“示例查询”部分）。  
@@ -209,7 +209,7 @@ END
   
  该过程如下，  
   
-1.  用户问题`CREATE PROCEDURE`语句[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+1.  用户发出`CREATE PROCEDURE`语句[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 2.  分析器和 algebrizer 为该过程创建处理流程，并为存储过程中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询创建查询树。  
   
@@ -226,11 +226,11 @@ END
   
  本机编译存储过程的调用如下所述：  
   
-1.  用户问题`EXEC` *usp_myproc*语句。  
+1.  用户发出`EXEC` *usp_myproc*语句。  
   
 2.  分析器提取名称和存储过程参数。  
   
-     如果已准备该语句，例如使用`sp_prep_exec`，分析器不需要提取过程名称，并在执行时的参数。  
+     如果准备的语句，例如使用`sp_prep_exec`，分析器不需要提取过程名称和在执行时的参数。  
   
 3.  内存中 OLTP 运行时查找存储过程的 DLL 入口点。  
   
@@ -304,7 +304,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   用索引查找替换了对 IX_CustomerID 的全文检索扫描。 这样只需扫描 5 行，而全文检索扫描需要扫描 830 行。  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>内存优化表的统计信息和基数  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 维护内存优化表的列级统计的信息。 此外，它还保留表的实际行数。 但是，与基于磁盘的表相比，它并不自动更新内存优化表的统计信息。 因此，在表中进行重大更改之后需要手动更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 维护内存优化表的列级统计信息。 此外，它还保留表的实际行数。 但是，与基于磁盘的表相比，它并不自动更新内存优化表的统计信息。 因此，在表中进行重大更改之后需要手动更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [内存优化表](memory-optimized-tables.md)  

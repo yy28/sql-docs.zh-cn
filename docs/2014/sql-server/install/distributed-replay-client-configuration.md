@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay 客户端配置 |Microsoft 文档
+title: Distributed Replay 客户端配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 330334330fd27459f19d3746187150e20900bd93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 83863c8bc5547ec0839eed7e0883de4d22c4f693
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168138"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay 客户端配置
   使用 **安装向导的** “Distributed Replay 客户端配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以指定您希望向其授予针对 Distributed Replay 客户端服务的管理权限的用户。  
@@ -28,7 +28,7 @@ ms.locfileid: "36026469"
   
 ## <a name="options"></a>“常规”  
  **控制器名称**  
- 这是一个可选参数，默认值为\<*空白*>。  
+ 这是一个可选参数，默认值是\<*空白*>。  
   
  输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 请注意以下事项：  
   

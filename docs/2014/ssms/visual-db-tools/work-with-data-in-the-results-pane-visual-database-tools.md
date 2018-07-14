@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249507"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用“结果”窗格中的数据 (Visual Database Tools)
   在运行查询或视图之后，将在“结果”窗格中显示结果。 然后您就可以对这些结果进行处理。 例如，您可以添加和删除行、输入或更改数据以及在大型结果集中轻松导航。  
@@ -119,12 +119,12 @@ ms.locfileid: "36025634"
 ### <a name="what-can-not-be-represented-fully"></a>不能完全呈现的内容  
  从数据库返回“结果”窗格的内容很大程度上受您所使用的数据源的提供程序控制。 “结果”窗格并不总是能转换所有数据库管理系统中的数据。 在以下情况下便是如此。  
   
--   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此，由表示*\<二进制数据 >* 或*Null*。  
+-   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由*\<二进制数据 >* 或*Null*。  
   
--   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果具有更高的精度的数据类型的数据，数据可能会被截断，或可能由*\<无法读取数据 >*。  
+-   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果数据具有更高的精度的数据类型的数据可能会被截断或可能由*\<无法读取数据 >*。  
   
 ## <a name="see-also"></a>请参阅  
- [对查询执行基本操作&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [执行基本的查询操作&#40;可视化数据库工具&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b35d7e5bc36dec9dce01cbd22d07d5f4a46676d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 58b44f220715654a3a9d37271aeb7ff017355ffa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286563"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>选择工具箱项（“维护任务”页）
   “自定义工具箱”对话框的此选项卡可显示已经在你的计算机上注册的所有维护任务组件的列表，可以通过此选项卡更改工具箱中所显示的组件。 可以从“工具”菜单中打开“自定义工具箱”对话框。 若要对组件列表排序，请选择相应的列标题。  

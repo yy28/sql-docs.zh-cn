@@ -1,5 +1,5 @@
 ---
-title: 更改挖掘模型的属性 |Microsoft 文档
+title: 更改挖掘模型的属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28e417708981a7184caa62ae74fe681397411d78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed77c0d87fc6fb62497cc68c52dd3fabeb50d2ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279805"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>更改挖掘模型的属性
-  某些挖掘模型属性应用于整个模型，而其他一些模型属性应用于单独的列。 将应用于整个模型的属性的示例将`Drillthrough`属性，用于指定是否应可用于查询事例数据，与`Description`属性。 应用于列的属性包括 `Usage` 和 `ModelingFlags`；它们控制列中的数据在模型内的使用方式。  
+  某些挖掘模型属性应用于整个模型，而其他一些模型属性应用于单独的列。 应用于整个模型的属性的示例`Drillthrough`属性，用于指定是否应将可用于查询事例数据，并`Description`属性。 应用于列的属性包括 `Usage` 和 `ModelingFlags`；它们控制列中的数据在模型内的使用方式。  
   
  下面的模型属性具有可用于创建表达式或配置复杂模型属性的高级编辑器。 以下属性提供：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36025625"
 2.  在屏幕右侧的 **“属性”** 窗口中，突出显示与要更改的属性对应的值，然后输入新的值。  
   
     > [!NOTE]  
-    >  如果列用法设置为`Ignore`、**属性**的列的窗口为空。  
+    >  如果列的用法设置为`Ignore`，则**属性**列窗口为空白。  
   
      在设计器中选择一个不同的元素后，新值即生效。  
   

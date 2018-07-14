@@ -1,5 +1,5 @@
 ---
-title: 管理连接和会话 (XMLA) |Microsoft 文档
+title: 管理连接和会话 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192499"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理连接和会话 (XMLA)
-  *Statefulness*是在此期间服务器将保留的标识和方法调用之间的客户端的上下文的条件。 *无状态*是在此期间服务器不会记住的标识和客户端上下文方法调用完成后的条件。  
+  *有状态性*是在此期间服务器将保留标识和上下文的方法调用之间的客户端的条件。 *无状态*是在此期间服务器不会记住标识和上下文的客户端方法调用完成后一情况。  
   
- 若要提供 statefulness，XML Analysis (XMLA) 支持*会话*允许一系列语句一起执行。 例如，创建要在后续查询中使用的计算成员就是这样的一系列语句。  
+ 若要提供有状态，XML for Analysis (XMLA) 支持*会话*允许一系列语句一起执行。 例如，创建要在后续查询中使用的计算成员就是这样的一系列语句。  
   
  通常，XMLA 中的会话遵循 OLE DB 2.6 规范中所述的以下行为：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36028045"
   
 -   可以在一个会话的上下文中运行多个命令。  
   
--   XMLA 上下文中的事务的支持是通过使用发送的提供程序特定命令[执行](../xmla/xml-elements-methods-execute.md)方法。  
+-   支持 XMLA 上下文中的事务是通过使用发送的特定于提供程序的命令[Execute](../xmla/xml-elements-methods-execute.md)方法。  
   
  XMLA 定义了一种方法，用于在 Web 环境中以与分布式创作和版本管理 (DAV) 协议所使用的方法类似的模式支持会话，以便在松散耦合环境中实现锁定。 此实现遵循 DAV，允许访问接口由于各种原因而终止会话（例如超时或连接错误）。 支持会话时，Web 服务必须能够知道必须重新启动的已中断命令集，并准备好进行处理。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36028045"
 |EndSession|若要终止会话，请使用此标头。 值区域中必须包含会话 ID。|  
   
 > [!NOTE]  
->  会话 ID 并不保证会话保持有效。 如果会话过期时 （例如，如果超时或连接已丢失），可以选择提供程序结束，并回滚该会话的操作。 因此，来自客户端的对会话 ID 的所有后续方法调用都将失败，返回错误以通知会话无效。 客户端应处理此情况，并准备从头开始重新发送这些会话方法调用。  
+>  会话 ID 并不保证会话保持有效。 如果会话过期 （例如，如果在超时或连接已丢失），可以选择提供程序终止并回滚该会话的操作。 因此，来自客户端的对会话 ID 的所有后续方法调用都将失败，返回错误以通知会话无效。 客户端应处理此情况，并准备从头开始重新发送这些会话方法调用。  
   
 ## <a name="legacy-code-example"></a>旧代码示例  
  下面的示例演示如何支持会话。  
@@ -77,7 +77,7 @@ ms.locfileid: "36028045"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  从提供程序的 SOAP 响应消息包括会话 ID 在返回的标头区域中，使用 XMLA 标头标记\<SessionId >。  
+2.  从提供程序的 SOAP 响应消息将会话 ID 包含在返回标头区域中，使用 XMLA 标头标记\<SessionId >。  
   
     ```  
     <SOAP-ENV:Header>  

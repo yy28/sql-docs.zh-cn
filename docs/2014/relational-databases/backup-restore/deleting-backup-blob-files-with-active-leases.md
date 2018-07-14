@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3c46becd5ae766627e96ad935900f063c4389bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256683"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
   在备份到 Windows Azure 存储区或从中还原时，SQL Server 获得无限期租约以锁定对 blob 的独占访问。 当成功完成备份或还原过程时，释放租约。 如果备份或还原失败，备份过程将尝试清除所有无效 blob。 但是，如果由于持续很长时间的网络连接故障而导致备份失败，备份过程可能无法再次访问 blob 且 blob 可能保持孤立状态。 这意味着在释放租约前，不能写入或删除 blob。 本主题说明如何释放租约和删除 blob。  
@@ -43,7 +42,7 @@ ms.locfileid: "36026140"
 3.  **删除 Blob：** 要删除具有活动租约的 blob，必须首先中断租约。  
   
 ###  <a name="Code_Example"></a> PowerShell 脚本示例  
- **\*\* 重要\* \*** 如果正在运行 PowerShell 2.0，则可能遇到加载 Microsoft WindowsAzure.Storage.dll 程序集的问题。 我们建议您升级到 Powershell 3.0 以解决该问题。 您也可以为 PowerShell 2.0 使用以下解决方法：  
+ **\*\* 重要\* \*** 如果正在运行 PowerShell 2.0，您可能必须加载 Microsoft WindowsAzure.Storage.dll 程序集的问题。 我们建议您升级到 Powershell 3.0 以解决该问题。 您也可以为 PowerShell 2.0 使用以下解决方法：  
   
 -   使用以下语句创建或修改 powershell.exe.config 文件以在运行时加载 .NET 2.0 和 .NET 4.0 程序集：  
   

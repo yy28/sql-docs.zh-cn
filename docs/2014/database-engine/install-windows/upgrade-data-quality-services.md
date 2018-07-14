@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1feb8292020b61d00705e662bda80d2b3af4eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ecbf266c87e5aebe47f0f7af9c7a244c0e8dfb20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171428"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
   本主题的信息介绍如何将现有 Data Quality Services (DQS) 安装升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 在将 DQS 中的数据质量服务器升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，您还必须升级 DQS 数据库架构。  
@@ -27,7 +27,7 @@ ms.locfileid: "36025751"
 > [!IMPORTANT]  
 >  -   您必须先备份 DQS 数据库，然后才能升级 DQS，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   通过使用当前或早期版本的数据质量客户端或 Integration Services 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DQS 清除转换 [，你可以连接](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) 版数据质量服务器，执行你的数据质量任务。  
-> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 你可以下载[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版本的主数据服务外接程序从 excel[此处](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 您可以下载[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版本的 Master Data Services 外接程序从 excel[此处](http://go.microsoft.com/fwlink/?LinkId=328664)。  
   
 ##  <a name="Prerequisites"></a> 先决条件  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36025751"
   
     2.  在左窗格中，单击 **“安装”**。  
   
-    3.  在右窗格中，单击**从 SQL Server 2005、 SQL Server 2008、 SQL Server 2008 R2 或 SQL Server 2012 升级**。  
+    3.  在右窗格中，单击**从 SQL Server 2005 中，SQL Server 2008、 SQL Server 2008 R2 或 SQL Server 2012 升级**。  
   
     4.  完成安装向导。  
   

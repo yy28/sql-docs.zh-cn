@@ -1,5 +1,5 @@
 ---
-title: ReportParameter 元素 (ASSL) |Microsoft 文档
+title: ReportParameter 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58aeafeaee114c1d08d0ad8b0119bee2dc5d5dea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197817"
 ---
 # <a name="reportparameter-element-assl"></a>ReportParameter 元素 (ASSL)
-  包含的名称和值的参数传递给[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]在运行时的报表。  
+  包含名称和值的参数传递给[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]在运行时的报表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36027756"
 ## <a name="remarks"></a>Remarks  
  `Value` 元素必须包含一个多维表达式 (MDX) 表达式。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ReportParameter>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ReportParameter>。  
   
 ## <a name="see-also"></a>请参阅  
  [ReportAction 数据类型&#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c681fed24d521c978946c46caeb4a9bbe1124bd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272333"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报是一种数据驱动的警报解决方案，用于在恰当的时间向您通知令您感兴趣或对您重要的报表数据。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。  
@@ -116,14 +116,14 @@ ms.locfileid: "36025169"
 ##  <a name="InstallAlerting"></a> 安装数据警报  
  数据警报功能仅当在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时才可用。 在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，安装程序会自动创建警报数据库（用于存储数据警报定义和警报元数据）和两个 SharePoint 页（用于管理警报和向 SharePoint 站点添加数据警报设计器）。 没有要执行的特殊步骤或在安装过程中为警报设置的选项。  
   
- 如果你想要了解有关安装[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在 SharePoint 模式下，包括[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]共享服务中的新增[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序必须创建并配置，然后可以使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能，请参阅[安装 Reporting Services SharePoint 模式用于 SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) MSDN 库中。  
+ 如果你想要了解有关安装的详细信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在 SharePoint 模式下，包括[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]共享服务中的新增[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]并[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序，必须创建并配置，然后可以使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) MSDN 库中。  
   
- 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅[配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md)和[启动、 停止、 暂停、 继续、 重新启动数据库引擎、 SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅[配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md)并[启动、 停止、 暂停、 继续、 重新启动数据库引擎、 SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
  可以使用 SharePoint 管理中心中的 **“设置订阅和警报”** 页来查看 SQL Server 代理是否正在运行，并创建和下载之后要运行以向 SQL Server 代理授予权限的自定义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 通过使用 PowerShell 还可以生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
 ##  <a name="ConfigAlert"></a> 配置数据警报  
- 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，只要在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的设置（包括数据警报）就将在报表服务器配置文件 (rsreportserver.config) 和 SharePoint 配置数据库之间分布。 当您将创建服务应用程序作为安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的一个步骤时，会自动创建 SharePoint 配置数据库。 有关详细信息，请参阅[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)和[Reporting Services Configuration Files](report-server/reporting-services-configuration-files.md)。  
+ 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，只要在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的设置（包括数据警报）就将在报表服务器配置文件 (rsreportserver.config) 和 SharePoint 配置数据库之间分布。 当您将创建服务应用程序作为安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的一个步骤时，会自动创建 SharePoint 配置数据库。 有关详细信息，请参阅[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)并[Reporting Services Configuration Files](report-server/reporting-services-configuration-files.md)。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报的设置包括清除警报数据和元数据的间隔和通过电子邮件发送数据警报消息的重试次数。 您可以更新配置文件和配置数据库，以便为数据警报设置使用不同的值。  
   
@@ -199,9 +199,9 @@ ms.locfileid: "36025169"
 ##  <a name="Permissions"></a> 数据警报的权限  
  在可以针对报表创建数据警报前，必须有权在 SharePoint 站点上运行该报表和创建警报。 若要了解有关报表权限的详细信息，请参见以下内容。  
   
--   [基于报表生成数据馈送&#40;报表生成器和 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [从报表生成数据馈送&#40;报表生成器和 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [SharePoint 站点上为报表服务器项设置权限&#40;的 Reporting Services SharePoint 集成模式&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [SharePoint 站点上为报表服务器项设置权限&#40;Reporting Services SharePoint 集成模式下&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报支持两个权限级别：信息工作者和警报管理员。 下表列出了相关的 SharePoint 权限和用户任务。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "36025169"
 |GenerateAlert|警报：处理的事件数 - GenerateAlert|  
 |DeliverAlert|警报：处理的事件数 - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的性能计数器。 有关详细信息，请参阅[reportserver: Service 和 reportserversharepoint: Service 性能对象的性能计数器](report-server/performance-counters-reportserver-service-performance-objects.md)， [MSRS 2014 Web Service 和 MSRS 2014 Windows 性能计数器服务性能对象&#40;纯模式&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md)，和[MSRS 2014 Web Service SharePoint Mode 和 MSRS 2014 Windows Service SharePoint Mode 性能对象的性能计数器&#40;SharePoint模式&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的性能计数器。 有关详细信息，请参阅[reportserver: Service 和 reportserversharepoint: Service 性能对象的性能计数器](report-server/performance-counters-reportserver-service-performance-objects.md)， [MSRS 2014 Web Service 和 MSRS 2014 Windows 性能计数器服务性能对象&#40;本机模式&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md)，并[MSRS 2014 Web Service SharePoint Mode 和 MSRS 2014 Windows Service SharePoint Mode 性能对象的性能计数器&#40;SharePoint模式&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   
 ##  <a name="SupportForSSL"></a> 对 SSL 的支持  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以使用 HTTP SSL（安全套接字层）服务建立到报表服务器或 SharePoint 站点的加密连接。  
@@ -280,13 +280,13 @@ ms.locfileid: "36025169"
 ##  <a name="UserInterface"></a> 数据警报用户界面  
  数据警报提供用于管理警报的 SharePoint 页以及用于创建和编辑数据警报定义的设计器。  
   
--   **数据警报设计器** ，在其中创建或编辑数据警报定义。 有关详细信息，请参阅[数据警报设计器](../../2014/reporting-services/data-alert-designer.md)，[在数据警报设计器中创建数据警报](create-a-data-alert-in-data-alert-designer.md)和[编辑数据警报在警报设计器中](edit-a-data-alert-in-alert-designer.md)。  
+-   **数据警报设计器** ，在其中创建或编辑数据警报定义。 有关详细信息，请参阅[数据警报设计器](../../2014/reporting-services/data-alert-designer.md)，[在数据警报设计器中创建数据警报](create-a-data-alert-in-data-alert-designer.md)并[编辑数据警报在警报设计器中](edit-a-data-alert-in-alert-designer.md)。  
   
 -   **数据警报管理器** ，在其中查看数据警报列表、删除警报以及打开警报以进行编辑。 数据警报管理器有两个版本：一个可供用户管理他们创建的警报，另一个可供管理员管理属于站点用户的警报。  
   
-     有关管理你创建的数据警报的详细信息，请参阅[Data Alert Manager for SharePoint 用户](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)和[数据警报管理器中的管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
+     有关管理您创建的数据警报的详细信息，请参阅[SharePoint 用户的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)并[在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
   
-     有关管理站点上的所有数据警报的详细信息，请参阅[警报管理员的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)和[数据警报管理器中的 SharePoint 站点上 Manage All Data Alerts](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
+     有关管理站点上的所有数据警报的详细信息，请参阅[向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)并[数据警报管理器中的 SharePoint 站点上管理所有数据警报](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
 -   **设置订阅和数据警报** ，在其中查看 Reporting Services 是否可以针对数据警报使用 SQL Server 代理，是否可以下载允许访问 SQL Server 代理的脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   

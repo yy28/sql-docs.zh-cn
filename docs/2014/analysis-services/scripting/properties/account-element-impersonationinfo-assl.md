@@ -1,5 +1,5 @@
 ---
-title: 帐户元素 (ImpersonationInfo) (ASSL) |Microsoft 文档
+title: 帐户元素 (ImpersonationInfo) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Account element
 ms.assetid: aa3a1281-e42a-4926-875b-e6b81f4599c3
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 454e46b3515ebd6b5ad8e8193edbc2a9aea14562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4382d0e252fe7c44e7de12832e5a8a8c599e6515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237527"
 ---
 # <a name="account-element-impersonationinfo-assl"></a>Account 元素 (ImpersonationInfo) (ASSL)
-  包含的用户帐户的名称[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)数据类型。  
+  包含用户帐户的名称[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36024662"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 值`Account`元素，以及值[密码](password-element-assl.md)元素，用于模拟目的如果的值[ImpersonationMode](impersonationmode-element-assl.md)任何元素的元素派生自`ImpersonationInfo`数据类型设置为*ImpersonateAccount*。  
+ 值`Account`元素，以及的值[密码](password-element-assl.md)元素，用于模拟目的如果的值[ImpersonationMode](impersonationmode-element-assl.md)任何元素派生自`ImpersonationInfo`数据类型设置为*ImpersonateAccount*。  
   
 ## <a name="see-also"></a>请参阅  
  [DataSourceImpersonationInfo 元素&#40;ASSL&#41;](impersonationinfo-element-assl.md)   

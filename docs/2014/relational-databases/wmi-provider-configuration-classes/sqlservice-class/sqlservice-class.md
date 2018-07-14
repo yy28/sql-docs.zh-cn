@@ -1,5 +1,5 @@
 ---
-title: SqlService 类 |Microsoft 文档
+title: SqlService 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - SqlService class
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edb7b1cc97f7dc1906214ec00f10a476c3e5569e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6a0cb192de294c831a884c4b11676d1db3a380e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179564"
 ---
 # <a name="sqlservice-class"></a>SqlService 类
   [SqlService 类](sqlservice-class.md)表示的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。  
   
- [SqlService 类](sqlservice-class.md)用于以编程方式管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。 与[SqlService 类](sqlservice-class.md)对象，你可以执行以下任务：  
+ [SqlService 类](sqlservice-class.md)用来以编程方式管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。 与[SqlService 类](sqlservice-class.md)对象，你可以执行以下任务：  
   
 -   连接到服务。  
   

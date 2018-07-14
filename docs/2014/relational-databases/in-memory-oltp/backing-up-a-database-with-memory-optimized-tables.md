@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6d9f0a4fd663cfcd6bf3e3bad827429bc2f0133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 38a2dbeed7220f0300015ba8741795603856f898
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279393"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
   内存优化表在定期数据库备份过程中进行备份。 对于基于磁盘的表，数据和差异文件对的 CHECKSUM 在数据库备份过程中进行验证，以检测存储损坏。  
@@ -43,7 +43,7 @@ ms.locfileid: "36025694"
 |IN TRANSITION TO TOMBSTONE|仅文件元数据|  
 |TOMBSTONE|仅文件元数据|  
   
- 具有一个或多个内存优化表的数据库备份的大小通常大于其在内存中的大小，但小于磁盘上存储。 额外大小取决于删除的行数以及处于状态“合并源”和 REQUIRED FOR BACKUP/HA 下的检查点文件对数，从而间接取决于工作负荷。 有关检查点文件对的状态的说明，请参阅[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ 具有一个或多个内存优化表的数据库备份的大小通常大于其在内存中的大小，但小于磁盘上存储。 额外大小取决于删除的行数以及处于状态“合并源”和 REQUIRED FOR BACKUP/HA 下的检查点文件对数，从而间接取决于工作负荷。 有关检查点文件对状态的说明，请参阅[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
 ### <a name="estimating-size-of-full-database-backup"></a>估计完整数据库备份的大小  
   

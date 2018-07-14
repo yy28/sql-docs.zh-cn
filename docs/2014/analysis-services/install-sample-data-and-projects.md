@@ -1,5 +1,5 @@
 ---
-title: 安装适用于 Analysis Services 多维建模教程 Sample Data and Projects |Microsoft 文档
+title: 安装 Analysis Services 多维建模教程示例数据和项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2d1aca34ac45c88452b83444c7287595c22bb453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218267"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安装 Analysis Services 多维建模教程的示例数据和项目
   可使用本主题中提供的说明和链接来安装 Analysis Services 教程中使用的所有数据和项目文件。  
   
 ## <a name="step-1-install-sql-server-software"></a>步骤 1：安装 SQL Server 软件  
- 本教程中的课程假定您已安装以下软件。 所有以下软件都使用 SQL Server 安装介质进行安装。 为了简化部署，您可以在一台计算机上安装所有功能。 若要安装这些功能，请运行 SQL Server 安装程序并从“功能选择”页中选择它们。 有关详细信息，请参阅[从安装向导安装 SQL Server 2014&#40;安装&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+ 本教程中的课程假定您已安装以下软件。 所有以下软件都使用 SQL Server 安装介质进行安装。 为了简化部署，您可以在一台计算机上安装所有功能。 若要安装这些功能，请运行 SQL Server 安装程序并从“功能选择”页中选择它们。 有关详细信息，请参阅[从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 -   数据库引擎  
   

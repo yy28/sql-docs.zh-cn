@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - published reports [Reporting Services], managing
@@ -18,13 +18,13 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3428d1e16bf2531c0c339835ed083d2cce272490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212357"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。  
@@ -129,7 +129,7 @@ ms.locfileid: "36026721"
   
 |运算|文件类型|  
 |---------------|---------------|  
-|上载|若要上载资源，如果报表服务器在本机模式下运行，则必须使用报表管理器，如果报表服务器在 SharePoint 集成模式下运行，则必须使用 SharePoint 站点上的应用程序页。 有关详细信息，请参阅[上载文件或报表&#40;报表管理器&#41;](../reports/upload-a-file-or-report-report-manager.md)或 [将文档上载到 SharePoint 库&#40;在 SharePoint 模式下的 Reporting Services&#41;].../ upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md）。|  
+|上载|若要上载资源，如果报表服务器在本机模式下运行，则必须使用报表管理器，如果报表服务器在 SharePoint 集成模式下运行，则必须使用 SharePoint 站点上的应用程序页。 有关详细信息，请参阅[上传文件或报表&#40;报表管理器&#41;](../reports/upload-a-file-or-report-report-manager.md)或 [文档上传到 SharePoint 库&#40;在 SharePoint 模式下的 Reporting Services&#41;].../ upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md）。|  
 |发布|项目中不是报表、报表部件、数据源或数据集的所有文件都作为资源上载。 若要发布资源，请将现有项添加到报表设计器的一个项目中，然后将该项目发布到报表服务器。|  
   
  所有资源最初都是文件系统中的文件，只是随后上载到报表服务器上而已。 除 ASP.NET 施加的 4 MB 的默认文件大小限制之外，对于可以上载的文件类型没有任何限制。 不过，具有等效 MIME 类型的文件类型比其他类型更适于作为资源发布到报表服务器。 例如，在用户单击基于 HTML 和 JPG 文件的资源时，这些资源将在浏览器窗口中打开，以网页形式呈现 HTML 文件，并以图像形式呈现 JPG 文件，这样，用户就可以看到。 相反，对于不具有等效 MIME 类型的资源（如桌面应用程序文件），则不能在浏览器窗口中呈现。  

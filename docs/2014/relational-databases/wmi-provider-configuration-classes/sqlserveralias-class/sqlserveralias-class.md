@@ -1,5 +1,5 @@
 ---
-title: SqlServerAlias 类 |Microsoft 文档
+title: SqlServerAlias 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01e66c9362a8e1c91bd43e4d6821e12f93d23152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68976bc9c8683554ac58a0744196ecfa5bc7e689
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274273"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 类
-  [SqlServerAlias 类](sqlserveralias-class.md)类表示的服务器连接别名。  
+  [SqlServerAlias 类](sqlserveralias-class.md)类表示服务器连接别名。  
   
  出现以下两种情况时需要服务器连接别名：  
   
--   客户端连接到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络传输不是默认网络传输。  
+-   客户端连接到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在不是默认网络传输的网络传输。  
   
 -   客户端连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例侦听备用命名管道。  
   

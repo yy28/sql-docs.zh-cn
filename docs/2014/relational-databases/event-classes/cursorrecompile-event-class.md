@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2b0cbd43a0ceb21f7e7ac518450cba5c75e654d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d59c35129a5b032c29b549efbdcdeb95215dcfab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190447"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 事件类
   **CursorRecompile** 事件类描述了应用程序编程接口 (API) 游标中发生的游标重新编译事件。 游标重新编译事件将在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 由于架构更改而重新编译 Transact-SQL 游标时发生。  

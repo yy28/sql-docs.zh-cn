@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 702850c72f684c1e9a48871557f89e86da67c2b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6ab017df400de3a9894a64108d97cbd97fd3374c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218977"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
   运算符是一种符号，用来表示要应用到表达式中一个或多个字词的操作。 表达式中支持下列类别的运算符：算术、比较、串联、逻辑或位，以及移位。  
@@ -51,7 +51,7 @@ ms.locfileid: "36027158"
 |>=|大于等于。|  
 |=|等于。|  
 |<>|不等于。|  
-|Like|确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。<br /><br /> 以下列表字符可用作通配符：<br /><br /> **%**： 零个或多个字符的任意字符串。<br /><br /> **_**： 的任何单个字符。<br /><br /> **[]**： 的任何单个指定范围内的字符 (例如，[a f]) 或设置 （例如，[字母以外]）。<br /><br /> **[^]**： 的任何单个字符不在指定范围内的 (例如，[^ a-f]) 或设置 (例如，[^ 字母以外])。|  
+|Like|确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。<br /><br /> 以下列出了一个字符可用作通配符：<br /><br /> **%**： 零个或多个字符任意字符串。<br /><br /> **_**： 任何单个字符。<br /><br /> **[]**： 任何单个字符指定范围内的 (例如，[a-f]) 或集合 （例如 [aeiou]）。<br /><br /> **[^]**： 任何单个字符不在指定范围内的 (例如，[^ a-f]) 或设置 (例如，[^ aeiou])。|  
 |Is|比较两个对象引用。|  
   
 ### <a name="string-concatenation"></a>字符串串联  

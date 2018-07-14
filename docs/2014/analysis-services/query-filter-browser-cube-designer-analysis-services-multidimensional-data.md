@@ -1,5 +1,5 @@
 ---
-title: 查询和筛选器 （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 查询和筛选器 （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93055c2220f4dfa7b32293ee88178defbf1d0f6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250969"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查询和筛选（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   多维数据集设计器中 **“浏览器”** 选项卡的这一区域包含查询和筛选区域，可帮助您从多维数据集中选择用于浏览或查询的数据。 您可以按需添加任意多个多维数据集对象，然后在数据区域中查看结果，或使用“在 Excel 中分析”功能将结果导出到报表，以便演示最终用户将如何查看数据。  
@@ -48,9 +48,9 @@ ms.locfileid: "36025818"
 |**In**|结果限制为在 **“筛选表达式”** 中选择的命名集。|  
 |**不在**|结果限制为排除在 **“筛选表达式”** 中所选命名集之外的成员。|  
 |**包含**|结果限制为成员名称包含 **“筛选表达式”** 中的字符串的成员。|  
-|**开头**|结果限制为成员名称以 **“筛选表达式”** 中的字符串开头的成员。|  
-|**范围 （含）**|结果限制为在 **“筛选表达式”** 中选择的范围。|  
-|**范围 （独占）**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
+|**开始使用**|结果限制为成员名称以 **“筛选表达式”** 中的字符串开头的成员。|  
+|**范围 （包括）**|结果限制为在 **“筛选表达式”** 中选择的范围。|  
+|**范围 （不包括）**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
 |**MDX**|结果限制为在“筛选表达式”中设置的多维表达式 (MDX) 表达式。|  
   
  **筛选表达式**  

@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4da3c1af787d41c7b1b49ba3edc6b2a191d3ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277073"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
   本主题介绍 SQL Server 备份和还原到 Windows Azure Blob 服务的最佳做法和故障排除提示。  
@@ -52,13 +51,13 @@ ms.locfileid: "36025724"
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>备份到 URL 或从 URL 还原故障排除  
  以下内容提供了在备份到 Windows Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
   
- 若要避免不受支持的选项或限制造成的错误，查看限制列表和支持中的备份和还原命令信息[Windows Azure Blob 存储服务使用 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)文章。  
+ 若要避免由于不受支持的选项或限制导致的错误，查看限制列表以及备份和还原命令中的信息的支持[SQL Server 备份和还原使用 Windows Azure Blob 存储服务](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)一文。  
   
  **身份验证错误：**  
   
 -   WITH CREDENTIAL 是一个新选项，在备份到 Windows Azure Blob 存储服务或从中还原时需要该选项。 与凭据有关的失败可能包括：  
   
-     中指定的凭据`BACKUP`或`RESTORE`不存在的命令。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
+     中指定的凭据`BACKUP`或`RESTORE`命令不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
   
     ```  
     IF NOT EXISTS  
@@ -98,7 +97,7 @@ ms.locfileid: "36025724"
 -   从压缩备份中还原时，您可能看到以下错误：  
   
     -   **发生 SqlException 3284。严重性：16 状态：5**  
-        **在设备上消息的文件标记https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak未对齐。使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
+        **在设备上的消息文件标记https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak未对齐。使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
   
          要修复此错误，请重新发布指定了 `BACKUP` 的 `BLOCKSIZE = 65536` 语句。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36025724"
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。   下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   
--   在编写"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失败： 备份到 URL 从远程终结点收到了异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+-   尽情涂鸦"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失败： 备份到 URL 从远程终结点收到了异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
   
 -   文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。无法从远程终结点收集错误。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36025724"
   
      备份数据库异常终止。  
   
--   BackupIoRequest::ReportIoError： 备份设备上写入失败http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+-   Backupiorequest:: Reportioerror 备份设备上写入失败http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
   
  如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
   
@@ -155,10 +154,10 @@ ms.locfileid: "36025724"
   
     ```  
   
-2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器中，将配置文件置于此处： *C:\Program Files\Microsoft SQL Server\MSSQL12。\<InstanceName > \MSSQL\Binn*。  
+2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器上，配置文件将置于以下位置： *C:\Program Files\Microsoft SQL Server\MSSQL12。\<实例名 > \MSSQL\Binn*。  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>对 SQL Server 托管备份到 Windows Azure 进行故障排除  
- 由于 SQL Server 托管备份构建在“备份到 URL”上，因此上面各节中介绍的故障排除提示适用于使用 SQL Server 托管备份的数据库或实例。  在中详细介绍了有关故障排除 SQL Server Managed Backup to Windows Azure 信息[故障排除 SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
+ 由于 SQL Server 托管备份构建在“备份到 URL”上，因此上面各节中介绍的故障排除提示适用于使用 SQL Server 托管备份的数据库或实例。  中详细介绍了有关 SQL Server 托管备份到 Windows Azure 进行故障排除信息[故障排除 SQL Server 托管备份到 Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [从 Windows Azure 中存储的备份还原](restoring-from-backups-stored-in-microsoft-azure.md)  

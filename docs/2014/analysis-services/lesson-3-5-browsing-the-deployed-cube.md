@@ -1,5 +1,5 @@
 ---
-title: 浏览已部署的多维数据集 |Microsoft 文档
+title: 浏览已部署的多维数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b804f31df461225d5325de63568b303bdc475e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96480e0303dbb3176ea9fd17b14536e84d9006c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253399"
 ---
 # <a name="browsing-the-deployed-cube"></a>浏览已部署的多维数据集
   在下面的任务中，将浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集。 因为我们的分析将比较多个维度的度量值，所以，您将使用 Excel 数据透视表来浏览您的数据。 使用数据透视表使您可以将客户、日期和产品信息放置于不同的轴上，这样，您可以在查看时看到在特定的时间段、客户人口统计信息和产品系列上 Internet 销售是如何变化的。  
@@ -46,7 +46,7 @@ ms.locfileid: "36026032"
   
      此时会按区域和产品系列显示 2006 年 2 月份的 Internet 销售，如下图所示。  
   
-     ![Internet 销售区域和产品线](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet 销售区域和产品线")  
+     ![按区域和产品系列的 Internet sales](../../2014/tutorials/media/l3-cube-browser-finish.gif "按区域和产品系列的 Internet 销售额")  
   
 ## <a name="next-lesson"></a>下一课  
  [第 4 课：定义高级属性和维度属性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  

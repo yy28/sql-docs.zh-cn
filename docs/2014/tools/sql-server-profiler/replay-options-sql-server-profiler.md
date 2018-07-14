@@ -1,5 +1,5 @@
 ---
-title: 重播选项 （SQL Server 事件探查器） |Microsoft 文档
+title: 重播选项 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffceaa31c30aec5a0d0911017a45fde592c427c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ce23580af011e536ed33a5612952b7bc2177480c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251189"
 ---
 # <a name="replay-options-sql-server-profiler"></a>重播选项 (SQL Server Profiler)
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播捕获的跟踪之前，请在 **“重播配置”** 对话框中指定重播选项。 若要启动此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中打开重播跟踪文件或表，然后在 **“重播”** 菜单上单击 **“开始”**。 有关重播跟踪需要哪些权限的信息，请参阅 [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)。  
@@ -84,6 +84,6 @@ ms.locfileid: "36026513"
 ## <a name="see-also"></a>请参阅  
  [重播跟踪](replay-traces.md)   
  [重播要求](replay-requirements.md)   
- [重播跟踪的注意事项&#40;SQL Server 事件探查器&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
+ [重播跟踪的注意事项&#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

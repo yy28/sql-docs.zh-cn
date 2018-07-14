@@ -1,5 +1,5 @@
 ---
-title: 属性关系图 （属性关系设计器选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 属性关系图 （属性关系设计器选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a8d895599cf800b7ca0e6b882f3d1451800b0db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208117"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性关系图（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“属性关系”** 选项卡上的工具栏紧下方的窗格查看属性关系图，以及创建、修改和删除属性关系。  

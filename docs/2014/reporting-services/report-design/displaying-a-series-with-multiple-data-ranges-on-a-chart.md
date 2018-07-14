@@ -1,5 +1,5 @@
 ---
-title: 显示在图表 （报表生成器和 SSRS） 上具有多个数据区域的系列 |Microsoft 文档
+title: 在图表 （报表生成器和 SSRS） 中显示包含多个数据区域的序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: deba57aaef05f5859f7a241fee0a3ca17c8362c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251289"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）
   图表将使用序列中的最小值和最大值计算轴刻度。 图表中的序列包含多个数据区域时，数据点将会变得模糊，在图表中只能轻松地看到少量数据点。 例如，假设报表显示 30 天内的每日销售总额。  
@@ -65,11 +65,11 @@ ms.locfileid: "36025868"
  具有刻度分隔线的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 ## <a name="see-also"></a>请参阅  
- [在图表上的多个序列&#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [图表上的多个序列&#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [三维、 凹凸效果和图表中的其他效果&#40;报表生成器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [三维效果、 凹凸效果和其他效果在图表中的&#40;报表生成器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [在饼图上将小切片收集&#40;报表生成器和 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [收集饼图上的小切片&#40;报表生成器和 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

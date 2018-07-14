@@ -1,5 +1,5 @@
 ---
-title: 将数据传输 |Microsoft 文档
+title: 将数据传输 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - transferring data
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc0b4f2e79564bbdc6ceaabb088cdb070636a3d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 70224f60f7bd6da21b757cdff265749c9ac35979
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186134"
 ---
 # <a name="transferring-data"></a>传输数据
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> 类是一个实用工具类，它提供用于传输对象和数据的工具。  
   
  通过在目标服务器上执行生成的脚本可以传输数据库架构中的对象。 使用动态创建的 DTS 包传输 <xref:Microsoft.SqlServer.Management.Smo.Table> 数据。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象除包含 DMO 中的 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象的所有功能之外，还包含其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。 但是，在 SMO 中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、<xref:Microsoft.SqlServer.Management.Smo.Transfer>对象使用[SQLBulkCopy](http://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 来传输数据。 同样，用于执行数据传输的方法和属性驻留在 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象中，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象中。 将功能从实例类移到实用工具类符合轻型对象模型，因为仅在需要特定任务的代码时才加载它们。  
+ <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象除包含 DMO 中的 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象的所有功能之外，还包含其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。 但是，在中的 SMO [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，则<xref:Microsoft.SqlServer.Management.Smo.Transfer>对象使用[SQLBulkCopy](http://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 将数据传输。 同样，用于执行数据传输的方法和属性驻留在 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象中，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象中。 将功能从实例类移到实用工具类符合轻型对象模型，因为仅在需要特定任务的代码时才加载它们。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象不支持向 <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> 低于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例版本的目标数据库传输数据。  
   

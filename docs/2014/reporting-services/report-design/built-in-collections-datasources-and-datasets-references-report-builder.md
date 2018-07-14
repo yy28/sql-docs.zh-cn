@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3a2113a46869312d1954115c60723dcb51c1d262
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168148"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合引用（报表生成器和 SSRS）
   `DataSources` 集合表示在报表中使用的所有数据源。 同样，`DataSets`集合表示在报表中的所有数据源的所有数据集。 使用 **“报表数据”** 窗格显示报表数据集的层次结构视图，报表数据集按照它们所引用的数据源组织。 如果这些集合中包含引用，则在预览报表时将不会看到值。 这些集合只有在将报表发布到报表服务器之后才可用。  
@@ -36,7 +36,7 @@ ms.locfileid: "36026274"
 |`Type`|`String`|数据源数据访问接口的类型。 例如， `SQL`。|  
   
 ## <a name="datasets"></a>DataSets  
- `DataSets` 集合表示在报表定义中引用的数据集。 您可以在文本框中选择包括报表查询，以便希望知道报表中确切数据的用户可以看到原始命令文本。 此集合在 **“预览”** 模式下不可用。 下表描述的成员`DataSets`集合。  
+ `DataSets` 集合表示在报表定义中引用的数据集。 您可以在文本框中选择包括报表查询，以便希望知道报表中确切数据的用户可以看到原始命令文本。 此集合在 **“预览”** 模式下不可用。 下表介绍的成员`DataSets`集合。  
   
 |**成员**|`Type`|**Description**|  
 |----------------|--------------|---------------------|  

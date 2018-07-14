@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: d444739180c4326dd68af08be0a382c0e0ff6cb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f7ec9327a35e9ba110dd9d93db53c50b5c130f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227807"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>在数据库引擎 PowerShell 中管理身份验证
-  默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件在连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例时使用 Windows 身份验证。 你可以使用 SQL Server 身份验证，通过定义 PowerShell 虚拟驱动器，或通过指定`–Username`和`–Password`参数`Invoke-Sqlcmd`。  
+  默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件在连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例时使用 Windows 身份验证。 可以使用 SQL Server 身份验证，通过定义 PowerShell 虚拟驱动器，或者通过指定`–Username`并`–Password`参数`Invoke-Sqlcmd`。  
   
 1.  **开始之前：**  [权限](#Permissions)  
   
@@ -44,14 +44,14 @@ ms.locfileid: "36027278"
   
     3.  使用 `new-object` 来创建凭据对象。  
   
-    4.  使用`new-psdrive`若要创建具有提供的凭据的虚拟驱动器。  
+    4.  使用`new-psdrive`具有提供的凭据创建的虚拟驱动器。  
   
 2.  调用函数来创建具有提供的凭据的虚拟驱动器。  
   
 ### <a name="example-virtual-drive"></a>示例（虚拟驱动器）  
  此示例创建名为 **sqldrive** 的函数，您可使用该函数来创建与指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证登录名和实例相关联的虚拟驱动器。  
   
- **sqldrive** 函数提示您输入登录名的密码，并在您键入密码时屏蔽密码。 然后，每当你使用更改目录命令 (`cd`) 若要使用的虚拟驱动器名称连接到的路径，所有操作都执行使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]你在创建驱动器时提供的身份验证登录凭据。  
+ **sqldrive** 函数提示您输入登录名的密码，并在您键入密码时屏蔽密码。 然后，每当你使用更改目录命令 (`cd`) 来使用虚拟驱动器名称连接到的路径，所有操作都执行使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在创建驱动器时提供的身份验证登录凭据。  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  

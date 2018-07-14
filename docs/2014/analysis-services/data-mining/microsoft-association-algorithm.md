@@ -1,5 +1,5 @@
 ---
-title: Microsoft 关联算法 |Microsoft 文档
+title: Microsoft 关联算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -31,22 +31,22 @@ helpviewer_keywords:
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4dfed3abb4cff8826c42770996a2ea78ab4b324a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165668"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是指 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的关联算法，对建议引擎非常有用。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐产品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。 市场篮分析的示例，请参阅[第 3 课： 生成市场篮方案&#40;中间 Data Mining Tutorial&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)在数据挖掘教程。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是指 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的关联算法，对建议引擎非常有用。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐产品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。 市场篮分析的示例，请参阅[第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)中的数据挖掘基础教程。  
   
  关联模型基于包含各事例的标识符及各事例所包含项的标识符的数据集生成。 事例中的一组项称为“项集 ”。 关联模型由一系列项集和说明这些项在事例中如何分组的规则组成。 算法标识的规则可用于根据客户购物车中已有的项来预测客户将来可能购买的产品。 以下关系图显示了项集中的一系列规则。  
   
- ![一组规则对于关联模型](../media/association.gif "一套规则对于关联模型")  
+ ![对于关联模型的规则的一组](../media/association.gif "一组对于关联模型的规则")  
   
  正如该关系图中所示， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法可能会在数据集中找到许多规则。 该算法使用两个参数（support 和 probability）来说明项集以及该算法生成的规则。 例如，假定 X 和 Y 表示购物车中的两个项，则 support 参数是数据集中同时包含这两个项（X 和 Y）的事例的数目。通过将 support 参数与用户定义的 *MINIMUM_SUPPORT* 和 *MAXIMUM_SUPPORT,* 参数结合使用，该算法可控制生成的项集数。 probability 参数（也称为置信度）表示数据集中既包含 X 也包含 Y 的一部分事例。通过将 probability 参数与 *MINIMUM_PROBABILITY* 参数结合使用，该算法可控制生成的规则数。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36026664"
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
   
 ## <a name="performance"></a>“性能”  
- 创建项集和对关联进行计数的过程可能会非常耗时。 尽管[!INCLUDE[msCoName](../../includes/msconame-md.md)]关联规则算法使用的优化技术以节省空间和进行更快地处理，你应该了解，如下所示的情况下可能会出现性能问题：  
+ 创建项集和对关联进行计数的过程可能会非常耗时。 尽管[!INCLUDE[msCoName](../../includes/msconame-md.md)]关联规则算法使用优化技术来节省空间并使处理更快，您应该知道，如下所示的情况下可能会出现性能问题：  
   
 -   数据集很大，包含许多单个项。  
   

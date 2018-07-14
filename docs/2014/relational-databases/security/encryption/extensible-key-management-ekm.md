@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02590440104caba60d6e102ece0844f9424595ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288663"
 ---
 # <a name="extensible-key-management-ekm"></a>可扩展的密钥管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据加密功能以及*可扩展的密钥管理* (EKM)，同时使用“Microsoft 加密 API”(MSCAPI) 提供程序进行加密和生成密钥。 在临时密钥容器中可创建用于数据和密钥加密的加密密钥，并且必须先将它们从访问接口中导出，然后才能存储在数据库中。 这种方法使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
@@ -39,7 +38,7 @@ ms.locfileid: "36025462"
  当在 Azure VM 中运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以使用存储在 [Azure 密钥保管库](http://go.microsoft.com/fwlink/?LinkId=521401)中的密钥。 有关详细信息，请参阅 [使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md)能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
   
 ## <a name="ekm-configuration"></a>EKM 配置  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有版本中都未提供可扩展密钥管理。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有版本中都未提供可扩展密钥管理。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  默认情况下，可扩展的密钥管理是关闭的。 若要启用此功能，请使用包含以下选项和值的 sp_configure 命令，如下面的示例所示：  
   

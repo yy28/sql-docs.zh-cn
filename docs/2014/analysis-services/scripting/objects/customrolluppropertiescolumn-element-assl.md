@@ -1,5 +1,5 @@
 ---
-title: CustomRollupPropertiesColumn 元素 (ASSL) |Microsoft 文档
+title: CustomRollupPropertiesColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CustomRollupPropertiesColumn element
 ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9452dbc1d6c3104fe76760ad4460e636fdd45fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92125569eec6b0642efea7c9164e41c7740ded66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180834"
 ---
 # <a name="customrolluppropertiescolumn-element-assl"></a>CustomRollupPropertiesColumn 元素 (ASSL)
   定义用于提供自定义汇总公式属性的列的详细信息。  
@@ -64,7 +64,7 @@ ms.locfileid: "36027075"
 ## <a name="remarks"></a>Remarks  
  有关其他信息`DataItem`类型，包括 Analysis Services 脚本语言 (ASSL) 对象和属性表`DataItem`类型，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 对应于的父元素`CustomRollupPropertiesColumn`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 父级对应的元素`CustomRollupPropertiesColumn`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [CustomRollupColumn 元素&#40;ASSL&#41;](column-element-assl.md)   

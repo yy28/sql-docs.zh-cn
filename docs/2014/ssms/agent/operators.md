@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - operators (users) [Database Engine]
 - fail-safe operator [SQL Server]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d234e4748e2e0188b9b1d7f0248261089a454778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c0d64bf91d18b5bbd1538a3f65d8ca50f74b8019
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282343"
 ---
 # <a name="operators"></a>运算符
   操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
@@ -123,7 +123,7 @@ ms.locfileid: "36025853"
 |-|-|  
 |**任务**|**主题**|  
 |与创建操作员相关的任务|[创建操作员](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|与分配警报相关的任务|[向操作员分配警报](assign-alerts-to-an-operator.md)<br /><br /> [定义对警报的响应 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [向操作员分配警报](assign-alerts-to-an-operator.md)|  
+|与分配警报相关的任务|[向操作员分配警报](assign-alerts-to-an-operator.md)<br /><br /> [定义对警报的响应 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [向操作员分配警报](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)  

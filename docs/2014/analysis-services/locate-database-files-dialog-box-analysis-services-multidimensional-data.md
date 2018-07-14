@@ -1,5 +1,5 @@
 ---
-title: 定位数据库文件对话框 (Analysis Services-多维数据) |Microsoft 文档
+title: 找到数据库文件对话框 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1709d430a92116e3ba5dc1e9be3d33c96eb6bf59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92c2f181638b9c995b01d9a5434e7b004241d6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192837"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>“定位数据库文件”对话框（Analysis Services - 多维数据）
   **“定位数据库文件”** 对话框显示一组可用文件的列表，这些文件位于为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例定义的日志和数据文件夹中。 您可以选择一个列出的文件，如果需要的话，您也可以指定另一个文件夹和文件。 您可以通过执行以下操作之一显示 **“定位数据库文件”** 对话框：  

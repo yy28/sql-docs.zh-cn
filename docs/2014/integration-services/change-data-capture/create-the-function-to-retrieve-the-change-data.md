@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217827"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
   在完成用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流之后，接下来的任务是创建用于检索变更数据的表值函数。 只需在第一次增量加载之前创建一次此函数。  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>编写自己的表值函数  
  还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编写自己的可调用变更数据捕获查询函数的表值包装函数，并将该表值包装函数存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 有关如何创建 Transact-SQL 函数的详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)。  
   
- 下面的示例定义一个表值函数，该表值函数将检索 Customer 表在指定的变更间隔发生的变更。 此函数使用变更数据捕获函数映射`datetime`值与二进制日志序列号 (LSN) 的更改表使用的内部的值。 此函数还可以处理以下几种特殊情况：  
+ 下面的示例定义一个表值函数，该表值函数将检索 Customer 表在指定的变更间隔发生的变更。 此函数使用变更数据捕获函数将映射`datetime`值与二进制日志序列号 (LSN) 值的更改表在内部使用。 此函数还可以处理以下几种特殊情况：  
   
 -   将 null 值传递到开始时间时，函数将采用最早的可用值。  
   

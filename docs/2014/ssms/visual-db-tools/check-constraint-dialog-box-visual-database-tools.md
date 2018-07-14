@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3dc13f77788f46796c274d43d5dea920167033f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e4908c1ea2bb110c176e07e5fe8a0ffc8a0ad496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202247"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
   如果在表设计器中右键单击表定义网格，再单击“CHECK 约束”，则会显示此对话框。 此对话框包含附加到数据库中表的非唯一约束的一组属性。 应用于唯一约束的属性则包含在“索引/键”对话框中。  
@@ -68,6 +68,6 @@ ms.locfileid: "36026051"
   
 ## <a name="see-also"></a>请参阅  
  [唯一约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [索引和密钥对话框&#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [索引和键对话框的&#40;可视化数据库工具&#41;](visual-database-tools.md)  
   
   

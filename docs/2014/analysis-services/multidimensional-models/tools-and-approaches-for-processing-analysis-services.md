@@ -1,5 +1,5 @@
 ---
-title: 用于处理 (Analysis Services) 工具和方法 |Microsoft 文档
+title: 工具和方法可用于处理 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c191732dd66214c19c949d28e3dcd0efe01f7fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261394"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
   处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
@@ -50,7 +50,7 @@ ms.locfileid: "36026027"
  处理是由一组处理选项控制的高度可配置操作，这些选项决定在对象级别执行完全处理还是增量处理。 有关处理选项和对象的详细信息，请参阅[处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md) 和[处理 Analysis Services 对象](processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、 表或分区](../tabular-models/process-database-table-or-partition-analysis-services.md)和[处理数据&#40;SSAS 表格&#41;](../process-data-ssas-tabular.md)。  
+>  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、 表或分区](../tabular-models/process-database-table-or-partition-analysis-services.md)并[处理数据&#40;SSAS 表格&#41;](../process-data-ssas-tabular.md)。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中处理对象  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220717"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
-  在报表设计器中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，报表数据窗格显示在报表中，包括数据源、 数据集、 字段、 参数和图像数据对象，你可以使用层次结构视图。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  
+  报表设计器中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，报表数据窗格显示在报表中，包括数据源、 数据集、 字段、 参数和映像可以使用的数据对象的分层视图。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  
   
 ### <a name="to-display-the-report-data-pane"></a>显示“报表数据”窗格  
   

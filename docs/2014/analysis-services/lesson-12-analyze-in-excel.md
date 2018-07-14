@@ -1,5 +1,5 @@
 ---
-title: '第 13 课: 在 Excel 中分析 |Microsoft 文档'
+title: 第 13 课： 在 Excel 中分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200357"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>第 13 课：在 Excel 中分析
   在本课中，您将使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“在 Excel 中分析”功能打开 Microsoft Excel、自动创建到模型工作区的数据源连接以及自动将数据透视表添加到工作表。 “在 Excel 中分析”功能旨在提供一种快速简便的方法，供您在部署模型之前测试模型设计的效用。 在本课中，您将不执行任何数据分析。 本课程的目的是让模型作者熟悉可用于测试模型设计的工具。 与模型作者使用“在 Excel 中分析”功能所不同的是，最终用户将使用客户端报告应用程序（如 Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]）来连接和浏览部署的模型数据。  
@@ -42,7 +42,7 @@ ms.locfileid: "36026663"
   
      Excel 将打开，并显示一个新工作簿。 将使用当前用户帐户创建一个数据源连接，默认透视将用于定义可查看字段。 数据透视表将自动添加到工作表中。  
   
-3.  在 Excel 中，在**数据透视表字段列表**，请注意**日期**和**Internet Sales**度量值显示，以及**客户**， **日期**， **Geography**，**产品**，**产品类别**，**产品子类别**，和**Internet Sales**所有各自的列的表会显示。  
+3.  在 Excel 中，在**数据透视表字段列表**，请注意**日期**并**Internet Sales**度量值将出现，并将**客户**， **日期**， **Geography**，**产品**，**产品类别**，**产品子类别**，和**Internet Sales**及其各自的列的所有表的都显示。  
   
 4.  关闭 Excel 而不保存工作簿。  
   

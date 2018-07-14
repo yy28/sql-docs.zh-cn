@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255459"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
@@ -78,7 +78,7 @@ ms.locfileid: "36026481"
  （可选）指定用于连接到报表服务器的用户帐户。 如果省略 `-u` 和 `-p`，则使用当前的 Windows 用户帐户。  
   
  `-p` *密码*  
- (如果存在`-u`指定) 指定要使用的密码`-u`自变量。 此值区分大小写。  
+ (需要`-u`指定) 指定要使用的密码`-u`参数。 此值区分大小写。  
   
  `-e`  
  （可选）指定应对其运行脚本的 SOAP 端点。 有效值如下：  
@@ -91,13 +91,13 @@ ms.locfileid: "36026481"
   
 -   Exec2005  
   
- 如果未指定值，则使用 Mgmt2005 端点。 有关 SOAP 终结点的详细信息，请参阅[报表服务器 Web 服务端点](../report-server-web-service/methods/report-server-web-service-endpoints.md)。  
+ 如果未指定值，则使用 Mgmt2005 端点。 有关 SOAP 终结点的详细信息，请参阅[报表服务器 Web 服务终结点](../report-server-web-service/methods/report-server-web-service-endpoints.md)。  
   
  `-l` *time_out*  
  （可选）指定与服务器的连接超时之前等待的时间，以秒为单位。默认值为 60 秒。 如果未指定超时值，则使用默认值。 `0` 值指定连接从不超时。  
   
  **-b**  
- （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理的异常，并返回通常从`Main`，便会提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅[Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
+ （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理异常，并从正常返回`Main`，将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅[Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
  `-v` *globalvar*  
  （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 **–v** 参数指定一个全局变量。  
@@ -106,7 +106,7 @@ ms.locfileid: "36026481"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 全局变量以给定的名称命名，并设置为提供的值。 例如， **-v =**"`1`" **-v b =**"`2`"一个名为变量会导致`a`值为"`1`"和变量**b**值为"`2`"。  
+ 全局变量以给定的名称命名，并设置为提供的值。 例如， **-v =**"`1`" **-v b =**"`2`"名为的变量会导致`a`值为"`1`"和变量**b**值为"`2`"。  
   
  全局变量可用于脚本中的所有函数。 反斜杠与英文引号连用 (**\\"**) 将解释为一个英文双引号。 仅当字符串中包含空格时才需要使用英文引号。 变量名必须对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]有效；变量名必须以字母字符或下划线开头，并包含字母字符、数字或下划线。 不能将保留字用作变量名。 有关使用全局变量的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -138,7 +138,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 ## <a name="see-also"></a>请参阅  
  [运行 Reporting Services 脚本文件](run-a-reporting-services-script-file.md)   
  [为部署和管理任务编写脚本](script-deployment-and-administrative-tasks.md)   
- [使用 rs.exe 实用工具和 Web 服务的脚本](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [使用 rs.exe 实用工具和 Web 服务脚本](script-with-the-rs-exe-utility-and-the-web-service.md)   
  [报表服务器命令提示实用工具&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

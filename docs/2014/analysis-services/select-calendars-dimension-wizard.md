@@ -1,5 +1,5 @@
 ---
-title: 选择日历 （维度向导） |Microsoft 文档
+title: 选择日历 （维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245587"
 ---
 # <a name="select-calendars-dimension-wizard"></a>选择日历（维度向导）
   可以使用“选择日历”页，为时间维度创建表示会计、报表、生产或国际标准化组织 (ISO) 8601 日历的其他层次结构。  
@@ -45,7 +45,7 @@ ms.locfileid: "36025519"
 > [!NOTE]  
 >  只有在选择了“会计日历”时，此选项才可用。  
   
- **报告 （或市场营销） 日历**  
+ **报表 （或营销） 日历**  
  选择此项可以基于报表日历创建时间层次结构。  
   
  **起始周和月份**  
@@ -54,7 +54,7 @@ ms.locfileid: "36025519"
 > [!NOTE]  
 >  只有在选择了“报表(或营销)日历”时，此选项才可用。  
   
- **年月模式周**  
+ **月份周别模式**  
  选择报表日历使用的月份周别模式。  
   
 > [!NOTE]  
@@ -64,9 +64,9 @@ ms.locfileid: "36025519"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**周 445**|季度的第一个月有 4 周，第二个月有 4 周，第三个月有 5 周。|  
-|**周 454**|季度的第一个月有 4 周，第二个月有 5 周，第三个月有 4 周。|  
-|**周 544**|季度的第一个月有 5 周，第二个月有 4 周，第三个月有 4 周。|  
+|**一周 445**|季度的第一个月有 4 周，第二个月有 4 周，第三个月有 5 周。|  
+|**一周 454**|季度的第一个月有 4 周，第二个月有 5 周，第三个月有 4 周。|  
+|**一周 544**|季度的第一个月有 5 周，第二个月有 4 周，第三个月有 4 周。|  
   
  **生产日历**  
  选择此项可以基于生产日历创建时间层次结构。  

@@ -1,5 +1,5 @@
 ---
-title: 记录挖掘模型 （数据挖掘外接程序 excel） |Microsoft 文档
+title: 记录挖掘模型 （Excel 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - documenting models
 - mining structures, managing
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - model properties
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a093deb3764c154ae45596ad64d2805aa6d00d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f605fd2ef1e0aafad5b34a2b74c12fc95be6ef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167708"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>记录挖掘模型（Excel 数据挖掘外接程序）
-  ![文档模型按钮，数据挖掘功能区](media/dmc-docmodel.gif "文档模型按钮，数据挖掘功能区")  
+  ![文档模型按钮、 数据挖掘功能区](media/dmc-docmodel.gif "文档模型按钮、 数据挖掘功能区")  
   
- **文档模型**向导创建提供有关已创建的挖掘模型的有用信息的报表。 通过记录创建的模型，不但可以跟踪用于生成模型的数据的源，获取有关模型处理时间的其他信息，还可以跟踪影响模型结果的参数更改。  
+ **文档模型**向导创建报表以提供有关已创建的挖掘模型的有用信息。 通过记录创建的模型，不但可以跟踪用于生成模型的数据的源，获取有关模型处理时间的其他信息，还可以跟踪影响模型结果的参数更改。  
   
 ## <a name="using-the-document-model-wizard"></a>使用文档模型向导  
   
 1.  单击**数据挖掘**选项卡。  
   
-2.  在**模型用法**组中，单击**文档模型**。  
+2.  在中**模型使用情况**组中，单击**文档模型**。  
   
-3.  在**选择模型**对话框中，选择报表，在其上的模型，然后单击**下一步**。 必须运行**文档模型**向导中单独为每个你想要记录的模型。  
+3.  在中**选择模型**对话框中，选择报表，在其上的模型，然后单击**下一步**。 您必须运行**文档模型**向导单独为每个想要记录的模型。  
   
-4.  在**选择文档详细信息**对话框框中，选择两个选项之一：**完成信息**或**摘要信息**。  
+4.  在中**选择文档详细信息**对话框框中，选择两个选项之一：**填写信息**或**摘要信息**。  
   
 5.  单击 **“完成”**。  
   
-6.  向导将自动创建的新工作表包含指定的报表，标题为**模型文档**，  
+6.  向导会自动创建一个包含指定的报表标题为的新工作表**模型文档**，  
   
 ## <a name="understanding-the-report"></a>了解报表  
  创建记录数据挖掘模型的报表时，可以创建包含基本信息（模型的名称和说明）的摘要，或者也可以创建包含基础结构详细信息和挖掘模型高级信息的完整报表。  
@@ -79,9 +79,9 @@ ms.locfileid: "36025833"
 ||离散列|传递计数<br /><br /> 失败计数<br /><br /> 对数评分<br /><br /> 提升|  
   
 > [!NOTE]  
->  您可以记录 SQL Server Analysis Services 支持的任何模型类型。 因此，该表列出了使用表分析工具或数据挖掘客户端中的向导无法创建的某些模型类型。 但是，你可以通过创建所有模型类型**高级数据挖掘查询编辑器**。 有关详细信息，请参阅[查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)。  
+>  您可以记录 SQL Server Analysis Services 支持的任何模型类型。 因此，该表列出了使用表分析工具或数据挖掘客户端中的向导无法创建的某些模型类型。 但是，可以通过使用创建所有模型类型**高级数据挖掘查询编辑器**。 有关详细信息，请参阅[查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [部署和缩放挖掘模型&#40;数据挖掘的 Excel 外接程序&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [部署和缩放挖掘模型&#40;Excel 数据挖掘外接程序&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

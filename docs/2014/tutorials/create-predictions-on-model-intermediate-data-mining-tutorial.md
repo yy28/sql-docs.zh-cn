@@ -1,5 +1,5 @@
 ---
-title: 在序列聚类分析模型 （数据挖掘中级教程） 上创建预测 |Microsoft 文档
+title: 创建预测针对顺序聚类分析模型 （数据挖掘中级教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2334975b13b3d503a2208f5a73997549befae219
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198297"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>针对顺序分析和聚类分析模型创建预测（数据挖掘中级教程）
-  了解群集通过浏览查看器中的模型更好的序列后，你可以通过上使用预测查询生成器创建预测查询**挖掘模型预测**数据挖掘设计器中的选项卡。 若要创建预测，首先要选择顺序分析和聚类分析模型，然后选择输入数据。 对于输入，可以使用外部数据源，也可以生成单独查询并在对话框中提供值。  
+  了解群集通过在查看器中浏览模型以获得进一步的序列后，您可以在使用预测查询生成器创建预测查询**挖掘模型预测**数据挖掘设计器中的选项卡。 若要创建预测，首先要选择顺序分析和聚类分析模型，然后选择输入数据。 对于输入，可以使用外部数据源，也可以生成单独查询并在对话框中提供值。  
   
- 本课程假定您已经熟悉如何使用预测查询生成器，同时希望了解如何针对顺序分析和聚类分析模型生成查询。 有关如何使用预测查询生成器的常规信息，请参阅[数据挖掘查询接口](../../2014/analysis-services/data-mining/data-mining-query-tools.md)或数据挖掘基础教程中，一部分[创建预测&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md).  
+ 本课程假定您已经熟悉如何使用预测查询生成器，同时希望了解如何针对顺序分析和聚类分析模型生成查询。 有关如何使用预测查询生成器的常规信息，请参阅[数据挖掘查询接口](../../2014/analysis-services/data-mining/data-mining-query-tools.md)或数据挖掘基础教程中，一部分[创建预测&#40;数据挖掘基础教程&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md).  
   
 ## <a name="creating-predictions-on-the-regional-model"></a>针对 Regional 模型创建预测  
  对此方案，您首先需要创建一些单独预测查询，以了解预测结果如何因区域不同而不同。  
@@ -33,28 +33,28 @@ ms.locfileid: "36312985"
   
 1.  单击**挖掘模型预测**数据挖掘设计器选项卡。  
   
-2.  在**挖掘模型**列菜单上，选择**单独查询**。  
+2.  在中**挖掘模型**列菜单中，选择**单独查询**。  
   
      **挖掘模型**窗格和**单独查询输入**窗格中显示。  
   
-3.  在**挖掘模型**窗格中，单击**选择模型**。 （如果已选择顺序分析和聚类分析模型，则可跳过此步骤。）  
+3.  在中**挖掘模型**窗格中，单击**选择模型**。 （如果已选择顺序分析和聚类分析模型，则可跳过此步骤。）  
   
      **选择挖掘模型**对话框随即打开。  
   
-4.  展开表示挖掘结构的节点**序列聚类分析与地区**，并选择的模型**序列聚类分析与地区**。 单击“确定” 。 现在，请忽略“输入”窗格；您将在设置预测函数之后指定输入。  
+4.  展开表示挖掘结构的节点**Sequence Clustering with Region**，然后选择模型**Sequence Clustering with Region**。 单击“确定” 。 现在，请忽略“输入”窗格；您将在设置预测函数之后指定输入。  
   
-5.  在网格中，单击下的空单元格**源**和选择**预测函数。** 在下面的单元格中**字段**，选择**PredictSequence**。  
+5.  在网格中，单击下的空单元格**源**，然后选择**预测函数。** 在下的单元格**字段**，选择**PredictSequence**。  
   
     > [!NOTE]  
-    >  你还可以使用**预测**函数。 如果你执行操作，请务必选择的版本**预测**采用表格列作为自变量的函数...  
+    >  此外可以使用**Predict**函数。 如果执行操作，请确保选择的版本**Predict**采用表列作为参数的函数...  
   
-6.  在**挖掘模型**窗格中，选择嵌套的表`v Assoc Seq Line Items`，并为将其拖到网格，**条件/参数**框**PredictSequence**函数。  
+6.  在中**挖掘模型**窗格中，选择嵌套的表`v Assoc Seq Line Items`，并为将其拖到网格中**条件/参数**框**PredictSequence**函数。  
   
-     拖动和删除表和列名称，可生成复杂语句没有语法错误。 但是，它将替换该单元格，其中包括用于其他可选自变量的当前内容**PredictSequence**函数。 为了查看其他参数，可以将函数的另一个实例临时添加到网格供参考。  
+     拖动和删除表和列的名称，可生成没有语法错误的复杂语句。 但是，它将替换该单元格，其中包括其他可选参数的当前内容**PredictSequence**函数。 为了查看其他参数，可以将函数的另一个实例临时添加到网格供参考。  
   
-7.  单击**结果**的预测查询生成器角的按钮。  
+7.  单击**结果**在预测查询生成器上角的按钮。  
   
- 预期的结果包含一个具有标题的单个列**表达式**。 **表达式**列包含一个具有三列的嵌套的表，如下所示：  
+ 预期的结果包含单个列标题**表达式**。 **表达式**列包含具有三列的嵌套的表，如下所示：  
   
 |$SEQUENCE|Line Number|“模型”|  
 |---------------|-----------------|-----------|  
@@ -63,19 +63,19 @@ ms.locfileid: "36312985"
  这些结果是什么意思？ 请记住，您没有指定任何输入。 因此，该预测针对整个事例，Analysis Services 会返回最可能的总预测。  
   
 ### <a name="adding-inputs-to-a-singleton-prediction-query"></a>向单独预测查询添加输入  
- 到现在为止，您还没有指定任何输入。 在下一个任务，你将使用**单独查询输入**窗格以指定查询的某些输入。 首先，使用 [Region] 作为区域顺序分析和聚类分析模型的输入，以确定所有区域的预测序列是否都相同。 然后将了解如何修改查询以添加每项查询的概率，并简化结果以便易于查看。  
+ 到现在为止，您还没有指定任何输入。 在下一个任务，您将使用**单独查询输入**窗格来指定查询的输入。 首先，使用 [Region] 作为区域顺序分析和聚类分析模型的输入，以确定所有区域的预测序列是否都相同。 然后将了解如何修改查询以添加每项查询的概率，并简化结果以便易于查看。  
   
 ##### <a name="to-generate-predictions-for-a-specific-customer-group"></a>针对特定客户组生成预测  
   
 1.  单击**设计**在预测查询生成器，若要切换回查询生成网格的左上角的按钮。  
   
-2.  在**单独查询输入**对话框中，单击**值**框`Region`，然后选择**欧洲**。  
+2.  在中**单独查询输入**对话框中，单击**值**框`Region`，然后选择**欧洲**。  
   
 3.  单击**结果**按钮，以查看在欧洲客户的预测。  
   
 4.  单击**设计**在预测查询生成器，若要切换回查询生成网格的左上角的按钮。  
   
-5.  在**单独查询输入**对话框中，单击**值**框`Region`，然后选择**北美**。  
+5.  在中**单独查询输入**对话框中，单击**值**框`Region`，然后选择**北美**。  
   
 6.  单击**结果**按钮，以查看在北美的客户的预测。  
   
@@ -86,13 +86,13 @@ ms.locfileid: "36312985"
   
 1.  单击**设计**在预测查询生成器，若要切换回查询生成网格的左上角的按钮。  
   
-2.  在网格中，在**源**，单击新行，然后选择**自定义表达式**。  
+2.  在网格中下,**源**，单击一个新行，然后选择**自定义表达式**。  
   
-3.  将在下的框**字段**空白。  
+3.  下的框保留**字段**保留为空。  
   
 4.  有关**别名**，类型`t`。  
   
-5.  在**条件/参数**框中，键入完整的嵌套 select 语句，如下面的代码示例中所示。 请确保包括开始括号和结束括号。  
+5.  在中**条件/参数**框中，键入完整的嵌套 select 语句，如下面的代码示例中所示。 请确保包括开始括号和结束括号。  
   
     ```  
     (SELECT PredictProbability([Model]) FROM PredictSequence([Sequence Clustering with Region].[v Assoc Seq Line Items]))  
@@ -117,7 +117,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-flatten-nested-rowsets-in-a-prediction-query"></a>平展预测查询中的嵌套行集  
   
-1.  单击**查询**右上方的预测查询生成器的按钮。  
+1.  单击**查询**预测查询生成器角的按钮。  
   
      网格更改为一个打开的窗格，在此您可以查看和修改由预测查询生成器创建的 DMX 语句。  
   
@@ -135,7 +135,7 @@ NATURAL PREDICTION JOIN
     (SELECT 'Europe' AS [Region]) AS t  
     ```  
   
-3.  单击**结果**的预测查询生成器角的按钮。  
+3.  单击**结果**在预测查询生成器上角的按钮。  
   
  手动编辑查询之后，将无法切换回设计视图而不丢失更改。 不过，您可以将创建的 DMX 语句手动保存到文本文件，然后更改回设计视图。 这时，查询会恢复到在设计视图中有效的上一版本。  
   
@@ -143,21 +143,21 @@ NATURAL PREDICTION JOIN
  由于您希望了解模型在区域之间是否发现任何差别，所以前面的示例使用了一个事例表列 Region 作为单独预测查询的输入。 但是，浏览了模型之后，您发现差别不足以证明按区域可以生成自定义产品的建议。 您真正感兴趣的是预测客户选择的产品。 因此，在下面的查询中，您将使用不包括 Region 的顺序分析和聚类分析模型来生成对所有客户的建议。  
   
 ### <a name="using-nested-table-columns-as-input"></a>使用嵌套表列作为输入  
- 首先要创建一个单独预测查询，采用单个产品作为输入并返回下一个最可能的产品。 若要获取此类预测，您需要使用嵌套表列作为输入值。 这是因为正在预测的属性 Model 是嵌套表的一部分。 Analysis Services 提供**嵌套表输入**对话框中，以帮助您轻松地创建预测查询通过使用预测查询生成器嵌套表属性。  
+ 首先要创建一个单独预测查询，采用单个产品作为输入并返回下一个最可能的产品。 若要获取此类预测，您需要使用嵌套表列作为输入值。 这是因为正在预测的属性 Model 是嵌套表的一部分。 Analysis Services 提供**嵌套表输入**对话框可以帮助您轻松地创建预测查询与嵌套表属性，使用预测查询生成器。  
   
 ##### <a name="to-use-a-nested-table-as-input-to-a-prediction"></a>使用嵌套表作为预测输入  
   
 1.  单击**设计**在预测查询生成器，若要切换回查询生成网格的左上角的按钮。  
   
-2.  在**单独查询输入**对话框中，单击**值**框`Region`，然后选择要清除此字段的输入的空的行。  
+2.  在中**单独查询输入**对话框中，单击**值**框`Region`，并选择空行以清除此字段的输入。  
   
-3.  在**单独查询输入**对话框中，单击**值**框`vAssocSeqLineItems`，然后单击 （…） 按钮。  
+3.  在中**单独查询输入**对话框中，单击**值**框`vAssocSeqLineItems`，然后单击 （...） 按钮。  
   
-4.  在**嵌套表输入**对话框中，单击**添加**。  
+4.  在中**嵌套表输入**对话框中，单击**添加**。  
   
-5.  在新行中，单击下的框中`Model`，然后从列表中选择旅行车轮胎。 单击“确定” 。  
+5.  在新行中，单击下的框`Model`，并从列表中选择 Touring Tire。 单击“确定” 。  
   
-6.  单击**结果**按钮，以查看预测。  
+6.  单击**结果**按钮以查看预测。  
   
  该模型为选择 Touring Tire 作为第一件商品的所有客户推荐了其他商品。 您已经通过浏览模型了解到，客户经常同时购买 Touring Tire 和 Touring Tire Tube，因此这些建议看来不错。  
   
@@ -174,23 +174,23 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-prediction-query-using-nested-table-inputs"></a>使用嵌套表输入创建预测查询  
   
-1.  在**挖掘模型**窗格中，选择序列聚类分析模型，如果尚未选择。  
+1.  在中**挖掘模型**窗格中，选择序列聚类分析模型，如果未选中。  
   
-2.  在**选择输入表**对话框中，单击**选择事例表**。  
+2.  在中**选择输入表**对话框中，单击**选择事例表**。  
   
-3.  在**选择表**对话框中，为数据源选择订单。 在**表/视图名称**列表，选择 vAssocSeqOrders，，然后单击**确定**。  
+3.  在中**选择表**对话框中，为数据源选择订单。 在中**表/视图名称**列表中，选择 vAssocSeqOrders，，然后单击**确定**。  
   
-4.  在**选择输入表**对话框中，单击**选择嵌套表**。  
+4.  在中**选择输入表**对话框中，单击**选择嵌套表**。  
   
-5.  在**选择表**对话框中，为**数据源**，选择订单。 在**表/视图名称**列表，选择 vAssocSeqLineItems，，然后单击**确定**。  
+5.  在中**选择表**对话框中，对于**数据源**，选择订单。 在中**表/视图名称**列表中，选择 vAssocSeqLineItems，然后单击**确定**。  
   
-     Analysis Services 将尝试检测关系，如果数据类型匹配并且列名称相近，将自动创建关系。 如果它创建的关系是错误的你可以右键单击联接线并选择**修改连接**编辑列映射，也可以右击联接线并选择**删除**到完全删除的关系。 在此方案中，由于表已经在数据源视图中联接，因此，将在“设计”窗格中自动添加这些关系。  
+     Analysis Services 将尝试检测关系，如果数据类型匹配并且列名称相近，将自动创建关系。 如果它创建的关系是错误的可右键单击联接线并选择**修改连接**来编辑列映射，或者您可以右键单击联接线并选择**删除**到完全删除关系。 在此方案中，由于表已经在数据源视图中联接，因此，将在“设计”窗格中自动添加这些关系。  
   
-6.  在网格中添加一个新行。 有关**源**，选择 vAssocSeqOrders，和**字段**，选择 CustomerKey。  
+6.  在网格中添加一个新行。 有关**源**，选择 vAssocSeqOrders，并为**字段**，选择 CustomerKey。  
   
-7.  在网格中添加一个新行。 有关**源**，选择**预测函数**，和**字段**，选择**PredictSequence**。  
+7.  在网格中添加一个新行。 有关**源**，选择**预测函数**，并为**字段**，选择**PredictSequence**。  
   
-8.  将 vAssocSeqLineItems，拖到**条件/参数**框。 单击末尾**条件/参数**框中，然后键入以下参数： `2`。  
+8.  将 vAssocSeqLineItems 拖到**条件/参数**框。 单击的末尾**条件/参数**框，然后键入下列参数： `2`。  
   
      中的完整文本**条件/参数**框应为： `[Sequence Clustering].[v Assoc Seq Line Items],2`  
   
@@ -199,12 +199,12 @@ NATURAL PREDICTION JOIN
  您已经完成关于顺序分析和聚类分析模型的教程。  
   
 ## <a name="next-steps"></a>后续步骤  
- 如果已经完成中的所有部分[中间 Data Mining Tutorial &#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)下, 一步可能是了解如何使用数据挖掘扩展插件 (DMX) 语句来生成模型和生成预测。 有关详细信息，请参阅[创建和查询数据挖掘模型使用 DMX： 教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)。  
+ 如果您已经完成中的所有部分[数据挖掘中级教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)下, 一步可能是了解如何使用数据挖掘扩展插件 (DMX) 语句来生成模型和生成预测。 有关详细信息，请参阅[创建和查询数据挖掘模型使用 DMX： 教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)。  
   
  如果您熟悉编程概念，您还可以使用分析管理对象 (AMO) 以编程方式处理数据挖掘对象。 有关详细信息，请参阅 [AMO 数据挖掘类](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [序列聚类分析模型查询示例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [顺序聚类分析模型查询示例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [序列聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

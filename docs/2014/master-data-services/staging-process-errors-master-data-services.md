@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8433ac306fa85c983d959f5678072a51759b9133
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9fc93b6684ee98a641d6f8989f1c77d7aa9b468b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239127"
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
   当临时过程完成后，临时表中的所有已处理记录在 ErrorCode 列中都对应一个值。 下表中列出了这些值。  
@@ -47,7 +47,7 @@ ms.locfileid: "36026182"
 |210048|**ParentCode** 和 **ChildCode** 不能相同。|**ParentCode** 值与 **ChildCode** 值相同。 这些值必须不同。|关系|  
   
 ## <a name="see-also"></a>请参阅  
- [查看在临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [查看临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

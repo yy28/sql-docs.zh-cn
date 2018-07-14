@@ -1,5 +1,5 @@
 ---
-title: CSDLBI 概念 |Microsoft 文档
+title: CSDLBI 概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,22 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 150ebbbf646f8c51a226f25f9b4799463608f823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257303"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   带 BI 注释的概念性架构定义语言 (CSDLBI) 基于实体数据框架。实体数据框架是一个抽象概念，用于以某种方式表示不同类型的数据，以便能够以编程方式访问、查询或导出不同的数据集。 CSDLBI 用于表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建的数据模型，因为它支持丰富的数据驱动的报告和应用程序。  
   
  这部分说明 CSDLBI 表示形式如何映射到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型（表格和多维）以及每种模型类型的示例。  
   
- 用于说明这些概念的示例取自 Codeplex 上提供的 AdventureWorks 示例数据库。 有关这些示例的详细信息，请参阅[for SQL Server 的 Adventure Works 示例](http://go.microsoft.com/fwlink/?linkID=220093)。  
+ 用于说明这些概念的示例取自 Codeplex 上提供的 AdventureWorks 示例数据库。 有关示例的详细信息，请参阅[SQL Server 的 Adventure Works 示例](http://go.microsoft.com/fwlink/?linkID=220093)。  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI 中表格模型的结构  
  描述报表模型及其数据的 CSDLBI 文档以 xsd 语句开头，后跟模型的定义。  
@@ -88,11 +88,11 @@ ms.locfileid: "36025794"
  为了限制生成的 CSDLBI 文档的大小，在实体中出现多次的属性将由对某个现有属性的引用指定，这样，只需为 `EntityType` 列出该属性一次。 客户端应用程序可通过查找与 `EntityType` 匹配的 `OriginEntityType` 来获取属性的值。  
   
 ### <a name="relationships"></a>关系  
- 在实体数据框架中，关系定义为*关联*实体之间。  
+ 在实体数据框架中，关系被定义为*关联*实体之间。  
   
- 关联始终有两个端点，每个端点指向表中的一个字段或一个列。 因此，两个表之间可以存在多个关系，前提是这些关系具有不同的端点。 将为关联的端点分配角色名称，并指示如何在数据模型的上下文中使用关联。 角色名称的一个示例可能是**ShipTo**，当应用于客户 ID 相关的 Orders 表中的客户 id。  
+ 关联始终有两个端点，每个端点指向表中的一个字段或一个列。 因此，两个表之间可以存在多个关系，前提是这些关系具有不同的端点。 将为关联的端点分配角色名称，并指示如何在数据模型的上下文中使用关联。 角色名称的一个示例可能**ShipTo**，当应用于与 Orders 表中的客户 ID 相关的客户 ID。  
   
- CSDLBI 模型表示形式还包含对关联来确定如何将实体映射到每个方面的其他特性*多重性*的关联。 多重性指示位于表之间的关系的端点上的属性或列是位于关系的一方还是多方。 没有针对一对一关系的单独的值。 CSDLBI 注释支持多重性为 0（表示实体未与任何对象关联）或为 0..1（表示一对一关系或一对多关系）。  
+ 该模型的 CSDLBI 表示形式还包含对关联来确定如何将实体映射到彼此的特性*多重性*的关联。 多重性指示位于表之间的关系的端点上的属性或列是位于关系的一方还是多方。 没有针对一对一关系的单独的值。 CSDLBI 注释支持多重性为 0（表示实体未与任何对象关联）或为 0..1（表示一对一关系或一对多关系）。  
   
  以下示例表示 Date 表和 ProductInventory 表之间的关系的 CSDLBI 输出，其中这两个表通过 DateAlternateKey 列联接。 请注意，默认情况下，`AssociationSet` 的名称是关系中涉及的列的完全限定名称。 但是，可以在设计模型时将此行为更改为使用其他命名格式。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36025794"
   
 ```  
   
-### <a name="visualization-and-navigation-properties"></a>可视化效果和导航属性  
+### <a name="visualization-and-navigation-properties"></a>可视化和导航属性  
  用于定义报告层中的表示形式和导航实体之间的关系的属性是 CSDLBI 注释的一个重要部分。 通常，基于客户端应用程序将指定排序和表示形式的其他详细信息这种假设，在创建数据模型时，您会认为控制数据的排序和分组方式或可能的默认值并不重要。 但是，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型设计为可以与 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表客户端集成，并在报表设计图面中包含支持数据模型中的实体的表示形式的属性和特性。  
   
  针对可视化的扩展包括用于以下用途的属性：指定要用于数值数据的默认聚合、指示指向图像的 URL 的文本字段或指定用于为当前字段进行排序的字段。  
@@ -128,29 +128,29 @@ ms.locfileid: "36025794"
 ## <a name="additions-to-support-multidimensional-models"></a>所增加的用于支持多维模型的内容  
  CSDLBI 注释 1.0 版仅支持表格模型。 在版本 1.1 中，添加了对使用传统 BI 开发工具创建的多维模型（OLAP 多维数据集）的支持。 因此，您现在可以向多维模型发出 XML 请求并接收模型的 CSDLBI 定义，以用于报告。  
   
- **多维数据集：** SQL Server[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格数据库可以包含只有一种模式。 相比较而言，每个多维数据库可以包含多个多维数据集，每个数据库与一个默认的多维数据集关联。 因此，当针对多维服务器发出 XML 请求时，需要指定多维数据集；否则，将返回默认多维数据集的 XML。  
+ **多维数据集：** SQL Server[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格数据库只能包含只有一种模式。 相比较而言，每个多维数据库可以包含多个多维数据集，每个数据库与一个默认的多维数据集关联。 因此，当针对多维服务器发出 XML 请求时，需要指定多维数据集；否则，将返回默认多维数据集的 XML。  
   
  多维数据集的表示形式与表格模型数据库的表示形式非常相似。 多维数据集名称和多维数据集分别对应于表格数据库名称和数据库标识符。  
   
- **维度：** 维度 CSDLBI 中表示为具有列和属性的实体 （表）。 请注意，即使未包括在透视中，模型中包括的维度也将表示为 CSDL 输出（标记为 `Hidden`）。  
+ **维度：** 维度在 CSDLBI 中表示为具有列和属性的实体 （表）。 请注意，即使未包括在透视中，模型中包括的维度也将表示为 CSDL 输出（标记为 `Hidden`）。  
   
- **透视：** 客户端可以为单个透视请求 CSDL。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
+ **透视：** 客户端可以请求 CSDL 以获得单独的透视。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
   
- **层次结构：** 层次结构支持的和在 CSDLBI 中表示为一组级别。  
+ **层次结构：** 支持和 CSDLBI 中表示为一组级别的层次结构。  
   
- **成员：** 对支持已添加的默认成员，默认值会自动添加到 CSDLBI 输出。  
+ **成员：** 对已添加的默认成员和默认值会自动添加到 CSDLBI 输出的支持。  
   
- **计算成员：** 多维模型支持计算的成员的子级**所有**与单个真实成员。  
+ **计算成员：** 多维模型支持计算的成员的子级**所有**具有单个真实成员。  
   
- **维度属性：** 中 CSDLBI 输出，支持的和自动标记为不可聚合维度属性。  
+ **维度属性：** 在 CSDLBI 输出中，维度属性均受支持，自动将标记为不可聚合。  
   
- **Kpi:** Kpi CSDLBI 1.1 版中，在受支持，但表示已更改。 以前，KPI 是度量值的属性。 在 1.1 版中，KPI 元素可以添加到度量值  
+ **Kpi:** CSDLBI 版本 1.1 中支持 Kpi，但表示形式已发生变化。 以前，KPI 是度量值的属性。 在版本 1.1 中，可以将 KPI 元素添加到度量值  
   
- **新属性：** 添加了其他属性，以支持 DirectQuery 模型。  
+ **新属性：** 添加了其他属性以支持 DirectQuery 模型。  
   
- **限制：** 单元安全性不支持。  
+ **限制：** 不支持单元安全性。  
   
 ## <a name="see-also"></a>请参阅  
- [商业智能的 CSDL 批注&#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [用于商业智能的 CSDL 批注&#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: AliasName 属性 （SqlServerAlias 类） |Microsoft 文档
+title: AliasName 属性 （SqlServerAlias 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b320caa58c70028a49be3b1984bfdbd9d80d7ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 263407a4da24424faa4f24b6811835090b4c3d13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214758"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 属性（SqlServerAlias 类）
   获取服务器连接别名的名称。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [SqlServerAlias 类](sqlserveralias-class.md)对象，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]别名。  
+ 一个[SqlServerAlias 类](sqlserveralias-class.md)对象，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]别名。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器连接别名的 `string` 值。  

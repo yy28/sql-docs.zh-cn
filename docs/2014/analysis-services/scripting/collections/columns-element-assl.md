@@ -1,5 +1,5 @@
 ---
-title: 列元素 (ASSL) |Microsoft 文档
+title: Columns 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231907"
 ---
 # <a name="columns-element-assl"></a>Columns 元素 (ASSL)
   包含与父元素关联的列的集合。  
@@ -80,9 +80,9 @@ ms.locfileid: "36026635"
 |[MiningStructure](../objects/miningstructure-element-assl.md)， [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 有关`DrillThroughAction`元素，`Columns`集合标识包含数据时执行的操作返回的列。  
+ 有关`DrillThroughAction`元素，`Columns`集合标识包含要执行的操作时，返回的数据的列。  
   
- 有关`TableMiningStructureColumn`元素，`Columns`集合只允许一级递归。 换而言之，任何`TableMiningStructureColumn`此集合中包含的元素不能包含任何`TableMiningStructureColumn`中的元素及其`Columns`集合。  
+ 有关`TableMiningStructureColumn`元素，`Columns`集合只允许一级递归。 换而言之，任何`TableMiningStructureColumn`包括在此集合中的元素不能包含任何`TableMiningStructureColumn`中的元素及其`Columns`集合。  
   
  在 Analysis Management Objects (AMO) 对象模型中，部分对应的元素为 <xref:Microsoft.AnalysisServices.TraceColumnCollection>、<xref:Microsoft.AnalysisServices.MiningModelColumnCollection> 和 <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>。  
   

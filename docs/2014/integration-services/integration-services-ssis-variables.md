@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283613"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
   变量存储 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其容器、任务和事件处理程序在运行时可以使用的值。 脚本任务和脚本组件中的脚本也可以使用变量。 将任务和容器按顺序组织为工作流的优先约束在其约束定义包含表达式时可以使用变量。  
@@ -90,7 +90,7 @@ ms.locfileid: "36025733"
  指定对变量的描述。  
   
  EvaluateAsExpression  
- 当属性设置为`True`，提供的表达式用于设置变量的值。  
+ 当属性设置为`True`，所提供的表达式用于设置变量值。  
   
  表达式  
  指定分配给该变量的表达式。  
@@ -118,17 +118,17 @@ ms.locfileid: "36025733"
  IncludeInDebugDump  
  指示调试转储文件中是否包括变量值。  
   
- 有关用户定义的变量和系统变量，默认值为**InclueInDebugDump**选项`true`。  
+ 对于用户定义的变量和系统变量的默认值为**InclueInDebugDump**选项是`true`。  
   
- 但是，对于用户定义变量，系统将重置**IncludeInDebugDump**选项设为`false`当满足以下条件：  
+ 但是，对于用户定义变量，系统将重置**IncludeInDebugDump**选项设为`false`时满足以下条件：  
   
--   如果**EvaluateAsExpression**变量属性设置为`true`，系统将重置**IncludeInDebugDump**选项设为`false`。  
+-   如果**EvaluateAsExpression**变量的属性设置为`true`，系统将重置**IncludeInDebugDump**选项设为`false`。  
   
-     若要在调试转储文件中包含的文本作为变量值表达式，设置**IncludeInDebugDump**选项设为`true`。  
+     若要在调试转储文件中包含的文本作为变量值的表达式，设置**IncludeInDebugDump**选项设为`true`。  
   
--   如果变量数据类型更改为一个字符串，系统将重置**IncludeInDebugDump**选项设为`false`。  
+-   如果变量数据类型更改为字符串时，系统会重置**IncludeInDebugDump**选项设为`false`。  
   
- 如果系统重置**IncludeInDebugDump**选项设为`false`，这可能会重写由用户选择的值。  
+ 时系统将重置**IncludeInDebugDump**选项设为`false`，这可能会覆盖用户选择的值。  
   
  ReplTest1  
  用户定义变量的值可以是文字或表达式。 变量包含设置变量值和值的数据类型的选项。 这两种属性必须兼容：例如，字符串值不能与整数数据类型一起使用。  
@@ -146,7 +146,7 @@ ms.locfileid: "36025733"
   
  有关可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅[“变量”窗口](../../2014/integration-services/variables-window.md)。  
   
- 若要了解有关变量的属性，以及有关以编程方式设置这些属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.Variable>。  
+ 若要了解有关变量的属性，以及有关如何以编程方式设置这些属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.Variable>。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [添加、删除、更改包中用户定义变量的作用域](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

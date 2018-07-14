@@ -1,5 +1,5 @@
 ---
-title: SQL Native Client 11.0 配置 |Microsoft 文档
+title: SQL Native Client 11.0 配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f83aa59c76750a0e6384a88e9755b0c51333bb58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7d2397f64e5e987e2346938d5c4a9a4ad805482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282393"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 配置
   本节包含了按 F1 后看到的有关  配置管理器中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对话框的帮助主题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是客户端计算机用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的网络库，与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起启动。  
@@ -32,7 +32,7 @@ ms.locfileid: "36025365"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [SQL Server Native Client 配置属性&#40;标志选项卡&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
+-   [SQL Server Native Client 配置属性&#40;标记选项卡&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
   
 -   [客户端协议&#40;SQL Server 配置管理器&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
@@ -42,11 +42,11 @@ ms.locfileid: "36025365"
   
     -   [客户端协议-TCP 和 IP 属性&#40;协议选项卡&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
   
-    -   [客户端协议-Named Pipes 属性&#40;协议选项卡&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
+    -   [客户端协议-命名管道属性&#40;协议选项卡&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
   
 -   [别名&#40;SQL Server 配置管理器&#41;](../../../2014/tools/configuration-manager/aliases-sql-server-configuration-manager.md)  
   
-    -   [新别名&#40;别名选项卡&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
+    -   [新的别名&#40;别名选项卡&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)  
   
     -   [&#60;别名&#62;属性&#40;别名选项卡&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   

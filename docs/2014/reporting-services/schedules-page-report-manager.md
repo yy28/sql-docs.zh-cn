@@ -1,5 +1,5 @@
 ---
-title: 计划页 （报表管理器） |Microsoft 文档
+title: 计划页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8d460ad3e85f1884a101ad1ad52adc1cd04fe43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf66402ba021949bce1eb2810d634177ddf1916d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198507"
 ---
 # <a name="schedules-page-report-manager"></a>“计划”页（报表管理器）
   使用“计划”页可以创建、修改、删除、暂停或恢复共享计划。 共享计划是一个指定计划。您可以独立于报表、订阅以及其他需要计划信息的进程来创建和管理共享计划。 用户可以选择您提供的共享计划。  
@@ -27,7 +27,7 @@ ms.locfileid: "36028075"
  要删除、暂停或恢复共享计划，请选中您要修改的共享计划旁边的复选框。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  
@@ -41,7 +41,7 @@ ms.locfileid: "36028075"
 3.  选择 **“计划”** 选项卡。  
   
 ## <a name="options"></a>“常规”  
- **新计划**  
+ **新建计划**  
  单击此选项可打开用于指定频率信息的“计划”页。  
   
  **删除**  
@@ -59,7 +59,7 @@ ms.locfileid: "36028075"
  **创建者**  
  显示创建共享计划的用户名。  
   
- **上次运行，接下来运行**  
+ **上次运行时间和下次运行**  
  显示共享计划的上次运行时间和下次运行时间。  
   
  **“状态”**  

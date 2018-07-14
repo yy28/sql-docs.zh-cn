@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 caps.latest.revision: 65
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 77b0bb18dde4c6f6bc8a1ff22bf3fda11b6f414f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6427878b5c032e0560859ab7ba68af8d06fb40e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276543"
 ---
 # <a name="memory-optimized-tables"></a>内存优化表
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存中 OLTP 通过高效的内存优化的数据访问、对业务逻辑的本机编译以及锁和闩锁释放算法帮助改进了 OLTP 应用程序的性能。 内存中 OLTP 功能包括内存优化表和表类型，以及用于高效访问这些表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的本机编译。  

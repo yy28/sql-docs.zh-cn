@@ -1,5 +1,5 @@
 ---
-title: HideMemberIf 元素 (ASSL) |Microsoft 文档
+title: HideMemberIf 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b1540a3b7f5d1e1a93ea3b4628bfbde186e5bb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0829804ae0225c848da3583c429e39d9bc176821
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187024"
 ---
 # <a name="hidememberif-element-assl"></a>HideMemberIf 元素 (ASSL)
   指示是否应该从客户端应用程序中隐藏某一级别的成员以及何时隐藏。  
@@ -73,7 +73,7 @@ ms.locfileid: "36027068"
 |*ParentName*|如果成员名称与其父级名称相同，则隐藏该成员。|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的允许值为枚举`HideMemberIf`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.HideIfValue>。  
+ 与允许的值相对应的枚举`HideMemberIf`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.HideIfValue>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

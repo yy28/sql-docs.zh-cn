@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f89bf86f17cf274d579ed22d3439f8ec0d7a662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204967"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
   稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 当至少能够节省 20% 到 40% 的空间时，才应考虑使用稀疏列。 稀疏列和列集是通过使用 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 语句定义的。  
@@ -124,7 +124,7 @@ ms.locfileid: "36026304"
 ## <a name="restrictions-for-using-sparse-columns"></a>使用稀疏列的限制  
  稀疏列可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，其行为与任何其他列类似，但有以下限制：  
   
--   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不能为以下数据类型： `text`， `ntext`， `image`， `timestamp`，用户定义数据类型， `geometry`，或`geography`; 或具有 FILESTREAM 属性。  
+-   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不能为以下数据类型： `text`， `ntext`， `image`， `timestamp`，用户定义数据类型`geometry`，或`geography`; 或者有 FILESTREAM 属性。  
   
 -   稀疏列不能有默认值。  
   

@@ -1,5 +1,5 @@
 ---
-title: TimeAttributeBinding 数据类型 (ASSL) |Microsoft 文档
+title: TimeAttributeBinding 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TimeAttributeBinding data type
 ms.assetid: e8317b1c-a83a-4074-9538-400792500985
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7422bc4f3101b4ecbbb004583fed61801c9dfad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e123cad0d54a1512aaa7edac8a230348505b879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237547"
 ---
 # <a name="timeattributebinding-data-type-assl"></a>TimeAttributeBinding 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示服务器时间维度中的生成数据项的“占位符”绑定，如属性的键列。  
@@ -60,11 +60,11 @@ ms.locfileid: "36024665"
 |派生元素|请参阅[绑定](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 有关详细信息`Binding`类型，包括表的 Analysis Services 脚本语言 (ASSL) 对象`Binding`类型和继承层次结构的`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 有关详细信息`Binding`类型，包括 Analysis Services 脚本语言 (ASSL) 对象的表`Binding`类型和继承层次结构`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.TimeAttributeBinding>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.TimeAttributeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
