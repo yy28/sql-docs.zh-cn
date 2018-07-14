@@ -1,5 +1,5 @@
 ---
-title: BeginSession 元素 (XMLA) |Microsoft 文档
+title: BeginSession 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2982709512433e5a6b87929f3a4efba4f77138b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285823"
 ---
 # <a name="beginsession-element-xmla"></a>BeginSession 元素 (XMLA)
-  使用在 SOAP 请求消息的 SOAP 标头的实例上启动新会话[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  使用 SOAP 请求消息中的 SOAP 标头的实例上启动新会话[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   
@@ -72,13 +72,13 @@ ms.locfileid: "36026405"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `BeginSession` 标头元素是发送到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的 SOAP 请求的一部分，可在该实例上显式启动新会话。 SOAP 响应返回的 SOAP 标头包含[会话](session-element-xmla.md)标识新的会话的元素。 可以通过使用 `Session` 标头元素，将该新会话标识符存储到后续 SOAP 请求中，并发送该标识符。  
+ `BeginSession` 标头元素是发送到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的 SOAP 请求的一部分，可在该实例上显式启动新会话。 返回的 SOAP 响应的 SOAP 标头包含[会话](session-element-xmla.md)标识新会话的元素。 可以通过使用 `Session` 标头元素，将该新会话标识符存储到后续 SOAP 请求中，并发送该标识符。  
   
- 如果不发送 `BeginSession` 标头，则不会显式启动会话。 如果不显式启动会话，则将无法管理该会话上的事务。 换而言之，无法将以下 XML 用于 Analysis (XMLA) 命令： [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md)， [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md)，和[RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md)。 显式启动的会话上执行的所有 XMLA 方法和命令均视为原子事务。  
+ 如果不发送 `BeginSession` 标头，则不会显式启动会话。 如果不显式启动会话，则将无法管理该会话上的事务。 换而言之，不能使用以下 XML for Analysis (XMLA) 命令： [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md)， [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md)，并[RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md)。 显式启动的会话上执行的所有 XMLA 方法和命令均视为原子事务。  
   
 ## <a name="see-also"></a>请参阅  
  [EndSession 元素&#40;XMLA&#41;](endsession-element-xmla.md)   
- [会话元素&#40;XMLA&#41;](session-element-xmla.md)   
+ [Session 元素&#40;XMLA&#41;](session-element-xmla.md)   
  [管理连接和会话&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [标头&#40;XMLA&#41;](xml-elements-headers.md)  
   

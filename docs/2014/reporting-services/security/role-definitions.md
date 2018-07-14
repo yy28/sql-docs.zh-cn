@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - roles [Reporting Services], security
@@ -18,13 +18,13 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 70fb0da3dccb70dc8ce706fe56dc83693084c114
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03d3bc951a76b6ff3fdf088999777d80f699f690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282663"
 ---
 # <a name="role-definitions"></a>角色定义
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，“角色**定义”是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
@@ -64,6 +64,6 @@ ms.locfileid: "36027870"
  [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)   
  [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)   
  [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)   
- [SharePoint 站点上为报表服务器项设置权限&#40;的 Reporting Services SharePoint 集成模式&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [SharePoint 站点上为报表服务器项设置权限&#40;Reporting Services SharePoint 集成模式下&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e87912fc00924698bf2fe735c0bd9ce9433cdb1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c340afc52dbd60f4accb1da7d3883e62d36974f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288523"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  A`MultiLineString`是零个或多集合`geometry`或**geographyLineString**实例。  
+  一个`MultiLineString`是零个或多集合`geometry`或**geographyLineString**实例。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 实例  
- 下图显示的示例`MultiLineString`实例。  
+ 下图显示了示例的`MultiLineString`实例。  
   
  ![几何 MultiLineString 实例的示例](../../database-engine/media/multilinestring.gif "几何 MultiLineString 实例的示例")  
   
@@ -42,12 +42,12 @@ ms.locfileid: "36028091"
   
 -   图 4 显示的是一个不简单、 非闭合的`MultiLineString`实例。  
   
--   图 5 显示的是一个简单、非闭合的 `MultiLineString`。 它没有闭合是因为其`LineStrings`元素没有闭合。 这很简单因为无任何内部`LineStrings`实例相交。  
+-   图 5 显示的是一个简单、非闭合的 `MultiLineString`。 它没有闭合是因为其`LineStrings`元素没有闭合。 它是简单因为无任何内部`LineStrings`实例相交。  
   
--   图 6 显示的是一个简单、 关闭`MultiLineString`实例。 它为闭合的是因为它的所有元素都是闭合的。 而其简单的原因在于，其所有元素都没有出现内部相交现象。  
+-   图 6 是一个简单、 关闭`MultiLineString`实例。 它为闭合的是因为它的所有元素都是闭合的。 而其简单的原因在于，其所有元素都没有出现内部相交现象。  
   
 ### <a name="accepted-instances"></a>接受的实例  
- 有关`MultiLineString`实例可接受它必须或者为空或者的仅由`LineString`接受的实例。 有关详细信息接受`LineString`实例，请参阅[LineString](../spatial/linestring.md)。 下面的示例显示接受的 `MultiLineString` 实例。  
+ 有关`MultiLineString`实例可接受它必须或者为空或组成仅`LineString`接受的实例。 有关详细信息接受`LineString`实例，请参阅[LineString](../spatial/linestring.md)。 下面的示例显示接受的 `MultiLineString` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -56,7 +56,7 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 下面的示例引发`System.FormatException`因为第二个`LineString`实例无效。  
+ 下面的示例将引发`System.FormatException`因为第二个`LineString`实例无效。  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  

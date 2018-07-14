@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
@@ -16,13 +16,13 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fd49c4cb6e16c9bbda6dc970e3bb5b0ceb2ef52d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54fb06c849655b8fbb7c60fd2b20117dff610f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276043"
 ---
 # <a name="format-a-reporting-services-script-file"></a>设置 Reporting Services 脚本文件的格式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 脚本是用来定义 Reporting Services SOAP API 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 代码文件，该文件是针对基于 Web 服务描述语言 (WSDL) 构建的代理编写的。 脚本文件以 Unicode 或 UTF-8 文本文件形式存储，扩展名为 .rss。  
@@ -50,7 +50,7 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  用户凭据由脚本环境管理，并通过使用 RS.exe 来传递命令提示符参数。 尽管可以使用 *rs* 变量来设置对 Web 服务的身份验证，但是仍建议您使用脚本环境。 不必在脚本文件本身中对 Web 服务进行身份验证。 有关进行身份验证的脚本环境的详细信息，请参阅[RS.exe 实用工具&#40;SSRS&#41;](rs-exe-utility-ssrs.md)。  
+>  用户凭据由脚本环境管理，并通过使用 RS.exe 来传递命令提示符参数。 尽管可以使用 *rs* 变量来设置对 Web 服务的身份验证，但是仍建议您使用脚本环境。 不必在脚本文件本身中对 Web 服务进行身份验证。 有关脚本环境进行身份验证的详细信息，请参阅[RS.exe 实用工具&#40;SSRS&#41;](rs-exe-utility-ssrs.md)。  
   
  在脚本文件中不必声明命名空间。 通过脚本环境提供了几个有用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间： **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**和 **System.IO**。  
   

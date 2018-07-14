@@ -1,5 +1,5 @@
 ---
-title: InstanceSelection 元素 (ASSL) |Microsoft 文档
+title: InstanceSelection 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - InstanceSelection element
 ms.assetid: 908a2da9-274c-40d2-87dc-4641cb8d77e6
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b36f0c3c5d29c88c499dea6e70ab4dd0cee1b42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9babb9e5066d00b8a396d52dfb2dbdfc2f0b4cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279763"
 ---
 # <a name="instanceselection-element-assl"></a>InstanceSelection 元素 (ASSL)
-  提供对客户端应用程序建议如何的项列表的提示应显示，基于预期数量的列表中的项。  
+  提供了应显示提示客户端应用程序建议如何的项的列表，根据预期的列表中的项目数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36029115"
 |*FilteredList*|项数太多，需要用户进行筛选才能显示。|  
 |*MandatoryFilter*|项数太多，必须一直使用筛选才能显示。|  
   
- 对应于的允许值为枚举`InstanceSelection`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.InstanceSelection>。  
+ 与允许的值相对应的枚举`InstanceSelection`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.InstanceSelection>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

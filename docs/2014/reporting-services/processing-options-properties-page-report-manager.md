@@ -1,5 +1,5 @@
 ---
-title: 处理选项属性页 （报表管理器） |Microsoft 文档
+title: 处理选项属性页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288383"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>“处理选项”属性页（报表管理器）
   使用“处理选项”属性页可为当前所选的报表设置报表执行属性。 这些选项将确定处理报表数据的时间。 您可以设置这些选项，使报表数据的检索时间错开高峰期。 如果有经常访问的报表，则可以临时缓存其副本，这样，在每隔几分钟便有多个用户访问同一报表的情况下可使用户无需等待。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供报表历史记录、执行快照和缓存功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供报表历史记录、执行快照和缓存功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  

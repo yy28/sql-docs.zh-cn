@@ -3,28 +3,26 @@ title: 查看存储过程的定义 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], viewing
 - definition of stored procedure
 - viewing stored procedures
 - displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3b63ca5ff5b5373ea56c0df355c519d23054d07f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 09737f1b9764680e67dbb0bbefb2d0ec86df71e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288403"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
     
@@ -100,7 +98,7 @@ ms.locfileid: "36028303"
   
 2.  在工具栏上，单击 **“新建查询”**。  
   
-3.  在查询窗口中，输入使用以下语句`sys.sql_modules`目录视图。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
+3.  在查询窗口中，输入下面的语句，使用`sys.sql_modules`目录视图。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
   
     ```  
     USE AdventureWorks2012;  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLAUDIT.FILTER.F1
 - sql12.swb.sqlaudit.srvaudit.general.f1
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366904b4db0836df83daf49b30771f8c5b5c4b54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: e05a1d985e287b1ff9d0a767b293cbf29c67bbc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280793"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和服务器审核规范。 “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 “服务器审核规范”  对象属于审核。 您可以为每个审核创建一个服务器审核规范，因为它们都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例范围内创建的。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。  
@@ -84,7 +83,7 @@ ms.locfileid: "36028988"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 选择 **“继续”** 选项可以允许未经审核的活动，这可能违反了您的安全策略。 在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的继续操作比维护完整审核更重要时，选择此选项。 这是默认选项。  
   
      **关闭服务器**  
-     在写入目标的服务器实例无法将数据写入审核目标时，强制关闭服务器。 发出此登录名必须具有`SHUTDOWN`权限。 如果该登录名没有此权限，则该函数将失败并将引发错误消息。 将不会发生审核的事件。 在审核失败可能损害系统的安全或完整性时，选择此选项。  
+     在写入目标的服务器实例无法将数据写入审核目标时，强制关闭服务器。 发出此命令的登录名必须具有`SHUTDOWN`权限。 如果该登录名没有此权限，则该函数将失败并将引发错误消息。 将不会发生审核的事件。 在审核失败可能损害系统的安全或完整性时，选择此选项。  
   
      **失败操作**  
      在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 无法写入审核日志的情况下，如果数据库操作将导致审核的事件，则此选项将导致数据库操作失败。 将不会发生审核的事件。 不会导致审核的事件的操作可以继续。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 在维护完整审核比对 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的完全访问权限更重要时，选择此选项。  

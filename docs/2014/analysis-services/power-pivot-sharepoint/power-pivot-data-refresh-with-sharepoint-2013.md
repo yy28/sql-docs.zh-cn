@@ -1,5 +1,5 @@
 ---
-title: 使用 SharePoint 2013 的 PowerPivot 数据刷新 |Microsoft 文档
+title: 使用 SharePoint 2013 的 PowerPivot 数据刷新 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280773"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 PowerPivot 数据刷新
   SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型刷新设计通过利用 Excel Services 作为主组件，加载和刷新在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。  
   
- 以前的数据刷新体系结构专门依赖于 PowerPivot 系统服务来加载和刷新在 SharePoint 模式下的数据模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 PowerPivot 应用程序服务器上在本地运行。 这个新的体系结构还引入了一个新方法，以便将计划信息作为文档库中工作簿项的元数据维护。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新”  和“计划数据刷新” 。  
+ 以前的数据刷新体系结构专门依赖于 PowerPivot 系统服务来加载和刷新数据模型在 SharePoint 模式下[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 PowerPivot 应用程序服务器上在本地运行。 这个新的体系结构还引入了一个新方法，以便将计划信息作为文档库中工作簿项的元数据维护。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新”  和“计划数据刷新” 。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -147,13 +147,13 @@ ms.locfileid: "36028465"
   
 -   **凭据：** 使用存储的凭据。 不要使用当前用户的标识。  
   
--   **支持工作簿：** 使用创建的工作簿[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 外接程序 Excel 2010 或使用 Excel 2013。 在 Excel 2010 中创建的工作簿[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]不支持 PowerPivot 外接程序。 将工作簿升级到至少是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+-   **支持的工作簿：** 创建使用的工作簿[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 外接程序 Excel 2010 或使用 Excel 2013。 在 Excel 2010 中创建的工作簿[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]不支持 PowerPivot 外接程序。 将工作簿升级到至少是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  要显示 **“管理数据刷新”** 页，请执行以下操作：  
   
 -   请参阅这些步骤之后的图示。  
   
-1.  在 SharePoint 文档库中，单击**打开菜单**(**...**) PowerPivot 工作簿。  
+1.  在 SharePoint 文档库中，单击**打开菜单**(**...**) 的 PowerPivot 工作簿。  
   
 2.  单击第二个 **“打开菜单”** ，然后单击 **“管理 PowerPivot 数据刷新”**。  
   
@@ -170,12 +170,12 @@ ms.locfileid: "36028465"
  ![管理数据刷新上下文菜单](../media/as-manage-datarefresh-sharepoint2013.gif "管理数据刷新上下文菜单")  
   
 > [!TIP]  
->  有关刷新联机工作簿从 SharePoint 的信息，请参阅[具有嵌入的 PowerPivot 模型从 SharePoint Online （白皮书） 的刷新 Excel 工作簿](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
+>  有关 online 刷新工作簿从 SharePoint 的信息，请参阅[刷新 Excel 工作簿使用嵌入的 PowerPivot 模型从 SharePoint Online （白皮书）](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx)。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中计划的数据刷新体系结构  
  下图总结了 SharePoint 2013 和 SQL Server 2012 SP1 中的数据刷新体系结构。  
   
- ![SQL Server 2012 SP1 数据刷新体系结构](../media/as-scheduled-data-refresh2012sp1-architecture.gif "的 SQL Server 2012 SP1 数据刷新体系结构")  
+ ![SQL Server 2012 SP1 数据刷新的体系结构](../media/as-scheduled-data-refresh2012sp1-architecture.gif "的 SQL Server 2012 SP1 数据刷新体系结构")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -198,7 +198,7 @@ ms.locfileid: "36028465"
   
 2.  在该面板的底部，查看 **“数据刷新 - 最近的活动”** 和 **“数据刷新 - 最近的失败”**。  
   
-3.  使用情况数据以及如何启用它的详细信息，请参阅[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+3.  使用情况数据以及如何启用它的详细信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)。  
   
  **诊断日志数据：** 您可以查看与数据刷新相关的 SharePoint 诊断日志数据。 首先，在 SharePoint 管理中心的 **“监视”** 页中确认针对 **“PowerPivot 服务”** 的诊断日志记录的配置。 对于要记入日志的“严重程度最低的事件”，您可能需要增加日志记录的级别。 例如，暂时将该值设置为 **“详细”** ，然后重新运行数据刷新操作。  
   

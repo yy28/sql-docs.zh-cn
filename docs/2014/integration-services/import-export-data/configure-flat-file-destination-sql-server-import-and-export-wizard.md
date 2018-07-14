@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 033b602d712d4ec6e0caf136b1228cd82b552e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14e1742f83496b2976466d152cdd7aab39f76346
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289363"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>配置平面文件目标（SQL Server 导入和导出向导）
-  使用**配置平面文件目标**页为目标平面文件中，指定格式选项以及在继续前预览结果。  
+  使用**配置平面文件目标**页为目标平面文件中，指定格式选项，并继续操作之前预览结果。  
   
- 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关启动向导，以及成功运行向导所需的权限的选项，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关用于启动向导，以及若要成功运行该向导所需的权限选项，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36028379"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**{CR}{LF}**|列由回车符-换行符组合分隔。|  
+|**{CR}{LF}**|列由回车符和换行符的组合分隔。|  
 |**{CR}**|列由回车符分隔。|  
 |**{LF}**|列由换行符分隔。|  
 |**分号 {;}**|列由分号分隔。|  
@@ -63,9 +63,9 @@ ms.locfileid: "36028379"
 |**竖线 {&#124;}。**|列由竖线分隔。|  
   
  **预览**  
- 在中查看**预览数据**目标平面文件选项所选格式的结果的对话框。  
+ 在中查看**预览数据**对话框结果的所选的格式设置选项中为目标平面文件。  
   
  **编辑转换**  
- 删除行，追加行，并使用目标文件中配置列**列映射**对话框。  
+ 删除行、 追加行，并使用目标文件中配置的列**列映射**对话框。  
   
   

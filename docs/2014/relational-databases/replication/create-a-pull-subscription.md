@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], creating
 - merge replication subscribing [SQL Server replication], pull subscriptions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8db5ec7429f770e7fe9f2765fa0ba67294c99887
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 002e07494d3304a782de0ab18c0c4d0de0a3d9c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288853"
 ---
 # <a name="create-a-pull-subscription"></a>创建请求订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建请求订阅。  
@@ -93,7 +93,7 @@ ms.locfileid: "36123392"
   
     -   如果结果集中 **allow_pull** 的值为 **1**，则发布支持请求订阅。  
   
-    -   如果值**allow_pull**是**0**，执行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，并指定**allow_pull**为**@property**和`true`为**@value**。  
+    -   如果的值**allow_pull**是**0**，执行[sp_changepublication &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，并指定**allow_pull**对于**@property**并`true`有关**@value**。  
   
 2.  在订阅服务器上，执行 [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 指定 **@publisher** 和 **@publication**中通过 FTP 传递快照。 有关更新订阅的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36123392"
         > [!NOTE]  
         >  使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** 和 **@job_password**中为非 SQL Server 订阅服务器创建订阅。 分发代理始终使用 Windows 集成身份验证与订阅服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到分发服务器。  
   
-    -   （可选）值为**0**为**@distributor_security_mode**和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录信息**@distributor_login**和**@distributor_password**，如果你需要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证来连接到分发服务器。  
+    -   （可选）值为**0**有关**@distributor_security_mode**并[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录信息**@distributor_login**和**@distributor_password**，如果您需要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证来连接到分发服务器。  
   
     -   该订阅的分发代理作业计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36123392"
   
     -   如果结果集中 **allow_pull** 的值为 **1**，则发布支持请求订阅。  
   
-    -   如果值**allow_pull**是**0**，执行[sp_changemergepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，并指定**allow_pull**为**@property**和`true`为**@value**。  
+    -   如果的值**allow_pull**是**0**，执行[sp_changemergepublication &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，并指定**allow_pull**有关**@property**并`true`有关**@value**。  
   
 2.  在订阅服务器上，执行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**或复制管理对象 (RMO) 在 **@publication**以及下列参数：  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36123392"
   
 2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，在步骤 2 中指定的属性不正确或服务器上不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，步骤 2 中指定的属性不正确或服务器上不存在发布。  
   
 4.  执行按位逻辑 AND (`&`在 Visual C# 和`And`在 Visual Basic 中) 之间<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>属性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用请求订阅。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36123392"
   
     -   用于 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>的发布的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>和<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>提供的凭据[!INCLUDE[msCoName](../../includes/msconame-md.md)]在其下运行分发代理在订阅服务器上的 Windows 帐户。 该帐户用于与订阅服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>并<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>的字段<xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>提供的凭据[!INCLUDE[msCoName](../../includes/msconame-md.md)]用于分发代理在订阅服务器上运行的 Windows 帐户。 该帐户用于与订阅服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
         > [!NOTE]  
         >  当 `sysadmin` 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](security/replication-agent-security-model.md)。  
@@ -195,7 +195,7 @@ ms.locfileid: "36123392"
     -   （可选）<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 的 `true` 值，用于创建用来同步订阅的代理作业。 如果您指定了 `false`（默认值），则只能以编程的方式同步订阅，如果您通过 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 属性访问该对象，则必须指定 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 的其他属性。 有关详细信息，请参阅 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)。  
   
         > [!NOTE]  
-        >  并不是所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都提供 SQL Server 代理。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 当指定的值`true`Express 订阅服务器的代理作业未创建。 但是，与订阅相关的重要元数据存储在订阅服务器中。  
+        >  并不是所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都提供 SQL Server 代理。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 指定的值时`true`Express 订阅服务器的代理作业不会创建。 但是，与订阅相关的重要元数据存储在订阅服务器中。  
   
     -   （可选）在使用 SQL Server 身份验证连接到分发服务器时设置 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 字段。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "36123392"
   
 2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，在步骤 2 中指定的属性不正确或服务器上不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，步骤 2 中指定的属性不正确或服务器上不存在发布。  
   
 4.  执行按位逻辑 AND (`&`在 Visual C# 和`And`在 Visual Basic 中) 之间<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>属性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用请求订阅。  
   

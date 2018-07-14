@@ -1,5 +1,5 @@
 ---
-title: 将数据添加到报表 （报表生成器和 SSRS） |Microsoft 文档
+title: 将数据添加到报表 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aeae106d4ab76cb6ab04248126b4b32e1e4a160a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284743"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>向报表添加数据（报表生成器和 SSRS）
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  
@@ -77,9 +77,9 @@ ms.locfileid: "36123347"
   
 -   [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [报表部件&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [报表部件的&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [筛选、 分组和排序数据&#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -100,30 +100,30 @@ ms.locfileid: "36123347"
   
  在查询设计器中，可以运行查询以查看示例数据并验证查询命令语法。 结果集中的列名将成为您在“报表数据”窗格中看到的字段名称。 结果集必须是单组行和列，在其中，为每行数据存在相同数目的值。 不支持来自单个查询的多个结果集。 不支持不具有固定数目的列并且可为每一行生成不同数目的数据值的不规则层次结构。  
   
- 若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)和[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+ 若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)并[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
  数据扩展插件和外部数据源之间的通信由数据提供程序处理。 对查询命令语法的支持、查询参数和结果集中值的数据类型由各数据访问接口确定。 有关详细信息，请参阅针对数据扩展插件和[查询设计器（报表生成器）](../query-designers-report-builder.md)的特定类型的主题。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 操作指南主题  
- [添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [生成关系查询设计器中的某个查询&#40;报表生成器和 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [在关系查询设计器中生成查询&#40;报表生成器和 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
  [为多维数据的参数值显示隐藏的数据集&#40;报表生成器和 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [向数据集添加筛选器（报表生成器和 SSRS）](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [为数据区域设置无数据消息&#40;报表生成器和 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [数据区域设置无数据消息&#40;报表生成器和 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
  [将查询参数与报表参数相关联&#40;报表生成器和 SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Analysis Services 的 MDX 查询设计器中定义参数&#40;报表生成器和 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Analysis Services MDX 查询设计器中定义参数&#40;报表生成器和 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   

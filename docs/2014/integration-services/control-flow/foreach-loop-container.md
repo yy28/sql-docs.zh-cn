@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280423"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -41,7 +41,7 @@ ms.locfileid: "36028623"
   
 -   Foreach 文件枚举器，用于枚举文件夹中的文件。 该枚举器可遍历子文件夹。 例如，可读取 Windows 文件夹及其子文件夹中所有具有 *.log 文件扩展名的文件。  
   
--   Foreach 源变量枚举器，用于枚举指定变量包含的可枚举对象。 可枚举对象可以是一个数组，ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]枚举器，依次类推。 例如，可以枚举包含服务器名称的数组中的值。  
+-   Foreach 源变量枚举器，用于枚举指定变量包含的可枚举对象。 可枚举对象可以是数组、 ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]枚举器，依次类推。 例如，可以枚举包含服务器名称的数组中的值。  
   
 -   Foreach 项枚举器，用于枚举集合项。 例如，可以枚举执行进程任务所使用的可执行文件和工作目录的名称。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36028623"
   
 -   Foreach Azure Blob 枚举器，用于在 Azure 存储中的 blob 容器中枚举 blob。  
   
--   若要枚举 ADLS 目录中的文件的 Foreach ADLS 文件枚举器。
+-   若要枚举的 ADLS 目录中的文件的 Foreach ADLS 文件枚举器。
   
  以下关系图显示了一个具有文件系统任务的 Foreach 循环容器。 该 Foreach 循环使用了 Foreach 文件枚举器，并将文件系统任务配置为复制文件。 如果枚举器指定的文件夹包含四个文件，则循环将重复四次，复制四个文件。  
   
  ![用于枚举文件夹的 Foreach 循环容器](../media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
   
- 可以使用变量和属性表达式的组合，用枚举器集合值更新包对象的属性。 首先，将集合值映射到用户定义变量；然后，对使用该变量的属性执行一个属性表达式。 例如，Foreach 文件枚举器集合值映射到名为`MyFile`变量然后使用属性表达式中的使用者属性的发送邮件任务。 如果运行该包，则每次重复循环时，都会用一个文件名更新 Subject 属性。 有关详细信息，请参阅 [在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)。  
+ 可以使用变量和属性表达式的组合，用枚举器集合值更新包对象的属性。 首先，将集合值映射到用户定义变量；然后，对使用该变量的属性执行一个属性表达式。 例如，Foreach 文件枚举器集合值映射到一个名为变量`MyFile`变量然后发送邮件任务的 Subject 属性使用属性表达式中。 如果运行该包，则每次重复循环时，都会用一个文件名更新 Subject 属性。 有关详细信息，请参阅 [在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)。  
   
  映射到枚举器集合值的变量也可用于表达式和脚本。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36028623"
 |Foreach Nodelist|指定 XML 文档的源并配置 XPath 操作。|  
 |Foreach SMO|指定与数据库的连接以及要枚举的 SMO 对象。|  
 |Foreach Azure Blob|指定包含要枚举的 blob 的 Azure blob 容器。|  
-|Foreach ADLS 文件|指定包含要枚举，以及某些筛选器文件的 ADLS 目录。|
+|Foreach ADLS 文件|指定包含要枚举，以及一些筛选器文件的 ADLS 目录。|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Foreach 循环容器中的属性表达式  
  可以将包配置为并发运行多个可执行文件。 如果包中包含实现属性表达式的 Foreach 循环容器，则应当小心使用此配置。  

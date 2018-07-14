@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - updating query results
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1f0dd3467f10c80f728288bc60c57f7d270b394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bdc2b9c4d98e140dc60c900a3a955a04f88d06df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282303"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新结果的规则 (Visual Database Tools)
   在许多情况下，都可以更新显示在 [“结果”窗格](visual-database-tools.md)中的结果集。 不过，在某些情况下却不能这样做。  

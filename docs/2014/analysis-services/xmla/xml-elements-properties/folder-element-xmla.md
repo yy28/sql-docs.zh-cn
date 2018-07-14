@@ -1,5 +1,5 @@
 ---
-title: Folder 元素 (XMLA) |Microsoft 文档
+title: Folder 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64bc73db4cfb1fee4471e474bf498094751edcf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9bc961679619f15211689b4f118f511edbadac8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283913"
 ---
 # <a name="folder-element-xmla"></a>Folder 元素 (XMLA)
-  包含要更新的文件系统存储位置[位置](location-element-xmla.md)期间元素[还原](../xml-elements-commands/restore-element-xmla.md)或[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
+  包含要更新的文件系统存储位置[位置](location-element-xmla.md)期间[还原](../xml-elements-commands/restore-element-xmla.md)或[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36026624"
 ## <a name="remarks"></a>Remarks  
  如果指定 `Folder` 元素，当备份文件（对于 `Restore` 命令）或源实例上的数据库（对于 `Synchronize` 命令）中包含的对象的存储位置与 `Original` 元素的值相匹配时，该位置将更改为 `New` 元素的值。  
   
- 有关备份和还原对象的详细信息，请参阅[Backing Up、 正在还原，和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 有关备份和还原对象的详细信息，请参阅[备份、 还原和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [StorageLocation 元素&#40;ASSL&#41;](../../scripting/properties/storagelocation-element-assl.md)   
