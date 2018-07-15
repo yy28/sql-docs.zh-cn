@@ -1,5 +1,5 @@
 ---
-title: 安装 Reporting Services 本机模式报表服务器 |Microsoft 文档
+title: 安装 Reporting Services 本机模式报表服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
@@ -17,13 +17,13 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 090432d75605eb1678eacc77fafe1c213825d5ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329437"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安装 Reporting Services 本机模式报表服务器
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式报表服务器可从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装或从命令行安装。 在安装向导中，您可以选择：1) 安装文件并使用默认设置配置服务器；或 2) 仅安装文件，不通过安装向导配置服务器。  本主题讨论“本机模式默认配置”，其中，安装程序安装并配置报表服务器实例。 安装程序结束后，报表服务器便进入运行状态，可供使用。 本机模式报表服务器作为一个独立的应用程序服务器运行。 本机模式是默认服务器模式。  
@@ -55,7 +55,7 @@ ms.locfileid: "36124052"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令行实用工具（rsconfig.exe、rskeymgmt.exe 和 rs.exe）  
   
- 此选项不适用于共享功能如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，其必须指定为独立的项如果你想要安装它们。  
+ 此选项不适用于共享功能等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，如果你想要安装它们必须作为单独的项指定的。  
   
  安装程序为本机模式的报表服务器安装配置以下设置：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36124052"
   
  如果计算机不满足默认安装的全部要求，则必须在“仅文件”模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并在安装程序结束后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器对其进行配置。  
   
- 请不要仅为了使默认安装继续进行而试图对计算机进行重新配置。 这样做可能需要好几个小时的工作量，实际上抵消了该安装选项所带来的省时优势。 最佳解决方案是安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]仅文件模式，然后配置要使用特定值的报表服务器。  
+ 请不要仅为了使默认安装继续进行而试图对计算机进行重新配置。 这样做可能需要好几个小时的工作量，实际上抵消了该安装选项所带来的省时优势。 最佳解决方案是安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]仅文件模式中，然后配置要使用特定值的报表服务器。  
   
 ##  <a name="bkmk_defaultURLreservations"></a> 默认 URL 保留项  
  URL 预留由前缀、主机名、端口和虚拟目录组成：  
@@ -101,15 +101,15 @@ ms.locfileid: "36124052"
 |组成部分|Description|  
 |----------|-----------------|  
 |Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 预留。|  
-|主机名|默认主机名为强通配符 (+)。 它指定报表服务器将接受解析为计算机，包括 http:// 任何主机名的指定端口上的任何 HTTP 请求\<计算机名 > / reportserver， http://localhost/reportserver，或 http://\<ip 地址 > /reportserver。|  
+|主机名|默认主机名为强通配符 (+)。 它指定报表服务器会接受指定端口的任何主机名解析为的计算机，包括 http:// 上的任何 HTTP 请求\<计算机名 > / reportserver， http://localhost/reportserver，或 http://\<ip 地址 > /报表服务器。|  
 |端口|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|  
-|虚拟目录|默认情况下，虚拟目录创建 ReportServer_ 格式\<*instance_name*> 为报表服务器 Web 服务和 Reports_\<*instance_name*>为报表管理器中。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于报表管理器，默认的虚拟目录为 **reports**。|  
+|虚拟目录|默认情况下，虚拟目录创建格式为 ReportServer_\<*instance_name*> 的报表服务器 Web 服务和 Reports_\<*instance_name*>为报表管理器中。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于报表管理器，默认的虚拟目录为 **reports**。|  
   
  完整的 URL 字符串示例如下所示：  
   
 -   http://+:80/reportserver 用于访问报表服务器。  
   
--   http://+:80/reports提供到报表管理器的访问。  
+-   http://+:80/reports用于为报表管理器的访问权限。  
   
 ##  <a name="bkmk_installwithwizard"></a> 使用 SQL Server 安装向导安装本机模式  
  以下列表介绍了在 SQL Server 安装向导中选择的  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 特定步骤和选项。 该列表并不介绍您在安装向导中看到的每一页，而是仅介绍作为本机模式安装一部分的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关页。  
@@ -124,7 +124,7 @@ ms.locfileid: "36124052"
   
     -   **Reporting Services-本机**。  
   
-    -   **管理工具 – 基本**。 管理工具不是必需的，但是建议您安装，除非您安装了其他一些管理工具。 默认配置选项将使报表服务器正常运行，但是您可能想在以后更改配置选项。 通过管理某些选项例如我的报表 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **管理工具 – 基本**。 管理工具不是必需的，但是建议您安装，除非您安装了其他一些管理工具。 默认配置选项将使报表服务器正常运行，但是您可能想在以后更改配置选项。 通过管理诸如我的报表选项 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![功能选择中的 SSRS 本机模式选择](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "SSRS Native Mode Select in Feature Selection")  
   

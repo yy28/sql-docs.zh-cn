@@ -1,5 +1,5 @@
 ---
-title: 报表管理器 （SSRS 本机模式） |Microsoft 文档
+title: 报表管理器 （SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - Report Manager [Reporting Services], about Report Manager
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 012b0a7d775050108305d44a1eb595a9f8b7b789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327067"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>报表管理器（SSRS 本机模式）
   报表管理器是基于 Web 的报表访问和管理工具，用于通过 HTTP 连接来管理远程位置的单个报表服务器实例。 您还可以使用报表管理器的报表查看器和导航功能。 本主题内容：  
@@ -70,7 +70,7 @@ ms.locfileid: "36128488"
   
  报表管理器只能供在本机模式下运行的报表服务器使用。 配置为 SharePoint 集成模式的报表服务器不支持报表管理器。  
   
- 某些报表管理器功能才可用的指定版本中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 某些报表管理器功能才可指定版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](security/grant-user-access-to-a-report-server.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36128488"
  可以自定义报表管理器，但可自定义的方式非常有限。 例如，您可以在“站点设置”页上修改应用程序标题。 如果您是 Web 开发人员，则可以修改包含报表管理器所用样式信息的样式表。 由于没有专门对报表管理器进行设计以支持自定义，因此，必须对所做的任何修改进行全面测试。 如果发现报表管理器不能满足您的需要，则可以开发自定义报表查看器，或者配置 SharePoint Web 部件以便在 SharePoint 站点中找到和查看报表。 有关详细信息，请参阅[配置报表管理器（本机模式）](report-server/configure-web-portal.md)。  
   
 ##  <a name="bkmk_icon_descriptions"></a> 图标说明  
- 下表对报表管理器中使用的图标进行了说明。 有关在报表工具栏显示的图标的详细信息，请参阅[HTML 查看器和报表工具栏](html-viewer-and-the-report-toolbar.md)。  
+ 下表对报表管理器中使用的图标进行了说明。 有关报表工具栏中显示的图标的详细信息，请参阅[HTML 查看器和报表工具栏](html-viewer-and-the-report-toolbar.md)。  
   
 |图标|Description|操作|  
 |----------|-----------------|------------|  
@@ -118,11 +118,11 @@ ms.locfileid: "36128488"
   
 ## <a name="see-also"></a>请参阅  
  [配置 URL &#40;SSRS 配置管理器&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Planning for Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+ [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [报表生成器&#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Reporting Services 工具](tools/reporting-services-tools.md)   
  [报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [查看和浏览本机模式报表使用的 SharePoint Web 部件&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
+ [查看和浏览本机模式下使用 SharePoint Web 部件的报表&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

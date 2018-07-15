@@ -1,5 +1,5 @@
 ---
-title: 创建测试集 （数据挖掘向导） |Microsoft 文档
+title: 创建测试集 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ced530beaaa09954e94c851069ca76d01f3023d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326877"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>创建测试集（数据挖掘向导）
   可以使用 **“创建测试集”** 页指定用于定型的数据量，以及为用作测试集而保留的数据量。 在创建挖掘结构时将数据分成定型集和测试集，可以更方便地评估以后创建的挖掘模型的准确性。  
@@ -30,7 +30,7 @@ ms.locfileid: "36125951"
   
  默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 生成用于启动分区的数值种子。 此种子基于挖掘结构的名称。 如果希望即使在挖掘结构名称更改的情况下分区仍保持不变，则可以设置挖掘结构的 HoldoutSeed 属性，为种子指定一个值。 如果更改维持种子，则必须重新处理该结构。  
   
- 如果你以后要更改的测试或定型数据量，则可以修改`HoldoutMaxCases`和`HoldoutMaxPercent`通过对数据挖掘结构属性**属性**窗口。 不过，进行更改后，必须重新处理挖掘结构及所有关联挖掘模型。 还存在下列限制：  
+ 如果以后想要更改的测试或定型数据量，则可以修改`HoldoutMaxCases`并`HoldoutMaxPercent`上使用的数据挖掘结构的属性**属性**窗口。 不过，进行更改后，必须重新处理挖掘结构及所有关联挖掘模型。 还存在下列限制：  
   
 -   仅当数据挖掘结构存储在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中时，才支持数据挖掘结构的分区。 早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不支持缓存挖掘结构的分区信息。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36125951"
  **有关详细信息，请参阅**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)、[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>“常规”  
- **用于测试的数据的百分比**  
+ **测试数据的百分比**  
  单击向上箭头和向下箭头可以增大或减小用作测试数据的数据百分比，也可以在文本框中键入介于 0 到 100 之间的值。  
   
  **最大测试数据集中的事例数**  

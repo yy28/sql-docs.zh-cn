@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 81dcad91ec5027050d000764ebfaa951e96f9c08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c360b7c9ab56e044c297ea9333ac5e4175c6f5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328867"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>向报表添加仪表（报表生成器和 SSRS）
   如果要以可视化格式汇总数据，则可使用仪表数据区域。 将仪表数据区域添加到设计图面后，可以将报表数据集字段拖到仪表的数据窗格中。  
@@ -38,7 +38,7 @@ ms.locfileid: "36126780"
     > [!NOTE]  
     >  与图表不同的是，仪表只有两个类型：线性和径向。 **“选择仪表类型”** 对话框中的可用仪表是这两类仪表的模板。 因此，在将仪表添加到报表后不能更改仪表类型。 必须通过删除并重新添加仪表来更改仪表类型。  
   
-     如果报表没有数据源和数据集，则 **“数据源属性”** 对话框即会打开并引导您完成创建数据源和数据集的步骤。 有关详细信息，请参阅[添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+     如果报表没有数据源和数据集，则 **“数据源属性”** 对话框即会打开并引导您完成创建数据源和数据集的步骤。 有关详细信息，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
      如果报表具有数据源但没有数据集，则 **“数据集属性”** 对话框即会打开并引导您完成创建一个数据集的步骤。 有关详细信息，请参阅 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   

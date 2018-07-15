@@ -1,30 +1,29 @@
 ---
-title: 选项 (SQL Server AlwaysOn，仪表板页) |Microsoft 文档
+title: 选项 (SQL Server AlwaysOn，仪表板页) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 6
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 553f76520f9bb292d795fbbd5e13833391d6bdab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d7ab91fe3fac841c11a0e237a9ec44a4f1ad6911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330507"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>选项（SQL Server AlwaysOn、“仪表板”页）
-  使用**SQL Server AlwaysOn 仪表板**页[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**选项**对话框中配置 AlwaysOn 仪表板。  
+  使用**SQL Server AlwaysOn 仪表板**页[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**选项**对话框来配置 AlwaysOn 仪表板。  
   
  **若要访问此页，请执行以下操作：**  
   
@@ -38,7 +37,7 @@ ms.locfileid: "36123692"
   
 -   **“连接重试次数”** 显示面板尝试连接到承载着面板所监视的可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的次数。 默认值为 65535。 启用自动刷新时，您可以编辑此字段以更改连接重试次数。  
   
- **启用您用户定义的 AlwaysOn 策略。**  
+ **启用用户定义的 AlwaysOn 策略。**  
  如果您已定义了自己的 AlwaysOn 策略，单击此选项即可启用您的策略。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 自 SQL Server 2008 以来已更改的全文搜索 |Microsoft 文档
+title: 全文搜索自 SQL Server 2008 以后已发生更改 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e70053054ce287618625380b3072dc4ce5119b12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c934f79ba4f8fec418c422beb0a60a3c563516ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330807"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>全文搜索自 SQL Server 2008 以后已发生更改
   升级顾问检测到将升级全文搜索。 许多全文搜索选项和设置已发生更改。 因此，当您升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 全文搜索时，可能需要修改某些设置。  

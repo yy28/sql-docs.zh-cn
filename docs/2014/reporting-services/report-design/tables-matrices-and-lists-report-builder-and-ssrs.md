@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
 - sql12.rtp.rptdesigner.groupproperties.advanced.f1
@@ -36,15 +36,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80661ab558038af26a9b98fef925c2ec24df83ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8579071257a3f4026a111aaf16d7898bbd28cbb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323897"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
   表、矩阵和列表是在以行和列形式组织的单元中显示报表数据的数据区域。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域。  
@@ -100,7 +100,7 @@ ms.locfileid: "36125789"
   
  ![从工具箱添加的新列表，选中](../media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
   
- 有关详细信息，请参阅[列出&#40;报表生成器和 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 
   
@@ -138,7 +138,7 @@ ms.locfileid: "36125789"
   
 -   [向组或 Tablix 数据区域添加总计&#40;报表生成器和 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [更改单元格内的项&#40;报表生成器和 SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [更改单元中的项&#40;报表生成器和 SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
 -   [更改行高或列宽&#40;报表生成器和 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36125789"
   
 -   [添加或删除数据区域的组中&#40;报表生成器和 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [显示标头和组尾与组&#40;报表生成器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [显示组头和组尾&#40;报表生成器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
 -   [创建递阶的报表&#40;报表生成器和 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
@@ -169,10 +169,10 @@ ms.locfileid: "36125789"
  [向 Tablix 数据区域添加数据&#40;报表生成器和 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  提供与向 Tablix 数据区域添加详细信息和分组数据、小计和总计以及标签有关的详细信息。  
   
- [控制 Tablix 数据区域的显示报表页上&#40;报表生成器和 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [控制 Tablix 数据区域显示报表页上的&#40;报表生成器和 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  介绍 Tablix 数据区域的属性，您可以修改这些属性以便更改在报表中查看 Tablix 数据区域时该数据区域的显示方式。  
   
- [控制行和列标题&#40;报表生成器和 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [控制行标题和列标题&#40;报表生成器和 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  介绍在表、矩阵或列表数据区域可以水平或垂直跨多页时如何控制行和列标题。  
   
  [创建递归层次结构组&#40;报表生成器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  

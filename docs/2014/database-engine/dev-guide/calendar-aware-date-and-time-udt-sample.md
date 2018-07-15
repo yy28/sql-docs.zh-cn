@@ -1,5 +1,5 @@
 ---
-title: 日历感知的日期和时间 UDT 示例 |Microsoft 文档
+title: 识别日历的日期和时间 UDT 示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a324a9b0f5ce90c7990bdc44c352df1e7a48c206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161395e5c57e8355c75f952f0ea0998feb487c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330457"
 ---
-# <a name="calendar-aware-date-and-time-udt-sample"></a>日历感知的日期和时间 UDT 示例
+# <a name="calendar-aware-date-and-time-udt-sample"></a>识别日历的日期和时间 UDT 示例
   将日期作为字符串存储会导致混乱，因为在不识别所使用日历系统的情况下日期毫无意义。`CADatetime` 示例定义两个用户定义数据类型（`CADatetime` 和 `CADate`），通过它们可以按日历方式对日期和时间进行处理。  
   
 ## <a name="prerequisites"></a>必要條件  
@@ -53,7 +53,7 @@ ms.locfileid: "36126144"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，你必须`ALTER SETTINGS`服务器级别权限，该权限的成员隐式具有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36126144"
   
 3.  在 c:\MySample 中，创建 `CalendarAware.cs` 并将 C# 示例代码（如下所示）复制到该文件中。  
   
-4.  在 c:\MySample，创建文件`calendars.txt`并将示例代码复制到文件。  
+4.  在 c:\MySample，创建文件`calendars.txt`和示例代码复制到的文件。  
   
 5.  在 c:\MySample 中，创建文件 `calendars.ar-SA.txt` 并将以下代码复制到该文件中：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36126144"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]测试到文件的命令脚本并将其保存为`test.sql`示例目录中。  
+14. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
   
 15. 使用以下命令执行测试脚本：  
   

@@ -20,13 +20,13 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 660524626e7120f21d5e420526f0634f3155f2b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f63101c71ada32768139c075dd98122bac5ca75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329937"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中使用转换组件可以在数据从源传递到目标时修改和分析该数据。 具有同步输出的转换在每个输入行传递给该组件时对该行进行处理。 具有异步输出的转换可能要等收到所有输入行之后才完成其处理，也可能在收到所有输入行之前输出某些行。 本主题讨论异步转换。 如果你的处理需要同步转换，请参阅[使用脚本组件创建同步转换](../data-flow/transformations/script-component.md)。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "36127123"
 ### <a name="adding-variables"></a>添加变量  
  如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。  
   
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 此外可以选择多个变量，通过单击省略号 (**...**) 按钮旁边`ReadOnlyVariables`和`ReadWriteVariables`属性字段，然后选择中的变量**选择变量**对话框。  
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 此外可以选择多个变量，通过单击省略号 (**...**) 按钮旁边`ReadOnlyVariables`并`ReadWriteVariables`属性字段，然后选择中的变量**选择变量**对话框。  
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36127123"
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码  
- 当在创建并配置可编辑的转换组件后打开 VSTA IDE`ScriptMain`使用存根在代码编辑器中显示为 ProcessInputRow 和 CreateNewOutputRows 方法的类。 在 ScriptMain 类中可编写自定义代码，ProcessInputRow 是转换组件中最重要的方法。 `CreateNewOutputRows` 方法通常在源组件中使用，该组件与异步转换相似，因为这两个组件都必须创建自己的输出行。  
+ 创建并配置转换组件，可编辑后打开 VSTA IDE 时`ScriptMain`类存根 （stub） 与在代码编辑器中显示其中有 ProcessInputRow 和 CreateNewOutputRows 方法。 在 ScriptMain 类中可编写自定义代码，ProcessInputRow 是转换组件中最重要的方法。 `CreateNewOutputRows` 方法通常在源组件中使用，该组件与异步转换相似，因为这两个组件都必须创建自己的输出行。  
   
- 如果打开 VSTA**项目资源管理器**窗口中，你可以看到，脚本组件也具有生成只读`BufferWrapper`和`ComponentWrapper`项目项。 ScriptMain 类继承自中的 UserComponent 类`ComponentWrapper`项目项。  
+ 如果打开 VSTA**项目资源管理器**窗口中，您可以看到，脚本组件还生成了只读`BufferWrapper`和`ComponentWrapper`项目项。 在 ScriptMain 类继承自 UserComponent 类中`ComponentWrapper`项目项。  
   
- 在运行时，数据流引擎调用 PrimeOutput 方法`UserComponent`类，该类会重写<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>方法<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>父类。 PrimeOutput 方法又调用 CreateNewOutputRows 方法。  
+ 在运行时，数据流引擎调用 PrimeOutput 方法中`UserComponent`类，该类会重写<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>方法的<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>父类。 PrimeOutput 方法又调用 CreateNewOutputRows 方法。  
   
  随后，数据流引擎调用 UserComponent 类中的 ProcessInput 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 ProcessInput 方法遍历输入缓冲区中的所有行并为每一行调用一次 ProcessInputRow 方法。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36127123"
   
  在异步转换中，可以根据需要在 ProcessInputRow 或 ProcessInput 方法中使用 AddRow 方法向输出添加行。 不一定要使用 CreateNewOutputRows 方法。 如果要将单行结果（如聚合结果）写入特定输出，可以使用 CreateNewOutputRows 方法预先创建该输出行，然后在处理完所有输入行之后填充其值。 但是，在 CreateNewOutputRows 方法中创建多个行是没有任何用处的，因为脚本组件只允许使用输入或输出中的当前行。 CreateNewOutputRows 方法在源组件中更重要，源组件没有任何输入行要处理。  
   
- 可能还需要重写 ProcessInput 方法本身，以便在遍历输入缓冲区并为每行调用 ProcessInputRow 之前或之后执行附加的预处理或最终处理。 例如，其中一个此主题中的代码示例替代 ProcessInput 才能计为 ProcessInputRow 循环访问行的特定城市中的地址数`.`示例写入的汇总值的第二个输出之后的所有行处理。 该示例在 ProcessInput 中完成输出，原因是调用 PostExecute 时，输出缓冲区不再可用。  
+ 可能还需要重写 ProcessInput 方法本身，以便在遍历输入缓冲区并为每行调用 ProcessInputRow 之前或之后执行附加的预处理或最终处理。 例如，本主题中的代码示例之一重写 ProcessInput，若要在 ProcessInputRow 遍历各行进行计数的对特定城市中的地址数`.`该示例将汇总值写入到第二个输出所有行都已之后处理。 该示例在 ProcessInput 中完成输出，原因是调用 PostExecute 时，输出缓冲区不再可用。  
   
  根据用户的要求，可能还需要在 ScriptMain 类中可用的 PreExecute 和 PostExecute 方法中编写脚本来执行任何预处理或最终处理。  
   
@@ -234,7 +234,7 @@ public class ScriptMain:
   
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [了解同步和异步转换](../understanding-synchronous-and-asynchronous-transformations.md)   

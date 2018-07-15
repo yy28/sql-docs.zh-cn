@@ -1,5 +1,5 @@
 ---
-title: 已弃用的 SQL Server 2014 中的数据库引擎功能 |Microsoft 文档
+title: 不推荐使用 SQL Server 2014 中的数据库引擎功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326397"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的数据库引擎功能
   本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -150,13 +150,13 @@ ms.locfileid: "36127401"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|表提示通过视图间接应用于多语句表值函数 (TVF) 的调用。|无。|间接 TVF 提示|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 语法:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |其他|DB-Library<br /><br /> 用于 C 语言的嵌入式 SQL|尽管 [!INCLUDE[ssDE](../includes/ssde-md.md)] 仍然支持来自使用 DB-Library 和嵌入式 SQL API 的现有应用程序的连接，但它不包括在使用这些 API 的应用程序上进行编程工作所需的文件或文档。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的未来版本将不再支持来自 DB-Library 或嵌入式 SQL 应用程序的连接。 请不要使用 DB-Library 或嵌入式 SQL 来开发新的应用程序。 修改现有应用程序时，请删除 DB-Library 或嵌入式 SQL 的任何依赖项。 请使用 SQLClient 命名空间或诸如 ODBC 的 API，而不使用这些 API。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 不包含运行这些应用程序所需的 DB-Library DLL。 若要运行 DB-Library 或嵌入式 SQL 应用程序，必须有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 6.5 版、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 版或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]提供的 DB-Library DLL。|InclusionThresholdSetting|InclusionThresholdSetting|  
-|工具|SQL Server Profiler for Trace Capture|使用 SQL Server Management Studio 中嵌入的扩展事件探查器。<br /><br /> 注意： 继续使用 SQL Server 事件探查器跟踪捕获 for Analysis Services 工作负荷。|SQL Server 事件探查器|InclusionThresholdSetting|  
-|工具|SQL Server Profiler for Trace Replay|[SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意： 继续 SQL Server 事件探查器用于跟踪重播的 Analysis Services 工作负荷。|SQL Server 事件探查器|InclusionThresholdSetting|  
+|工具|SQL Server Profiler for Trace Capture|使用 SQL Server Management Studio 中嵌入的扩展事件探查器。<br /><br /> 注意： 继续使用 SQL Server Profiler for Trace Capture 用于 Analysis Services 工作负荷。|SQL Server 事件探查器|InclusionThresholdSetting|  
+|工具|SQL Server Profiler for Trace Replay|[SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意： 继续 SQL Server Profiler for Trace Replay 用于 Analysis Services 工作负荷。|SQL Server 事件探查器|InclusionThresholdSetting|  
 |跟踪管理对象|Microsoft.SqlServer.Management.Trace 命名空间（包含用于 SQL Server 跟踪和重播对象的 API）|跟踪配置： <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 跟踪读取： <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 重播跟踪：无|||  
 |SQL 跟踪存储过程、函数和目录视图|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[扩展事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
->  `OUTPUT` 的 cookie `sp_setapprole` 参数当前记载为 `varbinary(8000)`，这是正确的最大长度。 但是，目前执行返回`varbinary(50)`。 如果开发人员已分配 `varbinary(50)`，当 cookie 在将来的版本中返回大小增量时，应用程序可能需要更改。 尽管这不是不推荐使用的问题，但本主题中提到了，因为应用程序调整都是类似的。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)。  
+>  `OUTPUT` 的 cookie `sp_setapprole` 参数当前记载为 `varbinary(8000)`，这是正确的最大长度。 但是当前实现将返回`varbinary(50)`。 如果开发人员已分配 `varbinary(50)`，当 cookie 在将来的版本中返回大小增量时，应用程序可能需要更改。 尽管这不是不推荐使用的问题，但本主题中提到了，因为应用程序调整都是类似的。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 中废止的数据库引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md)  

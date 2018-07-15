@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subcomponents visibility [SQL Server]
 - metadata [SQL Server], visibility
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5e664343b495990477fb43b0a838edefe930b390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8d4eaac9765f36b72e068bb39cda4d3377a67d56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323957"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
   元数据的可见性仅限用户所拥有的安全对象，或已授予用户某些权限的安全对象。 例如，如果用户获得了对表 `myTable`的 SELECT 或 INSERT 权限，则下面的查询将返回一行。  
@@ -67,7 +66,7 @@ GO
   
 -   元数据生成的内置函数（如 OBJECTPROPERTYEX）可能返回 NULL。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程可能只返回行子集或 NULL。  
+-    [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程可能只返回行子集或 NULL。  
   
  SQL 模块（如存储过程和触发器）在调用方的安全上下文中运行，因此，它们只有有限的元数据访问性。 例如，在以下代码中，当存储过程尝试访问表 `myTable` （调用方对该表没有权限）的元数据时，返回空的结果集。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，返回一行。  
   

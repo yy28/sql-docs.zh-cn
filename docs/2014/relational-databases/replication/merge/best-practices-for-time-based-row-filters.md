@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 718615cbe81c5238d6d16cff1806d14a019920e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331337"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
   应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 `GETDATE()` 函数的查询来实现此功能。 请考虑以下行筛选器语句：  
@@ -30,7 +30,7 @@ ms.locfileid: "36126289"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 使用此类型的筛选器时，通常假定合并代理运行时始终发生两件事情：满足此筛选器的行复制到订阅服务器中；从订阅服务器中清除不再满足此筛选器的行。 (有关筛选与`HOST_NAME()`，请参阅[参数化行筛选器](parameterized-filters-parameterized-row-filters.md)。)但是，合并复制只复制并清除自上次同步以来发生更改的数据，而不考虑如何定义数据的行筛选器。  
+ 使用此类型的筛选器时，通常假定合并代理运行时始终发生两件事情：满足此筛选器的行复制到订阅服务器中；从订阅服务器中清除不再满足此筛选器的行。 (有关使用筛选的详细信息`HOST_NAME()`，请参阅[参数化行筛选器](parameterized-filters-parameterized-row-filters.md)。)但是，合并复制只复制并清除自上次同步以来发生更改的数据，而不考虑如何定义数据的行筛选器。  
   
  要使合并复制处理某一行，该行中的数据必须满足行筛选器，并且该行自上次同步以来必须已发生更改。 对于 **SalesOrderHeader** 表，插入行时将输入 **OrderDate** 。 由于插入是一种数据更改，因此各行将如预期的那样被复制到订阅服务器中。 但是，如果订阅服务器中存在不再满足此筛选器的行（这些行是早于七天前的订单中的行），除非由于某种原因更新这些行，否则不会从订阅服务器中将其删除。  
   
@@ -53,13 +53,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>使用基于时间的行筛选器时的建议  
  下面的方法提供了基于时间进行筛选的强大而直接的途径：  
   
--   向数据类型的表中添加列`bit`。 此列用来指示是否应复制行。  
+-   将列添加到数据类型的表`bit`。 此列用来指示是否应复制行。  
   
 -   使用引用新列而非基于时间的列的行筛选器。  
   
 -   创建一个 SQL Server 代理作业（通过另一种机制计划的作业），该作业在合并代理计划运行之前更新列。  
   
- 此方法地址使用的不足之处`GETDATE()`或另一种基于时间的方法，并可避免无需确定筛选器的分区的计算时的问题。 考虑 **Events** 表的以下示例：  
+ 此方法解决使用的不足之处`GETDATE()`或另一种基于时间的方法并避免了必须确定何时为分区计算筛选器问题。 考虑 **Events** 表的以下示例：  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

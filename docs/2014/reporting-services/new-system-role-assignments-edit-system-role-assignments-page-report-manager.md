@@ -1,5 +1,5 @@
 ---
-title: 新建系统角色分配： 编辑系统角色分配页 （报表管理器） |Microsoft 文档
+title: 新建系统角色分配： 编辑系统角色分配页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4cc3521561aac3e91e2af2dd8f45eea77b74b58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331267"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>“新建系统角色分配: 编辑系统角色分配”页（报表管理器）
   使用“新建系统角色分配”页或“编辑系统角色分配”页可以定义报表服务器的安全性。 所有安全性都是通过将特定用户或组映射到这些用户或组可以执行的任务的角色分配来定义的。 任务列表表现为您在进行角色分配时选择的角色定义。  
@@ -55,9 +55,9 @@ ms.locfileid: "36126448"
  **Roles**  
  提供可以分配给其他用户的系统级角色的列表。 可以为单个角色分配指定多个角色。  
   
- 报表管理器不显示每个角色中的任务，也不提供用来添加或修改任务的方法。 您必须按照角色的定义使用角色。 若要创建、 修改或删除角色、 使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅[创建、 删除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。  
+ 报表管理器不显示每个角色中的任务，也不提供用来添加或修改任务的方法。 您必须按照角色的定义使用角色。 若要创建、 修改或删除角色，使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅[创建、 删除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。  
   
- 请注意，如果你使用[!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)]具有高级服务，必须使用提供的默认角色。  
+ 请注意，如果使用的[!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)]具有高级服务，必须使用提供的默认角色。  
   
  **说明**  
  显示有关角色的其他信息。 对于预定义角色（如系统用户或系统管理员），说明概述每个角色支持的任务。  

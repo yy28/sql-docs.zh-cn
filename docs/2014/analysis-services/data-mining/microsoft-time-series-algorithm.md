@@ -1,5 +1,5 @@
 ---
-title: Microsoft 时序算法 |Microsoft 文档
+title: Microsoft 时序算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325107"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]时，时序算法提供了针对预测连续值，如产品销量，随着时间的推移进行了优化的回归算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法提供了用于预测的连续值，如产品销量，随着时间的推移进行了优化的回归算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
   
  下面的关系图显示了一个用于预测一段时间内某一产品在四个不同销售区域的销售额的典型模型。 该关系图中的模型以红色、黄色、紫色和蓝色线条分别显示每个区域的销售额。 每个区域的线条都分为两部分：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36128662"
   
  源数据和预测数据的组合称为“序列 ”。  
   
- ![举例说明了时间序列](../media/time-series.gif "时序的示例")  
+ ![时间序列的示例](../media/time-series.gif "的时间序列示例")  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的一个重要功能就是可以执行交叉预测。 如果用两个单独但相关的序列为该算法定型，则可以使用生成的模型来根据一个序列的行为预测另一个序列的结果。 例如，一个产品的实际销售额可能会影响另一个产品的预测销售额。 在创建可应用于多个序列的通用模型时，交叉预测也很有用。 例如，由于序列缺少高质量的数据，造成对某一特定区域的预测不稳定。 您可以根据所有四个区域的平均情况来为通用模型定型，然后将该模型应用到各个序列，以便为每个区域产生更稳定的预测。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36128662"
  每个季度，该公司都会计划用最近的销售数据来更新模型，并更新其预测以描绘出最近的趋势。 有些商店不能准确地或始终如一地更新销售数据，为了弥补这一点造成的误差，他们将创建一个通用预测模型，并用该模型对所有区域进行预测。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]时，时序算法使用单一算法，ARTXP。 ARTXP 算法进行了优化短期预测，因此，预测在一系列中下一步可能的值。 从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]时，时序算法使用 ARTXP 算法和第二个算法，ARIMA。 ARIMA 算法针对长期预测进行了优化。 有关 ARTXP 和 ARIMA 算法的实现的详细说明，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。  
+ 在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，则[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用单个算法，即 ARTXP。 ARTXP 算法针对短期预测进行了优化，因此，预测序列中的下一个可能的值。 从开始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，则[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法同时使用 ARTXP 算法和另一种算法 ARIMA。 ARIMA 算法针对长期预测进行了优化。 有关 ARTXP 和 ARIMA 算法的实现的详细说明，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。  
   
- 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法在分析模式和进行预测时混合使用这两种算法。 该算法训练上相同的数据的两个单独的模型： 一个模型使用 ARTXP 算法和一个模型使用 ARIMA 算法。 然后，该算法结合这两个模型的结果来产生可变数量时间段的最佳预测。 因为 ARTXP 最适合于短期预测，所以在一系列预测的开始时它十分重要。 但是，随着预测的时间段不断地向将来延伸，ARIMA 就比较重要了。  
+ 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法在分析模式和进行预测时混合使用这两种算法。 该算法相同的数据的两个单独的模型定型： 一个模型采用 ARTXP 算法，另一个模型采用 ARIMA 算法。 然后，该算法结合这两个模型的结果来产生可变数量时间段的最佳预测。 因为 ARTXP 最适合于短期预测，所以在一系列预测的开始时它十分重要。 但是，随着预测的时间段不断地向将来延伸，ARIMA 就比较重要了。  
   
- 您还可以控制这两种算法的混合方式，以在时序中优先采用短期预测或长期预测。 从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]标准，你可以指定[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用以下设置之一：  
+ 您还可以控制这两种算法的混合方式，以在时序中优先采用短期预测或长期预测。 从开始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]标准，您可以指定[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用以下设置之一：  
   
 -   对短期预测仅使用 ARTXP。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36128662"
   
 -   使用这两种算法的默认混合。  
   
- 从[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，你可以自定义如何[!INCLUDE[msCoName](../../includes/msconame-md.md)]时，时序算法混合模型以预测。 采用混合模型时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法按以下方式混合这两种算法：  
+ 从开始[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，你可以自定义如何[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法混合预测模型的。 采用混合模型时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法按以下方式混合这两种算法：  
   
 -   在进行前几步预测时始终只使用 ARTXP。  
   
@@ -159,8 +159,8 @@ ms.locfileid: "36128662"
 ## <a name="see-also"></a>请参阅  
  [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 时序查看器浏览模型](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)   
- [时间时序模型查询示例](time-series-model-query-examples.md)   
+ [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)   
+ [时序模型查询示例](time-series-model-query-examples.md)   
  [时序模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

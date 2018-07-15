@@ -1,5 +1,5 @@
 ---
-title: 引入 AMO 类 |Microsoft 文档
+title: AMO 类简介 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e525dec6972d68ce8695bc7fab6aa6ab177e0a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb4e3761642f8b03e5853ae99e00cc4bc2f4a46f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328527"
 ---
 # <a name="introducing-amo-classes"></a>AMO 类简介
-  分析管理对象 (AMO) 是用于管理的实例的类的库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序。 AMO 类可用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象，例如数据库、维度、多维数据集、挖掘结构和模型、角色和权限、异常以及其他对象。  
+  分析管理对象 (AMO) 是一个库的类设计用来管理的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序。 AMO 类可用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象，例如数据库、维度、多维数据集、挖掘结构和模型、角色和权限、异常以及其他对象。  
   
  下图显示了本主题中介绍的类之间的关系。  
   
- ![在 AMO 概念主题中的类检查](../../../analysis-services/dev-guide/media/amo-reviewedclasses.gif "类评审 AMO 概念主题")  
+ ![在 AMO 概念性主题中查看的类](../../../analysis-services/dev-guide/media/amo-reviewedclasses.gif "在 AMO 概念性主题中查看的类")  
   
  可以将 AMO 库视为用于完成特定任务的逻辑相关对象组。 AMO 类可以按照以下方式进行分类。 本节包括下列主题：  
   

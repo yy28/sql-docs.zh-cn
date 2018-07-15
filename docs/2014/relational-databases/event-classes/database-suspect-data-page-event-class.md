@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6f92e92474b6d923ad355e8ae0a5ddb1499fb14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c67265ee31ebf9f9a013546ccac631c2cd53f373
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331457"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件类
   **Database Suspect Data Page** 事件类指示何时将某页添加到 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 中的 [suspect_pages](../databases/msdb-database.md)表中。 在监视是否出现可疑页的跟踪中包括此事件类。  

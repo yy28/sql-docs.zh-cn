@@ -1,5 +1,5 @@
 ---
-title: 重命名 Analysis Services 实例 |Microsoft 文档
+title: 重命名 Analysis Services 实例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
 - renaming instances of Analysis Services
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d9369a62a1fcd5dde7de92c7da81a4fcb6c02ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dfa3a42caf787fad5e8eb64e5bdbab38997640b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326807"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
-  你可以重命名的现有实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用**重命名实例**对话框。  
+  您可以重命名的现有实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过使用**重命名实例**对话框。  
   
 > [!IMPORTANT]  
 >  重命名该实例时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具将以提升的权限运行，更新与该实例关联的 Windows 服务名称、安全帐户和注册表项。 为确保执行这些操作，请务必以本地系统管理员身份运行此工具。  
@@ -39,7 +39,7 @@ ms.locfileid: "36123924"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>重命名 Analysis Services 的实例  
   
-1.  启动**实例重命名**工具， **asinstancerename.exe**，从 C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio。  
+1.  启动**实例重命名**工具**asinstancerename.exe**，从 C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio。  
   
 2.  在 **“重命名实例”** 对话框中，从 **“要重命名的实例”** 列表中选择要重命名的实例。  
   

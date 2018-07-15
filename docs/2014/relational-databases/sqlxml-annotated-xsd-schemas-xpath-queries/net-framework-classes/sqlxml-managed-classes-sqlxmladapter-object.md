@@ -1,5 +1,5 @@
 ---
-title: SqlXmlAdapter 对象 （SQLXML 托管类） |Microsoft 文档
+title: SqlXmlAdapter 对象 （SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,28 +18,28 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], SqlXmlAdapter object
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d657ba49f7d4905eef8eaa0bdc3ca4327852df6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192f356052289725043ae2b3dc748931aedb11fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331407"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>SqlXmlAdapter 对象（SQLXML 托管类）
-  此对象提供用于促进与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 中的数据集进行交互的方法。 有关工作示例，请参阅[.NET 环境中访问 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  
+  此对象提供用于促进与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 中的数据集进行交互的方法。 有关工作示例，请参阅[在.NET 环境中访问 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
- SqlXmlAdapter 对象支持这些方法：  
+ SqlXmlAdapter 对象支持以下方法：  
   
- void 填充 (数据集 ds)  
+ void Fill (DataSet ds)  
  用从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 检索的 XML 数据填充 .NET Framework 中的数据集。  
   
- void 更新 (数据集 ds)  
+ void Update (DataSet ds)  
  用数据集中的数据更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的记录。  
   
- SqlXmlAdapter 对象支持这些构造函数：  
+ SqlXmlAdapter 对象支持以下构造函数：  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   

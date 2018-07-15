@@ -1,5 +1,5 @@
 ---
-title: 修复 PowerPivot for SharePoint |Microsoft 文档
+title: 修复 PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c346ae8-87fa-44e5-b88a-47e804fedf20
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 7e575d18ed529fc0f030850cb7ebac4b0ee9ab44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cbf20ab4a8ad117c06d0a3b116b3ada71430b05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323717"
 ---
 # <a name="repair-powerpivot-for-sharepoint"></a>修复 PowerPivot for SharePoint
   可以使用 PowerPivot 配置工具修复 PowerPivot for SharePoint 的现有安装。 该工具会读取本地 PowerPivot for SharePoint 实例的配置设置，并提供用于重新配置与 PowerPivot for SharePoint 安装不一致的设置的步骤。 例如，如果您停止了某项服务或取消了某解决方案，该工具将提供用于启动这项服务和部署该解决方案的操作。  

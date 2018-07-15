@@ -1,5 +1,5 @@
 ---
-title: 修剪元素 (ASSL) |Microsoft 文档
+title: Trimming 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326537"
 ---
 # <a name="trimming-element-assl"></a>Trimming 元素 (ASSL)
   指定如何修整数据源的数据。  
@@ -51,7 +51,7 @@ ms.locfileid: "36127988"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|*右*|  
+|默认值|*右侧*|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -66,14 +66,14 @@ ms.locfileid: "36127988"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*左*|对数据的左侧进行修整。|  
-|*右*|对数据的右侧进行修整。|  
+|*左侧*|对数据的左侧进行修整。|  
+|*右侧*|对数据的右侧进行修整。|  
 |*LeftRight*|对数据的左侧和右侧进行修整。|  
 |*无*|不修整数据。|  
   
- 对应于的允许值为枚举`Trimming`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Trimming>。  
+ 与允许的值相对应的枚举`Trimming`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Trimming>。  
   
- 对应于的父元素`Trimming`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DataItem>。  
+ 父级对应的元素`Trimming`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DataItem>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

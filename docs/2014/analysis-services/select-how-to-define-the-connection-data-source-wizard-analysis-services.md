@@ -1,5 +1,5 @@
 ---
-title: 选择如何定义连接 （数据源向导） (Analysis Services) |Microsoft 文档
+title: 选择如何定义连接 （数据源向导） (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.selectdataconnection.f1
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55a2963fd36d25f7d163659fecbd854ab0660dce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f74438c1591c5035117d974c838ca38cf2174b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330487"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>选择如何定义连接（数据源向导）(Analysis Services)
   可以使用 **“选择如何定义连接”** 页创建或选择数据源的数据连接。  
   
 ## <a name="options"></a>“常规”  
- **创建基于现有或新连接连接数据源**  
+ **创建基于现有的或新连接连接的数据源**  
  选择此选项可以使用现有连接字符串，或者为数据源对象创建新的连接字符串。  
   
  **数据连接**  
@@ -42,7 +42,7 @@ ms.locfileid: "36126711"
  **删除**  
  选择此选项可以删除现有的数据源。  
   
- **创建另一个对象的基础的数据源**  
+ **创建基于另一个对象的数据源**  
  选择此选项可以基于现有数据源对象或现有项目来创建新的数据源。  
   
   

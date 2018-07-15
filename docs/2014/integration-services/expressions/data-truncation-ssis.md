@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data truncation [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e735659fb2898c2ab6bc428d7ad6fc0f5759f17c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f80a51df610040e18dbdae7b1552c56d81cb084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328087"
 ---
 # <a name="data-truncation-ssis"></a>数据截断 (SSIS)
   表达式可能因疏忽而致使数据截断。 在下列情况下会发生截断：  
@@ -38,6 +38,6 @@ ms.locfileid: "36126128"
  在分析表达式时，表达式计算器会标识可能导致截断的显式转换并发出警告。 例如，如果要将 30 个字符的字符串转换为 20 个字符的字符串，则表达式计算器会发出警告。  
   
 > [!NOTE]  
->  运行时不检查截断；数据被截断而不发出警告。 但是，大部分数据适配器和转换支持可处理错误行处置的错误输出。 有关处理截断的数据的详细信息，请参阅[Error Handling in Data](../data-flow/error-handling-in-data.md)。  
+>  运行时不检查截断；数据被截断而不发出警告。 但是，大部分数据适配器和转换支持可处理错误行处置的错误输出。 有关处理数据截断的详细信息，请参阅[数据中的错误处理](../data-flow/error-handling-in-data.md)。  
   
   

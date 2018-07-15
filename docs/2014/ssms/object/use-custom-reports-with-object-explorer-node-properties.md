@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da4d8cc46e141fb404ee0f63876178f41464b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94dd1cc0e96e11eb24e1d7f09665960485f758df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323697"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
   如果自定义报表引用所选对象资源管理器节点的报表参数，则将在此节点的上下文中执行自定义报表。 这样，自定义报表可以使用当前上下文（如当前数据库）或者数据库或服务器对象。  
@@ -1006,7 +1006,7 @@ ms.locfileid: "36126766"
   
 ## <a name="see-also"></a>请参阅  
  [Management Studio 中的自定义报表](custom-reports-in-management-studio.md)   
- [将自定义报表添加到 Management Studio](add-a-custom-report-to-management-studio.md)   
+ [向 Management Studio 添加自定义报表](add-a-custom-report-to-management-studio.md)   
  [启用运行自定义报告警告](unsuppress-run-custom-report-warnings.md)  
   
   

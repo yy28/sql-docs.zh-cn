@@ -1,5 +1,5 @@
 ---
-title: 定义事实关系 |Microsoft 文档
+title: 定义事实关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330787"
 ---
 # <a name="defining-a-fact-relationship"></a>定义事实关系
   用户有时需要按事实数据表中的数据项定义度量值的维度，或者查询事实数据表中其他特定的相关信息，例如与特定销售情况有关的发票号或采购订单号。 当根据此类事实数据表项定义维度时，则将该维度称为“事实维度”。 事实维度也称为退化维度。 若要将相关的事实数据表行（例如所有与特定发票号有关的行）组合在一起，事实维度将非常有用。 尽管可以将此信息置于关系数据库中一个单独的维度表内，但为此信息创建单独的维度表没有任何益处，因为维度表与事实数据表按照同一速度增长，只会创建重复的数据并增加不必要的复杂性。  
@@ -67,15 +67,15 @@ ms.locfileid: "36127414"
   
 13. 在“文件”  菜单上，单击“全部保存” 。  
   
-14. 在**属性**窗格中的维度设计器中为**Internet 销售订单详细信息**维度中，选择**销售订单号**，然后将更改**名称**到属性窗口中的属性 `Item Description.`  
+14. 在**特性**维度的维度设计器窗格**Internet 销售订单详细信息**维度，选择**销售订单号**，然后将更改**名称**属性窗口中的属性 `Item Description.`  
   
 15. 在“名称列”属性单元中，单击浏览按钮 **(…)**。 在“名称列”对话框中，从“源表”列表中选择“产品”，为“源列”选择“EnglishProductName”，然后单击“确定”。  
   
 16. 将“数据源视图”窗格中“InternetSales”表内的“SalesOrderNumber”列拖到“特性”窗格，以将“销售订单编号”属性添加到维度中。  
   
-17. 更改**名称**属性的新**销售订单号**属性设为`Order Number`，并更改**OrderBy**属性**密钥**.  
+17. 更改**名称**属性的新**销售订单号**归于`Order Number`，并将更改**OrderBy**属性设置为**密钥**.  
   
-18. 在**层次结构**窗格中，创建**Internet Sales Orders**用户层次结构包含`Order Number`和**项说明**级别，按此顺序。  
+18. 在**层次结构**窗格中，创建**Internet 销售订单**用户层次结构包含`Order Number`并**项说明**级别，按该顺序。  
   
 19. 在“特性”窗格中，选择“Internet 销售订单详细信息”，然后查看“属性”窗口中“StorageMode”属性的值。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36127414"
   
      下图显示了“定义关系”对话框中的事实关系属性。  
   
-     ![定义关系对话框](../../2014/tutorials/media/l5-factrelationship-2.gif "定义关系对话框中")  
+     ![定义关系对话框](../../2014/tutorials/media/l5-factrelationship-2.gif "定义关系对话框")  
   
 3.  单击“取消”。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36127414"
   
      下图显示了上述步骤的结果。  
   
-     ![标注的 Internet Sales Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "标注的 Internet Sales Sales Amount")  
+     ![Internet 销售-销售额的维度划分](../../2014/tutorials/media/l5-factrelationship-3.gif "维度划分的 Internet 销售-销售额")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义多对多关系](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  

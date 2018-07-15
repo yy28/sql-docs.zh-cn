@@ -1,5 +1,5 @@
 ---
-title: 工具栏 （翻译选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 工具栏 （翻译选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0f8a60c636afb90dd68878b1e989454fb8d327b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d74778a66b1b5b286c26f7366184a2b62da57292
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328547"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“翻译”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用工具栏按钮执行 **维度设计器** 的 **“翻译”** 视图中的常规操作。  

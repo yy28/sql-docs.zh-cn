@@ -1,5 +1,5 @@
 ---
-title: ReportingWeekToMonthPattern 元素 (ASSL) |Microsoft 文档
+title: ReportingWeekToMonthPattern 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportingWeekToMonthPattern element
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90c07018747c7ad04bbd2324bb0bd697f7d774c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcbbf8a7783d152c66ec4f222ba79b00181b60f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324817"
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>ReportingWeekToMonthPattern 元素 (ASSL)
-  定义的报表周月模式[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
+  定义周对月报表模式对于[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36123710"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*445*|季度，4 周中第二个月，和 5 周中第三个月的第一个月中的 4 周。|  
-|*454*|季度 5 周，第二个月中和第三个月中的 4 周的第一个月中的 4 周。|  
-|*544*|中的季度，4 周中的第二个月份和第三个月中的 4 周的第一个月的 5 周。|  
+|*445*|在每个季度，4 周中第二个月和第三个月中的 5 周的第一个月中的 4 周。|  
+|*454*|在每个季度，5 周中第二个月和第三个月中的 4 周的第一个月中的 4 周。|  
+|*544*|在每个季度，4 周中第二个月和第三个月中的 4 周的第一个月的 5 周。|  
   
- 对应于的允许值为枚举`ReportingWeekToMonthPattern`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>。  
+ 与允许的值相对应的枚举`ReportingWeekToMonthPattern`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  
