@@ -1,5 +1,5 @@
 ---
-title: AttributeAllMemberTranslation 元素 (ASSL) |Microsoft 文档
+title: AttributeAllMemberTranslation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributeAllMemberTranslation element
 ms.assetid: 4b0c61dd-6666-4bf4-9b23-c9d8e315c414
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a93f67722e16034d256f4af16c582ef986b4b521
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d70f1420c0324cf1f1a2b3bb06fb68394268071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314687"
 ---
 # <a name="attributeallmembertranslation-element-assl"></a>AttributeAllMemberTranslation 元素 (ASSL)
-  包含的转换是为标题`All`的成员[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)元素。  
+  包含标题的翻译`All`的成员[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36129781"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|[转换](../data-type/translation-data-type-assl.md)|  
+|数据类型和长度|[翻译](../data-type/translation-data-type-assl.md)|  
 |默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36129781"
  在 Analysis Management Objects (AMO) 对象模型中，与 `AttributeAllMemberTranslations` 集合的父级对应的元素为 <xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
- [转换元素&#40;ASSL&#41;](translation-element-assl.md)   
+ [Translation 元素&#40;ASSL&#41;](translation-element-assl.md)   
  [对象&#40;ASSL&#41;](objects-assl.md)  
   
   

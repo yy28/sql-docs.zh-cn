@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], foreign keys
 - foreign keys [SQL Server], disabling constraints
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], foreign key constraints
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f37ba3c296e74a2c095f5ac9af5deb581491fa5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b199b8294f077ac11e28ad025f21d51728aa1724
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266223"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>使用 INSERT 和 UPDATE 语句禁用外键约束
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 INSERT 和 UPDATE 事务期间禁用外键约束。 如果您知道新数据将与现有约束冲突或者如果约束仅适用于数据库中已有的数据，则可选择此选项。  

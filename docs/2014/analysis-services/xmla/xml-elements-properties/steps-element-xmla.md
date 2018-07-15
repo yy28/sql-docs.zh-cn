@@ -1,5 +1,5 @@
 ---
-title: 步骤元素 (XMLA) |Microsoft 文档
+title: 步骤元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Steps element
 ms.assetid: a6821a2a-89ec-418b-b2dd-92adf2ccc20e
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cfafdc9aa9644b028d66b844550175a462a0258a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3b4e5b6682d0cb6778abc1dc22b7d5193ada47f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308387"
 ---
 # <a name="steps-element-xmla"></a>Steps 元素 (XMLA)
-  指定的步骤使用的最大的数[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)命令设计聚合。  
+  指定的步骤使用的最大数[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)命令用于设计聚合。  
   
 ## <a name="syntax"></a>语法  
   

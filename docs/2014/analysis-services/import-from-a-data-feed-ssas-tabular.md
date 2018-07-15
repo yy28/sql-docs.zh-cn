@@ -1,5 +1,5 @@
 ---
-title: 从数据馈送 (SSAS 表格) 导入 |Microsoft 文档
+title: 从数据馈送 (SSAS 表格) 导入 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7869e07a67e7e3a74ee93ebef495eaba26d55317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325137"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>从数据馈送导入（SSAS 表格）
   数据馈送是从联机数据源生成的流向目标文档或应用程序的一个或多个 XML 数据流。 可以通过使用“表导入向导”将数据从数据馈送导入模型中。  
@@ -126,7 +126,7 @@ ms.locfileid: "36128883"
   
 3.  在 **“连接到数据馈送”** 页中，为您要访问的馈送键入描述性名称。 如果您正在导入多个馈送或数据源，则将描述性名称用于连接可帮助您记住连接的使用方式。  
   
-4.  在数据馈送 URL 中，输入到列表数据服务，地址替换\<服务器名称 > 替换你的 SharePoint 服务器的实际名称：  
+4.  在数据馈送 URL 中，键入列表数据服务的地址替换\<服务器名称 > 您的 SharePoint 服务器的实际名称：  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -160,7 +160,7 @@ ms.locfileid: "36128883"
   
 4.  单击 **“浏览”** 并选择一个报表服务器。  
   
-     如果定期使用报表服务器上的报表，该服务器可能在 **“最近使用的站点和服务器”** 中列出。 否则，在“名称”中键入报表服务器的地址，然后单击 **“打开”** 以浏览报表服务器站点上的文件夹。 报表服务器的示例地址可能为 http://\<计算机名 > / reportserver。  
+     如果定期使用报表服务器上的报表，该服务器可能在 **“最近使用的站点和服务器”** 中列出。 否则，在“名称”中键入报表服务器的地址，然后单击 **“打开”** 以浏览报表服务器站点上的文件夹。 例如，地址为报表服务器可能会为 http://\<计算机名 > / reportserver。  
   
 5.  选择报表，单击 **“打开”**。 或者，可以在 **“名称”** 文本框中粘贴指向报表的链接，包括完整路径和报表名称。 “表导入向导”将连接到该报表，然后在预览区域中呈现它。  
   

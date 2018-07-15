@@ -1,5 +1,5 @@
 ---
-title: 数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。 以下连接刷新失败： PowerPivot 数据 |Microsoft 文档
+title: 数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。 以下连接无法刷新： PowerPivot 数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7598685ddb6cd92ad3bcddd1bd307f976db88f55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9cdc773ef42536be619d8d8c0edac1d6d1dcb92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319377"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。 以下连接无法刷新：PowerPivot 数据
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 无法连接到 SharePoint 中的 PowerPivot 服务器实例，则会返回此错误。  

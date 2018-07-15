@@ -1,5 +1,5 @@
 ---
-title: Excel 源编辑器 （列页） |Microsoft 文档
+title: Excel 源编辑器 （列页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.columns.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 83ed9947f8541a0de6af25ab47ce1baf2cdf731f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c32af4737ae537d363e8373e2acebbb0a0625f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306047"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
   可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  

@@ -1,5 +1,5 @@
 ---
-title: 帐户元素 (ASSL) |Microsoft 文档
+title: 帐户元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a99dbaee6e1eaec95385295cf1842ffcc336adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321163"
 ---
 # <a name="account-element-assl"></a>Account 元素 (ASSL)
-  包含有关中的帐户类型的详细信息[数据库](database-element-assl.md)元素。  
+  包含有关内的某个帐户类型的详细信息[数据库](database-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,13 +65,13 @@ ms.locfileid: "36130221"
 |子元素|[AccountType](../properties/accounttype-element-assl.md)， [AggregationFunction](../properties/aggregationfunction-element-assl.md)，[别名](../collections/aliases-element-assl.md)，[批注](../collections/annotations-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 维度，其[类型](../properties/type-element-dimension-assl.md)元素设置为*帐户，* 可具有属性，指定的帐户类型，例如收入，费用，以及在其他方面，表示由成员在维度中。 然后使用的帐户类型[度量值](measure-element-assl.md)元素，其[AggregationFunction](../properties/aggregatefunction-element-assl.md)元素设置为*ByAccount*，以确定时要使用的聚合函数聚合该维度的成员。 `Account` 元素表示单个帐户类型和这类度量值应使用的聚合函数。  
+ 维度，其[类型](../properties/type-element-dimension-assl.md)元素设置为*帐户，* 可以在维度中具有成员的属性的指定帐户类型，如收入、 支出，并在其他方面，表示。 然后使用的帐户类型[度量值](measure-element-assl.md)元素，其[AggregationFunction](../properties/aggregatefunction-element-assl.md)元素设置为*ByAccount*，以确定时要使用的聚合函数聚合该维度的成员。 `Account` 元素表示单个帐户类型和这类度量值应使用的聚合函数。  
   
- 如果聚合函数不同于使用的默认值，则必须列出帐户类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]为各种帐户类型。  
+ 如果聚合函数不同于使用的默认值，则必须列出的帐户类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]为每个帐户类型。  
   
  有效帐户类型集是固定的。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Account>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Account>。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库元素&#40;ASSL&#41;](database-element-assl.md)   

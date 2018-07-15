@@ -1,5 +1,5 @@
 ---
-title: 处理表格模型分区 (SSAS 表格) |Microsoft 文档
+title: 处理表格模型分区 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3329eb6e7f003f3e43407aa6948b844c3bfda27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e8e8622ec7b278b5e00f43d9a9c0fe1fc26efe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291363"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>处理表格模型分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 本主题中的任务说明如何使用 **中的** “处理分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框在模型数据库中处理分区。  

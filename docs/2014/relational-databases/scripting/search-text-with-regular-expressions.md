@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 311815d140b21eac330c91cfa87ee6645f3bc91e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 000efcad2db89e05bbfac8e1471ccf4551bc1956
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298037"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
   正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  

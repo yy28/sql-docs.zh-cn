@@ -20,15 +20,15 @@ helpviewer_keywords:
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fd33311f93f8634efc311f1dbddd35c292d8d36a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292267"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，对复制拓扑中所有用户可配置的功能的编程访问是由系统存储过程提供的。 虽然可使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 sqlcmd 命令行实用工具来单独执行存储过程，但编写可执行具有一定逻辑顺序的复制任务的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件也有诸多好处。  
@@ -132,7 +132,7 @@ GO
  创建完复制脚本后，可以通过下列方式之一执行所创建的复制脚本：  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 SQL 查询文件  
- 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何创建[!INCLUDE[tsql](../../../includes/tsql-md.md)]使用脚本[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，请参阅[查询和文本编辑器&#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md))。  
+ 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何创建详细信息[!INCLUDE[tsql](../../../includes/tsql-md.md)]使用的脚本[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，请参阅[查询和文本编辑器&#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md))。  
   
  若要使用包含脚本变量的脚本，[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 必须在 **sqlcmd** 模式下运行。 在 **sqlcmd** 模式下，查询编辑器可接受特定于 **sqlcmd** 的附加语法，如可用于变量值的 `:setvar`。 有关 **sqlcmd** 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../../scripting/edit-sqlcmd-scripts-with-query-editor.md)。 在下面的脚本中，`:setvar` 用于为 `$(DistPubServer)` 变量提供值。  
   

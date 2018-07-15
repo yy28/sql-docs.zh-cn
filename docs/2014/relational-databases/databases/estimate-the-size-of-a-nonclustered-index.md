@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 102701a984c6f35d38194c0d8a46c4ed63438936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2fb15614dbb72fd9e76bf62174f6b435429d4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296647"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估计非聚集索引的大小
   按照下列步骤估计存储非聚集索引所需的空间大小：  
@@ -121,7 +121,7 @@ ms.locfileid: "36138002"
     >  您可以通过包含索引键列和非键列扩展非聚集索引。 这些额外的列只存储在叶级非聚集索引。 有关详细信息，请参阅 [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md)。  
   
     > [!NOTE]  
-    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`使总定义的表的宽度超过 8,060 字节的列。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。 这也适用于具有包含列的非聚集索引叶行。  
+    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`导致总定义的表的宽度超过 8,060 字节的列。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。 这也适用于具有包含列的非聚集索引叶行。  
   
      如果非聚集索引没有任何包含列，则使用步骤 1 中的值（包括在步骤 1.3 中进行的任何修改）：  
   
@@ -220,13 +220,13 @@ ms.locfileid: "36138002"
   
 2.  计算索引中的非叶页数：  
   
-     ***Num_Index_Pages*** = level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>级别</sup>) where 1 < = Level < =***级别***  
+     ***Num_Index_Pages*** = level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>级别</sup>) 其中 1 < = Level < =***级别***  
   
      将每个被加数向上舍入到最接近的整数。 由于是个简单示例，请考虑使用 ***Num_Leaf_Pages*** = 1000 和 ***Index_Rows_Per_Page*** = 25 的索引。 页级别以上的第一个索引级别存储 1000 个索引行，即每个叶页一个索引行，每页可以包括 25 个索引行。 这意味着存储这 1000 个索引行需要 40 页。 下一级索引必须存储 40 行。 这意味着需要 2 页。 最后一级索引必须存储 2 行。 这意味着需要 1 页。 这就产生了 43 个非叶索引页。 如果将这些数用到前面的公式中，结果如下：  
   
      ***Non-leaf_levels*** = 1 + log25 (1000年 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，这是此示例中所述的页面数。  
+     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，这是在示例中所述的页数。  
   
 3.  计算索引的大小（每页总共有 8192 个字节）：  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36138002"
   
 -   大型对象 (LOB) 值  
   
-     要确定完全多少空间将用于存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， `ntext`， `xml`，和`image`值很复杂。 只需加上期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后将所得结果加到非群集索引的总大小。  
+     要确定将完全使用多少空间来存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， `ntext`， `xml`，和`image`值很复杂。 只需加上期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后将所得结果加到非群集索引的总大小。  
   
 -   压缩  
   

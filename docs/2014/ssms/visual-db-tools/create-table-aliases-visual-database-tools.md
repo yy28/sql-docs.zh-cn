@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table aliases [SQL Server]
 - aliases [SQL Server], tables
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75eaebe7ca2faf459f7f60700b3b2ef1d725db4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a98f093964ae44dbb6bc301585d8a37e3bc3c296
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327017"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>创建表别名 (Visual Database Tools)
   别名可使表名的使用更为方便。 在以下情况下，使用别名很有帮助：  
@@ -44,9 +44,9 @@ ms.locfileid: "36128897"
 3.  在“属性”窗口的“别名”字段中输入别名。  
   
 ## <a name="see-also"></a>请参阅  
- [将表添加到查询&#40;Visual Database Tools&#41;](add-tables-to-queries-visual-database-tools.md)   
- [排序和分组查询结果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [汇总查询结果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [向查询添加表&#40;可视化数据库工具&#41;](add-tables-to-queries-visual-database-tools.md)   
+ [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

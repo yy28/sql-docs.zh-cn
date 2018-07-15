@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
@@ -16,16 +16,16 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 878f8fc674659d91a732549fcd68da134cdf5fc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fa0589e7ac68f3662929c6316cdd0ddf427911d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306103"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
-  Azure HDInsight 连接管理器使一个 SSIS 包来连接到 Azure 订阅的属性使用你指定的值： Azure 订阅 ID 和管理证书。  
+  Azure HDInsight 连接管理器使一个 SSIS 包来使用你指定的值的属性连接到 Azure 订阅： Azure 订阅 ID 和管理证书。  
   
 1.  在如上所示的“添加 SSIS 连接管理器”  对话框中，选择“Azure 订阅” ，然后单击“添加” 。  你应该会看到  “Azure 订阅连接管理器编辑器”对话框。  
   

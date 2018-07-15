@@ -1,5 +1,5 @@
 ---
-title: 执行 XPath 查询的命名空间 (SQLXMLOLEDB Provider) |Microsoft 文档
+title: 执行 XPath 查询 （sqlxmloledb 访问接口） 的命名空间与 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c2c5d0388f3bd0fa396e1e689eb29fbd98ba7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d5a5149b56d98cc319a06b9cbb8129f7699a17fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301727"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>执行带命名空间的 XPath 查询（SQLXMLOLEDB 访问接口）
   XPath 查询可以包含命名空间。 如果架构元素为限定命名空间（即，包含目标命名空间），则针对该架构的 XPath 查询必须指定该命名空间。  
   
- 由于 SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解决此前缀，使用命名空间属性指定的命名空间绑定。  
+ 由于 SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解决此前缀，使用命名空间属性指定命名空间绑定。  
   
- 在下面的示例中，XPath 查询指定的命名空间使用的通配符字符 (\*) 和 local-name() 和 namespace-uri() XPath 函数。 此 XPath 查询将返回其本地名称为 `Contact` 且其命名空间 URI 为 `urn:myschema:Contacts` 的所有元素。  
+ 在以下示例中，XPath 查询指定命名空间使用通配符字符 (\*) 和 local-name （) and namespace-uri （) XPath 函数。 此 XPath 查询将返回其本地名称为 `Contact` 且其命名空间 URI 为 `urn:myschema:Contacts` 的所有元素。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -58,7 +58,7 @@ ms.locfileid: "36130066"
   
  由于此架构定义了目标命名空间，因此针对此架构的 XPath 查询（如“Employee”）必须包含该命名空间。  
   
- 以下是一个 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 应用程序示例，针对前述 XSD 架构执行 XPath 查询 (x:Employee)。 若要解决前缀，使用命名空间属性指定了命名空间绑定。  
+ 以下是一个 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 应用程序示例，针对前述 XSD 架构执行 XPath 查询 (x:Employee)。 若要解析此前缀，使用命名空间属性指定了命名空间绑定。  
   
 > [!NOTE]  
 >  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 此外，本示例还指定使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) 作为数据访问接口，该访问接口需要安装其他网络客户端软件。 有关详细信息，请参阅[SQL Server Native Client 的系统要求](../../native-client/system-requirements-for-sql-server-native-client.md)。  

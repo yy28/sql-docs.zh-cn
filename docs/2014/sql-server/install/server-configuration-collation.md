@@ -1,5 +1,5 @@
 ---
-title: 服务器配置-排序规则 |Microsoft 文档
+title: 服务器配置-排序规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
 - collation configuration, Setup
 - collation configuration
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee24c8f9234069526780db72457e178d50d5c824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: abd57940e3caf8af66cb58fdeceebc802e877f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290173"
 ---
 # <a name="server-configuration---collation"></a>服务器配置 - 排序规则
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置 – 排序规则”页上修改[!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 排序时所用的排序规则设置。 选择相应选项以匹配其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装或者其他计算机的排序规则设置。  
   
 ## <a name="options"></a>“常规”  
  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行自定义  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供两个组的排序规则： Windows 排序规则和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则。 您可以为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定不同的排序规则设置，也可以为它们指定相同的排序规则。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了两个组的排序规则： Windows 排序规则和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则。 您可以为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定不同的排序规则设置，也可以为它们指定相同的排序规则。  
   
  默认情况下，对于美国英语系统区域设置，选择的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地化版本的默认排序规则由您的计算机的 Windows 系统区域设置决定。  
   

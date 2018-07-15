@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 55c30791-cd2a-420b-8ba7-5700e005cb45
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a634b0cf961d922ea3169f5c44aa7c87f3ec42fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5ab22490bfb46f784333a4bb19cd5d966fbec753
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313469"
 ---
 # <a name="transfer-snapshots-through-ftp"></a>通过 FTP 传输快照
   默认情况下，快照存储在定义为通用命名约定 (UNC) 共享的文件夹中。 复制还允许指定用文件传输协议 (FTP) 共享取代 UNC 共享。 若要使用 FTP，必须先配置 FTP 服务器，然后配置要使用 FTP 的发布和一个或多个订阅。 有关如何配置 FTP 服务器的详细信息，请参阅 Internet 信息服务 (IIS) 文档。 如果为发布指定了 FTP 信息，则对此发布的订阅将默认使用 FTP。 仅当运行 IIS 的计算机通过防火墙与分发服务器相隔离时，才会使用 FTP 进行 Web 同步。 在这种情况下，FTP 可用于传输来自分发服务器和运行 IIS 的计算机的快照。 （快照始终使用 HTTPS 传输到订阅服务器。）  

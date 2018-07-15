@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 数据库的备份和还原 |Microsoft 文档
+title: Analysis Services 数据库的备份和还原 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.Backup.f1
 - sql12.asvs.ssmsimbi.Restore.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d778b7b21242cdd7f994caba33360ad61f9bf3bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3881b600453b66723afae9369fac8b18ca0012aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312627"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>备份和还原 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括备份和还原功能，以便您能从特定时间点恢复数据库及其对象。 此外，备份和还原是一项用于将数据库迁移到升级后的服务器、在服务器之间移动数据库或将数据库部署到生产服务器的有效方法。 出于数据恢复目的，如果您还没有制定备份计划并且您的数据十分重要，则应尽快设计和实施备份计划。  

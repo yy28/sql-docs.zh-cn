@@ -1,5 +1,5 @@
 ---
-title: 定义数据源视图 (Analysis Services) |Microsoft 文档
+title: 定义数据源视图 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308547"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
   数据源视图包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据库对象（即多维数据集、维度和挖掘结构）使用的架构的逻辑模型。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  
@@ -111,7 +111,7 @@ ms.locfileid: "36137869"
 ##  <a name="bkmk_secondaryDS"></a> 添加辅助数据源  
  定义包含来自多个数据源的表、视图或列的数据源视图时，会将从中将对象添加到数据源视图的第一个数据源指定为主数据源（主数据源在定义之后便不能更改）。 根据来自单个数据源的对象定义数据源视图之后，便可添加来自其他数据源的对象。  
   
- 如果 OLAP 处理或数据挖掘查询需要来自单个查询中的多个数据源的数据，主数据源必须支持远程查询使用`OpenRowset`。 通常，此数据源将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源。 例如，如果设计包含绑定到多个数据源列的属性的 OLAP 维度，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将构造 `OpenRowset` 查询以在处理过程中填充此维度。 但是，如果可以填充 OLAP 对象或数据挖掘查询从解析单个数据源，则`OpenRowset`不会构造查询。 在某些情况下，可以定义属性之间的属性关系，从而不再需要 `OpenRowset` 查询。 有关属性关系的详细信息，请参阅[属性关系](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)，[添加或删除表或数据源视图中的视图&#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)和[定义属性关系](attribute-relationships-define.md)。  
+ 如果 OLAP 处理或数据挖掘查询需要在单个查询中的多个数据源中的数据，主数据源必须支持使用远程查询`OpenRowset`。 通常，此数据源将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源。 例如，如果设计包含绑定到多个数据源列的属性的 OLAP 维度，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将构造 `OpenRowset` 查询以在处理过程中填充此维度。 但是，如果便可填充 OLAP 对象或数据挖掘查询解析从单个数据源，则`OpenRowset`不会构造查询。 在某些情况下，可以定义属性之间的属性关系，从而不再需要 `OpenRowset` 查询。 有关属性关系的详细信息，请参阅[属性关系](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)，[添加或删除表或数据源视图中的视图&#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)并[定义属性关系](attribute-relationships-define.md)。  
   
  若要从第二个数据源添加表和列，请在解决方案资源管理器中双击 DSV，在数据源视图设计器中打开它，然后使用“添加/删除表”对话框以包含来自在项目中定义的其他数据源中的对象。 有关详细信息，请参阅[在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)。  
   
@@ -137,11 +137,11 @@ ms.locfileid: "36137869"
 ## <a name="see-also"></a>请参阅  
  [添加或删除表或视图中数据源视图&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [在数据源视图中定义逻辑主键&#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [在数据源视图中定义命名的计算&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [数据源视图中定义命名的计算&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [数据源视图中定义命名的查询&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [替换表或数据源视图中的命名的查询&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [使用数据源视图设计器中的关系图&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [浏览数据源视图中的数据&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
+ [替换表或命名的查询数据源视图中&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [使用的数据源视图设计器中的关系图&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [在数据源视图中浏览数据&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [删除数据源视图&#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
  [刷新数据源视图中的架构&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   

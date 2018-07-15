@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
 - sql12.swb.user.securables.f1
@@ -24,18 +23,18 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 201d314b1f89b518559465c36736c2ab16ad7f18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299967"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
-  本主题介绍如何创建一个映射到中的登录名的数据库用户[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅[创建登录名](create-a-login.md)。  
+  本主题介绍如何创建映射到中的登录名的数据库用户[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅[创建一个登录名](create-a-login.md)。  
   
  **本主题内容**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "36137725"
   
      [Security](#Security)  
   
--   **若要创建数据库用户，使用：**  
+-   **若要创建数据库用户时，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -91,7 +90,8 @@ ms.locfileid: "36137725"
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“数据库用户 – 新建”** 对话框还在四个其他页面上提供了选项： **“拥有的架构”**、 **“成员身份”**、 **“安全对象”** 和 **“扩展属性”**。  
+ 
+  **“数据库用户 – 新建”** 对话框还在四个其他页面上提供了选项： **“拥有的架构”**、 **“成员身份”**、 **“安全对象”** 和 **“扩展属性”**。  
   
 -   **“拥有的架构”** 页列出了可由新的数据库用户拥有的所有可能的架构。 若要向数据库用户添加架构或者从数据库用户中删除架构，请在 **“此用户拥有的架构”** 下选中或取消选中架构旁边的复选框。  
   

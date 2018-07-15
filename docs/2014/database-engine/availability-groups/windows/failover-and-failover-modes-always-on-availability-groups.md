@@ -1,14 +1,13 @@
 ---
-title: 故障转移和故障转移模式 （AlwaysOn 可用性组） |Microsoft 文档
+title: 故障转移和故障转移模式 （AlwaysOn 可用性组） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310437"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
   在可用性组的上下文中，可用性副本的主角色和辅助角色在称为“故障转移” 的过程中通常是可互换的。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”。 自动故障转移和计划的手动故障转移会保留您的所有数据。 可用性组在可用性副本级别进行故障转移。 也就是说，可用性组故障转移到其次要副本之一（当前故障转移目标）。  
@@ -72,7 +71,7 @@ ms.locfileid: "36138513"
 |计划的手动故障转移|“否”|是|是|  
 |强制故障转移|是|是|是的**<sup>*</sup>**|  
   
- **<sup>*</sup>**  如果你发出强制故障转移命令对已同步的辅助副本，辅助副本的行为与手动故障转移相同。  
+ **<sup>*</sup>**  如果发出对已同步辅助副本的强制故障转移命令，辅助副本的行为与手动故障转移相同。  
   
  在故障转移过程中，数据库不可用的时间取决于故障转移的类型及其原因。  
   
@@ -239,14 +238,14 @@ ms.locfileid: "36138513"
   
 1.  连接到主副本。  
   
-2.  查询`last_commit_lsn`(上次提交的事务的 LSN) 和`last_commit_time`（上次提交时间） 列[sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)动态管理视图。  
+2.  查询`last_commit_lsn`(上次提交事务的 LSN) 和`last_commit_time`（上次提交时间） 列[sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)动态管理视图。  
   
 3.  比较为每个主数据库和它的每个辅助数据库返回的值。 它们的上次提交 LSN 的差值指示滞后的程度。  
   
 4.  当某个或某组数据库上的滞后程度超过指定时间段的最大滞后程度时，您可以触发一个警报。 例如，可以通过每分钟在每个主数据库上执行的一个作业来运行查询。 如果自上次执行该作业以来，主数据库的 `last_commit_time` 和任意辅助数据库的相应值的差值超过恢复点目标 (RPO)（例如，5 分钟），该作业可以引发一个警报。  
   
 > [!IMPORTANT]  
->  当 WSFC 群集缺少仲裁或者仲裁已被强制，`last_commit_lsn`和`last_commit_time`均为 NULL。 有关在强制仲裁后如何避免数据丢失的信息，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
+>  当 WSFC 群集缺少仲裁或强制执行仲裁，`last_commit_lsn`和`last_commit_time`均为 NULL。 有关在强制仲裁后如何避免数据丢失的信息，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> 管理潜在的数据丢失  
  强制故障转移后，所有辅助数据库都将挂起。 这包括以前的主数据库（在以前的主副本返回到联机状态并且发现它现在是辅助副本后）。 您必须单独在每个辅助副本上手动恢复每个挂起的数据库。  
@@ -311,9 +310,9 @@ ms.locfileid: "36138513"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

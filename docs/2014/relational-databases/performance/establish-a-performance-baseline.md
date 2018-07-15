@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database performance [SQL Server], baselines
 - monitoring performance [SQL Server], baselines
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database monitoring [SQL Server], baselines
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0eea5cd429daa580bd3193050f4267b361e66dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a7f7d262360a4f8d5e5530ea31934faed563a0e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296607"
 ---
 # <a name="establish-a-performance-baseline"></a>建立性能基线
   若要确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统是否以最佳状态执行，可以定期进行性能度量（即使没有发生问题）以建立一条服务器性能基线。 将每组新的度量值与以前取得的度量值进行比较。  

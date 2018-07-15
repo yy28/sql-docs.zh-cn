@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acf93e98116b42808a9ed93321fbe57f5976f8b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b72b3a0391753d7f2af138baab8f05f103937d29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308847"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的属性页
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的属性页对话框均使用可展开和折叠类别的通用格式显示信息。 显示的字段取决于具体的属性。 显示为灰色的属性为只读属性。 “按分类顺序”和“字母顺序”按钮位于每个属性页的顶部附近。  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的属性页对话框均使用可展开和折叠类别的通用格式显示信息。 显示的字段取决于具体的属性。 显示为灰色的属性为只读属性。 “按分类顺序”和“字母顺序”按钮位于每个属性页的顶部附近。  
   
  下表对 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 属性页对话框的常用元素进行了说明。  
   

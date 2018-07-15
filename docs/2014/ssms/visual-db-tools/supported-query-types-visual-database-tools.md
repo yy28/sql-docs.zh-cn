@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Delete query
 - queries [SQL Server], types
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - View Designer, query types
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db00234849e885c82898a379bd3546e193a1a634
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 865bdf79fa72817ed3f3855be855c908d669dd10
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299417"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支持的查询类型 (Visual Database Tools)
   可以在[查询和视图设计器](visual-database-tools.md)的“关系图”窗格和“条件”窗格（图形化窗格）中创建以下类型的查询：  
@@ -56,7 +56,7 @@ ms.locfileid: "36129111"
  在使用 SQL 语句创建无法在图形化窗格中显示的查询时，查询和视图设计器会将这些图形化窗格显示为灰色，以表示它们不再反映正在创建的查询。 不过，变成灰色的窗格仍然是活动的，而且在许多情况下，仍可以在这些窗格中对查询进行修改。 如果所做的更改产生的查询可以在图形化窗格中显示，则这些窗格将不再显示为灰色。  
   
 ## <a name="see-also"></a>请参阅  
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [查询类型 (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
   
   

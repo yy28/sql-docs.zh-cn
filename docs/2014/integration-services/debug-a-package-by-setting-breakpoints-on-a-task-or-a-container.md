@@ -1,5 +1,5 @@
 ---
-title: 通过在任务或容器上设置断点调试包 |Microsoft 文档
+title: 通过在任务或容器上设置断点调试包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308107"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>通过在任务或容器上设置断点调试包
   本过程介绍如何在包、任务、For 循环容器、Foreach 循环容器或序列容器中设置断点。  
@@ -49,8 +49,8 @@ ms.locfileid: "36137576"
 6.  若要保存包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [包开发的故障排除工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [通过在脚本任务和脚本组件中设置断点调试脚本](data-flow/transformations/script-component.md)   
+ [用于包开发故障排除工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [通过在脚本任务和脚本组件中设置断点来调试脚本](data-flow/transformations/script-component.md)   
  [编码和调试脚本任务](control-flow/script-task.md)   
  [脚本组件的编码和调试](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   

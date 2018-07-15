@@ -1,5 +1,5 @@
 ---
-title: 重播跟踪 |Microsoft 文档
+title: 重播跟踪 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, replaying traces
 - Run to Cursor option
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], replaying traces
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e6f0b2068faf1fb5282eb0effd348cb01d4ac91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76ef0ddde1f23d68e198854466a8b0abbbecc427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325277"
 ---
 # <a name="replay-traces"></a>重播跟踪
   重播是重现在跟踪内捕获的活动的功能。 在创建或编辑跟踪时，可以将跟踪保存到文件中并在以后重播。 可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 从一台计算机重播跟踪活动。 对于大型工作负荷，可使用分布式重播实用工具从多台计算机重播跟踪数据。  
@@ -46,8 +46,8 @@ ms.locfileid: "36137436"
 |主题|Description|  
 |-----------|-----------------|  
 |[重播要求](replay-requirements.md)|说明跟踪定义必须包含的事件，以便它能使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]进行重播。|  
-|[重播选项&#40;SQL Server 事件探查器&#41;](replay-options-sql-server-profiler.md)|说明在 **的** “重播配置” [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]对话框中可以设置的选项。|  
-|[重播跟踪的注意事项&#40;SQL Server 事件探查器&#41;](considerations-for-replaying-traces-sql-server-profiler.md)|说明不能使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 重播的跟踪事件以及重播跟踪对服务器性能的影响。|  
+|[重播选项&#40;SQL Server Profiler&#41;](replay-options-sql-server-profiler.md)|说明在 **的** “重播配置” [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]对话框中可以设置的选项。|  
+|[重播跟踪的注意事项&#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)|说明不能使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 重播的跟踪事件以及重播跟踪对服务器性能的影响。|  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 分布式重播](../distributed-replay/sql-server-distributed-replay.md)  

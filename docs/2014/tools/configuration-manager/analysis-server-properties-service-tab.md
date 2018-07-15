@@ -1,5 +1,5 @@
 ---
-title: 分析服务器属性 （服务选项卡） |Microsoft 文档
+title: 分析服务器属性 （服务选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 081fd98155a51e888215bddc640c19847959f7ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd921f3f954c027c60ef036a7846388e6927aaef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304737"
 ---
 # <a name="analysis-server-properties-service-tab"></a>分析服务器属性（“服务”选项卡）
   此服务是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 若要使 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 正常运行，则必须运行此服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  

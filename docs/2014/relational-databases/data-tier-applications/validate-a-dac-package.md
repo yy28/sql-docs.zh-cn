@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 438b0b847df6877ada5ba1278d6cf57648439820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29496d117c1fde896bcf72cc6e485e6b3a1cef62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322287"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
@@ -86,7 +86,7 @@ ms.locfileid: "36128998"
   
 3.  在变量中指定 DAC 名称。  
   
-4.  使用`GetDatabaseChanges()`方法来检索`ChangeResults`对象，并通过管道到文本文件，以便生成一个简单的报表的新，对象删除，并且已更改对象。  
+4.  使用`GetDatabaseChanges()`方法来检索`ChangeResults`对象，并将该对象加入到一个文本文件，以便生成一个简单报表的新，删除，并且已更改的对象。  
   
 ### <a name="view-database-changes-example-powershell"></a>查看数据库更改示例 (PowerShell)  
  **查看数据库更改示例 (PowerShell)**  
@@ -133,7 +133,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 4.  在变量中指定 DAC 名称。  
   
-5.  使用`GetIncrementalUpgradeScript()`方法来获取升级的 TRANSACT-SQL 语句的列表将运行，并列表通过管道传递到文本文件。  
+5.  使用`GetIncrementalUpgradeScript()`方法来获取升级的 TRANSACT-SQL 语句的列表会运行，并将该列表加入到文本文件。  
   
 6.  关闭用于读取 DAC 包文件的文件流。  
   

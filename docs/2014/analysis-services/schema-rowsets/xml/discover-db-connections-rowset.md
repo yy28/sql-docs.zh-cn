@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_DB_CONNECTIONS 行集 |Microsoft 文档
+title: DISCOVER_DB_CONNECTIONS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_DB_CONNECTIONS rowset
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76b078c5b61c685634636f8891f65da722be911e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f22c330fcc1deef1e86f4442ed8524235a3ba5c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295547"
 ---
 # <a name="discoverdbconnections-rowset"></a>DISCOVER_DB_CONNECTIONS 行集
   提供当前打开的服务器到数据库连接的资源使用情况和活动信息。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_DB_CONNECTIONS`行集包含以下各列。  
+ `DISCOVER_DB_CONNECTIONS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36137853"
 >  `DISCOVER_DB_CONNECTIONS` 行集将仅在服务连接到关系数据源时才显示信息。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_DB_CONNECTIONS`行集可限制在下表中列出的列。  
+ `DISCOVER_DB_CONNECTIONS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

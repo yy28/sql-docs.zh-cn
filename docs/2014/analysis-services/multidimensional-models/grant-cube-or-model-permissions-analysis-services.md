@@ -1,5 +1,5 @@
 ---
-title: 授予多维数据集或模型权限 (Analysis Services) |Microsoft 文档
+title: 授予多维数据集或模型权限 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306557"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
   多维数据集或表格模型是 Analysis Services 数据模型中的主要查询对象。 为进行即席数据浏览从 Excel 连接到多维或表格数据时，用户通常选择一个特定多维数据集或表格模型作为透视报表对象背后的数据结构，以此开始。 本主题说明了如何授予对多维数据集或表格数据的访问权限。  
@@ -38,7 +38,7 @@ ms.locfileid: "36129081"
  要为连续的解决方案部署保留角色定义，最佳做法是将 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的角色定义为该模型的一个组成部分，然后让数据库管理员在数据库发布后在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中分配角色成员身份。 但可以对两个任务使用两个工具中的任一个。 为简化该练习，我们将同时对角色定义和成员身份使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 > [!NOTE]  
->  只有具有“完全控制”权限的服务器管理员或数据库管理员可以将多维数据集从源文件部署到服务器，或创建角色和分配成员。 请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授予数据库权限&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)有关这些权限的详细信息级别。  
+>  只有具有“完全控制”权限的服务器管理员或数据库管理员可以将多维数据集从源文件部署到服务器，或创建角色和分配成员。 请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)并[授予数据库权限&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)有关这些权限的详细信息级别。  
   
 #### <a name="step-1-create-the-role"></a>步骤 1：创建角色  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36129081"
   
 #### <a name="step-3-set-cube-permissions"></a>步骤 3：设置多维数据集权限  
   
-1.  在**多维数据集**窗格中，选择多维数据集，，然后单击`Read`或**读/写**访问。  
+1.  在中**多维数据集**窗格中，选择多维数据集，并单击`Read`或**读/写**访问。  
   
      `Read` 权限已经足以进行多数操作。 “读/写”仅用于回写，而非处理。 有关此功能的详细信息，请参阅 [Set Partition Writeback](set-partition-writeback.md) 。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36129081"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授予对数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予对数据源对象的权限&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予数据源对象上的权限&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_SETS 行集 |Microsoft 文档
+title: MDSCHEMA_SETS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edc33b87256fb680225eaaa087ff655be1b82851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecc8167d697be2195c9ae44e214afcbc1f3a05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275473"
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS 行集
   描述当前在数据库中定义的任何集，包括会话作用域的集。  
   
 ## <a name="rowset-columns"></a>行集列  
- `MDSCHEMA_SETS`行集包含以下各列。  
+ `MDSCHEMA_SETS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -45,13 +45,13 @@ ms.locfileid: "36138107"
 |`EXPRESSION`|`DBTYPE_WSTR`||集的表达式。|  
 |`DIMENSIONS`|`DBTYPE_WSTR`||集中包含的层次结构的逗号分隔列表。|  
 |`SET_CAPTION`|`DBTYPE_WSTR`||与集关联的标签或标题。 标签或标题主要用于显示。|  
-|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||标识客户端应用程序用来显示集的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜杠 (\\) 是级别的分隔符。 若要提供多个显示文件夹，请使用分号 （;） 到不同的文件夹。|  
+|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||标识客户端应用程序用来显示集的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜杠 (\\) 作为级别分隔符。 若要提供多个显示文件夹，请使用分号 （;） 来分隔文件夹。|  
 |`SET_EVALUATION_CONTEXT`|`DBTYPE_I4`||集的上下文。 集可以是静态的或动态的。<br /><br /> 此列可以为下列值之一：<br /><br /> -MDSET_RESOLUTION_STATIC = 1<br />-MDSET_RESOLUTION_DYNAMIC = 2|  
   
  行集按 `CATALOG_NAME`、`SCHEMA_NAME`、`CUBE_NAME` 排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `MDSCHEMA_SETS`行集可限制在下表中列出的列。  
+ `MDSCHEMA_SETS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "36138107"
 |`SET_NAME`|`DBTYPE_WSTR`|可选。|  
 |`SCOPE`|`DBTYPE_I4`|可选。|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|可选。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|可选。 **注意：** 只有一个层次结构可以是包括在内，并且仅那些命名集将返回其层次结构与限制完全匹配。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|可选。 **注意：** 只有一个层次结构可以包含，并且仅的命名集将返回其层次结构与限制完全匹配。|  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB for OLAP 架构行集](ole-db-for-olap-schema-rowsets.md)  

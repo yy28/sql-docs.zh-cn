@@ -1,5 +1,5 @@
 ---
-title: NullKeyConvertedToUnknown 元素 (ASSL) |Microsoft 文档
+title: NullKeyConvertedToUnknown 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316917"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>NullKeyConvertedToUnknown 元素 (ASSL)
   指定遇到空转换错误时要执行的操作。  
@@ -62,17 +62,17 @@ ms.locfileid: "36138518"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 在键列中遇到空值并被解释为 `Unknown` 成员时，将引发空转换错误。 仅当，但是，发生此错误[NullProcessing](nullprocessing-element-assl.md)元素[DataItem](../data-type/dataitem-data-type-assl.md)的祖先`ErrorConfiguration`父元素设置为*UnknownMember*。  
+ 在键列中遇到空值并被解释为 `Unknown` 成员时，将引发空转换错误。 但是，此错误发生才[NullProcessing](nullprocessing-element-assl.md)元素[DataItem](../data-type/dataitem-data-type-assl.md)的祖先`ErrorConfiguration`父元素设置为*UnknownMember*。  
   
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*IgnoreError*|处理将忽略该错误并继续。|  
+|*IgnoreError*|处理会忽略该错误并继续。|  
 |*ReportAndContinue*|处理报告错误并继续。|  
 |*ReportAndStop*|处理报告错误并停止。|  
   
- 对应于的允许值为枚举`NullKeyConvertedToUnknown`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ErrorOption>。  
+ 与允许的值相对应的枚举`NullKeyConvertedToUnknown`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ErrorOption>。  
   
 ## <a name="see-also"></a>请参阅  
  [ErrorConfiguration 元素&#40;ASSL&#41;](../objects/errorconfiguration-element-assl.md)   

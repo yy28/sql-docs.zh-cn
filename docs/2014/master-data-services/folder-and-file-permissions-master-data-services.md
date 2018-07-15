@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
+author: leolimsft
+ms.author: lle
+manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 1461491a8cb6dba196878bd428b6acc413d568c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 1cee48c465b95598f4bdbcca6f22df2cf623945d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318767"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
-  在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用的默认安装路径[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]共享的功能、 的安装路径[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]是*驱动器*: files\microsoft SQL Server\120\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
+  在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果使用的默认安装路径[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]共享的功能、 的安装路径[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]是*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
   
 ## <a name="inherited-permissions"></a>继承的权限  
  **Microsoft SQL Server** 文件夹、 **Master Data Services** 文件夹以及大多数子文件夹和文件从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序中指定的父文件夹继承权限。 如果选择默认安装位置，则继承其权限的父文件夹是驱动器:\Program Files。 下表描述针对 **“程序文件”** 的默认权限。  

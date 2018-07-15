@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrator connections [SQL Server]
 - DAC
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 35113a648a66b1122e7bf92785fab7bd7aaa1317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a0a79abea84914ca0c4ffef487e8f7e1bc0a7e96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302717"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections 服务器配置选项
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了专用管理员连接 (DAC)。 DAC 允许管理员访问运行的服务器以执行诊断函数或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或对服务器上的问题进行故障排除，即使服务器已锁定或在非正常状态下运行并且不响应 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 连接。 默认情况下，只有服务器上的客户端可以使用 DAC。 若要在远程计算机上启用客户端应用程序以使用 DAC，请使用 sp_configure 的远程管理连接选项。  

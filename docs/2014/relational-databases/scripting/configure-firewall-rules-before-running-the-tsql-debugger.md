@@ -1,5 +1,5 @@
 ---
-title: 配置 TRANSACT-SQL 调试器 |Microsoft 文档
+title: 配置 TRANSACT-SQL 调试器 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262513"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>配置 Transact-SQL 调试器
   必须配置 Windows 防火墙规则，以便在连接到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例（运行该实例的计算机不同于运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。  
@@ -60,7 +60,7 @@ ms.locfileid: "36138825"
   
     2.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   
-    3.  在 **“程序”** 对话框中，选择 **“此程序路径:”** ，然后输入指向此实例的 sqlservr.exe 的完整路径。 默认情况下，sqlservr.exe 安装在 C:\Program Files\Microsoft SQL Server\MSSQL12 中。*InstanceName*\MSSQL\Binn 中，其中*InstanceName* MSSQLSERVER 为默认实例，并且任何的实例名称命名实例。  
+    3.  在 **“程序”** 对话框中，选择 **“此程序路径:”** ，然后输入指向此实例的 sqlservr.exe 的完整路径。 默认情况下，sqlservr.exe 安装在 C:\Program Files\Microsoft SQL Server\MSSQL12。*InstanceName*\MSSQL\Binn 中，其中*InstanceName*对于默认实例为 MSSQLSERVER 实例和实例名称的任何命名实例。  
   
     4.  在 **“操作”** 对话框中，选择 **“允许连接”**，然后单击 **“下一步”**。  
   

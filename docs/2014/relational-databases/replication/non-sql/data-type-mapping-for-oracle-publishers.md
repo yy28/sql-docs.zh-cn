@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce067977a12b0ebb7a0c3e7f03b9fa5fa0794781
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 131c2a7618493d1b48758f653ab2e2d2e22ed2dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313687"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
   Oracle 数据类型并非始终与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  

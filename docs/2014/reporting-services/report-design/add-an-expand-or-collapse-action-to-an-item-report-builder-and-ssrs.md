@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238477"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>为项添加展开或折叠操作（报表生成器和 SSRS）
   你可以使用户实现以交互方式展开或折叠报表项，或者展开或折叠与表或矩阵的组关联的行与列。 若要让用户能够展开或折叠某个项，请设置该项的可见性属性。 设置可见性在 HTML 报表查看器中有效，有时也称为“深化”  操作。  
@@ -100,7 +100,7 @@ ms.locfileid: "36137458"
      ![运行具有展开表格的报表](../media/expandcollapse-runreport-reporttable.png "运行具有展开表格的报表")  
   
 ## <a name="see-also"></a>请参阅  
- [深化操作&#40;报表生成器和 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [向下钻取操作&#40;报表生成器和 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [隐藏项（报表生成器和 SSRS）](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

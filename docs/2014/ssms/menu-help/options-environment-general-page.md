@@ -1,5 +1,5 @@
 ---
-title: 选项 （环境-常规页） |Microsoft 文档
+title: 选项 （环境-常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 84227cbf3cdab5295331dab9016016277ff063ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8fc7d2cc8b8b9c0cf3e598e9531d85aefc02d961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301627"
 ---
 # <a name="options-environment-general-page"></a>选项 （环境-常规页）
   使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再单击“常规”。  

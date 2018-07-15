@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c81867131974a7cf9f4bdd62b1ab84743a3b3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bc4a0923e5e0d337df82e87a9086e14b61a0e945
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305457"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 调试器
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器通过调查代码的运行时行为可以帮助您查找 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的错误。 将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口设置为调试模式后，可在特定的代码行上暂停执行，并检查那些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用和返回的信息和数据。  

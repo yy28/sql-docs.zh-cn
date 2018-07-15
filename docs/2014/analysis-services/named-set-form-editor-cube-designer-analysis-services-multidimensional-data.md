@@ -1,5 +1,5 @@
 ---
-title: 命名集窗体编辑器 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 命名集窗体编辑器 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b2e06ab78f4e9267c9bc85bf55a14b0c71d69c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c548022920690437937bc3a24f39049574d3d911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291643"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器的 **“计算”** 选项卡上，可以使用 **“命名集窗体编辑器”** 窗格创建或修改命名集。  

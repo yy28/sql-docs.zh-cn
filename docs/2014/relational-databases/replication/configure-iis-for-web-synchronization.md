@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 86
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6589261f0ad1a800bcf88d11abe2ebe6314a4855
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307587"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
@@ -72,7 +72,7 @@ ms.locfileid: "36137965"
   
     1.  单击 **“启动”**，再单击 **“运行”**。  
   
-    2.  在**打开**框中，键入`inetmgr`，然后单击**确定**。  
+    2.  在中**开放**框中，键入`inetmgr`，然后单击**确定**。  
   
 3.  运行 IIS 证书向导：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36137965"
         > [!NOTE]  
         >  默认情况下，SelfSSL 安装的证书有效期为七天。  
   
-    -   若要指定一个或多个参数的值，请单击 **“开始”**，然后单击 **“运行”**。 在**打开**框中，输入`cmd`，然后单击**确定**。 找到 SelfSSL 安装目录，键入 `SelfSSL`，然后指定一个或多个参数的值。 若要获得参数列表，请键入 `SelfSSL -?`。  
+    -   若要指定一个或多个参数的值，请单击 **“开始”**，然后单击 **“运行”**。 在中**开放**框中，输入`cmd`，然后单击**确定**。 找到 SelfSSL 安装目录，键入 `SelfSSL`，然后指定一个或多个参数的值。 若要获得参数列表，请键入 `SelfSSL -?`。  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>安装连接组件和 SQL Server Management Studio  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36137965"
   
 1.  以管理员身份登录到正在运行 IIS 的计算机。  
   
-2.  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装磁盘中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。 有关使用此向导的详细信息，请参阅[从安装向导安装 SQL Server 2014&#40;安装&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+2.  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装磁盘中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。 有关使用此向导的详细信息，请参阅[从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 3.  在 **“功能选择”** 页中，选择 **“客户端工具连接”**。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36137965"
   
     1.  在 **“别名”** 框中输入虚拟目录别名。  
   
-    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果你输入`websync1`中**别名**框中，输入`C:\Inetpub\wwwroot\websync1`中**路径**框。 单击“下一步” 。  
+    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果您输入`websync1`中**别名**框中，输入`C:\Inetpub\wwwroot\websync1`中**路径**框。 单击“下一步” 。  
   
     3.  在两个对话框中，单击 **“是”**。 这指定您要创建一个新文件夹并复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 实例时都提供 SQL Server 登录名。  
   
@@ -183,11 +183,11 @@ ms.locfileid: "36137965"
   
 11. 如果运行 IIS 的计算机是在 64 位版本的 Windows 上运行，则必须将 replisapi.dll 复制到相应目录：  
   
-    1.  单击 **“启动”**，再单击 **“运行”**。 在**打开**框中，输入`iisreset`，然后单击**确定**。  
+    1.  单击 **“启动”**，再单击 **“运行”**。 在中**开放**框中，输入`iisreset`，然后单击**确定**。  
   
     2.  IIS 停止并重新启动后，将 replisapi.dll 从 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi 复制到步骤 6b 中指定的目录。  
   
-    3.  单击 **“启动”**，再单击 **“运行”**。 在**打开**框中，输入`cmd`，然后单击**确定**。  
+    3.  单击 **“启动”**，再单击 **“运行”**。 在中**开放**框中，输入`cmd`，然后单击**确定**。  
   
     4.  在步骤 6b 指定的目录中，执行以下命令：  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36137965"
   
 3.  注册 replisapi.dll：  
   
-    1.  单击 **“启动”**，再单击 **“运行”**。 在**打开**框中，输入`cmd`，然后单击**确定**。  
+    1.  单击 **“启动”**，再单击 **“运行”**。 在中**开放**框中，输入`cmd`，然后单击**确定**。  
   
     2.  在步骤 1 创建的目录中，执行以下命令：  
   
@@ -280,7 +280,7 @@ ms.locfileid: "36137965"
   
     1.  单击 **“启动”**，再单击 **“运行”**。  
   
-    2.  在**打开**框中，键入`inetmgr`，然后单击**确定**。  
+    2.  在中**开放**框中，键入`inetmgr`，然后单击**确定**。  
   
     3.  在 **“Internet 信息服务(IIS)管理器”** 中，展开 **“本地计算机”** 节点。  
   

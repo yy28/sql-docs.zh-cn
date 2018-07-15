@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full recovery model [SQL Server], RESTORE example
 - piecemeal restores [SQL Server], full recovery model
 - restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ef8f416a0f4a666ab6e2ee0c02bda39325886927
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c298fd3a1a96b6c8b1333df5a446896221bfefc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296627"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>示例：数据库的段落还原（完整恢复模式）
   段落还原顺序将从主文件组及所有具有读写权限的辅助文件组开始，在文件组级别分阶段还原和恢复数据库。  

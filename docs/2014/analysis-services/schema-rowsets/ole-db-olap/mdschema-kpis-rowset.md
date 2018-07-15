@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_KPIS 行集 |Microsoft 文档
+title: MDSCHEMA_KPIS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,32 +18,32 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314767"
 ---
 # <a name="mdschemakpis-rowset"></a>MDSCHEMA_KPIS 行集
   介绍数据库中的关键绩效指标 (KPI)。  
   
 ## <a name="rowset-columns"></a>行集列  
- `MDSCHEMA_KPIS`行集包含以下各列。  
+ `MDSCHEMA_KPIS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`||源数据库。|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||不提供支持。|  
 |`CUBE_NAME`|`DBTYPE_WSTR`||KPI 的父多维数据集。|  
-|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||KPI 的关联度量值组。<br /><br /> 您可以使用此列确定 KPI 的维数。 如果"**\<NULL >**"，将通过所有度量值组维度 KPI。<br /><br /> 默认值是"**\<NULL >**"。|  
+|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||KPI 的关联度量值组。<br /><br /> 您可以使用此列确定 KPI 的维数。 如果"**\<NULL >**"，由所有度量值组维度所 KPI。<br /><br /> 默认值是"**\<NULL >**"。|  
 |`KPI_NAME`|`DBTYPE_WSTR`||KPI 的名称。|  
-|`KPI_CAPTION`|`DBTYPE_WSTR`||与 KPI 关联的标签或标题。 主要用于显示目的。 如果标题不存在，`KPI_NAME`返回。|  
+|`KPI_CAPTION`|`DBTYPE_WSTR`||与 KPI 关联的标签或标题。 主要用于显示目的。 如果不存在标题，`KPI_NAME`返回。|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||用户可读的 KPI 说明。|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||标识客户端应用程序用来显示成员的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜杠 (\\) 是级别的分隔符。 若要提供多个显示文件夹，请使用分号 （;） 到不同的文件夹。|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||标识客户端应用程序用来显示成员的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜杠 (\\) 作为级别分隔符。 若要提供多个显示文件夹，请使用分号 （;） 来分隔文件夹。|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||KPI 值的度量值维度中的成员的唯一名称。|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||KPI 目标的度量值维度中的成员的唯一名称。<br /><br /> 如果未定义目标，则返回 `NULL`。|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||KPI 状态的度量值维度中的成员的唯一名称。<br /><br /> 如果未定义状态，则返回 `NULL`。|  
@@ -59,7 +59,7 @@ ms.locfileid: "36130222"
  未对此架构行集进行排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `MDSCHEMA_KPIS`行集可限制在下表中列出的列。  
+ `MDSCHEMA_KPIS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "36130222"
 |`SCHEMA_NAME`|`DBTYPE_WSTR`|可选。|  
 |`CUBE_NAME`|`DBTYPE_WSTR`|可选。|  
 |`KPI_NAME`|`DBTYPE_WSTR`|可选。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）位图，并使用以下有效的值之一：<br /><br /> -   `1` 多维数据集<br />-   `2` 维度<br /><br /> 默认限制的值为 `1`。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）使用以下有效值之一位图：<br /><br /> -   `1` 多维数据集<br />-   `2` 维度<br /><br /> 默认限制的值为 `1`。|  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB for OLAP 架构行集](ole-db-for-olap-schema-rowsets.md)  

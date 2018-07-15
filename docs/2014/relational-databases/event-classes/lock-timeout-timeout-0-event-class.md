@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e94eadfb707402c7fc99d5d5ea9d569f1051a6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6713a2a55ae3326ffccef661093f97aa33a6d3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286213"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件类
   **Lock:Timeout (timeout > 0)** 事件类指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 此事件类除了不包括超时值为 0 的任何事件外，其行为与 **Lock:Timeout** 事件类相同。  
@@ -37,7 +37,7 @@ ms.locfileid: "36139095"
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|`image`|锁资源标识符。|2|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|DatabaseID|`int`|发生超时的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示数据库的名称，如果`ServerName`在跟踪中捕获数据列而且服务器是否可用。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|DatabaseID|`int`|发生超时的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示数据库的名称，如果`ServerName`在跟踪中捕获的数据列并且服务器可用。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |DatabaseName|`nvarchar`|发生超时的数据库的名称。|35|是|  
 |Duration|`bigint`|事件占用的时间（微秒）。|13|是|  
 |EndTime|`datetime`|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。|15|是|  
@@ -57,7 +57,7 @@ ms.locfileid: "36139095"
 |OwnerID|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
 |ssSqlProfiler|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
-|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果你连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 并以 login2 的身份，执行语句`SessionLoginName`显示 Login1 和`LoginName`将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 并以 login2 的身份，执行语句`SessionLoginName`显示 Login1 和`LoginName`显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
 |TextData|`ntext`|依赖于跟踪中捕获的事件类的文本值。|@shouldalert|是|  

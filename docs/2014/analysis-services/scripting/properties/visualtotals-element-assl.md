@@ -1,5 +1,5 @@
 ---
-title: VisualTotals 元素 (ASSL) |Microsoft 文档
+title: VisualTotals 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - VisualTotals element
 ms.assetid: 352a05b1-846c-4d58-ac36-1f5ad418ba7d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73d5bb9579c078fab44a04d173edc2f606c856a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf4eb3a172571ee7456f0da1cb0df60852132e03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319278"
 ---
 # <a name="visualtotals-element-assl"></a>VisualTotals 元素 (ASSL)
   包含一个可以确定是否为该属性成员显示直观合计的多维表达式 (MDX)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36130208"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`VisualTotals`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AttributePermission>。  
+ 父级对应的元素`VisualTotals`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AttributePermission>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

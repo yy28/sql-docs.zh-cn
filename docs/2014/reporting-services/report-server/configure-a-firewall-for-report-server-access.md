@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1f3c852712890d8a1cd67f9d2cabc6d5053c39ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60c593878f3c40094995a4d7b905d0bb59ff1a24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292167"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以通过指定 IP 地址、端口和虚拟目录的 URL 访问报表服务器应用程序和已发布的报表。 如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的迹象包括请求报表后出现空白网页，或尝试从远程客户端计算机打开报表管理器时出现空白页。  
@@ -83,13 +83,13 @@ ms.locfileid: "36130041"
   
 3.  单击 **“继续”**。  
   
-4.  在异常选项卡上，单击**添加端口**。  
+4.  在异常选项卡上单击**添加端口**。  
   
 5.  在名称键入**ReportServer (TCP 端口 80 上)**。  
   
-6.  在端口号键入**80**。  
+6.  端口号，在键入**80**。  
   
-7.  验证**TCP**选择。  
+7.  确认**TCP**处于选中状态。  
   
 8.  单击**更改作用域**。  
   

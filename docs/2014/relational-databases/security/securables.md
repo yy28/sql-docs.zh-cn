@@ -5,10 +5,9 @@ ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectobject.f1
 helpviewer_keywords:
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b2679a2583b21ba1015b9b54e5e1662c9e89bf5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: cdd6daa0eb7578b8889fdc4b236f1b83df42a005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319997"
 ---
 # <a name="securables"></a>安全对象
   安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  

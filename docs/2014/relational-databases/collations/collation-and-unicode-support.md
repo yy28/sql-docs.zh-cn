@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
 - expression-level collations [SQL Server]
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f7ba7721287907142e7966b6d4e298afa07a89f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287333"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 字符的数据类型一起使用的排序规则如`char`和`varchar`规定代码页和对应字符可表示该数据类型。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 排序规则一起使用的字符数据类型，如`char`和`varchar`规定代码页和对应字符可表示该数据类型。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
   
  在为您的服务器、数据库、列或表达式选择排序规则时，也在向您的数据分配某些特征，这些特征将会影响数据库中许多操作的结果。 例如，使用 ORDER BY 构造查询时，结果集的排序顺序可能取决于应用于该数据库的排序规则或 COLLATE 子句中在查询的表达式级别规定的排序规则。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36137554"
   
  除了更改服务器的排序规则外，无法更改系统数据库的排序规则。  
   
- 数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在`tempdb`系统数据库，将使用实例的排序规则。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 `tempdb` 之间的字符数据的查询可能会失败。 您可以通过在查询中指定 COLLATE 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](/sql/t-sql/statements/collations)。  
+ 数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在`tempdb`系统数据库，将使用该实例的排序规则。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 `tempdb` 之间的字符数据的查询可能会失败。 您可以通过在查询中指定 COLLATE 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](/sql/t-sql/statements/collations)。  
   
  列级排序规则  
  当您创建或更改表时，可使用 COLLATE 子句指定每个字符串列的排序规则。 如果未指定排序规则，则为该列分配数据库的默认排序规则。  
@@ -117,7 +117,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> Unicode 支持  
- Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储反映多种语言的字符数据时，始终使用 Unicode 数据类型 (`nchar`， `nvarchar`，和`ntext`) 而不是非 Unicode 数据类型 (`char`， `varchar`，和`text`)。  
+ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储反映多种语言的字符数据，请始终使用 Unicode 数据类型 (`nchar`， `nvarchar`，并`ntext`) 而不是非 Unicode 数据类型 (`char`， `varchar`，并`text`)。  
   
  非 Unicode 数据类型有明显的局限性， 这是因为非 Unicode 计算机只能使用单个代码页。 通过使用 Unicode 您可能会体验到性能提升，因为需要较少的代码页转换。 必须在数据库级、列级或表达式级单独选择 Unicode 排序规则，因为在服务器级不支持 Unicode 排序规则。  
   
@@ -148,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> 增补字符  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供数据类型，如`nchar`和`nvarchar`来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符” ，两个连续的 16 位字称为“代理项对” 。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的数据类型，例如`nchar`和`nvarchar`来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符” ，两个连续的 16 位字称为“代理项对” 。  
   
  如果使用增补字符：  
   

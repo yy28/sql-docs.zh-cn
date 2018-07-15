@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7289921695521efc1b09360af5975b8e9e5c21f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bb2b83b4c68f45e10808ffc2a9876d247562d25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318777"
 ---
 # <a name="file-system-task"></a>文件系统任务
   文件系统任务对文件系统中的文件和目录执行操作。 例如，通过使用文件系统任务，包可以创建、移动或删除目录和文件。 您还可以使用文件系统任务设置文件和目录的属性。 例如，文件系统任务可以让文件隐藏或只读。  

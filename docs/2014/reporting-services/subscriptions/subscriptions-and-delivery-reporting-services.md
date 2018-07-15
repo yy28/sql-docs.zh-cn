@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268603"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>订阅和传递 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 订阅是一种配置，它在特定时间或为响应某个事件，以指定的文件格式传递报表。 例如，每周三将 MonthlySales.rdl 报表作为 Microsoft Word 文档保存至文件共享。 订阅可以用于对报表的传递（以特定报表参数值集）进行计划并使其自动完成。  
@@ -39,10 +39,10 @@ ms.locfileid: "36138600"
   
  ![示例 SSRS 订阅流](../media/ssrs-subscription-example-flow.png "示例 SSRS 订阅流")  
   
- 并非在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本中均提供订阅。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 并非在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本中均提供订阅。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 > [!NOTE]  
->  从开始[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]可以以编程方式传输订阅的所有权。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>和[使用 PowerShell 更改和列表 Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)。  
+>  从开始[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]可以以编程方式转移其所有权的订阅。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>并[使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](manage-subscription-owners-and-run-subscription-powershell.md)。  
   
  **本主题内容：**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36138600"
   
 -   [传递扩展插件](#bkmk_delivery_extensions)  
   
--   [订阅的部分](#bkmk_parts_of_subscription)  
+-   [订阅的各个部分](#bkmk_parts_of_subscription)  
   
 -   [如何处理订阅](#bkmk_subscription_processing)  
   
@@ -107,8 +107,8 @@ ms.locfileid: "36138600"
 |要求|Description|  
 |-----------------|-----------------|  
 |权限|您必须对报表具有访问权限。 在订阅报表之前，您必须具有查看该报表的权限。<br /><br /> 您的角色分配必须包括“管理各个订阅”任务。|  
-|已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须对报表服务器启用 **“预定的事件和报表传递”** 。 有关详细信息，请参阅[Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)。|  
-|报表中的用户依赖值|仅在标准订阅情况下，如果报表在筛选器中使用用户帐户信息或将此信息以文本形式显示在报表上，则可以对这些报表创建订阅。 在报表中，通过指定的用户帐户名称`User!UserID`解析为当前用户的表达式。 创建订阅时，将把创建订阅的用户视为当前用户。|  
+|已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须对报表服务器启用 **“预定的事件和报表传递”** 。 有关详细信息，请参阅[创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)。|  
+|报表中的用户依赖值|仅在标准订阅情况下，如果报表在筛选器中使用用户帐户信息或将此信息以文本形式显示在报表上，则可以对这些报表创建订阅。 在报表中，通过指定用户帐户名`User!UserID`表达式解析为当前用户。 创建订阅时，将把创建订阅的用户视为当前用户。|  
 |无模型项安全性|不能订阅将包含模型项安全设置的模型用作数据源的报表生成器报表。 此限制仅适用于使用模型项安全性的报表。|  
 |参数值|如果报表使用参数，则必须由报表自己或在所定义的订阅中指定参数值。 如果报表中已定义了默认值，则可以将参数值设置为使用默认值。|  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36138600"
 > [!NOTE]  
 >  报表传递是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 体系结构的可扩展部分。 第三方供应商可以创建自定义的传递扩展插件，将报表传送到不同的位置或设备。 有关自定义传递扩展插件的详细信息，请参阅 [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md)。  
   
-##  <a name="bkmk_parts_of_subscription"></a> 订阅的部分  
+##  <a name="bkmk_parts_of_subscription"></a> 订阅的各个部分  
  订阅定义由以下几部分组成：  
   
 -   指向可在无人参与模式下运行的报表（即，使用存储凭据或不使用任何凭据的报表）的指针。  

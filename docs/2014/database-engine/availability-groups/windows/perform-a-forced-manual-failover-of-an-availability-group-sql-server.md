@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 80
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9ababac85cb978253682050d558c7d8aca8aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287984"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。 强制故障转移是一种在不可能进行 [计划的手动故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 时严格限制用于灾难恢复的手动故障转移。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 因此，我们强烈建议您仅在以下情况下才强制故障转移：您必须立即将服务还原到可用性组并且您愿意承担丢失数据的风险。  
@@ -173,7 +172,7 @@ ms.locfileid: "36138742"
   
     -   **-AllowDataLoss-Force**  
   
-         要启动强制故障转移而无需确认，请同时指定 `-AllowDataLoss` 和 `-Force` 参数。 如果您要在脚本中包含此命令而无需用户交互来运行它，此操作很有用。  但是，使用`-Force`选项时要格外小心，因为强制故障转移可能导致丢失数据的数据库参与可用性组。  
+         要启动强制故障转移而无需确认，请同时指定 `-AllowDataLoss` 和 `-Force` 参数。 如果您要在脚本中包含此命令而无需用户交互来运行它，此操作很有用。  但是，使用`-Force`选项时，要注意，因为强制故障转移可能会导致参与可用性组的数据库中的数据丢失。  
   
          下面的示例将对可用性组 `MyAg` 执行强制故障转移（可能造成数据丢失），以将故障转移到名为 `SecondaryServer\InstanceName`的服务器实例。 `-Force` 选项将取消确认此操作。  
   
@@ -184,7 +183,7 @@ ms.locfileid: "36138742"
         ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请使用`Get-Help`中的 cmdlet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 3.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面的 [跟进：强制故障转移后的重要任务](#FollowUp)。  
   
@@ -319,13 +318,13 @@ ms.locfileid: "36138742"
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
   
 -   **白皮书：**  
   
-     [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7963860153e90a24879b51e47c67bed3423510fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9b063510595a4c80f31433a1f793857ca35dd0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322727"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 实例
   Oracle CDC 实例是 Oracle CDC 服务为处理从单个 Oracle 源数据库捕获的更改而创建的进程。 Oracle CDC 实例从 **cdc.xdbcdc_config** 表检索其配置并且在 **cdc.xdbcdc_state** 表中维护其状态。 这些表是用于定义 Oracle CDC 实例的 CDC 数据库的一部分。 有关 xdbcdc 数据库和表的详细信息，请参阅 [The CDC Databases](the-oracle-cdc-service.md)。  

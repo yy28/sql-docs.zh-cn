@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Report class
 ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 696db1b8513d16a296f354645560fe74b67a38f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 42bb83e2f4420419f82489193dcf022a08783e77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301697"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>将 Report 类用于传递扩展插件
   <xref:Microsoft.ReportingServices.Interfaces.Report> 类表示报表服务器数据库中的报表。 任何订阅都与某一特定报表相关联。 该报表包含在通知中。 您的传递扩展插件可以使用作为该通知的一部分的 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象来呈现报表。 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象还包含特定于报表的属性，例如指向报表服务器上的报表的 URL 和报表名称。 这些属性全都可以用作您的传递提供程序的一部分。  

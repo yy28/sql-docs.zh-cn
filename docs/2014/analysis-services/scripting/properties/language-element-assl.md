@@ -1,5 +1,5 @@
 ---
-title: 语言元素 (ASSL) |Microsoft 文档
+title: 语言元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09a51320df0cf5d4246fbc14307f488c2d754e3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 738403bedd7a9da120e5ba706eabe4848f7e1e2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293229"
 ---
 # <a name="language-element-assl"></a>Language 元素 (ASSL)
   包含父元素的语言标识符。  
@@ -57,14 +57,14 @@ ms.locfileid: "36129774"
   
 |祖先或父级|基数|  
 |------------------------|-----------------|  
-|[转换](../objects/translation-element-assl.md)|1-1：出现一次且仅出现一次的必需元素。|  
+|[翻译](../objects/translation-element-assl.md)|1-1：出现一次且仅出现一次的必需元素。|  
 |其他|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[多维数据集](../objects/cube-element-assl.md)，[数据库](../objects/database-element-assl.md)，[维度](../objects/dimension-element-assl.md)， [MiningModel](../objects/miningmodel-element-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)，[转换](../objects/translation-element-assl.md)|  
+|父元素|[多维数据集](../objects/cube-element-assl.md)，[数据库](../objects/database-element-assl.md)，[维度](../objects/dimension-element-assl.md)， [MiningModel](../objects/miningmodel-element-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)，[翻译](../objects/translation-element-assl.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

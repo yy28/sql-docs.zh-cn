@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f0691fea33b8e69fcea5f58eba6f60318dfadbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311997"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步骤 2：添加和配置 Foreach 循环容器
   在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
@@ -30,7 +30,7 @@ ms.locfileid: "36129495"
   
 -   **Foreach 循环容器** ：将该容器的枚举值映射为用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 `ConnectionString` 属性，并循环连接该文件夹中的每个平面文件。  
   
--   **平面文件连接管理器：** 将修改通过使用用户定义变量填充的连接管理器在第 1 课中创建的连接管理器`ConnectionString`属性。  
+-   **平面文件连接管理器：** 将修改通过使用用户定义的变量填充连接管理器的第 1 课中创建的连接管理器`ConnectionString`属性。  
   
  本任务中的过程向您显示如何创建和修改 Foreach 循环容器以使用用户定义的包变量，以及如何将数据流任务添加到该循环中。 您将了解改平面文件连接管理器，以便在下一任务中使用用户定义的变量。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36129495"
   
 3.  右键单击新添加的“Foreach 循环容器”，然后选择“编辑”。  
   
-4.  在**Foreach 循环编辑器**对话框中，在**常规**页上，为**名称**，输入`Foreach File in Folder`。 单击“确定” 。  
+4.  在中**Foreach 循环编辑器**对话框中，在**常规**页上，对于**名称**，输入`Foreach File in Folder`。 单击“确定” 。  
   
-5.  右键单击 Foreach 循环容器、 单击**属性**，并在属性窗口中，确认`LocaleID`属性设置为**英语 （美国）**。  
+5.  右键单击 Foreach 循环容器中，单击**属性**，然后在属性窗口中，确保`LocaleID`属性设置为**英语 （美国）**。  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>为 Foreach 循环容器配置枚举器  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36129495"
   
 2.  在“变量映射”页的“变量”列中，单击空单元，然后选择“\<新建变量…>”。  
   
-3.  在**添加变量**对话框中，为**名称**，类型`varFileName`。  
+3.  在中**添加变量**对话框中，对于**名称**，类型`varFileName`。  
   
     > [!IMPORTANT]  
     >  变量名称区分大小写。  
@@ -90,7 +90,7 @@ ms.locfileid: "36129495"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>将数据流任务添加到循环中  
   
--   拖动**提取示例货币数据**数据流任务拖动到 Foreach 循环容器现在经过重新命名`Foreach File in Folder`。  
+-   拖动**Extract Sample Currency Data**数据流任务拖动到 Foreach 循环容器现重命名`Foreach File in Folder`。  
   
 ## <a name="next-lesson-task"></a>下一课程任务  
  [步骤 3：修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  

@@ -1,5 +1,5 @@
 ---
-title: 调用元素 (ASSL) |Microsoft 文档
+title: Invocation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312237"
 ---
 # <a name="invocation-element-assl"></a>Invocation 元素 (ASSL)
-  指定如何[操作](../objects/action-element-assl.md)应被调用。  
+  指定如何[操作](../objects/action-element-assl.md)应调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36137845"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 操作的调用取决于客户端应用程序。 `Invocation`元素如何操作处理方式，并且不表示到的实例提供的建议客户端应用程序到[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]如何调用一个操作。  
+ 操作的调用取决于客户端应用程序。 `Invocation`元素建议客户端应用程序如何操作应处理并不指示的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]如何调用操作。  
   
  此元素的值限定为下表中的字符串之一。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36137845"
 |*OnOpen*|当客户端应用程序打开对象时调用。|  
 |*批处理*|由批处理命令调用。|  
   
- 对应于的允许值为枚举`Invocation`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
+ 与允许的值相对应的枚举`Invocation`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

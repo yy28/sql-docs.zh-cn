@@ -1,5 +1,5 @@
 ---
-title: 管理在 SSMS 中的 DQS 用户 |Microsoft 文档
+title: 管理 DQS 用户在 SSMS 中的 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a6115b9b28b4c27c6b3cddccd1f83ec1aef02ab3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 949c86f3a83856a474a388bf94f224d5a6273174
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306057"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>在 SSMS 中管理 DQS 用户
   本主题介绍如何使用 SQL Server Management Studio 在 SQL Server 实例中创建其他用户，并向这些用户授予针对 DQS_MAIN 数据库的适当 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 角色。  

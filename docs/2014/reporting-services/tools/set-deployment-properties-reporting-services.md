@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276373"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
   在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你必须指定报表服务器，并视需要指定报表文件夹和共享数据源，以便你可以将报表服务器项目中的项发布到报表服务器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成、预览和部署报表所需的属性和值存储在报表服务器项目的项目配置中。 可以为这些项目属性创建多个命名集，从而方便地在属性集之间切换。 每个属性集都是一个配置。 例如，可拥有一个向测试服务器发布报表的配置，还可拥有另一个向生产服务器发布报表的配置。  
@@ -46,17 +46,17 @@ ms.locfileid: "36138133"
     > [!NOTE]  
     >  您可以使用多种配置在不同的报表服务器或设置之间快速切换。  
   
-3.  在**OutputPath**文本框中，键入或粘贴你的本地文件系统来存储用于生成验证、 部署和预览报表的报表定义中的路径。 此路径必须与您用于项目的路径不同，并且它是一个相对路径（即项目路径下的一个子文件夹）。  
+3.  在中**OutputPath**文本框中，键入或粘贴本地文件系统来存储在生成验证、 部署和预览过程中使用的报表定义中的路径。 此路径必须与您用于项目的路径不同，并且它是一个相对路径（即项目路径下的一个子文件夹）。  
   
-4.  在**ErrorLevel**文本框中，键入的重要程度生成问题报告为错误。 问题发生时生成严重级别的报表、 数据源或其他项目资源级别小于或等于的值**ErrorLevel**被报告为错误; 否则为问题报告为警告。 任何错误都将导致生成任务失败。 有效的严重级别为 0 到 4（包括这两者）。 默认值为 2。  
+4.  在中**ErrorLevel**文本框中，键入问题生成的严重性报告为错误。 问题严重性生成报表、 数据源或其他项目资源时发生级别小于或等于的值**ErrorLevel**是报告为错误; 否则为将问题报告为警告。 任何错误都将导致生成任务失败。 有效的严重级别为 0 到 4（包括这两者）。 默认值为 2。  
   
      **ErrorLevel** 可用于增加或降低生成的敏感度。 例如，当在部署到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 报表服务器的过程中生成了一个带有地图的报表时，默认情况下将显示错误，并且报表生成过程失败。 如果您降低 **ErrorLevel** 并从报表中删除地图，则将显示警告并且报表生成过程继续。  
   
-5.  在**StartItem**列表中，选择要运行报表项目时显示在预览窗口中或在浏览器窗口中的报表。  
+5.  在中**StartItem**列表中，选择要在预览窗口或浏览器窗口中显示报表项目运行时的报表。  
   
 6.  在 **OverwriteDataSources** 列表中，选择 **True** 以在每次发布共享数据源时覆盖服务器上的共享数据源，或选择 **False** 以保留服务器上的数据源。  
   
-7.  在**TargetServerVersion**列表中，选择[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]或选择**检测版本**就能够自动确定已安装的版本通过标识的服务器**TargetServer URL**属性。 默认值为 **SQL Server 2008 R2**。  
+7.  在中**TargetServerVersion**列表中，选择[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]或选择**检测版本**以自动确定已安装的版本通过标识的服务器**TargetServer URL**属性。 默认值为 **SQL Server 2008 R2**。  
   
      使用 **TargetServerVersion** 可以自定义生成的报表，这些报表位于在 OutputPath 中指定的路径下，对应于在 **TargetServer URL**中指定的报表服务器版本。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server replication], publishing
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0a88b719e45881bf8abed1b6b9331cd9d2d4502e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c3fbc6aec57fc1b18ecbb8b5c1e5246a4fe0cc24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324227"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定项目类型（复制 Transact-SQL 编程）
   复制的默认项目类型为表项目，但可以将其他数据库对象发布为项目，这些项目包括视图、存储过程、用户定义函数以及存储过程执行。 定义项目时，您可以使用复制存储过程以编程方式指定项目类型。 您要使用的具体过程取决于复制的类型和项目的类型。  

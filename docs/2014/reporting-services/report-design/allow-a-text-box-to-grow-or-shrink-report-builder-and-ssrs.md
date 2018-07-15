@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2cf6653d19dad876d6412ae1c2bcfe33c680f38f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3cc7ef92ea93df0d912ec22f78ebdaba226e6114
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313087"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>允许文本框扩大或收缩（报表生成器和 SSRS）
   默认情况下，文本框的大小是固定的。 您可以设置允许文本框基于其内容扩大或收缩的选项。 这些选项与“属性”窗格中的 `CanGrow` 或 `CanShrink` 属性相对应。  
@@ -38,6 +38,6 @@ ms.locfileid: "36139006"
     -   若要允许文本框基于其内容收缩，请选择 **“允许高度减小”**。  
   
 ## <a name="see-also"></a>请参阅  
- [文本框&#40;报表生成器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [文本框中&#40;报表生成器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

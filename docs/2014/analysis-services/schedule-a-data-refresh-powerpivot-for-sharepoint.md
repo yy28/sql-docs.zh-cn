@@ -1,5 +1,5 @@
 ---
-title: 计划数据刷新 (PowerPivot for SharePoint) |Microsoft 文档
+title: 计划数据刷新 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325147"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>计划数据刷新 (PowerPivot for SharePoint)
   您可以计划数据刷新，以便自动获取对您发布到 SharePoint 站点的 Excel 工作簿内的 PowerPivot 数据的更新。  
@@ -110,7 +110,7 @@ ms.locfileid: "36138537"
   
     3.  如果您知道包含您希望使用的以前存储的凭据的目标应用程序的 ID，则选择 **“使用在 Secure Store Service 中保存的凭据进行连接”** 。  
   
-     有关这些选项的详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)和[配置 PowerPivot 无人参与数据刷新帐户&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
+     有关这些选项的详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)并[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
 9. 如果您希望数据刷新重新查询所有原始数据源，则在“数据源”中选中 **“所有数据源”** 复选框。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36138537"
  查看 TechNet WIKI 上的 PowerPivot 数据刷新故障排除页，帮助解决数据刷新问题。 有关详细信息，请参阅 [解决 PowerPivot 数据刷新问题](http://go.microsoft.com/fwlink/?LinkId=251594)。  
   
 > [!NOTE]  
->  SharePoint 管理员可通过在管理中心查看 PowerPivot 管理面板中的合并数据刷新报告来帮助您排除数据刷新问题。 有关详细信息，请参阅[PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
+>  SharePoint 管理员可通过在管理中心查看 PowerPivot 管理面板中的合并数据刷新报告来帮助您排除数据刷新问题。 有关详细信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 SharePoint 2010 的 PowerPivot 数据刷新](powerpivot-data-refresh-with-sharepoint-2010.md)   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unlocking versions [Master Data Services]
 - versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 190fc47fa071f719c46a4f45265f6117ac0d93f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3f80134be794c6a58501899c6cadc4df26b7f003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254679"
 ---
 # <a name="unlock-a-version-master-data-services"></a>取消锁定版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，取消锁定某一模型的版本以便实现对该模型的成员及其属性的更改。  

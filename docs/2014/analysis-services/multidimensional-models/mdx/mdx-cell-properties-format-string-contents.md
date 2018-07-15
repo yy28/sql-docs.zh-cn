@@ -1,5 +1,5 @@
 ---
-title: FORMAT_STRING 内容 (MDX) |Microsoft 文档
+title: FORMAT_STRING 内容 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293587"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 内容 (MDX)
-  `FORMAT_STRING`单元格属性格式`VALUE`单元格属性，创建的值`FORMATTED_VALUE`单元属性。 `FORMAT_STRING`单元格属性处理字符串和数字的原始值，将针对要返回的格式化的值的值格式表达式应用`FORMATTED_VALUE`单元属性。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
+  `FORMAT_STRING`单元属性格式化`VALUE`单元属性的值为`FORMATTED_VALUE`单元属性。 `FORMAT_STRING`单元属性可以处理字符串和数字原始值，应用针对要返回的格式化的值的值的格式表达式`FORMATTED_VALUE`单元属性。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
   
 ## <a name="string-values"></a>字符串值  
  字符串的格式表达式可以是一部分，也可以是由分号 (;) 分隔开的两部分。  
@@ -153,7 +153,7 @@ ms.locfileid: "36130241"
 |`Short Time`|使用 24 小时格式显示时间，例如 17:45。|  
   
 ## <a name="see-also"></a>请参阅  
- [语言和 FORMAT_STRING 的 formated_value](mdx-cell-properties-formatted-value-property.md)   
+ [LANGUAGE 和 FORMAT_STRING 的 formated_value](mdx-cell-properties-formatted-value-property.md)   
  [使用单元属性&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [创建和使用属性值&#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
  [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  

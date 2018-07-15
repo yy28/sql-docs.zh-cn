@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextindexingwizard.selecttablecolumns.f1
 - sql12.swb.fulltextindexingwizard.welcome.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69b7caacb7d6731731aaae11c18e9f960278136c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5395a6ee63d3fbf4456a3da4e4e19390e042e2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309517"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
   全文索引向导可引导您完成一系列步骤，以帮助您创建全文索引。  
@@ -53,7 +52,7 @@ ms.locfileid: "36138826"
      **类型列**  
      选择存储作为全文索引列的文档类型的列名称。  
   
-     **类型列**中名为的列后才可以启用**可用列**列的类型是`varbinary(max)`或`image`。  
+     **类型列**仅当列中命名的启用**可用列**列的类型是`varbinary(max)`或`image`。  
   
      **统计语义**  
      选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](semantic-search-sql-server.md)。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88db7af7bbca5a202b79ec42d8cade77e85cd258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2a6021971575b0a17821e415aaf738ff651e9ec5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323967"
 ---
 # <a name="drop-xml-indexes"></a>删除 XML 索引
   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可用于删除现有的主（或辅助）XML 索引和非 XML 索引。 但是，任何 DROP INDEX 选项都不会应用于 XML 索引。 如果删除主 XML 索引，则会删除任何现有的辅助索引。  
@@ -31,7 +31,7 @@ ms.locfileid: "36128933"
  以后将逐步停止使用带有 *TableName.IndexName* 的 DROP 语法，并且 XML 索引不支持该语法。  
   
 ## <a name="example-creating-and-dropping-a-primary-xml-index"></a>示例：创建和删除主 XML 索引  
- 在下面的示例中，在创建 XML 索引`xml`类型列。  
+ 在以下示例中，在创建 XML 索引`xml`类型列。  
   
 ```  
 DROP TABLE T  
@@ -55,7 +55,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  删除表后，也将自动删除其所有的 XML 索引。 但是，如果 XML 列存在 XML 索引，则不会从表中删除该列。  
   
- 在下面的示例中，在创建 XML 索引`xml`类型列。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../xml/compare-typed-xml-to-untyped-xml.md)。  
+ 在以下示例中，在创建 XML 索引`xml`类型列。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../xml/compare-typed-xml-to-untyped-xml.md)。  
   
 ```  
 CREATE TABLE TestTable(  

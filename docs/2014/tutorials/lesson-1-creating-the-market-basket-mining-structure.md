@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 创建市场篮挖掘结构 |Microsoft 文档
+title: 第 1 课： 创建市场篮挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2201afdb7226267e44686b76edb22e77b11dd199
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 3f719a4dd11234a361856dcf170eebcd3856f66c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323607"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>第 1 课：创建市场篮挖掘模型
-  在本课中，将创建一个挖掘模型，可以使用该模型预测客户要同时购买的 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 产品。 如果你不熟悉挖掘结构和数据挖掘中的其角色，请参阅[挖掘结构&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
+  在本课中，将创建一个挖掘模型，可以使用该模型预测客户要同时购买的 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 产品。 如果您不熟悉挖掘结构和数据挖掘中的其角色，请参阅[挖掘结构&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
   
- 你将在本课程中创建的关联挖掘结构支持基于的挖掘模型添加[Microsoft 关联算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)。 在后面的课程中，您将使用挖掘模型来预测客户要同时购买的产品类型，这称为市场篮分析。 例如，您可能会发现客户要同时购买山地自行车、自行车轮胎和头盔。  
+ 将在本课程中创建的关联挖掘结构支持添加挖掘模型基于[Microsoft 关联算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)。 在后面的课程中，您将使用挖掘模型来预测客户要同时购买的产品类型，这称为市场篮分析。 例如，您可能会发现客户要同时购买山地自行车、自行车轮胎和头盔。  
   
- 在本课中，挖掘结构是使用嵌套表定义的。 使用嵌套表是因为将由结构定义的数据域分别包含在两个不同的源表中。 嵌套表的详细信息，请参阅[嵌套表&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)。  
+ 在本课中，挖掘结构是使用嵌套表定义的。 使用嵌套表是因为将由结构定义的数据域分别包含在两个不同的源表中。 有关嵌套表的详细信息，请参阅[嵌套表&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)。  
   
 ## <a name="create-mining-structure-statement"></a>创建挖掘结构语句  
- 若要创建一个包含嵌套的表的挖掘结构，你使用[创建挖掘结构&#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx)语句。 可以将语句中的代码分为下列几部分：  
+ 若要创建挖掘结构包含嵌套的表，则使用[CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx)语句。 可以将语句中的代码分为下列几部分：  
   
 -   命名结构  
   
@@ -59,7 +59,7 @@ CREATE MINING STRUCTURE [<Mining Structure Name>]
 CREATE MINING STRUCTURE [Mining Structure Name]  
 ```  
   
- 有关命名在 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 有关命名 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
   
  代码的下一行定义了挖掘结构的键列，它唯一标识源数据中的实体：  
   
@@ -81,7 +81,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
    <nested mining structure columns> )  
 ```  
   
- 有关的挖掘结构列可以定义类型的信息，请参阅[挖掘结构列](../../2014/analysis-services/data-mining/mining-structure-columns.md)。  
+ 有关挖掘结构列可以定义的类型的信息，请参阅[挖掘结构列](../../2014/analysis-services/data-mining/mining-structure-columns.md)。  
   
 > [!NOTE]  
 >  默认情况下，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 为每个挖掘结构创建 30% 的维持数据集；但是，如果使用 DMX 创建挖掘结构，则必须手动添加维持数据集（如果需要）。  
@@ -102,9 +102,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
-2.  在**连接到服务器**对话框中，为**服务器类型**，选择**Analysis Services**。 在**服务器名称**，类型`LocalHost`，或的实例的名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]你想要连接到的本课程。 单击 **“连接”**。  
+2.  在中**连接到服务器**对话框中，对于**服务器类型**，选择**Analysis Services**。 在中**服务器名称**，类型`LocalHost`，或实例的名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]想要连接到本课程中。 单击 **“连接”**。  
   
-3.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**。  
+3.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -113,7 +113,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 #### <a name="to-customize-the-create-mining-structure-statement"></a>自定义 CREATE MINING STRUCTURE 语句  
   
-1.  在查询编辑器中，将创建挖掘结构语句的泛型示例复制到空的查询。  
+1.  在查询编辑器中，将 CREATE MINING STRUCTURE 语句的一般示例复制到空白查询。  
   
 2.  将  
   
@@ -168,18 +168,18 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     )  
     ```  
   
-5.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+5.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-6.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`Market Basket Structure.dmx`。  
+6.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Market Basket Structure.dmx`。  
   
 ## <a name="executing-the-query"></a>执行查询  
- 最后一步是执行查询。 创建并保存查询后，需要执行该查询（即，需要执行该语句）以便在服务器中创建挖掘结构。 有关执行查询编辑器中的查询的详细信息，请参阅[数据库引擎查询编辑器&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)。  
+ 最后一步是执行查询。 创建并保存查询后，需要执行该查询（即，需要执行该语句）以便在服务器中创建挖掘结构。 有关在查询编辑器中执行查询的详细信息，请参阅[数据库引擎查询编辑器&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)。  
   
 #### <a name="to-execute-the-query"></a>若要执行查询  
   
--   在查询编辑器中，在工具栏上，单击**执行**。  
+-   在查询编辑器中，在工具栏上，单击**Execute**。  
   
-     查询的状态将显示在**消息**底部查询编辑器的语句完成执行后的选项卡。 所显示的消息应为：  
+     查询的状态显示在**消息**在底部的查询编辑器执行完语句后的选项卡。 所显示的消息应为：  
   
     ```  
     Executing the query   

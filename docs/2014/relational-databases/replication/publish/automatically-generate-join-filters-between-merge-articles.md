@@ -1,5 +1,5 @@
 ---
-title: 自动生成的合并项目 (SQL Server Management Studio) 之间的联接筛选器的一组 |Microsoft 文档
+title: 自动生成一组联接筛选器之间合并项目 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic join filter generation
 - join filters
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 420f46e7d41fa5f11ad9f587e9c336674b689962
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a8be0d1ec78f8be444cec85fb8bf7de4f2e1bb0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246290"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>在合并项目之间自动生成一组联接筛选器 (SQL Server Management Studio)
   在新建发布向导的“筛选表行”页上，或在“发布属性 - \<发布>”对话框的“筛选行”页上自动生成一组联接筛选器。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 翻译详细信息 （翻译选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 翻译详细信息 （翻译选项卡，维度设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c3fea9b837915fff37bad632780544bcf7ebb1a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306327"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“翻译”** 选项卡上的 **“翻译详细信息”** 窗格，定义和管理当前所选维度的翻译。  
@@ -65,7 +65,7 @@ ms.locfileid: "36138079"
   
      显示[“级别命名模板”对话框（Analysis Services - 多维数据）](level-naming-template-dialog-box-analysis-services-multidimensional-data.md)。  
   
--   `Caption` 属性 （对于属性）  
+-   `Caption` 属性 （针对特性）  
   
      显示[“翻译属性数据”对话框（Analysis Services - 多维数据）](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
   

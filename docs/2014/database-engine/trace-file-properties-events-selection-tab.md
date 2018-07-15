@@ -1,5 +1,5 @@
 ---
-title: 跟踪文件属性 （事件选择选项卡） |Microsoft 文档
+title: 跟踪文件属性 （事件选择选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdc365671beae3d0037ca9f3dca9b0c2a1f21ad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74cc7160d66909523628c173e4b80db4045a90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302637"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>跟踪文件属性（“事件选择”选项卡）
   使用 **“跟踪文件模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看跟踪的列属性或者从跟踪中删除数据列。  
@@ -52,10 +52,10 @@ ms.locfileid: "36129724"
  选择要跟踪的**事件**和数据列后，单击“组织列”将强制网格对跟踪结果窗口中的列重新排序。  
   
 ## <a name="see-also"></a>请参阅  
- [指定跟踪文件的事件和数据列&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [在跟踪中筛选事件&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [指定跟踪文件的事件和数据列&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [在跟踪中筛选事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [查看筛选器信息 (SQL Server Profiler)](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [修改筛选器&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
+ [修改筛选器&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server 事件探查器](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

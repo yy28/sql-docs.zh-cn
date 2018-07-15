@@ -1,5 +1,5 @@
 ---
-title: 表 (DTA) 的名称元素 |Microsoft 文档
+title: 元素名称的表 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0cb54e42b9acf1ac4b4224feb0c25dcdb98cab8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2158ea2131d917ff1ca5ababcc93392ffce8c0dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303147"
 ---
 # <a name="name-element-for-table-dta"></a>表的名称元素 (DTA)
   指定表名以进行优化。  
@@ -49,7 +49,7 @@ ms.locfileid: "36138321"
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[架构的表元素&#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**父元素**|[表的架构元素&#40;DTA&#41;](table-element-for-schema-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

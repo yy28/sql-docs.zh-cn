@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9af13376bd8dfe6fc182b784c250c286fcabdf6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de8849902a313391f414367ca6e51fb64c6dffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303537"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 电子邮件传递扩展插件是通过 Reporting Services 配置管理器并编辑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件进行配置的。  
   
- 若要通过电子邮件分发或接收报表，请定义标准订阅或数据驱动订阅。 您一次只能订阅或分发一个报表。 您不能创建在一个电子邮件中传递多个报表的订阅。 有关订阅的详细信息，请参阅[Create，Modify，and 删除标准订阅&#40;在纯模式下的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 若要通过电子邮件分发或接收报表，请定义标准订阅或数据驱动订阅。 您一次只能订阅或分发一个报表。 您不能创建在一个电子邮件中传递多个报表的订阅。 有关订阅的详细信息，请参阅[创建、 修改和删除标准订阅&#40;本机模式下的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
 ||  
 |-|  
@@ -75,13 +75,13 @@ ms.locfileid: "36129129"
   
  有关如何配置本机模式报表服务器的信息，请参阅以下内容：  
   
--   [针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [电子邮件设置-Configuration Manager &#40;SSRS 本机模式&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [电子邮件设置-配置管理器&#40;SSRS 本机模式&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  
   
--   [Reporting services 服务应用程序配置电子邮件&#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [为 Reporting Services 服务应用程序配置电子邮件&#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>请参阅  
  [任务和权限](../security/tasks-and-permissions.md)   

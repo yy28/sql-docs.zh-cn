@@ -1,5 +1,5 @@
 ---
-title: 子包的实现 |Microsoft 文档
+title: 子包的实现 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287583"
 ---
 # <a name="implementation-of-child-packages"></a>子包的实现
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]来实现负载平衡时，子包将安装在其他服务器上，以利用可用的 CPU 或服务器时间。 若要创建和运行子包，需要执行以下步骤：  
@@ -73,6 +73,6 @@ ms.locfileid: "36138708"
   
 -   博客文章[SSIS： 访问父包中的变量](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
--   博客文章[SSIS： 应执行子包进程内或进程外？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   博客文章[SSIS： 应该执行子包进程内或进程外？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
   

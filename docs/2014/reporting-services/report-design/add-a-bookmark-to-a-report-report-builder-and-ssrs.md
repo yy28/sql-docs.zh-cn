@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c5dbb01a671b6490c798ec9e688a6824efdf122a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c0303996c4db22d05a288ce055201a343e330778
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290243"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>向报表添加书签（报表生成器和 SSRS）
   若要在报表中提供自定义目录或自定义内部导航链接，可以向报表中添加书签或书签链接。 通常情况下，如果要引导用户到报表中的某一位置，例如表、图表以及表或矩阵中显示的唯一组值，可以向该位置添加书签。 可以创建用作书签的字符串；或者，对于组而言，可以将书签设置为组表达式。  
@@ -61,6 +61,6 @@ ms.locfileid: "36138150"
 ## <a name="see-also"></a>请参阅  
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [筛选、 分组和排序数据&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

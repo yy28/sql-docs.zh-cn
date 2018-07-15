@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database configuration [SQL Server]
 - configuration options [SQL Server], databases
 - modifying database configuration settings
 ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c766596bd49664773d0345b292079843fef52a46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d7b9c15d9dbcdea8ff52bcb8f82b9ee15754ea5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302447"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>更改数据库的配置设置
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改服务器级别选项。 这些选项仅针对各自的数据库，而不会影响其他数据库。  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f403ef13892ed913c00d2f7042ab8d127fffd09e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 17c7a8f084db4c252da7f235762a60078ef39214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315467"
 ---
 # <a name="image-device-information-settings"></a>图像设备信息设置
   下表列出了用于以 IMAGE 格式呈现的设备信息设置。  
@@ -34,13 +34,13 @@ ms.locfileid: "36138803"
 |`DpiX`|输出图像的水平分辨率。 默认值为 **96**。 适用于`BMP`， `GIF`， `PNG`，和`TIFF`输出格式。|  
 |`DpiY`|输出图像的垂直分辨率。 默认值为 **96**。 适用于`BMP`， `GIF`， `PNG`，和`TIFF`输出格式。|  
 |**EndPage**|要呈现的报表的最后一页。 默认值为 `StartPage` 的值。|  
-|**MarginBottom**|要为报表设置的下边距值，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `1in`)。 此值将覆盖报表的原始设置。|  
-|**MarginLeft**|要为报表设置的左边距值，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `1in`)。 此值将覆盖报表的原始设置。|  
-|**MarginRight**|要为报表设置的右边距值，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `1in`)。 此值将覆盖报表的原始设置。|  
-|**MarginTop**|要为报表设置的上边距值，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `1in`)。 此值将覆盖报表的原始设置。|  
-|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
-|**PageHeight**|要为报表设置的页高，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `11in`)。 此值将覆盖报表的原始设置。|  
-|**PageWidth**|要为报表设置的页宽，以英寸为单位。 必须包含整数或后跟"中"的十进制值 (例如， `8.5in`)。 此值将覆盖报表的原始设置。|  
+|**MarginBottom**|要为报表设置的下边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
+|**MarginLeft**|要为报表设置的左边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
+|**MarginRight**|要为报表设置的右边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
+|**MarginTop**|要为报表设置的上边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
+|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
+|**PageHeight**|要为报表设置的页高，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `11in`)。 此值将覆盖报表的原始设置。|  
+|**PageWidth**|要为报表设置的页宽，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `8.5in`)。 此值将覆盖报表的原始设置。|  
 |**PrintDpiX**|输出图像的水平分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
 |**PrintDpiY**|输出图像的垂直分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
 |`StartPage`|要呈现的报表的第一页。 值为 `0` 指示将呈现所有页。 默认值是 `1`。|  

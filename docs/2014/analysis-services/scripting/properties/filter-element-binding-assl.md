@@ -1,5 +1,5 @@
 ---
-title: 筛选元素 （绑定） (ASSL) |Microsoft 文档
+title: Filter 元素 （绑定） (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 659719ea4ba87b548b08b5b7cb680e1b28b563d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291303"
 ---
 # <a name="filter-element-binding-assl"></a>Filter 元素（绑定）(ASSL)
   包含筛选父元素的内容的多维表达式 (MDX)。  
@@ -62,14 +62,14 @@ ms.locfileid: "36129553"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关详细信息`Binding`类型，包括表的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的脚本语言 (ASSL) 对象`Binding`类型和继承层次结构的`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
+ 有关详细信息`Binding`类型，包括表的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]脚本语言 (ASSL) 对象`Binding`类型和继承层次结构`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
   
- ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
- 对应的父级的元素`Filter`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.CubeDimensionBinding>和<xref:Microsoft.AnalysisServices.MeasureGroupBinding>。  
+ 父级对应的元素`Filter`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.CubeDimensionBinding>和<xref:Microsoft.AnalysisServices.MeasureGroupBinding>。  
   
 ## <a name="see-also"></a>请参阅  
- [绑定数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
+ [Binding 数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
  [数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Backup/Restore event class
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a5db06ff100781f4d340d186b254843349d8d1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c1ac7826b6061cba68a3f2445f8d6e236d7a7069
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256466"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>审核备份和还原事件类
   每当发出备份或还原命令时，都会发生 **Audit Backup/Restore** 事件类。  

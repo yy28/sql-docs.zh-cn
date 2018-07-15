@@ -1,5 +1,5 @@
 ---
-title: PowerPivot BI 语义模型连接 (.bism) |Microsoft 文档
+title: PowerPivot BI 语义模型连接 (.bism) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac5edd8e03f7094bec05298057f081053ef13640
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253009"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 语义模型连接 (.bism)
-  BI 语义模型连接 (.bism) 是一个可移植的连接，将 Excel 连接或[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]向报告[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格模型数据库或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在多维模式下的实例。 如果您熟悉 Office 数据连接 (.odc) 文件，则您会注意到定义和使用 .bism 连接文件的方式的相似性。  
+  BI 语义模型连接 (.bism) 是可移植的连接 Excel 连接或[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]向报告[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格模型数据库或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在多维模式下的实例。 如果您熟悉 Office 数据连接 (.odc) 文件，则您会注意到定义和使用 .bism 连接文件的方式的相似性。  
   
- BI 语义模型连接是通过 SharePoint 创建和访问的。 创建 BI 语义模型连接后，您可以对库中的 BI 语义模型连接启用快速启动命令。 快速启动命令打开新的 Excel 工作簿或选项来供您编辑连接文件。 如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是安装，你还将看到命令创建[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]报表。  
+ BI 语义模型连接是通过 SharePoint 创建和访问的。 创建 BI 语义模型连接后，您可以对库中的 BI 语义模型连接启用快速启动命令。 快速启动命令打开新的 Excel 工作簿或选项来供您编辑连接文件。 如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是安装，您还会看到命令以创建[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]报表。  
   
- ![屏幕快照的 BISM 快速启动命令](../media/ssas-bism-quicklaunch.gif "屏幕截图的 BISM 快速启动命令")  
+ ![屏幕截图的 BISM 快速启动命令](../media/ssas-bism-quicklaunch.gif "屏幕截图的 BISM 快速启动命令")  
   
 ##  <a name="bkmk_prereq"></a> 支持的数据库  
  BI 语义模型连接指向表格模型数据。 存在三种可用于此数据的数据源：  
   
 -   以表格服务器模式在独立的 Analysis Services 实例上运行的表格模型数据库。 独立 Analysis Services 实例的部署位于场外部。 访问场外部的数据源要求附加权限，您可在本主题中阅读相关信息： [创建与表格模型数据库的 BI 语义模型连接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
--   保存到 SharePoint 的 PowerPivot 工作簿。 Excel 工作簿内嵌入的 PowerPivot 数据库等效于在独立的 Analysis Services 表格模式服务器上运行的表格模型数据库。 如果你已使用 PowerPivot for Excel 和 PowerPivot for SharePoint，则可以定义指向 SharePoint 库和生成中的 PowerPivot 工作簿的 BI 语义模型连接[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]使用现有 PowerPivot 数据的报表。  您可以使用在 PowerPivot for Excel 的 SQL Server 2008 R2 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中创建的工作簿。  
+-   保存到 SharePoint 的 PowerPivot 工作簿。 Excel 工作簿内嵌入的 PowerPivot 数据库等效于在独立的 Analysis Services 表格模式服务器上运行的表格模型数据库。 如果您已经使用 PowerPivot for Excel 和 PowerPivot for SharePoint，则可以定义指向 SharePoint 库和生成中的 PowerPivot 工作簿的 BI 语义模型连接[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]使用现有的 PowerPivot 数据的报表。  您可以使用在 PowerPivot for Excel 的 SQL Server 2008 R2 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中创建的工作簿。  
   
 -   上的多维数据模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36138741"
   
  在 Analysis Services 实例上，只有系统管理员角色的成员才有权使用 `effectiveusername` 参数进行连接和模拟该服务器实例上的其他用户。 因此，Reporting Services 共享服务的执行帐户必须对 Analysis Services 实例具有管理权限。  主题 [创建与表格模型数据库的 BI 语义模型连接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)中将提供有关向服务帐户授予管理权限的说明。  
   
- 下图展示了将相同 Windows 用户标识用于每个连接的连接顺序。 Reporting Services 服务应用程序标识，传递 Windows 用户标识使用与 Analysis Services 的最后一个连接，在建立连接`effectiveusername`。  
+ 下图展示了将相同 Windows 用户标识用于每个连接的连接顺序。 上最后一个连接到 Analysis Services 中，通过传递 Windows 用户标识使用的 Reporting Services 服务应用程序标识进行连接`effectiveusername`。  
   
- ![Imersonated 连接到表格数据库](../media/ssas-powerpivotbismconnection-2.gif "Imersonated 连接到表格数据库")  
+ ![到表格数据库的模拟连接](../media/ssas-powerpivotbismconnection-2.gif "到表格数据库的模拟连接")  
   
  **从 Power View 连接到 SharePoint 中的 PowerPivot 数据**  
   

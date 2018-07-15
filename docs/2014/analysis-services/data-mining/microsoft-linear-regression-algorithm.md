@@ -1,5 +1,5 @@
 ---
-title: Microsoft 线性回归算法 |Microsoft 文档
+title: Microsoft 线性回归算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315073"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 线性回归算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体，有助于计算依赖变量和独立变量之间的线性关系，然后使用该关系进行预测。  
   
  该关系采用的表示形式是最能代表数据序列的线的公式。 例如，以下关系图中的线是数据最可能的线性表示形式。  
   
- ![模型的数据集的行](../media/linear-regression.gif "模型的数据集行")  
+ ![模型的一组数据的行](../media/linear-regression.gif "模型的一组数据的行")  
   
  关系图中的每个数据点都有一个与该数据点与回归线之间距离关联的错误。 回归方程式中的系数 a 和 b 可以调整回归线的角度和位置。 可以对 a 和 b 进行调整，直到与所有点都关联的错误总数达到最低值，以此获得回归公式。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36138314"
   
  如果想了解有关该方程式的更多详细信息，还可以使用 [“Microsoft 一般内容树查看器”](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)查看系数和其他详细信息。  
   
- 对于线性回归模型，模型内容包括元数据、回归公式和有关输入值分布的统计信息。 有关详细信息，请参阅[挖掘模型内容线性回归模型的&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 对于线性回归模型，模型内容包括元数据、回归公式和有关输入值分布的统计信息。 有关详细信息，请参阅[线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions"></a>创建预测  
  模型处理完毕后，结果将以一组统计信息和线性回归公式的形式存储，您可以利用这些结果来计算未来趋势。 有关用于线性回归模型的查询的示例，请参阅 [线性回归模型查询示例](linear-regression-model-query-examples.md)。  

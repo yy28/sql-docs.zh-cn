@@ -1,5 +1,5 @@
 ---
-title: 查找转换编辑器 （连接页） |Microsoft 文档
+title: 查找转换编辑器 （连接页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 91794c83736042672026f5a0fe35ead15dd112eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c3236fe156e103269995a0707be17602af0a5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318907"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“连接”** 页选择连接管理器。 在选择 OLE DB 连接管理器时，会同时选择用来生成引用数据集的查询、表或视图。  

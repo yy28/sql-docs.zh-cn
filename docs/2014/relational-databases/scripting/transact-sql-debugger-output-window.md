@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.output
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3cab20d2f294c69e2916f30be0fdfb7b3af2c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8b519da50addd621ee75e7c03aaf850b708c4236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270733"
 ---
 # <a name="output-window"></a>输出窗口
   此窗口显示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各种功能的状态消息。 输出是从 **调试器、外部工具功能或调试器** “命令窗口” [!INCLUDE[tsql](../../includes/tsql-md.md)] 中运行的命令发送到 **“输出”** 窗口的特殊窗格中。 此外，来自外部工具（例如 .bat 或 .com 文件）且通常在“命令提示符”窗口中显示的输出也在此窗口中显示。  

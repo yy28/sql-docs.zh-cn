@@ -1,5 +1,5 @@
 ---
-title: ReadDefinition 元素 (ASSL) |Microsoft 文档
+title: ReadDefinition 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReadDefinition element
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb505ff02917259b71d5f5b1ee803a5982217b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fed91c75bd717e67dd624fc16f7091be24fb030c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297227"
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 元素 (ASSL)
   确定成员是否可以读取数据库的定义或数据库中对象的定义。  
@@ -67,8 +67,8 @@ ms.locfileid: "36138098"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |*无*|不允许访问对象定义。|  
-|*基本*|允许对对象定义进行基本访问。 **注意：** 此权限是必需创建本地多维数据集、 链接度量值组和链接维度。|  
-|*允许*|允许对对象定义进行完全的访问。 **注意：** 此权限是必需执行[发现](../../xmla/xml-elements-methods-discover.md)XML for Analysis (XMLA) 调用使用 DISCOVER_XML_METADATA 参数。|  
+|*基本*|允许对对象定义进行基本访问。 **注意：** 时用于创建本地多维数据集、 链接度量值组和链接维度需要此权限。|  
+|*允许*|允许对对象定义进行完全的访问。 **注意：** 时需要执行此权限[发现](../../xmla/xml-elements-methods-discover.md)XML for Analysis (XMLA) 调用使用 DISCOVER_XML_METADATA 参数。|  
   
  在 Analysis Management Objects (AMO) 对象模型中，与 `ReadDefinition` 的父级对应的元素为 <xref:Microsoft.AnalysisServices.CubePermission>、<xref:Microsoft.AnalysisServices.DatabasePermission>、<xref:Microsoft.AnalysisServices.DimensionPermission>、<xref:Microsoft.AnalysisServices.MiningModelPermission>、<xref:Microsoft.AnalysisServices.MiningStructurePermission> 和 <xref:Microsoft.AnalysisServices.Permission>。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - string literals
 - numeric literals [Integration Services]
@@ -20,13 +20,13 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 90b00837c6a1c652be601b4237fd4329b9ebbce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 812e0d2db0e0cc202e78e0bd920901509b9ae082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312027"
 ---
 # <a name="literals-ssis"></a>文字 (SSIS)
   表达式可以包含数值、字符串和布尔文字。 表达式计算器支持多种数值，例如整数、小数和浮点常量。 表达式计算器还支持数值中包含科学记数法和指定表达式计算器如何处理值的 long 和 float 后缀。  

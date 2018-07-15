@@ -1,5 +1,5 @@
 ---
-title: 源元素 （同步） (XMLA) |Microsoft 文档
+title: Source 元素 （同步） (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 0a857f91-771f-4c5e-8bf7-4bf17442d4df
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5341a6c993c6053dbe6716dcfcd5155f81a4ae0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8a9389b47418a581c9d711c9cd29b73b6a8e962d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326417"
 ---
 # <a name="source-element-synchronize-xmla"></a>Source 元素（同步）(XMLA)
   表示从中同步期间在目标数据库的源数据库[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
@@ -65,7 +65,7 @@ ms.locfileid: "36129530"
 |子元素|[ConnectionString](connectionstring-element-xmla.md)，[对象](object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Synchronize`命令使用`Source`元素建立的连接并标识实例上的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]要与之同步目标数据库。  
+ `Synchronize`命令使用`Source`要建立的连接和标识的实例上的数据库元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]要与之同步目标数据库。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

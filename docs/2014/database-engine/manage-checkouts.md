@@ -1,5 +1,5 @@
 ---
-title: 管理方式签出 |Microsoft 文档
+title: 管理签出 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], checkouts
 - checkouts [SQL Server Management Studio]
 - checking out files
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0540aade3a2e05a6b74a5a16ef9b9ddcfdb6d3f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a64e2346479c95327c3f183331cc7971481521b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320707"
 ---
-# <a name="manage-checkouts"></a>管理方式签出
-  在将文件添加到源代码管理后，您必须签出该文件才能对其进行修改。 将文件签出源代码管理时，源代码管理提供程序会在本地磁盘中创建最新版本的副本并删除该文件的只读属性。 在某些情况下，您可能需要在不签出文件的情况下编辑该文件。 有关编辑但不签出该文件的文件的详细信息，请参阅[编辑 Checked-In 文件](../../2014/database-engine/edit-checked-in-files.md)。  
+# <a name="manage-checkouts"></a>管理签出
+  在将文件添加到源代码管理后，您必须签出该文件才能对其进行修改。 将文件签出源代码管理时，源代码管理提供程序会在本地磁盘中创建最新版本的副本并删除该文件的只读属性。 在某些情况下，您可能需要在不签出文件的情况下编辑该文件。 有关编辑文件，而无需签出文件的详细信息，请参阅[编辑 Checked-In 文件](../../2014/database-engine/edit-checked-in-files.md)。  
   
- 你可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]手动或自动签出文件。 你手动签出文件通过打开包含中的文件的解决方案[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境，，然后单击**签出**命令。 如果将 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境配置为自动签出文件，则可以自动签出文件。  
+ 可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]手动或自动签出文件。 您手动签出文件通过打开包含中的文件的解决方案[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境中，，然后单击**签出**命令。 如果将 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境配置为自动签出文件，则可以自动签出文件。  
   
  根据管理员在源代码管理提供程序中设置的选项，还可以使用独占模式或共享模式签出文件。 当您以独占模式签出文件时，只有您能修改文件，在您将文件签入之前，其他任何用户都不能签出该文件。 当您以共享模式签出文件时，任何用户都可以签出同一文件。 每个用户签入文件时，源代码管理提供程序都会尝试将该文件与文件的最新服务器版本进行合并。 如果在签入版本和最新版本之间存在冲突，源代码管理提供程序会提示用户解决这些冲突。  
   

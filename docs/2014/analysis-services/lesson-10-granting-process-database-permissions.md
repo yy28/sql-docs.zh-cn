@@ -1,5 +1,5 @@
 ---
-title: 授予处理数据库权限 |Microsoft 文档
+title: 授予处理数据库权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c309ca3781bea3594c6d7e8d1b912730371635e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306517"
 ---
 # <a name="granting-process-database-permissions"></a>授予处理数据库权限
   在安装 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例后，该实例中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器管理员角色的所有成员都将具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中执行任何任务的服务器范围权限。 默认情况下，其他用户都不具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中管理或查看任何对象的任何权限。  
@@ -34,9 +34,9 @@ ms.locfileid: "36129372"
   
 2.  单击“处理数据库”复选框。  
   
-3.  在属性窗口中，更改**名称**到此新角色的属性`Process Database Objects Role`。  
+3.  在属性窗口中更改**名称**到此新角色的属性`Process Database Objects Role`。  
   
-     ![在角色设计器](../../2014/tutorials/media/l10-security-1.png "角色设计器")  
+     ![角色设计器](../../2014/tutorials/media/l10-security-1.png "角色设计器")  
   
 4.  切换到角色设计器的“成员身份”选项卡，然后单击“添加”。  
   

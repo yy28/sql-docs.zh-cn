@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - heterogeneous database replication, non-SQL Server Publishers
 - non-SQL Server Publishers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], Oracle
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1151a7c84dfaa346fb208d74614dd742c1683879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fbb2694932b20c38bee4bc7b3978abfab1472b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299907"
 ---
 # <a name="non-sql-server-publishers"></a>非 SQL Server 发布服务器
   通过从非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 源发布数据，您可以将数据合并到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以订阅从 Oracle 数据库发布的快照或事务数据。 有关从 Oracle 发布的详细信息，请参阅 [Oracle 发布概述](oracle-publishing-overview.md)。  

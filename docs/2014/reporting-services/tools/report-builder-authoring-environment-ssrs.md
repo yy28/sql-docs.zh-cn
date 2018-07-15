@@ -1,5 +1,5 @@
 ---
-title: 报表生成器 (SSRS) |Microsoft 文档
+title: 报表生成器 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ebcb4995b834051b3fd8a5a96599b20874984f0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 1dcdbebf197c15eb091a7d982ce0e4e17b4f1a24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290194"
 ---
 # <a name="report-builder-ssrs"></a>报表生成器 (SSRS)
-  报表生成器是报表创作环境的业务用户想使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]机构环境。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。  
+  报表生成器是一种报表创作环境的业务用户更愿意[!INCLUDE[msCoName](../../includes/msconame-md.md)]Office 环境。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。  
   
 ## <a name="benefits-of-report-builder"></a>报表生成器的优点  
  通过报表生成器，您可以：  
@@ -48,7 +48,7 @@ ms.locfileid: "36139001"
  报表生成器和报表设计器共享许多功能。 有关报表生成器的详细信息，请参阅[报表生成器文档](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
   
 ## <a name="see-also"></a>请参阅  
- [配置报表生成器访问权](../report-server/configure-report-builder-access.md)   
+ [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)   
  [Reporting Services 工具](reporting-services-tools.md)   
  [使用报表设计器设计报表 (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 643f46f0e8339cbe5e5cc46c13e90796b1479bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7538c80ac8425e02f5ccc37ecffacfa07b8576c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318747"
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建模型以便包含模型对象。  
@@ -38,15 +38,15 @@ ms.locfileid: "36138460"
   
 2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”**。  
   
-3.  上**模型维护**页上，单击**Add model**。  
+3.  上**模型维护**页上，单击**添加模型**。  
   
-4.  在**模型名称**框中，键入模型的名称。  
+4.  在中**模型名称**框中，键入模型的名称。  
   
 5.  或者，选择 **“使用与模型相同的名称创建实体”** 可以使用与模型相同的名称创建实体。  
   
-6.  （可选） 选择**创建与模型同名的显式层次结构**创建与模型同名的显式层次结构。 此选项还为集合启用实体。  
+6.  （可选） 选择**使用与模型相同的名称创建显式层次结构**以使用与模型相同的名称创建显式层次结构。 此选项还为集合启用实体。  
   
-7.  （可选） 选择**强制层次结构 (已包括所有叶成员**创建作为强制的层次结构的显式层次结构。  
+7.  （可选） 选择**强制的层次结构 (所有叶成员都都包含**创建显式层次结构作为强制层次结构。  
   
 8.  单击 **“保存模型”**。  
   

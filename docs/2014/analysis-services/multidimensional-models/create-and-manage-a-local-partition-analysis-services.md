@@ -1,5 +1,5 @@
 ---
-title: 创建和管理本地分区 (Analysis Services) |Microsoft 文档
+title: 创建和管理本地分区 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321267"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>创建和管理本地分区 (Analysis Services)
   您可以为度量值组创建更多分区以提高处理性能。 通过多个分区，您可以跨本地以及远程服务器上对应数目的物理数据文件分配事实数据。 在 Analysis Services 中，可以独立和并行处理分区，从而可更好地控制服务器上的处理工作负荷。  
@@ -31,7 +31,7 @@ ms.locfileid: "36138961"
  可以在模型设计期间在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中创建分区，或在部署解决方案后使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 来创建分区。 建议您仅选择一种方法。 如果您交替使用这些工具，可能会发现，在随后从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署该解决方案时，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中对已部署的数据库所进行的更改将被覆盖。  
   
 ## <a name="before-you-start"></a>开始之前  
- 检查所用版本是否为 Business Intelligence 或 Enterprise。 Standard 版不支持多个分区。 若要检查版本，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击服务器节点，然后选择“报表” | “常规”。 有关功能可用性的详细信息，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 检查所用版本是否为 Business Intelligence 或 Enterprise。 Standard 版不支持多个分区。 若要检查版本，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击服务器节点，然后选择“报表” | “常规”。 有关功能可用性的详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  如果您想以后将分区合并，则从一开始就须知道各分区必须具有相同的聚合设计。 仅当分区具有相同的聚合设计和存储模式时，才能将分区合并。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36138961"
   
 3.  在“源”列中，单击浏览 ( .) 按钮打开“分区源”对话框。  
   
-     ![在分区窗格中的源列](../media/ssas-partitionsource.png "在分区窗格中的源列")  
+     ![在分区窗格中的源列](../media/ssas-partitionsource.png "分区窗格中的源列")  
   
 4.  在“绑定类型”中，选择 **“查询绑定”**。 将自动显示用于选择数据的 SQL 查询。  
   
@@ -128,6 +128,6 @@ ms.locfileid: "36138961"
 ## <a name="see-also"></a>请参阅  
  [分区&#40;Analysis Services-多维数据&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [远程分区](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [在 Analysis Services 中合并分区&#40;SSAS-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services 中合并分区&#40;SSAS-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.documentoutline.f1
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 583c67e6355719ceb27b70862a77e6ec48072293
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a336b82bb6776b864bfaca4d596a16a77ed416be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312887"
 ---
 # <a name="document-outline"></a>文档大纲
   使用“文档大纲”窗口可在报表中查看报表项的层次结构。 Tablix 数据区域显示了 Tablix 单元中包含的所有文本框以及其他报表项。 在设计图面上选择某报表项时，将在“文档大纲”窗口中选中对应的报表项。 使用此视图可在设计图面上查找报表项。 例如，预览带有表达式错误的报表时，“输出”窗口将显示每个错误的相关消息。 该消息包含带有错误表达式的文本框的名称。 您可以在“文档大纲”窗口中单击文本框的名称，将看到在设计图面上也选中该文本框名称，然后查看包含错误的表达式。  

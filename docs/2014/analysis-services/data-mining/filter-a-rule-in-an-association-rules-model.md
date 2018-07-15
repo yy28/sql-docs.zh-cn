@@ -1,5 +1,5 @@
 ---
-title: 筛选器中关联的规则规则模型 |Microsoft 文档
+title: 筛选器规则模型中关联的规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36332206119e0cf3c75e62650f8f6d9ac60897e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2abb9180b446183764d96e95fe85f74d9bcd40f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289793"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
   您可以将筛选与关联模型一起使用来限制结果，使其仅包含您感兴趣的关联。 例如，您可以筛选规则，以便仅显示包含特定产品的规则。  
@@ -65,6 +65,6 @@ ms.locfileid: "36138547"
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 关联规则查看器浏览模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第 3 课： 生成市场篮方案&#40;中间数据挖掘教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

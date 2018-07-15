@@ -1,5 +1,5 @@
 ---
-title: 运行 SQL Server 导入和导出向导-> |Microsoft 文档
+title: 运行 SQL Server 导入和导出向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,34 +18,34 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307987"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>运行 SQL Server 导入和导出向导
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导为在数据源之间复制数据和构造基本包提供了一种最为简单的方法。 有关向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
   
- 有关演示如何使用 SQL Server 导入和导出向导创建的包，将数据从 SQL Server 数据库导出到 Microsoft Excel 电子表格的视频，请参阅[将 SQL Server 数据导出 Excel （SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=131024)。  
+ 有关演示如何使用 SQL Server 导入和导出向导来创建将数据从 SQL Server 数据库导出到 Microsoft Excel 电子表格的包的视频，请参阅[SQL Server 数据导出到 Excel （SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=131024)。  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>启动 SQL Server 导入和导出向导  
   
--   上**启动**菜单上，指向**所有程序**，指向**Microsoft SQL Server** ，然后单击**导入和导出数据**。  
+-   上**启动**菜单，依次指向**所有程序**，指向**Microsoft SQL Server** ，然后单击**导入和导出数据**。  
   
      — 或 —  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，右键单击**SSIS 包**文件夹，，然后单击**SSISImport 和导出向导**。  
+     在中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，右键单击**SSIS 包**文件夹，，然后单击**SSISImport 和导出向导**。  
   
      — 或 —  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]上**项目**菜单上，单击**SSISImport 和导出向导**。  
+     在中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，然后在**项目**菜单中，单击**SSISImport 和导出向导**。  
   
      — 或 —  
   
-     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务器类型，展开数据库，右键单击某个数据库，指向**任务**，然后单击**导入数据**或**导出数据**.  
+     在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务器类型，展开数据库，右键单击某个数据库，指向**任务**，然后单击**导入数据**或**导出数据**.  
   
      — 或 —  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36130158"
     > [!NOTE]  
     >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle BLOB、CLOB、NCLOB、BFILE 和 UROWID 数据类型。 因此，OLE DB 源无法从包含具有上述数据类型的列的表中提取数据。  
   
-     可用数据目标包括[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据提供程序、 OLE DB 访问接口、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端、 Excel、 访问和平面文件目标。  
+     可用数据目标包括[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据访问接口、 OLE DB 访问接口、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、 Excel、 Access 和平面文件目标。  
   
 3.  为选定的目标类型设置选项。  
   
@@ -123,12 +123,12 @@ ms.locfileid: "36130158"
   
      如果向导从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示符启动，则包可以立即运行。 您还可以保存到包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**数据库或文件系统。 有关详细信息**msdb**数据库，请参阅[包管理&#40;SSIS 服务&#41;](../service/package-management-ssis-service.md)。  
   
-     保存包时，可以设置包保护级别，如果该保护级别使用密码，请提供密码。 有关包保护级别的详细信息，请参阅[Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)。  
+     保存包时，可以设置包保护级别，如果该保护级别使用密码，请提供密码。 有关包保护级别的详细信息，请参阅[包中敏感数据的访问控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   
-     如果从启动向导[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]项目中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，你将无法从向导运行该包。 相反，该包将添加到启动该向导的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目中。 然后可以在运行包[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+     如果在启动向导[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]项目中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，不能从向导运行包。 相反，该包将添加到启动该向导的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目中。 然后可以在中运行包[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
     > [!NOTE]  
-    >  在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，以保存由向导创建的包的选项不可用。  
+    >  在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，用于保存由向导创建的包的选项不可用。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stopping Report Server service
 - Report Server Windows service, starting
@@ -18,13 +18,13 @@ ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e04d465bf8d3f779573d71881237fae039b90b6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cd026561a1f17a7b50dab79319c38ffbeef7b1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301768"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>启动和停止报表服务器服务
   报表服务器是作为包含报表服务器 Web 服务、报表管理器和后台处理应用程序的 Windows 服务来实现的。 若要使用任何报表服务器功能，必须运行该服务。 停止该服务将停止所有报表服务器操作。  

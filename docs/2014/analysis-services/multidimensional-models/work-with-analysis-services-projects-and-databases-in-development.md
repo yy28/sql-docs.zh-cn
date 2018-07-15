@@ -1,5 +1,5 @@
 ---
-title: 使用 Analysis Services 项目和数据库的开发阶段 |Microsoft 文档
+title: 使用 Analysis Services 在开发阶段项目和数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
 ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f6aa0b033d0f30f2c4db017583d0f785e13215d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19cf53ef3e3f118f53d9496d38c336eb3adb4c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301237"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>在开发阶段使用 Analysis Services 项目和数据库
   可以在项目模式或联机模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 开发 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库。  

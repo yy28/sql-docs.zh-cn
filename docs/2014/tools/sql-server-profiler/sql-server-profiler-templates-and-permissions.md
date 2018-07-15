@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb7943b3117882365c0e33e8aa78e6a6e70e675d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 314854547ec64c1c4700ccf087a9461e526a212b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297757"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 模板和权限
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何在内部解析查询。 这就使管理员能够准确查看提交到服务器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或多维表达式，以及服务器是如何访问数据库或多维数据集以返回结果集的。  

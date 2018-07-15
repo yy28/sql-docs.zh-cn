@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 938d32c65c8eb1d7fa6087d864e62b0bb4d5d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f2c47fee88ba536c084649669ac5cd5f53cf6d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318817"
 ---
 # <a name="error-handling"></a>错误处理
   Oracle CDC 实例从单个 Oracle 源数据库（一个 Oracle RAC 群集被视为单个数据库）挖掘更改并且将提交的更改写入目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 CDC 数据库的更改表中。  

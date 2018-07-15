@@ -1,5 +1,5 @@
 ---
-title: 标准视图 （聚合选项卡，多维数据集设计器） |Microsoft 文档
+title: 标准视图 （聚合选项卡，多维数据集设计器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.aggregations.standard.f1
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ada9abd6b87fa00a10158e9e9f2ed1570576bc59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14df3e7e01ccd1bd5a4f0405685f0ec9729f68a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246477"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>标准视图（多维数据集设计器的“聚合”选项卡）
   可以使用聚合设计器的 **“标准视图”** 来查看聚合。 您还可以使用 **“聚合设计向导”** 或 **“基于使用情况的优化向导”** 在此视图中创建和修改聚合设计。  

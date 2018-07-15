@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 客户端功能 |Microsoft 文档
+title: ADOMD.NET 客户端功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5fa854ebf8a67878d17b6e01b5cf8e70fe869d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e9ff2d42c61b97822e4715af7b8be3f87b7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261533"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 客户端功能
   与其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 数据访问接口一样，ADOMD.NET 也用作应用程序与数据源之间的桥梁。 但 ADOMD.NET 与其他 .NET Framework 数据访问接口的不同之处在于 ADOMD.NET 处理的是分析数据。 为了处理分析数据，ADOMD.NET 支持的功能与其他 .NET Framework 数据访问接口所支持的功能差异很大。 ADOMD.NET 不仅可检索数据，还可检索元数据并更改分析数据存储区的结构：  
   
  **检索元数据**  
- 应用程序可使用架构行集或对象模型，进一步了解通过元数据检索从数据源检索的数据。 如可用的关键绩效指标 (KPI) 的类型、多维数据集中的维度和挖掘模型所需的参数等信息都可以发现。 元数据是对最重要*动态*需要用户输入，以确定类型、 深度和作用域的数据要检索的应用程序。 此类应用程序的例子有查询分析器、Microsoft Excel 以及其他查询工具。 元数据不太重要到*静态*执行一组预定义的操作的应用程序。  
+ 应用程序可使用架构行集或对象模型，进一步了解通过元数据检索从数据源检索的数据。 如可用的关键绩效指标 (KPI) 的类型、多维数据集中的维度和挖掘模型所需的参数等信息都可以发现。 元数据是最重要*动态*需要用户输入以确定要检索的类型、 深度、 和数据范围的应用程序。 此类应用程序的例子有查询分析器、Microsoft Excel 以及其他查询工具。 元数据是不太关键*静态*执行一组预定义的操作的应用程序。  
   
  有关详细信息：[分析数据源中检索元数据](retrieving-metadata-from-an-analytical-data-source.md)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36138744"
  **更改分析数据的结构**  
  ADOMD.NET 还可用于实际更改分析数据存储区的结构。 虽然这通常是通过分析管理对象 (AMO) 对象模型进行的，但您也可以使用 ADOMD.NET 来发送 Analysis Services 脚本语言 (ASSL) 命令，从而创建、更改或删除服务器中的对象。  
   
- 有关详细信息：[执行命令对分析数据源](executing-commands-against-an-analytical-data-source.md)，[使用分析管理对象开发&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [Analysis Services 脚本语言&#40;ASSL&#41;引用](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ 有关详细信息：[执行的命令对分析数据源](executing-commands-against-an-analytical-data-source.md)，[开发使用分析管理对象&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [Analysis Services 脚本语言&#40;ASSL&#41;引用](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  检索元数据、检索数据和更改数据结构均发生在典型 ADOMD.NET 应用程序的工作流中的特定点。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36138744"
   
 2.  连接建立后，动态应用程序即可从服务器查询更多特定元数据。 对于静态应用程序，由于程序员事先知道应用程序要查询哪些对象，因此不需要检索这些元数据。 应用程序和用户可以在下一步骤中使用检索到的元数据。  
   
-     有关详细信息：[分析数据源中检索元数据](retrieving-metadata-from-an-analytical-data-source.md)  
+     有关详细信息：[从分析数据源检索元数据](retrieving-metadata-from-an-analytical-data-source.md)  
   
 3.  接下来，应用程序对服务器运行一条命令。 执行这一命令的目的既可以是检索其他元数据或检索数据，也可以是修改数据库结构。 对于这些任务中的任何一个，应用程序都可以使用先前确定的查询，也可以使用新检索的元数据创建其他查询。  
   

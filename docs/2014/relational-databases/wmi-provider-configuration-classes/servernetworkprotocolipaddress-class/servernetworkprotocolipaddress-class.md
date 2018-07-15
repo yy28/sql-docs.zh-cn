@@ -1,5 +1,5 @@
 ---
-title: ServerNetworkProtocolIPAddress 类 |Microsoft 文档
+title: ServerNetworkProtocolIPAddress 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - ServerNetworkProtocolIPAddress class
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 35a9492435fe5e7c1aef2aa9a78432b1068c2813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: fa046009808e596876b3a1262db7739efff5195a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307327"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 类
-  [ServerNetworkProtocolIPAddress 类] servernetworkprotocolipaddress-class.md) 表示服务器网络协议支持的 IP 地址。  
+  [ServerNetworkProtocolIPAddress 类] servernetworkprotocolipaddress class.md) 表示服务器网络协议支持的 IP 地址。  
   
- 使用 [ServerNetworkProtocolIPAddress 类] servernetworkprotocolipaddress-class.md) 中，你可以执行以下任务：  
+ 使用 [ServerNetworkProtocolIPAddress 类] servernetworkprotocolipaddress class.md) 可以执行以下任务：  
   
--   请检查实例名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   检查的实例的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 -   检查 IP 地址名称和协议名称。  
   

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2980ff029352e638dc12169e3e0692fcd60b7c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321697"
 ---
 # <a name="create-custom-templates"></a>创建自定义模板
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 附带用于许多常见任务的模板，但模板的真正作用在于它能为必须频繁创建的复杂脚本创建自定义模板。 在本练习中，您将创建带有较少参数的简单脚本，但是模板也适用于较长的重复脚本。  
@@ -71,7 +70,7 @@ ms.locfileid: "36129119"
   
 10. 在查询编辑器中，键入 **EXECUTE dbo.WorkOrdersForBlade**，然后按 F5 执行查询。 确认“结果”窗格返回 Blade 的工作订单列表。  
   
-11. 编辑模板脚本 （步骤 7 中的脚本），替换参数的产品名称边栏选项卡 ***< * 库**， `nvarchar(50)`，**名称*> * * *，四个位置中。  
+11. 编辑模板脚本 （在步骤 7 中的脚本），使用参数替换的产品名称 Blade ***< * product_name**， `nvarchar(50)`，**名称*> * * *，四个位置。  
   
     > [!NOTE]  
     >  参数需要三个元素：要替换的参数的名称、该参数的数据类型以及该参数的默认值。  
@@ -107,7 +106,7 @@ ms.locfileid: "36129119"
   
 3.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。  
   
-4.  在**替换模板参数**对话框中，为`product_name`值时，请键入**FreeWheel** （覆盖的默认内容），然后单击**确定**关闭**替换模板参数**对话框框中，然后修改脚本在查询编辑器中。  
+4.  中**替换模板参数**对话框中，对于`product_name`值，键入**FreeWheel** （覆盖默认内容），然后单击**确定**关闭**替换模板参数**对话框框中，然后在查询编辑器中修改脚本。  
   
 5.  按 F5 键执行查询，并创建过程。  
   

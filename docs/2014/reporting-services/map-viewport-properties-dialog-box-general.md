@@ -1,5 +1,5 @@
 ---
-title: 地图视区属性对话框，常规 |Microsoft 文档
+title: 地图视区属性对话框，常规 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 98b0749983e079249c35d98e2d033b04273e2dd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea57f5e98aec1e95264908cc080d229d8be573f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284643"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>“地图视区属性”对话框 -&gt;“常规”
   选择 **“地图视区属性”** 对话框中的 **“常规”** 可以更改坐标系统、投影和边界选项。  
@@ -82,10 +82,10 @@ ms.locfileid: "36138153"
  **最大经度**  
  最高经度值。 仅适用于 **“地理”** 。  
   
- **最小纬度**  
+ **最低纬度**  
  最低纬度值。 仅适用于 **“地理”** 。  
   
- **最大纬度**  
+ **最高纬度**  
  最高纬度值。 仅适用于 **“地理”** 。  
   
 ## <a name="see-also"></a>请参阅  

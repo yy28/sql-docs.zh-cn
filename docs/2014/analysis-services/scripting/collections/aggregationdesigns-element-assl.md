@@ -1,5 +1,5 @@
 ---
-title: AggregationDesigns 元素 (ASSL) |Microsoft 文档
+title: AggregationDesigns 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesigns element
 ms.assetid: 7291956a-9c53-41fe-af2e-2418e26956c5
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6dfddae8284e32f08edc4cf1e0868c7c71c97db2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89140d57aafd7a74b5d1ad8082e8feba075c33bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279593"
 ---
 # <a name="aggregationdesigns-element-assl"></a>AggregationDesigns 元素 (ASSL)
   包含可在数据库的多个分区中共享的聚合设计的集合。  
@@ -64,7 +64,7 @@ ms.locfileid: "36138733"
 |子元素|[AggregationDesign](../objects/aggregationdesign-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [分区元素&#40;ASSL&#41;](../objects/partition-element-assl.md)   

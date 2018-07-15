@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
 - clusters [SQL Server], maintaining
@@ -24,18 +23,18 @@ helpviewer_keywords:
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 caps.latest.revision: 34
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 3c5364ad63b446abc4e79e0d3ac986f86e8432a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a954eb61a7cf5b4ed39ca2cd62ab763d753ac3d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317557"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
-  维护任务，例如添加或删除从现有 AlwaysOn 故障转移群集实例 (FCI) 的节点都通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  
+  维护任务，例如添加或删除节点从现有 AlwaysOn 故障转移群集实例 (FCI) 都通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>维护故障转移群集实例  
  安装 FCI 后，您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序对其进行更改或修复。 例如，您可以向 FCI 添加其他节点、将 FCI 作为独立实例运行或从 FCI 配置中删除节点。  
@@ -61,7 +60,7 @@ ms.locfileid: "36128904"
 |任务说明|主题链接|  
 |----------------------|----------------|  
 |说明如何为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源添加依赖项。|[向 SQL Server 资源添加依赖项](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos 是一种网络身份验证协议，旨在为客户端/服务器应用程序提供严格的身份验证。 Kerberos 为互操作性奠定了基础，同时有助于增强企业范围的网络身份验证的安全性。 你可以使用 Kerberos 身份验证用于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立实例或包含 AlwaysOn Fci。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。|  
+|Kerberos 是一种网络身份验证协议，旨在为客户端/服务器应用程序提供严格的身份验证。 Kerberos 为互操作性奠定了基础，同时有助于增强企业范围的网络身份验证的安全性。 可以使用 Kerberos 身份验证用于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立实例或 AlwaysOn Fci。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。|  
 |提供指向描述如何启用 Kerberos 身份验证的内容的链接||  
 |介绍用于从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集故障中恢复的过程。|[从故障转移群集实例故障中恢复](recover-from-failover-cluster-instance-failure.md)|  
 |介绍用于更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的 IP 地址资源的过程。|[更改故障转移群集实例的 IP 地址](change-the-ip-address-of-a-failover-cluster-instance.md)|  

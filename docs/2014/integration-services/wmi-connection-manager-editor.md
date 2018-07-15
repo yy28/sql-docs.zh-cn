@@ -1,5 +1,5 @@
 ---
-title: WMI 连接管理器编辑器 |Microsoft 文档
+title: WMI 连接管理器编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 092b52765cefdb24004e94e5963f6905f3beab5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53f403d9c4fd109e9d468658a8455f0ac06d1bb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269093"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 连接管理器编辑器
   可以使用“WMI 连接管理器”对话框指定到服务器的 Microsoft Windows Management Instrumentation (WMI) 连接。  
@@ -57,7 +57,7 @@ ms.locfileid: "36138686"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI Provider for Configuration Management Concepts](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [WMI 提供程序的配置管理概念](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [WMI Provider for Server Events 的概念](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

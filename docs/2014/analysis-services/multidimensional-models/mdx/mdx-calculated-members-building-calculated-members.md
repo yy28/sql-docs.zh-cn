@@ -1,5 +1,5 @@
 ---
-title: 生成 MDX (MDX) 中的计算的成员 |Microsoft 文档
+title: 生成的 MDX (MDX) 中的计算的成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], calculated members
 - calculated members [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [MDX], calculated members
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf71de626272200dbd04cf97618db90a61e8aa14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f01746c6bb0c73705451db8f236c75c1b8935bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312647"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>在 MDX 中生成计算成员 (MDX)
   在多维表达式 (MDX) 中，计算成员是通过以下方式解析的成员：计算 MDX 表达式以返回值。 这种泛泛的定义所包括的范围十分惊人。 由于能在 MDX 查询中构造和使用计算成员，使得人们能够更有力地驾驭多维数据。  
@@ -42,7 +42,7 @@ ms.locfileid: "36129355"
      有关如何使用 CREATE MEMBER 语句在会话中创建计算成员的详细信息，请参阅[创建会话作用域的计算成员 (MDX)](mdx-calculated-members-session-scoped-calculated-members.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [创建成员语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [CREATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [MDX 函数引用&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [SELECT 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   

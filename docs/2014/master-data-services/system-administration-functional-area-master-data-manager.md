@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e1600f24a0cd4d8b667e5fa6a8110bd52dcb2e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e7f6f90aab70c08be52c002dc92a9bc3f1943358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313997"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系统管理功能区域（主数据管理器）
   在“系统管理”功能区域中，管理员可以创建模型及其所有对象。 他们还可以创建业务规则以及创建和部署模型包。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  

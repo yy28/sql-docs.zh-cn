@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.LRA.f1
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7eb23c7cd20d30b0bb80423260c256067ede3ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 154d5d93668d4e7c1956d0b721b333fd9a680af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315647"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>日志读取器代理的安全性（对等复制）
   可以使用 **“日志读取器代理安全性”** 页，指定日志读取器代理在各对等方运行和建立连接时使用的帐户。 有关代理要求的权限及复制安全的最佳做法的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全最佳做法](security/replication-security-best-practices.md)。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c9dc9fe91d66158dcba280eb568053f2f0d0c9c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d6d757969acb1509641a74cc1c528bc717e01bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323937"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>教程：准备用于复制的服务器
   在配置复制拓扑之前，制定安全计划是非常重要的。 本教程向您介绍如何更好地保护复制拓扑以及如何配置分发，这是复制数据的第一步。 开始其他教程之前，必须先完成本教程。  

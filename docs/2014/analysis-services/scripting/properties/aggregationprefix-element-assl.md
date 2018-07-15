@@ -1,5 +1,5 @@
 ---
-title: AggregationPrefix 元素 (ASSL) |Microsoft 文档
+title: AggregationPrefix 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293277"
 ---
 # <a name="aggregationprefix-element-assl"></a>AggregationPrefix 元素 (ASSL)
   定义整个关联父元素中聚合名称所用的通用前缀。  
@@ -62,7 +62,7 @@ ms.locfileid: "36137856"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 聚合前缀生成中的聚合名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，并且还在聚合存储在关系 OLAP (ROLAP) 分区中的关系数据库中生成表名称。  
+ 聚合前缀生成中的聚合名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，并在聚合存储在关系 OLAP (ROLAP) 分区中的关系数据库中生成表名称。  
   
  一个完全展开的聚合名称包含以下部分：  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36137856"
   
 -   *PartitionPrefix*表示的值`AggregationPrefix`元素与关联`Partition`元素。  
   
- 第五个部分名称， *AggregationID*，是系统定义的 ID，并且用户必须不能控制此名称的一部分。  
+ 该名称，第 5 部分*AggregationID*，是系统定义的 ID，用户可以不控制此名称的一部分。  
   
  在 Analysis Management Objects (AMO) 对象模型中，与 `AggregationPrefix` 的父级对应的元素为 <xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.MeasureGroup> 和 <xref:Microsoft.AnalysisServices.Partition>。  
   

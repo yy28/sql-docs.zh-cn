@@ -5,25 +5,24 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], bcp utility
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c16ceceac2f4ddfed82605e18cac30f15894d702
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 08a530392f260142417006ec1d78b801895e6705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320370"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 实用工具导入和导出大容量数据 (SQL Server)
   本主题概述了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中可使用 SELECT 语句的任意位置（包括分区视图）导出数据。  
