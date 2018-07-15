@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting member permissions [Master Data Services]
 - members [Master Data Services], deleting permissions
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 84a342b21ade4e6f241f98545f3b669d0f30d2c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a7c8af9574730f64492e0b3288a23ae94e2cbc7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235247"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>删除层次结构成员权限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，删除模型对象权限可以删除已进行的任何分配。  
@@ -49,7 +49,7 @@ ms.locfileid: "36125904"
   
 6.   从“版本”列表中，选择某一版本。  
   
-7.  在**层次结构成员权限摘要**窗格中，选择你想要删除的权限的行。  
+7.  在中**层次结构成员权限摘要**窗格中，选择你想要删除的权限的行。  
   
 8.  单击**删除所选的权限**。  
   

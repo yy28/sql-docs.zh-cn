@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207097"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
-  是否要创建一个新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]内存优化表或将现有基于磁盘的表迁移到内存优化表，务必具有每个表的内存需求的合理估计值，因此你可以设置与具有足够的服务器内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
+  是否要创建一个新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]内存优化的表或将现有的基于磁盘的表迁移到内存优化表，务必要有的合理估计的每个表的内存需求，因此你可以设置与具有足够的服务器内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
   
  如果考虑从基于磁盘的表迁移至内存优化表，在继续阅读本主题前，请先阅读主题 [确定表或存储过程是否应移植到内存中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) ，了解哪类表适合迁移。 [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md) 下的所有主题均提供了有关从基于磁盘的表迁移至内存优化表的指导。  
   
@@ -123,7 +123,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **设置哈希索引数组的大小**  
   
- 哈希数组大小由设置`(bucket_count= <value>)`其中\<值 > 是一个整数值大于零。 如果\<值 > 不是为 2，实际的 bucket_count 舍入为下一个最近的 2 次幂。  在示例表中，(bucket_count = 5000000)，由于 5,000,000 并非 2 的幂，实际 bucket 计数舍入为 8,388,608 (2<sup>23</sup>)。  在计算此哈希数组所需的内存时，必须使用该值，而非 5,000,000。  
+ 设置哈希数组大小`(bucket_count= <value>)`其中\<值 > 是一个整数值大于零。 如果\<值 > 不为 2，实际的 bucket_count 舍入为下一个最近的 2 的幂。  在示例表中，(bucket_count = 5000000)，由于 5,000,000 并非 2 的幂，实际 bucket 计数舍入为 8,388,608 (2<sup>23</sup>)。  在计算此哈希数组所需的内存时，必须使用该值，而非 5,000,000。  
   
  因此，在本示例中，每个哈希数组所需的内存为：  
   
@@ -165,7 +165,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- 陈旧行的内存需求的公式估算陈旧行数目乘以内存优化表行的大小 (请参阅[表的内存](#bkmk_MemoryForTable)上面)。  
+ 陈旧行的内存需求估算陈旧行数目乘以内存优化表行的大小 (请参阅[用于表的内存](#bkmk_MemoryForTable)上面)。  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

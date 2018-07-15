@@ -1,5 +1,5 @@
 ---
-title: 支持的数据类型 |Microsoft 文档
+title: 支持的数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195301"
 ---
 # <a name="supported-data-types"></a>支持的数据类型
   内存优化表和本机编译存储过程中 **支持** 以下数据类型：  
@@ -44,12 +44,12 @@ ms.locfileid: "36126852"
 |数据类型|有关详细信息，请参阅：|  
 |---------------|--------------------------|  
 |char(n)|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar(n) <sup>1</sup>|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar （n) <sup>1</sup>|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar （n) <sup>1</sup>|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar(n) <sup>1</sup>|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup>限制为 8060 字节每行总计变量长度类型中的计数 (n)。  
+ <sup>1</sup>限制为每行总数 8060 个字节变量长度类型中的 counting (n)。  
   
  有关支持的排序规则的信息，请参阅[Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36126852"
   
 |数据类型|有关详细信息，请参阅：|  
 |---------------|--------------------------|  
-|日期|[日期&#40;Transact SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|日期|[日期&#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql)|  
 |DATETIME|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
@@ -71,7 +71,7 @@ ms.locfileid: "36126852"
 |binary(n)|[binary 和 varbinary (Transact-SQL)](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
 |varbinary （n) <sup>1</sup>|[binary 和 varbinary (Transact-SQL)](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup>限制为 8060 字节每行总计变量长度类型中的计数 (n)。  
+ <sup>1</sup>限制为每行总数 8060 个字节变量长度类型中的 counting (n)。  
   
  **其他数据类型**  
   

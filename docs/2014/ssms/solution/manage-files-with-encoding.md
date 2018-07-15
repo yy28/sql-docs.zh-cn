@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio]
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7a252e4e766b85c83c97ee55a5204932932ee3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cc038e491f895ad3ee017ff9e06835ad25c48912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208417"
 ---
 # <a name="manage-files-with-encoding"></a>管理使用编码的文件
   为便于以特定语言显示代码以及在特定平台中显示代码，可以将特定的字符编码与文件关联。  
@@ -66,7 +66,7 @@ ms.locfileid: "36125051"
 -   UTF8 文件不能在 Visual SourceSafe 中安全使用，因为在签入、签出、差异检查和合并过程中，会产生导致 UTF8 文件编辑器出现问题的更改。  
   
 ## <a name="see-also"></a>请参阅  
- [管理解决方案和项目的文件](files-that-manage-solutions-and-projects.md)   
+ [用于管理解决方案和项目的文件](files-that-manage-solutions-and-projects.md)   
  [将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

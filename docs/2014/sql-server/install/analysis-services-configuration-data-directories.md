@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 配置-数据目录 |Microsoft 文档
+title: Analysis Services 配置-数据目录 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 caps.latest.revision: 20
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b3b945938c0ffd8a5059f8b2c53546538ea97eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 64eb317972d33f2fc2957f40c74b0bdea9aac152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204617"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
   下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
@@ -28,10 +28,10 @@ ms.locfileid: "36126472"
   
 |Description|默认目录|建议|  
 |-----------------|-----------------------|---------------------|  
-|数据根目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Data\|确保，files\microsoft SQL Server\ 文件夹进行保护具有有限权限。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录放置在附加到系统上的最高性能存储区中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
-|日志文件目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Log\|这是目录[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]日志文件和它包含 FlightRecorder 日志。 如果要延长网络流量记录器持续时间，请确保该日志目录有足够的空间。|  
-|Temp 目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Temp\|将 Temp 目录放置在高性能存储子系统。|  
-|备份目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Backup\|这是目录[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]默认备份文件。 对于 PowerPivot for SharePoint 安装，这还是 PowerPivot 系统服务缓存 PowerPivot 数据文件的位置。<br /><br /> 确保设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的用户组具有写入备份目录的足够权限。 不支持对备份目录使用映射的驱动器。|  
+|数据根目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Data\|确保 \Program files\Microsoft SQL Server\ 文件夹进行保护具有有限权限。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录放置在附加到系统上的最高性能存储区中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
+|日志文件目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Log\|这是用于目录[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]日志文件和它包含 FlightRecorder 日志。 如果要延长网络流量记录器持续时间，请确保该日志目录有足够的空间。|  
+|Temp 目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Temp\|将 Temp 目录放置在高性能存储子系统上。|  
+|备份目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Backup\|这是用于目录[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]默认备份文件。 对于 PowerPivot for SharePoint 安装，这还是 PowerPivot 系统服务缓存 PowerPivot 数据文件的位置。<br /><br /> 确保设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的用户组具有写入备份目录的足够权限。 不支持对备份目录使用映射的驱动器。|  
   
 ## <a name="notes"></a>说明  
   

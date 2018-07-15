@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 创建 SQL Server 凭据 |Microsoft 文档
+title: 第 3 课： 创建 SQL Server 凭据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201863a1df64cdc85ef41a55170948dbf4eba419
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 486917c0cd6a36bbf2004e17ffaf0607e04ecbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219247"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>第 3 课：创建 SQL Server 凭据
   在本课中，您将创建凭据以存储用于访问 Windows Azure 存储帐户的安全信息。  
@@ -29,7 +29,7 @@ ms.locfileid: "36128538"
  有关凭据的常规信息，请参阅[凭据&#40;数据库引擎&#41;](security/authentication-access/credentials-database-engine.md)。  
   
 > [!IMPORTANT]  
->  用于创建如下所述的 SQL Server 凭据要求是特定于[Windows Azure 中的 SQL Server 数据文件](databases/sql-server-data-files-in-microsoft-azure.md)功能。 有关 Azure 存储空间中创建的备份过程的凭据的信息，请参阅[第 2 课： 创建 SQL Server 凭据](../tutorials/lesson-2-create-a-sql-server-credential.md)。  
+>  创建 SQL Server 凭据，如下所述的要求是特定于[在 Windows Azure 中的 SQL Server 数据文件](databases/sql-server-data-files-in-microsoft-azure.md)功能。 在 Azure 存储中创建备份过程的凭据的信息，请参阅[第 2 课： 创建 SQL Server 凭据](../tutorials/lesson-2-create-a-sql-server-credential.md)。  
   
  若要创建 SQL Server 凭据，请执行以下步骤：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36128538"
     SELECT * from sys.credentials  
     ```  
   
-     Sys.credentials 的详细信息，请参阅[sys.credentials &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) SQL Server 联机丛书中。  
+     有关 sys.credentials 的详细信息，请参阅[sys.credentials &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) SQL Server 联机丛书中。  
   
  **下一课：**  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
 - TDS
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 766c72f478be2cce2688312ed3accd43e67998b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6d258dd150b879b9e993e0c550916b4ab42e272d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180394"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
@@ -86,7 +86,7 @@ ms.locfileid: "36129520"
   
 4.  右键单击“IPAll”，再单击“属性”。  
   
-5.  在 **“TCP 端口”** 框中，键入要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的端口（用逗号分隔）。 在本示例中，如果列出了默认端口 1433年，则键入`,1500`以便框中将显示`1433,1500`，然后单击**确定**。  
+5.  在 **“TCP 端口”** 框中，键入要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的端口（用逗号分隔）。 在本示例中，如果列出了默认端口 1433年，则键入`,1500`因此框中将显示`1433,1500`，然后单击**确定**。  
   
     > [!NOTE]  
     >  如果不想对所有 IP 地址启用端口，则在属性框中只为所需地址配置其他端口。 然后，在控制台窗格中，右键单击“TCP/IP”，单击“属性”，然后在“全部侦听”框中选择“否”。  

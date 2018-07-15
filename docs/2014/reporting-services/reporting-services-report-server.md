@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 报表服务器 |Microsoft 文档
+title: Reporting Services 报表服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -29,13 +29,13 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1f0a11c1443126487ed49bd1489655e4e69368b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189834"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
   本主题概述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。  
@@ -54,7 +54,7 @@ ms.locfileid: "36129841"
   
 ##  <a name="bkmk_top"></a> 本主题内容  
   
--   [报表服务器模式的概述](#bkmk_overview)  
+-   [报表服务器模式概述](#bkmk_overview)  
   
 -   [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36129841"
   
 -   [SharePoint 模式](#bkmk_sharepointmode)  
   
--   [报表处理以及计划和传递处理](#bkmk_reportprocessor)  
+-   [报表处理以及计划和交付过程](#bkmk_reportprocessor)  
   
 -   [报表服务器数据库](#bkmk_reportdatabase)  
   
@@ -72,8 +72,8 @@ ms.locfileid: "36129841"
   
 -   [相关任务](#bkmk_relatedtasks)  
   
-##  <a name="bkmk_overview"></a> 报表服务器模式的概述  
- 处理引擎（处理器）是报表服务器的核心。 处理器确保报告系统的完整性，但无法修改或扩展。 扩展插件也是处理器，但执行的是非常具体的功能。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含每种类型的支持的扩展的一个或多个默认扩展。 您可以向报表服务器中添加自定义扩展插件。 这样做使您可以扩展报表服务器以支持当前不支持的功能；自定义功能的示例包括对单一登录技术的支持、默认呈现扩展插件不能处理的应用程序格式的报表输出，以及到打印机或应用程序的报表传递。  
+##  <a name="bkmk_overview"></a> 报表服务器模式概述  
+ 处理引擎（处理器）是报表服务器的核心。 处理器确保报告系统的完整性，但无法修改或扩展。 扩展插件也是处理器，但执行的是非常具体的功能。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含支持的扩展插件的每种类型的一个或多个默认扩展。 您可以向报表服务器中添加自定义扩展插件。 这样做使您可以扩展报表服务器以支持当前不支持的功能；自定义功能的示例包括对单一登录技术的支持、默认呈现扩展插件不能处理的应用程序格式的报表输出，以及到打印机或应用程序的报表传递。  
   
  单个报表服务器实例由完整的处理器和扩展插件集合定义，这些处理器和扩展插件提供从初始请求的处理到已完成报表的显示等端到端的处理。 报表服务器通过子组件来处理报表请求，并使报表可用于按需访问或计划分发。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36129841"
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器支持两种报表服务器实例部署模式：  
   
--   **本机模式**： 包括带有 SharePoint Web 部件，报表服务器在其中运行为应用程序服务器提供所有的处理和管理功能以独占方式通过本机模式[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]组件。 您使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器和 SQL Server Management Studio 对本机模式报表服务器进行配置。  
+-   **本机模式**： 包括带有 SharePoint Web 部件，其中报表服务器作为提供所有的处理和管理功能以独占方式通过应用程序服务器运行的本机模式[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]组件。 您使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器和 SQL Server Management Studio 对本机模式报表服务器进行配置。  
   
 -   **SharePoint 模式**：在此情况下，报表服务器作为 SharePoint 服务器场的一部分安装。  通过使用 PowerShell 命令或 SharePoint 内容管理页来部署和配置 SharePoint 模式。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36129841"
 ##  <a name="bkmk_nativemode"></a> 本机模式  
  在本机模式中，报表服务器是独立的应用程序服务器，提供查看、管理、处理和传递报表及报表模型的所有功能。 这是报表服务器实例的默认模式。 可以安装在系统安装期间配置的本机模式的报表服务器，也可以在系统安装完成后配置报表服务器进行本机模式操作。  
   
- 下图显示了三层体系结构[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式部署。 它显示了数据层中的报表服务器数据库和数据源、中间层中的报表服务器组件，以及表示层中的客户端应用程序和内置或自定义工具。 还显示了服务器组件之间的请求流和数据流，以及哪些组件发送和检索数据存储区中的内容。  
+ 下图显示的三层体系结构[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式部署。 它显示了数据层中的报表服务器数据库和数据源、中间层中的报表服务器组件，以及表示层中的客户端应用程序和内置或自定义工具。 还显示了服务器组件之间的请求流和数据流，以及哪些组件发送和检索数据存储区中的内容。  
   
  ![Reporting Services 体系结构](media/reporting-serv-arch.gif "Reporting Services architecture")  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36129841"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了两种 Web 部件，可以在 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 或更高版本、[!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 或更高版本的实例中安装和注册这两种部件。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中引入的。  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint 模式  
- 在 SharePoint 模式下，报表服务器必须在 SharePoint 服务器场中运行。 报表服务器处理、 呈现和管理功能都由运行的 SharePoint 应用程序服务器[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 共享服务和一个或多个[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 SharePoint 站点提供对报表服务器内容和操作的前端访问。  
+ 在 SharePoint 模式下，报表服务器必须在 SharePoint 服务器场中运行。 报表服务器处理、 呈现和管理功能都是运行的 SharePoint 应用程序服务器[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 共享服务和一个或多个[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 SharePoint 站点提供对报表服务器内容和操作的前端访问。  
   
  SharePoint 模式需要：  
   
@@ -145,7 +145,7 @@ ms.locfileid: "36129841"
 |**(5)**|报表、数据源和 SharePoint 内容数据库中存储的其他项。|  
 |**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序为报表服务器、temp 和数据警报功能创建三个数据库。 应用于所有 SSRS 服务应用程序的配置设置存储于 **RSReportserver.config** 文件中。|  
   
-##  <a name="bkmk_reportprocessor"></a> 报表处理以及计划和传递处理  
+##  <a name="bkmk_reportprocessor"></a> 报表处理以及计划和交付过程  
  报表服务器包括两个处理引擎，用于执行初级和中级的报表处理，以及计划的操作和传递操作。 报表处理器可以检索报表定义或模型，将布局信息与数据处理扩展插件的相应数据相结合，再按请求的格式呈现报表。 计划和传递处理可以处理按计划触发的报表，并将报表传递给目标。  
   
 ##  <a name="bkmk_reportdatabase"></a> 报表服务器数据库  
@@ -188,6 +188,6 @@ ms.locfileid: "36129841"
  [实现安全扩展插件](extensions/security-extension/implementing-a-security-extension.md)   
  [实现数据处理扩展插件](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 支持的数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [如何使用 PowerShell （策展答案） 管理 SSRS](http://go.microsoft.com/fwlink/?LinkId=321992)  
+ [如何使用 PowerShell （专业回答） 管理 SSRS](http://go.microsoft.com/fwlink/?LinkId=321992)  
   
   

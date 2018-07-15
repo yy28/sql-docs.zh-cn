@@ -1,5 +1,5 @@
 ---
-title: 创建关系挖掘结构 |Microsoft 文档
+title: 创建关系挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237907"
 ---
 # <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
   大多数数据挖掘模型都基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
@@ -97,7 +97,7 @@ ms.locfileid: "36029140"
   
  挖掘结构中的数据是从现有数据源视图中的内容派生而来的。 可以在数据源视图内根据需要修改数据，并添加基础关系数据中可能不会显示的关系或派生列。 您也可以在数据源视图内创建命名计算或聚合。 如果您无法控制数据源中数据的排列方式，或者您需要尝试对数据挖掘模型使用不同的数据聚合，这些功能会很有用。  
   
- 您无需使用所有可用数据；可以选择要包含在挖掘结构中的列。 然后基于该结构的所有模型可以都使用这些列，或者你可以某些列标记为`Ignore`为特定模型。 可以使数据挖掘模型的用户从该挖掘模型的结果进行深化，以查看没有包括在挖掘模型中的其他挖掘结构列。  
+ 您无需使用所有可用数据；可以选择要包含在挖掘结构中的列。 然后基于该结构的所有模型可以都使用这些列，或者您可以某些列标记为`Ignore`为特定模型。 可以使数据挖掘模型的用户从该挖掘模型的结果进行深化，以查看没有包括在挖掘模型中的其他挖掘结构列。  
   
 ##  <a name="bkmk_ContentDataType"></a> 如何指定内容类型和数据类型  
  数据类型与在 SQL Server 或其他应用程序接口中指定的数据类型极其相似：日期和时间、不同大小的数字、布尔值、文本及其他离散数据。  

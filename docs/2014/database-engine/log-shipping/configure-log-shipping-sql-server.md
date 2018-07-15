@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6558a69db2025deecd8c40300fd6ee830d2492c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 054026fa0716009f2303a46be15d2b954c7ddb6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213747"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置日志传送。  
@@ -154,7 +153,7 @@ ms.locfileid: "36127365"
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [升级日志传送到 SQL Server 2014 &#40;Transact SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [日志传送升级到 SQL Server 2014 &#40;Transact SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [向日志传送配置添加辅助数据库 (SQL Server)](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 执行 XPath 查询 (SQLXMLOLEDB Provider) |Microsoft 文档
+title: 执行 XPath 查询 （SQLXMLOLEDB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mapping Schema property
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da43bc10ea80c1019e9cd7ae785024bb78fcbe9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 34acdfc5c7957476534b2d637077a401144fc29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181644"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>执行 XPath 查询（SQLXMLOLEDB 访问接口）
   该示例说明以下特定于 SQLXMLOLEDB 访问接口的属性的用法：  
@@ -37,7 +37,7 @@ ms.locfileid: "36127255"
   
 -   `Mapping Schema`  
   
- 在该示例 ADO 应用程序中，根据 XSD 映射架构 (MySchema.xml) 指定了一个 XPath 查询 (root)。 架构具有**\<联系人 >** 具有元素**ContactID**， **FirstName**，和**LastName**属性。 在此架构中，发生默认映射：元素名称映射到同名的表，并且简单类型的属性映射到同名的列。  
+ 在该示例 ADO 应用程序中，根据 XSD 映射架构 (MySchema.xml) 指定了一个 XPath 查询 (root)。 该架构有**\<联系人 >** 具有元素**ContactID**， **FirstName**，并**LastName**属性。 在此架构中，发生默认映射：元素名称映射到同名的表，并且简单类型的属性映射到同名的列。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -59,7 +59,7 @@ ms.locfileid: "36127255"
 </xsd:schema>  
 ```  
   
- 映射架构属性提供对其执行 XPath 查询的映射架构。 映射架构可以是 XSD 或 XDR 架构。 基路径属性提供的映射架构的文件路径。  
+ 映射架构属性提供对其执行 XPath 查询的映射架构。 映射架构可以是 XSD 或 XDR 架构。 基路径属性提供映射架构的文件路径。  
   
  ClientSideXML 属性设置为 True。 因此，在客户端上生成 XML 文档。  
   

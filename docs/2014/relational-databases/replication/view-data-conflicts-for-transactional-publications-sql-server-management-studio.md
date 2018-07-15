@@ -1,5 +1,5 @@
 ---
-title: 对于事务发布 (SQL Server Management Studio) 中查看数据冲突 |Microsoft 文档
+title: 查看事务发布 (SQL Server Management Studio) 的数据冲突 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
 - queued updating subscriptions [SQL Server replication]
 - viewing conflict information
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 280b9cb6a8842b218a040e64742a7c685b7d2024
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a4dc4c42c18429c5fa05cfe42fc72c5b511e488b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179764"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>查看事务发布的数据冲突 (SQL Server Management Studio)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 复制冲突查看器中，您可以查看对等事务复制和具有排队更新订阅的事务复制的冲突。 有关如何检测和解决冲突的信息，请参阅[对等复制中的冲突检测](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)和[设置排队更新冲突解决选项 (SQL Server Management Studio)](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "36128733"
   
     -   为 @conflict_retention sp_addpublication [的](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)参数指定保持值。  
   
-    -   指定的值`'conflict_retention'`为@property参数和保留值@value参数[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。  
+    -   指定的值`'conflict_retention'`有关@property参数，保留期值@value参数[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。  
   
 ### <a name="to-view-conflicts"></a>查看冲突  
   

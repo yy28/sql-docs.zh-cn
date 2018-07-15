@@ -1,5 +1,5 @@
 ---
-title: 使用架构生成向导 (Analysis Services) |Microsoft 文档
+title: 使用架构生成向导 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 201adc90034afc715425dca9b3b269369a0f4494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac0560032be47e1934eb111a13511cf579d63fe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237667"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>使用架构生成向导 (Analysis Services)
   架构生成向导在生成阶段需要数量有限的信息。 架构生成向导在生成关系架构时所需的大多数信息都是从您已在项目中创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集和维度中提取的。 此外，您可以自定义主题区域数据库架构的生成方式以及架构中对象的命名方式。  

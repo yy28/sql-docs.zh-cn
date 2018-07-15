@@ -20,15 +20,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 01ec71af4094dd67d93dc49b881bb7ca22b2a580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6cce76e0d7ae2aaec45c851fa0ab7ee4e65dedff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222987"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全策略文件
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件与 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三个安全对象组件相对应：报表服务器和 Windows 服务、报表管理器 Web 应用程序以及报表设计器预览窗口。  

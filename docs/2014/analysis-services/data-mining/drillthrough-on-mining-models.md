@@ -1,5 +1,5 @@
 ---
-title: 在挖掘模型的钻取 |Microsoft 文档
+title: 对挖掘模型钻取功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f5b59e0a921e27bd5bdc62867130e71bbc67ffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0bb8838b9b012d1951f6b6fe0bde67ed09842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192937"
 ---
 # <a name="drillthrough-on-mining-models"></a>对挖掘模型的钻取功能
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
@@ -52,7 +52,7 @@ ms.locfileid: "36128001"
 |Microsoft Naïve Bayes 算法|不提供支持。<br /><br /> 这些算法不为内容中的特定节点分配事例。|  
 |Microsoft 神经网络算法|不提供支持。<br /><br /> 这些算法不为内容中的特定节点分配事例。|  
 |Microsoft 逻辑回归算法|不提供支持。<br /><br /> 这些算法不为内容中的特定节点分配事例。|  
-|Microsoft 线性回归算法|支持。<br /><br /> 但是，因为该模型创建单个节点， `All`，钻取时会返回模型的所有定型事例。 如果定型集非常大，则加载结果可能会需要很长时间。|  
+|Microsoft 线性回归算法|支持。<br /><br /> 但是，因为该模型创建的单个节点`All`，钻取时会返回模型的所有定型事例。 如果定型集非常大，则加载结果可能会需要很长时间。|  
 |Microsoft 时序算法|支持。<br /><br /> 但是，不能通过使用数据挖掘设计器的 **“挖掘模型查看器”** 来钻取到结构或事例数据， 而必须创建一个 DMX 查询。<br /><br /> 同样，不能钻取到特定节点，也不能编写一个 DMX 查询来检索时序模型内特定节点中的事例。 可以通过使用其他条件（如日期或属性值）来从模型或结构中检索事例数据。<br /><br /> 如果希望查看由 Microsoft 时序算法创建的 ARTXP 和 ARIMA 节点的详细信息，使用 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)可能简单一些。|  
   
 ## <a name="related-tasks"></a>Related Tasks  

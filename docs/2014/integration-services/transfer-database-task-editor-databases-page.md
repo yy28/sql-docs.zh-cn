@@ -1,5 +1,5 @@
 ---
-title: 传输数据库任务编辑器 （数据库页） |Microsoft 文档
+title: 传输数据库任务编辑器 （数据库页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.database.f1
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 64920a0b1d3a326cdda62359bd251a82190afe78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24de303a26a148ffe44b643e10a78c77a1ee4d3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231477"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页可为传输数据库任务涉及的源数据库和目标数据库指定属性。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  

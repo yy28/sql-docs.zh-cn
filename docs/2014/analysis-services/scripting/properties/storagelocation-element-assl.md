@@ -1,5 +1,5 @@
 ---
-title: StorageLocation 元素 (ASSL) |Microsoft 文档
+title: StorageLocation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6f6d023731126cafaa76cf31598e0bae9fdf1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecb1a20c6c436749913ea9f8f83d284cf1000c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163528"
 ---
 # <a name="storagelocation-element-assl"></a>StorageLocation 元素 (ASSL)
   包含文件系统中的父元素内容存储位置。  
@@ -67,7 +67,7 @@ ms.locfileid: "36015769"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`StorageLocation`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.MeasureGroup>，和<xref:Microsoft.AnalysisServices.Partition>。  
+ 父级对应的元素`StorageLocation`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.MeasureGroup>，和<xref:Microsoft.AnalysisServices.Partition>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

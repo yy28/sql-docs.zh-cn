@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], Visual Database Tools
 - Visual Database Tools [SQL Server], queries
 - parameters [SQL Server], queries
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 50afdef72e9b3db6cab56ac0a0117bf8be2715fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1822c3af10346c72ead4e68d1f51ebe599e8d059
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226447"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用参数查询 (Visual Database Tools)
   在许多情况下，创建一个每次采用不同的输入就可在应用程序中多次重复使用的查询非常有用。 在本节中，您将了解有关如何创建这些通用参数查询的信息。  

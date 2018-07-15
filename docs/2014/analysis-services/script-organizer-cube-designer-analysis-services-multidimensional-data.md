@@ -1,5 +1,5 @@
 ---
-title: 脚本组织程序 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 脚本组织程序 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.scriptorganizerpane.f1
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d079ca2d921000390f1d0f66265474febe1f1988
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82bde6a6773306fb0e90617d82c9198606c3c202
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216107"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>脚本组织程序（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“计算”** 选项卡上的 **“脚本组织程序”** 窗格，访问和重新排序指定多维数据集的多维数据集脚本中包含的计算成员、命名集和脚本命令。  
@@ -48,9 +48,9 @@ ms.locfileid: "36126398"
   
 |选项|定义|  
 |------------|----------------|  
-|**新的计算的成员**|选择此项可显示 **计算成员窗体编辑器** 并创建新的计算成员。 有关详细信息**计算成员窗体编辑器**，请参阅[计算成员窗体编辑器&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
-|**新的命名的集**|选择此项可显示 **命名集窗体编辑器** 并创建新的命名集。 有关详细信息**命名集窗体编辑器**，请参阅[命名集窗体编辑器&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
-|**新的脚本命令**|选择此项可显示 **脚本编辑器** 并创建新的脚本命令。 有关详细信息**脚本编辑器**，请参阅[脚本编辑器&#40;计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)。|  
+|**新的计算的成员**|选择此项可显示 **计算成员窗体编辑器** 并创建新的计算成员。 有关详细信息**计算成员窗体编辑器**，请参阅[计算成员窗体编辑器&#40;的计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
+|**新建命名的集**|选择此项可显示 **命名集窗体编辑器** 并创建新的命名集。 有关详细信息**命名集窗体编辑器**，请参阅[命名集窗体编辑器&#40;的计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
+|**新的脚本命令**|选择此项可显示 **脚本编辑器** 并创建新的脚本命令。 有关详细信息**脚本编辑器**，请参阅[脚本编辑器&#40;的计算选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**上移**|选择此项可以将所选计算上移一个位置。<br /><br /> 注意：如果无法进一步移动所选计算，将禁用此选项。|  
 |**“下移”**|选择此项可以将所选计算下移一个位置。<br /><br /> 注意：如果无法进一步移动所选计算，将禁用此选项。|  
 |**删除**|选择此项将删除所选计算。|  

@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_CUBES 行集 |Microsoft 文档
+title: MDSCHEMA_CUBES 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0044c9943b2f2819ea216c735f298b7e30de7a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441f83b4b5bec1a2340fbf6e8a3b14da77363162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243397"
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES 行集
   介绍数据库中的多维数据集的结构。  
   
 ## <a name="rowset-columns"></a>行集列  
- `MDSCHEMA_CUBES`行集包含以下各列。  
+ `MDSCHEMA_CUBES`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`||数据库的名称。|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||不提供支持。|  
-|`CUBE_NAME`|`DBTYPE_WSTR`||多维数据集或维度的名称。 维度名称以美元符号 ($) 开头。 **注意：** 仅服务器和数据库管理员有权查看多维数据集维度中创建。|  
+|`CUBE_NAME`|`DBTYPE_WSTR`||多维数据集或维度的名称。 维度名称以美元符号 ($) 开头。 **注意：** 只有服务器管理员和数据库管理员有权查看通过维度创建多维数据集。|  
 |`CUBE_TYPE`|`DBTYPE_WSTR`||多维数据集的类型。 有效值为<br /><br /> -   `CUBE`<br />-   `DIMENSION`|  
 |`CUBE_GUID`|`DBTYPE_GUID`||不提供支持。|  
 |`CREATED_ON`|`DBTYPE_DBTIMESTAMP`||不提供支持。|  
@@ -58,14 +58,14 @@ ms.locfileid: "36126618"
  行集按 `CATALOG_NAME`、`SCHEMA_NAME`、`CUBE_NAME` 排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `MDSCHEMA_CUBES`行集可限制在下表中列出的列。  
+ `MDSCHEMA_CUBES`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`|可选。|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`|可选。|  
 |`CUBE_NAME`|`DBTYPE_WSTR`|可选。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）具有以下任一有效值的位图：<br /><br /> -1 的多维数据集<br />-2 的维度<br /><br /> 默认限制的值为 1。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）具有以下任一有效值的位图：<br /><br /> -1 的多维数据集<br />-2 个维度<br /><br /> 默认限制的值为 1。|  
 |`Base Cube_Name`|`DBTYPE_WSTR`|可选。|  
   
 ## <a name="see-also"></a>请参阅  

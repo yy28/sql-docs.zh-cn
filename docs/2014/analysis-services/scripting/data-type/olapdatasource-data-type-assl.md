@@ -1,5 +1,5 @@
 ---
-title: OlapDataSource 数据类型 (ASSL) |Microsoft 文档
+title: OlapDataSource 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - OlapDataSource data type
 ms.assetid: cfe8937c-5f73-4773-a1e8-5e3310691966
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ee0e55bab11a9a1100403c423c4e6629445b48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ecfab3ea15e5f6a2cd134f0ced28ba2ad43245b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197957"
 ---
 # <a name="olapdatasource-data-type-assl"></a>OlapDataSource 数据类型 (ASSL)
-  定义一个派生的数据类型，表示多维[数据源](../objects/datasource-element-assl.md)元素。  
+  定义一个派生的数据类型，表示的多维[数据源](../objects/datasource-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,10 +57,10 @@ ms.locfileid: "36127166"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|InclusionThresholdSetting|  
-|派生元素|[数据源](../objects/datasource-element-assl.md)([数据源](../collections/datasources-element-assl.md)集合[数据库](../objects/database-element-assl.md))|  
+|派生元素|[数据源](../objects/datasource-element-assl.md)([数据源](../collections/datasources-element-assl.md)的集合[数据库](../objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.OlapDataSource>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.OlapDataSource>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

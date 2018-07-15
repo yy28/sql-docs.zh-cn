@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -17,20 +17,20 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5e96a1a11651106cd0534ec20a3a35b79a9f1e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22fbb63dda4b6e3211a5bb53cfd70e243e6960f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193607"
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
-  FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  
+  FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  
   
  将 FTP 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建可以在运行时决定 FTP 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包中的 `Connections` 集合。  
   
- `ConnectionManagerType`的连接管理器的属性设置为`FTP`。  
+ `ConnectionManagerType`连接管理器属性设置为`FTP`。  
   
  可以按照下列方式配置 FTP 连接管理器：  
   
@@ -59,10 +59,10 @@ ms.locfileid: "36129313"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请参阅 [TP 连接管理器编辑器](../ftp-connection-manager-editor.md)。  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[添加连接以编程方式](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [FTP 任务](../control-flow/ftp-task.md)   
- [Integration Services &#40;SSIS&#41;连接](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
   
   

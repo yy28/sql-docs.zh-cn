@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - modifying replication properties, articles
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8168a9cb358f2be2a4b5c7c120ee06a8c10f7ccc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7d6dd823e7f19ad13a8921146d13e59f4e443f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230837"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改发布属性。  
@@ -160,11 +160,11 @@ ms.locfileid: "36128953"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例，为发布设置 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为在步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
-4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符 (`&`在 Microsoft Visual C# 和`And`在 Microsoft Visual Basic) 来确定给定<xref:Microsoft.SqlServer.Replication.PublicationAttributes>值设置为<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>属性。 使用逻辑 OR 运算符（在 Visual C# 中为 `|`，在 Visual Basic 中为 `Or`）和逻辑异或运算符（在 Visual C# 中为 `^`，在 Visual Basic 中为 `Xor`）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
+4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符 (`&`在 Microsoft Visual C# 和`And`Microsoft Visual Basic 中) 以确定给定<xref:Microsoft.SqlServer.Replication.PublicationAttributes>值设置为<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>属性。 使用逻辑 OR 运算符（在 Visual C# 中为 `|`，在 Visual Basic 中为 `Or`）和逻辑异或运算符（在 Visual C# 中为 `^`，在 Visual Basic 中为 `Xor`）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+5.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>查看或修改合并发布的属性  
   
@@ -172,11 +172,11 @@ ms.locfileid: "36128953"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例，为发布设置 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为在步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
 4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符（在 Visual C# 中为 `&`，在 Visual Basic 中为 `And`）可确定是否为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性设置了给定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用逻辑 OR 运算符（在 Visual C# 中为 `|`，在 Visual Basic 中为 `Or`）和逻辑异或运算符（在 Visual C# 中为 `^`，在 Visual Basic 中为 `Xor`）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+5.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  该示例设置事务发布的发布属性。 这些更改将被缓存，直至将其显式发送到服务器。  

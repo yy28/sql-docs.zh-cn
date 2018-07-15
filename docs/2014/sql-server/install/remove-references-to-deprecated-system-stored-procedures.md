@@ -1,5 +1,5 @@
 ---
-title: 删除对不推荐使用的系统存储过程引用 |Microsoft 文档
+title: 删除对不推荐使用的系统存储过程引用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system stored procedures [SQL Server]
 - system stored procedures [SQL Server]
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45f10d9ab7697e84017da43d8767e52be23101bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5a588f8ec25301d3c8a4343e6c7f0d77eebdfe75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187574"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>删除对不推荐使用的系统存储过程的引用
   升级顾问检测到一些语句引用了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再可用的未记录的系统存储过程和扩展存储过程。 引用这些对象的语句将失败。 请勿使用未记录的系统对象或 API，因为在将来的版本中该功能可能会更改或删除，且不会给出相关通知。  

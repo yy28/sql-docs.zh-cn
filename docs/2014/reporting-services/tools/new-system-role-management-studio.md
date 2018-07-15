@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dbe402bde903297fba7f1420de6c1646d62db18e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c396a380d0198680391c73bfaa7fd31b8ede5799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218727"
 ---
 # <a name="new-system-role-management-studio"></a>新建系统角色 (Management Studio)
   使用此页可以创建系统级角色定义。 系统角色定义指定了作为整体应用于报表服务器的一组系统级任务。  

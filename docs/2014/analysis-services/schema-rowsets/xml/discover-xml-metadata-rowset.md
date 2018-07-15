@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_XML_METADATA 行集 |Microsoft 文档
+title: DISCOVER_XML_METADATA 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4452408b36fe50300277d0d0f8e076357403539f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214007"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 行集
   返回描述请求的对象的 XML 文档。 返回的行集始终包含一行和一列。  
   
- 如果调用[发现](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_XML_METATDATA`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法返回`DISCOVER_XML_METATDATA`行集。  
+ 如果您调用[Discover](../../xmla/xml-elements-methods-discover.md)方法替换`DISCOVER_XML_METATDATA`中的枚举值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)元素，`Discover`方法将返回`DISCOVER_XML_METATDATA`行集。  
   
 ## <a name="rowset-columns"></a>行集列  
  `DISCOVER_XML_METADATA` 行集包含以下列。  
@@ -46,7 +46,7 @@ ms.locfileid: "36129555"
 >  不能使用 SELECT 命令语法查询 `DISCOVER_XML_METADATA` 行集。 但是，可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> 查询 `DISCOVER_XML_METADATA` 行集。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_XML_METADATA`行集可限制在下表中列出的列。  
+ `DISCOVER_XML_METADATA`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "36129555"
 |-----------------------|-----------------|  
 |`ReferenceOnly`|只返回对所请求对象及其所有递归后代主要对象请求的名称/ID/时间戳/状态。|  
 |`ObjectProperties`|展开请求的对象，且不引用包含的对象（包括展开的次要所包含对象）。|  
-|`ExpandObject`|与相同*ObjectProperties*，但也会返回名称、 ID 以及包含主要对象的时间戳。|  
+|`ExpandObject`|与相同*ObjectProperties*，但也会返回名称、 ID 和所包含主要对象的时间戳。|  
 |`ExpandFull`|以递归方式将请求的对象完全展开，直至每个所包含对象的最底层。|  
   
 ## <a name="see-also"></a>请参阅  

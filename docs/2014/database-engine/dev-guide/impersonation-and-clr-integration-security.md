@@ -1,5 +1,5 @@
 ---
-title: 模拟和 CLR Integration Security |Microsoft 文档
+title: 模拟和 CLR 集成安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e5863ed19f306fbaf88cffd02903a958c63cfe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243197"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>模拟和 CLR 集成安全性
   托管代码访问外部资源时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会自动模拟执行例程所处的当前执行上下文。 `EXTERNAL_ACCESS` 和 `UNSAFE` 程序集中的代码可以显式模拟当前执行上下文。  
   
 > [!NOTE]  
->  有关中模拟的行为更改的信息，请参阅[中 SQL Server 2014 数据库引擎功能的重大更改](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  有关模拟中行为更改的信息，请参阅[SQL Server 2014 中数据库引擎功能的重大更改](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
  进程内数据访问提供程序提供了一个应用程序编程接口 `SqlContext.WindowsIdentity`，该接口可用于检索与当前安全上下文有关的令牌。 `EXTERNAL_ACCESS` 和 `UNSAFE` 程序集中的托管代码可使用此方法检索上下文并使用 .NET Framework `WindowsIdentity.Impersonate` 方法模拟该上下文。 当用户代码显式模拟时，适用下列限制：  
   

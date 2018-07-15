@@ -1,5 +1,5 @@
 ---
-title: 输入选择选项卡 （挖掘准确性图表视图） |Microsoft 文档
+title: 输入所选内容选项卡 （挖掘准确性图表视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198207"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>“输入选择”选项卡（“挖掘准确性图表”视图）
   可以使用 **“挖掘准确性图表”** 设计器的 **“输入选择”** 选项卡，指定用于测试模型和生成准确性图表的数据源。  
@@ -74,7 +74,7 @@ ms.locfileid: "36130238"
 ## <a name="see-also"></a>请参阅  
  [测试和验证任务和操作指南&#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [将筛选器应用于挖掘模型](data-mining/apply-a-filter-to-a-mining-model.md)   
+ [对挖掘模型应用筛选器](data-mining/apply-a-filter-to-a-mining-model.md)   
  [挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

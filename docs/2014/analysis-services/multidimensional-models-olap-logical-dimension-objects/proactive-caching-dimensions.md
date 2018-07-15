@@ -1,5 +1,5 @@
 ---
-title: 主动缓存 （维度） |Microsoft 文档
+title: 主动缓存 （维度） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - proactive caching [Analysis Services]
 ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86634be8be55ff48f2eac1a4c4453f7cdd5eddb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9849f5ce2f82b44772a1faf360a530eb712c6dbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224567"
 ---
 # <a name="proactive-caching-dimensions"></a>主动缓存（维度）
   可以利用主动缓存自动创建 MOLAP 缓存以及管理 OLAP 对象。 多维数据集可利用收自数据库的通知，立即合并对数据库中数据所做的更改。 主动缓存的目标是提供传统 MOLAP 所具有的性能，并同时保持使用 ROLAP 进行管理所具有的方便和快捷。  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4c89c746e47e6555004d14a66fa4f40c1a972ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3dce1a84dda8b5f26dbb469ed6d7e1fa0c1e1a38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212917"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>复制监视器界面概述
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器提供一个以发布服务器为主或以分发服务器为主的视图，以两个窗格的形式显示所有复制活动。 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  

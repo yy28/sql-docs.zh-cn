@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dqs administration
 - administration
@@ -17,13 +17,13 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c96312e55315160e8433a1c2fb0cf94e38af2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2dd08fce2cc93b62d323aee669f9e5e8b49dffa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222667"
 ---
 # <a name="dqs-administration"></a>dqs 管理
   使用[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，您可以管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上执行的各种 DQS 活动、配置与 DQS 活动有关的服务器级属性、配置 Reference Data Services 设置以及 DQS 日志设置。 通过 **的** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能来执行这些操作。 根据您在 DQS 中的安全访问权限（角色），授权/拒绝您在此区域中执行某些功能。  

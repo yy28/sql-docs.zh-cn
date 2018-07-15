@@ -1,5 +1,5 @@
 ---
-title: 脚本转换编辑器 （脚本页） |Microsoft 文档
+title: 脚本转换编辑器 （脚本页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a2f5e41abd5d54aa54a2fbff0bcd8e57720a163e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f620afb4ab4e32776d36ad5a1f37fd6ad28f3644
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217647"
 ---
 # <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“脚本”** 选项卡指定脚本及相关属性。  
@@ -39,7 +39,7 @@ ms.locfileid: "36125926"
 |**Description**|说明脚本转换的用途。|  
 |**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  
 |**名称**|为组件键入说明性名称。|  
-|**ValidateExternalMetadata**|指示在设计时脚本转换是否要根据外部数据源对列的元数据进行验证。 值为`false`会将验证之前执行的时间延迟。|  
+|**ValidateExternalMetadata**|指示在设计时脚本转换是否要根据外部数据源对列的元数据进行验证。 值为`false`会延迟到执行时才验证。|  
 |**ReadOnlyVariables**|以逗号分隔的形式键入一列可供脚本转换只读访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ReadWriteVariables**|以逗号分隔的形式键入一列可供脚本转换读/写访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ScriptLanguage**|选择脚本组件要使用的脚本语言。<br /><br /> 若要设置脚本组件和脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。 有关详细信息，请参阅 [General Page](general-page-of-integration-services-designers-options.md)。|  

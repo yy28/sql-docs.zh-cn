@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - queries [SQL Server], results
 - aggregate queries [SQL Server]
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d447d321d89da666d6db044ef9adac8b523d5656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5684e2f5e75d37dfbcce3a2a19ed49d63ead6032
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198357"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>汇总查询结果 (Visual Database Tools)
   当您创建聚合查询时，需要符合某些逻辑原则。 例如，在汇总查询中不能显示单个行的内容。 查询和视图设计器可帮助你遵循 [“关系图”窗格](visual-database-tools.md) 和 [“条件”窗格](criteria-pane-visual-database-tools.md) 的行为原则。  

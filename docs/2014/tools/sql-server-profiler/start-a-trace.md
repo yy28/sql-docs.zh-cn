@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
 - pausing traces
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb735810bcf265076fde9e3834dc7404d1f45079
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 678bf2b9140d5df7d19aa28088d598f4cca450c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224577"
 ---
 # <a name="start-a-trace"></a>启动跟踪
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]定义新跟踪或创建模板之后，可以使用新的跟踪定义或模板来启动、暂停或停止捕获数据。  
@@ -48,7 +48,7 @@ ms.locfileid: "36124459"
 >  在使用现有跟踪时，可以查看属性，但是不能修改属性。 若要修改属性，请停止或暂停跟踪。  
   
 ## <a name="see-also"></a>请参阅  
- [连接到服务器后自动启动跟踪&#40;SQL Server 事件探查器&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [连接到服务器后自动启动跟踪&#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [暂停跟踪 (SQL Server Profiler)](pause-a-trace-sql-server-profiler.md)   
  [停止跟踪 (SQL Server Profiler)](stop-a-trace-sql-server-profiler.md)   
  [清除跟踪窗口 (SQL Server Profiler)](clear-a-trace-window-sql-server-profiler.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8cc86517a3a8ee3e7876c1c50b2db93512c61d50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccc1337c845e3a9c30d6fcdb08c2c87ca1938b4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205687"
 ---
 # <a name="advanced-connection-properties"></a>高级连接属性
   使用 **“高级连接属性”** 对话框可以将更多连接参数添加到连接字符串。  

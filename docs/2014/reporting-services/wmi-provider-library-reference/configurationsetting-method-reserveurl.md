@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1cd5ef5a1e4a29b70d742e858a30ab9912cce6bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f3f7ee5edc3c9deb73e19f97421c7a0da7206082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166068"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   为给定的应用程序添加一个 URL 预留。  
@@ -59,7 +59,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
 ## <a name="remarks"></a>Remarks  
- *UrlString* 不包括虚拟路径名称。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md)为该目的提供方法。  
+ *UrlString* 不包括虚拟路径名称。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md)方法提供实现此目的。  
   
  针对当前 Windows 服务帐户创建 URL 预留。 更改 Windows 服务帐户需要手动更新所有的 URL 预留。  
   

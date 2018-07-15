@@ -1,5 +1,5 @@
 ---
-title: StatusGraphic 元素 (ASSL) |Microsoft 文档
+title: StatusGraphic 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c551e084d833dff17b7d6c1ab46b398cf6f62313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215957"
 ---
 # <a name="statusgraphic-element-assl"></a>StatusGraphic 元素 (ASSL)
   包含的状态的建议图形表示形式[Kpi](../objects/kpi-element-assl.md)元素。  
@@ -67,15 +67,15 @@ ms.locfileid: "36128619"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |*交通灯-单*|交通灯（单个）|  
-|*交通灯-多个*|交通灯（多个）|  
-|*道路标志*|路标|  
+|*交通灯的多个*|交通灯（多个）|  
+|*路标*|路标|  
 |*仪表-升序*|测量|  
 |*仪表的降序*|反向测量|  
 |*温度计*|温度计|  
-|*柱面*|柱状|  
+|*圆柱图*|柱状|  
 |*笑脸*|脸|  
   
- 对应于的父元素`StatusGraphic`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Kpi>。  
+ 父级对应的元素`StatusGraphic`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Kpi>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

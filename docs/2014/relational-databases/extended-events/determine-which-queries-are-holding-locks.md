@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], extended events
 - queries [SQL Server], holding locks
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3151dc68e8e18c462f8b0515f895fb1a1183cb0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c43bc96166021a8a0d774d9aaff3eedda0949e69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170368"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>确定持有锁的查询
   数据库管理员通常需要识别影响数据库性能的锁定来源。  

@@ -1,29 +1,28 @@
 ---
-title: 配置灵活的故障转移策略以控制自动故障转移 (Always On 可用性组） 的条件 |Microsoft 文档
+title: 配置灵活的故障转移策略以控制自动故障转移 (Alwayson 可用性组） 的条件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 caps.latest.revision: 22
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c789865b92b628c30e0f634e529027ad26de23eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4868c07427230de655fc8a1742458f4b4c72cfbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193977"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>配置灵活的故障转移策略以控制自动故障转移的条件（Always On 可用性组）
   本主题介绍如何在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 为 AlwaysOn 可用性组配置灵活故障转移策略。 灵活的故障转移策略提供了对导致可用性组自动执行故障转移的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
@@ -94,7 +93,7 @@ ms.locfileid: "36129529"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **配置灵活故障转移策略**  
   
-1.  设置默认 (`cd`) 到承载主副本的服务器实例。  
+1.  设置默认值 (`cd`) 到承载主副本的服务器实例。  
   
 2.  在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityGroup` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityGroup` cmdlet。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "36129529"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   若要设置的运行状况检查超时阈值，使用`HealthCheckTimeout` *n*参数，其中， *n*是从 15000 毫秒 （15 秒） 到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）。  
+    -   若要设置运行状况检查超时阈值，请使用`HealthCheckTimeout` *n*参数，其中， *n*是一个从 15000 毫秒 （15 秒） 到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）。  
   
          例如，以下命令会将现有可用性组 `AG1`的运行状况检查超时阈值更改为 120,000 毫秒（2 分钟）。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36129529"
         ```  
   
 > [!NOTE]  
->  若要查看 cmdlet 的语法，请使用`Get-Help`中的 cmdlet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

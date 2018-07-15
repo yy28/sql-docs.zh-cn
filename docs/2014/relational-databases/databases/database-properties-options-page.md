@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 65
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6747eb3df75a585236e85de6bc0103241f5b6d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 30a0bf869529c81b86e05a9bf6a8be8b43573705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187014"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
-  使用此页可以查看或修改所选数据库的选项。 此页上的可用选项的详细信息，请参阅[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+  使用此页可以查看或修改所选数据库的选项。 此页上可用的选项的详细信息，请参阅[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 ## <a name="page-header"></a>页眉  
  **排序规则**  
@@ -59,11 +59,11 @@ ms.locfileid: "36129275"
  指定数据库是否自动更新过期的优化统计信息。 可能值为 `True` 和 `False`。 如果为 `True`，将在优化过程中自动生成优化查询所需的任何过期统计信息。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
  **自动异步更新统计信息**  
- 当`True`，启动自动更新过期统计信息的查询不会等待统计信息在编译前更新。 后续查询将使用可用的已更新统计信息。  
+ 当`True`，启动自动更新过期统计信息的查询不会等待统计信息编译前更新。 后续查询将使用可用的已更新统计信息。  
   
- 当`False`，启动自动更新过期统计信息的查询等待，直到更新的统计信息可在查询优化计划。  
+ 当`False`，启动自动更新过期统计信息的查询等待，直到更新的统计信息可以使用查询优化计划中。  
   
- 将此选项设置为`True`无任何效果，除非**自动更新统计信息**也设置为`True`。  
+ 此选项设置为`True`不产生任何影响，除非**自动更新统计信息**也设置为`True`。  
   
 ## <a name="containment"></a>Containment  
  在包含数据库中，可以在数据库级别配置通常在服务器级别配置的某些设置。  
@@ -101,33 +101,33 @@ ms.locfileid: "36129275"
   
 ## <a name="miscellaneous"></a>杂项  
  **ANSI NULL 默认值**  
- 允许 null 值的所有用户定义的数据类型或列都没有显式定义为`NOT NULL`期间`CREATE TABLE`或`ALTER TABLE`语句 （默认状态）。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
+ 允许 null 值的所有用户定义数据类型或没有显式定义为的列`NOT NULL`期间`CREATE TABLE`或`ALTER TABLE`语句 （默认状态）。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
   
  **ANSI NULLS 已启用**  
- 指定等于 (`=`) 和不等于 (`<>`) 比较运算符在与 Null 值一起使用时的行为。 可能的值为`True`（开） 和`False`（关闭）。 如果为 `True`，所有与空值的比较的结果值都为 UNKNOWN。 当`False`，非 UNICODE 值为 null 值的比较计算结果为`True`如果这两个值均为 NULL。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。  
+ 指定等于 (`=`) 和不等于 (`<>`) 比较运算符在与 Null 值一起使用时的行为。 可能的值为`True`（开） 和`False`（关闭）。 如果为 `True`，所有与空值的比较的结果值都为 UNKNOWN。 当`False`，非 UNICODE 值与 null 值的比较运算计算结果为`True`如果这两个值均为 NULL。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。  
   
  **ANSI 填充已启用**  
  指定 ANSI 填充状态是开还是关。 允许的值为`True`（开） 和`False`（关闭）。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](/sql/t-sql/statements/set-ansi-padding-transact-sql)。  
   
  **ANSI 警告已启用**  
- 对于几种错误条件指定 ISO 标准行为。 当`True`，如果在聚合函数 （如 SUM、 AVG、 最大、 MIN、 STDEV、 STDEVP、 VAR、 VARP 或计数） 中出现 null 值，则会生成一条警告消息。 当`False`，会发出任何警告。 有关详细信息，请参阅 [SET ANSI_WARNINGS (Transact-SQL)](/sql/t-sql/statements/set-ansi-warnings-transact-sql)。  
+ 对于几种错误条件指定 ISO 标准行为。 当`True`，如果聚合函数 （如 SUM、 AVG、 最大、 MIN、 STDEV、 STDEVP、 VAR、 VARP 或计数） 中出现 null 值，则会生成一条警告消息。 当`False`，不会发出警告。 有关详细信息，请参阅 [SET ANSI_WARNINGS (Transact-SQL)](/sql/t-sql/statements/set-ansi-warnings-transact-sql)。  
   
  **算术中止已启用**  
  指定是否启用数据库的算术中止选项。 可能值为 `True` 和 `False`。 如果为 `True`，则溢出或被零除错误将导致查询或批查询终止。 如果错误发生在事务内，则回滚事务。 如果为 `False`，则将显示警告消息，但会继续执行查询、批处理或事务，就像没有发生错误一样。 有关详细信息，请参阅 [SET ARITHABORT (Transact-SQL)](/sql/t-sql/statements/set-arithabort-transact-sql)。  
   
  **串联的 Null 结果为 Null**  
- 指定在与 Null 值连接时的行为。 当属性值是`True`， `string` + NULL 会返回 NULL。 当`False`，结果是`string`。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)。  
+ 指定在与 Null 值连接时的行为。 属性值，则当`True`， `string` + NULL 会返回 NULL。 当`False`，结果是`string`。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)。  
   
  **跨数据库所有权链接已启用**  
  该只读值指示跨数据库所有权链接是否已启用。 当`True`，数据库可以为源或目标的跨数据库所有权链。 使用 ALTER DATABASE 语句设置此属性。  
   
  **日期相关性优化已启用**  
- 当`True`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]维护相关统计信息由外键约束链接并且已在数据库中任何两个表之间`datetime`列。  
+ 当`True`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]维护数据库中由 FOREIGN KEY 约束链接并包含任何两个表之间的相关统计数据`datetime`列。  
   
  当`False`，不维护相关统计信息。  
   
  **数值舍入中止**  
- 指定数据库处理舍入错误的方式。 可能值为 `True` 和 `False`。 如果为 `True`，则表达式中缺少精度时将生成错误。 当`False`，则在精度降低不生成错误消息和结果舍入到的列或将结果存储在变量的精度。 有关详细信息，请参阅 [SET NUMERIC_ROUNDABORT (Transact-SQL)](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)。  
+ 指定数据库处理舍入错误的方式。 可能值为 `True` 和 `False`。 如果为 `True`，则表达式中缺少精度时将生成错误。 当`False`、 失去精度不会生成错误消息和结果舍入到的列或将结果存储在变量的精度。 有关详细信息，请参阅 [SET NUMERIC_ROUNDABORT (Transact-SQL)](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)。  
   
  **参数化**  
  如果设置为 **SIMPLE**，则基于数据库的默认行为使查询参数化。 如果设置为 **FORCED**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使数据库中的所有查询参数化。  
@@ -136,25 +136,25 @@ ms.locfileid: "36129275"
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字在用引号引起来时是否可以用作标识符（对象名或变量名）。 可能值为 `True` 和 `False`。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。  
   
  **递归触发器已启用**  
- 指定触发器是否可以由其他触发器激发。 可能值为 `True` 和 `False`。 当设置为`True`，则会启用的触发器的递归激发。 当设置为`False`，则只直接递归。 若要禁用间接递归，请使用 sp_configure 将 nested triggers 服务器选项设置为 0。 有关详细信息，请参阅 [创建嵌套触发器](../triggers/create-nested-triggers.md)。  
+ 指定触发器是否可以由其他触发器激发。 可能值为 `True` 和 `False`。 如果设置为`True`，则会启用的触发器递归激发。 如果设置为`False`、 仅直接递归。 若要禁用间接递归，请使用 sp_configure 将 nested triggers 服务器选项设置为 0。 有关详细信息，请参阅 [创建嵌套触发器](../triggers/create-nested-triggers.md)。  
   
  `Trustworthy`  
- 在显示时`True`，此只读选项指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]允许在数据库内建立模拟上下文数据库以外资源的访问。 可以使用 EXECUTE AS 用户语句或数据库模块上的 EXECUTE AS 子句在数据库内建立模拟上下文。  
+ 在显示时`True`，该只读选项指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]允许对数据库内建立的模拟上下文数据库以外资源的访问。 可以使用 EXECUTE AS 用户语句或数据库模块上的 EXECUTE AS 子句在数据库内建立模拟上下文。  
   
  若要具有访问权限，数据库的所有者也需要具有服务器级的 AUTHENTICATE SERVER 权限。  
   
  使用此属性，还可以在数据库内创建和执行不安全的程序集和外部访问程序集。 除了将此属性设置为 `True` 以外，数据库的所有者还必须拥有服务器级的 EXTERNAL ACCESS ASSEMBLY 或 UNSAFE ASSEMBLY 权限。  
   
- 默认情况下，所有用户数据库和所有系统数据库 (除**MSDB**) 具有此属性设置为`False`。 对于 **model** 和 **tempdb** 数据库，不能更改此值。  
+ 默认情况下，所有用户数据库和所有系统数据库 (除**MSDB**) 将此属性设置为`False`。 对于 **model** 和 **tempdb** 数据库，不能更改此值。  
   
  每当数据库附加到服务器时，都要将 TRUSTWORTHY 设置为 `False`。  
   
- 访问在模拟上下文数据库以外资源的建议的方法是使用证书和签名替代`Trustworthy`选项。  
+ 用于访问数据库的模拟上下文以外的资源的建议的方法是使用证书和签名替代`Trustworthy`选项。  
   
  若要设置此属性，请使用 ALTER DATABASE 语句。  
   
  **VarDecimal 存储格式已启用**  
- 此选项是只读的开头[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本，所有数据库都将启用 vardecimal 存储格式。 此选项使用 [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)。  
+ 此选项是只读的开头[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本，所有数据库启用 vardecimal 存储格式。 此选项使用 [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)。  
   
 ## <a name="recovery"></a>恢复  
  **页验证**  

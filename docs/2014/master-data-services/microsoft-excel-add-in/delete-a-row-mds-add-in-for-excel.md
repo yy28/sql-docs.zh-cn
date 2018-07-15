@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23c0c877dd77fe51ed9a3940a177f9898ecdf400
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2088298a2b816b4e4f2b7acf80160cc73c6ed561
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215577"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>删除行（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果你不希望用户再使用某个数据行（成员），则可以将其从 MDS 存储库中删除。  
@@ -43,6 +43,6 @@ ms.locfileid: "36126567"
 3.  在确认对话框中，单击 **“是”**。  
   
 ## <a name="see-also"></a>请参阅  
- [将数据发布&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

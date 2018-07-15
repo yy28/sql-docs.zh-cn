@@ -1,5 +1,5 @@
 ---
-title: 将空点添加到图表 （报表生成器和 SSRS） |Microsoft 文档
+title: 将空点添加到图表 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 942da7aa8b4db6e6f54b80f941856185bc03758d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 317ada15f03de74dc25767a17036623d7479220a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181584"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>向图表添加空点（报表生成器和 SSRS）
   Null 值在图表中显示为空格或显示为序列中数据点间的空白。 空点是可在由 Null 值创建的空格中插入的数据点。  

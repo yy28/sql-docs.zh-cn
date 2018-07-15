@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237137"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
   表达式计算器使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 当数据首次进入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的数据流中时，数据流引擎将所有列数据转换为 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，因此，表达式使用的列数据已具有 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 有条件拆分和派生列转换中使用的表达式可以引用列，因为它们是包含列数据的数据流的一部分。  
@@ -36,7 +36,7 @@ ms.locfileid: "36127761"
  此外，表达式还可以包含字符串、布尔值和数值。 有关将数值转换为数值 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[文字 (SSIS)](numeric-string-and-boolean-literals.md)。  
   
 ## <a name="implicit-data-conversion"></a>隐式数据转换  
- 当表达式计算器自动将数据从一种数据类型转换为另一种数据类型时，将会发生数据类型的隐式转换。 例如，如果`smallint`与相比`int`、`smallint`隐式转换为`int`进行比较之前。  
+ 当表达式计算器自动将数据从一种数据类型转换为另一种数据类型时，将会发生数据类型的隐式转换。 例如，如果`smallint`相比`int`，则`smallint`隐式转换为`int`执行比较前。  
   
  当参数和操作数具有不兼容的数据类型时，表达式计算器无法执行隐式数据转换。 此外，表达式计算器无法将任何值隐式转换为布尔值。 相反，参数和操作数必须借助于转换运算符显式转换。 有关详细信息，请参阅[转换（SSIS 表达式）](cast-ssis-expression.md)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36127761"
   
  有关详细信息，请参阅以下主题：  
   
--   [= =&#40;相等&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)  
+-   [= =&#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)  
   
 -   [\!=（不等于）（SSIS 表达式）](unequal-ssis-expression.md)  
   

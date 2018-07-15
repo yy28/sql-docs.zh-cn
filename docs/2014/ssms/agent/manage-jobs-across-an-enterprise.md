@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiserver job management [SQL Server]
 - jobs [SQL Server Agent], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - target servers [SQL Server], job changes
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16816ec13f45d356d6d11c3ff1a3019b407d371d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2134acf57d96211a234564acdf49fbca7277818f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208647"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>管理整个企业内的作业
   如果在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以外对多服务器作业定义进行了更改，则必须将更改发布到下载列表中，以便目标服务器可以再次下载更新后的作业。 为了确保目标服务器具有当前的作业定义，在更新多服务器作业后，请发布一条 INSERT 指令，如下所示：  
@@ -44,7 +44,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [sp_attach_schedule (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_detach_schedule 将&#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
+-   [sp_detach_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
   
     > [!NOTE]  
     >  调用 **sp_update_job** 或 **sp_delete_job** 后不需要调用 **sp_post_msx_operation**，因为这些存储过程会自动向下载列表发布所需的更改。  

@@ -1,5 +1,5 @@
 ---
-title: AccountType 元素 (ASSL) |Microsoft 文档
+title: AccountType 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff7203d2882689b21a6ab3171880c26a8d385f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b79eec0531cf2ab9451a93df2e5f1bf0eb2adf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243427"
 ---
 # <a name="accounttype-element-assl"></a>AccountType 元素 (ASSL)
-  包含帐户类型中定义的名称[数据库](../objects/database-element-assl.md)元素。  
+  包含在中定义的帐户类型的名称[数据库](../objects/database-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36126172"
 |*责任*|该帐户是一个负债帐户。|  
 |*统计*|该帐户是一个统计帐户。|  
   
- 对应的允许值为枚举`AccountType`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AccountTypes>。  
+ 对应的允许值的枚举`AccountType`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AccountTypes>。  
   
 ## <a name="see-also"></a>请参阅  
  [帐户元素&#40;ASSL&#41;](../collections/accounts-element-assl.md)   

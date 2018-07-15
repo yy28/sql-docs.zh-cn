@@ -1,5 +1,5 @@
 ---
-title: 安装 SQL Server 2014 使用配置文件 |Microsoft 文档
+title: 安装 SQL Server 2014 使用配置文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33039ca7f957614e4c17d6dbff7a9f68aa21404e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9536c674f9bf5733fb6d20109ee03206a50570c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231857"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用配置文件安装 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供了基于系统默认值和运行时输入生成配置文件的功能。 可以使用配置文件在整个企业中部署具有相同配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 通过创建一个启动 Setup.exe 的批处理文件，还可以使企业范围内的手动安装得以标准化。  

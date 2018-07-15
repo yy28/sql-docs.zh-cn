@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188034"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分页（报表生成器和 SSRS）
-  分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 中的分页方式[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]用于查看和传递报表的呈现扩展插件而异。 在报表服务器上运行报表时，相应报表使用的是 HTML 呈现器。 HTML 遵循一组特定的分页规则。 如果将同一报表导出为其他格式，例如 PDF，系统会使用 PDF 呈现器并应用另一组规则；因此，该报表的分页方式就会不同。 若要成功设计非常适合你计划用于传递报表的呈现器易于理解报表为你的用户时，你需要了解用于控制中的分页方式的规则[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
+  分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 中的分页[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]用来查看和传递报表的呈现扩展插件而异。 在报表服务器上运行报表时，相应报表使用的是 HTML 呈现器。 HTML 遵循一组特定的分页规则。 如果将同一报表导出为其他格式，例如 PDF，系统会使用 PDF 呈现器并应用另一组规则；因此，该报表的分页方式就会不同。 若要成功设计一个易于理解为你的用户针对计划要用于传递报表的呈现器优化，您需要了解用于控制中的分页的规则[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
   
  本主题讨论了物理页大小和报表布局对硬分页符呈现器呈现报表的方式有何影响。 您可以使用 **“报表属性”** 窗格、 **“属性”** 窗格或 **“页面设置”** 对话框来设置属性，以修改物理页大小和边距，以及将报表分为多个列。 您可通过单击报表正文外面的蓝色区域来访问 **“报表属性”** 窗格。 通过单击“主文件夹”选项卡上的 **“运行”** 然后再单击“运行”选项卡上的 **“页面设置”** ，可以访问 **“页面设置”** 对话框。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36129138"
   
  可以使用常量以及简单或复杂表达式来设置 Disabled 和 ResetPageNumber 属性的值。 但是，不能将表达式用于 BreakLocation 属性。 有关编写和使用表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
   
- 在报表中，你可以编写通过使用引用当前页名称或页码的表达式`Globals`集合。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
+ 在报表中，您可以编写使用引用当前页名称或页码的表达式`Globals`集合。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
 ### <a name="naming-excel-worksheet-tabs"></a>命名 Excel 工作表选项卡  
  当您将报表导出到 Excel 工作簿时，以下属性非常有用。 使用 InitialPage 属性可以指定导出报表时工作表选项卡的默认名称，使用分页符和 PageName 属性可为每个工作表提供不同的名称。 分页符定义的每个新报表页将导出到由 PageName 属性的值命名的不同工作表中。 如果 PageName 为空白，但报表有一个初始页名称，则 Excel 工作簿中的所有工作表都将使用相同的名称，即该初始页名称。  

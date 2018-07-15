@@ -1,5 +1,5 @@
 ---
-title: ServerSettings 类 |Microsoft 文档
+title: ServerSettings 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ServerSettings class
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8d3bdc91c099d78042d4d22e2403772de96565b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b79be1bd131812b16647e9769e3298af06ad6624
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170228"
 ---
 # <a name="serversettings-class"></a>ServerSettings 类
-  [ServerSettings 类] serversettings-class.md) 表示的实例上的服务器设置[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  [ServerSettings 类] serversettings class.md) 表示的实例上的服务器设置[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- [ServerSettings 类] serversettings-class.md) 允许你执行以下任务：  
+ [ServerSettings 类] serversettings class.md) 可以执行以下任务：  
   
 -   访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的常规标志设置。  
   

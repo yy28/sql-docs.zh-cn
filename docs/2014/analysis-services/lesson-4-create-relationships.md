@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 创建关系 |Microsoft 文档
+title: 第 5 课： 创建关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d9428908b712fcda9a016af0825602c62548a691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204497"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 课：创建关系
   在本课中，将验证导入数据时自动创建的关系并在不同表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，Product 表和 Product Subcategory 表基于每个产品属于某个子类别的事实具有某种关系。 有关详细信息，请参阅[关系（SSAS 表格）](tabular-models/relationships-ssas-tabular.md)  
@@ -51,10 +51,10 @@ ms.locfileid: "36124671"
   
     |在职|表|相关查找表|  
     |------------|-----------|--------------------------|  
-    |是|**客户 [地域 Id]**|**Geography [地域 Id]**|  
+    |是|**客户 [Geography Id]**|**Geography [Geography Id]**|  
     |是|**产品 [产品子类别 Id]**|**产品子类别 [产品子类别 Id]**|  
     |是|**产品子类别 [产品类别 Id]**|**产品类别 [产品类别 Id]**|  
-    |是|**Internet Sales [客户 Id]**|**客户 [客户 Id]**|  
+    |是|**Internet Sales [Customer Id]**|**客户 [Customer Id]**|  
     |是|**Internet Sales [产品 Id]**|**产品 [产品 Id]**|  
   
  如果上述表中的任何关系缺失，请验证您的模型包括以下各表：Customer、Date、Geography、Product、Product Category、Product Subcategory 和 Internet Sales。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
