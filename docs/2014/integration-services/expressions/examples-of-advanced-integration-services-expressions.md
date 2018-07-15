@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - operators [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ce3f4c37d7c590166beb53879c624ae70d9a3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec3425d4382c19e93b0317db4d338173a9bb1b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314267"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>高级 Integration Services 表达式的示例
   本节提供合并多个运算符和函数的高级表达式示例。 如果表达式用于优先约束或有条件拆分转换中，则其计算结果必须为布尔值。 但是，这一限制并不适用于属性表达式、变量、派生列转换或 For 循环容器中使用的表达式。  

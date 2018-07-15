@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 13
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 925f20d61f4638041b7606df584147446ba28d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 15a47c1e8e1785b9b9b63c0a2dd8d17558898434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320627"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合并成员临时表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的合并成员临时表 (stg.name_Consolidated) 可以创建、更新、停用和删除合并成员。 您还可以使用它更新合并成员的属性值。  
@@ -45,10 +45,10 @@ ms.locfileid: "36013872"
 |\<属性名称>|实体中的每个属性对应的列。 对于 **ImportType** 为 **0** 或 **2**时使用它。 对于自由格式属性，请为该属性指定新的文本或字符串值。 对于基于域的属性，请为将要成为属性的成员指定代码。 对于链接属性，URL 必须以 **http://** 开头。<br /><br /> 注意：不能暂存文件属性。|  
   
 ## <a name="see-also"></a>请参阅  
- [加载或通过使用临时过程中更新 Master Data Services 中的成员](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
- [通过使用临时过程移动显式层次结构成员&#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [加载或使用临时过程更新 Master Data Services 中的成员](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [使用临时过程移动显式层次结构成员&#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [查看在临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [查看临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [临时过程错误&#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  
   
   

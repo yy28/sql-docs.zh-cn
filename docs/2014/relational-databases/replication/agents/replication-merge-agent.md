@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
 - Merge Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bacb2a50002dedd449d7060e0335d064645f8572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8234986c27b6bffc593d8eb7cc6c21c8988d7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287143"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   复制合并代理是一个将数据库表中保存的初始快照应用于订阅服务器的实用工具可执行文件。 它还合并自初始快照创建后发布服务器上发生的增量数据更改，并根据配置的规则或通过使用创建的自定义冲突解决程序来协调冲突。  

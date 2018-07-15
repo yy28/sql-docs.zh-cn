@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
 - "10015"
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d01b975eb36f54aa450d4e931740ac319a023e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301747"
 ---
 # <a name="report-model-query-designer-user-interface"></a>报表模型查询设计器用户界面
   报表设计器提供了两个查询设计器，可帮助您指定报表服务器模型数据源中要用于报表的数据。 使用图形查询设计器可以浏览和选择模型实体和实体字段。 使用基于文本的查询设计器可以直接以 XML 格式使用语义模型定义语言 (SMDL) 规范。  

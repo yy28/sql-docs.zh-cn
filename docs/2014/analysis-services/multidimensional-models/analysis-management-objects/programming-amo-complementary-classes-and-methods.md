@@ -1,5 +1,5 @@
 ---
-title: 编程 AMO 互补类和方法 |Microsoft 文档
+title: AMO 补充类和方法编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d7f1a2a00b91e9bff4b735ff80d4ac927032ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317327"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO 补充类和方法的编程
   本主题包含以下各节：  
   
--   [程序集类](#Assembly)  
+-   [Assembly 类](#Assembly)  
   
 -   [备份和还原](#BU)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "36018303"
   
 -   [CaptureLog 类和 CaptureXML 属性](#CL)  
   
-##  <a name="Assembly"></a> 程序集类  
- 程序集让扩展的功能的用户[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]通过添加新的存储的过程或多维表达式 (MDX) 函数。 有关详细信息，请参阅[AMO 其他类和方法](amo-other-classes-and-methods.md)。  
+##  <a name="Assembly"></a> Assembly 类  
+ 程序集使用户可以扩展的功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]通过添加新的存储的过程或多维表达式 (MDX) 函数。 有关详细信息，请参阅[AMO 其他类和方法](amo-other-classes-and-methods.md)。  
   
  添加和删除程序集很简单，可以联机执行。 只有数据库管理员才能向数据库添加程序集，只有服务器管理员才能向服务器对象添加程序集。  
   
@@ -76,7 +76,7 @@ static public void CreateStoredProcedures(Database db)
   
 ```  
   
-##  <a name="BU"></a> 备份和还原方法  
+##  <a name="BU"></a> Backup 和 Restore 方法  
  Backup 和 Restore 方法供管理员用于备份和还原数据库。  
   
  下面的示例为指定服务器中的所有数据库创建备份。 如果备份文件已存在，则会覆盖该文件。 备份文件将保存到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Data 文件夹中的 BackUp 文件夹中。  
@@ -282,7 +282,7 @@ static public string TestCaptureLog(Server svr)
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [AMO 其他类和方法](amo-other-classes-and-methods.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   

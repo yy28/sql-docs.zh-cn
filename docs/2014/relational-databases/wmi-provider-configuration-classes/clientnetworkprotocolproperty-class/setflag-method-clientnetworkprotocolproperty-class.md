@@ -1,5 +1,5 @@
 ---
-title: SetFlag 方法 （ClientNetworkProtocolProperty 类） |Microsoft 文档
+title: SetFlag 方法 （ClientNetworkProtocolProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetFlag method
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b295a208ee37c6f3ef36c5bff12707fbc5dc035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1030fe856642a6628ecde44db50567dcd0c31a9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331387"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>SetFlag 方法（ClientNetworkProtocolProperty 类）
-  设置所引用的当前属性的标志[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值。  
+  设置引用的当前属性的标志[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ BoolValue
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)表示使用的网络协议的属性的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
+ 一个[ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)对象，表示使用的网络协议的属性[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
   
 #### <a name="parameters"></a>Parameters  
   

@@ -1,5 +1,5 @@
 ---
-title: PermissionSet 元素 (ASSL) |Microsoft 文档
+title: PermissionSet 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PermissionSet element
 ms.assetid: da5a9175-48e4-4b5e-a780-3e0077939974
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6246058af826a73b589f1854b0236de946a4d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 471ef43aea9fadcca7ab8a4a36870a3bdddee22f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263463"
 ---
 # <a name="permissionset-element-assl"></a>PermissionSet 元素 (ASSL)
   标识与关联的权限集[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 程序集。  
@@ -66,15 +66,15 @@ ms.locfileid: "36125458"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*安全*|只允许内部计算和本地数据访问。 *安全*是限制性最强的权限集。 程序集执行代码*安全*权限无法访问外部系统资源，例如文件、 网络、 环境变量或注册表。|  
-|*外部访问*|*安全*，与访问外部系统资源，如文件、 网络、 环境变量和注册表的附加功能。|  
-|*不受限制*|不受限制允许程序集不受限制地访问资源，在内部和外部[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 代码中执行*不受限制的*程序集可以调用非托管的代码。|  
+|*安全*|只允许内部计算和本地数据访问。 *安全*是限制性最强的权限集。 所执行的程序集代码*安全*权限无法访问外部系统资源，例如文件、 网络、 环境变量或注册表。|  
+|*ExternalAccess*|*安全*，以及访问外部系统资源，如文件、 网络、 环境变量和注册表的附加功能。|  
+|*不受限制*|不受限制允许程序集不受限制地访问资源，内部和外部[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在执行的代码*Unrestricted*程序集可以调用非托管的代码。|  
   
- 对应于的允许值为枚举`PermissionSet`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.PermissionSet>。  
+ 与允许的值相对应的枚举`PermissionSet`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.PermissionSet>。  
   
 ## <a name="see-also"></a>请参阅  
  [ComAssembly 数据类型&#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
- [Assemblies 元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
+ [程序集元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [数据库元素&#40;ASSL&#41;](../objects/database-element-assl.md)   
  [服务器元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  

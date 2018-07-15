@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3ba1d095dd7aed4090e053368897bd6accc1f6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21db77ad7f226c78f31adaef80162b445129249e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257293"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  

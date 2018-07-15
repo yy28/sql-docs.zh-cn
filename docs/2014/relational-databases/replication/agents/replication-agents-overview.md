@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent
 - agents [SQL Server replication]
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 22d569b99b4e6010251e5f68c7338a6220caddfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4fe3b25fb570d305ba176d89f2f21413c19665e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270763"
 ---
 # <a name="replication-agents-overview"></a>复制代理概述
   复制使用许多称为“代理”的独立程序执行与跟踪更改和分发数据关联的任务。 默认情况下，复制代理作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理安排的作业运行，必须运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，这些作业才能运行。 复制代理还可以从命令行以及由使用复制管理对象 (RMO) 的应用程序运行。 可以从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对复制代理进行管理。  

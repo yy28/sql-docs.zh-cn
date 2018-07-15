@@ -1,13 +1,11 @@
 ---
-title: 创建程序集 |Microsoft 文档
+title: 创建程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7f58e9cd0122739b7d55e8cfe96731a39684fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a7dcaae61cdfa6466f8f7194b4f93977ec2e7d97
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025938"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353339"
 ---
 # <a name="creating-an-assembly"></a>创建程序集
-  托管数据库对象（如存储过程或触发器）先经过编译，然后部署到称为程序集的单元中。 托管的 DLL 程序集必须在注册[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]前，可以使用程序集提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中注册程序集，请使用 CREATE ASSEMBLY 语句。 本主题讨论如何使用 CREATE ASSEMBLY 语句在数据库中注册程序集，以及如何为程序集指定安全设置。  
+  托管数据库对象（如存储过程或触发器）先经过编译，然后部署到称为程序集的单元中。 托管的 DLL 程序集必须在注册[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]才能使用该程序集提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中注册程序集，请使用 CREATE ASSEMBLY 语句。 本主题讨论如何使用 CREATE ASSEMBLY 语句在数据库中注册程序集，以及如何为程序集指定安全设置。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY 语句  
  CREATE ASSEMBLY 语句用于在数据库中创建程序集。 以下是示例：  
@@ -44,7 +42,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允许使用相同的名称、区域性和公钥来注册程序集的不同版本。  
   
- 可以创建引用其他程序集的程序集。 在创建程序集时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]还创建根级的程序集引用的程序集，如果引用的程序集尚未创建到数据库。  
+ 可以创建引用其他程序集的程序集。 在创建程序集时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]还会创建由根级别程序集引用的程序集如果引用的程序集是否尚未创建到数据库。  
   
  将向数据库用户或用户角色授予在数据库中创建进而拥有程序集的权限。 为了创建程序集，数据库用户或角色应具有 CREATE ASSEMBLY 权限。  
   
@@ -55,7 +53,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   所调用或被引用的程序集是在同一个数据库中创建的。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>创建程序集时指定安全性  
- 当在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建程序集时，可以指定您的代码可在以下三种安全级别的哪一种下运行：`SAFE`、`EXTERNAL_ACCESS` 或 `UNSAFE`。 当运行 `CREATE ASSEMBLY` 语句时，会对代码程序集执行某些检查，看看是否存在可能导致程序集无法在服务器上注册的问题。 有关详细信息，请参阅模拟示例[CodePlex](http://msftengprodsamples.codeplex.com/)。  
+ 当在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建程序集时，可以指定您的代码可在以下三种安全级别的哪一种下运行：`SAFE`、`EXTERNAL_ACCESS` 或 `UNSAFE`。 当运行 `CREATE ASSEMBLY` 语句时，会对代码程序集执行某些检查，看看是否存在可能导致程序集无法在服务器上注册的问题。 有关详细信息，请参阅 》 上模拟示例[CodePlex](http://msftengprodsamples.codeplex.com/)。  
   
  `SAFE` 是默认的权限集，适用于绝大多数应用场景。 若要指定给定的安全级别，您可以按如下所示修改 CREATE ASSEMBLY 语句的语法：  
   
@@ -83,13 +81,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  程序集经过了强名称签名或使用证书进行了 Authenticode 签名。 此强名称（或证书）在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部作为非对称密钥（或证书）创建，它具有对应的带有 `EXTERNAL ACCESS ASSEMBLY` 权限（对于外部访问程序集）或 `UNSAFE ASSEMBLY` 权限（对于不安全的程序集）的登录名。  
   
-2.  数据库所有者 (DBO) 有`EXTERNAL ACCESS ASSEMBLY`(有关`EXTERNAL ACCESS`程序集) 或`UNSAFE ASSEMBLY`(有关`UNSAFE`程序集) 权限和数据库具有[TRUSTWORTHY 数据库属性](../../security/trustworthy-database-property.md)设置为`ON`。  
+2.  数据库所有者 (DBO) 拥有`EXTERNAL ACCESS ASSEMBLY`(对于`EXTERNAL ACCESS`程序集) 或`UNSAFE ASSEMBLY`(对于`UNSAFE`程序集) 的权限，并且数据库已[TRUSTWORTHY 数据库属性](../../security/trustworthy-database-property.md)设置为`ON`。  
   
  在加载程序集（包括执行）时，也将检查上面所列的两个条件。 至少必须满足这些条件之一才能加载程序集。  
   
- 我们建议， [TRUSTWORTHY 数据库属性](../../security/trustworthy-database-property.md)在数据库上不能设置为`ON`仅运行公共语言运行时 (CLR) 代码，在服务器进程中。 而是建议在 master 数据库中通过程序集文件创建非对称密钥。 然后，必须创建映射到此非对称密钥的登录名，并且必须向此登录名授予 `EXTERNAL ACCESS ASSEMBLY` 或 `UNSAFE ASSEMBLY` 权限。  
+ 我们建议[TRUSTWORTHY 数据库属性](../../security/trustworthy-database-property.md)在数据库上不是设置为`ON`仅将运行公共语言运行时 (CLR) 代码，在服务器进程中。 而是建议在 master 数据库中通过程序集文件创建非对称密钥。 然后，必须创建映射到此非对称密钥的登录名，并且必须向此登录名授予 `EXTERNAL ACCESS ASSEMBLY` 或 `UNSAFE ASSEMBLY` 权限。  
   
- 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]之前运行 CREATE ASSEMBLY 语句的语句。  
+ 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，然后才能运行 CREATE ASSEMBLY 语句。  
   
 ```  
 USE master;   
@@ -112,7 +110,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]之前运行 CREATE ASSEMBLY 语句的语句。  
+ 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，然后才能运行 CREATE ASSEMBLY 语句。  
   
 ```  
 USE master;   
@@ -132,13 +130,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- 有关每个设置的权限的详细信息，请参阅[CLR Integration Security](../security/clr-integration-security.md)。  
+ 有关每个设置的权限的更多详细信息，请参阅[CLR 集成安全性](../security/clr-integration-security.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [管理 CLR 集成程序集](managing-clr-integration-assemblies.md)   
  [更改程序集](altering-an-assembly.md)   
  [删除程序集](dropping-an-assembly.md)   
- [CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)   
+ [CLR 集成代码访问安全性](../security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY 数据库属性](../../security/trustworthy-database-property.md)   
  [允许部分可信任的调用方](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
 - SQL Server Profiler, viewing traces
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 68f437a636e9b6385d1a797114111210c5d30fd7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f6d3051af96c963c65496f1e10dabd8ae035d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286443"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 查看和分析跟踪
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 查看跟踪中捕获的事件数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示基于定义的跟踪属性的数据。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的一种方式是将数据复制到其他程序中，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果跟踪中包括“文本”数据列，则优化顾问可以使用包含 SQL 批处理和远程过程调用 (RPC) 事件的跟踪文件。 为了确保捕获正确的事件和列以便与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问一起使用，请使用随 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]一起提供的预定义优化模板。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: be5f32d7859d21409930428711c247b208b97e23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6deb9cf058343e5b2a84d90c5ead07776447c355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321727"
 ---
 # <a name="rename-a-report-server-computer"></a>重命名报表服务器计算机
   重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下，在计算机名称发生更改之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能无法访问。 请使用本主题中提供的步骤在计算机名称更改之后重新配置报表服务器。  
@@ -42,7 +42,7 @@ ms.locfileid: "36025642"
 ## <a name="renaming-a-report-server-computer"></a>重命名报表服务器计算机  
  如果要重命名运行报表服务器的计算机，请执行下列操作：  
   
-1.  打开**RSReportServer.config**在文本编辑器和修改`UrlRoot`设置以反映新的服务器名称。 传递扩展插件使用 `UrlRoot` 设置来编写在访问存储于报表服务器中的项时所使用的 URL。 更改报表服务器 URL 地址，你需要更新`UrlRoot`设置，以便订阅可以继续按预期方式传递报表。  
+1.  打开**RSReportServer.config**在文本编辑器中修改和`UrlRoot`设置以反映新的服务器名称。 传递扩展插件使用 `UrlRoot` 设置来编写在访问存储于报表服务器中的项时所使用的 URL。 更改报表服务器 URL 地址，你需要更新`UrlRoot`设置，以便订阅可以继续按预期方式传递报表。  
   
 2.  在同一文件中，如果设置，修改`ReportServerUrl`设置以反映新的服务器名称。 注意，并非每次安装时都会使用此设置。 如果此设置为空，则无需执行任何操作。  
   

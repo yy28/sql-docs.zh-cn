@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], subqueries
 - nested queries
 - subqueries [SQL Server], SQL pane
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b3622b847121caf20ca4b3264ec2822d714e967
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1232ba9cd9fd4d13a90e6467f8365b958af9957f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315117"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>创建子查询 (Visual Database Tools)
   可以将一个查询的结果用作另一个查询的输入。 可以将子查询的结果用作使用 IN(&#xA0;</ph>) 函数、EXISTS 运算符或 FROM 子句的语句。  
@@ -65,7 +65,7 @@ ms.locfileid: "36018513"
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [支持的查询类型&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [支持的查询类型&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

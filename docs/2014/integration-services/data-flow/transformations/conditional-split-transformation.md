@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 780227fc93e78bfda0d6e1612dc315b904ffe929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42886c47618dd1aae0ac90e54ae3e7ec9c8d6193
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287643"
 ---
 # <a name="conditional-split-transformation"></a>有条件拆分转换
   有条件拆分转换可以根据数据内容将数据行路由到不同的输出。 有条件拆分转换的实现类似于编程语言中的 CASE 决策结构。 此转换将计算表达式，并且根据结果将数据行定向到指定输出。 此转换还提供默认输出，因此如果某个行与任何表达式都不匹配，则它将被定向到默认输出。  

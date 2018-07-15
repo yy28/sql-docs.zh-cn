@@ -1,5 +1,5 @@
 ---
-title: 全球化提示和最佳做法 (Analysis Services) |Microsoft 文档
+title: 全球化提示和最佳实践 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
 - date comparisons
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 684da8d68061248556d99dcc06c8c8e9207e65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fa4cb11d4fdbd429cfc01b4dcb3cd43c2a35b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271943"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
@@ -95,7 +95,7 @@ ms.locfileid: "36127431"
  仅对象标识符（而非对象名）受限于表中描述的大小写行为。 如果你看到解决方案工作方式有所变化（之前和之后的比较 - 安装 SQL Server 2012 SP2 或更高版本之后），它将最可能是一个处理问题。 查询不受对象标识符影响。 对于两种查询语言（DAX 和 MDX），公式引擎会使用对象名（而非标识符）。  
   
 > [!NOTE]  
->  与区分大小写相关的代码更改对某些应用程序来说是重大更改。 请参阅[Analysis Services Features in SQL Server 2014 的重大更改](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)有关详细信息。  
+>  与区分大小写相关的代码更改对某些应用程序来说是重大更改。 请参阅[SQL Server 2014 中 Analysis Services 功能的重大更改](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)有关详细信息。  
   
 ##  <a name="bkmk_test"></a> 使用 Excel、SQL Server Profiler 和 SQL Server Management Studio 进行区域设置测试  
  测试翻译时，连接必须指定翻译的 LCID。 如 [从 SSAS 获取不同语言到 Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)中所述，你可以使用 Excel 测试你的翻译。  
@@ -110,7 +110,7 @@ ms.locfileid: "36127431"
   
      你会看到 Adventure Works 示例数据库的法语翻译。  
   
-     ![Excel 数据透视表及法语翻译](media/ssas-localetest-excel.png "包含法语翻译的 Excel 数据透视表")  
+     ![带有法语翻译的 Excel 数据透视表](media/ssas-localetest-excel.png "带有法语翻译的 Excel 数据透视表")  
   
  作为后续步骤，可以使用 Server Profiler 来确认区域设置。 单击一个 `Session Initialize` 事件，然后查看下方文本区域中的属性列表以找到 `<localeidentifier>1036</localeidentifier>`。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36127431"
   
 -   对 Adventure Works 数据库执行 MDX 查询。 查询结果应为法语翻译。  
   
-     ![使用 SSMS 中的法语翻译的 MDX 查询](media/ssas-localetest-ssms.png "与在 SSMS 中的法语翻译的 MDX 查询")  
+     ![SSMS 中带法语翻译的 MDX 查询](media/ssas-localetest-ssms.png "SSMS 中带法语翻译的 MDX 查询")  
   
 ##  <a name="bkmk_mdx"></a> 在包含翻译的解决方案中撰写 MDX 查询  
  翻译提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名称的显示信息，但是不翻译相同对象的标识符。 尽可能使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的标识符和键，而不使用翻译后的标题和名称。 例如，使用多维表达式 (MDX) 语句和脚本的成员键而不是成员名称以确保多种语言之间的可移植性。  

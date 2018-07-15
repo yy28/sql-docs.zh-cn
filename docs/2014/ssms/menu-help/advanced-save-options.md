@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.advancedsaveoptions
 helpviewer_keywords:
 - Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4af8221510389d65149ba36411f57f986af56202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08670b9b7ec22b7bc1e1c5c21064f65e0f867d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282383"
 ---
 # <a name="advanced-save-options"></a>高级保存选项
-  使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 访问**高级保存选项**对话框中，在**文件**菜单上，单击**保存**\<查询名称 >**作为.sql**到打开**文件另存为**对话框中，单击向下箭头**保存**按钮，，然后单击**编码保存**。  
+  使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 访问**高级保存选项**对话框中，在**文件**菜单中，单击**保存**\<查询名称 >**作为.sql**到打开**将文件另存为**对话框中，单击在上的向下箭头**保存**按钮，然后依次**编码保存**。  
   
 ## <a name="options"></a>“常规”  
  **编码**  

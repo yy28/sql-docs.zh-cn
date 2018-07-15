@@ -1,5 +1,5 @@
 ---
-title: ManufacturingFirstWeekOfMonth 元素 (ASSL) |Microsoft 文档
+title: ManufacturingFirstWeekOfMonth 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManufacturingFirstWeekOfMonth element
 ms.assetid: adb76a2f-c6c3-459e-a441-e80adad76ff1
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef20d6aba04da501336fe603d56dbc9b55a8ccee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c4ef6476d4c39344137e1ad7f6af346225e0a7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269753"
 ---
 # <a name="manufacturingfirstweekofmonth-element-assl"></a>ManufacturingFirstWeekOfMonth 元素 (ASSL)
   定义生产月的第一周[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36124200"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`ManufacturingFirstWeekOfMonth`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 父级对应的元素`ManufacturingFirstWeekOfMonth`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

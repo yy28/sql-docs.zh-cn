@@ -1,5 +1,5 @@
 ---
-title: 创建和管理远程分区 (Analysis Services) |Microsoft 文档
+title: 创建和管理远程分区 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10dc1d65f147c070a740b1e6adbe4b681af667bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315037"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
   对度量值组进行分区时，可将远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的辅助数据库配置为分区存储。  

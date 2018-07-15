@@ -1,5 +1,5 @@
 ---
-title: 平面文件源编辑器 （错误输出页） |Microsoft 文档
+title: 平面文件源编辑器 （错误输出页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.errorhandling.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 05c34018065fb21d3a46c59955f972b2f0904d1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89fd32ff708586c21df9d77b020ae6215b30c850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248597"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
   可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。  

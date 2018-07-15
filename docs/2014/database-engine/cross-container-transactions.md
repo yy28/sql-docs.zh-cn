@@ -1,5 +1,5 @@
 ---
-title: 跨容器事务 |Microsoft 文档
+title: 交叉容器事务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e09f7b68748aa40620196b0402ce81521591781a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310467"
 ---
 # <a name="cross-container-transactions"></a>交叉容器事务
   交叉容器事务是隐式或显式用户事务，这些事务包含对本机编译存储过程的调用或对内存优化表的操作。  
@@ -28,8 +28,8 @@ ms.locfileid: "36025261"
   
  引用内存优化表的任何解释型查询都被视为交叉容器事务的一部分，而无论是从显式或隐式事务中执行，还是在自动提交模式下执行。  
   
-##  <a name="isolation"></a> 各个操作隔离  
- 每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务都有一个隔离级别。 默认隔离级别为 Read Committed。 若要使用不同的隔离级别，你可以设置隔离级别使用[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
+##  <a name="isolation"></a> 单个操作的隔离  
+ 每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务都有一个隔离级别。 默认隔离级别为 Read Committed。 若要使用不同的隔离级别，可以设置隔离级别使用[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
   
  内存优化表和基于磁盘的表上的操作常常需要采用不同的隔离级别执行。 在事务中，可为一组语句或单个读取操作设置不同的隔离级别。  
   
@@ -69,13 +69,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>单个操作的隔离语义  
  可序列化事务 T 在完全隔离下执行。 此事务执行时，就好像其他每个事务要么都在 T 启动之前提交，要么都在 T 提交之后启动。 当一个事务中的不同操作具有不同隔离级别时，情况会变得更加复杂。  
   
- 中的事务隔离级别的常规语义[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，以及对锁定的影响，中所述[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
+ 中的事务隔离级别的常规语义[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，以及锁定的含义，详见[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
   
  对于不同操作可能具有不同隔离级别的交叉容器事务，您需要理解各个读取操作的隔离语义。 将始终对写操作进行隔离。 不同事务中的写操作不能相互影响。  
   
  数据读取操作返回很多符合筛选条件的行。  
   
- 为已属于读取操作的事务 t。 隔离级别可以理解数，将执行的读取数  
+ 读取来执行读取操作的事务 t。 隔离级别的一部分可以理解的  
   
  提交状态  
  提交状态指数据读取是否能够提交。  
@@ -103,7 +103,7 @@ commit
  到事务的逻辑结束时间，可以保证数据读取得到提交并保持稳定。  
   
  SERIALIZABLE  
- 所有的可重复读加上虚拟避免方面由 t。 虚拟避免意味着扫描操作可以仅返回由 T，编写的其他行执行的所有可序列化的读取操作的事务一致性保证，但没有已由其他事务写入的行。  
+ 可重复读加上避免虚拟及事务一致性保证所有可序列化的读取操作由 t。 虚拟避免意味着扫描操作只能返回由 T，写入的其他行执行的所有保证，但没有已由其他事务写入的行。  
   
  请考虑以下事务：  
   
@@ -139,7 +139,7 @@ commit
   
  给定事务 T 的基于磁盘的方面在满足以下条件之一的情况下达到特定隔离级别 X：  
   
--   它将启动 X。也就是说，会话默认为 X，或者因为您执行`SET TRANSACTION ISOLATION LEVEL`，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]默认值。  
+-   它在 X 中启动。也就是说，会话的默认级别为 X，或者因为您执行`SET TRANSACTION ISOLATION LEVEL`，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]默认值。  
   
 -   在该事务执行期间，默认隔离级别通过 `SET TRANSACTION ISOLATION LEVEL` 更改为 X。  
   
@@ -187,7 +187,7 @@ commit
   
  该事务结束时，自动提交模式下的交叉容器只读事务直接回滚。 不执行任何验证。  
   
- 如果显式或隐式交叉容器只读事务在 REPEATABLE READ 或 SERIALIZABLE 隔离级别下访问内存优化表，则该事务在提交时执行验证。 有关验证的详细信息请参阅的部分冲突检测，验证，并提交依赖项检查[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如果显式或隐式交叉容器只读事务在 REPEATABLE READ 或 SERIALIZABLE 隔离级别下访问内存优化表，则该事务在提交时执行验证。 有关验证的详细信息请参阅部分冲突检测、 验证和提交依赖关系检查[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [了解内存优化表上的事务](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   

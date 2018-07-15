@@ -1,5 +1,5 @@
 ---
-title: 第 8 课： 定义操作 |Microsoft 文档
+title: 第 8 课： 定义操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a57c6cc8d08d64c8f2498125f7df952c70adfd6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab952dba40b28ed0575b6fdb8da442ea6ebeb770
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274483"
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 课：定义操作
   在本课中，将了解如何在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义操作。 操作只是存储在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中并且可以合并到客户端应用程序中并被用户启动的多维表达式 (MDX) 语句。  
@@ -56,7 +56,7 @@ ms.locfileid: "36123918"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [多维建模&#40;通恒教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [多维建模&#40;Adventure Works 教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [操作&#40;Analysis Services-多维数据&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多维模型中的操作](multidimensional-models/actions-in-multidimensional-models.md)  
   

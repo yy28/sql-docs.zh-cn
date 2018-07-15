@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [XML in SQL Server], null default value
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ada1d2f79b74455a8fcd885362c9efc3fb286e71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dca972aecd3bbe0dec05a58678538ca2dfaff5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286803"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>默认情况下包含 Null 值的列
   默认情况下，列中的 Null 值映射为“缺少相应的属性、节点或元素”。 通过使用 ELEMENTS 指令请求以元素为中心的 XML 并指定 XSINIL 来请求为 NULL 值添加元素，可以覆盖此默认行为，如以下查询所示：  

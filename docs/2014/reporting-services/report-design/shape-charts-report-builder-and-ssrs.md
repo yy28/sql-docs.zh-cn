@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294057"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形状图（报表生成器和 SSRS）
   形状图将值数据显示为整体的百分比。 形状图通常用于显示数据集中不同值之间的比例比较结果。 类别由各个形状段来表示。 形状段的大小由值来决定。 形状图与饼图的用法类似，但前者是按从最大到最小的顺序来排列类别。  
   
- 漏斗图按逐渐递减的比例来显示值。 漏斗区的大小由序列值在所有值总计中所占的百分比来确定。 例如，您可能使用漏斗图来显示网站访问者的趋势。 漏斗图可能会在顶部显示较宽的区域，表明访问者对主页的点击率；而其他区域将成比例缩小。 有关如何将数据添加到漏斗图的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+ 漏斗图按逐渐递减的比例来显示值。 漏斗区的大小由序列值在所有值总计中所占的百分比来确定。 例如，您可能使用漏斗图来显示网站访问者的趋势。 漏斗图可能会在顶部显示较宽的区域，表明访问者对主页的点击率；而其他区域将成比例缩小。 有关如何向漏斗图添加数据的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  下图显示的是漏斗图示例。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36014951"
   
 -   形状图最有效的是以排序顺序显示成比例的百分比。 然而，为了保持一致性，图表默认情况下不会对数据集中的值进行排序。 请考虑从高到低对值排序，从而最准确地以漏斗图或棱锥图来表示数据。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
--   当计算比率时，Null 值、空值、负值和零值均无效。 因此，这些值不会显示在形状图中。 若要将这些值类型显示在图表中，需将图表类型更改为除形状图外的其他类型。 有关如何将空点添加到非形状图的详细信息，请参阅[向图表添加空点&#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
+-   当计算比率时，Null 值、空值、负值和零值均无效。 因此，这些值不会显示在形状图中。 若要将这些值类型显示在图表中，需将图表类型更改为除形状图外的其他类型。 有关如何向非形状图添加空点的详细信息，请参阅[向图表添加空点&#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
   
 -   若要使用自定义调色板在形状图上定义自己的颜色，请确保调色板中有足够的颜色，从而均用唯一的颜色突出显示各个数据点。 有关详细信息，请参阅 [设置图表上序列颜色的格式（报表生成器和 SSRS）](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   

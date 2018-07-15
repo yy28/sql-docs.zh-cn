@@ -1,13 +1,11 @@
 ---
-title: CLR 用户定义函数 |Microsoft 文档
+title: CLR 用户定义函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dd7a5d10a15b7072aced0c20b31193e3370488b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fbdb8fad94b76b0f9f30dde59896caebd8603c10
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016854"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349229"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 用户定义函数
   用户定义函数是可采用参数、执行计算或其他操作并返回结果的例程。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，可以使用任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程语言（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#）编写用户定义函数。  

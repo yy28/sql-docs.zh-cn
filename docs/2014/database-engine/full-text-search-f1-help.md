@@ -1,28 +1,27 @@
 ---
-title: 全文搜索的 F1 帮助 |Microsoft 文档
+title: 全文搜索的 F1 帮助 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a906bf4f9993943634fb6a61bc30237557d5bf72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59663c31be7d28e899ca4299500e0b6225ace419
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323197"
 ---
 # <a name="full-text-search-f1-help"></a>全文搜索的 F1 帮助
-  本部分提供有关主题[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的全文搜索对话框框中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 若要访问用户界面主题，请按 F1，或在对话框处于打开状态时单击 **“帮助”** 。  
+  本部分的主题提供有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]全文搜索中的对话框[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 若要访问用户界面主题，请按 F1，或在对话框处于打开状态时单击 **“帮助”** 。  
   
 |||  
 |-|-|  

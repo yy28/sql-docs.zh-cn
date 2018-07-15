@@ -1,5 +1,5 @@
 ---
-title: 从 SQL Server Management Studio 连接到任何 SQL Server 组件 |Microsoft 文档
+title: 从 SQL Server Management Studio 连接到任何 SQL Server 组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SQL Server Management Studio
 - saving connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c6a144c8c3807a00bfca2cff61faf95771463c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2e90c7befa7e65deb307a272a42fff203af04bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255289"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>从 SQL Server Management Studio 连接到任何 SQL Server 组件
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了管理每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件的功能。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以连接到：  

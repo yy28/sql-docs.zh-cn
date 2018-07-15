@@ -1,5 +1,5 @@
 ---
-title: 选择 SMO 枚举对话框 |Microsoft 文档
+title: 选择 SMO 枚举对话框的 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectsmoenumeration.f1
 helpviewer_keywords:
 - Select SMO Enumeration dialog box
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d78fa28451a62f1c563fdecd99fdee25bd057504
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50112efd67420e483a53d2eb116f296ae2c44899
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296767"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>“选择 SMO 枚举”对话框
   可以使用“选择 SMO 枚举”对话框，指定要在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上枚举的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 并选择枚举类型。  

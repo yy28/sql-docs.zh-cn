@@ -1,5 +1,5 @@
 ---
-title: 虚拟目录具有不受支持的身份验证方法 （升级顾问） |Microsoft 文档
+title: 虚拟目录具有不受支持的身份验证方法 （升级顾问） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1504b19f521258e2491626540baf49988d7605c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b707af2c203875553d614244c5bf6bbc87aaa4bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297747"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>虚拟目录包含不支持的身份验证方法（升级顾问）
   升级顾问检测到报表管理器或报表服务器虚拟目录上存在不支持的身份验证方法。 升级不支持的身份验证方法包括匿名、摘要式和 .NET Passport 身份验证。  

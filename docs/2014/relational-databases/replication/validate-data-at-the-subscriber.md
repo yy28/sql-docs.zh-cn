@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Subscribers [SQL Server replication], data validation
 - replication [SQL Server], validating data
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 399bf86dc105495c3c1d16721e669fa8e3ed622f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d900cb88e99963fd57c7192d0f2934312434bc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282983"
 ---
 # <a name="validate-data-at-the-subscriber"></a>在订阅服务器上验证数据
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中验证订阅服务器上的数据。  
@@ -316,7 +316,7 @@ ms.locfileid: "36124767"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> 方法。 传递以下参数：  
   
@@ -336,7 +336,7 @@ ms.locfileid: "36124767"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> 方法。 传递所需的 <xref:Microsoft.SqlServer.Replication.ValidationOption>。  
   
@@ -348,7 +348,7 @@ ms.locfileid: "36124767"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性。 将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的其余属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> 方法。 传递要验证的订阅服务器和订阅数据库的名称以及所需的 <xref:Microsoft.SqlServer.Replication.ValidationOption>。  
   

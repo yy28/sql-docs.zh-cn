@@ -1,5 +1,5 @@
 ---
-title: 更改模型名称 (Master Data Services) |Microsoft 文档
+title: 更改模型名称 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc049820c419dd2b5dd3fbcd165522ef80193d2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58f66ff01adba7661897b93076d7867bab73dcff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324417"
 ---
 # <a name="change-a-model-name-master-data-services"></a>更改模型名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，可以更改模型的名称。  
@@ -33,7 +33,7 @@ ms.locfileid: "36015056"
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
-### <a name="to-change-a-model-name"></a>若要更改的模型名称  
+### <a name="to-change-a-model-name"></a>若要更改模型名称  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36015056"
   
 4.  单击**编辑所选的模型**。  
   
-5.  在**模型名称**框中，键入模型的更新的名称。  
+5.  在中**模型名称**框中，键入更新后的模型名称。  
   
 6.  单击 **“保存模型”**。  
   

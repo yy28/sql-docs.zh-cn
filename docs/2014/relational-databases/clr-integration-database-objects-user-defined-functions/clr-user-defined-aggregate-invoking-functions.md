@@ -1,13 +1,11 @@
 ---
-title: 调用 CLR 用户定义聚合函数 |Microsoft 文档
+title: 调用 CLR 用户定义聚合函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013868"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355049"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>调用 CLR 用户定义聚合函数
   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，您可以根据适用于系统聚合函数的所有规则调用公共语言运行时 (CLR) 用户定义聚合。  
@@ -37,9 +35,9 @@ ms.locfileid: "36013868"
   
 -   当前用户必须对用户定义聚合拥有 `EXECUTE` 权限。  
   
--   必须使用的窗体中的两个部分组成的名称调用用户定义聚合*schema_name.udagg_name*。  
+-   必须使用两部分组成的名称的窗体调用用户定义聚合*schema_name.udagg_name*。  
   
--   用户定义聚合的参数类型必须匹配或者是隐式转换为*input_type*聚合中, 定义的`CREATE AGGREGATE`语句。  
+-   用户定义聚合的参数类型必须匹配或可隐式转换为*input_type*聚合，如中所定义的`CREATE AGGREGATE`语句。  
   
 -   用户定义聚合的返回类型必须与匹配*return_type*中`CREATE AGGREGATE`语句。  
   
@@ -201,7 +199,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦你编译到代码**MyAgg.dll**，你可以注册在聚合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 一旦您将代码编译为**MyAgg.dll**，可以注册中的聚合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

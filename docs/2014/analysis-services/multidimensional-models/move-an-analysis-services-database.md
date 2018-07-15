@@ -1,5 +1,5 @@
 ---
-title: 移动 Analysis Services 数据库 |Microsoft 文档
+title: 移动 Analysis Services 数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving databases [Anlysis Services]
 - moving databases
 - operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b211eadcd0861fb9900bb7bbe2ca67d6fb7e33e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb91f3120f4f58a2505d7c63f370a709a22a9bee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304667"
 ---
 # <a name="move-an-analysis-services-database"></a>移动 Analysis Services 数据库
   很多情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将多维或表格模型数据库移到另一个位置。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。  
@@ -59,7 +59,7 @@ ms.locfileid: "36017409"
   
 7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 也可以使用浏览按钮 (**…**) 查找数据库文件夹。  
   
-8.  选择`ReadWrite`模式使用数据库。  
+8.  选择`ReadWrite`数据库模式。  
   
 9. 键入步骤 3 中使用的密码，然后单击 **“确定”** 执行附加命令。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - out-of-memory conditions
 - XML schema collections [SQL Server], large
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73bcf8bf2fd6d4c0e8e92e9d0727ddd76b8a5081
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2428c122f1b6c36a944a4dfc041f44d169dadb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264243"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>大型 XML 架构集合和内存不足的情况
   当对大型 XML 架构集合调用内置 XML_SCHEMA_NAMESPACE() 函数时或当您试图删除大型 XML 架构集合时，可能会出现内存不足的情况。 可以使用以下解决方法来处理这种情况：  

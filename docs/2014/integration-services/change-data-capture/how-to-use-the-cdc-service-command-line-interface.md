@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1aa1945e0db2b9f155a6da71bacf0525a03bb6e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06af063cb1b56d0296726d32cc45b95268e120fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283703"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>如何使用 CDC 服务命令行界面
   Oracle CDC 服务程序 xdbcdcsvc.exe 通常运行 Oracle CDC Windows 服务，但可以从命令行直接调用它，以便创建或删除 Oracle CDC Windows 服务。  

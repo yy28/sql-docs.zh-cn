@@ -1,5 +1,5 @@
 ---
-title: 在.NET 环境中使用 SQLXML 大容量加载 |Microsoft 文档
+title: 在.NET 环境中使用 SQLXML 大容量加载 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f597ddc37d61337bd60714afbcb564c87c6747f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8133a762b1bc0f687529ee375bd8e9c5699051b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307477"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>在 .NET 环境中使用 SQLXML 大容量加载
   本主题说明如何在 .NET 环境中使用 XML 大容量加载功能。 有关 XML 大容量加载的详细信息，请参阅[执行大容量加载的 XML 数据&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "36025180"
  若要从托管环境使用 SQLXML 大容量加载 COM 对象，需要添加对此对象的项目引用。 这将围绕该大容量加载 COM 对象生成一个托管的包装接口。  
   
 > [!NOTE]  
->  托管的 XML 大容量加载不使用托管流并且要求围绕本机流的包装。 SQLXML 大容量加载组件将不在多线程环境中运行（“[MTAThread]”属性）。 如果你尝试在多线程环境中运行大容量加载组件，则会得到以下附加信息与 InvalidCastException 异常:"接口 SQLXMLBULKLOADLib.ISQLXMLBulkLoad QueryInterface 失败。" 解决方法是使包含大容量加载对象单线程可访问的对象 (例如，通过使用 **[STAThread]** 特性，如示例所示)。  
+>  托管的 XML 大容量加载不使用托管流并且要求围绕本机流的包装。 SQLXML 大容量加载组件将不在多线程环境中运行（“[MTAThread]”属性）。 如果尝试在多线程环境中运行大容量加载组件，获取具有以下附加信息的 InvalidCastException 异常:"接口 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失败。" 解决方法是使包含大容量加载对象单线程可访问的对象 (例如，通过使用 **[STAThread]** 特性，如示例所示)。  
   
  本主题提供一个 C# 应用程序的工作示例，用于将 XML 数据大容量加载到数据库中。 请按照以下步骤创建工作示例：  
   
@@ -116,9 +116,9 @@ ms.locfileid: "36025180"
   
 5.  创建 C# 控制台应用程序。  
   
-6.  从**项目**菜单上，选择**添加引用**。  
+6.  从**项目**菜单中，选择**添加引用**。  
   
-7.  在**COM**选项卡上，选择**Microsoft SQLXML Bulkload 4.0 类型库**(xblkld4.dll)，然后单击**确定**。 你将看到**Interop.SQLXMLBULKLOADLib**在该项目创建的程序集。  
+7.  在中**COM**选项卡上，选择**Microsoft SQLXML Bulkload 4.0 类型库**(xblkld4.dll) 并单击**确定**。 你将看到**Interop.SQLXMLBULKLOADLib**在项目中创建的程序集。  
   
 8.  用下面的代码替换 Main() 方法。 更新**ConnectionString**属性和架构和数据文件的文件路径。  
   

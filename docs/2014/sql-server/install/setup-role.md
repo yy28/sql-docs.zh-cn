@@ -1,5 +1,5 @@
 ---
-title: 设置角色 |Microsoft 文档
+title: 设置角色 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 caps.latest.revision: 14
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b734e817739d887c6e342aa841e3701f770175a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b37c8749ee82894ee7c28acf6b0fa94bf4ee58f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330977"
 ---
 # <a name="setup-role"></a>安装角色
   使用此页可以指定是使用“功能选择”页来分别选择各项功能，还是使用安装角色来进行安装。  

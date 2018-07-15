@@ -1,5 +1,5 @@
 ---
-title: 逻辑体系结构概述 (Analysis Services-多维数据) |Microsoft 文档
+title: 逻辑体系结构概述 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89260e7ed530216d514e3237ed0ffe11322e17d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284113"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
-  Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**作为 PowerPivot for SharePoint，用于加载和查询 Excel 或 PowerPivot 工作簿内的数据模型已安装的 Analysis Services 的实例引用。  
+  Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统的 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**指代作为 PowerPivot for SharePoint，用于加载和查询工作簿中的 Excel 或 PowerPivot 数据模型已安装的 Analysis Services 实例。  
   
- 本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅[表格建模&#40;SSAS 表格&#41;](../../tabular-models/tabular-models-ssas.md)和[比较表格和多维解决方案&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
+ 本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅[表格建模&#40;SSAS 表格&#41;](../../tabular-models/tabular-models-ssas.md)并[比较表格和多维解决方案&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
 ## <a name="basic-architecture"></a>基本体系结构  
- 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]命名为"\<ServerName >\\< InstanceName\>"。 下图显示之间的所有提到的关系[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象。  
+ 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]名为"\<服务器名 >\\< 实例名\>"。 下图显示了所有提及之间的关系[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象。  
   
- ![运行的 AMO 对象关系](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "运行的 AMO 对象关系")  
+ ![AMO 运行对象关系](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 运行对象关系")  
   
  基本类是生成多维数据集所需的最小对象集。 此最小对象集可为一个维度、一个度量值组和一个分区。 聚合是可选的。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36126191"
 ### <a name="aggregates"></a>聚合  
  多维数据集的业务用户可以确定每个维度的每个成员的所有度量值，而不用考虑该成员在维度中的级别，因为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将根据需要在更高级别聚合值。 例如，可以通过在下图中所示的时间维度中使用的日历时间层次结构根据标准日历层次结构聚合在上图中的度量值。  
   
- ![沿时间维度的度量值的关系图组织](../../../analysis-services/dev-guide/media/cubeintro2.gif "沿时间维度组织的度量值的关系图")  
+ ![按时间维度组织的度量值的关系图](../../../analysis-services/dev-guide/media/cubeintro2.gif "按时间维度组织的度量值的关系图")  
   
  除了使用单个维度来聚合度量值以外，还可以使用不同维度的成员的组合来聚合度量值。 这样业务用户就可以同时对多个维度中的度量值进行评估。 例如，如果业务用户要分析各个季度通过航空运输从东半球和西半球进口的货物，则该业务用户可以对多维数据集发出查询来检索以下数据集。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36126191"
 |“时间”维度中的“半年”属性|上半年、下半年|TimeDimensionTable|半年|下半年|  
 |“时间”维度中的“季度”属性|第一季度、第二季度、第三季度、第四季度|TimeDimensionTable|季度|第三季度|  
   
- 一个多维数据集单元中的数据通常派生自事实数据表中的多个行。 例如，无线成员、 非洲成员和第 1 个季度成员的交叉点处的多维数据集单元格包含一个值，通过聚合中的以下行派生**ImportsFactTable**事实数据表。  
+ 一个多维数据集单元中的数据通常派生自事实数据表中的多个行。 例如的空运成员、 非洲成员和第一季度成员的交集处的多维数据集单元包含一个值，通过聚合中的以下行**ImportsFactTable**事实数据表。  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -122,7 +122,7 @@ ms.locfileid: "36126191"
 |3645541|@shouldalert|6|@shouldalert|20|99/02/09|  
 |3674906|@shouldalert|6|@shouldalert|36|99/02/17|  
   
- 在前面的表中，每行都有相同的值**RouteKey**， **SourceKey**，和**TimeKey**的列，指明这些行参与到同一个多维数据集单元格中。  
+ 在上表中，每个行都有相同的值**RouteKey**， **SourceKey**，并**TimeKey** ，该值指示这些行参与到同一多维数据集单元格的列。  
   
  这里显示的示例提供了一个非常简单的多维数据集，该多维数据集仅有一个度量值组，并且所有维度表均与事实数据表以星型架构联接。 另一个常见的架构为雪花型架构，在该架构中，一个或多个维度表联接到其他维度表，而不是直接联接到事实数据表。 **相关的主题：**[维度&#40;Analysis Services-多维数据&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
   

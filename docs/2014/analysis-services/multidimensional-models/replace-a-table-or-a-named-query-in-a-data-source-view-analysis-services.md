@@ -1,5 +1,5 @@
 ---
-title: 替换表或数据源视图 (Analysis Services) 中的命名的查询 |Microsoft 文档
+title: 替换表或命名的查询中的数据源视图 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replacing tables
 - data source views [Analysis Services], tables
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17928764bbeb2b13df0763d653cf98d3933bb7d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6b16c98f438a02309a2509e0d070f7718b0c97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295797"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>在数据源视图中替换表或命名查询 (Analysis Services)
   在数据源视图设计器中，可以将数据源视图 (DSV) 中的表、视图或命名查询替换为来自相同数据源或不同数据源的其他表或视图，或者替换为 DSV 中定义的命名查询。 替换表时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的所有其他对象或引用了该表的项目将继续引用该表，因为 DSV 中表的对象 ID 不会发生更改。 任何仍然相关（基于名称和列类型匹配）的关系仍然保留。 与此不同的是，如果删除后再添加表，则将丢失引用和关系，因此必须重新创建引用和关系。  

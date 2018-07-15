@@ -1,5 +1,5 @@
 ---
-title: 语句元素 (XMLA) |Microsoft 文档
+title: Statement 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Statement command
 ms.assetid: bfedc03c-d476-4d55-b5fd-36169f01351a
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1174ab45098eef2d4f735a180cef11d332e2f4d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 72a2b52b8a95233dfa0f889603d74548fb031305
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300807"
 ---
 # <a name="statement-element-xmla"></a>Statement 元素 (XMLA)
-  包含查询或语句发送使用`Execute`到的实例方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  包含查询或要发送的语句使用`Execute`的实例方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   

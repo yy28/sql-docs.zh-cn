@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newrole.f1
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: eef02e568a484869d083d7d3c305a222d27b9adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6654b0bef25504737e2f3fb42cdb2b0f8d017506
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251359"
 ---
 # <a name="new-user-role-management-studio"></a>新建用户角色 (Management Studio)
   使用此页可以创建项级角色定义。 项级角色定义是一组任务的命名集合，这些任务用于枚举用户对于文件夹、报表、模型、资源和共享数据源可以执行的任务。 例如，预定义“浏览者”角色就是属于项级角色定义。该角色可以标识报表最终用户在浏览文件夹和查看报表时可能需要执行的各种操作。  

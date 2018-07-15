@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a92c8b9f7bc75a0a825e883ada82de72e34aca30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: edf358f8ed321274d8af55accd5dbc4ac4692db2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308527"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建复合域。 复合域由应用于单个数据字段的一个或多个单一域组成。 有关复合域的详细信息，请参阅[管理复合域](../../2014/data-quality-services/managing-a-composite-domain.md)。  

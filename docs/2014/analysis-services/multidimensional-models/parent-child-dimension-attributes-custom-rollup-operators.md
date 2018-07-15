@@ -1,5 +1,5 @@
 ---
-title: 父子维度中的自定义汇总运算符 |Microsoft 文档
+title: 父子维度中的自定义汇总运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child rollup operations
 - UnaryOperatorColumn property
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac668355cf3886c904ad8a1757020fac3c10a12d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6dcee2c6cb88e071d55c5cb1a7d6c131c31a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272003"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>父子维度中的自定义汇总运算符
   自定义汇总运算符提供了一种简单的方法，控制成员值如何汇总到父子层次结构的父值中。 在包含父子关系的维度中，可以指定包含一元运算符的列，以便用该运算符指定父属性的所有非计算成员的汇总。 计算出父成员的值后，一元运算符就将应用于成员。  

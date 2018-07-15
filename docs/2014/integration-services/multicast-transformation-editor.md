@@ -1,5 +1,5 @@
 ---
-title: 多播转换编辑器 |Microsoft 文档
+title: 多播转换编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multicasttransformation.f1
 helpviewer_keywords:
 - Multicast Transformation Editor
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 595aee1ed8fe237b1b64d33b07e1cf8e0ac84f83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81016c43ac0c671e7e861eef7e0a4011e2f1f754
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285433"
 ---
 # <a name="multicast-transformation-editor"></a>多播转换编辑器
   可以使用 **“多播转换编辑器”** 对话框查看和设置每个转换输出的属性。  

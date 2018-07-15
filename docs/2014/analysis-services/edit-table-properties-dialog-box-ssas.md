@@ -1,5 +1,5 @@
 ---
-title: 编辑表属性对话框 (SSAS) |Microsoft 文档
+title: 编辑表属性对话框 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36cabf1186738420e3dbd35504a81ea0318b966b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249587"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>“编辑表属性”对话框 (SSAS)
   **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”**。  
@@ -47,7 +47,7 @@ ms.locfileid: "36123968"
 > [!NOTE]  
 >  当您更改表的数据源时，您实质上是用新源表的内容替换当前表的内容。  
   
- **从列名称**  
+ **中的列名称**  
  |||  
 |-|-|  
 |**数据源**|选择此选项可用来自所选源表的列名替换当前列名。|  

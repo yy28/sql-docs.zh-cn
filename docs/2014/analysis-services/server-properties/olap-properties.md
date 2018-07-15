@@ -1,5 +1,5 @@
 ---
-title: OLAP 属性 |Microsoft 文档
+title: OLAP 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AggregationPerfLog property
 - DefaultPageSizeForProp property
@@ -96,15 +96,15 @@ helpviewer_keywords:
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796e4a26c73030ef22d8ff7aaa95572dea852d1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df4f5871d7892dd8c11329bb3665734ff4c6f110
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299027"
 ---
 # <a name="olap-properties"></a>OLAP 属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
@@ -482,7 +482,7 @@ ms.locfileid: "36014631"
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
+ [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

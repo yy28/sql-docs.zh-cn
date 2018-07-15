@@ -1,5 +1,5 @@
 ---
-title: 序列聚类分析群集配置文件选项卡 (挖掘模型查看器 |Microsoft 文档
+title: 序列聚类分析群集配置文件选项卡 (挖掘模型查看器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7730b07877b0cfe6cdcc6d4a749d28ce4cf093d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323127"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类配置文件”选项卡（挖掘模型查看器）
   “Microsoft 顺序分析和聚类分析查看器”中的“分类剖面图”提供每个分类中包含的序列的具有颜色编码的视图。  
@@ -53,16 +53,16 @@ ms.locfileid: "36018483"
   
  为模型中的每个分类显示两组直方图，每个组位于图形中不同的行上：  
   
--   **\<属性名称 >.samples**： 在此行中的直方图显示代表每个群集的项的序列。 在 DMX 术语中，它们是每个分类的示例事例。  
+-   **\<属性名称 >.samples**： 此行中的直方图显示代表每个分类的项的序列。 在 DMX 术语中，它们是每个分类的示例事例。  
   
--   **\<属性名称 >**： 在此行中的直方图描述群集包含的所有项和其总体分发。 在 **“挖掘图例”** 可见时单击直方图，这将显示每个项的数值  
+-   **\<属性名称 >**： 此行中的直方图介绍分类包含的所有项及其总体分布。 在 **“挖掘图例”** 可见时单击直方图，这将显示每个项的数值  
   
  **状态**  
  此列在图表中是可选的，并且可以选择“显示图例”选项来显示或删除它。 **“状态”** 列就对应的分类直方图中的哪种颜色表示哪种状态提供了指导。  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft 序列聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)   
  [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)   
  [使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  

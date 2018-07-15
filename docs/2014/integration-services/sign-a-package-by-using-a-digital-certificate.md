@@ -1,5 +1,5 @@
 ---
-title: 使用数字证书对包签名 |Microsoft 文档
+title: 使用数字证书对包签名 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 caps.latest.revision: 59
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8704b41e27a392225989e10876b27b5dbd402f42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 011b4ee289a55f150d7a800a26db2f9f7f954ad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326227"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用数字证书对包签名
   本主题介绍如何使用数字证书对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包进行签名。 可以使用数字签名以及其他设置来防止加载和运行无效的包。  
@@ -71,6 +71,6 @@ ms.locfileid: "36015478"
      虽然已对包进行了签名，您现在必须配置 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便在加载该包之前检查或验证数字签名。 有关详细信息，请参阅[使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [安全概述&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)  
   
   

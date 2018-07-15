@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
 - reloading processor cache
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c0c94785452841642edac541d9c120bfbd7ad14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271963"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 服务器配置选项
     
@@ -63,7 +63,7 @@ ms.locfileid: "36128844"
   
  如果指定的关联掩码试图映射到不存在的 CPU，RECONFIGURE 命令会向客户端会话和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志报告一条错误消息。 在这种情况下，RECONFIGURE WITH OVERRIDE 选项将不起作用，并将再次报告相同的配置错误。  
   
- 您也可以不在由 Windows 2000 或 Windows Server 2003 操作系统分配了特定工作负荷的处理器上执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动。 如果将代表某个处理器的位设置为 1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎将会选择该处理器来进行线程分配。 当你将设置`affinity mask`为 0 （默认值），Microsoft Windows 2000 或 Windows Server 2003 计划算法设置线程的关联。 如果将 `affinity mask` 设置为任一非零值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联将把该值解释为一个位掩码，用于指定可选的处理器。  
+ 您也可以不在由 Windows 2000 或 Windows Server 2003 操作系统分配了特定工作负荷的处理器上执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动。 如果将代表某个处理器的位设置为 1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎将会选择该处理器来进行线程分配。 当您将设置`affinity mask`为 0 （默认值），Microsoft Windows 2000 或 Windows Server 2003 计划算法设置线程的关联。 如果将 `affinity mask` 设置为任一非零值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联将把该值解释为一个位掩码，用于指定可选的处理器。  
   
  通过防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程在某个特定的处理器上运行，Microsoft Windows 2000 或 Windows Server 2003 可以更好地评估 Windows 专用的系统进程处理。 例如，在运行两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（实例 A 和实例 B）的具有 8 个 CPU 的服务器上，系统管理员可以使用关联掩码选项将第一组的 4 个 CPU 分配给实例 A，将第二组的 4 个 CPU 分配给实例 B。若要配置 32 个以上的处理器，应同时设置关联掩码和 affinity64 掩码。 `affinity mask` 的值如下：  
   
@@ -118,7 +118,7 @@ GO
 |127|01111111|0、1、2、3、4、5 和 6|  
 |255|11111111|0、1、2、3、4、5、6 和 7|  
   
- affinity mask 选项是一个高级选项。 如果使用 sp_configure 系统存储过程来更改该设置，你可以更改`affinity mask`仅当**显示高级选项**设置为 1。 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令后，新的设置将立即生效，且不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ affinity mask 选项是一个高级选项。 如果使用 sp_configure 系统存储过程来更改该设置，可以更改`affinity mask`仅当**显示高级选项**设置为 1。 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令后，新的设置将立即生效，且不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 ## <a name="non-uniform-memory-access-numa"></a>非一致性内存访问 (NUMA)  
  当使用基于硬件的非一致性内存访问 (NUMA) 并设置了关联掩码时，节点中的每个计划程序都将关联到它自己的 CPU。 未设置关联掩码时，每个计划程序都关联到 NUMA 节点内的 CPU 组，映射到 NUMA 节点 N1 的计划程序可对节点中的任何 CPU 计划工作，但是不能对与其他节点关联的 CPU 计划工作。  

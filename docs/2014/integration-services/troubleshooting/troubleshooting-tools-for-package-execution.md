@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 37c82e4f4977e9749413a29fd539379476b29c47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b6b76ce027321eb681a2cd6872c1b24050c569f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329907"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用于在包完成和部署以后的执行过程中进行故障排除的功能和工具。  
@@ -56,11 +56,11 @@ ms.locfileid: "36018670"
   
 -   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，您还可以添加说明性信息以便更容易分析错误输出。  
   
-     **添加的错误描述**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[脚本组件 Enhancing an Error Output](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+     **添加错误说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[脚本组件增强错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
-     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 有关如何使用此方法的示例，请参阅[将错误列名称添加到错误输出](http://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上。  
+     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 有关如何使用此方法的示例，请参阅[到错误输出中添加错误列名](http://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上的。  
   
-    1.  **创建查找表的列名称**。 创建另一个应用程序，该应用程序使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 对每个已保存的包、包中的每个数据流、数据流中的每个对象以及数据流对象中的每个输入和输出进行迭代。 应用程序应当将每一列的列 ID 和名称以及父数据流任务的 ID 和包的 ID 持久化到查找表。  
+    1.  **创建查找表的列名称的**。 创建另一个应用程序，该应用程序使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 对每个已保存的包、包中的每个数据流、数据流中的每个对象以及数据流对象中的每个输入和输出进行迭代。 应用程序应当将每一列的列 ID 和名称以及父数据流任务的 ID 和包的 ID 持久化到查找表。  
   
     2.  **将列名称添加到输出**。 将查找转换添加到错误输出中，此错误输出在上述步骤创建的查找表中查找列名。 查找可以使用错误输出中的列 ID、包 ID（在系统变量 System::PackageID 中）以及数据流任务的 ID（在系统变量 System::TaskID 中）。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36018670"
  有关详细信息，请参阅 [Troubleshooting Reports for Package Execution](troubleshooting-reports-for-package-execution.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>使用 SSISDB 视图对包执行进行故障排除  
- 提供了一些 SSISDB 数据库视图，您可以查询它们来监视包执行和其他操作信息。 有关详细信息，请参阅[监视有关包执行和其他操作](../performance/monitor-running-packages-and-other-operations.md)。  
+ 提供了一些 SSISDB 数据库视图，您可以查询它们来监视包执行和其他操作信息。 有关详细信息，请参阅[监视包执行和其他操作](../performance/monitor-running-packages-and-other-operations.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>使用日志记录对包执行进行故障排除  
  通过启用日志记录，您可以跟踪正在运行的包中所发生的大部分问题。 日志提供程序捕获有关指定事件的信息供以后分析，并且以数据库表、平面文件、XML 文件或支持的其他输出格式保存该信息。  
@@ -97,9 +97,9 @@ ms.locfileid: "36018670"
 ## <a name="troubleshoot-run-time-validation-issues"></a>针对运行时验证问题进行故障排除  
  有时在包中前一个任务执行完成之前，您也许不能连接到数据源，或者无法验证包的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括以下功能，可帮助您避免由这些情况导致的验证错误：  
   
--   **配置加载包时无效包元素的 DelayValidation 属性**。 你可以设置`DelayValidation`到`True`其配置不是有效，以防止加载包时出现验证错误的包元素。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 `DelayValidation`属性可以在包级别或级别的各个任务和容器的包包括启用。  
+-   **配置加载包时无效包元素的 DelayValidation 属性**。 可以设置`DelayValidation`到`True`其配置不是有效的以防止验证错误时加载包的包元素。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 `DelayValidation`属性可以在包级别或级别的各个任务和容器的包中包含的启用。  
   
-     `DelayValidation`属性可以设置数据流任务，但不是能在单个数据数据流组件。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值是`false`，该组件不知道的外部数据源的元数据更改。 当设置为`true`、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>属性有助于避免由于锁定在数据库中，尤其是在包使用事务时导致的阻塞问题。  
+     `DelayValidation`属性可以设置对数据流任务，但不能对单个数据流组件。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值是`false`，该组件不能识别外部数据源的元数据更改。 如果设置为`true`，则<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>属性可帮助避免由于包使用事务时，尤其是在数据库中，锁定导致的阻塞问题。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>运行时权限问题的故障排除  
  如果您在尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行已部署的包时遇到错误，则代理所使用的帐户可能不具备必需的权限。 有关如何对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760)（从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行）。 有关如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行包的详细信息，请参阅[包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。  

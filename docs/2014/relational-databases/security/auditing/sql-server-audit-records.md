@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f62cf2b44af1b34b87ce5f08e993135d1447ed59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: a55513bbe857d1d3ea48371d1e147d54ce8d3326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253771"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的用户。  
@@ -33,7 +32,7 @@ ms.locfileid: "36127498"
 |**event_time**|触发可审核操作的日期/时间。|`datetime2`|是|  
 |**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|`int`|是|  
 |**action_id**|操作的 ID<br /><br /> 提示：若要将 **action_id** 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|`varchar(4)`|是|  
-|**succeeded**|指示触发事件的操作是否成功|`bit` – 1 = 成功，0 = 失败|是|  
+|**succeeded**|指示触发事件的操作是否成功|`bit` – 1 = success,0 = Fail|是|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|`bigint`|“否”|  
 |**is_column_permission**|指示列级别权限的标志|`bit` – 1 = true，0 = False|“否”|  
 |**session_id**|发生该事件的会话的 ID。|`int`|是|  

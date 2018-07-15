@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e89c4b2b2026be6e90d02f38453f6e7ddd367226
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 1d4ea909ce3682498755ab45fd3336e2586e539b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299787"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>导出到图像文件（报表生成器和 SSRS）
   图像呈现扩展插件可以将报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。 本主题提供了特定于图像呈现器的信息并说明了呈现规则的例外情况。  

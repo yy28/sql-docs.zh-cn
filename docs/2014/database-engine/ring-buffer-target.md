@@ -1,5 +1,5 @@
 ---
-title: 环缓冲区目标 |Microsoft 文档
+title: 环形缓冲区目标 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events], ring buffer target
 - ring buffer target [SQL Server extended events]
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbba7b6da37f292d31d985921d25be5cabc51798
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b60f4e3c5ca8d207d3eac23047c8cdefc99d9f66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273073"
 ---
 # <a name="ring-buffer-target"></a>环形缓冲区目标
   环形缓冲区目标用于在内存中暂时容纳事件数据。 此目标可通过以下两种模式中的一种来管理事件。  

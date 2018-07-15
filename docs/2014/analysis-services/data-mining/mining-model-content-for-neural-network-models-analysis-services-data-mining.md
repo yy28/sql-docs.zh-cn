@@ -1,5 +1,5 @@
 ---
-title: 神经网络模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 神经网络模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
 - neural network algorithms [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d85b7b9ce95b0dc5a24ece14aa3a1e1203f49b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280453"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 神经网络算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "36123745"
   
 -   每个后续节点各包含一个不同的“子网”(NODE_TYPE = 17)。 每个子网始终包含一个隐藏层 (NODE_TYPE = 19) 以及该子网的输出层 (NODE_TYPE = 20)。  
   
- ![结构的神经网络模型内容](../media/modelcontentstructure-nn.gif "的神经网络模型内容的结构")  
+ ![神经网络模型内容结构](../media/modelcontentstructure-nn.gif "的神经网络模型内容结构")  
   
  输入层中的信息简单明了：每个输入层的顶端节点 (NODE_TYPE = 18) 充当输入节点 (NODE_TYPE = 21) 集合的组织程序。 下表说明了输入节点的内容。  
   

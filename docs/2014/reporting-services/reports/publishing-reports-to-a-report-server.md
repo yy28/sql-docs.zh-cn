@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -26,16 +26,16 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 30571f0eaa50961fd9d96c3e1c13b4c57da774d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98482f6ad6e2f98120603c28cdc40181e37ef9a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273953"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
-  设计和测试报表或报表的设置，你可以使用中的内置部署功能后[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]若要将报表发布到报表服务器。 您可以发布单个报表或报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语*部署*，而不是术语*发布*。 这两个术语可以互换。  
+  设计和测试报表或一组报表，可以使用中的内置部署功能后[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将报表发布到报表服务器。 您可以发布单个报表或报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语*部署*，而不是术语*发布*。 这两个术语可以互换。  
   
  发布报表之前，您必须具有相应的权限。 权限是通过基于角色的安全性确定的，而安全性由报表服务器管理员定义。 发布操作通常由“发布者”角色授予。  
   
@@ -46,10 +46,10 @@ ms.locfileid: "36128911"
   
  默认情况下，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供三种配置： DebugLocal、 Debug 和 Release。 默认配置为 DebugLocal。 通常，使用 DebugLocal 配置可以在本地预览窗口中查看报表，使用 Debug 配置可以将报表发布到测试服务器，使用 Release 配置可以将报表发布到生产服务器。 标准工具栏上的解决方案配置下拉列表中显示了活动的配置。 若要使用其他配置，请从列表中进行选择。  
   
- 报告环境中可能安装了多个报表服务器和不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以创建多个配置，然后根据部署方案选择不同的配置。 有关详细信息，请参阅[部署和版本支持 SQL Server Data Tools 中&#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)和[设置部署属性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)。  
+ 报告环境中可能安装了多个报表服务器和不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以创建多个配置，然后根据部署方案选择不同的配置。 有关详细信息，请参阅[部署和版本支持 SQL Server Data Tools 中&#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)并[设置部署属性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)。  
   
 ## <a name="publishing-reports"></a>发布报表  
- 您可以发布单个报表，也可以发布包含多个报表的报表服务器项目。 有关发布的报表的说明，请参阅[发布报表](../publish-reports.md)。  
+ 您可以发布单个报表，也可以发布包含多个报表的报表服务器项目。 有关发布报表的说明，请参阅[发布的报表](../publish-reports.md)。  
   
 ### <a name="publishing-a-single-report"></a>发布单个报表  
  如果不希望发布项目中的所有报表，可以选择只发布单个报表。 为此，请选择一种部署报表的配置（例如，“发布”配置），然后右键单击相应的报表，再单击“部署”。  

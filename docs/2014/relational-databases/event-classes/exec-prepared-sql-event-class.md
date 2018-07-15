@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exec Prepared SQL event class
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 174f9c8dc4b051e077c68b2f13be2443d785ceef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d91f0e07f454ee730eda1411aa90d97a0991b0af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320273"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL 事件类
   Exec Prepared SQL 事件类指示 SqlClient、ODBC、OLE DB 或 DB-Library 已执行准备好的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
