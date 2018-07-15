@@ -1,5 +1,5 @@
 ---
-title: 第 2 课： 定义和部署多维数据集 |Microsoft 文档
+title: 第 2 课： 定义和部署多维数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 527781bac1cdab44c0fd750bfb939ec80ae145a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077d422f47fa62083420713b580100afcccf1712
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284123"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 课：定义和部署多维数据集
   在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义数据源视图后，便可以定义一个初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集。  
@@ -54,7 +54,7 @@ ms.locfileid: "36138541"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [多维建模&#40;通恒教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [多维建模&#40;Adventure Works 教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)   
  [配置 Analysis Services 项目属性&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   

@@ -1,5 +1,5 @@
 ---
-title: Restore 元素 (XMLA) |Microsoft 文档
+title: Restore 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
 caps.latest.revision: 26
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e8eca537c61be64de403b4ad08bb0e64040937c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 682806680604606d54c133617b2150b975cf8c03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275653"
 ---
 # <a name="restore-element-xmla"></a>Restore 元素 (XMLA)
-  还原[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从备份文件的数据库。  
+  还原[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库从备份文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36129966"
 ## <a name="remarks"></a>Remarks  
  `Restore`命令还原[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定数据库`DatabaseName`从备份文件和 （可选） 从远程备份文件还原远程分区的元素。  
   
- 具体取决于在备份文件中，存储的对象所使用的存储模式`Restore`命令还原信息，如以下表中列出。  
+ 根据备份文件中存储的对象使用的存储模式`Restore`命令还原下表中列出的信息。  
   
 |存储模式|信息|  
 |------------------|-----------------|  
@@ -81,9 +81,9 @@ ms.locfileid: "36129966"
 |混合 OLAP (HOLAP)|聚合和元数据|  
 |关系 OLAP (ROLAP)|元数据|  
   
- 期间`Restore`命令时，排他锁所在[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定数据库`DatabaseName`元素。 该锁被释放后`Restore`命令已完成。  
+ 期间`Restore`命令时，排他锁置于[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定数据库`DatabaseName`元素。 该锁被释放后`Restore`命令是否已完成。  
   
- 有关备份和还原数据库的详细信息，请参阅[Backing Up、 正在还原，和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 有关备份和还原数据库的详细信息，请参阅[备份、 还原和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 > [!IMPORTANT]  
 >  对于每个备份文件，运行还原命令的用户必须对每个文件的指定备份位置具有读取权限。 若要还原未在服务器上安装的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库，用户还必须是此 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的服务器角色成员。 若要覆盖 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库，用户必须具有以下角色之一： [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的服务器角色成员，或对要还原的数据库拥有完全控制（管理员）权限的数据库角色成员。  
@@ -95,7 +95,7 @@ ms.locfileid: "36129966"
  [备份元素&#40;XMLA&#41;](backup-element-xmla.md)   
  [批处理元素&#40;XMLA&#41;](batch-element-xmla.md)   
  [并行元素&#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
- [同步元素&#40;XMLA&#41;](synchronize-element-xmla.md)   
+ [Synchronize 元素&#40;XMLA&#41;](synchronize-element-xmla.md)   
  [命令&#40;XMLA&#41;](xml-elements-commands.md)  
   
   

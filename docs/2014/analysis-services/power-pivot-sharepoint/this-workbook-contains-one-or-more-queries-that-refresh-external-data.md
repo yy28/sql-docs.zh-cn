@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdc5bd062e7b98a9ecea3411cdd9565d9c68c95d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29190b58267181a028b2a4f13343f0e8400effb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295657"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此工作簿包含一个或多个用于刷新外部数据的查询。
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 检测到连接信息，则将显示此警告，并提示您为此工作簿启用或禁用查询。  

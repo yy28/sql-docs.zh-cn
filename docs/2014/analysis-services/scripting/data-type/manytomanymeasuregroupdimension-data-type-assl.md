@@ -1,5 +1,5 @@
 ---
-title: ManyToManyMeasureGroupDimension 数据类型 (ASSL) |Microsoft 文档
+title: ManyToManyMeasureGroupDimension 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManyToManyMeasureGroupDimension data type
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14233f2e39771174b4d1b15acdeafb76bc76f32d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96a6df09c6474994a38930fa07c0a7b5f73cfd61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308417"
 ---
 # <a name="manytomanymeasuregroupdimension-data-type-assl"></a>ManyToManyMeasureGroupDimension 数据类型 (ASSL)
   定义一个派生的数据类型，该类型表示多对多维度和度量值组之间的关系。  
@@ -62,7 +62,7 @@ ms.locfileid: "36028668"
 |派生元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

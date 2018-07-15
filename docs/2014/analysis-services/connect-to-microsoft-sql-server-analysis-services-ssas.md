@@ -1,5 +1,5 @@
 ---
-title: 连接到 Microsoft SQL Server Analysis Services (SSAS) |Microsoft 文档
+title: 连接到 Microsoft SQL Server Analysis Services (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserveras.f1
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 800df54ac7fedcad048ada667376cead7447fd53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43a7dd31c52c81f7a2bfcbf87d1a8df3f6740081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323657"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>连接到 Microsoft SQL Server Analysis Services (SSAS)
-  此页**表导入向导**使您能够指定设置以从 Microsoft SQL Server Analysis Services 多维数据集或托管在 SharePoint 的 PowerPivot 工作簿导入数据。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
+  此页**表导入向导**使您能够指定用于从 Microsoft SQL Server Analysis Services 多维数据集或者 SharePoint 承载的 PowerPivot 工作簿导入数据的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
  若要连接到数据源，必须在计算机上安装适当的访问接口。  
   

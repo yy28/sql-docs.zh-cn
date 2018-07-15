@@ -1,5 +1,5 @@
 ---
-title: 货币换算 (Analysis Services) |Microsoft 文档
+title: 货币换算 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289823"
 ---
 # <a name="currency-conversions-analysis-services"></a>货币换算 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
@@ -58,7 +58,7 @@ ms.locfileid: "36028909"
  货币维度  
  一个为之定义了以下设置的数据库维度：  
   
--   `Type`维度属性设置为货币。  
+-   `Type`维度的属性设置为货币。  
   
 -   该维度的一个特性的 `Type` 属性被设置为 CurrencyName。  
   
@@ -72,18 +72,18 @@ ms.locfileid: "36028909"
   
 -   时间维度和比率度量值组之间的常规维度关系。  
   
--   作为一个可选项，还可以将 `Type` 属性设置为 ExchangeRate。 商业智能向导使用的货币和时间维度的关系来标识可能的比率度量值组，而设置`Type`属性设置为 exchangerate 可允许客户端应用程序更轻松地标识比率度量值组。  
+-   作为一个可选项，还可以将 `Type` 属性设置为 ExchangeRate。 商业智能向导使用的关系和货币与时间维度，以识别可能的比率度量值组，而设置`Type`属性设置为 exchangerate 可允许客户端应用程序能够更轻松地标识比率度量值组。  
   
 -   一个或多个度量值，用来代表比率度量值组中包含的汇率。  
   
  报表货币维度  
  由商业智能向导在定义了货币换算后定义的维度，它包含用于货币换算的报表货币。 报表货币维度基于一个命名查询，此命名查询定义于和比率度量值组相关联的货币维度所基于的数据源视图中，来自货币维度的维度主表。 该维度被定义了以下设置：  
   
--   `Type`维度属性设置为货币。  
+-   `Type`维度的属性设置为货币。  
   
--   `Type`的维度的键属性的属性设置为 CurrencyName。  
+-   `Type`属性的维度的键属性设置为 CurrencyName。  
   
--   `Type`属性在维度中的一个属性设置为 CurrencyDestination，并且绑定到的属性的列包含表示货币换算为报表货币的货币标识符。  
+-   `Type`的维度中的一个特性的属性设置为 CurrencyDestination，并且绑定到该属性的列包含代表用于货币换算的报表货币的货币标识符。  
   
 ## <a name="defining-currency-conversions"></a>定义货币换算  
  您可以使用商业智能向导来为多维数据集定义货币换算功能，也可以使用 MDX 脚本来手动定义货币换算。  

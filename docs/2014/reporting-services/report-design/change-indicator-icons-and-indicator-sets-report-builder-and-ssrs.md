@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d681a7b5e9c72283d924970d843582bb82b8522c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bafdcf47836f05248d6820622ce12905a87637f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280483"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>更改指示器图标和指示器集（报表生成器和 SSRS）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了预先配置的指示器集，这可能不能始终有效地描绘了你的数据和适用于传递的报表。 本主题提供的过程介绍如何更改指示器图标的外观，以及如何更改指示器集以便包括不同的指示器图标或者更多或更少的指示器图标。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供预先配置的指示器集，它们可能不总是能够高效地描绘您的数据以及适合于传递的报表。 本主题提供的过程介绍如何更改指示器图标的外观，以及如何更改指示器集以便包括不同的指示器图标或者更多或更少的指示器图标。  
   
  可以通过使用表达式设置颜色之类的选项。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
   

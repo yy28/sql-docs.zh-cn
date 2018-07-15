@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - HierarchyID
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c513aa5fb2c1f42b0eb2fa6c82deaac96c49d3ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 86aebcd1b6545782fed51991e3fe25e645c2e6c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321887"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>使用分层方法填充层次结构表
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 有 8 名在市场营销部门工作的雇员。 雇员的层次结构如下所示：  
@@ -68,7 +68,7 @@ ms.locfileid: "36027402"
   
 ### <a name="to-insert-a-subordinate-employee"></a>插入下属雇员  
   
-1.  **Sariya** 是 **David**的下属。 要插入**Sariya 的**节点，必须创建一个对应**OrgNode**数据类型的值`hierarchyid`。 下面的代码创建一个数据类型为 `hierarchyid` 的变量，并用表的根 OrgNode 值填充此变量。 然后使用该变量和 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法插入从属节点行。 `GetDescendant` 采用两个参数。 检查以下选项的参数值：  
+1.  **Sariya** 是 **David**的下属。 要插入**Sariya**节点，必须创建相应**OrgNode**数据类型的值`hierarchyid`。 下面的代码创建一个数据类型为 `hierarchyid` 的变量，并用表的根 OrgNode 值填充此变量。 然后使用该变量和 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法插入从属节点行。 `GetDescendant` 采用两个参数。 检查以下选项的参数值：  
   
     -   如果父级为 NULL， `GetDescendant` 返回 NULL。  
   

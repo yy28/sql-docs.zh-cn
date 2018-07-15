@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbdeployment.settings.f1
 - sql12.swb.dbdeployment.progress.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 122fb199052592bebb0f201358f6ff4c25149fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ec4cff220e8e3e08c71eb5a43986817c3c434332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199557"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
   使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
@@ -133,13 +133,13 @@ ms.locfileid: "36138455"
   
 2.  打开`ServerConnection`对象，并连接到同一实例。  
   
-3.  使用`Export`方法`Microsoft.SqlServer.Management.Dac.DacStore`类型将数据库导出到 BACPAC 文件。 指定要导出的数据库的名称以及指向将用于放置 BACPAC 文件的文件夹的路径。  
+3.  使用`Export`方法的`Microsoft.SqlServer.Management.Dac.DacStore`类型将数据库导出到 BACPAC 文件。 指定要导出的数据库的名称以及指向将用于放置 BACPAC 文件的文件夹的路径。  
   
 4.  创建一个 SMO Server 对象，并将该对象设置为目标实例或服务器。  
   
 5.  打开`ServerConnection`对象，并连接到同一实例。  
   
-6.  使用`Import`方法`Microsoft.SqlServer.Management.Dac.DacStore`类型导入 BACPAC。 指定导出创建的 BACPAC 文件。  
+6.  使用`Import`方法的`Microsoft.SqlServer.Management.Dac.DacStore`类型导入 BACPAC。 指定导出创建的 BACPAC 文件。  
   
 ## <a name="see-also"></a>请参阅  
  [数据层应用程序](data-tier-applications.md)   

@@ -1,5 +1,5 @@
 ---
-title: 索引元素 (DTA) |Microsoft 文档
+title: 索引元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f9391fb8b85e551f2f1904e164c7d86f2dcacc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9f2efa4761248c94a6db7a2747184808ffce3d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299357"
 ---
 # <a name="index-element-dta"></a>索引元素 (DTA)
   包含为用户指定的配置创建或删除的索引的信息。  

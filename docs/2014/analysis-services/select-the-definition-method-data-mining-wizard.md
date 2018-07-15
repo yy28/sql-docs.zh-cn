@@ -1,5 +1,5 @@
 ---
-title: 选择定义方法 （数据挖掘向导） |Microsoft 文档
+title: 选择定义方法 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdefinition.f1
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e7dd71c94eabbe8e1d491516a9555a0ca0471b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7213f8bcec9a72c5e319631f7cbf6997b6b7ab7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287985"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>选择定义方法（数据挖掘向导）
   可以使用 **“选择定义方法”** 页选择用于创建新挖掘模型的来源。 因为基于多维数据集的挖掘结构与基于关系数据源的挖掘结构所要求的构造步骤不同，所以根据您的选择情况，您使用该向导时所经过的步骤也会不同。  

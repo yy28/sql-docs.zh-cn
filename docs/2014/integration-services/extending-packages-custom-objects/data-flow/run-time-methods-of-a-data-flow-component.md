@@ -20,13 +20,13 @@ ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 669b8868113c0cf38eec6a8f628be415eb400452
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd0ba6f5043eb05120638b7bc93f82a2d816dc05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302239"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>数据流组件的运行时方法
   在运行时，数据流任务将检查一系列组件、准备执行计划以及管理执行工作计划的工作线程池。 任务先从源加载数据行，再通过转换处理这些行，然后将它们保存到目标。  
@@ -213,7 +213,7 @@ End Sub
   
  有关开发用于接收输入缓冲区中的行的组件的详细信息，请参阅[开发自定义目标组件](../../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)和[开发具有同步输出的自定义转换组件](../../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [数据流组件的设计时方法](design-time-methods-of-a-data-flow-component.md)  

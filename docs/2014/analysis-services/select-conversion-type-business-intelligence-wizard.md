@@ -1,5 +1,5 @@
 ---
-title: 选择换算类型 （商业智能向导） |Microsoft 文档
+title: 选择换算类型 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba4018a6ce30e4e7de4e0ca3e79ae07007015650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267343"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>选择换算类型（商业智能向导）
   可以使用 **“选择换算类型”** 页，为使用多种货币存储的事务定义本地货币和报表货币之间的关系。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。 报表货币是转换 **“选择度量值”** 页中所选事务时使用的货币。  

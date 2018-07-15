@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324547"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>步骤 2：创建损坏的文件
   为阐释如何配置和处理转换错误，必须创建一个在处理时导致组件失败的示例平面文件。  
@@ -38,12 +38,12 @@ ms.locfileid: "36027928"
   
     3.  单击 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
   
-2.  使用文本编辑器的查找和替换功能，若要查找的所有实例`VEB`和将其替换为`BAD`。  
+2.  使用文本编辑器的查找和替换功能，查找的所有实例`VEB`并将其替换为`BAD`。  
   
-3.  在其他示例数据文件所在的文件夹，保存已修改的文件作为`Currency_BAD.txt`。  
+3.  在其他示例数据文件所在的文件夹，将保存已修改的文件作为`Currency_BAD.txt`。  
   
     > [!IMPORTANT]  
-    >  请确保`Currency_BAD.txt`与另一个示例数据文件保存同一个文件夹。  
+    >  请确保`Currency_BAD.txt`与其他示例数据文件保存在同一文件夹。  
   
 4.  关闭文本编辑器。  
   

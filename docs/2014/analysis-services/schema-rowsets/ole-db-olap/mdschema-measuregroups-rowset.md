@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEASUREGROUPS 行集 |Microsoft 文档
+title: MDSCHEMA_MEASUREGROUPS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUPS rowset
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 046674dc7c579a99e3d9fd90a86c466001c270c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7846fa9eb88a91a945c787cfec0fe19d0c520cf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300977"
 ---
 # <a name="mdschemameasuregroups-rowset"></a>MDSCHEMA_MEASUREGROUPS 行集
   介绍数据库中的度量值组。  
   
 ## <a name="rowset-columns"></a>行集列  
- `MDSCHEMA_MEASUREGROUPS`行集包含以下各列。  
+ `MDSCHEMA_MEASUREGROUPS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  

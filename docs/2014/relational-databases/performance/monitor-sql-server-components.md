@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a2351bd03a362e555ba285d81ff3660ef8058eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 986819015191d7fbb1f07738d25b3dab489e185b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290633"
 ---
 # <a name="monitor-sql-server-components"></a>监视 SQL Server 组件
   监视操作非常重要，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在动态环境中提供服务。 应用程序中的数据在变化。 用户需要的访问类型在变化。 用户连接的方式在变化。 甚至，访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序的类型也可能在变化，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动管理系统级资源（如内存和磁盘空间），以便最小化对广泛系统级手动优化的需要。 管理员可以通过监视来标识性能趋势以确定是否有必要进行更改。  

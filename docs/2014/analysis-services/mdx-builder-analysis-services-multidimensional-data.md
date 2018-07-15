@@ -1,5 +1,5 @@
 ---
-title: MDX 生成器 (Analysis Services-多维数据) |Microsoft 文档
+title: MDX 生成器 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
 helpviewer_keywords:
 - MDX Builder dialog box
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1df3416ee7b7016cbc6db8a1d694eadfdbc33a5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bc55eb874f0d404c1d4f330e0c0841a8183157
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308537"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 生成器（Analysis Services -多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“MDX 生成器”对话框生成多维表达式 (MDX) 表达式。 通过在“角色设计器”的“单元数据”页上单击“允许读取多维数据集内容”选项、“允许根据单元安全性读取单元内容”选项或“允许读取和写入多维数据集内容”选项的“编辑 MDX”省略号按钮 (**…**)，可以显示“MDX 生成器”对话框。  
@@ -39,6 +39,6 @@ ms.locfileid: "36028041"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [单元格数据&#40;角色设计器&#41; &#40;Analysis Services-多维数据&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
+ [单元数据&#40;角色设计器&#41; &#40;Analysis Services-多维数据&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
   
   

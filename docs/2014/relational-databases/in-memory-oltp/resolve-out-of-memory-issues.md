@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b57ae0faef29326a510dddbbfe049c1c9b4a9b3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253979"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 相比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 随着需求的不断增加，为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 安装和分配的内存量可能会不足。 这时内存就会不足。 本主题介绍如何从 OOM 情况恢复。 有关可帮助你避免很多 OOM 情况的指南，请参阅 [内存使用情况的监视和故障排除](monitor-and-troubleshoot-memory-usage.md) 。  

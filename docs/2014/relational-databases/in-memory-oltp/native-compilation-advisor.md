@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a3aef7b96a5cd15f8bb22340cc2feeaf025b4072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1f156bee0da5d94043fa0ab04e5b74acdcd7f4f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256366"
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
-  事务性能报表工具 (请参阅[确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 会通知你有关哪些如果受益数据库中的解释型存储的过程移植后使用本机编译。 在您标识要移植到使用本机编译的存储过程后，可以使用本机编译顾问来帮助您将已解释的存储过程迁移到本地编译。 有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)。  
+  事务性能报告工具 (请参阅[确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 会通知你哪些解释型存储的过程在数据库中受益如果移植到使用本机编译。 在您标识要移植到使用本机编译的存储过程后，可以使用本机编译顾问来帮助您将已解释的存储过程迁移到本地编译。 有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)。  
   
  开始时，连接至包含已解释的存储过程的实例。 您可以连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 但是，如果您想要使用该顾问执行迁移操作，则必须连接到启用了内存中 OLTP 功能的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 有关内存中 OLTP 要求的详细信息，请参阅 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)。  
   

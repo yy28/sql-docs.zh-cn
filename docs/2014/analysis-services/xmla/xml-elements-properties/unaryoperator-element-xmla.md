@@ -1,5 +1,5 @@
 ---
-title: UnaryOperator 元素 (XMLA) |Microsoft 文档
+title: UnaryOperator 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - UnaryOperator element
 ms.assetid: 4dc9cfbe-6f8b-42bc-8d3a-42f48ca5d299
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c4e40b91c8d8f3d533362e3d938d99c351ae4f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7d8d0edb8231a27a2eb52241298d29ed271f86d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306080"
 ---
 # <a name="unaryoperator-element-xmla"></a>UnaryOperator 元素 (XMLA)
-  包含由父属性成员的一元运算符[属性](attribute-element-xmla.md)元素。  
+  包含表示由父属性成员的一元运算符[特性](attribute-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36027752"
   
 ## <a name="see-also"></a>请参阅  
  [插入元素&#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [更新元素&#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
+ [Update 元素&#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

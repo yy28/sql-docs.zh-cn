@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 分析死锁 |Microsoft 文档
+title: 使用 SQL Server Profiler 分析死锁 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
 - Profiler [SQL Server Profiler], deadlocks
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30ac6e2bf9ecade850ef28169ce1e4c9ebdb8ce8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: afc7eb593d226a71e761b1197fb1bab6eeb13517
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308897"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
@@ -51,7 +51,7 @@ ms.locfileid: "36028924"
  数据库对象。例如，表、索引或行。  
   
  边  
- 进程和资源之间的关系。 A`request`进程等待资源时发生边缘。 `owner`资源等待进程时发生边缘。 边说明中包括了锁模式。 例如， **“模式: X”**。  
+ 进程和资源之间的关系。 一个`request`边缘进程等待资源时出现。 `owner`资源等待进程时发生边缘。 边说明中包括了锁模式。 例如， **“模式: X”**。  
   
 ## <a name="deadlock-process-node"></a>死锁进程节点  
  在等待图形中，进程节点包含有关进程的信息。 下表介绍了进程的组件。  

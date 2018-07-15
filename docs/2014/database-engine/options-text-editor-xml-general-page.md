@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器的 XML-常规页） |Microsoft 文档
+title: 选项 （文本编辑器-XML-常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 caps.latest.revision: 20
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5d686db29cd4fe7db3c76be22c67a2aacbec3d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a6a5f53bbccbd0d30aaada30366d01af23a3a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322777"
 ---
 # <a name="options-text-editor---xml---general-page"></a>选项（“文本编辑器”-“XML”-“常规”页）
   使用此对话框可以更改 XML 编辑器（用于编辑 XML 文档）的常规编辑行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **XML** 子文件夹，再单击 **“常规”**。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多个位置设置选项  
- 选项也可以在设置 XML 编辑器**所有语言常规**对话框。 如果使用 **“所有语言”** 对话框来设置其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器（例如 DMX 或 MDX 编辑器）的其他选项，则必须使用此对话框重置 XML 编辑器选项。  
+ 此外可以设置的 XML 编辑器选项**所有语言常规**对话框。 如果使用 **“所有语言”** 对话框来设置其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器（例如 DMX 或 MDX 编辑器）的其他选项，则必须使用此对话框重置 XML 编辑器选项。  
   
 ## <a name="statement-completion"></a>语句结束  
  **自动列出成员**  
@@ -40,7 +40,7 @@ ms.locfileid: "36027964"
  选中此复选框后，在编辑器中，当前声明或过程的完整语法会显示在插入点的左侧，并显示其所有可用参数。 下一个可分配参数以粗体显示。  
   
 ## <a name="settings"></a>“设置”  
- **启用虚拟空间**  
+ **启用虚空格**  
  如果选中此复选框，将在每个代码行末尾插入空格。 如果选中此复选框，可将注释始终定位在代码旁的同一位置。  
   
  **自动换行**  

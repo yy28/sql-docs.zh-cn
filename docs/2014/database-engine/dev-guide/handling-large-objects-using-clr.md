@@ -1,5 +1,5 @@
 ---
-title: 处理使用 CLR 的大型对象 |Microsoft 文档
+title: 处理大型对象使用 CLR |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cb48a2c342d24bd4d7df12dc3fd7759ffb06e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310347"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 处理大型对象
   SQL Server 的 `HandlingLOBUsingCLR` 示例说明了如何通过使用公共语言运行时 (CLR) 存储过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与服务器可访问的文件系统之间传输大型对象 (LOB)。 本示例说明了如何在服务器端代码中访问文件，以及如何从基于 CLR 的存储过程中调用动态查询和存储过程。 此示例还说明了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 注册和注销 CLR 方法和程序集。  
@@ -53,7 +53,7 @@ ms.locfileid: "36026607"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，你必须`ALTER SETTINGS`服务器级别权限，该权限的成员隐式具有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -578,7 +578,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) 通过执行存储的过程中测试该示例。  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) 通过执行存储的过程测试该示例。  
   
 ```  
 USE AdventureWorks  

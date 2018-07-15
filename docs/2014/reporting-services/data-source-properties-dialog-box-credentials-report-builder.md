@@ -1,5 +1,5 @@
 ---
-title: 数据源属性对话框中，凭据 （报表生成器） |Microsoft 文档
+title: 数据源属性对话框中，凭据 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 237e1c9ef26c5dba838fa8071b2dce7293f2077a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238587"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>“数据源属性”对话框 -&gt;“凭据”（报表生成器）
   在 **“数据源属性”** 对话框中选择 **“凭据”** 可以显示和修改用于连接到报表中的嵌入数据源的凭据。 您所提供的凭据用于访问数据源以便预览报表。 有关凭据的详细信息，请参阅 [在报表生成器中指定凭据](../../2014/reporting-services/specify-credentials-in-report-builder.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "36138365"
 ## <a name="see-also"></a>请参阅  
  [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [“数据源属性”对话框 ->“常规”（报表生成器）](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
- [添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

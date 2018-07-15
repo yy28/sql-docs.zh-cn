@@ -1,5 +1,5 @@
 ---
-title: TableBinding 数据类型 (ASSL) |Microsoft 文档
+title: TableBinding 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220247"
 ---
 # <a name="tablebinding-data-type-assl"></a>TableBinding 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示与表的绑定。  
@@ -77,16 +77,16 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- 即使计算表达式使用限定的表名（例如 Sales.Qty），该表达式也仍然适用。 这同样适用如果表已改为通过某些查询"选择..."将替换为 上面的 FROM 子句将变为"从 SELECT...As Sales”。  
+ 即使计算表达式使用限定的表名（例如 Sales.Qty），该表达式也仍然适用。 当用某些查询“SELECT ”代替该表时，也同样适用，但 FROM 子句将变为“FROM SELECT ...As Sales”。  
   
- 有关详细信息`Binding`类型，包括 Analysis Services 脚本语言 (ASSL) 类型的对象表`Binding`和的继承层次结构`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 有关详细信息`Binding`类型，包括类型的 Analysis Services 脚本语言 (ASSL) 对象表`Binding`和的继承层次结构`Binding`类型，请参阅[绑定数据类型&#40;&#41;](binding-data-type-assl.md).  
   
- ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.TableBinding>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.TableBinding>。  
   
 ## <a name="see-also"></a>请参阅  
- [绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md)   
+ [Binding 数据类型&#40;ASSL&#41;](binding-data-type-assl.md)   
  [数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   

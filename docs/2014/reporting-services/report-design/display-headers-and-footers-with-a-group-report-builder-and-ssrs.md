@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1870bc8fdff52294fa2430534a7aed0b0c96680
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6b8813ab6a1d623cf8578bb498ffa4435438c37c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315617"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
   您可以帮助控制是否在显示与 Tablix 数据区域中某个组相关联的动态行的同时显示静态行，如组头或组尾。  

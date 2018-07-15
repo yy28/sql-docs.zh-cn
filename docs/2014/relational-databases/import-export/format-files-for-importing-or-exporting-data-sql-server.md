@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], format files
 - bulk importing [SQL Server], format files
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65e3648640a1a6120d81bb6bbcc049e24b675caa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0e4097436b9e921b3bd0228fe98b399fdf1eade4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292727"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>用来导入或导出数据的格式化文件 (SQL Server)
   当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中大容量导入数据或从该表中大容量导出数据时，可以使用格式化文件  存储大容量导入数据或大容量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。  

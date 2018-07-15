@@ -1,5 +1,5 @@
 ---
-title: 中的表提示索引视图定义忽略在 80 兼容模式下，不允许在 90 模式下或更高版本 |Microsoft 文档
+title: 中的表提示索引视图定义在 80 兼容模式下将被忽略，不允许在 90 模式下或更高版本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query hints [SQL Server]
 - indexed views [SQL Server], query hints
 ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b56e965ecfcfc802457bfa3b5a78118afae5c531
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 93159a8c32f484fd9c734b4847dfd1e7fca854a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317427"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>在 80 兼容模式中将忽略索引视图定义中的表提示且在 90 或更高的模式中不允许表提示
   在 90 或更高的兼容模式中，不允许索引视图定义中的表提示。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的以下主题：“设计索引视图”、“创建索引视图”和“查询提示 ([!INCLUDE[tsql](../../includes/tsql-md.md)])”。  

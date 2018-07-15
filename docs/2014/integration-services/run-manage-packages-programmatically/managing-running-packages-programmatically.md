@@ -17,20 +17,20 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f07749d44644071bb5e7aab2a5f33759ce96cdb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719e734aeccc505253c75280e06895048ccff4fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283543"
 ---
 # <a name="managing-running-packages-programmatically"></a>以编程方式管理正在运行的包
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定哪些包当前正在运行。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了满足这些需求的方法和类。  
   
  有关监视包的详细信息，请参阅[包管理（SSIS 服务）](../service/package-management-ssis-service.md)。  
   
- 本主题中讨论的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 新项目中添加引用后，导入<xref:Microsoft.SqlServer.Dts.Runtime>具有命名空间`using`或`Imports`语句。  
+ 本主题中讨论的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 在新的项目中添加引用后，导入<xref:Microsoft.SqlServer.Dts.Runtime>具有命名空间`using`或`Imports`语句。  
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  
@@ -64,7 +64,7 @@ ms.locfileid: "36129912"
 ### <a name="stopping-a-running-package"></a>停止正在运行的包  
  可以调用 <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage.Stop%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage> 方法来请求停止包。 发出停止请求的时间和包实际停止的时间之间可能存在延迟。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [包管理（SSIS 服务）](../service/package-management-ssis-service.md)   

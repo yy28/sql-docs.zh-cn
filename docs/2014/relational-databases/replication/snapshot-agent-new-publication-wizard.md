@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.configuresnapshotagent.f1
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b267a3a7b0b271f4777724b8ee6ec44248df1409
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 342cbeb0e746090fd6a74cd897eb83a99f8d871d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305527"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>快照代理（新建发布向导）
   快照代理可以创建包含发布架构和数据（用于初始化新订阅）的文件。 默认情况下，在新建发布向导中创建发布之后，快照代理将立即运行。 此后，该代理将按照您指定的计划运行。 代理每次运行时是否创建新的快照文件取决于复制类型和所选择的选项。 有关详细信息，请参阅[创建并应用快照](create-and-apply-the-snapshot.md)。  

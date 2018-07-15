@@ -1,5 +1,5 @@
 ---
-title: 创建日期类型维度 |Microsoft 文档
+title: 创建日期类型维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f57269c2f2400b9ccf2e090fd0c0a97a21c9efc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315071"
 ---
 # <a name="create-a-date-type-dimension"></a>创建日期类型维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，时间维度是指其属性表示时间段（如年、半期、季度、月和天）的维度类型。 时间维度中的时间段可提供用于分析和报告的基于时间的粒度级别。 属性将按层次结构进行组织，并且时间维度的粒度主要由历史数据的业务和报表需求决定。 例如，商业智能应用程序中的大多数财务数据和销售数据使用月粒度或季度粒度。  

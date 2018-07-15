@@ -1,5 +1,5 @@
 ---
-title: HoldoutActualSize 元素 |Microsoft 文档
+title: HoldoutActualSize 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe781b9e3381a97d9ad75440dac40e281881419f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f74b11b9032285bf45bc8b7705953adf6d58f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297277"
 ---
 # <a name="holdoutactualsize-element"></a>HoldoutActualSize 元素
-  处理之后，包含的测试集的维持分区指示实际大小， [MiningStructure](../objects/miningstructure-element-assl.md)元素。 数据集中的其余事例用于定型。 该属性为只读。  
+  指示包含测试集的维持分区在处理后的实际大小[MiningStructure](../objects/miningstructure-element-assl.md)元素。 数据集中的其余事例用于定型。 该属性为只读。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,9 +58,9 @@ ms.locfileid: "36028659"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 值`HoldoutActualSize`取决于源数据，和的值[HoldoutMaxCases](holdoutmaxcases-element.md)， [HoldoutMaxPercent](holdoutmaxpercent-element.md)，和[HoldoutSeed](holdoutseed-element.md)。 因此，只有在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 处理完挖掘结构之后，`HoldoutActualSize` 的值才可用。  
+ 值`HoldoutActualSize`取决于源数据，以及对值[HoldoutMaxCases](holdoutmaxcases-element.md)， [HoldoutMaxPercent](holdoutmaxpercent-element.md)，并且[HoldoutSeed](holdoutseed-element.md)。 因此，只有在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 处理完挖掘结构之后，`HoldoutActualSize` 的值才可用。  
   
- 对应于的父元素`HoldoutActualSize`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MiningStructure>。  
+ 父级对应的元素`HoldoutActualSize`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MiningStructure>。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 不支持对挖掘结构使用维持分区。 因此，包含 `HoldoutMaxCases`、`HoldoutMaxPercent`、`HoldoutSeed` 或 `HoldoutActualSize` 维持参数之一的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 语句不能在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中使用。 如果在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中将这些维持参数之一用于 ASSL 语句，则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将返回错误。  

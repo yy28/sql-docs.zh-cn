@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.tran.f1
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d79609fe311d5ce8df9fb4a24729dcd2152ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f458c62ce4283f0b94d7f07a425a12ce7d75fbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318147"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>发布信息，所有订阅（事务发布）
   **“所有订阅”** 选项卡显示所选发布的所有订阅的相关信息。  

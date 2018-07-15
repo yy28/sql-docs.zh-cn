@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
 - SQL12.SWB.makemanaged.Summary.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ae119f84af86a44e994e0a4684f99783a7edf2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 499516a41c06d31a32bb6846d16cb4be6f43de9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279153"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例注册到现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，以便将其性能和配置作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例进行监视。 实用工具控制点 (UCP) 每隔 15 分钟从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例收集配置和性能信息。 此信息存储在 UCP 上的实用工具管理数据仓库 (UMDW) 中；该 UMDW 文件名是 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能数据与策略进行比较，以便帮助标识资源使用瓶颈和整合机会。  
@@ -48,7 +48,7 @@ ms.locfileid: "36138665"
   
  在此版本中，UCP 必须满足以下要求：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   我们建议 UCP 由 SQL Server 的区分大小写的实例承载。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36138665"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具监视不支持 FILESTREAM 数据。  
   
- 有关详细信息，请参阅[Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)和[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 有关详细信息，请参阅[SQL Server 的最大容量规范](../../sql-server/maximum-capacity-specifications-for-sql-server.md)并[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具概念的详细信息，请参阅 [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36138665"
 |条件|纠正措施|  
 |---------------|-----------------------|  
 |对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例和 UCP，您必须具有管理员权限。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例和 UCP，以具有管理员权限的帐户登录。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必须支持实例注册。|有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必须支持实例注册。|有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 应启用 TCP/IP。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 上启用 TCP/IP。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例已不能向任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 注册。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已作为现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的一部分进行管理，则您无法向其他 UCP 注册它。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不能已经是 UCP。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已经是与您连接到的 UCP 不同的其他 UCP，则不能在此 UCP 中注册它。|  

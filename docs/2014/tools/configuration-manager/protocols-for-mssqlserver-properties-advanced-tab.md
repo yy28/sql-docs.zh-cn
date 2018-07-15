@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1f5617af3c601875149e64740ade53edf6242ba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 49407e25f003c436629ddd221fcb417182c269e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224557"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 属性的协议（“高级”选项卡）
   使用 **“MSSQLSERVER 属性的协议”** 对话框上的 **“高级”** 选项卡为   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 **扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 提供**扩展保护** ，旧操作系统的 Service Pack 中也包括此功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。 **扩展保护** 功能的一些好处需要选定 **“标志”** 选项卡上的 **“强行加密”** 后才能获得。  

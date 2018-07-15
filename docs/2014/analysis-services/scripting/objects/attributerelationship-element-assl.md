@@ -1,5 +1,5 @@
 ---
-title: AttributeRelationship 元素 (ASSL) |Microsoft 文档
+title: AttributeRelationship 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeRelationship element
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85c63d69b413239d9bbacc074b1f6f5f0d3b864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a13dcac8fd37e16e90888e904cc6f0ae3587c8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310697"
 ---
 # <a name="attributerelationship-element-assl"></a>AttributeRelationship 元素 (ASSL)
   提供有关两个属性之间的关系的详细信息。  
@@ -67,10 +67,10 @@ ms.locfileid: "36026633"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[AttributeRelationships](../collections/relationships-element-assl.md)|  
-|子元素|[批注](../collections/annotations-element-assl.md)， [AttributeID](../properties/id-element-assl.md)，[基数](../properties/cardinality-element-assl.md)，[名称](../properties/name-element-assl.md)， [Optionality](../properties/optionality-element-assl.md)， [OverrideBehavior](../properties/overridebehavior-element-assl.md)， [RelationshipType](../properties/relationshiptype-element-assl.md)，[翻译](../collections/translations-element-assl.md)，[可见](../properties/visible-element-assl.md)|  
+|子元素|[批注](../collections/annotations-element-assl.md)， [AttributeID](../properties/id-element-assl.md)，[基数](../properties/cardinality-element-assl.md)，[名称](../properties/name-element-assl.md)，[可选性](../properties/optionality-element-assl.md)， [OverrideBehavior](../properties/overridebehavior-element-assl.md)， [RelationshipType](../properties/relationshiptype-element-assl.md)，[翻译](../collections/translations-element-assl.md)，[可见](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AttributeRelationship>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AttributeRelationship>。  
   
 ## <a name="see-also"></a>请参阅  
  [对象&#40;ASSL&#41;](objects-assl.md)  

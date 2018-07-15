@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290223"
 ---
 # <a name="saving-reports-report-builder"></a>保存报表（报表生成器）
   在报表生成器中，可以将报表保存到您有写入权限的报表服务器、SharePoint 库和文件共享区，也可以将其保存到您的计算机。 可以将报表保存到打开报表时的相同位置或将其保存到其他位置，也可以使用新名称将报表保存到相同或不同位置。 默认情况下，将报表重新保存到与其打开位置相同的位置。 保存报表时，真正保存的内容是报表定义，该定义描述了报表布局。 您不是在保存数据。 每次运行报表时，报表数据将刷新，它可能不同于您上次运行报表时的数据。  
@@ -56,7 +56,7 @@ ms.locfileid: "36027619"
 
   
 ##  <a name="ExportingAndSavingReports"></a> 导出和保存报表  
- 如果只有少量要存档的报表，可以考虑导出报表并将其另存为文件。 在将报表导出到其他应用程序（如 PDF 或 Excel）后，您可以将其另存为文件，并放在网络上受保护的共享目录中。 或者，如果希望在报表服务器数据库中保留报表的所有副本（不论何种格式），则可以将已保存的 PDF 或 Excel 文件作为资源项上载。 有关导出报表的详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41; ](export-reports-report-builder-and-ssrs.md)和[上载文件或报表&#40;报表管理器&#41;](../reports/upload-a-file-or-report-report-manager.md)。  
+ 如果只有少量要存档的报表，可以考虑导出报表并将其另存为文件。 在将报表导出到其他应用程序（如 PDF 或 Excel）后，您可以将其另存为文件，并放在网络上受保护的共享目录中。 或者，如果希望在报表服务器数据库中保留报表的所有副本（不论何种格式），则可以将已保存的 PDF 或 Excel 文件作为资源项上载。 有关导出报表的详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41; ](export-reports-report-builder-and-ssrs.md)并[上载文件或报表&#40;报表管理器&#41;](../reports/upload-a-file-or-report-report-manager.md)。  
   
 
   
@@ -76,12 +76,12 @@ ms.locfileid: "36027619"
   
 -   [将报表保存到 SharePoint 库&#40;报表生成器&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [将报表保存到你的计算机&#40;报表生成器&#41;](../save-reports-to-your-computer-report-builder.md)  
+-   [将报表保存到您的计算机&#40;报表生成器&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
 ## <a name="see-also"></a>请参阅  
- [报表，报表部件，和报表定义&#40;报表生成器和 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [报表、 报表部件和报表定义&#40;报表生成器和 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [安装、 卸载和报表生成器支持](../install-uninstall-and-report-builder-support.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

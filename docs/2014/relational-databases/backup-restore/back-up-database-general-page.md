@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7300b9be81e07a922079bc8e1b56aa02266d9b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290953"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
   使用 **“备份数据库”** 对话框中的 **“常规”** 页可以查看或修改数据库备份操作的设置。  
@@ -115,7 +114,7 @@ ms.locfileid: "36029043"
  选择可用于对 Windows Azure 存储进行身份验证的 SQL 凭据。 如果没有可使用的现有 SQL 凭据，则单击 **“创建”** 按钮可创建新的 SQL 凭据。  
   
 > [!IMPORTANT]  
->  单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅中的示例代码中[创建凭据](../security/authentication-access/create-a-credential.md#Credential)主题，以使用 TRANSACT-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”** 和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
+>  单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅中的示例代码中[若要创建凭据](../security/authentication-access/create-a-credential.md#Credential)主题，以使用 TRANSACT-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”** 和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
   
  **Azure 存储容器**  
  指定 Windows Azure 存储容器的名称  

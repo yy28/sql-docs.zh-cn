@@ -1,5 +1,5 @@
 ---
-title: 工作负荷元素 (DTA) |Microsoft 文档
+title: 工作负荷元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71a7bfe2fe4d613117c1b52e83a7767a474a791e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2ff6e041783707a6c9a7fa5e2f4472fa8cd901a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315007"
 ---
 # <a name="workload-element-dta"></a>工作负荷元素 (DTA)
   指定要用于优化会话的工作负荷。  
@@ -44,14 +44,14 @@ ms.locfileid: "36027566"
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**出现次数**|必须为每个使用一次`DTAInput`元素。|  
+|**出现次数**|必须出现一次为每个`DTAInput`元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**子元素**|[文件元素&#40;DTA&#41;](file-element-dta.md)<br /><br /> [为工作负荷的数据库元素&#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 元素&#40;DTA&#41;](eventstring-element-dta.md)|  
+|**子元素**|[文件元素&#40;DTA&#41;](file-element-dta.md)<br /><br /> [工作负荷的数据库元素&#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 元素&#40;DTA&#41;](eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  工作负荷是对要优化的一个或多个数据库执行的一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 数据库引擎优化顾问可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本、跟踪文件和跟踪表用作工作负荷。  

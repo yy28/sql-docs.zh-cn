@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285469"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步骤 4：添加平面文件目标
   Lookup Currency Key 转换的错误输出将无法执行查找操作的所有数据行重定向到脚本转换。 为了突显相关错误的信息，脚本转换将运行可获取错误说明的脚本。  
@@ -40,11 +40,11 @@ ms.locfileid: "36029275"
   
 6.  在“平面文件格式”对话框中，确认已选中“带分隔符”，然后单击“确定”。  
   
-7.  在**平面文件连接管理器编辑器**中**连接管理器名称**框中，键入`Error Data`。  
+7.  在中**平面文件连接管理器编辑器**，在**连接管理器名称**框中，键入`Error Data`。  
   
 8.  在“平面文件连接管理器编辑器”对话框中，单击“浏览”，然后找到存储文件的文件夹。  
   
-9. 在**打开**对话框中，为**文件名**，类型`ErrorOutput.txt`，然后单击**打开**。  
+9. 中**开放**对话框中，为**文件名**，类型`ErrorOutput.txt`，然后单击**打开**。  
   
 10. 在“平面文件连接管理器编辑器”对话框中，验证“区域设置”框是否包含“英语(美国)”，“代码页”是否包含 1252 (ANSI -Latin I)。  
   

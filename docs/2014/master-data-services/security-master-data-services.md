@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287563"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全设置可以确保用户可以访问完成自己工作所需的特定主数据，并防止他们访问自己不应查看的数据。  
@@ -42,9 +42,9 @@ ms.locfileid: "36028370"
   
 -   [功能区域访问权限](../../2014/master-data-services/functional-area-permissions-master-data-services.md)，该权限确定用户可以访问用户界面的五个功能区域中的哪些区域。  
   
--   [模型对象权限](../../2014/master-data-services/model-object-permissions-master-data-services.md)，以确定用户可以访问，这些特性并将对这些属性的用户拥有的访问 （读取或更新） 的类型。  
+-   [模型对象权限](../../2014/master-data-services/model-object-permissions-master-data-services.md)，这将决定用户可以访问的属性和访问 （读取或更新），用户必须对这些属性的类型。  
   
--   （可选）[层次结构成员权限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)，它确定的成员，用户可以访问，并且访问 （读取或更新） 的类型的用户具有给这些成员。  
+-   （可选）[层次结构成员权限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)，以确定用户可以访问的成员和用户对这些成员具有的访问 （读取或更新） 的类型。  
   
  分配对属性和成员的权限时，权限可能交叉，此时由规则确定哪个权限优先。 有关详细信息，请参阅[如何确定权限 (Master Data Services)](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36028370"
   
  下图显示了样式实体的派生层次结构以及选定用户的样式成员权限。 更新权限分配给 M {男性} 和 U {中性} 成员，并且只读权限分配给女性样式成员。 这表示用户可以更新男性和中性产品的记录，并且只读取女性样式产品的记录。  
   
- ![样式派生层次结构和成员权限](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "样式派生层次结构和成员权限")  
+ ![风格的派生层次结构和成员权限](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "样式派生层次结构和成员权限")  
   
- 有关如何创建层次结构的信息，请参阅[创建显式层次结构&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)和[创建派生层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)。  
+ 有关如何创建层次结构的信息，请参阅[创建显式层次结构&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)并[创建派生层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)。  
   
  有关如何将成员分配权限的信息，请参阅[分配层次结构成员权限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 517208d1fa790739a2008cd5e149147cbf91643c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 458fa987ee31f024534b184b2729667cea3597c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287223"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
   本主题提供有关从数据访问应用程序中调用本机编译的存储过程的指导。  
@@ -40,7 +40,7 @@ ms.locfileid: "36126304"
   
  以下建议适用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序调用本机编译的存储过程。  
   
- 调用存储的过程一次的最有效方法是发出直接的 RPC 调用使用`SQLExecDirect`和 ODBC CALL 子句。 不要使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`语句。 如需多次调用存储过程，则准备好的执行最为高效。  
+ 若要一次调用存储的过程的最有效方法是发出直接的 RPC 调用使用`SQLExecDirect`和 ODBC CALL 子句。 不要使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`语句。 如需多次调用存储过程，则准备好的执行最为高效。  
   
  多次调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程的最高效方式是通过准备好的 RPC 过程调用执行。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序执行准备好的 RPC 调用的步骤是：  
   

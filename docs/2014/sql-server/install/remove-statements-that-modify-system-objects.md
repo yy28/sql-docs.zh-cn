@@ -1,5 +1,5 @@
 ---
-title: 删除用于修改系统对象的语句 |Microsoft 文档
+title: 删除用于修改系统对象的语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - direct system catalog updates [SQL Server]
 - system catalogs [SQL Server]
 ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c77525957fa679659a67bfa41f28090e028a7a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aca644a822673e4d373048fc0d3a95eb0cd6fdf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297810"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>删除用于修改系统对象的语句
   升级顾问检测到了用于更新系统目录的语句。 不允许直接更新系统目录。 请修改您的 SQL 脚本，使用正式且有记录的 API。  
@@ -38,7 +38,7 @@ ms.locfileid: "36028274"
  `Ad hoc updates to system catalogs are not allowed.`  
   
 ## <a name="corrective-action"></a>纠正措施  
- 请修改您的 SQL 脚本，使用正式且有记录的 API。 例如，使用 ALTER DATABASE *database_name*而不是运行 UPDATE 语句设置紧急**sysdatabases**系统表。  
+ 请修改您的 SQL 脚本，使用正式且有记录的 API。 例如，使用 ALTER DATABASE *database_name* SET EMERGENCY，而不是运行 UPDATE 语句**sysdatabases**系统表。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

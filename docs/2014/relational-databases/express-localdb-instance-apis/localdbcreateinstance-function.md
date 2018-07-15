@@ -1,5 +1,5 @@
 ---
-title: LocalDBCreateInstance 函数 |Microsoft 文档
+title: LocalDBCreateInstance 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2e413b18e76ab94b81df9ae0a3722f0669a49ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 51596ed8b3c8cc0e140b0dbb424f1b7cf1390be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320257"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 函数
   创建新的 SQL Server Express LocalDB 实例。  
@@ -107,7 +107,7 @@ HRESULT LocalDBCreateInstance(
   
  在现有实例损坏的情况下，对 `LocalDBCreateInstance` API 方法的后续调用将失败。 必须手动修复损坏的实例或显式删除它们，然后才能再次使用。  
   
- 使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  

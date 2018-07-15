@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosename
 - vdt.dlgbox.newdatabaseview
 - vdt.dlgbox.newtablename
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 191da426970c364d6b6d9a6af3bfbf5478866950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b6198bb639cf4b56f943b47d9b82e5419daef001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304967"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>“选择名称”对话框 (Visual Database Tools)
-  当你选择时，会出现此对话框**保存\<TableName**>，**保存\<DiagramName >**，或**保存\<ViewName >** 从**文件**菜单。  
+  当你选择时，会显示此对话框**保存\<TableName**>，**保存\<DiagramName >**，或者**保存\<ViewName >** 从**文件**菜单。  
   
  **输入表、关系图或视图的名称。**  
  提供一个文本框，您可以在其中为表、关系图或视图键入名称。  

@@ -1,5 +1,5 @@
 ---
-title: 为了演示内存中 OLTP 的 AdventureWorks 扩展 |Microsoft 文档
+title: 若要演示内存中 OLTP 的 AdventureWorks 扩展 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6bc04894a372f4391c12622158673e4ba4068098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312327"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
     
 ## <a name="overview"></a>概述  
- 此示例展示新[!INCLUDE[hek_2](../includes/hek-2-md.md)]功能，是一部分的[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 它显示了新的内存优化表和本机编译存储的过程，并可用于演示性能优势[!INCLUDE[hek_2](../includes/hek-2-md.md)]。  
+ 本示例展示了新[!INCLUDE[hek_2](../includes/hek-2-md.md)]功能，它是一部分的[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 它显示的新内存优化表和本机编译存储的过程，并可用于演示性能优势的[!INCLUDE[hek_2](../includes/hek-2-md.md)]。  
   
 > [!NOTE]  
 >  若要查看 SQL Server 2016 的本主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
@@ -37,7 +37,7 @@ ms.locfileid: "36026218"
   
 -   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)   
   
--   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
+-    [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
 -   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures) – 包括通过 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 示例添加到 AdventureWorks 的表和过程的说明，以及将一些原始 AdventureWorks 表迁移到内存优化表的注意事项  
   
@@ -47,16 +47,16 @@ ms.locfileid: "36026218"
   
 ##  <a name="Prerequisites"></a> 先决条件  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – 评估、 开发人员或企业版  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation、 Developer 或 Enterprise edition  
   
--   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 上的硬件的一般指导[!INCLUDE[hek_2](../includes/hek-2-md.md)]，请参阅以下博客文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 有关硬件的一般指导原则[!INCLUDE[hek_2](../includes/hek-2-md.md)]，请参阅以下博客文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 示例  
  请按照以下步骤安装示例：  
   
 1.  下载用于 AdventureWorks2014 数据库完整备份的存档：  
   
-    1.  请打开以下： [ http://msftdbprodsamples.codeplex.com/downloads/get/880661 ](http://msftdbprodsamples.codeplex.com/downloads/get/880661)。  
+    1.  打开以下： [ http://msftdbprodsamples.codeplex.com/downloads/get/880661 ](http://msftdbprodsamples.codeplex.com/downloads/get/880661)。  
   
     2.  提示保存文件时，选择本地文件夹。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36026218"
   
 -   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
   
--   *外键约束*内存优化表中不支持[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用程序可确保引用完整性，从而在插入行时不验证引用完整性。 可以使用以下脚本，通过存储过程 dbo.usp_ValidateIntegrity 验证此表中数据的引用完整性：  
+-   *外键约束*中，内存优化表不支持[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用程序可确保引用完整性，从而在插入行时不验证引用完整性。 可以使用以下脚本，通过存储过程 dbo.usp_ValidateIntegrity 验证此表中数据的引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -227,7 +227,7 @@ ms.locfileid: "36026218"
   
 -   *别名 UDT* – 原始表使用等效于系统数据类型位的用户定义数据类型 dbo.Flag。 迁移的表改用位数据类型。  
   
--   *BIN2 排序规则*– 列 Name 和 ProductNumber 包含在索引键，并且因此必须有 BIN2 排序规则中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 这里假设应用程序不依赖于排序规则具体内容（如区分大小写）。  
+-   *BIN2 排序规则*– 列 Name 和 ProductNumber 包含在索引键中，因而必须具有 BIN2 排序规则[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 这里假设应用程序不依赖于排序规则具体内容（如区分大小写）。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
@@ -242,7 +242,8 @@ ms.locfileid: "36026218"
   
  Sales.SpecialOffer  
   
--   *检查* 和 *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOffer_inmem 和 Sales.usp_DeleteSpecialOffer_inmem 可用于插入和删除特价商品；这些过程验证域和引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
+-   
+  *检查* 和 *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOffer_inmem 和 Sales.usp_DeleteSpecialOffer_inmem 可用于插入和删除特价商品；这些过程验证域和引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -253,7 +254,8 @@ ms.locfileid: "36026218"
   
  Sales.SpecialOfferProduct  
   
--   *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOfferProduct_inmem 可用于插入和删除特价商品与产品之间的关系；此过程验证引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证引用完整性：  
+-   
+  *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOfferProduct_inmem 可用于插入和删除特价商品与产品之间的关系；此过程验证引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
@@ -466,7 +468,7 @@ END
  我们将使用 Ostress 工具通过几个并发连接执行脚本。 我们将使用参数“-n”控制连接数，使用参数“r”控制对每个连接执行脚本的次数。  
   
 #### <a name="functional-validation-of-the-workload"></a>工作负荷的功能验证  
- 若要验证一切正常，我们将从样本测试开始，使用 10 并发连接和 5 迭代，插入总共 10 * 5 个\*20 = 1000 销售订单。  
+ 若要验证一切正常，我们将使用示例测试开始，使用 10 个并发连接和 5 次迭代，插入总共 10 * 5 \* 20 = 1000 个销售订单。  
   
  对于以下命令，我们假设在本地计算机上使用默认实例。 如果使用命名实例或使用远程服务器，请使用参数 -S 相应地更改服务器名称。  
   

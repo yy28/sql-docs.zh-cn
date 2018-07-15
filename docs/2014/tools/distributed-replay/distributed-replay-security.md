@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Security |Microsoft 文档
+title: 分布式重播安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301277"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
   在安装和使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能之前，您应查看本主题中的重要安全信息。 本主题介绍了您使用分布式重播之前所需的安装后安全配置步骤。 本主题还介绍了与数据保护相关的重要注意事项和重要删除步骤。  

@@ -1,5 +1,5 @@
 ---
-title: 对国际数据 (Visual Database Tools) 使用的查询和视图设计器 |Microsoft 文档
+title: 使用查询和视图设计器对国际数据 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], international data
 - queries [SQL Server], international data
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - multiple language support [SQL Server], Query and View Designer
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ab3f1bbc7708b40243269724f949df4693dd488
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c4776214176aca7990863491f68f06e934400e02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315107"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>对国际数据使用查询和视图设计器 (Visual Database Tools)
   在[查询和视图设计器](visual-database-tools.md)中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  

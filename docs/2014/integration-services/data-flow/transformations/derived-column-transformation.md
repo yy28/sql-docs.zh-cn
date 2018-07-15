@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 955cd566e0e4ef92b4cd241ddb40ea034b2a57e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68dae5fdc6d4b35c4c4ef7633e29d22f8db25cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285593"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
   派生列转换通过对转换输入列应用表达式来创建新列值。 表达式可以包含来自转换输入的变量、函数、运算符和列的任意组合。 结果可作为新列添加，也可作为替换值插入到现有列。 派生列转换可定义多个派生列，任何变量或输入列都可以出现在多个表达式中。  

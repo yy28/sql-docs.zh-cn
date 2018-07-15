@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xe
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 782c883958470b308f2d3605891fcfb654078589
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a6c00a184eccb1139652edf39dbedd349eaeb100
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287233"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件会话是在用于承载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件引擎的进程中创建的。 扩展事件会话的以下各方面信息可为您理解扩展事件基础结构和所发生的常规处理提供有关背景知识：  

@@ -1,5 +1,5 @@
 ---
-title: 导入包对话框 UI 参考 |Microsoft 文档
+title: 导入包对话框 UI 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.importpackage.f1
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bc1c4ab12c5617d8c60e898587b664f552709299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e34f7c697df4b7c9ba183adfdf71753e47bf6619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245557"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>“导入包”对话框 UI 参考
   可以使用 **中的** “导入包” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，导入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及设置或修改包的保护级别。  

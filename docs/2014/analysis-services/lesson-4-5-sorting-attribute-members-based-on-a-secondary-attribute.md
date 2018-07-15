@@ -1,5 +1,5 @@
 ---
-title: 对属性成员进行排序基于辅助属性 |Microsoft 文档
+title: 根据辅助属性对属性成员进行排序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5286bcca918cd77985ea6aef98cd3c99b89e20f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299287"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>根据辅助属性对属性成员进行排序
   在第 3 课中，您已了解了如何根据属性成员的名称或键值对属性成员进行排序。 您还了解了如何使用组合成员键影响属性成员和排序顺序。 有关详细信息，请参阅 [修改日期维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 但是，如果属性的名称或键都无法提供所需的排序顺序时，您可以使用辅助属性来获取所需的排序顺序。 通过定义属性之间的关系，您可以使用第二个属性来对第一个属性的成员进行排序。  
@@ -73,7 +73,7 @@ ms.locfileid: "36027333"
   
      注意，月份现在按时间顺序排序，如下图所示。  
   
-     ![修改用户层次结构按时间顺序](../../2014/tutorials/media/l4-memberproperties-3.gif "修改用户层次结构按时间顺序")  
+     ![修改用户层次结构中按时间顺序](../../2014/tutorials/media/l4-memberproperties-3.gif "修改用户层次结构中按时间顺序")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>在“客户”维度中定义属性关系和排序顺序  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36027333"
   
      下图显示了“上下班路程”属性层次结构的成员，这些成员按成员键的 ASCII 值进行排序。  
   
-     ![上下班距离属性层次结构](../../2014/tutorials/media/l4-memberproperties-4.gif "单位的距离属性层次结构")  
+     ![Commute Distance 属性层次结构](../../2014/tutorials/media/l4-memberproperties-4.gif "Commute Distance 属性层次结构")  
   
 2.  在“客户”维度的维度设计器中，切换到“维度结构”选项卡，右键单击“数据源视图”窗格的 **Customer** 表中的“CommuteDistanceSort”，然后单击“从列新建属性”。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36027333"
   
      注意，属性层次结构成员现在根据不断增加的距离按逻辑顺序进行排序，如下图所示。  
   
-     ![重新排序单位的距离属性层次结构](../../2014/tutorials/media/l4-memberproperties-5.gif "Re-sorted 上下班距离属性层次结构")  
+     ![重新排序的 Commute Distance 属性层次结构](../../2014/tutorials/media/l4-memberproperties-5.gif "Re-sorted Commute Distance 属性层次结构")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [指定用户定义层次结构中属性之间的属性关系](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

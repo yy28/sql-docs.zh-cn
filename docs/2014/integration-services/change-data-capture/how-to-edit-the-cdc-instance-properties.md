@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef7fbe1be575d2f9e3d1c5d63e6d5c6bb57601e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eac21ed54a9a66d8e4ca0fe4dbee13fd5c0984b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209487"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台编辑 CDC 实例的配置属性。  

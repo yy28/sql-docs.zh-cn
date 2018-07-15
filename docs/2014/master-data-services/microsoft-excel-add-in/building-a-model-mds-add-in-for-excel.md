@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba6915e8d5e39af32279fbaca208c97fd076d337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd4544aefe0f8a5b474b073ef4279f50c4d8a434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320287"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>生成模型（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以执行在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中提供的一部分管理功能。  
@@ -62,7 +62,7 @@ ms.locfileid: "36027482"
   
 -   [业务规则&#40;Master Data Services&#41;](../business-rules-master-data-services.md)  
   
--   [导出数据&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
+-   [将数据导出&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
   
 -   [层次结构&#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
 - result sets [SQL Server], queries
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 24f72c0da16bb9c0fe7500e6381eba63fc40859c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dab0c64711da6e8e975920aa3c584f76a0713881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301307"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>从查询结果中删除列 (Visual Database Tools)
   如果在“选择”查询中使用某列，但不希望在结果集中显示该列（即不希望它显示在查询的选择列表中），则可将其从输出中移除。 从查询的输出中移除该列后，您仍可在搜索条件中使用它或将其用作排序字段。  
@@ -43,10 +43,10 @@ ms.locfileid: "36027855"
 -   将该列从 [SQL 窗格](sql-pane-visual-database-tools.md)的输出列表中删除。  
   
 ## <a name="see-also"></a>请参阅  
- [将列添加到查询&#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
- [从查询中删除列&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [排序和分组查询结果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [汇总查询结果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [向查询中添加列&#40;可视化数据库工具&#41;](add-columns-to-queries-visual-database-tools.md)   
+ [从查询中删除列&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [排序和分组查询结果&#40;可视化数据库工具&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

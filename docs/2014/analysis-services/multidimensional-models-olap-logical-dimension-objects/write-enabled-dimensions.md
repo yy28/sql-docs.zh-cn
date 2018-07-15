@@ -1,5 +1,5 @@
 ---
-title: 维度启用写功能 |Microsoft 文档
+title: 启用写操作的维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f140fc79d1b93c419e64d564efec68d29821f2d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293521"
 ---
 # <a name="write-enabled-dimensions"></a>启用写操作的维度
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- 维度中的数据通常为只读数据。 但在某些情况下，可能需要为维度启用写操作。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，写入启用维度使业务用户能够修改维度的内容并查看更改的即时影响维度的层次结构上。 基于单个表的任何维度均可启用写操作。 在启用写操作的维度中，业务用户和管理员都可以更改、移动、添加和删除维度中的属性成员。 这些更新统称为*维度写回*。  
+ 维度中的数据通常为只读数据。 但在某些情况下，可能需要为维度启用写操作。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度启用写，业务用户可以修改维度的内容，并查看维度的层次结构上的更改的即时影响。 基于单个表的任何维度均可启用写操作。 在启用写操作的维度中，业务用户和管理员都可以更改、移动、添加和删除维度中的属性成员。 这些更新统称为*维度写回*。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持对所有维度属性的维度写回，维度的任何成员均可修改。 对于启用写操作的多维数据集或分区，更新存储在独立于多维数据集的源表的写回表中。 不过，对于启用写操作的维度，更新直接记录在维度的表中。 同样，如果启用写操作的维度包括在具有多个分区的多维数据集中（其中，某些数据源或所有数据源具有维度表的副本），则在写回过程中只更新原始维度表。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36026883"
   
 ## <a name="see-also"></a>请参阅  
  [数据库维度属性](database-dimension-properties.md)   
- [写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [启用写操作的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [维度&#40;Analysis Services-多维数据&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

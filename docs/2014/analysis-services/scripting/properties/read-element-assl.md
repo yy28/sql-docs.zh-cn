@@ -1,5 +1,5 @@
 ---
-title: 读取元素 (ASSL) |Microsoft 文档
+title: 读取元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e7f26c9064f754633420cd58a0f15197189d1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321197"
 ---
 # <a name="read-element-assl"></a>Read 元素 (ASSL)
-  确定是否可以为读取数据或元数据给定[CubeDimensionPermission](../data-type/permission-data-type-assl.md)或[权限](../data-type/permission-data-type-assl.md)元素。  
+  确定是否可用于读取数据或元数据给定[CubeDimensionPermission](../data-type/permission-data-type-assl.md)或[权限](../data-type/permission-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36029313"
 |*允许*|允许对父对象的数据和元数据进行读取访问。|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`Read`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.CubeDimensionPermission>和<xref:Microsoft.AnalysisServices.Permission>。  
+ 父级对应的元素`Read`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.CubeDimensionPermission>和<xref:Microsoft.AnalysisServices.Permission>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [维度元素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [CubePermission 元素&#40;ASSL&#41;](../objects/cubepermission-element-assl.md)   
- [权限数据类型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
+ [Permission 数据类型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 处理 SMO 异常 |Microsoft 文档
+title: 处理 SMO 异常 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 329cc87a9a82545708f71202f15de4eb219463e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2d8e121a9fdc76073a016041f102fa36e6685f72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299837"
 ---
 # <a name="handling-smo-exceptions"></a>处理 SMO 异常
   在托管代码中，如果出现错误，便会引发异常。 SMO 方法和属性不在返回值中报告成功或失败信息。 相反，可以通过异常处理程序捕获和处理异常。  
@@ -35,12 +35,12 @@ ms.locfileid: "36124753"
  异常处理语句是特定于编程语言的。 例如，在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 中，该语句为 `Catch` 语句。  
   
 ## <a name="inner-exceptions"></a>内部异常  
- 异常可能是常规异常，也可能是特定异常。 常规异常包含一组特定异常。 多个`Catch`语句可以用于处理预期的错误和其余错误通过常规异常处理代码。 通常，异常按照级联顺序发生。 很多情况下，SMO 异常可能是由 SQL 异常导致的。 若要检测到这种方法是使用`InnerException`属性连续以确定导致最终的顶层异常的原始异常。  
+ 异常可能是常规异常，也可能是特定异常。 常规异常包含一组特定异常。 多个`Catch`语句可用于处理预期的错误和其余错误常规异常处理代码。 通常，异常按照级联顺序发生。 很多情况下，SMO 异常可能是由 SQL 异常导致的。 若要检测到这种方法是使用`InnerException`连续属性确定导致最终顶级异常的原始异常。  
   
 > [!NOTE]  
 >  `SQLException`中声明异常**System.Data.SqlClient**命名空间。  
   
- ![显示从其级别的关系图 excp](../../../database-engine/dev-guide/media/exception-flow.gif "的关系图，显示从中级别 excp")  
+ ![显示从其级别的关系图关系](../../../database-engine/dev-guide/media/exception-flow.gif "图显示了从其级别的关系")  
   
  此图显示了异常通过各应用程序层的流程。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36124753"
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)或[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中捕获异常  
- 此代码示例演示如何使用`Try…Catch…Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET 文档。  
+ 此代码示例演示如何使用`Try…Catch…Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]语句捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET 文档。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBExceptions1](SMO How to#SMO_VBExceptions1)]  -->  
   

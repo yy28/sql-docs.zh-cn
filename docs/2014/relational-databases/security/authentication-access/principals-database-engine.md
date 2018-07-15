@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,20 +28,20 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318037"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
   “主体” 是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。  
   
- **Windows 级别的主体**  
+ **Windows 级主体**  
   
 -   Windows 域登录名  
   
@@ -54,7 +53,7 @@ ms.locfileid: "36028982"
   
 -   服务器角色  
   
- **数据库级主体**  
+ **数据库级的主体**  
   
 -   数据库用户  
   
@@ -89,7 +88,7 @@ ms.locfileid: "36028982"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest 用户  
- 每个数据库包括一个 **guest**。 授予 **guest** 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 **来宾**无法删除用户，但可以通过撤消该禁用它的`CONNECT`权限。 `CONNECT`权限可以通过执行吊销`REVOKE CONNECT FROM GUEST`master 或 tempdb 以外的任何数据库中。  
+ 每个数据库包括一个 **guest**。 授予 **guest** 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 **来宾**不能删除用户，但可以通过撤消该禁用的`CONNECT`权限。 `CONNECT`可以通过执行撤消权限`REVOKE CONNECT FROM GUEST`master 或 tempdb 以外的任何数据库中。  
   
 ## <a name="client-and-database-server"></a>客户端和数据库服务器  
  根据定义，客户端和数据库服务器是安全主体，可以得到保护。 在建立安全的网络连接前，这些实体之间可以互相进行身份验证。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758)身份验证协议，定义客户端与网络身份验证服务的交互。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9965626846162d6dcfa7fd7e7781cb240ad7be8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52b0ee24cc9e76bda96b5fda64bf8dca425c5638
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300567"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>步骤 2：运行包安装向导
   在此任务中，将运行包安装向导，将包从 Deployment Tutorial 项目部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 只能将包安装在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 sysssispackages 表中，而部署捆绑包括的支持文件将被部署到文件系统。  
@@ -105,7 +105,7 @@ ms.locfileid: "36028385"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 3：测试已部署的包](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 服务&#40;SSIS 服务&#41;](service/integration-services-service-ssis-service.md)   

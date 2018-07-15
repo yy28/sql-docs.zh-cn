@@ -1,5 +1,5 @@
 ---
-title: SQL Server 配置为使用软件 NUMA (SQL Server) |Microsoft 文档
+title: SQL Server 配置为使用软件 NUMA (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
@@ -8,41 +8,41 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 827975fcb4c5bbba6253f3b44e1813a6e70f6fcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279553"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>将 SQL Server 配置为使用软件 NUMA (SQL Server)
-当今的处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。 借助包含每个插槽的 10 个或多个内核处理器，使用软件 NUMA (SOFT-NUMA) 来拆分硬件 NUMA 节点通常可以提高可伸缩性和性能。   
+当今的处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。 与处理器包含每个插槽的 10 个或多个内核，请使用软件 NUMA (SOFT-NUMA) 来拆分硬件 NUMA 节点通常会增加可伸缩性和性能。   
 
 > [!NOTE]
 > 软件 NUMA 不支持热添加处理器。
   
 ## <a name="automatic-soft-numa"></a>自动软件 NUMA
 
-从开始 SQL Server 2014 Service Pack 2，只要数据库引擎服务器检测到 8 个以上的物理处理器，在启动时，软件 NUMA 节点将自动创建如果跟踪标志 8079 启用作为引导参数。 未对说明超线程处理器内核，盘点物理处理器时。 多个每个插槽 8 检测到的物理处理器的数目时，数据库引擎服务将创建软件 NUMA 节点的理想情况下包含 8 个内核，但可以向下转到每个节点的 5 或最多 9 个逻辑处理器。 可以通过 CPU 关联掩码限制硬件节点的大小。 NUMA 节点数永远不会超过支持的 NUMA 节点的最大数目。
+从 SQL Server 2014 Service Pack 2，只要数据库引擎服务器检测到 8 个以上的物理处理器，在启动时，软件 NUMA 节点将自动创建如果作为引导参数启用跟踪标志 8079。 当计算物理处理器时，未对说明超线程处理器内核。 如果检测到的物理处理器数，超过 8 个套接字 / 数据库引擎服务会创建软件 NUMA 节点，在理想情况下包含 8 个内核，但会下降到每个节点的 5 个或最多 9 个逻辑处理器。 可以通过 CPU 关联掩码限制硬件节点的大小。 NUMA 节点数永远不会超过支持的 NUMA 节点的最大数目。
 
-不跟踪标志，默认情况下禁用软件 NUMA。 你可以启用 SOFT-NUMA 使用跟踪标志 8079。 更改此设置的值后，需要重新启动数据库引擎才会生效。
+如果没有跟踪标志，默认情况下禁用软件 NUMA。 可以让软件 NUMA 使用跟踪标志 8079。 更改此设置的值后，需要重新启动数据库引擎才会生效。
 
-下图显示的关于您将看到 SQL Server 错误日志中，当 SQL Server 检测到硬件 NUMA 节点大于 8 个逻辑处理器和启用跟踪标志 8079 的软件 NUMA 的信息的类型。
+下图显示了有关将 SQL Server 错误日志中看到的 SQL Server 检测到硬件 NUMA 节点大于 8 个逻辑处理器时，如果启用了跟踪标志 8079 的软件 NUMA 的信息的类型。
 
 ![ssNoVersion](./media/soft-numa-sql-server/soft-numa.PNG)
 
 ## <a name="manual-soft-numa"></a>手动软件 NUMA
   
-若要配置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要手动使用 SOFT-NUMA，必须编辑注册表以添加节点配置关联掩码。 软件 NUMA 掩码可以表示为二进制、DWORD（十六进制或十进制）或 QWORD（十六进制或十进制）注册表项。 若要配置头 32 个 CPU 以后的 CPU，请使用 QWORD 或 BINARY 注册表值。 （在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，不能使用 QWORD 值。）要配置软件 NUMA，必须重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+若要配置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要手动使用软件 NUMA，必须编辑注册表才能添加节点配置关联掩码。 软件 NUMA 掩码可以表示为二进制、DWORD（十六进制或十进制）或 QWORD（十六进制或十进制）注册表项。 若要配置头 32 个 CPU 以后的 CPU，请使用 QWORD 或 BINARY 注册表值。 （在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，不能使用 QWORD 值。）要配置软件 NUMA，必须重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 > [!TIP]  
 >  CPU 从 0 开始编号。  

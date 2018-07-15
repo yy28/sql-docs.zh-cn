@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b937c76546b2e7ee8b5d33a340abb4b120f51dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a970e1572113b7834bdc59fbf0fdca01178b441a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198829"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
   如主题 [使用 FOR XML 构造 XML](../xml/for-xml-sql-server.md)中所述，使用 RAW 和 AUTO 模式不能很好地控制从查询结果生成的 XML 的形状。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  

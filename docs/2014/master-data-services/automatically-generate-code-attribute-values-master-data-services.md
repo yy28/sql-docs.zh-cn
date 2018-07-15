@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a8cfcda0d6fc37db1b620fd64c044e322f81877e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 12d5a8666896337e288cd235b56c4b8c76f79131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302427"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>自动生成 Code 属性值 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您希望在每次创建新成员时自动为 Code 值分配一个整数时，自动为实体的 Code 属性设置值。  
@@ -37,7 +37,7 @@ ms.locfileid: "36124809"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
-2.  上**模型资源管理器**页上，从菜单栏中，指向**管理**单击**实体**。  
+2.  上**模型资源管理器**页上，从菜单栏中，依次指向**管理**然后单击**实体**。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   

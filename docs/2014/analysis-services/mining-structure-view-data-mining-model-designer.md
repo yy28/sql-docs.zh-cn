@@ -1,5 +1,5 @@
 ---
-title: 挖掘结构视图 （数据挖掘模型设计器） |Microsoft 文档
+title: 挖掘结构视图 （数据挖掘模型设计器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.f1
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d032e92d3ca08cd666026a5244bcf9794ef4caed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 105b4e33e916dda945e3cec77d0c0ca06b09b3c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303067"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>“挖掘结构”视图（数据挖掘模型设计器）
   可以使用 **“挖掘结构”** 视图修改和处理挖掘结构，以及处理与其关联的所有挖掘模型。  
   
  **“挖掘结构”** 视图具有以下工具和对话框：  
   
--   [新挖掘模型对话框&#40;挖掘结构视图&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
+-   [新建挖掘模型对话框的&#40;挖掘结构视图&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
 -   [选择列对话框&#40;挖掘结构视图&#41;](select-a-column-dialog-box-mining-structure-view.md)  
   

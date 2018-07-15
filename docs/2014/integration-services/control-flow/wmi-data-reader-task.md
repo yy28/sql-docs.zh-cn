@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9871b79451feacd256692513e767d9d693e6300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e31b3c63d1fab749aea96e0d55fd7a704301d26d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308094"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 数据读取器任务
   WMI 数据读取器任务使用 Windows Management Instrumentation (WMI) 查询语言来运行查询，此查询语言从 WMI 返回有关计算机系统的信息。 可以将 WMI 数据读取器任务用于下列目的：  

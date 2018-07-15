@@ -1,5 +1,5 @@
 ---
-title: 维度元素 (ASSL) |Microsoft 文档
+title: Dimensions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimensions element
 ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da68ed1367dd1fe2a212b76f5e0261614ca4dc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff15cecd5e5d4451a580d8ee73922dc4ab05364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241607"
 ---
 # <a name="dimensions-element-assl"></a>Dimensions 元素 (ASSL)
   包含与父元素关联的维度的集合。  
@@ -64,7 +64,7 @@ ms.locfileid: "36138089"
 |子元素|[Dimension](../objects/dimension-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

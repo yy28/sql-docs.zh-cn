@@ -1,5 +1,5 @@
 ---
-title: 维度数据类型 (ASSL) |Microsoft 文档
+title: 维度数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Dimension data type
 ms.assetid: 3fe6adc2-5206-44c3-a689-a731705f43ca
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1451da2c20228e00b99482a7c9b43a92a8478154
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b60c51847900fee89f0baee2d5b04d96dc3c9ad5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289553"
 ---
 # <a name="dimension-data-type-assl"></a>Dimension 数据类型 (ASSL)
   定义表示数据库维度的基元数据类型。  
@@ -95,7 +95,7 @@ ms.locfileid: "36028034"
   
 -   *UnknownMember*子元素必须设置为 `AutomaticNull`  
   
--   所有唯一属性都必须具有*NullProcessing*子元素设置为 `Error`  
+-   所有唯一属性必须具有*NullProcessing*子元素设置为 `Error`  
   
  在 DeploymentMode 值 1 (SharePoint) 和 2（表格）下不支持以下子属性。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36028034"
   
 -   *ProactiveCaching*  
   
- 分析管理对象 (AMO) 对象模型中的相应元素<xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.AggregationDimension>， <xref:Microsoft.AnalysisServices.AggregationDesignDimension>， <xref:Microsoft.AnalysisServices.CubeDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupDimension>，和<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.AggregationDimension>， <xref:Microsoft.AnalysisServices.AggregationDesignDimension>， <xref:Microsoft.AnalysisServices.CubeDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupDimension>，并<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

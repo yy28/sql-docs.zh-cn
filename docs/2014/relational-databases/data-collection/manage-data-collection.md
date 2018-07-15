@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296517"
 ---
 # <a name="manage-data-collection"></a>管理数据收集
-  你可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程和功能来管理数据收集的各个方面，例如启用或禁用数据收集、 更改收集组配置，或查看管理数据仓库中的数据.  
+  可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程和功能来管理数据收集的各个方面，例如启用或禁用数据收集、 更改收集组配置或查看管理数据仓库中的数据.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理数据收集  
- 你可以通过使用对象资源管理器中执行以下数据收集器相关任务[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ 可以通过使用对象资源管理器中执行以下与数据收集器相关任务[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [配置管理数据仓库 (SQL Server Management Studio)](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36123313"
 > [!IMPORTANT]  
 >  与常规存储过程不同的是，数据收集器存储过程使用严格类型化的参数，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
- 你可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建和执行提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。 或者，您可在任何编辑器中创建查询并将其保存为文件扩展名为 .sql 的文本文件。 你可以从 Windows 命令提示符处使用执行查询`sqlcmd`实用程序。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../scripting/sqlcmd-use-the-utility.md)。  
+ 可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建和执行提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](../../ssms/object/object-explorer.md)。 或者，您可在任何编辑器中创建查询并将其保存为文件扩展名为 .sql 的文本文件。 你可以从 Windows 命令提示符处使用执行该查询`sqlcmd`实用程序。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../scripting/sqlcmd-use-the-utility.md)。  
   
 ### <a name="stored-procedures-and-views"></a>存储过程和视图  
  **使用数据收集器**  

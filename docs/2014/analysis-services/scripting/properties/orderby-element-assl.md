@@ -1,5 +1,5 @@
 ---
-title: OrderBy 元素 (ASSL) |Microsoft 文档
+title: OrderBy 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderBy element
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18fa2af79937c7f927413f0e601b6969bbfeb3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2151ac4cdcaa095d663682c936158557c1fea2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291313"
 ---
 # <a name="orderby-element-assl"></a>OrderBy 元素 (ASSL)
   说明如何对属性中包含的成员进行排序。  
@@ -68,10 +68,10 @@ ms.locfileid: "36028236"
 |-----------|-----------------|  
 |*名称*|按成员名称进行排序。|  
 |*Key*|按成员键进行排序。|  
-|*AttributeKey*|Order by 中指定的属性的成员键[OrderByAttributeID](id-element-assl.md)元素`DimensionAttribute`。|  
+|*AttributeKey*|中指定的属性的成员键进行排序[OrderByAttributeID](id-element-assl.md)元素的`DimensionAttribute`。|  
 |*AttributeName*|按在 `OrderByAttributeID` 的 `DimensionAttribute` 元素中指定的属性的成员名称进行排序。|  
   
- 对应于的允许值为枚举`OrderBy`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.OrderBy>。  
+ 与允许的值相对应的枚举`OrderBy`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.OrderBy>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

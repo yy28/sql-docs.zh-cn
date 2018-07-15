@@ -1,5 +1,5 @@
 ---
-title: NamingTemplate 元素 (ASSL) |Microsoft 文档
+title: NamingTemplate 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300837"
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate 元素 (ASSL)
-  定义级别从构造的父-子层次结构中的命名方式[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)父元素。  
+  定义如何从构造的父子层次结构中命名级别[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)父元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36027753"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 值`NamingTemplate`元素仅由父属性 (换而言之，值[用法](usage-element-dimensionattribute-assl.md)元素`DimensionAttribute`父元素设置为*父*)。  
+ 值`NamingTemplate`元素仅供父属性 (换而言之，值[用法](usage-element-dimensionattribute-assl.md)元素的`DimensionAttribute`父元素设置为*父*)。  
   
- 当使用父属性构造层次结构时，该层次结构的级别由父属性包含的成员之间的父子关系确定。 因此，与其他维度，不同的级别名称不能绘制从层次结构所使用的属性名称。  
+ 当使用父属性构造层次结构时，该层次结构的级别由父属性包含的成员之间的父子关系确定。 因此，与其他维度不同级别的名称不能绘制从层次结构使用的属性名称。  
   
  相反，命名模板用于生成父子层次结构的级别名称。 在父属性中定义的 `NamingTemplate` 元素包含用于定义级别名称的字符串表达式。 有两种方法可以定义父属性的命名模板。 您可以设计一种命名模式，也可以指定名称列表。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36027753"
   
  列表中的每个名称都视为一个模板，以确保级别名称的唯一性。 例如，使用 `Manager;Team Lead;Manager;Team Lead;Worker *` 将得到级别名称 `Manager`、`Team Lead`、`Manager 01`、`Team Lead 01`、`Worker 05`、`Worker 06`。  
   
- 使用两个星号 （*） 以包括星号 (\*) 字符中的命名模板一部分的级别名称。  
+ 使用两个星号 （*） 来包含星号 (\*) 字符作为命名模板的一部分的级别名称中。  
   
- 对应于的父元素`NamingTemplate`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 父级对应的元素`NamingTemplate`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [NamingTemplateTranslations 元素&#40;ASSL&#41;](../collections/translations-element-assl.md)   

@@ -19,13 +19,13 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e943eab4aea643762f2ab9553c800211c5a2d9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8a4fb438fce2ff1e774938a34dfd25be1b483a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302357"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和异步转换
   若要了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中同步转换与异步转换之间的区别，最好先了解同步转换。 如果同步转换无法满足您的需要，您的设计可能需要异步转换。  
@@ -35,7 +35,7 @@ ms.locfileid: "36029049"
   
  “数据转换”这种转换是同步转换的一个示例。 对于每个传入行，它都转换指定列中的值，然后将其向下游发送。 每个单独的转换操作都与数据集中的其他所有行无关。  
   
- 在[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]脚本和编程，你通过查阅组件的输入 ID，并将其分配给指定同步转换`SynchronousInputID`的组件的输出的属性。 这可以使数据流引擎处理输入中的每一行，然后自动将每行发送给指定输出。 如果希望每一行都产生一个输出，则不必再编写任何其他代码来输出数据。 如果使用 `ExclusionGroup` 属性指定各行的输出只应归为一个或另一个输出组，就像有条件拆分转换中那样，则必须调用 `DirectRow` 方法来为每一行选择相应的目标。 如果存在错误输出，必须调用 `DirectErrorRow` 将存在错误的行发送到错误输出，而不是默认输出。  
+ 在中[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]通过查找一个组件的输入 ID 并将其分配给脚本和编程时，指定同步转换`SynchronousInputID`组件的输出的属性。 这可以使数据流引擎处理输入中的每一行，然后自动将每行发送给指定输出。 如果希望每一行都产生一个输出，则不必再编写任何其他代码来输出数据。 如果使用 `ExclusionGroup` 属性指定各行的输出只应归为一个或另一个输出组，就像有条件拆分转换中那样，则必须调用 `DirectRow` 方法来为每一行选择相应的目标。 如果存在错误输出，必须调用 `DirectErrorRow` 将存在错误的行发送到错误输出，而不是默认输出。  
   
 ## <a name="asynchronous-transformations"></a>异步转换  
  如果处理每一行时无法独立于其他所有行，则您的设计可能需要异步转换。 换言之，您不能在处理每一行时在数据流中传递该行，而必须使输出数据与输入异步，即两者不同时发生。 例如，以下情况需要异步转换：  
@@ -53,7 +53,7 @@ ms.locfileid: "36029049"
   
  还可以创建一个模拟同步转换的异步转换，方法是显式将每个输入行复制到输出中。 使用此方法可以重命名列或者转换数据类型或格式。 但是，此方法会降低性能。 您可以使用内置 Integration Services 组件（如复制列或数据转换）达到同样的效果，但是性能更佳。  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [使用脚本组件创建同步转换](data-flow/transformations/script-component.md)   

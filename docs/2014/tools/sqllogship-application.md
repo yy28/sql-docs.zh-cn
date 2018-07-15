@@ -1,5 +1,5 @@
 ---
-title: sqllogship 应用程序 |Microsoft 文档
+title: sqllogship 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306677"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
@@ -78,7 +78,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  由 **sqllogship** 创建的日志传送历史记录与由日志传送备份、复制和还原作业创建的历史记录混杂在一起。 如果打算反复使用 **sqllogship** 来执行日志传送配置中的备份、复制或还原操作，请考虑禁用相应的日志传送作业。 有关详细信息，请参阅 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
   
- **Sqllogship**应用程序 SqlLogShip.exe 安装在 x:\Program Files\Microsoft SQL Server\120\Tools\Binn 目录。  
+ **Sqllogship** x:\Program Files\Microsoft SQL Server\120\Tools\Binn 目录中安装应用程序，SqlLogShip.exe。  
   
 ## <a name="permissions"></a>权限  
  **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy**还是 **-restore** 选项。  

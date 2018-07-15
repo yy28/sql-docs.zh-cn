@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
 - tracer tokens [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cee723effa7edf573c71fa1783b4fce720ade23e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c313792beb9f07438f13a169d7502f631bab25b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294727"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
   本主题说明如何使用复制监视器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务复制测量滞后时间和验证连接。 事务复制提供了跟踪令牌功能，可以方便地测量事务复制拓扑中的滞后时间和验证发布服务器、分发服务器及订阅服务器之间的连接。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
@@ -146,7 +146,7 @@ ms.locfileid: "36028784"
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的发布属性中定义不正确或不存在发布。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的发布属性定义不正确或不存在发布。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> 方法。 此方法将跟踪令牌插入到发布的事务日志中。  
   

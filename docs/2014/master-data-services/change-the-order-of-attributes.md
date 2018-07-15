@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 413a61401e37db923a3513a96d8d0252d4183560
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 081ca01462cc2c885e7dea902acb585eddb681ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246827"
 ---
 # <a name="change-the-order-of-attributes"></a>更改属性的顺序
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改属性的顺序。  
@@ -43,7 +43,7 @@ ms.locfileid: "36137787"
   
 5.  单击 **“编辑所选实体”**。  
   
-6.  上**编辑实体**页上，在**叶成员属性**，或**合并成员属性**，或**集合属性**，选择你想要更改的顺序，然后单击向上箭头或向下箭头更改其顺序属性。  
+6.  上**编辑实体**页上，在**叶成员属性**，或**合并成员属性**，或者**集合属性**，选择你想要更改的顺序，然后单击向上箭头或向下箭头以更改其顺序的属性。  
   
 7.  单击**保存实体**。  
   

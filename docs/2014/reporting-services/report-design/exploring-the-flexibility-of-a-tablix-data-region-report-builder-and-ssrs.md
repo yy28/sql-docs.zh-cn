@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5870596b88527413706c24985a3c0fb584721b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d4dbdcedec7cf61b3de912bab3e3658c0267f134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323887"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）
   当通过功能区上的“插入”选项卡添加表、矩阵或列表数据区域时，应从 Tablix 数据区域的初始模板开始，但并不受该模板限制。 通过添加或删除组、行和列等任何 Tablix 数据区域功能，可以继续开发数据的显示方式。  
   
- 删除行组或列组时，您可以选择删除用于显示组值的行和列。 还可以手动添加或删除行和列。 若要了解如何行和列用于显示详细信息和组数据，请参阅[Tablix 数据区域&#40;报表生成器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)。  
+ 删除行组或列组时，您可以选择删除用于显示组值的行和列。 还可以手动添加或删除行和列。 若要了解如何使用行和列以显示详细信息和组数据，请参阅[Tablix 数据区域&#40;报表生成器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)。  
   
  在更改 Tablix 数据区域的结构之后，可以设置相应属性以帮助控制报表呈现数据区域的方式；例如，可以在每页顶部重复列标题，或者将组标题与组保留在一起。 有关详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   

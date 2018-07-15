@@ -1,5 +1,5 @@
 ---
-title: 模式元素 (XMLA) |Microsoft 文档
+title: Mode 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5634e273e1708f9de213436e20008cc6874f50a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267643"
 ---
 # <a name="mode-element-xmla"></a>Mode 元素 (XMLA)
-  标识要使用由容器的父模式[锁](../xml-elements-commands/lock-element-xmla.md)元素在指定的对象上创建锁时。  
+  标识父对象使用的模式[锁](../xml-elements-commands/lock-element-xmla.md)元素时指定的对象上创建锁。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36138936"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[锁定](../xml-elements-commands/lock-element-xmla.md)，[解锁](../xml-elements-commands/unlock-element-xmla.md)|  
+|父元素|[锁](../xml-elements-commands/lock-element-xmla.md)，[解锁](../xml-elements-commands/unlock-element-xmla.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,7 +68,7 @@ ms.locfileid: "36138936"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*CommitShared*|对指定对象建立一个共享锁。 还可以为同一对象创建其他共享锁。<br /><br /> 共享的锁可防止事务包含写入操作，如[执行](../xml-elements-methods-execute.md)方法调用运行[Alter](../xml-elements-commands/alter-element-xmla.md)命令，对指定的对象，从提交之前删除的共享的锁。 共享的锁不会阻止事务包含读取的操作，如[发现](../xml-elements-methods-discover.md)方法调用或`Execute`方法调用运行[语句](../xml-elements-commands/statement-element-xmla.md)命令，从提交。|  
+|*CommitShared*|对指定对象建立一个共享锁。 还可以为同一对象创建其他共享锁。<br /><br /> 共享的锁将阻止包含写操作，如事务[Execute](../xml-elements-methods-execute.md)方法调用运行[Alter](../xml-elements-commands/alter-element-xmla.md)命令，对指定的对象，从提交之前删除该共享的锁。 共享的锁不会阻止包含读的操作，如事务[Discover](../xml-elements-methods-discover.md)方法调用或`Execute`方法调用运行[语句](../xml-elements-commands/statement-element-xmla.md)命令的提交。|  
 |*CommitExclusive*|对指定对象建立一个排他锁。 不可为同一对象创建其他共享锁或排他锁。<br /><br /> 排他锁可阻止指定对象的包含写或读操作的事务的提交，阻止会一直持续到该排他锁被删除为止。|  
   
 ## <a name="see-also"></a>请参阅  

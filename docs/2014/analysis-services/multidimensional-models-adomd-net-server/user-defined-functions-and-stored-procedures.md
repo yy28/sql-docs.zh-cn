@@ -1,5 +1,5 @@
 ---
-title: 用户定义的函数和存储过程 |Microsoft 文档
+title: 用户定义的函数和存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - ADOMD.NET, stored procedures
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba07911e050fc4b2430957cc45beea55d2f8094d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719929ec255f29da6477788d4feff1162609f993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253019"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>用户定义函数和存储过程
-  使用 ADOMD.NET server 对象，您可以创建用户定义函数 (UDF) 或存储的过程[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，与元数据和数据从服务器进行交互。 这些进程内方法是通过多维表达式 (MDX) 或数据挖掘扩展插件 (DMX) 语句调用的，可以提供附加功能而不会有网络通信的延迟。  
+  使用 ADOMD.NET 服务器对象，您可以创建用户定义函数 (UDF) 或存储的过程，以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，与元数据和来自服务器的数据进行交互。 这些进程内方法是通过多维表达式 (MDX) 或数据挖掘扩展插件 (DMX) 语句调用的，可以提供附加功能而不会有网络通信的延迟。  
   
 ## <a name="udf-examples"></a>UDF 示例  
  UDF 是一种可在 MDX 或 DMX 语句上下文中调用的方法，可具有任意数目的参数，并可返回任意类型的数据。  
@@ -86,7 +86,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- 下面的 MDX 示例中调用了上面的示例。 在此 MDX 示例中，五个随机州或省检索从**Adventure Works**数据库。  
+ 下面的 MDX 示例中调用了上面的示例。 在此 MDX 示例中，五个随机的州或省从中**Adventure Works**数据库。  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 42718362257d6b6f8b8551d2de5d32b2dc4ed734
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d584d8070bcad4a594145c9e22e353a851435fde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305047"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在报表中嵌入图像（报表生成器和 SSRS）
   报表中可以包含嵌入图像。 嵌入图像可确保图像对报表始终可用，但会影响报表定义（即定义报表的文件）的大小。 报表中嵌入的图像在“报表数据”窗格中列出。  

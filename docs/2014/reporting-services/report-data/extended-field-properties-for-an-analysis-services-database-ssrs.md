@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5912a29ddfd19ef5e191be6c4d102117d125421d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268623"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 你可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
   
- 扩展属性包括预定义属性和自定义属性。 预定义的属性是普遍适用于多个数据源映射到特定的字段属性名称，并且可以访问通过内置的属性`Fields`按名称的集合。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
+ 扩展属性包括预定义属性和自定义属性。 预定义的属性是通用的多个数据源映射到特定字段属性名称，并且可以访问通过内置属性`Fields`集合按名称。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
  在图形模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询设计器定义查询时，一组预定义的单元属性和维度属性会自动添加到 MDX 查询。 您只能使用在您的报表的 MDX 查询中专门列出的扩展属性。 根据您的报表，可能需要修改默认 MDX 命令文本才能包含多维数据集中定义的其他维度或自定义属性。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源中的可用扩展字段的详细信息，请参阅[创建和使用属性值 (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md)。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>在报表中使用字段属性  
- 扩展字段属性包括预定义属性和数据访问接口特定属性。 即使字段属性位于为数据集生成的查询中，它们也不会与字段列表一起显示在 **“报表数据”** 窗格中，因此，不能将字段属性拖至报表设计图面中。 相反，您必须将该字段拖动到报表，然后更改`Value`到你想要使用的属性的字段的属性。 例如，如果已设置多维数据集的单元格数据的格式，则可以通过表达式 `=Fields!FieldName.FormattedValue`，来使用 FormattedValue 字段属性。  
+ 扩展字段属性包括预定义属性和数据访问接口特定属性。 即使字段属性位于为数据集生成的查询中，它们也不会与字段列表一起显示在 **“报表数据”** 窗格中，因此，不能将字段属性拖至报表设计图面中。 不过，您必须将该字段拖到报表上，然后将更改`Value`到你想要使用的属性字段的属性。 例如，如果已设置多维数据集的单元格数据的格式，则可以通过表达式 `=Fields!FieldName.FormattedValue`，来使用 FormattedValue 字段属性。  
   
  若要引用未预定义的扩展属性，请在表达式中使用以下语法：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36137692"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|指定字段的数据值。|  
 |`IsMissing`|`Boolean`|指示是否在结果数据集中找到了该字段。|  
-|`UniqueName`|`String`|返回级别的完全限定名称。 例如，`UniqueName`员工可能的值 *[员工]。 [员工部门]。[部门]。 （&) [销售]。 （& a) [北美销售经理]。 （&) [272]*。|  
+|`UniqueName`|`String`|返回级别的完全限定名称。 例如，`UniqueName`值可能为某位员工 *[Employee]。 [雇员所在部门]。[部门]。.& [Sales]。 （& a) [北美销售经理]。 [272] &*。|  
 |`BackgroundColor`|`String`|返回数据库中为该字段定义的背景颜色。|  
 |`Color`|`String`|返回数据库中为该项定义的前景色。|  
 |`FontFamily`|`String`|返回数据库中为该项定义的字体的名称。|  
@@ -58,7 +58,7 @@ ms.locfileid: "36137692"
 |`FontWeight`|`String`|返回数据库中为该项定义的字体的粗细。|  
 |`FontStyle`|`String`|返回数据库中为该项定义的字体的样式。|  
 |`TextDecoration`|`String`|返回数据库中为该项定义的特殊文本格式设置。|  
-|`FormattedValue`|`String`|返回度量值或关键数字的格式值。 例如，`FormattedValue`属性**销售额配额**返回货币格式，如 $1,124,400.00。|  
+|`FormattedValue`|`String`|返回度量值或关键数字的格式值。 例如，`FormattedValue`属性**销售配额**返回货币格式，如 $1,124,400.00。|  
 |`Key`|`Object`|返回级别的键。|  
 |`LevelNumber`|`Integer`|针对父子层次结构返回级别号或维度编号。|  
 |`ParentUniqueName`|`String`|针对父子层次结构返回父级的完全限定名称。|  
@@ -144,7 +144,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- 如果使用此查询创建报表数据集，并将该数据集绑定到一个表，则可以看到字段的默认 VALUE 属性，例如 `=Fields!Month_of_Year!Value`。 如果将此表达式设置表的排序表达式，则结果将为表进行排序，按字母顺序按月因为值字段使用`String`数据类型。 若要按月份在一年中的顺序（即一月排在第一位，十二月排在最后）对该表进行排序，请使用以下表达式：  
+ 如果使用此查询创建报表数据集，并将该数据集绑定到一个表，则可以看到字段的默认 VALUE 属性，例如 `=Fields!Month_of_Year!Value`。 如果将此表达式设置为该表的排序表达式，则结果将为对表进行排序按字母顺序按月因为值字段使用`String`数据类型。 若要按月份在一年中的顺序（即一月排在第一位，十二月排在最后）对该表进行排序，请使用以下表达式：  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -154,7 +154,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>请参阅  
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)   
- [在表达式中的内置集合&#40;报表生成器和 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [表达式中的内置集合&#40;报表生成器和 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18e56dea2976e5a058a1161c1ea87eaec64d7dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f837d1380fc5198b0d42bdf0399717807ac81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302267"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
   使用 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页，选择 SAP BW 目标要使用的 SAP BW 连接管理器。 在该页中，您还可选择用于向 SAP Netweaver BW 系统加载数据的参数。  
@@ -83,7 +83,7 @@ ms.locfileid: "36029075"
  输入服务器名称或网关主机的 IP 地址。 通常，名称或 IP 地址与 SAP 应用程序服务器相同。  
   
  **网关服务**  
- 输入网关服务的名称格式`sapgwNN`，其中`NN`是系统编号。  
+ 输入网关服务的名称采用格式`sapgwNN`，其中`NN`是系统编号。  
   
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  

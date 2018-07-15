@@ -1,5 +1,5 @@
 ---
-title: 批注元素 (ASSL) |Microsoft 文档
+title: Annotation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dfe8ea881948de8ed53cea0ddcff1e1325a96d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304497"
 ---
 # <a name="annotation-element-assl"></a>Annotation 元素 (ASSL)
   包含用于扩展 Analysis Services 脚本语言 (ASSL) 架构的元素。  
@@ -74,7 +74,7 @@ ms.locfileid: "36028028"
   
  在 `Annotation` 元素内，无法保留未用子元素括起来的注释和空格。 此外，所有元素必须可读写；只读元素将被忽略。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Annotation>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Annotation>。  
   
 ## <a name="see-also"></a>请参阅  
  [对象&#40;ASSL&#41;](objects-assl.md)  

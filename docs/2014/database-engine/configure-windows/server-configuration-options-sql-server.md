@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
 - configuration options [SQL Server], when take effect
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 caps.latest.revision: 116
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b1ae5c91b9ffebf1b4c5aba1ecaf4c2f19401d68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0ba5185fd33f6ad7dc2e7d5d8b7e228140a0181f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316997"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系统存储过程通过配置选项来管理和优化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 资源。 大多数常用的服务器配置选项可以通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来使用；而所有配置选项都可通过 sp_configure 来访问。 在设置这些选项之前应该认真考虑这些选项对系统的影响。 有关详细信息，请参阅[查看或更改服务器属性 (SQL Server)](view-or-change-server-properties-sql-server.md)。  

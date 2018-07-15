@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3aec36dc9ba7771cd83cea8ddc1deafe3bf1a648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292297"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
   文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 `varbinary`、`varbinary(max)`（包括 `FILESTREAM`）或 `image` 二进制数据列中支持的文档类型，您可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  
@@ -65,7 +64,7 @@ ms.locfileid: "36027207"
 ##  <a name="impact"></a> 启用属性搜索的影响  
  根据您在搜索属性列表中指定的属性的数目以及每个属性的内容，配置全文索引以便支持搜索一个或多个属性将在某种程度上增加索引的大小。  
   
- 在测试中的 Microsoft Word 的典型相近<sup>®</sup>，Excel<sup>®</sup>，和 PowerPoint<sup>®</sup>文档，我们配置的全文索引的索引为典型的搜索属性。 对这些属性建立索引将全文索引的大小增加了大约 5%。 我们预计这一大小上的增量对于大多数文档资料而言大致相近。 不过，这个大小上的增量最终将取决于相对于整个数据量，给定文档资料中的属性数据量的比例。  
+ 在测试中的 Microsoft Word 的典型资料<sup>®</sup>，Excel<sup>®</sup>，和 PowerPoint<sup>®</sup>文档，我们配置了全文索引到索引典型的搜索属性。 对这些属性建立索引将全文索引的大小增加了大约 5%。 我们预计这一大小上的增量对于大多数文档资料而言大致相近。 不过，这个大小上的增量最终将取决于相对于整个数据量，给定文档资料中的属性数据量的比例。  
   
   
   

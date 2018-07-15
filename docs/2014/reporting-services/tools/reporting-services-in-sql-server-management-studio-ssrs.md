@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5564db01308819c3fdb9c777cace2d2308b1c272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba0324f9c74d1888c7ee160735392338bff89795
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301771"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio 中的 Reporting Services (SSRS)
   报表服务器管理员可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 执行以下操作：  
@@ -44,7 +44,7 @@ ms.locfileid: "36028277"
   
 -   [创建、 删除或修改角色&#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
   
--   [删除某个项&#40;Management Studio&#41;](delete-an-item-management-studio.md)  
+-   [删除项&#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
 -   [取消报表服务器作业&#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
   

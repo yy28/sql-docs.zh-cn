@@ -1,5 +1,5 @@
 ---
-title: 包含行中不支持 CREATE STATISTICS 语句中的兼容性模式 90 或更高版本 |Microsoft 文档
+title: 使用行不支持在 CREATE STATISTICS 语句中的兼容性模式为 90 或更高版本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH ROWS in CREATE STATISTICS statement
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d509352d99cab9359e7ea222f5fb2d5d7e28075
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 98aec243141e642cd0ef77719795490a1333f473
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294087"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>在 90 或更高的兼容模式下，CREATE STATISTICS 语句中不支持 WITH ROWS
   当运行兼容模式设置为 90 或更高的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，不支持在 CREATE STATISTICS 语句中指定 WITH ROWS。  

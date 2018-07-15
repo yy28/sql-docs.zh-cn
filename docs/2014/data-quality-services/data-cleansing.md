@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880ef05d0e3c3a23294be92866e79fe9f0137fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0d882d85e2dcb8c0b8b03d1981912d669afb9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293267"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   数据清理是在数据源中分析数据质量的过程，在其中手动批准/拒绝系统的建议并将对数据进行更改。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据清理包括计算机辅助的过程和交互式过程，前者分析数据与知识库中知识的符合程度，后者允许数据专员查看和修改计算机辅助过程的结果，确保数据清理符合自己的要求。  

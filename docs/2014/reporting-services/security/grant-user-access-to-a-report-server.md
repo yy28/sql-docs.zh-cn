@@ -1,5 +1,5 @@
 ---
-title: 授予用户对报表服务器 （报表管理器） 的访问 |Microsoft 文档
+title: 授予用户访问报表服务器 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256139"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>授予用户对报表服务器的访问权限（报表管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的安全性向用户授予对报表服务器的访问权限。 在新安装的报表服务器上，只有作为本地 Administrators 组的成员的用户具有对报表服务器内容和操作的权限。 若要使其他用户可以使用报表服务器，必须创建将用户帐户或组帐户映射到指定任务集合的预定义角色的角色分配。  
@@ -61,7 +61,7 @@ ms.locfileid: "36137686"
   
 4.  单击 **“新建角色分配”**。  
   
-5.  在**组或用户名**，输入的 Windows 域用户或组帐户以这种格式：\<域 >\\< 帐户\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
+5.  在中**组或用户名**，输入 Windows 域用户或组帐户按以下格式：\<域 >\\< 帐户\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
   
 6.  选择一个系统角色，然后单击 **“确定”**。  
   
@@ -82,14 +82,14 @@ ms.locfileid: "36137686"
     > [!NOTE]  
     >  如果某项当前从父项继承安全性，则在工具栏中单击 **“编辑项安全设置”** 可以更改安全设置。 然后，单击 **“新建角色分配”**。  
   
-5.  在**组或用户名**，输入的 Windows 域用户或组帐户以这种格式：\<域 >\\< 帐户\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
+5.  在中**组或用户名**，输入 Windows 域用户或组帐户按以下格式：\<域 >\\< 帐户\>。 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。  
   
 6.  选择一个或多个角色定义（说明用户或组应如何访问该项），再单击 **“确定”**。  
   
 7.  重复上述步骤，为其他用户或组创建分配。  
   
 ## <a name="see-also"></a>请参阅  
- (创建-和-管理的角色-assignments.md)   
+ (创建-和-管理-角色-assignments.md)   
  [新建角色分配： 编辑角色分配页&#40;报表管理器&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
  [安全属性页中，项&#40;报表管理器&#41;](../security-properties-page-items-report-manager.md)   
  [角色分配](role-assignments.md)   

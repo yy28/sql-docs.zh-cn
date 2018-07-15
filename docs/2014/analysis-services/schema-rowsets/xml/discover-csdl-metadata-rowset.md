@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_CSDL_METADATA 行集 |Microsoft 文档
+title: DISCOVER_CSDL_METADATA 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bac193969cb4f5392944a79351b44390b013596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293519"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行集
   返回有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据模型（表格或多维）的信息，同时提供 CSDLBI 格式（带 BI 注释的概念性架构定义语言）的模型定义。 CSDLBI 基于 CSDL，CSDL 是实体数据框架使用的 XML 架构，用于在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器和 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 客户端之间进行通信。 商业智能 (BI) 注释提供有关表格模型以及其中对象的其他元数据。 有关表格数据模型的详细信息，请参阅[用于商业智能的 CSDL 批注 (CSDLBI)](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "36027327"
  发出行集请求的客户端的语言标识符包括在命令的连接字符串中，并且影响作为行集的一部分返回的若干属性中显示的语言。  有关语言标识符可影响的属性和说明的信息，请参阅“备注”部分。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_CSDL_METADATA`行集包含以下各列。  
+ `DISCOVER_CSDL_METADATA`行集包含以下列。  
   
 |**列名**|**类型指示符**|**限制**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
@@ -127,6 +127,6 @@ ms.locfileid: "36027327"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 架构行集](../analysis-services-schema-rowsets.md)   
- [商业智能的 CSDL 批注&#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [用于商业智能的 CSDL 批注&#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

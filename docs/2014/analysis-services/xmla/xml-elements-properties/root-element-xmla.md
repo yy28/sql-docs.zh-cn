@@ -1,5 +1,5 @@
 ---
-title: 根元素 (XMLA) |Microsoft 文档
+title: root 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321077"
 ---
 # <a name="root-element-xmla"></a>root 元素 (XMLA)
-  包含返回的结果[发现](../xml-elements-methods-discover.md)方法或的 XML for Analysis (XMLA) 命令执行使用[执行](../xml-elements-methods-execute.md)方法。  
+  包含返回的结果[Discover](../xml-elements-methods-discover.md)方法或 XML for Analysis (XMLA) 命令使用执行[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36125685"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `root`元素包含在返回的信息[DiscoverResponse](../xml-elements-objects-discoverresponse.md)返回由单个元素`Discover`方法调用，或在[ExecuteResponse](../xml-elements-objects-executeresponse.md)元素返回的单个 XMLA 命令执行由单个`Execute`方法调用。  
+ `root`元素包含在返回的信息[DiscoverResponse](../xml-elements-objects-discoverresponse.md)返回单个元素`Discover`方法调用中，或在[ExecuteResponse](../xml-elements-objects-executeresponse.md)元素返回的单个 XMLA 命令执行由单个`Execute`方法调用。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

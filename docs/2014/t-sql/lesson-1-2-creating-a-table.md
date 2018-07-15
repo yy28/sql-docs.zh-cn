@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating tables
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 91dbb81211dcfdec3d88b1f3f93a8c03ed36b16a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: fed1f78700fd9dc315dd0e15823eead1f279884e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255149"
 ---
 # <a name="creating-a-table-tutorial"></a>创建表（教程）
   若要创建表，您必须提供该表的名称以及该表中每个列的名称和数据类型。 指出每个列中是否允许空值，也是一种很好的做法。  

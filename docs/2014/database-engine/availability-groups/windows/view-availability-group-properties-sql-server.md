@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 caps.latest.revision: 11
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 1c6e3b8fcd049b4702fcccea27271f17b335f8f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7c59f778735c524ca8b1d0b41469114b21e5b591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312317"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>查看可用性组属性 (SQL Server)
   本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]查看 AlwaysOn 可用性组的属性。  
@@ -105,6 +104,6 @@ ms.locfileid: "36027318"
 
   
 ## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [监视可用性组&#40;TRANSACT-SQL&#41; ](monitor-availability-groups-transact-sql.md) [运行问题的 AlwaysOn 的 AlwaysOn 策略可用性组&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [AlwaysOn 可用性组概述&#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [监视可用性组&#40;TRANSACT-SQL&#41; ](monitor-availability-groups-transact-sql.md) [针对运行问题的 AlwaysOn 的 AlwaysOn 策略可用性组&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

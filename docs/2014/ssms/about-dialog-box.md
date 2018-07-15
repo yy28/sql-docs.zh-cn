@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - status information [SQL Server Management Studio]
 - About dialog box
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8d6c0087cbe685fc2a5e83f377b78f055436e3b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7dbf08b5fdb44c2dc8b843c09b52e3e986093c02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315187"
 ---
 # <a name="about-dialog-box"></a>“关于”对话框
   “关于”对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中，[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”菜单中。  

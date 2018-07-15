@@ -1,5 +1,5 @@
 ---
-title: 线性回归模型查询示例 |Microsoft 文档
+title: 线性回归模型查询示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303177"
 ---
 # <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，内容查询可能会提供有关回归公式的更多详细信息，而预测查询则可能会告诉您新数据点是否适合模型。 您还可以使用查询来检索有关模型的元数据。  
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
 |9（统计信息）|  
 |11（截距）|  
   
- 回归模型的每个值类型的含义的详细信息，请参阅[挖掘模型内容线性回归模型的&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 有关回归模型的每个值类型的含义的详细信息，请参阅[线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
  [返回页首](#bkmk_top)  
   
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [返回页首](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> 示例查询 4：使用单独查询预测收入  
- 创建针对回归模型的单个查询的最简便方法是使用 **“单独查询输入”** 对话框。 例如，可以通过选择相应的回归模型中，生成下面的 DMX 查询选择**单独查询**，，然后键入`20`的值作为**年龄**。  
+ 创建针对回归模型的单个查询的最简便方法是使用 **“单独查询输入”** 对话框。 例如，可以通过选择相应的回归模型中，生成下面的 DMX 查询选择**单独查询**，然后键入`20`的值作为**年龄**。  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  

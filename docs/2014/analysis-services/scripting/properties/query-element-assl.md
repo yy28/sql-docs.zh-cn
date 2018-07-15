@@ -1,5 +1,5 @@
 ---
-title: 查询元素 (ASSL) |Microsoft 文档
+title: 查询元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fac4774f6e8a2694ee79691a84f3333ab1a4226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2917bfe5a0050a3e3baa17838dffc1e1d94a0172
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308407"
 ---
 # <a name="query-element-assl"></a>Query 元素 (ASSL)
   包含要为通知执行的查询的文本。  
@@ -58,7 +58,7 @@ ms.locfileid: "36026873"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`Query`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.QueryNotification>。  
+ 父级对应的元素`Query`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.QueryNotification>。  
   
 ## <a name="see-also"></a>请参阅  
  [ProactiveCachingQueryBinding 数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

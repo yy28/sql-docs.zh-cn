@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e722f2884b0137b261f8442021199f4cc1cb0ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6bb76e6e17562ae1ed16acba6a63f17d665ca05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318047"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
   当您创建报表时，经常预览报表以验证报表显示您所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  

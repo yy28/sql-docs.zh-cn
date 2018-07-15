@@ -1,5 +1,5 @@
 ---
-title: 从客户端应用程序 (Analysis Services) 连接 |Microsoft 文档
+title: 连接客户端应用程序 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314907"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
   如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
@@ -109,7 +109,7 @@ ms.locfileid: "36028683"
   
 1.  在 Analysis Services 实例上启动 **SQL Server Profiler** ，然后开始一个新跟踪。  
   
-2.  在事件选择验证`Audit Login`和`Audit Logout`签入安全审核部分。  
+2.  在事件选择确认`Audit Login`和`Audit Logout`安全审核部分中选中了。  
   
 3.  通过某一应用程序服务（例如 SharePoint 或 Reporting Services）从远程客户端计算机连接到 Analysis Services。 Audit Login 事件将显示连接到 Analysis Services 的用户的标识。  
   

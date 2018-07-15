@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -17,20 +17,20 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44b07e26877a4d53d87cabb2ce48894f067a2802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a94c611a8c200f5b7b8211b6a1d69b3f147b7a37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195657"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 连接管理器
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器使包能够使用 .NET 访问接口访问数据源。 此连接管理器通常用于访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等数据源，也用于访问在用 C# 等语言以托管代码编写的自定义任务中通过 OLE DB 和 XML 公开的数据源。  
   
- 当你将添加[!INCLUDE[vstecado](../../includes/vstecado-md.md)]到包中，连接管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建连接管理器，它被解析为[!INCLUDE[vstecado](../../includes/vstecado-md.md)]在运行时，连接设置连接管理器属性，并添加的连接管理器`Connections`上包的集合。  
+ 当您将添加[!INCLUDE[vstecado](../../includes/vstecado-md.md)]到包，连接管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器，它将被解析为[!INCLUDE[vstecado](../../includes/vstecado-md.md)]连接在运行时，设置该连接管理器属性，并将添加到连接管理器`Connections`上包的集合。  
   
- `ConnectionManagerType`的连接管理器的属性设置为`ADO.NET`。 值`ConnectionManagerType`受到限定，以包括连接管理器使用的.NET 提供程序的名称。  
+ `ConnectionManagerType`连接管理器属性设置为`ADO.NET`。 值`ConnectionManagerType`受到限定，以包括连接管理器使用的.NET 提供程序的名称。  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>ADO.NET 连接管理器故障排除  
  可以记录 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器对外部数据访问接口所做的调用。 使用此日志记录功能，可以对 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器与外部数据源的连接进行故障排除。 若要记录 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
@@ -64,9 +64,9 @@ ms.locfileid: "36139135"
   
 -   [配置 ADO.NET 连接管理器](../configure-ado-net-connection-manager.md)  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[添加连接以编程方式](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;连接](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
   
   

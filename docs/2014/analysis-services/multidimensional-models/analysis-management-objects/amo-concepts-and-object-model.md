@@ -1,5 +1,5 @@
 ---
-title: AMO 概念和对象模型 |Microsoft 文档
+title: AMO 概念和对象模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,54 +21,54 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310717"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 概念和对象模型
-  本主题提供的分析管理对象 (AMO) 的定义如何与其他工具和库中的体系结构提供相关 AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及在 AMO 中的所有主对象的概念说明。  
+  本主题提供了定义的分析管理对象 (AMO) 如何与其他工具和库中的体系结构提供相关 AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及在 AMO 中的所有主要对象的概念性说明。  
   
- AMO 是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理类的完整集合，可在托管环境中，在 <xref:Microsoft.AnalysisServices> 命名空间下以编程方式使用。 类包含在 AnalysisServices.dll 文件中，通常可找到 where[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序安装文件，在文件夹 \100\SDK\Assemblies\\。 若要使用 AMO 类，请将对此程序集的引用包含在项目中。  
+ AMO 是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理类的完整集合，可在托管环境中，在 <xref:Microsoft.AnalysisServices> 命名空间下以编程方式使用。 这些类包含在 AnalysisServices.dll 文件中，通常[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序安装目录下的文件夹 \100\SDK\Assemblies\\。 若要使用 AMO 类，请将对此程序集的引用包含在项目中。  
   
- 通过使用你将能够创建的 AMO，修改和删除对象，例如多维数据集、 维度、 挖掘结构和[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库; 在所有这些对象，可以从.NET Framework 中应用程序执行操作。 您还可以处理和更新存储在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库中的信息。  
+ 通过使用的 AMO 可以创建、 修改和删除对象，如多维数据集、 维度、 挖掘结构和[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库; 对所有这些对象，可以从.NET Framework 中的应用程序执行操作。 您还可以处理和更新存储在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库中的信息。  
   
- 无法通过 AMO 来查询数据。 若要查询你的数据，使用[使用 ADOMD.NET 开发](../adomd-net/developing-with-adomd-net.md)。  
+ 无法通过 AMO 来查询数据。 若要查询你的数据，请使用[使用 ADOMD.NET 进行开发](../adomd-net/developing-with-adomd-net.md)。  
   
  本主题包含以下各节：  
   
- [AMO 中的 Analysis Services 体系结构](#AMOintheAnalysisServicesArchitecture)  
+ [Analysis Services 体系结构中的 AMO](#AMOintheAnalysisServicesArchitecture)  
   
  [AMO 体系结构](#AMOArchitecture)  
   
  [使用 AMO](#bkmk_UsingAMO)  
   
- [自动执行使用 AMO 的管理任务](#AutomatingAdministrativeTaskswithAMO)  
+ [使用 AMO 自动执行管理任务](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture"></a> AMO 中的 Analysis Services 体系结构  
- 按照设计，AMO 只用于对象管理，而不用于查询数据。 如果用户需要查询[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序的数据，客户端应用程序应使用[使用 ADOMD.NET 开发](../adomd-net/developing-with-adomd-net.md)。  
+##  <a name="AMOintheAnalysisServicesArchitecture"></a> Analysis Services 体系结构中的 AMO  
+ 按照设计，AMO 只用于对象管理，而不用于查询数据。 如果用户需要查询[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的客户端应用程序数据，客户端应用程序应使用[使用 ADOMD.NET 进行开发](../adomd-net/developing-with-adomd-net.md)。  
   
 ##  <a name="AMOArchitecture"></a> AMO 体系结构  
- AMO 是用于管理的实例的类的完整库[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序在.NET Framework 2.0 版的托管代码中。  
+ AMO 是一个完整的类设计用来管理的实例类库[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从托管代码在.NET Framework 2.0 版中的客户端应用程序。  
   
  AMO 类库具有类层次结构，特定的类必须在其他类之前实例化才能在代码中使用。 此外，还有可随时在代码中实例化的辅助类，但是在使用任一辅助类之前，您可能已经实例化了类层次结构中的一个或多个类。  
   
  下图是 AMO 层次结构的高级视图，它包含该层次结构中的主要类。 该图显示各类在其容器和同级之间的位置。 <xref:Microsoft.AnalysisServices.Dimension> 属于 <xref:Microsoft.AnalysisServices.Database> 和 <xref:Microsoft.AnalysisServices.Server>，可与 <xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.MiningStructure> 同时创建。 在同一级别上，某些类必须先实例化，然后才能使用该级别的其他类。 例如，必须先创建 <xref:Microsoft.AnalysisServices.DataSource> 的实例，然后才能添加新的 <xref:Microsoft.AnalysisServices.Dimension> 或 <xref:Microsoft.AnalysisServices.MiningStructure>。  
   
- ![AMO 类高级别视图](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO 类高级视图")  
+ ![AMO 类概览](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO 类概览")  
   
- A*主要对象*是为整个实体而不是另一个对象的一部分代表整个对象的类。 主要对象包括 <xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension> 和 <xref:Microsoft.AnalysisServices.MiningStructure>，因为它们是独立的实体。 但是，<xref:Microsoft.AnalysisServices.Level> 不是主要对象，因为它是 <xref:Microsoft.AnalysisServices.Dimension> 的一个组成部分。 主要对象的创建、删除、修改或处理可以独立于其他对象。 次要对象是只能作为创建父级主要对象的一部分才能创建的对象。 次要对象通常在创建主要对象时创建。 次要对象的值应在创建时定义，因为次要对象没有默认创建值。  
+ 一个*主要对象*是一个完整对象表示为整个实体而不是作为另一个对象的一部分的类。 主要对象包括 <xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension> 和 <xref:Microsoft.AnalysisServices.MiningStructure>，因为它们是独立的实体。 但是，<xref:Microsoft.AnalysisServices.Level> 不是主要对象，因为它是 <xref:Microsoft.AnalysisServices.Dimension> 的一个组成部分。 主要对象的创建、删除、修改或处理可以独立于其他对象。 次要对象是只能作为创建父级主要对象的一部分才能创建的对象。 次要对象通常在创建主要对象时创建。 次要对象的值应在创建时定义，因为次要对象没有默认创建值。  
   
  下图显示 <xref:Microsoft.AnalysisServices.Server> 对象包含的主要对象。  
   
- ![AMO 主对象突出显示](../../../analysis-services/dev-guide/media/amo-majorobjects.gif "AMO 主对象突出显示")  
+ ![突出显示的 AMO 主要对象](../../../analysis-services/dev-guide/media/amo-majorobjects.gif "突出显示的 AMO 主要对象")  
   
- ![AMO 主对象突出显示 (2)](../../../analysis-services/dev-guide/media/amo-majorobjects-02.gif "AMO 主对象突出显示 (2)")  
+ ![突出显示的 AMO 主要对象 (2)](../../../analysis-services/dev-guide/media/amo-majorobjects-02.gif "突出显示的 AMO 主要对象 (2)")  
   
  用 AMO 进行编程时，类和包含类之间的关联使用集合类型属性，例如 <xref:Microsoft.AnalysisServices.Server> 和 <xref:Microsoft.AnalysisServices.Dimension>。 若要使用包含类的一个实例，请先获取对含有或能够含有该包含类的集合对象的引用。 然后，在该集合中找到要查找的特定对象，接着可以获得该对象的引用，以便开始使用该对象。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36027562"
 ##### <a name="data-mining-advanced-users"></a>数据挖掘高级用户  
  对于数据挖掘高级用户，如果您有必须定期重新定型的大型模型集，则 AMO 是最有用的。  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO"></a> 自动执行使用 AMO 的管理任务  
+##  <a name="AutomatingAdministrativeTaskswithAMO"></a> 使用 AMO 自动执行管理任务  
  对于大多数重复性的任务来说，与使用任何您选择的语言将其开发为应用程序相比，使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 进行开发可以更好地设计、部署和维护这些任务。 但是，对于不能使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自动执行的重复性任务，可以使用 AMO。 如果您想用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 开发专用的商业智能应用程序，AMO 也很有用。  
   
 ##### <a name="automatic-object-management"></a>自动对象管理  
@@ -118,6 +118,6 @@ ms.locfileid: "36027562"
  使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 任务或者创建自动运行的专用 AMO 应用程序可以自动进行备份管理。 使用 AMO 可以为操作员开发帮助他们完成日常工作的备份界面。  
   
 ##### <a name="tasks-amo-is-not-intended-for"></a>不适合使用 AMO 的任务  
- AMO 不能用于查询数据。 若要查询 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据，包括多维数据集和挖掘模型，请在用户应用程序中使用 ADOMD.NET。 有关详细信息，请参阅[使用 ADOMD.NET 开发](../adomd-net/developing-with-adomd-net.md)。  
+ AMO 不能用于查询数据。 若要查询 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据，包括多维数据集和挖掘模型，请在用户应用程序中使用 ADOMD.NET。 有关详细信息，请参阅[使用 ADOMD.NET 进行开发](../adomd-net/developing-with-adomd-net.md)。  
   
   

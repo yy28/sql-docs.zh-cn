@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 修改度量值、 属性和层次结构 |Microsoft 文档
+title: 第 3 课： 修改度量值、 属性和层次结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e985dc25323960ccaab5ad9c320bf12bd14bf43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6d1f397b5950144ed898e4907c7ea30bc582f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255489"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 课：修改度量值、属性和层次结构
   在定义初始多维数据集后，即可开始提高多维数据集的有用性和友好性。 您可以通过添加在不同级别支持导航和聚合的层次结构、通过将格式应用于特定的度量值以及通过定义计算和关系，实现上述目的。  
@@ -46,6 +46,6 @@ ms.locfileid: "36138963"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [多维建模&#40;通恒教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多维建模&#40;Adventure Works 教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

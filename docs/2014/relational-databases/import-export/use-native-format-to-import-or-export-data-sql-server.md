@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81bfb6671a5c504505de34d368c972de98e21b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300407"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
   当使用不包含任何扩展/双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用本机格式。  
@@ -61,14 +60,14 @@ ms.locfileid: "36027476"
   
 -   `char` 数据或 `varchar` 数据  
   
-     每个开头`char`或`varchar`字段， **bcp**添加前缀长度。  
+     每个开头`char`或`varchar`字段中， **bcp**添加前缀长度。  
   
     > [!IMPORTANT]  
     >  当使用本机模式时，默认情况下， **bcp** 实用工具先将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字符转换为 OEM 字符，然后将这些字符复制到数据文件中。 **bcp** 实用工具先将数据文件中的字符转换为 ANSI 字符，然后将这些字符大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 在执行这些转换过程中，可能丢失扩展字符数据。 对于扩展字符，请使用 Unicode 本机格式或指定代码页。  
   
 -   `sql_variant` 数据  
   
-     如果`sql_variant`以本机格式数据文件中 SQLVARIANT 存储数据，则数据会保留其所有特征。 记录每个数据值的数据类型的元数据与数据值一起存储。 此元数据用于重新创建具有相同的数据类型，目标中的数据值`sql_variant`列。  
+     如果`sql_variant`数据存储为 SQLVARIANT 的本机格式数据文件中，数据会保留其所有特征。 记录每个数据值的数据类型的元数据与数据值一起存储。 此元数据用于重新创建具有相同的数据类型在目标中的数据值`sql_variant`列。  
   
      如果目标列的数据类型不是`sql_variant`，每个数据值转换为目标列中，按照隐式数据转换的一般规则的数据类型。 如果在数据转换过程中出现错误，则回滚当前批。 在 `char` 列之间传输的任何 `varchar` 值和 `sql_variant` 值都可能存在代码页转换问题。  
   
@@ -81,10 +80,10 @@ ms.locfileid: "36027476"
   
 |Command|选项|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-n**|导致**bcp**实用程序来使用本机数据类型的数据。<sup>1</sup>|  
+|**bcp**|**-n**|将导致**bcp**实用工具使用本机数据类型的数据。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|使用本机数据类型或宽本机数据类型的数据。 注意，如果格式化文件指定了数据类型，则不需要 DATAFILETYPE。|  
   
- <sup>1</sup>加载本机 (**-n**) 到兼容的早期版本的格式的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端，使用 **-V**切换。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>加载本机 (**-n**) 到与早期版本的兼容的格式数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端，使用 **-V**切换。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   

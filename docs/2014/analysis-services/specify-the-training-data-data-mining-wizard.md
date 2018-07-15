@@ -1,5 +1,5 @@
 ---
-title: 指定定型数据 （数据挖掘向导） |Microsoft 文档
+title: 指定定型数据 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6c6239831cc1e53ba1925b022d310f5cef907e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291423"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>指定定型数据（数据挖掘向导）
   可以使用 **“指定定型数据”** 页，确定要在挖掘结构中包括哪些列。 即使在所有模型中都不使用某些列，也可以选择将其包括在结构中。 例如，如果希望从挖掘模型中钻取到列，则您可以将其包括在结构中但不包括在模型中。  

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1ce999d3a443ef4a691f980646997eb1c927172e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e75fa36b86a0efa24a1de7f5ebfa638b14392776
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294537"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
   平面空间数据类型， `geometry`，表示欧几里得 （平面） 坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为公共语言运行时 (CLR) 数据类型实现。  
   
- `geometry`类型是预定义，可在每个数据库。 你可以创建类型的表列`geometry`并对进行操作`geometry`方式与你的数据像使用其他 CLR 类型。  
+ `geometry`类型是预定义，可在每个数据库。 可以创建类型的表列`geometry`并对`geometry`与你相同的方式中的数据像使用其他 CLR 类型。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 `geometry` 数据类型（平面）符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36028761"
 ##  <a name="creating"></a> 创建或构建新的几何图形实例  
   
 ###  <a name="existing"></a> 从现有实例创建新的几何图形实例  
- `geometry`数据类型提供了许多内置方法可用于创建新`geometry`实例基于现有实例。  
+ `geometry`数据类型提供了许多内置方法可用于创建新的`geometry`实例基于现有实例。  
   
  **在几何图形周围创建缓冲区**  
  [STBuffer（geometry 数据类型）](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -104,7 +104,7 @@ ms.locfileid: "36028761"
   
   
 ###  <a name="wkb"></a> 从熟知二进制输入构造几何图形实例  
- WKB 是指定的允许开放地理空间联盟 (OGC) 的二进制格式`geometry`客户端应用程序和 SQL 数据库之间进行交换的数据。 以下函数接受用于构造几何图形的 WKB 输入：  
+ WKB 是通过允许开放地理空间联盟 (ogc) 的二进制格式`geometry`客户端应用程序和 SQL 数据库之间交换数据。 以下函数接受用于构造几何图形的 WKB 输入：  
   
  **用 WKB 输入构造任意类型的几何图形实例**  
  [STGeomFromWKB（geometry 数据类型）](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -133,7 +133,7 @@ ms.locfileid: "36028761"
   
   
 ###  <a name="gml"></a> 用 GML 文本输入构造几何图形实例  
- `geometry`数据类型提供了生成的方法`geometry`用 GML，几何对象的 XML 表示的实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
+ `geometry`数据类型提供了生成的方法`geometry`gml 的 XML 表示形式的几何对象的实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
  **用 GML 输入构造任意类型的几何图形实例**  
  [GeomFromGml（geometry 数据类型）](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -141,7 +141,7 @@ ms.locfileid: "36028761"
   
   
 ##  <a name="returning"></a> 从几何图形实例返回熟知文本和熟知二进制  
- 你可以使用以下方法返回 WKT 或 WKB 格式的`geometry`实例：  
+ 可以使用以下方法返回 WKT 或 WKB 格式的`geometry`实例：  
   
  **返回几何图形实例的 WKT 表示形式**  
  [STAsText（geometry 数据类型）](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,10 +160,10 @@ ms.locfileid: "36028761"
   
   
 ##  <a name="querying"></a> 查询几何图形实例的属性和行为  
- 所有`geometry`实例具有多个可通过方法检索的属性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主题定义了几何图形类型的属性和行为，并为查询每种图形定义了方法。  
+ 所有`geometry`实例都有多个可通过方法检索的属性的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主题定义了几何图形类型的属性和行为，并为查询每种图形定义了方法。  
   
 ###  <a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
- 一次`geometry`构造实例，可以使用以下方法来确定其是否格式正确、 返回实例类型，或如果它是一个集合实例中，返回特定`geometry`实例。  
+ 一次`geometry`构造实例，可以使用以下方法来确定它是否格式正确、 返回实例类型，或如果它是集合实例，则返回特定`geometry`实例。  
   
  **返回几何图形的实例类型**  
  [STGeometryType（geometry 数据类型）](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -215,7 +215,7 @@ ms.locfileid: "36028761"
   
   
 ###  <a name="dimension"></a> 维度  
- 非空`geometry`实例可以是 0-1 维或二维。 零维`geometries`，如`Point`和`MultiPoint`，没有长度或面积。 一维对象，如`LineString, CircularString, CompoundCurve`，和`MultiLineString`，具有长度。 二维实例（例如 `Polygon`、`CurvePolygon` 和 `MultiPolygon`）具有面积和长度。 空实例将报告为 -1 维，并且`GeometryCollection` 将根据其内容类型报告一个面积。  
+ 非空`geometry`实例可以是 0-1-或二维。 零维`geometries`，如`Point`和`MultiPoint`，没有长度或面积。 一维对象，如`LineString, CircularString, CompoundCurve`，和`MultiLineString`，具有长度。 二维实例（例如 `Polygon`、`CurvePolygon` 和 `MultiPolygon`）具有面积和长度。 空实例将报告为 -1 维，并且`GeometryCollection` 将根据其内容类型报告一个面积。  
   
  **返回实例的维度**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -229,7 +229,7 @@ ms.locfileid: "36028761"
   
   
 ###  <a name="empty"></a> Empty  
- *空*`geometry`实例不包含任何点。 空的长度`LineString, CircularString`， `CompoundCurve`，和`MultiLineString`实例为零。 空的区域`Polygon`， `CurvePolygon`，和`MultiPolygon`实例为 0。  
+ *空*`geometry`实例不包含任何点。 空的长度`LineString, CircularString`， `CompoundCurve`，和`MultiLineString`实例是零。 空的区域`Polygon`， `CurvePolygon`，和`MultiPolygon`实例为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)。  
@@ -237,7 +237,7 @@ ms.locfileid: "36028761"
   
   
 ###  <a name="simple"></a> Simple  
- 有关`geometry`的实例设置为*简单*，它必须符合以下全部两个要求：  
+ 有关`geometry`的实例才是*简单*，它必须满足这两项要求：  
   
 -   实例的每个图形不能与自身相交，但其终点除外。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "36028761"
   
   
 ###  <a name="boundary"></a> 边界、内部和外部  
- *内部*的`geometry`实例是由实例占用的空间和*外部*是空间不占用。  
+ *内部*的`geometry`实例是指由实例占用的空间并*外部*是指未占用空间它。  
   
  “边界” 由 OGC 定义，如下所示：  
   
@@ -280,7 +280,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a> 包络线  
- *信封*的`geometry`实例，也称为*边界框*、 轴对齐矩形形成按最小值和最大值 （X，Y） 坐标的实例。  
+ *信封*的`geometry`实例，也称为*边界框*、 按最小值形成的轴对齐矩形和最大 （X，Y） 坐标的实例。  
   
  **返回实例的包络线**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -288,7 +288,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 闭合  
- A*关闭*`geometry`实例是指起始点和图形是相同的终结点。 `Polygon` 实例被视为闭合。 `Point` 实例不是闭合的。  
+ 一个*关闭*`geometry`实例是指起始点和终点相同。 `Polygon` 实例被视为闭合。 `Point` 实例不是闭合的。  
   
  环是一个简单、 关闭`LineString`实例。  
   

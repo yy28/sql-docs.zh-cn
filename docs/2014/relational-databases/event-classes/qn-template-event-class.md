@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acf958a7ffa9044b7cd432a5d08ae9197315aa51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: adc7d7a6700373227d5508cbd77e4101a0051ba9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268983"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 事件类
   QN:Template 事件报告有关查询模板的内部使用情况的信息。 查询模板是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用于针对通知共享查询定义的机制。 这些模板是与参数表一起创建的。 当创建、使用或销毁查询模板时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会创建此类型的事件。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data correction
 - correct data
@@ -16,13 +16,13 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cec475debf0c386b51a165df743b2a6893992a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 696dce12d347fe8da679c5d029b9f9d78bafc19c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283713"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
   DQS 清除转换使用 Data Quality Services (DQS)，通过应用为连接的数据源或类似数据源创建的已批准规则来更正来自连接的数据源的数据。 有关数据更正规则的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)。 有关 DQS 的详细信息，请参阅 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。  
@@ -52,7 +52,7 @@ ms.locfileid: "36138474"
   
 ## <a name="related-content"></a>相关内容  
   
--   [管理&#40;打开、 解锁、 重命名，并删除&#41;数据质量项目](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [管理&#40;打开、 解锁、 重命名，并删除&#41;的数据质量项目](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   social.technet.microsoft.com 上的文章： [使用复合域清理复杂数据](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
   

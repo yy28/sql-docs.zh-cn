@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], adding snapshots
 - historical data [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9d7c8723311845f7e9e7ba8cc6ecda6f3a37cbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb2c755b95a31c5c7892b6a9dcb192f250a46e93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246333"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>向报表历史记录添加快照（报表管理器）
   报表历史记录是随着时间变化而创建的报表快照的集合。 报表快照是包含在特定时间点检索到的布局信息以及查询结果的报表。 与按需运行报表（在选择该报表时可获得最新的查询结果）不同，报表快照按计划进行处理，再保存到报表服务器中。 当您选择报表快照进行查看时，报表服务器将在报表服务器数据库中检索存储的报表，然后显示快照创建时报表的数据和布局。  
@@ -76,7 +76,7 @@ ms.locfileid: "36138158"
 5.  单击 **“应用”**。  
   
 ## <a name="see-also"></a>请参阅  
- [配置报表执行属性&#40;报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [配置报表的执行属性&#40;报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [打开和关闭报表&#40;报表管理器&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [限制报表历史记录（报表管理器）](../reports/limit-report-history-report-manager.md)   
  [“计划”](../subscriptions/schedules.md)   

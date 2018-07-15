@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92279d4ee154bbac96341680fe2c8bcd1d3c2231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc09916ca71dabcdf9e50ddb109c9b60ac0401b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303497"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>参数查询 (Visual Database Tools)
   在某些情况下，您需要创建可以使用多次但每次使用不同值的查询。 例如，可能经常运行一个查询以查找某位作者编写的所有 `title_ids` 。 可以为每次请求运行相同的查询，只是每次使用的作者 ID 或姓名不同。  
@@ -69,8 +69,8 @@ WHERE au_fname = %first name% AND
  在查询和视图设计器中运行查询时，将显示 [查询参数对话框](query-parameters-dialog-box-visual-database-tools.md) 和命名参数列表。  
   
 ## <a name="see-also"></a>请参阅  
- [带参数查询&#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [支持的查询类型&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [使用参数查询&#40;可视化数据库工具&#41;](query-with-parameters-visual-database-tools.md)   
+ [支持的查询类型&#40;可视化数据库工具&#41;](supported-query-types-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

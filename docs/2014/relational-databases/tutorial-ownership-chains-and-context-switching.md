@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - context switching [SQL Server], tutorials
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0c9eea1ca7c8a2777534ec814b8c45e74b7c0235
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c580b7b2f9826251a9703b89bbc8c46a227e4564
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198847"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
@@ -204,7 +204,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a> 完整的示例  
+##  <a name="CompleteExample"></a> 完整示例  
  本部分显示完整的示例代码。  
   
 > [!NOTE]  

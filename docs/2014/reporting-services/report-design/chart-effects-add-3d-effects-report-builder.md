@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 99a350febe4166293664e51a17978e66d7d25f97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ebbdf3a5f3f4402cca8da92295d5f9632d1e1e8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202547"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>将三维效果添加到图表（报表生成器和 SSRS）
   三维 (3D) 效果可以使图表具有深度并增强视觉效果。 例如，若要强调分离型饼图的某个特定切片，可以旋转并更改图表的透视，以便人们可以首先注意到该切片。 将三维效果应用于图表时，将会禁用所有渐变颜色和阴影类型。  
@@ -33,7 +33,7 @@ ms.locfileid: "36138349"
   
 2.  在 **“三维选项”** 中，选择 **“启用三维”** 选项。  
   
-3.  （可选）在“三维选项”中，可以设置各种与三维角度和场景选项相关的属性。 有关这些属性的详细信息，请参阅[三维、 凹凸效果和图表中的其他效果&#40;报表生成器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)。  
+3.  （可选）在“三维选项”中，可以设置各种与三维角度和场景选项相关的属性。 有关这些属性的详细信息，请参阅[三维效果、 凹凸效果和其他效果在图表中&#40;报表生成器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)。  
   
 4.  单击“确定” 。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36138349"
     4.  对于 **DrawingStyle** 属性，指定 **“柱状”** 值。  
   
 ## <a name="see-also"></a>请参阅  
- [三维、 凹凸效果和图表中的其他效果&#40;报表生成器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [三维效果、 凹凸效果和其他效果在图表中的&#40;报表生成器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   

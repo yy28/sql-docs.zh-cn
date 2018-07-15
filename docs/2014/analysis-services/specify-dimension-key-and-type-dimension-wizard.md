@@ -1,5 +1,5 @@
 ---
-title: 指定维度键和类型 （维度向导） |Microsoft 文档
+title: 指定维度键和类型 （维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionkeyandtype.f1
 ms.assetid: d7d5db55-36c3-45f6-ade3-29aa516589c1
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ce08115251beee6dc71509bc4d3a53420ecd678
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 897aa6a576c93776cbefb29cbf80c858a651b229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293437"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>指定维度键和类型（维度向导）
   可以使用“指定维度键和类型”页定义维度的键属性，并指示维度是否为渐变维度 (SCD)。  

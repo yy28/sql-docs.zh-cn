@@ -1,5 +1,5 @@
 ---
-title: 行集数据类型 (XMLA) |Microsoft 文档
+title: Rowset 数据类型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279443"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 数据类型 (XMLA)
-  定义一个派生的数据类型，表示[根](../xml-elements-properties/root-element-xmla.md)返回从表格数据的元素[发现](../xml-elements-methods-discover.md)或[执行](../xml-elements-methods-execute.md)方法调用。  
+  定义一个派生的数据类型，表示[根](../xml-elements-properties/root-element-xmla.md)返回的表格数据的元素[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法调用。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析： 行集  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36138512"
 |派生元素|[根](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- XML 不允许某些字符作为元素和属性的名称。 若要解决此命名的约束，XML Analysis (XMLA) 支持编码由定义[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 对于包含不符合 XML 1.0 规范的 XML 名称字符的列名，XMLA 使用对应的十六进制值不是有效的 Unicode 字符进行编码。 十六进制值转义为 _x*HHHH*\_，其中*HHHH*代表最高有效位第一个订单中的字符的四位十六进制 ucs-2 代码。 例如，XMLA 将名称“Order Details”编码为 Order_x0020_Details，将空格字符替换为相应的十六进制代码。  
+ XML 不允许某些字符作为元素和属性的名称。 若要解决此命名约束，XML for Analysis (XMLA) 支持定义的编码方式[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 对于包含不符合 XML 1.0 规范的有效的 XML 名称字符的列名，XMLA 使用相应的十六进制值不是有效的 Unicode 字符进行编码。 十六进制值被转义为 _x*HHHH*\_，其中*HHHH*代表最高有效位的第一个订单中的字符的四位十六进制 ucs-2 代码。 例如，XMLA 将名称“Order Details”编码为 Order_x0020_Details，将空格字符替换为相应的十六进制代码。  
   
- 编码会使可扩展样式语言 (XSL) 转换变得困难。 若要支持的实际快速查找未编码列名称、 添加`sql:field`归于每个列的 XML 行集架构，如下面的示例中所示：  
+ 编码会使可扩展样式语言 (XSL) 转换变得困难。 若要支持的实际，快速查找未编码列名称、 添加`sql:field`属性为每个列的 XML 行集架构，如下面的示例中所示：  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

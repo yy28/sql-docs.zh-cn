@@ -1,5 +1,5 @@
 ---
-title: ScriptCacheProcessingMode 元素 (ASSL) |Microsoft 文档
+title: ScriptCacheProcessingMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0566ea0411eb3f6574d03e738017d8ca6a5bdf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253069"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>ScriptCacheProcessingMode 元素 (ASSL)
   指示服务器在处理期间或处理之后是否生成脚本缓存。  
@@ -69,9 +69,9 @@ ms.locfileid: "36138940"
 |*正则*|服务器在处理过程中生成脚本缓存。|  
 |*延迟*|服务器在处理之后生成脚本缓存。|  
   
- 对应于的允许值为枚举`ScriptCacheProcessingMode`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>。  
+ 与允许的值相对应的枚举`ScriptCacheProcessingMode`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>。  
   
- 对应于的父元素`ScriptCacheProcessingMode`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Cube>。  
+ 父级对应的元素`ScriptCacheProcessingMode`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Cube>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

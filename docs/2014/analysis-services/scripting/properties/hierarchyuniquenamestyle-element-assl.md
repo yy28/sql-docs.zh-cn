@@ -1,5 +1,5 @@
 ---
-title: HierarchyUniqueNameStyle 元素 (ASSL) |Microsoft 文档
+title: HierarchyUniqueNameStyle 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304287"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>HierarchyUniqueNameStyle 元素 (ASSL)
-  确定如何唯一的名称中包含的层次结构生成[CubeDimension](../data-type/dimension-data-type-assl.md)。  
+  确定如何唯一名称中包含的层次结构生成[CubeDimension](../data-type/dimension-data-type-assl.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36028022"
 |*IncludeDimensionName*|包括维度的名称，将其作为层次结构名称的一部分。|  
 |*ExcludeDimensionName*|维度的名称不作为层次结构名称的一部分。|  
   
- 对应于的父元素`HierarchyUniqueNameStyle`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.CubeDimension>。  
+ 父级对应的元素`HierarchyUniqueNameStyle`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CubeDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

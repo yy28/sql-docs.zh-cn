@@ -1,5 +1,5 @@
 ---
-title: CLR 集成安全性中的链接 |Microsoft 文档
+title: CLR 集成安全性中的链接 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edd8600e3c8e577ef020d732cce3924252393ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243097"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 集成安全性中的链接
   本节介绍使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或某种托管语言的用户代码片段怎样才能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中相互调用。 对象之间的这些关系称为链接。  
@@ -36,8 +36,8 @@ ms.locfileid: "36137813"
 ## <a name="table-access-links"></a>表访问链接  
  表访问链接对应于在表、视图或表值函数中检索或修改值。 它们类似于调用链接，但它们在 SELECT、INSERT、UPDATE 和 DELETE 权限方面有较粗粒度的访问控制权。  
   
-## <a name="gated-links"></a>封闭的链接  
- 门链接意味着，在执行期间，一旦已建立对象关系，则不跨越该对象关系检查权限。 两个对象之间的封闭的链接时 (例如，对象**x**和对象**y**)，对象的权限**y**和从对象访问其他对象**y**仅在对象的创建时间将检查**x**。 在对象的创建时间**x**，`REFERENCE`上检查权限**y**针对的所有者**x**。 在执行时 (例如，当有人调用对象**x**)，没有权限进行比照**y**或它引用静态其他对象。 在执行时，将根据对象检查了适当的权限**x**本身。  
+## <a name="gated-links"></a>门的链接  
+ 门链接意味着，在执行期间，一旦已建立对象关系，则不跨越该对象关系检查权限。 在两个对象之间有门的链接时 (例如，对象**x**和对象**y**)，对象的权限**y**和其他对象从对象访问**y**仅在对象的创建时间检查**x**。 在对象的创建时间**x**，`REFERENCE`权限检查**y**针对的所有者**x**。 在执行时 (例如，当某人调用对象时，才**x**)，没有权限进行比照**y**或它静态引用其他对象。 在执行时，将根据对象检查了适当的权限**x**本身。  
   
  门链接始终与两个对象之间的元数据依赖性配合使用。 该元数据依赖性是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录中建立的关系，它使得只要另一个对象依赖于某个对象则无法删除该对象。  
   

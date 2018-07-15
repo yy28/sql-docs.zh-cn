@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313290"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，您可以向报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  
@@ -256,9 +256,9 @@ ms.locfileid: "36027889"
   
 -   [添加、 更改或删除地图或地图层&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [更改地图图例、 色阶，和关联规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [在向地图添加自定义位置&#40;报表生成器和 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [向地图添加自定义位置&#40;报表生成器和 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
@@ -267,16 +267,16 @@ ms.locfileid: "36027889"
   
  [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [自定义的数据和地图或地图层的显示&#40;报表生成器和 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [自定义的数据和显示的地图或地图层&#40;报表生成器和 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
  [添加、 更改或删除地图或地图层&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [更改地图图例、 色阶，和关联规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [在向地图添加自定义位置&#40;报表生成器和 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [向地图添加自定义位置&#40;报表生成器和 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [报表故障排除： 将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

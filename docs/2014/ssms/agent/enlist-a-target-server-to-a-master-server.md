@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enlisting target servers [SQL Server]
 - SQL Server Agent jobs, target servers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - target servers [SQL Server], enlisting
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f51d0175c1d71f9c0dfaed4ea9a38aad14f8e31b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3005fedecb002b50c239f53f1726bb7b6c78e1bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315177"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>将目标服务器登记到主服务器
   本主题介绍了如何将目标服务器添加到多服务器管理配置中。 从主服务器运行此过程。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]，或使用 SQL Server 管理对象 (SMO)。  
@@ -58,7 +58,7 @@ ms.locfileid: "36027121"
   
 #### <a name="to-enlist-a-target-server"></a>登记目标服务器  
   
-1.  使用 `sp_msx_enlist` 存储过程。  有关详细信息，请参阅[sp_msx_enlist &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
+1.  使用 `sp_msx_enlist` 存储过程。  有关详细信息，请参阅[sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server 管理对象 (SMO)  
   

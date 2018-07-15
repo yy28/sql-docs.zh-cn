@@ -1,5 +1,5 @@
 ---
-title: XML 数据类型 (XMLA) |Microsoft 文档
+title: XML 数据类型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML for Analysis, data types
 ms.assetid: 979b5384-90d9-4e09-9286-1d1eafdc4864
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7a21691474e890ba8614715b18e972d1353b2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ccba3c69101362d1a384320808a30066ae572b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297087"
 ---
 # <a name="xml-data-types-xmla"></a>XML 数据类型 (XMLA)
   除了 XML 1.0 建议中定义的标准基元类型和派生类型之外，XML for Analysis (XMLA) 1.1 规范还定义了其他数据类型以支持多维数据和表格格式数据的表示形式。  
@@ -39,12 +39,12 @@ ms.locfileid: "36028857"
 |----------------|-----------------|  
 |Boolean|标准 XML `boolean` 数据类型。|  
 |Decimal|标准 XML `decimal` 数据类型。|  
-|[EmptyResult](emptyresult-data-type-xmla.md)|`root` 元素上的命名空间。 此命名空间将返回在 XMLA 命令不返回任何结果，因为 XMLA 命令通常不返回结果，或者在出错时[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]执行 XMLA 命令时的实例。|  
+|[EmptyResult](emptyresult-data-type-xmla.md)|`root` 元素上的命名空间。 XMLA 命令不返回结果，因为 XMLA 命令正常情况下不返回结果，或者因为发生错误时，将返回此命名空间[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例执行 XMLA 命令时。|  
 |[EnumString](enumstring-data-type-xmla.md)|给定枚举器的命名字符串常量集。|  
 |Integer|标准 XML `int` 数据类型。|  
-|[MDDataSet](mddataset-data-type-xmla.md)|返回的多维数据*结果*参数[执行](../xml-elements-methods-execute.md)方法。|  
+|[MDDataSet](mddataset-data-type-xmla.md)|返回的多维数据*结果*的参数[Execute](../xml-elements-methods-execute.md)方法。|  
 |[结果集](resultset-data-type-xmla.md)|`Execute` 方法返回的自描述 XML 结果集。|  
-|[Rowset](rowset-data-type-xmla.md)|嵌入的 XML 架构，结构化的数据源的行返回[发现](../xml-elements-methods-discover.md)方法。|  
+|[Rowset](rowset-data-type-xmla.md)|返回的行从数据源，由嵌入式 XML 架构，结构化[发现](../xml-elements-methods-discover.md)方法。|  
 |String|XML `string` 数据类型。|  
 |UnsignedInt|XML `unsignedInt` 架构类型。|  
   

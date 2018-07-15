@@ -1,28 +1,27 @@
 ---
-title: Always On 运行问题的 Always On 可用性组 (SQL Server) 的策略 |Microsoft 文档
+title: Alwayson 策略针对运行问题的 Always On 可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d046706bcdfa5259feb19a7ad92805b8f37f7c7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 44d086a00d2e18bfd87410848a5acd73461fac6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287913"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]运行状况模型评估一组基于预定义策略的管理 (PBM) 策略。 可以使用这些策略查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中可用性组及其可用性副本和数据库的运行状况。  
@@ -33,7 +32,7 @@ ms.locfileid: "36029096"
  AlwaysOn 预定义策略  
  利用一组内置策略，数据库管理员可以检查可用性组及其可用性副本和数据库是否与由 AlwaysOn 策略定义的状态兼容。  
   
- [AlwaysOn 可用性组](always-on-availability-groups-sql-server.md)提供企业级替代数据库镜像的高可用性和灾难恢复解决方案。  
+ [AlwaysOn 可用性组](always-on-availability-groups-sql-server.md)提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。  
   
  可用性组 (availability group)  
  一个容器，用于一组共同实现故障转移的离散用户数据库（被称为可用性数据库）。  
@@ -88,7 +87,7 @@ ms.locfileid: "36029096"
 ##  <a name="ExtendHealthModel"></a> 扩展 AlwaysOn 运行状况模型  
  扩展 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况模型只是创建您自己的用户定义策略，并基于您正在监视的对象类型将其放入特定类别。  在更改了一些设置后，AlwaysOn 面板将自动评估您自己的用户定义策略以及 AlwaysOn 预定义策略。  
   
- 用户定义策略可以使用任何可用的 PBM 方面，包括那些由 AlwaysOn 预定义策略使用的方面（请参阅本主题前面的[预定义策略和问题](#AlwaysOnPBM)）。 服务器方面提供的以下属性用于监视[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]运行状况: (`IsHadrEnabled`和`HadrManagerStatus`)。 服务器方面还提供了下列用于监视 WSFC 群集配置的策略：`ClusterQuorumType` 和 `ClusterQuorumState`。  
+ 用户定义策略可以使用任何可用的 PBM 方面，包括那些由 AlwaysOn 预定义策略使用的方面（请参阅本主题前面的[预定义策略和问题](#AlwaysOnPBM)）。 服务器方面提供以下属性用于监视[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]运行状况: (`IsHadrEnabled`和`HadrManagerStatus`)。 服务器方面还提供了下列用于监视 WSFC 群集配置的策略：`ClusterQuorumType` 和 `ClusterQuorumState`。  
   
  有关详细信息，请参阅 [AlwaysOn 运行状况模型第二部分 -- 扩展运行状况模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（SQL Server AlwaysOn 团队博客）。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36029096"
   
 -   [AlwaysOn 运行状况模型第 2 部分-扩展运行状况模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组 (SQL Server)](always-on-availability-groups-sql-server.md)   

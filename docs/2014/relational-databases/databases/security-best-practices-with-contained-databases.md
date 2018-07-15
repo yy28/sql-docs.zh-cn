@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aef1d046b409a7ebcaa0cb7db8370cf2f61590eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f6bc6472ed6e40016448b9088db497c770eaaa09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300517"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
-  包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与相关`USER WITH PASSWORD`身份验证过程中，从而将移动身份验证的范围从[!INCLUDE[ssDE](../../includes/ssde-md.md)]级别到数据库级别。  
+  包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与相关`USER WITH PASSWORD`身份验证过程中，后者将移动身份验证的范围从[!INCLUDE[ssDE](../../includes/ssde-md.md)]级别为数据库级别。  
   
 ## <a name="threats-related-to-users"></a>与用户相关的威胁  
- 中包含的数据库的用户具有`ALTER ANY USER`权限，例如成员**db_owner**和**db_securityadmin**固定数据库角色的成员，可授予访问权限没有数据库知识或权限如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理员。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解访问控制的这种委托，而且要非常谨慎中包含的数据库的用户授予`ALTER ANY USER`权限。 所有数据库所有者都拥有`ALTER ANY USER`权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
+ 具有中包含的数据库用户`ALTER ANY USER`权限，例如的成员**db_owner**并**db_securityadmin**固定数据库角色的成员，可以授予访问权限而无需数据库不知情或不允许如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理员。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解这种委托的访问控制，而且要非常谨慎中包含的数据库的用户授予`ALTER ANY USER`权限。 所有数据库所有者都拥有`ALTER ANY USER`权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>使用 guest 帐户访问其他数据库  
  数据库所有者和拥有 `ALTER ANY USER` 权限的数据库用户可以创建包含数据库用户。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上包含的数据库后，如果其他数据库启用了 [!INCLUDE[ssDE](../../includes/ssde-md.md)]guest **帐户，包含数据库的用户就可以访问** 上的其他数据库。  
@@ -49,7 +49,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- 若要执行跨数据库查询时，必须设置`TRUSTWORTHY`在调用数据库上的选项。 例如，如果以上定义的用户 (Carlo) 在 DB1 中，要执行 `SELECT * FROM db2.dbo.Table1;`，则 `TRUSTWORTHY` 设置对于数据库 DB1 必须为 on。 执行以下代码以设置`TRUSTWORHTY`上设置。  
+ 若要执行跨数据库查询时，必须设置`TRUSTWORTHY`调用数据库上的选项。 例如，如果以上定义的用户 (Carlo) 在 DB1 中，要执行 `SELECT * FROM db2.dbo.Table1;`，则 `TRUSTWORTHY` 设置对于数据库 DB1 必须为 on。 执行以下代码以将`TRUSTWORHTY`上设置。  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  
@@ -62,12 +62,12 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
   
 -   最佳做法是，创建有密码的包含数据库用户时，其名称不得与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名相同。  
   
--   如果存在重复的登录名，连接到**master**数据库，但不要指定初始目录，，然后执行`USE`命令以更改为包含的数据库。  
+-   如果存在重复的登录名，连接到**主**数据库，但不要指定初始目录，并执行`USE`命令更改到包含的数据库。  
   
 -   存在包含的数据库时，非包含数据库的用户应连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，但不要使用初始目录，或者将非包含数据库的数据库名称指定为初始目录。 这样就避免了连接到包含的数据库而导致 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理员的直接控制减弱。  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>通过更改数据库的包含状态来增加访问  
- 登录名具有`ALTER ANY DATABASE`权限，例如成员**dbcreator**固定服务器角色，并且具有非包含数据库中的用户`CONTROL DATABASE`权限，例如成员**db_owner**固定的数据库角色，可以更改数据库的包含设置。 如果数据库的包含设置从 `NONE` 更改为 `PARTIAL` 或 `FULL`，则可以通过创建有密码的包含数据库用户来授予用户访问权限。 这样就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员不知情或不允许的情况下提供访问。 若要防止并不包含任何数据库，设置[!INCLUDE[ssDE](../../includes/ssde-md.md)]`contained database authentication`为 0 的选项。 若要阻止有密码的包含数据库用户连接到选定的包含的数据库，请使用登录触发器取消有密码的包含数据库用户进行的登录尝试。  
+ 有登录名`ALTER ANY DATABASE`权限，例如的成员**dbcreator**固定服务器角色和具有非包含数据库中的用户`CONTROL DATABASE`权限，如成员的**db_owner**固定的数据库角色，可以更改数据库的包含设置。 如果数据库的包含设置从 `NONE` 更改为 `PARTIAL` 或 `FULL`，则可以通过创建有密码的包含数据库用户来授予用户访问权限。 这样就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员不知情或不允许的情况下提供访问。 若要防止任何数据库更改为包含，请设置[!INCLUDE[ssDE](../../includes/ssde-md.md)]`contained database authentication`选项为 0。 若要阻止有密码的包含数据库用户连接到选定的包含的数据库，请使用登录触发器取消有密码的包含数据库用户进行的登录尝试。  
   
 ### <a name="attaching-a-contained-database"></a>附加包含的数据库  
  通过附加包含的数据库，管理员会向用户授予针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的不必要的访问权限。 担心这种风险的管理员可以使数据库以 `RESTRICTED_USER` 模式联机，这样会阻止对有密码的包含数据库用户进行身份验证。 只有通过登录授权的主体才能够访问 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  

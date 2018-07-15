@@ -1,5 +1,5 @@
 ---
-title: PerspectiveDimension 数据类型 (ASSL) |Microsoft 文档
+title: PerspectiveDimension 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveDimension data type
 ms.assetid: c4bc56de-4f42-4ceb-a68d-a4fec92fdfa9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2ec6ecb714ad87b32683f667514fe4badcabeda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 305219e524868a2dc036c07bedcff5876699e560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323257"
 ---
 # <a name="perspectivedimension-data-type-assl"></a>PerspectiveDimension 数据类型 (ASSL)
   定义一个基元数据类型，该类型表示透视中的维度的相关信息。  
@@ -59,11 +59,11 @@ ms.locfileid: "36125921"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
-|子元素|[批注](../collections/annotations-element-assl.md)，[属性](../collections/attributes-element-assl.md)， [CubeDimensionID](../properties/id-element-assl.md)，[层次结构](../collections/hierarchies-element-assl.md)|  
-|派生元素|[维度](../objects/dimension-element-assl.md)([维度](../collections/dimensions-element-assl.md)集合[透视](../objects/perspective-element-assl.md))|  
+|子元素|[批注](../collections/annotations-element-assl.md)，[特性](../collections/attributes-element-assl.md)， [CubeDimensionID](../properties/id-element-assl.md)，[层次结构](../collections/hierarchies-element-assl.md)|  
+|派生元素|[维度](../objects/dimension-element-assl.md)([维度](../collections/dimensions-element-assl.md)的集合[角度来看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

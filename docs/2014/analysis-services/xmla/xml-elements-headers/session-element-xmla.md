@@ -1,5 +1,5 @@
 ---
-title: 会话元素 (XMLA) |Microsoft 文档
+title: Session 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4be4778be16da0271e2f46643a165864d679e8ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310367"
 ---
 # <a name="session-element-xmla"></a>Session 元素 (XMLA)
-  使用在 SOAP 请求消息的 SOAP 标头来标识实例上的现有的显式会话[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  使用 SOAP 标头的 SOAP 请求消息中标识的实例上的现有显式会话[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36027995"
 ## <a name="remarks"></a>Remarks  
  `Session` 标头元素标识 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例上的现有显式启动的会话。 `Session` 元素是以下消息类型中的 SOAP 标头的一部分：  
   
--   包含的 SOAP 响应[BeginSession](session-element-xmla.md) SOAP 标头元素。  
+-   SOAP 响应，其中包含[BeginSession](session-element-xmla.md) SOAP 标头元素。  
   
--   SOAP 请求来标识在其上运行会话[发现](../xml-elements-methods-discover.md)或[执行](../xml-elements-methods-execute.md)方法。  
+-   SOAP 请求来标识在其上运行的会话[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法。  
   
  会话标识符并不保证会话保持有效。 `Session` 元素中指定的会话会过期。 例如，如果会话超时或与会话相关联的连接断开，则该会话将过期。 如果会话过期并且不再有效，则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将结束该会话并回滚当前正在处理的所有事务。 使用不再有效的会话标识符发送的任何 SOAP 消息将失败，相应 SOAP 错误指示找不到指定的会话。  
   

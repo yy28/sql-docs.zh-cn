@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f0bdc2134723cddd5acf6ead6e137b91bf52f68e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1b6ea8ca74c7ca587b0ecbc6ef4ee3c3f1decc16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319753"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>示例：指定 ID 和 IDREF 指令
   此示例与 [指定 ELEMENTXSINIL 指令](example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesPersonID** 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  
