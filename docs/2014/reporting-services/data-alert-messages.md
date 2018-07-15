@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: df5c57bdf3138dbecf23ece011b1dad56f8e9b13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2227a89a3e44934550a828dc9bc47db97b83e28c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331347"
 ---
 # <a name="data-alert-messages"></a>数据警报消息
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报通过电子邮件传递两种类型的数据警报消息：具有数据警报结果的消息和具有错误说明的消息。 具有结果的消息向所有收件人告知有关报表数据中共同感兴趣的和对业务决策至关重要的更改。 如果由于某种原因导致错误且结果不可用，则发送错误消息。  

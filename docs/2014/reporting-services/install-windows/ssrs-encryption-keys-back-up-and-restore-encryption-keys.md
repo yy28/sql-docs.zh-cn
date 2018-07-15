@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
 - restoring encryption keys [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26b64626126f331b5ca9dcc893a7ecb73a7bce38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c71d0d4f3811d4204e83f465c47a6a78f7532f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331297"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>备份和还原 Reporting Services 加密密钥
   报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。  
@@ -104,7 +104,7 @@ ms.locfileid: "36139011"
   
 ####  <a name="bkmk_restore_rskeymgmt"></a> 还原加密密钥 – rskeymgmt（本机模式）  
   
-1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 使用`-a`自变量来还原密钥。 必须提供完全限定的文件名，并指定密码。 下面的示例演示必须指定的参数：  
+1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 使用`-a`参数还原密钥。 必须提供完全限定的文件名，并指定密码。 下面的示例演示必须指定的参数：  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  

@@ -1,11 +1,11 @@
 ---
-title: 调用 CLR 用户定义聚合函数 |Microsoft 文档
+title: 调用 CLR 用户定义聚合函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,24 +21,24 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700338"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355369"
 ---
-# <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 用户定义聚合的调用函数
+# <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 用户定义聚合-调用函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，您可以根据适用于系统聚合函数的所有规则调用公共语言运行时 (CLR) 用户定义聚合。  
   
  应遵循下列附加规则：  
   
--   当前用户必须具有**执行**权限的用户定义聚合。  
+-   当前用户必须具有**EXECUTE**针对用户定义聚合的权限。  
   
--   必须使用的窗体中的两个部分组成的名称调用用户定义聚合*schema_name.udagg_name*。  
+-   必须使用两部分组成的名称的窗体调用用户定义聚合*schema_name.udagg_name*。  
   
--   用户定义聚合的参数类型必须匹配或者是隐式转换为*input_type*聚合中, 定义的**CREATE AGGREGATE**语句。  
+-   用户定义聚合的参数类型必须匹配或可隐式转换为*input_type*聚合，如中所定义的**CREATE AGGREGATE**语句。  
   
 -   用户定义聚合的返回类型必须与匹配*return_type*中**CREATE AGGREGATE**语句。  
   
@@ -200,7 +200,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦你编译到代码**MyAgg.dll**，你可以注册在聚合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 一旦您将代码编译为**MyAgg.dll**，可以注册中的聚合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -212,7 +212,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  不支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行已使用 /clr:pure 编译器选项编译的 Visual C++ 数据库对象，例如标量值函数。  
   
- 因为大多数聚合，使用的逻辑的大容量正在**Accumulate**方法。 此处，作为参数传递给传入的字符串**Accumulate**方法追加到**StringBuilder**中初始化的对象**Init**方法。 假设这不是第一次**Accumulate**调用方法，逗号也会附加到**StringBuilder**之前追加传入的字符串。 在结束时计算的任务，**终止**调用方法时，它将返回**StringBuilder**作为字符串。  
+ 因为与大多数聚合，大部分逻辑正在**Accumulate**方法。 此处，作为参数传入的字符串**Accumulate**方法将追加到**StringBuilder**中初始化对象**Init**方法。 假设这不是第一次**Accumulate**调用方法，则还将逗号追加到**StringBuilder**在追加传入字符串之前。 在计算任务结束**Terminate**调用方法时，它将返回**StringBuilder**作为字符串。  
   
  例如，请考虑具有以下架构的表：  
   

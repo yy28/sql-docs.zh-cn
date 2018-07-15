@@ -1,11 +1,11 @@
 ---
-title: 使用 Dataadapter 更新 UDT 列 |Microsoft 文档
+title: 使用 Dataadapter 更新 UDT 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -26,19 +26,19 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab3e174062e3618d55f7cba5e715845e0c01327a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8bdb8993d93c438dcfc47dd28c3ac90cfd5fcc0d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702038"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358219"
 ---
-# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>访问用户定义的类型-使用 Dataadapter 更新 UDT 的列
+# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>访问用户定义类型-使用 Dataadapter 更新 UDT 列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  通过使用支持用户定义类型 (Udt) **System.Data.DataSet**和**System.Data.SqlClient.SqlDataAdapter**来检索和修改数据。  
+  用户定义类型 (Udt) 支持通过使用**System.Data.DataSet**和一个**System.Data.SqlClient.SqlDataAdapter**来检索和修改数据。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定你具有**点**定义具有以下结构和一些示例数据的表。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表和插入几行。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定**点**表定义为具有以下结构和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表并插入几行。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -50,7 +50,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 下面的 ADO.NET 代码段检索有效的连接字符串，创建一个新**SqlDataAdapter**，并填充 **: System.Data.DataTable**中的数据的行与**点**表。  
+ 以下 ADO.NET 代码段检索有效的连接字符串，创建一个新**SqlDataAdapter**，并填充**System.Data.DataTable**中的数据的行与**点**表。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -67,16 +67,16 @@ da.Fill(datTable);
 ```  
   
 ## <a name="updating-udt-data-in-a-dataset"></a>更新数据集中的 UDT 数据  
- 你可以使用两种方法更新中的 UDT 列**数据集**:  
+ 可以使用两种方法来更新中的 UDT 列**数据集**:  
   
--   提供自定义**InsertCommand**， **UpdateCommand**和**DeleteCommand**对象**SqlDataAdapter**对象。  
+-   提供自定义**InsertCommand**， **UpdateCommand**并**DeleteCommand**对象**SqlDataAdapter**对象。  
   
--   使用命令生成器 (**System.Data.SqlClient.SqlCommandBuilder**) 为你自动创建的 INSERT、 UPDATE 和 DELETE 命令。 为了具有冲突检测，添加**时间戳**列 (别名**rowversion**) 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，其中包含用户定义的类型。 **时间戳**数据类型可版本标记表中的行并保证在数据库中唯一。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
+-   使用命令生成器 (**System.Data.SqlClient.SqlCommandBuilder**) 为你自动创建 INSERT、 UPDATE 和 DELETE 命令。 为启用冲突检测，添加**时间戳**列 (别名**rowversion**) 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，其中包含用户定义的类型。 **时间戳**数据类型允许您添加版本戳表中的行和保证可在数据库中唯一。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
   
- 请注意， **SqlCommandBuilder**不考虑对冲突检测 UDT，除非存在**时间戳**基础表中的列。 可以比较 UDT，也可以不比较，因此，当使用“比较原始值”选项生成命令时，不会在 WHERE 子句中包含 UDT。  
+ 请注意， **SqlCommandBuilder**不会考虑对 UDT 执行冲突检测，除非有**时间戳**基础表中的列。 可以比较 UDT，也可以不比较，因此，当使用“比较原始值”选项生成命令时，不会在 WHERE 子句中包含 UDT。  
   
 ### <a name="example"></a>示例  
- 下面的示例，需要创建的第二个表包含**点**UDT 列以及一个**时间戳**列。 这两个表用于说明如何创建自定义命令的对象以更新数据，以及如何更新使用**时间戳**列。 运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以便另外创建一个表，并使用示例数据填充该表。  
+ 下面的示例，需要创建的第二个表包含**点**UDT 列以及一个**时间戳**列。 这两个表分别用于演示如何创建自定义命令对象来更新数据，以及如何使用**时间戳**列。 运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以便另外创建一个表，并使用示例数据填充该表。  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -89,9 +89,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  以下 ADO.NET 示例具有两个方法：  
   
--   **UserProvidedCommands**，用于演示如何提供**InsertCommand**， **UpdateCommand**，和**DeleteCommand**更新对象**点**UDT**点**表 (不包含**时间戳**列)。  
+-   **UserProvidedCommands**，用于演示如何提供**InsertCommand**， **UpdateCommand**，并且**DeleteCommand**对象，以便更新**点**中的 UDT**点**表 (不包含**时间戳**列)。  
   
--   **CommandBuilder**，用于演示如何使用**SqlCommandBuilder**中**Points_ts**包含表**时间戳**列。  
+-   **CommandBuilder**，用于演示如何使用**SqlCommandBuilder**中**Points_ts**表，该表包含**时间戳**列。  
   
 ```vb  
 Imports System  

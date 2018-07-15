@@ -1,5 +1,5 @@
 ---
-title: 在 Management Studio 中创建 Analysis Services 脚本 |Microsoft 文档
+title: 在 Management Studio 中创建 Analysis Services 脚本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services objects, scripts
 - objects [Analysis Services], scripts
 - scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5819b821bf482e02a8a5b189b5600aa6e4e637fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd7a8102fdde22ada4f1b7bf4eb9edc6d1b31d7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330777"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中创建 Analysis Services 脚本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包括您可以用来对 Analysis Services 对象和任务编写脚本的脚本生成功能、模板和编辑器。  
@@ -69,7 +69,7 @@ ms.locfileid: "36129562"
     >  通常，如果想要创建该文件的多个不同版本，请选择“文件”。  
   
 ## <a name="see-also"></a>请参阅  
- [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)   
  [XMLA 查询编辑器&#40;Analysis Services-多维数据&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

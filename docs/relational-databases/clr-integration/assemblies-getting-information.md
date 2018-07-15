@@ -1,9 +1,8 @@
 ---
-title: 获取有关程序集的信息 |Microsoft 文档
+title: 获取有关程序集的信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -19,36 +18,36 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7cbf238a71c25d8cc24b106007db6acba73698b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7b01592ad65a6db4acc8dee1c7f417096c6a6265
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697458"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352619"
 ---
 # <a name="assemblies---getting-information"></a>程序集-获取信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可以查询下列目录视图和函数来获取有关程序集的元数据。  
   
- **若要获取有关单个程序集信息**  
+ **若要获取有关各个程序集信息**  
   
 -   [ASSEMBLYPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
- **若要在数据库中获取有关所有程序集信息**  
+ **若要获取数据库中的所有程序集的信息**  
   
 -   [sys.assemblies &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   
  **若要获取有关程序集文件，包括程序集二进制文件的信息源文件，并调试文件**  
   
--   [sys.assembly_files &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
+-   [sys.assembly_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
  **若要获取有关跨程序集引用的信息**  
   
--   [sys.assembly_references &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
+-   [sys.assembly_references &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
  **若要获取有关用户定义类型的程序集信息**  
   
--   [sys.assembly_types &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
+-   [sys.assembly_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
 -   [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   

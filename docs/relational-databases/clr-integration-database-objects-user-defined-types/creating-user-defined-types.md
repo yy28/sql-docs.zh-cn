@@ -1,11 +1,11 @@
 ---
-title: 创建用户定义类型 |Microsoft 文档
+title: 创建用户定义类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -18,18 +18,18 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 62bcb175cebbfa4848bbc49ac21710d58bfafcc8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702608"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349479"
 ---
-# <a name="creating-user-defined-types"></a>创建用户定义的类型
+# <a name="creating-user-defined-types"></a>创建用户定义类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要创建能够在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安装的用户定义类型 (UDT)，必须首先用一种支持的 .NET Framework 编程语言（例如 Visual C# 或 Visual Basic，该语言符合创建 UDT 的规范）创建一个类。 然后，可以将该类编译为可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的动态链接库 (DLL)。 还可以使用 Visual Studio 创建和部署 UDT。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以使用启用 CLR **sp_configure**系统存储过程，如在下面的示例所示[!INCLUDE[tsql](../../includes/tsql-md.md)]语句：  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以使用启用 CLR **sp_configure**系统存储过程，在下面的示例所示[!INCLUDE[tsql](../../includes/tsql-md.md)]语句：  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -44,7 +44,7 @@ Reconfigure
  演示在创建用户定义类型的过程中涉及的编码方法。  
   
 ## <a name="example"></a>示例  
- 下面的代码清单定义点 UDT 中详细, 描述[Coding User-Defined 类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
+ 以下代码列表定义了 Point UDT 中的详细信息中所述[类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
  通过安装 CLR 示例，可以获得在本节中讨论的其他示例的完整代码列表。 有关安装这些示例的说明，请参阅[SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
   

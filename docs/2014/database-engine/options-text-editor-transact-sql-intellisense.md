@@ -1,5 +1,5 @@
 ---
-title: 选项 (文本编辑器的 Transact-SQL-IntelliSense) |Microsoft 文档
+title: 选项 (文本编辑器-Transact-SQL-IntelliSense) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Advanced
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67dc90ab7682d4882a3d64b78af1a69968fd2247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c63a9d226372e155f52f57b473346c9caf7ba1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332221"
 ---
-# <a name="options-text-editor-transact-sql-intellisense"></a>选项 (文本编辑器的 Transact-SQL-IntelliSense)
+# <a name="options-text-editor-transact-sql-intellisense"></a>选项 (文本编辑器-Transact-SQL-IntelliSense)
   您可以使用 **“选项”** 对话框更改 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 设置。 若要显示这些设置，请在“工具”菜单上单击“选项”，依次展开“文本编辑器”文件夹和“Transact-SQL”文件夹，然后单击“高级”。  
   
 ## <a name="transact-sql-intellisense-settings"></a>Transact-SQL IntelliSense 设置  
@@ -34,7 +34,7 @@ ms.locfileid: "36137810"
 ### <a name="enable-intellisense"></a>启用 IntelliSense  
  启用 IntelliSense 功能。 如果未选中此复选框，具体的 IntelliSense 选项不可用。 默认情况下，此复选框处于选中状态。  
   
- **下划线标出错误**  
+ **用下划线标出错误**  
  在查询窗口中标识 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中的语法和语义错误。 所有错误和警告将以红色显示。 只有已为其实现 IntelliSense 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句才支持错误和警告。 默认情况下，此复选框处于选中状态。  
   
  **大纲语句**  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
 - attributes [Master Data Services], about attributes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3818434134bc03c335c8811ade391ec61824db35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5c9974eced9ec643c38fd8d3d535800456c1796d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331847"
 ---
 # <a name="attributes-master-data-services"></a>属性 (Master Data Services)
   属性是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实体中包含的对象。 属性值描述实体的成员。 属性可用于描述叶成员、合并成员或集合。  
@@ -87,7 +87,7 @@ ms.locfileid: "36139093"
 |创建新的自由格式的链接属性。|[创建链接属性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
 |创建新的文件属性。|[创建文件属性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |创建新的基于域的属性。|[创建基于域的属性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|更改现有属性的名称。|[更改的属性名称&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
+|更改现有属性的名称。|[更改属性名称&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
 |向更改跟踪组添加现有属性。|[向更改跟踪组添加属性&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |删除现有属性。|[删除属性&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |更改属性的顺序。|[更改属性的顺序](../../2014/master-data-services/change-the-order-of-attributes.md)|  
@@ -102,6 +102,6 @@ ms.locfileid: "36139093"
   
 -   [叶权限&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [合并权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [合并的权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

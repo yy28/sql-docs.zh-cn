@@ -1,12 +1,11 @@
 ---
-title: 删除程序集 |Microsoft 文档
+title: 删除程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c9948122e98c86e6c4ccb310c23b0513679379f
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694318"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356919"
 ---
 # <a name="dropping-an-assembly"></a>删除程序集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   在数据库中使用 WITH SCHEMABINDING 子句创建了使用 UDT 变量或参数的函数、存储过程或触发器。  
   
 ### <a name="finding-udt-dependencies"></a>查找 UDT 依赖关系  
- 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询找到的所有列和参数，在 UDT **AdventureWorks**数据库。  
+ 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询找到的所有列和参数使用 UDT **AdventureWorks**数据库。  
   
 ```  
 USE Adventureworks;  
@@ -71,7 +70,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [管理 CLR 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [更改程序集](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [创建程序集](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [拖放聚合&#40;Transact SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP AGGREGATE &#40;Transact SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION (Transact-SQL)](../../../t-sql/statements/drop-function-transact-sql.md)   
  [DROP PROCEDURE (Transact-SQL)](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../../t-sql/statements/drop-trigger-transact-sql.md)   

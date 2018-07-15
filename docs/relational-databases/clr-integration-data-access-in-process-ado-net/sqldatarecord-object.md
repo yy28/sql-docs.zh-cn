@@ -1,12 +1,12 @@
 ---
-title: SqlDataRecord 对象 |Microsoft 文档
+title: SqlDataRecord 对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +17,20 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ed9098863a661a9016fd2ee47808da35e25953e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: eed4ff836262fdf9a2a0cbb4d48e7b9fc7c4b94a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701158"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359919"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SqlDataRecord**对象表示一行数据，以及其相关的元数据。  
   
- 托管的存储的过程可能会向不是来自的客户端结果集发送**SqlDataReader**。 **SqlDataRecord**类，以及与**SendResultsStart**， **SendResultsRow**，和**SendResultsEnd** 方法**SqlPipe**对象，允许要发送到客户端的自定义结果集的存储的过程。  
+ 托管存储的过程可以发送到客户端结果集不是来自**SqlDataReader**。 **SqlDataRecord**类，以及与**SendResultsStart**， **SendResultsRow**，以及**SendResultsEnd** 方法**SqlPipe**对象，允许存储的过程以向客户端发送自定义结果集。  
   
- 有关详细信息，请参阅**Microsoft.SqlServer.Server.SqlDataRecord**类参考文档中的.NET Framework SDK 文档。  
+ 有关详细信息，请参阅**Microsoft.SqlServer.Server.SqlDataRecord**类在.NET Framework SDK 文档中的参考文档。  
   
 ## <a name="example"></a>示例  
  下面的示例创建一个新雇员记录并将其返回到调用方。  

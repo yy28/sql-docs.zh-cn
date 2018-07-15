@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329957"
 ---
 # <a name="transaction-isolation-levels"></a>事务隔离级别
-  以下的隔离级别访问内存优化表的事务支持。  
+  访问内存优化表的事务支持以下隔离级别。  
   
 -   SNAPSHOT  
   
@@ -34,9 +34,9 @@ ms.locfileid: "36139140"
   
  可以在本机编译存储过程的原子块中指定事务隔离级别。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)。 在从解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 访问内存优化表时，可以使用表级提示指定隔离级别。  
   
- 定义本机编译存储过程时必须指定事务隔离级别。 在从解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 中的用户事务访问内存优化表时，必须使用表级提示指定隔离级别。 有关详细信息，请参阅[具有内存优化表的事务隔离级别的准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 定义本机编译存储过程时必须指定事务隔离级别。 在从解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 中的用户事务访问内存优化表时，必须使用表级提示指定隔离级别。 有关详细信息，请参阅[具有内存优化表的事务隔离级别准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
- 自动提交事务对于内存优化表支持隔离级别 READ COMMITTED。 READ COMMITTED 在用户事务或原子块中无效。 显式或隐式用户事务不支持 READ COMMITTED。 具有自动提交事务的内存优化表支持隔离级别 READ_COMMITTED_SNAPSHOT，并且仅在查询未访问任何基于磁盘的表时才支持。 此外，在 SNAPSHOT 隔离级别下通过解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 启动的事务不能访问内存优化表。 在 REPEATABLE READ 或 SERIALIZABLE 隔离级别下使用解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 的事务必须使用 SNAPSHOT 隔离级别访问内存优化表。 有关此方案的详细信息，请参阅[跨容器事务](cross-container-transactions.md)。  
+ 自动提交事务对于内存优化表支持隔离级别 READ COMMITTED。 READ COMMITTED 在用户事务或原子块中无效。 显式或隐式用户事务不支持 READ COMMITTED。 具有自动提交事务的内存优化表支持隔离级别 READ_COMMITTED_SNAPSHOT，并且仅在查询未访问任何基于磁盘的表时才支持。 此外，在 SNAPSHOT 隔离级别下通过解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 启动的事务不能访问内存优化表。 在 REPEATABLE READ 或 SERIALIZABLE 隔离级别下使用解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 的事务必须使用 SNAPSHOT 隔离级别访问内存优化表。 有关此方案的详细信息，请参阅[交叉容器事务](cross-container-transactions.md)。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的默认隔离级别为 READ COMMITTED。 在会话的隔离级别为 READ COMMITED（或更低级别）时，可以执行以下操作之一：  
   
@@ -61,27 +61,27 @@ ms.locfileid: "36139140"
   
  如果当前事务尝试插入的行所包含的主键值与在当前事务之前提交的其他事务所插入行的主键值相同，将会发生提交失败并显示以下错误消息。  
   
- 错误 41325。 因某个序列化读取验证失败，当前事务无法提交。  
+ 显示错误 41325。 因某个序列化读取验证失败，当前事务无法提交。  
   
  如果一个事务向该事务提交之前已删除的表写入数据，则该事务会终止并显示以下错误消息：  
   
- 错误 41305。 因某个可重复读取验证失败，当前事务无法提交。  
+ 显示错误 41305。 因某个可重复读取验证失败，当前事务无法提交。  
   
  REPEATABLE READ  
  此隔离级别包含由 SNAPSHOT 隔离级别提供的保证。 此外，REPEATABLE READ 还保证，对于由该事务读取的任何行，在该事务提交时，该行都不会由任何其他事务更改。 在事务结束之前，该事务中的每个读取操作都是可重复的。  
   
  如果当前事务读取的任何行已由在当前事务之前提交的其他事务更新，则提交会失败并显示以下错误消息。  
   
- 错误 41305。 因某个可重复读取验证失败，当前事务无法提交。  
+ 显示错误 41305。 因某个可重复读取验证失败，当前事务无法提交。  
   
  SERIALIZABLE  
  此隔离级别包含由 REPEATABLE READ 提供的保证。 在获取快照与事务结束之间不会出现任何虚拟行。 虚拟行与选择、更新或删除的筛选条件匹配。  
   
- 事务执行时就好像不存在并发事务。 几乎所有操作都发生在单个序列化点 （提交时间）。  
+ 事务执行时就好像不存在并发事务。 所有操作几乎都发生在单个序列化点 （提交时间）。  
   
  如果违反了其中任何一个保证，则该事务无法提交并显示以下错误消息：  
   
- 错误 41325。 因某个序列化读取验证失败，当前事务无法提交。  
+ 显示错误 41325。 因某个序列化读取验证失败，当前事务无法提交。  
   
 ## <a name="see-also"></a>请参阅  
  [了解内存优化表上的事务](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   

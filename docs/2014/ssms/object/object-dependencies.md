@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c8b86adcbad71286c29500b2e85da23c4a18d5d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f360b9553c754c5e6fa9ee2bdd5e39d73f9194b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329003"
 ---
 # <a name="object-dependencies"></a>对象依赖关系
   一些数据库对象与其他数据库对象存在依赖关系。 例如，视图和存储过程依赖于包含视图或过程返回的数据的表是否存在。 当前对象的“对象依赖关系（‘常规’页）”列出了该对象正常运行所需的数据库对象和依赖于所选对象的对象。 在其定义中引用了另一个对象并且该定义存储在系统目录中的对象称为“引用实体”。 被另一对象引用的对象称为“被引用实体”。  
@@ -31,14 +31,14 @@ ms.locfileid: "36129116"
  使用此对话框可在更改或删除所选对象之前了解其依赖关系。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **依赖于对象***\<所选的对象 >*   
+ **依赖于对象***\<所选的对象 >  *  
  单击此按钮将列出依赖于所选对象的对象，以及依赖关系跟踪所涉及的对象。  
   
- **对哪些对象***\<所选的对象 >***依赖**   
+ **对象所在***\<所选的对象 >***取决于    **  
  单击此按钮将列出所选对象所依赖的并且依赖关系跟踪涉及的对象。  
   
  **依赖关系**  
- 如果**对象依赖于** *\<所选的对象 >* 是单击，这将显示依赖于所选对象的对象的分层视图。 如果**对哪些对象** *\<所选的对象 >* **依赖**是单击，这将显示所选的对象所依赖的对象的分层视图.  
+ 如果**依赖于对象** *\<所选的对象 >* 是单击，这将显示依赖所选对象的对象的层次结构视图。 如果**的对象** *\<所选的对象 >* **取决于**是单击，这将显示所选的对象所依赖的对象的层次结构视图.  
   
  **名称**  
  显示上面“依赖关系”树视图中所选对象的名称。  

@@ -1,12 +1,11 @@
 ---
-title: 调试 CLR 数据库对象 |Microsoft 文档
+title: 调试 CLR 数据库对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -19,21 +18,21 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67fd37b04592bd4daeeb6a03c95d3c1976109ed4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 5a983312beb68f266c20973e70f730eb13bd89e6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701008"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354339"
 ---
 # <a name="debugging-clr-database-objects"></a>调试 CLR 数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和数据库中的公共语言运行时 (CLR) 对象提供支持。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行调试的主要特点一个是易于设置和使用，另一个是 SQL Server 调试器与 Microsoft Visual Studio 调试器集成。 此外，还可以跨语言进行调试。 用户可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中无缝地单步执行 CLR 对象，反之亦然。 SQL Server Management Studio 中的 Transact-SQL 调试器无法用于调试托管数据库对象，但您可以通过使用 Visual Studio 中的调试器来调试这些对象。 Visual Studio 中的托管数据库对象调试支持所有常见的调试功能，例如，在服务器上执行的例程中的“单步执行”语句和“逐过程”语句。 调试器可以在调试过程中设置断点、检查调用堆栈、检查变量以及修改变量值。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或调试。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
   
- 有关调试使用 Visual Studio 的托管的代码的详细信息，请参阅"[调试托管代码](http://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio 文档中的主题。  
+ 有关调试托管的代码使用 Visual Studio 的详细信息，请参阅"[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio 文档中的主题。  
   
 ## <a name="debugging-permissions-and-restrictions"></a>调试权限和限制  
- 调试是一个高特权的操作，并因此只有的成员**sysadmin**允许因此在执行固定的服务器角色的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 调试是高特权的操作，因此只有的成员**sysadmin**固定的服务器角色中执行此操作允许[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  调试时存在下列限制：  
   
@@ -46,25 +45,25 @@ ms.locfileid: "35701008"
 ## <a name="overview-of-debugging-managed-database-objects"></a>关于调试托管数据库对象的概述  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行的调试遵循单连接模式。 一个调试器只能检测和调试其附加到的客户端连接的活动。 由于调试器的功能不受连接类型的限制，因此表格格式数据流 (TDS) 和 HTTP 连接都可以进行调试。 不过，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许调试现有连接。 调试支持在服务器上执行的例程中使用所有常见的调试功能。 调试器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间的交互通过分布式组件对象模型 (COM) 进行。  
   
- 有关详细信息和有关调试托管的存储的过程、 函数、 触发器、 用户定义的类型和聚合的方案，请参阅"[SQL Server CLR 集成数据库调试](http://go.microsoft.com/fwlink/?LinkId=120378)"Visual Studio 中的主题文档。  
+ 有关详细信息和有关调试托管存储的过程、 函数、 触发器、 用户定义类型和聚合的方案，请参阅"[SQL Server CLR 集成数据库调试](http://go.microsoft.com/fwlink/?LinkId=120378)"在 Visual Studio 中的主题文档。  
   
- 必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 网络协议，才能使用 Visual Studio 进行远程开发、调试和开发。 有关启用服务器上的 TCP/IP 协议的详细信息，请参阅[Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)。  
+ 必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 网络协议，才能使用 Visual Studio 进行远程开发、调试和开发。 有关在服务器上启用 TCP/IP 协议的详细信息，请参阅[配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)。  
   
 #### <a name="to-debug-a-managed-database-object"></a>调试托管数据库对象  
   
 1.  打开 Microsoft Visual Studio，创建一个新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 项目，并与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库建立连接。  
   
-2.  创建一种新类型。 在**解决方案资源管理器**，右键单击项目，选择**添加**和**新建项...** 从**添加新项**窗口中，选择**存储过程**，**用户定义函数**，**用户定义类型**， **触发器**，**聚合**，或**类**。 指定新类型的源文件的名称，然后单击**添加**。  
+2.  创建一种新类型。 在中**解决方案资源管理器**，右键单击项目，选择**添加**和**新项...** 从**添加新项**窗口中，选择**存储过程**，**用户定义的函数**，**用户定义类型**， **触发器**，**聚合**，或**类**。 指定新类型的源文件的名称，然后单击**添加**。  
   
 3.  将此新类型的代码添加到文本编辑器中。 有关示例存储过程的示例代码，请参阅本主题后面的部分。  
   
-4.  添加测试该类型的脚本。 在**解决方案资源管理器**，展开**testscripts**目录双击**Test.sql**以打开默认的测试脚本源文件。 将调用要调试的代码的测试脚本添加到文本编辑器中。 示例脚本见下文。  
+4.  添加测试该类型的脚本。 在中**解决方案资源管理器**，展开**TestScripts**目录，双击**Test.sql**以打开默认测试脚本源文件。 将调用要调试的代码的测试脚本添加到文本编辑器中。 示例脚本见下文。  
   
-5.  将一个或多个断点放在源代码中。 在文本编辑器中，在函数或你想要调试的例程中的代码的行上右键单击并选择**断点**和**插入断点**。 即会添加断点，并以红色突出显示该行代码。  
+5.  将一个或多个断点放在源代码中。 在文本编辑器中，函数或你想要调试的例程中的代码行上右键单击并选择**断点**并**插入断点**。 即会添加断点，并以红色突出显示该行代码。  
   
-6.  在**调试**菜单上，选择**启动调试**进行编译时，部署和测试项目。 将运行 Test.sql 中的测试脚本，并将调用托管数据库对象。  
+6.  在中**调试**菜单中，选择**开始调试**编译，部署和测试项目。 将运行 Test.sql 中的测试脚本，并将调用托管数据库对象。  
   
-7.  如果在断点代码执行暂停时出现表示指令指针的黄色箭头，则您可以开始调试托管数据库对象。 你可以**逐过程**从**调试**菜单向前指令指针移动到下一行代码。 **局部变量**窗口用于观察当前指令指针通过突出显示的对象的状态。 可以将变量添加到**监视**窗口。 受监视变量的状态在整个调试会话过程中都可以进行观察，而不是仅当变量位于当前由指令指针突出显示的代码行中时才可以进行观察。 从“调试”菜单中选择“继续”以使指令指针前进到下一个断点或完成例程的执行（如果不再有其他断点）。  
+7.  如果在断点代码执行暂停时出现表示指令指针的黄色箭头，则您可以开始调试托管数据库对象。 你可以**单步跳过**从**调试**菜单以使指令指针前进到下一行代码。 **局部变量**窗口用于观察当前由指令指针突出显示的对象的状态。 可以将变量添加到**监视**窗口。 受监视变量的状态在整个调试会话过程中都可以进行观察，而不是仅当变量位于当前由指令指针突出显示的代码行中时才可以进行观察。 从“调试”菜单中选择“继续”以使指令指针前进到下一个断点或完成例程的执行（如果不再有其他断点）。  
   
 ### <a name="example"></a>示例  
  下面的示例将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本返回给调用方。  

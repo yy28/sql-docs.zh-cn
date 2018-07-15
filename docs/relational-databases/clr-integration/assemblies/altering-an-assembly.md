@@ -1,12 +1,11 @@
 ---
-title: 更改程序集 |Microsoft 文档
+title: 更改程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - altering assemblies
 - ALTER ASSEMBLY statement
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
-caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7edffcdf1009199a2c2024adf7621a53e7109796
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 03f2f9d033b4c030bd262bc5cb5621e5cdaaae6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698288"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356289"
 ---
 # <a name="altering-an-assembly"></a>更改程序集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +36,14 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
  ALTER ASSEMBLY 不中断当前正在运行且正在使用此程序集的进程；这些进程使用未经更改的程序集继续执行。 ALTER ASSEMBLY 不能用于更改公共语言运行时 (CLR) 函数、聚合函数、存储过程和触发器的签名。 只要未更改签名或属性，就可以向程序集添加新的公共方法，以任何方式修改专用方法以及修改公共方法。 不能使用 ALTER ASSEMBLY 更改本机序列化用户定义类型（包含数据成员或基类）内包含的字段。 不支持所有其他更改。 有关详细信息，请参阅[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>更改程序集的权限集  
- 还可以使用 ALTER ASSEMBLY 语句更改程序集的权限集。 下面的语句更改为 SQLCLRTest 程序集的权限集**EXTERNAL_ACCESS**。  
+ 还可以使用 ALTER ASSEMBLY 语句更改程序集的权限集。 下面的语句更改到将 SQLCLRTest 程序集的权限集**EXTERNAL_ACCESS**。  
   
 ```  
 ALTER ASSEMBLY SQLCLRTest  
 WITH PERMISSION_SET = EXTERNAL_ACCESS   
 ```  
   
- 如果正在从更改程序集的权限集**安全**到**EXTERNAL_ACCESS**或**UNSAFE**，将非对称密钥和相应的登录名与**EXTERNAL ACCESS ASSEMBLY**权限或**UNSAFE ASSEMBLY**必须首先创建程序集的权限。 有关详细信息，请参阅 [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
+ 如果从更改程序集的权限集，则**安全**到**EXTERNAL_ACCESS**或**UNSAFE**，将非对称密钥和对应登录名具有**EXTERNAL ACCESS ASSEMBLY**权限或**UNSAFE ASSEMBLY**必须先创建程序集的权限。 有关详细信息，请参阅 [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
   
 ## <a name="adding-the-source-code-of-an-assembly"></a>添加程序集的源代码  
  CREATE ASSEMBLY 中不存在 ALTER ASSEMBLY 语法中的 ADD FILE 子句。 您可以使用该子句来添加源代码或与程序集关联的任何其他文件。 这些文件将从其原始位置复制并存储到数据库的系统表中。 如果您需要重新创建或记录 UDT 的当前版本，这样可确保源代码或其他文件随时备用。  

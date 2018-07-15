@@ -1,5 +1,5 @@
 ---
-title: CellData 元素 (XMLA) |Microsoft 文档
+title: CellData 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ce445127e78f7f503bf3b81a640047f0d1f1d87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 370837c78fe1fa49396a5209dd94dd0e7cb4f69d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330407"
 ---
 # <a name="celldata-element-xmla"></a>CellData 元素 (XMLA)
-  包含表示包含的单元格数据的单元格元素的集合[根](root-element-xmla.md)用元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)数据类型。  
+  包含一系列表示包含的单元格数据的单元格元素[根](root-element-xmla.md)使用的元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   
