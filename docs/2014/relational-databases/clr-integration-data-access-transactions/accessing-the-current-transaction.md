@@ -1,13 +1,11 @@
 ---
-title: 访问当前的事务 |Microsoft 文档
+title: 访问当前事务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128356"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351809"
 ---
 # <a name="accessing-the-current-transaction"></a>访问当前事务
   如果在输入运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的公共语言运行时 (CLR) 代码时某事务是活动的，则该事务通过 `System.Transactions.Transaction` 类公开。 `Transaction.Current` 属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 将在调用 `Transaction.Current` 方法时自动检查 `Connection.Open`，并在该事务中以透明方式登记连接（除非在连接字符串中将 `Enlist` 关键字设置为 false）。  
@@ -69,7 +67,7 @@ The context transaction which was active before entering user defined routine, t
  也应出现该异常，并且为了让执行得以继续，在执行激发触发器的操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句周围必须有 try/catch 块。 尽管引发了两个异常，但事务将回滚，并且不提交更改。  
   
 ### <a name="example"></a>示例  
- 下面是通过使用 `Transaction.Rollback` 方法从托管过程回滚事务的示例。 请注意在托管代码中 `Transaction.Rollback` 方法周围的 try/catch 块。 此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建了一个程序集和托管存储过程。 请注意，`EXEC uspRollbackFromProc`语句包装在 try/catch 块，以便捕获托管的过程完成后执行时引发的异常。  
+ 下面是通过使用 `Transaction.Rollback` 方法从托管过程回滚事务的示例。 请注意在托管代码中 `Transaction.Rollback` 方法周围的 try/catch 块。 此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建了一个程序集和托管存储过程。 请注意，`EXEC uspRollbackFromProc`语句包装在 try/catch 块，以便可以捕获在托管的过程完成执行时引发的异常。  
   
 ```csharp  
 using System;  

@@ -1,5 +1,5 @@
 ---
-title: 更改数据源视图 (Analysis Services) 中的属性 |Microsoft 文档
+title: 在数据源视图 (Analysis Services) 中更改属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
 - names [Analysis Services], data source views
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c740690921e496cffc70959e0494bcdfb190b16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f264928a8abde5e20738b0fb60d712aa9bef2320
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332507"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>在数据源视图中更改属性 (Analysis Services)
   在使用数据源视图向导定义数据源视图并将表、视图、命名计算和命名查询添加到数据源视图后，可能需要更改与下列各项相关的属性：  
@@ -85,6 +85,6 @@ ms.locfileid: "36129988"
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [使用数据源视图设计器中的关系图&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [使用的数据源视图设计器中的关系图&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 通过使用 CommandStream 属性执行模板文件 |Microsoft 文档
+title: 使用 CommandStream 属性执行模板文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd2f29f14d4af758581e368986398720dd3b5a0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d149b40acdc7fc81c79f8800787d093636753d39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331287"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>使用 CommandStream 属性执行模板文件
-  此示例说明如何通过使用 SqlXmlCommand 对象的 CommandStream 属性指定 SQL 或 XPath 查询的包含的模板文件。 在此应用程序，FileStreamobject 打开命令文件，并将文件流分配作为执行 CommandStream。  
+  此示例说明了如何通过使用 CommandStream 属性 SqlXmlCommand 对象的指定 SQL 或 XPath 查询组成的模板文件。 在此应用程序，FileStreamobject 打开的命令文件，并指定文件流作为执行 CommandStream。  
   
- 在下面的示例中，CommandType 属性被指定为 SqlXmlCommandType.Template （而不是作为 TemplateFile)。  
+ 在以下示例中，CommandType 属性指定为 SqlXmlCommandType.Template （而不是作为 TemplateFile)。  
   
  下面是示例 XML 模板：  
   
@@ -87,7 +87,7 @@ class Test
   
 1.  将该示例中提供的 XML 模板 (TemplateFile.xml) 保存在某个文件夹中。  
   
-2.  在此示例中的架构存储在其中的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+2.  在此示例中在其中存储架构的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 3.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

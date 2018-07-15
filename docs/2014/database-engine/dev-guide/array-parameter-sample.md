@@ -1,5 +1,5 @@
 ---
-title: 数组参数示例 |Microsoft 文档
+title: 数组参数示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f550af33b55d7b54a5bc88b69ecf419e07a3116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b3675473d52edb767c0aa96fa73e8775430d97e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328187"
 ---
 # <a name="array-parameter-sample"></a>数组参数示例
   有时需要创建、更新或删除数据库中的一组行。 实现的方法有多种。 其中一种是使用 CLR 集成用户定义数据类型将客户端上的数组信息传递到服务器上的公共语言运行时 (CLR) 集成存储过程。 这类用户定义数据类型的特性将提供给服务器的数据大小限制在 8000 个字节。 因此，此方法不适于大型数据或复杂数据。 如果操作的数据量小且简单，则此方法比为每行调用存储过程有效得多。 通过传递数组可以保留数据顺序，数据顺序对一些应用程序而言非常重要。此示例包含以下内容：  
@@ -59,7 +59,7 @@ ms.locfileid: "36028844"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，你必须`ALTER SETTINGS`服务器级别权限，该权限的成员隐式具有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36028844"
   
 5.  在 c:\MySample 中，创建 `Program.vb`（用于 Visual Basic 示例）或 `Program.cs`（用于 C# 示例），并将相应的 Visual Basic 或 C# 示例代码（如下所示）复制到该文件中。  
   
-6.  （绕行 24） 的程序文件中找到适当的行，并将`XXX`替换为你的实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  找到文件 Program （在第 24 行附近） 中相应的行和替换`XXX`实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

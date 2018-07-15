@@ -1,5 +1,5 @@
 ---
-title: DataSourceViewBinding 数据类型 (ASSL) |Microsoft 文档
+title: DataSourceViewBinding 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSourceViewBinding data type
 ms.assetid: 1f08e2d8-b279-4181-9257-e56f9fcbd9bf
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68b2a967fc57187d343a8cfd06e5706f474ab90d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d97c0c08a686ef364f321dc466c95cc5da3a4f54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332687"
 ---
 # <a name="datasourceviewbinding-data-type-assl"></a>DataSourceViewBinding 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示数据源视图和父元素之间的绑定。  
@@ -61,11 +61,11 @@ ms.locfileid: "36129782"
 |派生元素|请参阅[绑定](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 有关其他信息`Binding`类型，包括表的 Analysis Services 脚本语言 (ASSL) 对象`Binding`类型和继承层次结构的`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md)。  
+ 有关其他信息`Binding`类型，包括 Analysis Services 脚本语言 (ASSL) 对象的表`Binding`类型和继承层次结构`Binding`类型，请参阅[&#40;ASSL&#41;](binding-data-type-assl.md)。  
   
- ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DataSourceViewBinding>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DataSourceViewBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

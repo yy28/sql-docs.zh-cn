@@ -1,13 +1,11 @@
 ---
-title: 模拟和连接的凭据 |Microsoft 文档
+title: 模拟和连接的凭据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2cc3fc4695c9e0b2a723668f09fc1bf388dabaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 9af64be53b702dfded163a06562e4f6bdf7e5a61
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128992"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350870"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>模拟和连接凭据
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成中，使用 Windows 身份验证虽然比较复杂，但是比使用 SQL Server 身份验证更为安全。 使用 Windows 身份验证时，请谨记下列注意事项：  
@@ -38,7 +36,7 @@ ms.locfileid: "36128992"
   
  在某些情况下，最好使用 `SqlContext.WindowsIdentity` 属性来模拟调用方，而非作为服务帐户运行。 `WindowsIdentity` 实例表示调用调用代码的客户端的标识，并且仅在客户端使用 Windows 身份验证时才可用。 在已获得 `WindowsIdentity` 实例后，可以调用 `Impersonate` 来更改线程的安全令牌，然后代表客户端打开 ADO.NET 连接。  
   
- 调用 SQLContext.WindowsIdentity.Impersonate 之后，你无法访问本地数据，并不能访问系统数据。 若要访问数据同样，你必须调用 WindowsImpersonationContext.Undo。  
+ 调用 SQLContext.WindowsIdentity.Impersonate 后，不能访问本地数据并不能访问系统数据。 若要访问的数据同样，您必须调用 WindowsImpersonationContext.Undo。  
   
  下面的示例将说明如何使用 `SqlContext.WindowsIdentity` 属性来模拟调用方。  
   
@@ -76,9 +74,9 @@ catch
 ```  
   
 > [!NOTE]  
->  有关中模拟的行为更改的信息，请参阅[中 SQL Server 2014 数据库引擎功能的重大更改](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  有关模拟中行为更改的信息，请参阅[SQL Server 2014 中数据库引擎功能的重大更改](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
- 另外，如果获得了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 标识实例，则默认情况下不能将该实例传播到其他计算机；默认情况下 Windows 安全基础结构会限制这种传播。 然而，存在一种称为“委托”的机制，通过该机制可在多个可信任的计算机之间启用 Windows 标识传播。 你可以了解有关 TechNet 文章中的委派"[Kerberos 协议转换和约束委派](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
+ 另外，如果获得了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 标识实例，则默认情况下不能将该实例传播到其他计算机；默认情况下 Windows 安全基础结构会限制这种传播。 然而，存在一种称为“委托”的机制，通过该机制可在多个可信任的计算机之间启用 Windows 标识传播。 您可以了解有关 TechNet 文章中的委派的详细信息"[Kerberos 协议转换和约束委派](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
   
 ## <a name="see-also"></a>请参阅  
  [SqlContext 对象](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

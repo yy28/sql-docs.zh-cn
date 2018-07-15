@@ -1,13 +1,11 @@
 ---
-title: SqlPipe 对象 |Microsoft 文档
+title: SqlPipe 对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b67acce373f412ef4adca2c9957f4f5046f35a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 61ece1402c9675f4f737098580283f1a6e777b76
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129473"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350849"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 对象
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，编写向调用客户端发送结果或输出参数的存储过程（或扩展存储过程）非常常见。  
@@ -59,7 +57,7 @@ ms.locfileid: "36129473"
 >  在调用 `SendResultsStart` 方法之后，只能调用 `SendResultsRow` 和 `SendResultsEnd`。 在同一 `SqlPipe` 实例中调用任何其他方法将导致 `InvalidOperationException`。 `SendResultsEnd` 将 `SqlPipe` 设置回初始状态，您可以在该状态下调用其他方法。  
   
 ### <a name="example"></a>示例  
- `uspGetProductLine` 存储过程返回指定产品系列中所有产品的名称、产品编号、颜色和标价。 此存储的过程接受的完全匹配项*prodLine*。  
+ `uspGetProductLine` 存储过程返回指定产品系列中所有产品的名称、产品编号、颜色和标价。 此存储的过程接受与精确匹配*prodLine*。  
   
  C#  
   

@@ -1,5 +1,5 @@
 ---
-title: 创建 Analysis Services 项目 (SSDT) |Microsoft 文档
+title: 创建 Analysis Services 项目 (SSDT) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [Analysis Services]
 - templates [Analysis Services], projects
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9361e396f9d3c4d33ac2113e2dab68ef00b6b248
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 382e8996ea270203e3a3e756f927764e8aeebf9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328557"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>创建 Analysis Services 项目 (SSDT)
   您可以通过使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目模板或使用导入 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库向导读取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的内容，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 如果 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中当前未加载解决方案，则创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的同时将自动创建一个新的解决方案。 否则，新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目将添加到现有的解决方案中。 针对解决方案开发的最佳做法要求为不同类型的应用程序数据创建单独的项目，并且在项目相关时使用单个解决方案。 例如，您可能具有单个解决方案，该解决方案为 Integration Services 包、Analysis Services 数据库和 Reporting Services 报表包含不同的项目，它们全都由相同的业务应用程序使用。  

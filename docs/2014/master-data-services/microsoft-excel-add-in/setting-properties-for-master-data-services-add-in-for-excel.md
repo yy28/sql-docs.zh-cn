@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 59fece6c670c57e5f781affd00ed11490914bdfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ab4a1941af43e2853d06f72e58baf07dd80a1724
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327897"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>设置用于 Excel 的 Master Data Services 外接程序的属性
   用于 Excel 的 Master Data Services 外接程序设置确定将 MDS 中的数据加载到 Excel 外接程序的方式和将 Excel 外接程序中的数据发布到 MDS 的方式。  
@@ -33,7 +33,7 @@ ms.locfileid: "36028612"
 |选项卡和部分|设置|Description|  
 |设置：发布|发布时显示 **“发布并添加批注”** 对话框|如果在单击 **“发布”** 之后选择显示 **“发布并添加批注”** 对话框，您便可以为所有更改输入单个批注或为每个更改输入一个批注。<br /><br /> 取消选择可指定启动发布过程时不显示 **“发布并添加批注”** 对话框。 您将没有机会输入批注。|  
 |设置：版本|版本选择|选择将加载到 Excel 外接程序中的主数据的版本。 可以是：<br /><br /> **“无”** 以便不将任何版本设置为默认版本；<br /><br /> **“最早”** 以将默认版本设置为最早版本； **“最新”** 以将默认版本设置为最新版本。|  
-|设置：日志记录|打开详细日志记录|启用到 Excel 外接程序，从 MDS 加载主数据的进程的日志记录以便记录在服务中的每个命令的结果。|  
+|设置：日志记录|打开详细日志记录|启用日志记录过程的主数据从 MDS 加载到 Excel 外接程序，以便记录在服务中的每个命令的结果。|  
 |设置：批大小|要加载的单元格数|选择一个数目，指示从 MDS 服务器加载到 Excel 的一个批次中将加载几千个单元格。 默认值为 50,000 个单元格。|  
 |设置：批大小|要发布的单元格数|选择一个数目，指示从 Excel 返回到服务器的一个批次中将发布几千个单元格。 默认值为 50,000 个单元格。|  
 |设置：添加到安全列表的服务器|全部清除|单击可清除在打开关联的快捷查询文件时被指定为安全的连接列表。|  

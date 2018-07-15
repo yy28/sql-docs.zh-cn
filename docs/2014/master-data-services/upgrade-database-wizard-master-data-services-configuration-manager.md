@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c077e53cbca0e9c97d6ac347ff85cec5c5e752f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d19c17410c5cf6511db7b53ccf0de758dfefc0aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329977"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升级数据库向导（Master Data Services 配置管理器）
   使用 **“升级数据库向导”** 来升级 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  

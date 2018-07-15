@@ -1,5 +1,5 @@
 ---
-title: 更改已注册的服务器或已注册的服务器组 (SQL Server Management Studio) 的名称 |Microsoft 文档
+title: 更改名称的已注册的服务器或已注册的服务器组 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying registered server or server group names
 - server groups [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - names [SQL Server], registered server or server group
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c5bfcf4f5874aac5b646987a93ff497ac67c0ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df3d5d3f1081156bb7847d44fbb12eac61e194ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330827"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>更改已注册的服务器或已注册的服务器组的名称 (SQL Server Management Studio)
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中更改已注册服务器或服务器组的名称。 该名称可以随时更改。 在已注册的服务器中更改某个服务器的名称只会更改该名称的显示方式。 若要连接到其他服务器，必须编辑已注册的服务器的连接属性。  

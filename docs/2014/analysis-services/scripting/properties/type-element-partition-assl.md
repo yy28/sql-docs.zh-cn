@@ -1,5 +1,5 @@
 ---
-title: 类型元素 （分区） (ASSL) |Microsoft 文档
+title: 键入元素 (Partition) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 61c022fe-8c41-4f62-9808-c386e05eb547
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29401c702cce49ed46415a1708da5fec9138fa9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f51966789f33cd535ff0322ec2f50caa392f5ccc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332787"
 ---
 # <a name="type-element-partition-assl"></a>Type 元素 (Partition) (ASSL)
-  包含的一种[分区](../objects/partition-element-assl.md)元素。  
+  包含的类型[分区](../objects/partition-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36138509"
 |*数据*|该分区包含事实数据表数据。|  
 |*写回*|该分区包含写回表数据。|  
   
- 对应于的允许值为枚举`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.PartitionType>。  
+ 与允许的值相对应的枚举`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.PartitionType>。  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Partition>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Partition>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: SqlLocalDB 实用工具 |Microsoft 文档
+title: SqlLocalDB 实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 368c770520725aa83ccb4852881e4d62d487998d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3a3c83dfc8e7282ea67c3aff783ad4ec50826865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330907"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 实用工具
-  使用`SqlLocalDB`实用程序来创建的实例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**。 `SqlLocalDB`实用工具 (SqlLocalDB.exe) 是一个简单的命令行工具，让用户和开发人员可以创建和管理的实例[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**。 有关如何使用信息**LocalDB**，请参阅[SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
+  使用`SqlLocalDB`实用工具创建的实例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**。 `SqlLocalDB`实用工具 (SqlLocalDB.exe) 是一个简单的命令行工具，使用户和开发人员能够创建和管理的实例[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**。 有关如何使用信息**LocalDB**，请参阅[SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>参数  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 `SqlLocalDB` 使用版本的[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]由指定的二进制文件*\<实例版本 >* 自变量。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认的新版`SqlLocalDB`实用程序。 添加 **–s** 可启动新的 **LocalDB**实例。  
+ 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 `SqlLocalDB` 使用的版本[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]二进制文件指定*\<实例版本 >* 参数。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为的新版`SqlLocalDB`实用程序。 添加 **–s** 可启动新的 **LocalDB**实例。  
   
  [ **共享** | **h** ]  
  使用指定的共享名称共享指定的 **LocalDB** 私有实例。 如果省略该用户 SID 或帐户名称，则默认为当前用户。  
@@ -71,7 +71,7 @@ SqlLocalDB.exe
  \<instance-name> 返回指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]LocalDB 实例的名称、版本、状态（正在运行或已停止）、上次启动时间，以及 LocalDB 的本地管道名称。  
   
  [ **trace** | **t** ] **on** | **off**  
- **跟踪上**为启用跟踪`SqlLocalDB`API 调用为当前用户。 **trace off** 禁用跟踪。  
+ **在跟踪**为启用跟踪`SqlLocalDB`API 调用为当前用户。 **trace off** 禁用跟踪。  
   
  **-?**  
  返回的简短说明每个`SqlLocalDB`选项。  

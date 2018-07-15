@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fdaebbfc823445594e32f18ba1ec858b2350f108
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328437"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>配置可用性副本备份 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的辅助副本的备份。  
   
 > [!NOTE]  
->  辅助副本备份的简介，请参阅[活动辅助副本： 辅助副本 （AlwaysOn 可用性组） 上的备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  辅助副本备份的介绍，请参阅[活动次要副本： 辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
  
   
@@ -115,13 +114,13 @@ ms.locfileid: "36027536"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **配置辅助副本备份**  
   
-1.  设置默认 (`cd`) 到承载主副本的服务器实例。  
+1.  设置默认值 (`cd`) 到承载主副本的服务器实例。  
   
 2.  （可选）配置要添加或修改的每个可用性副本的备份优先级。 此优先级由承载主副本的服务器实例用来确定哪一副本应该用于针对可用性组中某一数据库的自动备份请求（选择具有最高优先级的副本）。 该优先级可以是 0 和 100 之间（含 0 和 100）的任何数字。 优先级 0 指示副本不应视作支持备份请求的候选。  默认设置为 50。  
   
      在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityReplica` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityReplica` cmdlet。 在任一情况下，指定`BackupPriority` *n*参数，其中*n*是从 0 到 100 的值。  
   
-     例如，以下命令将设置可用性副本的备份优先级`MyReplica`到`60`。  
+     例如，以下命令设置可用性副本的备份优先级`MyReplica`到`60`。  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -130,7 +129,7 @@ ms.locfileid: "36027536"
   
 3.  （可选）配置要创建或修改的可用性组的自动备份首选项。 此首选项指示在选择执行备份的位置时备份作业应该如何评估主副本。 默认设置是首选辅助副本。  
   
-     创建可用性组时，使用 `New-SqlAvailabilityGroup` cmdlet。 在修改现有可用性组，使用`Set-SqlAvailabilityGroup`cmdlet。 在任一情况下，指定`AutomatedBackupPreference`参数。  
+     创建可用性组时，使用 `New-SqlAvailabilityGroup` cmdlet。 当修改现有可用性组，使用`Set-SqlAvailabilityGroup`cmdlet。 在任一情况下，指定`AutomatedBackupPreference`参数。  
   
      其中：  
   
@@ -161,7 +160,7 @@ ms.locfileid: "36027536"
     ```  
   
 > [!NOTE]  
->  若要查看 cmdlet 的语法，请使用`Get-Help`中的 cmdlet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -199,9 +198,9 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

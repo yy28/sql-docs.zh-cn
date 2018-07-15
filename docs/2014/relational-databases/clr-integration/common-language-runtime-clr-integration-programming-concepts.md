@@ -1,13 +1,11 @@
 ---
-title: 公共语言运行时 (CLR) 集成编程概念 |Microsoft 文档
+title: 公共语言运行时 (CLR) 集成编程概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - .NET Framework [SQL Server]
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f508cdada9905c2a8ec322319df58cb5504af14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b4b2ee2815f89770d3c9af182237fb7d888424bc
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126103"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350089"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>公共语言运行时 (CLR) 集成编程概念
   从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 集成了用于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 的 .NET Framework 的公共语言运行时 (CLR) 组件。 这意味着现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#）来编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合和流式表值函数。  
@@ -34,7 +32,7 @@ ms.locfileid: "36126103"
  Microsoft.SqlServer.Server 命名空间包括在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中进行 CLR 编程的核心功能。 但是，有关 Microsoft.SqlServer.Server 命名空间的文档位于 .NET Framework SDK。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书不包括该文档。  
   
 > [!IMPORTANT]  
->  默认情况下，.NET Framework 随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装，但不安装 .NET Framework SDK。 如果未在计算机上安装 SDK，并且未将其包括在联机丛书集中，则本节中指向 SDK 内容的链接无效。 请安装 .NET Framework SDK。 安装完成后，将 SDK 添加到的联机丛书集合和内容的表中的说明[安装.NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)。  
+>  默认情况下，.NET Framework 随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装，但不安装 .NET Framework SDK。 如果未在计算机上安装 SDK，并且未将其包括在联机丛书集中，则本节中指向 SDK 内容的链接无效。 请安装 .NET Framework SDK。 安装后，将 SDK 添加到联机丛书集和内容按照中的说明[安装.NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)。  
   
  下表列出了本节的主题。  
   

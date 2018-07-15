@@ -1,5 +1,5 @@
 ---
-title: 报表服务器计算机 （升级顾问） 上检测到过时的扩展插件 |Microsoft 文档
+title: 报表服务器计算机 （升级顾问） 上检测到过时的扩展插件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f1bbf0f40fd78f7372ee7b332e9eaa89fb97cff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c29365b40d59d76ab65d8f9f40a3bec86a0b486f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328979"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>在报表服务器计算机上检测到过时的扩展插件（升级顾问）
   升级顾问检测到当前版本中不再可用的一个或多个呈现扩展插件。  

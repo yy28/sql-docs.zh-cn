@@ -1,13 +1,11 @@
 ---
-title: 生成与公共语言运行时 (CLR) 集成的数据库对象 |Microsoft 文档
+title: 生成使用公共语言运行时 (CLR) 集成的数据库对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 070e9df2a42cbed665de1b076600d333926f6ea1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 72d68e213d240e3c6182f99e8c1637c1f1ebedfb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126877"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351009"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
-  你可以生成使用的数据库对象[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]简称为"CLR 例程"。 这些例程包括：  
+  您可以生成使用的数据库对象[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]被称为"CLR 例程"。 这些例程包括：  
   
 -   标量值用户定义函数（标量 UDF）  
   
@@ -42,7 +40,7 @@ ms.locfileid: "36126877"
   
  CLR 例程在托管代码中具有相同的结构。 它们映射为某个类的公共静态（在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 中共享）方法。 除了例程之外，还可以使用 .NET Framework 定义用户定义类型 (UDT) 和用户定义的聚合函数。 将 UDT 和用户定义聚合映射为整个 .NET Framework 类。  
   
- 每种类型的.NET Framework 例程具有[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]，[!INCLUDE[tsql](../../../includes/tsql-md.md)]可以使用等效项。 例如，标量 UDF 可以用于任意标量表达式中。 TVF 可以用于任意 FROM 子句中。 可以在 EXEC 语句中调用过程或从客户端应用程序调用。  
+ 每种类型的.NET Framework 例程具有[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]的[!INCLUDE[tsql](../../../includes/tsql-md.md)]使用等效。 例如，标量 UDF 可以用于任意标量表达式中。 TVF 可以用于任意 FROM 子句中。 可以在 EXEC 语句中调用过程或从客户端应用程序调用。  
   
 > [!NOTE]  
 >  如果查询优化器确定这样做有益处，则在公共语言运行时上执行 CLR 对象（用户定义函数、用户定义类型或触发器）可能在多个线程上发生（并行计划）。 但是，如果用户定义函数访问数据，则会在串行计划上执行。 当在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的服务器版本上执行时，如果某一用户定义函数包含 LOB 参数或返回值，则也必须在串行计划上执行。  

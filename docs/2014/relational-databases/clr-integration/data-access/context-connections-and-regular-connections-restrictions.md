@@ -1,13 +1,11 @@
 ---
-title: 对常规和上下文连接限制 |Microsoft 文档
+title: 对常规连接和上下文连接的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f0d266b75dad229a0784606af112c249728a112c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: aaff8841ec9ccd7b61b5ab7646daaf700a05b3df
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127078"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349449"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>对常规连接和上下文连接的限制
-  本主题讨论与在中执行代码相关的限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
+  本主题讨论中执行的代码相关的限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
   
 ## <a name="restrictions-on-context-connections"></a>对上下文连接的限制  
  开发应用程序时，请考虑应用于上下文连接的以下限制：  

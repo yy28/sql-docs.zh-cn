@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 客户端编程 |Microsoft 文档
+title: ADOMD.NET 客户端编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9faa64cce77c883ed6adb86bca6d50f32f015c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332747"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 客户端编程
-  ADOMD.NET 客户端组件位于 `Microsoft.AnalysisServices.AdomdClient` 命名空间 (microsoft.analysisservices.adomdclient.dll) 中。 这些客户端组件提供的功能的客户端和中间层应用程序轻松地查询数据和元数据来自分析数据存储区，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  ADOMD.NET 客户端组件位于 `Microsoft.AnalysisServices.AdomdClient` 命名空间 (microsoft.analysisservices.adomdclient.dll) 中。 这些客户端组件提供的功能的客户端和中间层应用程序轻松地查询数据和元数据从分析数据存储，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="using-the-adomdnet-client-objects"></a>使用 ADOMD.NET 客户端对象  
  查询分析数据源时，有一组常见任务需要执行。 下表介绍了这些常见任务，您通常在这些任务中使用 ADOMD.NET 客户端对象执行此类查询。  
@@ -43,8 +43,8 @@ ms.locfileid: "36128868"
   
 |若要|使用此对象|  
 |--------|---------------------|  
-|连接到分析数据源|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象表示与数据源之间的连接以及数据源元数据。 例如，你可以连接到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]本地多维数据集 (.cub) 文件，并检查<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A>属性来获取有关存在多维数据集在分析数据源上的元数据。 此对象还表示 `IDbConnection` 接口的实现，该接口是所有 .NET Framework 数据访问接口必需的。|  
-|发现数据源的数据挖掘功能|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象公开若干挖掘集合：<br /><br /> -<xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection>包含的数据源中的每个挖掘模型列表。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection>提供有关可用的挖掘算法的信息。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection>公开有关挖掘结构在服务器上的信息。|  
+|连接到分析数据源|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象表示与数据源之间的连接以及数据源元数据。 例如，你可以连接到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]本地多维数据集 (.cub) 文件，并检查<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A>属性来获取有关对多维数据集存在分析数据源的元数据。 此对象还表示 `IDbConnection` 接口的实现，该接口是所有 .NET Framework 数据访问接口必需的。|  
+|发现数据源的数据挖掘功能|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象公开若干挖掘集合：<br /><br /> -<xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection>包含数据源中的每个挖掘模型的列表。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection>提供了有关可用挖掘算法的信息。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection>公开有关挖掘结构的服务器上的信息。|  
 |查询数据源|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 对象表示将发送到服务器的语句或查询。 与数据源建立连接后，即可使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 对象以支持的语言运行语句，例如多维表达式 (MDX) 或数据挖掘扩展插件 (DMX)。 还可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 对象以 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 或 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象形式返回结果。|  
 |以快速有效的方法检索数据|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader><br /> 可通过调用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> 或 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A> 方法来创建 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>。 此对象实现 .NET Framework 类库的 `IDbDataReader` 命名空间的 `System.Data` 接口。|  
 |检索带有最多元数据的分析数据|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet><br /> 可通过调用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> 或 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteCellSet%2A> 方法来创建 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>。 在 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 返回 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 后，即可检查 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 包含的分析数据。|  
@@ -52,7 +52,7 @@ ms.locfileid: "36128868"
 |使用 `System.Data.IDbDataAdapter` 接口检索数据|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter> 提供对现有 .NET Framework 客户端应用程序的只读支持。|  
   
 ## <a name="see-also"></a>请参阅  
- [ADOMD.NET Server 编程](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)   
+ [ADOMD.NET 服务器编程](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)   
  [使用 ADOMD.NET 进行开发](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   

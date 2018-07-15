@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 caps.latest.revision: 45
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 826e6feb86dec026d22bdfb255361bbbbcd93480
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 252ec37bb94881a04cfe1137c829274cac6ad893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330859"
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
   超文本传输协议 (HTTP) 是一个无连接且无状态协议，这意味着它不自动指示不同请求是否来自同一个客户端，甚至也不指示单个浏览器实例是否仍在查看页面或站点。 会话创建逻辑连接，以通过 HTTP 在服务器与客户端之间维护状态。 与特定会话相关的用户特定的信息称为会话状态。  

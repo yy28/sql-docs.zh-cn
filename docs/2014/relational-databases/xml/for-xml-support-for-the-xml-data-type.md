@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327331"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
-  如果 FOR XML 查询指定的列`xml`类型在选择子句中，列的值将映射为返回的 XML，不管是否指定了 ELEMENTS 指令中的元素。 `xml` 类型的列中的任何 XML 声明都不是序列化的。  
+  如果 FOR XML 查询指定的列`xml`类型在 SELECT 子句中列的值将映射为返回的 XML，不管是否指定了 ELEMENTS 指令中的元素。 `xml` 类型的列中的任何 XML 声明都不是序列化的。  
   
- 例如，以下查询检索客户联系人信息如`BusinessEntityID`， `FirstName`，和`LastName`列，以及从电话号码`AdditionalContactInfo`列`xml`类型。  
+ 例如，以下查询检索客户联系人信息如`BusinessEntityID`， `FirstName`，并`LastName`列，以及从电话号码`AdditionalContactInfo`列`xml`类型。  
   
 ```  
 USE AdventureWorks2012;  
@@ -121,7 +121,7 @@ FOR XML AUTO, TYPE;
   
  如果在查询中指定 ELEMENTS 指令，则 BusinessEntityID、LastName 和 FirstName 将作为生成的 XML 中的元素返回。  
   
- 下面的示例演示了 FOR XML 处理逻辑不序列化中的 XML 数据中的任何 XML 声明`xml`类型列：  
+ 下面的示例说明了 FOR XML 处理逻辑不序列化的 XML 数据中的任何 XML 声明`xml`类型列：  
   
 ```  
 create table t(i int, x xml)  
@@ -152,7 +152,7 @@ for xml auto;
   
 -   实例`xml`类型  
   
- 例如，下面的用户定义函数返回的单个列的表`xm`l 类型：  
+ 例如，以下用户定义函数返回包含的单个列的表`xm`l 类型：  
   
 ```  
 USE AdventureWorks2012;  
@@ -174,7 +174,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- 您可以执行用户定义函数并查询由它返回的表。 在此示例中，通过查询表返回的 XML 被分配到`xml`类型变量。  
+ 您可以执行用户定义函数并查询由它返回的表。 在此示例中，通过查询表返回的 XML 被分配到`xml`类型的变量。  
   
 ```  
 declare @x xml;  

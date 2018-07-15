@@ -1,13 +1,11 @@
 ---
-title: 事务升级 |Microsoft 文档
+title: 事务升级 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +15,20 @@ helpviewer_keywords:
 - transaction promotion [CLR integration]
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74beef45bcf29f78b800100e2c3c8ec14c301435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 789fa82f6afc23c09028726c837ff5d37a082a06
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028809"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349239"
 ---
 # <a name="transaction-promotion"></a>事务升级
-  事务*升级*描述可以自动提升为完全可分发事务根据需要的轻量、 本地事务。 当在服务器上的数据库事务内调用托管存储过程时，会在本地事务的上下文中运行公共语言运行时 (CLR) 代码。  如果在数据库事务内打开到远程服务器的连接，则到远程服务器的连接会登记在分布式事务中，并且本地事务会自动升级为分布式事务。 因此，通过将分布式事务的创建延迟到需要创建时才进行，事务升级可以将分布式事务的开销降至最低。 如果已使用 `Enlist` 关键字启用了事务升级，则事务升级将自动进行，而不需要开发人员干预。 用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 .NET Framework 数据提供程序可为事务升级提供支持，这是通过 .NET Framework `System.Data.SqlClient` 命名空间中的类处理的。  
+  事务*促销*介绍可以进行自动提升为完全可分发事务根据需要轻型本地事务。 当在服务器上的数据库事务内调用托管存储过程时，会在本地事务的上下文中运行公共语言运行时 (CLR) 代码。  如果在数据库事务内打开到远程服务器的连接，则到远程服务器的连接会登记在分布式事务中，并且本地事务会自动升级为分布式事务。 因此，通过将分布式事务的创建延迟到需要创建时才进行，事务升级可以将分布式事务的开销降至最低。 如果已使用 `Enlist` 关键字启用了事务升级，则事务升级将自动进行，而不需要开发人员干预。 用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 .NET Framework 数据提供程序可为事务升级提供支持，这是通过 .NET Framework `System.Data.SqlClient` 命名空间中的类处理的。  
   
-## <a name="the-enlist-keyword"></a>登记关键字  
+## <a name="the-enlist-keyword"></a>Enlist 关键字  
  `ConnectionString` 对象的 `SqlConnection` 属性支持 `Enlist` 关键字，该关键字指示 `System.Data.SqlClient` 是否检测事务上下文并在分布式事务中自动登记连接。 如果此关键字设置为 True（默认设置），则会在打开的线程的当前事务上下文中自动登记连接。 如果此关键字设置为 False，则 SqlClient 连接不会与分布式事务交互。 如果未在连接字符串中指定 `Enlist`，并且如果在打开相应连接时检测到一个分布式事务，则会在此分布式事务中自动登记此连接。  
   
 ## <a name="distributed-transactions"></a>分布式事务  

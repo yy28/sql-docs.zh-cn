@@ -1,13 +1,11 @@
 ---
-title: 将 CLR 参数数据映射 |Microsoft 文档
+title: 映射 CLR 参数数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,18 +26,18 @@ helpviewer_keywords:
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7c442f3bf102c668f0889f008b8a87205b2257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137563"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354519"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
-  下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 来中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空间，和中的本机 CLR 等效项[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
+  下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 为中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空间，并在其本机 CLR 等效[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
   
 ||||  
 |-|-|-|  
@@ -49,31 +47,31 @@ ms.locfileid: "36137563"
 |`bit`|`SqlBoolean`|**布尔值、 可以为 Null\<布尔 >**|  
 |`char`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`cursor`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`date`|`SqlDateTime`|**日期/时间，可以为 Null\<DateTime >**|  
-|`datetime`|`SqlDateTime`|**日期/时间，可以为 Null\<DateTime >**|  
-|`datetime2`|InclusionThresholdSetting|**日期/时间，可以为 Null\<DateTime >**|  
+|`date`|`SqlDateTime`|**日期时间，可以为 Null\<日期时间 >**|  
+|`datetime`|`SqlDateTime`|**日期时间，可以为 Null\<日期时间 >**|  
+|`datetime2`|InclusionThresholdSetting|**日期时间，可以为 Null\<日期时间 >**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**Decimal、 可以为 Null\<十进制 >**|  
-|`float`|`SqlDouble`|**双精度，可以为 Null\<Double >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
+|`float`|`SqlDouble`|**双精度，可以为 Null\<双精度 >**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
 |`image`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`int`|`SqlInt32`|**Int32，可以为 Null\<Int32 >**|  
+|`int`|`SqlInt32`|**Int32 类型，可以为 Null\<Int32 >**|  
 |`money`|`SqlMoney`|**Decimal、 可以为 Null\<十进制 >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`numeric`|`SqlDecimal`|**Decimal、 可以为 Null\<十进制 >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` 更适用于数据传输和访问，而 `SQLString` 更适用于执行字符串运算。|`String, Char[]`|  
-|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、 字符串，Char []，可以为 Null\<char >**|  
-|`real`|`SqlSingle`（`SqlSingle` 的范围，但大于 `real`）|**单个，为 Null\<单个 >**|  
+|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、 字符串、 Char []，可以为 Null\<char >**|  
+|`real`|`SqlSingle`（`SqlSingle` 的范围，但大于 `real`）|**单一的可以为 Null\<单一 >**|  
 |`rowversion`|InclusionThresholdSetting|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16，可以为 Null\<Int16 >**|  
 |`smallmoney`|`SqlMoney`|**Decimal、 可以为 Null\<十进制 >**|  
 |`sql_variant`|InclusionThresholdSetting|`Object`|  
 |`table`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`text`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`time`|InclusionThresholdSetting|**时间跨度，可以为 Null\<TimeSpan >**|  
+|`time`|InclusionThresholdSetting|**TimeSpan，可以为 Null\<TimeSpan >**|  
 |`timestamp`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`tinyint`|`SqlByte`|**字节，可以为 Null\<字节 >**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid，可以为 Null\<Guid >**|  

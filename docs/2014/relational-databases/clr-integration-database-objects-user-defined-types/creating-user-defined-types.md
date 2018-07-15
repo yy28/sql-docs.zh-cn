@@ -1,13 +1,11 @@
 ---
-title: 创建用户定义类型 |Microsoft 文档
+title: 创建用户定义类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024348"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350969"
 ---
 # <a name="creating-a-user-defined-type"></a>Creating a User-Defined Type（创建用户定义类型）
   若要创建能够在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安装的用户定义类型 (UDT)，必须首先用一种支持的 .NET Framework 编程语言（例如 Visual C# 或 Visual Basic，该语言符合创建 UDT 的规范）创建一个类。 然后，可以将该类编译为可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的动态链接库 (DLL)。 还可以使用 Visual Studio 创建和部署 UDT。  
@@ -45,7 +43,7 @@ Reconfigure
  演示在创建用户定义类型的过程中涉及的编码方法。  
   
 ## <a name="example"></a>示例  
- 下面的代码清单定义点 UDT 中详细, 描述[Coding User-Defined 类型](creating-user-defined-types-coding.md)。  
+ 以下代码列表定义了 Point UDT 中的详细信息中所述[类型](creating-user-defined-types-coding.md)。  
   
  通过安装 CLR 示例，可以获得在本节中讨论的其他示例的完整代码列表。 有关安装这些示例的说明，请参阅[SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
   

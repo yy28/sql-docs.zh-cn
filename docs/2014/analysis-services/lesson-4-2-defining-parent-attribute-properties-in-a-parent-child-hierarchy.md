@@ -1,5 +1,5 @@
 ---
-title: 在父-子层次结构中定义父特性属性 |Microsoft 文档
+title: 定义父-子层次结构中的父特性属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328577"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定义父子层次结构中的父特性属性
   父子层次结构是基于两个表列的维度中的层次结构。 这两个表列一起定义维度成员之间的层次结构关系。 第一列称为“成员键列”，用于标识每个维度成员。 另一列称为“父列”，用于标识每个维度成员的父项。 父特性的“NamingTemplate”属性决定父子层次结构中的每个级别的名称，而“MembersWithData”属性则决定是否应显示父成员的数据。  
@@ -61,7 +61,7 @@ ms.locfileid: "36029138"
   
      下图显示展开的“雇员”层次结构。  
   
-10. ![显示员工层次结构的数据透视表](../../2014/tutorials/media/l4-employee-1.gif "显示员工层次结构的数据透视表")  
+10. ![数据透视表显示员工层次结构](../../2014/tutorials/media/l4-employee-1.gif "显示员工层次结构的数据透视表")  
   
      请注意，级别 03 中每个经理的销售额也会显示在级别 04 中。 这是因为每个经理也是其他经理的雇员。 在下一个任务中，将隐藏这些销售额。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36029138"
   
      下图显示了在“级别命名模板”对话框中的更改。  
   
-     ![级别命名模板对话框](../../2014/tutorials/media/l4-namingtemplate.gif "级别命名模板对话框中")  
+     ![级别命名模板对话框](../../2014/tutorials/media/l4-namingtemplate.gif "级别命名模板对话框")  
   
 5.  单击“确定” 。  
   

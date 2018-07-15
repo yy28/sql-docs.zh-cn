@@ -1,5 +1,5 @@
 ---
-title: 参数属性页 （报表管理器） |Microsoft 文档
+title: 参数属性页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327557"
 ---
 # <a name="parameters-properties-page-report-manager"></a>“参数”属性页（报表管理器）
   使用“参数”属性页可以查看或修改参数化报表的参数设置。  

@@ -1,13 +1,11 @@
 ---
-title: 操作 UDT 数据 |Microsoft 文档
+title: 操作 UDT 数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -31,21 +29,21 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f618cb1faa8c1b5682e069bd7568ad9d856cdc52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b9d8d594b60b5e9ed9716d8aa3c0eed322db98fd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127727"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349889"
 ---
 # <a name="manipulating-udt-data"></a>操作 UDT 数据
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有为在对用户定义类型 (UDT) 列中的数据进行修改时所使用的 INSERT、UPDATE 或 DELETE 语句提供专用语法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数用于将本机数据类型转换为 UDT 类型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>在 UDT 列中插入数据  
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句插入到示例数据的三个行**点**表。 **点**数据类型包含 X 和 Y 整数值作为用户定义的类型的属性公开。 必须使用 CAST 或 CONVERT 函数来强制转换以逗号分隔 X 和 Y 值复制到**点**类型。 前两个语句使用 CONVERT 函数将转换为一个字符串值**点**类型和第三个语句使用 CAST 函数：  
+ 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将三行示例数据加载到**点**表。 **点**数据类型由 X 和 Y 整数值作为 UDT 属性公开。 您必须使用 CAST 或 CONVERT 函数将以逗号分隔 X 和 Y 值复制到**点**类型。 前两个语句使用 CONVERT 函数将转换为一个字符串值**点**类型，第三个语句使用 CAST 函数：  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -60,7 +58,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 若要查看输出以可读格式显示，请调用`ToString`方法**点**UDT，将值转换为其字符串表示形式。  
+ 若要查看以可读格式显示输出，请调用`ToString`方法**点**UDT，将值转换为其字符串表示形式。  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -87,7 +85,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **点**UDT 为然后，你可以选择单独的属性公开其 X 和 Y 坐标。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将分别选择 X 和 Y 坐标：  
+ **点**UDT 公开为属性，然后分别选择其 X 和 Y 坐标。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将分别选择 X 和 Y 坐标：  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -161,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>调用 UDT 方法  
- 还可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用在 UDT 中定义的方法。 **点**类包含三种方法， `Distance`， `DistanceFrom`，和`DistanceFromXY`。 定义这三种方法的代码列表，请参阅[Coding User-Defined 类型](creating-user-defined-types-coding.md)。  
+ 还可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用在 UDT 中定义的方法。 **点**类包含三个方法`Distance`， `DistanceFrom`，和`DistanceFromXY`。 有关定义这三种方法的代码列表，请参阅[类型](creating-user-defined-types-coding.md)。  
   
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句调用 `PointValue.Distance` 方法：  
   
@@ -182,7 +180,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- `DistanceFrom`方法采用的自变量**点**数据类型，并显示从指定的点到 PointValue 的距离：  
+ `DistanceFrom`方法采用的参数**点**数据类型，并显示从指定的点到 PointValue 的距离：  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  

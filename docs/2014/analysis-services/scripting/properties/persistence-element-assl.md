@@ -1,5 +1,5 @@
 ---
-title: 持久性元素 (ASSL) |Microsoft 文档
+title: Persistence 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1409ee5b58ee0e65aa324bb8009758430ef95224
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330287"
 ---
 # <a name="persistence-element-assl"></a>Persistence 元素 (ASSL)
-  确定绑定的源数据的哪些部分是动态的并使用指定的频率更新检查[RefreshPolicy](refreshpolicy-element-assl.md)元素。  
+  确定绑定的源数据的哪些部分是动态的使用指定的频率更新检查[RefreshPolicy](refreshpolicy-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36027067"
 |*元数据*|源元数据是静态的，但是成员和数据是动态的。|  
 |*全部*|源元数据、成员和数据都是静态的。|  
   
- 对应于的允许值为枚举`Persistence`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.PersistenceType>。  
+ 与允许的值相对应的枚举`Persistence`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.PersistenceType>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  
