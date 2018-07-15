@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320677"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中开发包的过程中可用于对包进行故障排除的功能和工具。  
@@ -45,11 +45,11 @@ ms.locfileid: "36126879"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括以下附加功能，可帮助您避免验证错误：  
   
--   **在数据源不可用时，将所有包和所有连接设置为脱机工作**。 您可以从 **“SSIS”** 菜单启用 **“脱机工作”** 。 与不同`DelayValidation`属性，**脱机工作**选项才可用，即使之前打开包。 您还可以启用 **“脱机工作”** 以加快设计器中操作的速度，而仅在需要验证包的时候再禁用此选项。  
+-   **在数据源不可用时，将所有包和所有连接设置为脱机工作**。 您可以从 **“SSIS”** 菜单启用 **“脱机工作”** 。 与不同`DelayValidation`属性，**脱机工作**即使打开包之前，选项才可用。 您还可以启用 **“脱机工作”** 以加快设计器中操作的速度，而仅在需要验证包的时候再禁用此选项。  
   
--   **针对在运行时之前无效的包元素配置 DelayValidation 属性**。 对于其配置在设计时无效的包元素，您可以将 `DelayValidation` 设置为 `True` 以防止出现验证错误。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 `DelayValidation`属性可以在包级别或级别的各个任务和容器的包包括启用。 通常必须将此属性设置为`True`上相同的包元素在部署程序包，以防止在运行时的相同的验证错误时。  
+-   **针对在运行时之前无效的包元素配置 DelayValidation 属性**。 对于其配置在设计时无效的包元素，您可以将 `DelayValidation` 设置为 `True` 以防止出现验证错误。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 `DelayValidation`属性可以在包级别或级别的各个任务和容器的包中包含的启用。 通常必须将此属性设置为`True`上相同的包元素在部署包，以防止在运行时相同的验证错误时。  
   
-     `DelayValidation`属性可以设置数据流任务，但不是能在单个数据数据流组件。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值是`false`，该组件不知道的外部数据源的元数据更改。  
+     `DelayValidation`属性可以设置对数据流任务，但不能对单个数据流组件。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值是`false`，该组件不能识别外部数据源的元数据更改。  
   
  如果进行验证时包使用的数据库对象被锁定，则验证过程可能会停止响应。 在这些情况下， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器也会停止响应。 可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 继续验证过程，以结束 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的关联会话。 还可以使用本节中介绍的设置避免此问题。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36126879"
     > [!NOTE]  
     >  当调试一个包含多个脚本任务的包时，调试器将只命中其中一个脚本任务中的断点，而将忽略其他脚本任务中的断点。 如果脚本任务是 Foreach 循环容器或 For 循环容器的一部分，则调试器将在循环的第一次迭代之后忽略脚本任务中的断点。  
   
- 有关详细信息，请参阅 [Debugging Script](debugging-script.md)。 有关如何调试脚本组件的建议，请参阅 [编码和调试脚本组件] (.../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。  
+ 有关详细信息，请参阅 [Debugging Script](debugging-script.md)。 有关如何调试脚本组件的建议，请参阅 [的编码和调试脚本组件] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>无说明错误的故障排除  
  如果在包开发过程中遇到了没有附带说明的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误号，可以在 [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)中查找说明。 目前该列表中不包括故障排除信息。  

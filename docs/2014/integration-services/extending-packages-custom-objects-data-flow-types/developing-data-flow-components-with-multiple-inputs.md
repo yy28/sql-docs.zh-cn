@@ -14,13 +14,13 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10c2ff8df0fbcc1b9bc491a1c6a32787d0cdac55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5db0cc5bccaf05cf18aa3a7459eecfead5cd13b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285673"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>开发具有多个输入的数据流组件
   如果其多个输入以不相等速率生成数据，则具有多个输入的数据流组件可能会占用过多的内存。 开发支持两个或多个输入的自定义数据流组件时，可以通过使用 Microsoft.SqlServer.Dts.Pipeline 命名空间中的下列成员来管理此内存压力：  
@@ -59,9 +59,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法的实现方式不应在基类中调用这些实现方式。 基类中此方法的默认实现方式只是引发 `NotImplementedException`。  
   
- 实现此方法时，为该组件的每个输入都在布尔 canProcess 数组中设置元素的状态。 （这些输入在 inputIDs 数组中由其 ID 值标识。）当你设置的值中的某个元素*canProcess*数组到`true`输入，数据流引擎调用该组件的<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>方法，并为指定的输入提供更多的数据。  
+ 实现此方法时，为该组件的每个输入都在布尔 canProcess 数组中设置元素的状态。 （这些输入在 inputIDs 数组中由其 ID 值标识。）如果设置中的元素的值*canProcess*到数组`true`对于某个输入，数据流引擎调用该组件的<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>方法，并为指定的输入提供更多的数据。  
   
- 可用，更多的上游数据时的值*canProcess*至少一个输入的数组元素必须始终为`true`，或处理停止。  
+ 而更多的上游数据可用的值*canProcess*数组元素的至少一个输入必须始终为`true`，否则处理将停止。  
   
  数据流引擎将在发送每个数据缓冲区前调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法，以便确定哪些输入正在等待接收更多数据。 在返回值指示某个输入被阻塞时，数据流引擎暂时为该输入缓存附加的数据缓冲区，而不是将它们发送到该组件。  
   
@@ -75,9 +75,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   在已接收该组件的缓冲区中，对于该输入该组件当前不具有可供处理的数据 (`inputBuffers[inputIndex].CurrentRow() == null`)。  
   
- 如果输入正在等待接收更多的数据，数据流组件指示这通过将设置为`true`中的元素的值*canProcess*对应于该输入的数组。  
+ 如果某个输入正在等待接收更多数据，数据流组件指示这一情况设置设置为`true`中的元素的值*canProcess*与该输入相对应的数组。  
   
- 相反，在该组件对于该输入仍具有可供处理的数据时，该示例将挂起对该输入的处理。 该示例执行这通过将设置为`false`中的元素的值*canProcess*对应于该输入的数组。  
+ 相反，在该组件对于该输入仍具有可供处理的数据时，该示例将挂起对该输入的处理。 该示例通过将设置为执行此`false`中的元素的值*canProcess*与该输入相对应的数组。  
   
 ```csharp  
 public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)  
@@ -92,7 +92,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- 前面的示例使用布尔型 `inputEOR` 数组指示是否有更多的上游数据可用于每个输入。 该数组名称中的 `EOR` 表示“行集结束”，并且引用数据流缓冲区的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性。 在此处未包括的示例部分中，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法为它接收的每个数据缓冲区检查 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性的值。 在 `true` 的值指示没有更多的上游数据可用于某个输入时，该示例将针对该输入将 `inputEOR` 数组元素的值设置为 `true`。 此示例的<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>方法设置中的相应元素的值*canProcess*数组到`false`输入时的值`inputEOR`数组元素表示不再上游可用输入数据。  
+ 前面的示例使用布尔型 `inputEOR` 数组指示是否有更多的上游数据可用于每个输入。 该数组名称中的 `EOR` 表示“行集结束”，并且引用数据流缓冲区的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性。 在此处未包括的示例部分中，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法为它接收的每个数据缓冲区检查 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性的值。 在 `true` 的值指示没有更多的上游数据可用于某个输入时，该示例将针对该输入将 `inputEOR` 数组元素的值设置为 `true`。 此示例中的<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>方法设置的值中的相应元素*canProcess*到数组`false`对于某个输入时的值`inputEOR`数组元素指示已没有更多上游可用于输入的数据。  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>实现 GetDependentInputs 方法  
  在您的自定义数据流组件支持多个输入时，您还必须为 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法提供实现方式。  
@@ -100,7 +100,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法的实现方式不应在基类中调用这些实现方式。 基类中此方法的默认实现方式只是引发 `NotImplementedException`。  
   
- 在用户将多个输入附加到组件时，数据流引擎仅调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。 如果组件具有只有两个输入和<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>方法指示一个输入被阻止 (*canProcess* = `false`)，数据流引擎知道其他输入正在等待接收更多的数据。 但是，在存在多个输入，并且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法指示一个输入被阻塞时，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 中的附加代码标识哪些输入正在等待接收更多数据。  
+ 在用户将多个输入附加到组件时，数据流引擎仅调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。 在某个组件具有只有两个输入，并<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>方法指示一个输入被阻塞 (*canProcess* = `false`)，数据流引擎将知道另一个输入正在等待接收更多的数据。 但是，在存在多个输入，并且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法指示一个输入被阻塞时，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 中的附加代码标识哪些输入正在等待接收更多数据。  
   
 > [!NOTE]  
 >  您不必在自己的代码中调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 或 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 方法。 数据流引擎调用这些方法以及您覆盖的 `PipelineComponent` 类的其他方法（在数据流引擎运行您的组件时）。  

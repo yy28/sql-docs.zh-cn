@@ -1,5 +1,5 @@
 ---
-title: 了解表格模型 (SSAS 表格) 中的 DAX |Microsoft 文档
+title: 了解表格模型 (SSAS 表格) 中的 DAX |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1788cadfe3f84798c7143e069fc40a0acb75883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4047c082a890e0ddd2871bbd35d7dbd21d363d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291433"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
   数据分析表达式 (DAX) 是一种公式语言，用于在针对 Microsoft Excel 工作簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目中创建自定义计算。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
@@ -128,7 +128,7 @@ ms.locfileid: "36128005"
   
 -   将两个或更多表达式组合起来以返回单个结果的逻辑运算符。  
   
- 有关在 DAX 公式中使用的运算符的详细信息，请参阅[PowerPivot 的 DAX 运算符参考](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)。  
+ 有关在 DAX 公式中使用的运算符的详细信息，请参阅[针对 PowerPivot 的 DAX 运算符参考](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)。  
   
 ##  <a name="bkmk_DAX_Formulas"></a> DAX 公式  
  DAX 公式对于在计算列和度量值中创建计算以及使用行级别筛选器保护数据方面非常重要。 若要创建用于计算列和度量值的公式，您需要使用模型设计器窗口顶部的公式栏。 若要创建用于行筛选器的公式，您需要使用“角色管理器”对话框。 本节中的信息旨在帮助您开始了解 DAX 公式的基础知识。  
@@ -178,7 +178,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|度量值的名称。|  
 |`=`|公式以等号 (=) 开头。|  
-|`COUNTROWS`|[COUNTROWS 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/ee634574(v=sql.120).aspx)对日期表中的行数进行计数|  
+|`COUNTROWS`|[COUNTROWS 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/ee634574(v=sql.120).aspx)的日期表中的行进行计数|  
 |`()`|左括号和右括号指定参数。|  
 |`DATESBETWEEN`|DATESBETWEEN 函数返回 Date 表的 Date 列中每个值的最后日期之间的天数。|  
 |`'Date'`|指定 Date 表。 表引在单引号中。|  
@@ -234,7 +234,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  逻辑函数对表达式执行操作，以返回表达式中有关值的信息。 例如，通过 TRUE 函数您可以了解您正在计算的表达式是否返回 TRUE 值。 有关详细信息，请参阅[逻辑函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634365(v=sql.120).aspx)。  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>数学和三角函数  
- DAX 中的数学函数与 Excel 中的数学和三角函数非常相似。 DAX 函数使用的数值数据类型存在一些细微的差别。 有关详细信息，请参阅[数学和三角等式函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx)。  
+ DAX 中的数学函数与 Excel 中的数学和三角函数非常相似。 DAX 函数使用的数值数据类型存在一些细微的差别。 有关详细信息，请参阅[数学和三角函数函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx)。  
   
 ### <a name="statistical-functions"></a>统计函数  
  DAX 提供执行聚合的统计函数。 除了求和与平均值或者查找最小值和最大值外，您还可以通过 DAX 在聚合之前筛选列或基于相关表创建聚合。 有关详细信息，请参阅[统计函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634822(v=sql.120).aspx)。  
@@ -318,9 +318,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  在表格模型中，可通过多种方式来创建筛选上下文。 在可使用该模型的客户端的上下文（如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表）中，用户可以随时通过在行和列标题上添加切片器或报表筛选器来创建筛选器。 还可以在公式中直接指定筛选表达式来执行以下操作：指定相关的值、筛选用作输入的表或动态获取计算中使用的值的上下文。 您还可以完全清除或有选择地清除特定列上的筛选器。 这在创建用于计算总计的公式时很有用。  
   
- 有关如何创建公式中的筛选器的详细信息，请参阅[筛选器函数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)。  
+ 有关如何在公式内创建筛选器的详细信息，请参阅[筛选器函数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)。  
   
- 有关可以如何清除筛选器的示例创建总计，请参阅[ALL 函数](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)。  
+ 有关举例说明如何清除筛选器以便创建总计，请参阅[ALL 函数](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)。  
   
  有关如何有选择地清除和应用筛选器公式中的示例，请参阅[ALLEXCEPT 函数](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)。  
   
@@ -335,22 +335,22 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>公式中上下文的示例  
   
-1.  [RELATED 函数](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx)函数展开当前行，以包含相关列中值的上下文。 这允许您执行查找。 该主题中的示例阐释筛选和行上下文的交互情况。  
+1.  [RELATED 函数](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx)函数可展开当前行，以包括相关列中的值的上下文。 这允许您执行查找。 该主题中的示例阐释筛选和行上下文的交互情况。  
   
-2.  [筛选器函数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)函数允许你指定要包括在当前上下文中的行。 该主题中的示例还演示如何在执行聚合的其他函数内嵌入筛选器。  
+2.  [筛选器函数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)函数允许您指定要包括在当前上下文中的行。 该主题中的示例还演示如何在执行聚合的其他函数内嵌入筛选器。  
   
-3.  [ALL 函数](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)函数设置公式中的上下文。 使用此函数可以覆盖因查询上下文而应用的筛选器。  
+3.  [ALL 函数](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)函数公式中设置上下文。 使用此函数可以覆盖因查询上下文而应用的筛选器。  
   
-4.  [ALLEXCEPT 函数](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)函数使你能够删除除你指定的所有筛选器。 以上两个主题包括的示例将引导您构建公式和了解复杂的上下文。  
+4.  [ALLEXCEPT 函数](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)函数可以删除保留一个指定的所有筛选器。 以上两个主题包括的示例将引导您构建公式和了解复杂的上下文。  
   
-5.  [EARLIER 函数](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx)和[最早函数](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx)函数的让你循环访问表时从内部循环引用值执行计算。 如果您熟悉递归的概念以及内部循环和外部循环，将领会到 EARLIER 和 EARLIEST 函数所提供的强大功能。 如果这些概念对您来说是全新的，则应仔细按照示例中的步骤执行，以便了解如何在计算中使用内部上下文和外部上下文。  
+5.  [EARLIER 函数](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx)并[EARLIEST 函数](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx)函数的以便循环遍历表执行计算，并引用内部循环中的值。 如果您熟悉递归的概念以及内部循环和外部循环，将领会到 EARLIER 和 EARLIEST 函数所提供的强大功能。 如果这些概念对您来说是全新的，则应仔细按照示例中的步骤执行，以便了解如何在计算中使用内部上下文和外部上下文。  
   
 ##  <a name="bkmk_RelModel"></a> 公式和表格模型  
  模型设计器（位于 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中）是一个区域，您可以在其中处理多个数据表，并连接表格模型中的这些表。 在此模型内，表通过具有公用值（键）的各列之间的关系联接起来。 利用表格模型，您可以将值链接到其他表中的列，从而创建更有趣的计算。 正如在关系数据库中一样，您可以连接多个级别的关系表，也可以在结果中使用任何表中的列。  
   
  例如，您可以链接销售表、产品表和产品类别表，用户可以在数据透视表和报表中使用列的各种组合。 关系字段可用于对连接的表进行筛选，或针对子集创建计算。 （如果不熟悉关系数据库以及表和联接的用法，请参阅[关系（SSAS 表格）](relationships-ssas-tabular.md)。）  
   
- 表格模型支持表之间的多种关系。 为避免混淆或结果错误，每次只将一个关系指定为活动关系，但您可以根据需要更改活动关系以便遍历计算数据中的不同连接。 [USERELATIONSHIP 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx)可以用于指定要在特定计算中使用的一个或多个关系。  
+ 表格模型支持表之间的多种关系。 为避免混淆或结果错误，每次只将一个关系指定为活动关系，但您可以根据需要更改活动关系以便遍历计算数据中的不同连接。 [USERELATIONSHIP 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx)可用于指定要在特定计算中使用的一个或多个关系。  
   
  在表格模型中，您应遵守以下公式设计规则：  
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44ed354ea56f58e08e512fa91fd9a0d7064b7b43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0d8ecc6116b5000c1db7100abf4ea4db5155ca7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317987"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>使用 ReportViewer 控件集成 Reporting Services
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 集成报表查看功能集成到你的应用程序提供两个 ReportViewer 控件。 一个控件版本针对基于 Windows 窗体的应用程序，另一个版本针对 Web 窗体应用程序。 每个控件都提供类似的功能，但分别设计为针对其各自的环境。 这两个控件都可以处理已部署到报表服务器（远程处理模式）的报表或已复制到尚未安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的计算机（本地处理模式）的报表。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供两个 ReportViewer 控件将报表查看功能到应用程序。 一个控件版本针对基于 Windows 窗体的应用程序，另一个版本针对 Web 窗体应用程序。 每个控件都提供类似的功能，但分别设计为针对其各自的环境。 这两个控件都可以处理已部署到报表服务器（远程处理模式）的报表或已复制到尚未安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的计算机（本地处理模式）的报表。  
   
  ReportViewer 控件不包括对动态适应具有不同屏幕分辨率的不同设备的内置支持。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "36128032"
   
 ## <a name="see-also"></a>请参阅  
  [将 Reporting Services 集成到应用程序中](../application-integration/integrating-reporting-services-into-applications.md)   
- [创建使用 Visual Studio （策展应答） 的 SSRS 报表](http://go.microsoft.com/fwlink/?LinkId=321991)  
+ [创建 SSRS 报表使用 Visual Studio （专业回答）](http://go.microsoft.com/fwlink/?LinkId=321991)  
   
   

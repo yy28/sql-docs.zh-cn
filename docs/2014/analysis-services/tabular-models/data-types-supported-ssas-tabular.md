@@ -1,5 +1,5 @@
 ---
-title: 支持的数据类型 (SSAS 表格) |Microsoft 文档
+title: 支持的数据类型 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237627"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支持的数据类型（SSAS 表格）
   本文说明可在表格模型中使用的数据类型，并且论述在数据分析表达式 (DAX) 公式中计算或使用数据时数据类型的隐式转换。  
@@ -50,11 +50,11 @@ ms.locfileid: "36130220"
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
 |N/A|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
- <sup>1</sup> DAX 公式不支持小于表中列出的数据类型。  
+ <sup>1</sup> DAX 公式不支持比表中列出的较小的数据类型。  
   
- <sup>2</sup>如果你尝试导入具有非常大的数字值的数据，导入可能会失败并出现以下错误：  
+ <sup>2</sup>如果尝试导入具有非常大数值数据，导入可能会失败并出现以下错误：  
   
- 内存中数据库错误：\<列名 >' 的列\<表名 > 表包含一个值，1.7976931348623157 e + 308，这不受支持。 操作已取消。  
+ 内存中数据库错误：\<列名称 > 的列\<表名称 > 表包含一个值 1.7976931348623157 e + 308，这不受支持。 操作已取消。  
   
  此错误是因为模型设计器使用该值来表示 Null 导致的。 下表中的值是上述 Null 值的同义词：  
   

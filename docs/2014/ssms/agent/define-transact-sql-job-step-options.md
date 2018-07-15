@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL job step
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6f7b5724901e5d0e4750bad2a22ac175874e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4b014c06b4a19d6c710ab7fb60c90dcfbe5bf130
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301679"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
   本主题介绍了如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中定义 [!INCLUDE[tsql](../../includes/tsql-md.md)]  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 代理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 作业步骤的选项。  
@@ -76,6 +76,6 @@ ms.locfileid: "36127449"
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **定义 Transact-SQL 作业步骤选项**  
   
- 使用`JobStep`通过使用一种选择，如 Visual Basic、 Visual C# 或 PowerShell 编程语言的类。  
+ 使用`JobStep`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。  
   
   

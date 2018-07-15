@@ -1,5 +1,5 @@
 ---
-title: 确定服务器模式的 Analysis Services 实例 |Microsoft 文档
+title: 确定服务器模式的 Analysis Services 实例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297427"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>确定 Analysis Services 实例的服务器模式
   Analysis Services 可以安装在以下三种服务器模式之一下：多维和数据挖掘（默认模式）、PowerPivot for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
@@ -31,13 +31,13 @@ ms.locfileid: "36126188"
 ## <a name="server-icons-in-object-explorer"></a>对象资源管理器中的服务器图标  
  确定服务器模式的最简单方法是在 SQL Server Management Studio 中连接到该服务器，并且在对象资源管理器中注意服务器名称旁的图标。 下图显示在多维、表格和 PowerPivot 模式下部署的三个 Analysis Services 实例：  
   
- ![对象的每个服务器模式的资源管理器图标](../media/ssas-ssms-servermodes.gif "每种服务器模式的对象资源管理器图标")  
+ ![对象资源管理器图标，为每个服务器模式](../media/ssas-ssms-servermodes.gif "每种服务器模式的对象资源管理器图标")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>在 MSMDSRV.INI 文件中查看 DeploymentMode 属性  
  或者，您可以在包含在每个 Analysis Services 实例中的 msmdsrv.ini 文件中查看 `DeploymentMode` 属性。 该属性的值标识服务器模式。 有效值为 0（多维）、1 (SharePoint) 或 2（表格）。 你必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员（即，服务器角色的成员）才可以打开 msmdsrv.ini 文件。 此文件包含结构化的 XML。 可以使用记事本或其他文本编辑器查看该文件。  
   
 > [!CAUTION]  
->  不更改的值`DeploymentMode`属性。 不支持在安装服务器后手动更改该属性。  
+>  值不更改`DeploymentMode`属性。 不支持在安装服务器后手动更改该属性。  
   
 ## <a name="about-the-deploymentmode-property"></a>关于 DeploymentMode 属性  
  `DeploymentMode` 属性确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为服务器模式。 此属性基于您安装 Analysis Services 的方式由安装程序启动。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  

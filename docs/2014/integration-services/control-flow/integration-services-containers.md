@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283623"
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中为包提供结构和为任务提供服务的对象。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  
@@ -62,7 +62,7 @@ ms.locfileid: "36138908"
 |`FailPackageOnFailure`|指定如果容器中出现错误包是否失败的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>。|  
 |`FailParentOnFailure`|指定如果容器中出现错误父容器是否失败的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>。|  
 |`ForcedExecutionValue`|如果`ForceExecutionValue`设置为`True`，包含容器的可选执行值的对象。 此属性的默认值为 **0**。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>。|  
-|`ForcedExecutionValueType`|数据类型`ForcedExecutionValue`。 此属性的默认值是`Int32`。|  
+|`ForcedExecutionValueType`|数据类型的`ForcedExecutionValue`。 此属性的默认值是`Int32`。|  
 |`ForceExecutionResult`|指定运行包或容器的强制结果的值。 值是`None`， `Success`， `Failure`，和`Completion`。 此属性的默认值是`None`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>。|  
 |`ForceExecutionValue`|指定容器的可选执行值是否应强制包含特定值的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>。|  
 |`ID`|容器 GUID，该属性是在创建包时分配的。 该属性为只读。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>的用户。|  
@@ -87,7 +87,7 @@ ms.locfileid: "36138908"
  容器包括由可执行文件和优先约束组成的控制流，并且可能使用事件处理程序和变量。 任务宿主容器是个例外：因为任务宿主容器封装单个任务，所以它不使用优先约束。  
   
 ### <a name="executables"></a>可执行文件  
- 可执行文件指容器级别的任务和该容器内的任意容器。 可执行文件可以是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的任务和容器之一，也可以是自定义任务。 有关详细信息，请参阅[Integration Services Tasks](integration-services-tasks.md)和[Integration Services Containers](integration-services-containers.md)。  
+ 可执行文件指容器级别的任务和该容器内的任意容器。 可执行文件可以是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的任务和容器之一，也可以是自定义任务。 有关详细信息，请参阅[Integration Services Tasks](integration-services-tasks.md)并[Integration Services 容器](integration-services-containers.md)。  
   
 ### <a name="precedence-constraints"></a>优先约束  
  优先约束将同一父容器中的容器和任务链接到已排序的控制流中。 有关详细信息，请参阅 [Precedence Constraints](precedence-constraints.md)。  

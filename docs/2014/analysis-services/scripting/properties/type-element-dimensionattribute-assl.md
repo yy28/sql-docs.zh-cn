@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (DimensionAttribute) (ASSL) |Microsoft 文档
+title: Type 元素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293467"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 元素 (DimensionAttribute) (ASSL)
   包含属性的类型。  
@@ -122,14 +122,14 @@ ms.locfileid: "36128415"
 |*FiscalDayOfYear*|该属性表示会计日历中每年的第几天。|  
 |*FiscalHalfYears*|该属性表示会计日历中的半年。|  
 |*FiscalHalfYearsOfYear*|该属性表示会计日历中每年的第几个半年。|  
-|*财月*|该属性表示会计日历中的月。|  
+|*会计月份*|该属性表示会计日历中的月。|  
 |*FiscalMonthOfHalfYears*|该属性表示会计日历中每半年的第几个月。|  
 |*FiscalMonthOfQuarter*|该属性表示会计日历中每个季度的第几个月。|  
 |*FiscalMonthOfTrimester*|该属性表示会计日历中每四个月的第几个月。|  
 |*FiscalMonthOfYear*|该属性表示会计日历中每年的第几个月。|  
 |*FiscalQuarter*|该属性表示会计日历中的季度。|  
 |*FiscalQuarterOfHalfYear*|该属性表示会计日历中每半年的第几个季度。|  
-|*Fiscalquarterofyear 等*|该属性表示会计日历中每年的第几个季度。|  
+|*FiscalQuarterOfYear*|该属性表示会计日历中每年的第几个季度。|  
 |*FiscalTrimester*|该属性表示会计日历中的四个月。|  
 |*FiscalTrimesterOfYear*|该属性表示会计日历中每年的第几个四个月。|  
 |*FiscalWeek*|该属性表示会计日历中的周。|  
@@ -166,7 +166,7 @@ ms.locfileid: "36128415"
 |*ISO8601Week*|该属性表示 ISO 8601 日历中的周。|  
 |*ISO8601WeekOfYear*|该属性表示 ISO 8601 日历中每年的第几周。|  
 |*ISO8601Year*|该属性表示 ISO 8601 日历中的年。|  
-|*IsWeekDay*|该属性指示某个日期是否为正常的工作日（周一至周五）。|  
+|*Isweekday*|该属性指示某个日期是否为正常的工作日（周一至周五）。|  
 |*IsWorkingDay*|该属性指示某个日期是否为工作日（可包含周末）。|  
 |*ManufacturingDay*|该属性表示生产日历中的日。|  
 |*ManufacturingDayOfHalfYears*|该属性表示生产日历中每半年的第几天。|  
@@ -199,7 +199,7 @@ ms.locfileid: "36128415"
 |*MonthOfQuarter*|该属性表示每个季度的第几个月。|  
 |*MonthOfTrimester*|该属性表示每四个月的第几个月。|  
 |*MonthOfYear*|该属性表示每一年的第几个月。|  
-|*月*|该属性表示月。|  
+|*几个月*|该属性表示月。|  
 |*OrganizationalUnit*|该属性表示部门。|  
 |*OrgTitle*|该属性表示单位名称。|  
 |*PercentOwnership*|该属性表示所有权百分比。|  
@@ -298,12 +298,12 @@ ms.locfileid: "36128415"
 |*周*|该属性表示周。|  
 |*年*|该属性表示年。|  
   
- 对应于的允许值为枚举`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AttributeType>。  
+ 与允许的值相对应的枚举`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AttributeType>。  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
- [属性元素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Attributes 元素&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [维度元素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
@@ -16,13 +16,13 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7cf067ff7ebfb4f9990b424acf73d5084470d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3bd3b0369c990b6db3dc1cbb44f7fd387289ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303647"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 课：为复制创建 Windows 帐户
   在本课中，将创建 Windows 帐户以运行复制代理。 您将在本地服务器上为以下代理创建一个单独的 Windows 帐户：  
@@ -45,7 +45,7 @@ ms.locfileid: "36126066"
   
 3.  右键单击“用户”，然后单击“新建用户”。  
   
-4.  输入`repl_snapshot`中**用户名**框中，提供密码和其他相关信息，然后单击**创建**创建 repl_snapshot 帐户。  
+4.  输入`repl_snapshot`中**用户名**框中，提供密码和其他相关信息，然后单击**创建**来创建 repl_snapshot 帐户。  
   
 5.  重复上述步骤创建 repl_logreader、repl_distribution 和 repl_merge 帐户。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36126066"
   
 3.  右键单击“用户”，然后单击“新建用户”。  
   
-4.  输入`repl_distribution`中**用户名**框中，提供密码和其他相关信息，然后单击**创建**创建 repl_distribution 帐户。  
+4.  输入`repl_distribution`中**用户名**框中，提供密码和其他相关信息，然后单击**创建**来创建 repl_distribution 帐户。  
   
 5.  重复上述步骤创建 repl_merge 帐户。  
   

@@ -1,14 +1,13 @@
 ---
-title: 为镜像数据库了停机时间最短的系统上安装的 Service Pack |Microsoft 文档
+title: 镜像数据库停机时间最短的系统上安装的 Service Pack |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296917"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
-  本主题介绍了如何在安装 Service Pack 和修补程序时尽量减少镜像服务器的停机时间。 此过程包括按顺序升级参与数据库镜像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例。 这种形式的更新，这被称为*滚动更新*，减少到仅一次故障转移的停机时间。 请注意，对于高性能模式会话的镜像服务器处于与主体服务器在地理上遥远，滚动更新可能不适合。  
+  本主题介绍了如何在安装 Service Pack 和修补程序时尽量减少镜像服务器的停机时间。 此过程包括按顺序升级参与数据库镜像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例。 这种形式的更新，这被称为*滚动更新*，停机时间减少为仅一次故障转移。 请注意，对于高性能模式会话中的镜像服务器与主体服务器从地理上遥远，滚动更新可能不合适。  
   
  滚动更新是包含下列阶段的一个多阶段过程：  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36129325"
   
     -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”对话框中的 [镜像页](../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”选项更改为“高性能(同步)”。  
   
-    -   在[!INCLUDE[tsql](../includes/tsql-md.md)]： 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
+    -   在中[!INCLUDE[tsql](../includes/tsql-md.md)]： 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>将见证服务器返回镜像会话  
   

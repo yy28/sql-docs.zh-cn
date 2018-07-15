@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 创建 RDL 架构 Visual Studio 项目 |Microsoft 文档
+title: 第 1 课： 创建 RDL 架构 Visual Studio 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319807"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 课：创建 RDL 架构 Visual Studio 项目
   针对本教程，您将创建一个简单控制台应用程序。 本教程假定你正在开发中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
@@ -31,7 +31,7 @@ ms.locfileid: "36128451"
   
 ### <a name="to-create-the-web-service-proxy"></a>创建 Web 服务代理  
   
-1.  从**启动**菜单上，选择**所有程序**，然后 Microsoft Visual Studio 中，然后**Visual Studio Tools**，，然后**Visual Studio 2010 命令提示**.  
+1.  从**启动**菜单中，选择**所有程序**，然后 Microsoft Visual Studio 中，然后**Visual Studio Tools**，然后**Visual Studio 2010 命令提示**.  
   
 2.  在命令提示符窗口中，如果您使用 C#，则运行以下命令：  
   
@@ -49,29 +49,29 @@ ms.locfileid: "36128451"
   
 ### <a name="to-create-a-console-application"></a>创建控制台应用程序  
   
-1.  上**文件**菜单上，指向**新建**，然后单击**项目**以打开**新项目**对话框。  
+1.  上**文件**菜单，依次指向**新建**，然后单击**项目**以打开**新项目**对话框。  
   
-2.  在左窗格中，在**已安装的模板**，单击**Visual Basic**或**Visual C#** 节点，然后选择项目的类别类型从展开的列表。  
+2.  在左窗格中下,**已安装的模板**，单击**Visual Basic**或**Visual C#** 节点，然后选择某个类别，项目的类型从展开的列表。  
   
 3.  选择**控制台应用程序**项目类型。  
   
-4.  在**名称**框中，输入你的项目的名称。 键入的名称`SampleRDLSchema`。  
+4.  在中**名称**框中，输入你的项目的名称。 键入名称`SampleRDLSchema`。  
   
-5.  在**位置**框中，键入你想要保存你的项目，或单击的路径**浏览**以导航到的文件夹。  
+5.  在中**位置**框中，键入你想要保存你的项目，或者单击的路径**浏览**以导航到的文件夹。  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 您的项目折叠的视图将显示在解决方案资源管理器。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 在解决方案资源管理器中将显示你的项目的折叠的视图。  
   
 7.  在“项目”菜单上，单击“添加现有项”。  
   
-8.  导航到的位置，为.cs 或.vb 文件生成，然后选择该文件，，然后单击**添加**。  
+8.  导航到的位置，.cs 或.vb 文件生成，然后选择该文件，然后依次**添加**。  
   
      您还需要添加对 <xref:System.Web.Services> 命名空间的引用，Web 引用才能正常工作。  
   
-9. 在项目菜单中，单击**添加引用**。  
+9. 在项目菜单上单击**添加引用**。  
   
-     在**添加引用**对话框中，在 **.NET**选项卡上，选择**System.Web.Services**，然后单击**确定**。  
+     在中**添加引用**对话框中 **.NET**选项卡上，选择**System.Web.Services**，然后单击**确定**。  
   
-     有关如何连接到报表服务器 Web 服务的详细信息，请参阅[生成应用程序使用 Web 服务和.NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
+     有关如何连接到报表服务器 Web 服务的详细信息，请参阅[使用 Web 服务和.NET Framework 构建应用程序](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
   
 10. 在解决方案资源管理器中，展开该项目节点。 您将看到默认名称为 Program.cs（对于 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]，为 Module1.vb）的代码文件已添加到您的项目中。  
   
@@ -201,10 +201,10 @@ ms.locfileid: "36128451"
     ```  
   
 ## <a name="next-lesson"></a>下一课  
- 在下一课中，您将使用 XML 架构定义工具 (Xsd.exe) 从 RDL 架构中生成类，并将其包含在项目中。 请参阅[第 2 课： 从 RDL 架构使用 xsd 工具生成的类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
+ 在下一课中，您将使用 XML 架构定义工具 (Xsd.exe) 从 RDL 架构中生成类，并将其包含在项目中。 请参阅[第 2 课： 使用 xsd 工具的 RDL 架构生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [更新报表使用生成的 RDL 架构类&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

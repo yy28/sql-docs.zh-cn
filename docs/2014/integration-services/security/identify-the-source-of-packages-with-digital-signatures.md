@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1657156b61b3f87fb639394b6624f8e0a209207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b744fb7d966fc7079cf05072f94f425d79e2b34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320657"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
   可以使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行签名以标识其来源。 使用数字证书对包进行签名后，可以让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在加载包之前先检查数字签名。 若要让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能够检查签名，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 实用工具 (dtexec.exe) 中设置一个选项，或设置一个可选的注册表值。  
@@ -38,7 +38,7 @@ ms.locfileid: "36128564"
   
 -   若要在设计时加载包之前检查所有包的数字签名，请在 **中设置** “加载包时检查数字签名” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项。 此选项是针对 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有包的全局设置。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
--   若要检查的单个包的数字签名，指定`/VerifyS[igned]`选项使用时**dtexec**实用工具运行包。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。  
+-   若要检查个别包的数字签名，请指定`/VerifyS[igned]`选项使用时**dtexec**实用工具运行包。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>设置注册表值以检查包的签名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还支持可选的注册表值 **BlockedSignatureStates**。你可以使用该值来管理组织用于加载签名包和未签名包的策略。 如果包未签名、签名无效或不可信，使用该注册表值将不允许加载该包。 有关如何设置此注册表值的详细信息，请参阅[通过设置注册表值实现签名策略](../implement-a-signing-policy-by-setting-a-registry-value.md)。  
@@ -48,6 +48,6 @@ ms.locfileid: "36128564"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services &#40;SSIS&#41;包](../integration-services-ssis-packages.md)   
- [安全概述&#40;Integration Services&#41;](security-overview-integration-services.md)  
+ [安全概述&#40;集成服务&#41;](security-overview-integration-services.md)  
   
   

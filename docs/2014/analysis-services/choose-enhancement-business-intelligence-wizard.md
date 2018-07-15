@@ -1,5 +1,5 @@
 ---
-title: 选择增强功能 （商业智能向导） |Microsoft 文档
+title: 选择增强功能 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.bienhancement.f1
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1377e93214ff5d9e459698946551ffaed6723390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35634d3094647cd7698ec1961b94cb2b6b5744e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243977"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>选择增强功能（商业智能向导）
   可以使用 **“选择增强功能”** 页选择商业智能增强功能，以添加到您的多维数据集或维度中。  

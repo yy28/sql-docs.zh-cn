@@ -1,5 +1,5 @@
 ---
-title: 在包中使用变量 |Microsoft 文档
+title: 在包中使用变量 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285413"
 ---
 # <a name="use-variables-in-packages"></a>在包中使用变量
   变量是对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的有效补充，而且使用非常灵活。它们可以在包中的对象之间以及父包和子包之间提供通信。 变量还可以用在表达式和脚本中。  
   
 ## <a name="user-defined-variables-and-system-variables"></a>用户定义的变量和系统变量  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供系统变量并支持用户定义的变量。 在创建新包时，可以将容器或任务添加到包中，也可以创建事件处理程序， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括一组可用于容器的系统变量。 系统变量包含有关包、容器、任务或事件处理程序的非常有用的信息。 例如，在运行时， **MachineName** 系统变量包含运行包的计算机的名称， **StartTime** 变量包含包开始运行的时间。 系统变量是只读的。 有关详细信息，请参阅 [System Variables](system-variables.md)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供系统变量，而且支持用户定义的变量。 在创建新包时，可以将容器或任务添加到包中，也可以创建事件处理程序， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括一组可用于容器的系统变量。 系统变量包含有关包、容器、任务或事件处理程序的非常有用的信息。 例如，在运行时， **MachineName** 系统变量包含运行包的计算机的名称， **StartTime** 变量包含包开始运行的时间。 系统变量是只读的。 有关详细信息，请参阅 [System Variables](system-variables.md)。  
   
  您可以创建用户定义的变量，然后在包中使用这些变量。 在 [!INCLUDE[ssIS](../includes/ssis-md.md)]中，可以通过很多方式使用用户定义的变量：在脚本中；在由优先约束、For 循环容器、派生列转换和有条件拆分转换使用的表达式中；以及在更新属性值的属性表达式中。  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 创建 Windows Azure 存储帐户和容器 |Microsoft 文档
+title: 第 1 课： 创建 Windows Azure 存储帐户和容器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c4a2fb1db64456fe63bc814adda8278b253937a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 3953936761ac031a352ef17544e4818c276ab54a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299307"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>第 1 课：创建 Windows Azure 存储帐户和容器
   必须先创建 Windows Azure 存储帐户和 blob 容器以及共享访问签名，然后才能将 SQL Server 数据文件存储在 Windows Azure 存储中。 第 1 课指导您完成登录到 Windows Azure 管理门户以及创建存储帐户、Blob 容器和共享访问签名的步骤。  
@@ -37,7 +37,7 @@ ms.locfileid: "36127425"
 ## <a name="create-storage-account"></a>创建存储帐户  
  若要在 Windows Azure 管理门户上创建存储帐户，请执行以下步骤：  
   
-1.  登录到[Windows Azure 管理门户](https://manage.windowsazure.com)使用你的帐户。 如果你没有 Azure 帐户，请访问[Windows Azure 免费试用版](http://www.windowsazure.com/pricing/free-trial/)。  
+1.  登录到[Windows Azure 管理门户](https://manage.windowsazure.com)使用你的帐户。 如果您没有 Windows Azure 帐户，请访问[Windows Azure 免费试用版](http://www.windowsazure.com/pricing/free-trial/)。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36127425"
   
 1.  登录到[Windows Azure 管理门户](https://manage.windowsazure.com)。  
   
-2.  选择存储帐户，单击**容器**选项卡，单击**添加容器**在屏幕的底部，这将打开一个新的对话框。  
+2.  选择存储帐户中，单击**容器**选项卡，单击**添加容器**在屏幕的底部，这会打开新建对话框。  
   
 3.  输入容器的名称。  
   
-4.  选择**私有**为**访问类型**。 将访问权限设置为专用后，只有 Windows Azure 帐户所有者可读取容器和 Blob 数据。  
+4.  选择**私有**有关**访问类型**。 将访问权限设置为专用后，只有 Windows Azure 帐户所有者可读取容器和 Blob 数据。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36127425"
   
  **下一课：**  
   
- [第 2 课.在容器上创建策略并生成共享访问签名&#40;SAS&#41;密钥](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [第 2 课.在容器上创建策略并生成共享访问签名&#40;SAS&#41;键](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

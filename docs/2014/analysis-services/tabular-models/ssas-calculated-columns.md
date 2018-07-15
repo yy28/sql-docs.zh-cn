@@ -1,5 +1,5 @@
 ---
-title: 计算列 (SSAS 表格) |Microsoft 文档
+title: 计算列 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 152030d73951b08e0b987c5114c5bf8661dc418a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b976a83220a501fde422b6f58fea21631c0d3f26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232067"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>计算列（SSAS 表格）
   在表格模型中，通过计算列可以将新数据添加到您的模型。 您可以创建用于定义列的行级值的 DAX 公式，而不用在列中粘贴或导入值。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  

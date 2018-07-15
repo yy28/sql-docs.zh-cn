@@ -1,5 +1,5 @@
 ---
-title: 文件组索引的元素 (DTA) |Microsoft 文档
+title: 文件组索引的元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Filegroup element [DTA]
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f1fa6dab61b89954624d6ba546e7ab97479e546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fad6406d6a719ebd33f48a4cd7c0cf7c2c0e7122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244107"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的文件组元素 (DTA)
   指定要针对用户指定的配置，对其创建索引的文件组。  
@@ -45,7 +45,7 @@ ms.locfileid: "36138771"
 |--------------------|-----------------|  
 |**数据类型和长度**|`string`长度没有限制。|  
 |**默认值**|无。|  
-|**出现次数**|可选。 可以使用上一次每个`Index`元素。 不能使用此元素，如果`PartitionScheme`和`PartitionColumn`元素指定`Index`元素。|  
+|**出现次数**|可选。 可以使用上一次为每个`Index`元素。 如果不能使用此元素`PartitionScheme`并`PartitionColumn`元素指定`Index`元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

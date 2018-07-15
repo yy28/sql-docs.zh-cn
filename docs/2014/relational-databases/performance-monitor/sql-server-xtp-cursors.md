@@ -1,5 +1,5 @@
 ---
-title: XTP 游标 |Microsoft 文档
+title: XTP 游标 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b404b5d425fe6116087821a4c51e1f5dd552dd7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c5eab11a0ee57a8545a2d19f8a7472392635e690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206977"
 ---
 # <a name="xtp-cursors"></a>XTP 游标
   XTP 游标性能对象包含与内部 XTP 引擎游标相关的计数器。 游标是低级构建基块用于处理的 XTP 引擎[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 因此，您通常不能直接控制游标。  

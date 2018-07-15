@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303927"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
     
-##  <a name="top"></a> 你可以将大容量导入 XML 文档转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库或大容量导出它们从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 本主题提供了这两种情况的示例。  
+##  <a name="top"></a> 您可以将大容量导入 XML 文档转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库或大容量导出从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 本主题提供了这两种情况的示例。  
   
  若要将数据从一个数据文件大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区视图，可以使用以下工具或命令：  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36126538"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- 有关详细信息，请参阅[导入和导出大容量数据使用 bcp 实用工具&#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)和[导入批量数据使用 BULK INSERT 或 OPENROWSET&#40;大容量...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
+ 有关详细信息，请参阅[导入和导出大容量数据使用 bcp 实用工具&#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)并[导入批量数据使用 BULK INSERT 或 OPENROWSET&#40;大容量...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
 ## <a name="examples"></a>示例  
  下列示例说明了以下操作内容：  
@@ -52,14 +51,14 @@ ms.locfileid: "36126538"
   
 -   B. [大容量导入现有行中的 XML 数据](#existing_row)  
   
--   C. [大容量从包含 DTD 的文件导入 XML 数据](#file_contains_dtd)  
+-   C. [大容量导入 XML 数据，从包含 DTD 的文件](#file_contains_dtd)  
   
 -   D. [指定字段终止符显式使用格式化文件](#field_terminator_in_format_file)  
   
 -   E. [大容量导出 XML 数据](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. 以二进制字节流的形式大容量导入 XML 数据  
- 在从文件大容量导入 XML 数据时，如果文件中包含您要应用的编码声明，则应在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 选项。 SINGLE_BLOB 选项可确保中的 XML 分析器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入根据 XML 声明中指定的编码方案的数据。  
+ 在从文件大容量导入 XML 数据时，如果文件中包含您要应用的编码声明，则应在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 选项。 SINGLE_BLOB 选项可确保中的 XML 分析器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入的数据根据 XML 声明中指定的编码方案。  
   
 #### <a name="sample-table"></a>示例表  
  若要测试示例 A，必须创建示例表 `T`。  

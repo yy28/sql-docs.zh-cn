@@ -1,5 +1,5 @@
 ---
-title: 批处理元素 (XMLA) |Microsoft 文档
+title: Batch 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Batch command
 ms.assetid: 818f3212-9605-4e34-8623-1154d9fae1f0
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 76fcd68ca71db298bc66dc63a3fa20c394c196c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 269eedd9a48d1bf7bde43d0294bac7a81b9f90ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291233"
 ---
 # <a name="batch-element-xmla"></a>Batch 元素 (XMLA)
-  针对 Analysis (XMLA) 命令作为批处理操作，执行一个或多个 XML，按顺序或并行，实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  一个或多个 XML for Analysis (XMLA) 命令就会以执行批处理操作，按顺序或并行情况下，实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36129066"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|子元素|[绑定](../xml-elements-properties/bindings-element-xmla.md)，[数据源](../xml-elements-properties/source-element-xmla.md)， [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md)， [ErrorConfiguration](../../scripting/objects/errorconfiguration-element-assl.md)，[并行](../xml-elements-properties/parallel-element-xmla.md)<br /><br /> One or more of the following XMLA commands: [Alter](alter-element-xmla.md), [Backup](backup-element-xmla.md), [BeginTransaction](begintransaction-element-xmla.md), [ClearCache](clearcache-element-xmla.md), [CommitTransaction](committransaction-element-xmla.md), [Create](create-element-xmla.md), [Delete](delete-element-xmla.md), [DesignAggregations](designaggregations-element-xmla.md), [Drop](drop-element-xmla.md), [Insert](insert-element-xmla.md), [Lock](lock-element-xmla.md), [MergePartitions](mergepartitions-element-xmla.md), [NotifyTableChange](notifytablechange-element-xmla.md), [Process](process-element-xmla.md), [Restore](restore-element-xmla.md), [RollbackTransaction](rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [Statement](statement-element-xmla.md), [Subscribe](subscribe-element-xmla.md), [Synchronize](synchronize-element-xmla.md), [Unlock](unlock-element-xmla.md), [Update](update-element-xmla.md), [UpdateCells](drop-element-xmla.md)|  
+|子元素|[绑定](../xml-elements-properties/bindings-element-xmla.md)，[数据源](../xml-elements-properties/source-element-xmla.md)， [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md)， [ErrorConfiguration](../../scripting/objects/errorconfiguration-element-assl.md)，[并行](../xml-elements-properties/parallel-element-xmla.md)<br /><br /> 一个或多个以下的 XMLA 命令： [Alter](alter-element-xmla.md)，[备份](backup-element-xmla.md)， [BeginTransaction](begintransaction-element-xmla.md)， [ClearCache](clearcache-element-xmla.md)， [CommitTransaction](committransaction-element-xmla.md)，[创建](create-element-xmla.md)，[删除](delete-element-xmla.md)， [DesignAggregations](designaggregations-element-xmla.md)，[删除](drop-element-xmla.md)， [插入](insert-element-xmla.md)，[锁](lock-element-xmla.md)， [MergePartitions](mergepartitions-element-xmla.md)， [NotifyTableChange](notifytablechange-element-xmla.md)，[过程](process-element-xmla.md)， [还原](restore-element-xmla.md)， [RollbackTransaction](rollbacktransaction-element-xmla.md)， [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e)，[语句](statement-element-xmla.md)，[订阅](subscribe-element-xmla.md)，[同步](synchronize-element-xmla.md)，[解锁](unlock-element-xmla.md)，[更新](update-element-xmla.md)， [UpdateCells](drop-element-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
   

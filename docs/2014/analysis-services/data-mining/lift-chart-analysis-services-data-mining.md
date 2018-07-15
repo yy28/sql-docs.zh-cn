@@ -1,5 +1,5 @@
 ---
-title: 提升图 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 提升图 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a18f752d0435a3ba840e484ff00bf42efb523b79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301247"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
-  A**提升图**以图形方式表示挖掘模型提供相比，针对随机推测的改进和度量值方面的更改*提升*分数。 通过比较您的数据集的不同部分以及不同模型的提升分数，您可以确定哪一模型最佳，以及数据集中多大百分比的事例可从应用该模型的预测中获益。  
+  一个**提升图**以图形方式表示的挖掘模型时比较提供针对随机推测，改进和度量的变化*提升*分数。 通过比较您的数据集的不同部分以及不同模型的提升分数，您可以确定哪一模型最佳，以及数据集中多大百分比的事例可从应用该模型的预测中获益。  
   
  对于提升图，您可为具有相同可预测属性的多个模型比较预测的准确性。 您还可为单个结果（可预测属性的单个值）或所有结果（指定属性的所有值）评估预测的准确性。  
   

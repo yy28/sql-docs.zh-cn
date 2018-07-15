@@ -1,5 +1,5 @@
 ---
-title: 访问元素 (ASSL) |Microsoft 文档
+title: 访问元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eea0d7e8b0d26692c2cc6e0400d4ceaf7aa8ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ba7c322fdd7c48a7a61262ea7aa891ae5fe4167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314727"
 ---
 # <a name="access-element-assl"></a>Access 元素 (ASSL)
-  指示提供给访问级别[CellPermission](../objects/cellpermission-element-assl.md)元素。  
+  指示到提供的访问级别[CellPermission](../objects/cellpermission-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36126613"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*读取*|允许只读访问。|  
-|*ReadContingent*|允许有条件读取访问。|  
+|*读取*|允许只读访问权限。|  
+|*有条件读取*|允许有条件读取访问。|  
 |*ReadWrite*|允许读写访问。|  
   
- 对应于的允许值为枚举`Access`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.CellPermissionAccess>。  
+ 与允许的值相对应的枚举`Access`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CellPermissionAccess>。  
   
 ## <a name="see-also"></a>请参阅  
  [Role 元素&#40;ASSL&#41;](../objects/role-element-assl.md)   

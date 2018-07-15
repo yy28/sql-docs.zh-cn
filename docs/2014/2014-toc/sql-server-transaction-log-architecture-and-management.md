@@ -1,25 +1,24 @@
 ---
-title: SQL Server 事务日志体系结构和管理 |Microsoft 文档
+title: SQL Server 事务日志体系结构和管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301337"
 ---
 # SQL Server 事务日志体系结构和管理
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +68,11 @@ ms.locfileid: "36128011"
   
  事务日志是一种回绕的文件。 例如，假设有一个数据库，它包含一个分成四个虚拟日志文件的物理日志文件。 当创建数据库时，逻辑日志文件从物理日志文件的始端开始。 新日志记录被添加到逻辑日志的末端，然后向物理日志的末端扩张。 日志截断将释放记录全部在最小恢复日志序列号 (MinLSN) 之前出现的所有虚拟日志。 MinLSN 是成功进行数据库范围内回滚所需的最早日志记录的日志序列号。 示例数据库中的事务日志的外观与下图所示相似。  
   
- ![日志文件划分为四个虚拟日志文件](media/tranlog3.gif "日志文件划分为四个虚拟日志文件")  
+ ![日志文件分为四个虚拟日志文件](media/tranlog3.gif "日志文件分为四个虚拟日志文件")  
   
  当逻辑日志的末端到达物理日志文件的末端时，新的日志记录将回绕到物理日志文件的始端。  
   
- ![换行以启动的日志文件的日志记录](media/tranlog4.gif "日志记录大约包装到日志文件的开头")  
+ ![自动换行大约到日志文件的开头的日志记录](media/tranlog4.gif "日志记录大约包装到日志文件的开头")  
   
  这个循环不断重复，只要逻辑日志的末端不到达逻辑日志的始端。 如果经常截断旧的日志记录，始终为到下一个检查点前创建的所有新日志记录保留足够的空间，则日志永远不会填满。 但是，如果逻辑日志的末端真的到达了逻辑日志的始端，将发生以下两种情况之一：  
   
@@ -88,11 +87,11 @@ ms.locfileid: "36128011"
   
  下列各图显示了截断前后的事务日志。 第一个图显示了从未截断的事务日志。 当前，逻辑日志使用四个虚拟日志文件。 逻辑日志开始于第一个逻辑日志文件的前面，并结束于虚拟日志 4。 MinLSN 记录位于虚拟日志 3 中。 虚拟日志 1 和虚拟日志 2 仅包含不活动的日志记录。 这些记录可以截断。 虚拟日志 5 仍未使用，不属于当前逻辑日志。  
   
- ![事务日志的四个虚拟日志](media/tranlog2.gif "的四个虚拟日志的事务日志")  
+ ![具有四个虚拟日志事务日志](media/tranlog2.gif "具有四个虚拟日志事务日志")  
   
  第二个图显示了日志截断后的情形。 已释放虚拟日志 1 和虚拟日志 2 以供重新使用。 现在，逻辑日志开始于虚拟日志 3 的开头。 虚拟日志 5 仍未使用，它不属于当前逻辑日志。  
   
- ![日志文件划分为四个虚拟日志文件](media/tranlog3.gif "日志文件划分为四个虚拟日志文件")  
+ ![日志文件分为四个虚拟日志文件](media/tranlog3.gif "日志文件分为四个虚拟日志文件")  
   
  除非由于某些原因导致延迟，否则将在以下事件后自动发生日志截断：  
   

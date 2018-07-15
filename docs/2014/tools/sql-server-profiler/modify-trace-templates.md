@@ -1,5 +1,5 @@
 ---
-title: 修改跟踪模板 |Microsoft 文档
+title: 修改跟踪模板 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
 - Profiler [SQL Server Profiler], templates
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08c08bd8838380ce1054e13697aa6873a8e98860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 131c10dde4557fd7f462a1dd2324819c58bbf1d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200647"
 ---
 # <a name="modify-trace-templates"></a>修改跟踪模板
   用户可以在运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的本地计算机上的文件中修改保存的模板。 也可以修改从那些文件派生的模板。 修改现有模板时，可以在 **“跟踪属性”** 对话框的 **“事件选择”** 选项卡上，以最初设置属性时相同的顺序编辑事件类和数据列等模板属性。 可以添加和删除事件类和数据列，也可以对筛选进行更改。 修改模板后，将创建用户特定的模板，并且将保持原始系统模板的完整性。 有关详细信息，请参阅 [保存跟踪和跟踪模板](save-traces-and-trace-templates.md)。  
@@ -42,13 +42,13 @@ ms.locfileid: "36138978"
   
  **修改跟踪模板**  
   
- [使用 SQL Server 事件探查器](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [使用 SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
  [使用 Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **在跟踪模板或跟踪文件中添加或删除事件**  
   
- [使用 SQL Server 事件探查器](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [使用 SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [使用 Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

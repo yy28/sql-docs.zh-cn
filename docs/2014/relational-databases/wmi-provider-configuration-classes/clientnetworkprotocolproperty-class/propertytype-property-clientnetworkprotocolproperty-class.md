@@ -1,5 +1,5 @@
 ---
-title: PropertyType 属性 （ClientNetworkProtocolProperty 类） |Microsoft 文档
+title: PropertyType 属性 （ClientNetworkProtocolProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40603fc717d8ec0a07d2e73e68910c6cfa775b86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 29fe521e607e1eb70ce6f3bf83110450d7a26383
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232897"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 属性（ClientNetworkProtocolProperty 类）
-  获取引用的属性的类型[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值。  
+  获取引用属性的类型[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)表示使用的网络协议的属性的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
+ 一个[ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)对象，表示使用的网络协议的属性[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定属性类型的 `uint32` 值。  

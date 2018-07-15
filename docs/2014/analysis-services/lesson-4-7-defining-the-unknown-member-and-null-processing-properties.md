@@ -1,5 +1,5 @@
 ---
-title: 定义未知的成员和 Null 处理属性 |Microsoft 文档
+title: 定义未知的成员和 Null 处理属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 29c4958263524f6c702f112d5817231734a4b31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e355d6c376b8196118d056954f8a2694676e08a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317297"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>定义未知成员和 Null 处理属性
   当 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 处理某个维度时，将使用数据源视图中的表或视图的基础列中的所有非重复值填充该维度中的属性。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在处理过程中遇到 Null 值，默认情况下，它会将此 Null 值转换为零（对于数值列）或空字符串（对于字符串列）。 你可以在基础关系数据仓库的提取、转换和加载过程（如果有）中修改默认设置或转换 Null 值。 另外，还可以通过配置以下三个属性使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将 Null 值转换为指定值：用于维度的 **UnknownMember** 和 **UnknownMemberName** 属性以及用于维度键特性的 **NullProcessing** 属性。  
@@ -28,7 +28,7 @@ ms.locfileid: "36126193"
   
  但是，当以增量方式（也就是我们在本教程中处理“产品”维度的方式）生成雪花型维度时，或使用“维度设计器”定义维度然后将这些现有维度合并到多维数据集内时，可能需要手动设置 **UnknownMember** 和 **NullProcessing** 属性。  
   
- 在本主题的各项任务中，将在雪花状表的“产品”维度中添加产品类别和产品子类别属性，这些雪花表将被添加到 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 数据源视图中。 然后，将启用**UnknownMember**属性的产品维度中，指定`Assembly Components`的值作为**UnknownMemberName**属性，相关`Subcategory`和`Category`属性到产品命名属性，然后定义自定义错误处理的雪花状表链接的成员键属性。  
+ 在本主题的各项任务中，将在雪花状表的“产品”维度中添加产品类别和产品子类别属性，这些雪花表将被添加到 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 数据源视图中。 然后将启用**UnknownMember**为 Product 维度属性指定`Assembly Components`的值作为**UnknownMemberName**属性，相关`Subcategory`和`Category`产品的属性命名属性，，然后定义自定义错误处理的雪花状表链接的成员键属性。  
   
 > [!NOTE]  
 >  如果在最初使用多维数据集向导定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集时添加了“子类别”和“类别”属性，则将自动执行这些步骤。  
@@ -55,7 +55,7 @@ ms.locfileid: "36126193"
   
      ![ErrorConfiguration 属性集合](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "ErrorConfiguration 属性集合")  
   
-5.  单击**浏览器**选项卡上，确认**产品型号系列**中选择**层次结构**列表，，然后展开`All Products`。  
+5.  单击**浏览器**选项卡上，确认**Product Model Lines**中选择**层次结构**列表中，，然后展开`All Products`。  
   
      注意“产品系列”级别的五个成员。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36126193"
   
 8.  在“数据源视图”窗格中，找到 **DimProductCategory** 表，右键单击该表中的 **ProductCategoryKey**，再单击“从列新建属性”。  
   
-9. 在**属性**窗格中，更改此名称将新属性为`Category`。  
+9. 在中**特性**窗格中，更改到新属性的此名称`Category`。  
   
 10. 在“属性”窗口中的 **NameColumn** 属性字段中单击，然后单击浏览 (**…**) 按钮以打开“名称列”对话框。  
   
@@ -99,15 +99,15 @@ ms.locfileid: "36126193"
   
 12. 在“数据源视图”窗格中，找到 **DimProductSubcategory** 表，右键单击该表中的 **ProductSubcategoryKey**，再单击“从列新建属性”。  
   
-13. 在**属性**窗格中，更改此名称将新属性为`Subcategory`。  
+13. 在中**特性**窗格中，更改到新属性的此名称`Subcategory`。  
   
 14. 在“属性”窗口中的 **NameColumn** 属性字段中单击，然后单击浏览“(…)”按钮以打开“名称列”对话框。  
   
 15. 选择“源列”列表中的 **EnglishProductSubcategoryName**，然后单击“确定”。  
   
-16. 创建新用户定义的层次结构称为**产品类别**具有以下级别，从顶部到底部的顺序： `Category`， `Subcategory`，和**产品名称**。  
+16. 创建新用户定义的层次结构称为**产品类别**具有以下级别，从上到下的顺序： `Category`， `Subcategory`，并**产品名称**。  
   
-17. 指定`All Products`的值作为**AllMemberName**的产品类别用户定义层次结构的属性。  
+17. 指定`All Products`的值作为**AllMemberName** Product Categories 用户定义层次结构的属性。  
   
 ## <a name="browsing-the-user-defined-hierarchies-in-the-product-dimension"></a>浏览“产品”维度中的用户定义层次结构  
   
@@ -127,19 +127,19 @@ ms.locfileid: "36126193"
   
 6.  单击“产品”维度的维度设计器中的“浏览器”选项卡，再单击“重新连接”。  
   
-7.  验证**产品型号系列**出现在**层次结构**列表中，展开`All Products`，然后展开**组件**。  
+7.  确认**Product Model Lines**将出现在**层次结构**列表中，展开`All Products`，然后展开**组件**。  
   
 8.  选择**产品类别**中**层次结构**列表中，展开`All Products`，然后展开**组件**。  
   
      注意，没有显示部件组件。  
   
- To modify the behavior mentioned in the previous task, you will enable the **UnknownMember** property of the Products dimension, set a value for the **UnknownMemberName** property, set the **NullProcessing** property for the `Subcategory` and **Model Name** attributes to **UnknownMember**, define the `Category` attribute as a related attribute of the `Subcategory` attribute, and then define the **Product Line** attribute as a related attribute of the **Model Name** attribute. 以上步骤将使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对在 **SubcategoryKey** 列中不包含值的每个产品使用未知成员名称值，如以下任务所示。  
+ 若要修改在上一任务中所述的行为，将启用**UnknownMember**产品维度属性设置为值**UnknownMemberName**属性，则设置**NullProcessing**属性`Subcategory`并**模型名称**向属性**UnknownMember**，定义`Category`作为相关属性的属性`Subcategory`属性，，然后定义**产品系列**特性的相关属性用作**模型名称**属性。 以上步骤将使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对在 **SubcategoryKey** 列中不包含值的每个产品使用未知成员名称值，如以下任务所示。  
   
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>启用未知成员，定义属性关系，并指定 Null 的自定义处理属性  
   
 1.  在“产品”维度的维度设计器中，单击“维度结构”选项卡，然后在“属性”窗格中选择“产品”。  
   
-2.  在**属性**窗口中，更改**UnknownMember**属性**可见**，然后将更改的值**UnknownMemberName**属性`Assembly Components`。  
+2.  在中**属性**窗口中，更改**UnknownMember**属性设置为**Visible**，然后将更改的值为**UnknownMemberName**属性设置为`Assembly Components`。  
   
      将 **UnknownMember** 属性更改为 **Visible** 或 **Hidden** 后，就会启用该维度的 **UnknownMember** 属性。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36126193"
   
 4.  在关系图中，右键单击`Subcategory`属性，然后选择**新建属性关系**。  
   
-5.  在**创建属性关系**对话框中，**源属性**是`Subcategory`。 设置**相关属性**到`Category`。 将关系类型保留为“柔性”。  
+5.  在中**创建属性关系**对话框中，**源属性**是`Subcategory`。 设置**相关属性**到`Category`。 将关系类型保留为“柔性”。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36126193"
   
 12. 将 **NullProcessing** 属性更改为 **UnknownMember**。  
   
-     由于这些变化，当[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]遇到的 null 值`Subcategory`属性或**模型名称**键值，将替代期间处理，未知的成员值的属性和将正确构造用户定义的层次结构。  
+     由于这些变化，当[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]遇到的 null 值`Subcategory`属性或**模型名称**期间处理，未知的成员值的属性将替换为密钥值，并将正确构建用户定义层次结构。  
   
 ## <a name="browsing-the-product-dimension-again"></a>再次浏览“产品”维度  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36126193"
   
 2.  成功完成部署后，单击“产品”维度的维度设计器中的“浏览器”选项卡，再单击“重新连接”。  
   
-3.  验证**产品类别**中选择**层次结构**列表，，然后展开`All Products`。  
+3.  确认**产品类别**中选择**层次结构**列表中，，然后展开`All Products`。  
   
      注意，“程序集组件”已显示为“类别”级别的新成员。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36126193"
   
      请注意，在“产品名称”级别上显示了所有程序集组件，如下图所示。  
   
-     ![显示程序集组件的产品名称级别](../../2014/tutorials/media/l4-assemblycomponents-1.gif "产品名称级别显示程序集组件")  
+     ![产品名称级别显示程序集组件](../../2014/tutorials/media/l4-assemblycomponents-1.gif "产品名称级别显示程序集组件")  
   
 ## <a name="next-lesson"></a>下一课  
  [第 5 课：定义维度和度量值组之间的关系](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  

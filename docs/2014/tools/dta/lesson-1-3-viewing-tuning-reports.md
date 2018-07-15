@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 787c9bac7f1eb1f07b22df3296a61afd1c10f70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0b910c73b09b2ebb5018c762fdd44c9da17c7924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212177"
 ---
 # <a name="viewing-tuning-reports"></a>查看优化报表
   在本课程的上一个练习中，您已经查看了在数据库引擎优化顾问建议中创建或删除数据库对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，这些建议是 MySession 优化会话生成的结果。 MySession 优化会话是在 [优化工作负荷](lesson-1-1-tuning-a-workload.md)中创建的。  
@@ -40,7 +40,7 @@ ms.locfileid: "36138550"
   
 4.  在“优化报告”窗格中，单击“选择报告”列表中的“语句开销报告”。 如果需要更多空间以查看报表，则将“会话监视器”窗格边框拖动到左侧。 对数据库中的表执行的每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句都会有相关的性能开销。 通过对表中经常访问的列创建有效的索引，可以降低此性能开销。 此报告显示了在工作负荷中执行语句的原有开销与实现优化建议后的开销相比，估计的提高百分比。 请注意，报告中包含的信息量取决于工作负荷的长度和复杂性。  
   
-5.  右键单击网格区域中的“语句开销报告”窗格，再单击“导出到文件”按钮。 保存报表作为`MyReport`。 文件名后会自动附加 .xml 扩展名。 可以在常用的 XML 编辑器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 MyReport.xml 以查看报告内容。  
+5.  右键单击网格区域中的“语句开销报告”窗格，再单击“导出到文件”按钮。 报表另存为`MyReport`。 文件名后会自动附加 .xml 扩展名。 可以在常用的 XML 编辑器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 MyReport.xml 以查看报告内容。  
   
 6.  返回数据库引擎优化顾问的“报告”选项卡，并再次右键单击“语句开销报告”。 查看其他可用选项。 请注意，您可以更改当前查看的报告的字体。 更改此处的字体也会更改其他选项卡式页面上的字体。  
   

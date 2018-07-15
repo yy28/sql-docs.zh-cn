@@ -1,5 +1,5 @@
 ---
-title: 定义时间智能计算使用商业智能向导 |Microsoft 文档
+title: 定义时间智能计算使用商业智能向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - period over period growth [Analysis Services]
 - parallel period comparisons [Analysis Services]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54d0e5cf5562049ee239d21a2d7fdeae8d46fed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319408b079ce5be4a381e02f47f5189edbde3ed0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295977"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
   时间智能增强功能是一项多维数据集增强功能，它可以将时间计算（或时间视图）添加到所选层次结构中。 此增强功能支持以下计算类别：  
@@ -45,14 +45,14 @@ ms.locfileid: "36128648"
   
 -   并行时间段比较。  
   
- 时间智能应用于有时间维度的多维数据集。 （时间维度是其 `Type` 属性设置为 `Time` 的维度）。 另外，该维度的时间特性的 `Type` 属性还必须有适当的设置（如年份或月份）。 `Type`的维度和其属性的属性将正确设置，如果你使用维度向导创建时间维度。  
+ 时间智能应用于有时间维度的多维数据集。 （时间维度是其 `Type` 属性设置为 `Time` 的维度）。 另外，该维度的时间特性的 `Type` 属性还必须有适当的设置（如年份或月份）。 `Type`如果使用维度向导创建时间维度将正确设置维度和其属性的属性。  
   
  若要向多维数据集添加时间智能，请使用商业智能向导，并在 **“选择增强功能”** 页上选择 **“定义时间智能”** 选项。 然后此向导将指引您完成相应的步骤，以选择将向其添加时间智能的层次结构，并指定将对层次结构中的哪些成员应用时间智能。 在向导的最后一页，可以看到为了添加所选时间智能而要对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库进行的更改。  
   
 ## <a name="selecting-a-time-hierarchy"></a>选择时间层次结构  
  在 **“选择目标层次结构和计算”** 页中，选择将应用时间增强功能的时间层次结构。 每次运行商业智能向导时，只能向一个时间层次结构应用时间增强功能。 如果希望向多个时间层次结构应用增强功能，请再次运行向导。  
   
- 选择时间层次结构后，请在 **“可用时间计算”** 列表中选择将应用于该层次结构的计算。 列出的计算取决于层次结构中和上级别`Type`属性设置为每个级别的属性。 例如，“年份”层次结构支持“本年度截止到现在”和“年度同比增长量”，但是“季度”层次结构则不支持。  
+ 选择时间层次结构后，请在 **“可用时间计算”** 列表中选择将应用于该层次结构的计算。 列出的计算取决于级别在位于层次结构以及`Type`属性设置为每个级别的属性。 例如，“年份”层次结构支持“本年度截止到现在”和“年度同比增长量”，但是“季度”层次结构则不支持。  
   
 > [!NOTE]  
 >  Timeintelligence.xml 模板文件定义了在 **“可用时间计算”** 中列出的时间计算。 如果列出的计算不能满足需要，可以更改现有计算，或在 Timeintelligence.xml 文件中添加新的计算。  

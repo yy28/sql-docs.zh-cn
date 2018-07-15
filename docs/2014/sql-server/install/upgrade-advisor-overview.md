@@ -1,5 +1,5 @@
 ---
-title: 升级顾问概述 |Microsoft 文档
+title: 升级顾问概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - SQL Server Upgrade Advisor, components
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], about analysis
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b204fd2f108ce4a2a12d6036e4ddc51ea5e9edfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b30fddb6ce8570b438c869d72c2d3d0ac48036e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315957"
 ---
 # <a name="upgrade-advisor-overview"></a>升级顾问概述
   升级顾问提供了一个中央控制台，可分析 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 组件，以及查看包含分析结果相关信息的报告。  
@@ -43,7 +43,7 @@ ms.locfileid: "36126461"
   
 -   升级顾问帮助  
   
- 第一次使用升级顾问时，应运行升级顾问分析向导来分析服务器。 向导完成后分析，单击**启动报表**从向导或返回到升级顾问起始页。 从该起始页中，运行升级顾问报表查看器查看报表。 报表提供的链接内容包含有助于解决已知问题的信息。  
+ 第一次使用升级顾问时，应运行升级顾问分析向导来分析服务器。 当向导完成分析后时，单击**启动报表**从向导或返回到升级顾问起始页。 从该起始页中，运行升级顾问报表查看器查看报表。 报表提供的链接内容包含有助于解决已知问题的信息。  
   
 ## <a name="upgrade-advisor-analysis-wizard"></a>升级顾问分析向导  
  若要执行分析，请单击**启动升级顾问分析向导**升级顾问起始页上。 升级顾问分析向导收集与计算机、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件以及要分析的跟踪文件有关的信息。 收集并确认所有信息之后，升级顾问分析向导会分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。  
@@ -75,13 +75,13 @@ ms.locfileid: "36126461"
  升级顾问不分析加密的存储过程、扩展存储过程中的代码以及使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 以外的语言编写的源代码。  
   
 ## <a name="upgrade-advisor-report-viewer"></a>升级顾问报表查看器  
- 若要查看升级顾问报表，请单击**启动升级的顾问报表查看器**升级顾问起始页上。 升级顾问报表查看器启动时，将加载默认目录中的报表。 如果升级顾问报表查看器在默认目录中未找到任何报表，则不会显示报表。 如果默认目录中没有报表，可以运行升级顾问分析向导来创建报表或从其他服务器或子目录中加载现有报表。  
+ 若要查看升级顾问报表，请单击**启动升级顾问报表查看**升级顾问起始页上。 升级顾问报表查看器启动时，将加载默认目录中的报表。 如果升级顾问报表查看器在默认目录中未找到任何报表，则不会显示报表。 如果默认目录中没有报表，可以运行升级顾问分析向导来创建报表或从其他服务器或子目录中加载现有报表。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问不会覆盖现有报表。 但是，报表查看器只显示最近的五个报表。 若要查看更早版本的报表，请选择从报表**报表**下拉列表框。 时间戳指示生成报表的日期和时间。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问不会覆盖现有报表。 但是，报表查看器只显示最近的五个报表。 若要查看较早的报表，请选择从报表**报表**下拉列表框。 时间戳指示生成报表的日期和时间。  
   
  将升级顾问分析向导生成的 XML 文件加载到升级顾问报表查看器中后，将为每个组件显示一个报告。 该报表包含需要解决的所有已知问题（包括可检测到的问题和无法检测到的问题）。 每个问题都有指示重要性的图标、通知何时必须解决此问题的标签和一个简要说明。 展开问题时，您将看到更详细的说明、问题详细信息链接和帮助文件链接。 每个问题的信息都旨在为您提供充足的信息以便解决此问题。  
   
- 大多数组件都存在无法检测到的问题。 若要查看这些问题，请展开**其他升级问题**项的组件，然后单击该链接可以查看文档中的问题的其他信息。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向后兼容问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
+ 大多数组件都存在无法检测到的问题。 若要查看这些问题，请展开**其他升级问题**组件项目，然后单击该链接可以查看文档中的问题的其他信息。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向后兼容问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
   
 ## <a name="see-also"></a>请参阅  
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

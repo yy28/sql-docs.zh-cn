@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a5c21c01ab776a17d3e160fee51167c426dfa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3a0f4ad36d9664d6627d02edfc401af9ed3d8b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307517"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  A`GeometryCollection`是零个或多集合`geometry`或`geography`实例。 A`GeometryCollection`能为空。  
+  一个`GeometryCollection`是零个或多集合`geometry`或`geography`实例。 一个`GeometryCollection`能为空。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 实例  
   
@@ -38,14 +38,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- 下面的示例引发`System.FormatException`因为`LinesString`实例中`GeometryCollection`实例不可接受。  
+ 下面的示例将引发`System.FormatException`因为`LinesString`实例中`GeometryCollection`实例不可接受。  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- 当组成 `GeometryCollection` 实例的所有实例均有效时，`GeometryCollection` 实例有效。 以下示例显示三个有效`GeometryCollection`实例和一个无效的实例。  
+ 当组成 `GeometryCollection` 实例的所有实例均有效时，`GeometryCollection` 实例有效。 以下示例显示三个有效`GeometryCollection`实例和一个不是有效的实例。  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

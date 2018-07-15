@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298337"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>调用本机编译存储过程的最佳做法
   本机编译存储过程：  
@@ -52,9 +52,9 @@ ms.locfileid: "36127709"
   
  可通过 XEvent `hekaton_slow_parameter_passing` 及 `reason=named_parameters` 检测使用了（低效）命名参数的本机编译存储过程。  
   
- 同样，你可以检测通过相同的 XEvent 不匹配类型的使用`hekaton_slow_parameter_passing`，与`reason=parameter_conversion`。  
+ 同样，可以检测通过相同的 XEvent 的类型不匹配`hekaton_slow_parameter_passing`，使用`reason=parameter_conversion`。  
   
- 因为在使用内存优化表时需要实现重试逻辑（在许多情况下），并且，因为需要解决某些功能限制，所以，您可能需要创建包装解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 有关示例，请参阅[内存优化表上的事务的重试逻辑的准则](memory-optimized-tables.md)。  
+ 因为在使用内存优化表时需要实现重试逻辑（在许多情况下），并且，因为需要解决某些功能限制，所以，您可能需要创建包装解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 有关示例，请参阅[内存优化表上的事务的重试逻辑准则](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [本机编译的存储过程](natively-compiled-stored-procedures.md)  

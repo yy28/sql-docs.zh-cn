@@ -1,5 +1,5 @@
 ---
-title: 定义计算成员 |Microsoft 文档
+title: 定义计算成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e063de7ce9ea45197c17f4d863c56228d9473e78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49779aa45ad8f0316dafa5fb74b037b5d199f328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238357"
 ---
 # <a name="defining-calculated-members"></a>定义计算成员
   计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
@@ -36,7 +36,7 @@ ms.locfileid: "36129995"
   
      下图显示多维数据集设计器的“计算”选项卡。  
   
-     ![多维数据集设计器计算选项卡](../../2014/tutorials/media/l6-calculatedmembers-1.gif "多维数据集设计器计算选项卡")  
+     ![计算多维数据集设计器选项卡](../../2014/tutorials/media/l6-calculatedmembers-1.gif "计算多维数据集设计器选项卡")  
   
 2.  在“计算”选项卡的工具栏上，单击“新建计算成员”。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36129995"
   
      ![计算表达式窗格窗体](../../2014/tutorials/media/l6-calculatedmembers-02.gif "计算表达式窗格窗体")  
   
-3.  在**名称**框中，更改到计算度量值的名称`[Total Sales Amount]`。  
+3.  在中**名称**框中，更改到的计算度量值名称`[Total Sales Amount]`。  
   
      如果计算成员的名称包含空格，则该计算成员名称必须放在方括号中。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36129995"
   
 5.  将“Internet Sales-Sales Amount”从“计算工具”窗格中的“元数据”选项卡拖到“计算表达式”窗格中的“表达式”框中。  
   
-6.  在**表达式**框中，键入一个加号 (`+`) 后 **[度量值]。 [Internet 销售 Sales Amount]**。  
+6.  在中**表达式**框中，键入一个加号 (`+`) 后 **[Measures]。 [Internet 销售-销售额]**。  
   
 7.  在“计算工具”窗格中的“元数据”选项卡上，展开“Reseller Sales”，然后将“Reseller Sales-Sales Amount”拖到“计算表达式”窗格的“表达式”框中的加号 (+) 后面。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36129995"
   
      下图显示使用前面步骤中所指定的设置填充的“计算表达式”窗格。  
   
-     ![Populated 计算表达式窗格](../../2014/tutorials/media/l6-calculatedmembers-03.gif "填充计算表达式窗格")  
+     ![计算表达式窗格中 Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "填充计算表达式窗格")  
   
 10. 在“计算”选项卡的工具栏上，单击“脚本视图”，然后在“计算表达式”窗格中检查计算脚本。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "36129995"
   
      ![在计算表达式窗格中的脚本](../../2014/tutorials/media/l6-calculatedmembers-04.gif "在计算表达式窗格中的脚本")  
   
-12. 在工具栏上的**计算**选项卡上，单击**窗体视图**，验证`[Total Sales Amount]`中选择**脚本组织程序**窗格中，，然后单击**新的计算的成员**。  
+12. 在工具栏上的**计算**选项卡上，单击**窗体视图**，验证`[Total Sales Amount]`中选择**脚本组织程序**窗格中，并单击**新的计算的成员**。  
   
-13. 更改到此新的计算成员的名称`[Total Product Cost]`，然后创建中的以下表达式**表达式**框：  
+13. 更改到此新计算成员的名称`[Total Product Cost]`，然后创建中的下列表达式**表达式**框：  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -105,9 +105,9 @@ ms.locfileid: "36129995"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>定义毛利润率计算  
   
-1.  验证`[Total Product Cost]`中选择**脚本组织程序**窗格中，，然后单击**新建计算成员**的工具栏上**计算**选项卡。  
+1.  确认`[Total Product Cost]`中选定**脚本组织程序**窗格中，，然后单击**新建计算成员**的工具栏上**计算**选项卡。  
   
-2.  在**名称**框中，更改到此新计算度量值名称`[Internet GPM]`。  
+2.  在中**名称**框中，更改到此新计算度量值名称`[Internet GPM]`。  
   
 3.  在“表达式”框中，创建以下 MDX 表达式：  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36129995"
   
 6.  在“计算”选项卡的工具栏上，单击“新建计算成员”。  
   
-7.  在**名称**框中，更改到此新计算度量值名称`[Reseller GPM]`。  
+7.  在中**名称**框中，更改到此新计算度量值名称`[Reseller GPM]`。  
   
 8.  在“表达式”框中，创建以下 MDX 表达式：  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36129995"
   
 11. 在“计算”选项卡的工具栏上，单击“新建计算成员”。  
   
-12. 在**名称**框中，更改到此计算度量值的名称`[Total GPM]`。  
+12. 在中**名称**框中，更改到此计算度量值名称`[Total GPM]`。  
   
 13. 在“表达式”框中，创建以下 MDX 表达式：  
   
@@ -165,17 +165,17 @@ ms.locfileid: "36129995"
   
      下图显示有三个新计算的“表达式”窗格。  
   
-     ![在计算表达式窗格中的新计算](../../2014/tutorials/media/l6-calculatedmembers-05.gif "在计算表达式窗格中的新计算")  
+     ![在计算表达式窗格中的新计算](../../2014/tutorials/media/l6-calculatedmembers-05.gif "计算表达式窗格中的新计算")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>定义总计计算的百分比  
   
 1.  在“计算”选项卡的工具栏上，单击“窗体视图”。  
   
-2.  在**脚本组织程序**窗格中，选择`[Total GPM]`，然后单击**新建计算成员**的工具栏上**计算**选项卡。  
+2.  在中**脚本组织程序**窗格中，选择`[Total GPM]`，然后单击**新建计算成员**的工具栏上**计算**选项卡。  
   
      在单击“新建计算成员”之前单击“脚本组织程序”窗格中的最后一个计算成员，可以保证在脚本末尾输入新计算成员。 脚本按它们出现在“脚本组织程序”窗格中的顺序执行。  
   
-3.  更改到此新的计算成员的名称`[Internet Sales Ratio to All Products]`。  
+3.  更改到此新计算成员的名称`[Internet Sales Ratio to All Products]`。  
   
 4.  在“表达式”框中键入以下表达式：  
   
@@ -276,7 +276,7 @@ ms.locfileid: "36129995"
   
      请注意，分销商销售的毛利润率要比 Internet 销售低很多，如下图中所示。  
   
-     ![数据窗格中显示的分销商销售额](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "数据窗格中显示的分销商销售额")  
+     ![显示分销商销售的数据窗格](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "显示分销商销售的数据窗格")  
   
 9. 将“Total Sales Ratio to All Products”、“Internet Sales Ratio to All Products”和“Reseller Sales Ratio to All Products”度量值添加到“值”区域。  
   

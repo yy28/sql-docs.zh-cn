@@ -1,5 +1,5 @@
 ---
-title: StorageMode 元素 (ASSL) |Microsoft 文档
+title: StorageMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageMode element
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d65d778e54a712e3fce18bdac5b3a0e31426863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d61633743b4ce7e7b72f868b280e1bb376f1846
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299007"
 ---
 # <a name="storagemode-element-assl"></a>StorageMode 元素 (ASSL)
   确定父元素的存储模式。  
@@ -68,10 +68,10 @@ ms.locfileid: "36124198"
 |-----------|-----------------|  
 |*MOLAP*|父级使用多维 OLAP (MOLAP) 存储。|  
 |*ROLAP*|父级使用关系 OLAP (ROLAP) 存储。|  
-|*HOLAP*|父级使用混合 OLAP (HOLAP) 存储。 **注意：** 此值不是有效的[维度](../objects/dimension-element-assl.md)父元素。|  
+|*HOLAP*|父级使用混合 OLAP (HOLAP) 存储。 **注意：** 此值不能用于[维度](../objects/dimension-element-assl.md)父元素。|  
 |*InMemory*|父级使用 IMBI 存储。|  
   
- 对应于的允许值为枚举`StorageMode`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.StorageMode>。  
+ 与允许的值相对应的枚举`StorageMode`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.StorageMode>。  
   
  在 Analysis Management Objects (AMO) 对象模型中，与 `StorageMode` 的父级对应的元素为 <xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.MeasureGroup> 和 <xref:Microsoft.AnalysisServices.Partition>。  
   

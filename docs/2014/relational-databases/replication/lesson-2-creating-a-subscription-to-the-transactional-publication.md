@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bcc7560136e96b4f0bdc039c1dd008ecf8a2f556
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a218bab115beece45e970d400689daf5882ff16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221097"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 课：创建事务发布的订阅
   在本课程中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建一个订阅。 本课程要求已完成上一课， [第 1 课：使用事务复制发布数据](lesson-1-publishing-data-using-transactional-replication.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "36139043"
   
 5.  在“订阅服务器”页上，如果未显示订阅服务器实例名称，请单击“添加订阅服务器”，然后单击“添加 SQL Server 订阅服务器”，在“连接到服务器”对话框中输入订阅服务器实例名称，然后单击“连接”。  
   
-6.  在订阅服务器页上，选择订阅服务器的实例名称，然后选择**\<新数据库 >** 下**订阅数据库**。  
+6.  在订阅服务器上，选择订阅服务器的实例名称，然后选择**\<新的数据库 >** 下**订阅数据库**。  
   
 7.  在“新建数据库”对话框的“数据库名称”框中输入“ProductReplica”，然后依次单击“确定”和“下一步”。  
   

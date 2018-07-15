@@ -1,5 +1,5 @@
 ---
-title: 更改 SQL Server （SQL Server 配置管理器） 的服务启动帐户 |Microsoft 文档
+title: 更改服务启动帐户适用于 SQL Server （SQL Server 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server services, startup account changes
 - startup accounts [SQL Server]
 - changing startup accounts for services
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6bb27d98c781f6e828df5fdb65a8f153bd63a5db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1e2b7f28d40a3d0db5feb7d49b445f9e4122a691
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306187"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>为 SQL Server 更改服务启动帐户（SQL Server 配置管理器）
   本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动选项，以及更改由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的服务帐户。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。 有关如何选择适合的服务帐户的详细信息，请参阅 [配置 Windows 服务帐户和权限](configure-windows-service-accounts-and-permissions.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "36124164"
   
 -   SKU 升级（从[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 到 Express 以外的 SKU）  
   
-     在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装期间， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务被配置为使用 Network Service 帐户（但已禁用）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以更改为分配的帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务，但服务不能启用或启动。 将 SKU 从 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 升级到 Express 以外的版本后，不能自动启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务，但可以在需要时通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器以及将服务启动模式更改为“手动”或“自动”来启用该服务。  
+     在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装期间， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务被配置为使用 Network Service 帐户（但已禁用）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以更改用于分配的帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务，但该服务不能启用或启动。 将 SKU 从 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 升级到 Express 以外的版本后，不能自动启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务，但可以在需要时通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器以及将服务启动模式更改为“手动”或“自动”来启用该服务。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36124164"
     >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
     >   
     >  -   **Windows 10**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager，请在**起始页**，键入 SQLServerManager12.msc (有关[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 对于早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将 12 替换为较小的数字。 单击 SQLServerManager12.msc 打开配置管理器。 要固定配置管理器起始页或任务栏中，右键单击 SQLServerManager12.msc，，然后单击**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**固定到任务栏**。  
+    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，然后在**起始页**，键入 SQLServerManager12.msc (对于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 对于早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]12 替换为较小的数字。 单击 SQLServerManager12.msc 会打开配置管理器。 若要固定到起始页或任务栏配置管理器，右键单击 SQLServerManager12.msc，然后依次**打开文件位置**。 在 Windows 文件资源管理器中，右键单击 SQLServerManager12.msc，，然后单击**固定到开始屏幕**或**锁定到任务栏**。  
     > -   **Windows 8**：  
-    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager，请在**搜索**超级按钮下**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
+    >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，请在**搜索**超级按钮**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“SQL Server 服务”**。  
   

@@ -1,5 +1,5 @@
 ---
-title: 合并联接转换编辑器 |Microsoft 文档
+title: 合并联接转换编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f548972d99242a4bc3d3423eeed748de2c31704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 209b6b64e200503144fb47e80d2f4e7c783e1db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300477"
 ---
 # <a name="merge-join-transformation-editor"></a>合并联接转换编辑器
   可以使用 **“合并联接转换编辑器”** 对话框指定联接类型、联接列和输出列，以合并通过联接组合的两个输入。  
@@ -53,7 +53,7 @@ ms.locfileid: "36125112"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [合并和合并联接转换对数据进行排序](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [通过使用合并联接转换扩展数据集](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [合并转换](data-flow/transformations/merge-transformation.md)   
  [Union All 转换](data-flow/transformations/union-all-transformation.md)  

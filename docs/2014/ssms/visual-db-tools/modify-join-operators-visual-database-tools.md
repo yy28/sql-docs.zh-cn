@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87174d9f5c13ebc29252076db2f919445181aa6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 865eee3e48d99914e2f04ad0ae59e42443447f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304947"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改联接运算符 (Visual Database Tools)
   默认情况下， [查询和视图设计器](visual-database-tools.md) 使用等号（同等联接）联接表，等号会对两个联接列中的值进行匹配。 如果需要，您可以更改用于对联接列中的值进行比较的运算符。  
@@ -37,8 +37,8 @@ ms.locfileid: "36127626"
 3.  在“联接”对话框中，选择一个新运算符。  
   
 ## <a name="see-also"></a>请参阅  
- [自动联接表&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [手动联接表&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [自动联接表&#40;可视化数据库工具&#41;](join-tables-automatically-visual-database-tools.md)   
+ [手动联接表&#40;可视化数据库工具&#41;](join-tables-manually-visual-database-tools.md)   
  [使用联接进行查询 (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -19,13 +19,13 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8bd434ee91f53e747b6291d6c718f9e073f8af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd5e04688dcea2b43d7093a73b828ba58ff1460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292827"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 表达式
   表达式是生成单个数据值的符号（标识符、文字、函数和运算符）的组合。 简单的表达式可以是单个常量、变量或函数。 更多情况下，表达式较为复杂，会使用多个运算符和函数，并且引用多个列和变量。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，表达式可以用于定义 CASE 语句的条件，创建和更新数据列中的值，为变量赋值，在运行时更新或填充属性，定义优先约束中的约束，以及提供 For 循环容器所使用的表达式。  
@@ -47,7 +47,7 @@ ms.locfileid: "36128572"
   
 -   变量可以使用表达式来设置其值。 例如，GETDATE() 可以将变量的值设置为当前日期。  
   
--   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 使用优先约束中的表达式的计算结果必须为`true`或`false`。 例如，表达式 @A > @B 比较两个用户定义的变量，以确定是否运行受约束任务。  
+-   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 优先约束中使用的表达式的计算结果必须为`true`或`false`。 例如，表达式 @A > @B 比较两个用户定义的变量，以确定是否运行受约束任务。  
   
 -   For 循环容器可以使用表达式来生成循环结构使用的初始化语句、计算语句、增量语句。 例如，表达式 @Counter = 1 初始化循环计数器。  
   

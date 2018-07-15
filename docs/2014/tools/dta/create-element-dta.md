@@ -1,5 +1,5 @@
 ---
-title: 创建元素 (DTA) |Microsoft 文档
+title: 创建元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Create element (DTA)
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce464bc186e4e99d14cf17d0bc442abee0fed39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 33bb86a6c677affb8301d836a254284749a17fbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317377"
 ---
 # <a name="create-element-dta"></a>创建元素 (DTA)
   包含有关用户指定配置中的索引、统计信息或堆结构的信息。  
@@ -55,7 +55,7 @@ ms.locfileid: "36125049"
 |**子元素**|[索引元素&#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics` 元素 (请参阅[数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/)信息)<br /><br /> `Heap` 元素 (请参阅[数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/)信息)|  
   
 ## <a name="remarks"></a>Remarks  
- 在数据库引擎优化顾问 XML 架构中，此元素的名称为 **CreateTypecomplexType** 。 此元素用于为用户指定的配置创建索引、统计信息和堆结构。 请勿将此 `Create` 元素和其他可用于创建视图 (`CreateViewType`) 或分区 (`CreatePType`) 的其他类型混淆。 请参阅[数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/)有关这些其他信息`Create`元素类型。  
+ 在数据库引擎优化顾问 XML 架构中，此元素的名称为 **CreateTypecomplexType** 。 此元素用于为用户指定的配置创建索引、统计信息和堆结构。 请勿将此 `Create` 元素和其他可用于创建视图 (`CreateViewType`) 或分区 (`CreatePType`) 的其他类型混淆。 请参阅[数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/)有关其他信息`Create`元素类型。  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[用户指定配置 (DTA) 的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

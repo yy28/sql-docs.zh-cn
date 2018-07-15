@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 375f268eecba7c519941f4743d7396346a863f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316057"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  
@@ -55,11 +55,11 @@ ms.locfileid: "36128586"
 -   输出的 `IsSorted` 属性，指示数据是否已排序。 此属性必须设置为`True`。  
   
     > [!IMPORTANT]  
-    >  值设置`IsSorted`属性`True`数据不排序。 此属性仅向下游组件提示数据之前已经过排序。  
+    >  值设置`IsSorted`属性设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。  
   
--   `SortKeyPosition`的输出列的属性，它指示列是否已排序、 列的排序顺序和多个列的排序顺序的序列。 必须为已排序数据的每一列设置此属性。  
+-   `SortKeyPosition`输出列的属性，指示列是否已排序、 列的排序顺序以及多个列的排序顺序的序列。 必须为已排序数据的每一列设置此属性。  
   
- 如果使用排序转换对数据进行排序，则排序转换将按合并转换或合并联接转换的要求设置这两个属性。 排序转换的设置，即`IsSorted`到其输出的属性`True`，并将设置`SortKeyPosition`其输出列属性。  
+ 如果使用排序转换对数据进行排序，则排序转换将按合并转换或合并联接转换的要求设置这两个属性。 排序转换的设置，即`IsSorted`到其输出的属性`True`，并设置`SortKeyPosition`其输出列的属性。  
   
  但是，如果不使用排序转换对数据进行排序，则必须对源或上游转换手动设置这些排序属性。 若要对源或上游转换手动设置这些排序属性，请使用以下过程。  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36128586"
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击**\<组件名称 > 输出**，并设置`IsSorted`属性`True`。  
+6.  单击**\<组件名称 > 输出**，并设置`IsSorted`属性设置为`True`。  
   
     > [!NOTE]  
-    >  如果你手动设置`IsSorted`属性将输出发送到`True`，并且数据未排序，则那里可能丢失数据或在下游合并联接转换的错误数据比较运行包时。  
+    >  如果你手动设置`IsSorted`到输出属性`True`和数据未排序，那里可能会丢失数据或下游合并联接转换的错误数据比较运行包时。  
   
 7.  展开 **“输出列”**。  
   
-8.  单击你想要指示的列进行排序，并设置其`SortKeyPosition`属性通过遵循这些准则的非零整数值：  
+8.  单击你想要表示的列进行排序，并设置其`SortKeyPosition`属性和非零整数值遵循以下准则：  
   
     -   该整数值必须表示一个数值序列，从 1 开始，并按 1 递增。  
   
@@ -96,13 +96,13 @@ ms.locfileid: "36128586"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     对于此语句中，将设置`SortKeyPosition`属性为每个列，如下所示：  
+     对于此语句，将设置`SortKeyPosition`属性的每个列，如下所示：  
   
     -   将 ColumnA 的 `SortKeyPosition` 属性设置为 1。 这表示 ColumnA 是第一个要排序的列，并且是以升序排序。  
   
     -   将 ColumnB 的 `SortKeyPosition` 属性设置为 -2。 这表示 ColumnB 是第二个要排序的列，并且是以降序排序  
   
-    -   设置`SortKeyPosition`ColumnC 的为 3 的属性。 这表示 ColumnC 是第三个要排序的列，并且是以升序排序。  
+    -   设置`SortKeyPosition`属性 ColumnC 设置为 3。 这表示 ColumnC 是第三个要排序的列，并且是以升序排序。  
   
 9. 对每个已排序的列，重复步骤 8。  
   
@@ -115,6 +115,6 @@ ms.locfileid: "36128586"
  [合并联接转换](merge-join-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
- [数据流任务]((../../control-flow/data-flow-task.md)  
+ [数据流任务](../../control-flow/data-flow-task.md)  
   
   

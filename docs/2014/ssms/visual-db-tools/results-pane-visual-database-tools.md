@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - result sets [SQL Server], queries
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a0923c3c8fd27764e01e1656f95fef0a9deaf4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 911f9eaa294b88ce9c773493f3eed9824a12ae7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321677"
 ---
 # <a name="results-pane-visual-database-tools"></a>“结果”窗格 (Visual Database Tools)
   “结果”窗格显示最近执行的 SELECT 查询的结果。 （其他类型查询的结果会在消息框中显示。）若要打开“结果”窗格，请打开或创建一个查询或视图，或者返回某个表的数据。 如果默认情况下不显示“结果”窗格，请在 **“查询设计器”** 菜单中，指向 **“窗格”**，再单击 **“结果”**。  
@@ -67,11 +67,11 @@ ms.locfileid: "36128016"
  如果某个查询发生更改，则在“结果”窗格的右下角会出现一个警报图标和文本“查询已更改”。 该图标在窗格的左上角反复出现。  
   
 ## <a name="see-also"></a>请参阅  
- [创建查询&#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [运行查询&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [关系图窗格&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [条件窗格&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [创建查询&#40;可视化数据库工具&#41;](create-queries-visual-database-tools.md)   
+ [运行查询&#40;可视化数据库工具&#41;](run-queries-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [关系图窗格&#40;可视化数据库工具&#41;](diagram-pane-visual-database-tools.md)   
+ [条件窗格&#40;可视化数据库工具&#41;](criteria-pane-visual-database-tools.md)   
  [使用“结果”窗格中的数据 (Visual Database Tools)](results-pane-visual-database-tools.md)  
   
   

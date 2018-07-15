@@ -1,5 +1,5 @@
 ---
-title: Location 元素 (XMLA) |Microsoft 文档
+title: Location 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 51b0838b9843658b4081f9464c63274631ed74be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295387"
 ---
 # <a name="location-element-xmla"></a>Location 元素 (XMLA)
-  包含父级的信息的远程服务器[备份](../xml-elements-commands/backup-element-xmla.md)，[还原](../xml-elements-commands/restore-element-xmla.md)，或[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
+  包含信息的远程服务器的父[备份](../xml-elements-commands/backup-element-xmla.md)，[还原](../xml-elements-commands/restore-element-xmla.md)，或[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36129063"
 |[同步](../xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](connectionstring-element-xmla.md)， [DataSourceID](datasourceid-element-xmla.md)， [DataSourceType](type-element-xmla.md)，[文件夹](folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 有关`Backup`命令，`Location`元素提供有关创建的远程实例的远程备份文件信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+ 有关`Backup`命令，`Location`元素提供有关创建的远程实例的远程备份文件的信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  对于 `Restore` 命令，`Location` 元素提供有关标识和连接到远程 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的信息，以及用于还原该远程实例上的远程分区的远程备份文件的信息。  
   

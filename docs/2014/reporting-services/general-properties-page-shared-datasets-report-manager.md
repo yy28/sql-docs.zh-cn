@@ -1,5 +1,5 @@
 ---
-title: 常规属性页中，共享数据集 （报表管理器） |Microsoft 文档
+title: 常规属性页上，共享数据集 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290303"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>共享数据集的“常规”属性页（报表管理器）
   使用“共享数据集”页可以查看和管理共享数据集项的属性。  
@@ -59,7 +59,7 @@ ms.locfileid: "36128936"
  从报表服务器数据库中删除共享数据集。 删除共享数据集将停用所有报表或缓存的版本。 若要重新激活报表，必须在报表创作工具中打开每个报表，用相同的名称和相同的字段集合指定数据集。 或者，可以更新每个数据区域引用以使用另一个具有相同字段集合的数据集。  
   
  **“移动”**  
- 在报表服务器文件夹层次结构中重新定位共享数据集。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。 有关详细信息，请参阅[移动项页面&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ 在报表服务器文件夹层次结构中重新定位共享数据集。 单击此按钮将打开“移动项”页，可以在该页浏览文件夹以选择新的文件夹位置。 有关详细信息，请参阅[移动项页&#40;报表管理器&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
   
  **下载**  
  提取共享数据集定义的副本。 根据计算机上所定义的文件关联的不同，文件将在 Visual Studio 或其他应用程序中打开。 大多数情况下，共享数据集将以 XML 文件形式打开。  
@@ -72,7 +72,7 @@ ms.locfileid: "36128936"
  [内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [缓存刷新选项&#40;报表管理器&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
- [缓存的页上，共享数据集&#40;报表管理器&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
+ [缓存页，共享数据集&#40;报表管理器&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [管理共享数据集](report-data/manage-shared-datasets.md)   
  [缓存共享数据集&#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   

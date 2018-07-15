@@ -1,5 +1,5 @@
 ---
-title: 包备份和还原 （SSIS 服务） |Microsoft 文档
+title: 包备份和还原 （SSIS 服务） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, backup and restore
 - backing up packages [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0effe7b8c6b18967d9d783f082614b9f039066d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aab0068df8906640acb5b8282f1b80d5e966c2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322587"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>包备份和还原（SSIS 服务）
     
@@ -41,7 +41,7 @@ ms.locfileid: "36126355"
   
 -   [备份和还原系统数据库 (SQL Server)](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括**dtutil**命令提示实用工具 (dtutil.exec)，你可以使用管理包。 有关详细信息，请参阅 [dtutil Utility](dtutil-utility.md)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括**dtutil**命令提示实用工具 (dtutil.exec) 可用于管理包。 有关详细信息，请参阅 [dtutil Utility](dtutil-utility.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
  包所包括的所有配置文件都存储在文件系统中。 在备份 msdb 数据库时并不会备份这些文件；因此，你应该确保定期备份配置文件，以便保护保存到 msdb 中的包。 若要将配置包括在 msdb 数据库的备份中，应该考虑使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型，而不使用基于文件的配置。  

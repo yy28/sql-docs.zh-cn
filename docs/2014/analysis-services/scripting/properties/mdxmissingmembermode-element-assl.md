@@ -1,5 +1,5 @@
 ---
-title: MdxMissingMemberMode 元素 (ASSL) |Microsoft 文档
+title: MdxMissingMemberMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MdxMissingMemberMode element
 ms.assetid: aca6130b-5fb8-4fa1-af8b-8e1ef361926f
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feba98157b8e3f6048e0513d7f8b11bb165ca45c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bf066a836d329096d36366b3d4a5f2835957fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319407"
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>MdxMissingMemberMode 元素 (ASSL)
   确定如何处理多维表达式 (MDX) 语句中缺少的成员。  
@@ -68,7 +68,7 @@ ms.locfileid: "36128196"
 |*错误*|如果遇到缺少的成员，则会引发错误。|  
 |*默认*|忽略缺少的成员。|  
   
- 对应于的父元素`MdxMissingMemberMode`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素`MdxMissingMemberMode`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维表达式&#40;MDX&#41;引用](/sql/mdx/multidimensional-expressions-mdx-reference)   

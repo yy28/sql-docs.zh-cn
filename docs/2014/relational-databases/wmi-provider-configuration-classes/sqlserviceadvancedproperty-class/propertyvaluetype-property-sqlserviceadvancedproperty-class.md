@@ -1,5 +1,5 @@
 ---
-title: PropertyValueType 属性 （SqlServiceAdvancedProperty 类） |Microsoft 文档
+title: PropertyValueType 属性 （SqlServiceAdvancedProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyValueType property
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4f5e2f9832de32cd86e3836860ea68c367247e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f12b5695eb17529d9bc80e1262cf422b546d7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276133"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>PropertyValueType 属性（SqlServiceAdvancedProperty 类）
   获取属性的数据类型。  

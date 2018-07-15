@@ -1,5 +1,5 @@
 ---
-title: IsKey 元素 (ASSL) |Microsoft 文档
+title: IsKey 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - IsKey element
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf2b45a6cc6b7963a894bea8316f5080676fef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 755d401f304b04e675f343911ef127050552b789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288023"
 ---
 # <a name="iskey-element-assl"></a>IsKey 元素 (ASSL)
-  指示列是否提供的密钥，这种情况在[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
+  指示列是否提供中的事例键[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36129983"
 ## <a name="remarks"></a>Remarks  
  可以将一个或多个列指定为每个嵌套表结构级别的键列。  
   
- 对应于的父元素`IsKey`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 父级对应的元素`IsKey`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 创建部署实用工具 |Microsoft 文档
+title: 创建部署实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7e51388856f6bbd63382410100b5655194ec3d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273113"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署包的第一步是为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目创建一个部署实用工具。 部署实用工具是一个文件夹，其中包含在不同服务器上部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包所需的文件。 部署实用工具是在存储 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的计算机上创建的。  
@@ -67,6 +67,6 @@ ms.locfileid: "36138044"
  [包配置](../../2014/integration-services/package-configurations.md)   
  [创建包配置](../../2014/integration-services/create-package-configurations.md)   
  [使用部署实用工具部署包](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

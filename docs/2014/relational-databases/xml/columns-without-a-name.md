@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns without
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 734f9b099976ce3498fcc1f355e034e1f89195fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 723ee2f2c9d9da6665c6a9a4b530e3deb247ff2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292157"
 ---
 # <a name="columns-without-a-name"></a>没有名称的列
-  任何没有名称的列都将成为内联列。 例如，未指定列别名的计算列或嵌套标量查询将生成没有名称的列。 如果此列属于`xml`插入类型，该数据类型实例的内容。 否则，列内容将作为文本节点插入。  
+  任何没有名称的列都将成为内联列。 例如，未指定列别名的计算列或嵌套标量查询将生成没有名称的列。 如果该列属于`xml`类型，该数据类型实例的内容插入。 否则，列内容将作为文本节点插入。  
   
 ```  
 SELECT 2+2  

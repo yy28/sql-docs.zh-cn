@@ -1,5 +1,5 @@
 ---
-title: 重命名多维数据库 (Analysis Services) |Microsoft 文档
+title: 重命名多维数据库 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming databases
 ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 94b3adfb8c85509e05bf9df8f69cfef715bbe417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 192582ec7724e16b0c02d499fac89798c4c17cd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312657"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重命名多维数据库 (Analysis Services)
   更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库名称的方式取决于如何连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 若要更改现有数据库的名称，则必须在联机模式下进行连接。 若要更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中要进行实例化的对象所在数据库的名称，必须以项目模式进行连接。  
@@ -55,7 +55,7 @@ ms.locfileid: "36128203"
 -   右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并且编辑 Name 属性。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)   
+ [在 Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)   
  [设置多维数据库属性&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
  [配置 Analysis Services 项目属性&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [部署 Analysis Services 项目&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  

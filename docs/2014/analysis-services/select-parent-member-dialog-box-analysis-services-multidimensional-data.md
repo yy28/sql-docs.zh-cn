@@ -1,5 +1,5 @@
 ---
-title: 选择父成员对话框 (Analysis Services-多维数据) |Microsoft 文档
+title: 选择父成员对话框 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.saveparentmemberdilaog.f1
 helpviewer_keywords:
 - Select Parent Member dialog box
 ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cf6bc82a1b56d83a92bae3023a9fc09142ce6c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b61d285a7e08c5e91a0f9b215fd6ecd18951515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224157"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>“选择父成员”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “选择父成员” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为计算成员选择父成员。 通过在多维数据集设计器的 **“计算”** 选项卡上单击 **“计算成员窗体编辑器”** 窗格中的 **“更改”** ，可以显示 **“选择父成员”** 对话框。  

@@ -1,5 +1,5 @@
 ---
-title: 指定合并表项目 （复制 TRANSACT-SQL 编程） 的处理顺序 |Microsoft 文档
+title: 指定合并表项目 （复制 TRANSACT-SQL 编程） 的处理顺序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], article processing order
 ms.assetid: 9fe576a2-f5fb-4fdf-bd7d-cb322021b669
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2b83175d2b480b3855d01e89f6e500a9ebe91cc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c2327f90e3ff8b8ad33d7766fec48596d4461611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299929"
 ---
 # <a name="specify-the-processing-order-of-merge-table-articles-replication-transact-sql-programming"></a>指定合并表项目的处理顺序（复制 Transact-SQL 编程）
   通过使用合并复制，您可以指定在同步过程中合并代理处理项目的顺序。 您可以在使用复制存储过程创建项目时以编程方式为每个项目指定顺序。 项目按值的由低到高顺序进行处理。 如果两个项目具有相同值，将对其进行并发处理。 有关详细信息，请参阅[指定合并项目的处理顺序](../merge/specify-the-processing-order-of-merge-articles.md)。  

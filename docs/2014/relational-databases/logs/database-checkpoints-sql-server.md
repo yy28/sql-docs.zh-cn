@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
 - transaction logs [SQL Server], checkpoints
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38efa1841deede4e56917028b04bdaba7dd00c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4226f66d19a37bc352a62d8f0113c604c4ca67f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303947"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
   本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检查点的概述。  “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。  
@@ -48,13 +48,13 @@ ms.locfileid: "36127298"
   
 |“属性”|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|Description|  
 |----------|----------------------------------|-----------------|  
-|自动|EXEC sp_configure **`recovery interval`'，'*`seconds`***|在后台以满足时间上限建议的自动颁发`recovery interval`服务器配置选项。 运行自动检查点直到完成。  基于未完成的写操作数和[!INCLUDE[ssDE](../../includes/ssde-md.md)]是否检测到写入滞后时间超过 20 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
+|自动|EXEC sp_configure **'`recovery interval`'，'*`seconds`***|在后台以满足时间上限由建议自动发出`recovery interval`服务器配置选项。 运行自动检查点直到完成。  基于未完成的写操作数和[!INCLUDE[ssDE](../../includes/ssde-md.md)]是否检测到写入滞后时间超过 20 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
 |间接|更改数据库… SET TARGET_RECOVERY_TIME =target_recovery_time { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 默认目标恢复时间为 0，这将导致对数据库使用自动检查点试探方法。 如果您使用 ALTER DATABASE 并将 TARGET_RECOVERY_TIME 设置为 >0，则将使用此值替代为服务器实例指定的恢复间隔。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql)。|  
 |内部|无。|由各种服务器操作（如备份和数据库快照创建）发出，以确保磁盘映像与日志的当前状态匹配。|  
   
 > [!NOTE]  
->  `-k` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]高级的设置选项允许数据库管理员来调控检查点 I/O 行为基于某些检查点类型 I/O 子系统的吞吐量。 `-k`安装程序选项适用于自动检查点和任何未调控的手动和内部检查点。  
+>  `-k` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]高级的设置选项允许数据库管理员来调控检查点 I/O 行为基于某些检查点类型 I/O 子系统的吞吐量。 `-k`设置选项适用于自动检查点和任何未调控的手动和内部检查点。  
   
  对于自动、手动和内部检查点，在数据库恢复期间只有在最新检查点后所做的修改需要前滚。 这将减少恢复数据库所需的时间。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36127298"
   
   
 ###  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 和“recovery interval”选项的相互影响  
- 下表总结了服务器范围之间的交互**sp_configure'`recovery interval`** 设置和特定于数据库的 ALTER DATABASE... TARGET_RECOVERY_TIME 设置之间的相互影响。  
+ 下表总结了服务器端之间的交互**sp_configure'`recovery interval`** 设置和特定于数据库的 ALTER DATABASE... TARGET_RECOVERY_TIME 设置之间的相互影响。  
   
 |target_recovery_time|'recovery interval'|使用的检查点类型|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "36127298"
 |>0|不适用。|间接检查点，其目标恢复时间由 TARGET_RECOVERY_TIME 设置确定，以秒为单位。|  
   
 ###  <a name="AutomaticChkpt"></a> 自动检查点  
- 自动检查点发生每次的日志记录数达到最数[!INCLUDE[ssDE](../../includes/ssde-md.md)]估计中指定的时间内可以处理`recovery interval`服务器配置选项。 在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 自动检查点的频率取决于`recovery interval`高级服务器配置选项，它指定给定的服务器实例应使用期间重新启动系统恢复数据库的最大时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库发出一个检查点命令。 自动检查点之间的时间间隔可以变化很大。 具有大量事务工作负荷的数据库的检查点生成频率将高于主要用于只读操作的数据库的检查点生成频率。  
+ 自动检查点发生每个时间的日志记录数达到的数量[!INCLUDE[ssDE](../../includes/ssde-md.md)]估计中指定的时间内可以处理`recovery interval`服务器配置选项。 在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 自动检查点的频率取决于`recovery interval`高级服务器配置选项，它指定应使用给定的服务器实例在系统重新启动恢复数据库的最大时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库发出一个检查点命令。 自动检查点之间的时间间隔可以变化很大。 具有大量事务工作负荷的数据库的检查点生成频率将高于主要用于只读操作的数据库的检查点生成频率。  
   
  此外，在简单恢复模式下，如果日志填充 70％，则自动检查点还将排队。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36127298"
   
   
 ####  <a name="PerformanceImpact"></a> 恢复间隔对恢复性能的影响  
- 针对联机事务处理 (OLTP) 系统使用短事务`recovery interval`是确定恢复时间的主要因素。 但是，`recovery interval`选项不影响撤消长时间运行事务时所需的时间。 恢复具有长时间运行事务的数据库可能需要更长时间指定在`recovery interval`选项。 例如，如果长时间运行事务需要两个小时来执行更新的服务器实例变为禁用前，实际的恢复时间远远超过`recovery interval`值恢复长的事务。 有关长时间运行的事务对恢复时间的影响的详细信息，请参阅 [事务日志 (SQL Server)](the-transaction-log-sql-server.md)。  
+ 对于联机事务处理 (OLTP) 系统使用短事务`recovery interval`是确定恢复时间的主要因素。 但是，`recovery interval`选项不影响撤消长时间运行事务所需的时间。 恢复具有长时间运行事务的数据库可能需要更长的时间比指定中`recovery interval`选项。 例如，如果长时间运行事务花费了两个小时来执行更新，服务器实例禁用前，则实际的恢复需要相当长的时间比`recovery interval`要恢复长的事务值。 有关长时间运行的事务对恢复时间的影响的详细信息，请参阅 [事务日志 (SQL Server)](the-transaction-log-sql-server.md)。  
   
  通常情况下，默认值提供了最佳恢复性能。 但是，在以下情况下更改恢复间隔可能会提高性能：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36127298"
   
 -   如果您注意到频繁的检查点操作损害了数据库的性能。  
   
- 如果您决定增大 `recovery interval` 设置，我们建议一点一点逐渐增大该值并评估每次增大对恢复性能的影响。 这种方法是重要因为作为`recovery interval`设置的增大，数据库恢复需要次数多长时间才能完成。 例如，如果你更改`recovery interval`10，恢复需要大约 10 次长时间才能完成比`recovery interval`设置为零。  
+ 如果您决定增大 `recovery interval` 设置，我们建议一点一点逐渐增大该值并评估每次增大对恢复性能的影响。 这种方法是重要因为作为`recovery interval`设置的增大，数据库恢复需要的次数多长时间才能完成。 例如，如果您更改`recovery interval`10，恢复需要大约 10 个更长时间才能完成比`recovery interval`设置为零。  
   
   
 ###  <a name="IndirectChkpt"></a> 间接检查点  

@@ -1,5 +1,5 @@
 ---
-title: 查看项目历史记录 |Microsoft 文档
+title: 查看项目历史记录 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing project history
 - version control services [SQL Server], project history
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], projects
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99c3a27a74d41efc895489a8690d735dadd3b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e10e920a5c60d389eaec6a5af06e4597d9667967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287843"
 ---
 # <a name="view-project-history"></a>查看项目历史
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) 项目的历史记录包括对每个项目文件执行的所有操作（包括文件创建、添加、删除和恢复）的列表。  
@@ -38,9 +38,9 @@ ms.locfileid: "36126677"
   
 1.  在解决方案资源管理器中，选择项目。  
   
-2.  上**文件**菜单上，指向**源代码管理**单击**查看历史记录**。  
+2.  上**文件**菜单，依次指向**源代码管理**然后单击**查看历史记录**。  
   
-3.  在**的历史记录**\<项目 > 对话框框中，执行任何以下操作：  
+3.  在中**的历史记录**\<项目 > 对话框框中，执行以下操作之一：  
   
     -   查看所选文件的源代码管理系统副本。  
   

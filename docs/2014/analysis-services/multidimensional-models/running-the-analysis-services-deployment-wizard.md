@@ -1,5 +1,5 @@
 ---
-title: 运行 Analysis Services 部署向导 |Microsoft 文档
+title: 运行 Analysis Services 部署向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, running
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b3a453586afdc51c77afc7ae654e3b044e684d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcc326b21515bbfd6c8c325ca91685c00fa96c93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323167"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>运行 Analysis Services 部署向导
   在使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导部署 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，可以按照以下方法运行该向导：  
@@ -44,10 +44,10 @@ ms.locfileid: "36128419"
   
      — 或 —  
   
--   在**项目**文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，双击*\<项目名称 >*.asdatabase 文件。  
+-   在中**项目**的文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，双击*\<项目名称 >*.asdatabase 文件。  
   
     > [!NOTE]  
-    >  如果找不到*\<项目名称 >*.asdatabase 文件，请尝试使用搜索和指定 *.asdatabase。  
+    >  如果找不到*\<项目名称 >*.asdatabase 文件，请尝试使用搜索，并指定 *.asdatabase。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>在命令提示符下运行 Analysis Services 部署向导  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导也可以在命令提示符下运行。 在命令提示符下运行该向导时，应提供 .asdatabase 文件的完整路径，并使用下列模式之一运行该向导：  
@@ -55,17 +55,17 @@ ms.locfileid: "36128419"
  **应答文件模式**  
  使用应答文件模式，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中生成 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目时，向导允许你交互式更改最初生成的输入文件。 并且该向导在生成 XMLA 部署脚本之前保存更改过的这些输入文件。 这些更改过的输入文件便成为向导下次运行时的新起点。  
   
- 若要在应答文件模式运行向导，使用 **/a**切换。  
+ 若要以应答文件模式运行向导，请使用 **/a**切换。  
   
  **静默模式**  
  使用静默模式，向导基于输入文件中的信息以静默、无人参与的模式运行部署。  
   
- 若要在静默模式下运行该向导，使用 **/s**切换。 如果以静默模式运行向导，则消息将输出至控制台或日志文件（如果有）。  
+ 若要以无提示模式运行向导，请使用 **/s**切换。 如果以静默模式运行向导，则消息将输出至控制台或日志文件（如果有）。  
   
  **输出模式**  
  使用输出模式，向导将基于输入文件生成 XMLA 部署脚本供以后执行。  
   
- 若要在输出模式中运行该向导，使用 **/o**切换，并提供输出文件的名称。  
+ 若要以输出模式运行向导，请使用 **/o**开关并提供输出文件名。  
   
  有关此类命令行开关的详细信息，请参阅[使用部署实用工具部署模型解决方案](deploy-model-solutions-with-the-deployment-utility.md)。  
   

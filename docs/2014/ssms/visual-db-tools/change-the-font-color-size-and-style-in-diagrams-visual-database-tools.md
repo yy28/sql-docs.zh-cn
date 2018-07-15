@@ -1,5 +1,5 @@
 ---
-title: 更改字体颜色、 大小和关系图 (Visual Database Tools) 中的样式 |Microsoft 文档
+title: 更改字体颜色、 大小和样式在关系图 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], changing text size
 - text in database diagrams
 - appearance of database diagrams
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96bd9cddc0821887982f26485f38be8370fba9c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a8ecb71fc2a9dce37bf3797da0326c16d5965afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232397"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>在关系图中更改字体颜色、大小和样式（可视化数据库工具）
   您可以通过更改字体颜色、大小和样式，自定义文本在数据库关系图中的显示方式。 当修改新关系图和现有关系图时，可对这些关系图应用上述更改。  

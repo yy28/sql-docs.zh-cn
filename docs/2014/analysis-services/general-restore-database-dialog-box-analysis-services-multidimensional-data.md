@@ -1,5 +1,5 @@
 ---
-title: 常规 （还原数据库对话框） (Analysis Services-多维数据) |Microsoft 文档
+title: 常规 （还原数据库对话框） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.f1
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4969ceb840f6c3d80b4d0854d582e695c109806b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e8ba4b11509b73dfc1b529e89b612549de7308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321317"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>常规（“还原数据库”对话框）（Analysis Services - 多维数据）
   在 **中，可以使用** “还原数据库” **对话框的** “常规” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 页指定在还原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库时使用的备份文件和常规设置。  
@@ -32,7 +32,7 @@ ms.locfileid: "36126418"
 > [!NOTE]  
 >  还原现有数据库之后，还原了此数据库的用户可能会失去对还原后的数据库的访问权限。 如果在执行备份时用户不是服务器角色成员或者不是拥有完全控制（管理员）权限的数据库角色成员，则会出现这种失去访问权限的情形。  
   
- **在还原数据库对话框中显示常规页**  
+ **若要在还原数据库对话框中显示常规页**  
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹，或“对象资源管理器”中的数据库，单击“还原”，然后在“选择页”下单击“常规”。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36126418"
   
 |选项|Description|  
 |------------|-----------------|  
-|**将所有复制**|还原备份文件中包含的数据库角色以及与这些角色关联的用户帐户。|  
+|**全部复制**|还原备份文件中包含的数据库角色以及与这些角色关联的用户帐户。|  
 |**跳过成员身份**|还原备份文件中包含的数据库角色，但不还原与这些角色关联的用户帐户。|  
   
  **密码**  

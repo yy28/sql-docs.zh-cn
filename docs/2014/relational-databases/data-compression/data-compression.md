@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -23,18 +22,18 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 986f0e94559804539889eeb1e7618327eee68165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320407"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持行和页压缩的行存储表和索引，并支持针对列存储表和索引的列存储索引和列存储存档压缩。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持针对行存储表和索引，row 和 page 压缩，并且支持针对列存储表和索引的列存储索引和列存储存档压缩。  
   
  对于行存储表和索引，使用数据压缩功能可帮助减小数据库的大小。 除了节省空间之外，数据压缩还可以帮助提高 I/O 密集型工作负荷的性能，因为数据存储在更少的页中，查询需要从磁盘读取的页更少。 但是，在与应用程序交换数据时，在数据库服务器上需要额外的 CPU 资源来压缩和解压缩数据。 您可以在以下数据库对象上配置行和页压缩：  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36128563"
   
 -   通过压缩可在一页上存储更多的行，但不会更改表或索引的最大行大小。  
   
--   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，表具有列 c1`char(8000)`和 c2`char(53)`不能压缩由于额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
+-   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，表具有列 c1`char(8000)`和 c2`char(53)`无法压缩，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
   
     -   固定长度类型的更新必须始终成功。  
   
@@ -171,9 +170,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>元数据  
  下面的系统视图包含有关聚集索引的数据压缩的信息：  
   
--   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`和`type_desc`列包括 CLUSTERED COLUMNSTORE 和非聚集列存储。  
+-   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`并`type_desc`列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) –`data_compression`和`data_compression_desc`列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+-   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) –`data_compression`并`data_compression_desc`列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
   
  [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 过程不会应用在列存储索引中。  
   

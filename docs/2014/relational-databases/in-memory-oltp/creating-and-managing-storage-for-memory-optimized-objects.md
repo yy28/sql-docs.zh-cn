@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 61
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b619d8e97c18d002c5e5588305e4889234db49c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 324143732c9ae7830e1fb588cb0793795acb6f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285233"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>创建和管理用于内存优化的对象的存储
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之中，这可让你在同一数据库中同时拥有内存优化表和（传统的）基于磁盘的表。 但是，内存优化表的存储结构不同于基于磁盘的表。  
@@ -36,7 +36,7 @@ ms.locfileid: "36127291"
   
  内存优化表的存储具有以下键属性：  
   
--   所有内存优化表都映射到内存优化文件组中。 此文件组使用的 filestream 文件组进行构建。  
+-   所有内存优化表都映射到内存优化文件组。 使用 filestream 文件组来生成此文件组。  
   
 -   没有任何页，且数据作为行保留。  
   

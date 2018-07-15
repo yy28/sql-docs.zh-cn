@@ -1,5 +1,5 @@
 ---
-title: 在嵌套 select 语句和子多维数据集中计算成员 |Microsoft 文档
+title: 计算在嵌套 select 语句和子多维数据集的成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323187"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
   在以前的版本中，在嵌套 select 或子多维数据集中不允许使用计算成员。 但从 SQL Server 2008 开始，在连接属性中允许使用和启用计算成员。 此外，在 SQL Server 2008 R2 的嵌套 select 和子多维数据集中，还引入了针对计算成员的一个新行为。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员  
- `SubQueries`中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROPMSMDSUBQUERIES`中的属性[支持 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定义的行为或计算成员的宽限期或计算在嵌套 select 语句或子多维数据集上的设置。 在本文档的上下文中，如果没有特别指明，则嵌套 select 表示嵌套 select 和子多维数据集。  
+ `SubQueries`中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROPMSMDSUBQUERIES`中的属性[支持的 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定义的行为或允许计算成员或计算在嵌套 select 语句或子多维数据集上的设置。 在本文档的上下文中，如果没有特别指明，则嵌套 select 表示嵌套 select 和子多维数据集。  
   
  SubQueries 属性允许以下值。  
   
@@ -128,6 +128,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [在查询中的嵌套 select 语句](subselects-in-queries.md)   
- [支持 XMLA 属性&#40;XMLA&#41;](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [支持的 XMLA 属性&#40;XMLA&#41;](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

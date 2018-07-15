@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a568423d865e9ffea07f4e4487ea6d3680e2b417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2693c20a4b1e26730085e9f84fcf3f920cf50314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310907"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的参数
   参数是在从“工具”菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”对话框将外部工具（如记事本）添加到“工具”菜单。  
@@ -47,7 +47,7 @@ ms.locfileid: "36125996"
 |**解决方案目录**|$(SolutionDir)|当前解决方案的目录（以驱动器 + 路径的形式定义）。|  
 |**解决方案文件名**|$(SolutionFileName)|当前解决方案的文件名（以驱动器 + 路径 + 文件名形式定义）。|  
   
- <sup>1</sup>当前行，当前列中或当前文本为基础的文本编辑器中光标的位置状态栏中所示。  
+ <sup>1</sup>当前行、 当前列中或当前文本基于游标在文本编辑器中的位置，在状态栏中所示。  
   
 ## <a name="see-also"></a>请参阅  
  [外部工具对话框](external-tools-dialog-box.md)   

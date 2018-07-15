@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9671f72321630dc53243d695dca7f943e4685e7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319789"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  
   
 > [!NOTE]  
->  尽管您不能修改报表工具栏，但是可以配置报表 URL 的参数以在报表中隐藏工具栏。 隐藏报表工具栏的详细信息，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。  
+>  尽管您不能修改报表工具栏，但是可以配置报表 URL 的参数以在报表中隐藏工具栏。 有关隐藏报表工具栏的详细信息，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。  
   
 ## <a name="report-toolbar"></a>报表工具栏  
  报表工具栏为 HTML 呈现扩展插件中所呈现的报表提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。  

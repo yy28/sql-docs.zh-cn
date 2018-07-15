@@ -1,5 +1,5 @@
 ---
-title: LastUpdate 元素 (ASSL) |Microsoft 文档
+title: LastUpdate 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - LastUpdate element
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a0cc42c5853e34ed4b1525cde528aa349f67ae7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01429b3086f6de62b7ad0b921ad89f042c341891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302777"
 ---
 # <a name="lastupdate-element-assl"></a>LastUpdate 元素 (ASSL)
-  包含一个只读的时间戳指示上次时间关联[数据库](../objects/database-element-assl.md)或任何主数据库包含的对象已更改。  
+  包含一个只读的时间戳，指示最后一个时间关联[数据库](../objects/database-element-assl.md)或数据库包含的主要对象的任何更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36128626"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`LastUpdate`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素`LastUpdate`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

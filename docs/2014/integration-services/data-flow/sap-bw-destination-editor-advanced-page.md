@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a95aebfde3b4feb803dd4f49fb70e5a2e099d447
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b622708d0e8e8eaeedf75488146fc09018348c51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237187"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 目标编辑器（“高级”页）
   可以使用“SAP BW 目标编辑器”的“高级”页设置高级设置，如包大小和超时信息。  

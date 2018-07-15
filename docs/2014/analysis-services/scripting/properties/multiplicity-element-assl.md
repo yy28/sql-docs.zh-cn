@@ -1,5 +1,5 @@
 ---
-title: 多重性元素 (ASSL) |Microsoft 文档
+title: Multiplicity 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ecb8a8b7ada49666d2b6144d1ba258a7c26b58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98eb9ba8186c395b598bff6a7ad2ea63ed101999
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261313"
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 元素 (ASSL)
   指示 RelationshipEnd 中的属性是位于关系的“一”方还是关系的“多”方。  
@@ -57,8 +57,8 @@ ms.locfileid: "36138279"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |*其中一个*|这是主键方。|  
-|*许多*|这是外键方。|  
+|*很多*|这是外键方。|  
   
- 对应于的允许值为枚举`role`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Multiplicity>。  
+ 与允许的值相对应的枚举`role`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Multiplicity>。  
   
   

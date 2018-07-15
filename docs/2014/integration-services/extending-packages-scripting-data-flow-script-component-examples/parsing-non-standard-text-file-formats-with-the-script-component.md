@@ -19,13 +19,13 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cbc0be5255b3345ba27297123981f2b0138e4437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c34669ffc14ee623b17549f588385886488ed02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287593"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用脚本组件分析非标准文本文件格式
   当源数据以非标准格式排列时，您可能会发现在一个脚本中合并所有分析逻辑要比将多个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 转换链接在一起以实现相同结果更方便。  
@@ -40,7 +40,7 @@ ms.locfileid: "36129504"
 ##  <a name="example1"></a> 示例 1：分析以行分隔的记录  
  本示例演示如何采用其中包含的每列数据显示在单独一行中的文本文件，并使用脚本组件对该文件进行分析，分析结果写入目标表。  
   
- 有关如何将使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[创建异步With the Script Component 转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 有关如何使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[创建异步使用脚本组件转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36129504"
   
 11. 在“脚本转换编辑器”的“输入列”页中，选择可用的单一输入列。  
   
-12. 上**输入和输出**页**脚本转换编辑器**，选择输出 0 并设置其`SynchronousInputID`为 None。 创建 5 个输出列，所有 [DT_STR] 类型字符串的长度为 32：  
+12. 上**输入和输出**页**脚本转换编辑器**，选择输出 0 并将其`SynchronousInputID`为 None。 创建 5 个输出列，所有 [DT_STR] 类型字符串的长度为 32：  
   
     -   FirstName  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36129504"
   
     -   StateProvince  
   
-13. 上**脚本**页**脚本转换编辑器**，单击**编辑脚本**然后输入中所示的代码`ScriptMain`类示例。 关闭脚本开发环境和“脚本转换编辑器”。  
+13. 上**脚本**页**脚本转换编辑器**，单击**编辑脚本**，然后输入代码中所示`ScriptMain`类的示例。 关闭脚本开发环境和“脚本转换编辑器”。  
   
 14. 向数据流添加 SQL Server 目标。 将该目标配置为使用 OLE DB 连接管理器和 RowDelimitedData 表。 将脚本组件的输出连接到此目标。  
   
@@ -198,7 +198,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  此示例仅供演示之用。 如果多次运行该示例，则会在目标表中插入重复的键值。  
   
- 有关如何将使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[创建异步With the Script Component 转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 有关如何使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[创建异步使用脚本组件转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
@@ -258,7 +258,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. 在“脚本转换编辑器”的“输入列”页中，选择可用的单一输入列。  
   
-12. 上**输入和输出**页**脚本转换编辑器**、 选择输出 0，将它重命名为 ParentRecords，并设置其`SynchronousInputID`为 None。 创建 2 个输出列：  
+12. 上**输入和输出**页**脚本转换编辑器**，选择输出 0，将其重命名为 ParentRecords，并设置其`SynchronousInputID`为 None。 创建 2 个输出列：  
   
     -   ParentID（主键），类型为四字节有符号整数 [DT_I4]  
   
@@ -351,7 +351,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

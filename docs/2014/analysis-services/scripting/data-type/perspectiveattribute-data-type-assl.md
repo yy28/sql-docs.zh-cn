@@ -1,5 +1,5 @@
 ---
-title: PerspectiveAttribute 数据类型 (ASSL) |Microsoft 文档
+title: PerspectiveAttribute 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveAttribute data type
 ms.assetid: bf4d45c1-e48d-4ada-bbab-49c3ac74948d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e6125aa11dedf6fe1eda706e136caf989e3d4c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2f27d082f4d0ff13f736d00a3f6d521e830c402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295557"
 ---
 # <a name="perspectiveattribute-data-type-assl"></a>PerspectiveAttribute 数据类型 (ASSL)
   定义一个基元数据类型，表示有关中的属性的信息[PerspectiveDimension](dimension-data-type-assl.md)元素。  
@@ -60,10 +60,10 @@ ms.locfileid: "36129079"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[批注](../collections/annotations-element-assl.md)， [AttributeHierarchyVisible](../properties/visible-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [DefaultMember](../objects/member-element-assl.md)|  
-|派生元素|[属性](../objects/attribute-element-assl.md)([属性](../collections/attributes-element-assl.md)集合[PerspectiveDimension](dimension-data-type-assl.md))|  
+|派生元素|[特性](../objects/attribute-element-assl.md)([特性](../collections/attributes-element-assl.md)的集合[PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd437c11712872df22ecadbf7f0ae0521c09c696
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2a058012e450dbb763e26bd7f9efb3ac45b8ec00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237167"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导部署只包含模型对象的包。 如果需要部署包含数据的包，请参阅 [使用 MDSModelDeploy 部署模型部署包](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
@@ -61,7 +61,7 @@ ms.locfileid: "36139079"
   
  **说明：**  
   
--   如果包中的订阅视图具有现有模型中的订阅视图同名，作为创建视图*modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
+-   如果包中的订阅视图现有模型中具有订阅视图同名，视图创建为*modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
   
 -   部署过程具有以下四个步骤：  
   

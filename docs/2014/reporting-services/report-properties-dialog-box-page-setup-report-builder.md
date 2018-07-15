@@ -1,5 +1,5 @@
 ---
-title: 报表属性对话框，页面设置 （报表生成器） |Microsoft 文档
+title: 报表属性对话框，页面设置 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9974b741f82d0347fe5a549dfa462bb3f973058d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51df7fe3664e3e35bf0fb4c45a0124481d5c6ce7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306887"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>“报表属性”对话框 ->“页面设置”（报表生成器）
   选择 **“报表属性”** 对话框中的 **“页面设置”** 可设置整个报表的页面选项。  
@@ -54,16 +54,16 @@ ms.locfileid: "36123564"
  **底部**  
  设置报表底部与报表最后一行底部之间的距离。  
   
- **左**  
+ **左侧**  
  设置报表的左边缘与报表行的左边缘之间的距离。  
   
- **右**  
+ **右侧**  
  设置报表的右边缘与报表行的右边缘之间的距离。  
   
 ## <a name="see-also"></a>请参阅  
  [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [报表属性对话框中，代码&#40;报表生成器&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
- [报表属性对话框中，引用&#40;报表生成器&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
+ [报告属性对话框的代码&#40;报表生成器&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
+ [报表属性对话框引用&#40;报表生成器&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   
   

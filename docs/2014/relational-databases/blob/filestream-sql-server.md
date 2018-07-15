@@ -5,39 +5,38 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b8af5e825fb72ce47c7612b0c1c56af9bce4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6c2c5e8841a866eb82d9c844b1eccf60c09555ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287293"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   借助 FILESTREAM，基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序可以将非结构化的数据（如文档和图像）存储在文件系统中。 应用程序在利用丰富的流式 API 和文件系统的性能的同时，还可保持非结构化数据和对应的结构化数据之间的事务一致性。  
   
- FILESTREAM 集成[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用 NTFS 文件系统通过将存储`varbinary(max)`二进制大型对象 (BLOB) 数据作为文件系统上的文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
+ FILESTREAM 使[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用 NTFS 文件系统通过将存储`varbinary(max)`二进制大型对象 (BLOB) 数据作为文件系统上的文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
   
  FILESTREAM 使用 NT 系统缓存来缓存文件数据。 这有助于减少 FILESTREAM 数据可能对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生的任何影响。 由于没有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池，因此该内存可用于查询处理。  
   
- 在安装或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，并不会自动启用 FILESTREAM。 您必须使用 SQL Server 配置管理器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来启用 FILESTREAM。 若要使用 FILESTREAM，您必须创建或修改数据库以包含一个特殊类型的文件组。 然后，创建或修改一个表，以使其包含`varbinary(max)`具有 FILESTREAM 属性的列。 在完成这些任务后，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Win32 来管理 FILESTREAM 数据。  
+ 在安装或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，并不会自动启用 FILESTREAM。 您必须使用 SQL Server 配置管理器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来启用 FILESTREAM。 若要使用 FILESTREAM，您必须创建或修改数据库以包含一个特殊类型的文件组。 然后，创建或修改表，使其包含`varbinary(max)`列具有 FILESTREAM 属性。 在完成这些任务后，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Win32 来管理 FILESTREAM 数据。  
   
  有关安装和使用 FILESTREAM 的详细信息，请参阅 [相关任务](#reltasks)的列表。  
   
 ##  <a name="whentouse"></a> 何时使用 FILESTREAM  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Blob 可以是标准`varbinary(max)`以表或 FILESTREAM 存储数据的数据`varbinary(max)`将数据存储在文件系统的对象。 数据的大小和应用情况决定您应该使用数据库存储还是文件系统存储。 如果满足以下条件，则应考虑使用 FILESTREAM：  
+ 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Blob 可以是标准`varbinary(max)`将数据存储在表或 FILESTREAM 数据`varbinary(max)`文件系统中存储数据的对象。 数据的大小和应用情况决定您应该使用数据库存储还是文件系统存储。 如果满足以下条件，则应考虑使用 FILESTREAM：  
   
 -   所存储的对象平均大于 1 MB。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "36127107"
   
   
 ##  <a name="storage"></a> FILESTREAM 存储  
- 作为实现 FILESTREAM 存储`varbinary(max)`顺序数据作为 Blob 存储在文件系统中的列。 BLOB 的大小仅受文件系统容量大小的限制。 标准`varbinary(max)`的 2 GB 文件大小限制不适用于 Blob 存储到文件系统中。  
+ 作为实现 FILESTREAM 存储`varbinary(max)`中的数据存储为 Blob 文件系统中的列。 BLOB 的大小仅受文件系统容量大小的限制。 标准`varbinary(max)`文件大小为 2 GB 的限制不适用于文件系统中存储的 Blob。  
   
  若要指定列应将数据存储在文件系统上，指定 FILESTREAM 属性上`varbinary(max)`列。 这样 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会将该列的所有数据存储在文件系统，而不是数据库文件中。  
   

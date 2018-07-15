@@ -21,13 +21,13 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ac2d2c8c45e359dafbed4d33dc26c3470fc13d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292887"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
   在脚本组件中编写自定义代码之前，必须选择要创建的数据流组件的类型：源、转换或目标，然后在“脚本转换编辑器”中配置组件的元数据和属性。  
@@ -54,7 +54,7 @@ ms.locfileid: "36127581"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>脚本转换编辑器的“输入列”页  
  对于转换组件和目标组件，将显示“脚本转换编辑器”的“输入列”页；对于源组件则不显示该页。 在此页中，可以选择希望用于自定义脚本的可用输入列，然后指定可对这些列进行只读还是读/写访问。  
   
- 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入的一个类，并且此类包含每个所选输入列的类型化取值函数属性。 例如，如果你选择一个整数**CustomerID**列和字符串**CustomerName**从名为的输入列`CustomerInput`，BufferWrapper 项目项将包含`CustomerInput`类派生自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，和`CustomerInput`类将公开名为是整数属性**CustomerID**和名为的字符串属性**CustomerName**。 使用此约定可编写能够进行类型检查的代码，如下所示：  
+ 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入的一个类，并且此类包含每个所选输入列的类型化取值函数属性。 例如，如果您选择一个整数**CustomerID**列和字符串**CustomerName**从名为输入列`CustomerInput`，则 BufferWrapper 项目项将包含`CustomerInput`类派生<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，并`CustomerInput`类将公开名为一个整数属性**CustomerID**名为一个字符串属性**CustomerName**。 使用此约定可编写能够进行类型检查的代码，如下所示：  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -72,7 +72,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   用作目标时，脚本组件支持一个输入，没有输出。  
   
- 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入和输出的一个类。 例如，如果创建名为输出`CustomerOutput`，BufferWrapper 项目项将包含`CustomerOutput`派生自的类<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，和`CustomerOutput`类将包含创建每个输出列的类型化访问器属性。  
+ 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入和输出的一个类。 例如，如果创建名为的输出`CustomerOutput`，则 BufferWrapper 项目项将包含`CustomerOutput`类派生自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，和`CustomerOutput`类将包含创建的每个输出列的类型化取值函数属性。  
   
  只能在“输入和输出”页中配置输出列。 可在“输入列”页中选择转换和目标的输入列。 在 BufferWrapper 项目项中创建的类型化取值函数属性对于输出列来说是只写的。 输入列的取值函数属性将为只读还是读/写取决于在“输入列”页中为每列所选的使用类型。  
   
@@ -87,7 +87,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `SynchronousInputID` 属性仅在具有同步输出的转换中具有非零值。 如果此属性的值为零，则意味着输出是异步的。 对于同步输出，行将传递给所选一个或多个输出而不添加任何新行，此属性应包含组件的输入 `ID`。  
   
 > [!NOTE]  
->  当**脚本转换编辑器**创建第一个输出，编辑器集`SynchronousInputID`属性将输出发送到`ID`的组件的输入。 但是，当编辑器创建后续输出时，它会将那些输出的 `SynchronousInputID` 属性设置为零。  
+>  当**脚本转换编辑器**创建第一个输出时，编辑器集`SynchronousInputID`输出到属性`ID`组件的输入。 但是，当编辑器创建后续输出时，它会将那些输出的 `SynchronousInputID` 属性设置为零。  
 >   
 >  如果您创建的是具有同步输出的组件，则每个输出的 `SynchronousInputID` 属性必须设置为组件的输入 `ID`。 因此，编辑器在第一个输出之后创建的每个输出的 `SynchronousInputID` 值必须从零更改为组件的输入 `ID`。  
 >   
@@ -108,7 +108,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `ValidateExternalMetadata` 属性的布尔值指定组件是应在设计时针对外部数据源执行验证，还是应推迟到运行时才验证。 默认情况下，此属性的值为 `True`；也就是说，在设计时和运行时都对外部元数据进行验证。 如果外部数据源在设计时不可用，可以将此属性的值设置为 `False`；例如，当包仅在运行时下载源或创建目标时。  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 和 ReadWriteVariables 属性  
- 可以输入以逗号分隔的现有变量列表作为这些属性的值，使这些变量在脚本组件代码中可用于只读或读/写访问。 这些变量可在代码中通过自动生成的基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 属性来访问。 有关详细信息，请参阅 [使用中脚本 Component]((using-variables-in-the-script-component.md) 变量。  
+ 可以输入以逗号分隔的现有变量列表作为这些属性的值，使这些变量在脚本组件代码中可用于只读或读/写访问。 这些变量可在代码中通过自动生成的基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 属性来访问。 有关详细信息，请参阅 [使用脚本 Component]((using-variables-in-the-script-component.md) 中变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
@@ -117,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  您可以选择 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 作为脚本组件的编程语言。  
   
 #### <a name="edit-script-button"></a>“编辑脚本”按钮  
- 使用“编辑脚本”按钮可打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本。 有关详细信息，请参阅 [编码和调试脚本 Component]((coding-and-debugging-the-script-component.md)。  
+ 使用“编辑脚本”按钮可打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本。 有关详细信息，请参阅 [的编码和调试脚本 Component]((coding-and-debugging-the-script-component.md)。  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>脚本转换编辑器的“连接管理器”页  
  在“脚本转换编辑器”的“连接管理器”页中，可以添加和删除要在自定义脚本中使用的连接管理器。 通常，创建源或目标组件时需要引用连接管理器。  
@@ -131,9 +131,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  有关详细信息，请参阅 [连接到脚本 Component]((connecting-to-data-sources-in-the-script-component.md) 中的数据源。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
- [编码和调试脚本组件]((coding-and-debugging-the-script-component.md)  
+ [的编码和调试脚本组件]((coding-and-debugging-the-script-component.md)  
   
   

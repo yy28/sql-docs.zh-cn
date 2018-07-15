@@ -1,5 +1,5 @@
 ---
-title: 调试存储的过程 |Microsoft 文档
+title: 调试存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec2c67e30caf18f3e11b1391dc0a4bb67028c083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d14f4b68aa3a4cf76cad1c49c1d37a6be9c70f7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282013"
 ---
 # <a name="debugging-stored-procedures"></a>调试存储的过程
   实际上，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程是使用 C#（或任何其他 CLR 或 COM 语言）编写的 CLR 或 COM 库（通常为 DLL）。 因此，调试存储过程类似于在 Visual Studio 调试环境中调试任何其他应用程序。 您可以使用集成调试功能在 Visual Studio 开发环境中调试存储过程。 您可以使用这些功能执行下列操作：在过程位置停止、检查内存和注册值、更改变量、观察消息流量以及密切监视代码的运行状况。  
@@ -42,13 +42,13 @@ ms.locfileid: "36137628"
   
 6.  在 Visual Studio 中，附加到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程 (Msmdsrv.exe)。  
   
-    1.  从**调试**菜单上，选择**Attatch toProcess**。  
+    1.  从**调试**菜单中，选择**附加 toProcess**。  
   
-    2.  在**Attatch toProcess**对话框中，选择**显示来自所有用户的进程**。  
+    2.  在中**附加 toProcess**对话框中，选择**显示所有用户的进程**。  
   
-    3.  在**可用进程**列表中，**过程**列中，单击**Msmdsrv.exe**。 如果服务器上运行多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，则需要通过要使用的实例的 ID 标识进程。  
+    3.  在中**可用进程**列表中，在**进程**列中，单击**Msmdsrv.exe**。 如果服务器上运行多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，则需要通过要使用的实例的 ID 标识进程。  
   
-    4.  在**将附加到**文本框中，请确保选择相应的程序类型。 有关 CLR DLL，请单击**选择**，然后单击**调试以下代码类型**，然后单击**托管**，然后单击**确定**。 COM DLL，请单击**选择**，然后单击**调试以下代码类型**，然后单击**本机**，然后单击**确定**。  
+    4.  在中**将附加到**文字框中，请确保选择适当的程序类型。 对于 CLR DLL，单击**选择**，然后单击**调试这些代码类型**，然后单击**托管**，然后单击**确定**。 对于 COM DLL，单击**选择**，然后单击**调试这些代码类型**，然后单击**本机**，然后单击**确定**。  
   
     5.  单击**附加**。  
   

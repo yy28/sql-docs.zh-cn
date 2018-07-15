@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282933"
 ---
 # <a name="extensions-ssrs"></a>扩展插件 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的报表服务器使用扩展插件来模块化其为身份验证、数据处理、报表呈现和报表传递接受的输入或输出的类型。 这便于现有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装利用行业中的新的软件标准，例如新的身份验证架构或自定义数据源类型。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 报表服务器至少分别需要一个身份验证扩展插件、数据处理扩展插件和呈现扩展插件。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。  
@@ -59,7 +59,7 @@ ms.locfileid: "36137476"
 ## <a name="rendering-extensions"></a>呈现扩展插件  
  呈现扩展插件将来自报表处理器的数据和布局信息转换为设备特定的格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
--   **HTML 呈现扩展插件** 通过 Web 浏览器向报表服务器请求报表时，报表服务器将使用 HTML 呈现扩展插件来呈现报表。 HTML 呈现扩展插件使用 UTF-8 编码生成所有的 HTML。 有关详细信息，请参阅[以 html 格式呈现&#40;报表生成器和 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)和[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **HTML 呈现扩展插件** 通过 Web 浏览器向报表服务器请求报表时，报表服务器将使用 HTML 呈现扩展插件来呈现报表。 HTML 呈现扩展插件使用 UTF-8 编码生成所有的 HTML。 有关详细信息，请参阅[以 html 格式呈现&#40;报表生成器和 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)并[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 -   **Excel 呈现扩展插件** Excel 呈现扩展插件呈现可在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 或更高版本中查看和修改的报表。 此呈现扩展插件会创建二进制交换文件格式 (BIFF) 的文件。 BIFF 是 Excel 数据的本机文件格式。 在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 中呈现的报表支持适用于任何电子表格的所有功能。 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   

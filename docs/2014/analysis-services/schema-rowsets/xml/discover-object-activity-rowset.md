@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_OBJECT_ACTIVITY 行集 |Microsoft 文档
+title: DISCOVER_OBJECT_ACTIVITY 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ab904cff026149194c3bd2d242ab448da4be89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09aec1da2c7e9001585b0793b12f0faf89feaf27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235697"
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 行集
   提供在启动服务后每个对象的资源使用情况。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_OBJECT_ACTIVITY`行集包含以下各列。  
+ `DISCOVER_OBJECT_ACTIVITY`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "36138291"
  未对此架构行集进行排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_OBJECT_ACTIVTY`行集可限制在下表中列出的列。  
+ `DISCOVER_OBJECT_ACTIVTY`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

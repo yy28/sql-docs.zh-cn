@@ -1,14 +1,13 @@
 ---
-title: 针对数据库镜像和 AlwaysOn 可用性组 (SQL Server) 传输安全 |Microsoft 文档
+title: 传输安全模式的数据库镜像和 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
 - cryptography [SQL Server], database mirroring
@@ -22,13 +21,13 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdcfc0b7d7ce374f65fac8dca13dc7136b129e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3f2a6d5dfcba21cea89802a29eec7a56a58936c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291403"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)
   传输安全性涉及身份验证，或者还涉及数据库间交换的消息的加密。 对于数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，身份验证和加密在数据库镜像端点配置。 有关数据库镜像端点的简介，请参阅 [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)。  

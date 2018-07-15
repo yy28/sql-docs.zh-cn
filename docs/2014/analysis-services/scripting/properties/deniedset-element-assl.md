@@ -1,5 +1,5 @@
 ---
-title: DeniedSet 元素 (ASSL) |Microsoft 文档
+title: DeniedSet 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DeniedSet element
 ms.assetid: 898deefb-822d-458b-96d8-880da287b687
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20a915d24291ec01fe619abf8fa259099c71c810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c63ced94ae8779e57fa8e9aebf84642fd4e468f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312397"
 ---
 # <a name="deniedset-element-assl"></a>DeniedSet 元素 (ASSL)
   包含一个集表达式，该表达式定义关联属性所拒绝的权限的列表。  
@@ -62,7 +62,7 @@ ms.locfileid: "36128199"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`DeniedSet`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AttributePermission>。  
+ 父级对应的元素`DeniedSet`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AttributePermission>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

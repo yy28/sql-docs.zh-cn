@@ -1,5 +1,5 @@
 ---
-title: 具有内存优化表的事务隔离级别的准则 |Microsoft 文档
+title: 具有内存优化表的事务隔离级别的指导原则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f21b7340b4c2d0cc3457cf0a2169d0a7fe17b311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d4c515d6eb3c86143e1344b342b8ee29a781358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320723"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>内存优化表事务隔离级别准则
   在许多情况下，必须指定事务隔离级别。 内存优化表的事务隔离不同于基于磁盘的表。  
@@ -28,7 +28,7 @@ ms.locfileid: "36123315"
   
 -   对于包含本机编译存储过程内容的原子块，TRANSACTION ISOLATION LEVEL 为必需选项。  
   
--   由于在跨容器事务中使用隔离级别存在限制，因此在解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 中使用内存优化表时通常必须随附一个表提示，以指定用于访问该表的隔离级别。 有关隔离级别的提示和跨容器事务的详细信息，请参阅[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md)。  
+-   由于在跨容器事务中使用隔离级别存在限制，因此在解释型 [!INCLUDE[tsql](../includes/tsql-md.md)] 中使用内存优化表时通常必须随附一个表提示，以指定用于访问该表的隔离级别。 有关隔离级别提示和交叉容器事务的详细信息，请参阅[事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md)。  
   
 -   必须显式声明所需的事务隔离级别。 无法使用锁提示（如 XLOCK）来保证事务中特定行或表的隔离。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36123315"
   
 -   对于内存优化表，应避免长时间运行的事务。 这类事务会增加冲突的可能性，使后续事务终止。 长时间运行的事务还会延迟垃圾回收。 一个事务的运行时间越长，内存中 OLTP 保留最近删除的行版本的时间就越长，这可能会降低新事务的查找性能。  
   
- 基于磁盘的表通常依赖于锁定和阻塞来实现事务隔离。 而内存优化表依赖于多版本控制和冲突检测来确保隔离。 有关详细信息，请参阅部分冲突检测、 验证和提交依赖项检查中[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 基于磁盘的表通常依赖于锁定和阻塞来实现事务隔离。 而内存优化表依赖于多版本控制和冲突检测来确保隔离。 详细信息，请参阅的部分在冲突检测、 验证和提交依赖关系检查中[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  基于磁盘的表允许隔离级别 SNAPSHOT 和 READ_COMMITTED_SNAPSHOT 进行多版本控制。 对于内存优化表，所有隔离级别都是基于多版本的，包括 REPEATABLE READ 和 SERIALIZABLE。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36123315"
   
  SNAPSHOT 隔离级别提供的保障（内存优化表支持的最低隔离级别）包括 READ COMMITTED 保障。 事务中的每条语句都读取相同、一致的数据库版本。 不仅该事务读取的所有行都提交到数据库，而且所有读取操作都会看到由同一组事务所作更改的集合。  
   
- **原则**： 如果只需要的 READ COMMITTED 隔离保证，则使用快照隔离与本机编译存储过程以及用于访问内存优化表通过解释[!INCLUDE[tsql](../includes/tsql-md.md)]。  
+ **指导原则**： 如果只有 READ committed 隔离是必需的使用快照隔离与本机编译存储过程和用于访问内存优化表通过解释[!INCLUDE[tsql](../includes/tsql-md.md)]。  
   
  对于自动提交事务，隔离级别 READ COMMITTED 会隐式映射到内存优化表的 SNAPSHOT。 因此，如果 TRANSACTION ISOLATION LEVEL 会话设置设为 READ COMMITTED，则在访问内存优化表时无需通过表提示指定隔离级别。  
   
@@ -95,13 +95,13 @@ COMMIT
   
      某些应用程序可能会假定读取器总是等待编写器提交，特别是当应用程序层中的两个事务之间没有任何同步时。  
   
-     **原则：** 应用程序不能依赖于阻止行为。 如果应用程序所需并发事务之间的同步，此类可以实现逻辑的应用层中或在数据库层中，通过[sp_getapplock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)。  
+     **指导原则：** 应用程序不能依赖阻塞行为。 如果应用程序需要同步并发事务之间，此类可以实现逻辑的应用层中或在数据库层中，通过[sp_getapplock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)。  
   
 -   在使用 READ COMMITTED 隔离的事务中，每条语句都会看到数据库中各行的最新版本。 因此，后续语句看到的是数据库状态的更改。  
   
      采用这一假设的应用程序模式的一个示例：使用 WHILE 循环轮询表，直至发现新行为止。 该循环每次迭代时，查询将看到数据库中的最新更新。  
   
-     **原则：** 如果应用程序需要轮询以获取最新的行写入到表的内存优化表，将轮询循环移动事务范围之外。  
+     **指导原则：** 如果应用程序需要轮询内存优化的表，以获取最新的行写入到表中，将轮询循环移动事务范围之外。  
   
      下面的示例介绍采用这一假设的应用程序模式。 使用 WHILE 循环轮询表，直至发现新行。 在每次循环迭代中，查询将访问数据库中的最新更新。  
   
@@ -127,7 +127,7 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>锁定表提示  
- 锁定提示 ([表提示&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) 如 HOLDLOCK 和 XLOCK 可与基于磁盘的表具有[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要更多的锁不是所需的指定的隔离级别。  
+ 锁定提示 ([表提示&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) 如 HOLDLOCK 和 XLOCK 可用于与基于磁盘的表具有[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要更多的锁不是所需的指定的隔离级别。  
   
  内存优化表不使用锁。 可以使用更高的隔离级别（如 REPEATABLE READ 和 SERIALIZABLE）声明所需的保障。  
   
@@ -135,7 +135,7 @@ COMMIT
   
 ## <a name="see-also"></a>请参阅  
  [了解内存优化表上的事务](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [准则的内存优化表上的事务重试逻辑](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [准则适用于内存优化表上事务重试逻辑](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [事务隔离级别](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

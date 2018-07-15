@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘向导的 F1 帮助 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 数据挖掘向导的 F1 帮助 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291673"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>数据挖掘向导 F1 帮助（Analysis Services － 数据挖掘）
   可以使用 **“数据挖掘向导”** 创建新的挖掘结构和关联挖掘模型（可选）。  
@@ -73,13 +73,13 @@ ms.locfileid: "36128665"
  [提供相关的列建议&#40;数据挖掘向导&#41;](suggest-related-columns-data-mining-wizard.md)   
  [选择源多维数据集维度&#40;数据挖掘向导&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
  [选择事例键&#40;数据挖掘向导&#41;](select-the-case-key-data-mining-wizard.md)   
- [选择案例级别列&#40;数据挖掘向导&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [选择 Case 级别列&#40;数据挖掘向导&#41;](select-case-level-columns-data-mining-wizard.md)   
  [指定挖掘模型列用法&#40;数据挖掘向导&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
- [选择度量值组维度&#40;添加新嵌套的表向导&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
- [选择嵌套的表键&#40;添加新嵌套的表向导&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
- [选择嵌套的表列&#40;添加新嵌套的表向导&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
+ [选择度量值组维度&#40;添加新的嵌套的表向导&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
+ [选择嵌套的表键&#40;添加新的嵌套的表向导&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [选择嵌套的表列&#40;添加新的嵌套的表向导&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
  [指定列的内容和数据类型&#40;数据挖掘向导&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
- [源多维数据集进行切片&#40;数据挖掘向导&#41;](slice-source-cube-data-mining-wizard.md)   
+ [对源多维数据集进行切片&#40;数据挖掘向导&#41;](slice-source-cube-data-mining-wizard.md)   
  [完成向导&#40;数据挖掘向导&#41;](completing-the-wizard-data-mining-wizard.md)   
  [指定列内容和数据类型&#40;数据挖掘向导&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
  [创建测试集&#40;数据挖掘向导&#41;](create-testing-set-data-mining-wizard.md)  

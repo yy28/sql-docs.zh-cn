@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
@@ -16,13 +16,13 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 07c6f1a6d6f202805f5d2b830e45e8638c5a3a80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198f3c46c97039fb788cb924a5980f0b6cd75145
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295437"
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中为复合域创建跨域规则。 跨域规则测试在复合域中包含的单一域中各值之间的关系。 跨域规则必须在复合域中保持正确，这样才能认为域值是准确的并且符合业务要求。 跨域规则用于验证、更正和标准化域值。  
@@ -31,7 +31,7 @@ ms.locfileid: "36129070"
   
  具有可定义条件的跨域规则将规则逻辑应用于条件中的值的同义词以及这些值本身。 If 和 Then 子句的可定义条件是值等于、值不等于、值处于和值不处于。 例如，假定对于某一复合域，您具有以下跨域规则：“For ‘City’, if Value is equal to ‘Los Angeles’, then for ‘State’, Value is equal to ‘CA’。” 如果‘Los Angeles’ 和 ‘LA’是同义词，则此规则对于‘Los Angeles CA’和‘LA CA’将返回正确结果，对于‘Los Angeles WA’和‘LA WA’将返回错误结果。  
   
- 除了让您知道跨域规则的有效性之外，跨域规则 *“值等于”* 中的可定义 **Then**子句还在数据清理活动过程中更正数据。 有关详细信息，请参阅[Data Correction using 权威跨域规则](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection)中[清理复合域中的数据](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)。  
+ 除了让您知道跨域规则的有效性之外，跨域规则 *“值等于”* 中的可定义 **Then**子句还在数据清理活动过程中更正数据。 有关详细信息，请参阅[使用明确的跨域规则更正数据](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection)中[清理复合域中的数据](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)。  
   
  应首先考虑仅影响单一域的所有简单规则，之后才考虑跨域规则。 只有在某个值通过单一域规则（如果它们存在）之后，才会应用跨域规则。 对其运行某个规则的复合域和单一域必须全都定义后，才能执行该规则。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36129070"
     > [!NOTE]  
     >  域管理在 Data Quality Service 客户端页面中执行，该页面包含用于单独域管理操作的五个选项卡。 它不是一个向导驱动的过程；任何管理操作都可以单独执行。  
   
-3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要为其创建域规则的复合域，或者创建一个新的复合域。 如果你必须创建一个新域，请参阅[创建复合域](../../2014/data-quality-services/create-a-composite-domain.md)。  
+3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要为其创建域规则的复合域，或者创建一个新的复合域。 如果您必须创建一个新域，请参阅[创建复合域](../../2014/data-quality-services/create-a-composite-domain.md)。  
   
 4.  单击 **“复合域规则”** 选项卡。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36129070"
   
     6.  完成测试后，在 **“测试复合域规则”** 对话框中单击 **“关闭”** 。  
   
-2.  完成跨域规则后，单击**完成**中所述完成域管理活动，[结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)。  
+2.  完成您的跨域规则后，单击**完成**以完成域管理活动，如中所述[结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)。  
   
 ##  <a name="FollowUp"></a> 跟进：创建跨域规则后  
  在创建跨域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  

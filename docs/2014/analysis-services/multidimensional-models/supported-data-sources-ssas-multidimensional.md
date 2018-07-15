@@ -1,5 +1,5 @@
 ---
-title: 支持的数据源 (SSAS 多维) |Microsoft 文档
+title: 支持的数据源 (SSAS 多维) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
 - data sources [Analysis Services], about data sources
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 caps.latest.revision: 59
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130e0e904dcd60b8dc7838cfc8e57f7589739857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c4d8c3c37b63568da63d65e9548b50c44bcc455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301167"
 ---
-# <a name="data-sources-supported-ssas-multidimensional"></a>数据源支持 (SSAS 多维)
+# <a name="data-sources-supported-ssas-multidimensional"></a>数据源受支持 (SSAS 多维)
   本主题介绍可以在多维模型中使用的数据源的类型。  
   
 ##  <a name="bkmk_supported_ds"></a> 支持的数据源  
@@ -50,13 +50,13 @@ ms.locfileid: "36127997"
   
  <sup>1</sup>多维解决方案不支持 ODBC 数据源。 尽管 Analysis Services 可自行处理连接，但 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中用于生成解决方案的设计器不能连接到 ODBC 数据源，即使在使用 MSDASQL 驱动程序时也是如此。 如果您的业务需求包括 ODBC 数据源，请考虑改为生成表格解决方案。  
   
- <sup>2</sup>详细信息，请参阅[!INCLUDE[ssSDS](../../includes/sssds-md.md)]上[azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856)。  
+ <sup>2</sup>的详细信息，请参阅[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，然后在[azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856)。  
   
- <sup>3</sup>有关详细信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW，请参阅[SQL Server 并行数据仓库](http://go.microsoft.com/fwlink/?LinkId=150895)。  
+ <sup>3</sup>有关详细信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW，请参阅[SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。  
   
- <sup>4</sup>在某些情况下，使用 MSDAORA OLE DB 提供程序可能导致连接错误，尤其是对于 Oracle 的较新版本。 如果您遇到任何错误，我们建议您使用为 Oracle 列出的其他访问接口之一。  
+ <sup>4</sup>在某些情况下，使用 MSDAORA OLE DB 提供程序可能导致连接错误，特别是对于 Oracle 的较新版本。 如果您遇到任何错误，我们建议您使用为 Oracle 列出的其他访问接口之一。  
   
- <sup>5</sup>的某些功能需要在本地运行的 SQL Server 关系数据库。 特别是写回和 ROLAP 存储要求基础数据源为 SQL Server 关系数据库。  
+ <sup>5</sup>某些功能需要在本地运行的 SQL Server 关系数据库。 特别是写回和 ROLAP 存储要求基础数据源为 SQL Server 关系数据库。  
   
 ## <a name="see-also"></a>请参阅  
  [支持的数据源&#40;SSAS 表格&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   

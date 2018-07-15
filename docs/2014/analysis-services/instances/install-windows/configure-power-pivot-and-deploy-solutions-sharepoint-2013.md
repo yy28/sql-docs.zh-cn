@@ -1,5 +1,5 @@
 ---
-title: 配置 PowerPivot 和部署解决方案 (SharePoint 2013) |Microsoft 文档
+title: 配置 PowerPivot 和部署解决方案 (SharePoint 2013) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 10
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f06b47e8f30c60152912c49901341a2d8fdef359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312667"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>配置 PowerPivot 和部署解决方案 (SharePoint 2013)
-  此主题介绍如何部署和配置的中间层增强功能中的 PowerPivot 功能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]包括 PowerPivot 库、 计划数据刷新、 管理仪表板和数据访问接口。 运行 **PowerPivot for SharePoint 2013 配置** 工具以便完成以下任务：  
+  本主题介绍如何部署和配置中的 PowerPivot 功能的中间层增强功能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]包括 PowerPivot 库、 计划数据刷新、 管理仪表板和数据访问接口。 运行 **PowerPivot for SharePoint 2013 配置** 工具以便完成以下任务：  
   
 -   部署 SharePoint 解决方案文件。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36123323"
   
  以安装了 SharePoint 的帐户登录或将安装帐户配置为 SharePoint 管理中心网站的主管理员。  
   
-1.  上**启动**菜单上，单击**所有程序**，然后单击[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot 的 SharePoint2013 配置**。 只有在本地服务器上安装了 PowerPivot for SharePoint 后，才会列出工具。  
+1.  上**启动**菜单上，单击**所有程序**，然后单击[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot For SharePoint2013 配置**。 只有在本地服务器上安装了 PowerPivot for SharePoint 后，才会列出工具。  
   
 2.  单击 **“配置或修复 PowerPivot for SharePoint”** ，然后单击 **“确定”**。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36123323"
   
     5.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改这些默认设置，请在左窗口中查看以下页： **“创建默认的 Web 应用程序”** 和 **“部署 Web 应用程序解决方案”**。  
   
-5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个详细信息，请参阅部分"输入值用于配置中的服务器[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md)在本主题。  
+5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个详细信息，请参阅部分"输入值用于配置中的服务器[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this 主题。  
   
 6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”** 复选框。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36123323"
   
      单击服务应用程序的名称，以便打开 PowerPivot 管理面板以使服务应用程序打开。 第一次使用时，面板要花几分钟的加载时间。  
   
- 有关详细信息，请参阅[Verify a PowerPivot for SharePoint 安装](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)。  
+ 有关详细信息，请参阅[验证 PowerPivot for SharePoint 安装](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)。  
   
 ##  <a name="bkmk_troubleshoot_issues"></a> 解决问题  
  为了协助解决问题，最好验证诊断日志记录已启用。  
@@ -138,7 +138,7 @@ ms.locfileid: "36123323"
   
 5.  单击“确定” 。  
   
- 有关解决数据刷新的详细信息，请参阅[解决 PowerPivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关故障排除数据刷新的详细信息，请参阅[解决 PowerPivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  有关配置工具的详细信息，请参阅[PowerPivot 配置工具](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

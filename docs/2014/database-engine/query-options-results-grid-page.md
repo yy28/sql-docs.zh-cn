@@ -1,5 +1,5 @@
 ---
-title: 查询选项结果 （网格页） |Microsoft 文档
+title: 查询选项结果 （网格页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4a06b4ad95b844dd002bf1efbb367b22193d3979
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312287"
 ---
 # <a name="query-options-results-grid-page"></a>“查询选项”中的“结果”（“网格”页）
   使用此页可以指定以网格格式显示查询结果集的选项。  
@@ -36,7 +36,7 @@ ms.locfileid: "36126907"
  **执行后放弃结果**  
  当屏幕显示接收到查询结果之后，通过放弃查询结果来释放内存。  
   
- **在单独选项卡中显示结果**  
+ **在单独的选项卡中显示结果**  
  在新文档窗口中显示结果集，而不是在查询文档窗口的底部显示。  
   
  **执行查询后切换到结果选项卡**  

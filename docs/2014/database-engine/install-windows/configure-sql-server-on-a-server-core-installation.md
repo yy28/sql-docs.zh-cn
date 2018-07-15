@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2306c5d35aa6b36196348c6733430dadbbf0b5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7016c90e98e7719c4566e53b7aa071edf469b080
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269783"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
   本主题详细介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 的 Server Core 安装上配置 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 。 请参阅以下各节：  
@@ -35,7 +35,7 @@ ms.locfileid: "36137817"
   
 -   [启用 AlwaysOn 可用性组](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [配置运行在 Server Core 上的 SQL Server 的远程访问](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [配置 Server Core 上运行 SQL Server 的远程的访问](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server 事件探查器](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
@@ -52,28 +52,28 @@ ms.locfileid: "36137817"
   
  有关远程配置和管理 Server Core 安装的详细信息，请参阅以下主题：  
   
--   [Windows Server 2008 R2: Server Core 部署的最佳做法](http://go.microsoft.com/fwlink/?LinkID=245957)(http://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2: Server Core 部署的最佳实践](http://go.microsoft.com/fwlink/?LinkID=245957)(http://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [配置服务器核心安装： 概述](http://go.microsoft.com/fwlink/?LinkId=245958)(http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [配置 Server Core 安装： 概述](http://go.microsoft.com/fwlink/?LinkId=245958)(http://go.microsoft.com/fwlink/?LinkId=245958)  
   
 -   [使用 Sconfig.cmd 配置 Windows Server 2008 R2 的服务器核心安装](http://go.microsoft.com/fwlink/?LinkId=245959)(http://go.microsoft.com/fwlink/?LinkId=245959)  
   
 -   [运行 Windows Server 2008 R2 的服务器核心安装的服务器上安装服务器角色： 概述](http://go.microsoft.com/fwlink/?LinkId=245960)(http://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [在运行 Windows Server 2008 R2 的服务器核心安装的服务器上安装 Windows 功能： 概述](http://go.microsoft.com/fwlink/?LinkId=245961)(http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [运行 Windows Server 2008 R2 的服务器核心安装的服务器上安装 Windows 功能： 概述](http://go.microsoft.com/fwlink/?LinkId=245961)(http://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [管理服务器核心安装： 概述](http://go.microsoft.com/fwlink/?LinkId=245962)(http://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [管理 Server Core 安装： 概述](http://go.microsoft.com/fwlink/?LinkId=245962)(http://go.microsoft.com/fwlink/?LinkId=245962)  
   
 -   [管理服务器核心安装](http://go.microsoft.com/fwlink/?LinkId=245963)(http://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新  
- 本节提供有关在 Windows Server Core 计算机上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新的信息。 我们建议客户及时评估和安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便确保系统是最新的并且具有最近的安全更新。 有关安装的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Windows Server Core 计算机上，请参阅[在 Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
+ 本节提供有关在 Windows Server Core 计算机上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新的信息。 我们建议客户及时评估和安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便确保系统是最新的并且具有最近的安全更新。 有关安装的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Windows Server Core 计算机上，请参阅[Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
  以下是安装产品更新的两个方案：  
   
 -   [在全新安装期间为 SQL Server 2014 安装更新](configure-sql-server-on-a-server-core-installation.md#bkmk_newinstall)  
   
--   [为 SQL Server 2014 在安装后安装更新](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
+-   [为 SQL Server 2014 安装它之后安装更新](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
   
 ###  <a name="bkmk_NewInstall"></a> 在全新安装期间为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装更新  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序在 Server Core 操作系统上仅支持命令提示符安装。 有关详细信息，请参阅 [从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  启用 AlwaysOn 可用性组是服务器实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。 有关管理 AlwaysOn 可用性组的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>远程使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
- 这些步骤将执行的电脑上运行的客户端版本[!INCLUDE[win7](../../includes/win7-md.md)]或更高版本，或已安装服务器图形 Shell 的另一台服务器 (即完全安装的[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]或与服务器的 Windows Server 8 安装图形 Shell 功能中启用）。  
+ 这些步骤用于执行在 PC 上运行的客户端版本的[!INCLUDE[win7](../../includes/win7-md.md)]或更高版本，或安装了服务器图形 shell 的另一台服务器 (即完整安装的[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]或与服务器的 Windows Server 8 安装图形 Shell 功能中启用）。  
   
 1.  打开“计算机管理”。 若要打开“计算机管理”，请执行下列操作之一：  
   
@@ -144,7 +144,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  双击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-6.  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器中，单击[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务，右键单击[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<实例名称 >)，其中\<实例名称 > 是你想要启用 AlwaysOn 的本地服务器实例的名称可用性组，并单击属性。  
+6.  在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器中，单击[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务，右键单击[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<实例名称 >)，其中\<实例名称 > 是你想要启用 AlwaysOn 的本地服务器实例的名称可用性组，并单击属性。  
   
 7.  选择“AlwaysOn 高可用性”选项卡。  
   

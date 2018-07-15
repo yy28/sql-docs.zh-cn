@@ -1,5 +1,5 @@
 ---
-title: 设置列 (SSAS 表格) 的数据类型 |Microsoft 文档
+title: 设置列 (SSAS 表格) 的数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c0c55e44192b348b9ae1510d9ee90731185b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0871dbef7b9b9a053a7c79688ec7073d2d8fdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312227"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>设置列的数据类型（SSAS 表格）
   导入数据或将数据粘贴到模型时，模型设计器将自动检测并应用数据类型。 在将数据添加到模型后，您可以手动修改列的数据类型以便更改数据的存储方式。 如果只想更改显示数据的格式而不更改其存储方式，可以采用其他方法。  
@@ -69,7 +69,7 @@ ms.locfileid: "36125225"
   
  如果支持该数据类型，但是模型设计器在新数据类型中发现不支持的值，将遇到另一个错误，在继续操作前您需要更正数据值。  
   
- 有关在商业智能语义模型中使用的数据类型的详细信息，它们隐式转换和不同数据类型如何将它用公式中，请参阅[数据类型支持&#40;SSAS 表格&#41;](data-types-supported-ssas-tabular.md).  
+ 有关使用商业智能语义模型中的数据类型的详细信息，它们是隐式转换后，以及如何将不同数据类型的方式是在公式中使用，请参阅[支持的数据类型&#40;SSAS 表格&#41;](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>请参阅  
  [支持的数据类型&#40;SSAS 表格&#41;](data-types-supported-ssas-tabular.md)  

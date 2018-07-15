@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 caps.latest.revision: 30
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 36a0b3d3237360ede083ce635375eb2ace716bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f7c92b097d1b6388fe1e531d27b9965da0ec584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290963"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>步骤 1：复制 Lesson 2 包
   在本任务中，将为第 2 课中创建的 Lesson 2.dtsx 包创建一个副本。 或者，可以将本教程中附带的已完成的 Lesson 2 包添加到项目中，然后再对其进行复制。 将使用这个新副本来完成第 3 课的剩余部分。  
@@ -40,9 +40,9 @@ ms.locfileid: "36128569"
   
 6.  右键单击“控制流”选项卡背景的任意位置，然后单击“属性”。  
   
-7.  在属性窗口中，更新`Name`属性`Lesson 3`。  
+7.  在属性窗口中，更新`Name`属性设置为`Lesson 3`。  
   
-8.  单击对应的框**ID**属性，然后在列表中，单击**\<生成新的 ID >**。  
+8.  单击对应的框**ID**属性，然后在列表中，单击**\<生成新 ID >**。  
   
 ### <a name="to-add-the-completed-lesson2-package"></a>添加已完成的 Lesson 2 包  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295047"
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
   在表达式中，标识符是可供运算使用的列和变量。 表达式可以使用常规标识符和限定标识符。  
@@ -116,9 +116,9 @@ ms.locfileid: "36125212"
 > [!IMPORTANT]  
 >  必须将命名空间与限定的变量名二者的组合放在方括号中，表达式计算器才能识别该变量。  
   
- 如果值**计数**中**用户**命名空间为 10 的值**计数**中**MyNamespace**为 2，该表达式的计算结果为`true`因为表达式计算器将它们识别两个不同的变量。  
+ 如果的值**计数**中**用户**命名空间是 10，而值**计数**中**MyNamespace**为 2，该表达式的计算结果为`true`因为表达式计算器将它们识别两个不同的变量。  
   
- 如果变量名不唯一，将不会发生错误。 相反，表达式计算器将仅使用变量的一个实例来计算表达式并返回错误的结果。 例如，下面的表达式用于比较两个单独值 （10 和 2）**计数**变量，但表达式计算结果为`false`因为表达式计算器使用的同一个实例**计数**变量两次。  
+ 如果变量名不唯一，将不会发生错误。 相反，表达式计算器将仅使用变量的一个实例来计算表达式并返回错误的结果。 例如，以下表达式原来是为了比较两个单独的值 （10 和 2）**计数**变量，但该表达式的计算结果为`false`因为表达式计算器使用的同一个实例**计数**变量两次。  
   
 ```  
 @Count > @Count  

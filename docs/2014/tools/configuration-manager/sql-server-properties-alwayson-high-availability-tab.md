@@ -1,5 +1,5 @@
 ---
-title: SQL Server 属性 （AlwaysOn 高可用性选项卡） |Microsoft 文档
+title: SQL Server 属性 （AlwaysOn 高可用性选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 caps.latest.revision: 12
-author: MikeRayMSFT
+author: mikeraymsft
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c19735c4cdae900f9d9d05b911e37224a31ddf96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24f1a371cf69c825d9ec251fa4271c5c8d596210
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303157"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 属性（“AlwaysOn 高可用性”选项卡）
   使用  配置管理器的 **“SQL Server 属性”** 对话框中的“AlwaysOn 高可用性” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 选项卡，可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启用或禁用“AlwaysOn 可用性组”功能。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  

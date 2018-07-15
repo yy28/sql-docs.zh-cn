@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint 2010 安装 |Microsoft 文档
+title: PowerPivot for SharePoint 2010 安装 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26f7d5188f5c119bcd4fd114e955638f22b9efd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db5a6400ee6191c6be328857ea44365238adcab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232517"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 安装
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是为您发布到 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿提供查询处理和管理控制的服务器组件的集合。 组件包括 Analysis Services 引擎和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务。  
@@ -29,11 +29,11 @@ ms.locfileid: "36138998"
 >   
 >  -   "SQL Server 2012 SP1"部分[概述的 SQL Server 服务安装](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)。  
   
- Analysis Services 为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿提供服务器端处理。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务与 Analysis Services 一起工作，从而添加 SharePoint 集成、负载平衡和连接管理。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 将 Excel 服务扩展通过配对 Excel 提供的数据呈现服务具有其大规模数据处理功能。  
+ Analysis Services 为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿提供服务器端处理。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务与 Analysis Services 一起工作，从而添加 SharePoint 集成、负载平衡和连接管理。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 通过进行配对其大规模数据处理能力与 Excel 提供的数据呈现服务扩展了 Excel Services。  
   
- 若要安装[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安装媒体。  
+ 若要安装[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安装介质。  
   
- 高级的部署方案的说明，请参阅[部署清单： Reporting Services、 Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署清单： 通过将添加到 PowerPivot 服务器的横向扩展SharePoint 2010 场](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
+ 有关高级的部署方案的说明，请参阅[部署核对清单： Reporting Services、 Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署核对清单： 通过添加到 PowerPivot 服务器来横向扩展SharePoint 2010 场](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [安装 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

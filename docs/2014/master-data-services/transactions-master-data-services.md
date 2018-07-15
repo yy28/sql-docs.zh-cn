@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: debc2d15deda7079c54d3b763ef89afaa86f17f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7697fba2cadf0f7199b047ce7e84656b838cedb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283353"
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，每次对成员执行操作时，都记录一个事务。 事务可供所有用户查看并由管理员撤销。 事务显示执行操作的日期、时间和用户以及其他详细信息。 用户可以为事务添加批注，以指示事务发生的时间。  

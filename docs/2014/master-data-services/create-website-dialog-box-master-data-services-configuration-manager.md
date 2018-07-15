@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ba53eed2e5d9bd7d3de0c85e27b049d002a67bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285403"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>“创建网站”对话框（Master Data Services 配置管理器）
   使用 **“创建网站”** 对话框可以在本地计算机上创建新网站。 在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中创建网站时，该网站将添加到本地计算机上的 Internet Information Services (IIS)，并且具有配置为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的根应用程序。 还将创建一个新的应用程序池，并且 Web 应用程序将放置在该应用程序池中。  

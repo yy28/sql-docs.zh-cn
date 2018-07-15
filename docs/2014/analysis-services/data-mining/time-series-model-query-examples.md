@@ -1,5 +1,5 @@
 ---
-title: 时序模型查询示例 |Microsoft 文档
+title: 时序模型查询示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b6c0f25f4d5694d678e51acc0ecb4ccbf98f8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319297"
 ---
 # <a name="time-series-model-query-examples"></a>时序模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 例如，时序模型的内容查询可能提供有关检测到的周期性结构的其他详细信息，而预测查询可能给出接下来 5-10 个时间段的预测。 您还可以使用查询来检索有关模型的元数据。  
@@ -143,7 +143,7 @@ AND NODE_TYPE = 15
   
      扩展模型事例对于使用新数据持续更新模型很有用。 例如，如果要使定型集随时间增长，则只需扩展该模型。  
   
-     若要扩展数据，你可以创建`PREDICTION JOIN`时序模型，在指定的新数据源，然后使用`EXTEND_MODEL_CASES`自变量。  
+     若要扩展数据，则创建`PREDICTION JOIN`对时序模型，指定新数据源，并使用`EXTEND_MODEL_CASES`参数。  
   
 -   **替换：** 当您在数据系列中替换数据时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将保留定型模型，但使用新数据值替换全部或部分现有定型事例。 因此，定型数据的大小永远不会发生变化，但事例本身却可以使用更新的数据不断进行替换。 如果您提供了足够的新数据，则可以使用全新的序列替换定型数据。  
   
@@ -160,7 +160,7 @@ AND NODE_TYPE = 15
   
  例如，假定现有模型具有六个月积累的数据。 您想通过添加最近三个月的销售数字来扩展该模型。 同时，您还想对接下来三个月进行预测。 添加新数据时如果只想获得新的预测，则将起点指定为时间段 4，将终点指定为时间段 7。 您可能还要请求全部六个预测，但是，前三个预测的时间段会与刚添加的新数据重叠。  
   
- 有关查询示例和有关使用的语法的详细信息`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 有关查询示例和使用的语法的详细信息`REPLACE_MODEL_CASES`并`EXTEND_MODEL_CASES`，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="bkmk_EXTEND"></a> 使用 EXTEND_MODEL_CASES 进行预测  
  根据您是要扩展还是替换模型事例，预测行为会有所不同。 如果要扩展模型，新数据会附加到序列的末尾，并且定型集的大小会增加。 但是，用于预测查询的时间段始终从原始序列的末尾开始。 因此，如果您要添加三个新数据点并请求六个预测，返回的前三个预测将会与新数据重叠。 在这种情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会返回实际的新数据点，而不是进行预测，直到所有新数据点用完为止。 然后， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会根据组合序列进行预测。  
@@ -182,7 +182,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> 使用 REPLACE_MODEL_CASES 进行预测  
  在替换模型中的事例时，模型的大小将保持不变，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将替换模型中的各个事例。 这对于交叉预测以及需要让定型数据集的大小保持一致的情形很有用。  
   
- 例如，您的一个商店的销售数据不足。 您可以对位于特定地区的所有商店的销售量计算平均值，然后定型一个模型，以此来创建一个常规模型。 然后，若要进行预测的存储区不包含足够的销售数据，你创建`PREDICTION JOIN`只是该存储区的新销售数据上。 在进行此操作时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会保留从地区模型中派生的模式，而使用各个商店的数据替换现有的定型事例。 最后，您的预测值将更为接近各个商店的趋势线。  
+ 例如，您的一个商店的销售数据不足。 您可以对位于特定地区的所有商店的销售量计算平均值，然后定型一个模型，以此来创建一个常规模型。 然后，若要进行预测的销售数据不足的商店，你创建`PREDICTION JOIN`上仅为该商店的新销售数据。 在进行此操作时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会保留从地区模型中派生的模式，而使用各个商店的数据替换现有的定型事例。 最后，您的预测值将更为接近各个商店的趋势线。  
   
  使用 `REPLACE_MODEL_CASES` 参数时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会连续将新事例添加到事例集的末尾，并从事例集的开头删除相应数量的事例。 如果您要添加的新数据比原始定型集中的数据多， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将丢弃最早的数据。 如果您提供了足够的新值，则预测可以基于全新的数据。  
   
@@ -202,10 +202,10 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  对于 REPLACE_MODEL_CASES，从时间戳 1 开始获取基于新数据的新预测，这会替换旧的定型数据。  
   
- 有关查询示例和有关使用的语法的详细信息`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 有关查询示例和使用的语法的详细信息`REPLACE_MODEL_CASES`并`EXTEND_MODEL_CASES`，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="bkmk_MissingValues"></a> 时序模型中的缺失值替代  
- 在通过 `PREDICTION JOIN` 语句在时序模型中添加新数据时，新数据集不能有任何缺失值。 如果有任何序列不完整，则该模型必须使用 Null、数值平均值、特定数值平均值或预测值来替换缺失的值。 如果指定了 `EXTEND_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将缺失值替换为基于原始模型的预测。 如果你使用`REPLACE_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]缺失值替换为你在中指定的值*MISSING_VALUE_SUBSTITUTION*参数。  
+ 在通过 `PREDICTION JOIN` 语句在时序模型中添加新数据时，新数据集不能有任何缺失值。 如果有任何序列不完整，则该模型必须使用 Null、数值平均值、特定数值平均值或预测值来替换缺失的值。 如果指定了 `EXTEND_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将缺失值替换为基于原始模型的预测。 如果您使用`REPLACE_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]缺失值替换在指定的值*MISSING_VALUE_SUBSTITUTION*参数。  
   
 ## <a name="list-of-prediction-functions"></a>预测函数的列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下表中列出的其他函数。  
@@ -213,7 +213,7 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |预测函数|用法|  
-|[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|返回当前事例的日期与定型集的最近日期之间的若干时间段。<br /><br /> 该函数的一个典型用途是标识最近的定型事例，以使您可以检索有关这些事例的详细数据。|  
+|[延隔时间&#40;DMX&#41;](/sql/dmx/lag-dmx)|返回当前事例的日期与定型集的最近日期之间的若干时间段。<br /><br /> 该函数的一个典型用途是标识最近的定型事例，以使您可以检索有关这些事例的详细数据。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|返回指定的可预测列的节点 ID。<br /><br /> 该函数的一个典型用途是标识生成特定预测值的节点，以使您可以查看与该节点关联的事例，或者检索公式和其他详细信息。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|返回指定的可预测列中预测的标准偏差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|返回指定可预测列的预测方差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
@@ -224,7 +224,7 @@ AND NODE_TYPE = 15
 ## <a name="see-also"></a>请参阅  
  [数据挖掘查询](data-mining-queries.md)   
  [Microsoft 时序算法](microsoft-time-series-algorithm.md)   
- [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)   
+ [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)   
  [时序模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

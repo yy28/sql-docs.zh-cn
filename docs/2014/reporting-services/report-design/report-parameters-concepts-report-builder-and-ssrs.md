@@ -1,5 +1,5 @@
 ---
-title: 报表参数概念 （报表生成器和 SSRS） |Microsoft 文档
+title: 报表参数概念 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3df4f17a75018c3b78653f5b0fb9419d3835f9e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 860099dc49e0fe383d7b53ac379c4671ead2477b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296057"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>报表参数概念（报表生成器和 SSRS）
   您可以向报表添加参数，以便链接相关报表、控制报表外观、筛选报表数据或者将报表的作用域限制为特定的用户或位置。  
@@ -50,6 +50,6 @@ ms.locfileid: "36129132"
 ## <a name="see-also"></a>请参阅  
  [报表创作概念&#40;报表生成器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [教程： 将参数添加到您的报表&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教程： 向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

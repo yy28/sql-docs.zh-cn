@@ -1,5 +1,5 @@
 ---
-title: 选择成员 （商业智能向导） |Microsoft 文档
+title: 选择成员 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75cd6c2aeca77d55b4ec66baa3dccb4c77f4a66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b1bdcf78e3a7fd35da53e7a39bea5c24e217ae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321237"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>选择成员（商业智能向导）
   可以使用 **“选择成员”** 页，确定商业智能向导应对哪些成员应用 **“设置货币换算选项”** 页上指定的货币换算功能。  
@@ -37,11 +37,11 @@ ms.locfileid: "36125456"
   
 |选项|Description|  
 |------------|-----------------|  
-|**内置的度量值类型**|选择此选项可为指定的度量值包括货币换算功能。|  
+|**内置度量值类型**|选择此选项可为指定的度量值包括货币换算功能。|  
 |**度量值**|从包含汇率的比率度量值组中，选择在换算从“内置度量值类型”中选择的度量值时要使用的度量值。|  
   
  **帐户层次结构**  
- 选择此选项可以对多维数据集中所包括帐户维度的帐户层次结构中的一个或多个成员应用货币换算功能。 帐户层次结构是帐户内的层次结构维度其`Type`属性设置为*帐户*。  
+ 选择此选项可以对多维数据集中所包括帐户维度的帐户层次结构中的一个或多个成员应用货币换算功能。 帐户层次结构是在维度的帐户中的层次结构`Type`属性设置为*帐户*。  
   
  如果选择此选项，网格中将显示下表中所列出的选项：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36125456"
 |**度量值**|从包含汇率的比率度量值组中，选择在换算 **“帐户成员”** 中所选成员的度量值时要使用的度量值。|  
   
  **基于类型的帐户层次结构**  
- 选择要应用于的所有成员的货币换算功能属性帐户层次结构中其`Type`属性设置为指定的帐户类型。  
+ 选择要应用于的所有成员的货币换算功能特性帐户层次结构中其`Type`属性设置为指定的帐户类型。  
   
  如果选择此选项，网格中将显示下表中所列出的选项：  
   

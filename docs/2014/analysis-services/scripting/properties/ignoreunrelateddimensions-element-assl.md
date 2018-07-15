@@ -1,5 +1,5 @@
 ---
-title: IgnoreUnrelatedDimensions 元素 (ASSL) |Microsoft 文档
+title: IgnoreUnrelatedDimensions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IgnoreUnrelatedDimensions element
 ms.assetid: c7d7a1cd-a8e0-4ae7-9464-a1d2a55a86ab
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a85e4c3b5d113b6e122f699425a8b0ffaf88a091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c278a3109180dbd058bc7ed8212c7b05782ce3d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295457"
 ---
 # <a name="ignoreunrelateddimensions-element-assl"></a>IgnoreUnrelatedDimensions 元素 (ASSL)
   确定当查询中包括与度量值组无关的维度的成员时，是否将无关维度强制为顶级。  
@@ -64,7 +64,7 @@ ms.locfileid: "36127165"
 ## <a name="remarks"></a>Remarks  
  当 `IgnoreUnrelatedDimensions` 为 `true` 时，无关的维度会被强制为顶级；当其值为 `false` 时，维度不会被强制为顶级。 此属性是为多维表达式 (MDX) 类似[ValidMeasure](/sql/mdx/validmeasure-mdx)函数。  
   
- 对应于的父元素`IgnoreUnrelatedDimensions`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroup>。  
+ 父级对应的元素`IgnoreUnrelatedDimensions`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

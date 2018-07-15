@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
 - Transact-SQL international considerations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cbd8342f74668ba52ff837336bd9b245480f489f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 236948c23164cd0890e7c4fc4455cbc87227d792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256973"
 ---
 # <a name="write-international-transact-sql-statements"></a>编写国际化 Transact-SQL 语句
   如果遵循以下指导原则，则使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的数据库和数据库应用程序将变得更易于在语言之间移植，或者将支持多种语言：  
@@ -48,7 +48,7 @@ ms.locfileid: "36138214"
   
     -   使用其他 API 的应用程序或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本、存储过程和触发器都应使用未分隔数值字符串。 例如 *yyyymmdd* 为 19980924。  
   
-    -   使用其他 Api 的应用程序或[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本、 存储的过程和触发器应使用的 CONVERT 语句与显式样式参数之间的所有转换`time`， `date`， `smalldate`， `datetime`，**datetime2**，和`datetimeoffset`数据类型和字符串数据类型。 例如，以下语句对于所有语言或日期格式连接设置的解释方式都相同：  
+    -   使用其他 Api 的应用程序或[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本、 存储的过程和触发器应使用的 CONVERT 语句带有显式样式参数之间的所有转换`time`， `date`， `smalldate`， `datetime`，**datetime2**，和`datetimeoffset`数据类型与字符串数据类型。 例如，以下语句对于所有语言或日期格式连接设置的解释方式都相同：  
   
         ```  
         SELECT *  

@@ -1,5 +1,5 @@
 ---
-title: 操作 (Analysis Services-多维数据) |Microsoft 文档
+title: 操作 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
 - actions [Analysis Services], about actions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5828886d047c6b8fcec0d511a8d1ddbd94bbae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319447"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
   操作可以具有不同的类型，因而必须相应地进行创建。 操作可为：  
@@ -42,7 +42,7 @@ ms.locfileid: "36126629"
   
  目标指操作在多维数据集中的实际执行位置。 目标由目标类型和目标对象组成。 目标类型表示要在其中启用操作的多维数据集中的对象的类型。 目标类型可为级别成员、单元、层次结构、层次结构成员等。 目标对象是目标类型的特定对象；如果目标类型为层次结构，则目标对象将为多维数据集中定义的任一层次结构。  
   
- 条件是`Boolean`操作事件发生时计算的 MDX 表达式。 如果条件计算结果为`true`，然后执行此操作。 否则，不执行操作。  
+ 条件是`Boolean`操作事件发生时计算的 MDX 表达式。 如果条件计算结果为`true`，则执行操作。 否则，不执行操作。  
   
  类型是要执行的操作的类型。 <xref:Microsoft.AnalysisServices.Action> 是一个抽象类；因此，若要使用该类，你必须使用任一派生类。 预定义了两种类型的操作：钻取和报告。 这两种类型的操作具有相应的派生类： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他操作包含在 <xref:Microsoft.AnalysisServices.StandardAction> 类中。  
   

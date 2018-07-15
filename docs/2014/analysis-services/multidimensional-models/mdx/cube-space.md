@@ -1,5 +1,5 @@
 ---
-title: 多维数据集空间 |Microsoft 文档
+title: 多维数据集范围 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8be8107b3d18aca49cf8b670131ef695d5901f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282183"
 ---
 # <a name="cube-space"></a>多维数据集空间
   “多维数据集空间”是多维数据集属性层次结构的成员与多维数据集的度量值的乘积。 因此，多维数据集空间由多维数据集中所有属性层次结构成员和多维数据集的度量值的组合乘积确定，并且定义多维数据集的最大大小。 需要特别注意的是，此空间包括属性层次结构成员的所有可能组合；甚至包括在真实世界可能会认定为不可能的组合，例如城市是巴黎而国家/地区是英国、西班牙、日本、印度或其他地方的组合。  
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  请注意，`WITH`关键字用于[CurrentMember (MDX)](/sql/mdx/current-mdx)和[名称 (MDX)](/sql/mdx/members-string-mdx)函数来创建在查询中使用的计算的成员。 有关详细信息，请参阅[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)。  
+>  请注意，`WITH`关键字用于[CurrentMember (MDX)](/sql/mdx/current-mdx)并[Name (MDX)](/sql/mdx/members-string-mdx)函数来创建在查询中使用的计算的成员。 有关详细信息，请参阅[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)。  
   
  在前面的查询中，返回了与 State 属性层次结构各成员相关联的 Country 属性层次结构的成员名称。 出现了预期的 Country 成员（因为定义了 City 和 Country 属性之间的属性关系）。 不过，如果在同一维度中没有定义属性层次结构间的任何属性关系，将返回“(全部)”成员，如以下查询所示。  
   

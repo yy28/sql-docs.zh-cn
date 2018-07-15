@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 583603105c6c5ce4a7c24dc09ef50b56ccf77173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c1d2141f51c0434fb0c03dee6c1a07875b8150f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305407"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -39,7 +39,7 @@ ms.locfileid: "36127102"
 ## <a name="explanation"></a>解释  
  这是一个常规错误，不管是否进行复制，都会引发该错误。 对于复制拓扑中的服务器，引发该错误的原因通常是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 服务控制管理器，而不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 配置管理器来更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 当您在更改服务帐户后尝试运行代理作业时，作业可能会失败，并显示类似如下的错误消息：  
   
- "作为用户执行：\<用户帐户 >。 复制复制快照子系统： 代理\<代理名称 > 失败。 作为用户执行：\<用户帐户 >。 客户端没有所需的特权。 该步骤失败。 `[SQLSTATE 42000] (Error 14151)`的用户。 该步骤失败。”  
+ "作为用户执行：\<用户帐户 >。 复制-复制快照子系统： 代理\<代理名称 > 失败。 以用户身份执行：\<用户帐户 >。 客户端没有所需的特权。 该步骤失败。 `[SQLSTATE 42000] (Error 14151)`的用户。 该步骤失败。”  
   
  出现此问题的原因是 Windows 服务控制管理器无法向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的新服务帐户授予所需权限。  
   

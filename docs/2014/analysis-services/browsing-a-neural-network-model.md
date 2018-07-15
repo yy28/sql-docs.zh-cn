@@ -1,5 +1,5 @@
 ---
-title: 浏览神经网络模型 |Microsoft 文档
+title: 浏览神经网络模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286363"
 ---
 # <a name="browsing-a-neural-network-model"></a>浏览神经网络模型
   使用“浏览”打开神经网络或逻辑回归模型时，该模型显示在交互式查看器（类似于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的神经网络模型查看器）中。 该查看器有助于您探索相关性并获取有关该模型和基础数据中各种模式的信息。  
   
-##  <a name="BKMK_Tabs"></a> 浏览该模型  
+##  <a name="BKMK_Tabs"></a> 浏览模型  
  基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络或逻辑回归算法的模型是类似的，它们都是将数据作为已知输入和输出中的一组连接进行分析。 “浏览”查看器可帮助你使用以下控件浏览这些连接：  
   
 -   [变量](#BKMK_Variables)  
@@ -46,7 +46,7 @@ ms.locfileid: "36128422"
   
  使用此查看器，您可以探索在确定客户是更有可能属于自行车购买者类别还是更有可能属于非购买者类别时最为重要的因素。  
   
- ![测试对所选特性的结果影响](media/dm13-neuralnet-agebuyer1.gif "测试对所选特性的结果的影响")  
+ ![测试结果的所选属性的效果](media/dm13-neuralnet-agebuyer1.gif "测试对所选属性的结果的影响")  
   
 ##### <a name="explore-variables"></a>浏览变量  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36128422"
   
      对于“Income”，该列已细分为多个分组，如 78.4-154.06（用于最高收入范围）。  
   
-     ![若要查看如何变量已装箱的排序](media/dm13-nn-bucketing-variables.gif "排序，若要查看如何已装箱变量")  
+     ![若要查看变量的装箱方式排序](media/dm13-nn-bucketing-variables.gif "排序可查看变量的装箱方式")  
   
      如果需要不同的分组，应使用[重新标记（SQL Server 数据挖掘外接程序）](relabel-sql-server-data-mining-add-ins.md)工具或 Excel 函数，在生成模型前创建新收入类别。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36128422"
   
 1.  假设要以特定组为目标，查看组中最影响购买行为的因素。  
   
-     在**输入**窗格中，单击**\<所有 >** 下单元格**属性**，然后选择**年龄**。  
+     在中**输入**窗格中，单击**\<所有 >** 下单元格**属性**，然后选择**年龄**。  
   
      对于“值”，请选择最年轻的年龄类别。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36128422"
   
      例如，对于输入属性，添加“Gender”，然后选择“Female”作为值。  
   
-     ![测试对所选特性的结果影响](media/dm13-neuralnet-agebuyer2.gif "测试对所选特性的结果的影响")  
+     ![测试结果的所选属性的效果](media/dm13-neuralnet-agebuyer2.gif "测试对所选属性的结果的影响")  
   
      注意变量列表是如何变化的。 此时，“Income”是在预测目标结果时最重要的变量。  
   
@@ -138,6 +138,6 @@ ms.locfileid: "36128422"
  有关详细信息，请参阅[创建挖掘结构（SQL Server 数据挖掘外接程序）](create-mining-structure-sql-server-data-mining-add-ins.md)和[将模型添加到结构（Excel 数据挖掘外接程序）](add-model-to-structure-data-mining-add-ins-for-excel.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [浏览 Excel 中的模型&#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [在 Excel 中浏览模型&#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

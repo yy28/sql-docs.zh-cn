@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77e87dc08897954cb210b9e785dc4d6e266a3ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8a8b6cc94bf769be46bf3a2fc101731ba28d2021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321867"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
@@ -88,6 +88,6 @@ ms.locfileid: "36126778"
   
 ## <a name="see-also"></a>请参阅  
  [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [设置文本框中的文本格式&#40;报表生成器和 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [中的文本框中的文本格式&#40;报表生成器和 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

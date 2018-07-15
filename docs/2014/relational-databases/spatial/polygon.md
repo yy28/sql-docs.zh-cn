@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238757"
 ---
 # <a name="polygon"></a>Polygon
-  A`Polygon`是存储为一系列点定义一个外部边界环和零个或多个内部环的二维表面。  
+  一个`Polygon`是存储为一系列点定义一个外部边界环和零个或多个内部环的二维表面。  
   
 ## <a name="polygon-instances"></a>Polygon 实例  
- A`Polygon`可以从具有至少三个不同点的环中构建实例。 A`Polygon`实例也可以为空。  
+ 一个`Polygon`实例可以从具有至少三个不同点的环中构建。 一个`Polygon`实例也可以为空。  
   
  外部环和任意内部环`Polygon`定义了其边界。 环内部的空间定义了 `Polygon` 的内部。  
   
- 下图显示的示例`Polygon`实例。  
+ 下图显示了示例的`Polygon`实例。  
   
  ![几何 Polygon 实例的示例](../../database-engine/media/polygon.gif "几何 Polygon 实例的示例")  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36138822"
   
  要使环可接受，需要满足以下条件。  
   
--   `LineString`必须已接受的实例。  
+-   `LineString`实例必须已接受。  
   
 -   `LineString` 实例至少必须有四个点。  
   
@@ -85,9 +85,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- 内部环`Polygon`可以触摸这两个本身也相互在单个切点处，但如果的内部环`Polygon`交叉，实例不是有效。  
+ 内部环`Polygon`可以接触这两个本身也相互在单个切点处，但如果的内部环`Polygon`cross、 的实例不是有效。  
   
- 下面的示例显示有效`Polygon`实例。  
+ 以下示例显示有效`Polygon`实例。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
@@ -108,7 +108,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` 无效，因为内部环在两个位置接触外部环。 `@g2` 无效，因为第二个内部环位于第一个内部环的内部。 `@g3` 不是有效因为两个内部环在多个连续点处接触。 `@g4` 无效，因为两个内部环的内部重叠。 `@g5` 无效，因为外部环不是第一个环形。 `@g6` 无效，因为环未至少具有三个不同的点。  
+ `@g1` 无效，因为内部环在两个位置接触外部环。 `@g2` 无效，因为第二个内部环位于第一个内部环的内部。 `@g3` 不是有效因为两个内部环在多个连续点接触。 `@g4` 无效，因为两个内部环的内部重叠。 `@g5` 无效，因为外部环不是第一个环形。 `@g6` 无效，因为环未至少具有三个不同的点。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建了一个带有孔和 SRID 为 10 的简单 `geometry``Polygon` 实例。  

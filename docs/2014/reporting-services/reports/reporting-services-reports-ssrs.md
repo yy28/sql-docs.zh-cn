@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306997"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表是包括报表数据和报表布局元素的基于 XML 的报表定义。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 报表是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的基于服务器的报表平台的一部分。  
@@ -99,7 +99,7 @@ ms.locfileid: "36127023"
   
     -   **自定义数据和布局。** 设计报表布局。 报表定义具有表体、数据源、数据集、数据区域、文本框、线条和图像。 矩形用作布局以及可视元素的容器。 通过撰写表达式以便控制对数据的筛选、分组、排序、格式设置和显示，对每个数据区域进行自定义。 添加报表名称、位置以及可帮助管理几十或数百个报表的其他标识信息。 添加可视元素和容器以便组织页面上的布局元素。 有关详细信息，请参阅以下主题：  
   
-        -   [筛选、 分组和排序数据&#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36127023"
 ##  <a name="bkmk_SecureReportsSummary"></a> 保护报表  
  保护报表：  
   
--   从报表服务器管理员，标识用于您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安装的授权和身份验证系统。 默认情况下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用 Windows 身份验证、 集成的安全性和角色分配来帮助控制访问权限已发布的报表。 有关详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)。  
+-   从报表服务器管理员，标识用于您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安装的授权和身份验证系统。 默认情况下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用 Windows 身份验证、 集成的安全性和角色分配来帮助控制对已发布的报表访问。 有关详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)。  
   
 ## <a name="create-notifications-based-on-report-data"></a>基于报表数据创建通知  
  您可以为 SharePoint 站点上的已发布报表创建数据警报。 数据警报基于报表的数据区域中的数据馈送。 默认情况下，将自动对数据区域进行命名。 报表作者可以通过基于其业务用途命名数据区域，更轻松地在其报表中创建数据区域。 在您创建数据警报时，如果数据满足您指定的条件，您将收到以电子邮件形式发出的通知。 有关详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)、[在数据警报设计器中创建数据警报](../create-a-data-alert-in-data-alert-designer.md)和 [Reporting Services 数据警报](../reporting-services-data-alerts.md)。  

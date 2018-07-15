@@ -1,30 +1,29 @@
 ---
-title: 选择数据库页 （新建可用性组向导将添加数据库向导） |Microsoft 文档
+title: 选择数据库页 （新建可用性组向导 / 添加数据库向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.selectdatabases.f1
 - sql12.swb.newagwizard.selectdatabases.f1
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 12
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 304ce826a45debaf4d18a63e9d68061ef393705b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc83c051c75887ee58230e2a1276b8eb408c6830
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320927"
 ---
-# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>选择数据库页 （新建可用性组向导将添加数据库向导）
+# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>选择数据库页 （新建可用性组向导 / 添加数据库向导）
   本帮助主题说明 **“指定数据库”** 页的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ##  <a name="PageOptions"></a> 选择数据库选项  
@@ -52,6 +51,6 @@ ms.locfileid: "36125220"
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

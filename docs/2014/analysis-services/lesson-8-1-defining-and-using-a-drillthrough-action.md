@@ -1,5 +1,5 @@
 ---
-title: 定义和使用钻取操作 |Microsoft 文档
+title: 定义和使用钻取操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263723"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定义和使用钻取操作
   如果按事实维度来维度化事实数据，而不正确筛选查询返回的数据，则可能导致查询速度变慢。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
@@ -40,9 +40,9 @@ ms.locfileid: "36138102"
   
      “显示”窗格中将出现空白操作模板。  
   
-     ![在显示窗格中的空白操作模板](../../2014/tutorials/media/l8-action2.gif "空的操作在显示窗格中的模板")  
+     ![在显示窗格中的空白操作模板](../../2014/tutorials/media/l8-action2.gif "显示窗格中的空白操作模板")  
   
-3.  在**名称**框中，更改到此操作的名称`Internet Sales Details Drillthrough Action`。  
+3.  在中**名称**框中，更改到此操作的名称`Internet Sales Details Drillthrough Action`。  
   
 4.  在“度量值组成员”列表中，选择“Internet 销售”。  
   
@@ -50,19 +50,19 @@ ms.locfileid: "36138102"
   
 6.  在“返回列”列表中，选中“项说明”和“订单编号”复选框，再单击“确定”。 下图显示至此在该操作过程中操作模板的应有外观。  
   
-     ![钻取列框](../../2014/tutorials/media/l8-action3.gif "钻取列中")  
+     ![钻取列框](../../2014/tutorials/media/l8-action3.gif "钻取列框")  
   
 7.  展开“附加属性”框，如下图所示。  
   
-     ![其他属性框](../../2014/tutorials/media/l8-action4.gif "其他属性框")  
+     ![其他属性框](../../2014/tutorials/media/l8-action4.gif "附加属性框")  
   
-8.  在**最大行数**框中，键入`10`。  
+8.  在中**最大行数**框中，键入`10`。  
   
-9. 在**标题**框中，键入`Drillthrough to Order Details…`。  
+9. 在中**标题**框中，键入`Drillthrough to Order Details…`。  
   
      这些设置将限制返回的行数，并指定在客户端应用程序菜单中将出现的标题。 下图显示了“附加属性”框中的这些设置。  
   
-     ![其他属性框](../../2014/tutorials/media/l8-action5.gif "其他属性框")  
+     ![其他属性框](../../2014/tutorials/media/l8-action5.gif "附加属性框")  
   
 ## <a name="using-the-drillthrough-action"></a>使用钻取操作  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36138102"
   
      交付给 Adam Powell 的订单的详细信息将显示在“数据示例查看器”中，如下图所示。 但是，某些其他详细信息也会是有用的，如订单日期、截止日期和发运日期。 在下一个过程中，您将添加这些其他详细信息。  
   
-     ![Adam Powell 发往订单](../../2014/tutorials/media/l8-action6.gif "到 Adam Powell 已发货的订单")  
+     ![交付给 Adam Powell 的订单](../../2014/tutorials/media/l8-action6.gif "交付给 Adam Powell 的订单")  
   
 8.  关闭 Excel/  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36138102"
   
     -   ShipDateKey  
   
-6.  更改**名称**属性**订单日期参数**属性设为`Order Date`然后，单击浏览按钮为**名称列**属性，并在**名称列**对话框中，选择**日期**作为源表和源列的选择 SimpleDate。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  更改**名称**属性**订单日期键**归于`Order Date`然后单击浏览按钮**名称列**属性，在**名称列**对话框中，选择**日期**作为源表并选择 SimpleDate 作为源列。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  更改**名称**属性**到期日期密钥**属性设为`Due Date`，，然后，通过使用相同方法**订单日期参数**属性，更改**名称列**到此特性的属性**Date.SimpleDate (WChar)**。  
+7.  更改**名称**属性**截止日期键**归于`Due Date`，然后，按使用相同的方法作为**订单日期键**属性，请更改**名称列**到此属性的属性**Date.SimpleDate (WChar)**。  
   
-8.  更改**名称**属性**发货日期密钥**属性设为`Ship Date`，然后将更改**名称列**到此特性的属性**Date.SimpleDate (WChar)**。  
+8.  更改**名称**属性**装运日期键**归于`Ship Date`，然后将更改**名称列**到此属性的属性**Date.SimpleDate (WChar)**。  
   
 9. 切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“操作”选项卡。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36138102"
   
      下图显示了这些所选列。  
   
-     ![钻取列框](../../2014/tutorials/media/l8-action7.gif "钻取列中")  
+     ![钻取列框](../../2014/tutorials/media/l8-action7.gif "钻取列框")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>检查修改后的钻取操作  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36138102"
   
      在临时电子表格中将显示交付给 Adam Powell 的这些订单的详细信息。 这包括项说明、订单号、订单日期、截止日期和发运日期信息，如下图所示。  
   
-     ![Adam Powell 发往订单](../../2014/tutorials/media/l8-action8.gif "到 Adam Powell 已发货的订单")  
+     ![交付给 Adam Powell 的订单](../../2014/tutorials/media/l8-action8.gif "交付给 Adam Powell 的订单")  
   
 ## <a name="next-lesson"></a>下一课  
  [第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  

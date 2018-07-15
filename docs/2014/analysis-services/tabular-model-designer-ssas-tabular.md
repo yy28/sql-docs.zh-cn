@@ -1,5 +1,5 @@
 ---
-title: 表格模型设计器 (SSAS 表格) |Microsoft 文档
+title: 表格模型设计器 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263343"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>表格模型设计器（SSAS 表格）
-  表格模型设计器属于[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、 与 Microsoft 集成[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010年或更高版本，并且专用于开发专业表格模型解决方案的其他项目类型模板。  
+  表格模型设计器属于[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]与 Microsoft 集成[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010年或更高版本，且专用于开发专业表格模型解决方案的附加项目类型模板。  
   
  本主题的内容：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36137846"
   
 -   [项目模板](#bkmk_proj_temp)  
   
--   [窗口和菜单](#bkmk_wind_men)  
+-   [Windows 和菜单](#bkmk_wind_men)  
   
 -   [Visual Studio 集成](#bkmk_vsint)  
   

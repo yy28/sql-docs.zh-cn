@@ -1,5 +1,5 @@
 ---
-title: 源元素 (XMLA) |Microsoft 文档
+title: 源元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Sources element
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f634df53b1eb92979caa699b25824d9345e00c21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1aae2aca405aaabce130400d4d5896a6ae823851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304167"
 ---
 # <a name="sources-element-xmla"></a>Sources 元素 (XMLA)
-  包含一套[源](source-element-xmla.md)父元素[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)元素。  
+  包含一系列[源](source-element-xmla.md)父元素[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36128185"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[撰写 MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
+|父元素|[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
 |子元素|[数据源](source-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

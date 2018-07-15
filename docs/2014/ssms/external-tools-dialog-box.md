@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15d26c23413cc3f47cba2cce5d7d7ce9efab9a66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 60e6ba4d3c9997eaa9052b5d88bf1e2ed625f548
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226637"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
   使用“外部工具”对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
@@ -78,7 +78,7 @@ ms.locfileid: "36138987"
 |**参数**|-A|  
   
 ## <a name="see-also"></a>请参阅  
- [外部工具参数](menu-help/external-tools.md)   
+ [外部工具的参数](menu-help/external-tools.md)   
  [常规用户界面元素](general-user-interface-elements.md)  
   
   

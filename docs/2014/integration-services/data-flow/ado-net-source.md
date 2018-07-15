@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320767"
 ---
 # <a name="ado-net-source"></a>ADO NET 源
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
@@ -35,7 +35,7 @@ ms.locfileid: "36127584"
  你可以使用 ADO NET 源连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的详细信息，请参阅 [通用指导原则和限制（Microsoft Azure SQL 数据库）](http://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="data-type-support"></a>数据类型支持  
- 源会将未映射到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的任意数据类型转换为 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 即使数据类型，会发生此转换`System.Object`。  
+ 源会将未映射到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的任意数据类型转换为 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 即使数据类型为，会发生此转换`System.Object`。  
   
  可以将 DT_NTEXT 数据类型更改为 DT_WSTR 数据类型，也可以将 DT_WSTR 更改为 DT_NTEXT。 通过在 ADO NET 源的 **“高级编辑器”** 对话框中设置 **DataType** 属性可更改数据类型。 有关详细信息，请参阅 [Common Properties](../common-properties.md)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36127584"
 >  在您使用 SQL 语句调用从临时表返回结果的某一存储过程时，使用 WITH RESULT SETS 选项可为结果集定义元数据。  
   
 > [!NOTE]  
->  如果你使用的 SQL 语句来执行存储的过程，并且包将失败并出现以下错误，你可以通过添加解决该错误`SET FMTONLY OFF`exec 语句前的语句。  
+>  如果使用 SQL 语句来执行存储的过程且包因为以下错误失败，您可能能够通过添加解决该错误`SET FMTONLY OFF`exec 语句前的语句。  
 >   
 >  **在数据源中找不到列 <列名>。**  
   

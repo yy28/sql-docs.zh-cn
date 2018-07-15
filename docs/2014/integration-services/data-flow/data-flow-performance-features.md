@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287655"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -76,12 +76,12 @@ ms.locfileid: "36128812"
  不要将缓冲区大小增加到开始对磁盘进行分页的点。 与未经过优化的缓冲区大小相比，对磁盘进行分页对性能的阻碍作用更大。 若要确定是否在进行分页，可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的性能管理单元中的“Buffers spooled”性能计数器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>将包配置为支持并行执行  
- 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 若要在包中，支持并行执行不同任务[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用两个属性：`MaxConcurrentExecutables`和`EngineThreads`。  
+ 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 若要在包中，支持不同的任务的并行执行[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用两个属性：`MaxConcurrentExecutables`和`EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 属性  
  `MaxConcurrentExecutables`属性是包本身的属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
   
- 若要了解此属性的工作原理，可参考一个包含三个数据流任务的示例包。 如果你设置`MaxConcurrentExecutables`为 3，可以同时运行所有三个数据流任务。 但是，假定每个数据流任务都具有 10 个源到目标执行树。 将 `MaxConcurrentExecutables` 设置为 3 不能确保每个数据流任务内的执行树都能并行运行。  
+ 若要了解此属性的工作原理，可参考一个包含三个数据流任务的示例包。 如果您设置`MaxConcurrentExecutables`为 3，可以同时运行所有三个数据流任务。 但是，假定每个数据流任务都具有 10 个源到目标执行树。 将 `MaxConcurrentExecutables` 设置为 3 不能确保每个数据流任务内的执行树都能并行运行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 属性  
  `EngineThreads` 属性是每个数据流任务的属性。 此属性定义数据流引擎可以创建和并行运行的线程数。 `EngineThreads`属性同样适用于这两个源线程数据流引擎创建的源和该引擎为转换和目标创建的工作线程。 因此，将 `EngineThreads` 设置为 10 表示该引擎可以创建多达 10 个源线程和多达 10 个工作线程。  
@@ -103,7 +103,7 @@ ms.locfileid: "36128812"
  您可以键入查询或使用查询生成器来构造查询。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“进度”选项卡将列出警告信息。 其中包括当源向数据流提供了某个数据列但下游数据流组件却没有使用它时出现的警告信息。 你可以使用`RunInOptimizedMode`自动删除这些列的属性。  
+>  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“进度”选项卡将列出警告信息。 其中包括当源向数据流提供了某个数据列但下游数据流组件却没有使用它时出现的警告信息。 可以使用`RunInOptimizedMode`属性来自动删除这些列。  
   
 #### <a name="avoid-unnecessary-sorting"></a>避免不必要的排序  
  排序本身是非常缓慢的操作，因此避免不必要的排序可以提高包数据流的性能。  
@@ -129,7 +129,7 @@ ms.locfileid: "36128812"
  使用本节中的建议可以改善聚合、模糊查找、模糊分组、查找、合并联接和渐变维度转换的性能。  
   
 #### <a name="aggregate-transformation"></a>聚合转换  
- 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果你知道预期产生的组的准确或近似数目**分组依据**操作，设置`Keys`和`KeysScale`属性，分别。 如果你知道的非重复值的预期产生的准确或近似数**非重复计数**操作，设置`CountDistinctKeys`和`CountDistinctScale`属性，分别。  
+ 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道从产生的组的准确或近似数量**分组依据**操作，设置`Keys`和`KeysScale`属性，分别。 如果知道从产生的非重复值的准确或近似数量**非重复计数**操作，设置`CountDistinctKeys`和`CountDistinctScale`属性，分别。  
   
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36128812"
  通过输入仅查找所需列的 SELECT 语句，最小化内存中引用数据的大小。 这种方法优于选择整个表或视图，因为后者将返回大量不必要的数据。  
   
 #### <a name="merge-join-transformation"></a>合并联接转换  
- 不再需要的值配置`MaxBuffersPerInput`属性因为 Microsoft 已进行更改，减少合并联接转换将会占用过多内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
+ 不再需要的值配置`MaxBuffersPerInput`属性因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多的内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>渐变维度转换  
  渐变维度向导和渐变维度转换是能满足大多数用户需要的通用工具。 但是，该向导生成的数据流未针对性能进行优化。  
@@ -201,7 +201,7 @@ ms.locfileid: "36128812"
 -   technet.microsoft.com 上的视频 [平衡的数据分发服务器](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
   
 ## <a name="see-also"></a>请参阅  
- [包开发的故障排除工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [用于包开发故障排除工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

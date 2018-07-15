@@ -1,5 +1,5 @@
 ---
-title: 多维数据集或模型属性对话框 (SSAS) |Microsoft 文档
+title: 多维数据集或模型属性对话框 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90efe4a053104491b24e290641205d85628c3689
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ad93386960630ffe1a49b473304cce80e580e61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317461"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>“多维数据集或模型属性”对话框 (SSAS)
   可以使用 **中的** “数据库属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置多维数据集或模型数据库的属性。 通过右键单击“对象资源管理器”中的多维数据集或模型，再选择“属性”，即可显示此对话框。  
@@ -32,7 +32,7 @@ ms.locfileid: "36127203"
   
 -   [多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
--   [主动缓存&#40;分区属性对话框中&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
+-   [主动缓存&#40;分区属性对话框&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
 ## <a name="options"></a>“常规”  
   

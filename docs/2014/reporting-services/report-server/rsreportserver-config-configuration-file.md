@@ -1,5 +1,5 @@
 ---
-title: RSReportServer 配置文件 |Microsoft 文档
+title: RSReportServer 配置文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 79df68ef047fc879e40ec14fb3754b783dba1ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc3c6ab630680d3d0d5cf1e3998153ac3e3a66fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305227"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RSReportServer.config** 文件存储报表管理器、报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -42,7 +42,7 @@ ms.locfileid: "36028759"
   
 -   [传递 UI 扩展插件常规配置](#bkmk_ui)  
   
--   [扩展 （RSReportServer.config 文件） 本机模式](#bkmk_extensions)  
+-   [扩展插件 （RSReportServer.config 文件） 本机模式](#bkmk_extensions)  
   
     -   [传递扩展插件常规配置](#bkmk_extensionsgeneral)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36028759"
   
         -   [报表服务器电子邮件扩展插件配置设置](#bkmk_email_extension)  
   
-        -   [报表服务器 SharePoint 文档库扩展配置](#bkmk_documentlibrary_extension)  
+        -   [报表服务器 SharePoint 文档库扩展插件配置](#bkmk_documentlibrary_extension)  
   
         -   [NULL 传递扩展插件配置](#bkmk_null_extension)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36028759"
   
     -   [安全扩展插件配置](#bkmk_security)  
   
-    -   [身份验证扩展配置](#bkmk_authentication)  
+    -   [身份验证扩展插件配置](#bkmk_authentication)  
   
     -   [事件处理](#bkmk_eventprocessing)  
   
@@ -107,9 +107,9 @@ ms.locfileid: "36028759"
 |设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**Dsn**|指定承载报表服务器数据库的数据库服务器的连接字符串。 在创建报表服务器数据库时，此值会进行加密并添加到配置文件中。 对于 SharePoint，从 SharePoint 配置数据库获取数据库连接信息。|N,S|  
-|**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效值为`Default`和`Impersonate`。 如果将报表服务器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户或服务帐户连接到报表服务器数据库，则指定 `Default`。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定 `Impersonate`。|否|  
-|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 值为`LogonUser`， `LogonDomain`，和`LogonCred`报表服务器连接配置为使用域帐户时创建。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|否|  
-|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值是`MSRS12`  *\<instancename >*。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效的值为`Default`和`Impersonate`。 如果将报表服务器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户或服务帐户连接到报表服务器数据库，则指定 `Default`。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定 `Impersonate`。|否|  
+|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 值为`LogonUser`， `LogonDomain`，和`LogonCred`时报表服务器的连接配置为使用域帐户创建。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|否|  
+|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值是`MSRS12` *\<实例名 >*。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|安装程序创建的报表服务器安装的标识符。 此值设置为 GUID。 请不要修改此设置。|否|  
 |**SecureConnectionLevel**|指定 Web 服务调用必须使用的安全套接字层 (SSL) 的级别。 此设置用于报表服务器 Web 服务和报表管理器。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [使用安全 Web 服务方法](../report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [配置本机模式报表服务器上的 SSL 连接](../security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|  
 |**DisableSecureFormsAuthenticationCookie**|默认值为 False。<br /><br /> 指定是否禁止将用于窗体和自定义身份验证 cookie 强制标记为安全的。 从 SQL Server 2012 开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在发送到客户端时将用于自定义身份验证扩展插件的窗体身份验证 cookie 标记为安全 cookie。 通过更改此属性，报表服务器管理员和自定义安全扩展插件作者可以恢复以前的行为，即允许自定义安全扩展插件作者确定是否将 cookie 标记为安全 cookie。 建议将安全 cookie 用于窗体身份验证，以便帮助防止网络截取和重播攻击。|否|  
@@ -125,7 +125,7 @@ ms.locfileid: "36028759"
 |**RunningRequestsAge**|指定间隔多长时间后正在运行的作业的状态将从“新建”更改到“正在运行”（秒）。 有效值的范围为 0 到 2147483647。 默认值为 30。|N,S|  
 |**MaxScheduleWait**|指定在请求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “下次运行时间” **时报表服务器 Windows 服务等待** 代理服务更新计划的秒数。 有效值为 1 到 60。<br /><br /> 在默认配置文件中，MaxScheduleWait 设置为 **5**。<br /><br /> 如果报表服务器无法找到或读取该配置文件，则服务器默认为 MaxScheduleWait 设置为 1。|N,S|  
 |**DisplayErrorLink**|指示发生错误时是否显示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 帮助和支持站点的链接。 此链接将显示在错误消息中。 用户单击此链接可以打开此站点上的更新的错误消息内容。 有效的值包括`True`（默认值） 和`False`。|N,S|  
-|**WebServiceuseFileShareStorage**|指定是否在文件系统中存储缓存报表和临时快照（由报表服务器 Web 服务在用户会话期间创建）。 有效值为`True`和`False`（默认值）。 如果该值设置为 False，临时数据将存储在 reportservertempdb 数据库中。|N,S|  
+|**WebServiceuseFileShareStorage**|指定是否在文件系统中存储缓存报表和临时快照（由报表服务器 Web 服务在用户会话期间创建）。 有效的值为`True`和`False`（默认值）。 如果该值设置为 False，临时数据将存储在 reportservertempdb 数据库中。|N,S|  
 |**WatsonFlags**|指定对于报告给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]的错误情况记录多少信息。<br /><br /> 0x0430 = 全部转储<br /><br /> 0x0428 = 小型转储<br /><br /> 0x0002 = 无转储|N,S|  
 |**WatsonDumpOnExceptions**|指定您要在错误日志中报告的异常列表。 如果存在重复问题并希望为要发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 以进行分析的信息创建转储，此设置会非常有用。 创建转储会影响性能，因此仅在诊断问题时才需更改此设置。|N,S|  
 |**WatsonDumpExcludeIfContainsExceptions**|指定您希望不要在错误日志中报告的异常列表。 在诊断问题并且不希望服务器为特定异常创建转储时，此设置非常有用。|N,S|  
@@ -179,12 +179,12 @@ ms.locfileid: "36028759"
 |`RSWindowsKerberos`|服务器接受 Kerberos 安全令牌。<br /><br /> 如果在约束委派身份验证方案中使用 Kerberos 身份验证，则将使用此设置或 RSWindowsNegotiate。|否|  
 |`RSWindowsBasic`|如果建立连接时没有使用凭据，则服务器会接受基本凭据，并发出质询/响应。<br /><br /> 基本身份验证以明文形式在 HTTP 请求中传递凭据。 如果使用基本身份验证，则使用 SSL 对进出报表服务器的网络通信进行加密。 若要查看 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本身份验证的示例配置语法，请参阅 [针对报表服务器的身份验证](../security/authentication-with-the-report-server.md)。|否|  
 |`Custom`|如果在报表服务器计算机上部署了自定义的安全扩展插件，请指定此值。 有关详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。|否|  
-|**LogonMethod**|此值指定的登录类型`RSWindowsBasic`。 如果指定`RSWindowsBasic`，此值是必需的。 有效值为 2 或 3，每个值的含义如下：<br /><br /> `2` = 网络登录高性能服务器进行身份验证的纯文本密码<br /><br /> `3` = 明文形式登录，从而保留与每个 HTTP 请求一起发送的身份验证包中的登录凭据，允许连接到网络中的其他服务器时模拟用户的服务器。<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|否|  
+|**LogonMethod**|此值指定的登录类型`RSWindowsBasic`。 如果指定`RSWindowsBasic`，此值是必需的。 有效值为 2 或 3，每个值的含义如下：<br /><br /> `2` = 网络登录要对纯文本密码进行身份验证的高性能服务器<br /><br /> `3` = 明文登录，其中保留了与每个 HTTP 请求一起发送的身份验证包中的登录凭据，这样，服务器可以连接到网络中其他服务器时，模拟用户。<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|否|  
 |**Realm**|此值用于`RSWindowsBasic`。 它指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|否|  
 |**DefaultDomain**|此值用于`RSWindowsBasic`。 它用于确定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|否|  
 |**RSWindowsExtendedProtectionLevel**|默认值为 **off**。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)|否|  
 |**RSWindowsExtendedProtectionScenario**|默认值为 **Proxy**。|否|  
-|**EnableAuthPersistence**|确定针对连接还是针对各个请求执行身份验证。<br /><br /> 有效值为 `True`（默认值）或 `False`。 如果设置为 `True`，则从同一连接发出的后续请求会采用第一个请求的模拟上下文。<br /><br /> 如果使用代理服务器软件（如 ISA 服务器）访问报表服务器，则此值必须设置为 `False`。 如果使用代理服务器，则允许多个用户使用来自代理服务器的单个连接。 对于这种情况，您应禁用身份验证持久性，以便可以对各个用户请求单独进行身份验证。 如果你未设置**EnableAuthPersistence**到`False`，所有用户将使用第一个请求的模拟上下文进行都连接。|N,S|  
+|**EnableAuthPersistence**|确定针对连接还是针对各个请求执行身份验证。<br /><br /> 有效值为 `True`（默认值）或 `False`。 如果设置为 `True`，则从同一连接发出的后续请求会采用第一个请求的模拟上下文。<br /><br /> 如果使用代理服务器软件（如 ISA 服务器）访问报表服务器，则此值必须设置为 `False`。 如果使用代理服务器，则允许多个用户使用来自代理服务器的单个连接。 对于这种情况，您应禁用身份验证持久性，以便可以对各个用户请求单独进行身份验证。 如果未设置**EnableAuthPersistence**到`False`，所有用户都将使用第一个请求的模拟上下文进行都连接。|N,S|  
   
 ##  <a name="bkmk_service"></a> 服务（RSReportServer.config 文件）  
  `Service` 指定作为一个整体应用于服务的应用程序设置。  
@@ -195,11 +195,11 @@ ms.locfileid: "36028759"
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|指定报表服务器是否维护一组与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户创建的计划和订阅相对应的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 代理作业。 有效的值包括`True`（默认值） 和`False`。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)。|N,S|  
 |**IsNotificationService**|指定报表服务器是否处理通知和传递。 有效的值包括`True`（默认值） 和`False`。 如果该值为 `False`，则不传递订阅。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)。|N,S|  
-|**IsEventService**|指定服务是否处理事件队列中的事件。 有效的值包括`True`（默认值） 和`False`。 当值是`False`，报表服务器不执行针对计划或订阅的操作。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)。|N,S|  
-|**IsAlertingService**|默认值为 `True`|S|  
+|**IsEventService**|指定服务是否处理事件队列中的事件。 有效的值包括`True`（默认值） 和`False`。 值是当`False`，报表服务器不会执行针对计划或订阅操作。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)。|N,S|  
+|**IsAlertingService**|默认值是 `True`|S|  
 |**PollingInterval**|指定报表服务器轮询事件表的间隔（秒）。 有效值的范围为 0 到最大整数之间。 默认值为 10。|N,S|  
-|**WindowsServiceUseFileShareStorage**|指定是否在文件系统中存储缓存报表和临时快照（由报表服务器服务为用户会话的持续期间创建）。 有效值为`True`和`False`（默认值）。|N,S|  
-|`MemorySafetyMargin`|指定 `WorkingSetMaximum` 的百分比，该百分比用于定义中压情况和低压情况之间的边界。 默认值为 80。 有关详细信息`WorkingSetMaximum`和配置可用内存，请参阅[配置的报表服务器应用程序的可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。|N,S|  
+|**WindowsServiceUseFileShareStorage**|指定是否在文件系统中存储缓存报表和临时快照（由报表服务器服务为用户会话的持续期间创建）。 有效的值为`True`和`False`（默认值）。|N,S|  
+|`MemorySafetyMargin`|指定 `WorkingSetMaximum` 的百分比，该百分比用于定义中压情况和低压情况之间的边界。 默认值为 80。 有关详细信息`WorkingSetMaximum`和配置可用内存，请参见[为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。|N,S|  
 |**MemoryThreshold**|指定的百分比`WorkingSetMaximum`用于定义高和中等压力方案之间的边界。 默认值为 **90**。 此值应大于为设置的值`MemorySafetyMargin`。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。|N,S|  
 |**RecycleTime**|指定应用程序域的回收时间（分钟）。 有效值的范围为 0 到最大整数之间。 默认值为 720。|N,S|  
 |**MaxAppDomainUnloadTime**|指定在回收操作期间允许卸载应用程序域的时间间隔。 如果在该时间段内没有完成回收，则应用程序域中的所有处理将会停止。 有关详细信息，请参阅 [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)。<br /><br /> 以分钟为单位指定此值。 有效值的范围为 0 到最大整数之间。 默认值为 **30**。|N,S|  
@@ -208,9 +208,9 @@ ms.locfileid: "36028759"
 |**UnattendedExecutionAccount**|指定报表服务器运行报表时所使用的用户名、密码和域。 这些值已经过加密。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具来设置这些值。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 对于 SharePoint 模式，您使用 SharePoint 管理中心设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../manage-a-reporting-services-sharepoint-service-application.md)|否|  
 |**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rssrvrpolicy.config。有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|N,S|  
 |**IsWebServiceEnabled**|指定报表服务器 Web 服务是否响应 SOAP 和 URL 访问请求。 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用服务时，设置此值。|N,S|  
-|**IsReportManagerEnabled**|指定在报表服务器上是否可以使用报表管理器应用程序。 有效值为`True`（默认值） 和`False`。 如果值设置为`True`，报表管理器将可用。 请注意，还必须为报表管理器配置 URL 预留，这样才能使用报表管理器。|否|  
+|**IsReportManagerEnabled**|指定在报表服务器上是否可以使用报表管理器应用程序。 有效的值为`True`（默认值） 和`False`。 如果值设置为`True`，报表管理器将可用。 请注意，还必须为报表管理器配置 URL 预留，这样才能使用报表管理器。|否|  
 |**FileShareStorageLocation**|指定文件系统中用于存储临时快照的单个文件夹。 尽管可以将文件夹路径指定为 UNC 路径，但不建议您这样做。 默认值为空。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
-|**IsRdceEnabled**|指定是否已启用报表定义自定义扩展插件 (RDCE)。 有效值为`True`和`False`。|N,S|  
+|**IsRdceEnabled**|指定是否已启用报表定义自定义扩展插件 (RDCE)。 有效的值为`True`和`False`。|N,S|  
   
 ##  <a name="bkmk_UI"></a> UI（RSReportServer.config 文件）  
  `UI` 指定应用于报表管理器应用程序的配置设置。  
@@ -220,8 +220,8 @@ ms.locfileid: "36028759"
 |设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|指定报表管理器连接到的报表服务器的 URL。 仅当将报表管理器配置为连接到其他实例中或远程计算机上的报表服务器时，才修改此值。 有关详细信息，请参阅[配置报表管理器（本机模式）](configure-web-portal.md)。|N,S|  
-|**ReportBuilderTrustLevel**|请不要修改此值，它是不可配置的。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和更高版本，报表生成器运行仅在`FullTrust`。 有关详细信息，请参阅 [配置报表生成器访问权限](configure-report-builder-access.md) 。 有关中止部分信任模式下的详细信息，请参阅[到 SQL Server Reporting Services 在 SQL Server 2014 中废止的功能](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N,S|  
-|`PageCountMode`|仅用于报表管理器，此设置指定在呈现报表之前或查看报表时报表服务器是否计算页计数值。 有效值为`Estimate`（默认值） 和`Actual`。 使用`Estimate`用户查看报表时计算页计数信息。 最初，页计数设置为 2（指当前页再加上一页），而当用户在报表中翻页时会上调。 使用`Actual`如果你想要显示报表之前提前计算页计数。 提供 `Actual` 是为了向后兼容。 请注意，如果你设置`PageCountMode`到`Actual`，必须先处理整个报表来获取有效页计数，增加报表显示之前的等待时间。|N,S|  
+|**ReportBuilderTrustLevel**|请不要修改此值，它是不可配置的。 在中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和更高版本中，报表生成器运行仅在`FullTrust`。 有关详细信息，请参阅 [配置报表生成器访问权限](configure-report-builder-access.md) 。 有关不再使用的部分信任模式下的详细信息，请参阅[到 SQL Server Reporting Services SQL Server 2014 中废止的功能](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N,S|  
+|`PageCountMode`|仅用于报表管理器，此设置指定在呈现报表之前或查看报表时报表服务器是否计算页计数值。 有效的值为`Estimate`（默认值） 和`Actual`。 使用`Estimate`计算页计数信息，如用户查看报表。 最初，页计数设置为 2（指当前页再加上一页），而当用户在报表中翻页时会上调。 使用`Actual`如果你想要显示报表之前提前计算页计数。 提供 `Actual` 是为了向后兼容。 请注意，如果您设置`PageCountMode`到`Actual`，必须先处理整个报表才能得到有效的页计数，增加报表显示之前的等待时间。|N,S|  
   
 ##  <a name="bkmk_extensions"></a> 扩展插件（RSReportServer.config 文件）本机模式  
  **仅对于本机模式** 的报表服务器，“扩展插件”部分才显示在 rsreportserver.config 文件中。 SharePoint 模式的报表服务器的扩展插件信息存储在 SharePoint 配置数据库中，并针对每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序进行配置。  
@@ -280,7 +280,7 @@ ms.locfileid: "36028759"
 |**ExcludedRenderFormats**， **RenderingExtension**|这些设置用于特意排除那些无法与文件共享传递协同工作的导出格式。 这些格式通常用于交互式报表、预览或预加载报表缓存。 它们无法生成便于桌面应用程序查看的应用程序文件。 有效值为<br /><br /> **HTMLOWC**<br /><br /> **RGDI**<br /><br /> **Null**|  
   
 ####  <a name="bkmk_email_extension"></a> 报表服务器电子邮件扩展插件配置设置  
- 报表服务器电子邮件使用 SMTP 网络设备向电子邮件地址发送报表。 必须对此传递扩展插件进行配置才能使用。 有关详细信息，请参阅[针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)和[Reporting Services 中的电子邮件传递](../subscriptions/e-mail-delivery-in-reporting-services.md)。  
+ 报表服务器电子邮件使用 SMTP 网络设备向电子邮件地址发送报表。 必须对此传递扩展插件进行配置才能使用。 有关详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)并[Reporting Services 中的电子邮件传递](../subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 |设置|Description|  
 |-------------|-----------------|  
@@ -296,7 +296,7 @@ ms.locfileid: "36028759"
 |**EmbeddedRenderFormats，RenderingExtension**|指定在电子邮件正文中嵌入报表时所使用的呈现格式。 报表中的图像将随后嵌入报表中。 有效值为 MHTML 和 HTML4.0。|  
 |**PrivilegedUserRenderFormats**|指定当通过“管理所有订阅”任务启用订阅时，用户可以从中为报表订阅选择的呈现格式。 如果未设置此值，则可以使用所有未特意排除的呈现格式。|  
 |**ExcludedRenderFormats，RenderingExtension**|特意排除无法与给定的传递扩展插件协同工作的格式。 但不能排除同一个呈现扩展插件的多个实例。 如果排除多个实例，则在报表服务器读取配置文件时将出现错误。 默认情况下，排除将下列扩展插件用于电子邮件传递：<br /><br /> **HTMLOWC**<br /><br /> **Null**<br /><br /> **RGDI**|  
-|**SendEmailToUserAlias**|此值与 **DefaultHostName**一起使用。<br /><br /> 当**SendEmailToUserAlias**设置为`True`，定义各个订阅的用户自动指定为报表的收件人。 并隐藏 **“收件人”** 字段。 如果此值为`False`、**到**字段是否可见。 将此值设置为`True`如果你想要最大控制报表分发。 有效值包括：<br /><br /> `True`=使用创建订阅的用户的电子邮件地址。 这是默认值。<br /><br /> `False`=可以指定任何电子邮件地址。|  
+|**SendEmailToUserAlias**|此值与 **DefaultHostName**一起使用。<br /><br /> 当**SendEmailToUserAlias**设置为`True`，定义各个订阅的用户自动指定为报表的收件人。 并隐藏 **“收件人”** 字段。 如果此值为`False`，则**到**字段是否可见。 将此值设置为`True`如果想要最大控制报表分发。 有效值包括：<br /><br /> `True`=使用创建订阅的用户的电子邮件地址。 这是默认值。<br /><br /> `False`=可以指定任何电子邮件地址。|  
 |**DefaultHostName**|此值与 **SendEmailToUserAlias**一起使用。<br /><br /> 指定一个字符串值，表示当 **SendEmailToUserAlias** 设置为 True 时追加到用户别名中的主机名。 此值可以为域名系统 (DNS) 名称或 IP 地址。|  
 |**PermittedHosts**|通过显式指定哪些主机能够接收电子邮件传递来限制报表分发。 在 **PermittedHosts**中，每个主机均指定为一个 **HostName** 元素，其中值为 IP 地址或 DNS 名称。<br /><br /> 只有为这些主机定义的电子邮件帐户才是有效的收件人。 如果指定 **DefaultHostName**，请确保在 **PermittedHosts** 的 **HostName**元素中包括该主机。 此值必须是一个或多个 DNS 名称或 IP 地址。 默认情况下，不设置此值。 如果未设置该值，则对于可接收通过电子邮件发送的报表的用户没有任何限制。|  
   
@@ -356,7 +356,7 @@ ms.locfileid: "36028759"
   
 -   [MHTML 设备信息设置](../html-device-information-settings.md)  
   
--   [HTML 设备信息设置].../../ html 设备信息 settings.md）  
+-   HTML 设备信息设置.../../ html 设备信息 settings.md）  
   
 -   [呈现扩展插件的设备信息设置 (Reporting Services)](../device-information-settings-for-rendering-extensions-reporting-services.md)  
   
@@ -404,7 +404,7 @@ ms.locfileid: "36028759"
  指定用于从报表服务器上已发布的共享数据源创建报表模型的模型生成扩展插件。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据源生成模型。 请不要修改此部分。 模型生成是不可扩展的。  
   
 ###  <a name="bkmk_security"></a> 安全扩展插件配置  
- 指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所用的授权组件。 使用的身份验证扩展插件在中注册此组件`Authentication`RSReportServer.config 文件中的元素。 除非要实现自定义的身份验证扩展插件，否则不要修改此部分。 有关添加自定义安全功能的详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。 有关授权的详细信息，请参阅 [Authorization in Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)。  
+ 指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所用的授权组件。 此组件由中注册的身份验证扩展插件`Authentication`RSReportServer.config 文件的元素。 除非要实现自定义的身份验证扩展插件，否则不要修改此部分。 有关添加自定义安全功能的详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。 有关授权的详细信息，请参阅 [Authorization in Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)。  
   
 ###  <a name="bkmk_authentication"></a> 身份验证扩展插件配置  
  指定报表服务器使用的默认和自定义身份验证扩展插件。 默认的扩展插件基于 Windows 身份验证。 除非要实现自定义的身份验证扩展插件，否则不要修改此部分。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的身份验证的详细信息，请参阅 [Reporting Services 中的身份验证](../extensions/security-extension/authentication-in-reporting-services.md) 和 [针对报表服务器的身份验证](../security/authentication-with-the-report-server.md)。 有关添加自定义安全功能的详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。  
@@ -419,7 +419,7 @@ ms.locfileid: "36028759"
  指定报表定义语言 (RDL) 模式，该模式可帮助您在多个用户共享报表服务器的单个 Web 场的情况下检测到和限制单个用户使用的特定类型的报表资源。 有关详细信息，请参阅 [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md)。  
   
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration（RSReportServer.config 文件）  
- `MapTileServerConfiguration` 定义配置设置[!INCLUDE[msCoName](../../includes/msconame-md.md)]报表项提供图块背景地图的必应地图 Web 服务发布的报表服务器上的报表中。 所有子元素都是必需的。  
+ `MapTileServerConfiguration` 定义配置设置[!INCLUDE[msCoName](../../includes/msconame-md.md)]提供地图图块背景的必应地图 Web 服务发布的报表服务器上的报表中的报表项。 所有子元素都是必需的。  
   
 |设置|Description|  
 |-------------|-----------------|  
@@ -556,7 +556,7 @@ ms.locfileid: "36028759"
 ## <a name="see-also"></a>请参阅  
  [修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)   
- [为 HTML 查看器和报表管理器自定义样式表](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [自定义 HTML 查看器和报表管理器的样式表](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
  [Reporting Services 配置文件](reporting-services-configuration-files.md)   
  [初始化 Report Server（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [存储加密的 Report Server 数据（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   

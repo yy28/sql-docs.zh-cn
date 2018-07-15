@@ -1,5 +1,5 @@
 ---
-title: 使用动态管理视图 (Dmv) 监视 Analysis Services |Microsoft 文档
+title: 使用动态管理视图 (Dmv) 监视 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288563"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
   Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
   
- 对于大多数 DMV 查询，你使用`SELECT`语句和`$System`具有 XML/A 架构行集架构。  
+ 对于大多数 DMV 查询，你使用`SELECT`语句和`$System`具有 XML/A 架构行集的架构。  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不可用为给定行集，服务器将返回以下错误:" \<schemarowset > 请求类型无法识别服务器"。 所有其他错误均与语法问题有关。  
+>  如果 DMV 不可用于给定行集，则服务器返回以下错误:" \<schemarowset > 服务器无法识别请求类型"。 所有其他错误均与语法问题有关。  
   
 |行集|Description|  
 |------------|-----------------|  
@@ -168,7 +168,7 @@ ORDER BY TABLE_NAME ASC
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [新 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [受限制的行集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函数](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [新的 SYSTEMRESTRICTEDSCHEMA 函数，为受限行集和 Dmv](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ConnectionStringSecurity 元素 (ASSL) |Microsoft 文档
+title: ConnectionStringSecurity 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionStringSecurity element
 ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fce202b78364b4a3de68a33416922b929521727c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9479865bd2e3f10570418ee33064bc30f4b7b786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300867"
 ---
 # <a name="connectionstringsecurity-element-assl"></a>ConnectionStringSecurity 元素 (ASSL)
   指定是否出于安全目的从数据源连接字符串中抽取用户的密码。  
@@ -69,7 +69,7 @@ ms.locfileid: "36125241"
 |*PasswordRemoved*|已从连接字符串中抽取密码。|  
 |*保持不变*|已修改连接字符串。|  
   
- 对应的允许值为枚举`ConnectionStringSecurity`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ConnectionStringSecurity>。  
+ 对应的允许值的枚举`ConnectionStringSecurity`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ConnectionStringSecurity>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

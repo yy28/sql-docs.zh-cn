@@ -1,5 +1,5 @@
 ---
-title: 查找和查看报表在报表管理器 （报表生成器和 SSRS） |Microsoft 文档
+title: 查找和查看报表在报表管理器 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fca55f69bcd97e0b3ac2199383cf28c0ad327313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fed7c8d79acf9f02620e6f11ac6eaee08113a819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313187"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>在报表管理器中查找和查看报表（报表生成器和 SSRS）
-  报表管理器是一种基于 Web 的工具，该工具包含查看和管理报表的功能。 它是报表服务器安装的一部分。 若要打开报表管理器，请在浏览器窗口中键入报表管理器 URL。 浏览器要求的信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。 有关如何可在报表服务器上配置报表管理器 URL 的详细信息，请与系统管理员联系。 有关详细信息，请参阅[配置报表管理器（本机模式）](../report-server/configure-web-portal.md)。  
+  报表管理器是一种基于 Web 的工具，该工具包含查看和管理报表的功能。 它是报表服务器安装的一部分。 若要打开报表管理器，请在浏览器窗口中键入报表管理器 URL。 有关浏览器要求的信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。 有关如何可在报表服务器上配置报表管理器 URL 的详细信息，请与系统管理员联系。 有关详细信息，请参阅[配置报表管理器（本机模式）](../report-server/configure-web-portal.md)。  
   
  系统管理员在报表服务器上设置的权限决定您使用报表管理器时可以查看的内容。 权限是通过角色分配授予的。 若要查找和查看报表，您的角色分配必须包括“查看报表”任务。 若要在报表服务器上查找某一报表，请按名称或说明搜索该报表，或者浏览报表服务器文件夹。 只能搜索或通过浏览查找已发布或上载到报表服务器的报表。 有关如何搜索报表的详细信息，请参阅[搜索报表和其他项&#40;报表生成器和 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)。  
   

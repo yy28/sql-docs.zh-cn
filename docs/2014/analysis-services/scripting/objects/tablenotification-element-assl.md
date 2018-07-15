@@ -1,5 +1,5 @@
 ---
-title: TableNotification 元素 (ASSL) |Microsoft 文档
+title: TableNotification 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - TableNotification element
 ms.assetid: 3afd075a-74f9-428c-b527-ee497cbe71e7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12dec839000f56e8d82a3f5b0e6398f20ccfb35f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e952acc38173462440ec94c050fb27e7a96cce89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321127"
 ---
 # <a name="tablenotification-element-assl"></a>TableNotification 元素 (ASSL)
-  包含信息[ProactiveCaching](proactivecaching-element-assl.md)有关的表或视图已修改的数据源中的元素。  
+  包含的信息[ProactiveCaching](proactivecaching-element-assl.md)有关表或视图已修改的数据源中的元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36126403"
 |子元素|[DbSchemaName](../properties/name-element-assl.md)， [DbTableName](../properties/dbtablename-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.TableNotification>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.TableNotification>。  
   
 ## <a name="see-also"></a>请参阅  
  [ProactiveCachingTablesBinding 数据类型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

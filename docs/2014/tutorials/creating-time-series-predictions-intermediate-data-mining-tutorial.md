@@ -1,5 +1,5 @@
 ---
-title: 创建时序预测 （数据挖掘中级教程） |Microsoft 文档
+title: 创建时序预测 （数据挖掘中级教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 999dcdec7c6a30617c9c9e04512da26ddebfdcc3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310827"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>创建时序预测（数据挖掘中级教程）
   在本课前面的任务中，您已经创建了时序模型并浏览了结果。 默认情况下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将始终为一个时序模型创建一组五 (5) 个预测，并将预测值作为预测图的一部分显示。 但是，也可以通过生成数据挖掘扩展插件 (DMX) 预测查询，来创建预测。  
@@ -33,51 +33,51 @@ ms.locfileid: "36312945"
   
 #### <a name="to-select-a-model-and-input-table"></a>选择模型和输入表  
   
-1.  上**挖掘模型预测**数据挖掘设计器选项卡，请在**挖掘模型**框中，单击**选择模型**。  
+1.  上**挖掘模型预测**数据挖掘设计器选项卡，在**挖掘模型**框中，单击**选择模型**。  
   
-2.  在**选择挖掘模型**对话框框中，展开预测结构，选择**预测**从列表中，模型，然后单击**确定**。  
+2.  在中**选择挖掘模型**对话框框中，展开预测结构，选择**Forecasting**从列表中，模型，然后单击**确定**。  
   
 3.  忽略**选择输入表**框。  
   
     > [!NOTE]  
     >  对于时序模型，并不需要指定单独的输入，除非您要进行交叉预测。  
   
-4.  在**源**上的网格中的列，**挖掘模型预测**选项卡上，单击第一个空行中的单元格，然后选择**预测挖掘模型**。  
+4.  在中**源**上的网格中列**挖掘模型预测**选项卡上，单击第一个空行中的单元格，然后选择**预测挖掘模型**。  
   
-5.  在**字段**列中，选择**模型区域**。  
+5.  在中**字段**列中，选择**Model Region**。  
   
      此操作可将序列标识符添加到预测查询中，以指示预测适用于的型号和区域的组合。  
   
 6.  单击下一步中的空行**源**列，，然后选择**预测函数**。  
   
-7.  在**字段**列中，选择**PredictTimeSeries**。  
+7.  在中**字段**列中，选择**PredictTimeSeries**。  
   
     > [!NOTE]  
-    >  你还可以使用`Predict`与时序模型的函数。 但在默认情况下，预测函数只为每个时序创建一个预测。 因此，若要指定多个预测步骤，必须使用**PredictTimeSeries**函数。  
+    >  此外可以使用`Predict`使用时序模型的函数。 但在默认情况下，预测函数只为每个时序创建一个预测。 因此，若要指定多个预测步骤，必须使用**PredictTimeSeries**函数。  
   
-8.  在**挖掘模型**窗格中，选择挖掘模型列，**量。** 拖动到量**条件/参数**框**PredictTimeSeries**前面添加的函数。  
+8.  在中**挖掘模型**窗格中，选择挖掘模型列**量。** 将 Amount 拖到**条件/参数**框**PredictTimeSeries**前面添加的函数。  
   
-9. 单击**条件/参数**框，然后键入逗号后, 跟**5**，在字段名之后。  
+9. 单击**条件/参数**框，然后键入一个逗号后, 跟**5**，在该字段名称。  
   
      中的文本**条件/参数**框现在应显示以下：  
   
      `[Forecasting].[Amount],5`  
   
-10. 在**别名**列中，键入`PredictAmount`。  
+10. 在中**别名**列中，键入`PredictAmount`。  
   
 11. 单击下一步中的空行**源**列，，然后选择**预测函数**试。  
   
-12. 在**字段**列中，选择**PredictTimeSeries**。  
+12. 在中**字段**列中，选择**PredictTimeSeries**。  
   
-13. 在**挖掘模型**窗格中，选择的列数量，然后将其拖到**条件/参数**第二个框**PredictTimeSeries**函数。  
+13. 在中**挖掘模型**窗格中，选择的列数量，然后将其拖到**条件/参数**第二个框**PredictTimeSeries**函数。  
   
-14. 单击**条件/参数**框，然后键入逗号后, 跟**5**，在字段名之后。  
+14. 单击**条件/参数**框，然后键入一个逗号后, 跟**5**，在该字段名称。  
   
      中的文本**条件/参数**框现在应显示以下：  
   
      `[Forecasting].[ Quantity],5`  
   
-15. 在**别名**列中，键入`PredictQuantity`。  
+15. 在中**别名**列中，键入`PredictQuantity`。  
   
 16. 单击**切换到查询结果视图**。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "36312945"
 |-----------|------------|  
 |2008 年 7 月 25 日|99978.00|  
 |2008 年 8 月 25 日|145575.07|  
-|9/25/2008|116835.19|  
-|10/25/2008|116537.38|  
+|2008 年 9 月 25 日|116835.19|  
+|2008 年 10 月 25 日|116537.38|  
 |2008 年 11 月 25 日|107760.55|  
   
  **M200 Europe PredictQuantity**  
@@ -103,8 +103,8 @@ ms.locfileid: "36312945"
 |-----------|--------------|  
 |2008 年 7 月 25 日|52|  
 |2008 年 8 月 25 日|67|  
-|9/25/2008|58|  
-|10/25/2008|57|  
+|2008 年 9 月 25 日|58|  
+|2008 年 10 月 25 日|57|  
 |2008 年 11 月 25 日|54|  
   
  **M200 North America-PredictAmount**  
@@ -113,8 +113,8 @@ ms.locfileid: "36312945"
 |-----------|------------|  
 |2008 年 7 月 25 日|348533.93|  
 |2008 年 8 月 25 日|340097.98|  
-|9/25/2008|257986.19|  
-|10/25/2008|374658.24|  
+|2008 年 9 月 25 日|257986.19|  
+|2008 年 10 月 25 日|374658.24|  
 |2008 年 11 月 25 日|379241.44|  
   
  **M200 North America-PredictQuantity**  
@@ -123,8 +123,8 @@ ms.locfileid: "36312945"
 |-----------|--------------|  
 |2008 年 7 月 25 日|272|  
 |2008 年 8 月 25 日|152|  
-|9/25/2008|250|  
-|10/25/2008|181|  
+|2008 年 9 月 25 日|250|  
+|2008 年 10 月 25 日|181|  
 |2008 年 11 月 25 日|290|  
   
 > [!WARNING]  
@@ -172,9 +172,9 @@ ms.locfileid: "36312945"
   
 1.  单击**保存查询结果**。  
   
-2.  在**保存数据挖掘查询结果**对话框中，为**数据源**，选择[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果您希望将数据保存到不同的关系数据库，也可以创建数据源。  
+2.  在中**保存数据挖掘查询结果**对话框中，对于**数据源**，选择[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果您希望将数据保存到不同的关系数据库，也可以创建数据源。  
   
-3.  在**表名**列中，键入新的临时表名，如**测试预测**。  
+3.  在中**表名称**列中，键入新的临时表名，如**Test Predictions**。  
   
 4.  单击 **“保存”**。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36312945"
  本教程中的其余任务是可选的，它们介绍高级时序预测。 如果您决定继续，将学习如何将新数据添加到模型并基于扩展的序列创建预测。 您还将学习如何通过使用模型中的趋势但是使用新数据序列替换模型中的数据来执行交叉预测。  
   
 ## <a name="next-lesson"></a>下一课  
- [高级时序预测&#40;中间数据挖掘教程&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [高级时序预测&#40;数据挖掘中级教程&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
  [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  

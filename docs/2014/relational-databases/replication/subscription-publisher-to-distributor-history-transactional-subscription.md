@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.pubtodist.tran.f1
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 497daf077cc5fa8d0d5cd30981ff9d6aacc8d841
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c35d6683b011e340851e08fd93870dfc463bcc76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309527"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>订阅，发布服务器到分发服务器的历史记录（事务订阅）
   **“发布服务器到分发服务器的历史记录”** 选项卡显示日志读取器代理的相关详细信息，包括状态、历史记录、信息性消息和所有错误消息。  

@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO (SQLXML 4.0) 执行属的 Updategram |Microsoft 文档
+title: 使用 ADO (SQLXML 4.0) 执行 Updategram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319967"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 执行 Updategram (SQLXML 4.0)
   该 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 应用程序使用 ADO 建立与 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接，然后执行 updategram。 updategram 更新特定雇员的姓氏。 本示例使用 AdventureWorks 示例数据库。  
   
  在此示例应用程序中：  
   
--   **Conn**对象 (**ADODB。连接**) 建立到正在运行的实例的连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定服务器计算机上。  
+-   **Conn**对象 (**ADODB。连接**) 与正在运行的实例建立连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定服务器计算机上。  
   
 -   **Cmd**对象 (**ADODB.Command**) 建立的连接上执行。  
   
 -   将命令方言设置为 DBGUID_MSSQLXML。  
   
--   Updategram 复制到命令流 (**strmIn**)。  
+-   将 updategram 复制到命令流 (**strmIn**)。  
   
--   命令的输出流设置为**StrmOut**对象 (**ADODB。流式传输**) 接收任何返回的数据。  
+-   该命令的输出流设置为**StrmOut**对象 (**ADODB。Stream**) 以便接收任何返回的数据。  
   
 -   最后，执行该命令 (updategram)。  
   
@@ -186,8 +186,8 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
-## <a name="passing-parameters"></a>传递参数  
- 在以前提供的 Visual Basic 应用程序中，不能传递参数。 在此应用程序， **ContactID**和**MiddleName**作为参数化输入到属的 updategram 传递值。  
+## <a name="passing-parameters"></a>将参数传递  
+ 在以前提供的 Visual Basic 应用程序中，不能传递参数。 在此应用程序**ContactID**并**MiddleName**值作为参数化输入传递到 updategram。  
   
 ```vb  
 Private Sub Form_Load()  

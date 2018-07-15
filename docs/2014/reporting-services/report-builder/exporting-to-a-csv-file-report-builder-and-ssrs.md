@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232687"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  
   
- CSV 呈现扩展插件使用字符串分隔符来分隔字段和行，字符串分隔符可以配置为逗号之外的其他字符。 生成的文件可以用电子表格程序（如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ）打开，也可以用作其他程序的导入格式。 导出的报表将成为.csv 文件，并返回的 MIME 类型`text/csv`。  
+ CSV 呈现扩展插件使用字符串分隔符来分隔字段和行，字符串分隔符可以配置为逗号之外的其他字符。 生成的文件可以用电子表格程序（如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ）打开，也可以用作其他程序的导入格式。 导出的报表会变为.csv 文件，并返回 MIME 类型的`text/csv`。  
   
  如果您想要在 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]中处理与图表、数据条、迷你图、仪表和指示器相关的数据，请将报表导出为 CSV 文件，然后在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 中打开该文件。  
   

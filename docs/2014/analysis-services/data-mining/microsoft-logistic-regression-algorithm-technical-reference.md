@@ -1,5 +1,5 @@
 ---
-title: Microsoft 逻辑回归算法技术参考 |Microsoft 文档
+title: Microsoft 逻辑回归算法技术参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: accf5f68267c4e66b2becac0f03c6bc4548b4ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317460"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 逻辑回归算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的一种变体，其中， *HIDDEN_NODE_RATIO* 参数设置为 0。 这样设置以后，所创建的神经网络模型就不包含隐藏层，因此等效于逻辑回归。  
@@ -36,11 +36,11 @@ ms.locfileid: "36123335"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法的实现  
  假定可预测列仅包含两个状态，但您仍希望进行回归分析，以将输入列与可预测列包含特定状态的概率关联起来。 下图展示了将可预测列的状态设置为 1 和 0，计算该列包含特定状态的概率以及对输入变量执行线性回归时将获得的结果。  
   
- ![不佳建模数据使用线性回归](../media/logistic-linear-regression.gif "不良建模数据使用线性回归")  
+ ![正确建模的数据使用线性回归](../media/logistic-linear-regression.gif "正确建模的数据使用线性回归")  
   
  X 轴表示输入列的值。 Y 轴表示可预测列为某状态或其他状态的概率。 此时的问题是，线性回归无法将该列限制在 0 和 1 之间，即使它们分别是该列的最小值和最大值。 解决此问题的一种方法是进行逻辑回归。 逻辑回归将创建一条包含最大和最小约束的 S 形曲线，而不是一条直线。 下图展示的是对上例中的数据进行逻辑回归后得到的结果。  
   
- ![使用逻辑回归数据建模](../media/logistic-regression.gif "使用逻辑回归建模的数据")  
+ ![使用逻辑回归建模的数据](../media/logistic-regression.gif "使用逻辑回归建模的数据")  
   
  请注意这条曲线是如何始终未能高于 1、低于 0 的。 您可以使用逻辑回归来说明哪些输入列对于确定可预测列的状态很重要。  
   
@@ -50,25 +50,25 @@ ms.locfileid: "36123335"
 ### <a name="scoring-inputs"></a>计分输入  
  在神经网络模型或逻辑回归模型中，“计分” 表示将数据中的值转换为一组使用同一刻度值的值，从而可相互进行比较。 例如，假设 Income 的输入范围为 0 到 100,000，而 [Number of Children] 的输入范围为 0 到 5。 您可以使用转换处理来“计分” 或比较所有输入的重要程度，而不用考虑值之间的差异。  
   
- 对于定型集中显示的每个状态，模型均会生成一个输入。 对于离散输入或离散化输入，只要定型集中出现缺失状态，就会创建一个额外的输入，以表示“Missing”状态。 对于连续输入，至多创建两个节点：一个用于缺失值（如果出现在定型数据中），一个用于现有值，即非 Null 值。 每个输入扩展到使用 z 评分规范化方法 (x-μ） 的数值格式 / StdDev。  
+ 对于定型集中显示的每个状态，模型均会生成一个输入。 对于离散输入或离散化输入，只要定型集中出现缺失状态，就会创建一个额外的输入，以表示“Missing”状态。 对于连续输入，至多创建两个节点：一个用于缺失值（如果出现在定型数据中），一个用于现有值，即非 Null 值。 每个输入调整为数值格式使用 z 分数规范化方法，(x – μ） / 标准偏差。  
   
  在 z-score 规范化过程中，平均值 ( ) 和标准偏差为对整个定型集计算的结果。  
   
  **连续值**  
   
- 值有: (X – μ) / σ / / X 是在编码的实际值)  
+ 值: (X – μ) / σ / / X 是编码的实际值)  
   
- 值不存在:-μ/σ / / 负 mu 除以 sigma)  
+ 缺少值:-μ/σ / / 负 mu 除以 sigma)  
   
  **离散值**  
   
- Μ = p – （某一状态的以前的概率）  
+ Μ = p – （状态的先验概率）  
   
  StdDev = sqrt(p(1-p))  
   
- 值有: （1 – μ）/σ / / （一个减 mu） 除以 sigma)  
+ 值: （1 – μ）/σ / / (1 减去 mu) 除以 sigma)  
   
- 值不存在: (– μ) / σ / / 负 mu 除以 sigma)  
+ 缺少值: (– μ) / σ / / 负 mu 除以 sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>了解逻辑回归系数  
  虽然统计文献中的用于执行逻辑回归的方法互有区别，但一个共同的特征是评估模型的拟合度。 其中提供有大量的拟合度统计信息，包括比值比和共变数模式。 有关如何度量模型的拟合度的讨论已超出本主题范围，但您可以检索模型中的系数的值，并使用它们来设计您自己的拟合度度量标准。  

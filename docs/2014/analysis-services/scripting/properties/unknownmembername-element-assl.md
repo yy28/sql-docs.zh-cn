@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberName 元素 (ASSL) |Microsoft 文档
+title: UnknownMemberName 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMemberName element
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcd9e1d81560b5175765c4aa77d1f921a258addd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c788574586a20ef44f0206d07bb21389cfd0308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306487"
 ---
 # <a name="unknownmembername-element-assl"></a>UnknownMemberName 元素 (ASSL)
   包含维度的未知成员的标题（以维度的默认语言显示）  
@@ -62,9 +62,9 @@ ms.locfileid: "36128197"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `UnknownMemberName` 元素的值可提供用于未知成员的标题。 未知成员的成员 ID 是*维度*。UnknownMember，其中*维度*是维度的唯一名称和不能更改。  
+ `UnknownMemberName` 元素的值可提供用于未知成员的标题。 未知成员的成员 ID 是*维度*。UnknownMember，其中*维度*是维度的唯一名称，不能更改。  
   
- 对应于的父元素`UnknownMemberName`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素`UnknownMemberName`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

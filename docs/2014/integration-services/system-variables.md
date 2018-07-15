@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311967"
 ---
 # <a name="system-variables"></a>系统变量
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
@@ -45,7 +45,7 @@ ms.locfileid: "36126125"
 |`ExecutionInstanceGUID`|String|正在执行的包实例的唯一标识符。|  
 |`FailedConfigurations`|String|失败的包配置的名称。|  
 |`IgnoreConfigurationsOnLoad`|Boolean|指示在加载包时是否忽略包配置。|  
-|**InteractiveMode**|Boolean|指示是否在交互模式中运行包。 如果包正在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中运行，则此属性将设置为 `True`。 如果使用运行包**DTExec**命令提示实用工具，该属性设置为`False`。|  
+|**InteractiveMode**|Boolean|指示是否在交互模式中运行包。 如果包正在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中运行，则此属性将设置为 `True`。 如果包正在使用**DTExec**命令提示实用工具的属性设置为`False`。|  
 |`LocaleId`|Int32|包所使用的区域设置。|  
 |**MachineName**|String|正在运行包的计算机的名称。|  
 |**OfflineMode**|Boolean|指示该包是否处于脱机模式下。 脱机模式不获取与数据源的连接。|  
@@ -93,7 +93,7 @@ ms.locfileid: "36126125"
 |**ProgressCountHigh**|Int32|64 位值的高位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |`ProgressCountLow`|Int32|64 位值的低位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressDescription**|String|进度说明。|OnProgress 事件处理程序|  
-|`Propagate`|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意： 的值`Propagate`变量包的验证过程中将忽略。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
+|`Propagate`|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意： 的值`Propagate`包的验证过程中忽略变量。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
 |`SourceDescription`|String|事件处理程序中引发事件的可执行文件的说明。|所有事件处理程序|  
 |`SourceID`|String|引发事件的事件处理程序中可执行文件的唯一标识符。|所有事件处理程序|  
 |**SourceName**|String|引发事件的事件处理程序中可执行文件的名称。|所有事件处理程序|  

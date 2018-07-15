@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 9f1dc6c0ff421909a672fe9abe1ccd94efe6c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 30707ed1e70c37fee37c4c84369853ef1fba5c12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311837"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
   本主题论述如何监视本机编译的存储过程的性能  
   
 ## <a name="using-extended-events"></a>使用扩展事件  
- 使用`sp_statement_completed`跟踪的查询执行的扩展的事件。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
+ 使用`sp_statement_completed`扩展的事件可以跟踪查询的执行。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
   
  `line_number` 连同扩展事件中的 `object_id` 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36128331"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 有关详细信息`sp_statement_completed`扩展事件，请参阅[如何检索导致事件的语句](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
+ 有关详细信息`sp_statement_completed`扩展事件，请参阅[如何检索导致了事件的语句](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
 ## <a name="using-data-management-views"></a>使用数据管理视图  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  

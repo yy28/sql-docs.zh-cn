@@ -1,5 +1,5 @@
 ---
-title: 选项 （查询结果的 SQL Server-结果网格逐页） |Microsoft 文档
+title: 选项 （查询结果-SQL Server 的结果到网格页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eafa41250705c453776947a3da56c86f9e3c0f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 23e5634a67ff6daec4f6b0852905d8596b885c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318897"
 ---
-# <a name="options-query-results-sql-server-results-to-grid-page"></a>选项 （查询结果的 SQL Server-结果到网格页）
+# <a name="options-query-results-sql-server-results-to-grid-page"></a>选项 （查询结果-SQL Server 的结果到网格页）
   使用此页可以指定以网格格式显示查询结果集的选项。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”菜单上单击“查询选项”，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”。 在 **“查询选项”** 对话框的左窗格中，在 **“结果”** 下，单击 **“网格”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -36,7 +36,7 @@ ms.locfileid: "36125219"
  **执行后放弃结果**  
  禁止在查看窗格中显示查询结果。 结果将在执行查询之后立即放弃。 指定此选项可帮助节省内存。  
   
- **在单独选项卡中显示结果**  
+ **在单独的选项卡中显示结果**  
  选中此复选框可在新选项卡中显示结果集，而不是在查询文档窗口的底部显示。  
   
  **执行查询后切换到结果选项卡**  

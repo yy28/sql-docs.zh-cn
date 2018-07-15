@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping articles
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fa5cfaec81c0e2b22e7b66a36907daf57e443bdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b4b452f37f06610ccccd042fd1aae6d616bac2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305447"
 ---
 # <a name="delete-an-article"></a>删除项目
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中删除项目。 有关删除项目时使用的条件以及删除项目是否需要新的快照或重新初始化订阅的信息，请参阅[向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -72,7 +72,7 @@ ms.locfileid: "36128038"
   
 4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-5.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证该项目是否存在。 如果此属性的值是`false`，在步骤 3 中的项目属性中定义不正确或不存在项目。  
+5.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证该项目是否存在。 如果此属性的值为`false`，步骤 3 中的项目属性定义不正确或此项目不存在。  
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 方法。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36128038"
   
 4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-5.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证该项目是否存在。 如果此属性的值是`false`，在步骤 3 中的项目属性中定义不正确或不存在项目。  
+5.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证该项目是否存在。 如果此属性的值为`false`，步骤 3 中的项目属性定义不正确或此项目不存在。  
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 方法。  
   

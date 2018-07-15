@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294779"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
@@ -41,7 +41,7 @@ ms.locfileid: "36138860"
 ##  <a name="Security"></a> 安全性  
   
 ### <a name="permissions"></a>权限  
- 使用时[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，需要`ALTER ANY LINKED SERVER`中的成员身份在服务器上的权限**setupadmin**固定的服务器角色。 使用时[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`权限或中的成员身份**sysadmin**固定的服务器角色。  
+ 使用时[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，要求`ALTER ANY LINKED SERVER`中的成员身份的服务器上的权限**setupadmin**固定的服务器角色。 使用时[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`权限或成员身份**sysadmin**固定的服务器角色。  
   
 ##  <a name="Procedures"></a> 如何创建链接服务器  
  您可以使用以下任意一项：  
@@ -184,7 +184,7 @@ ms.locfileid: "36138860"
      只对访问接口调用 0 级的 OLE DB 接口。  
   
      **允许进程内**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许将访问接口实例化为进程内服务器。 如果未设置此选项，则默认行为是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口，可防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程在访问接口中出错。 提供程序实例化外部时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]处理，请更新或插入长的引用列 (`text`， `ntext`，或`image`) 不允许。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许将访问接口实例化为进程内服务器。 如果未设置此选项，则默认行为是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口，可防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程在访问接口中出错。 外实例化提供程序时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]处理，请更新或插入长的引用列 (`text`， `ntext`，或`image`) 不允许。  
   
      **非事务更新**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许更新，即使 **ITransactionLocal** 不可用时也是如此。 如果启用此选项，对访问接口的更新将不可恢复，因为该访问接口不支持事务。  

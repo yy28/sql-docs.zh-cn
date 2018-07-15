@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 381abbb4ce34272a87f9b9a569fd6c869d0d7152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301707"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 预留语法（SSRS 配置管理器）
   本主题介绍报表服务器 Web 服务和报表管理器的 URL 字符串的各部分。 该内部存储的 URL 字符串的结构不同于在浏览器窗口的地址栏中键入的 URL 的结构。 URL 预留字符串会在你配置 URL 时显示在 Reporting Services 配置工具的“结果”窗口中，也会出现在 RSReportServer.config 文件中。 如果要解决 URL 预留中存在的问题，或者要查询 HTTP.SYS 以查看服务器上定义的内部 URL 预留，则了解该 URL 字符串的定义方式会很有用。  
   
 ## <a name="url-syntax"></a>URL 语法  
- 报表服务器 URL 存储在 `UrlString` 元素和 `VirtualDirectory` 元素中。 区分的原因`UrlString`和`VirtualDirectory`分为不同元素是，你可以拥有多个 URL 字符串，但只能将一个虚拟目录名称，每个[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]应用程序。  
+ 报表服务器 URL 存储在 `UrlString` 元素和 `VirtualDirectory` 元素中。 分离的原因`UrlString`并`VirtualDirectory`分为不同元素是您可以有多个 URL 字符串，但只有一个虚拟目录名称，为每个[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]应用程序。  
   
  在 HTTP.SYS 中，URL 预留包括 `UrlString` 和 `VirtualDirectory`。 URL 预留的语法包含以下部分：  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text search [SQL Server], stemmers
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 caps.latest.revision: 88
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4c3bfb07ca9730b8c03cb56f07464355c392bda6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 754e9097026fdf1e7a9be5bba6b6115db674a143
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221107"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
   断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析将涉及到查找词边界（断字）和组合动词（词干分析）。 断字符和词干分析器是特定于语言的，并且各语言的语言分析规则也各不相同。 对于给定语言，“断字符”  通过根据语言的词法规则确定词的边界位置来标识各个词。 每个词（也称为标记）使用压缩表示形式插入全文索引以减少其大小。 词干分析器根据该语言的规则生成特定词的变形形式（例如，“running”、“ran”和“runner”是单词“run”的不同形式）。  
@@ -44,7 +43,7 @@ ms.locfileid: "36138824"
  如果您添加、删除或更改了断字符，则需要刷新为全文索引和查询而支持的 Microsoft Windows 区域设置标识符 (LCID) 列表。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="default"></a> 设置默认全文语言选项  
- 本地化版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序集`default full-text language`到服务器的语言选项，如果存在合适的匹配项。 非本地化版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`default full-text language`选项是英语。  
+ 本地化版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序集`default full-text language`选项为服务器的语言，如果存在合适的匹配项。 有关非本地化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则`default full-text language`选项是英语。  
   
  创建或修改全文索引时，可以为每个全文索引列指定不同的语言。 如果未指定列的语言，默认值是配置选项 `default full-text language` 的值。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "36138824"
   
  如果要选择用于创建全文索引的列语言，有几个事项需要注意。 这些注意事项均与全文引擎如何对文本进行词汇切分再编制其索引有关。 有关详细信息，请参阅 [创建全文索引时选择语言](choose-a-language-when-creating-a-full-text-index.md)。  
   
- **若要查看的列的断字符语言**  
+ **若要查看某一列的断字符语言**  
   
 -   [管理全文检索](../indexes/indexes.md)  
   
@@ -67,15 +66,15 @@ ms.locfileid: "36138824"
     ```  
   
 ##  <a name="info"></a> 获取有关断字符的信息  
- **查看 word 断字符、 同义词库和非索引字表组合的词汇切分结果**  
+ **查看断字符、 同义词库和非索引字表组合的词汇切分结果**  
   
 -   [sys.dm_fts_parser (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)。  
   
- **返回有关已注册的断字符的信息**  
+ **若要返回有关已注册的断字符的信息**  
   
 -   [sp_help_fulltext_system_components (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="tshoot"></a> 排除断字超时错误  
+##  <a name="tshoot"></a> 故障排除断字超时错误  
  在许多情况下可能会出现断字超时错误。 有关这些情况及如何针对每种情况做出反应的信息，请参阅 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)。  
   
 ##  <a name="impact"></a> 了解新的断字符的影响  
