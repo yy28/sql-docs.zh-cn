@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b94705cc21951287df954e74ad322d2efc754052
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0404175f22e6edcb80e4179083555d23acf7db1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169046"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
   本主题说明如何使用复制编程方式或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中实现合并项目的业务逻辑处理程序。  
@@ -103,7 +103,7 @@ ms.locfileid: "36126059"
   
 1.  在发布服务器中，执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) 以验证该程序集是否尚未注册为业务逻辑处理程序。  
   
-2.  在分发服务器上，执行[sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)，指定的业务逻辑处理程序的友好名称**@article_resolver**，值为`true`为**@is_dotnet_assembly**，为程序集的名称**@dotnet_assembly_name**，和完全限定名称的类，并重写<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>为**@dotnet_class_name**.  
+2.  在分发服务器上，执行[sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)，指定的业务逻辑处理程序的友好名称**@article_resolver**，值为`true`对于 **@is_dotnet_assembly**的程序集的名称**@dotnet_assembly_name**，以及重写的类的完全限定名称<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>为**@dotnet_class_name**.  
   
     > [!NOTE]  
     >  如果未将该程序集部署在与合并代理可执行文件相同的目录下、与同步启动合并代理的应用程序相同的目录下，或者全局程序集缓存 (GAC) 中，则您需要为 **@dotnet_assembly_name**。 使用 Web 同步时，必须指定程序集在 Web 服务器中的位置。  
@@ -186,7 +186,7 @@ ms.locfileid: "36126059"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 访问业务逻辑处理程序时使用的友好名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> 值为`true`。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -值为`true`。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>部署业务逻辑处理程序  
   
@@ -218,7 +218,7 @@ ms.locfileid: "36126059"
   
 4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的项目属性中定义不正确或不存在项目。 有关详细信息，请参阅 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的项目属性定义不正确或此项目不存在。 有关详细信息，请参阅 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)。  
   
 6.  为 <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>设置业务逻辑处理程序的友好名称。 这是注册业务逻辑处理程序时指定的 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 属性的值。  
   

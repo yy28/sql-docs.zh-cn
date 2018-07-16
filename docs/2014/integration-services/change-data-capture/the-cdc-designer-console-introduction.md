@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae16ede1cf9a1fc51f0b7f7f31cc0b65a4565b9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bbbaf9e86f3a75f57c61099475f0692e8a017cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170998"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
   本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。  
   
 ## <a name="installation"></a>安装  
- 本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。 若要安装 CDC 设计器控制台，请手动运行**AttunityOracleCdcDesigner.msi**从 SQL Server 安装介质。  X86 和 x64 的安装包位于 **.\Tools\AttunityCDCOracle\\**  SQL Server 安装介质上。  
+ 本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。 若要安装 CDC 设计器控制台，请手动运行**AttunityOracleCdcDesigner.msi**从 SQL Server 安装介质。  用于 x86 和 x64 安装包位于 **.\Tools\AttunityCDCOracle\\**  SQL Server 安装介质上。  
   
 ## <a name="supported-windows-environments"></a>支持的 Windows 环境  
  CDC 设计器控制台可在以下 Windows 环境中运行：  
@@ -60,7 +60,7 @@ ms.locfileid: "36130181"
   
 -   Oracle 11.x 客户端  
   
- **请注意**： 你必须使用此软件根据安装的 Oracle CDC 设计器控制台的版本的 32 位或 64 位版本。  
+ **请注意**： 必须使用此软件根据所安装的 Oracle CDC 设计器控制台的 32 位或 64 位版本。  
   
  Oracle CDC 设计器控制台使用 Oracle ODBC 提供程序与源 Oracle 数据库通信。  
   

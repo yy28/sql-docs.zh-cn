@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose 实用工具 (Service Broker) |Microsoft 文档
+title: ssbdiagnose 实用工具 (Service Broker) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172328"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
   **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
@@ -187,21 +187,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  标识应用程序中某个会话端点的唯一标识符。 每个会话端点的会话句柄都是唯一的，发起方端点和目标端点具有不同的会话句柄。  
   
- 会话句柄返回给应用程序*@dialog_handle*参数**BEGIN DIALOG**语句，和`conversation_handle`结果中的列集的**接收**语句。  
+ 会话句柄返回给应用程序通过*@dialog_handle*参数**BEGIN DIALOG**语句中，和`conversation_handle`结果集中列的**接收**语句。  
   
- 会话句柄中报告`conversation_handle`列**sys.transmission_queue**和**sys.conversation_endpoints**目录视图。  
+ 在中报告会话句柄`conversation_handle`的列**sys.transmission_queue**并**sys.conversation_endpoints**目录视图。  
   
  *conversation_group_id*  
  标识会话组的唯一标识符。  
   
- 会话组 Id 返回到应用程序*@conversation_group_id*参数**GET CONVERSATION GROUP**语句和`conversation_group_id`结果集中的列**接收**语句。  
+ 会话组 Id 返回给应用程序通过*@conversation_group_id*参数**GET CONVERSATION GROUP**语句和`conversation_group_id`结果集中的列**接收**语句。  
   
- 会话组 Id 中报告`conversation_group_id`列**sys.conversation_groups**和**sys.conversation_endpoints**目录视图。  
+ 在中报告会话组 Id`conversation_group_id`的列**sys.conversation_groups**并**sys.conversation_endpoints**目录视图。  
   
  *conversation_id*  
  标识会话的唯一标识符。 会话的发起方端点和目标端点的会话 ID 是相同的。  
   
- 会话 Id 中报告`conversation_id`列**sys.conversation_endpoints**目录视图。  
+ 在中报告会话 Id`conversation_id`的列**sys.conversation_endpoints**目录视图。  
   
  **-TIMEOUT** *timeout_interval*  
  指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose**-**。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  

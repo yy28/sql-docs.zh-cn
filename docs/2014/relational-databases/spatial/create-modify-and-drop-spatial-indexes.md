@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 188c001672c31b4fdf4b72490553b7f65ccf0cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181624"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
   空间索引可以更有效地执行某些操作的列`geometry`或`geography`数据类型 (*空间列*)。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
@@ -59,7 +59,7 @@ ms.locfileid: "36126818"
   
 7.  若要指定想为其创建索引的空间数据列，请单击 **“添加”**。  
   
-8.  在**中选择列** *\<表名 >* 对话框中，选择一列的类型`geometry`或`geography`通过选择相应的复选框。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”**。  
+8.  在中**从选择的列** *\<表名称 >* 对话框中，选择一列的类型`geometry`或`geography`通过选择相应的复选框。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”**。  
   
 9. 请在 **“索引键列”** 网格中验证您的列选择。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36126818"
   
 11. 在 **“空间”** 页上，指定要用于索引的空间属性的值。  
   
-     在创建索引时`geometry`类型列中，你必须指定 **(*`X-min`*，*`Y-min`*)** 和 **(*`X-max`*，*`Y-max`*)** 边界框坐标。 索引的`geography`类型列的边界框字段变为只读后你指定**地理网格**分割方案，因为地理网格分割不使用边界框。  
+     在创建索引时`geometry`类型列，则必须指定 **(*`X-min`*，*`Y-min`*)** 和 **(*`X-max`*，*`Y-max`*)** 的边界框坐标。 在索引`geography`类型列中，边界框字段变为只读后指定**地理网格**分割方案，因为地理网格分割不使用边界框。  
   
      您还可以指定任意级别的分割方案的 **“每个对象的单元数”** 字段和网格密度的非默认值。 对于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ，每个对象的默认单元数为 16；对于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更高版本，则为 8。对于 **，默认网格密度为** “中” [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36126818"
   
      此时，将在表设计器中打开该表。  
   
-2.  选择`geometry`或`geography`索引的列。  
+2.  选择`geometry`或`geography`索引列。  
   
 3.  在 **表设计器** 菜单上，单击 **“空间索引”**。  
   

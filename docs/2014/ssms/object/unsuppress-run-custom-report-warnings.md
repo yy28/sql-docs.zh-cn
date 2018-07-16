@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d303321941668d5115c3796022f70195b4a0d066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9265d42cdde8ac528118cb72dead19726f3d3173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228417"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>启用运行自定义报表警告
   对于自定义报表，有两个警告对话框。 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中取消显示这些对话框。  
@@ -32,7 +32,7 @@ ms.locfileid: "36138124"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>启用主自定义报表警告对话框  
   
-1.  连接到\<*服务器*>\\<*共享*>|\<*驱动器*> \Documents and Settings\\< UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml。  
+1.  连接到\<*服务器*>\\<*共享*>|\<*驱动器*> \Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml。  
   
 2.  右键单击`reports.xml`，然后单击**编辑**。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36138124"
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>启用钻取自定义报表警告对话框  
   
-1.  连接到\<*服务器*>\\<*共享*>|\<*驱动器*> \Documents and Settings\\< UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml。  
+1.  连接到\<*服务器*>\\<*共享*>|\<*驱动器*> \Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml。  
   
 2.  右键单击`reports.xml`，然后单击**编辑**。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36138124"
   
 ## <a name="see-also"></a>请参阅  
  [Management Studio 中的自定义报表](custom-reports-in-management-studio.md)   
- [将自定义报表添加到 Management Studio](add-a-custom-report-to-management-studio.md)   
+ [向 Management Studio 添加自定义报表](add-a-custom-report-to-management-studio.md)   
  [将自定义报告与对象资源管理器节点属性一起使用](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

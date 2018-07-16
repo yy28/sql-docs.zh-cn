@@ -8,50 +8,50 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 230cd7bcbadf9e51ba248ffa34851335977cb0ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238233"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
   通过向报表添加参数，用户可以筛选来自数据源的报表数据或报表中的报表数据。 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将学习如何执行下列操作：  
   
 1.  [从表或矩阵向导创建矩阵报表和数据集](#Setup)  
   
-2.  [组织数据，选择布局，并设置样式表或矩阵向导](#CompleteWizard)  
+2.  [组织数据，并选择布局和样式表或矩阵向导](#CompleteWizard)  
   
 3.  [添加查询参数以创建报表参数](#Query)  
   
 4.  [更改报表参数的默认数据类型和其他属性](#ChangeDefaultProperties)  
   
-    1.  [添加数据集以提供可用值并显示名称](#AddDataset)  
+    1.  [添加数据集以提供可用值和显示名称](#AddDataset)  
   
-    2.  [指定要创建的值的下拉列表的可用值](#AvailableValues)  
+    2.  [指定可用值以创建值的下拉列表](#AvailableValues)  
   
-    3.  [指定默认值，因此报表自动运行](#DefaultValues)  
+    3.  [指定默认值，以便自动运行报表](#DefaultValues)  
   
-    4.  [从具有名称/值对数据集中查找某个值](#NameValue)  
+    4.  [从具有名称/值对的数据集查找值](#NameValue)  
   
 5.  [在报表中显示所选的参数值](#Expression)  
   
 6.  [在筛选器中使用报表参数](#Filter)  
   
-7.  [更改报表参数接受多个值](#Multivalued)  
+7.  [更改报表参数以接受多个值](#Multivalued)  
   
-8.  [为条件可见性添加一个布尔型参数](#Boolean)  
+8.  [为条件可见性添加布尔参数](#Boolean)  
   
 9. [添加报表标题](#Title)  
   
@@ -73,14 +73,14 @@ ms.locfileid: "36126484"
   
 #### <a name="to-create-a-new-matrix-report"></a>创建新的矩阵报表  
   
-1.  单击**启动**，指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
+1.  单击**启动**，依次指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
   
      此时将显示 **“入门”** 对话框。  
   
     > [!NOTE]  
-    >  如果**入门**未显示对话框中，从**报表生成器**菜单上，单击**新建**。  
+    >  如果**Getting Started**对话框不会出现，从**报表生成器**按钮，再单击**新建**。  
   
-2.  在左窗格中，验证**报表**选择。  
+2.  在左窗格中，确认**报表**处于选中状态。  
   
 3.  在右窗格中，单击“表或矩阵向导”。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "36126484"
   
 4.  单击“下一步” 。  
   
-5.  上**选择布局**页上，在**选项**，验证**显示小计和总计**选择。  
+5.  上**选择布局**页面上，在**选项**，验证**显示小计和总计**处于选中状态。  
   
      当您运行报表时，最后一列将显示所有商店的每个子类别的总数量，而最后一行将显示每个商店的所有子类别的总数量。  
   
 6.  单击“下一步” 。  
   
-7.  上**选择样式**页上，在样式窗格中，选择一种样式。  
+7.  上**选择一种样式**页上，在样式窗格中，选择一种样式。  
   
 8.  单击 **“完成”**。  
   
@@ -170,13 +170,13 @@ ms.locfileid: "36126484"
   
 2.  在“报表数据”窗格中，展开“数据集”文件夹，右键单击“DataSet1”，然后单击“查询”。  
   
-3.  添加以下[!INCLUDE[tsql](../includes/tsql-md.md)]`WHERE`作为在查询中的最后一行的子句：  
+3.  添加以下[!INCLUDE[tsql](../includes/tsql-md.md)]`WHERE`子句在查询中的最后一行：  
   
     ```  
     WHERE StoreID = (@StoreID)  
     ```  
   
-     `WHERE`子句限制检索的数据与由查询参数指定的应用商店标识符*@StoreID*。  
+     `WHERE`子句限制为由查询参数指定的商店标识符检索到的数据*@StoreID*。  
   
 4.  在查询设计器工具栏中，单击“运行”(**!**)。 此时将打开“定义查询参数”对话框，提示用户为查询参数 @StoreID 输入值。  
   
@@ -190,16 +190,16 @@ ms.locfileid: "36126484"
   
 8.  在“报表数据”窗格中，展开“参数”文件夹。  
   
- 请注意，现在有了报表参数名为*@StoreID*。 默认情况下，参数的数据类型**文本**。 由于商店标识符是一个整数，因此在下一个过程中将数据类型更改为 Integer。  
+ 请注意，现在有了名为报表参数*@StoreID*。 默认情况下，参数的数据类型**文本**。 由于商店标识符是一个整数，因此在下一个过程中将数据类型更改为 Integer。  
   
 ##  <a name="ChangeDefaultProperties"></a> 4.更改报表参数的默认数据类型和其他属性  
  创建报表参数之后，可以调整属性的默认值。  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>更改报表参数的默认数据类型  
   
-1.  下的报表数据窗格中**参数**节点，右键单击*@StoreID*，然后单击**参数属性**。  
+1.  在下的报表数据窗格**参数**节点，右键单击*@StoreID*，然后单击**参数属性**。  
   
-2.  在提示符下，键入**商店标识符？** 当您运行报表时，此文本出现在报表查看器工具栏上。  
+2.  在提示符处，键入**Store identifier？** 当您运行报表时，此文本出现在报表查看器工具栏上。  
   
 3.  在“数据类型”的下拉列表中，选择“整数”。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "36126484"
   
 4.  选择**使用我的报表中嵌入的数据集**选项。  
   
-5.  在**数据源**，从下拉列表中，选择第一个过程中创建的数据源。  
+5.  在中**数据源**，从下拉列表中，选择第一个过程中创建的数据源。  
   
 6.  在“查询类型”中，确保已选中“文本”。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "36126484"
   
      “报表数据”窗格在 **Stores** 数据集节点下显示字段 StoreID 和 StoreName。  
   
-##  <a name="AvailableValues"></a> 4b。 指定可用值以创建值的下拉列表  
+##  <a name="AvailableValues"></a> 4b 部分： 指定可用值以创建值的下拉列表  
  在创建数据集以提供可用值之后，必须更改报表属性，以指定将哪个数据集和哪个字段用于填充报表查看器工具栏上的有效值下拉列表。  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>为参数提供数据集中的可用值  
@@ -258,7 +258,7 @@ ms.locfileid: "36126484"
   
 6.  单击 **“常规”**。  
   
-7.  在提示符下，键入**存储名称？**  
+7.  在提示符处，键入**存储名称？**  
   
      用户现在将从商店名称列表而非商店标识符列表中进行选择。 请注意，参数数据类型保持为 **Integer** ，因为参数是基于商店标识符而不是商店名称。  
   
@@ -266,13 +266,13 @@ ms.locfileid: "36126484"
   
 9. 预览报表。  
   
-     在报表查看器工具栏中，参数文本框中现在是显示的下拉列表**\<选择一个值 >**。  
+     在报表查看器工具栏中，参数文本框现在为显示的下拉列表**\<选择一个值 >**。  
   
-10. 从下拉列表中，选择 Contoso 目录存储区，然后单击**查看报表**。  
+10. 从下拉列表中，选择 Contoso Catalog Store，然后单击**查看报表**。  
   
  报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
-##  <a name="DefaultValues"></a> 4 c。 指定默认值，以便自动运行报表  
+##  <a name="DefaultValues"></a> 4 核。 指定默认值，以便自动运行报表  
  可以为每个参数指定默认值，以便自动运行报表。  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>从数据集中指定默认值  
@@ -291,7 +291,7 @@ ms.locfileid: "36126484"
   
 7.  预览报表。  
   
- 有关*@StoreID*，报表查看器显示的值"Contoso North America 在线商店"。 这是从结果集中为数据集的第一个值**存储**。 报表显示了标识符为 **199**的商店销售的数码相机数量。  
+ 有关*@StoreID*，报表查看器显示值"Contoso North America Online Store"。 这是从结果集中的数据集的第一个值**商店**。 报表显示了标识符为 **199**的商店销售的数码相机数量。  
   
 #### <a name="to-specify-a-custom-default-value"></a>指定自定义默认值  
   
@@ -307,9 +307,9 @@ ms.locfileid: "36126484"
   
 6.  预览报表。  
   
- 有关*@StoreID*，报表查看器显示的值"Contoso 目录存储"。 这是存储标识符的显示名称**200**。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
+ 有关*@StoreID*，报表查看器显示值"Contoso Catalog Store"。 这是商店标识符的显示名称**200**。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
-##  <a name="NameValue"></a> 4 d。 从具有名称/值对的数据集查找值  
+##  <a name="NameValue"></a> 4d。 从具有名称/值对的数据集查找值  
  数据集可以同时包含标识符和对应的名称字段。 若只有一个标识符，则可以在创建的包含名称/值对的数据集中查找对应的名称。  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>从数据集查找值  
@@ -330,7 +330,7 @@ ms.locfileid: "36126484"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     存储列标头包含复杂表达式的显示文本：  **< \<Expr >>**。  
+     Store 列标题包含复杂表达式的显示文本：  **< \<Expr >>**。  
   
 8.  预览报表。  
   
@@ -343,7 +343,7 @@ ms.locfileid: "36126484"
   
 1.  切换到“设计”视图。  
   
-2.  右键单击页脚，指向**插入**，然后单击**文本框**。 拖动带时间戳的文本框旁边的文本框。 抓住该文本框的侧手柄并扩展宽度。  
+2.  右键单击页脚，指向**插入**，然后单击**文本框中**。 拖动带时间戳的文本框旁边的文本框。 抓住该文本框的侧手柄并扩展宽度。  
   
 3.  从“报表数据”窗格中，将参数 @StoreID 拖到文本框。 文本框显示 `[@StoreID]`。  
   
@@ -370,7 +370,7 @@ ms.locfileid: "36126484"
   
 4.  在“表达式”的下拉列表中，选择数据集字段 StoreID。 数据类型显示 **Integer**。 当表达式值为数据集字段时，将自动设置数据类型。  
   
-5.  在**运算符**，验证`equals`选择 （=）。  
+5.  在中**运算符**，验证`equals`（=） 处于选中状态。  
   
 6.  在“值”中，键入 `[@StoreID]`。 `[@StoreID]` 是一个简单表达式语法，它表示 `=Parameters!StoreID.Value`。  
   
@@ -449,7 +449,7 @@ ms.locfileid: "36126484"
   
 3.  在“提示符”，键入“Show selections?”  
   
-4.  在**数据类型**，从下拉列表中，单击**布尔**。  
+4.  在中**数据类型**，从下拉列表中，单击**布尔**。  
   
 5.  单击 **“默认值”**。  
   
@@ -479,7 +479,7 @@ ms.locfileid: "36126484"
   
      显示参数选项的文本框未出现。  
   
-8.  在报表查看器工具栏中，旁边**显示选择**，单击`True`。  
+8.  在报表查看器工具栏中下, 一步**Show selections**，单击`True`。  
   
 9. 预览报表。  
   

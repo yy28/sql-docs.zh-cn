@@ -1,5 +1,5 @@
 ---
-title: 客户端 与服务器端 XML 格式 (SQLXML 4.0) |Microsoft 文档
+title: 客户端 与服务器端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87043a75d4b8b3cc175d80c1196267a15116aeaf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 02875dd402a294e8598e62a5bee5e65f5b344f6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286843"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端 与服务器端 XML 格式 (SQLXML 4.0)
   本主题说明在 SQLXML 中客户端与服务器端 XML 格式的一般差异。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>客户端格式中不支持多行集查询  
- 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，它具有两个 SELECT 语句中 **\<sql:query >** 块：  
+ 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，其中有两个 SELECT 语句中 **\<sql:query >** 块：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -45,12 +45,12 @@ ms.locfileid: "36129642"
 </ROOT>  
 ```  
   
- 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个指定查询分隔 **\<sql:query >** 块，将获取所需的结果。  
+ 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个指定的查询分开 **\<sql:query >** 块，将获得所需的结果。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp 在客户端与服务器端格式中的映射方式不同  
  在服务器端 XML 格式中，`timestamp` 类型的数据库列映射为 i8 XDR 类型（如果在查询中指定了 XMLDATA 选项）。  
   
- 在客户端 XML 格式中，`timestamp` 类型的数据库列映射为 `uri` 或 `bin.base64` XDR 类型（取决于是否在查询中指定了二进制 base64 选项）。 `bin.base64` XDR 类型是很有用，如果你使用属的 updategram 和 bulkload 功能，因为此类型转换为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`timestamp`类型。 这样即可成功执行插入、更新或删除操作。  
+ 在客户端 XML 格式中，`timestamp` 类型的数据库列映射为 `uri` 或 `bin.base64` XDR 类型（取决于是否在查询中指定了二进制 base64 选项）。 `bin.base64` XDR 类型是使用 updategram 和 bulkload 功能的情况下很有用，因为此类型转换为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`timestamp`类型。 这样即可成功执行插入、更新或删除操作。  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>服务器端 XML 格式使用深层 VARIANT  
  在服务器端 XML 格式中，使用深层类型的 VARIANT 类型。 如果使用客户端 XML 格式，变量将转换为 Unicode 字符串，并且不使用 VARIANT 的子类型。  
@@ -59,7 +59,7 @@ ms.locfileid: "36129642"
  客户端 FOR XML 的 NESTED 模式类似于服务器端 FOR XML 的 AUTO 模式，不过以下方面除外：  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>使用服务器端的 AUTO 模式查询视图时，在生成的 XML 中将视图名称返回为元素名称。  
- 例如，假定在 AdventureWorksdatabase 中对 Person.Contact 表创建以下视图：  
+ 例如，假定 AdventureWorksdatabase 中的 Person.Contact 表，创建以下视图：  
   
 ```  
 CREATE VIEW ContactView AS (SELECT ContactID as CID,  
@@ -90,7 +90,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 使用对应的 NESTED 模式指定客户端 XML 格式时，在生成的 XML 中将基表名称返回为元素名称。 例如，以下修改后的模板执行相同的 SELECT 语句，但它的 XML 格式设置客户端上执行 (即，**客户端端 xml**设置为 true 模板中):  
+ 使用对应的 NESTED 模式指定客户端 XML 格式时，在生成的 XML 中将基表名称返回为元素名称。 例如，以下修改后的模板执行同一 SELECT 语句，但 XML 格式设置在客户端上执行 (即**客户端侧 xml**设置为在模板中，则返回 true):  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -184,7 +184,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 如果 XML 格式的服务器上完成 (**客户端端 xml ="0"**)，你可以返回 dbobject 查询的实际的表和列中 （即使具有指定的别名） 返回名称的列使用别名。 例如，以下模板执行的查询和 XML 格式的服务器上完成 (**客户端端 xml**未指定选项和**运行在客户端**选项未选中要虚拟根）。 该查询还指定了 AUTO 模式（而不是客户端 NESTED 模式）。  
+ 如果在服务器上执行 XML 格式设置 (**客户端侧 xml ="0"**)，可以返回 dbobject 查询中的实际表和列 （即使您已经指定了别名） 返回名称的列使用别名。 例如，以下模板执行一个查询，并在服务器上执行 XML 格式设置 (**客户端侧 xml**未指定选项和**在客户端运行**不选择选项虚拟根目录）。 该查询还指定了 AUTO 模式（而不是客户端 NESTED 模式）。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -213,13 +213,13 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   使用客户端 XPath 查询时所应用的数据转换与使用服务器端 XPath 查询时所应用的数据转换有所不同。 客户端 XPath 使用 CAST 而不是 CONVERT 模式 126。  
   
--   当指定**客户端端 xml ="0"** (false) 模板中，您请求服务器端 XML 格式。 因此，不能指定 FOR XML NESTED，因为服务器不识别 NESTED 选项。 这将生成一个错误。 必须使用服务器确实可以识别的 AUTO、RAW 或 EXPLICIT 模式。  
+-   当指定**客户端侧 xml ="0"** (false) 在模板中，则表示请求服务器端 XML 格式。 因此，不能指定 FOR XML NESTED，因为服务器不识别 NESTED 选项。 这将生成一个错误。 必须使用服务器确实可以识别的 AUTO、RAW 或 EXPLICIT 模式。  
   
--   当指定**客户端端 xml ="1"** (true) 模板中，您请求客户端的 XML 格式。 在这种情况下，可以指定 FOR XML NESTED。 即使在服务器端发生如果指定 FOR XML AUTO，XML 格式**客户端端 xml ="1"** 模板中指定。  
+-   当指定**客户端侧 xml ="1"** (true) 在模板中，则表示请求客户端 XML 格式。 在这种情况下，可以指定 FOR XML NESTED。 尽管在服务器端上进行指定 FOR XML AUTO，如果 XML 格式化**客户端侧 xml ="1"** 模板中指定。  
   
 ## <a name="see-also"></a>请参阅  
- [有关 XML 安全注意事项&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [客户端的 XML 格式&#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
- [服务器端 XML 格式&#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
+ [FOR XML 安全注意事项&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [客户端 XML 格式设置&#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
+ [服务器端 XML 格式设置&#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
   
   

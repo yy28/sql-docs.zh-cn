@@ -1,5 +1,5 @@
 ---
-title: 如何： 启动升级顾问 |Microsoft 文档
+title: 如何： 启动升级顾问 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - launching Upgrade Advisor
 - starting Upgrade Advisor
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Upgrade Advisor [SQL Server], launching
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6d044ae9f61434a0290ee525af2bc60a895be77d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c853e40a0559dcecd550327ba750ba9cdc2c2e9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236257"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>如何启动升级顾问
   升级顾问提供了可用于启动升级顾问分析向导和升级顾问报表查看器的中央控制台。 本主题介绍了如何启动升级顾问。  

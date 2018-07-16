@@ -1,5 +1,5 @@
 ---
-title: 初始化事务订阅从备份 （复制 TRANSACT-SQL 编程） |Microsoft 文档
+title: 初始化事务订阅从备份 （复制 TRANSACT-SQL 编程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1751d98983622a4968f28fd8a84cfa4145065c48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 231e2d8eb7019998cb497980d8ec1bba5bc5e91e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168661"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>从备份初始化事务订阅（复制 Transact-SQL 编程）
   虽然通常使用快照来初始化对事务发布的订阅，但也可以使用复制存储过程通过备份初始化订阅。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
@@ -38,9 +38,9 @@ ms.locfileid: "36127268"
   
     -   如果值为 **1**，则该发布支持此功能。  
   
-    -   如果值为 **0**，则在发布服务器上对发布数据库执行 [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 指定的值**allow_initialize_from_backup**为**@property**和的值`true`为**@value**。  
+    -   如果值为 **0**，则在发布服务器上对发布数据库执行 [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 指定的值**allow_initialize_from_backup**有关**@property**并将值`true`为**@value**。  
   
-2.  对于新发布，在发布服务器上对发布数据库执行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定的值`true`为**allow_initialize_from_backup**。 有关详细信息，请参阅 [Create a Publication](publish/create-a-publication.md)。  
+2.  对于新发布，在发布服务器上对发布数据库执行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定的值`true`有关**allow_initialize_from_backup**。 有关详细信息，请参阅 [Create a Publication](publish/create-a-publication.md)。  
   
     > [!WARNING]  
     >  为了避免丢失订阅服务器数据，在将 **sp_addpublication** 与 `@allow_initialize_from_backup = N'true'`一起使用时，始终使用 `@immediate_sync = N'true'`。  

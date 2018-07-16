@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236647"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   对等复制通过在多个服务器实例（又称为“节点” ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
@@ -147,18 +147,18 @@ ms.locfileid: "36127501"
   
  以下属性具有特殊的注意事项：  
   
--   发布属性**@allow_initialize_from_backup**需要的值`true`。  
+-   发布属性**@allow_initialize_from_backup**的值需要为`true`。  
   
--   项目属性**@replicate_ddl**需要的值`true`;**@identityrangemanagementoption**需要的值`manual`; 和**@status**需要该选项**24**设置。  
+-   项目属性**@replicate_ddl**的值需要为`true`;**@identityrangemanagementoption**的值需要为`manual`; 并**@status**需要该选项**24**设置。  
   
--   项目属性的值**@ins_cmd**， **@del_cmd**，和**@upd_cmd**不能设置为`SQL`。  
+-   项目属性的值**@ins_cmd**， **@del_cmd**，以及**@upd_cmd**不能设置为`SQL`。  
   
--   订阅属性**@sync_type**需要的值`none`或`automatic`。  
+-   订阅属性**@sync_type**的值需要为`none`或`automatic`。  
   
 ### <a name="maintenance-considerations"></a>维护注意事项  
  下列操作需要让系统静止。 也就是说，停止所有节点上已发布表中的活动，并确保每个节点都已收到来自所有其他节点的更改。  
   
--   添加[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]到一个现有的拓扑结构中的节点  
+-   添加[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]向现有拓扑的节点  
   
 -   将项目添加到现有发布  
   

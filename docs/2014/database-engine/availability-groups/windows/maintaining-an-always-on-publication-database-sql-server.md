@@ -1,28 +1,27 @@
 ---
-title: 维护 AlwaysOn 发布数据库 (SQL Server) |Microsoft 文档
+title: 维护 AlwaysOn 发布数据库 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dd0f464aeefcbd77f2a4f0dee726516a55a60132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a2e66a3537b62658458357a642a76d6e283abb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200197"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>维护 AlwaysOn 发布数据库 (SQL Server)
   本主题讨论了在使用 AlwaysOn 可用性组时维护发布数据库的特殊注意事项。  
@@ -36,17 +35,17 @@ ms.locfileid: "36138075"
   
 -   复制监视器将始终在原始发布服务器下显示发布信息。 但是，通过将原始发布服务器添加为服务器，可以使用复制监视器从任意副本查看此信息。  
   
--   当使用存储过程或复制管理对象 (RMO) 在当前主副本上管理复制时，对于需要指定发布服务器名称的情况，您必须指定已经启用了数据库复制的实例（原始发布服务器）的名称。 若要确定相应的名称，请使用 `PUBLISHINGSERVERNAME` 函数。 当发布数据库联接一个可用性组时，存储在辅助数据库副本中的复制元数据将与主副本上的相同。 因此，对于主副本上已启用复制的发布数据库而言，辅助副本上的系统表中存储的发布服务器实例名称将是主副本的名称，而不是辅助副本的名称。 如果将发布数据库故障转移到辅助副本，则这种情况会影响复制的配置和维护。 例如，如果故障转移后，使用辅助数据库上的存储过程配置复制，并且你想在另一副本已启用的发布数据库的请求订阅，你必须指定而不是原始发布服务器的名称当前的发布者*@publisher*参数`sp_addpullsubscription`或`sp_addmergepulllsubscription`。 但是，如果您在故障转移之后启用一个发布数据库，则存储在系统表中的发布服务器实例名称将为当前主副本主机的名称。 在此情况下，您应对 *@publisher* 参数使用当前主副本的主机名称。  
+-   当使用存储过程或复制管理对象 (RMO) 在当前主副本上管理复制时，对于需要指定发布服务器名称的情况，您必须指定已经启用了数据库复制的实例（原始发布服务器）的名称。 若要确定相应的名称，请使用 `PUBLISHINGSERVERNAME` 函数。 当发布数据库联接一个可用性组时，存储在辅助数据库副本中的复制元数据将与主副本上的相同。 因此，对于主副本上已启用复制的发布数据库而言，辅助副本上的系统表中存储的发布服务器实例名称将是主副本的名称，而不是辅助副本的名称。 如果将发布数据库故障转移到辅助副本，则这种情况会影响复制的配置和维护。 例如，如果故障转移后，使用辅助数据库上的存储过程配置复制，并且希望在不同副本上启用的发布数据库使用请求订阅，您必须指定而不是原始发布服务器的名称作为当前发布服务器*@publisher*参数`sp_addpullsubscription`或`sp_addmergepulllsubscription`。 但是，如果您在故障转移之后启用一个发布数据库，则存储在系统表中的发布服务器实例名称将为当前主副本主机的名称。 在此情况下，您应对 *@publisher* 参数使用当前主副本的主机名称。  
   
     > [!NOTE]  
-    >  对于某些步骤，如`sp_addpublication`、 *@publisher*参数仅支持不是的实例的发布者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; 在这些情况下，不相关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
+    >  对于一些过程，如`sp_addpublication`，则*@publisher*参数仅支持不支持的实例的出版商[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; 在这些情况下，不相关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
   
 -   若要在故障转移后在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中同步订阅，应将来自订阅服务器的请求订阅与来自活动发布服务器的推送订阅进行同步。  
   
 ##  <a name="RemovePublDb"></a> 从可用性组中删除已发布的数据库  
  如果从可用性组中删除了已发布的数据库，或者删除了包含已发布的成员数据库的可用性组，则应考虑以下问题。  
   
--   如果从可用性组主副本中删除原始发布服务器上的发布数据库，则必须运行`sp_redirect_publisher`而无需指定的值*@redirected_publisher*参数以删除重定向发布服务器/数据库对。  
+-   如果从可用性组主要副本中删除原始发布服务器上的发布数据库，必须运行`sp_redirect_publisher`无需指定值*@redirected_publisher*若要删除的参数发布服务器/数据库对的重定向。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -115,7 +114,7 @@ ms.locfileid: "36138075"
 -   [复制订阅服务器和 AlwaysOn 可用性组&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## <a name="see-also"></a>请参阅  
- [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组： 互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  

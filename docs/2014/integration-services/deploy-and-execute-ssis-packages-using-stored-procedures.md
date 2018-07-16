@@ -1,5 +1,5 @@
 ---
-title: 部署和使用存储过程执行 SSIS 包 |Microsoft 文档
+title: 部署和使用存储过程执行 SSIS 包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 273525c7bba0afb3424a394dec758471aaf082d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c9a86fd007501c3c8fa742f55057852d222f358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266626"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
   在您配置一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "36125652"
   
 1.  调用 [catalog.deploy_project（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) 将包含包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。  
   
-     若要检索的二进制内容组成[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的项目部署文件*@project_stream*参数，使用 SELECT 语句使用 OPENROWSET 函数和大容量行集提供程序。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
+     若要检索的二进制内容组成[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]为项目部署文件*@project_stream*参数，使用 SELECT 语句与 OPENROWSET 函数和 BULK 行集提供程序。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   
      在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 二进制数据从项目文件 (SSISPackage_ProjectDeployment.ispac) 读取并且存储于 varbinary(max) 类型的 *@ProjectBinary* 参数中。 将 *@ProjectBinary* 参数值赋给 *@project_stream* 参数。  
   
