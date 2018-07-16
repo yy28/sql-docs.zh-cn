@@ -1,5 +1,5 @@
 ---
-title: 管理缓存 (XMLA) |Microsoft 文档
+title: 管理缓存 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - cache [Analysis Services]
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b40efd25088e90b3761d3532188d5bdadce7630c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da13c86e86a2f51719a9d4f0aedfda33935766ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180798"
 ---
 # <a name="managing-caches-xmla"></a>管理缓存 (XMLA)
-  你可以使用[ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md)命令 XML 用于 Analysis (XMLA) 以清除指定的维度或分区的缓存中。 清除缓存强制[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]重新生成该对象的缓存。  
+  可以使用[ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md)命令，在 XML for Analysis (XMLA) 清除指定的维度或分区的缓存。 清除缓存可强制[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]重新生成该对象的缓存。  
   
 ## <a name="specifying-objects"></a>指定对象  
- [对象](../xmla/xml-elements-properties/object-element-xmla.md)属性`ClearCache`命令都可以包含仅对以下对象之一的对象引用。 如果包含的不是以下对象之一的对象引用，则会出错。  
+ [对象](../xmla/xml-elements-properties/object-element-xmla.md)属性的`ClearCache`命令可以包含仅对以下对象之一的对象引用。 如果包含的不是以下对象之一的对象引用，则会出错。  
   
  “数据库”  
  清除数据库中包含的所有维度和分区的缓存。  

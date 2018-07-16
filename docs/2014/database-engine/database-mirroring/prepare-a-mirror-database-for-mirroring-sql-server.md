@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], preparing for mirroring
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49b882cc0cf9d64fdaaf0a1120d0afe92a3c0bfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5bf92adf724f92c22d2d4b7232048136943593b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167238"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
   在数据库镜像会话开始之前，数据库所有者或系统管理员必须确保已创建镜像数据库并可进行镜像。 创建新镜像数据库的最低要求是：执行主体数据库的完整备份和一个后续日志备份，并使用 WITH NORECOVERY 将这两个备份还原到镜像服务器实例上。  
@@ -53,7 +52,7 @@ ms.locfileid: "36127578"
   
 -   不能镜像 **master**、 **msdb**、 **temp**或 **model** 系统数据库。  
   
--   不能镜像属于数据库[AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)。  
+-   不能镜像属于的数据库[AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
 ###  <a name="Recommendations"></a> 建议  
   
@@ -248,7 +247,7 @@ ms.locfileid: "36127578"
   
 ## <a name="see-also"></a>请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [针对数据库镜像和 AlwaysOn 可用性组传输安全&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [设置数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
  [备份和还原全文目录和索引](../../relational-databases/indexes/indexes.md)   
  [数据库镜像和全文目录 (SQL Server)](database-mirroring-and-full-text-catalogs-sql-server.md)   

@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8db1358fc13310c56b6486af73eed694e8423cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1fdc032aa6f82ce073720a14a0329764dcfec460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178084"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>创建叶成员 (Master Data Services)
-  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，当你想要将主数据添加到你的系统和未使用临时表创建叶成员或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]导入数据。  
+  在中[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，当你想要将主数据添加到您的系统和未使用临时表创建叶成员或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]导入数据。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
   
--   必须至少具有**更新**要添加到成员的实体的叶模型对象的权限。  
+-   必须至少具有**更新**对要添加到成员的实体的叶模型对象权限。  
   
 ### <a name="to-create-a-leaf-member"></a>创建叶成员  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36138882"
 8.  单击“确定” 。  
   
 ## <a name="see-also"></a>请参阅  
- [加载或通过使用临时过程中更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
+ [加载或使用临时过程更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
  [创建合并的成员&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [成员&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

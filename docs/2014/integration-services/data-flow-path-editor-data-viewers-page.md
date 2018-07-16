@@ -1,5 +1,5 @@
 ---
-title: 数据流路径编辑器 （数据查看器页） |Microsoft 文档
+title: 数据流路径编辑器 （数据查看器页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.visualizers.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b292b8589af99aaccc896bcb92c6b73c7096b7c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1815402b13ad8ba1550472a7a2dc1cb70374a4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231537"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>数据流路径编辑器（“数据查看器”页）
   可以使用 **“数据流路径编辑器”** 对话框的 **“数据查看器”** 页管理附加到路径的数据查看器。  

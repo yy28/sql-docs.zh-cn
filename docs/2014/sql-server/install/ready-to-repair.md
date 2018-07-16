@@ -1,5 +1,5 @@
 ---
-title: 准备修复 |Microsoft 文档
+title: 准备修复 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea4bce669b4647ab9d7838a778152e74c5075ad0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 17549988bd1a3ea18e06f627c773f32bab9eb7d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215047"
 ---
 # <a name="ready-to-repair"></a>准备修复
   “准备修复”页提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序执行的修复过程的摘要。  

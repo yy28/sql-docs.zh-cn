@@ -1,5 +1,5 @@
 ---
-title: 使用情况元素 (MiningModelColumn) (ASSL) |Microsoft 文档
+title: Usage 元素 (MiningModelColumn) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265294"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Usage 元素 (MiningModelColumn) (ASSL)
-  描述如何关联的列的父代中[MiningStructure](../objects/miningstructure-element-assl.md)使用。  
+  介绍如何在父级中关联的列[MiningStructure](../objects/miningstructure-element-assl.md)使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,9 +70,9 @@ ms.locfileid: "36126612"
 |*输入*|该列为输入列。|  
 |*Predict*|该列为预测列。|  
 |*PredictOnly*|该列仅为预测列。|  
-|*无*|模型不使用该列。 **警告：** 时使用的值为"None"，Analysis Services 不任何将值发送到服务器默认情况下; 因此，使用情况属性不包含在请求/响应。|  
+|*无*|模型不使用该列。 **警告：** 时使用的值为"None"，Analysis Services 不会默认不发送任何值到服务器; 因此，使用情况属性未包含在请求/响应。|  
   
- 对应于的允许值为枚举`Usage`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MiningModelColumnUsages>。  
+ 与允许的值相对应的枚举`Usage`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MiningModelColumnUsages>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

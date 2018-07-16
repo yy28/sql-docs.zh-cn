@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e26aab503c41cbd64f16708c8b420bf3ae93af1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf32579a40b3290e0126b3a1a92665643ae8c3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264193"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
   配置为 SharePoint 集成模式的报表服务器包含可用于向 SharePoint 库中发送报表的传递扩展插件。  
@@ -75,10 +75,10 @@ ms.locfileid: "36126449"
  指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " \< > |# { } %  
   
  Title  
- 指定一个可选`Title`目标库中报表的属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
+ 指定一个可选`Title`目标库中的报表的属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  
- 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： http://mySharePointWeb/MySite/MyDocLib; 其中"http://mySharePointWeb"指示的 Web 应用程序中，"MySite"是 SharePoint 站点，而"MyDocLib"是该报告将传递 SharePoint 库。  
+ 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： http://mySharePointWeb/MySite/MyDocLib; 其中"http://mySharePointWeb"指示 Web 应用程序，"MySite"是 SharePoint 站点，并"MyDocLib"是可传递报表的位置的 SharePoint 库。  
   
  不能指定页、站点或列表。 目标容器必须是同一站点上或同一场中的库。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36126449"
  指定处理订阅时是否使用更新的版本替换具有相同名称和扩展名的文件。 如果希望使用更新的版本替换现有文件，请选择 **“覆盖”** 。 如果不希望订阅替换文件，请选择 **“无”** 。 在这种情况下，如果存在具有目标名称和扩展名的文件，则不进行传递。 如果希望通过在文件名末尾追加数字来添加同一文件的连续版本，请选择 **“Autoincrement”** 。  
   
  自动复制  
- 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件。 如果你使用**Autoincrement**或**无**，将无法送达和`rsDeliveryError`将发生错误。  
+ 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件。 如果您使用了**Autoincrement**或**None**，则传递将失败并`rsDeliveryError`将发生错误。  
   
 ## <a name="see-also"></a>请参阅  
  [创建和管理 SharePoint 模式报表服务器的订阅](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

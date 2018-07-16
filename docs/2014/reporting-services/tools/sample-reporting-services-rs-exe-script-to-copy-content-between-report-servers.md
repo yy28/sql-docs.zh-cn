@@ -1,5 +1,5 @@
 ---
-title: Sample Reporting Services rs.exe Script to Migrate Content between Report Servers |Microsoft 文档
+title: Sample Reporting Services rs.exe Script to Migrate Content between Report Servers |Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1490220bc414ba4ad830bea7dfcfe0134363c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290293"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>用于在报表服务器之间迁移内容的示例 Reporting Services rs.exe 脚本
   本主题包括并说明一个示例 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS 脚本，该脚本使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 实用工具将来自一个  报表服务器的内容项和设置复制到另一个报表服务器中。 本机模式和 SharePoint 模式下，RS.exe 都随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 一起安装。 脚本将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 项（例如，报表和订阅）从一个服务器复制到另一个服务器。 该脚本支持 SharePoint 模式和本机模式报表服务器。  
@@ -74,7 +74,7 @@ ms.locfileid: "36124719"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
- 该脚本可用于在相同模式或不同模式的报表服务器之间复制内容。 例如，可以运行该脚本复制内容从[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]本机模式报表服务器到[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]SharePoint 模式报表服务器。 可以从安装了 RS.exe 的任何服务器运行该脚本。 例如，在以下部署中，您可以：  
+ 该脚本可用于在相同模式或不同模式的报表服务器之间复制内容。 例如，可以运行该脚本复制中的内容[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]本机模式报表服务器到[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]SharePoint 模式报表服务器。 可以从安装了 RS.exe 的任何服务器运行该脚本。 例如，在以下部署中，您可以：  
   
 -   在服务器 A **上** 运行 RS.exe 和脚本。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36124719"
 |项|是否迁移|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |密码|**是**|**是**|**不** 迁移密码。 在迁移内容项后，在目标服务器上更新凭据信息。 例如，具有已存储凭据的数据源。|  
-|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 **–u** 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容。 此外“我的报表”不是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式下的功能，并且这些文件夹中的项不能复制到 SharePoint 环境。 因此，该脚本不会复制源本机模式报表服务器上"我的报表"文件夹中的报表项。 若要使用该脚本迁移“我的报表”文件夹中的内容，请完成以下任务：<br /><br /> 1） 创建新的文件夹在报表管理器。 或者，您可为每个用户创建文件夹或子文件夹。<br /><br /> 2） 以使用"我的报表"内容用户之一进行登录。<br /><br /> 3） 在报表管理器中，单击**我的报表**文件夹。<br /><br /> 4） 单击**详细信息**文件夹视图。<br /><br /> 5） 选择要从中复制每个报表。<br /><br /> 6） 单击**移动**报表管理器工具栏中。<br /><br /> 7） 选择所需的目标文件夹。<br /><br /> 8） 为每个用户重复步骤 2-7。<br /><br /> 9） 运行该脚本。|  
+|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 **–u** 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容。 此外“我的报表”不是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式下的功能，并且这些文件夹中的项不能复制到 SharePoint 环境。 因此，该脚本不复制源本机模式报表服务器上的"我的报表"文件夹中的报表项。 若要使用该脚本迁移“我的报表”文件夹中的内容，请完成以下任务：<br /><br /> 1） 创建新文件夹在报表管理器。 或者，您可为每个用户创建文件夹或子文件夹。<br /><br /> 2） 为一个具有"我的报表"内容的用户的登录名。<br /><br /> 3） 在报表管理器中，单击**我的报表**文件夹。<br /><br /> 4） 单击**详细信息**文件夹视图。<br /><br /> 5） 选择要复制的每个报表。<br /><br /> 6） 单击**移动**报表管理器工具栏中。<br /><br /> 7） 选择所需的目标文件夹。<br /><br /> 8） 为每个用户重复步骤 2-7。<br /><br /> 9） 运行该脚本。|  
 |历史记录|**是**|**是**||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
 |“计划”|是|是|若要迁移计划，在目标服务器上需运行 SQL Server 代理。 如果在目标服务器上未运行 SQL Server 代理，将会显示如下错误消息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
@@ -109,7 +109,7 @@ ms.locfileid: "36124719"
 |订阅|是|是||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
 |处理选项|是|是||  
-|高速缓存刷新选项|是|是|相关设置作为目录项的一部分迁移。 下面是该脚本的示例，它迁移报表 (.rdl) 以及高速缓存刷新选项之类的相关设置：<br /><br /> 正在迁移报表 TitleOnly.rdl 的参数: 找到了 0 项。<br /><br /> 正在迁移报表 TitleOnly.rdl 的订阅:找到 1 项。<br /><br /> 迁移订阅保存在\\作为 TitleOnly \server\public\savedreports...成功<br /><br /> 正在迁移报表 TitleOnly.rdl 的历史记录设置...成功<br /><br /> 正在迁移报表 TitleOnly.rdl 的处理选项...找到 0 项。<br /><br /> 正在迁移报表 TitleOnly.rdl 的高速缓存刷新选项...成功<br /><br /> 正在迁移报表 TitleOnly.rdl 的高速缓存刷新计划: 找到了 1 项。<br /><br /> 正在迁移高速缓存刷新计划 titleonly_refresh735amM2F...成功|  
+|高速缓存刷新选项|是|是|相关设置作为目录项的一部分迁移。 下面是该脚本的示例，它迁移报表 (.rdl) 以及高速缓存刷新选项之类的相关设置：<br /><br /> 正在迁移报表 TitleOnly.rdl 的参数: 找到了 0 项。<br /><br /> 正在迁移报表 TitleOnly.rdl 的订阅:找到 1 项。<br /><br /> 正在迁移订阅保存在\\作为 TitleOnly \server\public\savedreports...成功<br /><br /> 正在迁移报表 TitleOnly.rdl 的历史记录设置...成功<br /><br /> 正在迁移报表 TitleOnly.rdl 的处理选项...找到 0 项。<br /><br /> 正在迁移报表 TitleOnly.rdl 的高速缓存刷新选项...成功<br /><br /> 正在迁移报表 TitleOnly.rdl 的高速缓存刷新计划: 找到了 1 项。<br /><br /> 正在迁移高速缓存刷新计划 titleonly_refresh735amM2F...成功|  
 |高速缓存刷新计划|是|是||  
 |映像|是|是||  
 |报表部件|是|是||  
@@ -232,7 +232,7 @@ ms.locfileid: "36124719"
   
          `Report: /Reports/TitleOnly`  
   
--   SOURCE_URL 和 TARGET_URL 必须是有效的报表服务器 Url 指向源和目标[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]报表服务器。 在本机模式下，报表服务器 URL 如下所示：  
+-   SOURCE_URL 和 TARGET_URL 必须是指向源和目标的有效的报表服务器 Url[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]报表服务器。 在本机模式下，报表服务器 URL 如下所示：  
   
     -   `http://servername/reportserver`  
   

@@ -1,5 +1,5 @@
 ---
-title: 缓存的页上，共享数据集 （报表管理器） |Microsoft 文档
+title: 缓存页，共享数据集 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42b50337fe529517d791cf5992e09f3a3f8235b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247987"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>共享数据集的“缓存”页（报表管理器）
   使用“缓存”属性页可以设置共享数据集的缓存选项。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面中的这一位置。  
@@ -50,7 +50,7 @@ ms.locfileid: "36126018"
  **缓存根据以下计划到期**  
  预设缓存的数据不再有效并且从缓存中删除的时间。 计划可以是共享计划，也可以是仅适用于当前共享数据集的特定计划。  
   
- **特定于数据集的计划**  
+ **数据集特定计划**  
  指定仅用于此数据集的计划。  
   
  **共享的计划**  

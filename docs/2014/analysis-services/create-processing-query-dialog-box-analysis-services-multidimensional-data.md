@@ -1,5 +1,5 @@
 ---
-title: 创建处理查询对话框 (Analysis Services-多维数据) |Microsoft 文档
+title: 创建处理查询对话框 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244097"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>“创建处理查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “创建处理查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“存储选项”** 对话框的 **“通知”** 选项卡中创建处理查询。 处理查询返回的行集包含与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象相关联的表自上次轮询之后所做的更改，用于增量更新该对象的多维 OLAP (MOLAP) 缓存。 Analysis Services 使用另一种称为轮询查询的查询，来轮询与对象相关联的表并确定该表是否已经更改。 完全更新对象的 MOLAP 缓存时，不需要处理查询。  

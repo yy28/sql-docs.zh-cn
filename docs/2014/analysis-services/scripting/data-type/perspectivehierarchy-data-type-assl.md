@@ -1,5 +1,5 @@
 ---
-title: PerspectiveHierarchy 数据类型 (ASSL) |Microsoft 文档
+title: PerspectiveHierarchy 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dddceea6ee82d02ef1a68953bd16d6fc728537ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 134b49fe8aa942dee63feae717a1ff1aa89a06dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208057"
 ---
 # <a name="perspectivehierarchy-data-type-assl"></a>PerspectiveHierarchy 数据类型 (ASSL)
-  定义一个基元数据类型，表示有关层次结构中的信息[PerspectiveDimension](dimension-data-type-assl.md)元素。  
+  定义一个基元数据类型，表示层次结构中的相关信息[PerspectiveDimension](dimension-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,10 +58,10 @@ ms.locfileid: "36138740"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[批注](../collections/annotations-element-assl.md)， [HierarchyID](../properties/id-element-assl.md)|  
-|派生元素|[层次结构](../objects/hierarchy-element-assl.md)([层次结构](../collections/hierarchies-element-assl.md)集合[PerspectiveDimension](dimension-data-type-assl.md))|  
+|派生元素|[层次结构](../objects/hierarchy-element-assl.md)([层次结构](../collections/hierarchies-element-assl.md)的集合[PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

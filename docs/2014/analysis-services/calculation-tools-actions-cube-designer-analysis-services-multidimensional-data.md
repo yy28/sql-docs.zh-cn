@@ -1,5 +1,5 @@
 ---
-title: 计算工具 （操作选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 计算工具 （操作选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.calculationtoolspane.f1
 ms.assetid: a3370370-43cd-4cc2-bb9f-c0d988b96f05
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a0fe659397a801fa69c2bb4ce2e26d7e087f9b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0613734c2ba4c2a8618d46854f2a3a7554068c71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328821"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>计算工具（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的 **“计算工具”** 窗格，浏览在操作、钻取操作和报表操作中可用的元数据、函数和模板。  
@@ -50,9 +50,9 @@ ms.locfileid: "36127205"
   
 |选项|定义|  
 |------------|----------------|  
-|**复制**|选择此选项可将在 **“元数据”** 或 **“函数”** 中选择的元素复制到剪贴板。<br /><br /> 请注意是否不会显示此选项**模板**选择。 另请注意，是否所选的成员不能复制，如将禁用此选项**集**文件夹中所显示维度**元数据**或中所显示函数的函数组文件夹**函数**。|  
-|**筛选成员**|选择此选项可显示 **“筛选成员”** 对话框，并筛选为 **“元数据”** 中所选元素显示的成员。 有关“筛选成员”对话框的详细信息，请参阅[“筛选成员”对话框（Analysis Services - 多维数据）](filter-members-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 请注意才会显示此选项**元数据**选择。 另请注意，在选择属性的级别的情况下，才会启用此选项**元数据**。|  
-|**添加模板**|选择此选项可以基于所选模板，将新的操作、钻取操作或报表操作添加到多维数据集，并分别显示 **操作窗体编辑器**、 **钻取操作窗体编辑器**或 **报表操作窗体编辑器**。<br /><br /> 注意： 此选项才会显示**元数据**选择。|  
+|**复制**|选择此选项可将在 **“元数据”** 或 **“函数”** 中选择的元素复制到剪贴板。<br /><br /> 请注意是否未显示此选项**模板**处于选中状态。 另请注意，将禁用此选项，是否所选的成员不能复制，如**集**文件夹中所显示维度**元数据**或中所显示函数的函数组文件夹**函数**。|  
+|**筛选成员**|选择此选项可显示 **“筛选成员”** 对话框，并筛选为 **“元数据”** 中所选元素显示的成员。 有关“筛选成员”对话框的详细信息，请参阅[“筛选成员”对话框（Analysis Services - 多维数据）](filter-members-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 请注意，才会显示此选项**元数据**处于选中状态。 另请注意，仅当在选择属性的级别启用此选项**元数据**。|  
+|**添加模板**|选择此选项可以基于所选模板，将新的操作、钻取操作或报表操作添加到多维数据集，并分别显示 **操作窗体编辑器**、 **钻取操作窗体编辑器**或 **报表操作窗体编辑器**。<br /><br /> 注意： 此选项显示才**元数据**处于选中状态。|  
   
 ## <a name="see-also"></a>请参阅  
  [MDX 脚本编写基础知识&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   

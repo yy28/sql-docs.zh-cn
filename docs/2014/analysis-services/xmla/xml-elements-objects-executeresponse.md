@@ -1,5 +1,5 @@
 ---
-title: ExecuteResponse 元素 (XMLA) |Microsoft 文档
+title: ExecuteResponse 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ExecuteResponse element
 ms.assetid: 6edb1b82-da4c-4cd9-9385-bea04032f0eb
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cf18cb2692f12a70da8b8108f7f1067f42a145c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e15030281f9d52bcd3a5d33e5fdc03b025ee2617
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213797"
 ---
 # <a name="executeresponse-element-xmla"></a>ExecuteResponse 元素 (XMLA)
-  包含返回的实例的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以响应[执行](xml-elements-methods-execute.md)方法调用。  
+  包含返回的实例的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]响应[Execute](xml-elements-methods-execute.md)方法调用。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   

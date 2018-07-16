@@ -1,5 +1,5 @@
 ---
-title: FiscalYearName 元素 (ASSL) |Microsoft 文档
+title: FiscalYearName 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FiscalYearName element
 ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e60ce6332e049f0528316a83c0dc62374c2bb4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2564345c916d73c5984be851523a234d2be6bbe4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197887"
 ---
 # <a name="fiscalyearname-element-assl"></a>FiscalYearName 元素 (ASSL)
-  定义的命名约定为会计年度的名称为[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
+  定义的会计年度名称的命名约定[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36130216"
 |*CalendarYearName*|向会计年度分配当前日历年的名称。|  
 |*NextCalendarYearName*|向会计年度分配下一日历年的名称。|  
   
- 对应于的允许值为枚举`FiscalYearName`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.FiscalYearName>。  
+ 与允许的值相对应的枚举`FiscalYearName`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.FiscalYearName>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

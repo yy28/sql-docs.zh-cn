@@ -1,5 +1,5 @@
 ---
-title: ASSL XML 约定 |Microsoft 文档
+title: ASSL XML 约定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279893"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 约定
   Analysis Services 脚本语言 (ASSL) 将对象层次结构表示为一组元素类型，其中的每个元素类型定义了可包含的子元素。  
@@ -43,7 +43,7 @@ ms.locfileid: "36130233"
   
 -   标准 XML 特性（例如“xml:lang”）除外，所有对象和属性都表示为元素。  
   
--   元素名称和枚举值遵循 Microsoft.NET Framework 命名约定的 Pascal 大小写与没有下划线。  
+-   元素名称和枚举值遵循 Microsoft.NET Framework 命名约定的 Pascal 大小写格式且没有下划线字符。  
   
 -   保留所有值的大小写。 枚举值也区分大小写。  
   
@@ -140,10 +140,10 @@ ms.locfileid: "36130233"
   
 -   保留内部空格。  
   
- `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关其他信息`Name`和`ID`约定，请参阅[ASSL 对象和对象特征](assl-objects-and-object-characteristics.md)。  
+ `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关其他信息`Name`并`ID`约定，请参阅[ASSL 对象和对象特征](assl-objects-and-object-characteristics.md)。  
   
  `DateTime`  
- A`DateTime`在.NET Framework 中的结构。 `DateTime` 值不能为 NULL。 `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
+ 一个`DateTime`从.NET Framework 的结构。 `DateTime` 值不能为 NULL。 `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
   
  `Boolean`  
  仅具有两个值的枚举，例如 {true, false} 或 {0, 1}。  
@@ -156,7 +156,7 @@ ms.locfileid: "36130233"
 |`Boolean`|False|  
 |`String`|""（空字符串）|  
 |`Integer` 或 `Long`|0（零）|  
-|`Timestamp`|12:00:00 AM，0001 年 1 月 1 日 (对应于.NET 框架`System.DateTime`0 时钟周期)|  
+|`Timestamp`|12:00:00 AM，0001 年 1 月 1 日 (对应于.NET Frameworks`System.DateTime`与 0 刻度)|  
   
  存在但为空的元素被解释为具有 Null 字符串值，而非默认值。  
   
@@ -183,6 +183,6 @@ ms.locfileid: "36130233"
   
  `</Dimension>`  
   
- 继承的默认设置的详细信息，请参阅[ASSL 对象和对象特征](assl-objects-and-object-characteristics.md)。  
+ 有关继承的默认值的详细信息，请参阅[ASSL 对象和对象特征](assl-objects-and-object-characteristics.md)。  
   
   

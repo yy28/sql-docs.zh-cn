@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d4f9da688927d7e96ac2162eb504e0bc15f27526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4722b2eb26f86537deb0283df0df384a4b565101
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292707"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
   查询优化器使用有关列的统计信息来创建可提高查询性能的查询计划。 从数据库中的表收集统计信息并将它保存在数据库元数据中。  
@@ -28,13 +28,13 @@ ms.locfileid: "36016358"
   
  随着行的插入、更新和删除，表数据通常在一段时间后发生变化。 这意味着需要定期更新统计信息。 默认情况下，在优化器确定基于磁盘的表的统计信息可能过期时，自动更新它们。  
   
- 默认情况下，不更新针对内存优化表的统计信息。 您需要手动更新它们。 使用[更新统计信息&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql)单个列、 索引或表。 使用[sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)更新的所有用户和数据库中的内部表的统计信息。  
+ 默认情况下，不更新针对内存优化表的统计信息。 您需要手动更新它们。 使用[更新统计信息&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql)的单个列、 索引或表。 使用[sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)若要更新的所有用户和数据库中的内部表的统计信息。  
   
- 使用时[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新统计信息&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，必须指定`NORECOMPUTE`若要禁用自动统计信息内存优化表的更新。 对于基于磁盘的表， [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)仅更新统计信息，如果表已被修改自上一个[sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。 对于内存优化表， [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)始终生成更新的统计信息。 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是一个不错的选择为内存优化表; 否则，你需要知道哪些表有重大更改，因此你可以单独更新统计信息。  
+ 使用时[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新统计信息&#40;-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，必须指定`NORECOMPUTE`若要禁用自动统计信息内存优化表的更新。 对于基于磁盘的表， [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)仅更新统计信息，如果已自上次修改表[sp_updatestats &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)。 对于内存优化表， [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)始终生成更新的统计信息。 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是一个不错的选择为内存优化的表; 否则您需要知道哪些表具有显著更改，以便您可以单独更新统计信息。  
   
  可以通过数据抽样或执行完全扫描生成统计信息。 抽样的统计信息只使用表数据的样本来估计数据分布情况。 完全扫描统计信息扫描整个表以确定数据分布情况。 完全扫描统计信息通常更为准确，但计算时间较长。 抽样的统计信息收集得更快。  
   
- 默认情况下，基于磁盘的表使用抽样的统计信息。 内存优化的表仅支持完全扫描统计信息。 使用时[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新统计信息&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，必须指定`FULLSCAN`选项用于内存优化表。  
+ 默认情况下，基于磁盘的表使用抽样的统计信息。 内存优化的表仅支持完全扫描统计信息。 使用时[创建统计信息&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)或[更新统计信息&#40;-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)，必须指定`FULLSCAN`选项用于内存优化表。  
   
  对于内存优化表的统计信息还有其他注意事项：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36016358"
   
 4.  创建访问表的存储过程。  
   
-5.  运行工作负荷，本机编译的和解释可以包含多种[!INCLUDE[tsql](../../../includes/tsql-md.md)]存储过程，以及即席批处理。  
+5.  运行工作负荷，本机编译并解释可以包含多种[!INCLUDE[tsql](../../../includes/tsql-md.md)]存储过程，以及即席批处理。  
   
  在加载数据并更新统计信息后创建本机编译的存储过程可确保优化器为内存优化的表提供统计信息。 这将确保在编译过程时生成高效的查询计划。  
   

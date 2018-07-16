@@ -1,5 +1,5 @@
 ---
-title: Web 服务任务编辑器 （常规页） |Microsoft 文档
+title: Web 服务任务编辑器 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331857"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
   使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
@@ -58,7 +58,7 @@ ms.locfileid: "36014820"
  **OverwriteWSDLFile**  
  指示是否可以覆盖 Web 服务任务的 WSDL 文件。  
   
- 如果你想要通过使用下载 WSDL 文件**下载 WSDL**按钮，将此值设置为`True`。  
+ 如果你想要使用下载的 WSDL 文件**下载 WSDL**按钮，将此值设置为`True`。  
   
  **名称**  
  为 Web 服务任务提供唯一的名称。 此名称用作任务图标中的标签。  

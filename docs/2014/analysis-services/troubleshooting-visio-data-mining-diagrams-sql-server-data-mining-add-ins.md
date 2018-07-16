@@ -1,5 +1,5 @@
 ---
-title: Visio 数据挖掘关系图 （SQL Server 数据挖掘外接程序） 疑难解答 |Microsoft 文档
+title: 解决 Visio 数据挖掘关系图 （SQL Server 数据挖掘外接程序） 问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visio]
 - Visio shapes
 - shapes
 ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc0f145ce45a616308e96836d1e54ab818091010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7c0ec79029f434f626d6f060b52e8f44048af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304347"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>解决 Visio 数据挖掘关系图问题（SQL Server 数据挖掘外接程序）
   本主题包含在您解决 Visio 数据挖掘关系图问题时可以使用的一些附加信息。  

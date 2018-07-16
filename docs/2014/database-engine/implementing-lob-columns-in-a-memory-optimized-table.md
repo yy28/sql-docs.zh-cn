@@ -1,5 +1,5 @@
 ---
-title: 在内存优化表中实现 LOB 列 |Microsoft 文档
+title: 在内存优化表中实现 LOB 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 2af703360aa56e48658fc7b76098eb5db0cdc2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 733183e50a631e86f391070ae45b1e70d179a643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283833"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>在内存优化的表中实现 LOB 列
   内存优化的表没有行外或大对象 (LOB) 存储区，且行大小限制为 8060 个字节。 可以通过两种方式存储大的二进制或字符串值：  

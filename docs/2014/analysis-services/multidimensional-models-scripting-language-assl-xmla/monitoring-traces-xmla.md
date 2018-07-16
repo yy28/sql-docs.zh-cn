@@ -1,5 +1,5 @@
 ---
-title: 监视跟踪 (XMLA) |Microsoft 文档
+title: 监视跟踪 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d605586c915963efc86c4e3197e087b8a5f82dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241617"
 ---
 # <a name="monitoring-traces-xmla"></a>监视跟踪 (XMLA)
-  你可以使用[订阅](../xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML 用于 Analysis (XMLA) 监视的实例上定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令将跟踪的结果作为行集返回。  
+  可以使用[Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML for Analysis (XMLA) 监视的实例中定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令将跟踪的结果作为行集返回。  
   
 ## <a name="specifying-a-trace"></a>指定跟踪  
- [对象](../xmla/xml-elements-properties/object-element-xmla.md)属性`Subscribe`命令必须包含对象引用为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例或上的跟踪[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 如果未指定 `Object` 属性，或者未在 `Object` 属性中指定跟踪标识符，则 `Subscribe` 命令将监视该命令的 SOAP 标头中指定的显式会话的默认会话跟踪。  
+ [对象](../xmla/xml-elements-properties/object-element-xmla.md)的属性`Subscribe`命令必须包含对象引用或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例或上的跟踪[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 如果未指定 `Object` 属性，或者未在 `Object` 属性中指定跟踪标识符，则 `Subscribe` 命令将监视该命令的 SOAP 标头中指定的显式会话的默认会话跟踪。  
   
 ## <a name="returning-results"></a>返回结果  
- `Subscribe` 命令会返回包含由指定跟踪捕获的跟踪事件的行集。 `Subscribe`命令返回跟踪结果，直到该命令取消通过[取消](../xmla/xml-elements-commands/cancel-element-xmla.md)命令。  
+ `Subscribe` 命令会返回包含由指定跟踪捕获的跟踪事件的行集。 `Subscribe`命令返回跟踪结果，直到取消该命令[取消](../xmla/xml-elements-commands/cancel-element-xmla.md)命令。  
   
  下表列出了该行集包含的列。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36128412"
 |ObjectReference|String|ObjectName 中所指定对象的对象引用的 XML 表示形式。|  
 |NestLevel|Integer|发生事件的事务的级别。|  
 |NumSegments|Long integer|发生事件的命令所影响或访问的数据段数量。|  
-|Severity|Integer|事件异常的严重级别。 此列可包含下列值之一：<br /><br /> 值： 0 = 成功<br /><br /> 值： 1 = 信息<br /><br /> 值： 2 = 警告<br /><br /> 值： 3 = 错误|  
+|Severity|Integer|事件异常的严重级别。 此列可包含下列值之一：<br /><br /> 值： 0 = Success<br /><br /> 值： 1 = 信息<br /><br /> 值： 2 = 警告<br /><br /> 值： 3 = 错误|  
 |成功|Boolean|指示命令成功还是失败。|  
 |错误|Long integer|事件的错误号（如果适用）。|  
 |ConnectionID|String|发生事件的连接的标识符。|  

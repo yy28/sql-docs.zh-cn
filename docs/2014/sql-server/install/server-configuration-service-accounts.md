@@ -1,5 +1,5 @@
 ---
-title: 服务器配置-服务帐户 |Microsoft 文档
+title: 服务器配置-服务帐户 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e390c18563b092fd0460da5b9aed90828921d10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212367"
 ---
 # <a name="server-configuration---service-accounts"></a>服务器配置 - 服务帐户
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置”页可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配登录帐户。 此页上配置的实际服务取决于您选择安装的功能。  
@@ -50,7 +50,7 @@ ms.locfileid: "36129130"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端|用于 Distributed Replay 客户端服务的服务帐户。<br /><br /> 提供运行 Distributed Replay 客户端服务的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。<br /><br /> 默认的启动类型为“手动”。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器|用于 Distributed Replay 控制器服务的服务帐户。<br /><br /> 提供运行 Distributed Replay 控制器服务的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。<br /><br /> 默认的启动类型为“手动”。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文筛选器后台程序启动器|创建 fdhost.exe 进程的服务。 需要使用此服务来承载为全文检索处理文本数据的断字符和筛选器。<br /><br /> 如果提供运行 FDHOST 启动器服务的域帐户，我们强烈建议您使用低特权的帐户。 此帐户应该不同于用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器提供的名称解析服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到客户端计算机的连接信息。 多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 实例共享此服务。 默认的登录帐户为 NT Authority\Local service 且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间无法更改。 可以在安装完成后更改该帐户。 如果未在安装期间指定启动类型，可以根据以下内容来确定：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器设置为自动并运行在如下所述的安装方案：<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例<br />-<br />                            启用了 TCP 或 NP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例<br />-<br />                            Analysis Server 的命名实例，未进行群集<br /><br /> 如果上述方案均不符合并且已经安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser，将保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的当前状态。<br /><br /> 如果在安装前没有现有的早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的实例，则启动类型会设置为“已禁用”且被停止。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器提供的名称解析服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到客户端计算机的连接信息。 多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 实例共享此服务。 默认的登录帐户为 NT Authority\Local service 且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间无法更改。 可以在安装完成后更改该帐户。 如果未在安装期间指定启动类型，可以根据以下内容来确定：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器设置为自动并在如下所述的安装方案中运行：<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例<br />-<br />                            启用了 TCP 或 NP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例<br />-<br />                            Analysis Server 的命名实例，未进行群集<br /><br /> 如果上述方案均不符合并且已经安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser，将保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的当前状态。<br /><br /> 如果在安装前没有现有的早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的实例，则启动类型会设置为“已禁用”且被停止。|  
   
 ## <a name="see-also"></a>请参阅  
  [安装 SQL Server 的安全注意事项](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

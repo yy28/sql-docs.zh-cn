@@ -1,13 +1,11 @@
 ---
-title: 编写用户定义类型 |Microsoft 文档
+title: 用户定义类型编码 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -33,15 +31,15 @@ helpviewer_keywords:
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab1bc1114d6bfd0ab29a2cc1e16b73466baa1d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026789"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354419"
 ---
 # <a name="coding-user-defined-types"></a>用户定义类型编码
   编写用户定义类型 (UDT) 的定义时，必须根据是要将 UDT 作为类还是作为结构实现以及您所选择的格式和序列化选项来实现各种功能。  
@@ -202,7 +200,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>实现 ToString 方法  
- `ToString` 方法用于将 `Point` UDT 转换为字符串值。 在此情况下，对于 `Point` 类型的 Null 实例，将返回字符串“NULL”。 `ToString` 方法执行的操作与 `Parse` 方法相反，它使用 `System.Text.StringBuilder` 返回由 X 和 Y 坐标值组成的逗号分隔 `System.String`。 因为**InvokeIfReceiverIsNull**默认值为 false，检查是否有的 null 实例`Point`是不必要的。  
+ `ToString` 方法用于将 `Point` UDT 转换为字符串值。 在此情况下，对于 `Point` 类型的 Null 实例，将返回字符串“NULL”。 `ToString` 方法执行的操作与 `Parse` 方法相反，它使用 `System.Text.StringBuilder` 返回由 X 和 Y 坐标值组成的逗号分隔 `System.String`。 因为**InvokeIfReceiverIsNull**默认值为 false，对的 null 实例的检查`Point`是不必要的。  
   
 ```vb  
 Private _x As Int32  
@@ -292,7 +290,7 @@ public Int32 Y
 ```  
   
 ## <a name="validating-udt-values"></a>验证 UDT 值  
- 处理 UDT 数据时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会自动将二进制值转换为 UDT 值。 该转换过程包括检查值是否符合类型的序列化格式和确保可以正确地反序列化值。 这可确保，值可以转换回二进制格式。 对于采用字节顺序的 UDT，这样还可以确保产生的二进制值与原始二进制值匹配。 这会防止在数据库中保留无效值。 在某些情况下，只进行这种级别的检查可能是不够的。 当要求 UDT 值在预期的域或范围之内时可能需要进行其他验证。 例如，实现日期的 UDT 可能要求日值为特定的有效值范围内的正数。  
+ 处理 UDT 数据时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会自动将二进制值转换为 UDT 值。 该转换过程包括检查值是否符合类型的序列化格式和确保可以正确地反序列化值。 这可确保，值可以转换回二进制形式。 对于采用字节顺序的 UDT，这样还可以确保产生的二进制值与原始二进制值匹配。 这会防止在数据库中保留无效值。 在某些情况下，只进行这种级别的检查可能是不够的。 当要求 UDT 值在预期的域或范围之内时可能需要进行其他验证。 例如，实现日期的 UDT 可能要求日值为特定的有效值范围内的正数。  
   
  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` 的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 属性可用于提供在将数据分配给 UDT 或转换为 UDT 时服务器运行的验证方法的名称。 运行 bcp 实用工具、BULK INSERT、DBCC CHECKDB、DBCC CHECKFILEGROUP、DBCC CHECKTABLE、分布式查询和表格格式数据流 (TDS) 远程过程调用 (RPC) 操作期间也会调用 `ValidationMethodName`。 `ValidationMethodName` 的默认值为 Null，表示没有验证方法。  
   
@@ -372,10 +370,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>验证方法限制  
  服务器是在执行转换时调用验证方法，而不是在通过设置个别属性插入数据时或在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 语句插入数据时调用验证方法。  
   
- 你必须显式调用验证方法从属性的 setter 和`Parse`方法如果你想要在所有情况下执行的验证方法。 并不要求这样做，在某些情况下可能甚至不需要这样做。  
+ 必须显式从属性 setter 调用验证方法和`Parse`方法如果你想要在所有情况下执行的验证方法。 并不要求这样做，在某些情况下可能甚至不需要这样做。  
   
 ### <a name="parse-validation-example"></a>Parse 验证示例  
- 若要确保`ValidatePoint`在调用方法`Point`类，则必须调用它时从`Parse`方法和属性从过程设置的 X 和 Y 坐标值。 下面的代码段演示如何调用`ValidatePoint`验证方法，从`Parse`函数。  
+ 若要确保`ValidatePoint`方法中调用`Point`类，则必须调用它从`Parse`方法和属性过程设置 X 和 Y 坐标值。 下面的代码段演示如何调用`ValidatePoint`验证方法从`Parse`函数。  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -421,7 +419,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>属性验证示例  
- 下面的代码段演示如何调用`ValidatePoint`从设置的 X 和 Y 坐标的属性过程的验证方法。  
+ 下面的代码段演示如何调用`ValidatePoint`从设置 X 和 Y 坐标的属性过程的验证方法。  
   
 ```vb  
 Public Property X() As Int32  
@@ -495,10 +493,10 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>UDT 方法编码  
- 编写 UDT 方法时，请考虑所用的算法是否可能会随时间的推移而改变。 如果可能改变的话，最好考虑为您的 UDT 所用的方法创建一个单独的类。 如果算法发生变化，则可以使用新代码重新编译该类并将程序集加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，而不会影响 UDT。 在许多情况下，都可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 语句重新加载 UDT，但这可能会使现有数据出现问题。 例如， `Currency` UDT 附带**AdventureWorks**示例数据库使用**ConvertCurrency**函数来转换货币值，这在一个单独的类中实现。 在未来，转换算法可能会发生不可预知的变化，或者可能需要新的功能。 分隔**ConvertCurrency**函数从`Currency`UDT 实现规划将来的更改时提供更大的灵活性。  
+ 编写 UDT 方法时，请考虑所用的算法是否可能会随时间的推移而改变。 如果可能改变的话，最好考虑为您的 UDT 所用的方法创建一个单独的类。 如果算法发生变化，则可以使用新代码重新编译该类并将程序集加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，而不会影响 UDT。 在许多情况下，都可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 语句重新加载 UDT，但这可能会使现有数据出现问题。 例如， `Currency` UDT 附带**AdventureWorks**示例数据库使用**ConvertCurrency**函数转换货币值，这一个单独的类中实现。 在未来，转换算法可能会发生不可预知的变化，或者可能需要新的功能。 分隔**ConvertCurrency**函数从`Currency`UDT 实现规划的未来更改时提供更大的灵活性。  
   
 ### <a name="example"></a>示例  
- `Point`类包含三种计算距离的简单方法：**距离**， **DistanceFrom**和**DistanceFromXY**。 每个方法均返回一个 `double`，分别计算的是从 `Point` 到零的距离，从指定点到 `Point` 的距离，以及从指定的 X 和 Y 坐标到 `Point` 的距离。 **距离**和**DistanceFrom**每次调用**DistanceFromXY**，并演示如何使用每个方法的不同自变量。  
+ `Point`类包含三个简单的方法来计算距离：**距离**， **DistanceFrom**并**DistanceFromXY**。 每个方法均返回一个 `double`，分别计算的是从 `Point` 到零的距离，从指定点到 `Point` 的距离，以及从指定的 X 和 Y 坐标到 `Point` 的距离。 **距离**并**DistanceFrom**每次调用**DistanceFromXY**，并演示如何使用不同的每个方法的参数。  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -548,7 +546,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  `Microsoft.SqlServer.Server.SqlMethodAttribute` 类提供了一些自定义属性，这些属性可用于标记方法定义以便指定 Null 调用行为的确定性以及指定方法是否为赋值函数。 使用的是这些属性的默认值，仅在需要非默认值时才使用自定义特性。  
   
 > [!NOTE]  
->  `SqlMethodAttribute` 类继承自 `SqlFunctionAttribute` 类，因此 `SqlMethodAttribute` 继承了 `FillRowMethodName` 中的 `TableDefinition` 和 `SqlFunctionAttribute` 字段。 这意味着可以编写一个不属于此情况的表值方法。 方法编译并程序集将部署，但错误有关`IEnumerable`返回类型引发在运行时，显示以下消息:"方法、 属性或字段\<名称 > 中类的\<类 > 中程序集\<程序集 > 具有无效的返回类型。"  
+>  `SqlMethodAttribute` 类继承自 `SqlFunctionAttribute` 类，因此 `SqlMethodAttribute` 继承了 `FillRowMethodName` 中的 `TableDefinition` 和 `SqlFunctionAttribute` 字段。 这意味着可以编写一个不属于此情况的表值方法。 方法能够编译并且程序集部署，但出现错误有关`IEnumerable`返回类型是在运行时出现以下消息:"方法、 属性或字段 '\<名称 > 中类\<类 > 中程序集\<程序集 > 具有无效的返回类型。"  
   
  下表说明了可以在 UDT 方法中使用的部分相关 `Microsoft.SqlServer.Server.SqlMethodAttribute` 属性，并列出了其默认值。  
   
@@ -625,7 +623,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  填充的目的是为了确保区域性与货币值完全分开，以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中将一个 UDT 与另一个 UDT 进行比较时，区域性字节与区域性字节相比较，货币字节值与货币字节值相比较。  
   
- 有关完整代码清单`Currency`UDT，按照说明来安装 CLR 示例[SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
+ 有关完整代码清单`Currency`UDT，按照中示例的说明安装 CLR [SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
   
 ### <a name="currency-attributes"></a>Currency 属性  
  `Currency` UDT 定义有以下属性。  

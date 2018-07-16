@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_PROVIDER_TYPES 行集 |Microsoft 文档
+title: DBSCHEMA_PROVIDER_TYPES 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c26c713f7032038b3cb969ff7681dc23c7deea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bca2527b77df65dede59878e91ef88ec5f933e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250947"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 行集
   标识数据访问接口支持的（基本）数据类型。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DBSCHEMA_PROVIDER_TYPES`行集包含以下各列。  
+ `DBSCHEMA_PROVIDER_TYPES`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "36127992"
 |`CREATE_PARAMS`|`DBTYPE_WSTR`||创建此数据类型的列时，由使用者指定的创建参数。 例如，SQL 数据类型 `DECIMAL,` 需要精度和小数位数。 在这种情况下，创建参数可能是字符串“precision,scale”。 在创建精度为 10、小数位数为 2 的 `DECIMAL` 列的文本命令中，`TYPE_NAME` 列的值可能是 `DECIMAL()` 且完整的类型规范应为 `DECIMAL(10,2)`。<br /><br /> 创建参数显示为逗号分隔的值列表，列表中的值按提供顺序排列，列表两边不带括号。 如果创建参数是长度、最大长度、精度、小数位数、种子或增量，则分别使用“length”、“max length”、“precision”、“scale”、“seed”或“increment”。 如果创建参数是其他某值，则访问接口将确定要使用什么文本来描述创建参数。<br /><br /> 如果数据类型需要创建参数，则“()”通常会显示在类型名称中。 这用于指示插入创建参数的位置。 如果类型名称不包括“()”，则将用括号括上创建参数并将其追加到数据类型名称中。|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||指示数据类型是否可以为 Null 的布尔值。<br /><br /> `VARIANT_TRUE` 指示数据类型可以为 Null。<br /><br /> `VARIANT_FALSE` 指示数据类型不是可以为 null。<br /><br /> `NULL` 指示不知道数据类型是否可以为 Null。|  
 |`CASE_SENSITIVE`|`DBTYPE_BOOL`||指示数据类型是否为字符类型及区分大小写的布尔值。<br /><br /> `VARIANT_TRUE` 指示数据类型为字符类型且区分大小写。<br /><br /> `VARIANT_FALSE` 指示数据类型不是字符类型或者不区分大小写。|  
-|`SEARCHABLE`|`DBTYPE_UI4`||一个整数，用于指示当访问接口支持 `ICommandText` 时可以在搜索中如何使用数据类型；否则为 `NULL`。<br /><br /> 此列可以具有下列值：<br /><br /> -   `DB_UNSEARCHABLE` 指示数据类型不能使用在`WHERE`子句。<br />-   `DB_LIKE_ONLY` 指示数据类型可在`WHERE`子句只能与`LIKE`谓词。<br />-   `DB_ALL_EXCEPT_LIKE` 指示数据类型可在`WHERE`子句与除之外的所有比较运算符`LIKE`。<br />-   `DB_SEARCHABLE` 指示数据类型可在`WHERE`子句的任何比较运算符。|  
+|`SEARCHABLE`|`DBTYPE_UI4`||一个整数，用于指示当访问接口支持 `ICommandText` 时可以在搜索中如何使用数据类型；否则为 `NULL`。<br /><br /> 此列可以具有下列值：<br /><br /> -   `DB_UNSEARCHABLE` 指示数据类型，不能用于`WHERE`子句。<br />-   `DB_LIKE_ONLY` 指示数据类型可在`WHERE`子句只能与`LIKE`谓词。<br />-   `DB_ALL_EXCEPT_LIKE` 指示数据类型可在`WHERE`子句使用所有比较运算符除外`LIKE`。<br />-   `DB_SEARCHABLE` 指示数据类型可在`WHERE`包含任何比较运算符的子句。|  
 |`UNSIGNED_ATTRIBUTE`|`DBTYPE_BOOL`||指示数据类型是否无符号的布尔值。<br /><br /> `VARIANT_TRUE` 指示数据类型无符号。<br /><br /> `VARIANT_FALSE` 指示数据类型有符号。<br /><br /> `NULL` 指示这不适用于数据类型。|  
 |`FIXED_PREC_SCALE`|`DBTYPE_BOOL`||指示数据类型是否具有固定精度和小数位数的布尔值。<br /><br /> `VARIANT_TRUE` 指示数据类型具有固定精度和小数位数。<br /><br /> `VARIANT_FALSE` 指示数据类型不具有固定精度和小数位数。|  
 |`AUTO_UNIQUE_VALUE`|`DBTYPE_BOOL`||指示数据类型是否自动递增的布尔值。<br /><br /> `VARIANT_TRUE` 指示该类型的值可以自动递增。<br /><br /> `VARIANT_FALSE` 指示该类型的值不能自动递增。<br /><br /> 如果该值是 `VARIANT_TRUE`，则该类型的列是否始终自动递增取决于访问接口的 `DBPROP_COL_AUTOINCREMENT` 列属性。 如果 `DBPROP_COL_AUTOINCREMENT` 属性是可读/写属性，则该类型的列是否自动递增取决于 `DBPROP_COL_AUTOINCREMENT` 属性的设置。 如果 `DBPROP_COL_AUTOINCREMENT` 是只读属性，则该类型的所有列都自动递增或都不自动递增。|  
@@ -61,7 +61,7 @@ ms.locfileid: "36127992"
  行集按 `DATA_TYPE` 排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DBSCHEMA_PROVIDER_TYPES`行集可限制在下表中列出的列。  
+ `DBSCHEMA_PROVIDER_TYPES`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

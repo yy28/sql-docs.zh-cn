@@ -1,5 +1,5 @@
 ---
-title: 源元素 （错误） (XMLA) |Microsoft 文档
+title: Source 元素 （错误） (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: eed47b9f-0501-4baf-8cac-3ea839a859c3
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5652a7107a17f253c6d813cfdddce8d4edfefec7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 18ee5ec5d9c25715719c3c06eaf2b5c7b081666f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273703"
 ---
 # <a name="source-element-error-xmla"></a>Source 元素 (Error) (XMLA)
-  包含生成父组件的名称[错误](error-element-xmla.md)元素。  
+  包含生成父级组件的名称[错误](error-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

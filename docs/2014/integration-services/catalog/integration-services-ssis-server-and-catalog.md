@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) 服务器 |Microsoft 文档
+title: Integration Services (SSIS) 服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69598f8ca412e32a76ea841f9a234d01c6847718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea60bbdac3df4cd1130ba4afee83f882f138d33d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289393"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services (SSIS) 服务器
   当您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -36,7 +36,7 @@ ms.locfileid: "36130178"
  若要大致了解 SSISDB 目录功能，请参阅 [SSIS 目录](ssis-catalog.md)。  
   
 ## <a name="high-availability"></a>高可用性  
- 如其他用户的数据库，`SSISDB`数据库支持数据库镜像和复制。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 像其他用户数据库，一样`SSISDB`database 数据库镜像和复制支持。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
  还可以通过利用 SSIS 和 AlwaysOn 可用性组，提供 SSISDB 及其内容的高可用性。 有关详细信息，请参阅 blogs.msdn.com 上 Matt Masson 的博客文章 [SSIS 与 AlwaysOn 一起使用](http://go.microsoft.com/fwlink/?LinkId=255873)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36130178"
   
 -   **SSISDB 数据库**  
   
-     `SSISDB`数据库出现在**数据库**在对象资源管理器的节点。 您可以查询视图和调用存储过程，这些存储过程既管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，也管理在该服务器上存储的对象。  
+     `SSISDB`下显示数据库**数据库**节点在对象资源管理器。 您可以查询视图和调用存储过程，这些存储过程既管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，也管理在该服务器上存储的对象。  
   
 -   **Integration Services 目录**  
   

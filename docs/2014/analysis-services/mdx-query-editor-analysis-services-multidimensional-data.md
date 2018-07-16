@@ -1,5 +1,5 @@
 ---
-title: MDX 查询编辑器 (Analysis Services-多维数据) |Microsoft 文档
+title: MDX 查询编辑器 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.mdx.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX Query Editor
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff0c288919bed3a6e1c13c9a7cb98bc7adbb949c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3fa81db8ca9f6a9ebd490724bf003a81d87c7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275866"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX 查询编辑器（Analysis Services - 多维数据）
   可以使用 MDX 查询编辑器，设计和执行使用多维表达式 (MDX) 语言编写的语句和脚本。  
@@ -60,7 +60,7 @@ ms.locfileid: "36128650"
   
 |术语|定义|  
 |----------|----------------|  
-|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**： 将当前所选内容复制到剪贴板并从查询编辑器窗口中移除所选内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**： 粘贴到当前选择剪贴板的内容。<br /><br /> **连接**：打开“连接到服务器”  对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开连接**： 断开连接当前查询编辑器与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br /><br /> **断开连接的所有查询**： 断开所有当前打开查询编辑器。<br /><br /> **更改连接**： 打开**连接到服务器**对话框，以便建立为另一种连接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br /><br /> **在对象资源管理器中打开服务器**： 打开[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中，当前的查询编辑器连接到**对象资源管理器**。<br /><br /> **执行**： 执行所选的代码，或如果没有选择任何代码，在当前的查询编辑器中执行的全部代码。<br /><br /> **属性窗口**： 显示**属性**中的窗口[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]当前的查询窗口。<br /><br /> **查询选项**： 显示**查询选项**对话框。|  
+|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**： 将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除所选内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**： 粘贴到当前所选内容剪贴板的内容。<br /><br /> **连接**：打开“连接到服务器”  对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开**： 断开当前查询编辑器与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br /><br /> **断开所有查询**： 断开所有当前打开的查询编辑器。<br /><br /> **更改连接**： 将打开**连接到服务器**对话框中，来为另一种连接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br /><br /> **在对象资源管理器中打开服务器**： 将打开[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中当前查询编辑器连接到**对象资源管理器**。<br /><br /> **执行**： 执行所选的代码，或如果没有选择任何代码，在当前查询编辑器中执行的全部代码。<br /><br /> **属性窗口**： 显示**属性**中的窗口[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]当前查询窗口。<br /><br /> **查询选项**： 显示**查询选项**对话框。|  
 |**元数据窗口**|显示当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的元数据。|  
 |**Cube**|在当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中选择一个多维数据集，以显示与 **“元数据”** 选项卡中的多维数据集关联的元数据。|  
 |**元数据**|显示在 **“多维数据集”** 中选定的多维数据集的元数据，包括度量值组和度量值、关键绩效指标 (KPI)、维度、层次结构、级别、成员和成员属性。 若要检索对象的完全限定键，请执行下列操作之一：<br /><br /> 将该对象从 **“元数据”** 选项卡拖到查询窗格。<br /><br /> 右键单击该对象并选择“复制”，再右键单击查询窗格并选择“粘贴”。|  

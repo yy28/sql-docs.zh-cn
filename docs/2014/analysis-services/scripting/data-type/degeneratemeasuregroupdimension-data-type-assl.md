@@ -1,5 +1,5 @@
 ---
-title: DegenerateMeasureGroupDimension 数据类型 (ASSL) |Microsoft 文档
+title: DegenerateMeasureGroupDimension 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a3d778580c344e0251e271415ff729b61520b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 343668137e77f53f94df2b6bc1324c3a67d94256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321140"
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>DegenerateMeasureGroupDimension 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示退化维度（即事实维度）和度量值组之间的关系。  
@@ -60,9 +60,9 @@ ms.locfileid: "36017618"
 |派生元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 事实维度有关的详细信息，请参阅[维度关系](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
+ 有关事实维度的详细信息，请参阅[维度关系](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

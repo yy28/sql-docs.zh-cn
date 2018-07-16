@@ -1,5 +1,5 @@
 ---
-title: 创建和查询数据挖掘模型使用 DMX： 教程 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 创建和查询使用 DMX 数据挖掘模型： 教程 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 46a60e6fc75613b2f763a31185f3e3861b125fc5
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93bdf0ee8ed305e9e3843b011ce8057894b8b287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234398"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 创建和查询数据挖掘模型：教程（Analysis Services - 数据挖掘）
-  使用创建数据挖掘解决方案后[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，你可以创建针对数据挖掘模型以预测趋势、 检索数据中的模式和度量挖掘模型的准确性的查询。  
+  使用创建数据挖掘解决方案后[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，可以创建针对数据挖掘模型以预测趋势、 检索数据中的模式以及度量挖掘模型的准确性的查询。  
   
- 下面的列表中的分步教程将帮助你了解如何生成并运行通过使用数据挖掘查询[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，以便你可以充分利用你的数据。  
+ 以下列表中的分步教程可帮助您了解如何生成并运行通过使用数据挖掘查询[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，以便可以充分利用你的数据。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36312395"
   
      本教程介绍了基本概念，例如如何创建项目以及如何生成挖掘结构和挖掘模型。  
   
--   [中间数据挖掘教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+-   [数据挖掘中级教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
      本教程包含一系列独立课程，每个课程向您介绍不同的模型类型。 每个课程向您演示创建模型、浏览模型、自定义模型以及创建预测查询的过程。  
   

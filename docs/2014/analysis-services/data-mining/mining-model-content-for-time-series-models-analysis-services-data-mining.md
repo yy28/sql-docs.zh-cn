@@ -1,5 +1,5 @@
 ---
-title: 时序模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 时序模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae3e235b2a80248327a4aa4a69e2b357b36d2a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0c69583fec1e43ba65ac1da2c321f7b0a5d9599
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214617"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
   所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
   
  有关适用于所有模型类型的一般挖掘模型内容的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
- 查看本主题时，通过浏览时序模型的内容您可能会发现，遵从本主题的说明会很有帮助。 可以通过完成数据挖掘基础教程来创建时序模型。 在教程中创建的模型是混合模型，该模型同时使用 ARIMA 和 ARTXP 算法来定型数据。 有关详细信息，请参阅[创建预测的结构和模型&#40;中间 Data Mining Tutorial&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)。 有关如何查看挖掘模型内容的信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。  
+ 查看本主题时，通过浏览时序模型的内容您可能会发现，遵从本主题的说明会很有帮助。 可以通过完成数据挖掘基础教程来创建时序模型。 在教程中创建的模型是混合模型，该模型同时使用 ARIMA 和 ARTXP 算法来定型数据。 有关详细信息，请参阅[创建预测结构和模型&#40;数据挖掘中级教程&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)。 有关如何查看挖掘模型内容的信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。  
   
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>了解时序模型的结构  
  时序模型具有表示该模型及其元数据的单一父节点。 根据用于创建该模型的算法的不同，在该父节点下面有一个或两个时序树。  
@@ -39,7 +39,7 @@ ms.locfileid: "36138990"
   
  以下关系图中显示的是使用默认设置创建的时序数据挖掘模型的一个示例，旨在创建混合模型。 该关系图左侧显示的是 ARTXP 模型，右侧显示的是 ARIMA 模型，这样，您就可以更轻松地比较这两个模型之间的不同之处。  由 ARTXP 算法创建的结构是拆分为越来越小的分支的树状结构，而由 ARIMA 算法创建的结构更像是一个棱锥图，从较小的组件向上构建。  
   
- ![时序模型的模型内容结构](../media/modelcontentstructure-ts.gif "时序模型的模型内容结构")  
+ ![时序模型的模型内容结构](../media/modelcontentstructure-ts.gif "的时序模型的模型内容结构")  
   
  在 ARIMA 和 ARTXP 树中，信息以完全不同的方式排列，这一点很重要，须牢记。而且应将这两种树视为只在根节点处相关。 尽管为方便起见而在一个模型中表示这两种表示形式，但应将其视为两个独立的模型。 ARTXP 表示实际树结构，而 ARIMA 则不然。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36138990"
   
  如果该节点没有任何子节点，这就意味着未找到可证明将事例分为更多子组是正确做法的重要条件。 此分支止于该点，且该节点称为“ 叶节点”。 该叶节点包含 ARTXP 公式的构造块：属性、系数和值。  
   
- 某些分支可能具有类似于决策树模型的其他拆分。 例如，表示欧洲地区销售额的树的分支拆分为两个分支。 如果发现导致两个组之间存在显著差异的条件，则发生拆分。 父节点指出引起拆分的属性的名称，如 [Amount]，以及该父节点中包含的事例数。 叶节点提供更多详细信息： 属性，如 [Sales] 的值 > 与 [Sales] 10,000 \< 10000)，支持每个条件和 ARTXP 公式的事例数。  
+ 某些分支可能具有类似于决策树模型的其他拆分。 例如，表示欧洲地区销售额的树的分支拆分为两个分支。 如果发现导致两个组之间存在显著差异的条件，则发生拆分。 父节点指出引起拆分的属性的名称，如 [Amount]，以及该父节点中包含的事例数。 叶节点提供更多详细信息： 属性，如 [Sales] 的值 > 10,000 与 [Sales] \< 10,000)，支持每个条件和 ARTXP 公式的事例数。  
   
 > [!NOTE]  
 >  如果希望查看公式，则可以在叶节点级别（而非中间节点或根节点级别）找到完整的回归公式。  
@@ -269,7 +269,7 @@ ms.locfileid: "36138990"
   
  在本例中，值 21.322 表示对 Quantity 进行预测（作为公式的以下元素的一个函数）得到的预测值。  
   
- 例如，一个元素是数量 (R250 North America，-7)。 该表示法表示北美地区在 t-7 或当前时间段之前七个时间段的数量。 此数据序列的值乘以系数 -0.293。 各元素的系数在定型过程中导出，其基于数据中的趋势。  
+ 例如，一个元素是数量 (R250 北美，-7)。 该表示法表示北美地区在 t-7 或当前时间段之前七个时间段的数量。 此数据序列的值乘以系数 -0.293。 各元素的系数在定型过程中导出，其基于数据中的趋势。  
   
  由于该模型已计算出欧洲地区的 R250 模型的数量由几个其他数据序列的值决定，因此该公式中有多个元素。  
   
@@ -390,7 +390,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  ARIMA ({1,1}、 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) 截距： 56.8888888888889  
   
- 该公式采用长 ARIMA 格式，其中包括系数和截距的值。 此公式的短格式将{1,0,7}，其中 1 表示句点作为时间段的计数，0 表示术语差分阶，，7 指示个数的系数。  
+ 该公式采用长 ARIMA 格式，其中包括系数和截距的值。 该公式的短格式是{1,0,7}，其中 1 表示的时间段的计数的时段内，0 表示项差分阶，，7 表示系数的数字。  
   
 > [!NOTE]  
 >  由 Analysis Services 计算得出的常量用于计算方差，但在用户界面中的任何位置均不显示该常量本身。 不过，如果选择 **“图表”** 视图中的 **“显示偏差”** ，则可以查看序列中任意一点的方差，该方差是此常量的函数。 各数据序列的工具提示显示特定预测点的方差。  
@@ -400,7 +400,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  数据序列的 ARIMA 模型包含四种不同格式的基本周期性公式，可根据不同的应用选用不同的公式。  
   
- **NODE_CAPTION：** 显示公式的缩写。 缩写指出表示的周期性结构的数目以及这些结构有多少系数。 例如，如果公式缩写为 {4,0,6}，则节点表示一个带有 6 个系数的周期性结构。 如果短格式类似{2,0,8}x {1,0,0}(4)，该节点包含两个周期性结构。  
+ **NODE_CAPTION：** 显示公式的缩写。 缩写指出表示的周期性结构的数目以及这些结构有多少系数。 例如，如果公式缩写为 {4,0,6}，则节点表示一个带有 6 个系数的周期性结构。 如果短格式为类似{2,0,8}x {1,0,0}(4) 的节点包含两个周期性结构。  
   
  **NODE DESCRIPTION：** 显示公式的长格式，这也是 **“挖掘图例”** 中显示的公式的格式。 公式的长格式类似于公式的缩写，不同之处在于前者显示系数的实际值，而后者是进行计数。  
   
@@ -422,7 +422,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29（ARIMA 自动回归）|系数<br /><br /> （系数的补数）|7|  
 |30（ARIMA 移动平均值）|t 时的值<br /><br /> t-1 时的值<br /><br /> …<br /><br /> t-n 时的值|7|  
   
- “  移动平均值阶数”的值指示序列中移动平均值的数目。 移动平均线通常是计算的 n-1 时间如果在序列中，n 条款但即使数可以减少为更轻松的计算。  
+ “  移动平均值阶数”的值指示序列中移动平均值的数目。 移动平均线通常为计算的 n-1 次如果有 n 个条款在一系列，但可以减少数以方便计算。  
   
  “  自动回归阶数”的值指示自动回归序列的数目。  
   
@@ -447,7 +447,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ## <a name="see-also"></a>请参阅  
  [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 时序算法](microsoft-time-series-algorithm.md)   
- [时间时序模型查询示例](time-series-model-query-examples.md)   
+ [时序模型查询示例](time-series-model-query-examples.md)   
  [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)  
   
   

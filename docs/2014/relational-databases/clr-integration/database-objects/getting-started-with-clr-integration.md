@@ -1,13 +1,11 @@
 ---
-title: 开始使用 CLR 集成 |Microsoft 文档
+title: CLR 集成入门 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,21 +25,21 @@ helpviewer_keywords:
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7616d610cbdd581325325f9ad00a57b417ef2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018456"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349805"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 集成入门
-  本主题提供的命名空间和编译使用的数据库对象所需的库的概述[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]与.NET Framework 公共语言运行时 (CLR) 集成。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
+  本主题概述的命名空间和编译使用的数据库对象所需的库[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]与.NET Framework 公共语言运行时 (CLR) 集成。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
   
 ## <a name="required-namespaces"></a>所需命名空间  
- 开头[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 自动添加，因此无需手动添加它。  
+ 从[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 自动添加，因此无需手动添加它。  
   
  system.data.dll 程序集包含以下命名空间，这些命名空间是编译 CLR 数据库对象所必需的：  
   
@@ -95,7 +93,7 @@ End Class
  我们现在将此程序编译为一个库，将其加载到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，然后将其作为存储过程运行。  
   
 ## <a name="compiling-the-hello-world-stored-procedure"></a>编译“Hello World”存储过程  
- [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] 默认情况下.NET framework 重新分发文件。 这些文件包括 csc.exe 和 vbc.exe，它们是用于 Visual C# 和 Visual Basic 程序的命令行编译器。 为了编译我们的示例，您必须修改路径变量以指向包含 csc.exe 或 vbc.exe 的目录。 下面是 .NET Framework 的默认安装路径。  
+ [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] 默认情况下.NET framework 再分发文件。 这些文件包括 csc.exe 和 vbc.exe，它们是用于 Visual C# 和 Visual Basic 程序的命令行编译器。 为了编译我们的示例，您必须修改路径变量以指向包含 csc.exe 或 vbc.exe 的目录。 下面是 .NET Framework 的默认安装路径。  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  
@@ -124,7 +122,7 @@ vbc /target:library helloworld.vb
  以上命令使用 /target 选项启动 Visual C# 或 Visual Basic 编译器，以指定生成库 DLL。  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>在 SQL Server 中加载并运行“Hello World”存储过程  
- 示例过程已成功编译后，你可以测试它在[!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)]并创建一个新的查询，连接到合适的测试数据库 （例如，AdventureWorks 示例数据库）。  
+ 一旦该存储过程示例已成功编译后，可以测试它在[!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)]并创建一个新查询，连接到合适的测试数据库 （例如，AdventureWorks 示例数据库）。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以使用启用 CLR 代码**sp_configure**系统存储过程。 有关详细信息，请参阅 [Enabling CLR Integration](../clr-integration-enabling.md)。  
   
@@ -181,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>请参阅  
  [CLR 存储过程](../../../database-engine/dev-guide/clr-stored-procedures.md)   
- [SQL Server 进程内特定 ADO.NET 扩展](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [SQL Server 进程内特定扩展 ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [调试 CLR 数据库对象](../debugging-clr-database-objects.md)   
  [CLR 集成安全性](../security/clr-integration-security.md)  
   

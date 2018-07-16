@@ -1,5 +1,5 @@
 ---
-title: 处理挖掘结构 |Microsoft 文档
+title: 处理挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99bb84e9af06ddb6238f4d2283734a0b18f13bdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da6309109cfdc29a2000f0a30f84c910c71d12ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247317"
 ---
 # <a name="process-a-mining-structure"></a>处理挖掘结构
   必须先部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目并处理挖掘结构和挖掘模型，然后才能浏览或使用与挖掘结构关联的挖掘模型。 此外，如果更改了挖掘结构或挖掘模型，则系统会提示您重新对其进行部署和处理。 处理 **中数据挖掘设计器的** “挖掘结构” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡中的结构时，也会处理所有关联的模型。  
@@ -42,13 +42,13 @@ ms.locfileid: "36126400"
   
      如果更改了结构，则在处理模型之前，系统会提示您重新部署该结构。 单击 **“是”**。  
   
-2.  单击**运行**中**处理挖掘结构\<结构 >** 对话框。  
+2.  单击**运行**中**处理挖掘结构-\<结构 >** 对话框。  
   
      **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。  
   
 3.  模型处理完成后，在 **“处理进度”** 对话框中单击 **“关闭”** 。  
   
-4.  单击**关闭**中**处理挖掘结构\<结构 >** 对话框。  
+4.  单击**关闭**中**处理挖掘结构-\<结构 >** 对话框。  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)  

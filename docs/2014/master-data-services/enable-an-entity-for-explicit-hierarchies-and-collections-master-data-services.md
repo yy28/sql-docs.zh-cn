@@ -1,5 +1,5 @@
 ---
-title: 为显式层次结构和集合 (Master Data Services) 启用实体 |Microsoft 文档
+title: 实体启用显式层次结构和集合 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c15f62eaebbfe77303004bb2417989ed5320ea11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a300dd4ab0a162c335dc0c0efac548dcb757f11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311897"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>为显式层次结构和集合启用实体 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，为显式层次结构和集合启用一个实体，以便您可以为该实体创建显式层次结构和集合。  
@@ -50,7 +50,7 @@ ms.locfileid: "36016861"
   
 6.  从**启用显式层次结构和集合**列表中，选择**是**。  
   
-7.  在**显式层次结构名称**框中，键入显式层次结构的名称。  
+7.  在中**显式层次结构名称**框中，键入显式层次结构的名称。  
   
 8.  也可以取消选中“强制的层次结构”复选框，以便将层次结构创建为非强制的层次结构。  
   

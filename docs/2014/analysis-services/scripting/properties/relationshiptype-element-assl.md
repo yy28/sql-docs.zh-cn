@@ -1,5 +1,5 @@
 ---
-title: RelationshipType 元素 (ASSL) |Microsoft 文档
+title: RelationshipType 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271593"
 ---
 # <a name="relationshiptype-element-assl"></a>RelationshipType 元素 (ASSL)
-  指示是否成员关系[AttributeRelationship](../objects/attributerelationship-element-assl.md)可以更改。  
+  指示是否的成员关系[AttributeRelationship](../objects/attributerelationship-element-assl.md)可以更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36129975"
 |*刚性*|不可更改属性和相关属性之间的成员关系。|  
 |*灵活*|可更改属性和相关属性之间的成员关系。|  
   
- 例如，如果`ZipCode`从一个无法更改`City`到另一个，从关系`ZipCode`到`City`被标记为*刚性*。  
+ 例如，如果`ZipCode`不能更改从一个`City`之间，从关系`ZipCode`到`City`标记为*刚性*。  
   
- 对应于的允许值为枚举`RelationshipType`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.RelationshipType>。  
+ 与允许的值相对应的枚举`RelationshipType`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.RelationshipType>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

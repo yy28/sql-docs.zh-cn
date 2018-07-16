@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329837"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建一个实体以便包含成员及其属性。  
@@ -46,20 +46,20 @@ ms.locfileid: "36015477"
   
 4.  单击**将实体添加**。  
   
-5.  在**实体名称**框中，键入实体的名称。  
+5.  在中**实体名称**框中，键入实体的名称。  
   
-6.  在**临时表的名称**框中，键入临时表的名称。  
+6.  在中**临时表的名称**框中，键入临时表的名称。  
   
     > [!TIP]  
     >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
   
 7.  可选。 选中 **“自动创建代码值”** 复选框。 有关详细信息，请参阅[自动创建代码 (Master Data Services)](../../2014/master-data-services/automatic-code-creation-master-data-services.md)。  
   
-8.  从**启用显式层次结构和集合**列表中，选择以下选项之一：  
+8.  从**启用显式层次结构和集合**列表中，选择下列选项之一：  
   
     -   **不**。 如果您无需为显式层次结构和集合启用实体，则选择此选项。 您可以根据需要在以后更改此项。  
   
-    -   **是**。 如果您想要为显式层次结构和集合启用实体，则选择此选项。 在**显式层次结构名称**框中，键入一个名称。 （可选） 选择**强制层次结构 (已包括所有叶成员**进行强制的层次结构的显式层次结构。  
+    -   **是**。 如果您想要为显式层次结构和集合启用实体，则选择此选项。 在中**显式层次结构名称**框中，键入一个名称。 （可选） 选择**强制的层次结构 (所有叶成员都都包含**以使该显式层次结构成为强制层次结构。  
   
 9. 单击**保存实体**。  
   

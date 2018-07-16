@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d90a6d3162c90ce80281d53d8fe73c8ce2da4a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 243f5f15535a785e544c6b4e081d3404fb7ad26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187614"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改 SQL Server 代理主作业的步骤。  
@@ -62,7 +62,7 @@ ms.locfileid: "36129126"
   
 5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“步骤”。  
   
-6.  单击“编辑”，打开“作业步骤属性 - job_step_name”对话框。 在此对话框中的可用选项的详细信息，请参阅[作业步骤属性： 新建作业步骤&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)和[作业步骤属性： 新建作业步骤&#40;高级页&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  单击“编辑”，打开“作业步骤属性 - job_step_name”对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性： 新建作业步骤&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)并[作业步骤属性： 新建作业步骤&#40;高级页&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  完成后，单击 **“确定”**。  
   

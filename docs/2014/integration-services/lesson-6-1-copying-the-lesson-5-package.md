@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 caps.latest.revision: 6
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bed4f06e073d370b10be04e614a18b041f0d1dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 042dde7beeff33dd988f5d21d0d5975e4ee88aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190757"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步骤 1：复制第 5 课包
   在本任务中，您将为第 5 课中创建的 Lesson 5.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 5 包添加到项目中，然后再对其进行复制。 您将使用这一新副本来完成第 6 课剩余部分。  
@@ -42,7 +42,7 @@ ms.locfileid: "36128369"
   
 7.  在“属性”窗口中，将 Name 属性更新为 Lesson 6。  
   
-8.  单击对于 ID 属性框中，然后单击下拉箭头，然后单击\<生成新的 ID >。  
+8.  单击 ID 属性框，然后单击下拉箭头，然后单击\<生成新 ID >。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>添加已完成的 Lesson 5 包  
   

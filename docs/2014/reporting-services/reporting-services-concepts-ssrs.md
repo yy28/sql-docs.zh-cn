@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236297"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本文概要介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
@@ -70,7 +70,7 @@ ms.locfileid: "36125307"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一种可用于自定义报表解决方案的可扩展体系结构。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。 有关详细信息，请参阅[扩展插件 (SSRS)](extensions-ssrs.md)。  
   
  **报表的访问权限**  
- 通过按需访问，用户可以从报表查看工具中选择报表。 根据报表服务器配置，你可以使用报表管理器， [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 部件、 SharePoint 库时[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 集成模式下，嵌入的 ReportViewer 控件或使用 URL 的浏览器中安装访问权限。 有关按需访问报表的详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 通过按需访问，用户可以从报表查看工具中选择报表。 根据您的报表服务器配置，可以使用报表管理器[!INCLUDE[msCoName](../includes/msconame-md.md)]SharePoint 2.0 Web 部件、 SharePoint 库时[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装在 SharePoint 集成模式下、 嵌入式的 ReportViewer 控件或使用 URL 的浏览器访问权限。 有关按需访问报表的详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
  订阅提供了一种可替代按需运行报表的方法。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36125307"
   
 -   **矩阵。** “矩阵”也称为交叉表。 矩阵数据区域包含动态列和行，它们都可以扩展以容纳数据。 矩阵可以具有动态列和行及静态列和行。 列或行可以包含其他列或行，并且可用于对数据进行分组。 有关详细信息，请参阅[矩阵&#40;报表生成器和 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)。  
   
--   **列表。** “列表”是一种数据区域，其中的数据以自由格式排列。 您可以排列这些报表项来创建一个窗体，其中的文本框、图像和其他数据区域可以位于列表中的任何位置。 有关详细信息，请参阅[列出&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+-   **列表。** “列表”是一种数据区域，其中的数据以自由格式排列。 您可以排列这些报表项来创建一个窗体，其中的文本框、图像和其他数据区域可以位于列表中的任何位置。 有关详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 -   **图表。** 图表以图形方式显示数据。 图表示例包括条形图、饼图和折线图等，并支持其他多种样式。 有关详细信息，请参阅[图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36125307"
 ##  <a name="bkmk_TypesofReports"></a> 类型的报表  
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中， *“报表”* 一词可适用于特定类型的报表服务器项、布局设计或解决方案设计。 单个报表可以具有来自多种类型的特征；例如，报表可同时是独立报表、主报表引用的子报表、不同主报表中钻取报表的目标和链接报表。  
   
- **明细报表**  
+ **向下钻取报表**  
  明细报表是一种布局设计，它最初隐藏复杂性，令用户可以切换按条件隐藏报表项，以控制其希望看到的数据量。 明细报表必须检索可在报表中显示的所有可能数据。 对于使用大量数据的报表，请考虑改为使用钻取报表。 有关详细信息，请参阅[深化操作（报表生成器和 SSRS）](report-design/drilldown-action-report-builder-and-ssrs.md)。  
   
  **子报表**  
@@ -186,7 +186,7 @@ ms.locfileid: "36125307"
   
 -   **点击链接型报表。** 点击链接型报表是指当单击基于模型的报表中包含的交互数据时，从报表模型显示相关数据的报表。 点击链接型报表自动生成。 有关详细信息，请参阅[点击链接型报表(SSRS)](reports/clickthrough-reports-ssrs.md)。  
   
- 有关 SMDL 模型的详细信息，请参阅[在 SQL Server 2014 中的 SQL Server Reporting Services 中的重大更改](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
+ 有关 SMDL 模型的详细信息，请参阅[SQL Server 2014 中的 SQL Server Reporting Services 中的重大更改](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
   
  **保存的报表**  
  保存的报表是报表定义 (.rdl) 文件。 可以在本地保存报表定义或将其上载到报表服务器。 如果您上载报表定义，而非发布报表定义，则不会发生版本验证或表达式验证。 在报表运行前，将不会看到错误。 有关更多信息，请参见 [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)。  

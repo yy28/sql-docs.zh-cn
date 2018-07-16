@@ -1,5 +1,5 @@
 ---
-title: 目标元素 (XMLA) |Microsoft 文档
+title: Target 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd34f3102d477d9a2e89af8c8ba7e5ff2d37ef62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287863"
 ---
 # <a name="target-element-xmla"></a>Target 元素 (XMLA)
-  表示目标分区合并期间[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
+  表示目标分区期间合并[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36125223"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[撰写 MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
+|父元素|[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
 |子元素|[CubeID](id-element-xmla.md)， [DatabaseID](databaseid-element-xmla.md)， [MeasureGroupID](measuregroupid-element-xmla.md)， [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Target`元素是对单个分区到其中的内容的源分区中，指定的对象引用[源](sources-element-xmla.md)元素的父`MergePartitions`元素，要合并。  
+ `Target`元素是对单个分区到其中的源分区的内容指定的对象引用[源](sources-element-xmla.md)父元素`MergePartitions`元素中，要合并。  
   
 ## <a name="example"></a>示例  
  下面的示例将 Internet Sales 度量值组的全部四个分区合并到了 `Internet_Sales_2004` 目标分区中。 此示例引用了 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据集。  
@@ -99,7 +99,7 @@ ms.locfileid: "36125223"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [源元素&#40;XMLA&#41;](source-element-xmla.md)   
+ [Source 元素&#40;XMLA&#41;](source-element-xmla.md)   
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

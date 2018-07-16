@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291043"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
@@ -56,7 +56,7 @@ ms.locfileid: "36125649"
     > [!NOTE]  
     >  无法在以 64 位模式运行的包中使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 日志提供程序。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志提供程序，将日志项写入`sysssislog`表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志提供程序，将日志条目写入`sysssislog`表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
   
 -   Windows 事件日志提供程序，将日志项写入本地计算机上 Windows 事件日志中的应用程序日志。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36125649"
 ### <a name="configuration-of-log-provider"></a>日志提供程序的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
- 作为在包中实现日志记录的一个步骤来创建和配置日志提供程序。 有关详细信息，请参阅[集成服务日志记录](integration-services-ssis-logging.md)。  
+ 作为在包中实现日志记录的一个步骤来创建和配置日志提供程序。 有关详细信息，请参阅[Integration Services 日志记录](integration-services-ssis-logging.md)。  
   
  创建日志提供程序后，可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“属性”窗口中查看和修改其属性。  
   

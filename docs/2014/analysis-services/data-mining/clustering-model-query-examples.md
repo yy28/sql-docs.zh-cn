@@ -1,5 +1,5 @@
 ---
-title: 聚类分析模型查询示例 |Microsoft 文档
+title: 聚类分析模型查询示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200627"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
   依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
@@ -256,12 +256,12 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>使用模型进行预测  
  尽管聚类分析通常用于描述和了解数据，但是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实现使您还可以对分类成员身份进行预测，并返回与预测关联的概率。 本节提供关于如何在聚类分析模型上创建预测查询的示例。 您可以通过指定表格格式数据源来针对多个事例进行预测，或者可以通过创建单独查询来一次提供一个新的值。 为清楚起见，本节中的示例均为单独查询。  
   
- 有关如何创建使用 DMX 预测查询的详细信息，请参阅[数据挖掘查询接口](data-mining-query-tools.md)。  
+ 有关如何使用 DMX 创建预测查询的详细信息，请参阅[数据挖掘查询接口](data-mining-query-tools.md)。  
   
  [返回页首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> 示例查询 8：从聚类分析模型中预测结果  
- 如果您创建的聚类分析模型包含可预测的属性，则可以使用该模型来对结果进行预测。 但是，模型处理以不同的方式根据是否将可预测列设置为可预测属性`Predict`或`PredictOnly`。 如果设置为列的用法`Predict`，该属性的值添加到聚类分析模型，并显示为完成的模型中的属性。 但是，如果将列的用法设置为 `PredictOnly`，则值不会用于创建分类。 相反，在完成模式后，聚类分析算法创建的新值`PredictOnly`属性基于每个用例属于群集。  
+ 如果您创建的聚类分析模型包含可预测的属性，则可以使用该模型来对结果进行预测。 但是，模型处理可预测属性以不同的方式根据是否将可预测列设置为`Predict`或`PredictOnly`。 如果设置为列的用法`Predict`，该属性的值添加到聚类分析模型，并在完成的模型中显示为属性。 但是，如果将列的用法设置为 `PredictOnly`，则值不会用于创建分类。 相反，模型完成后，聚类分析算法创建的新值`PredictOnly`属性基于每个事例所属的分类。  
   
  下面的查询向模型提供一个新事例，在该模型中，有关该事例的唯一信息是年龄和性别。 SELECT 语句指定你关注的可预测属性/值对，而 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 函数则指出具有这些属性的事例具有目标结果的概率。  
   
@@ -332,7 +332,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **请注意**默认情况下，`ClusterProbability`函数返回最可能分类的概率。 但是，您可以通过使用语法 `ClusterProbability('cluster name')`来指定另一分类。 如果这样做，请注意每个预测函数的结果都独立于其他结果。 因此，第二列中的概率分数可能引用另一个分类，而不是第一列中所指定的分类。  
+ **请注意**默认情况下，`ClusterProbability`函数将返回最可能分类的概率。 但是，您可以通过使用语法 `ClusterProbability('cluster name')`来指定另一分类。 如果这样做，请注意每个预测函数的结果都独立于其他结果。 因此，第二列中的概率分数可能引用另一个分类，而不是第一列中所指定的分类。  
   
  [返回页首](#bkmk_top2)  
   

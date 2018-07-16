@@ -1,5 +1,5 @@
 ---
-title: 包安装向导 UI 参考 |Microsoft 文档
+title: 包安装向导 UI 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
 - sql12.dts.deploymentwizard.deploydtspackages.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72e058913f4447ea14aa21934bffaf75bde62bdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 637ed65f38b53cf39630d4fb3ba04ab9f7a2158d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316807"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
   可以使用 **“包安装向导”** 部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目（包括包、所包含的杂项文件以及所有包的依赖关系）。  
@@ -173,6 +173,6 @@ ms.locfileid: "36124129"
  单击“完成”即可退出该向导。  
   
 ## <a name="see-also"></a>请参阅  
- [包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

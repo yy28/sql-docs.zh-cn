@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a61b15800c3ed28186c82a7fdc9c670fc866f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4f34bfe8900a4fe14774f1c39f540eddb3c5eb4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273713"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 课：创建并应用命名标准策略
   某些类型的基于策略的管理策略可以创建触发器，以强制要求以后符合策略。 在本课程中，您将创建一个策略以强制执行表命名标准。 然后，尝试创建一个违反该策略的表以对其进行测试。  

@@ -1,5 +1,5 @@
 ---
-title: 将 Integration Services 服务配置为群集资源 |Microsoft 文档
+title: 将 Integration Services 服务配置为群集资源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223763"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>将 Integration Services 服务配置为群集资源
   对于那些认为将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源所带来的优点大于缺点的客户，本节包含必要的配置说明。 但是， [!INCLUDE[msCoName](../includes/msconame-md.md)] 不建议将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源。  
@@ -104,9 +104,9 @@ ms.locfileid: "36137587"
   
 2.  在共享磁盘上，创建一个名为 **Packages** 的新文件夹来充当包存储区。 为适当的用户和组授予对这个新文件夹的“列出文件夹”和“写入”权限。  
   
-3.  在共享磁盘上，用文本编辑器或 XML 编辑器打开配置文件。 更改的值`ServerName`到的虚拟名称的元素[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，位于相同的资源组。  
+3.  在共享磁盘上，用文本编辑器或 XML 编辑器打开配置文件。 更改的值`ServerName`的虚拟名称的元素[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中相同的资源组。  
   
-4.  更改的值`StorePath`元素的完全限定路径**包**在上一步中的共享磁盘上创建文件夹。  
+4.  更改的值`StorePath`元素的完全限定路径**包**在上一步中在共享磁盘上创建文件夹。  
   
 5.  将注册表中的 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 值更新为共享磁盘上服务配置文件的完全限定路径和文件名。  
   

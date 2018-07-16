@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227078"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。  
@@ -41,7 +41,7 @@ ms.locfileid: "36130048"
   
 2.  右键单击带有 `[Date]` 字段表达式的单元格，然后单击“文本框属性”。  
   
-3.  单击**数**，然后在**类别**字段中，选择`Date`。  
+3.  单击**数量**，然后在**类别**字段中，选择`Date`。  
   
 4.  在 **“类型”** 框中，选择 **“2000 年 1 月 31 日”**。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36130048"
   
 1.  单击表，以便在此表的上方和旁边显示列控点和行控点。  
   
-     ![设计，具有标题行和详细信息行的表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "设计，表具有标题行和详细信息行")  
+     ![设计，具有标题行和详细信息行的表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design，Table with 标头行和详细信息行")  
   
      沿此表的上方和一侧显示的灰色条状物就是列控点和行控点。  
   

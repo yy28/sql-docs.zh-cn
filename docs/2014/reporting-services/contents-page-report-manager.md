@@ -1,5 +1,5 @@
 ---
-title: 内容页 （报表管理器） |Microsoft 文档
+title: 内容页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224817"
 ---
 # <a name="contents-page-report-manager"></a>“内容”页（报表管理器）
   使用“内容”页可以查看当前文件夹的内容，选择要查看的项，或导航到其他文件夹。 选择一个文件夹后即可打开此页。 此页也是报表管理器的主页。  
@@ -39,7 +39,7 @@ ms.locfileid: "36138367"
  **文件夹设置**  
  单击此处，打开并管理当前文件夹的属性。  
   
- **上载文件**  
+ **上传文件**  
  单击此选项可打开“上载文件”页，通过此页可以将文件从文件系统复制到报表服务器。 可以通过上载文件添加报表和资源（例如图表、文档或希望与报表一起保存的任何其他附属内容）。 上载的文件存储在报表服务器数据库中并在该数据库中进行管理。 要上载报表，请选择具有 .rdl 扩展名的文件。  
   
  **详细信息视图**  

@@ -1,5 +1,5 @@
 ---
-title: PushedDataSource 数据类型 (ASSL) |Microsoft 文档
+title: PushedDataSource 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PushedDataSource data type
 ms.assetid: b319ee87-7c0a-41ec-a8af-cc7089aeb6ad
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd0dec86e7c3abedf241fd79e44bdafd28297c7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98309a1fa1706efaed47ab27cdf88d0b3e313fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235567"
 ---
 # <a name="pusheddatasource-data-type-assl"></a>PushedDataSource 数据类型 (ASSL)
-  定义一个基元数据类型，表示的数据源 (如[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包) 用于将"推送"到数据[多维数据集](../objects/cube-element-assl.md)元素。  
+  定义一个基元数据类型，表示数据源 (如[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包) 用于"推送"到数据[多维数据集](../objects/cube-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

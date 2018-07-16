@@ -1,5 +1,5 @@
 ---
-title: TargetType 元素 (ASSL) |Microsoft 文档
+title: TargetType 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TargetType element
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e4a36c4ca0e38fe00990f2185685205840eafc66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b21033bb9a7e20923adccfa135475cf93dafb7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237557"
 ---
 # <a name="targettype-element-assl"></a>TargetType 元素 (ASSL)
-  标识中标识的项的项类型[目标](target-element-assl.md)元素。  
+  标识的标识中的项的项类型[目标](target-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,9 +76,9 @@ ms.locfileid: "36126382"
 |*LevelMembers*|操作目标是级别的成员。|  
 |*AttributeMembers*|操作目标是属性的成员。|  
   
- 对应于的允许值为枚举`TargetType`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ActionTargetType>。  
+ 与允许的值相对应的枚举`TargetType`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ActionTargetType>。  
   
- 对应于的父元素`TargetType`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
+ 父级对应的元素`TargetType`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

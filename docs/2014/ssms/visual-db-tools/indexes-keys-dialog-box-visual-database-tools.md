@@ -1,5 +1,5 @@
 ---
-title: 索引和密钥对话框 (Visual Database Tools) |Microsoft 文档
+title: 索引和密钥对话框 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6743bf4c39d92df79f68b98b4d8c40a70a79e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 77d81f3bb0e0d923bdf9fd8bd6a8ae88c14afa60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168260"
 ---
-# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>索引和密钥对话框 (Visual Database Tools)
+# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>索引和键对话框 (Visual Database Tools)
   使用此对话框可以创建或修改索引、主键和唯一键。 若要访问此对话框，请打开具有索引或键的表定义，右键单击表定义网格，再单击“索引/键”。  
   
 > [!NOTE]  

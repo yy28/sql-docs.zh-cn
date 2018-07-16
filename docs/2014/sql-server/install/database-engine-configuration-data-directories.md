@@ -1,5 +1,5 @@
 ---
-title: 数据库引擎配置-数据目录 |Microsoft 文档
+title: 数据库引擎配置-数据目录 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9b1fa0fc-623b-479a-afc3-4f13bd850487
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f28b0137d2d7aa3e5489c6c679f18cdbbb70a43e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5cffd3f38ae15132e9c7bafcc34bd469714f8452
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317497"
 ---
 # <a name="database-engine-configuration---data-directories"></a>数据库引擎配置 - 数据目录
   使用此页面可指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 程序和数据文件的安装位置。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
@@ -33,14 +33,14 @@ ms.locfileid: "36013660"
   
 |Description|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|数据根目录|本地磁盘、 SMB 文件服务器、 共享存储<sup>1</sup>|C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序将配置 Acl[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录和配置过程中中断继承。|  
+|数据根目录|本地磁盘、 SMB 文件服务器、 共享存储<sup>1</sup>|C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序将配置的 Acl[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录和配置过程中的中断继承。|  
 |用户数据库目录|本地磁盘、 SMB 文件服务器、 共享存储<sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data|用户数据目录的最佳实践取决于工作量和性能要求。|  
 |用户数据库日志目录|本地磁盘、 SMB 文件服务器、 共享存储<sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data|确保日志目录有足够的空间。|  
 |临时数据库目录|本地磁盘、 SMB 文件服务器、 共享存储<sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data|Temp 目录的最佳实践取决于工作量和性能要求。|  
 |临时数据库日志目录|本地磁盘、 SMB 文件服务器、 共享存储<sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data|确保日志目录有足够的空间。|  
 |备份目录|本地磁盘、 SMB 文件服务器、 共享存储<sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Backup|设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射的驱动器。|  
   
- <sup>1</sup>尽管支持共享的磁盘，它不是独立实例的建议的做法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ <sup>1</sup>尽管支持共享的磁盘，但它不是独立实例的做法，建议的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的故障转移群集实例支持的存储类型和默认目录，用户可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中配置这些内容。  

@@ -1,5 +1,5 @@
 ---
-title: SetStringValue 方法 （SqlServiceAdvancedProperty 类） |Microsoft 文档
+title: SetStringValue 方法 （SqlServiceAdvancedProperty 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStringValue method
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a62c17ed296d7d35be0ee4954583d0f6ab7b1e29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: be05ab6bccb772ef4f2bb0a65eed716f9633edff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166718"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 方法（SqlServiceAdvancedProperty 类）
   设置属性的字符串值。  
@@ -58,7 +58,7 @@ StrValue
  一个 `uint32` 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  
   
 ## <a name="remarks"></a>Remarks  
- 属性值类型必须为`string`要能够将属性设置为一个字符串值。  
+ 属性值类型必须为`string`以便能够将属性设置为一个字符串值。  
   
 ## <a name="see-also"></a>请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

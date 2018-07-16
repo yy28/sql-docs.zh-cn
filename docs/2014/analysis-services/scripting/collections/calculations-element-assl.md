@@ -1,5 +1,5 @@
 ---
-title: 计算元素 (ASSL) |Microsoft 文档
+title: Calculations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Calculations element
 ms.assetid: 03e5e91c-1f66-4dc7-8aad-4d9876928df0
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12d1ad22a305c6adb198348a1cd7fe6b858e72cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 130288eb3a628a746d3b7b19b1635a31250cdb8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319279"
 ---
 # <a name="calculations-element-assl"></a>Calculations 元素 (ASSL)
-  包含的集合[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)与关联的元素[透视](../objects/perspective-element-assl.md)元素。  
+  包含的集合[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)与关联的元素[角度来看](../objects/perspective-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36016947"
 |子元素|[计算](../objects/calculation-element-assl.md)类型的[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveCalculationCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveCalculationCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

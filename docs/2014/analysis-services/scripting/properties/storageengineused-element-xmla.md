@@ -1,5 +1,5 @@
 ---
-title: StorageEngineUsed 元素 (XMLA) |Microsoft 文档
+title: StorageEngineUsed 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 608ebcbb1252b4fafa44bf242a83418cc6b3d053
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203957"
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 元素 (XMLA)
   包含一个说明当前数据库类型的只读值。  
@@ -91,8 +91,8 @@ ms.locfileid: "36129765"
 |*InMemory*|数据库模型对应于 IMBI 存储模式。|  
 |*混合*|数据库模型将 IMBI 与 MOLAP、ROLAP 或 HOLAP 存储模式混合在一起。|  
   
- 对应于的允许值为枚举`StorageEngineUsed`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.StorageEngineUsed>。  
+ 与允许的值相对应的枚举`StorageEngineUsed`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.StorageEngineUsed>。  
   
- 对应的父级的元素`StorageEngineUsed`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.Database>。  
+ 父级对应的元素`StorageEngineUsed`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Database>。  
   
   

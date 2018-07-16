@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 创建时序挖掘模型和挖掘结构 |Microsoft 文档
+title: 第 1 课： 创建时序挖掘模型和挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: e6092c624d6fbbac57411d3e6d2e1c65c437a7d6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251179"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>第 1 课：创建时序挖掘模型和挖掘结构
   在本课中，将创建一个挖掘模型，可以使用该模型根据历史数据预测一段时间内的值。 创建该模型时，基础结构会自动生成，且可以用作其他挖掘模型的基础。  
@@ -27,7 +27,7 @@ ms.locfileid: "36312305"
  本课假定您已熟悉预测模型以及 Microsoft 时序算法的要求。 有关详细信息，请参阅 [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)。  
   
 ## <a name="create-mining-model-statement"></a>创建挖掘模型语句  
- 若要直接创建挖掘模型和自动生成基础挖掘结构，你使用[CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx)语句。 可以将语句中的代码分为下列几部分：  
+ 若要直接创建挖掘模型并自动生成基础挖掘结构，则使用[CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx)语句。 可以将语句中的代码分为下列几部分：  
   
 -   命名模型  
   
@@ -55,7 +55,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- 通过在模型名称后追加“_structure”，Analysis Services 自动生成基础结构的名称，这样可以确保将结构名称与模型名称区分开。 有关命名在 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 通过在模型名称后追加“_structure”，Analysis Services 自动生成基础结构的名称，这样可以确保将结构名称与模型名称区分开。 有关命名 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
   
  代码中的下一行定义了挖掘模型的键列，如果是时序模型，则它可唯一标识源数据中的时间步长。 时间步长在列名和数据类型后使用 `KEY TIME` 关键字进行标识。 如果时序模型具有单独的序列键，则使用 `KEY` 关键字对它进行标识。  
   
@@ -85,9 +85,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
-2.  在**连接到服务器**对话框中，为**服务器类型**，选择**Analysis Services**。 在**服务器名称**，类型`LocalHost`，或的实例的名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]你想要连接到的本课程。 单击 **“连接”**。  
+2.  在中**连接到服务器**对话框中，对于**服务器类型**，选择**Analysis Services**。 在中**服务器名称**，类型`LocalHost`，或实例的名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]想要连接到本课程中。 单击 **“连接”**。  
   
-3.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**。  
+3.  在中**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**。  
   
      将打开查询编辑器，其中包含一个新的空白查询。  
   
@@ -176,18 +176,18 @@ CREATE MINING MODEL [Mining Model Name]
   
     ```  
   
-6.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+6.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-7.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`Forecasting_MIXED.dmx`。  
+7.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Forecasting_MIXED.dmx`。  
   
 ## <a name="executing-the-query"></a>执行查询  
- 最后一步是执行查询。 创建并保存查询后，需要执行查询，以在服务器上创建挖掘模型及其挖掘结构。 有关执行查询编辑器中的查询的详细信息，请参阅[数据库引擎查询编辑器&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)。  
+ 最后一步是执行查询。 创建并保存查询后，需要执行查询，以在服务器上创建挖掘模型及其挖掘结构。 有关在查询编辑器中执行查询的详细信息，请参阅[数据库引擎查询编辑器&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)。  
   
 #### <a name="to-execute-the-query"></a>若要执行查询  
   
--   在查询编辑器中，在工具栏上，单击**执行**。  
+-   在查询编辑器中，在工具栏上，单击**Execute**。  
   
-     查询的状态将显示在**消息**底部查询编辑器的语句完成执行后的选项卡。 所显示的消息应为：  
+     查询的状态显示在**消息**在底部的查询编辑器执行完语句后的选项卡。 所显示的消息应为：  
   
     ```  
     Executing the query   
@@ -196,7 +196,7 @@ CREATE MINING MODEL [Mining Model Name]
   
      名为的新结构**Forecasting_MIXED_Structure**服务器，以及相关的挖掘模型上现在存在**Forecasting_MIXED**。  
   
- 在下一课中，你将添加到挖掘模型**Forecasting_MIXED**刚创建的挖掘结构。  
+ 在下一课中，您将添加到挖掘模型**Forecasting_MIXED**刚创建的挖掘结构。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：向时序挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  

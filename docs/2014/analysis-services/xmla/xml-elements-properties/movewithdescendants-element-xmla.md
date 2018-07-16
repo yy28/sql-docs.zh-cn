@@ -1,5 +1,5 @@
 ---
-title: MoveWithDescendants 元素 (XMLA) |Microsoft 文档
+title: MoveWithDescendants 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332567"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 元素 (XMLA)
-  指示是否由容器的父也将更新的后代中的属性成员[更新](../xml-elements-commands/update-element-xmla.md)命令。  
+  指示是否由父也会更新属性成员的后代[更新](../xml-elements-commands/update-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36028190"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `MoveWithDescendants`元素确定是否`Update`命令应只需更新由标识的属性成员[属性](attributes-element-xmla.md)元素，还要确保这些属性成员的后代，则为同样也更新。  
+ `MoveWithDescendants`元素可确定是否`Update`命令不应只更新通过标识的属性成员[属性](attributes-element-xmla.md)元素，还要确保这些属性成员的后代，则为也更新。  
   
 > [!NOTE]  
 >  此属性仅适用于父子层次结构中的属性成员。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7dd4c06a89eeebe5c3b7e83a699ea17ca68bbd18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 79e75ea52d0e1ed2d80dd4e2ef9dcc2d2092e6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188474"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription 事件类
   QN:Subscription 事件报告有关通知订阅的信息。  
@@ -38,7 +38,7 @@ ms.locfileid: "36138864"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|是|  
 |EventClass|`int`|事件类型 = 199。|27|“否”|  
 |EventSequence|`int`|此事件的序列号。|51|“否”|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 注册订阅： 指示查询通知订阅数据库中的已成功注册时。<br /><br /> 订阅重： 指明何时[!INCLUDE[ssDE](../../includes/ssde-md.md)]收到完全符合现有订阅的订阅请求。 在这种情况下， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将现有订阅的超时值设置为新订阅请求中指定的超时值。<br /><br /> 激发的订阅： 指示通知订阅时生成通知消息。<br /><br /> 激发失败，出现代理错误： 指示通知消息时失败由于[!INCLUDE[ssSB](../../includes/sssb-md.md)]错误。<br /><br /> 激发失败且不会 broker 错误： 指示通知消息的失败，但不是由于[!INCLUDE[ssSB](../../includes/sssb-md.md)]错误。<br /><br /> Broker 截获错误： 指示[!INCLUDE[ssSB](../../includes/sssb-md.md)]会话中使用查询通知传递错误。<br /><br /> 订阅删除尝试： 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试删除过期的订阅以释放资源。<br /><br /> 订阅删除失败： 指示尝试删除过期的订阅已失败。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除订阅以释放资源。<br /><br /> 销毁的订阅： 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]已成功删除过期的订阅|21|是|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 注册订阅： 指示查询通知订阅在数据库中的成功注册时。<br /><br /> 订阅倒带： 指示何时[!INCLUDE[ssDE](../../includes/ssde-md.md)]收到完全符合现有订阅的订阅请求。 在这种情况下， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将现有订阅的超时值设置为新订阅请求中指定的超时值。<br /><br /> 而激发订阅： 指示通知订阅生成通知消息。<br /><br /> 触发失败，出现代理错误： 指示通知消息时失败由于[!INCLUDE[ssSB](../../includes/sssb-md.md)]错误。<br /><br /> 触发失败且不会 broker 错误： 指示通知消息时失败但不是由于[!INCLUDE[ssSB](../../includes/sssb-md.md)]错误。<br /><br /> Broker 错误截获： 指示[!INCLUDE[ssSB](../../includes/sssb-md.md)]已在查询通知使用的会话中传递错误。<br /><br /> 订阅删除尝试： 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试删除过期的订阅以释放资源。<br /><br /> 订阅删除失败： 指示尝试删除过期的订阅已失败。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除订阅以释放资源。<br /><br /> 订阅被销毁： 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]已成功删除过期的订阅|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|“否”|  

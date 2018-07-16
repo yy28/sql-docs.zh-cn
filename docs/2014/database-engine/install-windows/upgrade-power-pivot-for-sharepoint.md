@@ -1,5 +1,5 @@
 ---
-title: 升级 PowerPivot for SharePoint |Microsoft 文档
+title: 升级 PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 caps.latest.revision: 13
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8c052ff9ba3c1c568beb580f92ca15c94fcd55d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: Minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b01d05d497691d2790b9423265cf420f236065f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273383"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升级 PowerPivot for SharePoint
-  本主题概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步骤。 具体步骤取决于你的环境当前正在运行的 SharePoint 版本和包括 PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**)。  
+  本主题概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步骤。 具体步骤取决于你的环境当前正在运行的 SharePoint 版本，并包括 PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**)。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- 有关发行说明，请参阅[SQL Server 2014 发行说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
+ 发行说明，请参阅[SQL Server 2014 发行说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
   
 
   
@@ -34,11 +34,11 @@ ms.locfileid: "36126401"
   
 -   如果要对具有两个或更多 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例的多服务器 SharePoint 2010 场进行升级，则必须在完全升级每个服务器 **后** ，才能继续对下一服务器进行升级。 完全升级包括运行 SQL Server 安装程序以升级 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 程序文件，然后执行 SharePoint 升级操作以便配置升级后的服务。 在适当的 PowerPivot 配置工具或 Windows PowerShell 中执行升级操作之前，服务器的可用性将受到限制。  
   
--   SharePoint 2010 场中 PowerPivot 系统服务和 Analysis Services 的所有实例必须为相同版本。 有关如何验证版本的信息，请参阅明[验证版本的 PowerPivot 组件和服务](#bkmk_verify_versions)本主题中。  
+-   SharePoint 2010 场中 PowerPivot 系统服务和 Analysis Services 的所有实例必须为相同版本。 有关如何验证版本的信息，请参阅部分[验证版本的 PowerPivot 组件和服务的](#bkmk_verify_versions)本主题中。  
   
--   PowerPivot 配置工具是 SQL Server 共享功能之一，所有共享功能同时升级。 如果在升级过程中选择需要共享功能升级的其他 SQL Server 实例或功能，则将一同升级 PowerPivot 配置工具。 如果该 PowerPivot 配置工具已升级，但您的 PowerPivot 实例未升级，可能会导致问题。 有关 SQL Server 共享功能的详细信息，请参阅[使用升级到 SQL Server 2014 安装向导&#40;安装&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+-   PowerPivot 配置工具是 SQL Server 共享功能之一，所有共享功能同时升级。 如果在升级过程中选择需要共享功能升级的其他 SQL Server 实例或功能，则将一同升级 PowerPivot 配置工具。 如果该 PowerPivot 配置工具已升级，但您的 PowerPivot 实例未升级，可能会导致问题。 有关 SQL Server 共享功能的详细信息，请参阅[升级到使用 SQL Server 2014 安装向导&#40;安装程序&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
--   PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**) 并行安装与以前的版本。 例如， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 外接程序安装到文件夹 `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`。  
+-   PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**) 与早期版本并行安装。 例如， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 外接程序安装到文件夹 `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`。  
   
 
   
@@ -51,9 +51,9 @@ ms.locfileid: "36126401"
   
  **SQL Server：**  
   
--   如果现有的 PowerPivot 安装[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2)，才能升级到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果现有 PowerPivot 安装是[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，则[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Service Pack 2 (SP2) 才能升级到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
--   如果现有的 PowerPivot 安装[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1)，才能升级到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果现有 PowerPivot 安装是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，则[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 1 (SP1) 是所必需的升级到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
  **SharePoint 2010：**  
   
@@ -74,21 +74,21 @@ ms.locfileid: "36126401"
   
     3.  在 **“选择实例”** 页上，选择 **POWERPIVOT** 实例名，然后单击 **“下一步”**。  
   
-    4.  有关详细信息，请参阅[使用升级到 SQL Server 2014 安装向导&#40;安装程序&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+    4.  有关详细信息，请参阅[升级到使用 SQL Server 2014 安装向导&#40;安装程序&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
 2.  重新启动服务器。  
   
-3.  在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 以安装数据访问接口。 您从中运行 SQL Server 安装向导的服务器除外，安装向导也将升级数据访问接口。 有关详细信息，请参阅[下载 Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013，](http://www.microsoft.com/download/details.aspx?id=40737)和[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 以安装数据访问接口。 您从中运行 SQL Server 安装向导的服务器除外，安装向导也将升级数据访问接口。 有关详细信息，请参阅[下载 Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013](http://www.microsoft.com/download/details.aspx?id=40737)并[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-4.  **运行 PowerPivot for SharePoint 2013 配置**使用外接程序安装的更新后的解决方案文件配置 SharePoint 场的 SharePoint 应用程序服务器之一上的工具。 不能使用 SharePoint 管理中心执行此步骤。 有关详细信息，请参见以下内容：  
+4.  **运行 PowerPivot for SharePoint 2013 配置**上某个 SharePoint 应用程序服务器以使用外接程序安装的更新的解决方案文件配置 SharePoint 场的工具。 不能使用 SharePoint 管理中心执行此步骤。 有关详细信息，请参见以下内容：  
   
-    1.  从 Windows 启动页中，键入**PowerPivot**在搜索结果中，单击**PowerPivot for SharePoint 2013 配置**。 请注意，搜索可能会返回配置工具的两个版本。  
+    1.  在 Windows 启动页上，键入**PowerPivot**在搜索结果中，单击**PowerPivot for SharePoint 2013 配置**。 请注意，搜索可能会返回配置工具的两个版本。  
   
          ![两个 powerpivot 配置工具](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
          或  
   
-         上**启动**菜单上，指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot for SharePoint 2013配置太**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
+         上**启动**菜单，依次指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot for SharePoint 2013配置过**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
     2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，您会看到此消息 **“已检测到 PowerPivot 解决方案文件的较新版本。请选择升级选项以升级你的场**。” 单击“确定”  关闭系统验证消息。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36126401"
   
     8.  单击 **“是”** 继续操作。  
   
-    9. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，连接请求，针对 PowerPivot 数据**将失败**并显示类似"**无法刷新数据**"或"**尝试执行请求的操作时发生错误。请重试**。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
+    9. 升级场中的解决方案和功能可能要花几分钟才能完成。 对 PowerPivot 数据连接请求在此期间，**将失败**出现如下错误"**无法刷新数据**"或"**试图执行请求的操作时出错。请重试**。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
      有关详细信息，请参见以下内容：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36126401"
   
     -   [使用 Windows PowerShell 配置 Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
-    -   [PowerPivot for SharePoint 的 PowerShell 参考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+    -   [用于 PowerPivot for SharePoint 的 PowerShell 参考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
 5.  请通过执行升级后步骤以及通过检查场中 PowerPivot 服务器的版本，确认升级成功。 有关详细信息，请参阅本主题中的 [升级后的验证任务](#verify) 以及下面的部分。  
   
@@ -140,25 +140,25 @@ ms.locfileid: "36126401"
     Get-Service | where {$_.displayname -like "*SharePoint*"}  
     ```  
   
-3.  验证**SharePoint**服务**SQL Server Analysis Services**和**SQL Server PowerPivot 系统服务**在 SharePoint 管理中心启动或使用以下 PowerShell 命令:。  
+3.  验证是否**SharePoint** services **SQL Server Analysis Services**并**SQL Server PowerPivot 系统服务**是否已在 SharePoint 管理中心启动，或使用以下 PowerShell 命令:。  
   
     ```  
     get-SPserviceinstance | where {$_.typename -like "*sql*"}  
     ```  
   
-4.  验证**Windows**服务**SQL Server Analysis Services (PowerPivot)** 正在运行。  
+4.  验证是否**Windows**服务**SQL Server Analysis Services (PowerPivot)** 正在运行。  
   
     ```  
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装**上运行的第一个 SharePoint 应用程序服务器**SQL Server Analysis Services (PowerPivot)** Windows 服务，以升级 POWERPIVOT 实例。 在 SQL Server 安装向导的“安装”页上选择升级选项。 有关详细信息，请参阅[使用升级到 SQL Server 2014 安装向导&#40;安装&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+5.  **运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装程序**上运行的第一个 SharePoint 应用程序服务器**SQL Server Analysis Services (PowerPivot)** Windows 服务，以升级 POWERPIVOT 实例。 在 SQL Server 安装向导的“安装”页上选择升级选项。 有关详细信息，请参阅[升级到使用 SQL Server 2014 安装向导&#40;安装程序&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
 6.  在运行配置工具前**重新启动服务器** 。 此步骤可确保 SQL Server 安装程序安装的所有更新或必备组件在系统上得到完全配置。  
   
-7.  **运行 PowerPivot 配置工具**在 SharePoint 中运行 SQL Server Analysis Services (PowerPivot) 服务以升级解决方案和 Web 服务的第一个 SharePoint 应用程序服务器上。 不能使用管理中心执行此步骤。  
+7.  **运行 PowerPivot 配置工具**在 SharePoint 中运行 SQL Server Analysis Services (PowerPivot) 服务，以升级解决方案和 Web services 的第一个 SharePoint 应用程序服务器上。 不能使用管理中心执行此步骤。  
   
-    1.  上**启动**菜单上，指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot 配置工具**. 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
+    1.  上**启动**菜单，依次指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot 配置工具**. 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
     2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，您会看到此消息“已检测到 Powerpivot 解决方案文件的较新版本。 请选择升级选项以升级你的场。” 单击“确定”  关闭消息框。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "36126401"
   
     2.  检查现有部署的以下信息： **“类型”** 是“收回”或“部署”， **“文件”** 为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
-    3.  对于部署或收回相关的 PowerPivot 解决方案，将复制的 GUID 值**JobId**然后将它粘贴到以下命令 （用于标记、 复制和粘贴命令 Shell 的编辑菜单上复制的 GUID）：  
+    3.  对于部署或收回与 PowerPivot 解决方案，将复制的 GUID 值**JobId**然后将其粘贴到以下命令 （使用的标记、 复制和粘贴命令外壳的编辑菜单上复制该 GUID）：  
   
         ```  
         Stsadm –o canceldeployment –id “<GUID>”  
@@ -241,7 +241,7 @@ ms.locfileid: "36126401"
 Get-PowerPivotSystemService  
 ```  
   
- 验证 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是版本 12.0。\<build >。\<.<minor build >  
+ 验证 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是版本 12.0。\<主版本 >。\<次版本 >  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>验证 Analysis Services Windows 服务的版本  
  如果您只升级了 SharePoint 2010 场中的某些 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，则未升级服务器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例可能比场中预期的版本旧。 您需要将所有的服务器升级到相同的版本，以便它们可以使用。 使用以下方法之一验证每台计算机上的 SQL Server Analysis Services (PowerPivot) Windows 服务的版本。  
@@ -254,7 +254,7 @@ Get-PowerPivotSystemService
   
 3.  单击 **“详细信息”**。  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件版本应为 12.00。\<build >。\<.<minor build >。  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件版本应为 12.00。\<主版本 >。\<次版本 >。  
   
 5.  验证此版本号是否与 PowerPivot 解决方案和系统服务版本相同。  
   
@@ -304,11 +304,11 @@ Get-PowerPivotSystemService
   
 2.  按程序集名称排序并查找 **Microsoft.Analysis Services.Adomd.Client**。  
   
-3.  验证具有 12.0 版。\<内部版本号 >。  
+3.  验证具有版本 12.0。\<内部版本号 >。  
   
   
   
-##  <a name="geminifarm"></a> 升级多个 PowerPivot for SharePoint 场中的 SharePoint 服务器  
+##  <a name="geminifarm"></a> 升级多个 PowerPivot for SharePoint 场中 SharePoint 服务器  
  在包含多个 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器的多服务器拓扑中，所有服务器实例和组件都必须为同一版本。 运行最高版本软件的服务器为场中的所有服务器设置级别。 如果您只升级某些服务器，则运行旧版软件的服务器将变得不可用，直到它们也升级之后才可用。  
   
  升级了第一台服务器后，尚未升级的其他服务器将 **变为不可用**。 当所有服务器都运行在同一级别后将还原可用性。  
@@ -352,14 +352,14 @@ Get-PowerPivotSystemService
 |在为数据刷新配置的所选工作簿上测试数据刷新。|测试数据刷新的最简单方法是修改数据刷新计划，并且选中 **“也尽快刷新”** 复选框以便数据刷新立即运行。 此步骤将确定数据刷新对于当前工作簿是否成功。 对其他常用工作簿重复上述步骤，以便确保数据刷新正常执行。 有关计划数据刷新，请参阅[计划数据刷新&#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)。|  
 |在一段时间后，监视 PowerPivot 管理面板中的数据刷新报表，以确认没有发生数据刷新错误。|[PowerPivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
- 有关如何配置 PowerPivot 设置和功能的详细信息，请参阅[管理中心在 PowerPivot 服务器管理和配置](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
+ 有关如何配置 PowerPivot 设置和功能的详细信息，请参阅[PowerPivot 服务器管理和配置在管理中心内](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
  有关指导你完成所有安装后配置任务的分步说明，请参阅[初始配置&#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)。  
   
 
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 的版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [PowerPivot for SharePoint 2010 安装](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

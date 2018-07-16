@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.beta2.f1
 helpviewer_keywords:
 - Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f2d7942930c4653d390129991b06e47a60ccc7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 821011e46c396eeca618a0ba4ae01b47489b63bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175884"
 ---
 # <a name="replication-monitor"></a>复制监视器
   此部分文档包含有关复制监视器的信息。 根据复制类型和所监视的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的不同，监视器中显示的页和对话框也会有所不同。  

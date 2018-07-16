@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3400a487a7e5775908cdd4c1dd69f8bb134e2c23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 200fd0b8db6b3816cd6870c153ca16e09aabfa9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284353"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>复制查询结果 (Visual Database Tools)
   可以从“结果”窗格中以制表符分隔文本的形式复制结果集。 可以复制整个结果集或任意数量的连续或非连续行或单元。  

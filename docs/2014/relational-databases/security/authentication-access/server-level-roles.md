@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.Security.BUILTIN.administrators
 - sql12.Security.NT_AUTHORITY.SYSTEM
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffccb6ce3fcf80441a953f86fc74ec71aac9ab40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301897"
 ---
 # <a name="server-level-roles"></a>服务器级别角色
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供服务器级角色以帮助你管理服务器上的权限。 这些角色是可组合其他主体的安全主体。 服务器级角色的权限作用域为服务器范围。 （“角色”类似于 Windows 操作系统中的“组”。）  
@@ -49,7 +48,7 @@ ms.locfileid: "36016110"
 |------------------------------|-----------------|  
 |sysadmin|sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。|  
 |serveradmin|serveradmin 固定服务器角色的成员可以更改服务器范围的配置选项和关闭服务器。|  
-|securityadmin|securityadmin 固定服务器角色的成员可以管理登录名及其属性。 他们可以 GRANT、DENY 和 REVOKE 服务器级别的权限。 他们还可以 GRANT、DENY 和 REVOKE 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **\*\* 安全说明 \*\*** 能够授予 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的访问权限和配置用户权限的能力使得安全管理员可以分配大多数服务器权限。 `securityadmin`角色应视为视为等效于`sysadmin`角色。|  
+|securityadmin|securityadmin 固定服务器角色的成员可以管理登录名及其属性。 他们可以 GRANT、DENY 和 REVOKE 服务器级别的权限。 他们还可以 GRANT、DENY 和 REVOKE 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **\*\* 安全说明 \*\*** 能够授予 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的访问权限和配置用户权限的能力使得安全管理员可以分配大多数服务器权限。 `securityadmin`角色应视为等效于`sysadmin`角色。|  
 |processadmin|processadmin 固定服务器角色的成员可以终止在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中运行的进程。|  
 |setupadmin|固定服务器角色的成员可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句添加和删除链接服务器。 （在使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]时需要 sysadmin 成员资格。）|  
 |bulkadmin|bulkadmin 固定服务器角色的成员可以运行 BULK INSERT 语句。|  
@@ -61,7 +60,7 @@ ms.locfileid: "36016110"
  每个固定服务器角色都被分配了特定的权限。 有关分配给服务器角色的权限的图表，请参阅 [数据库引擎固定服务器和固定数据库角色](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER`权限是类似，但不是完全相同`sysadmin`固定的服务器角色。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， `CONTROL SERVER` 不表示 `sysadmin` 固定服务器角色的成员身份。）但是，有时可在角色和相等的权限之间模拟。 大多数 `DBCC` 命令和许多系统过程要求 `sysadmin` 固定服务器角色的成员身份。 有关列表的 171 个系统存储过程的需要`sysadmin`成员身份，请参阅以下博客帖子： Andreas Wolter [CONTROL SERVER 与 sysadmin/sa： 权限、 系统过程、 DBCC、 自动架构创建和特权升级-注意事项](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  `CONTROL SERVER`权限是类似但不是等同于`sysadmin`固定的服务器角色。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， `CONTROL SERVER` 不表示 `sysadmin` 固定服务器角色的成员身份。）但是，有时可在角色和相等的权限之间模拟。 大多数 `DBCC` 命令和许多系统过程要求 `sysadmin` 固定服务器角色的成员身份。 有关列表的 171 个系统存储过程的要求`sysadmin`成员身份，请参阅 Andreas Wolter 的以下博文[CONTROL SERVER 与 sysadmin/sa： 权限、 系统过程、 DBCC、 自动架构创建和特权升级-注意事项](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
   
 ## <a name="server-level-permissions"></a>服务器级权限  
  只能向用户定义的服务器角色中添加服务器级权限。 若要列出服务器级权限，请执行下面的语句。 服务器级权限如下：  

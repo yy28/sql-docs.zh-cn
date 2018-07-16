@@ -1,5 +1,5 @@
 ---
-title: 使用聚合函数 |Microsoft 文档
+title: 使用聚合函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9520426cdb177b8851f0766448f637563b125693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257543"
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
   使用维度来切分度量值时，按该维度中包含的层次结构汇总该度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 `Sum`。 度量值的值的总和将根据活动的层次结构的级别而异。  
   
- 在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合类型包括`Sum`， `Min`， `Max`， `Count`，**非重复计数**，和几个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)。  
+ 在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合类型包括`Sum`， `Min`， `Max`， `Count`，**非重复计数**，以及多个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)。  
   
- 对通过“多维数据集向导”创建的度量值分配了作为度量值定义的一部分的聚合类型。 聚合类型始终是`Sum`，假设源列包含数值数据。 `Sum` 分配而不考虑源列的数据类型。 例如，如果你使用“多维数据集向导”创建度量值并从事实数据表中拉入所有列，则你将注意到所有所得度量值均具有 `Sum` 的聚合，即使源是日期时间列。 始终检查通过向导创建的度量值的预分配的聚合方法，以确保聚合函数恰当。  
+ 对通过“多维数据集向导”创建的度量值分配了作为度量值定义的一部分的聚合类型。 聚合类型始终是`Sum`，假设源列包含数字数据。 `Sum` 分配而不考虑源列的数据类型。 例如，如果你使用“多维数据集向导”创建度量值并从事实数据表中拉入所有列，则你将注意到所有所得度量值均具有 `Sum` 的聚合，即使源是日期时间列。 始终检查通过向导创建的度量值的预分配的聚合方法，以确保聚合函数恰当。  
   
  可在多维数据集定义之一中分配或更改聚合方法，方式为通过 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]，或通过 MDX。 有关详细说明，请参阅[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)或[聚合 (MDX)](/sql/mdx/aggregate-mdx)。  
   

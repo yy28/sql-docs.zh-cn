@@ -1,5 +1,5 @@
 ---
-title: 数据收集器编程 |Microsoft 文档
+title: 数据收集器编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data collector [SQL Server], programming
 ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9a3e4428eee6057ac3e38e553eec43616504a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a5a592e587504c250203febdf30441e864a2bd46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169508"
 ---
 # <a name="data-collector-programming"></a>数据收集器编程
   <xref:Microsoft.SqlServer.Management.Collector> 中的数据收集器 API 允许通过对象模型来对所有配置操作进行编程控制。 此外，很多使用此 API 的数据收集操作都是以服务器上安装的存储过程方式实现的。  

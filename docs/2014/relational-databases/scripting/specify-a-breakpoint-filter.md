@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8a55eb14c606348a63072d669db98fe3cae6b3f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9bf7e4f7a162bf172812ed555463c061611237e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191777"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
   断点筛选器对断点进行限制，使其仅对指定的计算机、操作系统进程和线程执行操作。 断点筛选器通常在调试并行应用程序时使用。  
@@ -45,7 +45,7 @@ ms.locfileid: "36137722"
   
     -   `ProcessID`和`ProcessName`是运行数据库引擎实例的操作系统进程。  
   
-    -   `ThreadID` 和`ThreadName`是运行的操作系统线程[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理、 过程或函数的数据库引擎实例中。  
+    -   `ThreadID` 并`ThreadName`是运行的操作系统线程[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理、 过程或函数的数据库引擎实例中。  
   
 3.  单击 **“确定”** 实施更改，或单击 **“取消”** 退出而不应用更改。  
   

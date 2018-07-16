@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication]
 - administering replication, restoring
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 35570f9248b53589e521480b29d44daa8280fee1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ec33d7601d8f68096152e6ef5e9cac35715f53bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264659"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>备份和还原复制的数据库
   对于复制的数据库，需要特别注意与备份和还原数据有关的信息。 本主题介绍了适用于各种复制类型的备份和还原策略，并提供了其详细信息的链接。  

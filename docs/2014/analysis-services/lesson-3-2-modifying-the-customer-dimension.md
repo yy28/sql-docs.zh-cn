@@ -1,5 +1,5 @@
 ---
-title: 修改客户维度 |Microsoft 文档
+title: 修改客户维度 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fef2880a71981b360d5ce124d6b5e2f0d8b24859
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556ce1a91985c0e153161a90413695edd2bc4cca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310797"
 ---
 # <a name="modifying-the-customer-dimension"></a>修改“客户”维度
   可以使用许多不同的方式提高多维数据集中的维度的可用性和功能。 在本主题的各任务中，您将修改“客户”维度。  
@@ -31,15 +31,15 @@ ms.locfileid: "36124446"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，切换到“客户”维度的“维度设计器”。 为此，请在解决方案资源管理器的“维度”节点中双击“客户”维度。  
   
-2.  在“属性”窗格中，右键单击“英语国家/地区区域名”，然后单击“重命名”。 更改的特性的名称`Country-Region`。  
+2.  在“属性”窗格中，右键单击“英语国家/地区区域名”，然后单击“重命名”。 将属性的名称更改`Country-Region`。  
   
 3.  以相同方法更改以下属性的名称：  
   
-    -   **英语教育**属性-将更改为 `Education`  
+    -   **英语教育**属性 — 更改为 `Education`  
   
-    -   **英语职业**属性-将更改为 `Occupation`  
+    -   **英语职业**属性 — 更改为 `Occupation`  
   
-    -   **状态省名称**属性-将更改为 `State-Province`  
+    -   **自治区/直辖市名**属性 — 更改为 `State-Province`  
   
 4.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "36124446"
   
 #### <a name="to-create-a-hierarchy"></a>创建层次结构  
   
-1.  拖动`Country-Region`属性从**属性**到窗格**层次结构**窗格。  
+1.  拖动`Country-Region`属性从**特性**到窗格**层次结构**窗格。  
   
-2.  拖动`State-Province`属性从**属性**到窗格**\<新级别 >** 中的单元格**层次结构**下窗格中`Country-Region`级别。  
+2.  拖动`State-Province`属性从**特性**到窗格**\<新级别 >** 中的单元格**层次结构**下窗格`Country-Region`级别。  
   
-3.  拖动**城市**属性从**属性**到窗格**\<新级别 >** 中的单元格**层次结构**窗格中，下方`State-Province`级别。  
+3.  拖动**城市**属性从**特性**到窗格**\<新级别 >** 中的单元格**层次结构**窗格中，下方`State-Province`级别。  
   
-4.  在**层次结构**窗格**维度结构**选项卡上，右键单击的标题栏**层次结构**层次结构中，选择**重命名**，然后键入`Customer Geography`。  
+4.  在中**层次结构**窗格**维度结构**选项卡上，右键单击的标题栏**层次结构**层次结构中，选择**重命名**，然后键入`Customer Geography`。  
   
      层次结构的名称现在是`Customer Geography`。  
   
@@ -80,11 +80,11 @@ ms.locfileid: "36124446"
     END  
     ```  
   
-     `CASE`语句将连接在一起**FirstName**， **MiddleName**，和**LastName**入一个列中，你将在客户使用的列作为维度显示的名称**客户**属性。  
+     `CASE`语句将连接在一起**FirstName**， **MiddleName**，和**LastName**作为维度到将在客户的单个列的列显示的名称**客户**属性。  
   
 4.  单击“确定”，然后展开“表”窗格中的 **Customer**。  
   
-     `FullName`命名的计算的 Customer 表中的列列表中将显示一个图标，指示它与命名的计算。  
+     `FullName`命名的计算 Customer 表中的列列表中显示一个图标指示它是命名的计算。  
   
 5.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36124446"
   
 7.  查看“浏览 Customer 表”视图中的最后一列。  
   
-     请注意，`FullName`正确列显示在数据源视图中，串联从基础数据源，而无需修改原始数据源的多个列中的数据。  
+     请注意，`FullName`列显示在数据源视图中，正确串联基础数据源而不修改原始数据源的多个列中的数据。  
   
 8.  关闭“浏览 Customer 表”选项卡。  
   
@@ -107,13 +107,13 @@ ms.locfileid: "36124446"
   
 3.  打开“属性”窗口并单击标题栏上的“自动隐藏”按钮，以便该窗口保持打开状态。  
   
-4.  在**名称**属性字段中，键入`Full Name`。  
+4.  在中**名称**属性字段中，键入`Full Name`。  
   
 5.  在底部的 **NameColumn** 属性字段中单击，然后单击浏览 (**…**) 按钮以打开“名称列”对话框。  
   
 6.  选择`FullName`底部**源列**列表，，然后单击**确定**。  
   
-7.  在维度结构选项卡中拖动`Full Name`属性从**属性**到窗格**\<新级别 >** 中的单元格**层次结构**窗格中，在**城市**级别。  
+7.  在维度结构选项卡中拖动`Full Name`属性从**特性**到窗格**\<新级别 >** 中的单元格**层次结构**窗格中，下方**城市**级别。  
   
 8.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -134,9 +134,9 @@ ms.locfileid: "36124446"
   
     -   `State-Province`  
   
-3.  在属性窗口中，单击**AttributeHierarchyDisplayFolder**属性字段顶部 （你可能需要以指向它，请参阅完整的名称），然后键入`Location`。  
+3.  在属性窗口中，单击**AttributeHierarchyDisplayFolder**属性字段，在顶部 （可能需要指向它才能看到完全名称），然后键入`Location`。  
   
-4.  在**层次结构**窗格中，单击`Customer Geography`，然后在右侧的属性窗口中，选择`Location`的值作为**DisplayFolder**属性。  
+4.  在中**层次结构**窗格中，单击`Customer Geography`，然后在右侧的属性窗口中，选择`Location`的值作为**DisplayFolder**属性。  
   
 5.  在“属性”窗格中，按住 Ctrl 键的同时单击下列各个属性，将它们选中：  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36124446"
   
     -   **Yearly Income**  
   
-6.  在属性窗口中，单击**AttributeHierarchyDisplayFolder**属性字段的顶部，然后键入`Demographic`。  
+6.  在属性窗口中，单击**AttributeHierarchyDisplayFolder**属性字段在顶部，并键入`Demographic`。  
   
 7.  在“属性”窗格中，按住 Ctrl 键的同时单击下列各个属性，将它们选中：  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36124446"
 9. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="defining-composite-keycolumns"></a>定义组合的 KeyColumns  
- **KeyColumns** 属性中包含表示特性键的一个或多个列。 在本课程中，你创建的复合键**城市**和`State-Province`属性。 需要唯一标识属性时，组合键可能会有帮助。 例如，在定义属性关系更高版本在本教程中，**城市**属性必须唯一地标识`State-Province`属性。 但是，在不同的省/自治区可能有些城市会重名。 为此，将创建由“市县”属性的 **StateProvinceName** 和 **City**列组成的组合键。 有关详细信息，请参阅[修改特性的 KeyColumn 属性](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
+ **KeyColumns** 属性中包含表示特性键的一个或多个列。 在本课程中，创建的复合键**城市**和`State-Province`属性。 需要唯一标识属性时，组合键可能会有帮助。 例如，定义属性关系时，本教程中稍后**城市**属性必须唯一地标识`State-Province`属性。 但是，在不同的省/自治区可能有些城市会重名。 为此，将创建由“市县”属性的 **StateProvinceName** 和 **City**列组成的组合键。 有关详细信息，请参阅[修改特性的 KeyColumn 属性](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>若要为“市县”属性定义组合的 KeyColumns  
   
@@ -199,7 +199,7 @@ ms.locfileid: "36124446"
   
 1.  确保“客户”维度的“维度结构”选项卡处于打开状态。  
   
-2.  在**属性**窗格中，单击`State-Province`属性。  
+2.  在中**特性**窗格中，单击`State-Province`属性。  
   
 3.  在“属性”窗口中，在 **KeyColumns** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "36124446"
   
 5.  单击“确定” 。  
   
-6.  若要设置**NameColumn**属性`State-Province`属性中，单击**NameColumn**字段在属性窗口中，然后单击浏览 (**...**) 按钮。  
+6.  若要设置**NameColumn**的属性`State-Province`属性，再单击**NameColumn**字段在属性窗口中，然后单击浏览 (**...**) 按钮。  
   
 7.  在“名称列”对话框的“源列”列表中，选择 **StateProvinceName**，然后单击“确定”。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "36124446"
   
 6.  在关系图中，右键单击`State-Province`属性，然后选择**新建属性关系**。  
   
-7.  在**创建属性关系**对话框中，**源属性**是`State-Province`。 设置**相关属性**到`Country-Region`。  
+7.  在中**创建属性关系**对话框中，**源属性**是`State-Province`。 设置**相关属性**到`Country-Region`。  
   
 8.  在“关系类型”列表中，将关系类型设置为“刚性”。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36124446"
   
 2.  在收到“部署成功完成”消息后，单击“客户”维度的维度设计器的“浏览器”选项卡，然后单击设计器工具栏左侧的“重新连接”按钮。  
   
-3.  验证`Customer Geography`中选择**层次结构**列表，，然后在浏览器窗格中，展开**所有**，展开**澳大利亚**，展开**新南部威尔士州**，然后展开**Coffs 庇护**。  
+3.  确认`Customer Geography`中选定**层次结构**列表，然后再在浏览器窗格中，展开**所有**，展开**澳大利亚**，展开**新南部威尔士**，然后展开**Coffs Harbour**。  
   
      浏览器会将客户显示在市县中。  
   
@@ -270,8 +270,8 @@ ms.locfileid: "36124446"
   
 ## <a name="see-also"></a>请参阅  
  [维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)   
- [维度中删除属性](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
+ [从维度中删除属性](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [重命名属性](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [在数据源视图中定义命名的计算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [数据源视图中定义命名的计算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

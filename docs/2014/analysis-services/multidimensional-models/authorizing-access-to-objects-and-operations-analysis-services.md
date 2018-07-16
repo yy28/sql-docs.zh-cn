@@ -1,5 +1,5 @@
 ---
-title: 授予对对象和操作 (Analysis Services) 的访问权限 |Microsoft 文档
+title: 授权访问权限的对象和操作 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249177"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>授予对对象和操作的访问权限 (Analysis Services)
   非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  
@@ -41,7 +41,7 @@ ms.locfileid: "36123925"
 ## <a name="list-roles-defined-for-your-database"></a>列出为你的数据库所定义的角色  
  管理员可以在 SQL Server Management Studio 中运行一个简单的 DMV 查询，获取在服务器上定义的全部角色的列表。  
   
-1.  在 SSMS 中，右键单击数据库，然后选择**新查询** | **MDX**。  
+1.  在 SSMS 中，右键单击某个数据库，然后选择**新查询** | **MDX**。  
   
 2.  键入以下查询并按下 F5 执行：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36123925"
   
  **步骤 3：启用多维数据集或模型访问以查询和处理工作负载**  
   
- 默认情况下，仅服务器和数据库管理员拥有对多维数据集或表格模型的访问权限。 使这些数据结构可供你的组织中的其他人员需要映射 Windows 用户和组帐户添加到多维数据集或模型，以及使用指定的权限的其他角色分配`Read`特权。 有关详细信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
+ 默认情况下，仅服务器和数据库管理员拥有对多维数据集或表格模型的访问权限。 将这些数据结构提供给你的组织中的其他人员需要映射 Windows 用户和组帐户添加到多维数据集或模型，以及使用指定的权限的其他角色分配`Read`特权。 有关详细信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
   
  处理任务可与其他管理功能隔离，允许服务器和数据库管理员将此任务委派给其他人员，或通过指定运行计划软件的服务帐户配置无人参与的处理。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
   

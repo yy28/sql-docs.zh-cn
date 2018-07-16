@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2d985681028cf919e1f56d1138863497b931c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175240"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   在本课中，您将使用报表管理器来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。 在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
@@ -32,17 +32,17 @@ ms.locfileid: "36138355"
   
 -   [修改 AdventureWorksDataset](#bkmk_modify_dataset)  
   
--   [添加报表参数，并将重新发布报表](#bkmk_add_reportparameter)  
+-   [若要添加报表参数并重新发布报表](#bkmk_add_reportparameter)  
   
 -   [若要重新部署报表](#bkmk_redeploy)  
   
 ##  <a name="bkmk_modify_datasource"></a> 若要修改的数据源属性  
   
-1.  启动[报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)使用管理员权限，例如，Internet explorer，右键单击图标，单击**以管理员身份运行**。  
+1.  启动[报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)使用管理员权限，例如，右键单击 Internet Explorer 图标，单击**以管理员身份运行**。  
   
 2.  浏览到包含 **Sales Orders** 报表的文件夹，在该报表的上下文菜单中，单击 **“管理”**。  
   
-     ![打开报表上下文菜单，然后选择管理](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "打开报表上下文菜单，然后选择管理")  
+     ![打开报表上下文菜单并选择管理](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "打开报表上下文菜单并选择管理")  
   
 3.  单击 **“数据源”** 选项卡。  
   
@@ -56,19 +56,19 @@ ms.locfileid: "36138355"
   
 6.  单击 **“安全存储在报表服务器中的凭据”**。  
   
-7.  输入用户名（使用 *domain\user* 格式）和密码。 如果你没有访问权限[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库，请指定登录名。  
+7.  输入用户名（使用 *domain\user* 格式）和密码。 如果您没有权限访问[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库，请指定登录名。  
   
-8.  单击 **“在与数据源建立连接时用作 Windows 凭据”**，再单击 **“确定”**。 如果你不使用域帐户 (例如，如果你使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录)，请不要单击此复选框。  
+8.  单击 **“在与数据源建立连接时用作 Windows 凭据”**，再单击 **“确定”**。 如果不使用域帐户 (例如，如果使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录名)，请不要单击此复选框。  
   
 9. 若要验证是否能连接到数据源，请单击 **“测试连接”** 。  
   
 10. 单击 **“应用”**。  
   
-11. 查看报表以验证报表是否以指定的凭据运行。 若要查看报表，请单击“查看”  选项卡。请注意打开报表后，你必须选中雇员姓名，然后单击**查看报表**按钮以查看报表。  
+11. 查看报表以验证报表是否以指定的凭据运行。 若要查看报表，请单击“查看”  选项卡。请注意打开报表后，您必须选中雇员姓名，然后单击**查看报表**按钮，以查看报表。  
   
 ##  <a name="bkmk_modify_dataset"></a> 修改 AdventureWorksDataset  
   
-1.  打开中的 Sales Orders 报表 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  打开 Sales Orders 报表中 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
 2.  右键单击数据集 `AdventureWorksDataset`，然后单击“数据集属性”。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36138355"
   
 4.  单击 **“确定”**。  
   
-##  <a name="bkmk_add_reportparameter"></a> 添加报表参数，并将重新发布报表  
+##  <a name="bkmk_add_reportparameter"></a> 若要添加报表参数并重新发布报表  
   
 1.  在 **“报表数据”** 窗格中，单击 **“新建”** ，然后单击 **“参数...”**。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36138355"
   
     -   取消选择 Null 选项，然后键入订单号，例如 so71949，以便只查看报表中的一个订单。  
   
-         ![报表查看器中的使用参数区域可见](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "报表查看器中的使用参数区域可见")  
+         ![报表查看器中的使用参数区域可见](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "参数区可见的报表查看器")  
   
 8.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。  
   

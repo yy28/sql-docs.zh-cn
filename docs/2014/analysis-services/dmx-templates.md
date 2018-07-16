@@ -1,5 +1,5 @@
 ---
-title: DMX 模板 |Microsoft 文档
+title: DMX 模板 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f29e0c000477ec705111f433c31370edc0d973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194357"
 ---
 # <a name="dmx-templates"></a>DMX 模板
   数据挖掘模板可帮助您快速生成复杂的查询。 虽然 DMX 查询的常规语法具有详细说明，但借助于这些模板，可通过单击并且指向参数和数据源，更轻松地生成查询。  
   
 ## <a name="using-the-templates"></a>使用模板  
   
-1.  在数据挖掘客户端 for Excel，单击**查询**。  
+1.  数据挖掘 Excel 客户端中，单击**查询**。  
   
 2.  在向导上**启动**页上，单击**下一步**。  
   
 3.  在页上，**选择模型**，单击**高级**。  
   
-     **提示：** 如果想要在模型上创建预测查询，你可以首先，选择的模型，然后单击**高级**、 用于预先填充具有模型名称的模板。  
+     **提示：** 如果要针对模型创建预测查询，您可以首先，选择该模型，然后单击**高级**、 预先填充该模板使用的模型名称。  
   
-4.  在**数据挖掘高级查询编辑器**，单击**DMX 模板**，然后选择一个模板。  
+4.  在中**数据挖掘高级查询编辑器**，单击**DMX 模板**，然后选择一个模板。  
   
 5.  按 Enter 将模板加载到“DMX 查询”窗格中。  
   
@@ -42,16 +42,16 @@ ms.locfileid: "36129096"
   
      对于预测查询，请首先选择输入数据集，然后映射列。  
   
-7.  单击**编辑查询**以切换到文本编辑器视图并手动更改查询。  
+7.  单击**编辑查询**切换到文本编辑器视图并手动更改查询。  
   
      但要注意，如果在使用查询编辑器时切换视图，则上一视图中的所有信息都将被清除。 更改视图前，请将 DMX 语句复制并粘贴到一个单独的文件中，保存好您的工作结果。  
   
-8.  单击 **“完成”**。 在**选择目标**对话框框中，指定要保存的结果的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  单击 **“完成”**。 在中**选择目标**对话框框中，指定要保存的结果。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  如果成功执行了语句，发送到服务器的 DMX 语句还记录在**跟踪**窗口。 有关如何使用跟踪功能的详细信息，请参阅[跟踪&#40;for Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)。  
+>  如果已成功执行语句，发送到服务器的 DMX 语句也会记录在**跟踪**窗口。 有关如何使用跟踪功能的详细信息，请参阅[Trace &#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)。  
   
- 有关如何使用数据挖掘高级查询编辑器的详细信息，请参阅[查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)和[高级数据挖掘查询编辑器](advanced-data-mining-query-editor.md)。  
+ 有关如何使用数据挖掘高级查询编辑器的详细信息，请参阅[查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)并[高级数据挖掘查询编辑器](advanced-data-mining-query-editor.md)。  
   
 ## <a name="list-of-dmx-templates"></a>DMX 模板的列表  
  以下 DMX 模板包含在 Excel 数据挖掘客户端中。  
@@ -120,7 +120,7 @@ ms.locfileid: "36129096"
   
 -   重命名挖掘结构  
   
--   训练挖掘模型  
+-   为挖掘模型定型  
   
 -   为嵌套挖掘结构定型  
   

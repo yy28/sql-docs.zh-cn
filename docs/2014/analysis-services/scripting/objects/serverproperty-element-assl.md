@@ -1,5 +1,5 @@
 ---
-title: ServerProperty 元素 (ASSL) |Microsoft 文档
+title: ServerProperty 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6cb62681b0c25c83d54076a67a37addc764102da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c6af3d46fac2b6ed02ff4cd261a8f5361d466ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300927"
 ---
 # <a name="serverproperty-element-assl"></a>ServerProperty 元素 (ASSL)
-  定义与关联的服务器属性[服务器](server-element-assl.md)元素。  
+  定义与关联的服务器属性[Server](server-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36016207"
 ## <a name="remarks"></a>Remarks  
  `ServerProperty`元素描述的数据和元数据与实例关联的服务器属性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 与 Analysis Services 脚本语言 (ASSL) 中的其他集合包含的元素不同，`ServerProperty` 元素使用名称/值对（而不是显式命名的元素）来描述服务器属性。 名称/值对可提供灵活性和可扩展性。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ServerProperty>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>请参阅  
  [服务器元素&#40;ASSL&#41;](server-element-assl.md)   

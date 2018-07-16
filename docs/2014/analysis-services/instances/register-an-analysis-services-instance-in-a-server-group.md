@@ -1,5 +1,5 @@
 ---
-title: 服务器组中注册 Analysis Services 实例 |Microsoft 文档
+title: 服务器组中注册 Analysis Services 实例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a503af156ae5998cf841161ceddad53ebc3696ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538b54cde0de7a49ff151f2f978346a2d8767317
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208077"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>在服务器组中注册 Analysis Services 实例
   如果有大量 Analysis Services 服务器实例，可以在 Management Studio 中创建服务器组来方便管理服务器。 服务器组的作用是在管理工作区内提供一组相关服务器的近似性。 例如，假定您负责管理 10 个单独的 Analysis Services 实例。 通过按服务器模式、运行时间条件或部门/区域将它们分组，您可以更易于查看并连接到共享相同特征的实例。 您还可以添加描述性信息，帮助您记住如何使用服务器。  
   
- ![与成员服务器的已注册服务器窗格](../media/ssas-ssms-registerserver.gif "与成员服务器的已注册的服务器窗格")  
+ ![包含成员服务器的已注册服务器窗格](../media/ssas-ssms-registerserver.gif "包含成员服务器的已注册的服务器窗格")  
   
  可以在层次结构中创建服务器组。 本地服务器组是根节点。 它始终包含在本地计算机上运行的 Analysis Services 实例。 您可以将远程服务器添加到任何组，包括本地组。  
   

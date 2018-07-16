@@ -1,5 +1,5 @@
 ---
-title: SilenceOverrideInterval 元素 (ASSL) |Microsoft 文档
+title: SilenceOverrideInterval 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SilenceOverrideInterval element
 ms.assetid: 0dcd2db4-9bc0-4460-b1dd-def0b38c4617
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f12bc90bcac229c3aaff35e23686b127f30b03d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba345f4d7ebe21af3c2ff79739f3badf89da03d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192483"
 ---
 # <a name="silenceoverrideinterval-element-assl"></a>SilenceOverrideInterval 元素 (ASSL)
   定义在收到初始通知后经过多长时间才能无条件开始多维 OLAP (MOLAP) 映像处理。  
@@ -64,7 +64,7 @@ ms.locfileid: "36137848"
 ## <a name="remarks"></a>Remarks  
  如果在静默期间收到通知，则 `SilenceOverrideInterval` 的值将覆盖 `SilenceInterval` 的值。  
   
- 对应于的父元素`SilenceOverrideInterval`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ProactiveCaching>。  
+ 父级对应的元素`SilenceOverrideInterval`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ProactiveCaching>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

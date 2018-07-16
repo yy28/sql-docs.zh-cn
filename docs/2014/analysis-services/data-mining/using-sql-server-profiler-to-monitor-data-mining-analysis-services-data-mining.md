@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 事件探查器监视数据挖掘 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 使用 SQL Server Profiler 监视数据挖掘 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e3c09140c6524e7bff893a72c78aed07b056c1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71927782c80006c76b5ae54ea5edc00d53a93fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323397"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server 事件探查器监视数据挖掘（Analysis Services – 数据挖掘）
   如果您具有必要的权限，可以使用 SQL Server Profiler 监视作为请求发送到 SQL Server Analysis Services 实例的数据挖掘活动。 数据挖掘活动可以包括处理模型或结构、预测查询或内容查询或者创建新模型或结构。  
   
- SQL Server 事件探查器使用`trace`监视从多个客户端，包括发送的请求[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，SQL Server Management Studio、 Web 服务或数据挖掘外接程序对于 Excel，只要所有的活动使用同一个 SQL Server 实例Analysis Services。 必须为要监视的每个 SQL Server Analysis Services 实例创建一个单独的跟踪。 有关跟踪的常规信息和如何使用 SQL Server Profiler，请参阅[使用 SQL Server Profiler 监视 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
+ 使用 SQL Server Profiler`trace`来监视从多个客户端，包括发送请求[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，SQL Server Management Studio、 Web 服务或数据挖掘外接对于 Excel，前提是这些活动均使用同一个 SQL Server 实例Analysis Services 中。 必须为要监视的每个 SQL Server Analysis Services 实例创建一个单独的跟踪。 有关跟踪的常规信息和如何使用 SQL Server Profiler，请参阅[使用 SQL Server Profiler 监视 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
  有关要捕获的事件类型的具体指南，请参阅[为重播创建探查器跟踪 (Analysis Services)](../instances/create-profiler-traces-for-replay-analysis-services.md)。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "36015579"
   
 ## <a name="see-also"></a>请参阅  
  [监视 Analysis Services 实例](../instances/monitor-an-analysis-services-instance.md)   
- [使用 SQL Server 扩展事件&#40;XEvents&#41;监视 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [使用 SQL Server 扩展事件&#40;XEvents&#41;若要监视 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

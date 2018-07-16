@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268643"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  A`CurvePolygon`是拓扑结构上闭合的图面定义由一个外部边界环以及零个或多个内环  
+  一个`CurvePolygon`是拓扑结构上闭合的图面定义由一个外部边界环以及零个或多个内环  
   
 > [!IMPORTANT]  
->  有关详细的说明和中引入的空间功能的示例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CurvePolygon`子类型，请下载白皮书[SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关详细的说明和中引入的空间功能的示例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，其中包括`CurvePolygon`子类型，请下载白皮书[SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
   
- 下面的条件定义的特性`CurvePolygon`实例：  
+ 下面的条件定义的属性`CurvePolygon`实例：  
   
 -   该 `CurvePolygon` 实例的边界由外环和所有内环界定。  
   
@@ -36,10 +36,10 @@ ms.locfileid: "36128296"
  `CurvePolygon` 实例不同于 `Polygon` 实例，因为 `CurvePolygon` 实例可以包含以下圆弧线段：`CircularString` 和 `CompoundCurve`。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
- 下图显示有效`CurvePolygon`数字：  
+ 下图显示了有效`CurvePolygon`数字：  
   
 ### <a name="accepted-instances"></a>接受的实例  
- 有关`CurvePolygon`实例才能被接受，它需要或者为空或包含接受的圆弧环。 接受的圆弧环满足以下要求。  
+ 有关`CurvePolygon`实例才能被接受，它需要或者为空或包含仅接受的圆弧环。 接受的圆弧环满足以下要求。  
   
 1.  是接受的 `LineString`、 `CircularString` 或 `CompoundCurve` 实例。 有关接受的实例的详细信息，请参阅 [LineString](linestring.md)、 [CircularString](circularstring.md)和 [CompoundCurve](compoundcurve.md)。  
   
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` 不被接受，因为起点和终点不具有相同的 Y 值。 `@g2` 不被接受，因为环没有足够的点。  
   
 ### <a name="valid-instances"></a>有效实例  
- 有关`CurvePolygon`实例才是有效 exterior 和 interior rings 必须满足以下条件：  
+ 有关`CurvePolygon`实例才是有效外环和内环必须满足以下条件：  
   
 1.  它们只能在单个切点处接触。  
   
@@ -136,14 +136,14 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ```  
   
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. 在同一语句中声明和实例化一个具有 CurvePolygon 的几何图形实例  
- 此代码段演示如何声明和初始化具有的几何图形实例`CurvePolygon`在同一语句中：  
+ 此代码片段演示如何声明和初始化的 geometry 实例`CurvePolygon`在同一语句中：  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. 实例化一个具有 CurvePolygon 的几何图形实例  
- 此代码段演示如何声明和初始化`geography`实例与`CurvePolygon`:  
+ 此代码片段演示如何声明和初始化`geography`实例与`CurvePolygon`:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. 存储包含内环的 CurvePolygon  
- 此示例将创建在一个圆环图`CurvePolygon`（一个外部边界环和内环用于定义圆环图） 的实例：  
+ 此示例将创建一个圆环图中的`CurvePolygon`实例 （一个外部边界环和内环用于界定圆环图）：  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -167,7 +167,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- 此示例说明有效`CurvePolygon`实例和一个无效的实例使用内环时：  
+ 此示例说明一个有效`CurvePolygon`实例和一个无效的实例使用内环时：  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

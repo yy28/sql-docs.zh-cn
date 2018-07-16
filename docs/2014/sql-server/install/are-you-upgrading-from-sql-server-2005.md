@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f5095c28bb6a5d09ae7b872272e8ed4f58efc584
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a675b9f671631030e2fd49a8f3aba3534e8fa30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294017"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
   需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
@@ -31,7 +31,7 @@ ms.locfileid: "36026471"
 > [!IMPORTANT]  
 >  对于 SQL Server 2005 的延长支持将于 2016 年 4 月 12 日结束。 如果 2016 年 4 月 12 日后你仍在运行 SQL Server 2005，你将不会再收到安全更新。  
   
- 若要获取有关从 SQL Server 2005 升级的 PDF 格式的数据表[单击此处](https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Infographic-UpgradeSQL2005Datasheet.pdf)（而不是在下方的缩略图）。  
+ 若要获取 PDF 格式有关从 SQL Server 2005 升级的数据表[单击此处](https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Infographic-UpgradeSQL2005Datasheet.pdf)（而不是在下方的缩略图）。  
   
  ![有关从 SQL Server 2005 升级的数据表](../../../2014/sql-server/install/media/sqlserver2005eos.png "有关从 SQL Server 2005 升级的数据表")  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36026471"
 |-------------------------------|--------------|-------------------------------|  
 |**本地 SQL Server**<br /><br /> 对于任何类型的数据库应用程序（从交易系统到数据仓库），请考虑此选项。<br /><br /> 有关详细信息，请参阅[SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)。|因为你管理硬件和软件，因此你对功能和可伸缩性具有最大控制权。<br /><br /> 如果你要从 SQL Server 2005 升级，这将是最相似的环境。|你必须做出最大的前期投资并进行日常管理，因为你需要购买、维护和管理你自己的硬件和软件。|  
 |**Azure 虚拟机上托管的 SQL Server**<br /><br /> 如果你需要以下内容，请考虑此选项。<br />-迁移到托管环境的好处。<br />-对操作环境的控制。<br />的 SQL server 熟悉功能集。<br /><br /> 有关详细信息，请参阅[SQL Server Azure 虚拟机概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。<br /><br /> 有关迁移的详细信息，请参阅 [将数据库迁移到 Azure VM 上的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)。|可以从虚拟机映像库快速进行部署。<br /><br /> 获得完整的 SQL Server 功能集。<br /><br /> 节约硬件和服务器软件的成本。 只需支付每小时的使用费用。|必须配置并管理 SQL Server 和操作系统软件。|  
-|**Azure SQL Database 托管的数据库服务**<br /><br /> 如果想要实现较少维护的低成本解决方案，请考虑此选项。<br /><br /> 此选项非常适用于不要求一直需要相同容量的应用，或必须提供外部访问的应用。<br /><br /> 有关详细信息，请参阅[SQL 数据库](https://azure.microsoft.com/services/sql-database/)。<br /><br /> 有关迁移的信息，请参阅[将 SQL Server 数据库迁移到 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|可以快速部署并轻松纵向扩展。<br /><br /> 只需支付每小时的使用费用。<br /><br /> 该服务的成本不仅包括存储，还包括高可用性和自动执行的备份。|Azure SQL Database 缺少某些在托管的云环境中不适用的 SQL Server 功能。 有关详细信息，请参阅 [Azure SQL 数据库 Transact-SQL 信息](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相较于 SQL Server 的 524 PB，Azure SQL Database 还具有 500 GB 的最大数据库大小。|  
+|**Azure SQL Database 托管的数据库服务**<br /><br /> 如果想要实现较少维护的低成本解决方案，请考虑此选项。<br /><br /> 此选项非常适用于不要求一直需要相同容量的应用，或必须提供外部访问的应用。<br /><br /> 有关详细信息，请参阅[SQL 数据库](https://azure.microsoft.com/services/sql-database/)。<br /><br /> 有关迁移的信息，请参阅[SQL Server 数据库迁移到 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|可以快速部署并轻松纵向扩展。<br /><br /> 只需支付每小时的使用费用。<br /><br /> 该服务的成本不仅包括存储，还包括高可用性和自动执行的备份。|Azure SQL Database 缺少某些在托管的云环境中不适用的 SQL Server 功能。 有关详细信息，请参阅 [Azure SQL 数据库 Transact-SQL 信息](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相较于 SQL Server 的 524 PB，Azure SQL Database 还具有 500 GB 的最大数据库大小。|  
   
  你还可能想要针对某些数据和应用程序考虑使用非关系或 NoSQL 解决方案。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36026471"
   
  若要按照 Microsoft 上的说明下载报表“从 SQL Server 2005 进行迁移”（包含相关升级选项的详细信息），请 [单击此处](https://info.microsoft.com/CO-SQL-CNTNT-FY16-09Sep-14-ModernizationDirOnMFST-Register.html) （不是在下方的缩略图上）。  
   
- ![有关将从 SQL Server 2005 迁移报表](../../../2014/sql-server/install/media/sqlserver2005migratingdoc.png "有关从 SQL Server 2005 进行迁移的报表")  
+ ![有关从 SQL Server 2005 进行迁移的报表](../../../2014/sql-server/install/media/sqlserver2005migratingdoc.png "有关从 SQL Server 2005 迁移报告")  
   
 ## <a name="plan-your-upgrade"></a>规划升级  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36026471"
   
     -   [规划有效地从 SQL Server 2005 升级：步骤 3/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
--   查看的要求和注意事项[计划 SQL Server 安装](../../../2014/sql-server/install/planning-a-sql-server-installation.md)，包括[Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
+-   查看要求和注意事项[计划 SQL Server 安装](../../../2014/sql-server/install/planning-a-sql-server-installation.md)，其中包括[硬件和软件要求安装 SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 -   阅读有关如何升级的内容。  
   

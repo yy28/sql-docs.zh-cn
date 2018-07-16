@@ -1,5 +1,5 @@
 ---
-title: PerspectiveKpi 数据类型 (ASSL) |Microsoft 文档
+title: PerspectiveKpi 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e4e6c512b0cab76a87b0d39428bfc570680fa42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca2bc8d765e7ffe5a0111a22d8b2e5977a17f010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215917"
 ---
 # <a name="perspectivekpi-data-type-assl"></a>PerspectiveKpi 数据类型 (ASSL)
-  表示关键绩效指标 (KPI) 有关的信息的基元数据类型定义中[透视](../objects/perspective-element-assl.md)元素。  
+  在定义一个基元数据类型表示关键绩效指标 (KPI) 有关的信息[角度来看](../objects/perspective-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,10 +58,10 @@ ms.locfileid: "36129977"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[批注](../collections/annotations-element-assl.md)， [KpiID](../properties/id-element-assl.md)|  
-|派生元素|[Kpi](../objects/kpi-element-assl.md) ([Kpi](../collections/kpis-element-assl.md)集合[透视](../objects/perspective-element-assl.md))|  
+|派生元素|[Kpi](../objects/kpi-element-assl.md) ([Kpi](../collections/kpis-element-assl.md)的集合[角度来看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveKpi>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveKpi>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

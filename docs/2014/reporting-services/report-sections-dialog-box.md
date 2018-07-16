@@ -1,5 +1,5 @@
 ---
-title: 报表部分对话框 |Microsoft 文档
+title: 报表部分对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9962f996bff428411a0372663ef860dfd0865f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4bbe031bd7cc918f39d1c3c965cdb9e82ab612a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328916"
 ---
 # <a name="report-sections-dialog-box"></a>“报表区域”对话框
-  打开报表时，报表设计器将验证报表是否包含只有一个报表定义语言 (RDL) **\<部分 >** 元素。 不支持打开具有多个 \<Section> 元素的报表。  
+  当您打开报表时，报表设计器验证报表包含一个报表定义语言 (RDL) **\<部分 >** 元素。 不支持打开具有多个 \<Section> 元素的报表。  
   
  尽管可以通过编程方式生成具有多个区域的报表定义，但是不支持在报表创作环境中编辑此报表。  
   

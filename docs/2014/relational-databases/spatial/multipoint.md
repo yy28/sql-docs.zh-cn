@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiPoint geometry subtype [SQL Server]
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0106449b66e1f4c55edd28abfd4e2fab67626080
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dbbe51251adf9a681a817aa5e402a23f3b5dde2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201137"
 ---
 # <a name="multipoint"></a>MultiPoint
-  A`MultiPoint`是零个或多个点的集合。 `MultiPoint` 实例的边界为空。  
+  一个`MultiPoint`是零个或多个点的集合。 `MultiPoint` 实例的边界为空。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `geometry MultiPoint` 实例，该实例的 SRID 为 23 且包含两个点：一个点的坐标为 (2, 3)，另一个点的坐标为 (7, 8)，Z 值为 9.5。  

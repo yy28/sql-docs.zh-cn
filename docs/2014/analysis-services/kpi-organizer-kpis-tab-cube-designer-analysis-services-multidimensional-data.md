@@ -1,5 +1,5 @@
 ---
-title: KPI 组织程序 （Kpi 选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: KPI 组织程序 （Kpi 选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpiorganizerpane.f1
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2a058a1698a5e7b202a63624d7f0d485c7a2a07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c82287e5fd5265e5cd112a1cb08c52f60c40bc07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176974"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 组织程序（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器的“KPI”选项卡中的“KPI 组织程序”窗格，访问和重新排列指定的多维数据集中包含的关键绩效指标 (KPI)。  

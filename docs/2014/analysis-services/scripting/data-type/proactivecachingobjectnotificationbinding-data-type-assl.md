@@ -1,5 +1,5 @@
 ---
-title: ProactiveCachingObjectNotificationBinding 数据类型 (ASSL) |Microsoft 文档
+title: ProactiveCachingObjectNotificationBinding 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingObjectNotificationBinding data type
 ms.assetid: b3cf5fb6-6121-4f25-8de6-f171792c440d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c901ea8aa1a11086c8ed6e4bdada9bb1f19acf1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72b45eae800790497b661a82e079255651bec4d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330327"
 ---
 # <a name="proactivecachingobjectnotificationbinding-data-type-assl"></a>ProactiveCachingObjectNotificationBinding 数据类型 (ASSL)
-  定义表示信息，用以抽象派生的数据类型[ProactiveCaching](../objects/proactivecaching-element-assl.md)有关数据源更改，在指定的表和视图中或在表和现有数据绑定通过标识的视图中的元素需要重新生成缓存。  
+  定义表示信息的抽象的派生的数据类型[ProactiveCaching](../objects/proactivecaching-element-assl.md)有关数据源更改，在指定的表和视图或表和现有数据绑定通过标识的视图中的元素这需要重新生成缓存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,13 +59,13 @@ ms.locfileid: "36015547"
 |派生元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关详细信息`ProactiveCachingBinding`类型，包括的继承层次结构的表`ProactiveCachingBinding`类型，请参阅[ProactiveCachingBinding 数据类型&#40;ASSL&#41;](binding-data-type-assl.md)。  
+ 有关详细信息`ProactiveCachingBinding`类型，包括继承层次结构的表`ProactiveCachingBinding`类型，请参阅[ProactiveCachingBinding 数据类型&#40;ASSL&#41;](binding-data-type-assl.md)。  
   
- 有关详细信息`Binding`类型，包括表的 Analysis Services 脚本语言 (ASSL) 对象`Binding`类型和继承层次结构的`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 有关详细信息`Binding`类型，包括 Analysis Services 脚本语言 (ASSL) 对象的表`Binding`类型和继承层次结构`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ProactiveCachingObjectNotificationBinding>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ProactiveCachingObjectNotificationBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

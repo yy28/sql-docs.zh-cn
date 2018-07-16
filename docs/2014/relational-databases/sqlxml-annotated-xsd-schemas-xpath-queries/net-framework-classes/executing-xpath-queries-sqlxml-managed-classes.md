@@ -1,5 +1,5 @@
 ---
-title: 执行 XPath 查询 （SQLXML 托管类） |Microsoft 文档
+title: 执行 XPath 查询 （SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b575f648b79ebc1012f72bf38bc4ce7b546682e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 040213e88786450a828d4923d7ce7b8c89505715
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191697"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>执行 XPath 查询（SQLXML 托管类）
   该示例说明如何针对映射架构执行 XPath 查询。  
@@ -93,7 +93,7 @@ class Test
   
 2.  将在该示例中提供的 XSD 架构 (MySchema.xml) 保存到某个文件夹中。  
   
-3.  在此示例中的架构存储在其中的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+3.  在此示例中在其中存储架构的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 4.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

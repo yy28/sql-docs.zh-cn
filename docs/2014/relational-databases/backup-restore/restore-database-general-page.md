@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 85
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f310d762ca8a8d116b3accc618532b772eef8c26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 79929bf3f9bebec61605ad173a460fbdbe2269f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219477"
 ---
 # <a name="restore-database-general-page"></a>还原数据库（“常规”页）
   使用“常规”页，可以指定数据库还原操作的目标数据库和源数据库的有关信息。  
@@ -33,14 +32,14 @@ ms.locfileid: "36127574"
 -   [为磁带驱动器定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  当你通过使用指定还原任务[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，你可以生成相应[!INCLUDE[tsql](../../includes/tsql-md.md)][还原](/sql/t-sql/statements/restore-statements-transact-sql)通过单击脚本**脚本**，然后选择该脚本的目标。  
+>  当使用指定还原任务[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，可以生成相应[!INCLUDE[tsql](../../includes/tsql-md.md)][还原](/sql/t-sql/statements/restore-statements-transact-sql)通过单击脚本**脚本**，再选择脚本目标。  
   
 ## <a name="permissions"></a>权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果该数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及该数据库的所有者 (**dbo**)。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
- 从加密的备份还原要求`VIEW DEFINITION`到证书或在备份期间用于加密的对称密钥的权限。  
+ 从加密的备份还原需要`VIEW DEFINITION`到证书或在备份期间用于加密的对称密钥的权限。  
   
 ## <a name="options"></a>“常规”  
   
@@ -59,13 +58,13 @@ ms.locfileid: "36127574"
 |术语|定义|  
 |----------|----------------|  
 |**“数据库”**|在该列表中输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。<br /><br /> 注意：若要还原带有密码保护的备份，必须使用 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句。|  
-|**“还原到”**|默认情况下， **“还原到”** 框将设置为“至最近一次进行的备份”。 您还可以单击 **“时间线”** 以便显示 **“备份时间线”** 对话框，该对话框将以时间线的形式显示数据库备份历史记录。 单击**时间线**指定特定`datetime`到想要还原数据库。 然后，数据库将还原到它在此指定时间点时所处的状态。 请参阅 [Backup Timeline](backup-timeline.md)。|  
+|**“还原到”**|默认情况下， **“还原到”** 框将设置为“至最近一次进行的备份”。 您还可以单击 **“时间线”** 以便显示 **“备份时间线”** 对话框，该对话框将以时间线的形式显示数据库备份历史记录。 单击**时间线**若要指定特定`datetime`到想要还原数据库。 然后，数据库将还原到它在此指定时间点时所处的状态。 请参阅 [Backup Timeline](backup-timeline.md)。|  
   
 ### <a name="restore-plan"></a>还原计划  
   
 |术语|定义|  
 |----------|----------------|  
-|**用于还原的备份集**|显示可用于指定位置的备份集。 每个备份集（单个备份操作的结果）分布在介质集的所有设备上。 默认情况下，会建议制定一个恢复计划，以实现基于所选必需备份集执行的还原操作目标。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用 **msdb** 中的备份历史记录来标识还原数据库所需的备份并创建还原计划。 例如，为了进行数据库还原，还原计划将选择最近的完整数据库备份，然后选择最近的后续差异数据库备份（如果有）。 在完整恢复模式下，还原计划随后将选择所有后续日志备份。<br /><br /> 若要覆盖建议的恢复计划，可以更改网格中的选择下列选项。 任何依赖于已取消选择备份的备份，也将被自动取消选择。<br /><br /> **还原**：<br />                          选中的复选框指示要还原的备份集。<br />**名称**： 备份集的名称。<br />**组件**： 备份的组件：**数据库**，**文件**，或**\<空白 >** （对于事务日志）。<br />**类型**：执行的备份类型： **完整备份**、 **差异备份**或 **事务日志备份**。<br />**服务器**：执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。<br />**数据库**： 备份操作涉及的数据库的名称。<br />**位置**：备份集在卷中的位置。<br />**第一个 LSN**： 备份集中第一个事务的日志序列号。 对于文件备份为空。<br />**最后一个 LSN**： 备份集中最后一个事务的日志序列号。 对于文件备份为空。<br />**检查点 LSN**： 在创建备份时的最新检查点的日志序列号 (LSN)。<br />**完整 LSN**： 最新的完整数据库备份的日志序列号。<br />**开始日期**： 的日期和时间开始备份操作后，按客户端的区域设置显示。<br />**完成日期**： 的日期和时间的备份操作完成时，按客户端的区域设置显示。<br />**大小**: 备份的大小设置以字节为单位。<br />**用户名称**： 执行备份操作的用户的名称。<br /><br /> **过期**： 的日期和备份集过期的时间。<br /><br /> 只有在选中了 **“手动选择”** 框后，这些复选框才启用。 这样，您可以选择要还原的备份集。<br /><br /> 在选中 **“手动选择”** 框后，每次修改还原计划时都会检查还原计划的精确性。 如果备份的顺序不正确，将显示一条错误消息。|  
+|**用于还原的备份集**|显示可用于指定位置的备份集。 每个备份集（单个备份操作的结果）分布在介质集的所有设备上。 默认情况下，会建议制定一个恢复计划，以实现基于所选必需备份集执行的还原操作目标。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用 **msdb** 中的备份历史记录来标识还原数据库所需的备份并创建还原计划。 例如，为了进行数据库还原，还原计划将选择最近的完整数据库备份，然后选择最近的后续差异数据库备份（如果有）。 在完整恢复模式下，还原计划随后将选择所有后续日志备份。<br /><br /> 若要覆盖建议的恢复计划，可以更改网格中的选择下列选项。 任何依赖于已取消选择备份的备份，也将被自动取消选择。<br /><br /> **还原**：<br />                          选中的复选框指示要还原的备份集。<br />**名称**： 备份集的名称。<br />**组件**： 备份组件：**数据库**，**文件**，或**\<空白 >** （对于事务日志）。<br />**类型**：执行的备份类型： **完整备份**、 **差异备份**或 **事务日志备份**。<br />**服务器**：执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。<br />**数据库**： 备份操作涉及的数据库的名称。<br />**位置**：备份集在卷中的位置。<br />**第一个 LSN**： 备份集中第一个事务的日志序列号。 对于文件备份为空。<br />**最后一个 LSN**： 备份集中的最后一个事务的日志序列号。 对于文件备份为空。<br />**检查点 LSN**： 在创建备份时的最新检查点的日志序列号 (LSN)。<br />**完整 LSN**： 最新完整数据库备份的日志序列号。<br />**开始日期**： 的日期和时间开始备份操作的时间，按客户端的区域设置显示。<br />**完成日期**： 的日期和时间的备份操作完成后，按客户端的区域设置显示。<br />**大小**： 以字节为单位设置备份的大小。<br />**用户名称**： 执行备份操作的用户的名称。<br /><br /> **过期**： 日期和备份集过期的时间。<br /><br /> 只有在选中了 **“手动选择”** 框后，这些复选框才启用。 这样，您可以选择要还原的备份集。<br /><br /> 在选中 **“手动选择”** 框后，每次修改还原计划时都会检查还原计划的精确性。 如果备份的顺序不正确，将显示一条错误消息。|  
 |**验证备份介质**|对所选的备份集调用 RESTORE VERIFY_ONLY 语句。<br /><br /> 注意：这是一个长时间运行的操作，并且可以通过在对话框框架上使用进度监视器来跟踪和取消其进度。<br /><br /> 此按钮可用于在还原所选备份文件之前检查其完整性。<br /><br /> 当检查备份集的完整性时，在该对话框左下角的进度状态将显示“正在验证”，而非“正在执行”。|  
   
 ## <a name="compatibility-support"></a>兼容性支持  

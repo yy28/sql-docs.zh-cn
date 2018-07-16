@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [Integration Services]
 - derived columns
@@ -18,13 +18,13 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 569d9edeadfab6f31cf3c4d01bbe57e50c1648fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: e2f2ab9752c9b9761e83c9f9207af36454cd52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215367"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
@@ -67,7 +67,7 @@ ms.locfileid: "36138244"
  [Integration Services 数据类型](../integration-services-data-types.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
- [数据流任务]((../../control-flow/data-flow-task.md)   
+ [数据流任务](../../control-flow/data-flow-task.md)   
  [Integration Services (SSIS) 表达式](../../expressions/integration-services-ssis-expressions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 线性回归模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 线性回归模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09285ab4c675417c2d00be13cfee771bd31d8faa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 289c9a68e6abce019324945cafd9baed544802a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198247"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 所有模型类型挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>了解线性回归模型的结构  
  线性回归模型的结构非常简单。 每个模型均具有表示该模型及其元数据的单一父节点，以及包含每个可预测属性的回归公式的回归树节点 (NODE_TYPE = 25)。  
   
- ![线性回归模型的结构](../media/modelcontentstructure-linreg.gif "线性回归模型的结构")  
+ ![用于线性回归模型的结构](../media/modelcontentstructure-linreg.gif "用于线性回归模型的结构")  
   
  线性回归模型与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树使用相同的算法，但线性回归模型使用不同的参数来约束树，并且仅接受连续属性作为输入。 但是，由于线性回归模型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法，线性回归模型使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树查看器来显示。 有关详细信息，请参阅 [使用 Microsoft 树查看器浏览模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36138768"
 ## <a name="model-content-for-a-linear-regression-model"></a>线性回归模型的模型内容  
  本部分提供的详细信息和示例仅针对挖掘模型内容中与线性回归有特殊关系的列。  
   
- 有关架构行集中的通用列的信息，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
+ 有关架构行集中通用列的信息，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  

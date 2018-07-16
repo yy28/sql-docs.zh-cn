@@ -1,5 +1,5 @@
 ---
-title: AggregationFunction 元素 (ASSL) |Microsoft 文档
+title: AggregationFunction 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c8b28c740e82d661c2664eac576f0e079fd3d46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308437"
 ---
 # <a name="aggregationfunction-element-assl"></a>AggregationFunction 元素 (ASSL)
   包含要用于帐户类型的聚合函数。  
@@ -78,7 +78,7 @@ ms.locfileid: "36017620"
 |*FirstNonEmpty*|通过返回度量值的第一个非空成员聚合度量值。|  
 |*LastNonEmpty*|通过返回度量值的最后一个非空成员聚合度量值。|  
   
- 对应于的允许值为枚举`AggregationFunction`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AggregationFunction>。  
+ 与允许的值相对应的枚举`AggregationFunction`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AggregationFunction>。  
   
 ## <a name="see-also"></a>请参阅  
  [帐户元素&#40;ASSL&#41;](../collections/accounts-element-assl.md)   

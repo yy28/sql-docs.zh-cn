@@ -1,5 +1,5 @@
 ---
-title: 元组元素 (XMLA) |Microsoft 文档
+title: 元组元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: da9614fb01620a3dec5bdff9f63d044652a4749b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e5f6f1dbddea4e5e962d30f352c254b0f2a7a80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254589"
 ---
 # <a name="tuples-element-xmla"></a>Tuples 元素 (XMLA)
-  包含一组[元组](tuple-element-xmla.md)对象[轴](axis-element-xmla.md)用元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[执行](../xml-elements-methods-execute.md)方法。  
+  包含一套[元组](tuple-element-xmla.md)对象的[轴](axis-element-xmla.md)使用的元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,10 +66,10 @@ ms.locfileid: "36126919"
 |子元素|[元组](tuple-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 当客户端应用程序设置`AxisFormat`属性*TupleFormat*，轴表示为一组元组。 每个 `Axis` 元素都包含一个表示该轴上的元组集的 `Tuples` 元素。 通过使用表示每个元组`Tuple`包含的元素[成员](member-element-xmla.md)在轴上的每个层次结构中的元素。  
+ 当客户端应用程序设置`AxisFormat`属性设置为*TupleFormat*，则轴将表示为一组元组。 每个 `Axis` 元素都包含一个表示该轴上的元组集的 `Tuples` 元素。 每个元组通过使用表示`Tuple`元素，其中包含[成员](member-element-xmla.md)在轴上每个层次结构中的元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的结构`Tuples`元素时客户端指定*TupleFormat*或*CustomFormat*为`AxisFormat`XML for Analysis (XMLA) 属性为轴提供以下成员：  
+ 下面的示例演示了结构`Tuples`时客户端指定的元素*TupleFormat*或*CustomFormat*为`AxisFormat`XML for Analysis (XMLA) 属性给轴成员如下：  
   
 |||||  
 |-|-|-|-|  

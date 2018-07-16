@@ -1,5 +1,5 @@
 ---
-title: UpdateCells 元素 (XMLA) |Microsoft 文档
+title: UpdateCells 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - UpdateCells command
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fd96a8652bb5537cfb4f4f116aa86450a34acbe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05b3b1dae8f409f367a88b696accb77484304b4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219977"
 ---
 # <a name="updatecells-element-xmla"></a>UpdateCells 元素 (XMLA)
   更新启用写操作的多维数据集中的单元。  
@@ -69,9 +69,9 @@ ms.locfileid: "36128194"
  有关更新单元的详细信息，请参阅[更新单元 (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [删除元素&#40;XMLA&#41;](drop-element-xmla.md)   
+ [Drop 元素&#40;XMLA&#41;](drop-element-xmla.md)   
  [插入元素&#40;XMLA&#41;](insert-element-xmla.md)   
- [更新元素&#40;XMLA&#41;](update-element-xmla.md)   
+ [Update 元素&#40;XMLA&#41;](update-element-xmla.md)   
  [命令&#40;XMLA&#41;](xml-elements-commands.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: AggregationDesignAttribute 数据类型 (ASSL) |Microsoft 文档
+title: AggregationDesignAttribute 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6d65f5cbd6173218b4d33448ec442002290aad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d723011d0342923e4020ab8655f45abb9a764396
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188914"
 ---
 # <a name="aggregationdesignattribute-data-type-assl"></a>AggregationDesignAttribute 数据类型 (ASSL)
-  定义表示属性之间的关联的基元数据类型和[AggregationDesignDimension](dimension-data-type-assl.md)元素。  
+  定义一个基元数据类型，表示属性之间的关联和一个[AggregationDesignDimension](dimension-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,10 +58,10 @@ ms.locfileid: "36138524"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[AttributeID](../properties/id-element-assl.md)， [EstimatedCount](../properties/estimatedcount-element-assl.md)|  
-|派生元素|[属性](../objects/attribute-element-assl.md)([属性](../collections/attributes-element-assl.md)集合[AggregationDesignDimension](dimension-data-type-assl.md))|  
+|派生元素|[特性](../objects/attribute-element-assl.md)([特性](../collections/attributes-element-assl.md)的集合[AggregationDesignDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [AggregationDesignDimension 数据类型&#40;ASSL&#41;](dimension-data-type-assl.md)   

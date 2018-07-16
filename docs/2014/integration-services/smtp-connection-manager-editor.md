@@ -1,5 +1,5 @@
 ---
-title: SMTP 连接管理器编辑器 |Microsoft 文档
+title: SMTP 连接管理器编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d2215a062328e08c5c7ebc4f1e59b9ade164053b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c67233452d294a6bc0f6f106a59678827ef17b3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235207"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP 连接管理器编辑器
   使用“SMTP 连接管理器编辑器”对话框可以指定简单邮件传输协议 (SMTP) 服务器。  
@@ -47,7 +47,7 @@ ms.locfileid: "36130163"
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
 > [!NOTE]  
->  当使用 Microsoft Exchange 作为 SMTP 服务器，你可能需要设置**使用 Windows 身份验证**到`True`。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
+>  当使用 Microsoft Exchange 作为 SMTP 服务器，您可能需要设置**使用 Windows 身份验证**到`True`。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
   
  **启用安全套接字层 (SSL)**  
  如果选中此选项，则在发送电子邮件时，将使用安全套接字层 (SSL) 来加密通信。  

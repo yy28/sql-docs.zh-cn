@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21f4e4749518036a1c2c40496102617c556f6aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: ab590e5016b7230124aa88a4a7fa73b0fcd7f4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180379"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用聚合转换来聚合数据集中的值
   若要添加并配置聚合转换，则包必须已包含至少一个数据流任务和一个源。  
@@ -58,7 +58,7 @@ ms.locfileid: "36128171"
     > [!NOTE]  
     >  由于转换可以为它的工作预先分配合适的内存数量，因此可通过提供不同值的个数（准确或近似）来优化性能。  
   
-12. 或者，单击 **“高级”** 并更新聚合转换输出的名称。 如果聚合包含`Group By`操作，你可以选择的分组中的键值的近似计数**键范围**列或指定分组中的键值的准确数目**密钥**列。  
+12. 或者，单击 **“高级”** 并更新聚合转换输出的名称。 如果聚合包含`Group By`操作，可以选择分组键值的近似计数**键范围**列或指定分组键值的准确数目**密钥**列。  
   
     > [!NOTE]  
     >  由于转换可以为它的工作预先分配合适的内存数量，因此可通过提供不同值的个数（准确或近似）来优化性能。  
@@ -76,6 +76,6 @@ ms.locfileid: "36128171"
  [聚合转换](aggregate-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
- [数据流任务]((../../control-flow/data-flow-task.md)  
+ [数据流任务](../../control-flow/data-flow-task.md)  
   
   

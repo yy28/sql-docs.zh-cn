@@ -1,5 +1,5 @@
 ---
-title: 浏览 Excel （SQL Server 数据挖掘外接程序） 中的模型 |Microsoft 文档
+title: 在 Excel （SQL Server 数据挖掘外接程序） 中浏览模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - browse models
 - mining models, viewing
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c2badba8baf8abad2c366c6b21a28e2e2a236e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5204d7f7084d6efd457a7928132048a8c1597eec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214357"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>在 Excel 中浏览模型（SQL Server 数据挖掘外接程序）
   ![浏览数据挖掘功能区中的模型按钮](media/dmc-browse.gif "数据挖掘功能区中的浏览模型按钮")  
@@ -36,14 +36,14 @@ ms.locfileid: "36126649"
   
 1.  单击**数据挖掘**选项卡。  
   
-2.  在**模型用法**组中，单击**浏览**。  
+2.  在中**模型使用情况**组中，单击**浏览**。  
   
-3.  在**选择模型**对话框中，从列表中，选择一个挖掘模型，然后单击**下一步**。  
+3.  在中**选择模型**对话框中，从列表中，选择一个挖掘模型，然后单击**下一步**。  
   
-4.  向导将打开**浏览**适合于你选择的模型的类型的窗口。  
+4.  向导将打开**浏览**适合于您选择的模型的类型的窗口。  
   
 ## <a name="list-of-data-mining-viewers"></a>数据挖掘查看器列表  
- 具体取决于你在创建模型时使用的数据挖掘算法**浏览**窗口将如下稍有不同。 该窗口可能包含用于帮助解释结果的图形、包含其他详细信息的图例以及与数据进行交互的控件。  
+ 具体取决于创建模型时使用的数据挖掘算法**浏览**窗口看起来有点不同。 该窗口可能包含用于帮助解释结果的图形、包含其他详细信息的图例以及与数据进行交互的控件。  
   
  以下主题提供如何使用每个查看器（包括解释复杂图形的提示）以及如何更改、复制或使用结果的指南。  
   

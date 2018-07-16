@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: f7651c43569003862f41a62f5e2a9917f3d534a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c2a997ec2df79b600b73be0bd5a33f7144fe119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195357"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>对 SQL Server 标识符进行编码和解码
   SQL Server 分隔标识符有时候包含 Windows PowerShell 路径名称中不支持的字符。 可以通过对其十六进制值进行编码来指定这些字符。  
@@ -34,7 +34,7 @@ ms.locfileid: "36129220"
  **Encode-SqlName** cmdlet 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入。 它输出一个字符串，其中包含所有不受 Windows PowerShell 语言支持且已经用“%xx”编码的字符。 **Decode-SqlName** cmdlet 将经过编码的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入并返回初始标识符。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
- `Encode-Sqlname`和`Decode-Sqlname`cmdlet 仅进行编码或解码，允许在 SQL Server 分隔标识符，但 PowerShell 路径中不支持的字符。 下面是可通过 **Encode-SqlName** 编码并可通过 **Decode-SqlName**解码的字符：  
+ `Encode-Sqlname`和`Decode-Sqlname`cmdlet 仅进行编码或解码的 SQL Server 分隔标识符中允许使用但是 PowerShell 路径中不支持的字符。 下面是可通过 **Encode-SqlName** 编码并可通过 **Decode-SqlName**解码的字符：  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
@@ -66,7 +66,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> 对标识符进行解码  
  **对 PowerShell 路径中的 SQL Server 标识符进行解码**  
   
- 使用`Decode-Sqlname`cmdlet 来替换编码所表示的字符的十六进制编码。  
+ 使用`Decode-Sqlname`cmdlet 将十六进制编码替换该编码所表示的字符。  
   
 ### <a name="examples-decoding"></a>示例（解码）  
  下面的示例返回“Table:Test”：  

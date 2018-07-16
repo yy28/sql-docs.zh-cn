@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (MiningStructureColumn) (ASSL) |Microsoft 文档
+title: Type 元素 (MiningStructureColumn) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ce999716-9487-4348-bc42-270a2026a452
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bac190fcde3dfb4a5e0768e42c7cf0e1b7b6659f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30ce9327fb28e9f452e643ded604f2a8dd72a084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304237"
 ---
 # <a name="type-element-miningstructurecolumn-assl"></a>Type 元素 (MiningStructureColumn) (ASSL)
-  包含的一种[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)元素。  
+  包含的类型[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,16 +66,16 @@ ms.locfileid: "36127397"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*Long*|64 位有符号整数。 此数据类型映射到`Int64`中数据类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 和是 DBTYPE_I8 数据类型在 OLE DB。|  
+|*Long*|64 位有符号整数。 此数据类型映射到`Int64`中的数据类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 和 DBTYPE_I8 数据类型在 OLE DB 中。|  
 |*Boolean*|一个布尔值。 此数据类型映射到 .NET Framework 中的 `Boolean` 数据类型和 OLE DB 中的 DBTYPE_BOOL 数据类型。|  
 |*Text*|Unicode 字符的以 Null 值结束的流。 此数据类型映射到 .NET Framework 中的 `String` 数据类型和 OLE DB 中的 DBTYPE_WSTR 数据类型。|  
-|*双精度*|双精度浮点数字的范围内-1.79 e + 308 到 1.79 e + 308。 此数据类型映射到 .NET Framework 中的 `Double` 数据类型和 OLE DB 中的 DBTYPE_R8 数据类型。|  
-|*日期*|双精度浮点数字的形式存储的日期数据。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 .NET Framework 中的 `DateTime` 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
-|*表*|嵌套表。 此数据类型映射到 OLE DB 中的 DBTYPE_HCHAPTER 数据类型。 **注意：** .NET Framework 中的表列不具有等效的内部数据类型，但改为受`DataReader`类。|  
+|*双精度*|双精度浮点数的范围内-1.79E + 308 到 1.79E + 308 之间。 此数据类型映射到 .NET Framework 中的 `Double` 数据类型和 OLE DB 中的 DBTYPE_R8 数据类型。|  
+|*日期*|日期数据，存储为双精度浮点数字。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 .NET Framework 中的 `DateTime` 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
+|*表*|嵌套表。 此数据类型映射到 OLE DB 中的 DBTYPE_HCHAPTER 数据类型。 **注意：** .NET Framework 中的表列没有等效的内部数据类型，但受`DataReader`类。|  
   
- 对应于的允许值为枚举`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MiningStructureColumnTypes>。  
+ 与允许的值相对应的枚举`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MiningStructureColumnTypes>。  
   
- 对应于的父元素`Type`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MiningStructureColumn>。  
+ 父级对应的元素`Type`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MiningStructureColumn>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

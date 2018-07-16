@@ -1,5 +1,5 @@
 ---
-title: 选项 (文本编辑器的所有语言的选项卡页) |Microsoft 文档
+title: 选项 (文本编辑器-所有语言的选项卡页) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.Tabs
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3e0df6dced5c69f60cbb95abcb5ba8eee78879b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cc5922ed04933dcb7a6b09995353e7fd64a3163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287853"
 ---
-# <a name="options-text-editor---all-languages--tabs-page"></a>选项 (文本编辑器的所有语言的选项卡页)
+# <a name="options-text-editor---all-languages--tabs-page"></a>选项 (文本编辑器-所有语言的选项卡页)
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有五个编辑器的跳格行为。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择“文本编辑器”文件夹，展开“所有语言”文件夹，再单击“制表符”。  
   
 ## <a name="tabbing-options-by-editor"></a>编辑器的跳格选项  

@@ -1,5 +1,5 @@
 ---
-title: 全文搜索断字符和筛选器显著改进了在 SQL Server 2005 和 SQL Server 2008 |Microsoft 文档
+title: 全文搜索断字符和筛选器在 SQL Server 2005 和 SQL Server 2008 中有重大改进 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Full-Text Search]
 - word breakers [Full-Text Search]
 ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d993c20ccd1af008f032b019c40bf673802d2f79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6a28f0ba9c29be0366b34626fd1c28a7f98c404f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315567"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>全文搜索断字符和筛选器在 SQL Server 2005 和 SQL Server 2008 中有重大改进
   断字符和筛选器都进行了重大更改。 对断字符进行了更多改进，其中包括增强的语言覆盖范围和可靠性。  

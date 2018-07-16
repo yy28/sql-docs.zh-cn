@@ -1,5 +1,5 @@
 ---
-title: SessionID 元素 (XMLA) |Microsoft 文档
+title: SessionID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SessionID element
 ms.assetid: 18220e00-76cf-48f6-9465-200465a0c553
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 50e38174e1db7a86f4f06967110e233fec79353e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c7f0466ac9a175a6e31df235fa11cd4662e46b73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207557"
 ---
 # <a name="sessionid-element-xmla"></a>SessionID 元素 (XMLA)
-  标识对其执行父活动会话[取消](../xml-elements-commands/cancel-element-xmla.md)元素。  
+  标识要对其执行父活动的会话[取消](../xml-elements-commands/cancel-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

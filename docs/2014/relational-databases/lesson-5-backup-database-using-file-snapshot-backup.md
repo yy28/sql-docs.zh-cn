@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 将数据库从一个源计算机上的本地到 Windows Azure 中的目标机 |Microsoft 文档
+title: 第 6 课： 将数据库从一个源计算机的本地到 Windows Azure 中的目标计算机 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2f6f0ac359d5358994c0a3a5367c676ca2f83969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207057"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>第 6 课：将数据库从本地源计算机迁移至 Windows Azure 中的目标计算机
-  本课假定您已有另一个 SQL Server，它可能位于另一个本地计算机中或位于 Windows Azure 的虚拟机中。 有关如何在 Windows Azure 中创建 SQL Server 虚拟机的信息，请参阅[设置 Windows Azure 上的 SQL Server 虚拟机](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Windows Azure 中设置 SQL Server 虚拟机后，确保可在另一计算机中通过 SQL Server Management Studio 连接到此虚拟机中的 SQL Server 实例。  
+  本课假定您已有另一个 SQL Server，它可能位于另一个本地计算机中或位于 Windows Azure 的虚拟机中。 有关如何在 Windows Azure 中创建 SQL Server 虚拟机的信息，请参阅[预配 Windows Azure 上的 SQL Server 虚拟机](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Windows Azure 中设置 SQL Server 虚拟机后，确保可在另一计算机中通过 SQL Server Management Studio 连接到此虚拟机中的 SQL Server 实例。  
   
  本课还假定您已完成以下步骤：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36127079"
   
         1.  在源计算机中通过 SQL Server Management Studio 连接到目标计算机。  或者，直接在目标计算机中启动 SQL Server Management Studio。  
   
-        2.  在标准工具栏上，单击**新查询**。  
+        2.  在标准工具栏上单击**新查询**。  
   
         3.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。 以下语句创建 SQL Server 凭据以存储您的存储容器的共享访问证书。  
   
@@ -136,9 +136,9 @@ ms.locfileid: "36127079"
   
 3.  连接到目标计算机，该计算机具有 SQL Server 2014 CTP2 或更高版本。 若要准备目标计算机，需要在目标计算机中创建一个 SQL Server 凭据，使其指向将 TestDB1 放入的同一容器。 如果要在同一个计算机上重新附加，则不需要创建另一个凭据。  
   
-4.  在**对象资源管理器**，右键单击**数据库**单击**附加**。  
+4.  在中**对象资源管理器**，右键单击**数据库**然后单击**附加**。  
   
-5.  在**附加数据库**对话框中，以指定要附加的数据库单击**添加**。 在**定位数据库文件**对话框窗口：  
+5.  在中**附加数据库**对话框框，以指定要附加的数据库中，单击**添加**。 在中**定位数据库文件**对话框窗口：  
   
      对于数据库数据文件位置，键入： `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。  
   

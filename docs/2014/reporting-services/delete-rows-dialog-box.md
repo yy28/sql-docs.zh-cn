@@ -1,5 +1,5 @@
 ---
-title: 删除行对话框 |Microsoft 文档
+title: 删除行对话框的 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
 - "10140"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Delete Rows dialog box
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: db5aa0c16802317a517b41f954c906cf4f400773
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68042821a3e2767a4bc95b573a2b1d46c7fea029
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189974"
 ---
 # <a name="delete-rows-dialog-box"></a>“删除行”对话框
   使用 **“删除行”** 对话框可以删除表、矩阵或列表数据区域中的行。 对于与组关联的行，您还可以删除组定义。  

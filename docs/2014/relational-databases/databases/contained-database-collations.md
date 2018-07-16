@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2858721cdfa3de8c9ebbe2dff0897c1dd806047e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1677c81bb13261e054d352697faeaf96aefd392c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316477"
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
   许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、区分重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../collations/collation-and-unicode-support.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "36124357"
  本主题阐明更改的内容，并考察这一更改可能导致问题的领域。  
   
 ## <a name="non-contained-databases"></a>非包含数据库  
- 所有数据库都有一种默认的排序规则（可在创建或更改数据库时设置）。 此排序规则用于数据库中的所有元数据，以及数据库中所有字符串列的默认值。 用户可以通过选择任何特定的列不同的排序规则`COLLATE`子句。  
+ 所有数据库都有一种默认的排序规则（可在创建或更改数据库时设置）。 此排序规则用于数据库中的所有元数据，以及数据库中所有字符串列的默认值。 用户可以选择任何特定列不同的排序规则使用`COLLATE`子句。  
   
 ### <a name="example-1"></a>示例 1  
  例如，如果我们在北京工作，则可能会使用中文排序规则：  
@@ -62,7 +62,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- 这看起来比较简单，但会引发几个问题。 存储在临时表使用列的排序规则是依赖于在其中创建表的数据库，因为出现问题`tempdb`。 排序规则`tempdb`通常与匹配的实例，不需要的数据库排序规则匹配的排序规则。  
+ 这看起来比较简单，但会引发几个问题。 使用存储在临时表使用列的排序规则是依赖于在其中创建表的数据库，因为出现问题`tempdb`。 排序规则`tempdb`通常与该实例，不需要与数据库排序规则匹配的排序规则。  
   
 ### <a name="example-2"></a>示例 2  
  假设在排序规则为 **Latin1_General** 的实例上使用上述（中文）数据库：  
@@ -122,7 +122,7 @@ END;
   
  如果某个包含数据库的目录排序规则是 **Latin1_General_100_CI_AS_WS_KS_SC**。 则所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的所有包含数据库都采用此排序规则，而且不能更改。  
   
- 数据库排序规则将得到保留，但只能用作用户数据的默认排序规则。 默认情况下，数据库排序规则等同于模型数据库排序规则，但可以更改用户通过`CREATE`或`ALTER DATABASE`命令作为非包含数据库。  
+ 数据库排序规则将得到保留，但只能用作用户数据的默认排序规则。 默认情况下，数据库排序规则等同于模型的数据库排序规则，但可以由用户通过更改`CREATE`或`ALTER DATABASE`命令作为非包含数据库。  
   
  `CATALOG_DEFAULT` 子句中提供了一个新关键字 `COLLATE`。 此关键字用作包含数据库和非包含数据库中当前元数据排序规则的快捷方式。 也就是说，在非包含数据库中，`CATALOG_DEFAULT`将返回当前数据库排序规则，因为元数据按数据库排序规则。 在包含数据库中，这两个值可能是不同的，因为用户可以更改数据库排序规则，以使其不同于目录排序规则。  
   
@@ -155,11 +155,11 @@ JOIN #T2
  之所以能够正常运行，是因为 `T1_txt` 和 `T2_txt` 都按包含数据库的数据库排序规则排列。  
   
 ## <a name="crossing-between-contained-and-uncontained-contexts"></a>跨越包含和非包含上下文  
- 只要包含数据库中的会话仍处于包含状态，就必须保留在它所连接到的数据库内。 此时的行为非常简单。 但是，如果会话跨越包含和非包含上下文，其行为就会变得比较复杂，因为必须将两组规则联系起来。 这会在部分包含的数据库，因为用户可`USE`到另一个数据库。 在此情况下，排序规则之间的差异按以下原则处理。  
+ 只要包含数据库中的会话仍处于包含状态，就必须保留在它所连接到的数据库内。 此时的行为非常简单。 但是，如果会话跨越包含和非包含上下文，其行为就会变得比较复杂，因为必须将两组规则联系起来。 这可以在部分包含数据库中，因为用户可`USE`到另一个数据库。 在此情况下，排序规则之间的差异按以下原则处理。  
   
 -   批处理的排序规则行为由开始执行批处理的数据库决定。  
   
- 请注意，在发出任何命令，包括最初之前，此决定做出`USE`。 也就是说，如果批处理中包含的数据库，但第一个命令开始是`USE`到非包含数据库，排序规则行为将仍可用于批处理。 鉴于此，引用（例如对变量的引用）可能会产生多种可能的结果：  
+ 请注意，此决定之前在发出任何命令，包括最初做出`USE`。 也就是说，如果一批中包含的数据库，但第一个命令开始是`USE`到非包含数据库排序规则行为将仍可用于批处理。 鉴于此，引用（例如对变量的引用）可能会产生多种可能的结果：  
   
 -   引用可能只找到一个匹配项。 在此情况下，该引用可正常操作。  
   
@@ -239,7 +239,7 @@ GO
  对象名“#A”无效。  
   
 ### <a name="example-3"></a>示例 3  
- 下面的示例演示引用找到多个原本不同的匹配项的情况。 首先，我们以启动`tempdb`（具有相同的区分大小写排序规则与我们实例） 并执行以下语句。  
+ 下面的示例演示引用找到多个原本不同的匹配项的情况。 首先，我们开始`tempdb`（具有相同的区分大小写排序规则与实例） 并执行以下语句。  
   
 ```  
 USE tempdb;  
