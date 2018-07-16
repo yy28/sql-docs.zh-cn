@@ -1,5 +1,5 @@
 ---
-title: 导出数据 (Master Data Services) |Microsoft 文档
+title: 导出数据 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 656578a35e70b8371056330e0edec69073816687
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2d42511c3e7fecfba3f1a8fd92e9f8633564bf17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332157"
 ---
 # <a name="exporting-data-master-data-services"></a>导出数据 (Master Data Services)
   您可以通过创建订阅视图将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据导出到订阅系统。 然后，任何订阅系统都可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中查看发布的数据。 有关视图的详细信息，请参阅 [视图](../relational-databases/views/views.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 生成的命名集的 MDX (MDX) |Microsoft 文档
+title: 生成的命名集的 MDX (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], named sets
 - named sets [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a05b343150cf72a760ba5eb9de24651f0f5db9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f990def60c377ca84b5dde593470634f3927b496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297457"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>在 MDX 中生成命名集 (MDX)
   集表达式可能是较长且非常复杂的声明，因此很难理解。 或者，可能非常频繁地使用集表达式，以致于重复定义集成为一种负担。 为了使长而复杂的表达式或常用的表达式更易于使用，多维表达式 (MDX) 允许使用“命名集”表达式。  
@@ -45,7 +45,7 @@ ms.locfileid: "36016690"
   
 ## <a name="see-also"></a>请参阅  
  [SELECT 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [创建 SET 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
+ [CREATE SET 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
  [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

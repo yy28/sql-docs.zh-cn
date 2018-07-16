@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 扩展事件 (XEvents) 监视 Analysis Services |Microsoft 文档
+title: 使用 SQL Server 扩展事件 (XEvents) 监视 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332797"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>使用 SQL Server 扩展事件 (XEvents) 监视 Analysis Services
-  Analysis Services 跟踪通过提供功能的使用情况[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
+  Analysis Services 提供了通过使用跟踪功能[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
   
  扩展事件是针对服务器系统的高度可伸缩和可配置的事件基础结构。 扩展事件是使用非常少的性能资源的轻型性能监视系统。  
   
- 所有 Analysis Services 事件可以捕获和对特定的使用者，如中定义的目标[扩展事件](../../relational-databases/extended-events/extended-events.md)，通过 Xevent。  
+ 所有 Analysis Services 可以捕获事件和目标中定义特定的使用者[扩展事件](../../relational-databases/extended-events/extended-events.md)，通过 Xevent。  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>在 Analysis Services 中启动扩展事件  
  通过使用如下的 XMLA 创建对象脚本命令启用扩展事件跟踪：  

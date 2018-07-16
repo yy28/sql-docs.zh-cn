@@ -1,5 +1,5 @@
 ---
-title: 文件和版本号 |Microsoft 文档
+title: 文件和版本号 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63602af6a7d798086c3e41d3796b20a2f71d6950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dfd73cbcb236c30f9a88a236ee87bf5cedecc7f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169030"
 ---
 # <a name="files-and-version-numbers"></a>文件和版本号
   所有所需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO) 组件安装的实例的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端或服务器。 SMO 实现于几个托管程序集中。 您可以在客户端或服务器上开发 SMO 应用程序。  

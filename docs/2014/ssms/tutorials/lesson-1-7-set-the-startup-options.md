@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9896d01e2a1352806b1212ffb1f207a8d42bc63b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 719682f5b5f8b595c13f3bdbac587023e52e56ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206397"
 ---
 # <a name="set-the-startup-options"></a>设置启动选项
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可配置为在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时打开首选配置的设计图面。 通过将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 配置为打开首选配置，您可以节省时间。  

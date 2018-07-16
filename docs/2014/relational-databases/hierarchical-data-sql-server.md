@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7294a3d1db75d8ef2596bf7796fa706a9a9bc269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f188b3824492ca28fdf37d4e26d2387fbd8e923a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322387"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
-  内置`hierarchyid`数据类型，从而更便于存储和查询的分层数据。 `hierarchyid` 针对表示树，最常见的层次结构数据类型进行了优化。  
+  内置`hierarchyid`数据类型，从而更便于存储和查询分层数据。 `hierarchyid` 最适宜表示树，树是最常见的分层数据类型。  
   
  层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。 通常存储在数据库中的层次结构数据示例包括以下内容：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36014780"
   
 -   按深度优先顺序进行比较  
   
-     给定两个`hierarchyid`值和**b**， **< b**意味着之前的树的深度优先遍历中传递 b。 `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
+     给定两个`hierarchyid`值并**b**， **< b**意味着之前 b 树的深度优先遍历中。 `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
   
 -   支持任意插入和删除  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36014780"
 ##  <a name="limits"></a> hierarchyid 的局限性  
  `hierarchyid`数据类型具有以下限制：  
   
--   类型的列`hierarchyid`不自动表示树。 由应用程序来生成和分配 `hierarchyid` 值，使行与行之间的所需关系反映在这些值中。 某些应用程序可能具有 `hierarchyid` 类型的列，该列指示在另一个表中定义的层次结构中的位置。  
+-   类型的列的`hierarchyid`不会自动表示树。 由应用程序来生成和分配 `hierarchyid` 值，使行与行之间的所需关系反映在这些值中。 某些应用程序可能具有 `hierarchyid` 类型的列，该列指示在另一个表中定义的层次结构中的位置。  
   
 -   它是由应用程序来管理生成和分配的并发`hierarchyid`值。 不能保证列中的 `hierarchyid` 值是唯一的，除非应用程序使用唯一键约束或应用程序自身通过自己的逻辑来强制实现唯一性。  
   
--   所表示的层次结构关系`hierarchyid`值不像外键关系那样强制实现。 可能会出现下面这种层次结构关系而且有时这种关系是合理的：A 具有子级 B，然后删除了 A，导致 B 与一条不存在的记录之间存在关系。 如果这种行为不可接受，应用程序在删除父级之前必须先查询其是否有后代。  
+-   所表示的层次结构关系`hierarchyid`值不会像外键关系那样强制执行。 可能会出现下面这种层次结构关系而且有时这种关系是合理的：A 具有子级 B，然后删除了 A，导致 B 与一条不存在的记录之间存在关系。 如果这种行为不可接受，应用程序在删除父级之前必须先查询其是否有后代。  
   
   
 ##  <a name="alternatives"></a> 何时使用 hierarchyid 的替代项  
@@ -102,17 +102,17 @@ GO
   
 -   使用 `hierarchyid` 进行直接后代查询时速度稍慢。  
   
--   移动非叶节点是慢`hierarchyid`。  
+-   移动非叶节点时速度较慢的`hierarchyid`。  
   
 -   使用 `hierarchyid` 插入非叶节点和插入或移动叶节点具有相同的复杂度。  
   
  当存在以下情况时，使用父/子可能更好：  
   
--   键的大小非常重要。 对于相同数量的节点，`hierarchyid`值为等于或大于整型系列 (`smallint`， `int`， `bigint`) 值。 这是仅在极少数情况下，使用父/子的原因，因为`hierarchyid`具有显著更好的 I/O 和 CPU 复杂性比使用父/子结构时所需的公用表表达式的引用地址。  
+-   键的大小非常重要。 对于相同数量的节点，`hierarchyid`值为等于或大于整型系列 (`smallint`， `int`， `bigint`) 值。 这是仅在极少数情况下，使用父/子的原因，因为`hierarchyid`具有显著更好的 I/O 和 CPU 复杂性都使用父/子结构时所需的公用表表达式的地址。  
   
 -   很少跨层次结构的不同部分执行查询。 也就是说，通常仅对层次结构中的单个点进行查询。 在这些情况下，存储在一起并不重要。 例如，如果组织表仅用于为各个雇员处理工资单，则使用父/子更好。  
   
--   非叶子树移动频繁并且性能非常重要。 在父/子表示形式中，更改层次结构中行的位置将影响单个行。 更改中的行的位置`hierarchyid`使用情况影响*n*行，其中*n*移动的子树中的节点数。  
+-   非叶子树移动频繁并且性能非常重要。 在父/子表示形式中，更改层次结构中行的位置将影响单个行。 更改行中的位置`hierarchyid`使用情况会影响*n*行，其中*n*要移动的子树中的节点数。  
   
      如果非叶子树移动频繁并且性能非常重要，但多数移动操作都是在比较明确的层次结构级别上进行的，请考虑将较高和较低的级别拆分成两个层次结构。 这样，所有的移动操作都是移到较高层次结构的叶级。 例如，假设有一个由服务承载的网站的层次结构。 各网站包含许多以分层方式排列的页面。 承载的网站可能移动到网站层次结构中的其他位置，但是从属的页面很少会重新排列。 这种情况可表示如下：  
   
@@ -126,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建 XML 索引时，`hierarchyid`值用于内部表示层次结构中的位置。  
+ XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建 XML 索引时，`hierarchyid`在内部使用的值来表示层次结构中的位置。  
   
  当满足以下所有条件时，使用 XML 数据类型会更好：  
   
@@ -269,11 +269,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 相关任务  
   
 ###  <a name="migrating"></a> 从父/子迁移到 hierarchyid  
- 大多数树都使用父/子结构来表示。 将从父/子结构迁移到表使用的最简单办法`hierarchyid`是使用临时列或临时表来跟踪每个级别的层次结构节点的编号。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
+ 大多数树都使用父/子结构来表示。 从父/子结构迁移到表使用的最简单办法`hierarchyid`是使用临时列或临时表来跟踪每个级别的层次结构节点的编号。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理树  
- 尽管`hierarchyid`列不一定表示树，应用程序可以很容易地确保此。  
+ 尽管`hierarchyid`列不一定表示树中，应用程序可以轻松地确保此。  
   
 -   生成新的值时，请执行下列操作之一：  
   

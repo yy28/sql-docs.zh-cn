@@ -25,13 +25,13 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a964501cd247007b2b7de6cd277977701bc0539
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 821d47f8a112efb3c2f70a094c139fdc7936ab32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203987"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)。  
@@ -64,9 +64,9 @@ ms.locfileid: "36129708"
   
     -   `Connections` 集合类，包含对在“脚本转换编辑器”的“连接管理器”页上选择的连接的引用。  
   
-    -   A`Variables`包含对输入中的变量的引用的集合类`ReadOnlyVariable`和`ReadWriteVariables`属性**脚本**页**脚本转换编辑器**.  
+    -   一个`Variables`集合类，包含对中输入的变量的引用`ReadOnlyVariable`并`ReadWriteVariables`上的属性**脚本**页**脚本转换编辑器**.  
   
--   `BufferWrapper`项目项包含一个类继承自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>为每个输入和输出上配置**输入和输出**页**脚本转换编辑器**。 其中每个类都包含与已配置的输入和输出列对应的类型化取值函数属性以及包含这些列的数据流缓冲区。  
+-   `BufferWrapper`项目项包含的类的继承自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>为每个输入和输出上配置**输入和输出**页**脚本转换编辑器**。 其中每个类都包含与已配置的输入和输出列对应的类型化取值函数属性以及包含这些列的数据流缓冲区。  
   
  有关如何使用这些对象、 方法和属性的信息，请参阅 [了解脚本组件对象 Model]((understanding-the-script-component-object-model.md)。 有关如何在特定类型的脚本组件中使用这些类的方法和属性的信息，请参阅[其他脚本组件示例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)一节。 该示例主题还包含完整的代码示例。  
   
@@ -175,7 +175,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |变量|使用 `Variables` 项目项的 `ComponentWrapper` 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 `Variables` 类的 `ScriptMain` 属性公开。<br /><br /> `PreExecute` 方法仅可访问只读变量。 `PostExecute` 方法既可以访问只读变量，又可以访问读/写变量。|  
 |连接|使用 `Connections` 项目项的 `ComponentWrapper` 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 `Connections` 类的 `ScriptMain` 属性公开。|  
-|事件|引发事件，通过使用<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>属性`ScriptMain`类和**激发\<X >** 方法<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>接口。|  
+|事件|通过引发事件<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>的属性`ScriptMain`类和**火灾\<X >** 方法<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>接口。|  
 |日志记录|使用 `ScriptMain` 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法执行日志记录。|  
   
 ## <a name="debugging-the-script-component"></a>调试脚本组件  
@@ -189,11 +189,11 @@ public class ScriptMain : UserComponent
   
  还可以使用以下方法监视脚本组件的执行：  
   
--   中断执行，并通过使用显示模式消息`MessageBox.Show`中的方法**System.Windows.Forms**命名空间。 （调试过程结束后，请删除此代码。）  
+-   中断执行并通过使用显示模式消息`MessageBox.Show`中的方法**System.Windows.Forms**命名空间。 （调试过程结束后，请删除此代码。）  
   
 -   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息。 FireProgress 事件的消息显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“进度”选项卡中。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。  
   
--   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅 [在脚本 Component]((logging-in-the-script-component.md) 日志记录。  
+-   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅 [中的日志记录脚本 Component]((logging-in-the-script-component.md)。  
   
  如果你只想检查配置为源或转换的脚本组件的输出，而不将数据保存到目标，则可以使用[行计数转换](../../data-flow/transformations/row-count-transformation.md)停止数据流，并向脚本组件的输出附加一个数据查看器。 有关数据查看器的信息，请参阅[调试数据流](../../troubleshooting/debugging-data-flow.md)。  
   
@@ -213,7 +213,7 @@ public class ScriptMain : UserComponent
   
 -   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](http://go.microsoft.com/fwlink/?LinkId=215661)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)  

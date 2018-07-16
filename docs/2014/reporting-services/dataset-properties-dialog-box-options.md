@@ -1,5 +1,5 @@
 ---
-title: 数据集属性对话框中，选项 |Microsoft 文档
+title: 数据集属性对话框中，选项 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d0f83c86076cc968d1b8896f3c857b9925fcbb81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7018038707462c2cf32a733b31cf66d25a275bfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319737"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>“数据集属性”对话框 -&gt;“选项”
-  选择**选项**上**DatasetProperties**对话框可以更改数据选项，如排序规则选项和小计，查询。 有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+  选择**选项**上**集**对话框可以更改数据选项，如排序规则选项和小计，查询。 有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="options"></a>“常规”  
  **排序规则**  
@@ -44,7 +44,7 @@ ms.locfileid: "36015427"
  选择一个用于决定是否区分全半角的值。 此选项指示数据是否区分全半角；可设置为 True、False 或“自动”。默认值为“自动”，指示报表服务器应在报表运行时尝试从数据提供程序派生该值。 如果数据访问接口不支持区分全半角的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
   
  **将小计解释为详细信息行**  
- 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值，**自动**，指示小计行应视为与详细信息行中，是否报表不使用`Aggregate`（） 函数，就可以访问在数据集中的任何字段。 如果希望将小计行解释为聚合行，请选择 **False**。 如果你想要被解释为详细信息行的小计行并且你知道它们不使用`Aggregate`（) 函数中，选择**True**。  
+ 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值**自动**，指示是否报表不使用，应将小计行视为为详细信息行`Aggregate`（） 函数来访问数据集中的任何字段。 如果希望将小计行解释为聚合行，请选择 **False**。 如果希望将小计行解释为详细信息行，并且知道它们不使用`Aggregate`（) 函数中，选择**True**。  
   
 ## <a name="see-also"></a>请参阅  
  [设置报表或文本框的区域设置&#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   

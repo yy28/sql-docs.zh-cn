@@ -1,5 +1,5 @@
 ---
-title: 源元素 （度量值） (ASSL) |Microsoft 文档
+title: Source 元素 (Measure) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed41316f62469268d86a89d0c0a5e59f07c8f726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d4e374490fdfe04e5da39a0f4e9424b2cb1ccde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323207"
 ---
 # <a name="source-element-measure-assl"></a>Source 元素 (Measure) (ASSL)
-  包含包含的值的源的详细信息[度量值](../objects/measure-element-assl.md)元素。  
+  包含的值的源的详细信息[度量值](../objects/measure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36018484"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Source`的`DataItem`，它用作`Source`的`Measure`，又可以是类型[RowBinding](../data-type/binding-data-type-assl.md)， [ColumnBinding](../data-type/columnbinding-data-type-assl.md)， [MeasureBinding](../data-type/measurebinding-data-type-assl.md)，或[CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md)。  
+ `Source`的`DataItem`，它可作为`Source`的`Measure`，又可以为类型[RowBinding](../data-type/binding-data-type-assl.md)， [ColumnBinding](../data-type/columnbinding-data-type-assl.md)， [MeasureBinding](../data-type/measurebinding-data-type-assl.md)，或[CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md)。  
   
  有关其他信息`DataItem`类型，包括 ASSL 对象和属性表`DataItem`类型，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 对父级的对应的元素`Source`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Measure>。  
+ 父级对应的元素`Source`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Measure>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

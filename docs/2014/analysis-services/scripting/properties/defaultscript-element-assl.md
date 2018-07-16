@@ -1,5 +1,5 @@
 ---
-title: DefaultScript 元素 (ASSL) |Microsoft 文档
+title: DefaultScript 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0a26b8b703636aebb6d3701c5c7c99d24a25ade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5de4eca3e226e6eddbe811af5dc089b1965cbd08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200057"
 ---
 # <a name="defaultscript-element-assl"></a>DefaultScript 元素 (ASSL)
-  标识默认[MdxScript](../objects/mdxscript-element-assl.md)中的元素[mdxscript 被](../collections/mdxscripts-element-assl.md)集合。  
+  标识默认[MdxScript](../objects/mdxscript-element-assl.md)中的元素[MdxScripts](../collections/mdxscripts-element-assl.md)集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36138735"
 ## <a name="remarks"></a>Remarks  
  将一个脚本的 `DefaultScript` 值设置为 `True` 将使 `DefaultScript` 集合中所有其他 `False` 元素的 `MdxScript` 值设置为 `MdxScripts`。  
   
- 对应于的父元素`DefaultScript`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MdxScript>。  
+ 父级对应的元素`DefaultScript`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MdxScript>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

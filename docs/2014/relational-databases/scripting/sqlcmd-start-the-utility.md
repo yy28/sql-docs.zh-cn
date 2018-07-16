@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb2234b466a41b58cc1dd137950514de4b7aa458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 67212f7457e029b18f39b15c6f105ed315f28251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248617"
 ---
 # <a name="start-the-sqlcmd-utility"></a>启动 sqlcmd 实用工具
   开始使用 `sqlcmd` 之前，必须先启动该实用工具并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个实例。 可以连接到默认实例，也可以连接到命名实例。 第一步是启动 `sqlcmd` 实用工具。  
@@ -42,7 +42,7 @@ ms.locfileid: "36124058"
   
      现在，您已与计算机上运行的默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立了可信连接。  
   
-     **1 >** 是`sqlcmd`指定的行号的提示。 每按一次 Enter，该数字就会加 1。  
+     **1 >** 是`sqlcmd`提示符，可以指定行号。 每按一次 Enter，该数字就会加 1。  
   
 4.  若要结束`sqlcmd`会话中，键入`EXIT`在`sqlcmd`提示符。  
   

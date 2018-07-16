@@ -1,28 +1,27 @@
 ---
-title: Getting Started with AlwaysOn 可用性组 (SQL Server) |Microsoft 文档
+title: 开始使用 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: 51
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c4dff6389577217b8b7a6d1cb447507c27f72ff5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3700a2e2d7b96a572fd8c72210a5d287ca56cf6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237637"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组入门 (SQL Server)
   本主题将介绍一些步骤，包括用于配置 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的实例以便支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的步骤，以及用于创建、管理和监视可用性组的步骤。  
@@ -35,7 +34,7 @@ ms.locfileid: "36123703"
   
 -   [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
--   [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+-   [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ##  <a name="ConfigSI"></a> 配置 SQL Server 以支持 AlwaysOn 可用性组的实例  
   
@@ -101,10 +100,10 @@ ms.locfileid: "36123703"
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组&#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组的服务器实例配置&#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
+ [为 AlwaysOn 可用性组配置服务器实例&#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
  [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
  [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组的 TRANSACT-SQL 语句概述&#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
- [AlwaysOn 可用性组的 PowerShell Cmdlet 概述&#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [为 AlwaysOn 可用性组的 TRANSACT-SQL 语句概述&#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
+ [用于 AlwaysOn 可用性组的 PowerShell Cmdlet 概述&#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

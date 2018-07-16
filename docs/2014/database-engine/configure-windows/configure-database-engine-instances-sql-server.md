@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d72adcfae0854807191e8cfa4faeac401f8bf52e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1ab5c7785fed8f22a12e265426d485fd65ed9a66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325087"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>配置数据库引擎实例 (SQL Server)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的每个实例都必须经过配置，以符合为该实例所承载的数据库所定义的性能和可用性要求。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包括一些配置选项，这些选项控制资源使用情况等行为和诸如审核或触发器递归等功能的可用性。  
@@ -35,7 +35,7 @@ ms.locfileid: "36025995"
 |----------------------|-----------|  
 |说明各种实例配置选项以及如何查看或更改这些选项。|[服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)|  
 |说明如何查看和配置实例中新的数据文件和日志文件的默认位置。|[查看或更改数据文件和日志文件的默认位置 (SQL Server Management Studio)](view-or-change-the-default-locations-for-data-and-log-files.md)|  
-|说明如何将 SQL Server 配置为使用软件 NUMA。|[SQL Server 配置为使用软件 NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)|  
+|说明如何将 SQL Server 配置为使用软件 NUMA。|[SQL Server 配置为使用软件 NUMA， &#40;SQL Server&#41;](soft-numa-sql-server.md)|  
 |说明如何将 TCP/IP 端口映射到非一致性内存访问 (NUMA) 节点关联。|[将 TCP IP 端口映射到 NUMA 节点 (SQL Server)](map-tcp-ip-ports-to-numa-nodes-sql-server.md)|  
 |说明如何启用 Windows“锁定内存页”策略。 此策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。|[启用“锁定内存页”选项 (Windows)](enable-the-lock-pages-in-memory-option-windows.md)|  
   

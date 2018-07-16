@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1f081c456b1683622cbdeec8b9187325add3fe16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d35860f1e220d3b4dca43e72ffbefb440eb16cdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303729"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>报表生成器中的报表部件和数据集
   在报表生成器中，在报表中包含数据的最简单方式是从报表部件库添加报表部件。 报表部件包含它们所依赖的数据集，这些数据集称为 *相关数据集*。 相关数据集基于共享数据源，并且可以是嵌入数据集或共享数据集。  
@@ -66,7 +66,7 @@ ms.locfileid: "36014958"
 ## <a name="see-also"></a>请参阅  
  [报表设计视图（报表生成器）](../report-builder/report-design-view-report-builder.md)   
  [安全性（报表生成器）](../report-builder/security-report-builder.md)   
- [报表部件&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [报表部件的&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

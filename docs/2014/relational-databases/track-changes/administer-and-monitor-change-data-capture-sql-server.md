@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc5accd969ae0a19d99610edca0023337321f657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ebc75d5750d77ac4166375f47b1301d7686f1a99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244567"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
   本主题介绍如何管理和监视变更数据捕获。  
   
 ##  <a name="Capture"></a> 捕获作业  
- 捕获作业可通过运行无参数存储过程 `sp_MScdc_capture_job` 来启动。 此存储过程启动时，将从 msdb.dbo.cdc_jobs 中为捕获作业提取 *maxtrans*、 *maxscans*、 *continuous*和 *pollinginterval* 的配置值。 这些配置值然后作为参数传递到存储过程`sp_cdc_scan`。 这用于调用`sp_replcmds`执行日志扫描。  
+ 捕获作业可通过运行无参数存储过程 `sp_MScdc_capture_job` 来启动。 此存储过程启动时，将从 msdb.dbo.cdc_jobs 中为捕获作业提取 *maxtrans*、 *maxscans*、 *continuous*和 *pollinginterval* 的配置值。 这些配置值然后作为参数传递给存储过程`sp_cdc_scan`。 这用于调用`sp_replcmds`执行日志扫描。  
   
 ### <a name="capture-job-parameters"></a>捕获作业参数  
  若要了解捕获作业行为，必须了解 `sp_cdc_scan` 使用可配置参数的方式。  
@@ -41,10 +41,10 @@ ms.locfileid: "36129173"
  *maxscans* 参数用于指定在返回 (continuous = 0) 或执行 waitfor (continuous = 1) 之前为完成日志扫描可以尝试的最大扫描循环次数。  
   
 #### <a name="continous-parameter"></a>continous 参数  
- *连续*参数控制是否`sp_cdc_scan`会在日志或执行的最大扫描循环 （单次触发模式） 数后将中的控件。 它还控制是否`sp_cdc_scan`继续运行之前显式停止 （连续模式）。  
+ *连续*参数控制是否`sp_cdc_scan`完成日志扫描或执行扫描循环 （单次触发模式） 的最大次数之后放弃控制中的。 它还控制是否`sp_cdc_scan`继续运行，直到显式停止 （持续模式）。  
   
 ##### <a name="one-shot-mode"></a>单次触发模式  
- 在单次触发模式，捕获作业请求`sp_cdc_scan`执行最多*maxtrans*扫描尝试完成日志并返回。 日志中存在的超出 *maxtrans* 数量的任何事务将在稍后的扫描中处理。  
+ 在单次触发模式中，捕获作业请求`sp_cdc_scan`执行最多*maxtrans*扫描以尝试完日志，然后返回。 日志中存在的超出 *maxtrans* 数量的任何事务将在稍后的扫描中处理。  
   
  单次触发模式用于待处理事务量已知的受控测试中，优点是作业完成后将自动关闭。 建议不要将单次触发模式用于生产。 这是因为它依赖于作业计划来管理扫描循环的运行频率。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "36129173"
  如果将单次触发模式用于控制日志扫描，则日志处理间隔的秒数将不得不受作业计划的控制。 如果需要采用这种方式，则以连续模式运行捕获作业是一种管理重新计划日志扫描的更好方式。  
   
 ##### <a name="continuous-mode-and-the-polling-interval"></a>连续模式和轮询间隔  
- 在连续模式下，捕获作业请求`sp_cdc_scan`连续运行。 这使得存储过程可通过提供 maxtrans 和 maxscans 值以及日志处理间隔（轮询间隔）的秒数值来管理自己的等待循环。 在此模式下运行，捕获作业会保持活动状态，执行`WAITFOR`日志扫描间隔。  
+ 在连续模式下，捕获作业将请求`sp_cdc_scan`连续运行。 这使得存储过程可通过提供 maxtrans 和 maxscans 值以及日志处理间隔（轮询间隔）的秒数值来管理自己的等待循环。 在此模式下运行，捕获作业将保持活动状态，执行`WAITFOR`日志扫描间隔。  
   
 > [!NOTE]  
 >  如果轮询间隔的值大于 0，则重复执行单次触发作业的吞吐量的同一上限也适用于连续模式下的作业操作。 也就是说，将 (*maxtrans* \* *maxscans*) 除以非零轮询间隔即可得到捕获作业可以处理的平均事务数的上限。  
   
 ### <a name="capture-job-customization"></a>捕获作业自定义  
- 对于捕获作业，可以应用其他逻辑来确定是立即开始新扫描，还是在启动新扫描之前强制休眠，而非依赖于固定的轮询间隔。 该选择可以仅基于一天中的某个时间，可以在峰值活动期间强制长时间休眠，甚至可以在一天即将结束时（此时为完成白天处理并为夜间运行做准备的关键时刻）将轮询间隔改为 0。 也可以监视捕获进程进度，以确定何时已对午夜提交的所有事务进行扫描并将其存放在更改表中。 这将导致捕获作业结束，该作业可由计划的每日重启来重新启动。 通过将交付的作业步骤调用`sp_cdc_scan`通过的用户已编写包装器调用`sp_cdc_scan`，可以通过很少的额外工作来获取高度自定义的行为。  
+ 对于捕获作业，可以应用其他逻辑来确定是立即开始新扫描，还是在启动新扫描之前强制休眠，而非依赖于固定的轮询间隔。 该选择可以仅基于一天中的某个时间，可以在峰值活动期间强制长时间休眠，甚至可以在一天即将结束时（此时为完成白天处理并为夜间运行做准备的关键时刻）将轮询间隔改为 0。 也可以监视捕获进程进度，以确定何时已对午夜提交的所有事务进行扫描并将其存放在更改表中。 这将导致捕获作业结束，该作业可由计划的每日重启来重新启动。 通过将替换为交付的作业步骤调用`sp_cdc_scan`的用户已编写包装器调用`sp_cdc_scan`，只需少量的额外操作即可获得高度自定义的行为。  
   
 ##  <a name="Cleanup"></a> 清除作业  
  本部分提供有关变更数据捕获清除作业工作方式的信息。  
@@ -71,15 +71,15 @@ ms.locfileid: "36129173"
 ### <a name="structure-of-the-cleanup-job"></a>清除作业的结构  
  变更数据捕获使用基于保持期的清理策略来管理更改表的大小。 清除机制包含一个在启用第一个数据库表时所创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业。 单个清除作业可处理所有数据库更改表的清除工作并将相同的保持值应用到所有定义的捕获实例。  
   
- 清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储的过程启动的清理作业配置的保持期和阈值值中提取，从而`msdb.dbo.cdc_jobs`。 保持值用于计算更改表的新低水印。 指定的分钟数是从最大值中的减去*tran_end_time*值从`cdc.lsn_time_mapping`表以获取表示为日期时间值的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果在表中，由多个项共享相同的提交时间`lsn`对应的条目，具有最小`lsn`被选作新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
+ 清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储的过程通过为清除作业从提取配置的保持期和阈值来启动`msdb.dbo.cdc_jobs`。 保持值用于计算更改表的新低水印。 指定的分钟数是从最大值减去*tran_end_time*值从`cdc.lsn_time_mapping`表以获取表示为日期时间值的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果在表中，由多个项共享相同的提交时间`lsn`的对应于具有最小的条目`lsn`选择作为新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
   
 > [!NOTE]  
->  使用最近事务的提交时间作为计算新低水印的基准的优点在于：它可使更改在更改表中保留指定的时间。 即使在捕获进程运行落后时也会出现这种情况。 具有相同提交时间作为当前低水印的所有项会都继续保留在更改表通过选择的最小`lsn`具有共享的提交时间为实际低水印。  
+>  使用最近事务的提交时间作为计算新低水印的基准的优点在于：它可使更改在更改表中保留指定的时间。 即使在捕获进程运行落后时也会出现这种情况。 具有相同的提交时间与当前低水印的所有项会都继续在更改表的最小选择`lsn`具有共享的提交时间为实际低水印。  
   
  执行清除时，所有捕获实例的低水印会在单个事务中初次更新。 然后，它会尝试从更改表和 cdc.lsn_time_mapping 表中删除过时项。 可配置的阈值用于限制使用任何单个语句中所删除的项数。 对任何单个表执行删除操作失败并不会阻止对其他表尝试执行该操作。  
   
 ### <a name="cleanup-job-customization"></a>清除作业自定义  
- 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于`lsn`而不是时间，任何数量的策略可以用于确定的最小`lsn`要保存在更改表。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同`lsn`来清除所有数据库的更改表，调用基础清除过程，可以还会清理在捕获实例级别。  
+ 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于`lsn`而不是时间，任何数量的策略可用于确定的最小`lsn`要保存更改表中。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同`lsn`来清除所有数据库的更改表，基础清除过程，还可以进行调用以清理在捕获实例级别。  
   
 ##  <a name="Monitor"></a> 监视变更数据捕获进程  
  通过监视变更数据捕获进程，可以确定更改是否正以合理的滞后时间正确写入更改表中。 监视还可以帮助您标识可能发生的任何错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两个动态管理视图，用于帮助你监视变更数据捕获： [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) 和 [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)。  

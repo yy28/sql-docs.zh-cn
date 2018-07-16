@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48164ff35e06c6aa9cd2a8ac0c9ba39fcf37310e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 832034620db797bdbd602cf8f7c99fd51c804bbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175169"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
   在本教程中，您可以练习以不同方式设置文本格式。 在设置了具有数据源和数据集的空白报表后，您可以选择要完成的步骤。  
@@ -32,23 +32,23 @@ ms.locfileid: "36138791"
   
  您在本教程中创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](http://go.microsoft.com/fwlink/?LinkId=184851)。  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
   
 ### <a name="set-up-the-report"></a>设置报表  
- 1. [创建空白报表使用数据源和数据集](#CreateReport)  
+ 1. [创建一个空白报表具有数据源和数据集](#CreateReport)  
   
- 2. [将字段添加到报表设计图面，（不正确，然后正确）](#AddField)  
+ 2. [向报表设计图面添加字段 （故意犯错，然后纠正）](#AddField)  
   
- 3. [将表添加到报表设计图面](#AddTable)  
+ 3. [向报表设计图面添加表](#AddTable)  
   
 ### <a name="pick-and-choose"></a>选取和选择  
  [向报表添加超链接](#AddHyperlink)  
   
- [报表中的旋转文本](#RotateText)  
+ [旋转报表中的文本](#RotateText)  
   
  [使用 HTML 格式显示文本](#FormatHTML)  
   
- [设置货币的格式](#FormatCurrency)  
+ [设置货币格式](#FormatCurrency)  
   
  [保存报表](#Save)  
   
@@ -57,11 +57,11 @@ ms.locfileid: "36138791"
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="CreateReport"></a> 创建空白报表使用数据源和数据集  
+##  <a name="CreateReport"></a> 创建一个空白报表具有数据源和数据集  
   
 #### <a name="to-create-a-blank-report"></a>创建空白报表  
   
-1.  单击**启动**，指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
+1.  单击**启动**，依次指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击**报表生成器**。  
   
     > [!NOTE]  
     >  此时应显示 **“入门”** 对话框。 如果未显示该对话框，则从“报表生成器”按钮，单击 **“新建”**。  
@@ -81,7 +81,7 @@ ms.locfileid: "36138791"
 4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = \<servername>  
   
     > [!NOTE]  
-    >  表达式\<servername >，对于示例 Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 本教程不需要具体数据；只需要与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库的连接。 如果你已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    >  表达式\<服务器名 >，例如，Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 本教程不需要具体数据；只需要与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库的连接。 如果你已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,18 +138,18 @@ ms.locfileid: "36138791"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a> 将字段添加到报表设计图面  
+##  <a name="AddField"></a> 向报表设计图面添加字段  
  如果您希望来自您的数据集的字段出现在报表中，则第一感可能是要将其直接拖到设计图面。 本练习指出为什么无法这样做以及相应替代步骤。  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>向报表添加字段（获得错误结果）  
   
 1.  将 **FullName** 字段从“报表数据”窗格中拖到设计图面中。  
   
-     报表生成器中它表示为表达式创建一个文本框\<Expr >。  
+     报表生成器将创建在其中表示为表达式文本框中\<Expr >。  
   
 2.  单击 **“运行”**。  
   
-     请注意，只需一条记录， **Fernando 跨**，即按字母顺序在查询中的第一个记录。 该字段并不重复以便显示该字段中的其他记录。  
+     请注意，有一个记录**Fernando Ross**，即按字母顺序在查询中的第一个记录。 该字段并不重复以便显示该字段中的其他记录。  
   
 3.  单击 **“设计”** 返回设计视图。  
   
@@ -193,34 +193,34 @@ ms.locfileid: "36138791"
   
 7.  选择列表框并按 Delete 键。  
   
-##  <a name="AddTable"></a> 将表添加到报表设计图面  
- 创建此表，以便您将具有一个地方安置超链接和旋转的文本。  
+##  <a name="AddTable"></a> 向报表设计图面添加表  
+ 创建此表，以便将具有为了放置超链接和旋转的文本。  
   
 #### <a name="to-add-a-table-to-the-report"></a>将表添加到报表中  
   
 1.  上**插入**菜单上，单击**表**，然后单击**表向导**。  
   
-2.  上**选择的数据集**页的新建表或矩阵向导中，单击**在此报表或共享数据集选择一个现有数据集**，单击 **（在此报表中） 的 TextDataset**，然后单击**下一步**。  
+2.  上**选择数据集**页上的新表或矩阵向导中，单击**在此报表或共享数据集选择的现有数据集**，然后单击**TextDataset （在此报表中）**，然后依次**下一步**。  
   
-3.  上**排列字段**页上，拖动**Territory**， **LinkText**，和**产品**字段设置为**行组**，拖动**销售**字段**值**，然后单击**下一步**。  
+3.  上**排列字段**页上，将**Territory**， **LinkText**，以及**产品**字段设置为**行组**，拖**Sales**字段**值**，然后单击**下一步**。  
   
-4.  上**选择布局**页上，清除**展开/折叠组**复选框，这样你可以看到整个表，并依次**下一步**。  
+4.  上**选择布局**页上，清除**展开/折叠组**复选框，以便您可以看到整个表，然后单击**下一步**。  
   
-5.  上**选择样式**页上，单击**盖板**，然后单击**完成**。  
+5.  上**选择一种样式**页上，单击**盖板**，然后单击**完成**。  
   
 6.  拖动该表以便该表位于标题块之下。  
   
 7.  单击 **“运行”**。  
   
-     该表看起来没问题，但具有两个总计行。 **LinkText**字段不需要总的行。  
+     该表看起来没问题，但具有两个总计行。 **LinkText**字段不需要总计行。  
   
 8.  单击 **“设计”** 返回设计视图。  
   
 9. 右键单击包含该文本框`[LinkText]`，然后单击**拆分单元格**。  
   
-10. 选择下面的空单元格`[LinkText]`单元格，然后按住 SHIFT 键，然后选择其右侧的两个单元格：**总**中的单元格**产品**列和`[Sum(Sales)]`中的单元格**销售**列。  
+10. 选择下面的空单元格`[LinkText]`单元格，然后按住 SHIFT 键并选择其右侧的两个单元：**总**格中**产品**列和`[Sum(Sales)]`中的单元格**销售**列。  
   
-11. 与选择这三个单元，右键单击这些单元格之一，然后单击**删除行**。  
+11. 选择这三个单元，右键单击其中一个单元，然后单击**删除行**。  
   
 12. 单击 **“运行”**。  
   
@@ -233,17 +233,17 @@ ms.locfileid: "36138791"
   
 2.  右键单击包含 `[LinkText]` 的单元格，然后单击“文本框属性”。  
   
-3.  在**文本框属性**框中，单击**操作**。  
+3.  在中**文本框属性**框中，单击**操作**。  
   
 4.  单击**转到 URL**。  
   
-5.  在**选择 URL**框中，单击 **[URL]**，然后单击**确定**。  
+5.  在中**选择 URL**框中，单击 **[URL]**，然后单击**确定**。  
   
 6.  请注意，文本在外观上看不出任何区别。 您需要使其看起来像链接文本。  
   
 7.  选择 `[LinkText]`。  
   
-8.  在**字体**部分**主页**选项卡上，单击**Underline**按钮，然后旁边单击下拉箭头**颜色**按钮，单击**蓝色**。  
+8.  在中**字体**一部分**主页**选项卡上，单击**用下划线标出**按钮，然后单击下拉箭头旁边**颜色**按钮，然后单击**蓝色**。  
   
 9. 单击 **“运行”**。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36138791"
   
 10. 单击某一链接。 如果计算机已连接到 Internet，则浏览器将打开到报表生成器的帮助主题。  
   
-##  <a name="RotateText"></a> 报表中的旋转文本  
+##  <a name="RotateText"></a> 旋转报表中的文本  
  在本节中，您将旋转前一节的表中的某些文本。  
   
 #### <a name="to-rotate-text"></a>旋转文本  
@@ -264,14 +264,14 @@ ms.locfileid: "36138791"
   
 4.  如果“属性”窗格未打开，请在“视图”选项卡上选中“属性”复选框。  
   
-5.  在属性窗格中找到 writingmode 设置属性。  
+5.  在属性窗格中找到 WritingMode 属性。  
   
     > [!NOTE]  
     >  对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中。 请确保您选择的是单元，而非文本。 WritingMode 是文本框的属性，而非文本的属性。  
   
-6.  列表框中，单击**Rotate270**。  
+6.  在列表框中，单击**Rotate270**。  
   
-7.  上**主页**选项卡中**段落**部分中，单击**中间**和**Center**按钮在这两个单元的中心中查找文本垂直和水平方向。  
+7.  上**主页**选项卡中**段落**部分中，单击**中间**并**Center**按钮在这两个单元的中心中查找文本垂直和水平。  
   
 8.  单击“运行”(**!**)。  
   
@@ -309,7 +309,7 @@ ms.locfileid: "36138791"
   
 5.  右键单击所有选定文本，然后单击“文本属性”。  
   
-6.  上**常规**页上，在**标记类型**，单击**HTML 的 HTML 标记解释为样式**。  
+6.  上**常规**页面上，在**标记类型**，单击**HTML-将 HTML 标记解释为样式**。  
   
 7.  单击“确定” 。  
   
@@ -317,7 +317,7 @@ ms.locfileid: "36138791"
   
  文本框中的文本将显示为标题、段落和带项目符号的列表。  
   
-##  <a name="FormatCurrency"></a> 设置货币的格式  
+##  <a name="FormatCurrency"></a> 设置货币格式  
   
 #### <a name="to-format-numbers-as-currency"></a>将数字设为货币格式  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36138791"
   
 3.  在“开始”选项卡上的“数字”组中，单击“货币”按钮。  
   
-4.  （可选）上**主页**选项卡上，在**数**组中，单击**占位符样式**按钮，然后单击**示例值**若要查看如何将数字采用格式。  
+4.  （可选）上**主页**选项卡上，在**数量**组中，单击**占位符样式**按钮，然后单击**示例值**若要查看如何将数字进行格式化。  
   
 5.  （可选）在“开始”选项卡上的“数字”组中，单击两次“减少小数位数”按钮，显示不带美分的美元数字。  
   
@@ -367,7 +367,7 @@ ms.locfileid: "36138791"
 4.  单击 **“保存”**。  
   
 ## <a name="next-steps"></a>后续步骤  
- 有多种方法用于设置在报表生成器中的文本格式[教程： 创建自由格式的报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多示例。  
+ 有许多方法来设置在报表生成器中的文本的格式[教程： 创建自由格式的报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多示例。  
   
 ## <a name="see-also"></a>请参阅  
  [教程&#40;报表生成器&#41;](report-builder-tutorials.md)   

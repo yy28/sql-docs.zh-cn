@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cd11409f4194e6eaa63c03d4ca211fe633a721a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 268fc3b35408c144d1eda570d92b9b166b96769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239057"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
   本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  
@@ -76,7 +75,7 @@ ms.locfileid: "36128567"
  有关加密受 EKM 保护的备份的示例，请参阅[使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
 ### <a name="backup-to-windows-azure-storage-with-encryption"></a>备份到 Windows Azure 存储并加密  
- 如果使用 **“SQL Server 备份到 URL”** 选项向 Windows Azure 存储创建备份，则加密步骤相同，但必须使用 URL 作为目标，并使用 SQL 凭据向 Windows Azure 存储进行身份验证。 如果你想要配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]加密选项，请参阅[设置 SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)和[为可用性组设置SQLServerManagedBackuptoWindowsAzure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ 如果使用 **“SQL Server 备份到 URL”** 选项向 Windows Azure 存储创建备份，则加密步骤相同，但必须使用 URL 作为目标，并使用 SQL 凭据向 Windows Azure 存储进行身份验证。 如果你想要配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]加密选项，请参阅[设置 SQL Server 托管备份到 Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)和[为可用性组设置SQLServer托管备份到WindowsAzure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  **先决条件：**  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - parameters [XML in SQL Server]
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08e80c3a42406b11abc0a46ae7b4afc92d0a35e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0da42dce1cef6d625a8e650a72c481b9458e35df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305087"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
-  您可以创建 `xml` 类型的变量、参数和列。 你可以根据需要将与变量、 参数或列关联的 XML 架构集合`xml`类型。 在这种情况下，`xml`调用数据类型实例*键入*。 否则，XML 实例称作“非类型化” 的实例。  
+  您可以创建 `xml` 类型的变量、参数和列。 （可选） 可以与变量、 参数或列关联的 XML 架构集合`xml`类型。 在这种情况下，`xml`数据类型实例称为*键入*。 否则，XML 实例称作“非类型化” 的实例。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正确的 XML 和 xml 数据类型  
  `xml` 数据类型可实现 ISO 标准的 `xml` 数据类型。 因此，它可以在非类型化的 XML 列中存储格式正确的 XML 1.0 版的文档以及具有文本节点和任意数量顶级元素的所谓的 XML 内容片段。 系统将检查数据格式是否正确，但不要求将列绑定到 XML 架构，并且拒绝在扩展意义上格式不正确的数据。 对于非类型化的 XML 变量和参数也是如此。  
@@ -67,19 +67,19 @@ ms.locfileid: "36026959"
  类型化的 XML 列、参数和变量可以存储 XML 文档或内容。 但是，在声明时必须使用标志指定是存储文档还是存储内容。 此外，必须提供 XML 架构集合。 如果每个 XML 实例都刚好有一个顶级元素，请指定 DOCUMENT。 否则，请使用 CONTENT。 查询编译器在查询编译期间的类型检查过程中使用 DOCUMENT 标志来推断单独的顶级元素。  
   
 ## <a name="creating-typed-xml"></a>创建类型化的 XML  
- 你可以创建类型化之前`xml`变量、 参数或列，您必须首先注册 XML 架构集合，通过使用[CREATE XML SCHEMA COLLECTION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)。 你可以然后将与变量、 参数或列关联的 XML 架构集合`xml`数据类型。  
+ 您可以创建类型化之前`xml`变量、 参数或列，您必须先注册使用的 XML 架构集合[CREATE XML SCHEMA COLLECTION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)。 然后可以将 XML 架构集合关联的变量、 参数或列的`xml`数据类型。  
   
  在下列示例中，使用由两部分组成的名称命名约定指定 XML 架构集合名称。 第一部分是架构名称，第二部分是 XML 架构集合名称。  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>示例：将架构集合与 xml 类型变量关联起来  
- 下面的示例创建`xml`类型变量并将架构集合与它关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
+ 下面的示例创建`xml`类型变量并将架构集合与之相关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
 ### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>示例：为 xml 类型列指定架构  
- 下面的示例创建一个表，其中`xml`类型列和为列指定一个架构：  
+ 下面的示例创建具有表`xml`类型列和为列指定一个架构：  
   
 ```  
 CREATE TABLE T1(  
@@ -88,7 +88,7 @@ CREATE TABLE T1(
 ```  
   
 ### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>示例：将 xml 类型参数传递给存储过程  
- 下面的示例传入`xml`类型到存储过程的参数，并为变量指定一个架构：  
+ 下面的示例传入`xml`类型到存储过程的参数和为该变量指定一个架构：  
   
 ```  
 CREATE PROCEDURE SampleProc   
@@ -101,16 +101,16 @@ AS
   
 -   XML 架构集合只有在通过 [创建 XML 架构集合](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)注册该集合的数据库中才可用。  
   
--   如果从字符串转换为类型化`xml`数据类型，则分析还将执行验证和类型，根据指定的集合中的 XML 架构命名空间。  
+-   如果从字符串转换为类型化`xml`数据类型，分析也执行验证，键入，根据指定的集合中的 XML 架构命名空间。  
   
 -   可以从类型化的 `xml` 数据类型转换到非类型化的 `xml` 数据类型，反之亦然。  
   
- 有关在 SQL Server 中生成 XML 的其他方法的详细信息，请参阅 [创建 XML 数据的实例](create-instances-of-xml-data.md)。 生成 XML 后，它可以分配到`xml`数据类型变量或存储在`xml`类型以进行其他处理的列。  
+ 有关在 SQL Server 中生成 XML 的其他方法的详细信息，请参阅 [创建 XML 数据的实例](create-instances-of-xml-data.md)。 生成 XML 后，它可以赋给`xml`数据类型变量中存储`xml`类型以进行其他处理的列。  
   
- 数据类型层次结构中,`xml`数据类型如下所示`sql_variant`和用户定义的类型，但高于任一内置类型。  
+ 数据类型层次结构中`xml`如下所示的数据类型`sql_variant`和用户定义类型，但所有内置类型之上。  
   
 ### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>示例：指定用于约束类型化的 xml 列的方面  
- 对于类型化`xml`列，你可以将限制列，以允许为存储在其中每个实例的只将单个顶层元素。 可以在创建了表以后通过指定可选的 `DOCUMENT` 方面来进行此操作，如以下示例中所示：  
+ 对于类型化`xml`列，您可以限制以允许存储在其中每个实例只将单个顶级元素的列。 可以在创建了表以后通过指定可选的 `DOCUMENT` 方面来进行此操作，如以下示例中所示：  
   
 ```  
 CREATE TABLE T(Col1 xml   
@@ -120,7 +120,7 @@ DROP TABLE T;
 GO  
 ```  
   
- 默认情况下，实例存储在类型化`xml`列中存储为 XML 内容，而不是 XML 文档。 这允许存储以下内容：  
+ 默认情况下，实例存储在类型化`xml`列存储为 XML 内容而不是 XML 文档。 这允许存储以下内容：  
   
 -   零个或多个顶级元素  
   
@@ -133,7 +133,7 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- 请注意，可以在定义 `xml` 类型（类型化的 xml）的任何位置指定可选的 DOCUMENT/CONTENT 方面。 例如，当创建类型化`xml`变量，你可以添加 DOCUMENT/CONTENT 方面，如在下面的示例所示：  
+ 请注意，可以在定义 `xml` 类型（类型化的 xml）的任何位置指定可选的 DOCUMENT/CONTENT 方面。 例如，当创建类型化`xml`变量时，可以添加 DOCUMENT/CONTENT 方面，如在下面的示例所示：  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  

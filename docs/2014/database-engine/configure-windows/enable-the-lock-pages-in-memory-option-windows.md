@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc2bbf20b7219d55f14911142913e7b6a941bcae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 64b922b5181ddb5fdab24b232864671d60457a97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200237"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
   此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。  
@@ -33,7 +33,7 @@ ms.locfileid: "36124624"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>启用“锁定内存页”选项  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。 在**打开**框中，键入`gpedit.msc`。  
+1.  在 **“开始”** 菜单上，单击 **“运行”**。 在中**开放**框中，键入`gpedit.msc`。  
   
 2.  在 **“本地组策略编辑器”** 控制台上，展开 **“计算机配置”**，再展开 **“Windows 设置”**。  
   

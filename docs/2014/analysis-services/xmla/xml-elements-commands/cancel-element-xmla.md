@@ -1,5 +1,5 @@
 ---
-title: 取消元素 (XMLA) |Microsoft 文档
+title: Cancel 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd0fdd50a1dcddb51d167ab76cd5408b631bb3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173268"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 元素 (XMLA)
-  取消当前正在运行的命令[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
+  取消当前正在运行命令[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
   
 ## <a name="syntax"></a>语法  
   

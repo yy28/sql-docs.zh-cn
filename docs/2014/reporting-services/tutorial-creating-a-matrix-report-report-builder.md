@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f900a871527e85cdc28f47ec3349eeb64f9853c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268163"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
   本教程教您如何基于示例销售数据创建基本矩阵报表。 该矩阵具有嵌套行组和列组，以及相邻列组。 您将学习如何设置列的格式以及旋转文本。 下图显示与您将创建的报表类似的报表。  
@@ -28,28 +28,28 @@ ms.locfileid: "36129616"
   
  您在本教程中将创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](http://go.microsoft.com/fwlink/?LinkId=184851)。  
   
-##  <a name="BackToTop"></a> 你将学习的内容  
+##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将学习如何执行以下操作：  
   
-1.  [从新的表或矩阵向导创建矩阵报表和数据集](#CreateMatrix)  
+1.  [新表或矩阵向导创建矩阵报表和数据集](#CreateMatrix)  
   
-2.  [组织数据，然后从新的表或矩阵向导选择布局和样式](#Groups)  
+2.  [组织数据并选择布局和样式的新表或矩阵向导](#Groups)  
   
-3.  [格式数据](#FormatData)  
+3.  [数据格式](#FormatData)  
   
 4.  [添加相邻列组](#AdjacentGroup)  
   
 5.  [更改列宽](#Width)  
   
-6.  [合并矩阵的单元格](#MergeCells)  
+6.  [合并矩阵单元](#MergeCells)  
   
-7.  [添加报表表头和报告标题](#HeaderTitle)  
+7.  [添加报表表头和报表标题](#HeaderTitle)  
   
 8.  [保存报表](#Save)  
   
 ### <a name="other-optional-step"></a>其他可选步骤  
   
-1.  [将文本框 270 度](#RotateTextBox)  
+1.  [旋转文本框 270 度](#RotateTextBox)  
   
  完成本教程的预计学时：20 分钟。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36129616"
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
 ##  <a name="CreateMatrix"></a> 1.使用新的表或矩阵向导创建矩阵报表和数据集  
- 从**入门**对话框中在报表生成器中，选择共享的数据源、 创建嵌入数据集，，然后在矩阵中显示的数据。  
+ 从**Getting Started**对话框在报表生成器中，选择共享的数据源、 创建嵌入数据集，然后在矩阵中显示的数据。  
   
 > [!NOTE]  
 >  在本教程中，由于查询已经包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
@@ -77,7 +77,7 @@ ms.locfileid: "36129616"
   
 5.  单击“下一步” 。  
   
-6.  上**选择数据源的连接**页上，选择现有的数据源或浏览到报表服务器，然后选择数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入的数据源的详细信息，请参阅[教程： 创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  上**选择数据源的连接**页上，选择现有数据源或浏览到报表服务器，然后选择数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入的数据源的详细信息，请参阅[教程： 创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步” 。  
   
@@ -133,9 +133,9 @@ ms.locfileid: "36129616"
   
 3.  将 Subcategory 拖到“列组”中。  
   
-4.  拖动到的产品**列组**，然后进行以下子类别。  
+4.  将 Product 拖到**列组**然后将其放 Subcategory 下面。  
   
-     在该字段中列出的顺序**列组**定义组层次结构。  
+     在列出字段的顺序**列组**定义组层次结构。  
   
      步骤 3 和 4 首先按子类别组织字段的值，然后按照产品组织字段的值。  
   
@@ -180,11 +180,11 @@ ms.locfileid: "36129616"
   
 3.  在“主文件夹”选项卡上的“数字”组中，单击“货币”。 单元会更改为显示已设置好格式的货币。  
   
-     如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果看不到一个示例货币值，请单击**占位符样式**中**数字**分组，并依次**示例值**。  
+     如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果您看不到示例货币值，请单击**占位符样式**中**数字**组，然后依次**示例值**。  
   
 4.  单击包含 `[SalesDate]`的单元格。  
   
-5.  在**数**组中，从下拉列表中，选择**日期**。  
+5.  在中**数量**组中，从下拉列表中，选择**日期**。  
   
      单元格会显示示例日期 **[2000/1/31]**。 如果看不到示例日期，请单击“数字”组中的“占位符样式”，然后单击“示例值”。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "36129616"
  报表包括名为 Monday 和 Tuesday 的列。 数据集仅包含针对这两天的数据。  
   
 > [!NOTE]  
->  如果数据包括了其他天，则报表也将包括这些天的相应列。 每列均具有列标题， `Sales`，和按地区的销售总额。  
+>  如果数据包括了其他天，则报表也将包括这些天的相应列。 每个列都具有列标题`Sales`，以及按地区的销售总额。  
   
 ##  <a name="Width"></a> 5.更改列宽  
  包括矩阵的报表填充以水平方式展开，并且在运行时以垂直方式展开。 如果您计划将数据导出到用于打印报表的格式（例如 Microsoft Word 或 Adobe PDF），则控制水平展开将特别重要。 如果报表跨多页水平展开，则打印报表将很难理解。 为了尽量缩小水平展开，您可以将列的大小调整为宽度仅供无需换行就可以显示数据。 您还可以重命名列，以便其标题适合显示数据所需的宽度。  
@@ -276,7 +276,7 @@ ms.locfileid: "36129616"
   
 4.  右键单击单元格，然后单击**合并单元格**。  
   
-5.  右键单击角单元格，并依次**文本框属性**。  
+5.  右键单击角单元格，然后依次**文本框属性**。  
   
 6.  单击 **“填充”** 选项卡。  
   
@@ -303,7 +303,7 @@ ms.locfileid: "36129616"
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  单击顶部的包含表体的文本框**单击此处添加标题**，然后按 Delete 键。  
+2.  单击包含表体顶部的文本框**单击此项可添加标题**，然后按 Delete 键。  
   
 3.  上**插入**选项卡的功能区中，单击**标头**，然后单击**添加标头**。  
   
@@ -313,14 +313,14 @@ ms.locfileid: "36129616"
   
 5.  在文本框中，键入“Sales by Territory, Subcategory, and Day”。  
   
-6.  选择您所键入的文本、 右键单击，然后单击**文本属性**。  
+6.  选择您所键入的文本，右键单击，然后单击**文本属性**。  
   
     > [!NOTE]  
     >  若要一起设置多个字符的格式，这些字符必须是连续的。  
   
-7.  在**文本属性**对话框中，单击**字体**。  
+7.  在中**文本属性**对话框中，单击**字体**。  
   
-8.  在**字体**列表中，选择**Times New Roman**; 在**大小**选择**24 pt**中**颜色**选择**褐紫红色**，然后在**样式**选择**斜体**。  
+8.  在中**字体**列表中，选择**Times New Roman**; 在**大小**选择**24 pt**中**颜色**选择**褐紫红色**，然后在**样式**选择**斜体**。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -370,11 +370,11 @@ ms.locfileid: "36129616"
   
 2.  单击包含 `[Territory].` 的单元。  
   
-3.  在属性窗格中，找到 writingmode 设置属性，并在其下拉列表列表中，选择**Rotate270**。  
+3.  在属性窗格中，找到 WritingMode 属性，并在其下拉列表中选择**Rotate270**。  
   
      如果“属性”窗格未打开，请单击功能区的“视图”选项卡，然后选择“属性”。  
   
-4.  验证 CanGrow 属性设置为`True`。  
+4.  确认 CanGrow 属性设置为`True`。  
   
 5.  将 Territory 列的大小调整为 1/2 英寸宽，并且删除列标题。  
   
@@ -383,7 +383,7 @@ ms.locfileid: "36129616"
  地区名称垂直书写，从下到上。 Territory 行组的高度由地区名称的长度决定。  
   
 ## <a name="next-steps"></a>后续步骤  
- 有关如何创建矩阵报表的教程到此结束。 有关矩阵的详细信息，请参阅[表、 矩阵和列表&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)，[矩阵&#40;报表生成器和 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)， [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)，和[Tablix 数据区域单元、 行和列&#40;报表生成器&#41;和 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+ 有关如何创建矩阵报表的教程到此结束。 有关矩阵报表的详细信息，请参阅[表、 矩阵和列表&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)，[矩阵&#40;报表生成器和 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)， [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)，并[Tablix 数据区域单元、 行和列&#40;报表生成器&#41;和 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>请参阅  
  [教程&#40;报表生成器&#41;](report-builder-tutorials.md)   

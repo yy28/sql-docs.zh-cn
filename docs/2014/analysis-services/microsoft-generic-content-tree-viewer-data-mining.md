@@ -1,5 +1,5 @@
 ---
-title: Microsoft 一般内容树查看器 （数据挖掘） |Microsoft 文档
+title: Microsoft 一般内容树查看器 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.contentviewer.f1
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb48d0ce455c41f6e684b54af86bb6ff5f8eddfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85c2cccfe0d5b578c0faa359ca3c276b654aaa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286173"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 一般内容树查看器（数据挖掘）
   **“Microsoft 一般内容树查看器”** 以标准化 HTML 表格式显示有关数据挖掘模式的内容的详细信息。 此视图很有用，因为它将公开模型的基础结构，以及有关系数、值的分布等项的详细信息。  
@@ -36,7 +36,7 @@ ms.locfileid: "36026432"
   
  可以单击每个节点，在 **“节点详细信息”** 窗格中显示有关该节点的详细信息。  
   
- **节点的详细信息**  
+ **节点详细信息**  
  显示选定节点的内容的详细信息。 每个节点均以标准化格式存储其信息，但表中每个行的内容和基数取决于要查看的模型类型或节点类型。 例如，为表示关联模型中的规则的节点存储的信息不同于表示决策树模型中的树的节点中的信息。  
   
  有关如何解释特定模型类型的节点信息的信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](data-mining/mining-model-content-analysis-services-data-mining.md)。  

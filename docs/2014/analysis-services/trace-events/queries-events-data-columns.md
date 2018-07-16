@@ -1,5 +1,5 @@
 ---
-title: 查询事件数据列 |Microsoft 文档
+title: 查询事件数据列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 174fa26fd7ed7105c14514b216f02d85224fcf82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0577680218a6059a0a14a5232fd328131e0f69c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310457"
 ---
 # <a name="queries-events-data-columns"></a>查询事件数据列
   “查询事件”事件类别具有以下事件类：  
@@ -38,7 +38,7 @@ ms.locfileid: "36014901"
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|@shouldalert|事件类用于将事件分类。|  
-|EventSubclass|@shouldalert|@shouldalert|下面的事件子类提供有关每个事件类的附加信息：<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|@shouldalert|@shouldalert|下面的事件子类提供有关每个事件类的其他信息：<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|包含事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|包含事件（如果有）的开始时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |ConnectionID|25|@shouldalert|包含与查询事件相关联的唯一连接 ID。|  
@@ -60,7 +60,7 @@ ms.locfileid: "36014901"
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|@shouldalert|事件类用于将事件分类。|  
-|EventSubclass|@shouldalert|@shouldalert|下面的事件子类提供有关每个事件类的附加信息。<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|@shouldalert|@shouldalert|下面的事件子类提供有关每个事件类的其他信息。<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|包含事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|包含事件（如果有）的开始时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|包含事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  

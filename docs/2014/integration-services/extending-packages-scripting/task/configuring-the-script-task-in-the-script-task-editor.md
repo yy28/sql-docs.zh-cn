@@ -20,13 +20,13 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e7b894400b6342064aac4762fc6707eca04962f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 827721e691e197faf0b786db5999b0061e42c516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263193"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在脚本任务编辑器中配置脚本任务
   在脚本任务中编写自定义代码之前，请在“脚本任务编辑器”的三个页面中配置它的主要属性。 使用“属性”窗口可以配置非脚本任务特有的其他任务属性。  
@@ -46,7 +46,7 @@ ms.locfileid: "36129924"
  若要设置脚本任务和脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“ScriptLanguage”属性。 有关详细信息，请参阅 [General Page](../../general-page-of-integration-services-designers-options.md)。  
   
 ### <a name="entrypoint-property"></a>EntryPoint 属性  
- `EntryPoint` 属性对 VSTA 项目中的 `ScriptMain` 类指定一种方法，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 `ScriptMain`类是由脚本模板生成的默认类。  
+ `EntryPoint` 属性对 VSTA 项目中的 `ScriptMain` 类指定一种方法，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 `ScriptMain`类是脚本模板生成的默认类。  
   
  若要更改 VSTA 项目中该方法的名称，必须更改 `EntryPoint` 属性的值。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36129924"
 ## <a name="expressions-page-of-the-script-task-editor"></a>脚本任务编辑器的“表达式”页  
  在“脚本任务编辑器”的“表达式”页中，可以使用表达式为上面列出的脚本任务属性和其他许多任务属性提供值。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../expressions/integration-services-ssis-expressions.md)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 有关最新的下载、 文章、 示例和视频从[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及在社区中的所选的解决方案访问[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 有关最新的下载、 文章、 示例和视频[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及从社区获得所选的解决方案访问[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的页面：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [脚本任务的编码和调试](coding-and-debugging-the-script-task.md)  

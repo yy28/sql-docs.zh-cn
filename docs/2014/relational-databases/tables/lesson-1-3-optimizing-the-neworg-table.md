@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236557"
 ---
 # <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
-  **NewOrd**中创建的表[填充使用现有的层次结构数据表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务包含的所有员工信息，并通过使用表示层次结构`hierarchyid`数据类型。 此任务添加了新的索引，以便支持对 `hierarchyid` 列的搜索。  
+  **NewOrd**中创建表[使用现有层次结构数据填充表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务包含所有雇员的信息，并使用表示层次结构`hierarchyid`数据类型。 此任务添加了新的索引，以便支持对 `hierarchyid` 列的搜索。  
   
 ## <a name="clustered-index"></a>聚集索引  
- `hierarchyid`列 (**OrgNode**) 为主键**NewOrg**表。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
+ `hierarchyid`列 (**OrgNode**) 是主键**NewOrg**表。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
   
 ## <a name="nonclustered-index"></a>非聚集索引  
  此步骤将创建两个非聚集索引，用于支持典型搜索。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0dc03dad5cfd346b76691113988ba126e67ae3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c7a91411531cccb253b42f4c6b075ebb73b5d78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217587"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>创建基于域的属性（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员在想要将列中的值限制为一组特定值时可以创建基于域的属性。  
@@ -40,7 +40,7 @@ ms.locfileid: "36137774"
   
 ### <a name="to-perform-this-procedure"></a>若要执行此过程：  
   
-1.  在 Excel 中，加载包含要约束的列（属性）的实体。 有关详细信息，请参阅[负载到 Excel 的 MDS 数据](export-data-to-excel-from-master-data-services.md)。  
+1.  在 Excel 中，加载包含要约束的列（属性）的实体。 有关详细信息，请参阅[将数据加载到 Excel 的 mds](export-data-to-excel-from-master-data-services.md)。  
   
 2.  单击要约束的列中的任意单元。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36137774"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   若要在约束列表中添加和删除值，请加载属性基于的实体。 加载实体的详细信息，请参阅[负载到 Excel 的 MDS 数据](export-data-to-excel-from-master-data-services.md)。  
+-   若要在约束列表中添加和删除值，请加载属性基于的实体。 有关加载实体的详细信息，请参阅[将数据加载到 Excel 的 mds](export-data-to-excel-from-master-data-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [基于域的属性&#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   

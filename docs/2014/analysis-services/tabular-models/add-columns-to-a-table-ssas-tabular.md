@@ -1,5 +1,5 @@
 ---
-title: 将列添加到表 (SSAS 表格) |Microsoft 文档
+title: 将列添加到表 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4be3136f461772e2d6eb4aa63d64a828ce18eaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12534cd4554d71c368f09a6620056e187578b456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326507"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>将列添加到表（SSAS 表格）
   本主题介绍如何向现有表中添加列。  

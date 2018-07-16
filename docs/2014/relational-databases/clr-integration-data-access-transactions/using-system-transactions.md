@@ -1,13 +1,11 @@
 ---
-title: 使用 System.Transactions |Microsoft 文档
+title: 使用 System.Transactions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 44054210ce7bf889bdc6e38f181cf8b16e638215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: cf0f57f84e4b1838b9fd2da9838891640782266b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027275"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350059"
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
   `System.Transactions` 命名空间提供与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成完全集成的新事务框架。 `System.Transactions.TransactionScope` 类通过在分布式事务中隐式登记连接，使代码块成为事务代码。 您必须在 `Complete` 标记的代码块的末尾调用 `TransactionScope` 方法。 如果未调用 `Dispose` 方法，将在程序执行离开代码块时调用 `Complete` 方法，从而导致停止使用该事务。 如果已引发导致代码离开范围的异常，则将该事务视为停止使用。  

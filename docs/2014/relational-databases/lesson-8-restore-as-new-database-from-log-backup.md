@@ -1,5 +1,5 @@
 ---
-title: 第 9 课。 从 Windows Azure 存储还原数据库 |Microsoft 文档
+title: 第 9 课。 从 Windows Azure 存储还原数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8ff5ec90f80262aae76abfb01ef6c737d13369c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 380ceeabb5a91dffafe0624e073856a837a99f14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175910"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>第 9 课。 从 Windows Azure 存储还原数据库
   在本课中，您将学习如何将 Windows Azure 存储中的数据库备份文件还原到数据库，该数据库位于本地或 Windows Azure 的虚拟机中。 不需要学完第 4、5、6、7 和 8 课即可听懂本课。  
@@ -28,7 +28,7 @@ ms.locfileid: "36138432"
   
 -   已在源计算机中创建了数据库。  
   
--   通过在 Windows Azure 存储中创建的数据库 (.bak) 备份[SQL Server Backup and Restore with Windows Azure Blob 存储服务](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)功能。 注意，需要在此步骤中创建另一个 SQL Server 凭据。 此凭据使用存储帐户密钥。  
+-   通过使用 Windows Azure 存储中创建的数据库 (.bak) 备份[Windows Azure Blob 存储服务使用 SQL Server 备份和还原](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)功能。 注意，需要在此步骤中创建另一个 SQL Server 凭据。 此凭据使用存储帐户密钥。  
   
 -   具有 Windows Azure 存储帐户。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36138432"
   
 3.  复制以下完整脚本并将其粘贴到查询窗口。 根据需要修改脚本。  
   
-     **注意：** 你运行`RESTORE`语句以在 Windows Azure 存储中的数据库备份 (.bak) 还原到另一台计算机中的数据库实例。  
+     **注意：** 运行`RESTORE`语句以在 Windows Azure 存储中的数据库备份 (.bak) 还原到另一台计算机中的数据库实例。  
   
     ```tsql  
   
@@ -99,6 +99,6 @@ ms.locfileid: "36138432"
   
     ```  
   
- **末尾教程： 在 Windows Azure 存储服务中的 SQL Server 数据文件**  
+ **教程结束时： 在 Windows Azure 存储服务的 SQL Server 数据文件**  
   
   

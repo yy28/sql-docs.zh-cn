@@ -1,27 +1,26 @@
 ---
-title: 启动 AlwaysOn 辅助数据库 (SQL Server) 上的数据移动 |Microsoft 文档
+title: 启动 AlwaysOn 辅助数据库 (SQL Server) 的数据移动 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 90fac7dfcd395b3a788360232c872c830259ba0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cbec6a7aa6c1ac92dbf64fe018800a223084e4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252789"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)
   本主题包含有关如何在将数据库添加到 AlwaysOn 可用性组后启动数据同步的信息。 对于每个新的主副本，必须在承载辅助副本的服务器实例上准备辅助数据库。 然后，必须将这些辅助数据库手动添加到可用性组。  
@@ -46,7 +45,7 @@ ms.locfileid: "36137604"
   
          **详细信息：**  
   
-         [从迁移的先决条件到 AlwaysOn 可用性组日志传送&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+         [从迁移的先决条件日志传送到 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
          [配置可用性副本备份 (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   

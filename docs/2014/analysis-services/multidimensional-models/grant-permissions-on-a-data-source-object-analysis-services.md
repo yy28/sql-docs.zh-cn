@@ -1,5 +1,5 @@
 ---
-title: 授予对数据源对象 (Analysis Services) 的权限 |Microsoft 文档
+title: 授予权限的数据源对象 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7df8a1a87b483d5b63641a8a621eb99a45d08c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe08e5e23b8c40ddeba9efa99c151314d499916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243717"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授予数据源对象的权限 (Analysis Services)
   通常，大多数 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用户无需访问作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目基础的数据源。 用户通常只查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据。 但是，在数据挖掘上下文中（如根据挖掘模型执行预测），用户必须将挖掘模型的已学习数据与用户提供的数据联接起来。 为了连接到包含用户提供数据的数据源，用户将使用包含 [OPENQUERY (DMX)](/sql/dmx/source-data-query-openquery) 或 [OPENROWSET (DMX)](/sql/dmx/source-data-query-openrowset) 子句的数据挖掘扩展插件 (DMX) 查询。  
@@ -63,6 +63,6 @@ ms.locfileid: "36123723"
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [授予对维度数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授予对单元数据的自定义访问权限&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [授予对单元数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

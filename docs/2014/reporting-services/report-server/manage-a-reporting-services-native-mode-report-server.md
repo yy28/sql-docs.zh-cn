@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 63291b62b946e733dbcc48359b06e1f3e33abc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305007"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
   本节包含使用 Reporting Services 配置管理器配置本机模式报表服务器实例的过程。  
@@ -38,7 +38,7 @@ ms.locfileid: "36014483"
  [配置服务帐户&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  说明如何为报表服务器服务指定帐户和密码信息。  
   
- [注册服务主体名称&#40;SPN&#41;为报表服务器](register-a-service-principal-name-spn-for-a-report-server.md)  
+ [注册服务主体名称&#40;SPN&#41;针对报表服务器](register-a-service-principal-name-spn-for-a-report-server.md)  
  说明如何为在使用 Kerberos 身份验证的网络上的域用户帐户下运行的报表服务器手动注册 SPN。  
   
  [配置 URL &#40;SSRS 配置管理器&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "36014483"
  [配置本机模式报表服务器扩展部署&#40;SSRS 配置管理器&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供配置多个报表服务器以共享报表服务器数据库的步骤。  
   
- [针对电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  提供有关配置报表服务器以进行电子邮件分发的步骤。  
   
  [将防火墙配置为允许报表服务器访问](configure-a-firewall-for-report-server-access.md)  

@@ -1,5 +1,5 @@
 ---
-title: 升级准备就绪 |Microsoft 文档
+title: 升级准备就绪 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 282f261e-cb00-4c31-af4b-faeee0445ee4
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea3ec6540e0b14c12f43954085e6e4283a4cc37a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1279cf5666fac22c20870e40acb9b3fbdaa3a33a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273853"
 ---
 # <a name="ready-to-upgrade"></a>准备升级
   使用 **“准备升级”** 页可以查看为该升级指定的选项。  

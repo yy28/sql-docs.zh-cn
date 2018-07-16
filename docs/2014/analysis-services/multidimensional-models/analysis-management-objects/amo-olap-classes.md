@@ -1,5 +1,5 @@
 ---
-title: AMO OLAP 类 |Microsoft 文档
+title: AMO OLAP 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280403"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 类
   分析管理对象 (AMO) OLAP 类可帮助您创建、修改、删除和处理多维数据集、维度以及相关对象，如关键绩效指标 (KPI)、操作和主动缓存。  
   
- 有关设置 AMO 编程环境的详细信息，如何建立与访问数据库或数据定义的服务器的连接源和数据源视图，请参阅[AMO 基础类](amo-fundamental-classes.md)。  
+ 有关设置 AMO 编程环境的详细信息，如何来建立与访问数据库或数据定义的服务器的连接源和数据源视图，请参阅[AMO Fundamental 类](amo-fundamental-classes.md)。  
   
  本主题包含以下各节：  
   
@@ -37,27 +37,27 @@ ms.locfileid: "36129797"
   
 -   [多维数据集对象](#Cubes)  
   
--   [度量值组对象](#MeasureGroups)  
+-   [MeasureGroup 对象](#MeasureGroups)  
   
--   [分区对象](#Partition)  
+-   [Partition 对象](#Partition)  
   
 -   [AggregationDesign 对象](#AggregationDesign)  
   
--   [聚合对象](#Aggregation)  
+-   [Aggregation 对象](#Aggregation)  
   
 -   [操作对象](#Action)  
   
 -   [KPI 对象](#KPI)  
   
--   [透视对象](#Perspective)  
+-   [Perspective 对象](#Perspective)  
   
--   [转换对象](#Translation)  
+-   [Translation 对象](#Translation)  
   
 -   [ProactiveCaching 对象](#ProactiveCaching)  
   
  下图显示了本主题中介绍的类之间的关系。  
   
- ![在 AMO 中的 OLAP 类](../../../analysis-services/dev-guide/media/amo-olapclasses.gif "AMO 中的 OLAP 类")  
+ ![在 AMO OLAP 类](../../../analysis-services/dev-guide/media/amo-olapclasses.gif "AMO 中的 OLAP 类")  
   
 ## <a name="basic-classes"></a>基本类  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36129797"
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Dimension> 中的 <xref:Microsoft.AnalysisServices>。  
   
 ###  <a name="Cubes"></a> 多维数据集对象  
- 多维数据集的创建方法是：将其添加到数据库的多维数据集集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可以包括参数 UpdateOptions.ExpandFull，这样可以确保修改多维数据集中的所有对象，将都更新到此更新操作中的服务器。  
+ 多维数据集的创建方法是：将其添加到数据库的多维数据集集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可以包含参数 UpdateOptions.ExpandFull，该参数可确保在多维数据集中已修改的所有对象，将都更新到此更新操作中的服务器。  
   
  若要删除多维数据集，必须使用 <xref:Microsoft.AnalysisServices.Cube> 的 Drop 方法来删除。 从集合中删除多维数据集不会对服务器产生影响。  
   
@@ -79,14 +79,14 @@ ms.locfileid: "36129797"
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Cube> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="MeasureGroups"></a> 度量值组对象  
+###  <a name="MeasureGroups"></a> MeasureGroup 对象  
  度量值组的创建方法是：将其添加到多维数据集的度量值组集合中，然后使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象自己的 Update 方法，将该对象更新到服务器中。 使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象自己的 Drop 方法可将该对象删除。  
   
- 创建 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象之后可对其进行处理。 <xref:Microsoft.AnalysisServices.MeasureGroup>可以处理通过使用其自己的进程方法，或可以当父对象处理其自身与其自己过程方法进行处理。  
+ 创建 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象之后可对其进行处理。 <xref:Microsoft.AnalysisServices.MeasureGroup>可以处理通过使用其自己的 Process 方法，或当父对象处理本身使用其自己的 Process 方法进行处理。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.MeasureGroup> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Partition"></a> 分区对象  
+###  <a name="Partition"></a> Partition 对象  
  <xref:Microsoft.AnalysisServices.Partition> 对象的创建方法是：将其添加到父度量值组的分区集合中，然后使用 Update 方法，在服务器中更新 <xref:Microsoft.AnalysisServices.Partition> 对象。 删除 <xref:Microsoft.AnalysisServices.Partition> 对象可使用 Drop 方法。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Partition> 中的 <xref:Microsoft.AnalysisServices>。  
@@ -96,7 +96,7 @@ ms.locfileid: "36129797"
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.AggregationDesign> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Aggregation"></a> 聚合对象  
+###  <a name="Aggregation"></a> Aggregation 对象  
  <xref:Microsoft.AnalysisServices.Aggregation> 对象的创建方法是：将其添加到父度量值组的聚合设计集合中，然后使用 Update 方法，在服务器中更新父度量值组对象。 从 <xref:Microsoft.AnalysisServices.AggregationCollection> 中删除聚合可使用 Remove 方法或 RemoveAt 方法。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Aggregation> 中的 <xref:Microsoft.AnalysisServices>。  
@@ -119,23 +119,23 @@ ms.locfileid: "36129797"
 ###  <a name="Action"></a> 操作对象  
  <xref:Microsoft.AnalysisServices.Action> 对象的创建方法是：将其添加到多维数据集的操作集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可包含参数 UpdateOptions.ExpandFull，该参数可确保此更新操作会将多维数据集中所有修改过的对象都更新到服务器中。  
   
- 若要删除<xref:Microsoft.AnalysisServices.Action>对象，必须从集合中移除，并且必须更新父多维数据集。  
+ 若要删除<xref:Microsoft.AnalysisServices.Action>对象，必须从集合中删除，必须更新父多维数据集。  
   
  从客户端使用操作之前，必须先更新和处理多维数据集。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Action> 中的 <xref:Microsoft.AnalysisServices>。  
   
 ###  <a name="KPI"></a> Kpi 对象  
- <xref:Microsoft.AnalysisServices.Kpi> 对象的创建方法是：将其添加到多维数据集的 KPI 集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可以包括参数 UpdateOptions.ExpandFull，这样可以确保修改多维数据集中的所有对象，将都更新到具有此更新操作的服务器。  
+ <xref:Microsoft.AnalysisServices.Kpi> 对象的创建方法是：将其添加到多维数据集的 KPI 集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可以包含参数 UpdateOptions.ExpandFull，该参数可确保在多维数据集中已修改的所有对象，将都更新到此更新操作的服务器。  
   
- 若要删除<xref:Microsoft.AnalysisServices.Kpi>对象，必须从该集合，然后将它删除，并且必须更新父多维数据集。  
+ 若要删除<xref:Microsoft.AnalysisServices.Kpi>对象，它必须从该集合，然后删除，必须更新父多维数据集。  
   
  使用 KPI 之前，必须先更新和处理多维数据集。  
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Kpi> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Perspective"></a> 透视对象  
- <xref:Microsoft.AnalysisServices.Perspective> 对象的创建方法是：将其添加到多维数据集的透视集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可以包括参数 UpdateOptions.ExpandFull，这样可以确保修改多维数据集中的所有对象，将都更新到具有此更新操作的服务器。  
+###  <a name="Perspective"></a> Perspective 对象  
+ <xref:Microsoft.AnalysisServices.Perspective> 对象的创建方法是：将其添加到多维数据集的透视集合中，然后使用 Update 方法将 <xref:Microsoft.AnalysisServices.Cube> 对象更新到服务器中。 多维数据集的 Update 方法可以包含参数 UpdateOptions.ExpandFull，该参数可确保在多维数据集中已修改的所有对象，将都更新到此更新操作的服务器。  
   
  若要删除 <xref:Microsoft.AnalysisServices.Perspective> 对象，必须从集合中将其删除，并且必须更新父多维数据集。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36129797"
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Perspective> 中的 <xref:Microsoft.AnalysisServices>。  
   
-###  <a name="Translation"></a> 转换对象  
+###  <a name="Translation"></a> Translation 对象  
  <xref:Microsoft.AnalysisServices.Translation> 对象的创建方法是：将其添加到所需对象的翻译集合中，然后使用 Update 方法，将最近的主要父对象更新到服务器中。 最近的父对象的 Update 方法可包含参数 UpdateOptions.ExpandFull，该参数可确保此更新操作会将所有修改过的子对象都更新到服务器中。  
   
  若要删除 <xref:Microsoft.AnalysisServices.Translation> 对象，必须从集合中将其删除，并且必须更新最近的父对象。  
@@ -161,8 +161,8 @@ ms.locfileid: "36129797"
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
- [编程 AMO OLAP Basic Objects](programming-amo-olap-basic-objects.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
+ [AMO OLAP 基本对象的编程](programming-amo-olap-basic-objects.md)   
  [编程 AMO OLAP 高级对象](programming-amo-olap-advanced-objects.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  

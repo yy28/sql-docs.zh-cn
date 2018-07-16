@@ -1,5 +1,5 @@
 ---
-title: 指定属性顺序 （商业智能向导） |Microsoft 文档
+title: 指定属性顺序 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.setordering.f1
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4b9a3e1656f8b19fda03febf3c695d290a70bd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56eac43752ad8528f3bb5989b0a3014573b6288e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332887"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>指定属性顺序（商业智能向导）
   可以使用 **“指定属性顺序”** 页指定所选维度中的属性的排序依据属性和排序条件。  
@@ -33,7 +33,7 @@ ms.locfileid: "36015106"
  **排序依据属性**  
  选择用于对相应“属性”进行排序的属性。 可以指定同一个属性。  
   
- 若要创建新的排序依据属性，选择**\<新属性 >**，然后在**选择一列**对话框框中，选择新的属性是以数据为基础的列。  
+ 若要创建新的排序依据属性，请选择**\<新属性 >**，然后在**选择一个列**对话框框中，选择新属性所基于的列。  
   
  **条件**  
  指定“排序依据属性”中用于对相应“属性”中的成员进行排序的条件。 下表列出了可用的条件：  

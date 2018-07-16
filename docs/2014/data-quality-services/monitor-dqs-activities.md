@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 363b1d538c37123c3cc787e7b80c1cf57b693181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a7458eb1aa76eebeb987ef49f7079634b26e577
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267663"
 ---
 # <a name="monitor-dqs-activities"></a>监视 DQS 活动
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中监视以下活动：知识发现、域管理、匹配策略、数据清理、数据匹配和 SSIS 清理。  
@@ -59,11 +59,11 @@ ms.locfileid: "36129748"
     |**处于活动状态**|指示活动当前是否处于活动状态。 该选项可具有以下值：<br /><br /> **活动**：活动当前正在运行。<br /><br /> **已结束**：活动已完成。<br /><br /> **已终止**：DQS 管理员已使用活动监视屏幕终止活动，或者用户在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的相应功能区中运行该活动时取消了活动。|  
     |**类型**|指示活动的类型。 监视以下类型的活动： **“知识管理”**、 **“DQ 项目”** 和 **“SSIS 清理”**。|  
     |**子类型**|指示为活动类型执行的特定工作流。<br /><br /> **“知识管理”** 类型的活动可具有以下工作流或子类型： **“知识发现”**、 **“域管理”** 和 **“匹配策略”**。<br /><br /> **“DQ 项目”** 类型的活动可具有以下工作流或子类型： **“清理”** 和 **“匹配”**。<br /><br /> **“SSIS 清理”** 类型的活动仅具有 **“清理”** 工作流或子类型。|  
-    |**当前状态**|指示活动的当前状态。 活动状态取决于最后的计算过程。 该选项可具有以下值：<br /><br /> **正在运行**：计算过程正在运行。<br /><br /> **成功**：在任何计算过程运行之前，状态已设置为 **“成功”**。 同样，在计算过程成功结束后，状态也设置为 **“成功”**。<br /><br /> **失败**：计算过程已失败。<br /><br /> **已停止**：计算过程已停止。<br /><br /> <br /><br /> 注意： 可以有多个计算进程的一个活动，如运行发现过程几次 （在知识发现活动）。 因此，在整个活动生命周期中状态可以更改多次。|  
+    |**当前状态**|指示活动的当前状态。 活动状态取决于最后的计算过程。 该选项可具有以下值：<br /><br /> **正在运行**：计算过程正在运行。<br /><br /> **成功**：在任何计算过程运行之前，状态已设置为 **“成功”**。 同样，在计算过程成功结束后，状态也设置为 **“成功”**。<br /><br /> **失败**：计算过程已失败。<br /><br /> **已停止**：计算过程已停止。<br /><br /> <br /><br /> 注意： 可以有多个计算过程中一个活动，例如运行发现过程几次 （在知识发现活动内）。 因此，在整个活动生命周期中状态可以更改多次。|  
     |**DQKB**|用于活动的知识库的名称。|  
     |**用户**|发起活动的用户的名称或最后处理活动的用户的名称（如果二者不相同）。|  
     |**活动开始时间**|活动的开始日期和时间。|  
-    |**运行时间**|活动开始后所经过的时间。 以 HH:MM:SS 格式显示。|  
+    |**已用时间**|活动开始后所经过的时间。 以 HH:MM:SS 格式显示。|  
     |**活动结束时间**|活动的结束日期和时间。|  
   
 ##  <a name="Filter"></a> 筛选 DQS 活动信息  

@@ -1,14 +1,13 @@
 ---
-title: 使用将数据库添加到可用性组向导 (SQL Server Management Studio) |Microsoft 文档
+title: 使用将数据库添加到可用性组向导 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2eae2dbc1f6031b18f6edf3a92e65d05d56b4ff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3900ee843069adb8775497168069716e68eea352
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243497"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用“将数据库添加到可用性组向导”(SQL Server Management Studio)
   使用“将数据库添加到可用性组向导”可帮助您将一个或多个数据库添加到现有的 AlwaysOn 可用性组。  
@@ -43,7 +42,7 @@ ms.locfileid: "36129965"
 -   **若要添加数据库，请使用：**[将数据库添加到可用性组向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 如果你从未向可用性组添加数据库，请参阅中的"可用性数据库"部分[先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 如果您从未向可用性组添加数据库，请参阅中的"可用性数据库"部分[的先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ###  <a name="Prerequisites"></a> 先决条件、限制和建议  
   
@@ -51,7 +50,7 @@ ms.locfileid: "36129965"
   
 -   如果数据库进行了加密或者数据库甚至包含数据库加密密钥 (DEK)，则您无法使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 或 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 将该数据库添加到某一可用性组。 即使已对加密的数据库进行了解密，其日志备份也可能包含加密的数据。 在此情况下，在该数据库上完整的初始数据同步可能会失败。 其原因在于，还原日志操作可能要求数据库加密密钥 (DEK) 使用的证书，但该证书可能不可用。  
   
-     **为使解密的数据库可添加到可用性组使用向导：**  
+     **为使解密的数据库可使用添加到可用性组向导：**  
   
     1.  创建主数据库的日志备份。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36129965"
   
 3.  右键单击要向其添加数据库的可用性组，然后选择“添加数据库”命令。 该命令将启动“将数据库添加到可用性组向导”。  
   
-4.  在 **“选择数据库”** 页上，选择一个或多个数据库。 有关详细信息，请参阅[选择数据库页&#40;新建可用性组向导将添加数据库向导&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)。  
+4.  在 **“选择数据库”** 页上，选择一个或多个数据库。 有关详细信息，请参阅[选择数据库页&#40;新建可用性组向导 / 添加数据库向导&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)。  
   
 5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   
@@ -146,9 +145,9 @@ ms.locfileid: "36129965"
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [将数据库添加到可用性组 (SQL Server)](availability-group-add-a-database.md)   
- [启动 AlwaysOn 辅助数据库上的数据移动&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
+ [启动 AlwaysOn 辅助数据库的数据移动&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [将数据库添加到可用性组 (SQL Server)](availability-group-add-a-database.md)  
   
   

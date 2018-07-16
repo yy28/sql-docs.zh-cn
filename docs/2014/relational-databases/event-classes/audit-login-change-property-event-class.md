@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login Change Property event class
 ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ceec505901b0076b4ab428aa684d6845599abd56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 534c0e6e1656d9001aec810550729f1c4e793944
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316427"
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property 事件类
   当使用 **sp_defaultdb** 存储过程、 **sp_defaultlanguage** 存储过程或 ALTER LOGIN 语句修改某个登录名的属性时，将发生 **Audit Login Change Property** 事件类。  

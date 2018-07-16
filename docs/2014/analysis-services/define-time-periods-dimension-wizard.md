@@ -1,5 +1,5 @@
 ---
-title: 定义时间段 （维度向导） |Microsoft 文档
+title: 定义时间段 （维度向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d0eaa7b29e84be26032618fe7470652adc1a7b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46d6cea52d34599e44a4439121730c1412e08bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315927"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>定义时间段（维度向导）
   可以使用 **“定义时间段”** 页，定义要包含在时间维度或服务器时间维度中的日历年信息和时间频率。  
@@ -48,7 +48,7 @@ ms.locfileid: "36124023"
 > [!NOTE]  
 >  `Date` 时间段是必需的。  
   
- **时间成员名称的语言**  
+ **时间成员名称**  
  选择时间维度中的成员所用的语言。  
   
 ## <a name="see-also"></a>请参阅  

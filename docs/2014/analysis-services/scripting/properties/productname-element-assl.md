@@ -1,5 +1,5 @@
 ---
-title: ProductName 元素 (ASSL) |Microsoft 文档
+title: ProductName 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ProductName element
 ms.assetid: f8129bb2-55c9-44e1-8857-82dc01c04a7f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a63e5209f206a99002fad139b44aab5a32cb13a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be8078f2e3949513f76d6aed6dfdd3e66c50ed18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187034"
 ---
 # <a name="productname-element-assl"></a>ProductName 元素 (ASSL)
-  包含的实例的只读的产品名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]关联[服务器](../objects/server-element-assl.md)元素。  
+  包含的实例的只读产品名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]关联[Server](../objects/server-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36138289"
 ## <a name="remarks"></a>Remarks  
  `ProductName` 元素提供对与 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例关联的产品名的只读访问。  
   
- 对应于的父元素`ProductName`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Server>。  
+ 父级对应的元素`ProductName`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Server>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 选项 （文本编辑器的纯文本的选项卡页） |Microsoft 文档
+title: 选项 （文本编辑器的纯文本的选项卡页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c27514ea38602885c26733238f2564211d4f43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275303"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>选项（“文本编辑器”-“纯文本”-“选项卡”页）
   使用此对话框可以更改文本编辑器的跳格行为，该编辑器用于编辑未与特定开发语言关联的文档。 若要显示这些设置，请在“工具”菜单上单击“选项”，展开“文本编辑器”，展开“纯文本”，再单击“制表符”。  

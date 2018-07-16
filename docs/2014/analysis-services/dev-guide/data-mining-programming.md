@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘编程 |Microsoft 文档
+title: 数据挖掘编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 1ad8f0d8e066fde6f199af26c977b5a9ba3d8917
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: fce4bd16cdc64aeabb2367d757b0b68a5cab6144
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297367"
 ---
 # <a name="data-mining-programming"></a>数据挖掘编程
   如果您觉得 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的内置工具和查看器不符合您的要求，您可以编写自己的扩展插件代码来扩展 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的功能。 如果采用这种方法，您有两种选择：  
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 支持 XML Analysis (XMLA) 用作一种协议与客户端应用程序进行通信。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 支持 XML for Analysis (XMLA) 作为与客户端应用程序进行通信协议。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
   
      由于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将 XMLA 用于数据定义、数据操作和数据控制支持，因此您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的可视化工具创建挖掘结构和挖掘模型，然后扩展已使用数据挖掘扩展插件 (DMX) 和 Analysis Services 脚本语言 (ASSL) 脚本创建的数据挖掘对象。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36313285"
   
 ## <a name="related-reference"></a>相关参考  
  [使用 ADOMD.NET 进行开发](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
- 引入了 ADOMD.NET 客户端和服务器编程对象。  
+ 介绍 ADOMD.NET 客户端和服务器编程对象。  
   
  [使用分析管理对象开发&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  介绍 AMO 编程库。  

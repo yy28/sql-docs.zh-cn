@@ -1,5 +1,5 @@
 ---
-title: 其中元素 (XMLA) |Microsoft 文档
+title: 其中元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Where element
 ms.assetid: 81fb4190-3379-4ddf-8795-a0772f3b92bb
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4e63d2ecd6f20d374c6746c7d3bc77ad455f1ef6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 44d6242d0c815ee8ec150936a5e41ad12de4a59d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218067"
 ---
 # <a name="where-element-xmla"></a>Where 元素 (XMLA)
   定义父 [Drop](../xml-elements-commands/drop-element-xmla.md) 或 [Update](../xml-elements-commands/update-element-xmla.md) 命令使用的筛选条件。  
@@ -66,7 +66,7 @@ ms.locfileid: "36138285"
 |子元素|[属性](attributes-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 有关`Drop`命令，`Where`元素，结合[DeleteWithDescendants](deletewithdescendants-element-xmla.md)元素中，标识要删除的属性成员的作用域。  
+ 有关`Drop`命令，`Where`元素，结合[DeleteWithDescendants](deletewithdescendants-element-xmla.md)元素，标识要删除的属性成员的范围。  
   
  对于 `Update` 命令，`Where` 元素标识要更新的属性成员的范围。 结合使用父 `Attributes` 命令的 `Update` 集合和 `Attributes` 元素的 `Where` 集合中的属性可更新多个属性成员。  
   

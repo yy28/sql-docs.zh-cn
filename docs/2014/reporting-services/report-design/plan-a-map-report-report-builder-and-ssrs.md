@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309417"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
   好的报表提供的信息可指导您采取措施或让您洞察实际情况。 若要展示分析数据，如某一地理背景下的总销售额或人口统计，您可以将地图添加到报表。 一个地图可以包含多个图层，每个图层都显示由特定类型的空间数据定义的地图元素：代表地点的点、代表路线的线条以及代表区域的多边形。 您可以将分析数据与每个图层上的地图元素相关联。  
@@ -66,7 +66,7 @@ ms.locfileid: "36018120"
   
 -   地图库中报表内的地图。  
   
--   提供了 ESRI 形状文件作为空间数据的第三方站点或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]空间数据。  
+-   提供空间数据作为 ESRI 形状文件的第三方站点或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]空间数据。  
   
 -   Bing 地图图块，为地图视图提供背景。 若要在地图中显示图块，必须将报表服务器配置为支持 Bing 地图 Web 服务。  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36018120"
  [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
- [报表故障排除： 将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

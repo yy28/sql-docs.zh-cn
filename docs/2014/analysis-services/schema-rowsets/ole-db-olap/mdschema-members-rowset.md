@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEMBERS 行集 |Microsoft 文档
+title: MDSCHEMA_MEMBERS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280013"
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS 行集
   介绍数据库中的成员。  
   
 ## <a name="rowset-columns"></a>行集列  
- `MDSCHEMA_MEMBERS`行集包含以下各列。  
+ `MDSCHEMA_MEMBERS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "36129785"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`||成员的唯一名称。|  
 |`MEMBER_TYPE`|`DBTYPE_I4`||成员的类型：<br /><br /> -   `MDMEMBER_TYPE_REGULAR` (`1`)<br />-   `MDMEMBER_TYPE_ALL` (`2`)<br />-   `MDMEMBER_TYPE_MEASURE` (`3`)<br />-   `MDMEMBER_TYPE_FORMULA` (`4`)<br />-   `MDMEMBER_TYPE_UNKNOWN` (`0`)<br />-   `MDMEMBER_TYPE_FORMULA` 将优先于`MDMEMBER_TYPE_MEASURE`。 例如，如果度量值维度上有一个公式（计算）成员，则作为 `MDMEMBER_TYPE_FORMULA` 列出。|  
 |`MEMBER_GUID`|`DBTYPE_GUID`||成员的 GUID。 如果 GUID 不存在，则为 `NULL`。|  
-|`MEMBER_CAPTION`|`DBTYPE_WSTR`||与成员相关的标签或标题。 主要用于显示目的。 如果标题不存在，`MEMBER_NAME`返回。|  
+|`MEMBER_CAPTION`|`DBTYPE_WSTR`||与成员相关的标签或标题。 主要用于显示目的。 如果不存在标题，`MEMBER_NAME`返回。|  
 |`CHILDREN_CARDINALITY`|`DBTYPE_UI4`||成员具有的子级的个数。 它可以是一个估计值，所以使用者不应依赖它作为确切计数。 访问接口应尽可能返回最精确的估计值。|  
 |`PARENT_LEVEL`|`DBTYPE_UI4`||成员的父级距层次结构的根级别的距离。 根级别为零 (0)。|  
 |`PARENT_UNIQUE_NAME`|`DBTYPE_WSTR`||成员的父成员的唯一名称。 对于根级别上的任何成员，均返回 `NULL`。|  
@@ -64,7 +64,7 @@ ms.locfileid: "36129785"
  行集按 `CATALOG_NAME`、`SCHEMA_NAME`、`CUBE_NAME`、`DIMENSION_UNIQUE_NAME`、`HIERARCHY_UNIQUE_NAME`、`LEVEL_UNIQUE_NAME`、`LEVEL_NUMBER`、`MEMBER_ORDINAL` 排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `MDSCHEMA_MEMBERS`行集可限制在下表中列出的列。  
+ `MDSCHEMA_MEMBERS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
@@ -79,8 +79,8 @@ ms.locfileid: "36129785"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|可选。|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|可选。|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|可选。|  
-|`TREE_OP`|`DBTYPE_I4`|（可选）仅适用于单个成员：<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) 返回所有上级。<br />-   `MDTREEOP_CHILDREN` (`0x01`) 返回仅的直属子级。<br />-   `MDTREEOP_SIBLINGS` (`0x02`) 返回相同的级别上的成员。<br />-   `MDTREEOP_PARENT` (`0x04`) 返回仅的直接父。<br />-   `MDTREEOP_SELF` (`0x08`) 在列表中返回的行返回它自身。<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) 返回所有子代。|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）位图，并使用以下有效的值之一：<br /><br /> -1 的多维数据集<br />-2 的维度<br /><br /> 默认限制的值为 1。|  
+|`TREE_OP`|`DBTYPE_I4`|（可选）仅适用于单个成员：<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) 返回所有祖先。<br />-   `MDTREEOP_CHILDREN` (`0x01`) 返回仅直属子级。<br />-   `MDTREEOP_SIBLINGS` (`0x02`) 返回相同的级别上的成员。<br />-   `MDTREEOP_PARENT` (`0x04`) 仅将直接父级返回。<br />-   `MDTREEOP_SELF` (`0x08`) 返回的行的列表中返回自身。<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) 返回的所有后代。|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|（可选）使用以下有效值之一位图：<br /><br /> -1 的多维数据集<br />-2 个维度<br /><br /> 默认限制的值为 1。|  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB for OLAP 架构行集](ole-db-for-olap-schema-rowsets.md)  

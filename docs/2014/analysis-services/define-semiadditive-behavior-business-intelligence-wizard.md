@@ -1,5 +1,5 @@
 ---
-title: 定义半累加性行为 （商业智能向导） |Microsoft 文档
+title: 定义半累加行为 （商业智能向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79ee4ffdb89c4ee8ccb13f4a4985f6d545f573ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201a5a24e8bafa2f2f919f6ad0b072ca801a694e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310807"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定义半累加行为（商业智能向导）
   可以使用“定义半累加性行为”页启用或禁用针对度量值的半累加行为。 半累加行为确定多维数据集所包含的度量值在一定时间维度内如何聚合。  
@@ -33,8 +33,8 @@ ms.locfileid: "36018764"
  **关闭半累加性行为**  
  在多维数据集所包含的所有度量值中禁用半累加性行为。  
   
- **向导检测到\<维度名称 > 帐户维度，其中包含半累加性成员。服务器将聚合根据为每个帐户类型指定的半累加性行为此维度的成员。**  
- 对包含半累加性成员的帐户维度启用半累加性行为。 选择此选项设置引用到该帐户维度的度量值组中的所有度量值的聚合函数`ByAccount`。  
+ **向导检测到\<维度名称 > 包含半累加性成员的帐户维度。服务器将聚合此维度根据为每个帐户类型指定的半累加性行为的成员。**  
+ 对包含半累加性成员的帐户维度启用半累加性行为。 选择此选项设置的所有度量值的聚合函数引用为该帐户维度的度量值组中`ByAccount`。  
   
  有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。  
   

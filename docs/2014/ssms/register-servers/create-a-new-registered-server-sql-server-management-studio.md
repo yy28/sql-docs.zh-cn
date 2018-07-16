@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.sqlce.f1
 - sql12.swb.registerserver.general.sqlserver.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28039cf3d87fb25895044defc039c9a3f3d46ffb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ba895e7c6bd490278147fb6656b8c5856c02f57c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299567"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>创建新的已注册的服务器 (SQL Server Management Studio)
   本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的已注册服务器组件中注册服务器，以保存经常访问的服务器的连接信息。 您可以在连接之前注册服务器，也可以在从对象资源管理器中进行连接时注册服务器。 对象资源管理器中有注册本地计算机上的服务器实例的专用菜单选项。  

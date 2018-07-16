@@ -1,5 +1,5 @@
 ---
-title: AggregationDesignID 元素 (ASSL) |Microsoft 文档
+title: AggregationDesignID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesignID element
 ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0548685e81b7c98b80e49ea67bdb754cb0dfe887
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 373f77f8195f0e8d9c3000f9e55e0f1395c91b67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194277"
 ---
 # <a name="aggregationdesignid-element-assl"></a>AggregationDesignID 元素 (ASSL)
   标识[AggregationDesign](../objects/aggregationdesign-element-assl.md)元素与关联[分区](../objects/partition-element-assl.md)元素。  
@@ -62,7 +62,7 @@ ms.locfileid: "36028234"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`AggregationDesignID`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Partition>。 另请参阅<xref:Microsoft.AnalysisServices.AggregationDesign>。  
+ 父级对应的元素`AggregationDesignID`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Partition>。 另请参阅<xref:Microsoft.AnalysisServices.AggregationDesign>。  
   
 ## <a name="see-also"></a>请参阅  
  [AggregationDesign 元素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   

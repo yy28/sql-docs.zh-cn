@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c0cece8fb2a7fa52d3185080e34c8b1425470aae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f322ed88e8e9bdf6eea23799e533f124165f1bb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236047"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
   使用“空间索引”对话框可为“几何”或“地理”数据类型的列（空间列）创建索引，不能使用“索引/键”对话框为这些列创建索引。 每个空间列可以有多个空间索引，但一次只能创建一个索引。  
@@ -113,7 +113,7 @@ ms.locfileid: "36130008"
  **允许页锁定**  
  指定对此索引是否允许页级锁定。 允许或禁用页级锁定会影响数据库性能。  
   
- **重新计算****统计信息**   
+ **重新计算****统计信息  **  
  指定在创建索引后是否计算新的统计数据。 重新计算统计数据会降低索引的生成速度，但通常会提高查询性能。  
   
  **允许行锁定**  

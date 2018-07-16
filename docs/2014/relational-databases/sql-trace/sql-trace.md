@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188334"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
   在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "36137719"
  下列词汇介绍了 SQL 跟踪的重要概念。  
   
  **事件**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]实例内发生的操作。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]实例内发生的操作。  
   
  **数据列**  
  事件的属性。  
@@ -77,13 +77,13 @@ ms.locfileid: "36137719"
 |数据列|列号|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
-|**BigintData1**|52|值 (`bigint`数据类型)，取决于跟踪中指定的事件类。|  
-|**BigintData2**|53|值 (`bigint`数据类型)，取决于跟踪中指定的事件类。|  
+|**BigintData1**|52|值 (`bigint`数据类型)，这取决于跟踪中指定的事件类。|  
+|**BigintData2**|53|值 (`bigint`数据类型)，这取决于跟踪中指定的事件类。|  
 |**Binary Data**|2|依赖于跟踪中捕获的事件类的二进制值。|  
 |**ClientProcessID** <sup>1</sup>|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
 |**ColumnPermissions**|44|表示是否已设置了列权限。 可以分析语句文本来确定各列所应用权限的情况。|  
 |**CPU**|18|事件使用的 CPU 时间（毫秒）。|  
-|**数据库 ID 为** <sup>1</sup>|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
+|**数据库 ID** <sup>1</sup>|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
 |**DatabaseName**|35|正在运行用户语句的数据库的名称。|  
 |**DBUserName** <sup>1</sup>|40|客户端的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户名。|  
 |**Duration**|13|事件的持续时间（微秒）。<br /><br /> 服务器以微秒（百万分之一秒或 10<sup>-6</sup> 秒）为单位报告事件的持续时间，以毫秒（千分之一秒或 10<sup>-3</sup> 秒）为单位报告事件使用的 CPU 时间。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 图形用户界面默认以毫秒为单位显示 **“持续时间”** 列，但是当跟踪保存到文件或数据库表中时，将以微秒为单位写入“持续时间”  列值。|  
@@ -141,9 +141,9 @@ ms.locfileid: "36137719"
 |**Writes**|17|由服务器代表事件写入物理磁盘的次数。|  
 |**XactSequence**|50|用于说明当前事务的标记。|  
   
- <sup>1</sup>默认情况下，所有事件将填充这些数据列。  
+ <sup>1</sup>默认情况下，所有事件填充这些数据列。  
   
- <sup>2</sup>有关详细信息**ObjectType**数据列，请参阅[ObjectType Trace Event Column](../event-classes/objecttype-trace-event-column.md)。  
+ <sup>2</sup>有关详细信息**ObjectType**数据列中，请参阅[ObjectType Trace Event Column](../event-classes/objecttype-trace-event-column.md)。  
   
 ## <a name="sql-trace-tasks"></a>SQL 跟踪任务  
   

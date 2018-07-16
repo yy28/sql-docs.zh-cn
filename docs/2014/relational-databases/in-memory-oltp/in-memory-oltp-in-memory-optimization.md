@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316197"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]中的新增功能 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 可大幅度提高 OLTP 数据库应用程序性能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是集成到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎中的内存优化的数据库引擎，针对 OLTP 进行了优化。  
@@ -35,7 +35,7 @@ ms.locfileid: "36016656"
   
  下表总结了可通过使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]获得最多好处的工作负载模式：  
   
-|实现场景|实现场景|优点 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]|  
+|实现场景|实现场景|优势 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]|  
 |-----------------------------|-----------------------------|-------------------------------------|  
 |来自多个并发连接的高数据插入率。|主要是仅限追加存储。<br /><br /> 无法与工作负荷保持同步。|消除争用。<br /><br /> 减少日志记录。|  
 |读取性能并通过定期批量插入和更新进行扩展。|高性能读取操作，尤其是在每个服务器请求包含多个要执行的读取操作时。<br /><br /> 无法满足扩展要求。|在新数据到达时消除争用。<br /><br /> 延迟较低的数据检索。<br /><br /> 最大限度缩短代码执行时间。|  
@@ -53,7 +53,7 @@ ms.locfileid: "36016656"
   
  在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，对于 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 支持的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]外围应用存在一些限制。  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 通过使用，来实现显著提高性能和可伸缩性目标：  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 通过使用，从而实现显著的性能和可伸缩性提升：  
   
 -   专为访问内存常驻数据而优化的算法。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36016656"
   
 -   [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [SQL Server 内存中 OLTP 内部结构概述](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [SQL Server 内存中 OLTP 内部组件概述](http://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## <a name="see-also"></a>请参阅  
  [数据库功能](../database-features.md)  

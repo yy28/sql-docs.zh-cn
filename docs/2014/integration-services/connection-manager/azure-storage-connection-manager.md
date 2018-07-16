@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpstorageconn.f1
 - sql11.dts.designer.afpstorageconn.f1
@@ -16,16 +16,16 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41ddc29a865b84ef01721931b0702476fe6b9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6289ec54afd8b649b937fe3d5b9140dd50874f48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190817"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
-  Azure 存储空间连接管理器使一个 SSIS 包来连接到 Azure 存储帐户的属性使用你指定的值： 存储帐户名称和帐户密钥。  
+  Azure 存储连接管理器使一个 SSIS 包来使用你指定的值的属性连接到 Azure 存储帐户： 存储帐户名称和帐户密钥。  
   
 1.  在“添加 SSIS 连接管理器”  对话框中，选择“AzureStorage” ，然后单击“添加” 。  
   

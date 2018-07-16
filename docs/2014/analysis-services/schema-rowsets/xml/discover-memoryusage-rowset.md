@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_MEMORYUSAGE 行集 |Microsoft 文档
+title: DISCOVER_MEMORYUSAGE 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304577"
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 行集
   返回由服务器分配的各种对象的 DISCOVER_MEMORYUSAGE 统计信息。  
@@ -30,10 +30,10 @@ ms.locfileid: "36025809"
 >   
 >  '\<drive>:\Users\\<username\>\AppData\Local\Temp\\<fileID\>.xml'.  
   
- **适用于：** 表格模型、 多维模型  
+ **适用于：** 表格模型和多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_MEMORYUSAGE`行集包含以下各列。  
+ `DISCOVER_MEMORYUSAGE`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36025809"
 |`ElementCount`|`DBTYPE_UI4`||对于容器对象，这是该对象包含的对象的数目。|  
 |`Shrinkable`|`DBTYPE_BOOL`|是|一个布尔值，指示内存是否可收缩（可能因内存压力被逐出）。 如果为 true，则表示内存可收缩；如果为 false，则表示内存不可收缩。|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||用于标识此对象的完整路径的字符串。|  
-|`ObjectID`|`DBTYPE_WSTR`||标识对象的字符串。 由字符串表示此对象的完整路径: (ObjectParentPath + '。 ' + ObjectId)。|  
+|`ObjectID`|`DBTYPE_WSTR`||标识对象的字符串。 此对象的完整路径表示为字符串: (ObjectParentPath + '。 + ObjectId)。|  
   
  未对此架构行集进行排序。  
   

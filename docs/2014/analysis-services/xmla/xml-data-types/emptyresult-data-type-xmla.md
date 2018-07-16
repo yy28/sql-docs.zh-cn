@@ -1,5 +1,5 @@
 ---
-title: EmptyResult 数据类型 (XMLA) |Microsoft 文档
+title: EmptyResult 数据类型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba727b2d7d612fa59c99665bd16d936da137fb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257153"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 数据类型 (XMLA)
-  定义一个派生的数据类型，表示[根](../xml-elements-properties/root-element-xmla.md)不返回中的数据的元素[发现](../xml-elements-methods-discover.md)或[执行](../xml-elements-methods-execute.md)方法调用。  
+  定义一个派生的数据类型，表示[根](../xml-elements-properties/root-element-xmla.md)不返回数据的元素[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法调用。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析： 空  
   

@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_MODEL_XML 行集 |Microsoft 文档
+title: DMSCHEMA_MINING_MODEL_XML 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,26 +18,26 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_XML rowset
 ms.assetid: f58b00e9-3f72-4cff-b448-21a9fb529772
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37bfb0f304e8204f28f83589a6c16625c178444c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d68948949fd1e8c5863ad62f73fd9f5f8fd234
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317027"
 ---
 # <a name="dmschemaminingmodelxml-rowset"></a>DMSCHEMA_MINING_MODEL_XML 行集
   返回挖掘模型的 XML 结构。 该 XML 字符串的格式遵循预测模型标记语言 (PMML 2.1) 标准。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DMSCHEMA_MINING_MODEL_XML`行集包含以下各列。  
+ `DMSCHEMA_MINING_MODEL_XML`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||目录名称。 使用模型为其成员的数据库的名称填充。|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||非限定的架构名称。 此列不支持通过[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 它始终包含`NULL`。|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||非限定的架构名称。 此列不受[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 它始终包含`NULL`。|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||模型名称。 此列不能包含 `NULL`。|  
 |`MODEL_TYPE`|`DBTYPE_WSTR`||模型类型。 它是特定于访问接口的字符串。 它可以是`NULL`。|  
 |`MODEL_GUID`|`DBTYPE_GUID`||标识模型的 GUID。 不使用 GUID 标识表的访问接口返回 `NULL`。|  

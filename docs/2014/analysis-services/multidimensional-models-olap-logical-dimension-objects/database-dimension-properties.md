@@ -1,5 +1,5 @@
 ---
-title: 数据库维度属性 |Microsoft 文档
+title: 数据库维度属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - properties [Analysis Services], dimensions
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f426560d08d9ba4600a3619828d29d658145b8f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e9b86509f0b4a5ab87102c43838cfa1b18376a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194327"
 ---
 # <a name="database-dimension-properties"></a>数据库维度属性
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，由基于各种的维度属性的设置和上的属性或维度包含的层次结构的维度的元数据定义维度的特征。 下表说明了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度属性。  
+  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度特征基于各种维度属性的设置和属性或层次结构所包含的维度的维度的元数据由定义。 下表说明了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度属性。  
   
 |“属性”|Description|  
 |--------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "36127403"
 |`WriteEnabled`|指示维度写回是否可用（视安全权限而定）。|  
   
 > [!NOTE]  
->  有关使用 null 值和其他数据完整性问题时设置值 ErrorConfiguration 和 UnknownMember 属性的详细信息，请参阅[中 Analysis Services 2005 中处理数据完整性问题](http://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  有关处理 null 值和其他数据完整性问题时设置 ErrorConfiguration 和 UnknownMember 属性的值的详细信息，请参阅[在 Analysis Services 2005 中处理数据完整性问题](http://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](attributes-and-attribute-hierarchies.md)   

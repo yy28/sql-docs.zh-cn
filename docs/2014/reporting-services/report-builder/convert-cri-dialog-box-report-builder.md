@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10008"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dafcb1944eae08767df64f9a97f4115756f682c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8fcaa229bfc685e8e9315086f963d5bc9f74a613
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247847"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>“转换 CRI”对话框（报表生成器）
   该报表包含其中有不受支持的功能的自定义报表项 (CRI)。 CRI 是对报表定义语言 (RDL) 的扩展，它支持用于显示报表中的数据的自定义对象。 CRI 包含由第三方软件供应商提供的设计时和运行时组件。  
@@ -34,7 +34,7 @@ ms.locfileid: "36128477"
   
  某些 CRI 可以转换为采用新的报表定义格式的报表项。 打开报表时，系统会提示您是否升级报表。 使用以下信息可以决定是否转换该报表中的 CRI：  
   
--   **是** 选择 **“是”** 将转换报表中所有可以转换的 CRI。 无法升级 CRI 中不受支持的功能，也不能从报表定义文件中删除它们。 不支持的功能的列表，请参阅[Upgrade Reports](../install-windows/upgrade-reports.md)。 查看报表时，可能看到 CRI 在报表中的显示方式存在差异。  
+-   **是** 选择 **“是”** 将转换报表中所有可以转换的 CRI。 无法升级 CRI 中不受支持的功能，也不能从报表定义文件中删除它们。 不支持的功能的列表，请参阅[升级报表](../install-windows/upgrade-reports.md)。 查看报表时，可能看到 CRI 在报表中的显示方式存在差异。  
   
 -   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”**。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
   

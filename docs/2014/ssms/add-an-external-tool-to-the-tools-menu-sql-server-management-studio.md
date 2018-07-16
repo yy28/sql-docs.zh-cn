@@ -1,5 +1,5 @@
 ---
-title: 将外部工具添加到工具菜单 (SQL Server Management Studio) |Microsoft 文档
+title: 将外部工具添加到工具菜单 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], external
 - external tools [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Tools menu
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3fc600545da3d0f7d5b2253b89b8063380ffe6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d4377bb872c4d442fd6aca2a6f9acde7e5b803d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249477"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>在“工具”菜单中添加外部工具 (SQL Server Management Studio)
   可以从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 启动任何 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 应用程序。 可以在“工具”菜单中添加和运行外部应用程序。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - inserting rows
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00efde2b8d3598524dea15f105005d99275f311b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6ace4fb5b33cb2649e81398be6483d87f4371321
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330847"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中添加新行 (Visual Database Tools)
   若要添加新数据，既可以在其中键入数据也可以从其他程序（如“记事本”或 Excel）粘贴数据。 要粘贴的行必须与要粘贴到的表中列的数目和类型完全一致。 可以在“结果”窗格中一次粘贴多行。  
@@ -58,7 +58,7 @@ ms.locfileid: "36014221"
 -   按 Esc 取消编辑。 如果在已经进行了更改的某个单元格中按 Esc，则将取消对该单元格所做的更改。 如果在未进行更改的单元格中按 Esc，则将取消对整个行所做的更改。  
   
 ## <a name="see-also"></a>请参阅  
- [在结果窗格中处理数据&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [使用结果窗格中的数据&#40;可视化数据库工具&#41;](results-pane-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

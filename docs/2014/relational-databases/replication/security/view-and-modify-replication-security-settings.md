@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
 - replication [SQL Server], security
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3f07f5c5cce04561121a03a0c5634c352ae2b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3f5f4de1de339e3fc6d92106e645a6b84ead2cd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292477"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改复制安全设置。 例如，您可能需要将日志读取器代理到发布服务器的连接从 SQL Server 身份验证更改为 Windows 集成身份验证，或者您可能需要在 Window 帐户密码更改后更改用于运行代理作业的凭据。 有关每个代理所需权限的信息，请参阅[复制代理安全模型](replication-agent-security-model.md)。  
@@ -451,7 +451,7 @@ ms.locfileid: "36026537"
   
 3.  设置订阅的 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 属性，并为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的订阅属性中定义不正确或订阅不存在。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的订阅属性定义不正确或订阅不存在。  
   
 5.  对 <xref:Microsoft.SqlServer.Replication.TransSubscription>实例设置下列一个或多个安全属性：  
   
@@ -459,12 +459,12 @@ ms.locfileid: "36026537"
   
     -   若要指定 Windows 集成身份验证作为代理连接到订阅服务器时使用的身份验证类型，请将 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 属性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 字段设置为 `true`。  
   
-    -   若要指定 SQL Server 身份验证作为代理连接到订阅服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>属性`false`，并指定的订阅服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
+    -   若要指定 SQL Server 身份验证作为代理连接到订阅服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>属性设置为`false`，并指定的订阅服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
   
         > [!NOTE]  
         >  在建立代理与分发服务器之间的连接时将始终使用由 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 凭据。 此帐户还用于建立使用 Windows 身份验证的远程连接。  
   
-6.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+6.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>为事务发布的请求订阅的分发代理更改安全设置  
   
@@ -474,7 +474,7 @@ ms.locfileid: "36026537"
   
 3.  设置订阅的 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性，并为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的订阅属性中定义不正确或订阅不存在。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的订阅属性定义不正确或订阅不存在。  
   
 5.  对 <xref:Microsoft.SqlServer.Replication.TransPullSubscription>实例设置下列一个或多个安全属性：  
   
@@ -482,12 +482,12 @@ ms.locfileid: "36026537"
   
     -   若要指定 Windows 集成身份验证作为代理连接到分发服务器时使用的身份验证类型，请将 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 属性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 字段设置为 `true`。  
   
-    -   若要指定 SQL Server 身份验证作为代理连接到分发服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>属性`false`，并指定的分发服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
+    -   若要指定 SQL Server 身份验证作为代理连接到分发服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>属性设置为`false`，并指定的分发服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
   
         > [!NOTE]  
         >  在建立代理与订阅服务器之间的连接时将始终使用由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 凭据。 此帐户还用于建立使用 Windows 身份验证的远程连接。  
   
-6.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+6.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>为合并发布的请求订阅的合并代理更改安全设置  
   
@@ -497,7 +497,7 @@ ms.locfileid: "36026537"
   
 3.  设置订阅的 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性，并为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的订阅属性中定义不正确或订阅不存在。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的订阅属性定义不正确或订阅不存在。  
   
 5.  对 <xref:Microsoft.SqlServer.Replication.MergePullSubscription>实例设置下列一个或多个安全属性：  
   
@@ -505,16 +505,16 @@ ms.locfileid: "36026537"
   
     -   若要指定 Windows 集成身份验证作为代理连接到分发服务器时使用的身份验证类型，请将 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 属性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 字段设置为 `true`。  
   
-    -   若要指定 SQL Server 身份验证作为代理连接到分发服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>属性`false`，并指定的分发服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
+    -   若要指定 SQL Server 身份验证作为代理连接到分发服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>属性设置为`false`，并指定的分发服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
   
-    -   若要指定 Windows 集成身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>属性`true`。  
+    -   若要指定 Windows 集成身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>属性设置为`true`。  
   
-    -   若要指定 SQL Server 身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>属性`false`，并指定的发布服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
+    -   若要指定 SQL Server 身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>属性设置为`false`，并指定的发布服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
   
         > [!NOTE]  
         >  在建立代理与订阅服务器之间的连接时将始终使用由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 凭据。 此帐户还用于建立使用 Windows 身份验证的远程连接。  
   
-6.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+6.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>为合并发布的推送订阅的合并代理更改安全设置  
   
@@ -524,7 +524,7 @@ ms.locfileid: "36026537"
   
 3.  设置订阅的 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 属性，并为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 3 中的订阅属性中定义不正确或订阅不存在。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的订阅属性定义不正确或订阅不存在。  
   
 5.  对 <xref:Microsoft.SqlServer.Replication.MergeSubscription>实例设置下列一个或多个安全属性：  
   
@@ -532,16 +532,16 @@ ms.locfileid: "36026537"
   
     -   若要指定 Windows 集成身份验证作为代理连接到订阅服务器时使用的身份验证类型，请将 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 属性的 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 字段设置为 `true`。  
   
-    -   若要指定 SQL Server 身份验证作为代理连接到订阅服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>属性`false`，并指定的订阅服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
+    -   若要指定 SQL Server 身份验证作为代理连接到订阅服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>属性设置为`false`，并指定的订阅服务器登录凭据<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>字段。  
   
-    -   若要指定 Windows 集成身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>属性`true`。  
+    -   若要指定 Windows 集成身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>属性设置为`true`。  
   
-    -   若要指定 SQL Server 身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>属性`false`，并指定的发布服务器登录凭据<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A>字段。  
+    -   若要指定 SQL Server 身份验证作为代理连接到发布服务器时使用的身份验证类型，请设置<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>字段<xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>属性设置为`false`，并指定的发布服务器登录凭据<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A>字段。  
   
         > [!NOTE]  
         >  在建立代理与分发服务器之间的连接时将始终使用由 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 凭据。 此帐户还用于建立使用 Windows 身份验证的远程连接。  
   
-6.  （可选）如果指定的值`true`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法来提交服务器上的更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值）、 更改发送到服务器立即。  
+6.  （可选）如果指定的值`true`有关<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，调用<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法以在服务器上提交更改。 如果指定的值`false`为<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（默认值），更改立即发送到服务器。  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>更改即时更新订阅服务器连接到事务发布服务器时使用的登录信息  
   
@@ -549,7 +549,7 @@ ms.locfileid: "36026537"
   
 2.  为订阅数据库创建 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 类的实例。 为 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> 指定步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 2 中的数据库属性中定义不正确或订阅数据库不存在。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 2 中的数据库属性定义不正确或订阅数据库不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> 方法，传递以下参数：  
   

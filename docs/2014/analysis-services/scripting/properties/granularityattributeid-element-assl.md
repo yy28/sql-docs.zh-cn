@@ -1,5 +1,5 @@
 ---
-title: GranularityAttributeID 元素 (ASSL) |Microsoft 文档
+title: GranularityAttributeID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GranularityAttributeID element
 ms.assetid: 90e6c939-71bd-462a-a377-4854cb9d5266
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f8d43d57717b7bae1a90087b83cc44bee6c096b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d29d88dcc7317388e2baab3415509f52299883f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308427"
 ---
 # <a name="granularityattributeid-element-assl"></a>GranularityAttributeID 元素 (ASSL)
   包含与父项关联的属性的标识符 (ID) [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md)数据类型。  
@@ -60,7 +60,7 @@ ms.locfileid: "36018027"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关扩展的行绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关的外部绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

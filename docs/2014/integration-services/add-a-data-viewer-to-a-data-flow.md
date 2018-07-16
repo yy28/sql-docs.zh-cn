@@ -1,5 +1,5 @@
 ---
-title: 将数据查看器添加到数据流 |Microsoft 文档
+title: 将数据查看器添加到数据流 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data viewers [Integration Services]
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8dce7625bad6faf206104884d56711faf7cabb3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a92dbd4bcd778ce081ff94e7e16dee75bccaee4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267223"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>将数据查看器添加到数据流
   本主题介绍如何在数据流中添加和配置数据查看器。 数据查看器可以显示在两个数据流组件之间移动的数据。 例如，数据查看器可以显示在数据流中的转换修改数据之前从数据源中提取的数据。  

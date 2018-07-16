@@ -1,5 +1,5 @@
 ---
-title: ReportServer 元素 (ASSL) |Microsoft 文档
+title: ReportServer 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportServer element
 ms.assetid: 677437aa-9d15-4dcc-a9bc-34f851d9640d
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0da706fd2a2bf80a15ae5c4916e33b0420902d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d80b432482d5b84db38d43291459c6aff8c758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208197"
 ---
 # <a name="reportserver-element-assl"></a>ReportServer 元素 (ASSL)
   包含名称的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]由的实例[ReportAction](../data-type/action-data-type-assl.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36124877"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`ReportServer`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ReportAction>。  
+ 父级对应的元素`ReportServer`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ReportAction>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

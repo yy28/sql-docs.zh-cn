@@ -1,29 +1,28 @@
 ---
-title: 将数据库还原到故障点在完整恢复模式 (Transact SQL) |Microsoft 文档
+title: 将数据库还原到故障点在完整恢复模式 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - point of failure [SQL Server]
 - restoring databases [SQL Server], point of failure
 - database restores [SQL Server], point of failure
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 743408c4cafccedf6648834fbdcb0be459857768
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ad1916a80b7e209773eacbafa4ec390e63be880b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271573"
 ---
 # <a name="restore-a-database-to-the-point-of-failure-under-the-full-recovery-model-transact-sql"></a>在完整恢复模式下将数据库还原到故障点 (Transact-SQL)
   本主题说明如何还原到故障点。 本主题仅与那些使用完整或大容量日志恢复模式的数据库相关。  

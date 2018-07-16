@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
 helpviewer_keywords:
@@ -19,16 +19,16 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47b5fffebd2ce4eba41aceb88725e4dc4c867348
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15e2239a7285e4d460e4fa5a85add8445f797ede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227847"
 ---
 # <a name="for-loop-container"></a>For 循环容器
-  For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 每次循环重复时，For 循环容器计算表达式，并重复其工作流，直到表达式计算结果为`False`。  
+  For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 在每次重复循环时，For 循环容器计算表达式，并重复运行其工作流，直到表达式计算结果为`False`。  
   
  For 循环容器使用下列元素定义循环：  
   

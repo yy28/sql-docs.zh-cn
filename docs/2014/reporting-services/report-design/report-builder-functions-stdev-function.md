@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1725f69b957ab319a59469605965ca563701c8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c45476e2bc717d7fb0f98830558539843d37879d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253439"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>StDev 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的标准偏差。  
@@ -36,7 +36,7 @@ StDev(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Integer`或`Float`) 在其上执行聚合表达式。  
+ (`Integer`或`Float`) 对其执行聚合的表达式。  
   
  *作用域*  
  (`String`) 可选。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
@@ -45,10 +45,10 @@ StDev(expression, scope, recursive)
  (**Enumerated Type**) 可选。 `Simple` （默认值） 或`RdlRecursive`。 指定是否以递归方式执行聚合。  
   
 ## <a name="return-type"></a>返回类型  
- 返回`Decimal`十进制表达式和`Double`所有其他表达式。  
+ 返回`Decimal`对于十进制表达式和`Double`对于所有其他表达式。  
   
 ## <a name="remarks"></a>Remarks  
- 表达式中指定的数据集必须具有相同的数据类型。 若要转换为相同的数据类型的多个数值数据类型的数据，使用转换功能，例如`CInt`，`CDbl`或`CDec`。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
+ 表达式中指定的数据集必须具有相同的数据类型。 若要将转换具有多个数值数据类型为相同的数据类型的数据，请使用转换函数，例如`CInt`，`CDbl`或`CDec`。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   

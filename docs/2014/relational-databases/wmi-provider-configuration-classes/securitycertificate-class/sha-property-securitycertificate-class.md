@@ -1,5 +1,5 @@
 ---
-title: SHA 属性 （SecurityCertificate 类） |Microsoft 文档
+title: SHA 属性 （SecurityCertificate 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SHA property
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f33792c2a9e52891ed62101b82f6a1b1ec505b6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7b5656923cf751a315ebd2f52b3580043af7d5bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325677"
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA 属性（SecurityCertificate 类）
   获取安全证书的 SHA 指纹属性。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- [SecurityCertificate 类] securitycertificate-class.md) 代表安全证书对象。  
+ [SecurityCertificate 类] securitycertificate-class.md) 对象，表示安全证书。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定安全证书的 SHA 指纹属性的字符串值。  

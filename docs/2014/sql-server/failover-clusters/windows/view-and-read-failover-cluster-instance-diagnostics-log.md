@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 21
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 93471f74f608febd0f6920b0b93646eac394eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a72521b1d2c40eb50954ea16676e17ec40d7d07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317517"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
   将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
@@ -33,7 +32,7 @@ ms.locfileid: "36016295"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Recommendations"></a> 建议  
- 默认情况下，SQLDIAG 存储在下本地日志文件夹的 SQL Server 实例目录，例如 ' C\Program Files\Microsoft SQL Server\MSSQL12。\<InstanceName > \MSSQL\LOG' 所属节点的 AlwaysOn 故障转移群集实例 (FCI)。 每个 SQLDIAG 日志文件的大小固定为 100 MB。 在被回收用于新日志之前，计算机上有十个这样的日志文件。  
+ 默认情况下，SQLDIAG 存储在 SQL Server 实例目录的本地 LOG 文件夹下，例如 C\Program Files\Microsoft SQL Server\MSSQL12。\<实例名 > \MSSQL\LOG 的 AlwaysOn 故障转移群集实例 (FCI) 的自有节点。 每个 SQLDIAG 日志文件的大小固定为 100 MB。 在被回收用于新日志之前，计算机上有十个这样的日志文件。  
   
  这些日志使用扩展事件文件格式。 **sys.fn_xe_file_target_read_file** 系统函数可用于读取由扩展事件创建的文件。 每行返回一个 XML 格式的事件。 查询系统视图以将 XML 数据作为结果集分析。 有关详细信息，请参阅 [sys.fn_xe_file_target_read_file (Transact SQL)](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)。  
   
@@ -97,7 +96,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
- 使用数据定义语言 (DDL) 语句， `ALTER SERVER CONFIGURATION`，你可以启动或停止日志记录诊断数据捕获[sp_server_diagnostics &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)过程，并设置 SQLDIAG 日志配置参数，例如日志文件滚动更新计数、 日志文件大小和文件位置。 有关语法详细信息，请参阅 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
+ 使用数据定义语言 (DDL) 语句`ALTER SERVER CONFIGURATION`，可以启动或停止诊断数据的日志记录捕获[sp_server_diagnostics &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)过程，并设置 SQLDIAG 日志配置参数，如日志文件滚动更新计数、 日志文件大小和文件位置。 有关语法详细信息，请参阅 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
   
 ###  <a name="ConfigTsqlExample"></a> 示例 (Transact-SQL)  
   

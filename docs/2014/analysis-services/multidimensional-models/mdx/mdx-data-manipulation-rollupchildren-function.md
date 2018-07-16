@@ -1,5 +1,5 @@
 ---
-title: 使用 RollupChildren 函数 (MDX) |Microsoft 文档
+title: 使用 RollupChildren 函数 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
 - RollupChildren function
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7776ad0bf70060912e4ad8d3e612b04bbcd4183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d864ea4e9d71928823b7de4d5b539594783d8ba2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314978"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>使用 RollupChildren 函数 (MDX)
-  多维表达式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [的搜索和替换脚本] 函数汇总将不同的一元运算符应用于每个子成员的子级，并返回数字的形式在此汇总的值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
+  多维表达式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [用于搜索和替换脚本] 函数汇总到每个子级应用不同的一元运算符的成员的子级，并返回一个数字作为此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 函数示例  
  `RollupChildren` 函数在多维表达式 (MDX) 语句中的用法很容易理解，但它对 MDX 查询的影响十分广泛。  
@@ -68,7 +68,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  当调用函数时，使用该成员属性中存储的运算符将每个子级的值应用于总数。 将忽略国内盈利和国外盈利的成员，并将 `RollupChildren` 函数返回的汇总总数乘以 1.1。  
   
 ### <a name="using-the-iif-function"></a>使用 IIf 函数  
- 如果示例操作不常发生或者如果该操作仅适用于一个 MDX 查询， [IIf](/sql/mdx/iif-mdx)函数可与`RollupChildren`函数以提供相同的结果。 下列 MDX 查询提供的结果与前面的 MDX 示例相同，但这里没有使用自定义成员属性：  
+ 如果示例操作不常发生或者只适用于一个 MDX 查询， [IIf](/sql/mdx/iif-mdx)函数可以用于`RollupChildren`函数以提供相同的结果。 下列 MDX 查询提供的结果与前面的 MDX 示例相同，但这里没有使用自定义成员属性：  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server、 代理和 DBM 传输对象 |Microsoft 文档
+title: SQL Server、 代理和 DBM Transport 对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac5a560f328de972dc40675d83e93c69447e6938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253919"
 ---
-# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、 代理和 DBM 传输对象
+# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、 代理和 DBM Transport 对象
   **Broker / DBM Transport** 性能对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。 下表列出了此对象包含的计数器。  
   
 |SQL Server Broker/DBM Transport 计数器|Description|  
@@ -54,7 +54,7 @@ ms.locfileid: "36129868"
 |**Receive I/O Bytes Total**|此计数器报告通过网络由 Service Broker 端点和数据库镜像端点接收的字节总数。|  
 |**Receive I/O bytes/sec**|此计数器报告每秒通过网络由 Service Broker 端点和数据库镜像端点接收的字节数。|  
 |**Receive I/O Len Avg**|此计数器报告传输接收操作的字节平均数。|  
-|**接收输入/输出/秒**|此计数器报告每秒 Service Broker / DBM transport 层已完成的传输接收 I/O 操作数。 注意，传输接收操作可能包含多个消息片段。|  
+|**接收 i/o 操作/秒**|此计数器报告每秒 Service Broker / DBM transport 层已完成的传输接收 I/O 操作数。 注意，传输接收操作可能包含多个消息片段。|  
 |**Send I/O Bytes Total**|此计数器报告 Service Broker 端点和数据库镜像端点通过网络传送的总字节数。|  
 |**Send I/O bytes/sec**|此计数器报告 Service Broker 端点和数据库镜像端点每秒通过网络传送的字节数。|  
 |**Send I/O Len Avg**|此计数器报告每个传输发送操作的平均大小（以字节为单位）。 注意，传输发送操作可能包含多个消息片段。|  

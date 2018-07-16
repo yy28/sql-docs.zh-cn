@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
 - replication [SQL Server], upgrading
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58c7b1de8c75c9cb5d9f57e1df498921de16a6d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ce7d9e9a67a11e7df2d2322e2c3c9bda17f3d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233807"
 ---
 # <a name="upgrade-replicated-databases"></a>升级复制数据库
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制数据库；在升级某一节点时，不需要停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则：  
@@ -84,7 +84,7 @@ ms.locfileid: "36130190"
  在使用合并复制的拓扑中升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后，如果要使用新功能，请更改所有发布的发布兼容级别。  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>升级至 Standard Edition、Workgroup Edition 或 Express Edition  
- 在从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。 有关详细信息，请参阅部分中的复制[支持的 SQL Server 2014 的版本功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 在从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。 详细信息，请参阅部分中有关复制[SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步  
  合并复制的 Web 同步选项要求将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (replisapi.dll) 复制到用于同步的 Internet Information Services (IIS) 服务器上的虚拟目录中。 配置 Web 同步时，该文件被配置 Web 同步向导复制到虚拟目录中。 若要升级安装在 IIS 服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，必须将 replisapi.dll 从 COM 目录手动复制到 IIS 服务器上的虚拟目录。 有关配置 Web 同步的详细信息，请参阅 [配置 Web 同步](../../../2014/relational-databases/replication/configure-web-synchronization.md)。  

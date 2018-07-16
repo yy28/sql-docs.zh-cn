@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Class
 api_location:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e09e954cb842a25a1e20453dec816479061c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fbc5fb6155840f6c64003f1e1dd38dc7914a0f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280133"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 类
   表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。  
   
- 此类型的所有成员的列表，请参阅[MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)。  
+ 有关此类型的所有成员的列表，请参阅[MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ public class MSReportServer_ConfigurationSetting
  此类型的任何公共静态（**中的** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
   
 ## <a name="example"></a>示例  
- 若要运行下面的代码，请添加服务器名称来取代每个 \<servername>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例循环访问每个属性[MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)类，打印的每个属性并向控制台其值的名称。  
+ 若要运行下面的代码，请添加服务器名称来取代每个 \<servername>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例循环访问每个属性中[MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)类，打印的名称以及每个属性及其值到控制台。  
   
 ```vb  
 Imports System  

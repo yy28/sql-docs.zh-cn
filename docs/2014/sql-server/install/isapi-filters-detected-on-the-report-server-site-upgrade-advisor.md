@@ -1,5 +1,5 @@
 ---
-title: 在报表服务器站点 （升级顾问） 上检测到的 ISAPI 筛选器 |Microsoft 文档
+title: 在报表服务器站点 （升级顾问） 上检测到 ISAPI 筛选器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ISAPI filters
 - report servers [Reporting Services], upgrade issues
@@ -16,13 +16,13 @@ ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 18a9aab0737cb6d5127bbb3357d307c9c8f03aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 448f334fc5a82dea623a12e2ad143725ec11f711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268132"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>在报表服务器站点上检测到 ISAPI 筛选器（升级顾问）
   升级顾问检测到承载报表服务器和报表管理器虚拟目录的网站上存在一个或多个 ISAPI 筛选器。 中不支持 ISAPI 筛选器[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  

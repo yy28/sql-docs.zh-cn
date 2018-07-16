@@ -1,5 +1,5 @@
 ---
-title: 修改跟踪结果视图 |Microsoft 文档
+title: 修改跟踪结果视图 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302757"
 ---
 # <a name="modify-the-trace-results-view"></a>修改跟踪结果视图
   本主题介绍如何通过执行以下任务修改 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中扩展事件会话的跟踪结果视图。  
@@ -233,7 +233,7 @@ ms.locfileid: "36017584"
   
     -   **详细信息**。 使用此选项可在跟踪窗口中搜索在打开 **“在扩展事件中查找”** 对话框之前已选择的所有列（提升和非提升的）。  
   
-    -   **\<事件列名称 >**。 使用此选项可在下拉列表的特定事件列中进行搜索。  
+    -   **\<输入列名称 >**。 使用此选项可在下拉列表的特定事件列中进行搜索。  
   
 5.  使用以下选项可指定所需的定义搜索的方式：  
   

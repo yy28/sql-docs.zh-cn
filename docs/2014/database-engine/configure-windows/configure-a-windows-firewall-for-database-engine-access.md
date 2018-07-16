@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dceef388586398fbeb5129f7859d1245f3f86ef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ad31b37014261e3545a206cfbd546113afd8c51a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188984"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为数据库引擎访问配置 Windows 防火墙。 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要通过防火墙访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙以允许访问。  
@@ -88,7 +88,7 @@ ms.locfileid: "36126930"
   
 3.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   
-4.  在 **“程序”** 对话框中，选择 **“此程序路径”**。 单击 **“浏览”**，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”**。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]位于**C:\Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击“下一步” 。  
+4.  在 **“程序”** 对话框中，选择 **“此程序路径”**。 单击 **“浏览”**，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”**。 默认情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]位于**C:\Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击“下一步” 。  
   
 5.  在 **“操作”** 对话框中，选择 **“允许连接”**，然后单击 **“下一步”**。  
   

@@ -1,13 +1,11 @@
 ---
-title: 删除程序集 |Microsoft 文档
+title: 删除程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3551d0971a90c77135ca3e74b30d3009108646c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3920b679e017d5d0e4f069dea29ada7ba97bf13b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124564"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354589"
 ---
 # <a name="dropping-an-assembly"></a>删除程序集
   使用 CREATE ASSEMBLY 语句在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中注册的程序集可以进行删除（如果不再需要程序集所提供的功能）。 删除程序集时，将从数据库中删除程序集和它的所有关联文件，如调试文件。 若要删除程序集，可按照如下语法使用 DROP ASSEMBLY 语句：  
@@ -48,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   在数据库中使用 WITH SCHEMABINDING 子句创建了使用 UDT 变量或参数的函数、存储过程或触发器。  
   
 ### <a name="finding-udt-dependencies"></a>查找 UDT 依赖关系  
- 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询找到的所有列和参数，在 UDT **AdventureWorks**数据库。  
+ 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询找到的所有列和参数使用 UDT **AdventureWorks**数据库。  
   
 ```  
 USE Adventureworks;  
@@ -72,7 +70,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [管理 CLR 集成程序集](managing-clr-integration-assemblies.md)   
  [更改程序集](altering-an-assembly.md)   
  [创建程序集](creating-an-assembly.md)   
- [拖放聚合&#40;Transact SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP AGGREGATE &#40;Transact SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
  [DROP FUNCTION (Transact-SQL)](/sql/t-sql/statements/drop-function-transact-sql)   
  [DROP PROCEDURE (Transact-SQL)](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER (Transact-SQL)](/sql/t-sql/statements/drop-trigger-transact-sql)   

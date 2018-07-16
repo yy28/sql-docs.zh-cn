@@ -1,5 +1,5 @@
 ---
-title: SetDefaults 方法 （ClientSettings 类） |Microsoft 文档
+title: SetDefaults 方法 （ClientSettings 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58cfbe5b2a53bfdce97037602058466ccd1af187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 92224fb0d9e8a46702a1bbfdecc6c8cf64d18ecf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216907"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>SetDefaults 方法（ClientSettings 类）
-  设置的实例的所有默认值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项覆盖现有数据的客户端。  
+  设置实例的所有默认值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择覆盖现有数据的客户端。  
   
 ## <a name="syntax"></a>语法  
   

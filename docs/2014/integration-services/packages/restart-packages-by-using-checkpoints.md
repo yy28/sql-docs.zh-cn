@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
@@ -17,13 +17,13 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b585849d6bb585a2d7008894c874b84d0a87f17e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260983"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以从失败点重新启动失败的包，而不是重新运行整个包。 如果包配置为使用检查点，则关于包执行的信息会写入检查点文件中。 当重新运行失败的包时，可以使用检查点文件从失败点重新启动该包。 如果包成功运行，则会删除该检查点文件，然后在下次运行包时会重新创建相应的检查点文件。  
@@ -63,7 +63,7 @@ ms.locfileid: "36138010"
 |CheckpointUsage|指定是否使用检查点。|  
 |SaveCheckpoints|指示包是否保存检查点。 此属性必须设置为 True，才能从失败点重新启动包。|  
   
- 此外，必须将 FailPackageOnFailure 属性设置为`true`的标识的包中的所有容器一样重新启动点。  
+ 此外，必须将 FailPackageOnFailure 属性设置为`true`对于你想要识别的包中的所有容器为重新启动点。  
   
  可以使用 ForceExecutionResult 属性测试包中检查点的使用情况。 通过将容器或任务的 ForceExecutionResult 设置为 Failure，可以模拟实时的失败。 当重新运行包时，将重新运行失败的任务和容器。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36138010"
 |`IfExists`|指定如果存在检查点文件则使用该文件。 如果检查点文件存在，则包从上一次执行失败的点重新启动；如果检查点文件不存在，则包从包工作流的起点开始运行。|  
   
 > [!NOTE]  
->  **上的 /CheckPointing** dtexec 选项等效于设置`SaveCheckpoints`的程序包的属性`True`，和`CheckpointUsage`为始终的属性。 有关详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
+>  **上的 /CheckPointing** dtexec 选项等效于设置`SaveCheckpoints`包的属性`True`，和`CheckpointUsage`属性为始终。 有关详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
   
 ## <a name="securing-checkpoint-files"></a>保护检查点文件  
  包级别的保护不包括保护检查点文件，必须单独保护这些文件。 检查点数据只能存储在文件系统中，应当使用操作系统访问控制列表 (ACL) 来保护用于存储该文件的位置或文件夹。 重要的是务必保护检查点文件，因为它们包含了有关包状态的信息，包括变量的当前值。 例如，变量可能包含由很多行私人数据（如电话号码）组成的记录集。 有关详细信息，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 关系数据类型 (ASSL) |Microsoft 文档
+title: Relationship 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81421605828b064644f0b9a0cfae2a7ed1b301a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4c5be48e7a5d4c5913a4bc881b6bd5b5c58ec57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224037"
 ---
 # <a name="relationship-data-type-assl"></a>Relationship 数据类型 (ASSL)
   定义一个基元数据类型，该类型表示维度中的关系。  
@@ -53,7 +53,7 @@ ms.locfileid: "36124873"
 |派生元素||  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Relationship>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Relationship>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

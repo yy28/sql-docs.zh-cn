@@ -1,5 +1,5 @@
 ---
-title: 分区 （还原数据库对话框） (Analysis Services-多维数据) |Microsoft 文档
+title: 分区 （还原数据库对话框） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269983"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>分区（“还原数据库”对话框）（Analysis Services - 多维数据）
   可以使用 **中的** “还原数据库” **对话框上的** “分区” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 页，指定还原本地分区的位置、是否还原远程分区以及在还原远程分区时使用的远程备份文件。  
@@ -32,7 +32,7 @@ ms.locfileid: "36125236"
 > [!NOTE]  
 >  还原现有数据库之后，还原了此数据库的用户可能会失去对还原后的数据库的访问权限。 如果在执行备份时用户不是服务器角色成员或者不是拥有完全控制（管理员）权限的数据库角色成员，则会出现这种失去访问权限的情形。  
   
- **在还原数据库对话框中显示分区页**  
+ **若要在还原数据库对话框中显示分区页**  
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹或**对象资源管理器**中的数据库，单击“还原”，然后在“选择页”下单击“分区”。  
   

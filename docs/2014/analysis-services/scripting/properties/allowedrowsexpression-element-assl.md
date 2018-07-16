@@ -1,5 +1,5 @@
 ---
-title: AllowedRowsExpression 元素 (ASSL) |Microsoft 文档
+title: AllowedRowsExpression 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99a340f2bbeb1e5d61a20b4031beeade9fbcc5c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f335861084f86fa509b8c2bc3f977332d5e1da7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291323"
 ---
 # <a name="allowedrowsexpression-element-assl"></a>AllowedRowsExpression 元素 (ASSL)
   包含布尔类型的数据分析表达式 (DAX)，该表达式定义了父元素的内容。  
@@ -52,7 +52,7 @@ ms.locfileid: "36015115"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关`CellPermission`元素，`Expression`元素包含一个逻辑的 MDX 表达式，标识适用于由的权限的单元格[访问](access-element-assl.md)元素`CellPermission`元素。 如果 `Expression` 元素的 `CellPermission` 元素值为空，则将忽略 `CellPermission` 元素。  
+ 有关`CellPermission`元素中，`Expression`元素包含标识适用于所指示的权限的单元格的逻辑 MDX 表达式[访问](access-element-assl.md)元素的`CellPermission`元素。 如果 `Expression` 元素的 `CellPermission` 元素值为空，则将忽略 `CellPermission` 元素。  
   
  对于 `StandardAction` 元素，`Expression` 元素包含一个表示操作内容的 MDX 表达式。 如果 `Expression` 元素的 `StandardAction` 元素值为空，则将忽略 `StandardAction` 元素。  
   

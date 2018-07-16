@@ -1,5 +1,5 @@
 ---
-title: 钻取操作窗体编辑器 （多维数据集设计器中的操作选项卡） (Analysis Services-多维数据) |Microsoft 文档
+title: 钻取操作窗体编辑器 （操作选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.drillthroughaction.f1
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81b7cde92983bf16f37b586389c059dfbff639d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6c310afd3535c1e5a7da5bd9f7784bec2a235ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220477"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>钻取操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的 **“钻取操作窗体编辑器”** 窗格，修改在 **“操作组织程序”** 窗格中选择的钻取操作。 有关钻取操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "36137645"
  **Default**  
  若要将此钻取操作设置为默认的钻取操作，请选择 **True** ，否则选择 **False**。  
   
- 如果`RETURN`从 MDX 省略子句`DRILLTHROUGH`由客户端应用程序，执行语句[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例评估所有默认钻取操作，并运行第一个默认钻取返回非空的集的操作。 有关详细信息，有关 MDX`DRILLTHROUGH`语句，请参阅[钻取语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
+ 如果`RETURN`省略子句的 mdx`DRILLTHROUGH`由客户端应用程序，执行语句[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例评估所有默认钻取操作，并运行第一个默认钻取返回非空的集合的操作。 有关 MDX 的详细信息`DRILLTHROUGH`语句，请参阅[钻取语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
   
 > [!NOTE]  
 >  使用此选项只是为了向后兼容。  

@@ -1,5 +1,5 @@
 ---
-title: 定型集和测试数据集 |Microsoft 文档
+title: 定型和测试数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0789d5f5ae4c141e8b7e53f7cab9938fae488a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173545"
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
   将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
@@ -47,7 +47,7 @@ ms.locfileid: "36138116"
   
  您还可以配置该向导以设置定型事例的最大数量，也可以组合不同的限制来允许事例的最大百分比达到所指定的最大事例数。 如果您既指定了事例的最大百分比又指定了事例的最大数量， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将这两个限制的较小者用作测试集的大小。 例如，如果指定测试事例维持在 30% 的比率，测试事例的最大数量为 1000，则测试集的大小决不会超过 1000 个事例。 如果您想确保测试集的大小保持一致（即使向模型中添加更多的定型数据也是如此），则这可能非常有用。  
   
- 如果您在不同的挖掘结构中使用相同的数据源视图，并希望以大体相同的方式对所有挖掘结构及其模型中的数据进行拆分，则应当指定用来初始化随机抽样的种子。 当指定的值`HoldoutSeed`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将使用此值开始采样。 否则，抽样功能将根据挖掘结构的名称使用哈希算法来创建种子值。  
+ 如果您在不同的挖掘结构中使用相同的数据源视图，并希望以大体相同的方式对所有挖掘结构及其模型中的数据进行拆分，则应当指定用来初始化随机抽样的种子。 指定的值时`HoldoutSeed`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将使用该值来开始抽样。 否则，抽样功能将根据挖掘结构的名称使用哈希算法来创建种子值。  
   
 > [!NOTE]  
 >  如果您使用 `EXPORT` 和 `IMPORT` 语句来创建挖掘结构的副本，则新挖掘结构将具有相同的定型数据集和测试数据集，因为导出过程将创建新 ID，但是使用相同的名称。 不过，如果两个挖掘结构使用相同的基础数据源但是具有不同的名称，那么，为每个挖掘结构创建的集将有所不同。  
@@ -91,7 +91,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>维持数据的使用限制  
   
--   若要使用维持参数，必须将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为默认值（即 `KeepTrainingCases`）。 如果你更改`CacheMode`属性`ClearAfterProcessing`，然后重新处理挖掘结构，则分区将丢失。  
+-   若要使用维持参数，必须将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为默认值（即 `KeepTrainingCases`）。 如果您更改`CacheMode`属性设置为`ClearAfterProcessing`，然后重新处理挖掘结构，则分区将丢失。  
   
 -   不能从时序模型删除数据；因此不能将源数据分为定型集和测试集。 如果开始创建挖掘结构和模型并选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法，将禁用创建维持数据集的选项。 如果挖掘结构的事例级别或嵌套表级别中包含 KEY TIME 列，也将禁止使用维持数据。  
   
@@ -99,7 +99,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   在多数情况下，默认的维持值 (30) 会在定型数据和测试数据之间提供良好的平衡。 不能通过任何一种简单的方法来确定数据集应当多大才能提供足够的定型，或者如何可使定型集稀疏并且仍可以避免过度拟合。 不过，在生成模型后，可以使用交叉验证来评估特定模型的数据集。  
   
--   除了上表中列出的属性以外，AMO 和 XML DDL 中还提供了一个只读属性：`HoldoutActualSize`。 不过，因为一个分区的实际大小无法确定准确地直到处理结构后，你应该检查之前检索的值是否已处理模型`HoldoutActualSize`属性。  
+-   除了上表中列出的属性以外，AMO 和 XML DDL 中还提供了一个只读属性：`HoldoutActualSize`。 但是，因为分区的实际大小不能确定准确地直到处理该结构后，您应检查之前检索的值是否已处理模型`HoldoutActualSize`属性。  
   
 ## <a name="related-content"></a>相关内容  
   

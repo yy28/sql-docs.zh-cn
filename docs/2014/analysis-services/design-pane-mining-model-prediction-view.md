@@ -1,5 +1,5 @@
 ---
-title: 设计窗格 （挖掘模型预测视图） |Microsoft 文档
+title: 设计窗格 （挖掘模型预测视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f170ff6d780871a6ddbb9b1048fb0a521b4fb015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316027"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>“设计”窗格（“挖掘模型预测”视图）
   **“设计”** 窗格包含可用于生成数据挖掘预测的预测查询生成器。 您可以设计使用数据源视图中的输入数据表的预测查询来生成大量预测，也可以创建允许您提供各个值的单独预测查询。  

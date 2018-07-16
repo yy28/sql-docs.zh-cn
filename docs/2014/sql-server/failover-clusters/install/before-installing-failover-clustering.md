@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268153"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
   安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集之前，必须选择运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
@@ -47,7 +47,7 @@ ms.locfileid: "36139010"
   
 -   安装必备软件。 在运行安装程序以安装或升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之前，请首先安装下列必备软件以缩短安装时间。 可以在每个故障转移群集节点上安装必备软件，然后在运行安装程序之前将这些节点重新启动一次。  
   
-    -   Windows PowerShell 不再由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序安装。 Windows PowerShell 2.0 是用于安装的先决条件[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)]组件和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如果您的计算机上没有 Windows PowerShell 2.0，您可以按照 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) （Windows 管理框架）页上的说明启用它。  
+    -   Windows PowerShell 不再由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序安装。 Windows PowerShell 2.0 是用于安装的必备[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)]组件和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如果您的计算机上没有 Windows PowerShell 2.0，您可以按照 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) （Windows 管理框架）页上的说明启用它。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](http://go.microsoft.com/fwlink/?LinkId=296445)。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "36139010"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise （64 位） x64<sup>1</sup>|是|是|是<sup>2</sup>|是<sup>2</sup>|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] （64 位） X64<sup>1</sup>|是|是|是<sup>2</sup>|是<sup>2</sup>|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|是|是|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|是|是|是 <sup>2</sup>|是 <sup>2</sup>|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|是|是|||  

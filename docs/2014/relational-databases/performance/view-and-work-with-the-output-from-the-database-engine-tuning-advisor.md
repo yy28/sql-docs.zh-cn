@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167098"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
   数据库引擎优化顾问在优化数据库时，会创建摘要、建议、报告和优化日志。 可以使用优化日志输出来对数据库引擎优化顾问优化会话进行故障排除。 可以使用摘要、建议和报告来确定是要实施优化建议，还是继续优化直到查询性能可提高到安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所需的程度为止。 有关如何使用数据库优化引擎来创建工作负荷和优化数据库的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)。  
@@ -152,7 +152,7 @@ ms.locfileid: "36138848"
   
 2.  在 **“文件”** 菜单上，单击 **“导出会话结果”** ，然后将其保存为 XML 文件。  
   
-3.  在您最喜爱的 XML 编辑器、文本编辑器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开在步骤 2 中创建的 XML 文件。 向下滚动到`Configuration`元素。 复制并粘贴`Configuration`元素部分到 XML 输入文件模板后的`TuningOptions`元素。 保存此 XML 输入文件。  
+3.  在您最喜爱的 XML 编辑器、文本编辑器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开在步骤 2 中创建的 XML 文件。 向下滚动到`Configuration`元素。 复制并粘贴`Configuration`元素节的配置在 XML 输入文件模板后的`TuningOptions`元素。 保存此 XML 输入文件。  
   
 4.  在步骤 3 中创建的新 XML 输入文件中，指定 `TuningOptions` 元素中所需的任何优化选项，编辑 `Configuration` 元素部分（根据分析需要，添加或删除物理设计结构），保存文件并根据数据库引擎优化顾问 XML 架构验证该文件。 有关编辑此 XML 文件的详细信息，请参阅 [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36138848"
   
 2.  将 [XML 输入文件示例用户指定配置 (DTA)](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) 复制并粘贴到你的 XML 编辑器或文本编辑器。 使用此示例为您的优化会话创建 XML 输入文件。 有关执行此任务的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)中的“创建 XML 输入文件”部分。  
   
-3.  编辑`TuningOptions`和`Configuration`示例 XML 输入文件中的元素。 在`TuningOptions`元素，指定希望数据库引擎优化顾问优化会话期间考虑的物理设计结构。 在 `Configuration` 元素中，指定与希望数据库引擎优化顾问分析的物理数据库设计结构的假设配置相匹配的物理设计结构。 有关哪些属性和子元素可用于`TuningOptions`和`Configuration`父元素，请参阅[XML 输入文件引用&#40;数据库引擎优化顾问&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
+3.  编辑`TuningOptions`和`Configuration`示例 XML 输入文件中的元素。 在`TuningOptions`元素，指定希望数据库引擎优化顾问优化会话期间考虑的物理设计结构。 在 `Configuration` 元素中，指定与希望数据库引擎优化顾问分析的物理数据库设计结构的假设配置相匹配的物理设计结构。 有关哪些属性和子元素的信息可用于`TuningOptions`并`Configuration`父元素，请参阅[XML 输入文件引用&#40;数据库引擎优化顾问&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
 4.  保存该输入文件，以 **.xml** 为扩展名。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36138848"
   
      数据库引擎优化顾问 XML 架构也可通过 [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta) 在线获得。  
   
-6.  创建工作负荷和 XML 输入文件后，你就可以将该输入文件提交到 **dta** 命令行实用工具进行分析。 请确保为 **-ox** 实用工具参数指定 XML 输出文件名。 这将创建的 XML 输出文件中指定的建议配置具有`Configuration`元素。 如果你想要运行数据库引擎优化顾问以检查基于该输出的另一个假设配置，你可以复制并粘贴`Configuration`到新的输出文件或原始 XML 输入的文件中的元素内容。 有关将 XML 输入文件与 **dta** 实用工具结合使用的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)中的“使用 dta 实用工具优化数据库”部分。  
+6.  创建工作负荷和 XML 输入文件后，你就可以将该输入文件提交到 **dta** 命令行实用工具进行分析。 请确保为 **-ox** 实用工具参数指定 XML 输出文件名。 这将创建的 XML 输出文件中指定的建议配置与`Configuration`元素。 如果你想要运行数据库引擎优化顾问以检查基于该输出的另一个假设配置，可以复制并粘贴`Configuration`到一个新的输出文件或原始 XML 输入的文件中的元素内容。 有关将 XML 输入文件与 **dta** 实用工具结合使用的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)中的“使用 dta 实用工具优化数据库”部分。  
   
      优化完成后，可以使用数据库引擎优化顾问 GUI 来查看优化报告，也可以打开该 XML 输出文件查看 `TuningSummary` 和 `Configuration` 元素，以便查看数据库引擎优化顾问建议。 有关查看优化会话结果的信息，请参阅本主题中前面的 [查看优化输出](#View) 。 此外，注意，XML 输出文件可能包含数据库引擎优化顾问分析报告。  
   

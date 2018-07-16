@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
 - versions [SQL Server], multiple
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abff13ee6139d74dbe0da10d37ff318d10b47f6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 920e7295d56f3b7bfadf91a9532f638911535d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246367"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多个版本和实例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在同一台计算机上存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的多个实例。 也可以在已安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本的计算机上升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本或安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关支持的升级方案，请参阅 [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
@@ -82,7 +82,7 @@ ms.locfileid: "36138334"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 不支持在同一台计算机上并行安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的已准备实例和早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，您不能并行安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例与 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的已准备实例。 但是，可以在同一台计算机上并行安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相同主版本的多个已准备实例。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
 >   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不能在运行 Windows Server 2008 R2 Server Core SP1 的计算机上与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本一起并行安装。 在服务器核心安装的详细信息，请参阅[在 Server Core 上安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不能在运行 Windows Server 2008 R2 Server Core SP1 的计算机上与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本一起并行安装。 在服务器核心安装的详细信息，请参阅[Server Core 上安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
  下表显示了对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的并行支持情况：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36138334"
  [从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [升级到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
- [SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [SQL Server 2014 的版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [后向兼容性](../../../2014/getting-started/backward-compatibility.md)   
  [使用升级顾问来准备升级](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 选项 （查询结果分析服务器-常规页） |Microsoft 文档
+title: 选项 （查询结果 Analysis Server-常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.AnalysisServer.AnalysisServicesResulstsGeneral
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 caps.latest.revision: 22
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 79249fc8fb502545f6f648cc754ba5773f515511
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1bb42865f2322c2b808d83f1311dc25ae403397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254719"
 ---
-# <a name="options-query-results-analysis-server-general-page"></a>选项 （查询结果分析服务器-常规页）
+# <a name="options-query-results-analysis-server-general-page"></a>选项 （查询结果 Analysis Server-常规页）
   使用此页可确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查询的查询结果窗口的默认行为。 若要显示这些设置，请选择“工具”菜单中的“选项”。 在“查询结果”文件夹内，展开“分析服务器”子文件夹，再选择“常规”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  

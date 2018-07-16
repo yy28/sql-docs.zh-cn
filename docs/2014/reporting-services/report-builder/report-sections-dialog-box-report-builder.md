@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ae29a69138f1defcc8b6c5715a0ecaac67d24922
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a2e763536f65004299a3dd3d8e0bb3f3c75d6c53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327207"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>“报表区域”对话框（报表生成器）
   打开报表时，报表生成器会验证报表是否只包含一个报表定义语言 (RDL) \<Section> 元素。 不支持打开具有多个 \<Section> 元素的报表。  

@@ -1,5 +1,5 @@
 ---
-title: 启动、 停止、 暂停、 继续、 重新启动数据库引擎、 SQL Server 代理或 SQL Server Browser 服务 |Microsoft 文档
+title: 启动、 停止、 暂停、 继续、 重新启动数据库引擎、 SQL Server 代理或 SQL Server Browser 服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
 - stopping SQL Server Agent
@@ -41,18 +41,18 @@ helpviewer_keywords:
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 22a7d3321cfdcbcbd07e5771fd908f409002999a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 760ad35b8212ab8b38e441a3f5db332bce9f2bec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326277"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务
-  本主题介绍如何启动、 停止、 暂停、 恢复或重新启动[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的浏览器服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]， **net**在命令提示符下，命令[!INCLUDE[tsql](../../includes/tsql-md.md)]，或 PowerShell。  
+  本主题介绍如何启动、 停止、 暂停、 恢复或重新启动[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的浏览器服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]， **net**从命令提示符处，命令[!INCLUDE[tsql](../../includes/tsql-md.md)]，或 PowerShell。  
   
 -   **开始之前：**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36026406"
  作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可执行进程。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是默认实例（每台计算机只有一个），也可以是多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]命名实例中的一个。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器确定在计算机上安装哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 默认实例（如果安装）作为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** 列出。 命名实例（如果安装）作为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** 列出。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务**  
- 一种 Windows 服务，可执行计划的管理任务（称为作业和警报）。 有关详细信息，请参阅 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 一种 Windows 服务，可执行计划的管理任务（称为作业和警报）。 有关详细信息，请参阅 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务**  
  一种 Windows 服务，可侦听对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求并为客户端提供有关计算机中安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务的单个实例用于计算机上安装的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -121,7 +121,7 @@ ms.locfileid: "36026406"
 ####  <a name="Permissions"></a> Permissions  
  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅 [如何授予用户管理 Windows Server 2003 中的服务的权限](http://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
   
- 停止[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN`命令要求的成员身份**sysadmin**或**serveradmin**固定服务器角色的成员，并且不可转让。  
+ 正在停止[!INCLUDE[ssDE](../../includes/ssde-md.md)]通过使用[!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN`命令要求中的成员身份**sysadmin**或**serveradmin**固定服务器角色的成员，并且不可转让。  
   
 ##  <a name="SSCMProcedure"></a> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
   

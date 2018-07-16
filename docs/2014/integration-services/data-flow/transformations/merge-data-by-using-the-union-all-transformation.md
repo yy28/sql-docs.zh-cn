@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - merging inputs [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 05a72777ee0244173d54f294d6c89411acb6126a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 5b113a2ca169ebc1f49a522d51800b09b9a30343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221807"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>通过使用 Union All 转换来合并数据
   若要添加和配置 Union All 转换，包必须至少已包含一个数据流任务和两个数据源。  
@@ -62,6 +62,6 @@ ms.locfileid: "36027944"
  [Union All 转换](union-all-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
- [数据流任务]((../../control-flow/data-flow-task.md)  
+ [数据流任务](../../control-flow/data-flow-task.md)  
   
   

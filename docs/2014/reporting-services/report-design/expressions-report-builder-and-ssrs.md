@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268583"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
-  表达式在报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 许多报表项属性都可以设置为表达式。 表达式可帮助您控制报表的内容、设计和交互。 表达式编写的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，在报表定义中，已保存和运行报表时报表处理器计算。  
+  表达式在报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 许多报表项属性都可以设置为表达式。 表达式可帮助您控制报表的内容、设计和交互。 表达式用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，保存在报表定义中，并且运行报表时由报表处理器计算。  
   
- 与应用程序，如不同[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office Excel，你可以直接在工作表中的数据和报表，请在您可以使用表达式的占位符的数据。 若要查看来自已计算表达式的实际数据，您必须预览报表。 在运行报表时，报表处理器在合并报表数据和报表布局元素（例如表和图表）时对每个表达式进行计算。  
+ 与应用程序，如不同[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office Excel 使用直接在工作表中的数据在报表中，您使用表达式的占位符的数据。 若要查看来自已计算表达式的实际数据，您必须预览报表。 在运行报表时，报表处理器在合并报表数据和报表布局元素（例如表和图表）时对每个表达式进行计算。  
   
  在您设计报表时，系统将为您设置针对报表项的许多表达式。 例如，将一个字段从数据窗格拖到报表设计图面上的表单元时，文本框值将设置为针对该字段的简单表达式。 在下图中，“报表数据”窗格显示数据集字段 ID、Name、SalesTerritory、Code 和 Sales。 三个字段已添加到该表中：[Name]、[Code] 和 [Sales]。 设计图面上的标志 [Name] 表示基础表达式 `=Fields!Name.Value`。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36129407"
  表达式可包括对函数、运算符、常量、字段、参数、内置集合中的项以及对嵌入的自定义代码或自定义程序集的引用。  
   
 > [!NOTE]  
->  若要开发复杂表达式或使用自定义代码或自定义程序集的表达式，我们建议你使用报表设计器中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+>  若要开发复杂表达式或使用自定义代码或自定义程序集，我们建议使用报表设计器中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  下表列出了可以包含在表达式中的引用类型：  
   
@@ -112,8 +112,8 @@ ms.locfileid: "36129407"
 |[常量](expressions-report-builder-and-ssrs.md)|介绍能以交互方式访问需要常量值的属性（例如字体颜色）的常量。|`="Blue"`|  
 |[运算符](operators-in-expressions-report-builder-and-ssrs.md)|描述可用于合并表达式中的引用的运算符。 例如，`&`运算符用于串联字符串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[内置集合](built-in-collections-in-expressions-report-builder.md)|介绍可在表达式中包含的内置集合，例如 `Fields`、 `Parameters`和 `Variables`。|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
-|[内置报告和聚合函数](report-builder-functions-aggregate-functions-reference.md)|介绍可从表达式中访问的内置函数，例如 `Sum` 或 `Previous`。|`=Previous(Sum(Fields!Sales.Value))`|  
-|[自定义代码和程序集引用的表达式中的报表设计器&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|描述如何访问的内置的 CLR 类<xref:System.Math>和<xref:System.Convert>，其他 CLR 类，[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]运行时库函数或从外部程序集的方法。<br /><br /> 介绍如何访问嵌入在报表中的自定义代码或已编译成自定义程序集并安装在报表客户端和报表服务器上的自定义代码。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[内置报表函数和聚合函数](report-builder-functions-aggregate-functions-reference.md)|介绍可从表达式中访问的内置函数，例如 `Sum` 或 `Previous`。|`=Previous(Sum(Fields!Sales.Value))`|  
+|[自定义代码和程序集引用的表达式中的报表设计器&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|介绍如何访问内置 CLR 类<xref:System.Math>并<xref:System.Convert>，其他 CLR 类、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]运行时库函数或外部程序集中的方法。<br /><br /> 介绍如何访问嵌入在报表中的自定义代码或已编译成自定义程序集并安装在报表客户端和报表服务器上的自定义代码。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   

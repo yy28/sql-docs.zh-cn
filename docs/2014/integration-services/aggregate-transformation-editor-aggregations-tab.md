@@ -1,5 +1,5 @@
 ---
-title: 聚合转换编辑器 （聚合选项卡） |Microsoft 文档
+title: 聚合转换编辑器 （聚合选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aba29b60491e5f16bf262f2ae7fc5616c827ecd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221847"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“聚合”** 选项卡指定聚合的列以及聚合属性。 可以应用多个聚合。 此转换不生成错误输出。  
@@ -84,17 +84,17 @@ ms.locfileid: "36138492"
  如果选择“分组依据”，请使用复选框来控制转换如何执行比较。 有关字符串比较选项的信息，请参阅 [Comparing String Data](data-flow/comparing-string-data.md)。  
   
  **Count Distinct Scale**  
- 根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果这两个`CountDistinctScale`和**CountDistinctKeys**指定， **CountDistinctKeys**优先。  
+ 根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果这两个`CountDistinctScale`并**CountDistinctKeys**指定了**CountDistinctKeys**优先。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|“未指定”|`CountDistinctScale`未使用属性。|  
+|“未指定”|`CountDistinctScale`不使用属性。|  
 |Low|聚合可以写入大约 500,000 个非重复值。|  
 |Medium|聚合可以写入大约 5,000,000 个非重复值。|  
 |High|聚合可以写入 25,000,000 个以上的非重复值。|  
   
  **Count Distinct Keys**  
- 根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果这两个`CountDistinctScale`和**CountDistinctKeys**指定， **CountDistinctKeys**优先。  
+ 根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果这两个`CountDistinctScale`并**CountDistinctKeys**指定了**CountDistinctKeys**优先。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

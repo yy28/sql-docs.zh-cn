@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 09afff6c9464261193283267b33fe5c5533aba63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bd78c18acc34c9549c574d3f82cfce6c0e5612a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325617"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩阵和图表上显示相同数据（报表生成器）
   如果希望在矩阵和图表中显示相同数据，则必须将两个数据区域的属性都设置为指定相同数据集，而且还要为筛选器、组、排序和数据指定相同表达式。  
@@ -28,7 +28,7 @@ ms.locfileid: "36014735"
   
  若要使用矩阵列组值作为图表的图例，必须指定图表上序列数据的颜色，然后使用与填充颜色相同的颜色作为用于显示组值的矩阵单元中文本框的背景色。 有关详细信息，请参阅[对多个形状图指定一致的颜色（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
- 在运行时，如果组定义中有太多组值，则报表可能显得很混乱。 您可能需要筛选值、组合组或调整阈值，以便图表为您组合组。 有关详细信息，请参阅[到同一数据集的链接多个数据区域&#40;报表生成器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ 在运行时，如果组定义中有太多组值，则报表可能显得很混乱。 您可能需要筛选值、组合组或调整阈值，以便图表为您组合组。 有关详细信息，请参阅[多个数据区域链接到同一数据集&#40;报表生成器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

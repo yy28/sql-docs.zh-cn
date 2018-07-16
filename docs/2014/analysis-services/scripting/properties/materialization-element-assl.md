@@ -1,5 +1,5 @@
 ---
-title: 具体化元素 (ASSL) |Microsoft 文档
+title: Materialization 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Materialization element
 ms.assetid: a87a95ae-d89c-4005-b22c-47c8991673b7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08e3607d1cb04f3a4483d43ead544edbbcf42a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf6b3121159a1a98cfac56c91af1920c5b96935b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176404"
 ---
 # <a name="materialization-element-assl"></a>Materialization 元素 (ASSL)
   指示度量值组和引用维度之间的关系类型。  
@@ -67,7 +67,7 @@ ms.locfileid: "36126390"
 |*正则*|引用维度具有常规关系，如常规维度中的关系。|  
 |*间接*|引用维度具有间接关系，如多对多维度中的关系。|  
   
- 对应于的父元素`Materialization`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
+ 父级对应的元素`Materialization`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [维度元素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
