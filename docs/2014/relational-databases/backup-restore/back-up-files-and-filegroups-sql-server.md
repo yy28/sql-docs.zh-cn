@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
 - file backups [SQL Server], how-to topics
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49e2ba4f8788a60b5d0e00d24539a085c233b446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332647"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](differential-backups-sql-server.md)。  
@@ -221,9 +220,9 @@ GO
   
 1.  使用 `Backup-SqlDatabase` cmdlet 并且为 `Files` 参数的值指定 `-BackupAction`。 此外，还指定下列参数之一：  
   
-    -   若要备份的特定文件，指定`-DatabaseFile`*字符串*参数，其中*字符串*是要备份的一个或多个数据库文件。  
+    -   若要备份某个特定文件，指定`-DatabaseFile`*字符串*参数，其中*字符串*是要备份的一个或多个数据库文件。  
   
-    -   若要备份某个给定文件组中的所有文件，指定`-DatabaseFileGroup`*字符串*参数，其中*字符串*是一个或多个数据库文件组进行备份。  
+    -   若要备份某个给定文件组中的所有文件，请指定`-DatabaseFileGroup`*字符串*参数，其中*字符串*是一个或多个数据库文件组备份。  
   
      下面的示例在 `MyDB` 数据库中创建辅助文件组“FileGroup1”和“FileGroup2”中的每个文件的完整文件备份。 将在服务器实例 `Computer\Instance`的默认备份位置上创建备份。  
   

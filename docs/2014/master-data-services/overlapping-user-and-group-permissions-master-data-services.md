@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6523603f7524af93bc21417f378a41bd907532d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264933"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
   用户的权限基于：  
@@ -76,9 +76,9 @@ ms.locfileid: "36129692"
   
  用户对层次结构节点中的一组成员具有 **“更新”** 权限。  
   
- 组 1 具有**只读**权限的一组层次结构节点中的成员。  
+ 组 1 具有**只读**的一组层次结构节点中的成员的权限。  
   
- 组 2 具有**只读**权限的一组层次结构节点中的成员。  
+ 组 2 具有**只读**的一组层次结构节点中的成员的权限。  
   
  结果：用户对这些成员的有效权限是 **“更新”** 。  
   

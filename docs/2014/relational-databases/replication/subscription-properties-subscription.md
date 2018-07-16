@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 97a762d7552b69aebf4eda07d918be6be23abad9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: af68d962b41d97a9b4b5de2641919ff8835f10aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274173"
 ---
 # <a name="subscription-properties---ltsubscriptiongt"></a>订阅属性 - &lt;订阅&gt;
   本部分提供有关 **“订阅属性”** 对话框的信息：  

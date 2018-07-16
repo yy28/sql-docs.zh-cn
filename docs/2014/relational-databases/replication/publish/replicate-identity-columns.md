@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271023"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
   为列分配 IDENTITY 属性后， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将为在包含标识列的表中插入的新行自动生成顺序编号。 有关详细信息，请参阅 [IDENTITY（属性）&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 因为包含的标识列可能是主键的一部分，所以请务必避免在标识列中出现重复值。 若要在多个节点上都有更新的复制拓扑中使用标识列，复制拓扑中的每个节点都必须使用不同范围的标识值，以避免出现重复。  
@@ -55,12 +55,12 @@ ms.locfileid: "36129442"
 ## <a name="assigning-identity-ranges"></a>分配标识范围  
  合并复制和事务复制用不同的方法分配范围，这些方法将在本部分中介绍。  
   
- 复制标识列时有两种类型的范围需要考虑：分配给发布服务器和订阅服务器的范围，以及列中数据类型的范围。 下表显示了通常标识列中所使用数据类型的可用范围。 此范围可用于拓扑中的所有节点。 例如，如果你使用`smallint`从 1 递增值的 1 开始，插入的最大数是 32,767 个出版商出版和所有订阅服务器。 插入的实际数取决于所用的值是否有间隔，以及是否使用了阈值。 有关阈值的详细信息，请参阅下列“合并复制”和“具有排队更新订阅的事务复制”两部分。  
+ 复制标识列时有两种类型的范围需要考虑：分配给发布服务器和订阅服务器的范围，以及列中数据类型的范围。 下表显示了通常标识列中所使用数据类型的可用范围。 此范围可用于拓扑中的所有节点。 例如，如果您使用`smallint`从 1 开始的增量为 1，插入的最大数为 32,767 的发布服务器和所有订阅服务器。 插入的实际数取决于所用的值是否有间隔，以及是否使用了阈值。 有关阈值的详细信息，请参阅下列“合并复制”和“具有排队更新订阅的事务复制”两部分。  
   
  如果发布服务器在插入后用尽了其标识范围，并且若此插入是由 **db_owner** 固定服务器角色的某个成员来执行的，那么该发布服务器将会自动分配一个新范围。 如果插入是由不属于该角色的用户执行的，则日志读取器代理、合并代理或属于 **db_owner** 角色的成员的用户必须运行 [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)。 对于事务发布，必须运行日志读取器代理，以便自动分配新范围（默认设置是使代理连续运行）。  
   
 > [!WARNING]  
->  在大型批插入过程中，复制触发器只激发一次，不是对每个插入行都激发。 这可以导致 insert 语句失败，如果标识范围用尽期间大型插入，如`INSERT INTO`语句。  
+>  在大型批插入过程中，复制触发器只激发一次，不是对每个插入行都激发。 这会导致 insert 语句失败如果如大型插入期间用尽标识范围，是`INSERT INTO`语句。  
   
 |数据类型|范围|  
 |---------------|-----------|  

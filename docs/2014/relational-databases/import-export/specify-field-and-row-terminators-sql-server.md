@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9730f5e59d302b95f892d4de2860f3f8a0b147f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ba5e58a3f3c05985b8219e004e803a516a2ff81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197207"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
   对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
@@ -42,13 +41,13 @@ ms.locfileid: "36138269"
 |换行符|\n<br /><br /> 这是默认的行终止符。|  
 |回车符/换行符|\r|  
 |反斜杠<sup>1</sup>|\\\|  
-|Null 终止符 （不可见终止符）<sup>2</sup>|\0|  
+|空终止符 （不可见终止符）<sup>2</sup>|\0|  
 |任何可打印的字符（控制字符是不可打印的，除空值、制表符、换行符和回车之外）|（*、A、t、l 等）|  
 |最长可达 10 个可打印字符的字符串，包括上面列出的部分或全部终止符|（**\t\*\*、end、!!!!!!!!!!、\t—\n 等）|  
   
- <sup>1</sup> t、 n、 r、 0 和 \0' 字符使用反斜杠转义字符，以生成一个控制字符。  
+ <sup>1</sup> t、 n、 r、 0 和 \0 字符一起使用反斜杠转义字符，以生成控制符。  
   
- <sup>2</sup>即使空控制字符 (\0) 不是打印时可见的它是一个独特的字符数据文件中。 这表示使用空控制字符作为字段终止符或行终止符与根本没有字段终止符或行终止符是不同的。  
+ <sup>2</sup>即使时空控制字符 (\0) 不是打印时可见的它是一个独特的字符数据文件中。 这表示使用空控制字符作为字段终止符或行终止符与根本没有字段终止符或行终止符是不同的。  
   
 > [!IMPORTANT]  
 >  如果数据中出现终止符字符，则它被视为终止符（而非数据），并且该字符后的数据被视为属于下一个字段或记录。 因此，请仔细选择您的终止符，以确保它们从未出现在您的数据中。 例如，如果数据中包含某个低代理项，则低代理项字段终止符并不是一个好的选择。  
@@ -60,7 +59,7 @@ ms.locfileid: "36138269"
 >  交互使用 **bcp** 并指定 \n（换行符）作为行终止符时， **bcp** 将自动以 \r（回车符）作为前缀，从而形成行终止符 \r\n。  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>指定大容量导出的终止符  
- 大容量导出时`char`或`nchar`数据，并想要使用非默认终止符时，您必须指定到终止符**bcp**命令。 可以用下列任一方式指定终止符：  
+ 大容量导出`char`或`nchar`数据，并且希望使用非默认终止符时，您必须指定到终止符**bcp**命令。 可以用下列任一方式指定终止符：  
   
 -   使用格式化文件逐个字段指定终止符。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "36138269"
         >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
 ### <a name="guidelines-for-using-terminators"></a>使用终止符指南  
- 在某些情况下，终止符很有用`char`或`nchar`数据字段。 例如：  
+ 在某些情况下，一个终结器可用于`char`或`nchar`数据字段。 例如：  
   
 -   对于数据文件中包含 null 值的数据列，将不会被导入到不能理解前缀长度信息的程序中。  
   

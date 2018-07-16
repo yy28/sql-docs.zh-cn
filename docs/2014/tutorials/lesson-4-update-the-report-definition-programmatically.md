@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 以编程方式更新报表定义 |Microsoft 文档
+title: 第 4 课： 以编程方式更新报表定义 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286493"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>第 4 课：以编程方式更新报表定义
   从报表服务器加载了报表定义并且通过报表字段拥有了对该报表定义的引用之后，需要更新报表定义。 对本例来说，您将更新报表的 `Description` 属性。  
   
 ### <a name="to-update-the-report-definition"></a>若要更新报表定义  
   
-1.  替换 UpdateReportDefinition() 方法在 Program.cs 文件中的代码 (有关 Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 替换为以下代码：  
+1.  Program.cs 文件中的 UpdateReportDefinition() 方法的代码替换为 (为 Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 使用以下代码：  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -95,6 +95,6 @@ ms.locfileid: "36129375"
  在下一课中，您将学习如何将更新的报表定义保存回报表服务器。 请参阅[第 5 课： 将报表定义发布到报表服务器](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [更新报表使用生成的 RDL 架构类&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

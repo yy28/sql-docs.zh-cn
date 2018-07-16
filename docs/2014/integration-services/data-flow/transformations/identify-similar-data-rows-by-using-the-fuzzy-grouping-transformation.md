@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Fuzzy Grouping transformation
 - match similar data [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bff1f66d68f07aaaf23e8a3c90b8c09b0206c79e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 948a55588aa943ba05fc3ac536f6ca04213a2e99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233743"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊分组转换标识相似数据行
   若要添加和配置模糊分组转换，包必须已包含至少一个数据流任务和一个源。  
@@ -87,6 +87,6 @@ ms.locfileid: "36137582"
  [模糊分组转换](fuzzy-grouping-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
- [数据流任务]((../../control-flow/data-flow-task.md)  
+ [数据流任务](../../control-flow/data-flow-task.md)  
   
   

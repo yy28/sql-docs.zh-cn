@@ -1,13 +1,11 @@
 ---
-title: 对于 CLR 例程的自定义特性 |Microsoft 文档
+title: CLR 例程的自定义属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +22,18 @@ helpviewer_keywords:
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 caps.latest.revision: 82
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 21bb0d5bd6ea5dfe672b47ee9095416da6267dbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a2f3e1980c164327e584d8f485c2d08571534245
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018884"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351039"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 例程的自定义属性
-  列出的属性可以应用于公共语言运行时 (CLR) 例程、 用户定义类型和在中注册的用户定义聚合[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在 `Microsoft.SqlServer.Server` 命名空间中定义。  
+  列出的特性可以应用于公共语言运行时 (CLR) 例程、 用户定义类型和用户定义的聚合中注册的[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在 `Microsoft.SqlServer.Server` 命名空间中定义。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 属性  
  `SqlUserDefinedAggregate` 属性指示方法应注册为用户定义聚合。 必须使用此属性注释每个用户定义聚合。  
@@ -45,7 +43,7 @@ ms.locfileid: "36018884"
 ## <a name="the-sqlfunction-attribute"></a>SqlFunction 属性  
  `SqlFunction` 属性指示方法应注册为包含相应函数属性集的函数。  
   
- 有关详细信息，请参阅[sqlfunctionattribute 注释](http://go.microsoft.com/fwlink/?LinkId=128019)。  
+ 有关详细信息，请参阅[SqlFunctionAttribute](http://go.microsoft.com/fwlink/?LinkId=128019)。  
   
 ## <a name="the-sqlfacet-attribute"></a>SqlFacet 属性  
  `SqlFacet` 属性用于返回有关用户定义类型 (UDT) 表达式的返回类型的信息。  
@@ -60,7 +58,7 @@ ms.locfileid: "36018884"
 ## <a name="the-sqltrigger-attribute"></a>SqlTrigger 属性  
  `SqlTrigger` 属性指示方法应注册为触发器。  
   
- 有关详细信息，请参阅[SqlTriggerContext](http://go.microsoft.com/fwlink/?LinkId=128022)和[SqlTriggerAttribute](http://go.microsoft.com/fwlink/?LinkId=203898)。  
+ 有关详细信息，请参阅[SqlTriggerContext](http://go.microsoft.com/fwlink/?LinkId=128022)并[SqlTriggerAttribute](http://go.microsoft.com/fwlink/?LinkId=203898)。  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>SqlUserDefinedTypeAttribute  
  可将 SqlUserDefinedTypeAttribute 应用于程序集中的类定义。 此属性会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建绑定到具有此自定义属性的类定义的用户定义类型。  
@@ -75,7 +73,7 @@ ms.locfileid: "36018884"
 ## <a name="see-also"></a>请参阅  
  [CLR 用户定义聚合](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR 用户定义函数](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [CLR 用户定义的类型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [CLR 用户定义类型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR 存储过程](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [CLR 触发器](../../../database-engine/dev-guide/clr-triggers.md)  
   

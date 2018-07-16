@@ -1,5 +1,5 @@
 ---
-title: 离散化方法 （数据挖掘） |Microsoft 文档
+title: 离散化方法 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206247"
 ---
 # <a name="discretization-methods-data-mining"></a>离散化方法（数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中创建数据挖掘模型时使用的某些算法需要特定的内容类型才能正常运行。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的输入不能为连续列，并且不能预测连续值。 另外，有些列可能会因包含的值太多而导致算法不易标识数据中据以创建模型的相关模式。  
@@ -54,11 +54,11 @@ ms.locfileid: "36129088"
   
 ## <a name="remarks"></a>Remarks  
   
--   你可以使用`EQUAL_AREAS`方法进行离散化字符串。  
+-   可以使用`EQUAL_AREAS`方法来离散化字符串。  
   
--   `CLUSTERS`方法使用 1000 条记录的随机采样进行离散化数据。 如果您不希望算法对数据采样，请使用 `EQUAL_AREAS` 方法。  
+-   `CLUSTERS`方法使用 1000 条记录的随机样本来离散化数据。 如果您不希望算法对数据采样，请使用 `EQUAL_AREAS` 方法。  
   
--   神经网络挖掘模型教程提供了一个介绍如何自定义离散化的示例。 有关详细信息，请参阅[第 5 课： 构建神经网络和逻辑回归模型&#40;中间 Data Mining Tutorial&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
+-   神经网络挖掘模型教程提供了一个介绍如何自定义离散化的示例。 有关详细信息，请参阅[第 5 课： 生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [内容类型&#40;数据挖掘&#41;](content-types-data-mining.md)   

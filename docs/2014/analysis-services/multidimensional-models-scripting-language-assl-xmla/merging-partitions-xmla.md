@@ -1,5 +1,5 @@
 ---
-title: 合并分区 (XMLA) |Microsoft 文档
+title: 合并分区 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcd21c66320c5d29f597bc5f85b35c61f14cf36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a3de50e053ed8b3e16373e4aa5b162991f286dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332717"
 ---
 # <a name="merging-partitions-xmla"></a>合并分区 (XMLA)
-  如果分区具有相同的聚合设计和结构，你可以通过使用合并分区[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) XML Analysis (XMLA) 命令。 合并分区是将在管理分区时执行的一项重要操作，特别是那些包含按日期分区的历史数据的分区。  
+  如果分区具有相同的聚合设计和结构，你可以通过使用合并分区[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令 XML for Analysis (XMLA) 中。 合并分区是将在管理分区时执行的一项重要操作，特别是那些包含按日期分区的历史数据的分区。  
   
  例如，财务多维数据集可以使用两个分区：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36017839"
  这两个分区使用不同的存储设置，但使用相同的聚合设计。 除了在年末处理所有年度的历史数据的多维数据集，还可以使用 `MergePartitions` 命令将当年的分区合并到以往年度的分区。 这样将保留聚合数据，而不需要对多维数据集进行潜在耗时的完全处理。  
   
 ## <a name="specifying-partitions-to-merge"></a>指定要合并的分区  
- 当`MergePartitions`命令运行时，存储在中指定的源分区的聚合数据[源](../xmla/xml-elements-properties/source-element-xmla.md)属性添加到目标分区中指定[目标](../xmla/xml-elements-properties/target-element-xmla.md)属性。  
+ 当`MergePartitions`运行的命令中指定的源分区中存储的聚合数据[源](../xmla/xml-elements-properties/source-element-xmla.md)属性添加到中指定的目标分区[目标](../xmla/xml-elements-properties/target-element-xmla.md)属性。  
   
 > [!NOTE]  
 >  `Source` 属性可包含多个分区对象引用。 但是，`Target` 属性则没有此功能。  
@@ -51,7 +51,7 @@ ms.locfileid: "36017839"
 ## <a name="examples"></a>示例  
   
 ### <a name="description"></a>Description  
- 下面的示例合并中的所有分区**客户计数**的度量值组**Adventure Works**多维数据集内**Adventure Works DW**示例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库分成**Customers_2004**分区。  
+ 下面的示例合并中的所有分区**Customer Counts**的度量值组**Adventure Works**多维数据集内**Adventure Works DW**示例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库分成**Customers_2004**分区。  
   
 ### <a name="code"></a>代码  
   

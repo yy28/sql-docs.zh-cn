@@ -1,5 +1,5 @@
 ---
-title: 添加、 删除、 更改包中的用户定义变量的作用域 |Microsoft 文档
+title: 添加、 删除、 更改包中用户定义变量的作用域 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 caps.latest.revision: 46
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d0d607408aed88a91be310d715505881708edee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fdccdecea434aa3fe56c362f932b3ba0da396b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213597"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>添加、删除、更改包中用户定义变量的作用域
   这些过程介绍如何使用“变量”窗口来添加、删除和更改包中用户定义变量的作用域。  
   
- 有关变量的作用域的详细信息，请参阅[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)。  
+ 有关变量作用域的详细信息，请参阅[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 此外提供了将系统信息在运行时提供并可在包和事件处理程序等容器的系统变量。 您无法删除系统变量。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 此外提供了系统变量在运行时提供系统信息可用，可使用包和事件处理程序等容器中。 您无法删除系统变量。  
   
 ### <a name="to-add-a-variable"></a>添加变量  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36130176"
 ## <a name="see-also"></a>请参阅  
  [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
- [设置用户定义的变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
+ [设置用户定义变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [在子包中使用变量和参数的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
   

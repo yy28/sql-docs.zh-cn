@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - cache [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 22bad94dc3102b48b858f22354039bcb61fea06e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dd80e542132cb2ebd36b1431e274e823970d9af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206547"
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
   报表服务器可以缓存已处理报表的副本，并在用户打开此报表时返回该副本。 对用户而言，可指示报表为缓存副本的唯一证据是报表的运行日期和时间。 如果日期或时间不是当前的日期或时间，并且报表不是快照，则说明该报表是从缓存中检索的。  
@@ -74,7 +74,7 @@ ms.locfileid: "36138161"
  如果出于任何原因（例如，如果用户指定的参数值与生成缓存报表所用的参数值不同）无法从缓存实例呈现报表，则报表服务器将重新运行该报表。  
   
 ## <a name="see-also"></a>请参阅  
- [设置处理选项&#40;的 Reporting Services SharePoint 集成模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [设置处理选项&#40;Reporting Services SharePoint 集成模式下&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [设置报表处理属性](set-report-processing-properties.md)   
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
  [预加载缓存（报表管理器）](preload-the-cache-report-manager.md)   

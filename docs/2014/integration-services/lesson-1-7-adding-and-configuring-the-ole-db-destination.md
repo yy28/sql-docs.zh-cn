@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 caps.latest.revision: 24
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9492f985dda337159257257c675fe37d39f162b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f85ebcc3be06d86110a99e498a9349d973a9ca6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260933"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步骤 7：添加和配置 OLE DB 目标
   现在，您的包可以从平面文件源中提取数据，并将数据转换为与目标兼容的格式。 下一个任务是将已转换的数据实际加载到目标。 若要加载数据，您必须将 OLE DB 目标添加到数据流。 OLE DB 目标可以使用数据库表、视图或 SQL 命令将数据加载到各种 OLE DB 兼容的数据库中。  
@@ -54,7 +54,7 @@ ms.locfileid: "36128802"
   
 13. 右键单击 **Sample OLE DB Destination** 目标，再单击“属性”。  
   
-14. 在属性窗口中，确保`LocaleID`属性设置为**英语 （美国）** 和`DefaultCodePage`属性设置为**1252年**。  
+14. 在属性窗口中，验证是否`LocaleID`属性设置为**英语 （美国）** 并且`DefaultCodePage`属性设置为**1252年**。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 8：使第 1 课包更易理解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

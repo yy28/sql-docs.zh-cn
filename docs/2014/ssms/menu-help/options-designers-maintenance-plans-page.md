@@ -1,5 +1,5 @@
 ---
-title: 选项 （设计器维护计划页） |Microsoft 文档
+title: 选项 （设计器维护计划页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ab6ddd2d43d7055d458ac475ed5eb775b61c5b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4bacbb1b5b4ef708055affe400b12ac9604dbabc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249517"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>选项 （设计器维护计划页）
   使用“选项”对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”菜单上，单击“选项”，展开“设计器”，再选择“维护计划”。  

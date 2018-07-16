@@ -1,13 +1,11 @@
 ---
-title: 从 CLR 数据库对象的数据访问 |Microsoft 文档
+title: 从 CLR 数据库对象的数据访问 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +23,18 @@ helpviewer_keywords:
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab43297c592258075e9c80ec9808b10c7bd267df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027277"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351139"
 ---
 # <a name="data-access-from-clr-database-objects"></a>从 CLR 数据库对象进行数据访问
-  一个公共语言运行时 (CLR) 例程可以方便地访问数据的实例中存储[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]在其中运行，以及远程实例中存储的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 通过使用.NET Framework 数据提供程序访问从 CLR 数据库对象中的数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管客户端和中间层应用程序中的数据。 因此，您可以在客户端和中间层应用程序中充分利用您所掌握的有关 ADO.NET 和 `SqlClient` 的知识。  
+  公共语言运行时 (CLR) 例程可以轻松地访问数据的实例中存储[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]中它运行所在，以及在远程实例中存储的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 通过使用用于.NET Framework 数据提供程序访问数据从 CLR 数据库对象内的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管客户端和中间层应用程序中的数据。 因此，您可以在客户端和中间层应用程序中充分利用您所掌握的有关 ADO.NET 和 `SqlClient` 的知识。  
   
 > [!NOTE]  
 >  默认情况下，不允许用户定义类型方法和用户定义函数执行数据访问。 您必须将 `DataAccess` 或 `SqlMethodAttribute` 的 `SqlFunctionAttribute` 属性设置为 `DataAccessKind.Read`，才能从用户定义类型 (UDT) 方法或用户定义函数进行只读数据访问。 不允许从 UDT 或用户定义函数执行数据修改操作，否则，将在执行时引发异常。  
@@ -57,7 +55,7 @@ ms.locfileid: "36027277"
  [CLR 集成和事务](../../native-client-ole-db-transactions/transactions.md)  
  介绍 System.Transactions 命名空间中提供的新事务框架如何与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 集成相集成。  
   
- [从 CLR 数据库对象的 XML 序列化](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  
+ [从 CLR 数据库对象进行 XML 序列化](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  
  说明如何对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 数据库对象启用 XML 序列化方案。  
   
   

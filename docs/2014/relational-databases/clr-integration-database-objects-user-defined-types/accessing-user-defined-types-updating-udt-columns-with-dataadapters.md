@@ -1,13 +1,11 @@
 ---
-title: 使用 Dataadapter 更新 UDT 列 |Microsoft 文档
+title: 使用 Dataadapter 更新 UDT 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015038"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354869"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>使用 DataAdapter 更新 UDT 列
   使用 `System.Data.DataSet` 和 `System.Data.SqlClient.SqlDataAdapter` 支持用户定义类型 (UDT) 以检索和修改数据。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定你具有**点**定义具有以下结构和一些示例数据的表。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表和插入几行。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定**点**表定义为具有以下结构和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表并插入几行。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -51,7 +49,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 下面的 ADO.NET 代码段检索有效的连接字符串，创建一个新`SqlDataAdapter`，并填充`System.Data.DataTable`中的数据的行与**点**表。  
+ 以下 ADO.NET 代码段检索有效的连接字符串，创建一个新`SqlDataAdapter`，并填充`System.Data.DataTable`中的数据的行与**点**表。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -90,9 +88,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  以下 ADO.NET 示例具有两个方法：  
   
--   `UserProvidedCommands`用于演示如何提供`InsertCommand`， `UpdateCommand`，和`DeleteCommand`更新对象`Point`UDT**点**表 (不包含`timestamp`列)。  
+-   `UserProvidedCommands`用于演示如何提供`InsertCommand`， `UpdateCommand`，并`DeleteCommand`对象，以便更新`Point`UDT**点**表 (不包含`timestamp`列)。  
   
--   `CommandBuilder`用于演示如何使用`SqlCommandBuilder`中**Points_ts**包含表`timestamp`列。  
+-   `CommandBuilder`用于演示如何使用`SqlCommandBuilder`中**Points_ts**表，该表包含`timestamp`列。  
   
 ```vb  
 Imports System  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99c12dce1bcab99ae5e4d65bf3ccc6d637b8154c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194963"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 `geometry` 或 `geography`）的数据的表列。  
@@ -103,7 +103,7 @@ ms.locfileid: "36137503"
   
  例如，上图显示了一个完全适合第 1 级网格的单元 15 的八边形。 在此图中，单元 15 已进行分割，将八边形分成了九个二级单元。 此图假定每对象单元数限制为 9 或更大。 然而，如果每对象单元数限制为 8 或更小，则单元 15 将不进行分割，而只为该对象对单元 15 进行计数。  
   
- 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 但是， [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句支持 CELLS_PER_OBJECT`=`*n*子句，使您可以指定介于 1 和 8192，之间的单元格每个对象限制非独占。  
+ 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 但是， [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句支持 CELLS_PER_OBJECT`=`*n*子句可以指定介于 1 和 8192，之间每对象单元数限制非独占。  
   
 > [!NOTE]  
 >  空间索引的 **cells_per_object** 设置显示在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目录视图中。  
@@ -118,9 +118,9 @@ ms.locfileid: "36137503"
 ###  <a name="schemes"></a> 分割方案  
  空间索引的行为部分取决于“分割方案” 。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，空间索引支持两种分割方案：  
   
--   *几何图形网格分割*，即的方案`geometry`数据类型。  
+-   *几何图形网格分割*，这是方案`geometry`数据类型。  
   
--   *地理网格分割*，该方案适用于列的`geography`数据类型。  
+-   *地理网格分割*，这适用于的列`geography`数据类型。  
   
 > [!NOTE]  
 >  空间索引的 **tessellation_scheme** 设置显示在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目录视图中。  
@@ -132,7 +132,7 @@ ms.locfileid: "36137503"
 >  可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句显式指定此分割方案。  
   
 ##### <a name="the-bounding-box"></a>边界框  
- 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 边界框由四个坐标`(` *x-最小值 ***，*** y-最小值*`)`和`(` *x-最大值 ***，*** y-最大值* `)`，其存储为空间索引的属性。 这些坐标所表示的意义如下：  
+ 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 边界框由四个坐标`(`*最小 x 坐标 ***，*** 最小 y* `)`并`(`*最大 x ***，*** 最大 y* `)`，其中存储为空间索引的属性。 这些坐标所表示的意义如下：  
   
 -   x-min 是边界框左下角的 x 坐标。  
   
@@ -145,11 +145,11 @@ ms.locfileid: "36137503"
 > [!NOTE]  
 >  这些坐标通过 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 BOUNDING_BOX 子句指定。  
   
- `(` *X-min ***，*** y-min* `)`和`(` *x-最大值 ***，*** y-max* `)`坐标确定的位置和边界框的维度。 边界框的外部空间视作一个编号为 0 的单元。  
+ `(`*最小 x 坐标 ***，*** 最小 y* `)`并`(`*最大 x ***，*** 最大 y* `)`坐标确定的位置和边界框的尺寸。 边界框的外部空间视作一个编号为 0 的单元。  
   
  空间索引将分解边界框的内部空间。 网格层次结构的第 1 级网格将填充边界框。 若要在网格层次结构中放置几何对象，空间索引会将该对象的坐标与边界框的坐标进行比较。  
   
- 下图显示由定义的点`(` *x-最小值 ***，*** y-最小值*`)`和`(` *x-最大值 ***，*** y-最大值*`)`边界框坐标。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
+ 下图显示了由定义的点`(`*最小 x 坐标 ***，*** 最小 y* `)`并`(`*最大 x ***，*** 最大 y* `)`的边界框坐标。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
   
  ![显示坐标和单元 0 的边界框。](../../database-engine/media/spndx-bb-4x4-objects.gif "显示坐标和单元 0 的边界框。")  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], renaming
 - renaming projects
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - renaming solutions
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c9e2b320adca788cc2ba296100708f826b15d461
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 841fe0512efd234efde2d981b358057336d52bfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236187"
 ---
 # <a name="rename-solutions-and-project-items"></a>重命名解决方案和项目项
   可以在解决方案资源管理器中重命名解决方案及其项目项。  

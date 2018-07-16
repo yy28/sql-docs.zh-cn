@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row removal [SQL Server], Delete query
 - Delete query
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - deleting data
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96039bb192985375a2261ac339a3d9eaba01f6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 792cf742948dba7768ad467d6cdf597d9bda802f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198497"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>创建删除查询 (Visual Database Tools)
   您可以通过使用“删除”查询来删除表中的所有行。  
@@ -52,7 +52,7 @@ ms.locfileid: "36138982"
  在执行“删除”查询时，不会在 [“结果”窗格](results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指示已删除的行数。  
   
 ## <a name="see-also"></a>请参阅  
- [支持的查询类型&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [支持的查询类型&#40;可视化数据库工具&#41;](supported-query-types-visual-database-tools.md)   
  [设计查询和视图操作指南主题 (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

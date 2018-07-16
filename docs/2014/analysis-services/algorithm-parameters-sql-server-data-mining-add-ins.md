@@ -1,5 +1,5 @@
 ---
-title: 算法参数 （SQL Server 数据挖掘外接程序） |Microsoft 文档
+title: 算法参数 （SQL Server 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,22 +48,22 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267673"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>算法参数（SQL Server 数据挖掘外接程序）
   使用 Excel 表分析工具执行数据挖掘时，无需配置数据挖掘算法或参数；每一种工具都将对数据进行分析并自动选择最佳参数。 但是，如果您要修改模型，或要从头开始创建挖掘模型，可以使用 Excel 数据挖掘客户端提供的多种选项进行自定义。  
   
--   通过单击手动创建数据挖掘模型**高级**，然后单击**添加到结构的模型**。  
+-   手动创建数据挖掘模型，通过单击**高级**，然后单击**将模型添加到结构**。  
   
--   在数据挖掘客户端，使用任何建模向导并单击**参数**来控制的行为[!INCLUDE[msCoName](../includes/msconame-md.md)]数据挖掘算法。  
+-   在数据挖掘客户端，使用任意建模向导，并单击**参数**来控制行为的[!INCLUDE[msCoName](../includes/msconame-md.md)]数据挖掘算法。  
   
 -   单击**查询**以打开查询模型向导，然后单击**高级**以打开**数据挖掘高级查询编辑器**。 在此编辑器中，可以使用 DMX 模板创建模型。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36129370"
 |CLUSTER_COUNT|Microsoft Clustering Algorithm<br /><br /> Microsoft 顺序分析和聚类分析算法|指定将由算法生成的大致分类数。 如果无法基于相应的数据生成该大致数目的分类，则算法将生成尽可能多的分类。 如果将 CLUSTER_COUNT 设置为 0，则算法将使用试探性方法最准确地确定要生成的分类数。<br /><br /> 默认值为 10。|  
 |CLUSTER_SEED|Microsoft Clustering Algorithm|指定在为建模初始阶段随机生成分类时所要使用的种子数量。<br /><br /> 默认值为 0。|  
 |CLUSTERING_METHOD|Microsoft Clustering Algorithm|指定算法要使用的聚类分析方法。 可用的聚类分析方法有：scalable EM (1)、non-scalable EM (2)、scalable K-Means (3) 和 non-scalable K-Means (4)。<br /><br /> 默认值为 1。|  
-|COMPLEXITY_PENALTY|Microsoft 决策树算法<br /><br /> Microsoft 时序算法|控制决策树的增长。 该值较低时，会增加拆分数；该值较高时，会减少拆分数。 默认值基于特定模型的属性数，详见以下列表：<br /><br /> 对于 1 到 9 个属性，默认值为 0.5。<br /><br /> 对于 10 到 99 个属性，默认值为 0.9。<br /><br /> 对于 100 或更多个属性，默认值为 0.99。<br /><br /> 注意： 在时序模型，此参数仅适用于通过使用 ARTxp 算法生成的模型或混合模型。|  
+|COMPLEXITY_PENALTY|Microsoft 决策树算法<br /><br /> Microsoft 时序算法|控制决策树的增长。 该值较低时，会增加拆分数；该值较高时，会减少拆分数。 默认值基于特定模型的属性数，详见以下列表：<br /><br /> 对于 1 到 9 个属性，默认值为 0.5。<br /><br /> 对于 10 到 99 个属性，默认值为 0.9。<br /><br /> 对于 100 或更多个属性，默认值为 0.99。<br /><br /> 注意： 在时序模型中，此参数仅适用于使用 ARTxp 算法生成的模型或混合模型。|  
 |FORCED_REGRESSOR|Microsoft 决策树算法<br /><br /> Microsoft 线性回归算法|强制算法将指示的列用作回归量，而不考虑算法为这些列计算出的重要性。<br /><br /> 注意： 此参数仅用于预测连续属性的决策树。 根据定义，线性回归模型是一种特殊的决策树，可对连续属性进行预测。 但是，任何决策树模型都可包含表示线性回归公式的节点。|  
 |FORECAST_METHOD|Microsoft 时序算法|指示是否应使用 ARTxp 算法、ARIMA 算法或二者的组合来生成预测。<br /><br /> 默认值为 MIXED。|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|指定隐藏神经元相对于输入和输出神经元的比率。 以下公式可确定隐藏层中神经元的初始数目：<br /><br /> HIDDEN_NODE_RATIO * SQRT（总输入神经元 \* 总输出神经元）<br /><br /> 默认值为 4.0。|  
@@ -95,7 +95,7 @@ ms.locfileid: "36129370"
 |MAXIMUM_OUTPUT_ATTRIBUTES|Microsoft 决策树算法<br /><br /> Microsoft 线性回归算法<br /><br /> Microsoft 逻辑回归算法<br /><br /> Microsoft Naive Bayes 算法<br /><br /> Microsoft Neural Network Algorithm|定义算法在调用功能选择之前可以处理的输出属性数。 如果将此值设置为 0，则表示关闭功能选择。<br /><br /> 默认值为 255。|  
 |MAXIMUM_SEQUENCE_STATES|Microsoft 顺序分析和聚类分析算法|指定一个顺序可以拥有的最大状态数。 将该值设置为大于 100 的数将导致算法创建一个不提供有意义的信息的模型。<br /><br /> 默认值为 64。|  
 |MAXIMUM_SERIES_VALUE|Microsoft 时序算法|指定用于预测的最大值。 此参数可与 MINIMUM_SERIES_VALUE 一起使用，以便将预测限制在预期范围内。 例如，您可以指定任何一天的预测销售数量决不应超过库存产品数量。|  
-|MAXIMUM_STATES|Microsoft Clustering Algorithm<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft 顺序分析和聚类分析算法|指定算法支持的最大属性状态数。 如果该属性的状态数大于最大状态数，算法将使用此属性的最常见状态，并忽略剩余状态。<br /><br /> 默认值为 100。|  
+|MAXIMUM_STATES|Microsoft Clustering Algorithm<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft 顺序分析和聚类分析算法|指定算法支持的最大属性状态数。 如果属性具有的状态数大于最大状态数，算法将使用该属性的最常见状态并忽略剩余状态。<br /><br /> 默认值为 100。|  
 |MAXIMUM_SUPPORT|Microsoft 关联算法|指定支持项集的事例的最大数目。 如果该值小于 1，则表示事例总计的百分比。 如果此值大于 1，该值表示可以包含项集的事例的绝对数。<br /><br /> 默认值为 1。|  
 |MINIMUM_IMPORTANCE|Microsoft 关联算法|指定关联规则的重要性阈值。 将筛选出重要性小于此值的规则。|  
 |MINIMUM_ITEMSET_SIZE|Microsoft 关联算法|指定一个项集中允许的最小项数。<br /><br /> 默认值为 1。|  

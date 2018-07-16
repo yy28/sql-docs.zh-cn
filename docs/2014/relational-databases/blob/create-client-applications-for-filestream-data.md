@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260863"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>为 FILESTREAM 数据创建客户端应用程序
   可以使用 Win32 在 FILESTREAM BLOB 中读取和写入数据。 您需要执行以下步骤：  
@@ -51,7 +50,7 @@ ms.locfileid: "36129475"
 ##  <a name="steps"></a> 访问 FILESTREAM 数据的步骤  
   
 ###  <a name="path"></a> 读取 FILESTREAM 文件路径  
- FILESTREAM 表中的每个单元都具有关联的文件路径。 若要读取的路径，使用`PathName`属性`varbinary(max)`中的列[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 下面的示例演示如何读取的文件路径`varbinary(max)`列。  
+ FILESTREAM 表中的每个单元都具有关联的文件路径。 若要读取该路径，请使用`PathName`的属性`varbinary(max)`中的列[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 下面的示例演示如何读取的文件路径`varbinary(max)`列。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36129475"
   
 -   避免使用向 FILESTREAM BLOB 中更新、追加或预置数据的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 这会导致 BLOB 数据被假脱机保存到 tempdb 数据库中，然后回到新物理文件中。  
   
--   避免将小型 BLOB 更新追加到 FILESTREAM BLOB 中。 每次追加都会导致复制基础 FILESTREAM 文件。 如果应用程序必须追加小型 Blob，写入到 Blob`varbinary(max)`列，然后执行到 FILESTREAM BLOB 单个写入操作时的 Blob 数达到预设的限制。  
+-   避免将小型 BLOB 更新追加到 FILESTREAM BLOB 中。 每次追加都会导致复制基础 FILESTREAM 文件。 如果应用程序必须追加小型 Blob，请将 Blob 写入`varbinary(max)`列，然后执行单次写入操作对 FILESTREAM BLOB 的 Blob 数达到预设的限制时。  
   
 -   避免在应用程序中检索大量 BLOB 文件的数据长度。 这是非常耗时的操作，因为大小未存储在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中。 如果必须确定 BLOB 文件的长度，请使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 函数确定 BLOB 的大小（如果它是关闭的）。 DATALENGTH() 不会打开 BLOB 文件来确定其大小。  
   

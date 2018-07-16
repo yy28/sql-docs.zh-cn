@@ -1,5 +1,5 @@
 ---
-title: 表格建模 （Adventure Works 教程） |Microsoft 文档
+title: 表格建模 （Adventure Works 教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3d8b4a492a5da9ae0f709c0ab98189e74ed21269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247367"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格建模（Adventure Works 教程）
   本教程提供的课程介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 表格模型。  
@@ -94,7 +94,7 @@ ms.locfileid: "36127986"
 |课程|学完本课的估计时间|  
 |------------|--------------------------------|  
 |[通过使用行筛选器实现动态安全性](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分钟|  
-|[为 Power View 报表配置 Reporting 属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)为 Power View 报表配置报表属性|30 分钟|  
+|[为 Power View 报表配置报表属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)为 Power View 报表配置报表属性|30 分钟|  
   
 ## <a name="next-step"></a>下一步  
  若要开始学习本教程，请继续第一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  

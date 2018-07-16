@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InstanceName Property
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 12a0f51fc42456dd6f954c198822a8c8f2f36839
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f7616f9b1ce935b63a6953a40662524fc7f023bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222878"
 ---
 # <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>InstanceName 属性 (WMI MSReportServer_ConfigurationSetting)
   指定特定计算机上报表服务器实例的名称。 只读。  
@@ -43,7 +43,7 @@ public string InstanceName;
 ```  
   
 ## <a name="property-value"></a>属性值  
- A`String`表示报表服务器实例的名称的对象。  
+ 一个`String`对象，表示报表服务器实例的名称。  
   
 ## <a name="example-code"></a>示例代码  
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  

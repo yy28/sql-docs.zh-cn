@@ -1,5 +1,5 @@
 ---
-title: 跟踪属性 （常规选项卡） |Microsoft 文档
+title: 跟踪属性 （常规选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.general.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8d92a51eaca0f98624ea6174a56448b383c1744a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99621b4d142e6d1686c908783ba63628109eae5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221937"
 ---
 # <a name="trace-properties-general-tab"></a>跟踪属性（“常规”选项卡）
   使用 **“跟踪属性”** 对话框中的 **“常规”** 选项卡可以查看或指定跟踪属性。  
@@ -50,7 +50,7 @@ ms.locfileid: "36129944"
  **设置最大文件大小(MB)**  
  如果选择将跟踪数据保存到文件，则必须指定跟踪文件的最大大小。 默认值为 5 MB。 最大大小仅受保存该文件的文件系统（NTFS、FAT）的限制。  
   
- \<图形 >**将另存为**  
+ \<图形 >**另存为**  
  在选择进行保存后，可以选择此图标来更改文件名。  
   
  **启用文件滚动更新**  

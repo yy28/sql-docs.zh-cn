@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7782cb836f437aa61064d64d084859dedf97ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0eabbd703d04e5aca74b8b94e449d5d8fd18ae97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261993"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>图表中的位置标签（报表生成器和 SSRS）
   由于每种图表类型都具有不同的形状，因此应将数据点标签放在最佳位置上以免对图表产生干扰。 标签的默认位置因图表类型而异：  
@@ -82,7 +82,7 @@ ms.locfileid: "36129612"
   
 6.  为 BarLabelStyle 属性选择一个值。  
   
- 当条形标签样式设置为`Outside`，标签就将位于条的外部，只要它非常适合在图表区中。 如果标签在图表区内图条以外的区域放不下，则标签将位于最靠近图条末尾的图条内。  
+ 当条形图标签样式设置为`Outside`，标签就将位于外部在栏中，只要图表区放得。 如果标签在图表区内图条以外的区域放不下，则标签将位于最靠近图条末尾的图条内。  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>更改点标签在面积图、柱形图、折线图或散点图中的位置  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36129612"
  [条形图&#40;报表生成器和 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [饼图外显示数据点标签&#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [在饼图外显示数据点标签&#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

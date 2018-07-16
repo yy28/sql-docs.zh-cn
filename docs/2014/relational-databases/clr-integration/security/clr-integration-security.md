@@ -1,13 +1,11 @@
 ---
-title: CLR 集成安全性 |Microsoft 文档
+title: CLR 集成安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689d425c2f13a442b1d8bbd5515939135f44fa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017764"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349589"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
-  安全模型[!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 可管理和保护不同类型的运行中的 CLR 和非 CLR 对象之间的访问权限[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]语句或另一个服务器中运行的 CLR 对象。 对象之间的调用称为链接。 对这些对象执行的安全检查类型取决于相关的链接类型。  
+  安全模型[!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 管理和保护不同类型的运行中的 CLR 和非 CLR 对象之间的访问权限[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]语句或在服务器中运行的其他 CLR 对象。 对象之间的调用称为链接。 对这些对象执行的安全检查类型取决于相关的链接类型。  
   
  CLR 集成安全模式可实现以下目的：  
   
@@ -40,7 +38,7 @@ ms.locfileid: "36017764"
   
 -   用户定义代码不应能通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程中运行而获得对系统资源的未经授权访问。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 CLR 的代码基于访问的安全模型。 本节将讨论此组合安全方法的某些优势。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 CLR 的代码访问基于安全模型。 本节将讨论此组合安全方法的某些优势。  
   
  下表列出了本节的主题。  
   

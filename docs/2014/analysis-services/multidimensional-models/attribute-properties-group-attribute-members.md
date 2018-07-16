@@ -1,5 +1,5 @@
 ---
-title: 对属性成员 （离散化） 进行分组 |Microsoft 文档
+title: 对属性成员 （离散化） 进行分组 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
 - discretization [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc2c51f16733597af532fe256c73c69649f0e1c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251449"
 ---
 # <a name="group-attribute-members-discretization"></a>对属性成员分组（离散化）
   成员组是系统生成的连续维度成员的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性成员分成若干成员组。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  
@@ -47,9 +47,9 @@ ms.locfileid: "36128879"
   
  特性的 `DiscretizationNumber` 属性指定要显示的组数。 如果将属性设置为默认值 0，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将通过对数据进行抽样或读取（具体取决于 `DiscretizationMethod` 属性的设置）来确定组数。  
   
- 中的成员组的成员的排序顺序通过使用控制`OrderBy`特性属性。 基于该排序顺序，成员组中的各成员将连续排列。  
+ 中的成员组的成员的排序顺序通过使用控制`OrderBy`特性的属性。 基于该排序顺序，成员组中的各成员将连续排列。  
   
- 成员组的通常用法是从有很少成员的级别深化到有很多成员的级别。 若要允许用户在级别之间深化，请将包含大量成员的级别特性的 `DiscretizationMethod` 属性从 `None` 更改为上表中所述的离散化方法之一。 例如，“客户端”维度包含具有 500,000 个成员的“客户端名称”属性层次结构。 你可以重命名该特性客户端组并将设置`DiscretizationMethod`属性`Automatic`要在属性层次结构成员级别上显示成员组。  
+ 成员组的通常用法是从有很少成员的级别深化到有很多成员的级别。 若要允许用户在级别之间深化，请将包含大量成员的级别特性的 `DiscretizationMethod` 属性从 `None` 更改为上表中所述的离散化方法之一。 例如，“客户端”维度包含具有 500,000 个成员的“客户端名称”属性层次结构。 可以重命名该特性的客户端组和设置`DiscretizationMethod`属性设置为`Automatic`以显示特性层次结构成员级别成员组。  
   
  若要深化到每个组中的各个客户端，可以创建另一个绑定到相同表列的“客户端名称”属性层次结构。 然后根据两个属性创建新的用户层次结构。 顶级将基于“客户端组”属性，而较低级别基于“客户端名称”属性。 两个特性的 `IsAggregatable` 属性将为 `True`。 然后，用户可以展开层次结构上的“（所有）”级别以查看组成员，并展开组成员以查看层次结构的叶成员。 若要隐藏组或客户端级别，您可以将相应特性的 `AttributeHierarchyVisible` 属性设置为 `False`。  
   

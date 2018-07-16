@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
 - query time-outs [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9066dbbc02149913959c9c1e16ee044f5f3b7a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4794c4a2b6c9207cb48573bb481499fa402f3b29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214567"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>为报表和共享数据集处理设置超时值 (SSRS)
   可以通过指定超时值来限制使用系统资源的方式。 报表服务器支持两种类型的超时值：  
@@ -38,7 +38,7 @@ ms.locfileid: "36138139"
  大多数超时错误出现在查询处理期间。 如果遇到超时错误，请尝试增大查询超时值。 确保将报表执行超时值调整为比查询超时值更大的值。时间段必须足以完成查询和报表处理。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>为报表中的嵌入数据集设置查询超时值  
- 查询超时值是在创作报表过程中在定义嵌入数据集时指定的。 超时值使用报表存储在`Timeout`报表定义的元素。 默认情况下，此值设置为 30 秒。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 查询超时值是在创作报表过程中在定义嵌入数据集时指定的。 超时值与报表一起存储在`Timeout`报表定义的元素。 默认情况下，此值设置为 30 秒。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
  对已发布报表的属性具有修改权限的用户可以通过编辑报表定义文件来重置此值。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36138139"
 >  可以在 RSReportServer.config 文件中设置 `RunningRequestsDbCycle` 设置，以更改计算正在运行的作业的频率。  
   
 ## <a name="see-also"></a>请参阅  
- [设置处理选项&#40;的 Reporting Services SharePoint 集成模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [设置处理选项&#40;Reporting Services SharePoint 集成模式下&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)   
  [管理正在运行的进程](../subscriptions/manage-a-running-process.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  

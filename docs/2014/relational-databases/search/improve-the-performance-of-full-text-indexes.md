@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb10d58c2197f422fe59ff2fa9a165bca5f8bf62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212767"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
   硬件资源（例如内存、磁盘速度、CPU 速度和计算机体系结构）会影响全文索引和全文查询的性能。  
@@ -62,7 +61,7 @@ ms.locfileid: "36129663"
 ##  <a name="tuning"></a> 优化全文索引的性能  
  若要最大限度地提高全文索引的性能，请实施下列最佳做法：  
   
--   若要使用所有处理器或内核数与最大值，设置[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)`max full-text crawl ranges`到系统上的 Cpu 数。 有关此配置选项的信息，请参阅 [max full-text crawl range 服务器配置选项](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
+-   若要使用所有处理器或内核的最大，将[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)`max full-text crawl ranges`到系统上的 Cpu 数。 有关此配置选项的信息，请参阅 [max full-text crawl range 服务器配置选项](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
   
 -   请确保基表具有聚集索引。 对聚集索引的第一列使用整数数据类型。 避免在聚集索引的第一列使用 GUID。 对聚集索引执行多范围填充可以产生最高的填充速度。 我们建议充当全文键的列采用整数数据类型。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "36129663"
   
   
   
-##  <a name="full"></a> 解决完全填充性能问题  
+##  <a name="full"></a> 完全填充性能故障排除  
  若要诊断性能问题，请查看全文爬网日志。 有关爬网日志的信息，请参阅[填充全文索引](../indexes/indexes.md)。  
   
  如果对完全填充的性能不满意，则建议按顺序执行以下故障排除步骤。  
@@ -109,7 +108,7 @@ ms.locfileid: "36129663"
   
  可以使用下面的公式粗略估算筛选器后台程序宿主占用的内存量（以字节为单位）：  
   
- *number_of_crawl_ranges* \`ism_size*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
   
  上面公式中的变量的默认值如下所示：  
   
@@ -125,21 +124,21 @@ ms.locfileid: "36129663"
   
 -   *T*，它是系统中可用物理内存的总量（以 MB 为单位）。  
   
--   *M*，这是最优`max server memory`设置。  
+-   *M*，这是最佳`max server memory`设置。  
   
 > [!IMPORTANT]  
->  有关公式的基本信息，请参阅<sup>1</sup>， <sup>2</sup>，和<sup>3</sup>下面。  
+>  有关公式的基本信息，请参阅<sup>1</sup>， <sup>2</sup>，并<sup>3</sup>下文。  
   
-|平台|估计 fdhost.exe 的内存需求量 （mb）-*F*<sup>1</sup>|用于计算最大服务器内存的公式-*M*<sup>2</sup>|  
+|平台|估计 fdhost.exe 内存需求量以 mb 为单位，*F*<sup>1</sup>|用于计算最大服务器内存的公式 —*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
 |x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 最小值 (** *T* **，** 2000年 **) –*`F`*–** 500|  
 |x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
   
- <sup>1</sup>如果正在多个完全填充，计算每个的 fdhost.exe 内存需求量分别作为*F1*， *F2*，依次类推。 然后计算 M 为 T– sigma(Fi)。  
+ <sup>1</sup>如果正在多个完全填充，则计算每个的 fdhost.exe 内存需求量分别作为*F1*， *F2*，依次类推。 然后计算 M 为 T– sigma(Fi)。  
   
  <sup>2</sup> 500 MB 是系统中其他进程所需的内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
   
- <sup>3</sup> 。*ism_size*被假定为 8 MB; 在 x64 平台。  
+ <sup>3</sup> 。*ism_size*被假定为 8 MB，对于 x64 平台。  
   
  **示例： 估计 fdhost.exe 的内存需求量**  
   
@@ -147,13 +146,13 @@ ms.locfileid: "36129663"
   
  `F = 8*10*8=640`  
   
- 然后，计算出的最佳值`max server memory`-*M*。 该系统的可用物理内存总量（以 MB 为单位）—*T*—是 `8192`。  
+ 下一步计算出的最佳值`max server memory`—*M*。 该系统的可用物理内存总量（以 MB 为单位）—*T*—是 `8192`。  
   
  `M = 8192-640-500=7052`  
   
  **示例： 设置最大服务器内存**  
   
- 此示例使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)和[重新配置](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句设置`max server memory`到的值计算为*M*在前面的示例, `7052`:  
+ 此示例使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)和[重新配置](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句来设置`max server memory`的值计算为到*M*在前面的示例, `7052`:  
   
 ```  
 USE master;  
@@ -202,12 +201,12 @@ GO
   
   
   
-##  <a name="filters"></a> 解决索引性能由于筛选器而变慢  
+##  <a name="filters"></a> 故障排除慢速索引性能由于筛选器  
  在填充全文索引时，全文引擎使用以下两种类型的筛选器：多线程筛选器和单线程筛选器。 有些文档（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文档）使用多线程筛选器进行筛选。 另外一些文档使用单线程筛选器进行筛选，如 Adobe Acrobat 可移植文档格式 (PDF) 文档。  
   
  为了安全起见，筛选器是由筛选器后台程序主机进程加载的。 服务器实例对所有多线程筛选器使用多线程进程，并对所有单线程筛选器使用单线程进程。 如果使用多线程筛选器的文档包含使用单线程筛选器的嵌入文档，全文引擎将启动单线程进程以处理嵌入文档。 例如，在遇到包含 PDF 文档的 Word 文档时，全文引擎使用多线程进程来处理 Word 内容，并启动单线程进程以处理 PDF 内容。 但是，单线程筛选器可能无法在此环境中正常工作，并且可能会破坏筛选进程的稳定性。 在某些频繁出现此类嵌入的环境中，它可能会导致筛选进程崩溃。 如果发生这种情况，全文引擎会将任何失败的文档（如包含嵌入 PDF 内容的 Word 文档）重新传送到单线程筛选进程。 如果频繁进行重新传送，将会导致全文索引进程性能下降。  
   
- 若要解决该问题，必须将容器文档（此处为 Word 文档）的筛选器标记为单线程筛选器。 可以更改筛选器注册表值，以便将给定筛选器标记为单线程筛选器。 若要将标记为单线程筛选器的筛选器，你需要设置**ThreadingModel**到筛选器的注册表值`Apartment Threaded`。 有关单线程单元的信息，请参阅白皮书 [了解和使用 COM 线程模型](http://go.microsoft.com/fwlink/?LinkId=209159)。  
+ 若要解决该问题，必须将容器文档（此处为 Word 文档）的筛选器标记为单线程筛选器。 可以更改筛选器注册表值，以便将给定筛选器标记为单线程筛选器。 若要将标记为单线程筛选器的筛选器，您需要设置**ThreadingModel**到筛选器的注册表值`Apartment Threaded`。 有关单线程单元的信息，请参阅白皮书 [了解和使用 COM 线程模型](http://go.microsoft.com/fwlink/?LinkId=209159)。  
   
   
   

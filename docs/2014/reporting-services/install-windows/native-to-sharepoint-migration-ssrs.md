@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: c8e7684f241ea5ab69709cdaaea9b2c6faffe889
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0667c3fc2154875d3f68e5eea22f9cd0a6600956
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264313"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
   不能从一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式升级或转换到另一个服务器模式。 例如，不能将本机模式报表服务器升级或转换到 SharePoint 模式。 您不能在模式之间复制报表服务器数据库，因为它们使用不同的数据库架构。 可以将内容从一个报表服务器迁移到另一个服务器。 您使用的工具依赖于为源和目标服务器配置的报表服务器模式的类型。  
@@ -53,8 +53,8 @@ ms.locfileid: "36129169"
 |Models|是||  
 |数据集|是||  
 |报表部件||在迁移后，验证或更新指向报表部件的路径。|  
-|计划|是|请参阅 ListSchedules 方法[Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
-|订阅|是|请参阅列表订阅方法[Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)和 ChangeSubscriptionOwner 方法 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
+|计划|是|请参阅 ListSchedules 方法[订阅和传递方法](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|订阅|是|请参阅列表订阅方法[订阅和传递方法](../report-server-web-service/methods/subscription-and-delivery-methods.md)和 ChangeSubscriptionOwner 方法 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |快照|||  
 ||||  
   

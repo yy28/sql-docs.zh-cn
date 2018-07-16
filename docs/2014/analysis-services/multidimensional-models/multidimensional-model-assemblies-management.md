@@ -1,5 +1,5 @@
 ---
-title: 多维模型程序集管理 |Microsoft 文档
+title: 多维模型程序集管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
 - calling user-defined functions
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c8c27856135007c172e2e53b066b14a1a3a7eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243487"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一些可用于多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 语言的内部函数，这些内部函数经过专门设计，可用于完成从标准统计计算到遍历层次结构中的成员的所有任务。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
@@ -95,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |权限设置|Description|  
 |------------------------|-----------------|  
 |`Safe`|提供内部计算权限。 此权限存储桶不分配访问 .NET Framework 中任何受保护资源的权限。 如果没有对 `PermissionSet` 属性指定任何权限存储桶，则这是程序集的默认权限存储桶。|  
-|`ExternalAccess`|提供与一样进行访问`Safe`设置，与访问外部系统资源的附加功能。 此权限存储桶无法保证安全性（尽管有可能保证这种情况的安全），但可以保证可靠性。|  
+|`ExternalAccess`|提供的相同访问权限`Safe`设置，以及访问外部系统资源的附加功能。 此权限存储桶无法保证安全性（尽管有可能保证这种情况的安全），但可以保证可靠性。|  
 |`Unsafe`|无限制。 对运行于此权限集下的托管代码无法提供安全性或可靠性保证。 任何权限，甚至管理员提供的自定义权限都将授予在此信任级别运行的代码。|  
   
  当 CLR 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]承载时，基于堆栈审核的权限检查在本机 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 代码的边界停止。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集中的任何托管代码始终属于前面列出的三种权限类别中的一种。  
@@ -109,7 +109,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   如果某个中间 EXECUTE AS 更改了执行上下文，使之不再是原始调用方的上下文，则访问外部资源的尝试将失败。  
   
- `ImpersonationMode`属性可以设置为`ImpersonateCurrentUser`或`ImpersonateAnonymous`。 默认设置， `ImpersonateCurrentUser`，当前用户的网络登录帐户下运行程序集。 如果`ImpersonateAnonymous`设置时，执行上下文是对应的 Windows 登录用户帐户 IUSER_*servername*服务器上。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
+ `ImpersonationMode`属性可以设置为`ImpersonateCurrentUser`或`ImpersonateAnonymous`。 默认设置， `ImpersonateCurrentUser`，当前用户的网络登录帐户下运行程序集。 如果`ImpersonateAnonymous`设置，执行上下文是对应于 Windows 登录用户帐户 IUSER_*servername*在服务器上。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
   
 ### <a name="application-domains"></a>应用程序域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不直接显示应用程序域。 由于一组程序集运行于同一个应用程序域中，因此应用程序域可以在执行期间使用 .NET Framework 中的 `System.Reflection` 命名空间或以其他方式发现彼此，并且可以用后期绑定的方式调用这些程序集。 此类调用将受到基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授权的安全性所使用的权限检查的约束。  
@@ -117,7 +117,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  不应依赖于在同一应用程序域中查找程序集，因为应用程序域边界和每个域中的程序集都是由此实现而定义的。  
   
 ## <a name="see-also"></a>请参阅  
- [安全设置的存储过程](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [设置存储过程的安全性](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [定义存储过程](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

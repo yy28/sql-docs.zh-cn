@@ -1,5 +1,5 @@
 ---
-title: 创建交叉验证报表 |Microsoft 文档
+title: 创建交叉验证报表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - validating data mining models
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9f9905bc991a018d5856237e1659811e7a2b1c36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b0058e22e313d26ac5b2f806848e09dacfccb67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332867"
 ---
 # <a name="create-a-cross-validation-report"></a>创建交叉验证报表
   本主题演练如何在数据挖掘设计器中使用“准确性图表”选项卡创建交叉验证报表。 有关交叉验证报表外观的常规信息，以及该报表包含的统计度量值，请参阅[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)。  

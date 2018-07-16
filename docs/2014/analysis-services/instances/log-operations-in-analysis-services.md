@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 中记录操作 |Microsoft 文档
+title: 在 Analysis Services 中记录操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228367"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
   Analysis Services 实例将会把服务器通知、错误和警告记录到 msmdsrv.log 文件中 – 你安装的每个实例都有该文件。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](http://support.microsoft.com/kb/2965035)中查看整个更改列表。  
@@ -59,16 +59,16 @@ ms.locfileid: "36129996"
   
  如有可能，我们建议你在 Management Studio 的服务器属性页设置日志记录属性。 但是在某些情况下，你必须直接编辑 msmdsrv.ini 文件以配置管理工具中不可见的设置。  
   
- ![显示日志设置配置文件部分](../media/ssas-logfilesettings.png "显示日志设置配置文件部分")  
+ ![显示日志设置配置文件的部分](../media/ssas-logfilesettings.png "显示日志设置配置文件部分")  
   
 ##  <a name="bkmk_msmdsrv"></a> MSMDSRV 服务日志文件  
  Analysis Services 会将服务器操作记录到 msmdsrv.log 文件中，每个实例一个文件，位于 \program files\Microsoft SQL Server\\<instance\>\Olap\Log。  
   
  此日志文件会在每次重启服务时被清空。 在以前版本中，管理员有时会重启服务，其唯一目的是在其变得过大不能使用前清空日志文件。 现在已没有必要。 SQL Server 2012 SP2 和更高版本中引入的配置设置使你可控制日志文件及其历史记录的大小：  
   
--   `MaxFileSizeMB` 指定最大日志文件大小 (MB)。 默认值为 256。 有效替换值必须是正整数。 当`MaxFileSizeMB`是达到，Analysis Services 重命名为 msmdsrv {当前 timestamp}.log 文件，当前文件并启动新的 msmdsrv.log 文件。  
+-   `MaxFileSizeMB` 指定最大日志文件大小 (MB)。 默认值为 256。 有效替换值必须是正整数。 当`MaxFileSizeMB`是达到，Analysis Services 将重命名为 msmdsrv {current timestamp}.log 文件，当前文件并启动新的 msmdsrv.log 文件。  
   
--   `MaxNumberFiles` 指定较旧的日志文件保留的期。 默认值为 0（禁用）。 你可将其更改为正整数以保持日志文件的版本。 当`MaxNumberFiles`是达到，Analysis Services 删除包含在其名称中最早的时间戳的文件。  
+-   `MaxNumberFiles` 指定较旧的日志文件保留的期。 默认值为 0（禁用）。 你可将其更改为正整数以保持日志文件的版本。 当`MaxNumberFiles`是达到，Analysis Services 删除具有名称中最旧时间戳的文件。  
   
  要使用这些设置，请进行以下操作：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36129996"
   
 2.  授予 Analysis Services 帐户有关数据库的足够权限。 帐户需要创建表、写入表和从表读取的权限。  
   
-3.  在 SQL Server Management Studio，右键单击**Analysis Services** | **属性** | **常规**，将其设置**CreateQueryLogTable**为 true。  
+3.  在 SQL Server Management Studio 中，右键单击**Analysis Services** | **属性** | **常规**，将**CreateQueryLogTable**为 true。  
   
 4.  或者，如果你要以不同速率取样查询，或者使用表的不同名称，则更改 **QueryLogSampling** 或 **QueryLogTableName** 。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36129996"
   
  查询日志设置属于服务器范围。 你指定的设置将被此服务器上运行的所有数据库使用。  
   
- ![查询在 Management Studio 中的日志设置](../media/ssas-querylogsettings.png "在 Management Studio 中的查询日志设置")  
+ ![查询日志设置在 Management Studio](../media/ssas-querylogsettings.png "Management Studio 中的查询日志设置")  
   
  指定配置设置后，多次运行 MDX 查询。 如果取样设置为 10，则运行 11 次查询。验证表是否创建。 在 Management Studio 中，连接到关系数据库引擎，打开数据库文件夹，打开 **“表”** 文件夹，并验证 **OlapQueryLog** 是否存在。 如果不能立即查看表，则刷新文件夹，提取其内容的任何更改。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36129996"
   
  除非 Microsoft 支持另有指示，否则大多数管理员使用默认设置。 这篇较旧的知识库文章仍用于提供有关如何配置转储文件的说明： [如何配置 Analysis Services 以生成内存转储文件](http://support.microsoft.com/kb/919711)。  
   
- 设置最可能要修改的配置是`CreateAndSendCrashReports`使用以确定是否将生成内存转储文件的设置。  
+ 最可能要修改的配置设置是`CreateAndSendCrashReports`设置用于确定是否生成内存转储文件。  
   
 |值|Description|  
 |-----------|-----------------|  
@@ -164,7 +164,7 @@ ms.locfileid: "36129996"
   
  `CrashReportsFolder` 是转储文件的位置。 默认情况下，可在 \Olap\Log 文件夹找到 .mdmp 文件和相关日志记录。  
   
- `SQLDumperFlagsOn` 用于生成完全转储。 默认情况下，未启用完全转储。 你可以将此属性设置为`0x34`。  
+ `SQLDumperFlagsOn` 用于生成完全转储。 默认情况下，未启用完全转储。 可以将此属性设置为`0x34`。  
   
  以下链接提供了更多背景信息：  
   
@@ -185,7 +185,7 @@ ms.locfileid: "36129996"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 实例管理](analysis-services-instance-management.md)   
- [监视 Analysis Services with SQL Server 事件探查器简介](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)  
+ [通过 SQL Server Profiler 监视 Analysis Services 简介](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [在 Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)  
   
   

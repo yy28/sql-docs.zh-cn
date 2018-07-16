@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupAttributeBinding 数据类型 （超的行） (ASSL) |Microsoft 文档
+title: MeasureGroupAttributeBinding 数据类型 （的外部） (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureGroupAttributeBinding data type
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5bb43dfc9dc6cb0ac578c36a24b470d444630d01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 244656b0ae951ec5f8274f11e58153faef80957d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218207"
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>MeasureGroupAttributeBinding 数据类型（外部）(ASSL)
   定义一个派生数据类型，该类型表示包含在度量值组中的维度的属性外部绑定。  
@@ -60,10 +60,10 @@ ms.locfileid: "36129345"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[CubeID](../properties/id-element-assl.md)， [DatabaseID](../../xmla/xml-elements-properties/id-element-xmla.md)， [MeasureGroupID](../properties/measuregroupid-element-assl.md)， [GranularityAttributeID](../properties/attributeid-element-assl.md)，[源](../properties/source-element-binding-assl.md)|  
-|派生元素|[绑定](../../xmla/xml-elements-properties/binding-element-xmla.md)([绑定](../collections/attributes-element-assl.md)Analysis (XMLA) XML 集合[批处理](../../xmla/xml-elements-commands/batch-element-xmla.md)和[过程](../../xmla/xml-elements-commands/process-element-xmla.md)命令)|  
+|派生元素|[绑定](../../xmla/xml-elements-properties/binding-element-xmla.md)([绑定](../collections/attributes-element-assl.md)集合的 XML for Analysis (XMLA)[批处理](../../xmla/xml-elements-commands/batch-element-xmla.md)并[过程](../../xmla/xml-elements-commands/process-element-xmla.md)命令)|  
   
 ## <a name="remarks"></a>Remarks  
- 有关扩展的行绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关的外部绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

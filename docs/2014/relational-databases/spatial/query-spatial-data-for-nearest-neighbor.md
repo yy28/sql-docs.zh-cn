@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46d2c75b69d283d6122255ec9ac4a41c4ccdbc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 361c4e6fe070170163b5e14f1b061467bab96186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227129"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
   Nearest Neighbor 查询是用于空间数据的常用查询。 Nearest Neighbor 查询用于查找与特定的空间对象最接近的空间对象。 例如，网站的存储区定位器必须时常查找与客户位置最接近的存储区位置。  
@@ -55,7 +55,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Nearest Neighbor 查询和空间索引  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 `TOP` 和 `ORDER BY` 子句对空间数据列执行 Nearest Neighbor 查询。 `ORDER BY`子句包含调用`STDistance()`为空间数据列数据类型方法。 `TOP`子句指示针对查询要返回的对象数。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 `TOP` 和 `ORDER BY` 子句对空间数据列执行 Nearest Neighbor 查询。 `ORDER BY`子句包含对的调用`STDistance()`空间列数据类型的方法。 `TOP`子句指示要为查询返回的对象数。  
   
  为了使 Nearest Neighbor 查询使用空间索引，必须满足以下要求：  
   
@@ -65,7 +65,7 @@ SELECT TOP ( number )
   
 3.  `WHERE` 子句必须包含 `STDistance()` 方法。  
   
-4.  如果 `WHERE` 子句中有多个谓词，则必须使用 `AND` 连词将包含 `STDistance()` 方法的谓词连接到其他谓词。 `STDistance()`方法不能在的可选部分`WHERE`子句。  
+4.  如果 `WHERE` 子句中有多个谓词，则必须使用 `AND` 连词将包含 `STDistance()` 方法的谓词连接到其他谓词。 `STDistance()`方法不能为中的可选部分`WHERE`子句。  
   
 5.  `ORDER BY` 子句中的第一个表达式必须使用 `STDistance()` 方法。  
   
@@ -105,7 +105,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- 该查询缺少`WHERE`子句使用`STDistance()`语法部分中指定，因此查询不能使用空间索引的窗体中。  
+ 该查询缺少`WHERE`使用的子句`STDistance()`语法部分中指定，因此它不能使用空间索引的窗体中。  
   
 ## <a name="see-also"></a>请参阅  
  [空间数据 (SQL Server)](spatial-data-sql-server.md)  

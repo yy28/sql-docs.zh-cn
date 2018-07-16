@@ -1,13 +1,11 @@
 ---
-title: CLR 集成的性能 |Microsoft 文档
+title: CLR 集成的性能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2259cf7be33fdf0e1ded99345db8102875f95618
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de2c903436475790b1d7b6fa01c5c59ae16f20b5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123655"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352579"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 集成的性能
-  本主题讨论一些增强的性能的设计选择[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与集成[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 公共语言运行时 (CLR)。  
+  本主题讨论了一些增强的性能的设计选择[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与集成[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 公共语言运行时 (CLR)。  
   
 ## <a name="the-compilation-process"></a>编译过程  
  在编译 SQL 表达式时，如果遇到对托管例程的引用，则生成 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 中间语言 (MSIL) 存根。 该存根包含的代码用于将例程参数从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 封送到 CLR、调用函数并返回结果。 该“粘附”代码基于参数类型和参数方向（向内、向外或引用）。  
@@ -40,7 +38,7 @@ ms.locfileid: "36123655"
  编译过程生成的函数指针可以在运行时通过本机代码调用。 对于标量值用户定义函数，可基于每行调用此函数。 为最大程度地降低在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 之间转换的成本，包含任何托管调用的语句都具有一个标识目标应用程序域的启动步骤。 该标识步骤减少每行的转换成本。  
   
 ## <a name="performance-considerations"></a>性能注意事项  
- 以下内容概述了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中特定于 CLR 集成的性能注意事项。 在找不到更多详细的信息"[SQL Server 2005 中使用 CLR 集成](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 网站上。 在找不到有关托管的代码性能的常规信息"[提高.NET 应用程序性能和可伸缩性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 网站上。  
+ 以下内容概述了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中特定于 CLR 集成的性能注意事项。 可以在中找到更多详细的信息"[SQL Server 2005 中使用 CLR 集成](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 网站上。 有关托管的代码性能的常规信息可在"[提高.NET 应用程序性能和可伸缩性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 网站上。  
   
 ### <a name="user-defined-functions"></a>用户定义函数  
  相较于 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 用户定义函数，CLR 函数可以从更快的调用路径中受益。 此外，同 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 相比，托管代码在过程代码、计算和字符串操作方面具有决定性性能优势。 需要大量计算且不执行数据访问的 CLR 函数采用托管代码编写的效果更好。 但是与 CLR 集成相比，[!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数的确可以更有效地执行数据访问。  

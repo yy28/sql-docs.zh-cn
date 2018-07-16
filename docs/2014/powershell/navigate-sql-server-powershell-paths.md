@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242757"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供程序在与文件路径相似的结构中公开 SQL Server 实例中的对象集。 您可以使用 Windows PowerShell cmdlet 导航提供程序路径，并且创建自定义驱动器以便缩短需键入的路径。  
@@ -118,7 +118,7 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>创建自定义驱动器  
  **创建和使用自定义驱动器**  
   
-1.  使用 `New-PSDrive` 可以定义自定义驱动器。 使用`Root`参数来指定按自定义驱动器名称表示的路径。  
+1.  使用 `New-PSDrive` 可以定义自定义驱动器。 使用`Root`参数来指定自定义驱动器名称表示的路径。  
   
 2.  引用路径导航 cmdlet 中的自定义驱动器名称如`Set-Location`。  
   

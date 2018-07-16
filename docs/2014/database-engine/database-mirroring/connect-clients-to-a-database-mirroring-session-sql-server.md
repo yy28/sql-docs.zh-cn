@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204038"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
@@ -102,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  如果连接字符串指定命名实例的名称而不是端口，则 SQL Server Browser 查询是必需的。  
   
- 若要指定的 IP 地址和端口，`Server`属性采用以下形式， `Server=` *< i p >*`,`*\<端口 >*，例如：  
+ 若要指定 IP 地址和端口`Server`属性采用以下格式`Server=` *< ip_address >*`,`*\<端口 >*，例如：  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  此字符串未包含身份验证信息。  
   
 > [!IMPORTANT]  
->  绑定协议前缀和`Server`属性 (`Server=tcp:`*\<servername >*) 与不兼容**网络**属性，然后在指定的协议这两个位置很可能会导致错误。 因此，我们建议的连接字符串指定协议使用**网络**属性，并指定仅中的服务器名称`Server`属性 (`"Network=dbmssocn; Server=`*\<servername>*`"`)。  
+>  将协议前缀和捆绑`Server`属性 (`Server=tcp:`*\<servername >*) 与不兼容**网络**属性，并指定中的协议这两个位置则可能会导致错误。 因此，建议连接字符串，指定协议使用**网络**属性，指定仅中的服务器名称`Server`属性 (`"Network=dbmssocn; Server=`*\<servername>*`"`)。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  除了初始伙伴名称以外，客户端还可以指定应标识当前镜像服务器实例的故障转移伙伴名称。 故障转移伙伴是由 failover partner 属性的某个关键字指定的。 具体由该属性的哪个关键字指定取决于您所使用的 API。 下表列出了这些关键字：  
@@ -141,7 +140,7 @@ Server=123.34.45.56,4724;
 >  如果仅提供了初始伙伴名称，则应用程序开发人员不需要执行任何操作，也不需要编写除了有关如何重新连接的代码之外的任何代码。  
   
 > [!NOTE]  
->  托管的代码应用程序开发人员提供故障转移伙伴名称中的`ConnectionString`的`SqlConnection`对象。 有关使用此连接字符串的信息，请参阅 ADO.NET 文档（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 中包含此文档）中的“Database Mirroring Support in the .NET Framework Data Provider for SQL Server”。  
+>  托管的代码应用程序开发人员提供在故障转移伙伴名称`ConnectionString`的`SqlConnection`对象。 有关使用此连接字符串的信息，请参阅 ADO.NET 文档（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 中包含此文档）中的“Database Mirroring Support in the .NET Framework Data Provider for SQL Server”。  
   
 #### <a name="example-connection-string"></a>连接字符串示例  
  例如，为了使用 TCP/IP 显式连接到 Partner_A 或 Partner_B 上的 **AdventureWorks** 数据库，使用 ODBC 驱动程序的客户端应用程序可能会提供以下连接字符串：  

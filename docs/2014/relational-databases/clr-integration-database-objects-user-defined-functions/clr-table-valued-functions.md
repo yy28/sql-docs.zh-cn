@@ -1,13 +1,11 @@
 ---
-title: CLR 表值函数 |Microsoft 文档
+title: CLR 表值函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83d955467034448e5c9a7337b674b85a12acb0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 67bb174803f7368257217e5244ef023e2c274929
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028139"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353999"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
   表值函数是返回表的用户定义函数。  
@@ -50,7 +48,7 @@ ms.locfileid: "36028139"
  表值参数即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 表值参数提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 表值参数还有助于减少到服务器的往返次数。 可以将数据作为表值参数发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关表值参数的详细信息，请参阅[使用表值参数（数据引擎）](../tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>输出参数和表值函数  
- 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 你必须指定参数的引用并将应用\<out （) > 属性以表示输出参数，如以下所示：  
+ 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 你必须指定该参数通过引用并应用\<out （) > 属性以表示输出参数，如以下所示：  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -81,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   当从外部数据生成表值函数时。 例如，读取事件日志并将其显示为表的表值函数。  
   
- **请注意**表值函数只能执行数据访问通过[!INCLUDE[tsql](../../includes/tsql-md.md)]查询中的`InitMethod`方法，而不是在`FillRow`方法。 如果执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，则应使用 `InitMethod` 属性标记 `SqlFunction.DataAccess.Read`。  
+ **请注意**的表值函数只能执行数据访问通过[!INCLUDE[tsql](../../includes/tsql-md.md)]查询中的`InitMethod`方法，而不是在`FillRow`方法。 如果执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，则应使用 `InitMethod` 属性标记 `SqlFunction.DataAccess.Read`。  
   
 ## <a name="a-sample-table-valued-function"></a>示例表值函数  
  下面的表值函数返回系统事件日志中的信息。 此函数采用单个字符串参数，其中包含要读取的事件日志的名称。  

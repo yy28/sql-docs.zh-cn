@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59819655763d017ebe549b7325aa920960000fa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08c664c7e8f2c345331b90d5b4ad502638a0c5be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263753"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的自定义报表。  
@@ -78,8 +78,8 @@ ms.locfileid: "36129117"
  [报表示例](http://go.microsoft.com/fwlink/?LinkId=81792)，包括由创建的标准报表[!INCLUDE[msCoName](../../includes/msconame-md.md)]，可供下载。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
   
 ## <a name="see-also"></a>请参阅  
- [将自定义报表添加到 Management Studio](add-a-custom-report-to-management-studio.md)   
- [解除隐含运行自定义报告警告](unsuppress-run-custom-report-warnings.md)   
+ [向 Management Studio 添加自定义报表](add-a-custom-report-to-management-studio.md)   
+ [启用运行自定义报表警告](unsuppress-run-custom-report-warnings.md)   
  [将自定义报告与对象资源管理器节点属性一起使用](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

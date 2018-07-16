@@ -1,5 +1,5 @@
 ---
-title: 模糊分组转换编辑器 （高级选项卡） |Microsoft 文档
+title: 模糊分组转换编辑器 （高级选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1696734810b1b3fd4ceccb624139358cea0dcaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e8c12ad683e46838a88359170ea970f20c02828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231517"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  
   
 > [!NOTE]  
->  `Exhaustive`和`MaxMemoryUsage`模糊分组转换的属性中均不提供**模糊分组转换编辑器**，但可以通过使用设置**高级编辑器**. 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
+>  `Exhaustive`并`MaxMemoryUsage`模糊分组转换的属性中没有**模糊分组转换编辑器**，但可以通过使用设置**高级编辑器**. 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
   
  若要了解有关模糊分组转换的详细信息，请参阅 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
 ## <a name="options"></a>“常规”  
  **输入键列名**  
- 指定包含每个输入行的唯一表示符的输出列名称。 `_key_in`列具有一个唯一标识每一行的值。  
+ 指定包含每个输入行的唯一表示符的输出列名称。 `_key_in`列具有唯一标识每行的值。  
   
  **输出键列名**  
  对于一组重复的行，指定包含其规范行的唯一标识符的输出列名称。 `_key_out` 列对应于规范数据行的 `_key_in` 值。  

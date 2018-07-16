@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fdbb5ced844290625222036e0d670e93cbd08a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f526cb2f46f8ecda6af37e325a54c7c695910686
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202957"
 ---
 # <a name="configure-distribution"></a>配置分发
   分发服务器是指包含分发数据库的服务器，其中存储所有类型复制的元数据和历史记录数据以及事务复制的事务。 若要建立复制，必须配置分发服务器。 只能为每台发布服务器分配一个分发服务器实例，但是多台发布服务器可共享一台分发服务器。 分发服务器在其所在服务器上使用以下附加资源：  

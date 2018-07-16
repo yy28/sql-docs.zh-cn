@@ -1,5 +1,5 @@
 ---
-title: 从 PowerPivot 还原 |Microsoft 文档
+title: 从 PowerPivot 还原 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01d963c2adacfb7df778787eac5f3ef37a66b1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65f585fe2a6ac0046cebd99878f6e2bf8c5a5061
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250849"
 ---
 # <a name="restore-from-powerpivot"></a>从 PowerPivot 还原
   您可以使用 SQL Server Management Studio 中的“从 PowerPivot 还原”功能针对 Analysis Services 实例（在表格模式下运行）创建新的表格模型数据库，或从 PowerPivot 工作簿 (.xlsx) 还原到现有数据库。  
@@ -43,7 +43,7 @@ ms.locfileid: "36129540"
   
 1.  在 SSMS 中，你想要还原到的 Active Directory 实例中右键单击**数据库**，然后单击**从 PowerPivot 还原**。  
   
-2.  在**从 PowerPivot 还原**对话框中，在**还原源**中**备份文件**，单击**浏览**，然后选择.abf 或.xslx若要从还原的文件。  
+2.  在**从 PowerPivot 还原**对话框中**还原源**，在**备份文件**，单击**浏览**，然后选择.abf 或.xslx若要从还原的文件。  
   
 3.  在 **“还原目标”** 中的“ **还原数据库”** 中，键入新数据库或现有数据库的名称。 如果不指定名称，则使用工作簿的名称。  
   

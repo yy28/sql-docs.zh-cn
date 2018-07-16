@@ -1,5 +1,5 @@
 ---
-title: 将预测函数应用于模型 |Microsoft 文档
+title: 将预测函数应用于模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: abd75a7a7be7cacc0395af11e02b5dc55828e31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270013"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>将预测函数应用于模型
   若要创建预测查询，必须先选择查询基于的挖掘模型。 可以选择当前项目中存在的任何挖掘模型。  
@@ -72,7 +72,7 @@ ms.locfileid: "36129568"
     |||  
     |-|-|  
     |**\<模型名称 >**|选择此选项将在输出中包含挖掘模型的值。 只能添加可预测的列。<br /><br /> 从模型添加列时，返回的结果是该列中值的重复列表。<br /><br /> 使用此选项添加的列将包含在生成的 DMX 语句的 SELECT 部分。|  
-    |**Prediction Function**|选择此选项将浏览预测函数的列表。<br /><br /> 您选择的值或函数将添加到生成的 DMX 语句的 SELECT 部分。<br /><br /> 已选择的模型的类型不会筛选或约束预测函数的列表。 因此，如果对当前模型类型是否支持该函数有任何疑问，则可以只将函数添加到列表并查看是否出错。<br /><br /> （如 $AdjustedProbability) 前面的列表项将列表示从嵌套表时使用函数，输出`PredictHistogram`。 这些是可用于返回单个列而不返回嵌套表的快捷方式。|  
+    |**Prediction Function**|选择此选项将浏览预测函数的列表。<br /><br /> 您选择的值或函数将添加到生成的 DMX 语句的 SELECT 部分。<br /><br /> 已选择的模型的类型不会筛选或约束预测函数的列表。 因此，如果对当前模型类型是否支持该函数有任何疑问，则可以只将函数添加到列表并查看是否出错。<br /><br /> （如 $ $AdjustedProbability) 前面的列表项时使用函数输出的嵌套表中表示列`PredictHistogram`。 这些是可用于返回单个列而不返回嵌套表的快捷方式。|  
     |**自定义表达式**|选择此选项将键入自定义表达式然后向输出分配别名。<br /><br /> 自定义表达式将添加到生成的 DMX 预测查询的 SELECT 部分。<br /><br /> 如果要为每行的输出添加文本、调用 VB 函数或调用自定义存储过程，则此选项会很有用。<br /><br /> 有关使用 DMX 中的 VBA 和 Excel 函数的信息，请参阅 [MDX 和 DAX 中的 VBA 函数](/sql/mdx/vba-functions-in-mdx-and-dax)。|  
   
 3.  在添加每个函数或表达式后，切换到 DMX 视图可查看该函数在 DMX 语句中的添加方式。  
@@ -98,7 +98,7 @@ ms.locfileid: "36129568"
   
 6.  有关**源**，选择**预测函数**，并添加函数， `Cluster`。  
   
-7.  有关**源**，选择**预测函数**，添加函数`PredictSupport`，并将模型列 [Bike Buyer] 拖到**条件/参数**框。 在“别名”列中键入 **Support** 。   
+7.  有关**源**，选择**预测函数**，添加函数`PredictSupport`，并将模型列 [Bike Buyer] 拖入**条件/参数**框。 在“别名”列中键入 **Support** 。   
   
      从“条件/参数”框复制表示预测函数和列引用的表达式。  
   

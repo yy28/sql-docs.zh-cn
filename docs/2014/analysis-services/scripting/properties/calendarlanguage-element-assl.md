@@ -1,5 +1,5 @@
 ---
-title: CalendarLanguage 元素 (ASSL) |Microsoft 文档
+title: CalendarLanguage 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d3be256a83ee4ee0d6b1c448699f50076e44e186
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bcdf5c3f0955a3adb8994217eb10f3fd9447863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241377"
 ---
 # <a name="calendarlanguage-element-assl"></a>CalendarLanguage 元素 (ASSL)
   定义使用的日历语言[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36129073"
 ## <a name="remarks"></a>Remarks  
  这是用以创建维度成员名称的语言。 标题语言应使用基于整数的 LCID 代码定义。 例如，该默认值表示英语（美国）LCID。  
   
- 对应于的父元素`CalendarLanguage`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 父级对应的元素`CalendarLanguage`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

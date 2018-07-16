@@ -1,5 +1,5 @@
 ---
-title: 在简单示例 (MDX) 中使用查询轴和切片器轴 |Microsoft 文档
+title: 在一个简单的示例 (MDX) 中使用查询轴和切片器轴 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - slicer axis
 - query axis [MDX]
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0be467a75ed63c91e97b7fcd9aeef2e59944f09b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b6eb6140795995f2fb035e9972a7c89396fd83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197907"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>在简单示例中使用查询轴和切片器轴 (MDX)
   本主题中提供的简单示例说明了指定和使用查询轴和切片器轴的基本操作。  
@@ -52,7 +52,7 @@ WHERE ( [Measures].[Packages] )
 |第二季度|45|45|  
   
 ## <a name="see-also"></a>请参阅  
- [指定的查询轴内容&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [指定查询轴的内容&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
  [指定切片器轴的内容&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

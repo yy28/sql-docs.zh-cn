@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
@@ -16,13 +16,13 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e9333ffac363c12176057ab4da006881ce4cbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d03b080b757fc8cdc8ffdc52d4ac7c0734cdbfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250547"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;（大于）（SSIS 表达式）
   通过比较来确定第一个表达式是否大于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -107,7 +107,7 @@ ListPrice > 500
  [&#60;&#40;小于&#41; &#40;SSIS 表达式&#41;](less-than-ssis-expression.md)   
  [>=（大于或等于）（SSIS 表达式）](greater-than-or-equal-to-ssis-expression.md)   
  [<=（小于或等于）（SSIS 表达式）](less-than-or-equal-to-ssis-expression.md)   
- [= =&#40;相等&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)   
+ [= =&#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
  [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
   

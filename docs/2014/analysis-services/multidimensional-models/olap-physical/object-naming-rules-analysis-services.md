@@ -1,5 +1,5 @@
 ---
-title: 对象命名规则 (Analysis Services) |Microsoft 文档
+title: 对象命名规则 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 029d851c7ad8048fab574cc6ae3122719d857378
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202077"
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
   本主题介绍对象命名约定，以及不能在任何对象名称、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的代码或脚本中使用的保留字和字符。  
@@ -79,7 +79,7 @@ ms.locfileid: "36129967"
 |`Dimension` 或 `Hierarchy`|实例时都提供 SQL Server 登录名。 , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
 |所有其他对象|实例时都提供 SQL Server 登录名。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
- **： 当保留字符允许异常**  
+ **异常： 当允许保留字符的**  
   
  如上所述，特定模式和兼容级别的数据库可具有包含保留字符的对象名称。 对于允许使用以下扩展字符的表格数据库（1103 或更高版本），维度属性、层次结构、级别、度量值和 KPI 对象名称可包含保留字符：  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
 - Sql12.swb.sqlimail.manageexistingaccount.f1
@@ -40,15 +40,15 @@ f1_keywords:
 - Sql12.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a56c620c26a7ef2a7af3dccf59f2f6bcdb0bf3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d4b20236528e1908c5012ef6cae19d7fb62e580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269353"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
   本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
@@ -71,7 +71,7 @@ ms.locfileid: "36129497"
   
 2.  展开 **“管理”** 节点。  
   
-3.  紧密单击**数据库邮件**，然后单击**配置数据库邮件**。  
+3.  右键单击**数据库邮件**，然后单击**配置数据库邮件**。  
   
 4.  完成向导对话框  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36129497"
  键入电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户的回信可能会发送给数据库管理员 danw@Adventure-Works.com。  
   
  **服务器名称**  
- 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常，这是类似于格式`smtp.` *< your_company >*`.com`。 如需相关帮助，请询问您的邮件管理员。  
+ 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常这是在格式类似于`smtp.` *< your_company >*`.com`。 如需相关帮助，请询问您的邮件管理员。  
   
  **端口号**  
  键入此帐户的 SMTP 服务器的端口号。 大多数 SMTP 服务器使用端口 25。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 520d0b15fb5c2ad7e666bbb5804e2325865700e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d8d693e328aafb852e5878418401495ffd61a2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234727"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
   如果要将报表服务器扩展配置为在网络负载平衡 (NLB) 群集上运行，必须执行以下操作：  
@@ -54,7 +54,7 @@ ms.locfileid: "36129409"
   
  若要解决此问题，可以生成一个任意验证密钥来支持视图状态验证功能，然后将每个报表服务器节点手动配置为使用同一密钥。 可以使用随机生成的十六进制序列。 十六进制序列的长度由验证算法（如 SHA1）确定。  
   
-1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 在结束时，你必须具有单个 <`machineKey`> 可将它们粘贴到横向扩展部署中每个报表管理器实例的 Web.config 文件的条目。  
+1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，你必须具有单个 <`machineKey`> 条目，您可以将其粘贴到扩展部署中每个报表管理器实例的 Web.config 文件。  
   
      下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36129409"
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  打开 Web.config 文件，为报表管理器中，然后在 <`system.web`> 部分粘贴 <`machineKey`> 你生成的元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
+2.  打开 Web.config 文件，为报表管理器中，并在 <`system.web`> 部分粘贴 <`machineKey`> 你生成的元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
   
 3.  保存该文件。  
   
 4.  对扩展部署中的每个报表服务器重复上述步骤。  
   
-5.  请验证 \Reporting Services\Report Manager 文件夹中的所有 Web.Config 文件都包含相同 <`machineKey`> 中的元素 <`system.web`> 部分。  
+5.  验证 services\report Manager 文件夹中的所有 Web.Config 文件都包含相同 <`machineKey`> 中的元素 <`system.web`> 部分。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot  
  若要在 NLB 群集上配置报表服务器扩展部署，必须定义单个虚拟服务器名称，以提供服务器群集的单访问点。 然后向您的环境中的域名服务器 (DNS) 注册此虚拟服务器名称。  
@@ -79,28 +79,28 @@ ms.locfileid: "36129409"
   
  此外，配置 `UrlRoot` 属性，以便报表链接处理的是已导出为静态报表的报表（例如 Excel 或 PDF 格式）或由订阅（例如电子邮件订阅）生成的报表。  
   
- 如果将集成[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与[!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3.0 或[!INCLUDE[offSPServ](../../includes/offspserv-md.md)]2007，或承载您的自定义的 Web 应用中的报表，你可能需要只配置`UrlRoot`属性。 在这种情况下，将 `UrlRoot` 属性配置为 SharePoint 站点或 Web 应用程序的 URL。 这会将报表环境的网络流量定位到处理报表的应用程序，而不是报表服务器或 NLB 群集。  
+ 如果将集成[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与[!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3.0 或[!INCLUDE[offSPServ](../../includes/offspserv-md.md)]2007 中，或托管的报表中的自定义 Web 应用程序，可能需要仅配置`UrlRoot`属性。 在这种情况下，将 `UrlRoot` 属性配置为 SharePoint 站点或 Web 应用程序的 URL。 这会将报表环境的网络流量定位到处理报表的应用程序，而不是报表服务器或 NLB 群集。  
   
  请不要修改 `ReportServerUrl`。 如果修改了此 URL，那么，在每次处理内部请求时，都将额外引入一个通过虚拟服务器的往返过程。 有关详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 有关编辑配置文件的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-2.  查找**\<服务 >** 部分，并将以下信息添加到配置文件中，替换`Hostname`替换为 NLB 服务器的虚拟服务器名称的值：  
+2.  查找**\<服务 >** 部分，并将以下信息添加到配置文件中，替换`Hostname`值替换为 NLB 服务器的虚拟服务器名称：  
   
     ```  
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  查找`UrlRoot`。 元素在配置文件中，未指定，但使用的默认值是以这种格式的 URL: http:// 或 https://\<*computername*>/\<*reportserver*>，其中\< *reportserver*> 是报表服务器 Web 服务的虚拟目录名称。  
+3.  查找`UrlRoot`。 此元素未在配置文件中，但使用的默认值是按以下格式的 URL: http:// 或 https://\<*computername*>/\<*reportserver*>，其中\< *reportserver*> 是报表服务器 Web 服务的虚拟目录名称。  
   
-4.  键入的值`UrlRoot`中包括此格式中的群集的虚拟名称： http:// 或 https://\<*virtual_server*>/\<*reportserver*>。  
+4.  键入的值`UrlRoot`按以下格式包括群集虚拟名称： http:// 或 https://\<*其*>/\<*reportserver*>。  
   
 5.  保存该文件。  
   
 6.  对于扩展部署中的每个报表服务器，在其相应的 RSReportServer.config 文件中重复上述步骤。  
   
 ##  <a name="Verify"></a> 验证报表服务器访问权限  
- 请验证你可以通过虚拟服务器名称访问的横向扩展部署 (例如，https://MyVirtualServerName/reportserver和https://MyVirtualServerName/reports)。  
+ 验证是否可以通过虚拟服务器名称来访问横向扩展部署 (例如，https://MyVirtualServerName/reportserver和https://MyVirtualServerName/reports)。  
   
  通过查看报表服务器日志文件或检查 RS 执行日志（该执行日志表包含的 **InstanceName** 列可以显示处理特定请求的实例名称），可以检查哪个节点实际处理报表。 有关详细信息，请参阅[Reporting Services 日志文件和源](../report-server/reporting-services-log-files-and-sources.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36129409"
   
 1.  在文本编辑器中打开 RSReportServer.config 文件。  
   
-2.  找到 <`Hostname`>，<`ReportServerUrl`>，和 <`UrlRoot`>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
+2.  找到 <`Hostname`>，<`ReportServerUrl`>，并 <`UrlRoot`>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
   
  如果在做出以下更改后启动 Reporting Services 配置工具，则该工具可能会将 <`ReportServerUrl`> 设置更改为默认值。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
   

@@ -1,5 +1,5 @@
 ---
-title: EXISTING 关键字 (MDX) |Microsoft 文档
+title: EXISTING 关键字 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7205cad36bbeb5adee16ca10bd881280b59d98f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228387"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 关键字 (MDX)
   强制在当前上下文中计算所指定的集。  
@@ -40,10 +40,10 @@ Existing Set_Expression
  有效的多维表达式 (MDX) 集表达式。  
   
 ## <a name="remarks"></a>Remarks  
- 默认情况下，在包含集成员的多维数据集的上下文中对集进行求值。 `Existing`关键字强制计算的当前上下文中指定的集。  
+ 默认情况下，在包含集成员的多维数据集的上下文中对集进行求值。 `Existing`关键字强制指定的集计算当前上下文中。  
   
 ## <a name="example"></a>示例  
- 下例将根据使用 `Aggregate` 函数求出并由用户选择的 State-Province 成员值，返回在上一时间段内销售额下降的分销商的计数。 但 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函数用于返回 Product 维度中产品类别的销售额下降值。 `Existing`关键字强制在中的设置`Filter`函数进行计算的当前上下文-即，在华盛顿特区和 Oregon 州-省属性层次结构的成员。  
+ 下例将根据使用 `Aggregate` 函数求出并由用户选择的 State-Province 成员值，返回在上一时间段内销售额下降的分销商的计数。 但 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函数用于返回 Product 维度中产品类别的销售额下降值。 `Existing`关键字强制在集`Filter`函数将计算当前上下文-也就是说，在针对 State-province 属性层次结构的 Washington 和 Oregon 成员。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

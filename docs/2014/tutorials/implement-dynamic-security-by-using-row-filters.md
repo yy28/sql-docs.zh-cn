@@ -1,5 +1,5 @@
 ---
-title: 通过使用行筛选器实现动态安全性 |Microsoft 文档
+title: 通过使用行筛选器实现动态安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257593"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>通过使用行筛选器实现动态安全性
   在本补充课程中，您将另外创建一个实现动态安全性的角色。 动态安全性提供了基于当前登录用户的用户名或登录 ID 的行级别安全性。 若要了解详细信息，请参阅[角色（SSAS 表格）](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
  若要实现动态安全性，您必须向模型中添加一个表，该表中包含那些可以创建与模型的连接作为数据源并可浏览模型对象和数据的用户的 Windows 用户名。 您使用本教程创建的模型位于 Adventure Works Corp. 上下文中；但是，若要完成本课程，您必须添加一个表，其中包含来自您自己域的用户。 您不需要将添加的用户名的密码。 若要使用您自己域中的少量示例用户创建一个 Employee Security 表，您需要使用粘贴功能，从 Excel 电子表格中粘贴员工数据。 在实际应用场景中，包含添加到模型中的用户名的表通常将使用实际数据库中的表作为数据源；例如，实际的 dimEmployee 表。  
   
- 若要实现动态安全性，你将使用两个新的 DAX 函数：[用户名函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)和[LOOKUPVALUE 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 之后，该用户只能浏览此角色的行筛选器指定的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
+ 为了实现动态安全性，您将使用两个新的 DAX 函数： [USERNAME 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)并[LOOKUPVALUE 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 之后，该用户只能浏览此角色的行筛选器指定的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
   
  若要完成本补充课程，您将需要完成一系列任务。 这些任务是此 Adventure Works 表格模型方案所特有的，但并不一定适用于实际的应用场景。 每个任务都包含描述任务目的的附加信息。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36137440"
   
      如果“粘贴”灰显，请单击模型设计器窗口中的任意表中的任意列，然后依次单击“编辑”菜单和“粘贴”。  
   
-7.  在**粘贴预览**对话框中，在**表名**，类型`Employee Security`。  
+7.  在中**粘贴预览**对话框中**表名**，类型`Employee Security`。  
   
 8.  在“要粘贴的数据”中，确认数据包含“Sample Employee”工作表中的所有用户数据和标题。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36137440"
   
      一个具有“无”权限的新角色将添加到列表中。  
   
-3.  单击该新角色，然后在**名称**列中，重命名该角色向`Sales Employees by Territory`。  
+3.  单击新角色，然后在**名称**列中，重命名为`Sales Employees by Territory`。  
   
 4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36137440"
   
 7.  单击“行筛选器”选项卡。  
   
-8.  有关`Employee Security`表中， **DAX 筛选器**列中，键入以下公式。  
+8.  有关`Employee Security`表，在**DAX 筛选器**列中，键入以下公式。  
   
      `=FALSE()`  
   

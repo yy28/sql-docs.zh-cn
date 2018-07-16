@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 定义高级属性和维度属性 |Microsoft 文档
+title: 第 4 课： 定义高级属性和维度属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 853ce6e8fbbc559e690c46fda0ae1d7db02d2eb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dd26e1f755f655dd5757c35c3232ce34981da6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279804"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级属性和维度属性
   在本课中，将了解如何使用特性、特性层次结构和维度属性的某些高级属性。  
@@ -33,7 +33,7 @@ ms.locfileid: "36129084"
  在该任务中，您将打开、检查和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程项目的修改版本，该项目包含多个度量值组和其他维度。  
   
  [定义父子层次结构中的父特性属性](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- 在该任务中，将定义父子维度的级别名称，并指定是否显示与父成员有关的数据。 有关详细信息，请参阅[父-子层次结构](multidimensional-models/parent-child-dimension.md)和[父-子层次结构中的特性](multidimensional-models/parent-child-dimension-attributes.md)。  
+ 在该任务中，将定义父子维度的级别名称，并指定是否显示与父成员有关的数据。 有关详细信息，请参阅[父-子层次结构](multidimensional-models/parent-child-dimension.md)并[父子层次结构中的属性](multidimensional-models/parent-child-dimension-attributes.md)。  
   
  [自动将属性成员分组](lesson-4-3-automatically-grouping-attribute-members.md)  
  在该任务中，将基于成员在属性层次结构中的分布自动创建属性成员的分组。 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "36129084"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [多维建模&#40;通恒教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [多维建模&#40;Adventure Works 教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

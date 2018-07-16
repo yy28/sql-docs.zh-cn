@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220847"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
   您可以添加对报表中嵌入的自定义代码的引用，或添加对生成并保存到您的计算机并且部署到报表服务器的自定义程序集的引用。 对于自定义常量、复杂的函数，或在一个报表中多次使用的函数，可使用嵌入代码。 可以使用自定义代码程序集在一个位置中维护代码，并共享该代码以便由多个报表使用。 自定义代码可包含新的自定义常量、变量、函数或子例程。 可以包含对内置集合（例如，Parameters 集合）的只读引用。 但是，无法将报表数据值集传递给自定义函数；特别要指出的是，不支持自定义聚合。  
@@ -71,7 +71,7 @@ ms.locfileid: "36138156"
 ##  <a name="Embedded"></a> 包括嵌入代码  
  若要将嵌入代码添加到某个报表，请使用 **“报表属性”** 对话框的“代码”选项卡。 创建的代码块可以包含多个方法。 嵌入代码中的方法必须采用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写，并且必须是基于实例的方法。 对于 System.Convert 和 System.Math namespaces 命名空间，报表处理器会自动添加引用。 使用 **“报表属性”** 对话框的 **“引用”** 页添加其他程序集引用。 有关详细信息，请参阅[向报表添加程序集引用 (SSRS)](add-an-assembly-reference-to-a-report-ssrs.md)。  
   
- 嵌入代码中的方法可通过全局定义的 `Code` 成员使用。 你可以通过访问这些引用`Code`成员和方法名称。 下面的示例调用该方法`ToUSD`，它将转换中的值`StandardCost`字段为美元值：  
+ 嵌入代码中的方法可通过全局定义的 `Code` 成员使用。 您可以访问这些参考`Code`成员和方法名称。 下面的示例调用方法`ToUSD`，它将转换中的值`StandardCost`字段为美元值：  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -101,11 +101,11 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- 下面的示例包含的代码引用和函数的代码实现`FixSpelling`，该替换文本`"Bicycle"`为该文本的所有实例"都 Bike"中`SubCategory`字段。  
+ 下面的示例包含的代码引用和代码实现函数`FixSpelling`，文本替换`"Bicycle"`所有出现的文本中"bike"`SubCategory`字段。  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- 嵌入报表定义代码块后，以下代码显示 `FixSpelling` 方法的实现。 此示例演示如何使用完全限定的引用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder`类。  
+ 嵌入报表定义代码块后，以下代码显示 `FixSpelling` 方法的实现。 此示例演示如何使用对的完全限定的引用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder`类。  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -121,7 +121,7 @@ End Function
  有关内置对象集合和初始化的详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)和[初始化自定义程序集对象](../custom-assemblies/initializing-custom-assembly-objects.md)。  
   
 ##  <a name="Parameters"></a> 包括对代码中的参数的引用  
- 可以通过所提供的报表定义代码块中或自定义程序集中的自定义代码来引用全局参数集合。 该参数集合是只读的，并且没有公共迭代器。 不能使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`For Each`单步集合构造。 您需要首先知道在报表定义中定义的参数名称，然后才能在代码中引用该参数。 但是，可以遍历多值参数的所有值。  
+ 可以通过所提供的报表定义代码块中或自定义程序集中的自定义代码来引用全局参数集合。 该参数集合是只读的，并且没有公共迭代器。 不能使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`For Each`步集合构造。 您需要首先知道在报表定义中定义的参数名称，然后才能在代码中引用该参数。 但是，可以遍历多值参数的所有值。  
   
  下表包含从自定义代码引用该内置集合 `Parameters` 的示例：  
   
@@ -133,9 +133,9 @@ End Function
 ##  <a name="Custom"></a> 包括对自定义程序集中的代码的引用  
  若要在报表中使用自定义程序集，您必须先创建程序集，使其可供报表设计器使用，然后在报表中添加对该程序集的引用，最后在报表中使用表达式来引用该程序集中包含的方法。 如果报表部署到报表服务器，您还必须向报表服务器部署该自定义程序集。  
   
- 有关创建自定义程序集和使其可供信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[使用自定义 Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)。  
+ 有关创建自定义的程序集并使其可供[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[使用的报表的自定义程序集](../custom-assemblies/using-custom-assemblies-with-reports.md)。  
   
- 若要在表达式中引用自定义代码，您必须调用程序集中某个类的成员。 调用方式取决于该方法是静态方法还是基于实例的方法。 自定义程序集中的静态方法可在报表内全局使用。 您可以在表达式中通过指定命名空间、类和方法名称来访问静态方法。 下面的示例调用该方法`ToGBP`，它将转换的值**StandardCost**值从美元为英镑：  
+ 若要在表达式中引用自定义代码，您必须调用程序集中某个类的成员。 调用方式取决于该方法是静态方法还是基于实例的方法。 自定义程序集中的静态方法可在报表内全局使用。 您可以在表达式中通过指定命名空间、类和方法名称来访问静态方法。 下面的示例调用方法`ToGBP`，它将转换的值**StandardCost**值从美元为英镑：  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
@@ -164,8 +164,8 @@ End Function
  因为 *Fields* 和 *ReportItems* 集合的内容可在运行时动态更改，所以不应阻止它们对自定义程序集的调用（例如，在成员变量中）。 同样的建议通常应用于所有内置集合。  
   
 ## <a name="see-also"></a>请参阅  
- [将代码添加到报表&#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
- [与报表中使用自定义程序集](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [向报表添加代码&#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
+ [将自定义程序集用于报表](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [向报表添加程序集引用 (SSRS)](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services 教程 (SSRS)](../reporting-services-tutorials-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   

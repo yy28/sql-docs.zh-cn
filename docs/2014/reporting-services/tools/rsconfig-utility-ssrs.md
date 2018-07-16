@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - rsconfig utility
@@ -19,13 +19,13 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 631b2dfd94ce74dd96a7d411f18ecb07182460e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5598de66babc70f9301894d96b215e903e6654e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196757"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  
@@ -52,14 +52,14 @@ ms.locfileid: "36138140"
 |术语|可选/必需|定义|  
 |----------|------------------------|----------------|  
 |**-?**|可选。|显示 Rsconfig.exe 参数的语法。|  
-|`-c`|如果存在`-e`参数未使用。|指定用于将报表服务器连接到报表服务器数据库的连接字符串、凭据和数据源值。<br /><br /> 此参数不带值。 但是，必须对其指定其他参数以提供所有必需的连接值。<br /><br /> 你可以使用指定的自变量`-c`包括`-m`， **-s**， `-i`，`-d`，`-a`，`-u`，`-p`，和`-t`。|  
-|`-e`|如果存在`-c`参数未使用。|指定无人参与报表执行帐户。<br /><br /> 此参数不带值。 但是，您必须在命令行中指定其他参数，以指定配置文件中加密的值。<br /><br /> 可以使用 `-e` 指定的参数包括 `-u` 和 `-p`。 您还可以设置 `-t`。|  
+|`-c`|如果使用`-e`不使用参数。|指定用于将报表服务器连接到报表服务器数据库的连接字符串、凭据和数据源值。<br /><br /> 此参数不带值。 但是，必须对其指定其他参数以提供所有必需的连接值。<br /><br /> 您可以使用指定的参数`-c`包括`-m`， **-s**， `-i`，`-d`，`-a`，`-u`，`-p`，和`-t`。|  
+|`-e`|如果使用`-c`不使用参数。|指定无人参与报表执行帐户。<br /><br /> 此参数不带值。 但是，您必须在命令行中指定其他参数，以指定配置文件中加密的值。<br /><br /> 可以使用 `-e` 指定的参数包括 `-u` 和 `-p`。 您还可以设置 `-t`。|  
 |`-m`  *计算机名*|如果要配置远程报表服务器实例，则此参数是必需的。|指定承载报表服务器的计算机的名称。 如果省略此参数，默认值是`localhost`。|  
 |**-s**  servername|必需的。|指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
-|`-i`  *instancename*|如果使用了命名实例，则此参数是必需的。|如果使用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例承载报表服务器数据库，则此值指定该命名实例。|  
-|`-d`  *Databasename*|必需的。|指定报表服务器数据库的名称。|  
+|`-i`  *实例名称*|如果使用了命名实例，则此参数是必需的。|如果使用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例承载报表服务器数据库，则此值指定该命名实例。|  
+|`-d`  *databasename*|必需的。|指定报表服务器数据库的名称。|  
 |`-a`  *身份验证方法*|必需的。|指定报表服务器连接到报表服务器数据库时使用的身份验证方法。 有效值是 `Windows` 或 `SQL`（该参数不区分大小写）。<br /><br /> `Windows` 指定报表服务器使用 Windows 身份验证。<br /><br /> `SQL` 指定报表服务器使用 SQL Server 身份验证。|  
-|`-u`  *[域\\] 用户名*|`-e` 是必需的，`-c` 是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 有关**rsconfig-c**和`-a SQL`，此参数必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。<br /><br /> 有关**rsconfig-c**和`-a Windows`，此参数可以指定域用户、 内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”格式指定域和用户名。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
+|`-u`  *[域\\] 用户名*|`-e` 是必需的，`-c` 是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 有关**rsconfig-c**并`-a SQL`，此参数必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。<br /><br /> 有关**rsconfig-c**和`-a Windows`，此参数可能指定域用户、 内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”格式指定域和用户名。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
 |`-p`  *密码*|如果指定了 `-u`，则该参数是必需的。|指定与 *username* 参数一起使用的密码。 如果帐户不需要密码，则可将该参数设置为空值。 对于域帐户，此值区分大小写。|  
 |`-t`|可选。|将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
   
@@ -105,7 +105,7 @@ rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"
 ```  
   
 #### <a name="specifying-a-service-account"></a>指定服务帐户  
- 此示例显示如何配置报表服务器，以便在连接本地报表服务器数据库时使用 Report Server Windows 服务帐户和 Web 服务帐户。 请注意，`-u`未使用和指定帐户信息。 从命令中清除帐户值时， **rsconfig** 实用工具使用每个服务运行时都要使用的集成安全性和服务帐户。  
+ 此示例显示如何配置报表服务器，以便在连接本地报表服务器数据库时使用 Report Server Windows 服务帐户和 Web 服务帐户。 请注意，`-u`未使用，并且没有指定任何帐户信息。 从命令中清除帐户值时， **rsconfig** 实用工具使用每个服务运行时都要使用的集成安全性和服务帐户。  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows  

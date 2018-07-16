@@ -1,5 +1,5 @@
 ---
-title: 查询选项结果 （文本页） |Microsoft 文档
+title: 查询选项结果 （文本页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205747"
 ---
 # <a name="query-options-results-text-page"></a>“查询选项”中的“结果”（“文本”页）
   使用此页可以指定以文本格式显示查询结果集的选项。 在选择 **“将结果保存到文件”** 时也会应用此页上的设置。  
@@ -44,7 +44,7 @@ ms.locfileid: "36128828"
  **执行查询后放弃结果**  
  当屏幕显示接收到查询结果之后，通过放弃查询结果来释放内存。  
   
- **在单独选项卡中显示结果**  
+ **在单独的选项卡中显示结果**  
  选中此复选框可在新文档窗口中显示结果集，而不是在查询文档窗口的底部显示。  
   
  **执行查询后切换到结果选项卡**  

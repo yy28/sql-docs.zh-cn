@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], traces
 - traces [SQL Server], logs
 - default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb4067c2bbb5f922dd8e70b50acaaccb1a1955af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 478b528634ee413683c4b5b4d2d41cec2cfe072c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332637"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 服务器配置选项
   使用 **default trace enabled** 选项可启用或禁用默认跟踪日志文件。 默认跟踪功能提供了丰富持久的活动日志，并主要根据配置选项进行更改。  

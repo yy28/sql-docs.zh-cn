@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 602452b683e779eba316aa014cc0799d9068d67c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1db1837c339960c0d320170fd25eb8a05b499a35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242355"
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
   可通过新建发布向导和 **“发布属性”** 对话框访问 **“项目属性”** 对话框。 使用该对话框可以查看和设置所有类型项目的属性。 对于某些属性来说，只有在创建了发布时才能设置；而对于其他属性，只有在发布没有活动订阅时才能设置。 无法设置的属性将显示为只读。  
@@ -43,7 +43,8 @@ ms.locfileid: "36127075"
   
 ## <a name="options-for-all-publications"></a>用于所有发布的选项  
  **复制表分区方案** / **复制索引分区方案**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了表分区和索引分区功能，这些功能与通过行筛选器和列筛选器提供的分区复制功能无关。 **“复制表分区方案”** 选项和 **“复制索引分区方案”** 选项指定了是否应将分区方案复制到订阅服务器。 有关分区的详细信息，请参阅 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了表分区和索引分区功能，这些功能与通过行筛选器和列筛选器提供的分区复制功能无关。 **“复制表分区方案”** 选项和 **“复制索引分区方案”** 选项指定了是否应将分区方案复制到订阅服务器。 有关分区的详细信息，请参阅 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
   
  **转换数据类型**  
  确定在订阅服务器上创建对象时是否从用户定义数据类型转换为基本数据类型。 用户定义数据类型包括 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的用户定义的 CLR 类型。 如果将这些数据类型复制到 **早期版本，请指定值为** True [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]；这样可确保在订阅服务器上正确处理这些数据类型。  

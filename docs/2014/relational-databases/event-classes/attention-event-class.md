@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Attention event class
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3fd3a56fb3fa424e00c8afc9c1250ad8b143bca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 714c8a628f32e44205c26142a1416d5cf04c2875
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283293"
 ---
 # <a name="attention-event-class"></a>Attention 事件类
   **Attention** 事件类指示发生了需要注意的事件（例如取消、客户端中断请求或客户端连接中断）。 取消操作可视为实现数据访问驱动程序超时的一部分。  

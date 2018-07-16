@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe704e638cb32ff397bf906c61593af6d07ba866
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b89788698662245d69cb8b209286e1e5dd2f93a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235317"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务
   传输主存储过程任务在 **的实例上的** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库之间传输一个或多个用户定义的存储过程。 若要从 **master** 数据库传输存储过程，该过程的所有者必须是 dbo。  
@@ -49,7 +49,7 @@ ms.locfileid: "36130166"
  传输主存储过程任务并不报告存储过程传输的进度；它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 中定义的执行值`ExecutionValue`该任务的属性返回传输的存储过程数。 通过分配的用户定义变量`ExecValueVariable`传输主存储过程任务，有关存储的过程传输的信息的属性可提供对其他对象的包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 中定义的执行值`ExecutionValue`任务，属性返回传输的存储过程数。 通过将用户定义的变量分配`ExecValueVariable`传输主存储过程任务，有关存储的过程传输的信息的属性可提供给其他对象在包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输主存储过程任务包括下列自定义日志项：  
@@ -58,7 +58,7 @@ ms.locfileid: "36130166"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  此日志项报告传输已经完成。 日志项包括结束时间。  
   
- 此外的日志项`OnInformation`事件报告已传输的存储的过程和的日志项的数量`OnWarning`每个存储过程会覆盖目标上写入事件。  
+ 此外，一个日志条目`OnInformation`事件报告已传输的存储的过程和一个日志条目的数目`OnWarning`每个存储过程将覆盖目标上写入事件。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  用户必须具有查看源服务器上 **master** 数据库中的存储过程列表的权限，而且必须是 sysadmin 服务器角色的成员，或者必须具有对目标服务器上 **master** 数据库中所创建的存储过程的权限。  

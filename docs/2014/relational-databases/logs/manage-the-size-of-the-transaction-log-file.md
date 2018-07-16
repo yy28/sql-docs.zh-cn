@@ -5,26 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e24c14509cd0154aca2a7ee0cb4486540761066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9fc03b150dba90839b5a2b54b016103a33cd13cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264813"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
-  在某些情况下，它可用于物理收缩或扩展的事务日志的物理日志文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 本主题包含与下列各项有关的信息：如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 **tempdb** 事务日志增长率以及控制事务日志文件的增长。  
+  在某些情况下，它可用于物理收缩或扩展物理日志文件的事务日志的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 本主题包含与下列各项有关的信息：如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 **tempdb** 事务日志增长率以及控制事务日志文件的增长。  
   
   
 ##  <a name="MonitorSpaceUse"></a> 监视日志空间使用情况  
@@ -42,7 +41,7 @@ ms.locfileid: "36129279"
   
  收缩日志文件可删除一个或多个不包含逻辑日志任何部分的虚拟日志文件（即“不活动的虚拟日志文件” ）。 在收缩事务日志文件时，将从日志文件的末端删除足够的不活动虚拟日志文件，以便将日志减小到接近目标大小。  
   
- **若要收缩日志文件 （而无需收缩数据库文件）**  
+ **若要收缩日志文件 （而不收缩数据库文件）**  
   
 -   [DBCC SHRINKFILE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)  
   
@@ -59,7 +58,7 @@ ms.locfileid: "36129279"
 -   [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)（请参阅日志文件或文件的 **size**、**max_size** 和 **growth** 列。）  
   
 > [!NOTE]  
->  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 `autoshrink` 数据库属性默认情况下设置为 FALSE。 如果 `autoshrink` 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改的设置信息`autoshrink`属性，请参阅[查看或更改数据库属性](../databases/view-or-change-the-properties-of-a-database.md)-使用**Auto Shrink**属性**选项**页-或[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 AUTO_SHRINK 选项。  
+>  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 `autoshrink` 数据库属性默认情况下设置为 FALSE。 如果 `autoshrink` 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改的设置信息`autoshrink`属性，请参阅[查看或更改数据库的属性](../databases/view-or-change-the-properties-of-a-database.md)— 使用**Auto Shrink**属性**选项**页，或[ALTER DATABASE SET 选项&#40;-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 AUTO_SHRINK 选项。  
   
   
 ##  <a name="AddOrEnlarge"></a> 添加或扩大日志文件  
@@ -81,7 +80,7 @@ ms.locfileid: "36129279"
   
 -   若要更改增量，请使用 FILEGROWTH 选项。 如果值为 0，则表明自动增长已设置为关闭，且不允许增加空间。 日志文件的小幅度自动增长量可能降低性能。 因此，为了避免经常向日志文件中扩充内容，应该采用足够大的文件增量。 通常，采用 10% 的默认增量较为合适。  
   
-     有关更改日志文件的文件增长属性的信息，请参阅[ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
+     有关更改日志文件中的文件增长属性的信息，请参阅[ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
 -   若要控制日志文件的最大大小（以 KB、MB、GB 和 TB 为单位）或将增长设置为 UNLIMITED，请使用 MAXSIZE 选项。  
   
