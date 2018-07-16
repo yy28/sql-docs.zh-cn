@@ -1,5 +1,5 @@
 ---
-title: 报表属性对话框中，代码 |Microsoft 文档
+title: 报告属性对话框的代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c31cd76f1de4ffe7ec528f6040718bb4551669e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60d1ee37f078c5abdc4043ef5ea743c3e9e4f883
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272193"
 ---
 # <a name="report-properties-dialog-box-code"></a>“报表属性”对话框 -&gt;“代码”
-  选择**代码**上**报表属性**对话框可以定义将由表达式在报表中使用的自定义代码。  
+  选择**代码**上**报表属性**对话框可以定义由报表的表达式中使用自定义代码。  
   
 ## <a name="options"></a>“常规”  
  **自定义代码**  

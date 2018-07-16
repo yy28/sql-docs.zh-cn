@@ -1,5 +1,5 @@
 ---
-title: 选项 （查询结果 SQL 服务器-常规页） |Microsoft 文档
+title: 选项 （查询结果-SQL Server-常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
 - SQL12.SWB.TSQLRESULTS.F1
@@ -19,15 +19,15 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73901b4555760e4978317a620ed0ba15befa639b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56a2a5cd321ad6914efeda674d2bc6bf0e89f7d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282073"
 ---
-# <a name="options-query-results-sql-server-general-page"></a>选项 （查询结果 SQL 服务器-常规页）
+# <a name="options-query-results-sql-server-general-page"></a>选项 （查询结果-SQL Server-常规页）
   使用此页可确定查询结果窗格的默认行为。 若要显示这些设置，请在“工具”菜单上，单击“选项”，展开“查询结果”文件夹，选择 “SQL Server”，然后单击“常规”。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请单击“查询”菜单上的“查询选项”，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中右键单击并选择“查询选项”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  

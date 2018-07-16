@@ -1,5 +1,5 @@
 ---
-title: 选项 （SQL Server 对象资源管理器脚本页） |Microsoft 文档
+title: 选项 （SQL Server 对象资源管理器-脚本页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,48 +8,48 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74dfa7eec9ed7f014e9baf09cf4ddcf30cd12901
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170218"
 ---
-# <a name="options-sql-server-object-explorer-scripting-page"></a>选项 （SQL Server 对象资源管理器脚本页）
+# <a name="options-sql-server-object-explorer-scripting-page"></a>选项 （SQL Server 对象资源管理器-脚本页）
   使用此页可设置脚本选项，以应用于**对象资源管理器**中对象上下文菜单上的以下命令：  
   
 -   用于用户表和视图的“编辑”命令。  
   
--   **脚本\<对象 > 作为**用户创建的对象的命令。  
+-   **脚本\<对象 > 作为**用于用户创建对象的命令。  
   
 -   用于用户创建对象的“修改”命令。  
   
 -   本页也可用于设置“生成 SQL Server 脚本向导”的脚本选项默认值。  
   
 ## <a name="remarks"></a>Remarks  
- **编辑**和**修改**命令可能会产生不同的结果**脚本\<对象 > 作为**命令相同的选项设置。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 **脚本\<对象 > 作为**命令而设计，以生成脚本，使它可以在稍后用于创建对象。  
+ **编辑**并**修改**命令可能会产生不同的结果**脚本\<对象 > 作为**命令用于同一选项设置。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 **脚本\<对象 > 作为**命令用于生成一个脚本，以便它可用于更高版本创建的对象。  
   
 ## <a name="options"></a>“常规”  
  通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
   
 ### <a name="general-scripting-options"></a>常规脚本选项  
  **分隔各条语句**  
- 使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”/“选项”/“查询执行”/“SQL Server”/“常规”/“批处理分隔符”。 默认值为 False。 有关详细信息，请参阅[转&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
+ 使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”/“选项”/“查询执行”/“SQL Server”/“常规”/“批处理分隔符”。 默认值为 False。 有关详细信息，请参阅[GO &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
   
  **包含说明性标头**  
  通过将每个对象的脚本分隔为多个部分以向脚本添加说明性注释。 默认值为 True。 有关详细信息，请参阅[注释&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)。  
   
  **包含 vardecimal 选项**  
- 包含 vardecimal 存储选项。 默认值为 False。 有关详细信息，请参阅和[sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)。  
+ 包含 vardecimal 存储选项。 默认值为 False。 有关详细信息，请参阅并[sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)。  
   
  **编写更改跟踪的脚本**  
  将更改跟踪信息包含到脚本中。  
@@ -68,7 +68,7 @@ ms.locfileid: "36126220"
  为在执行所选对象的脚本时需要的附加对象生成脚本。 默认值为 False。  
   
  **包含 If NOT EXISTS 子句**  
- 包含一条语句以用来检查在尝试创建各对象之前数据库中不存在该对象。 默认值为 False。 有关详细信息，请参阅[IF...其他&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql)和[EXISTS &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql)。  
+ 包含一条语句以用来检查在尝试创建各对象之前数据库中不存在该对象。 默认值为 False。 有关详细信息，请参阅[IF...其他&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql)并[EXISTS &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql)。  
   
  **架构限定对象名称**  
  使用对象架构限定对象名称。 默认值为 False。 有关详细信息，请参阅 [创建数据库架构](../../relational-databases/security/authentication-access/create-a-database-schema.md)。  
@@ -101,7 +101,7 @@ ms.locfileid: "36126220"
  将架构名称添加到 FOREIGN KEY 约束的表引用。 默认值为 True。  
   
  **绑定到脚本的默认值和规则**  
- 包括 **sp_bindefault** 和 **sp_bindrule** 绑定存储过程调用。 默认值为 True。 有关详细信息，请参阅[sp_bindefault &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql)和[sp_bindrule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql)。  
+ 包括 **sp_bindefault** 和 **sp_bindrule** 绑定存储过程调用。 默认值为 True。 有关详细信息，请参阅[sp_bindefault &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql)并[sp_bindrule &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql)。  
   
  **编写检查约束脚本**  
  将 [CHECK 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md) 添加到脚本中。 默认值为 True。  

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_SESSIONS 行集 |Microsoft 文档
+title: DISCOVER_SESSIONS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_SESSIONS rowset
 ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b85e563aacdfe2f520c185a3ddcbd0c4b5dc5453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b9c137aafe16ad999bba5213afaaf92c15e1c35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218107"
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS 行集
   提供在服务器上当前打开的会话的资源使用情况和活动信息。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_SESSIONS`行集包含以下各列。  
+ `DISCOVER_SESSIONS`行集包含以下列。  
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36125933"
 |`SESSION_READS`|`DBTYPE_UI8`||自会话开始后的累计磁盘读取次数。|  
 |`SESSION_SPID`|`DBTYPE_I4`||会话 ID。|  
 |`SESSION_START_TIME`|`DBTYPE_DBTIMESTAMP`||会话的启动日期和时间，以服务器上的 UTC 时间表示。|  
-|`SESSION_STATUS`|`DBTYPE_I4`||会话的活动状态。<br /><br /> 0 表示“空闲”：当前没有活动正在进行。<br /><br /> 1 表示“活动”：会话正在执行某个请求的任务。<br /><br /> 2 表示“阻塞”：会话正在等待某些资源，以便继续执行挂起的任务。<br /><br /> 3 表示"已取消": 会话已因为取消标记。|  
+|`SESSION_STATUS`|`DBTYPE_I4`||会话的活动状态。<br /><br /> 0 表示“空闲”：当前没有活动正在进行。<br /><br /> 1 表示“活动”：会话正在执行某个请求的任务。<br /><br /> 2 表示“阻塞”：会话正在等待某些资源，以便继续执行挂起的任务。<br /><br /> 3 表示"已取消": 会话已标记为已取消。|  
 |`SESSION_USED_MEMORY`|`DBTYPE_I4`||会话当前使用的内存大小 (KB)。 报告的值为按 SPID 划分的 RAM 使用情况，其中可收缩和不可收缩的内存之间没有区别。 与报告有关内存使用情况的其他 DMVS 不同，DISCOVER_SESSIONS 不按类别细分内存使用情况。<br /><br /> 请注意，SESSION_USED_MEMORY 倾向于过低报告实际内存使用情况，因为它不包括多个会话间共享的对象。  只有那些对会话唯一的对象才会在内存计算中出现。|  
 |`SESSION_USER_NAME`|`DBTYPE_WSTR`||会话的用户名。|  
 |`SESSION_WRITE_KB`|`DBTYPE_UI8`||自会话开始后写入磁盘的数据的累计值 (KB)。|  
@@ -58,7 +58,7 @@ ms.locfileid: "36125933"
  未对此架构行集进行排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_SESSIONS`行集可限制在下表中列出的列。  
+ `DISCOVER_SESSIONS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

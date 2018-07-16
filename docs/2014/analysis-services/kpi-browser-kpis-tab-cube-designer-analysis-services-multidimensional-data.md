@@ -1,5 +1,5 @@
 ---
-title: KPI 浏览器 （Kpi 选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: KPI 浏览器 （Kpi 选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32373127f72dae058a80712cec564af7dffca45e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257373"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 浏览器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“KPI”选项卡上的“KPI 浏览器”窗格查看和测试关键绩效指标 (KPI) 的结果。 在浏览之前，必须先将 KPI 部署到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
@@ -49,9 +49,9 @@ ms.locfileid: "36125041"
 |**In**|结果限制为在 **“筛选表达式”** 中选择的命名集。|  
 |**不在**|结果限制为排除在 **“筛选表达式”** 中所选命名集之外的成员。|  
 |**包含**|结果限制为成员名称包含 **“筛选表达式”** 中的字符串的成员。|  
-|**开头**|结果限制为成员名称以 **“筛选表达式”** 中的字符串开头的成员。|  
-|**范围 （含）**|结果限制为在 **“筛选表达式”** 中选择的范围。|  
-|**范围 （独占）**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
+|**开始使用**|结果限制为成员名称以 **“筛选表达式”** 中的字符串开头的成员。|  
+|**范围 （包括）**|结果限制为在 **“筛选表达式”** 中选择的范围。|  
+|**范围 （不包括）**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
 |**MDX**|结果限制为在“筛选表达式”中设置的多维表达式 (MDX) 表达式。|  
   
  **筛选表达式**  
@@ -81,7 +81,7 @@ ms.locfileid: "36125041"
  **Weight**  
  显示 KPI 的加权系数。  
   
- **（描述中）**  
+ **（说明）**  
  如果为 KPI 提供了说明，则显示信息图标。  
   
  将鼠标悬停在信息图标上方可以显示包含 KPI 说明的工具提示。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc44d75cd4ab87623c84eff94f6569872038c1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0e70c9c5e8060e4cd2daace9c4997ea324533106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234897"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
   计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为计算列指定表达式。  
@@ -66,7 +66,7 @@ ms.locfileid: "36126273"
 4.  在“(公式)”子属性中，在右侧的网格单元格中输入此列的表达式。 例如，在 `SalesTotal` 列中，您输入的公式可能是 `SubTotal+TaxAmt+Freight`，它将该值加入到表中每行的这些列中。  
   
     > [!IMPORTANT]  
-    >  当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型的列`nvarchar`结合了类型的列`int`，必须将整数类型转换为`nvarchar`此公式中所示`('Prod'+CONVERT(nvarchar(23),ProductID))`。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+    >  当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型的列`nvarchar`结合了类型的列`int`，整数类型必须转换为`nvarchar`此公式中所示`('Prod'+CONVERT(nvarchar(23),ProductID))`。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
 5.  从“持久化”子属性的下拉菜单上选择“是”或“否”，以指示该数据是否持久。  
   

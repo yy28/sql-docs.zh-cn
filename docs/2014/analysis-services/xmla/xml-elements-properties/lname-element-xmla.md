@@ -1,5 +1,5 @@
 ---
-title: LName 元素 (XMLA) |Microsoft 文档
+title: LName 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - LName element
 ms.assetid: 2c8c2fa9-cb2d-44ea-b253-5e6ff61f1b66
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: aa8dbe634d876527cc23112e96740c5ebcbf9cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 13eb12010ab201067494cb04c598301f4f8c44e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255189"
 ---
 # <a name="lname-element-xmla"></a>LName 元素 (XMLA)
-  包含父级的唯一级别名称有关的信息[HierarchyInfo](hierarchyinfo-element-xmla.md)或[成员](member-element-xmla.md)元素。  
+  包含父级的唯一级别名称的信息[HierarchyInfo](hierarchyinfo-element-xmla.md)或[成员](member-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

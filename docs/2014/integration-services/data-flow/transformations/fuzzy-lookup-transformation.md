@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
 helpviewer_keywords:
@@ -33,13 +33,13 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47afae752c8e9f82e5904346de21613509499673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f73bbc60cfcc59cc53252239da9acc4ecf05919d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185184"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
@@ -55,7 +55,7 @@ ms.locfileid: "36126575"
   
  此转换有一个输入和一个输出。  
   
- 在模糊匹配中，只能使用具有 `DT_WSTR` 和 `DT_STR` 数据类型的输入列。 完全匹配可以使用除 `DT_TEXT`、`DT_NTEXT` 和 `DT_IMAGE` 之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，它是有效加入与 DTS 列`DT_WSTR`到列，但数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nvarchar`加入具有的列的数据类型，但无效`DT_WSTR`到列，但数据类型`int`数据类型。  
+ 在模糊匹配中，只能使用具有 `DT_WSTR` 和 `DT_STR` 数据类型的输入列。 完全匹配可以使用除 `DT_TEXT`、`DT_NTEXT` 和 `DT_IMAGE` 之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，它是有效地将具有 DTS 列联接`DT_WSTR`到具有的列的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nvarchar`数据类型，但是不能联接的列`DT_WSTR`数据类型设置为与列`int`数据类型。  
   
  通过指定最大内存量、行比较算法以及对转换所用的索引和引用表进行缓存，可以自定义这种转换。  
   
@@ -113,12 +113,12 @@ ms.locfileid: "36126575"
 >  由于“维护存储索引”选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 **实例上的引用表时，此功能才能发挥作用**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="row-comparison"></a>行比较  
- 配置模糊查找转换时，可以指定该转换在定位引用表中的匹配记录时所用的比较算法。 如果 Exhaustive 属性设置为`True`，转换将对引用表中每行的输入中的每一行进行比较。 这种比较算法可以生成更准确的结果，但是，除非引用表中的行数较少，否则很有可能使转换的执行速度变得很慢。 如果 Exhaustive 属性设置为`True`，将整个引用表加载到内存。 若要避免性能问题，则最好将详尽属性设置为`True`仅包开发过程中。  
+ 配置模糊查找转换时，可以指定该转换在定位引用表中的匹配记录时所用的比较算法。 如果将 Exhaustive 属性设置为`True`，转换将输入到引用表中的每一行中的每一行进行比较。 这种比较算法可以生成更准确的结果，但是，除非引用表中的行数较少，否则很有可能使转换的执行速度变得很慢。 如果将 Exhaustive 属性设置为`True`，则整个引用表加载到内存。 若要避免性能问题，是建议将 Exhaustive 属性设置为`True`包只在开发过程。  
   
- 如果 Exhaustive 属性设置为`False`，模糊查找转换返回的是具有至少一个索引的令牌或子字符串的匹配 (称为子字符串*q 克*) 与输入记录相同。 若要最大程度提高查找效率，请以模糊查找转换查找匹配项时所用的倒排索引结构仅对表内每行中的一个令牌子集建立索引。 当输入数据集很小时，可以将 exhaustive 属性设置为`True`以免缺少没有常见令牌存在索引表中的匹配项。  
+ 如果将 Exhaustive 属性设置为`False`，模糊查找转换返回的是具有至少一个索引的令牌或子字符串的匹配 (该子字符串称为*q 元语法*) 输入记录一样。 若要最大程度提高查找效率，请以模糊查找转换查找匹配项时所用的倒排索引结构仅对表内每行中的一个令牌子集建立索引。 当输入数据集很小时，可以将 exhaustive 属性设置为`True`为了避免丢失任何公共令牌存在索引表中的匹配项。  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>缓存索引和引用表  
- 在配置模糊查找转换时，可以指定转换在开始执行其工作之前，是否将部分索引和引用表缓存到内存中。 如果 WarmCaches 属性设置为`True`，索引和引用表加载到内存。 当输入中包含许多行，将 WarmCaches 属性设置为`True`可以提高转换的性能。 当输入行的数量较少时，将 WarmCaches 属性设置为`False`可以使大型索引重用更快。  
+ 在配置模糊查找转换时，可以指定转换在开始执行其工作之前，是否将部分索引和引用表缓存到内存中。 如果 WarmCaches 属性设置为`True`，索引和引用表加载到内存。 当输入具有很多行，将 WarmCaches 属性设置为`True`可以提高转换的性能。 当输入行数很小时，将 WarmCaches 属性设置为`False`可以使重用大型索引更快。  
   
 ## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊查找转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引。 这些临时表和索引的大小与引用表中的行数和标记数以及模糊查找转换所创建的标记数成比例；因此，它们有可能会占用相当大的磁盘空间。 该转换也会查询这些临时表。 因此，应该考虑将模糊查找转换连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的非生产实例中，在生产服务器只有有限的可用磁盘空间时，尤其应该如此。  

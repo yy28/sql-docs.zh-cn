@@ -1,5 +1,5 @@
 ---
-title: 启用属性 （ServerNetworkProtocolIpAddress 类） |Microsoft 文档
+title: 启用属性 （ServerNetworkProtocolIpAddress 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655acfd106800927bbec8b2fa8021a3b2ba4be87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a2296ec80dc8c97fef8588b810d5d4179dd5ed7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268503"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled 属性（ServerNetworkProtocolIpAddress 类）
   获取指定是否启用 IP 地址的布尔值。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  对象  
- A [ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)表示的实例上的网络协议的 IP 地址的对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象，表示的实例上的网络协议 IP 地址[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定是否启用 IP 地址的布尔值：如果启用 IP 地址，则为 `true`；如果禁用 IP 地址，则为 `false`。  

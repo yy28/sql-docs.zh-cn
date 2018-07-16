@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273963"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
-  如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果你尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2014&#40;安装&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md).  
+  如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果您尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)并[管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -59,7 +59,7 @@ ms.locfileid: "36125535"
   
 -   [为本地报表服务器管理配置 SQL Server Management Studio (SSMS)](#bkmk_configure_ssms)  
   
--   [若要配置 SQL Server Data Tools BI (SSDT) 若要发布到本地报表服务器](#bkmk_configure_ssdt)  
+-   [若要配置 SQL Server Data Tools BI (SSDT) 以便发布到本地报表服务器](#bkmk_configure_ssdt)  
   
 -   [其他信息](#bkmk_addiitonal_informaiton)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36125535"
   
  现在，在您打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并且没有明确选择 **“以管理员身份运行”** 时，您有权访问报表服务器属性。  
   
-##  <a name="bkmk_configure_ssdt"></a> 若要配置 SQL Server Data Tools BI (SSDT) 若要发布到本地报表服务器  
+##  <a name="bkmk_configure_ssdt"></a> 若要配置 SQL Server Data Tools BI (SSDT) 以便发布到本地报表服务器  
  如果您在本主题的第一节中列出的操作系统之一上安装了 [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] ，并且希望 SSDT 与本地本机模式报表服务器交互，您将会遇到权限错误，除非您使用提升的权限打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或者配置报表服务角色。 例如，如果您没有足够的权限，将遇到如下问题：  
   
 -   在您尝试将报表项部署到本地报表服务器时，您将在 **“错误列表”** 窗口中看到如下错误消息：  
@@ -170,7 +170,7 @@ ms.locfileid: "36125535"
   
  **在每次打开 SSDT 时使用提升的权限运行：**  
   
-1.  从开始屏幕中，键入`sql server`，然后右键单击**SQL Server Data Tools for Visual Studio**。 单击 **“以管理员身份运行”**。  
+1.  从开始屏幕中，键入`sql server`，然后右击**SQL Server Data Tools for Visual Studio**。 单击 **“以管理员身份运行”**。  
   
      **或者**，在较早的操作系统上：  
   

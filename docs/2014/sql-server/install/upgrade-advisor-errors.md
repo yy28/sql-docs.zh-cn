@@ -1,5 +1,5 @@
 ---
-title: 升级顾问错误 |Microsoft 文档
+title: 升级顾问错误 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [Upgrade Advisor]
 ms.assetid: a493a459-e7ea-4629-a14c-684d8c57e310
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 76f04e52c1178ea29b42338656bcf31d4c9f9178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f03468036cdb65bf8ea0103ab6caa4c86ee612fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192827"
 ---
 # <a name="upgrade-advisor-errors"></a>升级顾问错误
   升级顾问错误可能出现在报表查看器中。 此类错误链接到本帮助主题。  

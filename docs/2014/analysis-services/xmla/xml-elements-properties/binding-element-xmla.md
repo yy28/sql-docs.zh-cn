@@ -1,5 +1,5 @@
 ---
-title: 绑定元素 (XMLA) |Microsoft 文档
+title: 绑定元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe6f67a91ac410596601ffd2d5e440a0de727d0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec223f5a56ea32388a3485f39db0bbbc494fda85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203967"
 ---
 # <a name="binding-element-xmla"></a>Binding 元素 (XMLA)
-  定义的外部绑定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象，例如在维度中，属性为[绑定](bindings-element-xmla.md)集合[批处理](../xml-elements-commands/batch-element-xmla.md)或[进程](../xml-elements-commands/process-element-xmla.md)命令。  
+  定义的外部绑定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象，例如在维度中，属性为[绑定](bindings-element-xmla.md)系列[批处理](../xml-elements-commands/batch-element-xmla.md)或[进程](../xml-elements-commands/process-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36125226"
 ## <a name="remarks"></a>Remarks  
  `Binding` 元素可定义要由 `Batch` 或 `Process` 命令处理的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象的外部绑定，而不是数据源和数据源视图。 有关处理对象的详细信息，请参阅[处理对象&#40;XMLA&#41;](../xml-elements-objects.md)。  
   
- 有关扩展的行绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关的外部绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

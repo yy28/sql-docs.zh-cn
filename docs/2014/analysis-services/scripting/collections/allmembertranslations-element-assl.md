@@ -1,5 +1,5 @@
 ---
-title: AllMemberTranslations 元素 (ASSL) |Microsoft 文档
+title: AllMemberTranslations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberTranslations element
 ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2a1a8b9b72895c69cb8d415d00d633be99ebc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 977168f25f81c1755b6c25e442bae4b7e6e3bfa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171538"
 ---
 # <a name="allmembertranslations-element-assl"></a>AllMemberTranslations 元素 (ASSL)
-  包含的集合[转换](../objects/translation-element-assl.md)的所有成员的标题元素[层次结构](../objects/hierarchy-element-assl.md)元素。  
+  包含的集合[翻译](../objects/translation-element-assl.md)元素的所有成员的标题对应[层次结构](../objects/hierarchy-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,10 +65,10 @@ ms.locfileid: "36127609"
 |子元素|[AllMemberTranslation](../objects/allmembertranslation-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 对父级的对应的元素`AllMemberTranslations`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Hierarchy>。  
+ 父级对应的元素`AllMemberTranslations`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Hierarchy>。  
   
 ## <a name="see-also"></a>请参阅  
- [转换元素&#40;ASSL&#41;](../objects/translation-element-assl.md)   
+ [Translation 元素&#40;ASSL&#41;](../objects/translation-element-assl.md)   
  [集合&#40;ASSL&#41;](collections-assl.md)  
   
   

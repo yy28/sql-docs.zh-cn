@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b683b9778275f07b791df1881da6d7213e1d1d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 560b889359a428625131ff69d8aab5589834a39e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225287"
 ---
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用名为的预定义的数据库角色`RSExecRole`授予对报表服务器数据库的服务器权限的报表。 `RSExecRole`与报表服务器数据库会自动创建角色。 通常，始终不应修改该角色或将其他用户分配给该角色。 但是，将报表服务器数据库移到新的或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 时，必须在 Master 和 MSDB 系统数据库中重新创建该角色。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用名为的预定义的数据库角色`RSExecRole`授予报表服务器到报表服务器数据库的权限。 `RSExecRole`与报表服务器数据库自动创建角色。 通常，始终不应修改该角色或将其他用户分配给该角色。 但是，将报表服务器数据库移到新的或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 时，必须在 Master 和 MSDB 系统数据库中重新创建该角色。  
   
  使用以下说明，您将执行下列步骤：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36125277"
   
 ## <a name="before-you-start"></a>开始之前  
   
--   备份加密密钥，以便可以在数据库移动之后对其进行还原。 这是步骤不直接影响你能够创建和预配`RSExecRole`，但必须密钥备份才能验证您的工作。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
+-   备份加密密钥，以便可以在数据库移动之后对其进行还原。 这是步骤不会直接影响您能够创建和预配`RSExecRole`，不过您必须有密钥备份才能验证您的工作。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
 -   验证您是以具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的 `sysadmin` 权限的用户帐户身份登录的。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36125277"
  关于手动创建 `RSExecRole` 的说明是供迁移报表服务器安装的上下文中使用的。 备份和移动报表服务器数据库等重要任务均不在本主题中讲述，但是会记录在数据库引擎文档中。  
   
 ## <a name="create-rsexecrole-in-master"></a>在 Master 中创建 RSExecRole  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用扩展存储的过程的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务以支持计划的操作。 下列步骤说明如何向 `RSExecRole` 角色授予这些过程的执行权限。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用扩展存储的过程，以[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务来支持计划的操作。 下列步骤说明如何向 `RSExecRole` 角色授予这些过程的执行权限。  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>使用 Management Studio 在 Master 系统数据库中创建 RSExecRole  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36125277"
   
 7.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
   
-8.  在**角色名称**，类型`RSExecRole`。  
+8.  在中**角色名称**，类型`RSExecRole`。  
   
 9. 在 **“所有者”** 中，键入 **DBO**。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36125277"
   
 5.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
   
-6.  在角色名称，键入`RSExecRole`。  
+6.  在角色名称键入`RSExecRole`。  
   
 7.  在“所有者”中，键入 **DBO**。  
   

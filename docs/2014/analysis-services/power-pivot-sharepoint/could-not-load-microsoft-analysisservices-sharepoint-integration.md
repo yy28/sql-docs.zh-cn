@@ -1,5 +1,5 @@
 ---
-title: 无法加载文件或程序集&#39;Microsoft.Data.Services，Version = 3.5.0.0，Culture = neutral，PublicKeyToken = b77a5c561934e089&#39;或其依赖项之一。 系统找不到指定的文件。 | Microsoft Docs
+title: 无法加载文件或程序集&#39;Microsoft.Data.Services，版本 = 3.5.0.0，区域性 = 中性，PublicKeyToken = b77a5c561934e089&#39;或其某个依赖项。 系统找不到指定的文件。 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0330867bb1ffc9d7715d285b6c2c4c5143fb40c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63c549d310d283743d17632b814b4a621eee0286
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226387"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>无法加载文件或程序集&#39;Microsoft.Data.Services，Version = 3.5.0.0，Culture = neutral，PublicKeyToken = b77a5c561934e089&#39;或其依赖项之一。 系统找不到指定的文件。
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>无法加载文件或程序集&#39;Microsoft.Data.Services，版本 = 3.5.0.0，区域性 = 中性，PublicKeyToken = b77a5c561934e089&#39;或其某个依赖项。 系统找不到指定的文件。
   在具有 PowerPivot for SharePoint 的 SharePoint 2010 环境中，如果您尝试执行数据馈送导出并且系统缺少 Microsoft ADO.NET Data Services 的必需版本，则会出现此错误。  
   
 ## <a name="details"></a>详细信息  
@@ -40,13 +40,13 @@ ms.locfileid: "36125254"
   
 ## <a name="user-action"></a>用户操作  
   
-1.  转到 SharePoint 2010 的硬件和软件要求文档[确定硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)。  
+1.  转到针对 SharePoint 2010 的硬件和软件要求文档[确定硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)。  
   
 2.  在 **“安装必备软件”** 中，找到用于与您正在使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
   
 3.  单击该链接并且运行安装该服务的安装程序。  
   
 ## <a name="see-also"></a>请参阅  
- [部署到 SharePoint 的 PowerPivot 解决方案](deploy-power-pivot-solutions-to-sharepoint.md)  
+ [将 PowerPivot 解决方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

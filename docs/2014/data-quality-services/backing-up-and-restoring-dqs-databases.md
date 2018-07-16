@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6403dd558991a38bfad6e89224ba3b93d60c57eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c12611f98ce2309e2102f2cd8134659a6534ace5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235647"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
   本主题说明如何备份和还原 DQS 数据库。  
@@ -30,7 +30,7 @@ ms.locfileid: "36126153"
   
 -   您必须知道或记住您在 DQS 服务器安装过程中提供的数据库主密钥的密码。  
   
--   确保 DQS 中没有正在运行的活动或过程。 这可以使用 **“活动监视”** 屏幕进行验证。 有关在此屏幕中使用的详细信息，请参阅[Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
+-   确保 DQS 中没有正在运行的活动或过程。 这可以使用 **“活动监视”** 屏幕进行验证。 有关使用此屏幕的详细信息，请参阅[Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
   
 -   确保没有用户已登录 DQS 服务器。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36126153"
   
 6.  断开与当前 SQL Server 实例的连接，然后连接到要还原这些数据库的 SQL Server 实例。  
   
-7.  还原 DQS_MAIN 数据库。 若要将 SQL Server 数据库还原的分步说明，请参阅[还原数据库备份&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
+7.  还原 DQS_MAIN 数据库。 若要还原的 SQL Server 数据库的分步说明，请参阅[还原数据库备份&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
   
 8.  还原 DQS_PROJECTS 数据库。  
   

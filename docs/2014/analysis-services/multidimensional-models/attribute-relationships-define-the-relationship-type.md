@@ -1,5 +1,5 @@
 ---
-title: 定义属性关系的关系类型 |Microsoft 文档
+title: 定义属性关系的关系类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing member properties
 - deleting member properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6193e5d457236cfc7dd1f297037e78cb0739ebb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe8c5564487e72e370b2b5004ea3632a3d63242d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224607"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>定义属性关系的关系类型
   可以在 **中使用维度设计器的** “属性关系” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡定义属性关系的关系类型。  

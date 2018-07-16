@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
 - sql12.dta.general.f1
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a64863d6d36d7eb5d934b08db7c7ed8fdb2638e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182074"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](database-engine-tuning-advisor.md)。  
   
 ##  <a name="Initialize"></a> 初始化数据库引擎优化顾问  
- 第一次使用时，作为 **sysadmin** 固定服务器角色成员的用户必须初始化数据库引擎优化顾问。 这是因为必须在中创建多个系统表`msdb`数据库才能支持优化操作。 如果用户是 **db_owner** 固定数据库角色的成员，初始化还可以使他们能够优化数据库（他们拥有的数据库）中的表的工作负荷。  
+ 第一次使用时，作为 **sysadmin** 固定服务器角色成员的用户必须初始化数据库引擎优化顾问。 这是因为必须在创建多个系统表`msdb`数据库才能支持优化操作。 如果用户是 **db_owner** 固定数据库角色的成员，初始化还可以使他们能够优化数据库（他们拥有的数据库）中的表的工作负荷。  
   
  具有系统管理员权限的用户必须执行下列操作之一：  
   
@@ -302,7 +302,7 @@ ms.locfileid: "36126853"
 ##  <a name="XMLInput"></a> 创建 XML 输入文件  
  如果是有经验的 XML 开发人员，您可以创建一些 XML 格式的文件， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可使用这些文件来优化工作负荷。 若要创建这些 XML 文件，请使用您最喜爱的 XML 工具编辑示例文件，或者通过 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构生成实例。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构位于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的以下位置：  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构位于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的以下位置：  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   

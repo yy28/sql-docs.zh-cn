@@ -1,5 +1,5 @@
 ---
-title: 编程 AMO 安全对象 |Microsoft 文档
+title: AMO 安全对象的编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197947"
 ---
 # <a name="programming-amo-security-objects"></a>AMO 安全对象编程
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，编程安全对象或运行使用 AMO 安全对象的应用程序需要是服务器管理员组或数据库管理员组的成员。 服务器管理员和数据库管理员将访问级别由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，安全对象的编程或运行使用 AMO 安全对象的应用程序需要服务器管理员组或数据库管理员组的成员。 服务器管理员和数据库管理员是所需的访问级别由提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，对所有对象的用户访问权限是通过分配给该对象的角色和权限的组合获得的。 有关详细信息，请参阅[AMO 安全类](amo-security-classes.md)。  
   
@@ -145,8 +145,8 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
- [编程 AMO 安全对象](programming-amo-security-objects.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
+ [AMO 安全对象的编程](programming-amo-security-objects.md)   
  [权限和访问权限&#40;Analysis Services-多维数据&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
  [保护 Analysis Services 实例](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   

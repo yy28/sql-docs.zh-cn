@@ -1,5 +1,5 @@
 ---
-title: 聚合和聚合设计 |Microsoft 文档
+title: 聚合和聚合设计 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 283825b20aaad5764744197aca46d3358feb20b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b196f950e04a2b636c9b758dda6f5f6947a9912d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228197"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>聚合和聚合设计
   <xref:Microsoft.AnalysisServices.AggregationDesign> 对象定义一组可在多个分区间共享的聚合定义。  
@@ -46,7 +46,7 @@ ms.locfileid: "36124656"
  虽然对多维数据集中所有可能的聚合进行预先计算可以使所有查询以最短的时间做出响应，但 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以通过其他预先计算好的聚合轻松地计算某些聚合值。 另外，计算所有可能的聚合需要大量的处理时间和存储空间。 因此，应该综合考虑存储要求和预先计算的可能聚合百分比两方面因素，采纳一个折中方案。 如果没有预先计算任何聚合（即 0%），则多维数据集所需要的处理时间和存储空间量达到最低，但由于必须从叶单元检索回答每个查询所需的数据，然后在查询时聚合数据以回答每个查询，因而查询响应时间可能会很长。 例如，为了回答前面提出的问题（“1998 年产品 X 在西北地区的销售额是多少”）而返回单一数值可能需要读取数千行数据，再从每一行提取用于提供“销售额”度量值的列的值，然后再计算总和。 此外，检索这些数据所需的时间主要取决于为数据选定的存储模式（MOLAP、HOLAP 或 ROLAP）。  
   
 ## <a name="designing-aggregations"></a>设计聚合  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含一个复杂的算法，若要选择为预先聚合，以便其他聚合可迅速获得计算从预先计算的值。 例如，如果“时间”层次结构中“月份”级别的聚合已经预先计算好，则某个“季度”级别的计算只要求对三个数字进行汇总，就可以根据需要很快地计算出结果。 这种技术可节省处理时间并降低存储要求，同时对查询响应时间的影响也最小。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 集成了复杂的算法来选择预先聚合，以便从预先计算的值可以快速计算其他聚合。 例如，如果“时间”层次结构中“月份”级别的聚合已经预先计算好，则某个“季度”级别的计算只要求对三个数字进行汇总，就可以根据需要很快地计算出结果。 这种技术可节省处理时间并降低存储要求，同时对查询响应时间的影响也最小。  
   
  聚合设计向导提供了一些选项，允许在算法中指定存储和百分比约束，从而综合查询响应时间和存储要求两个因素，采纳一个令人满意的折中方案。 但是，聚合设计向导的算法假定所有可能的查询具有相同的概率。 使用基于使用情况的优化向导，您可以通过分析客户端应用程序所提交的查询来针对度量值组调整聚合设计。 通过使用向导来优化多维数据集的聚合，可以使频繁出现的查询迅速地做出响应，而不经常出现的查询则可以以稍慢的速度做出响应，这样就不会对多维数据集所需的存储空间造成较大影响。  
   

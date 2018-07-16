@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c64662a9bbfa8a4d36ed406b6fb7529961b693da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179724"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
-  可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函数中使用邻近词 (NEAR) 来搜索相互邻近的字词或短语。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以按任意顺序或您指定的顺序搜索词或短语。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 同时支持以前[通用邻近词](#Generic_NEAR)，其现已弃用，和[自定义邻近词](#Custom_NEAR)中, 新[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+  可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函数中使用邻近词 (NEAR) 来搜索相互邻近的字词或短语。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以按任意顺序或您指定的顺序搜索词或短语。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 同时支持以前[通用邻近词](#Generic_NEAR)，其现已弃用，并且[自定义邻近词](#Custom_NEAR)，这是中的新增功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
 ##  <a name="Custom_NEAR"></a> 自定义邻近词  
  自定义邻近词引入了下列新功能：  
@@ -129,7 +128,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a> 邻近搜索的其他注意事项  
+##  <a name="Additional_Considerations"></a> 有关邻近搜索的其他注意事项  
  本节讨论了对通用邻近搜索和自定义邻近搜索都有影响的考虑因素：  
   
 -   搜索词的重叠匹配项  

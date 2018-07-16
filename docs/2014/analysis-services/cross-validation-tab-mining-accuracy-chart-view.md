@@ -1,5 +1,5 @@
 ---
-title: 交叉验证选项卡 （挖掘准确性图表视图） |Microsoft 文档
+title: 交叉验证选项卡 （挖掘准确性图表视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169818"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>“交叉验证”选项卡（“挖掘准确性图表”视图）
-  通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后生成一组标准准确性指标为每个模型。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  
+  通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后将生成一组标准准确性指标为每个模型。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  
   
  有关详细信息，请参阅[交叉验证（Analysis Services - 数据挖掘）](data-mining/cross-validation-analysis-services-data-mining.md)。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36126750"
   
  例如，假设对特定目标状态进行了三次预测，每次预测的概率分别是 0.05、0.15 和 0.8。 如果将阈值设置为 0.5，则仅有一个预测计为正确。 如果将 **“目标阈值”**  设置为 0.10，则两个预测将计为正确。  
   
- 当**目标****阈值**设置为`null`默认值时，每个事例可能性最大的预测计为正确。 在上面的示例中，0.05、0.15 和 0.8 是三个不同事例中的预测概率。 虽然概率差别较大，但每个预测都记为正确，因为每个事例只生成一个预测，而这些预测是这些事例的最佳预测。  
+ 当**目标****阈值**设置为`null`，这是默认值，每个事例最有可能的预测计为正确。 在上面的示例中，0.05、0.15 和 0.8 是三个不同事例中的预测概率。 虽然概率差别较大，但每个预测都记为正确，因为每个事例只生成一个预测，而这些预测是这些事例的最佳预测。  
   
 ## <a name="see-also"></a>请参阅  
  [测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)   

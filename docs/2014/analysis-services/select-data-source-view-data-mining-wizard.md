@@ -1,5 +1,5 @@
 ---
-title: 选择数据源视图 （数据挖掘向导） |Microsoft 文档
+title: 选择数据源视图 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdatasource.f1
 ms.assetid: ee6c283d-60a2-4f51-9406-483cd1df2d7d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85b3375e07875112c6dfb75be28b900e7013c167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef91f4b09844c9e75a8ef208bd28211c52f65a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165468"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>选择数据源视图（数据挖掘向导）
   可以使用 **“选择数据源视图”** 页确定挖掘结构的数据源视图。  

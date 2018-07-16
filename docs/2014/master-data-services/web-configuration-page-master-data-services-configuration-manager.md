@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8669ed96e5fbe5d34f673375cdc1269db24932c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 23702f53f7e34d7f0bfc11e2248383fc6a3d76f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193353"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>“Web 配置”页（Master Data Services 配置管理器）
   使用 **“Web 配置”** 页可以创建新的网站或 Web 应用程序。 在选择某一 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序后，您可以指定该应用程序的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库并启用 Data Quality Services。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.toolboxcommon.F1
 - sql12.dts.designer.toolbox.F1
@@ -17,13 +17,13 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b34cd549a8a8debf43121f8b401d16c41acde66a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 779b710f06a32a7e5add974281d9cd5c2e6eed93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248727"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   安装在本地计算机上的所有组件（包括为 SQL Server 2008 和 2008 R2 生成的第三方组件）现在都自动显示在新的“SSIS 工具箱”中。 当安装其他组件时，在此工具箱内右键单击，然后单击“刷新工具箱”即会添加组件。  

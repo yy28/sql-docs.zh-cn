@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
 - packages [Integration Services], expressions
@@ -20,13 +20,13 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a9a69fcddc41c72a12bec05e224ce3c0c5d70fdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d000c77263a0448ff838bff42a5020b86a299a72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221827"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
   如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置`LoggingMode`属性，则必须使用数值 2 而不是友好名称已禁用。  
@@ -122,7 +122,7 @@ ms.locfileid: "36125978"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 枚举器  
- `SourceDocumentType``InnerXPathStringSourceType`，和**OuterXPathStringSourceType**属性-通过使用中的值设置`SourceType`枚举。  
+ `SourceDocumentType``InnerXPathStringSourceType`，并**OuterXPathStringSourceType**属性-通过使用中的值设置`SourceType`枚举。  
   
 |SourceType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
@@ -435,7 +435,7 @@ ms.locfileid: "36125978"
 |变量|@shouldalert|  
 |DirectInput|2|  
   
- `DestinationType` 和**DiffGramDestinationType**属性-通过使用中的值设置`DTSXMLSaveResultTo`枚举。  
+ `DestinationType` 并**DiffGramDestinationType**属性-通过使用中的值设置`DTSXMLSaveResultTo`枚举。  
   
 |DTSXMLSaveResultTo 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
@@ -528,7 +528,7 @@ ms.locfileid: "36125978"
 |追加|0|  
 |Overwrite|@shouldalert|  
   
- `BackupAction` 属性-通过使用中的值设置`BackupTaskType`枚举。 此属性适用于`BackupIsIncremental`属性来定义的任务所执行的备份类型。  
+ `BackupAction` 属性-通过使用中的值设置`BackupTaskType`枚举。 此属性适用于`BackupIsIncremental`属性来定义该任务执行的备份类型。  
   
 |BackupTaskType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  

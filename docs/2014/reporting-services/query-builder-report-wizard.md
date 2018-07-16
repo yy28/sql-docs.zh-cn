@@ -1,5 +1,5 @@
 ---
-title: 查询生成器 （报表向导） |Microsoft 文档
+title: 查询生成器 （报表向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
 - sql12.rtp.rptwizard.querybuilder.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9d6e087d2df36209c443eb8411e2439fe7400360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fef45f5ec6c4b9e0682ea625b2cc84bc8aaa089
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253459"
 ---
 # <a name="query-builder-report-wizard"></a>查询生成器（报表向导）
   使用查询生成器可以指定用于检索要在报表中使用的结果集的查询。 您可以在两种查询生成器中进行选择：  

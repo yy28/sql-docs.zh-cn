@@ -1,5 +1,5 @@
 ---
-title: 计算序列属性对话框，标记 （报表生成器和 SSRS） |Microsoft 文档
+title: 计算序列属性对话框，标记 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10153"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ec388f2c247b4eceb533aa80f7fd8b2b0fc01f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12cdf89aff76bb651efd1c40b17364c3321cd224
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270793"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>“计算序列属性”对话框 -&gt;“标记”（报表生成器和 SSRS）
   在 **“计算序列属性”** 对话框中选择 **“标记”** 可定义标记在序列的每个数据点上的显示方式。 标记仅对某些图表类型可用。 支持标记的图表类型如下：面积图、条形图、柱形图、折线图、极坐标图和散点图。 有关图表功能的详细信息，请参阅[图表类型（报表生成器和 SSRS）](report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "36125293"
  [设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [辅助轴上绘制数据&#40;报表生成器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [格式设置图表上的数据点&#40;报表生成器和 SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [向图表添加移动平均线&#40;报表生成器和 SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186114"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>使用现有层次结构数据填充表
   此任务将创建新表，然后使用 **EmployeeDemo** 表中的数据填充该表。 此任务包含以下步骤：  
@@ -117,7 +117,7 @@ ms.locfileid: "36127262"
   
      `10        4         2`  
   
-3.  填充 **NewOrg** 表。 使用的 GetRoot 和 ToString 方法连接**Num**值转换`hierarchyid`格式，，然后更新**OrgNode**列，其结果的分层值：  
+3.  填充 **NewOrg** 表。 使用 GetRoot 和 ToString 方法要串联**Num**值到`hierarchyid`格式，然后再**OrgNode**使用生成的层次结构值的列：  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -155,7 +155,7 @@ ms.locfileid: "36127262"
   
     ```  
   
-     **LogicalNode**列将转换`hierarchyid`转换为更具可读性的文本格式表示层次结构的列。 在其余的任务中，您将使用 `ToString()` 方法显示 `hierarchyid` 列的逻辑格式。  
+     **LogicalNode**列转换为`hierarchyid`列转换的更具可读性的文本形式表示层次结构。 在其余的任务中，您将使用 `ToString()` 方法显示 `hierarchyid` 列的逻辑格式。  
   
 5.  删除不再需要的临时表：  
   

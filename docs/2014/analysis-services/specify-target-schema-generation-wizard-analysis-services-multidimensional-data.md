@@ -1,5 +1,5 @@
 ---
-title: 指定目标 （架构生成向导） (Analysis Services-多维数据) |Microsoft 文档
+title: 指定目标 （架构生成向导） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.generationtarget.f1
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796f28368badd6eb92e4714ee5e98a22cc12d18f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9e4d9b991aed272d7f32d66b760d87597c46136
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217977"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定目标（架构生成向导）（Analysis Services - 多维数据）
   可以使用 **“指定目标”** 页，指定要在其中创建关系架构的数据源视图。  

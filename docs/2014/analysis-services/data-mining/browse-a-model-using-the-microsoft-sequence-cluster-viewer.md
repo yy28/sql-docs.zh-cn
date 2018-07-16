@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft 序列分类查看器浏览模型 |Microsoft 文档
+title: 使用 Microsoft 序列分类查看器浏览模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
 - clusters [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37a7d3c5be648c1861dbbb33ac20a824e462296f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276213"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 序列分类查看器浏览模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 序列分类查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是用于探析特定数据的顺序分析算法，这些数据所包含的事件可通过以下路径（又称“序列 ”）联系起来。 有关此算法的详细信息，请参阅 [Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "36125250"
  [返回页首](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> 分类剖面图  
- **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 网格中 **“总体”** 列后的每一列都代表模型发现的分类。 \<属性 >.samples 行表示在群集中，存在的数据的不同序列和\<属性 > 行所说明群集包含的所有项和其总体分发。  
+ **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 网格中 **“总体”** 列后的每一列都代表模型发现的分类。 \<属性 > s 行代表不同的群集中存在的数据序列和\<属性 > 行进行了说明分类包含的所有项及其总体分布。  
   
  通过“直方图条”  选项，可以控制直方图中可见的条数。 如果存在的图条数多于您选择显示的图条数，则会保留重要性最高的那些图条，其余图条则组合到一个灰色的存储桶内。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36125250"
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft 序列聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
  [数据挖掘工具](data-mining-tools.md)   
  [数据挖掘模型查看器](data-mining-model-viewers.md)   
  [使用 Microsoft 分类查看器浏览模型](browse-a-model-using-the-microsoft-cluster-viewer.md)  

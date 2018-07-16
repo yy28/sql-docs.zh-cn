@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a0deaffca9298b29ceb3d22c85bd199fcfc55ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9844fbe92d37a440bda6a165481e00de5a72c2d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212527"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
   报表参数为选择报表数据、连接相关报表以及更改报表显示提供了一种方法。 您可以提供一个默认值和一列可用值，用户可以更改所选值。  
   
- 报表发布后，您可以在报表服务器上更改报表参数的默认值、可用值以及其他属性。 通过创建链接报表，您可以提供多组默认参数值。 有关详细信息，请参阅"设置参数属性的已发布报表的"[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的文档[SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)。  
+ 报表发布后，您可以在报表服务器上更改报表参数的默认值、可用值以及其他属性。 通过创建链接报表，您可以提供多组默认参数值。 详细信息，请参阅"设置参数属性已发布报表的"中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的文档[SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,7 +62,7 @@ ms.locfileid: "36126446"
 2.  右键单击报表参数，然后单击 **“删除”**。  
   
 ## <a name="see-also"></a>请参阅  
- [添加、 更改或删除报表参数的可用值&#40;报表生成器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [添加、 更改或删除可用值为报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
  [为报表参数添加、更改或删除默认值（报表生成器和 SSRS）](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [更改报表参数的顺序&#40;报表生成器和 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   

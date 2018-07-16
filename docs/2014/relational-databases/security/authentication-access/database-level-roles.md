@@ -5,10 +5,9 @@ ms.date: 09/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server 2014
@@ -41,15 +40,15 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 981112bd47f6a75bd633e5baa1046abf56e14669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 337252b4b5203003bc6bec6b44b12d86183ab343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188054"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
   为便于管理数据库中的权限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了若干“角色”  ，这些角色是用于对其他主体进行分组的安全主体。 它们类似于 ***Windows 操作系统中的*** 组 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 数据库级角色的权限作用域为数据库范围。  
@@ -86,7 +85,7 @@ ms.locfileid: "36127263"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|这些数据库角色的成员可以管理和使用数据收集器。 有关详细信息，请参阅 [Data Collection](../../data-collection/data-collection.md)。|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 数据库角色的成员可以对基于策略的管理策略和条件执行所有配置和维护活动。 有关详细信息，请参阅 [使用基于策略的管理来管理服务器](../../policy-based-management/administer-servers-by-using-policy-based-management.md)。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|这些数据库角色的成员可以管理和使用注册的服务器组。|  
-|**dbm_monitor**|在中创建`msdb`时在数据库镜像监视器中注册的第一个数据库的数据库。 在系统管理员为 **dbm_monitor** 角色分配用户之前，该角色没有任何成员。|  
+|**dbm_monitor**|在中创建`msdb`在数据库镜像监视器中注册的第一个数据库时。 在系统管理员为 **dbm_monitor** 角色分配用户之前，该角色没有任何成员。|  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。  

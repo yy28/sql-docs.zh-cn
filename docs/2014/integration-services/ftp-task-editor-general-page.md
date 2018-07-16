@@ -1,5 +1,5 @@
 ---
-title: FTP 任务编辑器 （常规页） |Microsoft 文档
+title: FTP 任务编辑器 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 786f0d4371773f77045f0ef9cd6825057c12a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f8761af335319cbd205eca3c57d4f6874e5829
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283633"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 任务编辑器（“常规”页）
   使用 **“FTP 任务编辑器”** 对话框的 **“常规”** 页可以指定连接到与任务通信的 FTP 服务器的 FTP 连接管理器。 您还可以命名和描述 FTP 任务。  
@@ -53,7 +53,7 @@ ms.locfileid: "36125410"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP 任务编辑器&#40;文件传输页&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [FTP 任务编辑器&#40;文件传输页面&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

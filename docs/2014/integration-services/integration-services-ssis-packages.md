@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252379"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 包
   包是一个有组织的集合，其中可包括连接、控制流元素、数据流元素、事件处理程序、变量、参数和配置，您可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形设计工具将这些对象组合到包中，或以编程方式生成包含这些对象的包。  然后将完成的包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区或文件系统中，还可以将 ssISnoversion 项目部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器。 包是可被检索、执行和保存的工作单元。  
@@ -54,9 +54,9 @@ ms.locfileid: "36126127"
 ## <a name="package-templates"></a>包模板  
  包经常用作模板，以便通过它生成可共享基本功能的包。 可以生成基本包然后复制它，也可以将包指定为模板。 例如，一个下载并复制文件然后提取数据的包可能会在枚举文件夹内文件的 Foreach 循环中包括 FTP 和文件系统任务。 它还可能包括平面文件连接管理器以访问数据，并包括平面文件源以提取数据。 数据的目标会发生变化，在从基本包复制之后，目标会添加到每个新包中。 还可以创建包，然后使用它们作为添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的新包的模板。 有关详细信息，请参阅 [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)。  
   
- 当首次创建包，以编程方式或通过使用 SSIS 设计器中，将 GUID 添加到其`ID`属性和名称到其`Name`属性。 如果通过复制现有包或使用模板包来创建新包，那么也会复制名称和 GUID。 如果使用日志记录，则这可能是个问题，因为包的 GUID 和名称将写入日志，以标识被记录的信息所属的包。 因此，应当更新新包的名称和 GUID，以便帮助将它们与源包区分开来，并且能够在日志数据中的区分彼此。  
+ 当首次创建包，以编程方式或使用 SSIS 设计器中，将 GUID 添加到其`ID`属性，将名称传递给其`Name`属性。 如果通过复制现有包或使用模板包来创建新包，那么也会复制名称和 GUID。 如果使用日志记录，则这可能是个问题，因为包的 GUID 和名称将写入日志，以标识被记录的信息所属的包。 因此，应当更新新包的名称和 GUID，以便帮助将它们与源包区分开来，并且能够在日志数据中的区分彼此。  
   
- 若要更改包 GUID，需要在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“属性”窗口中的 `ID` 属性内重新生成 GUID。 若要更改包名称，可以更新的值`Name`属性窗口中的属性。 还可以使用 **dtutil** 命令提示符，或通过编程更新 GUID 和名称。 有关详细信息，请参阅[设置包属性](set-package-properties.md)和 [dtutil 实用工具](dtutil-utility.md)。  
+ 若要更改包 GUID，需要在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“属性”窗口中的 `ID` 属性内重新生成 GUID。 若要更改包名称，则可以更新的值`Name`属性窗口中的属性。 还可以使用 **dtutil** 命令提示符，或通过编程更新 GUID 和名称。 有关详细信息，请参阅[设置包属性](set-package-properties.md)和 [dtutil 实用工具](dtutil-utility.md)。  
   
 ## <a name="objects-that-extend-package-functionality"></a>扩展包功能的对象  
  包中还可包含其他提供高级功能或扩展现有功能的对象，如事件处理程序、配置、日志记录和变量。  
@@ -119,7 +119,7 @@ ms.locfileid: "36126127"
   
 ## <a name="related-content"></a>相关内容  
   
--   [实现 SQL Server Integration Services Microsoft Dynamics mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [实现 SQL Server Integration Services 与 Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
   
 -   [如何： 为 Microsoft Dynamics AX 配置 SQL Server Integration Services 包](http://msdn.microsoft.com/library/bb986852)  
   

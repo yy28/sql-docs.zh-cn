@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘解决方案 |Microsoft 文档
+title: 数据挖掘解决方案 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 62
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 78467c48599e9f97cf856be9963ad2e3e5318472
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57c0dcbc62475cd55b827d9104efe8a8c2db249c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263843"
 ---
 # <a name="data-mining-solutions"></a>数据挖掘解决方案
   数据挖掘解决方案是一个包含一个或多个数据挖掘项目的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案。  
@@ -31,13 +31,13 @@ ms.locfileid: "36126399"
   
  有关对数据挖掘有用的其他项目类型的详细信息，请参阅[数据挖掘解决方案的相关项目](data-mining-solutions.md)。  
   
- [关系 vs。多维解决方案](#bkmk_RelMD)  
+ [关系与。多维解决方案](#bkmk_RelMD)  
   
  [部署数据挖掘解决方案](#bkmk_Deploy)  
   
  [解决方案演练](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> 关系 vs。多维解决方案  
+##  <a name="bkmk_RelMD"></a> 关系与。多维解决方案  
  数据挖掘解决方案可基于多维数据（即现有多维数据集）、纯关系数据（例如，数据仓库中的表和视图）、文本文件、Excel 工作簿或其他外部数据源。  
   
 -   可以在现有多维数据库解决方案中创建数据挖掘对象。  

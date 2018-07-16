@@ -1,5 +1,5 @@
 ---
-title: 缓存刷新选项 （报表管理器） |Microsoft 文档
+title: 缓存刷新选项 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282693"
 ---
 # <a name="cache-refresh-options-report-manager"></a>缓存刷新选项（报表管理器）
   使用“缓存刷新选项”页可以创建使用报表或共享数据集数据的临时副本预加载缓存的计划。 刷新计划包括计划和指定或覆盖参数值的选项。 对于共享数据集，不能覆盖标记为只读的参数值。 在刷新选项页中，可以创建和使用多个刷新计划。  
@@ -27,7 +27,7 @@ ms.locfileid: "36124050"
  通过“内容管理员”、“我的报表”和“发布者”默认角色分配，您可以添加、删除、更改和查看缓存刷新计划的相关报表和共享数据集。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="to-open-the-cache-refresh-plan-properties-page-for-a-report-or-shared-dataset"></a>打开报表或共享数据集的“缓存刷新计划”属性页  
   
@@ -50,10 +50,10 @@ ms.locfileid: "36124050"
  **删除**  
  删除所有当前所选的刷新计划。  
   
- **从现有新**  
+ **根据现有内容新建**  
  仅当选择一个缓存刷新计划时启用此选项。 此选项将创建一个新的刷新计划，该计划是从原始计划复制而来。 将打开缓存刷新计划页，其中预先填充了所选计划的详细信息。 然后，您可以修改刷新计划选项并用新说明保存该计划。  
   
- **新的缓存刷新计划**  
+ **新建缓存刷新计划**  
  单击以创建要在当前缓存刷新选项中使用的新刷新计划。  
   
  **编辑**  
@@ -63,7 +63,7 @@ ms.locfileid: "36124050"
  **Description**  
  指定缓存刷新计划的说明。  
   
- **特定于项的计划**  
+ **项特定的计划**  
  选择此选项可以创建仅供此项使用的计划。  
   
  **配置**  
@@ -111,7 +111,7 @@ ms.locfileid: "36124050"
 ### <a name="report-parameters"></a>报表参数  
  对于报表，在成功创建一个缓存刷新计划前，每个参数值必须是有效的。 必须键入或选择每个报表参数的默认值。 您设置的值将覆盖在报表服务器上定义的报表参数默认值。  
   
- 参数必须符合在报表服务器上的参数属性中指定的要求。 例如，如果属性 AllowBlank 为报表参数为 false，空字符串不是有效的值。  
+ 参数必须符合在报表服务器上的参数属性中指定的要求。 例如，如果 AllowBlank 属性为 false 为报表参数，为空字符串不是有效的值。  
   
  若要查看或更改报表参数选项，必须在报表中编辑报表参数，或在报表服务器上独立编辑。 有关详细信息，请参阅[报表参数概念&#40;报表生成器和 SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
   

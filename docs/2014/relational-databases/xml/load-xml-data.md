@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166298"
 ---
 # <a name="load-xml-data"></a>加载 XML 数据
   您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。 例如：  
@@ -31,7 +31,7 @@ ms.locfileid: "36126021"
   
 -   您可以使用 bcp out 将数据从其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中大容量复制出来，然后再使用 bcp in 将数据大容量插入到更高版本的数据库中。  
   
--   如果您的数据在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的关系列中，则可以创建一个包含 [n]text 列的表，也可选择包含一个主键列来放置行标识符。 使用客户端编程检索在服务器中使用 FOR XML 生成的 XML 并将其写入`[n]text`列。 然后，使用上面提到的方法将数据传输到更高版本的数据库中。 您可以选择将 XML 直接写入更高版本数据库中的 XML 列。  
+-   如果您的数据在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的关系列中，则可以创建一个包含 [n]text 列的表，也可选择包含一个主键列来放置行标识符。 使用客户端编程检索在服务器中使用 FOR XML 生成的 XML，并将其写入`[n]text`列。 然后，使用上面提到的方法将数据传输到更高版本的数据库中。 您可以选择将 XML 直接写入更高版本数据库中的 XML 列。  
   
 ## <a name="bulk-loading-xml-data"></a>大容量加载 XML 数据  
  可以通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的大容量加载功能（如 bcp）将 XML 数据大容量加载到服务器中。 通过使用 OPENROWSET 可以将文件中的数据加载到 XML 列中。 以下示例说明了这一点。  
@@ -54,10 +54,10 @@ FROM    (SELECT *
   
 -   如果由于源代码页的原因，编码不是 Unicode 而是隐式的，则数据库中的字符串代码页应与要加载的码位相同或与其兼容。 如果需要，请使用 COLLATE。 如果不存在这样的服务器代码页，则必须添加使用正确编码的显式 XML 声明。  
   
--   若要使用显式编码，使用`varbinary()`类型，它具有与代码页中，没有交互，或者使用适当的代码页的字符串类型。 然后，将数据赋给 XML 列、变量或参数。  
+-   若要使用显式编码，请使用`varbinary()`类型，它具有不与代码页交互或使用相应的代码页的字符串类型。 然后，将数据赋给 XML 列、变量或参数。  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>示例：显式指定编码  
- 假定您的 XML 文档和 vcdoc 存储为不具有显式 XML 声明的 `varchar(max)`。 以下语句将添加使用编码"iso8859-1"的 XML 声明，连接了 XML 文档，将结果转换为`varbinary(max)`以便字节表示形式保留，然后最终将它转换到 XML。 这样，XML 处理器就可以根据指定的编码“iso8859-1”分析数据，并为字符串值生成相应的 UTF-16 表示形式。  
+ 假定您的 XML 文档和 vcdoc 存储为不具有显式 XML 声明的 `varchar(max)`。 以下语句添加了带有编码"iso8859-1"的 XML 声明，连接了 XML 文档，将结果转换为`varbinary(max)`以便字节表示形式被保留，然后最终将它转换为 XML。 这样，XML 处理器就可以根据指定的编码“iso8859-1”分析数据，并为字符串值生成相应的 UTF-16 表示形式。  
   
 ```  
 SELECT CAST(   

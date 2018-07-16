@@ -1,5 +1,5 @@
 ---
-title: 更改实体名称 (Master Data Services) |Microsoft 文档
+title: 更改实体名称 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2f0869bd7cff707ac65d83c870b290aa1af4cec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3986f5508bd5b6fe5ce55b38ff038e4a14a2b73c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260993"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>更改实体名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，可以更改实体的名称。  
@@ -48,7 +48,7 @@ ms.locfileid: "36125110"
   
 5.  单击 **“编辑所选实体”**。  
   
-6.  在**实体名称**框中，键入实体的更新的名称。  
+6.  在中**实体名称**框中，键入实体的更新的名称。  
   
 7.  单击**保存实体**。  
   

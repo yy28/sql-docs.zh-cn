@@ -1,5 +1,5 @@
 ---
-title: 定义了一个数据源 |Microsoft 文档
+title: 定义数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a564a314e92b683418b2bb3d12291fddeded016c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f764d7e7640fc7549d97402a83f997b63f9105cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179074"
 ---
 # <a name="defining-a-data-source"></a>定义数据源
   在创建 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目后，通常通过定义项目使用的一个或多个数据源来开始使用项目。 定义数据源时，将定义要用于连接此数据源的连接字符串信息。 有关详细信息，请参阅[创建数据源（SSAS 多维）](multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
@@ -36,11 +36,11 @@ ms.locfileid: "36126406"
   
 4.  在“连接管理器”对话框中，为数据源定义连接属性。 在“提供程序”列表框中，确保已选中“本机 OLE DB\SQL Server Native Client 11.0”。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 此外支持其他提供程序，它显示在**提供程序**列表。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 此外支持其他提供程序，将显示在**提供程序**列表。  
   
-5.  在**服务器名称**文本框中，键入`localhost`。  
+5.  在中**服务器名称**文本框中，键入`localhost`。  
   
-     若要连接到本地计算机上的命名实例，键入**localhost\\< 实例名称\>**。 若要连接到特定的计算机而不是本地计算机，请键入该计算机名称或 IP 地址。  
+     若要连接到本地计算机上的命名实例，请键入**localhost\\< 实例名称\>**。 若要连接到特定的计算机而不是本地计算机，请键入该计算机名称或 IP 地址。  
   
 6.  确保已选中“使用 Windows 身份验证”。 在“选择或输入数据库名称”列表中，选择 **AdventureWorksDW2012**。  
   

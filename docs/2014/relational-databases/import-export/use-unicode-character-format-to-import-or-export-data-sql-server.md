@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19d00a0ecf553798fb37a424a516476cd3eb307d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9124d6807bc4fea19e98fb0f099cd31ba15172bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235337"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
   使用包含扩展/DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用 Unicode 字符格式。 从服务器导出数据时，Unicode 字符数据格式允许使用与执行该操作的客户端不同的代码页。 在这种情况下，使用 Unicode 字符格式有下列优点：  
@@ -36,7 +35,7 @@ ms.locfileid: "36126088"
 > [!IMPORTANT]  
 >  对于用于 Unicode 字符数据文件的格式化文件，所有输入字段必须为 Unicode 文本字符串（即固定大小 Unicode 字符串或字符终止 Unicode 字符串）。  
   
- `sql_variant` Unicode 字符格式数据文件中存储的数据进行操作与在字符格式数据文件中运行的方式相同，只不过将数据存储为`nchar`而不是`char`数据。 有关字符格式的详细信息，请参阅 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
+ `sql_variant`的不同数据存储为 Unicode 字符格式数据文件中存储的数据运行与它在字符格式数据文件中，运行相同的方式`nchar`而不是`char`数据。 有关字符格式的详细信息，请参阅 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
   
  若要使用与 Unicode 字符格式提供的默认终止符不同的字段终止符或行终止符，请参阅[指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。  
   
@@ -88,7 +87,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |限定符|Description|  
 |----------------|-----------------|  
 |**-w**|指定 Unicode 字符格式。|  
-|**-t** `,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意： 默认的字段终止符是 Unicode 字符 (\t) 的选项卡。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意： 默认的字段终止符是 Unicode 制表符 (\t)。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T**，则需要指定 **-U** 和 **-P** 才能成功登录。|  
   
  以下示例将 Unicode 字符格式的数据从 `myTestUniCharData` 表中大容量导出到名为 `myTestUniCharData-w.Dat` 的新数据文件，此数据文件使用逗号 (`,`) 作为字段终止符。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示符下输入：  

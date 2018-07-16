@@ -1,5 +1,5 @@
 ---
-title: 通过使用 WMI 提供程序管理服务和网络设置 |Microsoft 文档
+title: 使用 WMI 提供程序管理服务和网络设置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,25 +17,25 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54c441653fd1116aa9061d143aa63ae353a43585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f0f9c249ac1a494a3dd965386da7160dd373818
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280623"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
   WMI 提供程序是一个已发布的接口，可供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]管理控制台 (MMC) 管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务和网络协议。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象表示 WMI 提供程序。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象的操作与与建立的连接无关<xref:Microsoft.SqlServer.Management.Smo.Server>到的实例的对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并使用 Windows 凭据来连接到 WMI 服务。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象的运行与建立的连接<xref:Microsoft.SqlServer.Management.Smo.Server>对象的实例与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并使用 Windows 凭据连接到 WMI 服务。  
   
 ## <a name="example"></a>示例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]WMI 提供程序，你必须包括`Imports`语句来限定的 WMI 命名空间。 请在应用程序的其他 `Imports` 语句之后、任何声明之前插入该语句，例如：  
+ 有关程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]WMI 提供程序必须包括`Imports`语句以限定 WMI 命名空间。 请在应用程序的其他 `Imports` 语句之后、任何声明之前插入该语句，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

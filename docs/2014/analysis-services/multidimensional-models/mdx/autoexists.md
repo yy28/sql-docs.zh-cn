@@ -1,5 +1,5 @@
 ---
-title: Autoexists |Microsoft 文档
+title: Autoexists |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8fdb4d1cf175d88a6437f2efab269b4ecbf2e236
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194367"
 ---
 # <a name="autoexists"></a>Autoexists
   “autoexists”  的概念将多维数据集空间限制为在多维数据集中实际存在的那些单元，而不是可能由于从同一层次结构创建属性层次结构成员的所有可能组合而存在的那些单元。 其原因在于，一个属性层次结构的成员不能与同一维度中其他属性层次结构的成员共存。 在 SELECT 语句中使用同一维度的两个或更多属性层次结构时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。  
@@ -66,7 +66,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  请注意 0 用于表示列轴的名称，它是列轴“axis(0)”的简称。  
   
- 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 上述查询还可以编写即可使用新 * 的 variant[叉积 (MDX)](/sql/mdx/crossjoin-mdx)函数。  
+ 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 此外可以使用新编写前面的查询 * 的变体[Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)函数。  
   
 ```  
 SELECT   
@@ -92,7 +92,7 @@ WHERE (Measures.[Internet Sales Amount],
  前面的这三个查询均阐释了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自动共存行为所带来的影响。  
   
 ## <a name="deep-and-shallow-autoexists"></a>深度和浅表 Autoexists  
- Autoexists 可以深度或浅表的形式应用于表达式。 `Deep Autoexists` 意味着将对所有表达式进行计算，以便在应用了切片器表达式、轴中的嵌套 select 表达式等后到达可能的最深空间。 `Shallow Autoexists` 意味着，在外部表达式当前表达式之前计算和这些结果传递给当前表达式。 默认设置为深度 autoexists。  
+ Autoexists 可以深度或浅表的形式应用于表达式。 `Deep Autoexists` 意味着将对所有表达式进行计算，以便在应用了切片器表达式、轴中的嵌套 select 表达式等后到达可能的最深空间。 `Shallow Autoexists` 表示在当前表达式之前对外部表达式计算，这些结果传递到当前表达式。 默认设置为深度 autoexists。  
   
  下面的应用场景和示例将帮助阐明不同类型的 Autoexists。 在下面的示例中，将创建两个集：一个作为计算表达式，另一个作为常量表达式。  
   
@@ -312,7 +312,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 可以使用 AUTOEXISTS 修改 Autoexists 的行为 = [1 | 2 | 3] 中的连接字符串; 参数请参阅[支持 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>对于参数用法。  
+ 可以修改 Autoexists 的行为使用 AUTOEXISTS = [1 | 2 | 3] 参数; 在连接字符串请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)并<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>有关参数的用法。  
   
 ## <a name="see-also"></a>请参阅  
  [MDX 中的重要概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   

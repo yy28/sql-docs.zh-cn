@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2720d4e3a767a66768909bccad6cf1a7fdf78722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9aa5b777f8e05b9a3bd8784c15ae8294e9caa8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264273"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
   Word 呈现扩展插件将报表呈现为本机格式的[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010年。 格式为 Office Open XML。  
@@ -31,7 +31,7 @@ ms.locfileid: "36125809"
  与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的以前版本的 Word 呈现扩展插件已重命名为 Word 2003。 默认情况下，只提供 Word 呈现扩展插件。 您必须更新 Reporting Services 配置文件，才能使用 Word 2003 呈现扩展插件。 Word 2003 呈现器生成的文件的内容类型为 **application/vnd.ms-word** ，文件的文件扩展名为 .doc。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003年呈现扩展插件已弃用。 有关详细信息，请参阅[Deprecated Features in SQL Server 2014 中的 SQL Server Reporting Services](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
+>  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003年呈现扩展插件不推荐使用。 有关详细信息，请参阅[SQL Server 2014 中的 SQL Server Reporting Services 中不推荐使用功能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
  报表导出为 Word 文档后，可以更改报表内容并设计文档样式的报表，例如邮件标签、采购订单或套用信函。  
   
@@ -140,14 +140,14 @@ ms.locfileid: "36125809"
   
 -   导出报表后，Word 将再次对报表进行分页。 这可能导致向呈现的报表中添加其他分页符。  
   
--   Word 不重复第二页上的标头行和更高版本，尽管 tablix （表、 矩阵或列表） 中的静态标题行的 RepeatOnNewPage 属性设置为`True`。 您可以在报表中定义显式分页符，以便强制标题行在新页上出现。 但是，因为 Word 将其自己的分页应用于导出到 Word 的呈现的报表，所以结果可能会不同并且标题行可能不会以可预测的方式重复。 静态标题行是包含列标题的行。  
+-   Word 不会重复第二页上的标题行和更高版本，尽管将 tablix （表、 矩阵或列表） 中静态标题行的 RepeatOnNewPage 属性设置为`True`。 您可以在报表中定义显式分页符，以便强制标题行在新页上出现。 但是，因为 Word 将其自己的分页应用于导出到 Word 的呈现的报表，所以结果可能会不同并且标题行可能不会以可预测的方式重复。 静态标题行是包含列标题的行。  
   
 -   文本框在包含不间断空格时会增长。  
   
 -   将文本导出到 Word 时，某些字体具有字体效果的文本可能会在呈现的报表中生成意外标志符号或缺失某些标志符号。  
   
 ##  <a name="WordBenefits"></a> 使用 Word 呈现器的优点  
- 除了发起中新增的功能外[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010 可用于导出报表，导出的报表的 *.docx 文件往往会较小。 通过使用 Word 呈现器导出的报表通常显著小于通过使用 Word 2003 呈现器导出的相同报表。  
+ 除了使中新增的功能[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010 可用于导出报表，导出的报表的 *.docx 文件往往更小。 通过使用 Word 呈现器导出的报表通常显著小于通过使用 Word 2003 呈现器导出的相同报表。  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>导出的报表的向后兼容性  
  您可以选择 Word 兼容性模式并设置兼容性选项。 Word 呈现器在创建文档时会启用兼容性模式。 因此，重新保存禁用了兼容性模式的文档可能会影响文档的布局。  
@@ -155,11 +155,11 @@ ms.locfileid: "36125809"
  如果您禁用了兼容性模式，然后重新保存报表，该报表布局可能会意外更改。  
   
 ##  <a name="AvailabilityWord"></a> Word 2003 呈现器的可用性  
- 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，默认 Word 呈现器是呈现为本机格式的版本[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010年。 这是报表管理器和 SharePoint 列表中 **“导出”** 菜单的 **Word** 选项。 仅与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的早期版本现在命名为 Word 2003，并且使用该名称在菜单上列出。 **Word 2003** 菜单选项默认不可见，但是，管理员可以通过更新 RSReportServer 配置文件使该选项可见。 若要使用 Word 2003 呈现器从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 导出报表，请更新 RSReportDesigner 配置文件。 但是，使 Word 2003 呈现器可见并不会使其可用于所有方案中。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。 如果在断开连接或本地模式中使用工具或产品，则使 Word 2003 呈现器可见没有任何影响。 **Word 2003** 菜单选项保持不可用。 如果在 RSReportDesigner 配置文件中使 Word 2003 呈现器可见，则 **Word 2003** 菜单选项在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 报表预览中始终可用。  
+ 在中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，默认的 Word 呈现器是呈现到的本机格式的版本[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010年。 这是报表管理器和 SharePoint 列表中 **“导出”** 菜单的 **Word** 选项。 仅与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的早期版本现在命名为 Word 2003，并且使用该名称在菜单上列出。 **Word 2003** 菜单选项默认不可见，但是，管理员可以通过更新 RSReportServer 配置文件使该选项可见。 若要使用 Word 2003 呈现器从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 导出报表，请更新 RSReportDesigner 配置文件。 但是，使 Word 2003 呈现器可见并不会使其可用于所有方案中。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。 如果在断开连接或本地模式中使用工具或产品，则使 Word 2003 呈现器可见没有任何影响。 **Word 2003** 菜单选项保持不可用。 如果在 RSReportDesigner 配置文件中使 Word 2003 呈现器可见，则 **Word 2003** 菜单选项在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 报表预览中始终可用。  
   
  **Word 2003** 菜单选项在以下方案中始终不可见：  
   
--   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。 此错误出现在同时[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和报表生成器的独立版本。  
+-   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。 在这种将发生这种情况[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和报表生成器的独立版本。  
   
 -   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式报表和报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36125809"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和预览报表。  
   
--   连接到报表服务器的报表生成器。 这可以是[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]或报表生成器的独立版本。  
+-   连接到报表服务器的报表生成器。 这可以是[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]或报表生成器独立版本。  
   
 -   远程模式下的报表查看器 Web 部件。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36125809"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 的 Word 呈现器。 WORD 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 指示 Word 2003 呈现器处于隐藏状态。 有关详细信息，请参阅[RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)和[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
+ WORDOPENXML 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 的 Word 呈现器。 WORD 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 指示 Word 2003 呈现器处于隐藏状态。 有关详细信息，请参阅[RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)并[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
   
 ##  <a name="Differences"></a> Word 和 Word 2003 呈现器之间的差异  
  使用 Word 呈现器或 Word 2003 呈现器呈现的报表往往从外观上无法区分。 但是，您可以在 Word 或 Word 2003 格式之间注意到这两者之间的细微差异。  

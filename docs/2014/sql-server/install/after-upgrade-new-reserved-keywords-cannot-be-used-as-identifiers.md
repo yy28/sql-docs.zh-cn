@@ -1,5 +1,5 @@
 ---
-title: 在升级后，新的保留关键字不能作为标识符 |Microsoft 文档
+title: 升级后，新的保留关键字不能用作标识符 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keywords [SQL Server], after upgrade
 - keywords [SQL Server], reserved
 - keywords [SQL Server]
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 177c36aaeca8e6cc9d84aae21e1f99fe0bb96867
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7569837d0442b23e16c365ea1076b734f23892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172110"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>升级后，新的保留关键字不能用作标识符
   升级顾问检测到所使用的某些词为保留关键字。 保留关键字不能用作标识符或对象名称，除非该名称用分隔符分割。  
@@ -53,7 +53,7 @@ ms.locfileid: "36126234"
   
 -   将数据库兼容级别设置保留为 90 或更低。  
   
--   使用分隔标识符引用对象。 例如，语句`CREATE TABLE [MERGE] ([MERGE] int);`使用括号来分隔对象名称合并。  
+-   使用分隔标识符引用对象。 例如，语句`CREATE TABLE [MERGE] ([MERGE] int);`使用方括号来分隔对象名称 MERGE。  
   
 ## <a name="external-resources"></a>外部资源  
  [保留关键字&#40;Transact SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  

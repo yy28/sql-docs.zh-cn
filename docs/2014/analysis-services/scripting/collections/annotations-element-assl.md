@@ -1,5 +1,5 @@
 ---
-title: Annotations 元素 (ASSL) |Microsoft 文档
+title: Annotations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotations element
 ms.assetid: b2236075-6a48-470d-8182-b0de112e258a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b673e7f9edd199d32f7bd89d082d39b6d58f876a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 165d5ba47462c47ebc77a53b9f76537427cb9837
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276153"
 ---
 # <a name="annotations-element-assl"></a>Annotations 元素 (ASSL)
   包含的集合[批注](../objects/annotation-element-assl.md)与父元素关联的元素。  
@@ -65,7 +65,7 @@ ms.locfileid: "36123914"
 |子元素|[批注](../objects/annotation-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AnnotationCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AnnotationCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  
