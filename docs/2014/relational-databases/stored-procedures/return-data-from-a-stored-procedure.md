@@ -3,26 +3,24 @@ title: 从存储过程返回数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8120714aba03f2be632d19e846daea3789dba54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd21d239fb1a4a947e5f6d17120cc6a63feb575b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249687"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
   有两种方法可以将结果集或数据从过程返回给调用程序：输出参数和返回代码。 本主题提供了有关这两种方法的信息。  
@@ -75,13 +73,13 @@ GO
  如果在调用过程时为参数指定 OUTPUT，而在过程定义中该参数又不是用 OUTPUT 定义的，那么将收到一条错误消息。 但是，在执行过程时，可以执行带有输出参数的过程而不指定 OUTPUT。 这样不会返回错误，但将无法在调用程序中使用输出值。  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>在 OUTPUT 参数中使用 cursor 数据类型  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可以使用过程`cursor`数据类型用于 OUTPUT 参数。 如果`cursor`数据类型指定为参数，则必须为过程定义中该参数指定 VARYING 和 OUTPUT 关键字。 可以将参数指定为仅限 OUTPUT，但如果在参数声明中指定了 VARYING 关键字，数据类型必须为`cursor`并且还必须指定 OUTPUT 关键字。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可以使用过程`cursor`数据类型用于 OUTPUT 参数。 如果`cursor`数据类型指定为参数，则必须为过程定义中该参数指定 VARYING 和 OUTPUT 关键字。 可以将参数指定为仅限 OUTPUT，但如果在参数声明中指定了 VARYING 关键字，则数据类型必须为`cursor`，并且还必须指定 OUTPUT 关键字。  
   
 > [!NOTE]  
->  `cursor`数据类型不能绑定到应用程序通过数据库 Api 如 OLE DB、 ODBC、 ADO 和 Db-library 的变量。 因为必须先绑定 OUTPUT 参数，应用程序才可以执行的过程，过程，与`cursor`输出参数不能通过数据库 Api 调用。 这些过程可以从调用[!INCLUDE[tsql](../../../includes/tsql-md.md)]批处理、 过程或触发器时，才`cursor`输出变量分配给[!INCLUDE[tsql](../../../includes/tsql-md.md)]本地`cursor`变量。  
+>  `cursor`数据类型不能绑定到通过数据库 Api，如 OLE DB、 ODBC、 ADO 和 Db-library 应用程序变量。 因为必须绑定 OUTPUT 参数，应用程序可以执行的过程，过程与之前`cursor`输出参数不能从数据库 Api 调用。 可以从调用这些过程[!INCLUDE[tsql](../../../includes/tsql-md.md)]批处理、 过程或触发器时，才`cursor`OUTPUT 变量分配给[!INCLUDE[tsql](../../../includes/tsql-md.md)]本地`cursor`变量。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>cursor 输出参数的规则  
- 以下规则适用于`cursor`执行过程时，输出参数：  
+ 以下规则适用于`cursor`时执行该过程输出参数：  
   
 -   对于只进游标，游标的结果集中返回的行只是那些过程执行结束时处于或超出游标位置的行，例如：  
   
@@ -108,7 +106,7 @@ GO
     >  关闭状态只有在返回时才有影响。 例如，可以在过程中关闭游标，稍后再打开游标，然后将该游标的结果集返回给调用批处理、过程或触发器。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 输出参数的示例  
- 在下面的示例中，创建过程指定一个输出参数， `@currency`_`cursor`使用`cursor`数据类型。 然后在批处理中调用该过程。  
+ 在以下示例中，创建过程的指定输出参数， `@currency`_`cursor`使用`cursor`数据类型。 然后在批处理中调用该过程。  
   
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   
@@ -149,7 +147,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>使用返回代码返回数据  
- 过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 使用 RETURN 语句指定过程的返回代码。 与 OUTPUT 参数一样，执行过程时必须将返回代码保存到变量中，才能在调用程序中使用返回代码值。 例如，分配变量`@result`的数据类型`int`用于存储过程的返回代码`my_proc`，如：  
+ 过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 使用 RETURN 语句指定过程的返回代码。 与 OUTPUT 参数一样，执行过程时必须将返回代码保存到变量中，才能在调用程序中使用返回代码值。 例如，赋值变量`@result`的数据类型`int`用于存储过程的返回代码`my_proc`，如：  
   
 ```  
 DECLARE @result int;  

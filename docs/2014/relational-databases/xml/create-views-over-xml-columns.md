@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec628981acc51d660a0e8a99dba991d957955e9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3f575b1a21efa30d2317cff644b65c73150c4ac1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170178"
 ---
 # <a name="create-views-over-xml-columns"></a>对 XML 列创建视图
-  你可以使用`xml`类型列创建视图。 下面的示例在其中创建视图中的值`xml`类型列使用检索`value()`方法`xml`数据类型。  
+  可以使用`xml`类型列创建视图。 以下示例在其中创建一个视图中的值`xml`类型列使用检索`value()`方法的`xml`数据类型。  
   
 ```  
 -- Create the table.  
@@ -59,7 +59,7 @@ ProductID   PName
 1           SomeName   
 ```  
   
- 请注意以下几点使用`xml`要创建视图的数据类型：  
+ 请注意以下几点有关使用`xml`数据类型创建视图：  
   
 -   可以在具体化视图中创建 xml 数据类型。 具体化视图不能基于 xml 数据类型方法。 但是，它可以转换为不同于基表中的 xml 类型列的 XML 架构集合。  
   

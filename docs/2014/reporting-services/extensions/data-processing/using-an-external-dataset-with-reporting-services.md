@@ -17,15 +17,15 @@ helpviewer_keywords:
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 caps.latest.revision: 48
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3bbf50ec43b263eedb9a7d1b8805b0575dc3962
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: aaa06d612dc3ed28c442076c96ff4782003a333e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202537"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>将外部数据集用于 Reporting Services
   DataSet 对象是支持具有 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 的断开连接的、分布式数据方案的核心。 DataSet 对象是数据的驻留内存表示形式，提供与数据源无关的一致的关系编程模型。 它可用于具有 XML 数据的多种不同的数据源，或者用于管理应用程序的本地数据。 DataSet 对象表示完整的数据集合，包括相关表、约束以及表之间的关系。 由于 DataSet 对象既存储数据、又公开数据，因此，数据可能会经常被处理并转换为 DataSet，然后发生针对这些数据的报告。  

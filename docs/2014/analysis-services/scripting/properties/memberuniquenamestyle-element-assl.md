@@ -1,5 +1,5 @@
 ---
-title: MemberUniqueNameStyle 元素 (ASSL) |Microsoft 文档
+title: MemberUniqueNameStyle 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca327bceaddce4c0f7ac1b7a726d321a02cdffc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226357"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 元素 (ASSL)
-  确定如何唯一名称的层次结构中包含的成员生成[CubeDimension](../data-type/dimension-data-type-assl.md)元素。  
+  确定如何唯一名称为层次结构中包含的成员生成[CubeDimension](../data-type/dimension-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36127391"
 |*NamePath*|该实例将生成由每个级别和成员标题组成的复合名称。|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`MemberUniqueNameStyle`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.CubeDimension>。  
+ 父级对应的元素`MemberUniqueNameStyle`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CubeDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

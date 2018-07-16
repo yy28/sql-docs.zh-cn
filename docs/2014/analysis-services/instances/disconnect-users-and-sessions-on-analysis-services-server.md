@@ -1,5 +1,5 @@
 ---
-title: 断开用户连接和会话上 Analysis Services 服务器 |Microsoft 文档
+title: 断开用户连接和会话上 Analysis Services 服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ending user activity [Analysis Services]
 - connections [Analysis Services]
 - sessions [Analysis Services]
 ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9f7979b85f3f1af919e55ef9d20b14d153a3f71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b327f4f6e8e7088704008b128fc410f6d9b6e0eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222227"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>断开 Analysis Services 服务器上用户和会话的连接
   作为工作负荷管理的一部分， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可能需要结束用户活动。 可以通过取消会话和连接来完成这一任务。 会话可以在运行查询时隐式自动形成，也可以在创建会话时由管理员显式命名。 连接是开放的管道，可以通过连接运行查询。 会话和连接均可在处于活动状态时结束。 例如，如果会话处理时间过长，或者对正在执行的命令是否被正确写入产生了怀疑，管理员可能要结束对会话的处理。  
@@ -79,6 +79,6 @@ ms.locfileid: "36126627"
  [管理连接和会话&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [BeginSession 元素&#40;XMLA&#41;](../xmla/xml-elements-headers/beginsession-element-xmla.md)   
  [EndSession 元素&#40;XMLA&#41;](../xmla/xml-elements-headers/endsession-element-xmla.md)   
- [会话元素&#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
+ [Session 元素&#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
   
   

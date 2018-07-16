@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - memory [SQL Server], NUMA
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-uniform memory access
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7f9c18af0ff41315bff9f014feceed0b5b1017f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba432a934ef7992b5cc41c1d33fbebbb16c971b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163328"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>将 TCP IP 端口映射到 NUMA 节点 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器来将 TCP/IP 端口映射到非一致性内存访问 (NUMA) 节点。 启动时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会将节点信息写入错误日志中。  
@@ -59,6 +59,6 @@ ms.locfileid: "36127972"
 3.  在 **“IP 地址”** 选项卡（要配置的 IP 地址的相应部分）的 **“TCP 端口”** 框中，在端口号后面的方括号里添加 NUMA 节点标识符。 例如，对于 TCP 端口 1500年和节点 0、 2 和 5，使用`1500[37]`，或`1500[0x25]`。  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 配置为使用软件 NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)  
+ [SQL Server 配置为使用软件 NUMA， &#40;SQL Server&#41;](soft-numa-sql-server.md)  
   
   

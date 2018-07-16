@@ -1,5 +1,5 @@
 ---
-title: 项目和包的部署 |Microsoft 文档
+title: 项目和包的部署 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50da655d029228c4fc2339b49245cd11f5967305
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf58e533b46304d4d8833626381e52e86d017404
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221657"
 ---
 # <a name="deployment-of-projects-and-packages"></a>项目和包的部署
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  

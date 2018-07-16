@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan Statistics Profile event class
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b327098b3a7b0920b49917631bcc26cfd704337d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0a8634750f29c68af569a7c5d7da3803ce47a167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231107"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile 事件类
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan Statistics Profile 事件类。 所包括的信息是 Showplan XML Statistics Profile 事件类中所含信息的一部分。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan Statistics Profile 事件类。 所包括的信息是 Showplan XML Statistics Profile 事件类中所含信息的一部分。  
   
  Showplan Statistics Profile 事件类显示完整的编写时数据；包含 Showplan Statistics Profile 的跟踪可能会使性能明显降低。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。  
   

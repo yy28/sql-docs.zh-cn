@@ -1,5 +1,5 @@
 ---
-title: 实例配置 |Microsoft 文档
+title: 实例配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274323"
 ---
 # <a name="instance-configuration"></a>实例配置
   使用 **安装向导的** “实例配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页面可指定是创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是其命名实例。 如果尚未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则除非您指定命名实例，否则将创建默认实例。  
@@ -65,7 +65,7 @@ ms.locfileid: "36126770"
   
 -   如果为实例名称指定 MSSQLServer，将创建默认实例。  
   
--   安装[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]始终安装为命名实例 PowerPivot。 您不能为此功能角色指定不同的实例名称。  
+-   安装[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]始终作为 powerpivot 命名实例安装。 您不能为此功能角色指定不同的实例名称。  
   
 -   实例名限制为 16 个字符。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36126770"
   
 -   实例名称中不允许含有空格或其他特殊字符， 也不允许存在反斜杠 (\\)、逗号 (,)、冒号 (:)、分号 (;)、单引号 (')、& 号 (&)、连字号 (-) 和 at 符 (@)。  
   
--   **只有在当前 Windows 代码页中有效的字符可在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。如果使用了不受支持的 Unicode 字符，将发生安装错误。**  
+-   **只有在当前 Windows 代码页中有效的字符可在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。如果使用的不受支持的 Unicode 字符，则将发生安装错误。**  
   
  **检测到的实例和功能**  
  查看正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机中安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和组件的列表。  

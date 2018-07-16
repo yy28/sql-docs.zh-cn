@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e05c5d9e4e400ddc240bfd5bd4630801765164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b1519c49181be681fa6ced527d1db14f488aaf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176514"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
   本主题说明数据库镜像会话的同步和异步运行模式。  
@@ -50,7 +49,7 @@ ms.locfileid: "36127977"
  此节介绍异步数据库镜像的工作原理，何时适合使用高性能模式以及在主体服务器发生故障时如何响应。  
   
 > [!NOTE]  
->  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本信息，请参阅"高可用性 (AlwaysOn)"中[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本信息，请参阅"高可用性 (AlwaysOn)"中[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  将事务安全设置为 OFF 时，数据库镜像会话便会异步运行。 异步操作仅支持一种操作模式 - 高性能模式。 此模式可增强性能，但要牺牲高可用性。 高性能模式仅使用主体服务器和镜像服务器。 镜像服务器上出现的问题不会影响主体服务器。 在丢失主体服务器的情况下，镜像数据库将标记为 DISCONNECTED，但仍可以作为备用数据库。  
   
@@ -224,9 +223,9 @@ ms.locfileid: "36127977"
 |不带自动故障转移的高安全性模式|FULL|NULL（无见证服务器）|  
 |具有自动故障转移的高安全性模式<sup>1</sup>|FULL|CONNECTED|  
   
- <sup>1</sup>如果见证服务器断开连接，我们建议你设置 WITNESS OFF 的，直到见证服务器实例变为可用。  
+ <sup>1</sup>如果见证服务器断开连接，我们建议您设置 WITNESS OFF 的，直到见证服务器实例变为可用。  
   
- <sup>2</sup>高性能模式中存在见证服务器，则如果见证服务器没有参与会话中。 但是，若要使数据库可用，必须至少有两个服务器实例保持连接。 因此，建议您在高性能模式会话中，始终将 WITNESS 属性设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ <sup>2</sup>如果见证服务器处在高性能模式下，见证服务器不会参与会话。 但是，若要使数据库可用，必须至少有两个服务器实例保持连接。 因此，建议您在高性能模式会话中，始终将 WITNESS 属性设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ###  <a name="ViewWitness"></a> 查看安全设置和见证服务器状态  
  若要针对数据库查看安全设置和见证服务器的状态，请使用 **sys.database_mirroring** 目录视图。 相关列如下所示：  

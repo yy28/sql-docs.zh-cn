@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.removesecondaryar.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 caps.latest.revision: 35
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 8dd0df4b298c998d5697a43b04a0a892541be87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f2616b1bf50197ded6d2c076844609e1f4776018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261543"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>从可用性组中删除辅助副本 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除辅助副本。  
@@ -115,7 +114,7 @@ ms.locfileid: "36127382"
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请使用`Get-Help`中的 cmdlet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

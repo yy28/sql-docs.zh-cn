@@ -1,5 +1,5 @@
 ---
-title: 数据配置文件查看器 F1 帮助 |Microsoft 文档
+title: 数据配置文件查看器 F1 帮助 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f29fae6a9f9284bd35b2779029d7b3f176bcd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27869a87ed10056517806bd872ef1e48d572690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302387"
 ---
 # <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
   可以使用数据配置文件查看器查看数据事件探查任务的输出。  
@@ -58,10 +58,10 @@ ms.locfileid: "36016889"
  显示此列中值的最大长度。  
   
  **忽略前导空格**  
- 显示是否与此配置文件计算得出`IgnoreLeadingSpaces`值 True 或 False。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
+ 显示计算此配置文件时`IgnoreLeadingSpaces`的 True 或 False 值。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
   
  **忽略尾随空格**  
- 显示是否与此配置文件计算得出`IgnoreTrailingSpaces`值 True 或 False。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
+ 显示计算此配置文件时`IgnoreTrailingSpaces`的 True 或 False 值。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
   
  **行计数**  
  显示表或视图中的行数。  

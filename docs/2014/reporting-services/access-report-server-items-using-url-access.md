@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
@@ -16,13 +16,13 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d8c509675ed604582fe83ce7ddf539b0e7be717e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7184a0a5aa72ea7fe4ff681103044f2791bdf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227074"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 访问报表服务器项
   本主题介绍如何使用 rs:Command=Value 访问报表服务器数据库或 SharePoint 站点中不同类型的目录项。  
@@ -69,7 +69,7 @@ ms.locfileid: "36127487"
 </DataSourceDefinition>  
 ```  
   
- 将根据报表服务器的 **SecureConnectionLevel** 设置返回连接字符串。 有关详细信息**SecureConnectionLevel**设置，请参阅[Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)。  
+ 将根据报表服务器的 **SecureConnectionLevel** 设置返回连接字符串。 有关详细信息**SecureConnectionLevel**设置，请参见[Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)。  
   
 ## <a name="access-the-contents-of-a-folder"></a>访问文件夹的内容  
  要访问某一文件夹的内容，请使用 rs:Command=GetChildren 参数。 将返回一个一般的文件夹导航页，其中包含指向在所请求文件中包含的子文件夹、报表、数据源和资源的链接。 例如：  

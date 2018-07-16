@@ -1,5 +1,5 @@
 ---
-title: 报表向导的帮助 |Microsoft 文档
+title: 报表向导帮助 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.rptwizardhelp.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 caps.latest.revision: 33
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 315091a829fc7294bb08be76d5231a43afb2fa20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cda8c213e8f14da1d36eeb3b71ad913762703f92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309357"
 ---
 # <a name="report-wizard-help"></a>报表向导帮助
   本部分介绍报表向导的 F1 帮助。 报表向导可自动完成创建表格报表和矩阵报表的过程。 下表对本部分的主题进行了说明：  
@@ -39,11 +39,11 @@ ms.locfileid: "36014948"
   
 -   [设计查询](../../2014/reporting-services/design-the-query.md)  
   
--   [查询生成器&#40;报表向导&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
+-   [查询生成器&#40;报告向导&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
   
 -   [选择报表类型](../../2014/reporting-services/select-the-report-type.md)  
   
--   [设计表&#40;报表向导&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [设计表&#40;报告向导&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [选择表布局](../../2014/reporting-services/choose-the-table-layout.md)  
   

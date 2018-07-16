@@ -1,5 +1,5 @@
 ---
-title: SolveOrder 元素 (ASSL) |Microsoft 文档
+title: SolveOrder 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173288"
 ---
 # <a name="solveorder-element-assl"></a>SolveOrder 元素 (ASSL)
   指示在其中的求解次序[CalculationProperty](../objects/calculationproperty-element-assl.md)元素应用于计算的成员或计算的单元定义。  
@@ -62,14 +62,14 @@ ms.locfileid: "36129071"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `SolveOrder`属性适用于`CalculationProperty`元素[CalculationType](calculationtype-element-assl.md)的*成员*或*单元格*。  
+ `SolveOrder`属性适用于`CalculationProperty`元素[CalculationType](calculationtype-element-assl.md)的*成员*或者*单元格*。  
   
- 对应于的父元素`SolveOrder`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.CalculationProperty>。  
+ 父级对应的元素`SolveOrder`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CalculationProperty>。  
   
 ## <a name="see-also"></a>请参阅  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [MdxScript 元素&#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Mdxscript 被元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [MdxScripts 元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

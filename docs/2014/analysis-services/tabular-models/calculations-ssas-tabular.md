@@ -1,5 +1,5 @@
 ---
-title: 计算 (SSAS 表格) |Microsoft 文档
+title: 计算 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 738816e3-0e1d-44a5-8d1b-81068dce8ac0
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f17c8ab9ebf08379bf0b989924221995d7eaf891
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0628ad4360199ac1710ac9669e27c214287a0e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261355"
 ---
 # <a name="calculations-ssas-tabular"></a>计算（SSAS 表格）
   将数据导入模型之后，可以添加计算来聚合、筛选、扩展、组合和保护该数据。 表格模型采用数据分析表达式 (DAX)，这是一种用于创建自定义计算的公式语言。 在表格模型中，使用 DAX 公式创建的计算用在“计算列” 、“度量值” 和“行筛选器” 中。  

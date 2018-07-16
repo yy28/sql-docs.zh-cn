@@ -1,5 +1,5 @@
 ---
-title: 创建查询使用表以外的对象 (Visual Database Tools) |Microsoft 文档
+title: 创建查询使用表以外的对象 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47e0895f71964c1c903bed462a1d0b4f2b118e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eea7b83bcad091b395b82aa39c47a2ab2f9685d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303187"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用表以外的对象创建查询 (Visual Database Tools)
   每次编写检索查询时，必须明确说明所需的列和行以及查询处理器应从何处查找原始数据。 一般情况下，此类原始数据由一个表或几个联接在一起的表组成。 不过，原始数据也可以来自表以外的源。 事实上，它可以来自视图、查询、同义词或可返回表的用户定义函数。  

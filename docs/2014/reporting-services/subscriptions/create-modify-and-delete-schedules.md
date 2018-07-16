@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -25,27 +25,27 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c4ac89d35cfe118cb82e945ef48d87c24b56abed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5cecee40fb3eaee2bd481b38a54cbcfa686eb0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317873"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   通过本主题，您可以了解有关创建、修改和删除计划的信息。  
   
  本主题内容：  
   
--   [概述管理共享计划](#bkmk_overview)  
+-   [共享计划的管理概述](#bkmk_overview)  
   
 -   [创建和管理共享的计划 （SharePoint 模式）](#bkmk_sharepoint)  
   
 -   [创建和管理共享的计划 （本机模式）](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a> 概述管理共享计划  
- 若要管理共享的计划为纯模式，使用计划页在报表管理器或中的共享计划文件夹[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 对于 SharePoint 模式，请使用针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的管理页。  
+##  <a name="bkmk_overview"></a> 共享计划的管理概述  
+ 若要管理本机模式下的共享的计划，请使用报表管理器中的计划页或共享计划文件夹中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 对于 SharePoint 模式，请使用针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的管理页。  
   
  您可以查看为报表服务器定义的所有共享计划、暂停和恢复计划（仅限在报表管理器上），还可以选择要修改或删除的计划。 “共享计划”页汇总了每个计划的状态的以下相关信息：频率、所有者、过期日期和状态。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36017685"
   
 2.  在对象资源管理器中，展开报表服务器节点。  
   
-3.  右键单击共享计划文件夹中，并依次**新计划**。 将显示 **“新建共享计划”** 对话框的“常规”页。  
+3.  右键单击共享计划文件夹，然后依次**新计划**。 将显示 **“新建共享计划”** 对话框的“常规”页。  
   
      要修改现有共享的计划，请展开“共享的计划”文件夹，右键单击要修改的计划，然后单击“属性”。  
   

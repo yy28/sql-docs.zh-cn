@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 创建在 Windows Azure 存储中的数据库 |Microsoft 文档
+title: 第 4 课： 在 Windows Azure 存储中创建数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b72bfc90936011fc4556fae6021fad89b134c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327837"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>第 4 课：在 Windows Azure 存储中创建数据库
   在本课程中，你将学习如何使用“Windows Azure 中的 SQL Server 数据文件”功能来创建数据库。 注意，开始学习本课之前，必须先学完第 1、2 和 3 课。 第 3 课是一个非常重要的步骤，因为需要将有关 Windows Azure 存储容器及其关联的策略名称和 SAS 密钥的信息存储到 SQL Server 凭据存储区中，然后再开始学习第 4 课。  
@@ -115,6 +115,6 @@ ms.locfileid: "36015012"
   
  **下一课：**  
   
- [第 5 课。&#40;可选&#41;加密你的数据库使用 TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [第 5 课。&#40;可选&#41;对使用 TDE 对数据库进行加密](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

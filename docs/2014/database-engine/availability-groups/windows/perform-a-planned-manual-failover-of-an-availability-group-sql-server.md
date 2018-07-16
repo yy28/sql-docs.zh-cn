@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.manualfailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: 34
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2573df633ca63b480869831b2f5edc0993ad4a56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7072e55d4c756be1bb0121e1e58abeb460b6760f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326327"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的计划手动故障转移 (SQL Server)
   本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移（类似于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移）将辅助副本转换为主角色，同时将以前的主副本转换为辅助角色。  
@@ -98,7 +97,7 @@ ms.locfileid: "36017804"
 2.  使用`Switch-SqlAvailabilityGroup`cmdlet。  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请使用`Get-Help`中的 cmdlet [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
      下面的示例将 *MyAg* 可用性组手动故障转移到具有指定路径的次要副本。  
   

@@ -1,5 +1,5 @@
 ---
-title: 请与使用 CLR 和 XML 创建 |Microsoft 文档
+title: 使用 CLR 和 XML 创建联系信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc0921ce6d6c4107df80e84c3623ead2fc209911
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6e7e534ec77dce09c99ba9172f6917308e39022c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213767"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>使用 CLR 和 XML 创建联系信息
   SQL Server 的联系人示例提供了一些有用的实用工具，这些实用工具在基本的 AdventureWorks2012 示例数据库之上形成了一层额外的功能。 第一个实用工具为 AdventureWorks2012 数据库中所涉及的各种类型的人创建联系记录。 联系信息通过使用 XML 来指定，并传递到基于 C# 的存储过程或 VB 存储过程，以创建 XML 并将其放入该数据库中的正确表。  
@@ -83,7 +83,7 @@ ms.locfileid: "36127585"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]测试到文件的命令脚本并将其保存为`test.sql`示例目录中。  
+10. 复制[!INCLUDE[tsql](../../includes/tsql-md.md)]到一个文件测试命令脚本并将其保存为`test.sql`示例目录中。  
   
 11. 使用以下命令执行测试脚本：  
   
@@ -1387,7 +1387,7 @@ End Class
   
 ```  
   
- 这是[!INCLUDE[tsql](../../includes/tsql-md.md)]安装脚本 (`Install.sql`)，该部署程序集，并在数据库中创建存储的过程。  
+ 这是[!INCLUDE[tsql](../../includes/tsql-md.md)]安装脚本 (`Install.sql`)，它将程序集部署并在数据库中创建存储的过程。  
   
 ```tsql  
 use AdventureWorks  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f0b4143ed7daa7274e82523cdd5083d27295b755
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d434f30fb3ef34c97aa38463aa9a28c115ac5e46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321247"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中从 .dqs 数据文件导入整个知识库。 您可以通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序内导出现有知识库来创建数据文件（请参阅 [将知识库导出到.dqs 文件](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)）。  

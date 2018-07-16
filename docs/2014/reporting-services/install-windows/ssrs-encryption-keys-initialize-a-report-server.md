@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -20,20 +20,20 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 70953e800019fd91afde599daa060abf3beda581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec18c65310311e51baf5c3d8a2d6939d4cac5f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232587"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化报表服务器（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，已初始化的服务器是指可以在报表服务器数据库中加密和解密数据的服务器。 初始化是一项必需的报表服务器操作。 初始化在报表服务器服务第一次启动时发生。 在将报表服务器联接到现有部署，或在恢复进程中手动重新创建密钥时也需要进行初始化。 有关使用加密密钥的方法和原因的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)和[存储加密的报表服务器数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
   
  加密密钥部分基于报表服务器服务的配置文件信息。 如果更改用于运行报表服务器服务的用户标识，则必须相应地更新密钥。 如果使用 Reporting Services 配置工具更改标识，将自动处理此步骤。  
   
- 如果由于某种原因初始化失败，则报表服务器返回`RSReportServerNotActivated`到用户和服务请求的响应中出错。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅 Technet Wiki 中的 [SSRS：解决 Reporting Services 的问题和错误](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)。  
+ 如果由于某种原因初始化失败，则报表服务器返回`RSReportServerNotActivated`用户和服务请求的响应中出错。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅 Technet Wiki 中的 [SSRS：解决 Reporting Services 的问题和错误](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)。  
   
 ## <a name="overview-of-the-initialization-process"></a>初始化过程概述  
  初始化过程将创建并存储一个用于加密的对称密钥。 对称密钥由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 加密服务创建，随后由报表服务器服务用来加密和解密数据。 对称密钥本身通过非对称密钥进行加密。  

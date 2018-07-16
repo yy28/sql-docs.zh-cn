@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38dccbf58c4e0cbfee98b10c7cd8974198bceabc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299997"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  

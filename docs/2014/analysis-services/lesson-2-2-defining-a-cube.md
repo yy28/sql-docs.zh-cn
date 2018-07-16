@@ -1,5 +1,5 @@
 ---
-title: 定义多维数据集 |Microsoft 文档
+title: 定义多维数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ee7de0dd605b8a6083a6541daf7942cf93ab5916
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9de74db589624ecbf16785ca108dbdd6c5f9ca87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323287"
 ---
 # <a name="defining-a-cube"></a>定义多维数据集
   多维数据集向导可以帮助您为多维数据集定义度量值组和维度。 在下面的任务中，将使用维度向导来构建多维数据集。  

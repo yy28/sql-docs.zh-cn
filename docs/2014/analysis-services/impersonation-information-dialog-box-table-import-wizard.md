@@ -1,5 +1,5 @@
 ---
-title: 模拟信息对话框 （表导入向导） |Microsoft 文档
+title: 模拟信息对话框 （表导入向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.impersonationinfo.f1
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53b71a06904bd3f898efa3dd2d9946670193845
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c9d9b49d41d8f9320ff414925bb4532145d16f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245677"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>“模拟信息”对话框（表导入向导）
   使用 **“模拟信息”** 页可以指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将用于连接到数据源的凭据。 有关凭据模拟的详细信息，请参阅[模拟&#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "36124220"
  **用户名**  
  键入要使用的用户帐户的域和名称。 使用以下格式：  
   
- *\<域名 >* **\\** *\<用户帐户名 >*  
+ *\<域名 >* ** \\ ** *\<用户帐户名 >*  
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  
   

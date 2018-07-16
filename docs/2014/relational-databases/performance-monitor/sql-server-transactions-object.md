@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: edc150f4977be2a85dddce1735385782e6d0fe9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 48e61e47e9752b187dd8b391cfe8b7983f00f136
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290483"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
   Microsoft **中的** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中处于活动状态的事务的数量，以及这些事务对资源（如 **tempdb**中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  

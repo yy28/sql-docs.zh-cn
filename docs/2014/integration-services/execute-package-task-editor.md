@@ -1,5 +1,5 @@
 ---
-title: 执行包任务编辑器 |Microsoft 文档
+title: 执行包任务编辑器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45d295035ecd4b01b481fc40573336a0fc5a0109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e6903528380735fde050decace5903e0a55c9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271713"
 ---
 # <a name="execute-package-task-editor"></a>执行包任务编辑器
   可以使用执行包任务编辑器来配置执行包任务。 执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企业功能。  

@@ -1,5 +1,5 @@
 ---
-title: 设置聚合选项 （聚合设计向导） |Microsoft 文档
+title: 设置聚合选项 （聚合设计向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29a9334ebe2f098c805d7093a739ecbf29d18d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e99f96de2f9b75fb49b0de5a73ef611bb7d991c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190887"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>设置聚合选项（聚合设计向导）
   可以使用 **“设置聚合选项”** 页启动聚合设计进程，为生成的聚合指定存储或性能限制。  
   
 ## <a name="options"></a>“常规”  
- **预计的存储空间达到**  
+ **预计存储空间达到**  
  通过指定可用于生成聚合的最大兆字节数 (MB) 或吉字节数 (GB)，可以限制聚合设计。  
   
  **性能提升达到**  

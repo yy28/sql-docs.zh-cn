@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scheduling jobs [SQL Server]
 - SQL Server Agent jobs, scheduling
 - jobs [SQL Server Agent], scheduling
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c7430671ad6ebbd65953727adacfb154aa612155
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9b76c883ceeed6b9758f8a132052b2e1b170fc05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312867"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   本主题介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。  
@@ -113,9 +113,9 @@ ms.locfileid: "36018096"
     GO  
     ```  
   
- 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)和[sp_attach_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)。  
+ 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)并[sp_attach_schedule &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)。  
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
- 使用`JobSchedule`通过使用一种选择，如 Visual Basic、 Visual C# 或 PowerShell 编程语言的类。 有关详细信息，请参阅[SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 使用`JobSchedule`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。 有关详细信息，请参阅[SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
   
   

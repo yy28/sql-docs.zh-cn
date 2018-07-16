@@ -1,5 +1,5 @@
 ---
-title: 第 8 课. 将数据库还原到 Windows Azure 存储空间 |Microsoft 文档
+title: 第 8 课. 将数据库还原到 Windows Azure 存储 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea9ec20e60fb879b17434e8fe4581d28b3d7a551
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 98d44755a26519dd63701ba8e5eebb1cf4ef7e7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311778"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>第 8 课. 将数据库还原到 Windows Azure 存储
   在本课中，您将学习如何在本地创建备份文件，然后将其还原到 Windows Azure 存储。 注意，数据库可在本地，也可在 Windows Azure 的虚拟机中。 不需要学完第 4、5、6 和 7 课即可听懂本课。  
@@ -73,21 +73,21 @@ ms.locfileid: "36015671"
   
  若要使用 SQL Server Management Studio 用户界面通过指向 Windows Azure 存储的数据和日志文件还原数据库，请执行以下步骤：  
   
-1.  在**对象资源管理器**，单击服务器名称以展开服务器树。  
+1.  在中**对象资源管理器**，单击服务器名称以展开服务器树。  
   
-2.  展开**数据库**，然后选择你的数据库。  
+2.  展开**数据库**，然后选择数据库。  
   
 3.  右键单击数据库，指向“任务”，再单击“还原”。  
   
-4.  上**常规**页上，在**还原**源部分，单击**源**设备。  
+4.  上**常规**页上，在**还原**源部分中，单击**源**设备。  
   
 5.  单击浏览按钮**源**设备文本框中，这将打开**选择备份设备**对话框。  
   
-6.  在备份媒体文本框中，选择**文件**，然后单击**添加**按钮以找到备份 (.bak) 文件。 单击“确定” 。  
+6.  在备份介质文本框中，选择**文件**，然后单击**添加**按钮查找备份 (.bak) 文件。 单击“确定” 。  
   
 7.  单击**文件**第一页上。  
   
-8.  在**还原数据库文件**一样部分下,**还原为**字段中，键入以下内容：  
+8.  在中**将数据库文件还原**下部分**还原为**字段中，键入以下内容：  
   
      对于数据文件，请键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`。 对于日志文件，请键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`。  
   

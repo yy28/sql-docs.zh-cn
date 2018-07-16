@@ -1,5 +1,5 @@
 ---
-title: 我的订阅页 （报表管理器） |Microsoft 文档
+title: 我的订阅页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f75d31ab49d706200ff90d49295d18bc9ba6487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177614"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>“我的订阅”页（报表管理器）
-  使用“我的订阅”页可以在同一位置查看您的所有订阅。 使用此页可以访问、修改或删除您拥有的任何订阅。 您只拥有您所创建的订阅。 您不能访问其他用户的订阅，也不能访问您可使用但不能拥有的订阅（例如，如果您的名称已添加到由另一个用户定义的某个现有订阅中）。 您不能从本页创建订阅。 有关创建订阅的详细信息，请参阅[新订阅或编辑订阅页&#40;报表管理器&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。  
+  使用“我的订阅”页可以在同一位置查看您的所有订阅。 使用此页可以访问、修改或删除您拥有的任何订阅。 您只拥有您所创建的订阅。 您不能访问其他用户的订阅，也不能访问您可使用但不能拥有的订阅（例如，如果您的名称已添加到由另一个用户定义的某个现有订阅中）。 您不能从本页创建订阅。 有关创建订阅的详细信息，请参阅[新的订阅或编辑订阅页&#40;报表管理器&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。  
   
  默认情况下，订阅按报表名的字母顺序排列。 单击不同的列标题可以更改订阅的排序方式。 如果没有任何订阅或者禁用了创建或管理订阅的权限，则该页不显示任何订阅。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  

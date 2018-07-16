@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11d97017f27634c5c6f3f913cd41447780b68199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29da6dedad91566c0d111acfeb18b3778d2da4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308117"
 ---
 # <a name="step-4-adding-package-configurations"></a>步骤 4：添加包配置
   在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  
@@ -46,7 +46,7 @@ ms.locfileid: "36017986"
   
 5.  在包配置向导的欢迎页中，单击“下一步”。  
   
-6.  在选择配置类型页上，选择**XML 配置文件**中**配置类型**列表中，选择**配置位置存储在一个环境变量**选项，然后键入`DataTransfer,`或选择**DataTransfer**列表中的环境变量。  
+6.  在选择配置类型页上选择**XML 配置文件**中**配置类型**列表中，选择**配置位置存储在一个环境变量**选项，然后键入`DataTransfer,`或选择**DataTransfer**列表中的环境变量。  
   
     > [!NOTE]  
     >  为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。 如果不希望重新启动计算机，则可以键入该环境变量的名称。  
@@ -97,7 +97,7 @@ ms.locfileid: "36017986"
   
 5.  在包配置向导的欢迎页中，单击“下一步”。  
   
-6.  在选择配置类型页上，选择**XML 配置文件**中**配置类型**列表中，选择**配置位置存储在一个环境变量**选项，请键入`LoadXMLData`或选择`LoadXMLData`列表中的环境变量。  
+6.  在选择配置类型页上选择**XML 配置文件**中**配置类型**列表中，选择**配置位置存储在一个环境变量**选项，请键入`LoadXMLData`或选择`LoadXMLData`列表中的环境变量。  
   
     > [!NOTE]  
     >  为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。  
@@ -135,7 +135,7 @@ ms.locfileid: "36017986"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 5：测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [包配置](../../2014/integration-services/package-configurations.md)   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stretch cluster
 - Availability Groups [SQL Server], WSFC clusters
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2238da7a6eae3e4374f899d8f7c667bc163f1e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65f8cb55f16372e5b0d70298fc3b3d5bb52ce2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317547"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集是一种配置，其中，每个故障转移群集节点都连接到其他子网或其他子网组。 这些子网可位于同一位置或在地理上分散的地点中。 跨地理上分散的站点进行群集有时称为拉伸群集。 因为没有所有节点都可以访问的共享存储，所以在多个子网上的数据存储之间应该复制数据。 对于数据复制，有多个可用数据的副本。 因此，多子网故障转移群集除了具备高可用性之外，还提供了灾难恢复解决方案。  
@@ -71,9 +70,9 @@ ms.locfileid: "36015622"
  并行安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 与 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 若将 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置为使用不同的端口，则在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 未能连接到备用节点时，将防止出现会阻止实例启动的意外 IP 地址/TCP 端口冲突。  
   
 ##  <a name="DNS"></a> 故障转移期间的客户端恢复延迟  
- 默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 `MultiSubnetFailover=True` 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅[AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)和[创建或配置可用性组侦听器&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
+ 默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 `MultiSubnetFailover=True` 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅[AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)并[创建或配置可用性组侦听器&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- 对于旧客户端库或第三方数据提供程序，不能使用`MultiSubnetFailover`连接字符串中的参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在其能够循环访问您的多子网 FCI 中的所有 IP 地址之前不会超时。  
+ 使用旧客户端库或第三方数据提供程序，不能使用`MultiSubnetFailover`在连接字符串中的参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在其能够循环访问您的多子网 FCI 中的所有 IP 地址之前不会超时。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的默认客户端连接超时期限为 15 秒。  
   

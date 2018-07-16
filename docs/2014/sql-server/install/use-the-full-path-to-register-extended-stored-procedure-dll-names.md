@@ -1,5 +1,5 @@
 ---
-title: 使用的完整路径注册扩展存储的过程 DLL 名称 |Microsoft 文档
+title: 使用的完整路径注册扩展存储的过程 DLL 名称 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - registering DLL names
 - extended stored procedures [SQL Server], registering
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - full path DLL name registration [SQL Server]
 ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5735e7cc66f269a03ba37fc33dd59e1bdc46c7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cf09e25eb1a07e7714969fb3838859586cf6d763
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303657"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>使用完整路径注册扩展存储过程 DLL 名称
   先前未用 DLL 名称的完整路径注册的扩展存储过程在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中可能无法运行。  

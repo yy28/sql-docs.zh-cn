@@ -1,5 +1,5 @@
 ---
-title: 报表属性对话框，页面设置 |Microsoft 文档
+title: 报表属性对话框，页面设置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 caps.latest.revision: 38
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3377c1d0384bb15cd131c041abe32590767fd8f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e9881b5016e4d2c8dbf9e69cb5a3fad6d24ed44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194407"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>“报表属性”对话框 ->“页面设置”
   选择 **“报表属性”** 对话框中的 **“页面设置”** 可设置整个报表的页面选项。  
@@ -55,10 +55,10 @@ ms.locfileid: "36128475"
  **底部**  
  设置报表底部与报表最后一行底部之间的距离。  
   
- **左**  
+ **左侧**  
  设置报表的左边缘与报表行的左边缘之间的距离。  
   
- **右**  
+ **右侧**  
  设置报表的右边缘与报表行的右边缘之间的距离。  
   
 ## <a name="see-also"></a>请参阅  

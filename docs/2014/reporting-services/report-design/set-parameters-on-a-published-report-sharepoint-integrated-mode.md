@@ -1,5 +1,5 @@
 ---
-title: 已发布报表 (Reporting Services SharePoint 集成模式下) 设置参数 |Microsoft 文档
+title: 设置已发布的报表 (Reporting Services SharePoint 集成模式下) 的参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 caps.latest.revision: 8
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2e6fc8260135151635971d1f0bd77bb74e21cc79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 11145fe92935f4e964b750310d70a753eb2e424c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189984"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>设置已发布报表的参数（SharePoint 集成模式下的 Reporting Services）
   参数化报表可以在运行报表时接受用于筛选数据的输入值。 参数是在创建报表时定义的。 根据报表定义中报表参数的定义方式，参数可以接受单值、多值或者根据上一选择而变化的动态值（例如，选择产品类别后，下一选择可能是该类别中的特定产品）。 参数可以具有默认值，该值可用于自动运行经过筛选的报表，也可以由不同的值来代替。  

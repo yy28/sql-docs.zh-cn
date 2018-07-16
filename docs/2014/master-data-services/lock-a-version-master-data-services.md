@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], locking
 - locking versions [Master Data Services]
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ad21e9b1503e1a352215632a5190267efa48f752
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bd611f0593aa1a99e075e3ea6cd506c48f705513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302377"
 ---
 # <a name="lock-a-version-master-data-services"></a>锁定版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，锁定某一模型的版本以便防止对该模型的成员及其属性的更改。  

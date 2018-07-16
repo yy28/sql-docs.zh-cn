@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47093fbf2be19ffcb8891c782df7fd6a72207b42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 391becc72bcbcb21ff0f15c57229ec28acc8f158
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326197"
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
   只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  

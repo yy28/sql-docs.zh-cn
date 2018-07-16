@@ -1,5 +1,5 @@
 ---
-title: 分区和 DirectQuery 模式 (SSAS 表格) |Microsoft 文档
+title: 分区和 DirectQuery 模式 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269683"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>分区和 DirectQuery 模式（SSAS 表格）
   本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中分区的更多常规信息，请参阅[分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
- 有关如何更改分区使用时或查看有关分区的信息的说明，请参阅[更改 DirectQuery 分区&#40;SSAS 表格&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
+ 有关如何更改的分区的使用或查看有关分区的信息的说明，请参阅[更改 DirectQuery 分区&#40;SSAS 表格&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
   
 ## <a name="using-partitions-in-directquery-mode"></a>在 DirectQuery 模式下使用分区  
  对于每个表，您必须指定要用作 DirectQuery 数据源的单个分区。  如果存在多个分区，则在您切换模型以便启用 DirectQuery 模式时，默认情况下，在该表中已创建的第一个分区将标记为 DirectQuery 分区。 可以在以后通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的分区管理器来更改此设置。  

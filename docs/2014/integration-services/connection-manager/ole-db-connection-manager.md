@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -18,13 +18,13 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6d2fd657b3fa7cd91f00f98242aed0e959dd5e9
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 11b88bd8144651abfed39fb5b68316abc23f09a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295137"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
   OLE DB 连接管理器使包能够用 OLE DB 访问接口连接到数据源。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 OLE DB 连接管理器可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -36,9 +36,9 @@ ms.locfileid: "36324601"
   
  OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编写的自定义任务中访问 OLE DB 数据源。  
   
- 当将一个 OLE DB 连接管理器添加到包，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建连接管理器，它将解析为 OLE DB 连接在运行时，设置连接管理器属性，并将添加到连接管理器`Connections`上的集合包。  
+ 当将一个 OLE DB 连接管理器添加到包中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器将解析为在运行时的 OLE DB 连接，设置该连接管理器属性，并将对该连接管理器`Connections`集合包。  
   
- `ConnectionManagerType`的连接管理器的属性设置为`OLEDB`。  
+ `ConnectionManagerType`连接管理器属性设置为`OLEDB`。  
   
  可以按下列方式配置 OLE DB 连接管理器：  
   
@@ -66,6 +66,6 @@ ms.locfileid: "36324601"
  [OLE DB 源](../data-flow/ole-db-source.md)   
  [OLE DB 目标](../data-flow/ole-db-destination.md)   
  [执行 SQL 任务](../control-flow/execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41;连接](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
   
   

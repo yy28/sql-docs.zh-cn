@@ -1,5 +1,5 @@
 ---
-title: 配置报表管理器 （本机模式） |Microsoft 文档
+title: 配置报表管理器 （本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299757"
 ---
 # <a name="configure-report-manager-native-mode"></a>配置报表管理器（本机模式）
   报表管理器是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择 **“以默认的本机模式配置安装”** 选项，则可以将报表管理器与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并有选择地进行配置。 还可以在安装完成后配置报表管理器。 本主题提供有关以下报表管理器配置方案的信息：  
@@ -90,7 +90,7 @@ ms.locfileid: "36025650"
   
 4.  保存所做的更改，并关闭该文件。  
   
- 有关配置文件的详细信息，请参阅[修改 Reporting Services 配置文件&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)和[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)。  
+ 有关配置文件的详细信息，请参阅[修改 Reporting Services 配置文件&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)并[RSReportServer 配置文件](rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="ConfigureRemoteRS"></a> 将报表管理器配置为使用远程报表服务器  
  对于将报表管理器和报表服务器置于不同计算机上的部署配置，必须有两个单独的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装。 报表管理器嵌入在报表服务器服务中，无法自行安装。 如果希望报表管理器在另一台计算机上以自身进程运行，则必须安装第二个报表服务器。 这两个服务器实例都必须是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器。  
@@ -117,7 +117,7 @@ ms.locfileid: "36025650"
   
 4.  在报表管理器计算机上，修改 RSReportServer.config 中的配置设置以指向远程报表服务器实例。 在启动时，报表管理器将读取该配置文件以获取指向报表服务器的 URL：  
   
-    1.  在文本编辑器中打开 RSReportServer.config。 默认情况下，它是位于 files\microsoft SQL Server\MSRS11。\< *instancename*> \Reporting Services\ReportServer。  
+    1.  在文本编辑器中打开 RSReportServer.config。 默认情况下，它位于 \Program Files\Microsoft SQL Server\MSRS11。\< *instancename*> services\reportserver。  
   
     2.  查找`ReportServerURL`。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36025650"
   
 8.  关闭不使用的服务器功能：  
   
-    -   在报表管理器计算机上，关闭`WebServiceAndHTTPAccessEnabled`和`ScheduleEventsAndReportDeliveryEnabled`。  
+    -   在报表管理器计算机上关闭`WebServiceAndHTTPAccessEnabled`和`ScheduleEventsAndReportDeliveryEnabled`。  
   
     -   在报表服务器计算机上关闭`ReportManagerEnabled`。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36025650"
   
 #### <a name="to-turn-off-report-manager"></a>关闭报表管理器  
   
-1.  在文本编辑器中打开 RSReportServer.config 文件。 默认情况下，它是位于 files\microsoft SQL Server\MSRS11。\< *instancename*> \Reporting Services\ReportServer。  
+1.  在文本编辑器中打开 RSReportServer.config 文件。 默认情况下，它位于 \Program Files\Microsoft SQL Server\MSRS11。\< *instancename*> services\reportserver。  
   
 2.  查找 **IsReportManagerEnabled**。  
   
@@ -176,10 +176,10 @@ ms.locfileid: "36025650"
   
 ## <a name="see-also"></a>请参阅  
  [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
- [Planning for Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [配置 URL &#40;SSRS 配置管理器&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [验证 Reporting Services 安装](../install-windows/verify-a-reporting-services-installation.md)   
- [为 HTML 查看器和报表管理器自定义样式表](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [自定义 HTML 查看器和报表管理器的样式表](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
  [打开或关闭 Reporting Services 功能](turn-reporting-services-features-on-or-off.md)   
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)   
  [RSReportServer 配置文件](rsreportserver-config-configuration-file.md)   

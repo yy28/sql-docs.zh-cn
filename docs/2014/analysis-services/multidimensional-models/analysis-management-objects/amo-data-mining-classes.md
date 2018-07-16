@@ -1,5 +1,5 @@
 ---
-title: AMO 数据挖掘类 |Microsoft 文档
+title: AMO 数据挖掘类 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171638"
 ---
 # <a name="amo-data-mining-classes"></a>AMO 数据挖掘类
   数据挖掘类可帮助您创建、修改、删除和处理数据挖掘对象。 处理数据挖掘对象包括创建数据挖掘结构、创建数据挖掘模型以及处理这些模型。  
   
- 有关如何设置环境，和有关的详细信息<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，和<xref:Microsoft.AnalysisServices.DataSourceView>对象，请参阅[AMO 基础类](amo-fundamental-classes.md)。  
+ 详细了解如何设置环境，以及大约<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，和<xref:Microsoft.AnalysisServices.DataSourceView>对象，请参阅[AMO Fundamental 类](amo-fundamental-classes.md)。  
   
  定义分析管理对象 (AMO) 中的对象需要设置每个对象的多个属性以设置正确的上下文。 复杂对象（例如 OLAP 和数据挖掘对象）需要较长且详细的编码。  
   
   
  下图显示了本主题中介绍的类之间的关系。  
   
- ![AMO 数据挖掘类](../../../analysis-services/dev-guide/media/amo-dataminingclasses.gif "AMO 数据挖掘类")  
+ ![AMO DataMining 类](../../../analysis-services/dev-guide/media/amo-dataminingclasses.gif "AMO DataMining 类")  
   
 ##  <a name="MiningStructure"></a> MiningStructure 对象  
  挖掘结构是挖掘模型的容器。 该结构定义了挖掘模型可使用的所有可能列。 每个挖掘模型都在该挖掘结构的已定义列集中定义自己的列。  
@@ -109,9 +109,9 @@ ms.locfileid: "36127410"
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [AMO 基础类](amo-fundamental-classes.md)   
- [编程 AMO 数据挖掘对象](programming-amo-data-mining-objects.md)   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO Fundamental 类](amo-fundamental-classes.md)   
+ [AMO 数据挖掘对象的编程](programming-amo-data-mining-objects.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

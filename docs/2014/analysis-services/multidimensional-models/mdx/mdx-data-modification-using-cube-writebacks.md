@@ -1,5 +1,5 @@
 ---
-title: 使用多维数据集写回 (MDX) |Microsoft 文档
+title: 使用多维数据集写回 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writeback [Analysis Services], cubes
 - cubes [Analysis Services], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 53a9b5ab5e3c5e6539304936bb62997f40576e02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e74303a0796f1b1ffbee4771b0e7ecbf40085b7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310767"
 ---
 # <a name="using-cube-writebacks-mdx"></a>使用多维数据集写回 (MDX)
   可以使用 [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) 语句更新多维数据集。 通过此语句，您可以使用特定值更新元组。 若要有效地使用 UPDATE CUBE 语句更新多维数据集，必须了解该语句的语法、发生错误的条件以及更新可能对多维数据集产生的影响。  

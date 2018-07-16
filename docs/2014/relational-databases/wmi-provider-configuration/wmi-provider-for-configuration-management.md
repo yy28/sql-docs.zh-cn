@@ -1,5 +1,5 @@
 ---
-title: WMI Provider for Configuration Management Concepts |Microsoft 文档
+title: 配置管理概念的 WMI 提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, about WMI Provider for Configuration Management
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5185d55296d1b5cd2adcbb6c61139e06195588be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5e19f7bda872dbf29c018599430f40bfd353ae42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290283"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>用于配置管理的 WMI 提供程序的概念
-  WMI 提供程序是与一起使用的已发布的层[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器管理单元用于接[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台 (MMC) 和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
+  WMI 提供程序是与一起使用的已发布的层[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器管理单元[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台 (MMC) 和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供程序是一个 DLL 和一个 MOF 文件，这些文件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序自动编译。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供程序包含一组的对象类用于控制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务使用以下方法：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供程序包含一组用于控制对象类[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务使用以下方法：  
   
 -   可以在其中嵌入 Windows 查询语言 (WQL) 的脚本语言，如 VBScript、[!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)] 或 Perl。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "36025172"
  此外，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务、客户端和服务器协议以及服务器别名。  
   
 ## <a name="see-also"></a>请参阅  
- [了解的 WMI 提供程序的配置管理](understanding-the-wmi-provider-for-configuration-management.md)   
- [使用的 WMI 提供程序的配置管理](working-with-the-wmi-provider-for-configuration-management.md)   
+ [了解配置管理的 WMI 提供程序](understanding-the-wmi-provider-for-configuration-management.md)   
+ [使用配置管理的 WMI 提供程序](working-with-the-wmi-provider-for-configuration-management.md)   
  [将 WQL 和脚本语言用于配置管理的 WMI 提供程序](using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   
   

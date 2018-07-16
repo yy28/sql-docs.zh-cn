@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring tables [SQL Server]
 - backups [SQL Server], restore scenarios
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b360f5817d74461d41ce47da47afbea8e4095649
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 72c827235057c77fe42de062dc2c09050dd1a698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197487"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
   若要从故障中恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，数据库管理员必须按照逻辑正确并且有意义的还原顺序还原一组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原和恢复支持从整个数据库、数据文件或数据页的备份还原数据，如下所示：  
@@ -46,7 +45,7 @@ ms.locfileid: "36129011"
   
      在完整恢复模式或大容量日志恢复模式下，可以还原单个数据库。 可以对任何数据库执行页面还原，而不管文件组数为多少。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原对所有支持的操作系统都有效，不管它们是 64 位还是 32 位系统。 有关支持的操作系统的信息，请参阅[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)中的“兼容性支持”部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原对所有支持的操作系统都有效，不管它们是 64 位还是 32 位系统。 有关支持的操作系统的信息，请参阅[的硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)中的“兼容性支持”部分。  
   
  **本主题内容：**  
   

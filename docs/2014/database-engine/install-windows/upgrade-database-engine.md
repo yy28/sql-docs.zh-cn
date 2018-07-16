@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a263e00df1978f09a77a4eeebbf90f0059fb2590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b8837cb450313df1c72a255a12fe0f26e29c941f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279843"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
   本主题提供了为升级过程进行准备和了解升级过程所需的信息，其中包括：  
@@ -50,7 +50,7 @@ ms.locfileid: "36125429"
 >  在从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
 ## <a name="pre-upgrade-checklist"></a>升级准备一览表  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。 也可以迁移早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的数据库。 可以从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移至同一台计算机上的另一个实例，也可以从另一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移。 迁移选项包括使用复制数据库向导，备份和还原功能，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]导入和导出向导中和大容量导出/大容量导入方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。 也可以迁移早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的数据库。 可以从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移至同一台计算机上的另一个实例，也可以从另一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移。 迁移选项包括使用复制数据库向导、 备份和还原功能，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]导入和导出向导中，以及批量导出/批量导入方法。  
   
  升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下主题：  
   
@@ -106,12 +106,12 @@ ms.locfileid: "36125429"
  可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安装向导升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>升级后的数据库兼容级别  
- 兼容级别`tempdb`， `model`，`msdb`和**资源**升级后的数据库将设置为 120。 `master` 系统数据库保留它在升级之前的兼容级别。  
+ 兼容性级别`tempdb`， `model`，`msdb`并**资源**升级后的数据库将设置为 120。 `master` 系统数据库保留它在升级之前的兼容级别。  
   
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。  
   
 > [!NOTE]  
->  新的用户数据库将继承的兼容级别`model`数据库。  
+>  新的用户数据库将继承的兼容性级别`model`数据库。  
   
 ## <a name="migrating-databases"></a>迁移数据库  
  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的备份和还原功能或分离和附加功能将用户数据库移动到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 有关详细信息，请参阅[通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)或[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
@@ -136,7 +136,7 @@ ms.locfileid: "36125429"
   
 -   验证或删除 USE PLAN 提示，这些提示由 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成并应用于对已分区表和索引的查询。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改已分区的表和索引的查询的处理的方式。 如果已分区对象将 USE PLAN 提示用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成的计划，针对这些对象的查询可能会包含不可在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的计划。 建议升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，执行下列过程。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改对已分区的表和索引的查询处理的方式。 如果已分区对象将 USE PLAN 提示用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成的计划，针对这些对象的查询可能会包含不可在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的计划。 建议升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，执行下列过程。  
   
      **如果直接在查询中指定 USE PLAN 提示：**  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36125429"
   
     3.  如果优化器未选择相应的计划并优化查询，请考虑使用所需的查询计划指定 USE PLAN 提示。  
   
-     **如果在计划指南中指定 USE PLAN 提示：**  
+     **如果计划指南中指定 USE PLAN 提示：**  
   
     1.  使用 sys.fn_validate_plan_guide 函数来检查计划指南的有效性。 或者，可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中的 Plan Guide Unsuccessful 事件检查是否存在无效计划。  
   
@@ -168,7 +168,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
   
 ## <a name="see-also"></a>请参阅  
  [支持的版本升级](supported-version-and-edition-upgrades.md)   
- [使用多个版本和 SQL Server 实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [使用多个版本和 SQL Server 的实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [后向兼容性](../../getting-started/backward-compatibility.md)   
  [升级复制的数据库](upgrade-replicated-databases.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 输入数据源凭据对话框 |Microsoft 文档
+title: 输入数据源凭据对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.runtimecredentials.f1
 - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
 caps.latest.revision: 26
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e168e05490bac9f4d3c8946d7759b5e37cea3083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2c650ed9dba79889583cc660b75abcc2d706e53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296137"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>“输入数据源凭据”对话框
-  使用**输入数据源凭据**对话框可以提供你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]凭据，这样你可以从数据源检索数据。  
+  使用**输入数据源凭据**对话框可以提供你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]凭据，以便可以从数据源检索数据。  
   
 ## <a name="options"></a>“常规”  
  **用户名**  

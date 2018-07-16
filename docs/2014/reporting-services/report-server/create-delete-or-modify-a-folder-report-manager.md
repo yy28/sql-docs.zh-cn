@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
 - modifying folders
@@ -20,13 +20,13 @@ ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8a6971e6746c7e35afdb010435bda10767e7b8f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177264"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>创建、删除或修改文件夹（报表管理器）
   可以创建文件夹来组织和管理发布到报表服务器的项。 创建文件夹有助于用户查找他们关注的报表。 对于内容管理员来说，文件夹提供了应用权限的框架。 可以对特定的文件夹创建角色分配，来限制对处于开发阶段或者不应大范围分布的报表的访问。  
@@ -78,7 +78,7 @@ ms.locfileid: "36128473"
 7.  单击 **“应用”** 以保存更改。  
   
 ## <a name="see-also"></a>请参阅  
- [新文件夹页&#40;报表管理器&#41;](../new-folder-page-report-manager.md)   
+ [新的文件夹页面&#40;报表管理器&#41;](../new-folder-page-report-manager.md)   
  [内容页&#40;报表管理器&#41;](../contents-page-report-manager.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

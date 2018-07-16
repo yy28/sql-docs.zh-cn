@@ -1,5 +1,5 @@
 ---
-title: 通过设置注册表值实现签名策略 |Microsoft 文档
+title: 通过设置注册表值实现签名策略 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c101b66398d7259d97bdf4a828830764138df09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320637"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  
@@ -58,9 +58,9 @@ ms.locfileid: "36015280"
   
 4.  右键单击“MSDTS”，指向“新建”，然后单击“DWORD 值”。  
   
-5.  更新到新的值的名称`BlockedSignatureStates`。  
+5.  更新到新值的名称`BlockedSignatureStates`。  
   
-6.  右键单击`BlockedSignatureStates`单击**修改**。  
+6.  右键单击`BlockedSignatureStates`然后单击**修改**。  
   
 7.  在 **“编辑 DWORD 值”** 对话框中，键入值 0、1、2 或 3。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36015280"
 9. 在 **“文件”** 菜单中，单击 **“退出”**。  
   
 ## <a name="see-also"></a>请参阅  
- [安全概述&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)   
  [使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

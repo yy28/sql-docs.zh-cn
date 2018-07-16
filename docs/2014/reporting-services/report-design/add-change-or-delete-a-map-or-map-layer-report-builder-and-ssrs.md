@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10526"
 - sql12.rtp.rptdesigner.maptilelayerproperties.general.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9f187f50864bfccdcf093ca8270c096f5032d57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 951fe65c8cf9876d5ea5afe2e8eda25b2f8e8a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286683"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当您向报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -45,7 +45,7 @@ ms.locfileid: "36127251"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- 按照地图层在“地图”窗格中的显示顺序从下到上绘制地图层。 在上图中，首先绘制图块层，最后绘制多边形层。 后来绘制的层可能隐藏先前绘制的层上的地图元素。 可以使用“地图”窗格工具栏上的箭头键来更改层的顺序。 若要显示或隐藏层，请切换可见性图标。 你可以在更改层的透明度`Visibility`页**层数据**属性对话框。  
+ 按照地图层在“地图”窗格中的显示顺序从下到上绘制地图层。 在上图中，首先绘制图块层，最后绘制多边形层。 后来绘制的层可能隐藏先前绘制的层上的地图元素。 可以使用“地图”窗格工具栏上的箭头键来更改层的顺序。 若要显示或隐藏层，请切换可见性图标。 可以更改层的透明度`Visibility`页的**层数据**属性对话框。  
   
  下表列出了 **“地图”** 窗格的工具栏图标：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36127251"
   
  “地图”窗格的底部是“地图”视图区域。 若要更改地图的中心或缩放选项，请使用箭头键来调整视图中心和使用滑块来调整缩放级别。  
   
- 有关层的详细信息，请参阅[地图&#40;报表生成器和 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
+ 有关层的详细信息，请参阅[映射&#40;报表生成器和 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -128,7 +128,7 @@ ms.locfileid: "36127251"
   
 1.  选择 **“地图点属性”** 对话框中的 **“常规”** 可以更改以下地图元素的标签、工具提示和标记类型选项：  
   
-    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要替代特定嵌入点的选项，请使用[地图嵌入点属性对话框中，标记](../map-embedded-point-properties-dialog-box-marker.md)页。  
+    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定嵌入点选项，请使用[地图嵌入点属性对话框中，标记](../map-embedded-point-properties-dialog-box-marker.md)页。  
   
     -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](../map-embedded-point-properties-dialog-box-marker.md)页。  
   
@@ -286,6 +286,6 @@ ms.locfileid: "36127251"
   
 ## <a name="see-also"></a>请参阅  
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
- [报表故障排除： 将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 目标数据库文件 |Microsoft 文档
+title: 目标数据库文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 97d8a955b199aeb617171ed29f27271252a9fc4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 184d1838b2f3d6effd37cfbeead410dc2f5299d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310127"
 ---
 # <a name="destination-database-files"></a>目标数据库文件
   可以使用 **“目标数据库文件”** 对话框查看或更改目标服务器上的数据库文件的名称和位置，或为传输数据库任务指定网络文件位置。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  

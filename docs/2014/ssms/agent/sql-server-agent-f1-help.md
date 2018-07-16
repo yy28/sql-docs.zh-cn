@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad0ca1b2550abdd0add92b16930eb8b39a2fd51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 449d734353bd9cebf881646613fad3f5233d7367
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257823"
 ---
 # <a name="sql-server-agent-f1-help"></a>SQL Server 代理的 F1 帮助
   本节包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 F1 帮助。 按 F1 键或在对话框中单击“帮助”即可从用户界面中查看这些主题。  

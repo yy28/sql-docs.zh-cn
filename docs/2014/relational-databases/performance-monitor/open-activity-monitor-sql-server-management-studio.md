@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
 - refresh interval for Activity Monitor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2f067d5efbf5b8e3262311e3b351e0443920287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8b1910e465e9f2f5d8341c5dd51596d5a6710bb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262433"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>打开活动监视器 (SQL Server Management Studio)
-  本主题介绍如何打开活动监视器以便获取有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进程并了解这些进程如何影响的当前实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题还介绍如何设置活动监视器的刷新间隔。  
+  本主题介绍如何打开活动监视器可以获取有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进程和了解这些进程如何影响的当前实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题还介绍如何设置活动监视器的刷新间隔。  
   
  **本主题内容**  
   

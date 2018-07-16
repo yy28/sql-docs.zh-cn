@@ -1,5 +1,5 @@
 ---
-title: 添加、 更新和删除数据 (Master Data Services) |Microsoft 文档
+title: 添加、 更新和删除数据 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 caps.latest.revision: 6
-author: douglaslM
+author: leolimsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 665925f4d9298b3bfaf1dcc5841b78993978a94e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311987"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>添加、更新和删除数据 (Master Data Services)
   你可以添加数据并将数据批量更改为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的模型。  
@@ -44,7 +44,7 @@ ms.locfileid: "36025494"
   
     -   用于移动显式层次结构中成员的位置的表为 stg.\<name>_Relationship。 有关所需字段的信息，请参阅[关系临时表 (Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)。  
   
-         在显式层次结构中移动成员的概述，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
+         有关移动显式层次结构中成员的概述，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
   
     -   使用 **ImportType** 字段值来指定你要创建新的成员、停用成员或删除成员。 有关这些值的详细信息，请参阅[叶成员临时表 (Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)和[合并成员临时表 (Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36025494"
   
     -   运行临时表（想要移动数据到的目标位置）相对应的临时存储过程。  
   
-         临时存储的过程和临时表的概述，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。 有关临时存储过程参数以及代码示例的详细信息，请参阅[临时存储过程 (Master Data Services)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)。  
+         有关临时存储的过程和临时表的概述，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。 有关临时存储过程参数以及代码示例的详细信息，请参阅[临时存储过程 (Master Data Services)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)。  
   
     -   使用主数据管理的“集成管理”  功能区域。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36025494"
   
          按照 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的“临时批处理间隔”设置所确定的间隔启动临时过程。 有关详细信息，请参阅[系统设置 (Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
-5.  查看在临时过程中出现的错误。 有关详细信息，请参阅[临时过程时发生的视图错误&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)和[临时过程错误&#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)。  
+5.  查看在临时过程中出现的错误。 有关详细信息，请参阅[临时过程时发生的视图错误&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)并[临时过程错误&#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)。  
   
 6.  根据业务规则对数据进行验证。  
   

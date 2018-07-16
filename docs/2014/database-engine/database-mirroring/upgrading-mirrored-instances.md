@@ -1,35 +1,34 @@
 ---
-title: 升级服务器实例时，尽量减少镜像数据库的停机时间 |Microsoft 文档
+title: 升级服务器实例时，尽量减少镜像数据库的停机时间 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300817"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>升级服务器实例时，尽量减少镜像数据库的停机时间
-  升级到的服务器实例时[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，你可以通过执行顺序升级，每个镜像数据库的停机时间减少到仅一次的手动故障转移称为*滚动升级*。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的服务器实例，然后对镜像数据库进行手动故障转移，升级以前的主体服务器，恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的服务器实例上运行的镜像会话的编号和布局。  
+  升级到的服务器实例时[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，你可以减少每个镜像数据库的停机时间仅一次的手动故障转移到按顺序进行升级，称为*滚动升级*。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的服务器实例，然后对镜像数据库进行手动故障转移，升级以前的主体服务器，恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的服务器实例上运行的镜像会话的编号和布局。  
   
 > [!NOTE]  
->  有关执行滚动升级来安装 service pack 或修补程序的信息，请参阅[镜像数据库了停机时间最短的系统上安装的 Service Pack](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
+>  有关执行滚动升级，以安装 service pack 或修补程序的信息，请参阅[为镜像数据库停机时间最短的系统上安装 Service Pack](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
   
  **建议的准备工作 （最佳实践）**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "36014889"
   
     2.  在每个主体服务器上运行 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) 命令。  
   
- **滚动升级阶段**  
+ **滚动升级的阶段**  
   
  滚动升级的具体步骤取决于镜像配置的运行模式。 不过基本阶段是相同的。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "36014889"
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [查看镜像数据库的状态 (SQL Server Management Studio)](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
- [为镜像数据库了停机时间最短的系统上安装的 Service Pack](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
+ [镜像数据库停机时间最短的系统上安装的 Service Pack](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [在数据库镜像会话中强制服务 (Transact-SQL)](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [启动数据库镜像监视器 (SQL Server Management Studio)](start-database-mirroring-monitor-sql-server-management-studio.md)   

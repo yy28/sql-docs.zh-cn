@@ -1,5 +1,5 @@
 ---
-title: CaptionColumn 元素 (ASSL) |Microsoft 文档
+title: CaptionColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaptionColumn element
 ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58d10ce00adaa3593f50be99383bdfbdbee14441
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c60ac92841ce35e7b4c00c80da4be4eeed6bd96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273343"
 ---
 # <a name="captioncolumn-element-assl"></a>CaptionColumn 元素 (ASSL)
   定义提供属性标题的列。  
@@ -64,7 +64,7 @@ ms.locfileid: "36125708"
 ## <a name="remarks"></a>Remarks  
  有关详细信息`DataItem`类型，包括 Analysis Services 脚本语言 (ASSL) 对象和属性表`DataItem`类型，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 对应于的父元素`CaptionColumn`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AttributeTranslation>。  
+ 父级对应的元素`CaptionColumn`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AttributeTranslation>。  
   
 ## <a name="see-also"></a>请参阅  
  [对象&#40;ASSL&#41;](objects-assl.md)  

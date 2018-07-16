@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], skipping data fields
 - skipping data fields when importing
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a60d4d668cb9c7d7d13a60a12df1057b24eea465
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b7a68881bf5609e3a5ab3036b17f4a38faf875cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225237"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式化文件跳过数据字段 (SQL Server)
   数据文件所包含的字段数可能大于表中的列数。 本主题说明了通过修改非 XML 和 XML 格式化文件，将表中的列映射到相应的数据字段并忽略额外字段，从而能够使用具有较多字段的数据文件。  

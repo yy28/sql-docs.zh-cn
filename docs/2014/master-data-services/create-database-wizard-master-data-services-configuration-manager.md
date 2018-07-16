@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296687"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>创建数据库向导（主数据服务配置管理器）
   使用 **“创建数据库”** 向导可以创建 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
@@ -50,7 +50,7 @@ ms.locfileid: "36017980"
   
 |控件名称|Description|  
 |------------------|-----------------|  
-|**用户名**|指定的域用户帐户，要[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系统管理员联系。 所有[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]与此数据库，此用户关联的 Web 应用程序可以更新所有模型以及所有功能区域中的所有数据。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。|  
+|**用户名**|指定域用户帐户为[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系统管理员联系。 所有[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]与此数据库，此用户关联的 Web 应用程序可以更新所有模型和所有功能区域中的所有数据。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。|  
   
 ## <a name="summary"></a>“摘要”  
  显示所选选项的摘要。 查看您的选择，然后单击 **“下一步”** 以便使用指定的设置开始创建数据库。  

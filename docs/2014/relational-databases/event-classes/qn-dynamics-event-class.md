@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300467"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 事件类
   QN:Dynamics 事件类报告有关 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行以支持查询通知的后台活动的信息。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]中，后台线程监视订阅超时、要激发的挂起订阅和参数表析构。  
@@ -38,7 +38,7 @@ ms.locfileid: "36025489"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|是|  
 |EventClass|`int`|事件类型 = 202。|27|“否”|  
 |EventSequence|`int`|此事件的序列号。|51|“否”|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 时钟运行已启动： 指示的后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清除已启动。<br /><br /> 时钟运行已完成： 指示的后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清理已完成。<br /><br /> 主清除任务已启动： 指示清除 （垃圾收集） 删除过期的查询通知订阅数据开始。<br /><br /> 主清除任务已完成： 指示清除 （垃圾收集） 删除过期的查询通知订阅数据何时结束。<br /><br /> 主清除任务已跳过： 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]未执行清除 （垃圾收集） 删除过期的查询通知订阅数据。|21|是|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 时钟运行已启动： 指示的后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清理已启动。<br /><br /> 时钟运行已完成： 指示的后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清理已完成。<br /><br /> 主清除任务已启动： 指示清除 （垃圾收集） 删除过期的查询通知订阅数据的开始。<br /><br /> 主清除任务已完成： 指示清除 （垃圾收集） 删除过期的查询通知订阅数据的完成时间。<br /><br /> 主清除任务已跳过： 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]未执行清除 （垃圾收集） 删除过期的查询通知订阅数据。|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|“否”|  

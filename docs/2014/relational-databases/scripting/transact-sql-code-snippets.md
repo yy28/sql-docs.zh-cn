@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 914a9b9d74c360e466919770b2b749a0f0c00920
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a1d2a85cc2409820165b151542dc1152eda83e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166798"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 代码段
   [!INCLUDE[tsql](../../includes/tsql-md.md)]代码段是一个模板，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句块的基本结构。 当您在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中添加语句时，可以将该代码段用作起点。 您可以插入随 SQL Server 一起提供的预定义代码段，也可以创建您自己的代码段。  

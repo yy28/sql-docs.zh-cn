@@ -1,5 +1,5 @@
 ---
-title: 编程 AMO Fundamental Objects |Microsoft 文档
+title: AMO 基础对象的编程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321297"
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基础对象的编程
   基础对象通常是简单直接的对象。 通常会创建和实例化这些对象，然后在不再需要它们时，用户可以断开与它们的连接。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 AMO 基础对象中的唯一一个复杂对象是 <xref:Microsoft.AnalysisServices.DataSourceView>，它需要详细信息来生成表示数据源视图的抽象模型。  
@@ -47,7 +47,7 @@ ms.locfileid: "36016959"
   
 -   [DataSourceView 对象](#DSV)  
   
-##  <a name="ServerObjects"></a> 服务器对象  
+##  <a name="ServerObjects"></a> Server 对象  
  使用 <xref:Microsoft.AnalysisServices.Server> 对象需要以下步骤：连接服务器，验证 <xref:Microsoft.AnalysisServices.Server> 对象是否已连接到服务器，如果已连接，断开 <xref:Microsoft.AnalysisServices.Server> 与服务器的连接。  
   
 ### <a name="connecting-to-the-server-object"></a>连接服务器对象  
@@ -87,7 +87,7 @@ static Server ServerConnect( String strStringConnection)
   
  有关连接字符串的详细信息，请参阅 <xref:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.ConnectionString%2A>。  
   
-### <a name="validating-the-connection"></a>正在验证连接  
+### <a name="validating-the-connection"></a>验证连接  
  在对 <xref:Microsoft.AnalysisServices.Server> 对象进行编程之前，应验证与服务器仍保持连接。 下面的代码示例演示具体做法。 该示例假定 `svr` 是一个代码中已存在的 <xref:Microsoft.AnalysisServices.Server> 对象。  
   
 ```  
@@ -97,7 +97,7 @@ if ( (svr != null) && ( svr.Connected))
 }  
 ```  
   
-### <a name="disconnecting-from-the-server"></a>从服务器断开连接  
+### <a name="disconnecting-from-the-server"></a>正在从服务器断开连接  
  完成之后，可以使用 Disconnect 方法断开与服务器的连接。 下面的代码示例演示具体做法。 该示例假定 `svr` 是一个代码中已存在的 <xref:Microsoft.AnalysisServices.Server> 对象。  
   
 ```  
@@ -558,8 +558,8 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
- [AMO 基础类](amo-fundamental-classes.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
+ [AMO Fundamental 类](amo-fundamental-classes.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [数据库对象&#40;Analysis Services-多维数据&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

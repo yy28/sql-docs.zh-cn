@@ -1,5 +1,5 @@
 ---
-title: 访问 WMI 提供程序的配置管理使用 WQL |Microsoft 文档
+title: 用于配置管理使用 WQL 访问 WMI 提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3c9ced24edc7e7f3537a73d074cf7cd73128dc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f35c895597bf19a7cc4ad20614d2d2f29521504e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313357"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 访问用于配置管理的 WMI 提供程序
   本节描述如何根据用于计算机管理的 WMI 提供程序执行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation 查询语言 (WQL) 语句。  
@@ -40,7 +40,7 @@ ms.locfileid: "36018147"
   
 3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击 **“连接”**。  
   
-4.  单击**查询**。 键入该查询将返回本地计算机上运行的当前服务：**选择\*从 SqlService。** 单击 **“应用”**。  
+4.  单击**查询**。 键入用于返回在本地计算机上运行的当前服务的查询：**选择\*从 SqlService。** 单击 **“应用”**。  
   
 5.  通过添加 `WHERE ServiceName = "MSSQLSERVER"`，进一步细化查询。  
   

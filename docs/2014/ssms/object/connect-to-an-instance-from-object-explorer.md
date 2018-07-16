@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5784837d47e1cc20afd617a1e97bda1f4fd1999f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 19f0ec63f3f2f2372e9f7803b5256692910f6242
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222507"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>从对象资源管理器连接到实例
   若要使用对象资源管理器管理对象，必须首先将对象资源管理器连接到包含对象的实例。 可以同时将对象资源管理器连接到多个实例。  

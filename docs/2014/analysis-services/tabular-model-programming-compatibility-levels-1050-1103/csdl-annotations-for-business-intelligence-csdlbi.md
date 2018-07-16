@@ -1,5 +1,5 @@
 ---
-title: 商业智能 (CSDLBI) 的 CSDL 批注 |Microsoft 文档
+title: 用于商业智能 (CSDLBI) 的 CSDL 批注 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328427"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>用于商业智能的 CSDL 批注 (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持以 XML 格式（称为带商业智能注释的概念性架构定义语言 (CSDLBI)）来表示表格模型定义。  
@@ -76,7 +76,7 @@ ms.locfileid: "36015968"
   
 -   支持透视。  
   
- 有关 CSDLBI 注释中各个元素的详细信息，请参阅[BI 批注的 CSDL 到的技术参考](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)。 有关核心 CSDL 规范的信息，请参阅[CSDL v3 规范](https://msdn.microsoft.com/en-us/data/jj652004)MSDN 上。  
+ 有关 CSDLBI 注释中的各个元素的详细信息，请参阅[用于商业智能注释的 CSDL 的技术参考](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)。 有关核心 CSDL 规范的信息，请参阅[CSDL v3 规范](https://msdn.microsoft.com/en-us/data/jj652004)MSDN 上。  
   
 ## <a name="see-also"></a>请参阅  
  [了解表格对象模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   

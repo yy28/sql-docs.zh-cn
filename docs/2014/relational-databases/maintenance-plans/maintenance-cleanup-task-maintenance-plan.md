@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.cleanup.f1
 helpviewer_keywords:
 - Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 730e538b3696f4d8f49e35230b20914cb3c766f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b17bf0ef990f3653b802b714e434ed6987086581
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231091"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>“清除维护”任务（维护计划）
   使用 **“‘清除维护’任务”** 可以删除与维护计划相关的旧文件，包括由维护计划文件和数据库备份文件创建的文本报告。  

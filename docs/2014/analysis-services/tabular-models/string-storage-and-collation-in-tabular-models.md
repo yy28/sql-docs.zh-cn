@@ -1,5 +1,5 @@
 ---
-title: 字符串存储和表格模型中的排序规则 |Microsoft 文档
+title: 字符串存储和表格模型中的排序规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6312157544413369574248a06477946a6a45bd71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b61d01e59aa99e6ed97a328d14cee8ab82c3427a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280543"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
   字符串（文本值）以高度压缩的格式存储于表格模型中；由于这一压缩，您在检索整个或部分字符串时可能会得到意外结果。 此外，因为字符串区域设置和排序规则在层次结构上继承自最接近的父对象，所以，如果未显式定义字符串语言，父对象的区域设置和排序规则可能会影响存储各字符串的方式以及字符串是唯一的还是与父排序规则定义的相似字符串合并。  

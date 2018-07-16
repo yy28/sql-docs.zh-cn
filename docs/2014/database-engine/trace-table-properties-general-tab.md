@@ -1,5 +1,5 @@
 ---
-title: 跟踪表属性 （常规选项卡） |Microsoft 文档
+title: 跟踪表属性 （常规选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.general.f1
 helpviewer_keywords:
 - Trace Table Properties dialog box
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dd4a18bf81d89df26aec8c7c1e39637f3dbe7a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 04730fcf274b8e8febf9533b84949222e96978b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326247"
 ---
 # <a name="trace-table-properties-general-tab"></a>跟踪表属性（“常规”选项卡）
-  使用**常规**选项卡**跟踪表属性**对话框中，若要查看的跟踪表属性。  
+  使用**常规**选项卡**跟踪表属性**对话框可以查看跟踪表的属性。  
   
- 若要查看此窗口，请使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]以打开跟踪表，然后在**文件**菜单上，单击**属性**。  
+ 若要查看此窗口，请使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]以打开跟踪表，然后在**文件**菜单中，单击**属性**。  
   
 ## <a name="options"></a>“常规”  
  **表名**  
@@ -46,7 +46,7 @@ ms.locfileid: "36025503"
  **行**  
  显示跟踪表中的行数。  
   
- **数据大小 （页）**  
+ **数据大小 （页数）**  
  显示跟踪表中数据页的数量。  
   
 ## <a name="see-also"></a>请参阅  

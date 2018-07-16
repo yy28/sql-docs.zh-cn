@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8589086db4f176080bbddc1dab257b4931a059f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20886efdda6ef944331d2bc619cd9324ad0adb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185210"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知识库
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中对知识库执行管理功能。 您可以删除知识库、对知识库进行解锁、放弃对知识库所做的工作、重命名知识库以及显示其属性。  
@@ -46,9 +46,9 @@ ms.locfileid: "36128187"
   
     1.  **打开**：单击以便在 **“选择活动”** 窗格中选择的活动中打开该知识库。  
   
-    2.  **取消锁定**：如果您是在域管理、知识发现和匹配策略活动的某一步骤中正在使用该知识库的用户，并且关闭了该知识库，则可以取消锁定该知识库。 如果您卸载了该知识库，则其他人士将能够打开并使用该知识库。 如果知识库未处于某一活动状态中，则此命令将不可用。 有关详细信息，请参阅[打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+    2.  **取消锁定**：如果您是在域管理、知识发现和匹配策略活动的某一步骤中正在使用该知识库的用户，并且关闭了该知识库，则可以取消锁定该知识库。 如果您卸载了该知识库，则其他人士将能够打开并使用该知识库。 如果知识库未处于某一活动状态中，则此命令将不可用。 有关详细信息，请参阅[打开某一知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
-    3.  **放弃工作**：在知识库处于正被使用状态时单击，如表的“状态”字段中的条目所示。 如果知识库未处于某一活动状态中，则此命令将不可用；并且在知识库被锁定时不可用。 有关详细信息，请参阅[打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+    3.  **放弃工作**：在知识库处于正被使用状态时单击，如表的“状态”字段中的条目所示。 如果知识库未处于某一活动状态中，则此命令将不可用；并且在知识库被锁定时不可用。 有关详细信息，请参阅[打开某一知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
     4.  **重命名**：单击可使表的“知识库”字段对于您右键单击的知识库而言可编辑。 更改名称，然后单击该知识库和字段中的其他知识库，以便接受名称更改。  
   

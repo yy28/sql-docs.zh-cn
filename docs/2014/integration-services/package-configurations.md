@@ -1,5 +1,5 @@
 ---
-title: 包配置 |Microsoft 文档
+title: 包配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
 - SQL Server Integration Services packages, configurations
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3b80e197cedae2b8a9902b8e3de4f9066fab374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314147"
 ---
 # <a name="package-configurations"></a>包配置
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用于在运行时更新属性的值的包配置。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用于更新属性的值在运行时的包配置。  
   
 > [!NOTE]  
 >  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "36017588"
   
 -   配置可以使包更加灵活。 例如，配置可以更新在属性表达式中使用的变量的值。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持的存储包配置，如 XML 文件的多种不同方法中的表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库和环境和包变量。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持的存储包配置，例如 XML 文件的多种不同的方法中的表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库和环境变量和包变量。  
   
  每个配置都是一个属性/值对。 XML 配置文件和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型可以包括多个配置。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36017588"
   
 -   不能使用 **/ConfigFile** 选项加载用来替换在设计时指定的配置的配置。  
   
- 有关这些选项，以及这些选项的行为之间的区别的详细信息[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]和早期版本中，请参阅[到 Integration Services Features in SQL Server 2014 的行为更改](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
+ 有关这些选项以及这些选项的行为之间的区别的详细信息[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]和早期版本中，请参阅[SQL Server 2014 中 Integration Services 功能的行为更改](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
   
 ## <a name="package-configuration-types"></a>包配置类型  
  下表介绍了包配置的类型。  
@@ -125,9 +125,9 @@ ms.locfileid: "36017588"
 ```  
   
 ### <a name="registry-entry"></a>注册表项  
- 如果要使用注册表项存储配置，可以使用已有项或在 HKEY_CURRENT_USER 中创建新项。 你使用的注册表项必须具有一个名为值`Value`。 该值可以是 DWORD 或一个字符串。  
+ 如果要使用注册表项存储配置，可以使用已有项或在 HKEY_CURRENT_USER 中创建新项。 您使用的注册表项必须具有一个名为值`Value`。 该值可以是 DWORD 或一个字符串。  
   
- 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。 例如，若要使用位于 SSISPackages MyPackage 密钥，请键入`SSISPackages\MyPackage`。  
+ 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。 例如，若要使用 SSISPackages 中的 MyPackage，请键入`SSISPackages\MyPackage`。  
   
 ### <a name="sql-server"></a>SQL Server  
  如果选择 **SQL Server** 配置类型，则需指定到要存储这些配置的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的连接。 可以将配置保存到现有表，也可以在指定数据库中新建表。  
@@ -148,7 +148,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  您为配置提供的名称就是在 **ConfigurationFilter** 列中存储的值。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接配置和间接配置  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供直接和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了直接和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
   
  间接配置使用环境变量。 配置不直接指定配置设置，而是指向环境变量，环境变量又包含配置值。 如果对于包的每个部署，配置的位置都可以更改，则使用间接配置是较好的选择。  
   

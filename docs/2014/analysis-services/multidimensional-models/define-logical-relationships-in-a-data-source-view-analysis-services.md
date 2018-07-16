@@ -1,5 +1,5 @@
 ---
-title: 数据源视图 (Analysis Services) 中定义逻辑关系 |Microsoft 文档
+title: 数据源视图 (Analysis Services) 中定义逻辑关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding relationships
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ce3e78493e9e8e3f24cc7a146b2ad4afb9bfebc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc84a74ba66923088168b273408d58ea6b3ccae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214317"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在数据源视图中定义逻辑关系 (Analysis Services)
   数据源视图向导和数据源视图设计器自动定义添加到数据源视图 (DSV) 的表之间的关系，定义过程基于基础数据库关系或指定的名称匹配条件。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - WMI provider [Reporting Services], remote configuration
@@ -19,13 +19,13 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f7a3ee16a9085639e03abe268c4c72dc0f488de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e89d1452c1daa5c1aa53341fa09e0e6b71b0c078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325697"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以通过本地或远程方式配置报表服务器实例。 若要配置远程报表服务器实例，可以使用 Reporting Services 配置工具或编写使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序的自定义代码。 Reporting Services 配置工具为 WMI 提供程序提供了一个图形界面，这样您便可以直接配置报表服务器，而不必编写代码。 启动该工具时，可以指定要连接的远程服务器。  
@@ -80,7 +80,7 @@ ms.locfileid: "36026268"
   
 1.  以本地管理员身份登录要启用远程管理功能的计算机。  
   
-2.  如果报表服务器正在运行 Windows Vista 上，右键单击**命令提示符**和选择**以管理员身份运行**。 对于其他操作系统，请打开一个命令提示符窗口。  
+2.  如果报表服务器正在运行 Windows Vista 上，右键单击**命令提示符**，然后选择**以管理员身份运行**。 对于其他操作系统，请打开一个命令提示符窗口。  
   
 3.  运行以下命令：  
   

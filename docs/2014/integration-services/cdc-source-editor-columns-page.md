@@ -1,5 +1,5 @@
 ---
-title: CDC 源编辑器 （列页） |Microsoft 文档
+title: CDC 源编辑器 （列页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 87d5d9b1096e2068759a2100b4daf504849fba0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12fc9ddc38caa6525138f630dfb51a74c65c38b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306077"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 源编辑器（“列”页）
   可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
