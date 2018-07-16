@@ -16,15 +16,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], delivery extensions
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cda3a9b09c06151e3814d59e7cdb00aa419374ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3b7c168d96a34830373f7a2fd2ce838014e842c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186084"
 ---
 # <a name="debugging-delivery-extension-code"></a>调试传递扩展插件代码
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一些可以帮助分析传递扩展插件代码和查找其中错误的调试工具。 哪个工具效果最佳取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  

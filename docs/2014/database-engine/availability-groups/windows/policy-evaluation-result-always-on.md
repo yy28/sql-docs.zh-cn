@@ -1,28 +1,27 @@
 ---
-title: 策略评估结果 (AlwaysOn) |Microsoft 文档
+title: 策略评估结果 (AlwaysOn) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.policyeval.f1
 - swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 8
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0efad6e52d9d297f42b98c2268daeca46b2d5a14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 68837a04228b90c389cd909190c62915c4bb88db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271623"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>策略评估结果 (AlwaysOn)
   使用 AlwaysOn 面板的 **“策略评估结果”** 页查看当前的所有策略问题。  

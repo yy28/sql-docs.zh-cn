@@ -1,5 +1,5 @@
 ---
-title: 登录属性 |Microsoft 文档
+title: 记录属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
 - QueryLogTableName property
@@ -54,15 +54,15 @@ helpviewer_keywords:
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76a7f70754f211add486783019c1cd7bc7f5e24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aee6f05c7d572f38c90754d2cf1996661d10f89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295507"
 ---
 # <a name="log-properties"></a>日志属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的日志服务器属性 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "36124864"
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
 ## <a name="error-log"></a>错误日志  
- 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 请参阅[多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)和<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>有关详细信息。  
+ 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 请参阅[多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)并<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>有关详细信息。  
   
  **ErrorLog\ErrorLogFileName**  
  在服务器执行处理操作期间使用的一个默认属性。  
@@ -236,7 +236,7 @@ ms.locfileid: "36124864"
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
+ [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

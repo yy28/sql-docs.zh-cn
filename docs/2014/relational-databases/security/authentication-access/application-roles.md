@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application roles [SQL Server], about application roles
 - principals [SQL Server], application roles
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8da65658242f5b8192fa2ec5fb27dc07de704163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 5613f0657b8b8c5a3a9083be022865d83264e5db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262279"
 ---
 # <a name="application-roles"></a>应用程序角色
   应用程序角色是一个数据库主体，它使应用程序能够用其自身的、类似用户的权限来运行。 使用应用程序角色，可以只允许通过特定应用程序连接的用户访问特定数据。 与数据库角色不同的是，应用程序角色默认情况下不包含任何成员，而且是非活动的。 应用程序角色使用两种身份验证模式。 可以使用 **sp_setapprole**启用应用程序角色，该过程需要密码。 因为应用程序角色是数据库级主体，所以它们只能通过其他数据库中为 **guest**授予的权限来访问这些数据库。 因此，其他数据库中的应用程序角色将无法访问任何已禁用 **guest** 的数据库。  

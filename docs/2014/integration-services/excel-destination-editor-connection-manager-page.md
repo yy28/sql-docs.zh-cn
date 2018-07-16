@@ -1,5 +1,5 @@
 ---
-title: Excel 目标编辑器 （连接管理器页） |Microsoft 文档
+title: Excel 目标编辑器 （连接管理器页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.connection.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14b06c895b60f3965d7b7ccd0bea5c3d6f8b447b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af5336747676827b054d34ce2c4aa616fb383813
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329997"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目标编辑器（“连接管理器”页）
   使用 **“Excel 目标编辑器”** 对话框的 **“连接管理器”** 页可以指定数据源信息和预览结果。 Excel 目标将数据加载到 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿中的工作表或指定范围。  
   
 > [!NOTE]  
->  `CommandTimeout` Excel 目标的属性不是位于**Excel 目标编辑器**，但可以通过使用设置**高级编辑器**。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
+>  `CommandTimeout` Excel 目标的属性不是在可用**Excel 目标编辑器**，但可以通过使用设置**高级编辑器**。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
   
  若要了解有关 Excel 目标的详细信息，请参阅 [Excel Destination](data-flow/excel-destination.md)。  
   

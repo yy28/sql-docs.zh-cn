@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberTranslation 元素 (ASSL) |Microsoft 文档
+title: UnknownMemberTranslation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownElementTranslation element
 ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b04dad97f6c61a884d4ba4234083bbc60bc260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68270cff61daace55131454b549f12880f3b5e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220297"
 ---
 # <a name="unknownmembertranslation-element-assl"></a>UnknownMemberTranslation 元素 (ASSL)
-  包含的转换是为标题[UnknownMember](member-element-assl.md)元素[维度](dimension-element-assl.md)元素。  
+  包含标题的翻译[UnknownMember](member-element-assl.md)元素[维度](dimension-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36128200"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|[转换](../data-type/translation-data-type-assl.md)|  
+|数据类型和长度|[翻译](../data-type/translation-data-type-assl.md)|  
 |默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36128200"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`UnknownMemberTranslation`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素`UnknownMemberTranslation`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  
- [转换元素&#40;ASSL&#41;](translation-element-assl.md)   
+ [Translation 元素&#40;ASSL&#41;](translation-element-assl.md)   
  [对象&#40;ASSL&#41;](objects-assl.md)  
   
   

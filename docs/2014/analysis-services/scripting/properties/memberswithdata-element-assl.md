@@ -1,5 +1,5 @@
 ---
-title: MembersWithData 元素 (ASSL) |Microsoft 文档
+title: MembersWithData 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c0311a774b225234aeb63d4d67680e12b693b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218227"
 ---
 # <a name="memberswithdata-element-assl"></a>MembersWithData 元素 (ASSL)
   确定是否显示父属性中非叶成员的数据成员。  
@@ -62,7 +62,7 @@ ms.locfileid: "36128402"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 值`MembersWithData`元素仅由父属性 (换而言之，值[用法](usage-element-dimensionattribute-assl.md)元素`DimensionAttribute`父元素设置为*父*) 以确定是否父属性中显示非叶成员的数据成员。 有关数据成员的详细信息，请参阅[父子层次结构中的属性](../../multidimensional-models/parent-child-dimension-attributes.md)。  
+ 值`MembersWithData`元素仅供父属性 (换而言之，值[用法](usage-element-dimensionattribute-assl.md)元素的`DimensionAttribute`父元素设置为*父*) 以确定是否若要显示父属性中非叶成员的数据成员。 有关数据成员的详细信息，请参阅[父子层次结构中的属性](../../multidimensional-models/parent-child-dimension-attributes.md)。  
   
  此元素的值限定为下表中列出的字符串之一。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36128402"
 |*NonLeafDataHidden*|隐藏非叶数据。|  
 |*NonLeafDataVisible*|非叶数据可见。|  
   
- 对应于的允许值为枚举`MembersWithData`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MembersWithData>。  
+ 与允许的值相对应的枚举`MembersWithData`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MembersWithData>。  
   
 ## <a name="see-also"></a>请参阅  
  [MembersWithDataCaption 元素&#40;ASSL&#41;](caption-element-assl.md)   

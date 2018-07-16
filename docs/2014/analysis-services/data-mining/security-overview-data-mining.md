@@ -1,5 +1,5 @@
 ---
-title: 安全性概述 （数据挖掘） |Microsoft 文档
+title: 安全性概述 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a20982584b08256cf02d0ca1bb6a3fb3012190b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d7432450357e77875695983f65661f0e645c7a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177011"
 ---
 # <a name="security-overview-data-mining"></a>安全性概述（数据挖掘）
   可以在多个级别对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行保护。 您必须保护每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其数据源，以确保只有经过授权的用户具有所选维度、挖掘模型以及数据源的读或读/写权限。 您还必须保护基础数据源以防止未经授权的用户恶意破坏敏感商业信息。 以下主题说明了保护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的过程。  

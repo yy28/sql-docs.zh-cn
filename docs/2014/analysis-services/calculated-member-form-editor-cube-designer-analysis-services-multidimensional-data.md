@@ -1,5 +1,5 @@
 ---
-title: 计算成员窗体编辑器 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 计算成员窗体编辑器 （计算选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218367"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>计算成员窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“计算”** 选项卡上的 **“计算成员窗体编辑器”** 窗格创建或修改计算成员。  
@@ -69,7 +69,7 @@ ms.locfileid: "36128224"
  选择用于为计算成员解析 MDX 中的 NON EMPTY 查询的度量值名称。 如果 **“非空行为”** 属性为空白，则必须对计算成员进行反复计算以确定成员是否为空。 如果 **“非空行为”** 属性包含度量值的名称，则在指定的度量值为空的情况下将计算成员视为空。  
   
 > [!WARNING]  
->  不推荐使用此属性。 避免将其设置。 请参阅[Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md)有关详细信息。  
+>  不推荐使用此属性。 避免将其设置。 请参阅[SQL Server 2014 中不推荐使用 Analysis Services 功能](deprecated-analysis-services-features-in-sql-server-2014.md)有关详细信息。  
   
  **颜色表达式**  
  展开此项可以查看“前景色”和“背景色”选项。  

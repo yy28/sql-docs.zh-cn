@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319819"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
   可以将安装中使用的报表服务器数据库移至其他计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 必须一同移动或复制数据库 reportserver 和数据库 reportservertempdb。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装需要这两个数据库；reportservertempdb 数据库必须按名称与将要移动的 reportserver 主数据库相关。  
@@ -62,7 +62,7 @@ ms.locfileid: "36124489"
   
 8.  单击 **“添加”** 以选择要附加的报表服务器数据库 .mdf 和 .ldf 文件。 对报表服务器临时数据库重复此步骤。  
   
-9. 附加数据库后，验证`RSExecRole`是中的报表服务器数据库和临时数据库的数据库角色。 `RSExecRole` 必须对报表服务器数据库表中，选择、 插入、 更新、 delete 和引用的权限并存储过程的 execute 权限。 有关详细信息，请参阅 [创建 RSExecRole](../security/create-the-rsexecrole.md)。  
+9. 附加数据库后，验证`RSExecRole`是报表服务器数据库和临时数据库中的数据库角色。 `RSExecRole` 必须对报表服务器数据库表的 select、 insert、 update、 delete 和引用的权限，并执行存储过程的权限。 有关详细信息，请参阅 [创建 RSExecRole](../security/create-the-rsexecrole.md)。  
   
 10. 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并打开与报表服务器的连接。  
   
@@ -218,7 +218,7 @@ GO
 7.  单击 **“下一步”** ，然后单击 **“完成”**。  
   
 > [!NOTE]  
->  A[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装需要[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例包括`RSExecRole`角色。 通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具设置报表服务器数据库连接时，将创建角色、注册登录信息并分配角色。 如果使用备用方法（具体来说，如果使用 rsconfig.exe 命令提示实用工具）来配置连接，报表服务器不会处于工作状态。 您可能需要编写 WMI 代码以使报表服务器可用。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../tools/access-the-reporting-services-wmi-provider.md)。  
+>  一个[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装需要[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例包括`RSExecRole`角色。 通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具设置报表服务器数据库连接时，将创建角色、注册登录信息并分配角色。 如果使用备用方法（具体来说，如果使用 rsconfig.exe 命令提示实用工具）来配置连接，报表服务器不会处于工作状态。 您可能需要编写 WMI 代码以使报表服务器可用。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../tools/access-the-reporting-services-wmi-provider.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建 RSExecRole](../security/create-the-rsexecrole.md)   

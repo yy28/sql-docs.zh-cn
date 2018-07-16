@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema collections [SQL Server], viewing
 - XML schemas [SQL Server], viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 164b207ab8191486005491eaf64323fed83aaee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1560eb844657d806862d6a4e85bb9a52682b77d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301770"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>查看存储 XML 架构集合
   使用 [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)导入 XML 架构集合之后，架构组件便存储在元数据中。 你可以使用 [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)内部函数重新构造 XML 架构集合。 此函数将返回`xml`数据类型实例。  
@@ -39,7 +39,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- 如果你想要查看从 XML 架构集合只有一个架构，则可以指定 XQuery`xml`类型返回的结果`xml_schema_namespace`。  
+ 如果你想要查看 XML 架构集合中的只有一个架构，则可以指定 XQuery`xml`类型返回的结果`xml_schema_namespace`。  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  

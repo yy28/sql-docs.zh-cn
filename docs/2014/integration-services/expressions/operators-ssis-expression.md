@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
 - SQL Server Integration Services, operators
@@ -18,13 +18,13 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d907683caf7add1a3d0e7747a3e3c1ce7eaded94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 779597ab830df7cf89ad3d830c41402b43a91768
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320687"
 ---
 # <a name="operators-ssis-expression"></a>运算符（SSIS 表达式）
   本部分介绍了表达式语言提供的运算符和表达式计算器使用的运算符优先级及结合性。  
@@ -36,20 +36,20 @@ ms.locfileid: "36124816"
 |[强制转换&#40;SSIS 表达式&#41;](cast-ssis-expression.md)|将表达式从一种数据类型转换为另外一种数据类型。|  
 |[&#40;&#41;&#40;括号&#41; &#40;SSIS 表达式&#41;](parentheses-ssis-expression.md)|标识表达式的计算顺序。|  
 |[+&#40;添加&#41; &#40;SSIS&#41;](add-ssis.md)|将两个数值表达式相加。|  
-|[+&#40;串联&#41; &#40;SSIS 表达式&#41;](concatenate-ssis-expression.md)|连接两个表达式。|  
-|[-&#40;减去&#41; &#40;SSIS 表达式&#41;](subtract-ssis-expression.md)|从第一个数值表达式的值中减去第二个数值表达式的值。|  
-|[- &#40;Negate&#41; &#40;SSIS 表达式&#41;](negate-ssis-expression.md)|对一个数值表达式求反。|  
-|[&#42;&#40;乘&#41; &#40;SSIS 表达式&#41;](multiply-ssis-expression.md)|将两个数值表达式相乘。|  
-|[将划分&#40;SSIS 表达式&#41;](divide-ssis-expression.md)|用第一个数值表达式除以第二个数值表达式。|  
+|[+&#40;连接&#41; &#40;SSIS 表达式&#41;](concatenate-ssis-expression.md)|连接两个表达式。|  
+|[-&#40;中减去&#41; &#40;SSIS 表达式&#41;](subtract-ssis-expression.md)|从第一个数值表达式的值中减去第二个数值表达式的值。|  
+|[-&#40;负号&#41; &#40;SSIS 表达式&#41;](negate-ssis-expression.md)|对一个数值表达式求反。|  
+|[&#42;&#40;乘以&#41; &#40;SSIS 表达式&#41;](multiply-ssis-expression.md)|将两个数值表达式相乘。|  
+|[除&#40;SSIS 表达式&#41;](divide-ssis-expression.md)|用第一个数值表达式除以第二个数值表达式。|  
 |[&#40;取模&#41; &#40;SSIS 表达式&#41;](modulo-ssis-expression.md)|将第一个数据表达式的值除以第二个数据表达式的值后，提供整数余数。|  
 |[&#124;&#124; &#40;逻辑或&#41; &#40;SSIS 表达式&#41;](logical-or-ssis-expression.md)|执行“逻辑或”运算。|  
-|[& &&#40;逻辑 AND&#41; &#40;SSIS 表达式&#41;](logical-and-ssis-expression.md)|执行“逻辑与”运算。|  
+|[& &&#40;逻辑与&#41; &#40;SSIS 表达式&#41;](logical-and-ssis-expression.md)|执行“逻辑与”运算。|  
 |[!&#40;逻辑非&#41; &#40;SSIS 表达式&#41;](logical-not-ssis-expression.md)|对布尔操作数求反。|  
 |[&#124; &#40;位异或&#41; &#40;SSIS 表达式&#41;](bitwise-inclusive-or-ssis-expression.md)|对两个整数值执行“位或”运算。|  
 |[^&#40;按位异或&#41; &#40;SSIS 表达式&#41;](bitwise-exclusive-or-ssis-expression.md)|对两个整数值执行“位异或”运算。|  
-|[&&#40;按位 AND&#41; &#40;SSIS 表达式&#41;](bitwise-and-ssis-expression.md)|对两个整数值执行“位与”运算。|  
+|[（& a)&#40;按位 AND&#41; &#40;SSIS 表达式&#41;](bitwise-and-ssis-expression.md)|对两个整数值执行“位与”运算。|  
 |[~&#40;位非&#41; &#40;SSIS 表达式&#41;](bitwise-not-ssis-expression.md)|对整数执行位求反运算。|  
-|[= =&#40;相等&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)|执行比较来确定两个表达式是否相等。|  
+|[= =&#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)|执行比较来确定两个表达式是否相等。|  
 |[\!=（不等于）（SSIS 表达式）](unequal-ssis-expression.md)|通过比较来确定两个表达式是否不相等。|  
 |[&#62;&#40;大于&#41; &#40;SSIS 表达式&#41;](greater-than-ssis-expression.md)|通过比较来确定第一个表达式是否大于第二个表达式。|  
 |[&#60;&#40;小于&#41; &#40;SSIS 表达式&#41;](less-than-ssis-expression.md)|通过比较确定第一个表达式是否小于第二个表达式。|  

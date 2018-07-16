@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237017"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原事务日志备份。  
@@ -150,7 +149,7 @@ ms.locfileid: "36126561"
   
          将已发布的数据库还原到创建该数据库的服务器之外的服务器时，保留复制设置。  
   
-         此选项才可用只用**使数据库处于可以使用通过回滚未提交的事务...** （后面所述），这等效于使用还原备份的选项`RECOVERY`选项。  
+         此选项，同时仅提供**使数据库处于可以使用通过回滚未提交的事务...** 选项 （稍后介绍的），这是等效于使用还原备份`RECOVERY`选项。  
   
          选中此选项相当于使用`KEEP_REPLICATION`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
   
@@ -166,13 +165,13 @@ ms.locfileid: "36126561"
   
          使还原的数据库仅供 **db_owner**、 **dbcreator**或 **sysadmin**的成员使用。  
   
-         选中此选项是使用同义词`RESTRICTED_USER`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
+         选择此选项等效于使用`RESTRICTED_USER`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
   
 10. 对于 **“恢复状态”** 选项，请指定还原操作之后的数据库状态。  
   
     -   **回退未提交的事务，使数据库处于可以使用的状态。无法还原其他事务日志。(RESTORE WITH RECOVERY)**  
   
-         恢复数据库。 此选项等同于`RECOVERY`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
+         恢复数据库。 此选项等效于`RECOVERY`选项[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`语句。  
   
          请仅在没有要还原的日志文件时选择此选项。  
   

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14e8cb87d04ff0f929fe88c5755087ead58e0c7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af382eb9398dc2c8d790f8af1cf72fc89c572959
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250347"
 ---
 # <a name="odata-source"></a>OData 源
   可在 SSIS 包中使用 OData 源组件，以使用来自开放式数据协议 (OData) 服务的数据。 该组件支持 OData v2 和 v3 协议以及 ATOM 和 JSON 数据格式。  
   
 > [!NOTE]  
->  OData 源可用于从 SharePoint 列表读取。 若要查看你的 SharePoint 服务器上的所有列表，请使用以下 URL: http://\<服务器 > / _vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。  
+>  OData 源可用于从 SharePoint 列表读取。 若要查看您的 SharePoint 服务器上的所有列表，请使用以下 URL: http://\<服务器 > / /_vti_bin/listdata.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。  
   
 ## <a name="odata-format"></a>OData 格式  
  大多数 OData 服务采用多种格式返回结果。 可以使用 $format 查询选项指定结果集的格式。 传输大量数据时，JSON 和 JSON 轻型这类格式比 ATOM/XML 更高效，可以提供更佳性能。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换为 JSON 时，性能提高 30-53%，从 ATOM 切换为新的 JSON 轻型格式（WCF Data Services 5.1 中提供）时，性能提高 67%。  

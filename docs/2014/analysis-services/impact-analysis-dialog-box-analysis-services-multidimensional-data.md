@@ -1,5 +1,5 @@
 ---
-title: 影响分析对话框 (Analysis Services-多维数据) |Microsoft 文档
+title: 影响分析对话框 (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.impactanalysisdialog.f1
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da3a687a637dee6b3b9df59eecebf957f06e64be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02b5ee9613672762c466ba023ccabf1fa90d5892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299377"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>“影响分析”对话框（Analysis Services - 多维数据）
   如果 **“处理”** 对话框中列出的对象已处理，则使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 **“影响分析”** 对话框来标识和处理受影响的依赖对象。 通过在 **“处理”** 对话框中单击 **“影响分析”** ，可以显示 **“影响分析”** 对话框。  
@@ -56,6 +56,6 @@ ms.locfileid: "36013932"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [处理对话框&#40;Analysis Services-多维数据&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [进程对话框&#40;Analysis Services-多维数据&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

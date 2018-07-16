@@ -1,5 +1,5 @@
 ---
-title: 第 2 课： 将挖掘模型添加到时序挖掘结构 |Microsoft 文档
+title: 第 2 课： 向时序挖掘结构添加挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cee3d839ae7a7bcce62c8a3a1d2f7cb62b1155e2
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 368ab5b56fb55e083d5d8c38e34a0bdae98afe7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211987"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>第 2 课：向时序挖掘结构添加挖掘模型
-  在本课程中，你将向你在中创建的挖掘结构中添加新的挖掘模型[第 1 课： 创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)。  
+  在本课中，将新的挖掘模型添加到刚刚创建的挖掘结构[第 1 课： 创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 语句  
- 若要将新的挖掘模型添加到现有挖掘结构，你使用 [ALTER 挖掘结构&#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 语句。 可以将语句中的代码分为下列几部分：  
+ 为了向现有挖掘结构添加新的挖掘模型，可以使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 语句。 可以将语句中的代码分为下列几部分：  
   
 -   标识挖掘结构  
   
@@ -61,7 +61,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- 有关命名在 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 有关命名 DMX 中的对象的信息，请参阅[标识符&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
   
  代码的接下来的各行定义挖掘结构中将由挖掘模型使用的各列：  
   
@@ -79,7 +79,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- 你可以调整的算法参数的详细信息，请参阅[Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。  
+ 您可以调整的算法参数的详细信息，请参阅[Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。  
   
  您可以使用以下语法指定将挖掘模型中的一列用于预测：  
   
@@ -99,7 +99,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>添加 ARIMA 时序挖掘模型  
   
-1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查询**，然后单击**DMX**以打开查询编辑器和一个新的空白的查询。  
+1.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**若要打开查询编辑器和一个新的空白查询。  
   
 2.  将 ALTER MINING STRUCTURE 语句的一般示例复制到空白查询中。  
   
@@ -185,11 +185,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+8.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-9. 在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`Forecasting_ARIMA.dmx`。  
+9. 在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Forecasting_ARIMA.dmx`。  
   
-10. 在工具栏上，单击**执行**按钮。  
+10. 在工具栏上，单击**Execute**按钮。  
   
 ## <a name="adding-an-artxp-time-series-model-to-the-structure"></a>在结构中添加 ARTXP 时序模型  
  ARTXP 算法是 SQL Server 2005 中的默认时序算法，针对短期预测进行了优化。 若要使用所有这三个时序算法来比较预测结果，还需要再添加一个基于 ARTXP 算法的模型。  
@@ -213,11 +213,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  上**文件**菜单上，单击**DMXQuery1.dmx 另存为**。  
+2.  上**文件**菜单上，单击**另存 dmxquery1.dmx 另存为**。  
   
-3.  在**另存为**对话框中，浏览到相应的文件夹，然后将该文件`Forecasting_ARTXP.dmx`。  
+3.  在中**另存为**对话框中，浏览到相应的文件夹，并将文件命名`Forecasting_ARTXP.dmx`。  
   
-4.  在工具栏上，单击**执行**按钮。  
+4.  在工具栏上，单击**Execute**按钮。  
   
  在下一课中，您将处理所有模型和挖掘结构。  
   

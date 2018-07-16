@@ -1,5 +1,5 @@
 ---
-title: 关于客户端使用 GEOMETRY、 GEOGRAPHY 和 HIERARCHYID 的警告 |Microsoft 文档
+title: 关于客户端使用 GEOMETRY、 GEOGRAPHY 和 HIERARCHYID 的警告 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02748f9dca8e4f9f29c7c94658d2a4068b1ba65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166108"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>关于客户端对 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的使用的警告
-  程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型中，已从升级版本 10.0 到版本 11.0。 满足某些条件时，引用此程序集的自定义应用程序可能会失败。  
+  程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足某些条件时，引用此程序集的自定义应用程序可能会失败。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- 程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型中，已从升级版本 10.0 到版本 11.0。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
+ 程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
   
--   当你移动自定义应用程序从一台计算机在其上[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]已安装到的计算机上仅[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安装，应用程序将失败，因为引用的版本 10.0 的**SqlTypes**程序集不存在。 您可能会看到此错误消息：`“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   移动时自定义应用程序从一台计算机依据[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]到仅计算机上安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安装，该应用程序将失败，因为的被引用的版本 10.0 **SqlTypes**程序集不存在。 您可能会看到此错误消息：`“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
   
--   当引用**SqlTypes**程序集版本 11.0 和版本 10.0，也会安装，你可能会看到此错误消息： `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   当引用**SqlTypes**程序集版本 11.0 和也安装了版本 10.0，可能会看到此错误消息： `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
   
--   当引用**SqlTypes**以.NET 3.5、 4 或 4.5 为目标的自定义应用程序中的程序集版本 11.0，应用程序将失败，因为设计使然 SqlClient 加载的程序集版本 10.0。 当应用程序调用以下方法之一时，将出现此失败：  
+-   当引用**SqlTypes**从面向.NET 3.5、 4 或 4.5 的自定义应用程序的程序集版本 11.0，该应用程序将失败，因为 SqlClient 按设计加载的程序集的版本 10.0。 当应用程序调用以下方法之一时，将出现此失败：  
   
     -   `GetValue` 类的 `SqlDataReader` 方法  
   

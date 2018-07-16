@@ -1,5 +1,5 @@
 ---
-title: CalculationProperties 元素 (ASSL) |Microsoft 文档
+title: CalculationProperties 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalculationProperties element
 ms.assetid: dccfe036-0b1b-4877-8bdd-4b128ccb55c9
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a61448c23dc09524cfe586ff4a1ced84d92b1895
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d28f9c0b2c11cd317db723317ebc356d8847aea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200117"
 ---
 # <a name="calculationproperties-element-assl"></a>CalculationProperties 元素 (ASSL)
   包含的集合[CalculationProperty](../objects/calculationproperty-element-assl.md)与关联的元素[MdxScript](../objects/mdxscript-element-assl.md)元素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36128202"
 |子元素|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CalculationPropertyCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CalculationPropertyCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 将 MSOLAP.5 添加为 Excel Services 中的受信任的数据提供程序 |Microsoft 文档
+title: 将 MSOLAP.5 添加为 Excel Services 中的受信任的数据提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86686f5ba9ffcdb6e640ce8328d11f600b3bf36c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319ef37cd831d7bcce3d428e6c82624147b175e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167618"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口
   MSOLAP.5 指代用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。 Excel Services 必须信任此访问接口，然后才能发出连接请求，请求在服务器上提供 PowerPivot 数据。  

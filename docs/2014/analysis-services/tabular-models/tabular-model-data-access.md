@@ -1,5 +1,5 @@
 ---
-title: 表格模型数据访问 |Microsoft 文档
+title: 表格模型数据访问 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316977"
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
   Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -87,13 +87,13 @@ ms.locfileid: "36123718"
   
 -   Codeplex 上的表格模型 AMO 示例  
   
--   [使用动态管理视图&#40;Dmv&#41;监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [使用动态管理视图&#40;Dmv&#41;若要监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  可以在非托管客户端应用程序中使用 Analysis Services 9.0 OLE DB 访问接口以支持对表格模型的 OLE DB 访问。 启用表格模型访问需要更新版本的 Analysis Services OLE DB 访问接口。 有关用于表格模型的提供程序的详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 。  
   
  还可以直接从 Analysis Services 实例以基于 XML 的格式检索数据。 可以使用 DISCOVER_CSDL_METADATA 行集来检索表格模型的架构，也可以将 EXECUTE 或 DISCOVER 命令与现有 ASSL 元素、对象或属性一起使用。 有关详细信息，请参阅下列资源：  
   
--   [商业智能的 CSDL 批注&#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [用于商业智能的 CSDL 批注&#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
 ### <a name="manipulate-analysis-services-objects"></a>操作 Analysis Services 对象  
  可以使用 XMLA 命令或使用 AMO 来创建、修改、删除和处理表格模型及其对象（包括表、列、透视、度量值和分区）。 已同时更新 AMO 和 XMLA 以支持表格模型中用于增强报告和建模的其他属性。  
@@ -119,7 +119,7 @@ ms.locfileid: "36123718"
   
 -   [DISCOVER_XEVENT_TRACE_DEFINITION 行集](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     用于监视 SQL Server 扩展事件的新架构行集。 有关详细信息，请参阅[使用 SQL Server 扩展事件&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
+     用于监视 SQL Server 扩展事件的新架构行集。 有关详细信息，请参阅[使用 SQL Server 扩展事件&#40;XEvents&#41;监视 Analysis services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
   
 -   [DISCOVER_TRACES 行集](../schema-rowsets/xml/discover-traces-rowset.md)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36123718"
   
 -   [MDSCHEMA_HIERARCHIES 行集](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     新`STRUCTURE_TYPE`枚举支持在表格模型中创建的用户定义的层次结构的标识。 有关详细信息，请参阅[层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)。  
+     新`STRUCTURE_TYPE`枚举支持的表格模型中创建用户定义层次结构的标识。 有关详细信息，请参阅[层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)。  
   
  此版本中不包含针对 OLE DB for Data Mining 架构行集的更新。  
   

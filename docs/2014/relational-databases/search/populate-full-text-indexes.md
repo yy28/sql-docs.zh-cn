@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce7d4774b40f43cc6a88c414cc18f7005a137e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cbe50e41fb353e092edddf2eacc2f189d635aa5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162258"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
   创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
@@ -44,7 +43,7 @@ ms.locfileid: "36129855"
 ### <a name="full-population"></a>完全填充  
  在完全填充期间，为表或索引视图的所有行生成索引条目。 全文索引的完全填充为基表或索引视图的所有行生成索引条目。  
   
- 默认情况下，一旦创建新的全文索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会对其进行完全填充。 但是，完全填充会占用相当多的资源。 因此，当在高峰期创建全文索引时，最佳做法通常是将完全填充推迟到非高峰时段，当全文索引的基表非常大时更应如此。 不过，索引所属的全文目录在填充其所有全文索引之后才可使用。 若要创建全文索引而不立即填充它，请在 CREATE FULLTEXT INDEX 语句中指定 CHANGE_TRACKING OFF, NO POPULATION 子句。 如果您指定 CHANGE_TRACKING MANUAL，全文引擎将使用语句。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到执行使用 START FULL POPULATION 或 START INCREMENTAL POPULATION 子句的 ALTER FULLTEXT INDEX 语句，将不会填充新的全文索引。 有关详细信息，请参阅本主题后面的示例“A. 创建全文索引而不运行完全填充”和“B. 对表运行完全填充”。  
+ 默认情况下，一旦创建新的全文索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会对其进行完全填充。 但是，完全填充会占用相当多的资源。 因此，当在高峰期创建全文索引时，最佳做法通常是将完全填充推迟到非高峰时段，当全文索引的基表非常大时更应如此。 不过，索引所属的全文目录在填充其所有全文索引之后才可使用。 若要创建全文索引而不立即填充它，请在 CREATE FULLTEXT INDEX 语句中指定 CHANGE_TRACKING OFF, NO POPULATION 子句。 如果您指定 CHANGE_TRACKING MANUAL，全文引擎将使用语句。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到执行使用 START FULL POPULATION 或 START INCREMENTAL POPULATION 子句的 ALTER FULLTEXT INDEX 语句，将不填充新的全文索引。 有关详细信息，请参阅本主题后面的示例“A. 创建全文索引而不运行完全填充”和“B. 对表运行完全填充”。  
   
 
   
@@ -52,7 +51,7 @@ ms.locfileid: "36129855"
  或者，您可以在对全文索引进行初始完全填充之后使用更改跟踪对其进行维护。 将出现与更改跟踪关联的较小开销，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护它用来跟踪自上次填充后对基表所做更改的表。 当使用更改跟踪时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护基表或索引视图中已通过更新、删除或插入进行过修改的行的记录。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
   
 > [!NOTE]  
->  表包含`timestamp`列中，你可以使用增量填充。  
+>  表包含`timestamp`列中，可以使用增量填充。  
   
  如果在创建索引期间启用更改跟踪，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在新全文索引创建之后立即对其进行完全填充。 其后，将跟踪更改并将更改传播到全文索引。 有两类更改跟踪：自动（CHANGE_TRACKING AUTO 选项）和手动（CHANGE_TRACKING MANUAL 选项）。 自动更改跟踪为默认行为。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "36129855"
 ### <a name="incremental-timestamp-based-population"></a>基于时间戳的增量填充  
  增量填充是手动填充全文索引的一种替代机制。 您可以对 CHANGE_TRACKING 设置为 MANUAL 或 OFF 的全文索引运行增量填充。 如果全文索引的第一个填充是增量填充，它将对所有行编制索引并使其等效于完全填充。  
   
- 增量填充的要求是索引的表必须具有的列`timestamp`数据类型。 如果 `timestamp` 列不存在，则无法执行增量填充。 请求不包含的表增量填充`timestamp`列会导致完全填充操作。 另外，如果影响表全文索引的任意元数据自上次填充以来发生了变化，则增量填充请求将作为完全填充来执行。 这包括更改任何列、索引或全文索引定义所引起的元数据更改。  
+ 增量填充要求是索引的表必须具有的一个列`timestamp`数据类型。 如果 `timestamp` 列不存在，则无法执行增量填充。 没有的表增量填充请求`timestamp`列会导致完全填充操作。 另外，如果影响表全文索引的任意元数据自上次填充以来发生了变化，则增量填充请求将作为完全填充来执行。 这包括更改任何列、索引或全文索引定义所引起的元数据更改。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `timestamp` 列标识自上次填充后发生更改的行。 然后，增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 如果对表进行大量插入操作，则使用增量填充会较使用手动填充有效。  
   
@@ -213,15 +212,15 @@ GO
 
   
 ##  <a name="crawl"></a> 排除全文填充 （爬网） 中的错误  
- 如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 通过对给定实例的默认爬网日志，在这种情况下，第一个实例，位于 %ProgramFiles%\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\LOG 文件夹。 爬网日志文件遵循以下命名方案：  
+ 如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 对给定实例的默认爬网日志，在这种情况下，第一个实例，位于 %ProgramFiles%\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\LOG 文件夹。 爬网日志文件遵循以下命名方案：  
   
  SQLFT\<DatabaseID >\<FullTextCatalogID >。日志 [\<n >]  
   
  <`DatabaseID`>  
- 数据库的 ID。 <`dbid`> 是五位数用前导零。  
+ 数据库的 ID。 <`dbid`> 是一个五位数带有前导零。  
   
  <`FullTextCatalogID`>  
- 全文目录 ID。 <`catid`> 是五位数用前导零。  
+ 全文目录 ID。 <`catid`> 是一个五位数带有前导零。  
   
  <`n`>  
  是一个整数，指示同一全文目录现有的一个或多个爬网日志。  

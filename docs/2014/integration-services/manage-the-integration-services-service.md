@@ -1,5 +1,5 @@
 ---
-title: 管理 Integration Services 服务 |Microsoft 文档
+title: 管理 Integration Services 服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 caps.latest.revision: 60
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45952fdec3955614cb7b69b053ffc635d9ab2ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e356283274c7ea741acfabcd6d56cb6bc0db7ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281513"
 ---
 # <a name="manage-the-integration-services-service"></a>管理 Integration Services 服务
     
@@ -32,7 +32,7 @@ ms.locfileid: "36127583"
  在安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]组件时，也会安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务已启动，该服务的启动类型已设置为自动。 不过，若要使用该服务来管理已存储的和正在运行的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包，还必须安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
 > [!NOTE]  
->  无法连接到的实例[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务中，从[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]版本[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 也就是说，在**连接到服务器**对话框中，不能仅在其上输入服务器的名称[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]版本[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务正在运行。 但是，你可以编辑服务的配置文件和从而管理的实例中存储的包[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]从[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]版本[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)。  
+>  无法连接到的实例[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务从[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]版本[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 即，在**连接到服务器**对话框中，您不能输入服务器的名称在其上仅[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]版本的[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务是否正在运行。 但是，可以编辑服务配置文件，从而管理的实例中存储的包[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]从[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]版本的[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)。  
   
  在一台计算机上可以只安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的一个实例。 该服务并非特定于某个 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例。 可以使用正在运行该服务的计算机的名称连接到该服务。  
   

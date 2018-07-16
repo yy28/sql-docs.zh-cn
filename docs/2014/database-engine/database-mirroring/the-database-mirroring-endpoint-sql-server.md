@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 060ab17ca1f86e2b5b1da0c900bd7e49a7103ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185164"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>数据库镜像端点 (SQL Server)
   若要参与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像，服务器实例需要有自己专用的“数据库镜像端点” 。 此端点用途特殊，专门用于接收来自其他服务器实例的这些连接。 在某一给定服务器实例上，与任何其他服务器实例的每个 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像连接都使用单个数据库镜像端点。  
@@ -51,7 +50,7 @@ ms.locfileid: "36129043"
 > [!IMPORTANT]  
 >  如果运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机具有防火墙，则防火墙配置必须允许端点中指定的端口的传入和发送连接。  
   
- 对于数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，身份验证和加密在端点配置。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组传输安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+ 对于数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，身份验证和加密在端点配置。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组的传输安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
   
 > [!IMPORTANT]  
 >  请勿重新配置正在使用的数据库镜像端点。 服务器实例使用彼此的端点来了解其他系统的状态。 如果重新配置端点，则可能会重新启动此端点，从而导致其他服务器实例出现错误。 这对于自动故障转移模式尤为重要，在此模式下，在伙伴上重新配置端点可能会导致故障转移。  
@@ -62,7 +61,7 @@ ms.locfileid: "36129043"
   
 -   如果每个服务器实例都在某一域服务帐户下运行，则您可以将 Windows 身份验证用于您的数据库镜像端点。 如果所有服务器实例使用相同的域用户帐户运行，则正确的用户登录名将自动存在于全部两个 **master** 数据库中。 这样可简化可用性数据库的安全配置并建议这样做。  
   
-     如果为某一可用性组托管可用性副本的任何服务器实例以不同的帐户身份运行，则必须在其他服务器实例上的 **master** 中创建每个登录帐户。 然后，必须向该登录名授予 CONNECT 权限，以便连接到该服务器实例的数据库镜像端点。 有关详细信息，[设置的登录帐户对数据库镜像或 AlwaysOn 可用性组&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)。  
+     如果为某一可用性组托管可用性副本的任何服务器实例以不同的帐户身份运行，则必须在其他服务器实例上的 **master** 中创建每个登录帐户。 然后，必须向该登录名授予 CONNECT 权限，以便连接到该服务器实例的数据库镜像端点。 有关详细信息[设置的登录帐户的数据库镜像或 AlwaysOn 可用性组&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)。  
   
      如果您的服务器实例使用 Windows 身份验证，则您可以通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]、PowerShell 或新建可用性组向导创建数据库镜像端点。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36129043"
   
 -   如果任何服务器实例正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，则您必须使用证书来进行端点身份验证。 如果您正在使用证书来用于您的数据库镜像端点，则您的系统管理员必须配置每个服务器实例，以在出站连接和进站连接中使用证书。  
   
-     没有使用证书来配置数据库镜像安全性的任何自动方法。 你将需要使用 CREATE ENDPOINT[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或`New-SqlHadrEndpoint`PowerShell cmdlet。 有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)的信息。 有关启用了服务器实例上的证书身份验证的信息，请参阅[数据库镜像终结点使用证书&#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+     没有使用证书来配置数据库镜像安全性的任何自动方法。 将需要使用 CREATE ENDPOINT[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或`New-SqlHadrEndpoint`PowerShell cmdlet。 有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)的信息。 有关启用证书身份验证服务器实例上的信息，请参阅[数据库镜像终结点使用证书&#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -97,9 +96,9 @@ ms.locfileid: "36129043"
   
   
 ## <a name="see-also"></a>请参阅  
- [针对数据库镜像和 AlwaysOn 可用性组传输安全&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [数据库镜像配置故障排除 (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys.dm_hadr_availability_replica_states &#40;Transact SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.dm_db_mirroring_connections &#40;Transact SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
   
   

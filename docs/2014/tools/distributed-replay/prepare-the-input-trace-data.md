@@ -1,5 +1,5 @@
 ---
-title: 准备输入的跟踪数据 |Microsoft 文档
+title: 准备输入的跟踪数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196717"
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能开始分布式重播之前，必须先从分布式重播管理工具启动预处理阶段以准备输入跟踪数据。 在预处理阶段，分布式重播控制器处理跟踪数据并生成一个中间文件：  
   
- ![分布式重播预处理阶段](../../database-engine/media/preprocess.gif "分布式重播预处理阶段")  
+ ![Distributed replay 预处理阶段](../../database-engine/media/preprocess.gif "Distributed replay 预处理阶段")  
   
  有关预处理阶段的详细信息，请参阅 [SQL Server Distributed Replay](sql-server-distributed-replay.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36130006"
   
 2.  **启动预处理阶段**：若要准备输入跟踪数据，你必须使用 **preprocess** 选项运行管理工具。 有关详细信息，请参阅[预处理选项（Distributed Replay 管理工具）](preprocess-option-distributed-replay-administration-tool.md)。  
   
-    1.  打开 Windows 命令提示符实用工具 (`CMD.exe`)，并导航到 Distributed Replay 管理工具的安装位置 (`DReplay.exe`)。  
+    1.  打开 Windows 命令提示实用工具 (`CMD.exe`)，并导航到分布式重播管理工具的安装位置 (`DReplay.exe`)。  
   
     2.  （可选）如果控制器服务不是在运行管理工具的计算机上运行，则使用 *controller* 参数 **-m**指定控制器。  
   

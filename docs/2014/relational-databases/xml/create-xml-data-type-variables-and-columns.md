@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309387"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
-  `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 因为与其他内置类型，你可以使用`xml`创建为变量的类型、 参数类型，函数返回类型，或在中的表时，数据类型作为列类型[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+  `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 您可以使用其他内置类型`xml`数据类型作为列类型时创建的表作为变量的类型、 参数类型、 函数返回类型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
 ## <a name="creating-columns-and-variables"></a>创建列和变量  
  若要创建 `xml` 类型列作为表的一部分，请使用 `CREATE TABLE` 语句，如下例所示：  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- 使用约束的替代方法是创建包装、 用户定义函数来包装`xml`数据类型方法，并在检查约束指定用户定义函数，如下面的示例中所示。  
+ 使用约束的替代方法是创建一个包装器、 用户定义函数来包装`xml`数据类型方法，并在检查约束中指定用户定义函数，如下面的示例中所示。  
   
  在以下示例中， `Col2` 的约束指定此列中存储的每个 XML 实例都必须具有包含 `<ProductDescription>` 属性的 `ProductID` 元素。 此约束由如下用户定义函数强制执行：  
   
@@ -131,9 +131,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>相同或不同的表  
- `xml`数据类型列可以包含其他关系列的表中或在单独的表具有外键关系与主表来创建。  
+ `xml`数据类型列可以包含其他关系列的表中或在单独的表具有外键关系与主表创建。  
   
- 创建`xml`当满足以下条件之一时，相同的表中的数据类型列：  
+ 创建`xml`当以下条件之一为 true 时相同的表中的数据类型列：  
   
 -   您的应用程序对 XML 列执行数据检索，并且不需要 XML 列的 XML 索引。  
   
@@ -141,7 +141,7 @@ INSERT INTO T values(1,'<Product />')
   
  创建`xml`在单独的表，如果满足以下条件的数据类型列：  
   
--   你想要生成 XML 索引`xml`数据类型列，但主表的主键是不同于它的聚集键，或主表没有主键，或者主表是堆 （没有聚集键）。 如果主表已存在，可能会这样。  
+-   你想要生成 XML 索引`xml`数据类型列，但是主表的主键不同于它的聚集键，或者主表没有主键，或者主表为堆 （没有聚集键）。 如果主表已存在，可能会这样。  
   
 -   您不希望因为表中存在 XML 列而降低表扫描的速度。 无论该列是存储在行内还是行外，都会占用空间。  
   

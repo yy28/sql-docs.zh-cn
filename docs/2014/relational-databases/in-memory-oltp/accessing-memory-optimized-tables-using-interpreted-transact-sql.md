@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170758"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解释型 Transact-SQL 访问内存优化表
   除了少数例外情况，可以使用任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 DML 操作（SELECT、INSERT、UPDATE 或 DELETE）、即席批处理和 SQL 模块（如存储过程、表值函数、触发器和视图）来访问内存优化表。  
@@ -57,7 +57,7 @@ ms.locfileid: "36129672"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 当使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 从显式或隐式事务访问内存优化表时，必须包含隔离级别表提示（如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE），也可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 有关详细信息，请参阅[具有内存优化表的事务隔离级别的准则](memory-optimized-tables.md)和[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+ 当使用解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 从显式或隐式事务访问内存优化表时，必须包含隔离级别表提示（如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE），也可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 有关详细信息，请参阅[具有内存优化表的事务隔离级别准则](memory-optimized-tables.md)并[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 > [!NOTE]  
 >  由在自动提交模式下运行的查询访问的内存优化表不需要隔离级别表提示。  

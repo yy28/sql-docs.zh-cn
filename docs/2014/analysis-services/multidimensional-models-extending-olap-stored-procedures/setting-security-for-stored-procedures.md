@@ -1,5 +1,5 @@
 ---
-title: 设置的安全性存储过程 |Microsoft 文档
+title: 设置的安全性存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - PermissionSet property
 ms.assetid: 6364b125-7d72-4312-9677-56c62e22461e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1a3a4f9d6b514ba6ea728e02e8886c34bf0a4565
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66da0abd1831fc3d32b2a228110cf85e8442e47e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204557"
 ---
 # <a name="setting-security-for-stored-procedures"></a>设置存储过程的安全性
   存储过程的安全性是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例（服务器级别）、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的存储过程的 `PermissionSet` 属性设置的。  

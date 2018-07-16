@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 399c6743f302bd616fe0a232527fcb5fc0af62ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199667"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具来创建包。 根据您指定的命令，包可以包含：  
@@ -30,7 +30,7 @@ ms.locfileid: "36129004"
   
  如果需要部署仅包含模型对象的包，可改为在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中使用模型部署向导。 有关详细信息，请参阅 [使用向导创建模型部署包](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
 > [!NOTE]  
-> 此版本的 MDSModelDeploy 工具不能使用超过千兆字节 (GB) 的内存。 当创建或使用部署大的模型**模型对象和数据**选项，你可能会遇到"内存不足"或"流已太长"错误。 若要解决此问题，请使用 MDS 暂存部署数据;或者在升级到 MDS 2016 或更高版本，其中包括 MDSModelDeploy 工具更新的版本。
+> 此版本的 MDSModelDeploy 工具不能使用多个千兆字节 (GB) 的内存。 当创建或使用部署大型模型**模型对象和数据**选项时，可能会出现"内存不足"或"Stream 时间过长"错误。 若要解决此问题，请使用 MDS 暂存部署数据;或升级到 MDS 2016 或更高版本，其中包括 MDSModelDeploy 工具的更新的版本。
 ## <a name="prerequisites"></a>必要條件  
  若要执行此过程：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36129004"
   
 2.  导航到 MDSModelDeploy.exe 所在的位置。  
   
-    -   如果 MDS 已安装在默认位置中，该文件位于*驱动器*: files\microsoft SQL Server\120\Master 数据 Services\Configuration。  
+    -   如果 MDS 安装在默认位置，该文件位于*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration。  
   
     -   如果 MDS 未安装在默认位置，请在本地计算机上搜索 MDSModelDeploy.exe。  
   

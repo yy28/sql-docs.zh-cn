@@ -1,5 +1,5 @@
 ---
-title: 逻辑体系结构 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 逻辑体系结构 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4505a89b4ea9e815b2fedbe8dbfddbfe70bff6c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299297"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
   数据挖掘过程涉及多个组件的交互。  
@@ -45,7 +45,7 @@ ms.locfileid: "36124679"
 ##  <a name="bkmk_SourceData"></a> 数据挖掘源数据  
  在数据挖掘中使用的数据并不会存储在数据挖掘解决方案中，而仅存储绑定。 该数据可能驻留在 SQL Server 早期版本创建的数据库、CRM 系统，或者甚至平面文件中。 通过处理定型结构或模型时，将创建数据的统计汇总并在缓存中存储它，这样可以将其持久化以供以后的操作使用它；或者在处理后删除数据的统计汇总。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)。  
   
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源视图 (DSV) 对象中组合不同数据，将在你的数据源上提供一个抽象层。 您可以指定表之间的联接，或添加具有多对一关系的表以便创建嵌套表列。 这些对象的定义、数据源和数据源视图存储在解决方案内，文件扩展名为 *.ds 和 \*.dsv。 有关创建和使用的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源和数据源视图，请参阅[支持数据源&#40;SSAS 多维&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源视图 (DSV) 对象中组合不同数据，将在你的数据源上提供一个抽象层。 您可以指定表之间的联接，或添加具有多对一关系的表以便创建嵌套表列。 这些对象的定义、数据源和数据源视图存储在解决方案内，文件扩展名为 *.ds 和 \*.dsv。 有关如何创建和使用的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源和数据源视图，请参阅[支持数据源&#40;SSAS 多维&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
  还可以使用 AMO 或 XMLA 定义和更改数据源以及数据源视图。 有关以编程方式使用这些对象的详细信息，请参阅[逻辑体系结构概述（Analysis Services - 多维数据）](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36124679"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  数据挖掘结构是一种逻辑数据容器，它定义从中生成挖掘模型的数据域。 单个挖掘结构可以支持多个挖掘模型。  
   
- 需要使用数据挖掘解决方案中的数据时，Analysis Services 读取源的数据并生成聚合以及其他信息的缓存。 默认情况下，将此缓存持久化以便可以重用定型数据来支持其他模型。 如果你需要删除缓存，更改`CacheMode`挖掘结构对象的值的属性`ClearAfterProcessing`。 有关详细信息，请参阅 [AMO 数据挖掘类](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
+ 需要使用数据挖掘解决方案中的数据时，Analysis Services 读取源的数据并生成聚合以及其他信息的缓存。 默认情况下，将此缓存持久化以便可以重用定型数据来支持其他模型。 如果需要删除此缓存，更改`CacheMode`属性的值对挖掘结构对象`ClearAfterProcessing`。 有关详细信息，请参阅 [AMO 数据挖掘类](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 还提供将数据分为定型数据集和测试数据集的功能，这样，您可以针对具有代表性的随机选择的数据集测试您的挖掘模型。 数据实际未单独存储；使用一个属性标记结构缓存中的事例数据，该属性指示特定事例是用于定型还是测试。 如果删除缓存，则无法检索该信息。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36124679"
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含很多供数据挖掘内部使用的系统存储过程。 尽管系统存储过程供内部使用，但是您可能发现它们是有用的快捷方式。 Microsoft 保留根据需要更改这些存储过程的权利；因此，对于生产而言，我们建议您使用 DMX、AMO 或 XMLA 创建查询。  
   
  **自定义插件算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 有关创建自己的算法，以及作为新数据挖掘服务的算法然后添加到的服务器实例中提供的机制。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一种机制，用于创建你自己的算法，然后将这些算法作为新的数据挖掘服务添加到的服务器实例。  
   
  Analysis Services 使用 COM 接口与插件算法进行通信。 若要了解有关如何实现新算法的详细信息，请参阅 [Plugin Algorithms](plugin-algorithms.md)。  
   

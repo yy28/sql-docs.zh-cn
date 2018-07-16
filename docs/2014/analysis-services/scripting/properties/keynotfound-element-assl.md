@@ -1,5 +1,5 @@
 ---
-title: KeyNotFound 元素 (ASSL) |Microsoft 文档
+title: KeyNotFound 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 545ae163b4dda53adb60f5300e7f8b75cf926d52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281803"
 ---
 # <a name="keynotfound-element-assl"></a>KeyNotFound 元素 (ASSL)
-  指定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]时遇到了引用完整性错误的响应。  
+  指定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]时遇到引用完整性错误的响应。  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36127607"
 |*ReportAndContinue*|处理应报告错误并继续。|  
 |*ReportAndStop*|处理应报告错误并停止。|  
   
- 对应于的允许值为枚举`KeyNotFound`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ErrorOption>。  
+ 与允许的值相对应的枚举`KeyNotFound`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ErrorOption>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 筛选器页，图表对话框 （报表生成器和 SSRS） |Microsoft 文档
+title: 筛选器页上，图表对话框 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
 - "10409"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5b695b45a43f388a7dabf64bad327404ef4f6510
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3123a7c1ba3a520ad743ffe7dbd65dfd57443672
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317897"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>“筛选器”页 -&gt;“图表”对话框（报表生成器和 SSRS）
   在以下对话框中单击 **“筛选器”** ：  
@@ -70,6 +70,6 @@ ms.locfileid: "36124271"
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
- [筛选、 分组和排序数据&#40;报表生成器和 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

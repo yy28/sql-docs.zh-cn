@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘算法 （SQL Server 数据挖掘外接程序） |Microsoft 文档
+title: 数据挖掘算法 （SQL Server 数据挖掘外接程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation
 - data mining algorithms
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ea33a6ee29965202189fd4149c243df3d1d91df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8cbcfbeae8691fb76daa6fa9231274040b52c23c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288533"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>数据挖掘算法（SQL Server 数据挖掘外接程序）
   Office 数据挖掘外接程序支持使用以下数据挖掘算法创建分析模型。 所有算法基于已知的计算机学习方法，并已由 Microsoft 研究院实现。  
@@ -63,6 +63,6 @@ ms.locfileid: "36128003"
   
 ## <a name="see-also"></a>请参阅  
  [查询&#40;SQL Server 数据挖掘外接程序&#41;](query-sql-server-data-mining-add-ins.md)   
- [高级建模&#40;数据挖掘的 Excel 外接程序&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+ [高级建模&#40;Excel 数据挖掘外接程序&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用用户定义表 |Microsoft 文档
+title: 使用用户定义表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 261414ecd50306f687abcc88963658aec2f124fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 611985a99822321092942c1e9de806e24c57f09b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206787"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
   用户定义表表示表格信息。 将表格数据传递到存储过程或用户定义函数中时，用户定义表可作为参数使用。 用户定义表不能用于表示数据库表中的列。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 对象。 每个<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>对象，因为集合具有**列**属性，它引用的集合<xref:Microsoft.SqlServer.Management.Smo.Column>列出用户定义表中的列的对象。 使用 Add 方法可向用户定义表添加列。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 对象。 每个<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>对象，集合具有**列**引用的集合的属性<xref:Microsoft.SqlServer.Management.Smo.Column>列出用户定义表中的列的对象。 使用 Add 方法可向用户定义表添加列。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 对象定义新的用户定义表时，必须提供列和基于其中一列的主键。  
   

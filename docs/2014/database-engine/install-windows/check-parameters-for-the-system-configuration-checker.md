@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, system configuration checks
 - failed system configuration checks [SQL Server]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Setup [SQL Server], system configuration checker
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6385a1174bdb5d64279dfcee18e71343bc98a77d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3846ae220bc1e0e412185daca57f576a7a2e030
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197797"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>系统配置检查器的检查参数
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，系统配置检查器 (SCC) 会对将要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机进行扫描。 SCC 将检查会使安装无法成功 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的情况。 在安装程序启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导之前，SCC 会检索每个项的状态。 然后，将检索结果与所需条件进行比较并提供如何排除妨碍性问题的指导。  

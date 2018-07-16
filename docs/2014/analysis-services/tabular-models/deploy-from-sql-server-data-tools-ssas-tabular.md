@@ -1,5 +1,5 @@
 ---
-title: 从 SQL Server Data Tools (SSAS 表格) 部署 |Microsoft 文档
+title: 从 SQL Server Data Tools (SSAS 表格) 部署 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b6193c57df6e6fa75f55b27402793fec20ca5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1498798cedeab8dacfe923754b02ba394937aff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265317"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>从 SQL Server Data Tools 进行部署（SSAS 表格）
   使用本主题中的任务以通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用“部署”命令来部署表格模型解决方案。  
@@ -41,7 +41,7 @@ ms.locfileid: "36128616"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的“解决方案资源管理器”中，右键单击项目名称，再单击“属性”。  
   
-2.  在**\<项目名称 > 属性**对话框，请在**部署选项**，指定属性设置，如果不同于默认设置。  
+2.  在中**\<项目名称 > 属性**对话框中**部署选项**，如果不同于默认设置指定属性设置。  
   
     > [!NOTE]  
     >  对于缓存模式下的模型，“查询模式”始终为“内存中”。  
@@ -58,7 +58,7 @@ ms.locfileid: "36128616"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>部署表格模型解决方案  
   
--   在[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]上**生成**菜单上，单击**部署\<项目名称 >**。  
+-   在中[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，然后在**构建**菜单中，单击**部署\<项目名称 >**。  
   
      “部署”对话框将出现，并且指示在模型中包括的每个表的元数据部署和处理的状态（除非将“处理选项”属性设置为“不处理”）。 在部署过程完成后，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 连接到 Analysis Services 实例并且确认已创建新的模型数据库对象或使用客户端报告应用程序连接到已部署的模型。  
   
