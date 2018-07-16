@@ -1,5 +1,5 @@
 ---
-title: ReportFormatParameters 元素 (ASSL) |Microsoft 文档
+title: ReportFormatParameters 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportFormatParameters element
 ms.assetid: f2e677bf-7b6b-4ce4-b0ec-75a4999306c9
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e76ba9b70c485a938910eef7a7285520163b1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b11bab41072f558af5ecbea86852f129853ed6e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234207"
 ---
 # <a name="reportformatparameters-element-assl"></a>ReportFormatParameters 元素 (ASSL)
   包含的集合[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)元素[ReportAction](../data-type/action-data-type-assl.md)元素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36127989"
 |子元素|[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 对应于的父元素`ReportFormatParameters`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ReportAction>。  
+ 父级对应的元素`ReportFormatParameters`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ReportAction>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

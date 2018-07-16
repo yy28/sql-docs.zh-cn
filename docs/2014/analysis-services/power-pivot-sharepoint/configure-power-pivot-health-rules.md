@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 运行状况规则-配置 |Microsoft 文档
+title: PowerPivot 运行状况规则-配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265424"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 运行状况规则 - 配置
   PowerPivot for SharePoint 包含一些 SharePoint 运行状况规则，它们可帮助您监视和解决服务器可用性和配置问题。 应用于 PowerPivot for SharePoint 的运行状况规则显示在“查看规则定义”页。  
@@ -32,7 +32,7 @@ ms.locfileid: "36126938"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意：** 将为 SQL Server Analysis Services 实例和 PowerPivot 服务应用程序单独配置运行状况规则设置。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅主题中的"版本"列[运行状况规则参考&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)，或者你可以运行以下的 Windows PowerShell 命令，以查看已安装的规则。  
+ **注意：** 将为 SQL Server Analysis Services 实例和 PowerPivot 服务应用程序单独配置运行状况规则设置。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅主题中的"版本"列[运行状况规则参考&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)，或者，可以运行以下 Windows PowerShell 命令以查看已安装的规则。  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -44,7 +44,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [配置用于评估服务器稳定性的运行状况规则 (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
   
- [配置用于评估应用程序稳定性 （PowerPivot 服务应用程序） 的运行状况规则](#bkmk_evaluate_application_stability)  
+ [配置用于评估 （PowerPivot 服务应用程序） 的应用程序稳定性的运行状况规则](#bkmk_evaluate_application_stability)  
   
 ## <a name="prerequisites"></a>必要條件  
  您必须是服务应用程序管理员才能更改 Analysis Services 实例和 PowerPivot 服务应用程序的配置属性。  
@@ -68,7 +68,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  在页面的顶部，选择 SharePoint 场中包含 Analysis Services 实例的服务器（在下图中，该服务器的名称为 AW-SRV033）。 **“SQL Server Analysis Services”** 将出现在服务列表中。  
   
-     ![屏幕快照的管理服务在服务器页上](../media/ssas-centraladmin-servicesonserver.gif "屏幕截图的管理服务在服务器页上")  
+     ![屏幕截图的管理服务服务器页](../media/ssas-centraladmin-servicesonserver.gif "屏幕截图的管理服务服务器页")  
   
 3.  单击 **SQL Server Analysis Services**。  
   
@@ -95,24 +95,24 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      此配置设置对应于 **“查看问题和解决方法”** 页上的以下规则定义： **“PowerPivot: 连接数较高表明应部署更多服务器以处理当前负载”**。  
   
      磁盘空间不足（默认值为 5%）  
-     每次请求数据库时，磁盘空间都将用于缓存 PowerPivot 数据。 此规则可告知您磁盘空间不足这一情况。 默认情况下，在备份文件夹所在的磁盘驱动器上，如果磁盘空间低于 5%，将触发此运行状况规则。 有关磁盘使用情况的详细信息，请参阅[配置磁盘空间使用情况&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
+     每次请求数据库时，磁盘空间都将用于缓存 PowerPivot 数据。 此规则可告知您磁盘空间不足这一情况。 默认情况下，在备份文件夹所在的磁盘驱动器上，如果磁盘空间低于 5%，将触发此运行状况规则。 有关磁盘使用情况的详细信息，请参阅[配置的磁盘空间使用情况&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
      此配置设置对应于 **“查看问题和解决方法”** 页上的以下规则定义： **“PowerPivot: 在缓存 PowerPivot 数据的驱动器上，磁盘空间越来减少”**。  
   
      数据收集间隔（小时）  
      可指定用于计算触发运行状况规则所使用的数字的数据收集期间。 虽然会对系统进行持续监视，但会使用在预定义间隔内生成的数据来计算用于触发运行状况规则警告的阈值。 默认间隔为 4 小时。 服务器将检索在前 4 个小时内收集到的系统和使用率数据，以计算用户连接数、磁盘空间使用率以及 CPU 与内存使用率。  
   
-##  <a name="bkmk_evaluate_application_stability"></a> 配置用于评估应用程序稳定性 （PowerPivot 服务应用程序） 的运行状况规则  
+##  <a name="bkmk_evaluate_application_stability"></a> 配置用于评估 （PowerPivot 服务应用程序） 的应用程序稳定性的运行状况规则  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
   
 2.  在“服务应用程序”页中，单击 **“默认 PowerPivot 服务应用程序”**。  
   
-     ![屏幕快照的 ManageService 应用程序页](../media/ssas-centraladmin-app.gif "的 ManageService 屏幕快照应用程序页")  
+     ![ManageService 应用程序的屏幕截图页面](../media/ssas-centraladmin-app.gif "ManageService 应用程序的屏幕截图页面")  
   
 3.  PowerPivot 管理面板将出现。 单击 **“操作”** 列表中的 **“配置服务应用程序设置”** 以打开服务器应用程序设置页。  
   
-     ![仪表板的屏幕截图专注于操作列表](../media/ssas-centraladmin-actionslist.gif "的仪表板，屏幕截图专注于操作列表")  
+     ![屏幕截图的仪表板，专注于操作列表](../media/ssas-centraladmin-actionslist.gif "的仪表板中，屏幕截图专注于操作列表")  
   
 4.  在“运行状况规则设置”中，修改以下设置：  
   
@@ -127,7 +127,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      检查对 PowerPivot Management Dashboard.xlsx 的更新（默认值为 5 天）  
      PowerPivot Management Dashboard.xlsx 文件是 PowerPivot 管理面板中的报表所使用的数据源。 依据默认的服务器配置，每天都会使用由 SharePoint 和 PowerPivot 系统服务收集到的使用率数据来刷新 .xlsx 文件。 如果该文件未更新，则运行状况规则会将其报告为一个问题。 默认情况下，如果该文件的时间戳已有 5 天未发生更改，则将触发此规则。  
   
-     有关使用情况数据收集详细信息，请参阅[配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
+     有关使用情况数据收集的详细信息，请参阅[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
      此配置设置对应于 **“查看问题和解决方法”** 页上的以下规则定义： **“PowerPivot: 使用情况数据不按预期频率进行更新”**.  
   

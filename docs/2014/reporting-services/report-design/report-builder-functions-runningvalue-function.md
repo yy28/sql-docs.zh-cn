@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319857"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。  
@@ -39,20 +39,20 @@ RunningValue(expression, function, scope)
  要对其执行聚合的表达式，例如， `[Quantity]`。  
   
  *函数*  
- (`Enum`) 应用于表达式，例如，聚合函数的名称`Sum`。 此函数不能为`RunningValue`， `RowNumber`，或`Aggregate`。  
+ (`Enum`) 要应用于表达式，例如，聚合函数的名称`Sum`。 此函数不能`RunningValue`， `RowNumber`，或`Aggregate`。  
   
  *作用域*  
- (`String`) 一个字符串常量，表示数据集、数据区域或组的名称，也可以为 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`），它指定在其中计算聚合的上下文。 `Nothing` 指定的最外层的上下文，通常报表数据集。  
+ (`String`) 一个字符串常量，表示数据集、数据区域或组的名称，也可以为 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`），它指定在其中计算聚合的上下文。 `Nothing` 指定最外层的上下文中，通常为报表数据集。  
   
 ## <a name="return-type"></a>返回类型  
  由 *function* 参数中指定的聚合函数确定。  
   
 ## <a name="remarks"></a>Remarks  
- 值`RunningValue`重置为 0 的作用域的每个新实例。 如果指定组，则会在更改组表达式时重置该运行值。 如果指定数据区域，则会为该数据区域的每个新实例重置该运行值。 如果指定数据集，则不会在整个数据集中重置该运行值。  
+ 值为`RunningValue`重置为 0，为每个作用域的新实例。 如果指定组，则会在更改组表达式时重置该运行值。 如果指定数据区域，则会为该数据区域的每个新实例重置该运行值。 如果指定数据集，则不会在整个数据集中重置该运行值。  
   
  `RunningValue` 不能在筛选器或排序表达式中使用。  
   
- 为其计算运行值的数据集必须具有相同的数据类型。 若要转换为相同的数据类型的多个数值数据类型的数据，使用转换功能，例如`CInt`，`CDbl`或`CDec`。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
+ 为其计算运行值的数据集必须具有相同的数据类型。 若要将转换具有多个数值数据类型为相同的数据类型的数据，请使用转换函数，例如`CInt`，`CDbl`或`CDec`。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
  *Scope* 不能是表达式。  
   

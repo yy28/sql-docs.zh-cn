@@ -1,5 +1,5 @@
 ---
-title: 授予数据库权限 (Analysis Services) |Microsoft 文档
+title: 授予数据库权限 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37022a42bc8e5347551a49c24ffc0ae9f8b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49e677c7c0a452b5b465d2a82c0bd3477dcc3b5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286163"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
   如果你在介绍关系数据库中具有后台的 Analysis Services 数据库管理，则需要理解的首要事项为在数据访问方面，数据库不是 Analysis Services 中的主要安全对象。  
@@ -33,7 +33,7 @@ ms.locfileid: "36015986"
   
  Analysis Services 中没有登录名。 可以简单地在“成员身份”  窗格中创建角色并分配 Windows 帐户。 所有用户（包括管理员）使用 Windows 帐户连接到 Analysis Services。  
   
- ![创建对话框显示数据库权限的角色](../media/ssas-permsdbrole.png "创建对话框显示数据库权限的角色")  
+ ![创建对话框中显示数据库权限的角色](../media/ssas-permsdbrole.png "创建对话框中显示数据库权限的角色")  
   
  在数据库级别可指定三种类型的权限。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "36015986"
 > [!NOTE]  
 >  服务器管理员（服务器管理员角色成员）对服务器上的每个数据库也具有隐式完全控制。  
   
- `Process Database` ─ 该权限用于委派在数据库级别的处理。 作为管理员，你可通过创建一个角色来卸载此任务，该角色允许其他人员或服务对数据库中的任何对象调用处理操作。 或者，你也可以创建在特定对象上启用处理的角色。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
+ `Process Database` ─ 该权限用于在数据库级别委派处理。 作为管理员，你可通过创建一个角色来卸载此任务，该角色允许其他人员或服务对数据库中的任何对象调用处理操作。 或者，你也可以创建在特定对象上启用处理的角色。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
   
- `Read Definition` ─ 该权限授予读取对象元数据的能力减查看关联的数据的能力。 一般地，该权限被用于为专用处理而创建的角色中，添加使用工具（例如： [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ）的功能来交互地处理数据库。 如果没有 `Read Definition`，则 `Process Database` 权限就仅在编写了脚本的方案中有效。 如果你打算自动执行处理，或许通过 SSIS 或另一个计划程序，你可能想要创建具有的角色`Process Database`而无需`Read Definition`。 否则，请考虑将这两个属性组合在同一角色中，以通过在用户界面中能形象化数据模型的 SQL Server 工具支持无人参与的以及交互式的处理。  
+ `Read Definition` ─ 该权限授予读取对象元数据的能力去除查看关联的数据的功能。 一般地，该权限被用于为专用处理而创建的角色中，添加使用工具（例如： [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ）的功能来交互地处理数据库。 如果没有 `Read Definition`，则 `Process Database` 权限就仅在编写了脚本的方案中有效。 如果计划自动执行处理，或许通过 SSIS 或其他计划程序，你可能想要创建具有的角色`Process Database`而无需`Read Definition`。 否则，请考虑将这两个属性组合在同一角色中，以通过在用户界面中能形象化数据模型的 SQL Server 工具支持无人参与的以及交互式的处理。  
   
 ## <a name="full-control-administrator-permissions"></a>完全控制（管理员）权限  
  在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，数据库管理员是被分配到包括完全控制（管理员）权限的角色的任何 Windows 用户标识。 数据库管理员可以在数据库中执行任何任务，其中包括：  
@@ -65,21 +65,21 @@ ms.locfileid: "36015986"
   
 #### <a name="create-roles-in-ssms"></a>在 SSMS 中创建角色  
   
-1.  在[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，连接到的实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，打开**数据库**文件夹中，选择一个数据库，然后右键单击**角色** | **新角色**.  
+1.  在中[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，连接到的实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，打开**数据库**文件夹，选择一个数据库，并右键单击**角色** | **新角色**.  
   
 2.  在“常规”  窗格中，输入名称（例如：DBAdmin）。  
   
-3.  为多维数据集选择“完全控制(管理员)”复选框。 请注意，`Process Database` 和 `Read Definition` 被自动选择。 这两种权限始终包括在包含角色`Full Control`。  
+3.  为多维数据集选择“完全控制(管理员)”复选框。 请注意，`Process Database` 和 `Read Definition` 被自动选择。 这两个这些权限始终包含在包含的角色`Full Control`。  
   
 4.  在“成员身份”  窗格中，输入使用此角色连接到 Analysis Services 的 Windows 用户和组帐户。  
   
 5.  单击“确定”  ，完成角色创建。  
   
 ## <a name="process-database"></a>Process Database  
- 如果定义授予数据库权限的角色，则可以跳过`Full Control`并只选择`Process Database`。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)  
+ 在定义时授予数据库权限的角色，则可以跳过`Full Control`仅选择`Process Database`。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)  
   
 ## <a name="read-definition"></a>Read Definition  
- 如`Process Database`，则设置`Read Definition`在数据库级别的权限具有对数据库中的其他对象的级联影响。 如果想在更为精细的级别上设置“读取定义”权限，则必须清除“常规”窗格中作为数据库属性的“读取定义”。 有关详细信息，请参阅[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)。  
+ 像`Process Database`，并设置`Read Definition`在数据库级别的权限有数据库中的其他对象级联作用。 如果想在更为精细的级别上设置“读取定义”权限，则必须清除“常规”窗格中作为数据库属性的“读取定义”。 有关详细信息，请参阅[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [授予服务器管理员权限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   

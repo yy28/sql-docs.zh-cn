@@ -1,5 +1,5 @@
 ---
-title: 数据流路径编辑器 （元数据页） |Microsoft 文档
+title: 数据流路径编辑器 （元数据页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.metadata.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cd52c13526eb3ecd91f5255f24726dc1d2830e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f14ff76694d380cfa5e118615568b20c2994872
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176444"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>数据流路径编辑器（“元数据”页）
   可以使用 **“数据流路径编辑器”** 对话框的 **“元数据”** 页查看路径列的元数据。  

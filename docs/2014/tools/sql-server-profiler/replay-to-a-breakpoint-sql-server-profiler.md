@@ -1,5 +1,5 @@
 ---
-title: 重播到断点 （SQL Server 事件探查器） |Microsoft 文档
+title: 重播到断点 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints [SQL Server]
 - traces [SQL Server], replaying
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22f9c80c8f17adba5bf939db65481a0ccde3a47a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef7c27eff6efd66d95a61a158a0f788f35757182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289863"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重播到断点 (SQL Server Profiler)
   本主题说明如何在您要通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]进行重播的跟踪文件或表中设置断点。 在重播跟踪之前，在跟踪文件或表中设置断点可以使您在发生特定事件时暂停重播跟踪。 在重播跟踪时使用断点能够支持调试，因为您可以将长跟踪脚本的重播分解为较短的段以便进行增量分析。  
@@ -56,7 +56,7 @@ ms.locfileid: "36125045"
 6.  重复步骤 5 到跟踪的末尾。  
   
 ## <a name="see-also"></a>请参阅  
- [重播至光标处&#40;SQL Server 事件探查器&#41;](replay-to-a-cursor-sql-server-profiler.md)   
+ [重播至游标&#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
  [重播跟踪](replay-traces.md)   
  [SQL Server 事件探查器](sql-server-profiler.md)  
   

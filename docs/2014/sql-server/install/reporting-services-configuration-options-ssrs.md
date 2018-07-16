@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 配置选项 (SSRS) |Microsoft 文档
+title: Reporting Services 配置选项 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
 helpviewer_keywords:
@@ -19,20 +19,20 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 81a94897a4c5a0ebce5932ef09612a377a458937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327077"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 配置选项 (SSRS)
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中的“Reporting Services 配置”页来指定如何安装和配置报表服务器。 安装选项的可用性取决于您以前在 **“功能选择”** 页选择的选项以及在安装报表服务器的同时是否还安装了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本地实例。  
   
- 在某些情况下，如果安全套接字层 (SSL) 证书安装在计算机上并绑定到一个强通配符，安装程序将使用 HTTPS 前缀创建 Reporting Services URL。 有关如何将证书映射到 Reporting Services Url 的详细信息，请参阅[配置报表服务器以使用安全套接字层 (SSL) 连接](http://go.microsoft.com/fwlink/?LinkId=199089)(http://go.microsoft.com/fwlink/?LinkId=199089) SQL Server 联机丛书中。  
+ 在某些情况下，如果安全套接字层 (SSL) 证书安装在计算机上并绑定到一个强通配符，安装程序将使用 HTTPS 前缀创建 Reporting Services URL。 有关如何将证书映射到 Reporting Services Url 的详细信息，请参阅[配置安全套接字层 (SSL) 连接的报表服务器](http://go.microsoft.com/fwlink/?LinkId=199089)(http://go.microsoft.com/fwlink/?LinkId=199089) SQL Server 联机丛书中。  
   
- 有关最新信息有关[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和的安装和配置的此版本中，请参阅[其他安装信息](http://go.microsoft.com/fwlink/?LinkId=207425)(http://go.microsoft.com/fwlink/?LinkId=207425)。  
+ 有关最新信息有关[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和的安装和配置此版本中，请参阅[其他安装信息](http://go.microsoft.com/fwlink/?LinkId=207425)(http://go.microsoft.com/fwlink/?LinkId=207425)。  
   
 ## <a name="options"></a>“常规”  
   
@@ -47,12 +47,12 @@ ms.locfileid: "36016520"
   
  仅当报表服务器安装中使用的默认值对您的系统有效时，此选项才可用。 建议希望在本地安装所有组件的开发人员和评估软件的用户使用此选项。  
   
- 若要查看关于安装程序所用默认设置的信息，或者要找出默认配置无法安装的原因，请单击 **“详细信息”**。 有关本机模式报表服务器的默认配置的详细信息，请参阅[为本机模式的安装 (Reporting Services) 的默认配置](http://go.microsoft.com/fwlink/?LinkId=199091)(http://go.microsoft.com/fwlink/?LinkId=199091)。  
+ 若要查看关于安装程序所用默认设置的信息，或者要找出默认配置无法安装的原因，请单击 **“详细信息”**。 有关本机模式报表服务器的默认配置的详细信息，请参阅[默认配置为本机模式安装 (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199091) (http://go.microsoft.com/fwlink/?LinkId=199091)。  
   
 #### <a name="install-only"></a>“仅安装”  
  安装报表服务器程序文件，创建报表服务器服务帐户，并注册报表服务器 Windows Management Instrumentation (WMI) 提供程序。 此安装选项称为“仅文件”安装。 如果不希望使用默认配置，则选择此选项。 如果无法安装默认配置，或安装的是包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]故障转移群集，这将是唯一可用的选项。 有关仅文件安装的详细信息，请参阅[文件安装 (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093)。  
   
- 安装程序完成后，必须先创建报表服务器数据库并配置报表服务器，服务器才可以使用。 若要配置报表服务器并创建数据库，请使用 Reporting Services 配置管理器。 有关详细信息，请参阅[如何： 创建报表服务器数据库 （Reporting Services 配置）](http://go.microsoft.com/fwlink/?LinkId=199094) (http://go.microsoft.com/fwlink/?LinkId=199094)和[配置报表服务器数据库连接](http://go.microsoft.com/fwlink/?LinkId=199095)(http://go.microsoft.com/fwlink/?LinkId=199095)。  
+ 安装程序完成后，必须先创建报表服务器数据库并配置报表服务器，服务器才可以使用。 若要配置报表服务器并创建数据库，请使用 Reporting Services 配置管理器。 有关详细信息，请参阅[如何： 创建报表服务器数据库 （Reporting Services 配置）](http://go.microsoft.com/fwlink/?LinkId=199094) (http://go.microsoft.com/fwlink/?LinkId=199094)并[配置报表服务器数据库连接](http://go.microsoft.com/fwlink/?LinkId=199095)(http://go.microsoft.com/fwlink/?LinkId=199095)。  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36016520"
   
 -   [安装 Reporting Services SharePoint 模式报表服务器用于 Power View 和数据警报](http://go.microsoft.com/fwlink/?LinkId=207543)(http://go.microsoft.com/fwlink/?LinkId=207543)。  
   
--   [安装 Reporting Services SharePoint 模式作为单个服务器场](http://go.microsoft.com/fwlink/?LinkId=207544)(http://go.microsoft.com/fwlink/?LinkId=207544)。  
+-   [安装 Reporting Services SharePoint 模式作为单服务器场](http://go.microsoft.com/fwlink/?LinkId=207544)(http://go.microsoft.com/fwlink/?LinkId=207544)。  
   
 -   [Reporting Services 报表服务器 (SSRS)](http://go.microsoft.com/fwlink/?LinkID=207244) (http://go.microsoft.com/fwlink/?LinkID=207244)。  
   

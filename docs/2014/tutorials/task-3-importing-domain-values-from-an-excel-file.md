@@ -1,5 +1,5 @@
 ---
-title: 任务 3： 从 Excel 文件导入域值 |Microsoft 文档
+title: 任务 3： 从 Excel 文件导入域值 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fd5f73f95dce1d40689062a368e1cc222023541c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e1f6f8700d0a5730785071f320b9ee88d80235b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299337"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>任务 3：从 Excel 文件导入域值
-  在此任务中，导入的值**状态**从 Excel 文件的工作表中的域。  
+  在此任务中，导入的值**状态**域从 Excel 文件的工作表。  
   
 1.  单击**状态**中的域**域列表**。  
   
-2.  确保**域值**选项卡处于活动状态的右窗格中。  
+2.  絋粄**域值**选项卡处于活动状态的右窗格中。  
   
 3.  在右窗格中，从工具栏中，单击**向下箭头**旁边**导入值**按钮，然后单击**从 Excel 导入有效值**。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "36014207"
   
 4.  单击**浏览**，选择**Suppliers.xls**，然后单击**打开**。  
   
-5.  选择**StatesToImport$** 为**工作表**。  
+5.  选择**StatesToImport$** 有关**工作表**。  
   
      ![导入域值对话框](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-02.jpg "导入域值对话框")  
   
-6.  单击**确定**关闭**导入域值**对话框。 您应在列表中看到导入的所有州的名称。 请注意，**仅显示新**导入后会自动选择选项。 当您导入值且在列表中看不到旧值时，这是因为导入后自动启用了此选项。 要查看所有值，请清除此复选框。 如果再次导入相同的一组值，则不导入任何值，因为它们在域中已存在。  
+6.  单击**确定**以关闭**导入域值**对话框。 您应在列表中看到导入的所有州的名称。 请注意，**仅显示新**导入后会自动选择选项。 当您导入值且在列表中看不到旧值时，这是因为导入后自动启用了此选项。 要查看所有值，请清除此复选框。 如果再次导入相同的一组值，则不导入任何值，因为它们在域中已存在。  
   
      ![对域值显示仅将新的复选框](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "对域值显示仅将新的复选框")  
   

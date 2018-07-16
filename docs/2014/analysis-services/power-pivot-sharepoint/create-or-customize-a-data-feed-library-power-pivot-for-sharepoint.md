@@ -1,5 +1,5 @@
 ---
-title: 创建或自定义数据馈送的库 (PowerPivot for SharePoint) |Microsoft 文档
+title: 创建或自定义数据馈送的库 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa955fd27e0edde1da50fe608034a98b2107eca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308497"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>创建或自定义数据馈送库 (PowerPivot for SharePoint)
   *数据馈送库* 是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
@@ -31,7 +31,7 @@ ms.locfileid: "36016482"
   
 -   在一个中心位置共享和管理数据服务文档。  
   
--   直观地由一个图标来标识数据服务文档，以便你可以轻松区分从同一库中存储的其他文档出服务文档： ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   以便可以轻松地从同一库中存储的其他文档中区分服务文档通过图标直观地标识数据服务文档： ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  数据馈送库始终包含数据服务文档 (.atomsvc) 文件，并且永远不会包含数据馈送本身。 与由静态 XML 数据构成的数据馈送不同，数据服务文档指定根据请求生成馈送的服务或应用程序的 URL，并且为可重复的导入操作提供可重复使用的连接信息。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36016482"
 ## <a name="see-also"></a>请参阅  
  [使用数据馈送&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
  [删除 PowerPivot 数据馈送的库](delete-a-power-pivot-data-feed-library.md)   
- [在管理中心 PowerPivot 服务器管理和配置](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [在管理中心的 PowerPivot 服务器管理和配置](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [PowerPivot 数据馈送](power-pivot-data-feeds.md)  
   
   

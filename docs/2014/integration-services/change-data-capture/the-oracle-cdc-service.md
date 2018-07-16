@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc492ecae459c0ff697f829ad6db14872e00da41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a95f78439afc186c7301a5e4b139494601a358aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328117"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
   Oracle CDC 服务是运行 xdbcdcsvc.exe 程序的一种 Windows 服务。 Oracle CDC 服务可配置为在同一台计算机上运行多个 Windows 服务，每个服务都使用不同的 Windows 服务名称。 在单个计算机上创建多个 Oracle CDC Windows 服务通常是为了在它们之间或在每个服务需要使用不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时实现更好的隔离。  
   
- Oracle CDC 服务是使用 Oracle CDC 服务配置控制台创建的，或者是通过内置于 xdbcdcsvc.exe 程序中的命令行接口定义的。 在这两种情况下，创建每个 Oracle CDC 服务是与一个相关联[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例 (其中可能群集或镜像的与**AlwaysOn**安装程序) 和连接信息 （连接字符串和访问凭据） 是服务配置的一部分。  
+ Oracle CDC 服务是使用 Oracle CDC 服务配置控制台创建的，或者是通过内置于 xdbcdcsvc.exe 程序中的命令行接口定义的。 在这两种情况下，创建每个 Oracle CDC 服务都与一个相关联[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例 (这可能会被群集或与镜像**AlwaysOn**安装程序) 和连接信息 （连接字符串和访问凭据） 是服务配置的一部分。  
   
  在某一 Oracle CDC 服务启动时，它将尝试连接到其关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，获取它需要处理的 Oracle CDC 实例的列表，并且执行初始环境验证。 服务启动期间出现的错误以及任何开始/停止信息始终写入 Windows 应用程序事件日志。 在建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接时，所有错误和信息消息都写入 **实例的 MSXDBCDC 数据库的** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 在启动期间执行的检查之一是验证没有具有相同名称的其他 Oracle CDC 服务当前正在工作。 如果具有相同名称的某一服务当前与其他计算机连接，则 Oracle CDC 服务将进入一个等待循环，并且等待其他服务断开连接，之后继续处理 Oracle CDC 工作。  
   

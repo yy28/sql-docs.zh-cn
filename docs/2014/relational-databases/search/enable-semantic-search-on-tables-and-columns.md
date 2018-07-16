@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64ed077658de8ba855bc2301a3db403e12a47511
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8187e19e40eba87e663c800ba9e593b30fe87a86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296437"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
   介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
@@ -46,7 +45,7 @@ ms.locfileid: "36016798"
   
 -   可以对具有任何支持全文索引的数据类型的列创建语义索引。 有关详细信息，请参阅 [创建和管理全文索引](create-and-manage-full-text-indexes.md)。  
   
--   你可以指定支持全文索引的任何文档类型`varbinary(max)`列。 有关详细信息，请参阅本主题中的 [如何确定可对哪些文档类型编制索引](#doctypes) 。  
+-   可以指定支持全文索引的任何文档类型`varbinary(max)`列。 有关详细信息，请参阅本主题中的 [如何确定可对哪些文档类型编制索引](#doctypes) 。  
   
 -   语义索引为您选择的列创建两种类型的索引：关键短语索引和文档相似性索引。 启用语义索引时，您无法只选择其中一种索引类型。 但是，您可以单独查询这两种索引。 有关详细信息，请参阅 [使用语义搜索在文档中查找关键短语](find-key-phrases-in-documents-with-semantic-search.md) 和 [使用语义搜索查找相似和相关文档](find-similar-and-related-documents-with-semantic-search.md)。  
   
@@ -119,7 +118,7 @@ GO
  **使用 SQL Server Management Studio 创建新的语义索引**  
  运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](use-the-full-text-indexing-wizard.md)。  
   
-###  <a name="HowToEnableAlter"></a> 如何： 在现有的全文索引时创建语义索引  
+###  <a name="HowToEnableAlter"></a> 如何： 在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
   
  **使用 TRANSACT-SQL 添加语义索引**  
@@ -195,7 +194,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>检查是否在数据库对象上启用了语义搜索  
   
-###  <a name="HowToCheckEnabled"></a> 如何： 检查是否在数据库对象上启用了语义搜索  
+###  <a name="HowToCheckEnabled"></a> 如何： 检查是否对数据库对象启用了语义搜索  
  **为数据库是否启用语义搜索？**  
  查询 [DATABASEPROPERTYEX (Transact-SQL)](/sql/t-sql/functions/databasepropertyex-transact-sql) 元数据函数的 **IsFullTextEnabled** 属性。  
   
@@ -206,7 +205,7 @@ SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')
 GO  
 ```  
   
- **是为表启用语义搜索？**  
+ **为表启用语义搜索？**  
  查询 [OBJECTPROPERTYEX (Transact-SQL)](/sql/t-sql/functions/objectproperty-transact-sql) 元数据函数的 **TableFullTextSemanticExtraction** 属性。  
   
  返回值 1 表示为表启用了语义搜索；返回值 0 表示未启用它。  
@@ -216,7 +215,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
- **是为列启用语义搜索？**  
+ **为列启用语义搜索？**  
  若要确定是否为特定列启用了语义搜索：  
   
 -   查询 [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql) 元数据函数的 **StatisticalSemantics** 属性。  
@@ -243,7 +242,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>确定可对哪些内容编制索引以进行语义搜索  
   
-###  <a name="HowToCheckLanguages"></a> 如何： 检查哪种语言支持的语义搜索  
+###  <a name="HowToCheckLanguages"></a> 如何检查语义搜索支持的语言  
   
 > [!IMPORTANT]  
 >  语义索引比全文索引支持的语言少。 因此，您可以对某些列编制索引以进行全文搜索，但不能进行语义搜索。  
@@ -275,11 +274,11 @@ GO
   
  如果您要为其编制索引的文档类型不在所支持类型的列表中，则可能必须查找、下载和安装其他筛选器。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳做法： 请考虑为全文和语义索引创建单独的文件组  
+##  <a name="BestPracticeFilegroup"></a> 最佳做法： 请考虑为全文索引和语义索引创建单独的文件组  
  如果磁盘空间分配成问题，请考虑为全文索引和语义索引创建单独的文件组。 在全文索引所在的文件组中创建语义索引。 完全填充的语义索引可能包含大量数据。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="IssueNoResults"></a> 问题： 搜索特定列会返回任何结果  
+##  <a name="IssueNoResults"></a> 问题： 搜索特定列返回任何结果  
  **是否为 Unicode 语言指定了非 Unicode LCID？**  
  可能对非 Unicode 列类型启用了语义索引，而该列的 LCID 用于只有 Unicode 词的语言，如用于俄语的 LCID 1049。 在这种情况下，将不从此列的语义索引返回结果。  
   

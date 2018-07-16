@@ -1,5 +1,5 @@
 ---
-title: 设置元素 (ASSL) 的格式 |Microsoft 文档
+title: 格式元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7434ba5d6e2db8d2a2e665fa333799b6b2e9eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169498"
 ---
 # <a name="format-element-assl"></a>Format 元素 (ASSL)
-  包含所需的格式的[DataItem](../data-type/dataitem-data-type-assl.md)元素。  
+  包含的所需的格式[DataItem](../data-type/dataitem-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36128865"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 允许值`Format`元素是 Microsoft Office Excel 格式和字符串*TrimRight*， *TrimLeft*， *TrimAll*，和*TrimNone*。 用于进行裁剪， *TrimRight*是默认设置。  
+ 允许值`Format`元素是 Microsoft Office Excel 格式，以及字符串*TrimRight*， *TrimLeft*， *TrimAll*，和*TrimNone*。 修整*TrimRight*是默认值。  
   
  此元素的值限定为下表中的字符串之一。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36128865"
 |*TrimNone*|不修整数据。|  
 |*TrimRight*|对数据的右侧进行修整。|  
   
- 对应于的父元素`Format`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DataItem>。  
+ 父级对应的元素`Format`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DataItem>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 0d742a0985177d9a6c860c6dedcb34eba128c930
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290865"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 为内存优化表提供完整持续性。 提交更改内存优化表的事务时，假设基础存储可用， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （就像对基于磁盘的表一样）会保证更改是永久的（数据库重新启动时仍然有效）。 持续性有两个重要方面：事务日志记录和在磁盘存储上持久保存数据更改。  
@@ -28,7 +28,7 @@ ms.locfileid: "36025208"
  对基于磁盘的表或持久的内存优化表所做的所有更改均捕获在一个或多个事务日志记录中。 提交事务时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将与事务关联的日志记录写入磁盘，然后再通知应用程序或用户会话事务已提交。 这样可确保事务所做的更改是持久的。 内存优化表的事务日志与基于磁盘的表使用的相同日志流完全集成。 此集成使现有事务日志备份、恢复和还原操作可以继续执行，无需任何附加步骤。 但是，由于 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 可显著增加工作负荷的事务吞吐量，因此您需要确保正确配置事务日志存储以应对提高的 IO 要求。  
   
 ## <a name="data-and-delta-files"></a>数据和差异文件  
- 内存优化表中的数据在内存中存储为自由格式的数据行，它们通过一个或多个内存中索引链接起来。 这些数据行没有基于磁盘的表所使用的页面结构。 已准备好提交事务，应用程序时[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]生成事务的日志记录。 内存优化表的持续性使用后台线程通过一组数据文件和差异文件来实现。 数据文件和差异文件位于一个或多个容器中（使用 FILESTREAM 数据所用的机制）。 这些容器映射到一个新类型的文件组，称为内存优化文件组。  
+ 内存优化表中的数据在内存中存储为自由格式的数据行，它们通过一个或多个内存中索引链接起来。 这些数据行没有基于磁盘的表所使用的页面结构。 准备好提交事务，应用程序时[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]生成事务的日志记录。 内存优化表的持续性使用后台线程通过一组数据文件和差异文件来实现。 数据文件和差异文件位于一个或多个容器中（使用 FILESTREAM 数据所用的机制）。 这些容器映射到一个新类型的文件组，称为内存优化文件组。  
   
  按严格顺序向这些文件写入数据，这样可将旋转介质的磁盘延迟降至最低。 可使用不同驱动器上的多个容器分散 I/O 活动。 从磁盘上的数据和差异文件中将数据读入内存时，不同磁盘上多个容器中的数据和差异文件将提高恢复性能。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36025208"
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命周期  
  CPF 首先要经过若干状态，然后才能被释放。 在任何给定时间，CFP 都处于以下阶段之一：PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE 和 TOMBSTONE。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
- 在考虑处于各种状态的 CFP 所占用的存储空间后，持久的内存优化表所占用的整个存储空间最高可为内存中表大小的 2 倍。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)可以查询列出所有 Cfp 的内存优化文件组中，包括其阶段。 将 CFP 从 MERGE SOURCE 状态转换为 TOMBSTONE 及最终垃圾收集可能占用五个检查点，其中每个检查点后跟一个事务日志备份（如果数据库针对完整或大容量日志恢复模式进行了配置）。  
+ 在考虑处于各种状态的 CFP 所占用的存储空间后，持久的内存优化表所占用的整个存储空间最高可为内存中表大小的 2 倍。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)能查询以列出所有 Cfp 内存优化文件组中，包括其阶段。 将 CFP 从 MERGE SOURCE 状态转换为 TOMBSTONE 及最终垃圾收集可能占用五个检查点，其中每个检查点后跟一个事务日志备份（如果数据库针对完整或大容量日志恢复模式进行了配置）。  
   
  您可以手动强制在检查点后进行日志备份，以便加快垃圾回收速度，但这将添加 5 个空 CFP（5 个数据/差异文件对，每个数据文件的大小为 128MB）。 在生产方案中，作为备份策略的一部分进行的自动检查点和日志备份可使 CFP 无缝通过这些阶段，而无需任何手动干预。 垃圾回收进程的影响是，具有内存优化表的数据库与其在内存中的大小相比，可能具有更大的存储大小。 CFP 是内存中的持久内存优化表大小的最多四倍并不少见。  
   

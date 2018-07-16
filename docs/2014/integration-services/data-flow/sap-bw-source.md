@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 922df55ae21fe9eda3fa3fc5b040696a2ce1424d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3f039dcac25d3fab4c42f1f412f202f19c37d14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324647"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
   SAP BW 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件。 因此，SAP BW 源从 SAP Netweaver BW 版本 7 系统提取数据，并将这些数据提供给 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据流。  
@@ -110,7 +110,7 @@ ms.locfileid: "36014102"
   
     -   对于“E - 仅提取”选项，提供请求 ID。  
   
--   指定字符串转换规则。 (例如，将所有字符串，具体取决于 SAP Netweaver BW 系统是 Unicode 或不是，都转换或都转换到的所有字符串`varchar`或`nvarchar`)。  
+-   指定字符串转换规则。 (例如，将根据是否在 SAP Netweaver BW 系统为 Unicode 或不是，所有字符串都转换或都转换所有字符串转换为`varchar`或`nvarchar`)。  
   
 -   使用您选择的选项预览要提取的数据。  
   

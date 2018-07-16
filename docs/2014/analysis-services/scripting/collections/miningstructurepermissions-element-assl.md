@@ -1,5 +1,5 @@
 ---
-title: 添加元素 (ASSL) |Microsoft 文档
+title: MiningStructurePermissions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructurePermissions element
 ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4771102a81dfae1e4a0e62ea1527a5ad6d19199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91beb4cef1679150255283621403b53abeadfa7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324857"
 ---
 # <a name="miningstructurepermissions-element-assl"></a>MiningStructurePermissions 元素 (ASSL)
-  包含的权限的集合上[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
+  在包含的权限的集合[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36025812"
 |子元素|[MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)类型的[权限](../data-type/permission-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructurePermissionCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructurePermissionCollection>。  
   
 ## <a name="see-also"></a>请参阅  
- [权限数据类型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
+ [Permission 数据类型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [集合&#40;ASSL&#41;](collections-assl.md)  
   
   

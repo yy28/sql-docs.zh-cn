@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
 - verifying report execution
@@ -21,13 +21,13 @@ ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ed7df4dc1c9bb9af8aa48a8b53506ebeab767ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be05b7ef8ffde732d6bdd85fb17be6aa25683134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319847"
 ---
 # <a name="verifying-a-report-run"></a>验证报表运行情况
   若要查看报表处理状态的有关信息，则可以使用日志文件或参考在报表管理器中随报表显示的状态信息。  
@@ -44,7 +44,7 @@ ms.locfileid: "36018537"
   
 |报表类型|日期和时间信息所在位置|查看信息所需操作|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|作为报表快照运行的报表。|在“内容”页上。 有关详细信息，请参阅[“内容”页（报表管理器）](../contents-page-report-manager.md)。|1) 找到包含该报表的文件夹。<br />2) 在“详细信息”视图中设置该文件夹。<br />3) 3) 请注意日期和时间在**时运行**列。|  
+|作为报表快照运行的报表。|在“内容”页上。 有关详细信息，请参阅[“内容”页（报表管理器）](../contents-page-report-manager.md)。|1) 找到包含该报表的文件夹。<br />2) 在“详细信息”视图中设置该文件夹。<br />3) 3) 请注意日期和时间**时运行**列。|  
 |报表历史记录中的快照。|在“历史记录”属性页上。 有关详细信息，请参阅[“快照选项”属性页（报表管理器）](../snapshot-options-properties-page-report-manager.md)。|1) 打开该报表。<br />2) 单击“属性”页。<br />3) 单击“历史记录”选项卡。<br />4) 请注意“运行时间”列中的日期和时间。|  
 |缓存的报表。|在用于创建和刷新该缓存报表的计划中。|1) 打开该报表。<br />2) 单击“属性”页。<br />3) 单击“执行”选项卡。<br />4) 打开该计划。|  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving tables
 - switching filegroups for index
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3ea31b77f210eca22d5ddea56984880a3056be1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 597ed7b2207302ff897f255479c6183ef44b255d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285163"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将现有索引从其当前文件组移动到其他文件组。  
@@ -99,7 +98,7 @@ ms.locfileid: "36017105"
   
      如果要移动聚集索引，则可以使用联机处理。 联机处理使并发用户可以在索引操作期间访问基础数据和非聚集索引。 有关详细信息，请参阅 [Perform Index Operations Online](perform-index-operations-online.md)。  
   
-     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](configure-parallel-index-operations.md)。  
+     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](configure-parallel-index-operations.md)。  
   
 8.  单击“确定” 。  
   

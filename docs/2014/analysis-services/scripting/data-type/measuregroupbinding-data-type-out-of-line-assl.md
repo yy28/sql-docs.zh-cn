@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupBinding 数据类型 （超的行） (ASSL) |Microsoft 文档
+title: MeasureGroupBinding 数据类型 （的外部） (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: e6c65597-89ac-457e-a0e5-01d85449a1b7
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c467267028e60910be01466754648e216c685d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1b67e063402a1488f77c3fc8bf43e54f580c513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291503"
 ---
 # <a name="measuregroupbinding-data-type-out-of-line-assl"></a>MeasureGroupBinding 数据类型（外部）(ASSL)
   定义一个基元数据类型，该类型表示与度量值组的绑定。  
@@ -65,7 +65,7 @@ ms.locfileid: "36026498"
 |派生元素|请参阅[绑定](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 详细信息，请参阅的部分中外, 绑定，在[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 详细信息，请参阅部分中，带外部绑定中，在[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

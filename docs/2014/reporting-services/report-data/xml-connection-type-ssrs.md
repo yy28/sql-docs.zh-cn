@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 421567faa999f075bb3961b82f23c14aa14334b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 17b03e4ca74b5aa8d9e59d6bcc32eafe4ef1139e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191797"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
   
  此数据扩展插件支持参数和与连接字符串分开管理的凭据。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ##  <a name="Connection"></a> 连接字符串  
  连接字符串必须为指向 Web 服务、基于 Web 的应用程序或可通过 HTTP 使用的 XML 文档的 URL。 XML 文档必须具有 XML 扩展名。 还可以对数据集查询中嵌入的 XML 数据使用空连接字符串。  
@@ -65,15 +65,15 @@ ms.locfileid: "36128919"
   
  下面显示当数据源为 XML 类型时数据集查询的可能值。  
   
--   *空*： 使用空查询来创建默认结果集。 默认查询是通过读取数据源并遍历到 XML 节点层次结构的第一个叶集合来创建的。 结果集包括具有文本值的所有节点以及沿该路径的所有节点属性。 结果集中的列将映射到数据集的字段。  
+-   *空*： 使用空查询创建默认结果集。 默认查询是通过读取数据源并遍历到 XML 节点层次结构的第一个叶集合来创建的。 结果集包括具有文本值的所有节点以及沿该路径的所有节点属性。 结果集中的列将映射到数据集的字段。  
   
 -   元素路径： 指定要从数据源中检索 XML 数据时使用的节点序列。  
   
--   XML 查询元素： 替换为以下可选元素的 XML 查询规范：  
+-   XML 查询元素： 具有以下可选元素的 XML 查询规范：  
   
-    -   **Web 服务：**  
+    -   **对于 Web 服务：**  
   
-         必需的 XML 元素：  
+         所需的 XML 元素：  
   
          `<Method Namespace=` *"命名空间"*  `Name="MethodName" />`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36128919"
   
          `<SoapAction>` *soap 操作* `</SoapAction>`  
   
-    -   **XML 文档：**  
+    -   **对于 XML 文档：**  
   
          可选的 XML 元素：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36128919"
   
     -   **对于嵌入的 XML 文档：**  
   
-         必需的 XML 元素：  
+         所需的 XML 元素：  
   
          `<XmlData>` 内部 XML `</XmlData>`  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36128919"
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
- [添加并验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   

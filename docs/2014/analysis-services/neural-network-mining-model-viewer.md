@@ -1,5 +1,5 @@
 ---
-title: 神经网络 （挖掘模型查看器） |Microsoft 文档
+title: 神经网络 （挖掘模型查看器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2db48dccb854d2dc51eaae3b8202324a8feed9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297407"
 ---
 # <a name="neural-network-mining-model-viewer"></a>神经网络（挖掘模型查看器）
   可以使用 **“神经网络”** 查看器浏览基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 逻辑回归算法的挖掘模型。  
@@ -43,7 +43,7 @@ ms.locfileid: "36017218"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**Attribute**|从列表中选择输入属性。 如果保留为默认情况下，选择**\<所有 >**，该图表显示的所有输入属性，按其对可预测属性的影响排名列表。|  
+|**Attribute**|从列表中选择输入属性。 如果保留为默认值，选择**\<所有 >**，图表将显示所有输入属性，按它们对可预测属性的影响进行排序的列表。|  
 |**ReplTest1**|为输入属性选择值。|  
   
  **输出**  
@@ -62,8 +62,8 @@ ms.locfileid: "36017218"
 |-----------|-----------------|  
 |**Attribute**|显示您在 **“属性”** 中选择的输入属性的名称。|  
 |**ReplTest1**|显示选定输入属性的值。|  
-|**优先\<值为 1 >**|显示一个条形，该条形指示此特定属性-值组合影响“值 1”中选择的目标结果的程度。|  
-|**优先\<值为 2 >**|显示一个条形，该条形指示此特定属性-值组合影响“值 2”中选择的目标结果的程度。|  
+|**倾向于\<值为 1 >**|显示一个条形，该条形指示此特定属性-值组合影响“值 1”中选择的目标结果的程度。|  
+|**倾向于\<值为 2 >**|显示一个条形，该条形指示此特定属性-值组合影响“值 2”中选择的目标结果的程度。|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

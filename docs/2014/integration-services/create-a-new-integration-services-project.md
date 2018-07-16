@@ -1,5 +1,5 @@
 ---
-title: 创建新的 Integration Services 项目 |Microsoft 文档
+title: 创建新的 Integration Services 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ee4484b97102b6bae3bd9496ee161233c47ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298727"
 ---
 # <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目
   此过程创建新项目和新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 解决方案。  
@@ -52,7 +52,7 @@ ms.locfileid: "36016642"
     > [!NOTE]  
     >  若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”菜单上的“选项”，然后展开“源代码管理”节点。  
   
-8.  单击**确定**要添加到该解决方案**解决方案资源管理器**r 和将项目添加到解决方案。  
+8.  单击**确定**若要向其添加解决方案**解决方案资源管理器**r 并将项目添加到解决方案。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services &#40;SSIS&#41;项目](integration-services-ssis-projects-and-solutions.md)   

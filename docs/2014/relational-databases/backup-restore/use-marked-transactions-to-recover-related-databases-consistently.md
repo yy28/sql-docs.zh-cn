@@ -1,14 +1,13 @@
 ---
-title: 使用标记的事务一致地恢复相关的数据库 （完整恢复模式） |Microsoft 文档
+title: 使用标记的事务一致地恢复相关的数据库 （完整恢复模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction marks [SQL Server]
 - marked transactions [SQL Server]
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26cda0b486ae2601a79458749e5169eaaad72f12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3c7eef3ce7b20995297bab8a083ef4bcd59482fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313887"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）
   本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  

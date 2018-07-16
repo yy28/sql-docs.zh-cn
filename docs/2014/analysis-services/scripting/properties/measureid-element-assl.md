@@ -1,5 +1,5 @@
 ---
-title: MeasureID 元素 (ASSL) |Microsoft 文档
+title: MeasureID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureID element
 ms.assetid: 8457aebc-8fdd-4683-8640-baaf9d89b2a2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70b7695644f2aa0da85050bb9db96ac277ede298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7a1ff1e817ae78307f8da134e88e742295892ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326527"
 ---
 # <a name="measureid-element-assl"></a>MeasureID 元素 (ASSL)
-  将相关联[度量值](../objects/measure-element-assl.md)与父元素的元素。  
+  将相关联[度量值](../objects/measure-element-assl.md)元素与父元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36017415"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md)， [MeasureBinding](../data-type/binding-data-type-assl.md)，[度量值](../data-type/perspectivemeasure-data-type-assl.md)|  
+|父元素|[AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md)， [MeasureBinding](../data-type/binding-data-type-assl.md)， [PerspectiveMeasure](../data-type/perspectivemeasure-data-type-assl.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对应的父级的元素`MeasureID`分析管理对象 (AMO) 对象模型中是<xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>， <xref:Microsoft.AnalysisServices.MeasureBinding>，和<xref:Microsoft.AnalysisServices.PerspectiveMeasure>。  
+ 父级对应的元素`MeasureID`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>， <xref:Microsoft.AnalysisServices.MeasureBinding>，和<xref:Microsoft.AnalysisServices.PerspectiveMeasure>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

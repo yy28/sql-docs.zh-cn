@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ea043eaf389aa87e1162c2321220c4fd7878923a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5cdcdb6edb146393a9daee7221d0a0d979989046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322377"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  
@@ -54,14 +54,14 @@ ms.locfileid: "36124111"
   
 9. 在 **“组件”** 窗格中，展开 **“条件”** 节点。  
   
-10. 单击一个条件，将其拖到**如果**窗格的**条件**标签。  
+10. 单击某一条件并将其拖到**IF**窗格中的**条件**标签。  
   
     > [!TIP]  
-    >  可以通过右键单击并选择从你的业务规则中删除项**删除**。  
+    >  可以通过右键单击并选择从你的业务规则中删除项目**删除**。  
   
-11. 在**属性**窗格中，单击某一属性，并将其拖到**编辑条件**窗格的**选择属性**标签。  
+11. 在中**特性**窗格中，单击某一属性，并将其拖到**编辑条件**窗格的**选择属性**标签。  
   
-12. 在**编辑条件**窗格中，完成所有必填的字段。  
+12. 在中**编辑条件**窗格中，完成必填的字段。  
   
 13. 在 **“编辑条件”** 窗格中，单击 **“保存项”**。  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 20
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29b5dbd44e02515cc2bdab7445bacb0e61d1dcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291393"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用“将副本添加到可用性组向导”(SQL Server Management Studio)
   使用“将副本添加到可用性组向导”可帮助您将新的辅助副本添加到现有 AlwaysOn 可用性组。  
@@ -35,7 +34,7 @@ ms.locfileid: "36024650"
 
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 如果你从未向可用性组添加任何可用性副本，请参阅"服务器实例"和"可用性组和副本"中的部分[先决条件、 限制和建议的 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 如果您从未向可用性组添加任何可用性副本，请参阅"服务器实例"和"可用性组和副本"部分中的[先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
@@ -86,7 +85,7 @@ ms.locfileid: "36024650"
     |选项卡|简短说明|  
     |---------|-----------------------|  
     |**副本**|使用此选项卡可以指定将承载新的辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
-    |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，你需要执行操作之前可以在向导中继续对服务器实例进行手动更改。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  
+    |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，需要执行操作之前可以在向导中继续对服务器实例进行手动更改。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项；如果您想要修改当前设置，还可为各个可用性副本指定备份优先级。|  
   
 6.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
@@ -135,7 +134,7 @@ ms.locfileid: "36024650"
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [先决条件、 限制和 AlwaysOn 可用性组的建议&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

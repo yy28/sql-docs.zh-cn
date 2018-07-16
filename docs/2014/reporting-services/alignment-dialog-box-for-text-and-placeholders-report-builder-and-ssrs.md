@@ -1,5 +1,5 @@
 ---
-title: 文本和占位符 （报表生成器和 SSRS） 的对齐方式对话框 |Microsoft 文档
+title: 对齐对话框中的文本和占位符 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10136"
 - "10137"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textproperties.alignment.f1
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 641aab9a5d29842f925914d243c0a6d207fd235c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dedb6d0c6e16f0be8c760f46fdbf57e836bf39b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305067"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>文本和占位符的“对齐”对话框（报表生成器和 SSRS）
-  选择 **“对齐”** 选项卡可以在选定的单元或数据区域内放置值。 您只能设置文本框中单个文本的水平对齐格式。 如果您希望在文本框中设置空白值或文本的垂直对齐方式，则使用相应文本框属性。 有关详细信息，请参阅[文本框框属性对话框中，对齐&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)。  
+  选择 **“对齐”** 选项卡可以在选定的单元或数据区域内放置值。 您只能设置文本框中单个文本的水平对齐格式。 如果您希望在文本框中设置空白值或文本的垂直对齐方式，则使用相应文本框属性。 有关详细信息，请参阅[文本属性对话框中，对齐方式&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>“常规”  
  **水平**  
@@ -45,6 +45,6 @@ ms.locfileid: "36017900"
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [向报表添加 HTML（报表生成器和 SSRS）](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
- [设置文本框中的文本格式&#40;报表生成器和 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [中的文本框中的文本格式&#40;报表生成器和 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

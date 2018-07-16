@@ -1,5 +1,5 @@
 ---
-title: 写入的分区 |Microsoft 文档
+title: 启用写操作的分区 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9098219cccf4559fbb2a9b9e7e03da0004f1b570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24fd38410e5719dd72e5a55b2914c22fc153ea98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326567"
 ---
 # <a name="write-enabled-partitions"></a>可写入的分区
   多维数据集中的数据通常为只读数据。 但在某些情况下，可能需要为分区启用写入。 使用可写入的分区，业务用户可以通过更改单元值并分析更改对多维数据集数据所产生的影响来研究方案。 向分区中写入时，客户端应用程序可以记录对分区中的数据所做的更改。 这些更改（称为写回数据）存储在单独的表中，并且不会覆盖度量值组中的任何现有数据。 但是，它们被作为多维数据集数据的一部分合并到了查询结果中。  
@@ -59,7 +59,7 @@ ms.locfileid: "36017456"
  仅当业务用户属于对多维数据集的单元拥有读/写访问权限的角色时，才允许该业务用户在多维数据集的写回表中记录更改。 对于每个角色，您都可以控制可更新和不可更新的多维数据集单元。 有关详细信息，请参阅[授予多维数据集或模型权限&#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [写入的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
+ [启用写操作的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [聚合和聚合设计](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [分区&#40;Analysis Services-多维数据&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [启用写操作的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  

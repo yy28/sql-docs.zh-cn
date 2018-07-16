@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3ec962379f992bcb89b6227cf3af13705d1193ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312767"
 ---
 # <a name="creating-a-login"></a>创建登录名
   若要访问[!INCLUDE[ssDE](../includes/ssde-md.md)]，用户需要有登录名。 登录名可以将用户身份表示为 Windows 帐户或 Windows 组成员，登录名也可以是仅存在于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录名。 应该尽可能使用 Windows 身份验证。  
@@ -30,7 +30,7 @@ ms.locfileid: "36024470"
   
 ### <a name="to-create-a-new-windows-account"></a>创建新的 Windows 帐户  
   
-1.  单击**启动**，单击**运行**中**打开**框中，键入`%SystemRoot%\system32\compmgmt.msc /s`，然后单击**确定**若要打开计算机管理程序。  
+1.  单击**启动**，单击**运行**，在**打开**框中，键入`%SystemRoot%\system32\compmgmt.msc /s`，然后单击**确定**打开计算机管理程序。  
   
 2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。  
   

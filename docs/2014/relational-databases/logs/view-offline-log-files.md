@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d24237c0464b79eb193001baef23e8a7b4362233
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e2e54a2eb18fc3adb98fca83620d8b88a2cec92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307567"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以在目标实例处于脱机状态或无法启动时，从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地或远程实例查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件。  
@@ -56,7 +56,7 @@ ms.locfileid: "36016655"
   
 -   对包含错误日志文件的文件夹的读取权限。 默认情况下，错误日志文件位于下面的路径中（其中 \<*Drive>* 表示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的驱动器，\<*InstanceName*> 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称）：  
   
-     **\<驱动器 >: files\microsoft SQL Server\MSSQL12。\<InstanceName > \MSSQL\Log**  
+     **\<驱动器 >: \Program Files\Microsoft SQL Server\MSSQL12。\<实例名 > \MSSQL\Log**  
   
  若要验证 WMI 命名空间安全设置，您可以使用 WMI 控制管理单元。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa28260303bc7be87ac166ce3e22aa55c32a2a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e13fa57378ac9dac263cb89d48da84b94739a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213667"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流组件
   本主题介绍使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -114,8 +114,8 @@ ms.locfileid: "36126674"
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|数值数据类型映射到 DT_NUMERIC 时 P 是大于或等于 38 和 S 为大于或等于 0 且 S 小于或等于第至少一个以下时，应的数值数据类型映射到 DT_R8 中：<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br /><br /><br />请注意，数值数据类型映射到 DT_CY 中，当它被声明为 money 数据类型。|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Decimal 数据类型映射到 DT_NUMERIC 时 P 是大于或等于 38 和 S 为大于或等于 0 且 S 小于或等于第Decimal 数据类型映射到 DT_R8 至少一个以下时：<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br />请注意，十进制数据类型映射到 DT_CY 中，当它被声明为 money 数据类型。|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|数值数据类型将映射到 DT_NUMERIC 时 P 是大于或等于 38 并且 S 大于或等于 0 且 S 小于或等于 p。当至少一个以下为 true 时，数值数据类型将映射到 DT_R8:<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br /><br /><br />请注意当它被声明为 money 数据类型的数值数据类型将映射到 DT_CY。|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|在 P 大于或等于 38 并且 S 大于或等于 0 且 S 小于或等于 p 时，decimal 数据类型将映射到 DT_NUMERIC当至少一个以下为 true 时，decimal 数据类型将映射到 DT_R8:<br /><br />精度大于 38<br /><br />刻度小于零<br /><br />刻度大于 38<br /><br />刻度大于精度<br /><br />请注意当它被声明为 money 数据类型为 decimal 数据类型将映射到 DT_CY。|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|如果小数位数大于 3，则 SQL_TIMESTAMP 数据类型将映射到 DT_DBTIMESTAMP2。 在所有其他情况下，它们将映射到 DT_DBTIMESTAMP。|  

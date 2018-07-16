@@ -1,5 +1,5 @@
 ---
-title: Foreach 循环编辑器 （集合页） |Microsoft 文档
+title: Foreach 循环编辑器 （集合页） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318877"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 循环编辑器（“集合”页）
   可以使用“Foreach 循环编辑器”对话框的“集合”页，指定枚举器类型以及配置枚举器。  
@@ -42,7 +42,7 @@ ms.locfileid: "36126917"
 |**Foreach Nodelist 枚举器**|枚举 XML 文档中的节点。 选择此值将显示 **“Foreach Nodelist 枚举器”** 部分中的动态选项。|  
 |**Foreach SMO 枚举器**|枚举 SMO 对象。 选择此值将显示 **“Foreach SMO 枚举器”** 部分中的动态选项。|  
 |**Foreach Azure Blob 枚举器**|枚举指定 blob 位置中的 blob 文件。 选择此值将显示 **“Foreach Azure Blob 枚举器”** 部分中的动态选项。|  
-|**Foreach ADLS 文件枚举器**|枚举上 ADLS 文件与筛选器。 选择此值会显示“Foreach ADLS 文件枚举器”部分中的动态选项。|
+|**Foreach ADLS 文件枚举器**|枚举筛选器与 adls 的文件。 选择此值会显示“Foreach ADLS 文件枚举器”部分中的动态选项。|
   
  **表达式**  
  单击或展开 **表达式** 可以查看现有属性表达式的列表。 单击省略号按钮 **(…)** 可以添加枚举器属性的属性表达式，或编辑并计算现有属性表达式。  
@@ -165,7 +165,7 @@ ms.locfileid: "36126917"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 枚举器  
  您可以使用 Foreach Nodelist 枚举器枚举一组通过将 XPath 表达式应用到 XML 文件而生成的 XML 节点。 例如，如果 Foreach 循环包括脚本任务，则可以使用 Foreach NodeList 枚举器将满足 XPath 表达式条件的值从 XML 文件传递到脚本任务。  
   
- 应用到 XML 文件的 XPath 表达式为外部 XPath 运算，存储于 OuterXPathString 属性中。 如果 XPath 枚举类型设置为`ElementCollection`，Foreach NodeList 枚举器可以应用内部 XPath 表达式中，存储在 InnerXPathString 属性，到元素的集合。  
+ 应用到 XML 文件的 XPath 表达式为外部 XPath 运算，存储于 OuterXPathString 属性中。 如果 XPath 枚举类型设置为`ElementCollection`，Foreach NodeList 枚举器可以将内部 XPath 表达式，存储在 InnerXPathString 属性中的一系列元素中。  
   
  若要了解有关使用 XML 文档和数据的详细信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)”。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36126917"
  **相关主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **InnerElementType**  
- 如果**EnumerationType**设置为`ElementCollection`，在列表中选择内部元素的类型。  
+ 如果**EnumerationType**设置为`ElementCollection`，列表中选择内部元素的类型。  
   
  **InnerXPathStringSourceType**  
  选择内部 XPath 字符串的源类型。 此属性具有下表所列的选项。  
@@ -277,8 +277,8 @@ ms.locfileid: "36126917"
   
  **Blob 时间范围(自/至)筛选器**  
  指定时间范围筛选器。 将枚举在 **TimeRangeFrom** 之后以及在 **TimeRangeTo** 之前修改的文件。  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>枚举器 = ADLS Foreach 文件枚举器  
-**ADLS 文件枚举器**允许 SSIS 包来枚举上 ADLS 文件与筛选器。 斜杠 (`/`) 的带前缀的完整路径的枚举的文件可以存储在变量中并用于 Foreach 循环容器内的任务。
+### <a name="enumerator--foreach-adls-file-enumerator"></a>枚举器 = Foreach ADLS 文件枚举器  
+**ADLS 文件枚举器**启用一个 SSIS 包来枚举 adls 具有筛选器的文件。 反斜杠 (`/`)-带前缀的完整路径的枚举的文件可以存储在变量中并用于 Foreach 循环容器内的任务。
   
 **AzureDataLakeConnection**  
 指定 Azure Data Lake 连接管理器，或创建一个引用 ADLS 帐户的新连接管理器。   

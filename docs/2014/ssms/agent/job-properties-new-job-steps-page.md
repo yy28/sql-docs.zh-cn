@@ -1,5 +1,5 @@
 ---
-title: 作业属性： 新的作业 （步骤页） |Microsoft 文档
+title: 作业属性： 新建作业 （步骤页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.steps.f1
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 089c0d9d89eeb84c3834affc634972677763d5e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 642ec7b6e135e5f9e865b2fd9b99164e022f26f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311287"
 ---
-# <a name="job-propertiesnew-job-steps-page"></a>作业属性： 新的作业 （步骤页）
+# <a name="job-propertiesnew-job-steps-page"></a>作业属性： 新建作业 （步骤页）
   使用此页可以查看和组织 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的作业步骤。  
   
 ## <a name="options"></a>“常规”  

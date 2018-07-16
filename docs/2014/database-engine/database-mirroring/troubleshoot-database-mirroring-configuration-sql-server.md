@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - endpoints [SQL Server], database mirroring
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b27afde0daad696efacacca184e15bef3883170
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3281a4112f585936f10b5c626a4b22f5fd359092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293157"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
   本主题提供有关信息以帮助您解决设置数据库镜像会话时遇到的问题。  
@@ -170,6 +169,6 @@ ms.locfileid: "36013898"
   
 ## <a name="see-also"></a>请参阅  
  [设置数据库镜像 (SQL Server)](setting-up-database-mirroring-sql-server.md)   
- [针对数据库镜像和 AlwaysOn 可用性组传输安全&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
+ [传输安全模式的数据库镜像和 AlwaysOn 可用性组&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2d0c5d66a15ba476806df39792206c47a31bb26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c20519f4db37f398fefed79042cc2d3ecf5ba631
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326127"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>配置业务规则以发送通知 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您要向用户通知有关属性值更改时，请配置业务规则以发送通知。  
@@ -55,9 +55,9 @@ ms.locfileid: "36016386"
   
 6.  从 **“属性”** 列表中，选择某一属性或保持默认值 **“全部”**。  
   
-7.  在网格中，业务规则的行中双击**通知**字段。  
+7.  在网格中，在业务规则所对应的行中，双击**通知**字段。  
   
-8.  从子菜单上，单击要发送到电子邮件通知的用户或组。  
+8.  从子菜单中，单击要向其发送电子邮件通知的用户或组。  
   
 ## <a name="next-steps"></a>后续步骤  
   

@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 升级问题 （升级顾问） |Microsoft 文档
+title: Reporting Services 升级问题 （升级顾问） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], upgrade issues
 - Reporting Services, upgrades
@@ -18,22 +18,22 @@ ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 68e688e416c0d4a001492f9372e8363f558f8a26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3adf211200ccc2596fe8766c11bffc653a2b3f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306927"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 升级问题（升级顾问）
-  以下主题介绍[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可能会影响你升级到的问题[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 主题描述可以采取用来缓解这些更改对你的环境的影响的操作。  
+  下面的主题介绍[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可能会影响您升级到的问题[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 主题介绍可用于缓解对您的环境的这些更改影响的操作。  
   
  升级顾问可分析报表服务器安装。 如果仅安装了客户端组件（例如，如果报表设计器是安装在计算机中的唯一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件），则不会报告任何问题。  
   
  根据安装的配置方式，您可能会遇到升级顾问未报告的其他问题。 这些问题不会阻止 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升级成功，但是它们可能影响升级完成后报表和应用程序的运行方式。 若要了解这些问题，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“Reporting Services 的向后兼容性”。  
   
- 如果你无法使用安装程序升级[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装，你可以安装管理新[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例，并将现有安装迁移到新实例。 详细信息，请参阅"升级和迁移 Reporting Services"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书[升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
+ 如果您不能使用安装程序升级[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装中，可以安装一个新[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例，并将你的现有安装迁移到新实例。 详细信息，请参阅"升级和迁移 Reporting Services"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书[升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
  以下主题介绍升级顾问报告的已知问题，并解释可以如何修改现有安装以顺利进行升级。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36127647"
   
 -   [报表服务器网站上的客户端证书&#40;升级顾问&#41;](../../../2014/sql-server/install/client-certificates-on-the-report-server-web-site-upgrade-advisor.md)  
   
--   [报表服务器上检测到自定义扩展&#40;升级顾问&#41;](../../../2014/sql-server/install/custom-extensions-were-detected-on-the-report-server-upgrade-advisor.md)  
+-   [报表服务器上检测到自定义扩展插件&#40;升级顾问&#41;](../../../2014/sql-server/install/custom-extensions-were-detected-on-the-report-server-upgrade-advisor.md)  
   
 -   [报表服务器上检测到自定义报表项&#40;升级顾问&#41;](../../../2014/sql-server/install/custom-report-items-were-detected-on-the-report-server-upgrade-advisor.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36127647"
   
 -   [检测到的 IP 地址限制&#40;升级顾问&#41;](../../../2014/sql-server/install/ip-address-restriction-detected-upgrade-advisor.md)  
   
--   [在报表服务器站点上检测到的 ISAPI 筛选器&#40;升级顾问&#41;](../../../2014/sql-server/install/isapi-filters-detected-on-the-report-server-site-upgrade-advisor.md)  
+-   [在报表服务器站点上检测到 ISAPI 筛选器&#40;升级顾问&#41;](../../../2014/sql-server/install/isapi-filters-detected-on-the-report-server-site-upgrade-advisor.md)  
   
 -   [报表服务器计算机上检测到过时的扩展插件&#40;升级顾问&#41;](../../../2014/sql-server/install/obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor.md)  
   
@@ -62,19 +62,19 @@ ms.locfileid: "36127647"
   
 -   [检测到的 SQL Server 2005 报表服务器 Web 服务组&#40;升级顾问&#41;](../../../2014/sql-server/install/sql-server-2005-report-server-web-service-group-detected-upgrade-advisor.md)  
   
--   [虚拟目录是未指定&#40;升级顾问&#41;](../../../2014/sql-server/install/virtual-directories-are-unspecified-upgrade-advisor.md)  
+-   [未指定虚拟目录&#40;升级顾问&#41;](../../../2014/sql-server/install/virtual-directories-are-unspecified-upgrade-advisor.md)  
   
 -   [虚拟目录具有不受支持的身份验证方法&#40;升级顾问&#41;](../../../2014/sql-server/install/virtual-directory-has-unsupported-authentication-method-upgrade-advisor.md)  
   
--   [对 SQL Server Standard 和 Enterprise 的 CPU 和内存限制的更改&#40;升级顾问&#41;](../../../2014/sql-server/install/cpu-memory-limits-changes-sql-server-standard-enterprise-upgrade-advisor.md)  
+-   [对 SQL Server Standard 和 Enterprise 的 CPU 和内存限制更改&#40;升级顾问&#41;](../../../2014/sql-server/install/cpu-memory-limits-changes-sql-server-standard-enterprise-upgrade-advisor.md)  
   
--   [所需的 SharePoint 场的域帐户&#40;升级顾问&#41;](../../../2014/sql-server/install/domain-accounts-required-for-sharepoint-farm-upgrade-advisor.md)  
+-   [为 SharePoint 场要求使用域帐户&#40;升级顾问&#41;](../../../2014/sql-server/install/domain-accounts-required-for-sharepoint-farm-upgrade-advisor.md)  
   
--   [直接浏览报表服务器&#40;升级顾问&#41;](../../../2014/sql-server/install/direct-browsing-to-report-server-upgrade-advisor.md)  
+-   [直接浏览到报表服务器&#40;升级顾问&#41;](../../../2014/sql-server/install/direct-browsing-to-report-server-upgrade-advisor.md)  
   
 -   [安装 Microsoft SharePoint 2007&#40;升级顾问&#41;](../../../2014/sql-server/install/microsoft-sharepoint-2007-is-installed-upgrade-advisor.md)  
   
--   [Microsoft SQL Server Reporting Services SharePoint 共享服务是并排安装&#40;升级顾问&#41;](../../../2014/sql-server/install/sql-server-reporting-services-sharepoint-shared-service-side-by-side-upgrade-advisor.md)  
+-   [Microsoft SQL Server Reporting Services SharePoint 共享服务是并行安装&#40;升级顾问&#41;](../../../2014/sql-server/install/sql-server-reporting-services-sharepoint-shared-service-side-by-side-upgrade-advisor.md)  
   
 -   [不兼容的数据库引擎服务器排序规则&#40;升级顾问&#41;](../../../2014/sql-server/install/incompatible-database-engine-server-collation-upgrade-advisor.md)  
   

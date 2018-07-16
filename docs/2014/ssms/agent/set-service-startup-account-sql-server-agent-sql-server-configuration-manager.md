@@ -1,5 +1,5 @@
 ---
-title: 为 SQL Server 代理 （SQL Server 配置管理器） 中设置服务启动帐户 |Microsoft 文档
+title: 为 SQL Server 代理 （SQL Server 配置管理器） 设置服务启动帐户 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6d2fb2581a2f2f5b7d851323290665af2c23b8ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f08e086bfcd523904d0f95c1e4b823c05bd7cb6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232554"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务启动帐户定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在运行时所用的 Windows 帐户及其网络权限。 本主题说明了如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置管理器设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代理服务帐户。  
@@ -49,7 +49,7 @@ ms.locfileid: "36125975"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 若要执行其函数，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理必须配置为使用的是的成员的帐户的凭据`sysadmin`中的固定的服务器角色[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该帐户必须拥有以下 Windows 权限：  
+ 若要执行其功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理必须配置为使用的是的成员的帐户的凭据`sysadmin`固定的服务器角色中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该帐户必须拥有以下 Windows 权限：  
   
 -   以服务身份登录 (SeServiceLogonRight)  
   

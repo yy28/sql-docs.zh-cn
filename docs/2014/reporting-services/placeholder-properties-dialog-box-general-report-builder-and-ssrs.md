@@ -1,5 +1,5 @@
 ---
-title: 占位符属性对话框，常规 （报表生成器和 SSRS） |Microsoft 文档
+title: 占位符属性对话框，常规 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ed0c21a7b55e0cf2387595e1c24dc430151f1e05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309727"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>“占位符属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
   使用 **“占位符属性”** 对话框可以更改文本框中占位符的值、工具提示以及标记选项。  
@@ -48,9 +48,9 @@ ms.locfileid: "36017481"
  [设置文本框中文本的格式（报表生成器和 SSRS）](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [向报表添加 HTML（报表生成器和 SSRS）](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
- [文本框&#40;报表生成器和 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [文本框中&#40;报表生成器和 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式文本和占位符&#40;报表生成器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [将 HTML 导入报表&#40;报表生成器和 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [将 HTML 报表导入&#40;报表生成器和 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

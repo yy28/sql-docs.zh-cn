@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4f247a5cbbdcbeb723c0fa9bc0abd1265c516459
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0aefc0500cd57bedc266401a7a987ea979b7c99c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301267"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>组织跟踪中显示的列 (SQL Server Profiler)
   通过在跟踪表或 **“跟踪文件属性”** 对话框中选择 **“组织列”** ，或者在定义跟踪时，都可以将跟踪中的数据列分组。 将数据列分组可以更好地分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪输出。 有关详细信息，请参阅 [使用 SQL Server Profiler 查看和分析跟踪](view-and-analyze-traces-with-sql-server-profiler.md)。  
@@ -87,7 +87,7 @@ ms.locfileid: "36018772"
 7.  若要使跟踪数据恢复为正常视图，请单击 **“视图”** 菜单上的 **“聚合视图”** 来取消选择。 如果要恢复为聚合视图，请再次单击 **“视图”** 菜单上的 **“聚合视图”** 来重新选择。 请注意，也可以单击 **“视图”** 菜单上的 **“分组视图”** 来显示分组的跟踪事件，而不折叠这些跟踪事件。  
   
 ## <a name="see-also"></a>请参阅  
- [创建跟踪&#40;SQL Server 事件探查器&#41;](create-a-trace-sql-server-profiler.md)   
+ [创建跟踪&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
  [打开跟踪表 (SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)   
  [打开跟踪文件 (SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md)  
   

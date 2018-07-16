@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93418f885f5c14d2d6ad43b7892f64906a43a2be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6ab4e0486cfcac8eaf4d5ed9d4a0456d4bb6d9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290893"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
   本节包含针对 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]的教程。  
@@ -58,7 +58,7 @@ ms.locfileid: "36014309"
  本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  
   
 ## <a name="see-also"></a>请参阅  
- [有关 SQL Server 2014 的教程](../tutorials/tutorials-for-sql-server-2014.md)   
+ [SQL Server 2014 教程](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI：SQL Server 2012 示例](http://go.microsoft.com/fwlink/?linkID=220734)  
   
   

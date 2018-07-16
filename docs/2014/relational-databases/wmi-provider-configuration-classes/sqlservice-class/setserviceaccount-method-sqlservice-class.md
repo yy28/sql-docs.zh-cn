@@ -1,5 +1,5 @@
 ---
-title: SetServiceAccount 方法 （SqlService 类） |Microsoft 文档
+title: SetServiceAccount 方法 （SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74f296fd52640c950d7d2c4b227a1c3aedb17df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7186220ae32ceb8faa3fd5bdd906712d844d88e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317937"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法（SqlService 类）
   尝试更改运行服务实例时使用的用户名和密码。  
@@ -54,9 +54,9 @@ ServiceStartName , ServiceStartPassword
   
 -   如果帐户属于内置域，则可以指定“\用户名”。  
   
--   如果指定 NULL，则服务将记录为**LocalSystem**帐户。  
+-   如果指定 NULL，则该服务将以登录**LocalSystem**帐户。  
   
- 内核或系统级的驱动程序， *StartName*包含驱动程序对象名称，\FileSystem\Rdr 或 \Driver\Xns，I/O 系统用来加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
+ 对于内核或系统级驱动程序*StartName*包含驱动程序对象名称 \FileSystem\Rdr 或 \Driver\Xns，I/O 系统用于加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
   
  *ServiceStartPassword*  
  一个字符串值，指定的密码中的帐户名称*StartName*参数。 如果不更改密码，请指定 NULL。 如果服务没有密码，请指定一个空字符串。  

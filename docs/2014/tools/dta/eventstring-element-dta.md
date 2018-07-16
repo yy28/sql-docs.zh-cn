@@ -1,5 +1,5 @@
 ---
-title: EventString 元素 (DTA) |Microsoft 文档
+title: EventString 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6155627f60694cf1a21d39893e40b106b9df0886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db55d1d2451ab8febf984deb9e5bcb6d4718353f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291693"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   直接在 XML 输入文件中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本工作负荷。  
@@ -51,7 +51,7 @@ ms.locfileid: "36016507"
 |--------------------|-----------------|  
 |**数据类型和长度**|`string`长度不受限制。|  
 |**默认值**|无。|  
-|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须指定`EventString`、 `File`，或`Database`子元素`Workload`父，但仅有一个类型使用。 例如，如果指定具有的工作负荷`EventString`元素，则你不能同时指定具有的工作负荷`File`相同的 XML 输入文件中的元素。|  
+|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须指定`EventString`、 一个`File`，或`Database`子元素`Workload`父级，但只有一种类型使用。 例如，如果指定的工作负荷`EventString`元素，则你不能同时指定具有的工作负荷`File`同一 XML 输入文件中的元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

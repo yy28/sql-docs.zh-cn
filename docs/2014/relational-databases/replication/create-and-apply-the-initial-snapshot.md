@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: acb9bfe0b078dae12d4c4db1263f86dcd7700590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13184d6de8612a2b86492854e755961008e3f3ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329848"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
@@ -159,9 +159,9 @@ ms.locfileid: "36016822"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以加载该对象的其余属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以加载该对象的其余属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
-4.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>创建此发布的快照代理作业。  
+4.  如果的值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>若要创建此发布的快照代理作业。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法以启动为此发布生成快照的代理作业。  
   
@@ -193,9 +193,9 @@ ms.locfileid: "36016822"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以加载该对象的其余属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以加载该对象的其余属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
-4.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>创建此发布的快照代理作业。  
+4.  如果的值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，调用<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>若要创建此发布的快照代理作业。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法以启动为此发布生成快照的代理作业。  
   

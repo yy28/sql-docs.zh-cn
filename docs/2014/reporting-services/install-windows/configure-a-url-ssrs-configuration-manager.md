@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8426f8980bd10877c07d814921f3c73ee91f0c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288573"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   您必须为每个应用程序至少配置一个 URL 才能使用报表管理器或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。 如果您将报表服务器配置为使用 SharePoint 集成模式，并使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具更新了报表服务器 Web 服务 URL，则您还必须更新 SharePoint 管理中心中的 URL。  
@@ -38,7 +38,7 @@ ms.locfileid: "36126251"
   
 -   设置高级 URL 属性以定义其他 URL。  
   
- 有关更多有关如何存储和维护 Url 的信息或互操作性问题，请参阅[关于 URL 保留项和注册&#40;SSRS 配置管理器&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)和[安装 Reporting服务和 Internet 信息服务的并行&#40;SSRS 本机模式&#41;](install-reporting-and-internet-information-services-side-by-side.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
+ 有关更多有关如何存储和维护 Url 的信息或互操作性问题，请参阅[关于 URL 保留项和注册&#40;SSRS 配置管理器&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)并[安装报告服务和 Internet 信息服务的同时&#40;SSRS 本机模式&#41;](install-reporting-and-internet-information-services-side-by-side.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
   
 ## <a name="prerequisites"></a>必要條件  
  在创建或修改 URL 之前，请注意以下几点：  
@@ -47,7 +47,7 @@ ms.locfileid: "36126251"
   
 -   如果同一台计算机上安装了 IIS 6.0 或 7.0，请检查使用端口 80 的任何网站上的虚拟目录的名称。 如果发现任何虚拟目录使用默认 Reporting Services 虚拟目录名称（即“Reports”和“ReportServer”），请为您要配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 选择不同的虚拟目录名称。  
   
--   必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来配置 URL， 而不要使用系统实用工具。 永远不能修改 URL 保留项中的`URLReservations`直接在 RSReportServer.config 文件的部分。 若要同时更新内部存储的基础 URL 预留并同步存储在 RSReportServer.config 文件中的 URL 设置，则有必要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  
+-   必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来配置 URL， 而不要使用系统实用工具。 永远不会修改 URL 保留项中的`URLReservations`直接在 RSReportServer.config 文件的部分。 若要同时更新内部存储的基础 URL 预留并同步存储在 RSReportServer.config 文件中的 URL 设置，则有必要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  
   
 -   选择一个报表活动较少的时间。 每次 URL 预留发生更改时，都可能会回收报表服务器 Web 服务和报表管理器的应用程序域。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36126251"
   
          如果有多个网络适配器，或者如果网络同时支持 IPv4 和 IPv6 地址，则会看到多个 IP 地址。 如果只选择一个 IP 地址，则会将应用程序限制为只能访问该 IP 地址（以及域名服务器映射到该地址的任何主机名）。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。 如果选择此值，则通常是因为你要配置多个还指定显式 IP 地址或主机名的 URL 预留（例如，一个针对用于 Intranet 连接的网络适配器，另一个用于 Extranet 连接）。  
   
-5.  指定端口。 端口 80 是默认设置[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]上[!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]和 Windows Server 2008 因为它可以与其他应用程序共享。 如果希望使用自定义端口号，请记住必须始终在用于访问报表服务器的 URL 中指定它。 可以使用以下方法来查找可用端口：  
+5.  指定端口。 端口 80 是默认值[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]上[!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]和 Windows Server 2008 因为它可以与其他应用程序共享。 如果希望使用自定义端口号，请记住必须始终在用于访问报表服务器的 URL 中指定它。 可以使用以下方法来查找可用端口：  
   
     -   在命令提示符下键入以下命令以返回正在使用的 TCP 端口的列表：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36126251"
   
 10. 通过单击页面 **URL** 部分中的链接来测试该 URL。 请注意，必须先创建并配置报表服务器数据库，然后才能测试 URL。 有关指导，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
-11. 此外，如果将报表服务器配置为使用 SharePoint 集成模式，则在 SharePoint 管理中心中配置报表服务器 Web 服务 URL。 有关如何更新报表服务器 Web 服务 URL 在 SharePoint 管理中心的详细信息，请参阅[配置和管理报表服务器&#40;Reporting Services SharePoint 模式&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)和[Reporting Services 报表服务器&#40;SharePoint 模式下&#41;](../reporting-services-report-server-sharepoint-mode.md)。  
+11. 此外，如果将报表服务器配置为使用 SharePoint 集成模式，则在 SharePoint 管理中心中配置报表服务器 Web 服务 URL。 有关如何更新在 SharePoint 管理中心内的报表服务器 Web 服务 URL 的详细信息，请参阅[配置和管理报表服务器的&#40;Reporting Services SharePoint 模式&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)和[Reporting Services 报表服务器&#40;SharePoint 模式下&#41;](../reporting-services-report-server-sharepoint-mode.md)。  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>为报表管理器创建 URL 预留  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36126251"
   
 2.  单击 **“报表管理器 URL”**。  
   
-3.  指定虚拟目录。 报表管理器与报表服务器 Web 服务将侦听相同的 IP 地址和端口。 如果将报表管理器配置为指向不同的报表服务器 Web 服务，则必须在 RSReportServer.config 文件中修改报表管理器 URL 设置。 有关说明，请参阅[配置报表管理器&#40;纯模式&#41;](../report-server/configure-web-portal.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+3.  指定虚拟目录。 报表管理器与报表服务器 Web 服务将侦听相同的 IP 地址和端口。 如果将报表管理器配置为指向不同的报表服务器 Web 服务，则必须在 RSReportServer.config 文件中修改报表管理器 URL 设置。 有关说明，请参阅[配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 4.  如果安装了 SSL 证书，则可以选择它以要求通过 HTTPS 路由针对报表管理器的所有请求。  
   

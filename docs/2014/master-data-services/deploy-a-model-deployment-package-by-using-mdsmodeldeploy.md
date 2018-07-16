@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e99859dcdfcc2061622e955399b6d7bdac8bcbf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e15f7e75f8967fb49b33b6b8a8eb6720b92131d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295017"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具来部署包含以下任一信息的包：  
@@ -50,7 +50,7 @@ ms.locfileid: "36015713"
   
 2.  打开命令提示符，然后导航到 MDSModelDeploy.exe。  
   
-    -   如果 MDS 安装在默认位置，该工具位于*驱动器*: files\microsoft SQL Server\120\Master 数据 Services\Configuration\MDSModelDeploy.exe  
+    -   如果 MDS 安装在默认位置，该工具位于*驱动器*: \Program Files\Microsoft SQL Server\120\Master 数据 Services\Configuration\MDSModelDeploy.exe  
   
     -   如果 MDS 未安装在默认位置，请在本地计算机上搜索 MDSModelDeploy.exe。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36015713"
   
  **说明：**  
   
--   如果包中的订阅视图具有现有模型中的订阅视图同名，作为创建视图*modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
+-   如果包中的订阅视图现有模型中具有订阅视图同名，视图创建为*modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
   
 -   部署过程具有以下四个步骤：  
   

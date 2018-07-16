@@ -1,5 +1,5 @@
 ---
-title: 筛选表 (SSAS 表格) 中的数据 |Microsoft 文档
+title: 筛选表 (SSAS 表格) 中的数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
 - sql12.asvs.bidtoolset.autofiltermenu.f1
 - sql12.asvs.bidtoolset.notallitemsshowing.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d58f376d4d7fde1ccd38eab1a1662fb7ad2605cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5232c34c8fdb8a76d24a623103d30863e7e9c21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306407"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>筛选表中的数据（SSAS 表格）
   您可以在导入数据时应用筛选器，以便控制加载到表中的行。 在导入数据后，不能删除单独的行。 不过，您可以应用自定义筛选器，以便控制显示行的方式。 不符合筛选条件的行会被隐藏。 您可以基于一列或多列进行筛选。 筛选器是累加式的，这意味着每个附加的筛选器都基于当前筛选器，从而进一步减少数据子集。  
@@ -47,7 +47,7 @@ ms.locfileid: "36124412"
   
 1.  单击您要清除其筛选器的列的标题中的箭头。  
   
-2.  单击**清除筛选器从\<列名称 >**。  
+2.  单击**清除筛选器从\<列名 >**。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>清除表的所有筛选器  
   

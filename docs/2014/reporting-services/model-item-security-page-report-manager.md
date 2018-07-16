@@ -1,5 +1,5 @@
 ---
-title: 模型项安全页 （报表管理器） |Microsoft 文档
+title: 模型项安全性页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299797"
 ---
 # <a name="model-item-security-page-report-manager"></a>“模型项安全性”页（报表管理器）
   使用此页，可以通过针对特定项授予或撤消只读权限来保护模型的各个部分。 模型项安全性不但会影响运行时的即席数据浏览，而且还会影响在报表生成器中创建报表时对已发布模型各部分的使用。 若要使用此功能，必须具有“内容管理员”权限。  
@@ -65,17 +65,17 @@ ms.locfileid: "36018809"
 4.  选择 **“模型项安全性”** 选项卡。  
   
 ## <a name="options"></a>“常规”  
- **保护此模型独立各模型项**  
+ **保护独立地为此模型的各模型项**  
  单击此复选框可以启用模型项安全性。  
   
- **指定模式中各模型项的安全性**  
+ **指定模型中各模型项的安全**  
  显示模型中的所有项。 您可以浏览模型命名空间来选择要保护的项。 一次只能选择一个项。 请确保先针对根节点创建第一个角色分配，然后再针对其他实体和文件夹创建角色分配。  
   
  **从父项继承权限**  
  单击此项可以继承父项的安全设置。  
   
- **分配到以下用户和组 （用分号分隔） 读取权限**  
- 单击此项可以指定要为其定义访问权限的用户帐户或组帐户。 如果使用默认安全性，则用户帐户和组帐户为 Windows 域帐户。 按以下格式指定的帐户： *\<域 >\\< 帐户\>*。  
+ **为以下用户和组 （用分号分隔） 分配读取权限**  
+ 单击此项可以指定要为其定义访问权限的用户帐户或组帐户。 如果使用默认安全性，则用户帐户和组帐户为 Windows 域帐户。 按以下格式指定帐户： *\<域 >\\< 帐户\>*。  
   
 ## <a name="see-also"></a>请参阅  
  [Management Studio 中报表服务器的 F1 帮助](tools/report-server-in-management-studio-f1-help.md)  

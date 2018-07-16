@@ -1,5 +1,5 @@
 ---
-title: 使用 ADOMD.NET 对象模型 |Microsoft 文档
+title: 使用 ADOMD.NET 对象模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2d73db65d10acdea5ec0c221eb994700ba5f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328537"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>使用 ADOMD.NET 对象模型
   ADOMD.NET 提供了一个对象模型，用于查看分析数据源中包含的多维数据集和从属对象。 但通过对象模型并不能获得给定分析数据源中的所有元数据。 通过对象模型只可访问那些对客户端应用程序的显示而言最有用的信息，以允许用户以交互方式构造命令。 由于要显示的元数据的复杂性较低，因而 ADOMD.NET 对象模型的使用较为简单。  
@@ -37,7 +37,7 @@ ms.locfileid: "36123728"
  对于旨在支持多个 OLAP 服务器或进行常规元数据显示和访问的客户端应用程序，应尽可能在其中使用 <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> 对象表示元数据。  
   
 > [!NOTE]  
->  对于特定于访问接口的元数据，或用于元数据的详细显示和访问，请使用架构行集检索元数据。 有关详细信息，请参阅[Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md))。  
+>  对于特定于访问接口的元数据，或用于元数据的详细显示和访问，请使用架构行集检索元数据。 有关详细信息，请参阅[使用在 ADOMD.NET 中的架构行集](retrieving-metadata-working-with-schema-rowsets.md))。  
   
  下面的示例使用 <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> 对象从本地服务器检索可见多维数据集及其维度：  
   

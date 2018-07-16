@@ -1,5 +1,5 @@
 ---
-title: DisplayFlag 元素 (ASSL) |Microsoft 文档
+title: DisplayFlag 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43c797101826a614c67c7c4f213140a427b51395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261453"
 ---
 # <a name="displayflag-element-assl"></a>DisplayFlag 元素 (ASSL)
-  包含一个只读的提示，指示是否应显示用户界面组件关联[ServerProperty](../objects/serverproperty-element-assl.md)元素。  
+  包含一个只读提示，指示用户界面组件是否应显示关联[ServerProperty](../objects/serverproperty-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36126609"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 对父级的对应的元素`DisplayFlag`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ServerProperty>。  
+ 父级对应的元素`DisplayFlag`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>请参阅  
  [ServerProperties 元素&#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

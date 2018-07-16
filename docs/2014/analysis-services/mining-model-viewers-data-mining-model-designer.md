@@ -1,5 +1,5 @@
 ---
-title: 挖掘模型查看器 （数据挖掘模型设计器） |Microsoft 文档
+title: 挖掘模型查看器 （数据挖掘模型设计器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293627"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>挖掘模型查看器（数据挖掘模型设计器）
   可以使用 **“挖掘模型查看器”** 选项卡浏览挖掘结构包含的挖掘模型。  
@@ -75,7 +75,7 @@ ms.locfileid: "36128414"
   
     -   [群集对比选项卡&#40;挖掘模型查看器&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [挖掘图例对话框&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [挖掘图例对话框的&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-decision-tree-algorithm"></a>Microsoft 决策树算法  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36128414"
   
     -   [依赖关系网络选项卡&#40;挖掘模型查看器&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [挖掘图例对话框&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [挖掘图例对话框的&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-linear-regression-algorithm"></a>Microsoft 线性回归算法  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36128414"
   
     -   [依赖关系网络选项卡&#40;挖掘模型查看器&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [挖掘图例对话框&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [挖掘图例对话框的&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36128414"
   
     -   [属性配置文件选项卡&#40;挖掘模型查看器&#41;](attribute-profiles-tab-mining-model-viewer.md)  
   
-    -   [属性特性标签&#40;挖掘模型查看器&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
+    -   [属性特征选项卡&#40;挖掘模型查看器&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
   
     -   [属性对比选项卡&#40;挖掘模型查看器&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
   
@@ -121,21 +121,21 @@ ms.locfileid: "36128414"
   
     -   [神经网络&#40;挖掘模型查看器&#41;](neural-network-mining-model-viewer.md)  
   
-    -   [查找节点对话框&#40;挖掘模型查看器&#41;](find-node-dialog-box-mining-model-viewer.md)  
+    -   [查找节点对话框的&#40;挖掘模型查看器&#41;](find-node-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法  
   
 -   [使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [群集群集关系图选项卡上的序列&#40;挖掘模型查看器](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [聚类分析群集关系图选项卡上的序列&#40;挖掘模型查看器](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
     -   [序列聚类分析群集配置文件选项卡&#40;挖掘模型查看器](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [群集群集特征选项卡上的序列&#40;挖掘模型查看器&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [聚类分析群集特征选项卡上的序列&#40;挖掘模型查看器&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [群集群集对比选项卡上的序列&#40;挖掘模型查看器&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [聚类分析群集对比选项卡上的序列&#40;挖掘模型查看器&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [群集群集转换选项卡上的序列&#40;挖掘模型查看器&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
+    -   [聚类分析群集转换选项卡上的序列&#40;挖掘模型查看器&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法  
   
@@ -143,9 +143,9 @@ ms.locfileid: "36128414"
   
     -   [模型选项卡&#40;挖掘模型查看器&#41;](model-tab-mining-model-viewers.md)  
   
-    -   [图表 选项卡&#40;挖掘模型查看器&#41;](chart-tab-mining-model-viewers.md)  
+    -   [图表选项卡&#40;挖掘模型查看器&#41;](chart-tab-mining-model-viewers.md)  
   
-    -   [挖掘图例对话框&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [挖掘图例对话框的&#40;挖掘模型查看器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型视图&#40;数据挖掘模型设计器&#41;](mining-models-view-data-mining-model-designer.md)   

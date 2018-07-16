@@ -1,5 +1,5 @@
 ---
-title: 向挖掘结构中添加嵌套的表 |Microsoft 文档
+title: 向挖掘结构中添加嵌套的表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d69932ebba84a08646dd1d8798f52fc2ff36dd66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868ef7af9d2116e2b148925a2a60bc01da4140bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177154"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>向挖掘结构中添加嵌套表
   在数据挖掘向导创建挖掘结构后，可以使用数据挖掘设计器在该挖掘结构中添加嵌套表。  

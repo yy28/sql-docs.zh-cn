@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd9706ee95376500993089a496f216c2fe113b27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 468d23a4bddd0df301d263e6c2fd6e22a167ef27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219677"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
   分配给成员的权限可与分配给模型对象的权限重叠。 出现重叠时，限制性更强的权限将生效。  
@@ -56,7 +56,7 @@ ms.locfileid: "36128344"
   
  上**层次结构成员**选项卡上，派生层次结构中的山地车子类别节点显式分配**只读**权限。  
   
- 结果： 在**资源管理器**，用户具有**只读**所有 Subcategory 属性值对山地车节点中的成员的权限。 所有其他成员和属性均隐藏。  
+ 结果： 在**资源管理器**，用户拥有**只读**所有 Subcategory 属性值的山地车节点中的成员的权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36128344"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别显式分配有 **“更新”** 权限。  
   
- 结果： 在**资源管理器**，用户具有**只读**的属性值的权限。 所有其他成员和属性均隐藏。  
+ 结果： 在**资源管理器**，用户拥有**只读**对属性值的权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_LOCATIONS 行集 |Microsoft 文档
+title: DISCOVER_LOCATIONS 行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cfcc451a3369a3f15e29381df3d21e7275a90f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90fa167102e9e5a5c8a4ad916bb921205347f1c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284433"
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 行集
   返回有关备份文件的内容的信息。 您必须有权访问备份文件位置。  
   
 ## <a name="rowset-columns"></a>行集列  
- `DISCOVER_LOCATIONS`行集包含以下各列。  
+ `DISCOVER_LOCATIONS`行集包含以下列。  
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "36126177"
  未对此架构行集进行排序。  
   
 ## <a name="restriction-columns"></a>限制列  
- `DISCOVER_LOCATIONS`行集可限制在下表中列出的列。  
+ `DISCOVER_LOCATIONS`行集可以限制下表中列出的列。  
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  

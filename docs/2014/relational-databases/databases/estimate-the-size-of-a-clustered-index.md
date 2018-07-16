@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b270dc2485be2c5c9a9fd2b491db8a9278cce43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b9293859eeef13f497c79989a546d527d5fb317a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305977"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估计聚集索引的大小
   您可以使用下列步骤估计存储聚集索引中的数据所需的空间大小：  
@@ -87,7 +87,7 @@ ms.locfileid: "36024844"
      添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
-    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`使总定义的表的宽度超过 8,060 字节的列。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`导致总定义的表的宽度超过 8,060 字节的列。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
      如果没有可变长度列，请将 ***Variable_Data_Size*** 设置为 0。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36024844"
   
      ***Non-leaf_levels*** = 1 + log25 (1000年 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，这是此示例中所述的页面数。  
+     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，这是在示例中所述的页数。  
   
 9. 计算索引的大小（每页总共有 8192 个字节）：  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36024844"
   
 -   大型对象 (LOB) 值  
   
-     要确定完全多少空间将用于存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， `ntext`， `xml`，和`image`值很复杂。 只需加上所期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后再加上群集索引的总大小就可以了。  
+     要确定将完全使用多少空间来存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， `ntext`， `xml`，和`image`值很复杂。 只需加上所期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后再加上群集索引的总大小就可以了。  
   
 -   压缩  
   

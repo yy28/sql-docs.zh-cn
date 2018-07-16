@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324007"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库在默认情况下支持全文索引。 不过，若要对表使用全文索引，必须对要使用全文引擎访问的表列设置全文索引功能。  
@@ -38,7 +37,7 @@ ms.locfileid: "36014478"
   
     1.  标识要包含在全文索引中的各个文本列。  
   
-    2.  如果给定的列包含存储为二进制数据的文档 (`varbinary(max)`，或`image`数据)，你必须指定一个表列 (*类型列*)，它标识要编制索引的列中每个文档的类型。  
+    2.  如果给定的列包含存储为二进制数据的文档 (`varbinary(max)`，或`image`数据)，必须指定一个表列 (*类型列*) 以标识被索引的列中每个文档的类型。  
   
     3.  指定对列中文档进行全文搜索时所使用的语言。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36014478"
   
 2.  对表或索引视图创建全文索引。  
   
-     全文索引是一种特殊类型的基于标记的功能性索引，由全文引擎生成和维护。 若要对表或视图创建全文搜索，则该表或视图必须具有唯一的、不可为 Null 的单列索引。 全文引擎需要使用此唯一索引将表中的每一行映射到一个唯一的可压缩键。 全文本索引可以包括`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，和`varbinary(max)`列。 有关详细信息，请参阅 [创建和管理全文索引](create-and-manage-full-text-indexes.md)。  
+     全文索引是一种特殊类型的基于标记的功能性索引，由全文引擎生成和维护。 若要对表或视图创建全文搜索，则该表或视图必须具有唯一的、不可为 Null 的单列索引。 全文引擎需要使用此唯一索引将表中的每一行映射到一个唯一的可压缩键。 全文索引可以包括`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，和`varbinary(max)`列。 有关详细信息，请参阅 [创建和管理全文索引](create-and-manage-full-text-indexes.md)。  
   
  在了解如何创建全文索引之前，请务必考虑它们与普通 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引的不同之处。 下表列出了这些差异。  
   
@@ -105,14 +104,14 @@ ms.locfileid: "36014478"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>将非索引字表与全文索引关联  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了非索引字表。 “非索引字表”  是非索引字（也称为“干扰词”）的列表。 非索引字表与每个全文索引相关联，因而该非索引字表中的词会应用于对该索引的全文查询。 默认情况下，系统非索引字表与新的全文索引相关联。 不过，您也可以创建和使用您自己的非索引字表。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- 例如，以下[CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句将创建新的全文非索引字表名为 myStoplist3，通过将复制从系统非索引字表：  
+ 例如，以下[CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句创建新全文非索引字表通过从系统非索引字表复制名为 myStoplist3:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 以下[ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句可更改名为 myStoplist，首先为西班牙语再为法语添加词 en，添加非索引字表：  
+ 以下[ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句可更改名为 myStoplist，首先为西班牙语，然后为法语添加单词 en，非索引字表：  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

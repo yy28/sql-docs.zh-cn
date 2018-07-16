@@ -1,5 +1,5 @@
 ---
-title: 更改系统管理员帐户 (Master Data Services) |Microsoft 文档
+title: 更改系统管理员帐户 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e9a79120b4f184fb7acf07eeaf46101740a173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6d15bf7b140445ca80f23fe22e058a78d6fdce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298607"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>更改系统管理员帐户 (Master Data Services)
-  你可以更改的用户帐户指定为[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系统管理员联系。  
+  你可以指定为的用户帐户[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系统管理员联系。  
   
 > [!WARNING]  
 >  当您完成此过程后，将删除旧系统管理员用户帐户。  
@@ -40,11 +40,11 @@ ms.locfileid: "36025219"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 数据库的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例。  
   
-2.  Mdm.tblUser 中，找到的用户，将新的管理员并复制中的值`SID`列。  
+2.  在 mdm.tblUser 中，找到的用户，将成为新管理员，并复制中的值`SID`列。  
   
 3.  创建新查询。  
   
-4.  键入以下文本，替换*域 \ 用户名*与新管理员的用户名称和*SID*使用在步骤 2 中复制的值。  
+4.  键入以下文本替换*DOMAIN\user_name*具有新管理员的用户名称和*SID*使用在步骤 2 中复制的值。  
   
     ```  
     EXEC [mdm].[udpSecuritySetAdministrator] @UserName='DOMAIN\user_name', @SID = 'SID', @PromoteNonAdmin = 1  

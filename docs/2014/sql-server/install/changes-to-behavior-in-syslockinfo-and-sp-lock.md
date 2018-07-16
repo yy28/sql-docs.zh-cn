@@ -1,5 +1,5 @@
 ---
-title: 将更改 syslockinfo 和 sp_lock 中的行为 |Microsoft 文档
+title: 对 syslockinfo 和 sp_lock 中的行为更改 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - syslockinfo
 - sp_lock
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 982f31bbffb32726089fa331d105bfc262fc16a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eb410a4c65d9b626290297fce85ddf2fe20c08d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295857"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>对 syslockinfo 和 sp_lock 中的行为的更改
-  **syslockinfo**和**sp_lock**可能会返回意外的值。 它们还可能返回其他行，而以前的版本**syslockinfo**和**sp_lock**返回的每个锁资源的两个行最多。  
+  **syslockinfo**并**sp_lock**可能返回意外的值。 它们还可能返回其他行，而以前的版本**syslockinfo**并**sp_lock**返回最多每个锁资源的两个行。  
   
- 访问信息从**syslockinfo**或执行**sp_lock**需要服务器上的 VIEW SERVER STATE 权限。  
+ 访问信息从**syslockinfo**或执行**sp_lock**需要对服务器拥有 VIEW SERVER STATE 权限。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- 在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 **rsc_objid**和**rsc_indid**中的列**syslockinfo**和**objid**和**indid**中的列**sp_lock**一致地返回的对象 ID 和索引 id。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，可能会返回值 0。  
+ 在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，则**rsc_objid**并**rsc_indid**中的列**syslockinfo**并**objid**和**indid**中的列**sp_lock**一致地返回的对象 ID 和索引 id。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，可能会返回值 0。  
   
- 在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]， **syslockinfo**和**sp_lock**对于任何给定的锁资源的两个行的最多返回在单个事务中。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，如果启用了锁分区，就可以针对在一个事务中运行的同一资源返回多行。 存在可能最多 N + 1 的行返回，其中 N 是 Cpu 的数目。 另外，现在可以针对同一资源显示 GRANTED 和 WAITING 请求，这在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中是不可能实现的。  
+ 在中[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]， **syslockinfo**并**sp_lock**在单个事务中返回最多为任何给定的锁资源的两个行。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，如果启用了锁分区，就可以针对在一个事务中运行的同一资源返回多行。 那里可能最多 N + 1 行返回，其中 N 是 Cpu 的数目。 另外，现在可以针对同一资源显示 GRANTED 和 WAITING 请求，这在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中是不可能实现的。  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

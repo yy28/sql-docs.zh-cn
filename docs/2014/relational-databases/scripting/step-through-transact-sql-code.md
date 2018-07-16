@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331277"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 代码
   使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可以控制在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口中运行哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句。 可在各个语句上暂停调试器，然后查看该位置的代码元素的状态。  
@@ -57,7 +57,7 @@ ms.locfileid: "36016808"
 |------------|---------------|  
 |运行当前语句到下一个断点之间的所有语句|上**调试**菜单上，单击**继续**。<br /><br /> 上**调试**工具栏上，单击**继续**按钮。|  
 |单步执行下一个语句或模块|上**调试**菜单上，单击**单步执行**。<br /><br /> 上**调试**工具栏上，单击**单步执行**按钮。<br /><br /> 按 F11。|  
-|逐过程执行下一个语句或模块|上**调试**菜单上，单击**逐过程**。<br /><br /> 上**调试**工具栏上，单击**逐过程**按钮。<br /><br /> 按 F10。|  
+|逐过程执行下一个语句或模块|上**调试**菜单上，单击**单步跳过**。<br /><br /> 上**调试**工具栏上，单击**单步跳过**按钮。<br /><br /> 按 F10。|  
 |跳出模块|上**调试**菜单上，单击**单步跳出**。<br /><br /> 上**调试**工具栏上，单击**单步跳出**按钮。<br /><br /> 按 Shift+F11。|  
 |运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”。<br /><br /> 按 Ctrl+F10。|  
   

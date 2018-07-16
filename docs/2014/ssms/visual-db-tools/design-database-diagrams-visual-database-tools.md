@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
 - vdt.DatabaseDesigner
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f4b54da69923a73d5c73647683fd9136c970e81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00f9386b6940d24f3ce7a063a58fb76c436221f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255389"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>设计数据库关系图 (Visual Database Tools)
   数据库设计器是一种可视化工具，它允许您对所连接的数据库进行设计和可视化处理。 设计数据库时，您可以使用数据库设计器创建、编辑或删除表、列、键、索引、关系和约束。 为使数据库可视化，您可创建一个或多个关系图，以显示数据库中的部分或全部表、列、键和关系。  
@@ -45,7 +45,7 @@ ms.locfileid: "36127213"
   
  如果修改了某个表，但尚未保存该表，则表名末尾将显示一个星号 (*)，表示未保存更改。 有关保存修改后的表和关系图的详细信息，请参阅 [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  
   
- **行选择器** 可以通过单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键值的信息，请参阅[Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
+ **行选择器** 可以通过单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键的信息，请参阅[主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。  
   
  **属性列** 属性列组仅在表的某些视图中可见。 您可以在五个不同视图中的任何一个视图中查看表，以帮助您管理关系图的大小和布局。  
   
@@ -72,8 +72,8 @@ ms.locfileid: "36127213"
  [打开数据库关系图设计器 (Visual Database Tools)](open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>请参阅  
- [使用数据库关系图&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [处理数据库关系图中的表&#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
+ [使用数据库关系图&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [使用数据库关系图中的表&#40;可视化数据库工具&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [使用关系图布局 (Visual Database Tools)](work-with-diagram-layout-visual-database-tools.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
 - renaming virtual servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: defb9efed51b1739f35d7dc8f1bdfbae12decb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 006abb7b37e67938a060ed05ced726c3699dfbd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294007"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包括在故障转移群集中，则重命名虚拟服务器的过程不同于重命名独立实例的过程。 有关详细信息，请参阅 [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "36014946"
 ## <a name="verify-the-renaming-operation"></a>验证重命名操作  
  虚拟服务器被重命名之后，任何使用旧名称的连接现在都必须使用新名称来连接。  
   
- 若要验证重命名操作已完成，请选择信息从`@@servername`或`sys.servers`。 `@@servername` 函数将返回新的虚拟服务器名称，`sys.servers` 表将显示新的虚拟服务器名称。 若要验证故障转移过程是否能够使用新名称正常工作，用户还应尝试将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源故障转移到其他节点。  
+ 若要验证重命名操作已完成，请选择信息眖`@@servername`或`sys.servers`。 `@@servername` 函数将返回新的虚拟服务器名称，`sys.servers` 表将显示新的虚拟服务器名称。 若要验证故障转移过程是否能够使用新名称正常工作，用户还应尝试将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源故障转移到其他节点。  
   
  对于从群集中任何节点进行的连接，都可以立即使用新名称。 但是，对于从客户端计算机使用新名称进行的连接，则必须在新名称对该客户端计算机可见之后，才能使用新名称连接到服务器。 根据网络配置，通过网络传播新名称所需的时间长度可能为几秒钟，也可能长至 3 到 5 分钟；旧的虚拟服务器名称在网络上不再可见也可能会需要一些时间。  
   

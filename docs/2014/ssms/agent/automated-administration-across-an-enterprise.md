@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
 - multiserver administration [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95ed4df18cfb4bcf433d08bbe9decacf35977c0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9c4cd4b54ef4659434f7b73b81c72f79c2cba4e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257853"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
   跨多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”。 使用多服务器管理可以执行下列操作：  
@@ -39,7 +39,7 @@ ms.locfileid: "36127641"
 -   在企业服务器之间安排数据仓库的信息流。  
   
 > [!NOTE]  
->  作为的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)]坚持不懈地降低总成本的所有权，[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了两个功能： 管理服务器的基于策略的管理和使用配置服务器和服务器的多服务器查询调用的方法组。 这些功能可以与本主题中介绍的某些功能一起使用，也可能会替代这些功能。 有关详细信息，请参阅[管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)和[使用中央管理服务器管理多个服务器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)。  
+>  作为的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)]正在致力于降低总拥有成本，[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了两个功能： 管理服务器的方法，名为基于策略的管理和使用配置服务器和服务器的多服务器查询组。 这些功能可以与本主题中介绍的某些功能一起使用，也可能会替代这些功能。 有关详细信息，请参阅[基于策略的管理的管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)并[使用中央管理服务器管理多个服务器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)。  
   
  若要利用多服务器管理，您必须至少有一台主服务器且至少有一台目标服务器。 主服务器将作业分发到目标服务器并从它那里接收事件。 主服务器还存储在目标服务器上运行的作业的作业定义的中央副本。 目标服务器定期连接到主服务器来更新它们的作业计划。 如果主服务器上存在新作业，目标服务器将下载该作业。 目标服务器在完成作业后，会重新连接到主服务器并报告作业状态。  
   
@@ -88,14 +88,14 @@ ms.locfileid: "36127641"
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据库引擎的向后兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [注册服务器](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
- [sp_delete_targetserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
- [sp_delete_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
- [sp_help_downloadlist &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
- [sp_help_jobserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
- [sp_help_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
- [sp_resync_targetserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
- [sp_update_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [sp_delete_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [sp_help_downloadlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [sp_help_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
  [dbo.sysjobservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
  [sys.syslogins &#40;Transact SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
  [dbo.systargetservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  

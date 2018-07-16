@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
 - joins [SQL Server], creating
 - joins [SQL Server], automatic
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 373264e421362d29ee00909707abc2be41ce1956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 394aab0fd5726b2a885f0f113cfe1f66c1eac5c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268173"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自动联接表 (Visual Database Tools)
   将两个或多个表添加到查询中时， [查询和视图设计器](visual-database-tools.md) 会尝试确定它们是否相关。 如果相关，查询和视图设计器将自动在表示表或表结构对象的矩形之间添加联接线。  
@@ -44,8 +44,8 @@ ms.locfileid: "36128442"
  如果查询和视图设计器在查询中没有自动联接表，您可以自己创建联接。 有关详细信息，请参阅[手动联接表 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [如何查询和视图设计器表示联接&#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
- [设计查询和视图的操作指南主题&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [查询和视图设计器如何表示联接&#40;可视化数据库工具&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
+ [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [使用联接进行查询 (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

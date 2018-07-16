@@ -1,5 +1,5 @@
 ---
-title: 确定正确的 Bucket 计数为哈希索引 |Microsoft 文档
+title: 确定哈希索引的正确存储桶计数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4fa6a93a3f66a3db6c2cc7f74b11fb66073a4013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306159"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
   必须指定的值`BUCKET_COUNT`参数创建内存优化表时。 本主题将提出一些建议，帮助您为 `BUCKET_COUNT` 参数确定适当的值。 如果您无法确定实际 Bucket 计数，则改用非聚集索引。  不正确的 `BUCKET_COUNT` 值（特别是过低的值）可能会显著影响工作负荷性能以及数据库的恢复时间。 最好将 Bucket 计数估计得高一些。  
   
  重复的索引键会降低哈希索引性能，因为键已哈希处理至同一个 Bucket，导致该 Bucket 的链增加。  
   
- 有关非聚集哈希索引的详细信息，请参阅[哈希索引](hash-indexes.md)和[对于使用内存优化表的索引的指导原则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 有关非聚集哈希索引的详细信息，请参阅[哈希索引](hash-indexes.md)并[Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
- 将为内存优化表上的每个哈希索引分配一个哈希表。 为指定的索引分配哈希表的大小`BUCKET_COUNT`中的参数[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Bucket 数将在内部舍入到 2 的下一次幂。 例如，指定 300,000 的 Bucket 计数将导致 524,288 的实际 Bucket 计数。  
+ 将为内存优化表上的每个哈希索引分配一个哈希表。 为指定的索引分配的哈希表的大小`BUCKET_COUNT`中的参数[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). Bucket 数将在内部舍入到 2 的下一次幂。 例如，指定 300,000 的 Bucket 计数将导致 524,288 的实际 Bucket 计数。  
   
  有关 Bucket 计数的文章和视频链接，请参阅 [如何确定哈希索引（内存 OLTP）的正确 Bucket 计数](http://go.microsoft.com/fwlink/p/?LinkId=525853)。  
   
 ## <a name="recommendations"></a>建议  
  在大多数情况下，Bucket 计数应该介于索引键中非重复值数目的 1 到 2 倍之间。 如果索引键包含许多重复值，且平均而言对于每个索引键值超过 10 行，则改用非聚集索引  
   
- 您不见得始终都能够预测到某个特定索引键可能具有或将具有多少个值。 性能应该可以接受如果`BUCKET_COUNT`值内 5 次键值的实际数量。  
+ 您不见得始终都能够预测到某个特定索引键可能具有或将具有多少个值。 性能就应该是可接受如果`BUCKET_COUNT`值处于 5 倍之内的键值的实际数目。  
   
  若要确定现有数据中唯一索引键的数目，请使用与下面的示例相似的查询：  
   
@@ -67,7 +67,7 @@ FROM
  对于 (SpecialOfferID, ProductID) 上的示例索引，这导致 121317 / 484 = 251。 这意味着索引键值具有平均值 251，并因此应该是一个非聚集索引。  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Bucket 计数故障排除  
- 若要解决内存优化表中的存储桶计数问题，请使用[sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)以获取有关空桶和行链的长度的统计信息。 可以使用下面的查询获取与当前数据库中所有哈希索引有关的统计信息。 如果数据库中有大型表，查询可能会用几分钟时间运行。  
+ 若要对内存优化表中的 bucket 计数问题进行故障排除，请使用[sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)若要获取的空 bucket 和行链长度有关的统计信息。 可以使用下面的查询获取与当前数据库中所有哈希索引有关的统计信息。 如果数据库中有大型表，查询可能会用几分钟时间运行。  
   
 ```tsql  
 SELECT   
@@ -86,7 +86,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  用于评估哈希索引运行状况的两个关键指标是：  
   
  *empty_bucket_percent*  
- *empty_bucket_percent*指示在哈希索引空存储桶数。  
+ *empty_bucket_percent*指示哈希索引中的空存储桶的数量。  
   
  如果 *empty_bucket_percent* 小于 10%，则该 Bucket 计数可能过低。 理想状态下， *empty_bucket_percent* 应该为 33% 或更高。 如果 Bucket 计数与索引键值的数目匹配，则由于哈希分布，大约 1/3 的 Bucket 是空的。  
   
@@ -147,7 +147,7 @@ GO
   
 -   主键索引 (PK__SalesOrder…)：36% 的 Bucket 是空的，这很好。 此外，平均链长度为 1，这也不错。 无需进行更改。  
   
- 具有内存优化哈希索引的问题疑难解答的详细信息，请参阅[故障排除常见性能问题，并且内存优化哈希索引](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)。  
+ 对具有内存优化哈希索引的问题进行疑难解答的详细信息，请参阅[与内存优化哈希索引 Troubleshooting Common Performance Problems](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)。  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>为进一步优化需要周全考虑的方面  
  本节概述为优化 Bucket 计数而需要进一步考虑的方面。  
@@ -156,7 +156,7 @@ GO
   
 -   Bucket 计数值越大，索引中存在的空 Bucket 就越多。 这会影响内存使用情况（每个 Bucket 8 个字节）和表扫描的性能，因为将在表扫描期间对每个 Bucket 进行扫描。  
   
--   Bucket 计数越低，分配给单个 Bucket 的值就越多。 这会降低点查找和插入的性能，因为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可能需要遍历单个 bucket 若要查找搜索谓词指定的值中的几个值。  
+-   Bucket 计数越低，分配给单个 Bucket 的值就越多。 这会降低点查找和插入的性能，因为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可能需要遍历单个 bucket，若要查找的搜索谓词指定的值中的多个值。  
   
  如果 Bucket 计数显著低于唯一索引键数，则许多值将映射到每个 Bucket。 这会减少大部分 DML 操作（尤其是查找个别索引键的点查找操作）和插入操作的性能。 例如，包含相等谓词（与 WHERE 子句中的索引键列匹配）的 SELECT 查询、UPDATE 和 DELETE 操作的性能可能较差。 较低的 Bucket 计数还将影响数据库的恢复时间，因为在数据库启动时会重新创建这些索引。  
   
@@ -181,7 +181,7 @@ GO
 -   如果全文检索扫描是对性能起着主要作用的操作，则使用接近于索引键值实际数目的 Bucket 计数。  
   
 ### <a name="big-tables"></a>大型表  
- 对于大型表，内存使用量可能成问题。 例如，具有 4 个哈希索引，每个都有 10 亿的 bucket 计数的 250 万行表与哈希表的开销是 4 个索引 * 1 亿个存储桶\*8 字节 = 32 千兆字节的内存使用率。 在为每个索引选择 2.5 亿的 Bucket 计数时，针对哈希表的总开销将是 8 GB。 请注意，这是除了 8 字节的内存使用率每个索引将添加到每个单独的行，这是在此方案中的 8 千兆字节 (4 个索引\*8 个字节\*250 万行)。  
+ 对于大型表，内存使用量可能成问题。 例如，2.5 亿行的表具有 4 个哈希索引，每个都有一个 10 亿的 bucket 计数与哈希表的开销是 4 个索引 * 10 亿 bucket \* 8 字节 = 32 千兆字节的内存使用率。 在为每个索引选择 2.5 亿的 Bucket 计数时，针对哈希表的总开销将是 8 GB。 请注意，这是除了 8 字节的内存使用情况的每个索引将添加到每个单独的行，这是在此方案中的 8 千兆字节 (4 个索引\*8 个字节\*2.5 亿行)。  
   
  全表扫描通常不是影响 OLTP 工作负荷的关键因素。 因此，需要在内存使用量与点查找和插入操作的性能之间进行权衡：  
   

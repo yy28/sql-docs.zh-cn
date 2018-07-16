@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 385c9fcbf98c30646c91694669cc13984e111cda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 326460795e7b1d72c1e894c80265401f5bfd882c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287083"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
   从设计上，从 Oracle 数据库中进行发布几乎与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布一样。 不过，还应注意下列限制和问题：  
@@ -141,7 +141,8 @@ ms.locfileid: "36125336"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持两种验证：二进制验证和行计数验证。 Oracle 发布服务器支持行计数验证。 有关详细信息，请参阅[验证已复制的数据](../validate-replicated-data.md)。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 Oracle 发布服务器支持字符模式快照。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 Oracle 发布服务器支持字符模式快照。  
   
 -   不支持对已发布的 Oracle 表进行架构更改。 若要更改架构，请先删除发布，进行更改，然后重新创建发布和任何订阅。  
   

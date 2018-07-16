@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03a681cf4ab018d82d991b91c463dfbef3fe8d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 690c7a670ca448c14c984b9fda76098ae7269c4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322707"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>步骤 3：测试第 3 课教程包
   在该任务中，将运行 Lesson 3.dtsx 包。 在包运行时，“日志事件”窗口将列出写入日志文件中的日志条目。 执行完包之后，将验证日志提供程序所生成的日志文件的内容。  
@@ -47,7 +47,7 @@ ms.locfileid: "36124378"
   
 -   使用记事本或其他任何文本编辑器，打开 TutorialLog.log 文件。  
   
--   尽管为生成的信息的语义`PipelineExecutionPlan`和`PipelineExecutionTrees`事件不在此教程的范围之内，你可以看到的第一行列出中指定的信息字段**详细信息**选项卡**配置 SSIS 日志**对话框。 此外，可以验证已为 Foreach 循环的每个迭代记录了所选择的两个事件：PipelineExecutionPlan 和 PipelineExecutionTrees。  
+-   尽管为生成的信息的语义`PipelineExecutionPlan`并`PipelineExecutionTrees`事件不在本教程的范围，则会看到第一行列出了在指定的信息字段**详细信息**选项卡**配置 SSIS 日志**对话框。 此外，可以验证已为 Foreach 循环的每个迭代记录了所选择的两个事件：PipelineExecutionPlan 和 PipelineExecutionTrees。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 4 课：添加错误流重定向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

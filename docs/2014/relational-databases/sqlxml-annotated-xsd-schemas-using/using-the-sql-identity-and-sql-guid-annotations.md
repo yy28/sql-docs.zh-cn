@@ -1,5 +1,5 @@
 ---
-title: 使用 sql:identity 和 sql:guid 批注 |Microsoft 文档
+title: '使用 sql: identity 和 sql: guid 批注 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b54109b005956241b87efe89a33bf1c949b792e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fa8661c437f33cd11165c0aa2ad3945a79d5fa7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197113"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 批注
-  你可以指定`sql:identity`和`sql:guid`中 XSD 架构映射到数据库列中的任何节点上的批注[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 updategram 格式支持 `updg:at-identity` 和 `updg:guid` 属性，而 DiffGram 格式不支持这些属性。 `updg:at-identity` 属性定义在更新 IDENTITY 类型列时的行为。 `updg:guid` 属性使您可以获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 GUID 值，并将其用于 updategram 中。 有关详细信息和工作示例，请参阅[插入数据使用 XML Updategram &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
+  您可以指定`sql:identity`并`sql:guid`映射到数据库列中的任何节点上的 XSD 架构中的批注[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 updategram 格式支持 `updg:at-identity` 和 `updg:guid` 属性，而 DiffGram 格式不支持这些属性。 `updg:at-identity` 属性定义在更新 IDENTITY 类型列时的行为。 `updg:guid` 属性使您可以获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 GUID 值，并将其用于 updategram 中。 有关详细信息和工作示例，请参阅[使用 XML Updategram 插入数据&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
   
  `sql:identity` 和 `sql:guid` 批注将此功能扩展至 DiffGram。  
   

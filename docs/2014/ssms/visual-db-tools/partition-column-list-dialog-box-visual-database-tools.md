@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.partitioncolumnlist
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67077100464f304d78ed714c1132b564f25ba5b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7625135e097627776eae7fc63222c578f9b535d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172218"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>“分区列列表”对话框 (Visual Database Tools)
   如果表具有关联的分区方案，则可以使用此对话框选择将分区函数应用于哪一列或哪些列。 要切换到的列的数据类型必须与分区函数中定义的列的数据类型相同，该函数才会有效。  

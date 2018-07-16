@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0b27e464fc28ed85d3b3c3b33eaf4b1d05a38e2
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: ed8d16bc5c9d9d653404a5c049ac10cedc9f129a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199677"
 ---
 # <a name="excel-source"></a>Excel 源
   Excel 源从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿的工作表或范围中提取数据。  
@@ -55,7 +55,7 @@ ms.locfileid: "36324661"
   
 -   **数据源**。 Excel 工作簿中的数据源可以是工作表（必须追加 $ 符号，如 Sheet1$）或命名区域（如 MyRange）。 在 SQL 语句中，工作表的名称必须加以分隔（如 [Sheet1$]），以避免 $ 符号引起语法错误。 查询生成器可自动添加这些分隔符。 指定工作表或范围时，该驱动程序将读取从工作表或范围左上角第一个非空单元开始的连续单元块。 因此，源数据中不能有空行，在标题或页眉行与数据行之间也不能有空行。  
   
--   **缺少值**。 Excel 驱动程序读取指定源中一定数量的行（默认情况下为 8 行）以推测每列的数据类型。 如果推测出列可能包含混合数据类型（尤其是混合了文本数据的数值数据时），驱动程序将决定采用占多数的数据类型，并对包含其他类型数据的单元返回 Null 值。 （如果各种数据类型的数量相当，则采用数值类型。）Excel 工作表中大部分单元格格式设置选项不会影响此数据类型判断。 可以通过指定导入模式来修改 Excel 驱动程序的此行为。 若要指定导入模式，请添加`IMEX=1`为连接字符串中的 Excel 连接管理器中的扩展属性值**属性**窗口。 有关详细信息，请参阅 [PRB: Excel Values Returned as NULL Using DAO OpenRecordset（PRB：使用 DAO OpenRecordset 返回的 Excel NULL 值）](http://support.microsoft.com/kb/194124)。  
+-   **缺少值**。 Excel 驱动程序读取指定源中一定数量的行（默认情况下为 8 行）以推测每列的数据类型。 如果推测出列可能包含混合数据类型（尤其是混合了文本数据的数值数据时），驱动程序将决定采用占多数的数据类型，并对包含其他类型数据的单元返回 Null 值。 （如果各种数据类型的数量相当，则采用数值类型。）Excel 工作表中大部分单元格格式设置选项不会影响此数据类型判断。 可以通过指定导入模式来修改 Excel 驱动程序的此行为。 若要指定导入模式，请添加`IMEX=1`中的 Excel 连接管理器在连接字符串中的扩展属性值为**属性**窗口。 有关详细信息，请参阅 [PRB: Excel Values Returned as NULL Using DAO OpenRecordset（PRB：使用 DAO OpenRecordset 返回的 Excel NULL 值）](http://support.microsoft.com/kb/194124)。  
   
 -   **截断的文本**。 驱动程序在确定 Excel 列是否包含文本数据时，它将基于采样的最长值来选择数据类型（字符串或 memo）。 如果驱动程序没有在其采样的行中发现任何长于 255 个字符的值，那么它会将该列视为 255 个字符的字符串的列而不是 memo 列。 因此，长度超过 255 个字符的值可能会被截断。 若要从 memo 列导入数据而不发生截断，必须确保至少一个采样行中的 memo 列包含的值的长度超过 255 个字符，否则必须增加驱动程序采样的行数，使其包括这样的行。 你可以通过增加 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** 注册表项下的 **TypeGuessRows** 的值来增加用作示例的行数。 有关详细信息，请参阅 [PRB：从 Jet 4.0 OLEDB 源传输数据失败并出现错误](http://support.microsoft.com/kb/281517)。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "36324661"
   
 -   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 3 部分（共 3 部分）：问题和替代方案](http://go.microsoft.com/fwlink/?LinkId=217676)。  
   
--   博客文章[SSIS 中的使用 XLSX 文件](http://go.microsoft.com/fwlink/?LinkId=233704)，sqlservergeeks.com 上。  
+-   博客文章[在 SSIS 中的使用 XLSX 文件](http://go.microsoft.com/fwlink/?LinkId=233704)，sqlservergeeks.com 上。  
   
   

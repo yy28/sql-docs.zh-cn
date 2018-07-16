@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 635c108ec76177b90839ebb04d00d13dec7d1099
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: dab153b8d5047f73b337e5647fdb25d3b36d9705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248062"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>数据集字段集合引用（报表生成器和 SSRS）
   报表中的每个数据集都包含一个字段集合。 字段集合由数据集查询指定的字段集以及你创建的任何其他计算字段组成。 创建数据集后，字段集合将显示在 **“报表数据”** 窗格中。  
@@ -47,7 +47,7 @@ ms.locfileid: "36125285"
  默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` \<table>，其中表定义会发生变化。  
   
 > [!NOTE]  
->  IsMissing 可针对任何类型的数据源检测在设计时和运行时数据集架构中的更改。 IsMissing 不能用来检测空成员中多维数据集中，不相关的 MDX 查询语言概念`EMPTY`和`NON EMPTY`。  
+>  IsMissing 可针对任何类型的数据源检测在设计时和运行时数据集架构中的更改。 IsMissing 不能用于检测多维数据集中的空成员和 MDX 查询语言概念无关`EMPTY`和`NON EMPTY`。  
   
  可以使用自定义代码测试 IsMissing 属性以确定某个字段是否存在于结果集中。 不能使用包含 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数调用（如 `IIF` 或 `SWITCH`）的表达式测试字段是否存在，因为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 会计算函数调用中的所有参数，这将导致计算对缺失字段的引用时出错。  
   
@@ -92,7 +92,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>使用扩展字段属性  
  扩展字段属性是由数据处理扩展插件为字段定义的其他属性，这些属性由数据集的数据源类型确定。 扩展字段属性可以是预定义的，也可以特定于某个数据源类型。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
- 如果指定为该字段不支持的属性，该表达式计算结果为`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 如果数据提供程序不支持扩展的字段属性，或者如果字段未找到执行查询时，该属性的值是`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 类型的属性的`String`和`Object`，和类型的属性的零 (0) `Integer`。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
+ 如果您指定该字段不支持的属性，该表达式计算结果为`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 如果数据访问接口不支持扩展的字段属性，或如果不执行查询时找到该字段，该属性的值是`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 的属性的类型`String`和`Object`，和类型的属性为零 (0) `Integer`。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
   
 ## <a name="see-also"></a>请参阅  
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   

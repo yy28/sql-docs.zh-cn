@@ -1,5 +1,5 @@
 ---
-title: 什么&#39;Office 数据挖掘外接程序中包含 |Microsoft 文档
+title: 什么&#39;Office 数据挖掘外接程序中包含的 s |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231984"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什么&#39;Office 数据挖掘外接程序中包含
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什么&#39;包含在 Office 数据挖掘外接程序
   安装 Office 2013 数据挖掘外接程序时，如果选择所有安装选项，将添加以下工具栏和模板：  
   
 -   [Excel 表分析工具](table-analysis-tools-for-excel.md)  
@@ -42,9 +42,9 @@ ms.locfileid: "36126922"
   
      只需将这些形状拖放至 Visio 页上即可创建关系图，这些关系图与挖掘模型关联，但可使用 Visio 进行自定义，从而创造更具吸引力、交互性更强的表现形式。  
   
--   [服务器配置实用程序&#40;数据挖掘的 Excel 外接程序&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [服务器配置实用程序&#40;Excel 数据挖掘外接程序&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     建模需要与数据挖掘服务器的连接。 如果你需要获取设置的帮助，只需单击**帮助**并按照配置向导的每一页上的说明。 您可以自己修复问题，向导也可以提供有关您可以发送到系统管理员的信息以便正确设置。  
+     建模需要与数据挖掘服务器的连接。 如果需要帮助，只需单击**帮助**并按照配置向导的每一页上的说明。 您可以自己修复问题，向导也可以提供有关您可以发送到系统管理员的信息以便正确设置。  
   
 -   [选择数据和使用示例数据](choosing-data-for-data-mining.md)  
   
@@ -60,11 +60,11 @@ ms.locfileid: "36126922"
   
      示例工作簿的默认位置取决于安装哪个版本：  
   
-    -   \<驱动器 >: files\microsoft SQL Server 2014 数据挖掘外接程序  
+    -   \<驱动器 >: \Program Files\Microsoft SQL Server 2014 DM 外接程序  
   
-    -   \<驱动器 >: \Program Files (x86) \Microsoft SQL Server 2014 数据挖掘外接程序  
+    -   \<驱动器 >: \Program 文件 (x86) \Microsoft SQL Server 2014 DM 外接程序  
   
 ## <a name="see-also"></a>请参阅  
- [开始使用数据挖掘&#40;数据挖掘的 Excel 外接程序&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+ [开始使用数据挖掘&#40;Excel 数据挖掘外接程序&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

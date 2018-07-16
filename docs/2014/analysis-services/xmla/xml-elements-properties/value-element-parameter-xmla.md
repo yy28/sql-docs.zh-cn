@@ -1,5 +1,5 @@
 ---
-title: 值元素 （参数） (XMLA) |Microsoft 文档
+title: 值元素 （参数） (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: e590d189-91aa-40c7-8669-09c87812f4ce
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 37e0ac55da5c8bae13fcddcaad52aeb8cf51da22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05535bb119ce20334b5681ea001e4e8528a507f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302697"
 ---
 # <a name="value-element-parameter-xmla"></a>Value 元素 (Parameter) (XMLA)
-  包含由参数的值[参数](parameter-element-xmla.md)元素。  
+  包含表示的参数的值[参数](parameter-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36018495"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Value`元素可以存储任何简单 XML 类型，以及 XML Analysis (XMLA)`Rowset`数据类型，使用中的 XMLA 命令参数[执行](../xml-elements-methods-execute.md)方法。  
+ `Value`元素可以存储任何简单的 XML 类型，以及 XML for Analysis (XMLA)`Rowset`数据类型，使用中的 XMLA 命令的参数[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

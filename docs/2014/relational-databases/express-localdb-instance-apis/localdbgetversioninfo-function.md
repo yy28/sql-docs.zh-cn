@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetVersionInfo 函数 |Microsoft 文档
+title: LocalDBGetVersionInfo 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ topic_type:
 - apiref
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03e8e4a07dfed1dc2430f020ad221bfb494eb41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: dc8b45c449a8bea7ca25e2f75fd0e21432838af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186534"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 函数
   返回有关指定的 SQL Server Express LocalDB 版本的信息，如该版本是否存在以及完整的 LocalDB 版本号（包括内部版本号和发行版本号）。  
   
- 形式返回的信息`struct`名为**LocalDBVersionInfo**，它具有以下定义。  
+ 形式返回的信息`struct`名为**LocalDBVersionInfo**，其中包含以下定义。  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -90,9 +90,9 @@ HRESULT LocalDBGetVersionInfo(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 引入背后的基本原理`struct`大小自变量 (*lpVersionInfoSize*) 是启用要返回的不同版本的 API **LocalDBVersionInfostruct**，从而有效启用向前和向后兼容性。  
+ 引入的基本原理`struct`大小参数 (*lpVersionInfoSize*) 是为了使 API 能够返回不同版本**LocalDBVersionInfostruct**，从而有效地实现向前和向后兼容。  
   
- 如果`struct`大小自变量 (*lpVersionInfoSize*) 匹配的大小的已知版本**LocalDBVersionInfostruct**，该版本的`struct`返回。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果`struct`大小参数 (*lpVersionInfoSize*) 与已知版本的大小匹配**LocalDBVersionInfostruct**，该版本的`struct`返回。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  典型示例**LocalDBGetVersionInfo** API 使用情况如下所示：  
   
@@ -103,7 +103,7 @@ LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)  

@@ -1,5 +1,5 @@
 ---
-title: 删除 PowerPivot 库 |Microsoft 文档
+title: 删除 PowerPivot 库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c203b085f00f59db437fdf2d1ef057c3c42f44c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c62e73c9a47e87b0890dab8832e9d7a05567b1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326557"
 ---
 # <a name="delete-powerpivot-gallery"></a>删除 PowerPivot 库
   删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库还会删除它的所有项，包括为计划的数据刷新配置的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的数据刷新历史记录。  

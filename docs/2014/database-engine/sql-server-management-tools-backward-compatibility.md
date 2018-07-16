@@ -1,25 +1,23 @@
 ---
-title: SQL Server 管理工具向后兼容性 |Microsoft 文档
+title: SQL Server 管理工具向后兼容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d9d98eea07e8f9a062ae4a5be168e831589ae729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7a7cea6026f043f42c0af433d41dd982e3bc747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195667"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 管理工具的向后兼容性
   向后兼容性部分中的主题说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本之间的行为更改。  

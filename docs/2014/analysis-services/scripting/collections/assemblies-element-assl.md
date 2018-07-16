@@ -1,5 +1,5 @@
 ---
-title: 程序集元素 (ASSL) |Microsoft 文档
+title: Assemblies 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Assemblies element
 ms.assetid: 8c9be991-0717-4fcf-97d9-13df0f27da05
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 777a1125d36f0d874ef85645c688ececffc2c869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2990946d1e124027cf653db3148c55d4c828a3e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314807"
 ---
 # <a name="assemblies-element-assl"></a>Assemblies 元素 (ASSL)
   包含的集合[程序集](../objects/assembly-element-assl.md)与关联的元素[服务器](../objects/server-element-assl.md)或[数据库](../objects/database-element-assl.md)元素。  
@@ -65,7 +65,7 @@ ms.locfileid: "36018489"
 |子元素|[程序集](../objects/assembly-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AssemblyCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AssemblyCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
 - overriding default startup options
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: 75
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 66aa5a32ddc527ccde99fcf990eb73046123d65f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219827"
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
   启动选项指定在启动期间所需的某些文件位置，并指定一些服务器范围的条件。 大多数用户不需要指定启动选项，除非您在排除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 故障或者具有不常见问题，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户支持指示使用启动选项。  
@@ -52,7 +52,7 @@ ms.locfileid: "36128388"
 |---------------------------|-----------------|  
 |**-c**|缩短从命令提示符启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的启动时间。 通常， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 通过调用服务控制管理器作为服务启动。 由于在通过命令提示符启动时 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不作为服务启动，因此请使用 **-c** 跳过此步骤。|  
 |**-f**|以最小配置启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。 在最低配置模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 置于单用户模式。 有关详细信息，请参阅下面的 **-m** 说明。|  
-|**-g**  *memory_to_reserve*|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程之内但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池之外分配内存而保留的内存整数量 (MB)。 内存池以外的内存是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于加载诸如下列项目的区域：扩展过程 .dll 文件、分布式查询引用的 OLE DB 提供程序以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用的自动化对象。 默认值为 256 MB。<br /><br /> 使用此选项可帮助优化内存分配，但仅限于物理内存超过操作系统设置的应用程序可用虚拟内存配置限制时。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用要求异乎寻常，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的虚拟地址空间都在使用，则对于这样的大内存配置适合使用此选项。 对此选项的不当使用会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例无法启动或遇到运行时错误。<br /><br /> 除非你在 **错误日志中看到下列任何警告，否则请使用** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数的默认值：<br /><br /> -"失败虚拟分配字节： FAIL_VIRTUAL_RESERVE\<大小 >"<br /><br /> -"失败虚拟分配字节： FAIL_VIRTUAL_COMMIT\<大小 >"<br /><br /> 这些消息可能指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正试图释放部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池空间，以便为扩展存储过程 .dll 文件或自动化对象等项目找到空间。 在这种情况下，可以考虑增加由 **-g** 开关保留的内存量。<br /><br /> 使用小于默认值的值将增加 SQL Server 内存管理器所管理的内存池和线程栈中的可用内存量；而在不使用很多扩展存储过程、分布式查询或自动化对象的系统中，这种方法可改善需要大量内存的工作负荷的性能。|  
+|**-g**  *memory_to_reserve*|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程之内但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池之外分配内存而保留的内存整数量 (MB)。 内存池以外的内存是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于加载诸如下列项目的区域：扩展过程 .dll 文件、分布式查询引用的 OLE DB 提供程序以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用的自动化对象。 默认值为 256 MB。<br /><br /> 使用此选项可帮助优化内存分配，但仅限于物理内存超过操作系统设置的应用程序可用虚拟内存配置限制时。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用要求异乎寻常，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的虚拟地址空间都在使用，则对于这样的大内存配置适合使用此选项。 对此选项的不当使用会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例无法启动或遇到运行时错误。<br /><br /> 除非你在 **错误日志中看到下列任何警告，否则请使用** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数的默认值：<br /><br /> -"失败，虚拟分配字节数： FAIL_VIRTUAL_RESERVE\<大小 >"<br /><br /> -"失败，虚拟分配字节数： FAIL_VIRTUAL_COMMIT\<大小 >"<br /><br /> 这些消息可能指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正试图释放部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池空间，以便为扩展存储过程 .dll 文件或自动化对象等项目找到空间。 在这种情况下，可以考虑增加由 **-g** 开关保留的内存量。<br /><br /> 使用小于默认值的值将增加 SQL Server 内存管理器所管理的内存池和线程栈中的可用内存量；而在不使用很多扩展存储过程、分布式查询或自动化对象的系统中，这种方法可改善需要大量内存的工作负荷的性能。|  
 |**-m**|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，只能连接一个用户，并且不启动 CHECKPOINT 进程。 CHECKPOINT 保证将已完成的事务定期从磁盘缓存写入数据库设备。 （通常，在遇到需要修复的系统数据库问题时使用此选项。）启用 sp_configure allow updates 选项。 默认情况下，allow updates 处于禁用状态。 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使计算机本地 Administrators 组的任何成员作为 sysadmin 固定服务器角色的成员连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [在系统管理员被锁定时连接到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)。有关单用户模式的详细信息，请参阅 [在单用户模式下启动 SQL Server](start-sql-server-in-single-user-mode.md)。|  
 |**-m"客户端应用程序名称"**|当你将 **-m** 选项与 **SQLCMD** 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 结合使用时，限制对指定的客户端应用程序的连接。 例如，-m"sqlcmd" 将连接限制为单个连接，并且该连接必须将自身标识为 SQLCMD 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查询编辑器进行连接，请使用 **-m"Microsoft SQL Server Management Studio - Query"**。<br /><br /> 客户端应用程序名称区分大小写。<br /><br /> **\*\* 安全说明 \*\*** ：请勿将此选项作为安全功能使用。 客户端应用程序提供客户端应用程序名称，并且提供假名称来作为连接字符串的一部分。|  
 |**-n**|不要使用 Windows 应用程序日志来记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如果你使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **启动**实例，我们建议你同时使用 **-e** 启动选项。 否则，将不会记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。|  

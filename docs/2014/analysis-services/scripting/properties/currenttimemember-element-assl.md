@@ -1,5 +1,5 @@
 ---
-title: CurrentTimeMember 元素 (ASSL) |Microsoft 文档
+title: CurrentTimeMember 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentTimeMember element
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48fc08b2d45ed75c2a57154efbc154cd9b1b0496
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 804b68d36d75741869595232fd09cd67959caa70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204097"
 ---
 # <a name="currenttimemember-element-assl"></a>CurrentTimeMember 元素 (ASSL)
   定义与维度关联的时间的当前成员[Kpi](../objects/kpi-element-assl.md)元素。  
@@ -64,7 +64,7 @@ ms.locfileid: "36126937"
 ## <a name="remarks"></a>Remarks  
  此元素的值是计算结果为时间维度中单个成员的多维表达式 (MDX) 语句，用于检索计算关键绩效指标 (KPI) 时的当前时间范围。  
   
- 对应于的父元素`CurrentTimeMember`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Kpi>。  
+ 父级对应的元素`CurrentTimeMember`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Kpi>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

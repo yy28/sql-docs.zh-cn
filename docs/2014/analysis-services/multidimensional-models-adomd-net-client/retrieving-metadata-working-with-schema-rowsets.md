@@ -1,5 +1,5 @@
 ---
-title: Working with Schema Rowsets in ADOMD.NET |Microsoft 文档
+title: 使用 ADOMD.NET 中的架构行集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310747"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>使用 ADOMD.NET 中的架构行集
   当需要的元数据超过 ADOMD.NET 对象模型中提供的元数据时，ADOMD.NET 会提供检索 XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP 以及 OLE DB for Data Mining 的所有架构行集的功能：  
   
- **分析元数据的 XML**  
+ **XML for Analysis 元数据**  
  XML for Analysis 架构行集可提供检索有关服务器的低级别信息的方法。 提供的信息包括服务器上可用的数据源、访问接口保留的关键字、访问接口支持的文字等。 您甚至可以使用 XML for Analysis 架构行集发现访问接口支持的所有架构行集。  
   
  有关详细信息： [XML for Analysis 架构行集](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "36124441"
  **OLE DB 元数据**  
  OLE DB 架构行集可提供从各种访问接口检索信息的行业标准方法。  
   
- 有关详细信息： [OLE DB 架构行集合](../schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ 有关详细信息： [OLE DB 架构行集](../schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
  **OLAP 元数据**  
  为分析数据源提供的架构信息包括可从分析数据源获取的数据库或目录、数据库中的多维数据集和挖掘模型、数据源中存在的多维数据集的角色等。  
@@ -75,7 +75,7 @@ ms.locfileid: "36124441"
  每个方法都会返回一个用架构信息填充的 `DataSet` 对象实例。 `DataSet` 对象来自 Microsoft .NET Framework 类库的 `System.Data` 命名空间。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，GetActions 函数采用连接、 多维数据集名称、 坐标和坐标类型，以检索[MDSCHEMA_ACTIONS 行集](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)，并在所选的坐标时返回可用的操作。  
+ 在以下示例中，GetActions 函数采用连接、 多维数据集名称、 坐标和坐标类型，检索[MDSCHEMA_ACTIONS 行集](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)，并在所选坐标返回可用的操作。  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

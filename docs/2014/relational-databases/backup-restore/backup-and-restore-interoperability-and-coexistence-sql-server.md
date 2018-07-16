@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server], related features
 - restoring [SQL Server], files
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05d61a8b1c6ba7008cf25a4f7ce60fe9e2475de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 655e4079fdd1bbdeaea6dd99fd5c36a0cac7f762
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180134"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
   本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
@@ -52,7 +51,7 @@ ms.locfileid: "36127737"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句：  
   
- ALTER DATABASE *database_name* MODIFY FILE (名称 **=*`filename`***，OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (名称 **='*`filename`***、 脱机)  
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   
@@ -136,6 +135,6 @@ ms.locfileid: "36127737"
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [活动辅助副本： 辅助副本上备份&#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [活动辅助副本： 次要副本备份&#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 创建新的 OLAP 挖掘结构 |Microsoft 文档
+title: 创建新的 OLAP 挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5f39fe05cef96739205c06ecc00cf4481e141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297437"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导来创建使用来自多维模型的数据的挖掘结构。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  
@@ -84,7 +84,7 @@ ms.locfileid: "36024697"
   
         -   如果您想要将列作为模型的可预测属性之一包括，则选中 **“预测”**。  
   
-        -   任何项都包括在结构中但未指定作为输入或可预测属性添加到具有标志结构`Ignore`; 这意味着在生成模型，但不是使用在分析中，并仅用于灾难恢复时处理数据illthrough。 如果您想要包含详细信息（例如客户名称），但不想在分析中使用这些信息时，此功能可能会给您带来便利。  
+        -   在结构中包括但不是指定作为输入或可预测属性添加到带有标记结构任何项`Ignore`; 这意味着生成模型，但不是使用在分析中，并仅适用于灾难恢复时处理数据illthrough。 如果您想要包含详细信息（例如客户名称），但不想在分析中使用这些信息时，此功能可能会给您带来便利。  
   
      单击 **“完成”** 关闭用于嵌套表的向导部分。 您可以重复此过程，添加多个嵌套列。  
   

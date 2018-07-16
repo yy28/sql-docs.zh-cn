@@ -1,5 +1,5 @@
 ---
-title: 分布式重播要求 |Microsoft 文档
+title: 分布式重播要求 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38f09e4b9c5bcf2d3d6611f4a6d5e8bdc9534d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bc0ae7de69ac9887e7bb3e75acfc97a1ae9be822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312727"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 要求
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，请考虑本主题中列出的产品要求。  
@@ -129,7 +129,7 @@ ms.locfileid: "36016991"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
- 支持运行管理工具、控制器和客户端服务的操作系统与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所要求的操作系统相同。 有关哪些操作系统支持的详细信息你[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，请参阅[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 支持运行管理工具、控制器和客户端服务的操作系统与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所要求的操作系统相同。 有关哪些操作系统支持的详细信息您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，请参阅[硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
  Distributed Replay 功能在基于 x86 和基于 x64 的操作系统上均受支持。 对于基于 x64 的操作系统，仅支持 Windows on Windows (WOW) 模式。  
   

@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘向导 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 数据挖掘向导 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - OLAP [Analysis Services], mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 56
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49b3ecb1f8cc1bb63344b201145f9d6639aace89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288413"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
   每次向数据挖掘项目中添加新的挖掘结构时，都会启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  
@@ -40,7 +40,7 @@ ms.locfileid: "36126962"
   
 -   您要将哪些列或属性用于预测？ 哪些列或属性适合用作分析的输入？  
   
--   应使用哪种算法？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
+-   应使用哪种算法？  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
   
 -   您是否需要能针对统一数据集来测试模型？ 如果需要，请考虑使用为测试保留一些数据的选项。 您可以选择一个百分比，并根据需要用指定行数设置其上限。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36126962"
   
  接下来，您将创建挖掘结构和一个关联的数据挖掘模型。 您也可以只创建挖掘结构并在稍后添加模型，但先创建测试模型通常最为轻松。  
   
-###  <a name="BKMK_Relational"></a> 关系 vs。OLAP 挖掘模型  
+###  <a name="BKMK_Relational"></a> 关系与。OLAP 挖掘模型  
  为您提供的下一个重要选项可让您确定是使用关系数据源还是使模型基于多维 (OLAP) 数据。  
   
  此时，数据挖掘向导分为两个路径，具体取决于您的数据源是关系数据源还是位于多维数据集中。 除数据选择进程之外，所有内容（算法选择、用于添加维持数据集的功能等）都是相同的，但选择多维数据集数据比使用关系数据略为复杂一些。 （如果您基于多维数据集创建模型，则在最后还会获得一些其他选项。）  
@@ -116,7 +116,7 @@ ms.locfileid: "36126962"
   
  [功能选择&#40;数据挖掘&#41;](feature-selection-data-mining.md)  
   
- [缺少值&#40;Analysis Services-数据挖掘&#41;](missing-values-analysis-services-data-mining.md)  
+ [缺失值&#40;Analysis Services-数据挖掘&#41;](missing-values-analysis-services-data-mining.md)  
   
  [对挖掘模型的钻取功能](drillthrough-on-mining-models.md)  
   

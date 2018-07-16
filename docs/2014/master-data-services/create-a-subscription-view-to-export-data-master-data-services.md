@@ -1,5 +1,5 @@
 ---
-title: 创建订阅视图 (Master Data Services) |Microsoft 文档
+title: 创建订阅视图 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b79bd1e50871fb921a3ce2b3fe9e43ab0995a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252279"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>创建订阅视图 (Master Data Services)
-  你想要创建的视图中的数据时创建订阅视图[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]供订阅系统使用的数据库。  
+  如果想要创建的视图中的数据创建订阅视图[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]供订阅系统使用的数据库。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要执行此过程：  
@@ -42,16 +42,16 @@ ms.locfileid: "36127111"
   
 3.  上**订阅视图**页上，单击**添加订阅视图**。  
   
-4.  在**创建订阅视图**窗格中，请在**订阅视图名称**框中，键入视图的名称。  
+4.  在中**创建订阅视图**窗格中，在**订阅视图名称**框中，键入视图的名称。  
   
 5.  从 **“模型”** 列表中，选择某一模型。  
   
-6.  选择**版本**或**版本标志**选项，然后再选中从相应的列表。  
+6.  选择任一**版本**或**版本标志**选项，然后从相应的列表中选择。  
   
     > [!TIP]  
     >  基于版本标志创建订阅视图。 当锁定版本时，可以将该标志重新分配给打开的版本，而无需更新订阅视图。  
   
-7.  选择**实体**或**派生层次结构**选项，然后再选中从相应的列表。  
+7.  选择任一**实体**或**派生层次结构**选项，然后从相应的列表中选择。  
   
 8.  从 **“格式”** 列表中，选择订阅视图格式。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36127111"
 10. 单击 **“保存”**。  
   
 ## <a name="see-also"></a>请参阅  
- [导出数据&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
+ [将数据导出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [删除订阅视图 &#40;Master Data Services&#41; ](delete-a-subscription-view-master-data-services.md)   
  [创建版本标志&#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 在 SharePoint 模式下 (SSRS) 报表服务器上的已发布的报表项的 URL 示例 |Microsoft 文档
+title: 在 SharePoint 模式下 (SSRS) 报表服务器上的已发布的报表项的 URL 示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214727"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) 
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
@@ -79,7 +79,7 @@ ms.locfileid: "36126776"
  报表定义可以包括存储为外部文件的图像文件。 可通过设置图像文件的完全限定 URL 来引用报表定义中的该文件。 该文件可以存储在 SharePoint 站点上，也可以存储在远程计算机上。  
   
 > [!IMPORTANT]  
->  如果外部 URL 表示 SharePoint 网站上的图像，则在报表生成器中预览报表时将显示图像无效图标。 当将报表上载到 SharePoint 站点，并将报表呈现在连接模式下时，如果仅有的则会出现图像无效的图标`View Items`权限。  
+>  如果外部 URL 表示 SharePoint 网站上的图像，则在报表生成器中预览报表时将显示图像无效图标。 当将报表上载到 SharePoint 站点中，并将报表呈现在连接模式下时，图像无效的图标将显示如果仅有`View Items`权限。  
   
  无论采用何种报表服务器模式，在报表中对外部图像文件的引用必须为完全限定的 URL。 此外，引用外部图像文件通常会需要配置无人参与的报表处理帐户。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36126776"
 ### <a name="file-names"></a>文件名  
  URL 中的报表项文件名必须包含文件扩展名。 文件扩展名决定文件类型。 从报表创作工具发布报表项时，会自动包含文件扩展名。 如果将报表项上载到 SharePoint 库，则必须包含文件扩展名。  
   
- 如果不为上载到 SharePoint 站点的项指定文件扩展名，则会发生 `rsInvalidDataSourceReference` 错误。 文件名不可以包括 SharePoint 应用程序无法识别为有效文件名字符的字符。 不包含以下字符: # %& *: \< >？ / { | }.  
+ 如果不为上载到 SharePoint 站点的项指定文件扩展名，则会发生 `rsInvalidDataSourceReference` 错误。 文件名不可以包括 SharePoint 应用程序无法识别为有效文件名字符的字符。 不能包含以下字符: # %& *: \< >？ / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>上载与发布之间的差异  
  使用报表设计器或报表生成器将报表和相关文件发布到库时，会在添加文件前对文件进行验证。 如果通过使用 SharePoint 库的 **“上载”** 操作来上载报表和相关文件，则不进行验证检查。 直到通过管理、编辑和运行报表来访问时，您才会知道文件是否有效。  

@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bc8f55fbbd939964d22521948ac1132ced4c73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b5d7d36bd056eddde8b7754b8fd9b5b8ae6a864f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331417"
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
   通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定用于保存添加到已分区表的下一个分区的文件组，可以修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的分区方案。 可通过将 NEXT USED 属性分配给文件组来执行此操作。 您可以将 NEXT USED 属性分配给空文件组或已存有分区的文件组。 也就是说，一个文件组可以保存多个分区。  
@@ -57,7 +56,7 @@ ms.locfileid: "36024799"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **修改分区方案：**  
   
- 无法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行此特定操作。 若要修改某个分区方案，您必须先删除该方案，然后通过创建分区向导使用所需属性创建一个新方案。 有关详细信息，请参阅[Create Partitioned Tables and 索引使用 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure)下**创建 Partitioned Tables and Indexes**。  
+ 无法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行此特定操作。 若要修改某个分区方案，您必须先删除该方案，然后通过创建分区向导使用所需属性创建一个新方案。 有关详细信息，请参阅[创建已分区表和索引使用 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure)下**创建已分区表和索引**。  
   
 #### <a name="to-delete-a-partition-scheme"></a>删除分区方案  
   

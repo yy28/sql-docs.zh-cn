@@ -5,28 +5,27 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d4f3796c0e6145e2dc24110e805971fb88058484
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8a0a6c8fb4b87ca1bbb51947b722fc4238a1c187
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161858"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
   使用 FailureConditionLevel 属性可以设置 AlwaysOn 故障转移群集实例 (FCI) 进行故障转移或重新启动的条件。 对此属性的更改会立即应用，而无需重新启动 Windows Server 故障转移群集 (WSFC) 服务或 FCI 资源。  
   
 -   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
--   **若要配置 FailureConditionLevel 属性设置，请使用** [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **若要配置 FailureConditionLevel 属性设置，请使用 **[PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -46,10 +45,10 @@ ms.locfileid: "36128253"
   
 2.  导入 `FailoverClusters` 模块以启用群集 cmdlet。  
   
-3.  使用`Get-ClusterResource`cmdlet 查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源，然后使用`Set-ClusterParameter`cmdlet 设置**FailureConditionLevel**的故障转移群集实例的属性。  
+3.  使用`Get-ClusterResource`cmdlet 查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源，然后使用`Set-ClusterParameter`cmdlet，以设置**FailureConditionLevel**故障转移群集实例的属性。  
   
 > [!TIP]  
->  每次打开新的 PowerShell 窗口时，需要导入`FailoverClusters`模块。  
+>  每次打开新的 PowerShell 窗口，需要导入`FailoverClusters`模块。  
   
 ### <a name="example-powershell"></a>示例 (PowerShell)  
  下面的示例将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源“`SQL Server (INST1)`”上的 FailureConditionLevel 设置更改为在出现严重服务器错误时执行故障转移或重新启动。  

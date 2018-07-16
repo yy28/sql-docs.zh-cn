@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e52a31296cee16b8580d08bc4eaf016f9d0cc3e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305107"
 ---
 # <a name="event-notifications"></a>事件通知
   事件通知将有关事件的信息发送给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。 执行事件通知可对各种 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据定义语言 (DDL) 语句和 SQL 跟踪事件做出响应，其方法是将这些事件的相关信息发送到 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。  
@@ -55,7 +54,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>事件通知概念  
  创建事件通知时，将会在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例和指定的目标服务之间打开一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话。 通常会话保持为打开状态，只要事件通知作为一个对象存在于服务器实例中。 在某些出错情况下，会话可以在删除事件通知之前关闭。 这些会话从不在事件通知之间共享。 每个事件通知都有自己的排他会话。 显式结束会话将阻止目标服务接收更多消息，下一次事件通知激发时，会话将不会重新打开。  
   
- 事件信息传递到[!INCLUDE[ssSB](../../includes/sssb-md.md)]服务类型的变量作为`xml`，它提供有关事件的发生时间，受影响，数据库对象的信息[!INCLUDE[tsql](../../includes/tsql-md.md)]涉及的批处理语句和其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
+ 事件信息传递到[!INCLUDE[ssSB](../../includes/sssb-md.md)]服务类型的变量`xml`提供有关事件的发生时间、 受影响的数据库对象信息[!INCLUDE[tsql](../../includes/tsql-md.md)]涉及的批处理语句和其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
   
 ### <a name="event-notifications-vs-triggers"></a>事件通知与触发器  
  下表对触发器和事件通知进行了比较。  

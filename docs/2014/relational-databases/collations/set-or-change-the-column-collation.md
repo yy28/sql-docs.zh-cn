@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298507"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
-  您可以重写的数据库排序规则`char`， `varchar`， `text`， `nchar`， `nvarchar`，和`ntext`数据通过指定表的特定列不同的排序规则并使用以下项之一：  
+  您可以重写的数据库排序规则`char`， `varchar`， `text`， `nchar`， `nvarchar`，并`ntext`数据通过指定特定列的表不同的排序规则并使用以下值之一：  
   
 -   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36014793"
  使用 **tempdb**时， [COLLATE](/sql/t-sql/statements/collations) 子句包括了 *database_default* 选项，以此来指定对于该连接，临时表中的列使用当前用户数据库的默认排序规则而非 **tempdb**的排序规则。  
   
 ## <a name="collations-and-text-columns"></a>排序规则和文本列  
- 您可以插入或更新中的值`text`列的排序规则是不同于数据库的默认排序规则代码页。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会隐式地将这些值转换为该列的排序规则。  
+ 您可以插入或更新中的值`text`列的排序规则是不同于数据库的默认排序规则的代码页。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会隐式地将这些值转换为该列的排序规则。  
   
 ## <a name="collations-and-tempdb"></a>排序规则和 tempdb  
  每次启动 **时，都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。该数据库与 **model** 数据库具有相同的默认排序规则。 这通常与实例的默认排序规则相同。 如果为创建的用户数据库指定的默认排序规则与 **model**的排序规则不同，则该用户数据库与 **tempdb**的默认排序规则也不同。 所有临时存储过程或临时表都创建和存储在 **tempdb**中。 这意味着临时表中的所有隐式列以及临时存储过程中的所有强制默认常量、变量和参数都具有与可比较对象（在永久表和存储过程中创建）不同的排序规则。  

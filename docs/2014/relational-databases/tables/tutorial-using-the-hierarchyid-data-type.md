@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [hierarchyid]
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3d380b0ad7eb1fb6120d959e3b7fb303466c010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1a9282da58d26e29c3f88a005e72fc431bf1e57a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168341"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教程：使用 hierarchyid 数据类型
   本教程面向有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用经验但对 `hierarchyid` 数据类型还很陌生的用户。  
@@ -49,7 +49,7 @@ ms.locfileid: "36129411"
  [教程： 数据库引擎入门](../tutorial-getting-started-with-the-database-engine.md)   
  [教程： 编写 TRANSACT-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)   
  [hierarchyid 数据类型方法引用](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [层次结构数据&#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
+ [分层数据&#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid (Transact-SQL)](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

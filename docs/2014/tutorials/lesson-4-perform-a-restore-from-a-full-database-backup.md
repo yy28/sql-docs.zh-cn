@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： Perform a Restore From 完整数据库备份 |Microsoft 文档
+title: 第 4 课： 从完整数据库备份执行还原 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8869fa4bba6050dd0c15b8b59b7f2d091902936f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 9d3220d2012587a6deedad51156b49f13ed9266c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293667"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>第 4 课：从完整数据库备份执行还原
   本课演示如何使用 tsql 语句从上一课所创建的完整数据库备份中执行还原。  
@@ -44,7 +44,7 @@ ms.locfileid: "36014701"
   
     ```  
   
-5.  验证 T-SQL 语句，然后单击**执行**  
+5.  验证 T-SQL 语句，然后单击**Execute**  
   
 ### <a name="return-to-tutorials-portal"></a>返回到教程入门  
  [教程： SQL Server 备份和还原到 Windows Azure Blob 存储服务](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  

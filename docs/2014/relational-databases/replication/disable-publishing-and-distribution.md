@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
 - publishing [SQL Server replication], disabling
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2b1cb0af2c8082ba7ba649c6d6f21b53d9b96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ec2381b96818d038c7e40b71a4e56b1c4d415af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313487"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用发布和分发。  
@@ -114,13 +114,13 @@ ms.locfileid: "36024310"
   
 4.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性，并传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-5.  （可选）调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取对象的属性，并验证发布服务器是否存在。 如果此方法返回`false`，步骤 4 中设置的发布服务器名称不正确，或者此分发服务器不使用该发布服务器。  
+5.  （可选）调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取对象的属性，并验证发布服务器是否存在。 如果此方法返回`false`、 在步骤 4 中设置的发布服务器名称不正确，或者此分发服务器不使用该发布服务器。  
   
-6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 传递的值`true`为*强制*如果发布服务器和分发服务器位于不同的服务器，并且应在不再存在发布而没有首先验证分发服务器上卸载发布服务器发布服务器。  
+6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 传递的值`true`有关*强制*发布服务器和分发服务器位于不同的服务器是否以及何时应在不再存在发布而没有首先验证分发服务器上卸载发布服务器发布服务器。  
   
 7.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 传递的值`true`为*强制*以删除所有复制对象而没有首先验证分发服务器上的所有本地发布数据库已被禁用，且分发数据库是否已卸载。  
+8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 传递的值`true`有关*强制*以删除所有复制对象而没有首先验证分发服务器上的所有本地发布数据库是否已禁用以及分发数据库是否已卸载。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  此示例将删除分发服务器上的发布服务器注册，删除分发数据库并卸载分发服务器。  

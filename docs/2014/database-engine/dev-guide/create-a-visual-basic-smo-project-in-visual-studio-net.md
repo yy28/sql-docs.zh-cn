@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio.NET 中创建 Visual Basic SMO 项目 |Microsoft 文档
+title: 在 Visual Studio.NET 中创建 Visual Basic SMO 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a3f3db2487a60c80d9fdb933298784b69db8718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213787"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>在 Visual Studio.NET 中创建 Visual Basic SMO 项目
   本节介绍了如何生成简单的 SMO 控制台应用程序。  
@@ -37,9 +37,9 @@ ms.locfileid: "36128385"
   
 2.  在“文件”菜单中，单击“新建项目”。 此时将显示“新建项目”  对话框。  
   
-3.  在**项目类型**对话框中，选择**Visual Basic**，然后选择**Windows**。 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板窗格中，选择**控制台应用程序。**  
+3.  在中**项目类型**对话框中，选择**Visual Basic**，然后选择**Windows**。 在中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板窗格中，选择**控制台应用程序。**  
   
-4.  （可选）在**名称**字段中，键入新的应用程序的名称。  
+4.  （可选）在中**名称**字段中，键入新应用程序的名称。  
   
 5.  单击**确定**加载[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]控制台应用程序模板。  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36128385"
   
 9. 单击 **“打开”**。  
   
-10. 上**视图**菜单上，单击**代码**。-或者-选择 Module1.vb 窗口以显示代码窗口。  
+10. 上**视图**菜单上，单击**代码**。 或者选择 Module1.vb 窗口以显示代码窗口。  
   
-11. 在代码中，任何声明之前键入以下命令**导入**语句来限定 SMO 命名空间中的类型。  
+11. 在代码中，任何声明前，键入以下内容**导入**语句以限定 SMO 命名空间中的类型。  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

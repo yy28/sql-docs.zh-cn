@@ -1,5 +1,5 @@
 ---
-title: 创建数据挖掘结构 （数据挖掘向导） |Microsoft 文档
+title: 创建数据挖掘结构 （数据挖掘向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f857256c2c8ab55b3ae35f48dce8ac3448baa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 638fa1cef33676b35415d29c1ff47602d3e1e56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241827"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>创建数据挖掘结构（数据挖掘向导）
   可以使用 **“创建数据挖掘结构”** 页创建数据挖掘结构，并且可以选择创建关联的挖掘模型。  
@@ -40,7 +40,7 @@ ms.locfileid: "36126190"
 > [!NOTE]  
 >  算法列表将根据创建挖掘结构所在的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例进行填充。 如果该服务器不可用，则只能使用默认的算法。  
   
- **与任何模型创建挖掘结构**  
+ **使用模型创建挖掘结构**  
  选择此选项将仅创建一个挖掘结构。  
   
  **Description**  

@@ -1,5 +1,5 @@
 ---
-title: 决策树模型查询示例 |Microsoft 文档
+title: 决策树模型查询示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261513"
 ---
 # <a name="decision-trees-model-query-examples"></a>决策树模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
@@ -90,7 +90,7 @@ WHERE NODE_TYPE = 2
  下面的相关查询返回这 5 个子组的子级以及子节点中属性和值的分布。 由于统计信息（如支持、概率和方差）存储在嵌套表 `NODE_DISTRIBUTION`中，因此本示例使用 `FLATTENED` 关键字输出嵌套表列。  
   
 > [!NOTE]  
->  嵌套的表列， `SUPPORT`，必须括在括号中，以便将它与同名的保留关键字区分开来。  
+>  嵌套的表列`SUPPORT`，必须括在括号中，以便将它与同名保留关键字区分开来。  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -111,7 +111,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|@shouldalert|473|  
   
- 从这些结果中，你可以判断，客户谁买了自行车 (`[Bike Buyer]` = 1)，1067年客户分别 0 汽车而且产生 473 客户具有 3 汽车。  
+ 根据这些结果，您可以知道，客户购买了自行车 (`[Bike Buyer]` = 1)，1067 个客户拥有 0 辆汽车，473 客户拥有 3 辆汽车。  
   
 ###  <a name="bkmk_Query3"></a> 示例查询 3：从模型中检索子树  
  假定您希望查找有关购买了自行车的客户的更多信息。 你可以通过在查询中使用 [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) 函数来查看任何子树的其他详细信息，如下面的示例所示。 通过从包含 42 岁以上的客户的树中检索叶节点 (NODE_TYPE = 4)，查询将返回自行车购买者的计数。 查询将嵌套表中的行限定为其中 Bike Buyer = 1 的行。  

@@ -18,16 +18,16 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316817"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解脚本组件对象模型
-  [编码和调试脚本组件] 中所述 (.../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，脚本组件项目包含三个项目项：  
+  [的编码和调试脚本组件] 中所述 (.../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，脚本组件项目包含三个项目项：  
   
 1.  `ScriptMain` 项，该项包含您要用来编写代码的 `ScriptMain` 类。 `ScriptMain` 类从 `UserComponent` 类继承。  
   
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 项目项提供的内容  
  ComponentWrapper 项目项包含从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 派生的名为 `UserComponent` 的类。 您要用来编写自定义代码的 `ScriptMain` 类又派生自 `UserComponent`。 `UserComponent` 类包含以下方法：  
   
--   `ProcessInput` 方法的重写实现。 这是数据流引擎在运行时继调用 `PreExecute` 方法后调用的下一个方法，该方法可被调用多次。 `ProcessInput` 将对处理消息 **\<inputbuffer > _ProcessInput**方法。 然后 `ProcessInput` 方法检查是否已到达输入缓冲区的末尾，如果已到达缓冲区末尾，则调用可重写的 `FinishOutputs` 方法和私有 `MarkOutputsAsFinished` 方法。 然后 `MarkOutputsAsFinished` 方法对最后一个输出缓冲区调用 `SetEndOfRowset`。  
+-   `ProcessInput` 方法的重写实现。 这是数据流引擎在运行时继调用 `PreExecute` 方法后调用的下一个方法，该方法可被调用多次。 `ProcessInput` 将处理传送到** \<inputbuffer > _ProcessInput**方法。 然后 `ProcessInput` 方法检查是否已到达输入缓冲区的末尾，如果已到达缓冲区末尾，则调用可重写的 `FinishOutputs` 方法和私有 `MarkOutputsAsFinished` 方法。 然后 `MarkOutputsAsFinished` 方法对最后一个输出缓冲区调用 `SetEndOfRowset`。  
   
 -   \<inputbuffer>_ProcessInput 方法的可重写实现。 此默认实现只是遍历每个输入行并调用 \<inputbuffer>_ProcessInputRow。  
   
@@ -158,7 +158,7 @@ public override void PreExecute()
   
 -   一个 `AddRow` 方法，用于将空的新行添加到输出缓冲区。  
   
--   一个 `SetEndOfRowset` 方法，用于通知数据流引擎没有数据缓冲区了。 还有一个 `EndOfRowset` 函数，用于确定当前缓冲区是否是最后一个数据缓冲区。 你通常不需要这些函数使用输入处理方法中实现时`UserComponent`基类。  
+-   一个 `SetEndOfRowset` 方法，用于通知数据流引擎没有数据缓冲区了。 还有一个 `EndOfRowset` 函数，用于确定当前缓冲区是否是最后一个数据缓冲区。 您通常不需要这些函数时使用的输入处理方法中实现`UserComponent`基类。  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 项目项提供的内容  
  ComponentWrapper 项目项包含从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 派生的名为 `UserComponent` 的类。 您要用来编写自定义代码的 `ScriptMain` 类又派生自 `UserComponent`。 `UserComponent` 类包含以下方法：  
@@ -180,7 +180,7 @@ public override void PreExecute()
  如果您有必须仅在处理完数据行之后执行一次的处理，请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 例如，在源中，您可能希望关闭曾用来将数据加载到数据流中的 `System.Data.SqlClient.SqlDataReader`。  
   
 > [!IMPORTANT]  
->  `ReadWriteVariables` 集合仅在 `PostExecute` 方法中可用。 因此不能在处理每行数据时直接递增包变量的值， 相反，递增的值的局部变量，并将包变量的值设置为中的本地变量的值`PostExecute`方法之后的所有数据已处理。  
+>  `ReadWriteVariables` 集合仅在 `PostExecute` 方法中可用。 因此不能在处理每行数据时直接递增包变量的值， 而是递增本地变量的值并将包变量的值设置为本地变量的值`PostExecute`已处理后的所有数据的方法。  
   
 ## <a name="releaseconnections-method"></a>ReleaseConnections 方法  
  源和目标通常必须连接到外部数据源。 请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法，以关闭和释放先前在 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> 方法中打开的连接。  
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新集成服务** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的集成服务页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [配置脚本组件在脚本组件编辑器]((configuring-the-script-component-in-the-script-component-editor.md)   
- [编码和调试脚本组件](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
+ [的编码和调试脚本组件](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

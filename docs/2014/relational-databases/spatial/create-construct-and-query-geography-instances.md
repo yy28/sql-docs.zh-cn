@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec18679f1d466917e99f249c75c6ebf3bc42ff8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ea4dc0a27743e62f0a13f866895cd7fe0ed0ae79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284713"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
-  地理空间数据类型 `geography` 表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`数据类型存储诸如 GPS 纬度和经度坐标的椭圆体 （圆球） 数据。  
+  地理空间数据类型 `geography` 表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体 （圆形地球） 数据。  
   
  `geography`类型是预定义，可在每个数据库。 您可以创建 `geography` 类型的表列并对 `geography` 数据进行操作，就像使用其他系统提供的数据类型一样。  
   
 ##  <a name="creating"></a> 创建或构建新的地域实例  
   
 ###  <a name="existing"></a> 从现有实例创建新的地域实例  
- `geography`数据类型提供了许多内置方法可用于创建新`geography`实例基于现有实例。  
+ `geography`数据类型提供了许多内置方法可用于创建新的`geography`实例基于现有实例。  
   
  **在地域周围创建缓冲区**  
  [STBuffer（geography 数据类型）](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
@@ -51,7 +51,7 @@ ms.locfileid: "36125589"
  [STDifference（geography 数据类型）](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
 ###  <a name="wkt"></a> 从熟知文本输入构造地域实例  
- `geography`数据类型提供了若干从开放地理空间联盟 (OGC) WKT 表示形式生成地域的内置方法。 WKT 标准是一种允许地域数据以文本形式交换的文本字符串。  
+ `geography`数据类型提供了若干种从开放地理空间信息联盟 (OGC) WKT 表示形式生成地域的内置方法。 WKT 标准是一种允许地域数据以文本形式交换的文本字符串。  
   
  **用 WKT 输入构造任意类型的地域实例**  
  [STGeomFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
@@ -80,7 +80,7 @@ ms.locfileid: "36125589"
  [STGeomCollFromText（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> 从熟知二进制输入构造地域实例  
- WKB 是 OGC 允许规定的二进制格式`Geography`客户端应用程序和 SQL 数据库之间进行交换的数据。 以下函数接受使用 WKB 输入构造地域实例：  
+ WKB 是 OGC 规定允许通过指定的二进制格式`Geography`客户端应用程序和 SQL 数据库之间交换数据。 以下函数接受使用 WKB 输入构造地域实例：  
   
  **用 WKB 输入构造任意类型的地域实例**  
  [STGeomFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
@@ -107,7 +107,7 @@ ms.locfileid: "36125589"
  [STGeomCollFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type) STGeomCollFromWKB（geography 数据类型）  
   
 ###  <a name="gml"></a> 用 GML 文本输入构造地域实例  
- `geography`数据类型提供了生成的方法`geography`用 GML 的 XML 表示形式的实例`geography`实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
+ `geography`数据类型提供了生成的方法`geography`gml 的 XML 表示形式的实例`geography`实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
  有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36125589"
  [GeomFromGML（geography 数据类型）](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
   
 ##  <a name="returning"></a> 从地域实例返回熟知文本和熟知二进制  
- 你可以使用以下方法返回 WKT 或 WKB 格式的`geography`实例：  
+ 可以使用以下方法返回 WKT 或 WKB 格式的`geography`实例：  
   
  **返回地域实例的 WKT 表示形式**  
  [STAsText（geography 数据类型）](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
@@ -132,10 +132,10 @@ ms.locfileid: "36125589"
  [AsGml（geography 数据类型）](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="query"></a> 查询地域实例的属性和行为  
- 所有`geography`实例具有多个可通过方法检索的属性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主题定义了地域类型的属性和行为，并为查询每种图形定义了方法。  
+ 所有`geography`实例都有多个可通过方法检索的属性的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主题定义了地域类型的属性和行为，并为查询每种图形定义了方法。  
   
 ###  <a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
- 后`geography`构造实例，可以使用以下方法来返回实例类型，或如果它是`GeometryCollection`实例，则返回特定`geography`实例。  
+ 之后`geography`构造实例，可以使用以下方法来返回实例类型，或者它是否`GeometryCollection`实例，则返回特定`geography`实例。  
   
  **返回地域的实例类型**  
  [STGeometryType（geography 数据类型）](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -165,7 +165,7 @@ ms.locfileid: "36125589"
  [STEndpoint（geography 数据类型）](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a> 维度  
- 非空`geography`实例可以是 0-1 维或二维。 零维`geography`实例，如`Point`和`MultiPoint`，没有长度或面积。 一维对象（例如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`）具有长度。 二维实例，如`Polygon, CurvePolygon`，和`MultiPolygon`，有面积和长度。 空实例将报告 -1 维，并且 `GeometryCollection` 报告其内容的最大维度。  
+ 非空`geography`实例可以是 0-1-或二维。 零维`geography`实例，如`Point`和`MultiPoint`，没有长度或面积。 一维对象（例如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`）具有长度。 二维实例，如`Polygon, CurvePolygon`，和`MultiPolygon`，有面积和长度。 空实例将报告 -1 维，并且 `GeometryCollection` 报告其内容的最大维度。  
   
  **返回实例的维度**  
  [STDimension（geography 数据类型）](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -183,7 +183,7 @@ ms.locfileid: "36125589"
  [STIsEmpty（geography 数据类型）](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a> 闭合  
- A*关闭*`geography`实例是指起始点和图形是相同的终结点。 `Polygon` 实例被视为闭合。 `Point` 实例不是闭合的。  
+ 一个*关闭*`geography`实例是指起始点和终点相同。 `Polygon` 实例被视为闭合。 `Point` 实例不是闭合的。  
   
  环是一个简单、 关闭`LineString`实例。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36125589"
  [RingN（geography 数据类型）](/sql/t-sql/spatial-geography/ringn-geography-data-type)  
   
 ###  <a name="srid"></a> 空间引用标识符 (SRID)  
- 空间引用标识符 (SRID) 是指定的椭球坐标系的标识符`geography`实例。 两个拥有不同 SRID 的 `geography` 实例是不可比的。  
+ 空间引用 ID (SRID) 是一个标识符，指定椭球坐标系`geography`实例。 两个拥有不同 SRID 的 `geography` 实例是不可比的。  
   
  **设置或返回实例的 SRID**  
  [STSrid（geography 数据类型）](/sql/t-sql/spatial-geography/stsrid-geography-data-type)  
@@ -229,7 +229,7 @@ ms.locfileid: "36125589"
  [STSymDifference（geography 数据类型）](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> 地域实例必须使用支持的 SRID  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 EPSG 标准的 SRID。 必须使用 `geography` 实例的支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SRID 执行计算或将方法用于地域空间数据。 SRID 必须与 **sys.spatial_reference_systems** 目录视图中显示的 SRID 中的一个匹配。 如前所述，当你计算上执行你空间数据使用`geography`数据类型，你的结果将取决于哪个椭圆体使用你的数据，创建每个椭圆体都分配了一个特定空间引用标识符 （如SRID)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 EPSG 标准的 SRID。 必须使用 `geography` 实例的支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SRID 执行计算或将方法用于地域空间数据。 SRID 必须与 **sys.spatial_reference_systems** 目录视图中显示的 SRID 中的一个匹配。 正如前面提到，执行计算时空间数据使用`geography`数据类型，结果将取决于哪个椭圆体于你的数据，创建时使用每个椭圆体都分配了一个特定空间引用标识符 （如SRID)。  
   
  对 `geography` 实例使用方法时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用等于 4326 的默认 SRID，它将映射到 WGS 84 空间引用系统。 如果要使用 WGS 84（或 SRID 4326）之外的某个空间引用系统中的数据，您需要确定地域空间数据的特定 SRID。  
   

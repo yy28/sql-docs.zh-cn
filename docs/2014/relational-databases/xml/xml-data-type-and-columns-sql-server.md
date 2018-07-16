@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b6e74d209c89a23ac4fff6ec728bd7e423b5b117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fe03ba5bafde60d2a653e49bcfe90b70978a25d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300027"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
-  本主题讨论的优势和限制的`xml`中数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并帮助你选择如何存储 XML 数据。  
+  本主题讨论的优势和限制`xml`中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并帮助您选择如何存储 XML 数据。  
   
 ## <a name="relational-or-xml-data-model"></a>关系或 XML 数据模型  
  如果您的数据已通过已知架构高度结构化，则关系模型可能最适合用于数据存储。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了您所需的必要功能和工具。 另一方面，如果结构是半结构化或非结构化的或者未知的，则必须考虑对这类数据进行建模。  
@@ -37,7 +37,7 @@ ms.locfileid: "36124276"
   
 -   您希望基于数据的结构查询数据或更新部分数据。  
   
- 如果上述条件均不满足，则应使用关系数据模型。 例如，如果你的数据采用 XML 格式，但你的应用程序只使用数据库来存储和检索数据，`[n]varchar(max)`列是所有需要。 将数据存储在 XML 列中还有其他好处， 包括让引擎确定数据格式是否正确或有效，以及支持对 XML 数据进行精细查询和更新。  
+ 如果上述条件均不满足，则应使用关系数据模型。 例如，如果你的数据采用 XML 格式，但你的应用程序只使用数据库来存储和检索数据，`[n]varchar(max)`列为所有需要。 将数据存储在 XML 列中还有其他好处， 包括让引擎确定数据格式是否正确或有效，以及支持对 XML 数据进行精细查询和更新。  
   
 ## <a name="reasons-for-storing-xml-data-in-sql-server"></a>在 SQL Server 中存储 XML 数据的理由  
  下面是一些使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的本机 XML 功能而不是在文件系统中管理 XML 数据的理由：  
@@ -65,7 +65,7 @@ ms.locfileid: "36124276"
   
      数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关信息集的详细信息，请访问 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
   
-     对于类型化`xml`数据类型，`xml`绑定到 XML 架构后, 架构验证信息集 (PSVI) 的数据类型将类型信息添加到信息集，并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅位于 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) 的 W3C XML 架构规范。  
+     对于类型化`xml`数据类型，`xml`数据类型绑定到 XML 架构后, 架构验证信息集 (PSVI) 将类型信息添加到信息集，并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅位于 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) 的 W3C XML 架构规范。  
   
 -   在 XML 和关系存储之间映射  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36124276"
   
      存储数据的精确副本。 这对于特殊用途的应用（如法律文档）很有用。 大多数应用不需要完全相同的副本，且 XML 内容（InfoSet 保真度）即可满足需要。  
   
- 通常，您必须结合使用这些方法。 例如，你可能想要在将 XML 数据存储`xml`数据类型列，并将属性从此列提升到关系列。 或者，你可能想要使用映射技术将非递归部分存储在非 XML 列以及仅在将递归部分`xml`数据类型列。  
+ 通常，您必须结合使用这些方法。 例如，你可能想要将 XML 数据存储在`xml`数据类型列，并将属性从其提升到关系列。 或者，可能想要使用映射技术将非递归部分存储中的非 XML 列，仅在将递归部分存储`xml`数据类型列。  
   
 ### <a name="choice-of-xml-technology"></a>XML 技术的选择  
  XML 技术（本机 XML 与 XML 视图）的选择通常取决于下列因素：  
@@ -103,7 +103,7 @@ ms.locfileid: "36124276"
  此外，不同的选择具有不同的性能特征。  
   
 ### <a name="native-xml-storage"></a>本机 XML 存储  
- 你可以存储 XML 数据中的`xml`在服务器上的数据类型列。 下列情况下，适于做此选择：  
+ 您可以将 XML 数据存储在`xml`在服务器上的数据类型列。 下列情况下，适于做此选择：  
   
 -   您希望使用一种简单的方法将 XML 数据存储在服务器上，同时保留文档顺序和文档结构。  
   
@@ -123,11 +123,11 @@ ms.locfileid: "36124276"
  适合 XML 文档的存储模型为 `xml` 数据类型列。 这可保留 XML 数据的 InfoSet 内容。 对 XML 列创建索引有利于提高查询性能。  
   
 #### <a name="example-retaining-exact-copies-of-xml-data"></a>示例：保留 XML 数据的精确副本  
- 为了进行说明，假定政府条例要求您保留 XML 文档的精确文本副本。 例如，这些文档可能为签署的文档、法律文档或股票交易单。 你可能想要将文档中的存储`[n]varchar(max)`列。  
+ 为了进行说明，假定政府条例要求您保留 XML 文档的精确文本副本。 例如，这些文档可能为签署的文档、法律文档或股票交易单。 你可能想要将文档存储在`[n]varchar(max)`列。  
   
  对于查询，可以在运行时将数据转换为 `xml` 数据类型并针对此数据执行 Xquery。 运行时转换开销可能很高，尤其是在文档较大的情况下更是如此。 如果要频繁查询，则可以另外将文档存储在 `xml` 数据类型列中，并在从 `[n]varchar(max)` 列返回精确的文档副本时对文档创建索引。  
   
- XML 列可能是计算的列，基于`[n]varchar(max)`列。 但是，你无法在 XML 计算列上创建 XML 索引，也可以生成 XML 索引`[n]varchar(max)`或`varbinary(max)`列。  
+ XML 列可能是计算的列，基于`[n]varchar(max)`列。 但是，不能对计算得出的 XML 列创建 XML 索引，也可以生成 XML 索引`[n]varchar(max)`或`varbinary(max)`列。  
   
 ### <a name="xml-view-technology"></a>XML 视图技术  
  通过定义 XML 架构和数据库中的表之间的映射，可以创建持久性数据的“XML 视图”。 通过 XML 视图，可使用 XML 大容量加载来填充基础表。 您可以使用 XPath 1.0 版来查询 XML 视图；这种查询将被转换为针对表的 SQL 查询。 与此类似，更新也会被传播到那些表。  
@@ -150,7 +150,7 @@ ms.locfileid: "36124276"
  为了进行说明，假定您具有希望将其作为 XML 处理的关系数据（如客户、订单和行项）。 请使用 AXSD 在关系数据上定义 XML 视图。 通过使用 XML 视图可以将 XML 数据大容量加载到表，以及使用 XML 视图查询和更新关系数据。 如果必须在 SQL 应用程序不间断工作时与其他应用程序交换包含 XML 标记的数据，该模型很有用。  
   
 ### <a name="hybrid-model"></a>混合模型  
- 通常情况下，组合的关系和`xml`数据类型列适合于数据建模。 可以将 XML 数据中的某些值存储在关系列中，而将其余或全部 XML 值存储在 XML 列中。 这可获得更好的性能，您可以更好地控制对关系列创建的索引和锁定特征。  
+ 通常情况下，关系的组合和`xml`数据类型列是适用于数据建模。 可以将 XML 数据中的某些值存储在关系列中，而将其余或全部 XML 值存储在 XML 列中。 这可获得更好的性能，您可以更好地控制对关系列创建的索引和锁定特征。  
   
  要存储在关系列中的值取决于您的工作负荷。 例如，如果根据路径表达式 /Customer/@CustId 检索所有 XML 值，则将 **CustId** 属性的值提升到关系列并对其进行索引可以获得更快的查询性能。 另一方面，如果您的 XML 数据是以非冗余方式广泛地分解在关系列中，则重新汇集的开销可能很大。  
   

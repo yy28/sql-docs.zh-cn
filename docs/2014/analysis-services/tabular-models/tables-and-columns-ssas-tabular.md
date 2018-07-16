@@ -1,5 +1,5 @@
 ---
-title: 表和列 (SSAS 表格) |Microsoft 文档
+title: 表和列 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f7302274fc745fbc7a63bf6af59e4622c36b9a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319357"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>表和列（SSAS 表格）
   在您通过使用表导入向导将表和数据添加到某一模型后，可通过添加新的数据列、创建表之间的关系、定义对数据进行扩展的计算以及对表中的数据进行筛选和排序以便于查看，开始使用这些表。  
@@ -66,7 +66,7 @@ ms.locfileid: "36013897"
 |[向表中添加列&#40;SSAS 表格&#41;](add-columns-to-a-table-ssas-tabular.md)|介绍如何将源列添加到表定义。|  
 |[删除列&#40;SSAS 表格&#41;](delete-a-column-ssas-tabular.md)|说明如何使用模型设计器或“表属性”对话框删除模型表列。|  
 |[更改表、 列或行筛选器映射&#40;SSAS 表格&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|介绍如何通过使用表预览或 SQL 查询编辑器在“编辑表属性”对话框中更改表、列或行筛选器映射。|  
-|[指定标记为日期表用于时间智能&#40;SSAS 表格&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|介绍如何使用“标记为日期表”对话框指定日期表和唯一标识符列。 在 DAX 公式中使用时间智能函数时，必须指定日期表和唯一标识符。|  
+|[指定标记为日期表，以便用于时间智能&#40;SSAS 表格&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|介绍如何使用“标记为日期表”对话框指定日期表和唯一标识符列。 在 DAX 公式中使用时间智能函数时，必须指定日期表和唯一标识符。|  
 |[将表添加&#40;SSAS 表格&#41;](add-a-table-ssas-tabular.md)|介绍如何通过使用现有数据源连接从数据源中添加表。|  
 |[删除表&#40;SSAS 表格&#41;](delete-a-table-ssas-tabular.md)|介绍如何删除不再需要的模型工作区数据库中的表。|  
 |[重命名表或列&#40;SSAS 表格&#41;](rename-a-table-or-column-ssas-tabular.md)|介绍如何重命名表或列以使其在您的模型中更易于标识。|  

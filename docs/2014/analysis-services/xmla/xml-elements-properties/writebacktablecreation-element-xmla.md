@@ -1,5 +1,5 @@
 ---
-title: WritebackTableCreation 元素 (XMLA) |Microsoft 文档
+title: WritebackTableCreation 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 95b9639b34002aa69366f87cac48427624f7d0dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319207"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 元素 (XMLA)
-  确定是否将写回表创建期间[过程](../xml-elements-commands/process-element-xmla.md)操作。  
+  确定是否将写回表创建期间[进程](../xml-elements-commands/process-element-xmla.md)操作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,14 +64,14 @@ ms.locfileid: "36123896"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- Analysis Services 实例上可用的对象的处理选项的详细信息，请参阅[多维模型对象处理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
+ Analysis Services 实例上可用的对象处理选项的详细信息，请参阅[多维模型对象处理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  `WritebackTableCreation` 元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |*创建*|如果不存在写回表，则创建一个新表。 如果写回表已存在，则会出错。|  
-|*CreateAlways*|创建一个新的写回表，并覆盖任何现有的写回表。|  
+|*CreateAlways*|创建一个新的写回表，覆盖任何现有的写回表。|  
 |*UseExisting*|如果已存在，请使用现有写回表。 如果写回表不存在，则会出错。|  
   
 ## <a name="see-also"></a>请参阅  

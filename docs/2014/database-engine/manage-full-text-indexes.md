@@ -1,25 +1,24 @@
 ---
-title: 管理全文索引 |Microsoft 文档
+title: 管理全文索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a38476f427cbc2c9630c66020f35c5f7355e9bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243107"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文索引
      
@@ -41,7 +40,7 @@ ms.locfileid: "36126145"
     |----------|-----------------|  
     |**常规**|显示全文索引的基本属性。 这些基本属性包括若干个可修改属性和多个不可更改属性，后者如数据库名称、表名和全文键列的名称。 可修改属性包括：<br /><br /> **全文索引非索引字表**<br /><br /> **全文索引已启用**<br /><br /> **更改跟踪**<br /><br /> **搜索属性列表**<br /><br /> <br /><br /> 有关详细信息，请参阅[全文本索引属性（常规页）](full-text-index-properties-general-page.md)。|  
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[全文本索引属性（列页）](../../2014/database-engine/full-text-index-properties-columns-page.md)。|  
-    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅 [填充全文索引](../relational-databases/indexes/indexes.md)。<br /><br /> **\*\* 重要\* \*** 退出后**全文本索引属性**对话框中，任何新创建的计划程序与 SQL Server 代理作业 （启动表增量填充上*database_name*。*table_name*)。|  
+    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅 [填充全文索引](../relational-databases/indexes/indexes.md)。<br /><br /> **\*\* 重要\* \* **退出后**全文本索引属性**对话框中，所有新创建的计划程序与 SQL Server 代理作业 （启动表增量填充*database_name*。*table_name*)。|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。  
   
@@ -67,12 +66,12 @@ ms.locfileid: "36126145"
 |`TableFulltextPopulateStatus`|全文表的填充状态。|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|表是否具有活动的全文索引。|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> 获取有关全文键列的信息  
+##  <a name="key"></a> 获取有关全文索引键列的信息  
  通常情况下，CONTAINSTABLE 或 FREETEXTTABLE 行集值函数的结果需要与基表相联接。 在这样的情况下，需要知道唯一键列名称。 可以查询给定的唯一索引是否作为全文键使用，并且可以获取全文键列的标识符。  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>查询给定的唯一索引是否作为全文键列使用  
   
-1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 语句调用 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函数。 在函数中调用使用 OBJECT_ID 函数将转换的表的名称 (*table_name*) 转换为表 ID 指定的名称是唯一索引的表，并指定`IsFulltextKey`索引属性，如下所示：  
+1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 语句调用 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函数。 在函数中调用使用 OBJECT_ID 函数将转换的表的名称 (*table_name*) 转换为表 ID，指定表中，唯一索引的名称，并指定`IsFulltextKey`索引属性，按如下所示：  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -129,7 +128,7 @@ GO
   
  此示例返回一个名为 `Unique Key Column`的结果集列，该结果集列显示单个行，该行包含 Document 表的唯一键列 DocumentID 的名称。 请注意，如果此查询包含无效的索引名称，索引名称与表不对应或表不存在等，它将返回 NULL。  
   
-##  <a name="disable"></a> 禁用或重新启用全文索引的表  
+##  <a name="disable"></a> 如果禁用或重新启用全文索引的表  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，默认情况下所有由用户创建的数据库都启用了全文索引。 另外，在为表创建全文索引并将列添加到索引之后，就会自动为单个表启用全文索引。 从表的全文索引中删除最后一列时，会自动为表禁用全文索引。  
   
  对于具有全文索引的表，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 手动为表禁用或重新启用全文索引。  

@@ -1,5 +1,5 @@
 ---
-title: DataAggregation 元素 (ASSL) |Microsoft 文档
+title: DataAggregation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795555e24dbdc30a02b0fd3b286e4122323c00f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289583"
 ---
 # <a name="dataaggregation-element-assl"></a>DataAggregation 元素 (ASSL)
-  确定实例是否可以聚合持久化的数据或缓存的数据的[MeasureGroup](../objects/group-element-assl.md)。  
+  确定实例是否可以聚合持久化的数据或缓存的数据[MeasureGroup](../objects/group-element-assl.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36015974"
 |*CacheAggregatable*|为此度量值组聚合缓存数据。|  
 |*DataAndCacheAggregatable*|为此度量值组聚合持久化数据和缓存数据。|  
   
- 对应于的父元素`DataAggregation`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.MeasureGroup>。  
+ 父级对应的元素`DataAggregation`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

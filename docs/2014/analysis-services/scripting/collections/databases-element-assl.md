@@ -1,5 +1,5 @@
 ---
-title: 数据库元素 (ASSL) |Microsoft 文档
+title: Databases 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Databases element
 ms.assetid: 2806a074-d47e-4434-9599-04888783770f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55063b20e5a98c2fc9d716083eebaf6e92d96ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadc9be7e7abc588c83515a6a199a37161075916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289643"
 ---
 # <a name="databases-element-assl"></a>Databases 元素 (ASSL)
-  包含的集合[数据库](../objects/database-element-assl.md)与关联的元素[服务器](../objects/server-element-assl.md)元素。  
+  包含的集合[数据库](../objects/database-element-assl.md)与关联的元素[Server](../objects/server-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36017625"
 |子元素|[“数据库”](../objects/database-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DatabaseCollection>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DatabaseCollection>。  
   
 ## <a name="see-also"></a>请参阅  
  [集合&#40;ASSL&#41;](collections-assl.md)  

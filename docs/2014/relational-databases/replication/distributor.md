@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d5a2f5c5d7f70624baa9b3f55d732e54642708c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a482479689ebfbbb81f79ae7d3b71ede1039d834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296477"
 ---
 # <a name="distributor"></a>分发服务器
   **“分发服务器”** 页出现在配置分发向导和新建发布向导中。 分发服务器是包含分发数据库并为所有类型的复制存储元数据和历史记录数据的服务器。 分发服务器还为事务复制存储事务。 分发服务器与发布服务器可以是同一服务器（本地分发服务器），也可以是不同的服务器（远程分发服务器）。 分发服务器的角色根据所实现的复制类型的不同而不同。 通常，对于事务复制，分发服务器角色要远比合并复制和快照复制重要。 合并和快照复制通常使用本地分发服务器，而对于繁忙的系统来说，为事务复制使用远程分发服务器可以提高性能。  

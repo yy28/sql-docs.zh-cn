@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.upgradedacwizard.reviewpolicy.f1
 - sql12.swb.upgradedacwizard.selectoptions.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2406cf16d4c5d6f2a9189e9f513beee0816a9014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fbe586573ac3ad40e3bc26514020bb928c0f09e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281693"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
   使用“升级数据层应用程序向导”或 Windows PowerShell 脚本可以更改当前部署的数据层应用程序 (DAC) 的架构和属性，以便匹配在 DAC 的新版本中定义的架构和属性。  
@@ -48,13 +48,13 @@ ms.locfileid: "36126115"
 ###  <a name="ChoseDACUpgOptions"></a> 选择 DAC 升级选项  
  就地升级有四种升级选项：  
   
--   **忽略数据丢失**– 如果`True`，即使某些操作导致丢失数据，将继续升级。 如果为 `False`，则上述操作将终止升级。 例如，如果当前数据库的表中不存在的新的 DAC 的架构中，该表将被删除如果`True`指定。 默认设置是`True`。  
+-   **忽略数据丢失**– 如果`True`，即使某些操作导致数据丢失，升级也将继续。 如果为 `False`，则上述操作将终止升级。 例如，如果当前数据库中的表不存在新的 DAC 的架构中，该表将被删除`True`指定。 默认设置是`True`。  
   
--   **更改时阻止**– 如果`True`，如果数据库架构不同于在之前的 DAC 中定义，升级将终止。 如果`False`，即使检测到更改，继续进行升级。 默认设置是`False`。  
+-   **更改时阻止**– 如果`True`，如果数据库架构不同于在之前的 DAC 中定义的架构时升级将终止。 如果`False`，即使检测到更改，继续进行升级。 默认设置是`False`。  
   
 -   **失败时回滚**– 如果`True`，则升级将封装在事务中，如果遇到错误时将尝试回滚。 如果为 `False`，则在进行更改时所有更改都将提交，并且在出错时，您可能要还原数据库的以前的备份。 默认设置是`False`。  
   
--   **跳过策略验证**– 如果`True`，将不评估 DAC 服务器选择策略。 如果`False`评估策略，升级将终止是否存在验证错误。 默认设置是`False`。  
+-   **跳过策略验证**– 如果`True`，不评估 DAC 服务器选择策略。 如果`False`，评估该策略，并且升级将终止是否存在验证错误。 默认设置是`False`。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  DAC 升级只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本中执行。  
@@ -139,7 +139,7 @@ ms.locfileid: "36126115"
   
  “正在验证 DAC 的内容”- 报告验证过程的当前状态的进度栏。  
   
- **\< 以前**-返回到初始状态的**选择包**页。  
+ **\< 以前**-返回到初始状态**选择包**页。  
   
  “下一步 >”- 继续到“选择包”页的最终版本。  
   

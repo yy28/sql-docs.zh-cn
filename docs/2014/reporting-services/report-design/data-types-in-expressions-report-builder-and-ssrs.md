@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319947"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
   数据类型表示不同种类的数据，以便能够有效地进行存储和处理。 典型的数据类型包括文本（也称为字符串）、带有小数位和不带小数位的数字、日期和时间以及图像。 报表中的值必须是报表定义语言 (RDL) 数据类型。 在报表中显示某个值时，您可以根据您的喜好设置该值的格式。 例如，表示货币的字段将以浮点数的形式存储在报表定义中，但是可以根据您所选择的格式属性以不同的格式显示该字段。  
@@ -60,7 +60,7 @@ ms.locfileid: "36016301"
 -   将从数据源检索的值从一种数据类型转换为另一种数据类型。  
   
 ## <a name="determining-the-data-type-of-report-data"></a>确定报表数据的数据类型  
- 若要确定报表项的数据类型，可以编写一个返回报表项数据类型的表达式。 例如，若要显示字段 `MyField`的数据类型，可在表单元中添加以下表达式： `=Fields!MyField.Value.GetType().ToString()`。 结果显示 CLR 数据类型用于表示`MyField`，例如，`System.String`或`System.DateTime`。  
+ 若要确定报表项的数据类型，可以编写一个返回报表项数据类型的表达式。 例如，若要显示字段 `MyField`的数据类型，可在表单元中添加以下表达式： `=Fields!MyField.Value.GetType().ToString()`。 结果将显示用于表示的 CLR 数据类型`MyField`，例如`System.String`或`System.DateTime`。  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>将数据集字段转换为其他数据类型  
  在报表中使用数据集字段之前，还可以对这些字段进行转换。 下面列出可用于转换现有数据集字段的方法：  
@@ -108,7 +108,7 @@ ms.locfileid: "36016301"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例中，此值已被放入`String`字段调用`MyDateTime.Value`。  
+ 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例中，此值已放在`String`名为字段`MyDateTime.Value`。  
   
  可以使用下列策略之一将此数据转换为一个或多个 CLR 值：  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36016301"
   
          如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下 `DateTime` 值：`2007-07-06 04:07:07 PM`（2007 年 7 月 6 日下午 4:07)。  
   
- 有关将字符串转换为`DateTime`数据类型，请参阅[分析日期和时间字符串](http://go.microsoft.com/fwlink/?LinkId=89703)，[特定区域性的格式设置的日期和时间](http://go.microsoft.com/fwlink/?LinkId=89704)，和[选择DateTime、 DateTimeOffset 和 TimeZoneInfo 之间](http://go.microsoft.com/fwlink/?linkid=110652)MSDN 上。  
+ 有关将字符串转换为详细信息`DateTime`数据类型，请参阅[分析日期和时间字符串](http://go.microsoft.com/fwlink/?LinkId=89703)，[特定区域性的格式设置日期和时间](http://go.microsoft.com/fwlink/?LinkId=89704)，并[选择DateTime、 DateTimeOffset 和 TimeZoneInfo 之间](http://go.microsoft.com/fwlink/?linkid=110652)MSDN 上。  
   
 -   向报表数据集添加使用表达式提取部分字符串的新计算字段。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   

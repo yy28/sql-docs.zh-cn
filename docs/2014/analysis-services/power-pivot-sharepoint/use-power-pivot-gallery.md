@@ -1,5 +1,5 @@
 ---
-title: 使用 PowerPivot 库 |Microsoft 文档
+title: 使用 PowerPivot 库 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321257"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 库
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种专用的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
@@ -37,7 +37,7 @@ ms.locfileid: "36014925"
   
 -   [在整页模式下打开工作簿或报表](#view)  
   
--   [PowerPivot 库中 PowerPivot 工作簿的计划数据刷新](#newdr)  
+-   [计划 PowerPivot 库中的 PowerPivot 工作簿的数据刷新](#newdr)  
   
 -   [删除工作簿或 PowerPivot 库中的报表](#delete)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36014925"
   
  在浏览器中查看工作簿的另一种方法是在客户端工作站上的 Excel 中打开它。 必须拥有 Excel 2013 或 Excel 2010 和 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 外接程序才能查看文件。 您可以使用 Excel 2007 来打开文件，但不能使用它来透视数据。 因而，建议使用 Excel 2013 或 Excel 2010 查看和创建 PowerPivot 数据。 如果没有所需的应用程序，则必须使用浏览器查看 SharePoint 中的工作簿。  
   
-##  <a name="newdr"></a> PowerPivot 库中 PowerPivot 工作簿的计划数据刷新  
+##  <a name="newdr"></a> 计划 PowerPivot 库中的 PowerPivot 工作簿的数据刷新  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
 |||  
@@ -165,7 +165,7 @@ ms.locfileid: "36014925"
  **“PowerPivot 库文档”** 内容类型不是自动添加到文档库的。除非您启用不支持的内容类型，否则不会遇到此问题。  
   
 ## <a name="see-also"></a>请参阅  
- [在管理中心中创建 PowerPivot 站点的受信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [删除 PowerPivot 库](delete-power-pivot-gallery.md)   
  [创建和自定义 PowerPivot 库](create-and-customize-power-pivot-gallery.md)   
  [计划数据刷新&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  

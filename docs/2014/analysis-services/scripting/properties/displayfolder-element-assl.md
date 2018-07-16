@@ -1,5 +1,5 @@
 ---
-title: DisplayFolder 元素 (ASSL) |Microsoft 文档
+title: DisplayFolder 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c959f1c2fe298217b46849c6a13d3e0f313f6803
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293197"
 ---
 # <a name="displayfolder-element-assl"></a>DisplayFolder 元素 (ASSL)
-  指定要在其中列出父元素的文件夹。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 为开发人员和管理员的应用程序可能支持显示文件夹以对多个元素进行分类以可视方式的使用。  
+  指定要在其中列出父元素的文件夹。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 开发人员和管理员的应用程序可能支持使用显示文件夹来直观地对多个元素进行分类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36026015"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[CalculationProperty](../objects/calculationproperty-element-assl.md)，[层次结构](../objects/hierarchy-element-assl.md)， [Kpi](../objects/kpi-element-assl.md)，[度量值](../objects/measure-element-assl.md)，[转换](../objects/translation-element-assl.md)|  
+|父元素|[CalculationProperty](../objects/calculationproperty-element-assl.md)，[层次结构](../objects/hierarchy-element-assl.md)， [Kpi](../objects/kpi-element-assl.md)，[度量值](../objects/measure-element-assl.md)，[翻译](../objects/translation-element-assl.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -70,14 +70,14 @@ ms.locfileid: "36026015"
   
 -   包含由反斜杠分隔的多个文件夹名称 (\\)，表示嵌入的文件夹层次结构。  
   
- `DisplayFolder`属性适用于`CalculationProperty`元素才的值[CalculationType](calculationtype-element-assl.md)设置为*成员*。  
+ `DisplayFolder`属性适用于`CalculationProperty`仅当元素的值[CalculationType](calculationtype-element-assl.md)设置为*成员*。  
   
  在 Analysis Management Objects (AMO) 对象模型中，与 `DisplayFolder` 的父级对应的元素为 <xref:Microsoft.AnalysisServices.CalculationProperty>、<xref:Microsoft.AnalysisServices.Hierarchy>、<xref:Microsoft.AnalysisServices.Kpi>、<xref:Microsoft.AnalysisServices.Measure> 和 <xref:Microsoft.AnalysisServices.Translation>。  
   
 ## <a name="see-also"></a>请参阅  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [MdxScript 元素&#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Mdxscript 被元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [MdxScripts 元素&#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [属性&#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.reportserver.f1
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 500624fbf81bc4ffc98ed3342878c2bf811005d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f98d7d47820765e4e4920c95f92d1154350af278
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293187"
 ---
 # <a name="connect-to-server-reporting-services"></a>连接到服务器 (Reporting Services)
   连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，可使用此对话框查看或指定选项。  
@@ -33,9 +33,9 @@ ms.locfileid: "36017580"
  **服务器名称**  
  您要连接到的报表服务器实例的服务器模式决定了必须输入的值。  
   
- 对于在本机模式下运行的报表服务器，指定要连接到的报表服务器实例。 如果使用默认实例，服务器名通常是计算机的名称。 如果你安装命名的实例，为此格式中的服务器名称追加实例名称： \<servername >\\< InstanceName\>。 Reporting Services 使用反斜杠字符分隔实例名。  
+ 对于在本机模式下运行的报表服务器，指定要连接到的报表服务器实例。 如果使用默认实例，服务器名通常是计算机的名称。 如果安装了命名的实例，将实例名追加到此格式中的服务器名称：\<服务器名称 >\\< 实例名\>。 Reporting Services 使用反斜杠字符分隔实例名。  
   
- 对于在 SharePoint 集成模式下运行的报表服务器，必须指定 SharePoint 站点。 可以指定与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]集成的站点集合中的任意站点。 您提供的 URL 必须包含 HTTP 或 HTTPS 前缀。 您必须有权访问 SharePoint 站点，才能在 Management Studio 中连接到该站点。 分配给您的权限级别将决定您可以查看和管理的项目。 有关详细信息，请参阅[连接到报表服务器在 Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
+ 对于在 SharePoint 集成模式下运行的报表服务器，必须指定 SharePoint 站点。 可以指定与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]集成的站点集合中的任意站点。 您提供的 URL 必须包含 HTTP 或 HTTPS 前缀。 您必须有权访问 SharePoint 站点，才能在 Management Studio 中连接到该站点。 分配给您的权限级别将决定您可以查看和管理的项目。 有关详细信息，请参阅[连接到 Management Studio 中的报表服务器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
   
  **身份验证**  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以配置为接受由你提供的自定义身份验证扩展插件处理的 Windows 身份验证请求或窗体身份验证请求。 请从以下身份验证模式中选择一个，以便在连接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时使用：  

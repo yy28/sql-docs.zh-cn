@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d78c844fa26c649a20030af7209fac061676be6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37fc5f2045f2fcf232ab8984ff83aa2ed3abb230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227017"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>CountDistinct 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的所有非重复的非 Null 值计数。  
@@ -36,7 +36,7 @@ CountDistinct(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Variant`) 在其上执行聚合表达式。  
+ (`Variant`) 对其执行聚合的表达式。  
   
  *作用域*  
  (`String`) 可选。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  

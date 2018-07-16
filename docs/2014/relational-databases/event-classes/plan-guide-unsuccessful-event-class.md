@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Plan Guide Unsuccessful event class
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92a9dc479d3125ef6be5a5232aa231cab2a98dfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 197379f910efef984a16cccb9ddebe3dfe3a8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246837"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 事件类
   Plan Guide Unsuccessful 事件类指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法为包含计划指南的查询或批处理生成执行计划。 相反，计划将在不使用计划指南的情况下进行编译。 当满足下列条件时，事件将激发：  

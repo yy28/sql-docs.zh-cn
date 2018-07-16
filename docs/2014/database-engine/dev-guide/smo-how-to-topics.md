@@ -1,5 +1,5 @@
 ---
-title: SMO 操作指南主题 |Microsoft 文档
+title: SMO 操作指南主题 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 201c83af-47b3-413a-8909-3c7cc5142be5
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b0f528ab5281da98c211a01fb94ceaec7234932
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 93999c94ca535c456cde806abb59946284aa09ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233717"
 ---
 # <a name="smo-how-to-topics"></a>SMO 操作指南主题
   SMO 操作指南主题介绍如何设置 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 编程环境以在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 或 C# 中创建程序。  

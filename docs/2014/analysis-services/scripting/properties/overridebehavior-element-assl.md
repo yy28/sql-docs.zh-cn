@@ -1,5 +1,5 @@
 ---
-title: OverrideBehavior 元素 (ASSL) |Microsoft 文档
+title: OverrideBehavior 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - OverrideBehavior element
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e36223c59306b158812d9bdc18fccd3660c54f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aecabbb04cefa1abf706c5f725c3a7f8e41aad07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241367"
 ---
 # <a name="overridebehavior-element-assl"></a>OverrideBehavior 元素 (ASSL)
-  指示所描述的关系的重写行为[AttributeRelationship](../objects/attributerelationship-element-assl.md)元素。  
+  指示描述的关系的覆盖行为[AttributeRelationship](../objects/attributerelationship-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36126169"
 |*强*|指示 AttributeRelationship 元素描述的关系的覆盖行为。 决定一个属性的位置如何影响另一个属性的位置。|  
 |*无*|无效。|  
   
- 对应于的允许值为枚举`OverrideBehavior`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.OverrideBehavior>。  
+ 与允许的值相对应的枚举`OverrideBehavior`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.OverrideBehavior>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

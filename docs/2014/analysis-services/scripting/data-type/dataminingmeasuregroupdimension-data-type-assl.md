@@ -1,5 +1,5 @@
 ---
-title: DataMiningMeasureGroupDimension 数据类型 (ASSL) |Microsoft 文档
+title: DataMiningMeasureGroupDimension 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataMiningMeasureGroupDimension data type
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f25a5e72e185085479be12ea6eddd3cdf890020b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c50bf707f105ba40b023e2f1970dda875b0570b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314597"
 ---
 # <a name="dataminingmeasuregroupdimension-data-type-assl"></a>DataMiningMeasureGroupDimension 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示某个度量值组和数据挖掘维度之间的关系。  
@@ -58,10 +58,10 @@ ms.locfileid: "36016474"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[CaseCubeDimensionID](../properties/id-element-assl.md)|  
-|派生元素|请参阅[维度](../objects/dimension-element-assl.md)([维度](../collections/dimensions-element-assl.md)集合[MeasureGroup](../objects/group-element-assl.md))|  
+|派生元素|请参阅[维度](../objects/dimension-element-assl.md)([维度](../collections/dimensions-element-assl.md)的集合[MeasureGroup](../objects/group-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

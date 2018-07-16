@@ -1,5 +1,5 @@
 ---
-title: 选择网络协议 |Microsoft 文档
+title: 选择网络协议 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
 - Named Pipes [SQL Server]
@@ -26,16 +26,16 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a2b280378747917865ad0afa5e7ee2873515a8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 864e8563eec427204f8256372a6a0d947bee9fb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327477"
 ---
 # <a name="choosing-a-network-protocol"></a>选择网络协议
-  若要连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必须启用网络协议。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在同一时间服务上多个协议的请求。 客户端用单个协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果客户端程序不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听哪个协议，可以配置客户端按顺序尝试多个协议。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器启用、禁用以及配置网络协议。  
+  若要连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必须启用网络协议。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在同一时间服务上有多个协议的请求。 客户端用单个协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果客户端程序不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听哪个协议，可以配置客户端按顺序尝试多个协议。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器启用、禁用以及配置网络协议。  
   
 ## <a name="shared-memory"></a>Shared Memory  
  Shared Memory 是可供使用的最简单协议，没有可配置的设置。 由于使用 Shared Memory 协议的客户端仅可以连接到同一台计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，因此它对于大多数数据库活动而言是没用的。 如果怀疑其他协议配置有误，请使用 Shared Memory 协议进行故障排除。  

@@ -1,5 +1,5 @@
 ---
-title: 内存属性 |Microsoft 文档
+title: 内存属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
 - MinimumAllocatedMemory property
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c80e57803c1635cf6688ac8d8a562aa7e40f8818
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286373"
 ---
 # <a name="memory-properties"></a>内存属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器内存属性。 有关设置这些属性的指南，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
@@ -51,7 +51,7 @@ ms.locfileid: "36024664"
  请注意，`TotalMemoryLimit` 必须始终小于 `HardMemoryLimit`。  
   
  `HardMemoryLimit`  
- 指定一个内存阈值，达到该阈值后实例会主动终止活动用户会话以减少内存的使用量。 所有终止的会话都将收到关于因内存压力而被取消的错误。 默认值为零 (0)，表示`HardMemoryLimit`将设置为之间的中间值`TotalMemoryLimit`和系统; 如果系统的物理内存大于进程，然后虚拟地址的虚拟地址空间的总物理内存将改为使用空间来计算`HardMemoryLimit`。  
+ 指定一个内存阈值，达到该阈值后实例会主动终止活动用户会话以减少内存的使用量。 所有终止的会话都将收到关于因内存压力而被取消的错误。 默认值为零 (0)，这意味着`HardMemoryLimit`将设置为之间的中间值`TotalMemoryLimit`和系统; 如果系统的物理内存大于进程中，则虚拟地址的虚拟地址空间的总物理内存将改为使用的空间来计算`HardMemoryLimit`。  
   
  `VirtualMemoryLimit`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
@@ -63,9 +63,9 @@ ms.locfileid: "36024664"
   
  **1** 为默认值。 该属性支持使用操作系统页文件 (pagefile.sys) 分页到磁盘。  
   
- 当`VertiPaqPagingPolicy`设置为 1，处理不大可能由于内存约束失败，因为服务器将尝试对使用你指定的方法的磁盘进行分页。 设置 `VertiPaqPagingPolicy` 属性并不会确保内存错误永远不会发生。 在下列条件下仍然可能会发生内存不足错误：  
+ 当`VertiPaqPagingPolicy`设置为 1，处理不大可能由于内存限制而失败，因为服务器将尝试使用您指定的方法对磁盘页上。 设置 `VertiPaqPagingPolicy` 属性并不会确保内存错误永远不会发生。 在下列条件下仍然可能会发生内存不足错误：  
   
--   没有足够的内存来用于所有字典。 在处理期间，Analysis Services 锁定为每个列的字典在内存中，和所有这些不能为指定的值超过`VertiPaqMemoryLimit`。  
+-   没有足够的内存来用于所有字典。 处理过程中，Analysis Services 中的锁的每个列的字典内存，并且所有这些不能为多个指定的值`VertiPaqMemoryLimit`。  
   
 -   没有足够的虚拟地址空间来容纳这个过程。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36024664"
  `VertiPaqMemoryLimit`  
  如果允许分页到磁盘，此属性指定内存占用达到何种程度（表示为内存总量的百分比）才开始分页。 默认值为 60。 如果内存占用不超过 60%，则服务器不会分页到磁盘。  
   
- 此属性依赖于`VertiPaqPagingPolicyProperty`，其必须设置为 1 才能进行分页的顺序。  
+ 此属性依赖于`VertiPaqPagingPolicyProperty`，其必须设置为 1 才能进行分页。  
   
  仅适用于表格服务器模式。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36024664"
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
+ [在 Analysis Services 中配置服务器属性](server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

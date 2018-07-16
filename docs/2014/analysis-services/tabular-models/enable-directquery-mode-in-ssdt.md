@@ -1,5 +1,5 @@
 ---
-title: 启用 DirectQuery 设计模式 (SSAS 表格) |Microsoft 文档
+title: 启用 DirectQuery 设计模式 (SSAS 表格) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ba954a8f296200070493625803aad263fa71520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93b95dc39c0efb088003af9d5fb8b68cfce11ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310407"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>启用 DirectQuery 设计模式（SSAS 表格）
   若要在 DirectQuery 模式下创建模型，您必须首先更改设计时环境，以便该环境支持 DirectQuery 模式的用户。 当您这样做时，该设计器还将执行以下操作：  
@@ -42,7 +42,7 @@ ms.locfileid: "36018289"
   
 3.  在 **“属性”** 窗格中，将属性 **DirectQueryMode**更改为 **On**。  
   
-4.  如果没有错误，Visual Studio 中，打开**错误列表**并解决将阻止模型切换到 DirectQuery 模式的任何问题。  
+4.  如果存在错误，在 Visual Studio 中，打开**错误列表**并且解决将阻止模型切换到 DirectQuery 模式下的任何问题。  
   
 ## <a name="see-also"></a>请参阅  
  [DirectQuery 模式下&#40;SSAS 表格&#41;](directquery-mode-ssas-tabular.md)  

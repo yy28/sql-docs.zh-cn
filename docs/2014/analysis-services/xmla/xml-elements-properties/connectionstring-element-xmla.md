@@ -1,5 +1,5 @@
 ---
-title: ConnectionString 元素 (XMLA) |Microsoft 文档
+title: ConnectionString 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293207"
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString 元素 (XMLA)
-  包含连接字符串使用由容器的父[位置](location-element-xmla.md)或[源](source-element-xmla.md)元素。  
+  包含父级所使用的连接字符串[位置](location-element-xmla.md)或[源](source-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,11 +70,11 @@ ms.locfileid: "36015776"
   
  对于 `Source` 元素，`ConnectionString` 元素包含 `Synchronize` 命令用于连接到源实例的连接字符串。  
   
- 有关备份和还原对象的详细信息，请参阅[Backing Up、 正在还原，和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 有关备份和还原对象的详细信息，请参阅[备份、 还原和同步数据库&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Restore 元素&#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   
- [同步元素&#40;XMLA&#41;](../xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize 元素&#40;XMLA&#41;](../xml-elements-commands/synchronize-element-xmla.md)   
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

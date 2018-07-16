@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331007"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>内置的全局和用户引用（报表生成器和 SSRS）
   内置字段集合包含 `Globals` 和 `User` 集合，表示处理报表时由 Reporting Services 提供的全局值。 `Globals` 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 `User` 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  
@@ -28,12 +28,12 @@ ms.locfileid: "36015850"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>使用 Globals 集合  
- `Globals`集合包含报表的全局变量。 在设计图面上，这些变量显示为带有前缀 &（& 号），例如 `[&ReportName]`。 下表描述的成员`Globals`集合。  
+ `Globals`集合包含报表的全局变量。 在设计图面上，这些变量显示为带有前缀 &（& 号），例如 `[&ReportName]`。 下表介绍的成员`Globals`集合。  
   
 |**成员**|**类型**|**Description**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|报表开始运行的日期和时间。|  
-|PageNumber|`Integer`|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 在矩形、 数据区域、 数据区域组或一个代码图，PageBreak 属性中，分页符的页码将 ResetPageNumber 属性设置为`True`。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
+|PageNumber|`Integer`|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 对页面进行编号中分页符的矩形、 数据区域、 数据区域组或映射中的，在 PageBreak 属性设置为 ResetPageNumber 属性`True`。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
 |ReportFolder|`String`|包含该报表的文件夹的完整路径。 它不包括报表服务器 URL。|  
 |ReportName|`String`|报表存储在报表服务器数据库中的名称。|  
 |ReportServerUrl|`String`|正在运行该报表的报表服务器的 URL。|  
@@ -43,7 +43,7 @@ ms.locfileid: "36015850"
 |OverallTotalPages|`Integer`|整个报表的总页数。 此值不受 ResetPageNumber 影响。<br /><br /> OverallTotalPages 只能用于页眉或页脚中的表达式中。|  
 |RenderFormat|`RenderFormat`|与当前呈现请求有关的信息。<br /><br /> 有关详细信息，请参阅下一节中的“RenderFormat”。|  
   
- 成员`Globals`集合返回一个变量。 如果要在表达式中使用此集合中要求特定数据类型的成员，则必须先转换该变量。 例如，若要将执行时间变量转换为 Date 格式，请使用 `=CDate(Globals!ExecutionTime)`。 有关详细信息，请参阅[Data Types in Expressions&#40;报表生成器和 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
+ 成员`Globals`集合返回一个变量。 如果要在表达式中使用此集合中要求特定数据类型的成员，则必须先转换该变量。 例如，若要将执行时间变量转换为 Date 格式，请使用 `=CDate(Globals!ExecutionTime)`。 有关详细信息，请参阅[表达式中的数据类型&#40;报表生成器和 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
 ### <a name="renderformat"></a>RenderFormat  
  下表介绍 `RenderFormat` 的成员。  
@@ -72,9 +72,9 @@ ms.locfileid: "36015850"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>使用 User 集合  
- `User`集合包含有关运行报表的用户数据。 可以使用此集合筛选报表中显示的数据，例如，仅显示当前用户的数据或显示 UserID（如在报表标题中）。 在设计图面上，这些变量显示为带有前缀 &（& 号），例如 `[&UserID]`。  
+ `User`集合包含有关正在运行报表的用户的数据。 可以使用此集合筛选报表中显示的数据，例如，仅显示当前用户的数据或显示 UserID（如在报表标题中）。 在设计图面上，这些变量显示为带有前缀 &（& 号），例如 `[&UserID]`。  
   
- 下表描述的成员`User`集合。  
+ 下表介绍的成员`User`集合。  
   
 |**成员**|**类型**|**Description**|  
 |----------------|--------------|---------------------|  

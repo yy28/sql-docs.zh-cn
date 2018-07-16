@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], deleting
 - leaf members [Master Data Services], deleting
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 871a4b76bd3e5b03017ded5ef01b88f8bd9efd27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cbfc5554d70a460d137b0938319f3025e581218c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172928"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>删除成员或集合 (Master Data Services)
-  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，当您不再需要某个成员或集合时，可以将其删除。 若要大批量删除成员，可以改用临时过程。 有关详细信息，请参阅[停用或删除成员通过使用临时过程&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
+  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，当您不再需要某个成员或集合时，可以将其删除。 若要大批量删除成员，可以改用临时过程。 有关详细信息，请参阅[停用或通过使用临时过程删除成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
   
 > [!NOTE]  
 >  如果某一成员用作另一个成员的基于域的属性值，则不能删除该成员。  
@@ -38,7 +38,7 @@ ms.locfileid: "36128105"
   
 -    您必须有权访问“资源管理器”功能区域。  
   
--   对于成员，你必须具有最少**更新**正在删除中的成员的叶模型对象的权限。  
+-   对于成员，必须具有最少**更新**要删除的成员的叶模型对象权限。  
   
 -   对于集合，您必须对要删除的叶集合对象至少具有 **“更新”** 权限。  
   

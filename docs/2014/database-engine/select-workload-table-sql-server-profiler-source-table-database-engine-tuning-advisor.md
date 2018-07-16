@@ -1,5 +1,5 @@
 ---
-title: SQL Server 事件探查器的源表数据库引擎优化顾问-选择工作负荷表 |Microsoft 文档
+title: SQL Server Profiler-源表数据库引擎优化顾问-选择工作负荷表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.sourcetable.f1
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Source Table dialog box
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b5ccfddb032fb3833e517632290cfdf7d82e643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c371644630c24946b4acc50d77916fb8d0fd4a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285683"
 ---
-# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server 事件探查器的源表数据库引擎优化顾问-选择工作负荷表
+# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-源表数据库引擎优化顾问-选择工作负荷表
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]和 [!INCLUDE[ssDE](../includes/ssde-md.md)]优化顾问使用此对话框来选择表。  
   
  在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中，使用“源表”对话框为跟踪表指定源表。 This is a table from which a trace is loaded, and the contents of which are viewed or used for replaying the trace.  
@@ -47,7 +47,7 @@ ms.locfileid: "36016181"
  指定将从中读取跟踪的跟踪表的名称。  
   
 ## <a name="see-also"></a>请参阅  
- [将跟踪结果保存到表&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [将跟踪结果保存到表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [数据库引擎优化顾问](../relational-databases/performance/database-engine-tuning-advisor.md)  
   

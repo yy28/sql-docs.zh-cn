@@ -1,5 +1,5 @@
 ---
-title: AMO 基础类 |Microsoft 文档
+title: AMO Fundamental 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ee31478a526dad385d9721256beebc4324cadb60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c1b94f30b21b71a6290e7b782e2eeb411d14f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270023"
 ---
 # <a name="amo-fundamental-classes"></a>AMO Fundamental 类
   基础类是使用分析管理对象 (AMO) 的起点。 通过这些类，您可以为将在应用程序中使用的其他对象建立自己的环境。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
   
  下图显示了本主题中介绍的类之间的关系。  
   
- ![AMO 基础类](../../../analysis-services/dev-guide/media/amo-fundamentalclasses.gif "AMO 基础类")  
+ ![AMO Fundamental 类](../../../analysis-services/dev-guide/media/amo-fundamentalclasses.gif "AMO Fundamental 类")  
   
   
   
-##  <a name="ServerObjects"></a> 服务器对象  
+##  <a name="ServerObjects"></a> Server 对象  
  另外，还具有对以下方法的访问权限：  
   
 -   连接管理：Connect、Disconnect、Reconnect 和 GetConnectionState。  
@@ -64,7 +64,7 @@ ms.locfileid: "36126739"
   
  有关可用的方法和属性的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Database> 中的 <xref:Microsoft.AnalysisServices>。  
   
-##  <a name="DSandDSV"></a> 数据源和 DataSourceView 对象  
+##  <a name="DSandDSV"></a> DataSource 和 DataSourceView 对象  
  数据源是使用数据库类的 <xref:Microsoft.AnalysisServices.DataSourceCollection> 管理的。 可从 <xref:Microsoft.AnalysisServices.DataSource> 对象使用 Add 方法创建 <xref:Microsoft.AnalysisServices.DataSourceCollection> 实例。 可从 <xref:Microsoft.AnalysisServices.DataSource> 对象使用 Remove 方法删除 <xref:Microsoft.AnalysisServices.DataSourceCollection> 实例。  
   
  <xref:Microsoft.AnalysisServices.DataSourceView> 对象是从数据库类的 <xref:Microsoft.AnalysisServices.DataSourceViewCollection> 对象管理的。  
@@ -73,7 +73,7 @@ ms.locfileid: "36126739"
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices>   
- [引入 AMO 类](amo-classes-introduction.md)   
+ [AMO 类简介](amo-classes-introduction.md)   
  [AMO 基础对象的编程](programming-amo-fundamental-objects.md)  
   
   

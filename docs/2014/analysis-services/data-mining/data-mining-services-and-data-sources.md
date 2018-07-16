@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘服务和数据源 |Microsoft 文档
+title: 数据挖掘服务和数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297467"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
   数据挖掘需要连接到 SQL Server Analysis Services 实例才能工作。 数据挖掘不需要多维数据集中的数据，建议使用关系源；但是，数据挖掘使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎提供的组件。  
@@ -27,7 +27,7 @@ ms.locfileid: "36125732"
  本主题提供了在连接到 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建、处理、部署或查询数据挖掘模型时需要了解的信息。  
   
 ## <a name="data-mining-services"></a>数据挖掘服务  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器组件是应用程序 msmdsrv.exe，该程序通常作为一项 Windows 服务来运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器组件是应用程序 msmdsrv.exe，该程序通常作为一项 Windows 服务来运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
   
 -   分析从客户端接收的语句  
   
@@ -48,13 +48,13 @@ ms.locfileid: "36125732"
 -   管理服务器资源  
   
 ### <a name="xmla-listener"></a>XMLA 侦听器  
- XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 文件中的配置设置可以用于指定在其上的端口[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所侦听。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
+ XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 文件中的配置设置可用于在其上指定端口[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所侦听。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
   
 |端口|Description|  
 |----------|-----------------|  
 |2383|默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
-|在服务器启动时动态分配|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例。|  
+|在服务器启动时动态分配| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例。|  
   
  有关控制此服务所用端口的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -78,10 +78,10 @@ ms.locfileid: "36125732"
   
  下面的服务器属性与数据挖掘有特殊关系：  
   
--   `AllowAdHocOpenRowsetQueries` 控制对 OLE DB 访问接口，直接加载到服务器内存空间的即席访问。  
+-   `AllowAdHocOpenRowsetQueries` 控制对 OLE DB 访问接口、 直接加载到服务器内存空间即席访问。  
   
     > [!IMPORTANT]  
-    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值是 `false`。 但是，即使此属性设置为`false`，用户可以继续创建单独查询，并且可以上允许的数据源使用 OPENQUERY。  
+    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值是 `false`。 但是，即使此属性设置为`false`，用户可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
   
 -   **AllowedProvidersInOpenRowset** 指定启用即席访问时的访问接口。 通过输入一个以逗号分隔的 ProgID 列表，您可以指定多个访问接口。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36125732"
  还可以设置允许用户优化服务器并控制客户端使用的安全性的属性。 有关详细信息，请参阅 [Feature Properties](../server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  有关支持版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关支持的各个版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>对数据挖掘对象的编程访问  
  您可以使用下列对象模型创建与 Analysis Services 数据库的连接和处理数据挖掘对象：  

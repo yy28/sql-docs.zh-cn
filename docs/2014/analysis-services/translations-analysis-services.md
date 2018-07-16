@@ -1,5 +1,5 @@
 ---
-title: 翻译 (Analysis Services) |Microsoft 文档
+title: 翻译 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293287"
 ---
 # <a name="translations-analysis-services"></a>翻译 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
   
  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据模型中，可以嵌入一个标题的多个翻译，以基于 LCID 提供特定于区域设置的字符串。 可为数据库名称、多维数据集对象和数据库维度对象添加翻译。  
   
- 定义翻译将在模型内创建元数据和已翻译的标题，但若要在客户端应用程序中呈现本地化字符串，必须设置对象上的 `Language` 属性，或传递连接字符串上的 `Locale Identifier` 参数（例如，通过设置 `LocaleIdentifier=1036` 返回法语设置）。 如果想在不同语言中支持同一对象的多个同时翻译，则应使用 `Locale Identifier`。 设置`Language`属性会发生作用，但它也会影响处理和查询，这可能具有意外的后果。 设置`Locale Identifier`是更好的选择，因为它仅用于返回已翻译的字符串。  
+ 定义翻译将在模型内创建元数据和已翻译的标题，但若要在客户端应用程序中呈现本地化字符串，必须设置对象上的 `Language` 属性，或传递连接字符串上的 `Locale Identifier` 参数（例如，通过设置 `LocaleIdentifier=1036` 返回法语设置）。 如果想在不同语言中支持同一对象的多个同时翻译，则应使用 `Locale Identifier`。 设置`Language`属性的工作原理，但它也会影响处理和查询，这可能会产生意想不到的后果。 设置`Locale Identifier`是更好的选择，因为它仅用于返回已翻译的字符串。  
   
  一个翻译包括一个区域设置标识符 (LCID)、一个该对象的已翻译标题（例如，维度或属性名称），还可以选择包括以目标语言提供数据值的一个列。 你可以拥有多个翻译，但只能对任意给定连接使用一个翻译。 理论上可以将任意数量的翻译嵌入到模型中，但每个翻译都会增加测试的复杂性，并且所有翻译必须共享同一排序规则，所以设计解决方案时，应考虑到这些自然约束。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36017614"
   
 1.  在设计器中打开 Adventure Works 多维模型。  
   
-2.  在解决方案资源管理器，打开数据源视图，并双击 Adventure Works DW\<版本 >.dsv。  
+2.  在解决方案资源管理器中打开数据源视图，然后双击 Adventure Works DW\<版本 >.dsv。  
   
 3.  找到 dimDate、dimProduct、dimProductCategory 或 dimProductSubcateogry。 所有这些维度均包含月份、每周天数、产品名称、类别名称等已翻译成员的属性。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36017614"
   
 2.  在翻译中指定目标语言（解析为 LCID）、已翻译的标题和已翻译的说明。 无论是在 Management Studio 中设置服务器语言，还是在单个属性上添加翻译覆盖，语言列表在整个 Analysis Service 中都是一致的。  
   
-3.  在数据库属性页中，设置`Language`到为转换指定的同一 LCID。 （可选） 设置`Collation`以及如果默认值不再有意义。  
+3.  在数据库的属性页上，设置`Language`对翻译指定的同一 lcid。 （可选） 设置`Collation`以及如果默认值不再具有意义。  
   
 4.  生成和部署数据库。  
   

@@ -1,5 +1,5 @@
 ---
-title: 常规 （数据库设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 常规 （数据库设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 435817b44643ddf1d3e6703ca2872dd5afe407c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234267"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>常规（数据库设计器）（Analysis Services - 多维数据）
   可以使用 **“常规”** 选项卡更改 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的属性。  
@@ -52,9 +52,9 @@ ms.locfileid: "36127200"
  **语言**  
  为指定事务选择语言。  
   
- 若要将一个新翻译添加到网格中，单击**\<添加新翻译 >**。  
+ 若要向网格中添加一个新的翻译，请单击**\<添加新翻译 >**。  
   
- **翻译后的标题**  
+ **已翻译的标题**  
  以翻译的相应语言键入数据库的标题。 如果为空，将使用默认的数据库标题。  
   
  **已翻译的说明**  

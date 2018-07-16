@@ -1,5 +1,5 @@
 ---
-title: SynchronizeSecurity 元素 (XMLA) |Microsoft 文档
+title: SynchronizeSecurity 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SynchronizeSecurity element
 ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cc50a9acd38fe394e5ac6b457f72e76669b5ec64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: dee99edf98aec8a9cd3b11add261cd941f9c9a0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330257"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>SynchronizeSecurity 元素 (XMLA)
-  指定如何将安全定义，如角色和权限，同步期间[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
+  指定如何同步安全定义，如角色和权限，期间[同步](../xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36016443"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Security`元素确定的安全定义，如角色和权限，是否定义上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库同步期间`Synchronize`命令。 此元素还确定定义为安全定义成员的 Windows 用户帐户和用户组是否包含在 `Synchronize` 命令中。  
+ `Security`元素可确定是否在上定义的安全定义，如角色和权限[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库同步期间`Synchronize`命令。 此元素还确定定义为安全定义成员的 Windows 用户帐户和用户组是否包含在 `Synchronize` 命令中。  
   
  此元素的值限定为下表中列出的字符串之一。  
   

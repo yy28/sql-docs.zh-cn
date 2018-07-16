@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
 - consolidated members [Master Data Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa1613512d6114a760b984da50089e2f524a083a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 934dbb8ff42bfbb3c334131f77e33d44d8542223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307974"
 ---
 # <a name="members-master-data-services"></a>成员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，成员是物理主数据。 例如，成员可以是 Product 实体中的 Road-150 自行车或 Customer 实体中的特定客户。  
@@ -54,7 +54,7 @@ ms.locfileid: "36018211"
 -   在显式层次结构中，合并成员可以是层次结构中其他成员的父级，也可以是子级。  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>使用层次结构和集合组织成员  
- 层次结构和集合可用于分组成员便于报告或分析。 有关详细信息，请参阅[层次结构&#40;Master Data Services&#41; ](hierarchies-master-data-services.md)和[集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)。  
+ 层次结构和集合可用于分组成员便于报告或分析。 有关详细信息，请参阅[层次结构&#40;Master Data Services&#41; ](hierarchies-master-data-services.md)并[集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)。  
   
 ## <a name="member-example"></a>成员示例  
  在下面的示例中，每个成员均包含 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性值。  
@@ -86,8 +86,8 @@ ms.locfileid: "36018211"
   
 -   [叶权限&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [合并权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [合并的权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
--   [Filter 运算符&#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
+-   [筛选器运算符&#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
   
   

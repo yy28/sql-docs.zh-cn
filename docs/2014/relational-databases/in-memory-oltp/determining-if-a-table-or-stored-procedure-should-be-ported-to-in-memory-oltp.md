@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4b88d6924c3a5b4f9b78b66ad7d1f556ff38628a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9cc5f2caba4f82a34c64fdaafdfef137739bc19e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313797"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
   通过 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的事务性能收集器，可帮助您评估内存中 OLTP 是否将改进您的数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  
@@ -48,7 +48,7 @@ ms.locfileid: "36123882"
     > [!IMPORTANT]  
     >  数据库的性能取决于多种因素，不是所有这些因素都能被事务性能收集器发现和度量。 因此，事务性能分析报告不保证实际性能收益会符合其预测（如果作出任何预测）。  
   
- 当你选择安装事务性能收集器和生成事务性能分析报告的能力**管理工具-基本**或**管理工具-高级**当你安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+ 当您选择安装事务性能收集器和生成事务性能分析报告的功能**管理工具-基本**或**管理工具-高级**当你安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ## <a name="best-practices"></a>最佳实践  
  下面的流程图给出了建议的工作流程。 黄色节点表示可选过程：  
@@ -67,7 +67,7 @@ ms.locfileid: "36123882"
   
  事务性能收集器每 15 分钟捕获数据。 若要获得稳定的结果，运行事务性能收集器至少 1 小时。 若要获得最佳结果，请根据需要运行尽可能长时间的事务性能收集器，以便捕获针对您的主要情形的数据。 只有在完成数据收集后，才生成事务性能分析报告。  
   
- 将事务性能收集器配置为在生产中在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上运行，并且在您的开发（测试）环境中收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据以便确保最小的系统开销。 有关如何将数据保存在远程管理数据仓库数据库的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，请参阅[远程 SQL Server 实例上配置数据收集](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)。  
+ 将事务性能收集器配置为在生产中在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上运行，并且在您的开发（测试）环境中收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据以便确保最小的系统开销。 有关如何将数据保存在管理数据仓库数据库中，远程计算机上的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，请参阅[远程的 SQL Server 实例上配置数据收集](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)。  
   
 ## <a name="performance-impacts"></a>性能影响  
  事务性能收集器由两个数据收集组构成：  
@@ -91,11 +91,11 @@ ms.locfileid: "36123882"
   
 1.  在对象资源管理器中，展开 **“管理”**。  
   
-2.  右键单击**数据收集**和选择**任务**然后**配置管理数据仓库**。 **配置管理数据仓库向导**开始。  
+2.  右键单击**数据收集**，然后选择**任务**，然后**配置管理数据仓库**。 **配置管理数据仓库向导**开始。  
   
 3.  单击**下一步**以选择将充当管理数据仓库的数据库。  
   
-4.  单击**新建**创建一个新的数据库，以包含配置文件数据。 完成创建数据库后，单击**下一步**向导中。  
+4.  单击**新建**若要创建新的数据库来保存配置文件数据。 在完成创建数据库后，单击**下一步**向导中。  
   
 5.  在向导中的下一步，可以添加用户并登录。 可以将登录映射到 MDW 实例的角色成员身份。 从本地实例收集数据时无需执行该操作。 如果不是从本地实例收集数据，则可将数据库角色成员身份 `mdw_admin` 授予将运行待探查事务的帐户。 完成后，单击**下一步**。  
   
@@ -110,19 +110,19 @@ ms.locfileid: "36123882"
   
  若要配置数据收集以便上载到同一实例上的管理数据仓库数据库，请执行以下步骤：  
   
-1.  在**对象资源管理器**，展开**管理**。  
+1.  在中**对象资源管理器**，展开**管理**。  
   
-2.  右键单击**数据收集**，选择**任务**，，然后**配置数据收集**。 **配置数据收集向导**开始。  
+2.  右键单击**数据收集**，选择**任务**，然后**配置数据收集**。 **配置数据收集向导**开始。  
   
 3.  单击**下一步**以选择将收集的配置文件数据的数据库。  
   
 4.  选择当前 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，然后在该实例上选择管理数据仓库数据库。  
   
-5.  在框中标记为**选择你想要启用数据收集器集**，选择**事务性能收集组**。 单击**下一步**完成。  
+5.  在标记为**选择你想要启用数据收集器集**，选择**事务性能收集组**。 单击**下一步**完成。  
   
 6.  验证所做的选择。 单击**回**要修改的设置。 完成操作后，请单击 **“完成”** 。  
   
-###  <a name="xxx"></a> 对远程配置数据收集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例  
+###  <a name="xxx"></a> 远程计算机上配置数据收集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例  
  数据收集要求在收集该数据的实例上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理。  
   
  可以在 SQL Server 2012 或更高版本上配置数据收集器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -133,7 +133,7 @@ ms.locfileid: "36123882"
   
 1.  在包含你想要迁移到内存中 OLTP 的基于磁盘的对象的实例，展开**管理**在对象资源管理器中的节点。  
   
-2.  右键单击**数据收集**和选择**任务**然后**配置数据收集**。 **配置数据收集向导**开始。  
+2.  右键单击**数据收集**，然后选择**任务**，然后**配置数据收集**。 **配置数据收集向导**开始。  
   
 3.  单击**下一步**以选择将收集的配置文件数据的数据库。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "36123882"
   
      将对其收集数据的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（探查对象）的版本应与配置管理数据仓库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本相同，或低于后者。  
   
-6.  在框中标记为**选择你想要启用数据收集器集**，选择**事务性能收集组**。  
+6.  在标记为**选择你想要启用数据收集器集**，选择**事务性能收集组**。  
   
-7.  选择**使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于远程上载代理的代理**。  
+7.  选择**使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理进行远程上载**。  
   
 8.  单击**下一步**完成。  
   
@@ -153,24 +153,24 @@ ms.locfileid: "36123882"
   
      如果要创建新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的代理帐户，请执行以下步骤：  
   
-    1.  单击**新建**以显示**新的代理帐户**对话框。  
+    1.  单击**新建**以显示**新建代理帐户**对话框。  
   
-    2.  在**新的代理帐户**对话框中，输入代理服务器的名称，选择凭据，并根据需要输入描述。 然后，单击**主体**。  
+    2.  在中**新建代理帐户**对话框中，输入代理服务器的名称，选择凭据，并输入可选说明。 然后，单击**主体**。  
   
-    3.  单击**添加**和选择**Msdb**角色。  
+    3.  单击**外**，然后选择**Msdb**角色。  
   
-    4.  选择`dc_proxy`单击**确定**。 然后单击**确定**试。  
+    4.  选择`dc_proxy`然后单击**确定**。 然后单击**确定**试。  
   
-     选择正确的代理之后，单击**下一步**。  
+     选择正确的代理后，单击**下一步**。  
   
-10. 若要配置系统收集组，检查**系统收集组**单击**下一步**。  
+10. 若要配置系统收集组，请检查**系统收集组**然后单击**下一步**。  
   
-11. 验证所做的选择。 单击**回**要修改的设置。 Clicck**完成**完成。  
+11. 验证所做的选择。 单击**回**要修改的设置。 完成**完成**完成。  
   
  数据收集组现已配置完成并运行在实例上。  
   
 ### <a name="generate-reports"></a>生成报告  
- 你可以通过右键单击管理数据仓库的数据库并选择生成事务性能分析报表**报表**，然后**管理数据仓库**，，然后**事务性能分析概述**。  
+ 可以通过右键单击管理数据仓库的数据库并选择生成事务性能分析报告**报表**，然后**管理数据仓库**，，然后**事务性能分析概述**。  
   
  该报告收集有关工作负荷服务器上的所有用户数据库的信息。 如果您的管理数据仓库 (MDW) 数据库在本地计算机上，会在报告中看到 MDW 数据库。  
   
@@ -194,15 +194,15 @@ ms.locfileid: "36123882"
   
     -   总等待百分比。 此数据库表上闩锁和锁等待数占数据库活动的百分比。 这个比例越高，使用此表的频率相对于数据库中的其他表就越大。  
   
-    -   闩锁统计信息。 这些列记录涉及此表的查询的闩锁等待数。 有关闩锁的信息，请参阅[闩锁](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)。 此数值越高，表的闩锁争用就越多。  
+    -   闩锁统计信息。 这些列记录涉及此表的查询的闩锁等待数。 闩锁的信息，请参阅[闩锁](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)。 此数值越高，表的闩锁争用就越多。  
   
-    -   锁定统计信息。 这组列记录对此表的查询的页锁定获取和等待次数。 有关锁的详细信息，请参阅[SQL Server 中的锁定了解](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)。 等待越多，对表的锁定争用就越多。  
+    -   锁定统计信息。 这组列记录对此表的查询的页锁定获取和等待次数。 有关锁的详细信息，请参阅[了解 SQL Server 中的锁定](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)。 等待越多，对表的锁定争用就越多。  
   
 -   迁移难度部分  
   
      本部分包含一个表，其中显示将此数据库表转换为内存优化表的困难程度。 难度等级越高，转换表的难度就越大。 若要查看转换此数据库表的详细信息，请使用[内存优化顾问](memory-optimization-advisor.md)。  
   
- 在表详细信息报表的扫描和争用统计信息收集和聚合从[sys.dm_db_index_operational_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql)。  
+ 在表的详细信息报表的扫描和争用统计信息收集和聚合从[sys.dm_db_index_operational_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql)。  
   
  存储过程的详细报告包含两个部分：  
   
@@ -226,7 +226,7 @@ ms.locfileid: "36123882"
   
  存储的过程的详细信息报表的执行统计信息收集和聚合从[sys.dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql)。 从获取引用[sys.sql_expression_dependencies &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)。  
   
- 若要查看有关如何将存储的过程转换为本机编译的存储过程的详细信息，请使用[本机编译顾问](native-compilation-advisor.md)。  
+ 若要查看有关如何将存储的过程转换为本机编译存储过程的详细信息，请使用[本机编译顾问](native-compilation-advisor.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)  

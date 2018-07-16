@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 定义计算 |Microsoft 文档
+title: 第 6 课： 定义计算 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 27d54217fe24f18184cacbbdb671f1d7569e350c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dcc6179b4a0cc0a5b5ade735ef7272d265e35c24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326657"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
   在此课程中，将了解如何定义计算（多维表达式 (MDX) 表达式或脚本）。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
@@ -60,7 +60,7 @@ ms.locfileid: "36123314"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)   
- [多维建模&#40;通恒教程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
+ [多维建模&#40;Adventure Works 教程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
  [创建命名的集](multidimensional-models/create-named-sets.md)   
  [创建计算成员](multidimensional-models/create-calculated-members.md)  
   

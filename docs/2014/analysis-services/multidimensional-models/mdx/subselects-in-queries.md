@@ -1,5 +1,5 @@
 ---
-title: 在查询中的嵌套 select 语句 |Microsoft 文档
+title: 在查询中的嵌套 select 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5f616181a6fffe42fa04e3978142c48375adb0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299177"
 ---
 # <a name="subselects-in-queries"></a>查询中的嵌套 select 语句
   嵌套 select 语句表达式是嵌套的 SELECT 表达式，用于限制从其计算更外部的外部 SELECT 的多维数据集的空间。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
@@ -353,6 +353,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   轴子句中不允许 HAVING 子句；请改用 [Filter (MDX)](/sql/mdx/filter-mdx) 函数表达式。  
   
--   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，是每个会话为基础，在通过将分配到的值`SubQueries`中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROP_MSMD_SUBQUERIES`中的属性[支持 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 请参阅[中嵌套 select 语句和子多维数据集的计算成员](calculated-members-in-subselects-and-subcubes.md)的值决定计算成员的行为的详细说明`SubQueries`或`DBPROP_MSMD_SUBQUERIES`。  
+-   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，在每个会话的基础，通过将分配到的值`SubQueries`中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROP_MSMD_SUBQUERIES`中的属性[支持的 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 请参阅[中嵌套 select 语句和子多维数据集的计算成员](calculated-members-in-subselects-and-subcubes.md)的值决定的计算成员的行为的详细说明`SubQueries`或`DBPROP_MSMD_SUBQUERIES`。  
   
   

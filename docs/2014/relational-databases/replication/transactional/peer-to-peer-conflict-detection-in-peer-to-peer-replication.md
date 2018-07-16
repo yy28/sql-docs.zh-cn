@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 01cc02c299d4a5fc617a8177efe141ea4916babe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 750781b73012b6815a3ad9c432ef83d1b02a7b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318127"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>对等复制中的冲突检测
   通过对等事务复制，可以在拓扑中的任何节点插入、更新或删除数据并将数据更改传播到其他节点。 由于可在任何节点上更改数据，因此在不同节点上进行的数据更改可能会相互冲突。 如果在多个节点上修改了某一行，则将该行传播给其他节点时会导致冲突甚至丢失更新。  
@@ -90,7 +90,7 @@ ms.locfileid: "36025182"
   
 -   尝试通过允许分发代理继续应用所做的更改，再次同步节点：  
   
-    1.  执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 为指定 p2p_continue_onconflict@property参数和`true`为@value参数。  
+    1.  执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 p2p_continue_onconflict@property参数和`true`为@value参数。  
   
     2.  重新启动分发代理。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36025182"
         > [!NOTE]  
         >  如果在执行该步骤之后数据不一致，则必须在具有最高优先级的节点上手动更新行，然后允许从该节点传播所做的更改。 如果拓扑中不再有发生冲突的更改，则所有节点将保持一致状态。  
   
-    5.  执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 为指定 p2p_continue_onconflict@property参数和`false`为@value参数。  
+    5.  执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 p2p_continue_onconflict@property参数和`false`为@value参数。  
   
 ## <a name="see-also"></a>请参阅  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  

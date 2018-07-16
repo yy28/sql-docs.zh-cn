@@ -1,5 +1,5 @@
 ---
-title: Microsoft 聚类分析算法 |Microsoft 文档
+title: Microsoft 聚类分析算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 61
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74e1a00c89050b632ca01a5f67f734484bff8de7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308787"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法是一种分段算法提供[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 该算法使用迭代技术将数据集中的事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法是由提供的分段算法[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 该算法使用迭代技术将数据集中的事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
   
  聚类分析模型标识数据集中可能无法通过随意观察在逻辑上得出的关系。 例如，在逻辑上可以得知，骑自行车上下班的人的居住地点通常离其工作地点不远。 但该算法可以找出有关骑自行车上下班人员的其他并不明显的特征。 在下面的关系图中，分类 A 表示有关通常开车上班人员的数据，而分类 B 表示通常骑自行车上班人员的数据。  
   
- ![群集上下班倾向模式](../media/clustering-example.gif "上下班倾向群集模式")  
+ ![往返式群集模式](../media/clustering-example.gif "往返式群集模式")  
   
  聚类分析算法不同于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法等其他数据挖掘算法，区别在于无需指定可预测列便能生成聚类分析模型。 聚类分析算法严格地根据数据以及该算法所标识的分类中存在的关系定型。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36017635"
 ## <a name="how-the-algorithm-works"></a>算法的原理  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法首先标识数据集中的关系并根据这些关系生成一系列分类。 散点图是一种非常有用的方法，可以直观地表示算法如何对数据进行分组，如下面的关系图所示。 散点图可以表示数据集中的所有事例，在该图中每个事例就是一个点。 分类对该图中的点进行分组并阐释该算法所标识的关系。  
   
- ![散点图中数据集的事例](../media/clustering-plot.gif "中数据集的事例的散点图")  
+ ![在数据集中的事例的散](../media/clustering-plot.gif "中数据集的事例的散点图")  
   
  在最初定义分类后，算法将通过计算确定分类表示点分组情况的适合程度，然后尝试重新定义这些分组以创建可以更好地表示数据的分类。 该算法将循环执行此过程，直到它不能再通过重新定义分类来改进结果为止。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36017635"
   
 -   **输入列** 每个模型都必须至少包含一个输入列，该输入列包含用于生成此分类的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
   
--   **可选可预测列** 该算法不需要可预测列来生成模型，但是可以添加几乎任意数据类型的可预测列。 可以将可预测列的值视为对聚类分析模型的输入，或者将其指定仅用于预测。 例如，如果你想要通过对人口统计信息，如地区或年龄预测客户收入，你将收入指定为`PredictOnly`并添加所有其他列，如地区或年龄，作为输入。  
+-   **可选可预测列** 该算法不需要可预测列来生成模型，但是可以添加几乎任意数据类型的可预测列。 可以将可预测列的值视为对聚类分析模型的输入，或者将其指定仅用于预测。 例如，如果你想要通过对人口统计信息，如地区和年龄预测客户的收入，您将收入指定为`PredictOnly`并将其他所有列，如地区和年龄，都添加作为输入。  
   
  有关聚类分析模型支持的内容类型和数据类型的更多详细信息，请参阅 [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)的“要求”部分。  
   

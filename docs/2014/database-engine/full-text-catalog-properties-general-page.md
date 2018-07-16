@@ -1,33 +1,32 @@
 ---
-title: 全文目录属性 （常规页） |Microsoft 文档
+title: 全文目录属性 （常规页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc774b0dfd87ae4f63e9332dd6813d92f79e4a5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc0d0c6e287d978b0a10979843a50f40f906872b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169312"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
   本节介绍在 **“全文目录属性”** 对话框的 **“常规”** 页上可用的选项和功能。  
   
 > [!NOTE]  
->  有关[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]数据库，全文目录是表示一组全文索引的逻辑概念。 全文目录是虚拟对象，不属于任何文件组。  
+>  有关[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]数据库，全文目录是指一组全文索引的逻辑概念。 全文目录是虚拟对象，不属于任何文件组。  
   
 ## <a name="options"></a>“常规”  
   
@@ -54,7 +53,7 @@ ms.locfileid: "36128379"
   
 -   **正在生成索引**  
   
--   **磁盘已满-已暂停**  
+-   **磁盘已满，已暂停**  
   
 -   **Change tracking**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "36128379"
   
 -   **是**  
   
--   有关标注字符标记的信息，请参阅[音符](http://go.microsoft.com/fwlink/?LinkId=154091)MSN 百科全书百科全书中。  
+-   有关标注字符的信息，请参阅[变音标记](http://go.microsoft.com/fwlink/?LinkId=154091)MSN Encarta Encyclopedia 中。  
   
  **上次填充日期**  
  显示上次填充目录的日期。  

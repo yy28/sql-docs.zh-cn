@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e98b169091b40ff24926ffef55f3687275b007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a85a05d5a0b18701ed9b8a480ef0bb7c05e873d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304207"
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
   使用 **“包属性”** 对话框可以查看在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储的包的属性。  
@@ -61,7 +61,7 @@ ms.locfileid: "36024377"
  列出包 ID。  
   
  **入口点**  
- 值`True`指示包是否已直接启动。 值`False`指示包是否已启动通过使用执行包任务的另一个包。 默认值是 `True`。  
+ 值`True`表示直接启动包。 值`False`指示包是否已由另一个包通过执行包任务启动。 默认值是 `True`。  
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中为父包和子包设置此属性，方法是在解决方案资源管理器中右键单击包，然后单击“入口点包”。  
   

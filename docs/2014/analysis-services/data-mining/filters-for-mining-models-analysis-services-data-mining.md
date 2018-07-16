@@ -1,5 +1,5 @@
 ---
-title: 挖掘模型的筛选器 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 挖掘模型的筛选器 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312707"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
   基于数据的模型筛选有助于创建利用挖掘结构中的数据子集的挖掘模型。 使用筛选功能，可以基于全面的数据源视图来创建单个挖掘结构，因此可以灵活地设计挖掘结构和数据源。 随后即可以创建筛选器，以便仅将该数据的一部分用于对各种模型进行定型和测试，而不是为数据的每个子集均生成不同的结构和相关模型。  
@@ -47,14 +47,14 @@ ms.locfileid: "36025626"
   
 -   使用数据挖掘设计器中的 **“挖掘模型”** 选项卡，并借助筛选器编辑器对话框生成各个条件。  
   
--   键入筛选表达式直接`Filter`挖掘模型的属性。  
+-   键入筛选器表达式直接`Filter`挖掘模型的属性。  
   
 -   使用 AMO 以编程方式对模型设置筛选条件。  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用数据挖掘设计器创建模型筛选器  
  可以通过更改挖掘模型的 `Filter` 属性在数据挖掘设计器中筛选模型。 可以在 **“属性”** 窗格中直接键入筛选表达式，也可以打开一个筛选器对话框来生成条件。  
   
- 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 你可以将多个条件链接使用`AND` / `OR`运算符。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，你可以使用`greater than`和`less than`运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
+ 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可以将多个条件链接使用`AND` / `OR`运算符。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用`greater than`和`less than`运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
   
 > [!NOTE]  
 >  `LIKE`关键字不受支持。 如果您希望包括多个离散属性，则必须创建不同条件并使用 `OR` 运算符来链接它们。  
@@ -66,7 +66,7 @@ ms.locfileid: "36025626"
   
  例如，如果您的事例表与客户相关，而且嵌套表中显示客户已经购买的产品，则可以通过在嵌套表的筛选器中使用下面的语法来为已经购买了特定商品的客户创建一个筛选器： `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`。  
   
- 此外可以通过使用筛选嵌套表中的特定值的存在性`EXISTS`或`NOT EXISTS`关键字和子查询。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `Water Bottle` 将返回 `true`。  
+ 此外可以通过使用筛选的嵌套表中的特定值存在`EXISTS`或`NOT EXISTS`关键字和子查询。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `Water Bottle` 将返回 `true`。  
   
  可以将事例表中的条件与嵌套表中的条件组合起来。 例如，下面的语法包括事例表中的一个条件 (`Age > 30` )、嵌套表中的一个子查询 (`EXISTS (SELECT * FROM Products)`) 以及嵌套表中的多个条件 (`WHERE ProductName=’Milk’  AND Quantity>2`)。  
   

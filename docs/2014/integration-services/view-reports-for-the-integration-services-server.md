@@ -1,5 +1,5 @@
 ---
-title: 查看 Integration Services 服务器的报表 |Microsoft 文档
+title: 查看 Integration Services 服务器的报表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d868930792e1d381e8f476d6be5c83cdfc05e1f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f379b41d4620197db75ffdd29b80295ee5dc67d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190557"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>查看 Integration Services 服务器的报告
-  在当前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，标准报表位于[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器。  有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
+  在当前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中, 均提供标准报表[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器。  有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>查看 Integration Services 服务器的报告  
   

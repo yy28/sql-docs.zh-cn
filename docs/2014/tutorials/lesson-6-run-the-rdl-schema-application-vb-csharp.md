@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 运行 RDL 架构应用程序 (VB-C#) |Microsoft 文档
+title: 第 6 课： 运行 RDL 架构应用程序 (VB-C#) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
 caps.latest.revision: 15
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95ef194a66d6c5480f8a83cbd0b78547e79804e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56a29edc9b30577dca3db245d3ace5e4c7814d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169788"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>第 6 课： 运行 RDL 架构应用程序 (VB-C#)
+  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供了两种从集成开发环境 (IDE) 生成和运行控制台应用程序的方法：  
   
 -   开始执行（调试）  
@@ -50,7 +51,7 @@ ms.locfileid: "36128669"
 3.  示例应用程序完成运行时，经过更新的该报表副本将保存至报表服务器。  
   
 ## <a name="see-also"></a>请参阅  
- [更新报表使用生成的 RDL 架构类&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

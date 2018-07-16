@@ -1,5 +1,5 @@
 ---
-title: 功能选择 （数据挖掘） |Microsoft 文档
+title: 功能选择 （数据挖掘） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295997"
 ---
 # <a name="feature-selection-data-mining"></a>功能选择（数据挖掘）
-  *功能选择*是一个术语，通常用于数据挖掘中描述的工具和技术可用于减少处理和分析的可管理大小的输入。 功能选择意味着不仅*降低基数的措施*，这意味着不对时生成一个模型，但还选择的属性，这意味着，可以考虑的属性数量的任意或预定义截止分析师或建模工具主动选择或放弃基于其用处受到以进行分析的属性。  
+  *功能选择*是一个术语，通常用于在数据挖掘中描述的工具和技术可用于输入减少到可控大小以便处理和分析。 功能选择意味着不仅*降低基数*，这意味着施加任意或预定义的截断，在生成模型，但还属性，这意味着的选择时可以考虑的属性的数目分析人员或建模工具主动选择或放弃属性基于对分析的可用性。  
   
  能够应用功能选择对于有效分析至关重要，因为数据集包含的信息通常多于生成模型所需的信息。 例如，一个数据集可能包含 500 个用来描述客户特征的列，但是，如果其中某些列的数据非常稀疏，则您从将这些数据添加到模型中所得到的利益可能会非常少。 如果在生成模型时保留不需要的列，则定型期间需要更多的 CPU 和内存，并且已完成的模型需要更多的存储空间。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36025838"
  在数据源的这 500 列中，如果只有 50 列具有在生成模型时有用的信息，则您可以只将这些列保持在模型之外，或者可以使用功能选择技术自动发现最佳功能并且排除在统计上无用的值。 功能选择有助于解决两个问题：无价值的数据过多或有价值的数据过少。  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 数据挖掘中的功能选择  
- 通常情况下，自动在执行功能选择[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，并且每种算法的默认方法智能地应用功能缩减的设置。 功能选择始终在对模型进行定型之前执行，以自动选择数据集中最有可能在该模型中使用的属性。 但是，您也可以手动设置参数以便影响功能选择行为。  
+ 通常情况下中自动, 执行功能选择[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和每个算法都有一套智能地应用功能的默认技术。 功能选择始终在对模型进行定型之前执行，以自动选择数据集中最有可能在该模型中使用的属性。 但是，您也可以手动设置参数以便影响功能选择行为。  
   
- 通常，功能选择的工作方式是为每个属性计算一个分数，然后仅选择具有最高分数的属性。 您还可以调整最高分数的阈值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供用于计算这些分数，多个方法和在任何模型中应用的具体方法取决于这些因素：  
+ 通常，功能选择的工作方式是为每个属性计算一个分数，然后仅选择具有最高分数的属性。 您还可以调整最高分数的阈值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多种方法来计算这些分数和任何模型中应用的准确方法取决于以下因素：  
   
 -   在模型中使用的算法  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36025838"
  下面的部分对功能选择的每种方法分别进行了介绍。  
   
 #### <a name="interestingness-score"></a>兴趣性分数  
- 如果某个功能可以提供一些有用的信息，则该功能很令人感兴趣。 由于什么是有用的定义各不相同，具体取决于方案，数据挖掘行业已开发了各种方法来测量*兴趣性*。 例如，*新奇*可能值得在离群值检测，但能够区分密切相关的项，或*对比权重*，可能是更大分类。  
+ 如果某个功能可以提供一些有用的信息，则该功能很令人感兴趣。 什么是有用的定义各不相同，具体取决于方案，因为数据挖掘行业开发了多种方法来度量*兴趣性*。 例如，*新奇*可能值得在离群值检测，但是区分密切关联的项的功能或*区分权重*，可能是更感兴趣分类。  
   
- 在 SQL Server Analysis Services 中使用的兴趣性的度量值是*基于平均信息量的*，这意味着，采用随机分布的属性具有更高版本的平均信息量和较低的信息获得的; 因此，此类属性小于令人感兴趣。 任何特定属性的平均信息量都将与所有其他属性的平均信息量进行比较，如下所示：  
+ SQL Server Analysis Services 中使用的兴趣性度量值是*基于平均信息量的*，这意味着随机分布的属性具有较高的平均信息量和较低的信息增益，因此，此类属性是小于令人感兴趣。 任何特定属性的平均信息量都将与所有其他属性的平均信息量进行比较，如下所示：  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   

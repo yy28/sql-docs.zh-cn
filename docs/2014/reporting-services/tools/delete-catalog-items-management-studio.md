@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32e636425cf8e04d48c05cc0e343504505c25f39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31ca797c34be8624c5d47ea874439167c5dbeede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315977"
 ---
 # <a name="delete-catalog-items-management-studio"></a>删除目录项 (Management Studio)
   使用此页可以删除共享计划和角色定义。  
@@ -49,7 +49,7 @@ ms.locfileid: "36014954"
  如果在删除项的过程中出现错误，则显示错误代码。  
   
 ## <a name="see-also"></a>请参阅  
- [删除某个项&#40;Management Studio&#41;](delete-an-item-management-studio.md)   
+ [删除项&#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [创建、修改和删除计划](../subscriptions/create-modify-and-delete-schedules.md)  
   

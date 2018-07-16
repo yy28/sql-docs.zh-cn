@@ -1,5 +1,5 @@
 ---
-title: EventColumn 数据类型 (ASSL) |Microsoft 文档
+title: EventColumn 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - EventColumn data type
 ms.assetid: c0009f1d-d136-4155-9a1b-7baacda4b552
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4e64defcd407e49b4f8e28d9034a2efeb440924
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f99484bdc41228dee28f6437631e0c05a542d9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293317"
 ---
 # <a name="eventcolumn-data-type-assl"></a>EventColumn 数据类型 (ASSL)
-  定义一个基元数据类型，表示要为捕获的信息的列[事件](../objects/event-element-assl.md)作为的一部分的元素[跟踪](../objects/trace-element-assl.md)元素。  
+  定义一个基元数据类型，表示要为捕获的信息的列[事件](../objects/event-element-assl.md)元素的一部分[跟踪](../objects/trace-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36125706"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[ColumnID](../properties/columnid-element-eventcolumn-assl.md)|  
-|派生元素|[列](../objects/column-element-assl.md)([列](../collections/columns-element-assl.md)集合[跟踪](../objects/trace-element-assl.md))|  
+|派生元素|[列](../objects/column-element-assl.md)([列](../collections/columns-element-assl.md)的集合[跟踪](../objects/trace-element-assl.md))|  
   
 ## <a name="see-also"></a>请参阅  
  [Events 元素&#40;ASSL&#41;](../collections/events-element-assl.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, accessing
 - Database Engine [SQL Server], services
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9541682c5c3b07260c053460bbe4d03f18b10e36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a6ab743d2acb58f29d15056a0b2231059e035b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300827"
 ---
 # <a name="manage-the-database-engine-services"></a>管理数据库引擎服务
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行在操作系统上。 服务是一种在系统后台运行的应用程序。 服务通常提供一些核心操作系统功能，例如 Web 服务、事件日志或文件服务。 运行的服务可以不在计算机桌面上显示用户界面。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和一些其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件都作为服务运行。 这些服务通常会在操作系统启动时自动启动。 但是，也有些服务默认情况下不会自动启动，这取决于安装过程中如何进行指定。 本部分说明了如何管理各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之前，您需要了解如何启动、停止、暂停、恢复和重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 登录成功之后，就可以执行各种任务，如管理服务器或查询数据库。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211887"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
   若要将 Kerberos 身份验证用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则以下两个条件都必须得到满足：  
@@ -109,7 +109,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="Auto"></a> 自动注册 SPN  
  当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例启动时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务注册 SPN。 实例停止时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试取消此 SPN 的注册。 对于 TCP/IP 连接，注册 SPN 时使用的格式为 MSSQLSvc/\<FQDN>:\<tcpport>。命名实例和默认实例均将注册为 MSSQLSvc，可根据 \<tcpport> 值来区分这些实例。  
   
- 对于支持 Kerberos 的其他连接 SPN 注册格式*MSSQLSvc /\<FQDN >*:*\<instancename >* 对于命名实例。 注册默认实例的格式为 MSSQLSvc/\<FQDN>。  
+ 对于支持 Kerberos 的其他连接注册 SPN 时采用格式*MSSQLSvc /\<FQDN >*:*\<实例名 >* 对于命名实例。 注册默认实例的格式为 MSSQLSvc/\<FQDN>。  
   
  如果服务帐户缺少执行这些操作所需的权限，在注册或取消注册 SPN 时可能需要进行手动干预。  
   
@@ -162,8 +162,8 @@ WHERE session_id = @@SPID;
   
 |应用场景|身份验证方法|  
 |--------------|---------------------------|  
-|SPN 映射到正确的域帐户、虚拟帐户、MSA 或内置帐户。 例如 Local System 或 NETWORK SERVICE。<br /><br /> 注意： 正确意味着映射注册的 SPN 的帐户下运行 SQL Server 服务的帐户。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
-|SPN 是正确的域帐户、虚拟帐户、MSA 或内置帐户。<br /><br /> 注意： 正确意味着映射注册的 SPN 的帐户下运行 SQL Server 服务的帐户。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
+|SPN 映射到正确的域帐户、虚拟帐户、MSA 或内置帐户。 例如 Local System 或 NETWORK SERVICE。<br /><br /> 注意： 映射的已注册 SPN 的帐户是 SQL Server 服务下运行的帐户的正确方法。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
+|SPN 是正确的域帐户、虚拟帐户、MSA 或内置帐户。<br /><br /> 注意： 映射的已注册 SPN 的帐户是 SQL Server 服务下运行的帐户的正确方法。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
 |SPN 映射到不正确的域帐户、虚拟帐户、MSA 或内置帐户。|身份验证失败。|  
 |SPN 查找失败或未映射到正确的域帐户、虚拟帐户、MSA 或内置帐户，或者不是正确的域帐户、虚拟帐户、MSA 或内置帐户。|本地和远程连接使用 NTLM。|  
   

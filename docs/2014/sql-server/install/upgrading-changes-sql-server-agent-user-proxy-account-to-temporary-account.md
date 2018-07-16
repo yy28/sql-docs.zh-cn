@@ -1,5 +1,5 @@
 ---
-title: 升级将 SQL Server 代理用户代理帐户更改为临时的 UpgradedProxyAccount |Microsoft 文档
+title: 升级将 SQL Server 代理用户代理帐户更改为临时的 UpgradedProxyAccount |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
 ms.assetid: cd2d08c3-4e56-4034-8b68-0c78df8b5471
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9bae867b97a9fc63b97506fd8900e68b670b8013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 14b79ad393db1360520e060b118c8a4e280e358b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292087"
 ---
 # <a name="upgrading-will-change-the-sql-server-agent-user-proxy-account-to-the-temporary-upgradedproxyaccount"></a>升级会将 SQL Server 代理用户的代理帐户更改为临时的 UpgradedProxyAccount
   启用了日志传送的数据库维护计划在升级后将不会启用。  
@@ -37,6 +37,6 @@ ms.locfileid: "36014933"
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 代理日志传送作业类别导致升级失败](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   
- [日志传送升级后将不会运行](../../../2014/sql-server/install/log-shipping-will-not-run-after-upgrading.md)  
+ [升级后日志传送不会运行](../../../2014/sql-server/install/log-shipping-will-not-run-after-upgrading.md)  
   
   

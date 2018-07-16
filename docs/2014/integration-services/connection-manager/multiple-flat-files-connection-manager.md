@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
 - connections [Integration Services], flat files
@@ -20,20 +20,20 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68b9fcf9965a3245b869006d1177104702f8079d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88409baa25d3e54319dc5b824494ff6a51d159aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322737"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
   
- 当将多个平面文件连接管理器添加到包， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建将解析为在运行时，设置的属性的多个平面文件连接管理器中，多平面文件连接管理器的连接和将添加到多个平面文件连接管理器`Connections`包的集合。  
+ 在将多个平面文件连接管理器添加到包中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建连接将解析为在运行时，集多平面文件连接管理器，属性的多个平面文件连接管理器和将多个平面文件连接管理器为`Connections`包的集合。  
   
- `ConnectionManagerType`的连接管理器的属性设置为`MULTIFLATFILE`。  
+ `ConnectionManagerType`连接管理器属性设置为`MULTIFLATFILE`。  
   
  可以按下列方式配置多平面文件连接管理器：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36024878"
   
  如果多平面文件连接管理器引用多个文件，则所有文件必须具有相同格式。  
   
- 默认情况下，多平面文件连接管理器将字符串列的长度设置为 50 个字符。 在 **“多个平面文件连接管理器编辑器”** 对话框中，可以计算示例数据，并自动调整这些列的长度大小，以防止发生数据截断或超过列宽的情况。 除非在平面文件源或转换过程中调整列长度的大小，否则列长度将在整个数据流中保持不变。 如果这些列映射到更窄的目标列，则用户界面将显示警告，在运行时，则可能由于数据截断而发生错误。 可以在平面文件连接管理器、平面文件源或转换过程中调整列的大小，以便与目标列兼容。 若要修改输出列的长度，你可以设置`Length`属性上的输出列的**输入和输出属性**选项卡中**高级编辑器**对话框。  
+ 默认情况下，多平面文件连接管理器将字符串列的长度设置为 50 个字符。 在 **“多个平面文件连接管理器编辑器”** 对话框中，可以计算示例数据，并自动调整这些列的长度大小，以防止发生数据截断或超过列宽的情况。 除非在平面文件源或转换过程中调整列长度的大小，否则列长度将在整个数据流中保持不变。 如果这些列映射到更窄的目标列，则用户界面将显示警告，在运行时，则可能由于数据截断而发生错误。 可以在平面文件连接管理器、平面文件源或转换过程中调整列的大小，以便与目标列兼容。 若要修改输出列的长度，则设置`Length`上的输出列的属性**输入和输出属性**选项卡中**高级编辑器**对话框。  
   
  在已添加并配置了使用连接管理器的平面文件源之后，如果在多平面文件连接管理器中更新了列长度，则不必在平面文件源中手动调整输出列的大小。 打开 **“平面文件源”** 对话框时，平面文件源将提供同步列元数据的选项。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36024878"
   
 -   [多平面文件连接管理器编辑器&#40;预览页&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[添加连接以编程方式](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [平面文件源](../data-flow/flat-file-source.md)   
  [平面文件目标](../data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41;连接](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
   
   

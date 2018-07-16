@@ -5,24 +5,23 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8af441227c9a584b6252d5d02b7e9989a772d526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0c12ef425f898b8406884fef8eff27c8c80c3df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329327"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
   说明统计语义搜索的必备组件以及如何安装或检查它们。  
@@ -57,7 +56,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> 如何： 安装、 附加，并注册语义语言统计数据库  
+###  <a name="HowToInstallModel"></a> 如何： 安装、 附加和注册语义语言统计数据库  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不安装语义语言统计数据库。 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下操作：  
   
  **1.安装语义语言统计数据库。**  

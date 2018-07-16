@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dece50e60880028f74cc43fa5bf4c9f78a0ca09a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 35f2a9ee4494805d9c451a0f03357acd3cc47dc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317997"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>示例：指定带有 ELEMENTS 指令的 XSINIL
   以下查询将指定 `ELEMENTS` 指令以根据查询结果生成以元素为中心的 XML。  

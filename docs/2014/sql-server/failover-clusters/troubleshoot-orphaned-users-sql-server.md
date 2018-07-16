@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - orphaned users [SQL Server]
 - logins [SQL Server], orphaned users
@@ -19,18 +18,18 @@ helpviewer_keywords:
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 97bef9ba2298766539d6b852bb41bb89c716c829
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5ac7577269daca9d8d5974c3a98ade1a681d6d79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317847"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户故障排除 (SQL Server)
-  要登录到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，主体必须有一个有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证是否允许主体连接到该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器实例上的登录名中是可见的**sys.server_principals**目录视图和**sys.syslogins**兼容性视图。  
+  要登录到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，主体必须有一个有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证是否允许主体连接到该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器实例上的登录名都显示在**sys.server_principals**目录视图和**sys.syslogins**兼容性视图。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名使用映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户访问各个数据库。 此规则有两种例外情况：  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36016085"
  在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 另外，在数据库还原或附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他实例之后，数据库用户也可能变为孤立用户。 如果未在新服务器实例中提供数据库用户映射到的 SID，则该用户可能变为孤立用户。  
   
 > [!NOTE]  
->  A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名不能访问在其中它缺少相应的数据库用户除非数据库**来宾**启用该数据库中。 有关创建数据库用户帐户的信息，请参阅[CREATE USER &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)。  
+>  一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名不能访问的数据库在其中它缺少对应的数据库用户除非**来宾**启用该数据库中。 有关创建数据库用户帐户的信息，请参阅[CREATE USER &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)。  
   
 ## <a name="to-detect-orphaned-users"></a>检测孤立用户  
  若要检测孤立用户，请执行下列 Transact-SQL 语句：  
@@ -62,12 +61,12 @@ GO;
  输出中列出了当前数据库中未链接到任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户以及对应的安全标识符 (SID)。 有关详细信息，请参阅[sp_change_users_login &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)。  
   
 > [!NOTE]  
->  **sp_change_users_login**不能与使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都从 Windows 创建的登录名。  
+>  **sp_change_users_login**不能用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都从 Windows 创建的登录名。  
   
 ## <a name="to-resolve-an-orphaned-user"></a>解决孤立用户问题  
  若要解决孤立用户问题，请执行以下过程：  
   
-1.  以下命令重新链接由指定的服务器登录帐户 *< login_name >* 与由指定的数据库用户 *< database_user >*。  
+1.  以下命令将重新链接由指定的服务器登录帐户 *< login_name >* 指定的数据库用户与 *< database_user >*。  
   
     ```  
     USE <database_name>;  
@@ -79,7 +78,7 @@ GO;
   
      有关详细信息，请参阅[sp_change_users_login &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)。  
   
-2.  运行上述步骤中的代码后，该用户就可以访问数据库了。 用户然后可以更改的密码 *< login_name >* 使用的登录帐户**sp_password**存储过程，如下：  
+2.  运行上述步骤中的代码后，该用户就可以访问数据库了。 用户然后可以更改的密码 *< login_name >* 使用的登录帐户**sp_password**存储过程中，按如下所示：  
   
     ```  
     USE master   

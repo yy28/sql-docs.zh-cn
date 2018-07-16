@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205677"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是 Internet Information Services (IIS) 托管的 Web 应用程序。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅在 Internet Explorer (IE) 7 或更高版本的工作原理。 IE 7 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是 Internet Information Services (IIS) 托管的 Web 应用程序。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅适用于 Internet 资源管理器 (IE) 7 或更高版本。 IE 7 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
   
  使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以创建和配置 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上配置 IIS，因此适用于初始 Web 配置任务。 例如，配置具有单个 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 环境，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的扩展部署中配置第一个 Web 应用程序。 使用 IIS 工具来执行一些更复杂的任务，如在扩展部署中配置多个 Web 服务器。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "36126878"
 ### <a name="operating-system"></a>操作系统  
  下面的 Windows 操作系包括 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序和 Web 服务所需的 Internet Information Services (IIS) 功能。  
   
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer （64 位） x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise （64 位） x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence（64 位）x64|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 开发人员 （64 位） x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] （64 位） X64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence（64 位）x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional、Enterprise 和 Ultimate<br /><br /> Windows 8.0 Professional、Enterprise 和 Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- 有关支持的版本的 Windows 操作系统的完整列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 有关支持的版本的 Windows 操作系统的完整列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  在使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 您可以从 [此处](http://go.microsoft.com/fwlink/?LinkId=243096)安装 Silverlight 5。  
@@ -47,7 +47,7 @@ ms.locfileid: "36126878"
  在 Windows Server 2008 R2 中，可以使用 **“服务器管理器”**（在 Microsoft 管理控制台 (MMC) 中提供）来安装 **“Web 服务器(IIS)”** 角色和以下必需的角色服务。  
   
 > [!NOTE]  
->  上[!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]和 Windows 7 操作系统，使用**程序和功能**控制面板启用这些选项中**Windows 功能**对话框。  
+>  上[!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]和 Windows 7 操作系统，使用**程序和功能**控制面板启用中的这些选项中**Windows 功能**对话框。  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36126878"
 |Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布]<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> “性能”<br /><br /> 静态内容压缩<br /><br /> Security<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>功能（Windows Server 2008 或 Windows Server 2008 R2、Windows 7 操作系统）  
- 上[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]或 Windows Server 2008 R2，你可以使用**服务器管理器**来安装以下必需的功能。  
+ 上[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]或 Windows Server 2008 R2，您可以使用**服务器管理器**来安装以下必需的功能。  
   
 > [!NOTE]  
->  上[!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]和 Windows 7 操作系统，使用**程序和功能**控制面板启用这些选项中**Windows 功能**对话框。  
+>  上[!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]和 Windows 7 操作系统，使用**程序和功能**控制面板启用中的这些选项中**Windows 功能**对话框。  
   
 ||  
 |-|  

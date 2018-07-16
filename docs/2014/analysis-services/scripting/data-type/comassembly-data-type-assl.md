@@ -1,5 +1,5 @@
 ---
-title: ComAssembly 数据类型 (ASSL) |Microsoft 文档
+title: ComAssembly 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe3a7791d02d97b4283b63a1aedd3b6702fe563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171548"
 ---
 # <a name="comassembly-data-type-assl"></a>ComAssembly 数据类型 (ASSL)
   定义一个派生的数据类型，表示与关联的 COM 库[服务器](../objects/server-element-assl.md)或[数据库](../objects/database-element-assl.md)元素。  
@@ -61,12 +61,12 @@ ms.locfileid: "36128191"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[数据源](../properties/source-element-comassembly-assl.md)|  
-|派生元素|请参阅[程序集](../objects/assembly-element-assl.md)([程序集](../collections/assemblies-element-assl.md)集合[数据库](../objects/database-element-assl.md)或[服务器](../objects/server-element-assl.md))|  
+|派生元素|请参阅[程序集](../objects/assembly-element-assl.md)([程序集](../collections/assemblies-element-assl.md)的集合[数据库](../objects/database-element-assl.md)或者[Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- `ComAssembly`元素包含与实例关联的 COM 库 （完全限定的文件名或的编程标识符） 的引用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]或的实例上的特定数据库[!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
+ `ComAssembly`元素包含与实例相关联对 COM 库 （完全限定的文件名或编程标识符） 的引用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]或与特定数据库上的实例[!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ComAssembly>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ComAssembly>。  
   
 ## <a name="see-also"></a>请参阅  
  [ClrAssembly 数据类型&#40;ASSL&#41;](assembly-data-type-assl.md)   

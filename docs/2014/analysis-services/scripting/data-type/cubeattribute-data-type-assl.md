@@ -1,5 +1,5 @@
 ---
-title: CubeAttribute 数据类型 (ASSL) |Microsoft 文档
+title: CubeAttribute 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dce594145db99d7edfa991c2e975f62e55d3ef34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319347"
 ---
 # <a name="cubeattribute-data-type-assl"></a>CubeAttribute 数据类型 (ASSL)
-  定义一个基元数据类型，表示与关联的特性[多维数据集](../objects/cube-element-assl.md)元素。  
+  定义一个基元数据类型，表示与关联的属性[多维数据集](../objects/cube-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,18 +62,18 @@ ms.locfileid: "36026016"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[AggregationUsage](../properties/aggregationusage-element-assl.md)，[批注](../collections/annotations-element-assl.md)， [AttributeHierarchyEnabled](../properties/enabled-element-assl.md)， [AttributeHierarchyOptimizedState](../properties/state-element-assl.md)， [AttributeHierarchyVisible](../properties/visible-element-assl.md)， [AttributeID](../properties/id-element-assl.md)|  
-|派生元素|[属性](../objects/attribute-element-assl.md)([属性](../collections/attributes-element-assl.md)集合[CubeDimension](dimension-data-type-assl.md))|  
+|派生元素|[特性](../objects/attribute-element-assl.md)([特性](../collections/attributes-element-assl.md)的集合[CubeDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- *AttributeHierarchyOptimizedState*为 1 或 2 (SharePoint 或表格模式，用于运行 PowerPivot 和表格模型数据库） 的属性值在 deploymentmode 的情况下配置中运行服务时，不支持元素。  
+ *AttributeHierarchyOptimizedState*在 DeploymentMode 配置属性值为 1 或 2 （SharePoint 或表格模式，用于运行 PowerPivot 和表格模型数据库） 运行服务时，不支持元素。  
   
- 属性不能添加为层次结构级别时，将该属性*AtttributeHierarchyEnabled*，设置为 FALSE，并且实例在 DeploymentMode 1 或 2 （SharePoint 或表格服务器模式） 下运行。  
+ 属性不能作为层次结构级别添加时属性， *AtttributeHierarchyEnabled*，设置为 FALSE 并且该实例正在 DeploymentMode 1 或 2 （SharePoint 或表格服务器模式） 下操作。  
   
- 中的属性[CubeDimension](dimension-data-type-assl.md)元素未显式包含在[属性](../collections/attributes-element-assl.md)集合成为属于具有默认值分配给他们的集合。 属性添加到集合之后，可以通过返回的属性[发现](../../xmla/xml-elements-methods-discover.md)方法。  
+ 中的属性[CubeDimension](dimension-data-type-assl.md)未显式包含在元素[属性](../collections/attributes-element-assl.md)集合变得具有分配给它们的默认值的集合的一部分。 属性添加到集合后，可以通过返回属性[发现](../../xmla/xml-elements-methods-discover.md)方法。  
   
- [AggregationUsage](../properties/aggregationusage-element-assl.md)元素控件如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]自动设计聚合的属性。 `AggregationUsage` 元素不会约束手动为多维数据集创建的任何聚合。  
+ [AggregationUsage](../properties/aggregationusage-element-assl.md)元素控制如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]自动设计属性的聚合。 `AggregationUsage` 元素不会约束手动为多维数据集创建的任何聚合。  
   
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CubeAttribute>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.CubeAttribute>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

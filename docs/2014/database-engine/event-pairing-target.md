@@ -1,5 +1,5 @@
 ---
-title: 事件配对目标 |Microsoft 文档
+title: 事件配对目标 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291333"
 ---
 # <a name="event-pairing-target"></a>事件配对目标
   事件配对目标使用两个事件中存在的一列或多列数据来对这两个事件进行匹配。 许多事件是成对的，例如，锁获取和锁释放。 对某个事件序列配对完毕，便会放弃这两个事件。 放弃匹配完毕的事件便于检测哪些获取的锁尚未释放。  
@@ -47,7 +47,7 @@ ms.locfileid: "36015304"
   
  系统将捕获并存储与某个事件相关联的所有数据，以供将来配对之用。 此外，还将收集由操作添加的数据。 收集的事件数据存储在内存中，因此会有一定的限制。 此限制基于系统容量和活动。 所用内存量将根据可用系统资源来决定，而不是以最大内存量作为限定因素。 内存不足时，将删除已经保留的不成对事件。 如果某事件尚未成对便被删除，则与之匹配的事件将作为不成对事件出现。  
   
- 配对目标会将不成对事件序列化为 XML 格式。 此格式不遵从任何架构， 只包含两种元素类型。 **\<不成对 >** 元素是根后, 跟一个元素。 **\<事件 >** 当前是否正在跟踪的每个不成对事件的元素。 **\<事件 >** 元素包含一个属性，其中包含不成对事件的名称。  
+ 配对目标会将不成对事件序列化为 XML 格式。 此格式不遵从任何架构， 只包含两种元素类型。 **\<不成对 >** 元素是根，跟一个元素。 **\<事件 >** 当前是否正在跟踪的每个不成对事件的元素。 **\<事件 >** 元素包含一个属性，其中包含不成对事件的名称。  
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将配对目标添加到扩展事件会话，您必须在创建或更改事件会话时包括下面的语句：  

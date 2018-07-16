@@ -1,5 +1,5 @@
 ---
-title: 图像属性对话框，常规 （报表生成器和 SSRS） |Microsoft 文档
+title: 图像属性对话框，常规 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 26c0378caeca7fd904cd793bc483dd28a464a5d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7137b65223a092cc136db7fda21cd2cd0e5c2ce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292207"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
   在 **“图像属性”** 对话框中选择 **“常规”** 可添加图片、更改图像的默认名称，还可以添加工具提示文本。  
@@ -43,7 +43,7 @@ ms.locfileid: "36014247"
   
 -   **数据库** 如果您希望包括表示您要包含在报表中的图像的数据库字段名称，请选择此选项。  
   
- **使用此图像**  
+ **使用此映像**  
  选择“嵌入”或“外部”选项时，便会出现此选项。  
   
  如果要嵌入图像，请从下拉列表中选择要添加到报表中的图像。 单击“导入”按钮可将图像添加到下拉列表中。  

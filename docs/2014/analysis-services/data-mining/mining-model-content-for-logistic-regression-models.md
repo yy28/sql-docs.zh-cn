@@ -1,5 +1,5 @@
 ---
-title: 逻辑回归模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 逻辑回归模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328927"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -144,7 +144,7 @@ ms.locfileid: "36014206"
  从父节点到达该节点的概率。 对于逻辑回归模型，始终为 0。  
   
  NODE_DISTRIBUTION  
- 包含节点的统计信息的嵌套表。 此表，以便每个节点类型的内容的详细信息，请参阅部分，了解 NODE_DISTRIBUTION 表中[挖掘模型内容神经网络模型的&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ 包含节点的统计信息的嵌套表。 有关该表中的每个节点类型的内容的详细信息，请参阅了解 NODE_DISTRIBUTION 表中的部分[神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  对于逻辑回归模型，始终为 0。  

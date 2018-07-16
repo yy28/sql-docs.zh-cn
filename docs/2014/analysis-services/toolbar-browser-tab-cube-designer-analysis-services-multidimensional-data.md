@@ -1,5 +1,5 @@
 ---
-title: 工具栏 （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft 文档
+title: 工具栏 （浏览器选项卡，多维数据集设计器） (Analysis Services-多维数据) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c20904d56add8256de37351c1435d06f8f526277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300917"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在设计或浏览多维数据集或其对象或在创建 MDX 查询期间，使用多维数据集设计器的 **“工具栏”** 中的功能可以执行常规操作。 在设计时和查询视图中均可执行的操作包括设置用户上下文、处理对象以及设置默认语言。  
@@ -66,7 +66,7 @@ ms.locfileid: "36015105"
 |**升序排序**|单击此项可以按 **“语言”** 中指定语言的升序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> **注意** 只有在“报表”窗格中选择了单元时，才会启用此选项。|  
 |**降序排序**|单击此项可以按 **“语言”** 中指定语言的降序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> 注意：只有在“报表”窗格中选择了单元时，才会启用此选项。 |  
 |**自动筛选器**|单击此项可以自动筛选 **“结果”** 窗格中的结果。|  
-|**显示仅上/下**|选择一个值或百分比，基于所选度量值在 **“报表”** 窗格中只显示最前面或最后面指定数量或百分比的单元。<br /><br /> 有关此选项的详细信息，请参阅 [TopCount (MDX)](/sql/mdx/topcount-mdx)、[TopPercent (MDX)](/sql/mdx/toppercent-mdx)、[BottomCount (MDX)](/sql/mdx/bottomcount-mdx) 和 [BottomPercent (MDX)](/sql/mdx/bottompercent-mdx)。|  
+|**显示仅顶部/底部**|选择一个值或百分比，基于所选度量值在 **“报表”** 窗格中只显示最前面或最后面指定数量或百分比的单元。<br /><br /> 有关此选项的详细信息，请参阅 [TopCount (MDX)](/sql/mdx/topcount-mdx)、[TopPercent (MDX)](/sql/mdx/toppercent-mdx)、[BottomCount (MDX)](/sql/mdx/bottomcount-mdx) 和 [BottomPercent (MDX)](/sql/mdx/bottompercent-mdx)。|  
 |**小计**|单击此项可以显示小计。|  
 |**所有项总计**|单击此项可以在 **“报表”** 窗格中显示所有成员的总计。|  
 |**显示空单元格**|单击此项可以在 **“报表”** 窗格中显示空单元。|  

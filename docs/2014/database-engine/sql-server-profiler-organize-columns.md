@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-组织列 |Microsoft 文档
+title: SQL Server Profiler-组织列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.organize.columns.f1
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69622d02bbe0eae497f7d6e463ea6d40eb6536cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1bfa74b1d6f8eb7f3c13c294aba37bfb88f7e995
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162908"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - 组织列
   使用 **“组织列”** 对话框可为跟踪中所显示的分组或聚合事件选择数据列，以便查看和分析较大的跟踪文件或跟踪表。  
@@ -52,9 +52,9 @@ ms.locfileid: "36127773"
  选择数据列之后，单击“向下”可将数据列从“组”中移出。 您也可以单击 **“向下”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
   
 ## <a name="see-also"></a>请参阅  
- [组织跟踪中显示的列&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [创建跟踪&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [创建跟踪模板&#40;SQL Server 事件探查器&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [组织跟踪中显示的列&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
+ [创建跟踪&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [创建跟踪模板&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [打开跟踪文件 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [打开跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 神经网络算法 |Microsoft 文档
+title: Microsoft 神经网络算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202047"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法合并每个可能状态的具有可预测属性，每个可能状态的输入属性并使用定型数据来计算概率。 之后，可以根据输入属性，将这些概率用于分类或回归，并预测被预测属性的结果。  
+  在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，则[!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法组合输入属性的每个可能状态的可预测属性，每个可能状态，并使用定型数据来计算概率。 之后，可以根据输入属性，将这些概率用于分类或回归，并预测被预测属性的结果。  
   
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经元网络算法构造的挖掘模型可以包含多个网络，这取决于用于输入和预测的列的数量，或者取决于仅用于预测的列的数量。 一个挖掘模型包含的网络数取决于挖掘模型使用的输入列和预测列包含的状态数。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "36128418"
 -   分析多个输入和相对较少的输出之间的复杂关系的任何预测模型。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法创建由神经元的最多三个层组成的网络。 这些层分别是输入层、可选隐藏层和输出层。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法创建的最多三层神经元组成的网络。 这些层分别是输入层、可选隐藏层和输出层。  
   
- **输入的层：** 输入神经元定义数据挖掘模型，以及其概率的所有输入的属性值。  
+ **输入的层：** 输入神经元定义数据挖掘模型和及其概率的所有输入的属性值。  
   
- **隐藏层：** 隐藏神经元接收来自输入神经元输入，并提供要输出神经元的输出。 隐藏层是向各种输入概率分配权重的位置。 权重说明某一特定输入对于隐藏神经元的相关性或重要性。 输入所分配的权重越大，则输入的值越重要。 权重可为负值，表示输入抑制而不是促进某一特定结果。  
+ **隐藏层：** 隐藏神经元接收来自输入神经元的输入，并向输出神经元提供输出。 隐藏层是向各种输入概率分配权重的位置。 权重说明某一特定输入对于隐藏神经元的相关性或重要性。 输入所分配的权重越大，则输入的值越重要。 权重可为负值，表示输入抑制而不是促进某一特定结果。  
   
  **输出层：** 输出神经元代表数据挖掘模型的可预测属性值。  
   

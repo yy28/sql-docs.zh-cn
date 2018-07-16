@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299817"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
   地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -33,7 +33,7 @@ ms.locfileid: "36014743"
   
  向报表添加地图或向地图添加地图层之前，必须具有以下信息：  
   
--   **空间数据源。** 位置或连接到提供空间数据，例如，某个源的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例和数据库包含空间数据或环境 Systems Research Institute，Inc.(ESRI) 形状文件的名称。  
+-   **空间数据源。** 例如，提供空间数据的源的名称与连接的位置[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例和数据库包含空间数据或 Environmental Systems Research Institute，Inc.(ESRI) 形状文件的名称。  
   
 -   **空间数据的第三方站点。** 来自空间数据源，是包含用于指定位置的一系列坐标的字段。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36014743"
   
  单击向导页标题以获得相应的帮助内容。 您看到的页面取决于您选择的地图类型、空间数据源和分析数据源。  
   
-1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可以来自地图库，环境 Systems Research Institute，Inc.(ESRI) 形状文件中，或中的空间数据来自[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]关系数据库。  
+1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可以来自地图库、 Environmental Systems Research Institute，Inc.(ESRI) 形状文件，或中的空间数据来自[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]关系数据库。  
   
     -   [什么是空间数据？](#SpatialData)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36014743"
   
  有关图块的详细信息，请参阅 [Bing 地图图块系统](http://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[疑难解答报表： 地图报表&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划的映射"中在[Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中.  
+ 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划地图"中在[Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中.  
   
  有关自定义图块层的其他方式的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

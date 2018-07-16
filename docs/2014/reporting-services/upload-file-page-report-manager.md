@@ -1,5 +1,5 @@
 ---
-title: 上载文件页 （报表管理器） |Microsoft 文档
+title: 上载文件页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5cdc35c029b40489e43e8e8b5715846cdab1fa6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272313"
 ---
 # <a name="upload-file-page-report-manager"></a>“上载文件”页（报表管理器）
   使用“上载文件”页可以将文件从文件系统发布到报表服务器数据库。 上载的文件将显示为报表服务器文件夹层次结构中的项。  
   
 -   上载的 .rdl 文件将以报表形式发布到报表服务器。  
   
--   如果上载的 .smdl 文件包含数据源视图信息，则这些文件将作为报表模型发布。 如果这些文件缺少数据源视图引用，则上载时将出现错误。 如果上载.smdl 文件从数据源视图信息可能丢失[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]报表模型项目。 在报表模型项目中，数据源视图信息存储在 .smdl 文件之外的单独文件中。  
+-   如果上载的 .smdl 文件包含数据源视图信息，则这些文件将作为报表模型发布。 如果这些文件缺少数据源视图引用，则上载时将出现错误。 如果上载.smdl 文件从数据源视图信息可能会丢失[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]报表模型项目。 在报表模型项目中，数据源视图信息存储在 .smdl 文件之外的单独文件中。  
   
      包含数据源视图信息（因此能够成功上载）的模型文件是以前已发布到报表服务器、之后又从该服务器保存到文件系统上某文件的那些文件。 如果打开某模型的“常规属性”页，再单击 **“编辑”** 来打开该模型，则可以将该模型保存到文件，再将该文件作为新模型上载到报表服务器。 随后上载的 .smdl 文件将包含发布模型所需的所有信息。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36128021"
  所上载的项放在当前的文件夹中。 完成上载后，可以将该项移动至其他位置。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  

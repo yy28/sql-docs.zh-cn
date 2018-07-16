@@ -1,5 +1,5 @@
 ---
-title: 配置本机模式报表服务器扩展部署 （SSRS 配置管理器） |Microsoft 文档
+title: 配置本机模式报表服务器扩展部署 （SSRS 配置管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36026089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296067"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>配置本机模式报表服务器扩展部署（SSRS 配置管理器）
   Reporting Services 本机模式支持扩展部署模式。该模式允许运行共享单个报表服务器数据库的多个报表服务器实例。 扩展部署用来增加报表服务器的可扩展性，以处理更多的并发用户和更大的报表执行负载， 还可用来在特定服务器上专门处理交互式报表或计划报表。  
@@ -42,7 +42,7 @@ ms.locfileid: "36026089"
   
  **若要计划、安装和配置扩展部署，请按照下列步骤操作：**  
   
--   查看[从安装向导安装 SQL Server 2014&#40;安装&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关如何安装报表服务器实例的说明联机丛书。  
+-   审阅[从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关如何安装报表服务器实例的说明联机丛书。  
   
 -   如果打算在网络负载平衡 (NLB) 群集上承载扩展部署，则应当在配置扩展部署之前配置 NLB 群集。 有关详细信息，请参阅 [在网络负载平衡群集上配置报表服务器](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36026089"
   
      ![“扩展部署”页的部分屏幕快照](../../../2014/sql-server/install/media/scaloutscreen.gif "“扩展部署”页的部分屏幕快照")  
   
-3.  在向外扩展部署页上，选择正在等待联接部署，并单击报表服务器实例**添加服务器**。  
+3.  在扩展部署页上，选择报表服务器实例正在等待联接部署，然后单击**添加服务器**。  
   
     > [!NOTE]  
     >  **问题：** 尝试将一个 Reporting Services 报表服务器实例联接到扩展部署时，你可能遇到类似“拒绝访问”的错误消息。  

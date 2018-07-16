@@ -1,5 +1,5 @@
 ---
-title: 轴属性对话框，轴选项 （报表生成器和 SSRS） |Microsoft 文档
+title: 轴属性对话框，轴选项 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 947b985ef25eec47ec8f064c752c5dad49fdf30b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b769fd686ba2bd32611b073cfe08a71e224d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315447"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）
-  选择**轴选项**上**水平**或**VerticalAxis 属性**对话框中，可以定义图表指定轴的外观。 在以前版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，默认情况下，图表会在 X 轴上显示所有标签。 但在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，图表会跳过一些标签，以使生成的图表更加整洁，并避免标签冲突。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
+  选择**轴选项**上**水平**或**垂直轴属性**对话框可以定义图表指定轴的外观。 在以前版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，默认情况下，图表会在 X 轴上显示所有标签。 但在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，图表会跳过一些标签，以使生成的图表更加整洁，并避免标签冲突。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>“常规”  
  **启用刻度分隔线**  
  选择此选项可在必要时启用图表以绘制小数位数分隔符。 启用此选项后，图表将自动计算数据集中高点与低点之间是否存在足够的差异以绘制小数位数分隔符。  
   
- **反转方向**  
+ **方向变为相反方向**  
  选择此选项可以反转图表的方向。 例如，默认情况下，柱形图在图表的左侧显示 Y 轴，并从左向右显示类别。 选择了此选项后，图表将在其右侧显示 Y 轴并从右向左显示类别。  
   
  **使用交错颜色**  
@@ -54,7 +54,7 @@ ms.locfileid: "36016771"
  **最大值**  
  键入一个表示 X 轴最大值的表达式或值。 如果省略此参数，最大值将由数据集返回的数据决定。  
   
- **间隔**  
+ **时间间隔**  
  键入表示轴标签之间间隔的表达式或值。 例如，键入 1 将在轴上显示每个类别标签。 键入 2 将每隔一个类别标签显示一次。 如果省略，则将基于数据集中的值自动计算标签。  
   
  **间隔类型**  
@@ -71,6 +71,6 @@ ms.locfileid: "36016771"
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [辅助轴上绘制数据&#40;报表生成器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [迷你图和数据条（报表生成器和 SSRS）](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [添加或从图表中删除边距&#40;报表生成器和 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [添加或删除边距在图表中&#40;报表生成器和 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

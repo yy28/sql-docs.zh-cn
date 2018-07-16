@@ -1,5 +1,5 @@
 ---
-title: 检索数据使用 AdomdDataReader |Microsoft 文档
+title: 使用 AdomdDataReader 检索数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ed47d13aab29ea47c5f1d041705029844e359e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321227"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>使用 AdomdDataReader 检索数据
   在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象可在开销和交互功能之间实现较好的平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象将从分析数据源检索只读、只进的平展数据流。 此未经缓冲的数据流使过程逻辑能够有效地按顺序处理分析数据源的结果。 当检索大量数据用于显示时，使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是一个不错的选择，因为这些数据未在内存中缓存。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 还可通过在数据可用后随即对数据进行检索（而不是等待返回查询的完整结果）来提高应用程序的性能。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 还可减少系统开销，因为默认情况下，此读取器一次仅在内存中存储一行。  
   
- 优化性能的代价在于 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象所提供的有关已检索数据的信息少于其他数据检索方法所提供的信息。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象不支持用于表示数据或元数据的大型对象模型，此对象模型也不允许使用更复杂的分析功能，例如单元写回。 但是，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象提供一组用于检索单元集数据的强类型方法，并且还提供一种用于检索表格格式单元集元数据的方法。 此外，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>实现**IDbDataReader**接口到支持数据绑定和用于检索数据使用`SelectCommand`方法，从**System.Data**的命名空间Microsoft.NET Framework 类库。  
+ 优化性能的代价在于 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象所提供的有关已检索数据的信息少于其他数据检索方法所提供的信息。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象不支持用于表示数据或元数据的大型对象模型，此对象模型也不允许使用更复杂的分析功能，例如单元写回。 但是，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象提供一组用于检索单元集数据的强类型方法，并且还提供一种用于检索表格格式单元集元数据的方法。 此外，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>实现**IDbDataReader**接口支持数据绑定以及使用检索的数据`SelectCommand`方法，从**System.Data**的命名空间Microsoft.NET Framework 类库。  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>使用 AdomdDataReader 检索数据  
  若要使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象检索数据，请按以下步骤操作：  
@@ -88,7 +88,7 @@ objReader.Close();
 ```  
   
 ## <a name="retrieving-metadata-from-the-adomddatareader"></a>使用 AdomdDataReader 检索元数据  
- 打开 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象的实例后，可使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A> 方法检索有关当前记录集的架构信息或元数据。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>返回`DataTable`使用当前的记录集的架构信息填充的对象。 在 `DataTable` 中，记录集的每一列都将占一行。 架构表行的每个列都映射到在单元集中返回的列的属性，其中 `ColumnName` 为该属性的名称，列的值为该属性的值。  
+ 打开 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象的实例后，可使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A> 方法检索有关当前记录集的架构信息或元数据。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>返回`DataTable`当前记录集的架构信息填充的对象。 在 `DataTable` 中，记录集的每一列都将占一行。 架构表行的每个列都映射到在单元集中返回的列的属性，其中 `ColumnName` 为该属性的名称，列的值为该属性的值。  
   
 ### <a name="example-of-retrieving-metadata-from-the-adomddatareader"></a>使用 AdomdDataReader 检索元数据的示例  
  下面的代码示例将写出 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象的架构信息。  
@@ -121,8 +121,8 @@ foreach (DataRow objRow in schemaTable.Rows)
  数据挖掘支持嵌套表的概念，ADOMD.NET 将此概念公开为嵌套行集。 若要检索与每行关联的嵌套行集，请调用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A> 方法。  
   
 ## <a name="see-also"></a>请参阅  
- [从分析数据源检索数据](retrieving-data-from-an-analytical-data-source.md)   
- [使用单元集中检索数据](retrieving-data-using-the-cellset.md)   
+ [从分析数据源中检索数据](retrieving-data-from-an-analytical-data-source.md)   
+ [使用 CellSet 检索数据](retrieving-data-using-the-cellset.md)   
  [使用 XmlReader 检索数据](retrieving-data-using-the-xmlreader.md)  
   
   
