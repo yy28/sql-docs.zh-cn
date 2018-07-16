@@ -1,5 +1,5 @@
 ---
-title: 选择表和视图 （数据馈送） (SSAS) |Microsoft 文档
+title: 选择表和视图 （数据馈送） (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviewsdf.f1
 ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 199e225e6a3a4b63c704606418fae021b1ba3e9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0864ee8b70f104abb02e7064d3f011495f193c3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208097"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>选择表和视图（数据馈送）(SSAS)
   **“表导入向导”** 的这一页可用于选择要从其导入数据的表和视图。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

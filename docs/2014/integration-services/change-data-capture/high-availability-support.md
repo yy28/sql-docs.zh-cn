@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a60dd1f961ca2e98787e4ba215d6893722083d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ebf240434df77c1f860e31952f12ec3eb0d13a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271323"
 ---
 # <a name="high-availability-support"></a>高可用性支持
   Oracle CDC 服务是为高可用性而设计的。 下列功能为高可用性支持助一臂之力：  
@@ -28,7 +28,7 @@ ms.locfileid: "36125654"
   
 -   Oracle CDC 服务可以使用群集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，因此，它可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例故障转移到其他群集节点后恢复。 Oracle CDC 服务计算机管理员仅需在创建 Oracle CDC 服务时指定与群集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接信息。  
   
--   Oracle CDC 服务可以使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **AlwaysOn**数据库镜像功能。 此支持要求 MSXDBCDC 和所有 CDC 数据库都位于同一个可用性组中。 它还需要 Oracle CDC 服务计算机管理员以指定合适**AlwaysOn**连接信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用性组 (例如，连接属性`Failover_Partner and Network=dbmssocn`)。 这允许 CDC 服务在故障转移后自动恢复在数据库的辅助副本上的处理。  
+-   Oracle CDC 服务可以使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **AlwaysOn**数据库镜像功能。 此支持要求 MSXDBCDC 和所有 CDC 数据库都位于同一个可用性组中。 它还要求 Oracle CDC 服务计算机管理员以指定合适**AlwaysOn**的连接信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用性组 (例如，连接属性`Failover_Partner and Network=dbmssocn`)。 这允许 CDC 服务在故障转移后自动恢复在数据库的辅助副本上的处理。  
   
 -   Oracle CDC 服务可以配置为 Windows 故障转移群集上的一般服务资源（可与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起也可以独立于后者），从而可以轻松地故障转移和回退针对群集的 CDC 处理。 若要将某一 Oracle CDC 服务配置为某个故障转移群集中的资源，系统管理员必须将该 Oracle CDC 服务配置为该故障转移群集上各节点的一般服务资源。  
   

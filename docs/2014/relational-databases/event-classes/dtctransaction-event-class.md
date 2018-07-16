@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a86cfec0f14eb0ed7f1f1012a90e88181d868b84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08472e53897bf28b872080cb596780b82216f514
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163048"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件类
   使用 **DTCTransaction** 事件类可以监视通过 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分布式事务处理协调器 (DTC) 进行协调的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事务的状态。 这包括涉及同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的两个或多个数据库的事务或涉及两个或多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的分布式事务。  

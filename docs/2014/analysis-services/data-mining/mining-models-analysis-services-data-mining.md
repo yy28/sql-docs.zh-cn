@@ -1,5 +1,5 @@
 ---
-title: 挖掘模型 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 挖掘模型 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - mining models [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 203295e2c3c45c5e9d67228e5009bc130d0d49eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ea9bf0ccedda65e75928aa4cca94e65e3901d4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228375"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
   “挖掘模型”是通过将算法应用于数据创建的  ，但挖掘模型并不仅仅是算法或元数据容器：它是可应用于新数据以便生成预测和对关系进行推断的数据、统计信息和模式的集合。  
@@ -94,9 +94,9 @@ ms.locfileid: "36125493"
   
  此外，每个挖掘模型还包含两个特殊属性： <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
   
--   **Algorithm 属性** 指定创建模型所使用的算法。 可用的算法取决于您所使用的访问接口。 有关附带的算法的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 属性应用于挖掘模型，并且对于每个模型，只能设置该属性一次。 以后您可以更改算法，但如果挖掘模型中的某些列不受您所选算法的支持，则这些列可能会无效。 在对此属性进行更改后，您必须始终重新处理该模型。  
+-   **Algorithm 属性** 指定创建模型所使用的算法。 可用的算法取决于您所使用的访问接口。 有关所含的算法的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[Data Mining Algorithms &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 属性应用于挖掘模型，并且对于每个模型，只能设置该属性一次。 以后您可以更改算法，但如果挖掘模型中的某些列不受您所选算法的支持，则这些列可能会无效。 在对此属性进行更改后，您必须始终重新处理该模型。  
   
--   **Usage 属性** 定义模型使用每个列的方式。 你可以定义作为列用法`Input`， `Predict`， `Predict Only`，或`Key`。 `Usage` 属性应用于挖掘模型的各个列，且必须为模型中包含的每个列分别设置此属性。 如果结构包含在模型中不使用的列，则用法设置为 `Ignore`。 您可以在挖掘结构中包括、但不在分析中使用的数据示例可以是客户名称或电子邮件地址。 这样，您可以在以后查询它们，而不必在分析阶段包括它们。  
+-   **Usage 属性** 定义模型使用每个列的方式。 您可以将列用法定义为`Input`， `Predict`， `Predict Only`，或`Key`。 `Usage` 属性应用于挖掘模型的各个列，且必须为模型中包含的每个列分别设置此属性。 如果结构包含在模型中不使用的列，则用法设置为 `Ignore`。 您可以在挖掘结构中包括、但不在分析中使用的数据示例可以是客户名称或电子邮件地址。 这样，您可以在以后查询它们，而不必在分析阶段包括它们。  
   
  创建挖掘模型后，您可以更改挖掘模型属性的值。 但是，只要进行了更改（甚至包括对挖掘模型名称的更改），就需要重新处理模型。 在重新处理模型后，可能会显示不同的结果。  
   

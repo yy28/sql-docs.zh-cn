@@ -1,5 +1,5 @@
 ---
-title: 安装 Reporting Services 和 Internet 信息服务的并行 （SSRS 本机模式） |Microsoft 文档
+title: 安装 Reporting Services 和 Internet 信息服务的并行 （SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274653"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
   可以在同一台计算机上安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
@@ -47,9 +47,9 @@ ms.locfileid: "36124511"
   
 |示例|请求|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|接收发送到的所有请求http://123.234.345.456/reports或 http://\<计算机名 > / 报表如果域名服务可以为该主机名解析的 IP 地址。|  
+|http://123.234.345.456:80/reports|接收发送到的所有请求http://123.234.345.456/reports或 http://\<计算机名 > / 报表如果域名服务可以将 IP 地址解析为相应主机名。|  
 |http://+:80/reports|只要 URL 包含“reports”虚拟目录名，就将接收发送到对于该计算机有效的任何 IP 地址或主机名的任何请求。|  
-|http://123.234.345.456:80|接收的任何请求都指定http://123.234.345.456或 http://\<computername > 如果域名服务可以为该主机名解析的 IP 地址。|  
+|http://123.234.345.456:80|接收的任何请求都指定http://123.234.345.456或 http://\<计算机名 > 如果域名服务可以将 IP 地址解析为相应主机名。|  
 |http://+:80|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
 |http://*:80|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   
@@ -61,17 +61,17 @@ ms.locfileid: "36124511"
 |应用程序|URL 预留|Description|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
 |报表服务器|http://+:80/ReportServer|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 http://\<computername>/reportserver 的所有请求。|  
-|报表管理器|http://+:80/Reports|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 报表管理器接收到 http:// 的所有请求\<计算机名 > / 报表。|  
+|报表管理器|http://+:80/Reports|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 报表管理器接收所有请求 http://\<计算机名 > / 报告。|  
 |IIS|http://*:80/|针对端口 80 使用弱通配符。|接收端口 80 上尚未由其他应用程序接收的所有剩余请求。|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>通过并行部署[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和在 IIS 6.0，7.0、 8.0、 8.5 上的 SQL Server 2005 Reporting Services  
+## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>通过并行部署的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 IIS 6.0、 7.0、 8.0、 8.5 上的 SQL Server 2005 Reporting Services  
  当 IIS 网站的虚拟目录名与 Reporting Services 所使用的虚拟目录名相同时，IIS 和 Reporting Services 之间会出现互操作性问题。 例如，假设您具有以下配置：  
   
 -   IIS 中一个分配到端口 80 的网站，以及名为“Reports”的虚拟目录。  
   
--   A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]默认配置，其中 URL 保留还指定了端口 80 和报表管理器应用程序也使用"Reports"作为虚拟目录名称中安装的报表服务器实例。  
+-   一个[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]报表服务器实例安装在默认配置，其中 URL 保留还指定了端口 80 和报表管理器应用程序还使用"Reports"作为虚拟目录名称。  
   
- 在此配置，发送到 http:// 请求\<computername >: 80/reports 将报表管理器接收。 在安装了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
+ 在这种配置，请求发送到 http://\<计算机名 >: 80/reports 将接收由报表管理器。 在安装了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
   
  如果您并行运行所部署的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的新旧版本，则有可能会遇到上面描述的路由问题。 这是由于所有版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 都使用“ReportServer”作为报表服务器的虚拟目录名，并使用“Reports”作为报表管理器应用程序的虚拟目录名，从而增加了在 IIS 中拥有“reports”和“reportserver”虚拟目录的可能性。  
   

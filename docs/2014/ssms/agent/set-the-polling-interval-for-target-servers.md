@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db2913badf1b5ecf8bda10a810f7d2f604354cf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c6ec96e9b728d5b00b15b5258895e1f17b119e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165774"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>设置目标服务器的轮询间隔
   本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理刷新从主服务器到目标服务器的信息的频率。 作业是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 多服务器作业是主服务器在一台或多台目标服务器上运行的作业。  
   
 -   **开始之前：**  [安全性](#Security)  
   
--   **若要使用的目标服务器设置的轮询间隔：**[SQL Server Management Studio](#SSMS)， [Transact SQL  ](#TSQL)  
+-   **若要设置目标服务器，使用的轮询间隔：**[SQL Server Management Studio](#SSMS)， [TRANSACT-SQL  ](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  每个目标服务器一次只能运行一个相同作业的实例。 每台目标服务器会定期轮询主服务器，下载分配给目标服务器的任何新作业的一个副本，然后断开连接。 目标服务器在本地运行作业，然后重新连接到主服务器以上载作业结果状态。  

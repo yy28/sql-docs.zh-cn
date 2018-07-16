@@ -1,5 +1,5 @@
 ---
-title: 配置分布式的重播 |Microsoft 文档
+title: 配置 Distributed 的 Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98385aae3bea4eff6227edc4a99807f4d2625775
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c213c892403e4d6bdf527601f5f7482ebb7e2ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189644"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播配置详细信息在分布式重播控制器、客户端以及安装有管理工具的位置的 XML 文件中指定。 这些文件包括下面的文件：  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播配置详细信息在分布式重播控制器、客户端以及安装有管理工具的位置的 XML 文件中指定。 这些文件包括下面的文件：  
   
 -   [控制器配置文件](#DReplayController)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36126979"
 |设置|XML 元素|Description|允许的值|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |包括系统会话活动|`<IncSystemSession>`|指示重播期间是否包括捕获过程中的系统会话活动。|`Yes` &#124; `No`|否。 默认情况下，该值为 `No`。|  
-|最长空闲时间|`<MaxIdleTime>`|将空闲时间的上限设为某个绝对值（以秒为单位）。|一个整数，表示 > =-1<br /><br /> `-1` 表示原始跟踪文件中的原始值没有变化。<br /><br /> `0` 表示在任意给定时间点有某个活动正在进行。|否。 默认情况下，该值为 `-1`。|  
+|最长空闲时间|`<MaxIdleTime>`|将空闲时间的上限设为某个绝对值（以秒为单位）。|一个整数，是 > =-1<br /><br /> `-1` 表示原始跟踪文件中的原始值没有变化。<br /><br /> `0` 表示在任意给定时间点有某个活动正在进行。|否。 默认情况下，该值为 `-1`。|  
   
 ### <a name="example"></a>示例  
  默认预处理配置文件：  

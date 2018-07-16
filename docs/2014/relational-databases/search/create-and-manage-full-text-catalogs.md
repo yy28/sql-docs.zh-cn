@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb72092ec96c373c05a74a479eaefa47de6d3d35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d3d1bf94e65ffb789204bb774ea502ef824659ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266323"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
   全文目录是虚拟对象，并不属于任何文件组；它是表示一组全文索引的逻辑概念。  
@@ -47,7 +46,7 @@ ms.locfileid: "36124532"
   
   
 ##  <a name="props"></a> 查看全文目录的属性  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 如 FULLTEXTCATALOGPROPERTY 函数可用来获取与全文索引相关的各种属性的值。 此信息可用于全文搜索的管理和故障排除。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 （例如 FULLTEXTCATALOGPROPERTY） 可用来获取与全文索引相关的各种属性的值。 此信息可用于全文搜索的管理和故障排除。  
   
  下表列出了与全文目录相关的属性。  
   
@@ -96,7 +95,7 @@ ms.locfileid: "36124532"
   
   
   
-##  <a name="removing"></a> 从数据库删除的全文目录  
+##  <a name="removing"></a> 从数据库中删除全文目录  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>从数据库中删除全文目录  
   

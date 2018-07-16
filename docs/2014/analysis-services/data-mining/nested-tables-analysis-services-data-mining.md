@@ -1,5 +1,5 @@
 ---
-title: 嵌套表 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 嵌套表 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acb00a14c6fb59a223727c8f551e74fb636a7ee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167728"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  
   
- ![通过使用嵌套的表的两个表组合](../media/nested-tables.gif "两个表组合使用嵌套的表")  
+ ![两个表组合在一起的嵌套的表](../media/nested-tables.gif "两个表组合在一起的嵌套的表")  
   
  在此关系图中，第一个表（父表）包含客户的信息，并且为每位客户关联了一个唯一标识符。 第二个表（子表）包含每位客户的采购信息。 子表中的采购信息又通过唯一标识符 **CustomerKey** 列与父表关联。 关系图中的第三个表显示了这两个表的结合。  
   

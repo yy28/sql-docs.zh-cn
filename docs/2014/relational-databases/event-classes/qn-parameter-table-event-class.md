@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e3f5cdbece8396bcc75250146bd43ce79da7f5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5681c630cc3c45d0f2de06d3b5baa981bebe8c85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184654"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 事件类
   QN:Parameter table 事件报告有关创建、删除存储参数信息的内部表和为其保留引用计数所需操作的信息。 另外，此事件还报告重置参数表的使用计数的内部活动。  
@@ -38,7 +38,7 @@ ms.locfileid: "36126072"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|是|  
 |EventClass|`Int`|事件类型 = 200。|27|“否”|  
 |EventSequence|`int`|此事件的序列号。|51|“否”|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 创建表： 指示已在数据库中创建参数表。<br /><br /> 表删除尝试： 指示数据库已尝试自动删除未使用的参数表以释放资源。<br /><br /> 表删除尝试失败： 指示数据库已尝试删除未使用的参数表但失败。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除参数表以释放资源。<br /><br /> 表已删除： 指示数据库已成功删除参数表。<br /><br /> 表已驻留： 指示参数表供内部处理标记为当前使用情况。<br /><br /> 表不驻留： 指示参数表已固定。 内部处理已使用表完成。<br /><br /> 递增的用户数： 指示引用参数表的查询通知订阅数已增加。<br /><br /> 递减的用户数： 指示引用参数表的查询通知订阅数已减少。<br /><br /> LRU 计数器重置： 指示参数表的使用计数已重置。<br /><br /> 清除任务已启动： 指示清除此参数表中的所有订阅的已启动。 启动数据库或删除此参数表订阅下的表时执行此操作。<br /><br /> 清除任务已完成： 指示清除此参数表中的所有订阅的已完成时。|21|是|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 创建表： 指示已在数据库中创建参数表。<br /><br /> 表删除尝试： 指示数据库已尝试自动删除未使用的参数表以释放资源。<br /><br /> 表删除尝试失败： 指示数据库已尝试删除未使用的参数表但失败。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除参数表以释放资源。<br /><br /> 表已删除： 指示数据库已成功删除参数表。<br /><br /> 表已驻留： 指示参数表标记为当前供内部处理。<br /><br /> 取消固定的表： 指示参数表已被解除固定。 内部处理已使用表完成。<br /><br /> 递增的用户数： 指示引用参数表的查询通知订阅数已增加。<br /><br /> 递减的用户数： 指示引用参数表的查询通知订阅数已减少。<br /><br /> LRU 计数器已重置： 指示参数表的使用计数已重置。<br /><br /> 清除任务已启动： 指示清除此参数表中的所有订阅的启动。 启动数据库或删除此参数表订阅下的表时执行此操作。<br /><br /> 清除任务已完成： 指示清除此参数表中的所有订阅的已完成时。|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|“否”|  

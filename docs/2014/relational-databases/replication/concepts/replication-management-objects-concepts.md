@@ -22,15 +22,15 @@ helpviewer_keywords:
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 caps.latest.revision: 60
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6054a9dba13bf319c04b5e066d009a32c3995fa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b6dd9b98eaca7591cf3fbfa3a7032d3ed0fc066
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199107"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   复制管理对象 (RMO) 是一个封装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制功能的托管代码程序集。 RMO 是由 <xref:Microsoft.SqlServer.Replication> 命名空间实现的。  

@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘概念 |Microsoft 文档
+title: 数据挖掘概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212007"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
   数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
@@ -66,7 +66,7 @@ ms.locfileid: "36125487"
   
  以下关系图说明过程中每个步骤之间的关系，以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用于完成每个步骤的技术。  
   
- ![密钥中数据挖掘过程的步骤](../media/data-mining-process.gif "密钥中数据挖掘过程的步骤")  
+ ![数据挖掘过程中的关键步骤](../media/data-mining-process.gif "中数据挖掘过程的关键步骤")  
   
  图中所示的处理为循环的，表示创建数据挖掘模型是动态迭代过程。 浏览完数据之后，您可能会发现数据不足，无法创建适当的挖掘模型，因此必须查找更多的数据。 或者，您可以生成数个模型，但随后发现这些模型无法充分地回答定义的问题，因此必须重新定义问题。 您可能必须在部署模型之后对其进行更新，因为又出现了更多的可用数据。 可能需要多次重复过程中的每个步骤才能创建良好的模型。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36125487"
 ##  <a name="DefiningTheProblem"></a> 定义问题  
  与以下关系图的突出显示相同，数据挖掘过程的第一步就是明确定义问题，并考虑可以何种方式利用数据来解答该问题。  
   
- ![数据挖掘的第一步： 定义问题](../media/dmprocess-defining.gif "数据挖掘的第一步： 定义问题")  
+ ![数据挖掘的第一个步骤： 定义问题](../media/dmprocess-defining.gif "数据挖掘的第一个步骤： 定义问题")  
   
  该步骤包括分析业务需求，定义问题的范围，定义计算模型所使用的度量，以及定义数据挖掘项目的特定目标。 这些任务转换为下列问题：  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36125487"
 ##  <a name="PreparingData"></a> 准备数据  
  如以下关系图中突出显示的那样，数据挖掘过程的第二步就是合并和清除 [定义问题](#DefiningTheProblem) 步骤中标识的数据。  
   
- ![数据挖掘的第二步： 准备数据](../media/dmprocess-preparing.gif "数据挖掘的第二步： 准备数据")  
+ ![数据挖掘的第二个步骤： 准备数据](../media/dmprocess-preparing.gif "数据挖掘的第二个步骤： 准备数据")  
   
  数据可以分散在公司的各个部门并以不同的格式存储，或者可能包含错误项或缺少项之类的不一致性。 例如，数据可能显示客户在产品推向市场之前购买该产品，或者客户在距离她家 2,000 英里的商店定期购物。  
   

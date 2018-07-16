@@ -1,5 +1,5 @@
 ---
-title: ImpersonationMode 元素 (ASSL) |Microsoft 文档
+title: ImpersonationMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ImpersonateMode element
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e41e5b5fef7759f6ad310a7f04dc012a7b7cb54f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dad131322f27cee48fa2fe1dd1ed593477afbe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216227"
 ---
 # <a name="impersonationmode-element-assl"></a>ImpersonationMode 元素 (ASSL)
-  包含一个值，指示派生自的元素的方法的模拟[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)数据类型。  
+  包含一个值，指示派生自的元素的模拟方法[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,9 +70,9 @@ ms.locfileid: "36125230"
 |*ImpersonateAccount*|父级使用父元素中指定的用户帐户的凭据。|  
 |*ImpersonateAnonymous*|父级使用匿名用户的凭据。|  
 |*ImpersonateCurrentUser*|父级使用当前用户的凭据。|  
-|*ImpersonateServiceAccount*|父级中使用的实例相关联的服务帐户的凭据[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
+|*ImpersonateServiceAccount*|父级使用与实例相关联的服务帐户的凭据[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
   
- 对应于的允许值为枚举`ImpersonationMode`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ImpersonationLevel>。  
+ 与允许的值相对应的枚举`ImpersonationMode`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ImpersonationLevel>。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;ASSL&#41;](properties-assl.md)  

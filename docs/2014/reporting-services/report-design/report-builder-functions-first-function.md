@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 57683bf4fe9f4306eecd8bf170510a4b8bd29bb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4b8da17628c94d281168d9956b13a63512167c31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246509"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 函数（报表生成器和 SSRS）
   返回指定表达式的给定作用域中的第一个值。  
@@ -36,7 +36,7 @@ First(expression, scope)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Variant`或`Binary`) 在其上执行的聚合，例如，表达式`=Fields!FieldName.Value`。  
+ (`Variant`或`Binary`) 要对其执行聚合，例如，表达式`=Fields!FieldName.Value`。  
   
  *作用域*  
  (`String`) 可选。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
@@ -47,9 +47,9 @@ First(expression, scope)
 ## <a name="remarks"></a>Remarks  
  `First` 函数返回在指定作用域中应用所有排序和筛选后的一组数据的第一个值。  
   
- `First`函数不能在除当前 （默认值） 范围之外的任何组筛选器表达式中。  
+ `First`函数不能用于当前 （默认值） 作用域的组筛选器表达式。  
   
- 你还可以使用`First`要返回的第一个值的页首结构中`ReportItems`以便生成页面显示的第一个和最后一个条目的字典式标题页的集合。  
+ 此外可以使用`First`中的页标头返回的第一个值`ReportItems`以便生成在页面显示的第一个和最后一个项的字典样式标题页的集合。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   

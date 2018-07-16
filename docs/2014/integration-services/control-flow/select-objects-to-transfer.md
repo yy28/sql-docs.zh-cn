@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8c6279f2dd57a490db9db3fdc45aa90733e8555
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb95317ceaac922602d1a6588013b83337466ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246787"
 ---
 # <a name="select-objects-to-transfer"></a>选择要传输的对象
   可以使用此对话框选择对象，以便使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 传输任务将这些对象从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的一个实例传输到另一个实例。  

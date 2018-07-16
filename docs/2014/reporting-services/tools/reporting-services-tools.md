@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
 - Reporting Services, tools
@@ -24,13 +24,13 @@ ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 caps.latest.revision: 73
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f1b80d3c9ef634b606bc8c86713fd3c115b3f83a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2942373c9732ea1233788ef23061c42433d2baa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212577"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含支持在托管环境中开发和使用具有丰富功能的报表的一组图形和脚本编写工具。 该工具集包括开发工具、配置和管理工具以及报表查看工具。 本主题简要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的各工具以及如何访问该工具。  
@@ -43,7 +43,7 @@ ms.locfileid: "36125528"
 |工具|Description|如何访问|  
 |----------|-----------------|-------------------|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|交互式数据浏览和直观显示体验，为使您可基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型创建报表和与报表交互而专门设计。<br /><br /> 注意： 需要[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 模式下。|具有 Silverlight 的浏览器。|  
-|报表设计器|使用此工具可以设计报表和部署到本机模式或 SharePoint 模式报表服务器。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 用于组织在报表中使用的数据的“报表数据”窗格<br /><br /> 用于交互式报表设计的设计和预览的选项卡式视图<br /><br /> 查询设计器以帮助指定要从数据源，检索的数据是与中的数据源类型相关联[RSReportDesigner 配置文件](../report-server/rsreportdesigner-configuration-file.md)<br /><br /> 具有 IntelliSense 的表达式编辑器，生成可自定义报表内容和外观的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 表达式<br /><br /> 支持自定义报表项和自定义查询设计器<br /><br /> <br /><br /> 有关详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md)。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
+|报表设计器|使用此工具可以设计报表和部署到本机模式或 SharePoint 模式报表服务器。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 用于组织在报表中使用的数据的“报表数据”窗格<br /><br /> 用于交互式报表设计的设计和预览的选项卡式视图<br /><br /> 查询设计器，可帮助指定要从数据源和的中检索数据中的数据源类型与关联[RSReportDesigner 配置文件](../report-server/rsreportdesigner-configuration-file.md)<br /><br /> 具有 IntelliSense 的表达式编辑器，生成可自定义报表内容和外观的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 表达式<br /><br /> 支持自定义报表项和自定义查询设计器<br /><br /> <br /><br /> 有关详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md)。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |报表生成器|使用此工具可以设计报表和部署到本机模式或 SharePoint 模式报表服务器。<br /><br /> 类似 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 的创作环境<br /><br /> 能够将报表项另存为报表部件<br /><br /> 用于创建地图的向导<br /><br /> 聚合的聚合<br /><br /> 增强的对表达式的支持<br /><br /> 帮助指定要从所选内置数据源类型检索的数据的查询设计器<br /><br /> <br /><br /> 有关详细信息，请参阅[报表生成器&#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)。|下载 MSI 或者从报表管理器/SharePoint 打开|  
   
 ## <a name="tools-for-report-server-administration"></a>用于报表服务器管理的工具  
@@ -54,9 +54,9 @@ ms.locfileid: "36125528"
   
 |工具|Description|如何访问|  
 |----------|-----------------|-------------------|  
-|Reporting Services 配置管理器|使用此工具可以配置 Reporting Services 安装。 请注意，Reporting Services 配置管理器无法帮助您管理报表服务器内容、 启用额外功能或授予对服务器的访问。 可用任务包括：<br /><br /> 配置本地和远程报表服务器实例<br /><br /> 配置报表服务器服务帐户。<br /><br /> 创建和配置一个或多个 Web 服务 URL。<br /><br /> 配置报表管理器 URL<br /><br /> 创建和配置报表服务器数据库。<br /><br /> 配置扩展部署。<br /><br /> 备份、还原或替换用于加密存储的连接字符串以及凭据的对称密钥。<br /><br /> 配置无人参与的执行帐户。<br /><br /> 配置 SMTP 服务器以进行电子邮件传递。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。|“开始”菜单|  
+|Reporting Services 配置管理器|使用此工具可以配置 Reporting Services 安装。 请注意，Reporting Services 配置管理器不会帮助您管理报表服务器内容、 启用额外功能或授予对服务器的访问。 可用任务包括：<br /><br /> 配置本地和远程报表服务器实例<br /><br /> 配置报表服务器服务帐户。<br /><br /> 创建和配置一个或多个 Web 服务 URL。<br /><br /> 配置报表管理器 URL<br /><br /> 创建和配置报表服务器数据库。<br /><br /> 配置扩展部署。<br /><br /> 备份、还原或替换用于加密存储的连接字符串以及凭据的对称密钥。<br /><br /> 配置无人参与的执行帐户。<br /><br /> 配置 SMTP 服务器以进行电子邮件传递。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。|“开始”菜单|  
 |SQL Server Management Studio|使用此工具可以在单一环境中管理一个或多个报表服务器实例，包括：<br /><br /> 管理本地和远程报表服务器实例<br /><br /> 设置报表服务器属性<br /><br /> 修改角色定义<br /><br /> 关闭不使用的报表服务器功能<br /><br /> 管理作业<br /><br /> 管理共享计划|“开始”菜单|  
-|SQL Server 配置管理器|使用此工具可以：<br /><br /> 启动和停止 Reporting Services Windows 服务<br /><br /> 配置客户反馈报告、转储目录位置和错误报告<br /><br /> <br /><br /> **\*\* 警告\* \*** 不要使用此工具来配置服务帐户。 请改用 Reporting Services 配置工具。<br /><br /> 有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。|“开始”菜单|  
+|SQL Server 配置管理器|使用此工具可以：<br /><br /> 启动和停止 Reporting Services Windows 服务<br /><br /> 配置客户反馈报告、转储目录位置和错误报告<br /><br /> <br /><br /> **\*\* 警告\* \* **不使用此工具来配置服务帐户。 请改用 Reporting Services 配置工具。<br /><br /> 有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。|“开始”菜单|  
 |Rsconfig 实用工具|使用此工具可配置和管理报表服务器与报表服务器数据库的连接。 您还可以使用该工具来指定用于无人参与报表处理的用户帐户。<br /><br /> 有关详细信息，请参阅[报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)。|命令提示符|  
 |Rskeymgmt 实用工具|使用此工具可以：<br /><br /> 提取、还原、创建和删除用于加密报表服务器数据的对称密钥<br /><br /> 在扩展部署中联接报表服务器实例<br /><br /> <br /><br /> 有关详细信息，请参阅[报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)。|命令提示符|  
 |Windows Management Instrumentation (WMI) 类|通过使用这些类，无需使用图形用户界面即可自动化 Reporting Services 配置管理器中的配置任务。<br /><br /> 有关详细信息，请参阅[WMI 提供程序以编程方式访问](../accessing-the-wmi-provider-programmatically.md)。|Visual Basic 脚本|  

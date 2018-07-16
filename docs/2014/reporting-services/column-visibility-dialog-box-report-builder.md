@@ -1,5 +1,5 @@
 ---
-title: 列可见性对话框 （报表生成器） |Microsoft 文档
+title: 列可见性对话框 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b5fbdc627473f449007af6dadcc73fcc69efc46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a91788f90fc5fb4e6afddf5a7b7e60c49cbfb49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205017"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>“列可见性”对话框（报表生成器）
   在报表首次运行时使用 **“列可见性”** 对话框来显示或隐藏选中的列，其他时候可通过此对话框使用另一报表项来切换该列的可见性。  
@@ -39,7 +39,7 @@ ms.locfileid: "36126255"
  **显示或隐藏基于表达式**  
  选择此选项可以使初始可见性根据表达式相应变化。  
   
- 键入一个表达式，计算结果为`Boolean`值`True`可以隐藏项和`False`表示显示该项。 单击“表达式”(*fx*) 按钮可编辑表达式。  
+ 键入一个表达式的计算结果为`Boolean`的值`True`可以隐藏项和`False`表示显示该项。 单击“表达式”(*fx*) 按钮可编辑表达式。  
   
  **可以通过此报表项切换显示**  
  选择此选项可以显示一个切换图像，用户可以使用该图像在 HTML 报表查看器中显示或隐藏此列。  

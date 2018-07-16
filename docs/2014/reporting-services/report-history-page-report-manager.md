@@ -1,5 +1,5 @@
 ---
-title: 报表历史记录页 （报表管理器） |Microsoft 文档
+title: 报表历史记录页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9a696c8b095281633e0d3b631aa773dad9fdb77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196733"
 ---
 # <a name="report-history-page-report-manager"></a>“报表历史记录”页（报表管理器）
   使用“报表历史记录”页可以查看一段时间中生成并存储的报表快照。 根据报表服务器上设置的选项，报表历史记录可能只包含较新的快照。  
@@ -31,7 +31,7 @@ ms.locfileid: "36126452"
  您可以通过单击报表历史记录快照来查看它。 报表历史记录中显示的快照只能通过创建的日期和时间来区分。 无法通过直观方式判断出某个快照是为响应计划而生成的还是为响应某个手动操作而生成的。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  并非在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  
@@ -59,7 +59,7 @@ ms.locfileid: "36126452"
   
 ## <a name="see-also"></a>请参阅  
  [查看或删除报表历史记录&#40;报表管理器&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [向报表历史记录添加快照&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [将快照添加到报表历史记录&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表的“常规”属性页（报表管理器）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [快照选项属性页&#40;报表管理器&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

@@ -1,5 +1,5 @@
 ---
-title: 定义多对多关系 |Microsoft 文档
+title: 定义多对多关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 89ec38cf3bd3b197c6a58a5d51758ee6c6f29269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868c814c1031f9ffb499f80da2d7e9314d80e3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189234"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定义多对多关系
   在定义维度时，通常每个事实联接且仅联接到一个维度成员，而一个维度成员可以与许多不同的事实相关联。 例如，每个客户可以具有很多订单，但每个订单只属于一个客户。 在关系数据库术语中，这称为“一对多关系”。 但有时一个事实可联接多个维度成员。 在关系数据库术语中，这称为“多对多关系”。 例如，一个客户进行采购的原因可以有多个，而一个采购原因可以与多个采购相关联。 联接表用于定义与每个采购相关的销售原因。 在由此类关系构建的 Sales Reason 维度中，将有多个成员与一个销售事务相关联。 多对多维度可将维度模型扩展到经典星型架构范围之外，并在维度不直接与事实数据表相关联的情况下支持复杂分析。  
@@ -39,7 +39,7 @@ ms.locfileid: "36126943"
   
 1.  打开 **Adventure Works DW 2012** 数据源视图的数据源视图设计器。  
   
-2.  右键单击任意位置**关系图组织程序**窗格中，单击**新关系图**，并指定`Internet Sales Order Reasons`作为这个新关系图的名称。  
+2.  中的任意位置右击**关系图组织程序**窗格中，单击**新关系图**，并指定`Internet Sales Order Reasons`作为此新关系图的名称。  
   
 3.  将 **InternetSales** 表从“表”窗格拖动到“关系图”窗格中。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36126943"
   
 6.  在“格式”菜单上，指向“自动布局”，再单击“关系图”。  
   
-7.  在属性窗口中，更改**FriendlyName**属性**DimSalesReason**表`SalesReason`，然后将更改**FriendlyName**属性**FactInternetSalesReason**表`InternetSalesReason`。  
+7.  在属性窗口中更改**FriendlyName**的属性**DimSalesReason**表`SalesReason`，然后将更改**FriendlyName**属性**FactInternetSalesReason**表向`InternetSalesReason`。  
   
 8.  在“表”窗格中，展开“InternetSalesReason (dbo.FactInternetSalesReason)”，单击“SalesOrderNumber”，然后在“属性”窗口中查看此数据列的“DataType”属性。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36126943"
   
      您会看到对于每个订单内的每个行号，均有一个键值标识采购该行中项的销售原因，如下图所示。  
   
-     ![密钥值来标识为购买的销售原因](../../2014/tutorials/media/l5-many-to-many-1.gif "密钥值来标识为购买的销售原因")  
+     ![密钥值来标识购买的销售原因](../../2014/tutorials/media/l5-many-to-many-1.gif "密钥值来标识购买的销售原因")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>定义中间度量值组  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36126943"
   
 2.  右键单击“度量值”窗格中的任意位置，然后单击“新建度量值组”。 有关详细信息。请参阅[在多维模型中创建度量值和度量值组](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
-3.  在**新建度量值组**对话框中，选择`InternetSalesReason`中**从数据源视图中选择表**列表，，然后单击**确定**。  
+3.  在中**新建度量值组**对话框中，选择`InternetSalesReason`中**从数据源视图选择一个表**列表，，然后单击**确定**。  
   
      请注意，“Internet 销售原因”度量值组现在显示在“度量值”窗格中。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36126943"
   
 5.  选择“Internet 销售原因记数”，然后在“属性”窗口中查看此度量值的属性。  
   
-     请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择**计数**因为基础数据类型为 string 数据类型。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。  
+     请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择了**计数**因为基础数据类型为字符串数据类型。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。  
   
 6.  在“属性”窗口中，将“Internet Sales Reason Count”度量值的“Visible”属性更改为“False”。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36126943"
   
      下图显示了“Internet 销售原因计数”度量值的属性。  
   
-     ![Internet 销售原因计数度量值的属性](../../2014/tutorials/media/l5-many-to-many-2.gif "Internet 销售原因计数度量值的属性")  
+     ![为 Internet 销售原因计数度量值的属性](../../2014/tutorials/media/l5-many-to-many-2.gif "Internet 销售原因计数度量值的属性")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>定义多对多维度  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36126943"
   
 4.  在“指定源信息”页上，确保选中 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 数据源视图。  
   
-5.  在**主表**列表中，选择`SalesReason`。  
+5.  在中**主表**列表中，选择`SalesReason`。  
   
 6.  在“键列”列表中，确保列出了“SalesReasonKey”。  
   
@@ -111,19 +111,19 @@ ms.locfileid: "36126943"
   
 8.  单击“下一步” 。  
   
-9. 在“选择维度属性”页上，由于“销售原因键”属性是键属性，因此它将自动处于选中状态。 选择旁边的复选框**销售原因原因类型**属性，其将名称更改为`Sales Reason Type`，然后单击**下一步**。  
+9. 在“选择维度属性”页上，由于“销售原因键”属性是键属性，因此它将自动处于选中状态。 选择旁边的复选框**销售原因原因类型**属性，其名称更改为`Sales Reason Type`，然后单击**下一步**。  
   
 10. 在“完成向导”页上，单击“完成”创建“销售原因”维度。  
   
 11. 在“文件”  菜单上，单击“全部保存” 。  
   
-12. 在**属性**窗格中的维度设计器中为**Sales Reason**维度中，选择**销售原因参数**，然后将更改**名称**到属性窗口中的属性 `Sales Reason.`  
+12. 在**特性**维度的维度设计器窗格**销售原因**维度，选择**销售原因键**，然后将更改**名称**属性窗口中的属性 `Sales Reason.`  
   
-13. 在**层次结构**窗格中的维度设计器中，创建**销售原因**用户层次结构包含`Sales Reason Type`级别和**Sales Reason**级别，请在该顺序。  
+13. 在中**层次结构**窗格中的维度设计器中，创建**销售原因**用户层次结构包含`Sales Reason Type`级别并**销售原因**级别，请在该顺序。  
   
-14. 在属性窗口中，定义`All Sales Reasons`的值作为**AllMemberName**销售原因层次结构的属性。  
+14. 在属性窗口中，定义`All Sales Reasons`的值作为**AllMemberName**的销售原因层次结构属性。  
   
-15. 定义`All Sales Reasons`的值作为**AttributeAllMemberName** Sales Reason 维度属性。  
+15. 定义`All Sales Reasons`的值作为**AttributeAllMemberName**销售原因维度的属性。  
   
 16. 若要将新建的维度作为多维数据集维度添加到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集，请切换到“多维数据集设计器”。 在“多维数据集结构”选项卡上，右键单击“维度”窗格，并选择“添加多维数据集维度”。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36126943"
   
      下图显示了“定义关系”对话框中的更改。  
   
-     ![定义关系对话框](../../2014/tutorials/media/l5-many-to-many-3.gif "定义关系对话框中")  
+     ![定义关系对话框](../../2014/tutorials/media/l5-many-to-many-3.gif "定义关系对话框")  
   
 5.  单击“确定” 。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36126943"
   
 5.  在元数据窗格中，依次展开“客户”、“位置”、“客户所在地域”、“成员”、“所有客户”、“澳大利亚”，然后右键单击“Queensland”，再单击“添加到筛选器”。  
   
-6.  展开的每个成员`Sales Reason Type`级别，以查看在昆士兰客户提供其购买的每个原因与关联的美元值[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]通过 Internet 的产品。  
+6.  展开的每个成员`Sales Reason Type`级别，以查看与 Queensland 中的客户提供给他们购买的每个原因相关联的美元值[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]Internet 上的产品。  
   
      您会看到与所有销售原因相关联的合计超过了销售总额。 这是因为某些客户为其采购陈述了多个原因。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "36126943"
  [定义度量值组中的维度粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>请参阅  
- [使用数据源视图设计器中的关系图&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [使用的数据源视图设计器中的关系图&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定义多对多关系和多对多关系属性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

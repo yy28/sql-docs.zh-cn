@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167008"
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
   复制监视器是一种可用于监视复制拓扑的图形化工具。 可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 复制存储过程或复制管理对象 (RMO) 以编程方式访问相同的监视数据。 您可以利用这些对象对以下任务进行编程：  
@@ -132,9 +132,9 @@ ms.locfileid: "36125612"
   
 5.  使用步骤 3 中获取的会话 ID 调用以下方法之一，以返回有关特定会话的详细信息：  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -返回的数组<xref:Microsoft.SqlServer.Replication.MergeSessionDetail>为所提供的对象*sessionID*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -返回的数组<xref:Microsoft.SqlServer.Replication.MergeSessionDetail>提供*sessionID*。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -返回<xref:System.Data.DataSet>包含指定的信息的对象*sessionID*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -返回<xref:System.Data.DataSet>包含指定信息的对象*sessionID*。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>监视分发服务器上所有发布的复制属性  
   
@@ -272,11 +272,11 @@ ms.locfileid: "36125612"
   
         |ReplTest1|Description|  
         |-----------|-----------------|  
-        |@shouldalert|`expiration` -对事务发布的订阅的即将到期的监视器。|  
-        |2|`latency` -对事务发布的订阅的性能监视器。|  
-        |4|`mergeexpiration` -为即将过期的订阅的监视器合并发布。|  
-        |5|`mergeslowrunduration` -监视通过低带宽 （拨号） 连接的合并同步持续时间。|  
-        |6|`mergefastrunduration` -监视通过高带宽 (LAN) 连接的合并同步持续时间。|  
+        |@shouldalert|`expiration` -监视对事务发布的订阅是否即将过期。|  
+        |2|`latency` -监视对事务发布的订阅的性能。|  
+        |4|`mergeexpiration` -合并发布的订阅是否即将过期的监视器。|  
+        |5|`mergeslowrunduration` -监视通过低带宽 （拨号） 连接的合并同步的持续时间。|  
+        |6|`mergefastrunduration` -监视通过高带宽 (LAN) 连接的合并同步的持续时间。|  
         |7|`mergefastrunspeed` - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
         |8|`mergeslowrunspeed` -监视通过低带宽 （拨号） 连接的合并同步的同步速率。|  
   
