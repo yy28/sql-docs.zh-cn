@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70f554444431c06d14d67bf7e39d46240581b23a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3e56757b73f01709bca2a989f2610269a5c2556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178094"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>步骤 3：添加错误流重定向
   如上一个任务中所示，当 Lookup Currency Key 转换尝试对产生错误的已损坏示例平面文件进行处理时，该转换无法生成匹配。 由于转换针对错误输出使用了默认设置，因此，任何错误都将导致该转换失败。 当转换失败时，该包的其余部分也将失败。  
@@ -52,7 +52,7 @@ ms.locfileid: "36138685"
   
 8.  在“输入和输出”页中，展开“输出 0”，单击“输出列”，再单击“添加列”。  
   
-9. 在`Name`属性中，键入**ErrorDescription**并设置`DataType`属性**Unicode 字符串 [DT_WSTR]**。  
+9. 在中`Name`属性中，键入**ErrorDescription**并设置`DataType`属性设置为**Unicode 字符串 [DT_WSTR]**。  
   
 10. 上**脚本**页上，确认`LocaleID`属性设置为**英语 （美国。**  
   
@@ -100,6 +100,6 @@ ms.locfileid: "36138685"
 13. 单击“确定”关闭“脚本转换编辑器”对话框。  
   
 ## <a name="next-steps"></a>后续步骤  
- [步骤 4： 添加平面文件目标](lesson-4-4-adding-a-flat-file-destination.md  
+ [第 4 步： 添加平面文件目标](lesson-4-4-adding-a-flat-file-destination.md  
   
   

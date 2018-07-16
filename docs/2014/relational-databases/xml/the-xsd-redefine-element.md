@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ca94410d7011c30de0a5481451337d11fa57120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 21f11e1d27ce94c62e2d3115134bf714c918a5d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36139012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175159"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 元素
-  W3C XSD **redefine** 元素为重新定义架构组件提供了支持。 但是，对此指令的可能会严重影响性能，并且还要求支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新验证的所有实例`xml`与重新定义架构关联的数据类型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含 **\<xsd:redefine>** 元素的 XML 架构。  
+  W3C XSD **redefine** 元素为重新定义架构组件提供了支持。 但是，对此指令可能会严重影响性能，同时还要求的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新进行验证的所有实例`xml`重新定义的架构与相关联的数据类型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含 **\<xsd:redefine>** 元素的 XML 架构。  
   
  若要更新架构或其组件，您可以改为执行以下操作：  
   

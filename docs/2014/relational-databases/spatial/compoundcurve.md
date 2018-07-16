@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4943247f5364991efe937ca56759c09ed5617e32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 143f549a4f3b1961c02587b4a913d56d6002bbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36129844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172298"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve` 是几何图形或地域类型的零个或多个连续 `CircularString` 或 `LineString` 实例的集合。  
@@ -31,12 +31,12 @@ ms.locfileid: "36129844"
   
 1.  它必须包含至少一个`CircularString`或`LineString`实例。  
   
-2.  序列`CircularString`或`LineString`实例必须是连续。  
+2.  一系列`CircularString`或`LineString`实例必须是连续。  
   
- 如果`CompoundCurve`包含多个序列`CircularString`和`LineString`实例，结束端点的最后一个实例除外的每个实例必须是序列中的下一个实例的起始端点。 这意味着，如果在序列中前一个实例的结束点是 (4 3 7 2)，则该序列中的下一个实例的起始点必须是 (4 3 7 2)。 请注意，该点的 Z（标高）和 M（度量）值也必须相同。 如果这两个点之间存在差异，则将引发 `System.FormatException` 。 中点`CircularString`无需具有 Z 值或 M 值。 如果未向前一个实例的结束点提供 Z 值或 M 值，下一个实例的起始点就不能包含 Z 值或 M 值。 如果前一个序列的结束点是 (4 3)，则后一个序列的起始点必须是 (4 3)；它不能是 (4 3 7 2）。 中的所有点`CompoundCurve`实例必须具有 Z 值或相同的 Z 值。  
+ 如果`CompoundCurve`包含多个序列`CircularString`和`LineString`实例，结束端点除外的最后一个实例的每个实例必须是序列中的下一个实例的起始端点。 这意味着，如果在序列中前一个实例的结束点是 (4 3 7 2)，则该序列中的下一个实例的起始点必须是 (4 3 7 2)。 请注意，该点的 Z（标高）和 M（度量）值也必须相同。 如果这两个点之间存在差异，则将引发 `System.FormatException` 。 中的点`CircularString`无需具有 Z 或 M 值。 如果未向前一个实例的结束点提供 Z 值或 M 值，下一个实例的起始点就不能包含 Z 值或 M 值。 如果前一个序列的结束点是 (4 3)，则后一个序列的起始点必须是 (4 3)；它不能是 (4 3 7 2）。 中的所有点`CompoundCurve`实例必须具有 Z 值或相同的 Z 值。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
- 下图显示有效`CompoundCurve`类型。  
+ 下图显示了有效`CompoundCurve`类型。  
   
  ![](../../database-engine/media/f278742e-b861-4555-8b51-3d972b7602bf.png "f278742e-b861-4555-8b51-3d972b7602bf")  
   
@@ -67,13 +67,13 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- A`CompoundCurve`实例是有效的如果它满足以下条件。  
+ 一个`CompoundCurve`实例是否满足以下条件时才有效。  
   
 1.  `CompoundCurve`实例接受的。  
   
 2.  `CompoundCurve` 实例包含的所有圆弧线段实例都是有效实例。  
   
- 下面的示例显示有效`CompoundCurve`实例。  
+ 以下示例显示有效`CompoundCurve`实例。  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -94,7 +94,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` 无效，因为第二个实例是无效的 LineString 实例。 `@g2` 无效，因为 `LineString` 实例无效。 `@g3` 无效，因为 `CircularString` 实例无效。 有关详细信息有效`CircularString`和`LineString`实例，请参阅[CircularString](circularstring.md)和[LineString](linestring.md)。  
+ `@g1` 无效，因为第二个实例是无效的 LineString 实例。 `@g2` 无效，因为 `LineString` 实例无效。 `@g3` 无效，因为 `CircularString` 实例无效。 有关详细信息有效`CircularString`并`LineString`实例，请参阅[CircularString](circularstring.md)并[LineString](linestring.md)。  
   
 ## <a name="examples"></a>示例  
   

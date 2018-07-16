@@ -1,5 +1,5 @@
 ---
-title: 数据源元素 (XMLA) |Microsoft 文档
+title: DataSource 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f0af7343a1d359bae1e02763b71fa80bdf557d82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 40efe20736e6e2e6364ddcf5aa41a92409a2e68c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167158"
 ---
 # <a name="datasource-element-xmla"></a>DataSource 元素 (XMLA)
-  包含父级的外部数据源绑定[批处理](../xml-elements-commands/batch-element-xmla.md)或[过程](../xml-elements-commands/process-element-xmla.md)元素。  
+  包含父的外部数据源绑定[批处理](../xml-elements-commands/batch-element-xmla.md)或[进程](../xml-elements-commands/process-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36138490"
 |子元素|[DatabaseID](id-element-xmla.md)， [DataSourceID](datasourceid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `DataSource`元素表示的外部绑定到数据源，使用`Batch`或`Process`命令以临时替代的数据源绑定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]处理的对象命令。  
+ `DataSource`元素表示的外部绑定到使用的数据源`Batch`或`Process`要暂时重写的数据源绑定命令[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]处理的对象命令。  
   
- 有关扩展的行绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 有关的外部绑定的详细信息，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

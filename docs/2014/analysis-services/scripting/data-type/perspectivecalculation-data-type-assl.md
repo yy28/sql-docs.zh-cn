@@ -1,5 +1,5 @@
 ---
-title: PerspectiveCalculation 数据类型 (ASSL) |Microsoft 文档
+title: PerspectiveCalculation 数据类型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185144"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation 数据类型 (ASSL)
-  定义一个基元数据类型，表示计算之间的关系和[透视](../objects/perspective-element-assl.md)元素。  
+  定义一个基元数据类型，表示某个计算之间的关系和一个[角度来看](../objects/perspective-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,10 +59,10 @@ ms.locfileid: "36138949"
 |------------------|-------------|  
 |父元素|InclusionThresholdSetting|  
 |子元素|[批注](../collections/annotations-element-assl.md)，[名称](../properties/name-element-assl.md)，[类型](../properties/type-element-perspectivecalculation-assl.md)|  
-|派生元素|[计算](../objects/calculation-element-assl.md)([计算](../collections/calculations-element-assl.md)集合[透视](../objects/perspective-element-assl.md))|  
+|派生元素|[计算](../objects/calculation-element-assl.md)([计算](../collections/calculations-element-assl.md)的集合[角度来看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
- 分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveCalculation>。  
+ 在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.PerspectiveCalculation>。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言 XML 数据类型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

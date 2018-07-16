@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Diagram Designer
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7150e60075d686c1954773b3a68b79688974df0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6400c5165bd224f680548be1a1f78bb3f1da3a9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180986"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在数据库关系图设计器中导航 (Visual Database Tools)
   可以在数据库关系图设计器中使用键盘和鼠标来执行操作。 有关数据库关系图设计器中使用的特定方法，请参阅下表：  

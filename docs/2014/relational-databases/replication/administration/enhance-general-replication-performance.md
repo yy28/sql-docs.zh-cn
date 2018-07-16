@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c16d70220050578fc810735f76465806a895d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71afdf1b34056089c767ed021c0e14006f400850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172868"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
@@ -84,7 +84,7 @@ ms.locfileid: "36137516"
   
 -   限制使用大型对象 (LOB) 数据类型。  
   
-     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 数据类型`text`， `ntext`，和`image`已弃用。 如果包含 Lob，我们建议你使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分别。  
+     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 数据类型`text`， `ntext`，和`image`不推荐使用。 如果确实要包括 Lob，建议使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分别。  
   
      对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   

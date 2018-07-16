@@ -1,5 +1,5 @@
 ---
-title: 方法 (XMLA) |Microsoft 文档
+title: 方法 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - XMLA, methods
 ms.assetid: c6768dd4-ca06-4a85-93b7-5fd5700886ad
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe42e2330e3e108ad1ee0e09d1e1e1007eda9102
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1baf254e9965153394a3a7b1367ced21c009a7f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171418"
 ---
 # <a name="methods-xmla"></a>方法 (XMLA)
-  XML for Analysis (XMLA) 协议使用两种方法，`Discover`和`Execute`，提供应用程序访问的实例上的信息的标准方法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 由于这些方法是通过使用简单对象访问协议 (SOAP) 调用的，因此它们接受的输入和传递的输出都是 XML 格式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可实现这两种方法，并与 XML for Analysis 1.1 规范兼容。  
+  XML for Analysis (XMLA) 协议使用两种方法，`Discover`并`Execute`，以提供应用程序访问的实例上的信息的标准方法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 由于这些方法是通过使用简单对象访问协议 (SOAP) 调用的，因此它们接受的输入和传递的输出都是 XML 格式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可实现这两种方法，并与 XML for Analysis 1.1 规范兼容。  
   
 ## <a name="in-this-section"></a>本节内容  
  下面的主题介绍 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实现的 XMLA 方法。  

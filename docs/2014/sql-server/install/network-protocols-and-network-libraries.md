@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
 - configuration options [SQL Server], protocols
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2ebd92a3ac467880ee1c3ae6185718ab315c7b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65ae022fe3445663837b1aaf01204a382ddcdc72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175106"
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
   服务器可以同时监听或监视多个网络协议。 但必须对每个协议都进行配置。 如果没有配置某个协议，则服务器将无法监听该协议。 安装完成后，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改这些协议配置。  

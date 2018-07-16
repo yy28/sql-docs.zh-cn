@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c1f08f222fa1d902232373051e8d584b673ba5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181554"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
@@ -78,7 +78,7 @@ ms.locfileid: "36130217"
 |MarginBottom|双精度|RW|报表设置|获取或设置下边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
 |PageWidth|双精度|RW|报表设置|获取或设置页宽。 如果开发人员或报表定义中未进行设置，则默认值为 215.9 毫米。|  
 |PageHeight|双精度|RW|报表设置|获取或设置页高。 如果开发人员或报表定义中未进行设置，则默认值为 279.4 毫米。|  
-|Culture|Int32|RW|浏览器区域设置|指定区域设置标识符 (LCID)。 此值将确定用户输入的度量单位。 例如，如果用户键入`3`，值将测量以毫米为单位，如果语言为法语或英寸如果语言是英语 （美国）。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|Culture|Int32|RW|浏览器区域设置|指定区域设置标识符 (LCID)。 此值将确定用户输入的度量单位。 例如，如果用户键入`3`，如果语言是法语或英寸在语言为英语 （美国） 将以毫米为单位测得值。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |UICulture|String|RW|客户端区域性|指定对话框字符串的本地化语言。 “打印”对话框中的文本已本地化为以下语言：简体中文、繁体中文、英语、法语、德语、意大利语、日语、朝鲜语和西班牙语。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |Authenticate|Boolean|RW|False|指定控件是否向报表服务器发出 GET 命令，以启动无会话打印连接。|  
   

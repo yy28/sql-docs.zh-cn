@@ -1,5 +1,5 @@
 ---
-title: 逻辑回归模型查询示例 |Microsoft 文档
+title: 逻辑回归模型查询示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189594"
 ---
 # <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  在“挖掘结构”选项卡中，右键单击 Service Grade 对应的列，然后选择“属性”。  
   
-7.  更改`Content`属性从**连续**到**Discretized**。 更改`DiscretizationMethod`属性**群集**。 对于 Discretization BucketCount，键入 **3**。  
+7.  更改`Content`属性从**连续**到**Discretized**。 更改`DiscretizationMethod`属性设置为**群集**。 对于 Discretization BucketCount，键入 **3**。  
   
     > [!NOTE]  
     >  这些参数仅用于演示过程，不一定生成有效模型。  
@@ -216,6 +216,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 逻辑回归算法](microsoft-logistic-regression-algorithm.md)   
  [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [逻辑回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-logistic-regression-models.md)   
- [第 5 课： 生成神经网络和逻辑回归模型&#40;中间数据挖掘教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [第 5 课： 生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

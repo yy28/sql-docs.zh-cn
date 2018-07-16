@@ -1,5 +1,5 @@
 ---
-title: Integration Services 服务器的报告 |Microsoft 文档
+title: Integration Services 服务器的报告 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9809de19a363c94365c0da88655d4e54b81b80cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180294"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 服务器的报表
-  在当前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，标准报表位于[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
+  在当前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中, 均提供标准报表[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
   
  在每个报告页的顶部，后退图标会将您转到查看过的上一页，刷新图标会刷新在该页上显示的信息，打印图标则可以打印当前页。  
   

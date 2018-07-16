@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a82a52b230564b81261cece8f61ea56cdb21da8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c4144787ac5085c4713781569d7e6d364ff7951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172168"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
   递归层次结构组可组织来自包含多个层次结构级别的单个报表数据集的数据。例如，表示组织层次结构中的经理－雇员关系的报告结构。  
@@ -54,13 +54,13 @@ ms.locfileid: "36137920"
     > [!NOTE]  
     >  如果看不到“属性”窗格，请单击“视图”选项卡上的“属性”。  
   
-2.  在属性窗格中，展开`Padding`节点，单击**左**，然后从下拉列表中，选择**\<表达式...>**。  
+2.  在属性窗格中，展开`Padding`节点中，单击**左**，然后从下拉列表中，选择**\<表达式...>**。  
   
 3.  在“表达式”窗格中，键入以下表达式：  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     “填充”属性需要 nnyy 格式的字符串，其中 nn 是一个数字，而 yy 是度量单位。 示例表达式将生成一个字符串，使用`Level`增加填充的大小的函数根据递归级别。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 璝惠`Level`函数中，请参阅[级别](report-builder-functions-level-function.md)。  
+     “填充”属性需要 nnyy 格式的字符串，其中 nn 是一个数字，而 yy 是度量单位。 该示例表达式将生成一个字符串，使用`Level`增加填充大小的函数根据递归级别。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 璝惠`Level`函数中，请参阅[级别](report-builder-functions-level-function.md)。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36137920"
 ## <a name="see-also"></a>请参阅  
  [创建递归层次结构组&#40;报表生成器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [聚合函数引用&#40;报表生成器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [聚合函数参考&#40;报表生成器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

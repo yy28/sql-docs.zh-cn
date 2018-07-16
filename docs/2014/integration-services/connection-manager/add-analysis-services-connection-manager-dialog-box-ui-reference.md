@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 88e2440ac19be6ed6990a6a303fc85bd234d5caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbb2fe2bc936fc66fe930ea5c0de60190b0ae5e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184644"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>“添加 Analysis Services 连接管理器”对话框 UI 参考
   可以使用 **“添加 Analysis Services 连接管理器”** 对话框，创建与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服务器之间的连接或编辑连接属性。  
@@ -48,6 +48,6 @@ ms.locfileid: "36137581"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)   
- [Integration Services &#40;SSIS&#41;连接](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
   
   
