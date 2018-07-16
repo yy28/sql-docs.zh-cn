@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10183"
 - sql12.rtp.rptdesigner.legendtitleproperties.shadow.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7f53e64e54b3bb56f0f2070b1fe894d26523c200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e67ff32578131fc5689ac819fd3ac1fc155d0f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244317"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>设置图表上图例的格式（报表生成器和 SSRS）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  
@@ -55,12 +55,12 @@ ms.locfileid: "36123346"
 ## <a name="ordering-legend-items-in-the-legend"></a>对图例中的图例项进行排序  
  在图例中，序列是按照 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 处理引擎处理它们的顺序进行排序的。 可以更改排序顺序，方法是更改数据字段放置区中字段的顺序。 如果使用序列分组，序列数据在处理之前是未知的，因此您无法对这些项重新进行排序。 所做的更改可在“预览”中查看。 有关序列分组的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
- 您可以隐藏任何序列，使其不显示在图例中。 如果使用序列分组，所有与数据字段相关的序列都将隐藏。 有关详细信息，请参阅[图表上隐藏图例项&#40;报表生成器和 SSRS&#41;](chart-legend-hide-items-report-builder.md)。  
+ 您可以隐藏任何序列，使其不显示在图例中。 如果使用序列分组，所有与数据字段相关的序列都将隐藏。 有关详细信息，请参阅[隐藏图表上的图例项&#40;报表生成器和 SSRS&#41;](chart-legend-hide-items-report-builder.md)。  
   
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>更改图例中图例项的文本或颜色  
  在图表的数据字段放置区中放入一个字段时，会自动生成一个包含此字段名称的图例项。 默认情况下，每个图例项以数据字段的名称作为其文本。 对于除形状图外的其他图表，每个图例项会连接到图表上的单个序列，而对于形状图，图例会连接到单个数据点而不是单个序列。 在形状图中定义类别组时，每个图例项以该类别组的字符串表示形式作为其文本。 您可以为饼图、圆环图和漏斗图指定自定义标签文本，以显示不同于类别组标签的与图例中每个单个数据点相关的信息。 若要执行此操作，请选择图例，并在 **“序列属性”** 对话框或“属性”窗格的 **LegendText** 属性中指定图例文本。 有关详细信息，请参阅[更改图例项的文本&#40;报表生成器和 SSRS&#41;](chart-legend-change-item-text-report-builder.md)。  
   
- 您还可以在 **LegendText** 属性或 **“序列属性”** 对话框中，为经常引用的属性指定特定于图表且区分大小写的关键字。 图表控件会在运行时用其数据表示形式替换这些关键字。 对于形状图，此方法非常有用，因为这样可以显示与特定数据点相关的信息。 有关详细信息，请参阅[图表上的格式设置数据点&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 您还可以在 **LegendText** 属性或 **“序列属性”** 对话框中，为经常引用的属性指定特定于图表且区分大小写的关键字。 图表控件会在运行时用其数据表示形式替换这些关键字。 对于形状图，此方法非常有用，因为这样可以显示与特定数据点相关的信息。 有关详细信息，请参阅[图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
  为每个图例项显示的彩色框继承自其相应序列的填充颜色。 若要更改显示在图例项中的颜色，必须更改相应序列的颜色。 有关详细信息，请参阅 [设置图表上序列颜色的格式（报表生成器和 SSRS）](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
@@ -80,10 +80,10 @@ ms.locfileid: "36123346"
 ## <a name="formatting-the-legend-text"></a>设置图例文本的格式  
  可以在 **“图例属性”** 对话框的 **“字体”** 页上更改图例文本的字体、大小、样式和颜色。  
   
- 默认情况下，图例文本没有为适应图例区的大小而进行优化。 若要使图例文本自动调整大小分配的空间，请将仅在 AutoFitTextDisabled 属性设置为`False`并将最小字号设置为你认为最最低字号 MinFontSize 属性将为演示，并且仍然允许将图例优化。  
+ 默认情况下，图例文本没有为适应图例区的大小而进行优化。 若要使图例文本自动适应所分配的空间，请将 AutoFitTextDisabled 属性设置为`False`并将最小字体大小设置为 MinFontSize 属性的最小字体大小，您认为可呈现且仍允许进行图例优化。  
   
 ## <a name="see-also"></a>请参阅  
- [图例属性对话框中，常规&#40;报表生成器和 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [图例属性对话框，常规&#40;报表生成器和 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [更改图例项的文本（报表生成器和 SSRS）](chart-legend-change-item-text-report-builder.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

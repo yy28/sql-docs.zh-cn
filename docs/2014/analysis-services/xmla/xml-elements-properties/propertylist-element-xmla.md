@@ -1,5 +1,5 @@
 ---
-title: PropertyList 元素 (XMLA) |Microsoft 文档
+title: PropertyList 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - PropertyList element
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4b49ad0cf03ce331a00a7eefc9f1302176d89e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6b3fdd7f6d59ef6a2523bada292dfb2b8f17a4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323037"
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 元素 (XMLA)
-  包含所使用的 Analysis (XMLA) 属性的集合的 XML[发现](../xml-elements-methods-discover.md)和[执行](../xml-elements-methods-execute.md)方法。  
+  包含所使用的 Analysis (XMLA) 属性的集合的 XML [Discover](../xml-elements-methods-discover.md)并[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36014895"
 |子元素|XMLA 属性（请参阅“备注”）|  
   
 ## <a name="remarks"></a>Remarks  
- `PropertyList`元素包含一个 XMLA 属性的集合。 利用每个属性，用户可以控制 `Discover` 或 `Execute` 方法的某个方面，如定义连接至数据源所需的信息、指定结果集的返回格式或指定设置数据格式时应使用的区域设置。 每个 XMLA 属性`PropertyList`由单独的 XML 元素定义元素。 XMLA 属性的值为 XML 元素包含的数据，XMLA 属性的名称与 XML 元素的名称对应。  
+ `PropertyList`元素包含 XMLA 属性的集合。 利用每个属性，用户可以控制 `Discover` 或 `Execute` 方法的某个方面，如定义连接至数据源所需的信息、指定结果集的返回格式或指定设置数据格式时应使用的区域设置。 中的每个 XMLA 属性`PropertyList`元素都由单独的 XML 元素定义。 XMLA 属性的值为 XML 元素包含的数据，XMLA 属性的名称与 XML 元素的名称对应。  
   
- 可以通过使用具有的 DISCOVER_PROPERTIES 请求类型获得可用的属性和它们的值`Discover`方法。 `PropertyList` 元素中列出的属性对顺序没有要求。  
+ 可以通过使用与 DISCOVER_PROPERTIES 请求类型获取可用属性和其值`Discover`方法。 `PropertyList` 元素中列出的属性对顺序没有要求。  
   
- 有关支持的 XMLA 属性的详细信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[支持 XMLA 属性&#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)。  
+ 有关支持的 XMLA 属性的详细信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[支持的 XMLA 属性&#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)。  
   
 ## <a name="example"></a>示例  
   

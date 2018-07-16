@@ -1,5 +1,5 @@
 ---
-title: LogFileRollover 元素 (ASSL) |Microsoft 文档
+title: LogFileRollover 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ecaf972c701175d388ab71fa61d94de1c6f2cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299017"
 ---
 # <a name="logfilerollover-element-assl"></a>LogFileRollover 元素 (ASSL)
-  指定的日志记录是否[跟踪](../objects/trace-element-assl.md)输出应将鼠标移到新文件或者应停止时，它是大小最大的日志文件中指定的[LogFileSize](logfilesize-element-assl.md)为止。  
+  指定的日志记录[跟踪](../objects/trace-element-assl.md)输出应转到新文件，还是应停止时的最大日志文件大小时，它是指定在[LogFileSize](logfilesize-element-assl.md)为止。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36015774"
 ## <a name="remarks"></a>Remarks  
  如果 `LogFileRollover` 元素的值设置为 True，则当日志文件的大小超出 `LogFileSize` 父元素的 `Trace` 元素中所指定的值时，打开一个新文件，否则停止日志记录。  
   
- 对应于的父元素`LogFileRollover`在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Trace>。  
+ 父级对应的元素`LogFileRollover`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>请参阅  
  [跟踪元素&#40;ASSL&#41;](../collections/traces-element-assl.md)   

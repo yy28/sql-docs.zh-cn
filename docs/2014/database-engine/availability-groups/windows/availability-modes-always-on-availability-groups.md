@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], asynchronous commit
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 924708dabd2cfe4fa94eb6f726e29613d6917d86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273743"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式（AlwaysOn 可用性组）
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，“可用性模式”是一个副本属性，该属性确定某一给定可用性副本是否可在同步提交模式下运行。 对于每个可用性副本，必须为同步提交模式或异步提交模式配置可用性模式。  如果主要副本配置为“异步提交模式”，则它不会等待任何次要副本将传入的事务日志记录写入磁盘（以便强制写入日志）。 如果某一给定的辅助副本配置为异步提交模式，则主副本不会等待该辅助副本强制写入日志。 如果主要副本和某一给定次要副本都配置为同步提交模式，则主要副本将等待次要副本，以便确认它已强制写入日志（除非次要副本在主要副本的会话超时期限内未能使用 ping 命令联系上主要副本）。  
@@ -66,7 +65,7 @@ ms.locfileid: "36123699"
   
  异步提交辅助副本会尝试与接收自主副本的日志记录保持一致。 但异步提交辅助数据库往往会保持未同步状态，并且可能稍微滞后于相应的主数据库。 通常，异步提交辅助数据库和相应的主数据库之间的这个时间差会很小。 但是，如果承载辅助副本的服务器的工作负荷过高或网络速度很慢，则这个时间差会变得较大。  
   
- 异步提交模式所支持的唯一故障转移形式为强制故障转移（可能造成数据丢失）。 强制故障转移是一种最后手段，仅可用于当前主要副本长时间保持不可用状态并且主数据库的即时可用性比可能丢失数据的风险更为重要的情况。故障转移目标必须是其角色处于 SECONDARY 或 RESOLVING 状态的副本。 故障转移目标将转换为主角色，并且其数据库副本将成为主数据库。 任何剩余的辅助数据库以及变得可用后的以前的主数据库都将被挂起，直到您手动单独恢复它们。 在异步提交模式下，原始主副本尚未发送到以前的辅助副本的任何事务日志都将丢失。 这意味着，某些或全部新的主数据库可能会缺少最近提交的事务。 有关强制故障转移工作原理和使用它的最佳实践的详细信息，请参阅[故障转移和故障转移模式&#40;AlwaysOn 可用性组&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
+ 异步提交模式所支持的唯一故障转移形式为强制故障转移（可能造成数据丢失）。 强制故障转移是一种最后手段，仅可用于当前主要副本长时间保持不可用状态并且主数据库的即时可用性比可能丢失数据的风险更为重要的情况。故障转移目标必须是其角色处于 SECONDARY 或 RESOLVING 状态的副本。 故障转移目标将转换为主角色，并且其数据库副本将成为主数据库。 任何剩余的辅助数据库以及变得可用后的以前的主数据库都将被挂起，直到您手动单独恢复它们。 在异步提交模式下，原始主副本尚未发送到以前的辅助副本的任何事务日志都将丢失。 这意味着，某些或全部新的主数据库可能会缺少最近提交的事务。 有关强制故障转移的工作原理和使用它的最佳实践的详细信息，请参阅[故障转移和故障转移模式&#40;AlwaysOn 可用性组&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
   
 ##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  在同步提交可用性模式（同步提交模式）下，联接到某个可用性组后，辅助数据库就会与对应的主数据库求得一致并进入 SYNCHRONIZED 状态。 只要一直在进行数据同步，辅助数据库就会保持 SYNCHRONIZED 状态。 这可确保对某一给定主数据库提交的每个事务也对相应的辅助数据库提交。 在同步给定辅助副本上的每个辅助数据库之后，辅助副本的同步运行状态总体上将为 HEALTHY。  
@@ -78,7 +77,7 @@ ms.locfileid: "36123699"
 -   网络/计算机的延迟或故障导致辅助副本与主副本之间的会话超时。  
   
     > [!NOTE]  
-    >  有关可用性副本的会话时间属性的信息，请参阅[的 AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
+    >  有关可用性副本的会话时间属性的信息，请参阅[AlwaysOn 可用性组的概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
   
 -   挂起了辅助副本上的辅助数据库。 辅助副本停止同步，其同步运行状态标记为 NOT_HEALTHY。 辅助副本将无法恢复正常，除非恢复并重新同步挂起的辅助数据库或从可用性组中删除它。  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36123699"
 ###  <a name="SyncCommitWithAuto"></a> 使用自动故障转移的同步提交模式  
  通过确保在丢失主副本之后快速使数据库再次变为可用，自动故障转移可提供高可用性。 若要将可用性组配置为自动故障转移，您需要将当前主副本和一个辅助副本设置为使用自动故障转移的同步提交模式。  
   
- 此外，为了在特定时间自动执行故障转移，此辅助副本必须与主副本同步（即，辅助数据库全部同步），并且 Windows Server 故障转移群集 (WSFC) 群集必须具有仲裁。 如果主副本在这些条件下变得不可用，则将发生自动故障转移。 辅助副本将切换为主副本角色，并提供其数据库作为主数据库。 有关详细信息，请参阅的"自动故障转移"部分[故障转移和故障转移模式&#40;AlwaysOn 可用性组&#41;](failover-and-failover-modes-always-on-availability-groups.md)主题。  
+ 此外，为了在特定时间自动执行故障转移，此辅助副本必须与主副本同步（即，辅助数据库全部同步），并且 Windows Server 故障转移群集 (WSFC) 群集必须具有仲裁。 如果主副本在这些条件下变得不可用，则将发生自动故障转移。 辅助副本将切换为主副本角色，并提供其数据库作为主数据库。 有关详细信息，请参阅"自动故障转移"一节[故障转移和故障转移模式&#40;AlwaysOn 可用性组&#41;](failover-and-failover-modes-always-on-availability-groups.md)主题。  
   
 > [!NOTE]  
 >  有关 WSFC 仲裁模式和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅 [WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
@@ -153,9 +152,9 @@ ms.locfileid: "36123699"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

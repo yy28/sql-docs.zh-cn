@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
@@ -16,13 +16,13 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2892c047bb3826b62da81f8f5f4ddcdea5b46f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ceab28c15a3e0a5e8851fd4d7142a7d0c0b2f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236157"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>性能、快照、缓存 (Reporting Services)
   报表服务器性能受各种组合因素的影响，这些因素包括硬件、访问报表的并发用户的数量、报表中的数据量和输出格式。 若要了解影响您的安装的具体性能因素以及哪个补救办法将生成所需的结果，您将需要获得基准数据并运行测试。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Reporting Services 性能优化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 和 [使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](http://go.microsoft.com/fwlink/?LinkID=77519)。  
@@ -41,7 +41,7 @@ ms.locfileid: "36124487"
   
 -   若要确定处理报表所需的时间以及其他使用情况指标，请检查报表服务器的执行日志。 有关详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](report-server-executionlog-and-the-executionlog3-view.md)。  
   
--   有关如何通过优化内存管理配置设置来缓解性能问题的详细信息，请参阅[配置的报表服务器应用程序的可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
+-   有关如何通过优化内存管理配置设置来缓解性能问题的详细信息，请参阅[为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [监视报表服务器性能](monitoring-report-server-performance.md)  

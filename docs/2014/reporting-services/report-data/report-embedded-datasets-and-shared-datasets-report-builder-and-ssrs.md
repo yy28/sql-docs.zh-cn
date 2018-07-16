@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36028314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218927"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
@@ -50,7 +50,7 @@ ms.locfileid: "36028314"
   
 7.  **来自架构的元数据** 数据访问接口将架构查询命令与检索数据集字段集合的元数据的查询分开运行。 例如， [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT`语句返回数据库表的列名称。 使用“报表数据”窗格展开数据集以查看数据集字段集合。  
   
- 通过使用预定义的共享数据集和报表部件，也可以将数据包含在报表中。 这些项已具有您所需的数据连接信息。 有关详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41; ](report-datasets-ssrs.md)和[报表部件&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)。  
+ 通过使用预定义的共享数据集和报表部件，也可以将数据包含在报表中。 这些项已具有您所需的数据连接信息。 有关详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41; ](report-datasets-ssrs.md)并[报表部件&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)。  
   
  有关内置数据源类型和数据扩展插件的详细信息，请参阅[从外部数据源中添加数据 (SSRS)](add-data-from-external-data-sources-ssrs.md)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36028314"
 ##  <a name="Overview"></a> 了解报表数据集和查询  
  报表数据集包含在外部数据源上运行并且指定要检索的数据的查询命令。 为了生成该查询命令，您使用与外部数据源的数据扩展插件相关联的查询设计器。 在查询设计器中，您可以运行该查询命令并查看结果集。 该结果集是一个矩形行集，它具有列名以及在每一行中值的数目都相同的行。 不支持层次结构数据（也称作“不规则层次结构” ）。 列名以数据集字段列表的形式保存在报表定义中。  
   
- 在您向报表中添加数据集后，在“报表数据”窗格中将字段从其字段集合拖到表、图表以及用于设计报表布局的其他报表项中。 有关使用域的详细信息，请参阅[数据集字段集合&#40;报表生成器和 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)。  
+ 在您向报表中添加数据集后，在“报表数据”窗格中将字段从其字段集合拖到表、图表以及用于设计报表布局的其他报表项中。 有关使用字段的详细信息，请参阅[数据集字段集合&#40;报表生成器和 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)。  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>了解报表数据集数据  
  根据数据扩展插件，报表数据集可以由以下类型的数据组成：  
@@ -209,7 +209,7 @@ ms.locfileid: "36028314"
   
 -   使用单独的数据区域显示每个数据集中的数据。 有关详细信息，请参阅[数据区域和地图（报表生成器和 SSRS）](../report-design/data-regions-and-maps-report-builder-and-ssrs.md)。  
   
--   可以将多个数据区域链接到一个数据集，并为相同数据提供多个视图。 有关详细信息，请参阅[到同一数据集的链接多个数据区域&#40;报表生成器和 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
+-   可以将多个数据区域链接到一个数据集，并为相同数据提供多个视图。 有关详细信息，请参阅[多个数据区域链接到同一数据集&#40;报表生成器和 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
   
 -   可以使用数据集提供报表参数的可用值或默认值的下拉列表。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
   

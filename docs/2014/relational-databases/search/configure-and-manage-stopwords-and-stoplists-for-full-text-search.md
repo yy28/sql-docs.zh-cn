@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d32fea4b5d9995628c187d39c7482c6694e828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284833"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
   为了精简全文检索，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字” 。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
@@ -102,37 +101,37 @@ ms.locfileid: "36123590"
 ##  <a name="queries"></a> 在全文查询中使用非索引字表  
  若要在查询中使用非索引字表，必须将该非索引字表与全文检索关联。 可以在创建全文检索时将非索引字表附加到全文检索中，也可以在以后更改索引来添加非索引字表。  
   
- **若要创建的全文索引，然后将非索引字表与其相关联**  
+ **若要创建全文索引，然后将非索引字表与其相关联**  
   
 -   [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **若要关联或解除关联与现有的全文索引非索引字**  
+ **若要将关联或解除关联的现有全文索引非索引字表**  
   
 -   [ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **若要禁止显示一条错误消息，如果非索引字导致全文查询失败的布尔操作**  
+ **若要取消非索引字导致全文查询失败的布尔操作时产生一条错误消息**  
   
 -   [“转换干扰词”服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a> 查看非索引字表和非索引字表元数据  
- **若要查看的非索引字表的所有非索引字**  
+##  <a name="viewing"></a> 查看非索引字表和非索引字表的元数据  
+ **若要查看非索引字表的所有非索引字**  
   
 -   [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **若要获取当前数据库中所有非索引字表有关的信息**  
+ **若要获取当前数据库中的所有非索引字表有关的信息**  
   
 -   [sys.fulltext_stoplists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
 -   [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **若要查看 word 断字符、 同义词库和非索引字表组合的词汇切分结果**  
+ **若要查看断字符、 同义词库和非索引字表组合的词汇切分结果**  
   
 -   [sys.dm_fts_parser (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
 ##  <a name="change"></a> 更改非索引字在非索引字  
- **若要添加或从非索引字表中删除非索引字**  
+ **若要添加或删除非索引字表的非索引字**  
   
 -   [ALTER FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   

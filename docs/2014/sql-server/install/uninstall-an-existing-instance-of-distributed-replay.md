@@ -1,5 +1,5 @@
 ---
-title: 卸载分布式重播的现有实例 |Microsoft 文档
+title: 卸载 Distributed Replay 的现有实例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 418af5b3-b8d8-45ba-9219-24ac2a348c29
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6ae9379c9369b1845eddd73dedcf92ce2d07f03e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d12edfbb93149a27316319e26210f8e4d0a8879f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210527"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>卸载 Distributed Replay 的现有实例
   卸载 Distributed Replay 组件（控制器或客户端）将删除以下内容：  
@@ -36,7 +36,7 @@ ms.locfileid: "36128686"
   
      选择[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中**卸载或更改程序**窗口中，然后在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]对话框中，单击**删除**。  
   
-2.  按照中的步骤[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导，然后在**选择功能**页上，选择你想要删除，，然后单击对 Distributed Replay 组件**下一步。**。  
+2.  按照中的步骤[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导中，然后在**选择功能**页上，选择你想要删除，然后单击 Distributed Replay 组件**下一步。**。  
   
 3.  完成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导以卸载选定的 Distributed Replay 功能。  
   

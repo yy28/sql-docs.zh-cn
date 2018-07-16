@@ -1,5 +1,5 @@
 ---
-title: 算法参数对话框 （挖掘模型视图） |Microsoft 文档
+title: 算法参数对话框 （挖掘模型视图） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 996a6b9ad990eeccd74888c8b43cd29b12ef17db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36125957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178954"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>“算法参数”对话框（“挖掘模型”视图）
   可以使用 **“算法参数”** 对话框调整专用于选定模型的算法参数。 当更改算法参数时，将通常更改挖掘模型的结果。 每个参数对结果的影响方式取决于您使用的算法和数据。 有关详细信息，请参阅[自定义挖掘模型和结构](data-mining/customize-mining-models-and-structure.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "36125957"
 |**参数**|列出参数的名称。|  
 |**ReplTest1**|仅当要更改参数的默认值时才能输入新值。|  
 |**Default**|如果没有在 **“值”** 列提供值，将列出算法使用的参数的默认值。|  
-|**范围**|列出可以在 **“值”** 列中输入的可能值的范围。 范围可以是以下项之一：<br /><br /> 离散列表，例如 1、 2、 3<br /><br /> 非独占的范围，如 [0，100]<br /><br /> 排除范围，例如 (0，...)<br /><br /> 组合，例如 [0，...)|  
+|**范围**|列出可以在 **“值”** 列中输入的可能值的范围。 范围可以是以下值之一：<br /><br /> 离散列表，例如 1、 2、 3<br /><br /> 内含范围，例如 [0，100]<br /><br /> 排他范围，例如 (0，...)<br /><br /> 组合，例如 [0，...)|  
   
  **Description**  
  说明在“参数”列表中选定的参数。  

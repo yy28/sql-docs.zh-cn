@@ -1,5 +1,5 @@
 ---
-title: 将数据转换为不同的数据类型，方法是使用数据转换转换 |Microsoft 文档
+title: 使用数据转换将数据转换为不同的数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -17,13 +17,13 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bddfd8409bcca80a468638398270c7479e02d62f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: e6988fb5a0bde5201a5b9839ae86658ae693848f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164938"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>使用数据转换将数据转换为其他数据类型
   若要添加并配置数据转换，包必须已经包含至少一个数据流任务和一个源。  
@@ -62,6 +62,6 @@ ms.locfileid: "36015491"
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
  [Integration Services 数据类型](../integration-services-data-types.md)   
- [数据流任务]((../../control-flow/data-flow-task.md)  
+ [数据流任务](../../control-flow/data-flow-task.md)  
   
   

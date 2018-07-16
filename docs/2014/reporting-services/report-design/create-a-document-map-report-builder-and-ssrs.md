@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95647eaf64c59078aeda48ec0dc7281d8af27d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 259de5dd91dfdc50958b25589b90fdadde4ac005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174949"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
   文档结构图提供了一组指向所呈现报表中的报表项的导航链接。 当您查看包含文档结构图的报表时，将在报表旁显示一个单独的侧窗格。 用户通过单击文档结构图中的链接，可跳至显示报表项的报表页。 报表的各区域和组将按一定层次结构的链接形式排列。 单击文档结构图中的项会刷新报表，并显示与文档结构图中所单击项对应的报表区域。  
   
- 若要向文档结构图添加链接，请设置`DocumentMapLabel`到你创建的文本或计算结果为文本所需文档结构图中的显示的表达式的报表项的属性。 还可以向文档结构图添加表或矩阵组的唯一值。 例如，对于基于颜色的组，每个唯一颜色都是指向显示该颜色组实例的报表页的一个链接。  
+ 若要向文档结构图添加链接，请设置`DocumentMapLabel`为你创建的文本或表达式的计算结果为文本所需在文档结构图中的显示的报表项的属性。 还可以向文档结构图添加表或矩阵组的唯一值。 例如，对于基于颜色的组，每个唯一颜色都是指向显示该颜色组实例的报表页的一个链接。  
   
  您还可以创建指向报表的 URL 来覆盖文档结构图，这样在运行报表时可以不显示文档结构图，然后通过单击报表查看器工具栏中的 **“显示/隐藏文档结构图”** 按钮，可切换到显示文档结构图。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36130047"
     > [!NOTE]  
     >  若要选择 Tablix 数据区域，请在任意单元内单击以显示行控点和列控点，然后单击角控点。  
   
-2.  在属性窗格中，键入你希望在文档结构图中显示的文本`DocumentMapLabel`属性，或输入到标签的计算结果的表达式。 例如，键入 **Sales Chart**。  
+2.  在属性窗格中，键入你想要在文档结构图中显示的文本`DocumentMapLabel`属性，或输入表达式的计算结果为标签。 例如，键入 **Sales Chart**。  
   
     > [!NOTE]  
     >  如果看不到“属性”窗格，请在 **“视图”** 选项卡的 **“显示/隐藏”** 组中选择 **“属性”**。  

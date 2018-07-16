@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copying queries
 - queries [SQL Server], copying
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5f6df3df44447d1ef24946468e54000a4a477d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f961375f9e73bd96e2bf4199743fb98f8b9e96f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204517"
 ---
 # <a name="copy-queries-visual-database-tools"></a>复制查询 (Visual Database Tools)
   可以将查询的正文复制到新的查询中作为起点。  
@@ -42,9 +42,9 @@ ms.locfileid: "36124704"
 6.  右键单击，然后在快捷菜单中单击“粘贴”。  
   
 ## <a name="see-also"></a>请参阅  
- [重命名查询&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [清除查询结果&#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
- [保存查询&#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
+ [重命名查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [清除查询结果&#40;可视化数据库工具&#41;](clear-query-results-visual-database-tools.md)   
+ [保存查询&#40;可视化数据库工具&#41;](save-queries-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

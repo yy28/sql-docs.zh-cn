@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 中不推荐使用的 Master Data Services 功能 |Microsoft 文档
+title: SQL Server 2014 中弃用的 Master Data Services 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 423e45193aed8d0f499e5920f08f8c8551e27545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 625887e6b737e3e54fc8c0516ec3fdbc1e13d46e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36124365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262953"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 Master Data Services 功能
   本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -27,7 +27,7 @@ ms.locfileid: "36124365"
 ## <a name="staging-process"></a>临时过程  
  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中使用的临时过程在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序将不再可用，但是仍可在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用。  
   
- [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的临时错误将不再显示在 UI 中。 在临时过程填充的错误代码在临时表中，仍然可用，并可在此处找到： [ http://msdn.microsoft.com/library/ff487022.aspx ](http://msdn.microsoft.com/library/ff487022.aspx)。  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的临时错误将不再显示在 UI 中。 在临时过程中填充的错误代码在临时表中仍然可用并可在此处找到： [ http://msdn.microsoft.com/library/ff487022.aspx ](http://msdn.microsoft.com/library/ff487022.aspx)。  
   
  临时表（tblStgMember、tblStgMemberAttribute 和 tblStgRelationship）在数据库中仍然可用。 用于启动临时过程的存储过程 (mdm.udpStagingSweep) 在数据库中仍然可用。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36124365"
  已在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中实现性能更高的新临时过程。 有关详细信息，请参阅[数据导入 (Master Data Services)](overview-importing-data-from-tables-master-data-services.md)。  
   
 ## <a name="metadata"></a>元数据  
- 尽管元数据模型仍显示在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，但不应使用该模型。 未来的版本会将其删除。 用户还可以不再查看中的元数据**资源管理器**功能区域中，并且你无法再创建元数据模型的版本。  
+ 尽管元数据模型仍显示在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，但不应使用该模型。 未来的版本会将其删除。 用户也无法再查看中的元数据**资源管理器**功能区域中，并且您无法再创建元数据模型的版本。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 中已停止使用的 Master Data Services 功能](discontinued-master-data-services-features.md)  

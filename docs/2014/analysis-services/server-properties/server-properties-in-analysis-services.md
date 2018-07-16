@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 中配置服务器属性 |Microsoft 文档
+title: 在 Analysis Services 中配置服务器属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247347"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中配置服务器属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员可以修改默认服务器配置属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员可以修改的默认服务器配置属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
  若要设置服务器属性，请使用 SQL Server Management Studio 或编辑特定实例的 msmdsrv.ini 文件。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36029112"
  SQL Server Management Studio 中的属性页包含一部分可用的属性，仅显示可能要修改的那些属性。 msmdsrv.ini 文件中提供了一组完整的属性。  
   
 > [!NOTE]  
->  本主题未说明 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署配置属性。 有关部署配置的详细信息，请参阅[指定解决方案部署的配置设置](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
+>  本主题未说明 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署配置属性。 有关部署配置的详细信息，请参阅[为解决方案部署指定配置设置](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>在 Management Studio 中查看或设置配置属性  
   

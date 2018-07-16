@@ -1,5 +1,5 @@
 ---
-title: 使用单元属性 (MDX) |Microsoft 文档
+title: 使用单元属性 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic cell properties [MDX]
 - cells [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 496fbb18fa454b17b78dc54d598a96a88e5dcb8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ba678db945252692d72901aab725224a6dfb503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301217"
 ---
 # <a name="using-cell-properties-mdx"></a>使用单元属性 (MDX)
   多维表达式 (MDX) 中的单元属性包含有关多维数据源（如多维数据集）中的单元的内容和格式的信息。  
@@ -56,22 +56,22 @@ SELECT [<axis_specification>
 |`ACTION_TYPE`|指示单元中存在何种操作的位掩码。 此属性可以具有下列值之一：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：对于在 where 子句中包含集的查询来说，不包含钻取操作。|  
 |**BACK_COLOR**|用于显示 `VALUE` 或 `FORMATTED_VALUE` 属性的背景色。 有关详细信息，请参阅 [FORE_COLOR 和 BACK_COLOR 内容 (MDX)](mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
 |`CELL_ORDINAL`|数据集中单元的序号。|  
-|**FONT_FLAGS**|字体的位掩码细节效果。 例如，值 5 表示加粗的组合 (`MDFF_BOLD`) 和下划线 (`MDFF_UNDERLINE`) 字体效果。 该值是对以下一个或多个常量执行按位 OR 操作的结果：<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
+|**FONT_FLAGS**|字体的位掩码细节效果。 例如，值 5 表示粗体的组合 (`MDFF_BOLD`) 和下划线 (`MDFF_UNDERLINE`) 字体效果。 该值是对以下一个或多个常量执行按位 OR 操作的结果：<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|要用于显示的字体`VALUE`或`FORMATTED_VALUE`属性。|  
 |**FONT_SIZE**|用来显示 `VALUE` 或 `FORMATTED_VALUE` 属性的字体大小。|  
 |**FORE_COLOR**|用来显示 `VALUE` 或 `FORMATTED_VALUE` 属性的前景色。 有关详细信息，请参阅 [FORE_COLOR 和 BACK_COLOR 内容 (MDX)](mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
 |`FORMAT`|与相同`FORMAT_STRING`。|  
 |`FORMAT_STRING`|用于创建格式字符串`FORMATTED_VALUE`属性值。 有关详细信息，请参阅 [FORMAT_STRING 内容 (MDX)](mdx-cell-properties-format-string-contents.md)。|  
-|`FORMATTED_VALUE`|表示的格式化的显示的字符字符串`VALUE`属性。|  
-|`LANGUAGE`|应用 `FORMAT_STRING` 的区域设置。 `LANGUAGE` 通常用于货币换算。|  
-|`UPDATEABLE`|指示单元是否可更新的值。 此属性可以具有下列值之一：<br /><br /> `MD_MASK_ENABLED` (0x00000000) 可以更新该单元格。<br /><br /> `MD_MASK_NOT_ENABLED` (0x10000000) 无法更新该单元格。<br /><br /> `CELL_UPDATE_ENABLED` (0x00000001) 可以在单元集中更新单元格。<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE` (0x00000002) 可以使用 update 语句更新单元格。 如果更新的叶单元未启用写操作，更新可能会失败。<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA` 单元格不能为 (0x10000001) 更新，因为该单元格之间其坐标; 计算的成员单元格一组与检索到在 where 子句。 即使公式影响单元值或单元值上存在计算单元（在沿聚合路径的某个位置），仍可以更新单元。 在这种情况下，单元的最终值可能不是更新后的值，因为计算将影响结果。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE` (0x10000002) 不能更新该单元格，因为无法更新非和度量值 （计数、 min、 max、 非重复计数、 半累加性）。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE` (0x10000003) 无法更新该单元格，因为它会在度量值的交集，与该度量值的度量值组无关的维度成员不存在的单元。<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE` (0x10000005) 不能更新该单元格，因为保护单元格。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL` (0x10000006) 留待将来使用。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE` (0x10000007) 由于内部原因无法更新该单元格。<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE` (0x10000009) 无法更新该单元格，因为在挖掘模型，间接的、 或数据挖掘维度中不支持更新。|  
+|`FORMATTED_VALUE`|字符串，表示格式化的显示的`VALUE`属性。|  
+|`LANGUAGE`|应用 `FORMAT_STRING` 的区域设置。 `LANGUAGE` 通常用于进行货币转换。|  
+|`UPDATEABLE`|指示单元是否可更新的值。 此属性可以具有下列值之一：<br /><br /> `MD_MASK_ENABLED` (0x00000000) 可更新单元。<br /><br /> `MD_MASK_NOT_ENABLED` (0x10000000) 不能更新单元。<br /><br /> `CELL_UPDATE_ENABLED` (0x00000001) 可在单元集中更新单元格。<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE` (0x00000002) 可使用 update 语句更新单元。 如果更新的叶单元未启用写操作，更新可能会失败。<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA` (0x10000001) 不能为该单元格更新，因为该单元格有一个计算的成员在其坐标中;该单元格与一组检索到在 where 子句。 即使公式影响单元值或单元值上存在计算单元（在沿聚合路径的某个位置），仍可以更新单元。 在这种情况下，单元的最终值可能不是更新后的值，因为计算将影响结果。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE` (0x10000002) 不能更新单元，因为不能更新非和度量值 （计数、 最小值、 最大值、 非重复计数、 半累加性）。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE` (0x10000003) 不能更新单元，因为该单元格不存在的度量值的交集处是和与该度量值的度量值组无关的维度成员。<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE` (0x10000005) 不能更新单元，因为该单元受保护。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL` (0x10000006) 保留供将来使用。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE` (0x10000007) 由于内部原因不能更新单元。<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE` (0x10000009) 不能更新单元，因为在挖掘模型，间接或数据挖掘维度中不支持更新。|  
 |`VALUE`|单元的未格式化值。|  
   
- 仅`CELL_ORDINAL`， `FORMATTED_VALUE`，和`VALUE`单元格属性都是必需。 所有的单元属性（内部单元属性或特定于提供程序的单元属性）都在 `PROPERTIES` 架构行集中进行定义，包括它们的数据类型和提供程序支持。 有关详细信息`PROPERTIES`架构行集，请参阅[MDSCHEMA_PROPERTIES 行集](../../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)。  
+ 仅`CELL_ORDINAL`， `FORMATTED_VALUE`，和`VALUE`单元属性是必需。 所有的单元属性（内部单元属性或特定于提供程序的单元属性）都在 `PROPERTIES` 架构行集中进行定义，包括它们的数据类型和提供程序支持。 有关详细信息`PROPERTIES`架构行集，请参阅[MDSCHEMA_PROPERTIES 行集](../../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)。  
   
- 默认情况下，如果`CELL PROPERTIES`不使用关键字，返回的单元格属性是`VALUE`， `FORMATTED_VALUE`，和`CELL_ORDINAL`（按此顺序）。 如果`CELL PROPERTIES`使用关键字，仅这些单元格使用关键字显式指定返回的属性。  
+ 默认情况下，如果`CELL PROPERTIES`未使用关键字时，返回的单元属性为`VALUE`， `FORMATTED_VALUE`，和`CELL_ORDINAL`（按此顺序）。 如果`CELL PROPERTIES`使用关键字，返回用该关键字显式声明这些单元属性。  
   
- 下面的示例演示了利用`CELL PROPERTIES`关键字在 MDX 查询：  
+ 下面的示例演示如何将`CELL PROPERTIES`关键字在 MDX 查询：  
   
 ```  
 SELECT  
@@ -81,7 +81,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORMAT_STRING, FORE_COLOR, BACK_COLOR  
 ```  
   
- 单元属性不会返回的 MDX 查询，返回平展行集;在这种情况下，就像仅表示每个单元格`FORMATTED_VALUE`单元格属性返回。  
+ 对于返回平展行集; 的 MDX 查询不返回单元属性在这种情况下，每个单元格表现为似乎只`FORMATTED_VALUE`返回单元属性。  
   
 ## <a name="setting-cell-properties"></a>设置单元属性  
  可以在各种位置的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中设置属性。 例如，可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]的多维数据集编辑器的“多维数据集结构”选项卡上为常规度量值设置格式字符串属性；可以为在多维数据集编辑器的“计算”选项卡上的多维数据集上定义的计算度量值设置相同属性；在查询的 WITH 子句中定义的计算度量值也具有其在此处定义的格式字符串。以下查询演示了如何在计算的度量值上设置单元属性：  
