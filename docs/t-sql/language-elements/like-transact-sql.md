@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -36,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f97c3e301814d73ece3703a5bd32c55a7b8ab8a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d230ee2c430d753573687502175f0fbc711f0e83
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065124"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36252909"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +70,7 @@ match_expression [ NOT ] LIKE pattern
  pattern  
  要在 match_expression 中搜索并且可以包括下列有效通配符的特定字符串。 pattern 的最大长度可达 8,000 字节。  
   
-|通配符|Description|示例|  
+|通配符|描述|示例|  
 |------------------------|-----------------|-------------|  
 |%|包含零个或多个字符的任意字符串。|WHERE title LIKE '%computer%' 将查找在书名中任意位置包含单词 "computer" 的所有书名。|  
 |_（下划线）|任何单个字符。|WHERE au_fname LIKE '_ean' 将查找以 ean 结尾的所有 4 个字母的名字（Dean、Sean 等）。|  

@@ -1,26 +1,24 @@
 ---
 title: 使用 Azure 中部署的 SSIS 包打开并保存文件 | Microsoft Docs
 description: 了解将使用本地文件系统的 SSIS 包提升并移动到 Azure 中的 SSIS 时，如何在本地和 Azure 中打开并保存文件
-ms.date: 11/27/2017
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c4f9d5e91db382d59dc156ed919c1af06cc56b77
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410469"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065987"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>使用 Azure 中部署的 SSIS 包在本地和 Azure 中打开并保存文件
 
 本文介绍将使用本地文件系统的 SSIS 包提升和移动到 Azure 中的 SSIS 时，如何在本地和 Azure 中打开并保存文件。
-
-> [!IMPORTANT]
-> 目前，SSIS 目录 (SSISDB) 仅支持一组访问凭据。 因此，你无法使用单个不同的凭证集连接到多个本地文件共享和 Azure 文件共享。
 
 ## <a name="save-temporary-files"></a>保存临时文件
 如果在单个包执行期间需存储和处理临时文件，包可以使用 Azure-SSIS Integration Runtime 节点的当前工作目录 (`.`) 或临时文件夹 (`%TEMP%`)。

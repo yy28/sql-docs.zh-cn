@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - retrieving messages
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3a405bf525cc5203b82860097e8904fca2de4f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 450de8b521cbbec33375a429bcfc7fb1035194a5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074734"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788458"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +163,7 @@ ms.locfileid: "33074734"
 ## <a name="queue-columns"></a>队列列  
  下表列出了队列中的列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|消息的状态。 对于由 RECEIVE 命令返回的消息，其状态始终为 0。 队列中的消息可以包含下列值之一：<br /><br /> 0=就绪 1=已收到消息 2=尚未完成 3=已保留发送的消息|  
 |**priority**|**tinyint**|应用于消息的会话优先级。|  
