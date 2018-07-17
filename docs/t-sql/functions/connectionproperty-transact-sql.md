@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51685541435f4ab0192792341d2a29210dc9f504
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0638fcbc1559507bffb478c559f53180dface974
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054784"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789378"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ CONNECTIONPROPERTY ( property )
 property  
 连接的属性。 property 可以为下列值之一：
   
-|ReplTest1|数据类型|Description|  
+|ReplTest1|数据类型|描述|  
 |---|---|---|
 |net_transport|**nvarchar(40)**|返回该连接使用的物理传输协议。 此值不可以为 null。 可能的返回值为：<br /><br /> **HTTP**<br /> **命名管道**<br /> **会话**<br /> **共享内存**<br /> **SSL**<br /> **TCP**<br /><br /> 和<br /><br /> **VIA**<br /><br /> 注意：如果连接启用了多个活动结果集 (MARS)，并且启用了连接池，则始终返回 Session。|  
 |protocol_type|**nvarchar(40)**|返回负载协议类型。 此参数当前可区分 TDS (TSQL) 和 SOAP。 可以为 Null。|  

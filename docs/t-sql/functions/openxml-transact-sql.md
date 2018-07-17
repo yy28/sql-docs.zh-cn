@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ad07906a4b64281016da04ee803833e3d17542
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055154"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255509"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flag*  
  指示应在 XML 数据和关系行集间使用映射以及应如何填充溢出列。 flag 为可选输入参数，可以是下列值之一。  
   
-|字节值|Description|  
+|字节值|描述|  
 |----------------|-----------------|  
 |**0**|默认为“以属性为中心”的映射。|  
 |**1**|使用“以属性为中心”的映射。 可以与 XML_ELEMENTS 一起使用。 这种情况下，首先应用“以属性为中心”的映射，然后对所有未处理的列应用“以元素为中心”的映射。|  
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  下表介绍了边缘表的结构。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|文档节点的唯一 ID。<br /><br /> 根元素具有的 ID 值为 0。 保留负的 ID 值。|  
 |**parentid**|**bigint**|标识节点的父节点。 此 ID 所标识的父节点不一定是父元素，而是取决于此 ID 所标识节点的子节点的 NodeType。 例如，如果节点是文本节点，则其父节点可能是属性节点。<br /><br />  如果节点位于 XML 文档的顶层，则其 ParentID 为 NULL。|  

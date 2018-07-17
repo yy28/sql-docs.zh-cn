@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f094b8701172ece034c53ebad5f07b45fa3c207c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bd89a336eb0797d67f22c5f534ce06bd96caf50
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960252"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359339"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>参数化筛选器 - 针对预计算分区进行优化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,6 +73,6 @@ ms.locfileid: "32960252"
  在将更改从订阅服务器上载到发布服务器时，尽管使用预计算分区会产生少量的性能开销，但大部分合并处理时间用于计算分区以及将更改从发布服务器下载到订阅服务器上，所以净的性能收益仍然很显著。 根据并发同步的订阅服务器的数目以及将行从一个分区移动到另一分区的每个同步的更新数目的不同，性能收益也会有所不同。  
   
 ## <a name="see-also"></a>另请参阅  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

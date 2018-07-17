@@ -3,9 +3,7 @@ title: SQL Server 2014 发行说明 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: f9a8d57f209e5c8c813fd08c8faff6ce5504c97b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036754"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926968"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序�
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>SP2 中性能和可伸缩性方面的改进
 
-|功能|Description|有关详细信息，请参阅：|
+|功能|描述|有关详细信息，请参阅：|
 |---|---|---|
 |自动 Soft NUMA 分区|可在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft NUMA。|[软件 NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |缓冲池扩展|启用 SQL Server 缓冲池以缩放 8 TB 以上。|[缓冲池扩展](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -44,7 +42,7 @@ SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序�
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 中的可支持性和诊断改进
 
-|功能|Description|有关详细信息，请参阅：|
+|功能|描述|有关详细信息，请参阅：|
 |---|---|---|
 |AlwaysON 超时日志记录|添加租约超时消息的新日志记录功能，以便记录当前时间和预期的续订时间。 |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)（改进的 AlwaysOn 可用性组租约超时诊断）
 |AlwaysON XEvent 和性能计数器|新 AlwaysON XEvent 和性能计数器，在对 AlwaysON 的延迟问题进行故障排除时改进诊断。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 和 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)

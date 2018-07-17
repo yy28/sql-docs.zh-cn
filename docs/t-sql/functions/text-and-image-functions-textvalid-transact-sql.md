@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf78bace0ee983375553433b5da117cfc02abbfc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: faccfb4456001f6a807e69cc69c89f31e8320955
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33057574"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788988"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>文本与图像函数 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
  当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用。  
   
-|函数或语句|Description|  
+|函数或语句|描述|  
 |---------------------------|-----------------|  
 |PATINDEX **(**'*%pattern%**'***,** *expression***)**|返回指定字符串在 text 和 ntext 列中所处的字符位置。|  
 |DATALENGTH(expression)****|返回 text、ntext 和 image 列中数据的长度。|  

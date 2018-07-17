@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 251c3c3d0f4a5d52d5c825eba86d55199e6a94b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f0c3a94b39787a302db13d6a3a9fed26f1718e8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960752"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357759"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32960752"
 > [!IMPORTANT]  
 >  如果在合并发布中添加、删除或更改参数化筛选器，则在重新初始化过程中，订阅服务器上的挂起更改将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
   
- 如果在创建发布时指定了不对订阅服务器应用初始快照，并将订阅标记为要重新初始化，则不应用快照。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+ 如果在创建发布时指定了不对订阅服务器应用初始快照，并将订阅标记为要重新初始化，则不应用快照。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
  **重新初始化订阅**  
   
