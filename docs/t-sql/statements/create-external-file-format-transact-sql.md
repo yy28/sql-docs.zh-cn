@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f478c5f06ff846d313625dc0792b33708a9ca358
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b8a39d64854d6cc63f0b607b9eaa5084ab250313
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702960"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784668"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -187,7 +186,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
   
 -   Am、pm (tt) 不是必需的。 默认值为 AM。
   
-|日期类型|示例|Description|  
+|日期类型|示例|描述|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|除了年、月和日之外，此日期格式包括 00-24 小时、00-59 分钟、00-59 秒以及用于毫秒的 3 位数字。|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|除了年、月和日之外，此日期格式包括 00-12 小时、00-59 分钟、00-59 秒、用于毫秒的 3 位数字以及 AM、am、PM 或 pm。 |  

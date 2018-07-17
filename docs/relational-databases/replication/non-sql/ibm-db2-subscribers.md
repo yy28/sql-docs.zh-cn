@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 452c82ff5fb19f90b3c20ad030c77b40f6de33d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0af7787982a49f82edafe1a39878e9e9f581356b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964362"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349849"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ms.locfileid: "32964362"
   
 -   如果表中有一个或多个主键列的数据类型为 DECIMAL(32-38, 0-38) 或 NUMERIC(32-38, 0-38)，请勿使用事务复制向 DB2 订阅服务器发布表。 事务复制使用主键标识行，这可能会导致失败，因为这些数据类型在订阅服务器上均映射为 VARCHAR(41)。 可以使用快照复制发布包含使用这些数据类型的主键的表。  
   
--   如果要在订阅服务器上预创建表，而不是让复制创建这些表，请使用“仅支持复制”选项。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+-   如果要在订阅服务器上预创建表，而不是让复制创建这些表，请使用“仅支持复制”选项。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 -   与 DB2 相比，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许使用更长的表名称和列名称：  
   

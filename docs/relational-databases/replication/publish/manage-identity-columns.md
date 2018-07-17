@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8173b90d4c23ca612e80175d59969e259c2cb24c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: debc7e5750d6d96e11a61a07be7ee4c7bbd97330
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964682"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355449"
 ---
 # <a name="manage-identity-columns"></a>管理标识列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ms.locfileid: "32964682"
   
 5.  如果在步骤 4 中选择了 **“自动”** 或 **True** ，请输入下表中列出的选项值。 有关如何使用这些设置的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“指定标识范围”部分。  
   
-    |选项|ReplTest1|Description|  
+    |选项|ReplTest1|描述|  
     |------------|-----------|-----------------|  
     |**发布服务器范围大小**|表示范围大小的整数值（例如 20000）。|请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“指定标识范围”部分。|  
     |**订阅服务器范围大小**|表示范围大小的整数值（例如 10000）。|请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“指定标识范围”部分。|  

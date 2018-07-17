@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c8fdd22ae4a058be09ef59a7ffaf97911647fc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c27f26971f71e971108f21d13499016913150ff
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956642"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355209"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "32956642"
   
 6.  为发布生成快照。 本主题提供了有关此步骤的详细信息。  
   
-7.  同步订阅。 有关详细信息，请参阅 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+7.  同步订阅。 有关详细信息，请参阅 [同步推送订阅](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 #### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>为非 SQL Server 订阅服务器启用发布  
   
@@ -194,6 +193,6 @@ ms.locfileid: "32956642"
  [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [其他非 SQL Server 订阅服务器](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
