@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,15 +26,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: 67
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23def6b6c02b49ae953c68a9e927de516582a605
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702910"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790818"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +153,7 @@ CREATE QUEUE <object>
   
  下表列出了队列中的列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|消息的状态。 RECEIVE 语句将返回状态为 1 的所有消息。 如果启用了消息保持，则将状态设置为 0。 如果禁用了消息保持，则将消息从队列中删除。 队列中的消息可包含下列任一值：<br /><br /> 0=保留收到的消息<br /><br /> 1=准备接收<br /><br /> 2=尚未完成<br /><br /> 3=保留发送的消息|  
 |priority|**tinyint**|为此消息指定的优先级。|  
