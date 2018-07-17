@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 795ff8c9d1ebc751bdf0a2acfd57b158ed64c956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318327"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新初始化订阅。 可以将各个订阅标记为重新初始化，以便在下次同步期间应用新快照。  
@@ -123,7 +123,7 @@ ms.locfileid: "36017309"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化对合并发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**和 **@publication**文件夹中打开。 若要重新初始化之前上载订阅服务器的更改，将值指定为`true`为**@upload_first**。 这会将订阅标记为在下一次运行合并代理时将要重新初始化。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**和 **@publication**文件夹中打开。 若要重新初始化之前上载订阅服务器的更改，将值指定为`true`有关**@upload_first**。 这会将订阅标记为在下一次运行合并代理时将要重新初始化。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -132,7 +132,7 @@ ms.locfileid: "36017309"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>重新初始化对合并发布的推送订阅  
   
-1.  在发布服务器上，执行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber**和 **@subscriber_db**文件夹中打开。 若要重新初始化之前上载订阅服务器的更改，将值指定为`true`为**@upload_first**。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
+1.  在发布服务器上，执行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber**和 **@subscriber_db**文件夹中打开。 若要重新初始化之前上载订阅服务器的更改，将值指定为`true`有关**@upload_first**。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -177,7 +177,7 @@ ms.locfileid: "36017309"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，在步骤 2 中的订阅属性中定义不正确或请求订阅不存在。  
+    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确或请求订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> 方法。 此方法将订阅标记为要重新初始化。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36017309"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，在步骤 2 中的订阅属性中定义不正确或推送订阅不存在。  
+    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确，或者推送订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 方法。 此方法将订阅标记为要重新初始化。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36017309"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，在步骤 2 中的订阅属性中定义不正确或请求订阅不存在。  
+    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确或请求订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> 方法。 传递 `true` 值以在重新初始化之前上载订阅服务器上的更改，或者传递 `false` 值以重新初始化并丢失订阅服务器上任何挂起的更改。 此方法将订阅标记为要重新初始化。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36017309"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，在步骤 2 中的订阅属性中定义不正确或推送订阅不存在。  
+    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确，或者推送订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> 方法。 传递 `true` 值以在重新初始化之前上载订阅服务器上的更改，或者传递 `false` 值以重新初始化并丢失订阅服务器上任何挂起的更改。 此方法将订阅标记为要重新初始化。  
   

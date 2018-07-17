@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 79de2148e10d4e43ae6560741435b1dcf3f31e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8975a3c535d627fe41a51b9b4937e204a07326c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36016114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298057"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定义合并表项目间的逻辑记录关系
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义合并表项目间的逻辑记录关系。  
@@ -106,7 +106,7 @@ ms.locfileid: "36016114"
   
     -   若要检测并解决发生在逻辑记录的相关行之间的冲突，请将 **@value** 的值指定为 **@logical_record_level_conflict_detection** 和 **@logical_record_level_conflict_resolution**。  
   
-    -   若要使用标准的行或列级冲突检测和解决方法，指定的值`false`为**@logical_record_level_conflict_detection**和**@logical_record_level_conflict_resolution**，这是默认设置。  
+    -   若要使用标准行级或列级冲突检测和解决方法，指定的值`false`有关**@logical_record_level_conflict_detection**并**@logical_record_level_conflict_resolution**，这是默认设置。  
   
 3.  为每个将包含逻辑记录的项目重复步骤 2。 您必须为逻辑记录中的每个项目使用相同的冲突检测和解决选项。 有关详细信息，请参阅 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "36016114"
   
 2.  使用标准行级或列级冲突检测和解决方法：  
   
-    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值**logical_record_level_conflict_detection**为**@property**和的值`false`为**@value**。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription**。  
+    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值**logical_record_level_conflict_detection**有关**@property**并将值`false`为**@value**。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription**。  
   
-    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值**logical_record_level_conflict_resolution**为**@property**和的值`false`为**@value**。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription**。  
+    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值**logical_record_level_conflict_resolution**有关**@property**并将值`false`为**@value**。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription**。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>删除逻辑记录关系  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36016114"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例，为发布设置 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为在步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，在步骤 2 中的发布属性中定义不正确或不存在发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 2 中的发布属性定义不正确或不存在发布。  
   
 4.  如果 <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> 属性设置为 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>，请将其设为 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>。  
   

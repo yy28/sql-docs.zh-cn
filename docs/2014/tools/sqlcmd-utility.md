@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -27,21 +27,21 @@ helpviewer_keywords:
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 115
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c563d74c639d580d6e20d76a9ebfef98fbf458b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303437"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`实用工具，可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件在命令提示符下，在**查询编辑器**在 SQLCMD 模式下，Windows 脚本文件或的操作系统 (Cmd.exe) 作业步骤[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理作业。 此实用工具使用 ODBC 执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批处理。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]用于执行的常规和中的 SQLCMD 模式下的 SqlClient**查询编辑器**。 从命令行运行 `sqlcmd` 时，`sqlcmd` 使用 ODBC 驱动程序。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 `sqlcmd` 实用工具中执行相同的查询时，可能会看到不同的行为。  
+>  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]常规执行和在 SQLCMD 模式下的 SqlClient**查询编辑器**。 从命令行运行 `sqlcmd` 时，`sqlcmd` 使用 ODBC 驱动程序。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 `sqlcmd` 实用工具中执行相同的查询时，可能会看到不同的行为。  
   
  当前，`sqlcmd` 在命令行选项和值之间不需要空格。 但是，在将来的版本中，在命令行选项和值之间可能需要空格。  
   
@@ -99,16 +99,16 @@ ms.locfileid: "36025199"
  工作站的名称。 此选项设置 `sqlcmd` 脚本变量 SQLCMDWORKSTATION。 工作站名称列出在“sys.processes”目录视图的“hostname”列中，并且可使用存储过程“sp_who”返回。 如果不指定此选项，则默认为当前计算机名称。 此名称可用来标识不同的 `sqlcmd` 会话。  
   
  **-K** *application_intent*  
- 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K**，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动辅助副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K**，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  `-M` *multisubnet_failover*  
- 始终指定`-M`连接到的可用性组侦听器时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用性组或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]故障转移群集实例。 `-M` 将为（当前）活动服务器提供更快的检测和连接。 如果未指定 `–M`，则 `-M` 将关闭。 有关详细信息[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[活动辅助副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ 始终指定`-M`连接到的可用性组侦听器时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用性组或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]故障转移群集实例。 `-M` 将为（当前）活动服务器提供更快的检测和连接。 如果未指定 `–M`，则 `-M` 将关闭。 有关详细信息[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  此开关供客户端用于请求加密连接。  
   
  **-P** *password*  
- 用户指定的密码。 密码是区分大小写的。 如果使用-U 选项和 **-P**不使用选项，并且尚未设置 SQLCMDPASSWORD 环境变量，`sqlcmd`提示用户输入密码。 如果 **-P**在命令提示符下，且没有密码的末尾使用选项`sqlcmd`使用默认密码 (NULL)。  
+ 用户指定的密码。 密码是区分大小写的。 如果使用-U 选项和 **-P**不使用选项，并且尚未设置 SQLCMDPASSWORD 环境变量，`sqlcmd`会提示用户输入密码。 如果 **-P**命令提示符处，但不提供密码的末尾使用选项`sqlcmd`使用默认密码 (NULL)。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../relational-databases/security/strong-passwords.md)。  
@@ -133,7 +133,7 @@ ms.locfileid: "36025199"
  如果用户名和密码组合不正确，将生成错误消息。  
   
 > [!NOTE]  
->  为实现向后兼容性而保留了 OSQLPASSWORD 环境变量。 SQLCMDPASSWORD 环境变量优先于 OSQLPASSWORD 环境变量，例如：这意味着，`sqlcmd`和**osql**可以使用下一步而无需其他每个到干扰，并且旧的脚本将继续工作。  
+>  为实现向后兼容性而保留了 OSQLPASSWORD 环境变量。 SQLCMDPASSWORD 环境变量优先于 OSQLPASSWORD 环境变量，例如：这意味着`sqlcmd`并**osql**可以是使用彼此而不会相互干扰，并且旧脚本将继续工作。  
   
  如果将 **-P** 选项与 **-E** 选项一起使用，将生成错误消息。  
   
@@ -142,20 +142,20 @@ ms.locfileid: "36025199"
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 它设置 `sqlcmd` 脚本变量 SQLCMDSERVER。  
   
- 指定 *server_name* 可连接到该服务器计算机上的默认实例 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*server_name* [**\\* * * instance_name* ] 若要连接到的命名实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在该服务器计算机上。 如果不指定服务器，`sqlcmd` 将连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 在执行时，此选项是必需`sqlcmd`从网络上的远程计算机。  
+ 指定 *server_name* 可连接到该服务器计算机上的默认实例 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*server_name* [**\\* * * instance_name* ] 若要连接到命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]该服务器计算机上。 如果不指定服务器，`sqlcmd` 将连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 在执行时，此选项是必需`sqlcmd`从网络上的远程计算机。  
   
- *协议*可以是`tcp`(TCP/IP) `lpc` （共享内存），或`np`（命名管道）。  
+ *协议*可以是`tcp`(TCP/IP) `lpc` （共享内存） 或`np`（命名管道）。  
   
- 如果不指定*server_name* [**\\* * * instance_name* ] 当启动`sqlcmd`，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]检查并使用 SQLCMDSERVER 环境变量。  
+ 如果未指定*server_name* [**\\* * * instance_name* ] 何时开始`sqlcmd`，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]检查并使用 SQLCMDSERVER 环境变量。  
   
 > [!NOTE]  
->  为实现向后兼容性而保留了 OSQLSERVER 环境变量。 SQLCMDSERVER 环境变量优先于 OSQLSERVER 环境变量，例如：这意味着，`sqlcmd`和**osql**可以使用下一步而无需其他每个到干扰，并且旧的脚本将继续工作。  
+>  为实现向后兼容性而保留了 OSQLSERVER 环境变量。 SQLCMDSERVER 环境变量优先于 OSQLSERVER 环境变量，例如：这意味着`sqlcmd`并**osql**可以是使用彼此而不会相互干扰，并且旧脚本将继续工作。  
   
  **-U** *login_id*  
  用户登录 ID。  
   
 > [!NOTE]  
->  OSQLUSER 环境变量可用于实现向后兼容性。 SQLCMDUSER 环境变量优先于 OSQLUSER 环境变量。 这意味着，`sqlcmd`和**osql**可以彼此相邻使用不受干扰。 此外，现有的 **osql** 脚本可以继续使用。  
+>  OSQLUSER 环境变量可用于实现向后兼容性。 SQLCMDUSER 环境变量优先于 OSQLUSER 环境变量。 这意味着`sqlcmd`并**osql**可以彼此不受干扰地使用。 此外，现有的 **osql** 脚本可以继续使用。  
   
  如果既没有 **-U**选项也不 **-P**指定选项，则`sqlcmd`尝试通过连接[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 身份验证模式。 身份验证基于运行 `sqlcmd` 的用户的 Windows 帐户。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "36025199"
   
 -   假定多个输入文件具有相同的代码页。 可以将 Unicode 和非 Unicode 输入文件混合在一起。  
   
- 输入`chcp`在命令提示符下，以验证 Cmd.exe 的代码页。  
+ 输入`chcp`在命令提示符处，以验证 Cmd.exe 的代码页。  
   
  **-i** *input_file*[**,***input_file2*...]  
  标识包含一批 SQL 语句或存储过程的文件。 可以指定要按顺序读取和处理的多个文件。 文件名之间不要使用任何空格。 `sqlcmd` 将首先检查所有指定的文件是否都存在。 如果有一个或多个文件不存在，`sqlcmd` 将退出。 -i 和 -Q/-q 选项是互斥的。  
@@ -270,7 +270,7 @@ ms.locfileid: "36025199"
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- 创建`sqlcmd`可以在中使用的脚本变量`sqlcmd`脚本。 如果该值包含空格，则将其用引号引起来。 你可以指定多个***var***=**"*`values`*"** 值。 如果指定的任何值中有错误，`sqlcmd` 会生成错误消息，然后退出。  
+ 创建`sqlcmd`可以使用中的脚本变量`sqlcmd`脚本。 如果该值包含空格，则将其用引号引起来。 可以指定多个***var***=**"*`values`*"** 值。 如果指定的任何值中有错误，`sqlcmd` 会生成错误消息，然后退出。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -388,10 +388,10 @@ ms.locfileid: "36025199"
   
  如果指定了可选参数 **1** ，则统计信息的输出格式为以冒号分隔的格式，此格式可以由脚本轻松导入到电子表格中或进行处理。  
   
- 如果可选参数是任何值，而不**1**，生成错误和`sqlcmd`退出。  
+ 如果可选参数而不是任何值**1**，将生成错误和`sqlcmd`退出。  
   
  `-X`[**1**]  
- 从批处理文件执行 `sqlcmd` 时，将禁用可能危及系统安全的命令。 禁用的命令仍然可以被识别；`sqlcmd` 发出警告消息并继续。 如果可选参数**1**指定，则`sqlcmd`会生成一条错误消息，然后退出。 使用 `-X` 选项时，将禁用以下命令：  
+ 从批处理文件执行 `sqlcmd` 时，将禁用可能危及系统安全的命令。 禁用的命令仍然可以被识别；`sqlcmd` 发出警告消息并继续。 如果可选参数**1**指定，则`sqlcmd`生成一条错误消息，然后退出。 使用 `-X` 选项时，将禁用以下命令：  
   
 -   **ED**  
   
@@ -405,12 +405,12 @@ ms.locfileid: "36025199"
 ## <a name="remarks"></a>Remarks  
  不必按语法部分所示的顺序使用选项。  
   
- 在返回多个结果时，`sqlcmd` 在批处理中的每个结果集之间输出一个空行。 此外，"\<x > 受影响的行"时它不适用于执行的语句未出现消息。  
+ 在返回多个结果时，`sqlcmd` 在批处理中的每个结果集之间输出一个空行。 此外，"\<x > 行受影响"如果不应用于已执行的语句未显示消息。  
   
- 若要使用`sqlcmd`以交互方式，键入`sqlcmd`在命令提示符下，与任何一个或多本主题前面所述的选项。 有关详细信息，请参阅[使用 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ 若要使用`sqlcmd`，以交互方式键入`sqlcmd`在命令提示符处带一个或多个本主题前面所述的选项。 有关详细信息，请参阅[使用 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
->  选项 **-L**， **-Q**， **-Z**或 **-i**导致`sqlcmd`执行后退出。  
+>  选项 **-L**， **-Q**， **-Z**或者 **-i**导致`sqlcmd`执行后退出。  
   
  命令环境 (Cmd.exe) 中的 `sqlcmd` 命令行的总长度（包括所有参数和扩展变量）取决于 Cmd.exe 所在的操作系统。  
   
@@ -420,7 +420,7 @@ ms.locfileid: "36025199"
   
 2.  用户级环境变量  
   
-3.  命令行界面 (**设置**X = Y) 在命令提示符处运行前设置`sqlcmd`。  
+3.  命令行界面 (**设置**X = Y) 在命令提示符处运行之前`sqlcmd`。  
   
 4.  **sqlcmd-v** X=Y  
   
@@ -531,7 +531,7 @@ ms.locfileid: "36025199"
  显示当前设置的脚本变量列表。  
   
 > [!NOTE]  
->  仅脚本变量设置的`sqlcmd`，以及使用设置 **: Setvar**将显示命令。  
+>  仅脚本设置的变量`sqlcmd`，并使用设置的 **: Setvar**命令将显示。  
   
  **输出命令**  
   **:Error**   
@@ -577,7 +577,7 @@ ms.locfileid: "36025199"
   
  `sqlcmd -Q "EXIT(SELECT COUNT(*) FROM '%1')"`  
   
- `sqlcmd`实用程序将发送括号之间的所有内容 **（)** 到服务器。 如果系统存储过程选择了一个集合并返回一个值，则仅返回选择的内容。 如果圆括号中没有任何内容，则 EXIT **()** 语句会执行批处理中此语句前的所有内容，然后退出，且不返回任何值。  
+ `sqlcmd`实用工具将圆括号之间的所有内容发送 **（)** 到服务器。 如果系统存储过程选择了一个集合并返回一个值，则仅返回选择的内容。 如果圆括号中没有任何内容，则 EXIT **()** 语句会执行批处理中此语句前的所有内容，然后退出，且不返回任何值。  
   
  当指定了不正确的查询时，`sqlcmd` 将退出，且不返回任何值。  
   
@@ -595,7 +595,7 @@ ms.locfileid: "36025199"
   
  执行包括查询的批处理，返回查询的结果后退出。  
   
- 如果在中使用 RAISERROR`sqlcmd`引发脚本并且出现状态 127，`sqlcmd`将退出，并将消息 ID 返回给客户端。 例如：  
+ 如果中使用 RAISERROR`sqlcmd`引发脚本，并出现状态 127，则`sqlcmd`将退出，并返回到客户端返回消息 ID。 例如：  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -614,12 +614,12 @@ ms.locfileid: "36025199"
   
  **其他命令**  
   **:r \<** *filename* **>**  
- 分析其他[!INCLUDE[tsql](../includes/tsql-md.md)]语句和`sqlcmd`从指定的文件的命令 **< *`filename`* >** 到语句缓存。  
+ 分析其他[!INCLUDE[tsql](../includes/tsql-md.md)]语句和`sqlcmd`中指定的文件的命令 **< *`filename`* >** 到语句缓存。  
   
  如果文件包含的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句后面没有跟随 **GO**，则必须在 **:r** 的后一行中输入 **GO**。  
   
 > [!NOTE]  
->  **\<** *filename* **>** 相对于在其中启动目录读取`sqlcmd`已运行。  
+>  **\<** *文件名* **>** 相对于在其中启动目录读取`sqlcmd`已运行。  
   
  当遇到批处理终止符之后，将读取并执行该文件。 可以发出多个 **:r** 命令。 该文件可以包含任何 `sqlcmd` 命令， 包括批处理终止符 **GO**。  
   
@@ -670,13 +670,13 @@ ms.locfileid: "36025199"
  列出 `sqlcmd` 命令以及每个命令的简短说明。  
   
 ### <a name="sqlcmd-file-names"></a>sqlcmd 文件名  
- `sqlcmd` 可通过指定输入的文件 **-i**选项或 **: r**命令。 可以使用 **-o** 选项或 **:Error**、 **:Out** 和 **:Perftrace** 命令指定输出文件。 以下是使用这些文件的一些原则：  
+ `sqlcmd` 可以使用指定输入的文件 **-i**选项或 **: r**命令。 可以使用 **-o** 选项或 **:Error**、 **:Out** 和 **:Perftrace** 命令指定输出文件。 以下是使用这些文件的一些原则：  
   
--   **： 错误**， **： 出**和 **: Perftrace**应使用单独**< *`filename`* >**. 如果相同**< *`filename`* >** 是使用，就可能混合来自命令的输入。  
+-   **: Error**， **: Out**并 **: Perftrace**应使用不同**< *`filename`* >**. 如果相同**< *`filename`* >** 是命令的输入可能会混杂在一起。  
   
 -   如果从本地计算机的 `sqlcmd` 调用远程服务器上的输入文件，并且该文件包含驱动器文件路径（如 :out c:\OutputFile.txt）， 将在本地计算机而不是远程服务器上创建输出文件。  
   
--   Valid file paths include: C:\\**<*`filename`*>**, \\\\<Server\>\\<Share$>\\**<*`filename`*>** and "C:\Some Folder\\**<*`file name`*>**". 如果路径中包含空格，请使用引号。  
+-   有效的文件路径包括： c:\\**<*`filename`*>**， \\ \\< 服务器\>\\< 共享 $>\\ **< *`filename`* >** 和"C:\Some 文件夹\\ **< *`file name`*>**". 如果路径中包含空格，请使用引号。  
   
 -   每个新的 `sqlcmd` 会话都将覆盖现有的同名文件。  
   

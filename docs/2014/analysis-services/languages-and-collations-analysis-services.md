@@ -1,5 +1,5 @@
 ---
-title: 语言和排序规则 (Analysis Services) |Microsoft 文档
+title: 语言和排序规则 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36014203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293717"
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 `Language` 和 `Collation` 属性最初是在安装期间的实例级别设置的，但之后可在对象层次结构的不同级别进行更改。  
@@ -71,7 +71,7 @@ ms.locfileid: "36014203"
   
      你在此多维数据集上设置的任何语言和排序方式由此多维数据集中包含的所有测量值和维度使用。 更细颗粒度的设置排序规则属性的唯一方法是在维度属性上创建翻译。 否则，假设在属性级别上没有翻译，则每个多维数据集上有一个排序规则。  
   
- 此外，你可以设置`Language`，其本身而言，在**转换**对象。  
+ 此外，可以设置`Language`，其本身而言，在**翻译**对象。  
   
  当你将翻译添加到多维数据集或维度时，将创建翻译对象。 `Language` 是翻译定义的一部分。 而另一方面，`Collation` 则设置在多维数据集或更高级别上，并由所有翻译共享。 这在包含翻译的多维数据集的 XMLA 中很明显，你可从中发现多个语言属性（每个翻译一个属性），但只有一个排序规则。 注意：对维度属性翻译例外，你可覆盖多维数据集排序规则以指定与源列匹配的属性排序规则（数据库引擎支持各列上的排序规则，通常配置各翻译以从不同源列获取成员数据）。 但除此之外，对于所有其他翻译，`Language` 均单独使用，且没有 `Collation` 推论。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36014203"
   
 -   更新排序规则后，重新处理分隔和维度。  
   
- 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，你可以修改**\<语言 >** 和 **\<CollationName >** 设置在 msmdsrv.ini 文件中，指定的语言的 LCID。  
+ 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，可以修改**\<语言 >** 并 **\<CollationName >** 设置在 msmdsrv.ini 文件中，指定语言的 LCID。  
   
 1.  在 Management Studio 中，右键单击服务器名 |“属性” | “语言/排序规则”。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36014203"
 4.  重新处理多维数据集。  
   
 ##  <a name="bkmk_enablefast1033"></a> 通过 EnableFast1033Locale 加快英语区域设置的性能  
- 如果您使用简体中文 （中国） 语言标识符 （0x0409 或 1033年） 作为默认语言[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，你可以通过设置获得更多的性能优势`EnableFast1033Locale`配置属性、 高级的配置属性仅适用于该语言标识符。 将该属性的值设置为 **true** 可使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用更快的字符串哈希算法和比较算法。 有关设置配置属性的详细信息，请参阅[在 Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)。  
+ 如果使用英语 （美国） 语言标识符 （0x0409 或 1033年） 作为默认语言[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，您可以通过设置获取额外的性能优势`EnableFast1033Locale`配置属性中，高级的配置属性仅适用于该语言标识符。 将该属性的值设置为 **true** 可使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用更快的字符串哈希算法和比较算法。 有关设置配置属性的详细信息，请参阅[在 Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)。  
   
 ##  <a name="bkmk_gb18030"></a> Analysis Services 中的 GB18030 支持  
  GB18030 是在中华人民共和国用于对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 在 Analysis Services 中，处理来自外部源的数据时没有数据转换。 数据仅存储为 Unicode。 在查询时，当查询结果中返回文本数据时，通过 Analysis Services 客户端库（具体指 MSOLAP.dll OLE DB 提供程序）根据客户端 OS 设置执行 GB18030 转换。 数据库引擎还支持 GB18030。 有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  

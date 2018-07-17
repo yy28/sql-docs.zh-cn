@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331207"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的文件共享传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含文件共享传递扩展插件，以便你可以将报表传递到文件夹。 默认情况下会提供文件共享传递扩展插件，并且不需要进行其他配置。 为了成功传递文件，必须设置对共享文件夹的写访问权限。 此外，需要访问报表的用户还必须对共享文件夹具有读取权限。  
@@ -71,9 +71,9 @@ ms.locfileid: "36017288"
   
  您可以指定覆盖选项对每个报表传递重复使用相同的文件名或者创建新文件。 若要覆盖文件，必须使用相同的文件名和扩展名。  
   
- 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，将添加`@timestamp`变量的文件名称 (例如， *CompanySales@timestamp*)。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
+ 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，添加`@timestamp`变量的文件的名称 (例如， *CompanySales@timestamp*)。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
   
 ## <a name="see-also"></a>请参阅  
- [创建、 修改和删除标准订阅&#40;的 Reporting Services 本机模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+ [创建、 修改和删除标准订阅&#40;Reporting Services 本机模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 功能选择 |Microsoft 文档
+title: 功能选择 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 159c77133a5b0a218fa308ab179b2d25376432bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36126235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315487"
 ---
 # <a name="feature-selection"></a>功能选择
   使用  安装向导的“功能选择” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页上的复选框为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择组件。  
@@ -44,12 +44,12 @@ ms.locfileid: "36126235"
   
 |功能|Description|  
 |--------------|-----------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包括[!INCLUDE[ssDE](../../includes/ssde-md.md)]（用于存储、处理和保护数据安全的核心服务）、复制、全文搜索、用于管理关系数据和 XML 数据的工具以及 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 服务器。 数据库引擎的功能如下：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。<br /><br /> 复制：可选：复制是一组技术，用于将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以维护一致性。<br /><br /> 全文搜索：可选：全文搜索提供了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于纯字符的数据发出全文查询的功能。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]： 可选： [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一种数据清理解决方案，使您能够发现不一致和不正确的数据，在您的数据源，并提供计算机辅助且交互式方法来清理你的数据。 选中此复选框将安装 DQS 服务器。 完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装之后，您必须运行 DQSInstaller.exe 文件，才能 *完成* DQS 服务器安装。 安装 SQL server 的默认实例，此文件是否可在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：** 选择“数据库引擎服务”时，复制和全文搜索组件是必需的，并由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装的安装程序自动选择。|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包括[!INCLUDE[ssDE](../../includes/ssde-md.md)]（用于存储、处理和保护数据安全的核心服务）、复制、全文搜索、用于管理关系数据和 XML 数据的工具以及 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 服务器。 数据库引擎的功能如下：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。<br /><br /> 复制：可选：复制是一组技术，用于将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以维护一致性。<br /><br /> 全文搜索：可选：全文搜索提供了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于纯字符的数据发出全文查询的功能。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]： 可选： [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一种数据清理解决方案，使您能够发现数据源中的不一致和不正确数据并提供计算机辅助且交互式方法来清理您的数据。 选中此复选框将安装 DQS 服务器。 完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装之后，您必须运行 DQSInstaller.exe 文件，才能 *完成* DQS 服务器安装。 如果你安装的 SQL server 默认实例，此文件是位于 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：** 选择“数据库引擎服务”时，复制和全文搜索组件是必需的，并由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装的安装程序自动选择。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一些工具，可用于创建和管理联机分析处理 (OLAP) 以及数据挖掘应用程序。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – 本机|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|  
   
 > [!IMPORTANT]  
->  1.  安装程序不为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署中的多个节点配置负载平衡和单 URL 寻址。 若要完成扩展部署，必须使用 Windows Server、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或第三方群集管理软件。 有关设置 Web 服务器场部署的详细信息，请参阅[横向扩展部署配置 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448)。  
+>  1.  安装程序不为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署中的多个节点配置负载平衡和单 URL 寻址。 若要完成扩展部署，必须使用 Windows Server、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或第三方群集管理软件。 有关设置 Web 场部署的详细信息，请参阅[为横向扩展部署配置 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448)。  
 > 2.  有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件的浏览器要求，请参阅 [规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
 > 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持同时在 64 位平台上和 64 位服务器的 32 位子系统 (WOW64) 上进行并行配置。  
   
@@ -59,14 +59,14 @@ ms.locfileid: "36126235"
 |功能|Description|  
 |-------------|-----------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式是一种基于服务器的应用程序，用于创建、管理报表并将报表传递到电子邮件、多种文件格式和基于 Web 的交互格式。 SharePoint 模式将报表查看和报表管理体验与 SharePoint 产品集成在一起。 有关详细信息，请参阅 [Reporting Services 报表服务器（SharePoint 模式）](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)。|  
-|用于 SharePoint 产品的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序为 SharePoint 产品集成的 SharePoint 产品的管理和用户界面组件[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]处于 SharePoint 模式报表服务器。 有关详细信息，请参阅[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。|  
+|用于 SharePoint 产品的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用于 SharePoint 产品包括管理和用户界面组件，以便将 SharePoint 产品与外接[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 模式下的报表服务器。 有关详细信息，请参阅[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。|  
 |数据质量客户端|Data Quality Client 是一个独立的应用程序，它连接到 DQS 服务器，并提供一个直观的图形用户界面来执行数据清除和数据匹配操作，以及在 DQS 中执行管理任务。|  
 |客户端工具连接|客户端工具包括用于在客户端和服务器之间进行通信的组件，其中包括用于 DB-Library、OLEDB for OLAP、ODBC、ADODB 和 ADOMD+ 的各种网络库。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是一组图形工具和可编程对象，用于移动、复制和转换数据。|  
 |客户端工具向后兼容性|客户端工具向后兼容性包括以下组件：<br /><br /> SQL 分布式管理对象 (SQL-DMO)。 有关详细信息，请参阅 [SQL Server 2014 中不再使用的 SQL Server 功能](../../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)。<br /><br /> 决策支持对象 (DSO)。 有关详细信息，请参阅 [SQL Server 2014 中 Analysis Services 功能的重大更改](../../../2014/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2014.md)。|  
 |客户端工具 SDK|包括包含针对程序员的资源的软件开发包。|  
 |文档组件|文档组件包括用于查看和管理帮助内容的组件。|  
-|管理工具 - 基本|**管理工具 - 基本：** 它包含以下项：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]， [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]， **sqlcmd**实用程序，与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell 提供程序<br /><br /> **管理工具 - 完整：** 除基本版本中的组件以外，完整版还包括以下组件：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的支持<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> Database Engine Tuning Advisor<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理|  
+|管理工具 - 基本|**管理工具 - 基本：** 它包含以下项：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为支持[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]， [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]， **sqlcmd**实用程序，和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell 提供程序<br /><br /> **管理工具 - 完整：** 除基本版本中的组件以外，完整版还包括以下组件：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的支持<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> Database Engine Tuning Advisor<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理|  
 |Distributed Replay 控制器|Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。 有关详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。|  
 |Distributed Replay 客户端|多个 Distributed Replay 客户端一起来模拟 SQL Server 实例的工作负荷。 在每个 Distributed Replay 环境中可以有一个或多个客户端。 有关详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。|  
 |SQL 客户端连接 SDK|为数据库应用程序开发包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (ODBC/OLE DB) SDK。|  

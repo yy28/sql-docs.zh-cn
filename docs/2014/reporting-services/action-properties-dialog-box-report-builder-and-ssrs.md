@@ -1,5 +1,5 @@
 ---
-title: 操作属性对话框 （报表生成器和 SSRS） |Microsoft 文档
+title: 操作属性对话框 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
 - "10413"
@@ -34,15 +34,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4cae7e5c0de408c4a2ed9636e3c941f8e0a32b0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323757"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>“操作属性”对话框（报表生成器和 SSRS）
   使用 **“操作”** 对话框可以为支持链接的图表、仪表和地图元素启用超链接选项。 定义一项操作，以便用户单击报表并链接到 URL、同一报表服务器或与报表服务器集成的 SharePoint 站点上的其他报表，或链接到同一报表中的其他位置。  
@@ -102,7 +102,7 @@ ms.locfileid: "36025874"
  选择此选项可以定义指向网页的链接。 键入或选择网页的 URL 或计算结果为网页的 URL 的表达式。 单击“表达式”(fx) 按钮，更改表达式。 此表达式可以有一个包含 URL 的字段。 选择 **“转到 URL”** 时，页面上将显示以下其他选项。  
   
  **选择 URL**  
- 键入或输入相应项的 URL。 对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如，http://*\<servername >*/images/image1.jpg。 对于发布到配置为 SharePoint 集成模式下的报表服务器的项，使用完全限定的 URL (例如，http://*\<SharePointservername > /\<站点 >*  /文档/图像 /image1.jpg)。  
+ 键入或输入相应项的 URL。 对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如，http://*\<服务器名 >*/images/image1.jpg。 对于发布到 SharePoint 集成模式下配置的报表服务器的项，请使用完全限定的 URL (例如 http://*\<SharePointservername > /\<站点 >*  /记录/映像 /image1.jpg)。  
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)   

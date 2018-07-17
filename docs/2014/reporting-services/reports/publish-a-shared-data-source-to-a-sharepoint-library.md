@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 876609eeb6f6a1490f4d2c7ad9196b08e2558646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bff0c3d4ed7f1eb155b170f0ffdbcaac45c20ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36128694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317907"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  
@@ -61,6 +61,6 @@ ms.locfileid: "36128694"
  [“项目属性页”对话框](../tools/project-property-pages-dialog-box.md)   
  [设置部署属性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)   
- [将 Office 数据连接&#40;.odc&#41;与报表&#40;的 Reporting Services SharePoint 集成模式&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [将 Office 数据连接&#40;.odc&#41;报表&#40;的 Reporting Services SharePoint 集成模式下&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

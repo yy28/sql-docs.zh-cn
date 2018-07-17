@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.storage.f1
 - sql12.swb.indexproperties.columns.f1
@@ -19,15 +18,15 @@ f1_keywords:
 - sql12.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ac38a8ac0fbe4e4761e3f2cd9a0524109727c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 240c72d9facde541e2eefa25fd8ba6d456cb7133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290943"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
   本主题中的这部分引用了使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框提供的各种索引属性。  
@@ -184,7 +183,7 @@ ms.locfileid: "36137528"
 ### <a name="bounding-box"></a>边界框  
  “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
   
- 该面板显示 **(*`X-min`*，*`Y-min`*)** 和 **(*`X-max`*，*`Y-max`* )** 边界框坐标。 没有任何默认坐标值。 因此，在对 `geometry` 类型列创建新的空间索引时，必须指定坐标值。  
+ 面板将显示 **(*`X-min`*，*`Y-min`*)** 并 **(*`X-max`*，*`Y-max`* )** 的边界框坐标。 没有任何默认坐标值。 因此，在对 `geometry` 类型列创建新的空间索引时，必须指定坐标值。  
   
  `X-min`  
  边界框左下角的 X 坐标。  
@@ -203,7 +202,7 @@ ms.locfileid: "36137528"
  指示索引的分割方案。 支持的分割方案如下所示。  
   
  **几何图形网格**  
- 指定几何图形网格分割方案的说明进行操作，它适用于的列`geometry`数据类型。  
+ 指定几何图形网格分割方案，并将应用到的列`geometry`数据类型。  
   
  **几何自动网格**  
  在数据库兼容级别设置为 110 或更高时，将为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用此选项。  

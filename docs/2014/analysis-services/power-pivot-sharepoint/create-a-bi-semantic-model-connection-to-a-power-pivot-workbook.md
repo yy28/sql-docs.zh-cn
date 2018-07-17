@@ -1,5 +1,5 @@
 ---
-title: 创建 PowerPivot 工作簿的 BI 语义模型连接 |Microsoft 文档
+title: 创建到 PowerPivot 工作簿的 BI 语义模型连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36123922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328477"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>创建与 PowerPivot 工作簿的 BI 语义模型连接
   使用本主题中的信息可设置一个 BI 语义模型连接，该连接重定向到同一个场中的 PowerPivot 工作簿。  
@@ -43,7 +43,7 @@ ms.locfileid: "36123922"
   
  您必须具有支持 BI 语义模型连接内容类型的库。 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
   
- 你必须知道你要为其设置 BI 语义模型连接的 PowerPivot 工作簿的 URL (例如， http://adventure-works/shared documents/myworkbook.xlsx)。 工作簿必须位于同一场中。  
+ 您必须知道为其设置 BI 语义模型连接的 PowerPivot 工作簿的 URL (例如， http://adventure-works/shared documents/myworkbook.xlsx)。 工作簿必须位于同一场中。  
   
  参与连接序列的所有计算机和用户都必须处于同一个域或可信域（双向信任）中。  
   
@@ -51,15 +51,15 @@ ms.locfileid: "36123922"
   
 1.  在将包含 BI 语义模型连接的库中，单击 SharePoint 功能区上的 **“文档”** 。 单击“新建文档”上的向下箭头，然后选择 **“BISM 连接文件”** 以便打开“新建 BI 语义模型连接”页。  
   
-     ![SharePoint 库中的新文档子菜单](../media/ssas-bismconnection-new.gif "SharePoint 库中的新文档子菜单")  
+     ![在 SharePoint 库中的新文档子菜单](../media/ssas-bismconnection-new.gif "SharePoint 库中的新建文档子菜单")  
   
-2.  设置**服务器**PowerPivot 工作簿的 SharePoint url 的属性 (例如，  **http://mysharepoint/shared documents/myWorkbook.xlsx**。 在 PowerPivot for SharePoint 部署中，数据可从场中的任何服务器上加载。 因此，与 PowerPivot 数据的数据源连接仅指定指向工作簿的路径。 PowerPivot 系统服务将确定哪一服务器将加载数据。  
+2.  设置**服务器**属性设置为 PowerPivot 工作簿的 SharePoint URL (例如，  **http://mysharepoint/shared documents/Myworkbook.xlsx**。 在 PowerPivot for SharePoint 部署中，数据可从场中的任何服务器上加载。 因此，与 PowerPivot 数据的数据源连接仅指定指向工作簿的路径。 PowerPivot 系统服务将确定哪一服务器将加载数据。  
   
      不要使用**数据库**属性; 指定的 PowerPivot 工作簿的位置时不使用。  
   
      页面的外观应该如下图所示。  
   
-     ![BISM 连接页显示到工作簿的 URL](../media/ssas-bismconnection-ppvtds.gif "BISM 连接页显示到工作簿的 URL")  
+     ![显示 URL 到工作簿的 BISM 连接页](../media/ssas-bismconnection-ppvtds.gif "到工作簿中显示 URL 的 BISM 连接页")  
   
      或者，如果您具有针对工作簿的 SharePoint 权限，则要执行一个附加的验证步骤，以便确保该位置有效。 如果您没有对数据的访问权限，则会向您提供一个无需验证响应即保存 BI 语义模型连接的选项。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36123922"
   
 ## <a name="see-also"></a>请参阅  
  [PowerPivot BI 语义模型连接&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [使用在 Excel 或 Reporting Services 中的 BI 语义模型连接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [使用 Excel 或 Reporting Services 中的 BI 语义模型连接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [创建与表格模型数据库的 BI 语义模型连接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

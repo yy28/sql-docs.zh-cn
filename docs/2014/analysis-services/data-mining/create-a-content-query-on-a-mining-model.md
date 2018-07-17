@@ -1,5 +1,5 @@
 ---
-title: 在挖掘模型上创建内容查询 |Microsoft 文档
+title: 创建针对挖掘模型内容查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bbc92d8083c570aa46371d4251b8ea2f8d9b57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747f066839ee10ab9982c5b6388c946abec66cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308887"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
   使用 AMO 或 XML/A 可以采用编程方式查询挖掘模型内容，但是使用 DMX 创建查询更简单。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
@@ -44,11 +44,11 @@ ms.locfileid: "36138311"
   
      此时将在相应代码编辑器中打开 **“内容查询”** 模板。 元数据窗格列出了当前数据库中的可用模型。 若要更改数据库，请从 **“可用数据库”** 列表中选择不同的数据库。  
   
-5.  在行中，输入的挖掘模型名称`FROM`[*\<挖掘模型、 名称、 MyModel >*]`.CONTENT`。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
+5.  在一行中，输入挖掘模型的名称`FROM`[*\<挖掘模型、 名称、 MyModel >*]`.CONTENT`。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
   
      如果不希望键入名称，则可以在 **对象资源管理器** 中选择某个挖掘模型，并将其拖放到模板中。  
   
-6.  在行中， `SELECT` *\<选择列表中，expr 列表\* >* ，键入在挖掘模型内容架构行集中的列的名称。  
+6.  在行中， `SELECT` *\<选择列表、 expr 列表\* >* ，键入挖掘模型内容架构行集中的列的名称。  
   
      若要查看可在挖掘模型内容查询中返回的列的列表，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   

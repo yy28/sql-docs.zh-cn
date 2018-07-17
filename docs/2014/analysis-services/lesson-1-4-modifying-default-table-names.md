@@ -1,5 +1,5 @@
 ---
-title: 修改默认表名称 |Microsoft 文档
+title: 修改默认表名 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 87328bab0552074462ec039cbcb9c8184639f350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308587"
 ---
 # <a name="modifying-default-table-names"></a>修改默认表名
   可以在数据源视图中更改 **FriendlyName** 属性的值，以使它们更易于受人关注和使用。  
@@ -41,7 +41,7 @@ ms.locfileid: "36027100"
   
      如果在 **FriendlyName** 属性单元格外单击，则应用此更改。 在下一课中，将定义一个基于该事实数据表的度量值组。 由于您在本课中进行了更改，因此该事实数据表的名称将为 InternetSales，而不是 FactInternetSales。  
   
-4.  在“表”窗格中单击 **DimProduct**。 在属性窗口中，更改**FriendlyName**属性*`Product`*。  
+4.  在“表”窗格中单击 **DimProduct**。 在属性窗口中更改**FriendlyName**属性设置为*`Product`*。  
   
 5.  使用同样的方法更改数据源视图中剩余的各个表的 **FriendlyName** 属性，删除“**Dim**”前缀。  
   

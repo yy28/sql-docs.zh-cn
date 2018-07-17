@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320437"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建完整数据库备份。  
@@ -208,7 +207,7 @@ ms.locfileid: "36138688"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          仅在 SQL Server 2014 或更高版本中，指定要使用的加密算法以及要用于保护加密的证书或非对称密钥。  
   
-         说明**=** { ***`text`*** | **@ * * * text_variable* }  
+         描述**=** { **'*`text`*'** | **@ * * * text_variable* }  
          指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
          NAME = { backup_set_name | @backup_set_name_var }  
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-1.  使用`Backup-SqlDatabase`cmdlet。 若要显式指示这是一个完整数据库备份，指定 **-BackupAction**参数的默认值， `Database`。 对于完整数据库备份而言，此参数是可选的。  
+1.  使用`Backup-SqlDatabase`cmdlet。 若要显式指示这是完整数据库备份，指定 **-BackupAction**使用其默认值的参数`Database`。 对于完整数据库备份而言，此参数是可选的。  
   
      下面的示例在服务器实例 `MyDB` 的默认备份位置创建数据库 `Computer\Instance`的完整数据库备份。 此示例也可以指定 `-BackupAction Database`。  
   

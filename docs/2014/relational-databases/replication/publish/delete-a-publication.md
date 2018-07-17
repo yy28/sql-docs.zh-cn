@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
 - publications [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ab132b903fcb15d11bac4a6d21ab6670397a13e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e13b845d6fba844ccf4199403240c5e8cb79bdbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36015473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303717"
 ---
 # <a name="delete-a-publication"></a>删除发布
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中删除发布。  
@@ -62,7 +62,7 @@ ms.locfileid: "36015473"
   
     -   若要删除单个发布，请在发布服务器上，对发布数据库执行 [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) 。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值`tran`为**@type**。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force**文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值`tran`有关**@type**。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force**文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定数据库的名称。  
   
         > [!NOTE]  
         >  将 **@force** @type **@force** 可能会使与复制相关的发布对象保留在数据库中。  
@@ -77,7 +77,7 @@ ms.locfileid: "36015473"
   
     -   若要删除单个发布，请在发布服务器上对发布数据库执行 [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql)。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值`merge`为**@type**。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force**文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值`merge`有关**@type**。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force**文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定数据库的名称。  
   
         > [!NOTE]  
         >  将 **@force** @type **@force** 可能会使与复制相关的发布对象保留在数据库中。  
@@ -106,7 +106,7 @@ ms.locfileid: "36015473"
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-4.  请检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证发布是否存在。 如果此属性的值是`false`，在步骤 3 中的发布属性中定义不正确或不存在发布。  
+4.  请检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证发布是否存在。 如果此属性的值为`false`，步骤 3 中的发布属性定义不正确或不存在发布。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> 方法。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36015473"
   
     2.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，确认数据库是否存在。  
   
-    3.  设置<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>属性`false`。  
+    3.  设置<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>属性设置为`false`。  
   
     4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36015473"
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-4.  请检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证发布是否存在。 如果此属性的值是`false`，在步骤 3 中的发布属性中定义不正确或不存在发布。  
+4.  请检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证发布是否存在。 如果此属性的值为`false`，步骤 3 中的发布属性定义不正确或不存在发布。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> 方法。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36015473"
   
     2.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果该方法返回 `false`，请验证数据库是否存在。  
   
-    3.  设置<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>属性`false`。  
+    3.  设置<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>属性设置为`false`。  
   
     4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   

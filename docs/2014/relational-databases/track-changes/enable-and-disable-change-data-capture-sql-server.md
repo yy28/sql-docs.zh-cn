@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
 - change data capture [SQL Server], enabling databases
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e21da034a1566ab4f34592b2b43e3b322bc60281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e96cb5bb777544b8a3a390eee59a16e0213c857f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36127670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309507"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
   本主题说明如何对数据库和表启用和禁用变更数据捕获。  
@@ -32,7 +32,7 @@ ms.locfileid: "36127670"
 ## <a name="enable-change-data-capture-for-a-database"></a>对数据库启用变更数据捕获  
  在为各个表创建捕获实例之前，必须先由 `sysadmin` 固定服务器角色的成员对数据库启用变更数据捕获。 通过在数据库上下文中运行 [sys.sp_cdc_enable_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) 存储过程可实现这一点。 若要确定数据库是否已启用此功能，请在 `is_cdc_enabled` 目录视图中查询 `sys.databases` 列。  
   
- 当数据库启用变更数据捕获，`cdc`架构，`cdc`为数据库创建用户、 元数据表和其他系统对象。 `cdc`架构包含变更数据捕获元数据表和源表启用了变更数据捕获之后，各个更改表将用作更改数据的存储库。 `cdc`架构还包含使用的关联的系统函数查询更改数据。  
+ 当对数据库启用了变更数据捕获`cdc`架构，`cdc`为数据库创建用户、 元数据表和其他系统对象。 `cdc`架构包含变更数据捕获元数据表，并且，源表启用变更数据捕获之后，各个更改表将用作更改数据的存储库。 `cdc`架构还包含所使用的关联的系统函数查询更改数据。  
   
  变更数据捕获要求采用独占方式使用 `cdc` 架构和 `cdc` 用户。 如果某数据库中当前存在名为 *cdc* 的架构或数据库用户，那么在删除或重命名此架构或用户之前，不能对此数据库启用变更数据捕获。  
   
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="enable-change-data-capture-for-a-table"></a>对表启用变更数据捕获  
- 数据库已启用了变更数据捕获的成员后`db_owner`固定的数据库角色可以通过使用存储的过程来创建捕获实例为各个源表`sys.sp_cdc_enable_table`。 若要确定是否已对某个源表启用了变更数据捕获，请在 `sys.tables` 目录视图中检查 is_tracked_by_cdc 列。  
+ 对数据库启用变更数据捕获的成员后`db_owner`固定的数据库角色可以使用存储的过程创建为各个源表的捕获实例`sys.sp_cdc_enable_table`。 若要确定是否已对某个源表启用了变更数据捕获，请在 `sys.tables` 目录视图中检查 is_tracked_by_cdc 列。  
   
  创建捕获实例时，可以指定以下选项：  
   
@@ -82,7 +82,7 @@ GO
   
  `A filegroup to contain the change table.`  
   
- 默认情况下，更改表位于数据库的默认文件组中。 希望控制各个更改表放置位置的数据库所有者可以使用 *@filegroup_name* 参数为与该捕获实例相关的更改表指定一个特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 请参阅`Enable a Table Specifying Filegroup Option`有关示例显示如何使用模板*@filegroup_name*参数。  
+ 默认情况下，更改表位于数据库的默认文件组中。 希望控制各个更改表放置位置的数据库所有者可以使用 *@filegroup_name* 参数为与该捕获实例相关的更改表指定一个特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 请参阅`Enable a Table Specifying Filegroup Option`的示例演示如何使用模板*@filegroup_name*参数。  
   
 ```tsql  
 -- =========  
@@ -102,9 +102,9 @@ GO
   
  `A role for controlling access to a change table.`  
   
- 指定角色的目的是控制对更改数据的访问。 指定的角色可以为现有的固定服务器角色或数据库角色。 如果指定的角色还不存在，则会自动创建具有该名称的数据库角色。 `sysadmin` 或 `db_owner` 角色的成员对于更改表中的数据拥有完全访问权限。 所有其他用户必须对源表中的所有捕获列拥有 SELECT 权限。 此外，指定角色时，不是的成员的用户`sysadmin`或`db_owner`角色还必须是指定角色的成员。  
+ 指定角色的目的是控制对更改数据的访问。 指定的角色可以为现有的固定服务器角色或数据库角色。 如果指定的角色还不存在，则会自动创建具有该名称的数据库角色。 `sysadmin` 或 `db_owner` 角色的成员对于更改表中的数据拥有完全访问权限。 所有其他用户必须对源表中的所有捕获列拥有 SELECT 权限。 此外，指定角色时，用户不是成员的任一`sysadmin`或`db_owner`角色还必须是指定角色的成员。  
   
- 如果不想使用访问控制角色，请将 *@role_name* 参数显式设置为 NULL。 请参阅`Enable a Table Without Using a Gating Role`模板启用没有访问控制角色的表的示例。  
+ 如果不想使用访问控制角色，请将 *@role_name* 参数显式设置为 NULL。 请参阅`Enable a Table Without Using a Gating Role`模板启用访问控制角色没有的表的示例。  
   
 ```tsql  
 -- =========  
@@ -129,7 +129,7 @@ GO
   
  若要支持净更改查询，源表必须具有用于唯一标识行的主键或唯一索引。 如果使用了唯一索引，则必须使用 *@index_name* 参数指定索引名称。 在主键或唯一索引中定义的列必须包含在要捕获的源列列表中。  
   
- 请参阅`Enable a Table for All and Net Changes Queries`的示例演示了同时具有这两个查询函数的捕获实例创建的模板。  
+ 请参阅`Enable a Table for All and Net Changes Queries`模板演示如何创建同时具有这两个查询函数的捕获实例的示例。  
   
 ```tsql  
 -- =============  

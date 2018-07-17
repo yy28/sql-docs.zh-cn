@@ -1,5 +1,5 @@
 ---
-title: 在 XPath 查询 (SQLXML 4.0) 中指定关系运算符 |Microsoft 文档
+title: XPath 查询 (SQLXML 4.0) 中指定关系运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,29 +17,29 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d8c77a561c4853db9bba036b33661f1a1f760a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a44253e26443288286a935fcaf06815ebcdeb405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36138642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329527"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
-  以下示例显示如何在 XPath 查询中指定关系运算符。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[有关 XPath 示例的示例批注 XSD 架构&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  以下示例显示如何在 XPath 查询中指定关系运算符。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定关系运算符  
- 此 XPath 查询返回的子元素的**\<客户 >** 元素其中**CustomerID**属性值是"1"和其中任何子**\<顺序>** 元素包含 **\<OrderDetail >** 具有子项**OrderQty**具有大于 3 的值属性：  
+ 此 XPath 查询返回的子元素的**\<客户 >** 元素的**CustomerID**属性值为"1"和其中任何子**\<顺序>** 元素包含 **\<OrderDetail >** 具有子级**OrderQty**属性大于 3 的值：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 方括号筛选器中指定的谓词**\<客户 >** 元素。 仅**\<客户 >** 至少有一个元素 **\<OrderDetail >** 孙具有大于 3 返回 OrderQty 属性值。  
+ 括号筛选器中指定的谓词**\<客户 >** 元素。 仅**\<客户 >** 至少有一个元素 **\<OrderDetail >** OrderQty 属性值大于返回 3 的孙级。  
   
  `child` 轴为默认轴。 因此，可以将该查询指定为：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36138642"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件。 将该文件另存为 SampleSchema1.xml。  
+1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (SpecifyRelationalA.xml)，并将它保存在保存 SampleSchema1.xml 的目录中。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36138642"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是执行该模板的结果集：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36138642"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查询中指定关系运算符并使用布尔函数比较该结果  
- 此查询返回所有**\<顺序 >** 的上下文节点的具有元素子级， **SalesPersonID**属性为小于 270 的值：  
+ 此查询返回所有**\<顺序 >** 具有的元素子级的上下文节点**SalesPersonID**属性值是小于 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -101,7 +101,7 @@ ms.locfileid: "36138642"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
-1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件。 将该文件另存为 SampleSchema1.xml。  
+1.  复制[示例架构代码](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (SpecifyRelationalB.xml)，并将它保存在保存 SampleSchema1.xml 的目录中。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36138642"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是执行该模板的部分结果集：  
   

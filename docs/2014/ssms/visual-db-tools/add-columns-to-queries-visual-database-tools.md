@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
 - columns [SQL Server], adding
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding columns
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5480a1ff78132ac8273fde2d0f5756ce62fc263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 70760f93bc60de7c8c4d8e86d7a32383647beee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308817"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>向查询中添加列 (Visual Database Tools)
   若要在查询中使用列，必须将其添加到查询中。 您可以添加某个列，以在查询输出中显示该列，使用该列进行排序，搜索该列的内容或对其内容进行汇总。 您可以决定在运行查询时，“结果”窗格中将包括查询中使用的哪些列。 有关详细信息，请参阅[从查询结果中删除列 (Visual Database Tools)](visual-database-tools.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "36025152"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>添加一个表或表值对象的所有列  
   
--   在**关系图窗格**，旁边选中的复选框 **\*（所有列）**。  
+-   在中**关系图窗格**，选中复选框旁边 **\*（所有列）**。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>添加所有表和表结构对象的所有列  
   
@@ -55,10 +55,10 @@ ms.locfileid: "36025152"
 3.  在“属性”窗口中，单击“输出所有列”，然后从下拉列表中选择“是”或“否”。  
   
 ## <a name="see-also"></a>请参阅  
- [从查询结果中删除列&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [从查询中删除列&#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
- [指定搜索条件&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [汇总查询结果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [从查询结果中删除列&#40;可视化数据库工具&#41;](visual-database-tools.md)   
+ [从查询中删除列&#40;可视化数据库工具&#41;](remove-columns-from-queries-visual-database-tools.md)   
+ [指定搜索条件&#40;可视化数据库工具&#41;](specify-search-criteria-visual-database-tools.md)   
+ [汇总查询结果&#40;可视化数据库工具&#41;](summarize-query-results-visual-database-tools.md)   
  [执行基本的查询操作 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

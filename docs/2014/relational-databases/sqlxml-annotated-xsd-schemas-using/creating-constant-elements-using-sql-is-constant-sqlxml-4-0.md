@@ -1,5 +1,5 @@
 ---
-title: 创建常量元素使用 sql： 是的常量 (SQLXML 4.0) |Microsoft 文档
+title: 创建常量元素使用 sql： 是的常量 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b275f695057480bb2833d5b05e0cbef354a33ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e475ad2cef5ef5729b5893f3218b0659528ffa14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317977"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
   若要指定常量元素，即 XSD 架构中不映射到任何数据库表或列的元素，可以使用 `sql:is-constant` 批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 可以在不具有任何属性的元素中指定 `sql:is-constant` 批注。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
@@ -39,15 +39,15 @@ ms.locfileid: "36018148"
   
 -   创建容器元素，如**\<订单 >** 包装所有订单的元素。  
   
- `sql:is-constant`批注添加到 **\<complexType >** 元素。  
+ `sql:is-constant`批注可以添加到 **\<complexType >** 元素。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 以添加容器元素  
- 在此批注 XSD 架构 **\<CustomerOrders >** 指通过指定的常量元素`sql:is-constant`值为 1 的属性。 因此，  **\<CustomerOrders >** 未映射到任何数据库表或列。 此常量的元素组成**\<顺序 >** 子元素。  
+ 在此带批注的 XSD 架构中，  **\<CustomerOrders >** 通过指定定义为常量元素`sql:is-constant`属性值为 1。 因此，  **\<CustomerOrders >** 未映射到任何数据库表或列。 此常量元素组成**\<顺序 >** 子元素。  
   
- 尽管 **\<CustomerOrders >** 未映射到任何数据库表或列中，事件仍显示为一个容器元素，其中包含生成的 XML 中**\<顺序 >** 子元素。  
+ 尽管 **\<CustomerOrders >** 未映射到任何数据库表或列，它仍然会出现在生成的 XML 作为一个容器元素，其中包含**\<顺序 >** 子元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -109,7 +109,7 @@ ms.locfileid: "36018148"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 查询使用 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分结果集如下：  
   

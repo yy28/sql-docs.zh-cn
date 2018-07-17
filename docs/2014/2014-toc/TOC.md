@@ -1,9 +1,4 @@
 # [SQL Server 2014 联机丛书](books-online-for-sql-server-2014.md) 
-## [案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 复制构建一个企业生态系统以实现可伸缩性并提高性能](case-study-building-an-enterprise-ecosystem.md)
-## [索引设计指南](sql-server-index-design-guide.md)
-## [事务锁定和行版本控制指南](sql-server-transaction-locking-and-row-versioning-guide.md)
-## [事务日志体系结构和管理](sql-server-transaction-log-architecture-and-management.md)
-## [术语表](glossary.md)
 
 # [Analysis Services +](../analysis-services/analysis-services.md)
 # [Data Quality Services +](../data-quality-services/data-quality-services.md)
@@ -15,6 +10,7 @@
 # [关系数据库功能 +](../relational-databases/database-features.md)
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server 2014 教程 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [术语表](glossary.md)
 
 # [SQL Server 2014 中的新增功能 +](../sql-server/what-s-new-in-sql-server-2016.md)
 
@@ -30,4 +26,9 @@
 ## [升级顾问 +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 ## [设置和维护安装 +](../sql-server/install/setup-and-servicing-installation.md)
 # [配置管理器帮助 +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+
+# [索引设计指南](sql-server-index-design-guide.md)
+# [事务锁定和行版本控制指南](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [事务日志体系结构和管理](sql-server-transaction-log-architecture-and-management.md)
+# [案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 复制构建一个企业生态系统以实现可伸缩性并提高性能](case-study-building-an-enterprise-ecosystem.md)
 

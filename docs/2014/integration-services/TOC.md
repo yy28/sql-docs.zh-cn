@@ -53,6 +53,7 @@
 ### [完成向导（SSIS 包升级向导）](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [升级包（SSIS 包升级向导）](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [SQL Server 导入和导出向导 +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [从 Excel 导入或导出到 Excel](load-data-to-from-excel-with-ssis.md)
 ## [包开发的疑难解答工具 +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Integration Services 包记录的事件](performance/events-logged-by-an-integration-services-package.md)
 ## [在“日志事件”窗口中查看日志项](view-log-entries-in-the-log-events-window.md)

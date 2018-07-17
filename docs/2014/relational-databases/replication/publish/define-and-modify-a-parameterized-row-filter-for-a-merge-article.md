@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
 - parameterized filters [SQL Server replication], modifying
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eea2edc2e87d6a7f63f01a28ef06a1d3b3d179da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3b3d8b397617674f4b297488e9cc8e2b541698df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36027450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296497"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改参数化行筛选器。  
@@ -115,9 +115,9 @@ ms.locfileid: "36027450"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>更改合并发布中的项目的参数化行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定**@publication**， **@article**，值为`subset_filterclause`为**@property**，定义的参数化筛选器的表达式**@value** (不包括`WHERE`)，和的值**1**两个**@force_invalidate_snapshot**和 **@force_reinit_subscription**.  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定**@publication**， **@article**，值为`subset_filterclause`对于**@property**，定义的参数化筛选器的表达式**@value** (不包括`WHERE`)，并将值**1**同时**@force_invalidate_snapshot**和 **@force_reinit_subscription**.  
   
-2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 指定**@publication**， **@article**，值为`partition_options`为**@property**，和有关最合适的分区选项**@value** ，这可以是以下之一：  
+2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 指定**@publication**， **@article**，值为`partition_options`对于**@property**，和最适当的分区选项**@value** ，可以是以下值之一：  
   
     -   **0** - 对项目的筛选是静态的，或者不为每个分区生成唯一的数据子集（“重叠”分区）。  
   
