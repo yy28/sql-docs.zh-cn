@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -53,16 +52,16 @@ helpviewer_keywords:
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b17a85709bbb7a60badadabc1f18ff5fd688188d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc12292f373e1028e37050020dfcccff74e90ade
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055624"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783958"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "33055624"
   
 ### <a name="string-functions"></a>字符串函数  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|返回字符串表达式的长度（以位为单位）。<br /><br /> 它不只适用于字符串数据类型， 因此不会将 string_exp 隐式转换为字符串，而是会返回提供给它的任何数据类型的（内部）大小。|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|返回一个表示将 string_exp2 连接到 string_exp1 的结果的字符串。 生成的字符串依赖于 DBMS。 例如，如果 string_exp1 所表示的列包含一个 NULL 值，则 DB2 将返回 NULL，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回非 NULL 的字符串。|  
@@ -85,13 +84,13 @@ ms.locfileid: "33055624"
   
 ### <a name="numeric-function"></a>数值函数  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|返回截断到小数点右侧 integer_exp 位置的 numeric_exp。 如果 integer_exp 为负数，则 numeric_exp 会截断到小数点左侧 &#124;integer_exp&#124; 位置。|  
   
 ### <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|返回当前日期。|  
 |CURDATE( ) (ODBC 3.0)|返回当前日期。|  

@@ -6,23 +6,21 @@ ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ba9202ae949122d83c2690e62a645246b7796bb
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 36d911274b98df4990f66be5079f2acf309afa84
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701850"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787198"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,7 +28,7 @@ ms.locfileid: "33701850"
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中重命名用户创建的表。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中重命名用户创建的表或数据库。  
   
 > [!NOTE]  
->  若要重命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库，请使用 [ALTER DATABASE（Azure SQL 数据仓库）](alter-database-azure-sql-data-warehouse.md)。  若要重命名 Azure SQL 数据库中的数据库，可使用 [ALTER DATABASE (Azure SQL Database)](alter-database-azure-sql-database.md) 语句。 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重命名数据库，请使用存储过程 [sp_renamedb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)。
+>  若要重命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库，请使用 [ALTER DATABASE（Azure SQL 数据仓库）](alter-database-transact-sql.md?&tabs=sqldw)。  若要重命名 Azure SQL 数据库中的数据库，可使用 [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?&tabs=sqldbmi) 语句。 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重命名数据库，请使用存储过程 [sp_renamedb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)。
   
 ## <a name="syntax"></a>语法  
   
