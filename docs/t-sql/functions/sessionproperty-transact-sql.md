@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 682ed62332c2fcc2e70c77fa75ac43b7249c3cac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8674d633df2c8e4c2dfc15197a46f2d790b38e59
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33056914"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789838"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ SESSIONPROPERTY (option)
  *option*  
  该会话的当前选项设置。 option 可以是下列任意值。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |ANSI_NULLS|指定是否对 Null 值上的等号 (=) 和不等号 (<>) 应用 ISO 标准行为。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|控制列存储小于定义的列大小的值的方式，以及列存储在字符串和 binary 数据中有尾随空格的值的方式。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80764484ec32e54ce9d48be659811a0c641b78d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99012d771ff9dcaa3f71c13d35ee730e3e5d15fb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960562"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351659"
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>发布属性，FTP 快照和 Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "32960562"
  此选项允许订阅服务器使用 FTP 检索快照文件，但不要求订阅服务器进行此操作。 如果选择此选项，新建订阅向导将默认为允许订阅服务器通过 FTP 检索快照文件。 若要更改该设置，请使用 **“订阅属性”** 对话框。 如果允许订阅服务器通过 FTP 访问快照文件，请将 FTP 文件夹指定为 **“发布属性”** 对话框的 **“快照”** 页上快照文件的位置。 这会导致在生成新快照时快照代理将自动更新 FTP 文件夹中的文件。 如果未将快照文件的位置设置为 FTP 文件夹，则在生成新快照时必须手动更新文件。 有关详细信息，请参阅[通过 FTP 传递快照](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
  **Web 同步**  
- 仅限合并复制。 若要允许合并订阅服务器使用 Web 同步，请选择 **“允许订阅服务器通过连接到 Web 服务器进行同步”**，并指定 Web 服务器地址。 Web 服务器必须使用安全套接字层 (SSL)，并且 Web 地址必须为完全限定地址，如 `https://server.domain.com/synchronize`。 有关详细信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  
+ 仅限合并复制。 若要允许合并订阅服务器使用 Web 同步，请选择 **“允许订阅服务器通过连接到 Web 服务器进行同步”**，并指定 Web 服务器地址。 Web 服务器必须使用安全套接字层 (SSL)，并且 Web 地址必须为完全限定地址，如 `https://server.domain.com/synchronize`。 有关详细信息，请参阅 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
