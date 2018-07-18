@@ -1,5 +1,5 @@
 ---
-title: 条件表达式 (XQuery) |Microsoft 文档
+title: 条件表达式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979009"
 ---
 # <a name="conditional-expressions-xquery"></a>条件表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 支持以下条件 **-if-then-else**语句：  
+  XQuery 支持下列条件 **-if-then-else**语句：  
   
 ```  
 if (<expression1>)  
@@ -59,9 +59,9 @@ else
   
 -   测试表达式必须用括号括起来。  
   
--   **其他**在要求表达式的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
+-   **其他**表达式是必需的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
   
- 例如，以下查询指定针对**xml**类型变量。 **如果**条件用于测试 SQL 变量的值 (@v) 内的 XQuery 表达式使用[sql: variable 函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数。 如果变量值为“FirstName”，则返回 <`FirstName`> 元素。 否则，返回 <`LastName`> 元素。  
+ 例如，下面的查询指定针对**xml**类型的变量。 **如果**测试条件的 SQL 变量的值 (@v) 通过使用 XQuery 表达式中[sql:variable() 函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数。 如果变量值为“FirstName”，则返回 <`FirstName`> 元素。 否则，返回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在前面的查询中的条件**如果**表达式检查是否有在两个以上的子元素 <`Features`>。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
+ 在前面的查询中的条件**如果**表达式将检查是否有在两个以上的子元素 <`Features`>。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
   
  结果如下：  
   
@@ -155,7 +155,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- 此查询可以编写，而无需**如果**子句，如下面的示例中所示：  
+ 此查询可以进行编写，而无需**如果**子句，如下面的示例中所示：  
   
 ```  
 SELECT Instructions.query('  
@@ -170,7 +170,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 中的服务器属性 |Microsoft 文档
+title: Analysis Services 中的服务器属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238817"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975095"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的服务器属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
- 若要配置服务器时，使用 SQL Server Management Studio 或编辑特定的 SQL Server Analysis Services 实例的 msmdsrv.ini 文件。  
+ 若要将服务器配置，使用 SQL Server Management Studio 或编辑特定的 SQL Server Analysis Services 实例的 msmdsrv.ini 文件。  
  
 SQL Server Management Studio 中的“属性”页显示最可能需要修改的属性子集。 属性的完整列表位于 msmdsrv.ini 文件中。   
   
 > [!NOTE]  
->  在默认 SQL Server Analysis Services 安装中，可以中 files\microsoft SQL Server\MSAS13 找到 msmdsrv.ini。MSSQLSERVER\OLAP\Config 文件夹。
+>  在默认 SQL Server Analysis Services 安装中，可以在 \Program Files\Microsoft SQL Server\MSAS13 找到 msmdsrv.ini。MSSQLSERVER\OLAP\Config 文件夹。
 > 
 > 其他影响服务器配置的属性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署配置属性。 有关这些属性的详细信息，请参阅 [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  

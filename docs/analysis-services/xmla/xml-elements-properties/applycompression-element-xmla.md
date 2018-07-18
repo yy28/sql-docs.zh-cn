@@ -1,5 +1,5 @@
 ---
-title: ApplyCompression 元素 (XMLA) |Microsoft 文档
+title: ApplyCompression 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9ebb0d912cc6d238aa2b5afaf1b794e079c201d4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973026"
 ---
 # <a name="applycompression-element-xmla"></a>ApplyCompression 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  确定是否父[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令压缩备份文件。  
+  确定是否父级[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令压缩备份文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577789"
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  

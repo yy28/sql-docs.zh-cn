@@ -1,5 +1,5 @@
 ---
-title: 创建挖掘模型 (DMX) |Microsoft 文档
+title: 创建挖掘模型 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842630"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980587"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34842630"
   
  挖掘结构的命名方式是在模型名称后追加 "_structure"，这样可以确保将结构名称与模型名称进行区分。  
   
- 若要创建现有挖掘结构的挖掘模型，使用[ALTER 挖掘结构&#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)语句。  
+ 若要创建现有挖掘结构的挖掘模型，请使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)语句。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  当前提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
->  来检索当前的提供程序支持的算法的列表，只需使用[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看的当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
+>  可以通过检索当前提供程序支持的算法的列表[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看支持的当前实例中的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[数据挖掘属性](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
@@ -56,11 +56,11 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *XML 字符串*  
  （仅适用于高级用户。）XML 编码的模型 (PMML)。 字符串必须以单引号 (') 引起。  
   
- **会话**子句，可以创建自动从服务器中删除时关闭连接或在会话超时的挖掘模型。**会话**挖掘模型很有用，因为它们不需要用户是数据库管理员，并且它们仅使用磁盘空间，只要的连接已打开。  
+ **会话**子句允许您创建在连接关闭或会话超时时时自动删除从服务器的挖掘模型。**会话**挖掘模型非常有用，因为它们不需要用户以数据库管理员，并且它们仅使用的磁盘空间，只要连接处于打开状态。  
   
- **WITH DRILLTHROUGH**子句，对新的挖掘模型的钻取。 只有在创建模型时，才能启用钻取功能。 对于某些模型类型，在自定义查看器中浏览模型时需要进行钻取。 对于预测或使用 Microsoft 一般内容树查看器浏览，钻取则不是必需的。  
+ **WITH DRILLTHROUGH**子句可以对新的挖掘模型的钻取。 只有在创建模型时，才能启用钻取功能。 对于某些模型类型，在自定义查看器中浏览模型时需要进行钻取。 对于预测或使用 Microsoft 一般内容树查看器浏览，钻取则不是必需的。  
   
- **CREATE MINING MODEL**语句将创建新的挖掘模型所基于的列定义列表、 算法，和算法参数列表。  
+ **CREATE MINING MODEL**语句创建新的挖掘模型基于列定义列表、 算法和算法参数列表。  
   
 ### <a name="column-definition-list"></a>列定义列表  
  通过包含各列的以下信息，可以使用列定义列表定义模型的结构：  
@@ -75,9 +75,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   内容类型（必需）  
   
--   预测请求，这将向算法来预测此列，由**预测**或**PREDICT_ONLY**子句  
+-   预测请求，用于指示算法对该列进行预测，为由**PREDICT**或**PREDICT_ONLY**子句  
   
--   到属性列 （强制仅当它应用） 的关系由**相关到**子句  
+-   与属性列 （强制仅在适用） 的关系由**RELATED TO**子句  
   
  使用以下列定义列表的语法，定义单个列：  
   
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- 有关与每个算法关联的参数的列表，请参阅[数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 有关与每种算法关联的参数的列表，请参阅[数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
 ## <a name="remarks"></a>Remarks  
  如果要创建具有内置测试数据集的模型，则应当使用 CREATE MINING STRUCTURE 语句，然后再使用 ALTER MINING STRUCTURE 语句。 但是，并非所有挖掘模型类型都支持维持数据集。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
- 有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时间序列预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时序预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  
  以下示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法创建新的挖掘模型。 Bike Buyer 列定义为可预测属性。  
@@ -144,7 +144,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>关联模型示例  
- 以下示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法创建新的挖掘模型。 该语句通过使用表列，充分利用了在模型定义中嵌套表的能力。 可通过修改模型*MINIMUM_PROBABILITY*和*MINIMUM_SUPPORT*参数。  
+ 以下示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法创建新的挖掘模型。 该语句通过使用表列，充分利用了在模型定义中嵌套表的能力。 通过修改模型*MINIMUM_PROBABILITY*并*MINIMUM_SUPPORT*参数。  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -175,7 +175,7 @@ USING Microsoft_Sequence_Clustering
  下面的示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法和 ARTxp 算法创建新的挖掘模型。 ReportingDate 是时序的键列，ModelRegion 是数据序列的键列。 在此示例中，假定数据出现的频率为每 12 个月一次。 因此， *PERIODICITY_HINT*参数设置为 12。  
   
 > [!NOTE]  
->  必须指定*PERIODICITY_HINT*参数通过使用大括号字符。 此外，因为值是一个字符串，它必须括在单引号中:"{\<数字值 >}"。  
+>  必须指定*PERIODICITY_HINT*参数使用大括号字符。 此外，由于值是一个字符串，则必须用单引号引起来:"{\<数值 >}"。  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

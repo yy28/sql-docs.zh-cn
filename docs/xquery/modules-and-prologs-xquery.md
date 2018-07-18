@@ -1,5 +1,5 @@
 ---
-title: 模块和起始 (XQuery) |Microsoft 文档
+title: 模块和 Prolog (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 08d19f2a24c243647b4004a557fd25bf96d2dd62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974528"
 ---
 # <a name="modules-and-prologs-xquery"></a>模块和 Prolog (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)是一系列的命名空间声明。 在 Prolog 中使用声明命名空间时，可以为命名空间绑定指定前缀并在查询正文中使用该前缀。  
+  [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)是一系列命名空间声明。 在 Prolog 中使用声明命名空间时，可以为命名空间绑定指定前缀并在查询正文中使用该前缀。  
   
 ## <a name="implementation-limitations"></a>实现限制  
  在此实现中，不支持下列 XQuery 规范：  
@@ -60,11 +60,11 @@ ms.locfileid: "33076754"
   
 -   函数声明 (`declare function`)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)  
  介绍 XQuery Prolog。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

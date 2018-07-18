@@ -1,5 +1,5 @@
 ---
-title: Subscribe 元素 (XMLA) |Microsoft 文档
+title: Subscribe 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f784cbe3c33eb6b2587b7b535668e793fac3b138
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973069"
 ---
 # <a name="subscribe-element-xmla"></a>Subscribe 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34574399"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -47,11 +47,11 @@ ms.locfileid: "34574399"
 |子元素|[对象](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **订阅**命令订阅和流将从指定的跟踪行集上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 如果在 **Object** 元素中指定对象而非跟踪，则会出错。  
+ **Subscribe**命令订阅和流返回行集上指定的跟踪[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 如果在 **Object** 元素中指定对象而非跟踪，则会出错。  
   
- 如果**对象**元素未指定，则会话跟踪定义，并会在[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 会话跟踪可从当前会话返回一组固定的跟踪事件。  
+ 如果**对象**未指定元素，定义并在订阅会话跟踪[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 会话跟踪可从当前会话返回一组固定的跟踪事件。  
   
- 客户端应用程序关闭之间的连接将终止此命令返回的行集流[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例，或者，如果在其中的会话**订阅**执行命令会终止。  
+ 如果客户端应用程序关闭到的连接终止此命令返回的行集流[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例，或者，如果在其中的会话**Subscribe**执行命令时终止。  
   
 ## <a name="see-also"></a>另请参阅
  [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  

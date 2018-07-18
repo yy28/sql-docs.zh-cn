@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464643"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978119"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34464643"
   
  大量重试表示存在并发问题；请致电 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支持部门。  
   
- 有关内存优化的非聚集索引的详细信息，请参阅[SQL Server 内存中 OLTP 的内部机制概述](http://t.co/T6zToWc6y6)，页上 17。  
+ 有关内存优化的非聚集索引的详细信息，请参阅[SQL Server 内存中 OLTP 内部组件概述](http://t.co/T6zToWc6y6)，第 17 页。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "34464643"
 ## <a name="permissions"></a>权限  
  要求对当前数据库拥有 VIEW DATABASE STATE 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [内存优化表的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

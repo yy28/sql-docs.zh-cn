@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_object_columns （Azure SQL 数据库） |Microsoft 文档
+title: sys.dm_xe_database_session_object_columns （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 863b6d2c274c76919455a4ea68ba0e944d64f16e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029403"
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34467803"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|事件会话的内存地址。 具有 sys.dm_xe_database_sessions.address 多对一关系。 不可为 null。|  
+|event_session_address|**varbinary(8)**|事件会话的内存地址。 具有与 sys.dm_xe_database_sessions.address 的多对一关系。 不可为 null。|  
 |column_name|**nvarchar(60)**|配置值的名称。 不可为 null。|  
 |column_id|**int**|列的 ID。 在对象中是唯一的。 不可为 null。|  
 |column_value|**nvarchar(2048)**|列的配置值。 可以为 Null。|  
@@ -52,7 +52,7 @@ ms.locfileid: "34467803"
 |dm_xe_database_session_object_columns.object_name<br /><br /> dm_xe_database_session_object_columns.object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多对一|  
 |dm_xe_database_session_object_columns.column_name<br /><br /> dm_xe_database_session_object_columns.column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|多对一|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

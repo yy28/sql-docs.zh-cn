@@ -1,5 +1,5 @@
 ---
-title: 将 MSOLAP.5 添加为 Excel Services 中的受信任的数据提供程序 |Microsoft 文档
+title: 将 MSOLAP.5 添加为 Excel Services 中的受信任的数据提供程序 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3ba11e1242a7deb63e19221985e1e56f83acb94
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7576aadda3739709acdffcb1b2419c20d39ed4e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026104"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979449"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34026104"
   
  对于每个 Excel Services 服务应用程序只需执行此步骤一次。  
   
- 处理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据请求的每个物理服务器（如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器或 Excel Services 服务器）必须在计算机上安装了 OLE DB 访问接口。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装始终包含 OLE DB 访问接口，但是如果 Excel Services 运行在未安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的计算机上，必须手动安装该访问接口。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
+ 处理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据请求的每个物理服务器（如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器或 Excel Services 服务器）必须在计算机上安装了 OLE DB 访问接口。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装始终包含 OLE DB 访问接口，但是如果 Excel Services 运行在未安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的计算机上，必须手动安装该访问接口。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>将受信任的访问接口添加到 Excel Services  
   

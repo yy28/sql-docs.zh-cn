@@ -1,5 +1,5 @@
 ---
-title: 发现方法 (XMLA) |Microsoft 文档
+title: Discover 方法 (XMLA) |Microsoft Docs
 ms.date: 05/30/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 921afc6d17a0eddcba48e5a6a6064810a3b3b6ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575009"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979099"
 ---
-# <a name="xml-elements---methods---discover"></a>XML 元素的方法-发现
+# <a name="xml-elements---methods---discover"></a>XML 元素-方法-发现
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  从 Analysis Services 的实例中检索信息，如可用数据库或针对特定对象的详细信息的列表。 使用检索的数据**发现**方法取决于传递给它的参数的值。  
+  从 Analysis services 实例中检索信息，如可用数据库或针对特定对象的详细信息的列表。 使用检索到的数据**发现**方法取决于传递给它的参数的值。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34575009"
 </Discover>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -54,10 +54,10 @@ ms.locfileid: "34575009"
  **发现**方法请求有关实例和对象的元数据。 使用 XMLA 返回元数据[行集](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)数据类型。  
  
 > [!TIP] 
-> 如果你不熟悉 XML 命令，在单击 XMLA 查询模板**查询**在 Management Studio 中生成查询并将参数添加的工具栏。 有关详细信息，请参阅 [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。 
+> 如果您不熟悉 XML 命令，在单击 XMLA 查询模板**查询**在 Management Studio 中生成查询并将参数添加工具栏。 有关详细信息，请参阅 [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。 
   
 ## <a name="example"></a>示例  
- 在下面的代码示例中，客户端发送**发现**调用来请求从多维数据集的列表[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例 Analysis Services 数据库：  
+ 在下面的代码示例中，客户端发送**Discover**调用来请求从多维数据集的列表[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例 Analysis Services 数据库：  
   
 ```  
 <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">  

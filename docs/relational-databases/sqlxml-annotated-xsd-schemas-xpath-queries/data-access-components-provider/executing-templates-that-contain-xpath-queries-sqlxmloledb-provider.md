@@ -1,5 +1,5 @@
 ---
-title: 执行包含 XPath 查询 （SQLXMLOLEDB 提供程序） 的模板 |Microsoft 文档
+title: 执行包含 XPath 查询 （sqlxmloledb 访问接口） 的模板 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 005df507a2c48356ee72506530fb7c552fa43b97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032375"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>执行包含 XPath 查询的模板（SQLXMLOLEDB 访问接口）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "32968022"
   
 -   映射架构  
   
- 在此示例 ADO 应用程序中，包含 XPath 查询 （根） 的 XML 模板指定针对中所述的 XSD 映射架构 (MySchema.xml)[执行 XPath 查询&#40;SQLXMLOLEDB Provider&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ 在此示例 ADO 应用程序中，由 XPath 查询 （根） 组成的 XML 模板指定针对 XSD 映射架构 (MySchema.xml) 所述[执行 XPath 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
- 映射架构属性提供对其执行 XPath 查询的 XSD 映射架构。 基路径属性提供的映射架构的文件路径。  
+ 映射架构属性提供对其执行 XPath 查询的 XSD 映射架构。 基路径属性提供映射架构的文件路径。  
   
  ClientSideXML 属性设置为 True。 因此，在客户端上生成 XML 文档。  
   

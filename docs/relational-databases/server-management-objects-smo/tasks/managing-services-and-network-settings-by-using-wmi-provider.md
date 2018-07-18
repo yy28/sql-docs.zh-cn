@@ -1,5 +1,5 @@
 ---
-title: 通过使用 WMI 提供程序管理服务和网络设置 |Microsoft 文档
+title: 使用 WMI 提供程序管理服务和网络设置 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77eef3609246b60c7a49adcde9ee72498bb6f215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031625"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   WMI 提供程序是一个已发布的接口，可供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]管理控制台 (MMC) 管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务和网络协议。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象表示 WMI 提供程序。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象的操作与与建立的连接无关<xref:Microsoft.SqlServer.Management.Smo.Server>到的实例的对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并使用 Windows 凭据来连接到 WMI 服务。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象的运行与建立的连接<xref:Microsoft.SqlServer.Management.Smo.Server>对象的实例与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并使用 Windows 凭据连接到 WMI 服务。  
   
 ## <a name="example"></a>示例  
 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
- 程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]WMI 提供程序，你必须包括**导入**语句来限定的 WMI 命名空间。 请在应用程序的其他 **Imports** 语句之后、任何声明之前插入该语句，例如：  
+ 有关程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]WMI 提供程序必须包含**导入**语句以限定 WMI 命名空间。 请在应用程序的其他 **Imports** 语句之后、任何声明之前插入该语句，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -217,7 +217,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于配置管理的 WMI 提供程序的概念](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

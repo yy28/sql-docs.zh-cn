@@ -1,5 +1,5 @@
 ---
-title: 评估访问数据库对象的转换 (AccessToSQL) |Microsoft 文档
+title: 用于转换 (AccessToSQL) 评估访问数据库对象 |Microsoft 文档
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,47 +25,47 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bf85577996a6dc1e4d3e4f3f1f353b0952aece54
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d2d804734432cfd396acb017d6358310debeec1f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773253"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979419"
 ---
-# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估转换 (AccessToSQL) 访问数据库对象
-在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你应确定多少的迁移将会成功，并转换可能需要多长时间。 SSMA 可以创建显示已成功将转换为对象的百分比评估报表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法和时间估计执行的迁移。 SSMA 还允许你查看特定的问题导致转换失败。  
+# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估访问数据库对象的转换 (AccessToSQL)
+然后加载对象和数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您应该确定多少的迁移将会成功，并且转换可能需要多长时间。 SSMA 可以创建显示已成功将转换为的对象的百分比评估报告[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法和时间估计为执行迁移。 SSMA 还允许您查看特定问题导致转换失败。  
   
-## <a name="creating-assessment-reports"></a>创建评估报表  
-SSMA 当它创建评估报表时，将转换到所选的访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法，然后显示结果。  
+## <a name="creating-assessment-reports"></a>创建评估报告  
+SSMA 时它创建的评估报告，将转换为所选的访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法，然后显示结果。  
   
-**创建评估报表**  
+**若要创建评估报告**  
   
-1.  在访问元数据资源管理器，选择你想要评估的数据库。  
+1.  访问元数据资源管理器中选择或多个您想要评估的数据库。  
   
-2.  若要省略单个对象，清除你不想要评估对象旁边的复选框。  
+2.  若要取消单个对象，清除不希望评估对象旁边的复选框。  
   
-3.  右键单击**数据库**，然后选择**创建报表**。  
+3.  用鼠标右键单击**数据库**，然后选择**创建报告**。  
   
-    您也可以通过右键单击一个对象，然后选择分析单个对象**创建报表**。  
+    您还可以通过右键单击对象，然后选择分析单个对象**创建报告**。  
   
-    SSMA 在窗口底部的状态栏中显示进度。 如果输出窗格可见时，你还将看到输出窗格中的消息。  
+    SSMA 窗口底部的状态栏中显示进度。 如果输出窗格是可见的您也会看到输出窗格中的消息。  
   
-评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Access： 出现评估报表窗口。  
+评估完成后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]访问迁移助手： 评估报告窗口出现。  
   
-## <a name="using-assessment-reports"></a>使用评估报表  
-评估报表窗口包含三个窗格： 资源管理器、 的详细信息窗格中，和消息窗格。  
+## <a name="using-assessment-reports"></a>使用评估报告  
+评估报告窗口包含三个窗格： 资源管理器、 详细信息窗格中和消息窗格。  
   
--   资源管理器窗格中，可以浏览中接受评估的对象。 你可以单击此窗格可以深化到各个表、 索引和密钥中的项。  
+-   资源管理器窗格允许您浏览得到评估的对象。 您可以单击该窗格以单个表、 索引和键向下钻取的项目。  
   
--   详细信息窗格显示所选对象的转换统计信息。  
+-   详细信息窗格中显示所选对象的转换统计信息。  
   
--   消息窗格中显示错误、 警告和信息性消息进行转换，和时间的估计值用于执行的迁移和各个错误更正步骤。  
+-   邮件窗格中显示错误、 警告和信息性消息进行转换，和时间估计用于执行迁移和各个错误纠正的步骤。  
   
-你应更正错误，然后再次运行评估报表或转换架构。 若要找到错误，请单击**错误**中消息窗格中，按钮，然后展开每个错误，若要查看的对象发生错误的列表。 如果单击消息窗格中的某个对象时，所有错误和警告为该对象将都显示在细节窗格中。  
+您应该再次运行评估报告或转换架构之前更正错误。 若要查找的错误，请单击**错误**中的邮件窗格中，按钮，然后展开要查看发生错误的对象的列表的每个错误。 如果单击 [消息] 窗格中的对象时，所有错误和警告该对象将都出现在详细信息窗格中。  
   
 ## <a name="next-step"></a>下一步  
-[转换 Access 数据库对象](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[转换 Access 数据库对象](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>请参阅  
-[将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Access 数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

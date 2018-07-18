@@ -1,5 +1,5 @@
 ---
-title: 查询存储存储过程 (Transact SQL) |Microsoft 文档
+title: 查询存储存储过程 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -23,16 +23,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3778acbe0fdfcbb05eec3318daf007799322e410
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238098"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978249"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>查询存储存储过程 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本部分包含以下用于配置查询存储的存储的过程。  
+  本部分包含以下存储的过程用于配置查询存储。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -48,8 +48,8 @@ ms.locfileid: "33238098"
   
 -   [sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

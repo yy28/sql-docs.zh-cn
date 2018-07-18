@@ -1,5 +1,5 @@
 ---
-title: NULL 处理 (SQLXML 4.0) |Microsoft 文档
+title: NULL 处理 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b53c3516dbe0ee87e23e9cb13ec441ef82a499c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031415"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 处理 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 语法将 NULL 视为不存在。 （例如，如果属性或元素值是 NULL，则该属性或元素不出现在 XML 文档中。）在[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML， **updg:nullvalue**特性允许元素或属性的值指定 NULL。  
+  XML 语法将 NULL 视为不存在。 （例如，如果属性或元素值是 NULL，则该属性或元素不出现在 XML 文档中。）在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML， **updg: nullvalue**特性使元素或属性值指定为 NULL。  
   
- 例如，以下属的 updategram 确保**标题**值与联系人**ContactID** 64 个为 NULL，，然后更新**标题**"Mr."的值 为此联系人。  
+ 例如，以下 updategram 确保**标题**值与联系人**ContactID** 64 的为 NULL，并更新**标题**值为"Mr." 该联系人。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -47,9 +47,9 @@ ms.locfileid: "32968892"
 </ROOT>  
 ```  
   
- 参数传递到 Updategram 时，NULL 可以作为参数值进行传递。 这可通过指定**nullvalue**属性中 **\<updg:header >** 块。 有关示例，请参阅[Passing Parameters to Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md)。  
+ 参数传递到 Updategram 时，NULL 可以作为参数值进行传递。 这是通过指定**nullvalue**属性中 **\<updg:header >** 块。 有关示例，请参阅[将参数传递给 Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

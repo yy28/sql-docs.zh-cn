@@ -1,5 +1,5 @@
 ---
-title: 应用 XSL 转换 （SQLXML 托管类） |Microsoft 文档
+title: 应用 XSL 转换 （SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 951c8d315fa4ff72d16acb0873117af4b7857196
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968832"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972129"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>应用 XSL 转换（SQLXML 托管类）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在本例中，对 AdventureWorks 数据库执行一个 SQL 查询。 对查询结果应用 XSL 转换以生成包含雇员的姓和名这两个列的表。  
   
- SqlXmlCommand 对象的 XslPath 属性用于指定该 XSL 文件和其目录路径。  
+ SqlXmlCommand 对象 XslPath 属性用于指定 XSL 文件及其目录路径。  
   
 > [!NOTE]  
 >  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  

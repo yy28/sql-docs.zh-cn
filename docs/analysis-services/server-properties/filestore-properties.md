@@ -1,5 +1,5 @@
 ---
-title: Filestore 属性 |Microsoft 文档
+title: Filestore 属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a5bf8e90352218b222bbd6a58ad876ca0e1364b
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239037"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975002"
 ---
 # <a name="filestore-properties"></a>FileStore 属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "35239037"
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
  **RandomFileAccessMode**  
- 这是一项布尔属性，指示是否在随机文件访问模式下访问数据库文件和缓存文件。 默认情况下禁用此属性。 默认情况下，服务器不设置随机文件访问标志，打开分区数据文件进行读取访问时。  
+ 这是一项布尔属性，指示是否在随机文件访问模式下访问数据库文件和缓存文件。 默认情况下禁用此属性。 默认情况下，服务器不设置随机文件访问标志，打开分区数据文件的读取访问权限时。  
   
  在高端系统上，特别是在具有大型内存资源和多个 NUMA 节点的系统上，使用随机文件访问可能会给您带来好处。 在随机访问模式下，Windows 会绕过页映射操作的数据从磁盘读入系统文件缓存，因此可降低对缓存的争用。  
   
- 您将需要执行比较测试，以便确定查询性能是否由于更改此属性而得到改善。 有关执行比较测试的最佳做法，包括清除缓存和避免常见错误，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。 关于权衡上使用此属性的其他信息，请参阅[ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369)。  
+ 您将需要执行比较测试，以便确定查询性能是否由于更改此属性而得到改善。 有关执行比较测试的最佳做法，包括清除缓存和避免常见错误，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。 有关权衡使用此属性的其他信息，请参阅[ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369)。  
   
  若要在 Management Studio 中查看或修改此属性，请在服务器属性页中启用高级属性列表。 您也可以在 msmdsrv.ini 文件中更改该属性。 建议在设置该属性后重新启动服务器；否则，将会继续在之前的模式下访问已打开的文件。  
   

@@ -1,5 +1,5 @@
 ---
-title: 执行 SQL 查询 （SQLXML 托管类） |Microsoft 文档
+title: 执行 SQL 查询 （SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b5a15a164156fe897d8f648b80e408b075d4f470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970322"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972271"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>执行 SQL 查询（SQLXML 托管类）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "32970322"
   
 -   将值分配到 SqlXmlParameter 对象的属性 （名称和值）。  
   
- 在本示例中，将执行一个简单的 SQL 查询，以检索其姓氏值作为参数传递的雇员的名字、姓氏和出生日期。 在指定参数 (*LastName*)，仅 Value 属性设置。 未设置 Name 属性，因为此查询中参数是位置参数，没有名称是必需的。  
+ 在本示例中，将执行一个简单的 SQL 查询，以检索其姓氏值作为参数传递的雇员的名字、姓氏和出生日期。 在指定参数 (*LastName*)，仅 Value 属性设置。 未设置 Name 属性，因为此查询中，参数是位置，并且没有名称为必填项。  
   
  默认情况下 SqlXmlCommand 对象的 CommandType 属性是**Sql**。 因此，不显式设置此属性。  
   
@@ -106,7 +106,7 @@ public static int Main(String[] args)
   
  若要测试该示例，必须在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   
- 您可以指定一个模板（如下面的代码段所示），该模板执行 updategram（也是一个模板）来插入客户记录，而不是将 SQL 查询指定为命令文本。 您可以在文件中指定模板和 updategram，然后执行文件。 有关详细信息，请参阅[使用 CommandText 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)。  
+ 您可以指定一个模板（如下面的代码段所示），该模板执行 updategram（也是一个模板）来插入客户记录，而不是将 SQL 查询指定为命令文本。 您可以在文件中指定模板和 updategram，然后执行文件。 有关详细信息，请参阅[通过使用 CommandText 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)。  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -127,7 +127,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>使用 ExecuteToStream  
- 如果你有现有的流，你可以使用 ExecuteToStream 方法，而不是创建的流对象，并使用 Execute 方法。 前面的示例中的代码是此处修订，若要使用 ExecuteToStream 方法：  
+ 如果有现有的流，你可以使用 ExecuteToStream 方法，而不是创建一个 Stream 对象并使用 Execute 方法。 此处修订前面示例中的代码使用 ExecuteToStream 方法：  
   
 ```  
 using System;  
@@ -160,6 +160,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  你还可以使用返回的 XmlReader 对象 ExecuteXMLReadermethod。 有关详细信息，请参阅[使用 ExecuteXMLReader 方法执行 SQL 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
+>  此外可以使用返回的 XmlReader 对象 ExecuteXMLReadermethod。 有关详细信息，请参阅[通过使用 ExecuteXMLReader 方法执行 SQL 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
   
   

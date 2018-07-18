@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (Transact SQL) |Microsoft 文档
+title: sp_delete_maintenance_plan_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242884"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974004"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@plan_id =**] *****plan_id*****  
+ [  **@plan_id =**] **'***plan_id*****  
  指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效的 id。  
   
  [ **@job_id =**] **'***job_id***'**  
@@ -59,10 +59,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_delete_maintenance_plan_job**必须从运行**msdb**数据库。  
   
- 当已从维护计划中删除所有作业时，我们建议用户执行**sp_delete_maintenance_plan_db**若要从计划中删除剩余的数据库。  
+ 如果已从维护计划中删除所有作业，我们建议用户执行**sp_delete_maintenance_plan_db**若要从计划中删除剩余的数据库。  
   
 ## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_delete_maintenance_plan_job**。  
@@ -74,7 +74,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [数据库维护计划存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

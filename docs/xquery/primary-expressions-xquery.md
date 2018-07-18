@@ -1,5 +1,5 @@
 ---
-title: 主要表达式 (XQuery) |Microsoft 文档
+title: 主表达式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031435"
 ---
 # <a name="primary-expressions-xquery"></a>主表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 内置的布尔函数， **true()** 和**false （)**，可以用于表示布尔值，如下面的示例中所示。  
+ 内置布尔函数**true （)** 并**false （)**，可以用于表示布尔值，如下面的示例中所示。  
   
 ```  
 DECLARE @var XML  
@@ -138,7 +138,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- 可以使用 sql: variable 扩展函数来指代 SQL 变量，如下面的查询中所示。  
+ 可以使用 sql:variable() 扩展函数来引用 SQL 变量，如下面的查询中所示。  
   
 ```  
 DECLARE @price money  
@@ -159,10 +159,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   不支持模块导入。  
   
--   不支持外部变量声明。 到此解决方案是使用[sql: variable 函数](../xquery/xquery-extension-functions-sql-variable.md)。  
+-   不支持外部变量声明。 此解决方案是使用[sql:variable() 函数](../xquery/xquery-extension-functions-sql-variable.md)。  
   
 ## <a name="context-item-expressions"></a>上下文项表达式  
- 上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 此外可以通过 nodes （） 方法，XPath 表达式的上下文或 [] 谓词中更改它。  
+ 上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 此外可以更改由 nodes （） 方法，在 XPath 表达式的上下文或 [] 谓词。  
   
  上下文项由包含点 (.) 的表达式返回。 例如，下面的查询将计算每个元素 <`a`>，以确定是否存在属性 `attr`。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
   
@@ -180,7 +180,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>函数调用  
- 你可以调用内置 XQuery 函数和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sql: variable 和 sql:column() 函数。 有关实现的函数的列表，请参阅[对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
+ 可以调用内置 XQuery 函数和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sql:variable() 和 sql: column 函数。 有关实现的函数列表，请参阅[针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
   
 #### <a name="implementation-limitations"></a>实现限制  
  实现限制如下：  
@@ -189,7 +189,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   不支持函数导入。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 构造&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

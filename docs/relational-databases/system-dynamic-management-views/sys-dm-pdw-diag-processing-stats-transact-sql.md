@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_diag_processing_stats (Transact SQL) |Microsoft 文档
+title: sys.dm_pdw_diag_processing_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 22c3a810349f1e41557572bd2bf5ce3ba25a7a27
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466763"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974033"
 ---
-# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (TRANSACT-SQL)
+# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  显示与无法合并到由管理员定义的诊断会话的所有内部的诊断事件相关信息。 查询此视图以了解该驱动器的所有其他 Dmv 填充的诊断和事件处理子系统后面的统计信息。 有一组的每个节点上每个进程的队列。  
+  显示与所有无法合并到由管理员定义的诊断会话的内部诊断事件相关的信息。 查询此视图，以了解该驱动器的所有其他 Dmv 填充的背后的诊断和事件处理子系统的统计信息。 有一组的每个节点上每个进程的队列。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|此日志所在的设备节点。|  
 |**process_id**|**int**|运行提交此统计信息的进程的标识符。|  
 |**target_name**|**nvarchar(255)**|队列的名称。|  
-|**queue_size**|**int**|在处理队列中的项的数目。 队列大小通常是 0。 正数表示系统压力下并生成的事件的积压工作。 其他列中的正计数意味着系统已损坏该特定的队列以及任何相关的 Dmv。|  
+|**queue_size**|**int**|在处理队列中的项的数目。 队列大小通常是 0。 正数表示系统在压力下并生成积压工作的事件。 其他列中的正值意味着系统已损坏该特定队列以及任何相关的 Dmv。|  
 |**lost_events_count**|**bigint**|丢失的事件数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

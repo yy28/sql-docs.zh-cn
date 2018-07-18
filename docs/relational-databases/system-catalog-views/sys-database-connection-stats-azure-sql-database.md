@@ -1,5 +1,5 @@
 ---
-title: sys.database_connection_stats （Azure SQL 数据库） |Microsoft 文档
+title: sys.database_connection_stats （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: ''
@@ -28,29 +28,29 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181523"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029510"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含有关的统计信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库**连接**事件，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅中的事件类型[sys.event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+  包含的统计信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库**连接**事件，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅中的事件类型[sys.event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 |统计信息|类型|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|数据库的名称。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 **End_time**始终是比相应之后恰好 5 分钟**start_time**同一行中。|  
+|**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 **End_time**始终是相应之后恰好 5 分钟**start_time**同一行中。|  
 |**success_count**|**int**|成功连接数。|  
-|**total_failure_count**|**int**|失败连接的总数。 这是的总和**connection_failure_count**， **terminated_connection_count**，和**throttled_connection_count**，并且不包括死锁事件。|  
+|**total_failure_count**|**int**|失败连接的总数。 这是总和**connection_failure_count**， **terminated_connection_count**，并**throttled_connection_count**，并且不包括死锁事件。|  
 |**connection_failure_count**|**int**|登录失败数。|  
 |**terminated_connection_count**|**int**|***仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 终止连接数。|  
 |**throttled_connection_count**|**int**|***仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 中止的连接数。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>事件聚合  
  在 5 分钟的间隔内收集和聚合此视图的事件信息。 计数列表示特定连接事件在给定的时间间隔内针对特定数据库发生的次数。  
@@ -62,7 +62,7 @@ ms.locfileid: "33181523"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>间隔 start_time 和 end_time  
- 事件包含在某个聚合间隔在事件发生时*上*或*后 * * * start_time** 和*之前 * * * end_time** 该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
+ 事件在事件发生时包含在某个聚合间隔*上*或*后 * * * start_time** 和*之前 * * * end_time** 该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
   
 ```  
   
@@ -80,17 +80,17 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>未包括的错误  
  此视图可能并未包含所有连接和错误信息：  
   
--   此视图不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库无法发生，只有中的事件类型中指定的错误[sys.event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+-   此视图不包含所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库可能会发生，仅那些中的事件类型中指定的错误[sys.event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 -   如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据中心内发生计算机故障，则事件表中可能缺少逻辑服务器的少量数据。  
   
 -   如果通过 DoSGuard 拦截了 IP 地址，则无法收集来自该 IP 地址的连接尝试事件，这些事件不会出现在此视图中。  
   
 ## <a name="permissions"></a>权限  
- 有权访问用户**master**数据库具有对此视图的只读访问。  
+ 具有访问权限的用户**主**数据库具有对此视图的只读访问。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的查询**sys.database_connection_stats**返回年 9 2011 年月 28 日 (UTC) 的中午到 2011 年 9 月 25 日中午之间发生的数据库连接的摘要。 默认情况下，查询结果按排序**start_time** （升序）。  
+ 下面的示例演示的查询**sys.database_connection_stats**返回中午 2011 年 9 月 25 日中午 9/28/2011 (UTC) 之间发生的数据库连接的摘要。 默认情况下，查询结果按排序**start_time**顺序 （升序）。  
   
 ```  
 SELECT *  
@@ -98,7 +98,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Windows Azure SQL Database 故障排除](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+## <a name="see-also"></a>请参阅  
+ [Windows Azure SQL 数据库故障排除](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

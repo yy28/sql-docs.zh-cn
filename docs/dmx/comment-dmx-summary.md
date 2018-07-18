@@ -1,5 +1,5 @@
 ---
-title: -（注释） (DMX) 摘要 |Microsoft 文档
+title: -（注释） (DMX) 摘要 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841180"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031445"
 ---
 # <a name="---comment-dmx-summary"></a>-（注释） (DMX) 摘要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "34841180"
   
  注释没有最大长度限制。  
   
- 有关如何在 DMX 中使用不同类型的注释的详细信息，请参阅[注释&#40;DMX&#41;](../dmx/comments-dmx.md)。  
+ 有关如何使用 DMX 中的不同种类注释的详细信息，请参阅[备注&#40;DMX&#41;](../dmx/comments-dmx.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [正斜杠星型&#40;注释&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
- [双斜线&#40;注释&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
+ [斜杠星型&#40;注释&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [双斜杠&#40;注释&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
