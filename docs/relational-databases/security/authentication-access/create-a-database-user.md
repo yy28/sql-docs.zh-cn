@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,15 +24,16 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 042659861435f0deacf885dc5ec4c382f47a328f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d4a4259d06ffdcb14d7bb4c7a772c8606d2b669
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941933"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
      输入新用户的名称。 如果你从“用户类型”列表中选择了“Windows 用户”，则还可以单击省略号“(…)”打开“选择用户或组”对话框。  
   
      **登录名**  
-     输入用户的登录名。 或者，单击省略号“(…)”以打开“选择登录名”对话框。 如果您从**“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“登录名”** 可用。  
+     输入用户的登录名。 或者，单击省略号“(…)”以打开“选择登录名”对话框。 如果您从 **“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“登录名”** 可用。  
   
      “密码”和“确认密码”  
      输入在数据库中进行身份验证的用户的密码。  
@@ -109,22 +108,23 @@ ms.lasthandoff: 05/03/2018
      输入默认的用户语言。  
   
      **默认架构**  
-     输入此用户所创建的对象所属的架构。 或者，单击省略号“(…)”以打开“选择架构”对话框。 如果您从**“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”**, **“不带登录名的 SQL 用户”**或 **“Windows 用户”** ，则 **“默认架构”** 可用。  
+     输入此用户所创建的对象所属的架构。 或者，单击省略号“(…)”以打开“选择架构”对话框。 如果您从 **“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”**, **“不带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“默认架构”** 可用。  
   
      **证书名称**  
-     输入将用于数据库用户的证书。 或者，单击省略号“(…)”以打开“选择证书”对话框。 如果从**“用户类型”** 列表中选择了 **“映射到证书的用户”** ，则 **“证书名称”** 可用。  
+     输入将用于数据库用户的证书。 或者，单击省略号“(…)”以打开“选择证书”对话框。 如果从 **“用户类型”** 列表中选择了 **“映射到证书的用户”** ，则 **“证书名称”** 可用。  
   
      **非对称密钥名称**  
-     输入将用于数据库用户的密钥。 或者，单击省略号“(…)”以打开“选择非对称密钥”对话框。 如果从**“用户类型”** 列表中选择了 **“映射到非对称密钥的用户”** ，则 **“非对称密钥名称”** 可用。  
+     输入将用于数据库用户的密钥。 或者，单击省略号“(…)”以打开“选择非对称密钥”对话框。 如果从 **“用户类型”** 列表中选择了 **“映射到非对称密钥的用户”** ，则 **“非对称密钥名称”** 可用。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“数据库用户 – 新建”** 对话框还在四个其他页面上提供了选项： **“拥有的架构”**、 **“成员身份”**、 **“安全对象”**和 **“扩展属性”**。  
+ 
+  **“数据库用户 – 新建”** 对话框还在四个其他页面上提供了选项： **“拥有的架构”**、 **“成员身份”**、 **“安全对象”** 和 **“扩展属性”**。  
   
--   **“拥有的架构”** 页列出了可由新的数据库用户拥有的所有可能的架构。 若要向数据库用户添加架构或者从数据库用户中删除架构，请在 **“此用户拥有的架构”**下选中或取消选中架构旁边的复选框。  
+-   **“拥有的架构”** 页列出了可由新的数据库用户拥有的所有可能的架构。 若要向数据库用户添加架构或者从数据库用户中删除架构，请在 **“此用户拥有的架构”** 下选中或取消选中架构旁边的复选框。  
   
--   **“成员身份”** 页列出了可由新的数据库用户拥有的所有可能的数据库成员身份角色。 若要向数据库用户添加角色或者从数据库用户中删除角色，请在 **“数据库角色成员身份”**下选中或取消选中角色旁边的复选框。  
+-   **“成员身份”** 页列出了可由新的数据库用户拥有的所有可能的数据库成员身份角色。 若要向数据库用户添加角色或者从数据库用户中删除角色，请在 **“数据库角色成员身份”** 下选中或取消选中角色旁边的复选框。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="TsqlProcedure"></a> 使用 T-SQL 创建用户  
     
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在“标准”  菜单栏上，单击“新建查询” 。  
   

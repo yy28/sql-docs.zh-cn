@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544651"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>设备时区配置-分析平台系统
 **时区**页使你可以在分析平台系统 (AP) 设备上设置的所有节点的时间区域。  

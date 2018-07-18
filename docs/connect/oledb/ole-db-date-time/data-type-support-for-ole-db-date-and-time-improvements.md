@@ -2,10 +2,10 @@
 title: 数据类型支持 OLE DB 日期和时间改进 |Microsoft 文档
 description: OLE DB 日期和时间改进的数据类型支持
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,25 +17,28 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 66756bbb8179e9d7644d053dd76c4ab8223032d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666387"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 日期和时间的改进的数据类型支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   这篇文章提供有关 OLE DB （OLE DB 驱动程序的 SQL Server） 的信息类型支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期/时间数据类型。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射  
  OLE DB 提供两种新数据类型来支持新服务器类型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表显示全部服务器类型映射：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|OLE DB 数据类型|“值”|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|OLE DB 数据类型|ReplTest1|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|date|DBTYPE_DBDATE|133 (oledb.h)|  
+|日期|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -44,9 +47,9 @@ ms.lasthandoff: 05/03/2018
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|OLE DB 数据类型|客户端转换的字符串格式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此数据类型具有精度为 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
-|date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
+|日期|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 -   “分钟”范围为从 0 到 59。  
   
--   秒范围是 0 到 59。 这允许最多两个闰秒以便与恒星时间保持同步。  
+-   秒范围是 0 到 59。 这允许最多两个闰秒，以便保持 sidereal 时间同步。  
   
  已对以下现有 OLE DB 结构的实现进行了修改，以支持新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 日期和时间数据类型。 不过未更改定义。  
   
@@ -177,14 +180,14 @@ enum SQLVARENUM {
   
 |OLE DB 数据类型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|说明|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|date||  
+|DBTYPE_DBDATE|日期||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
 |DBTYPE_DBTIME2|**time**(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
   
  当应用程序指定了在 DBTYPE_DBTIMESTAMP *wType*，它会重写到映射**datetime2**通过提供中的类型名称*pwszTypeName*。 如果**datetime**指定，则*bScale*必须为 3。 如果**smalldatetime**指定，则*bScale*必须为 0。 如果*bScale*与不一致时*wType*和*pwszTypeName*，返回 DB_E_BADSCALE。  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

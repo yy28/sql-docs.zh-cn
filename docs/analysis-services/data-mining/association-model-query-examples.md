@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020014"
 ---
 # <a name="association-model-query-examples"></a>关联模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,7 +110,7 @@ WHERE MODEL_NAME = 'Association'
  [返回页首](#bkmk_top2)  
   
 ## <a name="finding-information-about-rules-and-itemsets"></a>查找有关规则和项集的信息  
- 关联模型有两个常见用途：查找有关常见项集的信息以及提取有关特定规则和项集的详细信息。 例如，您可能希望提取评为当前特别受关注的规则的列表，或创建最常见项集的列表。 您可以使用 DMX 内容查询来检索此类信息， 也可使用 **“Microsoft 关联查看器”**浏览该信息。  
+ 关联模型有两个常见用途：查找有关常见项集的信息以及提取有关特定规则和项集的详细信息。 例如，您可能希望提取评为当前特别受关注的规则的列表，或创建最常见项集的列表。 您可以使用 DMX 内容查询来检索此类信息， 也可使用 **“Microsoft 关联查看器”** 浏览该信息。  
   
 ###  <a name="bkmk_Query4"></a> 示例查询 4：检索项集和产品列表  
  以下查询检索全部项集，同时还将检索列出每个项集中包含的产品的嵌套表。 NODE_NAME 列包含模型内项集的唯一 ID，而 NODE_CAPTION 给出项目的文本说明。 本例中对嵌套表进行了平展处理，这样，包含两个产品的项集在结果中生成了两行。 如果客户端支持分层数据，则可以忽略 FLATTENED 关键字。  

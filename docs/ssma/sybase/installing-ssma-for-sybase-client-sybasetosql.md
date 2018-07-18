@@ -3,8 +3,6 @@ title: Sybase 客户端 (SybaseToSQL) 安装 SSMA |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6084947ec356b2f86404ea72de20df6514b7c8cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e4db8a57c7928290ed97e32a897ee03544462a3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778803"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>安装 SSMA for Sybase 客户端 (SybaseToSQL)
 SSMA 客户端包含用于连接到 Sybase 自适应 Server Enterprise (ASE) 数据库服务器和实例的程序文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，将转换到的 ASE 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 语法，将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，然后将数据迁移到和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQLDB。  
@@ -72,7 +71,7 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Mig
   
 除了 SSMA 程序文件，你还必须安装 SSMA 用于 Sybase 扩展包在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 有关详细信息，请参阅[SQL 服务器上安装 SSMA 组件&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [在 SQL Server 上安装 SSMA 组件&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [将 Sybase ASE 数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

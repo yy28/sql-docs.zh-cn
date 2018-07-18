@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539147"
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，对于在其中的物理媒体 （如驱动器或备份磁带） 被盗的情况下，恶意方可以只需还原或附加该数据库并浏览的数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  

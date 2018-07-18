@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912542"
 ---
 # <a name="setting-up-the-cursor"></a>设置光标
 执行语句，以创建结果设置之前，应用程序可以指定游标类型。 具有 SQL_ATTR_CURSOR_TYPE 语句属性做到这一点。 如果应用程序未显式指定类型，则将使用只进游标。 若要获取混合的光标，应用程序指定的键集驱动游标，但声明键集大小小于结果集大小。  

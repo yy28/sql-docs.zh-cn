@@ -29,6 +29,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33180693"
 ---
 # <a name="sysresourcegovernorworkloadgroups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |group_id|**int**|工作负荷组的唯一 ID。 不可为 null。|  
 |name|**sysname**|工作负荷组的名称。 不可为 null。|  
-|importance|**sysname**|**注意：**重要性仅适用于在相同的资源池中的工作负荷组。<br /><br /> 此工作负荷组中的请求的相对重要性。 重要性是以下项之一，使用介质正在默认值： 低、 中、 高。<br /><br /> 不可为 null。|  
-|request_max_memory_grant_percent|**int**|授予单个请求的最大内存量（以百分比表示）。 默认值为 25。 不可为 null。<br /><br /> **注意：**如果此设置为高于 50%，则较大的查询将运行一次一个地。 因此，在查询正在运行时出现内存不足错误的风险更高。|  
-|request_max_cpu_time_sec|**int**|针对单个请求的最大 CPU 使用限制（以秒为单位）。 默认值为 0，指定没有限制。 不可为 null。<br /><br /> **注意：**详细信息，请参阅[CPU 阈值超出 Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
+|importance|**sysname**|**注意：** 重要性仅适用于在相同的资源池中的工作负荷组。<br /><br /> 此工作负荷组中的请求的相对重要性。 重要性是以下项之一，使用介质正在默认值： 低、 中、 高。<br /><br /> 不可为 null。|  
+|request_max_memory_grant_percent|**int**|授予单个请求的最大内存量（以百分比表示）。 默认值为 25。 不可为 null。<br /><br /> **注意：** 如果此设置为高于 50%，则较大的查询将运行一次一个地。 因此，在查询正在运行时出现内存不足错误的风险更高。|  
+|request_max_cpu_time_sec|**int**|针对单个请求的最大 CPU 使用限制（以秒为单位）。 默认值为 0，指定没有限制。 不可为 null。<br /><br /> **注意：** 详细信息，请参阅[CPU 阈值超出 Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
 |request_memory_grant_timeout_sec|**int**|针对单个请求的内存授予超时（以秒为单位）。 默认值为 0，表示使用基于查询开销的内部计算。 不可为 null。|  
-|max_dop|**int**|工作负荷组的最大并行度。 默认值为 0，表示使用全局设置。 不可为 null。<br /><br /> **节点：**此设置将重写查询选项**maxdop**。|  
+|max_dop|**int**|工作负荷组的最大并行度。 默认值为 0，表示使用全局设置。 不可为 null。<br /><br /> **节点：** 此设置将重写查询选项**maxdop**。|  
 |group_max_requests|**int**|并发请求的最大数目。 默认值为 0，指定没有限制。 不可为 null。|  
 |pool_id|**int**|此工作负荷组使用的资源池的 ID。|  
 |external_pool_id|**int**|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此工作负荷组使用的外部资源池的 ID。|  

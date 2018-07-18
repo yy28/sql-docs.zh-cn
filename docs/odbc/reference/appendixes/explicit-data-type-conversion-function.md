@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908142"
 ---
 # <a name="explicit-data-type-conversion-function"></a>显式数据类型转换函数
 显式数据类型转换是根据 SQL 数据类型定义指定的。  

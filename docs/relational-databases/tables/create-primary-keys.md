@@ -17,11 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 820dbb8998665eacef12417ada67222b967acd17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd476ff279b30d79f4f096f3978ec96c9333dce3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789288"
 ---
 # <a name="create-primary-keys"></a>创建主键
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”。  
   
-2.  在 **“表设计器”**中，单击要定义为主键的数据库列的行选择器。 若要选择多个列，请在单击其他列的行选择器时按住 Ctrl 键。  
+2.  在 **“表设计器”** 中，单击要定义为主键的数据库列的行选择器。 若要选择多个列，请在单击其他列的行选择器时按住 Ctrl 键。  
   
 3.  右键单击该列的行选择器，然后选择“设置主键”。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>在现有表中创建主键  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-create-a-primary-key-in-a-new-table"></a>在新表中创建主键  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -103,15 +104,17 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>在新表中创建具有非聚集索引的主键  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例创建一个表并针对 `CustomerID`列定义一个主键，针对 `TransactionID` 定义一个群集索引。  
   
     ```sql  
+    -- Select appropriate database
     USE AdventureWorks2012;  
     GO  
+    -- Create table to add the clustered index
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
        CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),

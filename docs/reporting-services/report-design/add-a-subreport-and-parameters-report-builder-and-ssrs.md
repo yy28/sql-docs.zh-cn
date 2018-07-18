@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020084"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>添加子报表和参数（报表生成器和 SSRS）
   当您希望创建作为多个相关报表的容器的主报表时，可以向报表添加子报表。 子报表是对另一个报表的引用。 若要通过数据值使报表相关联（例如，使多个报表显示同一客户的数据），必须设计参数化报表（例如，显示特定客户详细信息的报表）作为子报表。 向主报表添加子报表时，可以指定传递给子报表的参数。  

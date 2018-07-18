@@ -1,34 +1,23 @@
 ---
 title: CovarianceN (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COVARIANCEN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Covariancen function
-ms.assetid: 1cc621cd-ffa0-40aa-91f0-bc5cb57f692b
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 35bf5e9917545fc7bcc1fac6ae3aae2d289c65fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 054acaaca417ca7d3fa5303fb31b5ea027bfcd72
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740176"
 ---
 # <a name="covariancen-mdx"></a>CovarianceN (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   通过使用无偏差总体公式（除以 x-y 对的数目），返回对集求得的 x-y 值对的样本协方差。  
   
@@ -49,7 +38,7 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  通常是单元坐标（返回代表 X 轴的值的数字）的多维表达式 (MDX) 的有效数值表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **CovarianceN**函数的计算结果的第一个数值表达式，以获取 y 轴的值针对指定的集。 然后，此函数对指定的集计算第二个数值表达式（如果指定），以获得 x 轴的一组值。 如果未指定第二个数值表达式，则该函数使用指定集中的单元的当前上下文作为 X 轴的值。  
   
  **CovarianceN**函数使用无偏差的总体公式。 这是与此相反[协方差](../mdx/covariance-mdx.md)使用有偏差的总体公式 （除以 x，y 对的数目） 的函数。  
@@ -57,7 +46,7 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 > [!NOTE]  
 >  **CovarianceN**函数将忽略空单元格包含文本或逻辑值。 但是，该函数将包含值为零的单元。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

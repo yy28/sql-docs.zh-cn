@@ -2,10 +2,10 @@
 title: 执行命令 |Microsoft 文档
 description: 执行命令
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb-driver-for-sql-server
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1139b4e7ecc047c826dc29a3ffdb99d0f8c11e31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20d2a7314db4a70fbc27221fba34e510441d9236
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665527"
 ---
 # <a name="executing-a-command"></a>执行命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   建立到数据源的连接后，使用者调用**IDBCreateSession::CreateSession**方法以创建会话。 该会话充当命令、行集或事务工厂。  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
  **执行**命令用于执行命令。 该命令可以是任何 SQL 语句或过程名称。 不是所有命令都将生成结果集（行集）对象。 SELECT * FROM Authors 之类的命令将生成结果集。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建适用于 SQL Server 的 OLE DB 驱动程序应用程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

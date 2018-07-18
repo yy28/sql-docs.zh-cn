@@ -1,34 +1,33 @@
 ---
-title: 处理的结果 (ODBC) |Microsoft 文档
+title: 处理结果 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41cca358deb729fda5d9659b9b76040cf8c3cc50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 175b92969e9ce7515820a7aa3d9e4600e411bfb1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408230"
 ---
-# <a name="processing-results---process-results"></a>处理结果的过程结果
+# <a name="processing-results---process-results"></a>处理结果-处理结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-首先确定该结果集的特征，然后通过使用到程序变量中检索数据处理 ODBC 应用程序中的结果涉及[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)。  
+ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后通过使用将数据检索至程序变量[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ### <a name="to-process-results"></a>处理结果  
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  若要在 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 返回 SQL_NO_DATA 之前取消处理结果集，请调用 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)。  
   
-## <a name="see-also"></a>另请参阅  
-[检索结果集信息 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+## <a name="see-also"></a>请参阅  
+[检索结果集信息&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

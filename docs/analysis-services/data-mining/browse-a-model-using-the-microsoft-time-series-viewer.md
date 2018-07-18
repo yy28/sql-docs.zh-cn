@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34015434"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 时序查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
   
  如果创建模型时只使用 ARTxp，则根节点的 **“挖掘图例”** 只包含事例总数。 对于每个非根节点，“挖掘图例”会包含树杈的更详细的信息：例如，它可能会显示节点的公式和事例数量。 图例中的“规则”  包含标识序列的信息以及规则适用的时间段。 例如，图例文本 `M200 Europe Amount -2` 指示节点表示 M200 Europe 序列在两个时间段之前一段时间的模型。  
   
- 如果创建模型时只使用 ARIMA，则 **“模型”** 选项卡包含一个标题为 **“全部”**的单个节点。 根节点的 **“挖掘图例”** 包含 ARIMA 公式。  
+ 如果创建模型时只使用 ARIMA，则 **“模型”** 选项卡包含一个标题为 **“全部”** 的单个节点。 根节点的 **“挖掘图例”** 包含 ARIMA 公式。  
   
  如果创建的是混合模型，则根节点只包含事例数和 ARIMA 公式。 在根节点之后，树拆分为对应于各个周期性结构的单独节点。 对于每个非根节点，挖掘图例同时包含 ARTxp 和 ARIMA 算法、节点的公式和节点中的事例数。 首先列出的是 ARTxp 公式，并标记为树节点公式。 接着是 ARIMA 公式。 有关如何解释此信息的详细信息，请参阅 [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 轴元素 (XMLA) |Microsoft 文档
+title: 轴元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34574909"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038015"
 ---
 # <a name="axes-element-xmla"></a>Axes 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含一套[轴](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)元素表示包含的轴数据[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)用元素[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)数据类型。  
+  包含一系列[轴](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)表示包含的轴数据元素[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)使用的元素[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)数据类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34574909"
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34574909"
 |子元素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 下**轴**元素，**轴**元素中发生的数据集，从零开始的顺序列出。 **AxisFormat** XMLA 属性设置将决定如何**轴**元素的格式。 有关详细信息**AxisFormat**属性，请参阅[支持 XMLA 属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  
+ 下**轴**元素，**轴**元素列出它们出现在数据集中，从零开始的顺序。 **AxisFormat** XMLA 属性设置确定如何**轴**元素的格式。 有关详细信息**AxisFormat**属性，请参阅[支持的 XMLA 属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  
   
  轴表示一个元组集，其中的所有元组都具有相同的维数。 元组集可采用各具优势的不同方式来表示。 例如，以下由 4 个元组组成的元组集可表示为二维元组的集合或两个一维元组集的笛卡尔积。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "34574909"
 |运算|Description|  
 |---------------|-----------------|  
 |成员|表示维度层次结构成员的轴的最小单位。|  
-|成员|集合**成员**对象来自同一维度层次结构。|  
+|成员|一系列**成员**对象从相同维度层次结构。|  
 |Tuple|来自不同维度层次结构的成员的集合。|  
-|元组|集合**元组**具有相同维数的对象。|  
+|元组|一系列**元组**对象具有相同维数。|  
 |Union|多个集的并集。|  
 |CrossJoin|集的笛卡尔积。|  
   
@@ -102,7 +102,7 @@ CrossProduct (
    Members( Member(Actual), Member(Budget) )  
 ```  
   
- 客户端可以使用**AxisFormat**属性来请求特定的表示形式。  
+ 可以使用客户端**AxisFormat**属性来请求特定的表示形式。  
   
 ## <a name="see-also"></a>另请参阅
  [MDDataSet 数据类型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   

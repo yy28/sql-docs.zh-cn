@@ -2,7 +2,6 @@
 title: 访问在分层记录集中的行 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b1b387eaa01a3a3d71c51172becf196ec6474ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f45ec72f864c719091adc04a88e181a41124b76
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270166"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>访问分层记录集 （示例） 中的行
 下面的示例显示的步骤所必需的访问的行以分层[记录集](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -71,5 +71,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [数据定形概述](../../../ado/guide/data/data-shaping-overview.md)[字段对象](../../../ado/reference/ado-api/field-object.md)[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)[调整用于 OLE DB 服务的 Microsoft 数据（ADO 服务提供程序）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [必需的提供程序数据成型](../../../ado/guide/data/required-providers-for-data-shaping.md)[调整 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)[形状中的命令常规](../../../ado/guide/data/shape-commands-in-general.md)[形状计算子句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic 应用程序函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

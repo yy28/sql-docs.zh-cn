@@ -2,7 +2,6 @@
 title: Append 方法 （ADOX 组） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dc48bab9fa037ab4844bf3e1ab247365bf41070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecd80b3c2affcbbed7bbd50f7e130fa84d1e86ea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284896"
 ---
 # <a name="append-method-adox-groups"></a>Append 方法 （ADOX 组）
 添加新[组](../../../ado/reference/adox-api/group-object-adox.md)对象传递给[组](../../../ado/reference/adox-api/groups-collection-adox.md)集合。  
@@ -38,10 +38,10 @@ Groups.Append Group
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *组*  
+ *分组*  
  **组**要追加的对象或组要创建并追加的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **组**集合[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示所有目录的组帐户。 **组**集合[用户](../../../ado/reference/adox-api/user-object-adox.md)表示仅用户所属的组。  
   
  如果提供程序不支持创建组，将会出错。  
@@ -52,7 +52,7 @@ Groups.Append Group
 ## <a name="applies-to"></a>适用范围  
  [组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [组和用户追加，ChangePassword 方法示例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

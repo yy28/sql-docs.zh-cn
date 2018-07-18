@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914102"
 ---
 # <a name="mapping-deprecated-functions"></a>映射函数弃用
 本部分介绍如何已弃用的函数映射由 ODBC 3 *.x*驱动程序管理器，以保证向后兼容性的 ODBC 3 *.x*与 ODBC 2 一起使用的驱动程序。*x*应用程序。 驱动程序管理器执行此映射而不考虑应用程序的版本。 因为每个 ODBC 2。*x*以下列表中的函数映射到相应的 ODBC 3 *.x*函数 ODBC 3 中调用时 *.x*驱动程序，ODBC 3 *.x*驱动程序不需要实现 ODBC 2。*x*函数。  

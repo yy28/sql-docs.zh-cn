@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019004"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
   通过与报表服务器直接连接，您可以使用支持的任何 Web 浏览器查看报表。 每个报表在报表服务器上都有一个 URL 地址。 无需使用 Web 应用程序，输入报表的 Web 地址即可在浏览器窗口中打开相应报表。 相应的报表会以 HTML 格式打开，并且包含报表工具栏，这样在此报表中您就可以在各页间导航或按数据值进行搜索。 您可以在 URL 中设置参数以隐藏报表工具栏或选择报表的输出格式。  

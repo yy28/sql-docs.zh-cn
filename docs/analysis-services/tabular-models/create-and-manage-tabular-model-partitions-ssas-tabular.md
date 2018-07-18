@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34039881"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>创建和管理表格模型分区
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  在 **“分区”** 对话框中，单击 **“新建”** 按钮。  
   
-2.  在 **“分区名称”**中，键入分区的名称。 默认情况下，对于每个新建分区，默认分区的名称将为递增式编号。  
+2.  在 **“分区名称”** 中，键入分区的名称。 默认情况下，对于每个新建分区，默认分区的名称将为递增式编号。  
   
 3.  在**查询语句**，键入或粘贴 SQL 或 M 查询语句，用于定义列和任何你想要包含在分区到查询窗口的子句。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  在 **“分区”** 对话框的 **“分区”** 列表中，选择您要复制的分区，然后单击 **“复制”** 按钮。  
   
-2.  在 **“分区名称”**中，键入分区的新名称。  
+2.  在 **“分区名称”** 中，键入分区的新名称。  
   
 3.  在**查询语句**，编辑查询语句。  
   

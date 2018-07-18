@@ -2,7 +2,6 @@
 title: ADO 事件 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1573eaca943c1bb018e279f5360f72480610a5d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 764e47be93509356de38fc90b7b67a1c85e7ff00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275516"
 ---
 # <a name="ado-events"></a>ADO 事件
 |||  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|挂起命令在此连接上执行，并为用户提供了机会来检查和修改挂起的执行参数前立即调用。|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove**事件时调用*之前*挂起的操作将更改中的当前位置**记录集**。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

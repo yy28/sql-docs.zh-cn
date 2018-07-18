@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d80205b0af8bb6865d28012f4415d87b5f6d2b59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bca746b6461f3d2c4e86bf0a5d160526692081c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333841"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>分配模型对象权限 (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您需要授予用户或组在 **的** “资源管理器” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中访问数据的权限时，或者当您需要将用户或组指定为管理员时，可以向模型对象分配权限。  
   
 > [!NOTE]  
->  将权限分配给模型时，针对所有其他模型的权限被隐式拒绝。 如果未分配模型对象权限，则用户或组将无法在 **“资源管理器”**中访问任何数据。  
+>  将权限分配给模型时，针对所有其他模型的权限被隐式拒绝。 如果未分配模型对象权限，则用户或组将无法在 **“资源管理器”** 中访问任何数据。  
   
 ## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  

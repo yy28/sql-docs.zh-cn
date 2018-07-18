@@ -1,5 +1,5 @@
 ---
-title: 常规 XQuery 用例就 |Microsoft 文档
+title: XQuery 常规使用情况 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9a28080c682d40d1e08aaa96e594c96496d79026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999829"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery 常规使用情况
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ WHERE CatalogDescription is not null
   
  请注意上述查询的以下方面：  
   
--   **命名空间**关键字在 XQuery prolog 中的定义查询正文中使用的命名空间前缀。  
+-   **命名空间**XQuery prolog 中的关键字定义查询主体中使用的命名空间前缀。  
   
 -   查询主体用于构造所需的 XML。  
   
@@ -78,7 +79,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 下面的查询将检索相同的信息，但是仅限于其目录说明在规范（<`Specifications`> 元素）中包含权重（<`Weight`> 元素）的那些产品型号。 此示例使用 WITH XMLNAMESPACES 来声明 pd 前缀与其命名空间的绑定。 在这种方式，绑定不描述在**query （)** 方法并在**exist （)** 方法。  
+ 下面的查询将检索相同的信息，但是仅限于其目录说明在规范（<`Specifications`> 元素）中包含权重（<`Weight`> 元素）的那些产品型号。 此示例使用 WITH XMLNAMESPACES 来声明 pd 前缀与其命名空间的绑定。 这种方式，该绑定未描述在这种**query （)** 方法并在**exist （)** 方法。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -93,7 +94,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 在前面的查询， **exist （)** 方法**xml**数据类型中的 WHERE 子句进行检查，以查看是否存在 <`Weight`> 中的元素 <`Specifications`> 元素。  
+ 在前面的查询**exist （)** 方法**xml**数据类型中的 WHERE 子句进行检查以查看是否存在 <`Weight`> 元素中的 <`Specifications`> 元素。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. 为其目录说明包含前角和小幅图片的产品型号查找产品型号 ID  
  XML 产品目录说明包含产品图片（<`Picture`> 元素）。 每个图片都具有若干属性。 这些属性包括图片角度（<`Angle`> 元素）和大小（<`Size`> 元素）。  
@@ -126,9 +127,9 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
 -   在 WHERE 子句中， **exist （)** 方法用于检索具有与产品目录说明的行 <`Picture`> 元素。  
   
--   WHERE 子句使用**value （)** 方法两次来比较的值 <`Size`> 和 <`Angle`> 元素。  
+-   WHERE 子句使用**value （)** 方法二次对值进行比较 <`Size`> 和 <`Angle`> 元素。  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 <p1:Product   
@@ -142,8 +143,8 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 创建产品的简单列表括在每个对模型名称和功能对\<功能 > 元素  
- 在产品型号目录说明中，XML 包含若干种产品功能。 所有这些功能都包含在 <`Features`> 元素中。 该查询使用[XML 构造 (XQuery)](../xquery/xml-construction-xquery.md)构造必需的 XML。 大括号中的表达式将替换为结果。  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 创建一个平面列表的产品型号名称 / 功能对每个对都包含在\<功能 > 元素  
+ 在产品型号目录说明中，XML 包含若干种产品功能。 所有这些功能都包含在 <`Features`> 元素中。 该查询使用[XML 构造 (XQuery)](../xquery/xml-construction-xquery.md)来构造所需的 XML。 大括号中的表达式将替换为结果。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -168,7 +169,7 @@ WHERE ProductModelID=19
   
 -   **ProductName**是一个属性。 此查询中的 XML 构造将其作为一个元素返回。  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 <Feature>  
@@ -193,8 +194,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 产品型号的目录说明，从列表产品模型名称、 模型 ID，并将功能分组内\<产品 > 元素  
- 使用存储在产品型号的目录说明中的信息，以下查询将列出产品型号的模型 ID 和功能组合到\<产品 > 元素。  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 从产品型号目录说明中，列表在产品模型名称、 模型 ID，并内进行分组功能\<产品 > 元素  
+ 使用中的产品型号目录说明存储的信息，以下查询列出了产品型号的模型 ID 和功能内进行分组\<产品 > 元素。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -213,7 +214,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 <Product>  
@@ -230,7 +231,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. 检索产品型号功能说明  
- 以下查询构造 XML 包含 <`Product`> 元素，该元素**ProducModelID**， **ProductModelName**属性和第一个的两个产品功能。 前两个产品功能特指 <`Features`> 元素的前两个子元素。 如果有更多的功能，此查询将返回空的 <`There-is-more/`> 元素。  
+ 以下查询将构造 XML 包含 <`Product`> 元素具有**ProducModelID**， **ProductModelName**属性和前两个产品功能。 前两个产品功能特指 <`Features`> 元素的前两个子元素。 如果有更多的功能，此查询将返回空的 <`There-is-more/`> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -256,7 +257,7 @@ WHERE CatalogDescription is not NULL
   
  请注意上述查询的以下方面：  
   
--   FOR ...RETURN 循环结构用于检索前两个产品功能。 **Position()** 函数用于查找在该序列的元素的位置。  
+-   FOR ...RETURN 循环结构用于检索前两个产品功能。 **Position （)** 函数用于查找序列中元素的位置。  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. 从产品目录说明中查找以“ons”结尾的元素名称  
  下面的查询将搜索目录说明并返回 <`ProductDescription`> 元素中其名称以“ons”结尾的所有元素。  
@@ -274,7 +275,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription is not NULL  
 ```  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 ProductModelID   Result  
@@ -302,13 +303,13 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- 请注意，SELECT 查询指定**query （)** 和**value （)** 方法**xml**数据类型。 因此，该查询中使用了前缀 pd，并且只使用 WITH XMLNAMESPACES 定义了一次该前缀 pd，而不是在两个不同的查询 prolog 中两次重复声明命名空间。  
+ 请注意，SELECT 查询指定**query （)** 并**value （)** 方法**xml**数据类型。 因此，该查询中使用了前缀 pd，并且只使用 WITH XMLNAMESPACES 定义了一次该前缀 pd，而不是在两个不同的查询 prolog 中两次重复声明命名空间。  
   
  请注意上述查询的以下方面：  
   
 -   WHERE 子句用于只检索其目录说明在 <`Summary`> 元素中包含单词“Aerodynamic”的行。  
   
--   **Contains （)** 函数用于查看是否在文本中包括单词。  
+-   **Contains （)** 函数用于了解文本中是否包含单词。  
   
 -   **Value （)** 方法**xml**数据类型将返回的值进行比较**contains （)** 为 1。  
   
@@ -341,16 +342,16 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
   
  请注意上述查询的以下方面：  
   
--   如果**exist （)** 方法中的 WHERE 子句，则返回 False (0)，返回产品型号 ID。 否则，将不返回。  
+-   如果**exist （)** 方法中的 WHERE 子句，则返回 False (0)，则返回产品型号 ID。 否则，将不返回。  
   
 -   由于所有产品说明都包含 <`Picture`> 元素，因此在这种情况下结果集为空。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQueries 涉及层次结构](../xquery/xqueries-involving-hierarchy.md)   
- [XQueries 涉及顺序](../xquery/xqueries-involving-order.md)   
+ [涉及顺序的 XQueries](../xquery/xqueries-involving-order.md)   
  [XQueries 处理关系数据](../xquery/xqueries-handling-relational-data.md)   
- [在 XQuery 中的字符串搜索](../xquery/string-search-in-xquery.md)   
- [处理在 XQuery 中的命名空间](../xquery/handling-namespaces-in-xquery.md)   
+ [XQuery 中的字符串搜索](../xquery/string-search-in-xquery.md)   
+ [处理 XQuery 中的命名空间](../xquery/handling-namespaces-in-xquery.md)   
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  

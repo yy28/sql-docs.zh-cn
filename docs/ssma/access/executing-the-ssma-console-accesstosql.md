@@ -1,8 +1,6 @@
 ---
 title: 执行 SSMA 控制台 (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630e58111b82485b0e7567b972f05227fc26921e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e871f2dd71c4c348067555e03c45a151f001d933
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773993"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL)
 Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的部分详细介绍相同。  
@@ -165,7 +164,7 @@ connect-source-database
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <load-access-database>  
@@ -199,7 +198,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <force-load>  
@@ -312,7 +311,7 @@ generate-assessment-report
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <generate-assessment-report  
@@ -384,7 +383,7 @@ convert-schema
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <convert-schema  
@@ -444,7 +443,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-或  
+或多个  
   
 ```xml  
 <migrate-data  
@@ -474,7 +473,7 @@ convert-schema
   
 </link-tables>  
 ```  
-或  
+或多个  
   
 ```xml  
 <link-tables>  
@@ -500,7 +499,7 @@ convert-schema
   
 </unlink-tables>  
 ```  
-或  
+或多个  
   
 ```xml  
 <unlink-tables>  
@@ -579,7 +578,7 @@ convert-schema
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target  
@@ -588,7 +587,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target>  
@@ -644,7 +643,7 @@ convert-schema
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database  
@@ -653,7 +652,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database>  
@@ -703,7 +702,7 @@ save-as-script
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <save-as-script  

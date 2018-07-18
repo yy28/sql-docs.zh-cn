@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ad96038b59e283053b944f4bb88a7b0fdd0406f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f783df6df249f5ce045454070771566b59ba0bba
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812051"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/23/2018
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。此外，列中的值**scheduler_id**， **wait_order**， **pool_id**， **group_id**进行筛选; 列的值设置为 NULL。  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_query_memory_grants**。  
+> 若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_query_memory_grants**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -71,56 +72,55 @@ ms.lasthandoff: 05/23/2018
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
    
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  查询超时的典型调试情况可能如下所示：  
   
 -   请检查总体系统内存状态使用[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)， [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，和各种性能计数器。  
   
 -   中的查询执行内存预留检查**sys.dm_os_memory_clerks**其中`type = 'MEMORYCLERK_SQLQERESERVATIONS'`。  
   
--   检查查询等待授予使用**sys.dm_exec_query_memory_grants**。  
+-   检查查询等待<sup>1</sup>授予使用**sys.dm_exec_query_memory_grants**。  
   
-    ```  
+    ```sql  
     --Find all queries waiting in the memory queue  
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
+    
+    <sup>1</sup>在此方案中，等待类型通常是 RESOURCE_SEMAPHORE。 有关详细信息，请参阅 [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 
   
 -   搜索与使用的内存授予的查询的缓存[sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)和[sys.dm_exec_query_plan &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
-    ```  
+    ```sql  
     -- retrieve every query plan from the plan cache  
     USE master;  
     GO  
     SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
     GO  
-  
     ```  
   
 -   进一步检查占用大量内存的查询使用[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。  
   
-    ```  
+    ```sql  
     --Find top 5 queries by average CPU time  
     SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-    Plan_handle, query_plan   
+      plan_handle, query_plan   
     FROM sys.dm_exec_query_stats AS qs  
     CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
     ORDER BY total_worker_time/execution_count DESC;  
     GO  
-  
     ```  
   
 -   如果怀疑有失控查询，检查从 Showplan [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)和批处理中的文本[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
   
- 如果查询使用的动态管理视图中包括 ORDER BY 或聚合，则可能会增加内存占用，进而产生需进行故障排除的问题。  
+ 使用动态管理视图中包括的查询`ORDER BY`或者聚合可以增加内存占用，进而产生需进行故障排除问题。  
   
  数据库管理员可以使用资源调控器功能在多个资源池之间分发服务器资源，最多可为 64 个池。 开头[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，每个池的行为类似的小型的独立服务器实例，且需要 2 信号量。 从返回的行数**sys.dm_exec_query_resource_semaphores**可以是最多 20 次中返回的行超过[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
- [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
-
-

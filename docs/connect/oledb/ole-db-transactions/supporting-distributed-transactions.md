@@ -2,10 +2,10 @@
 title: 支持分布式的事务 |Microsoft 文档
 description: SQL Server 的 OLE DB 驱动程序中的分布式的事务
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e6593d0153f66e6899b5d180fb8194a970d7caa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690300"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 驱动程序的 SQL Server 使用者可以使用**ITransactionJoin::JoinTransaction**方法可以参与分布式事务协调由 Microsoft 分布式事务处理协调器 (MS DTC)。  
   
@@ -143,7 +146,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [事务](../../oledb/ole-db-transactions/transactions.md)  
+## <a name="see-also"></a>请参阅  
+ [中的](../../oledb/ole-db-transactions/transactions.md)  
   
   

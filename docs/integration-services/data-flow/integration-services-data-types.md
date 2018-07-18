@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fce885002fc8dd2870480327ed575b77332ed0d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abf3340badf3e1914bce13951625308ac10a3c65
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407729"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 表中的一些数据类型提供了适用的精度和小数位数信息。 有关精度和小数位数的详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |DT_BOOL|一个布尔值。|  
 |DT_BYTES|二进制数据值。 长度可变，且最大长度为 8000 字节。|  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909892"
 ---
 # <a name="executing-batches"></a>执行批处理
 应用程序执行一批语句之前，应首先检查是否支持它们。 为此，应用程序调用**SQLGetInfo**使用 SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 第一个选项返回行计数 – 生成和生成集 – 语句支持显式批处理和过程，后者的两个选项的可用性返回信息的行计数和结果的设置中时的结果是否 parameterized执行。  

@@ -1,5 +1,5 @@
 ---
-title: XML 构造 (XQuery) |Microsoft 文档
+title: XML 构造 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -30,18 +30,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995139"
 ---
 # <a name="xml-construction-xquery"></a>XML 构造 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  在 XQuery，你可以使用**直接**和**计算**构造函数来构造查询中的 XML 结构。  
+  在 XQuery 中，你可以使用**直接**并**计算**构造函数来查询中构造 XML 结构。  
   
 > [!NOTE]  
->  没有任何区别之间**直接**和**计算**构造函数。  
+>  没有任何区别**直接**并**计算**构造函数。  
   
 ## <a name="using-direct-constructors"></a>使用直接构造函数  
  使用直接构造函数时，可以在构造 XML 时指定类似 XML 的语法。 下列示例说明了直接构造函数的 XML 构造。  
@@ -53,9 +54,9 @@ ms.lasthandoff: 05/03/2018
   
 -   两个元素节点，\<摘要 > 和\<功能 >。  
   
-    -   \<摘要 > 元素具有一个文本节点子，其值是"某些说明"。  
+    -   \<摘要 > 元素有一个子文本节点的值为"Some description"。  
   
-    -   \<功能 > 元素具有三个元素节点的子级，\<颜色 >，\<权重 >，和\<保证 >。 这些节点中，每个节点都有一个子文本节点，它们的值分别为 Red、25、2 years parts and labor。  
+    -   \<功能 > 元素具有三个元素节点子级\<颜色 >，\<权重 >，和\<保证 >。 这些节点中，每个节点都有一个子文本节点，它们的值分别为 Red、25、2 years parts and labor。  
   
 ```  
 declare @x xml;  
@@ -85,7 +86,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询构造了一个 <`NewRoot`> 元素，该元素有一个子元素 <`e`>。 元素的值 <`e`> 通过指定在大括号 （"{… 内的路径表达式计算 }").  
+ 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询构造了一个 <`NewRoot`> 元素，该元素有一个子元素 <`e`>。 元素的值 <`e`> 计算通过指定路径表达式在大括号 （"{... }").  
   
 ```  
 DECLARE @x xml;  
@@ -105,7 +106,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 下面的查询与上一个查询类似。 但是，大括号中的表达式指定**data （)** 函数可检索的原子值 <`root`> 元素并将其分配给构造的元素中，<`e`>。  
+ 下面的查询与上一个查询类似。 但是，大括号中的表达式指定**data （)** 函数来检索的原子值 <`root`> 元素并将其分配给构造的元素，<`e`>。  
   
 ```  
 DECLARE @x xml;  
@@ -249,7 +250,7 @@ This is product model catalog description.
   
  构造属性时，可以使用大括号中的表达式指定属性的值。 在本例中，表达式的结果返回为属性值。  
   
- 在下面的示例中， **data （)** 函数不是绝对必需的。 将表达式值分配到属性，因为**data （)** 隐式应用以检索指定的表达式的类型化的值。  
+ 在以下示例中， **data （)** 函数不是绝对必需的。 将表达式值分配到一个属性，因为**data （)** 隐式应用以检索指定的表达式的类型化的值。  
   
 ```  
 DECLARE @x xml;  
@@ -321,7 +322,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   使用[concat 函数](../xquery/functions-on-string-values-concat.md)要连接到生成的属性值的两个字符串自变量：  
+    -   使用[concat 函数](../xquery/functions-on-string-values-concat.md)地连接到生成的属性值的两个字符串参数：  
   
         ```  
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -351,7 +352,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     如果将应用**data （)** 函数，查询可检索的原子值的表达式，因为`/x`，这加上字符串。 下面是原子值的序列：  
+     如果将应用**data （)** 函数，该查询有效，因为它检索的表达式，原子值`/x`，这与字符串串联。 下面是原子值的序列：  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -551,7 +552,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>其他直接 XML 构造函数  
  用于处理指令和 XML 注释的构造函数使用的语法与相应的 XML 构造使用的语法相同。 同时还支持文本节点的计算构造函数，但主要在 XML DML 中使用，用于构造文本节点。  
   
- **请注意**使用显式的文本节点构造函数的示例，请参阅中的特定示例[插入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
+ **请注意**使用显式文本节点构造函数的示例，请参阅中的特定示例[插入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
   
  在下面的查询中，构造的 XML 包括一个元素、两个属性、一个注释和一个处理指令。 注意，由于正在构造序列，因此要在 <`FirstLocation`> 前使用逗号。  
   
@@ -588,7 +589,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>使用计算构造函数  
- 。 本例中，指定了关键字来标识要构造的节点的类型。 仅支持下列关键字：  
+ 实例时都提供 SQL Server 登录名。 本例中，指定了关键字来标识要构造的节点的类型。 仅支持下列关键字：  
   
 -   element  
   
@@ -639,7 +640,7 @@ text{"Some text "},
   
  注意，使用 XQuery 规范中定义的计算元素和属性构造函数可以计算节点名称。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用直接构造函数时，元素和属性等节点名称必须指定为常量文字。 这样，元素和属性的直接构造函数和计算构造函数之间才不会有差异。  
   
- 在下面的示例中，构造的节点的内容从的说明列中存储的 XML 生产说明获取**xml** ProductModel 表中的数据类型。  
+ 在以下示例中，构造节点的内容均来自的 Instructions 列中存储的 XML 生产说明**xml** ProductModel 表中的数据类型。  
   
 ```  
 SELECT Instructions.query('  
@@ -675,7 +676,7 @@ where ProductModelID=7
   
 -   计算注释构造函数  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

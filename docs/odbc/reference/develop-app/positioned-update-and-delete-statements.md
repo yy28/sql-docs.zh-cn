@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913122"
 ---
 # <a name="positioned-update-and-delete-statements"></a>定位的 Update 和 Delete 语句
 应用程序可以更新或删除中定位的更新的结果集的当前行或删除语句。 定位 update 和 delete 语句支持的某些数据源，但不是所有异常。 若要确定是否定位数据源支持更新和 delete 语句，应用程序调用**SQLGetInfo**使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*信息类型*（具体取决于游标的类型）。 请注意 ODBC 游标库模拟定位的 update 和 delete 语句。  

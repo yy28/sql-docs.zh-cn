@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913242"
 ---
 # <a name="getting-long-data"></a>获取长整型数据
 Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 255 个字符的二进制数据。 此数据可能已经足够小，无法存储在单个缓冲区中，例如有几个千位字符的一部分描述。 但是，它可能太长，无法存储在内存中，如长文本文档或位图。 由于此类数据不能存储在单个缓冲区，可从使用部件中的驱动程序检索**SQLGetData**已提取的行中的其他数据之后。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023624"
 ---
 # <a name="define-linked-dimensions"></a>定义链接维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  使用 Windows 身份验证进行连接。  
   
-5.  在 **“初始目录”**中，单击向下箭头以选择此服务器上的数据库。  
+5.  在 **“初始目录”** 中，单击向下箭头以选择此服务器上的数据库。  
   
 6.  在“数据源向导”中，单击 **“下一步”** 以继续。  
   

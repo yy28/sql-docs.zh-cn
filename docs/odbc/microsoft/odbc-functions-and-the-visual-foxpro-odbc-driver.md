@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905072"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函数和 Visual FoxPro ODBC 驱动程序
 本部分中的主题提供的简要概述 ODBC API 函数和任何 Visual FoxPro – 特定的详细信息。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019124"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   您可以通过在报表 URL 中包含报表参数，将它们传递到报表。 这些 URL 参数不带前缀，因为它们被直接传递到报表处理引擎。  

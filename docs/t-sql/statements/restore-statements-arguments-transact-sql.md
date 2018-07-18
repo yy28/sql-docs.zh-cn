@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 caps.latest.revision: 154
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f16195a10c186e406571f65d8d79e2809f23dbad
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: d76099a9ac6cac338a176836ef483dbb37938736
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942273"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/07/2018
  { database_name | *@***database_name_var}  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- 是将日志或整个数据库还原到的数据库。 如果作为变量 (@**database_name_var) 提供，则可以将此名称指定为字符串常量 (@*database_name_var = database_name*) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量**。  
+ 是将日志或整个数据库还原到的数据库。 如果作为变量 (@**database_name_var) 提供，则可以将此名称指定为字符串常量 (@*database_name_var = database_name*) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量 **。  
   
  \<file_or_filegroup_or_page> [ ,...n ]  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

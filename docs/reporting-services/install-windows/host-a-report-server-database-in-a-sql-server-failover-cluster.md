@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f89e7e03b56678a97176db31369d6a4aa7ec3afa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 813a16c58fc592cf525831a1d461ca036f3a4649
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322186"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集中承载报表服务器数据库
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对故障转移群集的支持，用户可以针对一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用多个磁盘。 对故障转移群集的支持仅限于报表服务器数据库；您不能将报表服务器服务作为故障转移群集的一部分运行。  

@@ -3,8 +3,6 @@ title: SSMA for SAP ASE (SybaseToSQL) 中的新增 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 86a54f8dce44607b91437a89043ff98fdd670ad5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6b7cf1783ec677ba60033e29f132ac892b3844
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779433"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) 的新增功能
 本主题列出每个版本中的 SAP ASE (以前称为 Sybase 的 SSMA) 更改了 SSMA。 
@@ -213,5 +212,5 @@ Sybase 的 SSMA 2006 年 11 月版包含以下更改：
 ## <a name="july-2006"></a>2006 年 7 月  
 2006 年 7 月发布的用于 Sybase 的 SSMA 是初次发布。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [快速入门用于 Sybase 的 SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

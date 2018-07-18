@@ -2,7 +2,6 @@
 title: 方言属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74299cc953c3ac94653860d18d0ee7774ecf49ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 638d02511078028fa6c5b1337fdb1b095d8e5c85
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277916"
 ---
 # <a name="dialect-property"></a>方言属性
 指示的方言[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性。 方言定义的语法和提供程序使用来分析字符串或流的一般规则。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  **方言**属性包含一个有效的 GUID，它表示的命令文本或流的方言。 此属性的默认值是 {C8B521FB-5CF3-11CE-ADE5-00AA0044773D} 表示提供程序，应选择如何解释命令文本或流。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当用户读取此属性; 的值时，ADO 不查询提供程序它将返回的字符串表示形式中当前存储的值[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
  当用户设置**方言**属性，ADO 验证 GUID，并引发错误，如果提供的值不是有效的 GUID。 请参阅你的提供商，以确定支持的 GUID 值的文档**方言**属性。  
@@ -40,5 +40,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Execute 方法（ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)

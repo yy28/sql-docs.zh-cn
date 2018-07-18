@@ -1,8 +1,6 @@
 ---
 title: 故障排除 (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 96725d8f1dceae433aa4ceef6619e4fcf7530340
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d017b56e358ab70360f216aa985e73392858f584
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774863"
 ---
 # <a name="troubleshooting-accesstosql"></a>故障排除 (AccessToSQL)
 并不少见运行迁移问题中途执行控制台脚本或命令。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  过程  
   
-3.  视图  
+3.  “查看”  
   
 4.  触发器  
   

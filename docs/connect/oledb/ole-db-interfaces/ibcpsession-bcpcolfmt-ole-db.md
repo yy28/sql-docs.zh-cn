@@ -2,10 +2,10 @@
 title: IBCPSession::BCPColFmt (OLE DB) |Microsoft 文档
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 52b1907e81f38aa478cce48dcbf089d3db20f4e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccd2903e1294666d7b168f94d9c7145b1350cde
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689470"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在程序变量与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列之间创建绑定。  
   
@@ -45,7 +48,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **BCPColFmt**方法用于创建 BCP 数据文件字段之间的绑定和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]列。 它将列的长度、类型、终止符和前缀长度视为参数处理，并为各个字段设置所有这些属性。  
   
  如果用户选择交互模式，则调用该方法两次；一次按照默认值（与服务器列的类型相对应）设置列格式，另一次按照在交互模式期间选择的客户端的所选列类型为每个列设置格式。  
@@ -131,7 +134,7 @@ HRESULT BCPColFmt(
  E_OUTOFMEMORY  
  内存不足的错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
   

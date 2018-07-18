@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913392"
 ---
 # <a name="scalar-function-calls"></a>标量函数调用
 标量函数返回每一行的值。 例如，该绝对值标量函数将作为自变量的数值列，并返回列中的每个值的绝对值的数值。 调用标量函数的转义序列是  

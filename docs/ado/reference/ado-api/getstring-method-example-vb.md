@@ -2,7 +2,6 @@
 title: GetString 方法示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 47c8cc3ac8c70e43de4f5ad3771903f920d58a32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a5a2ac54d8a177669d94613a2b612f6ce65f8d9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278856"
 ---
 # <a name="getstring-method-example-vb"></a>GetString 方法示例 (VB)
 此示例演示[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
@@ -105,6 +105,6 @@ End Sub
 'EndGetStringVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetString 方法 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

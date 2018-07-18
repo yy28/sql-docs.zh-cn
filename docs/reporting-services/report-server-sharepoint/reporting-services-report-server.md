@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028394"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 
 Reporting Services 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。  
   
- **安装：**有关 Reporting Services 安装的信息，请参阅[安装 Reporting Services](../install-windows/install-reporting-services.md)。
+ **安装：** 有关 Reporting Services 安装的信息，请参阅[安装 Reporting Services](../install-windows/install-reporting-services.md)。
 
 ## <a name="overview-of-report-server-modes"></a>报表服务器模式概述
 

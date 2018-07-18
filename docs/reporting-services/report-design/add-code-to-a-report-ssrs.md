@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020774"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>向报表添加代码 (SSRS)
   您可以在任何表达式中调用自己的自定义代码。 可以通过下列两种方式提供代码：  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“代码”**。  
   
-3.  在 **“自定义代码”**中键入代码。 报表运行时，代码中的错误会引发警告。 下面的示例创建一个名为 `ChangeWord` 的自定义函数，该函数可使用词语“`Bike`”替换“`Bicycle`”。  
+3.  在 **“自定义代码”** 中键入代码。 报表运行时，代码中的错误会引发警告。 下面的示例创建一个名为 `ChangeWord` 的自定义函数，该函数可使用词语“`Bike`”替换“`Bicycle`”。  
   
     ```  
     Public Function ChangeWord(ByVal s As String) As String  

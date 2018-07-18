@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032114"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>更改默认 Reporting Services 传递扩展插件
   你可以通过修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置设置，来更改显示在订阅定义页的“传递方式”  列表中的默认传递扩展插件。 例如，你可以修改该配置，以便在用户创建新订阅时，文件共享传递（而非电子邮件传递）默认处于选中状态。 你还可以更改传递扩展插件在用户界面中的排列顺序。  

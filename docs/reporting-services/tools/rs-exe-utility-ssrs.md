@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035090"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  

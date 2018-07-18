@@ -1,8 +1,6 @@
 ---
 title: 映射 DB2 和 SQL Server 数据类型 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e9f470aca25b8f42473ccb8a453edc0d3da911a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d354f1b9fb44e77dc840f74d5692c1149e70ab0e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775023"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>将 DB2 和 SQL Server 数据类型 (DB2ToSQL) 映射
 DB2 数据库类型与不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库类型。 当转换到 DB2 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你必须指定如何将从到 DB2 的数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
@@ -95,6 +94,6 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
 ## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是为[评估报表&#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md)或[转换 DB2 架构&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。 如果创建了一个评估报告，DB2 对象将自动转换此评估过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

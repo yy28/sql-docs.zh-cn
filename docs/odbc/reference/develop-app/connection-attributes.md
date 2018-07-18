@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909812"
 ---
 # <a name="connection-attributes"></a>连接属性
 连接属性是连接的特性。 例如，因为事务发生在连接级别，所以事务隔离级别就是一个连接属性。 同样，登录超时值或尝试时连接超时前, 等待的秒数是连接属性。  

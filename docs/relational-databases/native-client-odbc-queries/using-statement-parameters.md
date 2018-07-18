@@ -1,13 +1,12 @@
 ---
-title: 使用语句参数 |Microsoft 文档
+title: 使用语句参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84fa75e75d21017b310fc807948bb4ed42e3d673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418816"
 ---
 # <a name="using-statement-parameters"></a>使用语句参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +39,9 @@ ms.lasthandoff: 05/03/2018
   
 -   在构造查询条件时增强用户交互。  
   
--   管理**文本**， **ntext**，和**映像**数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定 C 数据类型。  
+-   管理**文本**， **ntext**，并**图像**数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定的 C 数据类型。  
   
- 例如，**部件**表具有名为的列**PartID**，**说明**，和**价格**。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
+ 例如，**部件**表中包含名为的列**PartID**，**说明**，以及**价格**。 若要添加不带参数的部分，需要构造 SQL 语句，例如：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,11 +57,11 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  每个参数标记均按从左到右的顺序由其分配至参数的序号引用。 在 SQL 语句中，最左侧的参数标记的序号值为 1；下一个的序号为 2，以此类推。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [绑定参数](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行查询&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

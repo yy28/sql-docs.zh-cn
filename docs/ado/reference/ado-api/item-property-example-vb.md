@@ -2,7 +2,6 @@
 title: 项的属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3beaf6111b432427d2a40f9f0362c6a9084a5246
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdbddb4af085077b3aa86eec760253442dfefbd9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279256"
 ---
 # <a name="item-property-example-vb"></a>项的属性示例 (VB)
 此示例演示如何[项](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合的成员。 该示例打开***作者***表***Pubs***使用参数化命令的数据库。  
@@ -138,7 +138,7 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Item 属性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   

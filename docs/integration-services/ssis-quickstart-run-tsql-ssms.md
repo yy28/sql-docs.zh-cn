@@ -1,22 +1,21 @@
 ---
 title: 使用 Transact-SQL (SSMS) 运行 SSIS 包 | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07e3d841a04a632ac00a2e414b67c182e21c4557
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d4943bbddb027632a39e7a3ef13748dec286c68c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328451"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 运行来自 SSMS 的 SSIS 包
 本快速入门演示如何使用 SQL Server Management Studio (SSMS) 连接到 SSIS 目录数据库，然后使用 Transact-SQL 语句运行存储在 SSIS 目录中的 SSIS 包。

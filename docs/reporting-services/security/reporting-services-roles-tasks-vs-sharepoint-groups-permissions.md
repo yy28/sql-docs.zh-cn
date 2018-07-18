@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028374"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务与SharePoint 组权限对比
   本主题将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900192"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 从指定与数据源的数据库中删除一个表并将其从磁盘中删除。  

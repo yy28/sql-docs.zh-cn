@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e8f5dbf87ec79db858d550636c542173cb66883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac66951374390b1d2b148295c1097dc5faee6a91
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403829"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 源编辑器（“高级”页）
   使用“SAP BW 源编辑器”的“高级”页指定字符串转换规则和超时时间，还可重置特定请求 ID 的状态。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
-3.  在 **“SAP BW 源编辑器”**中单击 **“高级”** ，以打开编辑器的 **“高级”** 页。  
+3.  在 **“SAP BW 源编辑器”** 中单击 **“高级”** ，以打开编辑器的 **“高级”** 页。  
   
 ## <a name="options"></a>“常规”  
   
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
  **字符串转换**  
  指定要应用的字符串转换规则。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |**自动字符串转换**|当 SAP Netweaver BW 系统为 Unicode 系统时，将所有字符串转换为 **nvarchar** 。 否则，将所有字符串转换为 **varchar**。|  
 |**将字符串转换为 varchar**|将所有字符串转换为 **varchar**。|  

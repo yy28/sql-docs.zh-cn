@@ -1,5 +1,5 @@
 ---
-title: 使用用户定义表 |Microsoft 文档
+title: 使用用户定义表 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,17 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7231545e9037458669ff6eb3e9fcafcd0d3f9da9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985269"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   用户定义表表示表格信息。 将表格数据传递到存储过程或用户定义函数中时，用户定义表可作为参数使用。 用户定义表不能用于表示数据库表中的列。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 对象。 每个<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>对象，因为集合具有**列**属性，它引用的集合<xref:Microsoft.SqlServer.Management.Smo.Column>列出用户定义表中的列的对象。 使用 Add 方法可向用户定义表添加列。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 对象。 每个<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>对象，集合具有**列**引用的集合的属性<xref:Microsoft.SqlServer.Management.Smo.Column>列出用户定义表中的列的对象。 使用 Add 方法可向用户定义表添加列。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 对象定义新的用户定义表时，必须提供列和基于其中一列的主键。  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>在 Visual Basic 中创建用户定义表  
- 此示例中，你将需要包括类库，其中包含一条 imports 语句**StringCollection**类型。  
+ 对于此示例中，您必须包括类库，其中包含一条 imports 语句**StringCollection**类型。  
   
  `Imports System.Collections.Specialized`  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>在 Visual C# 中创建用户定义表  
- 此示例中，你将需要包括类库，其中包含一条 imports 语句**StringCollection**类型。  
+ 对于此示例中，您必须包括类库，其中包含一条 imports 语句**StringCollection**类型。  
   
  `using System.Collections.Specialized;`  
   
@@ -176,7 +177,7 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>在 PowerShell 中创建用户定义表  
- 此示例中，你将需要包括类库，其中包含一条 imports 语句**StringCollection**类型。  
+ 对于此示例中，您必须包括类库，其中包含一条 imports 语句**StringCollection**类型。  
   
  `using System.Collections.Specialized;`  
   
@@ -259,7 +260,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [数据库文件和文件组](../../../relational-databases/databases/database-files-and-filegroups.md)   
   

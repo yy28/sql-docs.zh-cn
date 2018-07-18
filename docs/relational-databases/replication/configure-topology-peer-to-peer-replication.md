@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c534b0114c3e54d9a3ecd17bdde03d779c7edc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0d0d154c844bd1afbcb4662b7e45f8a120de618
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351279"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="options"></a>“常规”  
  **“配置拓扑”** 页包含界面元素和在右键单击元素后显示的选项。 下表对每一界面元素进行了介绍。  
   
-|界面元素|Description|  
+|界面元素|描述|  
 |-----------------------|-----------------|  
 |设计图面|显示其他界面元素。 若要添加元素，请右键单击设计图面。|  
 |![拓扑中的第一个节点](../../relational-databases/replication/media/p2pwizard-firstnode.gif "拓扑中的第一个节点")|拓扑中的原始节点。 可使用来自原始节点的发布数据库副本初始化新节点。|  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538587"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>导入 SCOM 管理包-分析平台系统
 请按照下列步骤导入 System Center Operations Manager (SCOM) 管理包分析平台系统 (AP)。 监视 SCOM 中的并行数据仓库所需的管理包。 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016794"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>向用户和警报管理员授予权限
 

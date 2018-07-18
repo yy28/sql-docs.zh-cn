@@ -2,7 +2,6 @@
 title: 执行方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 241bf36ab3ee4babf8d4e306b9d27a350985cb20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2db735e51ec0c71f35e211db50b952f942cc3a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276246"
 ---
 # <a name="cancelbatch-method-ado"></a>执行方法 (ADO)
 取消挂起的批更新。  
@@ -39,9 +39,9 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parameters  
  *AffectRecords*  
- 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**执行**方法将会影响。  
+ 可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**执行**方法将会影响。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**执行**方法来取消任何挂起的更新中[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)在批处理更新模式下。 如果**记录集**处于立即更新模式，调用**执行**而无需**adAffectCurrent**生成错误。  
   
  如果你正在编辑当前记录或要添加一条新记录，在调用时**执行**，ADO 第一个调用[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法来取消任何缓存的更改。 在此之后，所有挂起的更改在**记录集**则已取消。  
@@ -53,7 +53,7 @@ recordset.CancelBatchAffectRecords
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UpdateBatch 和执行方法示例 (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch 和执行方法示例 （VC + +）](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

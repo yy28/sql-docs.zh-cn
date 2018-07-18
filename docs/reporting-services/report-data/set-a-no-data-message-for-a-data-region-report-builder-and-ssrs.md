@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020834"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>为数据区域设置“无数据”消息（报表生成器和 SSRS）
   如果希望指定在呈现的报表中所显示的文本来代替没有数据的数据区域，请为表、矩阵或列表数据区域设置 NoRowsMessage 属性，为图表数据区域设置 NoDataMessage 属性，以及为地图的色阶设置 NoDataText 属性。 运行时，报表处理器会针对报表中每个数据集运行查询，并且该数据集查询可能不生成结果集。 对于绑定到空数据集的数据区域，可以指定显示文本，而不是显示空数据区域。 如果在运行时子报表的数据集中没有数据，则还可以设置子报表的 NoRowsMessage 属性。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“属性”窗格中，展开 **NoDataMessage**的节点。  
   
-3.  在 **“标题”**的 **NoDataMessage** 属性字段中，键入要显示为消息的文本。  
+3.  在 **“标题”** 的 **NoDataMessage** 属性字段中，键入要显示为消息的文本。  
   
      此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式。  
   

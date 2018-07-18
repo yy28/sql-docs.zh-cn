@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,18 +19,19 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d5d676ed2b32827c16b70dab4c447d7029ed806
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e9360b346ed267fcaad61ef6c06b9408c837b8d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402979"
 ---
 # <a name="operators-ssis-expression"></a>运算符（SSIS 表达式）
   本部分介绍了表达式语言提供的运算符和表达式计算器使用的运算符优先级及结合性。  
   
  下表列出了本部分中有关运算符的主题。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[Cast（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)|将表达式从一种数据类型转换为另外一种数据类型。|  
 |[()（括号）（SSIS 表达式）](../../integration-services/expressions/parentheses-ssis-expression.md)|标识表达式的计算顺序。|  

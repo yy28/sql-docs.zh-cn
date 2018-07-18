@@ -1,34 +1,23 @@
 ---
 title: 上级 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ANCESTOR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ancestor function
-ms.assetid: b5bf2ce4-20df-4ebc-97eb-e44a6f64cc50
-caps.latest.revision: 46
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2bf6945868b889f31762476d1cd50bc87637c7f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 464f8504850c6aa13f1cf040f9429be56f7181be
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739316"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   此函数返回指定成员在指定级别或距离处的祖先。  
   
@@ -53,7 +42,7 @@ Ancestor(Member_Expression, Distance)
  *距离*  
  指定与指定成员距离的有效数值表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  与**上级**函数，该函数提供的 MDX 成员表达式，然后提供的级别，该成员的祖先一个 MDX 表达式，或者表示的上面该成员的级别数的数值表达式。 使用此信息，**上级**函数返回在该级别的祖先成员。  
   
 > [!NOTE]  
@@ -110,7 +99,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

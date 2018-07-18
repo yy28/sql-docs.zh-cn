@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538377"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>设置管理员密码登录到 AD 节点在目录服务还原模式 (DSRM)-分析平台系统
 目录服务还原模式 (DSRM) 是一种用于修复或恢复 Active Directory 域服务 (AD DS) 的启动模式。 它用于 AD DS 发生故障后或在 AD DS 需要还原时登录到设备 AD 节点。 为 DSRM 密码硬件供应商站点上的设备安装过程已初始化，并且应由设备管理员更改。 分析平台系统具有两个 AD DS （域控制器）;***appliance_domain *-AD01**和 ***appliance_domain *-AD02**。 对于每个设备 AD 节点，请更改使用以下步骤的 DSRM 密码。  

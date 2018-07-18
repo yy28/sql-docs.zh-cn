@@ -2,7 +2,6 @@
 title: 添加记录使用 AddNew |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba15d68b5fbaa749e00987b1fbfef73887dc377
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270086"
 ---
 # <a name="adding-records-using-addnew-method"></a>添加记录使用 AddNew 方法
 这是基本语法的**AddNew**方法：
@@ -51,5 +51,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
  因为此代码使用断开连接**记录集**与客户端游标在批处理模式下，你必须重新连接**记录集**到具有新的数据源**连接**对象，然后你可以调用**UpdateBatch**方法发布到数据库的更改。 轻松地完成此操作通过使用新函数**GetNewConnection**。

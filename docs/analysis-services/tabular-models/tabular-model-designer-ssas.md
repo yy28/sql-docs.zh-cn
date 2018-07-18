@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044841"
 ---
 # <a name="tabular-model-designer"></a>表格模型设计器
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/10/2018
   
 -   度量值  
   
- 项目属性在属性窗口中显示的项目名称和项目文件夹。 项目还具有您可以使用模式属性对话框设置的其他部署选项和部署服务器设置。 若要查看这些属性，请在 **“解决方案资源管理器”**中右键单击相应的项目，然后单击 **“属性”**。  
+ 项目属性在属性窗口中显示的项目名称和项目文件夹。 项目还具有您可以使用模式属性对话框设置的其他部署选项和部署服务器设置。 若要查看这些属性，请在 **“解决方案资源管理器”** 中右键单击相应的项目，然后单击 **“属性”**。  
   
  “属性”窗口的字段中嵌入了控件，单击这些控件便可将其打开。 编辑控件的类型取决于具体属性。 控件包括编辑框、下拉列表和指向自定义对话框的链接。 灰显的属性为只读属性。  
   

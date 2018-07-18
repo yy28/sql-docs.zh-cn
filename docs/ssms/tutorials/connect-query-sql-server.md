@@ -17,6 +17,7 @@ ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988751"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
 本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文演示如何执行以下操作：

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931204"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  打开 **“文件”** 菜单，选择 **“新建”**，然后选择 **“项目…”**。  
   
-2.  选择 **SQL Server** 项目模板，然后指定 **“名称”**、 **“位置”**和 **“解决方案名称”**。  
+2.  选择 **SQL Server** 项目模板，然后指定 **“名称”**、 **“位置”** 和 **“解决方案名称”**。  
   
-3.  在 **“解决方案资源管理器”**中，右键单击该项目节点，然后选择 **“属性…”**。  
+3.  在 **“解决方案资源管理器”** 中，右键单击该项目节点，然后选择 **“属性…”**。  
   
 4.  在“项目设置” 选项卡上的“输出类型”部分中，选中“数据层应用程序（.dacpac 文件）”复选框，然后关闭属性对话框。  
   

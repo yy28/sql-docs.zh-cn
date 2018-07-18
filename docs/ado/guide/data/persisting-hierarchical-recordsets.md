@@ -1,8 +1,7 @@
 ---
-title: 保留的分层记录集 |Microsoft 文档
+title: 保留分层记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +18,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1506bd80eee82c2b93a3f3f543825efef394ef07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 281204b15620eba99f30c4480817973052af0cea
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980953"
 ---
-# <a name="persisting-hierarchical-recordsets"></a>持久化分层记录集
-你可以保存分层结构**记录集**到通过调用 ADTG 或 XML 格式的文件中[保存](../../../ado/reference/ado-api/save-method.md)方法。 但是，两个限制适用保存分层时**记录集**以 XML 格式的 s： 如果无法将它们以 xml 格式保存分层**记录集**包含挂起的更新，且不能保存参数化分层**记录集**。  
+# <a name="persisting-hierarchical-recordsets"></a>保留分层记录集
+您可以将保存的分层**记录集**中通过调用 ADTG 或 XML 格式的文件[保存](../../../ado/reference/ado-api/save-method.md)方法。 但是，两个限制应用保存层次结构时**记录集**以 XML 格式的 s： 如果，则不能保存在 XML 中的层次结构**记录集**包含挂起的更新，且不能保存参数化分层**记录集**。  
   
- 有关数据调整的提供程序的详细信息，请参阅[用于 OLE DB 的 Microsoft 数据调整服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)(ADO) 和[OLE DB 数据调整服务概述](http://msdn.microsoft.com/en-us/9f51e471-8e85-448e-9fb8-b64bbf767bf3)。  
+ 有关定型数据提供程序的详细信息，请参阅[适用于 OLE DB 的 Microsoft Data Shaping 服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)(ADO) 和[OLE DB Data Shaping 服务的概述](http://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)。  
   
-## <a name="see-also"></a>另请参阅  
- [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>请参阅  
+ [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

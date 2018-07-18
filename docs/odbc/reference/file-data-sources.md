@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915582"
 ---
 # <a name="file-data-sources"></a>文件数据源
 *文件数据源*存储在文件中并允许重复使用单个用户或在多个用户之间共享连接信息。 当使用文件数据源时，驱动程序管理器使到使用.dsn 文件中的信息的数据源的连接。 此文件可以像任何其他文件一样操作。 文件数据源没有数据源名称，不机器数据源，以及未注册到任何一个用户或计算机。  

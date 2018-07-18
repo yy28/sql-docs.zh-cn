@@ -1,14 +1,11 @@
 ---
-title: 对常规和上下文连接限制 |Microsoft 文档
+title: 对常规连接和上下文连接的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -18,15 +15,16 @@ caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93a08bc27c73db40f1ee388455ce7ffbc7c38557
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e3f290a689cc1914548204e95a3a690d045a7d4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358159"
 ---
-# <a name="context-connections-and-regular-connections---restrictions"></a>上下文连接和正则连接的限制
+# <a name="context-connections-and-regular-connections---restrictions"></a>上下文连接和常规连接-限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题讨论与在中执行代码相关的限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
+  本主题讨论中执行的代码相关的限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
   
 ## <a name="restrictions-on-context-connections"></a>对上下文连接的限制  
  开发应用程序时，请考虑应用于上下文连接的以下限制：  
@@ -35,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 -   上下文连接中不支持多个活动结果集 (MARS)。  
   
--   **SqlBulkCopy**类未以上下文连接运行。  
+-   **SqlBulkCopy**类不对上下文连接中进行操作。  
   
 -   不支持上下文连接中的更新批处理  
   
@@ -45,18 +43,18 @@ ms.lasthandoff: 05/03/2018
   
 -   使用“context connection=true”时，不能使用任何其他连接字符串关键字。  
   
--   **SqlConnection.DataSource**属性将返回 null，如果该连接字符串，为**SqlConnection**是"上下文连接 = true"，而不是名称的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   **SqlConnection.DataSource**属性返回的连接字符串的情况下为 null **SqlConnection**是"上下文连接 = true"，而不是实例名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
--   设置**SqlCommand.CommandTimeout**属性不起作用对上下文连接执行命令时。  
+-   设置**SqlCommand.CommandTimeout**属性不起作用时对上下文连接执行命令。  
   
 ## <a name="restrictions-on-regular-connections"></a>对常规连接的限制  
  开发应用程序时，请考虑应用于常规连接的以下限制：  
   
--   不支持对内部服务器异步执行命令。 包括"异步 = true"在连接字符串的命令，然后再执行该命令，导致**System.NotSupportedException**引发。 将出现此消息：“在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程内运行时，不支持异步处理。”  
+-   不支持对内部服务器异步执行命令。 包括"async = true"在连接字符串的命令，然后再执行该命令中，会导致**System.NotSupportedException**所引发。 将出现此消息：“在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程内运行时，不支持异步处理。”  
   
 -   **SqlDependency**不支持对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [上下文连接](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

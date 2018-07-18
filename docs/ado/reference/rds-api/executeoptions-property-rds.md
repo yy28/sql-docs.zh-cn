@@ -2,7 +2,6 @@
 title: ExecuteOptions 属性 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e44be9cb2b46b91d536d5a90cbb589365ad7d2c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e054a4ea0ad6a485f0b1d1dedfd53cdf9b07d944
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288144"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 属性 (RDS)
 指示是否启用异步执行。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  使用这些常量的每个可执行文件必须提供其声明。 你可剪切并粘贴文件 Adcvbs.inc，位于 RDS 库的默认安装文件夹中的所需的常量声明。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果**ExecuteOptions**设置为**adcExecAsync**，则这以异步方式执行下一步，则**刷新**上调用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的**记录集**。  
   
  如果你尝试调用[重置](../../../ado/reference/rds-api/reset-method-rds.md)，[刷新](../../../ado/reference/rds-api/refresh-method-rds.md)， [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)，[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)，或[记录集](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)尽管可能会更改的另一个异步操作[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的**记录集**正在执行，则会出错。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ExecuteOptions 和 FetchOptions 属性示例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

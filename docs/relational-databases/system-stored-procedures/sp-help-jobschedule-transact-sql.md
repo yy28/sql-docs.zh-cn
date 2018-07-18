@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33261556"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_name=** ] **'***job_name***'**  
  作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
-> **注意：**任一*job_id*或*job_name*必须指定，但不能同时指定。  
+> **注意：** 任一*job_id*或*job_name*必须指定，但不能同时指定。  
   
  [  **@schedule_name=** ] *****schedule_name*****  
  作业的计划项的名称。 *schedule_name*是**sysname**，默认值为 NULL。  

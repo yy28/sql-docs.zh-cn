@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_workers (Transact SQL) |Microsoft 文档
+title: sys.dm_os_workers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ea9d2aa6365c421bcf8e04920c2cf1bd4ab415a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052376"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/23/2018
   对于系统中的每个工作线程，相应地返回一行。  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_workers**。  
+>  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_workers**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,19 +54,19 @@ ms.lasthandoff: 05/23/2018
 |pending_io_count|**int**|此工作线程执行的物理 I/O 数。|  
 |pending_io_byte_count|**bigint**|此工作线程的所有挂起的物理 I/O 的字节总数。|  
 |pending_io_byte_average|**int**|此工作线程的物理 I/O 的平均字节数。|  
-|wait_started_ms_ticks|**bigint**|中的时间，点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，当此辅助进程已进入 SUSPENDED 状态。 减去此值在 ms_ticks [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)返回等待工作线程的毫秒数。|  
-|wait_resumed_ms_ticks|**bigint**|中的时间，点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，当此辅助进程已进入可运行的状态。 减去此值在 ms_ticks [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)返回的工作线程已可运行的队列中的毫秒数。|  
-|task_bound_ms_ticks|**bigint**|中的时间，点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，当一项任务绑定到此辅助进程。|  
-|worker_created_ms_ticks|**bigint**|中的时间，点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，当创建工作线程。|  
+|wait_started_ms_ticks|**bigint**|在中的时间点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)此工作线程进入 SUSPENDED 状态时。 此值从中的 ms_ticks 中减去[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)返回工作线程已经等待的毫秒数。|  
+|wait_resumed_ms_ticks|**bigint**|在中的时间点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)此工作线程进入 RUNNABLE 状态时。 此值从中的 ms_ticks 中减去[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)返回工作线程已可运行队列中的毫秒数。|  
+|task_bound_ms_ticks|**bigint**|在中的时间点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，当任务绑定到此工作线程。|  
+|worker_created_ms_ticks|**bigint**|在中的时间点[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，当创建辅助角色。|  
 |exception_num|**int**|此工作线程遇到的上一个异常的错误号。|  
 |exception_severity|**int**|此工作线程遇到的上一个异常的严重性。|  
 |exception_address|**varbinary(8)**|出现异常的代码地址|  
-|affinity|**bigint**|工作线程的线程关联。 匹配的中的线程的相关性[sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
-|state|**nvarchar(60)**|工作线程的状态。 可以是以下值之一：<br /><br /> INIT = 工作线程当前正在初始化。<br /><br /> RUNNING = 工作线程当前正在以非抢先或抢先方式运行。<br /><br /> RUNNABLE = 工作线程准备运行在计划程序上。<br /><br /> SUSPENDED = 工作线程当前正在延迟，以等待事件向它发送信号。|  
+|affinity|**bigint**|工作线程的线程关联。 匹配中的线程的关联[sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
+|state|**nvarchar(60)**|工作线程的状态。 可以是下列值之一：<br /><br /> INIT = 工作线程当前正在初始化。<br /><br /> RUNNING = 工作线程当前正在以非抢先或抢先方式运行。<br /><br /> RUNNABLE = 工作线程准备运行在计划程序上。<br /><br /> SUSPENDED = 工作线程当前正在延迟，以等待事件向它发送信号。|  
 |start_quantum|**bigint**|此工作线程的当前运行开始时的时间（以毫秒为单位）。|  
 |end_quantum|**bigint**|此工作线程的当前运行结束时的时间（以毫秒为单位）。|  
 |last_wait_type|**nvarchar(60)**|最后一个等待的类型。 等待类型的列表，请参阅[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
-|return_code|**int**|从最后一个等待返回值。 可以是以下值之一：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|return_code|**int**|从最后一个等待返回值。 可以是下列值之一：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|仅限内部使用。|  
 |max_quantum|**bigint**|仅限内部使用。|  
 |boost_count|**int**|仅限内部使用。|  
@@ -77,9 +78,9 @@ ms.lasthandoff: 05/23/2018
 |signal_worker_address|**varbinary(8)**|最后一个向此对象发出信号的工作线程的内存地址。 有关详细信息，请参阅[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
 |scheduler_address|**varbinary(8)**|计划程序的内存地址。 有关详细信息，请参阅[sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
 |processor_group|**int**|存储分配给此线程的处理器组 ID。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果工作线程的状态是 RUNNING 并且工作线程正在以非抢先方式运行，则工作线程地址将与 sys.dm_os_schedulers 中的 active_worker_address 进行匹配。  
   
  当等待事件的工作线程得到信号时，工作线程将被放在可运行队列的开头。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许这种情况在行中发生一千次，在此之后工作线程将被放在队列的末尾。 将工作线程移动到队列末尾会对性能有某些潜在影响。  
@@ -139,8 +140,8 @@ SELECT
 
  在输出中，当 `w_runnable` 和 `w_suspended` 相等时，它代表工作线程处于 SUSPENDED 状态下的时间。 否则，`w_runnable` 代表工作线程处于 RUNNABLE 状态下的时间。 在输出中，会话 `52` 处于 `SUSPENDED` 状态下的时间为 `35,094` 毫秒。  
   
-## <a name="see-also"></a>另请参阅  
- [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

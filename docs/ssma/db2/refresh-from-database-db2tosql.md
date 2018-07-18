@@ -1,8 +1,6 @@
 ---
 title: 刷新从数据库 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 932314ef3325862746d2ce09ba0552ce4f4c7d2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f61bbf015c9c4a1dc0a650aa2299e763b00e7e62
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775323"
 ---
 # <a name="refresh-from-database-db2tosql"></a>刷新从数据库 (DB2ToSQL)
 **从数据库刷新**对话框中，可以选择要刷新从 DB2 数据库的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 访问**从数据库刷新**对话框中，右键单击对象 DB2 元数据资源管理器中单击**从数据库刷新**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **折叠 （-）**  
 折叠所有对象组，以隐藏的单个对象。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (Transact SQL) |Microsoft 文档
+title: sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,32 +7,32 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3abe99e707a4123e2f05fc1eb47b40d2b74fced
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3af945ced5fcbef03565a4e839a5cc56295810a7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020085"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 **sys.dm_pdw_nodes_database_encryption_keys**提供此信息的每个节点。 有关数据库加密的详细信息，请参阅[透明数据加密 (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)。  
+  返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 **sys.dm_pdw_nodes_database_encryption_keys**提供每个节点的此信息。 有关数据库加密的详细信息，请参阅[透明数据加密 (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|每个节点上的物理数据库 ID。|  
-|encryption_state|**int**|指示此节点上的数据库是否已加密或不加密。<br /><br /> 0 = 不存在数据库加密密钥，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 正在进行加密<br /><br /> 3 = 已加密<br /><br /> 4 = 正在更改密钥<br /><br /> 5 = 正在进行解密<br /><br /> 6 = 保护更改正在进行 （加密数据库加密密钥的证书正在更改。）|  
+|database_id|**int**|每个节点上的物理数据库的 ID。|  
+|encryption_state|**int**|指示此节点上的数据库是否是加密或未加密。<br /><br /> 0 = 不存在数据库加密密钥，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 正在进行加密<br /><br /> 3 = 已加密<br /><br /> 4 = 正在更改密钥<br /><br /> 5 = 正在进行解密<br /><br /> 6 = 正在进行 （正在加密数据库加密密钥的证书正在更改。） 中的保护更改|  
 |create_date|**datetime**|显示加密密钥的创建日期。|  
 |regenerate_date|**datetime**|显示重新生成加密密钥的日期。|  
 |modify_date|**datetime**|显示加密密钥的修改日期。|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/23/2018
  要求对服务器拥有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 以下示例联接`sys.dm_pdw_nodes_database_encryption_keys`与其他系统表，以指明 TDE 的每个节点受保护的数据库的加密状态。  
+ 下面的示例联接`sys.dm_pdw_nodes_database_encryption_keys`与其他系统表来指示的加密状态，为每个节点的 tde 保护的数据库。  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -64,7 +64,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   

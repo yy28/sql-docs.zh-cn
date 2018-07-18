@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908342"
 ---
 # <a name="argument-value-checks"></a>自变量值检查
 驱动程序管理器检查以下类型的自变量。 除非另行说明，否则驱动程序管理器将返回 SQL_ERROR 自变量值中的错误。  

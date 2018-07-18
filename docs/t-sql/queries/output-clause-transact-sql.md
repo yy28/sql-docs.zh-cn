@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -35,11 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f7d052adfec77a75415860f9f5ac40552dec8ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36252399"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 05/03/2018
  有关 table 变量的详细信息，请参阅 [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)。  
   
  output_table  
- 指定一个表，返回的行将被插入该表中而不是返回到调用方。 output_table 可以为临时表。  
+ 指定一个表，返回的行将插入该表中而不是返回到调用方。 output_table 可以为临时表。  
   
  如果未指定 column_list，则 table 必须与 OUTPUT 结果集具有相同的列数。 标识列和计算列例外， 必须跳过这两种列。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值。  
   

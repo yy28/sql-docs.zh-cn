@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33006405"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>对 INSERT 和 UPDATE 语句禁用 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -54,11 +55,11 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>为 INSERT 和 UPDATE 语句禁用 CHECK 约束  
   
-1.  在 **“对象资源管理器”**中，展开具有约束的表，再展开 **“约束”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“约束”** 文件夹。  
   
 2.  右键单击该约束，再选择 **“修改”**。  
   
-3.  在 **“表设计器”**下的网格中，单击 **“强制用于 INSERT 和 UPDATE”** ，然后从下拉菜单中选择 **“否”** 。  
+3.  在 **“表设计器”** 下的网格中，单击 **“强制用于 INSERT 和 UPDATE”** ，然后从下拉菜单中选择 **“否”** 。  
   
 4.  单击 **“关闭”**。  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>为 INSERT 和 UPDATE 语句禁用 CHECK 约束  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

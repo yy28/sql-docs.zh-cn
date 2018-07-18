@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911352"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的转义序列
 大量的语言功能，如外部联接和标量函数调用，通常被实现的 Dbms。 但是，为这些功能语法往往是特定于 DBMS 的即使标准语法定义的各种标准正文。 因此，ODBC 定义包含以下语言功能的标准语法的转义序列：  

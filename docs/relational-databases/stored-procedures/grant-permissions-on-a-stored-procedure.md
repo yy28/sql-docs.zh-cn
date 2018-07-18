@@ -3,12 +3,9 @@ title: 授予对存储过程的权限 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stored-Procs
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32344fd2ccaae9b8773c2cf4d00c5dd66ba26164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad83691259ac6ec8665ecc761eda75c2b1aa4e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319167"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,11 +62,11 @@ ms.lasthandoff: 05/03/2018
   
 3.  展开“存储过程”，右键单击要针对其授予权限的过程，再单击“属性”。  
   
-4.  在 **“存储过程属性”**中，选择 **“权限”** 页。  
+4.  在 **“存储过程属性”** 中，选择 **“权限”** 页。  
   
 5.  若要为用户、数据库角色或应用程序角色授予权限，请单击 **“搜索”**。  
   
-6.  在 **“选择用户或角色”**中，单击 **“对象类型”** 以添加或清除所需的用户和角色。  
+6.  在 **“选择用户或角色”** 中，单击 **“对象类型”** 以添加或清除所需的用户和角色。  
   
 7.  单击 **”浏览“** 以显示用户或角色列表。 选择应对其授予权限的用户或角色。  
   

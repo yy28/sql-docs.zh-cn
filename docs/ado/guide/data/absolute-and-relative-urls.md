@@ -2,7 +2,6 @@
 title: 绝对和相对 Url |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,14 +18,15 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba1ab2c9bdc1adbc063cd05e88cf9d0001efb15c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1af20bd6012b37ee798ad16cd0bf0456458c6083
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270536"
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 Url
-URL 指定存储在本地或网络的计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等*。*  
+URL 指定存储在本地或网络的计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等 *。*  
   
  *绝对 URL*包含所有定位资源所需的信息。  
   
@@ -46,7 +46,7 @@ URL 指定存储在本地或网络的计算机上的目标的位置。 目标可
  指定目录，从而导致目标的序列。 如果*资源*是省略，目标为中的最后一个目录*路径*。  
   
  *resource*  
- 如果包含，*资源*是目标，并且通常是文件的名称。 它可能是*简单文件*包含单个二进制流的字节，或*结构化的文档，*包含一个或多个存储和的字节的二进制流。  
+ 如果包含，*资源*是目标，并且通常是文件的名称。 它可能是*简单文件*包含单个二进制流的字节，或*结构化的文档，* 包含一个或多个存储和的字节的二进制流。  
   
 ## <a name="url-scheme-registration"></a>URL 方案注册  
  如果提供程序支持 Url，该提供程序将注册一个或多个 URL 方案。 注册意味着使用方案的任何 Url 将自动调用已注册的提供程序。 例如， *http*方案已注册到[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 ADO 假定所有的 Url 前缀为"http"表示 Web 文件夹或文件，才能用于 Internet 发布提供程序。 有关注册你的提供程序的方案的信息，请参阅提供程序文档。  
@@ -89,9 +89,9 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 访问接口提供的 URL 方案  
  完全限定 URL 的前导部分是*方案*用于访问 URL 的剩余部分标识的资源。 示例包括 HTTP （超文本传输协议） 和 FTP （文件传输协议）。  
   
- ADO 支持识别它们自己的 URL 方案的 OLE DB 提供程序。 例如， [Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*，*访问"已发布"Windows 2000 文件，识别现有 HTTP 方案。  
+ ADO 支持识别它们自己的 URL 方案的 OLE DB 提供程序。 例如， [Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*，* 访问"已发布"Windows 2000 文件，识别现有 HTTP 方案。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

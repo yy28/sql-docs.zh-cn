@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904612"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 安装程序对话框
 **ODBC Visual FoxPro 安装**对话框中，可以添加或更改 Visual FoxPro 数据源。  

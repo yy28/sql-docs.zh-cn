@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 脚本项目中 SQL Server Management Studio |Microsoft 文档
+title: Analysis Services 脚本项目在 SQL Server Management Studio |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8ee5d2958b6ba7f180472e4d91ce389159e0438
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034965"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 脚本项目
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -49,11 +50,11 @@ ms.lasthandoff: 05/10/2018
 ## <a name="analysis-services-templates"></a>Analysis Services 模板  
  向分析服务器脚本项目添加新的 MDX、DMX 或 XMLA 脚本时，您可以选择使用模板资源管理器来查找 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模板，这些模板是演示如何执行指定操作的预定义脚本或语句的集合。 模板资源管理器在 **“视图”** 菜单上提供，并且包括用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的模板。 有关详细信息，请参阅 [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 SQL Server Data Tools 创建多维模型 (SSDT)](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [多维表达式 & #40;MDX & #41;引用](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;引用](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [多维表达式 (MDX) 参考](../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 脚本语言&#40;的 XMLA ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services 脚本语言&#40;支持 XMLA 的 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

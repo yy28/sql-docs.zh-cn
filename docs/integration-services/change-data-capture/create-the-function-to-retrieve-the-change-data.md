@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c2305d2224147d463ef70fcb1b1055cf5751856
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 288d57ef9d9c02698d0f402a97356c18f0b7fd87
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408369"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
   在完成用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流之后，接下来的任务是创建用于检索变更数据的表值函数。 只需在第一次增量加载之前创建一次此函数。  
@@ -211,7 +210,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>检索带有变更数据的其他元数据  
  尽管上述用户创建的表值函数仅使用 **__$operation** 列，**cdc.fn_cdc_get_net_changes_<capture_instance>** 函数将针对每个变更行返回四列元数据。 如果想要在数据流中使用这些值，可以从表值包装函数中将它们作为额外的列返回。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|与更改的提交事务关联的 LSN。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的更新操作修改了两个不同的行，则更改表将包含四行（两行具有旧值，两行具有新值），每一行均具有相同的 **__$start_lsn** 值。|  
 |**__$seqval**|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  

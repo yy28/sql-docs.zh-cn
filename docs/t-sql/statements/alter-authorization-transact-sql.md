@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,15 +26,16 @@ helpviewer_keywords:
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69a1483b2bc515d0c03a5f11dc1ba520ab185c08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d1ff4bfeb848cf4f668d7e48a3cd3b574052ecc
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786208"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|主体必须为登录名。|    
   
 ## <a name="AlterDB"></a>对数据库执行 ALTER AUTHORIZATION  
-**适用范围**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+适用范围：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>对于 SQL Server：  
 **对新所有者的要求：**   
 新所有者主体必须是以下项之一：  
@@ -204,7 +204,7 @@ ALTER AUTHORIZATION ON
 -   表示 Windows 组的 Windows 用户，通过 Windows 身份验证登录名进行身份验证。  
   
 **对执行 ALTER AUTHORIZATION 语句的人员的要求：**  
-如果不是 **sysadmin** 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限。   
+如果不是 sysadmin 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限。   
 
 ### <a name="for-azure-sql-database"></a>对于 Azure SQL 数据库：  
 **对新所有者的要求：**   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544779"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在分析平台系统中启动 Configuration Manager
 本主题提供用于启动说明**Configuration Manager**针对分析平台系统设备。  

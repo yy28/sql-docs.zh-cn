@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025994"
 ---
 # <a name="enable-and-disable-my-reports"></a>启用和禁用“我的报表”
   使用“我的报表”功能可以在报表服务器数据库内分配个人存储区，便于用户在私人文件夹中保存自己的报表。 报表服务器管理员可以启用或禁用此功能，或通过修改控制用户如何使用此工作区的安全设置，来更改该功能的工作方式。  

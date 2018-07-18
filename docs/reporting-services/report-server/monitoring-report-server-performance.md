@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027154"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
   使用性能监视工具可监视报表服务器的性能以评估服务器活动，查看趋势，诊断系统瓶颈以及收集可以帮您确定当前系统配置是否充分的数据。 若要优化服务器性能，可指定回收报表服务器应用程序域的频率。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
  如果单台计算机上有多个报表服务器实例，则可以同时监视多个实例或分别监视各个实例。 选择要在添加计数器时包括的实例。 有关使用性能控制台 (perfmon.msc) 和添加计数器的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 产品文档。  
   
 ## <a name="other-performance-counters"></a>其他性能计数器  
- 仅对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] MSRS 2008 Web Service **、**MSRS 2008 Windows Service **和**ReportServer:Service **提供自定义**性能计数器。 下列性能对象为报表服务器提供附加的性能监视数据。  
+ 仅对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] MSRS 2008 Web Service **、** MSRS 2008 Windows Service **和**ReportServer:Service **提供自定义**性能计数器。 下列性能对象为报表服务器提供附加的性能监视数据。  
   
 |性能对象|说明|  
 |------------------------|-----------|  

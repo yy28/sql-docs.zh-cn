@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,15 +17,16 @@ f1_keywords:
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ee922c02ec87f4d8908b597f694328703366cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5c5020b57bd7a5fcd120b097a43961c35330733
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941393"
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  选中该选项可以拒绝该登录名具有该权限。 清除该选项将撤消此权限。  
   
  **列权限**  
- 对于包含列的对象（如表、视图或表值函数），单击“列权限”按钮将打开“列权限”对话框。 在该对话框中，可以针对表或视图中的各列设置 **“授予”**、 **“允许”**或 **“拒绝”** 权限。 此选项无法用于所有的对象类型或权限。  
+ 对于包含列的对象（如表、视图或表值函数），单击“列权限”按钮将打开“列权限”对话框。 在该对话框中，可以针对表或视图中的各列设置 **“授予”**、 **“允许”** 或 **“拒绝”** 权限。 此选项无法用于所有的对象类型或权限。  
   
 ## <a name="effective-tab"></a>“有效”选项卡  
  主体所拥有的与安全对象相关的权限可能来自为多个不同的主体设置的权限。 例如，对于某个登录名，可以为其单独授予权限，也可以将其作为组的成员授予权限。 **“有效”** 选项卡中显示从组或角色成员身份接收的权限与显式权限的组合结果。 将对授予权限进行聚合， 拒绝权限会覆盖所有的授予权限。  

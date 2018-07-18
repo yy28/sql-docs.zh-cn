@@ -2,7 +2,6 @@
 title: 列和表追加方法，将属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6496c812083d154205c0b96efa47badf35e56c82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c783914dd96e3545927f308c861eb80e72ef7717
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285306"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>列和表追加方法名称的属性示例 （VC + +）
 下面的代码演示如何创建一个新表。  
@@ -85,7 +85,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

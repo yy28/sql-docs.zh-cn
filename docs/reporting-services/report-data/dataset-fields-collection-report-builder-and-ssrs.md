@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023004"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>数据集字段集合（报表生成器和 SSRS）
   数据集字段表示来自数据连接的数据。 字段可以表示数值数据，也可以表示非数值数据。 示例包括销售额、总销售额、客户名称、数据库标识符、URL、图像、空间数据和电子邮件地址。 在设计图面上，字段显示为报表项（如文本框、表和图表）中的表达式。  

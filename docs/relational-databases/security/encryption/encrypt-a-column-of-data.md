@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,15 +16,16 @@ helpviewer_keywords:
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bba043baeb644c0067b655bdbe5d1156a9bd1fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa8adef85d2b1eb0513763174446837f41f158dd
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697478"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ PASSWORD = '<some strong password>';
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>使用简单对称加密对数据列进行加密  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -126,7 +125,7 @@ PASSWORD = '<some strong password>';
   
 #### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>使用包含验证器的对称加密对数据列进行加密  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

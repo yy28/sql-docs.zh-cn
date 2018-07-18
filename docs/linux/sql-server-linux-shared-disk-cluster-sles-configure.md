@@ -1,6 +1,6 @@
 ---
-title: 为 SQL Server 配置 SLES 共享的磁盘群集 |Microsoft 文档
-description: 通过为 SQL Server 配置 SUSE Linux 企业服务器 (SLES) 共享的磁盘群集实现高可用性。
+title: 配置 SQL Server 的 SLES 共享的磁盘群集 |Microsoft Docs
+description: 为 SQL Server 配置 SUSE Linux Enterprise Server (SLES) 共享的磁盘群集实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,22 +13,23 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 5c394dbfc613803a8f7eb0cf906b4b7733777919
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020756"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 上为 SQL Server 创建两节点的共享磁盘群集。 聚类分析层基于 SUSE[高可用性扩展 (HAE)](https://www.suse.com/products/highavailability)基础上构建[Pacemaker](http://clusterlabs.org/)。 
+本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 上为 SQL Server 创建两节点的共享磁盘群集。 群集层基于 SUSE[高可用性扩展 (HAE)](https://www.suse.com/products/highavailability)基础上构建[Pacemaker](http://clusterlabs.org/)。 
 
-群集配置、 资源代理选项、 管理、 最佳实践，和建议的详细信息，请参阅[SUSE Linux Enterprise 高可用性扩展 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
+有关群集配置、 资源代理选项、 管理、 最佳实践和建议的详细信息，请参阅[SUSE Linux Enterprise 高 Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成以下的端到端方案，你需要两台计算机部署两个节点群集和另一台服务器来配置 NFS 共享。 以下步骤概述了如何配置这些服务器。
+若要完成以下端到端方案，需要两台计算机部署两个节点群集和另一台服务器来配置 NFS 共享。 以下步骤概述了如何配置这些服务器。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>在每个群集节点上安装和配置操作系统
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/19/2018
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server
 
-1. 在两个节点上安装和设置 SQL Server。 有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 在两个节点上安装和设置 SQL Server。 有关详细说明，请参阅[Linux 上安装 SQL Server](sql-server-linux-setup.md)。
 2. 出于配置目的，请将一个节点指定为主要节点，而将另一个指定为辅助节点。 使用以下术语，按照此指南操作。 
 3. 在辅助节点上，停止并禁用 SQL Server。 以下示例将停止并禁用 SQL Server：
 
@@ -46,8 +47,8 @@ ms.lasthandoff: 05/19/2018
     ```
 
     > [!NOTE]
-    > 在安装时，服务器主密钥是生成的 SQL Server 实例和放在`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。
-4. 在主节点上，为 Pacemaker 创建的 SQL server 登录名和授予登录权限运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪些节点正在运行 SQL Server。
+    > 为 SQL Server 实例生成并放置在一个服务器主密钥在安装时`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。
+4. 在主节点上为 Pacemaker 创建 SQL server 登录名并授予登录权限以运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪个节点正在运行 SQL Server。
 
     ```bash
     sudo systemctl start mssql-server
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/19/2018
     GRANT VIEW SERVER STATE TO <loginName>
     ```
 5. 在主节点上，停止并禁用 SQL Server。
-6. 按照说明进行操作[SUSE 文档中](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)来配置和更新每个群集节点的主机文件。 “主机”文件必须包含每个群集节点的 IP 地址和名称。
+6. 按照说明进行操作[SUSE 文档中](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)若要配置和更新每个群集节点的主机文件。 “主机”文件必须包含每个群集节点的 IP 地址和名称。
 
     若要检查当前节点的 IP 地址，请运行：
 
@@ -69,9 +70,9 @@ ms.lasthandoff: 05/19/2018
     sudo ip addr show
     ```
 
-    在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 将计算机名称设置通过将其添加到`/etc/hostname`使用[yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)或[手动](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html)。
+    在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将其添加到设置的计算机名`/etc/hostname`使用[yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)或[手动](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html)。
 
-    下面的示例演示`/etc/hosts`名为的两个节点的添加`SLES1`和`SLES2`。
+    下面的示例演示`/etc/hosts`并补充了两个名节点`SLES1`和`SLES2`。
 
     ```
     127.0.0.1   localhost
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/19/2018
     ```
 
     > [!NOTE]
-    > 所有群集节点都必须能够通过 SSH 相互访问。 hb_report 或 crm_report（用于故障排除）和 Hawk 的历史记录浏览器等工具需要在节点之间进行无密码的 SSH 访问，否则它们只能收集当前节点的数据。 如果你使用非标准 SSH 端口，使用-X 选项 ([请参见手册页](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html))。 例如，如果 SSH 端口为 3479，请使用以下命令调用 crm_report：
+    > 所有群集节点都必须能够通过 SSH 相互访问。 hb_report 或 crm_report（用于故障排除）和 Hawk 的历史记录浏览器等工具需要在节点之间进行无密码的 SSH 访问，否则它们只能收集当前节点的数据。 如果使用非标准 SSH 端口，请使用-X 选项 ([请参见手册页](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html))。 例如，如果 SSH 端口为 3479，请使用以下命令调用 crm_report：
     >
     >```bash
     >crm_report -X "-p 3479" [...]
@@ -93,7 +94,7 @@ ms.lasthandoff: 05/19/2018
 
 有多种解决方案可用于提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 建议按照最佳做法进行操作，并使用 Kerberos 保护 NFS： 
 
-- [与 NFS 共享文件系统](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
+- [使用 NFS 共享文件系统](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
 
 如果不按照此指南进行操作，则可访问网络和欺骗 SQL 节点的 IP 地址的任何人均能访问你的数据文件。 与往常一样，请确保在将系统投入生产前，对系统建立威胁模型。 
 
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/19/2018
 
 在配置客户端 NFS 以装载 SQL Server 数据库文件路径，从而指向共享存储位置前，请确保将数据库文件保存到一个临时位置，以便稍后能够在共享上复制它们：
 
-1. **在主节点上**，将数据库文件保存到临时位置。 以下脚本将创建一个新的临时目录，将数据库文件复制到新的目录中并删除旧的数据库文件。 以本地用户 mssql 身份运行 SQL Server 时，需要确保将数据传输到装载的共享后，本地用户对共享具有读写权限。 
+1. **仅在主节点上**，将数据库文件保存到临时位置。 以下脚本将创建一个新的临时目录，将数据库文件复制到新的目录中并删除旧的数据库文件。 以本地用户 mssql 身份运行 SQL Server 时，需要确保将数据传输到装载的共享后，本地用户对共享具有读写权限。 
 
     ```bash
     su mssql
@@ -124,7 +125,7 @@ ms.lasthandoff: 05/19/2018
     - [配置客户端](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > 建议按照 SUSE 的最佳做法和高度可用的 NFS 存储方面的建议：[高度可用 NFS 带存储 DRBD 和 Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)。
+    > 建议按照 SUSE 的最佳做法和建议高度可用的 NFS 存储：[可用的高度 NFS 存储使用 DRBD 和 Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)。
 
 2. 验证 SQL Server 是否已成功通过新文件路径启动。 对每个节点均执行此操作。 此时，一次应只有一个节点运行 SQL Server。 它们不能同时运行，因为两者将同时尝试访问数据文件（要避免同时在两个节点上意外启动 SQL Server，请使用文件系统群集资源来确保共享未由不同的节点装载两次）。 以下命令可启动 SQL Server，检查状态，然后停止 SQL Server。
 
@@ -198,9 +199,9 @@ ms.lasthandoff: 05/19/2018
 以下步骤介绍如何为 SQL Server 配置群集资源。 有两个需要自定义的设置。
 
 - **SQL Server 资源名称**： 群集的 SQL Server 资源的名称。 
-- **超时值**： 超时值是群集等待资源联机时的时间量。 对于 SQL Server，这是希望 SQL Server 以使所需的时间`master`数据库联机。 
+- **超时值**： 超时值是使资源联机时群集所等待的时间量。 对于 SQL Server，这是预期 SQL Server，花费的时间`master`数据库联机。 
 
-更新你的环境的以下脚本中的值。 在一个节点上运行，以配置并启动群集服务。
+更新以下脚本为您的环境中的值。 在一个节点上运行，以配置并启动群集服务。
 
 ```bash
 sudo crm configure
@@ -228,7 +229,7 @@ exit
 
 ### <a name="verify-that-sql-server-is-started"></a>验证 SQL Server 是否已启动。 
 
-若要验证是否已启动 SQL Server，运行**crm 状态**命令：
+若要验证是否已启动 SQL Server，请运行**crm 状态**命令：
 
 ```bash
 crm status
@@ -249,7 +250,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>管理群集资源
 
-若要管理你的群集资源，请参阅以下 SUSE 主题：[管理群集资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+若要管理群集资源，请参阅以下 SUSE 主题：[管理群集资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>手动故障转移 (manual failover)
 
@@ -264,4 +265,4 @@ migrate mssqlha SLES2
 
 ## <a name="additional-resources"></a>其他资源
 
-[SUSE Linux Enterprise 高可用性扩展的管理指南](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 
+[SUSE Linux Enterprise High Availability Extension-管理指南](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 

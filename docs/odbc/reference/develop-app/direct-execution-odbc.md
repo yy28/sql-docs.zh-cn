@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912032"
 ---
 # <a name="direct-execution-odbc"></a>直接执行 ODBC
 直接执行是执行语句的最简单方法。 当针对执行提交该语句时，数据源将它编译成一个访问计划，然后执行该访问计划。  

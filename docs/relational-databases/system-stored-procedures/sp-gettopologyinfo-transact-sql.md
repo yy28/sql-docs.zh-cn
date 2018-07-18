@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32994080"
 ---
 # <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
   
 ## <a name="arguments"></a>参数  
  [ @request_id=] *request_id*  
- 拓扑状态请求 ID。 *request_id*是**int**，默认值为 NULL。 若要获取 ID，请使用@request_id输出参数从[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)或查询[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)系统表。  
+ 拓扑状态请求 ID。 *request_id*是**int**，默认值为 NULL。 若要获取 ID，请使用@request_id输出参数从 [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) 或查询[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)系统表。  
   
 ## <a name="result-sets"></a>结果集  
  sp_gettopologyinfo 返回包含单个 XML 列的结果集。 XML 列中的数据是中的数据相同[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)系统表。  

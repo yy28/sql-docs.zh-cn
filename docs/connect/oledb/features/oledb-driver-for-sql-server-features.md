@@ -2,7 +2,7 @@
 title: 用于 SQL Server 功能的 OLE DB 驱动程序 |Microsoft 文档
 description: OLE DB 驱动程序的 SQL Server 功能
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,20 +18,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612352"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>用于 SQL Server 功能的 OLE DB 驱动程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   除了公开功能的 Windows (以前称为 Microsoft) 数据访问组件 (WDAC)，OLE DB 驱动程序的 SQL Server 还实现了许多其他功能来公开[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能。  
   
-## <a name="in-this-section"></a>本節內容    
+## <a name="in-this-section"></a>本节内容    
  [使用数据库镜像](../../oledb/features/using-database-mirroring.md)  
  讨论如何 OLE DB 驱动程序的 SQL Server 支持是一种功能要保留的副本，或者镜像，镜像数据库，使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]备用服务器上的数据库。  
   
@@ -44,10 +45,10 @@ ms.lasthandoff: 05/03/2018
  [使用 XML 数据类型](../../oledb/features/using-xml-data-types.md)  
  讨论如何 OLE DB 驱动程序的 SQL Server 支持 XML 数据类型，它是可以用作列类型，变量类型、 参数类型或函数返回类型的基于 XML 的数据类型。  
   
- [使用用户定义的类型](../../oledb/features/using-user-defined-types.md)  
+ [使用用户定义类型](../../oledb/features/using-user-defined-types.md)  
  讨论 OLE DB 驱动程序的 SQL Server 如何支持用户定义类型 (UDT)，它扩展，它允许你存储对象和自定义数据结构中的 SQL 类型系统[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。  
   
- [使用较大的值类型](../../oledb/features/using-large-value-types.md)  
+ [使用大值类型](../../oledb/features/using-large-value-types.md)  
  讨论如何 OLE DB 驱动程序的 SQL Server 支持大型值数据类型，它们是大型对象数据类型 (LOB)。  
   
  [以编程方式更改密码](../../oledb/features/changing-passwords-programmatically.md)  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/03/2018
  [适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  介绍对 LocalDB 功能的 SQL Server 支持 OLE DB 驱动程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [安装适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910662"
 ---
 # <a name="role-of-the-driver"></a>该驱动程序的角色
 该驱动程序检查所有错误和警告不会检查由驱动程序管理器，并对它所生成的状态记录进行排序。 (一个 ODBC 2。*x*驱动程序不排序状态记录。)这包括数据截断、 数据转换、 语法和某些状态转换中的错误和警告。 错误和警告部分选中的驱动程序管理器，还可以检查驱动程序。 例如，尽管的驱动程序管理器检查是否的值*操作*中**SQLSetPos**是合法的该驱动程序必须检查是否支持。  

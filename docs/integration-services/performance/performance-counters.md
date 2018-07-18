@@ -1,14 +1,12 @@
 ---
 title: 性能计数器 | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 08/27/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b04d580014de1b5c248d299c2da1fce385326ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db10ccfd3a7487db61a03752111aa14702448d23
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411169"
 ---
 # <a name="performance-counters"></a>性能计数器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了这些性能计数器：  
   
-|性能计数器|Description|  
+|性能计数器|描述|  
 |-------------------------|-----------------|  
 |BLOB bytes read|数据流引擎从所有源中读取的二进制大型对象 (BLOB) 数据的字节数。|  
 |BLOB bytes written|数据流引擎已写入所有目标的 BLOB 数据的字节数。|  
@@ -88,7 +87,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ### <a name="to-add-logging-of-performance-counters"></a>添加性能计数器的日志记录  
   
-1.  在 **“控制面板”**中，如果您使用的是经典视图，请单击 **“管理工具”**。 如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
+1.  在 **“控制面板”** 中，如果您使用的是经典视图，请单击 **“管理工具”**。 如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
   
 2.  单击 **“性能”**。  
   

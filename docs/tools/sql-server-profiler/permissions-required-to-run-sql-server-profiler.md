@@ -22,9 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 313ddda23b53fc0a4458ee2f12926a47cf0b3830
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076134"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>运行 SQL Server Profiler 所需的权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

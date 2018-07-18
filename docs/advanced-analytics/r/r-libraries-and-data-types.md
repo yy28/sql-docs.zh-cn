@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34586039"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 库和 R 数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 
 若要查找包含特定版本的 Microsoft R Server 中的 R 版本，请参阅[R Server 的新增功能](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)。
 
-请注意，SQL Server 中的包管理系统意味着，多个版本的 R 程序包可以安装在同一计算机上具有多个用户共享同一个包，或使用不同版本的同一个包。 有关详细信息，请参阅[SQL Server 中的 R 包管理](../r/r-package-management-for-sql-server-r-services.md)。
+请注意，SQL Server 中的包管理系统意味着，多个版本的 R 程序包可以安装在同一计算机上具有多个用户共享同一个包，或使用不同版本的同一个包。 有关详细信息，请参阅[SQL Server 中的 R 包管理](../r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="r-and-sql-data-types"></a>R 和 SQL 数据类型
 
@@ -147,8 +148,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 注意使用 R 中的 `str` 函数可获取输出数据的架构。 此函数返回以下信息：
 
@@ -187,6 +188,6 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Python 库和数据类型](../python/python-libraries-and-data-types.md)

@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 身份验证和授权 |Microsoft 文档
+title: Power Pivot 身份验证和授权 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ebb63d1ad381982ab4313ee6d980c5a919d6122
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983462"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 身份验证和授权
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/10/2018
   
 -   在数据无法以其他方式可用的情况下从缓存或库加载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 如果对尚未加载到系统中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据发出数据连接请求， [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例将使用 SharePoint 用户的标识来从内容库中检索数据源并将其加载到内存中。  
   
--   数据刷新操作，用于将数据源的已更新副本保存到内容库中的工作簿。 在此情况下，将使用从安全存储区服务中的目标应用程序检索的用户名和密码执行实际登录操作。 凭据可以是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户，也可以是在创建数据刷新计划时随其存储的凭据。 有关详细信息，请参阅 [为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 和 [配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
+-   数据刷新操作，用于将数据源的已更新副本保存到内容库中的工作簿。 在此情况下，将使用从安全存储区服务中的目标应用程序检索的用户名和密码执行实际登录操作。 凭据可以是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户，也可以是在创建数据刷新计划时随其存储的凭据。 有关详细信息，请参阅 [为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 和 [配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
   
 ##  <a name="Permissions"></a> 用于 Power Pivot 数据访问的 SharePoint 权限  
  只有通过 SharePoint 集成，才能支持发布、管理和保护 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 SharePoint 服务器提供身份验证和授权子系统，以确保合法访问数据。 没有支持的方案可用于安全地在 SharePoint 场之外部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。  
@@ -94,10 +95,10 @@ ms.lasthandoff: 05/10/2018
   
  当在 SharePoint 站点中打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时，Excel Services 读取嵌入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据连接字符串，并将请求转发到本地 SQL Server Analysis Services OLE DB 访问接口。 然后，此访问接口将连接信息传递给场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器。 为了使请求在两个服务器之间无缝传递，必须将 Excel Services 配置为使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 要求的设置。  
   
- 在 Excel Services 中，与安全性相关的配置设置在受信任位置、受信任的数据访问接口和受信任的数据连接库中指定。 下表介绍可实现或增强 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置。 如果某个设置未在此处列出，则它对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器连接没有影响。 有关如何分步指定这些设置的说明，请参阅 [初始配置 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)中的“启用 Excel Services”一节。  
+ 在 Excel Services 中，与安全性相关的配置设置在受信任位置、受信任的数据访问接口和受信任的数据连接库中指定。 下表介绍可实现或增强 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置。 如果某个设置未在此处列出，则它对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器连接没有影响。 有关如何分步指定这些设置的说明，请参阅 [初始配置 (PowerPivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)中的“启用 Excel Services”一节。  
   
 > [!NOTE]  
->  与安全性相关的大多数设置适用于受信任位置。 如果你希望保留默认值或为不同站点使用不同值，则可以为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  与安全性相关的大多数设置适用于受信任位置。 如果你希望保留默认值或为不同站点使用不同值，则可以为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 |区域|设置|Description|  
 |----------|-------------|-----------------|  
@@ -105,14 +106,14 @@ ms.lasthandoff: 05/10/2018
 |受信任位置|位置类型|此值必须设置为 **Microsoft SharePoint Foundation**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器检索 .xlsx 文件的副本，并将其加载到场中的 Analysis Services 服务器上。 此服务器只能从内容库中检索 .xlsx 文件。|  
 ||允许外部数据|此值必须设置为 **“受信任的数据连接库和嵌入连接”**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据连接嵌入在工作簿中。 如果你不允许嵌入的连接，则用户可以查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 缓存，但将不能与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据交互。|  
 ||刷新时警告|如果你正在使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库来存储工作簿和报表，则应禁用此值。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库包含一个文档预览功能，如果同时关闭“打开时刷新”和“刷新时警告”，则其效果最佳。|  
-|受信任的数据访问接口|MSOLAP.4<br /><br /> MSOLAP.5|默认情况下包含 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问要求 MSOLAP.4 访问接口为 SQL Server 2008 R2 版本。<br /><br /> MSOLAP.5 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版本一起安装。<br /><br /> 请勿从受信任的数据访问接口列表中删除这些访问接口。 在某些情况下，您可能需要在场中的其他 SharePoint 服务器上安装此访问接口的更多副本。 有关更多信息，请参见 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
-|受信任的数据连接库|選擇性。|可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中使用 Office 数据连接 (.odc) 文件。 如果你使用 .odc 文件向本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿提供连接信息，则可以将相同的 .odc 文件添加到此库。|  
+|受信任的数据访问接口|MSOLAP.4<br /><br /> MSOLAP.5|默认情况下包含 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问要求 MSOLAP.4 访问接口为 SQL Server 2008 R2 版本。<br /><br /> MSOLAP.5 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版本一起安装。<br /><br /> 请勿从受信任的数据访问接口列表中删除这些访问接口。 在某些情况下，您可能需要在场中的其他 SharePoint 服务器上安装此访问接口的更多副本。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
+|受信任的数据连接库|可选。|可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中使用 Office 数据连接 (.odc) 文件。 如果你使用 .odc 文件向本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿提供连接信息，则可以将相同的 .odc 文件添加到此库。|  
 |用户定义函数程序集|不适用。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 会忽略你为 Excel Services 生成部署的用户定义函数程序集。 如果对于特定行为依赖于用户定义的程序集，请注意， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查询处理将不会使用你创建的用户定义函数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置 Power Pivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Power Pivot Securtiy 体系结构](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Power Pivot 安全体系结构](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

@@ -1,14 +1,11 @@
 ---
-title: 公共语言运行时 (CLR) 集成概述 |Microsoft 文档
+title: 公共语言运行时 (CLR) 集成概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -23,11 +20,12 @@ caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5462a7407a06364ddc4a1587271d6987c233acf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d79fe5e7d56e58e48ae92a6f934b11f8b3b42b67
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352649"
 ---
 # <a name="common-language-runtime-integration-overview"></a>公共语言运行时集成概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,29 +39,29 @@ ms.lasthandoff: 05/03/2018
   
 -   **更好的编程模型。** .NET Framework 语言在许多方面都比 Transact-SQL 丰富，它为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开发人员提供了以前没有的构造和功能。 开发人员还可以利用 .NET Framework 库的功能，它提供了大量可用于快速有效地解决编程问题的类。  
   
--   **改进的安全和安全性。** 托管代码在数据库引擎承载的公共语言运行时环境中运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这一特点为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中提供的扩展存储过程提供更安全更可靠的替代方法。  
+-   **改进了的安全和安全性。** 托管代码在数据库引擎承载的公共语言运行时环境中运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这一特点为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中提供的扩展存储过程提供更安全更可靠的替代方法。  
   
 -   **能够定义数据类型和聚合函数。** 用户定义类型和用户定义聚合是两个新的托管数据库对象，这两个对象扩展了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存储和查询功能。  
   
--   **通过标准化的环境的简化的开发。** 数据库开发集成到将来版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET 开发环境中。 开发人员在开发和调试数据库对象和脚本时所使用的工具与他们编写中间层或客户端层的 .NET Framework 组件和服务时所使用的工具相同。  
+-   **通过标准化环境简化了的开发。** 数据库开发集成到将来版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET 开发环境中。 开发人员在开发和调试数据库对象和脚本时所使用的工具与他们编写中间层或客户端层的 .NET Framework 组件和服务时所使用的工具相同。  
   
--   **为了提高的性能和可伸缩性的可能性。** 在多数情况下，.NET Framework 语言编译和执行模型通过 Transact-SQL 提高性能。  
+-   **为了提高的性能和可伸缩性的潜力。** 在多数情况下，.NET Framework 语言编译和执行模型通过 Transact-SQL 提高性能。  
   
  下表列出了本节的主题。  
   
  [CLR 集成的概述](../../relational-databases/clr-integration/clr-integration-overview.md)  
  说明可使用 CLR 集成生成的对象类型，并介绍使用 CLR 集成生成数据库对象的要求。  
   
- [CLR 集成的新增功能](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
+ [CLR 集成中的新增功能](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  介绍此发行版的新功能。  
   
- [CLR 集成的体系结构](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [CLR 集成体系结构](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  介绍 CLR 集成的设计目标。  
   
  [启用 CLR 集成](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  介绍如何启用 CLR 集成。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 集成的性能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

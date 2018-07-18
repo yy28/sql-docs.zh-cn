@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773573"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +29,28 @@ ms.lasthandoff: 05/03/2018
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
 
+## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT for Visual Studio 2017 (15.7.0)
+内部版本号：14.0.16165.0  
+发布日期：2018 年 6 月 4 日  
+  
+### <a name="whats-new"></a>新增功能
+
+**SSIS：**
+
+- 修复“选项”对话框中“Integration Services 设计器”页无法正常显示的问题。  
+- 修复“排序转换编辑器”编辑器中文本显示的亮度比问题。  
+- 修复尝试编辑组合框时“解决引用”对话框消失的问题。  
+- 修复“Hadoop 连接管理器”的 F1 帮助链接不起作用的问题。  
+- 修复面向 SQL Server 2016 时位于容器中的脚本任务代码丢失的问题。  
+
+
+**安装程序：**
+
+- 修复在 VS 15.7.2 中安装 SSRS 和 SSIS 之前无法安装 SSAS 的问题。
+
+### <a name="known-issues"></a>已知问题：
+
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
@@ -38,24 +61,24 @@ ms.lasthandoff: 05/03/2018
 
 **SSIS：**
 
-1.  修复问题：以 SQLServer2016 和 SQLServer2017 为目标时，AS 处理任务不记录任何处理步骤
-2.  修复问题：在 SSDT 中打开具有很长非英文名称的 dtsx 时发生访问冲突
-3.  修复问题：ScriptTask 变量列表有时会在任务 UI 中消失
-4.  修复问题：当包位置为 SQL Server 时，添加现有包的副本失败
-5.  修复问题：访问某个编辑器对话框中的组合框时，焦点会卡住。
-6.  修复问题：切换 VS 主题时背景不更改。
-7.  修复问题：注释和加载标签在深色主题中不可见。
-8.  修复问题：SSIS 工具箱禁用项的状态属性定义不正确。
-9.  修复问题：执行 WebServiceTask 始终失败。
-10. 修复问题：如果连接字符串设置为某个变量，且其中包含依赖于项目参数的表达式，包部署会失败。
+- 修复问题：以 SQLServer2016 和 SQLServer2017 为目标时，AS 处理任务不记录任何处理步骤
+- 修复问题：在 SSDT 中打开具有很长非英文名称的 dtsx 时发生访问冲突
+- 修复问题：ScriptTask 变量列表有时会在任务 UI 中消失
+- 修复问题：当包位置为 SQL Server 时，添加现有包的副本失败
+- 修复问题：访问某个编辑器对话框中的组合框时，焦点会卡住。
+- 修复问题：切换 VS 主题时背景不更改。
+- 修复问题：注释和加载标签在深色主题中不可见。
+- 修复问题：SSIS 工具箱禁用项的状态属性定义不正确。
+- 修复问题：执行 WebServiceTask 始终失败。
+- 修复问题：如果连接字符串设置为某个变量，且其中包含依赖于项目参数的表达式，包部署会失败。
 
 **安装程序：**
 
-1.  在隐私免责声明中添加“SQL Server Data Tools 客户体验改善计划”链接。
-2.  修复问题：当选择“安装新的 SQL Server Data Tools for Visual Studio 2017 实例”时会弹出 VS 安装程序窗口
+- 在隐私免责声明中添加“SQL Server Data Tools 客户体验改善计划”链接。
+- 修复问题：当选择“安装新的 SQL Server Data Tools for Visual Studio 2017 实例”时会弹出 VS 安装程序窗口
 
 ### <a name="known-issues"></a>已知问题：
-1.  当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
 
 
@@ -65,14 +88,14 @@ ms.lasthandoff: 05/03/2018
 ### <a name="whats-new"></a>新增功能
 
 **SSIS**
-1.  修复了 SSAS 和 SSIS 安装到同一 VS 2017 实例时，SSIS 2008 项目迁移会失败的问题。
-2.  修复了 Rdlc 报表设计器和 SSIS 安装到同一 VS 2017 实例时，无法生成 Rdlc 项目的问题。
-3.  修复了注释颜色无法更新的问题。
-4.  修复了使用其他语言时，某些字符串在 Hadoop 连接管理器编辑器中截断的问题。
-5.  修复了某些字符串在 OData 连接管理器编辑器中截断的问题。
-6.  修复了某些字符串在 Integration Services 导入项目向导窗口中截断的问题。
-7.  修复了标题位于 SSIS 工具框信息窗口中的问题。
-8.  修复了某些字符串在 Integration Services 部署向导窗口中截断的问题。 
+- 修复了 SSAS 和 SSIS 安装到同一 VS 2017 实例时，SSIS 2008 项目迁移会失败的问题。
+- 修复了 Rdlc 报表设计器和 SSIS 安装到同一 VS 2017 实例时，无法生成 Rdlc 项目的问题。
+- 修复了注释颜色无法更新的问题。
+- 修复了使用其他语言时，某些字符串在 Hadoop 连接管理器编辑器中截断的问题。
+- 修复了某些字符串在 OData 连接管理器编辑器中截断的问题。
+- 修复了某些字符串在 Integration Services 导入项目向导窗口中截断的问题。
+- 修复了标题位于 SSIS 工具框信息窗口中的问题。
+- 修复了某些字符串在 Integration Services 部署向导窗口中截断的问题。 
 
 **安装程序**
 - 修复了下载有效负载有时失败，出现错误“系统找不到指定的文件 (0x80070002)”的问题。  
@@ -631,8 +654,8 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 **新增功能**
 
-- **发行版本控制和编号：**现在，发行版按编号顺序而不是按月份标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
-- **Analysis Services – 表格模型资源管理器：**使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
+- **发行版本控制和编号：** 现在，发行版按编号顺序而不是按月份标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
+- **Analysis Services – 表格模型资源管理器：** 使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
 - **数据库工具 – Always Encrypted**：此发行版提供新的[“Always Encrypted 密钥管理”](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
     - 创建列主密钥或列加密密钥时，单击“更新数据库”后，更改可能不会立即显示在 SQL Server 对象资源管理器中。 若要解决此问题，可在 SQL Server 对象资源管理器中刷新数据库节点。
     - 如果尝试加密某个表中包含 SQL Server 对象资源管理器中数据的列，该操作可能会失败。 此功能目前仅在 SSDT 数据库项目和 SSMS 中受支持。 以后的发行版将会实现对 SQL Server 对象资源管理器的支持。
@@ -670,9 +693,9 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 内部版本号：14.0.60629.0  
   
 **新增功能**  
-* **Always Encrypted 支持：**对于包含 Always Encrypted 列的数据库，此发行版通过我们的核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
-* **临时表增强支持：**可以在修改之前取消链接临时表，在完成修改后重新链接临时表，因此简化了体验。 这意味着，在受支持的操作方面，临时表的功能与其他表类型（标准表、内存中表）完全相同。 
-* **SqlPackage.exe 和安装更改：**从 SQL Server 引擎中隔离 SSDT 的方式发生更改，SSMS 有了更新。 有关详细信息，请参阅 [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)（SSDT 和 SqlPackage.exe 安装与更新的更改）。
+* **Always Encrypted 支持：** 对于包含 Always Encrypted 列的数据库，此发行版通过我们的核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
+* **临时表增强支持：** 可以在修改之前取消链接临时表，在完成修改后重新链接临时表，因此简化了体验。 这意味着，在受支持的操作方面，临时表的功能与其他表类型（标准表、内存中表）完全相同。 
+* **SqlPackage.exe 和安装更改：** 从 SQL Server 引擎中隔离 SSDT 的方式发生更改，SSMS 有了更新。 有关详细信息，请参阅 [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)（SSDT 和 SqlPackage.exe 安装与更新的更改）。
 
  
 

@@ -1,5 +1,5 @@
 ---
-title: 处理客户端上的 XML （SQLXML 托管类） |Microsoft 文档
+title: 在客户端处理 XML （SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ea74968bc1776aecab380f5566abbe9a1e64ac5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972040"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>在客户端处理 XML（SQLXML 托管类）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   此示例演示如何使用 ClientSideXml 属性。 应用程序在服务器上执行存储过程。 在客户端对存储过程的结果（一个有两列的行集）进行处理，以产生 XML 文档。  
   
- 以下 GetContacts 存储过程返回**FirstName**和**LastName**的 AdventureWorks 数据库中的 Person.Contact 表中的员工。  
+ 以下 GetContacts 存储过程返回**FirstName**并**LastName**的 AdventureWorks 数据库中 Person.Contact 表中的雇员。  
   
 ```  
 USE AdventureWorks  
@@ -44,7 +45,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- 此 C# 应用程序执行存储的过程，并指定 FOR XML AUTO 选项中指定的 CommandText 值。 在应用程序，设置 SqlXmlCommand 对象的 ClientSideXml 属性为 true。 这将允许执行预先存在的存储过程，然后由存储过程返回行集，并在客户端上对它执行 XML 转换。  
+ 此 C# 应用程序执行存储的过程，并指定 FOR XML AUTO 选项中指定的 CommandText 值。 在应用程序，SqlXmlCommand 对象 ClientSideXml 属性设置为 true。 这将允许执行预先存在的存储过程，然后由存储过程返回行集，并在客户端上对它执行 XML 转换。  
   
 > [!NOTE]  
 >  在代码中，必须在连接字符串中提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  

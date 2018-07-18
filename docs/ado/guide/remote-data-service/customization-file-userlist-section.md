@@ -2,7 +2,6 @@
 title: 自定义项文件 UserList 部分 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f27f83f6b3753ad5298a869e5d8891af089e4ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcf8649af2695fa354659f13e891521eb14f39cb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273826"
 ---
 # <a name="customization-file-userlist-section"></a>自定义文件 UserList 部分
 **Userlist**部分与**连接**部分相同的部分*标识符*参数。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 |*userName*|*用户名*如何使用此连接的人员。 有效的用户名称与 IIS 建立**Service Manager**对话框。|  
 |***accessRights***|以下的访问权限之一：<br /><br /> -   **NoAccess** -用户将无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义文件连接部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

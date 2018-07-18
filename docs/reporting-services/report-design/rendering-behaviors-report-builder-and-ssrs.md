@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027514"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>呈现行为（报表生成器和 SSRS）
   根据选择的呈现器，呈现报表时，将针对表体及其内容应用特定的规则。 报表项在页面上的呈现方式由以下因素综合确定：  

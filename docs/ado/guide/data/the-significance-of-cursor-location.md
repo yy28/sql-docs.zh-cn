@@ -2,7 +2,6 @@
 title: 光标位置的重要性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5699c8c7bc3ab1ed54d9411ff889e43e8cf334d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6323e6ac260d413ad86e11ef5aefa38c7117b138
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272996"
 ---
 # <a name="the-significance-of-cursor-location"></a>光标位置的重要性
 每个游标使用临时资源来保存其数据。 这些资源可以是内存、 磁盘页面文件、 临时磁盘文件或甚至临时存储在数据库中。 游标被称为*客户端*光标时这些资源都位于客户端计算机上。 游标被称为*服务器端*时这些资源位于服务器上的光标。  

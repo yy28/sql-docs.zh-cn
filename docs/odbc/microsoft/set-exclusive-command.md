@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900372"
 ---
 # <a name="set-exclusive-command"></a>SET 独占命令
 指定是否在网络上独占或共享用于打开表文件。  

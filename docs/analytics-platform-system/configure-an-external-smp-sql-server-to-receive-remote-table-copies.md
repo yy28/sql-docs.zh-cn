@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538947"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>配置外部 SMP SQL 服务器以接收远程表副本的并行数据仓库
 描述如何配置一个外部的 SQL Server 实例，以便从并行数据仓库接收远程表副本。  

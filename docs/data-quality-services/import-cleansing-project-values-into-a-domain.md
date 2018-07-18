@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90333ec5e27254ee54c42ac02be355c94c6bb289
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad6b940fc5f24ad1ec8fcc238166c0775a56c0be
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311276"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  取消选择 **“仅显示新内容”** 以显示域中的所有值。  
   
-8.  选择 **“正确”**、 **“错误”**或 **“无效”** 以仅显示具有所选类型的值。  
+8.  选择 **“正确”**、 **“错误”** 或 **“无效”** 以仅显示具有所选类型的值。  
   
 9. 若要搜索特定字符串，在 **“查找”** 文本框中输入该字符串。 单击向上或向下箭头可以逐一查看满足搜索条件的值。 这些值将突出显示为黄色。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 05/03/2018
   
 -   仅字符串值导入到域中。  
   
--   将只导入 **“清理”**活动的 **“管理和查看结果”**页上 **“正确”** 、 **“已更正”** 和 **“新建”** 选项卡上的值。 如果在 **“导入项目值”** 对话框中选中了 **“从‘新建’选项卡中添加值”** 复选框，将只导入 **“新建”** 选项卡中的值。  
+-   将只导入 **“清理”** 活动的 **“管理和查看结果”** 页上 **“正确”** 、 **“已更正”** 和 **“新建”** 选项卡上的值。 如果在 **“导入项目值”** 对话框中选中了 **“从‘新建’选项卡中添加值”** 复选框，将只导入 **“新建”** 选项卡中的值。  
   
 -   值将作为正确的值或具有更正的错误值进行导入。 仅导入具有更正值的错误值。  
   

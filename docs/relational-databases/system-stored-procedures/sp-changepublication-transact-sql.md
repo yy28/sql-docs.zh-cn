@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32993846"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +99,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|仅当有新订阅时，才创建同步文件。 快照代理已启动并完成之前，订阅服务器无法在订阅后接收同步文件。|  
 |**independent_agent**|**true**|发布具有专用的分发代理。|  
 ||**false**|发布使用共享分发代理，每一对发布/订阅数据库共享一个代理。|  
-|**p2p_continue_onconflict**|**true**|检测到冲突时，分发代理继续处理更改。<br /> **注意：**我们建议你使用的默认值`FALSE`。 当此选项设置为`TRUE`，分发代理尝试通过从具有最高的发起方 ID 的节点应用冲突行聚合拓扑中的数据 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。|  
+|**p2p_continue_onconflict**|**true**|检测到冲突时，分发代理继续处理更改。<br /> **注意：** 我们建议你使用的默认值`FALSE`。 当此选项设置为`TRUE`，分发代理尝试通过从具有最高的发起方 ID 的节点应用冲突行聚合拓扑中的数据 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。|  
 ||**false**|检测到冲突时，分发代理将停止处理更改。|  
 |**post_snapshot_script**||指定在初始同步过程中应用了其他所有复制对象脚本和数据后，分发代理所运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的位置。|  
 |**pre_snapshot_script**||指定在初始同步过程中应用其他所有复制对象脚本和数据之前，分发代理所运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的位置。|  

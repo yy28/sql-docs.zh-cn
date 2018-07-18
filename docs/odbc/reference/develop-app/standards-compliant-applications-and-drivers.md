@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913782"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>符合标准的应用程序和驱动程序
 符合标准的应用程序或驱动程序是一个符合打开组 CAE 规范"数据管理:: SQL 调用级界面 (CLI)，"和 ISO/IEC 9075-3:1995 (E) 调用级接口 (SQL/CLI)。  

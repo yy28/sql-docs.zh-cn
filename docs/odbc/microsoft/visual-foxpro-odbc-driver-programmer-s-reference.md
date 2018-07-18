@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907012"
 ---
 # <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 驱动程序程序员&#39;的参考
 Visual FoxPro ODBC 驱动程序文档的此部分包含以下主题：  

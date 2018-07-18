@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32968112"
 ---
 # <a name="improve-access-to-trace-data"></a>改进对跟踪数据的访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在 **“系统属性”** 对话框中，单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
   
-3.  向下滚动 **“系统变量”**列表，选择对应于 **TEMP** 变量的行，并单击 **“编辑”**。  
+3.  向下滚动 **“系统变量”** 列表，选择对应于 **TEMP** 变量的行，并单击 **“编辑”**。  
   
 4.  在 **“编辑系统变量”** 对话框中，输入要作为 **temp** 目录的驱动器及目录的路径和名称。  
   

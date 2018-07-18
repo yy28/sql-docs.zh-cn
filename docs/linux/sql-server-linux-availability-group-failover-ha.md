@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799807"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>在 Linux 上的 alwayson 可用性组故障转移
 
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/19/2018
 - **RHEL/Ubuntu 示例**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **SLES 示例**
@@ -80,35 +81,17 @@ ms.lasthandoff: 05/19/2018
    crm config show
    ```
 
-因此，将来的故障转移-包括自动故障转移-成功，请删除该位置约束。 
-
-若要删除该约束，请运行以下命令： 
-
-- **RHEL/Ubuntu 示例**
-
-   在此示例中`ag_cluster-master`是故障转移的资源的名称。 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **SLES 示例**
-
-   在此示例中`ag_cluster`是故障转移的资源的名称。 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-或者，可以运行以下命令删除位置约束。  
+获取创建的手动故障转移由于约束的一个示例。 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu 示例**
 
-   在以下命令中，`cli-prefer-ag_cluster-master` 是需要删除的约束的 ID。 `sudo pcs constraint --full` 会返回此 ID。 
-
+   在以下命令中，`cli-prefer-ag_cluster-master` 是需要删除的约束的 ID。 `sudo pcs constraint list --full` 会返回此 ID。 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **SLES 示例**
 
    在下面的命令`cli-prefer-ms-ag_cluster`是约束的 ID。 `crm config show` 会返回此 ID。 
@@ -122,7 +105,7 @@ ms.lasthandoff: 05/19/2018
 >[!NOTE]
 >自动故障转移不会添加位置约束，因此不需要进行清除。 
 
-详细信息：
+详细信息：  
 - [Red Hat - 管理群集资源](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
 - [Pacemaker-手动移动资源](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 管理指南-资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 

@@ -20,9 +20,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80d968795e5201813f9f53f558b87f7ca2e3804b
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33073484"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>创建跟踪模板 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 **“文件”** 菜单上，指向 **“模板”**，然后单击 **“新建模板”**。  
   
-2.  在 **“跟踪模板属性”** 对话框中，从 **“选择服务器类型”**列表中选择服务器类型。  
+2.  在 **“跟踪模板属性”** 对话框中，从 **“选择服务器类型”** 列表中选择服务器类型。  
   
 3.  在“ **新模板名称** ”框中，输入模板的名称。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  在 **“事件选择”** 选项卡上，添加、删除或修改事件、数据列或筛选器。  
   
-7.  在 **“事件选择”**选项卡上，使用网格控件来添加或删除跟踪文件中的事件和数据列，如下所示：  
+7.  在 **“事件选择”** 选项卡上，使用网格控件来添加或删除跟踪文件中的事件和数据列，如下所示：  
   
     -   若要添加事件，请在 **“事件”** 列中展开相应的事件类别，再选择事件名称。  
   

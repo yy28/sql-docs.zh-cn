@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923342"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
     
 ### <a name="a-restore-a-full-database-backup"></a>**A.还原完整的数据库备份**    
     
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
     
 2.  右键单击“数据库”，然后选择“还原数据库...”    
     
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>**B.在现有数据库上还原以前的磁盘备份**    
 下面的示例将还原 `Sales` 的以前的磁盘备份，并覆盖现有 `Sales` 数据库。
 
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
     
 2.  右键单击“数据库”，然后选择“还原数据库...”  
 
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 
 7.  在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。
 
-    > **注意：**未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 备份集包含数据库备份，而不是现有的‘`Sales`’数据库。 (Microsoft.SqlServer.SmoExtended)”
+    > **注意：** 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 备份集包含数据库备份，而不是现有的‘`Sales`’数据库。 (Microsoft.SqlServer.SmoExtended)”
 
 8.  在“结尾日志备份”部分中，取消选中“还原前执行结尾日志备份”。
 
@@ -161,14 +162,14 @@ ms.lasthandoff: 05/03/2018
 
 9.  在“服务器连接”部分，选中“关闭目标数据库的现有连接”。
 
-    > **注意：**未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 无法获得独占访问权限，因为数据库正在使用中。 (Microsoft.SqlServer.SmoExtended)”
+    > **注意：** 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 无法获得独占访问权限，因为数据库正在使用中。 (Microsoft.SqlServer.SmoExtended)”
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
 ### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>**C.使用新的数据库名称还原以前的磁盘备份，并且原始数据库仍然存在**
 下面的示例将还原 `Sales` 的以前的磁盘备份，并创建名为 `SalesTest`的新数据库。  原始数据库 `Sales`仍存在于服务器上。
 
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
     
 2.  右键单击“数据库”，然后选择“还原数据库...”  
 
@@ -188,13 +189,13 @@ ms.lasthandoff: 05/03/2018
 
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-    > **注意：**如果收到以下错误消息：“System.Data.SqlClient.SqlError: 数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含您不希望丢失的工作，请使用 BACKUP LOG WITH NORECOVERY 备份该日志。 使用 RESTORE 语句的 WITH REPLACE 或 WITH STOPAT 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。  
+    > **注意：** 如果收到以下错误消息：“System.Data.SqlClient.SqlError: 数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含您不希望丢失的工作，请使用 BACKUP LOG WITH NORECOVERY 备份该日志。 使用 RESTORE 语句的 WITH REPLACE 或 WITH STOPAT 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。  
 那么你可能未输入上面步骤 6 中的新数据库名称。  还原一般会防止意外使用一个数据库覆盖另一个数据库。  如果 RESTORE 语句中指定的数据库已存在于当前服务器上，并且指定的数据库系列 GUID 与备份集中记录的数据库系列 GUID 不同，则不还原该数据库。 这是一项重要的安全保护措施。
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>**D.将以前的磁盘备份还原到某个时间点**
 下面的示例将数据库还原到它截止 2016 年 5 月 30 日下午 1:23:17 时的状态，并显示涉及多个日志备份的还原操作。  数据库当前不在服务器上。
 
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
     
 2.  右键单击“数据库”，然后选择“还原数据库...”  
 

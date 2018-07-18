@@ -2,7 +2,6 @@
 title: 密钥对象 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07b51f604cd8099d3b11f7e748199dfe6a438abd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05863d8227f2f0dddc6b7a44c60951fe3f8471be
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286828"
 ---
 # <a name="key-object-adox"></a>密钥对象 (ADOX)
 表示从数据库表的主键、 外，或唯一键字段。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下面的代码创建一个新**密钥**:  
   
 ```  
@@ -52,7 +52,7 @@ Dim obj As New Key
   
 -   [项对象属性、方法和事件](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [项集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

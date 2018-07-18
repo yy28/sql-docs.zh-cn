@@ -2,10 +2,10 @@
 title: 将列添加到 SQL Server 表 |Microsoft 文档
 description: 将列添加到使用 SQL Server 的 OLE DB 驱动程序的 SQL Server 表
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2f49f014e29401d0f99bd5f9bd59551c94255399
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e68b78a72657648320f4948646e4685cfbad388
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690290"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>向 SQL Server 表添加列
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序公开**ITableDefinition::AddColumn**函数。 这允许使用者添加到列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表。  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  新的列名称指定为中的 Unicode 字符字符串*pwszName*的成员*uName*联合中*dbcid* DBCOLUMNDESC 参数的成员*pColumnDesc*。 *EKind*成员必须是 DBKIND_NAME。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)  
   

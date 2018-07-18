@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32848782"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>步骤 1： 配置用于 Java 开发的开发环境
   

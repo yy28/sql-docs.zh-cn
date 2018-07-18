@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019876"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 设备信息设置
   下表列出以 PPTX 格式呈现 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表时的设备信息设置。  

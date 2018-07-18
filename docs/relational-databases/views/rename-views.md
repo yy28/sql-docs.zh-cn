@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33010843"
 ---
 # <a name="rename-views"></a>重命名视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-rename-a-view"></a>重命名视图  
   
-1.  在 **“对象资源管理器”**中，展开包含要重命名的视图的数据库，然后展开 **“视图”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，展开包含要重命名的视图的数据库，然后展开 **“视图”** 文件夹。  
   
 2.  右键单击要重命名的视图，然后选择 **“重命名”**。  
   

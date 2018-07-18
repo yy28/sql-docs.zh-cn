@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913162"
 ---
 # <a name="setting-parameter-values"></a>设置参数值
 若要设置参数的值，应用程序只需将设置绑定到参数变量的值。 它并不重要时设置此值，只要它设置之前执行的语句。 应用程序可以设置值之前或之后绑定变量，并且它可以更改它想多次的值。 当执行语句时，该驱动程序只需检索变量的当前值。 不止一次; 执行已准备的语句时，这是特别有用应用程序为某些或所有变量每次执行该语句时将设置新值。 此示例，请参阅[已准备的执行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)，本部分前面的。  

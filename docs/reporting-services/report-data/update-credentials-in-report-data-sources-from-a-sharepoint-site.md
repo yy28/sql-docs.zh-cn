@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021744"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>从 SharePoint 站点更新报表数据源的凭据
   本主题介绍如何更新报表中嵌入的数据源和保存在 SharePoint 文档库中的共享数据源。  

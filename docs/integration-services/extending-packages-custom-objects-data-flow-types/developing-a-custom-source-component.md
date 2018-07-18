@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +27,12 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 592cfb4a04503e72f246d91719a701dcf4c56120
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8987a0554736dcbe8b917b3ad9bef64bd6dee84c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329571"
 ---
 # <a name="developing-a-custom-source-component"></a>开发自定义源组件
   开发人员可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到自定义数据源的源组件，并可以将这些自定义数据源中的数据提供给数据流任务中的其他组件。 如果必须连接到无法使用现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源之一进行访问的数据源，则创建自定义源是非常重要的。  

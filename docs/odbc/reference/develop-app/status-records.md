@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910882"
 ---
 # <a name="status-records"></a>状态记录
 中的状态记录的字段包含有关特定错误或警告的驱动程序管理器、 驱动程序或数据源，包括 SQLSTATE、 本机错误号、 诊断消息，列数和行号返回的信息。 仅当该函数将返回 SQL_ERROR、 SQL_SUCCESS_WITH_INFO、 SQL_NO_DATA、 SQL_NEED_DATA 或 SQL_STILL_EXECUTING，可以创建状态记录。 中的状态记录的字段的完整列表，请参阅[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。  

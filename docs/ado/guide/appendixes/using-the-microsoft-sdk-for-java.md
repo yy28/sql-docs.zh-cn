@@ -2,7 +2,6 @@
 title: 使用 Microsoft SDK for Java |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40b718fbd2b54c55d9ef35a4d4cedbc87a24f3f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76fb8068cfc1640642292932923db084818dbb9c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270016"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java
 
@@ -53,5 +53,5 @@ Microsoft SDK for Java 是 Microsoft Internet Explorer 环境的开发人员工�
   
 3.  若要使用这些文件，打开你的项目中 Visual J + + 中。 从**项目**菜单上，选择**添加到项目**。 选择**文件**，然后添加的所有。JAVA trustlib\msado15 目录到你的项目中生成文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO Java 类包装器](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

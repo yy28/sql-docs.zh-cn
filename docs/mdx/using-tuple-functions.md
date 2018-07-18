@@ -1,6 +1,6 @@
 ---
 title: 使用元组函数 |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a58be5cbd0ea4101f5be2ebb8e29c1669d7f09f4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 578192fa982b8bbf65527f4ff1d71b6595a2400d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581629"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743816"
 ---
 # <a name="using-tuple-functions"></a>使用元组函数
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   元组函数从集中检索元组，或者通过解析元组的字符串表示形式来检索元组。  
   

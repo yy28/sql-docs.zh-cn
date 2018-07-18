@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
@@ -16,17 +14,18 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30b7a2f84933fba99cc0497b18de1e07e69ea77f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d89335242db30c0117ce3c929f623b1e6b92855
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330581"
 ---
 # <a name="preview"></a>预览
   使用 **“预览”** 对话框可以预览 SAP BW 源所要提取的数据。  
   
 > [!IMPORTANT]  
->  **“预览”** 选项位于 **“SAP BW 源编辑器”** 的 **“连接管理器”**页，实际用来提取数据。 如果您已配置 SAP Netweaver BW 只提取自从上次提取后发生更改的数据，则选择 **“预览”** 将从下次数据提取中排除已经预览过的数据。  
+>  **“预览”** 选项位于 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，实际用来提取数据。 如果您已配置 SAP Netweaver BW 只提取自从上次提取后发生更改的数据，则选择 **“预览”** 将从下次数据提取中排除已经预览过的数据。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 源组件的详细信息，请参阅 [SAP BW 源](../../integration-services/data-flow/sap-bw-source.md)。  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
-3.  在 **“SAP BW 源编辑器”**中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
+3.  在 **“SAP BW 源编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
 4.  配置 SAP BW 源。  
   

@@ -1,6 +1,6 @@
 ---
-title: 网络属性 |Microsoft 文档
-ms.date: 05/03/2018
+title: 网络属性 |Microsoft Docs
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 40399d8e40a3bf44a914c3f9783885a25db94384
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991599"
 ---
 # <a name="network-properties"></a>网络属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用于：** 多维和表格服务器模式  
@@ -29,7 +31,7 @@ ms.lasthandoff: 05/10/2018
  **IPV4Support**  
  有符号 32 位整数属性，用于定义 IPv4 协议支持。 此属性具有下表所列的值之一：  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*0*|禁用 IPv4；客户端无法连接。|  
 |*1*|（默认值）要求使用 IPv4；如果服务器无法侦听 IPv4，则不启动服务器。|  
@@ -38,7 +40,7 @@ ms.lasthandoff: 05/10/2018
  **IPV6Support**  
  有符号 32 位整数属性，用于定义 IPv6 协议支持。 此属性具有下表所列的值之一：  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*0*|禁用 IPv6；客户端无法连接。|  
 |*1*|（默认值）要求使用 IPv6；如果服务器无法侦听 IPv6，则不启动服务器。|  
@@ -116,7 +118,7 @@ ms.lasthandoff: 05/10/2018
  **SocketOptions\ SendBufferSize**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

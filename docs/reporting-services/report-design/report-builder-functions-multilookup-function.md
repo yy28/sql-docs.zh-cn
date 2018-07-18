@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027184"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>报表生成器函数 - Multilookup 函数
   从包含名称/值对的数据集返回指定名称集的一组第一个匹配值。  

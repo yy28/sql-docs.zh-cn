@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028264"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  

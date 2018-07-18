@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34039623"
 ---
 # <a name="process-tabular-model-partitions"></a>处理表格模型分区 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击包含要处理的分区的表，然后单击“分区”。  
   
-2.  在 **“分区”** 对话框的 **“分区”**中，单击“处理”按钮。  
+2.  在 **“分区”** 对话框的 **“分区”** 中，单击“处理”按钮。  
   
 3.  在“处理分区”对话框的“模式”列表框中，选择以下处理模式之一：  
   

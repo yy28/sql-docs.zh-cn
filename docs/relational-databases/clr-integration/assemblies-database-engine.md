@@ -1,14 +1,11 @@
 ---
-title: 程序集 （数据库引擎） |Microsoft 文档
+title: 程序集 （数据库引擎） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
@@ -19,17 +16,18 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fbed0b759f3b05688ee51156a9092294fe0ceb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02b9011a567eb3a91bf36dfc7d2450dfa9498a60
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359389"
 ---
 # <a name="assemblies-database-engine"></a>程序集（数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本节中的主题旨在帮助您了解、设计和实现程序集。  
   
- 程序集是实例中使用的 DLL 文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来部署函数、 存储的过程、 触发器、 用户定义聚合和用一种由承载的托管的代码语言编写的用户定义类型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]而不是中的公共语言运行时 (CLR) [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 程序集是 DLL 文件中的一个实例使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来部署函数、 存储的过程、 触发器、 用户定义聚合和一种托管的托管的代码语言编写的用户定义类型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]而不是在的公共语言运行时 (CLR) [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的程序集对象引用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时中创建的托管应用程序模块（.dll 文件）。 程序集包含类元数据和托管代码。 将程序集上载到 SQL Server 实例是创建以下任何一个数据库对象的第一步：  
   
@@ -53,15 +51,15 @@ ms.lasthandoff: 05/03/2018
   
 -   包含有关程序集与所引用的其他程序集之间的依赖关系的元数据。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |-----------|-----------------|  
 |[设计程序集](../../relational-databases/clr-integration/assemblies-designing.md)|说明创建程序集之前必须考虑的问题， 包括打包程序集、代码访问权限和其他限制。|  
-|[实现的程序集](../../relational-databases/clr-integration/assemblies-implementing.md)|说明如何创建和删除程序集、如何以及何时修改程序集、如何检索程序集的有关元数据。|  
+|[实现程序集](../../relational-databases/clr-integration/assemblies-implementing.md)|说明如何创建和删除程序集、如何以及何时修改程序集、如何检索程序集的有关元数据。|  
 |[获取有关程序集的信息](../../relational-databases/clr-integration/assemblies-getting-information.md)|列出了可以查询程序集的有关元数据的目录视图和函数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

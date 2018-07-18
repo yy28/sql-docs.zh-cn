@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021014"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
   您可以帮助控制是否在显示与 Tablix 数据区域中某个组相关联的动态行的同时显示静态行，如组头或组尾。  

@@ -2,7 +2,6 @@
 title: 用于 OLE DB （ADO 服务组件） 的 Microsoft 游标服务 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d119e537cd400f2bfd69720f17485366c23b4582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271326"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概述的 Microsoft 光标服务
 OLE DB Microsoft 游标服务将补充数据提供程序的光标支持函数。 因此，用户可以体验相对统一的功能，从所有数据提供程序。

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912794"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>数据长度、 缓冲区长度和截断
 *数据长度*的字节长度的数据为它的行将存储在应用程序的数据缓冲区，不是存储在数据源。 这一区别很重要，因为数据通常存储在数据源中比数据缓冲区中的不同类型。 对于正在发送到数据源的数据，这就是数据，再到数据源的类型转换的字节长度。 正在从数据源检索数据，这是数据的字节长度后转换到的数据缓冲区的类型和完成任何截断之前。  

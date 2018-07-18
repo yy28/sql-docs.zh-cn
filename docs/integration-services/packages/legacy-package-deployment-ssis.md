@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -37,11 +35,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778901dae6c0504d84eb7cb93667d0ac4024e9ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408499"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="package-configuration-types"></a>包配置类型  
  下表介绍了包配置的类型。  
   
-|类型|Description|  
+|类型|描述|  
 |----------|-----------------|  
 |XML 配置文件|XML 文件包含配置。 XML 文件可以包括多个配置。|  
 |环境变量|环境变量包含配置。|  
@@ -220,7 +219,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表介绍 **“包配置组织程序”** 对话框的配置列表中的各列。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |**配置名称**|配置的名称。|  
 |**配置类型**|配置类型。|  
@@ -234,7 +233,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”**、 **“事件处理程序”**或 **“包资源管理器”** 选项卡。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”**、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
   
 4.  在 **SSIS** 菜单上，单击“包配置” 。  
   
@@ -261,7 +260,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  如果多个配置更新同一属性，则在配置列表中排列靠后的配置的值将代替在列表中排列靠前的配置的值。 最后加载到属性中的值是在包运行时将要使用的值。 而且，如果包使用直接配置（例如 XML 配置文件）和间接配置（例如环境变量）的组合，那么指向直接配置的位置的间接配置必须在列表中处于靠前位置。  
   
-> **注意：**如果包配置按照首选顺序加载，则配置按照从“包配置组织程序”对话框中显示的列表顶部到列表底部的顺序进行加载。 但是，在运行时，包配置可能不会按照首选顺序加载。 父包配置将在其他类型的配置之后加载的情况尤其如此。  
+> **注意：** 如果包配置按照首选顺序加载，则配置按照从“包配置组织程序”对话框中显示的列表顶部到列表底部的顺序进行加载。 但是，在运行时，包配置可能不会按照首选顺序加载。 父包配置将在其他类型的配置之后加载的情况尤其如此。  
   
  在运行时，包配置将更新包对象的属性值。 加载包时，配置中的值将替换开发包时所设置的值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持不同的配置类型。 例如，您可以使用包含多个配置的 XML 文件或包含单个配置的环境变量。 有关详细信息，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
   
@@ -322,13 +321,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **配置类型**  
  使用下列选项选择存储配置的源的类型：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|**XML 配置文件**|将配置存储为 XML 文件。 选择此值将显示 **“配置类型”**部分中的动态选项。|  
-|**环境变量**|将配置存储在一个环境变量中。 选择此值将显示 **“配置类型”**部分中的动态选项。|  
-|**注册表项**|将配置存储在注册表中。 选择此值将显示 **“配置类型”**部分中的动态选项。|  
-|**父包变量**|将配置存储为包含该任务的包中的变量。  选择此值将显示 **“配置类型”**部分中的动态选项。|  
-|**SQL Server**|将配置存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中。 选择此值将显示 **“配置类型”**部分中的动态选项。|  
+|**XML 配置文件**|将配置存储为 XML 文件。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
+|**环境变量**|将配置存储在一个环境变量中。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
+|**注册表项**|将配置存储在注册表中。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
+|**父包变量**|将配置存储为包含该任务的包中的变量。  选择此值将显示 **“配置类型”** 部分中的动态选项。|  
+|**SQL Server**|将配置存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中。 选择此值将显示 **“配置类型”** 部分中的动态选项。|  
   
  **Next**  
  查看向导的下一页。  
@@ -339,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**配置文件名**|键入向导生成的配置文件的路径。|  
 |**“浏览”**|使用 **“选择配置文件位置”** 对话框指定向导生成的配置文件的路径。 如果文件不存在，则向导将创建该文件。|  
@@ -347,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -359,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**注册表项**|键入包含配置信息的注册表项。 格式为 \<registry key>。<br /><br /> 该注册表项必须已经存在于 HKEY_CURRENT_USER 中并且具有一个名为 Value 的值。 该值可以是 DWORD 或一个字符串。<br /><br /> 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -374,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**父变量**|指定父包中包含配置信息的变量。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -389,7 +388,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**“连接”**|从列表中选择连接，或者单击 **“新建”** 创建新连接。|  
 |**配置表**|选择现有的表，或者单击 **“新建”** 编写用于创建新表的 SQL 语句。|  
@@ -398,7 +397,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -483,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表列出了部署实用工具属性。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |AllowConfigurationChange|一个指定在部署过程中是否可以更新配置的值。|  
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 **True** 才能创建部署实用工具。|  

@@ -1,35 +1,20 @@
 ---
-title: SELECT DISTINCT FROM&lt;模型&gt;(DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DISTINCT
-- SELECT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- discrete columns [DMX]
-- discretized columns [DMX]
-- SELECT DISTINCT FROM <model> statement
-- continuous columns
-ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
-author: Minewiskan
+title: SELECT DISTINCT FROM&lt;模型&gt;(DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5754cbeb07789b0d5f7a3f51386f108633cda83e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985322"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,24 +31,24 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定要返回行数的整数。  
+ 可选。 一个指定要返回行数的整数。  
   
  *表达式列表*  
  相关列标识符（从模型中派生）或表达式的以逗号分隔的列表。  
   
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
  *条件列表*  
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注释  
- **SELECT DISTINCT FROM**语句只能与单个列或一组相关的列。 该子句不可用于一组不相关的列。  
+## <a name="remarks"></a>Remarks  
+ **SELECT DISTINCT FROM**语句只适用于单个列或与一组相关的列。 该子句不可用于一组不相关的列。  
   
- **SELECT DISTINCT FROM**语句允许您直接引用嵌套表内的列。 例如：  
+ **SELECT DISTINCT FROM**语句可以直接引用嵌套表内的列。 例如：  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -71,14 +56,14 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  结果**SELECT DISTINCT FROM\<模型 >** 语句不同，具体取决于列类型。 下表说明了所支持的列类型和该语句的输出结果。  
   
-|列类型|输出|  
+|列类型|“输出”|  
 |-----------------|------------|  
 |离散|列中的唯一值。|  
 |离散化|列中每个离散化存储桶的中点。|  
 |连续|列中各值的中点。|  
   
 ## <a name="discrete-column-example"></a>离散列示例  
- 下面的代码示例基于`[TM Decision Tree]`中创建的模型[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询返回离散列 `Gender` 中存在的唯一值。  
+ 下面的代码示例基于`[TM Decision Tree]`中创建的模型[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询返回离散列 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -115,7 +100,7 @@ FROM [TM Decision Tree]
  查询还返回一行表示缺失值的 Null 值。  
   
 ## <a name="discretized-column-example"></a>离散化列示例  
- 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，更改的内容类型`Yearly Income`列从**连续**到**Discretized**。  
+ 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，更改的内容类型`Yearly Income`从列**连续**到**Discretized**。  
   
 > [!NOTE]  
 >  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息，请参阅[更改挖掘模型中的列的离散化](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  
@@ -149,9 +134,9 @@ FROM [TM Decision Tree]
 > [!NOTE]  
 >  最小存储桶的最小值和最大存储桶的最大值为所观察到的最高值和最低值。 任何超出此观察范围的值都假定为属于最小存储桶和最大存储桶。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

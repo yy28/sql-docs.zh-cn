@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030258"
 ---
 # <a name="troubleshoot-reporting-services"></a>排除 Reporting Services 故障
   此部分的主题帮助确定并解决 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的问题。  

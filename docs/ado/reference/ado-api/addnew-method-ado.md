@@ -2,7 +2,6 @@
 title: AddNew 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315eec5a4cddccb55be1ad9b8bd9d8bc4ded99cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21161d5755fc31be78aced4a7f4350dbf901fd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275206"
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 创建可更新的新记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -42,12 +42,12 @@ recordset.AddNew FieldList, Values
  A**记录集**对象。  
   
  *字段列表*  
- 選擇性。 单个名称或名称的数组或新记录中的字段的序号位置。  
+ 可选。 单个名称或名称的数组或新记录中的字段的序号位置。  
   
  *值*  
- 選擇性。 单个值，则新记录中字段的值为数组。 如果*Fieldlist*是一个数组，*值*必须也为数组具有相同成员的数目; 否则为将会出错。 字段名称的顺序必须匹配每个数组中的字段值的顺序。  
+ 可选。 单个值，则新记录中字段的值为数组。 如果*Fieldlist*是一个数组，*值*必须也为数组具有相同成员的数目; 否则为将会出错。 字段名称的顺序必须匹配每个数组中的字段值的顺序。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**AddNew**方法创建并初始化一个新的记录。 使用[支持](../../../ado/reference/ado-api/supports-method.md)方法替换**adAddNew** ( [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值) 以验证是否可以将记录添加到当前**记录集**对象。  
   
  调用后**AddNew**方法，新的记录将成为当前记录和调用方法后仍当前[更新](../../../ado/reference/ado-api/update-method.md)方法。 由于新的记录追加到**记录集**，调用**MoveNext**更新后的末尾将移动**记录集**，这会让**EOF** True。 如果**记录集**对象不支持书签，你可能无法访问新的记录，一旦您移动到另一条记录。 具体取决于游标类型，你可能需要调用[Requery](../../../ado/reference/ado-api/requery-method.md)方法，以便可以访问新的记录。  
@@ -89,7 +89,7 @@ rs.Update
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AddNew 方法示例 (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew 方法示例 (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [AddNew 方法示例 （VC + +）](../../../ado/reference/ado-api/addnew-method-example-vc.md)   

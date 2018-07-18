@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916672"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC 服务提供程序接口摘要
 下表介绍 ODBC 服务提供程序接口函数。 有关语法和语义为每个函数的详细信息，请参阅[ODBC 服务提供程序接口 (SPI) 引用](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)。  

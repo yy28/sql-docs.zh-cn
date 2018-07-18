@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,17 +17,18 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 866eb9df9bffb4e1df8e16966cf69986bb14c267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa0a1257f6cb873c92b88cbe00001ed39fcf2845
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354189"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制将数据库对象安装在 Oracle 发布服务器上以启用更改跟踪和转发（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会在 Oracle 发布服务器上安装任何二进制文件）。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
   
-|Object Name|对象类型|Description|  
+|Object Name|对象类型|描述|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|表|更改跟踪表，当对已发布的表中进行了更改时，可使用此表存储更改信息。 为每个已发布的表创建一个更改跟踪表。|  
 |HREPL_Changes|表|Xactset 作业内部用来确定等待分配给事务集的更改数量的表。 有关此作业的详细信息，请参阅 [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)（Oracle 发布服务器的性能优化）。|  

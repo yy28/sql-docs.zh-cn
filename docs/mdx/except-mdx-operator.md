@@ -1,6 +1,6 @@
 ---
 title: '- （除外）(MDX) |Microsoft 文档'
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bac57c061205b421ad1492643c1be2ce6f8530bd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 618beda530627898cdf55f08be5071fd7568688c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578269"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740696"
 ---
 # <a name="except-mdx-operator"></a>除非 (MDX) 运算符
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   执行一个集运算，以返回两个集之间的不同项并删除重复成员。  
   

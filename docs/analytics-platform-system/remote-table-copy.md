@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538717"
 ---
 # <a name="remote-table-copy"></a>远程表复制
 描述如何使用远程表复制功能将从 SQL Server PDW 数据库的表复制到远程的 （非设备） SMP SQL Server 数据库。 用于 SQL Server PDW 的远程表复制到启用中心辐射方案。  

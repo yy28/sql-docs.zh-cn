@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911092"
 ---
 # <a name="sequence-of-status-records"></a>状态记录的序列
 如果返回了两个或多个状态记录，驱动程序管理器和驱动程序它们设置级别根据以下规则。 具有最高级别的记录是第一条记录。 记录 （驱动程序管理器、 驱动程序、 网关，等） 的源不会被视为时排名记录。  

@@ -1,8 +1,6 @@
 ---
 title: 连接到 Azure SQL DB (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: caa08a1a450e53e42e2b27bad33a7610e65220bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2092062d5409db561ba6b3f9055d180c8d10db48
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775683"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>连接到 Azure SQL DB (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Azure，必须连接到 SQL Azure 的目标实例。 连接时，SSMA 获取有关 SQL Azure 实例中的所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储的连接，但不会存储密码的 SQL Azure 实例的信息。  
@@ -94,6 +93,6 @@ ms.lasthandoff: 05/03/2018
   
 -   如果不需要执行任何这些任务，你可以将 MySQL 数据库对象定义转换为 SQL Azure 对象定义。 有关详细信息，请参阅[转换 MySQL 数据库&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

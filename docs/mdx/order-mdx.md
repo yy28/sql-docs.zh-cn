@@ -1,34 +1,23 @@
 ---
 title: 次序 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ORDER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Order function
-ms.assetid: 84acff52-2443-4424-a09e-694e6f14c109
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bfb3e7e9aba3b60df80d599a8f7443b91c7b7b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742456"
 ---
 # <a name="order-mdx"></a>Order (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   排列指定集的成员，可以选择保留或打乱原有的层次结构。  
   
@@ -56,7 +45,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  通常是单元坐标（返回以字符串表示的数字）的有效多维表达式 (MDX) 的有效字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **顺序**函数可以是分层 (所指定的使用**ASC**或**DESC**标志) 或非层次结构 (通过使用指定**BASC**或**BDESC**标志; **B**代表"中断层次结构")。 如果**ASC**或**DESC**指定，则**顺序**函数首先将根据其位置在位于层次结构的成员，然后订单每个级别。 如果**BASC**或**BDESC**指定，则**顺序**函数排列而不考虑层次结构集中的成员。 在任何标志指定如何， **ASC**是默认设置。  
   
  如果**顺序**函数用于处理一组其中两个或多个层次结构是交叉联接，和**DESC**使用标志，则只有组中的最后一个层次结构的成员进行排序。 这与 Analysis Services 2000 不同，后者对集合中的所有层次结构进行排序。  
@@ -222,7 +211,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911552"
 ---
 # <a name="schema-views"></a>架构视图
 通过调用 ODBC 目录函数或通过使用 INFORMATION_SCHEMA 视图，应用程序可以从 DBMS 检索元数据信息。 视图定义由 ANSI sql-92 标准。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42a983e599e68873950444317db0f1ecae941a3e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f8c57d8e8a024fc70a5ed55de08add886d9c065
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311196"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
   
-|DQS 组件|Description|  
+|DQS 组件|描述|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 在 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 数据库引擎的基础上安装，包括三个数据库：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 是一个独立的应用程序，使你可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，并提供一个高度直观的图形用户界面来执行数据质量操作以及与 DQS 相关的其他管理任务。|  

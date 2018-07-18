@@ -1,22 +1,21 @@
 ---
 title: 使用 .NET 代码 (C#) 运行 SSIS 项目 | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 256e8b022406a589bc31d595e4cc3b3fb052570d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410479"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>使用 .NET 应用中的 C# 代码运行 SSIS 包
 本快速入门演示如何编写用于连接数据库服务器和运行 SSIS 包的 C# 代码。

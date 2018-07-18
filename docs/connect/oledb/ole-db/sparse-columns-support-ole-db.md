@@ -2,10 +2,10 @@
 title: 稀疏列支持 (OLE DB) |Microsoft 文档
 description: 稀疏列支持 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d505ef702a1fda4b3896b51efb23c2b3b761bf33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5acd9fc1a368f9f7701468887263129495b046e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611922"
 ---
 # <a name="sparse-columns-support-ole-db"></a>稀疏列支持 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本主题提供有关稀疏列的 SQL Server 支持 OLE DB 驱动程序信息。 有关稀疏列的详细信息，请参阅[OLE DB 驱动程序的 SQL Server 中的稀疏列支持](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。 有关示例，请参阅[显示列和稀疏列的目录元数据&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 |IOpenRowset::OpenRowset|IOpenRowset::OpenRowset 返回作为 ICommand::Execute，相同的列行集**选择\*** 对同一个表的查询。|  
 |ITableDefinition|没有此接口为稀疏列或没有更改**column_set**列。 必须进行架构修改的应用程序必须直接执行正确的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -1,26 +1,25 @@
 ---
-title: 发送和接收数据以增量方式与 FILESTREAM (ODBC) |Microsoft 文档
+title: 发送和接收数据以增量方式与 FILESTREAM (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71bdf8f52d8b8ea726e9d350013c7848654903a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76a02beccc609c62267594e7f3512e8f0e395157
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428496"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +30,11 @@ ms.lasthandoff: 05/03/2018
  有关 FILESTREAM 功能的详细信息，请参阅[FILESTREAM 支持&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>示例  
- 编译并运行此示例之前，启用 FILESTREAM 的支持 ([启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 编译并运行此示例之前，启用 FILESTREAM 支持 ([启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
   
- 第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
+ 第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
   
  第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用的数据库。  
   

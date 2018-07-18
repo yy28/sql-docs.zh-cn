@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914252"
 ---
 # <a name="function-conformance"></a>函数一致性
 下表指示这是定义完善的每个 ODBC 函数，一致性级别。  

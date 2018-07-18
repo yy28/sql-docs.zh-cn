@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898902"
 ---
 # <a name="jet-outer-joins"></a>Jet： 外部联接
 SELECT 语句可以包含 OUTER JOIN 子句的列表。 支持嵌套的外部联接。 有关外部联接的详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。

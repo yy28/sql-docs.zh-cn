@@ -2,7 +2,6 @@
 title: 索引追加方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f8376004abf7d3e63938a449b7057ff582e8be9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e11ab17b03988ca30842e66c9d1ebcf0c0bd3958
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286066"
 ---
 # <a name="indexes-append-method-example-vc"></a>索引追加方法示例 （VC + +）
 下面的代码演示如何创建新的索引。 索引是上表中的两个列。  

@@ -1,8 +1,6 @@
 ---
 title: 全局设置 （对话框） (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 88ada3b15e6c3b0ff23661876a713f633ea93262
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ce168a2cfe2937195bffe20c39a9a2a4f3fbf3b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774813"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>全局设置 （对话框） (DB2ToSQL)
 使用的对话框页**全局设置**对话框中指定的默认用户执行任何操作和 SSMA 警告设置。  
   
 若要访问在该对话框设置**工具**菜单上，选择**全局设置**，单击**GUI**底部的左窗格中，，然后选择**对话框**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **覆盖对象之前，则发出警告**  
 当 SSMA 将对象转换为 SQL Server 时，某些对象可能已经存在于项目的 SQL Server 元数据。 这些对象可能已转换，或对象可能只需具有在目标架构与要转换的对象相同的名称。  
   

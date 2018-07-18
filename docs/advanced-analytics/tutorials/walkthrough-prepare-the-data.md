@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af8c03d33fe0e0b42fe09fbe1b900166d50e25cd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585929"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>准备使用 PowerShell （演练） 的数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +84,7 @@ GitHub 存储库中提供了所需的所有代码。 可使用 PowerShell 脚本
 
 ### <a name="install-required-packages-on-the-server"></a>在服务器上安装所需的包
 
-有多种不同的方法，你可以在 SQL Server 上安装包。 例如，SQL Server 提供[包管理](../r/installing-and-managing-r-packages.md)功能，它允许数据库管理员创建的程序包存储库并将用户分配的权限来安装其自己的程序包。 但是，如果你是计算机上的管理员，你可以安装使用 R，新包，只要您将安装到正确的库。
+有多种不同的方法，你可以在 SQL Server 上安装包。 例如，SQL Server 提供[R 包管理](../r/install-additional-r-packages-on-sql-server.md)功能，它允许数据库管理员创建的程序包存储库并将用户分配的权限来安装其自己的程序包。 但是，如果你是计算机上的管理员，你可以安装使用 R，新包，只要您将安装到正确的库。
 
 > [!NOTE]
 > 在服务器上，**不这样做**即使提示安装到用户的库。 若要安装到用户库时，SQL Server 实例无法找到或运行包。 有关详细信息，请参阅 [在 SQL Server 上安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)。
@@ -162,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-单击此链接可跳转到下一课：[视图和浏览使用 SQL 数据](/walkthrough-view-and-explore-the-data.md)
+单击此链接可跳转到下一课：[视图和浏览使用 SQL 数据](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>故障排除
 
@@ -296,10 +297,10 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ## <a name="next-lesson"></a>下一课
 
-[查看和浏览使用 R 和 SQL 的数据](/walkthrough-view-and-explore-the-data.md)
+[查看和浏览使用 R 和 SQL 的数据](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>上一课
 
-[R 和 SQL Server 的端到端数据科学演练](/walkthrough-data-science-end-to-end-walkthrough.md)
+[R 和 SQL Server 的端到端数据科学演练](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [数据科学演练的先决条件](walkthrough-prerequisites-for-data-science-walkthroughs.md)

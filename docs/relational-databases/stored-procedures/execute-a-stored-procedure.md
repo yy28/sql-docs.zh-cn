@@ -3,12 +3,9 @@ title: 执行存储过程 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stored-Procs
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 422273339e93fa5804b6cd0f5b3c4d2f1a7f833f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd5f9f06a5a1cb1d0fc7a1db4c7539cfc58a40b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326647"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,9 +136,9 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
-2.  展开所需的数据库，然后依次展开 **“可编程性”**和 **“存储过程”**。  
+2.  展开所需的数据库，然后依次展开 **“可编程性”** 和 **“存储过程”**。  
   
 3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”。  
   

@@ -2,7 +2,6 @@
 title: SetPermissions 方法 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3178c472bfeb58361ae6d7d889d82d3823b09469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cb3bb780109c61b5d481d0d0d3bae56badea819
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286798"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象上。  
@@ -53,12 +53,12 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  A**长**值可以是一个位屏蔽的一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量，指示设置的权限。  
   
  *继承*  
- 選擇性。 A**长**值可以是之一的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常量，用于指定如何将对象将继承这些权限。 默认值是**adInheritNone**。  
+ 可选。 A**长**值可以是之一的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常量，用于指定如何将对象将继承这些权限。 默认值是**adInheritNone**。  
   
  *ObjectTypeId*  
- 選擇性。 A **Variant**值，该值指定不由 OLE DB 规范定义的提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
+ 可选。 A **Variant**值，该值指定不由 OLE DB 规范定义的提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果提供程序不支持组或用户的设置访问权限，将会出错。  
   
 > [!NOTE]
@@ -70,7 +70,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 |-|-|  
 |[组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetPermissions 和 SetPermissions 方法示例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

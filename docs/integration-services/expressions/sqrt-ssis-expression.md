@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6655fbe3a6d21fb0a454bfdf0e999e8439fd4b5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e80c79f6d6b56b912aadb8f0ba793d73e5be4934
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407629"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT（SSIS 表达式）
   返回数值表达式的平方根。  
@@ -37,7 +36,7 @@ SQRT(numeric_expression)
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 是任意数值数据类型的数值表达式。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 是任意数值数据类型的数值表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>结果类型  
  DT_R8  

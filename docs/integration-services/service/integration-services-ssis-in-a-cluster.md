@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
@@ -16,11 +14,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfab44cc1e7b73e7172e5195c49268b97c94857f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3db86a73665ba532ecd5a1a55ce83339c61b36b9
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409929"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
   建议不要对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行聚类分析，因为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不是群集服务或群集感知服务，而且不支持从一个群集节点故障转移到另一个节点。 因此，在群集环境内，应当在群集的每个节点上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 并将其作为一个独立服务来启动。  
@@ -103,11 +102,11 @@ ms.lasthandoff: 05/03/2018
   
 4.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“资源”**。  
   
-5.  在“资源向导”的 **“新资源”** 页上，键入名称并选择 **“一般服务”** 作为 **“服务类型”**。 不要更改 **“组”**的值。 单击“下一步” 。  
+5.  在“资源向导”的 **“新资源”** 页上，键入名称并选择 **“一般服务”** 作为 **“服务类型”**。 不要更改 **“组”** 的值。 单击“下一步” 。  
   
 6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步” 。  
   
-7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”**下选择一项资源，然后单击 **“添加”**。 对于故障转移情况， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”**。  
+7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”** 下选择一项资源，然后单击 **“添加”**。 对于故障转移情况， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”**。  
   
      有关详细信息，请参阅 [Add Dependencies to a SQL Server Resource](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   

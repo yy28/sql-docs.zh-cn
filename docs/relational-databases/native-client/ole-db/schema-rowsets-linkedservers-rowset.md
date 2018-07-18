@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行集 (OLE DB) |Microsoft 文档
+title: LINKEDSERVERS 行集 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +19,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 08dabc873c9d80b3759f6a425f9e963064773350
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 975008ce3de833315ea9319e85880d7789517028
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421036"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>架构行集-LINKEDSERVERS 行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  **LINKEDSERVERS**行集枚举组织数据源可以参与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询。  
+  **LINKEDSERVERS**行集枚举可以参与的组织数据源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询。  
   
- **LINKEDSERVERS**行集包含以下各列。  
+ **LINKEDSERVERS**行集包含以下列。  
   
 |列名|类型指示符|Description|  
 |-----------------|--------------------|-----------------|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  行集按 SRV_NAME 排序，并支持对 SRV_NAME 的单个限制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [架构行集支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916372"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 服务提供程序接口 (SPI) 引用
 传统上，ODBC 定义应用程序编程接口 (API)。 可以由应用程序调用 API 中的函数，它们应在驱动程序管理器和驱动程序内实现。  

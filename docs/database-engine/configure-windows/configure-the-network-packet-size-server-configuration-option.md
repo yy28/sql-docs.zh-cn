@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866372"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>配置 network packet size 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“高级”** 节点。  
   
-3.  在 **“网络”**下，选择 **“网络数据包大小”** 框的值。  
+3.  在 **“网络”** 下，选择 **“网络数据包大小”** 框的值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

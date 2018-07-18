@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026894"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -147,7 +148,7 @@ ms.lasthandoff: 05/10/2018
   
     -   列上的**Sales Reason Name**   
   
-    -   行上的**“销售订单号”**   
+    -   行上的 **“销售订单号”**   
   
 4.  分析结果。 因为我们在使用示例数据，所以，最初的印象是所有销售订单都具有完全相同的值。 但是，如果您向下滚动，则会开始看到数据变化。  
   

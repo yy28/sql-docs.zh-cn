@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028114"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  

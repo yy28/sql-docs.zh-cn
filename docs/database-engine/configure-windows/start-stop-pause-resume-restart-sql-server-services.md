@@ -49,6 +49,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870562"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +164,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，单击 **“SQL Server 服务”**。  
   
-4.  在结果窗格中，右键单击命名实例的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”**或者“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (MSSQLServer)”或“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (<instance_name>)”，然后单击“开始”、“停止”、“暂停”、“恢复”或“重启”。  
+4.  在结果窗格中，右键单击命名实例的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”** 或者“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (MSSQLServer)”或“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (<instance_name>)”，然后单击“开始”、“停止”、“暂停”、“恢复”或“重启”。  
   
 5.  单击 **“确定”** 关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   

@@ -1,13 +1,12 @@
 ---
-title: datetime 数据类型转换 (ODBC) |Microsoft 文档
+title: datetime 数据类型转换 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - bindings [ODBC]
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39a6c79dee9d84ee85efd3b9d8b97b1ae82d081e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 451f379563b8705d027854f29bd04abbd3857e50
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424676"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 数据类型转换 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 -   日期字符串的格式为 'yyyy-mm-dd'  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅的"数据格式:: 字符串和文本"部分[ODBC 日期和时间的改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅的"数据格式： 字符串和文字"部分[ODBC 日期和时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
   
  下面是一般的转换规则：  
   
@@ -58,14 +57,14 @@ ms.lasthandoff: 05/03/2018
   
 -   如果在从 SQL 转换到 C 时截断了秒或秒的小数部分，则生成带有 SQLSTATE 01S07 的诊断记录和消息“截断小数部分”。  
   
-## <a name="in-this-section"></a>本節內容  
- [从 C 到 SQL 转换](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)  
+## <a name="in-this-section"></a>本节内容  
+ [由 C 转换为 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)  
  列出了在从 C 类型转换到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型时要考虑的问题。  
   
- [从 SQL 转换到 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)  
+ [由 SQL 转换为 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)  
  列出了在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换到 C 类型时要考虑的问题。  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

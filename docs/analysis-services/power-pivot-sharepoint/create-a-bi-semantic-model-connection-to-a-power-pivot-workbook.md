@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026504"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>创建与 Power Pivot 工作簿的 BI 语义模型连接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

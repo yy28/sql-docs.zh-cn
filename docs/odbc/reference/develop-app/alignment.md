@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909403"
 ---
 # <a name="alignment"></a>Alignment
 ODBC 应用程序中的对齐方式问题并通常没有什么区别不是它们处于任何其他应用程序。 这就是，大多数 ODBC 应用程序具有带对齐方式的弱或根本没有问题。 因为不对齐地址受到处罚硬件和操作系统而异，并且可能导致性能略微下降作为等小或为主要视为致命的运行时错误。 因此，ODBC 应用程序和可移植的 ODBC 应用程序尤其是，应小心地将其正确对齐的数据。  

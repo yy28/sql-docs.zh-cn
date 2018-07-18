@@ -3,7 +3,6 @@ title: 空闲连接复原
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307256"
 ---
 # <a name="idle-connection-resiliency"></a>空闲连接复原
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,14 +24,14 @@ ms.lasthandoff: 05/03/2018
 
 连接复原实现与可以添加到连接字符串的两个连接关键字： **ConnectRetryCount**和**ConnectRetryInterval**。
 
-|关键字|值|默认|Description|
+|关键字|值|，则“默认”|Description|
 |-|-|-|-|
-|**ConnectRetryCount**| 介于 0 和 255 （含） 之间的整数|1|尝试重新建立放弃之前断开的连接的最大次数。 默认情况下，进行一次尝试以重新建立连接时中断。 值为 0 表示将尝试没有重新连接。|
-|**ConnectRetryInterval**| 介于 1 和 60 （含） 之间的整数|1| 以秒为单位，以重新建立连接尝试之间的时间。 应用程序将尝试检测到断开的连接后立即重新连接，并会然后等到**ConnectRetryInterval**秒，然后重试。 如果此关键字将被忽略**ConnectRetryCount**等于 0。
+|**ConnectRetryCount**| 介于 0 和 255 （含） 之间的整数|@shouldalert|尝试重新建立放弃之前断开的连接的最大次数。 默认情况下，进行一次尝试以重新建立连接时中断。 值为 0 表示将尝试没有重新连接。|
+|**ConnectRetryInterval**| 介于 1 和 60 （含） 之间的整数|@shouldalert| 以秒为单位，以重新建立连接尝试之间的时间。 应用程序将尝试检测到断开的连接后立即重新连接，并会然后等到**ConnectRetryInterval**秒，然后重试。 如果此关键字将被忽略**ConnectRetryCount**等于 0。
 
 如果的产品**ConnectRetryCount**乘以**ConnectRetryInterval**大于**LoginTimeout**，则客户端将停止尝试进行一次连接**LoginTimeout**为止; 否则，它将继续尝试重新连接直到**ConnectRetryCount**为止。
 
-#### <a name="remarks"></a>注释
+#### <a name="remarks"></a>Remarks
 
 在连接处于空闲状态时，连接复原适用。 执行事务，例如，不会触发重新连接尝试 – 时发生的失败则会失败否则按预期的那样。 下列情况下，名为不可恢复的会话状态，不会触发重新连接尝试次数：
 
@@ -131,5 +131,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Windows ODBC 驱动程序中的连接弹性](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

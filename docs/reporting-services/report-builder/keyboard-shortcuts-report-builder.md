@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020624"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
   在报表生成器中创建和编辑分页的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，可以使用 Windows 环境提供的用于导航的所有快捷键。 您可以从多个标准键盘映射方案中选择。  

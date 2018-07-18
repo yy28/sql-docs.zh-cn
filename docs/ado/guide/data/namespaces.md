@@ -2,7 +2,6 @@
 title: 命名空间 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93a3aca2aee11ed1f78fb33ca286b171a28f62d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 419d11660d88f102cfa92628f4ee16fb89d8c422
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272086"
 ---
 # <a name="namespaces"></a>命名空间
 ADO 中的 XML 持久性格式使用以下四个命名空间。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ADO 中的 XML 持久性格式使用以下四个命名空间。  
   
 |Prefix|Description|  
@@ -49,5 +49,5 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
   
  用户可以定义为任何名称，只要整个 XML 文档一致地使用此名称。 ADO 始终写出"s、"rs、"dt，"并"z，"但这些前缀名称不是硬编码到加载组件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

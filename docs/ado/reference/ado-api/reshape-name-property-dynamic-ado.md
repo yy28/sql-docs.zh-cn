@@ -2,7 +2,6 @@
 title: 重新调整形状名称属性的动态 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4901e09d0df933c6aa35e8c1ebed3e62ef2012f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4752609469ecad3a3a6631584e120de8cc4a7575
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281406"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>重新调整形状名称属性的动态 (ADO)
 指定的名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>返回值  
  返回**字符串**值的名称**记录集**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  名称的连接或直到持续期间保留**记录集**已关闭。  
   
  **重新调整形状名称**属性主要用于与的重新调整功能一起使用[用于 OLE DB 的 Microsoft 数据调整服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)服务提供程序。 名称必须是唯一的以参与重新调整。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调整用于 OLE DB （ADO 服务提供程序） 的服务的 Microsoft 数据](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [在常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

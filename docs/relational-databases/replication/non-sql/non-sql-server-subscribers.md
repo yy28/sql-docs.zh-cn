@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,11 +25,12 @@ caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e031fe7469b95a68f06d01efb53903978c5ecd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab93ca40e53454d1574482b8ebeeaa625e671f9f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352609"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,9 +108,11 @@ Oracle 版本信息：
   
 ### <a name="replication-feature-support"></a>复制功能支持  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种订阅类型：推送订阅和请求订阅。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器必须使用推送订阅，在这种订阅中，分发代理运行在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器中。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种订阅类型：推送订阅和请求订阅。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器必须使用推送订阅，在这种订阅中，分发代理运行在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器中。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器需要字符模式快照。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器需要字符模式快照。  
   
 -   非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器不能使用即时更新订阅或排队更新订阅，也不能作为对等拓扑中的节点。  
   

@@ -2,7 +2,6 @@
 title: RDS 的使用情况和阿娜 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e149ec41722f22ce5b9c57592df39dd0d22b1fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc65be00af43f9ad891d01ad00e506fcd178872d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274236"
 ---
 # <a name="rds-usage-and-security"></a>RDS 的使用情况和阿娜
 使用本节中的信息设置你的服务器和快速使用 RDS。 本部分包括可能需要实现 RDS，介绍了一些 RDS 和其他技术之间的键关系时要执行的特定的配置步骤，并帮助确定设置时可能遇到的问题的解决方案RDS 解决方案。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [RDS 故障排除](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS 方案](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)

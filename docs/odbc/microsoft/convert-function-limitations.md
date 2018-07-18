@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898452"
 ---
 # <a name="convert-function-limitations"></a>转换函数限制
 类型转换失败会导致受影响的列设置为 NULL。  

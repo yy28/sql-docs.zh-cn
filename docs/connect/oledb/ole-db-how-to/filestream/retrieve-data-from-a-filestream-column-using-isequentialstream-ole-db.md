@@ -2,10 +2,10 @@
 title: 从使用 ISequentialStream (OLE DB) 的 FILESTREAM 列中检索数据 |Microsoft 文档
 description: 从使用 ISequentialStream (OLE DB) 的 FILESTREAM 列中检索数据
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: aefa55bf8da7b978e6371d91f0ca1a642a882cbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df98e47d26a9e6cce3e5f98e74deae4b0783aafa
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665537"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   此示例显示如何使用 ICommandText 接口中的 ISequentialStream 接口从 Filestream 列检索单个记录。  
   
@@ -32,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
  使用以下示例之一创建此示例读取的表：  
   
--   [将数据发送到 FILESTREAM 列使用 ISequentialStream 绑定到 ICommandText 参数 & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [将数据发送到 FILESTREAM 列使用 ISequentialStream 绑定到 ICommandText 参数&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [将数据发送到 FILESTREAM 列使用 IRowsetFastUpload & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [将数据发送到 FILESTREAM 列使用 IRowsetFastUpload &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  复制第一个代码列表，并将其粘贴到名为 ISSHelper.h 的文件中。  
   

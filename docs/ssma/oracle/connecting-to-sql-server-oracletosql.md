@@ -1,8 +1,6 @@
 ---
 title: 连接到 SQL Server (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 11a24da859c53107498111c6dc4d511cccd1b800
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 525560d66e5de50743bba0c1203c6617b482bef8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777153"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>连接到 SQL Server (OracleToSQL)
 若要迁移到的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 R2 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 必须连接到其中的任何目标实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 连接时，获取有关的实例中的所有数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]并显示在数据库元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 SSMA 存储的哪个实例有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]已连接，但不会存储密码。  
@@ -88,15 +87,15 @@ ms.lasthandoff: 05/03/2018
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (版本： 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (版本： 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL 数据库|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|是|用户帐户控制|用户帐户控制|用户帐户控制|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||是|用户帐户控制|用户帐户控制|是||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||是|用户帐户控制|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|是|是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||是|是|是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||是|是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||是||
 |Azure SQL 数据库||||||是|
   
 > [!IMPORTANT]  
-> 根据项目类型，但不是根据版本的数据库对象的转换执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 你连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年项目转换执行按照[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 即使你已连接到更高版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016年)。  
+> 根据项目类型，但不是根据版本的数据库对象的转换执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年项目转换执行按照[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 即使你已连接到更高版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016年)。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server 元数据同步  
 有关的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库不会自动更新。 中的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器是元数据的快照，首次连接到时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，或上一次你手动更新的元数据。 你可以手动更新所有数据库，或任何单个数据库或数据库对象的元数据。  
@@ -122,6 +121,6 @@ ms.lasthandoff: 05/03/2018
   
 -   如果不需要执行任何这些任务，你可以将转换到的 Oracle 数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象定义。 有关详细信息，请参阅[转换 Oracle 架构&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

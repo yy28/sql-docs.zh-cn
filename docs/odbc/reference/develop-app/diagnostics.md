@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910162"
 ---
 # <a name="diagnostics"></a>诊断
 ODBC 中的函数返回了两种方式的诊断信息。 返回代码指示的总体成功或失败的函数，诊断记录提供有关函数的详细的信息。 至少一个诊断记录-标头记录 — 即使如果函数成功，则返回。  

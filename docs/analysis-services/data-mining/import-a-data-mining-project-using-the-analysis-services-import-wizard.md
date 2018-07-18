@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014984"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 导入向导导入数据挖掘项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,9 +29,9 @@ ms.lasthandoff: 05/10/2018
   
      此时，您可能还需要验证要用于处理数据挖掘对象或查询数据挖掘模型的帐户是否具有对数据源的必要权限。  
   
--   默认情况下，在导入项目时，工作区数据库会设置为本地主机，或者任意默认实例会在 **中配置为** “默认目标服务器” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 若要设置此属性，请从 **“选项”** 菜单中依次选择 **“商业智能设计器”**、 **“Analysis Services”**和 **“常规”**。  
+-   默认情况下，在导入项目时，工作区数据库会设置为本地主机，或者任意默认实例会在 **中配置为** “默认目标服务器” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 若要设置此属性，请从 **“选项”** 菜单中依次选择 **“商业智能设计器”**、 **“Analysis Services”** 和 **“常规”**。  
   
-     请注意， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中还包含一个单独选项，可设置此选项以便为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目配置默认部署服务器。 **“默认部署服务器”**设置可确定表格模型项目的默认工作区数据库。 不能对数据挖掘项目使用支持表格模型的实例  
+     请注意， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中还包含一个单独选项，可设置此选项以便为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目配置默认部署服务器。 **“默认部署服务器”** 设置可确定表格模型项目的默认工作区数据库。 不能对数据挖掘项目使用支持表格模型的实例  
   
      如果无法更改默认部署数据库以使用在多维或数据挖掘模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，则可始终通过使用 **“项目属性”** 对话框来指定部署数据库。  
   
@@ -40,11 +41,11 @@ ms.lasthandoff: 05/10/2018
   
 2.  在“新建项目”对话框中，在“已安装的模板”下，依次单击“商业智能”、“Analysis Services”和“从服务器导入（多维/数据挖掘）”。  
   
-3.  在 **“名称”**中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
+3.  在 **“名称”** 中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
   
      这将启动 **“导入 Analysis Services 数据库向导”** 。 单击“欢迎使用”页面上的“确定”以继续。  
   
-4.  在该页上的 **“选择源数据库”**中，对于 **“服务器”**，指定包含要导入的解决方案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
+4.  在该页上的 **“选择源数据库”** 中，对于 **“服务器”**，指定包含要导入的解决方案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
      对于 **“数据库”**，选择包含要导入的数据挖掘对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
      单击“下一步” 。  
   
-5.  **“完成向导”**页将显示导入操作的进度。 无法取消该操作或更改正在导入的对象。 完成操作后，请单击 **“完成”** 。  
+5.  **“完成向导”** 页将显示导入操作的进度。 无法取消该操作或更改正在导入的对象。 完成操作后，请单击 **“完成”** 。  
   
      这将自动使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]打开新对象。  
   

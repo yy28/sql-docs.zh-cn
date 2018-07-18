@@ -1,35 +1,23 @@
 ---
 title: ': （范围) (MDX) |Microsoft 文档'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ':'
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ': (range operator)'
-- range operator (:)
-ms.assetid: f9b36aca-4efd-49b4-9e4f-12914c1b24a6
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5dd15009a01d51ef50d7dadf8ff9b5d6290d20d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 882082d503bf88f21566ac79ea4393a24ee551e4
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742776"
 ---
 # <a name="-range-mdx"></a>:（范围）(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   执行一个集运算以返回一个自然排序集，它将两个指定成员作为端点，并将这两个指定成员之间的所有成员作为该集的成员。  
   
@@ -47,8 +35,8 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>返回值  
  包含指定成员以及指定成员之间的所有成员的集。  
   
-## <a name="remarks"></a>注释  
- 两个参数所指定的成员必须位于给定维度的同一级别和层次结构中。 如果这两个参数指定相同的成员， **: （范围）**运算符将返回包含指定的成员的集。 如果第一个参数为 Null，则该集包含从第二个参数中指定的成员级别开始直到包括该成员的所有成员。 如果第二个参数为 Null，则该集包含从第一个参数中指定的成员开始直到包括同一级别最后一个成员的所有成员。  
+## <a name="remarks"></a>Remarks  
+ 两个参数所指定的成员必须位于给定维度的同一级别和层次结构中。 如果这两个参数指定相同的成员， **: （范围）** 运算符将返回包含指定的成员的集。 如果第一个参数为 Null，则该集包含从第二个参数中指定的成员级别开始直到包括该成员的所有成员。 如果第二个参数为 Null，则该集包含从第一个参数中指定的成员开始直到包括同一级别最后一个成员的所有成员。  
   
  在 MDX 中没有与此集运算符功能相同的函数。  
   
@@ -74,7 +62,7 @@ WHERE
     ([Measures].[Freight Per Customer])  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

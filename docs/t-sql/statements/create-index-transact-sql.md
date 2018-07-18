@@ -59,11 +59,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 63e1b86c52c6236d4b956f93910e9adb40abef10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582299"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,10 +109,10 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
-  
+
+### <a name="syntax-for-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL 数据库的语法
+
 ```  
--- Syntax for SQL Server and Azure SQL Database
-  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )   
     [ INCLUDE ( column_name [ ,...n ] ) ]  
@@ -167,14 +168,14 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
-  
-Backward Compatible Relational Index
+```
+
+### <a name="backward-compatible-relational-index"></a>后向兼容的关系索引
 
 > [!IMPORTANT]
-> The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-> Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
-> Use the syntax structure specified in <relational_index_option> instead.  
-  
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除此后向兼容的关系索引语法结构。 请避免在新的开发工作中使用此语法结构，并计划修改当前使用此功能的应用程序。 改用 <relational_index_option> 中指定的语法结构。  
+
+```  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
     [ WITH <backward_compatible_index_option> [ ,...n ] ]  
@@ -196,10 +197,9 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | DROP_EXISTING   
 }  
 ```  
-
+### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL 数据仓库和并行数据仓库的语法  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON [ database_name . [ schema ] . | schema . ] table_name   
@@ -498,7 +498,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
 MAXDOP = max_degree_of_parallelism  
 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 在索引操作期间替代 max degree of parallelism 配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 在索引操作期间替代 max degree of parallelism 配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
  max_degree_of_parallelism 可以是：  
   
@@ -1032,4 +1032,3 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
  [sys.xml_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
  
-

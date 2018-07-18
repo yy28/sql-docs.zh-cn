@@ -2,7 +2,6 @@
 title: HelloData： 一个简单的 ADO 应用程序 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271696"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData： 一个简单的 ADO 应用程序
 此简单的应用程序步骤通过每个四个主要的 ADO 操作： 获取、 检查、 编辑和更新数据。 对随附 Microsoft® SQL Server 的 Northwind 示例数据库执行这些操作。 若要专注于 ADO 的基础知识并避免出现代码混乱，该示例中的错误处理很小。  
@@ -46,19 +46,19 @@ ms.lasthandoff: 05/03/2018
   
  ![HelloData VB 应用程序显示 Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|控件类型|属性|“值”|  
+|控件类型|“属性”|ReplTest1|  
 |------------------|--------------|-----------|  
-|Form|名称|Form1|  
+|Form|“属性”|Form1|  
 ||高度|6500|  
 ||宽度|6500|  
-|MS DataGrid|名称|grdDisplay1|  
-|TextBox|名称|txtDisplay1|  
+|MS DataGrid|“属性”|grdDisplay1|  
+|TextBox|“属性”|txtDisplay1|  
 ||多行|true|  
-|命令按钮|名称|cmdGetData|  
+|命令按钮|“属性”|cmdGetData|  
 ||Caption|获取数据|  
-|命令按钮|名称|cmdExamineData|  
+|命令按钮|“属性”|cmdExamineData|  
 ||Caption|检查数据|  
-|命令按钮|名称|cmdEditData|  
+|命令按钮|“属性”|cmdEditData|  
 ||Caption|编辑数据|  
-|命令按钮|名称|cmdUpdateData|  
+|命令按钮|“属性”|cmdUpdateData|  
 ||Caption|更新数据|

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_merge_requests (Transact SQL) |Microsoft 文档
+title: sys.dm_db_xtp_merge_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -14,33 +14,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 262fb2743efef806c31cf1b452a214150691e255
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048515"
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 
-跟踪数据库合并请求。 合并请求可能由 SQL Server 生成或请求无法由具有的用户发出[sys.sp_xtp_merge_checkpoint_files (Transact SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)。
+跟踪数据库合并请求。 Merge 请求可能由 SQL Server 生成或请求可以由具有权限的用户发出[sys.sp_xtp_merge_checkpoint_files (Transact SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)。
 
 > [!NOTE]
-> 此动态管理视图 (DMV)，直到 Microsoft SQL Server 2014 sys.dm_db_xtp_merge_requests，存在。
+> 此动态管理视图 (DMV) sys.dm_db_xtp_merge_requests，Microsoft SQL Server 2014 之前存在。
 > 
-> 但此 DMV 启动 SQL Server 2016 不再适用。
+> 但是，此 DMV 与 SQL Server 2016 开始不再适用。
 
 ## <a name="columns-in-the-report"></a>在报表中的列
 
 | 列名 | 数据类型 | Description |
 | :-- | :-- | :-- |
-| request_state | tinyint | 合并请求的状态：<br/>0 = requested<br/>1 = pending<br/>2 = 安装<br/>3 = abandoned |
-| request_state_desc | nvarchar(60) | 请求的当前状态的含义：<br/><br/>请求的存在 merge 请求。<br/>挂起的合并是正在处理。<br/>安装的合并已完成。<br/>放弃的合并无法完成，可能是由于缺乏存储。 |
+| request_state | TINYINT | 合并请求的状态：<br/>0 = requested<br/>1 = pending<br/>2 = 安装<br/>3 = abandoned |
+| request_state_desc | nvarchar(60) | 请求的当前状态的含义：<br/><br/>请求-存在合并请求。<br/>挂起的合并是正在处理的。<br/>安装-合并已完成。<br/>已放弃的合并无法完成，可能是因为缺乏存储空间。 |
 | destination_file_id | GUID | 与源文件合并的目标文件的唯一标识符。 |
-| lower_bound_tsn | bigint | 目标合并文件的最小时间戳。 要合并的所有源文件的最低事务时间戳。 |
-| upper_bound_tsn | bigint | 目标合并文件的最大时间戳。 要合并的所有源文件的最高事务时间戳。 |
-| collection_tsn | bigint | 可以收集当前行时的时间戳。<br/><br/>当 checkpoint_tsn 大于 collection_tsn 时，删除处于 Installed 状态的行。<br/><br/>当 checkpoint_tsn 小于 collection_tsn 时，删除处于 Abandoned 状态的行。 |
-| checkpoint_tsn | bigint | 检查点启动时的时间。<br/><br/>在新数据文件中将考虑时间戳低于此值的事务执行的所有删除。 其余删除会移动到目标差异文件。 |
+| lower_bound_tsn | BIGINT | 目标合并文件的最小时间戳。 要合并的所有源文件的最低事务时间戳。 |
+| upper_bound_tsn | BIGINT | 目标合并文件的最大时间戳。 要合并的所有源文件的最高事务时间戳。 |
+| collection_tsn | BIGINT | 可以收集当前行时的时间戳。<br/><br/>当 checkpoint_tsn 大于 collection_tsn 时，删除处于 Installed 状态的行。<br/><br/>当 checkpoint_tsn 小于 collection_tsn 时，删除处于 Abandoned 状态的行。 |
+| checkpoint_tsn | BIGINT | 检查点启动时的时间。<br/><br/>在新数据文件中将考虑时间戳低于此值的事务执行的所有删除。 其余删除会移动到目标差异文件。 |
 | sourcenumber_file_id | GUID | 用于唯一标识合并中的源文件的最多 16 个内部文件 ID。 |
 
 ## <a name="permissions"></a>权限
@@ -49,6 +50,6 @@ ms.lasthandoff: 05/23/2018
 
 ## <a name="see-also"></a>另请参阅
 
-[内存优化表的动态管理视图 (Transact SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
+[内存优化表动态管理视图 (Transact SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
 
 

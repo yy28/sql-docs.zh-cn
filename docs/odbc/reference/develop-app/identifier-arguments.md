@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911512"
 ---
 # <a name="identifier-arguments"></a>标识符的自变量
 如果带引号的标识符参数中的字符串，该驱动程序中删除前导空格和尾随空格，并将按原义在引号内的字符串。 如果不带引号的字符串，该驱动程序将删除尾随空白和折叠为大写的字符串。 设置标识符的参数为 null 指针返回 SQL_ERROR 和 SQLSTATE HY009 （不允许使用 null 指针），除非自变量是一个目录名称，并且不支持目录。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916872"
 ---
 # <a name="other-driver-architectures"></a>其他驱动程序体系结构
 某些 ODBC 驱动程序严格不符合前面所述的体系结构。 这可能是因为驱动程序履行之外的传统的 ODBC 驱动程序，或不是在正常的意义上的驱动程序。  

@@ -1,5 +1,5 @@
 ---
-title: 创建 SMO 程序 |Microsoft 文档
+title: 创建 SMO 程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 036f5fa2b276d5cb078fdf6e9528b1877280f94e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991999"
 ---
 # <a name="creating-smo-programs"></a>创建 SMO 程序
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,9 +36,9 @@ ms.lasthandoff: 05/03/2018
   
 |主题|Description|  
 |-----------|-----------------|  
-|[连接到的 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的最简单 SMO 程序。 演示 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 此外还包括了一些示例，演示如何连接到本地和远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
-|[断开的 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|一个演示如何断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接的程序。|  
-|[调用方法](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|本节介绍调用方法的常见途径。 演示如何使用参数以及如何处理在 <xref:System.Data.DataTable> 对象中返回的数据的表。 此外包括如何调用对象构造函数和如何调用的示例**克隆**方法。|  
+|[连接到 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的最简单 SMO 程序。 演示 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 此外还包括了一些示例，演示如何连接到本地和远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
+|[断开与 SQL Server 实例的连接](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|一个演示如何断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接的程序。|  
+|[调用方法](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|本节介绍调用方法的常见途径。 演示如何使用参数以及如何处理在 <xref:System.Data.DataTable> 对象中返回的数据的表。 此外包括如何调用对象构造函数以及如何调用的示例**克隆**方法。|  
 |[设置属性 - SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|本节介绍如何设置不同类型的属性。 演示如何设置和获取对象属性。 此外还包括一些示例，演示如何在创建对象时设置对象属性，以及如何遍历对象的所有属性。|  
 |[使用集合](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|各种讨论用于对象集合的方法的程序。 演示如何使用集合引用对象。 此外还包括一个示例，演示如何遍历集合成员。|  
 |[处理 SMO 事件](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-events.md)|本节介绍如何设置和处理 SMO 中的事件。 包含一个示例，演示如何设置事件处理程序和如何设置事件订阅。|  

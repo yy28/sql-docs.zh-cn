@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027507"
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX 数据操作-使用 DRILLTHROUGH 检索源数据
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

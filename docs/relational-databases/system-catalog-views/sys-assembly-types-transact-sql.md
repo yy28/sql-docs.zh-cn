@@ -1,5 +1,5 @@
 ---
-title: sys.assembly_types (Transact SQL) |Microsoft 文档
+title: sys.assembly_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,15 +26,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d519c57b76e45a297598b6821658c640e8e97989
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998179"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  由 CLR 程序集定义的每个用户定义的类型对应一行。 以下**sys.assembly_types**出现在继承列的列表 (请参阅[sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 后**rule_object_id**。  
+  由 CLR 程序集定义的每个用户定义的类型对应一行。 以下**sys.assembly_types**继承的列列表中显示 (请参阅[sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 后**rule_object_id**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [标量类型目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019834"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 地图是实现地理数据可视化效果的好办法。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三种不同类型的地图可视化，并且内置了各个洲和不同国家/地区的地图。 你也可以 [上载和使用自定义地图](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   

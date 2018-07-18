@@ -2,10 +2,10 @@
 title: LINKEDSERVERS 行集 (OLE DB) |Microsoft 文档
 description: LINKEDSERVERS 行集 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ae01fd305fe420dd15634e5bb49b30be6b287e90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611722"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>架构行集-LINKEDSERVERS 行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **LINKEDSERVERS**行集枚举组织数据源可以参与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询。  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  行集按 SRV_NAME 排序，并支持对 SRV_NAME 的单个限制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [架构行集支持&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

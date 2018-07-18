@@ -1,5 +1,5 @@
 ---
-title: 语句元素 (XMLA) |Microsoft 文档
+title: Statement 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49238b50457a586bbf23cc75ee454003c57ac04e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575019"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979159"
 ---
 # <a name="statement-element-xmla"></a>Statement 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含查询或语句发送使用**执行**到的 Analysis Services 实例的方法。  
+  包含查询或要发送的语句使用**Execute**到的 Analysis Services 实例的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34575019"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "34575019"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **语句**命令上执行查询或语句[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持以下语言：  
+ **语句**命令执行查询或语句[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持以下语言：  
   
 -   多维表达式 (MDX)  
   

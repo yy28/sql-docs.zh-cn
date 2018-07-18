@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32956632"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>“高级编辑”（条件）对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="options"></a>“常规”  
  **单元值**  
- 在创建用于单元值的函数或表达式时，显示相应的函数或表达式。 单击 **“确定”**以后，在 **“常规”** 页的 **“创建新条件”** 对话框或 **“打开条件”** 对话框中，单元值就会出现在条件表达式框的 **“字段”** 单元或 **“值”** 单元。  
+ 在创建用于单元值的函数或表达式时，显示相应的函数或表达式。 单击 **“确定”** 以后，在 **“常规”** 页的 **“创建新条件”** 对话框或 **“打开条件”** 对话框中，单元值就会出现在条件表达式框的 **“字段”** 单元或 **“值”** 单元。  
   
  **函数和属性**  
  显示可用的函数和属性。  

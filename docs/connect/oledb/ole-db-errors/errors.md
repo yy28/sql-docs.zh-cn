@@ -2,10 +2,10 @@
 title: 错误 |Microsoft 文档
 description: 错误
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
+ms.component: oledb|ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3869f7cea6f193ebecc8c038faa27360561cefc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c94e2beaf56e6987bf49bb73e8629f33a775496
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665237"
 ---
 # <a name="errors"></a>错误
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE/COM 对象通过对象成员函数的 HRESULT 返回代码报告错误。 OLE/COM HRESULT 是一种位压缩结构。 OLE 提供取消对结构成员的引用的宏。  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  有关跟踪错误的信息，请参阅[数据访问跟踪](http://go.microsoft.com/fwlink/?LinkId=125805)。 有关在中添加的错误跟踪的增强功能[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，请参阅[访问扩展事件日志中的诊断信息](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [返回代码](../../oledb/ole-db-errors/return-codes.md)  
   
@@ -47,11 +50,11 @@ ms.lasthandoff: 05/03/2018
   
 -   [SQL Server 错误详细信息](../../oledb/ole-db-errors/sql-server-error-detail.md)  
   
--   [检索错误信息的信息](../../oledb/ole-db-errors/retrieving-error-information.md)  
+-   [检索错误信息](../../oledb/ole-db-errors/retrieving-error-information.md)  
   
 -   [SQL Server 消息结果](../../oledb/ole-db-errors/sql-server-message-results.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

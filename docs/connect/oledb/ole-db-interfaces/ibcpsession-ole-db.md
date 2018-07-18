@@ -2,10 +2,10 @@
 title: IBCPSession (OLE DB) |Microsoft 文档
 description: IBCPSession 接口 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0bd3242d21133f6218a6232b129f7e0109843b33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a252ab45aa8f20bac2c8b73606ebdc07b8a332e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689480"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IBCPSession**接口公开支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]基于文件的大容量复制操作。 **IBCPSession**接口将公开 OLE DB 驱动程序中的 SQL Server 在与会话相同的级别下。 OLE DB 驱动程序中的 SQL Server，数据源对象是工厂对于会话对象，并在连接属性 SSPROP_ENABLEBULKCOPY 中指定大容量复制操作。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
  有关示例用于演示如何使用**IBCPSession**接口，请参阅[IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |方法|Description|  
 |------------|-----------------|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |[IBCPSession::BCPReadFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)|从格式化文件中读取每一列的格式信息。|  
 |[IBCPSession::BCPWriteFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)|将每一列的格式信息写入格式化文件。|  
   
-## <a name="see-also"></a>另请参阅  
- [接口 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+## <a name="see-also"></a>请参阅  
+ [接口&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
   

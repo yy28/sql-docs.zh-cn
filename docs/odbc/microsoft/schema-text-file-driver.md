@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899632"
 ---
 # <a name="schema-text-file-driver"></a>架构 （文本文件驱动程序）
 架构包含有关每个表 （文本文件） 的信息包含在数据源，包括表的格式，要扫描以确定列类型是否表的第一行包含列名称，是否使用 OEM 编写的源代码文件的行数或ANSI 代码页和每个列的名称、 数据类型和宽度。

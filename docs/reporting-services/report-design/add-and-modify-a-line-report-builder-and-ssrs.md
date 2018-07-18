@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020464"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>添加和修改线条（报表生成器和 SSRS）
   如果希望图形元素分割报表的各部分，则可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加线条。 可以通过编辑线条属性（如颜色或样式）自定义线条的外观。 例如，您可能希望将公司颜色合并到报表中。    

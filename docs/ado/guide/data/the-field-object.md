@@ -2,7 +2,6 @@
 title: 字段对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 872bb5e1ccede336f85b7bbcbdc7e91c89dd1688
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8df319455802bb16d5e828d1d79c6253643e7ead
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273006"
 ---
 # <a name="the-field-object"></a>字段对象
 每个**字段**对象通常对应于数据库表中的列。 但是，**字段**还可以表示指针到另一个**记录集**，调用一章。 异常，如章节列，将在本指南后面进行介绍。  

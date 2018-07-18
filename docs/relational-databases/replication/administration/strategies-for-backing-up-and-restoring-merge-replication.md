@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c3e727b15d9e963996cfa4d9616ecf723bcff5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71e3d7a65fe7a4839046ffd82ef8c97779b1f378
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356719"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
  若要重新初始化订阅，请参阅 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)。  
   
- 若要创建并应用快照，请参阅 [Create 和 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 和 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+ 若要创建并应用快照，请参阅 [Create 和 Apply the Initial Snapshot 和 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>备份和还原分发数据库  
  对于合并复制，应定期备份分发数据库，而且，只要所用备份的时间不超过使用分发服务器的所有发布的最短保持期，则无须考虑任何特殊事项即可还原分发数据库。 例如，如果三个发布的保持期分别为 10 天、20 天和 30 天，则用于还原数据库的备份的保持时间不应超过 10 天。 分发数据库在合并复制中的作用有限：它不存储更改跟踪中使用的任何数据，也不对将要转发到订阅数据库的合并复制更改提供临时存储（而事务复制中提供）。  

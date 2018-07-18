@@ -1,5 +1,5 @@
 ---
-title: 计划 Automatic Administrative Tasks in SQL Server 代理 |Microsoft 文档
+title: 计划 SQL Server 代理中的自动管理任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e03ca384c3e425eead6663537031411ca8583af9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029835"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="examples"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
-程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理，必须包括**使用**语句来限定代理命名空间。 插入后的其他语句**使用**语句，在该应用程序，任何声明之前如：
+有关程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理，则必须包含**使用**语句以限定该代理命名空间。 Insert 语句后另**使用**在应用程序中的任何声明前的语句，如：
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -172,7 +173,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要正方形括号，因为**运算符**是[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。  
+ 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要方括号，因为**运算符**是[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。  
   
 ```csharp  
 {  
@@ -205,7 +206,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
   
- 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要正方形括号，因为**运算符**是[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。  
+ 对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>类型需要方括号，因为**运算符**是[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]关键字。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -270,7 +271,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 代理](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   

@@ -20,18 +20,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970509"
 ---
 # <a name="system-functions-for-transact-sql"></a>TRANSACT-SQL 的系统函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下组的系统函数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了以下组的系统函数。  
   
-## <a name="in-this-section"></a>本節內容  
- [Alwayson 可用性组函数](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
+## <a name="in-this-section"></a>本节内容  
+ [Always On 可用性组函数](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
  [变更数据捕获函数](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
  [更改跟踪函数](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [数据收集器函数](../../relational-databases/system-functions/data-collector-functions-transact-sql.md)  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
  [sys.fn_validate_plan_guide](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
  [sys.fn_xe_file_target_read_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)  
  [sys.fn_backup_file_snapshots](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
- [语义的全文搜索函数](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
+ [语义全文搜索函数](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
  [系统元数据函数](../../relational-databases/system-functions/system-metadata-functions.md)  
  [系统安全函数](../../relational-databases/system-functions/system-security-functions.md)  
  [系统跟踪函数](../../relational-databases/system-functions/system-trace-functions.md)  

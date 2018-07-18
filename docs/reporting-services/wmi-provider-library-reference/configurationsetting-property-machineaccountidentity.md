@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030124"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>ConfigurationSetting 属性 - MachineAccountIdentity
   获取安装了报表服务器的计算机的计算机帐户标识。  

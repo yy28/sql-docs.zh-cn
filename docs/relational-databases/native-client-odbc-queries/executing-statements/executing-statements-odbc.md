@@ -1,13 +1,12 @@
 ---
-title: 执行语句 (ODBC) |Microsoft 文档
+title: 执行语句 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,29 +15,28 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], executing
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7521f18d4ac934bd05b6922f8e48bcb18d31a4c8
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 8955a2ab0cff12ec65340b6c5ebfb6ddeedef744
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707815"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423846"
 ---
 # <a name="executing-statements-odbc"></a>执行语句 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序提供的各种方式来执行 SQL 语句中的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序提供了执行 SQL 语句中的多种方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库：  
   
 -   直接执行  
   
 -   准备好的执行  
   
- 直接执行涉及到生成的字符字符串包含[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句并将其提交执行使用**SQLExecDirect**函数。 准备好的执行即生成一个包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的字符串，然后分两个阶段执行。 第一个阶段将使用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)函数来分析和编译中的语句的执行计划[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 第二个阶段将使用**SQLExecute**函数来执行之前准备好的执行计划。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
+ 直接执行即生成一个字符字符串，包含[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，然后提交以执行使用**SQLExecDirect**函数。 准备好的执行即生成一个包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的字符串，然后分两个阶段执行。 第一个阶段使用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)函数分析和编译中的语句的执行计划[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 第二个阶段，使用**SQLExecute**函数来执行之前准备好的执行计划。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
   
  直接执行和准备好的执行都可以执行单个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或批处理 SQL 语句，也可以调用存储过程。  
   

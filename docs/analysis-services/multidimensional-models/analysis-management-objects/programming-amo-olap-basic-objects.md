@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024664"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本对象的编程
   创建复杂 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象是一个简单直接的过程，但需要注意细节。 本主题介绍 OLAP 基本对象的编程详细信息。 本主题包含以下各节：  

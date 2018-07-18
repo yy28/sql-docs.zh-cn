@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899054"
 ---
 # <a name="set-functions-limitations"></a>设置函数限制
 Set 函数 （平均值、 最大值、 最小值、 和 SUM） 不支持 DISTINCT 关键字。

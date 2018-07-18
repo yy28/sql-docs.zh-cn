@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb70afd25086bdee1c671f514cc5fc77cedc56d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5377d170dc3a733d7e47dff9082493a744036e9e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406679"
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
   数据挖掘查询任务根据 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]内置的数据挖掘模型运行预测查询。 预测查询通过使用挖掘模型来创建对新数据的预测。 例如，预测查询可以预测夏季可能销售多少帆板，或生成可能购买帆板的预期客户列表。  
@@ -144,7 +143,7 @@ ms.lasthandoff: 05/03/2018
  **结果名称**  
  根据需要更新结果集的名称。 通过在 **“变量名称”** 列表中选择变量，将结果映射到变量。  
   
- 通过单击 **“添加”**添加结果之后，为该结果提供唯一的名称。  
+ 通过单击 **“添加”** 添加结果之后，为该结果提供唯一的名称。  
   
  **“变量名称”**  
  在列表中选择变量以将其映射到结果集。  

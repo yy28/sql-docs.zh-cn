@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473901"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server Memory Manager 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="memory-manager-counters"></a>Memory Manager 计数器  
  下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 计数器。  
   
-|SQL Server Memory Manager 计数器|Description|  
+|SQL Server Memory Manager 计数器|描述|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|指定服务器正用来维护连接的动态内存的总量。|  
 |**Database Cache Memory (KB)**|指定服务器当前正用来缓存数据库页面的内存量。|  
-|**External benefit of memory**|内存的外部值(毫秒/页/毫秒，乘以 100 亿并截断为整数)。| 
+|**External benefit of memory**| 将内存添加至特定缓存的性能优势内部评估。 该评估可被引擎用来平衡缓存之间的内存使用情况，并且在对缓存异常增长情况进行故障排除时也很有用。 该值基于内部计算显示为整数。 | 
 |**Free Memory (KB)**|指定服务器当前未使用的已提交内存量。|  
 |**Granted Workspace Memory (KB)**|指定当前授予执行哈希、排序、大容量复制和索引创建操作等进程的内存总量。|  
 |**Lock Blocks**|指定服务器上使用的锁块的当前数目（定期进行刷新）。 一个锁块代表一个单独的锁定资源，如表、页或行。|  

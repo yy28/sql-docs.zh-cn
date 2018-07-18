@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908912"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>16 位和 32 位应用程序使用 32 位驱动程序
 > [!IMPORTANT]  

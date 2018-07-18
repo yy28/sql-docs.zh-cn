@@ -30,6 +30,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33182523"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/04/2018
 |**is_read_only**|**bit**|1 = 数据库为 READ_ONLY<br /> 0 = 数据库为 READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE 为 ON<br /> 0 = AUTO_CLOSE 为 OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK 为 ON<br /> 0 = AUTO_SHRINK 为 OFF|  
-|**状态**|**tinyint**|**值&#124;适用于**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = RECOVERING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT  <br /> 5 = 紧急情况：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 脱机：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = 复制： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：**对于 Always On 的数据库，查询`database_state`或`database_state_desc`列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
+|**状态**|**tinyint**|**值&#124;适用于**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = RECOVERING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT  <br /> 5 = 紧急情况：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 脱机：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = 复制： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：** 对于 Always On 的数据库，查询`database_state`或`database_state_desc`列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
 |**state_desc**|**nvarchar(60)**|数据库状态的说明。 请参阅状态。|  
 |**is_in_standby**|**bit**|对于还原日志而言，数据库是只读的。|  
 |**is_cleanly_shutdown**|**bit**|1 = 数据库完全关闭；在启动时不需要恢复<br /> 0 = 数据库并未完全关闭；在启动时需要恢复|  

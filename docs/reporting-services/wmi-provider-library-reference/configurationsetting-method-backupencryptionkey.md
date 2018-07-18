@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029864"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>ConfigurationSetting 方法 - BackupEncryptionKey
   备份指定报表服务器实例的加密密钥。 加密密钥会在使用密码加密后存储。  

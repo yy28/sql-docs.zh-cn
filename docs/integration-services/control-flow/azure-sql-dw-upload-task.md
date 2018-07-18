@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 8da49de795c0a0fbc8d6da2cf28374a07d7f8778
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 5677005fb992816e537c7780a62636c57f92b80d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332521"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
 “Azure SQL DW 上传任务”  使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 按照高效的 PolyBase 方法执行上传流程，如 [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)（Azure SQL 数据仓库加载模式和策略）一文中所述。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。

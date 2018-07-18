@@ -2,7 +2,6 @@
 title: 与字段相关的错误信息 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,16 +17,17 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b53698e1042af197db9d9fa7ddfc4af555721607
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0ae8e1717300b88650eb67225ff69b107efc5dc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270106"
 ---
 # <a name="field-related-error-information"></a>与字段相关的错误的信息
 如果错误直接相关的字段 — 例如，如果数据丢失或它的错误类型的字段是-你可以通过检查检索有关原因的问题的详细信息**字段**对象的**状态**属性。 此属性已得到增强，提供有关的问题的特定信息。 因此，举例来说，当调用**UpdateBatch**可以检查来确定失败，问题的原因**状态**属性**字段**中每个受影响记录。 属性将包含中的值之一**FieldStatusEnum**常量。 下表包含发生错误时所特别感兴趣的那些值。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|指示的字段不能检索或存储而不会丢失数据。|  
 |**adFieldDataOverflow**|6|指示从提供程序返回的数据溢出字段的数据类型。|  

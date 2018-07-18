@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909552"
 ---
 # <a name="connection-handles"></a>连接句柄
 A*连接*组成驱动程序和数据源。 连接句柄标识每个连接。 连接句柄定义要使用的驱动程序不仅要使用该驱动程序使用的数据源。 实现 ODBC （驱动程序管理器或驱动程序） 的代码段，在连接句柄标识包含连接信息，如下所示的结构：  

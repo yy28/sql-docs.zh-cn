@@ -2,7 +2,6 @@
 title: RecordOpenOptionsEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7372e17fb7e18cec3cbb25a1850433e41e918a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0795d6eb942f10a97be1acda77954ae43fd4f2e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281256"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定用于打开选项[记录](../../../ado/reference/ado-api/record-object-ado.md)。 这些值可能组合的使用或者。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|向字段与关联的提供程序指示**记录**最初，不需要检索，但可以在第一次尝试访问该字段检索。 缺少此标志，指示的默认行为是检索所有**记录**对象字段。|  
 |**adDelayFetchStream**|0x4000|向关联的默认流时使用的提供程序指示**记录**最初不需要检索。 缺少此标志，指示的默认行为是检索与关联的默认流**记录**对象。|  

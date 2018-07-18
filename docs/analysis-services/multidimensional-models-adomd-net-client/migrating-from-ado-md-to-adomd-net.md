@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027457"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>从 ADO MD 迁移到 ADOMD.NET
   ADOMD.NET 库类似于 ActiveX 多维数据对象 (ADO MD) 库，它是 ActiveX 数据对象 (ADO) 库的扩展，该库用于访问基于组件对象模型 (COM) 的客户端应用程序中的多维数据。 使用 ADO MD 可轻松地通过非托管语言（例如 C++ 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic）访问多维数据。 使用 ADOMD.NET 可轻松地通过托管语言（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET）访问分析数据（多维数据和数据挖掘数据）。 此外，ADOMD.NET 还提供了增强的元数据对象模型。  

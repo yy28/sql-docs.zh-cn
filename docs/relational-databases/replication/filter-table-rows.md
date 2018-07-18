@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14cfae5c386f252fc2a5c8623c50c566553d1bf2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13d6cad557e61eb295a4d0415989e66da83945aa
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355599"
 ---
 # <a name="filter-table-rows"></a>筛选表行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   
  **“添加”**  
- 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击 **“添加”** 将会显示三个选项： **“添加筛选器”**、 **“添加联接以扩展所选筛选器”**和 **“自动生成筛选器”**。  
+ 单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击 **“添加”** 将会显示三个选项： **“添加筛选器”**、 **“添加联接以扩展所选筛选器”** 和 **“自动生成筛选器”**。  
   
 -   选择 **“添加筛选器”** 将启动 **“添加筛选器”** 对话框。 使用此对话框可以将行筛选器应用于表项目。 例如，在 **“添加筛选器”** 对话框中，可以指定在将包含客户数据的表复制到订阅服务器时，该表应只包含法国客户的相关数据。  
   

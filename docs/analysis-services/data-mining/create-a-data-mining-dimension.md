@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014204"
 ---
 # <a name="create-a-data-mining-dimension"></a>创建数据挖掘维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  在 **“维度名称”** 框中，输入新的数据挖掘维度的名称。  
   
-5.  如果要创建包含新的数据挖掘维度的多维数据集，则选择 **“创建多维数据集”**。 选择 **“创建多维数据集”**之后，可以输入多维数据集的新名称。  
+5.  如果要创建包含新的数据挖掘维度的多维数据集，则选择 **“创建多维数据集”**。 选择 **“创建多维数据集”** 之后，可以输入多维数据集的新名称。  
   
 6.  单击 **“确定”**。  
   

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017364"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的代码访问安全性
   代码访问安全性以下面几个核心概念为中心：证据、代码组和命名权限集。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，报表管理器、报表设计器和报表服务器组件均有一个策略文件，该文件用来为自定义程序集配置代码访问安全性，还用来配置数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 下面几节提供了代码访问安全性的概述。 有关本节中所涵盖主题的更详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文档中的“安全策略模型”。  

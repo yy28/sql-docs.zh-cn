@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908902"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>分配语句句柄 ODBC
 应用程序可以执行语句，它必须先分配然后语句句柄，如下所示：  

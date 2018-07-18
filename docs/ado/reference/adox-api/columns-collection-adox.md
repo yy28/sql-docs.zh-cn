@@ -2,7 +2,6 @@
 title: 列集合 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,16 +22,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f3210bf977a27e945f2faa8e80e8a7c72cbe5cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65b5ae6a15ee5da44c2876c75dc21e658b50fed6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285187"
 ---
 # <a name="columns-collection-adox"></a>列集合 (ADOX)
 包含所有[列](../../../ado/reference/adox-api/column-object-adox.md)的表、 索引或键的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [追加](../../../ado/reference/adox-api/append-method-adox-columns.md)方法**列**集合是唯一的 ADOX。 您可以：  
   
 -   将新列添加到具有集合**追加**方法。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [列集合属性、方法和事件](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列和表追加方法名称的属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [连接关闭方法，表类型的属性示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

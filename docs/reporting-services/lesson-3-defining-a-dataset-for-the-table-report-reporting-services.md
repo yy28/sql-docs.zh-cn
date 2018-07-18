@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016574"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：为表报表定义数据集 (Reporting Services)
 定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  

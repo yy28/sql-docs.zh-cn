@@ -2,7 +2,6 @@
 title: ADO 属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6f2c0bee80ae3f8b59a9b8241226facc89edb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d8df3fdea1c8e5666593dfa63666ed2c051c3b4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275576"
 ---
 # <a name="ado-properties"></a>ADO 属性
 |||  
@@ -44,19 +44,19 @@ ms.lasthandoff: 05/03/2018
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|指示的一种**命令**对象。|  
 |[ConnectionString 属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)|指示用于建立与数据源的连接的信息。|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|指示多长时间来建立的连接在终止尝试并生成错误之前，请稍候。|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
+|[计数](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|指示光标服务的位置。|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|指示在中使用的游标类型**记录集**对象。|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|指示将从所引用的对象中检索的数据成员的名称**数据源**属性。|  
 |[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|表示包含数据表示为对象**记录集**对象。|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|指示的默认数据库**连接**对象。|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|指示数据容量**字段**对象。|  
-|[Description](../../../ado/reference/ado-api/description-property.md)|描述**错误**对象。|  
+|[说明](../../../ado/reference/ado-api/description-property.md)|描述**错误**对象。|  
 |[方言](../../../ado/reference/ado-api/dialect-property.md)|指示的语法和提供程序将用于分析的一般规则**CommandText**或**CommandStream**属性。|  
 |[方向](../../../ado/reference/ado-api/direction-property.md)|指示是否**参数**表示输入的参数、 一个输出参数，或两者，或如果参数是存储过程的返回值。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|指示当前记录的编辑状态。|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|指示当前的位置是否在流末尾。|  
-|[筛选](../../../ado/reference/ado-api/filter-property.md)|指示数据中的筛选器**记录集**。|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|指示数据中的筛选器**记录集**。|  
 |[HelpContext 和 HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|指示的帮助文件和相关联的主题**错误**对象。<br /><br /> **帮助上下文 Id**形式返回的上下文 ID，**长**值，帮助文件中的主题。<br /><br /> **HelpFile**返回**字符串**计算结果为的帮助文件的完全解析路径的值。|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|指示当前对有效的索引名称**记录集**对象。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|指示的隔离级别**连接**对象。|  
@@ -96,10 +96,10 @@ ms.lasthandoff: 05/03/2018
 |[类型](../../../ado/reference/ado-api/type-property-ado.md)|指示的操作的类型或数据类型**参数**，**字段**，或**属性**对象。|  
 |[类型 （ADO 流）](../../../ado/reference/ado-api/type-property-ado-stream.md)|指示数据中包含的类型**流**（二进制或文本）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指示的数据库中的当前值**字段**对象。|  
-|[Value](../../../ado/reference/ado-api/value-property-ado.md)|指示分配给值**字段**，**参数**，或**属性**对象。|  
+|[ReplTest1](../../../ado/reference/ado-api/value-property-ado.md)|指示分配给值**字段**，**参数**，或**属性**对象。|  
 |[版本](../../../ado/reference/ado-api/version-property-ado.md)|指示 ADO 版本号。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

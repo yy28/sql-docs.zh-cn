@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024654"
 ---
 # <a name="report-parameters-methods"></a>报表参数方法
   可以使用这些方法来设置和检索报表的参数。  

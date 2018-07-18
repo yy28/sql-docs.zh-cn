@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,12 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f37984c25fb722245d433e18904b2d48de7707df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358139"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +171,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  建立连接时合并代理使用的安全套接字层 (SSL) 加密的级别。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -185,7 +185,7 @@ replmerg [-?]
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
-|ExchangeType 值|Description|  
+|ExchangeType 值|描述|  
 |------------------------|-----------------|  
 |**1**|代理应将订阅服务器上的数据更改上载到发布服务器。|  
 |**2**|代理应将发布服务器上的数据更改下载到订阅服务器。|  
@@ -204,7 +204,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合并代理应使用的收敛级别，可以为以下值之一：  
   
-|ForceConvergenceLevel 值|Description|  
+|ForceConvergenceLevel 值|描述|  
 |---------------------------------|-----------------|  
 |**0** （默认值）|默认值。 执行不具有附加收敛的标准合并。|  
 |**1**|强制所有生成进行收敛。|  
@@ -225,7 +225,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  指定在合并操作期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|记录最终的代理状态消息、最终的会话详细信息和任何错误。|  
 |**1**|记录每个会话状态的增量会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。|  
@@ -330,7 +330,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  指定是否存在现有的订阅服务器数据库。  
   
-|SubscriberDBAddOption 值|Description|  
+|SubscriberDBAddOption 值|描述|  
 |---------------------------------|-----------------|  
 |**0**|使用现有数据库（默认值）。|  
 |**1**|创建一个新的空订阅服务器数据库。|  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否应在合并会话结束时执行验证，以及如果要执行验证，应执行哪种类型的验证。 建议值为 **3** 。  
   
-|Validate 值|Description|  
+|Validate 值|描述|  
 |--------------------|-----------------|  
 |**0** （默认值）|不执行验证。|  
 |**1**|只验证行计数。|  

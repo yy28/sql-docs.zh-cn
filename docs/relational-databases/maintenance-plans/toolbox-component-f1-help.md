@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32942472"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱组件的 F1 帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  每次返回到编辑器或设计器时， **“工具箱”** 都将自动滚动到最近选择的选项卡和项。 将焦点切换到其他编辑器或设计器时， **“工具箱”** 中的当前选择也会随之切换。  
   
 ## <a name="customize-the-toolbox"></a>自定义工具箱  
- 重新排列选项卡内的项以及向 **“工具箱”**添加自定义选项卡和项是很容易的。  
+ 重新排列选项卡内的项以及向 **“工具箱”** 添加自定义选项卡和项是很容易的。  
   
  若要添加或删除 **“工具箱”** 项，请在 **“工具”** 菜单上，单击 **“选择工具箱项”**。 只有 **“维护任务”** 可用于 **“工具箱”** 图标。 并不是所有组件都始终可用。 例如，维护任务仅在创建维护计划时可用。  
   

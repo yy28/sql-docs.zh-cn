@@ -2,7 +2,6 @@
 title: 排序属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10ce301591aaa8c921fb7eabfa153e2e83207ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 115c3565edfa128d0d9650c3512357caf7d3bebb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281946"
 ---
 # <a name="sort-property-example-vc"></a>排序属性示例 （VC + +）
 此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[排序](../../../ado/reference/ado-api/sort-property.md)属性重新排序的行**记录集**派生自***作者***的表**Pubs**数据库。 辅助实用程序例程将打印每个行。  
@@ -136,6 +136,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort 属性](../../../ado/reference/ado-api/sort-property.md)

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32807000"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 方法示例 (VBScript)
 > [!IMPORTANT]

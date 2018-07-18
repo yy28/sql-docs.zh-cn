@@ -2,7 +2,6 @@
 title: CursorLocation 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c169441ffc1cc455e0474f54fe923c3e4cd0f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a720586cc2ee6f866565fe9e43382395bcb44e65
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277276"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 属性 (ADO)
 指示光标服务的位置。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，可以将设置为其中一个[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此属性，可在各种提供程序访问的光标库中进行选择。 通常情况下，你可以使用在服务器上的客户端游标库或一个位于之间进行选择。  
   
  此属性设置会影响仅后未设置该属性建立的连接。 更改**CursorLocation**属性具有现有连接没有影响。  
@@ -51,5 +51,5 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

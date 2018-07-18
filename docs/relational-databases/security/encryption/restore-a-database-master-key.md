@@ -3,26 +3,24 @@ title: 还原数据库主密钥 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 41b2a6badc568faa98bc920770020b1a70d16d28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d88b601a977ef63b859d27f60f7485f9228ce74
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697918"
 ---
 # <a name="restore-a-database-master-key"></a>还原数据库主密钥
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  从物理备份介质或本地文件系统上的某个目录检索备份的数据库主密钥的副本。  
   
-2.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 3.  在标准菜单栏上，单击 **“新建查询”**。  
   

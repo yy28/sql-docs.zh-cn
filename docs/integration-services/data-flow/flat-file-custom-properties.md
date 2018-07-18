@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
@@ -16,11 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3094ea5f55d6884eae2d0edfd972a2c1162653b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 609fb5bf856bcea35ea7af2e814c9d93008dc5f5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406209"
 ---
 # <a name="flat-file-custom-properties"></a>平面文件自定义属性
   **源自定义属性**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍平面文件源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |FileNameColumnName|String|包含文件名的输出列的名称。 如果未指定名称，则不会生成包含文件名的输出列。<br /><br /> 注意：此属性未在 **平面文件源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
 |RetainNulls|Boolean|该值指定当数据转换管道引擎处理数据时是否将源文件中的 Null 值仍保留为 Null 值。 此属性的默认值为 **False**。|  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  下表描述了平面文件源的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |FastParse|Boolean|一个值，该值指示列是使用 DTS 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 有关详细信息，请参阅 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此属性的默认值为 **False**。<br /><br /> 注意：此属性未在 **平面文件源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍平面文件目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |标题|String|写入任何数据之前插入到文件中的文本块。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
 |Overwrite|Boolean|一个值，指定是覆盖还是追加到具有相同名称的现有目标文件。 此属性的默认值为 **True**。|  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036434"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
      此时将出现 **“选择报表服务器安装实例”** 对话框，可以选择要配置的报表服务器实例。  
   
-2.  在 **“服务器名称”**中，指定安装报表服务器实例的计算机的名称。 指定的默认值是本地计算机名称，但也可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
+2.  在 **“服务器名称”** 中，指定安装报表服务器实例的计算机的名称。 指定的默认值是本地计算机名称，但也可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
      如果指定远程计算机，请单击 **“查找”** 以建立一个连接。 必须事先配置报表服务器，以便进行远程管理。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
      依次单击“开始” 、“所有程序” 、“ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”和“SQL Server Management Studio” 。 此时，将显示 **“连接到服务器”** 对话框。  
   
-2.  如果没有出现 **“连接到服务器”** 对话框，请在 **“对象资源管理器”**中单击 **“连接”** ，然后选择 **Reporting Services**。  
+2.  如果没有出现 **“连接到服务器”** 对话框，请在 **“对象资源管理器”** 中单击 **“连接”** ，然后选择 **Reporting Services**。  
   
 3.  在 **“服务器类型”** 列表中，选择 **Reporting Services**。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不在列表中，则说明没有安装它。  
   

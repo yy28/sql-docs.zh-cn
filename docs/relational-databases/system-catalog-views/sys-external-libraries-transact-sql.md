@@ -1,5 +1,5 @@
 ---
-title: sys.external_libraries (Transact SQL) |Microsoft 文档
+title: sys.external_libraries (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: sql
@@ -24,29 +24,30 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 110f514c4688536decfd29c412ce310746cd972e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001189"
 ---
-# <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
+# <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 
-支持的管理包库与诸如 R 或 Python 等的外部运行时相关。
+支持的管理包库与 R 或 Python 等外部运行时相关。
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 
-目录视图 sys.external_libraries 列出每个外部库已上载到数据库的行。
+目录视图 sys.external_libraries 列出已上载到数据库中每个外部库的行。
 
 |列名 |数据类型 | Description|
 |------|------|------|
-|external_library_id |int | 外部库对象的 ID。 |
-|name |sysname |外部库的名称。 在中是唯一的每位所有者的数据库。|
-|principal_id |int |拥有此外部库的主体 ID。 |
-|language | sysname | 支持外部库的运行时的语言的名称。 有效值为 'R'。 可能在将来添加其他运行时。|
-|作用域 |int |公共作用域; 的 0私有的作用域的 1 |  
-|scope_desc |varchar(7) |指示包是否为公用或专用|
+|external_library_id |ssNoversion | 外部库对象的 ID。 |
+|NAME |sysname |外部库的名称。 数据库中是唯一的每位所有者。|
+|principal_id |ssNoversion |拥有此外部库的主体的 ID。 |
+|language | sysname | 支持的外部库的运行时的语言的名称。 有效值为 'R'。 可能在将来添加其他运行时。|
+|作用域 |ssNoversion |0 表示公共作用域;1 表示专用作用域 |  
+|scope_desc |varchar(7) |指示包是否是公共或专用|
 
 
 ## <a name="see-also"></a>另请参阅  

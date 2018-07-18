@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908712"
 ---
 # <a name="consistency-check"></a>一致性检查
 一致性检查时，将执行由驱动程序会自动应用程序设置 APD、 ARD 或 IPD SQL_DESC_DATA_PTR 字段。 每当设置此字段时，驱动程序将检查 SQL_DESC_TYPE 字段的值和适用于同一记录中的 SQL_DESC_TYPE 字段值有效且一致。  

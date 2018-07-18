@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913912"
 ---
 # <a name="statement-handles"></a>语句句柄
 A*语句*非常轻松地视为 SQL 语句，如**选择\*从员工**。 但是，一个语句是远不止一个 SQL 语句，它包含所有与该 SQL 语句，如所有结果集由该语句创建和执行语句中使用的参数关联的信息。 语句不甚至不需要具有应用程序定义 SQL 语句。 例如，目录的如函数时**SQLTables**执行上一条语句，它会执行返回表名称的列表的预定义的 SQL 语句。  

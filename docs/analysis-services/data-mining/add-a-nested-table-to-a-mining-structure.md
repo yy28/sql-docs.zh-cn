@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014674"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>向挖掘结构中添加嵌套表
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,9 +30,9 @@ ms.lasthandoff: 05/10/2018
   
      此时将打开 **“选择嵌套表键列”** 对话框。  
   
-4.  在 **“嵌套表”**下，选择要在挖掘结构中嵌套的表。  
+4.  在 **“嵌套表”** 下，选择要在挖掘结构中嵌套的表。  
   
-5.  在 **“源列”**下，为嵌套表选择键列。  
+5.  在 **“源列”** 下，为嵌套表选择键列。  
   
 6.  单击 **“确定”**。  
   

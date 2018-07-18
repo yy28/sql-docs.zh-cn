@@ -21,9 +21,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916582"
 ---
 # <a name="setup-program"></a>安装程序
-> **注意：**使用 Windows XP 和 Windows Server 2003 中，启动**ODBC 包含在 Windows 操作系统中**。 在早期版本的 Windows 上，应仅显式安装 ODBC。  
+> **注意：** 使用 Windows XP 和 Windows Server 2003 中，启动**ODBC 包含在 Windows 操作系统中**。 在早期版本的 Windows 上，应仅显式安装 ODBC。  
   
  用户在运行安装程序启动安装过程。 安装程序编写的应用程序或驱动程序开发人员。 除了安装 ODBC 组件，它可以安装其他软件。 例如，应用程序开发人员可能使用相同的安装程序来安装 ODBC 组件并安装其应用程序。  
   

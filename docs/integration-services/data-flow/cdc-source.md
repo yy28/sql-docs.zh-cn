@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076d87f76a1b9358797379758c7589421ae9dbe4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa7e66d1f7c8a0cd2ad808d59508975b3ca0bb2d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328431"
 ---
 # <a name="cdc-source"></a>CDC 源
   CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
@@ -89,7 +88,7 @@ use <cdc-enabled-database-name>
   
 -   \<value-from-state-ce> 是在 CDC 状态变量中以 CE/\<value-from-state-cs>/（CE 表示 Current-processing-range-End）形式出现的值。  
   
--   \<mode> 是 CDC 处理模式。 处理模式具有以下值之一： **“全部”**、 **“全部且具有旧值”**、 **“净值”**、 **“具有更新掩码的净值”**和 **“净值且具有合并”**。  
+-   \<mode> 是 CDC 处理模式。 处理模式具有以下值之一： **“全部”**、 **“全部且具有旧值”**、 **“净值”**、 **“具有更新掩码的净值”** 和 **“净值且具有合并”**。  
   
  此脚本可通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中复现问题（在其中可以轻松地复现和标识错误），有助于标识问题。  
   
@@ -137,7 +136,7 @@ use <cdc-enabled-database-name>
   
 2.  在“数据流”选项卡上，双击 CDC 源。  
   
-3.  在 **“CDC 源编辑器”**中，单击 **“连接管理器”**。  
+3.  在 **“CDC 源编辑器”** 中，单击 **“连接管理器”**。  
   
 ### <a name="options"></a>“常规”  
  **ADO.NET 连接管理器**  
@@ -190,7 +189,7 @@ use <cdc-enabled-database-name>
   
 2.  在“数据流”选项卡上，双击 CDC 源。  
   
-3.  在 **“CDC 源编辑器”**中，单击 **“列”**。  
+3.  在 **“CDC 源编辑器”** 中，单击 **“列”**。  
   
 ### <a name="options"></a>“常规”  
  **可用外部列**  
@@ -212,7 +211,7 @@ use <cdc-enabled-database-name>
   
 2.  在“数据流”选项卡上，双击 CDC 源。  
   
-3.  在 **“CDC 源编辑器”**中，单击 **“错误输出”**。  
+3.  在 **“CDC 源编辑器”** 中，单击 **“错误输出”**。  
   
 ### <a name="options"></a>“常规”  
  **输入/输出**  

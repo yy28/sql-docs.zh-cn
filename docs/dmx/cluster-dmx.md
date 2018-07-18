@@ -1,31 +1,20 @@
 ---
 title: 群集 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cluster
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Cluster function
-ms.assetid: 14b2942a-6dec-4dfa-98a6-697a3c89036a
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8a847f60134abd44fa5fc9da2deb4e9a53532960
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 41f835a93e5976945281b6b04258c516b0322236
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841300"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +36,7 @@ Cluster()
   
  **群集**函数将返回标量值的群集名称。 但是，如果你使用此函数作为自变量的另一个函数，你必须将其作为\<群集列引用 >。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **群集**还可用作`<`群集列引用`>`为**PredictHistogram**函数。  
   
 ## <a name="examples"></a>示例  
@@ -66,7 +55,7 @@ FROM
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   

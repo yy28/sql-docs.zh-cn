@@ -2,7 +2,6 @@
 title: 命令 (ADO 的 Visual c + + 语法) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 206b88fb2e8b8bf14f678b826bc4b5d52deb597d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01c460c5d7829d67242259a0c8d3c45e1dc66270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276596"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>命令 (ADO 的 Visual c + + 语法)
 ## <a name="methods"></a>方法  
@@ -55,5 +55,5 @@ get_State(LONG *plObjState)
 get_Parameters(ADOParameters **ppvObject)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

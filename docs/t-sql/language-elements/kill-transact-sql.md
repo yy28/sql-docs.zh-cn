@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -39,11 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2cf23ffc6cceaf92f80eb75dbe9da1179e9e4a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b40c02d7118b1d844263b1c298f256b74d95fea
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255569"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,9 +125,9 @@ UOW
  通过重复不带 WITH STATUSONLY 选项的同一 KILL session ID|UOW 语句，可以获得相同的状态报告；但不推荐这样做。 如果在运行新的 KILL 语句之前回滚已完成并且已将 session ID 重新分配给新任务，那么重复 KILL session ID 语句可能会终止新进程。 指定 WITH STATUSONLY 将防止这种情况发生。  
   
 ## <a name="permissions"></a>权限  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：**需要具有 ALTER ANY CONNECTION 权限。 ALTER ANY CONNECTION 包括在 sysadmin 或 processadmin 固定服务器角色的成员身份中。  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：** 需要具有 ALTER ANY CONNECTION 权限。 ALTER ANY CONNECTION 包括在 sysadmin 或 processadmin 固定服务器角色的成员身份中。  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]：**需要具有 KILL DATABASE CONNECTION 权限。 服务器级别主体登录名具有 KILL DATABASE CONNECTION。  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]：** 需要具有 KILL DATABASE CONNECTION 权限。 服务器级别主体登录名具有 KILL DATABASE CONNECTION。  
   
 ## <a name="examples"></a>示例  
   

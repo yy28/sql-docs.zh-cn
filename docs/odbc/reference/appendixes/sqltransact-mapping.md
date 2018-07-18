@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907872"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 映射
 **SQLTransact**现在已被取代通过**SQLEndTran**。 两个函数之间的主要区别在于**SQLEndTran**包含自变量*HandleType*，它指定要在完成工作的作用域。 *HandleType*自变量可以指定环境或连接句柄。 以下调用到**SQLTransact**:  

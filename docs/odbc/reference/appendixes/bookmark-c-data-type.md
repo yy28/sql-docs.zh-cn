@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905532"
 ---
 # <a name="bookmark-c-data-type"></a>书签 C 数据类型
 书签 C 数据类型允许应用程序检索书签。 书签 C 类型仅用于检索书签可以是长度; 中的变量的值它们不应转换为其他数据类型。 应用程序中检索结果的第 0 列从设置的书签**SQLBulkOperations** （与 SQL_ADD 的操作）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 有关详细信息，请参阅[书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  

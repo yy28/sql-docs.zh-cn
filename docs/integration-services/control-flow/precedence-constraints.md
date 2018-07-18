@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02790fb579d3b899444834eee526da8fc852d569
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca90530dbce46d98f3fbaa9faeaa744426e4843f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333431"
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="options"></a>“常规”  
  **求值运算**  
- 指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”**和 **“表达式或约束”**。  
+ 指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”** 和 **“表达式或约束”**。  
   
  **ReplTest1**  
  指定约束值：“成功” 、“失败” 或“完成” 。  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
     |读/写属性|配置操作|  
     |--------------------------|--------------------------|  
-    |Description|提供说明。|  
+    |描述|提供说明。|  
     |EvalOp|选择一个求值运算。 如果选择了 **Expression**、 **ExpressionAndConstant**或 **ExpressionOrConstant** 运算，则可指定一个表达式。|  
     |表达式|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
     |LogicalAnd|设置 **LogicalAnd** ，以指定当有多个可执行文件优先于并且链接到受约束的可执行文件时，是否将此优先约束与其他优先约束一起计算。|  
@@ -204,7 +203,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  在“控制流”选项卡的设计图面上双击优先约束。 **“优先约束编辑器”** 将打开。  
   
-5.  在 **“求值运算”**列表中选择 **“表达式”**、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
+5.  在 **“求值运算”** 列表中选择 **“表达式”**、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
   
 6.  在 **“表达式”** 文本框中键入表达式，或启动表达式生成器来创建表达式。  
   

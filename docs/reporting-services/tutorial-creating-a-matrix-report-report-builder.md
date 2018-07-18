@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036454"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
 本教程教你如何使用嵌套行组和列组中的示例销售数据的矩阵组件创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -326,7 +327,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
-2.  单击 **“桌面”**、 **“我的文档”**或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
+2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
 3.  在“名称”中，用“SalesByTerritorySubcategory”替换默认名称。  
   

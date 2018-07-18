@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902092"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>数值函数 （Visual FoxPro ODBC 驱动程序）
 下表描述了 Visual FoxPro ODBC 驱动程序; 支持的 ODBC 数值函数当相同的功能的 Visual FoxPro 语法不同于 ODBC 语法，将列等效 Visual FoxPro。  

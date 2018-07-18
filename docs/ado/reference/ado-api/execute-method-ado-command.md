@@ -2,7 +2,6 @@
 title: 执行方法 （ADO 命令） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09ce33d4fa2f6ac63fc19ce711fe88fcf717d049
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278116"
 ---
 # <a name="execute-method-ado-command"></a>执行方法 （ADO 命令）
 执行查询、 SQL 语句或存储的过程中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令对象](../../../ado/reference/ado-api/command-object-ado.md)。  
@@ -42,18 +42,18 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>Parameters  
  *RecordsAffected*  
- 選擇性。 A**长**变量到该提供程序返回的操作所影响的记录数。 *RecordsAffected*参数仅适用于操作查询或存储的过程。 *RecordsAffected*不返回的返回结果的查询或存储的过程返回的记录数。 若要获取此信息，请使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性。 **执行**方法不会返回正确的信息一起使用时**adAsyncExecute**，只需时以异步方式执行命令，因为受影响的记录数可能尚未未知在该方法返回的时间。  
+ 可选。 A**长**变量到该提供程序返回的操作所影响的记录数。 *RecordsAffected*参数仅适用于操作查询或存储的过程。 *RecordsAffected*不返回的返回结果的查询或存储的过程返回的记录数。 若要获取此信息，请使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性。 **执行**方法不会返回正确的信息一起使用时**adAsyncExecute**，只需时以异步方式执行命令，因为受影响的记录数可能尚未未知在该方法返回的时间。  
   
  *Parameters*  
- 選擇性。 A **Variant**与输入的字符串或流中指定结合使用的参数值数组**CommandText**或**CommandStream**。 （输出参数不会返回此参数中传递时的正确值。）  
+ 可选。 A **Variant**与输入的字符串或流中指定结合使用的参数值数组**CommandText**或**CommandStream**。 （输出参数不会返回此参数中传递时的正确值。）  
   
- *Options*  
- 選擇性。 A**长**值，该值指示提供程序应如何评估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 可以是使用所做的位掩码值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)和/或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值。 例如，可以使用**adCmdText**和**adExecuteNoRecords**结合，如果你想要评估的值的 ADO **CommandText**属性作为文本，并指示该命令应放弃，并且不会返回命令文本执行时可能会生成任何记录。  
+ *选项*  
+ 可选。 A**长**值，该值指示提供程序应如何评估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 可以是使用所做的位掩码值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)和/或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值。 例如，可以使用**adCmdText**和**adExecuteNoRecords**结合，如果你想要评估的值的 ADO **CommandText**属性作为文本，并指示该命令应放弃，并且不会返回命令文本执行时可能会生成任何记录。  
   
 > [!NOTE]
 >  使用**ExecuteOptionEnum**值**adExecuteNoRecords**通过最小化内部处理来提高性能。 如果**adExecuteStream**已指定，选项**adAsyncFetch**和**adAsynchFetchNonBlocking**将被忽略。 不要使用**CommandTypeEnum**值**adCmdFile**或**adCmdTableDirect**与**执行**。 这些值仅用作选项[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[Requery](../../../ado/reference/ado-api/requery-method.md)方法**记录集**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**执行**方法**命令**对象执行中指定的查询**CommandText**属性或**CommandStream**对象的属性。  
   
  返回结果的顺序**记录集**（默认） 或作为二进制信息的流。 若要获取二进制流，请指定**adExecuteStream**中*选项*，则通过设置提供流**Command.Properties （"输出流"）**。 ADO**流**可以指定对象接收结果，或可以指定另一个流对象，如 IIS 响应对象。 如果没有流已指定，然后再调**执行**与**adExecuteStream**，发生错误。 从返回流的当前位置**执行**是特定提供程序。  
@@ -75,7 +75,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="applies-to"></a>适用范围  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行、 重新执行查询，并清除方法示例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [执行、 重新执行查询，并清除方法示例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [执行、 重新执行查询，并清除方法示例 （VC + +）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

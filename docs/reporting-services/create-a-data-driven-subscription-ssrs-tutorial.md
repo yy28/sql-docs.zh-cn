@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689215"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教程通过一个简单示例，介绍了如何创建数据驱动订阅，生成筛选报表输出并将其保存到文件共享，解释了数据驱动订阅的概念。 
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 
  下图说明了教程的基本工作流。
 
-步骤  |Description 
+步骤  |描述 
 ---------|---------
 (1)     |  订阅配置说明了源报表、计划和映射到订阅服务器数据库的字段。        
 (2)     | OrderInfo 表包含 4 个用于筛选的订单编号，每个文件 1 个。 该表还包含所生成的报告的文件格式。

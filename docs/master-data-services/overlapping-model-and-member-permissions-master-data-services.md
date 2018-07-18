@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e153a9eca1215d1d873af06f3d1b222476e08083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 963a425748ab1c2ba0f114c85277b630f23317f7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411959"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **“拒绝”** 覆盖所有其他权限。  
   
--   模型级别的**“管理员”** 权限可覆盖所有其他权限，并将更改为子级别上的所有 (CRUD) 访问权限。  
+-   模型级别的 **“管理员”** 权限可覆盖所有其他权限，并将更改为子级别上的所有 (CRUD) 访问权限。  
   
 -   有效访问权限与成员和属性权限相交。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点分配有 **“更新”** 权限。  
   
- 结果：在 **“资源管理器”**中，用户对“山地车”节点中所有成员的所有属性值都具有 **“更新”** 权限。 所有其他成员和属性均隐藏。  
+ 结果：在 **“资源管理器”** 中，用户对“山地车”节点中所有成员的所有属性值都具有 **“更新”** 权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点显式分配有 **“读取”** 权限。  
   
- 结果：在 **“资源管理器”**中，用户对“山地车”节点中的成员的所有 Subcategory 属性值都具有 **“读取”** 权限。 所有其他成员和属性均隐藏。  
+ 结果：在 **“资源管理器”** 中，用户对“山地车”节点中的成员的所有 Subcategory 属性值都具有 **“读取”** 权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别显式分配有 **“更新”** 权限。  
   
- 结果：在 **“资源管理器”**中，用户对这些属性值具有 **“读取”** 权限。 所有其他成员和属性均隐藏。  
+ 结果：在 **“资源管理器”** 中，用户对这些属性值具有 **“读取”** 权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

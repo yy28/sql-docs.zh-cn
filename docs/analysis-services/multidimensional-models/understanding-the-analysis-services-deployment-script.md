@@ -1,5 +1,5 @@
 ---
-title: 了解 Analysis Services 部署脚本 |Microsoft 文档
+title: 了解 Analysis Services 部署脚本 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84179762d2c4819fb5fc5f82ad6d0528ea689ecf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021422"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>了解 Analysis Services 部署脚本
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -29,8 +30,8 @@ ms.lasthandoff: 05/10/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导仅将对象部署到单个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中。 该向导不会部署任何服务器级别对象或数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行 Analysis Services 部署向导](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
- [了解用于创建部署脚本的输入的文件](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
+ [了解用于创建部署脚本的输入文件](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

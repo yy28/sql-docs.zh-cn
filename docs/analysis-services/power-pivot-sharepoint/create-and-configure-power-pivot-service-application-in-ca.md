@@ -1,5 +1,5 @@
 ---
-title: 在创建和配置 Power Pivot 服务应用程序 CA |Microsoft 文档
+title: 创建和配置 Power Pivot 服务应用程序在 CA |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982599"
 ---
-# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>在创建和配置 Power Pivot 服务应用程序 CA
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>创建和配置 Power Pivot 服务应用程序在 CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的共享服务实例。 每个服务应用程序都具有自己的应用程序标识、配置设置、属性和内部数据存储。  
   
@@ -60,11 +61,11 @@ ms.lasthandoff: 05/10/2018
   
 5.  在“应用程序池”中，为该应用程序创建一个新的应用程序池（推荐）。 为该应用程序池选择或创建一个托管帐户。 请确保指定一个域用户帐户。 通过域用户帐户，可以使用 SharePoint 的托管帐户功能，从而使您可以在一个位置中更新密码和帐户信息。 如果您计划扩展部署以便包括将在同一标识下运行的附加服务实例，则域帐户是必需的。  
   
-6.  在 **“数据库服务器”**中，默认值是承载场配置数据库的 SQL Server 数据库引擎实例。 您可以使用该服务器或者选择其他的 SQL Server。  
+6.  在 **“数据库服务器”** 中，默认值是承载场配置数据库的 SQL Server 数据库引擎实例。 您可以使用该服务器或者选择其他的 SQL Server。  
   
-7.  在**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 必须为每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
+7.  在中**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 必须为每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
   
-8.  在 **“数据库身份验证”**中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
+8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
   
 9. 或者，选中“将此 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序的代理添加到场的默认代理组”复选框。 这会将该服务应用程序连接添加到默认服务连接组。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
   
      有关服务关联的详细信息，请参阅 [将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-10. 单击 **“确定”**。 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
+10. 单击“确定” **。** 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
   
 ##  <a name="ConfigApp"></a> 配置 Power Pivot 服务应用程序  
  使用默认配置创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 对于大多数情况，建议您采用这些默认设置。 仅在遇到响应时间较长或删除的连接时，或者你在为特定的 SharePoint Web 应用程序改变 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务配置时，才更改这些默认设置。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  在“数据库加载超时”中，增加或减少值可以更改 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务等待来自它将加载数据请求转发到的 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 实例的响应的时间长短。 因为非常大的数据集需要花时间在线路上移动，所以必须确保 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务实例有充裕的时间检索 Excel 工作簿并将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据移到 Analysis Services 实例以便进行查询处理。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据可能会非常大，所以默认值为 30 分钟。  
   
-5.  在 **“连接池超时”**中，增加或减少值可以更改空闲数据连接保持打开状态的分钟数。 默认值为 30 分钟。 在此期间，对于来自相同 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的同一 SharePoint 用户的只读请求， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务将重用空闲数据连接。 如果在指定的时段中没有收到针对该数据的进一步的请求，则从池中删除该连接。 有效值为 1 至 3600 秒。 有关连接池的详细信息，请参阅[配置设置参考 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)。  
+5.  在 **“连接池超时”** 中，增加或减少值可以更改空闲数据连接保持打开状态的分钟数。 默认值为 30 分钟。 在此期间，对于来自相同 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的同一 SharePoint 用户的只读请求， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务将重用空闲数据连接。 如果在指定的时段中没有收到针对该数据的进一步的请求，则从池中删除该连接。 有效值为 1 至 3600 秒。 有关连接池的详细信息，请参阅[配置设置参考 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)。  
   
 6.  在“最大用户连接池大小” 中，增加或减少值可以更改 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务将在单独的连接池中为每个 SharePoint 用户、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据集和版本组合创建的空闲连接的最大数目。  
   
@@ -103,15 +104,15 @@ ms.lasthandoff: 05/10/2018
   
 8.  在“分配方法” 中，可以指定负载平衡方案， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务使用该方案以便选择特定的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序来为初始请求实现负载平衡。 默认设置为 **“基于运行状况”**，可基于服务器状态分配请求，服务器状态根据可用内存量和处理器使用率进行度量。 或者，您可以选择 **“循环”** ，以便无论服务器是正忙还是空闲，都按相同的重复顺序分配对服务器的请求。  
   
-9. 在“数据刷新”的 **“工作时间”**中，您可以指定用于定义工作日的小时范围。 数据刷新计划可以在下班后运行，以便选取在正常工作时间中生成的事务数据。  
+9. 在“数据刷新”的 **“工作时间”** 中，您可以指定用于定义工作日的小时范围。 数据刷新计划可以在下班后运行，以便选取在正常工作时间中生成的事务数据。  
   
-10. 在“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户”中，可以指定一个预定义的 Secure Store Service 目标应用程序，以便存储用于运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新作业的预定义帐户。 请确保指定目标应用程序名称而不是 ID。 如果在 SQL Server 安装程序中使用了“新服务器”选项来安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则会自动创建用于无人参与的数据刷新的目标应用程序。 否则，您必须手动创建目标应用程序。 有关如何配置帐户的说明，请参阅 [配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
+10. 在“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户”中，可以指定一个预定义的 Secure Store Service 目标应用程序，以便存储用于运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新作业的预定义帐户。 请确保指定目标应用程序名称而不是 ID。 如果在 SQL Server 安装程序中使用了“新服务器”选项来安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则会自动创建用于无人参与的数据刷新的目标应用程序。 否则，您必须手动创建目标应用程序。 有关如何配置帐户的说明，请参阅[配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
   
-11. 在 **“允许用户输入自定义 Windows 凭据”**中，您可以选中或取消选中复选框以便指定计划所有者是否可以输入任意的 Windows 凭据以便运行数据刷新计划。 如果选中此复选框， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序将为每组存储凭据都创建和管理目标应用程序。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。  
+11. 在 **“允许用户输入自定义 Windows 凭据”** 中，您可以选中或取消选中复选框以便指定计划所有者是否可以输入任意的 Windows 凭据以便运行数据刷新计划。 如果选中此复选框， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序将为每组存储凭据都创建和管理目标应用程序。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。  
   
-12. 在 **“最大处理历史记录长度”**中，您可以指定保留多长时间的数据刷新处理的历史记录。 此信息显示在为使用数据刷新的每个工作簿保留的数据刷新历史记录页中。 它还出现在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中。  
+12. 在 **“最大处理历史记录长度”** 中，您可以指定保留多长时间的数据刷新处理的历史记录。 此信息显示在为使用数据刷新的每个工作簿保留的数据刷新历史记录页中。 它还出现在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中。  
   
-13. 在“使用情况数据收集”的 **“查询报告间隔”**中，指定用于报告查询统计信息的时间间隔。 查询统计信息作为单个事件报告，以便将服务器到服务器的通信量降至最低。  
+13. 在“使用情况数据收集”的 **“查询报告间隔”** 中，指定用于报告查询统计信息的时间间隔。 查询统计信息作为单个事件报告，以便将服务器到服务器的通信量降至最低。  
   
 14. 在“使用情况数据历史记录”中，指定要保留多长时间的使用情况数据的历史记录。 使用情况信息将出现在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中。 如果为使用情况数据历史指定太低的值，则报告不是那么有效。  
   
@@ -130,7 +131,7 @@ ms.lasthandoff: 05/10/2018
   
  默认的连接组将接受相同类型的多个服务应用程序。 但应注意，向此列表添加多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序不是支持的配置。  
   
-1.  在“管理中心”的 **“应用程序管理”**中，单击 **“管理 Web 应用程序”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理 Web 应用程序”**。  
   
 2.  选择要为其分配连接的应用程序（例如 SharePoint -80）。  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  对于“[自定义]”，选中要使用的每个服务应用程序连接旁边的复选框。 如果有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（由设置为“PowerPivot 服务应用程序代理”的类型指示），请确保仅选择一个。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ##  <a name="EditGSA"></a> 编辑服务应用程序属性  
  使用下面的说明可重新打开指定服务应用程序名称、应用程序池、数据库设置和服务关联的属性页。  
@@ -151,7 +152,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  在功能区上单击 **“属性”** 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

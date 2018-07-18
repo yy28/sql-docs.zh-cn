@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913822"
 ---
 # <a name="asynchronous-execution-polling-method"></a>异步执行 （轮询方法）
 在 ODBC 3.8 和 Windows 7 SDK 之前, 已仅在语句函数上允许异步操作。 有关详细信息，请参阅**异步执行语句操作**，本主题中更高版本。  

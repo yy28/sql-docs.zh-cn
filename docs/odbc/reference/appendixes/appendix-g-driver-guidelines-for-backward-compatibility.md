@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906024"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>为了向后兼容的附录 g： 驱动程序准则
 本附录提供驱动程序编写器处理 ODBC 3 的信息。*x*驱动程序需要支持 ODBC 2。*x*应用程序。 有关向后兼容性的详细信息，请参阅[向后兼容性和标准合规性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  

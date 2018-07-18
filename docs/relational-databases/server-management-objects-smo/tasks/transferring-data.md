@@ -1,5 +1,5 @@
 ---
-title: 将数据传输 |Microsoft 文档
+title: 将数据传输 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,10 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f02fd9ab2adec9f6e237a994df57781c6e60c10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032567"
 ---
 # <a name="transferring-data"></a>传输数据
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  通过在目标服务器上执行生成的脚本可以传输数据库架构中的对象。 使用动态创建的 DTS 包传输 <xref:Microsoft.SqlServer.Management.Smo.Table> 数据。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer>对象使用[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy.aspx) API 来传输数据。 同样，用于执行数据传输的方法和属性驻留在 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象中，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象中。 将功能从实例类移到实用工具类符合轻型对象模型，因为仅在需要特定任务的代码时才加载它们。  
+ <xref:Microsoft.SqlServer.Management.Smo.Transfer>对象使用[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy.aspx) API 将数据传输。 同样，用于执行数据传输的方法和属性驻留在 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象中，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象中。 将功能从实例类移到实用工具类符合轻型对象模型，因为仅在需要特定任务的代码时才加载它们。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Transfer> 对象不支持向 <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> 低于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例版本的目标数据库传输数据。  
   

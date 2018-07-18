@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022944"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或删除 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-2.  **“对象资源管理器”**中，展开连接的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的节点，并确保要删除的对象可见。  
+2.  **“对象资源管理器”** 中，展开连接的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的节点，并确保要删除的对象可见。  
   
 3.  右键单击要删除的对象，再选择“删除”。  
   

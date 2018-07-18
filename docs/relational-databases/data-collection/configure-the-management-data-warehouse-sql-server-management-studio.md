@@ -31,6 +31,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33145198"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +111,7 @@ ms.lasthandoff: 05/04/2018
   
  **“完成向导”页**  
   
- 使用此页可验证和完成数据收集配置。 显示在查看窗口中的树用于说明将应用的配置以及单击 **“完成”**时将执行的操作。  
+ 使用此页可验证和完成数据收集配置。 显示在查看窗口中的树用于说明将应用的配置以及单击 **“完成”** 时将执行的操作。  
   
  **“配置数据收集向导进度”页**  
   

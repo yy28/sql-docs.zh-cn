@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911702"
 ---
 # <a name="result-set-metadata"></a>结果集元数据
 *元数据*是描述其他数据的数据。 例如，结果集元数据描述结果集，如结果集中的列数、 数据类型的这些列，其名称、 精度、 可为 null，等等。  

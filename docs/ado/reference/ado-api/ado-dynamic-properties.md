@@ -1,9 +1,8 @@
 ---
 title: ADO 动态属性 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.service: ''
-ms.component: reference
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93d699a75045afde3b03a9f977657d0d6db87933
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5aa6d237b16c6ac24c0e921d51f19a26c36e3bbe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275446"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 动态属性
 可以将动态属性添加到[属性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 这些属性的源是哪种数据提供程序，如[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或服务提供程序，如[Microsoft 游标服务用于 OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)。 引用适当的数据提供程序或服务提供程序文档，了解有关特定的动态属性的详细信息。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |[唯一表、 唯一的架构、 唯一的目录](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**唯一表**指定的更新、 插入和删除允许在其基础表的名称。<br /><br /> **唯一架构**指定架构或表的所有者的名称。<br /><br /> **唯一的目录**指定的目录或包含的表的数据库名称。|  
 |[更新重新同步](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|指定是否**UpdateBatch**方法后跟一种隐式**重新同步**方法操作，如果是，该操作的作用域。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 枚举常量](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

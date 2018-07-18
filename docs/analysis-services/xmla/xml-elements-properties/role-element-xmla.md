@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e97292c386e7a0681759857d86cee3726078061
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e313b014632f85800111d1a3c419e38b7caa1f19
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34579999"
 ---
 # <a name="role-element--xmla"></a>Role 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|字符串|  
-|默认值|无|  
+|数据类型和长度|String|  
+|默认值|InclusionThresholdSetting|  
 |基数|1：可出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/10/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   

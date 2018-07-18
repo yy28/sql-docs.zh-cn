@@ -1,5 +1,5 @@
 ---
-title: 在 Linux 上的 SQL Server 安全入门 |Microsoft 文档
+title: Linux 上的 SQL Server 安全入门 |Microsoft Docs
 description: 本指南介绍了典型的安全操作。
 author: rothja
 ms.author: jroth
@@ -13,33 +13,34 @@ ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
 ms.openlocfilehash: 0d7f2244a20f117d2886cdee59d54adfa4029721
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020330"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-如果你不熟悉 SQL Server 的 Linux 用户，以下任务将指导你完成一些安全任务。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 在每个示例中，均提供该领域的详细文档链接。
+如果你是刚接触 SQL Server 的 Linux 用户，以下任务将指导你完成某些安全任务。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 在每个示例中，均提供该领域的详细文档链接。
 
 >  [!NOTE]
->  下面的示例使用**AdventureWorks2014**示例数据库。 有关如何获取和安装此示例数据库的说明，请参阅[从 Windows 的 SQL Server 数据库还原到 Linux](sql-server-linux-migrate-restore-database.md)。
+>  下面的示例使用**AdventureWorks2014**示例数据库。 有关如何获取和安装此示例数据库的说明，请参阅[SQL Server 数据库从 Windows 还原到 Linux](sql-server-linux-migrate-restore-database.md)。
 
 
 ## <a name="create-a-login-and-a-database-user"></a>创建登录名和数据库用户 
 
-通过在 master 数据库中使用创建登录名授予其他人访问 SQL Server [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)语句。 例如：
+通过使用在 master 数据库中创建的登录名授予其他人访问 SQL Server [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)语句。 例如：
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 >  [!NOTE]
->  始终在前一个命令中使用强密码来代替星号。
+>  在前一命令中始终使用强密码代替星号。
 
-登录名可连接到 SQL Server，且能（通过有限权限）访问 master 数据库。 若要连接到用户数据库，登录名需要数据库级别的相应标识，称为数据库用户。 用户特定于每个数据库，且必须在每个要向其授予访问权限的数据库中单独创建。 下面的示例到 AdventureWorks2014 数据库中，可使您移动，然后使用[CREATE USER](../t-sql/statements/create-user-transact-sql.md)语句以创建名为 Larry 都与名为 Larry 的登录名相关联的用户。 尽管该登录名和用户相关（相互映射），但它们是不同的对象。 登录名是服务器级主体。 用户是数据库级主体。
+登录名可连接到 SQL Server，且能（通过有限权限）访问 master 数据库。 若要连接到用户数据库，登录名需要数据库级别的相应标识，称为数据库用户。 用户特定于每个数据库，且必须在每个要向其授予访问权限的数据库中单独创建。 下面的示例移至 AdventureWorks2014 数据库，然后使用[CREATE USER](../t-sql/statements/create-user-transact-sql.md)语句以创建名为 Larry 的是与名为 Larry 的登录名相关联的用户。 尽管该登录名和用户相关（相互映射），但它们是不同的对象。 登录名是服务器级主体。 用户是数据库级主体。
 
 ```
 USE AdventureWorks2014;
@@ -51,7 +52,7 @@ GO
 - SQL Server 管理员帐户可连接到任何数据库，并可在任何数据库中创建更多登录名和用户。  
 - 当用户创建数据库时，他们会成为数据库所有者，可连接到该数据库。 数据库所有者可以创建更多用户。
 
-更高版本可以授权其他登录名创建多个登录名授予他们`ALTER ANY LOGIN`权限。 数据库中可以授权其他用户创建更多用户通过向他们授予`ALTER ANY USER`权限。 例如：   
+更高版本可以授权其他登录名创建更多的登录名通过向它们授予`ALTER ANY LOGIN`权限。 在数据库中，可以授权其他用户创建更多用户通过向它们授予`ALTER ANY USER`权限。 例如：   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -63,14 +64,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-登录名 Larry 现在可以创建多个登录名和用户杰儿可以创建更多的用户。
+现在 Larry 的登录名，可以创建更多登录名和用户 Jerry 可以创建更多的用户。
 
 
 ## <a name="granting-access-with-least-privileges"></a>授予特权最少的访问权限
 
 第一个连接到用户数据库的用户将是管理员和数据库所有者帐户。 但这些用户具有数据库的所有权限。 其权限要比大多数用户应该拥有的更多。 
 
-你刚开始时，你可以通过使用内置分配权限的一些常规类别*固定数据库角色的成员*。 例如，`db_datareader`固定的数据库角色可以读取所有表在数据库中，但不执行更改。 通过使用授予固定的数据库角色的成员身份[ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)语句。 下面的示例将用户添加`Jerry`到`db_datareader`固定的数据库角色。   
+如果你刚开始，可以使用内置的分配某些常规类别的权限*固定数据库角色的成员*。 例如，`db_datareader`固定的数据库角色可以读取所有表在数据库中，但不进行任何更改。 通过使用授予固定的数据库角色的成员身份[ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)语句。 下面的示例将用户添加`Jerry`到`db_datareader`固定的数据库角色。   
    
 ```   
 USE AdventureWorks2014;   
@@ -79,11 +80,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-固定的数据库角色的列表，请参阅[数据库级角色](../relational-databases/security/authentication-access/database-level-roles.md)。
+固定的数据库角色的列表，请参阅[数据库级别角色](../relational-databases/security/authentication-access/database-level-roles.md)。
 
-更高版本，当你准备好配置更精确地访问数据 （强烈建议），创建您自己使用的用户定义的数据库角色[创建角色](../t-sql/statements/create-role-transact-sql.md)语句。 然后将特定精细权限分配给自定义角色。
+更高版本，若要配置更精确的访问权限 （强烈建议） 在数据准备就绪后，创建你自己使用的用户定义的数据库角色[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)语句。 然后将特定精细权限分配给自定义角色。
 
-例如，以下语句创建名为的数据库角色`Sales`，授予`Sales`组能够查看、 更新和删除行`Orders`表，并将用户`Jerry`到`Sales`角色。   
+例如，以下语句创建名为的数据库角色`Sales`，授予`Sales`组的功能，请参阅、 更新和删除行`Orders`表，然后将用户添加`Jerry`到`Sales`角色。   
    
 ```   
 CREATE ROLE Sales;   
@@ -93,14 +94,14 @@ GRANT DELETE ON Object::Sales TO Orders;
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-有关权限系统的详细信息，请参阅[Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
+有关权限系统的详细信息，请参阅[数据库引擎权限入门](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
 
 ## <a name="configure-row-level-security"></a>配置行级安全性  
 
-[行级别安全性](../relational-databases/security/row-level-security.md)使您能够将访问限制为基于执行查询的用户数据库中的行。 在某些情况下（如确保客户只能访问自己的数据，或员工只能访问与其部门相关的数据）此功能很有用。   
+[行级别安全性](../relational-databases/security/row-level-security.md)使您能够将访问限制为执行查询的用户数据库中的行。 在某些情况下（如确保客户只能访问自己的数据，或员工只能访问与其部门相关的数据）此功能很有用。   
 
-以下步骤引导设置两个具有不同的行级访问权限的用户`Sales.SalesOrderHeader`表。 
+以下步骤引导完成设置两个具有不同的行级别访问权限的用户`Sales.SalesOrderHeader`表。 
 
 创建两个用户帐户，测试行级安全性：    
    
@@ -113,14 +114,14 @@ CREATE USER Manager WITHOUT LOGIN;
 CREATE USER SalesPerson280 WITHOUT LOGIN;    
 ```   
 
-在上授予读取访问权限`Sales.SalesOrderHeader`表添加到这两个用户：    
+上授予读取访问权限`Sales.SalesOrderHeader`向这两个用户的表：    
    
 ```   
 GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
 GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
 ```   
    
-创建新架构和内联表值函数。 该函数将返回 1 中的行时`SalesPersonID`列匹配的 ID`SalesPerson`登录名或执行查询的用户是否是 Manager 用户。   
+创建新架构和内联表值函数。 该函数将返回 1 中的行时`SalesPersonID`列的 ID 相匹配`SalesPerson`登录名或如果执行查询的用户是 Manager 用户。   
    
 ```     
 CREATE SCHEMA Security;   
@@ -146,7 +147,7 @@ ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)
 WITH (STATE = ON);   
 ```
 
-执行以下查询`SalesOrderHeader`表为每个用户。 验证`SalesPerson280`只看到从他们自己的销售和，95 行`Manager`可以看到表中的所有行。  
+执行以下查询`SalesOrderHeader`表为每个用户。 确认`SalesPerson280`只能查看自己的销售和 95 行`Manager`可以看到表中的所有行。  
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
@@ -168,9 +169,9 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>启用动态数据掩码
 
-[动态数据屏蔽](../relational-databases/security/dynamic-data-masking.md)使您能够限制敏感数据的公开应用程序的用户的完全或部分屏蔽某些列。 
+[动态数据屏蔽](../relational-databases/security/dynamic-data-masking.md)使您能够通过完全或部分掩盖某些列来限制敏感数据的应用程序的用户公开。 
 
-使用`ALTER TABLE`语句来添加到了屏蔽函数`EmailAddress`中的列`Person.EmailAddress`表： 
+使用`ALTER TABLE`语句添加到了屏蔽函数`EmailAddress`中的列`Person.EmailAddress`表： 
  
 ```
 USE AdventureWorks2014;
@@ -180,7 +181,7 @@ ALTER COLUMN EmailAddress
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
-创建一个新用户`TestUser`与`SELECT`权限表中，然后执行为查询`TestUser`查看经过屏蔽的数据：   
+创建新的用户`TestUser`与`SELECT`表的权限执行为查询`TestUser`以查看掩码的数据：   
 
 ```  
 CREATE USER TestUser WITHOUT LOGIN;   
@@ -195,20 +196,20 @@ REVERT;
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
-|1 |ken0@adventure-works.com |    
+|@shouldalert |ken0@adventure-works.com |    
  
 into 
 
 |EmailAddressID |EmailAddress |  
 |----|---- |   
-|1 |kXXX@XXXX.com |   
+|@shouldalert |kXXX@XXXX.com |   
 
 
 ## <a name="enable-transparent-data-encryption"></a>启用透明数据加密
 
 数据库面临的一种威胁是有人可能会窃取硬盘中的数据库文件。 因不良员工行为不轨，或者某人偷走包含文件的计算机（如笔记本电脑），然后提升访问权限入侵系统，这时可能会发生这种情况。
 
-透明数据加密 (TDE) 在数据文件存储在硬盘驱动器上时会对其加密。 SQL Server 数据库引擎的 master 数据库具有加密密钥，因此数据库引擎可以处理数据。 没有密钥访问权限就不能读取数据库文件。 高级管理员可以管理、备份和重新创建密钥，因此可以移动数据库（但仅能由所选人员操作）。 当配置 TDE 时，`tempdb`数据库也自动加密。 
+透明数据加密 (TDE) 在数据文件存储在硬盘驱动器上时会对其加密。 SQL Server 数据库引擎的 master 数据库具有加密密钥，因此数据库引擎可以处理数据。 没有密钥访问权限就不能读取数据库文件。 高级管理员可以管理、备份和重新创建密钥，因此可以移动数据库（但仅能由所选人员操作）。 配置 TDE 后，`tempdb`数据库也会自动加密。 
 
 由于数据库引擎可以读取数据，透明数据加密不能防止可以直接读取内存或者可以通过管理员帐户访问 SQL Server 的计算机管理员执行未经授权的访问。
 
@@ -246,7 +247,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-若要删除 TDE，执行 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+若要删除 TDE，请执行 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 加密和解密操作由 SQL Server 安排在后台线程中执行。 您可以使用本主题后面部分显示的列表中的目录视图和动态管理视图查看这些操作的状态。   
 
@@ -288,4 +289,4 @@ GO
 
 ## <a name="next-steps"></a>后续步骤
 
-SQL server 的安全功能的详细信息，请参阅[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。
+SQL Server 的安全功能的详细信息，请参阅[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。

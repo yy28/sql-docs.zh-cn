@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba11f1b2c561b280eb3a258be0696fd849ee869b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09d7b0e3238ecdec8ef07940aa4dc5eebbf4b6c3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401339"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>通过使用 OLE DB 目标来加载数据
   若要添加和配置 OLE DB 目标，包中必须已包含至少一个数据流任务和一个源。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，然后将 OLE DB 目标从 **“工具箱”**拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，然后将 OLE DB 目标从 **“工具箱”** 拖动到设计图面。  
   
 4.  将连接线从数据源或前一转换拖到目标，从而将 OLE DB 目标连接到数据流。  
   

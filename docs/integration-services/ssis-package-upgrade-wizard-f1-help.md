@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d5a99d26e02695c8c805e30f7a3bc9afb972178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0595f04bd99e2cab2ef71694d170392fd505b76
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329181"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 包升级向导的 F1 帮助
   使用 SSIS 包升级向导可将由较早版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 创建的包升级到当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的包格式。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
  **包源**  
  选择包含要升级包的存储位置。 此选项具有下表所列的值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**“文件系统”**|指示要升级的包位于本地计算机上的文件夹中。<br /><br /> 若要使向导在升级这些包前备份原始包，必须在文件系统中必须存储原始包。 有关详细信息，请参阅操作指南主题。|  
 |**SSIS 包存储区**|指示要升级的包位于包存储区中。 包存储区由一组 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **Package source** 。|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
  **包源**  
  指定存储升级包的位置。 此选项具有下表所列的值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**“文件系统”**|指示将升级的包将保存到本地计算机上的文件夹中。|  
 |**SSIS 包存储区**|指示升级的包将保存到 Integration Services 包存储区中。 包存储区由一组 Integration Services 服务管理的文件系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  

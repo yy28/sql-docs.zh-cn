@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030524"
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>ConfigurationSetting 属性 - SendUsingSMTPServer
   指定报表服务器的电子邮件配置中的 **SendUsing** 元素是否设置为 **true**。  

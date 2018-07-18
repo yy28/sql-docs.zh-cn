@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32867312"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>配置 locks 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“高级”** 节点。  
   
-3.  在 **“并行”**之下，键入想要的 **locks** 选项的值。  
+3.  在 **“并行”** 之下，键入想要的 **locks** 选项的值。  
   
      使用 **locks** 选项设置可用锁的最大数目，以限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为锁分配的内存量。  
   

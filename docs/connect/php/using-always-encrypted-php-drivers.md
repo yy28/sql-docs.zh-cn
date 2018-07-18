@@ -3,7 +3,6 @@ title: 使用始终加密的 PHP 驱动程序适用于 SQL Server |Microsoft 文
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 93b14d81411e3045d9d6f3a67ce03db281f41f68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f5035dc42b130afe7da8c27a1c6036e79e2fa0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309906"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>使用始终加密的 PHP 驱动程序适用于 SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -286,7 +286,7 @@ SQLSRV 和 PDO_SQLSRV:
  
 PHP 驱动程序还将继承为 SQL Server 和数据库规定的 ODBC 驱动程序的限制。 请参阅[的 ODBC 驱动程序使用始终加密时限制](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)和[始终加密功能详细信息](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [PHP SQL 驱动程序的编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV 驱动程序 API 参考](../../connect/php/pdo-sqlsrv-driver-reference.md)  

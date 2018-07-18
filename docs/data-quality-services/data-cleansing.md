@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c89b9618547e26ad8b18e3bacf527ba9e084abf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5381abcf7104b579db7bdb6e0d64ee7f90864257
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310656"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/03/2018
 -   **正确**：正确的值。 例如，与域值匹配的值。 根据需要，您可以通过拒绝此选项卡中的值，或通过指定 **“更正为”** 列中的替代字词，然后单击 **“接受”** 列中的单选按钮来覆盖 DQS 清理。 此选项卡还包含这样的值：用户在交互式清理期间通过单击 **“新建”** 或 **“无效”** 选项卡中 **“批准”** 列中的单选按钮批准了该值。  
   
 > [!NOTE]  
->  在 **“建议的”**、 **“已更正”**和 **“正确”** 选项卡中，DQS 针对相应域值在 **“更正为”** 列中显示域的前导值（如果适用）。  
+>  在 **“建议的”**、 **“已更正”** 和 **“正确”** 选项卡中，DQS 针对相应域值在 **“更正为”** 列中显示域的前导值（如果适用）。  
   
  数据专员使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 来查看 DQS 建议的更改并决定是否实施这些更改。 他们可以验证 DQS 指定为正确的值实际上是否正确； 验证是否确实应该更改 DQS 已经执行的具有高置信度的更改； 可以决定是否批准自动建议的更改； 可以检查尚未更改的值，以便执行他们想要执行但计算机辅助过程中未找到的更改。  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
  在清理数据质量项目向导的 **“导出”** 页中导出已清理的数据时，您通过选中 **“标准化输出”** 复选框来指定是否要以标准化格式导出已清理的数据。 默认情况下，以标准化格式导出已清理的数据，即选中该复选框。 有关导出已清理的数据的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)。  
   
-##  <a name="Related"></a>相关任务  
+##  <a name="Related"></a> 相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

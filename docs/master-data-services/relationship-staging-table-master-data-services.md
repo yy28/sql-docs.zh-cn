@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ac87515c37a6b5ea0356d47b9a60167787ee5d95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb81e8c1ac664474cf9482bb76b27e7f3f2fdc54
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335311"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>关系临时表 (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="TableColumns"></a> 表列  
  下表说明 Relationship 临时表中每个字段的用途。  
   
-|列名|Description|ReplTest1|  
+|列名|描述|ReplTest1|  
 |-----------------|-----------------|-----------|  
 |**ID**|自动分配的标识符。|不要在此字段中输入值。 如果尚未处理此批次，则此字段为空。|  
 |**RelationshipType**|Required<br /><br /> 正在设置的关系的类型。|可能的值有：<br /><br /> **1**：父级<br /><br /> **2**：同级（同一级）|  

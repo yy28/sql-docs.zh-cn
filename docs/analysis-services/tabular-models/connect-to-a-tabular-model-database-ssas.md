@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045291"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>连接到表格模型数据库  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -66,11 +67,11 @@ ms.lasthandoff: 05/10/2018
   
 #### <a name="connect-from-excel"></a>从 Excel 进行连接  
   
-1.  在 Excel 中的 **“数据”** 选项卡上的 **“获取外部数据”**中，单击 **“自其他来源”**。  
+1.  在 Excel 中的 **“数据”** 选项卡上的 **“获取外部数据”** 中，单击 **“自其他来源”**。  
   
 2.  选择 **“从 Analysis Services”**。  
   
-3.  在 **“服务器名称”**中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器作为命名实例安装，你必须按以下格式指定名称： \<servername >\\< instancename\>。  
+3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器作为命名实例安装，你必须按以下格式指定名称： \<servername >\\< instancename\>。  
   
      必须为独立的表格部署配置服务器实例，并且该服务器实例必须具有允许访问的入站规则。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   

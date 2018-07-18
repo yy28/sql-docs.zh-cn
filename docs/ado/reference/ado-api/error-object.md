@@ -2,7 +2,6 @@
 title: 错误对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6911493ab691b2c5e40ff4fa7331261070d981be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77851eaeabd460db12938f6386708057e7faee0c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278416"
 ---
 # <a name="error-object"></a>错误对象
 包含有关适用于涉及提供程序的单个操作的数据访问错误的详细信息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  涉及 ADO 对象的任何操作可以生成一个或多个提供程序错误。 每个错误发生时，一个或多个**错误**对象都将置于[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 当另一个 ADO 操作生成错误，**错误**集合处于未选中状态，以及新的集**错误**对象放入**错误**集合。  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [错误对象属性、方法和事件](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [描述、 HelpContext、 HelpFile、 NativeError、 数量、 源和 SQLState 属性示例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [描述、 HelpContext、 HelpFile、 NativeError、 数量、 源和 SQLState 属性示例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

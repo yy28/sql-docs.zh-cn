@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7ff7d1fcaa85ac4b53b1cde391bfb5dd6cbaf91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6918b56ec5335a25b9f0606b4646222df7ce9ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330891"
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-ftp-operations"></a>预定义的 FTP 操作  
  FTP 任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|运算|Description|  
+|运算|描述|  
 |---------------|-----------------|  
 |发送文件|将文件从本地计算机发送到 FTP 服务器。|  
 |接收文件|将文件从 FTP 服务器保存到本地计算机。|  
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 任务可用的自定义日志项  
  下表列出了 FTP 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指示任务已启动与 FTP 服务器的连接。|  
 |**FTPOperation**|报告任务所执行的 FTP 操作的开始及其类型。|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **IsRemotePathVariable**  
  指示远程路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **RemoteVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **RemotePath**。|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
  **IsLocalPathVariable**  
  指示本地路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **LocalVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **LocalPath**。|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
  **运算**  
  选择要执行的 FTP 操作。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**发送文件**|发送文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收文件**|接收文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  

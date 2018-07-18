@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026164"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
 

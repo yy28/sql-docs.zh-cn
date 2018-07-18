@@ -1,5 +1,5 @@
 ---
-title: sys.partition_range_values (Transact SQL) |Microsoft 文档
+title: sys.partition_range_values (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33179563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001209"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33179563"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|该范围边界值的分区函数的 ID。|  
 |**boundary_id**|**int**|边界值元组的 ID（从 1 开始的序号），最左边界以值为 1 的 ID 开始。|  
-|**parameter_id**|**int**|该值所对应的函数参数的 ID。 此列中的值对应与**parameter_id**列**sys.partition_parameters**目录为任何特定的视图**function_id**。|  
+|**parameter_id**|**int**|该值所对应的函数参数的 ID。 此列中的值与中的对应**parameter_id**的列**sys.partition_parameters**目录视图对于任何特定**function_id**。|  
 |**value**|**sql_variant**|实际的边界值。|  
   
 ## <a name="permissions"></a>权限  
@@ -51,6 +51,6 @@ ms.locfileid: "33179563"
  [分区函数目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
+ [sys.partition_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
   
   

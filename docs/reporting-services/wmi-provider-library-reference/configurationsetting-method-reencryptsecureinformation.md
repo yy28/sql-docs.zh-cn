@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030864"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>ConfigurationSetting 方法 - ReencryptSecureInformation
   生成新的加密密钥，并使用新密钥对目录中的所有安全信息进行重新加密。  

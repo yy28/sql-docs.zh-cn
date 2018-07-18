@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030724"
 ---
 # <a name="user-role-properties-management-studio"></a>用户角色属性 (Management Studio)
   使用此页，可以查看项级角色定义中所包含的任务， 还可以更改任务列表或修改角色说明。  

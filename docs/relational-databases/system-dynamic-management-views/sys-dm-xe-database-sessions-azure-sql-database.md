@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_sessions （Azure SQL 数据库） |Microsoft 文档
+title: sys.dm_xe_database_sessions （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
@@ -17,10 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984196"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,15 +43,15 @@ ms.lasthandoff: 05/23/2018
  要求拥有 VIEW DATABASE STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
-截至 2015年-07-13，sys.dm_xe_objects 是 （_d） 名称中的不包含这些 XEvents Dmv 之一。 不是存在拼写错误或以下表的右侧列中的错误。 名称是在 Microsoft SQL Server 和 Azure SQL 数据库相同的。 GeneMi。  
+截至 2015年-07-13 sys.dm_xe_objects 是一个不包含其名称中的 _database 这些 XEvents Dmv。 不是拼写错误或以下表的右侧列中的错误。 名称是 Microsoft SQL Server 和 Azure SQL 数据库中相同的。 GeneMi。  
   
 |From|若要|关系|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|多对一|  
 |sys.dm_xe_database_session_events.event_package_guid、 sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
   
-## <a name="see-also"></a>另请参阅  
-[Azure SQL 数据库中的扩展的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+## <a name="see-also"></a>请参阅  
+[Azure SQL 数据库中扩展的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
  

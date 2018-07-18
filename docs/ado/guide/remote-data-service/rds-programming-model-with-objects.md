@@ -2,7 +2,6 @@
 title: RDS 的编程模型和对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32cd0b412e06f591eee69581e1e7ea8f871cab7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9501b819e664e4b0841140f6b3d835773d2e2ed
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274076"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 的编程模型和对象
 RDS 的目标是访问和更新数据源通过如 IIS 媒介。 编程模型指定实现此目标所需的活动序列。 对象模型指定其方法和属性会影响的编程模型的对象。  
@@ -44,7 +44,7 @@ RDS 的目标是访问和更新数据源通过如 IIS 媒介。 编程模型指�
   
 -   更改为**记录集**发送回发到服务器和用于更新数据源对象 (**rds.DataControl**或**提高**)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS 对象模型摘要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

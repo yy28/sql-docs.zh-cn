@@ -1,5 +1,5 @@
 ---
-title: PDW 服务状态-分析平台系统 |Microsoft 文档
+title: PDW 服务状态-分析平台系统 |Microsoft Docs
 description: 分析平台系统并行数据仓库 (PDW) 的服务状态。
 author: mzaman1
 manager: craigg
@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e2252bb821f9522515f1625b0fc118323cb50d1f
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909887"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>分析平台系统的并行数据仓库服务状态
-并行数据仓库**服务状态**页 Microsoft 分析平台系统 Configuration Manager 中显示的当前状态的所有 SQL Server PDW 服务，并提供的功能来停止和启动 PDW 服务。 这是唯一受支持的方法启动和停止 PDW 服务。 请注意，单个组件或服务无法启动独立。  
+并行数据仓库**服务状态**页在 Microsoft 分析平台系统 Configuration Manager 中显示的当前状态的所有 SQL Server PDW 服务，并提供的功能来停止和启动 PDW 服务。 这是用于启动和停止 PDW 服务唯一受支持的方法。 请注意，单个组件或服务无法启动独立。  
   
 #### <a name="to-start-or-stop-the-appliance-services"></a>若要启动或停止设备服务  
   
@@ -24,13 +25,13 @@ ms.lasthandoff: 04/19/2018
   
 2.  若要停止设备服务，请单击**停止设备**。  
   
-没有必要单击**应用**时启动和停止使用设备服务**启动设备**和**停止设备**。  
+没有必要单击**Apply**启动或停止使用的工具服务时**启动设备**并**停止设备**。  
   
-![DWConfig 设备 PDW 服务](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
+![DWConfig 工具 PDW 服务](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
   
 > [!NOTE]  
-> 停止 PDW 区域还将 PDW 代理 (sqldwagent) 停止节点上的 HDInsight 区域中。 HDInsight 区域是仍正常工作，但是运行状况监视将不可用。 （PDW 代理需要 PDW 控制节点，以报告运行状况监视。）  
+> 在节点上停止 PDW 区域也停止 PDW 代理 (sqldwagent)。 PDW 代理需要 PDW 控制节点，以报告运行状况监视。  
   
-## <a name="see-also"></a>另请参阅  
-[打开或关闭电源 AP 设备&#40;分析平台系统&#41;](power-the-aps-appliance-on-or-off.md)  
+## <a name="see-also"></a>请参阅  
+[打开或关闭电源 APS 设备&#40;分析平台系统&#41;](power-the-aps-appliance-on-or-off.md)  
   

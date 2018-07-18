@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33045014"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="SSMSProcedure"></a>  
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>将执行跟踪消息写入到 SQL Server 代理错误日志中  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要将执行跟踪消息写入到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理错误日志的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要将执行跟踪消息写入到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理错误日志的服务器。  
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   

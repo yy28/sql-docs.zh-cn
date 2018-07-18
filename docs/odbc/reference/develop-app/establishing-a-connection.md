@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910695"
 ---
 # <a name="establishing-a-connection"></a>建立连接
 后分配环境和连接句柄并设置任何连接属性，应用程序已准备好连接到数据源或驱动程序。 应用程序可用于执行此操作的三个不同函数： **SQLConnect** （核心接口一致性级别）， **SQLDriverConnect** （核心） 和**SQLBrowseConnect**(级别 1)。 这三个用于在不同的方案中使用。 连接之前，，应用程序可以确定这这些函数与受支持**ConnectFunctions**关键字由**SQLDrivers**。  

@@ -1,32 +1,31 @@
 ---
-title: 使用日期和时间类型 |Microsoft 文档
+title: 使用日期和时间类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fe22cd6029d3699371098c491060a893709cb84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c356bf4502dbb102611a97e0237e698b898a09f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410626"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和时间类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此示例显示如何对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中增加的日期/时间数据结构进行初始化。 随后准备输入值、绑定参数，并执行查询。 有关使用这些类型的详细信息，请参阅[日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+  此示例显示如何对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中增加的日期/时间数据结构进行初始化。 随后准备输入值、绑定参数，并执行查询。 有关使用这些类型的详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="example"></a>示例  
  您将需要一个名为 DateTime 的 ODBC 数据源。 DateTime 的默认数据库应为 tempdb。 此数据源必须基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驱动程序。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例使用的表。  
   
- 使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
  第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例使用的表。  
   

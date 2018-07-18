@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f24a549196cfe7d795a4ae0b0f8b278cc3eb008a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa7df26acb805cbd3855339f38885281e0ae7297
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349869"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>发布服务器信息，订阅监视列表（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
  如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期，“状态”  列将显示“错误” 。  
   
- 状态值 **“‘严重’状态下的性能”**、 **“长时间运行的合并”**、 **“即将过期/已过期”**和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在同步代理。 例如，状态可能为 **“同步，‘严重’状态下的性能”**。  
+ 状态值 **“‘严重’状态下的性能”**、 **“长时间运行的合并”**、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在同步代理。 例如，状态可能为 **“同步，‘严重’状态下的性能”**。  
   
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 和 **“长时间运行的合并”** 。 只有在使用相同的连接类型（拨号或 LAN）对订阅进行五次同步后，才会显示状态值 **“‘严重’状态下的性能”** 。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  上次同步过程中合并代理运行所用的时间。 如果合并代理当前正在同步，该时间表示已运行的时间；如果合并代理之前已经同步，该时间则表示上次同步所用的总时间。  
   
  **“连接”**  
- 订阅服务器与发布服务器之间的连接类型。 可能的值包括 **LAN**、 **“拨号”**和 **Internet**。 如果订阅使用 Web 同步，则会显示 **Internet** 值。  
+ 订阅服务器与发布服务器之间的连接类型。 可能的值包括 **LAN**、 **“拨号”** 和 **Internet**。 如果订阅使用 Web 同步，则会显示 **Internet** 值。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021034"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合 - 数据集字段集合引用（报表生成器）
   报表中的每个数据集都包含一个字段集合。 字段集合由数据集查询指定的字段集以及你创建的任何其他计算字段组成。 创建数据集后，字段集合将显示在 **“报表数据”** 窗格中。  

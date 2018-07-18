@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904192"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare （桌面数据库驱动程序）
 使用一个不正确的列数准备的语句将返回在执行时，而非后语句准备错误。

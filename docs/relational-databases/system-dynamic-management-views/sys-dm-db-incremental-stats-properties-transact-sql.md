@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_incremental_stats_properties (Transact SQL) |Microsoft 文档
+title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997869"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  此行为在如 `sys.dm_db_incremental_stats_properties` 和 `sys.objects` 等视图中交叉应用于行时，允许安全使用 `sys.stats`。 此方法可返回对应于每个分区的统计信息的属性。 若要查看跨所有分区组合的合并统计信息的属性，请改为使用 sys.dm_db_stats_properties。 
 
-统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 不读取任何数据以生成统计信息数据时, 未创建统计信息 blob，日期不可用，和*last_updated*列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
+统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 当不读取任何数据，无法生成统计信息数据时，不会创建统计信息 blob，日期不可用，并且*last_updated*列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
 
 ## <a name="permissions"></a>权限  
  要求用户对统计信息列拥有 select 权限，或用户拥有表，或用户是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。  
@@ -90,7 +91,7 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 
 有关其他使用建议，请参阅  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)。
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [与对象相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

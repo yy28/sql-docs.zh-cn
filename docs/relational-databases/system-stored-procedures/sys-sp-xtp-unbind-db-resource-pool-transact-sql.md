@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_unbind_db_resource_pool (TRANSACT-SQL) |Microsoft 文档
+title: sys.sp_xtp_unbind_db_resource_pool (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 852d8db43c417d828678929f46ee28f12623a4af
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979409"
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -67,14 +68,14 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
   
 -   由 `database_name` 指定的数据库必须绑定至 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 资源池。  
   
 -   需要 CONTROL SERVER 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将具有内存优化表的数据库绑定至资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

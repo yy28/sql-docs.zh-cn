@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024234"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>极坐标图（报表生成器和 SSRS）
   极坐标图将序列显示为一组位于 360 度圆上、按类别分组的点。 值通过由自圆心测量的点的长度来表示。 点离圆心的距离越远，其值越大。 类别标签显示在图表的周边上。 有关如何将数据添加到坐标图的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

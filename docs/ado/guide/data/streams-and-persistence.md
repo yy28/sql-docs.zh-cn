@@ -2,7 +2,6 @@
 title: 流和持久性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0302de0cc9ac87c55ae0e6c8d44557b517d79d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd1ab20fbd539a0e944060837d1e32c8655b5e1f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272946"
 ---
 # <a name="streams-and-persistence"></a>流和持久性
 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象[保存](../../../ado/reference/ado-api/save-method.md)方法存储或*仍然存在*、**记录集**在文件中，与[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法还原**记录集**从该文件。  
@@ -164,7 +164,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

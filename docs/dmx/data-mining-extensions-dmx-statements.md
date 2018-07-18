@@ -1,35 +1,20 @@
 ---
 title: 数据挖掘扩展插件 (DMX) 语句引用 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], statements
-- statements [DMX], reference
-- mining models [Analysis Services], training
-- mining structures [DMX]
-- mining models [Analysis Services], options
-- mining structures [DMX], options
-ms.assetid: 9cfa1db4-0f21-4fa3-8158-f94c48987e1b
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a3c9f5d7331077520bab68c951b792f744f927db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841490"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>数据挖掘扩展插件 (DMX) 语句
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 |[数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)|数据定义语言 (DDL) 的一部分。 用于定义新挖掘模型（包括定型）或从数据库中删除现有挖掘模型。|  
 |[数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)|数据操作语言 (DML) 的一部分。 用于处理现有挖掘模型，包括浏览模型或创建预测。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904962"
 ---
 # <a name="about-drivers-and-data-sources"></a>有关驱动程序和数据源
 *驱动程序*是处理 ODBC 请求并将数据返回到应用程序的组件。 如有必要，驱动程序将修改到理解数据源的窗体的应用程序的请求。 必须使用驱动程序的安装程序以添加或删除驱动程序从你的计算机。  

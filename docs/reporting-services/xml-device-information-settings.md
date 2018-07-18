@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033294"
 ---
 # <a name="xml-device-information-settings"></a>XML 设备信息设置
   下表列出以 XML 格式呈现时的设备信息设置。  

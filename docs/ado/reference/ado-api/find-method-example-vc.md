@@ -2,7 +2,6 @@
 title: 查找方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ed34d6e09df280034b4e9f9e2e0ce201ff69cf3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3280728d8e2e7a7f822be568052a5cbac84767a3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278586"
 ---
 # <a name="find-method-example-vc"></a>查找方法示例 （VC + +）
 此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法定位并计数业务中的标题数目**Pubs**数据库。 该示例假定基础提供程序不支持类似的功能。  
@@ -158,6 +158,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

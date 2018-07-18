@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4ebd9bc6f9c70eb670671082bfc5627f7b14b5a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6163dcad3fcc755b6d75a0758fce42afed2320cf
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322726"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>并行安装 Reporting Services 和 Internet Information Services
 
@@ -31,35 +31,35 @@ ms.lasthandoff: 05/03/2018
 
 可以在同一台计算机上安装和运行 SQL Server Reporting Services (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
   
-|IIS 版本|问题|Description|  
+|IIS 版本|问题|描述|  
 |-----------------|------------|-----------------|  
-|8.0，8.5|一个应用程序收到发往另一个应用程序的请求。<br /><br /> HTTP.SYS 强制实施了 URL 保留的优先规则。 在向多个具有相同虚拟目录名称且共同监视端口 80 的应用程序发出请求时，如果目标应用程序的 URL 保留相对于另一个应用程序的 URL 保留较弱，则这些请求可能无法到达预期的目标。|在某些情况下，取代 URL 保留方案中另一个 URL 端点的已注册端点可能会收到发往其他应用程序的 HTTP 请求。<br /><br /> 为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用唯一的虚拟目录名有助于避免发生这种冲突。<br /><br /> 本主题中提供了有关此方案的详细信息。|  
+|8.0，8.5|一个应用程序收到发往另一个应用程序的请求。<br /><br /> HTTP.SYS 强制实施了 URL 预留的优先规则。 在向多个具有相同虚拟目录名称且共同监视端口 80 的应用程序发出请求时，如果目标应用程序的 URL 预留相对于另一个应用程序的 URL 预留较弱，则这些请求可能无法到达预期的目标。|在某些情况下，取代 URL 预留方案中另一个 URL 端点的已注册端点可能会收到发往其他应用程序的 HTTP 请求。<br /><br /> 为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用唯一的虚拟目录名有助于避免发生这种冲突。<br /><br /> 本主题中提供了有关此方案的详细信息。|  
   
-## <a name="precedence-rules-for-url-reservations"></a>URL 保留的优先规则  
- 必须了解 URL 保留优先规则，才能解决 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之间的互操作性问题。 优先规则可以归纳为如下表述：具有更明确定义值的 URL 保留将首先收到与该 URL 相匹配的请求。  
+## <a name="precedence-rules-for-url-reservations"></a>URL 预留的优先规则  
+ 必须了解 URL 预留优先规则，才能解决 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之间的互操作性问题。 优先规则可以归纳为如下表述：具有更明确定义值的 URL 预留将首先收到与该 URL 相匹配的请求。  
   
--   指定了虚拟目录的 URL 保留将比忽略了虚拟目录的 URL 保留更为明确。  
+-   指定了虚拟目录的 URL 预留将比忽略了虚拟目录的 URL 预留更为明确。  
   
--   指定了单个地址（IP 地址、完全限定的域名、网络计算机名称或主机名）的 URL 保留比使用通配符的 URL 保留更为明确。  
+-   指定了单个地址（IP 地址、完全限定的域名、网络计算机名称或主机名）的 URL 预留比使用通配符的 URL 预留更为明确。  
   
--   指定了强通配符的 URL 保留比指定了弱通配符的 URL 保留更为明确。  
+-   指定了强通配符的 URL 预留比指定了弱通配符的 URL 预留更为明确。  
   
- 下面的几个示例演示了一系列 URL 保留，按照从最明确到最不明确的顺序排列：  
+ 下面的几个示例演示了一系列 URL 预留，按照从最明确到最不明确的顺序排列：  
   
 |示例|请求|  
 |-------------|-------------|  
 |`http://123.234.345.456:80/reports`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收发送到 `http://123.234.345.456/reports` 或 `http://\<computername>/reports` 的所有请求。|  
 |`http://+:80/reports`|只要 URL 包含“reports”虚拟目录名，就将接收发送到对于该计算机有效的任何 IP 地址或主机名的任何请求。|  
 |`http://123.234.345.456:80`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收指定 `http://123.234.345.456` 或 `http://\<computername>` 的所有请求。|  
-|`http://+:80`|对于映射到 **“所有已分配的”**的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
-|`http://*:80`|对于映射到 **“所有未分配的”**的应用程序端点，接收尚未由其他应用程序接收的请求。|  
+|`http://+:80`|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
+|`http://*:80`|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   
  端口冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>用于带有 SQL Server Reporting Services 的 IIS 8.0、8.5 的 URL 保留项  
- 使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 保留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>用于带有 SQL Server Reporting Services 的 IIS 8.0、8.5 的 URL 预留  
+ 使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 预留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
   
-|应用程序|URL 保留|Description|请求接收情况|  
+|应用程序|URL 预留|描述|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
 |报表服务器|`http://+:80/ReportServer`|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 http://\<computername>/reportserver 的所有请求。|  
 |Web 门户|`http://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收针对 http://\<computername>/reports 的所有请求。|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 -   IIS 中一个分配到端口 80 的网站，以及名为“Reports”的虚拟目录。  
   
--   在默认配置中安装的报表服务器实例，其中 URL 保留还指定了端口 80，[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 应用程序也使用“Reports”作为虚拟目录名。  
+-   在默认配置中安装的报表服务器实例，其中 URL 预留还指定了端口 80，[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 应用程序也使用“Reports”作为虚拟目录名。  
   
  对于该配置，发送到 http://\<computername>:80/reports 的请求将由 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收。 在安装了报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
   

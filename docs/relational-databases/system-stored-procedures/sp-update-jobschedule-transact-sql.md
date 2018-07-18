@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253031"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  **sp_update_jobschedule**为了向后兼容性。  
   
 > [!IMPORTANT]  
->  有关 Microsoft SQL server 的早期版本中使用的语法的详细信息，请参阅 TRANSACT-SQL Referencefor Microsoft SQL Server 2000*。*  
+>  有关 Microsoft SQL server 的早期版本中使用的语法的详细信息，请参阅 TRANSACT-SQL Referencefor Microsoft SQL Server 2000 *。*  
   
 ## <a name="remarks"></a>注释  
  作业计划现在可以独立于作业进行管理。 若要更新计划，使用**sp_update_schedule**。  

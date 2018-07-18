@@ -36,6 +36,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32930042"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例（无论是在内部部署中还是在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中）。  
   
-2.  在 **“对象资源管理器”**中，展开要从中导出 DAC 的实例的节点。  
+2.  在 **“对象资源管理器”** 中，展开要从中导出 DAC 的实例的节点。  
   
 3.  右键单击数据库名称。  
   

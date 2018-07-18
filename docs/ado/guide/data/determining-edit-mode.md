@@ -2,7 +2,6 @@
 title: 确定编辑模式 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4532f65823d4aed88c4db05e03571497f8eac6b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5971234a7e758318acaac80b830d312327e14e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270346"
 ---
 # <a name="determining-edit-mode"></a>确定编辑模式
 ADO 维护一个与当前记录关联的编辑缓冲区。 **EditMode**属性指示是否进行了更改到此缓冲区，或是否已创建一条新记录。 使用**EditMode**来确定当前记录的编辑状态。 你可以测试挂起的更改被中断编辑过程并确定是否需要使用**更新**或**正在执行**方法。  

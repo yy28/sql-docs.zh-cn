@@ -2,7 +2,6 @@
 title: 状态属性示例 （字段） (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 84d9ed89afc18f87898e5636163e6fde16345602
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58c71c4f69cdd25de960eacba7370aa64b67bfb7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282036"
 ---
 # <a name="status-property-example-field-vb"></a>状态属性示例 （字段） (VB)
 下面的示例从读/写文件夹使用打开文档[Internet 发布提供商](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 [状态](../../../ado/reference/ado-api/status-property-ado-field.md)属性[字段](../../../ado/reference/ado-api/field-object.md)对象[记录](../../../ado/reference/ado-api/record-object-ado.md)首先将设置为**adFieldPendingInsert**，则将更新到**adFieldOk**。  
@@ -95,7 +95,7 @@ Attribute VB_Name = "StatusField"
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status 属性（ADO 字段）](../../../ado/reference/ado-api/status-property-ado-field.md)

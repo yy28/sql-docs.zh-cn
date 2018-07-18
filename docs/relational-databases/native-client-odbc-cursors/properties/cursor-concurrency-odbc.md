@@ -1,13 +1,12 @@
 ---
-title: 光标并发 (ODBC) |Microsoft 文档
+title: 游标并发 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,17 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c1cd11454b45ed3d5f3b67cc7e76bbf12eb79982
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bc43656728586f30a2fa07e3ab1903ec00dc6d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423896"
 ---
 # <a name="cursor-concurrency-odbc"></a>游标并发 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  和游标类型一样，游标操作也受应用程序设置的并发选项的影响。 并发选项设置使用的 SQL_ATTR_CONCURRENCY 选项[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 并发类型包括：  
+  和游标类型一样，游标操作也受应用程序设置的并发选项的影响。 使用的 SQL_ATTR_CONCURRENCY 选项设置并发选项[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 并发类型包括：  
   
 -   只读 (SQL_CONCUR_READONLY)  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   锁 (SQL_CONCUR_LOCK)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [游标属性](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

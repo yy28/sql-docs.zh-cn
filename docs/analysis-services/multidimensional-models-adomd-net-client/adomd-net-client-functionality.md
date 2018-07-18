@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024784"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 客户端功能
   与其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 数据访问接口一样，ADOMD.NET 也用作应用程序与数据源之间的桥梁。 但 ADOMD.NET 与其他 .NET Framework 数据访问接口的不同之处在于 ADOMD.NET 处理的是分析数据。 为了处理分析数据，ADOMD.NET 支持的功能与其他 .NET Framework 数据访问接口所支持的功能差异很大。 ADOMD.NET 不仅可检索数据，还可检索元数据并更改分析数据存储区的结构：  

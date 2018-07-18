@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908692"
 ---
 # <a name="general-error-checks"></a>常规错误检查
 驱动程序管理器检查一个常规错误。 它始终返回 SQL_ERROR 时遇到以下错误： 必须由驱动程序支持此函数。

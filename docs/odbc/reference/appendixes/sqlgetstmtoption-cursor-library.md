@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907812"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption （光标库）
 > [!IMPORTANT]  

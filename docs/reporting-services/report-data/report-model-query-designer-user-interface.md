@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021284"
 ---
 # <a name="report-model-query-designer-user-interface"></a>报表模型查询设计器用户界面
   报表设计器提供了两个查询设计器，可帮助您指定报表服务器模型数据源中要用于报表的数据。 使用图形查询设计器可以浏览和选择模型实体和实体字段。 使用基于文本的查询设计器可以直接以 XML 格式使用语义模型定义语言 (SMDL) 规范。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |设计区域|显示模型中的字段列表。 使用此窗格可以排列所选字段的布局。|  
 |Results pane|显示查询的结果。 若要运行查询，请右键单击任意窗格，再单击“运行”，或者单击工具栏中的“运行”窗格（![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")）按钮。|  
   
- 若在“资源管理器”和“设计区域”窗格中更改信息，则单击 **“运行”**时将会影响到“结果”窗格中的内容。  
+ 若在“资源管理器”和“设计区域”窗格中更改信息，则单击 **“运行”** 时将会影响到“结果”窗格中的内容。  
   
  若要在某个特定窗格中执行操作（如在设计区域中删除列），请右键单击该列，然后单击菜单上的命令。  
   

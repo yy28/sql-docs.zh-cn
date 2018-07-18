@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028684"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
   报表服务器 Web 服务提供了几个端点，用于管理报表服务器以及执行和导航报表。  

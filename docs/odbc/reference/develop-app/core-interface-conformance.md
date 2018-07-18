@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913982"
 ---
 # <a name="core-interface-conformance"></a>核心接口一致性
 所有 ODBC 驱动程序必须都展示至少核心级别接口一致性。 由于核心级别中的功能所需的最通用的可互操作应用程序，该驱动程序可以使用此类应用程序。 中的核心级别的功能还对应到 ISO CLI 规范中定义的功能和打开组 CLI 规范中定义的必需功能。 核心级接口 – 符合的 ODBC 驱动程序允许应用程序执行所有以下操作：  

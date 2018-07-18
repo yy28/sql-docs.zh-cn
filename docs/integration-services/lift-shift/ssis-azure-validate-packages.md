@@ -1,25 +1,27 @@
 ---
 title: 验证部署到 Azure 的 SSIS 包| Microsoft Docs
+description: 了解 SSIS 包部署向导如何检查包是否存在可能阻止包在 Azure 中按预期方式运行的已知问题。
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dcdd0f396f0cb6a272af121fd03757dc8bb2b72
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262051"
 ---
-# <a name="validate-ssis-packages-deployed-to-azure"></a>验证部署到 Azure 的 SSIS 包
-将 SQL Server Integration Services (SSIS) 项目部署到 Azure 服务器中的 SSIS 目录数据库 (SSISDB) 时，包部署向导在“评审”页面后添加一个额外的验证步骤。 检查项目中的包是否存在可能阻止包在 Azure SSIS Integration Runtime 中按预期运行的已知问题。 然后向导在“验证”页面上显示所有适用的警告。
+# <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>验证部署到 Azure 的 SQL Server Integration Services (SSIS) 包
+
+将 SQL Server Integration Services (SSIS) 项目部署到 Azure 服务器上的 SSIS 目录 (SSISDB) 时，包部署向导将在“评审”页面后添加一个额外的验证步骤。 检查项目中的包是否存在可能阻止包在 Azure SSIS Integration Runtime 中按预期运行的已知问题。 然后向导在“验证”页面上显示所有适用的警告。
 
 > [!IMPORTANT]
 > 使用 SQL Server Data Tools (SSDT) 17.4 版或更高版本部署项目时，将出现本文所述的验证。 要获取最新版 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。
@@ -29,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="validate-connection-managers"></a>验证连接管理器
 
 向导检查某些连接管理器是否存在以下问题，这些问题可能会导致连接失败：
-- **Windows 身份验证**。 如果连接字符串使用 Windows 身份验证，验证将引发警告。 Windows 身份验证需要其他配置步骤。 有关详细信息，请参阅[使用 Windows 身份验证连接到本地数据源](ssis-azure-connect-with-windows-auth.md)。
+- **Windows 身份验证**。 如果连接字符串使用 Windows 身份验证，验证将引发警告。 Windows 身份验证需要其他配置步骤。 有关详细信息，请参阅[使用 Windows 身份验证连接到数据和文件共享](ssis-azure-connect-with-windows-auth.md)。
 - **文件路径**。 如果连接字符串包含硬编码的本地文件路径（例如 `C:\\...`），验证将引发警告。 包含绝对路径的包可能会失败。
 - **UNC 路径**。 如果连接字符串包含 UNC 路径，验证将引发警告。 包含 UNC 路径的包可能会失败，这通常是因为 UNC 路径需要 Windows 身份验证才能访问。
 - **主机名**。 如果服务器属性包含主机名而不是 IP 地址，验证将引发警告。 包含主机名的包可能会失败，这通常是因为 Azure 虚拟网络需要正确的 DNS 配置才能支持 DNS 名称解析。
@@ -80,4 +82,4 @@ ms.lasthandoff: 05/03/2018
 HDFS 目标和 Azure Data Lake Store 目标不支持 Orc 格式。
 
 ## <a name="next-steps"></a>后续步骤
-要了解如何在 Azure 上安排包的执行，请参阅[在 Azure 上安排执行 SSIS 包](ssis-azure-schedule-packages.md)。
+若要了解如何计划 Azure 上的包执行，请参阅[计划 Azure 上的 SSIS 包执行](ssis-azure-schedule-packages.md)。

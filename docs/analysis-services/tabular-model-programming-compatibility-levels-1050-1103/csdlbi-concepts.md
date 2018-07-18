@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045231"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -126,23 +127,23 @@ ms.lasthandoff: 05/10/2018
   
  多维数据集的表示形式与表格模型数据库的表示形式非常相似。 多维数据集名称和多维数据集分别对应于表格数据库名称和数据库标识符。  
   
- **维度：**维度 CSDLBI 中表示为具有列和属性的实体 （表）。 请注意，即使未包括在透视，模型中包含的维度将表示在 CSDL 输出中，标记为**Hidden**。  
+ **维度：** 维度 CSDLBI 中表示为具有列和属性的实体 （表）。 请注意，即使未包括在透视，模型中包含的维度将表示在 CSDL 输出中，标记为**Hidden**。  
   
- **透视：**客户端可以为单个透视请求 CSDL。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
+ **透视：** 客户端可以为单个透视请求 CSDL。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
   
- **层次结构：**层次结构支持的和在 CSDLBI 中表示为一组级别。  
+ **层次结构：** 层次结构支持的和在 CSDLBI 中表示为一组级别。  
   
- **成员：**对支持已添加的默认成员，默认值会自动添加到 CSDLBI 输出。  
+ **成员：** 对支持已添加的默认成员，默认值会自动添加到 CSDLBI 输出。  
   
- **计算成员：**多维模型支持计算的成员的子级**所有**与单个真实成员。  
+ **计算成员：** 多维模型支持计算的成员的子级**所有**与单个真实成员。  
   
- **维度属性：**中 CSDLBI 输出，支持的和自动标记为不可聚合维度属性。  
+ **维度属性：** 中 CSDLBI 输出，支持的和自动标记为不可聚合维度属性。  
   
  **Kpi:** Kpi CSDLBI 1.1 版中，在受支持，但表示已更改。 以前，KPI 是度量值的属性。 在 1.1 版中，KPI 元素可以添加到度量值  
   
- **新属性：**添加了其他属性，以支持 DirectQuery 模型。  
+ **新属性：** 添加了其他属性，以支持 DirectQuery 模型。  
   
- **限制：**单元安全性不支持。  
+ **限制：** 单元安全性不支持。  
   
 ## <a name="see-also"></a>另请参阅  
  [Business Intelligence & #40; 有关的 CSDL 批注CSDLBI & #41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  

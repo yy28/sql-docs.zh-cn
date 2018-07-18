@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022614"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>添加数据集筛选器、数据区域筛选器和组筛选器
   在报表中，筛选器是创建的数据集、数据区域或数据区域组的一部分，用于限制报表中使用的数据。 如果无法更改数据集查询（例如，如果您使用的是共享数据集），则可使用筛选器帮助您控制报表数据。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="value"></a>ReplTest1  
  Value 表达式指定筛选器公式的最后一部分。 报表处理器会将计算后的表达式转换为指定的数据类型，然后计算整个筛选器公式以确定表达式中指定的数据是否通过了筛选器的筛选。  
   
- 若要转换为非标准 CLR 数据类型的数据类型，必须修改表达式以显式转换为该数据类型。 您可使用 **“表达式”** 对话框的 **“常见函数”**下的 **“转换”**中列出的转换函数。 例如，对于 `ListPrice` 字段，该字段表示 **数据源中以** money [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型存储的数据，数据处理扩展插件将以 <xref:System.Decimal> 数据类型返回该字段值。 若要将筛选器设置为仅使用报表货币中大于 **$50000.00** 的值，则可使用表达式 `=CDec(50000.00)`将该值转换为 Decimal 类型。  
+ 若要转换为非标准 CLR 数据类型的数据类型，必须修改表达式以显式转换为该数据类型。 您可使用 **“表达式”** 对话框的 **“常见函数”** 下的 **“转换”** 中列出的转换函数。 例如，对于 `ListPrice` 字段，该字段表示 **数据源中以** money [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型存储的数据，数据处理扩展插件将以 <xref:System.Decimal> 数据类型返回该字段值。 若要将筛选器设置为仅使用报表货币中大于 **$50000.00** 的值，则可使用表达式 `=CDec(50000.00)`将该值转换为 Decimal 类型。  
   
  此值还可以包括参数引用，以允许用户以交互方式选择作为筛选依据的值。  
   

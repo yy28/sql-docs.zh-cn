@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,21 +22,22 @@ helpviewer_keywords:
 - ERROR_SEVERITY function
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d17356f6730db14e85b9ab3c8186f4b474525608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc41d6323e28dad1aa37f5d0f0969f714d4492a5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789638"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回导致 TRY…CATCH 构造的 CATCH 块运行的错误的严重性。  
-  
+如果该错误导致执行了 TRY…CATCH 构造的 CATCH 块，此函数将在发生错误的位置返回错误的严重性值。  
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -50,22 +50,21 @@ ERROR_SEVERITY ( )
  **int**  
   
 ## <a name="return-value"></a>返回值  
- 在 CATCH 块中调用时，返回导致 CATCH 块运行的错误消息的严重级别。  
-  
- 如果在 CATCH 块作用域以外调用，则返回 NULL。  
+在发生错误的 CATCH 块中调用时，`ERROR_SEVERITY` 返回导致 `CATCH` 块运行的错误的严重性值。  
+
+如果在 CATCH 块作用域外调用，`ERROR_SEVERITY` 返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_SEVERITY 可以在 CATCH 块范围内的任意位置调用。  
+`ERROR_SEVERITY` 支持在 CATCH 块作用域内的任意位置调用。  
   
- ERROR_SEVERITY 返回错误严重级别，不管它运行多少次，或它运行在 CATCH 块的范围内的什么位置。 这与 @@ERROR 之类的函数形成鲜明对比，后者只在导致错误的语句的下一个语句中或者在 CATCH 块的第一个语句中返回错误号。  
+无论 `ERROR_SEVERITY` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回错误的错误严重性值。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
   
- 在嵌套 CATCH 块中，ERROR_SEVERITY 返回特定于引用它的 CATCH 块的范围的错误严重级别。 例如，外部 TRY...CATCH 构造的 CATCH 块可能具有嵌套 TRY...CATCH 构造。 在嵌套 CATCH 块中，ERROR_SEVERITY 返回调用了嵌套 CATCH 块的错误的严重级别。 如果 ERROR_SEVERITY 运行在 CATCH 块以外，则它会返回调用该 CATCH 块的错误的严重级别。  
+`ERROR_SEVERITY` 通常在嵌套的 `CATCH` 块中运行。 `ERROR_SEVERITY` 返回特定于引用该 `CATCH` 块的 `CATCH` 块的作用域的错误严重性值。 例如，外部 TRY...CATCH 构造的 `CATCH` 块可能具有内部 `TRY...CATCH` 构造。 在该内部 `CATCH` 块内，`ERROR_SEVERITY` 将返回调用内部 `CATCH` 块的错误的严重性值。 如果 `ERROR_SEVERITY` 在外部 `CATCH` 块中运行，它将返回调用该外部 `CATCH` 块的错误的错误严重性值。  
   
-## <a name="examples"></a>示例  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_SEVERITY  
- 下面的示例显示生成被零除错误的 `SELECT` 语句。 返回错误的严重级别。  
-  
+下面的示例显示生成被零除错误的存储过程。 `ERROR_SEVERITY` 返回该错误的严重性值。  
 ```  
   
 BEGIN TRY  
@@ -76,11 +75,22 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorSeverity
+-------------
+16
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. 使用其他错误处理工具在 CATCH 块中使用 ERROR_SEVERITY  
- 下面的示例显示一个会生成被零除错误的 `SELECT` 语句。 同时与严重级别一起返回与该错误相关的信息。  
-  
+下面示例显示生成被零除错误的 `SELECT` 语句。 存储过程返回有关此错误的信息。  
+
 ```  
   
 BEGIN TRY  
@@ -97,28 +107,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. 使用其他错误处理工具在 CATCH 块中使用 ERROR_SEVERITY  
- 下面的示例显示一个会生成被零除错误的 `SELECT` 语句。 同时与严重级别一起返回与该错误相关的信息。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
+----------- ------------- ----------- --------------- ----------- ----------------------------------
+8134        16            1           NULL            4           Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>另请参阅  

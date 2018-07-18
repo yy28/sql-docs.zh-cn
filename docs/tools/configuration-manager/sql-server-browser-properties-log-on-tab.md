@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 814b8f9f6c94e0c0907ee662565fd5377455a5a9
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33070324"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server 浏览器属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
  确认安全主体的密码。  
   
  **服务状态**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”**指示状态更改被挂起。  
+ 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
   
  **开始**  
  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。  

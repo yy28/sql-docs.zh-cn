@@ -2,7 +2,6 @@
 title: 操作的非参数化命令 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b468d55f9085c5201c1720887087b3ace94a6069
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8aa3ed637aa9206921f6da91f0218f67faf0154a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272276"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>操作非参数化命令
 非参数化命令，请执行所有提供程序命令和**记录集**命令执行过程中创建。 如果该命令以同步方式，执行所有**记录集**将完全填充。 如果选择了异步填充模式的填充的状态**记录集**将取决于的填充模式和的大小**记录集**。  
@@ -45,7 +45,7 @@ SHAPE {SELECT * FROM Customers}
   
  有关导航分层结构信息**记录集**，请参阅[访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
  [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

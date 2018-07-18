@@ -2,7 +2,6 @@
 title: Size 属性 （ADO 参数） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faa4e918d291f9d6dc095f05a40b6d71729bb5da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c33004000e4f8f3099a53777a2941c442901ba7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281856"
 ---
 # <a name="size-property-ado-parameter"></a>Size 属性 （ADO 参数）
 指示的最大大小，以字节或字符，[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，该值指示字节或字符中的值的最大大小**参数**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**大小**属性，以确定值写入到的最大大小，或从读取[值](../../../ado/reference/ado-api/value-property-ado.md)属性**参数**对象。  
   
  如果你指定的可变长度数据类型**参数**对象 (例如，任何**字符串**类型，如**以便您可以排除**)，你必须设置对象的**大小**之前追加到属性[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合; 否则，将会出错。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

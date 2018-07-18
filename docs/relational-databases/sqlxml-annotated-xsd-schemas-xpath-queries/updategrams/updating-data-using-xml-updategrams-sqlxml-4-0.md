@@ -1,5 +1,5 @@
 ---
-title: 更新数据使用 XML Updategram (SQLXML 4.0) |Microsoft 文档
+title: 更新数据使用 XML Updategram (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -33,14 +33,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e9db70d57cca76574f5f3e5e1aa77decade35392
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035734"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  在更新现有数据时，必须将同时指定**\<之前 >** 和**\<后 >** 块。 中指定的元素**\<之前 >** 和**\<后 >** 块描述所需的更改。 Updategram 使用中指定的元素**\<之前 >** 块来标识数据库中的现有记录。 中的相应元素**\<后 >** 块指示如何记录应查看后跟执行更新操作。 中的信息，含 updategram 创建匹配的 SQL 语句**\<后 >** 块。 然后，Updategram 使用该语句更新数据库。  
+  更新现有数据时，必须指定**\<之前 >** 并**\<后 >** 块。 中指定的元素**\<之前 >** 并**\<后 >** 块描述所需的更改。 Updategram 使用在中指定的元素**\<之前 >** 块来标识数据库中的现有记录。 中的相应元素**\<后 >** 块指示执行更新操作后应如何查找记录的。 中的信息，updategram 创建与匹配的 SQL 语句**\<后 >** 块。 然后，Updategram 使用该语句更新数据库。  
   
  以下是 Updategram 的更新操作格式：  
   
@@ -63,37 +64,37 @@ ms.lasthandoff: 05/03/2018
  中的元素**\<之前 >** 块标识数据库表中的现有记录。  
   
  **\<updg:after>**  
- 中的元素**\<后 >** 块描述如何在指定的记录**\<之前 >** 应用更新后，应查看块。  
+ 中的元素**\<后 >** 块描述中指定的记录如何**\<之前 >** 块应查找后进行更新。  
   
- **映射架构**特性标识要由属的 updategram 的映射架构。 如果属的 updategram 指定的映射架构，元素和属性名称中指定**\<之前 >** 和**\<后 >** 块必须与架构中的名称匹配。 该映射架构将这些元素或属性名称映射到数据库表和列名称。  
+ **映射架构**属性标识要由 updategram 的映射架构。 如果 updategram 指定映射架构，元素和属性名称中指定**\<之前 >** 并**\<后 >** 块必须与架构中的名称匹配。 该映射架构将这些元素或属性名称映射到数据库表和列名称。  
   
- 如果 Updategram 不指定架构，则 Updategam 将使用默认映射。 在默认映射，  **\<ElementName >** 属的 updategram 映射到数据库表和子元素或属性映射到数据库列中指定。  
+ 如果 Updategram 不指定架构，则 Updategam 将使用默认映射。 在默认映射，  **\<ElementName >** updategram 映射到数据库表和子元素或属性映射到数据库列中指定。  
   
- 中的某个元素**\<之前 >** 块必须与数据库中只有一个表行匹配。 如果元素匹配多个表行，或与任何表行不匹配，属的 updategram 返回一个错误，并取消整个**\<同步 >** 块。  
+ 中的元素**\<之前 >** 块必须与数据库中只有一个表行匹配。 如果该元素与多个表行匹配，或与任何表行不匹配，则 updategram 返回错误，并取消整个**\<同步 >** 块。  
   
- Updategram 可以包括多个**\<同步 >** 块。 每个**\<同步 >** 块被视为一个事务。 每个**\<同步 >** 块可以有多个**\<之前 >** 和**\<后 >** 块。 例如，如果你要更新两个现有记录，则可以指定两个**\<之前 >** 和**\<后 >** 对，一个用于正在更新每个记录。  
+ Updategram 可以包括多个**\<同步 >** 块。 每个**\<同步 >** 块均被视为一个事务。 每个**\<同步 >** 块可以有多个**\<之前 >** 并**\<后 >** 块。 例如，如果要更新两个现有记录，则可以指定两个**\<之前 >** 并**\<后 >** 对，一个用于每个要更新的记录。  
   
 ## <a name="using-the-updgid-attribute"></a>使用 updg:id 属性  
- 如果在中指定多个元素**\<之前 >** 和**\<后 >** 块，使用**updg:id**特性来标记中的行**\<之前 >** 和**\<后 >** 块。 处理逻辑使用此信息来确定中的哪个记录**\<之前 >** 阻止对中的哪个记录**\<后 >** 块。  
+ 如果在中指定多个元素**\<之前 >** 并**\<后 >** 块，使用**updg: id**特性标记中的行**\<之前 >** 并**\<后 >** 块。 处理逻辑使用此信息来确定中的什么记录**\<之前 >** 块中的什么记录对**\<后 >** 块。  
   
- **Updg:id**属性不需要 （尽管建议这样做），如果存在以下任一：  
+ **Updg: id**属性不需要 （尽管建议这样做），如果存在以下任一：  
   
--   指定的映射架构中的元素具有**sql:key-字段**在其上定义的属性。  
+-   指定的映射架构中的元素具有**sql:key-字段**在其上定义特性。  
   
 -   为 Updategram 中的键字段提供了一个或多个特定值。  
   
- 如果是这种情况，属的 updategram 使用中指定的键列**sql:key-字段**以中的元素配对**\<之前 >** 和 **\<后 >** 块。  
+ 如果是这种情况，则 updategram 将使用中指定的键列**sql:key-字段**中的元素进行配对**\<之前 >** 并 **\<后 >** 块。  
   
- 如果映射架构中没有标识键列 (使用**sql:key-字段**) 或如果属的 updategram 正在更新密钥的列的值，则必须指定**updg:id**。  
+ 如果映射架构未标识键列 (通过使用**sql:key-字段**) 或者 updategram 要更新键列值，您必须指定**updg: id**。  
   
- 在中标识的记录**\<之前 >** 和**\<后 >** 块不需要以相同的顺序。 **Updg:id**属性强制中指定的元素之间的关联**\<之前 >** 和**\<后 >** 块。  
+ 中标识的记录**\<之前 >** 并**\<后 >** 块没有处于相同的顺序。 **Updg: id**属性强制中指定的元素之间的关联**\<之前 >** 并**\<后 >** 块。  
   
- 如果指定中的有一个元素**\<之前 >** 块和中的相应元素只有一个**\<后 >** 一直阻止，请使用**updg:id**不是必需的。 但是，建议您指定**updg:id**仍以避免多义性。  
+ 如果指定中的有一个元素**\<之前 >** 块和中的只能有一个相应元素**\<后 >** 阻止，请使用**updg: id**不是必需的。 但是，建议您指定**updg: id**仍以避免多义性。  
   
 ## <a name="examples"></a>示例  
  在使用 Updategram 示例之前，请注意以下事项：  
   
--   大多数示例使用默认映射（即，未在 updategram 中指定任何映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[指定批注映射架构中属的 Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+-   大多数示例使用默认映射（即，未在 updategram 中指定任何映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[在 Updategram 中指定带批注的映射架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 -   大多数示例使用 AdventureWorks 示例数据库。 已对该数据库中的表应用所有更新。 您可以还原 AdventureWorks 数据库。  
   
@@ -113,9 +114,9 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- 该记录中所述**\<之前 >** 块表示数据库中的当前记录。 Updategram 使用所有的列的值中指定**\<之前 >** 块要搜索的记录。 在此属的 updategram， **\<之前 >** 块提供只有 ContactID 列; 因此，属的 updategram 使用仅将值搜索记录。 如果要将 LastName 值添加到该块，则 Updategram 会同时使用 ContactID 和 LastName 值执行搜索。  
+ 该记录中所述**\<之前 >** 块表示数据库中的当前记录。 Updategram 使用的列的值中指定的所有**\<之前 >** 块来搜索记录。 在该 updategram **\<之前 >** 块仅提供 ContactID 列; 因此，updategram 仅使用值以搜索记录。 如果要将 LastName 值添加到该块，则 Updategram 会同时使用 ContactID 和 LastName 值执行搜索。  
   
- 在此属的 updategram， **\<后 >** 块提供的 LastName 列值，因为这是唯一的值正在更改。  
+ 在该 updategram **\<后 >** 块提供的 LastName 列值，因为这是正在更改的唯一值。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行 updategram。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. 使用 updg:id 属性更新多个记录  
  在该示例中，Updategram 对 AdventureWorks 数据库中的 HumanResources.Shift 表执行两次更新：  
@@ -132,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
 -   它插入名为“Late Morning”的从 10:00AM 开始的新班。  
   
- 在属的 updategram， **updg:id**属性创建中元素之间的关联**\<之前 >** 和**\<后 >** 块。  
+ 在 updategram 中， **updg: id**属性将创建中的元素之间的关联**\<之前 >** 并**\<后 >** 块。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -151,7 +152,7 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- 请注意如何**updg:id**属性对的第一个实例\<HumanResources.Shift > 中的元素**\<之前 >** 代码块替换第二个实例\<HumanResources.Shift > 中的元素**\<后 >** 块。  
+ 请注意如何**updg: id**特性对的第一个实例\<HumanResources.Shift > 元素中的**\<之前 >** 块第二个实例\<HumanResources.Shift > 中的元素**\<后 >** 块。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
@@ -159,15 +160,15 @@ ms.lasthandoff: 05/03/2018
   
 2.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行 updategram。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. 指定多个项\<之前 > 和\<后 > 块  
- 若要避免多义性，你可以编写属的 updategram 示例 B 中通过使用多个**\<之前 >** 和**\<后 >** 阻止对。 指定**\<之前 >** 和**\<后 >** 对是至少包含混淆指定多个更新的一种方法。 此外，如果每个的**\<之前 >** 和**\<后 >** 块指定最多一个元素，则不需要使用**updg:id**属性.  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. 指定多个\<之前 > 和\<后 > 块  
+ 若要避免混淆，您可以编写 updategram 示例 B 中使用多个**\<之前 >** 并**\<后 >** 块对。 指定**\<之前 >** 并**\<后 >** 对是指定具有最不易混淆的多个更新的一种方法。 此外，如果每个的**\<之前 >** 并**\<后 >** 块指定最多一个元素，无需使用**updg: id**属性.  
   
 > [!NOTE]  
->  若要形成一个对**\<后 >** 标记后必须立即执行其相应的**\<之前 >** 标记。  
+>  若要形成配对， **\<后 >** 标记必须紧跟在其对应**\<之前 >** 标记。  
   
- 在以下属的 updategram，第一个**\<之前 >** 和**\<后 >** 对更新天 shift 的 shift 名称。 第二对将插入新的轮班记录。  
+ 在以下 updategram 中，第一个**\<之前 >** 并**\<后 >** 对将更新白班白班的名称。 第二对将插入新的轮班记录。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -196,16 +197,16 @@ ms.lasthandoff: 05/03/2018
   
 2.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行 updategram。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. 指定多个项\<同步 > 块  
- 你可以指定多个**\<同步 >** 中属的 updategram 的块。 每个**\<同步 >** 指定的块是一个独立事务。  
+### <a name="d-specifying-multiple-sync-blocks"></a>D. 指定多个\<同步 > 块  
+ 可以指定多个**\<同步 >** updategram 中的块。 每个**\<同步 >** 指定的块是独立的事务。  
   
- 在以下属的 updategram，第一个**\<同步 >** 块更新 Sales.Customer 表中的记录。 出于简化原因，Updategram 仅指定必需的列值：标识值 (CustomerID) 和要更新的值 (SalesPersonID)。  
+ 在以下 updategram 中，第一个**\<同步 >** 块更新 Sales.Customer 表中的记录。 出于简化原因，Updategram 仅指定必需的列值：标识值 (CustomerID) 和要更新的值 (SalesPersonID)。  
   
- 第二个**\<同步 >** 块向 Sales.SalesOrderHeader 表中添加两条记录。 对于该表，SalesOrderID 是 IDENTITY 类型的列。 因此，属的 updategram 未指定 SalesOrderID 的值中的每个\<Sales.SalesOrderHeader > 元素。  
+ 第二个**\<同步 >** 块将两条记录添加到 Sales.SalesOrderHeader 表。 对于该表，SalesOrderID 是 IDENTITY 类型的列。 因此，updategram 不指定 SalesOrderID 的值中的每个\<Sales.SalesOrderHeader > 元素。  
   
- 指定多个项**\<同步 >** 块可因为如果第二个**\<同步 >** 块 （事务） 无法将记录添加到 Sales.SalesOrderHeader 表第一个**\<同步 >** 块仍可以更新 Sales.Customer 表中的客户记录。  
+ 指定多个**\<同步 >** 块是很有用因为如果第二个**\<同步 >** 块 （事务） 未能将记录添加到 Sales.SalesOrderHeader 表第一个**\<同步 >** 块仍然可以更新 Sales.Customer 表中的客户记录。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -262,14 +263,14 @@ ms.lasthandoff: 05/03/2018
   
 2.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行 updategram。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="e-using-a-mapping-schema"></a>E. 使用映射架构  
- 在此示例中，属的 updategram 的映射架构指定通过使用**映射架构**属性。 （没有默认映射；就是说，由映射架构提供所需的映射，将 Updategram 中的元素和属性映射到数据库表和列。）  
+ 在此示例中，updategram 指定映射架构通过使用**映射架构**属性。 （没有默认映射；就是说，由映射架构提供所需的映射，将 Updategram 中的元素和属性映射到数据库表和列。）  
   
  在 Updategram 中指定的元素和属性将引用映射架构中的元素和属性。  
   
- 以下 XSD 映射架构存在**\<客户 >**， **\<顺序 >**，和 **\<OD >** 映射到的元素数据库中的 Sales.Customer、 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 表。  
+ 以下 XSD 映射架构有**\<客户 >**， **\<顺序 >**，以及 **\<OD >** 将映射到元素数据库中的 Sales.Customer、 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -322,7 +323,7 @@ ms.lasthandoff: 05/03/2018
 </xsd:schema>  
 ```  
   
- 以下 Updategram 指定该映射架构 (UpdategramMappingSchema.xml)。 该 Updategram 在 Sales.SalesOrderDetail 表中为特定顺序添加顺序细节项。 Updategram 包括嵌套的元素：  **\<OD >** 元素嵌套在**\<顺序 >** 元素。 在映射架构中指定了这两个元素之间的主键/外键关系。  
+ 以下 Updategram 指定该映射架构 (UpdategramMappingSchema.xml)。 该 Updategram 在 Sales.SalesOrderDetail 表中为特定顺序添加顺序细节项。 该 updategram 包括嵌套的元素：  **\<OD >** 元素嵌套在**\<顺序 >** 元素。 在映射架构中指定了这两个元素之间的主键/外键关系。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -348,9 +349,9 @@ ms.lasthandoff: 05/03/2018
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行 updategram。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 有关使用映射架构的 updategram 的更多示例，请参阅[指定批注映射架构中属的 Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+ 有关使用映射架构的 updategram 的更多示例，请参阅[在 Updategram 中指定带批注的映射架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. 将 IDREFS 属性与映射架构一起使用  
  该示例说明 Updategram 如何在映射架构中使用 IDREFS 属性以更新多个表中的记录。 对于该示例，假定数据库由以下表组成：  
@@ -363,7 +364,7 @@ ms.lasthandoff: 05/03/2018
   
  由于学生可以注册参加很多课程，而且一种课程可以有很多学生，因此需要用第三个表 Enrollment 表以表示该 M:N 关系。  
   
- 下面的 XSD 映射架构提供表的 XML 视图通过使用**\<学生 >**， **\<课程 >**，和**\<注册>** 元素。 **IDREFS**映射架构中的属性指定这些元素之间的关系。 **StudentIDList**属性**\<课程 >** 元素是**IDREFS**引用注册表中的 StudentID 列的类型属性。 同样， **EnrolledIn**属性**\<学生 >** 元素是**IDREFS**中注册的 CourseID 列引用的类型属性表。  
+ 以下 XSD 映射架构通过使用提供的表的 XML 视图**\<学生 >**， **\<课程 >**，以及**\<注册>** 元素。 **IDREFS**属性映射架构中的指定这些元素之间的关系。 **StudentIDList**特性，可以在**\<课程 >** 元素是**IDREFS**类型属性，它引用 Enrollment 表中的 StudentID 列。 同样， **enrolledin 属性**特性，可以在**\<学生 >** 元素是**IDREFS**类型属性，它是指在注册中的 CourseID 列表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -460,7 +461,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 以执行 updategram。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 6.  按照前面描述的步骤，保存并执行以下 Updategram。 该 Updategram 在 Enrollment 表中添加记录，从而将 StudentID="1" 的学生重新添加到 CS102 课程中。  
   
@@ -500,7 +501,7 @@ ms.lasthandoff: 05/03/2018
     </ROOT>  
     ```  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -558,9 +559,9 @@ ms.lasthandoff: 05/03/2018
 </Schema>  
 ```  
   
- 有关使用映射架构的 updategram 的更多示例，请参阅[指定批注映射架构中属的 Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+ 有关使用映射架构的 updategram 的更多示例，请参阅[在 Updategram 中指定带批注的映射架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

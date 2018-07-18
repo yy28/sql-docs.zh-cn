@@ -1,36 +1,20 @@
 ---
 title: 更改挖掘结构 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ALTER_MINING_STRUCTURE
-- ALTER MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining structures [DMX], creating
-- WITH DRILLTHROUGH clause
-- column definition lists [DMX]
-- parameter lists [DMX]
-- ALTER MINING STRUCTURE statement
-ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05d1a7c0d1e28ae380be05058661221a4952228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842690"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,12 +59,12 @@ USING <algorithm> [(<parameter list>)]
 >  来检索当前的提供程序支持的算法的列表，只需使用[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看的当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *参数列表*  
- 選擇性。 由提供程序定义的算法所需参数的逗号分隔列表。  
+ 可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *筛选条件*  
  应用于事例表中的列的筛选表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果挖掘结构中包含组合键，则挖掘模型必须包括该结构中定义的所有键列。  
   
  如果模型不需要可预测列（例如，使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型），则不必在语句中包括列定义。 生成的模型中的所有属性都将被视为输入。  
@@ -128,7 +112,7 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |术语|定义|  
-|**回归量**|指示该算法可以在回归算法的回归公式中使用指定列。|  
+|**REGRESSOR**|指示该算法可以在回归算法的回归公式中使用指定列。|  
 |**MODEL_EXISTENCE_ONLY**|指示该属性列的值没有该属性的存在重要。|  
   
  可以为一个列定义多个建模标志。 有关如何使用建模标志的详细信息，请参阅[建模标志&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)。  
@@ -217,9 +201,9 @@ WITH FILTER (EXISTS (SELECT * FROM [v Assoc Seq Line Items] WHERE
 USING Microsoft_Decision Trees  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

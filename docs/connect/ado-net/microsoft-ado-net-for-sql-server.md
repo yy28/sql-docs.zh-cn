@@ -1,10 +1,9 @@
----
+﻿---
 title: SQL Server 的 Microsoft ADO.NET |Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado-net
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32a848344e0f3b4aa32c0ac4722adad02b6f9469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288876"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>用于 SQL Server 的 Microsoft ADO.NET
 
@@ -45,7 +45,7 @@ ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 System.Data.S
 ## <a name="more-samples"></a>更多示例  
 * [ADO.NET 代码示例](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [在 Windows 上的.NET Framework 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [在 macOS 上入门.NET Core](https://www.microsoft.com/sql-server/developer-get-started/csharp/mac/)
+* [在 macOS 上入门.NET Core](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [在 Ubuntu 上的.NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL) 上的.NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

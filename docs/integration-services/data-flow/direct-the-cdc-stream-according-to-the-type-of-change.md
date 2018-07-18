@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 873d517e84844d83db908473d3e20fe6e78bc2b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 422a2c6cd2c3438f9ca2961a02f4390c365248f3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410189"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流
   若要添加并配置 CDC 拆分器转换，包必须包含至少一个数据流任务和一个 CDC 源。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”**把 CDC 拆分器拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”** 把 CDC 拆分器拖动到设计图面。  
   
 4.  将在包中包含的 CDC 源连接到 CDC 拆分器。  
   

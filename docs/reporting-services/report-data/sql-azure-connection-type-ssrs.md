@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022784"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 是基于云的、构建在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术之上的托管关系数据库。 若要在报表中包括来自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的数据，您必须有一个基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]并从中检索数据。  

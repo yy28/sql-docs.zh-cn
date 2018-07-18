@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7c524e2d6d6f6aa12b4299b95ed6307c044ba4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7799560165c6619403d5507b5003002ebf2d47f9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312766"
 ---
 # <a name="selecting-input-columns-programmatically"></a>以编程方式选择输入列
   以编程方式连接组件后，可从上游组件选择将要转换或传递到下游组件的列。 如果不为组件选择输入列，则组件将不会接收任何来自数据流任务的行。  

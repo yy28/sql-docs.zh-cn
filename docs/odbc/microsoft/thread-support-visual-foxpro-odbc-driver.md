@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905638"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>线程支持 （Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序是线程安全的。 访问环境句柄 (*当*)，连接句柄 (*hdbc*)，和语句句柄 (*hstmt*) 包装在适当的信号量，以防止其他进程访问并可能更改驱动程序的内部数据结构。  

@@ -2,7 +2,6 @@
 title: 更新方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0a5cd4e12848ecdec7c3c5168b6106dd95215c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ae65fa263d672c80fb886c5e1f212a8a189bf38
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282756"
 ---
 # <a name="update-method"></a>Update 方法
 将保存的当前行的任何更改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
@@ -39,12 +39,12 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parameters  
  *Fields*  
- 選擇性。 A **Variant**表示单个名称或**Variant**数组，表示名称或序号位置或多个你想要修改的字段。  
+ 可选。 A **Variant**表示单个名称或**Variant**数组，表示名称或序号位置或多个你想要修改的字段。  
   
  *值*  
- 選擇性。 A **Variant**表示单个值，或**Variant**数组，表示字段或新记录中的字段的值。  
+ 可选。 A **Variant**表示单个值，或**Variant**数组，表示字段或新记录中的字段的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>记录集  
  使用**更新**方法以将保存的当前记录的任何更改**记录集**以来调用的对象[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法或以来更改中的任何字段值现有记录。 **记录集**对象必须支持更新。  
@@ -65,7 +65,7 @@ record.Fields.Update
   
  当前记录后，仍当前调用**更新**方法。  
   
-## <a name="record"></a>記錄  
+## <a name="record"></a>录制  
  **更新**方法完成添加、 删除和中的字段的更新[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合**记录**对象。  
   
  例如，字段随删除**删除**方法将立即标记为删除，但保留在集合中。 **更新**必须调用方法来从提供程序的集合中实际删除这些字段。  
@@ -76,7 +76,7 @@ record.Fields.Update
 |-|-|  
 |[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [更新和正在执行的方法示例 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [更新和正在执行的方法示例 （VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [AddNew 方法 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

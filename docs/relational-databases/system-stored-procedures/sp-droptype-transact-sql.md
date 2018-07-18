@@ -1,5 +1,5 @@
 ---
-title: sp_droptype (Transact SQL) |Microsoft 文档
+title: sp_droptype (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 6f898820839afe4057805d9d6ed8bc4e53341065
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970309"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@typename=**] *****类型*****  
+ [  **@typename=**] **'***类型*****  
  您所拥有的别名数据类型的名称。 *类型*是**sysname**，无默认值。  
   
 ## <a name="return-code-type"></a>返回代码类型  
@@ -52,7 +53,7 @@ sp_droptype [ @typename = ] 'type'
 ## <a name="result-sets"></a>结果集  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **类型**如果表或其他数据库对象引用该数据类型不能删除别名。  
   
 > [!NOTE]  
@@ -74,9 +75,9 @@ EXEC sp_droptype 'birthday';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addtype &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
+ [sp_addtype &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -2,7 +2,6 @@
 title: 打开和关闭方法的示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1c87f8d225d8add1ff9a6ea9fbaba44f244c9f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d001611dc57ea90fe19fa83e794b4d9791a0399
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279916"
 ---
 # <a name="open-and-close-methods-example-vc"></a>打开和关闭方法的示例 （VC + +）
 此示例使用**打开**和[关闭](../../../ado/reference/ado-api/close-method-ado.md)两侧方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)打开过的对象。  
@@ -209,7 +209,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Close 方法 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 方法 （ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   

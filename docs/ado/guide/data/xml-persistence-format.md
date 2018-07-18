@@ -2,7 +2,6 @@
 title: XML 持久性格式 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 449353a8a7d8e5109d65e6f4f06ac646946e54a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273296"
 ---
 # <a name="xml-persistence-format"></a>XML 持久性格式
 ADO 使用 utf-8 编码为 XML 流，它仍然存在。  
   
  ADO XML 格式将划分成两个部分后, 跟的数据部分架构部分。 下面是从 Northwind 数据库的 Shippers 表的示例 XML 文件。 下面的示例介绍了各个部分的 XML。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -74,5 +74,5 @@ xmlns:z="#RowsetSchema">
   
  数据节中有三个行包含有关货主的信息。 为空的行集，数据部分可能为空，但\<rs： 数据 > 标记必须存在。 没有数据，你可以编写标记速记简单地\<rs： 数据 / >。 前缀为"rs"任何标记指示它是在命名空间中定义的架构 urn:-microsoft-com:rowset。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028164"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>MSRS 2011 Web Service 性能对象的性能计数器
   本主题介绍 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 性能对象的性能计数器。 这些对象是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 本机模式部署的组成部分。  

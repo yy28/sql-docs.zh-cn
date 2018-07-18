@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025794"
 ---
 # <a name="report-server-namespace-management-methods"></a>报表服务器命名空间管理方法
   报表服务器管理 Web 服务包含可用于管理报表服务器数据库中的报表、文件夹和资源的方法。  

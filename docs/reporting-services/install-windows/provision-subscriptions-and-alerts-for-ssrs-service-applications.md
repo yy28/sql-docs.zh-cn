@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -21,11 +20,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a4de22aefed2d4602e5ca331355ae7588394672e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3747bdba5ef54790a600b976c930ceeecd789c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322276"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报需要 SQL Server 代理，还需配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则您需要更新或验证权限。 本主题限于 SharePoint 模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并说明使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅来更新 SQL Server 代理权限的三种方式。 对于服务应用程序、msdb 和 master 数据库中的对象，在本主题的步骤中使用的凭据必须具有足够的权限来将执行权限授予 RSExecRole。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  ![对服务应用程序数据库的 SQL 代理权限](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "对服务应用程序数据库的 SQL 代理权限")  
   
-||Description|  
+||描述|  
 |------|-----------------|  
 |**1**|承载 Reporting Services 服务应用程序数据库的 SQL Server 数据库引擎实例。|  
 |**2**|SQL 数据库引擎实例的 SQL Server 代理实例。|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
     -   在 **“服务器类型”** 列表中，选择 **“数据库引擎”**  
   
-    -   在 **“服务器名称”**中键入要在其上配置 SQL Server 代理的 SQL Server 实例的名称。  
+    -   在 **“服务器名称”** 中键入要在其上配置 SQL Server 代理的 SQL Server 实例的名称。  
   
     -   选择身份验证模式。  
   

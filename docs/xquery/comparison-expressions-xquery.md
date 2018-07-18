@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984349"
 ---
 # <a name="comparison-expressions-xquery"></a>比较表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 以下查询将进行比较的序列中的电话号码 < 数\>到字符串文本"112-111-1111"的元素。 该查询对 AdditionalContactInfo 列中的一组电话号码元素进行比较，以确定文档中是否存在某个特定客户的特定电话号码。  
+ 以下查询将进行比较的序列中的电话号码 < 数\>字符串文字"112-111-1111"的元素。 该查询对 AdditionalContactInfo 列中的一组电话号码元素进行比较，以确定文档中是否存在某个特定客户的特定电话号码。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -108,7 +109,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- 该查询返回 True。 这表示文档中存在相应号码。 下面的查询只对上面的查询稍微做了修改。 在此查询中，将从文档中检索的电话号码值与包含两个电话号码值的组进行比较。 如果比较为 True，< 数\>返回元素。  
+ 该查询返回 True。 这表示文档中存在相应号码。 下面的查询只对上面的查询稍微做了修改。 在此查询中，将从文档中检索的电话号码值与包含两个电话号码值的组进行比较。 如果比较结果为 True，< 数\>返回元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -157,7 +158,7 @@ WHERE ContactID=1
   
  这些运算符只适用于单一原子值。 也就是说，不能将一个序列指定为其中一个操作数。  
   
- 例如，以下查询会检索\<图片 > 对于其中图片大小是产品型号的元素"小：  
+ 例如，以下查询将检索\<图片 > 针对某个产品型号图片的大小是其中的元素"小：  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -174,9 +175,9 @@ WHERE ProductModelID=19
   
 -   `declare namespace` 定义在随后的查询中使用的命名空间前缀。  
   
--   \<大小 > 元素值与指定原子值"小"进行比较。  
+-   \<大小 > 元素值与指定的原子值"small"进行比较。  
   
--   请注意，因为值运算符仅适用于原子值， **data （)** 函数隐式用于检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
+-   请注意，由于值运算符只适用于原子值**data （)** 函数隐式用于检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
   
  结果如下：  
   
@@ -192,7 +193,7 @@ WHERE ProductModelID=19
  注意，用于值比较的类型提升规则与用于常规比较的类型提升规则相同。 另外，在值比较过程中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对非类型化值使用的转换规则与它在常规比较过程中使用的转换规则相同。 而 XQuery 规范中的规则是，在值比较过程中总是将非类型化值转换为 xs:string。  
   
 ## <a name="node-comparison-operator"></a>节点比较运算符  
- 节点的比较运算符，**是**，仅适用于节点类型。 它返回的结果表明作为操作数传入的两个节点是否表示源文档中的同一节点。 如果两个操作数是同一节点，则此运算符返回 True。 否则，它将返回 False。  
+ 节点比较运算符**是**，仅适用于节点类型。 它返回的结果表明作为操作数传入的两个节点是否表示源文档中的同一节点。 如果两个操作数是同一节点，则此运算符返回 True。 否则，它返回 False。  
   
  下面的查询检查在某个特定产品型号的生产过程中生产车间 10 是否排在第一位。  
   
@@ -225,11 +226,11 @@ ProductModelID       Result
   
  下面是根据文档顺序所做的比较：  
   
--   `<<` ： 未**操作数 1**之前**操作数 2**按文档顺序。  
+-   `<<` : Does**操作数 1**前加上**操作数 2**按文档顺序。  
   
--   `>>` ： 未**操作数 1**按照**操作数 2**按文档顺序。  
+-   `>>` : Does**操作数 1**按照**操作数 2**按文档顺序。  
   
- 下面的查询将返回 True，如果产品目录说明中有\<保证 > 元素之前显示\<维护 > 中某一特定产品的文档顺序的元素。  
+ 下面的查询返回 True，如果产品目录说明\<担保 > 元素之前出现\<维护 > 某一特定产品的文档顺序中的元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -247,11 +248,11 @@ where ProductModelID=19
   
 -   **Value （)** 方法**xml**查询中使用数据类型。  
   
--   查询的布尔值的结果转换为**nvarchar(10)** 和返回。  
+-   查询的布尔值结果转换为**nvarchar(10)** 和返回。  
   
 -   该查询返回 True。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型系统&#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   

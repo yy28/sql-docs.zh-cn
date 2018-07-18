@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901272"
 ---
 # <a name="sorting-limitations"></a>排序限制
 GROUP BY 子句、 ORDER BY 子句、 SELECT DISTINCT 语句或外部联接中的排序键的最大长度为 255 个字节;排序行中的所有排序键的最大长度为 65500 字节。

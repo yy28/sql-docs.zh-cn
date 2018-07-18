@@ -1,8 +1,6 @@
 ---
 title: 项目设置 (Azure SQL DB) (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a01c8f7f7c8d58747d0d818140bed7593c82192a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aafaa73bcbbede50fc2aa274b0fca6b655b61dd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776543"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>项目设置 (Azure SQL DB) (MySQLToSQL)
 SQL Azure 项目设置允许你配置要添加在连接对话框，并还允许在 SQL Azure 连接中实现检测信号机制的 SQL Azure 数据库后缀。  
@@ -33,7 +32,7 @@ SQL Azure 窗格位于**项目设置**和**默认项目设置**对话框。
   
 -   使用默认项目设置对话框中设置的所有项目的配置选项。 若要访问 SQL Azure 设置中，在**工具**菜单上，选择**DefaultProject 设置**，选择迁移项目类型作为从 SQL Azure**迁移目标版本**下拉框来访问 SQL Azure 窗格中的设置，请单击**常规**底部的左窗格中，，然后选择**SQL Azure**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ## <a name="connectivity"></a>连接  
 **检测信号间隔**  

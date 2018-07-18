@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911262"
 ---
 # <a name="table-name-limitations"></a>表名称的限制
 表名称可以包含任何有效字符 （例如，空格）。 如果表名称包含除字母、 数字和下划线的任何字符，必须由将其括起来后引号 （'） 中分隔名称。  

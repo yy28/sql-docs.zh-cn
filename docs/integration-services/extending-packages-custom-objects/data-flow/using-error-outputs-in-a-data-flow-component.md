@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -30,11 +29,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7dd1c5f7c1c80eb4686677a426d5f18fb6b53672
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fff879e523baaf7955dd985cfc6453dfada8330
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403999"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>在数据流组件中使用错误输出
   称为错误输出的特殊的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 对象可添加到组件中，以使组件重定向无法在执行期间处理的行。 组件可能遇到的问题通常分为错误或截断，这些问题特定于每个组件。 提供错误输出的组件为组件用户处理错误条件提供了灵活性，既可以筛选出结果集中的错误行，也可以在出现问题时中止组件运行，还可以忽略错误并继续。  

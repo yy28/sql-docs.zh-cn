@@ -34,6 +34,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34334978"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

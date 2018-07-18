@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27b03d53f60ae4c68c35645d5991b958f1c678d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73186cdc165e13b422fb8246cfe22a7a442e84ac
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355749"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定义和修改静态行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义静态行筛选器  
   
-1.  定义要筛选的项目。 有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  定义要筛选的项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 为 **@article**指定项目的名称，为 **@publication**指定发布的名称，为 **@filter_name**指定筛选器的名称，并为 **@filter_clause** 指定筛选子句（不包括 `WHERE`）。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在发布服务器上，对发布数据库执行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 为 **@publication**指定发布名称、为 **@article**指定筛选项目的名称，为 **@filter_clause**中定义和修改静态行筛选器。 这将重新创建定义筛选项目的视图。  
   
-3.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+3.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [创建并应用初始快照](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 4.  重新初始化订阅。 有关详细信息，请参阅 [重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 **@subset_filterclause** 指定筛选子句（不包括 `WHERE`）。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-2.  如果还必须定义列筛选器，请参阅 [定义和修改列筛选器](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+2.  如果还必须定义列筛选器，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>为合并发布修改静态行筛选器  
   

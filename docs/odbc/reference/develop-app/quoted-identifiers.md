@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911522"
 ---
 # <a name="quoted-identifiers"></a>带引号的标识符
 在 SQL 语句中包含特殊字符或匹配关键字的标识符必须括在*标识符引号字符*; 括在此类字符中的标识符称为*带引号的标识符*(也称为*分隔标识符*SQL 92 中)。 例如，在下面的示例引用 Accounts Payable 标识符**选择**语句：  

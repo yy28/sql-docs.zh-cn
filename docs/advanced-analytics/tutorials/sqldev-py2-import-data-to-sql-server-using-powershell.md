@@ -2,23 +2,24 @@
 title: 步骤 2 到 SQL Server 使用 PowerShell 导入数据 |Microsoft 文档
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d85419c06915cc7d96c9713053239c27c70a9f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14606b42d17acdd56527795d2d475a263d918d7d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249990"
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>步骤 2： 将数据导入到 SQL Server 使用 PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 使用本教程，本文摘自[SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
-在此步骤中，你运行下载的脚本，以创建所需的演练数据库对象之一。 该脚本还会创建多个存储的过程，并将示例数据上载到你指定的数据库中的表。
+在此步骤中，你运行下载的脚本以创建所需的演练数据库对象之一。 该脚本还会创建多个存储的过程，并将示例数据上载到你指定的数据库中的表。
 
 ## <a name="create-database-objects-and-load-data"></a>创建数据库对象和加载数据
 
@@ -34,6 +35,16 @@ ms.lasthandoff: 04/16/2018
 
 如果遇到问题，可以作为引用使用脚本来手动执行的步骤。
 
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>修改脚本以使用受信任的 Windows 标识
+
+默认情况下，该脚本假设 SQL Server 数据库用户登录名和密码。 如果你在你的 Windows 用户帐户是 db_owner，你可以使用 Windows 标识创建对象。 为此，请打开`RunSQL_SQL_Walkthrough.ps1`在代码编辑器中，要追加**`-T`** 到 bcp 大容量插入命令：
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script"></a>运行脚本
+
 1. 以管理员身份打开 PowerShell 命令提示符。 如果你尚不在上一步中创建的文件夹中，导航到文件夹，，，然后运行以下命令：
   
     ```ps
@@ -44,8 +55,8 @@ ms.lasthandoff: 04/16/2018
 
     - 名称或地址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已安装与 Python 的机器学习服务实例。
     - 实例上某帐户的用户名和密码。 你使用的帐户必须具有创建数据库、 创建表和存储的过程和大容量加载到表的数据的能力。 
-    - 如果未提供的用户名和密码，你的 Windows 标识可用于登录到 SQL Server，并将提升到输入密码。
-    - 刚下载的示例数据文件的路径和文件名。 例如： `C:\temp\pysql\nyctaxi1pct.csv`
+    - 如果未提供的用户名和密码，你的 Windows 标识用于登录到 SQL Server。
+    - 刚下载的示例数据文件的路径和文件名。 例如，使用 IPv4 地址 `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 若要成功加载数据，库 xmlrw.dll 必须是 bcp.exe 所在的文件夹。

@@ -3,8 +3,6 @@ title: 使用示例控制台脚本文件 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 04f24032be49973a03ffd8d79b9c642b244c0ef2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31de0d04238c414b5380bbaa939fe664c7d1c025
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779623"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>使用示例控制台脚本文件 (SybaseToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -87,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
     架构映射到目标架构的源数据库。  
   
-    **属性**  
+    **Attribute**  
   
     -   `source-schema:` 指定需要要转换的源数据库。  
   
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`示例控制台脚本文件的命令的示例 4。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name`： 指定源数据库/对象需要要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
@@ -113,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name:` 指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
@@ -125,11 +124,11 @@ ms.lasthandoff: 05/03/2018
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`示例控制台脚本文件的命令的示例 2。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name:` 指定的源数据库/表需要要迁移的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [创建变量值文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [创建服务器连接文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [生成报表&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  

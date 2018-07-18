@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031094"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
   数据驱动订阅提供了一种使用动态订阅数据的方式，这些数据是在运行时从外部数据源中检索的。 数据驱动订阅还可以使用定义订阅时指定的静态文本和默认值。 可以使用数据驱动订阅来执行以下操作：  

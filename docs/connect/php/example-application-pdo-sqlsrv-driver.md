@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1ac3513e5805614a3cea530d403cd135f30e10b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307626"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>示例应用程序 （PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,9 +31,9 @@ AdventureWorks 产品评论示例应用程序是使用 PDO_SQLSRV 驱动程序�
 1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅[Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  将文本档后面列出的代码复制到两个文件中：adventureworks_demo.php 和 photo.php。  
 3.  将 adventureworks_demo.php 和 photo.php 文件放在 Web 服务器的根目录中。  
-4.  通过启动运行该应用程序http://localhost/adventureworks_demo.php从浏览器。  
+4.  通过启动运行该应用程序 http://localhost/adventureworks_demo.php 从浏览器。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  
   
 -   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息，请参阅[Microsoft Drivers for PHP for SQL Server 的系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
@@ -507,7 +507,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [连接到服务器](../../connect/php/connecting-to-the-server.md)
 
 [比较执行函数](../../connect/php/comparing-execution-functions.md)

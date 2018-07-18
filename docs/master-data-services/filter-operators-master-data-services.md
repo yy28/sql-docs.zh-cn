@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402609"
 ---
 # <a name="filter-operators-master-data-services"></a>Filter 运算符 (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="filter-operators"></a>Filter 运算符  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**等于**|返回与指定条件完全相同的属性值。 例如，如果要针对 **Mountain-100**进行筛选，则必须键入 **Mountain-100**。|  
 |**不等于**|返回与指定条件不完全相同的属性值。 筛选条件必须与您要在结果中忽略的属性值完全相同。 例如，如果要忽略与 **Mountain-100**匹配的结果，则必须键入 **Mountain-100**。<br /><br /> <br /><br /> 注意：对某个属性应用带有“Is not equal”子句的筛选条件时，如果 SET ANSI_NULLS 在数据库设置中设置为 ON，则属性为 NULL 的成员将传递该筛选条件并作为结果返回。 若要停止此行为，请在数据库设置中将 SET ANSI_NULLS 设置为 OFF。 如果 SET ANSI_NULLS 设置为 OFF，则在数据值为 NULL 时，所有数据与 Null 值的比较求得的值为 TRUE，最终结果是该成员不会传递“Is not equal”子句。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014444"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 访问集成 Reporting Services
   借助于 URL 访问，您可以通过报表服务器 URL 访问报表。 使用 URL 请求，您可以访问特定的报表服务器以及报表服务器数据库中的报表、资源和其他项。 还可以为用户自定义报表查看和导航体验。 URL 的查询字符串包含设备信息设置，以及针对报表和所选呈现输出的报表参数。 报表服务器处理 URL 请求的方法取决于您通过 URL 访问的项的参数、参数前缀和类型。  

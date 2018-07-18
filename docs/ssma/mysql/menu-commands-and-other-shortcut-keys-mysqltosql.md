@@ -1,8 +1,6 @@
 ---
 title: 菜单命令和其他快捷键 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 37d58f6bc754999eb90fc0d50736b0481583df56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31e5ee3a1b9a5fc08515d6755e87e1d70ad10f3f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776603"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
 以下各节描述了用于访问菜单命令和其他的 SSMA 的各种对话框中为 MySQL 应用程序使用键盘快捷方式的键盘快捷键。  
@@ -187,6 +186,6 @@ ms.lasthandoff: 05/03/2018
 |启动快速信息。|CTRL + SHIFT + 空间|  
 |请转到声明。|F12|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [键盘快捷方式&#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

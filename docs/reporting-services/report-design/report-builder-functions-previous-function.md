@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025514"
 ---
 # <a name="report-builder-functions---previous-function"></a>报表生成器函数 - Previous 函数
   返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。  

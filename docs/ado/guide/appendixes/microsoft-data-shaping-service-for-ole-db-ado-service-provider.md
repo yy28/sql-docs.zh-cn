@@ -2,7 +2,6 @@
 title: 调整用于 OLE DB （ADO 服务提供程序） 的服务的 Microsoft 数据 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271346"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 数据定形 OLE DB 概述的服务
 > [!IMPORTANT]
@@ -64,5 +64,5 @@ cn.Properties("Data Provider") = "MSDASQL"
 
  有关数据调整的详细信息，请参阅[数据成型](../../../ado/guide/data/data-shaping-overview.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

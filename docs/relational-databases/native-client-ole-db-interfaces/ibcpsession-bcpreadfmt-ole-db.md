@@ -1,14 +1,12 @@
 ---
-title: IBCPSession::BCPReadFmt (OLE DB) |Microsoft 文档
+title: 'Ibcpsession:: Bcpreadfmt (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1579e92e5938dd2a13555b5a8c17a09fc80dd081
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cdd98f828a69965a3a610ad27aeb2196e747d0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424346"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,14 +41,14 @@ HRESULT BCPReadFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>注释  
- **BCPReadFmt**方法用于从数据文件中指定的数据的格式的格式化文件中读取数据。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 支持的格式文件版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序 BCP 是 6.0 或更高版本。  
+## <a name="remarks"></a>Remarks  
+ **BCPReadFmt**方法用于从数据文件中指定的数据格式的格式文件中读取数据。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 支持的格式文件版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口 BCP 是 6.0 或更高版本。  
   
- 后**BCPReadFmt**方法读取的值设置格式，它使到适当的调用[IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)和[IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)方法。 用户不必分析格式化文件并发出上述调用。  
+ 之后**BCPReadFmt**方法读取格式值，它就会相应调用[ibcpsession:: Bcpcolumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)并[ibcpsession:: Bcpcolfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)方法。 用户不必分析格式化文件并发出上述调用。  
   
- 若要保存格式文件，请调用[IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)方法。 调用**BCPReadFmt**方法可以引用已保存的格式。 或者，大容量复制实用工具 (**bcp**) 可以在可供引用的文件中保存用户定义数据格式**BCPReadFmt**方法。  
+ 若要保存格式化文件，请调用[ibcpsession:: Bcpwritefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)方法。 调用**BCPReadFmt**方法可以引用保存的格式。 或者，使用大容量复制实用工具 (**bcp**) 可以将用户定义数据格式保存在可以引用的文件**BCPReadFmt**方法。  
   
- **BCP_OPTION_DELAYREADFMT**值*eOption*参数[IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)修改 IBCPSession::BCPReadFmt 的行为。  
+ **BCP_OPTION_DELAYREADFMT**的值*eOption*参数[ibcpsession:: Bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)修改 ibcpsession:: Bcpreadfmt 的行为。  
   
 ## <a name="arguments"></a>参数  
  *pwszFormatFile*[in]  
@@ -60,15 +59,15 @@ HRESULT BCPReadFmt(
  方法成功。  
   
  E_FAIL  
- 提供程序特定错误发生，有关详细的信息的使用[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 有关详细的信息可使用特定于提供程序的错误发生[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
   
  E_OUTOFMEMORY  
- 内存不足的错误。  
+ 内存不足错误。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法未调用此方法之前调用。  
+ 意外调用了该方法。 例如， [ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)调用此方法之前，未调用方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

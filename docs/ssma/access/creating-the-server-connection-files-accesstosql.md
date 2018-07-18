@@ -1,8 +1,6 @@
 ---
 title: 创建服务器连接文件 (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 79ae67368911f4535a320f87fec29a25b686c456
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773623"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>创建服务器连接文件 (AccessToSQL)
 服务器信息可以是指定在脚本文件的服务器部分。 此外可以在单独的服务器连接文件中指定服务器信息。 服务器连接文件的命令行参数是`-c <serverconnectionfile>`。 如果在脚本和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  

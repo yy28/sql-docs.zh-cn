@@ -23,13 +23,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912482"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo 支持
 当一个 ODBC 2。*x*应用程序调用**SQLGetInfo**为 ODBC 3 *.x*驱动程序，*信息类型*必须支持下表中的自变量。  
   
 |*信息类型*|返回|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2.0)**注意：**不推荐使用此信息类型; 右侧列中的位掩码已弃用。|枚举中的子句 SQLINTEGER 位掩码**ALTER TABLE**数据源所支持的语句。<br /><br /> 以下的位掩码用于确定支持哪些子句：<br /><br /> SQL_AT_DROP_COLUMN = 支持删除列的功能。 这是导致 cascade 还是限制行为是驱动程序定义的。 (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = 添加支持在单个的 ALTER TABLE 语句中的多个列的能力。 此位不能与其他 SQL_AT_ADD_COLUMN_XXX bits 或 SQL_AT_CONSTRAINT_XXX bits 合并。 (ODBC 2.0)|  
+|SQL_ALTER_TABLE (ODBC 2.0)**注意：** 不推荐使用此信息类型; 右侧列中的位掩码已弃用。|枚举中的子句 SQLINTEGER 位掩码**ALTER TABLE**数据源所支持的语句。<br /><br /> 以下的位掩码用于确定支持哪些子句：<br /><br /> SQL_AT_DROP_COLUMN = 支持删除列的功能。 这是导致 cascade 还是限制行为是驱动程序定义的。 (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = 添加支持在单个的 ALTER TABLE 语句中的多个列的能力。 此位不能与其他 SQL_AT_ADD_COLUMN_XXX bits 或 SQL_AT_CONSTRAINT_XXX bits 合并。 (ODBC 2.0)|  
 |SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> ODBC 1.0; 中引入的信息类型每个位掩码都标有在其中引入的版本。|枚举支持的提取方向选项 SQLINTEGER 位掩码。<br /><br /> 以下的位掩码与标志结合使用，以确定支持哪些选项：<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_FIRST (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) SQL_FD_FETCH_RELATIVE (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 2.0)|  
 |SQL_LOCK_TYPES (ODBC 2.0)|枚举支持的锁定 SQLINTEGER 位掩码类型*fLock*中的参数**SQLSetPos**。<br /><br /> 以下的位掩码与标志结合使用，以确定哪些锁类型受支持：<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|一个指示的 ODBC 一致性级别 SQLSMALLINT 值。<br /><br /> SQL_OAC_NONE = None<br /><br /> SQL_OAC_LEVEL1 = 级别 1 支持<br /><br /> SQL_OAC_LEVEL2 = 支持级别 2|  

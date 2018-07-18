@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020034"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>向报表添加仪表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，如果要以可视化格式汇总数据，则可使用仪表数据区域。 将仪表数据区域添加到设计图面后，可以将报表数据集字段拖到仪表的数据窗格中。  

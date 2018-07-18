@@ -2,10 +2,10 @@
 title: 数据源信息属性 |Microsoft 文档
 description: 数据源信息属性
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e10292524b5179e825a86da9cf612c6909e869e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80d39fd079654452a4d26484df7b9a12e903c714
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665967"
 ---
 # <a name="data-source-information-properties"></a>数据源信息属性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在提供程序特定属性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中，SQL Server 的 OLE DB 驱动程序定义的以下数据源信息属性。  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |-----------------|-----------------|  
 |SSPROP_STREAM_XMLROOT|类型：VT_BSTR 读取/写入：读取/写入<br /><br /> 说明：FOR XML 查询的结果可能不是格式正确的文档。 指定此属性是、 的结果选择... 对于 XML 查询包装在提供此属性以返回格式正确的 XML 文档的根标记中。 如果查询是在浏览器中执行的，在加载结果时它可能导致浏览器显示分析器错误。 为了避免错误，SQL ISAPI 支持 ROOT 关键字。 此关键字映射到 SSPROP_STREAM_XMLROOT 属性。|  
   
-## <a name="see-also"></a>另请参阅  
- [数据源对象 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 服务器属性（“高级”页）- Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: tools
@@ -17,11 +17,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfbfe74439ecbf3db24f1a2a32bd5ab5d528fb72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550398"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
 
@@ -46,16 +47,16 @@ ms.lasthandoff: 05/03/2018
 指示报表执行日志记录是否处于启用状态。 默认值为 **true**。 有关报表服务器执行日志的详细信息，请参阅 [报表服务器 ExecutionLog 和 ExecutionLog3 视图](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
 
 **ExecutionLogDaysKept**  
-在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为 **-1** ，则不会从执行日志表中删除项。 默认值是 **60**秒。  
+在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为“-1”，则不会从执行日志表中删除条目。 默认值是 **60**秒。  
 
 > [!NOTE] 
-> 将值设置为“0”会从执行日志中删除所有条目。 将值设置为“-1”会保留执行日志的条目，而不删除。
+> 将值设置为“0”会从执行日志中删除所有条目。 值为“-1”将保留执行日志的条目，不会删除它们。
 
 **SessionTimeout**  
 会话保持活动状态的时间长度（以秒为单位）。 默认值是 **600**秒。  
 
 **SharePointIntegratedMode**  
-这是一个指示服务器模式的只读属性。 如果此值为 False，则报表服务器在本机模式下运行。  
+此只读属性指示服务器模式。 如果此值为 False，则报表服务器在本机模式下运行。  
 
 **SiteName**  
 在 Web 门户的页面标题中显示的报表服务器站点的名称。 默认值是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]秒。 此属性可以是空字符串。 最大长度为 8,000 个字符。  
@@ -75,9 +76,9 @@ ms.lasthandoff: 05/03/2018
 **SnapshotCompression**  
 定义如何压缩快照。 默认值是 **SQL**秒。 有效值如下：
 
-|值|Description|
+|值|描述|
 |---------|---------|
-|**SQL**|在存储到报表服务器数据库中时压缩快照。 这是当前的行为。|
+|**SQL**|在存储到报表服务器数据库中时压缩快照。 此压缩操作是当前的行为。|
 |**无**|不压缩快照。|
 |**全部**|针对所有的存储选项（包括报表服务器数据库或文件系统）压缩快照。|
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 **EnableIntegratedSecurity**  
 确定报表数据源连接是否支持 Windows 集成安全性。 默认值为 **True**。 有效值如下：
 
-|值|Description|
+|值|描述|
 |---------|---------|
 |**True**|启用 Windows 集成安全性。|
 |**False**|未启用 Windows 集成安全性。 将不运行配置为使用 Windows 集成安全性的报表数据源。|
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/03/2018
 **EnableLoadReportDefinition**  
 选中此选项可以指定用户是否可以从报表生成器报表中执行特别报告执行。 设置此选项即可确定报表服务器的 **EnableLoadReportDefinition** 属性值。  
 
-如果清除此选项，则属性将设置为 False，报表服务器将不会为使用报表模型作为数据源的报表生成点击链接型报表。 将阻止对 LoadReportDefinition 方法的任何调用。  
+如果清除此选项，则该属性设置为 False。 报表服务器将不会为使用报表模型作为数据源的报表生成“点击链接型报表”。 将阻止对 LoadReportDefinition 方法的任何调用。  
 
 如果关闭此选项，则会缓解恶意用户通过用 LoadReportDefinition 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
 
@@ -106,13 +107,13 @@ ms.lasthandoff: 05/03/2018
 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false**秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
 
 **EnableReportDesignClientDownload**  
-指定是否可以从报表服务器下载报表生成器安装包。 如果清除此设置，则指向报表生成器的 URL 将不起作用。 有关详细信息，请参阅 [配置报表生成器访问权限](../../reporting-services/report-server/configure-report-builder-access.md)。  
+指定是否可以从报表服务器下载报表生成器安装包。 如果清除此设置，则指向报表生成器的 URL 将不起作用。 
 
 **EditSessionCacheLimit**  
 指定可在一个报表编辑会话中处于活动状态的数据缓存条目数。 默认数量为 5。  
 
 **EditSessionTimeout**  
-指定报表编辑会话超时之前的秒数。默认值为 7200 秒（2 小时）。  
+指定报表编辑会话超时之前的秒数。默认值为 7200 秒（两小时）。  
 
 **EnableCustomVisuals*****（仅适用于 Power BI 报表服务器）***  
 如果 PowerBI ReportServer 启用 PowerBI 自定义视觉对象的显示。 值为 True 和 False。  默认值为 True。  
@@ -129,11 +130,11 @@ ms.lasthandoff: 05/03/2018
 **AccessControlAllowCredentials**  
 指示当“凭据”标记设置为 true 时，是否可以公开对客户端请求的响应。 默认值是 **false**秒。
 
-**AccessControlAllowHeaders** 客户端发出请求时，服务器将允许的标头的列表（以逗号分隔）。 此属性可为空字符串，指定 * 可允许所有标头。
+**AccessControlAllowHeaders** 客户端发出请求时，服务器允许的以逗号分隔的标头列表。 此属性可为空字符串，指定 * 可允许所有标头。
 
-**AccessControlAllowMethods** 当客户端发出请求时，服务器将允许的以逗号分隔的 HTTP 方法列表。 默认值为（GET、PUT、POST、PATCH、DELETE），指定 * 可允许所有方法。
+**AccessControlAllowMethods** 当客户端发出请求时，服务器允许的以逗号分隔的 HTTP 方法列表。 默认值为（GET、PUT、POST、PATCH、DELETE），指定 * 可允许所有方法。
 
-**AccessControlAllowOrigin** 当客户端发出请求时，服务器将允许的以逗号分隔的来源列表。 默认值是空白，会阻止所有请求，指定 * 可在未设置凭据时允许所有源，如果指定凭据，则必须指定源的显式列表。
+**AccessControlAllowOrigin** 当客户端发出请求时，服务器允许的以逗号分隔的来源列表。 默认值为空白，这将阻止所有请求，指定 * 可在未设置凭据时允许所有源，如果指定凭据，则必须指定源的显式列表。
 
 **AccessControlExposeHeaders** 服务器将向客户端公开的以逗号分隔的标头列表。 默认值为空。
 

@@ -1,5 +1,5 @@
 ---
-title: 从 XML 文档使用 sql 排除架构元素： 映射 |Microsoft 文档
+title: 从 XML 文档中使用 sql 中排除架构元素： 映射 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -29,28 +29,29 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001239"
 ---
-# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>从 XML 文档使用 sql 排除架构元素： 映射
+# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>从 XML 文档中使用 sql 中排除架构元素： 映射
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  由于是默认映射，XSD 架构中的每个元素和属性都映射到数据库表/视图和列。 如果你想要创建 XSD 架构，不显示在 XML 中和未映射到任何数据库表 （视图） 或列中的元素，你可以指定**sql： 映射**批注。  
+  由于是默认映射，XSD 架构中的每个元素和属性都映射到数据库表/视图和列。 如果你想要不映射到任何数据库表 （视图） 或列并且，未出现在 XML 中的 XSD 架构中创建的元素，可以指定**sql： 映射**批注。  
   
- **Sql： 映射**批注是特别有用，如果架构不能修改或如果架构用于验证 XML 从其他源并尚未包含不会存储在你的数据库的数据。 **Sql： 映射**批注区别**sql： 是常量**在于未映射的元素和属性在 XML 文档中不会出现。  
+ **Sql： 映射**批注是特别有用，如果不能修改架构或如果使用的架构验证 XML 从其他源和尚未包含未存储在数据库中的数据。 **Sql： 映射**批注不同于**sql： 是常量**，因为未映射的元素和属性不出现在 XML 文档。  
   
- **Sql： 映射**批注采用布尔值 (0 = false、 1 = true)。 可接受的值为 0、1、true 和 false。  
+ **Sql： 映射**批注接受布尔值 (0 = false,1 = true)。 可接受的值为 0、1、true 和 false。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 批注  
- 假定您有来自其他源的 XSD 架构。 此 XSD 架构组成 **\<Person.Contact >** 具有元素**ContactID**， **FirstName**， **LastName**，和**家庭地址**属性。  
+ 假定您有来自其他源的 XSD 架构。 此 XSD 架构组成 **\<Person.Contact >** 具有元素**ContactID**， **FirstName**， **LastName**，和**HomeAddress**属性。  
   
- 在将此 XSD 架构映射到在 AdventureWorks 数据库中，Person.Contact 表**sql： 映射**上指定**家庭地址**特性，因为员工表不会存储主页员工的地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
+ 在将此 XSD 架构映射到 AdventureWorks 数据库中的 Person.Contact 表**sql： 映射**上指定**HomeAddress**属性，因为 Employees 表不存储主页雇员的地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
   
- 为架构的其余部分进行默认映射。 **\<Person.Contact >** 元素映射到 Person.Contact 表中，和所有属性都映射到具有相同名称 Person.Contact 表中的列。  
+ 为架构的其余部分进行默认映射。 **\<Person.Contact >** 元素映射到 Person.Contact 表中，而所有属性都映射到 Person.Contact 表中的相同名称的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 查询使用 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是结果集：  
   
@@ -107,9 +108,9 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- 请注意，ContactID、 FirstName 和 LastName 是否存在，但家庭地址是不是因为指定的映射架构的 0 **sql： 映射**属性。  
+ 请注意，ContactID、 FirstName 和 LastName 都存在，但 HomeAddress 是不是因为映射架构指定了值为 0 **sql： 映射**属性。  
   
-## <a name="see-also"></a>另请参阅  
- [XSD 元素和属性表和列的默认映射&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [XSD 元素和属性到表和列的默认映射&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

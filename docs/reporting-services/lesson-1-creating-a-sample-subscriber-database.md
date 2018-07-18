@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016614"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 课：创建示例订阅服务器数据库
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
     GO  
     ```  
   
-7.  单击**“!在工具栏上执行** 。  
+7.  单击 **“!在工具栏上执行** 。  
   
 8.  使用 SELECT 语句查看您是否有三行数据。 例如： `select * from OrderInfo`  
   

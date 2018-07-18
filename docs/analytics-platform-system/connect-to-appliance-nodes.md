@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539537"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>连接到分析平台系统中的设备节点
 此文章介绍了连接到分析平台系统设备在每个节点的各种方法。  

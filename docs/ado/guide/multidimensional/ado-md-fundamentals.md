@@ -2,7 +2,6 @@
 title: ADO MD 基础知识 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15a76c1a7109c6c08d95610278ba4ac9d5c37a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf6cf507d47527e2ca6a72985b6f5bc817ba88e7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273506"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 基础知识
 Microsoft® ActiveX® 数据对象 （多维） (ADO MD) 轻松访问通过提供对多维数据等 Microsoft Visual Basic®，语言 Microsoft Visual C++®。 ADO MD 扩展 Microsoft ActiveX® 数据对象 (ADO) 要包括特定于多维数据的对象，如[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)和[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。 使用 ADO MD 中，您可以浏览多维架构、 查询多维数据集，并检索结果。  
@@ -40,7 +40,7 @@ Microsoft® ActiveX® 数据对象 （多维） (ADO MD) 轻松访问通过提�
   
 -   [使用 ADO MD 进行编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO 程序员指南](../../../ado/guide/ado-programmer-s-guide.md)   
  [适用于数据定义语言和安全 (ADOX) 的 ADO 扩展](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   

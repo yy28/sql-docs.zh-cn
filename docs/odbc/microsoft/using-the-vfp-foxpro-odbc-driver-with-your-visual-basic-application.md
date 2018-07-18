@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907602"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>使用 Visual Basic 应用程序的 VFP FoxPro ODBC 驱动程序
 通过创建一个数据控件，连接到 Visual FoxPro 数据源时，你的 Microsoft® Visual Basic® 应用程序可以与 Visual FoxPro 数据通信。  

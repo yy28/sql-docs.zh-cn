@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ebf10bb9ae1a30a7f66ba5b984e0c08ee5ac24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaddf1fab037c2bccec6f3bfc5411ba6156ee75b
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619474"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列模式信息配置文件请求”** 设置选项。 列模式配置文件报告一组涵盖指定字符串列中值的百分比的正则表达式。 此配置文件可以帮助您识别数据中的问题（如无效字符串），还可以建议可用于以后验证新值的正则表达式。 例如，美国邮政编码列的模式配置文件可能会生成正则表达式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他的正则表达式，则数据有可能包含无效或格式不正确的值。  
@@ -133,7 +132,7 @@ ms.lasthandoff: 05/03/2018
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   
  **“符号”**  
- 列出应保留为模式一部分的符号。 可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“@”。 默认情况下，“符号”列表包含以下字符：`,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
+ 列出应保留为模式一部分的符号。 示例可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“\@”。 默认情况下，“符号”列表包含以下字符：`,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
   
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   

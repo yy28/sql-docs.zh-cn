@@ -2,7 +2,6 @@
 title: 定位属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c931d220a9418a790ff79d6b61c89004800a0061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280678"
 ---
 # <a name="position-property-ado"></a>位置属性 (ADO)
 指示当前位置[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**指定的偏移量中的流的当前位置从一开始的字节数的值。 默认值为 0，它表示流中的第一个字节。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以移动到点结束后的流的当前位置。 如果指定超出流末尾当前位置[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)的**流**对象将会相应地增加。 在这种方式中添加任何新字节将为 null。  
   
 > [!NOTE]
@@ -47,5 +47,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Charset 属性 (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

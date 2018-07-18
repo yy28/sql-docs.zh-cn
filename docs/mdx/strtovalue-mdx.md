@@ -1,34 +1,23 @@
 ---
 title: StrToValue (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STRTOVALUE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToValue function
-ms.assetid: 118a9c4f-74a3-48d5-a4f4-318664bc51bc
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c9df8d31e49019abf730f70664a74c50d7bdc678
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 5a46b68ac8e93a00c7730b32593331a28655c1c5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743066"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回多维表达式 (MDX) 格式的字符串指定的数值。  
   
@@ -43,7 +32,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  直接或间接解析为单个单元的有效字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **StrToValue**函数返回由 MDX 表达式指定的数字值。 **StrToValue**函数通常用于与用户定义的函数返回一个 MDX 表达式从一个外部函数回可被解析为单个单元格的 MDX 语句。  
   
 -   如果使用 CONSTRAINED 标志，则 MDX 表达式只能包含一个标量值。 通过指定字符串，使用 CONSTRAINED 标志可降低发生注入攻击的风险。 如果提供的 MDX 表达式不能直接解析为标量值，则会出现下列出错信息：“违反了 STRTOVALUE 函数中 CONSTRAINED 标志所规定的限制。”  
@@ -68,7 +57,7 @@ FROM [Adventure Works]
 WHERE [Product].[Product Categories].[Bikes]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

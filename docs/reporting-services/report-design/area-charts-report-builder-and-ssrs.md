@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019854"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面积图（报表生成器和 SSRS）
   面积图将序列显示为一组由线连接的点，并填充线下方的所有区域。 有关如何向分区图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

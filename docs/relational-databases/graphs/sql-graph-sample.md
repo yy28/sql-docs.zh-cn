@@ -1,6 +1,6 @@
 ---
-title: SQL 数据库示例 Graph |Microsoft 文档
-description: 一个快速示例，将帮助你开始使用 SQL graph 数据库中引入的新语法。
+title: SQL 图形数据库示例 |Microsoft Docs
+description: 一个快速示例，将帮助你开始使用 SQL 图形数据库中引入的新语法。
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,21 +22,22 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: cc1f388b7ec6687fe64a4bad39d8d2c878221505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999639"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>创建图形数据库并运行一些模式匹配使用 T-SQL 查询
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-本示例提供[!INCLUDE[tsql-md](../../includes/tsql-md.md)]脚本创建具有节点和边缘的关系图数据库，然后使用新的匹配子句匹配的一些模式，并遍历关系图。 此示例脚本将在这两个 Azure SQL 数据库上运行和 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+此示例提供了[!INCLUDE[tsql-md](../../includes/tsql-md.md)]脚本使用的节点和边缘创建图形数据库，然后使用新的 MATCH 子句匹配的一些模式，并遍历关系图。 此示例脚本将用于这两个 Azure SQL 数据库和 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>示例架构  
-此示例创建了一个图形架构，如图 1 中显示的假设的社交网络有人员、 餐馆和城市节点的。 这些节点都连接到使用友元，相互喜欢 LivesIn 和 LocatedIn 边缘。 
+此示例创建关系图架构，正如图 1 中所演示的假设的社交网络的人员、 餐馆和市/县的节点。 这些节点连接到使用朋友、 点赞、 LivesIn 和 LocatedIn 边缘。 
 
-![人员城市餐馆表](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph 数据库示例")  
-图 1： 示例使用餐馆、 市/县、 人员节点和 LivesIn，LocatedIn，喜欢边缘的架构。
+![人员城市餐馆表](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql 图形数据库示例")  
+图 1： 示例架构包含餐馆、 城市、 人员节点和 LivesIn，LocatedIn，点赞边缘。
 
 
 ## <a name="sample-script"></a>示例脚本
@@ -146,7 +147,7 @@ WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->
 ```
 
 ## <a name="clean-up"></a>清理  
-清理架构和创建示例数据库。
+清理的架构和创建示例数据库。
 ```
 USE graphdemo;
 go
@@ -168,10 +169,10 @@ go
 ```
 
 ## <a name="script-explanation"></a>脚本说明  
-此脚本使用新的 T-SQL 语法来创建节点和边缘表。 演示如何将数据插入节点和边缘表使用`INSERT`语句，并显示如何使用`MATCH`子句的模式匹配和导航。
+此脚本使用新的 T-SQL 语法创建节点和边界表。 演示如何将数据插入到使用的节点和边缘表`INSERT`语句，并还演示如何使用`MATCH`子句用于模式匹配和导航。
 
 |Command    |说明
 |---  |---  |
-|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |创建图形节点或边缘表  |
-|[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |节点或边缘表中插入  |
-|[匹配&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |使用 MATCH 与模式匹配或遍历关系图  |
+|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |创建图形节点或边界表  |
+|[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |插入节点或边界表  |
+|[匹配&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |使用匹配来匹配模式或遍历关系图  |

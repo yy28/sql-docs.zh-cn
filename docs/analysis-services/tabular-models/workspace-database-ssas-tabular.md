@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045171"
 ---
 # <a name="workspace-database"></a>工作区数据库 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/10/2018
   
   
 ##  <a name="bkmk_ws_prop"></a> 工作区数据库属性  
- 工作区数据库属性包含在模型属性中。 若要查看模型属性，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“解决方案资源管理器”**中，单击 **Model.bim** 文件。 可以使用 **“属性”** 窗口配置模型属性。 工作区数据库特定属性包括：  
+ 工作区数据库属性包含在模型属性中。 若要查看模型属性，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“解决方案资源管理器”** 中，单击 **Model.bim** 文件。 可以使用 **“属性”** 窗口配置模型属性。 工作区数据库特定属性包括：  
   
 > [!NOTE]  
 >  创建新模型项目时，“集成工作区模式”、“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页上（位于“工具\选项”对话框的“分析服务器”设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  

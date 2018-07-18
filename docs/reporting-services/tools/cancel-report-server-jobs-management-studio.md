@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029404"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
   使用“取消报表服务器作业”对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  

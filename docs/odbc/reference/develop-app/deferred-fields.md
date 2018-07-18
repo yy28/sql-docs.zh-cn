@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910262"
 ---
 # <a name="deferred-fields"></a>延迟的字段
 值*延迟字段*时设置，但该驱动程序将保存延迟影响的变量的地址不会使用。 应用程序参数描述符，驱动程序使用这些变量的内容在调用时**SQLExecDirect**或**SQLExecute**。 对于应用程序行描述符，驱动程序在提取时使用这些变量的内容。  

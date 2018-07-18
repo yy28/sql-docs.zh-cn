@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -18,11 +17,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1017185b0176b329308b049cb84fea1a1a50aeea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8bfa3073551c1a4881a5f3a13158a955b8fead8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322696"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
 
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 
 2. 此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 选择“连接”。
 
-3. 在 **“服务器名称”**中，指定安装报表服务器实例的计算机的名称。 默认情况下，将显示本地计算机的名称，但如果要连接到安装在远程计算机上的报表服务器，则可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。
+3. 在 **“服务器名称”** 中，指定安装报表服务器实例的计算机的名称。 默认情况下，将显示本地计算机的名称，但如果要连接到安装在远程计算机上的报表服务器，则可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。
 
 4. 如果指定远程计算机，请选择“查找”以建立连接。
 

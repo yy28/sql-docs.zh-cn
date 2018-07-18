@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33012414"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   当前表上不允许**ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 。 换言之，当临时表引用外键关系中的表时（对应于 sys.foreign_keys 中的 *parent_object_id* ），将不允许 CASCADE 选项。 若要解除此限制，请使用应用程序逻辑或 after 触发器，以在主键表中进行删除时保持一致性（对应于 sys.foreign_keys 中的  *referenced_object_id* ）。 如果主键表是临时表而引用表为非临时表，则不存在此类限制。 
 
-    **注意：**此限制仅适用于 SQL Server 2016。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017（从 CTP 2.0 开始）中支持 CASCADE 选项。  
+    **注意：** 此限制仅适用于 SQL Server 2016。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017（从 CTP 2.0 开始）中支持 CASCADE 选项。  
   
 -   在当前表或历史记录表上均不允许使用**INSTEAD OF** 触发器，以避免导致 DML 逻辑失效。 仅在当前表上允许**AFTER** 触发器。 这些触发器在历史记录表上会被阻止，以避免导致 DML 逻辑失效。  
   

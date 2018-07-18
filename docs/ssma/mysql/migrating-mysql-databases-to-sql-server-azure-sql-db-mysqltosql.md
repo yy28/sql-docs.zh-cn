@@ -1,8 +1,6 @@
 ---
-title: 将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档
+title: 将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 |Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,21 +16,22 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6ab959da887abd67ec7f80eae94cb4bfcacd0883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 094e74a3f4d63e46b21d74346b21132b6c616497
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985759"
 ---
-# <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB (MySQLToSql)
-SQL Server 迁移助手 (SSMA) mysql 是一个全面的环境，可帮助你快速将 MySQL 数据库迁移到 SQL Server 或 SQL Azure。 通过使用面向 MySQL 的 SSMA，你可以查看数据库对象和数据、 评估迁移的数据库，迁移到 SQL Server 或 SQL Azure 的数据库对象，然后将数据迁移到 SQL Server 或 SQL Azure。  
+# <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据库迁移到 SQL Server-Azure SQL DB (MySQLToSql)
+SQL Server Migration Assistant (SSMA) for MySQL 是一个全面的环境，可帮助你快速将 MySQL 数据库迁移到 SQL Server 或 SQL Azure。 通过使用 SSMA for MySQL，可以查看数据库对象和数据、 评估要迁移的数据库，迁移到 SQL Server 或 SQL Azure 数据库对象并再将数据迁移到 SQL Server 或 SQL Azure。  
   
-## <a name="recommended-migration-process"></a>建议迁移过程  
-若要成功迁移对象和数据从 MySQL 数据库到 SQL Server 或 SQL Azure，请使用以下过程：  
+## <a name="recommended-migration-process"></a>建议的迁移过程  
+若要成功迁移的对象和数据从 MySQL 数据库到 SQL Server 或 SQL Azure，请使用以下过程：  
   
-1.  [使用 SSMA 项目&#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-ssma-projects-mysqltosql.md)。  
+1.  [处理 SSMA 项目&#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-ssma-projects-mysqltosql.md)。  
   
-    创建项目后，你可以设置项目转换、 迁移和类型映射选项。 有关项目设置的详细信息，请参阅[设置项目选项&#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)。 有关如何自定义数据类型映射的信息，请参阅[映射 MySQL 和 SQL Server 数据类型&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+    创建项目后，可以设置项目转换、 迁移和类型映射选项。 有关项目设置的详细信息，请参阅[设置项目选项&#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)。 有关如何自定义数据类型映射的信息，请参阅[映射 MySQL 和 SQL Server 数据类型&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
 2.  [连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -42,26 +41,26 @@ SQL Server 迁移助手 (SSMA) mysql 是一个全面的环境，可帮助你快�
   
 5.  [连接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
-6.  （可选）[评估 MySQL 数据库以供转换&#40;MySQLToSQL&#41; ](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md)以评估转换的数据库对象，并估计转换时间。  
+6.  （可选）[评估 MySQL 数据库以供转换&#40;MySQLToSQL&#41; ](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md)评估转换数据库对象和估计的转换时间。  
   
-7.  [将 MySQL 数据库转换&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+7.  [转换 MySQL 数据库&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [同步](http://msdn.microsoft.com/en-us/ac993a6d-0283-4823-8793-6b217677dfa3)  
+8.  [同步](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
-9. 可以通过以下方式之一来执行此操作：  
+9. 可以通过以下方式之一执行此操作：  
   
-    -   保存脚本，并在 SQL Server 或 SQL Azure 上运行它。  
+    -   保存脚本和 SQL Server 或 SQL Azure 上运行。  
   
     -   同步数据库对象。  
   
-10. [将 MySQL 数据迁移到 SQL Server 的 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+10. [将 MySQL 数据迁移到 SQL Server-Azure SQL 数据库&#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 11. 如有必要，更新数据库应用程序。  
   
 > [!NOTE]  
-> 您无法迁移 Information_schema 和 MySQL 的架构。  
+> 不能迁移 Information_schema 和 MySQL 架构。  
   
-## <a name="see-also"></a>另请参阅  
-[安装适用于 MySQL SSMA &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
-[入门 MySQL SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
+## <a name="see-also"></a>请参阅  
+[安装 SSMA for MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
+[开始使用 SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   

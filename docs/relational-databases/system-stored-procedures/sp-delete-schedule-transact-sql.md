@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255941"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +48,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [ **@schedule_id=** ] *schedule_id*  
  要删除的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
-> **注意：**任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
+> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
   
  [  **@schedule_name=** ] *****schedule_name*****  
  要删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
-> **注意：**任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
+> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
   
  [ **@force_delete** = ] *force_delete*  
  指定当计划附加到作业时此过程是否会失败。 *Force_delete*位，默认值为**0**。 当*force_delete*是**0**，如果计划附加到一个作业，存储的过程将失败。 当*force_delete*是**1**，无论是否计划附加到一个作业删除该计划。  

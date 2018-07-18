@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905432"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>公历的约束
 Date 和 datetime 数据类型和尾随字段 interval 数据类型必须符合的公历的约束。 这些约束如下所示：  

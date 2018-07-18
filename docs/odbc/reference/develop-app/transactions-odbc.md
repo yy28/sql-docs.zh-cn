@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916292"
 ---
 # <a name="transactions-odbc"></a>ODBC 事务
 A*事务*是工作的单元，都将作为一个原子操作; 也就是说，此操作成功，要么作为一个整体失败。 例如，考虑将资金从一个银行帐户转移到另一个。 这涉及到两个步骤： 从第一个帐户中取出 money 和存储在第二个。 很重要，这两个步骤都成功;不是可接受的一个步骤，若要成功执行，另一个失败。 支持事务的数据库就能够保证这一点。  
@@ -32,7 +33,7 @@ A*事务*是工作的单元，都将作为一个原子操作; 也就是说，此
   
  若要解决此问题，有各种方案，以隔离来自另一个事务。 *事务隔离*通常由实现锁定的行，它可以阻止从在同一时间使用同一行的多个事务。 有些数据库中锁定行可能还锁定其他行。  
   
- 增加的事务隔离伴随降低*的并发程度，*或两个事务能够在同一时间使用相同的数据。 有关详细信息，请参阅[设置事务的隔离级别](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)。  
+ 增加的事务隔离伴随降低*的并发程度，* 或两个事务能够在同一时间使用相同的数据。 有关详细信息，请参阅[设置事务的隔离级别](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)。  
   
  本部分包含以下主题。  
   

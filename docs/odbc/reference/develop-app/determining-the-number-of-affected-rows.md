@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908992"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>确定受影响的行数
 应用程序更新、 删除或插入行后，它可以调用**SQLRowCount**来确定受影响的行数。 **SQLRowCount**返回此值，指示是否已更新、 删除，或者通过执行插入行**更新**，**删除**，或**插入**语句，通过执行定位更新或删除语句，或通过调用**SQLSetPos**。  

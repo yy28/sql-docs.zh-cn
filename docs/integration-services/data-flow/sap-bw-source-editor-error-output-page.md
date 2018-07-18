@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 366d152c495e92b882d2ff2c929169f8641d5d64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 895449ec61e2136b03e40864fa4bdb29a498abd1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406039"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 源编辑器（“错误输出”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
-3.  在 **“SAP BW 源编辑器”**中单击 **“错误输出”** ，以打开编辑器的 **“错误输出”** 页。  
+3.  在 **“SAP BW 源编辑器”** 中单击 **“错误输出”** ，以打开编辑器的 **“错误输出”** 页。  
   
 ## <a name="options"></a>“常规”  
   

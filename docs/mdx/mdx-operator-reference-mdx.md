@@ -1,6 +1,6 @@
 ---
 title: MDX 运算符参考 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580599"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742476"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 运算符参考 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多维表达式 (MDX) 语言支持算术、逻辑、比较、集、字符串和一元运算符。 下表列出了所支持的运算符及其说明。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907342"
 ---
 # <a name="interval-literal-syntax"></a>间隔文本语法
 以下语法用于 ODBC 中的间隔文本。  

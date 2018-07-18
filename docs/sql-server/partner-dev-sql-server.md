@@ -3,11 +3,6 @@ title: 开发 SQL Server 合作伙伴 | Microsoft Docs
 description: 提供 SQL Server 开发解决方案的第三方合作伙伴列表。
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -17,21 +12,24 @@ ms.date: 17/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 5fe3417539d0d4bf031845804a3863b66d409f5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f85c316502c107a76e0186deb0b242068576c712
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926298"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 开发合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 要支持开发 SQL Server 数据库解决方案，请从各种行业领先工具中进行选择。  本文重点介绍提供 Microsoft SQL Server 开发解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-development-partners"></a>我们的开发合作伙伴
-| Partner | Description | 链接 |
+| Partner | 描述 | 链接 |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>快速 SQL 是一种智能 SQL 集成开发环境，允许数据库开发人员和数据库管理员从一个界面在所有主要数据库平台（包括 SQL Server）上创建高性能 SQL 代码。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. 让开发者社区能够使用合适的工具集灵活选择编程语言、框架和服务。 使用 Click2Cloud 的工具包，开发者可以创建“SQL on Linux”容器，并将其附加到应用程序中，同时还可实现安全的多租户体系结构。 该容器可以独立部署于任何基于云的容器平台上。|[商城][click2cloud_marketplace]<br>[网站][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[视频][click2cloud_youtube] |
+|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. 让开发者社区能够使用合适的工具集灵活选择编程语言、框架和服务。 使用 Click2Cloud 的工具包，开发者可以创建“SQL on Linux”容器，并将其附加到应用程序中，同时还可实现安全的多租户体系结构。 该容器可以独立部署于任何基于云的容器平台上。|[Marketplace][click2cloud_marketplace]<br>[网站][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[视频][click2cloud_youtube] |
 ## <a name="next-steps"></a>后续步骤
 要深入了解一些其他合作伙伴，请参阅[高可用性和灾难恢复合作伙伴][hadr_partners]、[管理合作伙伴][management_partners]以及[监视合作伙伴][monitor_partners]。
 
@@ -53,8 +51,7 @@ ms.lasthandoff: 05/03/2018
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 
 <!--Press links-->
 <!--[idera_press]:-->

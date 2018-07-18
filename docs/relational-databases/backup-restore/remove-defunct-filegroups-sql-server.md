@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920012"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>删除失效文件组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-remove-defunct-filegroups"></a>删除失效的文件组  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
 2.  展开 **“数据库”**，右键单击要从其中删除文件的数据库，再单击 **“属性”**。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 （**注意：**此示例假定文件和文件组已存在。 若要创建这些对象，请参阅 [ALTER DATABASE 和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主题中的示例 B。）第一个示例通过使用具有 `test1dat3` 子句的 `test1dat4` 语句，从失效的文件组中删除 `ALTER DATABASE` 和 `REMOVE FILE` 文件。 第二个示例通过使用 `Test1FG1` 子句，删除失效的文件组 `REMOVE FILEGROUP`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 （**注意：** 此示例假定文件和文件组已存在。 若要创建这些对象，请参阅 [ALTER DATABASE 和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主题中的示例 B。）第一个示例通过使用具有 `test1dat3` 子句的 `test1dat4` 语句，从失效的文件组中删除 `ALTER DATABASE` 和 `REMOVE FILE` 文件。 第二个示例通过使用 `Test1FG1` 子句，删除失效的文件组 `REMOVE FILEGROUP`。  
   
 ```sql  
 USE master;  

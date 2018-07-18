@@ -1,8 +1,6 @@
 ---
 title: 评估 DB2 架构转换 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 03cf4d47e980c481df2353572a1c52d2868e214f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93ca9f22df0bf6e458676bd2de76f10009f67d44
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774393"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>转换 (DB2ToSQL) 评估 DB2 架构
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，迁移将十分复杂和多少时间应确定将需要迁移。 SSMA 可以创建显示百分比将成功转换的对象的评估报表。 SSMA 还允许你查看的特定问题导致转换失败。  
@@ -87,6 +86,6 @@ SSMA 时它会创建此评估报告，将转换到所选的 DB2 数据库对象[
 ## <a name="next-step"></a>下一步  
 [转换 DB2 架构&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

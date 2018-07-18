@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019344"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>更改图表类型（报表生成器和 SSRS）
 首次将图表插入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中时，将显示“选择图表类型”对话框。 如果取消此对话框，则默认情况下会添加柱形图图表类型。  

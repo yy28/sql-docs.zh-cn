@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c749048ddfe4bad75f1bf34d40d806fbe1bb1403
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06d5bffa202a2193ad0ba29dfa06843277687fd1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403419"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   原始文件目标将原始数据写入文件。 因为数据的格式是目标的本机格式，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件目标可以比其他目标（如平面文件和 OLE DB 目标）更快地写入数据。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍 WriteOption 属性的可用选项。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |追加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
 |始终创建|始终创建新文件。|  
@@ -167,16 +166,16 @@ ms.lasthandoff: 05/03/2018
  选择用来创建和写入文件的方法。  
   
  **生成初始原始文件**  
- 单击此按钮可以生成仅包含列的空原始文件（仅元数据文件），而无需运行包。 该文件包含在 **“原始文件目标编辑器”** 的 **“列”**页上选择的列。 可以将原始文件源指向此仅元数据文件。  
+ 单击此按钮可以生成仅包含列的空原始文件（仅元数据文件），而无需运行包。 该文件包含在 **“原始文件目标编辑器”** 的 **“列”** 页上选择的列。 可以将原始文件源指向此仅元数据文件。  
   
- 单击 **“生成初始原始文件”**时，将显示一个消息框。 单击 **“确定”** 可继续创建文件。 单击 **“取消”** 可选择 **“列”** 页上的其他列列表。  
+ 单击 **“生成初始原始文件”** 时，将显示一个消息框。 单击 **“确定”** 可继续创建文件。 单击 **“取消”** 可选择 **“列”** 页上的其他列列表。  
   
 ###  <a name="mapping"></a> 设置“列”选项卡上的选项  
  **可用输入列**  
  选择要写入原始文件的一个或多个输入列。  
   
  **输入列**  
- 当您在 **“可用输入列”**下选择某一输入列时，该输入列将自动添加到此表中，或者，您可以直接在此表中选择该输入列。  
+ 当您在 **“可用输入列”** 下选择某一输入列时，该输入列将自动添加到此表中，或者，您可以直接在此表中选择该输入列。  
   
  **输出别名**  
  指定要用于输出列的备用名称。  
@@ -218,7 +217,7 @@ ms.lasthandoff: 05/03/2018
  选择要写入原始文件的一个或多个输入列。  
   
  **输入列**  
- 当您在 **“可用输入列”**下选择某一输入列时，该输入列将自动添加到此表中，或者，您可以直接在此表中选择该输入列。  
+ 当您在 **“可用输入列”** 下选择某一输入列时，该输入列将自动添加到此表中，或者，您可以直接在此表中选择该输入列。  
   
  **输出别名**  
  指定要用于输出列的备用名称。  

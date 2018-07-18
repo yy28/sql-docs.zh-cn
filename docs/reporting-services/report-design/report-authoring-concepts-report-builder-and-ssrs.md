@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023604"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>报表创作概念（报表生成器和 SSRS）
   本节简要定义报表生成器和报表设计器文档中用来描述分页报表的某些主要概念。 有关具体字词或术语的定义，请参阅[术语（报表生成器）](../../reporting-services/report-builder/glossary-report-builder.md)。  

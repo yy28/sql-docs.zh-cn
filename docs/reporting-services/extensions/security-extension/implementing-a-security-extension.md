@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015574"
 ---
 # <a name="implementing-a-security-extension"></a>实现安全扩展插件
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 身份验证是用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中保护报表安全性的主要系统。 然而，在某些情况下，您可能需要扩展 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全系统以适应企业中的自定义安全性。 为此，可以使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API 提供的开发平台。 本节概述 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的安全扩展插件。  

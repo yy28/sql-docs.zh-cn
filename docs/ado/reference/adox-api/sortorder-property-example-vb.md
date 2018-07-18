@@ -2,7 +2,6 @@
 title: SortOrder 属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22c3955934e7e3030251bbb80165edaa6fee159f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286853"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
 此示例演示[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到[列](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码中的国家/地区列追加升序索引**员工**表，然后显示记录。 然后代码中的国家/地区列追加降序索引**员工**表并再次显示记录。 显示升序和降序索引之间的差异。  
@@ -140,7 +140,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

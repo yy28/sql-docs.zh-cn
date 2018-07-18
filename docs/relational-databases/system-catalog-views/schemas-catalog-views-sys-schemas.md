@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (Transact SQL) |Microsoft 文档
+title: sys.schemas (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33178333"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049944"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>架构目录视图-sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33178333"
 |**principal_id**|**int**|此架构所属的主体数据库的 ID。|  
   
 ## <a name="remarks"></a>Remarks  
- 数据库架构充当命名空间或找不到中的容器的对象，如表、 视图、 过程和函数， **sys.objects**目录视图。  
+ 数据库架构作为命名空间或对象，如表、 视图、 过程和函数，可以在中找到的容器**sys.objects**目录视图。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

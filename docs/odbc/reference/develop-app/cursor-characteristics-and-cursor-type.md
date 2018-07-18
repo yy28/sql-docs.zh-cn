@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912283"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>光标特征和游标类型
 应用程序可以指定而不是指定游标类型 （只进、 静态、 键集驱动的或动态） 游标的特性。 为此，应用程序选择光标的可滚动性 （通过设置 SQL_ATTR_CURSOR_SCROLLABLE 语句属性） 和大小写 （通过设置 SQL_ATTR_CURSOR_SENSITIVITY 语句属性） 在打开将光标放在该语句之前句柄。 然后将驱动程序选择的最有效地提供特征的光标类型请求的应用程序。  

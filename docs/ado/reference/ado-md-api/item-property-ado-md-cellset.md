@@ -2,7 +2,6 @@
 title: 项属性 （ADO MD 单元集） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f22f8195a082ffe1333efe46a270fb1e18057ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64de692b36cd2abda06402e5c0d55c250b9632f5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284076"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 属性 （ADO MD 单元集）
 检索从单元格[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)使用其坐标。  
@@ -48,7 +48,7 @@ Cell = Cellset.Item ( Positions)
   
 -   序号位置  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**项**属性以返回[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)对象内[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。 如果**项**属性找不到对应的单元格*位置*自变量，就会出错。  
   
  **项**属性是其默认属性**单元集**对象。 以下语法窗体是可互换的：  
@@ -58,7 +58,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *位置*参数指定要返回的单元格。 你可以指定单元格的序号位置或每个轴位置。 在指定的每个轴的位置的单元格时，你可以指定位置的数字值或成员的每个位置的名称。  
   
  序号位置是唯一标识一个单元格内的数字**单元集**。 单元格中的编号从概念上讲，**单元集**就像**单元集**已*p*-维数组，其中*p*是的轴数。 单元按行优先的顺序排列。 下面是用于计算的单元格序号的公式：  
@@ -71,6 +71,6 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## <a name="applies-to"></a>适用范围  
  [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [单元格对象 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

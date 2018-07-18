@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030514"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>ConfigurationSetting 方法 - DeleteEncryptionKey
   从报表服务器数据库删除加密密钥。  

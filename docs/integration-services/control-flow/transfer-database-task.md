@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b66f3db5c3c4017cc8022e6f1cc30f24347e803
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21fc39c5ed71826f12d6034d0507d03e61a82ecd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403629"
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
   传输数据库任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两个实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 与只通过复制方式传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的其他任务相比，传输数据库任务既可以复制也可以移动数据库。 此任务还可以用来复制同一个服务器上的数据库。  
@@ -126,7 +125,7 @@ ms.lasthandoff: 05/03/2018
   
  若要使用源数据库文件的名称和位置自动填充此字段，请首先指定 **SourceConnection**、 **SourceDatabaseName**和 **SourceDatabaseFiles** 。  
   
- 若要对目标服务器上的数据库文件进行重命名或为其指定新位置，请使用源数据库信息填充此字段，再单击浏览按钮。 在 **“目标数据库文件”** 对话框中，编辑 **“目标文件”**、 **“目标文件夹”**或 **“网络文件共享”**。  
+ 若要对目标服务器上的数据库文件进行重命名或为其指定新位置，请使用源数据库信息填充此字段，再单击浏览按钮。 在 **“目标数据库文件”** 对话框中，编辑 **“目标文件”**、 **“目标文件夹”** 或 **“网络文件共享”**。  
   
 > [!NOTE]  
 >  如果使用浏览按钮来定位数据库文件，则会使用本地驱动器表示法输入文件位置：例如，c:\\。 您必须将其替换为网络共享表示法（包括计算机名称和共享名称）。 如果使用默认的管理共享，您必须使用 $ 表示法，并且必须具有对该共享位置的管理权限。  
@@ -136,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|覆盖目标服务器数据库。|  
 |**False**|不覆盖目标服务器数据库。|  
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**True**|重新附加源数据库。|  
 |**False**|不重新附加源数据库。|  
@@ -192,7 +191,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="destination-database-files"></a>目标数据库文件
   可以使用 **“目标数据库文件”** 对话框查看或更改目标服务器上的数据库文件的名称和位置，或为传输数据库任务指定网络文件位置。  
   
- 若要使用源服务器上数据库文件的名称和位置自动填充此对话框，请首先在 **“传输数据库任务编辑器”**对话框的 **“数据库”**页中指定 **SourceConnection** 、 **SourceDatabaseName** 和 **SourceDatabaseFiles** 。  
+ 若要使用源服务器上数据库文件的名称和位置自动填充此对话框，请首先在 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页中指定 **SourceConnection** 、 **SourceDatabaseName** 和 **SourceDatabaseFiles** 。  
   
 ### <a name="options"></a>“常规”  
  **目标文件**  

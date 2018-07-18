@@ -2,10 +2,10 @@
 title: 表和索引 |Microsoft 文档
 description: 创建、 更改和摔表和索引使用的 SQL Server OLE DB 驱动程序
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -23,14 +23,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1bd6c32f7a0eaa0937c937abac3f135fd19f143c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 962efa70c583bdb9aa9537826800c1c166350dc4
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689340"
 ---
 # <a name="tables-and-indexes"></a>表和索引
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序公开**IIndexDefinition**和**ITableDefinition**接口，允许使用者能够创建、 更改和删除[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表和索引。 表和索引定义是否有效取决于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本。  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|类型：VT_BSTR<br /><br /> R/W：写<br /><br /> 默认值：Null<br /><br /> 说明： 使用此属性仅在**ITableDefinition**。 在创建时使用此属性中指定的字符串[CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 语句时使用。|  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [创建 SQL Server 表](../../oledb/ole-db-tables-indexes/creating-sql-server-tables.md)  
   
@@ -58,9 +61,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [删除 SQL Server 索引](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 编程的 OLE DB 驱动程序](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [DROP TABLE & #40;Transact SQL & #41;](../../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE (Transact-SQL)](../../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX (Transact-SQL)](../../../t-sql/statements/drop-index-transact-sql.md)  
   

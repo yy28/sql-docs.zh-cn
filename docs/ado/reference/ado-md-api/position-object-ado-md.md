@@ -2,7 +2,6 @@
 title: 放置对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44035b2df230ecbbf3ef9bbe757a706e4884e104
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 844997df808dbb1c61939164d72a9b2c601a9823
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284566"
 ---
 # <a name="position-object-ado-md"></a>位置对象 (ADO MD)
 表示一组定义的点沿 x 轴的不同维度的一个或多个成员。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用属性和集合**位置**对象你可以执行以下操作：  
   
 -   使用**序号**属性返回的序号位置**位置**沿[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [轴示例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [轴对象 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [单元格对象 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0632ab16741efa041a518f50656858a507218f65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 948c11c97bc9d155f3890f4d11aac54cd0ae4735
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308166"
 ---
 # <a name="pdo-class"></a>PDO 类
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ PDO 类包含一些方法，允许 PHP 应用程序连接到 [!INCLUDE[ssNoVersi
 PDO {}  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 PDO 类包含以下方法：  
   
 [PDO::__construct](../../connect/php/pdo-construct.md)  
@@ -66,7 +66,7 @@ PDO 类包含以下方法：
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [PDO_SQLSRV 驱动程序参考](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
 [Microsoft Drivers for PHP for SQL Server 的概述](../../connect/php/overview-of-the-php-sql-driver.md)

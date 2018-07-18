@@ -14,12 +14,13 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34028007"
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   提供服务器上当前打开的连接的资源使用情况和活动信息。  
   
- **适用于：**表格模型、 多维模型  
+ **适用于：** 表格模型、 多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_CONNECTIONS**行集包含以下各列。  

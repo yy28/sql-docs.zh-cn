@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3aea23b8a3fcf3632b164846a3addaba7a501e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307220"
 ---
 # <a name="default-sql-server-data-types"></a>默认 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,18 +33,18 @@ ms.lasthandoff: 05/03/2018
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|不支持|  
 |Boolean|bit|bit|  
-|Integer|int|int|  
-|Float|float(24)|不支持|  
+|Integer|ssNoversion|ssNoversion|  
+|float|float(24)|不支持|  
 |字符串（长度小于 8000 个字节）|varchar (<string length>)|varchar (<string length>)|  
 |字符串（长度大于 8000 个字节）|varchar(max)|varchar(max)|  
 |资源|不提供支持。|不提供支持。|  
 |流（编码：不是二进制）|varchar(max)|varchar(max)|  
 |流（编码：二进制）|varbinary|varbinary|  
 |Array|不提供支持。|不提供支持。|  
-|对象|不提供支持。|不提供支持。|  
-|DateTime (1)|datetime|不提供支持。|  
+|Object|不提供支持。|不提供支持。|  
+|DateTime (1)|DATETIME|不提供支持。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [转换数据类型](../../connect/php/converting-data-types.md)

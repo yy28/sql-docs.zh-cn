@@ -1,5 +1,5 @@
 ---
-title: sys.servers (Transact SQL) |Microsoft 文档
+title: sys.servers (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,15 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 17a270028d94974643c1993730e353cea30dd897
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969789"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  包含每个注册，链接或远程服务器的行和具有的本地服务器的行**server_id** = 0。  
+  包含链接服务器或远程服务器注册，每行和本地服务器具有一个行**server_id** = 0。  
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
 |**catalog**|**sysname**|OLEDB 目录连接属性。 如果没有，则为 NULL。|  
 |**connect_timeout**|**int**|以秒为单位的连接超时，0 表示没有超时。|  
 |**query_timeout**|**int**|以秒为单位的查询超时，0 表示没有超时。|  
-|**is_linked**|**bit**|0 = 是通过使用添加的旧式服务器**sp_addserver**，使用不同的 RPC 和分布式事务行为。<br /><br /> 1 = 标准链接服务器。|  
+|**is_linked**|**bit**|0 = 是通过使用添加的旧式服务器**sp_addserver**、 具有不同的 RPC 和分布式事务行为。<br /><br /> 1 = 标准链接服务器。|  
 |**is_remote_login_enabled**|**bit**|设置 RPC 选项来启用该服务器的传入远程登录。|  
 |**is_rpc_out_enabled**|**bit**|启用（从该服务器的）传出 RPC。|  
 |**is_data_access_enabled**|**bit**|为分布式查询启用服务器。|  
@@ -67,22 +68,22 @@ ms.lasthandoff: 05/04/2018
 |**modify_date**|**datetime**|上次更改服务器信息的日期。|  
   
 ## <a name="permissions"></a>权限  
- 中的值**provider_string**始终是 NULL 除非调用方具有 ALTER ANY LINKED SERVER 权限。  
+ 中的值**provider_string**除非调用方拥有 ALTER ANY LINKED SERVER 权限项始终为 NULL。  
   
  不需要权限以查看本地服务器 (**server_id** = 0)。  
   
- 当你创建链接服务器或远程服务器，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建默认登录名映射到**公共**服务器角色。 也就是说在默认情况下，所有登录名都可以查看所有链接服务器和远程服务器。 若要限制对这些服务器的可见性，请删除默认登录映射，通过执行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)并指定为 NULL *locallogin*参数。  
+ 创建链接服务器或远程服务器，当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建默认登录名映射到**公共**服务器角色。 也就是说在默认情况下，所有登录名都可以查看所有链接服务器和远程服务器。 若要将可见性限制为这些服务器，删除默认登录映射通过执行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)并指定为 NULL 来*locallogin*参数。  
   
  如果删除了默认登录映射，则只有已作为链接登录名或远程登录名显式添加的用户才能查看其拥有登录名的链接服务器或远程服务器。 删除默认登录映射之后，查看所有的链接服务器和远程服务器需要以下权限：  
   
 -   ALTER ANY LINKED SERVER 或 ALTER ANY LOGIN ON SERVER  
   
--   中的成员身份**setupadmin**或**sysadmin**固定服务器角色  
+-   中的成员身份**setupadmin**或**sysadmin**固定服务器角色的成员  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [链接的服务器目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

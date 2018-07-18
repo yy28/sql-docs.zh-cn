@@ -2,7 +2,6 @@
 title: Open 方法 （ADO 记录集） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e562f329f6f95a36777fc4db9131091003be37e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9689d9068af961c5935c9447acb07bea4dc38b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280616"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 （ADO 记录集）
 上打开一个游标[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -39,19 +39,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parameters  
  *数据源*  
- 選擇性。 A **Variant**计算结果为有效[命令](../../../ado/reference/ado-api/command-object-ado.md)对象、 SQL 语句、 表名、 存储的过程调用、 URL 或文件的名称或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象，其中包含永久存储[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 可选。 A **Variant**计算结果为有效[命令](../../../ado/reference/ado-api/command-object-ado.md)对象、 SQL 语句、 表名、 存储的过程调用、 URL 或文件的名称或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象，其中包含永久存储[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
  *ActiveConnection*  
- 選擇性。 任一**Variant**计算结果为有效[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量名称，或**字符串**包含[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)参数。  
+ 可选。 任一**Variant**计算结果为有效[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量名称，或**字符串**包含[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)参数。  
   
  *CursorType*  
- 選擇性。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值，该值确定的提供程序打开时应使用的游标类型**记录集**。 默认值是**adOpenForwardOnly**。  
+ 可选。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值，该值确定的提供程序打开时应使用的游标类型**记录集**。 默认值是**adOpenForwardOnly**。  
   
  *LockType*  
- 選擇性。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值确定哪种类型的锁定 （并发） 提供程序应使用打开时**记录集**。 默认值是**adLockReadOnly**。  
+ 可选。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值确定哪种类型的锁定 （并发） 提供程序应使用打开时**记录集**。 默认值是**adLockReadOnly**。  
   
- *Options*  
- 選擇性。 A**长**值，该值指示提供程序应如何评估*源*参数如果以外表示的一些东西**命令**对象，或**记录集**应从以前已保存的文件还原。 可以是一个或多个[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)可以使用按位 OR 运算符组合的值。  
+ *选项*  
+ 可选。 A**长**值，该值指示提供程序应如何评估*源*参数如果以外表示的一些东西**命令**对象，或**记录集**应从以前已保存的文件还原。 可以是一个或多个[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)可以使用按位 OR 运算符组合的值。  
   
 > [!NOTE]
 >  如果你打开**记录集**从**流**包含持久化**记录集**，使用[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 值**adAsyncFetchNonBlocking**不会有影响; 提取将同步和阻塞。  
@@ -59,7 +59,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **ExecuteOpenEnum**值**adExecuteNoRecords**或**adExecuteStream**不应与使用**打开**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ADO 的默认光标**记录集**是位于服务器上的只进、 只读游标。  
   
  使用**打开**方法**记录集**对象打开的游标可用于表示从基础表、 查询或以前保存的结果的记录**记录集**。  
@@ -108,7 +108,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [打开和关闭方法的示例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [打开和关闭方法的示例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [打开和关闭方法的示例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

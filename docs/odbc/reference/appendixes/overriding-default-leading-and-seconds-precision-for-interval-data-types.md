@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907842"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>间隔数据类型中重写默认前导和秒精度
 当 ARD SQL_DESC_TYPE 字段设置为 datetime 或间隔 C 类型，通过调用**SQLBindCol**或**SQLSetDescField**，SQL_DESC_PRECISION 字段 （其中包含间隔 （秒）精度） 设置为以下默认值：  

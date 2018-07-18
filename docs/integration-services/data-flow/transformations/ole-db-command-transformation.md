@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f0f455371c8ce7c5a2f5b7a02b9dc9e5d712f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd5b9c18c1c160688cb42c49677fc440ca1c566e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329531"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
   OLE DB 命令转换对数据流中的每一行运行一条 SQL 语句。 例如，您可以运行 SQL 语句以在数据库表中插入、更新或删除行。  
@@ -63,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”**中将 OLE DB 命令转换拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”** 中将 OLE DB 命令转换拖动到设计图面。  
   
 4.  将连接线（绿色或红色箭头）从数据源或前一个转换拖动到 OLE DB 命令转换，从而将 OLE DB 命令转换连接到数据流。  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
     -   指定列的数据类型，并根据该数据类型指定列的代码页、长度、精度和小数位数。  
   
-    -   若要删除未使用的参数，请选择 **“外部列”**中的参数，再单击 **“删除列”**。  
+    -   若要删除未使用的参数，请选择 **“外部列”** 中的参数，再单击 **“删除列”**。  
   
     -   单击 **“列映射”** ，并将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的参数。  
   

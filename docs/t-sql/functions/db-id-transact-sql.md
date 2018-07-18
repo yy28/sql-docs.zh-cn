@@ -28,16 +28,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb7e49f0ebd4746ccad1a9647ac2f35d61efcdc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239307"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回数据库标识 (ID) 号。
+此函数返回指定数据库的数据库标识 (ID) 号。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,21 +50,21 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>参数  
 'database_name'  
-用于返回对应的数据库 ID 的数据库名称。 database_name 的数据类型为 sysname。 如果省略 database_name，则返回当前数据库 ID。
+将返回其数据库 ID 号 `DB_ID` 的数据库的名称。 如果对 `DB_ID` 的调用省略 database_name，则 `DB_ID` 返回当前数据库的 ID。
   
 ## <a name="return-types"></a>返回类型
 **int**
   
 ## <a name="permissions"></a>权限  
-如果 DB_ID 的调用方并非数据库的所有者，并且数据库不是 master 或 tempdb，则查看对应行所需的最低权限为 ALTER ANY DATABASE 或 VIEW ANY DATABASE 服务器级权限，或者为 master 数据库中的 CREATE DATABASE 权限。 始终可以在 **sys.databases**中查看调用方连接的数据库。
+如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限。 调用方连接的数据库将始终出现在 sys.databases 中。
   
 > [!IMPORTANT]  
->  默认情况下，公共角色具有 VIEW ANY DATABASE 权限，允许所有登录名查看数据库信息。 要阻止登录名检测数据库，请撤销公共 VIEW ANY DATABASE 权限或拒绝单个登录名的 VIEW ANY DATABASE 权限。  
+>  默认情况下，公共角色具有 `VIEW ANY DATABASE` 权限，允许所有登录名查看数据库信息。 若要防止登录名检测数据库，则需 `REVOKE` 公共登录名的 `VIEW ANY DATABASE` 权限或 `DENY` 个人登录名的 `VIEW ANY DATABASE` 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-the-database-id-of-the-current-database"></a>A. 返回当前数据库的数据库 ID  
-以下示例将返回当前数据库的数据库 ID
+此示例返回当前数据库的数据库 ID。
   
 ```sql
 SELECT DB_ID() AS [Database ID];  
@@ -71,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>B. 返回指定数据库的数据库 ID  
-以下示例将返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的数据库 ID。
+此示例返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的数据库 ID。
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -79,7 +80,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 DB_ID 来指定系统函数参数的值  
-以下示例将使用 `DB_ID` 返回系统函数 `sys.dm_db_index_operational_stats` 中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的数据库 ID。 此函数将数据库 ID 作为第一个参数。
+此示例使用 `DB_ID` 返回系统函数 `sys.dm_db_index_operational_stats` 中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的数据库 ID。 此函数将数据库 ID 作为第一个参数。
   
 ```sql
 DECLARE @db_id int;  
@@ -104,14 +105,14 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>D. 返回当前数据库的 ID  
-以下示例将返回当前数据库的数据库 ID
+此示例返回当前数据库的数据库 ID。
   
 ```sql
 SELECT DB_ID();  
 ```  
   
 ### <a name="e-return-the-id-of-a-named-database"></a>E. 返回命名数据库的 ID。  
-以下示例将返回 AdventureWorksDW2012 数据库的数据库 ID。
+此示例返回 AdventureWorksDW2012 数据库的数据库 ID。
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

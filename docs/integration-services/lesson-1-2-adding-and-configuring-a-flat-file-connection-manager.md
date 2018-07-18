@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a114b291767449f4e187c0d3747dac7a77435b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401259"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>第 1-2 课 — 添加和配置平面文件连接管理器
 在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -33,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **列名：** 因为平面文件没有列名，因此平面文件连接管理器将创建默认的列名。 这些默认名称不能用于标识每个列代表的内容。 若要使这些默认名称更有用，需要将默认名称改为要加载平面文件数据的事实数据表匹配的名称。  
   
--   **数据映射：**为平面文件连接管理器指定的数据类型映射，将由所有引用该连接管理器的平面文件数据源组件使用。 可以使用平面文件连接管理器，或者使用“提供列类型建议”对话框来手动映射数据类型。 在本教程中，将查看“提供列类型建议”对话框中建议的映射，然后在“平面文件连接管理器编辑器”对话框中手动设置必要的映射。  
+-   **数据映射：** 为平面文件连接管理器指定的数据类型映射，将由所有引用该连接管理器的平面文件数据源组件使用。 可以使用平面文件连接管理器，或者使用“提供列类型建议”对话框来手动映射数据类型。 在本教程中，将查看“提供列类型建议”对话框中建议的映射，然后在“平面文件连接管理器编辑器”对话框中手动设置必要的映射。  
   
 平面文件连接管理器提供了有关数据文件的区域设置信息。 如果未将计算机配置为使用区域设置选项“英语(美国)”，则必须在“平面文件连接管理器编辑器”对话框中设置其他属性。   
   

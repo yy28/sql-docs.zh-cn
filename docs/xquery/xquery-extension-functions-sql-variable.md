@@ -1,5 +1,5 @@
 ---
-title: 'sql: variable 函数 (XQuery) |Microsoft 文档'
+title: sql:variable() 函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018198"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>XQuery 扩展函数-sql: variable
+# <a name="xquery-extension-functions---sqlvariable"></a>XQuery 扩展函数-sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   显示在 XQuery 表达式中包含 SQL 关系值的变量。  
@@ -41,27 +42,27 @@ ms.lasthandoff: 05/03/2018
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>注释  
- 本主题中所述[绑定关系的数据在 XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)，当你使用时，可以使用此函数[XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)公开内 XQuery 关系的值。  
+## <a name="remarks"></a>Remarks  
+ 本主题中所述[数据 XML 内部绑定关系](../t-sql/xml/binding-relational-data-inside-xml-data.md)，在使用时，可以使用此函数[XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)若要显示在 XQuery 内的关系值。  
   
- 例如， [query （） 方法](../t-sql/xml/query-method-xml-data-type.md)用于指定对 XML 实例中存储查询**xml**数据类型变量或列。 有时，您可能还希望查询使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 变量或参数中的值同时引入关系数据和 XML 数据。 若要执行此操作，请使用**sql: variable**函数。  
+ 例如， [query （） 方法](../t-sql/xml/query-method-xml-data-type.md)用来指定针对 XML 实例中存储的查询**xml**数据类型变量或列。 有时，您可能还希望查询使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 变量或参数中的值同时引入关系数据和 XML 数据。 若要执行此操作，您可以使用**sql: variable**函数。  
   
- SQL 值将映射到相应的 XQuery 值，其类型将是 XQuery 基类型，它等效于相应的 SQL 类型。  
+ SQL 值将映射到相应的 XQuery 值，其类型将为 XQuery 基类型，它等效于相应的 SQL 类型。  
   
- 你只能引用**xml**实例的上下文中的 XML DML 的源表达式 insert 语句; 否则不能引用类型的值中**xml**或公共语言运行时 (CLR)用户定义的类型。  
+ 您只能引用**xml**实例的上下文中的源表达式的 XML DML 插入语句，否则您不能引用的类型的值**xml**或公共语言运行时 (CLR)用户定义的类型。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. 使用 sql:variable() 函数将 Transact-SQL 变量值放到 XML 中  
  以下示例构造由下列值组成的 XML 实例：  
   
--   非 XML 列中的值 (`ProductID`)。 [Sql:column() 函数](../xquery/xquery-extension-functions-sql-column.md)用于 XML 中将此值。  
+-   非 XML 列中的值 (`ProductID`)。 [Sql: column 函数](../xquery/xquery-extension-functions-sql-column.md)用于在 XML 中绑定此值。  
   
 -   另一个表中非 XML 列中的值 (`ListPrice`)。 同样，`sql:column()` 用于在 XML 中绑定此值。  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] 变量中的值 (`DiscountPrice`)。 `sql:variable()` 方法用于将此值绑定到 XML。  
   
--   一个值 (`ProductModelName`) 从**xml**类型列中，为使查询能够更加有趣。  
+-   一个值 (`ProductModelName`) 从**xml**类型列中，为使查询更加有趣。  
   
  以下是查询语句：  
   
@@ -89,7 +90,7 @@ WHERE ProductID=771
   
 -   `query()` 方法中的 XQuery 构造 XML。  
   
--   `namespace`关键字用于定义命名空间前缀的[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)。 执行此操作的原因为 `ProductModelName` 属性值是从 `CatalogDescription xml` 类型列（具有与其关联的架构）中检索的。  
+-   `namespace`关键字用于定义中的命名空间前缀[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)。 执行此操作的原因为 `ProductModelName` 属性值是从 `CatalogDescription xml` 类型列（具有与其关联的架构）中检索的。  
   
  结果如下：  
   
@@ -99,12 +100,12 @@ WHERE ProductID=771
          ListPrice="3399.99" DiscountPrice="2500" />  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server XQuery 扩展函数](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [类型化的 XML 与非类型化的 XML 的比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [创建 XML 数据的实例](../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)   
+ [xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)   
  [XML 数据修改语言 (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

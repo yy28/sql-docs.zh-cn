@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025204"
 ---
 # <a name="using-secure-web-service-methods"></a>使用安全 Web 服务方法
   当您调用某些报表服务器 Web 服务方法时，它们可能要求安全连接。 要求安全连接的方法由 RSReportServer.config 文件中的 SecureConnectionLevel 设置确定。 该设置的值是整数值，大于等于 0 即可。 下表介绍了这些值。  

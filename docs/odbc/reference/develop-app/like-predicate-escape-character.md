@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911862"
 ---
 # <a name="like-predicate-escape-character"></a>如谓词转义字符
 在**如**谓词，百分号 （%） 匹配零个或多个任意字符和下划线 (_) 匹配的任何一个字符。 可匹配使用实际的百分比符号或下划线中**如**谓词，转义符必须出现在之前的百分比符号或下划线。 转义序列，用于定义**如**谓词转义符是：  

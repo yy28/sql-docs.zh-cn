@@ -2,7 +2,6 @@
 title: IsolationLevel 和模式属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2fd00358b9abd333dec26bb93ee70970aec650a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab8d199301be727faa3013100ba17bd340ed4661
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279196"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和模式属性示例 (VB)
 此示例使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)属性以打开独占连接，和[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)以打开执行的事务中的其他事务的隔离。  
@@ -119,7 +119,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel 属性](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 属性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

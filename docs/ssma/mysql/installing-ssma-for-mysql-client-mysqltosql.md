@@ -1,8 +1,6 @@
 ---
 title: SSMA 安装 MySQL 客户端 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a0df85f3b44d7956ed9382213bc380681d47e48b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d349ccf848d62363733a02bf296edaa88bea9e8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776223"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>SSMA 安装 MySQL 客户端 (MySQLToSQL)
 SSMA for MySQL 客户端包含的程序文件的执行以下任务：  
@@ -86,6 +85,6 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Mig
   
 在 64 位 Windows 计算机上的产品中 C:\Microsoft SQL Server Migration Assistant 安装为 MySQL。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

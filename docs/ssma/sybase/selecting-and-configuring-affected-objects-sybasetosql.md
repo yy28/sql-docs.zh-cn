@@ -3,8 +3,6 @@ title: 选择并配置受影响的对象 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d3e5c6c428668ee3b705da29883f1f8769064a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eda0bd642fa3b6c3524b785e8509d31908ae2bef
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779233"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>选择并配置受影响的对象 (SybaseToSQL)
 在此页中，你可以选择表和外键，在其中更改与其进行比较，如果 SSMA 验证上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   规则  
   
--   默认  
+-   ，则“默认”  
   
 -   标识  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sql"></a>Sql  
 SQL 选项卡包含的"创建表"选定的表的 SQL。  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>data  
 数据选项卡显示所选表中显示的数据。  
   
 ## <a name="properties"></a>属性  
@@ -125,7 +124,7 @@ SQL 选项卡包含的"创建表"选定的表的 SQL。
 ## <a name="next-step"></a>下一步  
 [自定义调用顺序&#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [运行测试用例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -1,8 +1,6 @@
 ---
 title: 项目设置 （类型映射） (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 18d49c123b42a41db33fd6eb37f580eba34f786e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0e239c2dfe345ff17b82fa002550e44fb5b09
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778143"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置 （类型映射） (OracleToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Oracle 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 若要指定设置的当前对象或对象的类，使用**类型映射**主 SSMA 窗口选项卡。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 下表显示**类型映射**选项卡上选项：  
   
 **源类型**  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|ssNoversion|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -74,13 +73,13 @@ ms.lasthandoff: 05/03/2018
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|日期|datetime2[0]|  
 |dec|dec[38][0]|  
-|decimal|float [53]|  
+|Decimal|float [53]|  
 |双精度|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|float [53]|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |长时间原始|varbinary(max)|  
 |长时间原始 [\*...8000]<sup>*</sup>|varbinary[*]|  
@@ -93,19 +92,19 @@ ms.lasthandoff: 05/03/2018
 |NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
-|Urowid|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
 |xmltype|xml|  
@@ -130,19 +129,19 @@ ms.lasthandoff: 05/03/2018
 |不同的字符 [*...\*]|varchar[*]|  
 |字符 [*...\*]|char[*]|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|日期|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*...\*]|dec[*][0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
-|decimal|decimal[38][0]|  
+|Decimal|decimal[38][0]|  
 |十进制 [*...\*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |双精度|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float[*..53]|float[*]|  
 |float[54..*]|float [53]|  
-|int|int|  
-|integer|int|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |长时间原始|varbinary(max)|  
 |长时间原始 [*...8000]|varbinary[*]|  
@@ -162,22 +161,22 @@ ms.lasthandoff: 05/03/2018
 |number|float [53]|  
 |数字 [*...\*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |数字 [*...\*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2 [*...\*]|nvarchar[*]|  
 |原始 [*...\*]|varbinary[*]|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
+|TIMESTAMP|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |与本地时区的时间戳 [*...\*]|datetimeoffset[*]|  
 |时区的时间戳|datetimeoffset|  
 |时区的时间戳 [*...\*]|datetimeoffset[*]|  
 |时间戳 [*...\*]|datetime2[*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*...\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*...\*]|UNIQUEIDENTIFIER|  
 |varchar [*...\*]|varchar[*]|  
 |varchar2 [*...\*]|varchar[*]|  
 |Xml 类型|xml|  
@@ -190,7 +189,7 @@ ms.lasthandoff: 05/03/2018
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
@@ -204,19 +203,19 @@ ms.lasthandoff: 05/03/2018
 |character[*..8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|日期|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*...\*]|dec[*][0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
-|decimal|decimal[38][0]|  
+|Decimal|decimal[38][0]|  
 |十进制 [*...\*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |双精度|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float[*..53]|float[*]|  
 |float[54..*]|float [53]|  
-|int|int|  
-|Integer|int|  
+|smallint|ssNoversion|  
+|Integer|ssNoversion|  
 |integer[*..\*]|numeric[*][0]|  
 |Long|varchar(max)|  
 |长时间原始|varbinary(max)|  
@@ -246,29 +245,29 @@ ms.lasthandoff: 05/03/2018
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..4000]|nvarchar[*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |原始 [*...8000]|varbinary[*]|  
 |raw[8001..*]|varbinary(max)|  
 |Real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |string[*..8000]|varchar[*]|  
 |string[8001..*]|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
 |与本地时区的时间戳 [*...\*]|datetimeoffset[*]|  
 |时区的时间戳 [*...\*]|datetimeoffset[*]|  
 |时间戳 [*...\*]|datetime2[*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*...\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*...\*]|UNIQUEIDENTIFIER|  
 |varchar[*..8000]|varchar[*]|  
 |varchar[8001..*]|varchar(max)|  
 |varchar2[*..8000]|varchar[*]|  
 |varchar2[8001..*]|varcha(max)|  
 |Xml 类型|xml|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [用户界面参考&#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

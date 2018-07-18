@@ -2,7 +2,6 @@
 title: ADO MD 对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ae297d189b03af51c73a98e6f273601e805b25c
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: b6e5358d5300c23c95ad2bea03d54f97b48b2578
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "32807130"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283266"
 ---
 # <a name="ado-md-objects"></a>ADO MD 对象
 |||  

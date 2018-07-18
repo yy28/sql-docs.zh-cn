@@ -2,7 +2,6 @@
 title: 提供程序错误 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4f551876f97f04f99bd8f2e722cd9e8a89f264
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272336"
 ---
 # <a name="provider-errors"></a>提供程序错误
 提供程序错误时，则返回-2147467259 运行时错误。 当你收到此错误时，请检查**错误**的活动的集合**连接**对象，将包含描述所发生的一个或多个错误。  

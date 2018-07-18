@@ -2,10 +2,10 @@
 title: 更新 SQL Server 游标中的数据 |Microsoft 文档
 description: 更新 SQL Server 游标中的数据
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 06f02dbd2376ffcdb08f932245bb098ae64c53ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cece02b19e2334246dbddc096cafbeeae705684
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689500"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 游标中的数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   当提取和更新数据通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标，用于使用者应用程序受相同的注意事项和约束应用于任何其他客户端应用程序的 SQL Server 的 OLE DB 驱动程序。  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  使用者不应假定行以任意特定顺序处理。 如果使用者要求按顺序处理基于多个行的数据修改，使用者应在应用程序逻辑中建立该顺序，并打开一个事务以包含该过程。  
   
-## <a name="see-also"></a>另请参阅  
- [更新行集合中的数据](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
+## <a name="see-also"></a>请参阅  
+ [更新行集中的数据](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

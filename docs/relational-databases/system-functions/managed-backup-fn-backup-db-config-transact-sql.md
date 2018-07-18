@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft 文档
+title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978949"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 要求的成员身份**db_backupoperator**具有数据库角色**ALTER ANY CREDENTIAL**权限。 该用户不应被拒绝**VIEW ANY DEFINITION**权限。  
+ 要求的成员身份**db_backupoperator**拥有数据库角色**ALTER ANY CREDENTIAL**权限。 用户应被拒绝**VIEW ANY DEFINITION**权限。  
   
 ## <a name="examples"></a>示例  
  以下示例返回“TestDB”的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置  

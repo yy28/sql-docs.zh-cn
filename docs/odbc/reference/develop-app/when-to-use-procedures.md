@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917372"
 ---
 # <a name="when-to-use-procedures"></a>何时使用过程
 有大量的使用过程的优点，所有基于这一事实使用过程的 SQL 语句将从移动应用程序数据源。 剩下的应用程序中是一个可互操作的过程调用。 这些优点包括：  

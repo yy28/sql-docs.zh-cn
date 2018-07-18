@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023544"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>设置数字和日期的格式（报表生成器和 SSRS）
   通过从相应数据区域的 **“属性”** 对话框的 **“数字”** 页选择格式，可以在数据区域中设置数字和日期的格式。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   如果是对同一文本框中的数字和字符组合设置格式，请考虑使用占位符，以将数字和其余文本区分开来单独设置格式。 有关详细信息，请参阅 [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。 如果为文本框的 Format 属性指定了无效格式字符串，则该格式字符串会被忽略。 如果为图表或仪表上的 Format 属性指定了无效格式字符串，则指定的格式字符串将被解释为字符串并且不会应用格式设置。  
   
--   如果选择 **“类别”** 下的 **“货币”** 并选中 **“值的显示位置”**，则可以选择 **“千”**、 **“百万”**或 **“十亿”** 使用财务格式显示数字。 例如，如果字段值为 1,789,905,394，且您选择 **“十亿”** 并指定 2 个小数位，则该值在报表中显示为 1.78。  
+-   如果选择 **“类别”** 下的 **“货币”** 并选中 **“值的显示位置”**，则可以选择 **“千”**、 **“百万”** 或 **“十亿”** 使用财务格式显示数字。 例如，如果字段值为 1,789,905,394，且您选择 **“十亿”** 并指定 2 个小数位，则该值在报表中显示为 1.78。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   

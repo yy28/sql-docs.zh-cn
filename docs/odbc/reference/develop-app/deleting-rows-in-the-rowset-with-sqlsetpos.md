@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909338"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>删除与 SQLSetPos 行集中的行
 删除操作的**SQLSetPos**使删除一个或多个选定的行的表的数据源。 若要删除的行**SQLSetPos**，应用程序调用**SQLSetPos**与*操作*设置为 SQL_DELETE 和*RowNumber*设置为要删除的行数。 如果*RowNumber*为 0，则删除在行集中的所有行。  

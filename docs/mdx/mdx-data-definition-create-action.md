@@ -1,42 +1,23 @@
 ---
 title: CREATE ACTION 语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741286"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 数据定义的创建操作
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   创建可以与多维数据集、维度、层次结构或从属对象关联的操作。  
   
@@ -91,14 +72,14 @@ FOR
  *String_Expression*  
  一个有效的字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  客户端应用程序可能会创建和执行不安全的操作，也可能会使用不安全的函数。 若要避免这些情况下，使用**安全选项**属性。 有关详细信息，请参阅“Safety Options 属性”。  
   
 > [!NOTE]  
->  包括此语句是为了向后兼容。 操作的新手[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，也不支持钻取或报表操作，如。  
+>  包括此语句是为了向后兼容。 操作的新手[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，也不支持钻取或报表操作，如。  
   
 ## <a name="action-types"></a>操作类型  
- 下表介绍中的可用操作的不同类型[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ 下表介绍中的可用操作的不同类型[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 |操作类型|Description|  
 |-----------------|-----------------|  
@@ -140,7 +121,7 @@ FOR
  集作用域  
  此操作仅适用于某个集。 该名称， **ActionParameterSet**，已保留供在操作的表达式内部应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

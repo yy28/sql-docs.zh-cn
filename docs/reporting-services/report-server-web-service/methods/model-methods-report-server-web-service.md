@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025394"
 ---
 # <a name="model-methods---report-server-web-service"></a>模型方法 - 报表服务器 Web 服务
   可以使用这些方法来管理模型。  

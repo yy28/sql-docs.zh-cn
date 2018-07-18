@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901052"
 ---
 # <a name="native-error"></a>本机错误
 正生成的桌面数据库驱动程序的本机错误代码。 由 Microsoft Jet 生成负的错误代码。 有关详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。

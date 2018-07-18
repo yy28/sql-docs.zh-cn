@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025354"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>启用报表服务器以允许进行 Power BI 移动访问
 可以通过 Power BI 移动应用来使用移动报表。 要将 Power BI 移动应用连接到 Reporting Services，需要进行一些配置。  

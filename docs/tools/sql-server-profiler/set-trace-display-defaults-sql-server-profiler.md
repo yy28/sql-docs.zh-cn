@@ -18,9 +18,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f67ce7dafe849f82a964140ac1aa25ce220773f
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076344"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>设置跟踪显示默认值 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在 **“字体”** 对话框中，选择 **用于显示跟踪的**“字体” **、**“字形” **和** “大小” [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 。  
   
-4.  单击“确定” **“确定”**应用设置并关闭“字体” **“字体”** 对话框。  
+4.  单击“确定” **“确定”** 应用设置并关闭“字体” **“字体”** 对话框。  
   
 5.  在 **“常规选项”** 对话框中，选中 **“使用区域设置来显示日期和时间值”** 以将 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 配置为在显示跟踪时使用为系统配置的区域设置。  
   

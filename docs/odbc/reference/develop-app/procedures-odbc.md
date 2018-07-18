@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910122"
 ---
 # <a name="procedures-odbc"></a>过程 ODBC
 A*过程*是数据源上存储的可执行对象。 通常，它是一个或更多的已经预编译的 SQL 语句。  

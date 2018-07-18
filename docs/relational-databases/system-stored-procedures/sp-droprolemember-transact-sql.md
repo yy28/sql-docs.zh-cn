@@ -1,5 +1,5 @@
 ---
-title: sp_droprolemember (TRANSACT-SQL) |Microsoft 文档
+title: sp_droprolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9bb4bf48955c2b8c2f3039aa9e8e0f68e097f516
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974167"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,21 +57,21 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] *****角色*****  
+ [  **@rolename =** ] **'***角色*****  
  将从中删除成员的角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
   
- [  **@membername =** ] *****security_account*****  
- 将从角色中删除的安全帐户的名称。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、 另一个数据库角色、 Windows 登录名或 Windows 组。 *security_account*必须存在于当前数据库。  
+ [  **@membername =** ] **'***security_account*****  
+ 将从角色中删除的安全帐户的名称。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、 其他数据库角色、 Windows 登录名或 Windows 组。 *security_account*必须存在于当前数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- sp_droprolemember 从数据库角色中删除通过从 sysmembers 表删除行的成员。 在从角色中删除一个成员后，该成员将失去作为该角色的成员所拥有的任何权限。  
+## <a name="remarks"></a>Remarks  
+ sp_droprolemember sysmembers 表中删除行的数据库角色中删除成员。 在从角色中删除一个成员后，该成员将失去作为该角色的成员所拥有的任何权限。  
   
- 若要从固定的服务器角色中删除用户，使用 sp_dropsrvrolemember。 用户不能删除从公共角色，且不能从任意角色中删除 dbo。  
+ 若要从固定的服务器角色中删除用户，请使用 sp_dropsrvrolemember。 不能从公共角色中删除用户和 dbo 不能从任何角色中删除。  
   
- 使用 sp_helpuser 查看成员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色，并使用 ALTER ROLE，若要向角色添加成员。  
+ 使用 sp_helpuser 若要查看的成员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色，并使用 ALTER ROLE，若要向角色添加成员。  
   
 ## <a name="permissions"></a>权限  
  要求具有角色的 ALTER 权限。  
@@ -89,12 +90,12 @@ EXEC sp_droprolemember 'Sales', 'Jonb';
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_dropsrvrolemember &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpuser &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

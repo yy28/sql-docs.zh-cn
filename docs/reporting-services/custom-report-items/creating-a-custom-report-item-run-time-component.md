@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015994"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>创建自定义报表项运行时组件
   自定义报表项运行时组件作为使用任何符合 CLS 的语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 组件实现，该组件由报表处理器在运行时调用。 可在设计环境下定义此类运行时组件的属性，方法为修改相应自定义报表项的对应设计时组件。  

@@ -1,5 +1,5 @@
 ---
-title: dbo.server_quotas （Azure SQL 数据库） |Microsoft 文档
+title: dbo.server_quotas （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: ''
@@ -26,10 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ada6f943e451e6c468adaed27bfe4618407d2dc7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029665"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,13 +44,13 @@ ms.lasthandoff: 05/04/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|quota_name|**nvarchar**|服务器的配额类型。 类型**Premium_database**相当于数据库与资源预留。|  
+|quota_name|**nvarchar**|服务器的配额类型。 类型**Premium_database**等效于具有资源保留数据库。|  
 |quota_value|**int**|服务器中允许的配额类型数。|  
   
 ## <a name="permissions"></a>权限  
- 此视图可供所有用户角色有权连接到虚拟**master**数据库。  
+ 此视图可供所有用户角色有权连接到虚拟**主**数据库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理高级数据库](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

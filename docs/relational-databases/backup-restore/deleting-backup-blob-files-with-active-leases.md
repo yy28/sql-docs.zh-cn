@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919282"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +34,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="manage-orphaned-blobs"></a>管理孤立的 blob  
  以下步骤说明在备份或还原活动失败后如何进行清除。 可以使用 PowerShell 脚本来执行所有这些步骤。 以下部分包括一个 PowerShell 脚本示例：  
   
-1.  **标识具有租约的 blob：**如果你有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。  还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦标识了 blob，我们建议查看列表，在删除 blob 前验证备份文件的有效性。  
+1.  **标识具有租约的 blob：** 如果你有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。  还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦标识了 blob，我们建议查看列表，在删除 blob 前验证备份文件的有效性。  
   
-2.  **中断租约：**获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](http://go.microsoft.com/fwlink/?LinkID=275664) 。  
+2.  **中断租约：** 获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](http://go.microsoft.com/fwlink/?LinkID=275664) 。  
   
     > [!TIP]  
     >  SQL Server 发出租约 ID 以在还原操作期间建立独占访问。 还原租约 ID 是 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
   
-3.  **删除 Blob：**要删除具有活动租约的 blob，必须首先中断租约。  
+3.  **删除 Blob：** 要删除具有活动租约的 blob，必须首先中断租约。  
   
 ###  <a name="Code_Example"></a> PowerShell 脚本示例  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538887"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>并行数据仓库的 T-SQL 语句
 TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。

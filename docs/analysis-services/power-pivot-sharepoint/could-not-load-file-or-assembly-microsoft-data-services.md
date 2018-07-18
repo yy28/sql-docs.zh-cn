@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026594"
 ---
 # <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>无法加载文件或程序集 Microsoft 数据服务
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  转到 SharePoint 2010 的硬件和软件要求文档[确定硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)。  
   
-2.  在 **“安装必备软件”**中，找到用于与您正在使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
+2.  在 **“安装必备软件”** 中，找到用于与您正在使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
   
 3.  单击该链接并且运行安装该服务的安装程序。  
   

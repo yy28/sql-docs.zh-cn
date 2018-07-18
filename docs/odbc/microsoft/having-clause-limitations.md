@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897912"
 ---
 # <a name="having-clause-limitations"></a>具有子句限制
 HAVING 子句中的搜索条件的最大数目为 40。

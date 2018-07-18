@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - DECRYPTBYPASSPHRASE function
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e01348ab88ef33ab38a9fd9040d5ff0174cb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee0265d9974883cd0d61ac1b8f0514f97d1b3a04
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787748"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  对使用通行短语加密的数据进行解密。  
+此函数可对最初使用密码加密的数据进行解密。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,43 +49,51 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
   
 ## <a name="arguments"></a>参数  
  passphrase  
- 将用于生成解密密钥的通行短语。  
+用于生成解密密钥的密码。  
   
  @passphrase  
- 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含将用来生成解密密钥的通行短语。  
+类型变量
+
++ **char**
++ **nchar**
++ **nvarchar**
+
+或多个
+
++ **varchar**
+
+包含用于生成解密密钥的密码。  
   
- 'ciphertext'  
- 要解密的加密文本。  
+'ciphertext'  
+使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型。  
+ 
+@ciphertext  
+varbinary 类型的变量，包含使用密钥加密的数据。 @ciphertext 变量的最大大小为 8,000 字节。  
   
- @ciphertext  
- 包含密码文本的 varbinary 类型的变量。 最大大小为 8,000 个字节。  
+add_authenticator  
+指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 add_authenticator 具有 1 值。 add_authenticator 具有 int 数据类型。  
   
- add_authenticator  
- 指示是否与明文一起加密验证器。 如果使用了验证器，则为 1。 int。  
+@add_authenticator  
+变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 @add_authenticator 的值为 1。 @add_authenticator 具有 int 数据类型。  
+
+authenticator  
+用作验证器生成基础的数据。 authenticator 具有 sysname 数据类型。  
   
- @add_authenticator  
- 指示是否与明文一起加密验证器。 如果使用了验证器，则为 1。 int。  
-  
- authenticator  
- 这是验证器数据。 sysname。  
-  
- @authenticator  
- 包含用于派生验证器的数据的变量。  
+@authenticator  
+包含用作验证器生成基础的数据的变量。 @authenticator 具有 sysname 数据类型。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>Remarks  
- 执行该函数无需任何权限。  
+`DECRYPTBYPASSPHRASE` 不需要执行权限。 如果 `DECRYPTBYPASSPHRASE` 收到错误的密码或错误的验证器信息，则返回 NULL。  
   
- 如果使用了错误的通行短语或验证器信息，则返回 NULL。  
+`DECRYPTBYPASSPHRASE` 使用密码生成解密密钥。 此解密密钥不会保留。  
   
- 该通行短语用于生成一个解密密钥，该密钥不会持久化。  
-  
- 如果对加密文本进行解密时包括验证器，则必须在解密时提供该验证器。 如果解密时提供的验证器值与使用数据加密的验证器值不匹配，则解密将失败。  
+如果在 ciphertext 加密时包含验证器，`DECRYPTBYPASSPHRASE` 必须接收该解密过程的同一验证器。 如果解密过程中提供的验证器值与最初用于加密数据的验证器值不匹配，则 `DECRYPTBYPASSPHRASE` 操作将失败。  
   
 ## <a name="examples"></a>示例  
- 以下示例对在 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) 中更新的记录进行解密。  
+此示例解密 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) 中更新的记录。  
   
 ```  
 USE AdventureWorks2012;  

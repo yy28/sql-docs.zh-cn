@@ -3,27 +3,24 @@ title: 在两个服务器上创建相同的对称密钥 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2739da6e51a378308287bdd21ea06a9a6b966697
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: add0b4b31326ee291666a652434d6c245f2ef4be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163608"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在两个服务器上创建相同的对称密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>在两台不同的服务器上创建相同的对称密钥  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

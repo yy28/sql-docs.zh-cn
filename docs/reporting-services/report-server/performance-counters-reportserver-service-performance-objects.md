@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027714"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>性能计数器 - ReportServer 服务，性能对象
   该主题描述了作为 **部署的一部分的** ReportServer:Service **和** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 性能对象的性能计数器。  

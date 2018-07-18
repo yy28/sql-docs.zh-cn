@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931203"
 ---
 # <a name="secondary-database-settings"></a>辅助数据库设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/03/2018
  显示用于将事务日志备份文件从主服务器复制到辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的名称。 首次创建此作业时，可以通过在该框中键入内容来更改名称。  
   
  **“计划”**  
- 显示用于将事务日志备份从主服务器复制到辅助服务器的 SQL Server 代理复制作业的当前计划。 通过单击 **“计划...”**可以修改此计划。  
+ 显示用于将事务日志备份从主服务器复制到辅助服务器的 SQL Server 代理复制作业的当前计划。 通过单击 **“计划...”** 可以修改此计划。  
   
  **“计划...”**  
  修改用于将事务日志备份从主服务器复制到辅助服务器的 SQL Server 代理作业的参数。  
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/03/2018
  显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的名称。 首次创建此作业时，可以通过在该框中键入内容来更改名称。  
   
  **“计划”**  
- 显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的当前计划。 通过单击 **“计划...”**可以修改此选项。  
+ 显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的当前计划。 通过单击 **“计划...”** 可以修改此选项。  
   
  **“计划...”**  
  修改与 SQL Server 代理还原作业相关联的参数。  

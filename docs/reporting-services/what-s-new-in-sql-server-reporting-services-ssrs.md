@@ -1,6 +1,6 @@
 ---
 title: Reporting Services (SSRS) 中的新增功能 | Microsoft Docs
-ms.date: 03/16/2018
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -13,11 +13,12 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a279a399575f6272b3cefc22a2a319637de6c7b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25acdc921c925d3882fb8282a3f78a7ed04a757f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550818"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
 有关最新的发行说明，请参阅 [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)。 
 
-有关 Power BI 报表服务器的信息，请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+有关 Power BI 报表服务器的信息，请参阅[什么是 Power BI 报表服务器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
 
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 
@@ -129,7 +130,7 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
 
 **新型分页报表：** 设计美观的新型分页报表，提供适用于图表、仪表、映射和其他数据可视化对象的各种新奇且现代的样式。
   
-**树状图和旭日图：**使用树状图 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 和旭日图 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 增强报表，非常适合显示分层数据。 有关详细信息，请参阅 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
+**树状图和旭日图：** 使用树状图 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 和旭日图 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 增强报表，非常适合显示分层数据。 有关详细信息，请参阅 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
 
 **报表嵌入：** 你现在可以使用 iframe 以及 URL 参数将移动报表和分页报表嵌入其他网页和应用程序中。  
 

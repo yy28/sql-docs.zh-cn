@@ -2,7 +2,6 @@
 title: 集合 (Visual c + + 语法的 ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60bcd8f05c88e20fade932287a429e315f1d8e40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dc0c28d095c96fa94c13118ce6876a99a888dbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276556"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>集合 (Visual c + + 语法的 ADO)
 ## <a name="parameters"></a>Parameters  
@@ -144,7 +144,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item 属性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

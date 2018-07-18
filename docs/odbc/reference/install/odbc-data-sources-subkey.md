@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915462"
 ---
 # <a name="odbc-data-sources-subkey"></a>ODBC 数据源子项
 ODBC 数据源子项下的值列表的数据源。 下表中所示，将为这些值的格式。  

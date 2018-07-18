@@ -1,5 +1,5 @@
 ---
-title: sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft 文档
+title: sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 373d2933d362f565799518bfe1af516ad1943276
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989240"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,20 +39,20 @@ ms.lasthandoff: 05/15/2018
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|配置选项的 ID。|  
 |**名称**|**nvarchar(60)**|配置选项的名称。 有关可能的配置信息，请参阅[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|  
-|**值**|**sqlvariant**|对于主副本的此配置选项设置的值。|  
-|**value_for_secondary**|**sqlvariant**|为辅助副本此配置选项设置的值。|  
-|**elevate_online**|**nvarchar(60)** |数据库范围索引操作的联机选项默认的集 |
-|**elevate_resumable**|nvarchar(60)|数据库范围索引操作的可恢复的选项默认的集| 
+|**value**|**sqlvariant**|对于主副本此配置选项设置的值。|  
+|**value_for_secondary**|**sqlvariant**|设置次要副本的此配置选项的值。|  
+|**elevate_online**|**nvarchar(60)** |数据库范围的联机索引操作的选项的默认集 |
+|**elevate_resumable**|nvarchar(60)|数据库范围的可恢复索引操作的选项的默认集| 
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  要求 **公共** 角色具有成员身份。  
   
-## <a name="remarks"></a>注释  
- 当为的值返回 NULL **value_for_secondary**，这意味着到辅助数据库已设置到主副本。  
+## <a name="remarks"></a>Remarks  
+ 值返回 NULL **value_for_secondary**，这意味着，辅助数据库设置为主要。  
  
  数据库作用域内配置设置随数据库一同转入。 这意味着还原或附加给定数据库时，会保留现有配置设置。
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
   

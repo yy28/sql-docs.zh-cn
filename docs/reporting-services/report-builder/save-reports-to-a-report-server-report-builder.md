@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019374"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>将报表保存到报表服务器（报表生成器）
   在报表生成器中，可以将报表定义保存到报表服务器（也称为发布报表）。 将报表保存到报表服务器时，其他用户可以查看报表。 每次运行已发布的报表时，将检索最新的数据。 若要保存所呈现报表的静态副本，请将该报表导出为另一文件格式并保存它，或使用报表历史记录功能来保存所呈现报表的各个版本。  
@@ -38,9 +39,9 @@ ms.lasthandoff: 05/03/2018
   
 3.  找到要将此报表保存到的报表服务器中的位置。  
   
-4.  在 **“名称”**中，键入报表的名称。  
+4.  在 **“名称”** 中，键入报表的名称。  
   
-5.  在 **“项类型”**中，选择要保存的报表项的类型。 报表的类型为 Reports(*.rdl)。  
+5.  在 **“项类型”** 中，选择要保存的报表项的类型。 报表的类型为 Reports(*.rdl)。  
   
 ### <a name="to-save-a-report-as-a-different-name"></a>将报表另存为不同名称  
   
@@ -48,9 +49,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  浏览到报表服务器位置或要保存报表的文件共享。  
   
-3.  在 **“名称”**中，键入报表的名称。  
+3.  在 **“名称”** 中，键入报表的名称。  
   
-4.  在 **“项类型”**中，选择要保存的报表项的类型。 报表的类型为 Reports(*.rdl)。  
+4.  在 **“项类型”** 中，选择要保存的报表项的类型。 报表的类型为 Reports(*.rdl)。  
   
 ## <a name="see-also"></a>另请参阅  
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

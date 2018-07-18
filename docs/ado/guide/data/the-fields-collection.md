@@ -2,7 +2,6 @@
 title: 字段集合 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb5d538f9c8cf8ae28f1397aac32555da1b33ecc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272866"
 ---
 # <a name="the-fields-collection"></a>字段集合
 **字段**集合是一个 ADO 的内部集合。 集合是一组有序可以作为一个单元引用的项。 有关 ADO 集合的详细信息，请参阅[ADO 对象模型](../../../ado/guide/data/ado-objects-and-collections.md)。  
@@ -117,5 +117,5 @@ objField = objRecordset.Fields(0)
   
  使用情况**字段追加**方法不同之间**记录集**对象和**记录**对象。 有关详细信息**记录**对象，请参阅[记录和流](../../../ado/guide/data/records-and-streams.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [构造分层记录集](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

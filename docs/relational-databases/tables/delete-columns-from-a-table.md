@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33009977"
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-columns-by-using-object-explorer"></a>通过使用对象资源管理器删除列  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在“对象资源管理器”中，找到要从其中删除列的表，然后将其展开以公开列名称。 
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-columns"></a>删除列  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

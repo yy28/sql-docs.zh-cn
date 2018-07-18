@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922462"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +140,7 @@ ms.lasthandoff: 05/03/2018
     |------------|------------|  
     |**名称**|备份集的名称。|  
     |**组件**|已备份的组件：**数据库**、**文件**或 **\<blank>**（用于事务日志）。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”**或 **“事务日志”**。|  
+    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
     |**位置**|备份集在卷中的位置。|  
@@ -155,12 +156,12 @@ ms.lasthandoff: 05/03/2018
   
       单击“验证”以检查执行页还原操作所需的备份文件的完整性。  
   
-4.   若要标识已损坏的页，则在 **“数据库”**框中选择了正确的数据库的情况下，单击“检查数据库页”。 此操作将运行较长时间。  
+4.   若要标识已损坏的页，则在 **“数据库”** 框中选择了正确的数据库的情况下，单击“检查数据库页”。 此操作将运行较长时间。  
   
     > [!WARNING]  
     >  若要还原未损坏的特定页，请单击“添加”  ，然后输入要还原的页的“文件 ID”  和“页 ID”  。  
   
-5.  页网格用于标识要还原的页。 最初，此网格将从 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系统表填充。  若要从该网格添加或删除页，请单击 **“添加”**或“删除”。 有关详细信息，请参阅 [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)在  中还原页。  
+5.  页网格用于标识要还原的页。 最初，此网格将从 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系统表填充。  若要从该网格添加或删除页，请单击 **“添加”** 或“删除”。 有关详细信息，请参阅 [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)在  中还原页。  
   
 6.  **“备份集”** 网格将列出默认还原计划中的备份集。  或者，单击“验证”可验证备份是否可读取以及备份集是否完整而无需还原。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   

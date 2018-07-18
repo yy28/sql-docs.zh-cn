@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2c2aa317f9d4ff810cba13fbb315ce090997583
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b504f924019c20a6203e18974d72e086e65f06c8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273566"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>引用在 Visual Basic 6 应用程序的 ADO 库
 若要将 ADO 库导入一个 Microsoft Visual Basic 6 应用程序，必须在 Visual Basic 项目中设置的引用。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  单击**确定**完成设置引用。  
   
-## <a name="backward-compatibility"></a>向后兼容性  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  安装 ADO 还会将复制早期版本的以下类型的库：  
   
 -   *msado27.tlb*，ADO 2.7 类型库  

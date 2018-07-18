@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34041631"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在设计模式下将示例数据添加到 DirectQuery 模型中
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  单击“表” > “属性”以打开“分区管理”对话框。  
   
-    请注意默认分区是**（直接查询）\<表名 >**。 这是完整数据视图。 不要删除此分区。 部署模型时会使用此分区。  
+    请注意默认分区是 **（直接查询）\<表名 >**。 这是完整数据视图。 不要删除此分区。 部署模型时会使用此分区。  
   
 4.  选择分区，然后单击“复制”。  
 

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0b524e7e9fb24ff0296fc0e70c8bb8a462f3d199
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585499"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>配置和管理 SQL Server 中的机器学习组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 
 这些文章介绍如何在 SQL Server 实例上安装新的 R 包，管理 R 包库和数据库还原后还原包库。
 
-+ [安装和管理 R 包](installing-and-managing-r-packages.md)
++ [SQL Server 中的默认 R 和 Python 包](installing-and-managing-r-packages.md)
 + [安装新的 R 包](install-additional-r-packages-on-sql-server.md)
 + [为使用数据库角色实例启用包管理](r-package-how-to-enable-or-disable.md)
 + [创建本地包存储库使用 miniCRAN](create-a-local-package-repository-using-minicran.md)

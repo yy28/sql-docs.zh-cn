@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902112"
 ---
 # <a name="sqlsetscrolloptions-desktop-database-drivers"></a>SQLSetScrollOptions （桌面数据库驱动程序）
 支持对 SQL_CONCUR_READ_ONLY 的正向和静态游标。  

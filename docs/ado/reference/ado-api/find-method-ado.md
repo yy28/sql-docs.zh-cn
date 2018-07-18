@@ -2,7 +2,6 @@
 title: Find 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278716"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定的搜索、 起始行和与起始行的偏移量的方向。 如果满足条件，则在找到记录; 设置当前行位置否则，该位置设置为的终点 （或起点）**记录集**。  
@@ -42,15 +42,15 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字符串**值，该值包含在搜索中指定要使用的列名称、 比较运算符和值的语句。  
   
  *SkipRows*  
- 可选*。* A**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将开始在当前行。  
+ 可选 *。* A**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将开始在当前行。  
   
  *SearchDirection*  
- 可选*。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定是否应在当前行或搜索方向的下一步可用行上开始的搜索。 结尾处停止时的不成功的搜索**记录集**如果值为**adSearchForward**。 在开始时停止失败搜索**记录集**如果值为**adSearchBackward**。  
+ 可选 *。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定是否应在当前行或搜索方向的下一步可用行上开始的搜索。 结尾处停止时的不成功的搜索**记录集**如果值为**adSearchForward**。 在开始时停止失败搜索**记录集**如果值为**adSearchBackward**。  
   
- *开始*  
- 選擇性。 A **Variant**充当搜索的起始位置的书签。  
+ *启动*  
+ 可选。 A **Variant**充当搜索的起始位置的书签。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以以指定仅包含单个列名称*条件*。 此方法不支持多列搜索。  
   
  中的比较运算符*条件*可能"**>**"（大于）、"**\<**"（小于）、"="（等于）、"> ="（大于或等于）"< ="（小于或等于）、"<>"（不等于），或"like"（模式匹配）。  
@@ -70,7 +70,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查找方法示例 (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [索引属性](../../../ado/reference/ado-api/index-property.md)   
  [优化属性的动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

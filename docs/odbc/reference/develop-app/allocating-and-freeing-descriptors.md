@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908844"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>分配和释放描述符
 描述符隐式或显式分配，如以下各节中所述。  

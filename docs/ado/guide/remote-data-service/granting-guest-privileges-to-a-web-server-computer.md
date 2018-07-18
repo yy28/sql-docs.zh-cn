@@ -2,7 +2,6 @@
 title: 授予 Web 服务器计算机的来宾权限 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffe80c4182d97725a342738b9df3eb0345f9272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 326a68def125fbc9e5f3b3d19ba1a0eb66cb5932
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274036"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>来宾特权授予 Web 服务器计算机
 匿名的 Web 服务器帐户 (IUSR_*ComputerName*) 必须添加到来宾本地 Web 服务器计算机上要使用的组 rds.  
@@ -41,6 +41,6 @@ ms.lasthandoff: 05/03/2018
   
 5.  如果在列表中不显示匿名的 Web 服务器帐户**选择用户或组**对话框框中，键入其名称 (IUSR_*ComputerName*) 到底部空白框中，然后单击**添加**.  
   
-6.  单击 **“确定”**。
+6.  单击“确定” 。
 
 

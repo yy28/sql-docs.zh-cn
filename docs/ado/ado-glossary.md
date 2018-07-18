@@ -2,7 +2,6 @@
 title: ADO 术语表 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6ba068234cbede37eeb97f77da6305ae950b673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c5a423a72b173020a4e711cd2f6d1d2a7ba62fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271596"
 ---
 # <a name="ado-glossary-terms"></a>ADO 术语词汇表
 本主题定义与 ADO 相关的术语。
 
-## <a name="a"></a>指向
+## <a name="a"></a>仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，
  绝对 URL 的完全限定的 URL，指定 Internet 或 intranet 上的资源所在的位置。 另请参阅*URL*和*相对 URL*。
 
  ActiveX 控件通常有一个可见元素在设计时或运行的时的自行注册，进程内 COM 组件。 ActiveX 控件还具有与活动文档容器，如 Microsoft Internet Explorer 进行通信的能力。

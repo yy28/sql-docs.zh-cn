@@ -2,7 +2,6 @@
 title: 轴示例 (VBScript) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8770018201fb8cc76d39c58300ed1e51958e507f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99bc75cb81454fac66dbc99ed7968c5f693d2f13
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283396"
 ---
 # <a name="axis-example-vbscript"></a>轴示例 (VBScript)
 此 Active Server Page 显示 MDX 查询字符串中的 OLAP 数据，并将生成的单元集写入一个 HTML 表结构。  

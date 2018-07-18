@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -23,11 +22,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09fa4bbe567677cbabe237d25790369d31ab7ec2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e333e2323729c3c699f1e4705e55f3d31f12036
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356139"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定项目类型（复制 Transact-SQL 编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **logbased manualboth** - 基于日志的水平和垂直筛选项目，其中用于水平筛选的存储过程和定义垂直筛选项目的视图均由用户创建和定义，并将分别指定给 **@filter** 和 **@sync_object**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
-     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  对于 **logbased manualboth** 和 **logbased manualfilter** 项目，请执行 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 生成用于水平筛选项目的筛选存储过程。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **indexed view logbased manualboth** - 基于日志的筛选索引视图项目，其中用于水平筛选的存储过程和定义垂直筛选项目的视图均由用户创建和定义，并会分别指定给 **@filter** 和 **@sync_object**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
-     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  对于 **logbased manualboth** 和 **logbased manualfilter** 项目，请执行 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 生成用于水平筛选项目的筛选存储过程。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **func schema only** - 仅限架构的用户定义函数项目。  
   
-     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ### <a name="to-publish-a-table-or-view-article-in-a-merge-publication"></a>在合并发布中发布表或视图项目  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **view schema only** - 仅限架构的视图项目。  
   
-     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ### <a name="to-publish-a-stored-procedure-or-user-defined-function-article-in-a-merge-publication"></a>在合并发布中发布存储过程或用户定义函数项目  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **proc schema only** - 仅限架构的存储过程项目。  
   
-     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

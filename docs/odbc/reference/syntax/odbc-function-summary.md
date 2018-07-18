@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921842"
 ---
 # <a name="odbc-function-summary"></a>ODBC 函数摘要
 下表列出 ODBC 函数，按类型的任务，分组，并包含所指定的一致性和每个函数的用途的简要概述。 有关一致性指定内容的详细信息，请参阅[ODBC 和标准 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)。 有关语法和语义为每个函数的详细信息，请参阅[ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。  

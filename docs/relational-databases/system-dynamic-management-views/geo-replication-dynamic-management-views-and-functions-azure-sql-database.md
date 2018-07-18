@@ -1,5 +1,5 @@
 ---
-title: 地域复制动态管理视图和函数 (Azure SQL Database) |Microsoft 文档
+title: 异地复制动态管理视图和函数 （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql
@@ -23,15 +23,16 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 76e405d57c5cc47b15af7a8943c506b04c09c19c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981659"
 ---
-# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>地域复制动态管理视图和函数 (Azure SQL Database)
+# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>异地复制动态管理视图和函数 （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本部分包含下列目录视图显示有关地域复制的信息。  
+  本部分包含以下目录视图显示有关异地复制的信息。  
   
 |||  
 |-|-|  

@@ -1,30 +1,29 @@
 ---
-title: 增强的日期和时间类型 （OLE DB 和 ODBC） 进行大容量复制更改 |Microsoft 文档
+title: 增强的日期和时间类型 （OLE DB 和 ODBC） 进行大容量复制更改 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de93dee05a09da895073a12a30d36d8d26e5d764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac3a37b26f077feed5f8a72c17afa887717b4ae7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431326"
 ---
-# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增强的日期和时间类型 （OLE DB 和 ODBC） 的大容量复制更改
+# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>大容量复制更改的增强的日期和时间类型 （OLE DB 和 ODBC）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -33,11 +32,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="format-files"></a>格式化文件  
  在以交互方式生成格式化文件时，下表描述用于指定日期/时间类型和相应的宿主文件数据类型名称的输入。  
   
-|文件存储类型|宿主文件数据类型|对提示符的响应:"输入文件存储类型的字段 < 字段名 > [\<默认 >]:"|  
+|文件存储类型|宿主文件数据类型|响应提示:"输入字段 < 字段名 > 的文件存储类型 [\<默认值 >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|日期时间|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日期|SQLDATE|de|  
+|date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -68,17 +67,17 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="character-data-files"></a>字符数据文件  
- 在字符数据文件中，日期和时间值表示的"数据格式:: 字符串和文本"部分中所述[ODBC 日期和时间的改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)适用于 ODBC 或[数据类型支持OLE DB 日期和时间改进](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)用于 OLE DB。  
+ 在字符数据文件中，日期和时间值表示的"数据格式： 字符串和文字"部分中所述[ODBC 日期和时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)适用于 ODBC 或[数据类型支持OLE DB 日期和时间改进的](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)用于 OLE DB。  
   
- 在本机数据文件为四种新类型的日期和时间值表示为对应 TDS 的表示形式是小数位数为 7 (因为这是支持的最大[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 bcp 数据文件不存储这些列的小数位数)。 不没有到现有的存储的任何更改**datetime**和**smalldatetime**类型或其表格数据流式处理 (TDS) 表示形式。  
+ 在本机数据大小数位数为四种新类型的日期和时间值表示为其 TDS 表示形式，小数的 7 (因为这是支持的最大[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 bcp 数据文件不存储这些列的小数位数)。 到现有的存储没有变化**datetime**并**smalldatetime**类型或其表格数据流 (TDS) 表示形式。  
   
  针对 OLE DB 的不同存储类型的存储大小如下：  
   
 |文件存储类型|存储大小（以字节为单位）|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|日期|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -95,13 +94,13 @@ ms.lasthandoff: 05/03/2018
 |datetimeoffset (do)|11|TDS|  
   
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 中的 BCP 类型  
- 以下类型在 sqlncli.h 中定义，以便用于对 ODBC 的 BCP API 扩展。 这些类型会随同传递*eUserDataType* IBCPSession::BCPColFmt OLE DB 中的参数。  
+ 以下类型在 sqlncli.h 中定义，以便用于对 ODBC 的 BCP API 扩展。 这些类型通过了*eUserDataType* ibcpsession:: Bcpcolfmt OLE DB 中的参数。  
   
-|文件存储类型|宿主文件数据类型|键入用于 IBCPSession::BCPColFmt 中|“值”|  
+|文件存储类型|宿主文件数据类型|键入用于 ibcpsession:: Bcpcolfmt sqlncli.h 中|ReplTest1|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|日期时间|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -109,14 +108,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="bcp-data-type-conversions"></a>BCP 数据类型转换  
  下表提供转换信息。  
   
- **OLE DB 注意**的 IBCPSession 来执行以下转换。 IRowsetFastLoad 使用 OLE DB 转换中定义[转换执行从客户端到服务器](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)。 请注意，日期时间值将舍入为 1 秒的 1/300，smalldatetime 值在执行下述客户端转换后将秒设置为零。 日期时间舍入将传播至小时和分钟，而非日期。  
+ **OLE DB 说明**IBCPSession 通过执行以下转换。 IRowsetFastLoad 使用 OLE DB 转换中定义[转换到服务器从客户端执行](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)。 请注意，日期时间值将舍入为 1 秒的 1/300，smalldatetime 值在执行下述客户端转换后将秒设置为零。 日期时间舍入将传播至小时和分钟，而非日期。  
   
-|若要：<br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|若要：<br /><br /> From|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日期|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|date|@shouldalert|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
-|Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|日期时间|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|Smalldatetime|1,2|1,4,10|@shouldalert|@shouldalert|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|@shouldalert|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  
@@ -129,9 +128,9 @@ ms.lasthandoff: 05/03/2018
 |符号|含义|  
 |------------|-------------|  
 |-|不支持任何转换。<br /><br /> 生成 ODBC 诊断记录，同时还生成 SQLSTATE 07006 和消息“受限制的数据类型属性冲突”。|  
-|1|如果提供的数据无效，则生成 ODBC 诊断记录，同时还生成 SQLSTATE 22007 和消息“日期时间格式无效”。 对于 datetimeoffset 值，在转换为 UTC 后时间部分必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间。 因此，在转换为 UTC 后，客户端必须检查时间部分是否处于支持的范围内。|  
+|@shouldalert|如果提供的数据无效，则生成 ODBC 诊断记录，同时还生成 SQLSTATE 22007 和消息“日期时间格式无效”。 对于 datetimeoffset 值，在转换为 UTC 后时间部分必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间。 因此，在转换为 UTC 后，客户端必须检查时间部分是否处于支持的范围内。|  
 |2|忽略时间部分。|  
-|3|对于 ODBC，如果发生具有数据丢失的截断，将生成一个诊断记录，同时还生成 SQLSTATE 22001 和消息“字符串数据，右端被截断”。秒的小数形式位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 7。 此转换应允许最高 9 位的秒的小数形式位数，这是 ODBC 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **隐式小数位数 0** 8<br /><br /> **隐式缩放 1..7** 10,16<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **隐式小数位数 0:** 19<br /><br /> **隐式缩放 1..7:** 21..27<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **隐式小数位数 0:** 26<br /><br /> **隐式缩放 1..7:** 28..34<br /><br /> 对于 OLE DB，如果发生具有数据丢失的截断，则会发出错误。 对于 datetime2，秒的小数形式位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **隐式小数位数 0** 8<br /><br /> **隐式缩放 1..9** 1..9<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **隐式小数位数 0:** 19<br /><br /> **隐式缩放 1..9:** 21..29<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **隐式小数位数 0:** 26<br /><br /> **隐式缩放 1..9:** 28..36|  
+|3|对于 ODBC，如果发生具有数据丢失的截断，将生成一个诊断记录，同时还生成 SQLSTATE 22001 和消息“字符串数据，右端被截断”。秒的小数形式位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 7。 此转换应允许最高 9 位的秒的小数形式位数，这是 ODBC 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **隐式小数位数 0** 8<br /><br /> **隐式小数位数 1..7** 10,16<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **隐式小数位数 0:** 19<br /><br /> **隐式小数位数 1..7:** 21..27<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **隐式小数位数 0:** 26<br /><br /> **隐式小数位数 1..7:** 28..34<br /><br /> 对于 OLE DB，如果发生具有数据丢失的截断，则会发出错误。 对于 datetime2，秒的小数形式位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **隐式小数位数 0** 8<br /><br /> **隐式小数位数 1..9** 1..9<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **隐式小数位数 0:** 19<br /><br /> **隐式小数位数 1..9:** 21..29<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **隐式小数位数 0:** 26<br /><br /> **隐式小数位数 1..9:** 28..36|  
 |4|忽略日期部分。|  
 |5|时区设置为 UTC（例如 00:00）。|  
 |6|时间设置为零。|  
@@ -143,8 +142,8 @@ ms.lasthandoff: 05/03/2018
 |12|秒设置为零，秒的小数部分被放弃。 可能没有截断错误。|  
 |N/A|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
- [日期和时间改进 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和时间改进&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

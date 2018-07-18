@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904802"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>以编程方式为 Paradox 驱动程序的的设置选项
 |选项|Description|方法|  

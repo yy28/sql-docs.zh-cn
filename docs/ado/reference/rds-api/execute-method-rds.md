@@ -2,7 +2,6 @@
 title: 执行方法 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c050ef685d6e3ef566d78307db2c10c2c01c23e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 488b4056ca768cfae943558aefc9922bd1a16368
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288182"
 ---
 # <a name="execute-method-rds"></a>执行方法 (RDS)
 执行该请求，并使用 ADO 记录集在创建 ADO 2.5 及更高版本。  
@@ -81,7 +81,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  指向返回执行的信息错误的指针。 如果为 NULL，则不返回任何错误的信息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *HandlerString*参数可以为 null。 在这种情况下发生的情况取决于如何配置的 RDS 服务器。 "MSDFMAP.handler"的处理程序字符串指示应使用 Microsoft 提供处理程序 (Msdfmap.dll)。 "MASDFMAP.handler,sample.ini"的处理程序字符串指示应使用 Msdfmap.dll 处理程序和自变量"sample.ini"，应传递到处理程序。 MSDFMAP.dll 将解释为一个方向，若要使用 sample.ini 检查连接和查询字符串参数。  
   
 ## <a name="applies-to"></a>适用范围  

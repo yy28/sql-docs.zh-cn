@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922832"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>将数据库还原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
      有关“用于还原的备份集”网格中的列的信息，请参阅[还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)。  
   
-7.  若要指定数据库文件的新位置，请选择 **“文件”** 页，然后单击 **“将所有文件重新定位到文件夹”**。 为 **“数据文件的文件夹”** 和 **“日志文件的文件夹”**提供一个新位置。 有关该网格的详细信息，请参阅[还原数据库（“文件”页）](../../relational-databases/backup-restore/restore-database-files-page.md)。  
+7.  若要指定数据库文件的新位置，请选择 **“文件”** 页，然后单击 **“将所有文件重新定位到文件夹”**。 为 **“数据文件的文件夹”** 和 **“日志文件的文件夹”** 提供一个新位置。 有关该网格的详细信息，请参阅[还原数据库（“文件”页）](../../relational-databases/backup-restore/restore-database-files-page.md)。  
   
 8.  在 **“选项”** 页上，根据要求调整选项。 有关这些选项的详细信息，请参阅[还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)。  
 
@@ -170,7 +171,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例通过还原 `MyAdvWorks` 示例数据库的备份创建名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的一个新数据库，该数据库包括两个文件： [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log。 此数据库使用简单恢复模式。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库已经存在于服务器实例上，因此备份中的文件必须还原到一个新位置。 RESTORE FILELISTONLY 语句用于确定数据库中要还原的文件数和名称。 该数据库备份是备份设备上的第一个备份集。  
   
-> **注意：**备份和还原事务日志的示例（包括时点还原）使用从 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 创建的 `MyAdvWorks_FullRM` 数据库的方式与下面的 `MyAdvWorks` 示例相同。 但是，必须通过使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对最终生成的 `MyAdvWorks_FullRM` 数据库进行更改，以便使用完整恢复模式：ALTER DATABASE <数据库名称> SET RECOVERY FULL。  
+> **注意：** 备份和还原事务日志的示例（包括时点还原）使用从 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 创建的 `MyAdvWorks_FullRM` 数据库的方式与下面的 `MyAdvWorks` 示例相同。 但是，必须通过使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对最终生成的 `MyAdvWorks_FullRM` 数据库进行更改，以便使用完整恢复模式：ALTER DATABASE <数据库名称> SET RECOVERY FULL。  
   
 ```sql  
 USE master;  

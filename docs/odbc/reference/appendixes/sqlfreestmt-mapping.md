@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906392"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 映射
 在应用程序调用**SQLFreeStmt**与*选项*参数通过 ODBC 3 SQL_DROP *.x*驱动程序，将会调用  

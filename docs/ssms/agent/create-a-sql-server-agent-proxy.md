@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33045054"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开要在 SQL Server 代理上创建代理的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开要在 SQL Server 代理上创建代理的服务器。  
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  在 **“说明”** 框中输入对代理帐户的说明。  
   
-7.  在 **“对以下子系统有效”**之下，为此代理选择适当的子系统。  
+7.  在 **“对以下子系统有效”** 之下，为此代理选择适当的子系统。  
   
 8.  在 **“主体”** 页上，添加或删除登录名或角色，以授予或删除对代理帐户的访问权限。  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

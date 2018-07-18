@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026944"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>缓存共享数据集 (SSRS)
   可以将用于共享数据集的查询结果复制到缓存，以便为多个报表提供一致的数据并且缩短数据集查询的响应时间。 与报表类似，您可以在首次使用时或通过指定一个计划，将共享数据集配置为存入缓存。  

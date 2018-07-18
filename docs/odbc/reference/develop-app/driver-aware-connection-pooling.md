@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912672"
 ---
 # <a name="driver-aware-connection-pooling"></a>识别驱动程序的连接池
 驱动程序感知的连接池是一项新功能的驱动程序管理器在 Windows 8。 驱动程序感知的连接池允许驱动程序编写器可自定义连接池其 ODBC 驱动程序中的行为。  

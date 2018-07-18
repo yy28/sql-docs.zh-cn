@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 132690629b3dd9aea99b460952bd17e449ee7e68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa529b30c25b4a21edd8d34a74c7fdfb5f8bdd64
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409569"
 ---
 # <a name="xml-source"></a>XML 源
   XML 源读取 XML 数据文件，并用数据填充源输出中的列。  
@@ -62,13 +61,13 @@ ms.lasthandoff: 05/03/2018
   
  如果 XML 数据文件包含 XSD 中没有的元素，则这些元素将被忽略，并且不会为其生成输出。 另一方面，如果 XML 数据文件缺少 XSD 中存在的元素，则输出将包含空值列。  
   
- 从 XML 数据文件提取数据后，数据将转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 不过，XML 源不能将 XML 数据转换为 DT_TIME2 或 DT_DBTIMESTAMP2 数据类型，这是因为源不支持这些数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 从 XML 数据文件提取数据后，数据将转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 不过，XML 源不能将 XML 数据转换为 DT_TIME2 或 DT_DBTIMESTAMP2 数据类型，这是因为源不支持这些数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  XSD 或内联架构可能为元素指定了数据类型，但如果未指定，则“XML 源编辑器”  对话框将为输出中包含该元素的列指定 Unicode 字符串数据类型 (DT_WSTR)，并将列长度设置为 255 个字符。  
   
  如果该架构指定了元素的最大长度，则输出列的长度将设置为此值。 如果最大长度大于将元素转换为的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型所支持的长度，则数据将被截断为该数据类型的最大长度。 例如，如果一个字符串的长度为 5000，则该字符串将因为 DT_WSTR 数据类型的最大长度而截断为 4000 字符；类似地，字节数据将截断为 DT_BYTES 数据类型的最大长度 8000 字符。 如果架构未指定最大长度，则具有任何一种数据类型的列的默认长度都设置为 255。 对 XML 源中的数据截断的处理方式与其他数据流组件中截断的处理方式相同。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
- 您可以修改数据类型和列长度。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 您可以修改数据类型和列长度。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="configuration-of-the-xml-source"></a>XML 源的配置  
  XML 源支持三种不同的数据访问模式。 您可以指定 XML 数据文件的文件位置、包含文件位置的变量或包含 XML 数据的变量。  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
 |来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：** [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

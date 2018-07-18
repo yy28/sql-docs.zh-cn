@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025984"
 ---
 # <a name="report-builder-functions---union-function"></a>报表生成器函数 - Union 函数
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的联合。  

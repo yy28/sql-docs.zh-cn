@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (Transact SQL) |Microsoft 文档
+title: sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046135"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -74,8 +75,8 @@ ms.lasthandoff: 05/23/2018
 |lob_read_ahead_count|**bigint**|迄今为止的 LOB 预读数。|  
 |segment_read_count|**int**|迄今为止的段预读数。|  
 |segment_skip_count|**int**|迄今为止跳过的段数。| 
-|actual_read_row_count|**bigint**|应用残留谓词之前读取运算符的行数。| 
-|estimated_read_row_count|**bigint**|**适用于：** 开头[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估计残留谓词应用之前，操作员要读取的行数。|  
+|actual_read_row_count|**bigint**|运算符应用驻留谓词之前读取的行数。| 
+|estimated_read_row_count|**bigint**|**适用于：** 开头[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估计剩余谓词应用之前，操作员要读取的行数。|  
   
 ## <a name="general-remarks"></a>一般备注  
  如果查询计划节点没有任何 IO，则所有与 IO 相关的计数器均设置为 NULL。  
@@ -86,12 +87,12 @@ ms.lasthandoff: 05/23/2018
   
 -   如果存在并行扫描，则此 DMV 将报告处理扫描的每个并行线程的计数器。
  
- 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，分析基础结构的标准查询执行统计信息存在并排显示具有分析基础结构轻量的查询执行统计信息。 新查询执行统计信息分析基础结构极大地减少了收集每个运算符查询执行统计信息，如的实际行数的性能开销。 可以使用全局启用此功能启动[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，或使用 query_thread_profile 扩展的事件时自动打开。
+ 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，标准查询执行统计信息分析基础结构存在同时使用轻量查询执行统计信息分析基础结构。 新查询执行统计信息分析基础结构极大地减少了收集按运算符查询执行统计信息，如实际行数的性能开销。 可以使用全局启用此功能启动[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，或使用 query_thread_profile 扩展的事件时自动打开。
 
 >[!NOTE]
-> 下的轻量的查询执行统计信息分析基础结构以减少对性能的影响不支持 CPU 和经过的时间。
+> 轻型查询执行统计信息分析基础结构以减少对性能的影响下不支持 CPU 和经过的时间。
 
- 设置统计信息 XML ON 和 SET STATISTICS PROFILE ON 始终使用分析基础结构的旧的查询执行统计信息。
+ 设置统计信息 XML ON 和 SET STATISTICS PROFILE ON 始终使用旧查询执行统计信息分析基础结构。
   
 ## <a name="permissions"></a>权限  
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/23/2018
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
    
 ## <a name="examples"></a>示例  
- 步骤 1： 登录到你打算使用 sys.dm_exec_query_profiles 运行将分析所查询的会话。 若要配置分析的查询时，可使用 SET STATISTICS PROFILE 上。 在同一会话中运行你的查询。  
+ 步骤 1： 登录到你打算使用 sys.dm_exec_query_profiles 运行的查询将分析的会话。 若要配置用于探查的查询上使用 SET STATISTICS PROFILE。 在同一会话中运行你的查询。  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -113,7 +114,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 步骤 2： 登录到不同于在其中运行你的查询的会话的第二个会话。  
+ 步骤 2： 登录到不同于在其中运行查询的会话的第二个会话。  
   
  以下语句总结当前在会话 54 中运行的查询的进度。 为此，它基于每个节点的所有线程计算输出行的总数，然后将其与该节点的输出行的估算数目进行比较。  
   
@@ -129,9 +130,9 @@ GROUP BY node_id,physical_operator_name
 ORDER BY node_id;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

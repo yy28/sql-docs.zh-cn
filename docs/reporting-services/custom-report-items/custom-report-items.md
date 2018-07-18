@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015194"
 ---
 # <a name="custom-report-items"></a>自定义报表项
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供大量工具，用于生成和发布企业报表，管理安全性和订阅，以及通过全面的 API 扩展报表功能。 报表使用称作报表定义语言 (RDL) 的基于 XML 的语言定义。 RDL 提供一组指令，用于描述报表的布局、查询信息和项类型。 可以通过编写自定义报表项来扩展 RDL。 自定义报表项由运行时组件（由报表处理器在运行时调用）和设计时组件（允许在报表设计器中使用该自定义报表项）构成。  

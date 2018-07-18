@@ -2,7 +2,6 @@
 title: ParentURL 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a7a476352519f4756e4e8f19166aac3c84d7da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4a0217d4f2e79dc5876af9518a06d73d2ac924d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280652"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 属性 (ADO)
 指示指向父级的绝对 URL 字符串[记录](../../../ado/reference/ado-api/record-object-ado.md)的当前**记录**对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>返回值  
  返回**字符串**值，该值指示的父 URL**记录**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ParentURL**属性取决于用来打开源**记录**对象。 例如，**记录**可以与源包含引用的目录的相对路径名打开[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性。  
   
  假设一个文件夹包含在"first"之下的"第二个"。 打开**记录**对象通过使用以下语法：  

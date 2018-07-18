@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 411ac9180290955a22164ad5922b6d04e649f79c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eefc9d628921bee8b8a8f28f5310775739b0a61a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411329"
 ---
 # <a name="--conditional-ssis-expression"></a>? :（条件）（SSIS 表达式）
   根据布尔表达式的计算结果，返回两个表达式之一。 如果布尔表达式的计算结果为 TRUE，则计算第一个表达式，结果为该表达式的结果。 如果布尔表达式的计算结果为 FALSE，则计算第二个表达式，结果为该表达式的结果。  

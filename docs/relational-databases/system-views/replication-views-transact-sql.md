@@ -1,5 +1,5 @@
 ---
-title: 复制视图 (Transact SQL) |Microsoft 文档
+title: 复制视图 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,15 +31,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9215cc303d4a6541e958a86dbdd352802bd64bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030875"
 ---
 # <a name="replication-views-transact-sql"></a>复制视图 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  这些视图包含中的复制将使用的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 视图启用中的数据容易访问[复制系统表](../../relational-databases/system-tables/replication-tables-transact-sql.md)。 将某个用户数据库启用为发布数据库或订阅数据库时，便会在该数据库中创建视图。 从复制拓扑中删除用户数据库时，便会删除该数据库中的所有复制对象。 用于访问复制元数据的首选的方法是通过使用[复制存储过程](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。  
+  这些视图包含中的复制所用的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些视图可以更轻松地访问中的数据[复制系统表](../../relational-databases/system-tables/replication-tables-transact-sql.md)。 将某个用户数据库启用为发布数据库或订阅数据库时，便会在该数据库中创建视图。 从复制拓扑中删除用户数据库时，便会删除该数据库中的所有复制对象。 访问复制元数据的首选的方法是通过使用[复制存储过程](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  任何用户都不应直接更改系统视图。  
@@ -51,33 +52,33 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|[MSdatatype_mappings &#40;Transact SQL&#41;](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)|[sysdatatypemappings &#40;Transact SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)|  
+|[MSdatatype_mappings &#40;Transact SQL&#41;](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)|[sysdatatypemappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)|  
   
 ### <a name="replication-views-in-the-distribution-database"></a>分发数据库中的复制视图  
   
 |||  
 |-|-|  
-|[IHextendedArticleView &#40;Transact SQL&#41;](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles&#40;系统视图&#41; &#40;Transact SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
-|[IHextendedSubscriptionView &#40;Transact SQL&#41;](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[sysextendedarticlesview &#40;Transact SQL&#41;](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
+|[IHextendedArticleView &#40;Transact SQL&#41;](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles&#40;系统视图&#41; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
+|[IHextendedSubscriptionView &#40;Transact SQL&#41;](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[sysextendedarticlesview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
 |[IHsyscolumns &#40;Transact SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications（系统视图）&#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
 |[MSdistribution_status &#40;Transact SQL&#41;](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions（系统视图）&#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
-|[sysarticlecolumns&#40;系统视图&#41; &#40;Transact SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
+|[sysarticlecolumns&#40;系统视图&#41; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-publication-database"></a>发布数据库中的复制视图  
   
 |||  
 |-|-|  
-|[sysmergeextendedarticlesview &#40;Transact SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;Transact SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
+|[sysmergeextendedarticlesview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
+|[systranschemas &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-subscription-database"></a>订阅数据库中的复制视图  
   
 |||  
 |-|-|  
-|[sysmergeextendedarticlesview &#40;Transact SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;Transact SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
+|[sysmergeextendedarticlesview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
+|[systranschemas &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

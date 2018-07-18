@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908742"
 ---
 # <a name="constructing-sql-statements"></a>构造 SQL 语句
 可以在三种方式之一中构造 SQL 语句： 硬编码在开发期间，在运行时构造或直接由用户输入。  

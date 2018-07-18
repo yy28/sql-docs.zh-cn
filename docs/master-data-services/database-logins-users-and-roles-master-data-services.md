@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -23,11 +22,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8c240d0338f9f9063ff51c9bd969c54bd8c61b76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fe91c605f019688bd250af578d9457aee4a96b0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406839"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>数据库登录名、用户和角色 (Master Data Services)
 
@@ -37,21 +37,21 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="logins"></a>登录名  
   
-|登录|Description|  
+|登录|描述|  
 |-----------|-----------------|  
 |**mds_dlp_login**|允许创建 UNSAFE 程序集。 有关详细信息，请参阅 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。<br /><br /> -具有随机生成的密码的禁用的登录名。<br /><br /> - 映射到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的 dbo。<br /><br /> - 对于 msdb，mds_clr_user 映射到此登录名。|  
 |**mds_email_login**|用于通知的启用的登录名。<br /><br /> 对于 msdb 和 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库，mds_email_user 映射到此登录名。|  
   
 ## <a name="msdb-users"></a>msdb 用户  
   
-|用户|Description|  
+|用户|描述|  
 |----------|-----------------|  
 |**mds_clr_user**|未使用。 映射到 mds_dlp_login。|  
 |**mds_email_user**|用于通知。<br /><br /> - 映射到 mds_email_login。<br /><br /> - 是角色 DatabaseMailUserRole 的成员。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 数据库用户  
   
-|用户|Description|  
+|用户|描述|  
 |----------|-----------------|  
 |**mds_email_user**|用于通知。<br /><br /> - 具有针对 mdm 架构的 SELECT 权限。<br /><br /> - 具有针对 mdm.MemberGetCriteria 用户定义的表类型的 EXECUTE 权限。<br /><br /> - 具有针对 mdm.udpNotificationQueueActivate 存储过程的 EXECUTE 权限。|  
 |**mds_schema_user**|拥有 mdm 和 mdq 架构。 默认架构为 mdm。<br /><br /> 不具有映射到它的登录名。|  
@@ -59,13 +59,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="master-data-services-database-role"></a>Master Data Services 数据库角色  
   
-|角色|Description|权限|  
+|角色|描述|权限|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|此角色包含创建 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] Web 应用程序并且为应用程序池指定帐户时在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中指定的帐户。|针对所有架构的 EXECUTE 权限。<br /><br /> <br /><br /> 针对以下表的 ALTER、INSERT 和 SELECT 权限：<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> 针对以下表的 SELECT 权限：<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> 针对以下视图的 SELECT 权限：<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>架构  
   
-|角色|Description|  
+|角色|描述|  
 |----------|-----------------|  
 |**mdm**|包含除了在 mdq 架构中包含的函数之外的所有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库和 Service Broker 对象。|  
 |**mdq**|包含与基于正则表达式或相似性筛选成员结果相关的以及用于设置通知电子邮件格式的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库函数。|  

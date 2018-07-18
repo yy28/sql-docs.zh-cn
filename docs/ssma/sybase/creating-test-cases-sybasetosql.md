@@ -3,8 +3,6 @@ title: 创建测试用例 (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 36155da5abac07730c93096e506553f2cd4b8bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54eda3b9434d52e221c7223e87c1305adc3d125c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778413"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>创建测试用例 (SybaseToSQL)
 使用测试用例向导来创建测试。 此向导允许您通过选择测试和验证对象和指定的测试参数创建测试用例。  
@@ -49,6 +48,6 @@ ms.lasthandoff: 05/03/2018
   
 5.  [完成测试用例准备&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

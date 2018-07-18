@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 587dc6b38daa7a79471e568d7c90dadbbb9adfd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310186"
 ---
 # <a name="using-directional-parameters"></a>使用方向参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 本部分中的主题介绍如何在使用 SQLSRV 驱动程序调用存储过程时使用方向参数。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |---------|---------------|  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |[如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|演示如何使用输出参数调用存储过程，以及如何检索其值。|  
 |[如何：使用 SQLSRV 驱动程序检索输入和输出参数](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|演示如何使用输入/输出参数调用存储过程，以及如何检索其值。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [检索数据](../../connect/php/retrieving-data.md)  
 
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

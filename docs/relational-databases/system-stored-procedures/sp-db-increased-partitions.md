@@ -1,5 +1,5 @@
 ---
-title: sp_db_increased_partitions |Microsoft 文档
+title: sp_db_increased_partitions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970409"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_dp_increased_partitions
  数据库的名称。 *dbname*是**sysname**默认值为 NULL。 如果*dbname*未指定，则使用当前数据库。  
   
  [ @increased_partitions=] '*increased_partitions*  
- 对指定的数据库启用或禁用对 15000 个分区的支持。 *increased_partitions*是**varchar(6)** 默认值为 NULL。 要启用支持，则接受的值是“ON”或“TRUE”；要禁用支持，则接受的值为“OFF”和“FALSE”。 如果*increased_partitions*未指定，则该过程返回 1，表示为指定的数据库启用了支持或 0 来指示支持处于禁用状态。  
+ 对指定的数据库启用或禁用对 15000 个分区的支持。 *increased_partitions*是**varchar(6)** 默认值为 NULL。 要启用支持，则接受的值是“ON”或“TRUE”；要禁用支持，则接受的值为“OFF”和“FALSE”。 如果*increased_partitions*未指定，则该过程返回 1，表示为指定的数据库启用了支持或 0，表示支持禁用。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

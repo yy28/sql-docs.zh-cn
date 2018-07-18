@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028044"
 ---
 # <a name="process-large-reports"></a>处理大型报表
   大型报表将给系统的处理能力带来一定的挑战。若要正确运行大型报表，需要进行特定配置。 除非将大型报表配置为支持分页，否则不应按需运行这些报表。  

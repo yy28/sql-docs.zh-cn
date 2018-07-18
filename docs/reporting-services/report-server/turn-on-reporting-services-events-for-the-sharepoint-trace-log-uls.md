@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028454"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  选择要添加到跟踪日志中的子类别。  
   
-7.  在类别列表的底部，为 **“要报告给跟踪日志的严重程度最低的事件”**选择一个事件级别。 选择 **“无”** 以禁用跟踪。  
+7.  在类别列表的底部，为 **“要报告给跟踪日志的严重程度最低的事件”** 选择一个事件级别。 选择 **“无”** 以禁用跟踪。  
   
 > [!NOTE]  
 >  **不支持选项** “要报告给事件日志的严重程度最低的事件” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 已忽略该选项。  

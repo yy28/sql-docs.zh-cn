@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021364"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 共享数据集发布在报表服务器上，可由多个报表使用。 你可以创建数据集，以便与他人共享。 在共享数据集设计窗口中，你可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  

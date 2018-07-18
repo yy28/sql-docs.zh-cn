@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033264"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>任务和权限 - 项级任务
   项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)。  

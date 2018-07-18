@@ -7,8 +7,7 @@ ms.prod_service: sql-tools
 ms.component: ssms
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,15 +25,18 @@ caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4e0ddf3ca23438a761b330238c9aa7356b8f7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7579eb32749cf41763f37980ddc6dc0b85997c2
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36927028"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
+  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
   
 > [!NOTE]  
 >  若要仅显示标题，请单击此页顶部的“全部折叠”。  

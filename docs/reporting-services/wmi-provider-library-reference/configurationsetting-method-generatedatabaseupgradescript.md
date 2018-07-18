@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031084"
 ---
 # <a name="configurationsetting-method---generatedatabaseupgradescript"></a>ConfigurationSetting 方法 - GenerateDatabaseUpgradeScript
   生成一个可用来将报表服务器数据库升级为 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 架构的脚本。  

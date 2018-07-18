@@ -1,6 +1,6 @@
 ---
 title: KPIGoal (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4d7bfd5c6458e725692a0c0fcd8c7b3d03a1ca29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c6b85136e5fde72635f5691b5172232e7d601a24
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580289"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740252"
 ---
 # <a name="kpigoal-mdx"></a>KPIGoal (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回计算指定关键绩效指标 (KPI) 目标部分的值的成员。  
   

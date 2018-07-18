@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,14 +23,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5257fc78e43295131685d2fbdededa2f71d2b7de
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789690"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 语句 - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,8 +88,6 @@ FROM <backup_device> [ ,...n ]
  指定 RESTORE 完成后自动倒带并卸载磁带。 启动新用户会话时，其默认设置为 UNLOAD。 如果不指定 NOUNLOAD，设置将始终为 UNLOAD。 此选项只用于磁带设备。 如果 RESTORE 使用非磁带设备，则将忽略此选项。  
   
  NOUNLOAD  
- 指定在执行 RESTORE 后不从磁带机中自动卸载磁带。 始终设置为 NOUNLOAD，直到指定 UNLOAD 为止。  
-  
  指定在执行 RESTORE 后不从磁带机中自动卸载磁带。 始终设置为 NOUNLOAD，直到指定 UNLOAD 为止。  
   
 ## <a name="general-remarks"></a>一般备注  

@@ -2,7 +2,6 @@
 title: CommandTypeEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,21 +19,22 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15cf7ce3c4af4d6bb4072dd3070298a846e825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2120e4e593b0465d7f2412b3e938a8aea6cc2674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276916"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定应如何解释命令自变量。  
   
  务必验证用户提供*CommandString*值以避免使应用程序用户有机会注入潜在的危险 ADO 执行的命令。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|未指定的命令类型自变量。|  
-|**adCmdText**|1|计算结果[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)作为文本定义命令或存储的过程的调用。|  
+|**adCmdText**|@shouldalert|计算结果[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)作为文本定义命令或存储的过程的调用。|  
 |**adCmdTable**|2|计算结果**CommandText**为其列都由内部生成的 SQL 查询返回的表名。|  
 |**adCmdStoredProc**|4|计算结果**CommandText**作为存储的过程名称。|  
 |**adCmdUnknown**|8|默认值。 指示中的命令类型**CommandText**属性未知。<br /><br /> ADO 时不知道类型的命令，将经过多次尝试解释**CommandText**。<br /><br /> -   **CommandText**解释为命令或存储过程调用的文本定义。 这是相同的行为**adCmdText**。<br />-   **CommandText**是存储过程的名称。 这是相同的行为**adCmdStoredProc**。<br />-   **CommandText**解释为表的名称。 所有列都由内部生成的 SQL 查询都返回。 这是相同的行为**adCmdTable**。|  

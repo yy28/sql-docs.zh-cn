@@ -2,7 +2,6 @@
 title: 删除方法示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57ac1b7d3b57686b6528064e785680b57b532c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee42e1717c9a142c5da551b89b3c3b8fe79d86d9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277596"
 ---
 # <a name="delete-method-example-vb"></a>删除方法示例 (VB)
 此示例使用[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法来删除从指定的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -132,6 +132,6 @@ End Sub
 'EndDeleteVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Delete 方法 （ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

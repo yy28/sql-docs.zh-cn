@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,11 +28,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42e3ae8b426b7230cf8cfee4be68838792d30318
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82a1ce7e2b416ed0b31b6612d580e95ac7d7500e
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36242109"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  在声明游标后，可使用下列系统存储过程确定游标的特性。  
   
-|系统存储过程|Description|  
+|系统存储过程|描述|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|返回当前在连接上可视的游标列表及其特性。|  
 |**sp_describe_cursor**|说明游标属性，例如是只前推的游标还是滚动游标。|  

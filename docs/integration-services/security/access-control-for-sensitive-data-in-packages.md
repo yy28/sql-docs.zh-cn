@@ -1,14 +1,12 @@
 ---
 title: 对包中敏感数据的访问控制 | Microsoft Docs
-ms.custom: ''
+ms.custom: security
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 329a9cbc48f2576160c53701dc199fb689ad9674
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401489"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
   为了保护 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据，可以设置保护级别，以帮助仅保护包中的敏感数据或包中的所有数据。 另外，可以采用密码或用户密钥对数据加密，或依靠数据库对数据进行加密。 另外，您对包所采用的保护级别不一定是静态的，而是在包的整个生命周期内可能变化。 通常，您可以在包开发阶段设置一个保护级别，在包部署阶段设置另一个保护级别。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="protection-levels"></a>保护级别  
  下表介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的保护级别。 括号中的值是来自 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> 枚举的值。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中处理包时，这些值出现在用来配置包属性的“属性”窗口中。  
   
-|保护级别|Description|  
+|保护级别|描述|  
 |----------------------|-----------------|  
 |不保存敏感数据 (**DontSaveSensitive**)|保存包时不保存包中敏感属性的值。 这种保护级别不进行加密，但它防止标记为敏感的属性随包一起保存，因此其他用户将无法使用这些敏感数据。 如果其他用户打开该包，敏感信息将被替换为空白，用户必须提供这些敏感信息。<br /><br /> 当与 **dtutil** 实用工具 (dtutil.exe) 一起使用时，此保护级别对应的值为 0。|  
 |使用密码加密所有数据 (**EncryptAllWithPassword**)|使用密码加密整个包。 使用用户在创建包或导出包时提供的密码加密包。 用户必须提供包密码，才能在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中打开包，或使用 **dtexec** 命令提示符实用工具运行包。 如果没有密码，用户将无法访问或运行包。<br /><br /> 当与 **dtutil** 实用工具一起使用时，此保护级别对应的值为 3。|  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
  再次键入该密码。  
 
 ## <a name="password_dialog"></a>“包密码”对话框
-  可以使用 **“包密码”** 对话框为使用密码加密的包提供包密码。 如果包使用 **“使用密码加密敏感数据”**或 **“使用密码加密所有数据”** 保护级别，则必须提供密码。  
+  可以使用 **“包密码”** 对话框为使用密码加密的包提供包密码。 如果包使用 **“使用密码加密敏感数据”** 或 **“使用密码加密所有数据”** 保护级别，则必须提供密码。  
   
 ### <a name="options"></a>“常规”  
  **密码**  

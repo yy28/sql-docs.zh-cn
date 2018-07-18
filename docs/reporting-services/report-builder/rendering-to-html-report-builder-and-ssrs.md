@@ -15,17 +15,16 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63f7f18921d856753162a22e8fbf079834105164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce0a1a62d294f510a9521ef38d178157244f1de2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703298"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现分页报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  
-  
- 在浏览器中查看报表时，包括报表在 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Web portal 中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。  
-  
+
  在浏览器中查看报表时，包括报表在 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Web portal 中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。 HTML 呈现扩展插件可以将 HTML 呈现为片段或完整的 HTML 文档。 如果 HTML 为片断形式，则会删除 HTML 文档的 **HEAD**、 **HTML**和 **BODY** 标记。 只有 **BODY** 标记的内容才会呈现。 这在将此 HTML 片段嵌入其他应用程序生成的 HTML 时颇为有用。  
   
  在某些情况下，以 HTML 格式呈现报表时，报表参数可用于发起脚本注入攻击。 有关保护报表的详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  

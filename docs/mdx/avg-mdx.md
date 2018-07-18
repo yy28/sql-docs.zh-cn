@@ -1,34 +1,23 @@
 ---
 title: Avg (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AVG
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Avg function [MDX]
-ms.assetid: efe61272-c3eb-4a33-b231-e00c30be16aa
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dd508fcef5ecd378dea8ec4afe86dfd35e45d1a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740536"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   对集求值，并返回该集中的单元的非空值的平均值，此平均值是对该集中的度量值或指定度量值求得的平均值。  
   
@@ -46,7 +35,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定一组空元组或一个空集，则**Avg**函数将返回空值。  
   
  **Avg**函数将首先计算跨交集中的单元格的值的总和，然后将计算的总和除以交集中的非空单元格的计数来计算指定集的单元格的非空值的平均值。  
@@ -156,7 +145,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -2,7 +2,6 @@
 title: CubeDef 对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31e2bf587c19ab8088b0ab702be60fde54247aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc529ed3ab408d70e6bcc0881a9a62d86029e35e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283596"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
 从包含一组相关的维度的多维架构表示多维数据集。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用集合和属性的**CubeDef**对象，你可以执行以下操作：  
   
 -   标识**CubeDef**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |CreatedOn|日期和时间的多维数据集创建。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CubeDef 示例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [目录对象 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   

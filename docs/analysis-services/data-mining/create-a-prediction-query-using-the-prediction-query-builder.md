@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014684"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/10/2018
   
 -   **结果**  
   
- 利用**“设计”** 模式，您可生成预测查询，方式为选择输入数据，将数据映射到模型中，然后将预测函数添加到使用网格生成的语句中。 设计网格包含以下生成块：  
+ 利用 **“设计”** 模式，您可生成预测查询，方式为选择输入数据，将数据映射到模型中，然后将预测函数添加到使用网格生成的语句中。 设计网格包含以下生成块：  
   
  **数据源**  
  选择新列的源。 您可使用挖掘模型中的列、数据源视图中包含的输入表、预测函数或自定义表达式。  

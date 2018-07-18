@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1131891676cac9f1975fcdfaf804959926c4260
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3749e218dd75d29974d0b84a0be598fc60d4a8f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308636"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*ctor_args*： 自定义类构造函数的参数个数的可选数组。
 ## <a name="return-value"></a>返回值  
 如果成功，则返回带有该类的实例的对象。 属性将映射到列。 如果失败，则返回 false。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="example"></a>示例  
@@ -58,7 +58,7 @@ $*ctor_args*： 自定义类构造函数的参数个数的可选数组。
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

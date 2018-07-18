@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a47b31037882b737992fd42d8b8660459279b06f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 538c80b0656739363796aaaf8cd95e202028192b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334381"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在数据流中添加或删除组件
   数据流组件是数据流中的源、目标和转换。 包中的控制流必须包含数据流任务，然后才能向数据流添加组件。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  单击“控制流”选项卡，然后双击包含要向其添加组件的数据流的数据流任务。  
   
-4.  在工具箱中，展开 **“数据流源”**、 **“数据流转换”**或 **“数据流目标”**，然后将数据流项拖动到 **“数据流”** 选项卡的设计图面。  
+4.  在工具箱中，展开 **“数据流源”**、 **“数据流转换”** 或 **“数据流目标”**，然后将数据流项拖动到 **“数据流”** 选项卡的设计图面。  
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

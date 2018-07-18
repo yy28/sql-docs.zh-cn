@@ -1,8 +1,6 @@
 ---
 title: 要开始使用用于访问 SQL Server Migration Assistant |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 450057d8167423b07a729a4bd05c65e67a533b37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c9195abaee31950fae9d26eb64f01d38ffa0447
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773963"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>开始使用 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 的访问权限允许您快速将转换到的访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 对象上载到生成的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，并将数据迁移到的访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如果有必要，你也可以链接到的访问表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库表，以便你可以继续使用现有访问前端应用程序与[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
@@ -125,7 +124,7 @@ SSMA 包含以下菜单：
   
 |菜单|Description|  
 |--------|---------------|  
-|**文件**|迁移向导，使用项目中，添加和移除 Access 数据库文件，以及连接到包含命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。|  
+|**File**|迁移向导，使用项目中，添加和移除 Access 数据库文件，以及连接到包含命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。|  
 |**编辑**|包含用于查找和处理的详细信息页中，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql_md.md)]从 SQL 详细信息窗格。 若要打开**管理书签**对话框中的，在编辑菜单上单击管理书签。 在对话框中，你将看到现有书签的列表。 可以使用对话框右侧的按钮来管理在书签。|  
 |**“视图”**|包含**同步元数据资源管理器**命令。 这将同步访问元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 元数据资源管理器。 此外包含用于显示和隐藏的命令**输出**和**错误列表**窗格和一个选项**布局**使用两种布局进行管理。|  
 |**工具**|包含命令以创建报表、 导出数据、 将对象和数据迁移，链接表，并提供到全球的访问权限和项目设置对话框。|  

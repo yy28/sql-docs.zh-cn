@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539707"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>数据类型 dwloader-并行数据仓库的转换的规则
 本主题介绍的输入的数据格式和隐式数据类型转换， [dwloader 命令行加载程序](dwloader.md)时它将数据加载到 PDW 支持。 隐式数据转换发生时输入的数据与 SQL Server PDW 目标表中的数据类型不匹配。 在设计你的加载过程以确保你的数据将载入 SQL Server PDW 成功时，请使用此信息。  

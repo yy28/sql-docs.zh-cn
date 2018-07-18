@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,11 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356359"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>设置“partition options”  
  创建项目时，根据订阅服务器共享已筛选表中的数据的方式，指定 **partition options** 属性的值。 可以使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)和 **“项目属性”** 对话框，将该属性设置为四个值中的一个。 可以使用 **“添加筛选器”** 或 **“编辑筛选器”** 对话框（可以通过新建发布向导和 **“发布属性”** 对话框访问），将该属性设置为两个值中的一个。 下表总结了可用的值：  
   
-|Description|“添加筛选器”和“编辑筛选器”中的值|“项目属性”中的值|存储过程中的值|  
+|描述|“添加筛选器”和“编辑筛选器”中的值|“项目属性”中的值|存储过程中的值|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |分区中的数据重叠，并且订阅服务器可以更新参数化筛选器中引用的列。|**此表中的行将转到多个订阅**|**重叠**|**0**|  
 |分区中的数据重叠，而订阅服务器无法更新参数化筛选器中引用的列。|N/A*|**重叠，不允许分区外的数据更改**|**1**|  

@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO (SQLXML 4.0) 执行属的 Updategram |Microsoft 文档
+title: 使用 ADO (SQLXML 4.0) 执行 Updategram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051455"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 执行 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,15 +33,15 @@ ms.lasthandoff: 05/03/2018
   
  在此示例应用程序中：  
   
--   **Conn**对象 (**ADODB。连接**) 建立到正在运行的实例的连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定服务器计算机上。  
+-   **Conn**对象 (**ADODB。连接**) 与正在运行的实例建立连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定服务器计算机上。  
   
 -   **Cmd**对象 (**ADODB.Command**) 建立的连接上执行。  
   
 -   将命令方言设置为 DBGUID_MSSQLXML。  
   
--   Updategram 复制到命令流 (**strmIn**)。  
+-   将 updategram 复制到命令流 (**strmIn**)。  
   
--   命令的输出流设置为**StrmOut**对象 (**ADODB。流式传输**) 接收任何返回的数据。  
+-   该命令的输出流设置为**StrmOut**对象 (**ADODB。Stream**) 以便接收任何返回的数据。  
   
 -   最后，执行该命令 (updategram)。  
   
@@ -187,8 +188,8 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
-## <a name="passing-parameters"></a>传递参数  
- 在以前提供的 Visual Basic 应用程序中，不能传递参数。 在此应用程序， **ContactID**和**MiddleName**作为参数化输入到属的 updategram 传递值。  
+## <a name="passing-parameters"></a>将参数传递  
+ 在以前提供的 Visual Basic 应用程序中，不能传递参数。 在此应用程序**ContactID**并**MiddleName**值作为参数化输入传递到 updategram。  
   
 ```vb  
 Private Sub Form_Load()  

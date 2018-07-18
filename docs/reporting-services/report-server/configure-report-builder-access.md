@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028174"
 ---
 # <a name="configure-report-builder-access"></a>配置报表生成器访问权限
   报表生成器是一个特别报告生成工具，该工具随为本机模式或 SharePoint 集成模式配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器一起安装。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
     4.  在“说明”中，输入角色说明，以使报表管理器中的用户了解该角色的作用。  
   
-    5.  添加下列任务： **“使用报表”**、 **“查看报表”**、 **“查看模型”**、 **“查看资源”**、 **“查看文件夹”**和 **“管理单独的订阅”**。  
+    5.  添加下列任务： **“使用报表”**、 **“查看报表”**、 **“查看模型”**、 **“查看资源”**、 **“查看文件夹”** 和 **“管理单独的订阅”**。  
   
     6.  单击 **“确定”** 保存角色。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899262"
 ---
 # <a name="like-predicate-limitations"></a>如谓词限制
 如果列中的数据的长度超过 255 个字符，如比较将基于仅前 255 个字符。  

@@ -31,11 +31,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dd0160149410a5de96158f1137972fcafdbeba8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4136ea1d123ce96a9a10de1dab8cfe6377bd4231
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695748"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,11 +48,11 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]支持几种类型的检查点：自动、间接、手动和内部。 下表总结了“检查点”的类型：
   
-|“属性”|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|Description|  
+|“属性”|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|描述|  
 |----------|----------------------------------|-----------------|  
 |自动|EXEC sp_configure 'recovery interval','seconds'****|自动在后台发出，以满足 **recovery interval** 服务器配置选项建议的时间上限。 运行自动检查点直到完成。  基于未完成的写操作数和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否检测到写入滞后时间超过 50 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
 |间接|更改数据库… SET TARGET_RECOVERY_TIME =target_recovery_time { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]开始，默认值是 1 分钟。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于针对服务器实例的恢复间隔设置。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)。|  
-|Manual|CHECKPOINT [ *checkpoint_duration* ]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)。|  
+|Manual|CHECKPOINT [*checkpoint_duration*]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)。|  
 |内部|无。|由各种服务器操作（如备份和数据库快照创建）发出，以确保磁盘映像与日志的当前状态匹配。|  
   
 > [!NOTE]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 |>0|不适用。|间接检查点，其目标恢复时间由 TARGET_RECOVERY_TIME 设置确定，以秒为单位。|  
   
 ##  <a name="AutomaticChkpt"></a> 自动检查点  
-每当日志记录数达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 估计在“恢复间隔”服务器配置选项中指定的时间内可以处理的数量时，便会生成一个自动检查点。 
+每当日志记录数达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 估计在“恢复间隔”服务器配置选项中指定的时间内可以处理的数量时，便会生成一个自动检查点。 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。
  
 在没有用户定义的目标恢复时间的每个数据库中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 生成自动检查点。 频率取决于“恢复间隔”高级服务器配置选项，该选项指定给定的服务器实例在系统重新启动期间应用于恢复数据库的最长时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库分发一个检查点。 
  
@@ -96,11 +97,12 @@ ms.lasthandoff: 05/03/2018
 如果您决定增大 **recovery interval** 设置，我们建议一点一点逐渐增大该值并评估每次增大对恢复性能的影响。 这种方法很重要，因为随着 **recovery interval** 设置的增大，数据库恢复需要更长的时间来完成。 例如，如果 **recovery interval** 更改为 10 分钟，那么完成恢复所用时间大约比 **recovery interval** 为 1 分钟时长 10 倍。  
   
 ##  <a name="IndirectChkpt"></a> 间接检查点  
-间接检查点是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的，用于提供自动检查点的可配置数据库级替代方法。 在系统崩溃时，间接检查点与自动检查点相比，恢复时间可能更短更可预测。 间接检查点具有以下优点：  
+间接检查点是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的，用于提供自动检查点的可配置数据库级替代方法。 可通过指定“目标恢复时间”数据库配置选项来配置此检查点。 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。
+在系统崩溃时，间接检查点与自动检查点相比，恢复时间可能更短更可预测。 间接检查点具有以下优点：  
   
 -   为间接检查点配置的数据库上的联机事务工作负荷会导致性能下降。 间接检查点确保损坏页的数量低于特定阙值，以便在目标恢复时间内完成数据库恢复。 
 
-与利用损坏页数量的间接检查点相反，恢复间隔配置选项使用事务数量来确定恢复时间。 当在接收大量 DML 操作的数据库上启用了间接检查点时，后台写入线程可以开始积极刷新磁盘的脏缓冲区，以确保执行恢复所需的时间在数据库所设目标恢复时间范围内。 这可能造成某些系统上出现额外的 I/O 活动，如果磁盘子系统在 I/O 阙值之上或附近运行，则这会导致性能瓶颈。  
+  与利用损坏页数量的“间接检查点”相反，“恢复间隔”配置选项使用事务数量来确定恢复时间。 当在接收大量 DML 操作的数据库上启用了间接检查点时，后台写入线程可以开始积极刷新磁盘的脏缓冲区，以确保执行恢复所需的时间在数据库所设目标恢复时间范围内。 这可能造成某些系统上出现额外的 I/O 活动，如果磁盘子系统在 I/O 阙值之上或附近运行，则这会导致性能瓶颈。  
   
 -   间接检查点使您可以通过控制 REDO 期间随机 I/O 的开销来可靠控制数据库恢复时间。 这使服务器实例不超过给定数据库的恢复时间上限（长时间运行的事务导致过多 UNDO 时间时除外）。  
   

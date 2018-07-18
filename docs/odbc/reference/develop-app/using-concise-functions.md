@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915572"
 ---
 # <a name="using-concise-functions"></a>使用简洁的函数
 某些 ODBC 函数向描述符隐式访问。 应用程序编写器可能会发现它们比调用更方便**SQLSetDescField**或**SQLGetDescField**。 调用这些函数的*简洁*函数因为它们执行的许多功能，包括设置或获取描述符字段。 某些简洁函数允许应用程序设置或检索单个函数调用中的多个相关的描述符字段。  

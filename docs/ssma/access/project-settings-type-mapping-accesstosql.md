@@ -1,8 +1,6 @@
 ---
-title: 项目设置 （类型映射） (AccessToSQL) |Microsoft 文档
+title: 项目设置 （类型映射） (AccessToSQL) |Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,27 +23,28 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 072d8aaf4582237cc60a3e3e6d76b02a86dc27c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985739"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>项目设置 （类型映射） (AccessToSQL)
-类型映射的项目设置，可以设置 SSMA 项目的默认类型映射。 你还可以指定单个数据库对象的类型映射。 有关详细信息，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
+类型映射项目设置，可以设置 SSMA 项目的默认类型映射。 此外可以指定单个数据库对象的类型映射。 有关详细信息，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
   
-类型映射可用于**项目设置**和**默认项目设置**对话框：  
+类型映射现已推出**项目设置**并**默认项目设置**对话框：  
   
--   使用**项目设置**对话框可设置为当前项目的配置选项。 若要访问的类型映射设置，在**工具**菜单上，选择**项目设置**，然后单击**类型映射**的左窗格中。  
+-   使用**项目设置**对话框来设置当前项目的配置选项。 若要访问的类型映射设置，在**工具**菜单中，选择**项目设置**，然后单击**类型映射**的左窗格中。  
   
--   使用**默认项目设置**对话框中设置的所有项目的配置选项。 若要访问的类型映射设置，在**工具**菜单上，选择**默认项目设置**，选择为其设置所需查看 / 更改，不再是迁移项目类型**迁移目标版本**下拉列表中，然后单击**类型映射**的左窗格中。  
+-   使用**默认项目设置**对话框来设置所有项目的配置选项。 若要访问的类型映射设置，在**工具**菜单中，选择**默认项目设置**，选择迁移项目类型设置为其所需查看 / 更改从**迁移目标版本**下拉列表中，然后单击**类型映射**的左窗格中。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **源类型**  
 要映射的访问的数据类型。  
   
 **目标类型**  
-目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或指定的访问的数据类型的 SQL Azure 数据类型。  
+目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 指定访问数据类型的数据类型。  
   
 下表显示源和目标数据类型之间的默认映射。  
   
@@ -58,12 +57,12 @@ ms.lasthandoff: 05/03/2018
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**Guid**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**int**|  
 |**长**|**int**|  
-|**长二进制**|**varbinary(max)**|  
+|**longbinary**|**varbinary(max)**|  
 |**备注**|**nvarchar(max)**|  
-|**备注**-对于 Access 97|**varchar(max)**|  
+|**备注**-适用于 Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  
 |**文本 [\*...\*]** -对于 Access 97|**varchar[\*]**|  
@@ -78,9 +77,9 @@ ms.lasthandoff: 05/03/2018
 单击以从映射列表中删除所选的数据类型映射。  
   
 **重置为默认值**  
-单击以将所有数据类型映射重都置为 SSMA 默认值。  
+单击重置为 SSMA 默认值的所有数据类型映射。  
   
-## <a name="see-also"></a>另请参阅  
-[映射源和目标数据类型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
-[用户界面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>请参阅  
+[映射源和目标数据类型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[用户界面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

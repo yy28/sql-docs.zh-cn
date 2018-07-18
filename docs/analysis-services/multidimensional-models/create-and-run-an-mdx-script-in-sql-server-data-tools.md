@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025294"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建和运行 MDX 脚本
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>创建多维表达式 (MDX) 脚本  
   
-1.  打开要为其创建 MDX 脚本的多维数据集，然后在 **“视图”**下单击 **“计算”**。  
+1.  打开要为其创建 MDX 脚本的多维数据集，然后在 **“视图”** 下单击 **“计算”**。  
   
 2.  如果不在 **“脚本视图”** 模式下，则单击 **“脚本视图”** 图标。  
   

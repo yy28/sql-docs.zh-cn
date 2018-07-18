@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914772"
 ---
 # <a name="transaction-isolation"></a>事务隔离
 *事务隔离*指的是多个并发事务之间交互的程度。 若要查看为何这很重要，你将需要首先看一下可序列化性的想法。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 792774360e368f0cf950cacfd97a8c2d5355e8e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415436"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,11 +61,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="supported-string-literal-formats-for-date"></a>date 支持的字符串文字格式
 以下各表显示了适用于 date 数据类型的有效字符串文字格式。
   
-|数字|Description|  
+|数字|描述|  
 |-------------|-----------------|  
 |mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m、dd 和 [yy]yy 在字符串中表示月、日和年，使用斜线 (/)、连字符 (-) 或句点 (.) 作为分隔符。<br /><br /> 仅支持四位或两位数字表示的年份。 请尽可能使用以四位数字表示的年份。 若要从 0001 到 9999 之间指定一个整数来表示缩略形式的年份，以将两位数的年份解释为四位数的年份，请使用[配置“two digit year cutoff”（两位数年份截止）服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。<br /><br /> **注意！** 对于 Informatica，YYYY 限为 1582 年到 9999 年。<br /><br /> 一个比截止年份的后两位数字小或者与其相等的两位数年份与该截止年份处于同一个世纪。 而一个比截止年份的后两位数字大的两位数年份所处的世纪为该截止年份所处世纪的上一个世纪。 例如，如果“两位数年份截止”为默认值 2049，则两位数年份 49 被解释为 2049 年，而两位数年份 50 被解释为 1950 年。<br /><br /> 默认日期格式由当前语言设置决定。 可以通过使用 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 语句更改日期格式。<br /><br /> ydm 格式不支持 date。|  
   
-|字母|Description|  
+|字母|描述|  
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|mon 表示采用当前语言的完整月份名称或月份缩写。 逗号是可选的，且忽略大小写。<br /><br /> 为避免不确定性，请使用四位数年份。<br /><br /> 如果没有指定日，则默认为当月第一天。|  
   
@@ -73,15 +73,15 @@ ms.lasthandoff: 05/03/2018
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|与 SQL 标准相同。 这是唯一定义为国际标准的格式。|  
   
-|未分隔的|Description|  
+|未分隔的|描述|  
 |-----------------|-----------------|  
 |[yy]yymmdd<br /><br /> yyyy[mm][dd]|可用四位、六位或八位数字来指定 date 数据。 六位或八位字符串始终解释为 ymd。 月和日必须始终是两位数字。 四位字符串被解释为年。|  
   
-|ODBC|Description|  
+|ODBC|描述|  
 |----------|-----------------|  
 |{ d 'yyyy-mm-dd' }|特定于 ODBC API。|  
   
-|W3C XML 格式|Description|  
+|W3C XML 格式|描述|  
 |--------------------|-----------------|  
 |yyyy-mm-ddTZD|专为用于 XML/SOAP 而支持的格式。<br /><br /> TZD 是时区指示符（Z 或 +hh:mm 或 -hh:mm）：<br /><br /> -   hh:mm 表示时区偏移量。 hh 是两位数，范围为 0 到 14，它表示时区偏移量中的小时数。<br />-   MM 是两位数，范围为 0 到 59，它表示时区偏移量中的额外分钟数。<br />-   +（加）或 –（减）是时区偏移量中必须包含的符号。 这两个符号表示用协调世界时 (UTC) 加上或减去时区偏移量以得出本地时间。 时区偏移量的有效范围为 -14:00 到 +14:00。|  
   

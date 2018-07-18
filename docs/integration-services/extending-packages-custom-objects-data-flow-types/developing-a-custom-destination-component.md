@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -27,11 +26,12 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc9254469d7c798540346741edb7427872e2a072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a2d3a6d014e0327d91594e724d0ddc4fe5104c8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332781"
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
   开发人员可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到任意自定义数据源并在其中存储数据的自定义目标组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  

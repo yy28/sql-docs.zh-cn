@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915002"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>步骤 6： 从数据源断开连接
 最后一步是从数据源断开连接下图中所示。 首先，应用程序通过调用释放任何语句句柄**SQLFreeHandle**。 有关详细信息，请参阅[释放语句处理](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)。  

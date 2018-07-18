@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba8ada2a67db9c0f6ea4882fb6fd04b26caa4f9f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35e312f2555e3a5d778b7b72623cdfc6db4ad26f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36833775"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +125,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 更改 FileTable 的目录**  
- 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。 在 **FileTable** 页上，为 **“FileTable 目录名称”**输入新值。  
+ 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。 在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
   
 ###  <a name="ReqAlter"></a> 更改 FileTable 的要求和限制  
   

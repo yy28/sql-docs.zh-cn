@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026804"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>图表中的位置标签（报表生成器和 SSRS）
   由于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的每种图表类型都具有不同的形状，因此应将数据点标签放在最佳位置上以免对图表产生干扰。 标签的默认位置因图表类型而异：  

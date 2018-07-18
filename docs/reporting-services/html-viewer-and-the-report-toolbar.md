@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017894"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  

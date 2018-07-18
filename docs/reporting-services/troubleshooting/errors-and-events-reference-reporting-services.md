@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035424"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>错误和事件参考 (Reporting Services)
   本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的错误和事件的信息。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件中也包含错误信息。 有关可用日志文件类型以及如何查看日志的详细信息，请参阅 [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  

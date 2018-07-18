@@ -1,7 +1,7 @@
 ---
 title: SQL Server 的 OLE DB 驱动程序支持策略 |Microsoft 文档
 description: 对 SQL Server OLE DB 驱动程序支持策略
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -14,14 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7660feb4b041804c33465b47d738085eecf4ca4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93bea39ced15c0656fc29d459cfede83028d3e3a
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612122"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>用于 SQL Server 的 OLE DB 驱动程序的支持策略
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -45,5 +46,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="ole-db-support-policies"></a>OLE DB 支持策略  
 应用程序可以使用 Windows 操作系统中包含的 OLE DB 访问接口 (SQLOLEDB)。 但是，这是在维护模式下，无法再更新。 您应改用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL)。
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

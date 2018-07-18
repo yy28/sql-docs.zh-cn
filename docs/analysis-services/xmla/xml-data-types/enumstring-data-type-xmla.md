@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1a181a73a6e6a2f4998fb12381c522afb4e510
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a795b4cf935f7eae8052c52a3527005f362b533c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34573799"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 数据类型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,23 +29,23 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|基本数据类型|**字符串**|  
-|派生数据类型|无|  
+|基本数据类型|**string**|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
-|子元素|無|  
-|派生元素|無|  
+|父元素|InclusionThresholdSetting|  
+|子元素|InclusionThresholdSetting|  
+|派生元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  XML for Analysis (XMLA) 可以使用枚举将字符串值限制为一组可验证设置。 **EnumString**使用标准的 XML**字符串**数据类型。 每个命名常量的特定值都通过枚举器定义指定。 通过将它们添加到定义枚举器[DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)架构行集，并可以通过使用检索[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法 DISCOVER_ENUMERATORS 替换请求类型。  
   
- 下表描述了支持的实例的枚举数[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+ 下表描述了支持的 Analysis Services 实例的枚举数。  
   
 |枚举器|Description|  
 |----------------|-----------------|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 |ResultsetContents|支持 XMLA 属性**内容**，它确定是否在返回元数据**根**元素。<br /><br /> 有关详细信息**内容**，请参阅[支持 XMLA 属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。|  
 |MDXSupportLevel|支持 XMLA 属性**MDXSupport**，指示的级别上可用的多维表达式 (MDX) 支持[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。<br /><br /> 有关详细信息**MDXSupport**，请参阅[支持 XMLA 属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
  [XML 数据类型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

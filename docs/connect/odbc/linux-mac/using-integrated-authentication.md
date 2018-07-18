@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853172"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

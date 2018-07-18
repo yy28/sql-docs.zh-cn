@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024564"
 ---
 # <a name="grouping-pane-report-builder"></a>“分组”窗格（报表生成器）
   “分组”窗格显示当前所选 Tablix 数据区域的行组和列组。 “分组”窗格对“图表”或“仪表”数据区域不可用。 “分组”窗格包含“行组”窗格和“列组”窗格。 “分组”窗格有两种模式：默认和高级。 默认模式显示行组和列组的动态成员的层次结构视图。 高级模式同时显示行组和列组的动态及静态成员。 组是来自数据区域显示的报表数据集中的一组命名的数据。 组被组织到包括静态和动态成员的层次结构中。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  

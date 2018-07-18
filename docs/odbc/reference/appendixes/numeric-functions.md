@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914372"
 ---
 # <a name="numeric-functions"></a>数值函数
 下表介绍 ODBC 标量函数集中包含的数值函数。 通过调用**SQLGetInfo**与*信息类型*的 SQL_NUMERIC_FUNCTIONS，应用程序可以确定由驱动程序支持的数值的函数。  

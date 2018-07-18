@@ -1,5 +1,5 @@
 ---
-title: 执行大容量复制操作 (ODBC) |Microsoft 文档
+title: 执行大容量复制操作 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5c05849172b018d3fce054727d217fe6a43527f8
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 9e3d19fec2ce59272f4361f419223e7c0f80afcc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707145"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421486"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>执行大容量复制操作 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34707145"
      在执行时必须存在。 sqlncli11.dll 随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起分发。  
   
 > [!NOTE]  
->  ODBC **SQLBulkOperations**函数具有与任何关系[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制函数。 应用程序必须使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制函数，才能执行大容量复制操作。  
+>  ODBC **SQLBulkOperations**函数与没有任何关系[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制函数。 应用程序必须使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制函数，才能执行大容量复制操作。  
   
 ## <a name="minimally-logging-bulk-copies"></a>按最小方式记录大容量复制  
  使用完整恢复模式，将在事务日志中完整记录大容量加载所执行的所有行插入操作。 对于大型数据加载，这会导致事务日志被迅速填充。 在某些情况下，按最小方式记录是可能的。 按最小方式记录将减少大容量加载操作填充日志空间的可能性，并且比完整记录更有效。  
@@ -71,7 +71,7 @@ ms.locfileid: "34707145"
 -   [从 DB-Library 转换到 ODBC 大容量复制](../../relational-databases/native-client-odbc-bulk-copy-operations/converting-from-db-library-to-odbc-bulk-copy.md)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server 本机客户端&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

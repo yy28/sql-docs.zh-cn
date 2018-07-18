@@ -14,21 +14,23 @@ helpviewer_keywords:
 - minimum query memory
 - queries [SQL Server], memory
 - min memory per query option
+- min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b81b6ada1e8be2c88d7956ff5f56ba904ea417a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e68c2617af6a2828e1183733ee53fdd142747f66
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811911"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>配置每次查询占用的最小内存服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “每次查询占用的最小内存” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “每次查询占用的最小内存”选项指定将分配给查询执行时所需要的最小内存量 (KB)。 例如，如果将 **min memory per query** 设置为 2048 KB，则查询保证将至少获取那么多的总内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “每次查询占用的最小内存” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “每次查询占用的最小内存”选项指定将分配给查询执行时所需要的最小内存量 (KB)。 这也称为最小内存授予。 例如，如果将 **min memory per query** 设置为 2048 KB，则查询保证将至少获取那么多的总内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
   
  **本主题内容**  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   min memory per query 的量优先于 [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) 选项。 如果改变这两个选项，并且索引创建内存小于每次查询占用的最小内存，则将收到警告消息，但仍会设置值。 在查询执行期间还会收到一个类似的警告。  
+-   min memory per query 的量优先于 [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) 选项。 如果改变这两个选项，并且索引创建内存小于每次查询占用的最小内存，则将收到警告消息，但仍会设置值。 在查询执行期间会收到另一个类似警告。  
   
 ###  <a name="Recommendations"></a> 建议  
   
@@ -60,8 +62,10 @@ ms.lasthandoff: 05/03/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器尝试确定要分配给查询的最佳内存量。 min memory per query 选项允许管理员指定任何单个查询收到的最小内存量。 如果查询需要对大量数据执行哈希和排序操作，则这些查询获得的内存通常比该选项指定的最小内存多。 对于一些小型查询和中等大小的查询，增大 min memory per query 的值可能提高性能，但会导致内存资源争夺加剧。 min memory per query 选项包括为排序操作分配的内存。  
 
--    不要将 min memory per query 服务器配置选项设置得太高，尤其是在非常繁忙的系统上，因为查询将不得不等到能确保占有所请求的最小内存、或直到时间超过 query wait 服务器配置选项内所指定的值。 如果可用内存比执行查询所需的指定最小内存多，则只要查询能对多出的内存加以有效的利用，就可以使用多出的内存。 
-  
+-    不要将 min memory per query 服务器配置选项设置得太高，尤其是在非常繁忙的系统上，因为查询将不得不等到<sup>1</sup>能确保占有所请求的最小内存、或直到时间超过 query wait 服务器配置选项内所指定的值。 如果可用内存比执行查询所需的指定最小内存多，则只要查询能对多出的内存加以有效的利用，就可以使用多出的内存。     
+
+<sup>1</sup>在此方案中，等待类型通常是 RESOURCE_SEMAPHORE。 有关详细信息，请参阅 [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。
+
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -107,6 +111,8 @@ GO
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)     
+ [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_exec_query_memory_grants (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
   
   

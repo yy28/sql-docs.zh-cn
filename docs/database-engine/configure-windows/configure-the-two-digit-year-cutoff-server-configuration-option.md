@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32865492"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>配置两位数年份截止服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“杂项服务器设置”** 节点。  
   
-3.  在 **“两位数年份支持”**下的 **“在输入两位数的年份时**， **将其解释为介于下面范围内的年份”** 框中，键入或选择作为时间范围的结束年份的值。  
+3.  在 **“两位数年份支持”** 下的 **“在输入两位数的年份时**， **将其解释为介于下面范围内的年份”** 框中，键入或选择作为时间范围的结束年份的值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

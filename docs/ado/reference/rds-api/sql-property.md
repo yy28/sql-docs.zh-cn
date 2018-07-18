@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5ddbfa6b69f4859f61130e8ec1c9b758c40cf64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c14edf35af65a9e9a64bbc89bb0cc9eb14a1d6a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288926"
 ---
 # <a name="sql-property"></a>SQL 属性
 指示用于检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -47,7 +47,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  表示的对象变量**rds.DataControl**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  一般情况下，这是一个 SQL 语句 （使用数据库服务器的方言），如`"Select * from NewTitles"`。 若要确保记录匹配，并可准确地更新，可更新查询必须包含长二进制字段或计算的字段以外的字段。  
   
  **SQL**属性是可选的如果自定义服务器端业务对象检索数据的客户端。  
@@ -55,7 +55,7 @@ Run time: DataControl.SQL = "QueryString"
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 的属性示例 (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
  [连接属性 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [查询方法 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   

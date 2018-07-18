@@ -1,34 +1,23 @@
 ---
 title: ClosingPeriod (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CLOSINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ClosingPeriod function
-ms.assetid: ae709017-219d-43e1-a98a-a85bd365b4cd
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 43094cc0934c516a871e249fd9bbdc22d0c4bf12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c6c9dea03a4b09ae4dcbe66e6712a542b1920ce0
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740296"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回指定成员在指定级别的后代中的最后一个同级成员。  
   
@@ -46,7 +35,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数主要用于具有 Time 类型的维度，但也可用于任何维度。  
   
 -   如果指定一个级别表达式，则**ClosingPeriod**函数使用包含指定的级别，并返回最后一个同级的后代中的指定级别的默认成员的维度。  
@@ -57,7 +46,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  **ClosingPeriod**函数等同于以下的 MDX 语句：  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`中创建已分区表或索引。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`的用户。  
   
 > [!NOTE]  
 >  [OpeningPeriod](../mdx/openingperiod-mdx.md)函数是类似于**ClosingPeriod**函数，只不过**OpeningPeriod**函数将返回而不是最后一个同级的第一个同级。  
@@ -91,9 +80,9 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
   
   

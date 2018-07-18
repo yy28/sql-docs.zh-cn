@@ -1,8 +1,6 @@
 ---
 title: 连接到 DB2 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09d4e69aefa89ed9930badc575be4fdc302d5f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 050c3e5755b86fc1928e6d44292e7e2fb82f5c0e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775123"
 ---
 # <a name="connect-to-db2-db2tosql"></a>连接到 DB2 (DB2ToSQL)
 使用**连接到 DB2**对话框中，连接到你想要迁移的 DB2 数据库。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 DB2**。 如果你以前连接，则命令是**重新连接到 DB2**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **提供程序**  
 选择你连接到 DB2 数据库的数据访问提供程序。 可用的提供程序是 DB2 客户端提供程序和 OLE DB 访问接口。 默认值为 DB2 客户端提供程序。  
   

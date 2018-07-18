@@ -1,31 +1,20 @@
 ---
 title: TopSum (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopSum function
-ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 83382c6fba828d1dc438f380dad72c670feb6c6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fd8d762f3bdb9ac1dd74ddb72d456ea69eb52917
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842680"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **TopSum**函数返回的最顶层的行的排名基于的计算值的按降序\<排名表达式 > 自变量对于每一行，以便的总和\<排名表达式 > 值至少是指定的给定的总数\<总和 > 自变量。 **TopSum**返回可能最少数量的元素，同时仍满足指定的和值。  
   
 ## <a name="examples"></a>示例  
@@ -66,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -102,7 +91,7 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29…|0.25…|  
 |Water Bottle|2866|0.19…|0.17…|  
@@ -110,7 +99,7 @@ NATURAL PREDICTION JOIN
   
  **请注意**提供了此示例仅为说明的使用情况**TopSum**。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  

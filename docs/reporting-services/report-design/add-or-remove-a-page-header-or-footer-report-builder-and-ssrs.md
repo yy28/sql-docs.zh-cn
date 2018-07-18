@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019104"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>添加或删除页眉或页脚（报表生成器和 SSRS）
   您可以向页眉或页脚添加静态文本、图像、线条、矩形和边框。 如果您希望在页眉或页脚中添加变量或计算数据，还可以在文本框中包含表达式和数据绑定图像。  

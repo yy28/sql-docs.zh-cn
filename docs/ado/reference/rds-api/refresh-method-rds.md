@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -22,11 +21,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e86c8965180eb6cec2fda86a2c5141d0c3e6fa75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee9fd5b4748d2343b78e2dc696e7826341223d53
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288416"
 ---
 # <a name="refresh-method-rds"></a>刷新方法 (RDS)
 将重新查询中指定的数据源[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性和更新查询结果。  
@@ -45,7 +45,7 @@ DataControl.Refresh
  *DataControl*  
  表示的对象变量[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  必须设置[连接](../../../ado/reference/rds-api/connect-property-rds.md)，[服务器](../../../ado/reference/rds-api/server-property-rds.md)，和[SQL](../../../ado/reference/rds-api/sql-property.md)属性在使用之前**刷新**方法。 使用关联的窗体上的所有数据绑定控件**rds.DataControl**对象将反映新的记录集。 预先存在的任何[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)在释放对象，任何未保存的更改将被丢弃。 **刷新**方法自动使第一条记录的当前记录。  
   
  它是一个好办法调用**刷新**方法定期当你处理的数据。 如果检索数据，然后将其保留在客户端计算机上一段时间，则很可能变得过期。 很可能你所做的任何更改将失败，因为其他人可能已更改的记录和提交更改之前。  
@@ -53,7 +53,7 @@ DataControl.Refresh
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [刷新方法示例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [刷新方法示例 (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

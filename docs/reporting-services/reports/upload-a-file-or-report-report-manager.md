@@ -1,7 +1,7 @@
 ---
-title: 上传文件或报表（报表管理器）| Microsoft Docs
+title: 在报表管理器中上传文件或报表 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reports
@@ -21,30 +21,25 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d5485f3c29c394655371ff42b690ccbacdcdd53d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550098"
 ---
-# <a name="upload-a-file-or-report-report-manager"></a>上载文件或报表（报表管理器）
-  报表管理器提供上载功能，因而您可以将报表、模型以及其他文件添加到报表服务器而不必从客户端应用程序发布这些项。 从文件系统上载的文件会存储为报表服务器上的项。 所上载的文件类型决定存储方式：  
+# <a name="upload-a-file-or-report-in-the-report-server"></a>在报表管理器中上传文件或报表
+报表服务器的 Web 门户提供上传功能，以便可以将报表和其他文件添加到报表服务器而不必从客户端应用程序发布这些项。 从文件系统上载的文件会存储为报表服务器上的项。 所上载的文件类型决定存储方式：  
   
--   .rdl 文件存储为报表。  
+-   .rdl 文件存储为分页报表。  
   
--   .smdl 文件存储为报表模型。  
-  
--   包括共享数据源 (.rds) 文件在内的所有其他文件都上载为资源。 报表服务器不会处理资源，但是如果报表服务器支持 MIME 文件类型，则可以通过报表管理器来查看资源。  
+-   包括共享数据源 (.rds) 文件在内的所有其他文件都上载为资源。 报表服务器不会处理资源，但是如果报表服务器支持 MIME 文件类型，则可以通过 Web 门户来查看资源。  
   
 ### <a name="to-upload-a-file-or-report"></a>上载文件或报表  
   
-1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  在 Web 门户中，单击“上传”。  
   
-2.  在报表管理器中，导航到 **“内容”** 页。 导航到要向其中添加项的文件夹。  
-  
-3.  单击 **“上载文件”**。  
-  
-4.  单击 **“浏览”** 以选择要上载的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
+4.  浏览到想要上传的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
   
 5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : @ & = + , $ / * < > |。  
   
@@ -52,10 +47,8 @@ ms.lasthandoff: 05/03/2018
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [“上传文件”页（报表管理器）](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
- [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)  
+## <a name="see-also"></a>另请参阅   
+[创建、修改和删除共享数据源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+[将文件上传到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   

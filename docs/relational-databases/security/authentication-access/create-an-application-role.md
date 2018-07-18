@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +15,16 @@ helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 32e4421664cc920336eae9b4780615f44ecb5f40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7fa11e354f508d56ac2f32fe9fca932a3b6617
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941533"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”。  
   
-5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”**页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
+5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”** 页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
   
 6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号 **(…)** 以打开 **“定位架构”** 对话框。  
   
@@ -76,7 +75,8 @@ ms.lasthandoff: 05/03/2018
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“应用程序– 新建”** 对话框还在两个其他页上提供了选项： **“安全对象”** 和 **“扩展属性”**。  
+ 
+  **“应用程序– 新建”** 对话框还在两个其他页上提供了选项： **“安全对象”** 和 **“扩展属性”**。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-an-application-role"></a>创建应用程序角色  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -3,12 +3,9 @@ title: 创建统计信息 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: statistics
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,16 +17,16 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4a06d45ab3fa089f07e31ac8b8fd9a3162e820f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01793292f04c2e5dc77310402aa3966a2bd3aa32
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429786"
 ---
 # <a name="create-statistics"></a>创建统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-statistics"></a>创建统计信息  
   
-1.  在 **“对象资源管理器”**中，单击加号以便展开要创建新的统计信息的数据库。  
+1.  在 **“对象资源管理器”** 中，单击加号以便展开要创建新的统计信息的数据库。  
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-statistics"></a>创建统计信息  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

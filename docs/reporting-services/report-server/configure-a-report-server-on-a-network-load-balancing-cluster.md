@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027804"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
   如果要将报表服务器扩展配置为在网络负载平衡 (NLB) 群集上运行，必须执行以下操作：  

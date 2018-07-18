@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3bd2f1d9050d0b83a918914246ecc2d51cbd997
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409159"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  以下五个配置文件分析单个列。  
   
-|分析单个列的配置文件|Description|  
+|分析单个列的配置文件|描述|  
 |----------------------------------------------|-----------------|  
 |列长度分布配置文件|报告所选列中各个字符串值的不同长度，以及每个长度表示的行在表中的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的值。 例如，美国州代码列应以两个字符来表示，但在对其进行事件探查时却发现有超过两个字符的值。|  
 |列 Null 比率配置文件|报告所选列中 Null 值的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如列中 null 值的比率意外偏高。 例如，您对邮政编码列进行事件探查，却发现缺失的邮政编码所占的比例超出允许的范围。|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
  以下三个配置文件分析多个列或列与表之间的关系。  
   
-|分析多个列的配置文件|Description|  
+|分析多个列的配置文件|描述|  
 |--------------------------------------------|-----------------|  
 |候选键配置文件|报告某个列或列集是选定表的键还是近似键。<br /><br /> 此配置文件还可以帮助您识别数据中存在的问题，如可能的键列中存在重复值。|  
 |函数依赖关系配置文件|报告某列（依赖列）中的值对另一列或一组列（决定列）中的值的依赖程度。<br /><br /> 此配置文件也可以帮助您识别数据中存在的问题，如无效的值。 例如，您对包含美国邮政编码的列和包含美国各州的列之间的依赖关系进行事件探查。 同一邮政编码应始终对应同一州，但配置文件却发现有违反此依赖关系的情况。|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>数据事件探查任务可用的自定义日志记录消息  
  下表列出了数据事件探查任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|提供有关任务状态的说明性信息。 日志记录消息包含以下信息：<br /><br /> 开始处理请求<br /><br /> 查询开始<br /><br /> 查询结束<br /><br /> 完成计算请求|  
   
@@ -135,7 +134,7 @@ ms.lasthandoff: 05/03/2018
  数据事件探查组件不包含内置功能，无法根据数据事件探查任务的输出在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的工作流中实现条件逻辑。 但是，您只要在脚本任务中进行少量的编程工作即可轻松地添加此逻辑。 此代码将对 XML 输出执行 XPath 查询，然后将结果保存在包变量中。 用于将脚本任务连接到后续任务的优先约束可以使用表达式来确定工作流。 例如，脚本任务检测某一列中 null 值超过阈值的百分比。 如果此条件为 true，则可能需要中断包并解决此问题，然后再继续执行。  
   
 ## <a name="configuration-of-the-data-profiling-task"></a>数据事件探查任务的配置  
- 使用 **“数据事件探查任务编辑器”**配置数据事件探查任务。 此编辑器有以下两页：  
+ 使用 **“数据事件探查任务编辑器”** 配置数据事件探查任务。 此编辑器有以下两页：  
   
  [“常规”页](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  
  在“常规”页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  

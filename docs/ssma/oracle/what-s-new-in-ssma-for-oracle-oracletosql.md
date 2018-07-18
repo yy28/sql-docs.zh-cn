@@ -1,8 +1,6 @@
 ---
 title: SSMA for Oracle (OracleToSQL) 中的新增 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 03/01/2018
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d80bf7637c5c17cdade7c47f25265a6d2b6c94c1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 014b37fa3550372a66252167e013b30d43acb015
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778025"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 的新增功能
 本主题列出每个版本中的 Oracle 更改 SSMA。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019244"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>添加和验证数据连接（报表生成器和 SSRS）
   在报表生成器中，您可以从报表服务器添加共享数据源或为您的报表创建嵌入数据源。 在报表设计器中，您可以创建共享数据源或嵌入数据源，并且将其部署到报表服务器上。  

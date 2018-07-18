@@ -2,10 +2,10 @@
 title: 架构行集支持 (OLE DB) |Microsoft 文档
 description: 架构行集支持 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d5b8bc20c380494560a5e7b605ff68dded99a928
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f78cbad6d328ba3e9a95a97a1eac4e3320b08de
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612072"
 ---
 # <a name="schema-rowset-support-ole-db"></a>架构行集支持 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序还支持从链接服务器返回的架构信息时处理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分布式查询。  
   
@@ -54,13 +57,13 @@ ms.lasthandoff: 05/03/2018
 |DBSCHEMA_TABLES|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |DBSCHEMA_TABLES_INFO|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [分布式查询中架构行集的支持](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
  [LINKEDSERVERS 行集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 编程的 OLE DB 驱动程序](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [使用用户定义的类型](../../oledb/features/using-user-defined-types.md)  
+ [使用用户定义类型](../../oledb/features/using-user-defined-types.md)  
   
   

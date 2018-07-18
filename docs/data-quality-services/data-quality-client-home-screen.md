@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/29/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb235729da9f818e5c20cad4c180acd4220c0a17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1078d0a80bf68148c9163a43d9b235dd2e7c792f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310556"
 ---
 # <a name="data-quality-client-home-screen"></a>数据质量客户端主屏幕
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  启动知识库的创建过程，可以从头创建也可以基于现有知识库的元数据创建。 此命令打开一个页面，您可以在其中标识知识库、使它基于现有知识库、选择所需知识库活动，然后创建知识库。  
   
  **打开知识库**  
- 打开知识库，以便您可以管理域、执行知识发现或生成匹配策略。 单击 **“打开知识库”** 按钮将显示 **“打开知识库”** 页，其中显示现有知识库的列表，列出这些知识库的属性、当前状态、知识库及其域的详细信息。 从 **“打开知识库”**页选择一个知识库并打开它。  
+ 打开知识库，以便您可以管理域、执行知识发现或生成匹配策略。 单击 **“打开知识库”** 按钮将显示 **“打开知识库”** 页，其中显示现有知识库的列表，列出这些知识库的属性、当前状态、知识库及其域的详细信息。 从 **“打开知识库”** 页选择一个知识库并打开它。  
   
  **最近的知识库**  
  从屏幕上的列表中，打开一个已创建的知识库。 如果未锁定，请单击向右箭头，然后选择要在（“域管理”、“知识发现”或“匹配策略”）中启动知识库的活动。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
  启动创建新项目的项目。 此命令打开一个页面，您可以在其中标识项目、将它与知识库关联、显示知识库的详细信息、选择所需项目活动，然后创建项目。  
   
  **打开数据质量项目**  
- 打开项目，以便您可以执行数据清理或数据匹配。 单击 **“打开数据质量项目”** 按钮将显示 **“打开数据质量项目”** 页，其中显示现有项目的列表，列出这些项目的属性、当前状态、知识库及其域和匹配策略规则的详细信息。 从 **“打开数据质量项目”**页选择一个项目，然后打开它。  
+ 打开项目，以便您可以执行数据清理或数据匹配。 单击 **“打开数据质量项目”** 按钮将显示 **“打开数据质量项目”** 页，其中显示现有项目的列表，列出这些项目的属性、当前状态、知识库及其域和匹配策略规则的详细信息。 从 **“打开数据质量项目”** 页选择一个项目，然后打开它。  
   
  **最近的数据质量项目**  
  从屏幕上的列表中，选择一个已创建的项目。 仅当您锁定它时，才可以打开锁定的项目。 如果这样，项目将以它关闭时的状态打开，该状态在括号中标明。 如果项目已完成，将在活动的“导出”步骤中打开它。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  显示与所连接的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相关的所有活动（当前和历史活动）的状态的视图。 监视的活动类型包括知识管理、数据质量项目和基于 SSIS 的数据更正。  
   
  **Configuration**  
- 显示 Reference Data Services 帐户的配置属性（通过 Windows Azure Marketplace 和直接针对 Reference Data Services）、常规设置（交互式清理、匹配和事件探查）以及日志严重级别设置。  
+ 显示 Reference Data Services 帐户的配置属性（通过 Microsoft Azure 市场和直接针对 Reference Data Services）、常规设置（交互式清理、匹配和事件探查）以及日志严重级别设置。  
   
 ## <a name="see-also"></a>另请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)   

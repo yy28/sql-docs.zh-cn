@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913732"
 ---
 # <a name="attribute-conformance"></a>属性的一致性
 下表指示这是定义完善的每个 ODBC 环境属性，一致性级别。  

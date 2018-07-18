@@ -1,5 +1,5 @@
 ---
-title: 错误元素 (XMLA) |Microsoft 文档
+title: Error 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f223bff2dced01c2b3f954ca14242b1a35c93813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036645"
 ---
 # <a name="error-element-xmla"></a>Error 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含有关错误的 Analysis Services 实例返回的信息。  
+  包含有关 Analysis Services 的实例返回错误的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34576549"
 </Cell>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "34576549"
 |Ancestor|子元素|  
 |--------------|--------------------|  
 |[Message](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|InclusionThresholdSetting|  
-|[单元格](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)，[行](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[说明](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md)， [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)， [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md)，[源](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
+|[单元格](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)，[行](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[描述](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md)， [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)， [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md)，[源](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -22,11 +21,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bbcd46741c92b04a5db85047cff04c3c1a9e678
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31aa4d36f1b978cb50e99b9350e3d04b1c1564d4
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312446"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
      管理员可以使用下面一组系统存储过程，针对伙伴双方的镜像数据库，分别设置和管理警告阈值。  
   
-    |过程|Description|  
+    |过程|描述|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|添加或更改指定镜像性能指标的警告阈值。|  
     |[sp_dbmmonitorhelpalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|返回若干个关键数据库镜像监视器性能指标中的一个或所有指标的警告阈值信息。|  

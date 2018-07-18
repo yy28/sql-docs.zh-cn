@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914482"
 ---
 # <a name="appendix-e-scalar-functions"></a>附录 e： 标量函数
 ODBC 指定以下类型的标量函数，有关上述每种函数类型，在此附录的相应章节中提供的详细信息。 函数说明中包含相关联的语法。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912182"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>声明应用程序&#39;s ODBC 版本
 应用程序分配连接之前，必须设置 SQL_ATTR_ODBC_VERSION 环境属性。 此属性，指出应用程序，如下所示 ODBC 2。*x*或 ODBC 3。*x*规范时使用以下各项：  

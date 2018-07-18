@@ -1,5 +1,5 @@
 ---
-title: WideWorldImporters OLAP 数据库-使用 SQL Server |Microsoft 文档
+title: WideWorldImporters OLAP 数据库-使用 SQL Server |Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -13,31 +13,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c386ab66a0084ec2da0508d7ae30f96e75031783
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c3158def05148941105867f24205b199e6c6dba
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023550"
 ---
-# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用 SQL Server 功能和功能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-WideWorldImportersDW 旨在展示许多适用于数据仓库和分析 SQL Server 的主要功能。 下面是 SQL Server 功能和功能，以及如何在 WideWorldImportersDW 中使用的说明的列表。
+# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用的 SQL Server 特性和功能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+WideWorldImportersDW 旨在展示许多适用于数据仓库和分析 SQL Server 的主要功能。 下面是 SQL Server 特性和功能，以及如何在 WideWorldImportersDW 中使用的说明的列表。
 
 ## <a name="polybase"></a>PolyBase
 
-[适用于 （2016年及更高版本） 的 SQL Server]
+[适用于 SQL Server 2016 和更高版本]
 
-PolyBase 用于将从 WideWorldImportersDW 的销售信息与有关人口统计信息以了解哪些城市可能感兴趣的销售的进一步扩展了公共数据集结合起来。
+使用 PolyBase 将 WideWorldImportersDW 来自销售信息组合使用人口统计信息来了解哪些城市可能感兴趣的销售额的更多扩展有关的公共数据集。
 
-若要使示例数据库中的 PolyBase 使用，请确保已安装，并在数据库中运行以下存储的过程：
+若要启用示例数据库中的使用 PolyBase，请确保已安装，并在数据库中运行以下存储的过程：
 
     EXEC [Application].[Configuration_ApplyPolybase]
 
-这将创建外部表`dbo.CityPopulationStatistics`引用包含在美国，托管在 Azure blob 存储中的城市的填充数据的公共数据集。 建议查看存储过程以了解配置过程中的代码的。 如果你想要承载您自己的数据在 Azure blob 存储和保护从常规公共访问权限，你将需要进行其他配置步骤。 以下查询从该外部的数据集返回的数据：
+这将创建外部表`dbo.CityPopulationStatistics`引用包含在美国，托管在 Azure blob 存储中的城市的人口数据的公共数据集。 建议以查看存储过程以了解配置过程中的代码的。 如果你想要托管在 Azure blob 存储中的数据和确保其安全从常规公共访问权限，你需要时需要执行其他配置步骤。 以下查询返回的数据从外部数据集：
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-若要了解哪些城市可能感兴趣进一步扩展，以下查询查看城市，增长率，并返回前 100 个最大城市显著增长，并且 Wide World Importers 没有销售是否存在。 查询涉及到远程表之间的联接`dbo.CityPopulationStatistics`和本地表`Dimension.City`，和筛选器涉及本地表`Fact.Sales`。
+若要了解哪些城市可能感兴趣的更多扩展，以下查询查看的城市，增长率，并返回前 100 个最大城市重要的业务增长，并且 Wide World Importers 没有销售业务。 查询涉及远程表之间的联接`dbo.CityPopulationStatistics`和本地表`Dimension.City`，并涉及本地表的筛选器`Fact.Sales`。
 
     WITH PotentialCities
     AS
@@ -73,23 +74,23 @@ PolyBase 用于将从 WideWorldImportersDW 的销售信息与有关人口统计�
 
 （此示例的完整版本）
 
-聚集列存储索引 (CCI) 用于所有事实数据表，以减少存储需求量和提高查询性能。 CCI 使用的事实数据表的基本存储使用列压缩。
+与所有事实表，使用聚集列存储索引 (CCI) 来减少存储占用并提高查询性能。 使用 CCI，事实表的基本存储使用列压缩。
 
-非聚集索引基于聚集列存储索引，用于简化主键和外键约束。 这些约束添加超出需要注意的众多-ETL 过程源具有约束来强制实现完整性的 WideWorldImporters 数据库中的数据。 删除主键和外键约束和其支持的索引，将减少的事实数据表的存储占用空间。
+除了聚集列存储索引中，使用非聚集索引来促进主键和外键约束。 超出了丰富的警告： 添加了这些约束-ETL 过程源具有约束强制实施完整性的 WideWorldImporters 数据库中的数据。 删除主键和外键约束和它们支持的索引将减少这一事实表的存储占用。
 
 **数据大小**
 
-示例数据库具有有限的数据大小，以便可以方便地下载并安装示例。 但是，若要查看列存储索引的实际性能优势，你想要使用的更大的数据集。
+示例数据库具有有限的数据的大小，以使其易于下载和安装该示例。 但是，若要查看列存储索引的实际性能优势，您可能需要使用更大的数据集。
 
-你可以运行以下语句以增加的大小`Fact.Sales`的方法是插入的示例数据的另一个 12 万行的表。 这些所有插入行年 2012，使 ETL 过程不干扰。
+可以运行以下语句以增加的大小`Fact.Sales`通过插入示例数据的另一个 12 万行的表。 这些所有插入行的 2012 年，只有使用 ETL 过程不会相互干扰。
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
-此语句将需要大约 5 分钟运行。 若要插入 12 多万行，请将传递所需的要作为参数传递给此存储过程插入的行数。
+此语句将需要大约 5 分钟运行。 若要插入超过 120 万行，请将传递所需的要作为此存储过程的参数插入的行数。
 
-若要比较使用和不使用列存储的查询性能，你可以删除和/或重新创建聚集列存储索引。
+若要比较使用和不使用列存储的查询性能，您可以删除和/或重新创建聚集列存储索引。
 
-若要删除索引：
+若要删除的索引：
 
     DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
 
@@ -101,9 +102,9 @@ PolyBase 用于将从 WideWorldImportersDW 的销售信息与有关人口统计�
 
 （此示例的完整版本）
 
-数据仓库中的数据大小会变得非常大。 因此，最好使用分区管理的数据库中的大型表存储是它。
+数据仓库中的数据大小会变得非常大。 因此它是使用分区管理的较大的表在数据库中存储的最佳做法。
 
-更大的事实数据表的所有按年进行分区。 唯一的例外是`Fact.Stock Holdings`、 这不是基于日期的和具有有限的数据大小相比于其他事实数据表。
+更大的事实数据表的所有按年分区。 唯一的例外是`Fact.Stock Holdings`，这不是基于日期的并具有有限的数据大小与其他事实数据表进行比较。
 
 用于所有已分区表的分区函数是`PF_Date`，并且正在使用分区方案为`PS_Date`。
 
@@ -111,6 +112,6 @@ PolyBase 用于将从 WideWorldImportersDW 的销售信息与有关人口统计�
 
 （此示例的完整版本）
 
-WideWorldImportersDW SCHEMA_ONLY 内存优化表用于临时表。 所有`Integration.` * `_Staging`表是 SCHEMA_ONLY 内存优化表。
+WideWorldImportersDW 为临时表使用 SCHEMA_ONLY 内存优化表。 所有`Integration.` * `_Staging`表是 SCHEMA_ONLY 内存优化表。
 
-SCHEMA_ONLY 表的优点是它们不作记录，并且不需要任何磁盘访问。 这提高了 ETL 过程的性能。 由于这些表不作记录，其内容都将丢失故障时。 但是，数据源仍然可用，因此 ETL 过程可以只需重新启动如果发生故障。
+SCHEMA_ONLY 表的优点是它们将不会记录，并且不需要任何磁盘访问。 这提高了 ETL 进程的性能。 由于这些表将不会记录，其内容将丢失，如果故障。 但是，数据源是仍然可用，因此 ETL 过程可以只需重新启动在失败时。

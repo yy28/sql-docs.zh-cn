@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34015536"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft 神经网络算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="how-the-algorithm-works"></a>算法的原理  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建由多至三层节点（有时称为神经元）组成的网络。 这些层分别是输入层、隐藏层和输出层。  
   
- **输入层：**输入节点定义数据挖掘模型的所有输入属性值及其概率。  
+ **输入层：** 输入节点定义数据挖掘模型的所有输入属性值及其概率。  
   
  **隐藏层：** 隐藏节点接收来自输入节点的输入，并向输出节点提供输出。 隐藏层是向各种输入概率分配权重的位置。 权重说明某一特定输入对于隐藏节点的相关性或重要性。 输入所分配的权重越大，则输入的值越重要。 权重可为负值，表示输入抑制而不是促进某一特定结果。  
   

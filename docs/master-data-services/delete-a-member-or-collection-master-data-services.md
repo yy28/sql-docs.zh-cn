@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9e7bf271d8c60cb25aeb5e75b775fae62d8c47e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d88efe6091db751dc11da023da51de3da8a4f49
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407539"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>删除成员或集合 (Master Data Services)
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  在网格中，单击要删除的成员或集合所对应的行。  
   
-6.  单击 **“删除成员”**、 **“删除”**或 **“删除集合”**。  
+6.  单击 **“删除成员”**、 **“删除”** 或 **“删除集合”**。  
   
 7.  实体管理员还将会在实体版本中看到用来清除（硬删除）所有软删除成员的菜单选项。  
   

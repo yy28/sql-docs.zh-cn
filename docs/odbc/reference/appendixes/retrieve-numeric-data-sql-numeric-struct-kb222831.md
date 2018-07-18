@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913222"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>检索与 SQL 的数值数据\_数值\_结构
 

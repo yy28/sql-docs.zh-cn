@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027134"
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connections in ADOMD.NET-使用连接和会话
   在 XML for Analysis (XMLA) 中，会话在分析数据访问期间为有状态操作提供支持。 会话为分析数据源构成命令和事务的作用域和上下文。 用于管理会话的 XMLA 元素是[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)，[会话](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)，和[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)。  

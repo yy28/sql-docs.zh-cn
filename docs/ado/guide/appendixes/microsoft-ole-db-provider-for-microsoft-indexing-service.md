@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Microsoft 索引服务 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271306"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服务概述
 Microsoft OLE DB Provider for Microsoft 索引服务提供编程的只读访问，以文件系统和 Web 数据由 Microsoft 索引服务编制索引。 ADO 应用程序可以发出 SQL 查询以检索内容和文件属性信息。
@@ -70,7 +70,7 @@ MSIDXS
 
  **标准 ADO 记录集属性的可用性：**
 
-|属性|可用性|
+|“属性”|可用性|
 |--------------|------------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|
@@ -82,7 +82,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|
-|[筛选](../../../ado/reference/ado-api/filter-property.md)|读/写|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|
 |[最大记录](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|
@@ -91,7 +91,7 @@ MSIDXS
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|
 |[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|
-|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|
+|[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|
 
  \*为了使此功能中的提供程序上存在，必须启用书签**记录集**。
 
@@ -99,13 +99,13 @@ MSIDXS
 
 |方法|可用？|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|“否”|
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|
-|[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|
-|[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|
+|[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|“否”|
+|[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|“否”|
 |[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|是|
 |[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|
-|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|
+|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|“否”|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|
 |[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|是|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|
@@ -114,10 +114,10 @@ MSIDXS
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|是|
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|
 |[支持](../../../ado/reference/ado-api/supports-method.md)|是|
-|[更新](../../../ado/reference/ado-api/update-method.md)|否|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|
+|[Update](../../../ado/reference/ado-api/update-method.md)|“否”|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|“否”|
 
  有关特定的实现详细信息和 Microsoft 索引服务 Microsoft OLE DB 提供程序的功能信息，请查阅[OLE DB 程序员指南](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)，或访问 Windows NT Server Web 的 Web 服务页站点。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [CommandType 属性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString 属性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供程序属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支持方法](../../../ado/reference/ado-api/supports-method.md)

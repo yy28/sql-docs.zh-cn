@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036164"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
 本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  

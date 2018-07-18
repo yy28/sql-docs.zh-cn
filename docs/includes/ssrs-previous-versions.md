@@ -13,5 +13,6 @@ ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30078643"
 ---
 对于与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server Reporting Services 2014](https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx)。

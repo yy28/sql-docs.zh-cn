@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910732"
 ---
 # <a name="developing-applications"></a>开发应用程序
 本部分包含有关开发使用 ODBC 接口和驱动程序实现它的应用程序的信息。  

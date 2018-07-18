@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024394"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和删除成员 (XMLA)
   你可以使用[插入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，和[删除](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)XML 中的命令为 Analysis (XMLA) 来分别插入、 更新或从允许写维度中删除成员。 关于启用写功能的维度的详细信息，请参阅[Write-Enabled 维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  

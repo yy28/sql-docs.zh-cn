@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34586059"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用 Integration Services 并行数据仓库加载数据
 提供数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署的信息。  
@@ -28,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -55,7 +56,7 @@ Integration Services 的完整文档，请参阅[SQL Server Integration Services
 ### <a name="run-from-powershell"></a>从 PowerShell 中运行  
 若要从 Windows PowerShell，运行包使用**dtexec**实用程序： `dtexec /FILE <packagePath>`  
   
-例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如，使用 IPv4 地址 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>运行从 Windows 命令提示符 
 若要从 Windows 命令提示符，运行包使用**dtexec**实用程序： `dtexec /FILE <packagePath>`  
@@ -83,7 +84,7 @@ Integration Services 的完整文档，请参阅[SQL Server Integration Services
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -245,18 +246,18 @@ Integration Services 在计算机上运行的包。
   
 2.  包的运行时间以及上将显示进度以及任何错误**进度**窗格。 使用 SQL 客户端以确认负载，或监视 SQL Server PDW 管理员控制台通过负载。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [创建使用 SSIS PDW 目标适配器的脚本任务](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[设计和实现包 (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[教程： 创建基本包使用向导](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[设计和实现包 (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[教程： 创建基本包使用向导](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [入门 (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [动态包生成示例](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [为并行度 （SQL Server 视频） 设计 SSIS 包](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server 社区示例： Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[与变更数据捕获改善增量加载](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[渐变维度转换](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[大容量插入任务](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[与变更数据捕获改善增量加载](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[渐变维度转换](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[大容量插入任务](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

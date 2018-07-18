@@ -1,5 +1,9 @@
 # [概述](statements.md)
 
+# ADD
+
+## [SENSITIVITY CLASSIFICATION](add-sensitivity-classification-transact-sql.md)
+
 # ALTER
 
 ## [APPLICATION ROLE](alter-application-role-transact-sql.md)
@@ -13,10 +17,7 @@
 ## [CREDENTIAL](alter-credential-transact-sql.md)  
 ## [CRYPTOGRAPHIC PROVIDER](alter-cryptographic-provider-transact-sql.md)  
 
-## [DATABASE](alter-database-transact-sql.md) 
-## [DATABASE（Azure SQL 数据库）](alter-database-azure-sql-database.md)  
-## [DATABASE （Azure SQL 数据仓库）](alter-database-azure-sql-data-warehouse.md)  
-## [DATABASE（并行数据仓库）](alter-database-parallel-data-warehouse.md)  
+## [DATABASE](alter-database-transact-sql.md)
 ## [DATABASE AUDIT SPECIFICATION](alter-database-audit-specification-transact-sql.md)
 ## [DATABASE 兼容级别](alter-database-transact-sql-compatibility-level.md)  
 ## [DATABASE 数据库镜像](alter-database-transact-sql-database-mirroring.md)  
@@ -69,7 +70,7 @@
 ## [TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
 ## [TABLE index_option](alter-table-index-option-transact-sql.md)  
 ## [TABLE table_constraint](alter-table-table-constraint-transact-sql.md)  
- 
+
 ## [TRIGGER](alter-trigger-transact-sql.md)  
 ## [USER](alter-user-transact-sql.md)  
 ## [VIEW](alter-view-transact-sql.md)  
@@ -85,7 +86,7 @@
 
 ## [RESTORE](restore-statements-transact-sql.md)  
 ## [RESTORE 语句](restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md)  
-## [RESTORE DATABASE（并行数据仓库）](restore-database-parallel-data-warehouse.md) 
+## [RESTORE DATABASE（并行数据仓库）](restore-database-parallel-data-warehouse.md)
 
 ## [RESTORE 参数](restore-statements-arguments-transact-sql.md)  
 ## [RESTORE FILELISTONLY](restore-statements-filelistonly-transact-sql.md)  
@@ -98,7 +99,7 @@
 # [BULK INSERT](bulk-insert-transact-sql.md)  
 
 # CREATE
-  
+
 ## [AGGREGATE](create-aggregate-transact-sql.md)  
 ## [APPLICATION ROLE](create-application-role-transact-sql.md)  
 ## [ASSEMBLY](create-assembly-transact-sql.md)  
@@ -113,10 +114,7 @@
 ## [CREDENTIAL](create-credential-transact-sql.md)  
 ## [CRYPTOGRAPHIC PROVIDER](create-cryptographic-provider-transact-sql.md)  
 
-## [DATABASE](create-database-sql-server-transact-sql.md)  
-## [DATABASE（Azure SQL 数据库）](create-database-azure-sql-database.md)  
-## [DATABASE （Azure SQL 数据仓库）](create-database-azure-sql-data-warehouse.md)  
-## [DATABASE（并行数据仓库）](create-database-parallel-data-warehouse.md)  
+## [DATABASE](create-database-transact-sql.md)  
 ## [DATABASE AUDIT SPECIFICATION](create-database-audit-specification-transact-sql.md)  
 ## [DATABASE ENCRYPTION KEY](create-database-encryption-key-transact-sql.md)  
 ## [DATABASE SCOPED CREDENTIAL](create-database-scoped-credential-transact-sql.md)  
@@ -168,7 +166,7 @@
 ## [TABLE（Azure SQL 数据仓库）](create-table-azure-sql-data-warehouse.md)  
 ## [TABLE（SQL 图形）](create-table-sql-graph.md)  
 ## [TABLE AS SELECT（Azure SQL 数据仓库）](create-table-as-select-azure-sql-data-warehouse.md)
-## [TABLE IDENTITY（属性）](create-table-transact-sql-identity-property.md) 
+## [TABLE IDENTITY（属性）](create-table-transact-sql-identity-property.md)
 ## [TRIGGER](create-trigger-transact-sql.md)  
 ## [TYPE](create-type-transact-sql.md)  
 ## [USER](create-user-transact-sql.md)  
@@ -184,7 +182,7 @@
 ## [Windows 排序规则名称](windows-collation-name-transact-sql.md)  
 ## [排序规则优先级](collation-precedence-transact-sql.md)  
 
-# [DELETE](delete-transact-sql.md) 
+# [DELETE](delete-transact-sql.md)
 # [DISABLE TRIGGER](disable-trigger-transact-sql.md)
 
 # DROP
@@ -234,6 +232,7 @@
 ## [SCHEMA](drop-schema-transact-sql.md)  
 ## [SEARCH PROPERTY LIST](drop-search-property-list-transact-sql.md)  
 ## [SECURITY POLICY](drop-security-policy-transact-sql.md)  
+## [SENSITIVITY CLASSIFICATION](drop-sensitivity-classification-transact-sql.md)
 ## [SEQUENCE](drop-sequence-transact-sql.md)  
 ## [SERVER AUDIT ](drop-server-audit-transact-sql.md)  
 ## [SERVER AUDIT SPECIFICATION](drop-server-audit-specification-transact-sql.md)  
@@ -243,7 +242,7 @@
 ## [STATISTICS](drop-statistics-transact-sql.md)  
 ## [SYMMETRIC KEY](drop-symmetric-key-transact-sql.md)  
 ## [SYNONYM](drop-synonym-transact-sql.md)  
-## [TABLE](drop-table-transact-sql.md) 
+## [TABLE](drop-table-transact-sql.md)
 ## [TRIGGER](drop-trigger-transact-sql.md)  
 ## [TYPE](drop-type-transact-sql.md)  
 ## [USER](drop-user-transact-sql.md)  
@@ -252,12 +251,12 @@
 ## [XML SCHEMA COLLECTION](drop-xml-schema-collection-transact-sql.md)  
 
 # [ENABLE TRIGGER](enable-trigger-transact-sql.md)
-# [Insert](insert-transact-sql.md) 
-# [INSERT（SQL 图形）](insert-sql-graph.md) 
-# [MERGE](merge-transact-sql.md) 
+# [Insert](insert-transact-sql.md)
+# [INSERT（SQL 图形）](insert-sql-graph.md)
+# [MERGE](merge-transact-sql.md)
 # [RENAME](rename-transact-sql.md)  
 
-# 权限 
+# 权限
 ## [ADD SIGNATURE](add-signature-transact-sql.md)  
 ## [CLOSE MASTER KEY](close-master-key-transact-sql.md)  
 ## [CLOSE SYMMETRIC KEY](close-symmetric-key-transact-sql.md)  
@@ -328,7 +327,7 @@
 ## [REVOKE 类型权限](revoke-type-permissions-transact-sql.md)  
 ## [REVOKE XML 架构集合权限](revoke-xml-schema-collection-permissions-transact-sql.md)  
 ## [SETUSER](setuser-transact-sql.md)
-  
+
 # Service Broker
 ## [BEGIN CONVERSATION TIMER](begin-conversation-timer-transact-sql.md)  
 ## [BEGIN DIALOG CONVERSATION](begin-dialog-conversation-transact-sql.md)  
@@ -339,7 +338,7 @@
 ## [RECEIVE](receive-transact-sql.md)  
 ## [SEND](send-transact-sql.md)  
 
-# SET 
+# SET
 ## [概述](set-statements-transact-sql.md)
 ## [ANSI_DEFAULTS](set-ansi-defaults-transact-sql.md)  
 ## [ANSI_NULL_DFLT_OFF](set-ansi-null-dflt-off-transact-sql.md)  

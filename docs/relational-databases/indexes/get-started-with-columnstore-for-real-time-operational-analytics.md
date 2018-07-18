@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32940582"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储适进行实时运行分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  以下是建议的最佳实践  
   
--   **插入/查询工作负载：**如果工作负载主要是插入数据和查询数据，则建议将 COMPRESSION_DELAY 的默认值设置为 0。 在单个增量行组中插入 100 万行后，新插入的行将被压缩。  
+-   **插入/查询工作负载：** 如果工作负载主要是插入数据和查询数据，则建议将 COMPRESSION_DELAY 的默认值设置为 0。 在单个增量行组中插入 100 万行后，新插入的行将被压缩。  
     此类工作负载的某些示例包括：(a) 传统的 DW 工作负载 (b) 需要分析 Web 应用程序中的点击模式时执行的点击流分析。  
   
 -   **OLTP 工作负载：** 如果工作负载频繁执行 DML（即大量混合更新、删除和插入操作），可以通过检查 DMV sys 来查看列存储索引碎片。 dm_db_column_store_row_group_physical_stats 来查看列存储索引碎片。 如果你看到在最近压缩的行组中，10% 以上的行标记为已删除，则可以使用 COMPRESSION_DELAY 选项来增加时间延迟，达到该延迟后，行可供压缩。 例如，对于你的工作负载，如果新插入的数据保持“热”状态（即多次更新）60 分钟，则应该将 COMPRESSION_DELAY 指定为 60。  

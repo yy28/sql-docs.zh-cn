@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44b3ace5dca858f1216d1e1d5298be8c26a444b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404369"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了值的类型。  
   
-|值名称|Description|值的类型|  
+|值名称|描述|值的类型|  
 |----------------|-----------------|-------------------|  
 |执行值|针对包执行的特定实例赋予的值。 此赋值将覆盖所有其他值，但仅应用于包执行的单个实例。|文字|  
 |服务器值|在将项目部署到 Integration Services 服务器后在项目范围内赋予参数的值。 此值将覆盖设计默认值。|文字或环境变量引用|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="create-parameters"></a>Create Parameters
 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可以创建项目参数和包参数。 下面的过程提供了有关创建包参数/项目参数的分步说明。  
   
-> **注意：**若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用“Integration Services 项目转换向导”来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意：** 若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用“Integration Services 项目转换向导”来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="create-package-parameters"></a>创建包参数  
   
@@ -119,24 +118,24 @@ ms.lasthandoff: 05/03/2018
   
      ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
   
-3.  为列表自身中或 **“属性”**窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
+3.  为列表自身中或 **“属性”** 窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |“属性”|Description|  
+    |“属性”|描述|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
     |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
     |Required|需要首先指定并非设计默认值的值，包才能执行。|  
-    |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
+    |描述|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
-    > **注意：**在向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
+    > **注意：** 在向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
   
 4.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件中。  
   
     > **警告！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
-    > **注意：**如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。  
+    > **注意：** 如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。  
   
 ### <a name="create-project-parameters"></a>创建项目参数  
   
@@ -150,16 +149,16 @@ ms.lasthandoff: 05/03/2018
   
      ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
   
-4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”**和 **“必需”** 属性输入值。  
+4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。  
   
-    |“属性”|Description|  
+    |“属性”|描述|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
     |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
     |Required|需要首先指定并非设计默认值的值，包才能执行。|  
-    |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
+    |描述|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  
   

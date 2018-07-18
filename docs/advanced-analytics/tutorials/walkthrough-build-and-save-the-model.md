@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204149"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>生成 R 模型并将保存到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -156,7 +157,7 @@ ms.lasthandoff: 04/16/2018
 
 因为[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]允许调用 R 模型使用[!INCLUDE[tsql](../../includes/tsql-md.md)]很容易在客户端应用程序中使用 R 的存储的过程。
 
-但是，从外部应用程序中调用模型之前，必须将模型保存到用于生产的数据库中。 在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]中，已定型的模型以二进制形式存储在 **varbinary(max)**类型的单个列中。
+但是，从外部应用程序中调用模型之前，必须将模型保存到用于生产的数据库中。 在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]中，已定型的模型以二进制形式存储在 **varbinary(max)** 类型的单个列中。
 
 因此，将训练用模型从 R 移动到 SQL Server 的操作包括以下步骤：
 

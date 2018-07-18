@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f21d84708f4d1fdb05fe422a5e176187118dae04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03f3e44683ab329e67360be3992fb942c3799165
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307806"
 ---
 # <a name="connecting-to-the-server"></a>连接到服务器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 身份验证或使用 SQL Server 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 默认情况下， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 尝试使用 Windows 身份验证连接到服务器。  
 
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 
 |主题|Description|  
 |---------|---------------|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |[连接到 Microsoft Azure SQL 数据库](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|讨论如何连接到 Azure SQL 数据库。|  
 |[连接复原](../../connect/php/connection-resiliency.md)|讨论重新连接断开连接复原功能。|  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)  

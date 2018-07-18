@@ -2,10 +2,10 @@
 title: 提取列使用 IRow::GetColumns (OLE DB) |Microsoft 文档
 description: 提取列使用 IRow::GetColumns (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 373d0f6577b921ce4461832ab9ba237aa790f410
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15d2531eb06f742644c6e7cf207ca45c8ca8dc8f
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666327"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取列 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRow**接口允许直接访问的单个行的列中的结果集。 因此， **IRow**是一种高效的方式来从具有一个行的结果集检索列。  
   
@@ -521,7 +524,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

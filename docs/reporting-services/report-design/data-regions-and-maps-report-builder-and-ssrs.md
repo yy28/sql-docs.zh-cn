@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023034"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>数据区域和地图（报表生成器和 SSRS）
   数据区域是报表中的对象，显示来自报表数据集中的数据。 可以在表、矩阵或列表中以数字和文本形式显示报表数据；在图表或仪表中以图形方式显示报表数据；以及在地图中以地理为背景显示报表数据。 表、矩阵和列表都基于“Tablix  ”数据区域，这种数据区域可根据需要扩展以显示数据集中的所有数据。 Tablix 数据区域支持多个行组和列组，还支持静态和动态的行和列。 图表显示各种图表格式的多个序列和类别组。 仪表显示数据集的单个值或聚合值。 地图会将空间数据显示为地图元素，这些地图元素的外观会根据数据集中的聚合数据而变化。  

@@ -1,14 +1,11 @@
 ---
-title: 开始使用 CLR 集成 |Microsoft 文档
+title: CLR 集成入门 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -30,18 +27,19 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d79bafbd781b34d3f6fa4908f998775f37548cd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349459"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 集成入门
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题提供的命名空间和编译使用的数据库对象所需的库的概述[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与.NET Framework 公共语言运行时 (CLR) 集成。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
+  本主题提供的命名空间和编译使用的数据库对象所需的库概述[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与.NET Framework 公共语言运行时 (CLR) 集成。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
   
 ## <a name="required-namespaces"></a>所需命名空间  
- 开发基本 CLR 数据库对象所需的组件安装与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 自动添加，因此无需手动添加它。  
+ 与安装开发基本 CLR 数据库对象所需的组件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 自动添加，因此无需手动添加它。  
   
  system.data.dll 程序集包含以下命名空间，这些命名空间是编译 CLR 数据库对象所必需的：  
   
@@ -90,9 +88,9 @@ End Class
   
 ```  
   
- 这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类， **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 和 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**、 用于创建托管数据库对象以输出简单的文本消息。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程，然后采用与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程相同的方式运行。  
+ 这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类**[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 并 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**，用于创建托管数据库对象以输出简单的文本消息。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程，然后采用与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程相同的方式运行。  
   
- 此程序编译为库、 将其加载到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并将其作为存储过程运行。  
+ 此程序编译为一个库，将其加载到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并将其作为存储过程运行。  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>编译"Hello World"存储过程  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认情况下将安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 再分发文件。 这些文件包括 csc.exe 和 vbc.exe，它们是用于 Visual C# 和 Visual Basic 程序的命令行编译器。 为了编译我们的示例，您必须修改路径变量以指向包含 csc.exe 或 vbc.exe 的目录。 下面是 .NET Framework 的默认安装路径。  
@@ -107,7 +105,7 @@ C:\Windows\Microsoft.NET\Framework\(version)
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
 ```  
   
- 一旦将 .NET Framework 目录添加到路径后，您可以使用以下命令将该存储过程示例编译到某一程序集中。 **Target**选项允许你将其编译到程序集。  
+ 一旦将 .NET Framework 目录添加到路径后，您可以使用以下命令将该存储过程示例编译到某一程序集中。 **/Target**选项，可以将其编译到程序集。  
   
  对于 Visual C# 源文件：  
   
@@ -181,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 存储过程](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [SQL Server 进程内特定 ADO.NET 扩展](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [SQL Server 进程内特定扩展 ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [调试 CLR 数据库对象](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [CLR 集成安全性](../../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

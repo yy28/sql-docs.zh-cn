@@ -2,7 +2,6 @@
 title: WriteText 方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2b12293935df6f9afaf6a1691e2decce3f6c6f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283186"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 将一个指定的文本字符串写入[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -41,10 +41,10 @@ Stream.WriteText Data, Options
  *数据*  
  A**字符串**值，该值包含要写入的字符中的文本。  
   
- *Options*  
- 選擇性。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，该值指定是否必须在指定的字符串的末尾写入的行的分隔符。  
+ *选项*  
+ 可选。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，该值指定是否必须在指定的字符串的末尾写入的行的分隔符。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  指定的字符串写入到**流**没有任何干预空格或每个字符串之间的字符的对象。  
   
  当前[位置](../../../ado/reference/ado-api/position-property-ado.md)设置为以下写入的数据的字符。 **WriteText**方法不截断流中的数据的其余部分。 如果要进行截断操作这些字符，调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
@@ -57,5 +57,5 @@ Stream.WriteText Data, Options
 ## <a name="applies-to"></a>适用范围  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Write 方法](../../../ado/reference/ado-api/write-method.md)

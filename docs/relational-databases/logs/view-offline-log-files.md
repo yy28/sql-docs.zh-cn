@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32945872"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="before-you-begin"></a>开始之前  
  若要连接到脱机日志文件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须安装在您用于查看脱机日志文件的计算机上，以及您查看的日志文件所在的计算机上。 如果两台计算机上都安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则您可以在任意一台计算机上查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的脱机文件，以及运行早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的脱机文件。  
   
- 如果正在使用已注册的服务器，您想要连接到的实例必须在 **“本地服务器组”** 或 **“中央管理服务器”**下注册。 实例可以单独进行注册，也可以注册为服务器组的成员。有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加到已注册的服务器的详细信息，请参阅以下主题：  
+ 如果正在使用已注册的服务器，您想要连接到的实例必须在 **“本地服务器组”** 或 **“中央管理服务器”** 下注册。 实例可以单独进行注册，也可以注册为服务器组的成员。有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加到已注册的服务器的详细信息，请参阅以下主题：  
   
 -   [创建或编辑服务器组 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   

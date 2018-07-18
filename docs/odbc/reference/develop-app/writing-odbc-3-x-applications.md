@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919142"
 ---
 # <a name="writing-odbc-3x-applications"></a>编写 ODBC 3.x 应用程序
 当一个 ODBC 2。*x*应用程序升级到 ODBC 3。*x*，以便它适用于这两个 ODBC 2 应编写它。*x*和 3。*x*驱动程序。 应用程序应满足条件的代码，以充分利用 ODBC 3。*x*功能。  

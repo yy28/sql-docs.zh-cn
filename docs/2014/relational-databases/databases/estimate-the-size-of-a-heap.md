@@ -1,0 +1,122 @@
+---
+title: 估计堆的大小 | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- disk space [SQL Server], indexes
+- estimating heap size
+- size [SQL Server], heap
+- space [SQL Server], indexes
+- heaps
+ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
+caps.latest.revision: 28
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd6d7c46c1f1aed62f0196640175bb566bca7471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203328"
+---
+# <a name="estimate-the-size-of-a-heap"></a>估计堆的大小
+  可以使用以下步骤估计在堆中存储数据所需的空间量：  
+  
+1.  指定表中显示的行数：  
+  
+     ***Num_Rows***  = 表中的行数  
+  
+2.  指定固定长度和可变长度列的数量，并计算存储所需的空间：  
+  
+     计算每组列在数据行中所占据的空间。 列的大小取决于数据类型和长度规定。  
+  
+     ***Num_Cols***  = 总列数（固定长度和可变长度）  
+  
+     ***Fixed_Data_Size***  = 所有固定长度列的总字节大小  
+  
+     ***Num_Variable_Cols***  = 可变长度列数  
+  
+     ***Max_Var_Size***  = 所有可变长度列的最大总字节大小  
+  
+3.  保留行中称为 Null 位图的部分以管理列的为空性。 计算其大小：  
+  
+     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+  
+     只应使用该表达式的整数部分。 而放弃所有余数。  
+  
+4.  计算可变长度数据的大小：  
+  
+     如果表中有可变长度列，请确定在行中存储这些列需使用的空间：  
+  
+     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+  
+     添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
+  
+    > [!NOTE]  
+    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`导致总定义的表的宽度超过 8,060 字节的列。 每一列的长度仍必须在 8,000 个字节的限制内`varchar`， `nvarchar,``varbinary`，或`sql_variant`列。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+  
+     如果没有可变长度列，请将 ***Variable_Data_Size*** 设置为 0。  
+  
+5.  计算总的行大小：  
+  
+     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+  
+     公式中的值 4 是数据行的行标题开销。  
+  
+6.  下一步，计算每页的行数（每页有 8096 个可用字节）：  
+  
+     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+  
+     因为行不跨页，所以每页的行数应向下舍入到最接近的整数。 公式中的数值 2 是计算行数时引入的行大小余量。  
+  
+7.  计算存储所有行所需的页数：  
+  
+     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+  
+     估计的页数应向上舍入到最接近的整数。  
+  
+8.  计算在堆中存储数据所需的空间量（每页的总字节为 8192）：  
+  
+     堆大小（字节）= 8192 x ***Num_Pages***  
+  
+ 此计算不考虑以下因素：  
+  
+-   分区  
+  
+     分区的空间开销很小，但是计算复杂。 是否包括它并不重要。  
+  
+-   分配页  
+  
+     至少有一个 IAM 页用于跟踪为堆分配的页，但是空间开销很小，并且没有算法可以精确地计算出要使用的 IAM 页数。  
+  
+-   大型对象 (LOB) 值  
+  
+     要确定将完全使用多少空间来存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， **ntextxml**，和`image`值很复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
+  
+-   压缩  
+  
+     无法预先计算压缩堆的大小。  
+  
+-   稀疏列  
+  
+     有关稀疏列的空间要求的信息，请参阅 [Use Sparse Columns](../tables/use-sparse-columns.md)。  
+  
+## <a name="see-also"></a>请参阅  
+ [堆（没有聚集索引的表）](../indexes/heaps-tables-without-clustered-indexes.md)   
+ [描述的聚集索引和非聚集索引](../indexes/clustered-and-nonclustered-indexes-described.md)   
+ [创建聚集索引](../indexes/create-clustered-indexes.md)   
+ [创建非聚集索引](../indexes/create-nonclustered-indexes.md)   
+ [估计表的大小](estimate-the-size-of-a-table.md)   
+ [估计聚集索引的大小](estimate-the-size-of-a-clustered-index.md)   
+ [估计非聚集索引的大小](estimate-the-size-of-a-nonclustered-index.md)   
+ [估计数据库的大小](estimate-the-size-of-a-database.md)  
+  
+  

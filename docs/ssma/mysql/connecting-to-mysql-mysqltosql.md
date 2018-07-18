@@ -1,8 +1,6 @@
 ---
 title: 连接到 MySQL (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44874d6ddcb4482ecedea8e94dd7c4bac4a1c01d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8784c672efc9a991d446a9b2016df8e943a05db7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775703"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，你必须连接到你想要迁移的 MySQL 数据库。 连接时，SSMA 获取有关所有 MySQL 架构，元数据，然后在 MySQL 元数据资源管理器窗格中显示内容。 SSMA 存储有关数据库服务器的信息，但不会存储密码。  
@@ -71,18 +70,18 @@ ms.lasthandoff: 05/03/2018
   
 5.  **SSL:** 如果你想要安全地连接到 MySQL，请通过检查使用的安全套接字层 (SSL) **SSL**复选框。  
   
-6.  **配置：**它提供一个选项以配置 MySQL 通过安全套接字层 (SSL) 的连接。  
+6.  **配置：** 它提供一个选项以配置 MySQL 通过安全套接字层 (SSL) 的连接。  
   
     > [!NOTE]  
     > 若要启用**配置**，SSL 必须设置为**True**。  
   
     单击"配置"按钮，会出现一个对话框。 若要使用加密，而必须连接到 MySQL 数据库，对以下三个证书文件在对话框中存在的路径定义 [隐私增强邮件证书 (PEM)]:  
   
-    -   **SSL 证书颁发机构：**的信任 SSL Ca 的列表中指定文件的路径。  
+    -   **SSL 证书颁发机构：** 的信任 SSL Ca 的列表中指定文件的路径。  
   
-    -   **SSL 证书：**指定要用于建立安全连接使用的 SSL 证书文件的名称。  
+    -   **SSL 证书：** 指定要用于建立安全连接使用的 SSL 证书文件的名称。  
   
-    -   **SSL 密钥：**指定 SSL 密钥文件用于建立的安全连接的名称。  
+    -   **SSL 密钥：** 指定 SSL 密钥文件用于建立的安全连接的名称。  
   
     > [!NOTE]  
     > -   **确定**按钮启用时提供了所需的信息。 如果任何文件路径无效，"确定"按钮将一直保持禁用。  
@@ -116,11 +115,11 @@ ms.lasthandoff: 05/03/2018
   
     -   若要查看的颜色编码定义，请单击**图例**按钮。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

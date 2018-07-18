@@ -26,21 +26,22 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908702"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>时间和日期函数 （Visual FoxPro ODBC 驱动程序）
 下表列出了 Visual FoxPro ODBC 驱动程序; 支持的 ODBC 的日期和时间函数当相同的功能的 Visual FoxPro 语法不同于 ODBC 语法，将列等效 Visual FoxPro。  
   
 |ODBC 语法|Visual FoxPro 语法|  
 |------------------|---------------------------|  
-|CURDATE*（)*|日期*（)*|  
-|CURTIME*（)*|时间*（)*|  
+|CURDATE *（)*|日期 *（)*|  
+|CURTIME *（)*|时间 *（)*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|天*（)*|  
+|DAYOFMONTH (*date_exp)*|天 *（)*|  
 |小时 *(time_exp)*||  
 |分钟 *(time_exp)*||  
 |月 *(time_exp)*||  
 |月份名称 *(date_exp)*|CMONTH *(date_exp)*|  
-|现在*（)*|DATETIME*（)*|  
+|现在 *（)*|DATETIME *（)*|  
 |第二个 *(time_exp)*|每秒 *(time_exp)*|  
 |周 *(date_exp)*||  
 |年 *(date_exp)*||  

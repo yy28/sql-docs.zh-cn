@@ -2,7 +2,6 @@
 title: 流对象 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08154406d90345fc995fe6eca512290936ab4d83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 591bf956cea85979f72bb513cb08c48f86883aa3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282596"
 ---
 # <a name="stream-object-ado"></a>流对象 (ADO)
 表示二进制数据或文本的流。  
@@ -80,5 +80,5 @@ ms.lasthandoff: 05/03/2018
   
 -   [流对象属性、 方法和事件](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录和流](../../../ado/guide/data/records-and-streams.md)

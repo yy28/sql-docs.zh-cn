@@ -2,7 +2,6 @@
 title: Execute21 方法 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1136e547d464f511aff92f4a6805da0262c7ed35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfe6de22f60ff43ab41144f0ee2e6e0fbb667766
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288326"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 执行该请求，并使用 ADO 记录集在创建 ADO 2.1。  
@@ -73,7 +73,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  包含安全数组的参数定义一个变体。 如果*GetInfo*选项中指定*lExecuteOptions*，此参数用于返回从 OLE DB 提供程序获取的参数定义。 否则，此参数可能为空。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *HandlerString*参数可以为 null。 在这种情况下会发生取决于如何配置的 RDS 服务器。 "MSDFMAP.handler"的处理程序字符串指示应使用 Microsoft 提供处理程序 (Msdfmap.dll)。 "MASDFMAP.handler,sample.ini"的处理程序字符串指示应使用 Msdfmap.dll 处理程序和自变量"sample.ini"，应传递到处理程序。 MSDFMAP.dll 将解释为一个方向，若要使用 sample.ini 检查连接和查询字符串参数。  
   
 > [!NOTE]

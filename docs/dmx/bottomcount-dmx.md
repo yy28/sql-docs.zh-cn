@@ -1,31 +1,20 @@
 ---
 title: BottomCount (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- BOTTOMCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomCount function
-ms.assetid: bbe2f1d6-c8b5-49ce-ae13-337114a50aee
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6301719854c05bd6243df446a5f6f2cdfab52402
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 0b844f4337a0d09a9457da0658b44e8225f6c224
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843030"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由提供的值\<排名表达式 > 自变量确定中提供的行级别的递增顺序\<表表达式 > 自变量，并在指定的最底部的行数\<计数 > 返回自变量。  
   
 ## <a name="examples"></a>示例  
@@ -66,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -102,7 +91,7 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
@@ -110,7 +99,7 @@ NATURAL PREDICTION JOIN
   
  **请注意**提供了此示例仅为说明 BottomCount 使用。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34576269"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 元素 (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
 |---------------|-----------------|  
 |CellOrdinal|所需**unsignedInt**属性。 多维数据集中单元的序号位置。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在父级中**根**元素，**轴**元素后跟**CellData**元素的一个集合**单元格**包含的元素在多维数据集中返回每个单元格属性值。 **单元格**元素包含**CellOrdinal**属性，它指明的单元格集中的多维数据集，并为每个单元格属性值的一个元素的从零开始的序号位置与单元格关联。 在每个单元格属性值**单元格**由单独的 XML 元素定义元素。 单元格属性的值是 XML 元素和单元格属性的名称包含的数据中定义**CellInfo**父根元素，元素对应于 XML 元素的名称。  
   
  下列语法对单元属性值进行了说明：  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  只可为 VALUE 单元属性指定单元属性值的数据类型。 其他单元格属性的数据类型由中包含的单元格属性定义**CellInfo**元素。 如果指定默认值，可以排除的单元格属性值元素 (通过包括**默认**单元格属性定义中包含的元素**CellInfo**元素) 的单元格属性，或如果没有默认值已指定并且单元格属性的值为 null。  
   
 ## <a name="cell-property-errors"></a>单元属性错误  
- 如果不能将单元格属性返回因的实例发生的错误而[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，例如防止将值对于给定的单元格，返回的计算错误**错误**元素的问题的单元格属性的内容替换。 下面的 XML 示例介绍了一个单元属性错误：  
+ 如果不能将单元格属性返回因例如防止将值对于给定的单元格，返回的计算错误的 Analysis Services 实例发生的错误而**错误**元素替换的内容单元格属性问题。 下面的 XML 示例介绍了一个单元属性错误：  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDDataSet 数据类型 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另请参阅
+ [MDDataSet 数据类型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

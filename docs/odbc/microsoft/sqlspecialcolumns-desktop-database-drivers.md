@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902882"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns （桌面数据库驱动程序）
 唯一索引将返回 （如果存在） SQL_BEST_ROWID 标志*fColType*。 将 SQL_ROWVER 标志不返回任何结果集。  

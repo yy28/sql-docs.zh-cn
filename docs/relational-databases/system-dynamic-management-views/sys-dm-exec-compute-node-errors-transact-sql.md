@@ -27,29 +27,30 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4038eed706e25ae779d6f0a2fd16babb5a951fac
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048755"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  出现的 PolyBase 的返回错误的计算节点。  
+  返回错误 PolyBase 中发生的计算节点。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|与错误关联的唯一数字 id。|在系统中的所有查询错误唯一|  
+|error_id|**nvarchar(36)**|与错误关联的唯一数字 id。|唯一跨系统中的所有查询错误|  
 |源 (source)|**nvarchar(255)**|源线程或进程说明||  
-|type|**nvarchar(255)**|错误类型。||  
+|type|**nvarchar(255)**|错误的类型。||  
 |create_time|**datetime**|错误出现的时间||  
-|compute_node_id|**int**|特定的计算节点标识符|请参阅的 compute_node_id [sys.dm_exec_compute_nodes &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|PolyBase 查询，如果任何标识符。||  
-|spid|**int**|SQL Server 会话标识符||  
+|compute_node_id|**int**|特定的计算节点的标识符|请参阅的 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|rexecution_id|**nvarchar(36)**|如果任何 PolyBase 查询的标识符。||  
+|spid|**int**|SQL Server 会话的标识符||  
 |thread_id|**int**|发生错误的线程的数字标识符。||  
 |详细信息|nvarchar(4000)|错误的详细信息的完整说明。||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [PolyBase 使用动态管理视图进行故障排除](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

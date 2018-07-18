@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4b4e9cd95db8a42f4a3e13962770aa018deeec2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401349"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -127,7 +126,7 @@ ms.lasthandoff: 05/03/2018
 >  若要从使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 或更低版本的数据源加载数据，请使用 Excel 源。 有关详细信息，请参阅 [Excel 源编辑器（“连接管理器”页）](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)。  
   
 > [!NOTE]  
->  OLE DB 源的 **CommandTimeout** 属性未在 **“OLE DB 源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关此属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“Excel 源”部分。  
+>  OLE DB 源的 **CommandTimeout** 属性未在 **“OLE DB 源编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 有关此属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“Excel 源”部分。  
   
 ### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>打开“OLE DB 源编辑器”（“连接管理器”页）  
   
@@ -147,7 +146,7 @@ ms.lasthandoff: 05/03/2018
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |表或视图|从 OLE DB 数据源中的表或视图中检索数据。|  
 |表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息：** [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

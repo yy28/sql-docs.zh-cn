@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470288"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +198,7 @@ ms.lasthandoff: 05/14/2018
  MAXDOP number  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 对于指定了 max degree of parallelism 配置选项的查询，会覆盖 sp_configure 和 Resource Governor 的该选项。 MAXDOP 查询提示可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用 Resource Governor 配置的值，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 Resource Governor MAXDOP 值（如 [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 对于指定了 max degree of parallelism 配置选项的查询，会覆盖 sp_configure 和 Resource Governor 的该选项。 MAXDOP 查询提示可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用 Resource Governor 配置的值，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 Resource Governor MAXDOP 值（如 [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!WARNING]     
 > 如果 MAXDOP 设置为零，服务器将选择最大并行度。  
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  针对需要对其执行基数估计的任何前导索引列，启用自动生成的快速统计信息（直方图修正）。 用于评估基数的直方图将在查询编译时针对此列的实际最大值或最小值进行调整。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 等效。 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查询优化器[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，导致 SQL Server 使用联接的简单包含假设而非默认的基本包含假设来生成查询计划。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 等效。 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查询优化器[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用联接的简单包含假设而非默认的基本包含假设来生成查询计划。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 等效。 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  强制查询优化器使用与当前数据库兼容级别相对应的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示替代[数据库作用域域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION=ON 或[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
-* “DISABLE_INTERLEAVED_EXECUTION_TVF”对多语句表值函数禁用交错执行。
-* “DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK”禁用批处理模式内存授予反馈。
-* “DISABLE_BATCH_MODE_ADAPTIVE_JOINS”禁用批处理模式自适应联接。
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+ 禁用多语句表值函数的交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+ 禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
+ 禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
  
 > [!TIP]
 > 提示名称不区分大小写。
@@ -328,7 +332,7 @@ TABLE HINT (exposed_object_name [ , \<table_hint> [ [, ]...n ] ] ) 将指定表�
 -   动态管理视图  
 -   命名子查询  
   
- 可以为没有任何现有表提示的查询指定 INDEX、FORCESCAN 和 FORCESEEK 表提示作为查询提示，这些提示也可用于分别替换查询中的现有 INDEX、FORCESCAN 或 FORCESEEK 提示。 不允许将非 INDEX、FORCESCAN 和 FORCESEEK 的表提示用作查询提示，除非该查询已经具有一个指定该表提示的 WITH 子句。 这种情况下，还必须使用 OPTION 子句中的 TABLE HINT 来将匹配的提示指定为查询提示，以保留查询的语义。 例如，如果查询包含表提示 NOLOCK，则计划指南的 @hints 参数中的 OPTION 子句必须也包含 NOLOCK 提示。 请参阅示例 K。当通过使用 OPTION 子句中的 TABLE HINT 指定了非 INDEX、FORCESCAN 或 FORCESEEK 的表提示，而未指定匹配的查询提示，或指定了后者而未指定前者时，将会引发错误 8702（表示 OPTION 子句可能会导致查询的语义发生变化），该查询将失败。  
+可以为没有任何现有表提示的查询指定 INDEX、FORCESCAN 和 FORCESEEK 表提示作为查询提示，这些提示也可用于分别替换查询中的现有 INDEX、FORCESCAN 或 FORCESEEK 提示。 不允许将非 INDEX、FORCESCAN 和 FORCESEEK 的表提示用作查询提示，除非该查询已经具有一个指定该表提示的 WITH 子句。 这种情况下，还必须使用 OPTION 子句中的 TABLE HINT 来将匹配的提示指定为查询提示，以保留查询的语义。 例如，如果查询包含表提示 NOLOCK，则计划指南的 @hints 参数中的 OPTION 子句必须也包含 NOLOCK 提示。 请参阅示例 K。当通过使用 OPTION 子句中的 TABLE HINT 指定了非 INDEX、FORCESCAN 或 FORCESEEK 的表提示，而未指定匹配的查询提示，或指定了后者而未指定前者时，将会引发错误 8702（表示 OPTION 子句可能会导致查询的语义发生变化），该查询将失败。  
   
 ## <a name="examples"></a>示例  
   

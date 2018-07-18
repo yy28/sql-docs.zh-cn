@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027594"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
 
@@ -65,13 +66,13 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 SharePoint 管理中心中，选择“备份和还原”组中的“执行备份”。  
   
-2.  在 **“共享服务”** 节点下，展开 **“共享服务应用程序”** ，然后选择您的服务应用程序。 该应用程序将具有 **“SQL Server Reporting Services 服务应用程序”**类型。  
+2.  在 **“共享服务”** 节点下，展开 **“共享服务应用程序”** ，然后选择您的服务应用程序。 该应用程序将具有 **“SQL Server Reporting Services 服务应用程序”** 类型。  
   
 3.  选择“下一步” 。  
   
 4.  键入“备份位置:”的路径，然后选择“开始备份”  
   
-5.  重复上述过程，而不是选择服务应用程序，展开 **“共享服务代理”** 节点，然后选择服务应用程序代理。 该应用程序将具有 **“SQL Server Reporting Services 服务应用程序代理”**类型。  
+5.  重复上述过程，而不是选择服务应用程序，展开 **“共享服务代理”** 节点，然后选择服务应用程序代理。 该应用程序将具有 **“SQL Server Reporting Services 服务应用程序代理”** 类型。  
   
  有关详细信息，请参阅 SharePoint 文档中的以下主题：  
   

@@ -3,8 +3,6 @@ title: SQL Server Migration Assistant |Microsoft 文档
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778103"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server 迁移助手 (SSMA) 是旨在自动数据库迁移到 SQL Server 从 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 工具。  
@@ -104,4 +103,3 @@ SQL Server 文档中显示的内容仅在经过充分测试后才发布。 产�
 客户不得使用未记录的 API，其中包括但不限于：存储过程、扩展存储过程、函数、视图、表、列、属性或元数据。 Microsoft 客户支持不支持数据库或应用程序利用或使用未说明的入口点。  
   
 对于利用和使用未记录的入口点的应用程序和数据库，升级至 SQL Server 的未来版本的服务器和数据库未得到保证。 必须将 SQL Server 特性和功能的使用限制为 Microsoft SQL Server 文档中包含的内容。 如果功能未在 Microsoft SQL Server 文档中记录，则它不属于 SQL Server 支持的部分。  
-  

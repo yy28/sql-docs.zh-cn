@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036134"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
 
@@ -355,7 +356,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
-2.  单击 **“桌面”**、 **“我的文档”**或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
+2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
 3.  在“名称”中，用选择的名称替换默认名称。 
   

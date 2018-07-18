@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909572"
 ---
 # <a name="applications"></a>应用程序
 *应用程序*是一个程序，调用 ODBC API 访问数据。 虽然许多类型的应用程序可能，但大多数分为三个类别，用作本指南中的示例。  

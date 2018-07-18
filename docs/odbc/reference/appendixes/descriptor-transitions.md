@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907692"
 ---
 # <a name="descriptor-transitions"></a>描述符转换
 ODBC 描述符具有以下三种状态。  

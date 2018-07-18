@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e156eea066ba43e6debc63be47b45fd18dcd9a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405299"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features 和 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中控制流故障的功能和工具。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了十个可以在所有任务和容器上启用的中断条件。 在 **“设置断点”** 对话框中，可根据下列条件启用断点：  
   
-|中断条件|Description|  
+|中断条件|描述|  
 |---------------------|-----------------|  
 |当任务或容器收到 **OnPreExecute** 事件时。|任务将要执行时调用。 此事件由任务或容器在其运行前一刻引发。|  
 |当任务或容器收到 **OnPostExecute** 事件时。|任务的执行逻辑完成后立即调用。 此事件由任务或容器在其运行后引发。|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍命中计数类型。  
   
-|命中计数类型|Description|  
+|命中计数类型|描述|  
 |--------------------|-----------------|  
 |始终|断点命中时始终挂起执行。|  
 |命中计数等于|断点发生的次数等于命中计数时挂起执行。|  
@@ -113,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍这些窗口。  
   
-|窗口|Description|  
+|窗口|描述|  
 |------------|-----------------|  
 |断点|列出包中的断点并提供启用和删除断点的选项。|  
 |“输出”|显示 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中各功能的状态消息。|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **命中计数类型**  
  指定断点生效的时间。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**始终**|断点命中时始终挂起执行。|  
 |**命中计数等于**|断点发生的次数等于命中计数时挂起执行。|  

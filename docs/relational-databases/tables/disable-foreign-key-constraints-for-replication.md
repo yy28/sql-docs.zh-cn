@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33006406"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>对复制禁用外键约束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -56,11 +57,11 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>对复制禁用外键约束  
   
-1.  在 **“对象资源管理器”**中，展开具有要修改的外键约束的表，再展开 **“键”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，展开具有要修改的外键约束的表，再展开 **“键”** 文件夹。  
   
 2.  右键单击外键约束，再单击“修改”。  
   
-3.  在 **“外键关系”** 对话框，针对 **“强制用于复制”** 选择 **“否”**值。  
+3.  在 **“外键关系”** 对话框，针对 **“强制用于复制”** 选择 **“否”** 值。  
   
 4.  单击 **“关闭”**。  
   

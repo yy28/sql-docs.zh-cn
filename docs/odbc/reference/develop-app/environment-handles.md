@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911432"
 ---
 # <a name="environment-handles"></a>环境句柄
 *环境*是用于访问数据的全局上下文; 与环境相关是任何信息，全局本质，如：  

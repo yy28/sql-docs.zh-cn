@@ -25,7 +25,6 @@
 ## [使用复制数据库向导](use-the-copy-database-wizard.md)  
 ## [通过备份和还原来复制数据库](copy-databases-with-backup-and-restore.md)  
 ## [发布数据库 (SQL Server Management Studio)](publish-a-database-sql-server-management-studio.md)  
-## [将 SQL Server 数据库部署到 Microsoft Azure 虚拟机](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
 # [数据库分离和附加](database-detach-and-attach-sql-server.md)  
 ## [通过分离和附加来移动数据库 (Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)  
 ## [使用分离和附加来升级数据库 (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)  

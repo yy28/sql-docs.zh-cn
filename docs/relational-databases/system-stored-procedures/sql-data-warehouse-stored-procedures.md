@@ -1,33 +1,31 @@
 ---
-title: SQL 数据仓库存储的过程 |Microsoft 文档
+title: SQL 数据仓库存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod_service: sql-data-warehouse
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
-caps.latest.revision: 4
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b2949d4f5d75de5a35a69ad895a6d270e9b5c60
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.openlocfilehash: b3d5174c871d25c37a299e7d24b0aab9a32bf2af
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037725"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL 数据仓库存储的过程
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 提供可用于执行与数据库角色相关的操作的内置过程。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 包括以下系统过程：  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 提供了可用于执行与数据库角色相关的操作的内置过程。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 包括下列系统过程：  
   
 ##  <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
@@ -44,9 +42,9 @@ ms.lasthandoff: 05/17/2018
  [sp_special_columns_100 &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  某些实例中仅使用存储的过程的其他系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或通过客户端 Api 并且不应为常规客户使用。 这些过程将列在[系统存储过程 (TRANSACT-SQL)](http://msdn.microsoft.com/en-us/library/ms187961.aspx)。 这些过程可能有所更改，并不保证兼容性。 在列表上的所有过程中都均不提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+>  某些实例中仅使用存储的过程的其他系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或通过客户端 Api，不应为一般客户使用。 这些过程均列在[系统存储过程 (Transact SQL)](http://msdn.microsoft.com/en-us/library/ms187961.aspx)。 这些过程可能会有所变动，不保证兼容性。 在列表上的所有过程中都均不提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储函数&#40;Transact SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   

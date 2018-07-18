@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030414"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>ConfigurationSetting 方法 - RestoreEncryptionKey
   将指定的加密密钥重新应用于报表服务器数据库。  

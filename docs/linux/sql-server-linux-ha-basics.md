@@ -16,6 +16,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34324058"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>SQL Server 可用性 Linux 部署的基础知识
 

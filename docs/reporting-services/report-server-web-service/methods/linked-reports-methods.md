@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025484"
 ---
 # <a name="linked-reports-methods"></a>链接报表方法
   可以使用这些方法来创建和管理链接的项。  

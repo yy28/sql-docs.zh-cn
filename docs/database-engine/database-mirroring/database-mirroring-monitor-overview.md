@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,11 +18,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 613c588ff3807aa767b9702a56edabeb1001fa42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311946"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  \<Status>  
  可能的状态及其相关图标如下所示：  
   
-|图标|“登录属性”|Description|  
+|图标|“登录属性”|描述|  
 |----------|------------|-----------------|  
 |警告图标|**Unknown**|监视器未与任一伙伴建立连接。 唯一可用的信息是监视器缓存的内容。|  
 |警告图标|**正在同步**|镜像数据库的内容滞后于主体数据库的内容。 主体服务器实例正在向镜像服务器实例发送日志记录，这会对镜像数据库应用更改，使其前滚。<br /><br /> 在数据库镜像会话开始时，镜像数据库和主体数据库处于此状态。|  
@@ -91,14 +91,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="action-menu"></a>“操作”菜单  
  **“操作”** 菜单总是包含以下命令：  
   
-|Command|Description|  
+|Command|描述|  
 |-------------|-----------------|  
 |**注册镜像数据库...**|打开 **“注册镜像数据库”** 对话框。 使用此对话框，通过向数据库镜像监视器添加一个或多个数据库，可在给定的服务器实例中注册一个或多个镜像数据库。 添加数据库时，数据库镜像监视器会在本地缓存有关数据库及其伙伴的信息，以及如何将数据库连接到伙伴的信息。|  
 |**管理服务器实例连接...**|选择该命令时，将打开 **“管理服务器连接”** 对话框。 在此，您可以选择要指定凭据的服务器实例，以便监视器在连接到给定伙伴时使用该凭据。<br /><br /> 若要编辑伙伴的凭据，请在 **“服务器实例”** 网格中找到对应条目，并在该行中单击 **“编辑”** 。 此时将显示 **“连接到服务器”** 对话框，其中固定了服务器实例名称并且将凭据控制初始化为当前的缓存值。 根据需要更改身份验证信息，并单击 **“连接”**。 如果凭据有足够的权限，则会以新凭据更新 **“连接方式”** 列。|  
   
  如果选定了一个数据库， **“操作”** 菜单还将包含以下命令。  
   
-|Command|Description|  
+|Command|描述|  
 |-------------|-----------------|  
 |**撤消注册此数据库**|从数据库镜像监视器中删除选定的数据库。|  
 |**设置警告阈值…**|打开 **“设置警告阈值”** 对话框。 在此，系统管理员可以在每个伙伴上启用或禁用数据库警告，并可更改每个警告的阈值。 建议您在两个伙伴上都为给定警告设置阈值，以确保数据库进行故障转移时，警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。<br /><br /> 更新状态表时，只有在性能值处于或高于阈值的情况下，才会将事件写入性能的事件日志。 如果峰值在两次状态更新之间瞬间达到阈值，峰值将丢失。|  

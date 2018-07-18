@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019964"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
 #### <a name="to-create-a-query-against-the-data-mining-schema-rowset"></a>对数据挖掘架构行集创建查询  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“新建查询”** 工具栏中，单击 **“Analysis Services DMX 查询”**或 **“Analysis Services MDX 查询”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“新建查询”** 工具栏中，单击 **“Analysis Services DMX 查询”** 或 **“Analysis Services MDX 查询”**。  
   
 2.  在 **“连接到 Analysis Services”** 对话框中，选择包含要查询的对象的实例，然后单击 **“连接”**。  
   

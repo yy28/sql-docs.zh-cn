@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-registration
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e027f624cf4a2fa07ac163b025f7e353fbca450
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2efe91607fc1198fb218b5f979b154f3b21929ed
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798292"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>创建中央管理服务器和服务器组
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在“新建服务器注册”对话框中，从服务器下拉列表中选择要作为中央管理服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 必须为此中央管理服务器使用 Windows 身份验证。  
   
-4.  在 **“已注册的服务器”**中，输入服务器名称和可选说明。  
+4.  在 **“已注册的服务器”** 中，输入服务器名称和可选说明。  
   
 5.  在 **“连接属性”** 选项卡上，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)。  
   
@@ -75,9 +74,9 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>创建新服务器组并向该组添加服务器  
   
-1.  在 **“已注册的服务器”**中，展开 **“中央管理服务器”**。 右键单击在上述步骤中添加的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后选择“新建服务器组”。  
+1.  在 **“已注册的服务器”** 中，展开 **“中央管理服务器”**。 右键单击在上述步骤中添加的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后选择“新建服务器组”。  
   
-2.  在 **“新建服务器组属性”**中，输入组名和可选说明。  
+2.  在 **“新建服务器组属性”** 中，输入组名和可选说明。  
   
 3.  在“已注册的服务器”中，右键单击服务器组，然后单击“新建服务器注册”。  
   

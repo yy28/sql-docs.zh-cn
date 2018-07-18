@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024004"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>交互式排序（报表生成器和 SSRS）
   对于表中的行或矩阵中的行和列，可以添加交互式排序按钮，以便用户能够在升序和降序顺序之间切换。 交互式排序最常见的用途是向每一个列标题添加一个排序按钮。 这样，用户就可以选择要按哪个列排序。  

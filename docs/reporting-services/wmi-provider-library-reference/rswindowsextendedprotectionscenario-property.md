@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031564"
 ---
 # <a name="rswindowsextendedprotectionscenario-property"></a>RSWindowsExtendedProtectionScenario 属性
   返回一个字符串值，该值指示报表服务器配置为允许的扩展保护方案。  

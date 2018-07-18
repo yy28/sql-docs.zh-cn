@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34030928"
 ---
 # <a name="distribution-element-assl"></a>Distribution 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 |子元素|无|  
   
 ## <a name="remarks"></a>注释  
- 可用于值**分发**元素，如*正常*或*统一，*特定于每个挖掘算法提供程序。 有关有效的详细信息**分发**值，请参阅挖掘算法提供程序文档。  
+ 可用于值**分发**元素，如*正常*或*统一，* 特定于每个挖掘算法提供程序。 有关有效的详细信息**分发**值，请参阅挖掘算法提供程序文档。  
   
  对父级的对应的元素**分发**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022484"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32864462"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，右键单击服务器，再单击“属性”。  
   
-2.  在 **“安全性”** 页上的 **“服务器身份验证”**下，选择新的服务器身份验证模式，再单击 **“确定”**。  
+2.  在 **“安全性”** 页上的 **“服务器身份验证”** 下，选择新的服务器身份验证模式，再单击 **“确定”**。  
   
 3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框中，单击 **“确定”** 以确认需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

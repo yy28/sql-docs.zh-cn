@@ -1,26 +1,25 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out Master | Microsoft Docs
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: 本文介绍 SSIS Scale Out 的 Scale Out Master 组件
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2f0e604ff66388d351cbb4cf7092c0b6fe5edfea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d404552fe71cf79cda57a7d204a5c2263f8e2e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405549"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
 Scale Out Master 通过 SSISDB 目录和 Scale Out Master 服务来管理 Scale Out 系统。 
@@ -50,7 +49,7 @@ Scale Out Master 服务是一项 Windows 服务，负责与 Scale Out Worker 的
 使用 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` 文件配置 Scale Out Master 服务。 更新配置文件之后，必须重启服务。
 
 
-配置  |Description  |“默认值”  
+配置  |描述  |“默认值”  
 ---------|---------|---------
 PortNumber|用于与 Scale Out Worker 进行通信的网络端口号。|8391         
 SSLCertThumbprint|用于保护与 Scale Out Worker 之间通信的 SSL 证书的指纹。|SSL 证书的指纹在 Scale Out Master 安装期间指定         

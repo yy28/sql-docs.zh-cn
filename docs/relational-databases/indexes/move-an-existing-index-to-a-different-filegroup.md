@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32940262"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  右键单击要移动的索引，然后选择“属性”。  
   
-6.  在 **“选择页”**下，选择 **“存储”**。  
+6.  在 **“选择页”** 下，选择 **“存储”**。  
   
 7.  选择移动此索引的目标文件组。  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

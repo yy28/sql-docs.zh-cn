@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028144"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
  在本示例中， `MyField` 的最高值的颜色将为 Red，而所有其他数据点的颜色将为 Green。 当在序列上使用 **“填充”** 属性来指定该序列的颜色时，图表将覆盖在调色板中指定的颜色。 有关详细信息，请参阅 [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在图表上定位数据点标签  
- 对于所有图表类型，右键单击图表并选择 **“显示数据标签”**后可以显示数据点标签。 数据点标签的位置是根据图表类型指定的：  
+ 对于所有图表类型，右键单击图表并选择 **“显示数据标签”** 后可以显示数据点标签。 数据点标签的位置是根据图表类型指定的：  
   
 -   在条形图中，可以使用 **BarLabelStyle** 自定义属性重新定位数据点标签。 有四个可能位置：外部、左侧、中间和右侧。 当条形标签样式设置为“外部”时，只要图表区放得下，标签就将定位到图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将定位到图条内。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在堆积图中，数据点标签始终位于序列内，并忽略序列标签上的 **“位置”** 属性。  
   
--   在所有其他图表类型中，可以使用序列标签上的 **“位置”** 属性来重新定位数据点标签。 默认情况下，图表自动计算数据点标签的位置，以便避免标签冲突。 设置 **“位置”**的值之后，所有数据点标签将按照相同方式定位，这可能导致标签重叠。 仅当具有较少的数据点时，请考虑使用该方法。  
+-   在所有其他图表类型中，可以使用序列标签上的 **“位置”** 属性来重新定位数据点标签。 默认情况下，图表自动计算数据点标签的位置，以便避免标签冲突。 设置 **“位置”** 的值之后，所有数据点标签将按照相同方式定位，这可能导致标签重叠。 仅当具有较少的数据点时，请考虑使用该方法。  
   
  有关详细信息，请参阅[图表中的位置标签（报表生成器和 SSRS）](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)。  
   

@@ -2,10 +2,10 @@
 title: 分布式查询支持架构行集在 |Microsoft 文档
 description: 分布式查询中架构行集的支持
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a3d6af2c655c04b3b1e69318d6b829a372b446bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c996768d8b2c0aaf2c2f622add33ffdf5aab3e89
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611612"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>架构行集的分布式的查询支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   若要支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询，SQL Server 的 OLE DB 驱动程序**IDBSchemaRowset**接口返回链接服务器上的元数据。  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server 的 OLE DB 驱动程序定义的架构行集 LINKEDSERVERS，返回已注册为链接服务器的 OLE DB 数据源的列表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [架构行集支持&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 行集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   

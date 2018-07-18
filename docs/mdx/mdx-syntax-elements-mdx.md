@@ -1,6 +1,6 @@
 ---
 title: MDX 语法元素 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b530205a5165c9be77710bf86e8600174be890dc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3c976cd33e73828698eac0ac43b5cd6878ac36b0
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581019"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742236"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX 语法元素 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多维表达式 (MDX) 具有一些由大多数语句使用或受其影响的元素：  
   
@@ -25,7 +25,7 @@ ms.locfileid: "34581019"
 |----------|----------------|  
 |[标识符](../mdx/identifiers-mdx.md)|标识符是对象（如多维数据集、维度、成员和度量值）的名称。|  
 |**数据类型**|定义单元、成员属性和单元属性中包含的数据的类型。 MDX 只支持 OLE VARIANT 数据类型。 有关 VARIANT 数据类型的强制、转换和操作的详细信息，请参阅 Platform SDK 文档中的“VARIANT 和 VARIANTARG”。|  
-|[表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)|表达式是语法的单元， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可以解析为单个 （标量） 值或对象。 表达式包含返回单个值、集表达式等的函数。|  
+|[表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)|表达式是语法的 Analysis Services 可以解析为单个 （标量） 值或对象的单元。 表达式包含返回单个值、集表达式等的函数。|  
 |[运算符](../mdx/operators-mdx-syntax.md)|运算符是与一个或多个简单的 MDX 表达式一起使用、以构成更复杂的 MDX 表达式的语法元素。|  
 |[函数](../mdx/functions-mdx-syntax.md)|函数是可以接受零个、一个或多个输入值并返回一个标量值或对象的语法元素。 示例包括[总和](../mdx/sum-mdx.md)添加多个值，函数[成员](../mdx/members-set-mdx.md)函数返回一组的成员从维度或级别上，依次类推。|  
 |[注释](../mdx/comments-mdx-syntax.md)|注释是插入到 MDX 语句或脚本中，用来说明语句用途的文本段。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不会执行注释。|  

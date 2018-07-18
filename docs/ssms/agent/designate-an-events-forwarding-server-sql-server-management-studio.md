@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33042194"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,9 +62,9 @@ ms.lasthandoff: 05/03/2018
   
 3.  在“SQL Server 代理属性 – server_name”对话框的“选择页”下，选择“高级”。  
   
-4.  在 **“SQL Server 事件转发”**下，选中 **“将事件转发到其他服务器”** 复选框。  
+4.  在 **“SQL Server 事件转发”** 下，选中 **“将事件转发到其他服务器”** 复选框。  
   
-5.  在 **“服务器”** 列表中，选择一台服务器，然后在 **“事件”**选择下列操作之一：  
+5.  在 **“服务器”** 列表中，选择一台服务器，然后在 **“事件”** 选择下列操作之一：  
   
     -   选择 **“未处理的事件”** 以仅转发本地警报未处理的事件。  
   

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913192"
 ---
 # <a name="role-of-the-driver-manager"></a>角色的驱动程序管理器
 驱动程序管理器确定最终顺序返回它所生成的状态记录。 具体而言，它确定哪一记录具有最高排名，并首先返回。 该驱动程序负责排序它生成的状态记录。 如果状态记录发布的驱动程序管理器和驱动程序，驱动程序管理器负责对数据进行排序。 有关详细信息，请参阅[状态记录序列](../../../odbc/reference/develop-app/sequence-of-status-records.md)。  

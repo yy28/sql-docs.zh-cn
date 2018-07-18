@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912392"
 ---
 # <a name="header-files"></a>标头文件
 Sql.h 标头文件包含函数和核心 ODBC 接口一致性级别中的功能的原型。 Sqlext.h 标头文件包含为函数和中的级别 1 和级别 2 API 一致性级别的功能的原型。 Sqltypes.h 标头文件包含类型定义和 SQL 数据类型的指示符。  

@@ -1,5 +1,5 @@
 ---
-title: 使用同义词 |Microsoft 文档
+title: 使用同义词 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,15 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d4971819e0731a5e72bd281f216a7afa4310dac1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000879"
 ---
 # <a name="using-synonyms"></a>使用同义词
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  同义词是架构范围内的对象的另一名称。 在 SMO 中，同义词由表示<xref:Microsoft.SqlServer.Management.Smo.Synonym>对象。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 对象是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象的子对象。 这意味着同义词仅在定义它们的数据库范围内有效。 但是，同义词可以引用的对象在另一个数据库，或的远程实例上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  同义词是架构范围内的对象的另一名称。 在 SMO 中，同义词由<xref:Microsoft.SqlServer.Management.Smo.Synonym>对象。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 对象是 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象的子对象。 这意味着同义词仅在定义它们的数据库范围内有效。 但是，同义词可以引用的对象上，另一个数据库或远程实例上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  具有另一名称的对象称为基对象。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 对象的名称属性即为提供给基对象的另一名称。  
   
@@ -85,7 +86,7 @@ $syn.BaseServer = $srv.Name
 $syn.Create()  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE SYNONYM (Transact-SQL)](../../../t-sql/statements/create-synonym-transact-sql.md)  
   
   

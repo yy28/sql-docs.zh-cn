@@ -2,7 +2,6 @@
 title: 保存和打开方法的示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 661dbe97eebfbe317f8258019e0fbf66704a5d28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281326"
 ---
 # <a name="save-and-open-methods-example-vc"></a>保存和打开方法的示例 （VC + +）
 这三个示例演示如何[保存](../../../ado/reference/ado-api/save-method.md)和**打开**方法可以一起使用。  
@@ -264,7 +264,7 @@ bool FileExists() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

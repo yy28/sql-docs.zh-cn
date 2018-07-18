@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (Transact SQL) |Microsoft 文档
+title: xp_sqlmaint (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979379"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  调用**sqlmaint**实用工具与包含的字符串**sqlmaint**开关。 **Sqlmaint**实用工具可执行一组的一个或多个数据库上的维护操作。  
+  调用**sqlmaint**实用程序使用一个字符串，包含**sqlmaint**开关。 **Sqlmaint**实用程序执行一系列一个或多个数据库上的维护操作。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -46,16 +47,16 @@ xp_sqlmaint 'switch_string'
 ```  
   
 ## <a name="arguments"></a>参数  
-  *switch_string*   
- 一个字符串包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
+ **'** *switch_string*   
+ 一个字符串，包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
   
- **-？** 交换机不是有效的**xp_sqlmaint**。  
+ **-？** 开关不能用于**xp_sqlmaint**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无。 如果返回错误**sqlmaint**实用程序将失败。  
   
-## <a name="remarks"></a>注释  
- 如果在使用 SQL Server 身份验证，登录用户调用此过程时 **-U"***login_id***"** 和 **-P"***密码***"** 开关为前缀*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*且不会更改传递**sqlmaint**。  
+## <a name="remarks"></a>Remarks  
+ 如果在使用 SQL Server 身份验证，登录用户调用此过程 **-U"***login_id***"** 并 **-P"***密码***"** 开关追加到前面*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*原样传递到**sqlmaint**。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
@@ -74,7 +75,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sqlmaint 实用工具](../../tools/sqlmaint-utility.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

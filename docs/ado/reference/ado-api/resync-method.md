@@ -2,7 +2,6 @@
 title: 重新同步方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 187f1397cbdb4e6ccdfc39b573f301fce1a957ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96853ed76d4fa94092ecedd54978ee9cfbd25497
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281416"
 ---
 # <a name="resync-method"></a>重新同步方法
 刷新当前中的数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，从基础数据库。  
@@ -41,12 +41,12 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parameters  
  *AffectRecords*  
- 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值确定多少个记录**重新同步**方法将会影响。 默认值是**adAffectAll**。 此值不可用**重新同步**方法**字段**集合**记录**对象。  
+ 可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值确定多少个记录**重新同步**方法将会影响。 默认值是**adAffectAll**。 此值不可用**重新同步**方法**字段**集合**记录**对象。  
   
  *ResyncValues*  
- 選擇性。 A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)值，该值指定是否覆盖基础值。 默认值是**adResyncAllValues**。  
+ 可选。 A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)值，该值指定是否覆盖基础值。 默认值是**adResyncAllValues**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>记录集  
  使用**重新同步**方法重新同步在当前记录**记录集**与基础数据库。 如果你使用的静态或只进游标，但你想要查看基础数据库中的任何更改，这非常有用。  
@@ -74,7 +74,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 |-|-|  
 |[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [重新同步方法示例 (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [重新同步方法示例 （VC + +）](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   

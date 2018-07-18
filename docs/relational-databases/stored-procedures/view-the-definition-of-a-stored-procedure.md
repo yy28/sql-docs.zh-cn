@@ -3,12 +3,9 @@ title: 查看存储过程的定义 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: stored-procedures
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stored-Procs
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - viewing stored procedures
 - displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 073a52659811663233da806541f220e2c6703e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c636da074e3955478a106c93dad8266f184d0947
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165548"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  依次展开“数据库” 、过程所属的数据库以及“可编程性” 。  
   
-3.  展开 **“存储过程”**，右键单击该过程，再单击 **“编写存储过程脚本为”**，然后单击下列选项之一： **“CREATE 到”**、 **“ALTER 到”**或 **“DROP 和 CREATE 到”**。  
+3.  展开 **“存储过程”**，右键单击该过程，再单击 **“编写存储过程脚本为”**，然后单击下列选项之一： **“CREATE 到”**、 **“ALTER 到”** 或 **“DROP 和 CREATE 到”**。  
   
 4.  选择 **“新建查询编辑器窗口”**。 这将显示过程定义。  
   

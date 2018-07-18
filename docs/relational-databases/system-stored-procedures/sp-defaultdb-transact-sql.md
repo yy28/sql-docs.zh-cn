@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ade405c0abdd5d3a07db3e7e5727677fd5d4e7be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037255"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +47,16 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame=**] *****登录*****  
- 登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录或 Windows 用户或组。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不存在 Windows 用户或用户组的登录名，则会自动添加该登录名。  
+ [  **@loginame=**] **'***登录*****  
+ 登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户或组。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不存在 Windows 用户或用户组的登录名，则会自动添加该登录名。  
   
- [  **@defdb=**] *****数据库*****  
- 新的默认数据库的名称。 *数据库*是**sysname**，无默认值。 *数据库*必须已存在。  
+ [  **@defdb=**] **'***数据库*****  
+ 新的默认数据库的名称。 *数据库*是**sysname**，无默认值。 *数据库*必须已经存在。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_defaultdb**调用 ALTER LOGIN。 此语句支持附加选项。 有关更改默认数据库的信息，请参阅[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
  **sp_defaultdb**不能在用户定义的事务内执行。  
@@ -70,7 +71,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

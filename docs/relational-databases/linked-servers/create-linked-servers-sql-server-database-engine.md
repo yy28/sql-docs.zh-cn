@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32947742"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/03/2018
      若要使用模拟功能，配置必须满足委托的要求。  
   
      **远程用户**  
-     使用远程用户映射 **“本地登录”**中未定义的用户。 **“远程用户”** 必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
+     使用远程用户映射 **“本地登录”** 中未定义的用户。 **“远程用户”** 必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
   
      **远程密码**  
      指定远程用户的密码。  

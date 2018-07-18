@@ -1,14 +1,12 @@
 ---
-title: 在 bcp_init |Microsoft 文档
+title: bcp_init |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 174c487c16f9e76fec6493dac0c77db15394df8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcfd732bd71d623cd1d21f3559f85b6a79b9a41b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421986"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,20 +49,20 @@ RETCODE bcp_init (
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 为大容量复制启用 ODBC 连接句柄。  
+ 是大容量复制启用 ODBC 连接句柄。  
   
  *szTable*  
- 要向内或向外复制的数据库表的名称。 该名称还可以包含数据库名称或所有者名称。 例如， **pubs.gracie.titles**， **pubs...标题**， **gracie.titles**，和**标题**是所有的合法的表名称。  
+ 要向内或向外复制的数据库表的名称。 该名称还可以包含数据库名称或所有者名称。 例如， **pubs.gracie.titles**， **pubs...标题**， **gracie.titles**，和**标题**都是合法的表名称。  
   
- 如果*eDirection*是将， *szTable*也可以是数据库视图的名称。  
+ 如果*eDirection*为 DB_OUT， *szTable*也可以是数据库视图的名称。  
   
- 如果*eDirection*将，并且使用指定的 SELECT 语句[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)之前[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)调用时， **bcp_init** *szTable*必须设置为 NULL。  
+ 如果*eDirection*为 DB_OUT，并且使用指定的 SELECT 语句[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)之前[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)调用时， **bcp_init** *szTable*必须设置为 NULL。  
   
  *szDataFile*  
- 要向内或向外复制的用户文件的名称。 如果复制数据的变量中直接使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，将其设置*szDataFile*为 NULL。  
+ 要向内或向外复制的用户文件的名称。 如果复制数据的过程直接从变量使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，请设置*szDataFile*为 NULL。  
   
  *szErrorFile*  
- 使用进度消息、错误消息，以及出于任何原因无法从用户文件复制到表的任何行的副本填充的错误文件的名称。 如果作为传递 NULL *szErrorFile*，不使用任何文件时出错。  
+ 使用进度消息、错误消息，以及出于任何原因无法从用户文件复制到表的任何行的副本填充的错误文件的名称。 如果将 NULL 传递作为*szErrorFile*，不使用任何错误文件。  
   
  *eDirection*  
  复制方向为 DB_IN 或 DB_OUT。 DB_IN 指示从程序变量或用户文件复制到表中。 DB_OUT 指示从数据库表复制到用户文件中。 必须使用 DB_OUT 指定一个用户文件名。  
@@ -71,30 +70,30 @@ RETCODE bcp_init (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>注释  
- 调用**bcp_init**之前调用任何其他大容量复制函数。 **在 bcp_init**用于大容量复制工作站之间的数据执行必要的初始化和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+## <a name="remarks"></a>Remarks  
+ 调用**bcp_init**之前调用任何其他大容量复制函数。 **bcp_init**工作站之间的数据大容量复制执行必要的初始化和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- **Bcp_init**函数必须提供了用于大容量复制函数启用一个 ODBC 连接句柄。 若要启用该句柄，请使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)与 SQL_COPT_SS_BCP 上的已分配，但未连接，连接的句柄设置为 SQL_BCP_ON。 尝试对已连接的句柄分配属性将导致错误。  
+ **Bcp_init**函数必须有启用使用大容量复制函数的 ODBC 连接句柄。 若要启用句柄，请使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)并将 SQL_COPT_SS_BCP 设置为 SQL_BCP_ON 分配，但尚未连接的连接句柄上。 尝试对已连接的句柄分配属性将导致错误。  
   
- 指定数据文件时， **bcp_init**检查数据库源或目标表，不是数据文件的结构。 **在 bcp_init**指定每个列中的数据库表、 视图或选择结果集所基于的数据文件的数据格式值。 此指定包括每一列的数据类型、数据中是否存在长度或 Null 指示符和终止符字节字符串以及固定长度的数据类型的宽度。 **在 bcp_init**设置这些值，如下所示：  
+ 当指定数据文件时， **bcp_init**检查数据库源或目标表，不是数据文件的结构。 **bcp_init**指定根据数据库表、 视图或 SELECT 结果集在每个列的数据文件的数据格式值。 此指定包括每一列的数据类型、数据中是否存在长度或 Null 指示符和终止符字节字符串以及固定长度的数据类型的宽度。 **bcp_init**方式设置这些值，如下所示：  
   
--   指定的数据类型是数据库表、视图或 SELECT 结果集中的列的数据类型。 数据类型由 sqlncli.h 中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据类型枚举。 数据自身采用它所在的计算机格式表示。 即，从列中的数据**整数**数据类型由很大的 4 字节序列的或小 endian 基于创建数据文件的计算机上。  
+-   指定的数据类型是数据库表、视图或 SELECT 结果集中的列的数据类型。 数据类型由 sqlncli.h 中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据类型枚举。 数据自身采用它所在的计算机格式表示。 也就是说，从一列的数据**整数**大的四个字节序列表示数据类型-或 little-endian 取决于创建数据文件的计算机。  
   
--   如果数据库数据类型的长度是固定的，则该数据文件中的数据长度也是固定的。 处理数据的大容量复制函数 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 分析数据行应为要与数据库表、 视图或所选列列表中指定的数据的长度相同的数据文件中的数据的长度。 例如，为数据库列定义为数据**char （13)** 必须由文件中的数据的每一行的 13 个字符来表示。 如果数据库列允许 Null 值，则可以使用 Null 指示符作为固定长度的数据的前缀。  
+-   如果数据库数据类型的长度是固定的，则该数据文件中的数据长度也是固定的。 处理数据的大容量复制函数 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 要与数据库表、 视图或 SELECT 列列表中指定的数据的长度相同的数据文件中的数据长度预期的数据行进行分析。 例如，对于定义为数据库列的数据**char （13)** 必须由 13 个字符的文件中的每一行表示。 如果数据库列允许 Null 值，则可以使用 Null 指示符作为固定长度的数据的前缀。  
   
 -   定义终止符字节序列时，该终止符字节序列的长度设置为 0。  
   
 -   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件必须包含数据库表中的每列数据。 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据库表、视图或 SELECT 结果集中的所有列的数据均被复制到数据文件中。  
   
--   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 当从复制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp_exec**放置在数据库表中的列的序号位置上基于的数据。  
+-   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 从复制时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp_exec**将基于数据库表中的列的序号位置的数据。  
   
--   如果某个数据库数据类型的长度的变量 (例如， **varbinary(22)**) 或数据库列可以包含 null 值，如果数据文件中的数据由长度/null 指示符的前缀。 指示符的宽度因数据类型和大容量复制的版本而异。  
+-   如果数据库数据类型长度是可变的 (例如， **varbinary(22)**) 或数据库列可以包含 null 值，如果数据文件中的数据作为前缀长度 /null 指示符。 指示符的宽度因数据类型和大容量复制的版本而异。  
   
- 若要更改为数据文件指定的数据格式值，请调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。  
+ 若要更改数据文件指定的数据格式值，请调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)并[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。  
   
- 对于不包含索引的表，通过将数据库恢复模式设置为 SIMPLE 或 BULK_LOGGED 可以优化向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制。 有关详细信息，请参阅[Prerequisites for Minimal Logging 中大容量导入](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)和[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。  
+ 对于不包含索引的表，通过将数据库恢复模式设置为 SIMPLE 或 BULK_LOGGED 可以优化向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制。 有关详细信息，请参阅[Prerequisites for Minimal Logging 中大容量导入](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)并[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。  
   
- 如果使用没有数据文件，则必须调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)若要在内存中的每个列的数据中指定的格式和位置，然后向其中复制数据行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
+ 如果使用没有数据文件，则必须调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)若要在内存中的每个列的数据中指定的格式和位置，然后将复制到的数据行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
   
 ## <a name="example"></a>示例  
  此示例显示如何将 ODBC bcp_init 函数用于格式化文件。  
@@ -225,7 +224,7 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

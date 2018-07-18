@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916382"
 ---
 # <a name="registry-entries-for-data-sources"></a>数据源的注册表项
 > [!NOTE]  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  Odbc.ini  
   
- 使用哪些密钥取决于数据源是*系统数据源，*这是可供所有用户，或*用户数据源，*这是仅供当前用户。 在 HKEY_LOCAL_MACHINE 树中，存储系统数据源和用户数据源将存储在 HKEY_CURRENT_USER 树。 在所有其他方面，系统数据源和用户数据源均相同。  
+ 使用哪些密钥取决于数据源是*系统数据源，* 这是可供所有用户，或*用户数据源，* 这是仅供当前用户。 在 HKEY_LOCAL_MACHINE 树中，存储系统数据源和用户数据源将存储在 HKEY_CURRENT_USER 树。 在所有其他方面，系统数据源和用户数据源均相同。  
   
  本部分包含以下主题。  
   

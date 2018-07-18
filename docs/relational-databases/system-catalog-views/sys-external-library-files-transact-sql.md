@@ -1,5 +1,5 @@
 ---
-title: sys.external_library_files (Transact SQL) |Microsoft 文档
+title: sys.external_library_files (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: sql
@@ -24,25 +24,26 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: febfe235bd7f4711e8192ab7625491b72ac050ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001169"
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (TRANSACT-SQL)  
+# <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-列出每个文件组成外部库一行。
+列出了每个文件组成的外部库的行。
 
 |列名 |数据类型 |Description|
 |------|------|-----|
-|external_library_id | int |外部库对象的 ID。 |
+|external_library_id | ssNoversion |外部库对象的 ID。 |
 |content |varbinary(max) |外部库文件项目的内容。 |
-|平台 |tinyint |在其上安装 SQL Server 的主机平台的 ID。 |
+|平台 |TINYINT |在其安装 SQL Server 的主机平台的 ID。 |
 |platform_desc | nvarchar(60) |主机平台的名称。 有效值为 WINDOWS、 LINUX。 |
 
 ### <a name="see-also"></a>另请参阅  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)  
-[SQL Server 机器学习服务管理包](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[为 SQL Server 机器学习服务的包管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

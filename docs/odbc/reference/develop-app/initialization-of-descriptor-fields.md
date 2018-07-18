@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910832"
 ---
 # <a name="initialization-of-descriptor-fields"></a>描述符字段的初始化
 中所示，其字段分配应用程序行描述符后，接收初始值[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 SQL_DESC_TYPE 字段的初始值是 SQL_DEFAULT。 这提供有关对应用程序的演示文稿的数据库数据的标准解决方法。 应用程序可以通过设置描述符记录的字段来指定不同的数据的处理。  

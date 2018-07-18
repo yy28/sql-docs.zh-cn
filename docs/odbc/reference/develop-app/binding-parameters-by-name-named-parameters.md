@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619514"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>绑定参数按名称 （命名参数）
 某些 Dbms 允许应用程序按名称而不是按位置在过程调用中指定的存储过程的参数。 此类参数称为*命名参数*。 ODBC 支持命名参数的使用。 ODBC 中, 命名的参数仅在对存储过程调用中使用，并且不在其他 SQL 语句中使用。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- 在此过程中，第一个参数， @title_id，默认值为 1。 应用程序可以使用下面的代码来调用此过程，以便它指定只有一个动态参数。 此参数是名称的命名的参数"@quote"。  
+ 在此过程中，第一个参数， @title_id，默认值为 1。 应用程序可以使用下面的代码来调用此过程，以便它指定只有一个动态参数。 此参数是名称的命名的参数"\@引号"。  
   
 ```  
 // Prepare the procedure invocation statement.  

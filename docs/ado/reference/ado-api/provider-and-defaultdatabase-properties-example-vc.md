@@ -2,7 +2,6 @@
 title: 提供程序和 DefaultDatabase 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dfa6d9521b403ae23cffbe8605072ed346bd5229
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6efcd2a571902cedaf065982490e2d593bd22ab6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280856"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>提供程序和 DefaultDatabase 属性示例 （VC + +）
 此示例演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)通过打开三个属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象使用不同的提供程序。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性来设置 Microsoft ODBC 访问接口的默认数据库。  
@@ -137,7 +137,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 属性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

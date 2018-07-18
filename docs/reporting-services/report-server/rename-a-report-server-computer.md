@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026314"
 ---
 # <a name="rename-a-report-server-computer"></a>重命名报表服务器计算机
   重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下，在计算机名称发生更改之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能无法访问。 请使用本主题中提供的步骤在计算机名称更改之后重新配置报表服务器。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  打开“数据库安装”页。  
   
-3.  在 **“服务器名称”**中，键入或选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名称，再单击 **“连接”**。  
+3.  在 **“服务器名称”** 中，键入或选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名称，再单击 **“连接”**。  
   
 4.  单击 **“应用”**。  
   

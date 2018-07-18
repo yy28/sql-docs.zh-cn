@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914732"
 ---
 # <a name="step-5-commit-the-transaction"></a>步骤 5： 提交事务
 下一步是提交该事务，如下面的插图中所示。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a36683429987afff72c3ee9aa98124c4ee0f613
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146365e4a4a0a287992bb1873a104f62cc79fc0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307886"
 ---
 # <a name="logging-activity"></a>日志记录活动
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,11 +40,11 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** 可以为下列值之一：  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |---------|---------------|  
 |0|禁用日志记录（如果未进行任何定义，则为默认值）。|  
 |-1|指定记录错误、 警告和通知。|  
-|1|指定记录错误。|  
+|@shouldalert|指定记录错误。|  
 |2|指定记录警告。|  
 |4|指定记录通知。|  
   
@@ -118,7 +118,7 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
   
 `sqlsrv.LogSeverity = 3`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

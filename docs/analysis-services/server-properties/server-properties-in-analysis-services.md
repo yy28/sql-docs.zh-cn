@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 中的服务器属性 |Microsoft 文档
-ms.date: 05/03/2018
+title: Analysis Services 中的服务器属性 |Microsoft Docs
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975095"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的服务器属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
- 若要配置服务器，请使用 SQL Server Management Studio 或编辑特定实例的 msmdsrv.ini 文件。  
+ 若要将服务器配置，使用 SQL Server Management Studio 或编辑特定的 SQL Server Analysis Services 实例的 msmdsrv.ini 文件。  
  
 SQL Server Management Studio 中的“属性”页显示最可能需要修改的属性子集。 属性的完整列表位于 msmdsrv.ini 文件中。   
   
 > [!NOTE]  
->  在默认安装中，msmdsrv.ini 可能位于 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 文件夹中。
+>  在默认 SQL Server Analysis Services 安装中，可以在 \Program Files\Microsoft SQL Server\MSAS13 找到 msmdsrv.ini。MSSQLSERVER\OLAP\Config 文件夹。
 > 
 > 其他影响服务器配置的属性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署配置属性。 有关这些属性的详细信息，请参阅 [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  
@@ -77,8 +79,8 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
 |[安全属性](../../analysis-services/server-properties/security-properties.md)|安全部分包含定义访问权限的基本属性和高级属性。 其中包括与管理员和用户有关的设置。|  
 |[线程池属性](../../analysis-services/server-properties/thread-pool-properties.md)|线程池属性控制服务器创建多少线程。 这些属性主要是高级属性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 实例管理](../../analysis-services/instances/analysis-services-instance-management.md)   
- [指定解决方案部署的配置的设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

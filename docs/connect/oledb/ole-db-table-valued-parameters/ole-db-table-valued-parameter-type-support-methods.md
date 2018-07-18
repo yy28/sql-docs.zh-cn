@@ -2,10 +2,10 @@
 title: OLE DB 表值参数类型支持 （方法） |Microsoft 文档
 description: OLE DB Table-Valued 参数类型支持 （方法）
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-table-valued-parameters
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d19b092f012127db987d52662ef08061907c4fa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f2b05fb6856544413ee2fb48251621880e94193
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690330"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>OLE DB 表值参数类型支持（方法）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   以下标准 OLE DB 方法支持表值参数：  
   
@@ -39,9 +42,9 @@ ms.lasthandoff: 05/03/2018
 |IColumnsRowset::GetColumnsRowset|检索有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表的元数据信息。 对于表值参数，同一接口提供有关各列的详细元数据信息，如下所示：<br /><br /> DBCOLUMN_FLAGS 通过 DBCOLUMNFLAGS_ISNULLABLE 位指示为空性。<br /><br /> DBCOLUMN_ISUNIQUE 指示列是否为标识列。<br /><br /> DBCOLUMN_COMPUTEMODE 指示是否可计算列。|  
 |IAccessor::CreateAccessor|若要将表值参数行集对象绑定到命令参数，请创建访问器中的使用其*wType*成员设置为 DBTYPE_TABLE。 DBOBJECT 结构将包含 IID_IRowset 或在任何其他有效的行集对象接口*iid*成员。 其余字段的处理方式类似于 DBTYPE_IUNKNOWN。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 表值参数类型支持](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [表值参数行集创建](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
- [使用表值参数 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [使用表值参数&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

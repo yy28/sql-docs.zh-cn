@@ -15,15 +15,16 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e9f294c857c1f1ed598eaaf0f79702475ef59c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78e74f96f36c5bfb21859bbc1f4ef1916e061b59
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926878"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用反馈收集的本地审核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) 包含支持 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集您的姓名、地址或其他联系信息。 有关详细信息，请参阅 [SQL Server 隐私声明](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)。
+SQL Server Management Studio (SSMS) 包含支持 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集您的姓名、地址或其他联系信息。 有关详细信息，请参阅 [SQL Server 隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a name="audit-feature-usage-data"></a>审核功能使用情况数据
 

@@ -1,34 +1,20 @@
 ---
 title: 创建挖掘结构 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MINING_STRUCTURE
-- CREATE MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- CREATE MINING STRUCTURE statement
-- mining structures [DMX], creating
-- RELATED TO column
-ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be83f470de9f72c74d5dc00403684a9ca6aa66f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842750"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  默认值：REPEATABLE(0)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  通过指定列的列表可以定义挖掘结构；如果需要，还可以指定列之间的层次结构关系，然后再根据需要将挖掘结构分为定型数据集和测试数据集。  
   
  可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先将数据库属性，AllowSessionMiningModels 的设置。 有关详细信息，请参阅 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
@@ -110,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  有关可用于定义结构列的数据类型、内容类型、列分布和建模标志的列表，请参阅下列主题：  
   
--   [数据类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [数据类型&#40;数据挖掘&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [内容类型 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [内容类型&#40;数据挖掘&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [列分布&#40;数据挖掘&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [建模标志 & #40; 数据挖掘 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [建模标志&#40;数据挖掘&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  可以为一个列定义多个建模标志值。 但是，一个列只能有一个内容类型和数据类型。  
   
@@ -192,9 +178,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

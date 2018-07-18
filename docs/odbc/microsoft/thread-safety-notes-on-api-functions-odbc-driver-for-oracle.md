@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905623"
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>API 函数 （适用于 Oracle 的 ODBC 驱动程序） 的线程安全性注意事项
 > [!IMPORTANT]  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34030338"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理仪表板和使用情况数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="open-the-dashboard-from-a-power-pivot-service-application"></a>从 Power Pivot 服务应用程序中打开仪表板  
   
-1.  在管理中心的 **“应用程序管理”**中，单击 **“管理服务应用程序”**。  
+1.  在管理中心的 **“应用程序管理”** 中，单击 **“管理服务应用程序”**。  
   
 2.  单击 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序的名称。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理仪表板显示当前服务应用程序的操作数据。  
   

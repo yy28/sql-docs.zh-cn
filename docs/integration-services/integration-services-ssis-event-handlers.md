@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e17c3a8cd3a79332c96a589a7b867509e95bdede
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 590553f65e3a49afe44b491c63e9ae68cef6b789
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411869"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
   在运行时，可执行文件（包以及 Foreach 循环容器、For 循环容器、序列容器和任务宿主容器）会引发事件。 例如，错误发生时会引发 OnError 事件。 可以为这些事件创建自定义事件处理程序，以扩展包的功能并使包在运行时更容易管理。 事件处理程序可以执行诸如下列任务：  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
  您可以使用 **设计器中的** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡的设计图面来创建事件处理程序。  
   
- 当 **“事件处理程序”** 选项卡活动时， **设计器中的工具箱的** “控制流项” **和** “维护计划中的任务” [!INCLUDE[ssIS](../includes/ssis-md.md)] 节点包含用于生成事件处理程序中控制流的任务和容器。 **“数据流源”**、 **“转换”**和 **“数据流目标”** 节点包含用于生成事件处理程序中数据流的数据源、转换和目标。 有关详细信息，请参阅 [Control Flow](../integration-services/control-flow/control-flow.md) 和 [Data Flow](../integration-services/data-flow/data-flow.md)。  
+ 当 **“事件处理程序”** 选项卡活动时， **设计器中的工具箱的** “控制流项” **和** “维护计划中的任务” [!INCLUDE[ssIS](../includes/ssis-md.md)] 节点包含用于生成事件处理程序中控制流的任务和容器。 **“数据流源”**、 **“转换”** 和 **“数据流目标”** 节点包含用于生成事件处理程序中数据流的数据源、转换和目标。 有关详细信息，请参阅 [Control Flow](../integration-services/control-flow/control-flow.md) 和 [Data Flow](../integration-services/data-flow/data-flow.md)。  
   
  **“事件处理程序”** 选项卡也包含 **“连接管理器”** 区域，在这里可创建并修改事件处理程序用来连接到服务器和数据源的连接管理器。 有关详细信息，请参阅 [创建连接管理器](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904622"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY 表达式列表
 表达式可以使用 ORDER BY 子句中。 例如，以下子句在表排序由三个密钥表达式： a + b、 c + d 和 e。  

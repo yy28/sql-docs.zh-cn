@@ -1,30 +1,20 @@
 ---
-title: + （正）(DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- + (positive operator)
-- positive operator (+)
-ms.assetid: 81259ec0-8e12-4a55-a4e5-5a9118d8488f
-caps.latest.revision: 11
-author: Minewiskan
+title: + （正）(DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b4e36bacf935f283c983bde48afe2e24957c3c47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 48f1cbdf3d19ce7937df9fc2d6bb1454c65891e3
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023875"
 ---
 # <a name="-positive-dmx"></a>+（正值）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>返回值  
  类型为指定参数的数据类型的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [一元运算符&#40;DMX&#41;](../dmx/operators-unary.md)  

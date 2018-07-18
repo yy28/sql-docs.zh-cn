@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019075"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 设备信息设置
   下表列出以 PDF 格式呈现报表时的设备信息设置。  

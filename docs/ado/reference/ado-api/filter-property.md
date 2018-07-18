@@ -2,7 +2,6 @@
 title: 筛选属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72efa7b9a70bdfdf141c32d5487cc2a5b9776d16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278756"
 ---
 # <a name="filter-property"></a>筛选器属性
 指示数据中的筛选器[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -33,13 +33,13 @@ ms.lasthandoff: 05/03/2018
 
 设置或返回**Variant**值，该值可以包含以下各项之一：  
   
--   **条件字符串：**的一个或多个串联在一起的单个子句组成的字符串**AND**或**OR**运算符。  
+-   **条件字符串：** 的一个或多个串联在一起的单个子句组成的字符串**AND**或**OR**运算符。  
   
--   **书签的数组：**唯一的书签的数组值中的记录到该点**记录集**对象。  
+-   **书签的数组：** 唯一的书签的数组值中的记录到该点**记录集**对象。  
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)值。  
   
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 使用**筛选器**属性可以有选择地剔除中记录**记录集**对象。 将筛选**记录集**将成为当前光标。 其他返回值的属性取决于当前**光标**受到影响，如[AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)， [AbsolutePage 属性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)， [RecordCount 属性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)，和[PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)。 设置**筛选器**为特定的新值的属性将当前记录移到满足的新值的第一个记录。
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 05/03/2018
 
 [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [筛选器和 RecordCount 属性示例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
 [筛选器和 RecordCount 属性示例 （VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)

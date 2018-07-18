@@ -1,7 +1,7 @@
 ---
-title: 打印报表（报表生成器和 SSRS）| Microsoft Docs
+title: 打印报表 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709045"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
-  在将报表保存到报表服务器之后，可以通过浏览器、报表管理器或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
+# <a name="print-reports---reporting-services-ssrs"></a>打印报表 - Reporting Services (SSRS)
+  在将报表保存到报表服务器之后，可以通过 Web 门户或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
   
  所有打印处理都是在客户端计算机上按需执行的。 现在还没有任何服务器端打印功能可以实现以下操作：即将打印作业从报表服务器直接传送到与 Web 服务器连接的打印机。 打印机和打印选项由每个报表用户使用标准的 **“打印”** 对话框自行选择。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>本节内容  
  [使用打印控件从浏览器中打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- 介绍如何使用客户端打印功能通过 Web 浏览器或报表管理器打印报表。  
+ 介绍如何使用客户端打印功能通过 Web 门户打印报表。  
   
  [从其他应用程序打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  介绍如何打印已导出到其他应用程序的报表。  

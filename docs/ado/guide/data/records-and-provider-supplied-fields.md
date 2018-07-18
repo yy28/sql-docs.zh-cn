@@ -2,7 +2,6 @@
 title: 记录和提供程序提供的字段 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8b27e7f5ed6f4bc658c590ab8ea05bcd4c46d7a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272566"
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 当[记录](../../../ado/reference/ado-api/record-object-ado.md)打开对象，其源可以是已打开的当前行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，绝对 URL 或相对 URL 结合打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象.  
@@ -76,10 +76,10 @@ ms.lasthandoff: 05/03/2018
 |RESOURCE_ISCOLLECTION|adBoolean|只读。 如果资源是一个集合，例如一个目录，则为 true。 如果资源是一个简单的文件，则为 false。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|如果资源是结构化的文档，则为 true。 如果资源不是结构化的文档，则为 false。 它可以为集合或一个简单的文件。|  
 |DEFAULT_DOCUMENT|AdVarWChar|只读。 指示此资源包含到的文件夹的默认简单文档或结构化的文档的 URL。 从资源请求的默认流时使用。 此属性是一个简单的文件为空。|  
-|CHAPTERED_CHILDREN|AdChapter|只读。 選擇性。 指示包含资源的子级的行集的章节。 ( *OLE DB Provider for Internet 发布*不使用此列。)|  
+|CHAPTERED_CHILDREN|AdChapter|只读。 可选。 指示包含资源的子级的行集的章节。 ( *OLE DB Provider for Internet 发布*不使用此列。)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|只读。 指示该资源的显示名称。|  
 |RESOURCE_ISROOT|adBoolean|只读。 如果资源是集合或结构化的文档的根，则为 true。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

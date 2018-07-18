@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dfed499dd91ae4113671bf88f23e5ac1b0d8792
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91ef4d0595ea468f9b6fdd2bfb43bbd9dacad6ed
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406909"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  除了在“OLE DB 目标编辑器”对话框中公开的快速加载选项以外，还可以通过在“高级编辑器”对话框的 FastLoadOptions 属性中键入选项，将 OLE DB 目标配置为使用以下大容量加载选项。  
   
-|快速加载选项|Description|  
+|快速加载选项|描述|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项的格式为 KILOBYTES_PER_BATCH  = \<正整数值>。|  
 |FIRE_TRIGGERS|指定是否在插入表上激发触发器。 选项的格式为 **FIRE_TRIGGERS**。 出现该选项说明要激发触发器。|  
@@ -129,7 +128,7 @@ ms.lasthandoff: 05/03/2018
 >  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
   
 > [!NOTE]  
->  OLE DB 目标的 **CommandTimeout** 属性未在 **“OLE DB 目标编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”**中提供。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
+>  OLE DB 目标的 **CommandTimeout** 属性未在 **“OLE DB 目标编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
   
 ### <a name="static-options"></a>静态选项  
  **“无缓存”**  
@@ -141,7 +140,7 @@ ms.lasthandoff: 05/03/2018
  **数据访问模式**  
  指定向目标中加载数据的方法。 加载双字节字符集 (DBCS) 数据需要使用一个快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |表或视图|将数据加载到 OLE DB 目标中的表或视图。|  
 |表或视图 - 快速加载|将数据加载到 OLE DB 目标中的表或视图，并使用快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。|  
@@ -163,7 +162,7 @@ ms.lasthandoff: 05/03/2018
  通过使用“创建表”对话框创建一个新表。  
   
 > [!NOTE]  
->  单击 **“新建”**时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
 #### <a name="data-access-mode--table-or-view--fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
  **表或视图的名称**  
@@ -173,7 +172,7 @@ ms.lasthandoff: 05/03/2018
  通过使用“创建表”对话框创建一个新表。  
   
 > [!NOTE]  
->  单击 **“新建”**时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留标识**  
  指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 **false**。  
@@ -216,7 +215,7 @@ ms.lasthandoff: 05/03/2018
  通过使用“创建表”对话框创建一个新表。  
   
 > [!NOTE]  
->  单击 **“新建”**时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留标识**  
  指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 **false**。  

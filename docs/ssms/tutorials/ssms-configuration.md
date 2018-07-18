@@ -17,6 +17,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455282"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教程：SQL Server Management Studio 组件和配置
 本教程介绍 SQL Server Management Studio (SSMS) 中的多种窗口组件和一些适用于工作区的基本配置选项。 本文将指导如何： 

@@ -2,7 +2,6 @@
 title: ADOX 对象模型 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3ed90b40a5d069ef1b6d6911f74a4ef3c63e7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ca46f636c295b56de346889e672e439e2aab41a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284746"
 ---
 # <a name="adox-object-model"></a>ADOX 对象模型
 下图说明如何表示和 ADOX 的相关对象。 有关特定对象或集合的详细信息，请参阅特定参考主题，或[ADOX 对象](../../../ado/reference/adox-api/adox-objects.md)和[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  每个[表](../../../ado/reference/adox-api/table-object-adox.md)，[索引](../../../ado/reference/adox-api/index-object-adox.md)，和[列](../../../ado/reference/adox-api/column-object-adox.md)对象还具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 代码示例](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912632"
 ---
 # <a name="level-2-interface-conformance"></a>级别 2 接口一致性
 级别 2 接口一致性级别包括级别 1 界面一致性 – 级别功能以及下列功能：  

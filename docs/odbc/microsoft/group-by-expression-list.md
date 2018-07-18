@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898492"
 ---
 # <a name="group-by-expression-list"></a>GROUP BY 表达式列表
 GROUP BY 支持的表达式列表，以及列名称。 具有 GROUP BY 子句的 SELECT 语句的选择列表只能包含 GROUP BY 子句中的表达式或 set 函数。

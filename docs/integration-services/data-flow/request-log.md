@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
@@ -16,11 +14,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c66f117c50c38955b328acc3d7789347203a5cbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e62c02c5a833a11f2ffa4eba942f74a660325ad7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405259"
 ---
 # <a name="request-log"></a>请求日志
   使用 **“请求日志”** 对话框查看向 SAP Netweaver BW 系统提出样本数据请求的过程中记录的事件。 此信息可用于排除 SAP BW 源配置的故障。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
-3.  在 **“SAP BW 源编辑器”**中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
+3.  在 **“SAP BW 源编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
 4.  配置 SAP BW 源后，单击 **“预览”** ，预览 **“请求日志”** 对话框中的事件。  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
  **类型**  
  显示所记录事件的类型。 下表列出了可能的事件类型。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |S|成功消息。|  
 |E|错误消息|  

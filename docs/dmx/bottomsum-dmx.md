@@ -1,31 +1,20 @@
 ---
 title: BottomSum (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- BOTTOMSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomSum function
-ms.assetid: fd4b0418-f814-4d83-b2fe-850117e1beb7
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b7bb5ede61f9ddb95c5f9d76ea09ef2667811bc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6a6356e70aa6694e04a9112e44a22825f0dc7a52
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842780"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **BottomSum**函数返回的最底部行按升序排列的级别。 级别基于的计算值\<排名表达式 > 自变量对于每一行，以便的总和\<排名表达式 > 值至少是指定的给定的总数\<总和 > 自变量。 **BottomSum**返回可能最少数量的元素，同时仍满足指定的和值。  
   
 ## <a name="examples"></a>示例  
@@ -66,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -102,14 +91,14 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.08…|0.07…|  
 |Mountain Bottle Cage|1367|0.09…|0.08…|  
   
  **请注意**提供了此示例仅为说明 BottomSum 的使用情况。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  

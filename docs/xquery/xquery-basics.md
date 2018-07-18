@@ -23,18 +23,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 726bf0f34e8fe8d8b5d0713ca74b8f07f9e94483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970619"
 ---
 # <a name="xquery-basics"></a>XQuery 基础知识
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本节介绍了 XQuery 的基础知识。  
   
-## <a name="in-this-section"></a>本節內容  
- [序列和 QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
+## <a name="in-this-section"></a>本节内容  
+ [序列和 Qname &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  说明了序列以及 QNames 和预定义的命名空间。  
   
  [表达式上下文和查询计算&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  [XQuery 与静态类型化](../xquery/xquery-and-static-typing.md)  
  将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 说明为静态类型化语言。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -2,7 +2,6 @@
 title: 索引对象 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8e5398c07a4abc449974dd890820ab7195830c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05663e8ef19fa6c825c49fe34865999fa9de461f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285986"
 ---
 # <a name="index-object-adox"></a>索引对象 (ADOX)
 表示从数据库表的索引。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下面的代码创建一个新**索引**:  
   
 ```  
@@ -65,7 +65,7 @@ Dim obj As New Index
   
 -   [索引对象属性、方法和事件](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [索引追加方法示例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [IndexNulls 属性示例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [PrimaryKey 和唯一属性示例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c9a9c20e8967f7c7cb23b66aa7ed5e9040525b36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349989"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  死锁发生时快照代理连接到分发服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  
   
-|DistributorDeadlockPriority 值|Description|  
+|DistributorDeadlockPriority 值|描述|  
 |---------------------------------------|-----------------|  
 |**-1**|在分发服务器上发生死锁时，应用程序而非快照代理优先。|  
 |**0** （默认值）|未分配优先级。|  
@@ -131,7 +131,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  建立连接时快照代理使用的安全套接字层 (SSL) 加密的等级。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -145,7 +145,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  指定在快照操作过程中记录的历史记录大小。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|进度消息将写入控制台或输出文件。 不在分发数据库中记录历史记录。|  
 |**1**|总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
@@ -191,7 +191,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  指定输出是否应提供详细内容。  
   
-|OutputVerboseLevel 值|Description|  
+|OutputVerboseLevel 值|描述|  
 |------------------------------|-----------------|  
 |**0**|仅输出错误消息。|  
 |**1** （默认值）|输出所有进度报告消息（默认值）。|  
@@ -212,7 +212,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  死锁发生时快照代理连接到发布服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  
   
-|PublisherDeadlockPriority 值|Description|  
+|PublisherDeadlockPriority 值|描述|  
 |-------------------------------------|-----------------|  
 |**-1**|在发布服务器上发生死锁时，应用程序而非快照代理优先。|  
 |**0** （默认值）|未分配优先级。|  

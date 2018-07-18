@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911302"
 ---
 # <a name="diagnostic-messages"></a>诊断消息
 诊断消息将返回每个 SQLSTATE 带。 使用大量不同的消息通常返回相同的 SQLSTATE。 例如，为 SQL 语法中的大多数错误返回 SQLSTATE 42000 （语法错误或访问冲突）。 但是，每个语法错误很可能可以通过不同的消息进行描述。  

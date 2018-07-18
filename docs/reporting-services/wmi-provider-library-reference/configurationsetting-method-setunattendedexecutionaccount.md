@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030154"
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>ConfigurationSetting 方法 - SetUnattendedExecutionAccount
   指定用于执行无人参与报表的帐户。  

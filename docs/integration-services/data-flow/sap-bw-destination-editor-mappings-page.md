@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0d0c2f6c12982eb6c2c9d23de4844ce602b2386
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4bd520574161dfcea1eb941e7928392e019addbc
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335871"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目标编辑器（“映射”页）
   使用 **“SAP BW目标编辑器”** 的 **“映射”** 页将输入列映射到目标列。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 SAP BW 目标。  
   
-3.  在 **“SAP BW 目标编辑器”**中单击 **“映射”** ，以打开编辑器的 **“映射”** 页。  
+3.  在 **“SAP BW 目标编辑器”** 中单击 **“映射”** ，以打开编辑器的 **“映射”** 页。  
   
 ## <a name="options"></a>“常规”  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550718"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>针对分析平台系统的设备配置清单
 提供有关为你自己的环境配置 Analytics Platform System 所需的任务的清单。 你可以使用该设备，还需要执行这些配置任务。  

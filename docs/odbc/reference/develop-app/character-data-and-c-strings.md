@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912382"
 ---
 # <a name="character-data-and-c-strings"></a>字符数据和 C 字符串
 引用 （如列名称、 动态参数和字符串特性值） 的长度可变的字符数据的输入的参数具有一个关联的长度参数。 如果在应用程序终止 null 字符，在 C 中的典型的字符串，它提供了作为自变量中，以字节为单位的 （不包括 null 终止符） 的字符串的长度，或者 sql_nts 以 （Null-Terminated 字符串）。 非负长度参数指定的关联字符串的实际长度。 长度参数可能为 0 以指定一个零长度字符串，它是不同于 NULL 值。 负值 sql_nts 以指示要通过定位 null 终止字符确定字符串的长度的驱动程序。  

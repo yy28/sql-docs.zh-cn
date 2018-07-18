@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033314"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>排查 Reporting Services 报表呈现问题
 将报表数据与布局信息组合起来后，会将组合的报表发送到报表呈现器。 例如，本地预览报表时，您是使用 HTML 呈现器查看组合报表。 使用本主题可帮助解决特定于报表呈现的问题。   

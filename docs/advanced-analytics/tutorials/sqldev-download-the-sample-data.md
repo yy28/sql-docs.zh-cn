@@ -1,26 +1,28 @@
 ---
-title: 第 1 课下载示例数据 |Microsoft 文档
+title: 第 1 课下载示例数据和脚本嵌入 R （SQL Server 机器学习） |Microsoft Docs
+description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a87d307dafa733e449c6ec893ece21645fe65640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030375"
 ---
-# <a name="lesson-1-download-the-sample-data"></a>第 1 课： 下载示例数据
+# <a name="lesson-1-download-data-and-scripts"></a>第 1 课： 下载数据和脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是教程的有关如何在 SQL Server 中使用 R 的 SQL 开发人员的一部分。
+本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
 
-在此步骤中，你将下载示例数据集和[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本在本教程中使用的文件。 在 GitHub 上共享的数据和脚本文件，但 PowerShell 脚本将下载的数据和脚本文件到你选择的本地目录。
+在此步骤中，你将下载示例数据集和[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本本教程中使用的文件。 在 GitHub 上共享数据和脚本文件，但 PowerShell 脚本将为你选择的本地目录下载的数据和脚本文件。
 
-## <a name="download-the-data-and-scripts"></a>下载的数据和脚本
+## <a name="download-tutorial-files-from-github"></a>从 Github 下载教程文件
 
 1.  打开 Windows PowerShell 命令控制台。
   
@@ -60,8 +62,8 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="next-lesson"></a>下一课
 
-[第 2 课： 将数据导入到 SQL Server 使用 PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[第 2 课： 将数据导入 SQL Server 使用 PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
 ## <a name="previous-lesson"></a>上一课
 
-[针对 SQL 开发人员的数据库中 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[SQL 开发人员的嵌入的 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)

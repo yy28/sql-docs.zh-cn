@@ -2,7 +2,6 @@
 title: Close 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5779f0fdd140ee4fbb95f7d8db339ee4d0b9b8af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b1cf9ee921355368dc9aaffb2905fb79eced5b7d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276477"
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
 关闭打开的对象和任何从属对象。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 object.Close  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**关闭**方法来关闭[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[记录](../../../ado/reference/ado-api/record-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象若要释放任何关联的系统资源。 关闭对象不会删除它从内存;你可以更改其属性设置，以后再打开它。 若要完全消除从内存的对象，关闭对象并将对象变量设置为*执行任何操作*（在 Visual Basic 中)。  
   
 ## <a name="connection"></a>连接  
@@ -64,7 +64,7 @@ object.Close
 |[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [打开和关闭方法的示例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [打开和关闭方法的示例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [打开和关闭方法的示例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

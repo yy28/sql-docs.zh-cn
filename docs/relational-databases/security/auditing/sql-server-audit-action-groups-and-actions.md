@@ -3,12 +3,10 @@ title: SQL Server 审核操作组和操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,14 +22,15 @@ helpviewer_keywords:
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
-ms.openlocfilehash: deef1b6db596acc7462fbd67eaae827fec759640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c819f291b09620a7151a8f6c6e9f5ba1a2cd26a
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942103"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了服务器级审核操作组，并提供了适用的等效 SQL Server 事件类。  
   
-|操作组名称|Description|  
+|操作组名称|描述|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|更改应用程序角色的密码时将引发此事件。 等效于 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)。|  
 |AUDIT_CHANGE_GROUP|创建、修改或删除任何审核时，均将引发此事件。 创建、修改或删除任何审核规范时，均将引发此事件。 任何针对某审核的更改均将在该审核中审核。 等效于 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)。|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了数据库级别审核操作组，并提供了适用的等效 SQL Server 事件类。  
   
-|操作组名称|Description|  
+|操作组名称|描述|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|更改应用程序角色的密码时将引发此事件。 等效于 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)。|  
 |AUDIT_CHANGE_GROUP|创建、修改或删除任何审核时，均将引发此事件。 创建、修改或删除任何审核规范时，均将引发此事件。 任何针对某审核的更改均将在该审核中审核。 等效于 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)。|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-level-audit-actions"></a>数据库级别审核操作  
  数据库级别的操作支持直接对数据库架构以及架构对象（例如表、视图、存储过程、函数、扩展存储过程、队列、同义词）进行的特定操作进行审核。 不审核类型、XML 架构集合、数据库和架构。 架构对象的审核可以在架构和数据库上配置，这意味着指定架构或数据库包含的所有架构对象上的事件都将被审核。 下表介绍了数据库级别的审核操作。  
   
-|操作|Description|  
+|操作|描述|  
 |------------|-----------------|  
 |SELECT|发出 SELECT 语句时将引发此事件。|  
 |UPDATE|发出 UPDATE 语句时将引发此事件。|  
@@ -182,7 +181,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="audit-level-audit-action-groups"></a>审核级别的审核操作组  
  您也可以对审核过程中的操作进行审核。 这些操作可以是服务器范围或数据库范围的操作。 如果在数据库范围内，则仅针对数据库审核规范而进行。 下表介绍了审核级别的审核操作组。  
   
-|操作组名称|Description|  
+|操作组名称|描述|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|发出以下命令之一时将引发此事件：<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

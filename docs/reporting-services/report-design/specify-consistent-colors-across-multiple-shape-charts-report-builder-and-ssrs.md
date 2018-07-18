@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028504"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>对多个形状图指定一致的颜色（报表生成器和 SSRS）
   在分页报表的非形状图中， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 将根据图表中各序列的索引从调色板选择新颜色。 例如，图表中的第一个序列将映射到调色板中的第一个颜色。 但是，对于形状图，该行为则不相同。 在形状图中，调色板中的每个颜色都映射到数据集中的数据点。 例如，数据点 1 映射到调色板中的第一个颜色，数据点 2 映射调色板中的第二个颜色，依此类推。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  右键单击表体外部区域，然后选择“报表属性”。  
   
-2.  在 **“代码”**中，将以下代码键入到文本框中。  
+2.  在 **“代码”** 中，将以下代码键入到文本框中。  
   
     ```  
     Private colorPalette As String() = {"Color1", "Color2", "Color3"}  

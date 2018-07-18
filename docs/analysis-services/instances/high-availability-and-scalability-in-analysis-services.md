@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700898"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 中的高可用性和可伸缩性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/10/2018
 |使用 MOLAP 存储的多维模型|选择可适应磁盘 IO 的平衡配置，以便快速加载数据并为缓存数据提供足够的 RAM。|  
 |使用 ROLAP 存储的多维模型|最大化磁盘 IO，最小化网络延迟。|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>通过 WSFC 实现高可用性和冗余  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>高可用性和冗余通过 WSFC  
  可将 Analysis Services 安装到现有 Windows Server 故障转移群集 (WSFC) 以实现高可用性，在尽量最短的时间内还原服务。  
   
  故障转移群集提供对数据库的完全访问权限（读取和写回），但一次只能访问一个节点。 如果第一个节点关闭，辅助数据库将在群集中的其他节点上以替代服务器的形式运行。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/10/2018
  
  白皮书 [如何安装群集 SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)中提供了有关在故障转移群集中部署 Analysis Services 的深入说明和背景信息。 此指南虽然是针对 SQL Server 2012 编写的，但同样适用于更高版本的 Analysis Services。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [强制对 Analysis Services 表格数据库的 NUMA 关联](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Analysis Services 案例研究： 使用表格模型中大规模商业解决方案](https://msdn.microsoft.com/library/dn751533.aspx)  

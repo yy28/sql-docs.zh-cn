@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910792"
 ---
 # <a name="how-is-metadata-used"></a>是如何使用元数据？
 应用程序需要大多数结果集操作的元数据。 例如，应用程序使用某列的数据类型来确定要将哪一种变量绑定到该列； 它使用的字节长度的字符列来确定需要显示该列中的数据的空间量。 应用程序确定列的元数据的方式取决于应用程序的类型。  

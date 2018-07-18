@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
@@ -16,18 +14,19 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec2754c1a9ced1ada44d4d461e8f3e76c4bc6c66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be325de5a80c6245b52f6c867bd841746cbbe797
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410039"
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   显示数据流组件在每个执行阶段中所花的时间。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|阶段的唯一标识符 (ID)。|  
 |execution_id|**bigint**|执行实例的唯一 ID。|  
@@ -46,7 +45,7 @@ ms.lasthandoff: 05/03/2018
  下面的示例使用 catalog.execution_component_phases 视图查看特定包在所有阶段花在执行上的总时间 (**active_time**) 以及包的总运行时间 (**total_time**)。  
   
 > [!WARNING]  
->  如果包执行的日志记录级别设置为“性能”或“详细”，则 catalog.execution_component_phases 视图将提供此信息。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
+>  如果包执行的日志记录级别设置为“性能”或“详细”，则 catalog.execution_component_phases 视图将提供此信息。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
   
 ```sql
 use SSISDB  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029284"
 ---
 # <a name="securable-items"></a>安全对象
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的安全性来控制对报表服务器上存储的项的访问权限。 通常通过创建一对角色分配来向用户授予对报表服务器的访问权限：  

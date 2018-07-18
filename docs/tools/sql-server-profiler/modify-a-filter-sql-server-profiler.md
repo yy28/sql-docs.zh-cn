@@ -20,9 +20,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bc42acf774fb9f9b25147998a604e9afa7565eb
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33070554"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改筛选器 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  单击 **“事件选择”** 选项卡。  
   
-     **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 事件类可能略有不同，这取决于所连接服务器的类型和版本。 事件类由网格的“事件” **“事件”**列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
+     **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 事件类可能略有不同，这取决于所连接服务器的类型和版本。 事件类由网格的“事件” **“事件”** 列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
   
 4.  单击 **“列筛选器”**。  
   

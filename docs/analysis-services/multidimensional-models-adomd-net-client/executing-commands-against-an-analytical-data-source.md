@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025314"
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>对分析数据源执行命令
   在建立与分析数据源的连接后，可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 对象对该数据源运行命令并从中返回结果。 这些命令可使用多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 甚至是有限 SQL 语法来检索数据。 此外，您还可以使用 Analysis Services 脚本语言 (ASSL) 命令修改基础数据库。  

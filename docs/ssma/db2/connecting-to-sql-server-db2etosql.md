@@ -1,8 +1,6 @@
 ---
 title: 连接到 SQL Server (DB2eToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d257c6b2569eec1677577e8fe98a0fe619ab60f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 285ce114c5161bb8fa56536d22c9699ccc9c7727
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774543"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>连接到 SQL Server (DB2eToSQL)
 迁移到 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]必须连接到任何这些目标实例的 2014年或 Azure SQL DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 连接时，获取有关的实例中的所有数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]并显示在数据库元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 SSMA 存储的哪个实例有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]已连接，但不会存储密码。  
@@ -89,13 +88,13 @@ ms.lasthandoff: 05/03/2018
 ||||||  
 |-|-|-|-|-|  
 |**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL 数据库|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|是|用户帐户控制|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||是||  
 |Azure SQL 数据库||||是|  
   
 > [!IMPORTANT]  
-> 根据项目类型，但不是根据版本的数据库对象的转换执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 你连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016年或 Azure SQL DB。  
+> 根据项目类型，但不是根据版本的数据库对象的转换执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016年或 Azure SQL DB。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server 元数据同步  
 有关的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库不会自动更新。 中的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器是元数据的快照，首次连接到时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，或上一次你手动更新的元数据。 你可以手动更新所有数据库，或任何单个数据库或数据库对象的元数据。  
@@ -121,6 +120,6 @@ ms.lasthandoff: 05/03/2018
   
 -   如果不需要执行任何这些任务，你可以将转换到 DB2 数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象定义。 有关详细信息，请参阅[转换 DB2 架构&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [迁移 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

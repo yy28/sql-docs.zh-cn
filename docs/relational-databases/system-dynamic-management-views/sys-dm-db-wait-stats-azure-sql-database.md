@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_wait_stats （Azure SQL 数据库） |Microsoft 文档
+title: sys.dm_db_wait_stats （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: af54ac9890cf903e0646d9b6d8eefe031924ffce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051397"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/23/2018
 |max_wait_time_ms|**bigint**|该等待类型的最长等待时间。|  
 |signal_wait_time_ms|**bigint**|正在等待的线程从收到信号通知到其开始运行之间的时差。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 -   此动态管理视图只显示当前数据库的数据。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/23/2018
   
  尽管线程不再处于等待状态，但是它不必立即开始运行。 这是因为此类线程首先放入可运行工作线程的队列中，并且必须等待量程在计划程序中运行。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等待时间计数器**bigint**值，因此不容易，只需计数器滚动更新导致的早期版本中的等效计数器那样[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等待时间计数器**bigint**值，并因此不一样容易出现计数器滚动更新的早期版本中的等效计数器作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  下表列出各任务所遇到的等待类型。  
   
@@ -256,7 +257,7 @@ ms.lasthandoff: 05/23/2018
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|在 SQLOS 计划程序切换到抢先模式时发生，以便关闭虚拟备份设备。|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|在 SQLOS 计划程序切换到抢先模式时发生，以便执行故障转移群集操作。|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|在 SQLOS 计划程序切换到抢先模式时发生，以便创建 COM 对象。|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Alwayson 可用性组租赁针对 CSS 诊断管理器。|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Always On 可用性组租赁针对 CSS 诊断管理器。|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -264,9 +265,9 @@ ms.lasthandoff: 05/23/2018
 |PRINT_ROLLBACK_PROGRESS|用于等待用户进程在已通过 ALTER DATABASE 终止子句完成转换的数据库中结束。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|在后台任务正在等待终止接收（通过轮询）Windows Server 故障转移群集通知的后台任务时发生。  仅限内部使用。|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|追加、 替换和/或删除操作正在等待获取 Alwayson 内部列表 （例如网络、 网络地址或可用性组侦听器的列表） 上的写入锁。  仅限内部使用。|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Alwayson 删除可用性组操作正在等待目标可用性组在销毁 Windows Server 故障转移群集对象之前进入脱机状态。|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Alwayson 删除可用性组操作正在等待目标可用性组脱机之前销毁 Windows Server 故障转移群集的对象。|  
 |PWAIT_HADR_ONLINE_COMPLETED|Alwayson 创建或故障转移可用性组操作正在等待目标可用性组联机。|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Alwayson 删除可用性组操作正在等待作为之前命令的一部分计划任何后台任务的终止。 例如，可能有正在将可用性数据库转换为主要角色的后台任务。 DROP AVAILABILITY GROUP DDL 必须等待此后台任务终止，以免出现争用情况。|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Alwayson 删除可用性组操作正在等待作为之前命令的一部分计划任何后台任务终止。 例如，可能有正在将可用性数据库转换为主要角色的后台任务。 DROP AVAILABILITY GROUP DDL 必须等待此后台任务终止，以免出现争用情况。|  
 |PWAIT_HADR_WORKITEM_COMPLETED|正在等待异步工作任务完成，这是线程执行的内部等待。 这是预期的等待，用于 CSS。|  
 |PWAIT_MD_LOGIN_STATS|在登录统计信息的元数据内部同步期间发生。|  
 |PWAIT_MD_RELATION_CACHE|在表或索引的元数据内部同步期间发生。|  
@@ -294,7 +295,7 @@ ms.lasthandoff: 05/23/2018
 |RESMGR_THROTTLED|在有新请求传入并且基于 GROUP_MAX_REQUESTS 设置而中止时出现。|  
 |RESOURCE_QUEUE|在同步不同的内部资源队列期间出现。|  
 |RESOURCE_SEMAPHORE|当由于存在其他并发查询而无法立即批准查询内存请求时出现。 等待时间较长或等待次数较多可能指示并发查询的数量过多或内存请求的数量过多。|  
-|RESOURCE_SEMAPHORE_MUTEX|在查询等待其保留线程的请求完成时出现。 它也在同步查询编译和内存授予请求时出现。|  
+|RESOURCE_SEMAPHORE_MUTEX|在查询等待其预留线程的请求完成时出现。 它也在同步查询编译和内存授予请求时出现。|  
 |RESOURCE_SEMAPHORE_QUERY_COMPILE|在并发查询编译的数量达到中止限制时出现。 等待时间较长或等待次数较多可能指示编译、重新编辑或不可缓存的计划过多。|  
 |RESOURCE_SEMAPHORE_SMALL_QUERY|当由于存在其他并发查询而无法立即批准较小查询的内存请求时出现。 等待时间不应超过几秒钟，因为如果服务器无法在几秒钟内给予请求的内存，则会将请求传输到主查询内存池中。 等待时间较长可能指示当主内存池被等待的查询阻塞时并发小查询的数量过多。|  
 |SE_REPL_CATCHUP_THROTTLE|在事务等待其中一个辅助数据库取得进展时发生。|  

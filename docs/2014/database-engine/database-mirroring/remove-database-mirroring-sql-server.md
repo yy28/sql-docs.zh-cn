@@ -1,0 +1,112 @@
+---
+title: 删除数据库镜像 (SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- database mirroring [SQL Server], removing
+- removing database mirroring [SQL Server]
+ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
+caps.latest.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: aae710069fbb8c27a8e94e3c26d35f04c935246d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297047"
+---
+# <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从数据库删除数据库镜像。  数据库所有者可以随时通过从数据库中删除镜像来手动停止数据库镜像会话。  
+  
+ 
+  
+##  <a name="BeforeYouBegin"></a> 开始之前  
+  
+###  <a name="Security"></a> 安全性  
+  
+####  <a name="Permissions"></a> Permissions  
+ 需要对数据库拥有 ALTER 权限。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  
+#### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
+  
+1.  在数据库镜像会话期间，连接到主体服务器实例，然后在对象资源管理器中，单击服务器名称以展开服务器树。  
+  
+2.  展开 **“数据库”** 并选择数据库。  
+  
+3.  右键单击数据库，选择“任务”，再单击“镜像”。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+  
+4.  在 **“选择页”** 窗格中，单击 **“镜像”**。  
+  
+5.  若要删除镜像，请单击 **“删除镜像”**。 此时，将显示一个提示，要求您进行确认。 如果单击 **“是”**，会话将停止，并从数据库中删除镜像。  
+  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+ 若要删除数据库镜像，请使用 **“数据库属性”**， 即使用 **“数据库属性”** 对话框的 **“镜像”** 页。  
+  
+#### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
+  
+1.  为任一镜像伙伴连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
+  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
+  
+3.  发出以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
+  
+    ```  
+    ALTER DATABASE database_name SET PARTNER OFF  
+    ```  
+  
+     其中 *database_name* 是要删除其会话的镜像数据库。  
+  
+     以下示例从 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库删除数据库镜像。  
+  
+    ```  
+    ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
+    ```  
+  
+##  <a name="FollowUp"></a> 跟进：在删除数据库镜像之后  
+  
+> [!NOTE]  
+>  有关删除镜像的影响的信息，请参阅[删除数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。  
+  
+-   **如果您打算在数据库上重新启动镜像**  
+  
+     重新启动镜像之前，必须将在删除镜像后对主体数据库执行的日志备份全部应用到镜像数据库中。  
+  
+-   **如果不打算重新启动镜像**  
+  
+     或者，可以恢复以前的镜像数据库。 在作为镜像服务器的服务器实例上，可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
+  
+    ```  
+    RESTORE DATABASE database_name WITH RECOVERY;  
+    ```  
+  
+    > [!IMPORTANT]  
+    >  如果恢复该数据库，则两个同名的不同数据库处于联机状态。 因此，需要确保客户端仅可访问其中一个数据库，通常为最新的主体数据库。  
+  
+##  <a name="RelatedTasks"></a> 相关任务  
+  
+-   [暂停或恢复数据库镜像会话 (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)  
+  
+-   [从数据库镜像会话删除见证服务器 (SQL Server)](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
+  
+-   [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](database-mirroring-establish-session-windows-authentication.md)  
+  
+-   [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+  
+## <a name="see-also"></a>请参阅  
+ [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   
+ [设置数据库镜像 (SQL Server)](setting-up-database-mirroring-sql-server.md)   
+ [AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
+  
+  

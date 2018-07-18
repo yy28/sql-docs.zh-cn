@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033774"
 ---
 # <a name="grouping-pane"></a>“分组”窗格
 设计 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表时，“分组”窗格显示当前所选 Tablix 数据区域的行组和列组。 “分组”窗格对“图表”或“仪表”数据区域不可用。 “分组”窗格由“行组”窗格和“列组”窗格组成。 “分组”窗格有两种模式：默认和高级。 默认模式显示行组和列组的动态成员的层次结构视图。 高级模式同时显示行组和列组的动态及静态成员。 组是来自数据区域显示的报表数据集中的一组命名的数据。 组被组织到包括静态和动态成员的层次结构中。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  有关详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
 ## <a name="advanced-mode"></a>“高级模式”  
-在高级模式中，可以查看组的所有静态和动态成员。 选择成员时，“属性”窗口将显示当前所选 **“Tablix 成员”**的属性。  
+在高级模式中，可以查看组的所有静态和动态成员。 选择成员时，“属性”窗口将显示当前所选 **“Tablix 成员”** 的属性。  
   
 ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 若要切换“高级模式”，请在“列组”窗格一侧右键单击向下箭头，然后单击“高级模式”。  
   

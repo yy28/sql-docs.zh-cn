@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031474"
 ---
 # <a name="design-view"></a>“设计”视图
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“设计”视图排列报表中的报表项。 设计视图有时称为设计图面或布局视图。  

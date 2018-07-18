@@ -3,28 +3,25 @@ title: 更新统计信息 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: statistics
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating statistics
 - statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55a8e7cf78b7f3dd90e43c52452a5a7e9361c4db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cf4d92818c1116f7665b130b7bc0d6c1248d18d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787438"
 ---
 # <a name="update-statistics"></a>更新统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-update-a-statistics-object"></a>更新统计信息对象  
   
-1.  在 **“对象资源管理器”**中，单击加号以便展开要更新统计信息的数据库。  
+1.  在 **“对象资源管理器”** 中，单击加号以便展开要更新统计信息的数据库。  
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
@@ -71,13 +68,13 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-update-a-specific-statistics-object"></a>更新特定的统计信息对象  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- The following example updates the statistics for the AK_SalesOrderDetail_rowguid index of the SalesOrderDetail table.   
@@ -87,13 +84,13 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-update-all-statistics-in-a-table"></a>更新表中的所有统计信息  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- The following example updates the statistics for all indexes on the SalesOrderDetail table.   
@@ -105,13 +102,13 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-update-all-statistics-in-a-database"></a>更新数据库中的所有统计信息  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- The following example updates the statistics for all tables in the database.   

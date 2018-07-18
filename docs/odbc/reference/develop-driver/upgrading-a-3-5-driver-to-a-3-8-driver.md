@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919122"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>升级到 3.8 驱动程序的 3.5 驱动程序
 本主题提供的指导原则和 ODBC 3.5 驱动程序升级到 ODBC 3.8 驱动程序的注意事项。  

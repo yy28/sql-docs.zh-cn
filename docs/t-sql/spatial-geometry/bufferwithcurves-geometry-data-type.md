@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,11 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e08e1f4301f1fe4ba70db867f0a3f8c73ebf9209
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45f265bee2ef910313bc8280cb753e1209a86a0a
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260339"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SQL Server 返回类型：geometry
 |距离值|类型维度|返回的空间类型|  
 |--------------------|---------------------|---------------------------|  
 |距离 < 0|0 或 1|空的 GeometryCollection 实例|  
-|距离 < 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例。 **注意：**负缓冲区可能会创建空 GeometryCollection|  
+|距离 < 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例。 **注意：** 负缓冲区可能会创建空 GeometryCollection|  
 |距离 = 0|所有维度|调用 geometry 实例的副本|  
 |distance > 0|所有维度|CurvePolygon 或 GeometryCollection 实例|  
   

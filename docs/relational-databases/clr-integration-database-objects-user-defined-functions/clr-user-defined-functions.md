@@ -1,13 +1,11 @@
 ---
-title: CLR 用户定义函数 |Microsoft 文档
+title: CLR 用户定义函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78f95d7da1a879c2ef33bed15709541cb399660b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15e5ab9bf993150d7ecb9c1439ee75dfeccb5302
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349679"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 用户定义函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
  [CLR 用户定义聚合](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
  说明如何实现和使用用户定义聚合。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   

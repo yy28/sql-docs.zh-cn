@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912432"
 ---
 # <a name="compatibility-matrix"></a>兼容性矩阵
 下表描述的兼容性应用程序和驱动程序以前在本部分中定义的类型。  

@@ -1,31 +1,20 @@
 ---
-title: PredictSupport (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictSupport
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictSupport function
-ms.assetid: 325437d6-7cb5-4ae0-8abe-edb58fe5e90d
-caps.latest.revision: 35
-author: Minewiskan
+title: PredictSupport (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 17dbe13334a4a11ad14c61b28e34bd32c054dabc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037335"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,15 +32,15 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
- 由指定类型的标量值 *\<* 标量列引用*>*。  
+ 指定的类型的标量值 *\<* 标量列引用*>*。  
   
-## <a name="remarks"></a>注释  
- 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含的缺失的状态存储桶，设置\<预测状态 > 到**INCLUDE_NULL**。  
+## <a name="remarks"></a>Remarks  
+ 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包括缺少状态存储桶，设置\<预测状态 > 到**INCLUDE_NULL**。  
   
- 若要返回 missing 状态的支持，设置\<预测状态 > 为 NULL。  
+ 若要返回缺少状态的支持，请设置\<预测状态 > 为 NULL。  
   
 > [!NOTE]  
->  支持值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何支持计算为任何特定模型类型的详细信息，请参阅中键入的各个算法[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+>  支持值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何为任何特定模型类型计算支持的详细信息，请参阅中的类型的单个算法[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例根据 TM Decision Tree 挖掘模型，使用单独查询预测某个人是否购买自行车，并且还确定对该预测的支持。  
@@ -70,9 +59,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

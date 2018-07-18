@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911642"
 ---
 # <a name="ordinary-arguments"></a>普通自变量
 时的目录函数字符串自变量是的普通自变量，它将被视为文字字符串。 普通参数接受字符串的搜索模式和的值列表都不。 普通自变量的情况是有意义的并按原义转字符串中的引号字符。 这些自变量被视为普通自变量，如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;将它们视为标识符自变量而是如果此属性设置为 SQL_TRUE。  

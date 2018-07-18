@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931312"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="deploy-a-dac-using-the-wizard"></a>使用向导部署 DAC  
   
-1.  在 **“对象资源管理器”**中，展开要将 DAC 部署到的实例的节点。  
+1.  在 **“对象资源管理器”** 中，展开要将 DAC 部署到的实例的节点。  
   
 2.  右键单击“数据库”节点，然后选择“部署数据层应用程序…”  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/03/2018
  “说明”- 一个只读框，它显示创作 DAC 或者从某一数据库中提取 DAC 时编写的版本。  
   
 ### <a name="validating-the-dac-package"></a>验证 DAC 包  
- 在向导确认所选文件是有效的 DAC 包时显示一个进度栏。 如果对该 DAC 包进行了验证，则向导将继续到 **“选择包”** 页的最终形式，从中可以查看验证的结果。 如果该文件不是有效的 DAC 包，则向导会保持在 **“选择 DAC 包”**页上。 或者选择另一个有效的 DAC 包，或者取消该向导并且生成一个新的 DAC 包。  
+ 在向导确认所选文件是有效的 DAC 包时显示一个进度栏。 如果对该 DAC 包进行了验证，则向导将继续到 **“选择包”** 页的最终形式，从中可以查看验证的结果。 如果该文件不是有效的 DAC 包，则向导会保持在 **“选择 DAC 包”** 页上。 或者选择另一个有效的 DAC 包，或者取消该向导并且生成一个新的 DAC 包。  
   
   ### <a name="review-policy-page"></a>“查看策略”页  
  查看所用的 DAC 服务器选择策略的评估结果。 该 DAC 服务器选择策略是可选的，并在 Visual Studio 中创建它时分配给该 DAC。 该策略使用该服务器选择策略方面指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例为承载该 DAC 而必须满足的条件。  

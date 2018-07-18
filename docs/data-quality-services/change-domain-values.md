@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15a93031e1e88faea33a3fb868d27d3355cc1dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d554acd38845f5cf1504eef2f0e843535f2582c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309946"
 ---
 # <a name="change-domain-values"></a>更改域值
 
@@ -112,7 +112,7 @@ ms.lasthandoff: 05/03/2018
  在更改域值后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Meaning"></a> 正确、错误和无效值的含义  
- **“域值”** 页的 **“值”** 表中的每个值都将被分配 **“正确”** 、 **“错误”**或 **“无效”**的 **“类型”**设置。 值的类型最初由知识发现活动生成，并且您可以在适合时更改该值。 清理活动将基于知识发现和交互更改生成最终类型。 这些设置将具有以下含义：  
+ **“域值”** 页的 **“值”** 表中的每个值都将被分配 **“正确”** 、 **“错误”** 或 **“无效”** 的 **“类型”** 设置。 值的类型最初由知识发现活动生成，并且您可以在适合时更改该值。 清理活动将基于知识发现和交互更改生成最终类型。 这些设置将具有以下含义：  
   
 -   **正确：** 这是属于域并且没有任何语法错误的值。 例如，City 域中的“Chicago”是正确的。  
   
@@ -127,9 +127,9 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Display"></a> How to Display the Appropriate Values  
  您可以按如下所示修改显示：  
   
--   通过在**“筛选器”** 下拉列表中选择状态，基于其状态筛选 **“筛选器”** 要处于表中的结果。  
+-   通过在 **“筛选器”** 下拉列表中选择状态，基于其状态筛选 **“筛选器”** 要处于表中的结果。  
   
--   通过在**“查找”** 文本框中输入要搜索的一个或多个字母，查找 **“查找”** 要检查或修改的数据。 这将突出显示在显示的任何值中出现的那些字母。  
+-   通过在 **“查找”** 文本框中输入要搜索的一个或多个字母，查找 **“查找”** 要检查或修改的数据。 这将突出显示在显示的任何值中出现的那些字母。  
   
 -   单击 **“仅显示新内容”** 会将在表中显示的值限制为仅限在当前会话（而非之前的会话）中发现的值。  
   

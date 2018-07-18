@@ -19,6 +19,7 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300585"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位信息
 从 Windows Server 2003 开始，Microsoft 操作系统具有支持的 64 位 ODBC 库。 ODBC 标头和库首次发布与 MDAC 2.7 SDK 包含以允许程序员可以轻松地写入新的 64 位平台的代码的更改。 通过确保你的代码使用下面列出的 ODBC 定义类型，可以编译为 64 位和 32 位平台的两个基于相同的源代码 **_WIN64**或**WIN32**宏。  

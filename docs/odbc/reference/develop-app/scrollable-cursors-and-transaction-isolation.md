@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913652"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>可滚动游标，事务隔离
 下表列出的因素控制的可见性更改。  

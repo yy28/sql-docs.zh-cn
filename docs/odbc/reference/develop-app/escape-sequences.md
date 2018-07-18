@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910422"
 ---
 # <a name="escape-sequences"></a>转义序列
 ODBC 定义包含针对日期、 时间、 时间戳，和日期时间间隔文本、 标量函数调用，标准语法的转义序列**如**谓词转义字符、 外部联接中和过程调用。 可互操作的应用程序应使用尽可能这些序列。  

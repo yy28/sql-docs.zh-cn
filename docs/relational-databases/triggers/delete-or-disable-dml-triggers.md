@@ -3,8 +3,6 @@ title: 删除或禁用 DML 触发器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - deleting DML triggers
 - DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e1ba0f042d356cf703bac0e40fd6753a2b63e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c5831d8158c5028c70ded46816151b98947d3aa
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410696"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要删除的触发器的表。  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要禁用的触发器的表。  
   

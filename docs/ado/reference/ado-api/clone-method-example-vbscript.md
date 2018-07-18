@@ -2,7 +2,6 @@
 title: 克隆方法示例 (VBScript) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 831a70b6ecb6da6ac2f819b879c7befeedb8a8d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276386"
 ---
 # <a name="clone-method-example-vbscript"></a>克隆方法示例 (VBScript)
 此示例使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法创建的副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后允许用户独立定位记录每个副本的指针。  
@@ -121,6 +121,6 @@ ms.lasthandoff: 05/03/2018
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Clone 方法 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

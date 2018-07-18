@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -36,15 +35,16 @@ helpviewer_keywords:
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 caps.latest.revision: 136
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ad45365bc2ddd0d43b7f683299c46e14f5a08a65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8b221c752e670d9894a1108e2dea8e01f564221
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788788"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +177,7 @@ style
   
 |ReplTest1|“输出”|  
 |---|---|
-|**0** （默认值）|使用默认的分析行为，即放弃无用的空格，且不允许使用内部 DTD 子集。<br /><br />**注意：**转换为 xml 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的无用空格处理方式不同于 XML 1.0。 有关详细信息，请参阅[创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
+|**0** （默认值）|使用默认的分析行为，即放弃无用的空格，且不允许使用内部 DTD 子集。<br /><br />**注意：** 转换为 xml 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的无用空格处理方式不同于 XML 1.0。 有关详细信息，请参阅[创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
 |**1**|保留无用空格。 此样式设置将默认 xml:space 处理设置为匹配 xml:space="preserve" 的行为。|  
 |**2**|启用有限的内部 DTD 子集处理。<br /><br /> 如果启用，则服务器可使用内部 DTD 子集提供的以下信息来执行非验证分析操作。<br /><br />   - 应用属性的默认值<br />   - 解析并展开内部实体引用<br />   - 检查 DTD 内容模型来确定语法的正确性<br /><br /> 分析器忽略外部 DTD 子集。 此外，它不会评估 XML 声明来查看 standalone 属性具有 yes 值还是 no 值。 相反，它将 XML 实例解析为独立文档。|  
 |**3**|保留无用空格，并启用有限的内部 DTD 子集处理。|  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908163"
 ---
 # <a name="views-limitations"></a>视图限制
 不支持 dBASE，Microsoft Excel、 Paradox 或文本驱动程序。

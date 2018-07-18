@@ -1,5 +1,5 @@
 ---
-title: 脚本 |Microsoft 文档
+title: 脚本编写 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,15 +20,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 722c8f75c8fe759e632a3cefc5960e49ad0519f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970589"
 ---
 # <a name="scripting"></a>脚本编写
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中编写脚本由控制<xref:Microsoft.SqlServer.Management.Smo.Scripter>对象及其子对象，或**脚本**能在单个对象的方法。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制外针对的实例上的对象的依赖关系映射[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  脚本在 SMO 中由控制<xref:Microsoft.SqlServer.Management.Smo.Scripter>对象及其子对象，或**脚本**各个对象的方法。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制外的实例上的对象的依赖关系映射[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象进行的高级脚本撰写是一个由三个阶段组成的过程：  
   
@@ -36,9 +37,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  生成列表  
   
-3.  脚本生成  
+3.  生成脚本  
   
- 发现阶段使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 对象。 如果给定对象的 URN 列表，则 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法将为该 URN 列表中的对象返回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 对象。 布尔值*fParents*参数用于选择父项或指定的对象的子级是要发现。 在此阶段可以修改依赖关系树。  
+ 发现阶段使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 对象。 如果给定对象的 URN 列表，则 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法将为该 URN 列表中的对象返回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 对象。 一个布尔值*fParents*参数用于选择父项或指定对象的子级是被发现。 在此阶段可以修改依赖关系树。  
   
  在生成列表阶段，会传入该树并返回生成的列表。 此对象列表是按脚本撰写顺序排列的，可以对其进行操作。  
   

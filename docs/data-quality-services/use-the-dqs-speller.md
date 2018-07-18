@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22c4ca9f1c7c0909734c8433d82f06aeb14e4990
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 349d46c3b2f15a9ef06c1600b859d1a6413bdbef
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311346"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Enable"></a> 启用拼写检查器  
   
-1.  若要在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中启用拼写检查器，请在 **“域管理”** 活动中打开知识库，选择所需域，然后在 **“域属性”** 页上单击 **“启用拼写检查器”** 。 在 **“语言”**中，选择要用于拼写检查器的语言。  
+1.  若要在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中启用拼写检查器，请在 **“域管理”** 活动中打开知识库，选择所需域，然后在 **“域属性”** 页上单击 **“启用拼写检查器”** 。 在 **“语言”** 中，选择要用于拼写检查器的语言。  
   
 2.  在域属性中启用拼写检查器后，该拼写检查器将在 **“管理域值”** 页、 **“域值”** 页或 **“基于字词的关系”** 页以及 **“管理和查看结果”** 页中启用。 若要在这些页上禁用拼写检查器，请单击 **“启用/禁用拼写检查器”** 图标。 单击图标将更改拼写检查器在该页上的状态。 同样，如果对于该域禁用 **“启用拼写检查器”** 属性，则单击 **“启用/禁用拼写检查器”** 图标将在该页上启用拼写检查器。 如果您退出该页后又返回到该页，则按钮状态将再次由 **“启用拼写检查器”** 域属性确定。  
   

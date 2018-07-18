@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905502"
 ---
 # <a name="using-microsoft-internet-information-services"></a>使用 Microsoft Internet 信息服务
 > [!IMPORTANT]  

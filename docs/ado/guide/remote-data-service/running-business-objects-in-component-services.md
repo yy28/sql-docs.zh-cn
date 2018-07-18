@@ -2,7 +2,6 @@
 title: 在组件服务中运行业务对象 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 491f6554be66926469f940cd83c12a5469ae3073
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0c83442d248d7427ece0837f4ab449e37a9f3d9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274376"
 ---
 # <a name="running-business-objects-in-component-services"></a>在组件服务中运行业务对象
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  通过使用作为组件服务组件实现的中间层上的业务对象时**GetObjectContext**， **SetComplete**，和**异常**，业务对象可以使用组件服务 （或 MTS，如果你使用的 Windows NT） 要跨多个客户端调用保持其状态的上下文对象。 本方案是，可以使用 DCOM，通常受信任的客户端和 intranet 中的服务器之间实现。 在这种情况下， [rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)对象和[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)事务上下文对象替换为在客户端的方法和**CreateInstance**方法，由**ITransactionContext**接口，并由组件服务实现。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

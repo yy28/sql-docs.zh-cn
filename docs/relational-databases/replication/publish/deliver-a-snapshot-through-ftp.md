@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 991c8ab81340b5ab9b03b79174e7a60e33b505cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52edda77eb537fb6962a183cc37591b457d33b6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355129"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **“FTP 快照和 Internet”** 页，用于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器的合并发布。  
   
-2.  为 **“FTP 服务器名称”**、 **“端口号”**、 **“从 FTP 根文件夹开始的路径”**、 **“登录名”**和 **“密码”**指定值。  
+2.  为 **“FTP 服务器名称”**、 **“端口号”**、 **“从 FTP 根文件夹开始的路径”**、 **“登录名”** 和 **“密码”** 指定值。  
   
      例如，如果 FTP 服务器的根目录是 \\\ftpserver\home，但你想将快照存储在 \\\ftpserver\home\snapshots，请为“从 FTP 根文件夹开始的路径”属性指定 \snapshots\ftp（复制在创建快照文件时将“ftp”追加到快照文件夹路径）。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
     -   在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher**、 **@publisher_db**、 **@publication**，将用于运行订阅服务器上的分发代理的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 **@job_login** 和 **@job_password**，并将值 **true** 指定给 **@use_ftp**中通过 FTP 传递快照。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 以注册请求订阅。 有关详细信息，请参阅 [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)。  
+2.  在发布服务器上，对发布数据库执行 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 以注册请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>创建对使用 FTP 快照传递的合并发布的请求订阅  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在订阅服务器上，对订阅数据库执行 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定 **@publisher**、 **@publisher_db**、 **@publication**，将用于运行订阅服务器上的分发代理的 Windows 凭据指定给 **@job_login** 和 **@job_password**，并将值 **true** 指定给 **@use_ftp**中通过 FTP 传递快照。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 以注册请求订阅。 有关详细信息，请参阅 [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)。  
+3.  在发布服务器上，对发布数据库执行 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 以注册请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布更改一个或多个 FTP 快照传递设置  
   

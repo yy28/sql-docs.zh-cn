@@ -2,7 +2,6 @@
 title: UpdateBatch 和执行方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3267646c7988caa030563d6c83f1ddb1b79d84ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4182bc62fcc289a689d1eeb25999d19f40b3dd69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282852"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和执行方法示例 （VC + +）
 此示例演示[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法结合[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法。  
@@ -214,6 +214,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)

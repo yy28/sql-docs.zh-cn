@@ -2,7 +2,6 @@
 title: 重新同步命令属性的动态 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 240c4d6ce4aa392f01ebb27a4a52fd73c684b981
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37896464c8c9387cb0d68da8bf9bc561e29602d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281367"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>重新同步命令属性的动态 (ADO)
 指定用户提供的命令字符串[重新同步](../../../ado/reference/ado-api/resync-method.md)要刷新中名为的表中的数据的方法问题[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)动态属性。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值即命令字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象是在多个基表上执行联接操作的结果。 取决于受影响的行*AffectRecords*参数[重新同步](../../../ado/reference/ado-api/resync-method.md)方法。 标准**重新同步**如果执行方法[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)和**重新同步命令**未设置属性。  
   
  命令字符串**重新同步命令**属性为参数化的命令或唯一标识要刷新的行的存储的过程并返回单个行的行包含相同数量和列顺序刷新。 该命令字符串包含在每个主键列的参数**唯一表**; 否则为返回运行时错误。 参数自动填写要刷新的行中的主键值。  

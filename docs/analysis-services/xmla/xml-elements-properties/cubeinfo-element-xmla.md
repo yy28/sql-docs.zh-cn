@@ -1,5 +1,5 @@
 ---
-title: CubeInfo 元素 (XMLA) |Microsoft 文档
+title: CubeInfo 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1e93de452634e0f97d648e6548357cc040b9aca
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34574109"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004569"
 ---
 # <a name="cubeinfo-element-xmla"></a>CubeInfo 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含多维数据集的元数据包含由容器的父[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)元素。  
+  包含多维数据集元数据包含在父[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34574109"
 </OlapInfo>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34574109"
 |子元素|[Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **CubeInfo**元素包含一个**多维数据集**为在多维数据集中引用的每个多维数据集的元素。  
+ **CubeInfo**元素包含一个**多维数据集**在多维数据集中引用的每个多维数据集的元素。  
   
 > [!NOTE]  
 >  Analysis Services 返回只有一个**多维数据集**此集合中的元素因为[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]不支持引用多个多维数据集的多维表达式 (MDX) 语言的 FROM 子句中的语句。  

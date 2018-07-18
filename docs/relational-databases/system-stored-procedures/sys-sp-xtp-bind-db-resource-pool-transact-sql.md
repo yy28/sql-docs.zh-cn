@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft 文档
+title: sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056085"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +69,9 @@ Msg 911, Level 16, State 18, Procedure sp_xtp_bind_db_resource_pool_internal, Li
 Database 'Hekaton_DB213' does not exist. Make sure that the name is entered correctly.  
 ```  
   
-**数据库是一个系统数据库**  
+**数据库是系统数据库**  
  无法在系统数据库中创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 表。  因此，为这种数据库创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存绑定是无效的。  返回以下错误：  
-*Database_name %s 是指系统数据库。资源池只能绑定到用户数据库。*  
+*Database_name %s 引用系统数据库。资源池只能绑定到用户数据库。*  
   
 ```  
 Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -86,7 +87,7 @@ Msg 41370, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, L
 Resource pool 'Pool_Hekaton' does not exist or resource governor has not been reconfigured.  
 ```  
   
-**Pool_name 指的是保留的系统池**  
+**Pool_name 引用了保留的系统池**  
  池名称“INTERNAL”和“DEFAULT”是为系统池保留的。  将数据库显式绑定至两者之一将是无效的。  如果输入了系统池名称，则返回以下错误：  
 *资源池 %s 是系统资源池。系统资源池可能不显式绑定到使用此过程的数据库。*  
   
@@ -97,7 +98,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
   
 **数据库已绑定到另一个资源池**  
  在任何时候，数据库都只能绑定至一个资源池。 必须显式删除与资源池的数据库绑定，才能将数据库绑定至其他池。 请参阅[sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
-*数据库 %s 已绑定到资源池 %s。你必须解除绑定，然后才能创建新的绑定。*  
+*数据库 %s 已绑定至资源池 %s。您必须取消绑定，然后才能创建新的绑定。*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -108,7 +109,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
   
 **成功绑定**  
  若成功，则该函数返回以下成功消息，此消息记录在 SQL ERRORLOG 中  
-*已成功创建资源绑定之间的数据库 ID %d 和 id 为 %d 的资源库。*  
+*已成功创建资源绑定 %d 数据库和资源池 id 为 %d 之间。*  
   
 ## <a name="examples"></a>示例  
 A.  以下代码示例将数据库 Hekaton_DB 绑定至资源池 Pool_Hekaton。  
@@ -119,7 +120,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  下次该数据库联机时，此绑定生效。  
  
- B. 上面的示例，其中包括一些基本的检查的扩展的示例。  执行以下操作[!INCLUDE[tsql](../../includes/tsql-md.md)]中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. 上面的示例，其中包括一些基本检查的扩展的示例。  执行以下[!INCLUDE[tsql](../../includes/tsql-md.md)]中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -149,14 +150,14 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
   
 -   绑定之前，由 `database_name` 指定的数据库以及由 `resource_pool_name` 指定的资源池必须存在。  
   
 -   需要 CONTROL SERVER 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将具有内存优化表的数据库绑定至资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_unbind_db_resource_pool & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

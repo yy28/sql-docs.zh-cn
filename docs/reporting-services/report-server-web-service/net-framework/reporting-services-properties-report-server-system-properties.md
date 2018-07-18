@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028624"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 属性 - 报表服务器系统属性
   已保留以下系统属性名称。 您不能创建具有相同名称的用户定义属性。 您可以使用 Web 服务方法读取或修改其中的许多属性。  

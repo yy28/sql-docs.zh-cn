@@ -1,13 +1,12 @@
 ---
-title: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB) |Microsoft 文档
+title: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
@@ -16,11 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 691c305f0634e42aa0ed960bf55eccd48c2ea19c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68f47843f6cb501400f164c8cb77555867b52baa
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409216"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.lasthandoff: 05/03/2018
  有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>示例  
- 编译并运行此示例之前，启用 FILESTREAM 的支持 ([启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 编译并运行此示例之前，启用 FILESTREAM 支持 ([启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
  该服务器必须具有名为 C:\DBFsa 的目录，示例将在其中创建数据库。 您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须对此位置具有写访问权限（例如，采用本地系统帐户登录）。  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  编译 IRowsetFastLoadUpload.cpp、ISSHelper.cpp、ole32.lib 和 oleaut32.lib。  
   
- 当你运行此示例，你必须将名称传递给服务器，或 server\instance_name，以及值之间 4 MB (0x400001) 和 4 GB (0xFFFFFFFF) 的数据量，该值指示要写入。  
+ 当你运行此示例，您必须在服务器或服务器，以及一个值的名称之间传递 4 MB (0x400001) 和 4 GB (0xFFFFFFFF)，该值指示的数据量来编写。  
   
  第四个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表删除此示例创建的数据库。  
   

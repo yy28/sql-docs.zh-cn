@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912732"
 ---
 # <a name="c-data-types"></a>C 数据类型
 ODBC C 数据类型表示在应用程序中存储数据所使用的 C 缓冲的数据类型。  

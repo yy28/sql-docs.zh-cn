@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,20 +20,21 @@ helpviewer_keywords:
 - SOUNDEX values
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e5ab09ee3ae088382fee86a8add2aa112d9efa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 692d3124814aaaeb25e7ec5507dc0a4ccf968b34
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781558"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回一个整数值，指示两个字符表达式的 SOUNDEX 值之间的差异。  
+该函数返回一个整数值，用于度量两个不同字符表达式的 [SOUNDEX()](./soundex-transact-sql.md) 值之间的差异。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +45,19 @@ DIFFERENCE ( character_expression , character_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- *character_expression*  
- 字符数据的字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。  
+*character_expression*  
+字符数据的字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。  
   
 ## <a name="return-types"></a>返回类型  
- **int**  
-  
+**int**  
+ 
 ## <a name="remarks"></a>Remarks  
- 返回的整数是 SOUNDEX 值中相同字符的个数。 返回的值从 0 到 4 不等：0 表示几乎不同或完全不同，4 表示几乎相同或完全相同。  
+`DIFFERENCE` 比较两个不同的 `SOUNDEX` 值，并返回一个整数值。 该值用于度量 `SOUNDEX` 值匹配的程度，范围为 0 到 4。 值为 0 表示 SOUNDEX 值之间的相似性较弱或不相似；4 表示与 SOUNDEX 值非常相似，甚至完全相同。  
   
- DIFFERENCE 和 SOUNDEX 区分排序规则。  
+`DIFFERENCE` 和 `SOUNDEX` 具有排序规则敏感度。  
   
 ## <a name="examples"></a>示例  
- 在以下示例的第一部分，对两个非常相似的字符串的 `SOUNDEX` 值进行了比较。 对于 Latin1_General 排序规则，`DIFFERENCE` 将返回值 `4`。 在以下示例的第二部分，对两个差别很大的字符串的 `SOUNDEX` 值进行了比较，对于 Latin1_General 排序规则，`DIFFERENCE` 将返回值 `0`。  
+本示例的第一部分比较两个非常相似的字符串的 `SOUNDEX` 值。 对于 Latin1_General 排序规则，`DIFFERENCE` 返回的值为 `4`。 示例的第二部分比较两个差异较大的字符串的 `SOUNDEX` 值，对于 Latin1_General 排序规则，`DIFFERENCE` 返回的值为 `0`。  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

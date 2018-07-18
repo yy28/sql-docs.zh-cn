@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,16 +17,17 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 423942773422452cc6b46b808fbe53a61270db2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85a9cdf94dff3a45563c0f22cb715a228d969dcb
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329941"
 ---
 # <a name="add-or-change-a-property-expression"></a>添加或更改属性表达式
   可以为包、任务、Foreach 循环容器、For 循环容器、序列容器、事件处理程序、包和项目级别连接管理器以及日志提供程序创建属性表达式。  
   
- 若要创建或更改属性表达式，您可以使用 **“属性表达式编辑器”** 或 **“表达式生成器”**。 可以从任务和容器使用的自定义编辑器中访问 **“属性表达式编辑器”** ，也可以从 **“属性”** 窗口中进行访问。 可以从**“属性表达式编辑器”** 内部访问 **“表达式生成器”**。 在 **“属性表达式编辑器”** 或 **“表达式生成器”**中编写表达式时， **“表达式生成器”** 提供一组图形工具，可以非常容易地生成复杂表达式。  
+ 若要创建或更改属性表达式，您可以使用 **“属性表达式编辑器”** 或 **“表达式生成器”**。 可以从任务和容器使用的自定义编辑器中访问 **“属性表达式编辑器”** ，也可以从 **“属性”** 窗口中进行访问。 可以从 **“属性表达式编辑器”** 内部访问 **“表达式生成器”**。 在 **“属性表达式编辑器”** 或 **“表达式生成器”** 中编写表达式时， **“表达式生成器”** 提供一组图形工具，可以非常容易地生成复杂表达式。  
   
  若要了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的语法、运算符和函数的详细信息，请参阅[运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。 每个运算符或函数的主题都包括在表达式中使用该运算符或函数的示例。 有关更复杂的表达式示例，请参阅 [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  单击“表达式”框，再单击省略号 (…)。  
   
-4.  在 **“属性表达式编辑器”**中的 **“属性”** 列表中选择某个属性，然后执行下列操作之一：  
+4.  在 **“属性表达式编辑器”** 中的 **“属性”** 列表中选择某个属性，然后执行下列操作之一：  
   
     -   在 **“表达式”** 列中直接键入或更改属性表达式，然后单击 **“确定”**。  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
     -   若要访问 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 表达式语言提供的函数、转换和运算符，请展开“数学函数”、“字符串函数”、“日期/时间函数”、“NULL 函数”、“类型转换”和“运算符”。  
   
-    -   若要在 **“表达式生成器”**中生成或更改表达式，请将变量、列、函数、运算符和转换拖到 **“表达式”** 框中，也可以在该框中键入表达式。  
+    -   若要在 **“表达式生成器”** 中生成或更改表达式，请将变量、列、函数、运算符和转换拖到 **“表达式”** 框中，也可以在该框中键入表达式。  
   
     -   若要查看表达式的计算结果，请在 **“表达式生成器”** 中单击 **“计算表达式”**。  
   

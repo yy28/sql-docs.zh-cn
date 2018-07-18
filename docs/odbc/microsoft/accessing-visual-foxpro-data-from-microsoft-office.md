@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898912"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>从 Microsoft Office 访问 Visual FoxPro 数据
 可以使用 Microsoft Visual FoxPro ODBC 驱动程序从你的 Microsoft Office for Windows 95 或 Windows 98 的应用程序访问 Visual FoxPro 数据。  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016860"
 ---
 # <a name="understanding-security-policies"></a>了解安全策略
   由报表服务器执行的任何代码必须是特定的代码访问安全策略的一部分。 这些安全策略包含多个将证据映射到一组命名权限集的代码组。 通常，代码组与在该组中为代码指定可允许权限的命名权限集关联。 运行时使用受信任主机或加载程序所提供的证据来确定代码所属的代码组，从而确定要授予代码的权限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 遵循由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 定义的安全策略体系结构。 下面几节介绍了 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各种代码类型以及与它们相关联的策略规则。  

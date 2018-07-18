@@ -2,10 +2,10 @@
 title: SSVARIANT 结构 |Microsoft 文档
 description: OLE DB 驱动程序中的 SQL Server 的 SSVARIANT 结构
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,20 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: eb977dbe9ef7bed4e6c98ef612bd6e2bb67bf159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9afd7d6ce87ac49c060347287d4b7a081ea5bb41
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666377"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 结构
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **SSVARIANT**结构，其定义中 msoledbsql.h，对应于 DBTYPE_SQLVARIANT 值 OLE DB 驱动程序中的 SQL Server。  
   
  **SSVARIANT**是对比联合。 根据 vt 成员的值，使用者可以确定哪个成员读取。 vt 值对应于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。 因此， **SSVARIANT**结构可以保存任何 SQL Server 类型。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示器](http://go.microsoft.com/fwlink/?LinkId=122171)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当 DataTypeCompat = = 80，多个**SSVARIANT**子类型变为字符串。 例如，以下的 vt 值将出现在**SSVARIANT** VT_SS_WVARSTRING 作为：  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -76,13 +79,13 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支持**时间**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**字节**) 指定的小数位数*tTime2Val*值。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支持**datetime2** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**字节**) 指定的小数位数*tsDataTimeVal*值。|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|支持**datetimeoffset** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**字节**) 指定的小数位数*tsoDateTimeOffsetVal*值。|  
-|NCharVal|没有对应的 OLE DB 类型指示器。|**结构 _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|支持**nchar**和**nvarchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *sActualLength* (**短**) 指定的字符串的实际长度为*pwchNCharVal*点。 不包括尾零。<br /><br /> *sMaxLength* (**短**) 指定的字符串的最大长度为*pwchNCharVal*点。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 指向的字符串。<br /><br /> 未使用的成员︰ *rgbReserved*， *dwReserved*，和*pwchReserved*。|  
+|NCharVal|没有对应的 OLE DB 类型指示器。|**结构 _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|支持**nchar**和**nvarchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *sActualLength* (**短**) 指定的字符串的实际长度为*pwchNCharVal*点。 不包括尾零。<br /><br /> *sMaxLength* (**短**) 指定的字符串的最大长度为*pwchNCharVal*点。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 指向的字符串。<br /><br /> 未使用的成员： *rgbReserved*， *dwReserved*，和*pwchReserved*。|  
 |CharVal|没有对应的 OLE DB 类型指示器。|**结构 _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|支持**char**和**varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *sActualLength* (**短**) 指定的字符串的实际长度*pchCharVal*点。 不包括尾零。<br /><br /> *sMaxLength* (**短**) 指定的字符串的最大长度*pchCharVal*点。<br /><br /> *pchCharVal* (**CHAR** \*) 指向的字符串。<br /><br /> 不使用的成员：<br /><br /> *rgbReserved*， *dwReserved*，和*pwchReserved*。|  
-|BinaryVal|没有对应的 OLE DB 类型指示器。|**结构 _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支持**二进制**和**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *sActualLength* (**短**) 指定到的数据的实际长度*prgbBinaryVal*点。<br /><br /> *sMaxLength* (**短**) 指定的数据传输到其最大长度*prgbBinaryVal*点。<br /><br /> *prgbBinaryVal* (**字节** \*) 的二进制数据的指针。<br /><br /> 未使用的成员︰ *dwReserved*。|  
+|BinaryVal|没有对应的 OLE DB 类型指示器。|**结构 _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支持**二进制**和**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *sActualLength* (**短**) 指定到的数据的实际长度*prgbBinaryVal*点。<br /><br /> *sMaxLength* (**短**) 指定的数据传输到其最大长度*prgbBinaryVal*点。<br /><br /> *prgbBinaryVal* (**字节** \*) 的二进制数据的指针。<br /><br /> 未使用的成员： *dwReserved*。|  
 |类型|不使用|不使用|不使用|不使用|  
 |BLOBType|不使用|不使用|不使用|不使用|  
   
-## <a name="see-also"></a>另请参阅  
- [数据类型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据类型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

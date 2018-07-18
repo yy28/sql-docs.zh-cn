@@ -2,7 +2,7 @@
 title: 用于高可用性、 灾难恢复的 SQL Server 支持的 OLE DB 驱动程序 |Microsoft 文档
 description: OLE DB 驱动程序的 SQL Server 支持的高可用性、 灾难恢复
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59c1000cff92dbe10b13c1de01afb12482b4e219
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02f6c8da18d94c243ea9c3c07717af5b9750b066
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612162"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>用于高可用性、 灾难恢复的 SQL Server 支持的 OLE DB 驱动程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本文介绍 SQL Server 支持 OLE DB 驱动程序 (在中添加[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 为[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
@@ -148,7 +151,7 @@ hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void **)&pIDBProperties)
 pIDBProperties->SetProperties(1, &PropSet);
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 功能的 OLE DB 驱动程序](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [将连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序结合使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
   

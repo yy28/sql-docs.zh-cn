@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bfc9c5c3ed25112bf1eace6086b72d37dfacacc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91549780097dc18bef5b6a4fe2d97cdbff4a44f4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409549"
 ---
 # <a name="script-task"></a>脚本任务
   脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
@@ -73,7 +72,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="configuring-the-script-task-in-the-designer"></a>在设计器中配置脚本任务  
  下表描述可以为脚本任务进行记录的 **ScriptTaskLogEntry** 事件。 在 **“配置 SSIS 日志”** 对话框的 **“详细信息”** 选项卡上选择 **ScriptTaskLogEntry** 事件，以便进行日志记录。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|报告在脚本中实现日志记录的结果。 该任务在每次调用 **Log** 对象的 **Dts** 方法时都编写一个日志条目。 然后，在运行代码时编写这些条目。 有关详细信息，请参阅 [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897052"
 ---
 # <a name="base-address-of-drivers"></a>驱动程序的基址
 每个 ODBC 桌面数据库驱动程序已链接使用 0x04c0000 基址。

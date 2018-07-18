@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015825"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：将 ReportViewer 控件添加到应用程序
 使用报表向导设计子报表后，接下来要向网站应用程序添加 ReportViewer 控件。 如果使用 ASP.NET 报表网站，它将添加 ReportViewer 控件到 default.aspx 页。   

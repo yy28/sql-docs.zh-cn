@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909562"
 ---
 # <a name="interval-data-types"></a>Interval 数据类型
 一个时间间隔被指两个日期和时间之间的差异。 按两种不同方式之一表示的时间间隔。 其中一个是*年-月*表示年和月八进制整数方面的时间间隔的间隔。 另一种是*一天时间*表示按天、 分钟和秒的间隔的间隔。 这两种类型的间隔不同，并且不能混合，因为月份可以具有不同的天数。  

@@ -2,7 +2,7 @@
 title: 生成使用 OLE DB 驱动程序的 SQL Server 的应用程序 |Microsoft 文档
 description: 使用 OLE DB 驱动程序的 SQL Server 的生成应用程序
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -19,20 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 48d5ea2a58b2a9466b5a32387143a4540c321355
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b768ec6810767e920650bc83e10f9ddece464a56
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612112"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>使用 OLE DB 驱动程序的 SQL Server 的生成应用程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在开发时为 SQL Server 库使用 OLE DB 驱动程序的应用程序，有大量的派上用场的问题。 本部分中的主题讨论这些问题，包括从 MDAC 升级到 OLE DB 驱动程序，对于 SQL Server，用于 SQL Server 标头和库文件，并简要介绍可用于与 OLE DB 驱动程序 S 的各种连接字符串的 OLE DB 驱动程序的许多QL Server。  
 
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [安装适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
  讨论如何安装 OLE DB 驱动程序的 SQL Server、 各种组件安装到的位置以及如何卸载 SQL Server 的 OLE DB 驱动程序。  
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
  [将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  讨论 OLE DB 驱动程序的 SQL Server 和 MDAC 和从 MDAC 升级到 OLE DB 驱动程序，为 SQL Server 时应考虑的问题之间的差异。  
 
- [更新应用程序从 SQL Server 2005 的本机客户端](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [从 SQL Server 2005 Native Client 更新应用程序](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  讨论了从升级时应考虑的问题[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]到 OLE DB 驱动程序的 SQL Server 的本机客户端。  
 
  [将 ADO 与适用于 SQL Server 的 OLE DB 驱动程序结合使用](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
@@ -57,6 +58,6 @@ ms.lasthandoff: 05/03/2018
  [适用于 SQL Server 的 OLE DB 驱动程序的支持策略](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  讨论如何各种数据访问组件可以用于适用于 SQL Server 的 OLE DB 驱动程序的不同版本。  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

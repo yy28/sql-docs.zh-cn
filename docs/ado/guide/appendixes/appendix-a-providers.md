@@ -2,7 +2,6 @@
 title: 附录 a： 提供程序 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 7cd4f36537158452eee32a92bd5544acc0956a91
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707505"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271276"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附录 a： 数据和服务提供商
 本节介绍三种类型的提供程序： 数据提供程序、 服务提供商和服务组件。 提供程序分为两类： 提供数据和提供服务。 A*数据提供程序*拥有其自己的数据，并以表格形式向你的应用程序公开。 A*服务提供商*通过生成和使用数据，并增加在 ADO 应用程序的功能来封装服务。 服务提供商还可进一步定义作为*服务组件*，哪项必须与其他服务提供程序或组件一起工作。

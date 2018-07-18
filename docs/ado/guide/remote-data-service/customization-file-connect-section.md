@@ -2,7 +2,6 @@
 title: 自定义文件连接部分 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273846"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件连接部分
 处理程序的默认行为是拒绝所有连接。 **连接**节指定该行为的例外情况。 例如，如果所有**连接**节都不存在或为空，则默认情况下无法不建立任何连接。  
@@ -55,18 +55,18 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 |组成部分|Description|  
 |----------|-----------------|  
-|**连接**|一个文本字符串，指示这是连接字符串条目。|  
+|**“连接”**|一个文本字符串，指示这是连接字符串条目。|  
 |***connectionString***|一个字符串，将整个客户端的连接字符串。|  
 |**访问**|一个文本字符串，指示这是访问条目。|  
 |***accessRight***|以下的访问权限之一：<br /><br /> -   **NoAccess** -用户将无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
   
  如果你想要允许任何连接 （实际上，禁用默认处理程序行为），在中设置的访问项**连接默认**部分到`Access=ReadWrite`，并删除或注释掉任何其他**连接***标识符*部分。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自定义文件 UserList 部分](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

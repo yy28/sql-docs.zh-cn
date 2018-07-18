@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a48f3114c4207d11dab84a1706af2f3e1971f9cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8f4a37d9d1ffc68c0887bf67921a3b32b097413
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333651"
 ---
 # <a name="partition-processing-destination"></a>分区处理目标
   分区处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分区。 有关分区的详细信息，请参阅[分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)。  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
  **处理方法**  
  选择处理方法。 此选项的默认值为 **“完全”**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |添加(增量式)|对分区执行增量处理。|  
 |完全|对分区执行完全处理。|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看从上表中选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。  
+ 查看从上表中选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。  
   
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  
@@ -119,7 +118,7 @@ ms.lasthandoff: 05/03/2018
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将无法接受的键值转换为 Unknown 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -136,7 +135,7 @@ ms.lasthandoff: 05/03/2018
  **出错时要执行的操作**  
  如果选择了“出错时停止”，请指定在达到错误阈值时要执行的操作。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -144,7 +143,7 @@ ms.lasthandoff: 05/03/2018
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
  **空键转换为未知键**  
  指定在将空键转换为 Unknown 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -171,7 +170,7 @@ ms.lasthandoff: 05/03/2018
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  

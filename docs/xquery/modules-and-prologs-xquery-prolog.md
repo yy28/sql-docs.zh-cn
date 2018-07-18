@@ -1,5 +1,5 @@
 ---
-title: XQuery Prolog |Microsoft 文档
+title: XQuery Prolog |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,17 +26,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974550"
 ---
-# <a name="modules-and-prologs---xquery-prolog"></a>模块和起始-XQuery Prolog
+# <a name="modules-and-prologs---xquery-prolog"></a>模块和 Prolog-XQuery Prolog
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 查询由一个 prolog 和一个主体组成。 XQuery prolog 是一系列声明和定义，它们共同创建所需的查询处理环境。 在 SQL Server 中，XQuery prolog 可以包含命名空间声明。 XQuery 主体由指定预期查询结果的一些表达式组成。  
   
- 例如，针对 Instructions 列指定以下 XQuery **xml**将生产说明存储为 XML 的类型。 该查询将检索生产车间 `10` 的生产说明。 `query()`方法**xml**数据类型用于指定 XQuery。  
+ 例如，针对的 Instructions 列指定以下 XQuery **xml**将生产说明存储为 XML 的类型。 该查询将检索生产车间 `10` 的生产说明。 `query()`方法**xml**数据类型用于指定 XQuery。  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -48,7 +49,7 @@ WHERE ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   XQuery prolog 包括命名空间前缀 (AWMI) 声明， `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`。  
+-   XQuery prolog 包含命名空间前缀 (AWMI) 声明， `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`。  
   
 -   `declare namespace` 关键字定义查询主体随后使用的命名空间前缀。  
   
@@ -80,7 +81,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 有关详细信息，请参阅，[将命名空间添加到查询使用 WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
+ 有关详细信息，请参阅，[命名空间添加到查询使用 WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
 ### <a name="default-namespace-declaration"></a>默认命名空间声明  
  如果不使用 `declare namespace` 声明来声明一个命名空间前缀，您可以使用 `declare default element namespace` 声明为元素名称绑定一个默认命名空间。 在这种情况下，并不需要指定任何前缀。  
@@ -107,7 +108,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

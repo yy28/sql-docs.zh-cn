@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014974"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>为数据处理扩展插件实现 Command 类
   Command 对象表述请求并将其传递到数据源上。 命令文本可以采用多种不同的语法形式，包括文本和 XML。 如果返回结果，则 Command 对象将结果作为 DataReader 对象返回。  

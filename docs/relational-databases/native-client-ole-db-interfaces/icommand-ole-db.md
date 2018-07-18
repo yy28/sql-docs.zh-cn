@@ -1,13 +1,12 @@
 ---
-title: ICommand (OLE DB) |Microsoft 文档
+title: ICommand (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 483c45ea2761a87e15a258ceca793dd09e1173f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22c5624b77f01f0194f2a8ec9e8048cbc15a595a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432476"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.lasthandoff: 05/03/2018
   本主题讨论特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 OLE DB 行为。  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- 如果插入的数据大于列的大小，通常会导致错误。 但是，在一些情况下返回 S_OK 但*dwStatus*将设置为 DBSTATUS_S_TRUNCATED。 这通常发生在时插入数据使用的参数，其中列是不足够大以保存数据，和**ICommandWithParameters::SetParameterInfo**尚未调用。  
+ 如果插入的数据大于列的大小，通常会导致错误。 但是，有些情况下将返回 S_OK，但*dwStatus*将设置为 DBSTATUS_S_TRUNCATED。 这通常发生在时插入数据使用参数，其中列是不足够大以保存数据，并**icommandwithparameters:: Setparameterinfo**尚未调用。  
   
-## <a name="see-also"></a>另请参阅  
- [接口 & #40; OLE DB & #41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+## <a name="see-also"></a>请参阅  
+ [接口&#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

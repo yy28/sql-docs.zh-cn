@@ -1,7 +1,7 @@
 ---
 title: 在 Reporting Services 数据源中存储凭据 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2015
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -20,26 +20,19 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa7bc5471455e428fb680dbe0369bc1fd4888dbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8511d948e0e942451e4c304e6a381686c0023a08
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550678"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>在 Reporting Services 数据源中存储凭据
   可以配置存储的凭据， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器可使用这些凭据来访问报表的外部数据。 如果报表在无人参与的状态下运行，则使用存储凭据，例如将报表作为电子邮件发布的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 计划或触发报表处理时，报表服务器将检索和使用这些凭据。 本主题向你说明了为本机模式下和 SharePoint 模式下的报表服务器配置存储凭据的过程。  
   
-||  
-|-|  
+|| |
+|-|-|
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
-  
--   [为特定于报表的数据源配置存储的凭据（本机模式）](#bkmk_stored_credentials_data_source_native)  
-  
--   [为特定于报表的数据源配置存储的凭据（SharePoint 模式）](#bkmk_stored_credentials_data_source_sharepoint)  
-  
--   [为共享数据源配置存储凭据（本机模式）](#bkmk_stored_credentials_shared_data_source_native)  
-  
--   [为共享数据源配置存储凭据（SharePoint 模式）](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> 存储凭据的安全策略要求  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 要求为报表服务器上的以下其中一项安全策略配置用于存储凭据的帐户。 建议使用环境要求的最低级别权限来选择策略。  
@@ -52,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> 为特定于报表的数据源配置存储的凭据（本机模式）  
   
-1.  在本机模式下的报表管理器中，浏览至包含该报表的文件夹。 单击项上下文菜单 ![报表管理器中 ssrs 项的上下文菜单](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items")。  
+1.  在 Web 门户中，浏览到包含该报表的文件夹。 单击报表磁贴右上角的省略号 (...)。  
   
 2.  单击“管理”  ，然后单击“数据源” 。  
   
@@ -108,11 +101,11 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 为共享数据源配置存储凭据（本机模式）  
   
-1.  在本机模式下的报表管理器中，浏览至共享数据源项。 ![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")  
+1.  在 Web 门户中，浏览到共享数据源项。 
   
-2.  单击上下文菜单 ![报表管理器中 ssrs 项的上下文菜单](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items")，然后单击“管理”。  
+2.  单击报表磁贴右上角的省略号 (...) >“管理”。 
   
-3.  在“数据源类型”  列表中，指定处理数据源的数据所用的数据处理扩展。  
+3.  在“类型”列表中，指定用于处理来自数据源的数据的数据处理扩展插件。  
   
 4.  对于 **“连接字符串”**，指定报表服务器用于连接数据源的连接字符串。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您不要在连接字符串中指定凭据。  
   
@@ -162,9 +155,4 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [配置报表的数据源属性（报表管理器）](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [“数据源”属性页（报表管理器）](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [“新建数据源”页（报表管理器）](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
-  
   

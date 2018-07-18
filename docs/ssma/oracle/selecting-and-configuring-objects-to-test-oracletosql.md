@@ -1,8 +1,6 @@
 ---
 title: 选择并配置的对象添加到测试 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8f4e53df32355dbe26efee5f680eb19e529d9670
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9069ec981e944118b649f1dd0d0dd326e2c217db
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777863"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>选择并配置的对象添加到测试 (OracleToSQL)
 在此步骤中，您将选择对象进行测试，以及如何用于比较过程的和函数的输出参数，以及函数的返回值配置设置。  
@@ -86,6 +85,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>下一步  
 [选择并配置受影响的对象&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [测试迁移的数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

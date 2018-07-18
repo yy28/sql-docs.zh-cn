@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dca926d79748d08c91f0f55173336373c495dc6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5ae8cef48ebf67488e1e6e7b0e3a53f6fb62156
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407299"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>“数据库配置”页（Master Data Services 配置管理器）
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="current-database"></a>当前数据库  
  选择一个现有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库或创建要编辑其系统设置的新数据库。 在创建后，将选择这个新数据库。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**SQL Server 实例**|显示所选 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称。 在您连接到某一实例并选择或创建某一 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库之前，此项为空。|  
 |**Master Data Services 数据库**|显示所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。 在您连接到某一实例并选择或创建某一 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库之前，此项为空。|  

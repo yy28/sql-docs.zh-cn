@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027696"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>嵌套数据区域（报表生成器和 SSRS）
   可以在一个数据区域（如矩阵）内嵌套另一个数据区域（如图表），通常用于简明显示数据摘要或提供可视显示和表或矩阵显示。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  必须设置仪表刻度上将显示的最小值和最大值。 若要指定仪表的最大值，可以使用表达式，例如 `=Max!MyField.Value`。 但是，由于此表达式仅在单元数据的作用域内计算，因此，Tablix 中所有行的各仪表的最大值将各不相同。 这样，可能很难理解对 Tablix 中各仪表之间的比较。 或者，还可以为最大值指定静态值。 Tablix 中的所有行均将显示具有此最大值的仪表。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
- 如果仪表上的数据太大，请考虑使用刻度乘数减少显示的数字量。 若要指定乘数，可以右键单击刻度并选择“刻度属性”。 打开 **“刻度属性”** 对话框时，指定 **“乘数”**的值。  
+ 如果仪表上的数据太大，请考虑使用刻度乘数减少显示的数字量。 若要指定乘数，可以右键单击刻度并选择“刻度属性”。 打开 **“刻度属性”** 对话框时，指定 **“乘数”** 的值。  
   
 ## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>在列表中嵌套表/矩阵和图表  
  若要在列表中嵌套多个数据区域，请首先添加一个矩形，然后将数据区域添加到该矩形中。  

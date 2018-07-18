@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcf6e290bf12600dee4b6483ca305507a5888973
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eacef877fe8cd803a06d3cce2b75f7eb445f8b3c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333211"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>历史属性选项（渐变维度向导）
   可以使用 **“历史属性选项”** 对话框按开始日期和结束日期显示历史属性，或者将历史属性记录到专门的列中。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  **使用单独的列显示当前和过期记录**  
  如果您选择使用单独的列来记录历史属性的状态，则下列选项可用：  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |**指示当前记录的列**|选择一个要在其中指示当前记录的列。|  
 |**表示当前记录的值**|使用 **True** 或 **“当前”** 来显示该记录是否为当前记录。|  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  **使用开始日期和结束日期确定当前记录和过期记录**  
  此选项的维度表必须包括一个日期列。 如果您选择按开始日期和结束日期显示历史属性，则下列选项可用：  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |**开始日期列**|在维度表中选择要包含开始日期的列。|  
 |**结束日期列**|在维度表中选择要包含结束日期的列。|  

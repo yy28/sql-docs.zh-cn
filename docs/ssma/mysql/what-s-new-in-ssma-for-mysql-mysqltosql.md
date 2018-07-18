@@ -1,8 +1,6 @@
 ---
 title: SSMA for MySQL (MySQLToSql) 中的新增 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 03/01/2018
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6e245e45ceec31cfbff4033c71b1f609f578ff58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d818a1ce31d752898d5d1ebde5a27addbedd91ad
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776673"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSql) 的新增功能
 本主题列出每个版本中的 MySQL 更改 SSMA。 
@@ -190,4 +189,4 @@ SSMA for MySQL 的 2010 年 7 月版本包含以下功能：
   
 -   添加了对迁移到同时支持本地 SQL Server 和 Azure SQL。  
   
--   **功能的快照：**架构和数据迁移的 MySQL 表/索引/约束。
+-   **功能的快照：** 架构和数据迁移的 MySQL 表/索引/约束。

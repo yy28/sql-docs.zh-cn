@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914232"
 ---
 # <a name="what-the-driver-manager-does"></a>驱动程序管理器的用途
 下表总结了如何 ODBC 3 *.x*驱动程序管理器将调用映射到 ODBC 2。*x*和 ODBC 3 *.x*驱动程序。  

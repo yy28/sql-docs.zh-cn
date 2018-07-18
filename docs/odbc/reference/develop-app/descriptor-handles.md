@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912622"
 ---
 # <a name="descriptor-handles"></a>描述符句柄
 A*描述符*是描述 SQL 语句的参数或结果集的列的元数据的集合，如所示的应用程序或驱动程序 (也称为*实现*)。 因此，描述符可填充所有四个角色：  

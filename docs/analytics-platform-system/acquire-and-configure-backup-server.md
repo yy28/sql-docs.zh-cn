@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539577"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>获取和并行数据仓库配置备份服务器
 本文介绍如何将非设备 Windows 系统配置为备份服务器以用于分析平台系统 (AP) 和并行数据仓库 (PDW) 中的备份和还原功能。  

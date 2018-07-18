@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023994"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>在仪表面板中包括指示器和仪表（报表生成器和 SSRS）
   仪表面板是包含一个或多个仪表和指示器的顶级容器。 指示器可以嵌入在仪表中或在仪表面板放置于仪表旁。  

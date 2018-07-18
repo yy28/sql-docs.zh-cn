@@ -2,7 +2,6 @@
 title: GetChunk 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38397b5573cfb7ddb10a7454833f4e9b512b769b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d39075e6d3c16540ded137a8ac78ccc6f8d94f8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278786"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 方法 (ADO)
 返回所有或较大的文本或二进制数据的内容的一部分，[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -44,7 +44,7 @@ variable = field.GetChunk(Size)
  *Size*  
  A**长**等于的字节或你想要检索的字符数的表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**GetChunk**方法**字段**要检索其长二进制或字符数据的部分或全部对象。 在系统内存有限的情况下，你可以使用**GetChunk**方法，以操作部分，而不是较长的值。  
   
  数据的**GetChunk**调用返回分配给*变量*。 如果*大小*大于剩余的数据， **GetChunk**方法仅返回的剩余数据而无需填充*变量*用空格。 如果该字段为空， **GetChunk**方法返回一个 null 值。  
@@ -61,7 +61,7 @@ variable = field.GetChunk(Size)
 ## <a name="applies-to"></a>适用范围  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppendChunk 和 GetChunk 方法示例 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk 和 GetChunk 方法示例 （VC + +）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [AppendChunk 方法 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   

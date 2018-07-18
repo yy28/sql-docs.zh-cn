@@ -2,7 +2,7 @@
 title: 使用未经验证的加密 |Microsoft 文档
 description: 使用未经验证的加密
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1c2b736c3bdb5c4e5154bfe1f56ff4a4ce18a656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96e33a0dfdb301c9088d37d6b33460b8c453c1b2
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612332"
 ---
 # <a name="using-encryption-without-validation"></a>使用不带验证的加密
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终对与登录相关的网络数据包进行加密。 如果在服务器启动时未为其提供任何证书，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将生成可用于对登录数据包进行加密的自签名证书。  
 
@@ -43,13 +46,13 @@ ms.lasthandoff: 05/03/2018
   
 |“强制协议加密”客户端设置|“信任服务器证书”客户端设置|连接字符串/连接属性加密/对数据使用加密|连接字符串/连接属性信任服务器证书|结果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|否|N/A|否（默认值）|忽略|无加密。|  
-|否|N/A|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|否|N/A|是|是|始终加密，但可能使用自签名的服务器证书。|  
-|是|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|“否”|N/A|否（默认值）|忽略|无加密。|  
+|“否”|N/A|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|“否”|N/A|是|是|始终加密，但可能使用自签名的服务器证书。|  
+|是|“否”|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
 |是|是|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
-|是|用户帐户控制|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|是|用户帐户控制|用户帐户控制|是|加密始终发生，但可能使用的自签名的服务器证书。|  
+|是|是|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|是|是|是|是|加密始终发生，但可能使用的自签名的服务器证书。|  
 ||||||
 
 > [!CAUTION]
@@ -61,7 +64,7 @@ ms.lasthandoff: 05/03/2018
  有关 dbpropset_sqlserverdbinit 限属性集对所做的增强功能的详细信息，请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

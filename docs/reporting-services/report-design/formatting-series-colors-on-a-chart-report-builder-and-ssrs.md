@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023514"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>设置图表上序列颜色的格式（报表生成器和 SSRS）
   Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置 **Pacific** 颜色调色板填充每个序列。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
  如果要向图表应用您自己的颜色，请使用自定义调色板。 使用自定义调色板可以按颜色在图表上的所需显示顺序来添加您自己的颜色。 如果在设计时不知道图表中的序列数，使用自定义调色板尤其有用。 有关详细信息，请参阅[使用调色板定义图表上的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)。  
   
 ## <a name="using-a-color-fill-on-each-series"></a>对每个序列使用颜色填充  
- 通过为图表中的每个序列各指定一种颜色，还可以在图表上定义您自己的颜色。 为此，请打开 **“序列属性”** 对话框，并设置 **“填充”** 的 **“颜色”**属性。 该方法将覆盖定义的所有调色板。 通常，最好使用自定义调色板定义您自己的颜色，因为在报表处理之前，您可能不知道数据集中的序列数。  
+ 通过为图表中的每个序列各指定一种颜色，还可以在图表上定义您自己的颜色。 为此，请打开 **“序列属性”** 对话框，并设置 **“填充”** 的 **“颜色”** 属性。 该方法将覆盖定义的所有调色板。 通常，最好使用自定义调色板定义您自己的颜色，因为在报表处理之前，您可能不知道数据集中的序列数。  
   
  该方法最适合希望根据表达式按条件设置序列颜色的情况。  有关详细信息，请参阅 [设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   

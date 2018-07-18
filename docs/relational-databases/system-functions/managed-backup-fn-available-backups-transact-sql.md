@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (TRANSACT-SQL) |Microsoft 文档
+title: managed_backup.fn_available_backups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040355"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 需要**选择**对该函数的权限。  
+ 需要**选择**对此函数的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例列出了通过 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 为数据库“MyDB”备份的所有可用备份  
@@ -86,7 +87,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 托管的备份到 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [从 Microsoft Azure 中存储的备份还原](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

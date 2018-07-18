@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771453"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612252"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-默认情况下，SQL Server 安装程序在以下路径中带有时间戳的日志文件夹中创建日志文件：%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下执行安装程序时，将在 %temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
+默认情况下，SQL Server 安装程序会在 \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log 内带有日期和时间戳的文件夹中创建日志文件，其中 nnn 是与正在安装的 SQL 版本相对应的数字。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下执行安装程序时，将在 %temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
+
+   | 文件           | 路径 |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **数据存储** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI 日志文件** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **对于无人参与的安装** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ ms.locfileid: "34771453"
 3.  用户请求的操作：允许用户选择和自定义功能
   
 
-此工作流生成一个摘要日志，此外还有一个供 RTM 安装使用的详细信息日志或供补充媒体时使用的两个详细信息日志。
+此工作流会生成单个摘要日志，并且对于基本 SQL Server 安装，单个详细日志将与基本安装一起安装，或者对于更新（例如服务包）时，则有两个详细日志将与基本安装一起安装。 
   
-数据存储文件包含安装过程所跟踪的所有配置对象状态的快照，对于纠正配置错误来说非常有用。 系统会为每个执行阶段创建 XML 转储文件，并将其保存在带时间戳的日志文件夹下的数据存储日志子文件夹中。 
+此外，还有数据存储文件包含安装过程正在跟踪的所有配置对象状态的快照，并且可用于故障排除配置错误。 系统会为每个执行阶段创建 XML 转储文件，并将其保存在带时间戳的日志文件夹下的数据存储日志子文件夹中。 
 
 以下部分介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序日志文件。  
   
@@ -130,6 +142,8 @@ ms.locfileid: "34771453"
   
 ### <a name="location"></a>位置  
 SystemConfigurationCheck_Report.htm 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>另请参阅  
  [安装 SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901092"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>将数据导入从 Visual FoxPro 数据库的 Microsoft Excel
 如果已为其定义的数据源，你可以 Visual FoxPro 数据导入 Microsoft Excel 工作表。 有关创建 Visual FoxPro 数据源的信息，请参阅[访问 Visual FoxPro 数据源从 Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)。  

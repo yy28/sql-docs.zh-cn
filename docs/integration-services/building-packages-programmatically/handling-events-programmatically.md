@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -31,11 +30,12 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95f028ab1faaf801eb59ede8fc6deec47faa5798
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: caf2d653ced197cc094baa3ef649ab95383c2437
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312656"
 ---
 # <a name="handling-events-programmatically"></a>以编程方式处理事件
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 运行时提供了一个事件集合，该集合中的事件在包的验证和执行过程之前、期间和之后发生。 这些事件可用两种方法捕获。 第一种方法是在类中实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口，并将该类作为参数提供给包的 Execute 和 Validate 方法。 第二种方法是创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象，该对象可以包含当 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 中的事件发生时所执行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象，例如任务和循环。 本节介绍这两种方法并提供代码示例来说明它们的用法。  

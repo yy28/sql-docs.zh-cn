@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberName 元素 (ASSL) |Microsoft 文档
+title: UnknownMemberName 元素 (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,10 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d744357078e4cfaa73fe3170dba8f1321313efad
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050575"
 ---
 # <a name="unknownmembername-element-assl"></a>UnknownMemberName 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|字符串|  
+|数据类型和长度|String|  
 |默认值|*Unknown*|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
@@ -42,15 +43,15 @@ ms.lasthandoff: 05/10/2018
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[维度](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|子元素|无|  
+|父元素|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
- 值**UnknownMemberName**元素提供未知成员所用的标题。 未知成员的成员 ID 是*维度*。UnknownMember，其中*维度*是维度的唯一名称和不能更改。  
+## <a name="remarks"></a>Remarks  
+ 值**UnknownMemberName**元素提供用于未知成员的标题。 未知成员的成员 ID 是*维度*。UnknownMember，其中*维度*是维度的唯一名称，不能更改。  
   
- 对应于的父元素**UnknownMemberName**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Dimension>。  
+ 父级对应的元素**UnknownMemberName**在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
-## <a name="see-also"></a>另请参阅  
- [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>请参阅  
+ [属性&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

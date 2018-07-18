@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6e8fd7999efdba906376abb35c0ae5d1db042b67
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b60f861b889647f6cfe76472773539f8fa27495f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322486"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序
 
@@ -161,7 +161,7 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>从 Windows 控制面板卸载  
  从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 控制面板启动向导并删除外接程序：  
   
-1.  在控制面板的 **“程序”**中，选择 **“卸载程序”**。  
+1.  在控制面板的 **“程序”** 中，选择 **“卸载程序”**。  
   
 2.  选择“用于 SharePoint 的 Microsoft SQL Server RS 外接程序”。 还可以从命令提示符运行不带开关的 **rssharepoint.msi** 来启动卸载向导。  
   
@@ -262,7 +262,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  下表概述了 rscustomaction.exe 的各个开关：  
   
-|开关|Description|  
+|开关|描述|  
 |------------|-----------------|  
 |i|安装自定义操作。 这将在 SharePoint 中注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 并且将重新启动 W3SVCservice。|  
 |r|Repair|  

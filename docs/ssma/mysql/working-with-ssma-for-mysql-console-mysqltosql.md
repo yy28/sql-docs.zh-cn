@@ -1,8 +1,6 @@
 ---
 title: SSMA 使用的 MySQL 控制台 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d564b6ee324ed883af771aaccf4b6bca70d41a7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 871dd3bd3ea440ff0430d37b8d476c99cb07c0a2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776793"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA 使用的 MySQL 控制台 (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) mysql 现可通过在命令行控制台应用程序访问。 脚本文件窗体的应用程序执行命令的输入。 作为控制台应用程序，SSMA 支持脚本级别进行连接、 减少迁移周期，并缩放迁移工作量。  
@@ -45,6 +44,6 @@ ms.lasthandoff: 05/03/2018
 |[生成报表&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|列出的命令生成报表。|  
 |[故障排除&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|提供关于修复的迁移问题的信息摘要。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [入门 MySQL 控制台 SSMA](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32838222"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -80,9 +81,9 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |RADIX|**short**|数值类型的基础。|  
 |NULLABLE|**short**|指示是否参数或返回值可以包含**null**值。<br /><br /> **它可以是以下值之一：**<br /><br /> functionNoNulls (0)：不允许为 NULL 值。<br /><br /> functionNullable (1)：允许为 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
 |REMARKS|**字符串**|有关列或参数的注释。|  
-|COLUMN_DEF|**字符串**|列的默认值。<br /><br /> **注意：**此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  
-|SQL_DATA_TYPE|**int**|此列等同于**DATA_TYPE**列中，除**datetime**和 ISO**间隔**数据类型。<br /><br /> **注意：**此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  
-|SQL_DATETIME_SUB|**int**|**Datetime** ISO**间隔**如果子代码的值**SQL_DATA_TYPE**是**SQL_DATETIME**或**SQL_INTERVAL**. 数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。<br /><br /> **注意：**此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  
+|COLUMN_DEF|**字符串**|列的默认值。<br /><br /> **注意：** 此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  
+|SQL_DATA_TYPE|**int**|此列等同于**DATA_TYPE**列中，除**datetime**和 ISO**间隔**数据类型。<br /><br /> **注意：** 此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  
+|SQL_DATETIME_SUB|**int**|**Datetime** ISO**间隔**如果子代码的值**SQL_DATA_TYPE**是**SQL_DATETIME**或**SQL_INTERVAL**. 数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。<br /><br /> **注意：** 此信息，同时提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是特定于驱动程序的 JDBC。|  
 |CHAR_OCTET_LENGTH|**int**|基于二进制和字符的最大长度的参数或列。 对于其他数据类型，该值为 NULL。|  
 |ORDINAL_POSITION|**int**|对于输入和输出参数，它表示从 1 开始的位置。<br /><br /> 对于结果集列，它指从 1 开始的结果集的列的位置。<br /><br /> 对于返回值，该值为 0。|  
 |IS_NULLABLE|**字符串**|确定参数或列的可为 Null 性。<br /><br /> 它可以是以下值之一：<br /><br /> **是**： 参数或列可以包含 NULL 值。<br /><br /> **不**： 参数或列不能包含 NULL 值。<br /><br /> 空字符串 ("")：未知。|  

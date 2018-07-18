@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 464fe19b441009e8a619cea6e478866890b19e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f66fd7e355b453fc2d00a775c0a244b04763d19e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349979"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
     -   对于合并发布的订阅，在 **“合并代理安全性”** 页上指定凭据。  
   
-     有关每个代理所需权限的信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+     有关每个代理所需权限的信息，请参阅 [R复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 -   指定同步计划和初始化订阅服务器的时间。  
   
@@ -129,11 +129,11 @@ ms.lasthandoff: 05/03/2018
   
     -   **@subscription_priority**。 对于服务器订阅，请指定订阅的优先级（从**0.00** 到 **99.99**）。  
   
-         有关详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+         有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
-    -   分发服务器中的分发代理运行时所使用的 **@subscriber**或复制管理对象 (RMO) 在 **@subscriber_db**和 **@publication** 参数。  
+    -   订阅服务器中的分发代理运行时所使用的 **@subscriber**或复制管理对象 (RMO) 在 **@subscriber_db**和 **@publication** 参数。  
   
     -   分发服务器中的合并代理运行时所使用的 **@job_login** ，将 **@job_password**。  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 05/03/2018
   
     -   分发服务器中的分发代理运行时所使用的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，将 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 字段，用于提供分发代理在分发服务器中运行所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
-        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   （可选） **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 05/03/2018
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。  
   
-    > 重要提示！！在具有远程分发服务器的发布服务器上创建推送订阅时，为所有属性（包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>）提供的值将作为纯文本发送到分发服务器。 在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法之前，应该对发布服务器与其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    > 重要提示！！在具有远程分发服务器的发布服务器上创建推送订阅时，为所有属性（包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>）提供的值将作为纯文本发送到分发服务器。 调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法之前，应先对发布服务器与其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>创建合并发布的推送订阅  
   
@@ -227,7 +227,7 @@ ms.lasthandoff: 05/03/2018
   
     -   分发服务器中的分发代理运行时所使用的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，将 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 字段，用于提供分发代理在分发服务器中运行所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
-        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   （可选） **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
   

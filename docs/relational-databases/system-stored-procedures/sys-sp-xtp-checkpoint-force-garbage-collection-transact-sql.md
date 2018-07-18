@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_checkpoint_force_garbage_collection (Transact SQL) |Microsoft 文档
+title: sys.sp_xtp_checkpoint_force_garbage_collection (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4f5968d9a68bef9b9bb6b107d0710d88c7fe5e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037701"
 ---
 # <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>结果集  
  返回的行包含以下信息：  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |num_collected_items|指示已移至文件流垃圾收集的文件数。 这些文件的日志序列号 (LSN) 小于日志截断点的 LSN|  
 |num_marked_for_collection_items|指示已使用日志结尾 LSN 的日志块 ID 更新其 LSN 的数据/差异文件数。|  
@@ -67,7 +68,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

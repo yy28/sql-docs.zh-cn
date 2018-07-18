@@ -1,40 +1,23 @@
 ---
 title: 创建全局多维数据集语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- GLOBAL CUBE
-- CUBE
-- GLOBAL
-- CREATE
-- CREATE GLOBAL
-- CREATE GLOBAL CUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], CREATE GLOBAL CUBE
-- CREATE GLOBAL CUBE
-ms.assetid: b46f3c98-a4f1-4ebb-915f-a3333f4054dc
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dc74fe731c98609a0840c12f0cd216b89d53e0a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741337"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 数据定义-创建全局多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息，请参阅[本地多维数据集&#40;Analysis Services-多维数据&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)。  
   
@@ -131,7 +114,7 @@ FROM source_cube_name (<param list>)
  \<级别类型 >  
  该规范仅对于派生维度定义有效。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  本地多维数据集是 definedin 使用条款的度量值和定义它的定义。 有两种类型的维度。  
   
 -   源维度 - 这些维度是一个或多个源多维数据集的一部分  
@@ -214,7 +197,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [创建会话多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   

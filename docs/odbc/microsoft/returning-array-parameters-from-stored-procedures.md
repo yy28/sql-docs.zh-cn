@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903732"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>从存储过程返回数组参数
 > [!IMPORTANT]  

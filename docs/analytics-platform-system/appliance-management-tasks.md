@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538827"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>分析平台系统的设备管理任务
 本指南介绍如何执行分析平台系统 (AP) 的设备管理任务。  

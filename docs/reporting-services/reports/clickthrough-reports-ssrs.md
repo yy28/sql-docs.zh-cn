@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028704"
 ---
 # <a name="clickthrough-reports-ssrs"></a>点击链接型报表 (SSRS)
   点击链接型报表是一种用于提供有关主报表数据的详细信息的报表。 当用户单击主报表中显示的交互式数据时，便会显示点击链接型报表。 这些报表是由报表服务器自动生成的。 作为模型设计者，您可以通过在报表模型中设置分配给某实体的 **DefaultDetailAttribute** 和 **DefaultAggregateAttribute** 属性来确定点击链接型报表中显示的内容。  

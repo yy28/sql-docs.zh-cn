@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028664"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
   若要控制 tablix 数据区域的行和列如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)、[矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)或[列表](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  

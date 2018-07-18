@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903862"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures （桌面数据库驱动程序）
 **SQLProcedures**将只返回有关这些过程，具有至少一个自变量的行。 没有任何参数的过程将被视为视图。  

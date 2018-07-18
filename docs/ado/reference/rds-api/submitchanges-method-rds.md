@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c4f2b3a0cf70d068e1f6a7124e7152c8329ebd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 784103c416947b57ebea358f911dfee4996a515e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288516"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 提交挂起的更改的本地缓存而可更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)中指定的数据源到[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性或[URL](../../../ado/reference/rds-api/url-property-rds.md)属性。  
@@ -50,7 +50,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Recordset*  
  表示的对象变量**记录集**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [连接](../../../ado/reference/rds-api/connect-property-rds.md)，[服务器](../../../ado/reference/rds-api/server-property-rds.md)，和[SQL](../../../ado/reference/rds-api/sql-property.md)必须设置属性，然后才能使用**SubmitChanges**方法替换**RDS.DataControl**对象。  
   
  如果调用[正在执行](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法后你调用了**SubmitChanges**为同一**记录集**对象，**正在执行**调用失败，因为所做的更改都已提交。  
@@ -67,7 +67,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SubmitChanges 方法示例 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [正在执行方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

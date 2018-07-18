@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32932442"
 ---
 # <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +105,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **故障转移**  
  单击此项可在发生故障时手动地将相关操作从主体数据库转移到镜像数据库。  
   
-> **注意：**如果镜像会话在高性能模式下运行，则不支持手动故障转移。 若要手动进行故障转移，必须先将运行模式更改为“不带自动故障转移功能的高安全(同步)”。 在故障转移完成后，可将新主体服务器实例上的模式再改为“高性能(异步)”。  
+> **注意：** 如果镜像会话在高性能模式下运行，则不支持手动故障转移。 若要手动进行故障转移，必须先将运行模式更改为“不带自动故障转移功能的高安全(同步)”。 在故障转移完成后，可将新主体服务器实例上的模式再改为“高性能(异步)”。  
   
  此时，将显示一个提示，要求您进行确认。 如果单击 **“是”**，将尝试进行故障转移。 主体服务器将开始尝试使用 Windows 身份验证连接到镜像服务器。 如果 Windows 身份验证无效，主体服务器将显示 **“连接到服务器”** 对话框。 如果镜像服务器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请选择 **“身份验证”** 框中的 **“SQL Server 身份验证”** 。 在 **“登录名”** 文本框中，指定连接镜像服务器时使用的登录帐户，然后在 **“密码”** 文本框中指定该帐户的密码。  
   
@@ -123,7 +124,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |**不带自动故障转移功能的高安全(同步)**|“否”|保证将所有提交的事务都写入镜像服务器的磁盘上。<br /><br /> 如果伙伴彼此连接在一起，便可进行手动故障转移。<br /><br /> 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止但仍可以作为热备用；数据库所有者可以强制让镜像服务器实例来提供服务（但这样做可能会丢失数据）。|  
 |**带自动故障转移功能的高安全(同步)**|是（必需）|通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择“带自动故障转移功能的高安全级（同步）”选项。<br /><br /> 只要伙伴彼此连接在一起，便可进行手动故障转移。<br /><br /> **\*\* 重要提示 \*\*** 如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步运行模式中，所有提交的事务都保证会受到保护，写入到镜像服务器的磁盘上。 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> 如果主体服务器实例变为不可用，则会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
   
- 在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”**来保存更改。  
+ 在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”** 来保存更改。  
   
  有关运行模式的详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 配置 Power Pivot 和部署解决方案 (SharePoint 2013) |Microsoft 文档
+title: 配置 Power Pivot 和部署解决方案 (SharePoint 2013) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93374b25f377265f1eafa09cf46714ed79927243
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 271f2c50c38585e26053f88b2d372dae4b7345c6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980019"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="bkmk_run_configuration_tool"></a> 运行 Power Pivot for SharePoint 2013 配置  
  **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装向导将为 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)] 安装两个不同的配置工具。 这两个工具均支持不同版本的 SharePoint。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 配置工具|具有 SharePoint 2010 Service Pack 1 (SP1) 的 SharePoint 2010|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  单击“配置或修复 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint”，然后单击“确定”。  
   
-3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”**和 **“退出”** 命令。  
+3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
   
 4.  在 **“参数”** 选项卡上：  
   
@@ -59,15 +60,15 @@ ms.lasthandoff: 05/10/2018
   
     5.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改这些默认设置，请在左窗口中查看以下页： **“创建默认的 Web 应用程序”** 和 **“部署 Web 应用程序解决方案”**。  
   
-5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 中的“用于配置服务器的输入值”部分。  
+5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 中的“用于配置服务器的输入值”部分。  
   
-6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”**复选框。  
+6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”** 复选框。  
   
 7.  单击 **“验证”** 以便检查该工具是否有足够的信息来处理列表中的操作。 如果看到验证错误，请单击左窗格中的警告查看验证错误的详细信息。 更正任何验证错误，然后再次单击 **“验证”** 。  
   
 8.  单击 **“运行”** 来处理该任务列表中的所有操作。 请注意， **“运行”** 将在您验证操作之后才可用。 如果 **“运行”** 未启用，请首先单击 **“验证”** 。  
   
- 有关详细信息，请参阅 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)  
+ 有关详细信息，请参阅 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)  
   
 ##  <a name="bkmk_verify_powerpivot"></a> 验证 Power Pivot 配置  
  **服务：**  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/10/2018
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序：**  
   
-1.  在“管理中心”的 **“应用程序管理”**中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理服务应用程序”**。  
   
 2.  确认服务应用程序状态为 **“已启动”**。 默认名称为**默认的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”**。  
   
@@ -123,9 +124,9 @@ ms.lasthandoff: 05/10/2018
   
 4.  确认选择了 **“启用运行状况数据收集”** 。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
- 有关解决数据刷新的详细信息，请参阅[解决 Power Pivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关故障排除数据刷新的详细信息，请参阅[故障排除 Power Pivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  有关配置工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

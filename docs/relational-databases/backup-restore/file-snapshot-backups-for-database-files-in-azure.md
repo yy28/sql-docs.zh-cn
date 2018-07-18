@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923632"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,9 +81,9 @@ ms.lasthandoff: 05/03/2018
   
  **大容量恢复模式：** 使用大容量日志恢复模式，并处理包含最低限度记录的事务的事务日志备份时，不能使用该事务日志备份执行日志还原（包括时间点恢复）。 而是应执行到文件快照备份集的时间的数据库还原。 此限制与流备份的限制相同。  
   
- **联机还原：**使用文件快照备份时，不能执行联机还原。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
+ **联机还原：** 使用文件快照备份时，不能执行联机还原。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
- **计费：**使用 SQL Server 文件快照备份时，如果数据发生更改，将会产生额外的费用。 有关详细信息，请参阅 [了解快照如何产生费用](https://msdn.microsoft.com/library/azure/hh768807.aspx)。  
+ **计费：** 使用 SQL Server 文件快照备份时，如果数据发生更改，将会产生额外的费用。 有关详细信息，请参阅 [了解快照如何产生费用](https://msdn.microsoft.com/library/azure/hh768807.aspx)。  
   
  **存档：** 如果你想要将文件快照备份存档，则可以存档到 blob 存储或流备份。 若要存档到 blob 存储，请将文件快照备份集中的 blob 复制到单独的 blob。 若要存档到流备份，请将文件快照备份还原为新数据库，然后使用压缩和/或加密执行标准流备份，并根据需要将其独立于基本 blob 进行存档。  
   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83ddc6ebe767289ad3704056ae04caf9ed509329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc90397111e2a124744a677920c02c2ec64cbf0b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356099"
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果要添加新的联接，则可以选择 **“使用生成器创建语句”** 或者 **“手动编写联接语句”**。 如果您开始手动编写联接，那么将无法使用生成器。  
   
-         如果选择使用生成器，请使用网格中的列（**“连接”**、 **“筛选的表列”**、 **“运算符”**、和 **“联接的表列”**）生成联接语句。 网格中的每个列都包含下拉列表框，允许你选择两个列和一个运算符（**=**、 **<>**、 **<=**、 **\<**、 **>=**、 **>**、 **like**）。 结果显示在 **“预览”** 文本区域中。 如果联接涉及不止一对列，请从**“连接”** 列中选择一个连接（ **AND**或 **OR** ），再输入另外两列和一个运算符。  
+         如果选择使用生成器，请使用网格中的列（**“连接”**、 **“筛选的表列”**、 **“运算符”**、和 **“联接的表列”**）生成联接语句。 网格中的每个列都包含下拉列表框，允许你选择两个列和一个运算符（**=**、 **<>**、 **<=**、 **\<**、 **>=**、 **>**、 **like**）。 结果显示在 **“预览”** 文本区域中。 如果联接涉及不止一对列，请从 **“连接”** 列中选择一个连接（ **AND**或 **OR** ），再输入另外两列和一个运算符。  
   
          如果选择手动编写语句，那么请在 **“联接语句”** 文本区域编写联接语句。 使用 **“筛选的表列”** 列表框和 **“联接的表列”** 列表框将列拖放到 **“联接语句”** 文本区域。  
   

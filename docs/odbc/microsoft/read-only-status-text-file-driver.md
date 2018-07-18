@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898982"
 ---
 # <a name="read-only-status-text-file-driver"></a>只读状态 （文本文件驱动程序）
 当使用文本驱动程序时，数据源表是只读的。 但是，应用程序可以为文本表执行插入操作。

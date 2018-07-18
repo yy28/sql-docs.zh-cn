@@ -2,7 +2,6 @@
 title: 创建方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccc2fec10db24bd1ca7d21c88a99b7cfe09136
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 410e35fd85e427f1552860e81f6e79412d395c85
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285596"
 ---
 # <a name="create-method-example-vc"></a>创建方法示例 （VC + +）
 下面的代码演示如何创建与新的 Microsoft Jet 数据库[创建](../../../ado/reference/adox-api/create-method-adox.md)方法。  
@@ -79,5 +79,5 @@ void CreateDatabaseX() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Create 方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914872"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>安装和配置 ODBC 软件
 > [!NOTE]  

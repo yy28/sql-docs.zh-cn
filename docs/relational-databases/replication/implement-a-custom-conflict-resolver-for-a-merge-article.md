@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +21,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d18ca8e63ca80671cd31a524b0c9878121a15e61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3a2632fee35166a4e272ba801cc6357914b9932
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957522"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353469"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "32957522"
   
 1.  在发布服务器的发布数据库或 **msdb** 数据库中，创建用于实现以下所需参数的新系统存储过程：  
   
-    |参数|数据类型|Description|  
+    |参数|数据类型|描述|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|**sysname**|冲突被解决的表的所有者名称。 这是发布数据库中的表的所有者。|  
     |**@tablename**|**sysname**|冲突被解决的表的名称。|  
@@ -115,7 +114,7 @@ ms.locfileid: "32957522"
   
 1.  在发布服务器上执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，并记下所需解决程序的友好名称。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 来定义项目。 将步骤 1 中项目冲突解决程序的友好名称指定给 **@article_resolver**中为合并项目实现自定义冲突解决程序。 有关详细信息，请参阅 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)。  
+2.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 来定义项目。 将步骤 1 中项目冲突解决程序的友好名称指定给 **@article_resolver**中为合并项目实现自定义冲突解决程序。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>将自定义冲突解决程序用于现有表项目  
   
@@ -127,6 +126,6 @@ ms.locfileid: "32957522"
 ## <a name="see-also"></a>另请参阅  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

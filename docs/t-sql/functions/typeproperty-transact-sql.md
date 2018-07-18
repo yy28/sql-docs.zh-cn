@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,16 @@ helpviewer_keywords:
 - TYPEPROPERTY function
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e2da7509e05a6c66d86f7e14709612ae4e61c235
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88aefe1fed48621e09c4c84c796851d8d07d90f9
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787058"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ TYPEPROPERTY (type , property)
  property  
  要为数据类型返回的信息类型。 property 可以是下列值之一。  
   
-|“属性”|Description|返回的值|  
+|“属性”|描述|返回的值|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|数据类型允许空值。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到数据类型。|  
 |**OwnerId**|类型的所有者。<br /><br /> 注意：架构所有者不一定是类型所有者。|Nonnull = 类型所有者的数据库用户 ID。<br /><br /> NULL = 不支持的类型，或类型 ID 无效。|  

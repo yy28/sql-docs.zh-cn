@@ -1,6 +1,6 @@
 ---
 title: MDX 函数引用 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9137655ce59efbfa13466fe50f8142987b0ec81a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580029"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742006"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函数参考 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供使用多维表达式 (MDX) 语法中的函数。 函数可以在任何有效的 MDX 语句中使用，并且经常用于查询、自定义汇总定义以及其他计算。 本节介绍 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 附带的 MDX 函数。  
+
+  Analysis Services 提供多维表达式 (MDX) 语法中的函数使用。 函数可以在任何有效的 MDX 语句中使用，并且经常用于查询、自定义汇总定义以及其他计算。 本部分提供有关 MDX 函数的信息。  
   
  可以使用下面这些表按返回值的类别来查找函数，也可以从按字母顺序排列的目录中按名称来选择函数。  
   

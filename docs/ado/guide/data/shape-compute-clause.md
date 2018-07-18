@@ -2,7 +2,6 @@
 title: 调整 COMPUTE 子句 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272826"
 ---
 # <a name="shape-compute-clause"></a>形状 COMPUTE 子句
 形状 COMPUTE 子句生成父**记录集**，其列包含的参考子**记录集**; 可选其内容是章，新的或计算的列的列或子级上执行聚合函数的结果**记录集**或以前整形**记录集**; 以及从子级的任何列**记录集**中列出可选的 BY 子句。  
@@ -59,7 +59,7 @@ SHAPE child-command [AS] child-alias
  *grp-field-list*  
  中的父和子列的列表**记录集**指定应如何在子分组行的对象。  
   
- 中的每列*组字段列表，*没有对应的列在子与父**记录集**对象。 每一行的父代中**记录集**、*组字段列表*列具有唯一值和子**记录集**引用的父行只包含子行其*组字段列表*列具有相同的值作为父行。  
+ 中的每列*组字段列表，* 没有对应的列在子与父**记录集**对象。 每一行的父代中**记录集**、*组字段列表*列具有唯一值和子**记录集**引用的父行只包含子行其*组字段列表*列具有相同的值作为父行。  
   
  如果包括，了 BY 子句，则子**记录集**的行分组基于 COMPUTE 子句中的列。 父**记录集**将包含每个组的子组织单位中的行的一个行**记录集**。  
   
@@ -136,7 +136,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |或|Portland|400,000|  
 |或|Corvallis|300,000|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [访问在分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [数据调整概述](../../../ado/guide/data/data-shaping-overview.md)   
  [字段对象](../../../ado/reference/ado-api/field-object.md)   

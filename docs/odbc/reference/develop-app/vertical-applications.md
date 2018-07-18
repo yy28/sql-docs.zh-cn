@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914752"
 ---
 # <a name="vertical-applications"></a>垂直应用程序
 垂直应用程序通常执行针对单个 DBMS 明确定义的任务。 例如，一个顺序输入应用程序跟踪在一家公司的订单。 这些类型的应用程序具有的共同点是通过应用程序开发人员通常设计数据库架构，并当应用程序可能会使用大量的不同 Dbms，它适用于单个 DBMS 单个客户。  

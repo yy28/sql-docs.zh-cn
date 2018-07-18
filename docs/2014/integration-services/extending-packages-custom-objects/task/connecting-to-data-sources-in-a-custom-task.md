@@ -1,0 +1,149 @@
+---
+title: 在自定义任务中连接数据源 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- docset-sql-devref
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: reference
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ConnectionManager objects
+- connection managers [Integration Services], external data sources
+- data sources [Integration Services], external
+- custom tasks [Integration Services], external data sources
+- external data sources [Integration Services]
+- connections [Integration Services], external data sources
+- SSIS custom tasks, external data sources
+ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
+caps.latest.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 091dc8ad646f1893dfdf5eb57b5f8b63f34caf7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239187"
+---
+# <a name="connecting-to-data-sources-in-a-custom-task"></a>在自定义任务中连接数据源
+  任务使用连接管理器连接外部数据源，以检索或保存数据。 在设计时，连接管理器表示逻辑连接，并提供诸如服务器名称和任何身份验证属性的关键信息。 在运行时，任务调用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法，以建立与数据源的物理连接。  
+  
+ 由于包能够包含许多任务，其中的每个任务都可以连接不同的数据源，因此包将在名为 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 的集合中跟踪所有连接管理器。 任务在包中使用集合来查找将在验证和执行期间使用的连接管理器。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合是 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的第一个参数。  
+  
+ 您可以使用图形用户界面中的对话框或下拉列表向用户显示集合中的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象，以防止任务使用错误的连接管理器。 这为用户提供了一种只从包含在包中的相应类型的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象中进行选择的方式。  
+  
+ 任务调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法建立与数据源的物理连接。 此方法返回随后可由任务使用的基础连接对象。 因为连接管理器将基础连接对象的实现细节与任务隔离，所以任务只需调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法即可建立连接，不需要关心连接的其他方面。  
+  
+## <a name="example"></a>示例  
+ 下面的示例代码演示如何在 Validate 和 Execute 方法中验证 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 名称，并演示如何使用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法在 Execute 方法中建立物理连接。  
+  
+```csharp  
+private string connectionManagerName = "";  
+  
+public string ConnectionManagerName  
+{  
+  get { return this.connectionManagerName; }  
+  set { this.connectionManagerName = value; }  
+}  
+  
+public override DTSExecResult Validate(  
+  Connections connections, VariableDispenser variableDispenser,  
+  IDTSComponentEvents componentEvents, IDTSLogging log)  
+{  
+  // If the connection manager exists, validation is successful;  
+  // otherwise, fail validation.  
+  try  
+  {  
+    ConnectionManager cm = connections[this.connectionManagerName];  
+    return DTSExecResult.Success;  
+  }  
+  catch (System.Exception e)  
+  {  
+    componentEvents.FireError(0, "SampleTask", "Invalid connection manager.", "", 0);  
+    return DTSExecResult.Failure;  
+  }  
+}  
+  
+public override DTSExecResult Execute(Connections connections,   
+  VariableDispenser variableDispenser, IDTSComponentEvents componentEvents,   
+  IDTSLogging log, object transaction)  
+{  
+  try  
+  {  
+    ConnectionManager cm = connections[this.connectionManagerName];  
+    object connection = cm.AcquireConnection(transaction);  
+    return DTSExecResult.Success;  
+  }  
+  catch (System.Exception exception)  
+  {  
+    componentEvents.FireError(0, "SampleTask", exception.Message, "", 0);  
+    return DTSExecResult.Failure;  
+  }  
+}  
+```  
+  
+```vb  
+Private _connectionManagerName As String = ""  
+  
+Public Property ConnectionManagerName() As String  
+  Get  
+    Return Me._connectionManagerName  
+  End Get  
+  Set(ByVal Value As String)  
+    Me._connectionManagerName = value  
+  End Set  
+End Property  
+  
+Public Overrides Function Validate( _  
+  ByVal connections As Microsoft.SqlServer.Dts.Runtime.Connections, _  
+  ByVal variableDispenser As Microsoft.SqlServer.Dts.Runtime.VariableDispenser, _  
+  ByVal componentEvents As Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents, _  
+  ByVal log As Microsoft.SqlServer.Dts.Runtime.IDTSLogging) _  
+  As Microsoft.SqlServer.Dts.Runtime.DTSExecResult  
+  
+  ' If the connection manager exists, validation is successful;  
+  ' otherwise fail validation.  
+  Try  
+    Dim cm As ConnectionManager = connections(Me._connectionManagerName)  
+    Return DTSExecResult.Success  
+  Catch e As System.Exception  
+    componentEvents.FireError(0, "SampleTask", "Invalid connection manager.", "", 0)  
+    Return DTSExecResult.Failure  
+  End Try  
+  
+End Function  
+  
+Public Overrides Function Execute( _  
+  ByVal connections As Microsoft.SqlServer.Dts.Runtime.Connections, _  
+  ByVal variableDispenser As Microsoft.SqlServer.Dts.Runtime.VariableDispenser, _  
+  ByVal componentEvents As Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents, _  
+  ByVal log As Microsoft.SqlServer.Dts.Runtime.IDTSLogging, ByVal transaction As Object) _  
+  As Microsoft.SqlServer.Dts.Runtime.DTSExecResult  
+  
+  Try  
+    Dim cm As ConnectionManager = connections(Me._connectionManagerName)  
+    Dim connection As Object = cm.AcquireConnection(transaction)  
+    Return DTSExecResult.Success  
+  Catch exception As System.Exception  
+    componentEvents.FireError(0, "SampleTask", exception.Message, "", 0)  
+    Return DTSExecResult.Failure  
+  End Try  
+  
+End Function  
+```  
+  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+  
+## <a name="see-also"></a>请参阅  
+ [Integration Services (SSIS) 连接](../../connection-manager/integration-services-ssis-connections.md)   
+ [创建连接管理器](../../create-connection-managers.md)  
+  
+  

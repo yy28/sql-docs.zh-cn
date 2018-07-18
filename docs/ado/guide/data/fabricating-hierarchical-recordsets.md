@@ -2,7 +2,6 @@
 title: 构造分层记录集 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e9301ec9204b5d2d6768f7487f279dd5f1eb0f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271526"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>构造分层记录集
 下面的示例演示如何使用调整语法来定义为父、 子节点和孙级的列的数据生成分层记录集而无需基础数据源**记录集**。  
@@ -58,7 +58,7 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  只要**记录集**已制造，它可以填充、 操作，或保存到文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [访问在分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [所需的提供程序，供你调整数据](../../../ado/guide/data/required-providers-for-data-shaping.md)   

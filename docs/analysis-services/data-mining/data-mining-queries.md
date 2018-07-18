@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018394"
 ---
 # <a name="data-mining-queries"></a>数据挖掘查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/10/2018
   
 -   可以使用为每种算法类型提供的自定义数据挖掘查看器来浏览和了解各种模型类型。 有关详细信息，请参阅 [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)。  
   
--   可以使用 **“Microsoft 一般内容树查看器”**来查看各种模型类型的模型内容。 若要解释此信息，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+-   可以使用 **“Microsoft 一般内容树查看器”** 来查看各种模型类型的模型内容。 若要解释此信息，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ##  <a name="bkmk_Interfaces"></a> 查询工具和接口  
  可以使用 SQL Server 提供的查询工具之一来以交互方式生成数据挖掘查询。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都提供图形预测查询生成器。 如果您之前未使用过预测查询生成器，建议您按照 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) 中的步骤进行操作来了解接口。 有关各步骤的概述，请参阅 [使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)。  

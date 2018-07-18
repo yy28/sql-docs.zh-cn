@@ -21,9 +21,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7222702d4e5e805ea6ab04eac60edcabc62698e4
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33074554"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>基于事件开始时间筛选事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
-     将出现“跟踪属性”对话框。 **“跟踪属性”**对话框。  
+     将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
     >  如果选择“建立连接后立即开始跟踪”，则不会显示“跟踪属性”对话框，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  

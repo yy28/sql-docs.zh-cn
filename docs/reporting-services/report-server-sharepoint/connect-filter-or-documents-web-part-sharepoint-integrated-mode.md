@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025584"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>将筛选器或文档 Web 部件与 Reporting Services 报表查看器 Web 部件连接
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 
  筛选器 Web 部件可用于向报表中的一个或多个参数发送值。 若要使用筛选器 Web 部件，报表必须具有为其定义的参数并且参数与 Web 部件发送的值、数据类型及格式兼容。  
   
- 文档 Web 部件与主文件夹站点的文档库相关联。 若要从文档库查看、添加或删除项，请单击 **“查看所有站点内容”**。 在“库”中，单击 **“文档”**。 可以使用 **“新建”**、 **“上载”**和 **“操作”** 菜单来管理文档库中的项。  
+ 文档 Web 部件与主文件夹站点的文档库相关联。 若要从文档库查看、添加或删除项，请单击 **“查看所有站点内容”**。 在“库”中，单击 **“文档”**。 可以使用 **“新建”**、 **“上载”** 和 **“操作”** 菜单来管理文档库中的项。  
   
 ## <a name="connect-a-filter-web-part"></a>连接筛选器 Web 部件
   

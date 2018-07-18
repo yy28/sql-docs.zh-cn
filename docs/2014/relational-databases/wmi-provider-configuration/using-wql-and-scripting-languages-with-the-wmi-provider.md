@@ -1,0 +1,48 @@
+---
+title: 使用 WQL 和脚本语言的配置管理的 WMI 提供程序 |Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- queries [WMI]
+- scripts [WMI]
+- query language [WMI]
+- WMI Query Language [WMI]
+- WQL [WMI]
+- WMI Provider for Configuration Management, WQL
+- WMI Provider for Configuration Management, scripts
+ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
+caps.latest.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7a55fc42e5186615dbe3e455668eb8cc5f7c199c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202877"
+---
+# <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>将 WQL 和脚本语言用于配置管理的 WMI 提供程序
+  管理应用程序以两种方式使用针对配置管理对象的 Windows Management Instrumentation (WMI) 提供程序访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络设置：  
+  
+-   使用某一 WQL 编辑器或查询工具（例如 WBEMTest.exe）可以查询通过 Windows Management Instrumentation 语言 (WQL) 设置的对象。  
+  
+-   使用某一脚本语言，例如 VBScript。  
+  
+ 或者，可以使用 SMO 中的 WMI 托管对象以编程方式管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络设置。 有关托管对象的有关对 WMI 进行编程的详细信息，请参阅[管理服务和通过使用 WMI 提供程序的网络设置](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)。  
+  
+ 可通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台访问用于配置管理的 WMI 提供程序。 有关从用户界面访问 WMI 提供程序的详细信息，请参阅[管理服务操作指南主题&#40;SQL Server 配置管理器&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)。  
+  
+## <a name="see-also"></a>请参阅  
+ [用于配置管理使用 WQL 访问 WMI 提供程序](access-wmi-provider-for-configuration-management-using-wql.md)   
+ [使用 VBScript 修改 SQL Server 服务高级属性](access-wmi-provider-for-configuration-management-using-vbscript.md)  
+  
+  

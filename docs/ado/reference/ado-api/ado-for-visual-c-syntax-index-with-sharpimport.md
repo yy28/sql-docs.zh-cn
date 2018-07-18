@@ -1,8 +1,7 @@
 ---
-title: '对于 Visual c + + 语法索引与 #import ADO |Microsoft 文档'
+title: 'ADO for Visual c + + 语法索引与 #import |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,18 +21,19 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88843691166fab6300f2a2f4a092b25ce9552ac3
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957700"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO 的 Visual c + + 语法 #import 索引
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO for Visual c + + 语法索引与 #import
 此索引是对基于 Microsoft Visual c + + ADO 语言参考的交叉引用和 **#import**指令。  
   
- 此特定索引派生通过编译的程序 **#import**指令针对 ADO.dll，然后重新格式化生成 *.tlh 文件。 已保留仅方法、 属性和事件有关的信息。 为每个属性列出的相应声明的替代语法"`__declspec(property...)`"指令。  
+ 此特定索引通过编译的程序派生 **#import**指令针对 ADO.dll，然后重新格式化\*生成.tlh 文件。 只有方法、 属性和事件有关的信息已保留。 对于每个属性列出的相应声明的替代语法"`__declspec(property...)`"指令。  
   
- 强烈建议读取[Visual c + + ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)有关详细信息。  
+ 强烈建议阅读[Visual c + + ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)有关详细信息。  
   
  使用 Visual c + + 中的方法和属性语法 **#import**指令列出的以下元素：  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 05/03/2018
   
 -   [记录集对象](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
--   [流对象](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
+-   [Stream 对象](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [连接事件](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [记录集事件](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 COM 的 ADO for Visual C++ 语法索引‎ ](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

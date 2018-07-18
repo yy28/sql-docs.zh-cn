@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901372"
 ---
 # <a name="scalar-function-limitations"></a>标量函数限制
 标量函数支持只能通过使用 ODBC 规范格式。

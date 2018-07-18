@@ -2,7 +2,6 @@
 title: ActiveConnection 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b37e3e062bcc8239b2231db66052e9cdaf9e812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6988f743abe5a6a0bf875da0b7e52bed23f7500
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275156"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 属性 (ADO)
 指示到[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象指定[命令](../../../ado/reference/ado-api/command-object-ado.md)，[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[记录](../../../ado/reference/ado-api/record-object-ado.md)当前所属的对象。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值，如果连接已关闭，或包含连接的定义**Variant**包含当前**连接**对象如果连接为打开状态。 默认值为空对象引用。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**ActiveConnection**属性来确定**连接**通过该对象指定**命令**对象执行或指定**记录集**将打开。  
   
 ## <a name="command"></a>Command  
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  **远程数据服务使用情况**时在客户端上使用**记录集**对象，可以设置此属性，只对连接字符串或 （在 Microsoft Visual Basic 或 Visual Basic Scripting Edition） 到*执行任何操作*.  
   
-## <a name="record"></a>記錄  
+## <a name="record"></a>录制  
  此属性为读/写时**记录**对象已关闭，并且可能包含的连接字符串或对打开引用**连接**对象。 此属性为只读时**记录**对象处于打开状态，并包含对已打开的引用**连接**对象。  
   
  A**连接**时在隐式创建对象**记录**从 URL 中打开对象。 打开**记录**与一个现有打开**连接**通过分配的对象**连接**对象传递给此属性，或使用**连接**对象中的参数作为[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法调用。 如果**记录**打开从现有**记录**或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，则它是自动关联的**记录**或**记录集**对象的**连接**对象。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|-|  
 |[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

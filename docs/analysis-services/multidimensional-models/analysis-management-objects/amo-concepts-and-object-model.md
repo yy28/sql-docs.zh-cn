@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024254"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 概念和对象模型
   本主题提供的分析管理对象 (AMO) 的定义如何与其他工具和库中的体系结构提供相关 AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及在 AMO 中的所有主对象的概念说明。  

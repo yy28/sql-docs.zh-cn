@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538777"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>卸载 Analytics Platform System 修补程序 
 以下步骤介绍如何卸载以前安装的分析平台系统修补程序。  

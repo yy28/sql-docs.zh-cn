@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ca4c8bfa2973d78e6d3da90a42ed5c7988a109f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 453207bf1a9e8a843cbaf5f19d77180453b6c43e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308776"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>安全注意事项 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,6 +56,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="secure-logs-for-deployed-application"></a>已部署应用程序的安全日志  
 对于已部署的应用程序，请确保日志写入安全位置或关闭日志记录。 这有助于防止最终用户可能访问已写入日志文件的信息。 有关详细信息，请参阅 [Logging Activity](../../connect/php/logging-activity.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

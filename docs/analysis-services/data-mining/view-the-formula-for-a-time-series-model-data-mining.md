@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34017224"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>查看时序模型的公式（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  如果未显示“挖掘图例”，请右键单击该节点，然后选择“显示图例”。  
   
-     ARTXP 公式将在 **“挖掘图例”**的前半部分显示为 **“树节点公式”**。  
+     ARTXP 公式将在 **“挖掘图例”** 的前半部分显示为 **“树节点公式”**。  
   
      ![在图例中查看时序公式](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "在图例中查看时序公式")  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  单击树中的任一叶节点。  
   
-     ARIMA 公式将在 **“挖掘图例”**的后半部分显示为 **“ARIMA 公式”**。  
+     ARIMA 公式将在 **“挖掘图例”** 的后半部分显示为 **“ARIMA 公式”**。  
   
 5.  如果未显示“挖掘图例”，请右键单击该节点，然后选择“显示图例”。  
   

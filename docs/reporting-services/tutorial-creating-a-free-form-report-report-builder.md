@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037184"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。
@@ -351,7 +352,7 @@ ms.lasthandoff: 05/03/2018
   
     此时将显示“正在连接到报表服务器”消息。 当连接完成时，您将看到报表服务器管理员指定为报表默认位置的报表文件夹的内容。  
   
-4.  在 **“名称”**中，用 **SalesInformationByTerritory**替换默认名称。  
+4.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
   
 5.  单击 **“保存”**。  
   
@@ -361,9 +362,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
-2.  单击 **“桌面”**、 **“我的文档”**或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
+2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
-3.  在 **“名称”**中，用 **SalesInformationByTerritory**替换默认名称。  
+3.  在 **“名称”** 中，用 **SalesInformationByTerritory**替换默认名称。  
   
 4.  单击 **“保存”**。  
   

@@ -14,6 +14,7 @@
 ## [线程和任务体系结构](thread-and-task-architecture-guide.md)
 ## [事务日志体系结构和管理指南](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [事务锁定和行版本控制指南](sql-server-transaction-locking-and-row-versioning-guide.md)
+## [虚影记录清除过程](ghost-record-cleanup-process-guide.md)
 
 # [备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)

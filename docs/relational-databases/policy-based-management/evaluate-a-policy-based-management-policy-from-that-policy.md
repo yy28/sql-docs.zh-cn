@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32953522"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>从基于策略的管理策略评估该策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-evaluate-a-policy"></a>评估策略  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要评估的策略的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要评估的策略的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   

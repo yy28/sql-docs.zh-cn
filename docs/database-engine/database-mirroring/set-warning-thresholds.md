@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 51f4f099935d92f95be67b0964e9ed3a52bc764f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 631f734e2ade09264c62bfb6392f2f7b3edd8fcd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312316"
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **警告**  
  列出所支持的警告：  
   
-|警告|Description|  
+|警告|描述|  
 |-------------|-----------------|  
 |**如果未发送日志超出了阈值，则发出警告**|该阈值指示在主体服务器的发送队列中未发送日志的 KB 值。|  
 |**如果未还原日志超出了阈值，则发出警告**|该阈值指示在镜像服务器实例中重做队列的 KB 值。|  

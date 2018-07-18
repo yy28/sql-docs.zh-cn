@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c79e19d6cd66cd25796d63d214b0234a659a9dc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc07ddaa29dc999bef0037eeab66f51b65e27ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359309"
 ---
 # <a name="change-publication-and-article-properties"></a>更改发布和项目属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>快照和事务复制的发布属性  
   
-|Description|存储过程|属性|要求|  
+|描述|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |更改快照格式。|**sp_changepublication**|**sync_method**|新建快照。|  
 |更改快照位置。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新建快照。|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>快照和事务复制的项目属性  
   
-|Description|存储过程|属性|要求|  
+|描述|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |删除项目|**sp_droparticle**|所有参数。|项目可以在创建订阅之前删除。 使用存储过程，可以删除项目的订阅；如果使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，则必须删除整个订阅，然后再重新创建订阅并进行同步。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |更改列筛选器。|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|新建快照。<br /><br /> 重新初始化订阅。|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="publication-properties-for-merge-replication"></a>合并复制的发布属性  
   
-|Description|存储过程|属性|要求|  
+|描述|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |更改快照格式|**sp_changemergepublication**|**sync_mode**|新建快照。|  
 |更改快照位置。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新建快照。|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="article-properties-for-merge-replication"></a>合并复制的项目属性  
   
-|Description|存储过程|属性|要求|  
+|描述|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |删除在发布中使用最新参数化筛选器的项目。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  
 |删除在联接筛选器或逻辑记录中处于父级的项目（这对删除联接有副作用）。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  

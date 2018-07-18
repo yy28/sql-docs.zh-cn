@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909642"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>用于块状游标绑定列
 由于块状游标返回多个行，使用它们的应用程序必须将数组变量绑定到每个列而不是单个变量。 这些阵列统称为*行集缓冲区*。 以下是绑定的两种样式:  

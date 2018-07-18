@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33041594"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +59,11 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-format-pager-addresses"></a>设置寻呼地址格式  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要发送到寻呼程序的警报的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要发送到寻呼程序的警报的服务器。  
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”  
   
-3.  在 **“选择页”**下，选择 **“警报系统”**。  
+3.  在 **“选择页”** 下，选择 **“警报系统”**。  
   
 4.  在“寻呼电子邮件的地址格式”字段的“收件人行”和“抄送行”框中，输入寻呼地址的前缀或后缀。 发送通知时，将插入操作员的实际寻呼地址。  
   

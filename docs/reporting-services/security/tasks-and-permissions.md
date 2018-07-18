@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029034"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“任务”  是指用户或管理员可以执行的操作。 任务是预定义的。 您不能创建自定义任务，也不能以编程方式或通过工具修改所提供的任务。 总共有二十五个任务。 这些任务组成了基于角色的安全性中可用的完整操作集。 部分任务示例包括：“查看报表”、“管理报表”和“管理报表服务器属性”。  

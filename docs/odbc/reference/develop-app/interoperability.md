@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913042"
 ---
 # <a name="interoperability"></a>互操作性
 *互操作性*是单个应用程序以运行许多不同 Dbms 的功能。 编写泛型且可互操作应用程序的需求是导致的 ODBC 开发的主要因素之一。 但是，互操作性不是简单的路径，然后从"不可互操作"到"完全可互操作。" 路径具有许多分支，并且每个需要功能、 速度、 代码复杂性和开发时间之间的权衡。  

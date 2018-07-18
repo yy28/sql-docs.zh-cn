@@ -2,7 +2,6 @@
 title: 事件处理程序是如何协同工作 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef9af3c4ba076048e0d04d31601b20e9d9ca321
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a50612e9bd16eafc2afb74c39ba2e5de7285e5a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271966"
 ---
 # <a name="how-event-handlers-work-together"></a>事件处理程序是如何协同工作
 除非在 Visual Basic 中，所有事件处理程序中进行编程**连接**和**记录集**必须实现的事件，而不考虑是否实际处理的所有事件。 你所要做的实现工作量取决于您的编程语言。 有关详细信息，请参阅[ADO 事件实例化语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  Visual Basic 中不能使用此技术，因为该语言可以关联的事件处理程序只能有一个对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [通过语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件参数](../../../ado/guide/data/event-parameters.md)   

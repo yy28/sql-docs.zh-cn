@@ -1,6 +1,6 @@
 ---
 title: 上级 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb15caffbe8461da0ce04385bc58d7f1815483b5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0c108ea102e03000481d18bfc69f657e6bd8a0ce
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576999"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740046"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  此函数返回指定成员在指定级别或距离处的所有祖先的集。 与[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，返回的集将始终包含的单个成员-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]单个成员不支持多个父级。  
+
+  此函数返回指定成员在指定级别或距离处的所有祖先的集。 与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，返回的集将始终包含的单个成员-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]单个成员不支持多个父级。  
   
 ## <a name="syntax"></a>语法  
   

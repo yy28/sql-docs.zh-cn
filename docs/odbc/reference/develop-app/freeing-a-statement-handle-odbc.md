@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909652"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>释放语句句柄 ODBC
 如前所述，它会重用比删除它们并分配新的语句更加高效。 之前在一个语句上执行新的 SQL 语句，应用程序应确保当前的语句设置适合。 这些设置包括语句属性、参数绑定和结果集绑定。 通常情况下，参数和旧的 SQL 语句的结果集需要是未绑定 (通过调用**SQLFreeStmt**使用 SQL_RESET_PARAMS 和 SQL_UNBIND 选项) 和新的 SQL 语句的重新绑定。  

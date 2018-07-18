@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914262"
 ---
 # <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数
 下表列出了 ODBC 标量函数集中包含的日期和时间函数。 应用程序可以确定由驱动程序支持的日期和时间函数，应调用**SQLGetInfo**与*信息类型*SQL_TIMEDATE_FUNCTIONS。  

@@ -2,7 +2,6 @@
 title: DataControl 错误代码 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34d749e90ed9e2d3c7819e23a9d7c552e0b4e8c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f42d65ef0ff274ecf1e671315fc019347586e903
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271126"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 对象错误代码
 下表列出[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象错误代码。 低两个字节的正十进制转换，显示完整的错误代码和十六进制值的负十进制转换。
@@ -50,5 +50,5 @@ ms.lasthandoff: 05/03/2018
 |**IDS_UpdatesFailed**|4098 -2146824190 0x800A1002|无法更新数据库。|
 |**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|DataControl **URL**属性所需的系统文件 Urlmon.dll，找不到。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

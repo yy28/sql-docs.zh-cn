@@ -1,5 +1,5 @@
 ---
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -8,18 +8,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0d6f3ef84c6df07abf30cef16102ef13277bff47
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999339"
 ---
 # <a name="log-properties"></a>日志属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的日志服务器属性 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+
+> [!NOTE]
+> 并非所有属性都适用于 Azure Analysis Services。
   
 ## <a name="general"></a>常规  
- **文件**  
+ **File**  
  一个字符串属性，用于标识服务器日志文件的名称。 只有在使用磁盘文件进行日志记录时，此属性才适用，而在使用数据库表进行日志记录时（默认行为）并不适用。  
   
  此属性的默认值为 msmdsrv.log。  
@@ -31,7 +36,7 @@ ms.lasthandoff: 05/10/2018
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
 ## <a name="error-log"></a>错误日志  
- 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 请参阅[多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)和<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>有关详细信息。  
+ 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 请参阅[多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)并<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>有关详细信息。  
   
  **ErrorLog\ErrorLogFileName**  
  在服务器执行处理操作期间使用的一个默认属性。  
@@ -186,7 +191,7 @@ ms.lasthandoff: 05/10/2018
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db81f4b18471e0a3640faa1f1ef54792af3b91e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d84c243d448376490b50835278b936c18fe0a47e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331891"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>发送邮件任务可用的自定义日志记录消息  
  下表列出了发送邮件任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|指示任务开始发送电子邮件。|  
 |**SendMailTaskEnd**|指示任务已发送完电子邮件。|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
  **MessageSourceType**  
  选择消息的源类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为邮件正文。 选择此值将显示动态选项 **MessageSource**。|  
 |**文件连接**|将源设置为包含邮件正文的文件。 选择此值将显示动态选项 **MessageSource**。|  

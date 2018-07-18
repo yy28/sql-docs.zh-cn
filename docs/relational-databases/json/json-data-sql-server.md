@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 86b80d4706adbbf298df34a74d6c923bb4f56161
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a83e36e7f62f9b8ca38c11e5113dae1c8fc4f5d3
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586019"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612212"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
@@ -18,11 +16,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a17dbabd2998f4578da9faca1d217fdee00b559d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba491a3ca7cec145f8b891c1b08d7d491b2c768d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403059"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>第 2 课：使用 SSIS 添加循环
 在 [第 1 课：使用 SSIS 创建项目包和基础包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，创建了从单个平面文件源中提取数据的包，然后使用查找转换功能对数据进行了转换，最后将数据加载到 **AdventureWorksDW2012** 示例数据库的 **FactCurrency** 事实数据表中。  

@@ -1,8 +1,6 @@
 ---
 title: 连接到 SQL Server (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,16 +13,17 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: b24730c11fc1cd650ab2ed405ec8b6717b2d955c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 795ea9dfb2dc779dad3b41c54a749d03feb3f6c5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777073"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>连接到 SQL Server (OracleToSQL)
 使用**连接到 SQL Server**对话框中，连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单上，单击**连接到 SQL Server**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **服务器名称**  
 输入或选择要连接到的 SQL Server 实例。 默认情况下，显示最近连接到的实例。  
   
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 **服务器端口**  
 如果你的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]未配置为接受默认值上的连接端口 (1433)，输入端口号。 否则，将此值留空。  
   
-**数据库**  
+**“数据库”**  
 指定要迁移对象和数据迁移到的数据库。 此选项不可用，当重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 **身份验证**  

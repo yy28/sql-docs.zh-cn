@@ -3,23 +3,21 @@ title: 卸载 Power Pivot for SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 437b8dcba0034bc1ab82778f54a0658824de8c09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49f29fe95801b792444dcd69edfc630b78fe580b
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926978"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>卸载 Power Pivot for SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -86,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  选择 **“删除功能、服务、应用程序和解决方案”** ，然后单击 **“确定”**。  
   
-3.  也可以将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”**和 **“退出”** 命令。  
+3.  也可以将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
   
 4.  检查任务列表中的每个操作，了解每个操作的作用。  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。  
   
-7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击 **“运行”**后，出现以下警告，提醒您将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
+7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击 **“运行”** 后，出现以下警告，提醒您将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
   
 8.  单击 **“是”** 继续操作。  
   

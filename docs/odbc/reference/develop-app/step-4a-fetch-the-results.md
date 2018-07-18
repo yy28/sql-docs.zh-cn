@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915742"
 ---
 # <a name="step-4a-fetch-the-results"></a>步骤 4a： 提取结果
 下一步是提取结果，如下面的插图中所示。  

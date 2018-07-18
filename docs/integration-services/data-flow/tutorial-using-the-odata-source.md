@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fefca580838b5331bb1dea488082c1b6cd080131
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0903c065381ce2828795240321a91c52f0c13e8b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410109"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教程：使用 OData 源
   本教程介绍了从示例 Northwind OData 服务 (http://services.odata.org/V3/Northwind/Northwind.svc/)) 提取 Employees 集合，然后将它加载到某一平面文件中的过程。  
@@ -49,9 +48,9 @@ ms.lasthandoff: 05/03/2018
   
 5.  单击 **“新建…”** 可添加新的 OData 连接管理器。  
   
-6.  为 **“服务文档位置”**输入 OData 服务 URL。 这可以是指向服务文档的 URL，也可以是指向特定源或实体的 URL。 就本教程而言，请将以下 URL 输入到服务文档中：[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
+6.  为 **“服务文档位置”** 输入 OData 服务 URL。 这可以是指向服务文档的 URL，也可以是指向特定源或实体的 URL。 就本教程而言，请将以下 URL 输入到服务文档中：[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
   
-7.  确认为 **“身份验证”** 选择了 **“Windows 身份验证”** ，以便用于访问 OData 服务。 默认情况下将选择**“Windows 身份验证”** 。  
+7.  确认为 **“身份验证”** 选择了 **“Windows 身份验证”** ，以便用于访问 OData 服务。 默认情况下将选择 **“Windows 身份验证”** 。  
   
 8.  单击“测试连接”以测试连接，然后单击“确定”以完成 OData 连接管理器实例的创建。  
   
@@ -59,13 +58,13 @@ ms.lasthandoff: 05/03/2018
   
 10. 从“集合”下拉列表中，选择“Employees”。  
   
-11. 为 **“查询选项”**输入任何其他 OData 查询选项或筛选器。 例如， `$orderby=CompanyName&$top=100`。 为了实现本教程的教学目的，请输入 `$top=5`。  
+11. 为 **“查询选项”** 输入任何其他 OData 查询选项或筛选器。 例如， `$orderby=CompanyName&$top=100`。 为了实现本教程的教学目的，请输入 `$top=5`。  
   
 12. 单击 **“预览”** 可预览数据。  
   
 13. 在左导航窗格中单击 **“列”** 可切换到 **“列”** 页。  
   
-14. 通过选中相应复选框，从 **“可用外部列”**中选择 **EmployeeID**、 **FirstName** 和 **LastName** 。  
+14. 通过选中相应复选框，从 **“可用外部列”** 中选择 **EmployeeID**、 **FirstName** 和 **LastName** 。  
   
 15. 单击 **“确定”** 关闭 **“OData 源编辑器”** 对话框。  
   

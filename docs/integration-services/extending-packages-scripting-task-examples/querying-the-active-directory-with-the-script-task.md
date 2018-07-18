@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,11 +24,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ef2e84c669c61518db09350f95423bb88170e32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e45942b35aca955316e1fa243c69ec90a64ecf2e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328371"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
   企业数据处理应用程序（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包）通常需要根据 Active Directory 中存储的雇员的级别、职务或其他特征来以不同方式处理数据。 Active Directory 是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目录服务，它不仅提供集中存储有关用户的元数据，还可以提供集中存储有关其他组织资产（如计算机和打印机）的元数据。 Microsoft .NET Framework 中的 System.DirectoryServices 命名空间提供使用 Active Directory 的类，以帮助根据 Active Directory 中存储的信息来定向数据处理工作流。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  下面的示例基于 `email` 变量的值（包含雇员的电子邮件地址），从 Active Directory 检索雇员的姓名、职务和电话号码。 包中的优先约束可使用检索到的信息，例如基于雇员的职务来确定发送具有低优先级的电子邮件消息，还是具有高优先级的页。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  

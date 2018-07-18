@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915953"
 ---
 # <a name="embedded-sql"></a>嵌入式的 SQL
 将 SQL 语句发送到 DBMS 的第一个技术嵌入 SQL。 因为 SQL 不使用变量和控制的流语句，它通常用于为数据库子语言，可以添加到在传统的编程语言中，例如 C 或 COBOL 编写的程序。 这是一个中央的嵌入式 SQL 了解： 置于主机编程语言中编写的程序的 SQL 语句。 简言之，以下方法用于在主机语言中嵌入的 SQL 语句：  

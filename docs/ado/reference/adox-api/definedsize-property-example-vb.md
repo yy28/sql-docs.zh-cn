@@ -2,7 +2,6 @@
 title: DefinedSize 属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcc6b8902f55945f41cfe380e522389055cf961c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d97cc77e64c76b0805315de247aeb4ce1ffdce4f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285566"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 属性示例 (VB)
 此示例演示[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 代码将重新定义的名字列的大小**员工**表*Northwind*数据库。 然后，在名字的值更改[字段](../../../ado/reference/ado-api/field-object.md)的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**显示表。 请注意，默认情况下，名字字段将成为使用空格填充后您重新定义**DefinedSize**属性。  
@@ -153,6 +153,6 @@ End Sub
 ' EndDefinedSizeVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize 属性 (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

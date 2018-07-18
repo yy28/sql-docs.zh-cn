@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900662"
 ---
 # <a name="select-statement-limitations"></a>SELECT 语句的限制
 聚合函数列不能混合使用 SELECT 语句中的非聚合列。  

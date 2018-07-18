@@ -2,7 +2,6 @@
 title: 索引集合 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79954616537a9a58b053bb4ee6fec4de50d3033a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7bddbeacadb3bac0b2f408502e6aacb30184dfe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286076"
 ---
 # <a name="indexes-collection-adox"></a>索引集合 (ADOX)
 包含所有[索引](../../../ado/reference/adox-api/index-object-adox.md)一个表对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [追加](../../../ado/reference/adox-api/append-method-adox-indexes.md)方法**索引**集合是唯一的 ADOX。 您可以：  
   
 -   将新的索引添加到与集合**追加**方法。  
@@ -49,6 +49,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [索引集合属性、方法和事件](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [索引追加方法示例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

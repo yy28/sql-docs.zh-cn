@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018974"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>向移动报表添加数据网格 | Reporting Services
 有时最佳可视化对象是数据本身。 了解用于在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中显示数据的三种数据网格（或表）：

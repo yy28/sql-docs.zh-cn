@@ -1,14 +1,12 @@
 ---
 title: 运行 Integration Services (SSIS) 包 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,17 +25,20 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe9d96b588130d1b4bab8e611dc2e0143ab457c9
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: ee4b75d609690535d80331c3437cdf9ecbd9de9e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411129"
 ---
 # <a name="run-integration-services-ssis-packages"></a>运行 Integration Services (SSIS) 包
   要运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，您可以根据包的存储位置使用某个工具。 下表中列出了这些工具。  
 
 > [!NOTE]
-> 借助适用于 Linux 的 SQL Server 的发布，可在 Linux 上运行 SSIS 包。 有关详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../../linux/sql-server-linux-migrate-ssis.md)。
+> 本文介绍如何在一般情况下运行 SSIS 包以及如何在本地运行包。 还可在以下平台上运行 SSIS 包：
+> - **Microsoft Azure 云**。 有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)和[在 Azure 中运行 SSIS 包](../lift-shift/ssis-azure-run-packages.md)。
+> - **Linux**。 有关详细信息，请参阅[使用 SSIS 在 Linux 上提取、转换和加载数据](../../linux/sql-server-linux-migrate-ssis.md)。
   
  为了在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储包，您使用项目部署模型将项目部署到服务器。 有关信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   

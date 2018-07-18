@@ -1,5 +1,5 @@
 ---
-title: sp_dropuser (TRANSACT-SQL) |Microsoft 文档
+title: sp_dropuser (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 9af8a740ae349f748acc6c8385d95b97a0e2490d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036985"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +53,14 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- **sp_dropuser**执行**sp_revokedbaccess**若要从当前数据库中删除用户。  
+## <a name="remarks"></a>Remarks  
+ **sp_dropuser**执行**sp_revokedbaccess**以从当前数据库中删除用户。  
   
  使用**sp_helpuser**以显示可以从当前数据库中删除的用户名称的列表。  
   
  删除数据库用户时，将同时删除该用户的所有别名。 如果此用户拥有一个与用户同名的空架构，则此架构也将被删除。 如果用户在数据库中拥有其他任何安全对象，则不会删除该用户。 必须首先将对象的所有权转让给其他主体。 有关详细信息，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。 删除数据库用户时，将自动删除与该用户相关联的权限，并且将该用户从其所属的所有数据库角色中删除。  
   
- **sp_dropuser**不能用于删除数据库所有者 (**dbo**) **INFORMATION_SCHEMA**用户，或**来宾**用户从**master**或**tempdb**数据库。 在非系统数据库中，`EXEC sp_dropuser 'guest'`将撤消从用户的 CONNECT 权限**来宾**。 但不会删除用户本身。  
+ **sp_dropuser**不能用于删除数据库所有者 (**dbo**) **INFORMATION_SCHEMA**用户，或**来宾**用户从**master**或**tempdb**数据库。 在非系统数据库`EXEC sp_dropuser 'guest'`将撤消用户的连接权限**来宾**。 但不会删除用户本身。  
   
  **sp_dropuser**不能在用户定义的事务内执行。  
   
@@ -74,10 +75,10 @@ EXEC sp_dropuser 'Albert';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [删除用户 & #40;Transact SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

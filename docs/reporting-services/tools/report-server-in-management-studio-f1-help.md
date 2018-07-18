@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029454"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio 中报表服务器的 F1 帮助
   本节包含有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可用于管理报表服务器的对话框的主题。  

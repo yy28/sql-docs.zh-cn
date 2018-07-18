@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908652"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>向后兼容性和标准合规性
 向后兼容性是较新的 ODBC 组件的功能，以便使用旧的 ODBC 组件。 以下各节讨论 ODBC 3 中的更改如何影响这些组件 *.x*。 主要包含在其中的信息解决写入 ODBC 3 *.x*应用程序和如何向后兼容性问题由 ODBC 驱动程序。 有关如何向后兼容性的特定指南问题影响的 ODBC 3 编写 *.x*驱动程序，请参阅[为了向后兼容的附录 g： 驱动程序准则](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  

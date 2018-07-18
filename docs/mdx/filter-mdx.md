@@ -1,34 +1,23 @@
 ---
 title: 筛选器 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- filter
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Filter function
-ms.assetid: f2df51c8-6acb-4300-b71c-2a480c9fbdf8
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 66f71d8fe604eb2002b6c1ed47afaf5ef09b1eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740526"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回根据搜索条件对指定集进行筛选后得到的集。  
   
@@ -46,7 +35,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  计算结果为 True 或 False 的有效多维表达式 (MDX) 逻辑表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **筛选器**函数计算对指定集中的每个元组指定的逻辑表达式。 该函数返回由指定集中的其中逻辑表达式的计算结果为每个元组集中**true**。 如果没有元组评估结果为**true**，则返回空集。  
   
  **筛选器**函数工作方式类似于[IIf](../mdx/iif-mdx.md)函数。 **IIf**函数将返回两个选项之一基于 MDX 逻辑表达式的计算，而**筛选器**函数将返回满足指定的搜索条件的元组的一组。 实际上，**筛选器**函数执行`IIf(Logical_Expression, Set_Expression.Current, NULL)`上每个元组中组，并返回生成设置。  
@@ -95,7 +84,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,13 +1,12 @@
 ---
-title: 大容量复制数据从程序变量 (ODBC) |Microsoft 文档
+title: 大容量复制数据从程序变量 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,21 +18,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5651efa7e0c816d6d1ed8ec99f3ddbe2538a012
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6850055d9e9b2b941086e6ed0e4364f64b8e99b3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425626"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  此示例演示如何使用大容量复制函数大容量将数据从程序变量复制到 SQL Server 使用**bcp_bind**和**bcp_sendrow**。 （为简化此示例，已删除错误检查代码。）  
+  此示例演示如何使用大容量复制函数将数据从程序变量复制到 SQL Server 使用批量**bcp_bind**并**bcp_sendrow**。 （为简化此示例，已删除错误检查代码。）  
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
- **安全说明**尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果你必须保存凭据，应将它们与加密[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
+ **安全说明**如果可能，请使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应将它们与加密[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>直接在程序变量上使用大容量复制函数  
   
@@ -53,15 +53,15 @@ ms.lasthandoff: 05/03/2018
   
     -   副本的方向：DB_IN 从应用程序到视图或表，或 DB_OUT 从表或视图到应用程序。  
   
-5.  调用[bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)大容量复制，可将列绑定到程序变量中的每列。  
+5.  调用[bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)大容量复制来将列绑定到程序变量中的各列。  
   
-6.  填充数据，并调用程序变量[bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送数据行。  
+6.  提供数据，并调用填充程序变量[bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送一行数据。  
   
-7.  在发送多个行后，调用[bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)为已发送的行的检查点。 很好的做法调用[bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)至少一次每 1000年行。  
+7.  发送多个行后，调用[bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)到检查点已发送的行。 它是调用的好办法[bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)每 1000年行至少一次。  
   
-8.  已发送的所有行后，调用[bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成操作。  
+8.  已发送所有行后，调用[bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成操作。  
   
- 您可以改变的位置和长度的程序变量批量复制操作期间通过调用[bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)。 使用[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)设置各种大容量复制选项。 使用[bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)发送**文本**， **ntext**，和**映像**到服务器的段中的数据。  
+ 您可能会因位置和长度的程序变量大容量复制操作期间调用[bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)并[bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)。 使用[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)设置多个大容量复制选项。 使用[bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)发送**文本**， **ntext**，以及**映像**到服务器的段中的数据。  
   
 ## <a name="example"></a>示例  
  IA64 平台不支持此示例。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  使用 odbc32.lib 和 odbcbcp.lib 编译第二个 (C++) 代码列表。 如果用 MSBuild.exe 生成示例，请先将 Bcpfmt.fmt 和 Bcpodbc.bcp 从项目目录复制到 .exe 文件所在的目录，然后调用 .exe。  
   
- 执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码段以删除使用示例表。  
+ 执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以删除该示例使用的表。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
@@ -308,8 +308,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [大容量复制使用 SQL Server ODBC 驱动程序操作指南主题 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
- [从程序变量大容量复制](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
+## <a name="see-also"></a>请参阅  
+ [大容量复制使用 SQL Server ODBC 驱动程序操作指南主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [从程序变量执行大容量复制](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

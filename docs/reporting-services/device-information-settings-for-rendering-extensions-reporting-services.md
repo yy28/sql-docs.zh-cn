@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015974"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>呈现扩展插件的设备信息设置 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，设备信息设置用于将呈现参数传递到呈现扩展插件。 每个呈现扩展插件接受一组特定设置。  

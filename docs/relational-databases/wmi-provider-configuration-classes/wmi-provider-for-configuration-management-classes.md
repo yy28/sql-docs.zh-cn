@@ -1,5 +1,5 @@
 ---
-title: 配置管理类的 WMI 提供程序 |Microsoft 文档
+title: 配置管理类的 WMI 提供程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 967d26b76a75da27a5b4df98ecf5cd53d2cb9950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005238"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>用于配置管理的 WMI 提供程序类
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   用于配置管理的 Windows Management Instrumentation (WMI) 提供程序提供以下类功能：  
   
- [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
+ [CInstance 类](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
   
  [ClientNetLibInfo 类](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)  
   

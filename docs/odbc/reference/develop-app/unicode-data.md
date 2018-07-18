@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915812"
 ---
 # <a name="unicode-data"></a>Unicode 数据
 SQL Unicode 数据类型用于描述驻留在本机上 DBMS 为 Unicode 的数据。 C Unicode 数据类型可用于允许应用程序将数据绑定到 Unicode 缓冲区。 驱动程序管理器可以将数据转换从 Unicode C 类型 (SQL_C_WCHAR) 以使其带有 ANSI 驱动程序的函数。  

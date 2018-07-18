@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025414"
 ---
 # <a name="processing-objects-xmla"></a>处理对象 (XMLA)
   在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理是步骤或系列的指导将数据转换进行业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  

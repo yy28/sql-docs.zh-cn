@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fdd7d2eee34303c466da0445233109b707c6645
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307596"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -108,7 +108,7 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 函数提供了在执行查询之前获取字段信息（包括类型信息）的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [检索数据](../../connect/php/retrieving-data.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)

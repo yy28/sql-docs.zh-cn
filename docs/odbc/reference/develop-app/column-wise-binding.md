@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909772"
 ---
 # <a name="column-wise-binding"></a>按列绑定
 使用专用于列的绑定时，应用程序会将一个或两个，或在某些情况下的三个，数组绑定到数据要为其返回每个列。 第一个数组中包含的数据值，并第二个数组拥有长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，将绑定的第三个数组。 每个数组包含有行的行集中的所有元素。  

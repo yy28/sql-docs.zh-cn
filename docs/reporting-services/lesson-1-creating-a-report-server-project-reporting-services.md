@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016524"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
 

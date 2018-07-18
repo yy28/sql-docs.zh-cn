@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909372"
 ---
 # <a name="comparing-bookmarks"></a>比较的书签
 因为字节比较，书签将变为，它们可以比较相等。 为此，应用程序将视为的字节数组的每个书签，并比较两个书签的字节。 要仅在结果集内非重复，保证具有书签，因为它没有意义要比较的书签，获取从不同的结果集。

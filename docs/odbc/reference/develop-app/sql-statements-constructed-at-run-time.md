@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914292"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>在运行时构造的 SQL 语句
 在运行时，通常执行即席分析的应用程序生成 SQL 语句。 例如，电子表格可能允许用户选择要从中检索数据的列：  

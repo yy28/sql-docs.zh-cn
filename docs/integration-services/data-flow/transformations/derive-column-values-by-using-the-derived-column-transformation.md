@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38865b44150dee9420faf05298cf7e911f780cad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb860aef0963351133b64b8c0e50689a0fcd74b9
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331111"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，然后将派生列转换从 **“工具箱”**拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，然后将派生列转换从 **“工具箱”** 拖动到设计图面。  
   
 4.  将连接线从源或前一转换拖到派生列转换，从而将派生列转换连接到数据流。  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
      如果选择使用新列， **“派生列转换编辑器”** 对话框将对表达式求值，并根据数据类型、长度、精度、小数位数和代码页为列指定数据类型。  
   
-8.  如果使用新列，请在 **“数据类型”** 列表中选择数据类型。 根据所选的数据类型，可选择更新 **“长度”**列、 **“精度”**列、 **“小数位数”**列和 **“代码页”** 列中的值。 现有列的元数据不能更改。  
+8.  如果使用新列，请在 **“数据类型”** 列表中选择数据类型。 根据所选的数据类型，可选择更新 **“长度”** 列、 **“精度”** 列、 **“小数位数”** 列和 **“代码页”** 列中的值。 现有列的元数据不能更改。  
   
 9. 还可以在 **“派生列名称”** 列中修改这些值。  
   

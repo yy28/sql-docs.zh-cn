@@ -18,9 +18,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29d0fca68fa5359abffccb57806b93d6c781d0c2
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33073394"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>创建跟踪 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
      此时，将显示 **“跟踪属性”** 对话框。  
   
-    > **注意：**如果选中“建立连接后立即开始跟踪”，就不会显示“跟踪属性”对话框，而是直接开始跟踪。 要关闭此设置，请在“工具”菜单上，单击“选项”，再清除“建立连接后立即开始跟踪”复选框。  
+    > **注意：** 如果选中“建立连接后立即开始跟踪”，就不会显示“跟踪属性”对话框，而是直接开始跟踪。 要关闭此设置，请在“工具”菜单上，单击“选项”，再清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在 **“跟踪名称”** 框中，键入跟踪的名称。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  若要保存跟踪结果，请执行下列操作之一：  
   
-    -   单击“保存到文件”，将跟踪内容捕获到文件中。 指定 **“设置最大文件大小”**的值。 默认值为 5 MB。  
+    -   单击“保存到文件”，将跟踪内容捕获到文件中。 指定 **“设置最大文件大小”** 的值。 默认值为 5 MB。  
   
          或者，选择 **“启用文件滚动更新”** ，以便当文件大小达到最大值时自动创建新文件。 也可以选择 **“服务器处理跟踪数据”**，由正在运行跟踪的服务而不是客户端应用程序来处理跟踪数据。 在服务器处理跟踪数据时，即使是在压力较大的情况下也不会跳过事件，但是服务器性能可能会受到影响。  
   

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032264"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部数据源提供订阅方数据（数据驱动订阅）
   在数据驱动订阅中，动态订阅数据是由从外部数据源检索数据的查询或命令提供的。 可以从满足数据驱动订阅处理要求的任何支持数据源中检索订阅数据。 查询或命令语法必须对随报表服务器安装的数据处理扩展插件有效。  

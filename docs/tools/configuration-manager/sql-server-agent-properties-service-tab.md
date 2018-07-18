@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c95a67c5907b1e546506827a32d69f848026ab1b
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33069844"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server 代理属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,6 +57,6 @@ ms.lasthandoff: 05/03/2018
 -   已禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”**指示状态更改被挂起。  
+ 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
   
   

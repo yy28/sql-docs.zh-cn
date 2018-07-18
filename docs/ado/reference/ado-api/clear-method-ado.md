@@ -2,7 +2,6 @@
 title: Clear 方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 238a936bb0bf0abe518b8a6268ace23406aac114
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4f02311140a82d869f38d3b64f025a69357c5d2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276336"
 ---
 # <a name="clear-method-ado"></a>Clear 方法 (ADO)
 中删除所有[错误](../../../ado/reference/ado-api/error-object.md)对象从[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 Errors.Clear  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**清除**方法[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合中移除所有现有[错误](../../../ado/reference/ado-api/error-object.md)从集合的对象。 发生错误时，自动清除 ADO**错误**集合和填充其与**错误**对象基于新的错误。  
   
  某些属性和方法返回显示为警告**错误**中的对象**错误**集合但不是会停止对程序的执行。 在调用之前[重新同步](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，或[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象;[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象; 或设置[筛选器](../../../ado/reference/ado-api/filter-property.md)属性**记录集**对象，请调用**清除**方法**错误**集合。 这样一来，你可以阅读[计数](../../../ado/reference/ado-api/count-property-ado.md)属性**错误**集合以测试是否返回警告。  
@@ -45,7 +45,7 @@ Errors.Clear
 ## <a name="applies-to"></a>适用范围  
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行、 重新执行查询，并清除方法示例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [执行、 重新执行查询，并清除方法示例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [执行、 重新执行查询，并清除方法示例 （VC + +）](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

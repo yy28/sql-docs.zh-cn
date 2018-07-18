@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除外键 |Microsoft 文档
+title: 创建、 更改和删除外键 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,19 +19,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb86a1463eef4a4e438a2bda7b329c9d78a46c6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998009"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>创建、更改和删除外键
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，外键由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 对象表示。  
   
- 若要在 SMO 中创建外键，必须指定在其的外键定义的构造函数中的表<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象。 在该表中，必须至少选择一个列作为外键。 为此，请创建一个 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 对象变量并指定作为外键的列的名称。 然后指定被引用表和被引用列。 使用<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>方法以向其中添加栏**列**对象属性。  
+ 若要在 SMO 中创建外键，必须指定在其的外键定义的构造函数中的表<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象。 在该表中，必须至少选择一个列作为外键。 为此，请创建一个 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 对象变量并指定作为外键的列的名称。 然后指定被引用表和被引用列。 使用<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>方法将添加到列**列**对象属性。  
   
- 表示外键的列中列出**列**对象的属性<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象。 外键引用的主键由<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>属性中指定的表中都<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>属性。  
+ 表示外键列会列在**列**对象的属性<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象。 表示外键引用的主键<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>中指定的表中的属性<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>属性。  
   
 ## <a name="example"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

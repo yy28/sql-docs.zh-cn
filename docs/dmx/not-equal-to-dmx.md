@@ -1,30 +1,20 @@
 ---
-title: '&lt;&gt; （不等于）(DMX) |Microsoft 文档'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- not equal operator (<>)
-- <> (not equal to operator)
-ms.assetid: df0e7901-9e31-452a-af14-471f5130c09d
-caps.latest.revision: 12
-author: Minewiskan
+title: '&lt;&gt; （不等于）(DMX) |Microsoft Docs'
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b36e2dfec16ad7941032c0220b605a276aeb82ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 58675993b909c439b402a64ba77b8511466eaa68
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037895"
 ---
 # <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt; （不等于）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +35,7 @@ DMX_Expression <> DMX_Expression
 ## <a name="return-value"></a>返回值  
  如果两个参数都为非空值，并且第一个参数的值不等于第二个参数的值，则返回包含 TRUE 的布尔值。 如果两个参数都为非空值，并且第一个参数的值等于第二个参数的值，则返回包含 FALSE 的布尔值。 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该布尔值包含空值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [比较运算符&#40;DMX&#41;](../dmx/operators-comparison.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  

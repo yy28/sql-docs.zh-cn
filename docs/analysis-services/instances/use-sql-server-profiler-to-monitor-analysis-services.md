@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 监视 Analysis Services |Microsoft 文档
+title: 使用 SQL Server Profiler 监视 Analysis Services |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e9e4407abe5565931994d9dcca4cd0326577dbf4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034663"
 ---
 # <a name="use-sql-server-profiler-to-monitor-analysis-services"></a>Use SQL Server Profiler to Monitor Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/10/2018
   
  下表对本部分的主题进行了说明：  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |-----------|-----------------|  
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/10/2018
 |[为重播创建事件探查器跟踪 (Analysis Services)](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)|说明使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建用于重播的跟踪的要求。|  
 |[Analysis Services 跟踪事件](../../analysis-services/trace-events/analysis-services-trace-events.md)|说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 事件类。 这些事件类映射到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所生成的操作并用于跟踪重播。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

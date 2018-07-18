@@ -1,26 +1,27 @@
 ---
 title: 将数据从 SQL Server 加载到 Azure SQL 数据仓库中 (SSIS) | Microsoft Docs
 description: 介绍如何创建 SQL Server Integration Services (SSIS) 包，以将数据从各种数据源移到 SQL 数据仓库。
-services: sql-data-warehouse
 documentationcenter: NA
-author: douglaslMS
-manager: craigg-msft
 ms.service: sql-data-warehouse
+ms.component: data-movement
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: e627fdad03bf3159a0ed9c730381fde53c86ee9f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+author: douglaslMS
+manager: craigg-msft
+ms.openlocfilehash: 84295d9d1e43a9d10724ab8381aa4308f50c8513
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36887403"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据从 SQL Server 加载到 Azure SQL 数据仓库
 
-创建 SQL Server Integration Services (SSIS) 包，以将数据从 SQL Server 加载到 [Azure SQL 数据仓库](/azure/sql-data-warehouse/index.md)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
+创建 SQL Server Integration Services (SSIS) 包，以将数据从 SQL Server 加载到 [Azure SQL 数据仓库](/azure/sql-data-warehouse/index)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
 
 在本教程中，你将学习：
 

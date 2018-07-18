@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025724"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>打开和关闭报表（报表管理器）
   可以使用报表管理器来查看已经发布到报表服务器的报表。 默认情况下，所有的报表都以 HTML 形式打开。 在打开报表之后，可以将其导出，以便以其他应用程序格式进行查看。 如果报表中包含交互式功能，或者如果它是包含交互式数据的报表生成器报表，则可以单击相应的链接来查看其他报表或数据。  

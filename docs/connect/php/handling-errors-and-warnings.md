@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e57c6a84a12bd148dc45c868a514da37cd87543
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cba0246f57157488b4e62ab2cdcbc80b2aea71e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307536"
 ---
 # <a name="handling-errors-and-warnings"></a>处理错误和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,20 +28,20 @@ ms.lasthandoff: 05/03/2018
   
 本部分中的主题提供了有关使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驱动程序处理错误和警告的信息。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |---------|---------------|  
 |[如何：使用 SQLSRV 驱动程序配置错误和警告处理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|演示如何为处理错误和警告更改配置设置。|  
 |[如何：使用 SQLSRV 驱动程序处理错误和警告](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|演示如何分别处理错误和警告。|  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>参考  
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
   
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

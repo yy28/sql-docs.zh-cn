@@ -2,7 +2,6 @@
 title: GetObjectOwner 和 SetObjectOwner 方法示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc2d82fd3223e38d6441cace07bd4f26a0a57bb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ea1e53e6a9259633a353e8eb0988b0fddc74a4e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285866"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 和 SetObjectOwner 方法示例 （VC + +）
 此示例演示[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)和[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此代码假定组是否存在记帐 (请参阅[组和用户追加，ChangePassword 方法示例 （VC + +）](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)若要了解如何将此组添加到系统)。 类别表的所有者设置为记帐。  

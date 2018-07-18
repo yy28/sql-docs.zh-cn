@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044451"
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>安装、 分发和引用表格对象模型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -79,7 +80,7 @@ AMO 取决于 TOM 因为 AMO 中的某些类从 TOM 引用类。 例如，AMO �
   
 2. 单击 **“下载”**。  
   
-3. 选择 **\X64\SQL_AS_AMO.msi**或 **\X86\SQL_AS_AMO.msi**。 你可以选择其中之一： AMO 和 TOM 程序集是以非特定于平台的。
+3. 选择**\X64\SQL_AS_AMO.msi**或**\X86\SQL_AS_AMO.msi**。 你可以选择其中之一： AMO 和 TOM 程序集是以非特定于平台的。
   
 4. 单击**下一步**继续进行下载。 你将发现中的.msi 文件你**下载**文件夹。  
   

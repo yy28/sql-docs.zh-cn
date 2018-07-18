@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b68b33eeb18b07c19bf367be9fdcb27b45e632c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 825edb0d4002dec483756551e1c2b175acef7efe
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401449"
 ---
 # <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
 |**文件系统**|当包驻留在文件系统时选择此选项。|  
 |**SSIS 包存储区**|当包驻留在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区时选择此选项。|  

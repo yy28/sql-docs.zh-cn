@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539397"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>配置 System Center Operations Manager (SCOM) 来监视分析平台系统
 请按照下列步骤为分析平台系统配置 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的分析平台系统所需管理包。  

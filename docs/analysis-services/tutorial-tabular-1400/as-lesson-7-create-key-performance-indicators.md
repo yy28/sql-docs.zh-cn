@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教程第 7 课： 创建关键绩效指标 |Microsoft 文档
+title: Analysis Services 教程第 7 课： 创建关键绩效指标 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,26 +10,27 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03dd09c8f06c8e4d96176f47dcc310008feaf564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979129"
 ---
 # <a name="create-key-performance-indicators"></a>创建关键绩效指标
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-在本课程中，你可以创建关键绩效指标 (Kpi)。 Kpi 用于测量性能由定义的值*基*度量值，针对*目标*度量值，或绝对值的数值还定义的值。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅[Kpi](../tabular-models/kpis-ssas-tabular.md)
+在本课程中，您将创建关键绩效指标 (Kpi)。 Kpi 用于测量由定义的值的性能*Base*度量值，针对*目标*同样由度量值或绝对值定义的值。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅[Kpi](../tabular-models/kpis-ssas-tabular.md)
   
 学完本课的估计时间： **15 分钟**  
   
 ## <a name="prerequisites"></a>必要條件  
 
-本文摘自表格建模教程中，应按顺序完成。 之前在本课程中执行任务，你应完成上一课： [6 课： 创建度量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
+本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 6 课： 创建度量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
   
 ## <a name="create-key-performance-indicators"></a>创建关键绩效指标  
   
-#### <a name="to-create-an-internetcurrentquartersalesperformance-kpi"></a>若要创建 InternetCurrentQuarterSalesPerformance KPI  
+#### <a name="to-create-an-internetcurrentquartersalesperformance-kpi"></a>创建 InternetCurrentQuarterSalesPerformance KPI  
   
 1.  在模型设计器中，单击**FactInternetSales**表。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
     InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
     ```
 
-    此度量值用作 kpi 基础度量值。  
+    此度量值用作 KPI 的基本度量值。  
   
 4.  在度量值网格中，右键单击**InternetCurrentQuarterSalesPerformance** > **创建 KPI**。   
   
@@ -54,15 +55,15 @@ ms.lasthandoff: 05/10/2018
     ![作为 lesson7 kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
-    > 请注意可展开**说明**下面可用图标样式的标签。 使用各种 KPI 元素的说明，以使它们更易于识别客户端应用程序中。  
+    > 请注意**说明**可用图标样式下方的标签。 按照说明为各种 KPI 元素使其更易于识别在客户端应用程序中。  
   
 9. 单击“确定”以完成 KPI。  
   
-    在度量值网格中，注意的图标旁边**InternetCurrentQuarterSalesPerformance**度量值。 此图标表示此度量值充当 KPI 的基本值。  
+    在度量值网格中，注意图标旁边**InternetCurrentQuarterSalesPerformance**度量值。 此图标表示此度量值充当 KPI 的基本值。  
   
-#### <a name="to-create-an-internetcurrentquartermarginperformance-kpi"></a>若要创建 InternetCurrentQuarterMarginPerformance KPI  
+#### <a name="to-create-an-internetcurrentquartermarginperformance-kpi"></a>创建 InternetCurrentQuarterMarginPerformance KPI  
   
-1.  在度量值网格**FactInternetSales**表中，单击空单元格。  
+1.  中的度量值网格**FactInternetSales**表中，单击某个空单元格。  
   
 2.  在表上面的公式栏中，键入以下公式：  
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  在关键绩效指标 (KPI) 对话框中，在**目标**选择**绝对值**，然后键入**1.25**。   
   
-5.  在左 （低） 滑块字段中，滑动，直到该字段显示**0.8**，然后即右 （高） 滑块字段中，直到该字段显示**1.03**。  
+5.  在左侧 （低） 滑块字段中，滑动，直到此字段显示**0.8**，然后滑动右侧 （高） 滑块字段，直到此字段显示**1.03**。  
   
 6.  在“选择图标样式”中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型，然后单击“确定”。  
   

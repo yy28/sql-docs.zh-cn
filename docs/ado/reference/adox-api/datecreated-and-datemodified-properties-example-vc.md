@@ -2,7 +2,6 @@
 title: 时间和 DateModified 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a841fd18a072480380f775102660054d8866346b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7919bd3e51ad685416ff35d99cb961988334dd15
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285606"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>时间和 DateModified 属性示例 （VC + +）
 此示例演示[时间](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)添加一个新的属性[列](../../../ado/reference/adox-api/column-object-adox.md)到一个现有[表](../../../ado/reference/adox-api/table-object-adox.md)和创建一个新**表**。 若要运行此示例需要 DateOutput 过程。  
@@ -118,7 +118,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [– 属性 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified 属性 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   

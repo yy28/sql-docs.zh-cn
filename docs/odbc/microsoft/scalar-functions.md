@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900062"
 ---
 # <a name="scalar-functions"></a>标量函数
 Microsoft ODBC 桌面数据库驱动程序支持以下标量函数：  

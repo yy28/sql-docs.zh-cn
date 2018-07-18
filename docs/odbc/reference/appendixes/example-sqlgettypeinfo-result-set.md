@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914452"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>示例 SQLGetTypeInfo 结果集
 应用程序调用**SQLGetTypeInfo**来确定哪些数据类型支持的数据源和这些数据类型的特征。 下表显示示例结果集返回**SQLGetTypeInfo**支持 SQL_CHAR、 SQL_LONGVARCHAR、 SQL_DECIMAL、 SQL_REAL、 SQL_DATETIME、 SQL_INTERVAL_YEAR 和 SQL_INTERVAL_DAY_TO_SECOND 的数据源。  

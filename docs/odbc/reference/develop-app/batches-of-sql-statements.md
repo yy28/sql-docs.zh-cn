@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911242"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 语句的批处理
 SQL 语句的批处理是一组两个或多个 SQL 语句或具有相同的效果的一组两个或多个 SQL 语句的单个 SQL 语句。 在某些实现中，可使用任何结果之前执行整个批处理语句。 这通常会更高效比单独，提交语句，因为通常可以减少网络流量和数据源有时可以优化的一批 SQL 语句的执行。 在其他实现中，调用**SQLMoreResults**触发的批次中的下一个语句执行。 ODBC 支持以下类型的批处理：  

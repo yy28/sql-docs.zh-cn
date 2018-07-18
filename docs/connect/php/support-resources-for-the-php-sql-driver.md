@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec95033698d9deb98145f8953ff73fcf096d3fcc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 125d571c30a201aa3934ea8e4d1e69b2cc88b263
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309856"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>支持资源 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,6 +57,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="microsoft-customer-support"></a>Microsoft 客户支持  
 支持问题相关的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，你可以联系[Microsoft 支持](https://support.microsoft.com/contactus/)，或询问有关[Github 项目页](https://github.com/Microsoft/msphpsql/issues)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Microsoft Drivers for PHP for SQL Server 的概述](../../connect/php/overview-of-the-php-sql-driver.md)
   

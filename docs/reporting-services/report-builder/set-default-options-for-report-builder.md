@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018724"
 ---
 # <a name="set-default-options-for-report-builder"></a>设置报表生成器的默认选项
   在报表生成器中，可以设置大量有用的默认设置，以使报表创作更加容易和快速。  例如，如果你可以设置或更改默认报表服务器，除非另行指定，否则报表生成器会将你的报表自动保存到同一报表服务器。  

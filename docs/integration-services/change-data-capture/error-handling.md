@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd409daab0e317cff3ad474bda2963115caa1c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f39b2ff34a821b00e8dd9cc2d003ad3b354df7d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405369"
 ---
 # <a name="error-handling"></a>错误处理
   Oracle CDC 实例从单个 Oracle 源数据库（一个 Oracle RAC 群集被视为单个数据库）挖掘更改并且将提交的更改写入目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 CDC 数据库的更改表中。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  下表描述 Oracle CDC 实例可在其状态表中报告的不同的状态代码。  
   
-|“登录属性”|活动状态代码|错误状态代码|Description|子状态|  
+|“登录属性”|活动状态代码|错误状态代码|描述|子状态|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|@shouldalert|Oracle CDC 实例未运行。 ABORTED 子状态指示 Oracle CDC 实例曾处于活动状态但之后已意外停止。|ABORTED 子状态在 Oracle CDC 服务主实例检测到 Oracle CDC 实例未运行而其状态为 ACTIVE 时建立。|  
 |error|0|@shouldalert|Oracle CDC 实例未运行。 ERROR 状态指示 CDC 实例曾处于活动状态但之后遇到了无法恢复的错误并且禁用了自身。|MISCONFIGURED：检测到无法恢复的配置错误。<br /><br /> PASSWORD-REQUIRED：没有为 Change Data Capture Designer for Oracle by Attunity 设置密码或者配置的密码无效。 这可能是因为对服务的非对称密钥密码进行的更改。|  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017354"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 课：创建新网站
 在本课程中，您将学习如何使用 Visual C# 的 ASP.NET 网站模板创建新网站项目。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902002"
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>书签支持 （Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序支持简单的书签。 当调用[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)与 SQL_BOOKMARK_PERSISTENCE*信息类型*，则返回值是 SQL_BP_SCROLL。  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 451273b019c91d7bf92ae2f277bb4a7b69e668b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e150652a335175dce388d7cd0f5c40a79e61391
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352979"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +66,10 @@ ms.lasthandoff: 05/03/2018
  确定是否在每次运行快照代理时创建快照文件（需要 **“独立的分发代理”**）。 此选项是只读选项；如果在新建发布向导的 **“快照代理”** 页上选择了 **“立即创建快照并使快照保持可用状态，以初始化订阅”** ，此选项将设置为 **True** （默认值）。 有关详细信息，请参阅[创建并应用快照](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
   
  **允许从备份文件初始化**  
- 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否允许使用备份文件来初始化订阅。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否允许使用备份文件来初始化订阅。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
  **允许非 SQL Server 订阅服务器**  
- 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 **True** 可将其他发布属性设置为支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”**或 **“允许对等订阅”**设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 **True** 可将其他发布属性设置为支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”** 或 **“允许对等订阅”** 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ### <a name="data-transformation"></a>数据转换  
  **允许数据转换**  
@@ -121,7 +121,7 @@ ms.lasthandoff: 05/03/2018
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否通过预先计算哪些数据行属于哪个分区来优化同步。 如果发布满足预计算分区的条件，则此设置在默认情况下为 **True** 。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
  **优化同步**  
- 确定是否通过在每个订阅服务器上存储其他元数据来优化合并处理。 此优化功能已被预计算分区取代；只有在 **“预计算分区”** 设置为 **False** 时，才需要使用 **“优化同步”**选项。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 确定是否通过在每个订阅服务器上存储其他元数据来优化合并处理。 此优化功能已被预计算分区取代；只有在 **“预计算分区”** 设置为 **False** 时，才需要使用 **“优化同步”** 选项。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 ### <a name="merge-processes"></a>合并进程  
  **限制并发进程**  

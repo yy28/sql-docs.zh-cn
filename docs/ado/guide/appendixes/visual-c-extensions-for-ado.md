@@ -2,7 +2,6 @@
 title: ADO 的 visual c + + 扩展 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d27cc7776c59364ebc0b69c4872dc8b78ee51116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c9200939a34f3d1a2af936388acaa6740387416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270546"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
 编程 Visual c + + 的 ADO 的首选的方法使用 **#import**指令中, 所述[Microsoft Visual c + + ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 但是，早期版本的 ADO 附带使用 Visual c + + 编程的另一种方法： Visual c + + 扩展。 本部分介绍此功能的用户的用户必须维护 Visual c + + 扩展代码，但应使用 # 编写新的 ADO 代码**导入**。
@@ -43,5 +43,5 @@ ms.lasthandoff: 05/03/2018
 
 -   [ADO 与 Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [有关 COM 的 Visual c + + 语法索引的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)[使用 Visual c + + 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual c + + 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)

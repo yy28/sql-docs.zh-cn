@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-registration
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00fe3c62180ada724cf202ae1dc2c3e6e9c6df8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 04e4d1cff15371962a5208457081549c28ab2277
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36904020"
 ---
 # <a name="registered-servers-f1-help"></a>“已注册的服务器”组件的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,15 +59,15 @@ ms.lasthandoff: 05/03/2018
  如果将 Reporting Services 安装配置为使用自定义身份验证扩展插件，则使用“窗体身份验证”进行连接。  
   
  **用户名**  
- 输入用于连接的登录名。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”**时，此选项才可用。  
+ 输入用于连接的登录名。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可用。  
   
  **密码**  
- 输入用户名的密码。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”**时，此选项才可编辑。  
+ 输入用户名的密码。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可编辑。  
   
  **记住密码**  
- 存储已经输入的密码。 只有在单击了 **“基本身份验证”** 或 **“窗体身份验证”**时，此选项才可用。  
+ 存储已经输入的密码。 只有在单击了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可用。  
   
-> **注意：**如果已经存储了此密码，而现在要放弃存储，请清除此复选框，再单击“保存”。  
+> **注意：** 如果已经存储了此密码，而现在要放弃存储，请清除此复选框，再单击“保存”。  
   
  **已注册的服务器名称**  
  希望在“已注册的服务器”中显示的名称。 此名称不必与 **“服务器名称”** 框中的名称相匹配。  
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="options"></a>“常规”  
  **服务器类型**  
- 在“已注册的服务器”中注册服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，在开始注册新服务器之前，请在 **“已注册的服务器”**工具栏上依次单击 **“数据库引擎”**、 **“分析服务器”**、 **Reporting Services** **、**SQL Server Compact Edition  或 **Integration Services** 。  
+ 在“已注册的服务器”中注册服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，在开始注册新服务器之前，请在 **“已注册的服务器”** 工具栏上依次单击 **“数据库引擎”**、 **“分析服务器”**、 **Reporting Services** **、** SQL Server Compact Edition  或 **Integration Services** 。  
   
  **服务器名称**  
  选择要连接的服务器。 默认情况下，显示上次连接的服务器。  

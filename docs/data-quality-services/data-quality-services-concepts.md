@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0268596f0cbba206ed81dfb4f3af3a450c6f9c7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff1a31645de3c39773ff9d78bddba03f3304fc19
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310296"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  **Reference Data Services**  
   
- 可以使用引用数据来验证、更正和丰富您的数据，同时利用可保证其引用数据质量的公司所提供的服务。 您可以使用 Windows Azure MarketPlace 的服务连接到引用数据提供程序，也可以直接连接到提供程序。 有关详细信息，请参阅 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
+ 可以使用引用数据来验证、更正和丰富您的数据，同时利用可保证其引用数据质量的公司所提供的服务。 您可以使用 Microsoft Azure 市场的服务连接到引用数据提供程序，也可以直接连接到提供程序。 有关详细信息，请参阅 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
   
  有关 DQS 中的知识管理的详细信息，请参阅 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   

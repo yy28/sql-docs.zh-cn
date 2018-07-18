@@ -2,7 +2,6 @@
 title: 目录对象 (ADO MD) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c85ae92757056243f513b23696d29fb2c21bc4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283376"
 ---
 # <a name="catalog-object-ado-md"></a>目录对象 (ADO MD)
 包含特定于多维数据提供程序 (MDP) 的多维架构信息 （即，多维数据集和基础维度、 层次结构、 级别和成员）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用集合和属性的**目录**对象，你可以执行以下操作：  
   
 -   通过设置打开目录[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性设置为标准 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或有效的连接字符串。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录 (VB) 示例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd4ba6a65e476005214c27b602bc5592c07291b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb6b03e2a644690e048b786f2046fa9d33531dfb
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402799"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 包
   包是一个有组织的集合，其中可包括连接、控制流元素、数据流元素、事件处理程序、变量、参数和配置，您可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形设计工具将这些对象组合到包中，或以编程方式生成包含这些对象的包。  然后将完成的包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区或文件系统中，还可以将 ssISnoversion 项目部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器。 包是可被检索、执行和保存的工作单元。  
@@ -89,7 +88,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-package"></a>包可用的自定义日志项  
  下表列出了包的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**PackageStart**|指示包开始运行。<br /><br /> 注意：此日志项自动写入日志。 无法排除它。|  
 |**PackageEnd**|指示包已完成。<br /><br /> 注意：此日志项自动写入日志。 无法排除它。|  

@@ -2,7 +2,6 @@
 title: 多维架构和数据概述 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7dad7be35de7e15ae560f56c3ad51f7222be53b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2d17b02ff9f340a432e2d096a07a6cf5328c5de
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273528"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多维架构和数据概述
 ## <a name="understanding-multidimensional-schemas"></a>了解多维架构  
@@ -87,7 +87,7 @@ Hamburg, Munich, Stuttgart}
   
  此示例还演示了另一个特性： 年周层次结构的周级别的某些成员未出现在年季度层次结构的任何一级别。 因此，层次结构不需要包括维度的所有成员。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO （多维） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [使用 ADO MD 编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

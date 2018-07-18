@@ -1,5 +1,5 @@
 ---
-title: XML 数据类型 (XMLA) |Microsoft 文档
+title: XML 数据类型 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c52717a6f061f4708b2d3e46c6d34f837b2039af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34573779"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981129"
 ---
 # <a name="xml-data-types-xmla"></a>XML 数据类型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "34573779"
 |----------------|-----------------|  
 |Boolean|标准的 XML**布尔**数据类型。|  
 |Decimal|标准的 XML**十进制**数据类型。|  
-|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|上的命名空间**根**元素。 当 XMLA 命令不返回任何结果，因为 XMLA 命令通常不返回结果，或者因为出错 Analysis Services 实例上执行 XMLA 命令时，将返回此命名空间。|  
+|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|上的命名空间**根**元素。 XMLA 命令不返回结果，因为 XMLA 命令正常情况下不返回结果或执行 XMLA 命令时，Analysis Services 实例上发生错误时，会返回此命名空间。|  
 |[EnumString](../../../analysis-services/xmla/xml-data-types/enumstring-data-type-xmla.md)|给定枚举器的命名字符串常量集。|  
 |Integer|标准的 XML **int**数据类型。|  
-|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|返回的多维数据*结果*参数[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。|  
-|[结果集](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|自我描述 XML 结果集返回**执行**方法。|  
-|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|嵌入的 XML 架构，结构化的数据源的行返回[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。|  
+|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|返回的多维数据*结果*的参数[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。|  
+|[结果集](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|自描述 XML 结果集返回的**Execute**方法。|  
+|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|返回的行从数据源，由嵌入式 XML 架构，结构化[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。|  
 |String|XML**字符串**数据类型。|  
 |UnsignedInt|XML **unsignedInt**架构类型。|  
   

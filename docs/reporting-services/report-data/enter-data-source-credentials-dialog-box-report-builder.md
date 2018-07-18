@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018674"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>“输入数据源凭据”对话框（报表生成器）
   使用 **“输入数据源凭据”** 对话框可以提供您用来从数据源检索数据的凭据。  

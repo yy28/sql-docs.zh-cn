@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539217"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>查看分析平台系统中的容量使用率
 本主题说明如何查看 SQL Server PDW 设备中的容量利用率。  

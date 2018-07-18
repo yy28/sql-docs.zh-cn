@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248132"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [ **@job_name=** ] **'***job_name***'**  
  从中删除步骤的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
-> **注意：**任一*job_id*或*job_name*必须指定; 不能同时指定。  
+> **注意：** 任一*job_id*或*job_name*必须指定; 不能同时指定。  
   
  [ **@step_id=** ] *step_id*  
  要删除的步骤的标识号。 *step_id*是**int**，无默认值。  
@@ -67,7 +68,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  有关与特定作业相关联的步骤的详细信息，请运行**sp_help_jobstep**。  
   
-> **注意：**调用**sp_delete_jobstep**与*step_id*值为零删除作业的所有作业步骤。  
+> **注意：** 调用**sp_delete_jobstep**与*step_id*值为零删除作业的所有作业步骤。  
   
  Microsoft SQL Server Management Studio 提供易于使用的图形方法来管理作业，建议使用该方法创建和管理作业基础结构。  
   

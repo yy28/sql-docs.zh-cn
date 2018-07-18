@@ -23,9 +23,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913172"
 ---
 # <a name="prepared-execution-odbc"></a>准备好的执行 ODBC
-准备好的执行是一种高效的方式来多次执行语句。 首次编译该语句，或*已准备好，*到访问计划。 然后执行一个或更多次在更高版本时，访问计划。 有关访问计划的详细信息，请参阅[处理 SQL 语句](../../../odbc/reference/processing-a-sql-statement.md)。  
+准备好的执行是一种高效的方式来多次执行语句。 首次编译该语句，或*已准备好，* 到访问计划。 然后执行一个或更多次在更高版本时，访问计划。 有关访问计划的详细信息，请参阅[处理 SQL 语句](../../../odbc/reference/processing-a-sql-statement.md)。  
   
  准备好的执行通常由垂直和自定义应用程序用于重复执行同一、 参数化 SQL 语句。 例如，下面的代码准备的语句，若要更新的不同部分的价格。 然后，它将执行每次对不同的参数值多次的语句。  
   

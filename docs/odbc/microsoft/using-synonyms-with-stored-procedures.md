@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914522"
 ---
 # <a name="using-synonyms-with-stored-procedures"></a>在存储过程中使用同义词
 > [!IMPORTANT]  

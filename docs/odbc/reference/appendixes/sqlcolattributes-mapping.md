@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907308"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 映射
 在应用程序调用**SQLColAttributes**到 ODBC 3 *.x*驱动程序，将会调用**SQLColAttributes**映射到**SQLColAttribute** ，如下所示：  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  如果应用程序是 ODBC 2。*x*应用程序， *fDescType* SQL_COLUMN_TYPE，并返回的类型是简洁的 DATETIME 类型，返回值的日期、 时间和时间戳的代码的驱动程序管理器映射。  
   
-2.  如果*fDescType*是 SQL_COLUMN_NAME、 SQL_COLUMN_NULLABLE，还是 SQL_COLUMN_COUNT，驱动程序管理器调用**SQLColAttribute**与驱动程序中*FieldIdentifier*自变量映射到 SQL_DESC_NAME、 SQL_DESC_NULLABLE 或 SQL_DESC_COUNT，根据*。* 所有其他值*fDescType*传递到该驱动程序。  
+2.  如果*fDescType*是 SQL_COLUMN_NAME、 SQL_COLUMN_NULLABLE，还是 SQL_COLUMN_COUNT，驱动程序管理器调用**SQLColAttribute**与驱动程序中*FieldIdentifier*自变量映射到 SQL_DESC_NAME、 SQL_DESC_NULLABLE 或 SQL_DESC_COUNT，根据 *。* 所有其他值*fDescType*传递到该驱动程序。  
   
  ODBC 3 *.x*驱动程序必须支持所有 ODBC 3 *.x* *FieldIdentifiers*列出**SQLColAttribute**。  
   

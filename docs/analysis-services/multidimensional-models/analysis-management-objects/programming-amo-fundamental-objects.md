@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026214"
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基础对象的编程
   基础对象通常是简单直接的对象。 通常会创建和实例化这些对象，然后在不再需要它们时，用户可以断开与它们的连接。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 AMO 基础对象中的唯一一个复杂对象是 <xref:Microsoft.AnalysisServices.DataSourceView>，它需要详细信息来生成表示数据源视图的抽象模型。  

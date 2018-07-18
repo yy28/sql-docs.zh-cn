@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914892"
 ---
 # <a name="tables-and-views"></a>表和视图
 在 ODBC 函数中，表和视图是可互换的。 术语*表*用于表和视图，除非术语*视图*显式使用。

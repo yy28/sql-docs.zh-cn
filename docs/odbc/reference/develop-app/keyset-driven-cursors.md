@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912442"
 ---
 # <a name="keyset-driven-cursors"></a>键集驱动游标
 键集驱动游标静态和动态游标之间在于它能够检测更改。 如静态游标，它不始终检测到的成员资格和顺序的结果集的更改。 动态游标，像它未在结果集中 （遵从事务，如所 SQL_ATTR_TXN_ISOLATION 连接属性设置的隔离级别） 检测更改的行的值。  

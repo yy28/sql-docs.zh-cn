@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) |Microsoft 文档
+title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26fc0678d8597cc8a56211e829bdc598c734f168
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029532"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +56,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|扩展事件类型|  
-|is_configurable|NVARCHAR(128)|此值设置为**True**如果事件是可配置，否则它设置为**False**。|  
+|is_configurable|NVARCHAR(128)|此值设置为 **，则返回 True**如果事件是可配置，否则它设置为**False**。|  
 |is_enabled|NVARCHAR(128)|如果启用了事件，则此项设置为 True；否则设置为 False。 使用 smart_admin.sp_set_parameter 启用调试事件。|  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 需要**选择**对函数的权限。  
+ 需要**选择**函数上的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例返回所有扩展事件及其当前的状态。  

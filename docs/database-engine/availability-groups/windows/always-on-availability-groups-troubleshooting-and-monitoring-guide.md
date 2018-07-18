@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32861692"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性组故障排除和监视指南
  本指南可帮助你开始监视 Always On 可用性组并排查可用性组的一些常见问题。 它提供了原始内容，以及在其他位置发布的有用信息的登陆页。 尽管本指南不能全面探讨大范围可用性组中出现的所有问题，但它可为分析根本原因和解决问题指出正确的方向。 

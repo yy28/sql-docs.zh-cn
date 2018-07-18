@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -24,11 +23,12 @@ caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7be58689ed97e72a9e8f887cb7ac303cd2b20513
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28160ced7c7d4d038bf6bb388f0b980cffc8171
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311956"
 ---
 # <a name="mirroring-states-sql-server"></a>镜像状态 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  可能的数据库镜像状态如下所示：  
   
-|镜像状态|Description|  
+|镜像状态|描述|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|镜像数据库的内容滞后于主体数据库的内容。 主体服务器正在将日志记录发送到镜像服务器（正在将更改应用于镜像数据库以使其前滚）。<br /><br /> 在数据库镜像会话开始时，数据库处于 SYNCHRONIZING 状态。 主体服务器为数据库提供服务，同时镜像服务器尽量与主体服务器保持同步。|  
 |SYNCHRONIZED|当镜像服务器与主体服务器几乎保持同步时，镜像状态将更改为 SYNCHRONIZED。 只要主体服务器继续向镜像服务器发送更改，并且镜像服务器继续将更改应用于镜像数据库，数据库就会保持此状态。<br /><br /> 如果将事务安全性设置为 FULL，则 SYNCHRONIZED 状态同时支持自动故障转移和手动故障转移，并且在故障转移后不会丢失数据。<br /><br /> 如果关闭事务安全性，则即使处于 SYNCHRONIZED 状态，也总可能丢失某些数据。|  

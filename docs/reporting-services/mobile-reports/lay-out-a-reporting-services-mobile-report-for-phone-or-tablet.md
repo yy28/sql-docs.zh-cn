@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018254"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>为手机或平板电脑设计 Reporting Services 移动报表
 在 [中创建](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) Reporting Services 移动报表 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]后，即可设计手机和平板电脑版移动报表。  

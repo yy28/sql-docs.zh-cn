@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904132"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>撤销和授予权限时使用存储的过程
 > [!IMPORTANT]  

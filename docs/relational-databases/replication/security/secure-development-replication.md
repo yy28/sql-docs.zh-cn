@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18eae7c22b52a1f5d7dfcf5db934fd87cf30a3ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a045036f9f1c985351af2164e59ca10b041cb2a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359929"
 ---
 # <a name="secure-development-replication"></a>安全开发（复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
  说明复制拓扑所需的最小安全权限和角色。  
   
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [复制安全最佳做法](../../../relational-databases/replication/security/replication-security-best-practices.md)  
  提供可帮助您规划更安全的复制拓扑的一般信息。  
   
 ## <a name="see-also"></a>另请参阅  

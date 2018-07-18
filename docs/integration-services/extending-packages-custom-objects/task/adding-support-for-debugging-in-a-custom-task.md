@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +27,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14e1fe6013cb58c926dc685385501ea42f94015d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1098a2cbb7efa9d60b103afb7a8f46db4e04857a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333011"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>在自定义任务中添加对调试的支持
   使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎可以通过断点在执行过程中将包、任务和其他类型的容器挂起。 通过断点可以检查和纠正那些导致应用程序或任务不能正常运行的错误。 断点体系结构使客户端能够在任务处理被挂起的同时在定义的执行点评估包中对象的运行时值。  

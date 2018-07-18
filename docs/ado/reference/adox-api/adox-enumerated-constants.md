@@ -2,7 +2,6 @@
 title: ADOX 枚举常量 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba95b08ddaa4a75a8243f6830b0f9ce9637d819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a862168ffd8be5d7490a7151813bb6c1272f6d86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284776"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
 若要帮助调试，ADOX 枚举常量，请列出每个常量的值。 但是，此值是纯粹是参考性的并且可以将不同的 ADOX 版本更改为另一个。 你的代码应仅依赖于的名称，而不是实际值的枚举常数。  
@@ -41,6 +41,6 @@ ms.lasthandoff: 05/03/2018
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定应时遵循的规则**密钥**被删除。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|指定索引列的排序顺序。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538987"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>获取和并行数据仓库的配置加载服务器
 本文介绍如何获取和将加载服务器配置为非设备 Windows 系统用于提交数据加载到并行数据仓库 (PDW)。  

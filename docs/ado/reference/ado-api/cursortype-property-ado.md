@@ -2,7 +2,6 @@
 title: 游标类型属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83302f195c18aee51f0f7fb4c5bfe2d59ae4e882
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e516d185e1d143033003cd82d11273f2908ad12c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277356"
 ---
 # <a name="cursortype-property-ado"></a>游标类型属性 (ADO)
 指示在中使用的游标类型[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值。 默认值是**adOpenForwardOnly**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**游标类型**属性指定的一种打开时应使用的游标**记录集**对象。  
   
  仅设置**adOpenStatic**如果，则支持[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。 如果设置不支持的值，则不会产生错误;最近支持**游标类型**将改为使用。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [游标类型、 LockType，以及 EditMode 属性示例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [游标类型、 LockType 和 EditMode 属性示例 （VC + +）](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

@@ -1,32 +1,23 @@
 ---
 title: 比较运算符 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- comparison operators [MDX]
-ms.assetid: 4a4bbc76-c6a2-4b19-ae75-6ac3ac14df01
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c5e012b9b9cea96957488b99bc29797ffcbddbbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 31c73e25042df50fba9c1702e7834565c0284fbd
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740896"
 ---
 # <a name="comparison-operators"></a>比较运算符
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   可以对标量数据使用比较运算符。 可以在任何多维表达式 (MDX) 表达式中使用比较运算符。  
   
@@ -45,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |[<（小于）](../mdx/less-than-mdx.md)|对于非空的参数，如果左边的参数值小于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
 |[<=（小于或等于）](../mdx/less-than-or-equal-to-mdx.md)|对于非空的参数，如果左边的参数值小于或等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62ba6104590ae2be0589ad95d417192894335adb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 907d63953ec1f8c527910de63b0ddddbd84fb773
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400709"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 源提取数据
   若要添加并配置 OLE DB 源，包必须已包含至少一个数据流任务。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”**中将 OLE DB 源拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”** 中将 OLE DB 源拖动到设计图面。  
   
 4.  双击此 OLE DB 源。  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **表名变量或视图名变量** 在 OLE DB 连接管理器连接到的数据库中，选择包含表名称或视图名称的用户定义变量。  
   
-    -   **SQL 命令** 键入 SQL 命令或单击 **“生成查询”** ，以使用 **“查询生成器”**编写 SQL 命令。  
+    -   **SQL 命令** 键入 SQL 命令或单击 **“生成查询”** ，以使用 **“查询生成器”** 编写 SQL 命令。  
   
         > [!NOTE]  
         >  此命令可以包含参数。 有关详细信息，请参阅 [将查询参数映射到数据流组件中的变量](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

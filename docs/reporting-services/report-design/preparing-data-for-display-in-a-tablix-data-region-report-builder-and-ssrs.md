@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023964"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>准备要在 Tablix 数据区域中显示的数据（报表生成器和 SSRS）
   Tablix 数据区域显示来自数据集的数据。 您可以查看从数据集中检索的所有数据，也可以创建筛选器以便仅查看数据子集。 还可以添加条件表达式，以便填充 Null 值或修改对数据集的查询，使其包括定义现有列的排序顺序的列。  

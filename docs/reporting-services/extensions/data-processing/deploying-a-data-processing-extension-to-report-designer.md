@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017024"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>向报表设计器部署数据处理扩展插件
   报表设计器在您设计报表时使用数据处理扩展插件检索和处理数据。 您应将数据处理扩展插件程序集作为专用程序集部署到报表设计器。 还需要在报表设计器配置文件 RSReportDesigner.config 中生成一个条目。  

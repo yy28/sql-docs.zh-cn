@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c20133364867cd111dfca6f2ea1e22bfbe26673a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 924461377eb5745f5df22eee77eec0121e1e5df1
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310596"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  启动 Microsoft SQL Server Management Studio。  
   
-2.  在 Microsoft SQL Server Management Studio 中，依次展开您的 SQL Server 实例、 **“安全性”**和 **“登录名”**。  
+2.  在 Microsoft SQL Server Management Studio 中，依次展开您的 SQL Server 实例、 **“安全性”** 和 **“登录名”**。  
   
 3.  右键单击某一 SQL 登录名，然后单击 **“属性”**。  
   

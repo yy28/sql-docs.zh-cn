@@ -2,7 +2,6 @@
 title: 事务处理 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b809f42f86646cff682127a6ce3836ab6ffaf095
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 216e6a7764ae02c38c21d65d2153b86739f46ce7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272926"
 ---
 # <a name="transaction-processing"></a>事务处理
 A*事务*分隔的开头和末尾的数据访问操作通过连接执行一系列。 受制于您的数据源的事务功能**连接**对象还允许你创建和管理事务。 例如，使用 Microsoft OLE DB Provider for SQL Server 访问 Microsoft SQL Server 上的数据库，你可以创建多个嵌套的事务执行的命令。  

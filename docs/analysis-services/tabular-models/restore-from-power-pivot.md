@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34041921"
 ---
 # <a name="restore-from-power-pivot"></a>从 Power Pivot 还原
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/10/2018
   
 2.  在“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”对话框中“还原源”的“备份文件”中，单击“浏览”，然后选择要从其中还原的 .abf 或 .xslx 文件。  
   
-3.  在 **“还原目标”**中的“ **还原数据库”**中，键入新数据库或现有数据库的名称。 如果不指定名称，则使用工作簿的名称。  
+3.  在 **“还原目标”** 中的“ **还原数据库”** 中，键入新数据库或现有数据库的名称。 如果不指定名称，则使用工作簿的名称。  
   
-4.  在 **“存储位置”**中，单击 **“浏览”**，然后选择数据库的存储位置。  
+4.  在 **“存储位置”** 中，单击 **“浏览”**，然后选择数据库的存储位置。  
   
-5.  在 **“选项”**中，选中 **“包括安全信息”** 。 在从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿还原时，此设置不适用。  
+5.  在 **“选项”** 中，选中 **“包括安全信息”** 。 在从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿还原时，此设置不适用。  
   
 ## <a name="see-also"></a>另请参阅  
  [表格模型数据库](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   

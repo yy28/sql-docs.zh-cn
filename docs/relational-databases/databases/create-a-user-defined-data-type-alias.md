@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931292"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/03/2018
     |20 – 28|13|  
     |29 – 38|17|  
   
-     对于 **nchar** 和 **nvarchar** 数据类型，存储值始终是 **“长度”**中值的两倍。  
+     对于 **nchar** 和 **nvarchar** 数据类型，存储值始终是 **“长度”** 中值的两倍。  
   
      不会显示 **nvarchar(max)**、**varchar(max)** 或 **varbinary(max)** 数据类型的存储。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  在 **“数据类型”** 框中，选择新数据类型别名所基于的数据类型。  
   
-5.  如果该数据类型适用，请填写 **“长度”**框、 **“精度”**框和 **“小数位数”** 框。  
+5.  如果该数据类型适用，请填写 **“长度”** 框、 **“精度”** 框和 **“小数位数”** 框。  
   
 6.  如果新数据类型别名允许 Null 值，请选中 **“允许 NULL”** 。  
   

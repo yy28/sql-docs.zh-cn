@@ -2,10 +2,10 @@
 title: 错误接口中的信息 |Microsoft 文档
 description: 错误接口中的信息
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
+ms.component: oledb|ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f9f6573916c890e7ae904f8a4b5dabed5ece62db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 514b2328fce0f400315be4d21539f766f8715890
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666137"
 ---
 # <a name="information-in-error-interfaces"></a>错误接口中的信息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序报告的 OLE DB 定义的错误接口中的某些错误和状态信息**IErrorInfo**， **IErrorRecords**，和**ISQLErrorInfo**。  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |成员函数|Description|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|使用有关错误的基本信息填充 ERRORINFO 结构。 ERRORINFO 结构包含标识错误的 HRESULT 返回值的成员、访问接口和该错误适用的接口。|  
-|**GetCustomErrorObject**|在接口上返回的引用**ISQLErrorInfo，**和[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。|  
+|**GetCustomErrorObject**|在接口上返回的引用**ISQLErrorInfo，** 和[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。|  
 |**GetErrorInfo**|在返回的引用**IErrorInfo**接口。|  
 |**GetErrorParameters**|SQL Server 的 OLE DB 驱动程序不会返回使用者通过参数**GetErrorParameters**。|  
 |**GetRecordCount**|可用错误记录的计数。|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 |*pbstrSQLState*|返回错误的 SQLSTATE 值。 SQLSTATE 值在 SQL-92、ODBC 和 ISO SQL 以及 API 规范中定义。 既不[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]也用于 SQL Server 的 OLE DB 驱动程序定义特定于实现的 SQLSTATE 值。|  
 |*plNativeError*|返回[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]错误号**master.dbo.sysmessages**时可用。 初始化用于 SQL Server 数据源的 OLE DB 驱动程序是成功的尝试后提供本机错误。 之前尝试，SQL Server 的 OLE DB 驱动程序将始终返回零。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  
   
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028124"
 ---
 # <a name="configure-the-web-portal"></a>配置 Web 门户
 
@@ -90,7 +91,7 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 4. 选择“站点设置”。 
 
-5. 在 **“常规”** 选项卡上的 **“名称”**中，将 **SQL Server Reporting Services** 替换为其他名称。
+5. 在 **“常规”** 选项卡上的 **“名称”** 中，将 **SQL Server Reporting Services** 替换为其他名称。
 
 6. 选择“应用” 。
 

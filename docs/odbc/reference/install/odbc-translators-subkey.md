@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915092"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 转换器子项
 ODBC 转换器子项下的值列表的已安装的转换器。 下表中显示这些值的格式。  

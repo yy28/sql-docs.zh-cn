@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024274"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/10/2018
   
 -   级别成员  
   
- 选择目标对象类型后，请在 **“目标对象”**下面选择指定类型的多维数据集对象。  
+ 选择目标对象类型后，请在 **“目标对象”** 下面选择指定类型的多维数据集对象。  
   
  **条件(可选)**  
  指定其结果为布尔值的可选“多维表达式 (MDX)”表达式。 如果值是 **True**，则对指定目标执行操作。 如果值是 **False**，则不执行操作。  

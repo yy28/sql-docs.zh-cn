@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924342"
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
  默认值为 2。  
   
  **保持期单位**  
- 指定“保持期”值的单位。 可以选择 **“天”**、 **“小时”**或 **“分钟”**。 默认值为 **“天”**。  
+ 指定“保持期”值的单位。 可以选择 **“天”**、 **“小时”** 或 **“分钟”**。 默认值为 **“天”**。  
   
  最短保持期为 1 分钟。 不存在最长保持期。  
   

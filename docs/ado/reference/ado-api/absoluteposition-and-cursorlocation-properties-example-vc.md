@@ -2,7 +2,6 @@
 title: AbsolutePosition 和 CursorLocation 属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 043b3d527ebf7d9dc81cb3ac43915b523789fcfe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dafee71e3b5fd70116260ad542a80085aaa845b7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275126"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition 和 CursorLocation 属性示例 （VC + +）
 此示例演示如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性可以跟踪枚举的所有记录的循环的进度[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**通过将光标设置为客户端游标的属性。  
@@ -261,7 +261,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [CursorLocation 属性 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

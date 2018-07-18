@@ -2,7 +2,6 @@
 title: ADOX 代码示例 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 909d9ed0345204a3a6247a05cc6a2f280b049a6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92319091f81fa94ed6be22479b598e2d31e658d8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284686"
 ---
 # <a name="adox-code-examples"></a>ADOX 代码示例
 使用下面的代码示例以了解如何使用 ADOX 对象、 方法、 属性和事件。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Microsoft Visual C++ 中的 ADOX 代码示例](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录 ActiveConnection 属性示例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [列和表追加方法名称的属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [命令和 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   

@@ -2,7 +2,6 @@
 title: 计数属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1046d3e75b29dec55bfcc3bc1acfbcdbe94dbb64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277256"
 ---
 # <a name="count-property-example-vb"></a>计数属性示例 (VB)
 此示例演示[计数](../../../ado/reference/ado-api/count-property-ado.md)具有两个集合中属性***员工***数据库。 属性获取的每个集合中的对象数，并设置枚举这些集合的循环的上限。 另一种方法而无需使用枚举这些集合**计数**属性是使用`For Each...Next`语句。  
@@ -100,5 +100,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Count 属性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

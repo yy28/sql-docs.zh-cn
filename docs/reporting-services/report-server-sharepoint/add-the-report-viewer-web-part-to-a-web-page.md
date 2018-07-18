@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025164"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>将报表查看器 Web 部件添加到网页
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 
 1.  打开或创建 Web 部件页或仪表板。  
   
-2.  在 **“站点操作”**菜单上，单击 **“编辑页面”**。  
+2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”**。  
   
 3.  单击“添加 Web 部件”。  
   

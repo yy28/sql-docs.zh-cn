@@ -1,6 +1,6 @@
 ---
 title: 属性 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b564d11696999ec2dbd778d15a3e881cab415259
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c29d9b29078d6097b512acb93ff47eef018592c8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581129"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742696"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回一个包含成员属性值的字符串，或返回一个强类型值。  
   

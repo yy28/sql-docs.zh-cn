@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914182"
 ---
 # <a name="sql-data-types"></a>SQL 数据类型
 每个 DBMS 定义其自己的 SQL 类型。 每个 ODBC 驱动程序公开仅关联的 DBMS 定义这些 SQL 数据类型。 有关如何将驱动程序映射信息 DBMS SQL 类型到 ODBC 定义的 SQL 类型标识符和驱动程序将 DBMS SQL 类型映射到其自己的特定于驱动程序的 SQL 类型标识符如何通过调用返回**SQLGetTypeInfo**。 驱动程序也会返回 SQL 数据类型变为描述列和通过对的调用的参数的数据类型时**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  

@@ -2,7 +2,6 @@
 title: Open 方法 （ADO 记录） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432f2a821bd276efd46f61497f4ef7ae95502bf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa486265426f52dfd5986c6d173bcd1ffdb45210
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280506"
 ---
 # <a name="open-method-ado-record"></a>Open 方法 （ADO 记录）
 打开现有[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，或创建新项由**记录**，如文件或目录。  
@@ -39,27 +39,27 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parameters  
  *数据源*  
- 選擇性。 A **Variant**可能表示该实体的 URL，以表示由此**记录**对象，**命令**，打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或另一个**记录**对象，包含一个 SQL SELECT 语句或表名称的字符串。  
+ 可选。 A **Variant**可能表示该实体的 URL，以表示由此**记录**对象，**命令**，打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或另一个**记录**对象，包含一个 SQL SELECT 语句或表名称的字符串。  
   
  *ActiveConnection*  
- 選擇性。 A **Variant**表示连接字符串或打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
+ 可选。 A **Variant**表示连接字符串或打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
  *模式*  
- 選擇性。 A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值，该值指定所产生的访问模式**记录**对象。 默认值是**adModeUnknown**。  
+ 可选。 A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)值，该值指定所产生的访问模式**记录**对象。 默认值是**adModeUnknown**。  
   
  *CreateOptions*  
- 選擇性。 A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)值，该值指定是否应打开一个现有文件或目录，或应创建新文件或目录。 默认值是**adFailIfNotExists**。 如果设置为默认值，访问模式获取从[模式](../../../ado/reference/ado-api/mode-property-ado.md)属性。 忽略此参数时*源*参数不包含 URL。  
+ 可选。 A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)值，该值指定是否应打开一个现有文件或目录，或应创建新文件或目录。 默认值是**adFailIfNotExists**。 如果设置为默认值，访问模式获取从[模式](../../../ado/reference/ado-api/mode-property-ado.md)属性。 忽略此参数时*源*参数不包含 URL。  
   
- *Options*  
- 選擇性。 A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)值，该值指定用于打开选项**记录**。 默认值是**adOpenRecordUnspecified**。 可以组合这些值。  
+ *选项*  
+ 可选。 A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)值，该值指定用于打开选项**记录**。 默认值是**adOpenRecordUnspecified**。 可以组合这些值。  
   
  *UserName*  
- 選擇性。 A**字符串**包含它是必需的如果授予访问权限的用户 ID 值*源*。  
+ 可选。 A**字符串**包含它是必需的如果授予访问权限的用户 ID 值*源*。  
   
  *密码*  
- 選擇性。 A**字符串**值，该值包含的密码是必需的如果将验证是否*用户名*。  
+ 可选。 A**字符串**值，该值包含的密码是必需的如果将验证是否*用户名*。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *源*可能是：  
   
 -   一个 URL。 如果 URL 的协议为 http 时，将默认情况下调用 Internet 提供商。 如果 URL 指向包含一个可执行的脚本的节点 (如。ASP 页面），**记录**包含而不是已执行的源内容会默认打开。 使用*选项*自变量来修改此行为。  
@@ -80,7 +80,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="applies-to"></a>适用范围  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Open 方法 （ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 方法 （ADO 流）](../../../ado/reference/ado-api/open-method-ado-stream.md)   

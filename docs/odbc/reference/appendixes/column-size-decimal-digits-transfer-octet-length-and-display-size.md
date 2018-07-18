@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907762"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列大小、 十进制数，再传输八位字节长度和显示大小-ODBC
 数据类型的特征是其列 （或参数） 的大小、 小数位数、 长度、 和显示大小。 以下的 ODBC 函数返回数据源上的这些属性中的 SQL 语句的参数或 SQL 数据类型。 每个 ODBC 函数返回一组不同的这些属性，如下所示：  

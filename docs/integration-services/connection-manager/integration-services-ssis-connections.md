@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6ece524c8ee7565b692902b5f8d1e7dbcbd5db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333541"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="package-level-and-project-level-connection-managers"></a>包级别和项目级别连接管理器
 可以在包级别或项目级别创建连接管理器。 在项目级别创建的连接管理器对项目中的所有包可用。 而在包级别创建的连接管理器对该特定包可用。  
   
- 您使用在项目级别创建的连接管理器来替代数据源将连接共享到源。 要添加项目级别的连接管理器， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目必须使用项目部署模型。 将一个项目配置为使用此模型时， **“连接管理器”** 文件夹显示在 **“解决方案资源管理器”**中，而 **“数据源”** 文件夹则从 **“解决方案资源管理器”**中删除。  
+ 您使用在项目级别创建的连接管理器来替代数据源将连接共享到源。 要添加项目级别的连接管理器， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目必须使用项目部署模型。 将一个项目配置为使用此模型时， **“连接管理器”** 文件夹显示在 **“解决方案资源管理器”** 中，而 **“数据源”** 文件夹则从 **“解决方案资源管理器”** 中删除。  
   
 > [!NOTE]  
 >  如果您要使用包中的数据源，需要将项目转换为包部署模型。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="built-in-connection-managers"></a>内置连接管理器  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器类型。  
   
-|类型|Description|主题|  
+|类型|描述|主题|  
 |----------|-----------------|-----------|  
 |ADO|连接到 ActiveX 数据对象 (ADO) 对象。|[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|使用 .NET 提供程序连接到数据源。|[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  下表中列出的连接管理器只能用于 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]。  
   
-|类型|Description|主题|  
+|类型|描述|主题|  
 |----------|-----------------|-----------|  
 |ORACLE|连接到 Oracle \<版本信息\> 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](http://go.microsoft.com/fwlink/?LinkId=262016)。|  
@@ -225,7 +224,7 @@ ms.lasthandoff: 05/03/2018
     |[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
-     您添加的连接管理器将显示在 **“解决方案资源管理器”** 中的 **“连接管理器”**节点下。 它还将显示在项目中所有包的 **“SSIS 设计器”** 窗口的 **“连接管理器”** 选项卡中。 此选项卡中的连接管理器名称具有 **(project)** 前缀，以便将此项目级别的连接管理器与包级别的连接管理器区别开来。  
+     您添加的连接管理器将显示在 **“解决方案资源管理器”** 中的 **“连接管理器”** 节点下。 它还将显示在项目中所有包的 **“SSIS 设计器”** 窗口的 **“连接管理器”** 选项卡中。 此选项卡中的连接管理器名称具有 **(project)** 前缀，以便将此项目级别的连接管理器与包级别的连接管理器区别开来。  
   
 4.  或者，在“解决方案资源管理器”窗口中的“连接管理器”节点下或在“SSIS 设计器”窗口的“连接管理器”选项卡中，右键单击连接管理器，再单击“重命名”，然后修改连接管理器的默认名称。  
   

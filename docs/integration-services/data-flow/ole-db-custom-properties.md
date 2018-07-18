@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9060dfbc8a5dfd7732bdd29c6bec37c5a877069
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b8600b4edf5c9d81467d9ea9b8dfedfdce99466
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401499"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自定义属性
   **源自定义属性**  
@@ -29,9 +28,9 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍 OLE DB 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用来访问数据库的模式。 可能的值包括： **“打开行集”**、 **“从变量打开行集”**、 **“SQL 命令”**和 **“变量中的 SQL 命令”**。 默认值为 **“打开行集”**。|  
+|AccessMode|Integer|用来访问数据库的模式。 可能的值包括： **“打开行集”**、 **“从变量打开行集”**、 **“SQL 命令”** 和 **“变量中的 SQL 命令”**。 默认值为 **“打开行集”**。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 **DefaultCodePage** 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 **False**。|  
 |CommandTimeout|Integer|命令超时之前的秒数。如果值为 0，则表示无限期超时。<br /><br /> 注意：此属性未在 **OLE DB 源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的代码页。|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  此处列出的 FastLoad 选项（FastLoadKeepIdentity、FastLoadKeepNulls 和 FastLoadOptions）对应于由 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) 实现的 **IRowsetFastLoad** 接口公开的具有相似名称的属性。 有关详细信息，请在 MSDN 库中搜索 IRowsetFastLoad。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> <br /><br /> **OpenRowset** (0) - 需要提供表或视图的名称。<br /><br /> **OpenRowset from Variable** (1) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **OpenRowset Using Fastload** (3) - 需要提供表或视图的名称。<br /><br /> **OpenRowset Using Fastload from Variable** (4) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **SQL 命令** (2) - 需要提供 SQL 语句。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 **DefaultCodePage** 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 **False**。|  

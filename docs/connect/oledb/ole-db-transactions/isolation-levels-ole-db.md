@@ -2,10 +2,10 @@
 title: 隔离级别 (OLE DB) |Microsoft 文档
 description: 隔离级别 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 55cc5c0db959ce21a5a4b3ae60d83c2f42a56a09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b015a27fccfdad7b9f20bdac16a3a587f0c026a5
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690010"
 ---
 # <a name="isolation-levels-ole-db"></a>隔离级别 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 若要控制事务隔离级别，OLE DB 驱动程序的 SQL Server 使用者使用：  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了快照隔离级别。 有关详细信息，请参阅[使用快照隔离](../../oledb/features/working-with-snapshot-isolation.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [事务](../../oledb/ole-db-transactions/transactions.md)  
+## <a name="see-also"></a>请参阅  
+ [中的](../../oledb/ole-db-transactions/transactions.md)  
   
   

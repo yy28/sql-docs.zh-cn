@@ -1,5 +1,5 @@
 ---
-title: sys.server_permissions (TRANSACT-SQL) |Microsoft 文档
+title: sys.server_permissions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 16200de0c63979912b893fa84e7b36cf93a4ec62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038868"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |**grantor_principal_id**|**int**|这些权限的授权者的服务器主体 ID。|  
 |**类型**|**char(4)**|服务器权限类型。 有关权限类型的列表，请参阅下一个表。|  
 |**permission_name**|**nvarchar(128)**|权限名称。|  
-|**状态**|**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
+|State|**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
 |**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |权限类型|权限名称|适用于安全对象|  
@@ -101,7 +102,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [安全对象](../../relational-databases/security/securables.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

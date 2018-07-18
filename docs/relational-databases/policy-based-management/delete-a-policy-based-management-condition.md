@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32953282"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>删除基于策略的管理条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-delete-a-condition"></a>删除条件  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要删除的条件的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要删除的条件的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   

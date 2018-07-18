@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023404"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
   呈现报表之后，为防止行和列标签滚动出视野之外，可以冻结行或列标题。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
   
-2.  在 **“常规”** 选项卡上的 **“行标题”** 或 **“列标题”**下选择 **“滚动时标题应保持可见”**。  
+2.  在 **“常规”** 选项卡上的 **“行标题”** 或 **“列标题”** 下选择 **“滚动时标题应保持可见”**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

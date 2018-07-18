@@ -1,5 +1,5 @@
 ---
-title: 类型元素 (DimensionAttribute) (ASSL) |Microsoft 文档
+title: Type 元素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,10 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971449"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 元素 (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|*Regular*|  
+|默认值|*正则*|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -43,12 +44,12 @@ ms.lasthandoff: 05/10/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  此元素的值限定为下表中列出的字符串之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*帐户*|该属性表示帐户的名称。|  
 |*AccountNumber*|该属性表示帐户的编号。|  
@@ -67,13 +68,13 @@ ms.lasthandoff: 05/10/2018
 |*AddressStreet*|该属性表示地址中的街道名。|  
 |*AddressZip*|该属性表示地址中的邮政编码。|  
 |*BOMResource*|该属性表示物料清单 (BOM) 的资源。|  
-|*Caption*|该属性表示标题。|  
+|*标题*|该属性表示标题。|  
 |*CaptionAbbreviation*|该属性表示缩写。|  
 |*CaptionDescription*|该属性表示说明。|  
 |*Channel*|该属性表示渠道。|  
-|*City*|该属性表示市。|  
+|*城市*|该属性表示市。|  
 |*公司*|该属性表示公司。|  
-|*洲*|该属性表示洲。|  
+|*属于一个大洲*|该属性表示洲。|  
 |*国家/地区*|该属性表示国家(地区)。|  
 |*国家/地区*|该属性表示县。|  
 |*CurrencyDestination*|该属性表示外币兑换的目标货币。|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/10/2018
 |*CurrencySource*|该属性表示外币兑换中的源货币。|  
 |*CustomerGroup*|该属性表示客户组。|  
 |*CustomerHousehold*|该属性表示全体客户。|  
-|*Customers*|该属性表示客户。|  
+|*客户*|该属性表示客户。|  
 |*日期*|该属性表示日期。|  
 |*DateCanceled*|该属性表示取消日期。|  
 |*DateDuration*|该属性表示持续时间。|  
@@ -90,11 +91,11 @@ ms.lasthandoff: 05/10/2018
 |*DateModified*|该属性表示修改日期。|  
 |*DateStart*|该属性表示开始日期。|  
 |*DayOfHalfYears*|该属性表示每半年的第几天。|  
-|*dayOfMonth*|该属性表示每月的第几天。|  
+|*DayOfMonth*|该属性表示每月的第几天。|  
 |*DayOfQuarter*|该属性表示每个季度的第几天。|  
 |*DayOfTrimester*|该属性表示每四个月的第几天。|  
-|*dayOfWeek*|该属性表示每周的第几天。|  
-|*dayOfYear*|该属性表示每年的第几天。|  
+|*DayOfWeek*|该属性表示每周的第几天。|  
+|*DayOfYear*|该属性表示每年的第几天。|  
 |*天*|该属性表示日。|  
 |*DaysOfTenDays*|该属性表示每十天的第几天。|  
 |*FiscalDay*|该属性表示会计日历中的日。|  
@@ -106,14 +107,14 @@ ms.lasthandoff: 05/10/2018
 |*FiscalDayOfYear*|该属性表示会计日历中每年的第几天。|  
 |*FiscalHalfYears*|该属性表示会计日历中的半年。|  
 |*FiscalHalfYearsOfYear*|该属性表示会计日历中每年的第几个半年。|  
-|*财月*|该属性表示会计日历中的月。|  
+|*会计月份*|该属性表示会计日历中的月。|  
 |*FiscalMonthOfHalfYears*|该属性表示会计日历中每半年的第几个月。|  
 |*FiscalMonthOfQuarter*|该属性表示会计日历中每个季度的第几个月。|  
 |*FiscalMonthOfTrimester*|该属性表示会计日历中每四个月的第几个月。|  
 |*FiscalMonthOfYear*|该属性表示会计日历中每年的第几个月。|  
 |*FiscalQuarter*|该属性表示会计日历中的季度。|  
 |*FiscalQuarterOfHalfYear*|该属性表示会计日历中每半年的第几个季度。|  
-|*Fiscalquarterofyear 等*|该属性表示会计日历中每年的第几个季度。|  
+|*FiscalQuarterOfYear*|该属性表示会计日历中每年的第几个季度。|  
 |*FiscalTrimester*|该属性表示会计日历中的四个月。|  
 |*FiscalTrimesterOfYear*|该属性表示会计日历中每年的第几个四个月。|  
 |*FiscalWeek*|该属性表示会计日历中的周。|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 05/10/2018
 |*ISO8601Week*|该属性表示 ISO 8601 日历中的周。|  
 |*ISO8601WeekOfYear*|该属性表示 ISO 8601 日历中每年的第几周。|  
 |*ISO8601Year*|该属性表示 ISO 8601 日历中的年。|  
-|*IsWeekDay*|该属性指示某个日期是否为正常的工作日（周一至周五）。|  
+|*Isweekday*|该属性指示某个日期是否为正常的工作日（周一至周五）。|  
 |*IsWorkingDay*|该属性指示某个日期是否为工作日（可包含周末）。|  
 |*ManufacturingDay*|该属性表示生产日历中的日。|  
 |*ManufacturingDayOfHalfYears*|该属性表示生产日历中每半年的第几天。|  
@@ -183,8 +184,8 @@ ms.lasthandoff: 05/10/2018
 |*MonthOfQuarter*|该属性表示每个季度的第几个月。|  
 |*MonthOfTrimester*|该属性表示每四个月的第几个月。|  
 |*MonthOfYear*|该属性表示每一年的第几个月。|  
-|*月*|该属性表示月。|  
-|*organizationalUnit*|该属性表示部门。|  
+|*几个月*|该属性表示月。|  
+|*OrganizationalUnit*|该属性表示部门。|  
 |*OrgTitle*|该属性表示单位名称。|  
 |*PercentOwnership*|该属性表示所有权百分比。|  
 |*PercentVoteRight*|该属性表示投票权百分比。|  
@@ -203,8 +204,8 @@ ms.lasthandoff: 05/10/2018
 |*PhysicalVolume*|该属性表示体积。|  
 |*PhysicalWeight*|该属性表示重量。|  
 |*PhysicalWidth*|该属性表示宽度。|  
-|*点*|该属性表示点。|  
-|*PostalCode*|该属性表示邮政编码。|  
+|*Point*|该属性表示点。|  
+|*邮政编码*|该属性表示邮政编码。|  
 |*Product*|该属性表示产品。|  
 |*ProductBrand*|该属性表示产品品牌。|  
 |*ProductCategory*|该属性表示产品类别。|  
@@ -215,17 +216,17 @@ ms.lasthandoff: 05/10/2018
 |*ProjectEnddate*|该属性表示项目的结束日期。|  
 |*项目名称*|该属性表示项目名称。|  
 |*ProjectStartDate*|该属性表示项目的开始日期。|  
-|*Promotion*|该属性表示促销。|  
+|*升级*|该属性表示促销。|  
 |*QtyRangeHigh*|该属性表示数量范围的上限。|  
 |*QtyRangeLow*|该属性表示数量范围的下限。|  
-|*Quantitative*|该属性表示定量属性。|  
+|*定量*|该属性表示定量属性。|  
 |*QuarterOfHalfYear*|该属性表示每半年的第几个季度。|  
 |*QuarterOfYear*|该属性表示每一年的第几个季度。|  
 |*季度*|该属性表示季度。|  
 |*速率*|该属性表示汇率。|  
 |*RateType*|该属性表示汇率类型。|  
 |地区|该属性表示客户定义的区域。|  
-|*Regular*|该属性表示常规属性。|  
+|*正则*|该属性表示常规属性。|  
 |*RelationToParent*|该属性表示与父级的关系。|  
 |*ReportingDay*|该属性表示报表日历中的日。|  
 |*ReportingDayOfHalfYears*|该属性表示报表日历中每半年的第几天。|  
@@ -282,13 +283,13 @@ ms.lasthandoff: 05/10/2018
 |*周*|该属性表示周。|  
 |*年*|该属性表示年。|  
   
- 对应于的允许值为枚举**类型**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.AttributeType>。  
+ 与允许的值相对应的枚举**类型**在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.AttributeType>。  
   
- 对应于的父元素**类型**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 父级对应的元素**类型**在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
-## <a name="see-also"></a>另请参阅  
- [属性元素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [维度元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>请参阅  
+ [Attributes 元素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [维度元素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [属性&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

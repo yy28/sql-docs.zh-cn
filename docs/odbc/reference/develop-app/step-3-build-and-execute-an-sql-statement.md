@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915502"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>步骤 3： 生成并执行的 SQL 语句
 第三步是生成和执行 SQL 语句，如下面的插图中所示。 用于执行此步骤的方法很可能有很大差异。 应用程序可能会提示用户输入的 SQL 语句，生成基于用户输入的 SQL 语句或使用硬编码的 SQL 语句。 有关详细信息，请参阅[构造 SQL 语句](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  

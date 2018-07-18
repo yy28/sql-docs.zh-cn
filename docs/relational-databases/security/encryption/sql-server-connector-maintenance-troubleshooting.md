@@ -3,26 +3,24 @@ title: SQL Server 连接器维护与故障排除 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: a8f4b4a73139a698d481b65e1ebe93b524e2d863
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9735b7d12bf8042436c6b554e6bb3c32fd5083b3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695828"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +40,14 @@ ms.lasthandoff: 05/03/2018
   
  对于 TDE，可按如下所述实现此目的：  
   
--   **在 PowerShell 中：**在密钥保管库中创建一个新的非对称密钥（使用与当前的 TDE 非对称密钥不同的名称）。  
+-   **在 PowerShell 中：** 在密钥保管库中创建一个新的非对称密钥（使用与当前的 TDE 非对称密钥不同的名称）。  
   
     ```powershell  
     Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或 sqlcmd.exe：**使用如第 3 部分的步骤 3 中所示的以下语句。  
+-   **使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或 sqlcmd.exe：** 使用如第 3 部分的步骤 3 中所示的以下语句。  
   
      导入新的非对称密钥。  
   
@@ -207,7 +205,7 @@ SQL Server 连接器需要哪些终结点的访问权限？ 该连接器与两�
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的错误代码说明  
  **提供程序错误代码：**  
   
-错误代码  |符号  |Description    
+错误代码  |符号  |描述    
 ---------|---------|---------  
 0 | scp_err_Success | 操作已成功执行。    
 @shouldalert | scp_err_Failure | 操作失败。    

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921492"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>在现有文件上还原文件和文件组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>在现有文件上还原文件和文件组  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
 2.  右键单击所需数据库，指向“任务”，再指向“还原”，然后单击“文件和文件组”。  
   
@@ -94,8 +95,8 @@ ms.lasthandoff: 05/03/2018
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”**或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”**或 **“事务日志”**。|  
+    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  

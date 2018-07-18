@@ -1,7 +1,7 @@
 ---
 title: 查询处理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842900"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可处理对各种数据存储体系结构（例如，本地表、已分区表和分布在多个服务器上的表）执行的查询。 下面的主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何处理查询并通过执行计划缓存来优化查询重用。
 
+## <a name="execution-modes"></a>执行模式
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可使用两种不同的处理模式处理 SQL 语句：
+- 行模式执行
+- 批模式执行
+
+### <a name="row-mode-execution"></a>行模式执行
+行模式执行是一种与传统 RDMBS 表一起使用的查询处理方法，其中数据以行格式存储。 当执行查询并且查询访问行存储表中的数据时，执行树运算符和子运算符会读取表格架构中指定的所有列中的每个所需行。 然后，从读取的每行开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检索结果集所需的列，即 SELECT 语句、JOIN 谓词或筛选谓词所引用的列。
+
+> [!NOTE]
+> 对于 OLTP 方案，行模式执行效率非常高，但在扫描大量数据时效率较低，例如数据仓库方案。
+
+### <a name="batch-mode-execution"></a>批模式执行  
+批模式执行是一种查询处理方法，用于统一处理多个行（因此采用“批”一词）。 批中的每列都作为一个矢量存储在单独的内存区域中，因此批模式处理是基于矢量的。 批模式处理还使用一些算法，这些算法针对多核 CPU 和新式硬件上的内存吞吐量增加进行了优化。      
+
+批模式执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批模式处理在可能的情况下会对压缩数据运行，并消除了行模式执行所用的[交换运算符](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)。 结果是并行性更佳和性能更快。    
+
+当在批模式下执行查询并且查询访问列存储索引中的数据时，执行树运算符和子运算符会一次读取列段中的多行。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仅读取结果所需的列，即 SELECT 语句、JOIN 谓词或筛选谓词引用的列。    
+有关列存储索引的详细信息，请参阅[列存储索引体系结构](../relational-databases/sql-server-index-design-guide.md#columnstore_index)。  
+
+> [!NOTE]
+> 批模式执行是非常高效的数据仓库方案，可读取和聚合大量数据。
+
 ## <a name="sql-statement-processing"></a>SQL 语句处理
+处理单个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行 SQL 语句的最基本方法。 用于处理只引用本地基表（不引用视图或远程表）的单个 `SELECT` 语句的步骤说明了这个基本过程。
 
-处理单个 SQL 语句是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行 SQL 语句的最基本方法。 用于处理只引用本地基表（不引用视图或远程表）的单个 `SELECT` 语句的步骤说明了这个基本过程。
-
-#### <a name="logical-operator-precedence"></a>逻辑运算符的优先顺序
+### <a name="logical-operator-precedence"></a>逻辑运算符的优先顺序
 
 当一个语句中使用了多个逻辑运算符时，计算顺序依次为：`NOT`、`AND`最后是 `OR`。 算术运算符和位运算符优先于逻辑运算符处理。 有关详细信息，请参阅[运算符优先级](../t-sql/language-elements/operator-precedence-transact-sql.md)。
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>优化 SELECT 语句
+### <a name="optimizing-select-statements"></a>优化 SELECT 语句
 
 `SELECT` 语句是非程序性的，它不规定数据库服务器应用于检索请求数据的确切步骤。 这意味着数据库服务器必须分析语句，以决定提取所请求数据的最有效方法。 这被称为“优化 `SELECT` 语句”。 处理此过程的组件称为“查询优化器”。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或直接称为“计划”。 本主题的后续各节将详细介绍查询计划的内容。
 
@@ -104,7 +128,7 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器很重要，因为它可以使数据库服务器针对数据库内的更改情况进行动态调整，而无需程序员或数据库管理员输入。 这样程序员可以集中精力描述最终的查询结果。 他们可以相信每次运行语句时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器总能针对数据库的状态生成一个有效的执行计划。
 
-#### <a name="processing-a-select-statement"></a>处理 SELECT 语句
+### <a name="processing-a-select-statement"></a>处理 SELECT 语句
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 处理单个 SELECT 语句的基本步骤包括如下内容： 
 
@@ -114,7 +138,7 @@ GO
 4. 关系引擎开始执行计划。 在处理需要基表中数据的步骤时，关系引擎请求存储引擎向上传递从关系引擎请求的行集中的数据。
 5. 关系引擎将存储引擎返回的数据处理成为结果集定义的格式，然后将结果集返回客户端。
 
-#### <a name="processing-other-statements"></a>处理其他语句
+### <a name="processing-other-statements"></a>处理其他语句
 
 上述处理 `SELECT` 语句的基本步骤也适用于其他 SQL 语句，例如 `INSERT`、 `UPDATE`和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT 语句，该语句提供要更新或插入的数据值。
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 显示计划功能显示关系引擎为这两个 `SELECT` 语句生成相同的执行计划。
 
-#### <a name="using-hints-with-views"></a>使用视图提示
+### <a name="using-hints-with-views"></a>使用视图提示
 
 放置在查询中的视图的提示可能会在视图扩展为访问其基表时与其他提示冲突。 发生这种情况时，查询将返回错误。 例如，请考虑下列视图，它们的定义中包含有表提示：
 

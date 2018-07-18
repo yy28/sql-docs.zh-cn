@@ -2,10 +2,10 @@
 title: 提取具有 IRow 的单一行 |Microsoft 文档
 description: 提取单个行使用用于 SQL Server 的 OLE DB 驱动程序的 IRow 接口
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5046360a21e3036851ee42423f1bb2ceb7083602
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21123e4d9918216f9b23ca2c7304bdcb1be2b0c7
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690040"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>使用 IRow 提取单行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRow**接口实现 OLE DB 驱动程序中的，为 SQL Server 简化以提高性能。 **IRow**允许直接访问的单个行对象的列。 如果您事先知道命令执行的结果将生成恰好一个行， **IRow**将检索该行的列。 如果结果集中包括多个行， **IRow**将公开仅第一行。  
   
@@ -39,11 +42,11 @@ ms.lasthandoff: 05/03/2018
   
  若要获取行对象使用**ICommand::Execute**方法，必须传递 IID_IRow。 **IMultipleResults**必须使用接口来处理多个结果集。 **IMultipleResults**支持**IRow**和**IRowset**。 **IRowset**用于大容量操作。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [使用 IRow::GetColumns](../../oledb/ole-db-rowsets/using-irow-getcolumns.md)   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [行集](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

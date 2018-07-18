@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022064"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>内置集合 - 内置的全局和用户引用（报表生成器）
   内置字段集合包含 **Globals** 和 **User** 集合，表示处理报表时由 Reporting Services 提供的全局值。 **Globals** 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 **User** 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  

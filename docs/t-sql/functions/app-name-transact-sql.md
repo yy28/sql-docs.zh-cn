@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,22 +22,23 @@ helpviewer_keywords:
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46e34f32e26c847abb4ad30b1bc41aabd0c10f28
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785868"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-一个函数，返回当前会话的应用程序名称（如果应用程序设置了该名称值）。
+此函数返回当前会话的应用程序名称（如果应用程序设置了该名称值）。
   
 > [!IMPORTANT]  
->  客户端提供了应用程序名称，且未通过任何方式验证应用程序名称值。 请不要使用 APP_NAME 作为安全检查的一部分。  
+>  客户端提供了应用程序名称，且 `APP_NAME` 未通过任何方式验证应用程序名称值。 请不要使用 `APP_NAME` 作为安全检查的一部分。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +53,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-使用 APP_NAME 可区分不同的应用程序，这可作为对这些应用程序执行不同操作的一种方式。 例如，APP_NAME 可以区分不同的应用程序，允许每个应用程序使用不同的日期格式。 它还可允许向特定应用程序返回信息性消息。
+使用 `APP_NAME` 可区分不同的应用程序，这可作为对这些应用程序执行不同操作的一种方式。 例如，`APP_NAME` 可以区分不同的应用程序，允许每个应用程序使用不同的日期格式。 它还可允许向特定应用程序返回信息性消息。
   
 要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中设置应用程序名称，请单击“连接到数据库引擎”对话框中的“选项”。 在“其他连接参数”选项卡上，提供 app 属性，格式为 `;app='application_name'`
   
 ## <a name="example"></a>示例  
-此示例检查了初始化该进程的客户端应用程序是否是一个 `SQL Server Management Studio` 会话，并且提供 US 或 ANSI 格式的日期。
+此示例检查启动此进程的客户端应用程序是否为 `SQL Server Management Studio` 会话。 然后，它提供 US 或 ANSI 格式的日期值。
   
 ```sql
 USE AdventureWorks2012;  

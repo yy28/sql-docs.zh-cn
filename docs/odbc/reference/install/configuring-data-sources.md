@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914702"
 ---
 # <a name="configuring-data-sources"></a>配置数据源
 有关数据源信息存储在系统注册表中。 用户修改通过管理计划的数据源信息。 这可以是 ODBC 管理器、 ODBC 控制面板设备或由应用程序或驱动程序的开发人员编写的管理程序。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245118"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**名称**|**sysname**|逻辑文件名称。|  
-|**fileid**|**int**|文件的数字标识符。 如果不返回*名称*指定*。*|  
+|**fileid**|**int**|文件的数字标识符。 如果不返回*名称*指定 *。*|  
 |**filename**|**nchar(260)**|物理文件名。|  
 |**filegroup**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件是一个日志文件。 它决不是文件组的一部分。|  
 |size|**nvarchar(15)**|文件大小 (KB)。|  

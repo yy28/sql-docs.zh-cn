@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900824"
 ---
 # <a name="procedure-invocation"></a>过程调用
 过程使用 Microsoft Access 驱动程序时，可以通过使用从驱动程序进行调用**SQLExecDirect**或**SQLPrepare**函数具有以下语法: {调用*过程名称* [(*参数*[，*参数*]...)]}。 请注意，作为参数调用的过程不支持表达式。  

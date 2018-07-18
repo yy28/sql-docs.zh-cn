@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906292"
 ---
 # <a name="scalar-function-escape-sequence"></a>标量函数转义序列
 ODBC 标量函数使用转义序列。 此转义序列的语法如下所示：  

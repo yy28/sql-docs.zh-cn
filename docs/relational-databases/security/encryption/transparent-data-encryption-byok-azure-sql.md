@@ -12,17 +12,17 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
-ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698328"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +140,7 @@ ms.lasthandoff: 05/03/2018
 - 选择逻辑服务器 TDE 窗格，并用于每个逻辑 SQL Server：  
    - 在相同区域中选择 AKV 
    - 选择密钥用作 TDE 保护程序 - 每个服务器都将使用该 TDE 保护程序的本地副本。 
-   - 在门户中执行此操作将为逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限）创建 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，请勿删除此标识符。  可通过删除 Azure Key Vault 中的权限来撤销访问权限。 对于逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限）。
+   - 在门户中执行此操作将为逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限）创建 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，请勿删除此标识符。 而对于逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限），可通过删除 Azure Key Vault 中的权限来撤销访问。
 - 创建主数据库。 
 - 请按照[活动异地复制指南](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)完成方案，此步骤将创建辅助数据库。
 

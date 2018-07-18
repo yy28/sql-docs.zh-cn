@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c334671fb9afaa4596688658e6beadbf8c9e6cc8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34563855"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297433"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,6 +35,36 @@ SQL Server 2017
 ## <a name="setup-and-configuration-issues"></a>安装和配置问题
 
 进程和与初始设置和配置相关的常见问题的说明，请参阅[升级和安装常见问题解答](r/upgrade-and-installation-faq-sql-server-r-services.md)。 它包含有关升级、 通过并行安装和安装新的 R 或 Python 组件的信息。
+
+### <a name="r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>R 脚本的运行时错误 （SQL Server 自 2017 年 CU5 CU7 倒退）
+
+对于 SQL Server 2017 中累积更新 5 到 7，没有中的回归**rlauncher.config**其中的临时目录文件路径包含空格的文件。 此回归是在 CU8 中更正。
+
+运行 R 脚本时将看到此错误包含以下消息：
+
+> *无法与 'R' 脚本的运行时进行通信。请检查 'R' 运行时的要求。*
+>
+> 来自外部脚本的 STDERR 消息： 
+>
+> *错误： 无法创建 R_TempDir*
+
+**解决方法**
+
+它可用时，请应用 CU8。 或者，你可以重新创建**rlauncher.config**通过运行**registerrext**上提升的命令提示符卸载/安装。 
+
+```text
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /install /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+```
+
+下面示例演示具有默认实例"MSSQL14 命令。MSSQLSERVER"安装到"C:\Program Files\Microsoft SQL Server\":
+
+```text
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /uninstall /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /install /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+```
 
 ### <a name="unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>无法在域控制器上安装 SQL Server 机器学习功能
 
@@ -167,7 +197,7 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 
 **适用于：** SQL Server 2016 R Services，Enterprise Edition
 
-## <a name="r-issues"></a>R 问题
+## <a name="r-script-execution-issues"></a>R 脚本执行问题
 
 本部分包含特定于 SQL Server 上运行 R 的已知的问题，以及一些与 R 库和工具是 Microsoft，包括 RevoScaleR 发布的相关的问题。
 
@@ -371,7 +401,7 @@ R --max-ppsize=500000
 
 有序系数被视为与所有 RevoScaleR 分析函数（ `rxDTree`除外）中的系数相同。
 
-## <a name="python-code-execution-or-python-package-issues"></a>Python 代码执行，或者 Python 包问题
+## <a name="python-script-execution-issues"></a>Python 脚本执行问题
 
 本部分包含特定于 SQL Server，以及与 Microsoft，发布的 Python 包相关的问题上运行 Python 的已知的问题包括[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)和[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 

@@ -1,5 +1,5 @@
 ---
-title: sp_addrolemember (TRANSACT-SQL) |Microsoft 文档
+title: sp_addrolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 147547c7392acaf528b7aef98c88affb8487fe99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032335"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,14 +65,14 @@ sp_addrolemember 'role', 'security_account'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 sp_addrolemember 添加到角色中的成员会继承该角色的权限。 如果新成员是没有对应数据库用户的 Windows 级主体，则会创建数据库用户，但数据库用户可能不会完全映射到登录名。 始终应检查登录名是否存在以及是否能访问数据库。  
   
  角色不能将自身包含为成员。 即使只有一个或多个中间成员身份间接体现这种成员关系，这种“循环”定义也无效。  
   
- sp_addrolemember 无法向角色添加固定的数据库角色、 固定的服务器角色或 dbo。 sp_addrolemember 不能在用户定义的事务内执行。  
+ sp_addrolemember 不能向角色添加固定的数据库角色、 固定的服务器角色或 dbo。 不能在用户定义的事务中执行 sp_addrolemember。  
   
- 只能使用 sp_addrolemember 将向数据库角色添加成员。 若要将成员添加到服务器角色，使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
+ 只能使用 sp_addrolemember 将向数据库角色添加成员。 若要将成员添加到服务器角色，请使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  为灵活的数据库角色添加成员需要满足以下条件之一：  
@@ -80,14 +81,14 @@ sp_addrolemember 'role', 'security_account'
   
 -   具有拥有该角色的角色的成员身份。  
   
--   **ALTER ANY ROLE**权限或**ALTER**在角色上的权限。  
+-   **ALTER ANY ROLE**权限或**ALTER**对角色的权限。  
   
  向固定数据库角色添加成员要求具有 db_owner 固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-adding-a-windows-login"></a>A. 添加 Windows 登录名  
- 下面的示例添加的 Windows 登录名`Contoso\Mary5`到`AdventureWorks2012`数据库作为用户`Mary5`。 用户 `Mary5` 随即被添加到 `Production` 角色中。  
+ 下面的示例添加的 Windows 登录名`Contoso\Mary5`到`AdventureWorks2012`数据库用户作为`Mary5`。 用户 `Mary5` 随即被添加到 `Production` 角色中。  
   
 > [!NOTE]  
 >  因为 `Contoso\Mary5` 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中被识别为数据库用户 `Mary5`，所以必须指定用户名 `Mary5`。 如果没有 `Contoso\Mary5` 登录名存在，语句将失败。 请通过使用您的域中的登录名进行测试。  
@@ -109,10 +110,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 添加 Windows 登录名  
- 下面的示例添加登录名`LoginMary`到`AdventureWorks2008R2`数据库作为用户`UserMary`。 用户 `UserMary` 随即被添加到 `Production` 角色中。  
+ 以下示例将添加登录名`LoginMary`到`AdventureWorks2008R2`数据库用户作为`UserMary`。 用户 `UserMary` 随即被添加到 `Production` 角色中。  
   
 > [!NOTE]  
->  因为该登录名`LoginMary`数据库用户称为`UserMary`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库，用户名称`UserMary`必须指定。 如果没有 `Mary5` 登录名存在，语句将失败。 登录名和用户通常具有相同的名称。 此示例使用不同的名称来区分影响与用户的登录名的操作。  
+>  因为该登录名`LoginMary`被识别为数据库用户`UserMary`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库，用户名称`UserMary`必须指定。 如果没有 `Mary5` 登录名存在，语句将失败。 登录名和用户通常具有相同的名称。 此示例使用不同的名称来区分这些操作会影响与用户的登录名。  
   
 ```  
 -- Uses AdventureWorks  
@@ -129,10 +130,10 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)  

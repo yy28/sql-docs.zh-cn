@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e47280ea121780890bf027578c29c69420211af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 792014313d846e0c25fd9280da7529006e3c5b0d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35327771"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   合并联接转换提供了一个输出，该输出是通过使用 FULL、LEFT 或 INNER 联接将两个已排序数据集进行联接而生成的。 例如，可使用 LEFT 联接来联接包含产品信息的表与列出产品的制造国家/地区的表。 结果是一个列出所有产品及其产地国家/地区的表。  

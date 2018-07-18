@@ -2,7 +2,6 @@
 title: 项属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -50,11 +49,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94826364231c295986d762361d6b946cba7e0b8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279246"
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
 按名称或序号指示集合的特定成员。  
@@ -72,7 +72,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant**表达式计算结果为名称或集合中对象的序号。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**项**属性集合中返回特定对象。 如果**项**在对应的集合中找不到对象*索引*自变量，就会出错。 此外，某些集合不支持命名的对象;对于这些集合中，你必须使用序号引用。  
   
  **项**属性是所有集合的默认属性; 因此，以下语法窗体是可互换：  
@@ -94,6 +94,6 @@ collection (Index)
 |[属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [项的属性示例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 属性示例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

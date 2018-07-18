@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43d77d15fb417d201e07d389d00df0be7aad145
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 646c2baeb42bbfc122455bd9c5981f0399d781b8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407099"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
-3.  在 **“SAP BW 源编辑器”**中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
+3.  在 **“SAP BW 源编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
 ## <a name="static-options"></a>静态选项  
   
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **执行模式**  
  指定从源提取数据的方法。  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |**P - 触发进程链**|触发进程链。 此情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包会启动提取进程。|  
 |**W - 等待通知**|等待 SAP Netweaver BW 系统发出开始提取数据的通知。 此情况下，SAP Netweaver BW 系统会启动提取进程。|  
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  **“预览”** 选项位于 SAP BW 源编辑器的 **“连接管理器”** 页，实际用来提取数据。 如果您已配置 SAP Netweaver BW 只提取自从上次提取后发生更改的数据，则选择 **“预览”** 将从下次数据提取中排除已经预览过的数据。  
   
- 单击 **“预览”**的同时还会打开 **“请求日志”** 对话框。 您可使用此对话框查看向 SAP Netweaver BW 系统提出样本数据请求的过程中记录的事件。 有关详细信息，请参阅 [Request Log](../../integration-services/data-flow/request-log.md)。  
+ 单击 **“预览”** 的同时还会打开 **“请求日志”** 对话框。 您可使用此对话框查看向 SAP Netweaver BW 系统提出样本数据请求的过程中记录的事件。 有关详细信息，请参阅 [Request Log](../../integration-services/data-flow/request-log.md)。  
   
 ## <a name="execution-mode-dynamic-options"></a>执行模式动态选项  
   

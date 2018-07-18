@@ -1,38 +1,23 @@
 ---
 title: 创建 SET 语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SET
-- CREATE SET
-- CREATE_SET
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- named sets [MDX]
-- CREATE SET statement
-ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4155067b6415ea8d2113bcf9f75cbb026dd117d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741686"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 数据定义-创建设置
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   为当前多维数据集创建具有会话作用域的命名集。  
   
@@ -62,7 +47,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  定义集属性值的有效标量表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  命名集是为重用而创建的维度成员集（或者是用于定义集的表达式）。 例如，使用命名集可以定义由销售额排在前十名的商店组成的维度成员集。 此组可以静态方式，或通过所示的函数定义[TopCount](../mdx/topcount-mdx.md)。 此命名集然后使用任何所需的一套前 10 个存储位置。  
   
  CREATE SET 语句创建命名的集，仍可在整个会话，并因此，可在多个查询在会话中。 有关详细信息，请参阅[Creating Session-Scoped 计算成员&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
@@ -108,14 +93,14 @@ SELECT [Core Products] ON 0
  指定该集对查询多维数据集的用户不可见。  
   
 ## <a name="standard-properties"></a>标准属性  
- 每个集都有一组默认属性。 当客户端应用程序连接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，默认属性为受支持，或可用于支持，如管理员将选择。  
+ 每个集都有一组默认属性。 当客户端应用程序连接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，默认属性为受支持，或可用于支持，如管理员将选择。  
   
 |属性标识符|含义|  
 |-------------------------|-------------|  
 |CAPTION|客户端应用程序用作集标题的字符串。|  
 |DISPLAY_FOLDER|标识客户端应用程序用来显示集的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠 (\\) 是级别的分隔符。 若要为已定义的集提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [拖放 SET 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

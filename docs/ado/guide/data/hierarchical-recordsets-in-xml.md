@@ -2,7 +2,6 @@
 title: 在 XML 中的分层记录集 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64be59db3e65386eaaa267e954f63d0cf063e146
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272056"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>在 XML 中的分层记录集
 ADO 允许持久性的分层记录集对象转换为 XML。 与层次结构的记录集对象中父记录集的值是字段的另一个记录集。 此类字段将呈现为 XML 流，而不是属性的子元素。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下面的示例演示这种情况下：  
   
 ```  
@@ -128,5 +128,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   如果子记录具有到多个父记录的引用，然后在重新打开记录集，子记录集可能包含重复的记录。 但是，这些重复项只能是如果用户可直接与基础的子行集可见。 如果某章节用于导航子记录集 （这是在 ADO 中导航的唯一方法），则重复项不可见。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

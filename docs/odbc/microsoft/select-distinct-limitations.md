@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901482"
 ---
 # <a name="select-distinct-limitations"></a>选择不同的限制
 DISTINCT 关键字不适用于二进制数据。

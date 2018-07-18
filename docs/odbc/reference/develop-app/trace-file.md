@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915262"
 ---
 # <a name="trace-file"></a>跟踪文件
 应用程序指定的跟踪文件通过设置**TraceFile**关键字在 Odbc.ini 注册表项中或通过调用**SQLSetConnectAttr**与 SQL_ATTR_TRACEFILE 连接属性。 如果启用跟踪时，该文件不存在，则驱动程序管理器将创建文件。 每个应用程序应具有其自己的专用的跟踪文件，若要避免争用。 应用程序可以使用多个跟踪文件;应用程序的安装程序可以向用户提供一种跟踪文件。 如果动态启用了跟踪，应用程序还可以显示跟踪结果，而不是日志记录到跟踪文件。  

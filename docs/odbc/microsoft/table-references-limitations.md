@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905754"
 ---
 # <a name="table-references-limitations"></a>表引用限制
 16 表引用最多可以包含在任何查询语句。

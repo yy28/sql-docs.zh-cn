@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,12 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d05dadf16e96589c2f16b7d31580cab61650b9e6
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e3b376d9fb4333489bf841f04cfb2d429803c6f3
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34563915"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309676"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -88,7 +87,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 有关写入和读取大量信息的备用策略，请参阅[SQL 语句的批处理](../../odbc/reference/develop-app/batches-of-sql-statements.md)和[大容量插入](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-有关详细信息，请参阅 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
 以下示例将准备和执行语句。 语句执行后 (请参阅[sqlsrv_execute](../../connect/php/sqlsrv-execute.md))，更新中的字段*Sales.SalesOrderDetail* AdventureWorks 数据库表。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  

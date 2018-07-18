@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036244"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
 本教程将使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 中的向导，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中创建条形图。 然后添加筛选器，并优化图表。 

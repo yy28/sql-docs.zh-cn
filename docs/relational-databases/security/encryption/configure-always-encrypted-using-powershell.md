@@ -3,23 +3,22 @@ title: 使用 PowerShell 配置 Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
-ms.prod_service: security, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f5fce37c6ab5bf10a5678397bd60e1f059ccaf02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b665fb4704f9b49fab8c3c326a55006d8fdceba7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289593"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,7 +125,7 @@ $database | Get-SqlColumnMasterKey
 
 以下 PowerShell cmdlet 可供 Always Encrypted 使用：
 
-|CMDLET |Description
+|CMDLET |描述
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |执行 Azure 身份验证，获取身份验证令牌。
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |为数据库中的现有列加密密钥对象添加新的加密值。

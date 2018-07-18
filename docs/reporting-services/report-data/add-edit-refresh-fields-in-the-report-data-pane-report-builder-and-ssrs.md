@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019274"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）
   数据集字段是在对外部数据源运行数据集查询时返回的表示数据的字段名称的内置集合。  

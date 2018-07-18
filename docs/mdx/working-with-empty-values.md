@@ -1,6 +1,6 @@
 ---
 title: 使用空值 |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1018c741ff545a88a90a6e27196cfc18d6f8177a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581949"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743976"
 ---
 # <a name="working-with-empty-values"></a>使用空值
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   空值表明特定成员、元组或单元是空的。 空单元值指明在基础事实表中找不到指定单元的数据，或者指定单元的元组代表不适用于多维数据集的成员组合。  
   

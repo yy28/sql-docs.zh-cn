@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028674"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
 阅读有关用于分页报表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 呈现扩展插件的信息，以便可确定报表的外观按所需方式呈现，包括页面布局、分页符和纸张大小。 

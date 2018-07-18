@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34382ce333db1d7dda8e72b4a7eeb6a2b8196e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c70f744427da1b6e7d10ce061bcd3640ca86cfa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408909"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>数值、字符串和布尔型文字
  表达式可以包含数值、字符串和布尔文字。 表达式计算器支持多种数值，例如整数、小数和浮点常量。 表达式计算器还支持数值中包含科学记数法和指定表达式计算器如何处理值的 long 和 float 后缀。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了数值的后缀。  
   
-|Suffix|Description|  
+|Suffix|描述|  
 |------------|-----------------|  
 |L 或 l|长整型数值。|  
 |U 或 u|无符号数值。|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  下表列出了数值表达式元素及其正则表达式。  
   
-|表达式元素|正则表达式|Description|  
+|表达式元素|正则表达式|描述|  
 |------------------------|------------------------|-----------------|  
 |表示为 D 的数字。|[0-9]|任何数字。|  
 |表示为 E 的科学记数法。|[Ee][+-]?{D}+|大写 E 或小写 e，+ 或 - 可选，D 根据自身的定义可以为一位数或多位数。|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了使用正则表达式语言的有效数值。  
   
-|正则表达式|Description|  
+|正则表达式|描述|  
 |------------------------|-----------------|  
 |{D}+{IS}|一个整型数值，具有至少一个数字 (D)，还可以包含长整型和/或无符号后缀 (IS)。  示例：457、785u、986L 和 7945ul。|  
 |{D}+{E}{FS}|一个非整型数值，具有至少一个数字 (D)、科学计数法和 long 或 float 后缀。  示例：4E8l、13e-2f 和 5E+L。|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
  字符串中可包括需要转义序列的其他字符。 下表列出了字符串文字的转义序列。  
   
-|转义序列|Description|  
+|转义序列|描述|  
 |---------------------|-----------------|  
 |\a|警报|  
 |\b|退格键|  

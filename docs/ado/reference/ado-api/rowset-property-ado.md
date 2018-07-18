@@ -2,7 +2,6 @@
 title: 行集属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9e5310f52345537b5062e8bb497589ceb61da9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c28d9b4398c0ef17067117ee392ff52aeef5e8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281286"
 ---
 # <a name="rowset-property-ado"></a>行集属性 (ADO)
 获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。 当你使用 put_Rowset 时，行集转换 ADO**记录集**对象。  

@@ -2,7 +2,6 @@
 title: 必需的提供程序数据成型 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 049f635c9566a72bb84a7cef18aa62b80746c21b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d53ea24bdd91950754de626683f013d1cb7301a2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272896"
 ---
 # <a name="required-providers-for-data-shaping"></a>所需的提供程序，供你调整数据
 数据成型通常需要两个提供程序。 服务提供商[用于 OLE DB 数据调整服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，提供调整功能和数据提供程序，如 OLE DB Provider for SQL Server 的数据，提供要填充形状的数据行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -41,7 +41,7 @@ cnn.Provider = "MSDataShape"
 cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
  [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

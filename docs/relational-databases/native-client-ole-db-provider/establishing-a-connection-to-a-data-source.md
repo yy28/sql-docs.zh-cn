@@ -1,13 +1,12 @@
 ---
-title: 建立与数据源的连接 |Microsoft 文档
+title: 建立与数据源的连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-provider
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,28 +16,28 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5e8cb2a3d78fabb44f661b3b16883377464bc99c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c11867c12a05656c74fa01ebc05a7a805bdac71
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425966"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立与数据源的连接
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，使用者必须首先创建数据源对象的实例调用**CoCreateInstance**方法。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，类标识符是 CLSID_SQLNCLI10。 你还可以使用符号将解析为的 SQLNCLI_CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序中引用使用。  
+  访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口使用者必须首先创建数据源对象的实例调用**CoCreateInstance**方法。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口，类标识符为 CLSID_SQLNCLI10。 此外可以使用符号 SQLNCLI_CLSID 将解析为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您引用的 sqlncli.h 中使用的 Native Client OLE DB 提供程序。  
   
- 数据源对象公开**IDBProperties**接口，使用者使用提供基本身份验证信息，如服务器名称、 数据库名称、 用户 ID 和密码。 **IDBProperties::SetProperties**调用方法来设置这些属性。  
+ 数据源对象公开**IDBProperties**接口，使用者使用来提供基本身份验证信息，例如服务器名称、 数据库名称、 用户 ID 和密码。 **Idbproperties:: Setproperties**调用方法来设置这些属性。  
   
  如果计算机上运行了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，应以“服务器名称\示例名称”的形式指定服务器名称。  
   
- 数据源对象还公开**IDBInitialize**接口。 设置了属性后，通过调用建立到数据源的连接**idbinitialize:: Initialize**方法。 例如：  
+ 数据源对象还公开**IDBInitialize**接口。 设置的属性后，通过调用来建立与数据源连接**idbinitialize:: Initialize**方法。 例如：  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -48,7 +47,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- 此调用**CoCreateInstance**创建 CLSID_SQLNCLI10 与关联的类的单个对象 （CSLID 相关联的数据和将用于创建对象的代码）。 IID_IDBInitialize 是对接口的标识符的引用 (**IDBInitialize**) 以用于通信的对象。  
+ 此调用**CoCreateInstance**创建与 CLSID_SQLNCLI10 相关联的类的单个对象 （CSLID 相关联的数据和将用于创建对象的代码）。 IID_IDBInitialize 是对接口的标识符的引用 (**IDBInitialize**) 用于与对象进行通信。  
   
  以下是一个函数示例，该函数初始化并建立与数据源的连接。  
   
@@ -110,7 +109,7 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 SQL Server Native Client OLE DB 提供程序应用程序](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

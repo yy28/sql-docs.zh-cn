@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32937432"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
      PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
-    >  您可以从 **“扩展事件”**下的任意节点启动 PowerShell。 例如，你可以右键单击“会话”，然后单击“启动 PowerShell”。 这将在下一级别（即“会话”文件夹）启动 PowerShell。  
+    >  您可以从 **“扩展事件”** 下的任意节点启动 PowerShell。 例如，你可以右键单击“会话”，然后单击“启动 PowerShell”。 这将在下一级别（即“会话”文件夹）启动 PowerShell。  
   
  您可以浏览 XEvent 文件夹树以查看现有的扩展事件会话及其关联的事件、目标和谓词。 例如，在 PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*> 路径下，如果你键入 **cd sessions**，按“Enter”，键入 **dir**，然后按“Enter”，则会看到该实例上存储的会话列表。 您还可以查看会话是否正在运行（如果正在运行，那么可以查看运行了多长时间），以及会话是否配置为在实例启动时启动。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5191250a1113be8bd5a613325aaceb31b176abce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b61c469ddf764ab2db6d7c56a23d0d87ef7a563
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312236"
 ---
 # <a name="register-mirrored-database"></a>注册镜像数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  该网格包含以下列：  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**注册**|检查您要注册的每个数据库。 如果正在监视数据库，则该数据库的复选框会被选中且禁用。<br /><br /> 注意：若要撤消注册某一数据库，请关闭“已注册镜像数据库”对话框，在导航树中选择该数据库，并从“操作”菜单中选择“撤消注册”。|  
 |**“数据库”**|选定服务器实例上的镜像数据库名称。|  

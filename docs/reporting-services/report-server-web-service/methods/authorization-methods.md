@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025194"
 ---
 # <a name="authorization-methods"></a>授权方法
   可以使用这些方法管理报表服务器上的任务、角色和策略。  

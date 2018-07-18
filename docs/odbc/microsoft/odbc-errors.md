@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899882"
 ---
 # <a name="odbc-errors"></a>ODBC 错误
 当发生错误时，Microsoft ODBC 桌面数据库驱动程序返回的本机错误号、 SQLSTATE （ODBC 错误代码） 和一条错误消息。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57d4e31b133ed4b7f55ee2a89089b956aedc9930
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52e05ac0ddc2f32a8131d2630cd82f8b92c52f07
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328341"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第三个任务（即最后一个任务）是准备查询变更数据和添加数据流任务。  
@@ -64,13 +63,13 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  此过程假定包从一个表中执行增量加载。 如果包从多个表加载并且具有包含多个子包的父包，则将该任务作为第一个组件添加到各子包中。 有关详细信息，请参阅 [执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
-2.  在 **“脚本任务编辑器”**中的 **“脚本”** 页上，选择以下选项：  
+2.  在 **“脚本任务编辑器”** 中的 **“脚本”** 页上，选择以下选项：  
   
     1.  对于 **ReadOnlyVariables**，从列表中选择 **User::DataReady**、 **User::ExtractStartTime**和 **User::ExtractEndTime** 。  
   
     2.  对于 **ReadWriteVariables**，从列表中选择 User::SqlDataQuery。  
   
-3.  在 **“脚本任务编辑器”**的 **“脚本”** 页上，单击 **“编辑脚本”** 以打开脚本开发环境。  
+3.  在 **“脚本任务编辑器”** 的 **“脚本”** 页上，单击 **“编辑脚本”** 以打开脚本开发环境。  
   
 4.  在 Main 过程中，输入下面的代码段之一：  
   
@@ -140,7 +139,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  此过程假定包从一个表中执行增量加载。 如果包从多个表加载并且具有包含多个子包的父包，则将该任务作为第一个组件添加到各子包中。 有关详细信息，请参阅 [执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
-2.  在 **“执行 SQL 任务编辑器”**中的 **“常规”** 页上，选择以下选项：  
+2.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
     1.  对于 **ResultSet**，选择 **“单行”**。  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 05/03/2018
         > [!NOTE]  
         >  上述示例中的 **else** 子句通过为开始日期和时间传递 null 值来生成查询，用于变更数据的首次加载。 此示例没有涉及到一种情况：必须将启用变更数据捕获功能之前所做的变更上传到数据仓库。  
   
-3.  在 **“执行 SQL 任务编辑器”** 的 **“参数映射”**页上，进行以下映射：  
+3.  在 **“执行 SQL 任务编辑器”** 的 **“参数映射”** 页上，进行以下映射：  
   
     1.  将 DataReady 变量映射到参数 0。  
   
@@ -185,7 +184,7 @@ ms.lasthandoff: 05/03/2018
   
     3.  将 ExtractEndTime 变量映射到参数 2。  
   
-4.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”**页上，将结果名称映射到 SqlDataQuery 变量。  
+4.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”** 页上，将结果名称映射到 SqlDataQuery 变量。  
   
      该结果名称是返回的单列的名称 SqlDataQuery。  
   

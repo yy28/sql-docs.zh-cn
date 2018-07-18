@@ -1,5 +1,5 @@
 ---
-title: 什么&#39;Analysis Services 中的新增功能的 s |Microsoft 文档
+title: 什么&#39;Analysis Services 中的 s |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016084"
 ---
-# <a name="what39s-new-in-analysis-services"></a>什么&#39;s Analysis Services 中的新增功能
+# <a name="what39s-new-in-analysis-services"></a>什么&#39;Analysis Services 中
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
-SQL Server 2016 Analysis Services 包含许多提供改进的性能、 更轻松解决方案创作、 自动的数据库管理新的增强功能，与双向交叉筛选，增强的关系的并行分区处理和其他更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
+SQL Server 2016 Analysis Services 包括许多新的增强功能提供改进的性能、 更容易解决方案创作，自动执行的数据库管理，增强与双向交叉筛选，关系的并行处理分区和更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-公布于 2016 SQL PASS 大会的 Analysis Services 现已作为一项 Azure 服务在云中推出。 **Azure Analysis Services**支持 1200年或更高的兼容性级别的表格模型。 可支持 DirectQuery、分区、行级安全性、双向关系和翻译。 若要了解详细信息并免费试用，请参阅 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)。 
+公布于 2016 SQL PASS 大会的 Analysis Services 现已作为一项 Azure 服务在云中推出。 **Azure Analysis Services**支持 1200年及更高版本的兼容性级别的表格模型。 可支持 DirectQuery、分区、行级安全性、双向关系和翻译。 若要了解详细信息并免费试用，请参阅 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)。 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>SQL Server 2016 Service Pack 1 (SP1) Analysis Services 中的新增功能
 
@@ -43,7 +44,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
 虽然此版本中的大多数增强功能特定于表格模型，但对多维模型还是进行了许多改进；例如，针对 DB2 和 Oracle 等数据源的非重复计数 ROLAP 优化、Excel 2016 的钻取多重选择支持以及 Excel 查询优化。    
 
 #### <a name="get-the-latest-tools"></a>获取最新工具
-若要在此版本中充分利用所有的增强功能，请确保安装最新版本的 SSDT 和 SSMS。    
+若要在此版本中充分利用的所有增强功能，请务必安装最新版本的 SSDT 和 SSMS。    
 - [下载 SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/library/mt204009.aspx)    
 - [下载 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
@@ -158,7 +159,7 @@ refresh|处理对象。 ASSL 等效项为 PROCESS。
     
  现有应用程序不受新程序集的影响。 但是，如果出于任何原因而选择使用新 AMO 程序集来重新生成应用程序，请务必添加对 Microsoft.AnalysisServices.Core 的引用。    
     
- 同样，加载和调用 AMO 的 PowerShell 脚本现在必须加载 Microsoft.AnalysisServices.Core.dll。 请务必更新任何脚本。  
+ 同样，加载和调用 AMO 的 PowerShell 脚本现在必须加载 Microsoft.AnalysisServices.Core.dll。 务必要更新的任何脚本。  
 
 ### <a name="json-editor-for-bim-files"></a>BIM 文件的 JSON 编辑器
 Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模型的 BIM 文件。 Visual Studio 的版本决定了是要通过内置 JSON 编辑器还是简单文本以 JSON 格式呈现 BIM 文件。
@@ -196,11 +197,11 @@ Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模�
 -   性能优化包括针对 VertiPaq 和 DirectQuery 的冗余联接消除。 
 
 ### <a name="new-data-sources-for-directquery-mode"></a>用于 DirectQuery 模式的新数据源    
- 现在支持在 DirectQuery 模式下的表格 1200年模型的数据源即包括 Oracle、 Teradata 和 Microsoft 分析平台 （以前称为并行数据仓库）。    
+ 现在支持在 DirectQuery 模式下的表格 1200年模型的数据源包括 Oracle、 Teradata 和 Microsoft 分析平台 （以前称为并行数据仓库）。    
     
 若要了解详细信息，请参阅[DirectQuery 模式下](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Analysis Services 团队博客](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)    
      

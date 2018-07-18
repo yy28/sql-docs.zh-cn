@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021314"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、Reporting Services Web 门户或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  右键单击表体外部区域，然后单击“报表属性”。  
   
-2.  在 **“页面设置”**中，从 **“纸张大小”** 列表选择一个值。 每一选项都会填充 **“宽度”** 和 **“高度”** 属性。 您也可以通过在 **“宽度”** 和 **“高度”** 框中键入数值，来指定自定义大小。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  在 **“页面设置”** 中，从 **“纸张大小”** 列表选择一个值。 每一选项都会填充 **“宽度”** 和 **“高度”** 属性。 您也可以通过在 **“宽度”** 和 **“高度”** 框中键入数值，来指定自定义大小。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  大小值的默认单位由用户的区域设置决定。 若要指定其他单位，请在提供的数字值后面键入一个物理单位指示符，例如 cm、mm、pt 或 pc。  

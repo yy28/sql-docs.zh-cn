@@ -1,31 +1,20 @@
 ---
-title: PredictNodeId (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictNodeId
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictNodeId function
-ms.assetid: fb236645-ad7e-4c54-9c4c-1af47cad7ad5
-caps.latest.revision: 31
-author: Minewiskan
+title: PredictNodeId (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 02b8e6e014a7f30635acef982e8d176e7b5f18a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 5202662b1bd41671905379272b2a52ba87510ecc
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037355"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,9 +61,9 @@ FROM
 WHERE NODE_UNIQUE_NAME= '00000000100'   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

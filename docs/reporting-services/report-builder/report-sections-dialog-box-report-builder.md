@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018694"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>“报表区域”对话框（报表生成器）
   打开报表时，报表生成器会验证报表是否只包含一个报表定义语言 (RDL) \<Section> 元素。 不支持打开具有多个 \<Section> 元素的报表。  

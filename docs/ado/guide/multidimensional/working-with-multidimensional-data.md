@@ -2,7 +2,6 @@
 title: 使用多维数据 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d7b5257bf0161c4064f1f25be5c223f46787e4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22d98e754952d8140e84d18c2d35f0e56698b8cd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273576"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常不超过四个轴，通常只有两个或三个集合。 *轴*是用于查找或筛选多维数据集中的特定值的一个或多个维度中的成员集合。  
@@ -44,7 +44,7 @@ A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常�
   
 -   度量值-销售，PercentChange，BudgetedSales  
   
--   产品  
+-   Products  
   
  以下单元集的所有产品的 1991年表示销售：  
   
@@ -81,7 +81,7 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
   
  单元集、 单元格、 轴和位置都表示 ADO MD 中由相应对象：[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)，[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，和[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO （多维） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多维架构和数据概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

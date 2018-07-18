@@ -1,5 +1,5 @@
 ---
-title: sp_delete_backup_file_snapshot (TRANSACT-SQL) |Microsoft 文档
+title: sp_delete_backup_file_snapshot (TRANSACT-SQL) |Microsoft Docs
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,10 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12cb91c23c87e32d25d73f551d7aa6b76fa66288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036205"
 ---
 # <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +42,17 @@ sys.sp_delete_backup_file_snapshot
 ```  
   
 ## <a name="arguments"></a>参数  
- *[ @db_name =] database_name*  
- 包含要删除、 提供为 Unicode 字符串的快照的数据库名称。  
+ *[ @db_name =] 数据库名称*  
+ 包含要删除，作为 Unicode 字符串提供的快照的数据库的名称。  
   
  *[ @snapshot_url = ] snapshot_url*  
  若要删除，作为 Unicode 字符串提供快照的 URL。  
   
 ## <a name="permissions"></a>权限  
- 需要 ALTER ANY DATABASE 权限。  
+ 要求具有 ALTER ANY DATABASE 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [sys.fn_db_backup_file_snapshots &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sys.fn_db_backup_file_snapshots &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   
   

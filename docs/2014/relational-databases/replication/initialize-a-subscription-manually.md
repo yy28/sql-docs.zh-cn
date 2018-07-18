@@ -1,0 +1,100 @@
+---
+title: 手动初始化订阅 | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- manual subscription initialization [SQL Server replication]
+- subscriptions [SQL Server replication], initializing
+- initializing subscriptions [SQL Server replication], without snapshots
+ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
+caps.latest.revision: 36
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1ab3c97535b9d65d7a79b16fb0eeedc98bdd6a7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217047"
+---
+# <a name="initialize-a-subscription-manually"></a>手动初始化订阅
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中手动初始化订阅。 虽然初始快照通常用于初始化订阅，但如果架构和初始数据已经在订阅服务器上存在，则可以在不使用快照的情况下初始化对发布的订阅。  
+  
+##  <a name="BeforeYouBegin"></a> 开始之前  
+  
+###  <a name="Restrictions"></a> 限制和局限  
+  
+-   如果在将数据及架构复制到订阅服务器和手动初始化订阅之间的时间段内，在使用事务复制发布的数据库上进行了某活动，则此活动导致的更改可能不会复制到订阅服务器。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 可通过将架构（通常为数据）复制到订阅数据库，手动初始化对发布的订阅。 架构和数据应与发布数据库匹配。 然后在新建订阅向导的 **“初始化订阅”** 页上指定订阅不需要架构和数据。 有关访问此向导的详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md) 和 [Create a Pull Subscription](create-a-pull-subscription.md)中手动初始化订阅。  
+  
+ 首次对订阅进行同步时，复制所需的对象和元数据将复制到订阅数据库。  
+  
+#### <a name="to-initialize-a-subscription-to-a-publication-manually"></a>手动初始化对发布的订阅  
+  
+1.  确保架构和数据已复制到订阅数据库。  
+  
+2.  清除 **“初始化订阅”** 页中的 **“初始化”** 复选框。 对每个只要求复制对象和元数据的订阅执行此操作。  
+  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+ 可以使用复制存储过程手动初始化订阅。  
+  
+#### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>手动初始化对事务发布的请求订阅  
+  
+1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**和 **@subscriber**，为 **@destination_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
+  
+3.  在订阅服务器上，执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 有关更新订阅的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+  
+4.  在订阅服务器上，执行 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
+  
+5.  启动分发代理以传输复制对象，并从发布服务器下载最新更改。 有关详细信息，请参阅 [创建请求订阅](synchronize-a-pull-subscription.md)。  
+  
+#### <a name="to-manually-initialize-a-push-subscription-to-a-transactional-publication"></a>手动初始化对事务发布的推送订阅  
+  
+1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 为 **@destination_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。 有关更新订阅的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+  
+3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 有关详细信息，请参阅 [创建推送订阅](create-a-push-subscription.md)。  
+  
+4.  启动分发代理以传输复制对象，并从发布服务器下载最新更改。 有关详细信息，请参阅 [同步推送订阅](synchronize-a-push-subscription.md)。  
+  
+#### <a name="to-manually-initialize-a-pull-subscription-to-a-merge-publication"></a>手动初始化对合并发布的请求订阅  
+  
+1.  确保订阅数据库中存在架构和数据。 通过在订阅服务器上还原发布数据库的备份，即可完成此操作。  
+  
+2.  在发布服务器中，执行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 指定 **@publication**和 **@subscriber**和 **@subscriber_db**，将 **@subscription_type** 的值指定为 **@subscription_type**中手动初始化订阅。 这样便可注册请求订阅。  
+  
+3.  在订阅服务器上，对包含已发布数据的数据库执行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。  
+  
+4.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
+  
+5.  启动合并代理以传输复制对象，并从发布服务器下载最新更改。 有关详细信息，请参阅 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)。  
+  
+#### <a name="to-manually-initialize-a-push-subscription-to-a-merge-publication"></a>手动初始化对合并发布的推送订阅  
+  
+1.  确保订阅数据库中存在架构和数据。 通过在订阅服务器上还原发布数据库的备份，即可完成此操作。  
+  
+2.  在发布服务器的发布数据库中，执行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 为 **@subscriber_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。  
+  
+3.  在发布服务器的发布数据库中，执行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 有关详细信息，请参阅 [创建推送订阅](create-a-push-subscription.md)。  
+  
+4.  启动合并代理以传输复制对象，并从发布服务器下载最新更改。 有关详细信息，请参阅 [同步推送订阅](synchronize-a-push-subscription.md)。  
+  
+## <a name="see-also"></a>另请参阅  
+ [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)   
+ [备份和还原复制的数据库](administration/back-up-and-restore-replicated-databases.md)   
+ [复制安全最佳做法](security/replication-security-best-practices.md)  
+  
+  

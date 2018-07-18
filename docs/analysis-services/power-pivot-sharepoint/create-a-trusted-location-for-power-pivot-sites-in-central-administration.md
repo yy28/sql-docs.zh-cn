@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027344"
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Create a trusted location for Power Pivot sites in Central Administration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/10/2018
   
 9. 在“外部数据”中，确认“允许外部数据”设置为 **“受信任的数据连接库和嵌入连接”**。 此设置是工作簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问所必需的。  
   
-10. 还在“外部数据”中，对于“刷新时警告”，取消选中 **“启用刷新警告”**的复选框。 取消选中该复选框将允许 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库跳过例行的警告消息，而显示工作簿的预览图像。  
+10. 还在“外部数据”中，对于“刷新时警告”，取消选中 **“启用刷新警告”** 的复选框。 取消选中该复选框将允许 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库跳过例行的警告消息，而显示工作簿的预览图像。  
   
 11. 单击 **“确定”**。  
   

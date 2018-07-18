@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913152"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>选择数据源或驱动程序
 此数据源或应用程序使用的驱动程序，有时应用程序中硬编码。 例如，编写由 MIS 部门要传输到另一个数据源的数据将包含这些数据源的名称的自定义应用程序-应用程序只需将不起作用的任何其他数据源。 另一个示例是垂直的应用程序，例如另一个用于订单条目。 此类应用程序始终使用同一数据源，已由应用程序已知的预定义的架构。  

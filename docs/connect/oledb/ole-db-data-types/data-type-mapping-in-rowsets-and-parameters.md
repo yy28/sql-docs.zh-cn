@@ -2,10 +2,10 @@
 title: 行集和参数中的数据类型映射 |Microsoft 文档
 description: 行集和参数中的数据类型映射
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -25,14 +25,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4e44de3f10573d9ef892999ad933756cfa737863
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666117"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序在行集和作为参数值，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过使用以下 OLE DB 的数据定义的数据类型，在函数中报告**IColumnsInfo::GetColumnInfo**和**ICommandWithParameters::GetParameterInfo**。  
   
@@ -96,7 +99,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |SSPROP_ALLOWNATIVEVARIANT|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回，这种情况下缓冲区将保留 SSVARIANT 结构。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区将具有 VARIANT 结构。|  
   
-## <a name="see-also"></a>另请参阅  
- [数据类型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据类型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

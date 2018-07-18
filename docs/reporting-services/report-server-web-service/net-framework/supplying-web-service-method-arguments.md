@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025404"
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服务方法参数
   报表服务器 Web 服务方法通过 HTTP 上的 SOAP 向位于指定 URL 处的服务发送请求。 此服务接收请求，对其进行处理，然后返回响应。 这些请求和响应采用 XML 文档形式。  

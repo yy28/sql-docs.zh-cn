@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898802"
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY GROUP BY 的
 ORDER BY 可以对执行中的 GROUP BY 的任何表达式*表达式列表*或结果中的任何列设置。

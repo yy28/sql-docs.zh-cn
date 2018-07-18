@@ -3,8 +3,6 @@ title: 如何： 检索输出参数使用 SQLSRV 驱动程序 |Microsoft 文档
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563885"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输出参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 在流类型（例如 SQLSRV_SQLTYPE_VARCHAR('max')）用作输出参数时，将会发生数据截断。 不支持将流类型用作输出参数。 对于非流类型，数据截断会在未指定输出参数长度或输出参数的指定长度不够大时发生。  
   
-## <a name="example"></a>示例  
+## <a name="example-1"></a>示例 1
 以下示例调用可返回某个指定员工的从年初至今的销售的存储过程。 PHP 变量 *$lastName* 是输入参数，而 *$salesYTD* 是输出参数。  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 如果值超出了范围可能最终为 bigint 值时，绑定一个输出参数时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，你将需要其 SQL 字段类型指定为 SQLSRV_SQLTYPE_BIGINT。 否则，它可能会导致"超出范围的值"异常。
+> 如果值超出了范围可能最终为 bigint 类型，绑定一个输出参数时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，你将需要其 SQL 字段类型指定为 SQLSRV_SQLTYPE_BIGINT。 否则，它可能会导致"超出范围的值"异常。
 
-## <a name="example"></a>示例  
+## <a name="example-2"></a>示例 2
 此代码示例演示如何将绑定大型 bigint 值作为输出参数。  
 
 ```
@@ -154,7 +153,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [如何：使用 SQLSRV 驱动程序指定参数方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [如何：使用 SQLSRV 驱动程序检索输入和输出参数](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)

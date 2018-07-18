@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33046554"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>为 SQL Server 代理设置服务启动帐户  
   
-1.  在 **“已注册的服务器”**中，单击加号以便展开 **“数据库引擎”**。  
+1.  在 **“已注册的服务器”** 中，单击加号以便展开 **“数据库引擎”**。  
   
 2.  单击加号以便展开 **“本地服务器组”** 文件集。  
   

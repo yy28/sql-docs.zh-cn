@@ -2,7 +2,6 @@
 title: 群集属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c8fcc028770a7d2d2b0c64b1f9f0630c4679071
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 091bef85e3312507c3924d216e65e125956c4bce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285416"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 的属性示例 （VC + +）
 此示例演示[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 请注意，Microsoft Jet 数据库不支持聚集的索引，因此本示例将返回**False**为**聚集**属性中的所有索引*Northwind*数据库。  
@@ -91,6 +91,6 @@ void ClusteredX() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Clustered 的属性 (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

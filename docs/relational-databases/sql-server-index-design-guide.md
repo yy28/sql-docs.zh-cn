@@ -28,11 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812161"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -642,37 +643,33 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 - “列存储”是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。
   
-列存储索引使用列存储格式以物理方式存储大部分数据。 使用列存储格式时，数据将以列的形式压缩和解压缩。 不需要解压缩每个行中未由查询请求的其他值。 这样，便可以快速扫描大型表的整个列。 
+  列存储索引使用列存储格式以物理方式存储大部分数据。 使用列存储格式时，数据将以列的形式压缩和解压缩。 不需要解压缩每个行中未由查询请求的其他值。 这样，便可以快速扫描大型表的整个列。 
 
 - “行存储”是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据（如堆或聚集 B 树索引）的传统方法。
 
-列存储索引还使用称为增量存储的行存储格式以物理方式存储某些行。 增量存储（也称为增量行组）是数量太少，不符合压缩到列存储中的条件的行的保存位置。 每个增量行组作为聚集 B 树索引实现。 
+  列存储索引还使用称为增量存储的行存储格式以物理方式存储某些行。 增量存储（也称为增量行组）是数量太少，不符合压缩到列存储中的条件的行的保存位置。 每个增量行组作为聚集 B 树索引实现。 
 
 - 增量存储是数量太少，无法压缩到列存储中的行的保存位置。 增量存储以行存储格式存储行。 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>针对行组和列段执行操作
 
-列存储索引将行分组成可管理的单元。 其中每个单元称为行组。 为提供最佳性能，行组中的行数大到能够提高压缩率，同时又小到能够从内存中操作受益。
-
-* **行组**是列存储索引针对其执行管理和压缩操作的行的组。 
+列存储索引将行分组成可管理的单元。 其中每个单元称为一个行组。 为提供最佳性能，行组中的行数大到能够提高压缩率，同时又小到能够从内存中操作受益。
 
 例如，列存储索引针对行组执行以下操作：
 
 * 将行组压缩到列存储中。 针对行组中的每个列段执行压缩。
-* 在 ALTER INDEX REORGANIZE 操作期间合并行组。
-* 在 ALTER INDEX REBUILD 操作期间创建新行组。
+* 在 `ALTER INDEX ... REORGANIZE` 操作期间合并行组。
+* 在 `ALTER INDEX ... REBUILD` 操作期间创建新行组。
 * 在动态管理视图 (DMV) 中报告行组运行状况和碎片。
 
-增量存储由一个或多个称为增量行组的行组构成。 每个增量行组是一个聚集 B 树索引，用于存储数量太少，无法压缩到列存储中的行。  
+增量存储由一个或多个名为“增量行组”的行组构成。 每个增量行组是一个聚集 B 树索引，用于存储较小的大容量加载和插入操作，直到行组包含 1,048,576 行或者重新生成了索引。  当增量行组包含 1,048,576 行时，将被标记为已关闭，等待名为 tuple-mover 的进程将它压缩到列存储中。 
 
-* “增量行组”是一个聚集 B 树索引，用于存储较小的大容量加载和插入操作，直到行组包含 1,048,576 行或者重新生成了索引。  当增量行组包含 1,048,576 行时，将被标记为已关闭，等待称为 tuple-mover 的进程将它压缩到列存储中。 
+每个列在每个行组中都有自身的一些值。 这些值称为“列段”。 每个行组包含表中每个列的一个列段。 每个列在每个行组中有一个列段。
 
-每个列在每个行组中都有自身的一些值。 这些值称为列段。 当列存储索引压缩行组时，会单独压缩每个列段。 若要解压缩整个列，列存储索引只需解压缩每个行组中的一个列段。
-
-* **列段**是行组中列值的一部分。 每个行组包含表中每个列的一个列段。 每个列在每个行组中有一个列段。| 
-  
- ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
+当列存储索引压缩行组时，会单独压缩每个列段。 若要解压缩整个列，列存储索引只需解压缩每个行组中的一个列段。   
+
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>小规模加载和插入操作转到增量存储
 列存储索引一次至少可将 102,400 个行压缩到列存储索引中，以此提高列存储的压缩率和性能。 若要批量压缩行，列存储索引可在增量存储中累积小规模的加载和插入操作。 增量存储操作在后台处理。 若要返回正确的查询结果，聚集列存储索引将合并来自列存储和增量存储的查询结果。 
 

@@ -12,11 +12,12 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202569"
 ---
 # <a name="python-interoperability-with-sql-server"></a>与 SQL Server 的 Python 互操作性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本指南介绍了当你启用该功能会安装的 Python 组件**机器学习服务 （数据库）**和选择 Python 作为语言。
+本指南介绍了当你启用该功能会安装的 Python 组件**机器学习服务 （数据库）** 和选择 Python 作为语言。
 
 ## <a name="python-components"></a>Python 组件
 

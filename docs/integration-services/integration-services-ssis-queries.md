@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e38b45781566ac04acdfb7584f8f10ed249d44c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e3603e4eb3f446518562eec82cf33d02d0ff1fa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411659"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
   执行 SQL 任务、OLE DB 源、OLE DB 目标以及查找转换都可以使用 SQL 查询。 在执行 SQL 任务中，SQL 语句可以创建、更新和删除数据库对象与数据；运行存储过程以及执行 SELECT 语句。 在 OLE DB 源和查找转换中，SQL 语句通常为 SELECT 语句或 EXEC 语句。 后者经常用于运行可返回结果集的存储过程。  
@@ -95,7 +94,7 @@ ms.lasthandoff: 05/03/2018
  **工具栏**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制查询函数。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**显示/隐藏关系图窗格**|显示或隐藏 **“关系图”** 窗格。|  
 |**显示/隐藏网格窗格**|显示或隐藏 **“网格”** 窗格。|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **查询定义**  
  查询定义提供可用来定义和测试查询的工具栏和窗格。  
   
-|窗格|Description|  
+|窗格|描述|  
 |----------|-----------------|  
 |**“关系图”** 窗格|在关系图中显示查询。 关系图可显示查询中包含的表以及这些表的联接方式。 选中或清除表中某列旁边的复选框，即可在查询输出中添加或删除该列。<br /><br /> 当您向查询添加表时，查询生成器将根据表和表中的键在表之间创建联接。 若要添加联接，请将一个表中的字段拖到另一个表中的字段上。 若要管理联接，请右键单击该联接，再选择菜单选项。<br /><br /> 右键单击“关系图”窗格，可以添加或删除表，选择所有表，以及显示或隐藏窗格。|  
 |**“网格”** 窗格|在网格中显示查询。 使用此窗格可以在查询中添加和删除列，以及更改每个列的设置。|  

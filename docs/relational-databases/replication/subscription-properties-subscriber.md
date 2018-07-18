@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 055577c76f40d2138f74e0366032be37330775e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cec562723955e40f1c269f459d20ef0741bbd6e1
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360229"
 ---
 # <a name="subscription-properties---subscriber"></a>订阅属性 - 订阅服务器
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
  对于 **“使用 Web 同步”** ，如果选择 **True**，则请执行以下操作：  
   
--   在 **“Web 服务器地址”**中输入 IIS 服务器的完整地址。  
+-   在 **“Web 服务器地址”** 中输入 IIS 服务器的完整地址。  
   
 -   单击 **“Web 服务器连接”** 行，再单击属性按钮 (**...**)，以设置或更改订阅服务器连接到 IIS 服务器时所使用的帐户。  
   

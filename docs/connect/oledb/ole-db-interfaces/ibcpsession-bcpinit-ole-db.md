@@ -2,10 +2,10 @@
 title: IBCPSession::BCPInit (OLE DB) |Microsoft 文档
 description: IBCPSession::BCPInit (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 70fe0f402d34ab0dae13922856ada01abb2c65b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e938dc96b78fa8ffa727d566913b33f5f7a07ac8
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690320"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   初始化大容量复制结构，执行某些错误检查，验证数据和格式化文件名是否正确，然后打开文件。  
   
@@ -42,7 +45,7 @@ HRESULT BCPInit(
       int eDirection);  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **BCPInit**应该在大容量复制的任何其他方法之前调用方法。 **BCPInit**方法用于大容量复制工作站之间的数据执行必要的初始化和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  **BCPInit**方法检查数据库源或目标表，不是数据文件的结构。 该方法将基于数据库表、视图或 SELECT 结果集中的每一列为数据文件指定数据格式值。 此指定包括每一列的数据类型、数据中是否存在长度或 Null 指示符和终止符字节字符串以及固定长度的数据类型的宽度。 **BCPInit**方法设置这些值，如下所示：  
@@ -92,7 +95,7 @@ HRESULT BCPInit(
  E_INVALIDARG  
  未正确指定一个或多个参数。 例如，给定的文件名无效。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
   

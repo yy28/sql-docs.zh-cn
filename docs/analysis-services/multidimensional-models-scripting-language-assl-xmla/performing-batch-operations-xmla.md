@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024174"
 ---
 # <a name="performing-batch-operations-xmla"></a>执行批处理操作 (XMLA)
   你可以使用[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML 用于 Analysis (XMLA) 若要运行多个 XMLA 命令使用的单个 XMLA 命令[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 你可以运行多个命令中包含**批处理**是作为单个事务或在为每个命令的单个事务、 以串行或并行命令。 你还可以指定的外部绑定和其他属性**批处理**命令处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  

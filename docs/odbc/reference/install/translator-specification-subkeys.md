@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915992"
 ---
 # <a name="translator-specification-subkeys"></a>转换器规范子项
 ODBC 转换器子项中列出每个翻译人员都有自己的子项。 此子项具有相同名称，为 ODBC 转换器子项下相应的值。 此子项下的值列表转换器和转换器设置 Dll 和使用情况计数的完整的路径。 值的格式为下表中所示。  

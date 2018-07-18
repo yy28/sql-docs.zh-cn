@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026474"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
   本节包含使用 Reporting Services 配置管理器配置本机模式报表服务器实例的过程。  

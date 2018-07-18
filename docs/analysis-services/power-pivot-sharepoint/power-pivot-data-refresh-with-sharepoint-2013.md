@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024874"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 Power Pivot 数据刷新
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/10/2018
   
     1.  运行“`secpol.msc`”  
   
-    2.  依次单击 **“本地安全策略”**、 **“本地策略”**和 **“用户权限分配”**。  
+    2.  依次单击 **“本地安全策略”**、 **“本地策略”** 和 **“用户权限分配”**。  
   
     3.  添加该服务帐户。  
   
@@ -223,7 +224,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  在功能区中单击 **“连接”** 。  
   
-3.  在 **“工作簿连接”**对话框中，选择连接，然后单击 **“属性”**。  
+3.  在 **“工作簿连接”** 对话框中，选择连接，然后单击 **“属性”**。  
   
 4.  在 **“连接属性”** 对话框中，单击 **“定义”**，然后单击 **“身份验证设置…”** 按钮。  
   

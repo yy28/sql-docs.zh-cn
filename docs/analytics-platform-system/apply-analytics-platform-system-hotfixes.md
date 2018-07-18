@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544869"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>应用 Analytics Platform System 修补程序
 此文章介绍了如何将修补程序应用于分析平台系统软件。  

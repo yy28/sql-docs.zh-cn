@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909312"
 ---
 # <a name="diagnostic-records"></a>诊断记录
 与每个环境关联，连接、 语句和的描述符句柄是*诊断记录*。 这些记录包含有关使用特定的句柄的最后一个函数调用的诊断信息。 记录将替换仅当另一个函数调用时使用该句柄。 对可以在任何时候存储的诊断记录的数量没有限制。  

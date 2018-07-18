@@ -1,5 +1,5 @@
 ---
-title: 使用 Power Pivot 库 |Microsoft 文档
+title: 使用 Power Pivot 库 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d47fc300b39e0dc7d63c2699e8a05f677573ea9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980580"
 ---
 # <a name="use-power-pivot-gallery"></a>使用 Power Pivot 库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  保存该文件。  
   
-2.  1.  **Excel 2010：**在“文件”菜单中，单击“保存并发送”。  
+2.  1.  **Excel 2010：** 在“文件”菜单中，单击“保存并发送”。  
   
     2.  单击 **“保存到 SharePoint”**。  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  在“库”功能区中，单击 **“文档”**。  
   
-3.  在 **“上载文档”**中，选择某一上载选项，然后输入要上载的文件的名称和位置。 库设置决定文档的显示位置。 可能需要刷新浏览器窗口以查看最近添加的内容。  
+3.  在 **“上载文档”** 中，选择某一上载选项，然后输入要上载的文件的名称和位置。 库设置决定文档的显示位置。 可能需要刷新浏览器窗口以查看最近添加的内容。  
   
 ##  <a name="newdocs"></a> 基于已发布的 Power Pivot 工作簿创建新报表或工作簿  
  对于发布到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，可以创建更多使用已发布工作簿作为连接数据源的工作簿或 Reporting Services 报表。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 05/10/2018
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|单击“管理数据刷新”按钮创建或查看一个计划，该计划从连接的数据源中检索已更新的数据。 有关如何创建一个计划的说明，请参阅 [计划数据刷新 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)。|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|单击“管理数据刷新”按钮创建或查看一个计划，该计划从连接的数据源中检索已更新的数据。 有关如何创建一个计划的说明，请参阅 [计划数据刷新 (PowerPivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)。|  
   
 ##  <a name="delete"></a> 删除 Power Pivot 库中的工作簿或报表  
  若要从库中删除文档，请先切换到“所有文档”视图。  
@@ -158,10 +159,10 @@ ms.lasthandoff: 05/10/2018
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] “库文档”** 内容类型不是自动添加到文档库的。除非你手动启用不受支持的内容类型，否则不会遇到此问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [删除 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [创建和自定义 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [计划数据刷新 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [计划数据刷新 (Powerpivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911792"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>对游标和已准备的语句的事务的影响
 提交或回滚事务将产生以下影响游标和访问计划：  

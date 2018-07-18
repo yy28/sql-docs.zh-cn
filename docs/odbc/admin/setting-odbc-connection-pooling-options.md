@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901293"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>设置 ODBC 连接池选项
 应用程序，从无需为每种使用重新建立的连接池使用连接可以连接池。 你可以使用**连接池**选项卡**ODBC 数据源管理器**对话框中，若要启用和禁用性能监视。 双击要设置的连接超时期限的驱动程序名称。  

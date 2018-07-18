@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916102"
 ---
 # <a name="standard-programming-interface"></a>标准编程接口
 编程接口可能是标准化的最明显候选。 事实上，当开发 ODBC 时，ANSI 和 ISO 已提供标准嵌入 SQL 和 SQL 的模块。 虽然没有标准存在数据库 CLI，使用 SQL 访问组-数据库供应商行业联合会-已考虑是否要创建一个;更高版本的 ODBC 部分垃圾回收其工作的基础。  

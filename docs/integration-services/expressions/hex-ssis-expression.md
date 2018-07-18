@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fdaff1603b9060272ed9e0b8d8118aea571a970
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 249c826812b49b3972bce63989ef5811083def95
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410300"
 ---
 # <a name="hex-ssis-expression"></a>HEX（SSIS 表达式）
   返回一个表示整数的十六进制值的字符串。  
@@ -45,7 +44,7 @@ HEX(integer_expression)
 ## <a name="remarks"></a>Remarks  
  如果 integer_expression 为 Null，则 HEX 返回 Null。  
   
- integer_expression 参数的计算结果必须为整数。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ integer_expression 参数的计算结果必须为整数。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  返回结果不包含限定符，如 0x 前缀。 若要包含前缀，请使用 +（连接）运算符。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](../../integration-services/expressions/concatenate-ssis-expression.md)。  
   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -38,11 +37,12 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e806f794a378672b28aa2334eda1afe076bd2ab9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dd3aa737e6155166d86f0dde983c4d9f63fd7c3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360245"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>在 IIS 7 中增加最大工作进程数  
   
-1.  在 **“Internet 信息服务(IIS)管理器”**中，展开本地服务器节点，然后单击 **“应用程序池”** 节点。  
+1.  在 **“Internet 信息服务(IIS)管理器”** 中，展开本地服务器节点，然后单击 **“应用程序池”** 节点。  
   
 2.  选择与 Web 同步站点关联的应用程序池，然后单击 **“操作”** 窗格上的 **“高级设置”** 。  
   
-3.  在“高级设置”对话框的 **“处理模型”** 标题下，单击标为 **“最大工作线程数”**的行。 更改属性值，然后单击 **“确定”**。  
+3.  在“高级设置”对话框的 **“处理模型”** 标题下，单击标为 **“最大工作线程数”** 的行。 更改属性值，然后单击 **“确定”**。  
   
 ## <a name="configuring-the-publication"></a>配置发布  
  若要使用 Web 同步，需要创建一个发布（就像为标准合并拓扑创建发布一样）。 有关详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  

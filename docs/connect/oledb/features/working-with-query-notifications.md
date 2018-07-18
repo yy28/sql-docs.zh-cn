@@ -2,7 +2,7 @@
 title: 使用查询通知 |Microsoft 文档
 description: 使用 SQL Server 的 OLE DB 驱动程序中的查询通知
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -25,14 +25,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f8170e2f465ed5b153945a69e50b42cc8c001bff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c425e8bc1b5d3dc9dfe6a5f68998b87a9e7def1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612342"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   中引入了查询通知[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]和 OLE DB 驱动程序的 SQL Server。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。  
   
@@ -78,11 +81,11 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 属性集  
  为了支持通过 OLE DB 的查询通知，OLE DB 驱动程序的 SQL Server 向 DBPROPSET_SQLSERVERROWSET 属性集内添加以下新属性。  
   
-|名称|类型|Description|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
-|SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认为 432000 秒（5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|  
-|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 消息正文是用户定义的，没有预定义格式。<br /><br /> 默认情况下，该字符串为空。 您可以使用 1 至 2000 个字符指定消息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 在字符串中以指定了这些*名称*=*值*语法。 用户负责创建服务并从队列中读取通知。<br /><br /> 預設為空字串。|  
+|SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认值为 432,000 秒 （5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|  
+|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 这是用户定义的并且有没有预定义的格式。<br /><br /> 默认情况下，该字符串为空。 您可以使用 1 至 2000 个字符指定消息。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 在字符串中以指定了这些*名称*=*值*语法。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
   
  无论语句是在用户事务中运行还是以自动提交模式运行，或者无论是提交还是回滚运行语句的事务，将始终提交通知订阅。 根据以下任一无效通知条件激发服务器通知：更改基础数据或架构，或者当达到超时期限时（以先发生者为准）。 激发通知后将立即删除通知注册。 因此，在接收通知时，应用程序必须再次订阅通知，以备进一步更新之用。  
   
@@ -111,7 +114,7 @@ RECEIVE * FROM MyQueue
   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)     
   
   

@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除规则 |Microsoft 文档
+title: 创建、 更改和删除规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2e46039c71863f6cfb60f63c8e1e926f8f68231d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046175"
 ---
 # <a name="creating-altering-and-removing-rules"></a>创建、更改和删除规则
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除规则  
  此代码示例说明如何创建规则，将其附加到列，修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的属性，从列中分离规则，以及删除规则。  
   
- **Dim**语句<xref:Microsoft.SqlServer.Management.Smo.Rule>具有完整的程序集路径，以避免多义性与指定对象<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 程序集中的对象。  
+ **Dim**语句<xref:Microsoft.SqlServer.Management.Smo.Rule>对象指定与完整的程序集路径，以避免含糊歧义<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 程序集中的对象。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -69,7 +70,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>在 Visual C# 中创建、更改和删除规则  
  此代码示例说明如何创建规则，将其附加到列，修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的属性，从列中分离规则，以及删除规则。  
   
- **Dim**语句<xref:Microsoft.SqlServer.Management.Smo.Rule>具有完整的程序集路径，以避免多义性与指定对象<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 程序集中的对象。  
+ **Dim**语句<xref:Microsoft.SqlServer.Management.Smo.Rule>对象指定与完整的程序集路径，以避免含糊歧义<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 程序集中的对象。  
   
 ```csharp  
 {  
@@ -102,7 +103,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>在 PowerShell 中创建、更改和删除规则  
  此代码示例说明如何创建规则，将其附加到列，修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 对象的属性，从列中分离规则，以及删除规则。  
   
- **Dim**语句<xref:Microsoft.SqlServer.Management.Smo.Rule>具有完整的程序集路径，以避免多义性与指定对象<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 程序集中的对象。  
+ **Dim**语句<xref:Microsoft.SqlServer.Management.Smo.Rule>对象指定与完整的程序集路径，以避免含糊歧义<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 程序集中的对象。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
@@ -129,7 +130,7 @@ $ru.UnbindFromColumn("Product", "SellEndDate", "Production")
 $ru.Drop()  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Rule>  
   
   

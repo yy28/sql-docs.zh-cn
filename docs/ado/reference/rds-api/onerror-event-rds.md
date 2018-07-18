@@ -2,7 +2,6 @@
 title: onError 事件 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7b14f2008446bbe6f49a8c8ae0887f84782f1a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470ed14f132233eb4bec6d58ac17c4d3c492b94e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288436"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 **OnError**事件时调用，只要在操作期间发生错误。  
@@ -41,7 +41,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  一个整数，指示错误的状态代码。  
   
- *Description*  
+ *说明*  
  A**字符串**，该值指示错误的描述。  
   
  *数据源*  
@@ -53,7 +53,7 @@ onError SCode, Description, Source, CancelDisplay
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)
 

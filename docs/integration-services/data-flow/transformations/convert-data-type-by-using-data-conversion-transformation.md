@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e35d69cb3a340051e8ae18ddd67a6738f60a8a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eee9cc960b7f8ef545ad26f0f3b1f42fcfbc3e9b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331171"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>通过使用数据转换进行数据类型的转换
   若要添加并配置数据转换，包必须已经包含至少一个数据流任务和一个源。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“数据流”** 选项卡，再从 **“工具箱”**中将数据转换拖动到设计图面。  
+3.  单击 **“数据流”** 选项卡，再从 **“工具箱”** 中将数据转换拖动到设计图面。  
   
 4.  将连接线从源或前一转换拖到数据转换，从而将数据转换连接到数据流。  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 8.  在 **“数据类型”** 列表中，选择列的新数据类型。 默认数据类型为输入列的数据类型。  
   
-9. 也可以根据所选数据类型更新 **“长度”**、 **“精度”**、 **“小数位数”**和 **“代码页”** 列的值。  
+9. 也可以根据所选数据类型更新 **“长度”**、 **“精度”**、 **“小数位数”** 和 **“代码页”** 列的值。  
   
 10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   

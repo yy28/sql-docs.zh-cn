@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32941512"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,14 +67,14 @@ n
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
-|BITN|**NULL：VP、NULL**<br /><br /> **ZERO：VP、NULL**<br /><br /> **>=255：**N/A<br /><br /> **<255：**N/A|  
+|BITN|**NULL：VP、NULL**<br /><br /> **ZERO：VP、NULL**<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
 |BIGVARCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、NULL**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据|  
 |BIGCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、255 个空格**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据加填充字符（最多 255 个）|  
 |BIGBINARY|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、255 0x00**<br /><br /> **>=255：VP、255 个字节**<br /><br /> <255：VP、实际数据加填充字符（最多 255 个）|  
 |BIGVARBINARY|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、0x00**<br /><br /> **>=255：VP、255 个字节**<br /><br /> <255：VP、实际数据|  
 |NCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、255 个空格**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据加填充字符（最多 255 个）|  
 |NVARCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、NULL**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据|  
-|NTEXT|**NULL：N/A**<br /><br /> **ZERO：**N/A<br /><br /> **>=255：**N/A<br /><br /> \<255：N/A|  
+|NTEXT|**NULL：N/A**<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> \<255：N/A|  
   
  \*   数据不能以 Null 值结束；截断 255 个字符以外的字符时不会发出警告。  
   

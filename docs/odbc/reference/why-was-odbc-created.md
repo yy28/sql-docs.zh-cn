@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917312"
 ---
 # <a name="why-was-odbc-created"></a>为什么创建 ODBC？
 从历史上看，公司使用单个 DBMS。 通过该系统的前端或通过编写能够以独占方式使用该系统的应用程序，已完成的所有数据库访问。 但是，使用计算机增长和多个计算机硬件和软件变得可用时，公司将启动以获取不同 Dbms。 之所以许多原因： 用户购买了什么是最便宜，什么是最快，他们已知道，是什么最适合单个应用程序在市场上最新。 其他原因在以前单个 DBMS 的部门现在有几个重组和合并，均。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33261043"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ sp_help_notification
   
 ## <a name="arguments"></a>参数  
  [ **@object_type =**] **'***object_type***'**  
- 要返回的信息的类型。 *object_type*是**char(9)**，无默认值。 *object_type*可以是警报，其中列出了分配给提供的运算符名称警报*，*或运算符，其中列出了运算符负责提供警报名称*。*  
+ 要返回的信息的类型。 *object_type*是**char(9)**，无默认值。 *object_type*可以是警报，其中列出了分配给提供的运算符名称警报 *，* 或运算符，其中列出了运算符负责提供警报名称 *。*  
   
  [ **@name =**]  **'***name***'**  
  运算符名称 (如果*object_type* is 运算符) 或警报的名称 (如果*object_type*为警报)。 *名称*是**sysname**，无默认值。  

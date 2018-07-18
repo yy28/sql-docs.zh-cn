@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202089"
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/16/2018
 
   了解如何使用 RevoScaleR 包中的函数。 R 和 SQL Server 和交换机之间移动数据计算上下文，以满足特定的任务。 创建模型和绘图，和你的开发环境与数据库服务器之间移动它们。
 
-  **受众：**为数据科研人员或开发人员已熟悉 R 语言中，并想要了解有关增强的 R 包和 Microsoft R 由 Revolution Analytics 中的函数。
+  **受众：** 为数据科研人员或开发人员已熟悉 R 语言中，并想要了解有关增强的 R 包和 Microsoft R 由 Revolution Analytics 中的函数。
 
   **要求：** R 了解一些基本知识。 对 SQL Server R Services 或与。 机器学习服务的服务器的访问安装程序帮助，请参阅[先决条件](#bkmk_Prerequisites)。
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 
   **受众：** SQL 开发人员、 应用程序开发人员或 SQL 专业人员支持 R 解决方案并且想要了解如何将 R 模型部署到 SQL Server。
 
-  **要求：**不需要任何 R 环境。 提供所有 R 代码，你可以构建完整解决方案仅使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和大家熟悉的商业智能和 SQL 开发工具。 但是，R 一些基本知识将会很有帮助。
+  **要求：** 不需要任何 R 环境。 提供所有 R 代码，你可以构建完整解决方案仅使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和大家熟悉的商业智能和 SQL 开发工具。 但是，R 一些基本知识将会很有帮助。
 
   使用 R 语言安装并启用必须访问 SQL Server。 安装程序帮助，请参阅[先决条件](#bkmk_Prerequisites)。
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 
   了解如何从 T-SQL 调用 R 运行时，将 R 函数包装在 SQL 代码，并运行将 R 输出和 R 模型保存到 SQL 表的存储的过程。
 
-  **受众：**的熟悉功能，并且想要了解从存储过程调用 R 的基础知识的人员。
+  **受众：** 的熟悉功能，并且想要了解从存储过程调用 R 的基础知识的人员。
 
   **要求：** R 或所需的 SQL 不知道。 但是，你需要 SQL Server Management Studio 或另一个客户端，可以连接到数据库并运行 T-SQL。 我们建议免费[MSSQL 扩展 Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)如果你不熟悉 T-SQL 查询。
 
@@ -70,9 +71,9 @@ ms.lasthandoff: 04/16/2018
 
   你将了解如何将图形之间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 R，以及在 T-SQL 中的使用 R 函数比较特征工程。 最后，您将学习如何使用中的预测模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批量计分和单行评分。
 
-  **受众：**的熟悉使用 R 和 SQL Server Management Studio 等开发人员工具的用户。
+  **受众：** 的熟悉使用 R 和 SQL Server Management Studio 等开发人员工具的用户。
 
-  **要求：**应该有权访问的 R 开发环境，并且知道如何运行 R 命令。 使用 PowerShell 需要下载纽约市 taxi 数据集。 你必须有权使用 SQL Server R Services 或使用已启用的 R 的机器学习服务的服务器。 安装程序帮助，请参阅[先决条件](#bkmk_Prerequisites)。
+  **要求：** 应该有权访问的 R 开发环境，并且知道如何运行 R 命令。 使用 PowerShell 需要下载纽约市 taxi 数据集。 你必须有权使用 SQL Server R Services 或使用已启用的 R 的机器学习服务的服务器。 安装程序帮助，请参阅[先决条件](#bkmk_Prerequisites)。
 
 ## <a name ="bkmk_samples"></a>产品示例
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909404"
 ---
 # <a name="explicitly-allocated-descriptors"></a>显式分配的描述符
 应用程序可以显式分配随时连接到数据库的连接上的应用程序描述符。 通过指定语句的属性处理使用该描述符句柄**SQLSetStmtAttr**，应用程序将使用该描述符以代替对应的驱动程序隐式分配应用程序描述符。 应用程序不能指定备用实现描述符。  

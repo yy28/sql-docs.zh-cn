@@ -1,46 +1,44 @@
 ---
 title: 计划安排 Azure 上的 SSIS 包 | Microsoft Docs
-ms.date: 05/09/2018
+description: 概述了用于计划已部署到 Azure SQL 数据库的 SSIS 包执行的可用方法。
+ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 62367e0ece20f56b6447a23b78b03b8799eef119
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262171"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>计划安排 Azure 上的 SSIS 包执行
-可以通过选择以下计划安排选项之一，计划安排存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的包的执行。
--   [SQL Server Management Studio (SSMS) 中的计划安排选项](#ssms)
--   [Azure 数据工厂执行 SSIS 包活动](#execute)
--   [Azure 数据工厂 SQL Server 存储过程活动](#storedproc)
--   [SQL 数据库弹性作业](#elastic)
--   [SQL Server 代理](#agent)
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>计划 Azure 中部署的 SQL Server Integration Services (SSIS) 包的执行
 
-## <a name="ssms"></a> 使用 SSMS 计划安排包
+可以通过选择本文介绍的方法之一，计划已部署到 Azure SQL 数据库服务器上 SSISDB 目录中的 SSIS 包的执行。 可以直接计划包，或作为 Azure 数据工厂管道的一部分间接地计划包。 有关 Azure 上 SSIS 的概述，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](ssis-azure-lift-shift-ssis-packages-overview.md)。
 
-在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框。 有关详细信息，请参阅[使用 SSMS 计划安排 Azure 上的 SSIS 包执行](ssis-azure-schedule-packages-ssms.md)。
+- 直接计划包
+
+  - [借助 SQL Server Management Studio (SSMS) 中的“计划”选项进行计划](#ssms)
+
+  - [SQL 数据库弹性作业](#elastic)
+
+  - [SQL Server 代理](#agent)
+
+- [作为 Azure 数据工厂管道的一部分间接地计划包](#activity)
+
+
+## <a name="ssms"></a>使用 SSMS 计划包
+
+在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框。 有关详细信息，请参阅[使用 SSMS 计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages-ssms.md)。
 
 此功能要求 SQL Server Management Studio 17.7 或更高版本。 若要获取 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
-
-## <a name="execute"></a> 通过“执行 SSIS 包”活动来计划安排包
-
-有关如何在 Azure 数据工厂中使用“执行 SSIS 包”活动来计划安排 SSIS 包的信息，请参阅[在 Azure 数据工厂中使用 SSIS 活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
-
-## <a name="storedproc"></a> 使用“存储过程”活动来计划安排包
-
-有关如何在 Azure 数据工厂中使用“存储过程”活动计划安排 SSIS 包的信息，请参阅[在 Azure 数据工厂中使用存储过程活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
-
-对于数据工厂版本 1，请参阅[在 Azure 数据工厂中使用存储过程活动运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)。
 
 ## <a name="elastic"></a> 使用 SQL 数据库弹性作业计划安排一个包
 
@@ -88,7 +86,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> 使用 SQL Server 代理计划安排一个包
+## <a name="agent"></a>使用 SQL Server 代理在本地计划包
+
+有关 SQL Server 代理的详细信息，请参阅 [包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
 
 ### <a name="prerequisite---create-a-linked-server"></a>先决条件 - 创建链接服务器
 
@@ -158,7 +158,24 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 6.  完成配置并计划作业。
 
-## <a name="next-steps"></a>后续步骤
-有关 SQL Server 代理的详细信息，请参阅 [包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
+## <a name="activity"></a>作为 Azure 数据工厂管道的一部分计划包
 
-有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理横向扩展的云数据库](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
+可通过使用触发器间接地计划包，从而运行用于运行 SSIS 包的 Azure 数据工厂管道。
+
+若要计划数据工厂管道，请使用以下触发器之一：
+
+- [计划触发器](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+
+- [翻转窗口触发器](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+
+- [基于事件的触发器](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+
+若要将 SSIS 包作为数据工厂管道的一部分运行，请使用以下活动之一：
+
+- [执行 SSIS 包活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
+
+- [已存储过程活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
+
+## <a name="next-steps"></a>后续步骤
+
+查看用于运行部署到 Azure 的 SSIS 包的选项。 有关详细信息，请参阅[在 Azure 中运行 SSIS 包](ssis-azure-run-packages.md)。

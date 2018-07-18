@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204209"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -107,7 +108,7 @@ SQL Server 2016 的早期发行版本无法在未连接到 internet 的脱机安
 
 3. 运行的 SQL Server 一次设置的详细信息，并这一次选择**向现有 SQL Server 添加功能**。
 
-4. 选择该实例，然后选择**R Services （数据库）**选项以添加。
+4. 选择该实例，然后选择**R Services （数据库）** 选项以添加。
 
 如果此过程无法解决该问题，请尝试以下解决方法：
 

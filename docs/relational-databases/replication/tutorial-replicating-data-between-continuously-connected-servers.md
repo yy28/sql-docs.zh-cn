@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -22,12 +21,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: fcb6a4d0468dc74bbc937a11fd60783897e402cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550478"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350029"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +141,8 @@ ms.locfileid: "34550478"
 
 ![“启动”按钮和状态消息中的更改会显示“快照代理”已经运行](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-如果看到此处的错误，请参阅[对快照代理错误进行故障排除](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)。 
+如果看到此处的错误，请参阅[对快照代理错误进行故障排除](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)。
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>将分发代理登录名添加到 PAL  
@@ -239,7 +239,7 @@ ms.locfileid: "34550478"
 
 有关详细信息，请参阅： 
 - [为事务复制测量滞后时间和验证连接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [排除事务复制同步错误故障](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [查找事务复制代理错误](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>后续步骤
@@ -249,5 +249,3 @@ ms.locfileid: "34550478"
 
 > [!div class="nextstepaction"]
 > [教程：配置服务器和移动客户端之间的复制（合并）](tutorial-replicating-data-with-mobile-clients.md)
-
-  

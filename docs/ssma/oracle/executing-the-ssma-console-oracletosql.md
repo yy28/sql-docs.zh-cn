@@ -1,8 +1,6 @@
 ---
 title: 执行 SSMA 控制台 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 43
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1bef78b8310cde7ad5053798ef589bb3deffe886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 739c4454b93fd4f1a57c6301902d9484f5890ece
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777123"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>执行 SSMA 控制台 (OracleToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。 控制台应用程序在此部分中使用作为枚举的某些标准脚本文件命令。  
@@ -166,7 +165,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <force-load>  
@@ -279,7 +278,7 @@ generate-assessment-report
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <generate-assessment-report  
@@ -353,7 +352,7 @@ convert-schema
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <convert-schema  
@@ -421,7 +420,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-或  
+或多个  
   
 ```xml  
 <migrate-data  
@@ -510,7 +509,7 @@ convert-schema
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target  
@@ -519,7 +518,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target>  
@@ -575,7 +574,7 @@ convert-schema
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database  
@@ -584,7 +583,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database>  
@@ -634,7 +633,7 @@ save-as-script
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <save-as-script  
@@ -710,7 +709,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  
@@ -733,7 +732,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  

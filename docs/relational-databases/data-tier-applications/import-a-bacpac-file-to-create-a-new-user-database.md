@@ -38,6 +38,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32930972"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **从 Azure 导入** - 从 Microsoft Azure 容器中导入一个 BACPAC 文件。 必须连接到 Microsoft Azure 容器才能验证此选项。 请注意，此选项还要求您为临时文件指定一个本地目录。 将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
-     在浏览 Azure 时，你将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 请注意，您可以按 **“名称”**、 **“大小”**或 **“修改日期”**对列进行排序。  
+     在浏览 Azure 时，你将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 请注意，您可以按 **“名称”**、 **“大小”** 或 **“修改日期”** 对列进行排序。  
   
      若要继续，请指定要导入的 .bacpac 文件，然后单击 **“打开”**。  
   

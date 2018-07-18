@@ -2,7 +2,6 @@
 title: '附录 d: ADO 示例 |Microsoft 文档'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 279e19f7f07144c376946c3155a2767f822c779c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c2e8ae98494d5208d05a61836c1bf9e586abf52
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270216"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Windows SDK 中的附录 d: ADO 示例
 Windows SDK 包含几个示例演示应用程序使用 ADO 和 RDS 的代码。 这些示例旨在帮助你了解如何使用 ADO 和 RDS，但不是应在生产服务器上部署。
@@ -36,5 +36,5 @@ Windows SDK 包含几个示例演示应用程序使用 ADO 和 RDS 的代码。 
 
  ADO 文档还包含多个语言版本，此联机帮助中的主题介绍作为包含的代码示例。 有关这些示例的详细信息，请参阅[ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md) [Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [Visual c + + 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)[配置 RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [附录 c:使用 ADO 编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 历史记录](../../../ado/guide/ado-history.md)

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916532"
 ---
 # <a name="processing-a-sql-statement"></a>处理 SQL 语句
 在讨论之前用于以编程方式使用 SQL 的技术，则需要讨论如何处理的 SQL 语句。 尽管每个方法在不同时间中执行它们，所涉及的步骤是通用的所有这三种技术。 下图演示的步骤中处理的 SQL 语句，详见本节的其余涉及。  

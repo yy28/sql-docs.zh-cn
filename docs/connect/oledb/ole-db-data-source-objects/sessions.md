@@ -2,10 +2,10 @@
 title: 会话 |Microsoft 文档
 description: 用于 SQL Server 的 OLE DB 驱动程序中的会话
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d5aed67da19db68097f57f689ad0a26692d75f63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bc74a5ee3fb461f641e55f3fdf9e9d540130f67
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666167"
 ---
 # <a name="sessions"></a>会话
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 会话 OLE DB 驱动程序表示一个连接到的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -190,7 +193,7 @@ EXIT:
 > [!NOTE]  
 >  在前面的示例中， **IDBCreateCommand**使用接口的原因是**ICommand**接口实现**GetDBSession**方法，允许该对象来确定在其创建的会话的命令或行集的作用域中的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
-## <a name="see-also"></a>另请参阅  
- [数据源对象 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

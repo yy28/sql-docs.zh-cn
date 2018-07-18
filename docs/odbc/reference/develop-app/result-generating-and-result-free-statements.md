@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913722"
 ---
 # <a name="result-generating-and-result-free-statements"></a>结果生成和无结果的语句
 SQL 语句可以松散分为以下五种类别：  

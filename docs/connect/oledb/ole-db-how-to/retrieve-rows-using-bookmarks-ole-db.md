@@ -2,10 +2,10 @@
 title: 使用书签 (OLE DB) 检索行 |Microsoft 文档
 description: 使用书签 (OLE DB) 检索行
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e5a4e71d0f3efca70ec50fdd748d43901545feb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b282efe0c230c8070b3be9d92e969aa305c4f654
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665587"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   使用者集**dwFlag**字段 DBCOLUMNSINFO_ISBOOKMARK 以指示列用作书签绑定结构的值。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 **IRowsetLocate::GetRowsAt**然后将其用于将提取指定从书签偏移量开始的行与行。  
   

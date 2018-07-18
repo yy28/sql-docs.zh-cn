@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_dms_services (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_exec_dms_services (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,23 +27,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9654ffe4e6e77defac0466882d65ae45b792ea4d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982599"
 ---
 # <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  保存有关 PolyBase 计算节点上运行的 DMS 服务的所有信息。 它列出每个服务实例的一行。  
+  保存有关运行 PolyBase 计算节点上的 DMS 服务的所有信息。 它列出了每个服务实例的一个行。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|与 DMS 核心关联的唯一数字 id。 此视图的键。|唯一 id。|  
-|compute_node_id|**int**|此 DMS 服务运行时所在的节点 ID|请参阅*compute_node_id*中[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|dms_core_id|**int**|使用 DMS core 相关联的唯一数字 id。 此视图的键。|唯一的 id。|  
+|compute_node_id|**int**|此 DMS 服务正在其运行的节点 ID|请参阅*compute_node_id*中[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |status|**nvarchar(32)**|DMS 服务的当前状态||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [PolyBase 使用动态管理视图进行故障排除](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

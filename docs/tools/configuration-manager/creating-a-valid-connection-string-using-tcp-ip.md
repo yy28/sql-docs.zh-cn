@@ -22,9 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f604651f6b457801b799df81d6cde6d29e79e5d0
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33073124"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 创建有效的连接字符串
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,11 +33,11 @@ ms.lasthandoff: 05/03/2018
   
 -   指定 **“别名”**。  
   
--   在 **“服务器”**框中，输入可以使用 **PING** 实用工具连接到的服务器名称或可以使用 **PING** 实用工具连接到的 IP 地址。 对于命名实例，请追加实例名称。  
+-   在 **“服务器”** 框中，输入可以使用 **PING** 实用工具连接到的服务器名称或可以使用 **PING** 实用工具连接到的 IP 地址。 对于命名实例，请追加实例名称。  
   
 -   在 **“协议”** 框中指定 **TCP/IP**。  
   
--   在 **“端口号”**框中输入端口号（可选）。 默认端口号为 1433，这是服务器上默认的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的端口号。 若要连接到命名实例或未侦听端口 1433 的默认实例，则必须提供端口号，或者启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务的信息，请参阅 [SQL Server Browser 服务](../../tools/configuration-manager/sql-server-browser-service.md)。  
+-   在 **“端口号”** 框中输入端口号（可选）。 默认端口号为 1433，这是服务器上默认的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的端口号。 若要连接到命名实例或未侦听端口 1433 的默认实例，则必须提供端口号，或者启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务的信息，请参阅 [SQL Server Browser 服务](../../tools/configuration-manager/sql-server-browser-service.md)。  
   
  连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 组件将从指定别名的注册表中读取服务器、协议和端口的值，然后创建一个格式为 `tcp:<servername>[\<instancename>],<port>` 或 `tcp:<IPAddress>[\<instancename>],<port>`的连接字符串。  
   

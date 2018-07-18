@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030894"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>ConfigurationSetting 属性 - DatabaseLogonAccount
   指定报表服务器连接到报表服务器数据库时使用的登录帐户。 只读。  

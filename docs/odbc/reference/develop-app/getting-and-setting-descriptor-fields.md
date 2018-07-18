@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910352"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>获取和设置描述符字段
 本部分介绍应用程序可用于检索或设置描述符字段中的值的方法。  

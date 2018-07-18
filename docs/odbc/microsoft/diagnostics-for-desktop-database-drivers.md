@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904222"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>对于桌面数据库驱动程序的诊断
 由驱动程序处理所有错误和警告不检查或部分选中的驱动程序管理器。 该驱动程序还会将映射本机错误或由数据源中，向 SQLSTATEs 返回的错误。 中列出每个函数*ODBC 程序员参考*包含指定条件和消息的"诊断"部分。  

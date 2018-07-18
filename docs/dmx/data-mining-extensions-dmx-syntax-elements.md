@@ -1,39 +1,27 @@
 ---
-title: 数据挖掘扩展插件 (DMX) 语法元素 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], syntax elements
-- syntax elements [DMX]
-- statements [DMX], syntax elements
-- DMX [Analysis Services], syntax elements
-ms.assetid: 25e45fa4-6409-47e0-a888-4af26d1c69b0
-caps.latest.revision: 35
-author: Minewiskan
+title: 数据挖掘扩展插件 (DMX) 语法元素 |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b9aadbc43562ef6a550afa6ac4e2b3a8fd00a024
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989919"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>数据挖掘扩展插件 (DMX) 语法元素
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，你可以使用各种语法元素定义可用于生成、 管理和使用数据挖掘模型的数据挖掘扩展插件 (DMX) 语句。 下面各部分对这些语法元素进行了说明。  
+  在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，可以使用各种语法元素来定义可用于生成、 管理和使用数据挖掘模型的数据挖掘扩展插件 (DMX) 语句。 下面各部分对这些语法元素进行了说明。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [标识符&#40;DMX&#41;](../dmx/identifiers-dmx.md)  
  命名挖掘模型、挖掘结构和列等对象。  
   
@@ -58,23 +46,23 @@ ms.lasthandoff: 05/03/2018
  [内容类型&#40;DMX&#41;](../dmx/content-types-dmx.md)  
  定义挖掘结构列包含的内容。  
   
- [分发&#40;DMX&#41;](../dmx/distributions-dmx.md)  
+ [分发版&#40;DMX&#41;](../dmx/distributions-dmx.md)  
  定义数据在列内的分布。  
   
- [使用情况&#40;DMX&#41;](../dmx/usage-dmx.md)  
+ [使用&#40;DMX&#41;](../dmx/usage-dmx.md)  
  定义挖掘模型使用其所包含的列的方式。  
   
- [建模标志 & #40; DMX & #41;](../dmx/modeling-flags-dmx.md)  
+ [建模标志&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  定义算法可用于处理挖掘模型的附加提示。  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   

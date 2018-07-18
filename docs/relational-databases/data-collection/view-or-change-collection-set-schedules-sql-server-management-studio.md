@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33145488"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>查看或更改收集组计划 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +43,13 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-view-collection-set-schedules"></a>查看收集组计划  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
   
 2.  右键单击收集组名称，然后单击“属性”[以便打开](#CollectionSet)“数据收集组属性”对话框。  
   
 ### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>更改缓存模式收集组的计划  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
   
 2.  右键单击使用缓存模式的收集组（如“查询统计信息”），然后单击“属性”以便打开“[数据收集组属性](#CollectionSet)”对话框。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>更改非缓存模式收集组的计划  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
   
 2.  右键单击使用非缓存模式的收集组（如“磁盘使用情况”），然后单击“属性”以便打开[数据收集组属性](#CollectionSet)对话框。  
   

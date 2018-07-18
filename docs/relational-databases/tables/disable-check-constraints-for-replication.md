@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33007334"
 ---
 # <a name="disable-check-constraints-for-replication"></a>对复制禁用 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -45,11 +46,11 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>对复制禁用 CHECK 约束  
   
-1.  在 **“对象资源管理器”**中，展开具有要修改的 CHECK 约束的表，再展开 **“约束”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，展开具有要修改的 CHECK 约束的表，再展开 **“约束”** 文件夹。  
   
 2.  右键单击要修改的 CHECK 约束，然后单击 **“修改”**。  
   
-3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”**，对 **“强制用于复制”** 选择 **“否”**值。  
+3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”**，对 **“强制用于复制”** 选择 **“否”** 值。  
   
 4.  单击 **“关闭”**。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>对复制禁用 CHECK 约束  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

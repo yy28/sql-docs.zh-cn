@@ -1,5 +1,5 @@
 ---
-title: 计数函数 (XQuery) |Microsoft 文档
+title: count 函数 (XQuery) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987479"
 ---
-# <a name="aggregate-functions---count"></a>聚合函数的计数
+# <a name="aggregate-functions---count"></a>聚合函数-count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回指定的序列中包含的项数目 *$arg*。  
@@ -45,11 +46,11 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  要计数的项。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果将返回 0 *$arg*是一个空序列。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml** AdventureWorks 数据库中的类型列。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. 使用 count() XQuery 函数计算产品型号生产中的生产车间数。  
  以下查询将计算产品型号 (ProductModelID=7) 生产过程中的生产车间数。  
@@ -73,7 +74,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   此查询将构造包含 <`NoOfWorkStations`> 元素的 XML。  
   
--   **Count （)** XQuery 正文计数在函数的数目 <`Location`> 元素。  
+-   **Count （)** 函数，在 XQuery 正文计数的数量 <`Location`> 元素。  
   
  结果如下：  
   
@@ -105,7 +106,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- 可以将这些值作为非 xml 类型（而不是 xml 类型）返回，如以下查询所示。 该查询使用[value （） 方法 （xml 数据类型）](../t-sql/xml/value-method-xml-data-type.md)以检索工作中心位置数。  
+ 可以将这些值作为非 xml 类型（而不是 xml 类型）返回，如以下查询所示。 该查询使用[value （） 方法 （xml 数据类型）](../t-sql/xml/value-method-xml-data-type.md)要检索的工作中心位置计数。  
   
 ```  
 SELECT  ProductModelID,   
@@ -124,7 +125,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

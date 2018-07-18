@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0ecf6ff0e925a7eaa01a5197ce71d641591d66e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 357a52e9722fb032bc65ac582bf0f8a41f794871
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355459"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>从复制监视器中添加和删除发布服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  若要为发布服务器指定刷新和连接选项，请在该网格中选择发布服务器，并根据需要修改选项。 有关刷新选项的详细信息，请参阅 [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  
   
-7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”**选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
+7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”** 选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  若要为发布服务器指定刷新和连接选项，请在该网格中选择发布服务器，并根据需要修改选项。 有关刷新选项的详细信息，请参阅 [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  
   
-7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”**选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
+7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”** 选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  若要为发布服务器指定刷新和连接选项，请在该网格中选择发布服务器，并根据需要修改选项。 有关刷新选项的详细信息，请参阅 [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  
   
-7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”**选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
+7.  选择复制监视器中放置发布服务器的组。 若要创建新组，请单击 **“新建组”** 选项，然后输入组名称；在 **“在以下组中显示此发布服务器”** 列表中选择该组。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

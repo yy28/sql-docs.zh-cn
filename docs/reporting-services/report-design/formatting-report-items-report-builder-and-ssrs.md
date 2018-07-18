@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023444"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>设置报表项的格式（报表生成器和 SSRS）
   对报表中的项进行格式设置可以使报表更赏心悦目并增强其可读性。 在报表设计模式下，可以对文本框、文本框中的各项、图像、表达式以及数据进行格式设置。  

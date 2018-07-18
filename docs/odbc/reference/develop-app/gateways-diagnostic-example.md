@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911962"
 ---
 # <a name="gateways-diagnostic-example"></a>网关诊断示例
 在网关体系结构，驱动程序将请求发送到网关支持 ODBC。 网关将请求发送给 DBMS。 因为它是接口与驱动程序管理器中的组件，该驱动程序进行格式化，并返回自变量**SQLGetDiagRec**。  

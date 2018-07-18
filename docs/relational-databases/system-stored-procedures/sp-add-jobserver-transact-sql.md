@@ -22,11 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89ba03a88db9dd5977ace92cc498726da6b3e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262311"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  任一*job_id*或*job_name*必须指定，但不能同时指定。  
   
  [ **@server_name =** ] **'***server***'**  
- 该作业的目标服务器的名称。 *服务器*是**nvarchar (30)**，默认值为 N'(LOCAL)。 *服务器*可以是**（本地）**本地服务器，或现有的目标服务器的名称。  
+ 该作业的目标服务器的名称。 *服务器*是**nvarchar (30)**，默认值为 N'(LOCAL)。 *服务器*可以是 **（本地）** 本地服务器，或现有的目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -62,7 +63,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>结果集  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **@automatic_post** 中存在**sp_add_jobserver**，但未列在自变量。 **@automatic_post** 是保留供内部使用。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
@@ -113,7 +114,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_apply_job_to_targets &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

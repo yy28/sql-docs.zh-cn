@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916352"
 ---
 # <a name="embedded-sql-example"></a>嵌入式的 SQL 的示例
 下面的代码是一个简单嵌入的 SQL 程序，用 C 语言编写程序演示很多，但不是全部的嵌入 SQL 技术。 程序提示用户输入订单号、 检索客户编号、 销售人员和订单的状态，并在屏幕上显示检索到的信息。  

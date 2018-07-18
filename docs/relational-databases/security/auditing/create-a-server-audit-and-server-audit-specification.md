@@ -3,12 +3,10 @@ title: 创建服务器审核和服务器审核规范 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,14 +18,15 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
-ms.openlocfilehash: 5bb0b9f0afe0549bcd3bef18f38becedd5dec613
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e67091c8b1e505e6e5401c022868b14bb3ca0b25
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942433"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -150,13 +149,13 @@ ms.lasthandoff: 05/03/2018
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
   
      **省略号 (…)**  
-     打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”**浏览和选择可用对象。  
+     打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”** 浏览和选择可用对象。  
   
      **主体名称**  
      对于所审核的对象，要作为审核筛选依据的帐户。  
   
      **省略号 (…)**  
-     打开 **“选择对象”** 对话框以基于指定的 **“对象名称”**浏览和选择可用对象。  
+     打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
 3.  在完成后，单击 **“确定”**。  
   
@@ -164,7 +163,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -178,7 +177,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-server-audit-specification"></a>创建服务器审核规范  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

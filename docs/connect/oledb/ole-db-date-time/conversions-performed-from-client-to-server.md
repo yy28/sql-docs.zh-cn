@@ -2,10 +2,10 @@
 title: 执行从客户端转换到服务器 |Microsoft 文档
 description: 执行从客户端到服务器转换
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a61001b562c982d4a6b5734f5840bf3b7e22b4ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b697052bf9de21671201ae840f828c0fc73481d
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666357"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本指南介绍了执行之间的日期/时间转换为 SQL Server 与 OLE DB 驱动程序编写的客户端应用程序和[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）。  
   
@@ -35,14 +38,14 @@ ms.lasthandoff: 05/03/2018
 |目标 -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1, 2|1、 3、 4|4, 12|1, 12|1, 12|1, 12|1、 5、 12|1, 12|1, 12|1, 12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1, 6|1, 6|1, 6|1、 5、 6|1, 10|1, 10|1<br /><br /> date|  
-|DBTIME|-|1|1|1, 7|1, 7|1, 7|1、 5、 7|1, 10|1, 10|1<br /><br /> Time(0)|  
-|DBTIME2|-|1, 3|1|1、 7、 10、 14|1、 7、 10、 15|1、 7、 10|1、 5、 7、 10|1、 10、 11|1、 10、 11|1<br /><br /> Time(7)|  
+|DBDATE|@shouldalert|-|-|1, 6|1, 6|1, 6|1、 5、 6|1, 10|1, 10|@shouldalert<br /><br /> 日期|  
+|DBTIME|-|@shouldalert|@shouldalert|1, 7|1, 7|1, 7|1、 5、 7|1, 10|1, 10|@shouldalert<br /><br /> Time(0)|  
+|DBTIME2|-|1, 3|@shouldalert|1、 7、 10、 14|1、 7、 10、 15|1、 7、 10|1、 5、 7、 10|1、 10、 11|1、 10、 11|@shouldalert<br /><br /> Time(7)|  
 |DBTIMESTAMP|1, 2|1、 3、 4|1、 4、 10|1、 10、 14|1、 10、 15|1, 10|1、 5、 10|1、 10,11|1、 10、 11|1, 10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1, 2, 8|1、 3、 4、 8|1、 4、 8、 10|1、 8、 10、 14|1、 8、 10、 15|1、 8、 10|1, 10|1、 10、 11|1、 10、 11|1, 10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1, 2|1、 3、 4|1、 4、 13|1, 13|1, 13|1, 13|1、 5、 13|1, 13|1, 10|1, 13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|N/A|N/A|N/A|  
-|VARIANT|1|1|1|1, 10|1, 10|1, 10|1, 10|N/A|N/A|1, 10|  
+|VARIANT|@shouldalert|@shouldalert|@shouldalert|1, 10|1, 10|1, 10|1, 10|N/A|N/A|1, 10|  
 |SSVARIANT|1、 16|1、 16|1、 16|1、 10、 16|1、 10、 16|1、 10、 16|1、 10、 16|N/A|N/A|1、 16|  
 |BSTR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|N/A|N/A|N/A|  
 |STR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|N/A|N/A|N/A|  
@@ -54,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 |------------|-------------|  
 |-|不支持任何转换。 如果调用 IAccessor::CreateAccessor 时验证绑定，以返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
 |N/A|不适用。|  
-|1|如果提供的数据无效，则设置 DBSTATUS_E_CANTCONVERTVALUE。 在应用转换前验证输入数据，因此即使后续转换忽略某一部分，该部分仍然有效，以使转换成功完成。|  
+|@shouldalert|如果提供的数据无效，则设置 DBSTATUS_E_CANTCONVERTVALUE。 在应用转换前验证输入数据，因此即使后续转换忽略某一部分，该部分仍然有效，以使转换成功完成。|  
 |2|忽略时间字段。|  
 |3|秒的小数部分必须为零，或者设置 DBSTATUS_E_DATAOVERFLOW。|  
 |4|忽略日期部分。|  
@@ -78,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [绑定和转换&#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

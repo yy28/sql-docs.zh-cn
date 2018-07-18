@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4e4696c7e3e98b227ae6489762e4e8202719672
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 56fc50cfa8f60385f2050d757df6b99f0b17261b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356819"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>高级合并复制冲突 - 基于 COM 的解决程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  下表说明了特定冲突解决程序的属性。  
   
-|“属性”|要求的输入|Description|注释|  
+|“属性”|要求的输入|描述|注释|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 累加性冲突解决程序|要求和的列的名称。 它必须为算术数据类型（例如 **int**、 **smallint**、 **numeric**等）。|冲突解决入选方由优先级值确定。 指定列的值设置为源列值与目标列值之和。 如果其中一列设置为 NULL，则结果按另一列的值设置。|只支持更新冲突和列跟踪。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平均化冲突解决程序|要平均化的列的名称。 它必须为算术数据类型（例如 **int**、 **smallint**、 **numeric**等）。|冲突解决入选方由优先级值确定。 所得列的值设置为源列值与目标列值的平均值。 如果其中一列设置为 NULL，则结果按另一列的值设置。|只支持更新冲突和列跟踪。|  

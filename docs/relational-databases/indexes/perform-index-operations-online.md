@@ -24,6 +24,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33698540"
 ---
 # <a name="perform-index-operations-online"></a>联机执行索引操作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/07/2018
   
 5.  右键单击要联机重新生成的索引，然后选择“属性”。  
   
-6.  在 **“选择页”**下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”**。  
   
 7.  选择 **“允许联机 DML 处理”**，然后从列表中选择 **True** 。  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/07/2018
   
 #### <a name="to-create-rebuild-or-drop-an-index-online"></a>联机创建、重新生成或删除索引  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

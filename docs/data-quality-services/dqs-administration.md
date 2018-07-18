@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bd848acf0dc8c45c1aacf884219421a6309ecd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28998d2bab22d771eadf0ad12d013684880e3243
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311086"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   使 DQS 管理员可以从 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 监视 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]上的各种 DQS 活动、根据需要 *终止* 正在运行的活动或 *停止* 活动中某个正在运行的过程。  
   
--   配置引用数据服务设置，如设置与 Windows Azure Marketplace 的连接以及管理直接第三方引用数据服务提供程序。  
+-   配置引用数据服务设置，如设置与 Microsoft Azure 市场的连接以及管理直接第三方引用数据服务提供程序。  
   
 -   配置清理和匹配活动的阈值。  
   
@@ -57,7 +57,8 @@ ms.lasthandoff: 05/03/2018
 ### <a name="configuration"></a>配置  
  DQS 管理员使用 **中的** “配置” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 屏幕执行以下操作：  
   
--   **引用数据**：配置引用数据服务提供程序：Windows Azure Marketplace 或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 您还可以使用它指定连接到 Internet 的代理设置以使用 Windows Azure Marketplace。  
+-   
+  **引用数据**：配置引用数据服务提供程序：Microsoft Azure 市场或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 您还可以使用它指定连接到 Internet 的代理设置以使用 Microsoft Azure 市场。  
   
 -   **常规设置**：指定数据清理和数据匹配的阈值，以及在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中是否启用事件探查的通知。 DQS 在执行数据质量项目中的计算机辅助的清理和匹配活动期间使用这些阈值。  
   

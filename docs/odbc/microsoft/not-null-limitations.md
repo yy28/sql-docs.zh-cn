@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898462"
 ---
 # <a name="not-null-limitations"></a>不为 NULL 的限制
 不支持 CREATE TABLE 语句中的 NOT NULL 约束。

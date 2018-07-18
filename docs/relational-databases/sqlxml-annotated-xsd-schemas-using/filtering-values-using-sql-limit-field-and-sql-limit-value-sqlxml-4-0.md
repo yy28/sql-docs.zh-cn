@@ -1,5 +1,5 @@
 ---
-title: 筛选值使用 sql:limit-字段和 sql:limit-值 (SQLXML 4.0) |Microsoft 文档
+title: 筛选值使用 sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,21 +25,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cc72a5c28166d3eac2b1ee9200bb1c6549b818cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032577"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  可以基于某些限制值来限制从数据库查询返回的行。 **Sql:limit-字段**和**sql:limit-值**批注用于标识包含限制值的数据库列并指定特定的限制值要用于筛选的数据返回。  
+  可以基于某些限制值来限制从数据库查询返回的行。 **Sql:-字段**并**sql:-值**批注用于标识包含限制值的数据库列和指定要用于筛选的数据的特定限制值返回。  
   
- **Sql:limit-字段**批注用于标识包含限制值的列; 每个映射的元素或属性上允许此属性。  
+ **Sql:-字段**批注用于标识包含限制值的列; 每个映射的元素或属性上允许使用它。  
   
- **Sql:limit-值**批注用于中指定的列中指定的限制的值**sql:limit-字段**批注。 **Sql:limit-值**批注是可选的。 如果**sql:limit-值**是未指定，假定一个 NULL 值。  
+ **Sql:-值**批注用于指定的限制的值中指定的列中**sql:-字段**批注。 **Sql:-值**批注是可选的。 如果**sql:-值**是未指定，则假定为 NULL 值。  
   
 > [!NOTE]  
->  使用时**sql:limit-字段**映射的 SQL 列所在的类型**实际**，SQLXML 4.0 上执行转换**sql:limit-值**根据 XML 架构中的指定作为**nvarchar**指定的值。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  
+>  使用时**sql:-字段**类型的映射的 SQL 列所在**实际**，SQLXML 4.0 对执行转换**sql:-值**根据 XML 架构中的指定作为**nvarchar**指定的值。 这要求使用纯科学记数法指定小数限制值。 有关详细信息，请参阅下面的示例 B。  
   
 ## <a name="examples"></a>示例  
  若要创建使用这些示例的工作示例，需要安装以下产品：  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
  一个客户可以具有发货地址和/或开票地址。 AddressType 列值是 Shipping 和 Billing。  
   
- 这是在其中的映射架构**ShipTo**架构属性映射到的地址关系中的 StreetAddress 列。 为此属性返回的值是限制为仅通过指定传送地址**sql:limit-字段**和**sql:limit-值**批注。 同样，**帐单寄往**架构属性返回仅客户的帐单邮寄地址。  
+ 这是在其中的映射架构**ShipTo**架构属性映射到 Addresses 关系中的 StreetAddress 列。 此属性的返回值被限制为仅通过指定发货地址**sql:-字段**并**sql:-值**批注。 同样， **BillTo**架构属性返回只客户的开票地址。  
   
  以下是架构：  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 查询使用 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  结果如下：  
   
@@ -176,7 +177,7 @@ ms.lasthandoff: 05/03/2018
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 这是在其中的映射架构**OrderID**订单详细信息上的属性映射到订单关系中的 OrderID 列。 为此属性返回的值仅限于仅在那些具有值为 2.0000000e-001 (0.2) 为指定**折扣**属性使用**sql:limit-字段**和**sql:limit-值**批注。  
+ 这是在其中的映射架构**OrderID**订单详细信息属性映射到 orders 关系中的 OrderID 列。 此属性的返回值被限制为仅显示那些具有值 2.0000000e-001 (0.2) 为指定**折扣**属性使用**sql:-字段**并**sql:-值**批注。  
   
  以下是架构：  
   
@@ -310,10 +311,10 @@ ms.lasthandoff: 05/03/2018
     </root>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar 和 nvarchar &#40;Transact SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [nchar 和 nvarchar &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [使用批注在查询中的 XSD 架构&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [使用带批注的 XSD 架构在查询中的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

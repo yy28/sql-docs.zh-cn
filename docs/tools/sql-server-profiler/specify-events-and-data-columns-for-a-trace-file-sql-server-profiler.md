@@ -22,9 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 60ee14bec276918fe402180503688cbc0ff7255d
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076834"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定跟踪文件的事件和数据列 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 **“跟踪属性”** 或 **“跟踪模板属性”** 对话框中，单击 **“事件选择”** 选项卡。  
   
-     **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 根据您所连接的服务器的类型和版本的不同，事件类会略有不同。 事件类由网格的“事件” **“事件”**列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
+     **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 根据您所连接的服务器的类型和版本的不同，事件类会略有不同。 事件类由网格的“事件” **“事件”** 列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
   
-2.  在 **“事件选择”**选项卡上，使用网格控件在跟踪文件中添加或删除事件和数据列。  
+2.  在 **“事件选择”** 选项卡上，使用网格控件在跟踪文件中添加或删除事件和数据列。  
   
 3.  若要从跟踪中删除事件，请清除每个事件类的 **“事件”** 列中的复选框。  
   

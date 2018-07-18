@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910502"
 ---
 # <a name="parameter-markers-in-procedure-calls"></a>在过程调用中的参数标记
 当调用接受参数的过程，可互操作的应用程序应使用参数标记，而不是文本的参数值。 某些数据源不支持在过程调用中使用的文字参数值。 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。 有关调用过程的详细信息，请参阅[过程调用](../../../odbc/reference/develop-app/procedure-calls.md)，本部分中更高版本。

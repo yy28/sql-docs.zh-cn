@@ -2,7 +2,6 @@
 title: ActiveConnection 属性 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420b6b26c38582c20bbc224ebcc53551967f1c4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5afb815a3e4701dc769f600d3a8d014d5a5cd25
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284576"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 属性 (ADOX)
 指示 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象[目录](../../../ado/reference/adox-api/catalog-object-adox.md)所属。  
@@ -38,13 +38,13 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  集**连接**对象或**字符串**包含连接的定义。 返回活动**连接**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  默认值为空对象引用。  
   
 ## <a name="applies-to"></a>适用范围  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录 ActiveConnection 属性示例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [命令和 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [连接关闭方法，表类型的属性示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

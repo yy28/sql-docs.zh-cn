@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903932"
 ---
 # <a name="limitations"></a>限制
 本部分介绍 ODBC 桌面数据库驱动程序的以下主题方面的限制：  

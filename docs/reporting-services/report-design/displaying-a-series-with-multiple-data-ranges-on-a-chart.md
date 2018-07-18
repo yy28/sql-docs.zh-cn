@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022504"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>在图表中显示包含多个数据区域的序列
 

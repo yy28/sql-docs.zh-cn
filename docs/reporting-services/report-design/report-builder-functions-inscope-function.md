@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023894"
 ---
 # <a name="report-builder-functions---inscope-function"></a>报表生成器函数 - InScope 函数
   指示项的当前实例是否位于指定的作用域中。  

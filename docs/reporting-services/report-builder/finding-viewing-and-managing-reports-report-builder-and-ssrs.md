@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022774"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
   在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
 |选项|结果|  
 |------------|------------|  
-|浏览器窗口上的**“刷新”** 按钮|显示在会话缓存中存储的报表。 用户打开报表时即会创建会话缓存。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用浏览器会话来保持一致的查看体验。|  
+|浏览器窗口上的 **“刷新”** 按钮|显示在会话缓存中存储的报表。 用户打开报表时即会创建会话缓存。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用浏览器会话来保持一致的查看体验。|  
 |![报表工具栏上的浏览器“刷新”按钮](../../reporting-services/media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|单击报表工具栏上的 **“刷新”** 按钮时，如果报表是按需运行的，则报表服务器将重新运行查询并更新报表数据。 如果报表已缓存或者为快照，则单击 **“刷新”** 后，将显示存储在报表服务器数据库中的报表。|  
 |Ctrl+F5 组合键|产生与单击报表工具栏上的 **“刷新”** 按钮相同的结果。|  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 05/03/2018
  ![rs_SharePointRunReport](../../reporting-services/report-builder/media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>通过操作来管理项  
- 可以通过每个项的下拉菜单中的操作来执行管理任务。 根据您拥有的权限，每个项都拥有一些共有的操作，这些操作是存储在 SharePoint 库中的项的标准操作。 **“查看属性”** 和 **“编辑属性”** 便属于这样的共有操作。 自定义操作可提供特定于项的管理功能。 下图显示了某个报表定义具有的操作。 对于报表定义，可以具有 **“管理订阅”** 和 **“管理处理选项”**这样的自定义操作：  
+ 可以通过每个项的下拉菜单中的操作来执行管理任务。 根据您拥有的权限，每个项都拥有一些共有的操作，这些操作是存储在 SharePoint 库中的项的标准操作。 **“查看属性”** 和 **“编辑属性”** 便属于这样的共有操作。 自定义操作可提供特定于项的管理功能。 下图显示了某个报表定义具有的操作。 对于报表定义，可以具有 **“管理订阅”** 和 **“管理处理选项”** 这样的自定义操作：  
   
  ![报表服务器项的菜单命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menu commands for report server items")  
   

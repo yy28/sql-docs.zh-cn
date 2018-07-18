@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025524"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>在报表中查找文本、数字或日期
   通过键入要查找的词或短语（搜索项的最大长度为 256 个字符），可以在报表中搜索内容。 搜索一种导航技术，它在报表中查找匹配值并将焦点放在报表中包含该值的部分。  

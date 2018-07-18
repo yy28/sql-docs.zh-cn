@@ -22,9 +22,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913212"
 ---
 # <a name="return-codes-odbc"></a>返回代码 ODBC
-ODBC 中的每个函数返回的代码，称为其*返回代码，*指示总体成功或失败的函数。 程序逻辑通常基于返回代码。  
+ODBC 中的每个函数返回的代码，称为其*返回代码，* 指示总体成功或失败的函数。 程序逻辑通常基于返回代码。  
   
  例如，下面的代码调用**SQLFetch**检索结果集中的行。 它会检查用于确定如果结果集的末尾已达到 (SQL_NO_DATA)，如果返回任何警告信息 (SQL_SUCCESS_WITH_INFO)，或如果出错 (SQL_ERROR) 的函数的返回代码。  
   

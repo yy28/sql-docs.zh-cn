@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019394"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -177,7 +178,7 @@ ms.lasthandoff: 05/10/2018
   
  例如，在根据年龄预测收入的模型中，了解 0 岁时的收入毫无用处。 在现实生活中，了解与平均值有关的人类行为通常更有用。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 修改了截距，以便说明每个回归量与平均值的关系。  
   
- 在挖掘模型内容中很难显示此调整，但是如果在 **Microsoft 树查看器** 的 **“挖掘图例”**中查看完成后的公式，则可以很清楚地显示这一调整。 回归公式从点 0 移向表示平均值的点。 这样，可以根据当前数据呈现一个更直观的视图。  
+ 在挖掘模型内容中很难显示此调整，但是如果在 **Microsoft 树查看器** 的 **“挖掘图例”** 中查看完成后的公式，则可以很清楚地显示这一调整。 回归公式从点 0 移向表示平均值的点。 这样，可以根据当前数据呈现一个更直观的视图。  
   
  因此，假定平均年龄约为 45，回归公式的截距 (VALUETYPE = 11) 则指示平均收入。  
   

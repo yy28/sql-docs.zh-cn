@@ -2,7 +2,7 @@
 title: 使用多个活动结果集 (MARS) |Microsoft 文档
 description: 使用多个活动的结果集 (MARS)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612082"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了支持多个活动结果集 (MARS) 访问的应用程序中[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本中，数据库应用程序无法在单个连接上保持多个活动语句。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认结果集时，应用程序必须先处理或取消从某一批处理生成的所有结果集，然后才能对该连接执行任何其他批处理。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了新的连接属性，该属性允许应用程序在每个连接上使用多个待定请求，具体而言，每个连接可以具有多个活动的默认结果集。  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB 驱动程序的 SQL Server 不限制在连接上的活动语句数。  
   
- 不需要同时执行多个多语句批处理或存储过程的典型应用程序将受益于 MARS，且无需了解如何实现 MARS。 不过，具有较复杂要求的应用程序确实需要考虑到这一点。  
+ 不需要已超过单个多语句批处理或存储的过程执行在同一时间将受益于 MARS 而无需了解如何实现 MARS 的典型应用程序。 不过，具有较复杂要求的应用程序确实需要考虑到这一点。  
   
  MARS 支持在单一连接中交错执行多个请求。 即：它允许运行批处理，并且在执行过程中还允许执行其他请求。 不过请注意，MARS 是从交错执行而不是从并行执行的角度定义的。  
   
- MARS 基础结构允许以交错方式执行多个批处理，尽管只能在定义完善的时间点切换执行。 此外，多数语句必须在同一批处理内以原子方式运行。 返回到客户端，有时称为行语句*产生点*，允许交错在完成之前执行，而行发送到客户端，例如：  
+ MARS 基础结构允许多个批处理执行采用交错的方式，像执行可以仅切换定义完善的点。 此外，多数语句必须在同一批处理内以原子方式运行。 返回到客户端，有时称为行的语句*产生点*，允许交错在完成之前执行，而行发送到客户端，例如：  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  使用 MARS 从 ADO 的示例，请参阅[与 OLE DB 驱动程序的 SQL Server 使用 ADO](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。  
   
 ## <a name="in-memory-oltp"></a>内存中 OLTP  
- 内存中 OLTP 支持 MARS 使用查询和本机编译存储的过程。 MARS 允许将从而无需完全检索每个结果才能发送请求以从新的结果集中提取行集的多个查询的请求数据。 若要成功读取从多个打开的结果集必须使用 MARS 启用连接。  
+ 内存中 OLTP 支持 MARS 使用查询和本机编译存储的过程。 MARS 允许将从而无需完全检索每个结果才能发送请求以从新的结果集中提取行集的多个查询的请求数据。 若要成功地从多个打开的结果集读取，必须使用启用 MARS 连接。  
   
  默认情况下禁用 MARS，因此你必须通过添加显式启用`MultipleActiveResultSets=True`到连接字符串。 下面的示例演示如何连接到 SQL Server 的实例并指定启用了 MARS:  
   
@@ -107,7 +110,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  语句块和交错的原子块所做的更改是相互隔离的。 例如，如果一个语句或原子块进行某些更改，然后生成到另一个语句执行新语句将不会看到第一个语句所做的更改。 此外，当第一条语句重新开始执行，不会看到任何其他语句所做的任何更改。 语句将仅查看完成并提交该语句开始前的更改。  
   
- 可以使用 BEGIN TRANSACTION 语句在当前用户事务中启动新用户事务 – 这是支持仅在互操作模式下，因此，只能从 T-SQL 的语句，调用 BEGIN TRANSACTION，不从在本机编译存储过程。你可以创建一个保存点在事务使用 SAVE TRANSACTION 或对事务的 API 调用中。回滚到保存点 Save(save_point_name)。 此功能同时会启用仅从 T-SQL 语句，并不是从在本机编译存储的过程。  
+ 可以使用 BEGIN TRANSACTION 语句在当前用户事务中启动新用户事务 – 这是支持仅在互操作模式下，因此，只能从 T-SQL 的语句，调用 BEGIN TRANSACTION，不从在本机编译存储过程。 你可以创建一个保存点在事务使用 SAVE TRANSACTION 或对事务的 API 调用中。回滚到保存点 Save(save_point_name)。 此功能同时会启用仅从 T-SQL 语句，并不是从在本机编译存储的过程。  
   
  **MARS 和列存储索引**  
   
@@ -207,7 +210,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_proc_exec_stats (TRANSACT-SQL) |Microsoft 文档
+title: sys.sp_xtp_control_proc_exec_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,17 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4423664cd7cf7edcfa628a51c85653bf3745fef6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971809"
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   对实例的本机编译存储过程启用统计信息收集。  
   
- 若要启用在本机编译存储过程的查询级别统计信息收集，请参阅[sys.sp_xtp_control_query_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)。  
+ 若要启用本机编译存储过程的查询级别统计信息收集，请参阅[sys.sp_xtp_control_query_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +46,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  @new_collection_value =*值*  
  决定打开 (1) 还是关闭 (0) 过程级统计信息收集。  
   
- @new_collection_value 设置为零在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或数据库启动。  
+ @new_collection_value 设置为零[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或数据库启动。  
   
  @old_collection_value =*值*  
  返回当前状态。  
@@ -66,7 +67,7 @@ exec sp_xtp_control_proc_exec_stats @old_collection_value=@c output
 select @c as 'collection status'  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030574"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 属性 - DatabaseServerName
   指定用来安装报表服务器数据库的服务器的名称。 读/写。  

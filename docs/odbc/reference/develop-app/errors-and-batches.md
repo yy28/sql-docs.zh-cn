@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909352"
 ---
 # <a name="errors-and-batches"></a>错误和批处理
 如果在执行一批 SQL 语句时发生错误，以下四种结果之一是可能的。 （每个可能结果是数据源 – 特定，甚至可能取决于包含批处理中的语句。）  

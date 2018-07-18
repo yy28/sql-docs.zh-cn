@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
@@ -16,11 +14,12 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a747d1fd1fba48e6bd6551141963d9844b09ad0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f19b5e1b9550f205e9c2951164c56a0a0fd8b56
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400489"
 ---
 # <a name="map-columns-to-composite-domains"></a>将列映射到复合域
   一个复合域包含两个或多个单一域。 您可以将多个列映射到域，也可以将具有分隔值的单个列映射到域。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  对于 **“输入列”** 字段中列出的每个列，在 **“域”** 字段中选择一个单一域。 仅选择处于复合域中的单一域。  
   
-5.  根据需要，修改在 **“源别名”**、 **“输出别名”**和 **“状态别名”** 字段中出现的名称。  
+5.  根据需要，修改在 **“源别名”**、 **“输出别名”** 和 **“状态别名”** 字段中出现的名称。  
   
 6.  根据需要，在 **“高级”** 选项卡上设置属性。有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  对于 **“输入列”** 字段中列出的列，在 **“域”** 字段中选择复合域。  
   
-5.  根据需要，修改在 **“源别名”**、 **“输出别名”**和 **“状态别名”** 字段中出现的名称。  
+5.  根据需要，修改在 **“源别名”**、 **“输出别名”** 和 **“状态别名”** 字段中出现的名称。  
   
 6.  根据需要，在 **“高级”** 选项卡上设置属性。有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
   

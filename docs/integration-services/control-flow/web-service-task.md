@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c82398a98bcd3233586d0effbc369fe6827321f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ce926659bd322dfc24c105a1c684ff087944352
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411039"
 ---
 # <a name="web-service-task"></a>Web 服务任务
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
@@ -61,7 +60,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web 服务任务可用的自定义日志记录消息  
  下表列出了可以为 Web 服务任务启用的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**WSTaskBegin**|任务已开始访问 Web 服务。|  
 |**WSTaskEnd**|任务已完成 Web 服务方法。|  
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
  **OutputType**  
  选择存储结果时所使用的存储类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**文件连接**|将结果存储在文件中。 选择此值将显示动态选项 **File**。|  
 |**变量**|将结果存储在变量中。 选择此值将显示动态选项 **Variable**。|  

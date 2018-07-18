@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b809f775b77c5c3b56cf3f3801e36fe20c915ed5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307736"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ## <a name="exceptions"></a>异常  
 PDOException  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 你可以通过将实例设置为 NULL 来关闭连接对象。  
   
 连接后，pdo:: errorcode 将显示 01000 而非 00000。  
@@ -90,7 +90,7 @@ PDOException
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [PDO 类](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

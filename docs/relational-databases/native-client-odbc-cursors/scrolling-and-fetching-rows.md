@@ -1,13 +1,12 @@
 ---
-title: 滚动和提取行 |Microsoft 文档
+title: 滚动和提取行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c7b0d1f850ad554d507a63513d12992c0281c88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5377e0bd603d6233ba99ddacb53c8113e580fa8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421546"
 ---
 # <a name="scrolling-and-fetching-rows"></a>滚动和提取行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,33 +40,33 @@ ms.lasthandoff: 05/03/2018
   
 -   设置使用的游标功能[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
--   打开光标使用**SQLExecute**或**SQLExecDirect**。  
+-   打开游标使用**SQLExecute**或**SQLExecDirect**。  
   
 -   使用滚动和提取行**SQLFetch**或[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。  
   
- 同时**SQLFetch**和**SQLFetchSroll**可以一次提取的行的块。 使用指定返回的行数**SQLSetStmtAttr**设置 SQL_ATTR_ROW_ARRAY_SIZE 参数。  
+ 这两**SQLFetch**并**SQLFetchSroll**可以一次提取行块。 使用指定返回的行数**SQLSetStmtAttr**设置 SQL_ATTR_ROW_ARRAY_SIZE 参数。  
   
  ODBC 应用程序可以使用**SQLFetch**通过只进游标提取。  
   
- **SQLFetchScroll**用于解决游标滚动。 **SQLFetchScroll**支持提取下一行，之前，第一个和最后一个行集除了相对提取 (提取行集*n*从开始的当前行集的行) 和绝对提取 （提取行集从行开始*n*)。 如果*n*是中的绝对读取负，行进行计数从结果集的末尾。 绝对提取行 -1 表示提取从结果集中最后一行开始的行集。  
+ **SQLFetchScroll**用于围绕游标滚动。 **SQLFetchScroll**支持提取下一步，以前版本中，第一个和最后一个行集除了相对提取 (提取行集*n*中当前行集的开始的行) 和绝对提取 （提取行集行开始*n*)。 如果*n*是负绝对提取中，行计数从结果集的末尾。 绝对提取行 -1 表示提取从结果集中最后一行开始的行集。  
   
- 应用程序使用**SQLFetchScroll**仅为其块光标功能，如报表，可能会将结果集通过一次仅选项用于提取下一步的行集。 基于屏幕的应用程序，另一方面，可以充分利用所有功能的**SQLFetchScroll**。 如果应用程序将行集大小设置为在屏幕上显示的行数，并将屏幕缓冲区绑定到结果集，它可以转换滚动栏操作直接调用**SQLFetchScroll**。  
+ 使用的应用程序**SQLFetchScroll**仅对其块游标功能，如报表，有可能通过结果集一次，仅使用此选项提取下一步的行集。 基于屏幕的应用程序，但是，可以充分利用所有的功能**SQLFetchScroll**。 如果应用程序将行集大小设置为在屏幕上显示的行数，并将屏幕缓冲区绑定到结果集，它可以将滚动条操作直接向调用转换**SQLFetchScroll**。  
   
 |滚动条操作|SQLFetchScroll 滚动选项|  
 |--------------------------|-------------------------------------|  
 |向上翻页|SQL_FETCH_PRIOR|  
 |向下翻页|SQL_FETCH_NEXT|  
-|向上移动一行|SQL_FETCH_RELATIVE 与 FetchOffset 等于-1|  
+|向上移动一行|SQL_FETCH_RELATIVE，FetchOffset 等于-1|  
 |向下移动一行|SQL_FETCH_RELATIVE，FetchOffset 等于 1|  
 |滚动框移到顶部|SQL_FETCH_FIRST|  
 |滚动框移到底部|SQL_FETCH_LAST|  
 |滚动框位于随机位置|SQL_FETCH_ABSOLUTE|  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
--   [ODBC 中的书签行](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
+-   [在 ODBC 中为行加书签](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
-## <a name="see-also"></a>另请参阅  
- [使用游标 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [使用游标&#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

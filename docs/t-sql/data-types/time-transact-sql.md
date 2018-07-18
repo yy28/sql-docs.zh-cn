@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 6/7/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,16 @@ helpviewer_keywords:
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 767f6650a46e67463dd51ad67ad1d506cc96c303
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421566"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="supported-string-literal-formats-for-time"></a>time 支持的字符串文字格式  
  下表显示的是适用于 time 数据类型的有效字符串文字格式。  
   
-|SQL Server|Description|  
+|SQL Server|描述|  
 |----------------|-----------------|  
 |hh:mm[:ss][:fractional seconds][AM][PM]<br /><br /> hh:mm[:ss][.fractional seconds][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|如果小时值为 0，则不论是否指定了 AM，都表示午夜 (AM) 后的小时。 当小时值等于 0 时，不能指定 PM。<br /><br /> 如果 AM 和 PM 均未指定，则小时值为 01 到 11 时，表示中午以前的小时。 如果指定了 AM，则这些值表示中午以前的小时。 如果指定了 PM，则这些值表示中午以后的小时。<br /><br /> 如果既未指定 AM，也未指定 PM，则小时值 12 表示始于中午的小时。 如果指定了 AM，则该值表示始于午夜的小时。 如果指定了 PM，则该值表示始于中午的小时。 例如：12:01 是指中午过后 1 分钟，与 12:01 PM 的含义相同，而 12:01 AM 则指午夜过后 1 分钟。 指定 12:01 AM 与指定 00:01 或 00:01 AM 等效。<br /><br /> 如果未指定 AM 或 PM，则小时值 13 到 23 表示中午以后的小时。 如果指定了 PM，这些值也表示中午以后的小时。 如果小时值为 13 到 23，不能指定 AM。<br /><br /> 如果小时值为 24，则该值无效。 若要表示午夜，请使用 12:00 AM 或 00:00。<br /><br /> 可以在毫秒之前加上冒号 (:) 或者句点 (.)。 如果使用冒号，这个数字表示千分之一秒。 如果使用句点，则单个数字表示十分之一秒，两个数字表示百分之一秒，三个数字表示千分之一秒。 例如，12:30:20:1 表示到了 12:30 后又过了二十又千分之一秒；12:30:20.1 表示到了 12:30 后又过了二十又十分之一秒。|  
   
@@ -249,7 +249,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. 将有效的时间字符串文字插入 time(7) 列  
  下表列出了可插入到数据类型为 time(7) 的一个列中的不同字符串文字，以及在插入后存储到该列中的对应值。  
   
-|字符串文字格式类型|插入的字符串文字|存储的 time(7) 值|Description|  
+|字符串文字格式类型|插入的字符串文字|存储的 time(7) 值|描述|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|如果在秒的小数部分精度之前使用冒号 (:)，则小数位数不能超过三位，否则将引发错误。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|如果指定了 AM 或 PM，则时间以不带 AM 或 PM 文字的 24 小时格式存储|  
@@ -264,7 +264,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. 将时间字符串文字插入到各种日期和时间数据类型的列中  
  下表中的第一列显示的是时间字符串文字，第二列显示的是日期或时间数据类型，第一列中的时间字符串文字将插入到第二列中与之对应的数据类型的数据库表列中。 第三列显示的是将存储在对应数据库表列中的值。  
   
-|插入的字符串文字|列数据类型|存储在列中的值|Description|  
+|插入的字符串文字|列数据类型|存储在列中的值|描述|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|如果秒的小数部分精度超过为列指定的值，则字符串将被截断，且不会出错。|  
 |'2007-05-07'|**date**|NULL|任何时间值均将导致 INSERT 语句失败。|  

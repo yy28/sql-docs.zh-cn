@@ -2,7 +2,6 @@
 title: WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77d02d1a5b5d643c49fcbbd33057d6c709f1949a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: baef6471c753f7a85590a6dd46efb59657fbe9dd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282836"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**事件调用一个或多个记录 （行） 之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)更改。 **RecordChangeComplete**事件时调用后一个或多个记录更改。  
@@ -64,13 +64,13 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  A**记录集**对象。 **记录集**此事件发生的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A **WillChangeRecord**或**RecordChangeComplete**事件可能会发生的原因如下行中的第一个已更改字段**记录集**操作： [更新](../../../ado/reference/ado-api/update-method.md)，[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)，[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)。 值**记录集**[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)确定哪些操作会导致要发生的事件。  
   
  期间**WillChangeRecord**事件，**记录集**[筛选器](../../../ado/reference/ado-api/filter-property.md)属性设置为**adFilterAffectedRecords**。 在处理该事件时，无法更改此属性。  
   
  必须设置**adStatus**参数**adStatusUnwantedEvent**对每个可能**adReason**值完全停用包括任何事件的事件通知**adReason**参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

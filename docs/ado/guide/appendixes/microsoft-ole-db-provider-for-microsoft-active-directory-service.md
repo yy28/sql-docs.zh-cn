@@ -2,7 +2,6 @@
 title: Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270646"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 提供程序允许 ADO 连接到通过 ADSI 异类目录服务。 这可以让 ADO 应用程序只读访问的 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 的目录服务，除了任何 LDAP 兼容目录服务和 Novell 目录服务。 ADSI 本身基于一个提供程序模型，以便如果没有另一个目录到新的提供程序给定访问，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程和启用 Unicode。  
@@ -63,12 +63,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*Root*|指示**ADsPath**从其开始搜索 （即，搜索的根） 的对象。|  
-|*筛选*|指示 RFC 1960 格式中的搜索筛选器。|  
+|*Filter*|指示 RFC 1960 格式中的搜索筛选器。|  
 |*属性*|指示要返回的属性的逗号分隔列表。|  
-|*作用域*|選擇性。 A**字符串**，它指定搜索范围。 可以为以下各项之一：<br /><br /> -基本-搜索基本对象 （搜索根）。<br />-OneLevel-搜索仅一个级别。<br />-子树 — 搜索整个子树。|  
+|*作用域*|可选。 A**字符串**，它指定搜索范围。 可以为以下各项之一：<br /><br /> -基本-搜索基本对象 （搜索根）。<br />-OneLevel-搜索仅一个级别。<br />-子树 — 搜索整个子树。|  
   
  例如：  
   
@@ -83,7 +83,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  提供程序不接受存储的过程调用或简单的表名称 (例如， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性将始终为**adCmdText**)。 请参阅有关的命令文本元素的更全面说明 Active Directory 服务接口文档。  
   
 ## <a name="recordset-behavior"></a>记录集行为  
@@ -93,7 +93,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **标准 ADO 记录集属性的可用性：**  
   
-|属性|可用性|  
+|“属性”|可用性|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
@@ -105,7 +105,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[筛选](../../../ado/reference/ado-api/filter-property.md)|读/写|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|  
 |[最大记录](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|  
@@ -114,19 +114,19 @@ objectClass='user' AND objectCategory='Person'"
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|  
 |[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
-|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
+|[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
   
  **标准 ADO 记录集方法的可用性：**  
   
 |方法|可用？|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|  
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|否|  
-|[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|  
-|[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|“否”|  
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|“否”|  
+|[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|“否”|  
+|[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|“否”|  
 |[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
 |[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|  
-|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
+|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|“否”|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|  
 |[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|是|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
@@ -138,12 +138,12 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|是|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|是|  
-|[更新](../../../ado/reference/ado-api/update-method.md)|否|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|“否”|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|“否”|  
   
  有关 ADSI 和提供程序的详细信息的详细信息，请参阅 Active Directory 服务接口文档或访问 ADSI 网页。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CommandType 属性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [ConnectionString 属性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

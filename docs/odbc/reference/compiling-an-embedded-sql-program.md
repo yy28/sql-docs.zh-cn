@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908932"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>编译嵌入式的 SQL 程序
 嵌入式的 SQL 程序包含的 SQL 和主机语言语句混合，因为它不能直接提交到主机语言使用的编译器。 相反，它是通过一个多步骤过程编译。 尽管此过程的不同产品产品，的步骤都大致相同的所有产品。  

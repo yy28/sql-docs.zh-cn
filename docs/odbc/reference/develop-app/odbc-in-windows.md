@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911272"
 ---
 # <a name="odbc-in-windows"></a>Windows 中的 ODBC
 以下各项仅适用于 Microsoft® Windows NT/Windows 2000 和 Microsoft Windows® 95/98 操作系统中运行的 ODBC。  

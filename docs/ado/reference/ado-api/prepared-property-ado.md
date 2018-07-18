@@ -2,7 +2,6 @@
 title: 准备属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a5f02d8c1536192832622e26fa4e128a7c04c66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70557d20239eedef30abc280de563a03b39b4a81
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280568"
 ---
 # <a name="prepared-property-ado"></a>已准备好的属性 (ADO)
 指示是否要保存的已编译的版本[命令](../../../ado/reference/ado-api/command-object-ado.md)之前执行。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**布尔**值，如果设置为**True**，该值指示应准备命令。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**已准备**属性能够保存中指定的查询的已准备的 （或已编译的） 版本的提供程序[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性之前[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的第一次执行。 这可能减慢命令的第一次执行，但后提供程序将编译命令，该提供程序将用于该命令的已编译的版本任何后续的执行，这将导致改进性能。  
   
  如果属性是**False**，提供程序将执行**命令**直接而无需创建的已编译的版本的对象。  
@@ -42,6 +42,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [已准备好的属性示例 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared 属性示例 (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

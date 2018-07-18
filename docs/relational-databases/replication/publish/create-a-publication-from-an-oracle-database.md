@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8f8aba1972cae5e92be6ea9456c836986af8514
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3eb84a6c79956b887a4ed005c9a5e177af2c559b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358679"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>从 Oracle 数据库创建发布
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
     3.  如果选择 **“Oracle 标准身份验证”**，则在配置过程中，请输入在 Oracle 发布服务器上创建的复制管理用户架构的登录名和密码。  
   
-6.  在 **“连接属性”** 选项卡上，选择 **“网关”** 或 **“完整”**发布服务器类型。  
+6.  在 **“连接属性”** 选项卡上，选择 **“网关”** 或 **“完整”** 发布服务器类型。  
   
      “完整”  选项用于为快照和事务发布提供所支持的完整 Oracle 发布功能集。 **“网关”** 选项提供特定的设计优化，以提高复制作为系统间的网关时的性能。 如果计划在多个事务发布中发布同一个表，则无法使用 **“网关”** 选项。 如果选择 **“网关”**，则一个表可以最多出现在一个事务发布中或出现在任意数量的快照发布中。  
   

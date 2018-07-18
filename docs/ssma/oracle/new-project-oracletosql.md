@@ -1,8 +1,6 @@
 ---
 title: 新项目 (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,16 +13,17 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 14228d43d5e0841a081fac70c9bbb105a46ff49b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4505c11d20c826b9c2b879d7b9c17bd690efaed9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777583"
 ---
 # <a name="new-project-oracletosql"></a>新项目 (OracleToSQL)
 使用**新项目**对话框中，创建新的 SSMA 项目。 访问**新项目**对话框中，在**文件**菜单上，单击**新项目**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **名称**  
 输入项目的名称。 SSMA 将追加文件扩展名。  
   

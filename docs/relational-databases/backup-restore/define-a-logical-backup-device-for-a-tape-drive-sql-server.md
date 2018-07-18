@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919442"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>为磁带机定义逻辑备份设备 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  展开“服务器对象”，然后右键单击“备份设备”。  
   
-3.  单击 **“新建备份设备”**打开 **“备份设备”** 对话框。  
+3.  单击 **“新建备份设备”** 打开 **“备份设备”** 对话框。  
   
 4.  输入设备名称。  
   

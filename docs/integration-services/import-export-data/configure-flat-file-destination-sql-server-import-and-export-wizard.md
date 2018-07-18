@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee1fcffe26a8f17d5a8c0fd4e547e98b95d30c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408519"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>配置平面文件目标（SQL Server 导入和导出向导）
   如果选择了平面文件目标，则在指定要复制表或提供查询之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“配置平面文件目标”。 在此页上，可为目标平面文件指定格式设置选项。 （可选）查看单个列的映射并预览示例数据。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  **行分隔符**  
  从分隔符的列表中选择，以分隔输出中的行。 没有指定自定义行分隔符的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|使用回车符和换行符的组合分隔行。|  
 |**{CR}**|使用回车符分隔行。|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  **列分隔符**  
  从分隔符列表中进行选择，用于分隔输出中的列。 没有用于指定自定义列分隔符的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|使用回车符和换行符的组合分隔列。|  
 |**{CR}**|使用回车符分隔列。|  

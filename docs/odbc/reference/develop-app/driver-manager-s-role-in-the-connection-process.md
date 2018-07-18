@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911772"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驱动程序管理器&#39;连接过程中的 s 角色
 请记住，应用程序请勿直接调用驱动程序函数。 相反，这些驱动程序管理器具有相同名称的函数调用，驱动程序管理器调用驱动程序函数。 通常情况下，发生这种情况几乎立即。 例如，在应用程序调用**SQLExecute**驱动程序管理器中之后，一些错误检查，驱动程序管理器调用**SQLExecute**驱动程序中。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030924"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>ConfigurationSetting 方法 - GenerateDatabaseCreationScript
   生成可用于创建报表服务器数据库的 SQL 脚本。  

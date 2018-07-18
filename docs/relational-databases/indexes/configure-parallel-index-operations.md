@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32939402"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  右键单击要为其设置最大并行度的索引，然后选择“属性”。  
   
-6.  在 **“选择页”**下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”**。  
   
 7.  选择 **“最大并行度”**，然后输入 1 和 64 之间的某个值。  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>设置现有索引的最大并行度  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>设置新建索引的最大并行度  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

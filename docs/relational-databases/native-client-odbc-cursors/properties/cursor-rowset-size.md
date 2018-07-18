@@ -1,13 +1,12 @@
 ---
-title: 光标的行集大小 |Microsoft 文档
+title: 游标行集大小 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,17 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65a90b983e21925dd9406874279b5742f50a738b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d03701d162e38ba0bd06c82cb3a29a00d87ed0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408686"
 ---
 # <a name="cursor-rowset-size"></a>游标行集大小
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  ODBC 游标并不仅限于一次提取一行。 它们可以检索对每个调用中的多个行**SQLFetch**或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。 当与客户端/服务器数据库（例如 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）一起使用时，可以更有效地一次提取多行。 在读取返回的行数称为行集大小，指定使用的 SQL_ATTR_ROW_ARRAY_SIZE [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
+  ODBC 游标并不仅限于一次提取一行。 它们可以检索每次调用中的多个行**SQLFetch**或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。 当与客户端/服务器数据库（例如 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）一起使用时，可以更有效地一次提取多行。 每次提取返回的行数称为行集大小和使用的 SQL_ATTR_ROW_ARRAY_SIZE 指定[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
 ```  
 SQLUINTEGER uwRowsize;  
@@ -49,13 +49,13 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      使用将所有列的数据和指示符保存在一个行中的结构来构建数组。 数组所具有的结构数目等于行集大小。  
   
- 使用列或按行绑定时，每次调用**SQLFetch**或**SQLFetchScroll**用从行集中检索的数据填充绑定的数组。  
+ 使用按列绑定或按行绑定时，每次调用**SQLFetch**或**SQLFetchScroll**中检索的行集中的数据填充绑定的数组。  
   
- [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)还可用来从块状游标中检索列数据。 因为**SQLGetData**工作一次一行**SQLSetPos**必须调用来将特定行的行集中设置为当前行之前调用**SQLGetData**。  
+ [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)还可用于从块游标中检索列数据。 因为**SQLGetData**适用一次一行**SQLSetPos**必须调用以设置特定行的行集中作为当前行之前调用**SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序提供一种优化方式使用行集检索整个结果集快速。 若要使用此优化，请将游标特性设置为各自的默认值 (只进、 只读的行集大小 = 1) 次**SQLExecDirect**或**SQLExecute**调用。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序设置默认结果集。 在不需要滚动的情况下将结果传输到客户端时，该优化功能比服务器游标更有效。 执行语句后，请增加行集大小并使用按列绑定或按行绑定。 这样[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用默认结果集将结果行有效地发送到客户端，而[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序持续从客户端上的网络缓冲区中提取行。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序提供了一种优化方式使用行集检索整个结果集快速。 若要使用这种优化，请将游标属性设置为其默认值 (只进、 只读的行集大小 = 1) 次**SQLExecDirect**或**SQLExecute**调用。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序设置了默认结果集。 在不需要滚动的情况下将结果传输到客户端时，该优化功能比服务器游标更有效。 执行语句后，请增加行集大小并使用按列绑定或按行绑定。 这可让[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用默认结果集有效地将结果行发送到客户端，而[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序持续提取这些行，从客户端上的网络缓冲区。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [游标属性](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

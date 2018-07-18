@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901793"
 ---
 # <a name="driver-architecture-overview"></a>驱动程序体系结构概述
 Microsoft Visual FoxPro ODBC 驱动程序是可用于打开和查询 Microsoft Visual FoxPro 数据库或通过打开数据库连接 (ODBC) 界面 FoxPro 表的 32 位驱动程序。 你可以访问 FoxPro 数据使用以下类型的应用程序：  

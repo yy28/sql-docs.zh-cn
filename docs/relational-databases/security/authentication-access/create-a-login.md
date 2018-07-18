@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,15 +23,16 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 40163a185516fc5d101baedf6632b46112dda52e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73f03c6206eda26c8bce1d2aeb2f723bbdc4deb5
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941993"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,15 +65,15 @@ ms.lasthandoff: 05/03/2018
   
      如果您单击 **“搜索…”**：  
   
-    1.  在 **“选择此对象类型”**下，单击 **“对象类型…”** 打开“对象类型”对话框，并选择以下的任意或全部选项：“内置安全主体”、“组”和“用户”。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
+    1.  在 **“选择此对象类型”** 下，单击 **“对象类型…”** 打开“对象类型”对话框，并选择以下的任意或全部选项：“内置安全主体”、“组”和“用户”。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
   
-    2.  在 **“从此位置”**下，单击 **“位置…”** 以打开 **“位置”** 对话框，并选择一个可用的服务器位置。 完成后，单击 **“确定”**。  
+    2.  在 **“从此位置”** 下，单击 **“位置…”** 以打开 **“位置”** 对话框，并选择一个可用的服务器位置。 完成后，单击 **“确定”**。  
   
     3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](http://technet.microsoft.com/library/cc771712.aspx)。  
   
     4.  单击 **“高级…”** 以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](http://technet.microsoft.com/library/cc733110.aspx)。  
   
-    5.  单击 **“确定”**中创建登录名。  
+    5.  单击 **“确定”** 中创建登录名。  
   
 4.  若要基于 Windows 主体创建一个登录名，请选择 **“Windows 身份验证”**。 这是默认选项。  
   
@@ -86,9 +85,9 @@ ms.lasthandoff: 05/03/2018
   
     3.  若要强制实施有关复杂性和强制执行的密码策略选项，请选择 **“强制实施密码策略”**。 有关详细信息，请参阅 [Password Policy](../../../relational-databases/security/password-policy.md)。 选中 **“SQL Server 身份验证”** 时，这是默认选项。  
   
-    4.  若要强制实施有关过期的密码策略选项，请选中 **“强制密码过期”**。 必须选择**“强制实施密码策略”** 才能启用此复选框。 选中 **“SQL Server 身份验证”** 时，这是默认选项。  
+    4.  若要强制实施有关过期的密码策略选项，请选中 **“强制密码过期”**。 必须选择 **“强制实施密码策略”** 才能启用此复选框。 选中 **“SQL Server 身份验证”** 时，这是默认选项。  
   
-    5.  若要在首次使用登录名后强制用户创建新密码，请选择 **“用户在下次登录时必须更改密码”**。 必须选择**“强制密码过期”** 才能启用此复选框。 选中 **“SQL Server 身份验证”** 时，这是默认选项。  
+    5.  若要在首次使用登录名后强制用户创建新密码，请选择 **“用户在下次登录时必须更改密码”**。 必须选择 **“强制密码过期”** 才能启用此复选框。 选中 **“SQL Server 身份验证”** 时，这是默认选项。  
   
 6.  若要将登录名与独立的安全性证书相关联，请选择“映射到证书”，然后再从列表中选择现有证书的名称。  
   
@@ -103,7 +102,8 @@ ms.lasthandoff: 05/03/2018
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“登录名 – 新建”** 对话框还在四个其他页面上提供了选项： **“服务器角色”**、“用户映射” 、 **“安全对象”**和“状态” 。  
+ 
+  **“登录名 – 新建”** 对话框还在四个其他页面上提供了选项： **“服务器角色”**、“用户映射” ****、 **“安全对象”** 和“状态” ****。  
   
 ### <a name="server-roles"></a>“服务器角色”  
  **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项包括：  
@@ -175,9 +175,9 @@ ms.lasthandoff: 05/03/2018
   
 3.  如果您选择 **“特定对象…”**：  
   
-    1.  在 **“选择对象”** 对话框中的 **“选择这些对象类型”**下，单击 **“对象类型…”**。  
+    1.  在 **“选择对象”** 对话框中的 **“选择这些对象类型”** 下，单击 **“对象类型…”**。  
   
-    2.  在 **“选择对象类型”** 对话框中，选择以下的任意或全部对象类型： **“端点”**、 **“登录名”**、 **“服务器”**、 **“可用组”**和 **“服务器角色”**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  在 **“选择对象类型”** 对话框中，选择以下的任意或全部对象类型： **“端点”**、 **“登录名”**、 **“服务器”**、 **“可用组”** 和 **“服务器角色”**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  在“输入要选择的对象名称（示例）”下，单击“浏览…”。  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 05/03/2018
   
     5.  在 **“选择对象”** 对话框中，单击 **“确定”**。  
   
-4.  如果您选择 **“特定类型的所有对象…”**，则在 **“选择对象类型”** 对话框中，选择以下的任意或全部对象类型： **“端点”**、 **“登录名”**、 **“服务器”**、 **“可用性组”**和 **“服务器角色”**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  如果您选择 **“特定类型的所有对象…”**，则在 **“选择对象类型”** 对话框中，选择以下的任意或全部对象类型： **“端点”**、 **“登录名”**、 **“服务器”**、 **“可用性组”** 和 **“服务器角色”**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  
@@ -234,7 +234,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="TsqlProcedure"></a> 使用 T-SQL 创建使用 Windows 身份验证的登录名  
   
  
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -250,7 +250,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>使用 SSMS 创建使用 SQL Server 身份验证的登录名  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

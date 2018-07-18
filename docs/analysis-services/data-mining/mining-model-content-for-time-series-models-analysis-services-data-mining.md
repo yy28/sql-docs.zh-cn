@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019544"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -192,7 +193,7 @@ ms.lasthandoff: 05/10/2018
  NODE_SUPPORT  
  支持此节点的事例的数目。  
   
- **ARTXP：**对于“(全部)”节点，指示分支中包括的时间段的总数。  
+ **ARTXP：** 对于“(全部)”节点，指示分支中包括的时间段的总数。  
   
  对于终端节点，指示 NODE_CAPTION 所描述的范围内包括的时间段的数目。 终端节点中时间段的数目始终等于分支“(全部)”节点的 NODE_SUPPORT 值。  
   
@@ -208,7 +209,7 @@ ms.lasthandoff: 05/10/2018
   
  有关计分方法的详细信息，请参阅[功能选择（数据挖掘）](../../analysis-services/data-mining/feature-selection-data-mining.md)。  
   
- **ARIMA：**ARIMA 模型的 Bayesian 信息标准 (BIC) 分数。 对与该公式相关的所有 ARIMA 节点设置相同的分数。  
+ **ARIMA：** ARIMA 模型的 Bayesian 信息标准 (BIC) 分数。 对与该公式相关的所有 ARIMA 节点设置相同的分数。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  **ARTXP：**  与 NODE_DESCRIPTION 相同的信息。  
@@ -246,7 +247,7 @@ ms.lasthandoff: 05/10/2018
  下一节将给出示例公式并解释基本术语。  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>ARTXP 公式的挖掘图例  
- 以下示例将给出模型的某个组成部分的 ARTXP 公式，如 **“挖掘图例”**中所示。 若要查看该公式，请在 Microsoft 时序查看器中打开在“数据挖掘基础教程”中创建的 [Forecasting] 模型，单击“模型”选项卡，选择对应于 R250: Europe 数据序列的树。  
+ 以下示例将给出模型的某个组成部分的 ARTXP 公式，如 **“挖掘图例”** 中所示。 若要查看该公式，请在 Microsoft 时序查看器中打开在“数据挖掘基础教程”中创建的 [Forecasting] 模型，单击“模型”选项卡，选择对应于 R250: Europe 数据序列的树。  
   
  若要查看此示例使用的公式，请单击表示 2003 年 7 月 5 日当天或之后的数据序列的节点。  
   
@@ -275,7 +276,7 @@ ms.lasthandoff: 05/10/2018
 |Quantity(R250 North America,-7)|-0.292914186039869|0|0|0|7（系数）|  
 |Quantity(R250 North America,-7)|10.36363640433|0|0|701.882534898676|9（统计信息）|  
   
- 通过比较这些示例您可以看出，挖掘模型内容包含的信息与 **“挖掘图例”**中提供的信息相同，但还额外增加了 *variance* 和 *support*两列内容。 支持值指示支持该公式所述趋势的事例的计数。  
+ 通过比较这些示例您可以看出，挖掘模型内容包含的信息与 **“挖掘图例”** 中提供的信息相同，但还额外增加了 *variance* 和 *support*两列内容。 支持值指示支持该公式所述趋势的事例的计数。  
   
 ### <a name="using-the-artxp-time-series-formula"></a>使用 ARTXP 时序公式  
  对于大多数商业用户来说，ARTXP 模型内容的值在于既提供数据的树视图又提供数据的线性表示。  
@@ -286,7 +287,7 @@ ms.lasthandoff: 05/10/2018
   
  使用 [Microsoft 时序查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md) 浏览模型内容，可以看到发生拆分的位置以及拆分影响趋势线的方式。  
   
- 如果数据序列的任何部分的时间和销售额直接相关，则获取该公式的最简单的方法是从 **“挖掘图例”**复制该公式，然后将其粘贴到有助于说明模型的文档或演示文稿中。 也可从该树的 NODE_DISTRIBUTION 表中提取平均值、系数和其他信息，然后将提取的信息用于计算趋势的扩展范围。 如果整个序列表现出一致的线性关系，则公式将包含在“(全部)”节点中。 只要树中有分支，公式就包含在叶节点中。  
+ 如果数据序列的任何部分的时间和销售额直接相关，则获取该公式的最简单的方法是从 **“挖掘图例”** 复制该公式，然后将其粘贴到有助于说明模型的文档或演示文稿中。 也可从该树的 NODE_DISTRIBUTION 表中提取平均值、系数和其他信息，然后将提取的信息用于计算趋势的扩展范围。 如果整个序列表现出一致的线性关系，则公式将包含在“(全部)”节点中。 只要树中有分支，公式就包含在叶节点中。  
   
  以下查询将从挖掘模型返回所有 ARTXP 叶节点和包含公式的嵌套表 NODE_DISTRIBUTION。  
   
@@ -389,7 +390,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_CAPTION：** 显示公式的缩写。 缩写指出表示的周期性结构的数目以及这些结构有多少系数。 例如，如果公式缩写为 `{4,0,6}`，则节点表示一个带有 6 个系数的周期性结构。 如果缩写类似于 `{2,0,8} x {1,0,0}(4)`，则节点中包含两个周期性结构。  
   
- **NODE DESCRIPTION：** 显示公式的长格式，这也是 **“挖掘图例”**中显示的公式的格式。 公式的长格式类似于公式的缩写，不同之处在于前者显示系数的实际值，而后者是进行计数。  
+ **NODE DESCRIPTION：** 显示公式的长格式，这也是 **“挖掘图例”** 中显示的公式的格式。 公式的长格式类似于公式的缩写，不同之处在于前者显示系数的实际值，而后者是进行计数。  
   
  **NODE_RULE：** 显示公式的 XML 表示形式。 根据节点类型的不同，XML 表示形式可以包括单个或多个周期性结构。 下表中说明如何将 XML 节点上滚到 ARIMA 模型的较高级别。  
   

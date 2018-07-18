@@ -2,10 +2,10 @@
 title: 显示列和稀疏列 (OLE DB) 的目录元数据 |Microsoft 文档
 description: 显示为稀疏列 (OLE DB) 的列和目录元数据
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 78e9231b348df486355b1b816faf52b9a5eda1e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665597"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此示例将创建具有三个列的表，包括一个稀疏列、一个非稀疏列和一个列集列。 随后示例将显示 OLE DB 标志，指示非稀疏列和列集列的列及目录元数据。  
   

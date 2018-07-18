@@ -1,8 +1,6 @@
 ---
 title: 项目设置 (GUI) (OracleToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4c4dcd294826c6a709b174cf0c82fa7d3b7141b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1376f257a98f0789ae0029665ad609d8121a06b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777763"
 ---
 # <a name="project-settings-gui-oracletosql"></a>项目设置 (GUI) (OracleToSQL)
 GUI 项目设置允许你配置数据上的显示方式**数据**选项卡以及是否或不显示转换后的评估报表。  
@@ -30,7 +29,7 @@ GUI 窗格位于**项目设置**和**默认项目设置**对话框。
   
 -   使用**默认项目设置**对话框可设置的所有项目的用户界面选项。 若要访问的完全安装设置中，在**工具**菜单上，选择**默认项目设置**，选择为其设置所需查看或更改，不再是迁移项目类型**迁移目标版本**下拉列表，并依次**GUI**在左窗格的底部。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **源的最大行数**  
 配置上显示数据的行数**数据**的所选的源表选项卡。  
   

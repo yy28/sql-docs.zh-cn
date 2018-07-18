@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331221"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 命令提示实用工具用于管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 该实用工具可以复制、移动、删除包，也可以验证包是否存在。 可对存储于以下三个位置之一的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包执行上述操作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区和文件系统。 如果此实用工具要访问存储在 **msdb**中的包，命令提示符可能要求输入用户名和密码。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则命令提示符要求输入用户名和密码。 如果缺少用户名， **dtutil** 将尝试使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 包的存储类型由 **/SQL**、 **/FILE**和 **/DTS** 选项标识。  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>Parameters  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |/?|显示命令提示符选项。|  
 |/C[opy] location;destinationPathandPackageName|指定对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的复制操作。 使用此参数需要先使用 **/FI**、 **/SQ**或 **/DT** 选项指定包的位置。 然后指定目标位置和目标包名称。 destinationPathandPackageName 参数指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的复制目标。 如果目标 *location* 为 **SQL**，那么还必须在命令中指定 *DestUser*、 *DestPassword* 和 *DestServer* 参数。<br /><br /> 如果 **Copy** 操作的目标处已经有一个包， **dtutil** 将提示用户确认是否删除该包。 回答 **Y** 将覆盖包，回答 **N** 将结束程序。 如果该命令包含 *Quiet* 参数，则将不显示任何提示，并覆盖任何现有包。|  
@@ -121,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil 退出代码  
  如果检测到语法错误、使用了错误参数或指定了无效的选项组合，**dtutil** 将设置退出代码以向你发出警报。 否则，该实用工具将报告“操作已成功完成”。下表列出了 **dtutil** 实用工具在退出时可以设置的值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0|已成功执行此实用工具。|  
 |@shouldalert|此实用工具已失败。|  

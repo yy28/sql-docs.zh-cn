@@ -2,7 +2,6 @@
 title: 最小化日志文件空间使用情况 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b0a0b3ba5bdaba5f334bce70acf87e52656c13b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75091ba881fde2c464ae6e184bd747cc70b42790
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274176"
 ---
 # <a name="minimizing-log-file-space-usage"></a>最小化日志文件空间使用情况
 日志文件可能很快用完 （从而停止服务器） 是否有大量的 SQL Server 数据库上的活动。 你可以将日志文件设置为**在检查点截断**以显著延长的数据库的日志文件的生存期。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  有关详细信息**在检查点截断**功能，请参阅 Microsoft SQL Server 文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

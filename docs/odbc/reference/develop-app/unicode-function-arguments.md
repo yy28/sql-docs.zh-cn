@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917952"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函数自变量
 ODBC 3.5 （或更高版本） 驱动程序管理器支持 ANSI 和 Unicode 版本的所有接受指向字符字符串或 SQLPOINTER 在自变量的指针的函数。 Unicode 函数作为函数来实现 (为后缀*W*)，而不是宏。 ANSI 函数 (其可以调用使用或不是由后缀为*A*) 是等于当前的 ODBC API 函数。  

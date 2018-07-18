@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3ccc6d50e3365defedffc4345838a109e653505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa667694b45c4a784c74ad3ca7b0e5689f491138
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333291"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
   派生列转换通过对转换输入列应用表达式来创建新列值。 表达式可以包含来自转换输入的变量、函数、运算符和列的任意组合。 结果可作为新列添加，也可作为替换值插入到现有列。 派生列转换可定义多个派生列，任何变量或输入列都可以出现在多个表达式中。  
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
  **相关主题**：[Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](../../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **数据类型**  
- 如果向新列中添加数据，“派生列转换编辑器”对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如果向新列中添加数据，“派生列转换编辑器”对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  **长度**  
  如果向新列中添加数据，“派生列转换编辑器”对话框将自动计算表达式的值并设置字符串数据的列长度。 该列的值是只读的。  

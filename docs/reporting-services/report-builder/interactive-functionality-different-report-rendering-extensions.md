@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020954"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>交互功能 - 不同报表呈现扩展插件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了在运行时与分页报表进行交互的功能。 并非所有的报表呈现格式都支持整套交互功能。 使用下表了解每项交互功能在处理特定格式时的工作原理。  

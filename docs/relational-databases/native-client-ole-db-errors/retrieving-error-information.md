@@ -1,13 +1,12 @@
 ---
-title: 检索错误信息 |Microsoft 文档
+title: 检索错误信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +17,22 @@ helpviewer_keywords:
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 94af5d04b4ef10c37753bd37dc1e9c848129e102
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e50595d0cad5247ba98dad45e5e06f4dcc6c9c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414396"
 ---
 # <a name="retrieving-error-information"></a>检索错误信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此示例将从公开的各种错误接口中获得信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
+  此示例从公开的各种错误接口获得信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -224,7 +223,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

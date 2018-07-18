@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028444"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 错误表
   报表服务器基于在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中发生的错误在 SOAP 异常中生成错误和错误消息。 下表显示可通过报表服务器 Web 服务中的“SoapException”从方法访问的错误。 该表按引发异常的方法组织。  

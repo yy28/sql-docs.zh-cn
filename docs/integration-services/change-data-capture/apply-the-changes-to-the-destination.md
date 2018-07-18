@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d8ec7ffc3d743a83a8a6a13ff51165cf05a15e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8450e3aa348b3474e3ed5359c799675e8c34c3af
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408569"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>将变更应用到目标
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第三个任务（即最后一个任务）是将变更应用到目标。 您将需要一个组件应用插入操作、一个组件应用更新操作以及一个组件应用删除操作。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  将包含来自有条件拆分转换的插入操作的输出连接到 OLE DB 目标。  
   
-3.  在 **“OLE DB 目标编辑器”**的 **“连接管理器”** 页上，选择下列选项：  
+3.  在 **“OLE DB 目标编辑器”** 的 **“连接管理器”** 页上，选择下列选项：  
   
     1.  为目标数据库选择或创建一个 OLE DB 连接管理器。  
   
@@ -59,9 +58,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  将包含来自有条件拆分转换的更新操作的输出连接到 OLE DB 命令转换。  
   
-3.  在 **“OLE DB 命令的高级编辑器”**的 **“连接管理器”** 选项卡上，为目标数据库选择或创建一个 OLE DB 连接管理器。  
+3.  在 **“OLE DB 命令的高级编辑器”** 的 **“连接管理器”** 选项卡上，为目标数据库选择或创建一个 OLE DB 连接管理器。  
   
-4.  在 **“OLE DB 命令的高级编辑器”**的 **“组件属性”** 选项卡上，对于 **SqlCommand**，输入参数化的 UPDATE 语句。  
+4.  在 **“OLE DB 命令的高级编辑器”** 的 **“组件属性”** 选项卡上，对于 **SqlCommand**，输入参数化的 UPDATE 语句。  
   
      例如，Customer 表的 UPDATE 语句可能具有以下语法：  
   
@@ -91,9 +90,9 @@ ms.lasthandoff: 05/03/2018
   
 3.  打开“高级编辑器”以配置该转换。  
   
-4.  在 **“OLE DB 命令的高级编辑器”**的 **“连接管理器”** 选项卡上，为目标数据库选择或创建一个 OLE DB 连接管理器。  
+4.  在 **“OLE DB 命令的高级编辑器”** 的 **“连接管理器”** 选项卡上，为目标数据库选择或创建一个 OLE DB 连接管理器。  
   
-5.  在 **“OLE DB 命令的高级编辑器”**的 **“组件属性”** 选项卡上，对于 **SqlCommand**，输入参数化的 DELETE 语句。  
+5.  在 **“OLE DB 命令的高级编辑器”** 的 **“组件属性”** 选项卡上，对于 **SqlCommand**，输入参数化的 DELETE 语句。  
   
      例如，Customer 表的 DELETE 语句可能具有以下语法：  
   

@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 06/13/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 20ede2e4e67c7d3d5e3925e041d0baceda5446e5
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612222"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -77,6 +78,7 @@ SQL Server Management Studio 17.7 升级包（将 17.x 升级到 17.7）：<br>
 
 > [!NOTE]
 > SQL Server PowerShell 模块现可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
+
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 
@@ -137,7 +139,8 @@ Azure SQL 数据仓库：
 
 以下是此 17.7 版本的问题和限制：
 
-使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
+- 使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
+- 可能会观察到 XEvents 查看器中的一些延迟。 这是 [.Net Framework 中的已知问题](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 请考虑升级到 NetFx 4.7.2。
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>卸载并重装 SSMS

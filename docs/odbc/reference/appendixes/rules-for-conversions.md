@@ -24,13 +24,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912703"
 ---
 # <a name="rules-for-conversions"></a>转换规则
 本部分中的规则适用于涉及数值的转换。 对于这些规则，定义了以下术语：  
   
--   *存储分配：*时将数据发送到数据库中的表列。 发生这种情况在调用过程**SQLExecute**， **SQLExecDirect**，和**SQLSetPos**。 在应用商店分配过程中，"目标"引用的数据库列和"源"是指应用程序缓冲区中的数据。  
+-   *存储分配：* 时将数据发送到数据库中的表列。 发生这种情况在调用过程**SQLExecute**， **SQLExecDirect**，和**SQLSetPos**。 在应用商店分配过程中，"目标"引用的数据库列和"源"是指应用程序缓冲区中的数据。  
   
--   *检索分配：*到应用程序缓冲区从数据库检索数据时。 发生这种情况在调用过程**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在检索分配过程中，"目标"是指应用程序缓冲区和"源"引用的数据库列。  
+-   *检索分配：* 到应用程序缓冲区从数据库检索数据时。 发生这种情况在调用过程**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在检索分配过程中，"目标"是指应用程序缓冲区和"源"引用的数据库列。  
   
 -   *CS:* 字符源中的值。  
   

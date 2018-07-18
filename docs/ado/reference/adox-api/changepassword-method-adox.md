@@ -2,7 +2,6 @@
 title: ChangePassword 方法 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 111f549f419404b8174d90e3d1298a7c3789913d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 224dd233d774781e5d902a952848587a543baee4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285188"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 方法 (ADOX)
 更改密码[用户](../../../ado/reference/adox-api/user-object-adox.md)帐户。  
@@ -44,7 +44,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  A**字符串**值，该值指定新密码。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  出于安全原因，除了新密码必须指定旧密码。  
   
  如果提供程序不支持的受信者属性的管理，将会出错。  
@@ -52,5 +52,5 @@ User.ChangePassword OldPassword, NewPassword
 ## <a name="applies-to"></a>适用范围  
  [用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [组和用户 Append、ChangePassword 方法示例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

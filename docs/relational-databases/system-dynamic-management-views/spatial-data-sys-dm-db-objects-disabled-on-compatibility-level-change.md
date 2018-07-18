@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact SQL) |Microsoft 文档
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,12 +25,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 083af55f2629a14f2ad28b293bb84ea9184a0345
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998139"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空间数据-sys.dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空间数据的 sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   列出由于更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的兼容级别而将禁用的索引和约束。 在升级或更改兼容级别之后，包含持久化计算列且其表达式使用空间 UDT 的索引和约束将被禁用。 使用此动态管理函数可以确定兼容级别变化所带来的影响。  
@@ -45,7 +46,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="Arguments"></a> 参数  
  *compatibility_level*  
- **int**标识你打算设置的兼容性级别。  
+ **int** ，它标识要设置的兼容性级别。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -55,7 +56,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|约束的 OBJECT 或 COLUMN<br /><br /> 索引和堆的 INDEX|  
 |**major_id**|**int**|约束的 OBJECT ID<br /><br /> 包含索引和堆的表的 OBJECT ID|  
 |**minor_id**|**int**|对于约束为 NULL<br /><br /> 索引和堆的 Index_id|  
-|**依赖项**|**nvarchar(60)**|导致禁用约束或索引的依赖项的说明。 在升级过程中引发的警告中也使用相同的值。 这方面的例子有：<br /><br /> “space”对应于内部<br /><br /> “geometry”对应于系统 UDT<br /><br /> “geography::Parse”对应于系统 UDT 的一个方法|  
+|**依赖关系**|**nvarchar(60)**|导致禁用约束或索引的依赖项的说明。 在升级过程中引发的警告中也使用相同的值。 这方面的例子有：<br /><br /> “space”对应于内部<br /><br /> “geometry”对应于系统 UDT<br /><br /> “geography::Parse”对应于系统 UDT 的一个方法|  
   
 ## <a name="general-remarks"></a>一般备注  
  当更改兼容级别时，将禁用使用某些内部函数的持久化计算列。 此外，当升级数据库时，将禁用使用任何 Geometry 或 Geography 方法的持久化计算列。  
@@ -114,13 +115,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: 减少**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>已禁用对象的行为  
- **索引**  
+ **“索引”**  
   
- 如果已禁用的聚集的索引，或如果非聚集索引而强制，会引发以下错误:"查询处理器不能生成计划，因为索引 %。\*ls 表或视图 %。\*ls 已禁用。" 若要重新启用这些对象，重新生成索引升级后通过调用**ALTER INDEX ON...重新生成**。  
+ 如果聚集的索引被禁用，或者如果强制非聚集索引，则会引发以下错误:"查询处理器是无法生成计划，因为索引 %。\*ls' 在表或视图 ' %。\*ls' 被禁用。" 若要重新启用这些对象，请重新生成索引升级后通过调用**ALTER INDEX ON...重新生成**。  
   
  **堆**  
   
- 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象，升级后重新生成通过调用**ALTER INDEX 所有 ON...重新生成**。  
+ 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象，请重新生成升级后通过调用**ALTER INDEX 所有 ON...重新生成**。  
   
 ```  
 // ErrorNumber: 8674  
@@ -137,7 +138,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Check 约束和外键**  
   
- 禁用的检查约束和外键不会引发错误。 但修改行时，不强制执行约束。 若要重新启用这些对象，可通过调用升级后检查约束**ALTER TABLE...CHECK 约束**。  
+ 禁用的检查约束和外键不会引发错误。 但修改行时，不强制执行约束。 若要重新启用这些对象，在升级后通过调用检查约束**ALTER TABLE...CHECK 约束**。  
   
  **持久化计算的列**  
   
@@ -149,7 +150,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示上一个查询查询**sys.dm_db_objects_disabled_on_compatibility_level_change**来查找更改兼容性级别为 120 受影响的对象。  
+ 下面的示例演示上查询**sys.dm_db_objects_disabled_on_compatibility_level_change**以查找兼容性级别更改为 120 受影响的对象。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

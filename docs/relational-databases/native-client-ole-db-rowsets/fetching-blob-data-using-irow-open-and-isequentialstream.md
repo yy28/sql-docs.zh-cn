@@ -1,13 +1,12 @@
 ---
-title: 提取 BLOB 数据使用 IRow::Open 和 ISequentialStream |Microsoft 文档
+title: '使用 irow:: Open 和 ISequentialStream 提取 BLOB 数据 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +20,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3716c9eedab9105a9671c296d2f55aaa3c624528
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd55cc02558987350e0a620ef0c48150465a0c47
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410286"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **IRow::Open**支持要打开的对象的唯一 DBGUID_STREAM 和 DBGUID_NULL 类型。  
+  **Irow:: Open**支持要打开的对象的唯一 DBGUID_STREAM 和 DBGUID_NULL 类型。  
   
- 以下函数使用**IRow::Open**和**ISequentialStream**提取大量数据。  
+ 以下函数使用**irow:: Open**并**ISequentialStream**提取大型数据。  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,9 +84,9 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 可以绑定或通过使用来检索大型数据**ISequentialStream**接口。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
+ 大型数据，可绑定或通过使用来检索**ISequentialStream**接口。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 IRow 提取 BLOB 数据](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

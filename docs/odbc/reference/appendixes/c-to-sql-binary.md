@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905914"
 ---
 # <a name="c-to-sql-binary"></a>To SQL 的 C： 二进制
 二进制 ODBC C 数据类型的标识符是：  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853262"
 ---
 # <a name="custom-keystore-providers"></a>自定义密钥存储提供程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

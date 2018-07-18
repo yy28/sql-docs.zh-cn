@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029674"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你可以通过使用报表向导或通过将新的空白报表添加到项目中来添加新的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 **“项目”** 菜单上单击 **“添加新项”**。  
   
-2.  在 **“模板”**上单击 **“报表”**。  
+2.  在 **“模板”** 上单击 **“报表”**。  
   
 3.  单击 **“添加”**。  
   

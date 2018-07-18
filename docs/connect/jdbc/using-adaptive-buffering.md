@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853322"
 ---
 # <a name="using-adaptive-buffering"></a>使用自适应缓冲
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +30,9 @@ ms.lasthandoff: 05/03/2018
   
  若要允许应用程序来处理非常大的结果，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供自适应缓冲。 使用自适应缓冲，驱动程序检索语句执行结果从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]随着应用程序需要它们，而不是一次。 一旦应用程序不再访问结果，驱动程序还会立即丢弃它们。 以下是可以使用自适应缓冲的一些示例：  
   
--   **此查询生成一个非常大型结果集：**应用程序可以执行生成不是应用程序可以在内存中存储的更多行的 SELECT 语句。 在以前版本中，应用程序必须使用服务器游标来避免发生内存不足错误。 借助于自适应缓冲，可以对任意大的结果集执行只进只读传递，而不需要服务器游标。  
+-   **此查询生成一个非常大型结果集：** 应用程序可以执行生成不是应用程序可以在内存中存储的更多行的 SELECT 语句。 在以前版本中，应用程序必须使用服务器游标来避免发生内存不足错误。 借助于自适应缓冲，可以对任意大的结果集执行只进只读传递，而不需要服务器游标。  
   
--   **此查询生成非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**出参数值：**应用程序可以检索单个值 (列或 OUT 参数) 太大，无法完全纳入应用程序内存。         自适应缓冲允许客户端应用程序通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索作为流，这样的值。 应用程序检索的值从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]如从流中读取。  
+-   **此查询生成非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**出参数值：** 应用程序可以检索单个值 (列或 OUT 参数) 太大，无法完全纳入应用程序内存。         自适应缓冲允许客户端应用程序通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索作为流，这样的值。 应用程序检索的值从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]如从流中读取。  
   
 > [!NOTE]  
 >  使用自适应缓冲时，JDBC Driver 只会缓冲它必须缓冲的那些数据。 该驱动程序未提供任何公共方法来控制或限制缓冲区的大小。  

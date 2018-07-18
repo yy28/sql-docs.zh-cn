@@ -2,10 +2,10 @@
 title: 提取 BLOB 数据使用 IRow::GetColumns 和 ISequentialStream |Microsoft 文档
 description: 使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 数据
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 02e17dd26df945b69e861a0d15a684549178f2a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4856cd6694aed63dfb11c1adc048c70c571cf3e4
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689370"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   以下函数使用**IRow::GetColumns**和**ISequentialStream**提取大型数据：  
   
@@ -89,7 +92,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 IRow 提取 BLOB 数据](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

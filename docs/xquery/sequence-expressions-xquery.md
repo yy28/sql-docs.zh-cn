@@ -1,5 +1,5 @@
 ---
-title: 序列表达式 (XQuery) |Microsoft 文档
+title: 序列表达式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048735"
 ---
 # <a name="sequence-expressions-xquery"></a>序列表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- 你可以通过使用计算序列中的项**fn:count()** 函数。  
+ 可以通过使用计算序列中的项**fn:count()** 函数。  
   
 ```  
 declare @x xml  
@@ -104,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>示例 C  
- 下面的查询指定的 AdditionalContactInfo 列针对**xml** Contact 表中的类型。 此列存储附加联系信息，如一个或多个附加电话号码、寻呼机号码和地址。 \<TelephoneNumber >，\<页导航 >，并且其他节点可以在文档中的任意位置出现。 查询将构造一个序列，其中包含所有\<telephoneNumber > 上下文节点后, 跟的子级\<页导航 > 子级。 注意返回表达式 (`($a//act:telephoneNumber, $a//act:pager)`) 中逗号序列运算符的使用。  
+ 下面的查询针对的 AdditionalContactInfo 列指定**xml** Contact 表中的类型。 此列存储附加联系信息，如一个或多个附加电话号码、寻呼机号码和地址。 \<TelephoneNumber >，\<寻呼程序 >，并且其他节点可以在文档中任何位置出现。 该查询将构造一个序列，其中包含所有\<telephoneNumber > 上下文节点后, 跟的子级\<寻呼程序 > 子级。 注意返回表达式 (`($a//act:telephoneNumber, $a//act:pager)`) 中逗号序列运算符的使用。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -174,7 +175,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- 有关如何指定路径表达式中的谓词的详细信息，请参阅[在路径表达式步骤中指定的谓词](../xquery/path-expressions-specifying-predicates.md)。  
+ 有关如何指定路径表达式中的谓词的详细信息，请参阅[路径表达式步骤中指定的谓词](../xquery/path-expressions-specifying-predicates.md)。  
   
  下面的示例生成子树的序列表达式并对该序列应用筛选器。  
   
@@ -247,7 +248,7 @@ SELECT @x.query('
   
 -   不支持使用 union、intersect 或 except 运算符组合节点序列。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

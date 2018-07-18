@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903102"
 ---
 # <a name="odbc-component-files"></a>ODBC 组件文件
 ODBC 驱动程序文件的每个组件的 ODBC 桌面数据库驱动程序 4.0 需要。  

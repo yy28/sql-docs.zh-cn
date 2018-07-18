@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,12 @@ caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed2f8686381e57dbac0b171ba28a2d1aaab77f11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1bca3b8acd26a4e2527b8e721a7da3a073ee4c0
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358149"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  日志读取器代理建立连接时使用的安全套接字层 (SSL) 加密级别。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -115,7 +115,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  指定在日志读取器运行期间记录的历史记录数量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|默认值。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
@@ -147,7 +147,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  指定输出是否应提供详细内容。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|仅输出错误消息。|  
 |**1**|输出所有代理进度报告消息。|  

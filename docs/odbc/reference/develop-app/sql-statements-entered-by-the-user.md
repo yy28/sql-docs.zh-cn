@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911392"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>用户输入的 SQL 语句
 通常还执行即席分析的应用程序允许用户直接输入 SQL 语句。 例如：  

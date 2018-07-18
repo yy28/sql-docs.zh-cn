@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,17 +16,18 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1117cc82dee86fa845dc817a7c98eaefe7e4548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1490e786bd2799d6ea2abb1c821b155777f1356f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403889"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“函数依赖关系配置文件请求”** 设置选项。 函数依赖关系配置文件报告一个列（依赖列）中的值对另一个列或另一个列集（决定列）中的值的依赖程度。 此配置文件还有助于标识数据中的问题，如值无效。 例如，您对邮政编码列与美国的州列之间的依赖关系进行事件探查， 在此配置文件中，同一邮政编码应始终对应相同的州，但配置文件发现依赖关系冲突。  
   
 > [!NOTE]  
->  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”**页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+>  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
  有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
@@ -89,7 +88,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  如果使用通配符 **(\*)** 作为 **ColumnName**，则 **CompareOptions** 将变为只读并设置为 **Default** 设置。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Default**|根据源表中列的排序规则对数据进行排序和比较。|  
 |**BinarySort**|根据为每个字符所定义的位模式对数据进行排序和比较。 二进制排序顺序既区分大小写，也区分重音。 二进制排序顺序的速度也最快。|  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，"å" 与 "a" 相同。|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **ThresholdSetting**  
  指定阈值设置。 此属性的默认值为 **Specified**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**无**|不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
 |**Specified**|使用 **FDStrengthThreshold**中指定的阈值。 仅当函数依赖关系强度大于阈值时，才会报告函数依赖关系强度。|  

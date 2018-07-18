@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906442"
 ---
 # <a name="numeric-literals"></a>数值
 数值数据值存储在字符串时，将使用数值。 对于为 SQL_C_CHAR 字符串，数值 SQL 数据的转换或转换的数字的 C 数据为 SQL_CHAR 或 SQL_VARCHAR 字符串，数值的文本语法用于指定目标中存储的内容。 对于数字存储为 SQL_C_CHAR 字符串到数值 SQL 数据或存储为 SQL_CHAR 字符串到数值 C 数据数值的转换，此语法用于验证在源中存储的内容。  

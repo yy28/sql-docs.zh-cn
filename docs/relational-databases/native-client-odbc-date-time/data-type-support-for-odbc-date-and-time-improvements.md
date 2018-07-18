@@ -1,31 +1,30 @@
 ---
-title: 数据类型支持 ODBC 日期和时间改进 |Microsoft 文档
+title: 数据类型为 ODBC 日期和时间改进的支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 46cbe54743926a3633c32cb40931436cae1dedc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431286"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>数据类型支持 ODBC 日期和时间的改进
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 日期和时间改进的数据类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -40,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
  下表显示完整的服务器类型映射。 注意，该表的某些单元格包含两个条目；在这些情况下，第一个是针对 ODBC 3.0 的值，第二个是针对 ODBC 2.0 的值。  
   
-|SQL Server 数据类型|SQL 数据类型|“值”|  
+|SQL Server 数据类型|SQL 数据类型|ReplTest1|  
 |--------------------------|-------------------|-----------|  
-|日期时间|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
+|date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
 |Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
@@ -65,11 +64,11 @@ ms.lasthandoff: 05/03/2018
   
 |SQL Server 数据类型|ODBC 数据类型|客户端转换的字符串格式|  
 |--------------------------|--------------------|------------------------------------------|  
-|日期时间|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
+|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|yyyy mm dd hh: mm: [.9999999]<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|年-月-日 hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
   
  日期/时间文字的 ODBC 转义序列没有更改。  
@@ -141,9 +140,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 如果**timezone_hour**为负， **timezone_minute**必须为负数或零。 如果**timezone_hour**为正、 **timezone_minute**必须为正数或零。 如果**timezone_hour**为零，s**timezone_minute**范围-59 到 +59 中可以具有任何值。  
+ 如果**timezone_hour**为负， **timezone_minute**必须为负数或零。 如果**timezone_hour**为正， **timezone_minute**必须为正数或零。 如果**timezone_hour**为零，则**timezone_minute** -59 到 + 59 范围内可能具有的任何值。  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

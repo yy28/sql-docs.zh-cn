@@ -2,10 +2,10 @@
 title: ISSAsynchStatus::GetStatus (OLE DB) |Microsoft 文档
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f302aaf87ebe80a778a91fffa6058f2e6751004
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd2afbdae2445c6709caead685c7611292f8a629
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689580"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   返回异步执行操作的状态。  
   
@@ -111,7 +114,7 @@ HRESULT GetStatus(
  E_FAIL  
  发生了特定于访问接口的错误。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::GetStatus**方法的行为完全相同**IDBAsynchStatus::GetStatus**方法处在于如果初始化的数据源对象被中止，E_UNEXPECTED 返回而不是比 DB_E_CANCELED (尽管[ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)将返回 DB_E_CANCELED)。 这是因为以便进一步初始化操作可能已尝试，数据源对象不会保留在以下了 abort，常用僵停状态。  
   
  如果异步初始化或填充行集，则必须支持此方法。  
@@ -126,8 +129,8 @@ HRESULT GetStatus(
   
  调用**ISSAsynchStatus::GetStatus**上初始化的数据源对象或填充的行集，或将值传递*eOperation*以外 DBASYNCHOP_OPEN，返回与，则为 S_OK *pulProgress*和*pulProgressMax*设置为相同的值。 如果**ISSAsynchStatus::GetStatus**的命令的更新、 删除或插入行，在执行创建的对象上调用方法同时*pulProgress*和*pulProgressMax*指示命令受影响的行总数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

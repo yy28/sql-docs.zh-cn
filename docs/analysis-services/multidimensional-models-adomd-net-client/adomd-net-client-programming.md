@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020224"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 客户端编程
   ADOMD.NET 客户端组件驻留在**Microsoft.AnalysisServices.AdomdClient** （中 microsoft.analysisservices.adomdclient.dll) 命名空间。 这些客户端组件提供的功能的客户端和中间层应用程序轻松地查询数据和元数据来自分析数据存储区，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  

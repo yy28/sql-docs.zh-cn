@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33012754"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>使用对象资源管理器获取视图属性  
   
-1.  在 **“对象资源管理器”**中，单击包含要查看属性的视图的数据库旁边的加号，然后单击加号以展开 **“视图”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，单击包含要查看属性的视图的数据库旁边的加号，然后单击加号以展开 **“视图”** 文件夹。  
   
 2.  右键单击要查看其属性的视图，然后选择“属性”。  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>使用视图设计器工具获取视图属性  
   
-1.  在 **“对象资源管理器”**中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
   
 2.  右键单击要查看其属性的视图，然后选择“设计”。  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-get-dependencies-on-the-view"></a>获取视图的依赖关系  
   
-1.  在 **“对象资源管理器”**中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
+1.  在 **“对象资源管理器”** 中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
   
 2.  右键单击要查看其属性的视图，然后选择“查看依赖关系”。  
   
@@ -184,7 +185,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>获取视图的定义和属性  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -214,7 +215,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>获取视图的依赖关系  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

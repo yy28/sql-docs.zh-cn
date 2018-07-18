@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915173"
 ---
 # <a name="static-sql"></a>静态 SQL
 中所示嵌入式的 SQL[嵌入式 SQL 示例](../../odbc/reference/embedded-sql-example.md)称为静态 SQL。 在程序中的 SQL 语句是静态的; 因为，称为静态 SQL也就是说，它们不会更改每次运行该程序。 如前一部分中所述，这些语句进行编译的程序的其余部分时，编译。  

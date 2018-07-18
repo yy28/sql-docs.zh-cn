@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916192"
 ---
 # <a name="unicode-applications"></a>Unicode 应用程序
 你可以重新编译应用程序作为 Unicode 应用程序在两种方式之一：  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020384"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>创建和修改嵌入的数据源
   嵌入数据源在报表定义中定义并只由该报表使用。  

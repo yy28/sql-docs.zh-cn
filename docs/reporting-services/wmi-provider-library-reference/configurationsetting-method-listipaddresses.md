@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030004"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting 方法 - ListIPAddresses
   列出报表服务器计算机的 IP 地址。  

@@ -1,5 +1,5 @@
 ---
-title: 使用目录函数 |Microsoft 文档
+title: 使用目录函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0f6a370d3a45a07c57f4de30fb22afdd55ea5f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b778df7190da4b9aab69419c8487267a0911ff6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423756"
 ---
 # <a name="using-catalog-functions"></a>使用目录函数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
   所有数据库都具有一个包含该数据中存储的数据的结构。 此结构的定义以及权限等其他信息存储在目录（作为一组系统表实现）中，也称为数据字典。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序可让应用程序确定通过对 ODBC 目录函数的调用的数据库结构。 目录函数返回结果集中的信息，这些函数是使用目录存储过程实现的，用于查询该目录中的系统表。 例如，应用程序可以请求包含系统上所有表的相关信息的结果集或包含特定表中的所有列的相关信息的结果集。 标准 ODBC 目录函数用于获取连接应用程序的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的目录信息。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序，应用程序可以确定通过调用 ODBC 目录函数的数据库结构。 目录函数返回结果集中的信息，这些函数是使用目录存储过程实现的，用于查询该目录中的系统表。 例如，应用程序可以请求包含系统上所有表的相关信息的结果集或包含特定表中的所有列的相关信息的结果集。 标准 ODBC 目录函数用于获取连接应用程序的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的目录信息。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持通过一个查询访问多个异类 OLE DB 数据源的数据的分布式查询。 访问远程 OLE DB 数据源的一种方法是将数据源定义为链接服务器。 这可以通过使用[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。 定义链接服务器后，使用由四个部分组成的名称可以在 Transact-SQL 语句中引用该服务器上的对象：  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
      返回链接服务器包含的目录的列表。  
   
- 你具有链接的服务器名称和目录的名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用的两部分名称从目录获取信息*linked_server_name***。***目录*为*CatalogName*上以下 ODBC 目录函数：  
+ 链接的服务器名称和目录名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用由两部分组成的名称的目录中的获取信息*linked_server_name ***。*** 目录*有关*CatalogName*对以下 odbc 目录函数：  
   
 -   **SQLColumnPrivileges**  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **SQLTables**  
   
- 两个部分构成*linked_server_name***。***目录*也支持*FKCatalogName*和*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
+ 由两部分*linked_server_name ***。*** 目录*也支持*FKCatalogName*并*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要以下文件：  
   
@@ -81,8 +82,8 @@ ms.lasthandoff: 05/03/2018
   
      在执行时必须存在。 sqlncli11.dll 随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起分发。  
   
-## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+## <a name="see-also"></a>请参阅  
+ [SQL Server 本机客户端&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
  [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   

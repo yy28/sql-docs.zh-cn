@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028424"
 ---
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
 
@@ -67,9 +68,9 @@ ms.lasthandoff: 05/03/2018
   
 7.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
   
-8.  在 **“角色名称”**中，键入 **RSExecRole**。  
+8.  在 **“角色名称”** 中，键入 **RSExecRole**。  
   
-9. 在 **“所有者”**中，键入 **DBO**。  
+9. 在 **“所有者”** 中，键入 **DBO**。  
   
 10. 单击 **“安全对象”**。  
   

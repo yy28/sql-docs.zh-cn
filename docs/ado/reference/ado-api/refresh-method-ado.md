@@ -2,7 +2,6 @@
 title: 刷新方法 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af7917817022b83ae5a8da4955ba3c08d05b0819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c52fd39b749f7e5c46bf58a943729319cfa78439
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281238"
 ---
 # <a name="refresh-method-ado"></a>刷新方法 (ADO)
 更新以反映，从可用的对象的集合和特定中的对象，提供程序。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **刷新**方法完成不同的任务，具体取决于调用它的集合。  
   
 ### <a name="parameters"></a>Parameters  
@@ -69,7 +69,7 @@ collection.Refresh
 |[属性集合](../../../ado/reference/ado-api/properties-collection-ado.md)|[表集合](../../../ado/reference/adox-api/tables-collection-adox.md)|[用户集合](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[视图集合](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [刷新方法示例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [刷新方法示例 （VC + +）](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Count 属性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

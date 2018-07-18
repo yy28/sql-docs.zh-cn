@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913622"
 ---
 # <a name="serializability"></a>可序列化性
 理想情况下，事务应*可序列化*。 事务可认为是如果同时运行事务的结果是否相同按顺序运行它们的结果，可序列化-一个接一个，即。 它并不重要的事务，则首先执行，仅，结果不会反映任何事务的混合。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd0aac2e3a0be8bba0bba6ff4e263c42f929ec17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332481"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>消息队列任务可用的自定义日志记录消息  
  下表列出了消息队列任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|指示任务已完成打开消息队列的操作。|  
 |**MSMQBeforeOpen**|指示任务开始打开消息队列。|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 05/03/2018
  **MessageType**  
  选择消息类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
 |**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  
@@ -185,7 +184,7 @@ ms.lasthandoff: 05/03/2018
  **MessageType**  
  选择消息类型。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
 |**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  
@@ -204,7 +203,7 @@ ms.lasthandoff: 05/03/2018
  **筛选**  
  指定是否对消息应用筛选器。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
@@ -225,7 +224,7 @@ ms.lasthandoff: 05/03/2018
  **Filter**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
@@ -251,7 +250,7 @@ ms.lasthandoff: 05/03/2018
  **比较**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**InclusionThresholdSetting**|不对消息进行比较。|  
 |**Exact match**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
@@ -265,7 +264,7 @@ ms.lasthandoff: 05/03/2018
  **比较**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**InclusionThresholdSetting**|不对消息进行比较。|  
 |**Exact match**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035204"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
   标准订阅是由希望通过电子邮件传递报表或将报表传递到共享文件夹的各个用户所创建的订阅。 本主题提供了由各个用户创建和管理的标准订阅的有关信息。 而数据驱动订阅具有不同的要求和步骤，将在另一个主题中进行讨论。 有关详细信息，请参阅 [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

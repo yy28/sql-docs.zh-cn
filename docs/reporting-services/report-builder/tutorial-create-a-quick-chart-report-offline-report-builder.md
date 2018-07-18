@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022414"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
 

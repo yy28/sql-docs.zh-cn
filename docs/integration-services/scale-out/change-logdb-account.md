@@ -1,26 +1,25 @@
 ---
 title: 更改 SSIS Scale Out 日志记录的帐户 | Microsoft Docs
-ms.description: This article describes how to change the user account for SSIS Scale Out logging
-ms.custom: ''
+description: 本文介绍如何更改 SSIS Scale Out 日志记录的用户帐户
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c266e716bbbaab50fa26c94cb7ee7836c010c5a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d2fa1e69ada0fe5e4ef66e01cd5322efbf38516
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406579"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>更改 Scale Out 日志记录的帐户
 在 Scale Out 中运行 SSIS 包时，会使用自动创建的名为 ##MS_SSISLogDBWorkerAgentLogin## 的用户帐户将事件消息记录到 SSISDB 数据库中。 此用户使用 SQL Server 身份验证登录。

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,16 @@ helpviewer_keywords:
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c59f13b67d8594610a8d7b764f5f42aed8733203
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790008"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ property
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检测到因电力故障或其他系统故障造成的不完全 I/O 操作。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效<br /><br /> 基本数据类型：int| 
 |IsVerifiedClone|数据库是使用 DBCC CLONEDATABASE 的 WITH VERIFY_CLONEDB 选项创建的用户数据库的仅限架构和仅限统计信息副本。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/3177838)。|**适用范围**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效<br /><br /> 基本数据类型：int| 
 |IsXTPSupported|指示数据库是否支持内存中 OLTP，即创建和使用内存优化表和本机编译模块。<br /><br /> 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 与任何 MEMORY_OPTIMIZED_DATA 文件组的存在与否无关，创建内存中 OLTP 对象则需要该文件组。|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效，出现错误或不适用<br /><br /> 基本数据类型：int|  
-|LastGoodCheckDbTime|上次在指定数据库上成功运行 DBCC CHECKDB 的日期和时间。|**适用范围**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> 日期时间值。<br /><br /> NULL：输入无效<br /><br /> 基本数据类型：datetime| 
+|LastGoodCheckDbTime|在指定数据库上运行的上一成功 DBCC CHECKDB 的日期和时间。<sup>1</sup> 如果 DBCC CHECKDB 未在数据库上运行，则返回 1900-01-01 00:00:00.000。|**适用范围**：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始。<br /><br /> 日期时间值。<br /><br /> NULL：输入无效<br /><br /> 基本数据类型：datetime| 
 |LCID|排序规则的 Windows 区域设置标识符 (LCID)。|LCID 值（十进制格式）。<br /><br /> 基本数据类型：int|  
 |MaxSizeInBytes|最大数据库大小（以字节为单位）。|适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：数据库未启动<br /><br /> 基本数据类型：bigint|  
 |恢复|数据库恢复模式|FULL：完整恢复模式<br /><br /> BULK_LOGGED：大容量日志记录模型<br /><br /> SIMPLE：简单恢复模式<br /><br /> 基本数据类型：nvarchar(128)|  
@@ -99,8 +99,12 @@ property
 |“登录属性”|数据库状态。|ONLINE：数据库可用于查询。<br /><br /> 注意：数据库处于打开状态但尚未恢复时，可能返回 ONLINE 状态。 要确定数据库何时可以接受连接，可以查询 DATABASEPROPERTYEX 的 Collation 属性。 在数据库排序规则返回非 Null 值之后，数据库就可以接受连接了。 对于 Always On 数据库，可以查询 `sys.dm_hadr_database_replica_states` 的 database_state 或 database_state_desc 列。<br /><br /> OFFLINE：数据库已被显式置于脱机状态。<br /><br /> RESTORING：数据库还原已启动。<br /><br /> RECOVERING：数据库还原已启动且数据库尚未准备好进行查询。<br /><br /> SUSPECT：数据库未恢复。<br /><br /> EMERGENCY：数据库处于紧急只读状态。 只有 sysadmin 成员可进行访问。<br /><br /> 基本数据类型：nvarchar(128)|  
 |Updateability|指示是否可以修改数据。|READ_ONLY：数据库支持数据读取，但不支持数据修改。<br /><br /> READ_WRITE：数据库支持数据读取和修改。<br /><br /> 基本数据类型：nvarchar(128)|  
 |UserAccess|指示哪些用户可以访问数据库。|SINGLE_USER：一次仅一个 db_owner、dbcreator 或 sysadmin 用户<br /><br /> RESTRICTED_USER：仅限 db_owner、dbcreator 或 sysadmin 角色的成员<br /><br /> MULTI_USER：所有用户<br /><br /> 基本数据类型：nvarchar(128)|  
-|版本|用于创建数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码的内部版本号。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|版本号：数据库处于打开状态。<br /><br /> NULL：数据库尚未启动。<br /><br /> 基本数据类型：int|  
-  
+|版本|用于创建数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码的内部版本号。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|版本号：数据库处于打开状态。<br /><br /> NULL：数据库尚未启动。<br /><br /> 基本数据类型：int| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> 对于属于某可用性组的数据库，`LastGoodCheckDbTime` 将返回在主要副本上运行的上一成功 DBCC CHECKDB 的日期和时间，而不管从哪个副本运行命令。 
+
 ## <a name="return-types"></a>返回类型
 **sql_variant**
   

@@ -2,7 +2,6 @@
 title: MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (RDS) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315ebd2a4de1a98634a5077096c0909550d979e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b57fef531fd66e9e649cba77b88d666281b273f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288308"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (RDS)
 将移动到第一个，最后，在指定的下一步，或上一个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -44,13 +44,13 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  表示的对象变量[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  你可以使用**移动**方法**rds.DataControl**对象来浏览网页上的数据绑定控件中的数据记录。 例如，假设你显示**记录集**在通过绑定到网格中**rds.DataControl**对象。 然后，可以包括名、 姓、 下一步和上一步按钮可供用户单击与第一个移动、 最后、 下一步，或在所显示的上一条记录**记录集**。 执行此操作通过调用**MoveFirst**， **MoveLast**， **MoveNext**，和**MovePrevious**方法**rds.DataControl**分别对象名、 姓、 下一步和上一步按钮的 onClick 过程中。 [通讯簿示例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)演示如何执行此操作。  
   
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveRecord 方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

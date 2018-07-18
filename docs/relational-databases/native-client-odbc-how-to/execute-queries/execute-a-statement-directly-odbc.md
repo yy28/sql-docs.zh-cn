@@ -1,28 +1,27 @@
 ---
-title: 执行语句直接 (ODBC) |Microsoft 文档
+title: 直接执行语句 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8d474f322ac4aa4ac140fea6a4eac378057d72d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89e6bf98dfe51f8287c37161b54eae4a0b6ba699
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429866"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>直接执行语句 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,15 +30,15 @@ ms.lasthandoff: 05/03/2018
     
 ### <a name="to-execute-a-statement-directly-and-one-time-only"></a>直接执行语句并且只执行一次  
   
-1.  如果语句具有参数标记，使用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)将每个参数绑定到程序变量。 使用数据值填充程序变量，然后设置任何执行时数据参数。  
+1.  如果语句有参数标记，使用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)要绑定到程序变量的每个参数。 使用数据值填充程序变量，然后设置任何执行时数据参数。  
   
 2.  调用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)执行语句。  
   
-3.  如果使用数据在执行输入的参数， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)返回 SQL_NEED_DATA。 使用将数据发送小区块中[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+3.  如果使用执行时数据输入的参数， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)返回 SQL_NEED_DATA。 通过使用分块区发送数据[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)并[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>通过使用按列参数绑定多次执行语句  
   
-1.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+1.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)以设置以下属性：  
   
      将 SQL_ATTR_PARAMSET_SIZE 设置为参数集 (S) 的数目。  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
      分配 S 参数缓冲区的数组以存储数据长度。  
   
-     调用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)要绑定到语句参数的参数的数据值和数据长度数组。  
+     调用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)若要将参数数据值和数据长度数组绑定到语句参数。  
   
      设置任意执行时数据 text 或 image 参数。  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  调用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)执行语句。 驱动程序将有效地执行该语句 S 次，每组参数一次。  
   
-4.  如果使用数据在执行输入的参数， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)返回 SQL_NEED_DATA。 使用将数据发送小区块中[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+4.  如果使用执行时数据输入的参数， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)返回 SQL_NEED_DATA。 通过使用分块区发送数据[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)并[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>通过使用按行参数绑定多次执行语句  
   
@@ -73,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
      第二部分是 SQLINTEGER 变量，以包含状态指示器。  
   
-2.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+2.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)以设置以下属性：  
   
      将 SQL_ATTR_PARAMSET_SIZE 设置为参数集 (S) 的数目。  
   
@@ -83,17 +82,17 @@ ms.lasthandoff: 05/03/2018
   
      将 SQL_ATTR_PARAMS_STATUS_PTR 设置为指向 SQLUSSMALLINT 变量的数组 [S]，以包含参数状态指示器。  
   
-3.  对于每个参数标记，调用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)为参数的数据值和数据长度指针指向在步骤 1 中分配的结构数组的第一个元素及其变量。 如果参数是执行时数据参数，则设置它。  
+3.  对于每个参数标记，调用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)以参数的数据值和数据长度指针指向其在步骤 1 中分配的结构数组的第一个元素中的变量。 如果参数是执行时数据参数，则设置它。  
   
 4.  用数据值填充绑定参数缓冲区数组。  
   
 5.  调用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)执行语句。 驱动程序将有效地执行该语句 S 次，每组参数一次。  
   
-6.  如果使用数据在执行输入的参数， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)返回 SQL_NEED_DATA。 使用将数据发送小区块中[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+6.  如果使用执行时数据输入的参数， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)返回 SQL_NEED_DATA。 通过使用分块区发送数据[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)并[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
- **请注意**按列和按行绑定更通常使用结合[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)和[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)比使用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+ **请注意**按列和按行绑定更常见的做法与结合[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)并[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)比与[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
-## <a name="see-also"></a>另请参阅  
- [正在执行查询操作指南主题 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [执行查询操作指南主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

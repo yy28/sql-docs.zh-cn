@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023454"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>通过添加条带线突出显示图表数据（报表生成器和 SSRS）
   条带线（或条带）是按固定或自定义间隔使图表背景带有阴影的水平或垂直区域。 可以使用条带线执行以下操作：  

@@ -2,7 +2,6 @@
 title: BOF，EOF 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276146"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF，EOF 属性 (ADO)
 -   **BOF**指示当前记录位置处于之前的第一个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>返回值  
  **BOF**和**EOF**属性返回**布尔**值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**BOF**和**EOF**属性来确定是否**记录集**对象包含的记录或者是否已超出限制的**记录集**对象移动到记录时。  
   
  **BOF**属性返回**True** (-1) 的当前记录的位置是否在第一条记录之前和**False** (0); 如果当前记录的位置位于或迟于第一个记录。  
@@ -72,6 +72,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [BOF、 EOF，以及书签属性示例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF、 EOF 和书签属性示例 （VC + +）](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

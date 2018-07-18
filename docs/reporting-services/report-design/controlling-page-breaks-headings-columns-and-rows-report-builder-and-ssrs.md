@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019464"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分页符、标题、列和行（报表生成器和 SSRS）
   分页符可将报表划分为单独的页，以便于查看和打印。 预览报表或将其导出为其他文件格式时，分页符可确定报表内容适合报表页的方式，以获得最佳查看效果。  

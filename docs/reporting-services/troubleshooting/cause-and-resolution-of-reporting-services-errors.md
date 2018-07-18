@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030765"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 错误的原因和解决方法
   本主题包含与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相关的多个错误的原因和解决方法信息。 本节中的错误消息主题提供对错误消息、可能的原因以及为更正问题可以采取的所有措施的说明。  

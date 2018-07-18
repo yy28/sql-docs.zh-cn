@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544929"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 证书预配的分析平台系统
 **PDW 证书预配**Analytics Platform System 页**Configuration Manager**导入或删除 PDW 区域使用的证书。 使用，对通信进行加密的证书有助于给控制节点通过 SQL Server 客户端，使用 SQL Server PDW 驱动程序的工具的安全通信[管理控制台](monitor-the-appliance-by-using-the-admin-console.md)，并 Integration Services 将加载。  

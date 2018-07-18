@@ -1,30 +1,20 @@
 ---
 title: '&lt;= （小于或等于） (DMX) |Microsoft 文档'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- <= (less than or equal to operator)
-- less than or equal to operator (<=)
-ms.assetid: 4f7135e8-1e27-4568-a9df-668454b4cdde
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ce5116339f27157a817a002298684389dde7e9e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 12dc7ca07dba7d36e7f65c9c6097b8b42457d3da
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054005"
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= （小于或等于） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +35,7 @@ DMX_Expression <= DMX_Expression
 ## <a name="return-value"></a>返回值  
  如果两个参数都非空，并且第一个参数的值小于或等于第二个参数的值，则返回包含 TRUE 的布尔值。 如果两个参数都非空，并且第一个参数的值大于第二个参数的值，则返回包含 FALSE 的布尔值。 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该布尔值包含空值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [比较运算符&#40;DMX&#41;](../dmx/operators-comparison.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  

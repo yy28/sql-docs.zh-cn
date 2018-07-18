@@ -2,7 +2,6 @@
 title: 通讯簿导航按钮 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3162bb0a7bd7ed54812848df214658980dc6ec8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61a43c6aef14cf59561cd433cfe5bd3c66761940
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273696"
 ---
 # <a name="address-book-navigation-buttons"></a>通讯簿导航按钮
 通讯簿应用程序在 Web 页的底部显示导航按钮。 你可以使用导航按钮导航通过 HTML 网格显示中的数据通过选择第一个或最后一行数据或到当前选择相邻的行。  
@@ -65,7 +65,7 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 

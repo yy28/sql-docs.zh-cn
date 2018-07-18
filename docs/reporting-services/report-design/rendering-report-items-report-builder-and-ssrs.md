@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026554"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>呈现报表项（报表生成器和 SSRS）
   报表项的数量、大小和位置会影响呈现器对表体的分页方式。 下面说明了各种报表项的呈现方式。  

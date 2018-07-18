@@ -3,8 +3,6 @@ title: 全局设置 （日志记录） (SybaseToSQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d877237074380414a630aa4585415ddd8bffcad6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7f0e5bebca49dfb05d0815386fee7d85d71b80b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778903"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>全局设置 （日志记录） (SybaseToSQL)
 使用**全局设置**对话框中，指定 SSMA 的日志记录设置。 通常情况下，仅当使用产品支持时，才会更改这些设置。  
   
 若要访问此对话框中，在**工具**菜单上，选择**全局设置**，然后单击**日志记录**在左窗格的底部的按钮。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **消息级别**  
 下下面的选项将可用**消息级别**:  
   

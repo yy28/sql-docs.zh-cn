@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901812"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 命令
 指定的存储的备注字段如何分配磁盘空间。  

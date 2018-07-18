@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,11 +18,12 @@ caps.latest.revision: 68
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6f5209c2e5017e208110886521f74cfa37ab388e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e41f40025a7ccf883f2643baf538f4f045f5b65
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322126"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
 
@@ -86,12 +86,14 @@ ms.lasthandoff: 05/03/2018
  > [!IMPORTANT]
  > 尽管可以在具有只读域控制器 (RODC) 的环境中安装 Reporting Services，但 Reporting Services 需要有权访问读写域控制器才能正常工作。 如果 Reporting Services 只有权访问 RODC，当你在尝试管理此服务时则可能会遇到错误。
   
-##  <a name="bkmk_defaultURLreservations"></a> 默认 URL 保留项  
- URL 保留项由前缀、主机名、端口和虚拟目录组成：  
+##  
+  <a name="bkmk_defaultURLreservations">
+  </a> 默认 URL 预留  
+ URL 预留由前缀、主机名、端口和虚拟目录组成：  
   
-|组成部分|Description|  
+|组成部分|描述|  
 |----------|-----------------|  
-|Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 保留项。|  
+|Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 预留。|  
 |主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `http://<computername>/reportserver`、`http://localhost/reportserver` 或 `http://<IPAddress>/reportserver`。|  
 |端口|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|  
 |虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<instance_name>（对于报表服务器 Web 服务）和 Reports_\<instance_name>（对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020044"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>向报表添加程序集引用 (SSRS)
   嵌入包含对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类的引用的自定义代码时，如果这些类不是 <xref:System.Math> 或 <xref:System.Convert>中的类，则必须提供对报表的程序集引用，以使报表处理器能够解析名称。 有关详细信息，请参阅[向报表添加代码 (SSRS)](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)。  
@@ -36,9 +37,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“引用”**。  
   
-3.  在 **“添加或删除程序集”**中，单击 **“添加”** ，然后单击省略号按钮浏览到程序集。  
+3.  在 **“添加或删除程序集”** 中，单击 **“添加”** ，然后单击省略号按钮浏览到程序集。  
   
-4.  在 **“添加或删除类”**中，单击 **“添加”** ，然后键入类的名称，并提供要在报表中使用的实例名。  
+4.  在 **“添加或删除类”** 中，单击 **“添加”** ，然后键入类的名称，并提供要在报表中使用的实例名。  
   
     > [!NOTE]  
     >  仅为基于实例的成员指定类名称和实例名。 请不要在 **“类”** 列表中指定静态成员。 有关详细信息，请参阅 [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  

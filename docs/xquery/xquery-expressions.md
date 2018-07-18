@@ -23,15 +23,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030355"
 ---
 # <a name="xquery-expressions"></a>XQuery 表达式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  描述的 XQuery 表达式的主题。  
+  介绍 XQuery 表达式的主题。  
   
 
  [主表达式&#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
  介绍 XQuery 支持的比较表达式。 即，常规比较表达式、值比较表达式、节点比较表达式和节点类型比较表达式。  
   
  [逻辑表达式&#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
- 描述为逻辑的 XQuery 支持**和**和**或**运算符。  
+ 介绍 XQuery 对逻辑**并**并**或**运算符。  
   
  [XML 构造&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
  介绍允许在查询中构造 XML 的 XQuery 构造函数。  
@@ -58,22 +59,22 @@ ms.lasthandoff: 05/03/2018
  [FLWOR 语句和迭代&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  介绍 FLOWR 迭代语法。 代表 FOR、LET、WHERE、ORDER BY 和 RETURN。 不支持 LET。  
   
- [排序和无序表达式&#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
+ [有序值并无序表达式&#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
  介绍 XQuery 操作的排序模式。 默认情况下，排序模式设置为**排序**。  
   
  [条件表达式&#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
- 描述对条件的 XQuery 支持 **-if-then-else**语句。  
+ 介绍 XQuery 支持条件 **-if-then-else**语句。  
   
- [全称量词化表达式&#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
+ [限定表达式&#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
  介绍 XQuery 中的存在量词和全称量词。  
   
  [SequenceType 表达式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
  介绍 XQuery 中的 SequenceType 语法。  
   
  [验证表达式&#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
- **验证**不支持表达式。  
+ **验证**表达式不受支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

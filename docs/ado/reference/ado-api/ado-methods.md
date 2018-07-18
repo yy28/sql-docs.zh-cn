@@ -2,7 +2,6 @@
 title: ADO 方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275556"
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|此方法不执行任何操作-它始终返回，则为 S_OK。|  
 |[读取](../../../ado/reference/ado-api/read-method.md)|读取指定的数目的字节从**流**对象。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|从文本文件中读取指定的数目的字符**流**对象。|  
-|[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)|更新以反映，从可用的对象的集合和特定中的对象，提供程序。|  
+|[“刷新”](../../../ado/reference/ado-api/refresh-method-ado.md)|更新以反映，从可用的对象的集合和特定中的对象，提供程序。|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|更新中的数据**记录集**通过重新执行的查询所基于的对象的对象。|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|刷新当前中的数据**记录集**对象，或**字段**集合**记录**对象，从基础数据库。|  
 |[保存](../../../ado/reference/ado-api/save-method.md)|将保存**记录集**文件中或**流**对象。|  
@@ -78,12 +78,12 @@ ms.lasthandoff: 05/03/2018
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|在读取文本流时，将跳过一整行。|  
 |[stat](../../../ado/reference/ado-api/stat-method.md)|获取有关打开的流的统计信息。|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|确定指定**记录集**对象支持特定类型的功能。|  
-|[更新](../../../ado/reference/ado-api/update-method.md)|将保存的当前行的任何更改**记录集**对象，或**字段**集合**记录**对象。|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|将保存的当前行的任何更改**记录集**对象，或**字段**集合**记录**对象。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|将写入磁盘的所有挂起的批更新。|  
 |[写入](../../../ado/reference/ado-api/write-method.md)|写入二进制数据保存到**流**对象。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|将一个指定的文本字符串写入**流**对象。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

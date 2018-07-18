@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33238534"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>参数  
  [  **@objname =** ] *****对象*****  
- 当前数据库中现有表、视图、用户定义函数或存储过程的名称。 *对象*是**nvarchar(776)**，无默认值。 *对象*可以限定与窗体中的现有对象的所有者*existing_owner***。***对象*如果的架构和其所有者具有相同的名称。  
+ 当前数据库中现有表、视图、用户定义函数或存储过程的名称。 *对象*是**nvarchar(776)**，无默认值。 *对象*可以限定与窗体中的现有对象的所有者*existing_owner ***。*** 对象*如果的架构和其所有者具有相同的名称。  
   
  [  **@newowner=**] *** * * 所有者*   
  将成为对象的新所有者的安全帐户的名称。 *所有者*是**sysname**，无默认值。 *所有者*必须是有效的数据库用户、 服务器角色， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名或有权访问当前数据库的 Windows 组。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  

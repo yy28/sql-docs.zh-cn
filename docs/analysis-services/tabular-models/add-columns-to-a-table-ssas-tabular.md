@@ -1,5 +1,5 @@
 ---
-title: 向表中添加列 |Microsoft 文档
+title: 向表中添加列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991469"
 ---
 # <a name="add-columns-to-a-table"></a>向表中添加列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  在 **“编辑表属性”** 对话框中，在表预览窗口中选择要添加的源列，然后单击“确定”。 已包含在表定义中的列将被选中。  
   
-## <a name="add-a-calculated-column"></a>添加一个计算的列  
+## <a name="add-a-calculated-column"></a>添加计算的列  
  在计算列中，DAX 公式用于定义每一行的值。 例如，您可以创建一个计算列，该列包含简单的公式 (=1) 以将值 1 添加到每行。 计算列还可以有更复杂的公式，以基于模型中的其他数据计算值。 将在其他主题中更详细介绍计算列。 有关详细信息，请参阅 [计算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)中创建的表格模型项目。  
   
 #### <a name="to-create-a-calculated-column"></a>创建计算列  

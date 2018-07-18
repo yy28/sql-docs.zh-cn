@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024714"
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他类和方法
   本部分包含公共类，并不特定于 olap 数据或数据挖掘，并且在管理或管理中的对象时，很有帮助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 它们包括诸如存储过程、跟踪、异常、备份和还原等功能。  

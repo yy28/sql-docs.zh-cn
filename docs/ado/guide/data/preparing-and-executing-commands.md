@@ -2,7 +2,6 @@
 title: 准备和执行命令 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4d0736e2c4f0a09ec43f2e910cc7fd8c9263fc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92b63916bd6dfdc8d61fa2c8b3a9bbfba9f3224a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272236"
 ---
 # <a name="preparing-and-executing-commands"></a>准备和执行命令
 命令是颁发给提供程序执行某些操作对基础数据源的说明。 SQL 语句，例如，是到 Microsoft SQL 数据提供程序的命令。 在 ADO 中，命令通常表示由**命令**对象，尽管还可以通过发出简单命令**连接**或**记录集**对象。  

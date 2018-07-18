@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024374"
 ---
 # <a name="report-builder-functions---countrows-function"></a>报表生成器函数 - CountRows 函数
   返回指定作用域内的行数，包括含有 Null 值的行。  

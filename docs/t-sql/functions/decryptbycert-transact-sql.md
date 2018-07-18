@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 789afb1973a38b877c8fec60b1603d23166acaec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d94bc1ba7a11f9d934118ba649bff58e84b9fb3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787088"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  用证书的私钥解密数据。  
+此函数使用证书的私钥解密已加密数据。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,32 +47,32 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>参数  
  certificate_ID  
- 数据库中证书的 ID。 certificate_ID 为 int。  
+数据库中证书的 ID。 certificate_ID 具有 int 数据类型。  
   
  ciphertext  
- 已用证书的公钥加密的数据的字符串。  
+使用证书的公钥加密的数据的字符串。  
   
  @ciphertext  
- 是 varbinary 类型的变量，包含已使用证书进行加密的数据。  
+varbinary 类型的变量，包含使用证书进行加密的数据。  
   
  cert_password  
- 用来加密证书私钥的密码。 必须为 Unicode 字符。  
+用于加密证书私钥的密码。 cert_password 必须采用 Unicode 数据格式。  
   
  @cert_password  
- 类型为 nchar 或 nvarchar 的变量，其中包含用来加密证书私钥的密码。 必须为 Unicode 字符。  
-  
+类型为 nchar 或 nvarchar 的变量，其中包含用来加密证书私钥的密码。 @cert_password 必须采用 Unicode 数据格式。  
+
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>Remarks  
- 此函数用证书的私钥解密数据。 使用非对称密钥进行的加密转换会消耗大量资源。 因此，EncryptByCert 和 DecryptByCert 不适合用于对用户数据的例行加密。  
-  
+此函数用证书的私钥解密数据。 使用非对称密钥进行的加密转换会消耗大量资源。 因此，建议开发人员避免使用 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 和 DECRYPTBYCERT 进行用户数据的常规加密/解密。  
+
 ## <a name="permissions"></a>权限  
- 需要对证书具有 CONTROL 权限。  
+`DECRYPTBYCERT` 需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例从 `[AdventureWorks2012].[ProtectedData04]` 中选择标记为 `data encrypted by certificate JanainaCert02` 的行。 此示例使用证书 `JanainaCert02` 的私钥对密码进行解密，首次解密时使用的是证书的密码 `pGFD4bb925DGvbd2439587y`。 解密后的数据将从 varbinary 转换为 nvarchar。  
-  
+此示例从 `[AdventureWorks2012].[ProtectedData04]` 选择行，选择范围标记为最初使用证书 `JanainaCert02` 加密的数据。 该示例首先使用证书 `pGFD4bb925DGvbd2439587y` 的密码解密证书 `JanainaCert02` 的私钥。 然后使用此私钥解密已加密文本。 该示例将解密后的数据从 varbinary 转换为 nvarchar。  
+
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  

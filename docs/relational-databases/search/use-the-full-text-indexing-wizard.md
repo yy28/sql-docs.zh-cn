@@ -34,6 +34,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33182083"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
 4. **断字符语言。** 从下拉列表中选择语言。 此选项用于为索引标识正确的断字符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用断字符在全文索引的数据中标识词的边界。  
   
 5.  **类型列。** 选择存储作为全文索引列的文档类型的列名称。  
-> **注意：**只有当“可用列”列中命名的列为 **varbinary(max)** 或 **image** 类型时，才会启用“类型列”。  
+> **注意：** 只有当“可用列”列中命名的列为 **varbinary(max)** 或 **image** 类型时，才会启用“类型列”。  
   
 6. **统计语义。** 选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   

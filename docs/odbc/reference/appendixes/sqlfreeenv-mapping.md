@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905992"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv 映射
 在应用程序调用**SQLFreeEnv**到 ODBC 3 *.x*驱动程序，将会调用  

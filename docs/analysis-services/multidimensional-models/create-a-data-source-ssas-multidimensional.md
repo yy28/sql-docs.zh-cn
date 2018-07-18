@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027044"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>创建数据源（SSAS 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/10/2018
   
 6.  单击“下一步” 。  
   
-7.  在 **“模拟信息”**中，指定在连接到外部数据源时 Analysis Services 将使用的 Windows 凭据或用户标识。 如果您正在使用数据库身份验证，则出于连接目的，这些设置将被忽略。  
+7.  在 **“模拟信息”** 中，指定在连接到外部数据源时 Analysis Services 将使用的 Windows 凭据或用户标识。 如果您正在使用数据库身份验证，则出于连接目的，这些设置将被忽略。  
   
      用于选择模拟选项的准则因您使用数据源的方式而异。 对于处理任务， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务在连接到数据源时，必须在其服务帐户或指定用户帐户的安全上下文中运行。  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/10/2018
   
      您指定的帐户必须对数据源具有读取权限。  
   
-8.  单击“下一步” 。  在 **“完成向导”**中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
+8.  单击“下一步” 。  在 **“完成向导”** 中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
   
 9. 单击 **“完成”**。  此时，解决方案资源管理器的 **“数据源”** 文件夹中将出现新数据源。  
   

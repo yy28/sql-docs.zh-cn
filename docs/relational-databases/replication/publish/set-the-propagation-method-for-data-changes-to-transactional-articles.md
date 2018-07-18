@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa1eef0787a96ddd1661c6276a692d3ad05d7b5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 787db7a15a214b029f55e315c41a624c09b9d244
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352849"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>为事务项目的数据更改设置传播方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  为以上任意参数指定 **SQL** 值后，该类型的命令将作为相应的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令复制到订阅服务器。  
   
-     有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>创建不传播数据更改的项目  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  将以上任意参数指定为 **NONE** 值后，该类型的命令将不会复制到订阅服务器。  
   
-     有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>通过用户修改的自定义存储过程创建项目  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  若要了解有关 CALL、SCALL、XCALL 和 MCALL 语法的详细信息，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-     有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  快照生成后，定位到此项目所属的发布的快照文件夹，并找到与此项目同名的 **.sch** 文件。 使用 Notepad.exe 打开此文件，找到用于插入、更新或删除存储过程的 CREATE PROCEDURE 命令，并编辑过程定义以提供用于传播数据更改的任何自定义逻辑。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  若要了解有关 CALL、SCALL、XCALL 和 MCALL 语法的详细信息，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-     有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  在发布服务器上，对发布数据库使用 [ALTER PROCEDURE](../../../t-sql/statements/alter-procedure-transact-sql.md) 语句来编辑 [sp_scriptpublicationcustomprocs](../../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) ，以使该语句可以返回用于插入、更新和删除自定义存储过程的 [CREATE PROCEDURE](../../../t-sql/statements/create-procedure-transact-sql.md) 脚本。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921982"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函数
 **一致性**  
@@ -99,7 +100,7 @@ SQLRETURN SQLFreeHandle(
  如果环境已共享的环境，在应用程序，调用**SQLFreeHandle**与*HandleType*的 SQL_HANDLE_ENV 不再具有对在调用后，环境而环境的访问权限不一定释放资源。 调用**SQLFreeHandle**递减引用计数的环境。 引用计数将保留通过驱动程序管理器。 如果它不会达到零，共享的环境不会释放，因为仍在另一个组件使用。 如果引用计数达到零时，将释放共享环境的资源。  
   
 ## <a name="freeing-a-connection-handle"></a>释放连接句柄  
- 在调用之前**SQLFreeHandle**与*HandleType*的 SQL_HANDLE_DBC，应用程序必须调用**SQLDisconnect**如果没有对此连接的连接处理*。* 否则为调用**SQLFreeHandle**返回 SQL_ERROR 和连接就保持有效。  
+ 在调用之前**SQLFreeHandle**与*HandleType*的 SQL_HANDLE_DBC，应用程序必须调用**SQLDisconnect**如果没有对此连接的连接处理 *。* 否则为调用**SQLFreeHandle**返回 SQL_ERROR 和连接就保持有效。  
   
  有关详细信息，请参阅[连接处理](../../../odbc/reference/develop-app/connection-handles.md)和[断开与数据源或驱动程序的连接](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)。  
   

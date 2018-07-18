@@ -2,7 +2,6 @@
 title: 键集游标 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6abebe52390c8c3423cd3c41f212236e051e1972
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94df9cb54dcdb98b6f0932e63d0935b0350eb868
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271926"
 ---
 # <a name="keyset-cursors"></a>键集游标
 键集游标提供的功能，以检测更改的静态和动态游标之间的功能。 如静态游标，它不始终检测到的成员资格和顺序的结果集的更改。 动态游标，像它未在结果集中检测更改的行的值。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  键集驱动游标很难正确使用因为向数据更改的敏感度取决于很多不同情况下，按上文所述。 但是，如果你的应用程序不关心并发更新，可以以编程方式处理错误的密钥，并必须直接访问某些键的行键集驱动游标可能适用于你。 使用**adOpenKeyset CursorTypeEnum**以指示你想要使用 ADO 中的键集游标。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   
  [静态游标](../../../ado/guide/data/static-cursors.md)   
  [动态游标](../../../ado/guide/data/dynamic-cursors.md)

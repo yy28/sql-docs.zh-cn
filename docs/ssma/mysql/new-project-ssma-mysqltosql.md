@@ -1,8 +1,6 @@
 ---
 title: 新项目 (SSMA) (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 37c620e110ea2d096c5085f0d040dd13e35f65f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92c0d05c34027b17f43cf0d9c8ba98f70d3ff017
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776703"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>新项目 (SSMA) (MySQLToSQL)
 使用**新项目**对话框中，创建新的 SSMA 项目。 访问**新项目**对话框中，在**文件**菜单上，单击**新项目**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **名称**  
   
 输入项目的名称。 SSMA 将追加文件扩展名。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914442"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>支持的数据类型 （Visual FoxPro ODBC 驱动程序）
 通过 ODBC API 和 Microsoft 查询中呈现的驱动程序支持的数据类型的列表。  

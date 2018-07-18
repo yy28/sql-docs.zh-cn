@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32954992"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含您要管理类别订阅的数据库的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含您要管理类别订阅的数据库的服务器。  
   
 2.  单击加号以展开 **“数据库”** 文件夹。  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
      策略类别的名称。  
   
      **已订阅**  
-     指示目标是否已订阅此策略类别。 如果禁用此复选框，则为 **“托管数据库订阅”**设置此策略类别。 这意味着该策略类别应用于服务器上的所有数据库。  
+     指示目标是否已订阅此策略类别。 如果禁用此复选框，则为 **“托管数据库订阅”** 设置此策略类别。 这意味着该策略类别应用于服务器上的所有数据库。  
   
      **策略**  
      展开策略组将显示策略类别中包括的策略。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>建立数据库对某个策略类别的订阅  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>取消数据库对某个策略类别的订阅  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

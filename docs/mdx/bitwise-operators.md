@@ -1,32 +1,23 @@
 ---
 title: 按位运算符 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- bitwise operators
-ms.assetid: 7349167b-f4b3-4344-bd01-b8f5fee4a509
-caps.latest.revision: 24
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2d28555db8a175cc7b131cab7ab75a0bca135f7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739416"
 ---
 # <a name="bitwise-operators"></a>按位运算符
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   逻辑运算符计算值并返回布尔值。 在多维表达式 (MDX) 中，逻辑运算符不执行按位运算。  
   
@@ -35,12 +26,12 @@ ms.lasthandoff: 05/03/2018
 |运算符|Description|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|对两个数值表达式执行逻辑与运算。|  
-|[是](../mdx/is-mdx.md)|对两个对象表达式执行逻辑比较。|  
+|[IS](../mdx/is-mdx.md)|对两个对象表达式执行逻辑比较。|  
 |[NOT](../mdx/not-mdx.md)|对数值表达式执行逻辑非运算。|  
 |[或](../mdx/or-mdx.md)|对数值表达式执行逻辑或运算。|  
 |[XOR](../mdx/xor-mdx.md)|对两个数值表达式执行逻辑异运算。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  
   

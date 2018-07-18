@@ -3,12 +3,9 @@ title: 使用 SQL Server Management Studio 配置 Always Encrypted | Microsoft D
 ms.custom: ''
 ms.date: 11/30/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7ace7cc5ca437a6ad67c5f7bf8cd138e470d0047
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b72dca20aaa566f8bb6630931fc656ee6231182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180444"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -367,7 +364,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 2.  查看“简介”页，然后单击“下一步”。
 3.  在“列选择”页上，展开表并找到你要替换的所有列，这些列当前使用旧的列加密密钥加密。
 4.  对于使用旧的列加密密钥加密的每个列，将“加密密钥”  设置为自动生成的新密钥。 **注意：** 或者，你也可以在运行该向导之前创建新的列加密密钥 — 请参阅上面的 *预配列加密密钥* 一节。
-5.  在“主密钥配置”  页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步” 。 **注意：**如果你使用的是现有的列加密密钥（不是自动生成的密钥），则无需在此页面上执行任何操作。
+5.  在“主密钥配置”  页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步” 。 **注意：** 如果你使用的是现有的列加密密钥（不是自动生成的密钥），则无需在此页面上执行任何操作。
 6.  在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。
 7.  在“摘要”页上，查看你选择的选项，单击“完成”，并在完成后关闭该向导。
 8.  使用**对象资源管理器**导航到“安全”/“始终加密密钥”/“列加密密钥”文件夹，并找到要从数据库中删除的旧列加密密钥。 右键单击该密钥，然后选择“删除” 。

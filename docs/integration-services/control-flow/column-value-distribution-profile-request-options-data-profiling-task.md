@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,17 +16,18 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0fb3daaeaac3afc27abfacee4c9f596baaa01e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6460f20104e73a3a941a5fdda0145a5bd2124f1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405619"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>列值分布配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列值分布配置文件请求”** 设置选项。 列值分布配置文件将报告选定列中的所有非重复值以及表中每个值表示的行的百分比。 该配置文件还可以报告其表示内容超过表中指定的行百分比的值。 此配置文件可帮助您识别数据中的问题，例如，列中非重复值的数目不正确。 例如，对表示美国州的列进行事件探查，发现有 50 多个非重复值。  
   
 > [!NOTE]  
->  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”**页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+>  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
  有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  如果将 **(\*)** 通配符用于 **ColumnName**，则 **CompareOptions** 为只读并设置为 **Default** 设置。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Default**|根据源表中列的排序规则对数据进行排序和比较。|  
 |**BinarySort**|根据为每个字符所定义的位模式对数据进行排序和比较。 二进制排序顺序既区分大小写，也区分重音。 二进制排序顺序的速度也最快。|  
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/03/2018
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，"å" 与 "a" 相同。|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
  **ValueDistributionOption**  
  指定是否计算所有列值的分布。 此选项的默认值为 **FrequentValues**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**AllValues**|计算所有列值的分布。|  
 |**FrequentValues**|仅计算其频率超出 **FrequentValueThreshold**中指定的最小值的值的分布。 输出报告中将不包括未满足 **FrequentValueThreshold** 的值。|  

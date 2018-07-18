@@ -1,7 +1,7 @@
 ---
-title: 安全扩展插件概述 | Microsoft Docs
+title: 安全扩展插件概述 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: extensions
@@ -19,13 +19,14 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0aa92c8538efae252aa205a38aa6f5eb2c542c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cd80296e13af18902d48b934bf26144d153c039
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550458"
 ---
-# <a name="security-extensions-overview"></a>安全扩展插件概述
+# <a name="security-extensions-overview---reporting-services-ssrs"></a>安全扩展插件概述 - Reporting Services (SSRS)
   利用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全扩展插件，可以对用户或组进行身份验证和授权；这样，不同的用户便可登录至同一台报表服务器，并基于他们的标识执行不同的任务或操作。 默认情况下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于 Windows 的身份验证扩展插件，该插件使用 Windows 帐户协议来验证声明在系统上拥有帐户的用户的标识。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的安全系统为用户授权。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 基于角色的安全模型与其他技术的基于角色的安全模型类似。  
   
  因为安全扩展插件基于可扩展的开放式 API，所以您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中创建新的身份验证和授权扩展插件。 下面的示例为使用基于窗体的身份验证和授权的典型安全扩展插件实现：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  如图所示，身份验证和授权将按以下所示发生：  
   
-1.  用户尝试使用 URL 访问报表管理器，然后被重定向至为客户端应用程序收集用户凭据的窗体。  
+1.  用户尝试使用 URL 访问 Web 门户，然后被重定向至为客户端应用程序收集用户凭据的窗体。  
   
 2.  用户向该窗体提交凭据。  
   
@@ -42,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
 4.  Web 服务调用客户提供的安全扩展插件，并验证相应的用户名称和密码是否存在于自定义安全机构中。  
   
-5.  进行身份验证之后，Web 服务创建一个身份验证票证（称为“cookie”），管理票证，然后为报表管理器的主页验证用户角色。  
+5.  进行身份验证之后，Web 服务创建一个身份验证票证（称为“cookie”），管理票证，然后为 Web 门户的主页验证用户角色。  
   
-6.  Web 服务将此 cookie 返回至浏览器，然后在报表管理器中显示相应的用户界面。  
+6.  Web 服务将此 cookie 返回至浏览器，然后在 Web 门户中显示相应的用户界面。  
   
-7.  对用户进行身份验证之后，在 HTTP 标头中传送此 cookie 的同时浏览器向报表管理器发出请求。 这些请求用于响应报表管理器应用程序中的用户操作。  
+7.  对用户进行身份验证之后，在 HTTP 标头中传送此 cookie 的同时浏览器向 Web 门户发出请求。 这些请求用于响应 Web 门户中的用户操作。  
   
 8.  此 cookie 在 HTTP 标头中与请求的用户操作一起传送至 Web 服务。  
   
@@ -69,6 +70,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [实现安全扩展插件](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [配置报表管理器以便传递自定义身份验证 Cookie](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   

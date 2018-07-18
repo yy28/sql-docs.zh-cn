@@ -1,5 +1,5 @@
 ---
-title: sp_estimated_rowsize_reduction_for_vardecimal (Transact SQL) |Microsoft 文档
+title: sp_estimated_rowsize_reduction_for_vardecimal (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1d699e62251f8f2c750795d2389f338e9bd1bf11
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999619"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table=** ] *****表*****  
+ [  **@table=** ] **'***表*****  
  由三部分组成的表名，将要更改此表的存储格式。 *表*是**nvarchar(776)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,12 +66,12 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**十进制 （12、 2）**|表示使用 vardecimal 存储格式时的平均行大小。|  
 |**row_count**|**int**|表中的行数。|  
   
-## <a name="remarks"></a>注释  
- 使用**sp_estimated_rowsize_reduction_for_vardecimal**来估计启用 vardecimal 存储格式的表时导致节省的空间。 例如，如果平均行大小能够减少 40%，则可能可以将表的大小减少 40%。 您可能无法节省空间，具体取决于填充因子和行大小。 例如，如果某行长度为 8000 字节并且您将该行的大小减少 40%，则数据页上仍只能容纳一行，因而并未节省空间。  
+## <a name="remarks"></a>Remarks  
+ 使用**sp_estimated_rowsize_reduction_for_vardecimal**来估计如果启用了 vardecimal 存储格式的表的存储。 例如，如果平均行大小能够减少 40%，则可能可以将表的大小减少 40%。 您可能无法节省空间，具体取决于填充因子和行大小。 例如，如果某行长度为 8000 字节并且您将该行的大小减少 40%，则数据页上仍只能容纳一行，因而并未节省空间。  
   
- 如果结果**sp_estimated_rowsize_reduction_for_vardecimal**指示表将会增长，这意味着表中的许多行，使用几乎整个精度的十进制数据类型，并加上的小型vardecimal 存储格式所需的开销大于从 vardecimal 存储格式的节省情况。 在这种极个别的情况下，不要启用 vardecimal 存储格式。  
+ 如果结果**sp_estimated_rowsize_reduction_for_vardecimal**指示表将增长，这意味着表中的许多行使用几乎 decimal 数据类型的完全精度和增加的少量vardecimal 存储格式所需的开销大于 vardecimal 存储格式的节省。 在这种极个别的情况下，不要启用 vardecimal 存储格式。  
   
- 如果表已启用 vardecimal 存储格式，使用**sp_estimated_rowsize_reduction_for_vardecimal**来估计的行的平均大小，如果禁用 vardecimal 存储格式。  
+ 如果对表启用 vardecimal 存储格式，使用**sp_estimated_rowsize_reduction_for_vardecimal**来估计在禁用了 vardecimal 存储格式的行的平均大小。  
   
 ## <a name="permissions"></a>权限  
  需要对表具有 CONTROL 权限。  
@@ -85,8 +86,8 @@ EXEC sp_estimated_rowsize_reduction_for_vardecimal 'Production.WorkOrderRouting'
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_db_vardecimal_storage_format &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
  [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

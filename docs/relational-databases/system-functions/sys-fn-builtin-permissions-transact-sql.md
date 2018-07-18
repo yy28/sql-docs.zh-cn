@@ -1,5 +1,5 @@
 ---
-title: sys.fn_builtin_permissions (TRANSACT-SQL) |Microsoft 文档
+title: sys.fn_builtin_permissions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
@@ -33,15 +33,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ff815d345d1cddc58ca484351c71baf8df40fcc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031595"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回服务器内置权限层次结构的说明。 `sys.fn_builtin_permissions` 只能在调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，并返回而不考虑是否受支持当前平台上的所有权限。 大多数权限适用于所有平台，但有些则不适用。 例如无法在 SQL 数据库上授予服务器级别权限。 有关哪些平台支持每个权限的信息，请参阅[权限&#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)。  
+  返回服务器内置权限层次结构的说明。 `sys.fn_builtin_permissions` 只有在调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，并返回而不考虑是否受当前平台上的所有权限。 大多数权限适用于所有平台，但有些则不适用。 例如不能在 SQL 数据库上授予服务器级别权限。 有关哪些平台支持每个权限的信息，请参阅[权限&#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +64,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="arguments"></a>参数  
  DEFAULT  
- 当使用默认选项 （无引号） 调用时，该函数将返回内置权限的完整列表。  
+ 使用默认选项 （无引号） 调用它时，该函数将返回内置权限的完整列表。  
   
  NULL  
  等效于 DEFAULT。  
@@ -72,7 +73,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  等效于 DEFAULT。  
   
  **'**<securable_class>**'**  
- 当使用一个安全对象类的名称调用它，则 sys.fn_builtin_permissions 将返回将应用于类的所有权限。 < securable_class > 是一个字符串，它需要引号引起来。 **nvarchar(60)**  
+ 当调用一个安全对象类的名称时，sys.fn_builtin_permissions 将返回应用于该类的所有权限。 < securable_class > 是一个需要加引号的字符串文字。 **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>返回的表  
   
@@ -117,7 +118,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|USER|  
+|AL|ALTER|User|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
@@ -184,7 +185,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|USER|  
+|CL|CONTROL|User|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
 |CO|CONNECT|ENDPOINT|  
@@ -224,9 +225,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **适用于**： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|删除|DATABASE|  
+|DL|删除|OBJECT|  
+|DL|删除|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |EX|在运行 CREATE 语句前执行|DATABASE|  
 |EX|在运行 CREATE 语句前执行|OBJECT|  
@@ -235,7 +236,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |EX|在运行 CREATE 语句前执行|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |IM|IMPERSONATE|Login|  
-|IM|IMPERSONATE|USER|  
+|IM|IMPERSONATE|User|  
 |IN|Insert|DATABASE|  
 |IN|Insert|OBJECT|  
 |IN|Insert|SCHEMA|  
@@ -313,7 +314,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|USER|  
+|VW|VIEW DEFINITION|User|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
@@ -326,8 +327,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>注释  
- `sys.fn_builtin_permissions` 是一个表值函数，它可以产生预定义权限层次结构的副本。 此层次结构包含涵盖权限。 `DEFAULT`结果集描述的权限层次结构，其中的根是定向、 非循环图形 (类 = SERVER，权限 = CONTROL SERVER)。  
+## <a name="remarks"></a>Remarks  
+ `sys.fn_builtin_permissions` 是一个表值函数，它可以产生预定义权限层次结构的副本。 此层次结构包含涵盖权限。 `DEFAULT`结果集说明了权限层次结构，其中的根是定向、 有向无环图 (类 = SERVER，权限 = CONTROL SERVER)。  
   
  `sys.fn_builtin_permissions` 不接受相关参数。  
   
@@ -341,14 +342,14 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 列出所有内置权限   
-使用`DEFAULT`或一个空字符串，以返回所有权限。   
+使用`DEFAULT`或空字符串返回的所有权限。   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. 列出可针对对称密钥设置的权限   
-指定一个类以返回为该类的所有可能的权限。   
+指定一个类以返回该类的所有可能权限。   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
@@ -360,7 +361,7 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   

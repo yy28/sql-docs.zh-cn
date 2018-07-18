@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9aba1da54540bec767755238707c5c18b933fd91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b75ee1d633e2469664df09c8c58d17d1d9b8c17
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350199"
 ---
 # <a name="publisher-properties---distributor"></a>发布服务器属性 - 分发服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 -   用于 Oracle 发布的快照代理和日志读取器代理。  
   
- 选择 **“模拟代理进程帐户”** 以使用运行这些代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文连接到发布服务器，或指定 **“SQL Server 身份验证”**，然后为 **“登录名”** 和 **“密码”**输入值。 建议选择 **“模拟代理进程帐户”**。 有关代理安全性的详细信息，请参阅[复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 选择 **“模拟代理进程帐户”** 以使用运行这些代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文连接到发布服务器，或指定 **“SQL Server 身份验证”**，然后为 **“登录名”** 和 **“密码”** 输入值。 建议选择 **“模拟代理进程帐户”**。 有关代理安全性的详细信息，请参阅[复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
  在新建发布向导中可以指定运行这些代理的 Windows 帐户。 您可以在如下位置更改这些帐户：  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -22,11 +21,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cac7056cb11a4d501effb0336496e63e25969292
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0ae7336f2b957d5cd846c0b5546bdaf2e3945ce
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400810"
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   不强制向 **Name** 和 **Code** 属性分配权限。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|用户可以读取叶成员、属性。|  
 |**创建**|用户可以创建叶成员，并在创建过程中指定属性值。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-permissions"></a>属性权限  
  属性权限应用到该属性用于特定实体的值。 仅具有属性权限的用户不能添加或删除成员。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|用户可以读取属性。|  
 |**创建**|用户可以在创建成员时分配值。|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 |Mountain-100|BK-M101|{5} 山地车|  
 |Mountain-100|BK-M201|{5} 山地车|  
   
- 在 **“资源管理器”**中，可以更新 Subcategory 列中的任何属性值。 如果您没有对属性的权限，则不显示该属性。  
+ 在 **“资源管理器”** 中，可以更新 Subcategory 列中的任何属性值。 如果您没有对属性的权限，则不显示该属性。  
   
 > [!NOTE]  
 >  在本示例中，Subcategory 是基于域的属性，基于 SubcategoryList 实体。 可以为 Mountain-100 选择不同子类别，但是不能向 SubcategoryList 实体添加成员或从中删除成员。  

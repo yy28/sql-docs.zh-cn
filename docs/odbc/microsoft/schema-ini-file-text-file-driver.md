@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904582"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 文件 （文本文件驱动程序）
 当使用文本驱动程序时，使用的架构信息文件来确定文本文件的格式。 架构信息文件始终名为 Schema.ini，会始终保留在文本数据源所在的目录。 架构信息文件提供了有关的一般格式的文件、 列名称和数据类型信息和若干其他数据特性的信息 IISAM。 Schema.ini 文件始终是必需的访问固定长度的数据。 当文本表包含日期时间、 货币或小数数据或随时根据需要更好地控制的表中的数据的处理时，应使用 Schema.ini 文件。  

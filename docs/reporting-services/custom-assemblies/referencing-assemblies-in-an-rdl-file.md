@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014704"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>在 RDL 文件中引用程序集
   为了支持在报表定义文件中使用自定义代码程序集，RDL 规范中包含两个报表定义语言 (RDL) 元素：CodeModules 元素和 Classes 元素。  

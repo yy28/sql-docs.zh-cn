@@ -1,5 +1,5 @@
 ---
-title: 监视 Analysis Services 使用 SQL Server Profiler 简介 |Microsoft 文档
+title: 通过 SQL Server Profiler 监视 Analysis Services 简介 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b3c2dcec84956cd83c09a6c9be1d70975df67cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040845"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>通过 SQL Server Profiler 监视 Analysis Services 简介
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -52,8 +53,8 @@ ms.lasthandoff: 05/10/2018
   
  为实现最佳性能，请仅使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视您最关注的那些事件。 如果监视太多的事件，会增加开销，并且可能导致跟踪文件或表变得很大，尤其是在很长时期内进行监视时。 此外，可通过筛选来限制收集的数据量，防止跟踪变得太大。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 跟踪事件](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [为重播 & #40; 创建事件探查器跟踪Analysis Services & #41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
+ [为重播创建事件探查器跟踪 (Analysis Services)](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   

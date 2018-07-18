@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907622"
 ---
 # <a name="interval-escape-sequences"></a>Interval 转义序列
 ODBC 使用间隔文字的转义序列。 此转义序列的语法如下所示：  

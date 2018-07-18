@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +21,18 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8213fe0bd59bf187cf3585bb473cb61703e361c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdc7a7922668efb8e83ecb19c1e89107b1e764f5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334391"
 ---
 # <a name="data-in-data-flows"></a>数据流中的数据
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了用于数据流中的一组数据类型。  
   
 ## <a name="data-type-conversion"></a>数据类型转换  
- 添加到数据流的源将源数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 后续转换可能将数据转换为不同的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，而且根据数据加载于其上的数据存储区的类型，目标可能将最终的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型转换成目标数据存储区所需的数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 添加到数据流的源将源数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 后续转换可能将数据转换为不同的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，而且根据数据加载于其上的数据存储区的类型，目标可能将最终的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型转换成目标数据存储区所需的数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  为将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，数据流组件对数据进行分析。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供两种类型的数据分析：快速分析和标准分析。 大多数数据流组件只能使用标准分析；但是，平面文件源和数据转换既可以使用快速分析，也可以使用标准分析。 有关详细信息，请参阅 [Parsing Data](../../integration-services/data-flow/parsing-data.md)。  
   

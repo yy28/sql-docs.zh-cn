@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019090"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
   您可以通过选择预定义调色板或定义自定义调色板来更改图表的调色板。 自定义调色板是针对具体报表而言。  

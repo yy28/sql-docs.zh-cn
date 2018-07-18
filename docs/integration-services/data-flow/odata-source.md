@@ -3,12 +3,10 @@ title: OData 源 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401429"
 ---
 # <a name="odata-source"></a>OData 源
 在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。 该组件支持 OData v3 和 v4 协议。  

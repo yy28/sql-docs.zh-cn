@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026664"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
   在设计并测试完一个或一组报表后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能将报表发布到报表服务器上。 可以发布单独报表或包含多个报表和数据源的报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语“部署”替代术语“发布”。 这两个术语可以互换。  

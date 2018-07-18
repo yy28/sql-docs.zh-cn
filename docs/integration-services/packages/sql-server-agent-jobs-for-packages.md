@@ -1,14 +1,12 @@
 ---
 title: 包的 SQL Server 代理作业 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +19,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405149"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以计划并且自动执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
-  
+ 
+> [!NOTE]
+> 本文介绍如何在一般情况下计划 SSIS 包以及如何在本地计划包。 还可在以下平台上运行并计划 SSIS 包：
+> - **Microsoft Azure 云**。 有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)和[计划 Azure 中的 SSIS 包执行](../lift-shift/ssis-azure-schedule-packages.md)。
+> - **Linux**。 有关详细信息，请参阅[在 Linux 上使用 SSIS 提取、转换和加载数据](../../linux/sql-server-linux-migrate-ssis.md)和[在 Linux 上使用 cron 计划 SQL Server Integration Services 包执行](../../linux/sql-server-linux-schedule-ssis-packages.md)。
+
 ## <a name="sections-in-this-topic"></a>本主题的内容  
  本主题包含以下各节：  
   
@@ -92,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
     4.  右键单击 SSISDB，依次指向“报表”和“标准报表”，然后单击“所有执行”。  
   
-    5.  在 **“所有执行”** 报告的 **ID** 列中，找到该执行 ID。 单击 **“概述”**、 **“所有消息”**或 **“执行性能”** ，查看有关此包执行的信息。  
+    5.  在 **“所有执行”** 报告的 **ID** 列中，找到该执行 ID。 单击 **“概述”**、 **“所有消息”** 或 **“执行性能”** ，查看有关此包执行的信息。  
   
     有关“概述”、“所有消息”和“执行性能”报告的详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
 
@@ -129,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
      **下表说明了可能的包源。**  
   
-    |“包源”|Description|  
+    |“包源”|描述|  
     |--------------------|-----------------|  
     |**SSIS 目录**|存储在 SSISDB 数据库中的包。 部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目中包含的包。|  
     |**SQL Server**|存储在 MSDB 数据库中的包。 可使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务来管理这些包。|  
@@ -138,14 +142,14 @@ ms.lasthandoff: 05/03/2018
   
      **以下各表说明可用于作业步骤的配置选项（具体选项取决于您所选的包源）。**  
   
-    > **重要提示：**如果包受密码保护，则单击“新建作业步骤”的“常规”页上除“包”选项卡之外的任何选项卡时，需要在出现的“包密码”对话框中输入密码。 如果不输入， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业将无法运行该包。  
+    > **重要提示：** 如果包受密码保护，则单击“新建作业步骤”的“常规”页上除“包”选项卡之外的任何选项卡时，需要在出现的“包密码”对话框中输入密码。 如果不输入， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业将无法运行该包。  
   
      **包源**：SSIS 目录  
   
     |选项卡|“常规”|  
     |---------|-------------|  
     |**“包”**|**Server**<br /><br /> 键入或选择承载 SSISDB 目录的数据库服务器实例的名称。<br /><br /> 如果 **“SSIS 目录”** 为包源，则可以仅使用 Microsoft Windows 用户帐户登录该服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证不可用。|  
-    ||**“包”**<br /><br /> 单击省略号按钮并选择一个包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“Integration Services 目录”**节点下的文件夹中选择包。|  
+    ||**“包”**<br /><br /> 单击省略号按钮并选择一个包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“Integration Services 目录”** 节点下的文件夹中选择包。|  
     |**Parameters**<br /><br /> 位于 **“配置”** 选项卡上。|**“Integration Services 项目转换向导”** 支持您使用参数替换包配置。<br /><br /> **“参数”** 选项卡显示您在设计包（例如通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]来设计包）时就已添加的参数。 该选项卡还显示在将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目从包部署模型转换为项目部署模型后添加到包中的参数。 为包中包含的参数输入新值。 您可以输入一个文字值，或使用已经映射到该参数的服务器环境变量所包含的值。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> **\*\* 重要说明 \*\*** 如果将多个参数和/或连接管理器属性映射到了多个环境中包含的变量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 有关如何创建服务器环境并将变量映射到参数的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
     |**连接管理器**<br /><br /> 位于 **“配置”** 选项卡上。|更改连接管理器属性的值。 例如，您可以更改服务器名称。 将在 SSIS 服务器上为连接管理器属性自动生成参数。 若要更改某个属性值，可以输入一个文字值，或使用已经映射到连接管理器属性的服务器环境变量所包含的值。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> **\*\* 重要说明 \*\*** 如果将多个参数和/或连接管理器属性映射到了多个环境中包含的变量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 有关如何创建服务器环境并将变量映射到连接管理器属性的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
     |**高级**<br /><br /> 位于 **“配置”** 选项卡上。|为包执行配置以下附加设置：|  
@@ -165,7 +169,7 @@ ms.lasthandoff: 05/03/2018
     ||**Use SQL Server Authentication**<br /><br /> 当用户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，来进行身份验证。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找不到登录帐户，则身份验证会失败，用户将收到错误消息。|  
     ||**用户名**|  
     ||**密码**|  
-    ||**“包”**<br /><br /> 单击省略号按钮并选择包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“已存储的包”**节点下的文件夹中选择包。|  
+    ||**“包”**<br /><br /> 单击省略号按钮并选择包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“已存储的包”** 节点下的文件夹中选择包。|  
     |**“包”**<br /><br /> 这些是存储在文件系统中的包的选项卡选项。|**“包”**<br /><br /> 键入包文件的完整路径，或单击省略号按钮选择包。|  
     |**配置**|添加 XML 配置文件以便使用特定配置来运行包。 使用包配置可在运行时更新包属性的值。<br /><br /> 此选项对应于 **dtexec** 的 **/ConfigFile**选项。<br /><br /> 若要了解如何应用包配置，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。 有关如何创建包配置的信息，请参阅 [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)。|  
     |**命令文件**|在单独的文件中指定要使用 **dtexec**运行的附加选项。<br /><br /> 例如，可以包括一个包含 /Dump errorcode 选项的文件，以便在包运行期间发生一个或多个指定事件时生成调试转储文件。<br /><br /> 您可以使用不同的选项组运行包，只需创建多个文件，然后通过使用 **“命令文件”** 选项指定正确的文件即可。<br /><br /> “命令文件”选项对应于 **dtexec** 的 **/CommandFile** 选项。|  
@@ -174,11 +178,11 @@ ms.lasthandoff: 05/03/2018
     |**日志记录**|将日志提供程序与包执行操作相关联。<br /><br /> **用于文本文件的 SSIS 日志提供程序**<br /> 将日志条目写入 ASCII 文本文件<br /><br /> **用于 SQL Server 的 SSIS 日志提供程序**<br /> 将日志条目写入 MSDB 数据库的 sysssislog 表中。<br /><br /> **用于 SQL Server Profiler 的 SSIS 日志提供程序**<br /> 写入可用 SQL Server 事件探查器查看的跟踪。<br /><br /> **用于 Windows 事件日志的 SSIS 日志提供程序**<br /> 将日志条目写入 Windows 事件日志中的应用程序日志。<br /><br /> **用于 XML 文件的 SSIS 日志提供程序**<br /> 将日志文件写入 XML 文件。<br /><br /> 对于文本文件、XML 文件以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件探查器日志提供程序，您需要选择包内所含的文件连接管理器。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志提供程序，您需要选择包内所含的 OLE DB 连接管理器。<br /><br /> 此选项对应于 **dtexec** 的 **/Logger**选项。|  
     |**设置值**|覆盖包属性设置。 在 **“属性”** 框中的 **“属性路径”** 和 **“值”** 列中输入值。 为一个属性输入值后， **“属性”** 框中会出现一个空行，支持您为另一个属性输入值。<br /><br /> 若要从“属性”框中删除某个属性，请单击该行，然后单击 **“删除”**。<br /><br /> 你可以通过执行以下操作之一查找属性路径：<br /><br /> - 从 XML 配置文件 (\*.dtsconfig) 复制属性路径。 该路径列在该文件的 Configuration 部分中，作为 Path 属性的值。 下面是 MaximumErrorCount 属性的路径的示例：\Package.Properties[MaximumErrorCount]<br /><br /> - 运行“包配置向导”，并从最后的“完成向导”页中复制属性路径。 随后可以取消该向导。|  
     |**验证**|**仅执行已签名的包**<br /> 指示是否已检查包签名。 如果包未签名或签名无效，则包将失败。 此选项对应于 **dtexec** 的 **/VerifySigned**选项。<br /><br /> **验证包内部版本**<br /> 指示是否根据在此选项旁边的 **“内部版本”** 框中输入的内部版本号，验证包的内部版本号。 如果出现不匹配，则将不执行包。 此选项对应于 **dtexec** 的 **/VerifyBuild**选项。<br /><br /> **验证包 ID**<br /> 指示是否通过将包的 GUID 与此选项旁边的 **“包 ID”** 框中输入的包 ID 进行比较，对该 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyPackageID**选项。<br /><br /> **验证版本 ID**<br /> 指示是否通过将包的版本 GUID 与此选项旁边的 **“版本 ID”** 框中输入的版本 ID 进行比较，对该版本 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyVersionID**选项。|  
-    |**命令行**|修改 dtexec 的命令行选项。 有关这些选项的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。<br /><br /> **还原原始选项**<br /> 使用在“作业集属性”对话框的“包”、“配置”、“命令文件”、“数据源”、“执行选项”、“日志记录”、“设置值”和“验证”选项卡上设置的命令行选项。<br /><br /> **手动编辑命令**<br /> 在“命令行”框中键入附加命令行选项。<br /><br /> 单击 **“确定”** 将更改保存至作业步骤之前，您可以通过单击 **“还原原始选项”** 删除您在 **“命令行”**框中键入的所有附加选项。<br /><br /> **\*\* 提示 \*\*** 你可以将命令行复制到命令提示符窗口，添加 `dtexec`，然后从该命令行运行包。 这是一种生成命令行文本的简单方法。|  
+    |**命令行**|修改 dtexec 的命令行选项。 有关这些选项的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。<br /><br /> **还原原始选项**<br /> 使用在“作业集属性”对话框的“包”、“配置”、“命令文件”、“数据源”、“执行选项”、“日志记录”、“设置值”和“验证”选项卡上设置的命令行选项。<br /><br /> **手动编辑命令**<br /> 在“命令行”框中键入附加命令行选项。<br /><br /> 单击 **“确定”** 将更改保存至作业步骤之前，您可以通过单击 **“还原原始选项”** 删除您在 **“命令行”** 框中键入的所有附加选项。<br /><br /> **\*\* 提示 \*\*** 你可以将命令行复制到命令提示符窗口，添加 `dtexec`，然后从该命令行运行包。 这是一种生成命令行文本的简单方法。|  
   
 9. 单击 **“确定”** 保存设置，然后关闭 **“新建作业步骤”** 对话框。  
   
-    > **注意：**对于存储在“SSIS 目录”中的包，如果有未解析的参数或连接管理器属性设置，则禁用“确定”按钮。 在使用服务器环境变量包含的值设置参数或属性，但存在以下条件之一时，就会出现未解析的设置：  
+    > **注意：** 对于存储在“SSIS 目录”中的包，如果有未解析的参数或连接管理器属性设置，则禁用“确定”按钮。 在使用服务器环境变量包含的值设置参数或属性，但存在以下条件之一时，就会出现未解析的设置：  
     >   
     >  未选中 **“配置”** 选项卡上的 **“环境”** 复选框。  
     >   

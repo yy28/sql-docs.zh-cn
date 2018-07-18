@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016984"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
 在父报表上添加钻取操作后，接下来将创建一个数据筛选器，用于为子报表定义的数据表。  

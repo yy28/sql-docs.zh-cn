@@ -1,0 +1,108 @@
+---
+title: 为磁带机定义逻辑备份设备 (SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- backup devices [SQL Server], defining
+- backup devices [SQL Server], tapes
+- backing up databases [SQL Server], tapes
+- database backups [SQL Server], tapes
+- tape backup devices, creating
+ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
+caps.latest.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 72651488293d52f0702d7c368ab0a704f74f8d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229257"
+---
+# <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>为磁带机定义逻辑备份设备 (SQL Server)
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为磁带机定义逻辑备份设备。 逻辑设备是指向特定物理备份设备（磁盘文件或磁带机）的用户定义名称。  将备份写入备份设备后，便会初始化物理设备。  
+  
+> [!NOTE]  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
+  
+ **本主题内容**  
+  
+-   **开始之前：**  
+  
+     [限制和局限](#Restrictions)  
+  
+     [Security](#Security)  
+  
+-   **若要为磁带机定义逻辑备份设备，请使用：**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> 开始之前  
+  
+###  <a name="Restrictions"></a> 限制和局限  
+  
+-   Microsoft Windows 操作系统必须支持磁带机。  
+  
+-   磁带设备必须物理连接到运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上。 不支持备份到远程磁带设备上。  
+  
+###  <a name="Security"></a> 安全性  
+  
+####  <a name="Permissions"></a> Permissions  
+ 要求具有 **diskadmin** 固定服务器角色中的成员身份。  
+  
+ 要求拥有写入磁盘的权限。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  
+#### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>为磁带机定义逻辑备份设备  
+  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
+  
+2.  展开“服务器对象”，然后右键单击“备份设备”。  
+  
+3.  单击 **“新建备份设备”** 打开 **“备份设备”** 对话框。  
+  
+4.  输入设备名称。  
+  
+5.  为了确定要使用的备份设备，请单击 **“磁带”** ，然后选择一个未与其他备份设备相关联的磁带设备。 如果没有这种磁带机，则 **“磁带”** 选项处于非活动状态。  
+  
+6.  若要定义新设备，请单击 **“确定”**。  
+  
+ 若要备份至此新设备，请将该设备添加到“备份数据库”（“常规”）对话框中的“备份到：”字段。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
+  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+  
+#### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>为磁带机定义逻辑备份设备  
+  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
+  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) 为磁带定义逻辑备份设备。 下面的示例以物理名称 `tapedump1`添加名为 `\\.\tape0`的磁带备份设备。  
+  
+```tsql  
+USE AdventureWorks2012 ;  
+GO  
+EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;  
+GO  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
+ [sys.backup_devices (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [sp_dropdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql)   
+ [备份设备 (SQL Server)](backup-devices-sql-server.md)   
+ [为磁盘文件定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [查看逻辑备份设备的属性和内容 (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+  
+  

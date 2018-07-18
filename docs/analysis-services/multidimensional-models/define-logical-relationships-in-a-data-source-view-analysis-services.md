@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023654"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在数据源视图中定义逻辑关系 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/10/2018
   
 ##  <a name="bkmk_tablespane"></a> 在“表”窗格中查看或修改关系  
   
-1.  在 **“数据源视图设计器”** 的 **“表”**窗格中，查找包含要查看或修改的关系的表、视图或命名查询，然后将其展开。  
+1.  在 **“数据源视图设计器”** 的 **“表”** 窗格中，查找包含要查看或修改的关系的表、视图或命名查询，然后将其展开。  
   
 2.  展开 **“关系”** 文件夹。  将显示所选表、视图或命名查询与其他表、视图和命名查询之间的关系，并列出关系列。  
   

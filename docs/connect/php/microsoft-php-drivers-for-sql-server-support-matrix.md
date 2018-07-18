@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: b8f1fad66e906b71ff5ea247ba4615e7be774f63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aae3c88e1460304cf4b2bea7dbc529f31393bde
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307916"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 支持矩阵的 Microsoft PHP 驱动程序
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2018
 |macOS Sierra （64 位）               |是  |是  |   |   |   |   |   |
 |macOS El Capitan （64 位）           |是  |是  |   |   |   |   |   |
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [发行说明](../../connect/php/release-notes-for-the-php-sql-driver.md)
 
 [支持资源](../../connect/php/support-resources-for-the-php-sql-driver.md)

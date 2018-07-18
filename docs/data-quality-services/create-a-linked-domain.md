@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf2c8fa7c15539eedef198f9bac03d0b2d073bb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9e651af44acb0592e162bed147fce5ecfe54e0e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310176"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
 
@@ -88,9 +88,9 @@ ms.lasthandoff: 05/03/2018
   
 -   您可以更改链接域的名称和说明。  
   
--   若要更改 **“数据类型”**、 **“使用前导值”**或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
+-   若要更改 **“数据类型”**、 **“使用前导值”** 或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
   
--   可以针对链接域或它链接到的域更改“域管理”页的 **“引用数据”**、 **“域规则”**、 **“域值”**和 **“基于字词的关系”** 选项卡中的设置，并且这些更改将被另一个域继承。  
+-   可以针对链接域或它链接到的域更改“域管理”页的 **“引用数据”**、 **“域规则”**、 **“域值”** 和 **“基于字词的关系”** 选项卡中的设置，并且这些更改将被另一个域继承。  
   
  链接域具有以下特征：  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74298d97ec386225cd47c354454d27ec95c22737
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c79ed326ac9553dfa756ab639b8689c2067c548c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332391"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”**中，单击 **“连接管理器”**。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“连接管理器”**。  
   
 ### <a name="static-options"></a>静态选项  
  **“ODBC 目标编辑器”**  
@@ -86,7 +85,7 @@ ms.lasthandoff: 05/03/2018
  使用“创建表”对话框创建新表或视图。  
   
 > [!NOTE]  
->  单击 **“新建”**时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **预览**  
  使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”**中，单击 **“映射”**。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”**。  
   
 ### <a name="options"></a>“常规”  
  **可用输入列**  
@@ -146,7 +145,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”**中，单击 **“错误输出”**。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”**。  
   
 ### <a name="options"></a>“常规”  
  **输入或输出**  

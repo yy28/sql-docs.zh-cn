@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/30/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,19 +16,20 @@ helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d2b965d3177be06b46bb51b8f5238f5a4b21dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c2eb8c020127211b25b762d96e6e376be7e234c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792138"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  使用 GZIP 算法解压缩输入表达式。 压缩的结果是字节数组（varbinary(max) 类型）。  
+此函数将使用 GZIP 算法解压缩输入表达式值。 `DECOMPRESS` 将返回字节数组（VARBINARY(MAX) 类型）。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- Is a varbinary(n)、varbinary(max) 或 binary(n)********。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+varbinary(n)、varbinary(max) 或 binary(n) 值********。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回 varbinary(max) 类型的数据类型。 输入参数使用 ZIP 算法进行了解压缩。 如果需要，用户应显式将结果强制转换为目标类型。  
+数据类型 varbinary(max) 的值。 `DECOMPRESS` 将使用 ZIP 算法解压缩输入参数。 如有必要，用户应显式将结果强制转换为目标类型。  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. 在查询时解压缩数据  
- 以下示例演示如何显示表中的压缩数据：  
+此示例演示如何返回已压缩的表数据：  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -60,10 +60,10 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. 使用计算列显示已压缩数据  
- 下面的示例演示如何创建表来存储解压缩的数据：  
+此示例演示如何创建用于解压缩数据存储的表：  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

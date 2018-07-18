@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c67cbfeb3797c2e0d9fb5758078dad96f290d4e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 796c0f5e2d0cb2d689921d75b9e2005a49a35106
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332571"
 ---
 # <a name="odbc-source"></a>ODBC 源
   ODBC 源通过使用数据库表、视图或 SQL 语句，从支持 ODBC 的数据库中提取数据。  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>数据访问模式  
  选择从源选择数据的方法。 选项显示在下表中：  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |表名|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
 ||**表或视图的名称**：从列表中选择一个可用表或视图，或键入正则表达式以标识该表。|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在“数据流”选项卡上，双击 ODBC 源。  
   
-3.  在 **“ODBC 源编辑器”**中，单击 **“列”**。  
+3.  在 **“ODBC 源编辑器”** 中，单击 **“列”**。  
   
 ### <a name="options"></a>“常规”  
   
@@ -159,7 +158,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在“数据流”选项卡上，双击 ODBC 源。  
   
--   在 **“ODBC 源编辑器”**中，单击 **“错误输出”**。  
+-   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”**。  
   
 ### <a name="options"></a>“常规”  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>截断  
  选择 ODBC 源应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>描述  
  未使用。  
   
 #### <a name="set-this-value-to-selected-cells"></a>将此值设置到选定的单元格  

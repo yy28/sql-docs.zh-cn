@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913342"
 ---
 # <a name="new-features"></a>新功能
 ODBC 3 中引入了以下新功能。*x*。 一个 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序将不能使用此功能。 ODBC 3。*x*驱动程序管理器使用 ODBC 2 时不将这些功能 *.x*驱动程序。  

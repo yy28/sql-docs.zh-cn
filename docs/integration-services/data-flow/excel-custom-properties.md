@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0eb452faf4039c82e0bf3d4dedfa8f2ae49b56b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dfdf9ba43d247d21500ee986e52c5e3ae141a0c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401599"
 ---
 # <a name="excel-custom-properties"></a>Excel 自定义属性
   **源自定义属性**  
@@ -29,9 +28,9 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍 Excel 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用来访问数据库的模式。 可能的值包括： **“打开行集”**、 **“从变量打开行集”**、 **“SQL 命令”**和 **“变量中的 SQL 命令”**。 默认值为 **“打开行集”**。|  
+|AccessMode|Integer|用来访问数据库的模式。 可能的值包括： **“打开行集”**、 **“从变量打开行集”**、 **“SQL 命令”** 和 **“变量中的 SQL 命令”**。 默认值为 **“打开行集”**。|  
 |CommandTimeout|Integer|命令超时之前的秒数。如果值为 0，则表示无限期超时。<br /><br /> **注意** ：此属性未在 **Excel 源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
 |OpenRowset|String|用来打开行集的数据库对象的名称。|  
 |OpenRowsetVariable|String|该变量包含用来打开行集的数据库对象的名称。|  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍 Excel 目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> **OpenRowset** (0) - 需要提供表或视图的名称。<br /><br /> **OpenRowset from Variable** (1) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **OpenRowset Using Fastload** (3) - 需要提供表或视图的名称。<br /><br /> **OpenRowset Using Fastload from Variable** (4) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **SQL 命令** (2) - 需要提供 SQL 语句。|  
 |CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。<br /><br /> 注意：此属性在“Excel 目标编辑器” 中不可用，但可以使用“高级编辑器” 进行设置。|  

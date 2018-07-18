@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035564"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting 成员
   MSReportServer_ConfigurationSetting 类包含以下属性和方法。  

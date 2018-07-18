@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,14 +27,15 @@ helpviewer_keywords:
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 11bdddd82efcbc4f0e97b8b33d99961caa9dcfd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeb752920a1d3cab1be4a52e2b9abf213b7b119
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788888"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT 将信息作为行集返回，行集形成一个层次结构树，用以表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器在执行每条语句时所采取的步骤。 在输出中，每个语句都有一行说明语句的文本，后面紧接着几行介绍执行步骤的详细信息。 下表显示输出中包含的列。  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列。|  
   

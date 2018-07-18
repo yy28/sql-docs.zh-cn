@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026964"
 ---
 # <a name="create-a-report-data-source"></a>创建报表数据源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,11 +44,11 @@ ms.lasthandoff: 05/10/2018
     > [!NOTE]  
     >  如果在菜单上没有看到 **“报表数据源”** 项，说明尚未启用此库的报表数据源内容类型。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
-3.  在 **“数据源属性”** 页上，在 **“名称”**中键入连接 .rsds 文件的名称。  
+3.  在 **“数据源属性”** 页上，在 **“名称”** 中键入连接 .rsds 文件的名称。  
   
-4.  在 **“数据源类型”**中，选择 **“Power View 的 Microsoft BI 语义模型”**。  
+4.  在 **“数据源类型”** 中，选择 **“Power View 的 Microsoft BI 语义模型”**。  
   
-5.  在 **“连接字符串”**中，指定 Analysis Services 服务器名称、数据库名称、多维数据集名称和所有可选设置。  
+5.  在 **“连接字符串”** 中，指定 Analysis Services 服务器名称、数据库名称、多维数据集名称和所有可选设置。  
   
      连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
   
      （可选）多维数据集可以具有为模型内各种语言指定的元数据和数据翻译。 为了查看翻译（数据和元数据），需要向连接字符串添加“Locale Identifier”属性： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
   
-6.  在 **“凭据”**中，指定报表服务器如何获取访问外部数据源的凭据。  
+6.  在 **“凭据”** 中，指定报表服务器如何获取访问外部数据源的凭据。  
   
     -   若要使用打开报表的用户凭据访问数据，请选择“Windows 身份验证(集成)”。 如果 SharePoint 站点或场使用窗体身份验证或通过可信帐户连接至报表服务器，请不要选择此选项。 若要为此报表计划订阅或数据处理，请不要选择此选项。 如果您的域启用了 Kerberos 身份验证或者数据源与报表服务器位于同一台计算机上，则此选项最为有效。 如果未启用 Kerberos 身份验证，则只能将 Windows 凭据传递到另一台计算机。 也就是说，如果外部数据源位于需要另行连接的其他计算机上，则会出现错误而不会获得期望的数据。  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021594"
 ---
 # <a name="amo-data-mining-classes"></a>AMO 数据挖掘类
   数据挖掘类可帮助您创建、修改、删除和处理数据挖掘对象。 处理数据挖掘对象包括创建数据挖掘结构、创建数据挖掘模型以及处理这些模型。  

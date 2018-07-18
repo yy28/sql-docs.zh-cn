@@ -2,7 +2,7 @@
 title: 使用较大的值类型 |Microsoft 文档
 description: 使用 OLE DB 驱动程序与用于 SQL Server 的较大的值类型
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6c610ff761a2b1af3ee4f0feda402346efc1dcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612092"
 ---
 # <a name="using-large-value-types"></a>使用大值类型
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大型值数据类型是超过 8 KB 的最大行大小的类型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入**max**说明符**varchar**， **nvarchar**，和**varbinary**数据类型，以允许的值存储最大为 2 ^31-1字节数。 表列和[!INCLUDE[tsql](../../../includes/tsql-md.md)]变量可以指定**varchar （max)**， **nvarchar (max)**，或**varbinary （max)** 数据类型。  
   
@@ -694,7 +697,7 @@ _ExitProcessResultSet:
  有关如何为 SQL Server OLE DB 驱动程序公开大型值数据类型的详细信息，请参阅[Blob 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)   
   
   

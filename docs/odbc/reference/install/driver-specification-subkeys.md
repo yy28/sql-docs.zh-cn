@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920392"
 ---
 # <a name="driver-specification-subkeys"></a>驱动程序规范子项
 中的 ODBC 驱动程序子项列出每个驱动程序都有自己的子项。 此子项具有同名的 ODBC 驱动程序子项下的相应值。 此子项下的值列表的驱动程序和驱动程序安装程序 Dll，返回的驱动程序关键字的值的完整路径**SQLDrivers**，和使用情况计数。 值的格式为下表中所示。  

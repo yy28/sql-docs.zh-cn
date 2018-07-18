@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aeaf5354106c548a8c0b107a99a9b0778be8006d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409979"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在“数据流”选项卡上，双击 ODBC 目标。  
   
--   在 **“ODBC 目标编辑器”**中，单击 **“连接管理器”**。  
+-   在 **“ODBC 目标编辑器”** 中，单击 **“连接管理器”**。  
   
 ### <a name="options"></a>“常规”  
   
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>数据访问模式  
  选择将数据加载到目标的方法。 选项显示在下表中：  
   
-|选项|Description|  
+|选项|描述|  
 |------------|-----------------|  
 |表名 - 批处理|选择此选项可将 ODBC 目标配置为在批处理模式下工作。 选择此选项后，以下选项可用：|  
 ||**表或视图的名称**：从列表中选择可用的表或视图。<br /><br /> 该列表仅包含前 1000 个表。 如果你的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (\*) 通配符输入名称的任何部分以便显示要使用的表。<br /><br /> **批大小**：键入用于大容量加载的批处理的大小。 这是作为一批加载的行数。|  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在“数据流”选项卡上，双击 ODBC 目标。  
   
--   在 **“ODBC 目标编辑器”**中，单击 **“错误输出”**。  
+-   在 **“ODBC 目标编辑器”** 中，单击 **“错误输出”**。  
   
 ### <a name="options"></a>“常规”  
   
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>截断  
  选择 ODBC 目标应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>描述  
  查看错误说明。  
   
 #### <a name="set-this-value-to-selected-cells"></a>将此值设置到选定的单元格  

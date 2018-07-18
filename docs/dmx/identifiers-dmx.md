@@ -1,39 +1,25 @@
 ---
-title: 标识符 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], identifiers
-- delimited identifiers [DMX]
-- DMX [Analysis Services], identifiers
-- identifiers [DMX]
-- regular identifiers [DMX]
-- names [DMX]
-ms.assetid: fbb487a7-1b89-482a-977e-f079379d44fc
-caps.latest.revision: 35
-author: Minewiskan
+title: 标识符 (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4db8e03ca5267941cca1f909e88afa7ceec7e96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978599"
 ---
 # <a name="identifiers-dmx"></a>标识符 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  中的所有对象[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]必须具有的标识符。 对象的名称便是它的标识符。 服务器、 数据库和数据库对象，如数据源、 数据源视图、 多维数据集、 维度、 挖掘模型等有标识符。  
+  中的所有对象[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]必须有一个标识符。 对象的名称便是它的标识符。 服务器、 数据库和数据库对象，例如数据源、 数据源视图、 多维数据集、 维度、 挖掘模型等具有标识符。  
   
  数据挖掘扩展插件 (DMX) 中有两类标识符：  
   
@@ -44,7 +30,7 @@ ms.lasthandoff: 05/03/2018
  定义对象时会创建一个对象标识符。 然后，可使用该标识符来引用对象。 标识符包含的字符数必须小于或等于 100。  
   
 ##  <a name="RegularIdentifiers"></a> 常规标识符  
- DMX 中的常规标识符符合 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在标识符格式方面的规则。 DMX 中的常规标识符不需要分隔符。 以下是使用常规、 非分隔标识符的 DMX 语句的示例：  
+ DMX 中的常规标识符符合 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在标识符格式方面的规则。 DMX 中的常规标识符不需要分隔符。 下面是使用的正则、 未分隔的标识符的 DMX 语句示例：  
   
 ```  
 SELECT * FROM Clustering.CONTENT;  
@@ -55,13 +41,13 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  常规标识符的第一个字符必须是下列字符之一：  
   
-    -   如 Unicode 标准 2.0 定义的字母。 包括从 a 到 z 和从 A 到 Z 的拉丁字符以及其他语言的字母字符。  
+    -   由 Unicode 标准 2.0 定义的字母。 包括从 a 到 z 和从 A 到 Z 的拉丁字符以及其他语言的字母字符。  
   
     -   下划线 (_)。  
   
 2.  后续字符可以是：  
   
-    -   在 Unicode 标准 2.0 定义的字母。  
+    -   在 Unicode 标准 2.0 中定义的字母。  
   
     -   基本拉丁字符或其他国家/地区字符中的十进制数字。  
   
@@ -90,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   使用保留关键字作为对象名或对象名的一部分时。  
   
-     建议您不要将保留关键字用作对象名。 从早期版本的升级的数据库[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含的早期版本中包含的单词时未保留的标识符[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]但保留的字[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 只有在使用分隔标识符引用此类对象后，才能更改对象的名称。  
+     建议您不要将保留关键字用作对象名。 从早期版本的升级的数据库中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含标识符，其中包括未保留的早期版本中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是保留的字，但[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 只有在使用分隔标识符引用此类对象后，才能更改对象的名称。  
   
 -   使用未被列为限定标识符的字符时。  
   
@@ -110,15 +96,15 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>分成多个部分的标识符  
  使用限定对象名称时，可能要分隔组成对象名的多个标识符。 必须单独分隔每个标识符。  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 & #40; DMX & #41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件 & #40; DMX & #41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   

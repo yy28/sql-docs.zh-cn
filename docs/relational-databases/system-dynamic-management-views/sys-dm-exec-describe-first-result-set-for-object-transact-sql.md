@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_describe_first_result_set_for_object (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_exec_describe_first_result_set_for_object (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,17 +23,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ac774a29be46e7be925141cd10b8dd7150e5724
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981915"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  此动态管理函数采用@object_id作为参数，并描述具有该 ID 的模块的第一个结果元数据 @object_id指定可以是的 ID[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程或[!INCLUDE[tsql](../../includes/tsql-md.md)]触发器。 如果它是其他任何对象（如视图、表、函数或 CLR 过程）的 ID，则会在结果的错误列中指定错误。  
+  此动态管理函数将@object_id作为参数并描述具有该 ID 的模块的第一个结果元数据 @object_id指定可以为的 ID[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程或[!INCLUDE[tsql](../../includes/tsql-md.md)]触发器。 如果它是其他任何对象（如视图、表、函数或 CLR 过程）的 ID，则会在结果的错误列中指定错误。  
   
- **sys.dm_exec_describe_first_result_set_for_object**具有相同的结果集与定义[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，它类似于[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+ **sys.dm_exec_describe_first_result_set_for_object**具有相同的结果集定义[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)它类似于[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,15 +59,15 @@ sys.dm_exec_describe_first_result_set_for_object
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定列是否是出于浏览信息的目的而额外添加的，并不会实际出现在结果集中。|  
-|**column_ordinal**|**int**|在结果集中包含列的序号位置。 第一个列的位置将指定为 1。|  
+|**column_ordinal**|**int**|在结果集中包含列的序号位置。 第一列的位置将指定为 1。|  
 |**名称**|**sysname**|包含列的名称（如果可以确定名称）。 否则为 NULL。|  
-|**is_nullable**|**bit**|如果列允许 null 值，如果列不允许使用 Null，则为 0 和 1，如果无法确定列允许 Null，则包含值 1。|  
-|**system_type_id**|**int**|包含 sys.types 中指定的列的数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
+|**is_nullable**|**bit**|如果列允许 null 值，如果列不允许 null 值，则为 0 和 1，如果无法确定列允许 null 值，则包含值 1。|  
+|**system_type_id**|**int**|包含在 sys.types 中指定列的数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含数据类型名称。 包含为列数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
-|**max_length**|**int**|列的最大长度（字节）。<br /><br /> 为-1 = 的列数据类型为**varchar （max)**， **nvarchar (max)**， **varbinary （max)**，或**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16 或设置的值**sp_tableoption 'text in row**。|  
+|**max_length**|**int**|列的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将是 16，或者设置的值**sp_tableoption 'text in row'**。|  
 |**精度**|**tinyint**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
-|**小数位数**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
-|**collation_name**|**sysname**|如果列包含的是字符，则为该列的排序规则的名称。 否则返回 NULL。|  
+|**scale**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
+|**collation_name**|**sysname**|如果列包含的是字符，则为该列的排序规则的名称。 否则，返回 NULL。|  
 |**user_type_id**|**int**|对于 CLR 和别名类型，包含在 sys.types 中指定的列数据类型的 user_type_id。 否则为 NULL。|  
 |**user_type_database**|**sysname**|对于 CLR 和别名类型，包含在其中定义相应类型的数据库的名称。 否则为 NULL。|  
 |**user_type_schema**|**sysname**|对于 CLR 和别名类型，包含在其中定义相应类型的架构的名称。 否则为 NULL。|  
@@ -79,7 +80,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_xml_document**|**bit**|如果返回的数据类型为 XML，并且保证该类型是完整的 XML 文档（包含根节点，与 XML 片段相对），则返回 1。 否则，返回 0。|  
 |**is_case_sensitive**|**bit**|如果列为区分大小写的字符串类型，则返回 1；否则，返回 0。|  
 |**is_fixed_length_clr_type**|**bit**|如果列为固定长度 CLR 类型，则返回 1；否则，返回 0。|  
-|**source_server**|**sysname**|此结果中的此列返回的源服务器的名称（如果结果源自远程服务器）。 在 sys.servers 中所示，未提供名称。  如果列源自本地服务器或无法确定它派自的服务器，则返回 NULL。 仅在请求浏览信息填充。|  
+|**source_server**|**sysname**|此结果中的此列返回的源服务器的名称（如果结果源自远程服务器）。 在 sys.servers 中所示，给定的名称。  如果列源自本地服务器或无法确定它派自的服务器，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_database**|**sysname**|此结果中的列返回的源数据库的名称。 如果无法确定该数据库，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_schema**|**sysname**|此结果中的列返回的源架构的名称。 如果无法确定该架构，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_table**|**sysname**|此结果中的列返回的源表的名称。 如果无法确定该表，则返回 NULL。 仅在请求浏览信息填充。|  
@@ -87,7 +88,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_identity_column**|**bit**|如果列是标识列，则返回 1；否则，返回 0。 如果无法确定列是否为标识列，则返回 NULL。|  
 |**is_part_of_unique_key**|**bit**|如果列是唯一索引的一部分（包括唯一和主要的约束），则返回 1；否则，返回 0。 如果无法确定列是否为唯一索引的一部分，则返回 NULL。 仅在请求浏览信息时填充它。|  
 |**is_updateable**|**bit**|如果可以更新列，则返回 1；否则，返回 0。 如果无法确定是否可以更新列，则返回 NULL。|  
-|**is_computed_column**|**bit**|如果列是计算列，则返回 1；否则，返回 0。 如果无法确定列是计算的列，返回 NULL。|  
+|**is_computed_column**|**bit**|如果列是计算列，则返回 1；否则，返回 0。 如果无法确定该列是计算的列，返回 NULL。|  
 |**is_sparse_column_set**|**bit**|如果列是稀疏列，则返回 1；否则，返回 0。 如果无法确定列是否为稀疏列集的一部分，则返回 NULL。|  
 |**ordinal_in_order_by_list**|**int**|此列在 ORDER BY 列表中的位置：如果在 ORDER BY 列表中不显示该列或无法唯一确定 ORDER BY 列表，则返回 NULL。|  
 |**order_by_list_length**|**int**|ORDER BY 列表的长度。 如果没有 ORDER BY 列表，或者无法唯一确定 ORDER BY 列表，则返回 NULL。 请注意，对于 sp_describe_first_result_set 返回的所有行，该值是相同的。|  
@@ -99,14 +100,14 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|包含一个整数，它表示返回的错误。 映射到 error_type_desc。 请参阅“备注”中的列表。|  
 |**error_type_desc**|**nvarchar(60)**|包含一个简短的大写字符串，它表示返回的错误。 映射到 error_type。 请参阅“备注”中的列表。|  
   
-## <a name="remarks"></a>注释  
- 此函数使用相同的算法为**sp_describe_first_result_set**。 有关详细信息，请参阅[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 此函数使用的相同算法**sp_describe_first_result_set**。 有关详细信息，请参阅[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  下表列出了错误类型及其说明。  
   
 |错误类型|错误类型|Description|  
 |-----------------|-----------------|-----------------|  
-|1|MISC|未描述的所有错误。|  
+|@shouldalert|MISC|未描述的所有错误。|  
 |2|SYNTAX|在批处理中发生语法错误。|  
 |3|CONFLICTING_RESULTS|由于两个可能的第一个语句之间发生冲突，无法确定结果。|  
 |4|DYNAMIC_SQL|由于动态 SQL 可能会返回第一个结果，无法确定结果。|  
@@ -115,18 +116,18 @@ sys.dm_exec_describe_first_result_set_for_object
 |7|EXTENDED_PROCEDURE|由于扩展存储过程可能会返回第一个结果，无法确定结果。|  
 |8|UNDECLARED_PARAMETER|由于结果集的一个或多个列的数据类型可能取决于未声明的参数，无法确定结果。|  
 |9|RECURSION|由于批处理包含递归语句，无法确定结果。|  
-|10|TEMPORARY_TABLE|无法确定结果，因为批处理包含临时表和不受**sp_describe_first_result_set** 。|  
-|11|UNSUPPORTED_STATEMENT|由于批处理包含不支持的语句，无法确定结果**sp_describe_first_result_set** (例如，FETCH、 REVERT 等。)。|  
-|12|OBJECT_ID_NOT_SUPPORTED|@object_id传递给函数不是支持 （即不是存储的过程）|  
-|13|OBJECT_ID_DOES_NOT_EXIST|@object_id传递到系统目录中找不到函数。|  
+|10|TEMPORARY_TABLE|无法确定结果，因为批处理包含临时表，并且不受**sp_describe_first_result_set** 。|  
+|11|UNSUPPORTED_STATEMENT|无法确定结果，由于批处理包含不支持的语句**sp_describe_first_result_set** (例如，FETCH、 REVERT 等。)。|  
+|12|OBJECT_ID_NOT_SUPPORTED|@object_id传递给该函数是不受支持 （即不是存储的过程）|  
+|13|OBJECT_ID_DOES_NOT_EXIST|@object_id传递到系统目录中找不到该函数。|  
   
 ## <a name="permissions"></a>权限  
- 需要有权执行@tsql自变量。  
+ 需要具有执行权限@tsql参数。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-metadata-with-and-without-browse-information"></a>A. 返回包含和不含浏览信息的元数据  
- 下面的示例创建名为 TestProc2 返回两个结果集的存储的过程。 然后该示例演示**sys.dm_exec_describe_first_result_set**返回第一个结果集在过程中，不含浏览信息与有关的信息。  
+ 以下示例创建一个名为 TestProc2 返回两个结果集的存储的过程。 然后该示例演示**sys.dm_exec_describe_first_result_set**返回的第一个结果集在过程中，使用和不含浏览信息有关的信息。  
   
 ```  
 CREATE PROC TestProc2  
@@ -141,7 +142,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>B. 结合使用 sys.dm_exec_describe_first_result_set_for_object 函数和表或视图  
- 下面的示例使用这两个与 sys.procedures 系统目录视图和**sys.dm_exec_describe_first_result_set_for_object**函数来显示中的所有存储过程的结果集的元数据[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。  
+ 下面的示例使用这两个 sys.procedures 系统目录视图和**sys.dm_exec_describe_first_result_set_for_object**函数显示中的所有存储过程的结果集的元数据[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。  
   
 ```  
 USE AdventureWorks2012;  
@@ -154,9 +155,9 @@ GO
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

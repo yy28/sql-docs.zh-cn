@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031899"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化方案
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,11 +60,11 @@ ms.lasthandoff: 05/10/2018
 |实现翻译支持|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，生成你填充并导回模型中的翻译文件。<br /><br /> 有关详细信息，请参阅[表格模型 (Analysis Services) 中的翻译](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，为多维数据集、度量值、维度和属性的标题、说明和帐户类型定义翻译。<br /><br /> 有关详细信息，请参阅[多维模型中的翻译 (Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 有关如何使用此功能的课程，请参阅 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程的[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)。|  
 |货币换算|不可用。|货币换算通过专用 MDX 脚本进行，这些脚本可以转换包含货币数据的度量值。 你可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的商业智能向导生成一个 MDX 脚本，它使用来自维度、属性和度量值组的组合数据与元数据来转换包含货币数据的度量值。 请参阅[货币换算 (Analysis Services)](../analysis-services/currency-conversions-analysis-services.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中的翻译支持](../analysis-services/translation-support-in-analysis-services.md)   
  [Windows 应用程序的国际化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [请转到全球开发人员中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [转到全球开发人员中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [使用基于区域设置的自适应设计编写 Windows 应用商店应用](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [开发使用 C# 和 XAML 的通用 Windows 应用](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [开发使用 C# 和 XAML 的通用 Windows 应用程序](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

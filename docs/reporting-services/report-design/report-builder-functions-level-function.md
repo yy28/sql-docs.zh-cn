@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024144"
 ---
 # <a name="report-builder-functions---level-function"></a>报表生成器函数 - Level 函数
   返回在递归层次结构中的当前深度级别。  

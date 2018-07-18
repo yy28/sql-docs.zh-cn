@@ -2,7 +2,6 @@
 title: 查看对象 (ADOX) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a55d77b7bb7f79ee5871445d5169a4dfd2de5f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2980c92b7980fe2fa6ec16f82bc4d8f7d3aff585
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287436"
 ---
 # <a name="view-object-adox"></a>视图对象 (ADOX)
 表示经过筛选的记录或一个虚拟表集。 用 ADO 结合使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**视图**对象可以用于添加、 删除或修改视图。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  视图是从其他数据库表或视图创建一个虚拟表。 **视图**对象允许你创建一个视图，而无需知道，或使用提供程序的"创建视图"语法。  
   
  使用的属性**视图**对象，你可以：  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [视图对象属性、方法和事件](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [视图和字段集合示例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [视图追加方法示例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [视图集合，CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   

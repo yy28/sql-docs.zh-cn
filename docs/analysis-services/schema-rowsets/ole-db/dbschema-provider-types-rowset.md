@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34036398"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/10/2018
 |**COLUMN_SIZE**|**DBTYPE_UI4**|非数值列的长度或以下参数，该参数或者是最大值或者是访问接口为此类型定义的长度。 对于字符数据，此为最大值或定义长度（以字符为单位）。 对于 DateTime 数据类型，本列为字符串表示形式的长度（假定精度允许的最大值为秒的小数形式）。<br /><br /> 如果数据类型为数值，则此为数据类型最大精度的上限。|  
 |**LITERAL_PREFIX**|**DBTYPE_WSTR**|用于在文本命令中作为此类型文字的前缀的一个或多个字符。|  
 |**LITERAL_SUFFIX**|**DBTYPE_WSTR**|用于在文本命令中作为此类型文字的后缀的一个或多个字符。|  
-|**CREATE_PARAMS**|**DBTYPE_WSTR**|创建此数据类型的列时，由使用者指定的创建参数。 例如，SQL 数据类型，**十进制，**需要精度和小数位数。 在这种情况下，创建参数可能是字符串“precision,scale”。 中的文本命令创建**十进制**具有 10 精度和小数位数为 2，值的列**TYPE_NAME**列可能是**DECIMAL()** 和完整的类型说明将为**DECIMAL(10,2)**。<br /><br /> 创建参数显示为逗号分隔的值列表，列表中的值按提供顺序排列，列表两边不带括号。 如果创建参数是长度、最大长度、精度、小数位数、种子或增量，则分别使用“length”、“max length”、“precision”、“scale”、“seed”或“increment”。 如果创建参数是其他某值，则访问接口将确定要使用什么文本来描述创建参数。<br /><br /> 如果数据类型需要创建参数，则“()”通常会显示在类型名称中。 这用于指示插入创建参数的位置。 如果类型名称不包括“()”，则将用括号括上创建参数并将其追加到数据类型名称中。|  
+|**CREATE_PARAMS**|**DBTYPE_WSTR**|创建此数据类型的列时，由使用者指定的创建参数。 例如，SQL 数据类型，**十进制，** 需要精度和小数位数。 在这种情况下，创建参数可能是字符串“precision,scale”。 中的文本命令创建**十进制**具有 10 精度和小数位数为 2，值的列**TYPE_NAME**列可能是**DECIMAL()** 和完整的类型说明将为**DECIMAL(10,2)**。<br /><br /> 创建参数显示为逗号分隔的值列表，列表中的值按提供顺序排列，列表两边不带括号。 如果创建参数是长度、最大长度、精度、小数位数、种子或增量，则分别使用“length”、“max length”、“precision”、“scale”、“seed”或“increment”。 如果创建参数是其他某值，则访问接口将确定要使用什么文本来描述创建参数。<br /><br /> 如果数据类型需要创建参数，则“()”通常会显示在类型名称中。 这用于指示插入创建参数的位置。 如果类型名称不包括“()”，则将用括号括上创建参数并将其追加到数据类型名称中。|  
 |**IS_NULLABLE**|**DBTYPE_BOOL**|指示数据类型是否可以为 Null 的布尔值。<br /><br /> **VARIANT_TRUE**该值指示数据类型为 null。<br /><br /> **VARIANT_FALSE**指示数据类型不是可以为 null。<br /><br /> **NULL**-指示，并不知道数据类型是否可以为 null。|  
 |**CASE_SENSITIVE**|**DBTYPE_BOOL**|指示数据类型是否为字符类型及区分大小写的布尔值。<br /><br /> **VARIANT_TRUE**指示的数据类型是字符类型，并且区分大小写。<br /><br /> **VARIANT_FALSE**指示的数据类型不是字符类型，或不区分大小写。|  
 |**可搜索**|**DBTYPE_UI4**|一个整数，指示如何的数据类型可在搜索如果提供程序支持**ICommandText**; 否则为**NULL**。 此列可以具有下列值：<br /><br /> **DB_UNSEARCHABLE**指示的数据类型不能使用在**其中**子句。<br /><br /> **DB_LIKE_ONLY**指示的数据类型可在**其中**子句只能与**如**谓词。<br /><br /> **DB_ALL_EXCEPT_LIKE**指示的数据类型可在**其中**子句与除之外的所有比较运算符**如**。<br /><br /> **DB_SEARCHABLE**指示的数据类型可在**其中**子句的任何比较运算符。|  

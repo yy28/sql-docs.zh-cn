@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32894963"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安装任务
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 |操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
-|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序|在将承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务的计算机上，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序或命令提示符安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序时， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将显示在 **“功能选择”** 页上的 **“共享功能”**下。 使用命令提示符时， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 作为功能参数提供。 请注意，命令行安装过程将安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]，但不会对它进行配置。 您必须使用 Master Data Services 配置管理器对其进行配置。<br /><br /> 安装过程：<br /><br /> 在您为共享功能指定的位置安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 文件夹和文件，并为这些对象分配权限。<br /><br /> 在全局程序集缓存 (GAC) 中注册 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 程序集。<br /><br /> 安装 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。|[使用安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [文件夹和文件权限 (Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)|  
+|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序|在将承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务的计算机上，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序或命令提示符安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序时， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将显示在 **“功能选择”** 页上的 **“共享功能”** 下。 使用命令提示符时， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 作为功能参数提供。 请注意，命令行安装过程将安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]，但不会对它进行配置。 您必须使用 Master Data Services 配置管理器对其进行配置。<br /><br /> 安装过程：<br /><br /> 在您为共享功能指定的位置安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 文件夹和文件，并为这些对象分配权限。<br /><br /> 在全局程序集缓存 (GAC) 中注册 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 程序集。<br /><br /> 安装 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。|[使用安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [文件夹和文件权限 (Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)|  
   
 ##  <a name="postinstall"></a> 安装后任务  
   

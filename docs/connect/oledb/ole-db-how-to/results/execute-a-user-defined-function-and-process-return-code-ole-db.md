@@ -2,10 +2,10 @@
 title: 执行用户定义函数和过程返回代码 (OLE DB) |Microsoft 文档
 description: 执行用户定义函数和过程返回代码使用的 SQL Server OLE DB 驱动程序
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2355ea72a10fc5cee1ea35ae5c682cf5cd269c8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a11b48a03bef7b6842b427d43d1a73c311a08b42
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665547"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>执行用户定义函数并处理返回代码 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   在此示例中，将执行一个用户定义函数并输出返回代码。 IA64 平台不支持此示例。  
   
@@ -368,7 +371,7 @@ drop function fn_RectangleArea
 go  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [处理结果操作指南主题 & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [处理结果操作指南主题&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

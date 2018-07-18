@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022674"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
 可在单个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表中使用嵌入的数据集。 报表服务器上的共享数据集可由多个报表使用，移动和分页皆可。 若要创建数据集，需要具有嵌入或共享的数据源。  

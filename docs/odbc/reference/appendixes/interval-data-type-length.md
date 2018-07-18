@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906173"
 ---
 # <a name="interval-data-type-length"></a>间隔数据类型长度
 以下规则用于确定以字符为单位的间隔数据类型的长度。 长度用的字符数表示。 字节数取决于的字符集。 长度包括以下值加在一起：  

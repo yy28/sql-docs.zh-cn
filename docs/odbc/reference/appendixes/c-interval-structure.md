@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906704"
 ---
 # <a name="c-interval-structure"></a>C 间隔结构
 每个 C interval 数据类型中列出[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分使用相同的结构来包含该间隔数据。 当**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是调用，该驱动程序到 SQL_INTERVAL_STRUCT 结构返回的数据，使用指定的值应用程序，C 数据类型 (在调用**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 来解释 SQL_INTERVAL_STRUCT 的内容并填充*interval_type*字段具有结构*枚举*与 C 类型相对应的值。 请注意，不读取驱动程序*interval_type*字段以确定间隔的类型; 它们检索 SQL_DESC_CONCISE_TYPE 描述符字段的值。 当结构用于参数数据时，该驱动程序使用 APD SQL_DESC_CONCISE_TYPE 字段中的应用程序指定的值来解释的内容 SQL_INTERVAL_STRUCT，即使应用程序设置的值*interval_type*字段为不同的值。  

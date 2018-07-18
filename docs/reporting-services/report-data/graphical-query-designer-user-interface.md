@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021974"
 ---
 # <a name="graphical-query-designer-user-interface"></a>图形查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同时提供了图形查询设计器和基于文本的查询设计器，用于创建在报表设计器中为报表数据集检索关系数据库中的数据的查询。 使用图形查询设计器能够以交互方式生成查询并查看数据源类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的结果。 使用基于文本的查询设计器可以指定多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、复杂的查询或命令语句以及基于表达式的查询。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。 有关使用特定数据源类型的详细信息，请参阅 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  

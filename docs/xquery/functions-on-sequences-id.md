@@ -1,5 +1,5 @@
 ---
-title: id 函数 (XQuery) |Microsoft 文档
+title: id 函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004619"
 ---
 # <a name="functions-on-sequences---id"></a>函数对序列的 id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回与匹配的一个或多个中提供的 xs: idref 值的值的 xs: id 值的元素节点的序列 *$arg*。  
+  返回与匹配一个或多个 xs: idref 值中提供的值的 xs: id 值的元素节点的顺序 *$arg*。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,26 +46,26 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  一个或多个 xs:IDREF 值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数的结果是 XML 实例中的一组元素（以文档顺序），其中有 xs:ID 值等于候选 xs:IDREF 列表中的一个或多个 xs:IDREF 值。  
   
  如果 xs:IDREF 值不匹配任何元素，则该函数返回空序列。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型中的列[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 基于 IDREF 属性值检索元素  
  下面的示例使用 fn:id 来基于 IDREF manager 属性检索 <`employee`> 元素。 在此示例中，manager 属性是一个 IDREF 类型的属性，eid 属性是一个 ID 类型的属性。  
   
- 为特定的管理器属性值， **id （)** 函数查找 <`employee`> 其 ID 类型特性值与输入的 IDREF 值匹配的元素。 换而言之，为特定员工， **id （)** 函数返回员工管理器。  
+ 对于特定的 manager 属性值， **id （)** 函数查找 <`employee`> 元素，其 ID 类型属性值匹配输入的 IDREF 值。 换句话说，对于特定雇员**id （)** 函数返回雇员经理。  
   
  在该示例中执行下列操作：  
   
 -   创建一个 XML 架构集合。  
   
--   类型化**xml**通过使用 XML 架构集合创建变量。  
+-   类型化**xml**使用 XML 架构集合来创建变量。  
   
--   该查询将检索具有 ID 属性值所引用的元素**manager** IDREF 特性的 <`employee`> 元素。  
+-   该查询将检索具有 ID 属性值引用的元素**管理器**IDREF 属性的 <`employee`> 元素。  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -107,7 +108,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 基于 OrderList IDREFS 属性值检索元素  
  在下面的示例中，<`Customer`> 元素的 OrderList 属性是一个 IDREFS 类型的属性。 它列出特定客户的订单 ID。 对于每个订单 ID，在 <`Customer`> 下都有一个提供订单值的 <`Order`> 元素子级。  
   
- 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 此值然后传递给**id （)** 函数。 然后找到函数 <`Order`> 其 OrderID 属性值与匹配的输入元素**id （)** 函数。  
+ 查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 然后将此值传递给**id （)** 函数。 然后，该函数查找 <`Order`> 元素的 OrderID 属性值匹配的输入**id （)** 函数。  
   
 ```  
 drop xml schema collection SC  
@@ -185,9 +186,9 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持的两个参数版本**id （)**。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求的自变量类型**id （)** 要 xs:IDREF* 的子类型。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要的参数类型**id （)** 为 xs: idref * 的子类型。  
   
-## <a name="see-also"></a>另请参阅  
- [在序列上的函数](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+## <a name="see-also"></a>请参阅  
+ [基于序列的函数](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

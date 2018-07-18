@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899322"
 ---
 # <a name="setup-dll"></a>安装程序 DLL
 ODBC 管理器调用函数**ConfigDSN**用户时配置数据源。

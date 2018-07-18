@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dba7ad5bc651e279ad23a7876d196ef9316bb56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22be2baf6980f8df813635f3b9d4e4dfd213b818
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355889"
 ---
 # <a name="generate-filters"></a>生成筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  **完成筛选语句以标识订阅服务器所要接收的表行。**  
   
-     定义新的筛选语句。 **“列”** 列表框列出了要从 **“选择要筛选的表”**中选择的表中发布的所有列。 **“筛选语句”** 文本区域包括默认的文本，其格式为：  
+     定义新的筛选语句。 **“列”** 列表框列出了要从 **“选择要筛选的表”** 中选择的表中发布的所有列。 **“筛选语句”** 文本区域包括默认的文本，其格式为：  
   
      `SELECT <published_columns> FROM [tableowner].[tablename] WHERE`  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  **指定将从此表接收数据的订阅数。**  
   
-     仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+     仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
  添加筛选器之后，请单击 **“确定”** 退出并关闭该对话框。 将对照 SELECT 子句中的表分析并运行指定的筛选器。 如果筛选语句有语法错误或其他问题，将会通知您编辑该筛选语句。  
   

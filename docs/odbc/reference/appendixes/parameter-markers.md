@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907102"
 ---
 # <a name="parameter-markers"></a>参数标记
 根据 sql-92 规范中，应用程序无法将参数标记放置在以下位置。 有关更完整的列表，请参阅 sql-92 规范。  

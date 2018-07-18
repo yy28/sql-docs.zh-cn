@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852022"
 ---
 # <a name="using-auto-generated-keys"></a>使用自动生成的键
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

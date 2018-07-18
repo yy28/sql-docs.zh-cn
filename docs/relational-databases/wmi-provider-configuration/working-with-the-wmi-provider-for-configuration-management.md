@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33010614"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>使用 WMI 提供程序进行配置管理
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  其中 `instance_name` 默认为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认安装中的 `MSSQLSERVER`。  
   
- **注意：**如果通过将需要确保你的计算机是否已正确配置 Windows 防火墙进行连接。 请参阅上的 Windows Management Instrumentation 文档中的"通过 Windows 防火墙连接"文章[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[网站](http://go.microsoft.com/fwlink/?linkid=15426)。  
+ **注意：** 如果通过将需要确保你的计算机是否已正确配置 Windows 防火墙进行连接。 请参阅上的 Windows Management Instrumentation 文档中的"通过 Windows 防火墙连接"文章[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[网站](http://go.microsoft.com/fwlink/?linkid=15426)。  
   
 ## <a name="permissions-and-server-authentication"></a>权限和服务器身份验证  
  若要访问用于配置管理的 WMI 提供程序，客户端 WMI 管理脚本必须在目标计算机上的管理员上下文中运行。 您需要具有要管理的计算机上的本地 Windows Administrators 组的成员身份。  

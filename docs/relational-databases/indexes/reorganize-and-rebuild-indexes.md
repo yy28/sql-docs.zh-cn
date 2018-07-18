@@ -40,6 +40,7 @@ ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/14/2018
+ms.locfileid: "34154627"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

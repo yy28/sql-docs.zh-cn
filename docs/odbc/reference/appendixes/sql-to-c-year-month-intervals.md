@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910012"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>为 c： 年-月间隔的 SQL
 年-月间隔 ODBC SQL 数据类型的标识符都是：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913492"
 ---
 # <a name="system-functions"></a>系统函数
 下表列出了 ODBC 标量函数集中包括的系统函数。 通过调用**SQLGetInfo**与*信息类型*的 SQL_SYSTEM_FUNCTIONS，应用程序可以确定由驱动程序支持的系统函数。  

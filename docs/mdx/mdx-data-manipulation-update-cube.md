@@ -1,40 +1,23 @@
 ---
 title: 更新多维数据集语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cube
-- UPDATE CUBE
-- UPDATE_CUBE
-- UPDATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- updating cubes
-- cubes [Analysis Services], modifying
-- modifying cubes
-- UPDATE CUBE statement
-ms.assetid: 6c8f23bb-401b-49de-843a-5324ac977239
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 805b6f1bf5966cefd3879ff53f8908f20944c441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741876"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 数据操作的更新多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   UPDATE CUBE 语句用于将数据写回到多维数据集中的任何单元中，该多维数据集使用 SUM 聚合而聚合到其父级。 详细说明和示例，请参阅"了解分配"在此博客文章：[使用 Analysis Services （博客） 生成写回](http://go.microsoft.com/fwlink/?LinkId=394977)。  
   
@@ -70,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  有效的 MDX（多维表达式）数值表达式，将返回介于 0 到 1 之间的一个十进制值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  您可以更新多维数据集中的指定叶单元或非叶单元的值，并且可以根据需要跨依赖叶单元为指定非叶单元分配值。 元组表达式指定的单元可以是多维空间中的任意有效单元（即该单元不一定是叶单元）。 但是，必须使用聚合单元格[总和](../mdx/sum-mdx.md)聚合函数和不能包含计算的成员的元组中用于标识该单元格。  
   
  可能需要考虑**更新多维数据集**作为将自动生成一系列到叶和非叶单元格将汇总到指定的和的各个单元格写回操作子例程的语句。  
@@ -124,7 +107,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  如果更新的单元不相互重叠，则 **Update Isolation Level** 连接字符串属性可用于提高 UPDATE CUBE 的性能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   

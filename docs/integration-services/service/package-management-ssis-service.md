@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -33,11 +31,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 09aa087d02f97e4c4c989ceb5186b79a123500cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 719d14ccca346ee2f89aab62cc61887652db6fba
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329291"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
   包管理包括监视、管理、导入和导出包。  
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-connect-to-integration-services"></a>连接到 Integration Services  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”**和 **Microsoft SQL Server**，然后单击 **SQL Server Management Studio**。  
+1.  单击 **“开始”**，依次指向 **“所有程序”** 和 **Microsoft SQL Server**，然后单击 **SQL Server Management Studio**。  
   
 2.  在 **“连接到服务器”** 对话框中，在 **“服务器类型”** 列表中选择 **Integration Services** ，在 **“服务器名称”** 框中提供服务器名称，然后单击 **“连接”**。  
   

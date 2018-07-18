@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904592"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>以编程方式为文本文件驱动程序设置选项
 |选项|Description|方法|  

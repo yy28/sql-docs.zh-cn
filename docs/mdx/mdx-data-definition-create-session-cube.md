@@ -1,41 +1,23 @@
 ---
 title: 创建会话多维数据集语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SESSION_CUBE
-- SESSION
-- CUBE
-- SESSION CUBE
-- CREATE SESSION CUBE
-- CREATE SESSION
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CREATE SESSION CUBE
-- statements [MDX], CREATE SESSION CUBE
-ms.assetid: 06b90f44-d943-4a52-b0d8-4bcbc57ed6ec
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5f49f41f4a346d7a30bdfd8d95e1df5c0f2c0eb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742466"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 数据定义-创建会话多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   根据现有服务器多维数据集，创建和填充会话多维数据集。 会话多维数据集仅在当前会话内可见；不能从其他任何会话浏览或查询。 会话关闭时将隐式删除会话多维数据集。  
   
@@ -129,7 +111,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<级别类型 >  
  该规范仅对于派生维度定义有效。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  与服务器和本地多维数据集不同，会话多维数据集在创建该会话多维数据集的会话之外不会持久保留。 会话多维数据集按照定义它的度量值和定义来定义。 有两种类型的维度。  
   
 -   源维度 - 这些维度是一个或多个源多维数据集的一部分。  
@@ -217,7 +199,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [创建全局多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   

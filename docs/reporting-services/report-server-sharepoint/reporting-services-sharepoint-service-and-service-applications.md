@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025134"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服务和服务应用程序
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>修改服务应用程序与代理服务器组的关联
 
- 创建服务应用程序的“新建”页包含 **“Web 应用程序关联”**部分。 此部分允许您在创建服务应用程序时对其进行关联。 使用以下步骤可更改关联和将客户配置分配给服务应用程序。 还可以使用相同的常规过程将代理添加到默认组，而不是更改服务应用程序与自定义组的关联。  
+ 创建服务应用程序的“新建”页包含 **“Web 应用程序关联”** 部分。 此部分允许您在创建服务应用程序时对其进行关联。 使用以下步骤可更改关联和将客户配置分配给服务应用程序。 还可以使用相同的常规过程将代理添加到默认组，而不是更改服务应用程序与自定义组的关联。  
   
 1.  在 SharePoint 管理中心内，在“应用程序管理”中单击 **“配置服务应用程序关联”**。  
   

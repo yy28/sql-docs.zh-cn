@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022044"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/10/2018
   
  选择在向导创建应用于您的数据的层次结构时要使用的时间段，如“年”、“半年”、“季度”、“四个月”、“月”、“十天”、“周”或“日期”。 您始终必须至少选择“日期”时间段。 “日期”属性是维度的键属性，因此，没有该属性，维度不能发挥作用。  
   
- 在 **“时间成员名称所用的语言”**旁边，选择要用于标记维度成员的语言。  
+ 在 **“时间成员名称所用的语言”** 旁边，选择要用于标记维度成员的语言。  
   
  创建完基于日期范围的时间维度之后，您可以使用维度设计器添加或删除时间属性。 由于“日期”属性是维度的键属性，因此，不能将该属性从维度中删除。 若要对用户隐藏“日期”特性，可以将该特性的 **AttributeHierarchyVisible** 属性更改为 **False**。  
   

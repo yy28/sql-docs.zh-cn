@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ec8f1c37cf2f28c2709640e06e92aa418524b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b1aa5dfe6a501548a3a7e0914eacda93169a89c6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310016"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  您在将域映射到引用数据服务过程中指定的阈值在使用引用数据服务中的知识清理数据时同样适用，但在 **“常规设置”** 选项卡的 **“配置”** 部分中指定的阈值则不适用。 有关为引用数据清理指定阈值的信息，请参阅[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)中的步骤 9。  
   
--   域值划分为以下几个类别： **“建议”**、 **“新建”**、 **“无效”**、 **“已更正”**和 **“正确”**。  
+-   域值划分为以下几个类别： **“建议”**、 **“新建”**、 **“无效”**、 **“已更正”** 和 **“正确”**。  
   
 -   附加数据将追加到源中，并且该信息与清理后的数据一起提供以供导出。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色，才能执行数据清理。  
   
 ##  <a name="Cleanse"></a> 使用引用数据知识清理您的数据  
- 我们将继续以同一个示例进行演示，并且使用在前一个主题[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)中通过 Microsoft Azure Marketplace 的 Melissa Data 服务映射的域。 现在，我们将使用相同的域来清理一些示例美国地址。 清理数据的步骤与[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中介绍的步骤相同。 但是，我们在该过程中将会在需要时提醒您注意。  
+ 我们将继续以同一个示例进行演示，并且使用在前一个主题[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)中通过 Microsoft Azure 市场的 Melissa Data 服务映射的域。 现在，我们将使用相同的域来清理一些示例美国地址。 清理数据的步骤与[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中介绍的步骤相同。 但是，我们在该过程中将会在需要时提醒您注意。  
   
 1.  创建一个数据质量项目，并且选择 **“清理”** 活动。 请参阅 [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  当您在 **“地址验证”** 复合域中映射了所有 4 个域后，数据清理现在将在复合域级别完成，而非在单独的域级别完成。  
   
-3.  在 **“清理”** 页上，通过单击 **“开始”**运行计算机辅助的清理过程。 在清理过程结束后，单击 **“下一步”**。  
+3.  在 **“清理”** 页上，通过单击 **“开始”** 运行计算机辅助的清理过程。 在清理过程结束后，单击 **“下一步”**。  
   
     > [!NOTE]  
     >  在 **“清理”** 页上，DQS 通过以下两种方式显示与附加到引用数据服务的域有关的信息：  

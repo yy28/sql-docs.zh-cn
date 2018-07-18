@@ -2,7 +2,6 @@
 title: 参数集合，命令属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91cbb561b62c084c20f8d8a217d54542bc4ceef7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38b389c04a6f9c4842c700aac0d87e14299ed31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286616"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>参数集合，命令属性示例 (VB)
 下面的代码演示如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)具有属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象以检索有关该过程的参数信息。  
@@ -79,7 +79,7 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [命令属性 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   

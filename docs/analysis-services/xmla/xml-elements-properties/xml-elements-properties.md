@@ -1,5 +1,5 @@
 ---
-title: 属性 (XMLA) |Microsoft 文档
+title: 属性 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bca744567d0feabafbcd489f619d76be9f2ade06
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037409"
 ---
-# <a name="xml-elements---properties"></a>XML 元素的属性
+# <a name="xml-elements---properties"></a>XML 元素-属性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   XML for Analysis (XMLA) 协议使用 XML 元素表示 XMLA 标头、方法、对象、命令和数据类型的属性信息和值。  
   
@@ -29,19 +29,19 @@ ms.locfileid: "34577959"
 |[ApplyCompression 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)||  
 |[属性元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)||  
 |[AttributeName 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)||  
-|[属性元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)||  
+|[Attributes 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)||  
 |[轴元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)||  
 |[AxesInfo 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)||  
-|[轴元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)||  
+|[Axis 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)||  
 |[AxisInfo 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md)||  
 |[BackupRemotePartitions 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)||  
 |[绑定元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md)||  
 |[绑定元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md)||  
 |[CancelAssociated 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)||  
-|[功能元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)||  
+|[Capability 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)||  
 |[标题元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/caption-element-xmla.md)||  
-|[单元格元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)||  
-|[单元格元素&#40;MDDataSet&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)||  
+|[单元元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)||  
+|[单元元素&#40;MDDataSet&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)||  
 |[CellData 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)||  
 |[CellInfo 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md)||  
 |[CellOrdinal 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)||  
@@ -53,13 +53,13 @@ ms.locfileid: "34577959"
 |[多维数据集元素&#40;OlapInfo&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md)||  
 |[CubeID 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md)||  
 |[CubeInfo 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cubeinfo-element-xmla.md)||  
-|[多维数据集名称元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cubename-element-xmla.md)||  
+|[CubeName 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cubename-element-xmla.md)||  
 |[CustomRollup 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/customrollup-element-xmla.md)||  
 |[CustomRollupProperties 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/customrollupproperties-element-xmla.md)||  
 |[数据库元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)||  
 |[DatabaseID 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md)||  
 |[DatabaseName 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md)||  
-|[数据源元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md)||  
+|[DataSource 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md)||  
 |[DataSourceID 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)||  
 |[DataSourceType 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md)||  
 |[DataSourceView 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla.md)||  
@@ -72,7 +72,7 @@ ms.locfileid: "34577959"
 |[错误元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)||  
 |[ErrorCode 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)||  
 |[ErrorConfiguration 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/errorconfiguration-element-xmla.md)||  
-|[异常元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)||  
+|[Exception 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)||  
 |[文件元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)||  
 |[Folder 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)||  
 |[Folders 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)||  
@@ -88,13 +88,13 @@ ms.locfileid: "34577959"
 |[LNum 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/lnum-element-xmla.md)||  
 |[Location 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)||  
 |[Locations 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md)||  
-|[具体化元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md)||  
+|[Materialize 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md)||  
 |[MeasureGroupID 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md)||  
-|[成员元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)||  
+|[Member 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)||  
 |[Members 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)||  
 |[消息元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)||  
 |[消息元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)||  
-|[模式元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)||  
+|[Mode 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)||  
 |[MoveWithDescendants 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/movewithdescendants-element-xmla.md)||  
 |[命名元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)||  
 |[命名元素&#40;参数&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-parameter-xmla.md)||  
@@ -103,21 +103,21 @@ ms.locfileid: "34577959"
 |[对象元素&#40;维度&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)||  
 |[ObjectDefinition 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md)||  
 |[OlapInfo 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)||  
-|[优化元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)||  
+|[Optimization 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)||  
 |[原始元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/original-element-xmla.md)||  
 |[并行元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)||  
-|[参数元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)||  
+|[Parameter 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)||  
 |[Parameters 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)||  
 |[ParentObject 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)||  
 |[PartitionID 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)||  
-|[密码元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)||  
-|[Properties 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
+|[Password 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)||  
+|[属性元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
 |[PropertyList 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
 |[查询元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)||  
 |[查询元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
 |[RequestType 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)||  
 |[RestrictionList 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)||  
-|[限制元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)||  
+|[Restrictions 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)||  
 |[结果元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)||  
 |[返回元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)||  
 |[根元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)||  
@@ -125,23 +125,23 @@ ms.locfileid: "34577959"
 |[安全元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)||  
 |[SessionID 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)||  
 |[SkippedLevels 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/skippedlevels-element-xmla.md)||  
-|[源元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)||  
-|[源元素&#40;错误&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)||  
-|[源元素&#40;同步&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-synchronize-xmla.md)||  
+|[Source 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)||  
+|[Source 元素&#40;错误&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)||  
+|[Source 元素&#40;同步&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-synchronize-xmla.md)||  
 |[源元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md)||  
 |[SPID 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)||  
 |[步骤元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md)||  
-|[存储元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md)||  
+|[Storage 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md)||  
 |[SynchronizeSecurity 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)||  
 |[TableNotification 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)||  
 |[TableNotifications 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotifications-element-xmla.md)||  
-|[目标元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
+|[Target 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
 |[时间元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)||  
-|[转换元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)||  
-|[翻译元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)||  
+|[Translation 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)||  
+|[Translations 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)||  
 |[元组元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)||  
 |[元组元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)||  
-|[类型元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)||  
+|[Type 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)||  
 |[UName 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/uname-element-xmla.md)||  
 |[UnaryOperator 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/unaryoperator-element-xmla.md)||  
 |[值元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)||  

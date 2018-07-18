@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018377"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
 除了[从 Excel 文件中加载数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)外，SQL Server 移动报表发布服务器还可以访问几乎任何来源的数据。 访问数据需要在 Reporting Services Web 门户上配置的共享数据源。 了解有关 [创建共享数据源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [创建共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)的详细信息。  

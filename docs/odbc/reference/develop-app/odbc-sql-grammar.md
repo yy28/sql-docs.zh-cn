@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912322"
 ---
 # <a name="odbc-sql-grammar"></a>ODBC SQL 语法
 可互操作的应用程序应始终在 SQL 语句中使用 ODBC SQL 语法。 但是，即使在此语法中可能会很大的变体。 有关详细信息，请参阅[SQL 语句的互操作性](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)。

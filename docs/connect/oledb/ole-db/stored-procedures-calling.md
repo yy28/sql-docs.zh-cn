@@ -1,11 +1,11 @@
 ---
-title: 调用存储的过程 (OLE DB) |Microsoft 文档
+title: 调用存储的过程 (OLE DB) |Microsoft Docs
 description: 调用存储过程 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,33 +22,36 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6f4ee66e9f1eaf37f78e3a0a4a326655554c58f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: adf1023b7975e788fc460756c0eb6d16f40ba2ef
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042627"
 ---
-# <a name="stored-procedures---calling"></a>存储的过程的调用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="stored-procedures---calling"></a>存储过程 - 调用
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  存储过程可以有零个或多个参数。 它还可以返回值。 使用用于 SQL Server 的 OLE DB 驱动程序，可以通过传递给存储过程的参数：  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  存储过程可以有零个或多个参数。 它还可以返回值。 当使用 SQL Server 的 OLE DB 驱动程序，可通过传递到存储过程的参数：  
   
 -   对数据值进行硬编码。  
   
 -   使用参数标记 (?) 指定参数，将程序变量绑定到参数标记，然后将数据值放在程序变量中。  
   
 > [!NOTE]  
->  在使用 OLE DB 和命名参数调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程时，参数名称必须以“@”字符开头。 这是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特有的限制。 SQL Server 的 OLE DB 驱动程序比 MDAC 更严格地强制实施此限制。  
+>  在使用 OLE DB 和命名参数调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程时，参数名称必须以“\@”字符开头。 这是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特有的限制。 SQL Server 的 OLE DB 驱动程序与 MDAC 相比更严格地强制实施此限制。  
   
- 若要支持参数， **ICommandWithParameters**接口公开命令对象上。 若要使用参数，使用者首先介绍的参数到提供程序通过调用**ICommandWithParameters::SetParameterInfo**方法 (或 （可选） 准备调用的调用语句**GetParameterInfo**方法)。 然后，使用者创建一个指定缓冲区结构的取值函数并将参数值放入该缓冲区中。 最后，它会将访问器和指针的句柄传递到的缓冲区**执行**。 在更高版本调用**执行**，使用者将新的参数值放入缓冲区和调用**执行**访问器句柄和缓冲区指针。  
+ 为了支持参数，ICommandWithParameters 接口是对命令对象公开的。 若要使用参数，使用者首先应通过调用 ICommandWithParameters::SetParameterInfo 方法（或者根据需要准备一个调用 GetParameterInfo 方法的调用语句）来向访问接口描述这些参数。 然后，使用者创建一个指定缓冲区结构的取值函数并将参数值放入该缓冲区中。 最后，它将取值函数的句柄和指向此缓冲区的指针传递给 Execute。 以后在调用 Execute 时，使用者将新参数值放入此缓冲区并使用取值函数句柄和缓冲区指针调用 Execute。  
   
- 一个可调用使用参数的临时存储的过程的命令必须首先调用**ICommandWithParameters::SetParameterInfo**之前已成功准备命令定义参数信息。 这是因为临时存储过程的内部名称与客户端使用的外部名称以及 MSOLEDBSQL 无法查询系统表来确定临时存储过程的参数信息。  
+ 在能成功地准备使用参数调用临时存储过程的命令之前，该命令必须首先调用 ICommandWithParameters::SetParameterInfo 以定义参数信息。 这是因为临时存储过程的内部名称与客户端使用的外部名称不同，并且 MSOLEDBSQL 无法通过查询系统表来确定临时存储过程的参数信息。  
   
  以下是参数绑定过程涉及的步骤：  
   
-1.  在 DBPARAMBINDINFO 结构的数组中填写参数信息，即，参数名、参数数据类型特定于访问接口的名称或者标准数据类型名称，等等。 数组中的每个结构都描述一个参数。 然后将此数组传递给**SetParameterInfo**方法。  
+1.  在 DBPARAMBINDINFO 结构的数组中填写参数信息，即，参数名、参数数据类型特定于访问接口的名称或者标准数据类型名称，等等。 数组中的每个结构都描述一个参数。 然后将此数组传递给 SetParameterInfo 方法。  
   
-2.  调用**ICommandWithParameters::SetParameterInfo**方法，用于描述到提供程序的参数。 **SetParameterInfo**指定每个参数的本机数据类型。 **SetParameterInfo**参数是：  
+2.  调用 ICommandWithParameters::SetParameterInfo 方法以向访问接口描述参数。 SetParameterInfo 指定每个参数的本机数据类型。 SetParameterInfo 参数包括：  
   
     -   要设定其类型信息的参数的数量。  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
     -   DBPARAMBINDINFO 结构的数组。  
   
-3.  通过创建参数访问器**IAccessor::CreateAccessor**命令。 取值函数指定缓冲区的结构并将参数值放在此缓冲区中。 **CreateAccessor**命令从一组绑定创建一个访问器。 使用者使用 DBBINDING 结构数组来描述这些绑定。 每个绑定都将单个参数关联到使用者的缓冲区，并且包含诸如以下所示的信息：  
+3.  通过使用 IAccessor::CreateAccessor 命令创建参数取值函数。 取值函数指定缓冲区的结构并将参数值放在此缓冲区中。 CreateAccessor 命令从一组绑定创建取值函数。 使用者使用 DBBINDING 结构数组来描述这些绑定。 每个绑定都将单个参数关联到使用者的缓冲区，并且包含诸如以下所示的信息：  
   
     -   应用绑定的参数的序号。  
   
@@ -66,11 +69,11 @@ ms.lasthandoff: 05/03/2018
   
     -   数据值存在于使用者的缓冲区中时的长度和类型。  
   
-     取值函数通过其类型为 HACCESSOR 的句柄进行标识。 返回此句柄**CreateAccessor**方法。 每当使用者完成后使用访问器中，必须调用使用者**ReleaseAccessor**方法来释放它所包含的内存。  
+     取值函数通过其类型为 HACCESSOR 的句柄进行标识。 此句柄由 CreateAccessor 方法返回。 只要使用者使用完取值函数，使用者就必须调用 ReleaseAccessor 方法释放它占用的内存。  
   
-     当使用者调用方法，如**ICommand::Execute**，它将该句柄传递给访问器和指向自身的缓冲区的指针。 访问接口使用该取值函数确定如何传送缓冲区中包含的数据。  
+     当使用者调用某个方法（如 ICommand::Execute）时，会传递取值函数的句柄以及指向缓冲区自身的指针。 访问接口使用该取值函数确定如何传送缓冲区中包含的数据。  
   
-4.  填写 DBPARAMS 结构。 使用者变量值都作为从哪个输入参数和值写入到哪个输出参数传递到运行时在**ICommand::Execute** DBPARAMS 结构中。 DBPARAMS 结构包括三个元素：  
+4.  填写 DBPARAMS 结构。 在运行时，从中获取输入参数值和向其中写入输出值的使用者变量会在 DBPARAMS 结构中被传递给 ICommand::Execute。 DBPARAMS 结构包括三个元素：  
   
     -   指向缓冲区的指针，根据取值函数句柄指定的绑定，访问接口将从该缓冲区中检索输入参数数据并将输出参数数据返回到该缓冲区中。  
   
@@ -78,10 +81,10 @@ ms.lasthandoff: 05/03/2018
   
     -   在步骤 3 中创建的取值函数句柄。  
   
-5.  通过使用执行命令**ICommand::Execute**。  
+5.  通过使用 ICommand::Execute 执行命令。  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>调用存储过程的方法  
- 在执行中的存储的过程时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，SQL Server 的 OLE DB 驱动程序支持:  
+ 执行中的存储的过程时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，适用于 SQL Server 的 OLE DB 驱动程序支持:  
   
 -   ODBC CALL 转义序列。  
   
@@ -89,14 +92,14 @@ ms.lasthandoff: 05/03/2018
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 语句。  
   
-### <a name="odbc-call-escape-sequence"></a>ODBC 调用转义序列  
- 如果你知道参数信息，请调用**ICommandWithParameters::SetParameterInfo**方法，用于描述提供程序的参数。 否则，在使用 ODBC CALL 语法调用存储过程时，访问接口将调用一个 Helper 函数来查找存储过程的参数信息。  
+### <a name="odbc-call-escape-sequence"></a>ODBC CALL 转义序列  
+ 如果知道参数信息，可调用 ICommandWithParameters::SetParameterInfo 方法向访问接口描述参数。 否则，在使用 ODBC CALL 语法调用存储过程时，访问接口将调用一个 Helper 函数来查找存储过程的参数信息。  
   
  如果您不知道确切的参数信息（参数元数据），建议使用 ODBC CALL 语法。  
   
  使用 ODBC CALL 转义序列调用过程的常用语法是：  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
+ {[**？ =**]**调用 * **procedure_name*[**(**[*参数*] [**，**[*参数*]]...**)**]}  
   
  例如：  
   
@@ -107,9 +110,9 @@ ms.lasthandoff: 05/03/2018
 ### <a name="rpc-escape-sequence"></a>RPC 转义序列  
  使用 RPC 转义序列调用存储过程的语法与 ODBC CALL 语法类似。 如果要多次调用过程，则在调用存储过程的三种方法中，RPC 转义序列可以提供最佳的性能。  
   
- 如果使用 RPC 转义序列执行存储过程，则访问接口不会调用任何 Helper 函数来确定参数信息（使用 ODBC CALL 语法时则会调用 Helper 函数）。 RPC 语法比 ODBC CALL 语法简单，因此命令的分析速度更快，从而提高了性能。 在这种情况下，你需要通过执行提供的参数信息**ICommandWithParameters::SetParameterInfo**。  
+ 如果使用 RPC 转义序列执行存储过程，则访问接口不会调用任何 Helper 函数来确定参数信息（使用 ODBC CALL 语法时则会调用 Helper 函数）。 RPC 语法比 ODBC CALL 语法简单，因此命令的分析速度更快，从而提高了性能。 在这种情况下，需要通过执行 ICommandWithParameters::SetParameterInfo 来提供参数信息。  
   
- RPC 转义序列要求您具有返回值。 如果存储过程不返回值，则服务器默认返回 0。 此外，您无法对存储过程打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标。 存储的过程准备隐式调用**ICommandPrepare::Prepare**将失败。 由于无法准备 RPC 调用，你可以查询列元数据;IColumnsInfo::GetColumnInfo 和 IColumnsRowset::GetColumnsRowset 将返回 DB_E_NOTPREPARED。  
+ RPC 转义序列要求您具有返回值。 如果存储过程不返回值，则服务器默认返回 0。 此外，您无法对存储过程打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标。 存储过程是隐式准备的，对 ICommandPrepare::Prepare 的调用会失败。 因为无法准备 RPC 调用，您不能查询列元数据;Icolumnsinfo:: Getcolumninfo 和 icolumnsrowset:: Getcolumnsrowset 将返回 DB_E_NOTPREPARED。  
   
  如果知道所有参数元数据，建议采用 RPC 转义序列方式执行存储过程。  
   
@@ -119,18 +122,18 @@ ms.lasthandoff: 05/03/2018
 {rpc SalesByCategory}  
 ```  
   
- 有关演示 RPC 转义序列的示例应用，请参阅[执行存储过程 & #40;使用 RPC 语法 & #41;和处理返回代码和输出参数 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ 有关演示 RPC 转义序列的示例应用程序，请参阅[执行存储过程&#40;使用 RPC 语法&#41;以及处理返回代码和输出参数&#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 语句  
- ODBC 调用转义序列和 RPC 转义序列是首选的方法调用存储的过程而不是[执行](../../../t-sql/language-elements/execute-transact-sql.md)语句。 SQL Server 的 OLE DB 驱动程序使用的 RPC 机制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
+ 与 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 语句相比，ODBC CALL 转义序列和 RPC 转义序列是调用存储过程的首选方法。 适用于 SQL Server 的 OLE DB 驱动程序使用的 RPC 机制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
   
- 这是一个示例的[!INCLUDE[tsql](../../../includes/tsql-md.md)]**执行**语句：  
+ 下面是一个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 语句的示例：  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [存储的过程](../../oledb/ole-db/stored-procedures.md)  
+ [存储过程](../../oledb/ole-db/stored-procedures.md)  
   
   

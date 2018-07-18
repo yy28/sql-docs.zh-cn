@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021206"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>表达式中的内置集合（报表生成器）
   在报表的表达式中，可以包含对以下内置集合的引用：ReportItems、Parameters、Fields、DataSets、DataSources、Variables 和全局信息的内置字段（如报表名称）。 并非所有集合都显示在 **“表达式”** 对话框中。 DataSets 和 DataSources 集合只有在运行时报表将发布到报表服务器之后才可用。 ReportItems 集合是报表区域中的文本框集合，例如页面或页眉中的文本框。  

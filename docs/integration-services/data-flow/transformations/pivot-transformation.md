@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f67b7eca9e4d3c5adbe20021784dfb82a6b96e69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ab9786458e0f3f4c3ca1cac3b5263acc417a2ae
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410159"
 ---
 # <a name="pivot-transformation"></a>透视转换
   通过透视列值的输入数据，透视转换将规范的数据集转变成规范程度稍低、但更为简洁的版本。 例如，在列有客户名称、产品和购买数量的规范的 **Orders** 数据集中，任何购买多种产品的客户都有多行，每一行显示一种产品的详细订购信息。 此时，如果对产品列透视数据集，透视转换可以输出每个客户只有一行的数据集。 这一行列出该客户购买的所有产品，产品名称显示为列名，而数量则显示为产品列的值。 并非每个客户都购买所有产品，所以很多列可能包含空值。  

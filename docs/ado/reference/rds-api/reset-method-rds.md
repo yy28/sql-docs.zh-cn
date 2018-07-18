@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 504f68bea78f34d2a40ced0453a251105bc5275c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8528794ecf2d52ec62225085c4de03d250ebf16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288556"
 ---
 # <a name="reset-method-rds"></a>重置方法 (RDS)
 客户端上执行排序或筛选器**记录集**基于指定的排序和筛选器属性。  
@@ -41,10 +41,10 @@ DataControl.Reset(value)
  *DataControl*  
  表示的对象变量[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
- *值*  
- 選擇性。 A**布尔**值，该值是**True** （默认），如果你想要对当前的"筛选"行集进行筛选。 **False**指示，原始行集进行筛选，删除任何以前的筛选选项。  
+ *value*  
+ 可选。 A**布尔**值，该值是**True** （默认），如果你想要对当前的"筛选"行集进行筛选。 **False**指示，原始行集进行筛选，删除任何以前的筛选选项。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)，和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供了排序和筛选功能对客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于查找条件，虽然完全的记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在缓存。 **重置**方法将执行条件，并将当前**记录集**与可更新**记录集**。  
   
  如果有未提交，原始数据的更改**重置**方法将失败。 首先，使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法以将任何更改保存在读/写**记录集**，然后使用**重置**方法进行排序或筛选记录。  
@@ -77,7 +77,7 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [FilterColumn、 FilterCriterion、 FilterValue、 SortColumn，和 SortDirection 属性和重置方法示例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

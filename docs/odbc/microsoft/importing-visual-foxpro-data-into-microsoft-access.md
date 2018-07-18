@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905102"
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Visual FoxPro 数据导入 Microsoft Access
 你可以导入到 Microsoft Access 数据库使用导入选项 Visual FoxPro 数据库中存储的数据。  

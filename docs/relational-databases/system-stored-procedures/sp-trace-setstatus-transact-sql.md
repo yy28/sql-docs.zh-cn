@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setstatus (TRANSACT-SQL) |Microsoft 文档
+title: sp_trace_setstatus (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8e3a2234d4213b78cbc828e71c602602e7a2481
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038315"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +48,14 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="arguments"></a>参数  
  [ **@traceid=** ] *trace_id*  
- 要修改的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户使用这*trace_id*值来识别、 修改和控制跟踪。 有关检索*trace_id*，请参阅[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
+ 要修改的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。 有关检索*trace_id*，请参阅[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
   
  [  **@status=** ]*状态*  
  指定要在跟踪上实现的操作。 *状态*是**int**，无默认值。  
   
  下表列出了可以指定的状态。  
   
-|状态|Description|  
+|“登录属性”|Description|  
 |------------|-----------------|  
 |**0**|停止指定的跟踪。|  
 |**1**|启动指定的跟踪。|  
@@ -74,9 +75,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**9**|指定的跟踪句柄无效。|  
 |**13**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
   
- 如果跟踪中指定的状态已存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将返回**0**。  
+ 如果在跟踪中指定的状态，已存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将返回**0**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
  有关使用跟踪存储过程的示例，请参阅[创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
@@ -84,10 +85,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [sys.fn_trace_geteventinfo &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  

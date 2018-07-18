@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e583cd99ce68c0e6a4b7986d71ab42865e5a2302
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: ce13efdb6b0373280d4691de4a50bdf1e02c987e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411429"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 帮助
   此部分包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 三个组件的 F1 帮助主题。 也可以按 F1 键或在向导页和对话框中单击“帮助”，从用户界面中查看这些主题。  

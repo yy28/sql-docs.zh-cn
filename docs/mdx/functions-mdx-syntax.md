@@ -1,34 +1,23 @@
 ---
 title: 函数 （MDX 语法） |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], functions
-- Multidimensional Expressions [Analysis Services], functions
-- functions [MDX]
-ms.assetid: 74ca5e79-1f33-4795-9d68-98eff9c190c1
-caps.latest.revision: 25
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cf28303c1ffedf36354fd0fb1489666ad68d519c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740726"
 ---
 # <a name="functions-mdx-syntax"></a>函数（MDX 语法）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多维表达式 (MDX) 中有几类用于执行特定操作的内部函数。 下表列出了 MDX 中可用的函数类别。  
   
@@ -51,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="uses-of-functions"></a>函数的使用  
  函数可用于或包含在任何 MDX 表达式中。 函数还可以嵌套（在一个函数内使用另一个函数）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

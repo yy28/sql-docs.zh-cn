@@ -1,7 +1,7 @@
 ---
-title: 配置报表的数据源属性（报表管理器）| Microsoft Docs
+title: 配置分页报表的数据源属性 - SSRS | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -17,24 +17,23 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 07c218a9117b4c8a8adb9985299ac6d08992dd6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7016de178bce501982e9c5bfa1eff030834c5d03
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34549998"
 ---
-# <a name="configure-data-source-properties-for-a-report--report-manager"></a>配置报表的数据源属性（报表管理器）
-  在运行报表时，报表服务器检索属性信息以确定如何连接到数据源。 数据源类型、连接字符串和凭据信息在已发布报表的“数据源”属性页中指定。 可以设置这些属性以使数据源连接信息与创建报表时指定的原始值不同。  
+# <a name="configure-data-source-properties-for-a-paginated-report"></a>配置分页报表的数据源属性
+  在运行分页报表时，报表服务器检索属性信息以确定连接到数据源的方法。 数据源类型、连接字符串和凭据信息在已发布报表的“数据源”属性页中指定。 可以设置这些属性以使数据源连接信息与创建报表时指定的原始值不同。  
   
  另外，如果具有已指定了要使用的连接信息的预定义共享数据源，则可以改为指定共享数据源。 若要使用共享数据源，请单击报表的“数据源属性”页上的 **“共享数据源”** 。  
   
-### <a name="to-configure-an-embedded-data-source"></a>配置嵌入数据源  
+## <a name="to-configure-an-embedded-data-source"></a>配置嵌入数据源  
   
-1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  在 Web 门户中，导航到要配置报表特定数据源的报表。  
   
-2.  在报表管理器中，导航到 **“内容”** 页。 导航到要配置报表特定数据源的报表，然后打开该报表。  
-  
-3.  单击 **“属性”** 选项卡。此时，将打开“常规”属性页。  
+3.  选择右上角的省略号 (...) >“管理”。  
   
 4.  单击 **“数据源”** 选项卡。此时将打开报表的“数据源属性”页。  
   
@@ -63,11 +62,6 @@ ms.lasthandoff: 05/03/2018
  有关配置凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 有关无人参与的执行帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [“新建数据源”页（报表管理器）](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [“数据源”属性页（报表管理器）](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
-  
+[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)
   

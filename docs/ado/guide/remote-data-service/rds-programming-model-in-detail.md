@@ -2,7 +2,6 @@
 title: RDS 编程模型，在详细信息 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e11dbaf046124e837b6ef33b8eb98219371ae18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcfed19cda8ce9675b656add6f1a15e0912efe31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274426"
 ---
 # <a name="rds-programming-model-in-detail"></a>在详细信息的 RDS 编程模型
 RDS 的编程模型的关键元素如下：  
@@ -74,7 +74,7 @@ RDS 的编程模型的关键元素如下：
 > [!NOTE]
 >  Microsoft Internet Explorer 到 RDS 提供两个其他事件： **onDataSetChanged**，这指示**记录集**是功能，但仍检索行，和**onDataSetComplete**，这指示**记录集**完毕检索行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS 的编程模型和对象](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

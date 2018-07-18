@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f825acb27b39a78a7997d34505e99704f0f14b27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe52410b491848001fc7e0861e27732d36bc173
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410629"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
   路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的两个组件。 路径具有源和目标。 例如，如果路径连接一个 OLE DB 源和一个排序转换，那么 OLE DB 源就是路径的源，而排序转换就是路径的目标。 源是路径开始处的组件，而目标是路径结束处的组件。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  单击“数据流”选项卡，然后双击路径。  
   
-4.  在 **“数据流路径编辑器”**中，单击 **“常规”**。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
+4.  在 **“数据流路径编辑器”** 中，单击 **“常规”**。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
   
 5.  单击“确定” 。  
   
@@ -157,7 +156,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍了数据流中路径的可配置属性。 数据流引擎还为此处未列出的其他只读属性赋值。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Integer（枚举）|用于指示在设计器图面上显示路径时是否应显示批注的值。 可能的值为 **AsNeeded**、 **SourceName**、 **PathName**和 **Never**。 默认值为 **AsNeeded**。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|与路径关联的输入。|  

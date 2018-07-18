@@ -1,6 +1,6 @@
 ---
-title: 安全属性 |Microsoft 文档
-ms.date: 05/03/2018
+title: 安全属性 |Microsoft Docs
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f54374802b18ab8142e8083bff0c14340e5af66a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 99678bc9a4a335ef39e10e41112551c751701b8f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991459"
 ---
 # <a name="security-properties"></a>安全属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的安全服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用于：** 多维和表格服务器模式  
@@ -49,7 +51,7 @@ ms.lasthandoff: 05/10/2018
  **DataProtection\ RequiredProtectionLevel**  
  有符号 32 位整数属性，用于定义所有客户端请求所需的保护级别。 该属性具有下表所列的值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*0*|无，允许使用明文。|  
 |*1*|（默认值）需要加密，没有明文日志记录。|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 05/10/2018
  **AdministrativeDataProtection\ RequiredProtectionLevel**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909702"
 ---
 # <a name="elements-used-in-sql-statements"></a>用于 SQL 语句中的元素
 在前面列出的 SQL 语句中使用以下元素。  

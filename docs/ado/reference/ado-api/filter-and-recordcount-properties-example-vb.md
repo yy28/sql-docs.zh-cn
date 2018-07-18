@@ -2,7 +2,6 @@
 title: 筛选器和 RecordCount 属性示例 (VB) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21e800cb39d13abe904e02ff2ca23a1eb8936ee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278663"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>筛选器和 RecordCount 属性示例 (VB)
 此示例中打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)中的发布服务器表***Pubs***数据库。 然后，它使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性可限制到特定的国家/地区中这些发布服务器的可见记录数。 **RecordCount**属性用于显示筛选和未筛选的记录集之间的差异。  
@@ -118,7 +118,7 @@ End Sub
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 属性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

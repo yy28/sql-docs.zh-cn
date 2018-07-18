@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019284"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>顺序分析和聚类分析模型的挖掘模型内容
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -205,7 +206,7 @@ ORDER BY Count(*) DESC
   
 2.  在查看器下拉列表中，选择 **Microsoft 一般内容树查看器**。  
   
-3.  在 **“节点标题”** 窗格中，单击名为 **“分类 16 的序列级别”**的节点。  
+3.  在 **“节点标题”** 窗格中，单击名为 **“分类 16 的序列级别”** 的节点。  
   
 4.  在“节点详细信息”窗格中，找到 NODE_DISTRIBUTION 行，并单击嵌套表中的任意位置。  
   
@@ -218,7 +219,7 @@ ORDER BY Count(*) DESC
     > [!NOTE]  
     >  您可以通过编程方式获取特定序列状态的行号，但是如果您只是为了浏览，最简单的方法是将嵌套表复制到 Excel 工作簿中。  
   
-6.  返回到“节点标题”窗格，展开 **“分类 16 的序列级别”**节点（如果尚未展开）。  
+6.  返回到“节点标题”窗格，展开 **“分类 16 的序列级别”** 节点（如果尚未展开）。  
   
 7.  在其子节点中查找 **“序列状态 20 的转换行”**。 单击该转换节点。  
   

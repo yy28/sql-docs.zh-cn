@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32893083"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>将 Master Data Services 数据库与 Web 应用程序关联
 
@@ -40,17 +41,17 @@ ms.lasthandoff: 05/03/2018
   
 2.  在左窗格中单击 **“Web 配置”**。  
   
-3.  在 **“Web 配置”** 页的 **“Web 应用程序”**下，从 **“网站”** 列表中选择包含 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的网站。  
+3.  在 **“Web 配置”** 页的 **“Web 应用程序”** 下，从 **“网站”** 列表中选择包含 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的网站。  
   
 4.  在 **“Web 应用程序”** 框中，选择承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]的 Web 应用程序。  
   
-5.  在 **“将应用程序与数据库相关联”**下，单击 **“选择”**。 将打开 **“连接到数据库”** 对话框。  
+5.  在 **“将应用程序与数据库相关联”** 下，单击 **“选择”**。 将打开 **“连接到数据库”** 对话框。  
   
 6.  指定承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 实例的连接信息，然后单击 **“连接”**。  
   
 7.  从 **“Master Data Services 数据库”** 列表选择要与 Web 应用程序关联的数据库，然后单击 **“确定”**。  
   
-8.  在 **“将应用程序与数据库相关联”**下，验证实例和数据库信息是正确的，然后单击 **“应用”**。  
+8.  在 **“将应用程序与数据库相关联”** 下，验证实例和数据库信息是正确的，然后单击 **“应用”**。  
   
 ## <a name="next-steps"></a>Next Steps  
   

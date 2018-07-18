@@ -1,5 +1,5 @@
 ---
-title: 示例 XSD 架构批注有关 XPath 示例 (SQLXML 4.0) |Microsoft 文档
+title: 带批注的 XSD 架构的 XPath 示例 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,20 +21,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6af6bcbd760cb74c55bda4caa3164bc304dadcd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053725"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>用于 XPath 示例的带批注的 XSD 架构示例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本节中的示例 XPath 查询引用某一映射架构。 该映射架构是一个带批注的 XML 架构 (XSD) 文件。 有关映射架构的详细信息，请参阅[简介批注 XSD 架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。  
+  本节中的示例 XPath 查询引用某一映射架构。 该映射架构是一个带批注的 XML 架构 (XSD) 文件。 有关映射架构的详细信息，请参阅[带批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。  
   
  针对带批注的 XSD 架构执行 XPath 查询时需要执行以下操作：  
   
 -   创建包含 XPath 查询的模板。 在该模板中，指定要针对其执行 XPath 查询的映射架构。 在这种情况下，必须在目录中存储的映射架构 (或其子目录，在其中用例的相对路径指定为的值之一**映射架构**模板中的属性) 与模板文件相关联。  
   
--   创建测试应用程序，该应用程序使用用于 ADO 的 SQLXML 扩展来执行查询。 有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+-   创建测试应用程序，该应用程序使用用于 ADO 的 SQLXML 扩展来执行查询。 有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  在本节中的所有示例中，为了便于说明，在使用 ADO 执行的模板中指定 XPath 查询。 因此，必须使用以下映射架构文件 SampleSchema1.xml。 将此文件保存在存储模板的目录中。  
   

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33042284"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  右键单击要编辑的警报，然后选择“属性”。  
   
-5.  在 **“常规”**、 **“响应”**和 **“选项”** 页上更新警报属性。  
+5.  在 **“常规”**、 **“响应”** 和 **“选项”** 页上更新警报属性。  
   
 6.  完成后，单击 **“确定”**。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-edit-an-alert"></a>编辑警报  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

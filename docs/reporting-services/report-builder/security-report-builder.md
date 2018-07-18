@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021205"
 ---
 # <a name="security-report-builder"></a>安全性（报表生成器）
   报表生成器是一类设计用来与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器配合使用的报表创作客户端应用程序。 可以将报表服务器配置为在本机模式中作为独立服务器运行，也可以将报表服务器配置为在 SharePoint 集成模式中运行以支持 SharePoint 站点上的报表。  

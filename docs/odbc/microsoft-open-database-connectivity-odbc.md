@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899822"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 打开数据库连接 (ODBC)
 Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它使应用程序使用不同的数据库管理系统 (Dbms) 访问数据。 ODBC 是专门针对关系数据存储设计一个低级别、 高性能接口。  

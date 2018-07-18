@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0606b7b36fd2d04f463e71af168e13a9b53e14d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5b1f811656f175826bb4653e41a5898881767d9
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407459"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>检索和了解变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第一个任务是运行查询以检索变更数据。 在数据流任务中在源组件内执行此查询。 然后，使用下游转换和目标将变更数据应用到目标。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 **“数据流”** 选项卡上，添加 OLE DB 源。  
   
-2.  在 **“OLE DB 源编辑器”**的 **“连接管理器”** 页上，选择下列选项：  
+2.  在 **“OLE DB 源编辑器”** 的 **“连接管理器”** 页上，选择下列选项：  
   
     1.  配置到源数据库的有效连接。  
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
     3.  对于 **“变量名称”**，选择 **“User::SqlDataQuery”**。  
   
-3.  在 **“OLE DB 源编辑器”**中的 **“列”** 页上，确保所需的所有列都映射到输出列。  
+3.  在 **“OLE DB 源编辑器”** 中的 **“列”** 页上，确保所需的所有列都映射到输出列。  
   
 ## <a name="next-step"></a>下一步  
  在配置了用于检索变更数据的 OLE DB 源之后，下一步就是开始设计包中的数据流。  

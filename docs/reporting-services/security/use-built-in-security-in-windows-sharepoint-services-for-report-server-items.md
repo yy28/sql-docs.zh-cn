@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033224"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>将 Windows SharePoint Services 中的内置安全性用于报表服务器项
   SharePoint 提供了内置安全功能，您可以使用这些功能从 SharePoint 站点和库访问报表服务器项。 如果已为用户分配了站点和列表权限，则在配置了 SharePoint 和报表服务器之间的集成设置后，这些用户即可拥有访问报表服务器项和操作的权限。  

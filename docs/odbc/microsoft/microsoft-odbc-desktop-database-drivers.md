@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903312"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面数据库驱动程序
 ODBC 是作为数据库访问语言中使用结构化查询语言 (SQL) 的 API。 可以使用直接合并到应用程序源代码的相同 ODBC 源代码来访问各种数据库管理系统 (Dbms)。 Microsoft ODBC 桌面数据库驱动程序中，ODBC 启用应用程序的用户可以打开查询，并通过 ODBC 接口的桌面数据库进行更新。  

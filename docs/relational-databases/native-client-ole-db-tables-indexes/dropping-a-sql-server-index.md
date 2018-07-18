@@ -1,13 +1,12 @@
 ---
-title: 删除 SQL Server 索引 |Microsoft 文档
+title: 删除 SQL Server 索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,28 +17,28 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6ddcdb0a2e76d2a1fd0f046fd064c7cb494ef3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efb206bda68421a8de81e0f1b03b541d839ef3cc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429506"
 ---
 # <a name="dropping-a-sql-server-index"></a>删除 SQL Server 索引
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开**IIndexDefinition::DropIndex**函数。 这允许使用者能够删除从索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开**iindexdefinition:: Dropindex**函数。 这允许使用者从索引中删除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开一些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为索引的 PRIMARY KEY 和 UNIQUE 约束。 表所有者，数据库所有者和某些管理角色成员可以修改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，删除约束。 默认情况下，只有表所有者才能删除现有索引。 因此， **DropIndex**成功还是失败取决于不仅应用程序用户的访问权限但还指示索引的类型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序提供了一些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PRIMARY KEY 和 UNIQUE 约束作为索引。 表所有者、 数据库所有者和某些管理角色成员可以修改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，删除约束。 默认情况下，只有表所有者才能删除现有索引。 因此， **DropIndex**成功还是失败取决于应用程序用户的访问权限，而且还对索引所指示的类型。  
   
- 使用者中 Unicode 字符串形式指定表名称*pwszName*的成员*uName*联合中*pTableID*参数。 *EKind*的成员*pTableID*必须 DBKIND_NAME。  
+ 使用者指定为 Unicode 字符串中的表名*pwszName*的成员*uName*联合*pTableID*参数。 *EKind*的成员*pTableID*必须为 DBKIND_NAME。  
   
- 使用者为 Unicode 字符字符串中指定的索引名称*pwszName*的成员*uName*联合中*pIndexID*参数。 *EKind*的成员*pIndexID*必须 DBKIND_NAME。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持在表上删除所有索引的 OLE DB 功能时*pIndexID*为 null。 如果*pIndexID*是 null，则返回 E_INVALIDARG。  
+ 使用者指定为 Unicode 字符串中的索引名称*pwszName*的成员*uName*联合*pIndexID*参数。 *EKind*的成员*pIndexID*必须为 DBKIND_NAME。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持删除表中的所有索引的 OLE DB 功能时*pIndexID*为 null。 如果*pIndexID*是 null，则返回 E_INVALIDARG。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表和索引](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  

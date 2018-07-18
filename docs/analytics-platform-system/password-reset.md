@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539417"
 ---
 # <a name="password-reset---analytics-platform-system"></a>密码重置-分析平台系统
 **密码重置**页使你可以更改由分析平台系统使用的管理员帐户的密码。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/19/2018
 域管理员凭据和系统管理员凭据遵守每种类型的凭据的密码强度策略。 新密码时更改域管理员凭据，将更新到域在整个 SQL Server PDW 需要的地方。  
   
 > [!IMPORTANT]  
-> SQL Server PDW 不支持的美元符号字符 (**$**) 中的域管理员或本地管理员密码。 字符**^ %&**允许密码，但是 PowerShell 将这些作为特殊字符。 如果任何这些字符用于在密码中的系统管理员或 SQL Server**sa**帐户 ( **AdminPassword**和**PdwSAPassword**期间的参数安装程序） 然后安装程序，包括安装、 升级、 REPLACENODE 和修补，将会失败。 若要在当前的密码包含不支持的字符时，请确保成功升级，请更改这些密码，以便它们在运行升级之前不包含此类字符。 升级完成后，你可以将这些密码设置回其原始值。 有关密码要求的详细信息，请参阅[ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)。  
+> SQL Server PDW 不支持的美元符号字符 (**$**) 中的域管理员或本地管理员密码。 字符 **^ %&** 允许密码，但是 PowerShell 将这些作为特殊字符。 如果任何这些字符用于在密码中的系统管理员或 SQL Server**sa**帐户 ( **AdminPassword**和**PdwSAPassword**期间的参数安装程序） 然后安装程序，包括安装、 升级、 REPLACENODE 和修补，将会失败。 若要在当前的密码包含不支持的字符时，请确保成功升级，请更改这些密码，以便它们在运行升级之前不包含此类字符。 升级完成后，你可以将这些密码设置回其原始值。 有关密码要求的详细信息，请参阅[ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)。  
   
 ## <a name="to-reset-a-password"></a>若要重置密码  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921092"
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,13 +107,13 @@ ms.lasthandoff: 05/03/2018
  **还原每个备份之前进行提示**  
  指定在还原了每个备份之后，将显示“继续还原”对话框，询问你是否要继续还原顺序。 该对话框将显示下一个介质集（如果已知）的名称以及下一个备份集的名称和说明。  
   
- 此选项允许您在还原了任何备份后暂停还原顺序。 如果必须为不同介质集更换磁带，例如在服务器仅具有一个磁带设备时，此选项非常有用。 准备就绪后，请单击 **“确定”**以继续。  
+ 此选项允许您在还原了任何备份后暂停还原顺序。 如果必须为不同介质集更换磁带，例如在服务器仅具有一个磁带设备时，此选项非常有用。 准备就绪后，请单击 **“确定”** 以继续。  
   
- 可以通过单击 **“否”**中断还原顺序。 这样可以使数据库保持还原状态。 在日后方便的时候，可以通过恢复执行 **“继续还原”** 对话框中所列出的下一个备份，继续该还原顺序。 还原下一个备份的过程取决于其是否包含数据或事务日志，如下所示：  
+ 可以通过单击 **“否”** 中断还原顺序。 这样可以使数据库保持还原状态。 在日后方便的时候，可以通过恢复执行 **“继续还原”** 对话框中所列出的下一个备份，继续该还原顺序。 还原下一个备份的过程取决于其是否包含数据或事务日志，如下所示：  
   
 -   如果下一个备份是完整备份或差异备份，请再次使用 **“还原数据库”** 任务。  
   
--   如果下一个备份是文件备份，请使用 **“还原文件和文件组”**任务。 有关详细信息，请参阅[还原文件和文件组 (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)。  
+-   如果下一个备份是文件备份，请使用 **“还原文件和文件组”** 任务。 有关详细信息，请参阅[还原文件和文件组 (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)。  
   
 -   如果下一个备份是日志备份，请使用 **“还原事务日志”** 任务。 有关通过还原事务日志来继续还原顺序的信息，请参阅 [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)。  
   

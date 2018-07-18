@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919292"
 ---
 # <a name="using-arrays-of-parameters"></a>使用参数的数组
 若要使用的参数，则应用程序调用数组**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAMSET_SIZE 可指定数目的参数集的自变量。 它调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAMS_PROCESSED_PTR 指定驱动程序可以在其中返回集的处理，参数个数的变量的地址的自变量包括错误设置。 它调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAM_STATUS_PTR 为指向数组中要返回其参数值的每一行的状态信息的自变量。 该驱动程序将这些地址存储在它还为该语句保留的结构。  

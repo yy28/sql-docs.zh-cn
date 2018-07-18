@@ -25,6 +25,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455221"
 ---
 # <a name="tutorial-using-templates-in-sql-server-management-studio"></a>教程：在 SQL Server Management Studio 中使用模板
 本教程将介绍 SQL Server Management Studio (SSMS) 中提供的预建 Transact-SQL (T-SQL) 模板。 本文将指导如何：

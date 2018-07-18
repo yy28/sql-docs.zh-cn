@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912362"
 ---
 # <a name="sql-data-types-in-odbc"></a>ODBC 中的 SQL 数据类型
 SQL 数据类型是数据存储在数据源的类型。  

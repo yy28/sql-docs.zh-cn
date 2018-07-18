@@ -1,6 +1,6 @@
 ---
-title: 要开始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft 文档
-description: 本快速入门演示如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。
+title: 开始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft Docs
+description: 本快速入门介绍如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 然后创建和查询使用 sqlcmd 数据库。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,34 +13,35 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020414"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门： 安装 SQL Server 和 Red Hat 上创建数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在本快速入门教程，你首先安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
+在本快速入门，首先安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
 
 > [!TIP]
-> 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
+> 本教程需要用户输入和 internet 连接。 如果您有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
-你必须 RHEL 7.3 或 7.4 机**至少 2 GB**的内存。
+您必须具有 RHEL 7.3 或 7.4 计算机**至少 2 GB**的内存。
 
-若要在您自己的计算机上安装 Red Hat Enterprise Linux，请转到[ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 你还可以在 Azure 中创建 RHEL 虚拟机。 请参阅[创建和使用 Azure CLI 管理 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并使用`--image RHEL`对的调用中`az vm create`。
+若要在自己的计算机上安装 Red Hat Enterprise Linux，请转到[ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 此外可以在 Azure 中创建 RHEL 虚拟机。 请参阅[创建和使用 Azure CLI 管理 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并使用`--image RHEL`对的调用中`az vm create`。
 
-其他系统要求，请参阅[在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
+其他系统要求，请参阅[Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 ## <a id="install"></a>安装 SQL Server
 
-若要在 RHEL 上配置 SQL Server，在安装的终端运行以下命令**mssql server**包：
+若要在 RHEL 上配置 SQL Server，若要安装的终端中运行以下命令**mssql server**包：
 
 > [!IMPORTANT]
-> 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)。
+> 如果以前已安装的 CTP 或 SQL Server 2017 的 RC 版本，必须先注册 GA 存储库之一之前删除旧的存储库。 有关详细信息，请参阅[存储库从预览存储库更改为 GA 存储库](sql-server-linux-change-repo.md)。
 
 1. 下载 Microsoft SQL Server Red Hat 存储库配置文件：
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/23/2018
    ```
 
    > [!NOTE]
-   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+   > 这是累积更新 (CU) 存储库。 有关存储库的选项和它们之间的差异的详细信息，请参阅[Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 1. 运行以下命令，安装 SQL Server：
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/23/2018
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > 如果你在本教程中尝试 SQL Server 自 2017 年，自由地授予许可的以下版本： 评估、 开发人员和快速。
+   > 如果在本教程中尝试 SQL Server 2017，自由地获得许可的以下版本： Evaluation、 Developer 和 Express。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -74,18 +75,18 @@ ms.lasthandoff: 05/23/2018
    systemctl status mssql-server
    ```
    
-1. 若要允许远程连接，请在 RHEL 上打开防火墙上的 SQL Server 端口。 默认的 SQL Server 端口为 TCP 1433。 如果你使用**FirewallD**适合您的防火墙，你可以使用以下命令：
+1. 若要允许远程连接，请在 RHEL 上打开防火墙上的 SQL Server 端口。 默认的 SQL Server 端口为 TCP 1433。 如果使用的**FirewallD**对于防火墙中，可以使用以下命令：
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
    sudo firewall-cmd --reload
    ```
 
-此时，SQL Server 正在您 RHEL 的计算机上运行并且已准备好使用 ！
+在此情况下，SQL Server 在 RHEL 计算机上运行并已准备好使用 ！
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
+若要创建数据库时，需要使用一种工具，可以在 SQL Server 上运行的 Transact SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
 
 1. 下载 Microsoft Red Hat 存储库配置文件。
 
@@ -93,19 +94,19 @@ ms.lasthandoff: 05/23/2018
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
-1. 如果你有以前版本的**mssql 工具**安装，请删除任何较旧的 unixODBC 程序包。
+1. 如果你有旧版**mssql 工具**安装，请删除任何较旧的 unixODBC 包。
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. 运行以下命令以安装**mssql 工具**与 unixODBC 开发人员包。
+1. 运行以下命令以安装**mssql 工具**使用 unixODBC 开发人员包。
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 
-1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**PATH**境变量。 这使您可以运行工具，而无需指定完整路径。 在登录会话和交互式/非登录会话中运行以下命令以修改**PATH**：
+1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**PATH**境变量。 这使您无需指定完整路径运行工具。 在登录会话和交互式/非登录会话中运行以下命令以修改**PATH**：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

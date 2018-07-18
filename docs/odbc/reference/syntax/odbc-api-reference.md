@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921942"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 参考
 此部分中的主题描述了每个 ODBC 函数按字母顺序。 每个函数定义为 C 编程语言的函数。 说明如下所示：  

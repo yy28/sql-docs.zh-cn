@@ -1,5 +1,6 @@
 ---
-title: 数据迁移助手 (SQL Server) 概述 |Microsoft 文档
+title: 概述数据迁移助手 (SQL Server) |Microsoft Docs
+description: 了解如何使用数据迁移助手将 SQL Server 数据库迁移到其他 SQL Server 或 Azure 数据库
 ms.custom: ''
 ms.date: 03/15/2018
 ms.prod: sql
@@ -17,52 +18,52 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 3480f529b5f560f50518fa3af4a810ea0acc0bbb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707965"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781518"
 ---
-# <a name="overview-of-data-migration-assistant"></a>数据迁移助手的概述
+# <a name="overview-of-data-migration-assistant"></a>数据迁移助手概述
 
-数据迁移助手 (DMA) 使您能够通过检测可能会影响你的 SQL Server 和 Azure SQL 数据库的新版本中的数据库功能的兼容性问题升级到现代数据平台。 DMA 性能和你的目标环境的可靠性改进建议，并允许你将架构、 数据和非包含的对象从源服务器移到目标服务器。
+数据迁移助手 (DMA) 可帮助你升级到现代数据平台，通过检测可能会影响在新版本的 SQL Server 或 Azure SQL 数据库中的数据库功能的兼容性问题。 DMA 建议性能和可靠性改进为目标环境，并允许您将架构、 数据和非包含的对象从源服务器移动到目标服务器。
 
 > [!NOTE] 
-> 对于大型 （在方面的数量和大小数据库） 迁移，建议使用[Azure 数据库迁移服务](https://docs.microsoft.com/azure/dms/dms-overview)，这将在规模较大的数据库迁移。
+> 对于大型迁移 （从数和数据库的大小），我们建议你使用[Azure 数据库迁移服务](https://docs.microsoft.com/azure/dms/dms-overview)，这可以在规模较大的数据库迁移。
   
 ## <a name="capabilities"></a>功能
 
-- 评估迁移到 Azure SQL 数据库的本地 SQL Server 实例。 评估工作流帮助可以检测到可能会影响 Azure SQL 数据库迁移，并提供有关如何解决这些问题的详细的指南的以下问题。
+- 评估的本地 SQL Server 实例迁移到 Azure SQL 数据库。 评估工作流可帮助你检测到以下问题，可能会影响 Azure SQL 数据库迁移，并提供有关如何解决这些问题的详细的指南。
 
-  - 迁移阻塞问题： 发现兼容性问题，块迁移的本地 SQL Server 数据库到 Azure SQL 数据库 s。 DMA 提供建议，以帮助你解决这些问题。
+  - 迁移阻塞问题： 发现兼容性问题，阻止迁移的本地 SQL Server 数据库到 Azure SQL 数据库 s。 DMA 提供建议来帮助你解决这些问题。
 
-  - 部分支持或不受支持的功能： 检测到当前正在使用源 SQL Server 实例上的部分支持或不受支持的功能。 DMA 提供一套全面的建议，在 Azure 中和缓解措施中可用的其他方法，以便你可以将合并到你迁移的项目。
+  - 部分支持或不受支持的功能： 检测到当前正在使用源 SQL Server 实例上的部分支持或不受支持的功能。 DMA 提供了一套综合的建议，在 Azure 中和缓解步骤中可用的替代方法，使您可以在迁移项目中将合并。
 
-- 发现可能会影响到本地 SQL Server 升级的问题。 这些被称为兼容性问题，而且必须组织在以下类别：
+- 发现可能会影响到在本地 SQL Server 升级的问题。 这些描述为兼容性问题，并按以下类别进行组织：
 
   - 重大更改
   - 行为更改
   - 已弃用的功能
 
-- 发现数据库可以受益于升级后的目标 SQL Server 平台中的新增功能。 这些被称为功能建议和分为以下类别：
+- 了解数据库可以受益于升级后在目标 SQL Server 平台中的新增功能。 这些被称为功能建议，并按以下类别进行组织：
 
   - “性能”
   - Security
   - 存储器
 
-- 将本地 SQL Server 实例迁移到托管在本地或 Azure 虚拟机 (VM)，可从你的本地网络访问的现代 SQL Server 实例。 可以使用 VPN 或其他技术访问 Azure VM。 迁移工作流可帮助你迁移以下组件：
+- 将本地 SQL Server 实例迁移到最新的 SQL Server 实例，托管在本地或 Azure 可从你的本地网络访问虚拟机 (VM) 上。 可使用 VPN 或其他技术访问 Azure VM。 迁移工作流可帮助你迁移以下组件：
 
   - 数据库的架构
   - 数据和用户
   - 服务器角色
   - SQL Server 和 Windows 登录名
 
-- 成功迁移之后，应用程序可以连接到目标 SQL server 数据库无缝。
+- 成功迁移后，应用程序可以连接到目标 SQL server 数据库无缝。
 
 ## <a name="supported-source-and-target-versions"></a>支持的源和目标版本
 
-DMA 替换所有以前版本的 SQL Server 升级顾问，并应该用于大多数 SQL Server 版本的升级。 按照支持的源和目标版本。
+DMA 替换所有以前版本的 SQL Server 升级顾问，应使用的大多数 SQL Server 版本升级。 遵循支持的源和目标版本。
 
 **源**
 - SQL Server 2005
@@ -77,23 +78,23 @@ DMA 替换所有以前版本的 SQL Server 升级顾问，并应该用于大多�
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- 在 Windows 和 Linux 上的 SQL Server 自 2017 年 1
+- 在 Windows 和 Linux 上的 SQL Server 2017
 - Azure SQL Database
 
 > [!NOTE] 
-> DMA 当前不支持 Azure SQL 数据库托管实例作为目标。
+> DMA 目前不支持 Azure SQL 数据库托管实例为目标。
 
 ## <a name="installation"></a>安装
 
-若要安装 DMA，下载最新版本中的工具[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595)，然后运行**DataMigrationAssistant.msi**文件。
+若要安装 DMA，下载最新版本中的工具[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=53595)，然后运行**DataMigrationAssistant.msi**文件。
 
 ## <a name="see-also"></a>另请参阅
 
-[评估你的 SQL Server 迁移](../dma/dma-assesssqlonprem.md)
+[评估 SQL Server 迁移](../dma/dma-assesssqlonprem.md)
 
 [数据迁移助手： 配置设置](../dma/dma-configurationsettings.md)
 
-[迁移在本地 SQL Server 使用数据迁移助手](../dma/dma-migrateonpremsql.md)
+[使用数据迁移助手迁移的本地 SQL Server](../dma/dma-migrateonpremsql.md)
 
 [数据迁移助手： 最佳实践](../dma/dma-bestpractices.md)
 

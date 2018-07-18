@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019134"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隐藏项（报表生成器和 SSRS）
   如果希望基于报表参数或指定的某个其他表达式来有条件地隐藏项，则可以设置报表项的可见性。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“可见性”**。  
   
-3.  在 **“在报表最初运行时”**中，指定是否要在第一次查看报表时隐藏该项：  
+3.  在 **“在报表最初运行时”** 中，指定是否要在第一次查看报表时隐藏该项：  
   
     -   若要显示项，请单击 **“显示”**。  
   

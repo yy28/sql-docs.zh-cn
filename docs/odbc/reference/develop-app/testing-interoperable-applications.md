@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917142"
 ---
 # <a name="testing-interoperable-applications"></a>测试可互操作的应用程序
 测试可互操作的应用程序是在最耗时业务，也在坏的情况下无法由于市场上不断显示新的驱动程序。 但是，可能会测试很合理程度。 仅需要针对这些驱动程序，可确保以支持测试具有有限或低的互操作性的应用程序。 但是，它们必须进行完全测试针对这些驱动程序。  

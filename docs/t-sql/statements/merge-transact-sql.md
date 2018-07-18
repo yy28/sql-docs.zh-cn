@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,21 +25,22 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 caps.latest.revision: 76
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 38ee232615df4c4f80bce08d69fb14251aab58e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d55da07e2011cf611525f1ba5edd904ad5d6095c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786218"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   根据与源表联接的结果，对目标表执行插入、更新或删除操作。 例如，根据在另一个表中找到的差异在一个表中插入、更新或删除行，可以对两个表进行同步。  
   
- **性能提示：**当两个表具有匹配特性的复杂混合时，针对 MERGE 语句介绍的条件行为的效果最佳。 例如，在行不存在时插入行，或是在行匹配时更新行。 仅仅基于其他表的行更新一个表时，可以通过基本的 INSERT、UPDATE 和 DELETE 语句提高性能和可伸缩性。 例如：  
+ **性能提示：** 当两个表具有匹配特性的复杂混合时，针对 MERGE 语句介绍的条件行为的效果最佳。 例如，在行不存在时插入行，或是在行匹配时更新行。 仅仅基于其他表的行更新一个表时，可以通过基本的 INSERT、UPDATE 和 DELETE 语句提高性能和可伸缩性。 例如：  
   
 ```  
 INSERT tbl_A (col, col2)  

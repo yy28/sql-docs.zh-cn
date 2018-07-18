@@ -2,7 +2,6 @@
 title: ADO 对象和集合 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03671824ef02a7316398f1d9b8d51d57845be736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d8b1967071b5dc420577ecbee3f1b124d917057
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271376"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 对象和集合
 ADO 由以下九个对象和四个集合组成。  
@@ -42,5 +42,5 @@ ADO 由以下九个对象和四个集合组成。
 |**参数**集合|包含所有**参数**的对象**命令**对象。|  
 |**错误**集合|包含所有**错误**到单个提供程序相关的失败的响应中创建的对象。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)

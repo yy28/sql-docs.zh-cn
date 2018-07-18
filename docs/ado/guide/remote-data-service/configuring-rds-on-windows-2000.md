@@ -2,7 +2,6 @@
 title: 在 Windows 2000 上配置 RDS |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1efc5f21b829e85e063dbbd3dbb3d72131d43149
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 774309f4b120f3c475645574429d1b08af627f8b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273766"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上配置 RDS
 如果你遇到困难获取 RDS 才能正常工作，为 Windows 2000 升级后，请按照下列步骤以解决此问题：  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。从 Windows 8 和 Windows Server 2012 开始，RDS 服务器组件不再包含在 Windows 操作系统中。 将应用程序使用到 RDS 迁移[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

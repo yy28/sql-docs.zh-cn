@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015284"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 课：在父报表上添加钻取操作
 向网站应用程序添加 ReportViewer 控件后，接下来要在父报表上添加钻取操作。  

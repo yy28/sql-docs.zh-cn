@@ -1,32 +1,23 @@
 ---
 title: CASE 语句 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], CASE
-ms.assetid: 0aee3b4a-d5f7-4c9a-87b8-e5efc2da6b6d
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 9e43188839e18290232de0d1ce6849c328580ec4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fb53db11e9c7ec816299d1541d27e962ab8650df
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740106"
 ---
 # <a name="case-statement-mdx"></a>CASE 语句 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   允许您有条件地从多次比较中返回特定值。 有两种类型的 Case 语句：  
   
@@ -69,7 +60,7 @@ END
  *Boolean_expression*  
  计算结果为标量值的 MDX 表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果没有 ELSE 子句，而且所有 WHEN 子句的计算结果都为 False，则结果是空单元。  
   
 ## <a name="simple-case-expression"></a>简单 Case 表达式  
@@ -115,7 +106,7 @@ FROM [Adventure Works]
 WHERE [Measures].x  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 脚本语句 & #40;MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 脚本编写语句&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

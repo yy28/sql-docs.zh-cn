@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +23,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ee7d74e217d252cf668c98dba3aaa9cc00bd49e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16b02c1a56bc91064d88a0d0e7c72ce0fc4662d4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401609"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中使用转换组件可以在数据从源传递到目标时修改和分析该数据。 具有同步输出的转换在每个输入行传递给该组件时对该行进行处理。 具有异步输出的转换可能要等收到所有输入行之后才完成其处理，也可能在收到所有输入行之前输出某些行。 本主题讨论异步转换。 如果你的处理需要同步转换，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/03/2018
   
  在异步转换中，可以根据需要在 ProcessInputRow 或 ProcessInput 方法中使用 AddRow 方法向输出添加行。 不一定要使用 CreateNewOutputRows 方法。 如果要将单行结果（如聚合结果）写入特定输出，可以使用 CreateNewOutputRows 方法预先创建该输出行，然后在处理完所有输入行之后填充其值。 但是，在 CreateNewOutputRows 方法中创建多个行是没有任何用处的，因为脚本组件只允许使用输入或输出中的当前行。 CreateNewOutputRows 方法在源组件中更重要，源组件没有任何输入行要处理。  
   
- 可能还需要重写 ProcessInput 方法本身，以便在遍历输入缓冲区并为每行调用 ProcessInputRow 之前或之后执行附加的预处理或最终处理。 例如，本主题的其中一个代码示例重写 ProcessInput，以便在 ProcessInputRow 遍历各行时对特定城市中的地址进行计数**。** 该示例在所有行被处理完后将汇总值写入到第二个输出中。 该示例在 ProcessInput 中完成输出，原因是调用 PostExecute 时，输出缓冲区不再可用。  
+ 可能还需要重写 ProcessInput 方法本身，以便在遍历输入缓冲区并为每行调用 ProcessInputRow 之前或之后执行附加的预处理或最终处理。 例如，本主题的其中一个代码示例重写 ProcessInput，以便在 ProcessInputRow 遍历各行时对特定城市中的地址进行计数 **。** 该示例在所有行被处理完后将汇总值写入到第二个输出中。 该示例在 ProcessInput 中完成输出，原因是调用 PostExecute 时，输出缓冲区不再可用。  
   
  根据用户的要求，可能还需要在 ScriptMain 类中可用的 PreExecute 和 PostExecute 方法中编写脚本来执行任何预处理或最终处理。  
   

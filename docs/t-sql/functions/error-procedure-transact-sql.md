@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,20 +24,21 @@ helpviewer_keywords:
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 051d120a972f681879a72f3a7f2e59fb2ae63adf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c60a1904db3375eb512f2ed639faa47d14060c0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792048"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回发生错误而导致运行 TRY…CATCH 构造的 CATCH 块的存储过程或触发器的名称。  
+如果该错误导致执行了 TRY…CATCH 构造的 CATCH 块，此函数返回出现错误的存储过程或触发器的名称。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,26 +49,26 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="return-value"></a>返回值  
- 在 CATCH 块中调用时，返回出现错误的存储过程名称。  
+如果在出现错误的存储过程 CATCH 块中调用，`ERROR_PROCEDURE` 返回该存储过程的名称。  
   
- 如果该错误未在存储过程或触发器中出现，则返回 NULL。  
+如果存储过程或触发器中未出现该错误，`ERROR_PROCEDURE` 返回 NULL。  
   
- 如果在 CATCH 块作用域以外调用，则返回 NULL。  
+在 CATCH 块作用域外调用时，`ERROR_PROCEDURE` 返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_PROCEDURE 可以在 CATCH 块的作用域内的任何位置调用。  
+`ERROR_PROCEDURE` 支持在 CATCH 块作用域内的任意位置调用。  
   
- ERROR_PROCEDURE 返回出现错误的存储过程或触发器的名称，无论它被调用多少次或在 CATCH 块的作用域的哪个位置被调用。 这与函数完全不同，如 @@ERROR，该函数返回语句中的错误号（紧跟着导致该错误的语句或在 CATCH 块的第一个语句中）。  
+无论 `CATCH` 运行多少次或在 `ERROR_PROCEDURE` 块作用域内的任意位置运行，它都将返回出现错误的存储过程或触发器的名称。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
   
- 在嵌套的 CATCH 块中，ERROR_PROCEDURE 返回存储过程或触发器的名称，该存储过程或触发器与在其中引用它的 CATCH 块的作用域是特定相关的。 例如，TRY…CATCH 构造的 CATCH 块可以有嵌套的 TRY…CATCH。 在嵌套的 CATCH 块中，ERROR_PROCEDURE 返回调用嵌套 CATCH 块的出错的存储过程或触发器的名称。 如果 ERROR_PROCEDURE 在 CATCH 块之外运行，它将返回调用该 CATCH 块的出错的存储过程或触发器的名称。  
+在嵌套 `CATCH` 块中，`ERROR_PROCEDURE` 返回特定于引用该 `CATCH` 块的 `CATCH` 块的作用域的错误号。 例如，外部 TRY...CATCH 构造的 `CATCH` 块可能具有内部 `TRY...CATCH` 构造。 在该内部 `CATCH` 块内，`ERROR_PROCEDURE` 将返回调用内部 `CATCH` 块的错误号。 如果 `ERROR_PROCEDURE` 在外部 `CATCH` 块中运行，它将返回调用该外部 `CATCH` 块的错误号。  
   
-## <a name="examples"></a>示例  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_PROCEDURE  
- 下面的代码示例显示了一个会生成被零除错误的存储过程。 `ERROR_PROCEDURE` 返回发生错误的存储过程的名称。  
+下面的示例显示生成被零除错误的存储过程。 `ERROR_PROCEDURE` 返回出现错误的存储过程的名称。  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -91,10 +91,21 @@ BEGIN CATCH
     SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorProcedure
+--------------------
+usp_ExampleProc
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. 通过其他错误处理工具在 CATCH 块中使用 ERROR_PROCEDURE。  
- 下面的代码示例显示了一个会生成被零除错误的存储过程。 与该错误相关的信息连同出错的存储过程的名称一起返回。  
+下面的示例显示生成被零除错误的存储过程。 除了返回出现错误的存储过程的名称外，存储过程将返回有关此错误的信息。  
   
 ```  
   
@@ -124,66 +135,17 @@ BEGIN CATCH
         ERROR_LINE() AS ErrorLine;  
         END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. 在 CATCH 块中使用 ERROR_PROCEDURE  
- 下面的代码示例显示了一个会生成被零除错误的存储过程。 `ERROR_PROCEDURE` 返回发生错误的存储过程的名称。  
-  
-```  
--- Verify that the stored procedure does not already exist.  
-IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_ExampleProc;  
-GO  
-  
--- Create a stored procedure that   
--- generates a divide-by-zero error.  
-CREATE PROCEDURE usp_ExampleProc  
-AS  
-    SELECT 1/0;  
-GO  
-  
-BEGIN TRY  
-    -- Execute the stored procedure inside the TRY block.  
-    EXECUTE usp_ExampleProc;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>D. 通过其他错误处理工具在 CATCH 块中使用 ERROR_PROCEDURE。  
- 下面的代码示例显示了一个会生成被零除错误的存储过程。 与该错误相关的信息连同出错的存储过程的名称一起返回。  
-  
-```  
-  
--- Verify that the stored procedure does not already exist.  
-IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_ExampleProc;  
-GO  
-  
--- Create a stored procedure that   
--- generates a divide-by-zero error.  
-CREATE PROCEDURE usp_ExampleProc  
-AS  
-    SELECT 1/0;  
-GO  
-  
-BEGIN TRY  
-    -- Execute the stored procedure inside the TRY block.  
-    EXECUTE usp_ExampleProc;  
-END TRY  
-BEGIN CATCH  
-    SELECT   
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-        END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage                       ErrorLine
+----------- ------------- ----------- ---------------- ---------------------------------- -----------
+8134        16            1           usp_ExampleProc  Divide by zero error encountered.  6
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>另请参阅  

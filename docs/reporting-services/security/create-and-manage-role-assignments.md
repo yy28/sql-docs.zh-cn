@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027024"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
   “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  

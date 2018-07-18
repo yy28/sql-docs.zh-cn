@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fefb85430b6bf3b98d15a884130e1db1d2cdfa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308416"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ $*cursor_offset*： 指定要提取时的行的可选 （整数） 符号 $*curs
 ## <a name="return-value"></a>返回值  
 返回行或 false 的混合值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 调用提取时，游标会自动前进。 下表包含可能列表*fetch_style*值。  
   
 |$*fetch_style*|Description|  
@@ -144,7 +144,7 @@ $*cursor_offset*： 指定要提取时的行的可选 （整数） 符号 $*curs
 ?>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

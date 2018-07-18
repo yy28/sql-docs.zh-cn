@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ea32972cf0c3f71d3eaf027fe729afcd12d8f24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1b6a884fa31a6e2ea90889c750ee5306ebc5e1c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400789"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
   可以为查找转换创建和部署缓存文件 (.caw)。 引用数据集存储在缓存文件中。  
@@ -47,11 +46,11 @@ ms.lasthandoff: 05/03/2018
   
 4.  双击缓存转换，在“缓存转换编辑器”中的“连接管理器”页上单击“新建”，创建一个新的缓存连接管理器。  
   
-5.  在 **“缓存连接管理器编辑器”**的 **“常规”** 选项卡上，选择以下选项对缓存连接管理器进行配置，以保存缓存：  
+5.  在 **“缓存连接管理器编辑器”** 的 **“常规”** 选项卡上，选择以下选项对缓存连接管理器进行配置，以保存缓存：  
   
     1.  选择 **“使用文件缓存”**。  
   
-    2.  在 **“文件名”**中，键入文件路径。  
+    2.  在 **“文件名”** 中，键入文件路径。  
   
      运行包时，系统会创建该文件。  
   

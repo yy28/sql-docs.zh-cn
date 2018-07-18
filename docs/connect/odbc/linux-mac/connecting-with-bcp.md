@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852592"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>可用选项
 在当前版本中，以下语法和选项有：  
 
-[*数据库 ***。**]* 架构***。***表 ***中** *data_file* | **出** *data_file*
+[*数据库 ***。**]* 架构 ***。*** 表 ***中** *data_file* | **出** *data_file*
 
 - -a *packet_size*  
 指定服务器发出或接收的每个网络数据包的字节数。  

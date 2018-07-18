@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912815"
 ---
 # <a name="reserved-keywords"></a>保留关键字
 保留了下列关键字以用于 ODBC 函数调用。 这些单词不会限制的最小的 SQL 语法;但是，若要确保使用支持的核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔列表。  

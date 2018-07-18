@@ -2,7 +2,6 @@
 title: RecordCount 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67416b2282f913e04867b9d4ac23ee0ea0f0c41a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0320cf9128c5b9f4b6bbe86f800c83e8eb779df4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280886"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 属性 (ADO)
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
 返回**长**值，该值指示中的记录数**记录集**。
   
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 使用**RecordCount**属性来查明多少个记录位于**记录集**对象。 该属性返回-1 时 ADO 无法确定的记录数，或提供程序或光标类型不支持**RecordCount**。 读取**RecordCount**属性关闭**记录集**会导致错误。
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 
 [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [筛选器和 RecordCount 属性示例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
 [筛选器和 RecordCount 属性示例 （VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   

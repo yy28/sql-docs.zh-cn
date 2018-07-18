@@ -1,10 +1,8 @@
 ---
-title: 入门 Sybase 控制台 (SybaseToSQL) SSMA |Microsoft 文档
+title: 开始使用 SSMA for Sybase 控制台 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -22,26 +20,27 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9b401ea1efdfcececbb35a16d7d10b29915e1fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980639"
 ---
-# <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Getting Started with SSMA Sybase 控制台 (SybaseToSQL)
-本部分介绍的过程启动并开始使用 SSMA for Sybase 控制台应用程序。 此处还列出将使用的约定在典型的 SSMA 控制台输出窗口。  
+# <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>开始使用 SSMA for Sybase 控制台 (SybaseToSQL)
+本部分介绍启动并开始使用 SSMA for Sybase 控制台应用程序的过程。 此处还列出了所使用的约定在典型的 SSMA 控制台输出窗口中。  
   
 ## <a name="launching-the-ssma-console"></a>启动 SSMA 控制台  
-使用以下步骤来启动 SSMA 控制台应用程序：  
+使用以下步骤启动 SSMA 控制台应用程序：  
   
 1.  转到开始，，然后指向所有程序。  
   
-2.  单击**SQL Server Migration Assistant 用于 Sybase 的命令提示符**快捷方式。  
+2.  单击**SQL Server Migration Assistant Sybase 命令提示符下**快捷方式。  
   
-    它显示的 SSMA 控制台使用情况菜单和`(/? Help)`，来帮助你开始使用控制台应用程序。  
+    它将显示 SSMA 控制台使用情况菜单和`(/? Help)`，以帮助你开始使用控制台应用程序。  
   
 ## <a name="using-the-ssma-console"></a>使用 SSMA 控制台  
-在 Windows 系统上成功启动控制台之后，你可以使用以下步骤才能使用它：  
+在 Windows 系统上成功启动控制台后，可以使用以下步骤才能使用它：  
   
 1.  通过脚本文件配置 SSMA 控制台。 本部分的详细信息，请参阅[创建脚本文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)。  
   
@@ -49,29 +48,29 @@ ms.lasthandoff: 05/03/2018
   
 3.  [创建服务器连接文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-4.  [执行 SSMA 控制台&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)基于您的项目需求。 
+4.  [执行 SSMA 控制台&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)根据您的项目需求。 
   
 其他功能：  
   
-1.  [指定密码](http://msdn.microsoft.com/en-us/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)和导出/导入它到窗口中的其他计算机。  
+1.  [指定一个密码](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)和导出/导入它到窗口的其他计算机。  
   
-2.  [生成报表](http://msdn.microsoft.com/en-us/19278f6a-6d58-4867-9d71-c6228040466e)以查看详细的 xml 输出评估/转换和数据迁移的报表。 你还可以生成刷新和同步命令的详细的错误报告。  
+2.  [生成报告](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e)若要查看详细的 xml 输出为评估/转换和数据迁移的报告。 此外可以生成刷新和同步命令的详细的错误报告。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
-时执行的 SSMA 脚本命令和选项，控制台程序为用户在控制台上显示的结果和消息 （信息、 错误等） 或者，如有必要，重定向到 xml 输出文件。 每种类型的输出中的消息是由唯一的颜色表示。 例如，白色的颜色的颜色的文本消息表示脚本文件命令;绿色中的一个表示提示用户输入，依次类推。  
+执行 SSMA 脚本命令和选项，在控制台程序为用户在控制台上显示的结果和消息 （信息、 错误等） 或者，如有必要，将重定向到的 xml 输出文件。 每种类型的输出中的消息是由唯一的颜色表示。 例如，白色颜色中的文本消息表示文件的脚本命令;以绿色表示一个表示提示用户输入，依此类推。  
   
 ![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
-下表中显示的控制台输出的颜色解释：  
+下表中将显示控制台输出的颜色的解释：  
   
 |Color|Description|  
 |---------|---------------|  
-|Red|在执行期间的错误|  
+|Red|执行期间出错|  
 |灰色|日期和时间戳，向用户显示消息|  
-|白色|脚本文件命令，消息类型|  
+|白色|脚本文件命令、 消息类型|  
 |Yellow|警告|  
 |绿色|提示用户输入|  
-|青色|开始、 完成和的操作的结果|  
+|蓝绿色|开始、 完成和操作的结果|  
   
 ## <a name="see-also"></a>另请参阅  
-[安装适用于 SAP ASE SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[安装 SSMA for SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

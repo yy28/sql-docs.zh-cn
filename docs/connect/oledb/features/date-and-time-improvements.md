@@ -2,7 +2,7 @@
 title: 日期和时间改进 |Microsoft 文档
 description: 日期和时间中的改进 OLE DB 驱动程序的 SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d39d7862dc470dfaada9b01f3717662dc2c9c94b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 622df9211c29c60cfdb42034f6284164f8d9af3b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611602"
 ---
 # <a name="date-and-time-improvements"></a>日期和时间的改进
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本主题介绍用于在中添加了日期和时间数据类型的 SQL Server 支持的 OLE DB 驱动程序[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="use-datetimedatetimedatetimeoffset-data-with-client-side-conversions-consistent-with-existing-conversions"></a>将 Date/Time/Datetime/Datetimeoffset 数据用于与现有转换一致的客户端转换  
  转换进行了扩展以一致的方式为包括所有中引入的日期和时间类型之间的转换[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

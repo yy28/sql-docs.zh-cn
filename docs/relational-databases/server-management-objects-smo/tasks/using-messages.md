@@ -1,5 +1,5 @@
 ---
-title: 使用消息 |Microsoft 文档
+title: 使用消息 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,17 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1b0f54854c6eebcbdfdf28d93e7df700cf4eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037845"
 ---
 # <a name="using-messages"></a>使用消息
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中，由系统消息<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>所属的对象**服务器**对象。 由于不能修改系统消息， **SystemMessage**对象属性是只读的。  
+  在 SMO 中，由系统消息<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>所属对象的**Server**对象。 由于不能修改系统消息，因此**SystemMessage**对象属性是只读的。  
   
- 用户定义的消息在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 对象以编程方式表示。 可通过循环访问该集合来发现现有的用户定义的消息。 可以通过实例化一个新创建新的用户定义消息**UserDefinedMessage**对象并设置适当的属性。  
+ 用户定义的消息在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 对象以编程方式表示。 可通过循环访问该集合来发现现有的用户定义的消息。 可以通过实例化一个新创建新用户定义的消息**UserDefinedMessage**对象并设置相应的属性。  
   
 ## <a name="examples"></a>示例  
  对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

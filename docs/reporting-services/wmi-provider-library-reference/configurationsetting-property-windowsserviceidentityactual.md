@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031314"
 ---
 # <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting 属性 - WindowsServiceIdentityActual
   用于运行报表服务器 Windows 服务的标识。 只读。  

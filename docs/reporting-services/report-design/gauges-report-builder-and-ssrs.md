@@ -168,6 +168,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027534"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表数据区域显示数据集的单个值。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 在单个仪表面板中，可以创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  

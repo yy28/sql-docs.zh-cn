@@ -1,6 +1,6 @@
 ---
 title: '* （叉积）(MDX) |Microsoft 文档'
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03a229dd7ab766a858967eb8c4891edadaaa6b92
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577629"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740596"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>叉积的 MDX 运算符参考
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   执行一个集运算以返回两个集的叉积。  
   

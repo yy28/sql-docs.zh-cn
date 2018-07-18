@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913952"
 ---
 # <a name="statement-parameters"></a>语句参数
 A*参数*是中的 SQL 语句的变量。 例如，假设部件表具有名为 PartID、 描述和价格的列。 若要添加不带参数部件需要构造 SQL 语句，例如：  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32867102"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>配置 media retention 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  单击 **“数据库设置”** 节点。  
   
-3.  在 **“备份/还原”**下的 **“默认备份媒体保持期”** 框中，键入或选择一个 0 到 365 之间的值，以设置备份媒体在数据库或事务日志备份后保留的天数。  
+3.  在 **“备份/还原”** 下的 **“默认备份媒体保持期”** 框中，键入或选择一个 0 到 365 之间的值，以设置备份媒体在数据库或事务日志备份后保留的天数。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

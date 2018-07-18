@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036464"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  

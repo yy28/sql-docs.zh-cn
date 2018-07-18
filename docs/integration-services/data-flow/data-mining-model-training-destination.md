@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 482e2bd27acedaed01acf4ef3d324af5b7e09b65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b70c19790ca3f9a09b2e18217f48190889c74624
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333131"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
   数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 和 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
  查看挖掘结构列的列表。 拖动挖掘结构列可将其映射到可用输入列。  
   
  **输入列**  
- 查看从上表中选择的输入列。 若要更改或删除映射选择，请使用 **“可用输入列”**的列表。  
+ 查看从上表中选择的输入列。 若要更改或删除映射选择，请使用 **“可用输入列”** 的列表。  
   
  **挖掘结构列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  

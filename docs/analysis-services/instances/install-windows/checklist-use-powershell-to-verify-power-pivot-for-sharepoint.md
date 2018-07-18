@@ -1,5 +1,5 @@
 ---
-title: 清单： 使用 PowerShell 验证 Power Pivot for SharePoint |Microsoft 文档
+title: 核对清单： 使用 PowerShell 验证 Power Pivot for SharePoint |Microsoft 文档
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985409"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![在 sharepoint 常规应用程序集中的 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 常规应用程序集中的 powerpivot")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击“常规应用程序设置” ，然后单击 **中的“管理面板”****[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**。 有关该面板的详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
+|![sharepoint 常规应用程序组中的 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 常规应用程序组中的 powerpivot")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击“常规应用程序设置” ，然后单击 **中的“管理面板”****[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**。 有关该面板的详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
   
 ##  <a name="bkmk_symptoms"></a> 症状和建议操作  
  下表列出了症状或问题，以及本主题的建议章节（旨在帮助您解决问题）。  
@@ -56,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |未运行数据刷新|请参阅 [计时器作业](#bkmk_timer_jobs) 章节，并验证 **联机 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据刷新计时器作业** 是否处于联机状态。|  
 |管理面板数据陈旧|请参阅 [计时器作业](#bkmk_timer_jobs) 章节，并验证 **“管理面板处理计时器作业”** 是否处于联机状态。|  
-|管理面板的某些部分|如果你将 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装到具有管理中心拓扑但没有 Excel Services 或 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 的场中，并且希望对 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板中的内置报表具有完全访问权限，则必须下载和安装 Microsoft ADOMD.NET 客户端库。 该面板中的某些报表将使用 ADOMD.NET 来访问内部数据，内部数据可提供有关 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 查询处理和场中服务器运行状况的报告数据。 请参阅 [ADOMD.Net 客户端库](#bkmk_adomd) 章节和 [在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)主题。|  
+|管理面板的某些部分|如果你将 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装到具有管理中心拓扑但没有 Excel Services 或 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 的场中，并且希望对 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板中的内置报表具有完全访问权限，则必须下载和安装 Microsoft ADOMD.NET 客户端库。 该面板中的某些报表将使用 ADOMD.NET 来访问内部数据，内部数据可提供有关 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 查询处理和场中服务器运行状况的报告数据。 请参阅 [ADOMD.Net 客户端库](#bkmk_adomd) 章节和 [在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)主题。|  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services Windows 服务  
  本章节中的脚本用于验证 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式下的实例。 验证服务正在 **运行**。  
@@ -166,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![请注意](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")还可以在管理中心页上验证了应用程序池**管理服务应用程序**。 单击服务应用程序的名称，然后单击功能区中的 **“属性”** 。  
+ ![请注意](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")还可以在管理中心页面上验证应用程序池**管理服务应用程序**。 单击服务应用程序的名称，然后单击功能区中的 **“属性”** 。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 和 Excel Service 应用程序代理**  
   
@@ -270,7 +271,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows 和 ULS 日志  
  **Windows 事件日志**  
   
- 下面的命令将在 Windows 事件日志中搜索与 SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例相关的事件。 有关禁用事件或更改的事件级别的信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录&#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 下面的命令将在 Windows 事件日志中搜索与 SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例相关的事件。 有关禁用事件或更改事件级别的信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录&#40;Powerpivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
  **服务名称：** MSOLAP$POWERPIVOT  
   
@@ -349,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据提供程序](http://technet.microsoft.com/library/hh758436.aspx)。  
+ 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据提供程序](http://technet.microsoft.com/library/hh758436.aspx)。  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.Net 客户端库  
   
@@ -366,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- 有关详细信息，请参阅 [在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)。  
+ 有关详细信息，请参阅 [在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)。  
   
 ##  <a name="bkmk_health_collection"></a> 运行状况数据收集规则  
  验证 **“状态”** 是否联机，以及 **“已启用”** 是否为 True。  

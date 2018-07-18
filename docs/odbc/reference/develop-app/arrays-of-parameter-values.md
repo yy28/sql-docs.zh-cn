@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909332"
 ---
 # <a name="arrays-of-parameter-values"></a>参数值的数组
 通常很有用的应用程序传递的参数数组。 例如，使用参数和参数化的数组**插入**语句，应用程序可以在一次插入的行数。 有以下几个使用数组优点。 首先，网络流量减少，因为 （如果数据源以本机方式支持参数数组），以单个数据包发送很多语句的数据。 其次，某些数据源可以执行使用数组快于执行相同数量的单独的 SQL 语句的 SQL 语句。 最后，在数据存储在数组中，因为通常是屏幕数据这种情况，应用程序绑定的所有行进行单个调用特定列中**SQLBindParameter**并通过执行单个语句对其进行更新。  

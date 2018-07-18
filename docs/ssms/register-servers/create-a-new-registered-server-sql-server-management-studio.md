@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-registration
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee2fa684589fcdf2089162bd9f7f5e243add925e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1894d3542613398d50ba0fb998439ce9b57b1af
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36806972"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>创建新的已注册的服务器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 1.  如果已注册的服务器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中没有出现，请在 **“视图”** 菜单上，单击 **“已注册的服务器”**。  
   
      **服务器类型**  
-     从“已注册的服务器”中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”**工具栏上依次单击 **“数据库引擎”**、 **“分析服务器”**、 **Reporting Services** 或 **Integration Services** 。  
+     从“已注册的服务器”中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上依次单击 **“数据库引擎”**、 **“分析服务器”**、 **Reporting Services** 或 **Integration Services** 。  
   
      **服务器名称**  
      选择要注册的服务器实例，格式如下：\<servername>[\\\<instancename>]。  

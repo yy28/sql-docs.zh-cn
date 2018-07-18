@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,11 +24,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 638e0029db80a695a1f5a09d84473070369f1ba4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36257029"
 ---
 # <a name="comparison-operators-transact-sql"></a>比较运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不同，Boolean 数据类型不能被指定为表列或变量的数据类型，也不能在结果集中返回。  
   
- 当 SET ANSI_NULLS 为 ON 时，带有一个或两个 NULL 表达式的运算符返回 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，上述规则同样适用，但是两个表达式均为 NULL，则等号 (=) 运算符返回 TRUE。 例如，如果 SET ANSI_NULLS 为 OFF，则 NULL = NULL 返回 TRUE。  
+ 当 SET ANSI_NULLS 为 ON 时，带有一个或两个 NULL 表达式的运算符返回 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，除了等于 (=) 和不等于 (<>) 运算符外，相同的规则适用。 当 SET ANSI_NULLS 为 OFF 时，这些运算符将 NULL 视为已知值，等效于任何其他 NULL，且只返回 TRUE 或 FALSE（绝不会返回 UNKNOWN）。  
   
  在 WHERE 子句中使用数据类型为 Boolean 的表达式，可以筛选出符合搜索条件的行，也可以在控制流语言语句（例如 IF 和 WHILE）中使用这种表达式。例如：  
   

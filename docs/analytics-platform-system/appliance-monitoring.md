@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538667"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>设备监视分析平台系统
 本设备监视指南介绍的工具和面向监视分析平台系统设备的任务。  

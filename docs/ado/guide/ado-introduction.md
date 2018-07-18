@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e278ead8b81bc0afef38e3dba87a25d8764076
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b2b3e0a8f9249abd76ccaf69bdd9f2311bcff2e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271406"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概述和优势
 ActiveX 数据对象 (ADO) 是 OLE DB 的高级别，能够轻松使用接口。 OLE DB 是很多数据存储区的低级别、 高性能界面。 ADO 和 OLE DB 可以用来处理关系型 （表格） 和非关系 (分层或流) 数据。

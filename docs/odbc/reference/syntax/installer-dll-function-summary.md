@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917382"
 ---
 # <a name="installer-dll-function-summary"></a>安装程序 DLL 函数摘要
 下表介绍在安装程序 DLL 的函数。 有关语法和语义为每个函数的详细信息，请参阅[安装程序 DLL API 参考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  

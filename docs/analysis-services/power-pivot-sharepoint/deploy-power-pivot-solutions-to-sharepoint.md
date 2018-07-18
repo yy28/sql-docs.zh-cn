@@ -1,5 +1,5 @@
 ---
-title: 将 Power Pivot 解决方案部署到 SharePoint |Microsoft 文档
+title: 将 Power Pivot 解决方案部署到 SharePoint |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51dffaf4569cf1aa0527ee0ba4d59379d4faab46
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984759"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>将 Power Pivot 解决方案部署到 SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
  [关于 Power Pivot 解决方案](#intro)  
   
 ##  <a name="bkmk_classic"></a> 先决条件：确认 Web 应用程序使用经典模式身份验证  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 只有使用 Windows 经典模式身份验证的 Web 应用程序才支持 PowerPivot for SharePoint。 若要检查应用程序是否使用经典模式下，运行以下 PowerShell cmdlet 从**SharePoint 2010 Management Shell**，并替换**http://\<顶层站点名称 >** 与SharePoint 站点名称：  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 只有使用 Windows 经典模式身份验证的 Web 应用程序才支持 PowerPivot for SharePoint。 若要检查应用程序是否使用经典模式，请运行以下 PowerShell cmdlet 从**SharePoint 2010 Management Shell**，并替换**http://\<顶层站点名称 >** 与您的 SharePoint 站点的名称：  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -47,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  返回值应为 **false**。 如果返回值为“True” ，则不能使用此 Web 应用程序访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
 ##  <a name="bkmk_farm"></a> 步骤 1：部署场解决方案  
- 本部分将向你演示如何使用 PowerShell 部署解决方案，但你也可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具来完成此任务。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
+ 本部分将向你演示如何使用 PowerShell 部署解决方案，但你也可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具来完成此任务。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  在安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 后，此任务只需要执行一次。  
   
@@ -105,7 +106,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  在“部署到？” 中，选择要为其添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能支持的 SharePoint Web 应用程序。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  对也支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的其他 SharePoint Web 应用程序重复此过程。  
   
@@ -118,7 +119,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  单击 **“收回解决方案”**。  
   
- 如果遇到回溯到场解决方案的服务器部署问题，则可以通过在 **配置工具中运行“修复”**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 选项，重新部署解决方案。 应优先通过工具进行修复操作，因为这样只需执行较少的步骤。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
+ 如果遇到回溯到场解决方案的服务器部署问题，则可以通过在 **配置工具中运行“修复”**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 选项，重新部署解决方案。 应优先通过工具进行修复操作，因为这样只需执行较少的步骤。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  如果您仍想要重新部署所有解决方案，则请确保按照下面的顺序进行重新部署：  
   
@@ -146,7 +147,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |Powerpivotfarm.wsp|将 Microsoft.AnalysisServices.SharePoint.Integration.dll 添加到全局程序集中。<br /><br /> 将 Microsoft.AnalysisServices.ChannelTransport.dll 添加到全局程序集中。<br /><br /> 安装功能和资源文件，并且注册内容类型。<br /><br /> 为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库和数据馈送库添加库模板。<br /><br /> 为服务应用程序配置、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板、数据刷新和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加应用程序页。|  
 |“powerpivotwebapp.wsp”|将 Microsoft.AnalysisServices.SharePoint.Integration.dll 资源文件添加到 Web 前端上的 Web 服务器扩展插件文件夹中。<br /><br /> 将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 服务添加到 Web 前端。<br /><br /> 为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加缩略图生成。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [升级 Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [使用 Windows PowerShell 配置 Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

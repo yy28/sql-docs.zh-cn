@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,21 +22,22 @@ helpviewer_keywords:
 - CATCH block
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45ad8be1da81b29b446ed18dd0c4688013a18875
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff6f4b95b1d1dd982344d8fac9ae131c7ba57eec
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783548"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回错误的错误号，该错误会导致运行 TRY…CATCH 结构的 CATCH 块。  
-  
+此函数返回错误的错误号，该错误导致执行了 TRY…CATCH 构造的 CATCH 块。  
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -50,21 +50,21 @@ ERROR_NUMBER ( )
  **int**  
   
 ## <a name="return-value"></a>返回值  
- 在 CATCH 块中调用时，返回导致运行 CATCH 块的错误消息的错误号。  
-  
- 如果在 CATCH 块作用域以外调用，则返回 NULL。  
+在 CATCH 块中调用时，`ERROR_NUMBER` 返回导致 CATCH 块运行的错误的错误号。  
+
+在 CATCH 块作用域外调用时，`ERROR_NUMBER` 返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
- 可以在 CATCH 块的作用域内的任何位置调用此函数。  
+`ERROR_NUMBER` 支持在 CATCH 块作用域内的任意位置调用。  
   
- 不管在 CATCH 块的作用域内运行的次数和位置，ERROR_NUMBER 都返回错误号。 这与 @@ERROR 不同，后者只在紧跟导致错误的语句的语句中或 CATCH 块的第一个语句中返回错误号。  
-  
- 在嵌套的 CATCH 块中，ERROR_NUMBER 返回特定于其被引用的 CATCH 块作用域的错误号。 例如，外部 TRY...CATCH 构造的 CATCH 块可能具有嵌套 TRY...CATCH 构造。 在嵌套的 CATCH 块中，ERROR_NUMBER 返回调用嵌套的 CATCH 块的错误的编号。 如果 ERROR_NUMBER 在外部 CATCH 块中运行，则返回调用此 CATCH 块的错误的编号。  
+无论 `ERROR_NUMBER` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回相关的错误号。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
+
+在嵌套 `CATCH` 块中，`ERROR_NUMBER` 返回特定于引用该 `CATCH` 块的 `CATCH` 块的作用域的错误号。 例如，外部 TRY...CATCH 构造的 `CATCH` 块可能具有内部 `TRY...CATCH` 构造。 在该内部 `CATCH` 块内，`ERROR_NUMBER` 将返回调用内部 `CATCH` 块的错误号。 如果 `ERROR_NUMBER` 在外部 `CATCH` 块中运行，它将返回调用该外部 `CATCH` 块的错误号。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-errornumber-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_NUMBER  
- 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 将返回错误号。  
+此示例显示生成被零除错误的 `SELECT` 语句。 `CATCH` 块返回错误号。  
   
 ```  
 BEGIN TRY  
@@ -75,11 +75,22 @@ BEGIN CATCH
     SELECT ERROR_NUMBER() AS ErrorNumber;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber
+-----------
+8134
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_NUMBER  
- 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 返回错误号的同时，还将返回与错误相关的信息。  
-  
+此示例显示生成被零除错误的 `SELECT` 语句。 `CATCH` 块将返回错误号和有关此错误的信息。  
+
 ```  
   
 BEGIN TRY  
@@ -96,28 +107,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_NUMBER  
- 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 返回错误号的同时，还将返回与错误相关的信息。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorLine  ErrorMessage
+----------- ------------- ----------- ---------------  ---------- ----------------------------------
+8134        16            1           NULL             4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>另请参阅  

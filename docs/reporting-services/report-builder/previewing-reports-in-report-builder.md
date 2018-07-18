@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022344"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
   当创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，经常预览报表以验证报表显示你所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  

@@ -1,13 +1,12 @@
 ---
-title: 持久的数据源对象 |Microsoft 文档
+title: 持久化数据源对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,27 +15,27 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b516f66963b0c3a6d72614c9218d01313d9e6f7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419386"
 ---
-# <a name="persisted-data-source-objects"></a>持久的数据源对象
+# <a name="persisted-data-source-objects"></a>持久化数据源对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持与持久化的数据源对象**IPersistFile**接口。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持持久化的数据源对象与**IPersistFile**接口。  
   
 ## <a name="examples"></a>示例  
- **A.保留数据源初始化：**  
+ **A.持久保存数据源初始化：**  
   
- 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在中收到的服务器名称和数据库名称*pLocation*和*pDatasource*函数的参数。  
+ 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在接收到的服务器名称和数据库名称*pLocation*并*pDatasource*函数的参数。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -145,7 +144,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B.使用持久化的数据源初始化：**  
+ **B.使用保留的数据源初始化：**  
   
  此示例使用具有其他初始化属性的一个持久化数据源对象，这些属性提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。  
   
@@ -233,9 +232,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **IPersistFile::Save**方法可以调用之前或之后调用**idbinitialize:: Initialize**。 在成功的返回后调用方法**idbinitialize:: Initialize**确保有效的数据源规范持续不断。  
+ **Ipersistfile:: Save**之前或之后调用，可以调用方法**idbinitialize:: Initialize**。 成功的返回之后调用该方法**idbinitialize:: Initialize**可确保有效的数据源规范保持不变。  
   
-## <a name="see-also"></a>另请参阅  
- [数据源对象 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [数据源对象&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

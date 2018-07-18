@@ -2,7 +2,6 @@
 title: 计数属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14470bd316473eb77de66cea530c78073bb902ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 567e1eed35fba0148e4ebb0e9fd137d4425e90ac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277216"
 ---
 # <a name="count-property-example-vc"></a>计数属性示例 （VC + +）
 此示例演示[计数](../../../ado/reference/ado-api/count-property-ado.md)具有两个集合中属性***员工***数据库。 属性获取的每个集合中的对象数，并设置枚举这些集合的循环的上限。  
@@ -134,5 +134,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Count 属性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

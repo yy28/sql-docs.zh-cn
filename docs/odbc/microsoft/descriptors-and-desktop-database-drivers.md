@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903802"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>描述符和桌面数据库驱动程序
 描述符是一种数据结构，其中包含有关列数据或动态参数的信息。 **SQLGetDescField**可以用于检索下面列出的受支持的描述符。 实现参数描述符 (IPD) 不会自动填充因为**SQLDescribeParam**不支持。 不可通过 Jet （如 SQL_DESC_BASE_TABLE_NAME) 的描述符字段也不支持。  

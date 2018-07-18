@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019764"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +65,7 @@ AS [t]
   
      对于本主题开头部分显示的示例代码，“选择列表”行设置为 *。  
   
-5.  在 **“挖掘模型”** 行，键入显示在 **“对象资源管理器”**中的挖掘模型列表中的挖掘模型的名称。  
+5.  在 **“挖掘模型”** 行，键入显示在 **“对象资源管理器”** 中的挖掘模型列表中的挖掘模型的名称。  
   
      对于本主题开头部分显示的示例代码，“挖掘模型”行设置为名称 **TM_Decision_Tree**。  
   

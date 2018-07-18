@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028014"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  

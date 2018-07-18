@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32933108"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ ON
 ### <a name="installation-prerequisites"></a>安装的先决条件  
  以下是在 Azure 中存储 SQL Server 数据文件时的安装先决条件。  
   
--   **本地 SQL Server：**SQL Server 2016 及更高版本包括此功能。 若要了解如何下载最新版本的 SQL Server，请参阅 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)。  
+-   **本地 SQL Server：** SQL Server 2016 及更高版本包括此功能。 若要了解如何下载最新版本的 SQL Server，请参阅 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)。  
   
 -   在 Azure 虚拟机中运行的 SQL Server：如果要 [在 Azure 虚拟机上安装 SQL Server](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，请安装 SQL Server 2016 或更新现有实例。 同样，也可以使用 SQL Server 2016 平台映像在 Azure 中创建新虚拟机。
 

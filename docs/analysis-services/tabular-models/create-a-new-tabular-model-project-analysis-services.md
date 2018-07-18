@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34039691"
 ---
 # <a name="create-a-new-tabular-model-project"></a>创建新的表格模型项目
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,9 +24,9 @@ ms.lasthandoff: 05/10/2018
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。  
   
-2.  在 **“新建项目”** 对话框中，在 **“已安装的模板”**下，单击 **“商业智能”**，然后单击 **“表格模型项目”**。  
+2.  在 **“新建项目”** 对话框中，在 **“已安装的模板”** 下，单击 **“商业智能”**，然后单击 **“表格模型项目”**。  
   
-3.  在 **“名称”**中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
+3.  在 **“名称”** 中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
   
  创建新项目后，请务必设置项目和模型属性。 有关详细信息，请参阅[项目属性](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)和[模型属性](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)。  
   

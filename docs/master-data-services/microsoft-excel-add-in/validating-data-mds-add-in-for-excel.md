@@ -1,14 +1,12 @@
 ---
 title: 验证数据 (MDS Add-in for Excel) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
@@ -16,11 +14,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab8cf0017260edd45a7538191689cd47198f8a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94fd34fa9224f7de468a6e89dd91c20903e96cb8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335781"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>验证数据（用于 Excel 的 MDS 外接程序）
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  有关其他状态的信息，请参阅[验证状态 (Master Data Services)](../../master-data-services/validation-statuses-master-data-services.md)  
   
-|“登录属性”|Description|  
+|“登录属性”|描述|  
 |------------|-----------------|  
 |验证失败|行中的一个或多个值未通过针对 MDS 管理员定义的业务规则的验证。|  
 |验证成功|行中的所有值都已根据业务规则通过了验证。|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="input-statuses"></a>输入状态  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，以下输入状态是可能的  
   
-|“登录属性”|Description|  
+|“登录属性”|描述|  
 |------------|-----------------|  
 |错误|行中的一个或多个值不符合长度或数据类型之类的系统要求。 值在 MDS 存储库中不更新。|  
 |新行|该行中的值尚未发布到 MDS 存储库中。|  

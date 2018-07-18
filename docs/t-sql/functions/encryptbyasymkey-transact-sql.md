@@ -1,10 +1,9 @@
----
+﻿---
 title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,49 +20,79 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 212ce15f0d28b16b81a9c07d785c129b039cdc6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b20c55dc0de01eec655afa245b554d908d93c703
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782938"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用非对称密钥加密数据。  
+此函数使用非对称密钥加密数据。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
 ## <a name="arguments"></a>参数  
- Asym_Key_ID  
- 数据库中非对称密钥的 ID。 int。  
+Asym_Key_ID  
+数据库中非对称密钥的 ID。 Asym_Key_ID 具有 int 数据类型。  
   
- cleartext  
- 将使用非对称密钥加密的数据字符串。  
+cleartext  
+`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的数据字符串。 cleartext 可以具有
+ 
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
   
- **@plaintext**  
- 这是类型为 nvarcharchar varcharbinaryvarbinary 或 nchar 的变量，其中包含要用非对称密钥加密的数据。  
+或多个
+  
++ **varchar**
+ 
+数据类型。  
+  
+**@plaintext**  
+`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的包含值的变量。 @plaintext 可以具有
+  
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
+  
+或多个
+  
++ **varchar**
+ 
+数据类型。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>Remarks  
- 与使用对称密钥进行加密和解密相比，使用非对称密钥进行加密和解密时的系统开销要高得多。 建议您不要使用非对称密钥加密大型数据集，例如表中的用户数据。 而应该使用强对称密钥加密数据并使用非对称密钥加密对称密钥。  
+与对称密钥加密和解密相比，使用非对称密钥的加密和解密操作消耗大量资源，因此成本非常高。 我们建议开发人员避免对大型数据集执行非对称密钥加密和解密操作 - 例如，存储在数据库表中的用户数据数据集。 相反，我们建议开发人员首先使用强对称密钥对数据进行加密，然后使用非对称密钥对该对称密钥进行加密。  
   
- 根据算法，如果输入超出一定字节数，**EncryptByAsymKey** 将返回 **NULL**。 限制为：512 位 RSA 密钥可加密达 53 个字节，1024 位密钥可加密达 117 个字节，而 2048 密钥可加密达 245 个字节。 （注意，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，证书和异步密钥都是 RSA 密钥的包装。）  
+如果输入超出一定字节数，`ENCRYPTBYASYMKEY` 将返回 NULL（具体取决于算法）。 具体限制：
+
++ 一个 512 位的 RSA 密钥最多可加密 53 个字节
++ 一个 1024 位的密钥最多可加密 117 个字节
++ 一个 2048 位的密钥最多可加密 245 个字节
+
+注意，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，证书和非对称密钥都可用作 RSA 密钥的包装器。  
   
 ## <a name="examples"></a>示例  
- 以下示例将用非对称密钥 `JanainaAsymKey02` 加密在 `@cleartext` 中存储的文本。 加密的数据插入表 `ProtectedData04` 中。  
+此示例将用非对称密钥 `JanainaAsymKey02` 加密 `@cleartext` 中存储的文本。 该语句将加密数据插入到 `ProtectedData04` 表中。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

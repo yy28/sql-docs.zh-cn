@@ -3,10 +3,9 @@ title: 从命令提示符安装 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: sql
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -84,16 +83,15 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a12eab1a7ea003c1837c68f53eae33989ed884ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225147"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -196,13 +194,13 @@ ms.locfileid: "34771503"
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **安装**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> 仅在为包含 Anaconda Python 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 安装程序控件|/IACCEPTPYTHONLICENSETERMS <br /><br /> 仅在为包含 Anaconda Python 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTROPENLICENSETERMS <br /><br /> 仅在为包含 Microsoft R Open 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateSource<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 `.\MyUpdates` 或一个 UNC 共享）。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将通过 Windows Server Update Services 搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或 Windows Update 服务。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/> 要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。<br /><br /> 支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/> 要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。<br /><br /> 支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> - 或 -<br /><br /> /ROLE<br /><br /> **必需**|指定要安装的组件。<br /><br /> 选择 **/FEATURES** 可指定要安装的各个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 有关详细信息，请参阅 [功能参数](#Feature) 。<br /><br /> 选择 **/ROLE** 可指定安装程序角色。 安装角色在预先确定的配置中安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示安装参数的用法选项。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
@@ -333,7 +331,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示安装参数的用法选项。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2（2013 年 1 月）之前，**必需**<br /><br /> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 起，**可选**|使用在准备映像步骤中指定的实例 ID。<br /><br /> 支持的值：InstanceID of a Prepared Instance。|  
@@ -400,7 +398,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateSource*<br /><br /> **可选**|指定 SQL Server 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 .\MyUpdates）或一个 UNC 共享。 默认情况下，SQL Server 安装程序将通过 Windows Server 更新服务搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新或 Windows 更新服务。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ INSTANCEDIR<br /><br /> **可选**|为共享组件指定一个非默认安装目录。|  
@@ -531,7 +529,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateSource*<br /><br /> **可选**|指定 SQL Server 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 .\MyUpdates）或一个 UNC 共享。 默认情况下，SQL Server 安装程序将通过 Windows Server 更新服务搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新或 Windows 更新服务。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要安装的 [组件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
@@ -611,7 +609,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateSource*<br /><br /> **可选**|指定 SQL Server 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 `.\MyUpdates` 或一个 UNC 共享）。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将通过 Windows Server Update Services 搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或 Windows Update 服务。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要安装的 [组件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
@@ -674,7 +672,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERGROUP<br /><br /> **可选**|指定要用于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的资源组的名称。 可以是现有群集组的名称，也可以是新资源组的名称。<br /><br /> 默认值：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<InstanceName>)|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅[实例配置](../../database-engine/install-windows/install-sql-server.md)  
@@ -739,7 +737,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateSource*<br /><br /> **可选**|指定 SQL Server 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 `.\MyUpdates` 或一个 UNC 共享）。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将通过 Windows Server Update Services 搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或 Windows Update 服务。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ INSTANCEDIR<br /><br /> **可选**|为共享组件指定一个非默认安装目录。|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2e9851921d808339681080d5df0c9439212a3db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410459"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
 
@@ -72,11 +72,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="grid-columns"></a>网格列  
  对于创建的每个实体，系统都会在网格中添加一行（其中包含十三列）。 下面介绍了这些列。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |“登录属性”|实体状态。 单击“保存”  时，将显示下图，指示实体正在更新。<br /><br /> ![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
 |“属性”|实体名称。|  
-|Description|实体说明。|  
+|描述|实体说明。|  
 |临时表|用于存储数据的表的前缀名称。|  
 |事务日志类型|实体的事务日志类型。|  
 |自动创建代码|指定是否启用自动代码创建。|  

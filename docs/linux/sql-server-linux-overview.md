@@ -4,7 +4,7 @@ description: 本主题介绍了 SQL Server 如何在 Linux 上运行和提供有
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 05/24/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 2c67e5d1563ef2420f45ec4b1d0093de888dd157
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
-ms.translationtype: MT
+ms.openlocfilehash: 16ea8b69f1d55e5b338931f0531bdf8a2e037707
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020135"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -54,7 +55,7 @@ SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的底�
 如果你已熟悉 SQL Server，请查看 [发行说明](sql-server-linux-release-notes.md) 了解常规使用说明和此版本的已知问题。 然后查看 [Linux 上的 SQL Server 的新功能](sql-server-linux-whats-new.md) 以及 [SQL Server 2017 更新概览](../sql-server/what-s-new-in-sql-server-2017.md)。 
 
 > [!TIP]
-> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
+> 有关常见问题的解答，请参阅[SQL Server Linux 常见问题](sql-server-linux-faq.md)。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

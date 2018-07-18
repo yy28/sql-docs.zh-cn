@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832582"
 ---
 # <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能依赖关系
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  ##  <a name="test-time"></a>测试时间
 需要其中的上述两个功能的特定项目需要显式声明其 pom 文件中的相应依赖关系：
 
-***例如：***如果你使用*Azure Active Directory 身份验证功能*，则需要重新声明*adal4j*中项目的 pom 文件依赖关系。 请参阅下面的代码段： 
+***例如：*** 如果你使用*Azure Active Directory 身份验证功能*，则需要重新声明*adal4j*中项目的 pom 文件依赖关系。 请参阅下面的代码段： 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 </dependency>
 ```
 
-***例如：***如果你使用*Azure 密钥保管库功能*则需要重新声明*azure keyvault*依赖项和*adal4j*中的依赖关系你项目的 pom 文件。 请参阅下面的代码段： 
+***例如：*** 如果你使用*Azure 密钥保管库功能*则需要重新声明*azure keyvault*依赖项和*adal4j*中的依赖关系你项目的 pom 文件。 请参阅下面的代码段： 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>

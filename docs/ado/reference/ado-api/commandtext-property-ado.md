@@ -2,7 +2,6 @@
 title: CommandText 属性 (ADO) |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaad9ab5bc4def9975631a875071dc69a44b6028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c333cd961ea8b4b3f37f78c682ebe65c7ac9001
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276852"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 属性 (ADO)
 指示要对提供程序发出命令的文本。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>设置和返回值  
  获取或设置**字符串**值，该值包含提供程序命令，如 SQL 语句、 表名称、 相对 URL 或存储的过程调用。 默认值为空字符串 ("")。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**CommandText**属性来设置或返回表示命令的文本[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 通常这将是一个 SQL 语句，但也可以是任何其他类型的提供程序，如存储的过程调用识别的命令语句。 SQL 语句必须是特定语句或提供程序的查询处理器支持的版本。  
   
  如果[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)属性**命令**对象设置为**True**和**命令**设置时，将对象绑定到打开的连接**CommandText**属性，ADO 准备查询 （即，已编译形式提供程序存储的查询） 当调用[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)或[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 （VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)   

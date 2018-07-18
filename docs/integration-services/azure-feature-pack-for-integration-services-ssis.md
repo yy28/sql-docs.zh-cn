@@ -1,14 +1,12 @@
 ---
 title: 用于 Integration Services (SSIS) 的Azure 功能包 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/24/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ce10711bd2ce6872928b320e86d65369bbbd011
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405049"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
@@ -34,6 +33,8 @@ ms.lasthandoff: 05/03/2018
 - 对于 SQL Server 2016 - [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)
 - 对于 SQL Server 2014 - [用于 Azure 的 Microsoft SQL Server 2014 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=47366)
 - 对于 SQL Server 2012 - [用于 Azure 的 Microsoft SQL Server 2012 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=47367)
+
+下载页面还包含有关先决条件的信息。 在将 Azure 功能包安装到服务器上之前，确保已安装 SQL Server，否则在将功能包部署到服务器上的 SSIS 目录数据库 SSISDB 时，功能包中的组件可能不可用。
 
 ## <a name="components-in-the-feature-pack"></a>功能包中的组件
 -   连接管理器
@@ -77,18 +78,6 @@ ms.lasthandoff: 05/03/2018
     -   [Azure Data Lake Store 目标](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
 -   Azure Blob 和 ADLS 文件枚举器。 请参阅 [Foreach 循环容器](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
-
-## <a name="download-the-feature-pack"></a>下载功能包
- 下载用于 Azure 的 SQL Server Integration Services (SSIS) 功能包。
- 
-- [用于 Azure 的 SSIS 功能包](http://go.microsoft.com/fwlink/?LinkID=626967)（对于 SQL Server 2016）
-- [用于 Azure 的 SSIS 功能包](https://www.microsoft.com/download/details.aspx?id=54798)（对于 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]）
-
-## <a name="prerequisites"></a>必备条件
- 必须在安装此功能包之前安装以下系统必备组件。
-
--   SQL Server Integration Services
--   .Net Framework 4.5
 
 ## <a name="scenario-processing-big-data"></a>应用场景：处理大数据
  使用 Azure Connector 可完成以下大数据处理工作：

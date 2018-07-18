@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019774"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>在现有挖掘结构中添加挖掘模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,9 +26,9 @@ ms.lasthandoff: 05/10/2018
   
      此时将打开 **“新建挖掘模型”** 对话框。  
   
-2.  在 **“模型名称”**下面，输入新挖掘模型的名称。  
+2.  在 **“模型名称”** 下面，输入新挖掘模型的名称。  
   
-3.  在 **“算法名称”**下面，选择将用来生成挖掘模型的算法。  
+3.  在 **“算法名称”** 下面，选择将用来生成挖掘模型的算法。  
   
 4.  单击 **“确定”**。  
   

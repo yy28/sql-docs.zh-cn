@@ -1,44 +1,43 @@
 ---
-title: sys.pdw_nodes_indexes (Transact SQL) |Microsoft 文档
+title: sys.pdw_nodes_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 04591e83fdfd8222a84480f983b21a6d77d51da2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db4fcae2e341731ff3e56b8b5a11101d7db5da5
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875015"
 ---
-# <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (TRANSACT-SQL)
+# <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   返回索引[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|此索引所属的对象 id。||  
-|name|**sysname**|索引的名称。 名称是仅在该对象内唯一的。 NULL = 堆||  
-|index_id|**int**|索引的 id。 index_id 是仅在该对象内唯一的。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引||  
+|object_id|**int**|此索引所属的对象的 id。||  
+|NAME|**sysname**|索引的名称。 名称是只在对象中唯一的。 NULL = 堆||  
+|index_id|**int**|索引的 id。 index_id 是只在对象中唯一的。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引||  
 |type|**tinyint**|索引的类型：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集<br /><br /> 2 = 非聚集<br /><br /> 5 = 聚集 xVelocity 内存优化的列存储索引|  
 |type_desc|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 聚集列存储||  
 |is_unique|**bit**|0 = 索引不是唯一的。|始终为 0。|  
-|data_space_id|**int**|此索引的数据空间的 id。 数据空间是文件组或分区方案。<br /><br /> 0 = object_id 是表值函数。||  
+|data_space_id|**int**|此索引的数据空间 id。 数据空间是文件组或分区方案。<br /><br /> 0 = object_id 是表值函数。||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY 是 OFF。|始终为 0。|  
 |is_primary_key|**bit**|1 = 索引是 PRIMARY KEY 约束的一部分。|始终为 0。|  
 |is_unique_constraint|**bit**|1 = 索引是 UNIQUE 约束的一部分。|始终为 0。|  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

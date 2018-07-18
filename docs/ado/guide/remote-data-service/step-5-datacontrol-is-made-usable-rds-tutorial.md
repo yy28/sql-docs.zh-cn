@@ -2,7 +2,6 @@
 title: '步骤 5: DataControl 可进行 （RDS 教程） |Microsoft 文档'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 564c9b1984226c02ab1cb960ff6e4ed32b5527d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd2d73a97e8ba4b3e2c052bb5fa0e08fa7c2d941
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274566"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步骤 5: DataControl 可进行 （RDS 教程）
 返回**记录集**对象是可供使用。 你可以检查、 导航，或对其进行编辑，就像任何其他**记录集**。 如何使用**记录集**取决于你的环境。 Visual Basic 和 Visual c + + 提供了可视控件，可以使用**记录集**直接或间接启用的数据控件的帮助。  
@@ -47,6 +47,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [步骤 6： 将更改发送到服务器 （RDS 教程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

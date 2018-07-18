@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912522"
 ---
 # <a name="sql-type-identifiers"></a>SQL 类型标识符
 每个数据源定义其自己的 SQL 数据类型。 ODBC 定义类型标识符，并描述了可能映射到每个类型标识符的 SQL 数据类型的一般特征。 它是驱动程序特定的基础数据源中的每个数据类型映射到 ODBC SQL 类型标识符的方式。  

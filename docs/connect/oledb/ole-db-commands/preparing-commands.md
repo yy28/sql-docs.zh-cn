@@ -2,10 +2,10 @@
 title: 准备命令 |Microsoft 文档
 description: 准备使用的 SQL Server OLE DB 驱动程序的命令
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-commands
+ms.component: oledb|ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3fadd6d85159607ad9450567ac8f042689da5fa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666057"
 ---
 # <a name="preparing-commands"></a>准备命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驱动程序支持命令准备用于优化多个执行单个命令;但是，命令准备生成开销，并使用者不需要准备要不止一次执行的命令。 一般而言，如果命令的执行次数超过三次，则应当进行准备。  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  命令对象中具有最多一个临时存储的过程**tempdb**。 任何现有的临时存储过程都表示特定命令对象的当前命令文本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令](../../oledb/ole-db-commands/commands.md)  
   
   

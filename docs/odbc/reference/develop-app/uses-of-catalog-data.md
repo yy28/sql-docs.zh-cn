@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915238"
 ---
 # <a name="uses-of-catalog-data"></a>使用的目录数据
 应用程序使用各种不同的方式的目录数据。 下面是一些常见用途：  

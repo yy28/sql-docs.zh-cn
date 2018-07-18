@@ -1,8 +1,6 @@
 ---
 title: 项目设置 （迁移） (MySQLToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b540d746440dd699821c2105b8d1f50ac5a3a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9d1ca803dd1d85f2629ca746794149cd14e0def
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776213"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>项目设置 （迁移） (MySQLToSQL)
 迁移页的**项目设置**对话框中包含自定义如何 SSMA 将数据迁移从 MySQL 到 SQL Server 的设置。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   若要对指定为当前项目中，设置**工具**菜单上，选择**项目设置**，单击**常规**中左窗格中，然后单击底部**迁移**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="bulk-copy"></a>大容量复制  
   
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 |术语|定义|  
 |--------|--------------|  
 |**扩展的数据迁移选项**|在单独的详细信息选项卡中显示每个表的额外的数据迁移选项。<br /><br />**默认模式**： 隐藏<br /><br />**开放式模式**： 隐藏<br /><br />**完整模式**： 隐藏|  
-|**出错时**|发生错误时，请停止数据迁移。 它具有三个选项：<br /><br />**停止迁移：**停止数据迁移操作<br /><br />**转到下一个表：**停止数据迁移到当前表，并将继续到下一个<br /><br />**继续执行下一批：**停止数据迁移到当前批次，并将继续到下一个<br /><br />**默认模式**： 继续执行下一批<br /><br />**开放式模式**： 继续执行下一批<br /><br />**完整模式**： 继续执行下一批|  
+|**出错时**|发生错误时，请停止数据迁移。 它具有三个选项：<br /><br />**停止迁移：** 停止数据迁移操作<br /><br />**转到下一个表：** 停止数据迁移到当前表，并将继续到下一个<br /><br />**继续执行下一批：** 停止数据迁移到当前批次，并将继续到下一个<br /><br />**默认模式**： 继续执行下一批<br /><br />**开放式模式**： 继续执行下一批<br /><br />**完整模式**： 继续执行下一批|  
   
 ### <a name="parallel-data-migration"></a>并行数据迁移  
   

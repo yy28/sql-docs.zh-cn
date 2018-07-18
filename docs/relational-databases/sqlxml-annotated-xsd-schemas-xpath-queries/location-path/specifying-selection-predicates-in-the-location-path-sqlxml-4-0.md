@@ -1,5 +1,5 @@
 ---
-title: 指定选择谓词中的位置路径 (SQLXML 4.0) |Microsoft 文档
+title: 位置路径 (SQLXML 4.0) 中指定选择谓词 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e32ce8235adfe6774b339219ced7ecb6a38f505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972300"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路径中指定选择谓词 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,16 +37,16 @@ ms.lasthandoff: 05/03/2018
  XPath 还允许基于位置的筛选。 求值结果为数字的谓词表达式选择该序数节点。 例如，位置路径 `Customer[3]` 返回第三个客户。 不支持此类数字谓词。 只支持返回布尔值结果的谓词表达式。  
   
 > [!NOTE]  
->  有关 XPath 的该 XPath 实现的限制信息和与 W3C 规范之间的差异，请参阅[使用 XPath 查询简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
+>  有关此 XPath 实现限制的信息和它与 W3C 规范之间的差异，请参阅[使用 XPath 查询简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
-## <a name="selection-predicate-example-1"></a>选定谓词： 示例 1  
- 下面的 XPath 表达式 （位置路径） 选择从当前上下文节点所有**\<客户 >** 元素子级具有**CustomerID**值为 ALFKI 的属性：  
+## <a name="selection-predicate-example-1"></a>选择谓词： 示例 1  
+ 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 子元素具有**CustomerID**值 ALFKI 的属性：  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 在此 XPath 查询中，`child` 和 `attribute` 是轴名称。 `Customer` 是节点的测试 (true`Customer`是**\<元素节点 >**，这是因为**\<元素 >** 是的主体数据库节点类型`child`轴)。 `attribute::CustomerID="ALFKI"` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是节点的测试 (true **CustomerID**是上下文节点的属性，因为**\<属性 >** 的主体节点类型**属性**轴)。  
+ 在此 XPath 查询中，`child` 和 `attribute` 是轴名称。 `Customer` 是节点测试 (如果`Customer`是**\<元素节点 >**，这是因为**\<元素 >** 是的主要节点类型`child`轴)。 `attribute::CustomerID="ALFKI"` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是节点测试 (如果**CustomerID**是上下文节点的属性，因为**\<属性 >** 的主体节点类型**特性**轴)。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -53,8 +54,8 @@ ms.lasthandoff: 05/03/2018
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>选定谓词： 示例 2  
- 下面的 XPath 表达式 （位置路径） 选择从当前上下文节点所有**\<顺序 >** 孙级具有**SalesOrderID**具有值 1 属性：  
+## <a name="selection-predicate-example-2"></a>选择谓词： 示例 2  
+ 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<顺序 >** 孙级**SalesOrderID**属性具有值 1:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -68,18 +69,18 @@ ms.lasthandoff: 05/03/2018
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>选定谓词： 示例 3  
- 下面的 XPath 表达式 （位置路径） 选择从当前上下文节点所有**\<客户 >** 包含一个或多个子级 **\<ContactName >** 子级：  
+## <a name="selection-predicate-example-3"></a>选择谓词： 示例 3  
+ 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 具有一个或多个子级的 **\<ContactName >** 子级：  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- 此示例假定 **\<ContactName >** 是的子元素**\<客户 >** 元素在 XML 文档中，称为*元素为中心的映射*带批注的 XSD 架构中。  
+ 此示例假定 **\<ContactName >** 子元素的**\<客户 >** 元素在 XML 文档中，被称为*元素为中心的映射*在带批注的 XSD 架构。  
   
- 在此 XPath 表达式中，`child` 是轴名称。 `Customer` 是节点的测试 (true`Customer`是**\<元素 >** 节点，因为**\<元素 >** 是的主体数据库节点类型`child`轴)。 `child::ContactName` 是谓词。 在谓词中，`child`是轴和`ContactName`是节点的测试 (true`ContactName`是**\<元素 >** 节点)。  
+ 在此 XPath 表达式中，`child` 是轴名称。 `Customer` 是节点测试 (如果`Customer`是**\<元素 >** 节点，因为**\<元素 >** 是的主要节点类型`child`轴)。 `child::ContactName` 是谓词。 在谓词中，`child`是轴和`ContactName`是节点测试 (如果`ContactName`是**\<元素 >** 节点)。  
   
- 此表达式仅返回**\<客户 >** 的上下文节点的具有元素子级，  **\<ContactName >** 元素子级。  
+ 此表达式仅返回**\<客户 >** 具有的元素子级的上下文节点 **\<ContactName >** 元素子级。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -87,16 +88,16 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>选定谓词： 示例 4  
- 下面的 XPath 表达式选择**\<客户 >** 的上下文节点的元素子级，而没有 **\<ContactName >** 元素子级：  
+## <a name="selection-predicate-example-4"></a>选择谓词： 示例 4  
+ 以下 XPath 表达式选择**\<客户 >** 上下文节点不具有元素子级 **\<ContactName >** 元素子级：  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- 此示例假定 **\<ContactName >** 是的子元素**\<客户 >** 中不需要在 XML 文档中和联系人姓名字段中的元素数据库。  
+ 此示例假定 **\<ContactName >** 子元素的**\<客户 >** 中不需要在 XML 文档和联系人姓名字段中的元素数据库。  
   
- 在本示例中，`child` 是轴。 `Customer` 是节点的测试 (true`Customer`是\<元素 > 节点)。 `not(child::ContactName)` 是谓词。 在谓词中，`child`是轴和`ContactName`是节点的测试 (true`ContactName`是\<元素 > 节点)。  
+ 在本示例中，`child` 是轴。 `Customer` 是节点测试 (如果`Customer`是\<元素 > 节点)。 `not(child::ContactName)` 是谓词。 在谓词中，`child`是轴和`ContactName`是节点测试 (如果`ContactName`是\<元素 > 节点)。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -104,14 +105,14 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>选定谓词： 示例 5  
- 下面的 XPath 表达式选择从当前上下文节点所有**\<客户 >** 具有的子级**CustomerID**属性：  
+## <a name="selection-predicate-example-5"></a>选择谓词： 示例 5  
+ 以下 XPath 表达式选择从当前上下文节点所有**\<客户 >** 具有子级的**CustomerID**属性：  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- 在此示例中，`child`是轴和`Customer`是节点测试 (true`Customer`是\<元素 > 节点)。 `attribute::CustomerID` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是谓词 (true`CustomerID`是**\<属性 >** 节点)。  
+ 在此示例中，`child`是轴和`Customer`是节点测试 (如果`Customer`是\<元素 > 节点)。 `attribute::CustomerID` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是谓词 (如果`CustomerID`是**\<属性 >** 节点)。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -128,8 +129,8 @@ Customer[Order/@OrderDate=Order/@ShipDate]
   
  此查询选择具有以下 `Order` 的所有客户：其 `OrderDate` 等于任意 `ShipDate` 的 `Order`。  
   
-## <a name="see-also"></a>另请参阅  
- [批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [客户端的 XML 格式 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [带批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [客户端 XML 格式设置&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

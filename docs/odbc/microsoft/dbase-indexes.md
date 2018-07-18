@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900102"
 ---
 # <a name="dbase-indexes"></a>dBASE 索引
 ODBC dBASE 驱动程序将自动打开，并更新 dBASE IV 索引文件。 必须使用**选择索引**对话框中显示通过 ODBC 数据源管理器将 dBASE III.ndx 文件相关联的 dBASE 文件。  

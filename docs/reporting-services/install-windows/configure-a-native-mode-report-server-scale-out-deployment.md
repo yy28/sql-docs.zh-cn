@@ -1,10 +1,9 @@
 ---
 title: 配置本机模式报表服务器扩展部署 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,17 +18,22 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 344c748b915ff8db4ce8a58267ab5e343a03c4f5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322426"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
 
-  Reporting Services 本机模式支持扩展部署模式。该模式允许运行共享单个报表服务器数据库的多个报表服务器实例。 扩展部署用来增加报表服务器的可扩展性，以处理更多的并发用户和更大的报表执行负载， 还可用来在特定服务器上专门处理交互式报表或计划报表。  
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+Reporting Services 本机模式支持扩展部署模式。该模式允许运行共享单个报表服务器数据库的多个报表服务器实例。 扩展部署用来增加报表服务器的可扩展性，以处理更多的并发用户和更大的报表执行负载， 还可用来在特定服务器上专门处理交互式报表或计划报表。
+
+对于 Power BI 报表服务器，为确保其良好性能，需要在负载均衡器上为任何横向扩展环境配置客户端关联（有时称为粘滞会话）。  
   
- SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行扩展。通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+对于 SQL Server 2016 Reporting Services，SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行扩展。通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
   在以下情形中使用“扩展部署”  ：  
   

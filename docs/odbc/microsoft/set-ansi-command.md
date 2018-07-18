@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904322"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 命令
 确定如何使用进行的不同长度的字符串之间的比较 = Visual FoxPro SQL 命令中的运算符。  

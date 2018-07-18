@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027564"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 配置文件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将组件信息存储在注册表和配置文件中，其中配置文件会在安装过程中复制到文件系统。 配置文件包含仅供内部使用的值和用户定义的值的组合。 可以通过安装程序、配置工具、命令行实用工具以及手动编辑配置文件的方式来指定用户定义的值。  

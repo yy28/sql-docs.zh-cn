@@ -1,5 +1,5 @@
 ---
-title: 配置 Power Pivot 和部署解决方案 (SharePoint 2016) |Microsoft 文档
+title: 配置 Power Pivot 和部署解决方案 (SharePoint 2016) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58315c0a956a4d9ecadfdfee8e9c1a0adbbc2c22
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984059"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  选择“配置或修复 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint”，然后选择“确定”。  
   
-3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”**和 **“退出”** 命令。  
+3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
   
 4.  在 **“参数”** 选项卡上：  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
   
     4.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改这些默认设置，请在左窗口中查看以下页： **“创建默认的 Web 应用程序”** 和 **“部署 Web 应用程序解决方案”**。  
   
-5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 中的“用于配置服务器的输入值”部分。  
+5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 中的“用于配置服务器的输入值”部分。  
   
 6.  您还可以删除不想在此时处理的任何操作。 例如，如果你想要在以后配置 Secure Store Service，请选择“配置 Secure Store Service” ，然后取消选中“在任务列表中包括此操作” 复选框。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
   
 8.  选择“运行”  来处理该任务列表中的所有操作。 请注意， **“运行”** 将在您验证操作之后才可用。 如果“运行”  未启用，请首先选择“验证”  。  
   
- 有关详细信息，请参阅 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)  
+ 有关详细信息，请参阅 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)  
   
 ##  <a name="bkmk_verify_powerpivot"></a> 验证 Power Pivot 配置  
  **服务：**  
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  选择“确定”。  
   
- 有关解决数据刷新的详细信息，请参阅[解决 Power Pivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关故障排除数据刷新的详细信息，请参阅[故障排除 Power Pivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  有关配置工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

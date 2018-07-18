@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908962"
 ---
 # <a name="determining-cursor-capabilities"></a>确定光标功能
 中的下列四个选项**SQLGetInfo**描述了支持哪些类型的游标和其功能是什么：  

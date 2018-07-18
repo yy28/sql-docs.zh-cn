@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028524"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>打开或关闭 Reporting Services 功能
   您可以关闭不用作锁定策略一部分的报表服务器功能，以减小生产报表服务器的攻击面。 在大多数情况下，需要同时运行各种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能才能使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的所有功能。 但是根据所用的部署模型，您可以禁用不需要的功能。 例如，如果所有报表处理均已配置为预定操作，则可以只启用后台处理。 同样，如果您只需要交互式的按需报表，则可以只运行报表服务器 Web 服务。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在 **“方面”** 列表中，选择 **Reporting Services 的外围应用配置器**。  
   
-4.  在 **“方面属性”**下：  
+4.  在 **“方面属性”** 下：  
   
     -   若要打开报表服务器 Web 服务，请将 **WebServiceAndHTTPAccessEnabled** 设置为 **True**。  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  在 **“方面”** 列表中，选择 **Reporting Services 的外围应用配置器**。  
   
-4.  在 **“方面属性”**下：  
+4.  在 **“方面属性”** 下：  
   
     -   若要打开预定的事件和传递，请将 **ScheduleEventsAndReportDeliveryEnabled** 设置为 **True**。  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在对象资源管理器中右键单击 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 节点，然后单击“属性”。  
   
-3.  在 **“服务器属性”** 对话框中，单击 **“选择页”**下的 **“安全性”**。  
+3.  在 **“服务器属性”** 对话框中，单击 **“选择页”** 下的 **“安全性”**。  
   
     -   若要打开报表生成器，请选择 **“启用特别报告执行”** 选项。  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在对象资源管理器中右键单击 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 节点，然后单击“属性”。  
   
-3.  在 **“服务器属性”** 对话框中，单击 **“选择页”**下的 **“安全性”**。  
+3.  在 **“服务器属性”** 对话框中，单击 **“选择页”** 下的 **“安全性”**。  
   
     -   若要打开 Windows 集成安全性，请选择 **“对报表数据源启用 Windows 集成安全性”** 选项。  
   

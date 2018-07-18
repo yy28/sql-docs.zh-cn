@@ -1,6 +1,6 @@
 ---
 title: 创建 KPI 语句 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7c2322d30e4e42bebbe4537f687c349c5179d9f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579319"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741526"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义-创建 KPI
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   创建关键绩效指标 (KPI)。 KPI 是与多维数据集中的某个度量值组关联并用于评估业务或方案成败的计算集合。  
   

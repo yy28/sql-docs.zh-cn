@@ -1,5 +1,5 @@
 ---
-title: 处理在 XQuery 中的命名空间 |Microsoft 文档
+title: 处理 XQuery 中的命名空间 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4602c1234c00b15191ca616ed56352f0eb784d9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031385"
 ---
 # <a name="handling-namespaces-in-xquery"></a>处理 XQuery 中的命名空间
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ WHERE ProductModelID=7
 …  
 ```  
   
- 请注意，**命名空间**关键字用于定义新的命名空间前缀，"AWMI:"。 随后必须在查询中对该命名空间范围内的所有元素使用此前缀。  
+ 请注意，**命名空间**关键字用于定义新的命名空间前缀"AWMI:"。 随后必须在查询中对该命名空间范围内的所有元素使用此前缀。  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. 声明默认的命名空间  
  在上面的查询中，定义了一个新的命名空间前缀。 随后必须在查询中使用该前缀来选择所需的 XML 结构。 或者，也可以将命名空间声明为默认命名空间，如以下修改后的查询所示：  
@@ -122,7 +123,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. 使用默认命名空间进行构造  
- 您还可以定义要在 XML 构造中使用的默认命名空间。 例如，以下查询显示了如何指定默认命名空间中，"uri:SomeNamespace"\\，则应使用默认值为本地命名元素构造，如`<Result>`元素。  
+ 您还可以定义要在 XML 构造中使用的默认命名空间。 例如，以下查询显示了如何指定默认命名空间中，"uri:SomeNamespace"\\，则应使用为默认的构造，如本地命名元素`<Result>`元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -152,7 +153,7 @@ where ProductModelID=19
   
  请注意，通过覆盖元素的默认命名空间（空命名空间），XML 构造中的所有本地命名元素随后将被绑定到覆盖的默认命名空间。 因此，如果在构造 XML 时需要灵活利用空命名空间，则不要覆盖元素的默认命名空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  

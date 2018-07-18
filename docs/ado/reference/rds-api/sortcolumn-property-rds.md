@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fae3b712f32ad2b3b5c9f478a600af611379e798
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5253e7ad569413fc22e4a8d0ab04c8b7c403410
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288486"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 属性 (RDS)
 表示要对记录进行排序的列。  
@@ -43,7 +43,7 @@ DataControl.SortColumn = String
  *字符串*  
  A**字符串**表示的名称或别名所依据的记录进行排序的列的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **SortColumn**， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)，和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供了排序和筛选功能对客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于时完整的查找条件的记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在缓存。 [重置](../../../ado/reference/rds-api/reset-method-rds.md)方法将执行条件，并将当前**记录集**与可更新**记录集**。  
   
  若要作为排序依据**记录集**，必须先保存任何挂起的更改。 如果你使用**rds.DataControl**，你可以使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法。 例如，如果你**rds.DataControl**是名为 ADC1，你的代码将可能`ADC1.SubmitChanges`。 如果你使用 ADO**记录集**，你可以使用其[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 使用**UpdateBatch**是建议的方法**记录集**创建与对象[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)方法。 例如，你的代码可能是`myRS.UpdateBatch`或`ADC1.Recordset.UpdateBatch`。  
@@ -51,7 +51,7 @@ DataControl.SortColumn = String
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [FilterColumn、 FilterCriterion、 FilterValue、 SortColumn，和 SortDirection 属性和重置方法示例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [排序属性](../../../ado/reference/ado-api/sort-property.md)   
  [SortDirection 属性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

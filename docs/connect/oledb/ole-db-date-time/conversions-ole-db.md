@@ -2,10 +2,10 @@
 title: 绑定和转换 (OLE DB) |Microsoft 文档
 description: 绑定和转换 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 79887c62b3cd26c194bf140b29b836bf9140eb85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666017"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本部分讨论如何之间进行转换**datetime**和**datetimeoffset**值。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
   
@@ -66,14 +69,14 @@ ms.lasthandoff: 05/03/2018
   
 -   如果在从服务器转换为客户端时截断了秒或秒的小数部分，则设置 DBSTATUS_S_TRUNCATED。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [在客户端和服务器之间执行的转换](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
  描述执行之间的日期/时间转换为 SQL Server 与 OLE DB 驱动程序编写的客户端应用程序和[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）。  
   
  [在服务器和客户端之间执行的转换](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  描述执行之间的日期/时间转换[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本） 和用 OLE DB 驱动程序编写的 SQL Server 客户端应用程序。  
   
-## <a name="see-also"></a>另请参阅  
- [日期和时间改进 & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>请参阅  
+ [日期和时间改进&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

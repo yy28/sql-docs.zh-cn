@@ -14,12 +14,13 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34029398"
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   返回系统上当前挂起的一组事务。  
   
- **适用于：**表格模型、 多维模型  
+ **适用于：** 表格模型、 多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_TRANSACTIONS**行集包含以下各列。  

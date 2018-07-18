@@ -2,7 +2,6 @@
 title: 调用存储的过程使用命令 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbb9edb3744f1cc2483cfbe4d0d08a06868998d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e2b0c1958f680b85bfe8b1df99442cc588b291
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270446"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>调用存储的过程使用命令
 命令可用于调用存储的过程。 本主题末尾处的代码示例是指在 Northwind 示例数据库中，调用 CustOrdersOrders，按以下方式定义的存储过程。  
@@ -136,5 +136,5 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [知识库文章 117500](http://go.microsoft.com/fwlink/?LinkId=117500)

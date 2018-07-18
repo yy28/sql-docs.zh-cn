@@ -2,7 +2,6 @@
 title: ErrorValueEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ce91ab8f23db46f82bbcbbe2c39210d47f597f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 842c452e9289a9197f93009167943b92e0143012
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278537"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 运行时错误的类型。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  可在 OLE DB 错误传递到 ADO 应用程序。 通常情况下，可以由 Windows 设施代码的标识这些*4*。 例如，0x800***4***。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|无法更改**ActiveConnection**属性**记录集**具有对象**命令**作为其源的对象。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|服务器无法完成该操作。|  
@@ -129,5 +129,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>适用范围  
  [Number 属性 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO 错误代码](../../../ado/guide/appendixes/ado-error-codes.md)

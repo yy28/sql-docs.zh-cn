@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2135360e8289cd48e9a77dea289325791287db4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd8bd35a642d72a0d3b1b934dbdc1587bd96996
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409649"
 ---
 # <a name="functions-ssis-expression"></a>函数（SSIS 表达式）
   表达式语言包含一组用于表达式的函数。 表达式可以使用单个函数。但是，通常一个表达式可以通过运算符将多个函数组合起来，从而使用多个函数。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  表达式语言提供了下列数学函数。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[ABS（SSIS 表达式）](../../integration-services/expressions/abs-ssis-expression.md)|返回数值表达式的绝对值。|  
 |[EXP（SSIS 表达式）](../../integration-services/expressions/exp-ssis-expression.md)|返回指定表达式以 e 为底的指数。|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  表达式计算器提供了下列字符串函数。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[CODEPOINT（SSIS 表达式）](../../integration-services/expressions/codepoint-ssis-expression.md)|返回字符表达式最左端字符的 Unicode 代码值。|  
 |[FINDSTRING（SSIS 表达式）](../../integration-services/expressions/findstring-ssis-expression.md)|返回表达式中指定出现的字符串从 1 开始的索引。|  
@@ -79,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  表达式计算器提供了下列日期和时间函数。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[DATEADD（SSIS 表达式）](../../integration-services/expressions/dateadd-ssis-expression.md)|通过将指定日期与一个日期或时间间隔相加，返回一个新的 DT_DBTIMESTAMP 值。|  
 |[DATEDIFF（SSIS 表达式）](../../integration-services/expressions/datediff-ssis-expression.md)|返回两个指定日期之间所跨的日期和时间边界的数目。|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  表达式计算器提供了下列空函数。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[ISNULL（SSIS 表达式）](../../integration-services/expressions/isnull-ssis-expression.md)|根据表达式是否为空，返回一个布尔值结果。|  
 |[NULL（SSIS 表达式）](../../integration-services/expressions/null-ssis-expression.md)|返回请求的数据类型的 Null 值。|  

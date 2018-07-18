@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
@@ -16,26 +14,27 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 093b6da73d55129b1a21e36dfad4fac3c899c296
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 716b80d50d8498f2a3325bd4719ddf0a7f1e9946
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334481"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   下表介绍了 ODBC 目标的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |连接|ODBC 连接|用于访问目标数据库的 ODBC 连接。|  
 |BatchSize|Integer|用于大容量加载的批处理的大小。 这是作为批处理加载的行数。 只有在支持按行参数绑定时，该属性才有效。 如果不支持按行参数绑定，则批处理大小为 1。|  
-|BindCharColumnAs|Integer（枚举）|此属性确定 ODBC 目标如何绑定具有多字节字符串类型的列，例如 SQL_CHAR、SQL_VARCHAR 或 SQL_LONGVARCHAR。<br /><br /> 可能值为 Unicode (0)，这是将列绑定为 SQL_C_WCHAR；值还可以是 ANSI (1)，这是将列绑定为 SQL_C_CHAR。 默认值为 Unicode (0)。<br /><br /> Unicode 是支持将 CHAR 参数作为宽字符串绑定的大多数 ODBC 3.x 访问接口和 ODBC 2.x 访问接口的最佳选项。 如果您将 Unicode 和 ExposeCharColumnsAsUnicode 选择为 True，则用户无需指定源数据库使用的代码页。<br /><br /> **注意：** 此属性在 **“ODBC 目标编辑器”**中不可用，但可以使用 **“高级编辑器”**进行设置。|  
-|BindNumericAs|Integer（枚举）|此属性确定 ODBC 目标如何将具有数字数据的列与数据类型 SQL_TYPE_NUMERIC 和 SQL_TYPE_DECIMAL 进行绑定。<br /><br /> 可能值为 Char (0)，这是将列绑定为 SQL_C_CHAR；值还可以是 Numeric (1)，这是将列绑定为 SQL_C_NUMERIC。 默认值为 Char (0)。<br /><br /> **注意：**此属性在 **“ODBC 目标编辑器”**中不可用，但可以使用 **“高级编辑器”**进行设置。|  
-|DefaultCodePage|Integer|要用于字符串列的代码页。<br /><br /> **注意：**此属性在 **“ODBC 目标编辑器”**中不可用，但可以使用 **“高级编辑器”**进行设置。|  
+|BindCharColumnAs|Integer（枚举）|此属性确定 ODBC 目标如何绑定具有多字节字符串类型的列，例如 SQL_CHAR、SQL_VARCHAR 或 SQL_LONGVARCHAR。<br /><br /> 可能值为 Unicode (0)，这是将列绑定为 SQL_C_WCHAR；值还可以是 ANSI (1)，这是将列绑定为 SQL_C_CHAR。 默认值为 Unicode (0)。<br /><br /> Unicode 是支持将 CHAR 参数作为宽字符串绑定的大多数 ODBC 3.x 访问接口和 ODBC 2.x 访问接口的最佳选项。 如果您将 Unicode 和 ExposeCharColumnsAsUnicode 选择为 True，则用户无需指定源数据库使用的代码页。<br /><br /> **注意：** 此属性在 **“ODBC 目标编辑器”** 中不可用，但可以使用 **“高级编辑器”** 进行设置。|  
+|BindNumericAs|Integer（枚举）|此属性确定 ODBC 目标如何将具有数字数据的列与数据类型 SQL_TYPE_NUMERIC 和 SQL_TYPE_DECIMAL 进行绑定。<br /><br /> 可能值为 Char (0)，这是将列绑定为 SQL_C_CHAR；值还可以是 Numeric (1)，这是将列绑定为 SQL_C_NUMERIC。 默认值为 Char (0)。<br /><br /> **注意：** 此属性在 **“ODBC 目标编辑器”** 中不可用，但可以使用 **“高级编辑器”** 进行设置。|  
+|DefaultCodePage|Integer|要用于字符串列的代码页。<br /><br /> **注意：** 此属性在 **“ODBC 目标编辑器”** 中不可用，但可以使用 **“高级编辑器”** 进行设置。|  
 |InsertMethod|Integer（枚举）|用于插入数据的方法。 可能的值为逐行 (0) 和批处理 (1)。 默认值为批处理 (1)。<br /><br /> 有关这些选项的详细信息，请参阅 [ODBC Destination](../../integration-services/data-flow/odbc-destination.md)中的“加载选项”。|  
 |StatementTimeout|Integer|在无错返回应用程序之前等待 SQL 语句执行的秒数。 默认值为 120。|  
 |TableName|String|要插入数据的目标表的名称。|  
-|TransactionSize|Integer|单个事务中的插入数。 默认值为 0，这意味着 ODBC 目标在自动提交模式下工作。<br /><br /> 因为 ODBC 连接管理器不支持分布式事务，所以，可以使用 0 以外的其他值来设置此属性。 但是，如果连接管理器的 **RetainSameConnection** 属性设置为 **true** ，则此属性必须设置为 0。<br /><br /> **注意：**此属性在 **“ODBC 目标编辑器”**中不可用，但可以使用 **“高级编辑器”**进行设置。|  
+|TransactionSize|Integer|单个事务中的插入数。 默认值为 0，这意味着 ODBC 目标在自动提交模式下工作。<br /><br /> 因为 ODBC 连接管理器不支持分布式事务，所以，可以使用 0 以外的其他值来设置此属性。 但是，如果连接管理器的 **RetainSameConnection** 属性设置为 **true** ，则此属性必须设置为 0。<br /><br /> **注意：** 此属性在 **“ODBC 目标编辑器”** 中不可用，但可以使用 **“高级编辑器”** 进行设置。|  
 |LobChunkSize|Integer|针对 LOB 列的块大小分配。|  
   
   

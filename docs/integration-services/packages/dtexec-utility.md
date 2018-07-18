@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
@@ -16,11 +14,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19120f136913925721b61aacd59364f787ac0816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2583631f47e2f986e238880acb3e420515eeda60
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335681"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
   **dtexec** 命令提示实用工具用于配置和执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 使用 **dtexec** 实用工具，可以访问所有包配置和执行功能，如参数、连接、属性、变量、日志和进度指示器等。 使用 **dtexec** 实用工具，可以加载来自以下源的包： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器、.ispac 项目文件、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。  
@@ -106,7 +105,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  运行包时， **dtexec** 可能会返回退出代码。 使用该退出代码填充 ERRORLEVEL 变量，然后可以在批处理文件的条件语句或分支逻辑中测试该变量的值。 下表列出了 **dtexec** 实用工具退出时可以设置的值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0|已成功执行包。|  
 |@shouldalert|包失败。|  

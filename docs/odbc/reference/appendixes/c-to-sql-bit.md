@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905492"
 ---
 # <a name="c-to-sql-bit"></a>To SQL 的 C： 位
 位 ODBC C 数据类型的标识符是：  

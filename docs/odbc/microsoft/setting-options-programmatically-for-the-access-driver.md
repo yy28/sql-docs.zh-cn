@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904752"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>以编程方式用于访问驱动程序的设置选项
 |选项|Description|方法|  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899972"
 ---
 # <a name="setting-tracing-options"></a>设置跟踪选项
 **跟踪**选项卡**ODBC 数据源管理器**对话框中，可以配置跟踪 ODBC 函数调用的方法。  

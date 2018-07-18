@@ -1,14 +1,13 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (Transact SQL) |Microsoft 文档
+title: sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -19,21 +18,22 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cfc242de943ef2f4cf88b86a789fa88f84a6dd51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cd8793713fafdaa6a92785eecd9c269c42fae307
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985238"
 ---
-# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL)
+# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  包含计算节点上每个物理数据库的行。 若要获取有关数据库的详细的信息的聚合的物理数据库信息。 若要将信息进行合并，联接`sys.pdw_nodes_pdw_physical_databases`到`sys.pdw_database_mappings`和`sys.databases`表。  
+  包含在计算节点上每个物理数据库的行。 若要获取有关数据库的详细的信息的聚合的物理数据库信息。 若要组合的信息，请加入`sys.pdw_nodes_pdw_physical_databases`到`sys.pdw_database_mappings`和`sys.databases`表。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|数据库的对象 ID。 请注意，此值不相同中 database_id [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)视图。|  
-|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值是在 physical_name 列中的值与相同[sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)视图。|  
+|physical_name|**sysname**|Shell/计算节点上数据库的物理名称。 此值是与 physical_name 列中的值相同[sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)视图。|  
 |pdw_node_id|**int**|与节点关联的唯一数字 id。|  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -52,8 +52,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. 使用 sys.pdw_nodes_pdw_physical_databases 收集详细的对象信息  
- 以下查询显示有关索引的信息，其中包括有关数据库的有用信息的对象属于数据库中的对象。  
+### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. 使用 sys.pdw_nodes_pdw_physical_databases 来收集详细的对象的信息  
+ 以下查询显示有关索引的信息，其中包括有关数据库对象属于数据库中的对象的有用信息。  
   
 ```  
 SELECT D.name AS UserDatabaseName, D.database_id AS DBIDinMaster,  
@@ -69,7 +69,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>C. 使用 sys.pdw_nodes_pdw_physical_databases 确定的加密状态  
+### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>C. 使用 sys.pdw_nodes_pdw_physical_databases 来确定的加密状态  
  下面的查询提供 AdventureWorksPDW2012 数据库加密状态。  
   
 ```  
@@ -91,10 +91,10 @@ SELECT TOP 1 encryption_state
        ORDER BY (CASE encryption_state WHEN 3 THEN -1 ELSE encryption_state END) DESC;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

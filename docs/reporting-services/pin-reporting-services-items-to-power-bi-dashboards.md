@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022894"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>将 Reporting Services 项目固定到 Power BI 仪表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 使用户能够将报表查看器工具栏中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表项作为新磁贴固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   若要固定，你的管理员需要先将报表服务器与 Azure Active Directory 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]相集成。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk-troubleshoot"></a> 解决问题  
   
--   报表查看器工具栏中**没有 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 按钮：**这指示报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
+-   报表查看器工具栏中**没有 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 按钮：** 这指示报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
   
 - **无法固定**：当你尝试固定项时，你看到以下错误消息：请参阅 [可以固定的项](#bkmk_supported_items)部分。  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909712"
 ---
 # <a name="diagnostic-tools"></a>诊断工具
 两种工具可以帮助进行诊断 ODBC 应用程序中的问题。 两者都可以从 ODBC 管理器中使用和实现由驱动程序管理器。 *跟踪*提供一种方式来记录到日志文件的函数调用序列。 Visual Studio 分析器允许分布式环境中分析的组件的交互有关的信息。  

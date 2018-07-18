@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -28,11 +26,12 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd87bb4373c0f2b455dbdc4b0b27b386a6538b32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4f3d362d6a58e44c2a18b05b69dc7aef3706095
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332121"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
   本节中的主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 此服务不是创建、保存和运行集成服务包所必需的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。  
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>使用 SQL Server 配置管理器设置 Integration Services 服务的属性  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”**和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
 2.  在“SQL Server 配置管理器”管理单元中，在服务列表中找到 **SQL Server Integration Services**，右键单击 **SQL Server Integration Services**，然后单击“属性”。  
   
@@ -119,7 +118,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>使用“服务”设置 Integration Services 服务的属性  
   
-1.  在 **“控制面板”**中，如果使用的是经典视图，请单击 **“管理工具”**；如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
+1.  在 **“控制面板”** 中，如果使用的是经典视图，请单击 **“管理工具”**；如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
   
 2.  单击 **“服务”**。  
   
@@ -289,7 +288,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  选择 **“文件”**菜单上的 **“连接对象资源管理器”** 以显示 **“连接到服务器”** 对话框。  
+2.  选择 **“文件”** 菜单上的 **“连接对象资源管理器”** 以显示 **“连接到服务器”** 对话框。  
   
 3.  在 **“服务器类型”** 列表中选择 **Integration Services** 。  
   
@@ -320,13 +319,13 @@ ms.lasthandoff: 05/03/2018
   
 6.  在 **“SQL Server Integration Services 11.0 属性”** 对话框中，选择 **“安全性”** 选项卡。  
   
-7.  在 **“启动和激活权限”**下，选择 **“自定义”**，然后单击 **“编辑”** 以打开 **“启动权限”** 对话框。  
+7.  在 **“启动和激活权限”** 下，选择 **“自定义”**，然后单击 **“编辑”** 以打开 **“启动权限”** 对话框。  
   
 8.  在 **“启动权限”** 对话框中，添加或删除用户，并为适当的用户和组分配相应的权限。 可用的权限为“本地启动”、“远程启动”、“本地激活”和“远程激活”。 启动权限可授予或拒绝启动和停止服务的权限；激活权限可授予或拒绝连接到服务的权限。  
   
 9. 单击“确定”关闭对话框。  
   
-10. 在 **“访问权限”**下，重复步骤 7 和步骤 8 以为适当的用户和组分配适当的权限。  
+10. 在 **“访问权限”** 下，重复步骤 7 和步骤 8 以为适当的用户和组分配适当的权限。  
   
 11. 关闭 MMC 管理单元。  
   

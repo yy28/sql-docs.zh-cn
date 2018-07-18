@@ -2,10 +2,10 @@
 title: ISSAsynchStatus (OLE DB) |Microsoft 文档
 description: ISSAsynchStatus (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca37010f2c0c0e42dd7e75f2dc87b0654fb31474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73ee8ab77cab188cf4a3d0d98c5dc1f238c8e3f0
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689090"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **ISSAsynchStatus**接口公开支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]异步操作。 它是一个可选接口继承自核心 OLE DB 接口**IDBAsynchStatus**。 除了**中止**和**GetStatus**方法继承自**IDBAsynchStatus**， **ISSAsynchStatus**提供了一个新方法用于等待异步操作已完成或发生超时。  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 |[ISSAsynchStatus::GetStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|返回异步执行操作的状态。|  
 |[ISSAsynchStatus::WaitForAsynchCompletion &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)|等待，直到以异步方式执行的操作已完成或发生超时。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus**实现**ISSAsynchStatus::GetStatus**方法等同于**IDBAsynchStatus::GetStatus**方法，但，如果数据源对象的初始化已中止，而不是 DB_E_CANCELED 返回 E_UNEXPECTED (尽管**ISSAsynchStatus::WaitForAsynchCompletion**返回 DB_E_CANCELED)。 这是因为数据源对象未处于以下中止操作，常用状态，以便进一步初始化操作可能已尝试。  
   
  以下方法支持在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中执行异步操作：  
@@ -48,8 +51,8 @@ ms.lasthandoff: 05/03/2018
   
 -   **IMultipleResults::GetResult**  
   
-## <a name="see-also"></a>另请参阅  
- [接口 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+## <a name="see-also"></a>请参阅  
+ [接口&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)  
   
   

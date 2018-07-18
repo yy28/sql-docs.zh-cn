@@ -2,7 +2,7 @@
 # [SQL Server 工具和实用工具概述](../tools/overview-sql-tools.md)
 # [新的和已更新的项目](new-updated-tools.md)
 
-# [SQL Operations Studio（预览版）](../sql-operations-studio/what-is.md)
+# [SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -30,3 +30,8 @@
 ## [sqlps 实用工具](sqlps-utility.md)  
 ## [sqlservr Application](sqlservr-application.md)  
 ## [tablediff 实用工具](tablediff-utility.md)
+
+# sqlpackage
+## [安装 sqlpackage](sqlpackage-download.md)
+## [发行说明](sqlpackage-release-notes.md)
+## [sqlpackage 参考](sqlpackage.md)

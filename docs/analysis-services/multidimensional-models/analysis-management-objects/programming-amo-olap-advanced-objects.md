@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024354"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 高级对象的编程
   本主题介绍 OLAP 高级对象的分析管理对象 (AMO) 编程详细信息。 本主题包含以下各节：  

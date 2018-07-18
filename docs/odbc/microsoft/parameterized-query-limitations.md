@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900823"
 ---
 # <a name="parameterized-query-limitations"></a>参数化的查询限制
 当使用 Microsoft Access 驱动程序时，可以使用以下语法来调用参数化的查询： 调用*查询名称*[(*参数*[，*参数*]...)]。

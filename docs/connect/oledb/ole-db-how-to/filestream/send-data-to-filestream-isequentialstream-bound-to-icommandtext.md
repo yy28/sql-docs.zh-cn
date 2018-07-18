@@ -2,10 +2,10 @@
 title: 将数据发送到 FILESTREAM-ISequentialStream 绑定到 ICommandText |Microsoft 文档
 description: 将数据发送到 FILESTREAM-绑定到 ICommandText ISequentialStream
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b2fc0b151e945f1cf724275a2f6ca6127eb060e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4bfc03b8cdf3047ddfd46338be4796dd9f39d2d3
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665567"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>将数据发送到 FILESTREAM-ISequentialStream 绑定到 ICommandText
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   此示例使用绑定到 ICommandText 参数的 ISequentialStream 接口向 filestream 列发送大小在 4MB 与 4GB 之间的数据。  
   

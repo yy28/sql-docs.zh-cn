@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7479bfd0d246bf3e70f7dc65a089844362f9b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331071"
 ---
 # <a name="audit-transformation"></a>审核转换
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables"></a>系统变量  
  下表介绍了审核转换可以使用的系统变量。  
   
-|系统变量|索引|Description|  
+|系统变量|索引|描述|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|标识包的执行实例的 GUID。|  
 |**PackageID**|@shouldalert|包的唯一标识符。|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **审核类型**  
  选择用于提供审核信息的可用系统变量。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**执行实例 GUID**|插入唯一标识包的执行实例的 GUID。|  
 |**包 ID**|插入唯一标识包的 GUID。|  

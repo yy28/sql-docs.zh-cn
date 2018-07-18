@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024274"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>为 GetProperties 方法设置项命名空间
   可以根据两个不同的项标识符在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 <xref:ReportService2010.ItemNamespaceHeader> SOAP 标头：项的完整路径或项的 ID。  

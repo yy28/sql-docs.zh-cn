@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32796510"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态 Property 索引
 数据提供程序、 服务提供商和服务组件可以添加到的动态属性**属性**集合的未打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 打开这些对象时，给定的提供程序还可能会插入其他属性。 中列出了这些属性的一些[ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)部分。 下列出中的特定提供程序的详细信息[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)部分。  

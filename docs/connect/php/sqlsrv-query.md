@@ -1,10 +1,9 @@
 ---
 title: sqlsrv_query |Microsoft 文档
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1f752f298ce1e8b45bda07b8abd30b92fde5af4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dd1dac24574484f0424399504f606f6b0917aa8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309496"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,10 +77,10 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="return-value"></a>返回值  
 语句资源。 如果该语句不能进行创建和/或执行， **false**返回。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 **Sqlsrv_query**函数非常适合一次性查询，并应为执行查询，除非特殊情况下应用的默认选项。 此函数提供了一个简化的方法，以便使用最少的代码来执行查询。 **Sqlsrv_query**函数不会语句准备和语句执行，并可用于执行参数化的查询。  
   
-有关详细信息，请参阅 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
 在下面的示例中，向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入单个行。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
@@ -166,7 +166,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。
+> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。 这同样适用于 bigint 列，尤其是在有效值的范围之外时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将绑定十进制值作为输入参数。  
@@ -193,7 +193,7 @@ sqlsrv_close($conn);
 ```
 
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [如何：执行参数化查询](../../connect/php/how-to-perform-parameterized-queries.md)  

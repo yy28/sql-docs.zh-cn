@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
@@ -16,18 +14,19 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5e85d8fa58235f3fb13c0cc3fbc237f6f104a8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6abf5f3823ecb42bcf6ee33155534663bef8b43
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409989"
 ---
 # <a name="xml-source-custom-properties"></a>XML 源自定义属性
   XML 源具有自定义属性和所有数据流组件通用的属性。  
   
  下表介绍 XML 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用来访问 XML 数据的模式。|  
 |UseInlineSchema|Boolean|该值指示是否要在 XML 源中使用内联架构定义。 此属性的默认值为 **False**。|  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  下表描述了 XML 源的输出的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |RowsetID|String|标识与输出关联的行集的值。|  
   

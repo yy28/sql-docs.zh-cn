@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -40,15 +38,16 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41bd67d9005d5862bdb24d8112b2a04d023f4141
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943153"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
  下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 无法更改分配给固定数据库角色的权限，“公共”数据库角色除外。   
   
-|固定数据库角色名|Description|  
+|固定数据库角色名|描述|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定数据库角色的成员可以执行数据库的所有配置和维护活动，还可以删除 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的数据库。 （在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中，某些维护活动需要服务器级别权限，并且不能由 **db_owners**执行。）|  
 |**db_securityadmin**|**db_securityadmin** 固定数据库角色的成员可以修改角色成员身份和管理权限。 向此角色中添加主体可能会导致意外的权限升级。|  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 
 这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。
 
-|角色名称|Description|  
+|角色名称|描述|  
 |--------------------|-----------------|
 **dbmanager** | 可以创建和删除数据库。 创建数据库的 dbmanager 角色的成员将成为该数据库的所有者，从而让该用户可作为 dbo 用户连接到该数据库。 Dbo 用户具有数据库中的所有数据库权限。 Dbmanager 角色的成员不一定具有访问非他们所有的数据库的权限。
 **loginmanager** | 可以创建和删除虚拟 master 数据库中的登录名。  
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="msdb-roles"></a>msdb 角色  
  msdb 数据库中包含下表显示的特殊用途的角色。  
   
-|msdb 角色名称|Description|  
+|msdb 角色名称|描述|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|这些数据库角色的成员可以管理和使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 从早期版本升级的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可能包含使用 Data Transformation Services (DTS)（而不是 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]）命名的旧版本角色。 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../../integration-services/security/integration-services-roles-ssis-service.md)。|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|这些数据库角色的成员可以管理和使用数据收集器。 有关详细信息，请参阅 [Data Collection](../../../relational-databases/data-collection/data-collection.md)。|  
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
 
 安装 R Services 时，其他数据库角色可用于管理包。 有关详细信息，请参阅 [SQL Server 的 R 包管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
 
-|角色名称 |Description|  
+|角色名称 |描述|  
 |-------------|-----------------|
 |**rpkgs-users** |允许用户使用任何由 rpkgs 共享角色成员安装的共享包。|
 |**rpkgs-private** |提供具有与 rpkgs-users 角色权限相同的共享包的访问权限。 此角色的成员还可以安装、删除和使用个人作用域包。|
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="working-with-database-level-roles"></a>使用数据库级角色  
  下表说明了用于数据库级角色的命令、视图和函数。  
   
-|功能|类型|Description|  
+|功能|类型|描述|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|元数据|返回固定数据库角色的列表。|  
 |[sp_dbfixedrolepermission (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|元数据|显示固定数据库角色的权限。|  

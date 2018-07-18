@@ -1,5 +1,5 @@
 ---
-title: 分析 ODBC 驱动程序性能 |Microsoft 文档
+title: 分析 ODBC 驱动程序性能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 337209ac91faecab319f66bcb9b61252e3444f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 526e25bcfebad13868d41a23bcee50caea23bda6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422806"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 驱动程序性能事件探查
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 -   连接到指定了日志记录的数据源。  
   
--   调用[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置该控件分析特定于驱动程序的特性。  
+-   调用[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置特定于驱动程序的属性控制事件探查。  
   
  每个应用程序进程都获取它自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序副本，而且事件探查工作是将驱动程序副本和应用程序进程综合在一起进行考虑的全局性工作。 当应用程序中的任意操作打开了事件探查时，事件探查将记录从该应用程序建立的、在驱动程序中仍处于活动状态的所有连接的信息。 其中甚至包括了那些不是专为进行事件探查而建立的连接。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  如果一个应用程序启动了事件探查并将信息写入某个日志文件，然后第二个应用程序试图启动事件探查并将信息写入同一个日志文件，第二个应用程序将无法在日志中记录任何事件探查数据。 如果第二个应用程序在第一个应用程序已卸载了其驱动程序之后启动事件探查，则第二个应用程序将覆盖第一个应用程序写入的日志文件。  
   
- 如果应用程序连接到已启用分析的数据源，该驱动程序将返回 SQL_ERROR，如果应用程序调用**SQLSetConnectOption**启动日志记录。 调用**SQLGetDiagRec**然后将返回以下：  
+ 如果应用程序连接到已启用分析的数据源，驱动程序将返回 SQL_ERROR，如果应用程序调用**SQLSetConnectOption**以启动日志记录。 调用**SQLGetDiagRec**然后将返回以下：  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -74,7 +75,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   连接  
   
--   Network  
+-   网络  
   
 -   Time  
   
@@ -90,9 +91,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|在 SQL_PERF_START 之后处理的 SELECT 语句的数量。|  
 |SQLSelectRows|在 SQL_PERF_START 之后选择的行数。|  
 |中的|SQL_PERF_START 之后用户事务的数量（包括回滚的数量）。 如果使用 SQL_AUTOCOMMIT_ON 运行 ODBC 应用程序，则每个命令都视为一个事务。|  
-|SQLPrepares|数[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)sql_perf_start 语句后的调用。|  
-|ExecDirects|数**SQLExecDirect** sql_perf_start 语句后的调用。|  
-|SQLExecutes|数**SQLExecute** sql_perf_start 语句后的调用。|  
+|SQLPrepares|数[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之后调用。|  
+|ExecDirects|数**SQLExecDirect** SQL_PERF_START 之后调用。|  
+|SQLExecutes|数**SQLExecute** SQL_PERF_START 之后调用。|  
 |CursorOpens|SQL_PERF_START 之后驱动程序打开服务器游标的次数。|  
 |CursorSize|SQL_PERF_START 之后游标打开的结果集中行的数量。|  
 |CursorUsed|SQL_PERF_START 之后通过驱动程序从游标实际检索的行的数量。|  
@@ -125,8 +126,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|SQL_PERF_START 之后驱动程序花费在处理工作上的累积时间量，其中包括等待服务器的回复所花费的时间。|  
 |msNetworkServerTime|驱动程序等待服务器回复所花费的累积时间量。|  
   
-## <a name="see-also"></a>另请参阅  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [分析性能操作指南主题的 ODBC 驱动程序 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>请参阅  
+ [SQL Server 本机客户端&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [分析 ODBC 驱动程序性能操作指南主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

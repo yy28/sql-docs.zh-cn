@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018376"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>将参数添加到移动报表 | Reporting Services
 可以创建带参数的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，以便你和你的报表读者可以筛选报表。 带参数的报表还可以是 [源报表中的钻取](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)的目标。 

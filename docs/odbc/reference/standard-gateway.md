@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915682"
 ---
 # <a name="standard-gateway"></a>标准网关
 A*网关*是一种软件导致如下所示另一个 DBMS。 即网关接受的编程接口，SQL 语法和数据流式传输协议的单个 DBMS 和将其转换到的编程接口，SQL 语法和数据流的隐藏 DBMS 的协议。 例如，编写用于 Microsoft® SQL Server™ 的应用程序可以还访问 DB2 数据通过 Micro Decisionware DB2 网关;此产品将导致 DB2 为类似于 SQL Server。 当使用网关时，必须为每个目标数据库编写不同的网关。  

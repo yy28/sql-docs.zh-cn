@@ -2,7 +2,7 @@
 title: 什么是 SQL Server Reporting Services (SSRS) | Microsoft Docs
 description: 了解用于本地移动和分页 Reporting Services 报表的工具和服务。
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,17 +22,18 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24f4671203d4efecd58cfd9e613bf3dd9dbb8bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfeadac5c872c75075cc40e1f2dc07e7a592aa6d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404909"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]要查找 Power BI 报表服务器？ 请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]要查找 Power BI 报表服务器？ 请参阅[什么是 Power BI 报表服务器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
 
 使用 SQL Server Reporting Services (SSRS) 提供的一系列现成工具和服务本地创建、部署和管理移动和分页 Reporting Services 报表。
 
@@ -99,7 +100,7 @@ Reporting Services 与“传统”分页文档样式报表相关联，这种报�
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 集成模式下的 Reporting Services
 
-在 SharePoint 集成模式下将报表发布到 Repoorting Services。 可以计划报表处理，按需访问报表，订阅已发布的报表并将报表导出到其他应用程序，例如 Microsoft Excel。 可以在发布到 SharePoint 站点的报表上创建数据警报，并在报表数据更改时接收电子邮件。  
+在 SharePoint 集成模式下将报表发布到 Reporting Services。 可以计划报表处理，按需访问报表，订阅已发布的报表并将报表导出到其他应用程序，例如 Microsoft Excel。 可以在发布到 SharePoint 站点的报表上创建数据警报，并在报表数据更改时接收电子邮件。  
 
 了解有关 [SharePoint 集成模式下的 Reporting Services 报表服务器](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)的详细信息。
 

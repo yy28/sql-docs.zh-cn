@@ -1,8 +1,6 @@
 ---
 title: 在 SQL Server (OracleToSQL) 上安装 SSMA 组件 |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: d75694edf4af06ec2d1e442ecebacaf971ba86de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 845abf0338512a48de8cc6b345c0944a5525681e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777593"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server (OracleToSQL) 上安装 SSMA 组件
 除了安装 SSMA，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 Oracle 提供程序启用服务器到服务器的连接。  
@@ -107,7 +106,7 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb**，到的指定�
   
 你将数据迁移到每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理作业。 这些作业将命名为**ssma_oracle 数据迁移包 {GUID}**，并且在中可见[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Jobs 文件夹中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装适用于 Oracle 客户端 SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

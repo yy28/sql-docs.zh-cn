@@ -9,13 +9,13 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: linux
 ms.date: 04/28/2018
-ms.openlocfilehash: 0563ef507b08df483c28266fdd2566c6acdd957d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 3b7ed71be06ee7e485236fa0e244e47bb77b3b70
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334011"
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的和最近的更新： Linux 文档上的 SQL Server
 
@@ -299,9 +299,9 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 - [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
-- [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）** 文档](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
+- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新 + 更新 (0 + 0): **SQL 的示例**文档](../samples/new-updated-samples.md)
 - [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)** 文档](../ssma/new-updated-ssma.md)
-- [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
+- [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 

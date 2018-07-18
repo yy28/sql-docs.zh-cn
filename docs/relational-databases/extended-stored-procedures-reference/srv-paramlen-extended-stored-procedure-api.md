@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32937932"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +67,13 @@ n
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL：**1<br /><br /> **ZERO：**1<br /><br /> **>=255：**N/A<br /><br /> **<255：**N/A|  
-|**BIGVARCHAR**|**NULL：**0<br /><br /> **ZERO：**1<br /><br /> **>=255：**255<br /><br /> <255：实际长度|  
-|**BIGCHAR**|**NULL：**0<br /><br /> **ZERO：**255<br /><br /> **>=255：**255<br /><br /> **<255：**255|  
-|**BIGBINARY**|**NULL：**0<br /><br /> **ZERO：**255<br /><br /> **>=255：**255<br /><br /> **<255：**255|  
-|**BIGVARBINARY**|**NULL：**0<br /><br /> **ZERO：**1<br /><br /> **>=255：**255<br /><br /> <255：实际长度|  
-|**NCHAR**|**NULL：**0<br /><br /> **ZERO：**255<br /><br /> **>=255：**255<br /><br /> **<255：**255|  
-|**NVARCHAR**|**NULL：**0<br /><br /> **ZERO：**1<br /><br /> **>=255：**255<br /><br /> <255：实际长度|  
+|**BITN**|**NULL：** 1<br /><br /> **ZERO：** 1<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|**BIGVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> <255：实际长度|  
+|**BIGCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|**BIGBINARY**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|**BIGVARBINARY**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> <255：实际长度|  
+|**NCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|**NVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> <255：实际长度|  
 |**NTEXT**|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255：**-1<br /><br /> **\<255：**-1|  
   
  \*   实际长度  = 多字节字符串 (cch) 的长度  

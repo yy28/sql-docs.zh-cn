@@ -2,23 +2,21 @@
 title: 如何参与编辑 SQL Server 文档 | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926528"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 - [创建 GitHub 帐户](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [安装内容创作工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [设置本地 Git 存储库](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [使用工具参与编辑](https://docs.microsoft.com/contribute/full-workflow)
+- [使用工具参与编辑](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 如果提交包含对文档的重大更改的拉取请求，则将在 GitHub 中收到一条注释，要求提交联机“贡献许可协议 (CLA)”。 必须先完成联机窗体，然后系统才会接受你的拉取请求。
 
@@ -94,7 +92,7 @@ ms.lasthandoff: 05/03/2018
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) 存储库使用多个标准文件夹来组织内容。
 
-| 文件夹 | Description |
+| 文件夹 | 描述 |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 包含所有已发布的 SQL Server 内容。 子文件夹有逻辑地组织内容的不同区域。 |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | 包括包含文件。 这些文件是可以包含在一个或多个其他主题中的内容块。 |
@@ -138,5 +136,3 @@ ms.lasthandoff: 05/03/2018
 查找文章，提交更改，并帮助 SQL Server 社区。 
 
 谢谢！
-
-

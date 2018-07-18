@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029416"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>使用 rs.exe 实用工具和 Web 服务编写脚本
   开发人员和报表服务器管理员可以使用 **rs** 实用工具 (RS.exe) 在报表服务器上执行操作。 利用此实用工具，可以通过用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写的脚本以编程方式管理报表服务器。  

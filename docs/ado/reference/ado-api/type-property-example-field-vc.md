@@ -2,7 +2,6 @@
 title: 键入属性示例 （字段） （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b04083dcc8901ac884588b1dc02fee3e36ab2bb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb420e129d36c9172837a9d68e631c9bc26086e7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282656"
 ---
 # <a name="type-property-example-field-vc"></a>类型属性示例 （字段） （VC + +）
 此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性**类型**的所有属性[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 有关运行此过程需要 FieldType 函数。  
@@ -174,6 +174,6 @@ void PrintComError(_com_error &e) {
  **类型： 每**  
  **名称： hire_date**  
  **类型： adDBTimeStamp**   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
  [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

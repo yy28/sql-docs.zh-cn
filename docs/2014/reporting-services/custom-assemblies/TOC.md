@@ -1,0 +1,8 @@
+# [将自定义程序集用于报表](using-custom-assemblies-with-reports.md)
+## [在 RDL 文件中引用程序集](referencing-assemblies-in-an-rdl-file.md)
+## [部署自定义程序集](deploying-a-custom-assembly.md)
+## [使用具有强名称的自定义程序集](using-strong-named-custom-assemblies.md)
+## [在自定义程序集中断言权限](asserting-permissions-in-custom-assemblies.md)
+## [通过表达式访问自定义程序集](accessing-custom-assemblies-through-expressions.md)
+## [初始化自定义程序集对象](initializing-custom-assembly-objects.md)
+## [如何调试自定义程序集](how-to-debug-custom-assemblies.md)

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25db1f9d16bf1a6134976639912dcb622ca1b4d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2a5c6e90b1c2cfc3b7b737c68a0750497e5e36c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307816"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>开始使用 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 * [步骤 3：使用 PHP 连接到 SQL 的概念验证](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [步骤 4：使用 PHP 实现对 SQL 的弹性连接](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)
 
 [For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)

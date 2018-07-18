@@ -1,5 +1,5 @@
 ---
-title: 使用数据馈送 (Power Pivot for SharePoint) |Microsoft 文档
+title: 使用数据馈送 (Powerpivot for SharePoint) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979860"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用数据馈送 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
  您必须具有以 Atom 1.0 格式提供数据的 Web 服务或数据服务。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 2010 能够以这种格式提供数据。  
   
- 在将 SharePoint 列表导出为数据馈送之前，必须在该 SharePoint 服务器上安装 ADO.NET Data Services。 有关详细信息，请参阅 [安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
+ 在将 SharePoint 列表导出为数据馈送之前，必须在该 SharePoint 服务器上安装 ADO.NET Data Services。 有关详细信息，请参阅 [安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
   
 ##  <a name="sharepointlist"></a> 从 SharePoint 列表创建数据馈送  
  在 SharePoint 2010 场中，SharePoint 列表在列表功能区上有一个“作为数据馈送导出”按钮。 可以单击此按钮将列表作为馈送导出。 为了获得最佳结果，你的工作站上应装有 Excel 2010 以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端应用程序。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端应用程序将启动，以响应数据馈送导出操作，并创建包含该列表的新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 表。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  如果选择 **“打开”**，请使用表导入向导将数据馈送导入工作表。 该数据馈送将作为新表添加到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 窗口中。  
   
- 如果在 SharePoint 服务器上未安装 ADO.NET Data Services 3.5.1，则将出现错误。 有关此错误和如何纠正此错误的详细信息，请参阅 [安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
+ 如果在 SharePoint 服务器上未安装 ADO.NET Data Services 3.5.1，则将出现错误。 有关此错误和如何纠正此错误的详细信息，请参阅 [安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
   
 ##  <a name="rsreport"></a> 从 Reporting Services 报表创建数据馈送  
  如果已部署 SQL Server 2008 R2 Reporting Services，则可以使用新的 Atom 呈现扩展插件从现有报表生成数据馈送。 为了获得最佳结果，您的工作站上应装有 Excel 2010 以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端应用程序将启动，以响应数据馈送导出操作，并在表和列流入时自动添加和关联这些表和列。  
@@ -81,13 +82,13 @@ ms.lasthandoff: 05/10/2018
   
     1.  **“基本 URL”** 是可选的。 如果数据服务文档提供多个馈送，则应该指定此选项。 基本 URL 应该指定所有馈送共有的 URL 部分（例如服务器名称和站点）。 如果按照 Reporting Services 报表创建数据服务文档，则基本 URL 将是报表服务器 URL 和报表。  
   
-    2.  **“Web 服务 URL”** 是必需的。 如果基 URL，没有包含此值必须`http://`或`https://`地址中。 如果指定了基本 URL，则 Web 服务 URL 为基本 URL 之后的部分。 例如，如果完整的 URL 为`http://adventure-works/inventory/today.aspx`，基 URL 将为`http://adventure-works/inventory`，和 Web 服务 URL 将为 /today.aspx。  
+    2.  **“Web 服务 URL”** 是必需的。 没有基本 URL，此值必须包括`http://`或`https://`地址中。 如果指定了基本 URL，则 Web 服务 URL 为基本 URL 之后的部分。 例如，如果完整的 URL 是`http://adventure-works/inventory/today.aspx`，则基本 URL 将为`http://adventure-works/inventory`，和 Web 服务 URL 为 /today.aspx。  
   
          Web 服务 URL 可以包括用来筛选或选择数据子集的参数。 提供馈送的应用程序或服务必须支持您在 URL 中指定的参数。  
   
 6.  输入 **“表名”**，每个馈送对应一个表。 此值是必需的。 表名由使用数据馈送的客户端应用程序使用。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中，表名用于在包含导入数据的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 窗口中对表命名。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在管理中心中针对网站集激活 Power Pivot 功能集成](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [使用数据馈送库共享数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

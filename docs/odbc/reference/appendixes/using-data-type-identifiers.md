@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907672"
 ---
 # <a name="using-data-type-identifiers"></a>使用数据类型标识符
 应用程序通过两种方式使用数据类型标识符： 描述其缓冲区到该驱动程序，以及如何检索有关的结果集从驱动程序，以便他们可以确定哪种类型的 C 将缓冲区中要用于存储数据的元数据。 应用程序调用以下函数以执行这些任务：  

@@ -2,7 +2,6 @@
 title: StringFormatEnum |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13c4f80064a06299a6049330fcf85c8e0827e619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac774393a914c13171dfa13150ee708b316fbd03
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282586"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 指定检索时的格式[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)作为字符串。  
   
-|常量|“值”|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|分隔行乘以*RowDelimiter*，列 × *ColumnDelimiter*，和 null 值*NullExpr*。 以下三个参数[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法是仅对有效*StringFormat*的**adClipString**。|  
   

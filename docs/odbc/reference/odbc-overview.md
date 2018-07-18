@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916072"
 ---
 # <a name="odbc-overview"></a>ODBC 概述
 开放式数据库连接 (ODBC) 是数据库访问被广泛接受的应用程序编程接口 (API)。 它基于从 Open Group 和 ISO/IEC 的数据库 Api 的调用级界面 (CLI) 规范，并使用结构化查询语言 (SQL) 作为其数据库访问语言。  

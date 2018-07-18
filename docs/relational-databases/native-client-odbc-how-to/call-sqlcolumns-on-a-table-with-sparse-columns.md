@@ -1,26 +1,25 @@
 ---
-title: 具有稀疏列的表调用 SQLColumns |Microsoft 文档
+title: 对具有稀疏列的表调用 SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: native-client
+yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ef97b45f003a8ca04e65423cc97866f0f166fce2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58a71205c92d6994943afa703d544d046450ba22
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414466"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>对具有稀疏列的表调用 SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +29,10 @@ ms.lasthandoff: 05/03/2018
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 有关稀疏列功能的详细信息，请参阅[中 SQL Server Native Client 的稀疏列支持](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 有关稀疏列功能的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>示例  
- 第一个代码列表是 C++ 源代码。 将“MyServer”更改为有效的服务器名称。 请确保你 INCLUDE 环境变量包含包含 sqlncli.h 的目录。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 第一个代码列表是 C++ 源代码。 将“MyServer”更改为有效的服务器名称。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   

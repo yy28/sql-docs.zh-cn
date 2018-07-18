@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022244"
 ---
 # <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>BI 向导-定义维度的排序
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,6 +30,6 @@ ms.lasthandoff: 05/10/2018
   
  在 **“排序依据属性”** 列中，可以更改用来进行排序的属性。 如果你想要使用的成员进行排序的属性不在列表中，向下滚动列表，，然后选择**\<新属性...>** 以打开**选择一列**对话框中，您可以在其中维度表中选择一个列。 如果使用 **“选择列”** 对话框来选择列，则可以创建可用来对属性的成员进行排序的其他属性。  
   
- 然后，可以在 **“条件”** 列中选择按 **“键”** 还是按 **“名称”**来对属性的成员进行排序。  
+ 然后，可以在 **“条件”** 列中选择按 **“键”** 还是按 **“名称”** 来对属性的成员进行排序。  
   
   

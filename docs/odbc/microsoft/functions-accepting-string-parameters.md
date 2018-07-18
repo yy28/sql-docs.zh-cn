@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900452"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字符串参数的函数
 采用字符串参数的所有函数将都转换为 Unicode。 （导出函数的"W"形式。）字节数将转换为针对这些适用的 ODBC Api 计数的字符。 这适用于以下函数：  

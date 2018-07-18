@@ -1,8 +1,6 @@
 ---
 title: 项目设置 （迁移） (AccessToSQL) |Microsoft 文档
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3fe26ecc9d250982206121d33b35ee5c975e376f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee97b6e47a51a8ed2e8b69c0f4044d8e583e949
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774473"
 ---
 # <a name="project-settings-migration-accesstosql"></a>项目设置 （迁移） (AccessToSQL)
 迁移项目设置允许你配置如何将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 -   使用**默认项目设置**对话框中设置的所有项目的配置选项。 若要访问的迁移设置中，在**工具**菜单上，选择**默认项目设置**，选择项目类型中的**迁移目标版本**你想要访问设置，请单击其中的组合框**常规**中左窗格中，然后单击底部**迁移**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **检查约束**  
 指定是否将数据添加到表时，SSMA 应检查约束。  
   
@@ -94,6 +93,6 @@ ms.lasthandoff: 05/03/2018
 **批大小**  
 数据迁移期间使用的批大小。 在每个批后，将记录事务。 默认情况下，所有方案的批处理大小为 10000。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [用户界面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

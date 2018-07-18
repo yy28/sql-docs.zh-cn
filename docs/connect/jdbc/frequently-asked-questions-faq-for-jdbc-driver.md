@@ -1,7 +1,7 @@
 ---
 title: 常见问题 (FAQ) JDBC 驱动程序 |Microsoft 文档
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 282f71f49eba5ccece8bc9d50ef690fd0af3cb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ebe12966a73d5944c2cfb6eb1a2328e27a5385e
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452157"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>常见问题 (FAQ) JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本文提供有关 Microsoft SQL Server JDBC 驱动程序常见问题的解答。  
+  此页提供有关 Microsoft JDBC Driver for SQL Server 的常见问题及问题的答案。  
   
 ## <a name="frequently-asked-questions"></a>常见问题  
 **如何帮助改进 JDBC 驱动程序？**  
@@ -32,6 +33,9 @@ JDBC 驱动程序的开源并且可以在上找到的源代码[GitHub](https://g
 **SQL Server 和 Java 不驱动程序支持哪些版本？**  
  请参阅[Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)页面了解详细信息。  
   
+**在 Microsoft 下载中心上可用的 JDBC 驱动程序包和 GitHub 上提供的 JDBC 驱动程序之间的区别是什么？**  
+ JDBC 驱动程序上的文件可用的 GitHub 存储库的 Microsoft JDBC driver 是 JDBC 驱动程序的核心且根据开放源代码许可的存储库中列出。 Microsoft 下载中心上的驱动程序包包括用于 Windows 集成身份验证和使用 JDBC 驱动程序的启用 XA 事务的其他库。 这些其他的库是指包含可下载包的许可证。
+
  **升级我的驱动程序时，我应该知道哪些内容？**  
  Microsoft JDBC 驱动程序 6.4 支持 JDBC 4.1、 4.2，和 4.3 （部分） 规范，并且包括三个 JAR 类库安装包，如下所示：  
   
@@ -69,12 +73,12 @@ JDBC 驱动程序的开源并且可以在上找到的源代码[GitHub](https://g
   
  **可以重新分发的驱动程序？** JDBC Drivers 4.1、 4.2、 6.0、 6.2 和 6.4 是可再发行组件。 查看许可协议中的"可分发代码"子句。 
    
- **可以使用该驱动程序从 Linux 计算机访问 Microsoft SQL Server？** 可以！ 可以使用该驱动程序从 Linux、Unix 及其他非 Windows 平台访问 SQL Server。 请参阅[Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)有关详细信息。  
+ **可以使用该驱动程序从 Linux 计算机访问 Microsoft SQL Server？** 可以！ 可以使用该驱动程序从 Linux、Unix 及其他非 Windows 平台访问 SQL Server。 有关详细信息，请参阅[Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
   
  **该驱动程序是否支持安全套接字层 (SSL) 加密？** 从 1.2 版起，该驱动程序就支持安全套接字层 (SSL) 加密。 有关详细信息，请参阅[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。  
   
  **SQL Server 的 Microsoft JDBC 驱动程序支持哪些身份验证类型？**  
- 下表列出了可用的身份验证选项。 注意，从 4.0 版起，该驱动程序就提供了纯 Java Kerberos 身份验证选项。  
+ 下表列出了可用的身份验证选项。 纯 Java Kerberos 身份验证是可用从 4.0 版本的驱动程序开始。  
   
 |||  
 |-|-|  
@@ -89,10 +93,10 @@ JDBC 驱动程序的开源并且可以在上找到的源代码[GitHub](https://g
 |Windows|Azure Active Directory 身份验证|  
   
 **该驱动程序是否支持 Internet 协议版本 6 (IPv6) 地址？**  
- 支持。该驱动程序支持结合使用 IPv6 地址以及连接属性集合和 serverName 连接字符串属性。 有关详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。  
+ 是。 该驱动程序支持使用 IPv6 地址。 使用的连接属性集合和 serverName 连接字符串属性。 有关详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。  
   
 **什么是自适应缓冲？**  
- 从 Microsoft SQL Server 2005 JDBC 驱动程序 1.2 版起，就引入了自适应缓冲。自适应缓冲的作用是在不占用服务器游标的情况下检索任何类型的大值数据。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 换言之，要获取自适应缓冲行为，应用程序不必显式请求自适应行为。 不过，在 1.2 版中，缓冲模式默认为“full”，即应用程序必须显式请求自适应缓冲模式。 有关详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)主题和博客。 [什么 adaptiveresponse 缓冲和为何要使用它？](http://go.microsoft.com/fwlink/?LinkId=111575)  
+ 自适应缓冲是从 Microsoft SQL Server 2005 JDBC 驱动程序版本 1.2 引入的。 它旨在检索大型值数据，而无需服务器游标开销的任何类型。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 在版本 1.2 版本中，"完整"默认为缓冲模式和应用程序必须显式设置的自适应缓冲模式。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 因此，你的应用程序不必请求显式以获得自适应缓冲行为的自适应行为。 有关详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)和博客[什么 adaptiveresponse 缓冲和为何要使用它？](http://go.microsoft.com/fwlink/?LinkId=111575)。
   
 **驱动程序支持连接池？**  
  该驱动程序支持 Java 平台 Enterprise Edition 5 (Java EE 5) 连接池。 该驱动程序实现了 JDBC 3.0 所需的接口，从而参与到任何中间件应用程序供应商提供的任何连接池实现中。 该驱动程序将参与这些环境中的已池化连接。 有关详细信息，请参阅[使用连接池](../../connect/jdbc/using-connection-pooling.md)。 该驱动程序不提供自己的池实现，而是依赖第三方的 Java 应用程序服务器。  
@@ -115,5 +119,5 @@ JDBC 驱动程序的开源并且可以在上找到的源代码[GitHub](https://g
 **可以通过验证的 FIPS 的算法驱动程序连接？**  
  Microsoft JDBC 驱动程序不包含任何加密算法。 如果客户利用操作系统、 应用程序，以及被认为是可接受的联邦信息处理标准 (FIPS) 的 JVM 算法，并将配置驱动程序来使用这些算法驱动程序使用的指定的算法仅通信。  
   
- ## <a name="see-also"></a>另请参阅  
+ ## <a name="see-also"></a>请参阅  
  [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

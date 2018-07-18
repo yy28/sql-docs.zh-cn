@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539077"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>数据加载到并行数据仓库
 可以加载，也可以使用数据插入到 SQL Server 并行数据仓库 (PDW) Integration Services， [bcp 实用工具](../tools/bcp-utility.md)， **dwloader**命令行加载程序或 SQL INSERT 语句。  
@@ -30,7 +31,7 @@ dwloader 加载直接到计算节点的数据，而无需通过管理节点的�
   
 在每个计算节点上，数据移动服务 (DMS) 接收和处理的数据块。 处理的数据包括将每一行转换为 SQL Server 本机格式，并计算分发哈希，以确定每个行所属于的计算节点。  
   
-在处理这些行后, DMS 使用随机排布移动传输到正确的计算节点和 SQL Server 实例的每一行。 SQL Server 收到行时，它可以将它们根据批处理**– b** dwloader，在设置批大小参数，然后大容量加载批处理。  
+在处理这些行后, DMS 使用随机排布移动传输到正确的计算节点和 SQL Server 实例的每一行。 SQL Server 收到行时，它可以将它们根据批处理 **– b** dwloader，在设置批大小参数，然后大容量加载批处理。  
 
 ## <a name="load-with-prepared-statements"></a>加载与已准备的语句
 

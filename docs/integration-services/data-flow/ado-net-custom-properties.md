@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d16d06518a5b58f768f4e87a4361d99b3e2796af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50c968acabb2432118d60bd19fb81c72fbe41d19
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334661"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自定义属性
   **源自定义属性**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  下表介绍 ADO NET 源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |CommandTimeout|String|该值指定 SQL 命令超时之前等待的秒数。值为 0 时指示命令永远不会超时。|  
 |SqlCommand|String|ADO NET 源可以用来提取数据的 SQL 语句。<br /><br /> 当包加载时，可以使用 ADO NET 源将使用的 SQL 语句动态更新此属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)和[在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。|  
@@ -43,9 +42,9 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标具有自定义属性和所有数据流组件共有的属性。  
   
- 下表介绍了 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标的自定义属性。 所有属性均可读/写。 这些属性在 **“ADO NET 目标编辑器”**中不可用，但可以使用 **“高级编辑器”**进行设置。  
+ 下表介绍了 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标的自定义属性。 所有属性均可读/写。 这些属性在 **“ADO NET 目标编辑器”** 中不可用，但可以使用 **“高级编辑器”** 进行设置。  
   
-|“属性”|数据类型|Description|  
+|“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|向服务器发送的批中的行数。 值 **0** 指示批大小与内部缓冲区大小匹配。 此属性的默认值为 **0**。|  
 |CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。|  

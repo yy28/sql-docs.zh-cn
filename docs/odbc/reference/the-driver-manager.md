@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918522"
 ---
 # <a name="the-driver-manager"></a>驱动程序管理器
 *驱动程序管理器*是一个库，管理应用程序和驱动程序之间的通信。 例如，在 Microsoft® Windows® 平台驱动程序管理器是动态链接库 (DLL) 由 Microsoft 编写并可以由用户的可再发行组件的 MDAC 2.8 SP1 sdk 一起重新分发。  

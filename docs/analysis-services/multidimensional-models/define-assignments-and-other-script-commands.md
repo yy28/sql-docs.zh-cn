@@ -14,10 +14,11 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023294"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>定义赋值和其他脚本命令
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在多维数据集设计器的“计算”选项卡上，单击工具栏中的“新建脚本命令”图标以创建空脚本。 创建新脚本时，该脚本最初以空白标题显示在“计算”选项卡的 **“脚本组织程序”** 窗格中。您在“计算表达式”窗格中键入的字符将在 **“脚本组织程序”**中显示为项的名称。 因此，您可能要在第一行中键入被注释的名称，以更方便地标识 **“脚本组织程序”** 窗格中的脚本。 有关详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](http://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅 [SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)中的“编写有效的 MDX”。  
+  在多维数据集设计器的“计算”选项卡上，单击工具栏中的“新建脚本命令”图标以创建空脚本。 创建新脚本时，该脚本最初以空白标题显示在“计算”选项卡的 **“脚本组织程序”** 窗格中。您在“计算表达式”窗格中键入的字符将在 **“脚本组织程序”** 中显示为项的名称。 因此，您可能要在第一行中键入被注释的名称，以更方便地标识 **“脚本组织程序”** 窗格中的脚本。 有关详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](http://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅 [SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)中的“编写有效的 MDX”。  
   
 > [!IMPORTANT]  
 >  当您最初切换到多维数据集设计器的 **“计算”** 选项卡时， **“脚本组织程序”** 窗格将包含具有 CALCULATE 命令的单个脚本。 CALCULATE 命令控制多维数据集中单元的聚合，仅当您要手动指定多维数据集的聚合方式时，才应编辑该命令。  

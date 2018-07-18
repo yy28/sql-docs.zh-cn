@@ -2,7 +2,6 @@
 title: ADO API 参考 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12e206c96b9a4e8fedc61fac55fcc99089b952f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275306"
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
 ADO 文档的此部分包含有关每个 ADO 对象、 集合、 属性、 动态属性、 方法、 事件和枚举的主题。 此外，它包含要与 Microsoft Visual c + + 和 Windows Foundation 类 (WFC) 一起使用的 ADO 语法索引的列表。  
@@ -48,7 +48,7 @@ ADO 文档的此部分包含有关每个 ADO 对象、 集合、 属性、 动�
   
 -   [ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [附录 d: ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [使用 ADO 编程附录 c:](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   

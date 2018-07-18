@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 294edd5ff81d55703b4b8354bec749d4dbda0fee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7f30e7ced486e1199a9348f267f42614f5899e2
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354739"
 ---
 # <a name="merge-agent-security"></a>合并代理安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   如果从新建订阅向导访问该对话框，您还可以指定合并代理在建立与订阅服务器（对于推送订阅）或发布服务器和分发服务器（对于请求订阅）的连接时所使用的上下文。 可以使用 Windows 帐户或指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户的上下文来建立连接。  
   
--   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的**“订阅服务器连接”**或 **“发布服务器连接”** 行中的属性按钮 ( **...** ) 来指定合并代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+-   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“发布服务器连接”** 行中的属性按钮 ( **...** ) 来指定合并代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  如果在建立连接时模拟进程帐户，则还需要其他权限。 请参阅下面的 **“连接到发布服务器和分发服务器”** 和 **“连接到订阅服务器”** 部分。  
   
- 由于合并代理没有运行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实例上，因此不能为对 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的请求订阅指定**“进程帐户”**。  
+ 由于合并代理没有运行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实例上，因此不能为对 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的请求订阅指定 **“进程帐户”**。  
   
  **“密码”** 和 **“确认密码”**  
  输入 Windows 帐户的密码。  

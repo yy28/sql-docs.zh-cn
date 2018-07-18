@@ -2,10 +2,10 @@
 title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) |Microsoft 文档
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 057e677242ad12cb9df8a669c129b75c3cb67f2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 936924540c5c55f8e333a64d794e54af098f7279
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690190"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   将指针返回到用于 SQL Server SSERRORINFO 结构包含的 OLE DB 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]错误详细信息。  
   
@@ -60,7 +63,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  SQL Server 的 OLE DB 驱动程序无法分配足够的内存来完成该请求。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SQL Server 的 OLE DB 驱动程序为通过传递使用者的指针返回 SSERRORINFO 和 OLECHAR 字符串分配内存。 使用者必须释放此内存通过使用**IMalloc::Free**方法时它不再需要访问的错误数据。  
   
  SSERRORINFO 结构的定义如下所示：  
@@ -91,8 +94,8 @@ SSERRORINFO;
   
  结构中的指针引用中返回的字符串中的地址*ppErrorStrings*自变量。  
   
-## <a name="see-also"></a>另请参阅  
- [ISQLServerErrorInfo & #40; OLE DB & #41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
- [RAISERROR & #40;Transact SQL & #41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [RAISERROR (Transact-SQL)](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

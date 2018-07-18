@@ -2,7 +2,6 @@
 title: ADOX 属性 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284586"
 ---
 # <a name="adox-properties"></a>ADOX 属性
 |||  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|描述列的特征。|  
 |[群集](../../../ado/reference/adox-api/clustered-property-adox.md)|指示索引是否聚集索引。|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|指定 ADO**命令**可以用于创建或执行该过程的对象。|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
+|[计数](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
 |[时间](../../../ado/reference/adox-api/datecreated-property-adox.md)|指示创建对象时的日期。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|指示对象上次修改日期。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|指示列的规定的最大大小。|  
@@ -52,6 +52,6 @@ ms.lasthandoff: 05/03/2018
 |[唯一](../../../ado/reference/adox-api/unique-property-adox.md)|指示是否必须唯一索引键。|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|指示更新主键时，将执行的操作。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

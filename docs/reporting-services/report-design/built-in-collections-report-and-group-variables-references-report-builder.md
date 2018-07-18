@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021644"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>内置集合 - 报表和组变量引用（报表生成器）
   在报表的表达式中需要多次使用某个复杂计算时，您可能需要创建一个变量。 您可以创建一个报表变量或组变量。 变量名称在报表中必须是唯一的。  

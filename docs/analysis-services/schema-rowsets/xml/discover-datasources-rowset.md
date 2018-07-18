@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34029569"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/10/2018
   
  如果调用[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法替换**DISCOVER_DATASOURCES**中的枚举值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素，**发现**方法返回**DISCOVER_DATASOURCES**行集。  
   
- **适用于：**表格模型、 多维模型  
+ **适用于：** 表格模型、 多维模型  
   
 ## <a name="rowset-columns"></a>行集列  
  客户端通过设置中选择数据源**DataSourceInfo**中的属性[属性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)一起发送的元素[命令](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)元素[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 客户端不应构造的内容**DataSourceInfo**属性发送到服务器。 相反，客户端应使用**发现**方法来查找该提供程序支持的数据源。 客户端然后发回相同的值**DataSourceInfo**属性，可从它获取**DISCOVER_DATASOURCES**行集。  

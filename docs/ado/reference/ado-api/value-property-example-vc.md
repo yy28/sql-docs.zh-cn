@@ -2,7 +2,6 @@
 title: 值属性示例 （VC + +） |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc0d24719a6f781e587a63d676760cd07cc3c19c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2f818240cac81bfad9dfc26a59ed4f11935ce2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282626"
 ---
 # <a name="value-property-example-vc"></a>值属性示例 （VC + +）
 此示例演示[值](../../../ado/reference/ado-api/value-property-ado.md)具有属性[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)通过显示的字段和属性值的对象***员工***表。  
@@ -173,7 +173,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
  [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 属性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

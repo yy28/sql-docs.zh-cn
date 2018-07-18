@@ -1,34 +1,23 @@
 ---
 title: 使 (MDX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LEAVES
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Leaves function
-ms.assetid: 09f908aa-1b2d-4af9-8c8d-c023915241b2
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2bdbf8b6c116efb305f27c048254c227918d1a26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741246"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   返回由所有属性（或者限制为属于特定维度的属性）组成的集。 对于返回集中的每个属性 x，如果 x 是粒度属性或者直接或间接与粒度属性相关，则在属性 x 上设置粒度而不会影响切片。 **离开**函数旨在使用 SCOPE 语句内，还是位于赋值的左侧。  
   
@@ -43,7 +32,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  返回维度的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  叶成员是由所有属性层次结构中的最低级别交叉联接构成的元组。 已排除了计算成员。  
   
 -   如果指定维度名称，则**离开**函数将返回包含指定维度的键属性的叶成员的集。  
@@ -58,7 +47,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  如果并非所有属性在当前范围内的度量值组中均具备相同的粒度，则会产生错误。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

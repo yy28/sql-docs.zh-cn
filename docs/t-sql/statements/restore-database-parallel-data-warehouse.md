@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,15 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782428"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -131,7 +131,7 @@ RESTORE HEADERONLY
   
 例如，将 60 GB 数据库从 2 节点设备（每个节点 30 GB）还原到 6 节点设备时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]会在 6 节点设备上创建 180 GB 数据库（6 个节点，每个节点 30 GB）。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]最初将数据库还原到 2 个节点以匹配源配置，然后将数据重新分发到所有 6 个节点。  
   
- 重新分发之后，与较小源设备上的每个计算节点相比，每个计算节点都会包含较少的实际数据和较多的可用空间。 使用附加空间可将更多数据添加到数据库。 如果还原的数据库大小大于所需大小，则可以使用 [ALTER DATABASE（并行数据仓库）](../../t-sql/statements/alter-database-parallel-data-warehouse.md)收缩数据库文件大小。  
+ 重新分发之后，与较小源设备上的每个计算节点相比，每个计算节点都会包含较少的实际数据和较多的可用空间。 使用附加空间可将更多数据添加到数据库。 如果还原的数据库大小大于所需大小，则可以使用 [ALTER DATABASE（并行数据仓库）](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)收缩数据库文件大小。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  对于这些限制和局限，源设备是从中创建数据库备份的设备，而目标设备是将数据库还原到的设备。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34015004"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>创建新的关系挖掘结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,19 +34,19 @@ ms.lasthandoff: 05/10/2018
   
      有关数据挖掘算法的详细信息，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
-5.  在 **“选择数据源视图”** 页中的 **“可用数据源视图”**下，单击要使用的数据源视图，再单击 **“下一步”**。  
+5.  在 **“选择数据源视图”** 页中的 **“可用数据源视图”** 下，单击要使用的数据源视图，再单击 **“下一步”**。  
   
      有关创建数据源视图的详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
-6.  在 **“指定表类型”** 页中的 **“输入表”**下，选择一个事例表和一个嵌套表。  
+6.  在 **“指定表类型”** 页中的 **“输入表”** 下，选择一个事例表和一个嵌套表。  
   
-7.  在 **“指定定型数据”** 页中的 **“挖掘模型结构”**下，选择键列、输入列和可预测列。  
+7.  在 **“指定定型数据”** 页中的 **“挖掘模型结构”** 下，选择键列、输入列和可预测列。  
   
      选择可预测列后，可以单击 **“建议”** 按钮以打开 **“提供相关列建议”** 对话框。 在该对话框中，单击 **“确定”** 可以接受建议的列，以将所选列包含到挖掘结构中；也可以在 **“输入”** 列中先更改选择的列，再单击 **“确定”**。 若要忽略建议，请单击 **“取消”**。  
   
 8.  单击“下一步” 。  
   
-9. 在 **“指定列的内容和数据类型”** 页的 **“挖掘模型结构”**下，可以调整每列的内容类型和数据类型。  
+9. 在 **“指定列的内容和数据类型”** 页的 **“挖掘模型结构”** 下，可以调整每列的内容类型和数据类型。  
   
     > [!NOTE]  
     >  您可以单击 **“检测”** 以自动检测列包含的是连续数据还是离散数据。 单击该按钮后，系统即会更新 **“内容类型”** 和 **“数据类型”** 两列中的列内容类型和数据类型。 有关内容类型和数据类型的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)和[数据类型（数据挖掘）](../../analysis-services/data-mining/data-types-data-mining.md)。  

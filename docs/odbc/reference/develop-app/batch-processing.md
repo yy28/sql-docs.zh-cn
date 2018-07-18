@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910402"
 ---
 # <a name="batch-processing"></a>批处理
 支持的 SQL 语句的批次不是大范围，因此可互操作的应用程序应在有条件地要么根本不使用它们。 有关详细信息，请参阅[执行批处理](../../../odbc/reference/develop-app/executing-batches.md)。

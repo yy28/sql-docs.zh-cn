@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32939902"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在 **“索引键列”**下，单击 **“添加…”**。  
+6.  在 **“索引键列”** 下，单击 **“添加…”**。  
   
 7.  在“从table_name中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>对表创建非聚集索引  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

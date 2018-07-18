@@ -1,5 +1,5 @@
 ---
-title: 文件和版本号 |Microsoft 文档
+title: 文件和版本号 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -23,20 +23,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046225"
 ---
 # <a name="files-and-version-numbers"></a>文件和版本号
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  所有必需 Microsoft.SqlServer.SqlManagementObjects NuGet 包中包含 SQL Server 管理对象 (SMO) 组件。 SMO 实现于几个托管程序集中。 您可以在客户端或服务器上开发 SMO 应用程序。  
+  所有必需的 SQL Server 管理对象 (SMO) 组件包含在 Microsoft.SqlServer.SqlManagementObjects NuGet 包。 SMO 实现于几个托管程序集中。 您可以在客户端或服务器上开发 SMO 应用程序。  
 
 >>[!Important]
-SMO 程序集的文件版本显示为主要。**0**。Build.Revision。 但嵌入程序集版本为主要。**100**。Build.Revision。 这样做是为了分开 SMO 在每个应用程序中使用的版本，因此对其中一个更新不会影响任何其他。
+SMO 程序集的文件版本显示为主要。**0**。Build.Revision。 但嵌入的程序集版本为主要。**100**。Build.Revision。 这样做是为了将 SMO 中每个应用程序使用的版本分开，以便对其中一个更新不会影响任何其他人。
 >>
->>因此你应该**不**安装到全局程序集缓存 (GAC) 中的这些版本的程序集。 这样可能会导致其他应用程序，如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio 中，若要中断。 
+>>正因为如此，您应该**不**安装到全局程序集缓存 (GAC) 中的这些版本的程序集。 这样做可能会导致其他应用程序，如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio 中，若要中断。 
   
 |文件|Description|  
 |-----------|-----------------|  

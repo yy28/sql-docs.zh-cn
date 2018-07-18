@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538857"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>并行数据仓库中的 tempdb 数据库
 **tempdb**是存储的用户数据库的本地临时表的 SQL Server PDW 系统数据库。 临时表通常用于提高查询性能。 例如，你可以使用临时表来将模块化脚本，并重复使用计算的数据。  

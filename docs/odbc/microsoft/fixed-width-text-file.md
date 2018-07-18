@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897962"
 ---
 # <a name="fixed-width-text-file"></a>定宽文本文件
 当使用文本驱动程序时，固定宽度的最后一列可以是文本文件的可变长度。

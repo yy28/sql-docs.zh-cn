@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7b8966e0955eb5a2eb85da0a77a64a4ca95c33e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16a0271d4cddfea6cf46d8d4f4d2af59479c4d2d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407929"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
   本过程说明如何通过使用 ODBC 源来提取数据。 若要添加和配置 ODBC 源，包中必须已经包含至少一个数据流任务。  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开所需的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
-2.  单击 **“数据流”** 选项卡，然后从 **“工具箱”**把 ODBC 源拖动到设计图面。  
+2.  单击 **“数据流”** 选项卡，然后从 **“工具箱”** 把 ODBC 源拖动到设计图面。  
   
 3.  双击此 ODBC 源。  
   

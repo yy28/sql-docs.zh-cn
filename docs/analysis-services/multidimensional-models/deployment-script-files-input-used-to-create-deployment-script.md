@@ -1,5 +1,5 @@
 ---
-title: 了解用于创建部署脚本的输入的文件 |Microsoft 文档
+title: 了解用于创建部署脚本的输入的文件 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b75ec5d7433931a81a0fa6e2c648f85335fbedc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002189"
 ---
 # <a name="deployment-script-files---input-used-to-create-deployment-script"></a>部署脚本文件-输入用于创建部署脚本
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  当生成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成的项目文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将这些文件放入的输出文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 默认情况下，输出将输出到 \Bin 文件夹之中。 下表列出了 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建的 XML 文件。  
+  在生成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成的项目文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将这些文件放在输出文件夹的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 默认情况下，输出将输出到 \Bin 文件夹之中。 下表列出了 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建的 XML 文件。  
   
 |文件|Description|  
 |---------------|-----------------|  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/10/2018
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 从不在其项目文件中存储密码。  
   
 ## <a name="modifying-the-input-files"></a>修改输入文件  
- 修改输入文件中中的值或从输入文件中，检索到的值使成为可能更改的部署目标，配置设置，并且部署选项而无需编辑整个\<*项目名称*>.asdatabase 文件 (或整个脚本文件，如果从现有生成脚本[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库)。 能够修改各个文件使您可以轻松地创建用于不同用途的不同部署脚本。  
+ 修改输入文件中的值或从输入文件中检索的值就可以更改部署目标、 配置设置和部署选项而无需编辑整个\<*项目名称*>.asdatabase 文件 (或整个脚本文件，如果从现有生成脚本[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库)。 能够修改各个文件使您可以轻松地创建用于不同用途的不同部署脚本。  
   
  以下主题解释了如何修改各个输入文件中的值：  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/10/2018
   
 -   [指定处理选项](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行 Analysis Services 部署向导](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
  [了解 Analysis Services 部署脚本](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)  
   

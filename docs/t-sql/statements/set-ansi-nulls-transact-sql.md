@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,16 @@ helpviewer_keywords:
 - comparison operators [SQL Server], null values
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e1a05133d905e6211cded5afc46dba8db75757f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc2cd5ced0f0528be99b8b6c7531f04d7b87114a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788478"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -66,7 +66,22 @@ SET ANSI_NULLS ON
  当 SET ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name = NULL 的 SELECT 语句返回 column_name 中包含空值的行。 使用 WHERE column_name <> NULL 的 SELECT 语句返回列中包含非空值的行。 此外，使用 WHERE column_name <> XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行。  
   
  当 SET ANSI_NULLS 为 ON 时，所有对 null 值的比较均取值为 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，如果数据值为 NULL，则所有数据对空值的比较将取值为 TRUE。 如果未指定 SET ANSI_NULLS，则应用当前数据库的 ANSI_NULLS 选项设置。 有关 ANSI_NULLS 数据库选项的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+
+ 下表显示 ANSI_NULLS 的设置如何通过 NULL 值和非 NULL 值影响大量布尔表达式的结果。  
   
+|布尔表达式|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  仅当某个比较操作数是值为 NULL 的变量或文字 NULL 时，SET ANSI_NULLS ON 才会影响比较。 如果比较双方是列或复合表达式，则该设置不会影响比较。  
   
  为使脚本按预期运行，不管 ANSI_NULLS 数据库选项或 SET ANSI_NULLS 的设置如何，请在可能包含空值的比较中使用 IS NULL 和 IS NOT NULL。  

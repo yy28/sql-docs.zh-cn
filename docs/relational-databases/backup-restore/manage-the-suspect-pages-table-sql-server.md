@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921805"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
 2.  依次展开“系统数据库” 、“msdb” 、“表” 和“系统表” 。  
   

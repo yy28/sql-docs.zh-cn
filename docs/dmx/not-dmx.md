@@ -1,31 +1,20 @@
 ---
-title: 不 (DMX) |Microsoft 文档
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- NOT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- NOT operator [DMX]
-ms.assetid: 6d91b3d9-270c-4a68-b41f-169cff5faa0e
-caps.latest.revision: 13
-author: Minewiskan
+title: 不 (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 155dbc89f38ad39a87bbf2e69171e741735ec8a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 053eb905edb1379bfdc40ec010dc6d4efadcba26
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037905"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,15 +35,15 @@ NOT Expression1
 ## <a name="return-value"></a>返回值  
  一个布尔值，在参数的计算结果为 TRUE 时返回 FALSE；否则将返回 FALSE。  
   
-## <a name="remarks"></a>注释  
- 在运算符执行逻辑非运算之前，该参数被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果*Expression1*为 TRUE 时，该运算符将返回 FALSE。 如果*Expression1*为 FALSE 时，该运算符将返回 TRUE。 下表阐释了执行逻辑与运算的方式。  
+## <a name="remarks"></a>Remarks  
+ 在运算符执行逻辑非运算之前，该参数被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果*Expression1*为 TRUE 时，该运算符将返回 FALSE。 如果*Expression1*为 FALSE 时，运算符将返回 TRUE。 下表阐释了执行逻辑与运算的方式。  
   
 |如果 Expression1 为|则返回值为|  
 |-----------------------|---------------------|  
 |TRUE|FALSE|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [逻辑运算符&#40;DMX&#41;](../dmx/operators-logical.md)   
  [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  

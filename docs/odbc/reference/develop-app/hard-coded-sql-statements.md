@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911502"
 ---
 # <a name="hard-coded-sql-statements"></a>硬编码的 SQL 语句
 通常执行固定的任务的应用程序包含硬编码 SQL 语句。 例如，订单输入系统可能会使用对列表未结的销售订单的以下调用：  

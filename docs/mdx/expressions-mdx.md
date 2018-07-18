@@ -1,6 +1,6 @@
 ---
 title: 表达式 (MDX) |Microsoft 文档
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 79909f574d818a599f30ad051be9cf6a980430a9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579479"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740836"
 ---
 # <a name="expressions-mdx"></a>表达式 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  表达式是标识符、 值和运算符的组合， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可以评估用于获取结果。 数据可在多个不同位置时访问或更改数据。 例如，可以将表达式用作查询要检索的数据的一部分，或用作查找满足一组条件的数据的搜索条件。  
+
+  表达式是标识符、 值和可进行计算以获取结果的运算符的组合。 数据可在多个不同位置时访问或更改数据。 例如，可以将表达式用作查询要检索的数据的一部分，或用作查找满足一组条件的数据的搜索条件。  
   
 ## <a name="simple-and-complex-expressions"></a>简单表达式和复杂表达式  
  在 MDX 中，表达式可以是简单的，也可以是复杂的：  

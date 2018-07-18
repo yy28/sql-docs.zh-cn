@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05e5e55f02573bc73ac13a411ebb03671bf9bba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36a8f87973096213c11cc9df8cd880c0928a5b88
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358319"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,25 +171,25 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>为事务发布的请求订阅定义同步计划  
   
-1.  对事务发布创建一个新的请求订阅。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  对事务发布创建一个新的请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在订阅服务器上，执行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**或复制管理对象 (RMO) 在 **@publication**，并为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_name **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>为事务发布的推送订阅定义同步计划  
   
-1.  对事务发布创建一个新的推送订阅。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  对事务发布创建一个新的推送订阅。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在订阅服务器上，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定 **@subscriber**或复制管理对象 (RMO) 在 **@subscriber_db**或复制管理对象 (RMO) 在 **@publication**，并为 **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>为合并发布的请求订阅定义同步计划  
   
-1.  对合并发布创建一个新的请求订阅。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  对合并发布创建一个新的请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**或复制管理对象 (RMO) 在 **@publication**，并为 **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>为合并发布的推送订阅定义同步计划  
   
-1.  对合并发布创建一个新的推送订阅。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  对合并发布创建一个新的推送订阅。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在订阅服务器上，执行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定 **@subscriber**或复制管理对象 (RMO) 在 **@subscriber_db**或复制管理对象 (RMO) 在 **@publication**，并为 **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>在创建事务发布的请求订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   
@@ -263,7 +263,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>在创建合并发布的请求订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   

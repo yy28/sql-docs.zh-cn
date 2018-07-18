@@ -2,7 +2,6 @@
 title: 支持方法 |Microsoft 文档
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a24ac211293847ffbb068055826abca3514abb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282576"
 ---
 # <a name="supports-method"></a>支持方法
 确定指定[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象支持特定类型的功能。  
@@ -44,7 +44,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  A**长**表达式包含一个或多个[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**支持**方法来确定哪些类型的功能**记录集**对象支持。 如果**记录集**对象支持的功能，其相应常量位于*CursorOptions*、**支持**方法返回**True**. 否则，它将返回**False**。  
   
 > [!NOTE]
@@ -53,7 +53,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持方法示例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [支持方法示例 （VC + +）](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType 属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030044"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>ConfigurationSetting 属性 - DatabaseLogonTimeout
   指定尝试登录到报表服务器数据库失败前等待的秒数。 值 **0** 指示无限期的等待时间。 只读。  

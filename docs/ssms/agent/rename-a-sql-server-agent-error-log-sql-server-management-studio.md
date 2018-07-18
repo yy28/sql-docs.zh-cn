@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33043504"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-rename-a-sql-server-agent-error-log"></a>重命名 SQL Server 代理错误日志  
   
-1.  在 **“对象资源管理器”**中，单击加号以展开包含要重命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理错误日志的服务器。  
+1.  在 **“对象资源管理器”** 中，单击加号以展开包含要重命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理错误日志的服务器。  
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   

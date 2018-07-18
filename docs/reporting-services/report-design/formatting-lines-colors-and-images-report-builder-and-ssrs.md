@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023354"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>设置线条、颜色和图像的格式（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以设置线条、颜色、数据区域、图像和其他报表项的格式。  

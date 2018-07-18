@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93f66d894dd451c8b6bae3893222b14387d7e803
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c29de77be7dc0a36ce7311055fa081a3ca9a36d6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358119"
 ---
 # <a name="add-or-edit-filter"></a>添加或编辑筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  **完成筛选语句以标识订阅服务器所要接收的表行**  
   
-     定义新的筛选语句或编辑现有的筛选语句。 **“列”** 列表框列出了要从 **“选择要筛选的表”**中选择的表中发布的所有列。 **“筛选语句”** 文本区域包括默认的文本，其格式为：  
+     定义新的筛选语句或编辑现有的筛选语句。 **“列”** 列表框列出了要从 **“选择要筛选的表”** 中选择的表中发布的所有列。 **“筛选语句”** 文本区域包括默认的文本，其格式为：  
   
      `SELECT <published_columns> FROM [schema].[tablename] WHERE`  
   

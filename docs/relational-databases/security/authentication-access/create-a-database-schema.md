@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,15 +18,16 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39149a6c1eb604fdeedaa1538e6655dab1a12a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 678f19f8f6eaf3e959ef7c51f966212d723f674d
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943073"
 ---
 # <a name="create-a-database-schema"></a>创建数据库架构
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +80,8 @@ ms.lasthandoff: 05/03/2018
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“架构– 新建”** 对话框还在两个其他页上提供了选项： **“权限”** 和 **“扩展属性”**。  
+ 
+  **“架构– 新建”** 对话框还在两个其他页上提供了选项： **“权限”** 和 **“扩展属性”**。  
   
 -   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-create-a-schema"></a>创建架构  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898932"
 ---
 # <a name="create-index-statement-limitations"></a>创建索引语句的限制
 Microsoft Excel 或文本驱动程序不支持 CREATE INDEX 语句。  

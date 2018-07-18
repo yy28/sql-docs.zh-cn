@@ -1,5 +1,5 @@
 ---
-title: ID 元素 (XMLA) |Microsoft 文档
+title: ID 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18c0a9e1db03ef30b54b788d16223e70bc9e9059
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037025"
 ---
 # <a name="id-element-xmla"></a>ID 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  标识对其执行父锁[锁](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)或[解锁](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)元素。  
+  标识要对其执行父锁[锁](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)或[解锁](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34575499"
 </Lock>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "34575499"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[锁定](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)，[解锁](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
+|父元素|[锁](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)，[解锁](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -51,7 +51,7 @@ ms.locfileid: "34575499"
   
 ## <a name="see-also"></a>另请参阅
  [对象元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
- [模式元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
+ [Mode 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
