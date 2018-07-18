@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 459507805f8b1a1803382e400722d910c802605b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076044"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042325"
 ---
 # <a name="comments-in-xquery"></a>XQuery 中的注释
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 以下是在其中查询针对的指令列指定的另一个示例**xml**类型：  
+ 以下是在其中指定了一个查询针对的指令列的另一个示例**xml**类型：  
   
 ```  
 SELECT Instructions.query('  

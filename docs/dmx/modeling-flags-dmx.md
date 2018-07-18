@@ -1,5 +1,5 @@
 ---
-title: 建模标志 (DMX) |Microsoft 文档
+title: 建模标志 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 17280abc62cd75122fde1f54b321ca9b51a1b1d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992459"
 ---
 # <a name="modeling-flags-dmx"></a>建模标志 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +45,9 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>在挖掘模型中指定建模标志  
- 有关语法的示例，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持用于指定标志为挖掘结构列，请参阅[创建挖掘结构&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
+ 有关语法的示例，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持用于指定标志在挖掘结构列，请参阅[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
   
- 用于指定挖掘模型列的建模 flga 的语法的示例，请参阅[ALTER 挖掘结构&#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 在挖掘模型列中指定建模标志的语法的示例，请参阅[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
  有关使用挖掘模型列的详细信息，请参阅[挖掘模型列](../analysis-services/data-mining/mining-model-columns.md)。  
   
@@ -55,12 +55,12 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   

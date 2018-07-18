@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index_xml (Transact SQL) |Microsoft 文档
+title: sp_help_spatial_geography_index_xml (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 13c388b03208c015ab8f0f6405b33b8ac3bd4a80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259074"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000709"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  名称和一组指定的属性的值将返回有关**geography**空间索引。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
+  名称和值的一组指定的属性将返回有关**geography**空间索引。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
   
  在一个显示了所选属性的名称和值的 XML 片段中返回结果。  
   
@@ -50,21 +50,21 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>参数  
- 请参阅[自变量和空间索引的属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 请参阅[空间索引的参数和属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="properties"></a>属性  
- 请参阅[自变量和空间索引的属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 请参阅[空间索引的参数和属性存储过程](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="permissions"></a>权限  
  必须为用户分配一个 PUBLIC 角色以便能够访问该过程。 需要服务器和对象的 READ ACCESS 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  包含 NULL 值的属性未包含在返回集中。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`sp_help_spatial_geography_index_xml`调查空间索引**SIndx_SpatialTable_geography_col2**在表上定义**geography_col**中给定的查询示例**@qs**. 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
+ 下面的示例使用`sp_help_spatial_geography_index_xml`若要调查的空间索引**SIndx_SpatialTable_geography_col2**表上定义**geography_col**中的给定的查询示例**@qs**. 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
   
- [XQuery](../../xquery/xquery-basics.md)然后在返回的特定属性的结果集上运行。  
+ [XQuery](../../xquery/xquery-basics.md)然后返回特定属性的结果集上运行。  
   
 ```  
 declare @qs geography  
@@ -74,13 +74,13 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- 类似于[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)，此存储的过程提供更简单的属性以编程方式访问**geography**空间索引和报表中 XML 的结果集。  
+ 类似于[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)，此存储的过程提供了更简单编程访问的属性**geography**空间索引和报表中 XML 的结果集。  
   
- 边界框**geography**是整个球体。  
+ 边界框**geography**是整个地球。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [空间索引存储过程](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   

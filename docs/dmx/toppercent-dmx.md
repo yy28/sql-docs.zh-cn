@@ -1,5 +1,5 @@
 ---
-title: TopPercent (DMX) |Microsoft 文档
+title: TopPercent (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842420"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040395"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  **TopPercent**函数返回时，按递减排名的顺序，最顶层的表的累积合计至少达到了指定百分比的行。  
+  **TopPercent**函数返回时，按降序形式的顺序，最顶层的行的表的累积合计至少达到指定百分比。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,18 +29,18 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>适用范围  
- 一个表达式，返回一个表，如\<表列引用 >，或函数返回一个表。  
+ 一个表达式，返回一个表，如\<表的列引用 >，或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
 ## <a name="remarks"></a>Remarks  
- **TopPercent**函数返回的最顶层的行的排名基于的计算值的按降序\<排名表达式 > 自变量对于每一行，以便的总和\<排名表达式 > 值是至少提供由指定的百分比\<%> 自变量。 **TopPercent**返回可能最少数量的元素，同时仍满足指定的百分比值。  
+ **TopPercent**函数根据的计算值的降序返回最前面的行\<排名表达式 > 参数对于每个行，使之和\<排名表达式 >值之至少由指定的百分比\<%> 参数。 **TopPercent**最少数量的元素同时，尽量返回满足指定百分比值。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建针对你通过使用生成的关联模型的预测查询[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例创建针对关联模型，它使用生成的预测查询[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
- 若要了解 TopPercent 的工作原理，它可能是第一次执行返回嵌套的表的预测查询很有帮助。  
+ 若要了解 TopPercent 的工作方式，可能会先执行返回嵌套的表的预测查询很有帮助。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -68,7 +68,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- TopPercent 函数使用此查询的结果，并返回包含最大值的行该总和的指定百分比。  
+ TopPercent 函数接受此查询的结果，并返回总值为指定百分比的最大值行。  
   
 ```  
 SELECT   
@@ -83,11 +83,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- TopPercent 函数的第一个参数是一个表列的名称。 在此示例中，嵌套的表返回通过调用预测函数并使用 INCLUDE_STATISTICS 自变量。  
+ TopPercent 函数的第一个参数是列的表的名称。 在此示例中，通过调用预测函数和使用 INCLUDE_STATISTICS 参数返回嵌套的表。  
   
  TopPercent 函数的第二个参数是使用对结果进行排序的嵌套表中的列。 在此示例中，INCLUDE_STATISTICS 选项返回 $SUPPORT、$PROBABILTY 和 $ADJUSTED PROBABILITY 列。 此示例使用 $SUPPORT，因为支持值不带有小数，所以很容易进行验证。  
   
- TopPercent 函数的第三个参数指定百分比，作为双精度。 若要获取总值为支持总数的 50% 的最前面的产品行，请键入 50。  
+ TopPercent 函数的第三个参数指定百分比，双精度。 若要获取总值为支持总数的 50% 的最前面的产品行，请键入 50。  
   
  示例结果：  
   
@@ -98,14 +98,14 @@ NATURAL PREDICTION JOIN
 |Patch kit|2113|0.14…|0.13…|  
 |Mountain Tire Tube|1992|0.133…|0.12…|  
   
- **请注意**提供了此示例仅为说明 TopPercent 的使用情况。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
+ **请注意**提供本示例仅用于说明 TopPercent 的用法。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
   
 > [!WARNING]  
 >  在用于计算百分比的值包含负数时，用于 TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函数可能会生成意外结果。 此行为并不影响 DMX 函数。 有关详细信息，请参阅[BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 更新 (DMX) |Microsoft 文档
+title: 更新 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4049c6052a4aabcfe7207086db1db19961354eb0
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989689"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ SET NODE_CAPTION='new caption'
   
 ## <a name="arguments"></a>参数  
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
  *新标题*  
  包含的新名称的字符串**NODE_CAPTION**列。  
@@ -41,7 +41,7 @@ SET NODE_CAPTION='new caption'
  可选。 一个限制条件，用于限制从列列表返回的值。  
   
 ## <a name="examples"></a>示例  
- 在下面的示例中，**更新**语句会更改默认名称， `Cluster 1`，群集`001`为更具描述性的名称， `Likely Customers`。  
+ 在以下示例中，**更新**语句更改默认名称， `Cluster 1`，为群集`001`为更具说明性的名称， `Likely Customers`。  
   
 ```  
 UPDATE [TM Clustering].CONTENT  

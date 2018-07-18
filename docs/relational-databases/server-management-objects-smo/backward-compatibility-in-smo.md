@@ -1,5 +1,5 @@
 ---
-title: 在 SMO 中的向后兼容性 |Microsoft 文档
+title: 在 SMO 中的向后兼容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d262a96a0da1fa0eec9bac446d7b22df2a1bc6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989419"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO 中的向后兼容性
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -60,7 +60,7 @@ Imports Microsoft.SqlServer.Management.Smo
 Imports Microsoft.SqlServer.Management.Common  
 ```  
   
- 如果你的代码使用 Urn 功能，如**Server.GetSqlSmoObject(Urn)**，你必须链接到 Microsoft.SqlServer.Management.Sdk.Sfc 命名空间。  
+ 如果你的代码使用 Urn 功能，例如**Server.GetSqlSmoObject(Urn)**，则必须链接到 Microsoft.SqlServer.Management.Sdk.Sfc 命名空间。  
   
  如果您的代码直接使用 Transfer 对象，则需要链接到 Microsoft.SqlServer.Management.SmoExtended 命名空间。  
   

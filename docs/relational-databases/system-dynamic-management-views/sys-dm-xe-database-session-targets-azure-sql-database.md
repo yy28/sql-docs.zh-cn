@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 8978a41b22beb36ccc31d1cfdc0a73eaf2da34ec
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041015"
 ---
 # <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "34466013"
   
 ||  
 |-|  
-|**适用于**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何将来的版本。|  
+|**适用于**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和所有将来的版本。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|事件会话的内存地址。 具有 sys.dm_xe_database_sessions.address 多对一关系。 不可为 null。|  
+|event_session_address|**varbinary(8)**|事件会话的内存地址。 具有与 sys.dm_xe_database_sessions.address 的多对一关系。 不可为 null。|  
 |target_name|**nvarchar(60)**|会话中目标的名称。 不可为 null。|  
 |target_package_guid|**uniqueidentifier**|包含目标的包的 GUID。 不可为 null。|  
 |execution_count|**bigint**|已为该会话执行目标的次数。 不可为 null。|  

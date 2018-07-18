@@ -1,5 +1,5 @@
 ---
-title: DMX 教程 (Analysis Services-数据挖掘) |Microsoft 文档
+title: DMX 教程 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3d242236074c652f2210580f657d99e205f5ed6
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842200"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991071"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 教程（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34842200"
   下面的教程说明如何在有关数据挖掘结构和模型的应用中使用数据挖掘扩展插件 (DMX)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Bike Buyer DMX 教程](http://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
+ [自行车购买者 DMX 教程](http://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
   
  在本教程中，您将学习如何使用 DMX 查询语言来创建、定型和浏览挖掘模型。 然后，还要使用这些挖掘模型创建有关客户是否可能购买特定产品的预测。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34842200"
  [多维模型数据访问&#40;Analysis Services-多维数据&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>请参阅  
- [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
   
   

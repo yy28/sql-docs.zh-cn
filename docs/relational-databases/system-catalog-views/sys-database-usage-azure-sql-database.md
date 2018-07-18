@@ -1,5 +1,5 @@
 ---
-title: sys.database_usage （Azure SQL 数据库） |Microsoft 文档
+title: sys.database_usage （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038815"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "33177445"
 |列名|Description|  
 |-----------------|-----------------|  
 |time|使用事件发生的日期。|  
-|sku|为数据库服务层的类型： **Web**，**业务**，**基本**，**标准**，**高级**|  
+|sku|数据库服务层的类型： **Web**，**业务**，**基本**，**标准**，**高级**|  
 |quantity|指定当天存在的 SKU 类型的数据库的最大数量。|  
   
 ## <a name="permissions"></a>权限  
- 对此视图的只读访问可供所有用户有权连接到**master**数据库。  
+ 对此视图的只读访问可供有权连接到的所有用户**主**数据库。  
   
-## <a name="remarks"></a>注释  
- **Sys.database_usage**查看你的订阅的每一天返回一行。  
+## <a name="remarks"></a>Remarks  
+ **Sys.database_usage**视图的每一天的你的订阅返回一行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据库定价详细信息](http://go.microsoft.com/fwlink/?LinkID=394978)   
  [帐户和 Windows Azure SQL Database 中的计费](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   

@@ -1,31 +1,30 @@
 ---
-title: SQL Server 共享管理对象 (SMO) 的许可条款 |Microsoft 文档
+title: SQL Server 共享管理对象 (SMO) 的许可条款 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040425"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共享管理对象 (SMO) 许可条款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT 软件许可条款
-**MICROSOFT SQL SERVER 自 2017 年共享管理对象**
+**MICROSOFT SQL SERVER 2017 共享管理对象**
 
 ---
 这些许可条款是 Microsoft Corporation（或您所在地的 Microsoft Corporation 关联公司）与您之间达成的协议。 请阅读条款内容。 这些条款适用于上述软件，包括您用来接收该软件的介质（如果有）。 这些条款也适用于 Microsoft 为该软件提供的任何
@@ -43,7 +42,7 @@ ms.locfileid: "34235094"
 
 **1.安装和使用权利。**
 
-&nbsp;&nbsp;可安装和使用在你的设备上的任意数量的软件副本的设计、 开发和测试您的程序。
+&nbsp;&nbsp;可以安装和在设备上使用任意数量的软件的副本，以便设计、 开发和测试您的程序。
 
 **2.  其他许可要求和/或使用权利。**
 
@@ -55,7 +54,7 @@ ms.locfileid: "34235094"
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii. 分发要求。对于你分发的任何可分发代码，你必须**
 * 在您的程序中为其添加重要的主要功能；
-* 任何具有.dll 文件扩展名的可分发代码，将分发仅通过使用你的程序; 链接器中运行此类可分发代码的结果
+* 对于.dll 文件扩展名的任何可分发代码，分发仅通过使用你的程序; 链接器运行此类可分发代码的结果
 * 要求分销商及外部最终用户同意至少能够像本协议一样保护“可分发代码”的条款； 
 * 在您的程序上显示有效的版权声明；以及
 * 对于与分发或使用您的程序有关的任何索赔，为 Microsoft 提供辩护、赔偿，包括支付律师费，并使 Microsoft 免受损失。

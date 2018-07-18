@@ -1,5 +1,5 @@
 ---
-title: 度量值 |Microsoft 文档
+title: 度量值 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045325"
 ---
 # <a name="measures"></a>度量值组
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -70,7 +70,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> 度量值属性  
  每个度量值具有定义它的属性。 可以在“属性”窗口中编辑度量值属性以及关联的列属性。 度量值具有以下属性：  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**Description**|空白|度量值的说明。 该说明将不与度量值一起显示在报告客户端中。|  
 |**格式**|从公式表达式中引用的列的数据类型自动确定。|度量值的格式。 例如，货币或百分比。|  
@@ -88,7 +88,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |-----------|-----------------|  
 |[创建和管理度量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|说明如何使用模型设计器中的度量值网格创建和管理度量值。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [创建和管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
  [计算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  

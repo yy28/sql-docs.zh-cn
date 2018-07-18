@@ -9,11 +9,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238889"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999339"
 ---
 # <a name="log-properties"></a>日志属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "35238889"
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
 ## <a name="error-log"></a>错误日志  
- 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 请参阅[多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)和<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>有关详细信息。  
+ 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 请参阅[多维数据集、 分区和维度处理的错误配置&#40;SSAS-多维&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)并<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>有关详细信息。  
   
  **ErrorLog\ErrorLogFileName**  
  在服务器执行处理操作期间使用的一个默认属性。  

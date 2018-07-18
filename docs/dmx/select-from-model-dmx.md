@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;(DMX) |Microsoft 文档
+title: SELECT FROM&lt;模型&gt;(DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842170"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989899"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  可选。 一个指定返回行数的整数。  
   
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
  *条件列表*  
  可选。 限制条件，用于限制从列列表返回的值。  
@@ -47,7 +47,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>Remarks  
- 中的列*表达式列表*必须定义为预测或预测仅，或与可预测列相关的。  
+ 中的列*表达式列表*必须定义为 predict 或 predict 仅，或与可预测列相关。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  
  以下示例对 Bike Buyer 列执行一个空的预测联接，并返回 TM Naive Bayes 挖掘模型中最可能的状态。  
@@ -57,7 +57,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>时间序列示例  
- 以下示例对预测模型中的 Amount 列执行预测，并返回接下来的四个时间步长。 Model Region 列将 bike models 和 regions 组合为一个标识符。 该查询使用[PredictTimeSeries &#40;DMX&#41; ](../dmx/predicttimeseries-dmx.md)函数进行预测。  
+ 以下示例对预测模型中的 Amount 列执行预测，并返回接下来的四个时间步长。 Model Region 列将 bike models 和 regions 组合为一个标识符。 该查询使用[PredictTimeSeries &#40;DMX&#41; ](../dmx/predicttimeseries-dmx.md)函数来执行预测。  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   

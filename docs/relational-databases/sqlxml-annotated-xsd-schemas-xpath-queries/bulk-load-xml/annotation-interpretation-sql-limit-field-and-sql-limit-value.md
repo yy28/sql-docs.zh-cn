@@ -1,5 +1,5 @@
 ---
-title: sql:limit-字段和 sql:limit-值 (SQLXML 4.0) |Microsoft 文档
+title: sql:-字段和 sql:-值 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969152"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050090"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>批注解释-sql:limit-字段和 sql:limit 的值
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>批注解释-sql:-字段和 sql:-值
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大容量加载进程**sql:limit-字段**和**sql:limit-值**每个其定义的批注。 有关详细信息，请参阅[筛选值使用 sql:limit-字段和 sql:limit-值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
+  XML 大容量加载进程**sql:-字段**并**sql:-值**按照定义的批注。 有关详细信息，请参阅[筛选值使用 sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
   
  例如，假定一个数据库包含以下各表：  
   
@@ -128,7 +128,7 @@ ms.locfileid: "32969152"
     set objBL=Nothing  
     ```  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  

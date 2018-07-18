@@ -1,5 +1,5 @@
 ---
-title: 空函数 (XQuery) |Microsoft 文档
+title: 空函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077204"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040495"
 ---
-# <a name="functions-on-sequences---empty"></a>函数对序列中的空
+# <a name="functions-on-sequences---empty"></a>基于序列的空的函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果返回 True 值 *$arg*是一个空序列。 否则，该函数返回 False。  
+  如果返回 True 的值 *$arg*是一个空序列。 否则，该函数返回 False。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,14 +46,14 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  项序列。 如果该序列为空，则此函数返回 True。 否则，该函数返回 False。  
   
-## <a name="remarks"></a>注释  
- **Fn:exists()** 不支持函数。 作为替代方法， **not()** 函数可用。  
+## <a name="remarks"></a>Remarks  
+ **Fn:exists()** 不支持函数。 作为替代方法， **not （)** 函数可用。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml** AdventureWorks 数据库中的类型列。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. 使用 empty() XQuery 函数来确定属性是否存在  
- 在产品模型 7 生产过程中，此查询将返回不具有的所有工作中心位置**MachineHours**属性。  
+ 在产品型号 7 的生产过程中，此查询返回不具有的所有工作中心位置**MachineHours**属性。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -82,7 +82,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- 以下、 略有修改后，查询将返回"NotFound"，如果**MachineHour**属性不存在：  
+ 以下、 略有修改，查询将返回"NotFound"如果**MachineHour**属性不存在：  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -118,8 +118,8 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)   
+## <a name="see-also"></a>请参阅  
+ [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist() 方法（xml 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

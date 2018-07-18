@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a382ceab3491cfbcd1b8d6dad564f6d8826c2d13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246198"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049495"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,18 +49,18 @@ sp_defaultlanguage [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>参数  
  [ **@loginame =** ] **'***login***'**  
- 登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录或 Windows 用户或组。  
+ 登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户或组。  
   
- [  **@language =** ] *****语言*****  
- 登录的默认语言。 *语言*是**sysname**，默认值为 NULL。 *语言*必须是有效的语言，在服务器上。 如果*语言*未指定，*语言*设置为服务器的默认语言; 由默认语言**sp_configure**配置变量**默认语言**。 更改服务器默认语言不会更改现有登录的默认语言。  
+ [  **@language =** ] **'***语言*****  
+ 登录的默认语言。 *语言*是**sysname**，默认值为 NULL。 *语言*必须是服务器上的有效语言。 如果*语言*未指定，则*语言*设置为服务器的默认语言; 默认语言由**sp_configure**配置变量**默认语言**。 更改服务器默认语言不会更改现有登录的默认语言。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- **sp_defaultlanguage**调用 ALTER LOGIN，支持其他选项。 有关更改其他登录名默认值的信息，请参阅[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ **sp_defaultlanguage**调用 ALTER LOGIN，后者支持其他选项。 有关更改其他登录名的默认值的信息，请参阅[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
- 使用 SET LANGUAGE 语句更改当前会话的语言。 使用 @@LANGUAGE函数以显示的当前语言设置。  
+ 使用 SET LANGUAGE 语句更改当前会话的语言。 使用 @@LANGUAGE函数以显示当前语言设置。  
   
  如果从服务器中删除登录的默认语言，则登录将获取服务器的默认语言。 **sp_defaultlanguage**不能在用户定义的事务内执行。  
   
@@ -77,7 +77,7 @@ ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   

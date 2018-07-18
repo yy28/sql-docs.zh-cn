@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cleanup_temporal_history |Microsoft 文档
+title: sys.sp_cleanup_temporal_history |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
@@ -18,18 +18,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6216ca6584c2bf6d78bb66096145cd49428398dc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257558"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051192"
 ---
-# <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (TRANSACT-SQL)
+# <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-从匹配配置的 HISTORY_RETENTION 时间段，在单个事务中的临时历史记录表中删除所有行。
+匹配单个事务中的配置的 HISTORY_RETENTION 期的时态历史记录表中删除所有行。
   
 ## <a name="syntax"></a>语法  
 ```  
@@ -40,21 +40,21 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 *@table_name*
 
-有关哪些保持调用清理临时表的名称。
+清理调用的保留期的时态表的名称。
 
 *schema_name*
 
-当前临时表所属的架构名称
+当前临时表所属的架构的名称
 
 *row_count_var* [OUTPUT]
 
-输出参数返回的已删除的行数。 如果历史记录表具有聚集列存储索引，此参数将返回始终为 0。
+输出参数返回的已删除的行数。 如果历史记录表具有聚集列存储索引，将返回此参数始终为 0。
   
-## <a name="remarks"></a>注释
-此存储的过程可以在具有有限指定保持期只能与临时表使用。
-仅当你需要立即清除历史记录表中的所有过期的行，请使用此存储的过程。 您应该知道，它会有重大影响的数据库日志和 I/O 子系统，它删除同一事务中的所有符合条件的行。 
+## <a name="remarks"></a>Remarks
+此存储的过程可用于仅临时表，具有有限保留期指定。
+仅当你需要立即清除历史记录表中的所有过期的行时，才使用此存储的过程。 您应该知道，它会有重大影响的数据库日志和 I/O 子系统上，删除在同一事务中所有符合条件的行。 
 
-建议始终依赖于清理内部后台任务删除过期的常规工作负载和一般的数据库上的最小影响的行。
+建议始终依赖于清理内部后台任务删除过期的行上的常规工作负载和在常规的数据库的影响降到最低。
 
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  

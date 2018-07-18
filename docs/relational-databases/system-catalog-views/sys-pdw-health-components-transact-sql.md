@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_health_components (Transact SQL) |Microsoft 文档
+title: sys.pdw_health_components (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5cc73d80ea4ca8c724a5cb0efbe63381de068cb1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178913"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000989"
 ---
-# <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components (TRANSACT-SQL)
+# <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   存储有关所有组件和系统中存在的设备信息。 其中包括硬件、 存储设备和网络设备。  
@@ -34,7 +34,7 @@ ms.locfileid: "33178913"
 |group_id|**Int**|此组件所属的逻辑组件组。 请参阅[sys.pdw_health_components （并行数据仓库）](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。|NOT NULL|  
 |component_name|**nvarchar(255)**|组件的名称。|NOT NULL|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

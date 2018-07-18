@@ -1,5 +1,5 @@
 ---
-title: 序列和 QNames (XQuery) |Microsoft 文档
+title: 序列和 Qname (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077994"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990006"
 ---
 # <a name="sequence-and-qnames-xquery"></a>序列和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  XQuery 中的每个标识符都是一个 QName。 QName 由一个命名空间前缀和一个本地名称组成。 在这样的实现中，XQuery 中的变量名是 QNames，它们不能带有前缀。  
   
- 考虑下面的示例在其中指定查询针对非类型化**xml**变量：  
+ 请考虑下面的示例指定了一个查询对非类型化**xml**变量：  
   
 ```  
 DECLARE @x xml;  
@@ -119,7 +119,7 @@ SELECT @x.query('/Root/a');
   
  在表达式 (`/Root/a`) 中，`Root` 和 `a` 是 QNames。  
   
- 在下面的示例中，指定的查询针对类型化**xml**列。 该查询循环访问所有\<步骤 > 的第一个 workcenter 位置处的元素。  
+ 在以下示例中，指定一个查询针对类型化**xml**列。 该查询循环访问所有\<步骤 > 元素的第一个工作中心位置。  
   
 ```  
 SELECT Instructions.query('  
@@ -151,12 +151,12 @@ WHERE ProductModelID=7;
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |（无前缀）|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 你创建每个数据库有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
+ 创建每个数据库有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
   
 > [!NOTE]  
 >  此实现不支持`local`前缀中的 XQuery 规范中所述http://www.w3.org/2004/07/xquery-local-functions。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)  
   
   

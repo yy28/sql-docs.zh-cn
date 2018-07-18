@@ -1,5 +1,5 @@
 ---
-title: sql： 映射 (SQLXML 4.0) |Microsoft 文档
+title: sql： 映射 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968472"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050145"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释-sql： 映射
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大容量加载进程**sql： 映射**中按预期方式的 XSD 架构的批注 — 也就是说，如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试将相关联的数据存储在相应的列。  
+  XML 大容量加载进程**sql： 映射**按预期的 XSD 架构中批注 — 也就是说，如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试在相应列中存储相关联的数据。  
   
- 元素和未映射的属性，将忽略 XML 大容量加载 (或者是因为在架构中，没有描述它们进行批注的 XSD 架构中**sql： 映射 ="false"**)。 未映射的所有数据都将进入溢出列中，如果这样的列指定通过使用**sql:overflow-字段**。  
+ XML 大容量加载忽略未映射的元素和属性 (因为它们不描述在架构中，或使用在 XSD 架构中批注**sql： 映射 ="false"**)。 未映射的所有数据都将进入溢出列中，如果这样的列通过使用指定**sql:overflow-字段**。  
   
  例如，请看此 XSD 架构：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "32968472"
 </xsd:schema>  
 ```  
   
- 因为**HomePhone**属性指定**sql： 映射 ="false"**，XML 大容量加载未映射到相应的列的此属性。 XSD 架构标识一个溢出列 (**OverflowColumn**) XML 大容量加载在其中存储此未用完的数据。  
+ 因为**HomePhone**特性指定**sql： 映射 ="false"**，XML 大容量加载不映射到相应的列的此属性。 XSD 架构标识一个溢出列 (**OverflowColumn**) XML 大容量加载在其中存储此未用完的数据。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   
@@ -100,7 +100,7 @@ ms.locfileid: "32968472"
     set objBL=Nothing  
     ```  
   
- 这是等效的 XDR 架构：  
+ 以下是等效的 XDR 架构：  
   
 ```  
 <?xml version="1.0" ?>  

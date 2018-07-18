@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft 文档
+title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842520"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992621"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **SELECT FROM\<模型 >。Dimension_CONTENT**语句返回的内容与作为维度及其用法的模型。  
+  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **SELECT FROM\<模型 >。Dimension_CONTENT**语句可以返回模型中的维度用法相关的内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  基于内容架构行集派生的一组以逗号分隔的相关列标识符。  
   
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
  *条件表达式*  
  可选。 一个限制条件，用于限制从列列表返回的值。  
@@ -59,7 +59,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |NODE_TYPE|成员属性。|  
 |NODE_CAPTION|有关 CaptionColumn**密钥**属性。|  
 |CHILDREN_CARDINALITY|成员属性。|  
-|PARENT_UNIQUE_NAME|有关 RelatedAttribute**密钥**属性 (ParentAttribute 父-子层次结构中)。|  
+|PARENT_UNIQUE_NAME|有关 RelatedAttribute**密钥**属性 (父-子层次结构中的 ParentAttribute)。|  
 |NODE_DESCRIPTION|成员属性。|  
 |NODE_RULE|成员属性。|  
 |MARGINAL_RULE|成员属性。|  

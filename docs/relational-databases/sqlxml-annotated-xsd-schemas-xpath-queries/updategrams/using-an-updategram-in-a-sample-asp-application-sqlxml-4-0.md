@@ -1,5 +1,5 @@
 ---
-title: 示例 ASP 应用程序 (SQLXML 4.0) 中使用属的 Updategram |Microsoft 文档
+title: 在示例 ASP 应用程序 (SQLXML 4.0) 中使用 Updategram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3e6ab461bc1916394b53e5b8c0017bbef71eabe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970602"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049912"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在示例 ASP 应用程序中使用 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "32970602"
   
  然后，用户可以更新联系人信息，但不能更新联系人 ID（因为 ContactID 为主键）。 在用户提交信息之后，将执行一个 updategram，并且所有表单参数将传递到该 updategram。  
   
- 以下模板为第一个模板 (GetContact.xml)。 将此模板保存在该目录中的虚拟名称与关联**模板**类型。  
+ 以下模板为第一个模板 (GetContact.xml)。 虚拟名称与相关联的目录中将此模板**模板**类型。  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -55,7 +55,7 @@ ms.locfileid: "32970602"
 </root>  
 ```  
   
- 以下模板为第二个模板 (UpdateContact.xml)。 将此模板保存在该目录中的虚拟名称与关联**模板**类型。  
+ 以下模板为第二个模板 (UpdateContact.xml)。 虚拟名称与相关联的目录中将此模板**模板**类型。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -165,7 +165,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [属的 Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [Updategram 安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

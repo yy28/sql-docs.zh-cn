@@ -1,5 +1,5 @@
 ---
-title: 删除挖掘模型 (DMX) |Microsoft 文档
+title: 删除挖掘模型 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f1cc0d35f7110d8ef805b8e1c07220a032c5a8b6
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842730"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052305"
 ---
 # <a name="drop-mining-model-dmx"></a>DROP MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,10 +30,10 @@ DROP MINING MODEL <model >
   
 ## <a name="arguments"></a>参数  
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
 ## <a name="examples"></a>示例  
- 下面的示例代码会删除挖掘模型 NBSample。  
+ 下面的示例代码删除挖掘模型 NBSample。  
   
 ```  
 DROP MINING MODEL [NBSample]  

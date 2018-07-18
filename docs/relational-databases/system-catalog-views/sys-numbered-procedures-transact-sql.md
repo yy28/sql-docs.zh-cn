@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedure (Transact SQL) |Microsoft 文档
+title: sys.numbered_procedures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d16757a007b423ab6c4ed8ff8a002a73c9c583dd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178753"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987439"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  每个作为带编号的过程而创建的 SQL Server 存储过程都占一行。 对于基（编号 = 1）存储过程，它不显示行。 基的存储过程的条目可以找到在视图中比如**sys.objects**和**sys.procedures**。  
+  每个作为带编号的过程而创建的 SQL Server 存储过程都占一行。 对于基（编号 = 1）存储过程，它不显示行。 在视图中可以如找到基存储过程的条目**sys.objects**并**sys.procedures**。  
   
 > [!IMPORTANT]  
 >  不推荐使用带编号的过程。 建议您不要使用带编号过程。 当编译使用此目录视图的查询时，将会激发 DEPRECATION_ANNOUNCEMENT 事件。  

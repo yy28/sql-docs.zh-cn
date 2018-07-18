@@ -1,5 +1,5 @@
 ---
-title: SMO Object Model Diagram |Microsoft 文档
+title: SMO 对象模型关系图 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966152"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046215"
 ---
 # <a name="smo-object-model-diagram"></a>SMO 对象模型关系图
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "32966152"
   
  ![显示层次结构关系图](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "显示层次结构关系图")  
   
- ![对象模型，显示层次结构的树视图](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "对象模型，显示层次结构的树视图")  
+ ![对象模型中，显示层次结构的树视图](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "对象模型中，显示层次结构的树视图")  
   
- ![对象模型，显示层次结构的树视图](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "对象模型，显示层次结构的树视图")  
+ ![对象模型中，显示层次结构的树视图](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "对象模型中，显示层次结构的树视图")  
   
- ![对象模型，显示层次结构的树视图](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "对象模型，显示层次结构的树视图")  
+ ![对象模型中，显示层次结构的树视图](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "对象模型中，显示层次结构的树视图")  
   
   

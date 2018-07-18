@@ -1,5 +1,5 @@
 ---
-title: 展开的 QName (XQuery) |Microsoft 文档
+title: 展开的 QName (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077764"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039618"
 ---
-# <a name="functions-related-to-qnames---expanded-qname"></a>与 QNames-展开 QName 相关函数
+# <a name="functions-related-to-qnames---expanded-qname"></a>与 Qname 展开的 QName 相关的函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回具有 URI 中指定的命名空间的 xs: qname 类型的一个值 *$paramURI*中指定的本地名称和 *$paramLocal*。 如果 *$paramURI*是空字符串或空序列，它表示不在命名空间。  
+  返回与命名空间中指定 URI 的 xs: qname 类型值 *$paramURI*中指定的本地名称和 *$paramLocal*。 如果 *$paramURI*是空字符串或空序列，它表示无命名空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,28 +48,28 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  QName 的本地名称部分。  
   
-## <a name="remarks"></a>注释  
- 以下规则适用于**expanded-QName()** 函数：  
+## <a name="remarks"></a>Remarks  
+ 以下规则适用于**expanded-qname （)** 函数：  
   
--   如果 *$paramLocal*指定值不处于 xs:NCName 类型正确词法窗体时，会返回空序列，并表示动态错误。  
+-   如果 *$paramLocal*指定值不是 xs: ncname 类型的正确词汇格式中，会返回空序列，并表示动态错误。  
   
--   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此， **expanded-QName()** 函数不能在 XML 构造。 例如，当构造节点（如 `<e> expanded-QName(…) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
+-   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此， **expanded-qname （)** 函数不能用于 XML 构造。 例如，当构造节点（如 `<e> expanded-QName(…) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
   
--   您可以修改或比较现有的 QName 类型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`值进行比较的元素，<`e`>，返回的 QName 与**expanded-QName()** 函数。  
+-   您可以修改或比较现有的 QName 类型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`元素的值进行比较 <`e`>，返回的 qname **expanded-qname （)** 函数。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型中的列[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. 替换 QName 类型节点值  
  此示例说明了如何修改 QName 类型的元素节点的值。 该示例执行以下操作：  
   
 -   创建定义 QName 类型的元素的 XML 架构集合。  
   
--   使用创建一个表**xml**通过使用 XML 架构集合的类型列。  
+-   创建一个包含**xml**使用 XML 架构集合的类型列。  
   
 -   将 XML 实例保存在表中。  
   
--   使用**modify （)** 要修改的实例中的 QName 类型元素的值的 xml 数据类型的方法。 **Expanded-QName()** 函数用于生成新的 QName 类型值。  
+-   使用**modify （)** 要修改的实例中的 QName 类型元素的值的 xml 数据类型的方法。 **Expanded-qname （)** 函数用于生成新的 QName 类型值。  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -106,7 +106,7 @@ go
 </Root>   
 ```  
   
- 在下面的查询中，<`ElemQN`> 元素值将由使用替换**modify （)** xml 数据类型和 XML DML，如所示的替换值的方法。  
+ 在以下查询中，<`ElemQN`> 元素的值替换为使用**modify （)** xml 数据类型和 XML DML，如所示的替换值的方法。  
   
 ```  
 -- the value.  
@@ -140,7 +140,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. 处理使用 expanded-QName() 函数时的限制。  
- **展开 QName**函数不能在 XML 构造。 下面的示例阐释了这一点。 为了消除此限制，该示例首先插入一个节点，然后修改此节点。  
+ **展开的 QName**函数不能用于 XML 构造。 下面的示例阐释了这一点。 为了消除此限制，该示例首先插入一个节点，然后修改此节点。  
   
 ```  
 -- if exists drop the table T  
@@ -194,7 +194,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- 可以比较 QName 值，如以下查询所示。 查询仅返回 <`root`> 元素，其值与匹配 QName 类型返回值**expanded-QName()** 函数。  
+ 可以比较 QName 值，如以下查询所示。 查询仅返回 <`root`> 元素的值匹配 QName 类型返回值**expanded-qname （)** 函数。  
   
 ```  
 SELECT xmlCol.query('  
@@ -208,9 +208,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>实现限制  
- 一个日期和时间限制： **expanded-QName()** 函数接受第二个参数为空序列，并将返回而不是引发运行时错误，第二个参数不正确时为空。  
+ 一个日期和时间限制： **expanded-qname （)** 函数接受空序列，第二个参数，并将返回空，而不是第二个参数不正确时引发运行时错误。  
   
-## <a name="see-also"></a>另请参阅  
- [函数与 QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+## <a name="see-also"></a>请参阅  
+ [与 Qname 相关的函数&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

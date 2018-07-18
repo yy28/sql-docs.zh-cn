@@ -1,5 +1,5 @@
 ---
-title: 运算符 (DMX) |Microsoft 文档
+title: 运算符 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 072d0a36a4803f4de1d50ba066e4e86e5d171c5c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842880"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989669"
 ---
 # <a name="operators-dmx"></a>运算符 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  你可以使用数据挖掘扩展插件 (DMX) 运算符中的查询中执行算术、 比较、 串联运算符和逻辑运算[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+  可以使用数据挖掘扩展插件 (DMX) 运算符的查询中执行算术、 比较、 串联和逻辑运算[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用运算符执行下列运算：  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34842880"
   
  DMX 使用多种类别的运算符，这些运算符将在以后各节中加以说明。 有关各个运算符的其他信息，请参阅[数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)。  
   
-|运算符类别|类型的操作|  
+|运算符类别|操作类型|  
 |-----------------------|-----------------------|  
 |[算术运算符&#40;DMX&#41;](../dmx/operators-arithmetic.md)|执行加、减、乘或除运算。|  
 |[比较运算符&#40;DMX&#41;](../dmx/operators-comparison.md)|将一个值与另一个值或表达式比较。|  
@@ -42,12 +42,12 @@ ms.locfileid: "34842880"
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   

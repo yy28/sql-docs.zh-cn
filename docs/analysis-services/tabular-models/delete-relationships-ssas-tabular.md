@@ -1,5 +1,5 @@
 ---
-title: 删除关系 |Microsoft 文档
+title: 删除关系 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040091"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999176"
 ---
 # <a name="delete-relationships"></a>删除关系 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用的关系的信息，请参阅[关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的信息，请参阅[关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
-## <a name="considerations-for-deleting-relationships"></a>删除关系注意事项  
+## <a name="considerations-for-deleting-relationships"></a>删除关系的注意事项  
  决定是否删除关系时要注意下列问题：  
   
 -   无法撤消删除关系。 您可以重新创建关系，但此操作要求完全重新计算模型中的公式。 因此，在删除在公式中使用的关系前，应始终首先进行检查。  
@@ -51,7 +51,7 @@ ms.locfileid: "34040091"
   
 4.  在 **“管理关系”** 对话框中，单击 **“关闭”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
  [创建关系](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   

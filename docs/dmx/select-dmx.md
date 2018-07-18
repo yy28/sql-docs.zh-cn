@@ -1,5 +1,5 @@
 ---
-title: 选择 (DMX) |Microsoft 文档
+title: SELECT (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842640"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989876"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  **选择**语句中数据挖掘扩展插件 (DMX) 用于数据挖掘中的以下任务：  
+  **选择**语句中的数据挖掘扩展插件 (DMX) 用于数据挖掘中的以下任务：  
   
 -   浏览现有挖掘模型的内容  
   
@@ -41,17 +41,17 @@ FROM <model/structure>[.aspect]
 ## <a name="flattened"></a>FLATTENED  
  有些数据挖掘客户端无法接受数据挖掘提供程序提供的、层次结构格式的结果集。 客户端可能不具备处理层次结构的能力，或者可能必须将结果存储在单一非规范化表中。 若要将嵌套表数据转换为平展表数据，您必须请求平展查询结果。  
   
- 若要对查询结果进行平展，使用**选择**语法与**FLATTENED**选项，如下面的示例中所示：  
+ 若要平展查询结果，请使用**选择**语法**FLATTENED**选项，如下面的示例中所示：  
   
 ```  
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>顶部\<n > 和排序依据  
- 你可以通过使用表达式，排序查询的结果，然后可以通过结合使用返回的结果子集**ORDER BY**和**顶部**子句。 如果在确定邮件目标时，只想将结果发送给最可能的答复者，以及类似的情况，上述选项就很有用。 无法按预测概率，邮件预测查询的目标的结果进行排序，然后仅返回顶部\<n > 结果。  
+## <a name="top-n-and-order-by"></a>顶部\<n > 和 ORDER BY  
+ 可以使用一个表达式，排序查询的结果，然后可以通过结合使用返回的结果子集**ORDER BY**并**顶部**子句。 如果在确定邮件目标时，只想将结果发送给最可能的答复者，以及类似的情况，上述选项就很有用。 可能的目标邮递按预测概率的预测查询结果进行排序，然后仅返回顶部\<n > 结果。  
   
 ## <a name="select-list"></a>选择列表  
- *\<选择列表 >* 可以包含标量列引用、 预测函数和表达式。 可用的选项取决于算法以及下列上下文：  
+ *\<选择列表 >* 可包括标量列引用、 预测函数和表达式。 可用的选项取决于算法以及下列上下文：  
   
 -   是否正在查询挖掘结构或挖掘模型  
   
@@ -77,7 +77,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 你可以限制查询返回使用的事例**其中**子句。 **其中**子句指定中引用该列**其中**表达式必须具有与中的列引用相同的语义*\<选择列表 >* 的**选择**语句，并可以仅返回一个布尔表达式。 语法**其中**子句，如下所示是  
+ 您可以限制查询返回使用的事例**其中**子句。 **其中**子句指定中的列引用**其中**表达式必须具有相同的语义中的列引用*\<选择列表 >* 的**选择**语句，并且只能返回一个布尔表达式。 语法**其中**子句如下所示  
   
 ```  
 WHERE < condition expression >  
@@ -100,7 +100,7 @@ WHERE < condition expression >
   
  第二种预测类型可以对挖掘模型中的可预测列创建空预测联接，并返回该列的最可能状态。 该查询的结果完全取决于挖掘模型的内容。  
   
- 你可以通过使用以下语法将插入选择从 PREDICTION JOIN 语句的源查询的 select 语句。  
+ 您可以通过使用以下语法为 select 语句插入 SELECT FROM PREDICTION JOIN 语句的源查询。  
   
 ```  
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
@@ -109,7 +109,7 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  有关创建预测查询的详细信息，请参阅[结构和 DMX 预测查询的使用情况](../dmx/structure-and-usage-of-dmx-prediction-queries.md)。  
   
 ## <a name="clause-syntax"></a>子句语法  
- 由于浏览与复杂性**选择**语句、 详细的语法元素和自变量均由子句描述。 有关各个子句的详细信息，请单击下面列表中的主题：  
+ 由于下进行浏览的复杂性**选择**按子句说明语句、 详细的语法元素和参数。 有关各个子句的详细信息，请单击下面列表中的主题：  
   
  [SELECT DISTINCT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   

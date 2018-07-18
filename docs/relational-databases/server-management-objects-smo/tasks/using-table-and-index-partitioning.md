@@ -1,5 +1,5 @@
 ---
-title: 使用表和索引分区 |Microsoft 文档
+title: 使用表和索引分区 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dca91e1be799d4fd666432820a7839718d3e28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039057"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用表和索引分区
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32969222"
 ## <a name="index-and-table-partitioning"></a>索引和表分区  
  通过该功能可以将索引和表数据分散到各个分区中的多个文件组。 分区函数定义如何根据某些列（称为分区依据列）中的值将表或索引的行映射到一组分区。 分区方案将分区函数指定的每个分区映射到一个文件组。 这样，您便可以制定相应存档策略，用以将表扩展到多个文件组，因而也可扩展到多个物理设备。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database>对象包含一套<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>表示实现的分区函数和集合对象<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>描述如何将数据映射到文件组的对象。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database>对象包含一系列<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>对象表示实现的分区函数和一系列<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>描述如何将数据映射到文件组的对象。  
   
  每个 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 属性中指定其使用的分区方案，并在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定列。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32969222"
  对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>在 Visual C# 中为表设置分区方案  
- 代码示例演示如何创建分区函数和分区方案`TransactionHistory`表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]示例数据库。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
+ 代码示例演示如何创建分区函数和分区方案为`TransactionHistory`表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]示例数据库。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
   
 ```csharp  
 {   
@@ -92,7 +92,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>在 PowerShell 中为表设置分区方案  
- 代码示例演示如何创建分区函数和分区方案`TransactionHistory`表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]示例数据库。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
+ 代码示例演示如何创建分区函数和分区方案为`TransactionHistory`表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]示例数据库。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  
@@ -137,7 +137,7 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

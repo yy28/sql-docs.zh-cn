@@ -1,5 +1,5 @@
 ---
-title: min 函数 (XQuery) |Microsoft 文档
+title: min 函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077404"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051705"
 ---
-# <a name="aggregate-functions---min"></a>聚合函数的最小值
+# <a name="aggregate-functions---min"></a>聚合函数-min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  从一系列原子值，返回 *$arg*，其值是否小于的所有其他的一个项。  
+  返回一组原子值 *$arg*，其值最小值的所有其他的一个项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,15 +46,15 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  要返回其最小值的一组数值。  
   
-## <a name="remarks"></a>注释  
- 所有类型的原子化的值传递给**min （)** 一定要相同的基类型的子类型。 接受的基类型是支持的类型**gt**操作。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果没有混合的这些类型，或者如果传递其他类型的其他值时，会引发静态错误。  
+## <a name="remarks"></a>Remarks  
+ 所有类型的原子化值传递给**min （)** 必须是同一基类型的子类型。 接受的基类型是支持的类型**gt**操作。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果混合使用这些类型，或者传递其他类型的其他值，会引发静态错误。  
   
- 结果**min （)** 接收传入的类型，如在 xdt:untypedAtomic 的情况下将 xs: double 的基类型。 如果输入是静态 empty，空会进行隐式并返回一个静态的错误。  
+ 结果**min （)** 接收传入的类型，如在 xdt: untypedatomic 的情况下 xs: double 的基类型。 如果输入为静态空，则暗示，并返回静态错误。  
   
- **Min （)** 函数返回一个值小于输入序列中任何其他序列中。 对于 xs:string 值，则使用默认的 Unicode 码位排序规则。 如果 xdt:untypedAtomic 值无法转换为将 xs: double，在输入序列中，将忽略值 *$arg*。 如果输入是动态计算的空序列，则返回空序列。  
+ **Min （)** 函数返回一个值小于输入序列中任何其他序列中。 对于 xs:string 值，则使用默认的 Unicode 码位排序规则。 如果无法将 xdt: untypedatomic 值转换为 xs: double，在输入序列中，将忽略值 *$arg*。 如果输入是动态计算的空序列，则返回空序列。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml** AdventureWorks 数据库中的类型列。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. 使用 min() XQuery 函数查找工时最少的生产车间  
  下面的查询检索产品型号 (ProductModelID=7) 生产过程中工时最少的所有生产车间。 通常返回单个位置，如下所示。 如果多个车间具有相同的最少工时数，则将它们全部返回。  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   **命名空间**关键字在 XQuery prolog 中的定义的命名空间前缀。 然后，将此前缀用于 XQuery 主体中。  
+-   **命名空间**关键字 XQuery prolog 中的定义的命名空间前缀。 然后，将此前缀用于 XQuery 主体中。  
   
- XQuery 正文构造具有 XML\<位置 > 具有 WCID 元素和**LaborHrs**属性。  
+ XQuery 主体构造的 XML 包含\<位置 > 元素具有 WCID 和**LaborHrs**属性。  
   
 -   该查询也检索 ProductModelID 和名称值。  
   
@@ -93,15 +93,15 @@ ProductModelID   Name              Result
 ## <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Min （)** 函数映射到 xs: decimal 的所有整数。  
+-   **Min （)** 函数将所有整数都映射到 xs: decimal。  
   
--   **Min （)** 不支持对类型 xs: duration 值的函数。  
+-   **Min （)** 不支持对类型 xs: duration 的值的函数。  
   
 -   不支持跨基类型边界混合类型的序列。  
   
 -   不支持提供排序规则的语法选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
