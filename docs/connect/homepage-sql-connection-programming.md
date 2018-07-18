@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL 客户端编程的主页 |Microsoft Docs
 description: 使用带批注的链接下载和文档的语言和操作系统，用于连接到 SQL Server 或 Azure SQL 数据库的许多组合的中心页。
 author: MightyPen

@@ -1,4 +1,4 @@
----
+﻿---
 title: 用于 Microsoft SQL 数据库的连接库 |Microsoft 文档
 description: 提供用于启用与 Microsoft SQL Server 和 Azure SQL 数据库，从多种编程语言的客户端的连接的模块下载链接。
 author: MightyPen

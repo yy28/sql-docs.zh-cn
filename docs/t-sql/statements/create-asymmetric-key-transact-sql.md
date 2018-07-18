@@ -1,4 +1,4 @@
----
+﻿---
 title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017

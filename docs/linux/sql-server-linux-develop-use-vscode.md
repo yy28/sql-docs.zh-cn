@@ -1,4 +1,4 @@
----
+﻿---
 title: 使用适用于 SQL Server Visual Studio Code 的 mssql 扩展 |Microsoft Docs
 description: 本教程演示如何使用适用于 VS Code 的 mssql 扩展。 此扩展，可编辑，在 VS Code 中运行的 Transact SQL 脚本。
 author: rothja
