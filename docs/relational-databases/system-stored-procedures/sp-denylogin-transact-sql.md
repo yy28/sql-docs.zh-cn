@@ -1,5 +1,5 @@
 ---
-title: sp_denylogin (TRANSACT-SQL) |Microsoft 文档
+title: sp_denylogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ef296a57b8fec029695654e5e519b723b455b59f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241835"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049458"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ] *** * * 登录*   
+ [  **@loginame =** ] **' * * * 登录名*   
  是 Windows 用户或组的名称。 *登录名*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- **sp_denylogin**拒绝对映射到指定的 Windows 用户或 Windows 组的服务器级别主体 CONNECT SQL 权限。 如果服务器主体不存在，将创建它。 新的主体就会出现在[sys.server_principals &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图。  
+## <a name="remarks"></a>Remarks  
+ **sp_denylogin**拒绝对映射到指定的 Windows 用户或 Windows 组的服务器级别主体 CONNECT SQL 权限。 如果服务器主体不存在，将创建它。 将显示在新的主体[sys.server_principals &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图。  
   
  **sp_denylogin**不能在用户定义的事务内执行。  
   
@@ -62,13 +62,13 @@ sp_denylogin [ @loginame = ] 'login'
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何使用**sp_denylogin**以防 Windows 用户`CORPORATE\GeorgeV`从连接到服务器。  
+ 下面的示例演示如何使用**sp_denylogin**若要防止 Windows 用户`CORPORATE\GeorgeV`从连接到服务器。  
   
 ```  
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

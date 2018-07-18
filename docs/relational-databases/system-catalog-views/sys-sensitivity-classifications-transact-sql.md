@@ -1,5 +1,5 @@
 ---
-title: sys.sensitivity_classifications (Transact SQL) |Microsoft 文档
+title: sys.sensitivity_classifications (TRANSACT-SQL) |Microsoft Docs
 ms.date: 06/17/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -28,43 +28,43 @@ helpviewer_keywords:
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: d0adbbeb82c06d6a44f3a7439bcbf479d7358401
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262880"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993789"
 ---
-# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (TRANSACT-SQL)
+# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 返回数据库中的每个已分类的项的行。
 
 |列名|数据类型|Description|
 |-----------------|---------------|-----------------|  
-|class|**int**|标识在其存在该分类的项的类|  
-|**class_desc**|**varchar(16)**|在其存在该分类的项的类的说明|  
-|**major_id**|**int**|在其上是否存在该分类的项的 ID。 < 巴西\>< 巴西\>major_id 如果类是 0，始终是 0。<br>如果 class 为 1、2 或 7，则 major_id 为 object_id。|  
-|**minor_id**|**int**|项在其存在该分类，根据其类解释辅助 ID。<br><br>如果类 = 1，minor_id 是 column_id (如果列)，否则 0 (如果对象)。<br>如果 class = 2，则 minor_id 为 parameter_id。<br>如果类 = 7，minor_id 是 index_id。 |  
-|label|**sysname**|已分配敏感度分类标签 （用户可读）|  
-|**label_id**|**sysname**|可以使用信息保护系统等 Azure 信息保护 (AIP) 的标签与关联的 ID|  
-|**information_type**|**sysname**|分配敏感度分类的信息类型 （用户可读）|  
-|**information_type_id**|**sysname**|可以使用信息保护系统等 Azure 信息保护 (AIP) 的信息类型与关联的 ID|  
+|class|**int**|标识的类的分类在其存在的项|  
+|**class_desc**|**varchar(16)**|分类在其存在的项的类的说明|  
+|**major_id**|**int**|分类在其存在的项的 ID。 < b \>< b\>如果 class 为 0，则 major_id 始终是 0。<br>如果 class 为 1、2 或 7，则 major_id 为 object_id。|  
+|**minor_id**|**int**|分类存在于其上，根据其类进行解释的项的辅助 ID。<br><br>如果类 = 1，minor_id 是 column_id (如果列)、 0 (如果对象)。<br>如果 class = 2，则 minor_id 为 parameter_id。<br>如果类 = 7，minor_id 为 index_id。 |  
+|label|**sysname**|分配敏感度分类的标签 （用户可读）|  
+|**label_id**|**sysname**|与标签，这是信息保护系统等 Azure 信息保护 (AIP) 可以使用关联的 ID|  
+|**information_type**|**sysname**|敏感度分类分配的信息类型 （用户可读）|  
+|**information_type_id**|**sysname**|可以使用通过信息保护系统等 Azure 信息保护 (AIP) 的信息类型与关联的 ID|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Remarks  
 
-- 此视图提供可见性的数据库的分类状态。 它可用于管理数据库分类，以及生成报表。
+- 此视图提供可见性数据库分类状态。 它可以用于管理数据库分类，以及用于生成报告。
 - 支持的数据库列的当前仅分类。 因此：
-    - **类**-将始终具有值 1 （表示列）
+    - **类**-将始终具有值 1 （表示某一列）
     - **class_desc** -将始终具有值*OBJECT_OR_COLUMN*
-    - **major_id** -表示包含已分类的列，表与 sys.all_objects.object_id 相对应的 ID
-    - **minor_id** -表示在其是否存在该分类，sys.all_columns.column_id 与相应的列的 ID
+    - **则 major_id** -表示包含已分类的列的表与 sys.all_objects.object_id 相对应的 ID
+    - **minor_id** -表示分类存在于其，使用 sys.all_columns.column_id 相应的列的 ID
 
 ## <a name="examples"></a>示例
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 列出所有已分类的列和其相应的分类
 
-以下示例返回一张表，列出表名称、 列名称、 标签，标签 ID，信息类型，在数据库中每个已分类列的信息类型 ID。
+以下示例返回一个表，该表列出表名、 列名、 标签，标签 ID，信息类型，在数据库中每个已分类列的信息类型 ID。
 
 ```sql
 SELECT

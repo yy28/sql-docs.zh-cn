@@ -1,5 +1,5 @@
 ---
-title: 转换元素 (XMLA) |Microsoft 文档
+title: Translation 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8b6c50664cdce599128be9f0ad15a10e33b77ec6
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576629"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047181"
 ---
 # <a name="translation-element-xmla"></a>Translation 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34576629"
 </Translations>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "34576629"
 |子元素|[语言](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)，[名称](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- A**转换**元素定义要关联到的转换是为给定属性，在过程定义的属性成员所需的信息[插入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)或[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)命令。  
+ 一个**翻译**元素定义关联属性成员与期间为给定属性定义的翻译所需的信息[插入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)或[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)命令。  
   
 ## <a name="see-also"></a>另请参阅
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

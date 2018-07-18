@@ -1,5 +1,5 @@
 ---
-title: RequestType 元素 (XMLA) |Microsoft 文档
+title: RequestType 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 63c1a838d74745b5ef51f73b51e34c95e08a81ff
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994789"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34577619"
 </Discover>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -47,10 +47,10 @@ ms.locfileid: "34577619"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **RequestType**元素确定从中架构行集**发现**方法返回的数据。 此枚举仅限于 Analysis Services 支持的架构行集的名称。 有关架构行集的详细信息，请参阅[Analysis Services 架构行集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)。  
+ **RequestType**元素可确定从该架构行集**Discover**方法返回数据。 此枚举仅限于由 Analysis Services 支持的架构行集的名称。 有关架构行集的详细信息，请参阅[Analysis Services 架构行集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)。  
   
 > [!NOTE]  
->  **RequestType**元素枚举仅架构行集名称。 如果使用架构行集 GUID，则会出错。  
+>  **RequestType**元素可枚举仅架构行集名称。 如果使用架构行集 GUID，则会出错。  
   
 ## <a name="see-also"></a>另请参阅
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

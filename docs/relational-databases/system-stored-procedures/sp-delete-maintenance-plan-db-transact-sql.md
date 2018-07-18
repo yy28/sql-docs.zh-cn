@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (Transact SQL) |Microsoft 文档
+title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049545"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@plan_id =**] *****plan_id*****  
+ [  **@plan_id =**] **'***plan_id*****  
  指定维护计划 id。 *plan_id*是**uniqueidentifier**。  
   
  [ **@db_name =**] **'***database_name***'**  
@@ -62,24 +62,24 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_delete_maintenance_plan_db**必须从运行**msdb**数据库。  
   
- **Sp_delete_maintenance_plan_db**存储的过程将删除维护计划和指定的数据库之间的关联; 它不删除或破坏该数据库。  
+ **Sp_delete_maintenance_plan_db**存储的过程将删除维护计划和指定的数据库之间的关联; 它不会删除或破坏数据库。  
   
- 当**sp_delete_maintenance_plan_db**从维护计划中删除的最后一个数据库、 存储的过程还会删除维护计划。  
+ 当**sp_delete_maintenance_plan_db**删除最后一个数据库从维护计划，该存储的过程还删除维护计划。  
   
 ## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_delete_maintenance_plan_db**。  
   
 ## <a name="examples"></a>示例  
- 删除中的维护计划**AdventureWorks2012**数据库，通过使用以前添加**sp_add_maintenance_plan_db**。  
+ 中的维护计划中删除**AdventureWorks2012**通过使用以前添加的数据库**sp_add_maintenance_plan_db**。  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [数据库维护计划存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

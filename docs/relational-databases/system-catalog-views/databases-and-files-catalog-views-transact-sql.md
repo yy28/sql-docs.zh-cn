@@ -1,5 +1,5 @@
 ---
-title: 数据库和文件目录视图 (Transact SQL) |Microsoft 文档
+title: 数据库和文件目录视图 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1f5c76077af1743e58e250f3bc57e20d86b573de
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049745"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>数据库和文件目录视图 (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "33177502"
   
 |||  
 |-|-|  
-|[sys.backup_devices &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
+|[sys.backup_devices &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
 |[sys.database_connection_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)|  
 |[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|[sys.database_usage &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|  
 |[sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)|[sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)|  
-|[sys.database_mirroring &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)||  
+|[sys.database_mirroring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

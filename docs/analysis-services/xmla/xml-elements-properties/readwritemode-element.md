@@ -1,5 +1,5 @@
 ---
-title: ReadWriteMode 元素 |Microsoft 文档
+title: ReadWriteMode 元素 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576489"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994849"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  **ReadWriteMode**数据库属性指定数据库是否处于**ReadWrite**模式或**ReadOnly**模式。 只可能有两个属性值。  
+  **ReadWriteMode**数据库属性指定数据库是否处于**ReadWrite**模式中或在**ReadOnly**模式。 只可能有两个属性值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576489"
 </Database>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -47,13 +47,13 @@ ms.locfileid: "34576489"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 在中创建数据库**ReadWrite**仅限模式。 无法在创建数据库**ReadOnly**模式。  
+ 数据库中创建**ReadWrite**仅限模式。 不能在中创建数据库**ReadOnly**模式。  
   
- 值**ReadWriteMode**元素被限制为下表中列出的字符串之一。  
+ 值**ReadWriteMode**元素仅限于下表中列出的字符串之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*readOnly*|不能向数据库应用任何更改或更新。|  
+|*只读*|不能向数据库应用任何更改或更新。|  
 |*ReadWrite*|可以向数据库应用更改和更新。|  
   
 ## <a name="see-also"></a>另请参阅

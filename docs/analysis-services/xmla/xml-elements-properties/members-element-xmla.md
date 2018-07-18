@@ -1,5 +1,5 @@
 ---
-title: Members 元素 (XMLA) |Microsoft 文档
+title: Members 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34579099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994709"
 ---
 # <a name="members-element-xmla"></a>Members 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含一套[成员](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)包含由容器的父元素[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)元素。  
+  包含一系列[成员](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)包含由父元素[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34579099"
 </CrossProduct>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "34579099"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|层次结构|所需**字符串**属性。 向其成员包含的层次结构的名称**成员**元素属于。|  
+|层次结构|所需**字符串**属性。 向其包含的成员的层次结构名称**成员**元素属于。|  
   
 ## <a name="remarks"></a>Remarks  
- 当客户端应用程序设置**AxisFormat**属性*ClusterFormat*，每个轴上的成员被划分到其中的每个群集都表示之间有序集的叉积的群集从每个层次结构的成员。 每个**轴**元素包含一个或多个**CrossProduct**元素。 每个**CrossProduct**元素包含**成员**在轴上的每个层次结构的元素。 **成员**元素，反过来，包含一个**成员**跨产品中包含指定层次结构的每个成员的元素。  
+ 当客户端应用程序设置**AxisFormat**属性设置为*ClusterFormat*，每个轴上的成员被划分到其中的每个群集表示之间的有序集的叉积的群集每个层次结构中的成员。 每个**轴**元素包含一个或多个**CrossProduct**元素。 每个**CrossProduct**元素包含**成员**在轴上每个层次结构的元素。 **成员**元素，又包含一个**成员**叉积中包含的指定层次结构的每个成员的元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的结构**成员**元素时客户端指定*ClusterFormat*为**AxisFormat**给定的 XMLA 属性轴的以下成员：  
+ 下面的示例演示了结构**成员**元素时客户端指定*ClusterFormat*有关**AxisFormat**给定的 XMLA 属性轴的以下成员：  
   
 ||||||  
 |-|-|-|-|-|  

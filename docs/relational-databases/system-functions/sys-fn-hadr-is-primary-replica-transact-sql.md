@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_is_primary_replica (Transact SQL) |Microsoft 文档
+title: sys.fn_hadr_is_primary_replica (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebfd66acdc93f1a5148981e06f8adf1c507e1705
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995627"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *dbname*  
- 数据库的名称。 *dbname*是 sysname 类型。  
+ '*dbname*  
+ 数据库的名称。 *dbname*的类型为 sysname。  
   
 ## <a name="returns"></a>返回  
  如果当前实例上的数据库是主副本，则返回 1。 否则，返回 0。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用此函数可以方便地确定本地实例承载是否承载指定可用性数据库的主副本。 示例代码可与以下代码相似。  
   
 ```  
@@ -75,10 +75,10 @@ SELECT sys.fn_hadr_is_primary_replica ('TestDB');
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn 可用性组 & #40;SQL server& #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [创建可用性组 & #40;Transact SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [AlwaysOn 可用性组&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn 可用性组目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   

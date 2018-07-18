@@ -1,5 +1,5 @@
 ---
-title: 成员元素 (XMLA) |Microsoft 文档
+title: Member 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c962452675a0c1c91a3573546f0763060dfb44e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575649"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994639"
 ---
 # <a name="member-element-xmla"></a>Member 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  表示单个成员的父文件夹中[成员](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[元组](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)元素。  
+  表示父命名空间中的单个成员[成员](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[元组](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34575649"
 </Tuple>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -68,10 +68,10 @@ ms.locfileid: "34575649"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|层次结构|所需**字符串**属性 (父**元组**仅限元素)。 与其所表示的成员的层次结构名称**成员**元素所属。|  
+|层次结构|所需**字符串**属性 (父**元组**仅限元素)。 向其表示的成员的层次结构名称**成员**元素所属。|  
   
 ## <a name="remarks"></a>Remarks  
- **成员**元素包含标识和显示在给定的层次结构中成员所需的信息。 父**成员**元素，通过已指定层次结构**层次结构**父元素的属性。 父**元组**元素，使用指定层次结构**层次结构**属性**成员**元素。  
+ **成员**元素包含标识和显示给定层次结构中的成员所需的信息。 对于父**成员**元素，通过已指定层次结构**层次结构**父元素的属性。 对于父**元组**元素，使用指定层次结构**层次结构**的属性**成员**元素。  
   
 ## <a name="see-also"></a>另请参阅
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

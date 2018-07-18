@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (TRANSACT-SQL) |Microsoft 文档
+title: sys.security_policies (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993799"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ms.locfileid: "33221128"
 |is_enabled|**bit**|安全策略规范状态：<br /><br /> 0 = 已禁用<br /><br /> 1 = 已启用|  
 |is_not_for_replication|**bit**|策略是使用 NOT FOR REPLICATION 选项创建的。|  
 |uses_database_collation|**bit**|使用与数据库相同的排序规则。|  
-|is_schemabinding_enabled|**bit**|安全策略的 Schemabinding 状态：<br /><br /> 0 或 NULL = 已启用<br /><br /> 1 = 已禁用|  
+|is_schemabinding_enabled|**bit**|架构绑定的安全策略的状态：<br /><br /> 0 或 NULL = 已启用<br /><br /> 1 = 已禁用|  
   
 ## <a name="permissions"></a>权限  
- 具有主体**ALTER ANY SECURITY POLICY**权限有权访问此目录视图，以及具有任何人都中的所有对象**VIEW DEFINITION**对象上。  
+ 具有主体**ALTER ANY SECURITY POLICY**权限有权访问此目录视图以及与任何人中的所有对象**VIEW DEFINITION**对象上。  
   
 ## <a name="see-also"></a>请参阅  
  [行级安全性](../../relational-databases/security/row-level-security.md)   

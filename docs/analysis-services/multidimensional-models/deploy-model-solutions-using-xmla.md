@@ -1,5 +1,5 @@
 ---
-title: 使用 XMLA 部署模型解决方案 |Microsoft 文档
+title: 使用 XMLA 部署模型解决方案 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ce0f50d158d715ddbbc689c47a012a4e92ba7c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994929"
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>使用 XMLA 部署模型解决方案
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34022056"
 > [!IMPORTANT]  
 >  如果在用于数据源的连接字符串中指定密码或出于模拟目的而指定密码，则此密码不包含在 XML 脚本中。 在这种情况下，由于处理时需要密码，因此必须在执行 XML 脚本之前将该密码手动添加到此脚本中，或者在执行 XML 脚本后添加该密码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)   
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除索引 |Microsoft 文档
+title: 创建、 更改和删除索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c376209c269456614e133b5e2726620835fb6888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049735"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>创建、更改和删除索引
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32970772"
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中创建非聚集组合索引  
- 此代码示例演示如何创建组合非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 设置<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>属性**False**非聚集索引。  
+ 此代码示例演示如何创建组合非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 设置<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>属性设置为**False**对于非聚集索引。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -93,7 +93,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>在 Visual C# 中创建非聚集组合索引  
- 此代码示例演示如何创建组合非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 设置<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>属性**False**非聚集索引。  
+ 此代码示例演示如何创建组合非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 设置<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>属性设置为**False**对于非聚集索引。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -151,7 +151,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>在 PowerShell 中创建非聚集组合索引  
- 此代码示例演示如何创建组合非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 设置<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>属性**False**非聚集索引。  
+ 此代码示例演示如何创建组合非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 设置<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>属性设置为**False**对于非聚集索引。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -192,7 +192,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>在 Visual Basic 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是 XML 架构集合调用 MySampleCollection，在中创建[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是名为 MySampleCollection 中创建的 XML 架构集合[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -255,7 +255,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>在 Visual C# 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是 XML 架构集合调用 MySampleCollection，在中创建[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是名为 MySampleCollection 中创建的 XML 架构集合[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -318,7 +318,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>在 PowerShell 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是 XML 架构集合调用 MySampleCollection，在中创建[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是名为 MySampleCollection 中创建的 XML 架构集合[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  
@@ -367,7 +367,7 @@ $i.IndexedColumns.Add($ic)
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  
   
   

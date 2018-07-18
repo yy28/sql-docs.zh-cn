@@ -1,5 +1,5 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) |Microsoft 文档
+title: sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180433"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058209"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. 返回内存优化表上的列存储索引的内存占用情况
 
-使用以下查询来在内存优化表上显示的列存储索引的内存消耗：
+使用下面的查询内存优化表上显示列存储索引的内存使用情况：
 
 ```Transact-SQL
 SELECT
@@ -118,7 +118,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-中用于内存优化表上的列存储索引的内部结构中使用以下查询分解的内存消耗：
+在用于内存优化表的列存储索引的内部结构中使用以下查询细分内存使用情况：
 
 ```Transact-SQL
 SELECT

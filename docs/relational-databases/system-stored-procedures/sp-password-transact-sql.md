@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993699"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +49,22 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@old=** ] *****old_password*****  
+ [  **@old=** ] **'***old_password*****  
  是的旧密码。 *old_password*是**sysname**，默认值为 NULL。  
   
- [  **@new=** ] *****new_password*****  
- 是的新密码。 *new_password*是**sysname**，无默认值。 *old_password*必须是否不使用命名的参数指定。  
+ [  **@new=** ] **'***new_password*****  
+ 是的新密码。 *new_password*是**sysname**，无默认值。 *old_password*必须命名的参数不能指定。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
+>  不要使用密码为空。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
- [  **@loginame=** ] *****登录*****  
- 受密码更改影响的登录名。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在并且可以指定只能由成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
+ [  **@loginame=** ] **'***登录*****  
+ 受密码更改影响的登录名。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在，可以指定只能由的成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_password**调用 ALTER LOGIN。 此语句支持附加选项。 有关更改密码的信息，请参阅[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
  **sp_password**不能在用户定义的事务内执行。  
@@ -94,7 +94,7 @@ ALTER LOGIN Victoria WITH
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
