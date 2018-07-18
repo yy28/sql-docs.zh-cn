@@ -3,11 +3,6 @@ title: 监视 SQL Server 合作伙伴 | Microsoft Docs
 description: 提供监视 SQL Server 解决方案的第三方合作伙伴列表。
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,14 +10,15 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: f9c0dbc7ddcd40f8dbd859711c32dc4f9ff79f71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f5251195c95036abb741672c593dbd82e8817fca
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033634"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926208"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 监视合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +29,13 @@ ms.locfileid: "33033634"
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 监视合作伙伴
-| Partner | Description | 链接 |
+| Partner | 描述 | 链接 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 诊断管理器是一种功能强大的性能监视和诊断解决方案，它可以主动向管理员警报 SQL Server 环境中的运行状况、性能和可用性问题，且所有操作均可从一个中央控制台完成。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] | |
-|[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - 利用卓越的 SQL Server 环境监控、诊断和优化，全天候确保出色的性能。 Spotlight 可提供对您所需的详细信息的访问权限，以实现 SQL Server 数据库的出色适用性。 获得直观的运行状况和性能概述、自动化警报和操作，以及移动设备支持。|[商城][quest_marketplace]<br>[网站][quest_website]<br>[视频][quest_video] | |
+|[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - 利用卓越的 SQL Server 环境监控、诊断和优化，全天候确保出色的性能。 Spotlight 可提供对您所需的详细信息的访问权限，以实现 SQL Server 数据库的出色适用性。 获得直观的运行状况和性能概述、自动化警报和操作，以及移动设备支持。|[Marketplace][quest_marketplace]<br>[网站][quest_website]<br>[视频][quest_video] | |
 |[![redgate][4]][redgate_website]| **Redgate**<br>Redgate 的 SQL Monitor 是一个 SQL Server 监视工具，可帮助管理 SQL Server 的团队能更变得更加主动。 SQL Monitor 不仅会警报当前存在的问题，还会提供防止将来发生这些问题所需的信息。 非常适合大型 SQL Server 财产，SQL Monitor 确保你始终能够回答有关性能的问题。 |[网站][redgate_website]<br>[Twitter][redgate_twitter]<br>[领英][redgate_linkedin] <br>[视频][redgate_video]| |
 |[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne 解决方案使 Microsoft 数据专业人员能在物理、虚拟和云环境中实现显著的性能。 借助 SentryOne，数据专业人员可以合并他们的工具集、降低基础架构成本，并提高数据库速度和效率，以在整个 Microsoft 数据平台环境中实现出色的性能，而不考虑环境的规模或复杂程度。|<!--[Marketplace][idera_marketplace]<br>-->[网站][sentryone_website]<br>[数据表][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[领英][sentryone_linkedin] | |
-|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>通过数据库性能分析器，可查看应用程序请求、SQL 语句、数据库资源、主机/操作系统、网络、虚拟化和存储性能。 DPA 合并了等待时间分析，因此不仅会关注运行状况，还会关注数据库响应应用程序请求的速度。 DPA 提供有关数据库的全面信息，而无论其部署方式。 无论是物理、虚拟、云还是 DBaaS，我们都能在一个平台中提供所有信息。|[商城][solarwinds_marketplace]<br>[网站][solarwinds_website]<br>[数据表][solarwinds_datasheet]<br>[领英][solarwinds_linkedin]<br>[视频][solarwinds_video]| |
+|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>通过数据库性能分析器，可查看应用程序请求、SQL 语句、数据库资源、主机/操作系统、网络、虚拟化和存储性能。 DPA 合并了等待时间分析，因此不仅会关注运行状况，还会关注数据库响应应用程序请求的速度。 DPA 提供有关数据库的全面信息，而无论其部署方式。 无论是物理、虚拟、云还是 DBaaS，我们都能在一个平台中提供所有信息。|[Marketplace][solarwinds_marketplace]<br>[网站][solarwinds_website]<br>[数据表][solarwinds_datasheet]<br>[领英][solarwinds_linkedin]<br>[视频][solarwinds_video]| |
 
 
 
@@ -72,9 +68,7 @@ ms.locfileid: "33033634"
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
 
 <!--Press links-->
 <!--[idera_press]:-->

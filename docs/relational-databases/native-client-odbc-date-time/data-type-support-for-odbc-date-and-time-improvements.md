@@ -1,12 +1,12 @@
 ---
-title: 数据类型支持 ODBC 日期和时间改进 |Microsoft 文档
+title: 数据类型为 ODBC 日期和时间改进的支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 970e40843b11679df67de56995606d077b583d1e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702628"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431286"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>数据类型支持 ODBC 日期和时间的改进
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 日期和时间改进的数据类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "35702628"
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|yyyy mm dd hh: mm: [.9999999]<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|年-月-日 hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
   
  日期/时间文字的 ODBC 转义序列没有更改。  
@@ -140,7 +140,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 如果**timezone_hour**为负， **timezone_minute**必须为负数或零。 如果**timezone_hour**为正、 **timezone_minute**必须为正数或零。 如果**timezone_hour**为零，s**timezone_minute**范围-59 到 +59 中可以具有任何值。  
+ 如果**timezone_hour**为负， **timezone_minute**必须为负数或零。 如果**timezone_hour**为正， **timezone_minute**必须为正数或零。 如果**timezone_hour**为零，则**timezone_minute** -59 到 + 59 范围内可能具有的任何值。  
   
 ## <a name="see-also"></a>请参阅  
  [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

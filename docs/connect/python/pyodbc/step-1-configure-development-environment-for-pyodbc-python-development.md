@@ -1,7 +1,7 @@
 ---
-title: 步骤 1： 配置 pyodbc Python 开发环境 |Microsoft 文档
+title: 步骤 1： 配置 pyodbc Python 开发环境 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,53 +14,41 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1491e68ea318f8a37f0f959f9432d410e0179a18
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309846"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890978"
 ---
-# <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步骤 1： 配置 pyodbc Python 开发的开发环境
+# <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步骤 1：配置用于 pyodbc Python 开发的开发环境
 
 ## <a name="windows"></a>Windows  
-通过使用 Python-在 Windows 上的 pyodbc 连接到 SQL 数据库：
+使用 Python-在 Windows 上的 pyodbc 连接到 SQL 数据库：
   
-1. **下载 Python 安装程序**  
-  如果您的计算机不具有 Python 请安装它。 请转到[Python 下载页](https://www.python.org/downloads/windows/)并下载适当的安装程序。 例如，如果您是在 64 位计算机上，下载 Python 2.7 或 3.5 (x64) 安装程序。  
+1. **下载 Python 安装程序**。  
+  如果你的计算机不具有 Python，请将其安装。 转到[Python 下载页](https://www.python.org/downloads/windows/)并下载适当的安装程序。 例如，如果您是在 64 位计算机上，下载 Python 2.7 或 3.7 (x64) 安装程序。  
   
-2. **安装 Python**安装在下载之后，执行以下操作：。 双击文件以启动安装程序。 B. 选择你的语言，并同意这些条款。 c. 按照屏幕上的说明和 Python 应安装在你的计算机上。 d. 可以通过转到 C:\Python27 或 C:\Python35 安装了 Python，运行 python-v 或 py v （针对 3.x)，它是验证 
+2. **安装 Python**。  下载安装程序后，执行以下步骤：。 双击该文件以启动安装程序。 B. 选择你的语言，并同意这些条款。 c. 按照屏幕上的说明，并应在计算机上安装 Python。 d. 你可以验证是否通过转到安装 Python`C:\Python27`或`C:\Python37`并运行`python -v`或`py -v`（适用于 3.x) 
       
-3. [**安装 Microsoft ODBC 驱动程序**](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+3. [**在 Windows 上安装 Microsoft ODBC Driver for SQL Server**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   
 4. **以管理员身份打开 cmd.exe**     
 
-5. **安装 Python 包管理器的 pyodbc 使用 pip-**
+5. **使用 pip 的 Python 包管理器安装 pyodbc** (替换`C:\Python27\Scripts`与你已安装的 Python 路径)
 ```  
-> cd C:\Python27\Scripts>  
+> cd C:\Python27\Scripts  
 > pip install pyodbc  
 ```  
 
   
 ## <a name="linux"></a>Linux 
-通过使用 Python-pyodbc Ubuntu 和 RedHat 上连接到 SQL 数据库：
+使用 Python-pyodbc 连接到 SQL 数据库：
   
 1. **打开终端**  
 
-2. **安装适用于 Linux 的 Microsoft ODBC Driver 13**适用于 Ubuntu 15.04 + 
-``` 
-> sudo su  
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-Ubuntu-b87369f0/file/154097/2/installodbc.sh  
-> sh installodbc.sh  
-```   
+2. [**在 Linux 上安装 Microsoft ODBC Driver for SQL Server**](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-  对于 RedHat 6，7 
-``` 
-> sudo su 
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
-> sh install.sh 
-```  
-  
 3.  **安装 pyodbc**  
 ```  
 > sudo -H pip install pyodbc

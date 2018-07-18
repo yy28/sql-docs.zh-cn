@@ -1,5 +1,6 @@
 # [实例管理](analysis-services-instance-management.md)  
 # [安装](../../analysis-services/instances/install-windows/install-analysis-services.md)
+# [验证 Analysis Services 累积更新内部版本](analysis-services-component-version.md)
 # [安装后配置](post-install-configuration-analysis-services.md)  
 ## [配置 Windows 防火墙](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [配置服务帐户](configure-service-accounts-analysis-services.md)  

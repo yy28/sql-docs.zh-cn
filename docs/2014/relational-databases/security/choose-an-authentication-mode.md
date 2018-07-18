@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.authenticationmode.f1
 helpviewer_keywords:
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1c2927e5d68ac41c9813dd623983e44b95b8ba53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 513a28480fbcd3c664b090ddcd68ebc0aa9df308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36017282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155918"
 ---
 # <a name="choose-an-authentication-mode"></a>选择身份验证模式
   在安装过程中，必须为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]选择身份验证模式。 可供选择的模式有两种：Windows 身份验证模式和混合模式。 Windows 身份验证模式会启用 Windows 身份验证并禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 混合模式会同时启用 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 Windows 身份验证始终可用，并且无法禁用。  
@@ -71,7 +70,7 @@ ms.locfileid: "36017282"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
-2.  在**运行**对话框中，键入`secpol.msc`，然后单击**确定**。  
+2.  在中**运行**对话框中，键入`secpol.msc`，然后单击**确定**。  
   
 3.  在 **“本地安全设置”** 应用程序中，依次展开 **“安全设置”**、 **“帐户策略”**，然后单击 **“密码策略”**。  
   

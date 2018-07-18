@@ -3,11 +3,6 @@ title: 管理 SQL Server 合作伙伴 | Microsoft Docs
 description: 提供监视 SQL Server 解决方案的第三方合作伙伴列表。
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,21 +10,22 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 80a7cceee6693b00e2bd61bbdb82229edef5d8d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: 6307fa14838afc49545875d56fed0bc2978b92ae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031944"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926388"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 要管理 SQL Server 服务，请从各种行业领先工具中进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的管理解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-management-partners"></a>我们的管理合作伙伴
-| Partner | Description | 链接 |
+| Partner | 描述 | 链接 |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL 合规性管理器是一种综合的审核解决方案，显示在 SQL Server 上由谁执行何种操作、何时执行、如何执行，以帮助确保符合法规和数据安全要求。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] | |
 

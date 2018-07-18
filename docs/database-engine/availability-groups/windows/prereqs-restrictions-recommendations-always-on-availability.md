@@ -1,7 +1,7 @@
 ---
 title: 先决条件、限制、建议 - AlwaysOn 可用性组 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769733"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934899"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>先决条件、限制、建议 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769733"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保此系统不是域控制器。|域控制器上不支持可用性组。|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保每台计算机正在运行 Windows Server 2012 或更高版本。|[安装 SQL Server 2016 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保每台计算机都是 WSFC 中的一个节点。|[Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保 WSFC 包含足够的节点来支持可用性组配置。|一个群集节点只能托管一个给定可用性组的一个可用性副本。 在某一给定的群集节点上，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的一个或多个实例可以托管多个可用性组的可用性副本。<br /><br /> 咨询数据库管理员，了解需要多少个群集节点才能支持计划的可用性组的可用性副本。<br /><br /> [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保 WSFC 包含足够的节点来支持可用性组配置。|群集节点可以为一个可用性组托管一个副本。 同一个节点不能托管来自同一可用性组的两个副本。 群集节点可以加入多个可用性组，每个组包含一个副本。 <br /><br /> 咨询数据库管理员，了解需要多少个群集节点才能支持计划的可用性组的可用性副本。<br /><br /> [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+
   
 > [!IMPORTANT]  
 >  另外，确保已正确配置了您的环境以连接到可用性组。 有关详细信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
@@ -170,8 +171,10 @@ ms.locfileid: "34769733"
   
     -   如果给定线程空闲一段时间，则将释放回常规 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 线程池。 正常情况下，不活动线程在处于不活动状态 15 秒后释放。 但是，根据上一次活动，空闲线程可能保留更长时间。  
 
-    - 对于次要副本，SQL Server 实例最多使用 100 个线程进行并行重做。 每个数据库最多使用 CPU 内核总数的一半，但是每个数据库不能超过 16 个线程。 如果单个实例的所需线程总数超过 100 个，则 SQL Server 会对每个其余数据库使用单个重做线程。 恢复线程将在处于不活动状态 15 秒后释放。 
-
+    -   对于次要副本，SQL Server 实例最多使用 100 个线程进行并行重做。 每个数据库最多使用 CPU 内核总数的一半，但是每个数据库不能超过 16 个线程。 如果单个实例的所需线程总数超过 100 个，则 SQL Server 会对每个其余数据库使用单个重做线程。 串行重做线程将在处于不活动状态约 15 秒后释放。 
+    
+    > [!NOTE]
+    > 基于数据库的升序数据库 ID 选择这些数据库使用单线程。 在这种情况下，对于托管可用性组数据库数量比可用工作线程数量多的 SQL Server 实例，应考虑其数据库创建顺序。 例如，在具有 32 个或更多个 CPU 内核的系统上，从加入可用性组的第 7 个数据库开始的所有数据库都将处于串行重做模式，不考虑每个数据库的实际重做工作负载。 应先将需要并行重做的数据库添加到可用性组。    
   
 -   此外，可用性组使用未共享的线程，如下所示：  
   

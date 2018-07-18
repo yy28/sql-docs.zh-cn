@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 的版本和组件 |Microsoft 文档
+title: SQL Server 2014 的版本和组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -34,36 +34,36 @@ helpviewer_keywords:
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 caps.latest.revision: 111
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450c54feb6d8e360ca812524778762751318aab7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0c27bcd84ddb567eaab1645fcee75f68d513855b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36025372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150108"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 的版本和组件
   根据应用程序的需要，安装要求会有所不同。 不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够满足单位和个人独特的性能、运行时以及价格要求。 安装哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件还取决于您的具体需要。 下面各节将帮助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的不同版本和可用组件中做出最佳选择。  
   
-## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>主要版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- 下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要版本。 有关详细信息，请参阅[支持的 SQL Server 2014 的版本功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>主体版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+ 下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要版本。 有关详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定义|  
 |---------------------------------------|----------------|  
-|Enterprise（64 位和 32 位）|作为高级版本， [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能 - 可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。|  
-|Business Intelligence（64 位和 32 位）|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence 版提供了综合性平台，可支持组织构建和部署安全、可扩展且易于管理的 BI 解决方案。 它提供令人兴奋的功能，如数据浏览和可视化效果; 基于浏览器功能强大的数据聚合型功能和增强的集成管理。|  
+|Enterprise（64 位和 32 位）|作为高级版本，[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能 - 可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。|  
+|Business Intelligence（64 位和 32 位）|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence 版提供了综合性平台，可支持组织构建和部署安全、可扩展且易于管理的 BI 解决方案。 它提供了令人兴奋的功能，如数据浏览和可视化效果; 基于浏览器功能强大的数据混合功能和增强的集成管理。|  
 |Standard（64 位和 32 位）|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署 - 有助于以最少的 IT 资源获得高效的数据库管理。|  
   
-## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>专业的版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>专业的版 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  专业化版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 面向不同的业务工作负荷。 下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的专业化版本。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Description|  
 |---------------------------------------|-----------------|  
 |Web（64 位和 32 位）|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web 版本是一项总拥有成本较低的选择。|  
   
-## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>延伸版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>扩展版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 延伸版是针对特定的用户应用而设计的，可免费获取或只需支付极少的费用。 下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的延伸版本。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Description|  
@@ -80,7 +80,7 @@ ms.locfileid: "36025372"
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于客户端/服务器应用程序  
  在运行直接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的客户端/服务器应用程序的计算机上，只能安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]客户端组件。 如果要在数据库服务器上管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，或者打算开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 应用程序，那么客户端组件安装也是一个不错的选择。  
   
- 客户端工具选项安装以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能：向后兼容性组件、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]、连接组件、管理工具、软件开发包和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书组件。 有关详细信息，请参阅[从安装向导安装 SQL Server 2014&#40;安装&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+ 客户端工具选项安装以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能：向后兼容性组件、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]、连接组件、管理工具、软件开发包和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书组件。 有关详细信息，请参阅[从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>选择 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装向导的“功能选择”页面选择安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]时要安装的组件。 默认情况下未选中树中的任何功能。  
