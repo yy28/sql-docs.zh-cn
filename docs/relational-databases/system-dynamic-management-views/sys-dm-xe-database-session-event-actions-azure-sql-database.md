@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_event_actions （Azure SQL 数据库） |Microsoft 文档
+title: sys.dm_xe_database_session_event_actions （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b52adfa82c532a8144e142f5d87c991a249becf8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468653"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040225"
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "34468653"
   
 ||  
 |-|  
-|**适用于**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何将来的版本。|  
+|**适用于**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和所有将来的版本。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 不可为 null。|  
 |action_name|**nvarchar(60)**|操作的名称。 不可为 null。|  
 |action_package_guid|**uniqueidentifier**|包含操作的包的 GUID。 不可为 null。|  
-|event_name|**nvarchar(60)**|操作绑定到事件的名称。 不可为 null。|  
-|event_package_guid|**uniqueidentifier**|包含事件的包 GUID。 不可为 null。|  
+|event_name|**nvarchar(60)**|操作绑定到该事件的名称。 不可为 null。|  
+|event_package_guid|**uniqueidentifier**|包含该事件的包 GUID。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求拥有 VIEW DATABASE STATE 权限。  
@@ -51,7 +51,7 @@ ms.locfileid: "34468653"
 |sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events.event_package_guid|多对一|  
 |sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|多对一|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

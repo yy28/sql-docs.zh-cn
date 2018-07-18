@@ -1,5 +1,5 @@
 ---
-title: 编程特定任务 |Microsoft 文档
+title: 编程特定的任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971692"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998120"
 ---
 # <a name="programming-specific-tasks"></a>编程特定的任务
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -59,6 +59,6 @@ ms.locfileid: "32971692"
 |[实现全文搜索](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|介绍如何在 SMO 中实现全文搜索目录和索引。|  
 |[实现终结点](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|介绍如何创建端点以处理用于数据库镜像、SOAP 请求和 Service Broker 的负载。|  
 |[创建和更新统计信息](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|介绍如何在 SMO 中设置和监视有关数据库的统计信息。|  
-|[跟踪和重播事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|介绍如何使用**跟踪**和**重播**在 SMO 中跟踪和重播事件的对象。|  
+|[跟踪和重播事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|介绍如何使用**跟踪**并**重播**在 SMO 中的跟踪和重播事件的对象。|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: not 函数 (XQuery) |Microsoft 文档
+title: not 函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3da41971a8af3fe92fc8c7034fa6cd749a68ac8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077654"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999809"
 ---
-# <a name="functions-on-boolean-values---not-function"></a>对布尔值的函数上不起作用 
+# <a name="functions-on-boolean-values---not-function"></a>基于布尔值的 not 函数的函数 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果返回 TRUE 的有效布尔值 *$arg*为 false，否则，返回 FALSE 的有效布尔值 *$arg*为 true。  
+  如果返回 TRUE 的有效的布尔值 *$arg*为 false，并且如果返回 FALSE 的有效的布尔值 *$arg*为 true。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,9 +49,9 @@ fn:not($arg as item()*) as xs:boolean
  具有有效布尔值一系列项。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml** AdventureWorks 数据库中的类型列。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 不包括使用 not() XQuery 函数查找其目录说明的产品型号\<规范 > 元素。  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 使用 not （） XQuery 函数查找产品型号目录说明不包括\<规范 > 元素。  
  以下查询将为目录说明中不包括 <`Specifications`> 元素的产品型号构造包含产品型号 ID 的 XML。  
   
 ```  
@@ -69,13 +69,13 @@ WHERE CatalogDescription.exist('
   
  请注意上述查询的以下方面：  
   
--   由于文档使用命名空间，因此示例将使用 WITH NAMESPACES 语句。 另一个选项是使用**声明命名空间**中的关键字[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义前缀。  
+-   由于文档使用命名空间，因此示例将使用 WITH NAMESPACES 语句。 另一种方法是使用**声明的命名空间**中的关键字[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)来定义前缀。  
   
--   该查询然后构造的 XML，包括 <`Product`> 元素并将其**ProductModelID**属性。  
+-   然后，查询将构造 XML 包含 <`Product`> 元素并将其**ProductModelID**属性。  
   
--   WHERE 子句使用[exist （） 方法 （XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)的行进行过滤。 **Exist （)** 方法返回 True，如果有\<ProductDescription > 元素不具有\<规范 > 子元素。 请注意，使用**not()** 函数。  
+-   WHERE 子句使用[exist （） 方法 （XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)若要筛选的行。 **Exist （)** 方法返回 True，如果有\<ProductDescription > 元素不具有\<规范 > 子元素。 请注意，使用**not （)** 函数。  
   
- 该结果集为空，因为每个产品型号目录说明包括\<规范 > 元素。  
+ 此结果集为空，因为每个产品型号目录说明包含\<规范 > 元素。  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. 使用 not() XQuery 函数检索没有 MachineHours 属性的生产车间  
  对 Instructions 列指定以下查询。 此列将存储产品型号的生产说明。  
@@ -97,9 +97,9 @@ WHERE ProductModelID=7
   
  在上述查询中，请注意以下内容：  
   
--   **Declarenamespace**中[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义生产说明命名空间前缀 Adventure Works。 它表示在生产说明文档中使用了相同的命名空间。  
+-   **Declarenamespace**中[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义 Adventure Works 生产说明命名空间前缀。 它表示在生产说明文档中使用了相同的命名空间。  
   
--   在查询中，**不 (@MachineHours)** 谓词返回 True，如果没有任何**MachineHours**属性。  
+-   在查询中，**不 (@MachineHours)** 谓词将返回 True，如果没有任何**MachineHours**属性。  
   
  结果如下：  
   
@@ -114,9 +114,9 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Not()** 函数仅支持类型 xs: boolean，或 node （） * 或空序列的自变量。  
+-   **Not （)** 函数只支持类型 xs: boolean 或 node （） * 或空序列的自变量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

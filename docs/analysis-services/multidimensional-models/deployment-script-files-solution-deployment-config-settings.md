@@ -1,5 +1,5 @@
 ---
-title: 指定的解决方案部署的配置设置 |Microsoft 文档
+title: 为解决方案部署指定配置设置 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f711dc12ed5014dbc397e5a72f97f55350da7d38
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020834"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002219"
 ---
-# <a name="deployment-script-files---solution-deployment-config-settings"></a>部署脚本文件的解决方案部署配置设置
+# <a name="deployment-script-files---solution-deployment-config-settings"></a>部署脚本文件-解决方案部署配置设置
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取的分区和角色的部署选项，使用部署脚本从中\<*项目名称*>.configsettings 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用当前项目的配置设置创建\<*项目名称*>.configsettings 文件。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取分区和角色部署选项，在部署脚本中使用\<*项目名称*>.configsettings 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用当前项目的配置设置来创建\<*项目名称*>.configsettings 文件。  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>检查部署的配置设置  
  以下是中存储的配置设置\<*项目名称*>.configsettings 文件：  
@@ -35,12 +35,12 @@ ms.locfileid: "34020834"
 -   **报表服务器** 此设置为数据库的每个多维数据集中定义的每个报表操作指定报表服务器和文件夹位置。  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>修改部署的配置设置  
- 在某些情况下，你可能需要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目使用比存储在不同的配置设置\<*项目名称*>.configsettings 文件。 例如，最好更改一个或多个数据源的连接字符串，或需要为特定的分区或度量值组指定存储位置。  
+ 在某些情况下，您可能需要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的配置设置中存储项目\<*项目名称*>.configsettings 文件。 例如，最好更改一个或多个数据源的连接字符串，或需要为特定的分区或度量值组指定存储位置。  
   
- 若要修改的分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，则必须更改中的此信息\<*项目名称*>.configsettings 文件，如下面的过程中所述。 无法更改项目中的分区和角色设置，因为*\<项目名称 >* **属性页**中的对话框[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不会显示这些选项。  
+ 若要修改分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，则必须更改此信息内的\<*项目名称*>.configsettings 文件中，如下面的过程中所述。 无法更改项目中的分区和角色设置，因为*\<项目名称 >* **属性页**中的对话框[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不显示这些选项。  
   
 > [!NOTE]  
->  配置设置可应用于所有对象，也可仅应用于新创建的对象。 仅当要将其他对象部署到以前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中，并且不希望覆盖现有对象时，才将配置设置应用于新创建的对象。 若要指定是否配置设置应用于所有对象，或只是为了新创建的违规时，在中设置此选项\<*项目名称*>.deploymentoptions 文件。 有关详细信息，请参阅[指定分区和角色部署选项](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)。  
+>  配置设置可应用于所有对象，也可仅应用于新创建的对象。 仅当要将其他对象部署到以前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中，并且不希望覆盖现有对象时，才将配置设置应用于新创建的对象。 若要指定配置设置应用于所有对象还是仅新创建的设置此选项\<*项目名称*>.deploymentoptions 文件。 有关详细信息，请参阅 [指定分区和角色部署选项](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)。  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>在生成输入文件后更改配置设置  
   
@@ -52,9 +52,9 @@ ms.locfileid: "34020834"
   
      — 或 —  
   
--   修改\<*项目名称*>.configsettings 文件使用的任何文本编辑器。  
+-   修改\<*项目名称*> 使用任何文本编辑器来.configsettings 文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指定安装目标](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
  [指定分区和角色部署选项](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
  [指定处理选项](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  

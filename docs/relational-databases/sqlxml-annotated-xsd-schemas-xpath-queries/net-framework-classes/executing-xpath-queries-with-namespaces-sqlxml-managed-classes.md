@@ -1,5 +1,5 @@
 ---
-title: 执行 XPath 查询的命名空间 （SQLXML 托管类） |Microsoft 文档
+title: 执行带命名空间的 XPath 查询 （SQLXML 托管类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,25 +25,25 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b068d1d9848a7c462833d54fa6e92268fc83433f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969052"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051485"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>执行带命名空间的 XPath 查询（SQLXML 托管类）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XPath 查询可以包含命名空间。 如果架构元素为限定命名空间（使用目标命名空间），则针对该架构的 XPath 查询必须指定该命名空间。  
   
- 由于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解决前缀，使用命名空间属性指定的命名空间绑定。  
+ 由于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解析此前缀，使用命名空间属性指定命名空间绑定。  
   
- 在下面的示例中，XPath 查询指定的命名空间使用的通配符字符 (\*) 和 local-name() 和 namespace-uri() XPath 函数。 此 XPath 查询返回的所有元素，其中的本地名称是**员工**和命名空间 URI 是**urn: myschema:Contacts**:  
+ 在以下示例中，XPath 查询指定命名空间使用通配符字符 (\*) 和 local-name （) and namespace-uri （) XPath 函数。 此 XPath 查询返回所有元素，其中的本地名称是**员工**和命名空间 URI 为**urn: myschema:Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- 在 SQLXML 4.0 中，用命名空间前缀来指定此 XPath 查询。 一个示例是**x: Contact**，其中**x**的命名空间前缀。 请看以下 XSD 架构：  
+ 在 SQLXML 4.0 中，用命名空间前缀来指定此 XPath 查询。 例如， **x： 请联系**，其中**x**为命名空间前缀。 请看以下 XSD 架构：  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -59,9 +59,9 @@ ms.locfileid: "32969052"
 </schema>  
 ```  
   
- 此架构定义目标命名空间，因为此架构的 XPath 查询 （如"Employee") 必须包含命名空间。  
+ 此架构所定义的目标命名空间，因为 （例如"Employee") 针对此架构的 XPath 查询必须包括命名空间。  
   
- 以下 C# 应用程序示例针对前述 XSD 架构 (MySchema.xml) 执行 XPath 查询。 若要解决前缀，请使用 SqlXmlCommand 对象的命名空间属性指定命名空间绑定。  
+ 以下 C# 应用程序示例针对前述 XSD 架构 (MySchema.xml) 执行 XPath 查询。 若要解析此前缀，请使用 SqlXmlCommand 对象的命名空间属性指定命名空间绑定。  
   
 > [!NOTE]  
 >  在该代码中，必须在连接字符串中提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
@@ -103,7 +103,7 @@ class Test
   
 1.  将在该示例中提供的 XSD 架构 (MySchema.xml) 保存到某个文件夹中。  
   
-2.  在此示例中的架构存储在其中的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+2.  在此示例中在其中存储架构的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 3.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   

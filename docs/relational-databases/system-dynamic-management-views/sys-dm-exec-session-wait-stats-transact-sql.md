@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_session_wait_stats (Transact SQL) |Microsoft 文档
+title: sys.dm_exec_session_wait_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d5932d5fa878f3816c636b6106c2723a40834be
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465073"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046065"
 ---
-# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (TRANSACT-SQL)
+# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  返回有关遇到的每个会话中执行的线程的所有等待的信息。 您可以使用此视图来诊断性能问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会话和也与特定查询和批处理。  此视图返回会话为聚合的相同信息[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但提供**session_id**以及数。  
+  返回有关线程所执行的每个会话遇到的所有等待的信息。 可以使用此视图来诊断性能问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会话和特定查询和批处理。  此视图返回会话相同的聚合的信息[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)提供，但**session_id**数量和。  
   
 **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
@@ -43,16 +43,16 @@ ms.locfileid: "34465073"
 |max_wait_time_ms|**bigint**|该等待类型的最长等待时间。|  
 |signal_wait_time_ms|**bigint**|正在等待的线程从收到信号通知到其开始运行之间的时差。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当打开会话时，或重置会话时，此 DMV 重置会话的信息 (如果连接池)，  
   
- 有关的等待类型的信息，请参阅[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。  
+ 有关等待类型的信息，请参阅[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- 如果用户具有**VIEW SERVER STATE**服务器上的权限，用户将看到执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户将看到的只对当前会话。  
+ 如果用户具有**VIEW SERVER STATE**服务器上的权限，用户会执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户会看到仅为当前会话。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
  

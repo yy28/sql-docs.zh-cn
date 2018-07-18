@@ -1,6 +1,6 @@
 ---
-title: 在 Linux 上的 SQL Server 的性能功能入门 |Microsoft 文档
-description: 本文提供为 Linux 用户的新 SQL Server 的 SQL Server 性能功能的介绍。 许多这些示例适用于所有平台，但这篇文章的上下文是 Linux。
+title: 开始使用 Linux 上的 SQL Server 的性能特点 |Microsoft Docs
+description: 本文提供的 Linux 用户刚接触 SQL Server 的 SQL Server 性能功能的介绍。 许多这些示例适用于所有平台，但这篇文章的上下文是 Linux。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,11 +13,11 @@ ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
 ms.openlocfilehash: 91a83740d83cb6e121d8ea413cf6322f75b68dff
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001849"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上 SQL Server 的性能功能演练
 
@@ -26,7 +26,7 @@ ms.locfileid: "34323418"
 如果你是刚接触 SQL Server 的 Linux 用户，以下任务会指导你完成某些性能任务。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 在每个示例中，均提供该领域的详细文档链接。
 
 > [!NOTE]
-> 以下示例使用 AdventureWorks 示例数据库。 有关如何获取和安装此示例数据库的说明，请参阅[从 Windows 的 SQL Server 数据库还原到 Linux](sql-server-linux-migrate-restore-database.md)。
+> 以下示例使用 AdventureWorks 示例数据库。 有关如何获取和安装此示例数据库的说明，请参阅[SQL Server 数据库从 Windows 还原到 Linux](sql-server-linux-migrate-restore-database.md)。
 
 ## <a name="create-a-columnstore-index"></a>创建列存储索引
 列存储索引是使用列式数据格式（称为列存储）存储和查询大量数据的技术。  
@@ -66,7 +66,7 @@ ms.locfileid: "34323418"
 SQL Server 提供的内存中 OLTP 功能可极大提升应用程序系统的性能。  《评估指南》中的本节内容将介绍如何创建存储在内存中的内存优化表，以及创建无需编译或解释即可访问表的本机编译的存储过程。
 
 ### <a name="configure-database-for-in-memory-oltp"></a>配置内存中 OLTP 的数据库
-1. 建议将数据库的兼容级别至少设置为 130，以使用内存中 OLTP。  使用以下查询来检查 AdventureWorks 的当前兼容级别：  
+1. 建议将数据库的兼容级别至少设置为 130，以使用内存中 OLTP。  使用以下查询检查 AdventureWorks 的当前兼容性级别：  
 
    ```sql
    USE AdventureWorks

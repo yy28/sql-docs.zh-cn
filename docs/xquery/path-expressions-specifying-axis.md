@@ -1,5 +1,5 @@
 ---
-title: 在路径表达式步骤中指定轴 |Microsoft 文档
+title: 在路径表达式步骤中指定轴 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -30,20 +30,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2acb1aa6b9eddd2cf30f97da0d594db56b94e456
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077944"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046875"
 ---
-# <a name="path-expressions---specifying-axis"></a>路径表达式的指定轴
+# <a name="path-expressions---specifying-axis"></a>路径表达式-指定轴
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   路径表达式中的轴步骤包括以下部分：  
   
 -   轴  
   
--   A[节点测试](../xquery/path-expressions-specifying-node-test.md)  
+-   一个[节点测试](../xquery/path-expressions-specifying-node-test.md)  
   
 -   [（可选） 的零个或多个步骤限定符](../xquery/path-expressions-specifying-predicates.md)  
   
@@ -60,15 +60,15 @@ ms.locfileid: "33077944"
 |**self**|返回上下文节点本身。|  
 |**descendant-or-self**|返回上下文节点及其所有后代。|  
   
- 所有这些轴，除**父**轴，是正轴。 **父**轴是反向轴，因为它会在文档层次结构中向后搜索。 例如，相对路径表达式 `child::ProductDescription/child::Summary` 包含两个步骤，每个步骤均指定一个 `child` 轴。 第一步检索\<ProductDescription > 元素的上下文节点的子级。 每个\<ProductDescription > 元素节点的第二步检索\<摘要 > 子元素节点。  
+ 所有这些轴，除**父**轴，是正轴。 **父**轴是反向轴，因为它会在文档层次结构中向后搜索。 例如，相对路径表达式 `child::ProductDescription/child::Summary` 包含两个步骤，每个步骤均指定一个 `child` 轴。 第一步是检索\<ProductDescription > 上下文节点的子元素。 每个\<ProductDescription > 元素节点，第二步检索\<摘要 > 元素节点子级。  
   
- 相对路径表达式 `child::root/child::Location/attribute::LocationID` 包含三个步骤。 前两个步骤各指定一个 `child` 轴，第三步是指定 `attribute` 轴。 对生产说明 XML 文档中的执行时**Production.ProductModel**表，该表达式将返回`LocationID`属性\<位置 >的子元素节点\<根 > 元素。  
+ 相对路径表达式 `child::root/child::Location/attribute::LocationID` 包含三个步骤。 前两个步骤各指定一个 `child` 轴，第三步是指定 `attribute` 轴。 执行的生产说明中的 XML 文档时**Production.ProductModel**表，该表达式将返回`LocationID`属性的\<位置 > 元素节点子级的\<根 > 元素。  
   
 ## <a name="examples"></a>示例  
- 针对指定的此主题中的查询示例**xml**类型中的列**AdventureWorks**数据库。  
+ 本主题中的查询示例指定对**xml**类型列中的**AdventureWorks**数据库。  
   
 ### <a name="a-specifying-a-child-axis"></a>A. 指定 child 轴  
- 对于特定产品的模型中，以下查询会检索\<功能 > 元素节点子级的\<ProductDescription > 元素节点从存储中的产品目录说明`Production.ProductModel`表。  
+ 有关某个特定产品型号，以下查询检索\<功能 > 元素节点子级\<ProductDescription > 元素节点从产品目录说明存储在`Production.ProductModel`表。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -82,10 +82,10 @@ WHERE ProductModelID=19
   
 -   `query()`方法**xml**数据类型指定的路径表达式。  
   
--   路径表达式中的两个步骤都指定一个 `child` 轴和节点名称（`ProductDescription` 和 `Features`）作为节点测试。 有关节点测试的信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)。  
+-   路径表达式中的两个步骤都指定一个 `child` 轴和节点名称（`ProductDescription` 和 `Features`）作为节点测试。 有关节点测试的信息，请参阅[路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)。  
   
 ### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. 指定 descendant 轴和 descendant-or-self 轴  
- 以下示例使用 descendant 轴和 descendant-or-self 轴。 此示例中的查询指定针对**xml**类型变量。 该 XML 实例经过简化以方便说明生成的结果中的差异。  
+ 以下示例使用 descendant 轴和 descendant-or-self 轴。 指定在此示例中查询**xml**类型的变量。 该 XML 实例经过简化以方便说明生成的结果中的差异。  
   
 ```  
 declare @x xml  
@@ -118,7 +118,7 @@ select @y
   
  `/child::a/child::b/descendant::*`，则您请求的是 <`b`> 元素节点的所有后代。  
   
- 节点测试中的星号 (*) 以一个节点测试表示节点名称。 因此，descendant 轴的主节点类型（元素节点）确定返回节点的类型。 即表达式返回所有元素节点。 但不返回文本节点。 有关主节点类型和节点测试其关系的详细信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)主题。  
+ 节点测试中的星号 (*) 以一个节点测试表示节点名称。 因此，descendant 轴的主节点类型（元素节点）确定返回节点的类型。 即表达式返回所有元素节点。 但不返回文本节点。 有关主节点类型和及其与节点测试的关系的详细信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)主题。  
   
  此时返回元素节点 <`c`> 和 <`d`>，结果如下所示：  
   
@@ -147,7 +147,7 @@ select @y
 <d>text3</d>   
 ```  
   
- 下面的示例查询针对**AdventureWorks**数据库检索的所有子代元素节点 <`Features`> 子元素的 <`ProductDescription`> 元素：  
+ 下面的示例查询针对**AdventureWorks**数据库中检索的所有后代元素节点 <`Features`> 元素子级的 <`ProductDescription`> 元素：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -182,7 +182,7 @@ WHERE  ProductModelID=19
   
  以下是一个关于 parent 轴的更为有用的示例。  
   
- 存储在每个产品型号目录说明**CatalogDescription**列**ProductModel**表具有`<ProductDescription>`元素具有`ProductModelID`属性和`<Features>`子元素，如以下片段中所示：  
+ 存储在每个产品型号目录说明**CatalogDescription**的列**ProductModel**表具有`<ProductDescription>`具有元素`ProductModelID`属性和`<Features>`子元素，如以下片段中所示：  
   
 ```  
 <ProductDescription ProductModelID="..." >  

@@ -1,5 +1,5 @@
 ---
-title: sys.endpoint_webmethods (Transact SQL) |Microsoft 文档
+title: sys.endpoint_webmethods (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 56939639112a61054b6896a00a978f84fc4c51fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181723"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998059"
 ---
 # <a name="sysendpointwebmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,17 @@ ms.locfileid: "33181723"
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|定义了 Web 方法的端点的 ID。|  
 |namespace|**nvarchar(384)**|Web 方法的命名空间。|  
-|method_alias|**nvarchar(64)**|方法的别名。<br /><br /> 注意：[!INCLUDE[tsql](../../includes/tsql-md.md)]标识符允许不在中是合法 WSDL 方法名称的字符。<br /><br /> 别名用于将端点 WSDL 说明中公开的名称映射到调用 Web 方法时调用的实际基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可执行对象。|  
-|object_name|**nvarchar(776)**|Web 方法重定向到的对象名称，在 NAME = 选项中指定。 名称部分由句点 （.） 分隔的分隔使用方括号， `[``]`。<br /><br /> 对象名称必须由三个部分组成，在 WSDL 选项中指定。|  
+|method_alias|**nvarchar(64)**|方法的别名。<br /><br /> 注意：[!INCLUDE[tsql](../../includes/tsql-md.md)]标识符允许法律 WSDL 方法名称中的字符。<br /><br /> 别名用于将端点 WSDL 说明中公开的名称映射到调用 Web 方法时调用的实际基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可执行对象。|  
+|object_name|**nvarchar(776)**|Web 方法重定向到的对象名称，在 NAME = 选项中指定。 名称部分由句点 （.） 分隔，并使用括号分隔`[``]`。<br /><br /> 对象名称必须由三个部分组成，在 WSDL 选项中指定。|  
 |result_schema|**tinyint**|确定将哪个 XSD（如果有）与响应一起发回的选项。<br /><br /> 0 = 无<br /><br /> 1 = Standard<br /><br /> 2 = Default|  
 |result_schema_desc|**nvarchar(60)**|确定将哪个 XSD（如果有）与响应一起发回的选项的说明。<br /><br /> 无<br /><br /> STANDARD<br /><br /> DEFAULT|  
-|result_format|**tinyint**|确定如何在响应中设置结果格式的选项。<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  
+|result_format|**tinyint**|确定如何在响应中设置结果格式的选项。<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = 无|  
 |result_format_desc|**nvarchar(60)**|确定如何在响应中设置结果格式的选项的说明。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> 无|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [终结点目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 托管备份存储的过程 (Transact SQL) |Microsoft 文档
+title: 托管备份的存储的过程 (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9a7903f06c1e38e9ff34210e01c3da72fd2e3c35
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236412"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046025"
 ---
-# <a name="managed-backup-stored-procedures-transact-sql"></a>托管备份的存储的过程 (TRANSACT-SQL)
+# <a name="managed-backup-stored-procedures-transact-sql"></a>托管备份的存储的过程 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   可以使用以下存储的过程来配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
-## <a name="in-this-section"></a>在本节中  
+## <a name="in-this-section"></a>本节内容  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)  
   
  [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "33236412"
   
  [managed_backup.sp_backup_on_demand (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

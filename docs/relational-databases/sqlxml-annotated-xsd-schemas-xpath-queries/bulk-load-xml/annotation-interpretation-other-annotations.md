@@ -1,5 +1,5 @@
 ---
-title: 其他批注 (SQLXML 4.0) |Microsoft 文档
+title: 其他批注 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,13 +28,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967112"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053966"
 ---
-# <a name="annotation-interpretation---other-annotations"></a>批注解释的其他批注
+# <a name="annotation-interpretation---other-annotations"></a>批注解释-其他批注
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   除本节上文的主题中介绍的批注之外，XML 大容量加载还解释了以下其他批注：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "32967112"
  **sql:key-fields**  
  XML 大容量加载始终忽略此批注。  
   
-## <a name="see-also"></a>另请参阅  
- [批注解释 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [批注解释&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。内容 (DMX) |Microsoft 文档
+title: SELECT FROM&lt;模型&gt;。内容 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040345"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。内容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  从内容架构行集派生的一组列，各列间以逗号分隔。  
   
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
  *条件表达式*  
  可选。 一个限制条件，用于限制从列列表返回的值。  
@@ -47,12 +47,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>Remarks  
- **SELECT FROM** *\<模型 > * * *。内容** 语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 你可以使用**SELECT FROM\<模型 >。内容**语句以返回模型的 NODE_RULE 列中值。  
+ **SELECT FROM** *\<模型 > * * *。内容** 语句可以返回特定于每个算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 可以使用**SELECT FROM\<模型 >。内容**语句来返回模型的 NODE_RULE 列中的值。  
   
  下表列出了挖掘模型内容中包含的列。  
   
 > [!NOTE]  
->  算法可能会为了正确表示内容而对列做出不同的解释。 挖掘模型内容每个算法，以及如何解释和查询挖掘模型内容的每个模型类型提示的说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+>  算法可能会为了正确表示内容而对列做出不同的解释。 有关挖掘模型内容的每个算法和有关如何解释和查询挖掘模型内容的每个模型类型提示的说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 |CONTENT 行集列|Description|  
 |---------------------------|-----------------|  
@@ -89,10 +89,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 下面的查询使用**IsDescendant**函数以返回在前面的查询返回的节点的直属子对象。  
+ 下面的查询使用**IsDescendant**函数以返回前面的查询中返回的节点的直接子级。  
   
 > [!NOTE]  
->  因为 NODE_NAME 的值是字符串，不能使用嵌套 select 语句的自变量作为返回，通过 NODE_ID **IsDescendant**函数。  
+>  由于 NODE_NAME 的值是一个字符串，不能使用嵌套 select 语句返回 node_id，以作为的参数**IsDescendant**函数。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   

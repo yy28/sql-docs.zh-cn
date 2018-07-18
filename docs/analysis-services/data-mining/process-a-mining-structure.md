@@ -1,5 +1,5 @@
 ---
-title: 处理挖掘结构 |Microsoft 文档
+title: 处理挖掘结构 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017124"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999729"
 ---
 # <a name="process-a-mining-structure"></a>处理挖掘结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "34017124"
   
      如果更改了结构，则在处理模型之前，系统会提示您重新部署该结构。 单击 **“是”**。  
   
-2.  单击**运行**中**处理挖掘结构\<结构 >** 对话框。  
+2.  单击**运行**中**处理挖掘结构-\<结构 >** 对话框。  
   
      **“处理进度”** 对话框将打开以显示有关模型处理的详细信息。  
   
 3.  模型处理完成后，在 **“处理进度”** 对话框中单击 **“关闭”** 。  
   
-4.  单击**关闭**中**处理挖掘结构\<结构 >** 对话框。  
+4.  单击**关闭**中**处理挖掘结构-\<结构 >** 对话框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IsInNode (DMX) |Microsoft 文档
+title: IsInNode (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21c90bea43972f1c9088c228d6810b18308f93f4
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841700"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992669"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ IsInNode(<NodeID>)
  一种布尔值类型。  
   
 ## <a name="remarks"></a>Remarks  
- **IsInNode**仅用在[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md)查询。  
+ **IsInNode**只用于[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)并[FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md)查询。  
   
 ## <a name="examples"></a>示例  
  以下示例返回所有用于创建与 IsInNode 函数中所指定节点关联的模型的事例。  
@@ -43,8 +43,8 @@ WHERE IsInNode('0')
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

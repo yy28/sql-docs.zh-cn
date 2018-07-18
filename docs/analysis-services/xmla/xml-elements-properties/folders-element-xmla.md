@@ -1,5 +1,5 @@
 ---
-title: Folders 元素 (XMLA) |Microsoft 文档
+title: Folders 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 803ec660944663c7f40f1b7c9dddc118b8b6b76c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050555"
 ---
 # <a name="folders-element-xmla"></a>Folders 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34575399"
 </Location>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "34575399"
   
 ## <a name="see-also"></a>另请参阅
  [Restore 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [同步元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

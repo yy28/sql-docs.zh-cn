@@ -1,5 +1,5 @@
 ---
-title: 目标元素 (ASSL) |Microsoft 文档
+title: Target 元素 (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 98ec5c729f5735343f5eaa87e5232fcfb138cf38
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038321"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045775"
 ---
 # <a name="target-element-assl"></a>Target 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "34038321"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|字符串|  
-|默认值|无|  
+|数据类型和长度|String|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -44,10 +44,10 @@ ms.locfileid: "34038321"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[操作](../../../analysis-services/scripting/objects/action-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
- 此元素的预期值取决于值[TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md)的父元素**操作**。 下表说明的预期值**目标**基于值**TargetType**。  
+## <a name="remarks"></a>Remarks  
+ 此元素的预期值取决于的值[TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md)父元素**操作**。 下表描述了预期值**目标**值的基础**TargetType**。  
   
 |TargetType 值|预期值|  
 |----------------------|--------------------|  
@@ -59,9 +59,9 @@ ms.locfileid: "34038321"
 |*级别 LevelMembers*|级别的名称。|  
 |*属性 AttributeMembers*|属性的名称。|  
   
- 对应于的父元素**目标**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Action>。  
+ 父级对应的元素**目标**在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  
   
-## <a name="see-also"></a>另请参阅  
- [属性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>请参阅  
+ [属性&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 涉及层次结构的 XQueries |Microsoft 文档
+title: 涉及层次结构的 XQueries |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,21 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048287"
 ---
 # <a name="xqueries-involving-hierarchy"></a>涉及层次结构的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  大多数**xml**类型中的列**AdventureWorks**数据库是半结构化的文档。 因此，每行中存储的文档可能看起来不同。 本主题中的查询示例说明如何从这些不同的文档提取信息。  
+  大多数**xml**类型列中的**AdventureWorks**数据库是半结构化的文档。 因此，每行中存储的文档可能看起来不同。 本主题中的查询示例说明如何从这些不同的文档提取信息。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 从生产说明文档检索生产车间以及这些生产车间的第一个生产步骤  
- 对于产品型号 7，查询将构造 XML 包含 <`ManuInstr`> 元素，与**ProductModelID**和**ProductModelName**特性，和一个或多个 <`Location`>子元素。  
+ 对于产品型号 7，该查询将构造 XML 包含 <`ManuInstr`> 元素，与**ProductModelID**和**ProductModelName**属性，以及一个或多个 <`Location`>子元素。  
   
  每个 <`Location`> 元素具有它自己的属性集和一个 <`step`> 子元素。 此 <`step`> 子元素是生产车间的第一个生产步骤。  
   
@@ -67,13 +67,13 @@ WHERE ProductModelID=7
   
 -   上下文切换标记 {) 和 (} 用于将查询从 XML 构造切换到查询计算。  
   
--   **Sql:column()** 用于正在构造的 XML 中包含的关系的值。  
+-   **Sql: column**用于正在构造的 XML 中包括关系值。  
   
 -   在构造 <`Location`> 元素时，$wc/@* 将检索所有生产车间属性。  
   
--   **String （)** 函数返回的字符串值从 <`step`> 元素。  
+-   **String （)** 函数返回的字符串值 <`step`> 元素。  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -121,7 +121,7 @@ WHERE ContactID = 1
   
  若要只检索顶级电话号码（即 <`AdditionalContactInfo`> 的 <`telephoneNumber`> 子元素），查询中的 FOR 表达式应变为  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`中创建已分区表或索引。  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`的用户。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   

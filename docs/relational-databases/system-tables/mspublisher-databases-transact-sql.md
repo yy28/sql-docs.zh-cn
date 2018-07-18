@@ -1,5 +1,5 @@
 ---
-title: MSpublisher_databases (Transact SQL) |Microsoft 文档
+title: MSpublisher_databases (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,25 +26,25 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 130a176655a7574903e85aa6cfa55037ca977448
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993499"
 ---
 # <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSpublisher_databases**表包含每个发布服务器发布服务器/数据库对由本地分发服务器提供服务的一个行。 此表存储在分发数据库中。  
+  **MSpublisher_databases**表包含每个发布服务器/发布服务器数据库对由本地分发服务器提供服务的一个行。 此表存储在分发数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**int**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**id**|**int**|行的 ID。|  
-|**publisher_engine_edition**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的版本，可以是下列值之一：<br /><br /> **10** = 个人版<br /><br /> **11** = 桌面引擎 (MSDE)<br /><br /> **20** = standard<br /><br /> **21** = 工作组<br /><br /> **30** = Enterprise （评估版）<br /><br /> **31** = 开发人员<br /><br /> **40** = express （Express 不能为发布服务器。 提供此值是为了确保完整性。）|  
+|**publisher_engine_edition**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的版本，可以是下列值之一：<br /><br /> **10** = 个人版<br /><br /> **11** = 桌面引擎 (MSDE)<br /><br /> **20** = 标准<br /><br /> **21** = 工作组<br /><br /> **30** = Enterprise （评估版）<br /><br /> **31** = 开发人员<br /><br /> **40** = express （Express 不能是发布服务器。 提供此值是为了确保完整性。）|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

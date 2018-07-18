@@ -1,5 +1,5 @@
 ---
-title: 访问在.NET 环境中的 SQLXML 功能 |Microsoft 文档
+title: 在.NET 环境中访问 SQLXML 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 023ffb86d8be4e2a6ba3dd897bdd64460824926b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051475"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>在 .NET 环境中访问 SQLXML 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

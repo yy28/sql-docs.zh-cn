@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_catalogs (Transact SQL) |Microsoft 文档
+title: sp_help_fulltext_catalogs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5490c7e8d8658ddc8048e63d082d48ea92249c08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243390"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989349"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33243390"
   返回指定的全文目录的 ID、名称、根目录、状态以及全文索引表的数量。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)改用目录视图。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)目录视图。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 下表显示结果集，这按排序**ftcatid**。  
+ 此表显示了结果集，按排序**ftcatid**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -77,10 +77,10 @@ EXEC sp_help_fulltext_catalogs 'Cat_Desc' ;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [FULLTEXTCATALOGPROPERTY & #40;Transact SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_catalog &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [sp_fulltext_catalog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

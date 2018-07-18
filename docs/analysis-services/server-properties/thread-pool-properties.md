@@ -1,5 +1,5 @@
 ---
-title: 线程池属性 |Microsoft 文档
+title: 线程池属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239247"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050598"
 ---
 # <a name="thread-pool-properties"></a>线程池属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程处理许多操作，通过并行运行多个作业提高总体服务器性能。 为了更高效地管理线程， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用线程池预分配线程并提高下一作业的线程可用性。  
   
- 每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都维护自己的一组线程池。 表格和多维实例使用线程池的方式存在差异。 例如，只有多维实例才使用 **IOProcess** 线程池。 在这种情况下， **PerNumaNode**此文章中描述的属性不是对表格实例有意义。 在下面的 [属性参考](#bkmk_propref) 部分中，为每个属性列出了模式要求。
+ 每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都维护自己的一组线程池。 表格和多维实例使用线程池的方式存在差异。 例如，只有多维实例才使用 **IOProcess** 线程池。 在这种情况下， **PerNumaNode**属性，此文章中所述不是针对表格实例有意义。 在下面的 [属性参考](#bkmk_propref) 部分中，为每个属性列出了模式要求。
   
  本文包含以下各节：  
   
@@ -189,13 +189,13 @@ ms.locfileid: "35239247"
   
  忽略 NUMA 节点。 将只有一个 IOProcess 线程池，并将使该线程池中的所有线程与所有逻辑处理器关联。 默认情况下（其中 PerNumaNode=-1），如果计算机具有的 NUMA 节点少于 4 个，则这是合适的设置。  
   
- ![Numa、 处理器和线程池 correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、 处理器和线程池 correspondance")  
+ ![Numa、 处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、 处理器和线程池通信")  
   
  **设置 PerNumaNode=1**  
   
  为每个 NUMA 节点创建 IOProcess 线程池。 具有不同的线程池可改进对本地资源（如 NUMA 节点上的本地缓存）的协调访问。  
   
- ![Numa、 处理器和线程池 correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、 处理器和线程池 correspondance")  
+ ![Numa、 处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、 处理器和线程池通信")  
   
  **设置 PerNumaNode=2**  
   
@@ -203,7 +203,7 @@ ms.locfileid: "35239247"
   
  在以下示例中，在具有 4 个 NUMA 节点和 32 个逻辑处理器的系统上，将 **PerNumaNode** 设置为 2 会产生 32 个 IOProcess 线程池。 前 8 个线程池中的线程将关联到 NUMA 节点 0 中的所有逻辑处理器，但理想的处理器设置为 0、1、2 直到 7。 接下来的 8 个线程池将关联到 NUMA 节点 1 中的所有逻辑处理器，而理想的处理器设置为 8、9、10 直到 15，以此类推。  
   
- ![Numa、 处理器和线程池 correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、 处理器和线程池 correspondance")  
+ ![Numa、 处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、 处理器和线程池通信")  
   
  在此关联水平上，计划程序始终会尝试先使用首选 NUMA 节点内的理想逻辑处理器。 如果逻辑处理器不可用，计划程序将选择同一节点内的另一个处理器，或在其他线程不可用时选择同一处理器组中的处理器。 有关详细信息和示例，请参阅 [Analysis Services 2012 配置设置（Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "35239247"
  [处理器组](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
  [SQL Server 2012 中的 analysis Services 线程池更改](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 配置设置 （Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [支持有超过 64 台处理器的系统](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [支持具有 64 个以上处理器的系统](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843020"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998579"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  返回**true**如果指定的子查询返回至少有一行。  
+  返回 **，则返回 true**如果指定的子查询返回至少有一行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,10 +30,10 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>参数  
  *subquery*  
- SELECT 语句的窗体 SELECT * FROM\<列名称 > [其中\<谓词的列表 >]。  
+ SELECT 语句的窗体 SELECT * FROM\<列名称 > [其中\<谓词列表 >]。  
   
 ## <a name="result-type"></a>结果类型  
- 返回**true**如果子查询返回的结果集包含至少一个行; 否则，返回**false**。  
+ 返回 **，则返回 true**如果子查询返回的结果集包含至少一个行; 否则，返回**false**。  
   
 ## <a name="remarks"></a>Remarks  
  可以在 EXISTS 前面使用 NOT 关键字：例如 `WHERE NOT EXISTS (<subquery>)`。  
@@ -43,7 +43,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>示例  
  可使用 EXISTS 和 NOT EXISTS 检查嵌套表中的条件。 这在创建控制定型或测试数据挖掘模型所使用的数据的筛选器时，将很有用。 有关详细信息，请参阅[挖掘模型筛选器（Analysis Services - 数据挖掘）](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
- 下面的示例基于`[Association]`挖掘结构和挖掘模型中创建[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 该查询仅返回其中客户至少购买一个 patch kit 的那些事例。  
+ 下面的示例基于`[Association]`挖掘结构和挖掘模型中创建[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 该查询仅返回其中客户至少购买一个 patch kit 的那些事例。  
   
 ```  
 SELECT * FROM [Association].CASES  
@@ -54,7 +54,7 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- 若要查看此查询返回的相同数据的另一种方法是在关联查看器中打开该模型中，右键单击此项集**修补程序工具包 = 现有**，选择**钻取**选项，然后再选中**仅模型用例**。  
+ 若要查看此查询返回的相同数据的另一个方法是在关联查看器中打开该模型中，右键单击项集**Patch kit = Existing**，选择**钻取**选项，然后选择**仅模型事例**。  
   
 ## <a name="see-also"></a>请参阅  
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   

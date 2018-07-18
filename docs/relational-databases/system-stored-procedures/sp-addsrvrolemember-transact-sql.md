@@ -1,5 +1,5 @@
 ---
-title: sp_addsrvrolemember (TRANSACT-SQL) |Microsoft 文档
+title: sp_addsrvrolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056095"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @loginame **=** ] *****登录*****  
+ [ @loginame **=** ] **'***登录*****  
  将添加到固定服务器角色中的登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
   
- [ @rolename **=** ] *****角色*****  
- 要添加登录名的固定服务器角色的名称。 *角色*是**sysname**，默认值为 NULL，并且必须是以下值之一：  
+ [ @rolename **=** ] **'***角色*****  
+ 要添加登录名的固定服务器角色的名称。 *角色*是**sysname**，默认值为 NULL，并且必须是下列值之一：  
   
 -   sysadmin  
   
@@ -73,14 +73,14 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在将登录名添加到固定服务器角色时，该登录名将获得与该角色相关的权限。  
   
- 无法更改的 sa 登录名和公共的角色成员资格。  
+ 无法更改 sa 登录名和公共角色成员身份。  
   
- 使用 sp_addrolemember 将成员添加到固定的数据库或用户定义的角色。  
+ 使用 sp_addrolemember 将成员添加到固定的数据库角色或用户定义的角色。  
   
- sp_addsrvrolemember 不能在用户定义的事务内执行。  
+ 不能在用户定义的事务内执行 sp_addsrvrolemember。  
   
 ## <a name="permissions"></a>权限  
  需要具有要添加新成员的角色中的成员身份。  
@@ -93,10 +93,10 @@ EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
  [CREATE SERVER ROLE (Transact-SQL)](../../t-sql/statements/create-server-role-transact-sql.md)   

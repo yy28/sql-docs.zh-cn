@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_xtp_gc_queue_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef266afcab07fbb9d5bb73a48dafcf8eea59844
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000829"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34465943"
   
  主垃圾回收线程（空闲线程）针对自上次调用主垃圾回收线程以来完成的所有事务跟踪已更新、删除和插入的行。 垃圾回收线程唤醒时，它会确定最早活动事务的时间戳是否已更改。 如果最早活动事务已更改，则空闲线程会针对不再需要写入集的事务，将工作项（16 行为一个块区）排入队列。 例如，如果您删除 1,024 行，则最终将看到 64 个垃圾回收工作项排队，每个工作项都包含 16 个已删除行。  用户事务提交之后，它选择其计划程序上的所有排队项。 如果其计划程序上没有排队项，则用户事务会搜索当前 NUMA 节点中的任何队列。  
   
- 您可以通过执行 sys.dm_xtp_gc_queue_stats 以查看是否在处理排队工作，确定垃圾回收是否在为已删除行释放内存。 如果没有被处理 current_queue_depth 中的条目，或者向 current_queue_depth 添加任何新的工作项，这是垃圾回收不释放内存的指示。 例如，如果存在长时间运行的事务，则垃圾回收无法进行。  
+ 您可以通过执行 sys.dm_xtp_gc_queue_stats 以查看是否在处理排队工作，确定垃圾回收是否在为已删除行释放内存。 如果未在处理 current_queue_depth 中的条目，或者没有新的工作项被添加到 current_queue_depth，这是指示垃圾回收未在释放内存。 例如，如果存在长时间运行的事务，则垃圾回收无法进行。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
@@ -67,7 +67,7 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 3        15625                15625    0                    15625                1233571605761  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [内存优化表的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

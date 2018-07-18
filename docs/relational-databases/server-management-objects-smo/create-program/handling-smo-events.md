@@ -1,5 +1,5 @@
 ---
-title: 处理 SMO 事件 |Microsoft 文档
+title: 处理 SMO 事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ce6066af6508215ebe84fc3e8f5680c06a246ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967602"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988209"
 ---
 # <a name="handling-smo-events"></a>处理 SMO 事件
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "32967602"
 ## <a name="event-subscription"></a>事件订阅  
  您可以通过以下方法处理事件：编写事件处理程序类，创建该类的实例，将事件处理程序分配给父对象，然后订阅事件。  
   
- 必须编写事件处理程序类才能处理事件。 事件处理程序类可以包含多个事件处理程序函数，且只有在安装事件处理程序类后才能处理事件。 事件处理程序函数接收从事件有关的信息*ServerEventNotificatificationArgs*可以用于报告有关事件的信息的参数。  
+ 必须编写事件处理程序类才能处理事件。 事件处理程序类可以包含多个事件处理程序函数，且只有在安装事件处理程序类后才能处理事件。 事件处理程序函数接收来自事件有关的信息*ServerEventNotificatificationArgs*参数可用于报告有关事件的信息。  
   
- 中列出的数据库和服务器可以处理的事件的类型<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>类和<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>类。  
+ 中列出的数据库和服务器可以处理的事件类型<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>类和<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>类。  
   
 ## <a name="example"></a>示例  
 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

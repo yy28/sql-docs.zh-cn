@@ -1,5 +1,5 @@
 ---
-title: IsDefaultMeasure 元素 (XML) |Microsoft 文档
+title: IsDefaultMeasure 元素 (XML) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bf91c689addd9aa08054c716c0ceb714769d759
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578309"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050502"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure 元素 (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34578309"
 </RelationshipEndVisualizationProperties>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -47,6 +47,6 @@ ms.locfileid: "34578309"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关**RelationshipEndVisualizationProperties**元素， **IsDefaultMeasure**元素指示是否可以通过导航到另一端来获取此实体的默认度量值此关系。 默认值**false**指示要从中获取但没有默认度量值。  
+ 有关**RelationshipEndVisualizationProperties**元素， **IsDefaultMeasure**元素指示就可以通过导航到另一端的获取此实体的默认度量值此关系。 默认值**false**不指示要获取任何默认度量值。  
   
   

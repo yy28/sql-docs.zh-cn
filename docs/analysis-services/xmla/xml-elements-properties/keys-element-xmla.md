@@ -1,5 +1,5 @@
 ---
-title: 密钥元素 (XMLA) |Microsoft 文档
+title: 密钥元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8ad15ae719e3d0bd31dccda3271ffccdbeacbfd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050524"
 ---
 # <a name="keys-element-xmla"></a>Keys 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含一套[密钥](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md)元素用于标识由父级的属性成员的成员键[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)元素。  
+  包含一系列[键](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md)用来标识由父级表示的属性成员的成员键的元素[属性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34575539"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -51,9 +51,9 @@ ms.locfileid: "34575539"
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>另请参阅
- [删除元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
+ [Drop 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
  [插入元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [更新元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Update 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.change_tracking_databases (TRANSACT-SQL) |Microsoft 文档
+title: sys.change_tracking_databases (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a3ec7102bbbdc01694bea11911d0de9a89dbacc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049665"
 ---
-# <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>更改跟踪目录视图-sys.change_tracking_databases
+# <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>更改跟踪目录视图的 sys.change_tracking_databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   为每个启用更改跟踪的数据库返回一行。  
@@ -49,7 +49,7 @@ ms.locfileid: "33177903"
 ## <a name="permissions"></a>权限  
  对 sys.change_tracking_databases 进行的权限检查与对 sys.databases 所做的权限检查相同。 如果 sys.change_tracking_databases 的调用方不是数据库的所有者，查看相应行所需的最低权限为 ALTER ANY DATABASE 或 VIEW ANY DATABASE 服务器级权限，或者是 master 数据库或当前数据库中的 CREATE DATABASE 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [更改跟踪目录视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

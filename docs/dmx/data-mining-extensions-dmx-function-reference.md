@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘扩展插件 (DMX) 函数引用 |Microsoft 文档
+title: 数据挖掘扩展插件 (DMX) 函数参考 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842530"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998419"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>数据挖掘扩展插件 (DMX) 函数参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34842530"
   
 |函数|Description|  
 |--------------|-----------------|  
-|[常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)|列出可用于所有模型类型的函数，并提供指向如何查询特定挖掘模型类型的相关详细信息的链接。|  
+|[通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)|列出可用于所有模型类型的函数，并提供指向如何查询特定挖掘模型类型的相关详细信息的链接。|  
 |[DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|提供有关如何使用 DMX 构建预测查询的概述。|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|返回一个表，该表包含指定数量的最底层的行，并根据排名表达式按排名的升序排列。|  
   
@@ -39,13 +39,13 @@ ms.locfileid: "34842530"
 |[存在&#40;DMX&#41;](../dmx/exists-dmx.md)|只要指定的 SELECT 语句返回的结果集包含行，就返回 True。|  
 |[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|指示当前节点是否源自指定节点。|  
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|指示指定节点是否包含事例。|  
-|[则 IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|指示事例是否属于测试事例集。|  
-|[则 IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|指示事例是否属于定型事例集。|  
-|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|返回当前事例的日期与数据中最后日期之间的时间段。|  
+|[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|指示事例是否属于测试事例集。|  
+|[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|指示事例是否属于定型事例集。|  
+|[延隔时间&#40;DMX&#41;](../dmx/lag-dmx.md)|返回当前事例的日期与数据中最后日期之间的时间段。|  
 |[预测&#40;DMX&#41;](../dmx/predict-dmx.md)|对指定列执行预测。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|返回调整后的指定可预测列的概率。|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|预测列中的关联成员身份。|  
-|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|返回输入的事例适合现有模型的可能性。 此函数仅可与聚类分析模型。|  
+|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|返回输入的事例适合现有模型中的可能性。 此函数仅可用于聚类分析模型。|  
 |[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|返回一个表，该表包含指定列的直方图。|  
 |[PredictNodeId &#40;DMX&#41;](../dmx/predictnodeid-dmx.md)|返回选定事例的 NodeID。|  
 |[PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|返回指定列的概率。|  
@@ -67,8 +67,8 @@ ms.locfileid: "34842530"
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [结构和使用情况的 DMX 预测查询](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   

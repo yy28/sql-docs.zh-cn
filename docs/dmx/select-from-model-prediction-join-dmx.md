@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;预测联接 (DMX) |Microsoft 文档
+title: SELECT FROM&lt;模型&gt;PREDICTION JOIN (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989509"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;预测联接 (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  使用挖掘模型来预测外部数据源中的列状态。 **PREDICTION JOIN**语句与匹配的源查询从每个用例与该模型。  
+  使用挖掘模型来预测外部数据源中的列状态。 **PREDICTION JOIN**语句匹配源查询中的模型为每种情况。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +36,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *n*  
  可选。 一个指定返回行数的整数。  
   
- *选择的表达式列表*  
+ *select 表达式列表*  
  从挖掘模型中派生的一组以逗号分隔的列标识符和表达式。  
   
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
- *sub 选择*  
+ *子选择*  
  嵌入的 Select 语句。  
   
  *源数据查询*  
@@ -70,13 +70,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  用于预测联接的源查询可以是表，也可以是单独查询。  
   
- 你可以指定不返回表表达式中的预测函数\< *select 表达式列表*> 和\<*条件表达式*>。  
+ 可以指定不返回表表达式中的预测函数\< *select 表达式列表*> 和\<*条件表达式*>。  
   
- **NATURAL PREDICTION JOIN**自动映射在一起的源查询从模型中的列名称匹配的列名称。 如果你使用**自然预测**，则可以省略 ON 子句。  
+ **NATURAL PREDICTION JOIN**一起自动映射源查询中的列名称与模型中的列名称匹配。 如果您使用**自然预测**，可以省略 ON 子句。  
   
  WHERE 条件只能用于可预测列或相关列。  
   
- ORDER by 子句可以接受只有一个列作为参数;也就是说，不能在多个列进行排序。  
+ ORDER by 子句可以接受单个列作为参数;也就是说，不能对多个列进行排序。  
   
 ## <a name="example-1-singleton-query"></a>示例 1：单独查询  
  下面的示例演示如何创建用于实时预测某个人是否会购买自行车的查询。 在此查询中，数据没有存储在表或其他数据源中，而是直接输入到查询中。 查询中的人员具有下列特性：  
@@ -87,9 +87,9 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   拥有两部汽车  
   
--   有两个子居住在家里项  
+-   有两个孩子家庭生活  
   
- 使用 TM 决策树挖掘模型和使用者有关的已知的特征，查询将返回一个布尔值，描述用户购买了自行车和表格返回的值，通过一组[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函数，用于描述进行预测的方式。  
+ 使用 TM Decision Tree 挖掘模型和使用者的已知的特征，查询将返回一个布尔值，描述此人是否购买自行车和返回的表格值的一组[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函数，用于描述进行预测的方式。  
   
 ```  
 SELECT  
@@ -106,7 +106,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>示例 2：使用 OPENQUERY  
- 下面的示例演示如何创建批预测查询中使用存储在外部数据集的潜在客户的列表。 因为该表是已定义的实例的数据源视图的一部分[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，查询无法使用[OPENQUERY](../dmx/source-data-query-openquery.md)检索的数据。 因为表中的列的名称不同于在挖掘模型中， **ON**子句必须用于表中的列映射到模型中的列。  
+ 下面的示例演示如何使用存储在外部数据集的潜在客户列表创建批预测查询。 由于表是已定义的实例的数据源视图的一部分[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，可以使用查询[OPENQUERY](../dmx/source-data-query-openquery.md)来检索数据。 因为表中的列的名称不同于挖掘模型中的那些**ON**子句必须用于将表中的列映射到模型中的列。  
   
  查询返回表中每个人的姓氏和名字，以及指示每个人是否会购买自行车的布尔列；其中，0 表示“可能不会购买自行车”，1 表示“可能会购买自行车”。 最后一列包含预测结果的概率。  
   
@@ -163,7 +163,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [预测&#40;DMX&#41; ](../dmx/predict-dmx.md)函数是多态类型，可以用于所有模型类型。 可以使用 value3 作为函数的参数来限制查询返回的项的数目。 **选择**遵循 NATURAL PREDICTION JOIN 子句的列表提供要使用作为输入来预测的值。  
+ [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md)函数是多态函数，并可用于所有模型类型。 可以使用 value3 作为函数的参数来限制查询返回的项的数目。 **选择**遵循 NATURAL PREDICTION JOIN 子句的列表提供用作预测输入的值。  
   
 ```  
 SELECT FLATTENED  
@@ -184,7 +184,7 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- 由于包含可预测属性 `[v Assoc Seq Line Items]` 的列是一个表列，因此查询将返回一个包含嵌套表的列。 默认情况下，嵌套表列名为 `Expression`。 如果你的提供程序不支持分层行集，则可以使用**FLATTENED**关键字，如要使结果更轻松地查看在此示例中所示。  
+ 由于包含可预测属性 `[v Assoc Seq Line Items]` 的列是一个表列，因此查询将返回一个包含嵌套表的列。 默认情况下，嵌套表列名为 `Expression`。 如果您的提供程序不支持分层行集，则可以使用**FLATTENED**关键字，若要使结果更轻松地查看在此示例中所示。  
   
 ## <a name="see-also"></a>请参阅  
  [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   

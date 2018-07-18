@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 183970c09d23304553167b20366e0751d5f35207
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467233"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993859"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,52 +43,52 @@ ms.locfileid: "34467233"
 SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 与较新版本具有显著差异和更低时在主题中讨论[SQL Server 2014](#bkmk_2014)。**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 大大不同于较新版本和更低时在主题中讨论[SQL Server 2014](#bkmk_2014)。**
   
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本  
  下表介绍中的列`sys.dm_db_xtp_checkpoint_stats`开头**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
-|last_lsn_processed|**bigint**|控制器观察到的最后一个 LSN。|  
-|end_of_log_lsn|**numeric(38)**|日志末尾 LSN。|  
-|bytes_to_end_of_log|**bigint**|日志未处理的控制器，对应于之间的字节的字节数`last_lsn_processed`和`end_of_log_lsn`。|  
-|log_consumption_rate|**bigint**|事务日志使用情况 （以 KB/秒） 的控制器的速率。|  
+|last_lsn_processed|**bigint**|控制器检测到的最后一个 LSN。|  
+|end_of_log_lsn|**numeric(38)**|日志结尾 LSN。|  
+|bytes_to_end_of_log|**bigint**|记录未处理的控制器，对应于之间字节的字节数`last_lsn_processed`和`end_of_log_lsn`。|  
+|log_consumption_rate|**bigint**|事务日志消耗的控制器 （以 KB/秒） 的速率。|  
 |active_scan_time_in_ms|**bigint**|通过主动扫描事务日志中的控制器所用的时间。|  
-|total_wait_time_in_ms|**bigint**|不扫描日志时的控制器的累积等待时间。|  
-|waits_for_io|**bigint**|等待日志 IO 引起控制器线程数。|  
-|io_wait_time_in_ms|**bigint**|等待日志 IO 控制器线程所用的累计时间。|  
-|waits_for_new_log_count|**bigint**|等待引起新的日志要生成的控制器线程数。|  
-|new_log_wait_time_in_ms|**bigint**|按控制器线程等待新的日志所用的累计时间。|  
-|idle_attempts_count|**bigint**|控制器转换为空闲状态的次数。|  
-|tx_segments_dispatched|**bigint**|控制器观察到且分派给序列化程序的段的数。 段是日志的一个连续部分的窗体，序列化的一个单元。 它的当前大小为 1 MB 大小，但可以在将来更改。|  
-|segment_bytes_dispatched|**bigint**|由于数据库重新启动调度到序列化程序，在控制器的字节的总字节数。|  
-|bytes_serialized|**bigint**|由于数据库重新启动，序列化的字节总数。|  
-|serializer_user_time_in_ms|**bigint**|通过在用户模式下的序列化程序所花费的时间。|  
-|serializer_kernel_time_in_ms|**bigint**|通过在内核模式下的序列化程序所花费的时间。|  
-|xtp_log_bytes_consumed|**bigint**|总消耗自数据库重新启动以来的日志字节数。|  
+|total_wait_time_in_ms|**bigint**|累计等待时间为控制器的时不会扫描日志。|  
+|waits_for_io|**bigint**|日志 IO 所产生的控制器线程的等待数。|  
+|io_wait_time_in_ms|**bigint**|等待日志 IO 由控制器线程所用的累计时间。|  
+|waits_for_new_log_count|**bigint**|所产生的新的日志要生成的控制器线程的等待数。|  
+|new_log_wait_time_in_ms|**bigint**|由控制器线程等待新日志所用的累计时间。|  
+|idle_attempts_count|**bigint**|在控制器转换为空闲状态次数。|  
+|tx_segments_dispatched|**bigint**|控制器检测到并分派到序列化程序的段的数目。 段是日志的连续窗体序列化的单元部分。 它当前的大小为 1 mb 以内，但可以在将来的更改。|  
+|segment_bytes_dispatched|**bigint**|由于数据库重新启动调度到序列化程序，控制器字节的总字节数。|  
+|bytes_serialized|**bigint**|由于数据库重新启动序列化的字节总数。|  
+|serializer_user_time_in_ms|**bigint**|序列化程序在用户模式下花费的时间。|  
+|serializer_kernel_time_in_ms|**bigint**|序列化程序在内核模式下花费的时间。|  
+|xtp_log_bytes_consumed|**bigint**|使用自该数据库重新启动以来的日志字节数的总计数。|  
 |checkpoints_closed|**bigint**|由于数据库重新启动已关闭的检查点计数。|  
 |last_closed_checkpoint_ts|**bigint**|最后一个已关闭检查点的时间戳。|  
 |hardened_recovery_lsn|**numeric(38)**|从此 LSN 开始将恢复。|  
-|hardened_root_file_guid|**uniqueidentifier**|由于最后一个已完成的检查点强制写入的根文件 GUID。|  
-|hardened_root_file_watermark|**bigint**|**内部仅**。 距离是有效的最多读取的根文件 （这是内部相关类型仅 – 调用 BSN）。|  
-|hardened_truncation_lsn|**numeric(38)**|截断点 LSN。|  
-|log_bytes_since_last_close|**bigint**|从上一个字节关闭到日志的当前末尾。|  
-|time_since_last_close_in_ms|**bigint**|自上次关闭的检查点以来的时间。|  
-|current_checkpoint_id|**bigint**|当前新的段正在分配给此检查点。 检查点系统是一种管道。 在当前检查点是从日志段分配给。 一旦它已达到限制，该检查点将由控制器和一个新创建为当前释放。|  
-|current_checkpoint_segment_count|**bigint**|段中当前检查点的计数。|  
-|recovery_lsn_candidate|**bigint**|**内部唯一**。 地选取作为 recoverylsn current_checkpoint_id 关闭时的候选。|  
-|outstanding_checkpoint_count|**bigint**|等待要关闭管道中的检查点数目。|  
-|closing_checkpoint_id|**bigint**|关闭检查点的 ID。<br /><br /> 序列化程序并行工作的因此它们完成后检查点是由关闭线程关闭的候选对象。 关闭线程可以仅关闭一次一个地，但必须是按顺序，因此关闭检查点是关闭线程正在处理的一个。|  
-|recovery_checkpoint_id|**bigint**|要恢复中使用的检查点的 ID。|  
+|hardened_root_file_guid|**uniqueidentifier**|强制写入的最后一个已完成检查点的结果的根文件的 GUID。|  
+|hardened_root_file_watermark|**bigint**|**内部仅**。 延伸的范围是有效的最多读取的根文件 （这是在内部相关类型仅 – 调用 BSN）。|  
+|hardened_truncation_lsn|**numeric(38)**|截断点的 LSN。|  
+|log_bytes_since_last_close|**bigint**|从上一个字节接近当前日志的结尾。|  
+|time_since_last_close_in_ms|**bigint**|自最后关闭的检查点的时间。|  
+|current_checkpoint_id|**bigint**|要分配给此检查点的当前新段。 检查点系统是一个管道。 当前检查点是在日志中的段分配给。 一旦它已达到限制，检查点是由控制器和一个新创建的新发布。|  
+|current_checkpoint_segment_count|**bigint**|当前检查点中的段的计数。|  
+|recovery_lsn_candidate|**bigint**|**在内部仅**。 若要被挑选为 recoverylsn current_checkpoint_id 关闭时的候选项。|  
+|outstanding_checkpoint_count|**bigint**|等待要关闭管道中的检查点的数目。|  
+|closing_checkpoint_id|**bigint**|关闭检查点的 ID。<br /><br /> 序列化程序并行工作的因此一旦它们达到完成检查点是关闭线程即将关闭的候选版本。 但关闭线程可以仅关闭一次一个地，必须是按顺序，因此关闭检查点是关闭线程所处理的。|  
+|recovery_checkpoint_id|**bigint**|若要在恢复中使用的检查点的 ID。|  
 |recovery_checkpoint_ts|**bigint**|恢复检查点的时间戳。|  
-|bootstrap_recovery_lsn|**numeric(38)**|引导的恢复 LSN。|  
-|bootstrap_root_file_guid|**uniqueidentifier**|Bootstrap 的根文件 GUID。|  
-|internal_error_code|**bigint**|归任何控制器、 序列化程序，关闭和合并线程时出错。|
-|bytes_of_large_data_serialized|**bigint**|序列化的数据量。 |  
+|bootstrap_recovery_lsn|**numeric(38)**|有关 bootstrap 的恢复 LSN。|  
+|bootstrap_root_file_guid|**uniqueidentifier**|Bootstrap 的根文件的 GUID。|  
+|internal_error_code|**bigint**|看到的任何控制器、 序列化程序，关闭和合并线程时出错。|
+|bytes_of_large_data_serialized|**bigint**|已序列化的数据量。 |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表介绍中的列`sys.dm_db_xtp_checkpoint_stats`，为**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
+ 下表介绍中的列`sys.dm_db_xtp_checkpoint_stats`，对于**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
@@ -111,7 +111,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [内存优化表的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   
