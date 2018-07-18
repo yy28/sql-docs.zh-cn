@@ -1,5 +1,5 @@
 ---
-title: 配置或修复 Power Pivot for SharePoint 2013 |Microsoft 文档
+title: 配置或修复 Power Pivot for SharePoint 2013 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 81090627eded7b2ca067c9723d96ff59d491d5d8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 07a92747b2687acb6556b96eeef0737b236abaf5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025224"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980709"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>配置或修复 Power Pivot for SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  若要配置或修复 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安装，请使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导安装 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题介绍 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 有关 SharePoint 2010 的详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
+  若要配置或修复 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安装，请使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导安装 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题介绍 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -124,9 +124,9 @@ ms.locfileid: "34025224"
 ||SharePoint 管理中心端口|默认值（如果需要）|如果未配置场，则该工具将提供用于创建场的选项，包括创建指向管理中心的 HTTP 端点。 它会选取一个未在使用中的随机生成的端口号。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([服务器名称]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|用户输入|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器是 Excel Services 启用核心 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能所必需的。 你在此页上键入的服务器名称还将添加到“配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器”页上的列表中。|  
 |**配置新场**|数据库服务器<br /><br /> 场帐户<br /><br /> 通行短语<br /><br /> SharePoint 管理中心端口|默认值（如果需要）|这些设置默认为在主页上输入的设置。|  
-|**创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序**|服务应用程序名称|默认|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称，默认名称为**默认[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序**。 您可以在该工具中替换为不同的值。|  
-||数据库服务器|默认|承载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库的数据库服务器。 默认服务器名称与用于该场的数据库服务器相同。 您可以将默认服务器名称替换为其他值。|  
-||数据库名称|默认|要为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库创建的数据库的名称。 默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|  
+|**创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序**|服务应用程序名称|，则“默认”|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称的默认名称为**默认[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序**。 您可以在该工具中替换为不同的值。|  
+||数据库服务器|，则“默认”|承载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库的数据库服务器。 默认服务器名称与用于该场的数据库服务器相同。 您可以将默认服务器名称替换为其他值。|  
+||数据库名称|，则“默认”|要为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库创建的数据库的名称。 默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|  
 |**创建默认的 Web 应用程序**|Web 应用程序名称|默认值（如果需要）|如果不存在任何 Web 应用程序，该工具将创建一个。 Web 应用程序配置为使用经典模式身份验证，并侦听端口 80。 最大文件上载大小设为 2047，这是 SharePoint 所允许的最大值。 较大的文件上载大小用于容纳将上载到服务器的大型 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件。|  
 ||URL|默认值（如果需要）|该工具将基于服务器名称创建一个 URL，并且使用与 SharePoint 相同的文件命名约定。|  
 ||应用程序池|默认值（如果需要）|该工具在 IIS 中创建默认应用程序池。|  
@@ -149,7 +149,7 @@ ms.locfileid: "34025224"
 ||通行短语|用户输入|用于数据加密的主密钥。 默认情况下，用于生成密钥的通行短语是用来在场中设置新服务的相同通行短语。 您可以将默认通行短语替换为唯一通行短语。|  
 |**为 DataRefresh 创建无人参与的帐户**|目标应用程序 ID|默认值（如果需要）|创建一个目标应用程序，以便存储用于无人参与的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新的凭据。<br /><br /> 应用程序 ID 可以是说明文本。|  
 ||目标应用程序的友好名称|默认值（如果需要）||  
-||无人参与的帐户用户名和密码|默认值（如果需要）|键入由目标应用程序用来运行无人参与数据刷新操作的 Windows 用户帐户的凭据。 有关详细信息，请参阅[在 SharePoint Server 2013 中使用无人参与的服务帐户配置 Excel Services 数据刷新](http://technet.microsoft.com/library/hh525344\(office.15\).aspx)(http://technet.microsoft.com/en-us/library/hh525344(office.15).aspx)。|  
+||无人参与的帐户用户名和密码|默认值（如果需要）|键入由目标应用程序用来运行无人参与数据刷新操作的 Windows 用户帐户的凭据。 有关详细信息，请参阅[在 SharePoint Server 2013 中使用无人参与的服务帐户配置 Excel Services 数据刷新](http://technet.microsoft.com/library/hh525344\(office.15\).aspx)(http://technet.microsoft.com/library/hh525344(office.15).aspx)。|  
 ||网站 URL|默认值（如果需要）|键入与目标应用程序关联的网站集的网站 URL。 若要与其他网站集关联，请使用 SharePoint 管理中心。|  
 |**创建 Excel Services 服务应用程序**|服务应用程序名称|默认值（如果需要）|键入服务应用程序名称。 将在 SharePoint 场的数据库服务器上创建同名的服务应用程序数据库。|  
 |**配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器**|服务应用程序名称|默认值（如果需要）|您在前一页中键入的服务应用程序名称。|  
@@ -178,7 +178,7 @@ ms.locfileid: "34025224"
 ### <a name="grant-sharepoint-permissions-to-workbook-users"></a>向工作簿用户授予 SharePoint 权限  
  用户将首先需要 SharePoint 权限，然后才能发布或查看工作簿。 对需要查看已发布工作簿的用户授予 **“查看”** 权限，对发布或管理工作簿的用户授予 **“参与讨论”** 权限。 您必须是网站集管理员才能授予权限。  
   
-1.  在 SharePoint 2013 网站中，单击设置图标![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")，然后单击**站点设置**。  
+1.  在 SharePoint 2013 网站上，单击设置图标![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")，然后单击**站点设置**。  
   
 2.  在 **“用户和权限”** 组中单击 **“网站权限”** 。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "34025224"
 4.  输入分属各个组成员的 Windows 域用户或组帐户。 与前面一样，如果将应用程序配置为采用经典身份验证，则不要使用电子邮件地址或分发组。  
   
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>安装数据刷新中使用的数据访问接口和检查用户权限  
- 服务器端数据刷新使用户可以在无人参与模式下将更新后的数据重新导入到其工作簿中。 为了成功执行数据刷新，在 SharePoint 模式下运行 Analysis Services 的服务器必须具有最初导入数据所用的相同的数据访问接口。 此外，运行数据刷新的用户帐户通常需要对外部数据源具有读取权限。 请务必检查启用和配置数据刷新的要求，以确保获得成功结果。 有关详细信息，请参阅 [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)。  
+ 服务器端数据刷新使用户可以在无人参与模式下将更新后的数据重新导入到其工作簿中。 为了成功执行数据刷新，在 SharePoint 模式下运行 Analysis Services 的服务器必须具有最初导入数据所用的相同的数据访问接口。 此外，运行数据刷新的用户帐户通常需要对外部数据源具有读取权限。 请务必检查启用和配置数据刷新的要求，以确保获得成功结果。 有关详细信息，请参阅 [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)。  
   
 > [!NOTE]  
 >  对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，数据访问接口会在运行 **spPowerPivot.msi** 安装程序和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置工具时安装。 有关详细信息，请参阅 [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
@@ -209,12 +209,12 @@ ms.locfileid: "34025224"
  一段时间后，如果您确定需要额外的数据存储和处理能力，则可以向场中添加更多的在 SharePoint 模式下运行 Analysis Services 的服务器。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，你可在 SharePoint 模式下安装新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，然后配置 Excel Services。 有关详细信息，请参阅 [在 PowerPivot 模式下安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)中的“单台服务器安装之外”部分。  
   
 ## <a name="additional-resources"></a>其他资源  
- ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[提交反馈和联系信息，通过 SQL Server 反馈](https://feedback.azure.com/forums/908035-sql-server)。  
+ ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[提交反馈和联系信息通过 SQL Server 反馈](https://feedback.azure.com/forums/908035-sql-server)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Power Pivot 配置工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [升级工作簿和计划的数据刷新 & #40;SharePoint 2013 & #41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

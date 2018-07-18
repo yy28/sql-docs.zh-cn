@@ -1,5 +1,5 @@
 ---
-title: 配置 Power Pivot 服务帐户 |Microsoft 文档
+title: 配置 Power Pivot 服务帐户 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed619d7a0a4e593193f0ac3f736f059d9826512d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025724"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984839"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>配置 Power Pivot 服务帐户
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "34025724"
   
 5.  在 **“为此服务选择帐户”** 中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ##  <a name="bkmk_appPool"></a> 创建或更改 Power Pivot 服务应用程序的应用程序池  
   
@@ -103,7 +103,7 @@ ms.locfileid: "34025724"
 |-----------------|-----------------|  
 |设置要求|在 SQL Server 安装程序使用安装向导中的“Analysis Services – 配置”页（或在命令行安装程序中使用 **ASSVCACCOUNT** 安装参数）的过程中，必须指定该帐户。<br /><br /> 你可以使用管理中心、PowerShell 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具修改用户名或密码。 不支持使用其他工具更改帐户和密码。|  
 |域用户帐户要求|此帐户必须是 Windows 域用户帐户。 禁止使用内置计算机帐户（如 Network Service 或 Local Service）。 SQL Server 安装程序通过在指定计算机帐户时就阻止安装来强制执行域用户帐户要求。|  
-|权限要求|此帐户必须属于 SQLServerMSASUser$\<服务器 > $PowerPivot 安全组和本地计算机上的 WSS_WPG 安全组。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅本主题中的 [手动授予 PowerPivot 服务帐户管理权限](#updatemanually) 和 [初始配置 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)。|  
+|权限要求|此帐户必须隶属 SQLServerMSASUser$\<服务器 > $PowerPivot 安全组和本地计算机上的 WSS_WPG 安全组。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅本主题中的[手动授予 PowerPivot 服务帐户管理权限](#updatemanually)和[初始配置 (Power Pivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)。|  
 |扩展要求|如果你在场中安装多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器实例，则所有 Analysis Services 服务器实例都必须在同一域用户帐户下运行。 例如，如果你将第一个 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例配置为以 Contoso\ssas-srv01 身份运行，则随后在同一场中部署的所有其他 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例也必须以 Contoso\ssas-srv01（或碰巧为当前帐户）身份运行。<br /><br /> 如果将所有服务实例配置为在同一帐户下运行，则 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务可以将查询处理或数据刷新作业分配到场中的任何 Analysis Services 服务实例。 此外，它还可将管理中心的“托管帐户”功能用于 Analysis Services 服务器实例。 通过对所有 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例使用同一帐户，您可以只更改帐户或密码一次，而所有使用这些凭据的服务实例都会自动更新。<br /><br /> SQL Server 安装程序强制执行使用同一帐户的要求。 在 SharePoint 场已安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 实例的扩展部署中，如果你指定的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 帐户与场中已使用的帐户不同，安装程序将阻止执行新的安装。|  
   
 #### <a name="power-pivot-service-application-pool"></a>Power Pivot 服务应用程序池  
@@ -124,7 +124,7 @@ ms.locfileid: "34025724"
   
 3.  单击 **“立即运行”**。  
   
- 作为最后一招，您可以通过授予对 Analysis Services 系统管理权限来确保正确的权限[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序，然后专门将服务应用程序标识添加到 SQLServerMSASUser$\<servername > $PowerPivot Windows 安全组。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
+ 作为最后的手段，您可以通过授予对 Analysis Services 系统管理权限来确保正确的权限[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序，以及然后明确将服务应用程序标识添加到 SQLServerMSASUser$\<服务器名 > $PowerPivot Windows 安全组。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
   
  您必须是本地管理员才能更新 Windows 安全组。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "34025724"
   
 8.  打开 **“组”**。  
   
-9. 双击 SQLServerMSASUser$\<servername > $PowerPivot。  
+9. 双击 SQLServerMSASUser$\<服务器名 > $PowerPivot。  
   
 10. 单击 **“添加”**。  
   
@@ -179,8 +179,8 @@ ms.locfileid: "34025724"
   
  如果安装了 Reporting Services，可以使用 Reporting Services 配置管理器来更新报表服务器的密码和与报表服务器数据库的连接。 有关详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

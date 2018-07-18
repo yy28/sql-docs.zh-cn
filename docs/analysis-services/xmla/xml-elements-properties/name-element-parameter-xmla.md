@@ -1,5 +1,5 @@
 ---
-title: 名称元素 （参数） (XMLA) |Microsoft 文档
+title: 命名元素 （参数） (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8804e354966e98fd6f7142ab0f86ccd827dd7ecc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575799"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968330"
 ---
 # <a name="name-element-parameter-xmla"></a>Name 元素（参数）(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含所表示的参数的名称[参数](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)元素。  
+  包含表示的参数的名称[参数](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34575799"
 </Parameter>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  

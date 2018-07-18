@@ -1,5 +1,5 @@
 ---
-title: sys.trace_events (Transact SQL) |Microsoft 文档
+title: sys.trace_events (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d564d08dce5dbc89c0071625aefc2cfef80ec36
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969619"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33220648"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**int**|事件的唯一 ID。 此列也是在**sys.trace_event_bindings**和**sys.trace_subclass_values**目录视图。|  
+|**trace_event_id**|**int**|事件的唯一 ID。 此列也是在**sys.trace_event_bindings**并**sys.trace_subclass_values**目录视图。|  
 |**category_id**|**int**|事件的类别 ID。 此列也是在**sys.trace_categories**目录视图。|  
 |**名称**|**nvarchar(128)**|此事件的唯一名称。 此参数未本地化。|  
   
@@ -53,9 +53,9 @@ ms.locfileid: "33220648"
 ## <a name="see-also"></a>另请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.traces &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
- [sys.trace_categories &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
+ [sys.trace_categories &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys.trace_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
- [sys.trace_event_bindings &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
- [sys.trace_subclass_values &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
+ [sys.trace_event_bindings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
+ [sys.trace_subclass_values &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 在 DirectQuery 模式下的 DAX 公式兼容性 |Microsoft 文档
+title: 在 DirectQuery 模式下的 DAX 公式兼容性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045641"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985379"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式下的 DAX 公式兼容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-对于在 DirectQuery 模式下的表格 1200年和更高版本模型，在早期版本中的许多功能限制不再适用。 尤其是对于 DAX 公式：
+对于在 DirectQuery 模式下的表格 1200年及更高版本模型，在早期版本中的许多功能限制不再适用。 尤其是对于 DAX 公式：
 
 - DirectQuery 现在会生成更简单的查询，从而提供改进的性能。
 - 行级别安全性 (RLS) 现在支持在 DirectQuery 模式下。
-- 对于在 DirectQuery 模式下的表格模型现在支持计算的列。
+- 在 DirectQuery 模式下的表格模型现在支持计算的列。
 
 ## <a name="dax-functions-in-directquery-mode"></a>DirectQuery 模式下的 DAX 函数
 
-简单地说，所有的 DAX 函数支持 DirectQuery 模型。 但是，对于所有公式的类型，支持不是所有函数，并且不是所有函数均已针对 DirectQuery 模型都优化。 基本上，我们可以将 DAX 函数分为两大阵营：已优化和未优化。 我们先仔细了解一下已优化的函数。
+简单地说，DirectQuery 模型支持所有 DAX 函数。 但是，并非所有的函数支持所有公式类型，并且已针对 DirectQuery 模型优化所有函数。 基本上，我们可以将 DAX 函数分为两大阵营：已优化和未优化。 我们先仔细了解一下已优化的函数。
 
 
 ### <a name="optimized-for-directquery"></a>针对 DirectQuery 进行了优化
@@ -39,16 +39,16 @@ ms.locfileid: "34045641"
 
 
 ### <a name="non-optimized-for-directquery"></a>未针对 DirectQuery 进行优化
-这些函数不优化用于 DirectQuery。 它们在计算列和行级别安全性公式中完全 *不* 受支持。 但是，它们在度量值和查询公式中 *受支持* ，不过性能不确定。
+这些函数未优化的 DirectQuery。 它们在计算列和行级别安全性公式中完全 *不* 受支持。 但是，它们在度量值和查询公式中 *受支持* ，不过性能不确定。
 
  我们不会在这里列出所有函数。 基本上，只要不是上列已优化的函数之一，就是未针对 DirectQuery 优化的函数。
 
 某个特定函数可能未针对 DirectQuery 进行优化的原因包括：基础关系引擎无法执行与 xVelocity 引擎执行的计算等效的计算，或者公式无法转换为等效的 SQL 表达式。 在其他情况中，则是转换后的表达式和生成的计算的性能不可接受。
 
-若要了解有关所有的 DAX 函数，请参阅 [DAX 函数参考]。(https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+若要了解有关所有 DAX 函数，请参阅 [DAX 函数参考]。(https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 模式下的 DAX 运算符
-在 DirectQuery 模式下完全支持所有的 DAX 比较和算术运算符。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。
+在 DirectQuery 模式下完全支持所有 DAX 比较和算术运算符。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。
 
 
  
@@ -100,7 +100,7 @@ ms.locfileid: "34045641"
   
 ### <a name="casts"></a>转换  
   
-在 DAX 中没有此类转换函数，但在许多比较和算术运算中会执行隐式转换。 它是确定结果的数据类型的比较或算术运算。 例如：  
+在 DAX 中没有此类转换函数，但在许多比较和算术运算中会执行隐式转换。 它是确定结果的数据类型的比较或算术运算。 例如，  
   
 -   布尔值在算术运算中被当作数值（如 TRUE + 1 或应用于布尔值列的函数 MIN）。 NOT 运算也返回一个数值。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "34045641"
 使用内存中数据存储区的模型所支持的日期文本格式范围比 SQL Server 支持的日期字符串格式的范围更加有限。 然而，DAX 支持自定义日期和时间格式。  
   
 **从字符串转换为非布尔值的其他类型**  
-当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
+当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允许从数字转换为字符串**  
 示例： `CONCATENATE(102,”,345”)`  
@@ -342,7 +342,7 @@ DirectQuery 模式将 DAX TRIM 函数转换为 SQL 语句 `LTRIM(RTRIM(<column>)
 
 
 ## <a name="see-also"></a>另请参阅  
-[DirectQuery 模式](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 模式](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

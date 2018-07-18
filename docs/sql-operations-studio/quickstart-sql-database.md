@@ -1,6 +1,6 @@
 ---
-title: 快速入门： 连接和查询 Azure SQL 数据库使用 SQL 操作 Studio （预览版） |Microsoft 文档
-description: 本快速入门演示如何使用 SQL 操作 Studio （预览版） 来连接到 SQL 数据库和运行查询
+title: 快速入门： 连接和查询 Azure SQL 数据库使用 SQL Operations Studio （预览版） |Microsoft Docs
+description: 本快速入门介绍如何使用 SQL Operations Studio （预览版） 连接到 SQL 数据库并运行查询
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
@@ -13,65 +13,65 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: c72e6d5b8e3e2770300e6b890b076bf77617849b
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 5470e19da9d8641a1337f0f8162fe0a1789820dd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235771"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982259"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]来连接和查询 Azure SQL 数据库
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据库
 
-本快速入门演示如何使用*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 以连接到 Azure SQL 数据库，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
+本快速入门演示如何使用*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 若要连接到 Azure SQL 数据库，并使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]相关教程。
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成本快速入门教程，你需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 服务器。
+若要完成本快速入门教程，需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL server。
 
 - [安装[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
-如果你还没有 Azure SQL 服务器，完成以下 （请记住服务器名称和登录凭据 ！） 的 Azure SQL 数据库快速入门之一：
+如果还没有 Azure SQL 服务器，请完成以下 （请记住服务器名称和登录凭据 ！） 的 Azure SQL 数据库快速入门之一：
 
 - [创建数据库-门户](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [创建数据库-CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [创建数据库-PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [创建 DB-PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
-## <a name="connect-to-your-azure-sql-database-server"></a>连接到你的 Azure SQL 数据库服务器
+## <a name="connect-to-your-azure-sql-database-server"></a>连接到 Azure SQL 数据库服务器
 
-使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]来建立与 Azure SQL 数据库服务器的连接。
+使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]建立到 Azure SQL 数据库服务器的连接。
 
-1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**应打开页。 如果看不到**连接**页上，单击**添加连接**，或**新连接**图标**服务器**侧栏：
+1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**应打开页面。 如果没有看到**连接**页上，单击**添加连接**，或**新连接**中的图标**服务器**边栏：
    
-   ![新建连接图标](media/quickstart-sql-database/new-connection-icon.png)
+   ![新的连接图标](media/quickstart-sql-database/new-connection-icon.png)
 
-2. 本文章将使用*SQL 登录名*，但*Windows 身份验证*也支持。 填写字段，如下所示使用服务器名称、 用户名和密码*你*Azure SQL server:
+2. 本文使用*SQL 登录名*，但*Windows 身份验证*也受支持。 填写字段，如下所示使用服务器名称、 用户名和密码*你*Azure SQL 服务器：
 
    | 设置       | 建议的值 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **服务器名称** | 完全限定的服务器名称 | 该名称应类似如下内容： **servername.database.windows.net，则** |
+   | **服务器名称** | 完全限定的服务器名称 | 名称应类似于此： **servername.database.windows.net** |
    | **身份验证** | SQL 登录名| 在本教程中使用 SQL 身份验证。 |
    | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
-   | **是否保存密码？** | 是或否 | 如果你不想要每次都输入密码，请选择是。 |
-   | **数据库名称** | *将保留为空* | 你想要连接到数据库的名称。 |
-   | **服务器组** | 选择<Default> | 如果你创建服务器组，你可以设置为特定服务器组。 | 
+   | **是否保存密码？** | 是或否 | 如果您不想要每次都输入密码，请选择是。 |
+   | **数据库名称** | *将保留为空* | 你想要连接到的数据库的名称。 |
+   | **服务器组** | 选择<Default> | 如果你创建服务器组，您可以设置为特定的服务器组。 | 
 
-   ![新建连接图标](media/quickstart-sql-database/new-connection-screen.png)  
+   ![新的连接图标](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 如果你的服务器不具有的防火墙规则允许 SQL 操作 Studio 若要连接，**创建新的防火墙规则**窗体将打开。 完成表单创建新的防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果你的服务器的防火墙规则允许 SQL Operations Studio 若要连接，没有**创建新的防火墙规则**窗体将打开。 完成窗体以创建新的防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新的防火墙规则](media/quickstart-sql-database/firewall.png)  
 
-4. 在成功连接你的服务器打开后*服务器*侧栏。
+4. 在将服务器连接成功打开后*服务器*侧栏。
 
 ## <a name="create-the-tutorial-database"></a>创建教程数据库
 
-下列各节创建*TutorialDB*数据库用于多种[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
+以下部分创建*TutorialDB*数据库中多个使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
 
-1. 右键单击服务器边栏中的 Azure SQL 服务器上，然后选择**新查询。**
+1. Azure SQL server 的服务器侧栏中右键单击并选择**新查询。**
 
-1. 下面的代码段粘贴到查询编辑器，然后单击**运行**:
+1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
 
    ```sql
    IF NOT EXISTS (
@@ -90,18 +90,18 @@ ms.locfileid: "34235771"
 
 ## <a name="create-a-table"></a>创建表
 
-查询编辑器是否仍连接*master*数据库中，但我们想要创建的表中*TutorialDB*数据库。 
+查询编辑器仍连接到*主*数据库中，但我们想要创建的表中*TutorialDB*数据库。 
 
-1. 将连接上下文更改为**TutorialDB**:
+1. 更改到的连接上下文**TutorialDB**:
 
    ![更改上下文](media/quickstart-sql-database/change-context.png)
 
 
 
-1. 下面的代码段粘贴到查询编辑器，然后单击**运行**:
+1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
 
    > [!NOTE]
-   > 可以追加到，也可以覆盖在编辑器中前面的查询。 请注意，单击**运行**执行所选查询。 如果未选择任何内容，则单击**运行**在编辑器中执行的所有查询。
+   > 可以将其追加或覆盖在编辑器中前面的查询。 请注意，单击**运行**执行所选查询。 如果未选择任何项，则单击**运行**执行所有查询编辑器中。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -123,7 +123,7 @@ ms.locfileid: "34235771"
 
 ## <a name="insert-rows"></a>插入行
 
-- 下面的代码段粘贴到查询编辑器，然后单击**运行**:
+- 以下代码片段粘贴到查询编辑器，然后单击**运行**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -139,7 +139,7 @@ ms.locfileid: "34235771"
 
 
 ## <a name="view-the-result"></a>查看结果
-1. 下面的代码段粘贴到查询编辑器，然后单击**运行**:
+1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -153,9 +153,9 @@ ms.locfileid: "34235771"
 
 ## <a name="clean-up-resources"></a>清理资源
 
-在此集合中的其他文章相互依赖本快速入门教程。 如果你打算继续使用后续快速入门，请执行不清理在本快速入门教程中创建的资源。 如果你不打算继续，使用以下步骤来删除此快速入门，Azure 门户中创建的资源。
-通过删除不再需要的资源组来清理资源。 有关详细信息，请参阅[清理资源](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
+在本快速入门生成此集合中的其他文章。 如果你打算继续使用后续快速入门，请执行不清理在本快速入门教程中创建的资源。 如果不打算继续，请使用以下步骤删除本快速入门在 Azure 门户中创建的资源。
+通过删除不再需要的资源组来清理资源。 有关详细信息，请参阅[清理资源](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，你已成功连接到 Azure SQL 数据库并运行查询时，试用[代码编辑器教程](tutorial-sql-editor.md)。
+现在，你已成功连接到 Azure SQL 数据库并运行查询，尝试[代码编辑器教程](tutorial-sql-editor.md)。

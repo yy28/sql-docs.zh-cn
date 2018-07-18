@@ -1,5 +1,5 @@
 ---
-title: 源元素 (XMLA) |Microsoft 文档
+title: 源元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5466ee4ed04b7890718e5d613cbade3f37cd6929
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576409"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019795"
 ---
 # <a name="sources-element-xmla"></a>Sources 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含一套[源](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)父元素[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)元素。  
+  包含一系列[源](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)父元素[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576409"
 </MergePartitions>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "34576409"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[撰写 MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
+|父元素|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |子元素|[数据源](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

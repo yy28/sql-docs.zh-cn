@@ -1,5 +1,5 @@
 ---
-title: sum 函数 (XQuery) |Microsoft 文档
+title: sum 函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 071394e1c2889c94c65a8e42179fd1bdbf5cf383
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076815"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022625"
 ---
-# <a name="aggregate-functions---sum"></a>聚合函数-求和
+# <a name="aggregate-functions---sum"></a>聚合函数-sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回一列数字的和。  
@@ -46,17 +46,17 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  要计算和的一列原子值。  
   
-## <a name="remarks"></a>注释  
- 所有类型的原子化的值传递给**sum （)** 一定要相同的基类型的子类型。 接受的基类型为三种内置数字基类型或 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果没有混合的这些类型，或者如果传递其他类型的其他值时，会引发静态错误。  
+## <a name="remarks"></a>Remarks  
+ 所有类型的原子化值传递给**sum （)** 必须是同一基类型的子类型。 接受的基类型为三种内置数字基类型或 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果混合使用这些类型，或者传递其他类型的其他值，会引发静态错误。  
   
- 结果**sum （)** 接收传入的类型，如 xdt:untypedAtomic，对于将 xs: double 的基类型，即使输入 （可选） 是空的序列。 如果输入在静态下为空，则对于 xs:integer 的静态和动态类型，结果都为 0。  
+ 结果**sum （)** 接收传入的类型，如 xdt: untypedatomic，对于 xs: double 的基类型，即使输入或者是空序列。 如果输入在静态下为空，则对于 xs:integer 的静态和动态类型，结果都为 0。  
   
- **Sum （)** 函数将返回数字值的总和。 如果 xdt:untypedAtomic 值无法转换为将 xs: double，在输入序列中，将忽略值 *$arg*。 如果输入是动态计算的空序列，则返回的所用基类型的值为 0。  
+ **Sum （)** 函数将返回数字值的总和。 如果无法将 xdt: untypedatomic 值转换为 xs: double，在输入序列中，将忽略值 *$arg*。 如果输入是动态计算的空序列，则返回的所用基类型的值为 0。  
   
  当发生溢出或超出范围异常时，函数将返回一个运行时错误。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型中的列[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. 使用 sum() XQuery 函数查找计算生产过程中所有生产车间的总工时  
  下面的查询查找在生产（已存储其生产说明的）所有产品型号的过程中所有生产车间的总工时。  
@@ -99,7 +99,7 @@ FROM Production.ProductModel
 WHERE Instructions is not NULL          
 ```  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 ProductModelID Name                 TotalLaborHours         
@@ -113,19 +113,19 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   只有单个自变量版本的**sum （)** 支持。  
+-   仅单参数版本的**sum （)** 支持。  
   
 -   如果输入是动态计算的空序列，则返回的所用基类型（而不是 xs:integer 类型）的值为 0。  
   
--   **Sum （)** 函数映射到 xs: decimal 的所有整数。  
+-   **Sum （)** 函数将所有整数都映射到 xs: decimal。  
   
--   **Sum （)** 不支持对类型 xs: duration 值的函数。  
+-   **Sum （)** 不支持对类型 xs: duration 的值的函数。  
   
 -   不支持跨基类型边界混合类型的序列。  
   
 -   sum((xs:double(“INF”), xs:double(“-INF”))) 将引发域错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

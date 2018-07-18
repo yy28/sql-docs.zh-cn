@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59196e0569ac9cc683b3affa68fc17f068e74994
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: da739700cabb6a9d691d5f284cd6f0532898393f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203169"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979019"
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server 中的 R 互操作性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题侧重于运行 SQL Server 中的 R 的机制，并介绍 Microsoft R 和开放源代码。 之间的差异
+本主题重点介绍适用于 SQL Server 中 R 运行的机制，并介绍了 Microsoft R 与开源 R.之间的差异
 
-适用于： SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
+适用范围： SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
 
 有关其他组件的信息，请参阅[SQL Server 中的新组件](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)。
 
@@ -31,19 +31,19 @@ ms.locfileid: "31203169"
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不会以任何方式修改 R 运行时。 R 运行时在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 进程的外部执行，并且可独立于 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 运行。 但是，我们强烈建议不要在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用 R 时运行这些工具，以免发生资源争用。
 
-可在与实例关联的文件夹中找到与特定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例关联的 R 基础包发行版。 例如，如果在默认实例上安装 R Services，R 库位于此文件夹中默认情况下：
+可在与实例关联的文件夹中找到与特定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例关联的 R 基础包发行版。 例如，如果默认实例上安装 R Services，R 库位于此文件夹默认情况下：
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 
-同样，与默认实例关联的 R 工具将位于此应用文件夹中默认情况下：
+同样，与默认实例关联的 R 工具将位于此应用程序文件夹中默认情况下：
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-有关如何 Microsoft R 是不同于你可能获得 CRAN 的 R 基础分发的详细信息，请参阅[R 语言和 Microsoft R 产品和功能的互操作性](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+有关 Microsoft R 的不同于你可能会收到从 CRAN 的 R 基础分发方式的详细信息，请参阅[与 R 语言和 Microsoft R 产品和功能的互操作性](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)
 
 ### <a name="additional-r-packages-from-microsoft-r"></a>从 Microsoft R 的其他 R 包
 
-除了基本的 R 分发，[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]包括某些专有的 R 包，以及一个框架，用于并行执行还支持远程计算上下文执行的 R 的 R。
+除了基础 R 发行版，[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]包含一些专有 R 包，以及用于并行执行还支持在远程计算上下文中执行 R 的 R 的框架。
 
 R 功能的这种组合（R 基础分发版加上增强的 R 功能和包）称为 **Microsoft R**。如果安装了 Microsoft R Server（独立版），获得的包集与连同 SQL Server R Services（数据库内）一起安装的包集完全相同，但这些包安装在不同的文件夹中。
 
@@ -62,7 +62,7 @@ Microsoft R 包含 Intel 数学内核库的发行版，每当能够加速数学�
 
 + **RevoPemaR。** PEMA 是“并行外部内存算法”的缩写。 **RevoPemaR** 包提供可用于开发你自己的并行算法的 API。 有关详细信息，请参阅 [RevoPemaR Getting Started Guide](https://docs.microsoft.com/r-server/r/how-to-developer-pemar)（RevoPemaR 入门指南）。
 
-我们还建议你尝试[MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)，从支持远程执行的 R 代码和可伸缩性，与分布式处理的 Microsoft R 新的包使用改进的机器学习算法由 Microsoft Research 开发。
+我们还建议您尝试[MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)，Microsoft R 支持远程执行 R 代码的且可缩放的分布式处理，从新的包使用改进的机器学习算法由 Microsoft Research 开发。
 
 ## <a name="next-steps"></a>后续步骤
 

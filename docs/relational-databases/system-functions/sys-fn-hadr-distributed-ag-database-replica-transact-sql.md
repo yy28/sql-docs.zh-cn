@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_distributed_ag_database_replica (Transact SQL) |Microsoft 文档
+title: sys.fn_hadr_distributed_ag_database_replica (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 029292526c3714bbfb532301d314cab0d4797590
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971789"
 ---
-# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (TRANSACT-SQL)
+# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  用于将分布式的可用性组中的数据库映射到本地可用性组中的数据库。  
+  用于将映射到本地可用性组中的数据库的分布式的可用性组中的数据库。  
    
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="examples"></a>示例  
   
 ### <a name="using-sysfnhadrdistributedagdatabasereplica"></a>使用 sys.fn_hadr_distributed_ag_database_replica  
- 下面的示例传入分布式的可用性组中的数据库 ID。 它返回具有与本地可用性组关联的数据库 ID 的表。  
+ 下面的示例将分布式的可用性组中的数据库 ID 中传递。 它返回具有与本地可用性组关联的数据库 ID 的表。  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  
@@ -72,11 +72,11 @@ SELECT * FROM sys.fn_hadr_distributed_ag_database_replica(@lagId, @databaseId)
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Alwayson 可用性组函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [Always On 可用性组函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
- [创建可用性组 & #40;Transact SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP & #40;Transact SQL & #41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

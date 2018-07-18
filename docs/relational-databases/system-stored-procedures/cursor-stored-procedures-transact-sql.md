@@ -1,5 +1,5 @@
 ---
-title: 游标存储过程 (Transact SQL) |Microsoft 文档
+title: 游标存储过程 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 29019fbc25394b0a61fba1fd31fb20225f173409
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237645"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970421"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>游标存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下系统存储过程实现游标变量功能。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持下列实现游标变量功能的系统存储过程。  
   
 |||  
 |-|-|  
@@ -43,7 +43,7 @@ ms.locfileid: "33237645"
 |[sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)|[sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)|  
 |[sp_cursoroption](../../relational-databases/system-stored-procedures/sp-cursoroption-transact-sql.md)||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

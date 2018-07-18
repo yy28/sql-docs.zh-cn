@@ -14,11 +14,11 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.openlocfilehash: 6b28ac7d654d04f5e0998ecda31d16ec597f8d3d
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020695"
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>快速入门： 使用 Docker 运行 SQL Server 2017 容器映像
 
@@ -31,7 +31,7 @@ ms.locfileid: "34455491"
 > [!NOTE]
 > 本快速入门专门重点介绍 mssql-server-linux 映像的使用。 虽然未介绍 Windows 映像，但可在 [mssql-server-windows-developer Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)上找到关于它的详细信息。
 
-## <a id="requirements"></a> 先决条件
+## <a id="requirements"></a> Prerequisites
 
 - 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
 - 至少 2 GB 的磁盘空间
@@ -52,7 +52,7 @@ ms.locfileid: "34455491"
 
    前一个命令请求最新的 SQL Server 2017 容器映像。 如果想请求某个特定映像，需添加一个冒号和标记名称（例如 `microsoft/mssql-server-linux:2017-GA`。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
    
-   有关本文中中的 bash 命令`sudo`使用。 在 MacOS 上,`sudo`可能不需要。 在 Linux 上，如果你不想要使用`sudo`若要运行 Docker，你可以配置**docker**组并将用户添加到该组。 有关详细信息，请参阅[安装后步骤适用于 Linux](https://docs.docker.com/install/linux/linux-postinstall/)。
+   在本文中，bash 命令`sudo`使用。 在 MacOS 上，`sudo`可能不需要。 在 Linux 上，如果不想要使用`sudo`若要运行 Docker，可以配置**docker**组，并将用户添加到该组。 有关详细信息，请参阅[安装后步骤适用于 Linux](https://docs.docker.com/install/linux/linux-postinstall/)。
 
 1. 要使用 Docker 运行容器映像，可以从 Bash Shell (Linux/macOS) 或提升的 PowerShell 命令提示符使用以下命令。
 
@@ -80,7 +80,7 @@ ms.locfileid: "34455491"
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | **-e SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
-   | **-p 1433:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听 TCP 1433 容器中，并且这公开给端口 1433，主机上。 |
+   | **-p 1433:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听容器中的 TCP 1433 并公开的端口 1433，在主机上。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
@@ -228,7 +228,7 @@ SELECT @@SERVERNAME,
 
 1. 查找承载容器的计算机的 IP 地址。 在 Linux 上，使用 **ifconfig** 或 **ip addr**。在 Windows 上，使用 **ipconfig**。
 
-1. 运行 sqlcmd，指定 IP 地址和映射容器中的端口 1433 的端口。 在此示例中，这是同一个端口，1433，主机上。 如果主机计算机上指定了不同的映射的端口，你将在此处使用它。
+1. 运行 sqlcmd，指定 IP 地址和映射容器中的端口 1433 的端口。 在此示例中，这是同一个端口，1433，在主机上。 如果主机计算机上指定其他映射的端口，你将在此处使用它。
 
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'

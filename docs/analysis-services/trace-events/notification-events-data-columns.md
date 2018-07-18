@@ -1,5 +1,5 @@
 ---
-title: Notification Events Data Columns |Microsoft 文档
+title: 通知事件数据列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045711"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017760"
 ---
 # <a name="notification-events-data-columns"></a>通知事件数据列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,25 +33,25 @@ ms.locfileid: "34045711"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息。<br /><br /> 以下**子类 Id**:<br />                      **子类名** ”对：<br /><br /> 0：主动缓存开始<br /><br /> 1：主动缓存结束<br /><br /> 2：网络流量记录器已启动<br /><br /> 3：网络流量记录器已停止<br /><br /> 4：配置属性已更新<br /><br /> 5：SQL 跟踪<br /><br /> 6：对象已创建<br /><br /> 7：对象已删除<br /><br /> 8：对象已更改<br /><br /> 9：主动缓存轮询开始<br /><br /> 10：主动缓存轮询结束<br /><br /> 11：网络流量记录器快照开始<br /><br /> 12：网络流量记录器快照结束<br /><br /> 13：主动缓存：可通知对象已更新<br /><br /> 14：迟缓处理：开始处理<br /><br /> 15：迟缓处理：处理完成<br /><br /> 16：SessionOpened 事件开始<br /><br /> 17：SessionOpened 事件结束<br /><br /> 18：SessionClosing 事件开始<br /><br /> 19：SessionClosing 事件结束<br /><br /> 20：CubeOpened 事件开始<br /><br /> 21：CubeOpened 事件结束<br /><br /> 22：CubeClosing 事件开始<br /><br /> 23：CubeClosing 事件结束<br /><br /> 24：已请求事务中止|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息。<br /><br /> 以下**子类 Id**:<br />                      **子类名** ”对：<br /><br /> 0：主动缓存开始<br /><br /> 1：主动缓存结束<br /><br /> 2：网络流量记录器已启动<br /><br /> 3：网络流量记录器已停止<br /><br /> 4：配置属性已更新<br /><br /> 5：SQL 跟踪<br /><br /> 6：对象已创建<br /><br /> 7：对象已删除<br /><br /> 8：对象已更改<br /><br /> 9：主动缓存轮询开始<br /><br /> 10：主动缓存轮询结束<br /><br /> 11：网络流量记录器快照开始<br /><br /> 12：网络流量记录器快照结束<br /><br /> 13：主动缓存：可通知对象已更新<br /><br /> 14：迟缓处理：开始处理<br /><br /> 15：迟缓处理：处理完成<br /><br /> 16：SessionOpened 事件开始<br /><br /> 17：SessionOpened 事件结束<br /><br /> 18：SessionClosing 事件开始<br /><br /> 19：SessionClosing 事件结束<br /><br /> 20：CubeOpened 事件开始<br /><br /> 21：CubeOpened 事件结束<br /><br /> 22：CubeClosing 事件开始<br /><br /> 23：CubeClosing 事件结束<br /><br /> 24：已请求事务中止|  
 |CurrentTime|2|5|包含通知事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|包含事件（如果有）的开始时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|包含事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|包含事件占用的时间量（毫秒）。|  
-|IntegerData|10|1|包含与通知事件相关联的整数数据。 EventSubclass 列为 8 时，取值为：<br /><br /> 1 = 已创建<br /><br /> 2 = 已删除<br /><br /> 3 = 已更改对象的属性<br /><br /> 4 = 已更改对象的子级的属性<br /><br /> 6 = 已添加子级<br /><br /> 7 = 已删除子级<br /><br /> 8 = 完全处理对象<br /><br /> 9 = 部分处理对象<br /><br /> 10 = 未处理对象<br /><br /> 11 = 完全优化对象<br /><br /> 12 = 部分优化对象<br /><br /> 13 = 未优化对象|  
+|IntegerData|10|@shouldalert|包含与通知事件相关联的整数数据。 EventSubclass 列为 8 时，取值为：<br /><br /> 1 = 已创建<br /><br /> 2 = 已删除<br /><br /> 3 = 已更改对象的属性<br /><br /> 4 = 已更改对象的子级的属性<br /><br /> 6 = 已添加子级<br /><br /> 7 = 已删除子级<br /><br /> 8 = 完全处理对象<br /><br /> 9 = 部分处理对象<br /><br /> 10 = 未处理对象<br /><br /> 11 = 完全优化对象<br /><br /> 12 = 部分优化对象<br /><br /> 13 = 未优化对象|  
 |ObjectID|11|8|包含为其发出此通知的对象 ID；这是一个字符串值。|  
-|ObjectType|12|1|包含与通知事件相关联的对象类型。|  
+|ObjectType|12|@shouldalert|包含与通知事件相关联的对象类型。|  
 |ObjectName|13|8|包含与通知事件相关联的对象名称。|  
 |ObjectPath|14|8|包含与通知事件相关联的对象路径。 路径作为以逗号分隔的父级列表（以该对象的父级开头）返回。|  
 |ObjectReference|15|8|包含进度报告结束事件的对象引用。 对象引用由所有父级编码为 XML，方法是使用标记说明对象。|  
-|ConnectionID|25|1|包含与通知事件相关联的唯一连接 ID。|  
+|ConnectionID|25|@shouldalert|包含与通知事件相关联的唯一连接 ID。|  
 |DatabaseName|28|8|包含在其中发生通知事件的数据库的名称。|  
 |NTUserName|32|8|包含与通知事件相关联的 Windows 用户名。|  
 |NTDomainName|33|8|用户所属的 Windows 域。|  
 |SessionID|39|8|包含与通知事件相关联的会话 ID。|  
 |NTCanonicalUserName|40|8|包含与通知事件相关联的 Windows 用户名。 用户名采用规范格式。 例如，engineering.microsoft.com/software/user。|  
-|SPID|41|1|包含唯一地标识与通知事件相关联的用户会话的服务器进程 ID (SPID)。 SPID 直接对应于 XMLA 所使用的会话 GUID。|  
+|SPID|41|@shouldalert|包含唯一地标识与通知事件相关联的用户会话的服务器进程 ID (SPID)。 SPID 直接对应于 XMLA 所使用的会话 GUID。|  
 |TextData|42|9|包含与通知事件相关联的文本数据。|  
 |ServerName|43|8|包含在其上发生通知事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
 |RequestProperties|45|9|包含 XMLA 请求的属性。|  
@@ -60,21 +60,21 @@ ms.locfileid: "34045711"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|提供有关每个事件类的附加信息的特定用户子类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|提供有关每个事件类的附加信息的特定用户子类。|  
 |CurrentTime|2|5|包含通知事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|IntegerData|10|1|特定的用户定义事件信息。|  
-|ConnectionID|25|1|包含与通知事件相关联的唯一连接 ID。|  
+|IntegerData|10|@shouldalert|特定的用户定义事件信息。|  
+|ConnectionID|25|@shouldalert|包含与通知事件相关联的唯一连接 ID。|  
 |DatabaseName|28|8|包含在其中发生通知事件的数据库的名称。|  
 |NTUserName|32|8|包含与通知事件相关联的 Windows 用户名。|  
 |NTDomainName|33|8|用户所属的 Windows 域。|  
 |SessionID|39|8|包含与通知事件相关联的会话 ID。|  
 |NTCanonicalUserName|40|8|包含与通知事件相关联的 Windows 用户名。 用户名采用规范格式。 例如，engineering.microsoft.com/software/user。|  
-|SPID|41|1|包含唯一地标识与通知事件相关联的用户会话的服务器进程 ID (SPID)。 SPID 直接对应于 XMLA 所使用的会话 GUID。|  
+|SPID|41|@shouldalert|包含唯一地标识与通知事件相关联的用户会话的服务器进程 ID (SPID)。 SPID 直接对应于 XMLA 所使用的会话 GUID。|  
 |TextData|42|9|包含与通知事件相关联的文本数据。|  
 |ServerName|43|8|包含在其上发生通知事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## <a name="see-also"></a>另请参阅  
- [通知事件事件类别](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>请参阅  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

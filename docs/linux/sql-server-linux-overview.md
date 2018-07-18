@@ -13,11 +13,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.openlocfilehash: 16ea8b69f1d55e5b338931f0531bdf8a2e037707
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311685"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020135"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -55,7 +55,7 @@ SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的底�
 如果你已熟悉 SQL Server，请查看 [发行说明](sql-server-linux-release-notes.md) 了解常规使用说明和此版本的已知问题。 然后查看 [Linux 上的 SQL Server 的新功能](sql-server-linux-whats-new.md) 以及 [SQL Server 2017 更新概览](../sql-server/what-s-new-in-sql-server-2017.md)。 
 
 > [!TIP]
-> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
+> 有关常见问题的解答，请参阅[SQL Server Linux 常见问题](sql-server-linux-faq.md)。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

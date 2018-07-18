@@ -2,7 +2,7 @@
 title: 执行 SQL Server 迁移评估 （数据迁移助手） |Microsoft Docs
 description: 了解如何使用数据迁移助手迁移到另一个 SQL Server 或 Azure SQL 数据库之前，评估的本地 SQL Server
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782218"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934949"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>执行使用数据迁移助手的 SQL Server 迁移评估
 
@@ -86,7 +86,7 @@ ms.locfileid: "37782218"
 
 2.  跨所有兼容性级别受目标 SQL Server 版本上选择查看兼容性问题**选项**页。
 
-你可以通过分析受影响的对象和其下标识每个问题的详细信息中查看兼容性问题**重大更改**，**的行为更改**，和**已弃用的功能**.
+你可以通过分析受影响的对象，其详细信息，并可能下标识每个问题的修复程序中查看兼容性问题**重大更改**，**的行为更改**，和**已弃用的功能**。
 
 ![查看评估结果](../dma/media/ReviewResults.png)
 

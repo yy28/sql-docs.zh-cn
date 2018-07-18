@@ -1,5 +1,5 @@
 ---
-title: MoveWithDescendants 元素 (XMLA) |Microsoft 文档
+title: MoveWithDescendants 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 518c95efa36c6a234036a1c7f293c3df8283749a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575729"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969187"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  指示是否由容器的父也将更新的后代中的属性成员[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)命令。  
+  指示是否由父也会更新属性成员的后代[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34575729"
 </Update>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34575729"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **MoveWithDescendants**元素确定是否**更新**命令应只需更新由标识的属性成员[属性](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)元素，但此外都的后代中的这些属性成员也将更新。  
+ **MoveWithDescendants**元素可确定是否**更新**命令不应只更新通过标识的属性成员[属性](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)元素，但此外，这些属性成员的后代也更新。  
   
 > [!NOTE]  
 >  此属性仅适用于父子层次结构中的属性成员。  

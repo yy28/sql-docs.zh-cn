@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a9d4cdb95349c9af9416caca7ca8dcf8893c0b4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970629"
 ---
 # <a name="sysfiletablesystemdefinedobjects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "33178563"
   
  有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
-|列|数据类型|Description|  
+|“列”|数据类型|Description|  
 |------------|---------------|-----------------|  
 |**object_id**|**int**|与 FileTable 相关的系统定义对象的对象 ID。<br /><br /> 引用中的对象**sys.objects**。|  
-|**parent_object_id。**|**int**|父 FileTable 的对象 ID。<br /><br /> 引用中的对象**sys.objects**。|  
+|**parent_object_id**|**int**|父 FileTable 的对象 ID。<br /><br /> 引用中的对象**sys.objects**。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建、更改和删除 FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  
   

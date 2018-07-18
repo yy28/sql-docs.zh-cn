@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_instance_config (Transact SQL) |Microsoft 文档
+title: managed_backup.fn_backup_instance_config (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4dae80911e6508a1a398cf208300bf4145faeecc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970499"
 ---
-# <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (TRANSACT-SQL)
+# <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   返回 1 行，其中是 SQL Server 实例的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置。  
@@ -60,13 +60,13 @@ managed_backup.fn_backup_db_config ()
 |retention_days|INT|在实例级别设置的默认保持期。|  
 |storage_url|NVARCHAR(1024)|在实例级别设置的默认存储帐户 URL。|  
 |encryption_algorithm|SYSNAME|加密算法的名称。 如果未指定加密，则设置为 NULL。|  
-|encryptor_type|NVARCHAR(32)|使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
+|encryptor_type|NVARCHAR （32)|使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
 |encryptor_name|SYSNAME|证书或非对称密钥的名称。 如果未指定名称，则设置为 NULL|  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 要求的成员身份**db_backupoperator**具有数据库角色**ALTER ANY CREDENTIAL**权限。 该用户不应被拒绝**VIEW ANY DEFINITION**权限。  
+ 要求的成员身份**db_backupoperator**拥有数据库角色**ALTER ANY CREDENTIAL**权限。 用户应被拒绝**VIEW ANY DEFINITION**权限。  
   
 ## <a name="examples"></a>示例  
  下例返回所在实例上的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的默认配置设置：  

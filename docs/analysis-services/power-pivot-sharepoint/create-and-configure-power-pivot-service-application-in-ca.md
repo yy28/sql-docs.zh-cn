@@ -1,5 +1,5 @@
 ---
-title: 在创建和配置 Power Pivot 服务应用程序 CA |Microsoft 文档
+title: 创建和配置 Power Pivot 服务应用程序在 CA |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025164"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982599"
 ---
-# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>在创建和配置 Power Pivot 服务应用程序 CA
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>创建和配置 Power Pivot 服务应用程序在 CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的共享服务实例。 每个服务应用程序都具有自己的应用程序标识、配置设置、属性和内部数据存储。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "34025164"
   
 6.  在 **“数据库服务器”** 中，默认值是承载场配置数据库的 SQL Server 数据库引擎实例。 您可以使用该服务器或者选择其他的 SQL Server。  
   
-7.  在**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 必须为每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
+7.  在中**数据库名称**，默认值是 PowerPivotServiceApplication1_\<guid >。 必须为每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
   
 8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34025164"
   
      有关服务关联的详细信息，请参阅 [将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-10. 单击 **“确定”**。 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
+10. 单击“确定” **。** 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
   
 ##  <a name="ConfigApp"></a> 配置 Power Pivot 服务应用程序  
  使用默认配置创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 对于大多数情况，建议您采用这些默认设置。 仅在遇到响应时间较长或删除的连接时，或者你在为特定的 SharePoint Web 应用程序改变 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务配置时，才更改这些默认设置。  
@@ -106,9 +106,9 @@ ms.locfileid: "34025164"
   
 9. 在“数据刷新”的 **“工作时间”** 中，您可以指定用于定义工作日的小时范围。 数据刷新计划可以在下班后运行，以便选取在正常工作时间中生成的事务数据。  
   
-10. 在“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户”中，可以指定一个预定义的 Secure Store Service 目标应用程序，以便存储用于运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新作业的预定义帐户。 请确保指定目标应用程序名称而不是 ID。 如果在 SQL Server 安装程序中使用了“新服务器”选项来安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则会自动创建用于无人参与的数据刷新的目标应用程序。 否则，您必须手动创建目标应用程序。 有关如何配置帐户的说明，请参阅 [配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
+10. 在“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户”中，可以指定一个预定义的 Secure Store Service 目标应用程序，以便存储用于运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新作业的预定义帐户。 请确保指定目标应用程序名称而不是 ID。 如果在 SQL Server 安装程序中使用了“新服务器”选项来安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则会自动创建用于无人参与的数据刷新的目标应用程序。 否则，您必须手动创建目标应用程序。 有关如何配置帐户的说明，请参阅[配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
   
-11. 在 **“允许用户输入自定义 Windows 凭据”** 中，您可以选中或取消选中复选框以便指定计划所有者是否可以输入任意的 Windows 凭据以便运行数据刷新计划。 如果选中此复选框， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序将为每组存储凭据都创建和管理目标应用程序。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。  
+11. 在 **“允许用户输入自定义 Windows 凭据”** 中，您可以选中或取消选中复选框以便指定计划所有者是否可以输入任意的 Windows 凭据以便运行数据刷新计划。 如果选中此复选框， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序将为每组存储凭据都创建和管理目标应用程序。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。  
   
 12. 在 **“最大处理历史记录长度”** 中，您可以指定保留多长时间的数据刷新处理的历史记录。 此信息显示在为使用数据刷新的每个工作簿保留的数据刷新历史记录页中。 它还出现在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "34025164"
   
 5.  对于“[自定义]”，选中要使用的每个服务应用程序连接旁边的复选框。 如果有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（由设置为“PowerPivot 服务应用程序代理”的类型指示），请确保仅选择一个。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ##  <a name="EditGSA"></a> 编辑服务应用程序属性  
  使用下面的说明可重新打开指定服务应用程序名称、应用程序池、数据库设置和服务关联的属性页。  
@@ -152,7 +152,7 @@ ms.locfileid: "34025164"
   
 3.  在功能区上单击 **“属性”** 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

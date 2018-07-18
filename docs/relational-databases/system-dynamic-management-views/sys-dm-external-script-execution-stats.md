@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_execution_stats |Microsoft 文档
+title: sys.dm_external_script_execution_stats |Microsoft Docs
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023811"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34468353"
 > [!NOTE]  
 >  运行外部脚本的用户必须具有额外权限 EXECUTE ANY EXTERNAL SCRIPT，但是，此 DMV 可由没有此权限的管理员使用。 
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   此 DMV 为内部遥测提供，以监视 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中提供的新外部脚本执行功能的总体使用情况。 启动 LaunchPad 时会启动遥测服务，每次调用已注册的外部脚本函数时会递增基于磁盘的计数器。
 
 通常情况下，只要生成性能计数器的进程处于活动状态，它们便有效。 因此，对 DMV 的查询不能显示已停止运行的服务的详细数据。 例如，如果启动程序执行外部脚本，且非常快速地完成它们，那么常规 DMV 可能不会显示任何数据
@@ -65,7 +65,7 @@ ms.locfileid: "34468353"
 ### <a name="r-counter-values"></a>R 计数器值
  [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] 中当前支持的外部脚本语言只有 R。R 语言的外部脚本请求由 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 处理。 
 
-为 R，此 DMV 的实例上跟踪所做的 R 调用数。 例如，如果调用且并行运行了 `rxLinMod` ，该计数器会增大 1。
+对于 R，此 DMV 会跟踪实例上的 R 调用所做的次数。 例如，如果调用且并行运行了 `rxLinMod` ，该计数器会增大 1。
  
 对于 R 语言， *counter_name* 字段中显示的计数器值表示已注册的 ScaleR 函数的名称。 *counter_value* 字段中的值表示特定 ScaleR 函数实例的累计数。 
 
@@ -89,7 +89,7 @@ WHERE language = 'R';
 ```  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md) 
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  

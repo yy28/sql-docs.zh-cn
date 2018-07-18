@@ -1,5 +1,5 @@
 ---
-title: 限制元素 (XMLA) |Microsoft 文档
+title: Restrictions 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 902f3086b28d17b11d1c1c44b130e2dcf224eb30
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578739"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968301"
 ---
 # <a name="restrictions-element-xmla"></a>Restrictions 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含限制列和数据使用[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
+  包含限制列和使用的数据[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34578739"
 </Discover>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34578739"
 |子元素|[RestrictionList](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **限制**元素表示限制列和用来限制检索的信息的数据**发现**方法。  
+ **限制**元素表示限制列和数据用来限制检索的信息**Discover**方法。  
   
 ## <a name="example"></a>示例  
   

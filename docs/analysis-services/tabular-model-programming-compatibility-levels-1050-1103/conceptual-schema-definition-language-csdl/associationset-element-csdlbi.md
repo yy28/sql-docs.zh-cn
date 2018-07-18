@@ -1,5 +1,5 @@
 ---
-title: AssociationSet 元素 (CSDLBI) |Microsoft 文档
+title: AssociationSet 元素 (CSDLBI) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039211"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968976"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34039211"
 ## <a name="applicable-attributes"></a>适用的属性  
  下表列出了用于定义 **AssociationSet** 元素的元素和属性。  
   
-|名称|是否必需|Description|  
+|“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |State|是|指示关联是否有效的字符串。 值由 State 元素定义。|  
 |Hidden|“否”|指示关系是否可见的布尔值。 默认情况下，Hidden 的值为 **false**，表示所有关系在模型中均可见。|  
@@ -37,7 +37,7 @@ ms.locfileid: "34039211"
   
  下表列出了 **State** 元素的值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |在职|关联处于活动状态。|  
 |Inactive|关联处于活动状态。|  
@@ -73,7 +73,7 @@ ms.locfileid: "34039211"
 </AssociationSet>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [BI 批注的 CSDL 的技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>请参阅  
+ [用于商业智能的 CSDL 注释技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

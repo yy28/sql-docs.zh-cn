@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (TRANSACT-SQL) |Microsoft 文档
+title: sp_help_fulltext_system_components (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260613"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019985"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  返回注册的断字符、筛选器和协议处理程序的信息。 **sp_help_fulltext_system_components**也会返回一系列的数据库和已使用指定的组件的全文目录的标识符。  
+  返回注册的断字符、筛选器和协议处理程序的信息。 **sp_help_fulltext_system_components**也会返回一组数据库和全文目录的使用过指定的组件的标识符。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ sp_help_fulltext_system_components
   
 -   **fullpath**  
   
- 如果指定完整路径， *param*还必须使用组件 DLL 的完整路径指定或返回一条错误消息。  
+ 如果指定完整路径，则*param*还必须使用组件 DLL 的完整路径来指定或返回错误消息。  
   
  [ **@param=** ] *param*  
  根据组件类型，此参数可以是：区域设置标识符 (LCID)、带“.”前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
@@ -77,11 +77,11 @@ sp_help_fulltext_system_components
 |**componenttype**|**sysname**|组件的类型。 可以是以下类型之一：<br /><br /> filter<br /><br /> 协议处理程序<br /><br /> 断字符|  
 |**componentname**|**sysname**|组件的名称。|  
 |**clsid**|**uniqueidentifier**|组件的类标识符。|  
-|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 不是的成员的调用方**serveradmin**固定的服务器角色。|  
+|**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 不是成员的调用方**serveradmin**固定的服务器角色。|  
 |**version**|**nvarchar(30)**|组件的版本。|  
 |**manufacturer**|**sysname**|组件制造商的名称。|  
   
- 以下结果集才会返回一个或多个全文目录存在，则使用*component_type*。  
+ 返回以下结果集仅当一个或多个全文目录存在，则使用*component_type*。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -89,9 +89,9 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|全文目录的 ID。|  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**公共**角色; 但是，用户只能看到他们具有 VIEW DEFINITION 权限的全文目录有关的信息。 只有的成员**serveradmin**固定的服务器角色，可以看到中的值**fullpath**列。  
+ 要求的成员身份**公共**角色; 但是，用户只能看到他们具有 VIEW DEFINITION 权限的全文目录有关的信息。 只有的成员**serveradmin**固定的服务器角色可以看到中的值**fullpath**列。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此方法在准备升级时尤为重要。 执行特定数据库中的存储过程，然后使用输出确定升级是否将影响特定目录。  
   
 ## <a name="examples"></a>示例  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 确定特定断字符是否已注册。  
- 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名称， **@component_type**和**@param**。  
+ 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名称， **@component_type**并**@param**。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -142,7 +142,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

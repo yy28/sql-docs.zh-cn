@@ -1,5 +1,5 @@
 ---
-title: 数据浏览和 SQL Server 机器学习中使用 R 的预测性建模 |Microsoft 文档
+title: 数据浏览和预测性建模在 SQL Server 机器学习中使用 R |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,32 +7,32 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9f808c2fffe0b008590ae1eaac51124471c02e5d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203059"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984709"
 ---
-# <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>数据探索和使用 SQL Server 中的 R 预测建模
+# <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>数据浏览和使用 SQL Server 中的 R 构建预测模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本指南介绍了可通过与 SQL Server 的集成到数据科学过程改进。
+本文介绍了对数据科学过程是可以通过与 SQL Server 集成的改进。
 
-适用于： SQL Server 2016 R Services、 SQL Server 自 2017 年机 Learnign 服务
+适用范围： SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
 
 ## <a name="the-data-science-process"></a>数据科学过程
 
 数据科学家经常使用 R 来浏览数据并构建预测模型。 此过程通常需要反复经历各种尝试和错误才能获得良好的预测模型。 有经验的数据科学家会使用 RODBC 包连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库并将数据提取到本地工作站，然后对数据进行浏览，最后再使用标准 R 包构建预测模型。
 
-但是，这种方法存在许多缺点，该 hae 影响企业中的广泛地采用了 R。 
+但是，这种方法有许多缺点，该 hae 阻碍了企业中的 R 更广泛采用。 
 
-+ 数据移动可能速度慢、 效率低下，或不安全
-+ R 本身也存在性能和规模限制
++ 数据移动可能速度慢、 效率不高，或不安全
++ R 本身也存在性能与伸缩性限制
 
 当你需要移动和分析大量数据，或者使用的数据集不适合计算机上可供使用的内存时，这些缺点就会变得更明显。
 
-新的、 可扩展的包和随附的 R 函数[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]帮助你克服这些难题的许多。 
+新的、 可缩放的包和 R 函数中包含[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]帮助您克服其中许多难题。 
 
 ## <a name="whats-different-about-revoscaler"></a>有关 RevoScaleR 差别是什么？
 
@@ -46,7 +46,7 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
 
 ### <a name="using-other-r-packages"></a>使用其他 R 包
 
-除了 Microsoft 机器学习中包含的专有 R 库，你可以在解决方案中，使用几乎任何 R 包包括：
+除了随附 Microsoft 机器学习的专有 R 库，你可以在解决方案中，使用几乎任何 R 包包括：
 
 + 公共存储库提供的通用 R 包。 你可以从公共存储库（例如 CRAN，托管 6000 多个可供数据科学家使用的包）获取最常用的开源 R 包。
   
@@ -60,23 +60,23 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
   
      **RevoPemaR** 包允许你在 R 中开发自己的并行外部存储器算法。  
   
-     有关这些程序包以及如何使用它们的详细信息，请参阅[什么是 RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction)和[入门 RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)。 
+     有关这些包以及如何使用它们的详细信息，请参阅[什么是 RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction)并[RevoPemaR 入门](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)。 
 
-+ **MicrosoftML**包含高度优化的机器学习算法和数据从 Microsoft 数据科学团队的转换的集合。 许多算法还在 Azure 机器学习中使用。 有关详细信息，请参阅[使用 MicrosoftML 包](../../advanced-analytics/using-the-microsoftml-package.md)。
++ **MicrosoftML**包含一系列高度优化的机器学习算法和 Microsoft 数据科学团队的数据转换。 许多算法还使用 Azure 机器学习中。 有关详细信息，请参阅[使用 MicrosoftML 包](../../advanced-analytics/using-the-microsoftml-package.md)。
 
 ### <a name="r-development-tools"></a>R 开发工具
 
-当开发 R 解决方案，请务必下载 Microsoft R 客户端。 此免费下载内容还包括支持远程计算上下文和可扩展 alorithms 所需的库：
+当开发 R 解决方案，请务必下载 Microsoft R 客户端。 此免费下载包括支持远程计算上下文和可缩放 alorithms 所需的库：
 
 + **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：** R 运行时的一个分发版以及一组包（例如 Intel 数学内核库），用于提升标准 R 操作的性能。  
   
 + **RevoScaleR：** 一个可用来将计算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 R 包。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]。 它还包括一组常用 R 函数，这些函数在重新设计后具有更好的性能和可伸缩性。 你可以通过 **rx** 前缀来标识这些性能已改善的函数。 它还包括了针对各种源的增强数据提供程序；这些函数具有前缀 **Rx**。
 
-你可以使用支持 R，如任何基于 Windows 的代码编辑器[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或 RStudio。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 的下载包还包括 R 的常用命令行工具，例如 RGui.exe。
+你可以使用支持 R，例如任何基于 Windows 的代码编辑器[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或 RStudio。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 的下载包还包括 R 的常用命令行工具，例如 RGui.exe。
 
 ## <a name="use-new-data-sources-and-compute-contexts"></a>使用新数据源和计算上下文
 
-当使用 RevoScaleR 包连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查找在 R 代码中使用这些函数：
+当使用 RevoScaleR 包连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，寻找将在 R 代码中使用这些函数：
 
 + **RxSqlServerData** 是 RevoScaleR 包中提供的函数，支持通过改进型数据连接来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]随附的新的可伸缩包和 R 函数来克服这些困难。
   
@@ -89,7 +89,7 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
 有关如何创建和使用数据源和执行上下文的示例，请参阅以下教程：
 
 + [对数据科学的深入探讨](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [使用 Microsoft R 数据分析](https://msdn.microsoft.com/en-us/microsoft-r/data-analysis-in-microsoft-r)
++  [使用 Microsoft R 的数据分析](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
 ## <a name="deploy-r-code-to-production"></a>将 R 代码部署到生产
 
@@ -97,9 +97,9 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
 
 有关如何将代码转移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的第三方包的信息，请参阅 [Operationalizing Your R Code](../../advanced-analytics/r/operationalizing-your-r-code.md)随附的新的可伸缩包和 R 函数来克服这些困难。
 
-通常情况下，在开始部署时会对脚本进行清除，去掉生产过程中不需要的脚本。 当你将计算更接近移到数据时，可能会发现如何更有效地移动、 汇总，或存在比。 中的所有内容的数据 我们建议数据科研人员咨询数据库开发人员，了解如何提高性能，尤其是如果解决方案执行数据清理或工程的功能可能是 SQL 中更有效。 可能需要更改 ETL 流程来确保模型的构建或评分工作流不会失败，并可能需要以正确格式提供输入数据。
+通常情况下，在开始部署时会对脚本进行清除，去掉生产过程中不需要的脚本。 在移动计算更接近的数据时，你可能会发现更高效地移动、 汇总，或显示比执行所有操作在 R 中的数据的方法 我们建议数据科学家咨询数据库开发人员如何提高性能，尤其是当解决方案执行数据清理或功能工程的可能是在 SQL 中更有效。 可能需要更改 ETL 流程来确保模型的构建或评分工作流不会失败，并可能需要以正确格式提供输入数据。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Base R 函数和 ScaleR 函数之对比](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 

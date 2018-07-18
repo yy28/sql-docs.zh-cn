@@ -1,5 +1,5 @@
 ---
-title: 查询处理事件的数据列 |Microsoft 文档
+title: 查询处理事件数据列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8c0222c19d1f21e130f342f689ebb72cc8c0fda7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045531"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017594"
 ---
 # <a name="query-processing-events-data-columns"></a>查询处理事件数据列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,20 +52,20 @@ ms.locfileid: "34045531"
 |||||  
 |-|-|-|-|  
 |**列名**|**列 ID**|**列类型**|**列说明**|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -73,20 +73,20 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -94,20 +94,20 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -116,21 +116,21 @@ ms.locfileid: "34045531"
 |||||  
 |-|-|-|-|  
 |**列名**|**列 ID**|**列类型**|**列说明**|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：获取数据<br /><br /> 2：处理计算成员<br /><br /> 3：开机自检顺序|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：获取数据<br /><br /> 2：处理计算成员<br /><br /> 3：开机自检顺序|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -138,20 +138,20 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -159,20 +159,20 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -180,21 +180,21 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息。<br /><br /> 1：序列化轴<br /><br /> 2：序列化单元<br /><br /> 3：序列化 SQL 行集<br /><br /> 4：序列化平展行集|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息。<br /><br /> 1：序列化轴<br /><br /> 2：序列化单元<br /><br /> 3：序列化 SQL 行集<br /><br /> 4：序列化平展行集|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -202,20 +202,20 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -223,21 +223,21 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：MDX 脚本<br /><br /> 2：MDX 脚本命令|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：MDX 脚本<br /><br /> 2：MDX 脚本命令|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -245,20 +245,20 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -266,21 +266,21 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：MDX 脚本<br /><br /> 2：MDX 脚本命令|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：MDX 脚本<br /><br /> 2：MDX 脚本命令|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -288,21 +288,21 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息。<br /><br /> 1：缓存数据<br /><br /> 2：非缓存数据|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息。<br /><br /> 1：缓存数据<br /><br /> 2：非缓存数据|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -310,19 +310,19 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：缓存数据<br /><br /> 2：非缓存数据<br /><br /> 3：内部数据<br /><br /> 4：SQL 数据<br /><br /> 11：度量值组结构变化<br /><br /> 12：度量值组删除|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：缓存数据<br /><br /> 2：非缓存数据<br /><br /> 3：内部数据<br /><br /> 4：SQL 数据<br /><br /> 11：度量值组结构变化<br /><br /> 12：度量值组删除|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -330,19 +330,19 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 21：缓存数据<br /><br /> 22：非缓存数据<br /><br /> 23：内部数据<br /><br /> 24：SQL 数据|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 21：缓存数据<br /><br /> 22：非缓存数据<br /><br /> 23：内部数据<br /><br /> 24：SQL 数据|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -350,18 +350,18 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -369,19 +369,19 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息。<br /><br /> 1：从度量值组缓存中获取数据<br /><br /> 2：从平面缓存中获取数据<br /><br /> 3：从计算缓存中获取数据<br /><br /> 4：从持久缓存中获取数据|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息。<br /><br /> 1：从度量值组缓存中获取数据<br /><br /> 2：从平面缓存中获取数据<br /><br /> 3：从计算缓存中获取数据<br /><br /> 4：从持久缓存中获取数据|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -389,24 +389,24 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 0：VertiPaq 扫描<br /><br /> 1：表格查询<br /><br /> 2：用户层次结构处理查询<br /><br /> 10：内部 VertiPaq 扫描<br /><br /> 11：内部表格查询<br /><br /> 12：内部用户层次结构处理查询|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 0：VertiPaq 扫描<br /><br /> 1：表格查询<br /><br /> 2：用户层次结构处理查询<br /><br /> 10：内部 VertiPaq 扫描<br /><br /> 11：内部表格查询<br /><br /> 12：内部用户层次结构处理查询|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|作业 ID|7|1|进度的作业 ID。|  
+|作业 ID|7|@shouldalert|进度的作业 ID。|  
 |SessionType|8|8|会话类型（导致了操作的实体）。|  
 |ObjectID|11|8|对象 ID（请注意这是一个字符串）。|  
-|ObjectType|12|1|对象类型。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectName|13|8|对象名。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
 |ObjectReference|15|8|对象引用。 作为所有父级的 XML 编码，并且使用标记来描述对象。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTUserName|32|8|Windows 用户名。|  
 |NTDomainName|33|8|用户所属的 Windows 域。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -414,32 +414,32 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息。<br /><br /> 0：VertiPaq 扫描<br /><br /> 1：表格查询<br /><br /> 10：内部 VertiPaq 扫描<br /><br /> 11：内部表格查询|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息。<br /><br /> 0：VertiPaq 扫描<br /><br /> 1：表格查询<br /><br /> 10：内部 VertiPaq 扫描<br /><br /> 11：内部表格查询|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|作业 ID|7|1|进度的作业 ID。|  
+|作业 ID|7|@shouldalert|进度的作业 ID。|  
 |SessionType|8|8|会话类型（导致了操作的实体）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
+|ProgressTotal|9|@shouldalert|总进度。|  
+|IntegerData|10|@shouldalert|整型数据。|  
 |ObjectID|11|8|对象 ID（请注意这是一个字符串）。|  
-|ObjectType|12|1|对象类型。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectName|13|8|对象名。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
 |ObjectReference|15|8|对象引用。 作为所有父级的 XML 编码，并且使用标记来描述对象。|  
-|Severity|22|1|异常的严重级别。|  
-|成功|23|1|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|  
-|错误|24|1|给定事件的错误号。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|Severity|22|@shouldalert|异常的严重级别。|  
+|成功|23|@shouldalert|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|  
+|错误|24|@shouldalert|给定事件的错误号。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTUserName|32|8|Windows 用户名。|  
 |NTDomainName|33|8|用户所属的 Windows 域。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -447,17 +447,17 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTUserName|32|8|Windows 用户名。|  
 |NTDomainName|33|8|用户所属的 Windows 域。|  
-|ClientProcessID|36|1|客户端应用程序的进程 ID。|  
+|ClientProcessID|36|@shouldalert|客户端应用程序的进程 ID。|  
 |ApplicationName|37|8|创建了到服务器连接的客户端应用程序的名称。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -465,23 +465,23 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 0：VertiPaq 缓存精确匹配|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
+|EventSubclass|@shouldalert|@shouldalert|事件子类提供有关每个事件类的附加信息：<br /><br /> 0：VertiPaq 缓存精确匹配|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|作业 ID|7|1|进度的作业 ID。|  
+|作业 ID|7|@shouldalert|进度的作业 ID。|  
 |SessionType|8|8|会话类型（导致了操作的实体）。|  
 |ObjectID|11|8|对象 ID（请注意这是一个字符串）。|  
-|ObjectType|12|1|对象类型。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectName|13|8|对象名。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
 |ObjectReference|15|8|对象引用。 作为所有父级的 XML 编码，并且使用标记来描述对象。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
 |NTUserName|32|8|Windows 用户名。|  
 |NTDomainName|33|8|用户所属的 Windows 域。|  
 |SessionID|39|8|会话 GUID。|  
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -489,27 +489,27 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|作业 ID|7|1|进度的作业 ID。|  
+|作业 ID|7|@shouldalert|进度的作业 ID。|  
 |SessionType|8|8|会话类型（导致了操作的实体）。|  
-|IntegerData|10|1|整型数据。|  
+|IntegerData|10|@shouldalert|整型数据。|  
 |ObjectID|11|8|对象 ID（请注意这是一个字符串）。|  
-|ObjectType|12|1|对象类型。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectName|13|8|对象名。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|Severity|22|1|异常的严重级别。|  
-|成功|23|1|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|  
-|错误|24|1|给定事件的错误号。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|Severity|22|@shouldalert|异常的严重级别。|  
+|成功|23|@shouldalert|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|  
+|错误|24|@shouldalert|给定事件的错误号。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
-|ClientProcessID|36|1|客户端应用程序的进程 ID。|  
+|ClientProcessID|36|@shouldalert|客户端应用程序的进程 ID。|  
 |SessionID|39|8|会话 GUID。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
@@ -517,31 +517,31 @@ ms.locfileid: "34045531"
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
+|EventClass|0|@shouldalert|事件类用于将事件分类。|  
 |CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |Duration|5|2|事件占用的时间（毫秒）。|  
 |CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|作业 ID|7|1|进度的作业 ID。|  
+|作业 ID|7|@shouldalert|进度的作业 ID。|  
 |SessionType|8|8|会话类型（导致了操作的实体）。|  
-|IntegerData|10|1|整型数据。|  
+|IntegerData|10|@shouldalert|整型数据。|  
 |ObjectID|11|8|对象 ID（请注意这是一个字符串）。|  
-|ObjectType|12|1|对象类型。|  
+|ObjectType|12|@shouldalert|对象类型。|  
 |ObjectName|13|8|对象名。|  
 |ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|Severity|22|1|异常的严重级别。|  
-|成功|23|1|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|  
-|错误|24|1|给定事件的错误号。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
+|Severity|22|@shouldalert|异常的严重级别。|  
+|成功|23|@shouldalert|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|  
+|错误|24|@shouldalert|给定事件的错误号。|  
+|ConnectionID|25|@shouldalert|唯一的连接 ID。|  
 |DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
-|ClientProcessID|36|1|客户端应用程序的进程 ID。|  
+|ClientProcessID|36|@shouldalert|客户端应用程序的进程 ID。|  
 |SessionID|39|8|会话 GUID。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|SPID|41|@shouldalert|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询处理事件类别](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

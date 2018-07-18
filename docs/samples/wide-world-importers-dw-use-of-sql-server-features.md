@@ -14,11 +14,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7c3158def05148941105867f24205b199e6c6dba
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023550"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用的 SQL Server 特性和功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
