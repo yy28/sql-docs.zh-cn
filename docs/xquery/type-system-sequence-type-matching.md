@@ -1,5 +1,5 @@
 ---
-title: 序列的类型匹配 |Microsoft 文档
+title: 序列类型匹配 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078024"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980019"
 ---
-# <a name="type-system---sequence-type-matching"></a>类型系统的序列的类型匹配
+# <a name="type-system---sequence-type-matching"></a>类型系统-序列类型匹配
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 表达式的值始终是零序列或多项序列。 一个项可以是一个原子值，也可以是一个节点。 序列类型匹配是指将查询表达式返回的序列类型与特定类型进行匹配的能力。 例如：  
@@ -47,7 +47,7 @@ ms.locfileid: "33078024"
  如果表达式返回的是原子值序列，则您可能必须弄清序列中值的类型。 下列示例说明如何使用序列类型语法来估计表达式返回的原子值类型。  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>示例：确定序列是否为空  
- **Empty()** 序列类型可以使用序列类型表达式，以确定指定的表达式返回的序列是否为空序列。  
+ **Empty （)** 序列类型可以使用序列类型表达式，以确定是否返回指定表达式的序列为空序列。  
   
  在下面的示例中，XML 架构允许 <`root`> 元素为空：  
   
@@ -168,7 +168,7 @@ GO
  如果两种情况都匹配，`instance of` 表达式将返回 True。  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>示例：对 xml 类型列进行查询  
- 在下面的示例中，针对 Instructions 列指定的查询**xml**键入[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。 因为它具有关联的架构，因此是类型化 XML 列。 XML 架构定义整数类型的 `LocationID` 属性。 因此，在序列表达式中， `instance of xs:integer?` ，则返回 True。  
+ 在以下示例中，针对的 Instructions 列指定一个查询**xml**中键入[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。 因为它具有关联的架构，因此是类型化 XML 列。 XML 架构定义整数类型的 `LocationID` 属性。 因此，在序列表达式中， `instance of xs:integer?` ，则返回 True。  
   
 ```  
 SELECT Instructions.query('   
@@ -181,15 +181,15 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>比较表达式返回的节点类型  
  如果表达式返回节点序列，则您可能必须弄清此序列中节点的类型。 下列示例说明如何使用序列类型语法估计表达式返回的节点类型。 您可以使用下列序列类型：  
   
--   **item()** – 匹配序列中的任何项。  
+-   **item()** – 与匹配序列中的任何项。  
   
--   **node （)** – 确定序列是否是一个节点。  
+-   **node （)** – 确定序列是否为节点。  
   
--   **processing-instruction()** – 确定表达式是否返回处理指令。  
+-   **processing-instruction()** -确定表达式是否返回处理指令。  
   
--   **comment()** – 确定表达式是否返回注释。  
+-   **comment （)** -确定表达式是否返回一条注释。  
   
--   **document-node()** – 确定表达式是否返回文档节点。  
+-   **document-node()** -确定表达式是否返回文档节点。  
   
  以下示例说明这些序列类型。  
   
@@ -236,7 +236,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>实现限制  
  具体的限制如下：  
   
--   **document-node()** 内容类型不支持语法。  
+-   **document-node()** 与内容类型不支持语法。  
   
 -   **processing-instruction(name)** 不支持语法。  
   
@@ -314,7 +314,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>示例 B  
- 下列示例说明如何确定表达式返回的节点是否为具有特定名称的元素节点。 它使用**element()** 测试。  
+ 下列示例说明如何确定表达式返回的节点是否为具有特定名称的元素节点。 它使用**element （)** 测试。  
   
  在下面的示例中，正在查询的 XML 实例中的两个 <`Customer`> 元素属于两种不同的类型：`CustomerType` 和 `SpecialCustomerType`。 假定您希望知道表达式返回的 <`Customer`> 元素的类型。 以下 XML 架构集合定义 `CustomerType` 和 `SpecialCustomerType` 类型。  
   
@@ -390,7 +390,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 由于正在查询的 XML 实例中具有名称为 `Age` 的属性节点，因此，以下查询返回 True。 此表达式中使用了 `attribute(Age)` 属性测试。 由于属性是无序的，查询使用 FLWOR 表达式检索所有属性，然后使用 `instance of` 表达式测试每个属性。 此示例首先创建 XML 架构集合创建类型化**xml**变量。  
+ 由于正在查询的 XML 实例中具有名称为 `Age` 的属性节点，因此，以下查询返回 True。 此表达式中使用了 `attribute(Age)` 属性测试。 由于属性是无序的，查询使用 FLWOR 表达式检索所有属性，然后使用 `instance of` 表达式测试每个属性。 该示例首先创建 XML 架构集合创建类型化**xml**变量。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -423,24 +423,24 @@ RETURN
         ()')  
 ```  
   
- 或者，您可以指定`attribute(*, type)`序列类型语法。 如果属性类型与指定类型匹配（名称不限），则此序列类型语法将与属性节点匹配。  
+ 或者，可以指定`attribute(*, type)`序列类型语法。 如果属性类型与指定类型匹配（名称不限），则此序列类型语法将与属性节点匹配。  
   
 ### <a name="implementation-limitations"></a>实现限制  
  具体的限制如下：  
   
--   在元素测试中，类型名称后面必须跟发生指示符 (**？**)。  
+-   在元素测试中，类型名称必须跟有出现指示符 (**？**)。  
   
--   **元素 （ElementName，TypeName）** 不支持。  
+-   **element （ElementName，TypeName）** 不受支持。  
   
--   **元素 (\*，TypeName)** 不支持。  
+-   **元素 (\*，TypeName)** 不受支持。  
   
--   **schema-element()** 不支持。  
+-   **schema-element （)** 不受支持。  
   
--   **schema-attribute(AttributeName)** 不支持。  
+-   **schema-attribute （attributename)** 不受支持。  
   
--   显式查询**xsi: type**或**xsi: nil**不支持。  
+-   显式查询**xsi: type**或**xsi: nil**不受支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型系统&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

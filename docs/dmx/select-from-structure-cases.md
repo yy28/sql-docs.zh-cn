@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;结构&gt;。用例 |Microsoft 文档
+title: SELECT FROM&lt;结构&gt;。用例 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985259"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;结构&gt;。用例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34842100"
   
  如果未对结构启用钻取功能，则该语句将失败。 此外，如果用户在挖掘结构上没有钻取权限，则该语句也会失败。  
   
- 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，默认情况下启用对新的挖掘结构的钻取功能。 若要验证是否为特定结构启用钻取功能，请检查是否的值**CacheMode**属性设置为**KeepTrainingCases**。  
+ 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，默认情况下启用对新挖掘结构的钻取功能。 若要验证是否为特定结构启用钻取功能，请检查是否的值**CacheMode**属性设置为**KeepTrainingCases**。  
   
- 如果值**CacheMode**更改为**ClearAfterProcessing**、 从缓存中清除结构事例，并且不能使用钻取。  
+ 如果的值**CacheMode**更改为**ClearAfterProcessing**、 从缓存中清除结构事例和不能使用钻取功能。  
   
 > [!NOTE]  
 >  不能使用数据挖掘扩展插件 (DMX) 在挖掘结构上启用或禁用钻取功能。  
@@ -63,10 +63,10 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- 因此，为了保护敏感数据或个人信息，你应该构建你的数据源视图来屏蔽个人信息，并授予**AllowDrillthrough**权限挖掘结构或挖掘模型仅在必要时。  
+ 因此，若要保护敏感数据或个人信息，应构造数据源视图来屏蔽个人信息，并授予**AllowDrillthrough**对挖掘结构或挖掘模型的权限时，才必需。  
   
 ## <a name="examples"></a>示例  
- 下面的示例基于挖掘结构，目标邮递，基于[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]数据库和关联的挖掘模型。 有关详细信息，请参阅[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 以下示例基于挖掘结构，而根据目标邮件[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]数据库和关联的挖掘模型。 有关详细信息，请参阅[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>示例 1：钻取到结构事例  
  下面的示例返回挖掘结构“目标邮件”中 500 名年龄最大的客户的列表。 查询返回挖掘模型中的所有列，但将行限制为购买过自行车的客户，并且按年龄进行排序。 您还可以编辑表达式列表以便仅返回需要的列。  

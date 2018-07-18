@@ -1,5 +1,5 @@
 ---
-title: 为 Power View 报表配置报表属性 |Microsoft 文档
+title: 为 Power View 报表配置报表属性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045661"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033426"
 ---
-# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>补充课-为 Power View 报表配置报表属性
+# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>补充课程-为 Power View 报表配置报表属性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在此补充课程中，你将设置 reporting AW Internet Sales 项目的属性。 通过报表属性，最终用户可以更轻松地在 Power View 中选择和显示模型数据。 您还可以设置属性以隐藏特定的列和表，并创建新数据以在图表中使用。   
+在本补充课程中，您将设置报表的 AW Internet 销售项目属性。 通过报表属性，最终用户可以更轻松地在 Power View 中选择和显示模型数据。 您还可以设置属性以隐藏特定的列和表，并创建新数据以在图表中使用。   
   
 学完本课的估计时间： **30 分钟**  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34045661"
 本补充课程是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
 为了完成这一特定的补充课程，您还必须具备以下各项：  
   
--   （通过本教程中完成） 的 AW Internet Sales 项目准备好部署或已部署到 Analysis Services 服务器。  
+-   （已完成本教程通过） AW Internet Sales 项目准备好进行部署或已部署到 Analysis Services 服务器。  
   
   
 ## <a name="model-properties-that-affect-reporting"></a>影响报表的模型属性  
@@ -131,7 +131,7 @@ ms.locfileid: "34045661"
 ## <a name="reporting-properties-for-columns"></a>列的报表属性  
 对于列而言，您可以设置许多基本列属性和特定的报表属性，以改善模型报表体验。 例如，用户可能不需要看到每个表中的每一列。 就像前面您通过使用列的“隐藏”属性隐藏 Product Category 表和 Product Subcategory 表一样，您可以隐藏表中原本应显示的特定列。 其他属性（如“数据格式”和“按列排序”）也可能影响列数据出现在报表中的方式。 您可以现在对特定的列设置上述某些属性。 其他列不要求您执行任何操作，下面也没显示它们。  
   
-您将只在此处设置一些不同的列属性，但其他属性还有很多。 有关更多详细报表属性的列的相关信息，请参阅[列属性](../analysis-services/tabular-models/column-properties-ssas-tabular.md)SQL Server 联机丛书中。  
+您将只在此处设置一些不同的列属性，但其他属性还有很多。 有关详细信息有关列报表属性的详细信息，请参阅[列属性](../analysis-services/tabular-models/column-properties-ssas-tabular.md)SQL Server 联机丛书中。  
   
 #### <a name="to-set-properties-for-columns"></a>设置列的属性  
   
@@ -147,19 +147,19 @@ ms.locfileid: "34045661"
   
     **Customer**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|数据格式|短日期|  
   
-    **日期**  
+    **Date**  
   
     > [!NOTE]  
     > 因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择 Date 表作为模型日期表，并且选择 Date 表中的 Date 列作为要用作唯一标识符的列，所以，Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅[指定标记为日期表用于时间智能](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server 联机丛书中。  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
-    |日期|数据格式|短日期|  
+    |date|数据格式|短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|按列排序|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -174,14 +174,14 @@ ms.locfileid: "34045661"
   
     **地域**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|默认标签|True|  
@@ -191,7 +191,7 @@ ms.locfileid: "34045661"
   
     **Internet Sales**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -208,7 +208,7 @@ ms.locfileid: "34045661"
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>重新部署 Adventure Works Internet Sales 表格模型  
   
--   在 SSDT 中，单击**生成**菜单，，然后单击**部署 Adventure Works Internet 销售模型**。  
+-   在 SSDT 中，单击**构建**菜单，并单击**部署 Adventure Works Internet Sales Model**。  
   
     “部署”对话框将出现，并且显示模型中包括的元数据和每个表的部署状态。  
   

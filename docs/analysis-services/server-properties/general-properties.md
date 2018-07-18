@@ -1,5 +1,5 @@
 ---
-title: 常规属性 |Microsoft 文档
+title: 常规属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238888"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033335"
 ---
 # <a name="general-properties"></a>常规属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "35238888"
  有符号 32 位整数属性，用于定义为生成分区索引分配的最大线程数。 如果增加此值，则可加快分区索引速度，同时增加内存使用的开销。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  **CoordinatorCancelCount**  
- 有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。 在表格服务器模式下，将忽略此属性。  
+ 有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。 在表格服务器模式下将忽略此属性。  
   
  **CoordinatorExecutionMode**  
  有符号 32 位整数属性，用于定义服务器将尝试的最大并行操作（包括处理操作和查询操作）数。 零 (0) 指示服务器将基于内部算法来决定。 正数指示最大操作总数。 如果是符号相反的负数，则指示每个处理器的最大操作数。  

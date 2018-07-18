@@ -1,5 +1,5 @@
 ---
-title: RangeMid (DMX) |Microsoft 文档
+title: RangeMid (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7daff41d09f1468f3819af5a8d2020719aebe9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037315"
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ RangeMid(<scalar column reference>)
  一个标量值。  
   
 ## <a name="remarks"></a>Remarks  
- 如果用于[SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)、 **RangeMin**， **RangeMid**，和**RangeMax**函数将返回指定的存储桶的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**， **RangeMid**，和**RangeMax**函数描述预测指定的存储桶。 当**RangeMid**使用 PREDICTION JOIN 语句使用函数、 标量列引用只能包含离散、 可预测列。  
+ 与一起使用时[SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，则**RangeMin**， **RangeMid**，并**RangeMax**函数返回指定存储桶的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**， **RangeMid**，并**RangeMax**函数用于说明预测所指定的存储桶。 当**RangeMid**函数用于 PREDICTION JOIN 语句，标量列引用只能包含离散、 可预测列。  
   
 ## <a name="examples"></a>示例  
  以下示例返回 TM Decision Tree 挖掘模型中“年收入”连续列的最小值、最大值和平均值。  
@@ -49,9 +49,9 @@ FROM [TM Decision Tree]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
  [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
   

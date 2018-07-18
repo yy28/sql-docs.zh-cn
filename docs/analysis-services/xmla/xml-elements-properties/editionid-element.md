@@ -1,5 +1,5 @@
 ---
-title: EditionId 元素 |Microsoft 文档
+title: EditionId 元素 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e9402541be96be9e529dcd56a168e8ab17dc21ae
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036585"
 ---
 # <a name="editionid-element"></a>EditionId 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含父级的数值的版本标识符代码[服务器元素 (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md)元素。  
+  包含的数字版本标识符代码的父[Server 元素 (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576539"
 </Server>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  

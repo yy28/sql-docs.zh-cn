@@ -1,5 +1,5 @@
 ---
-title: 形状 (DMX) |Microsoft 文档
+title: 形状 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841670"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985290"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询&gt;的形状
+# <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询&gt;-形状
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   将多个数据源中的查询合并到一个层次结构表中（即具有嵌套表的表），该表将成为挖掘模型的事例表。  
@@ -59,7 +59,7 @@ APPEND ({ <child table query> }
  必须按与父表和子表都相关的列对查询排序。  
   
 ## <a name="examples"></a>示例  
- 你可以使用下面的示例中[INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)语句来训练某个模型包含嵌套的表。 中的两个表**形状**通过相关联的语句**OrderNumber**列。  
+ 可以使用下面的示例中[INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)语句来训练某个模型包含嵌套的表。 中的两个表**形状**通过相关语句**OrderNumber**列。  
   
 ```  
 SHAPE {  

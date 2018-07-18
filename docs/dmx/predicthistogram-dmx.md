@@ -1,5 +1,5 @@
 ---
-title: PredictHistogram (DMX) |Microsoft 文档
+title: PredictHistogram (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842140"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985356"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  直方图可以生成统计信息列。 返回的直方图的列结构取决于与一起使用的列引用的类型**PredictHistogram**函数。  
   
 ## <a name="scalar-columns"></a>标量列  
- 有关\<标量列引用 >，直方图， **PredictHistogram**函数将返回包含以下各列：  
+ 有关\<标量列引用 >，直方图， **PredictHistogram**函数将返回包含以下列：  
   
 -   要预测的值。  
   
@@ -56,10 +56,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     **$AdjustedProbability**列为[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]扩展[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB 数据挖掘的规范。  
+     **$AdjustedProbability**列为[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]扩展到[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB for Data Mining 规范。  
   
 ## <a name="cluster-columns"></a>群集列  
- 直方图， **PredictHistogram**函数返回\<群集列引用 > 包含以下各列：  
+ 直方图， **PredictHistogram**函数将返回有关\<群集列引用 > 包含以下列：  
   
 -   **$Cluster** （表示群集名称）  
   
@@ -68,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>示例  
- 以下示例返回单独查询中 Bike Buyer 列的预测状态。 该查询还返回 Bike Buyer 属性，根据使用获取的调整后的概率的顶部的两个最有可能状态**PredictHistogram**函数。  
+ 以下示例返回单独查询中 Bike Buyer 列的预测状态。 该查询还返回 Bike Buyer 属性，基于使用获得的调整后概率的前两个最可能状态**PredictHistogram**函数。  
   
 ```  
 SELECT  
@@ -93,8 +93,8 @@ NATURAL PREDICTION JOIN
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
  [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

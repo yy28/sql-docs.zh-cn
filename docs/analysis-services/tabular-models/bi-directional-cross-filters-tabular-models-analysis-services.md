@@ -1,5 +1,5 @@
 ---
-title: 双向交叉筛选器在表格模型中 |Microsoft 文档
+title: 双向交叉筛选器中的表格模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044871"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033305"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>在表格模型中的双向交叉筛选器
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "34044871"
 ## <a name="walkthrough-an-example"></a>演练示例  
  最好是通过一个示例来理解双向交叉筛选的值。 假设 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)中有以下数据集，该数据集反映按默认创建的基数和交叉筛选器。  
   
- ![SSAS 双向 2 模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS 双向 2 模型")  
+ ![SSAS BIDI 2 模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2 模型")  
   
 > [!NOTE]  
 >  默认情况下，在数据导入期间，将在派生自事实数据表与相关维度表之间的外键和主键关系的多对一配置中为你创建表关系。  
   
  请注意，筛选方向是从维度表到事实数据表 - 促销、产品、日期、客户和客户地理位置都是有效的筛选器，可成功产生度量值的某种聚合，实际值根据使用的维度而有所不同。  
   
- ![ssas 双向 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas 双向 3 defaultrelationships")  
+ ![ssas bidi 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3 defaultrelationships")  
   
  对于这种简单的星型架构，在筛选从维度表中行与列到位于中心 **FactOnlineSales** 表的“销售额总计”度量值提供的聚合数据的数据流时，Excel 中的测试可以完美地确认数据切片。   
   
@@ -103,7 +103,7 @@ ms.locfileid: "34044871"
   
 3.  在表格模型设计器中，将工作区数据库设置为表格服务器模式的 SQL Server 2016 Preview Analysis Services 实例。  
   
-4.  验证模型兼容性级别设置为**SQL Server 2016 RTM (1200)** 或更高版本。  
+4.  确认模型兼容性级别设置为**SQL Server 2016 RTM (1200)** 或更高版本。  
   
      单击 **“确定”** 以创建项目。  
   
@@ -140,11 +140,11 @@ ms.locfileid: "34044871"
 ### <a name="review-default-table-relationships"></a>查看默认表关系  
  切换到关系图视图：“模型” > “模型视图” > “关系图视图”。 将直观指示基数和活动关系。 任意两个相关表之间的所有关系都是一对多的关系。  
   
- ![SSAS 双向 2 模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS 双向 2 模型")  
+ ![SSAS BIDI 2 模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2 模型")  
   
  或者，单击“表” > “管理关系”查看表布局中的相同信息。  
   
- ![ssas 双向 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas 双向 3 defaultrelationships")  
+ ![ssas bidi 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3 defaultrelationships")  
   
 ### <a name="create-measures"></a>创建度量值  
  需要使用一个聚合来根据维度数据的不同 facet 来合计销售额。 在 **DimProduct** 中，可以创建一个统计产品的度量值，然后使用该度量值来分析产品销售情况，以显示在给定年份、在给定区域或针对哪种客户类型销售了多少产品。  
@@ -198,8 +198,8 @@ ms.locfileid: "34044871"
   
 ## <a name="see-also"></a>另请参阅  
  [在 Power BI Desktop 中创建和管理关系](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [如何处理在 Power Pivot 和表格模型中的简单多到 manay 关系一个实际示例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [利用 DAX 的解析多对多关系交叉表筛选](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
- [多对多 revolution （SQLBI 博客）](http://www.sqlbi.com/articles/many2many/)  
+ [如何处理简单多到演示关系 Power Pivot 和表格模型中的一个实际示例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [解析多对多关系，利用 DAX 交叉表筛选](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [多对多解析 （SQLBI 博客）](http://www.sqlbi.com/articles/many2many/)  
   
   

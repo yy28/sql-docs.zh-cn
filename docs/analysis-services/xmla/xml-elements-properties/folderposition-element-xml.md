@@ -1,5 +1,5 @@
 ---
-title: FolderPosition 元素 (XML) |Microsoft 文档
+title: FolderPosition 元素 (XML) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5607f8d40fce117f3fe9526f5350312203144684
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575229"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036795"
 ---
 # <a name="folderposition-element-xml"></a>FolderPosition 元素 (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34575229"
 </RelationshipEndVisualizationProperties>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -47,6 +47,6 @@ ms.locfileid: "34575229"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 有关**RelationshipEndVisualizationProperties**元素， **FolderPosition**元素包含集合中的文件夹的默认文件夹元素的位置。 默认值**false**指示没有要使用的默认文件夹。  
+ 有关**RelationshipEndVisualizationProperties**元素， **FolderPosition**元素包含默认文件夹元素的集合中的文件夹的位置。 默认值**false**指示没有要使用的默认文件夹。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 进度报告事件类别 |Microsoft 文档
+title: 进度报告事件类别 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f3e48e34e5b85093793b0ea70786b106d72235a7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045861"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981301"
 ---
 # <a name="progress-reports-event-category"></a>“进度报告”事件类别
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34045861"
   
  有关与每个进度报告事件类关联的列的信息，请参阅 [Progress Reports Data Columns](../../analysis-services/trace-events/progress-reports-data-columns.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 跟踪事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

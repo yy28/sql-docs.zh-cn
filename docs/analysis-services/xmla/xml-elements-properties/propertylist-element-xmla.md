@@ -1,5 +1,5 @@
 ---
-title: PropertyList 元素 (XMLA) |Microsoft 文档
+title: PropertyList 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3e773de16e65aa9c7f1be521214088aa9f06b369
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577829"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036705"
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含所使用的 Analysis (XMLA) 属性的集合的 XML[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+  包含所使用的 Analysis (XMLA) 属性的集合的 XML [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)并[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577829"
 </Properties>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "34577829"
   
  结合使用 **Discover** 方法和 DISCOVER_PROPERTIES 请求类型可获取可用属性及其值。 **PropertyList** 元素中列出的属性对顺序没有要求。  
   
- 有关支持的 Analysis Services XMLA 属性的详细信息，请参阅[支持 XMLA 属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  
+ Analysis Services 支持的 XMLA 属性的详细信息，请参阅[支持的 XMLA 属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  
   
 ## <a name="example"></a>示例  
   

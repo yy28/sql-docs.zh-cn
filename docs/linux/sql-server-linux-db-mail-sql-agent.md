@@ -1,6 +1,6 @@
 ---
-title: 数据库邮件和电子邮件警报使用 Linux 上的 SQL 代理 |Microsoft 文档
-description: 本文介绍如何在 Linux 上的 SQL 服务器上使用数据库邮件和电子邮件警报
+title: DB 邮件和电子邮件警报与 Linux 上的 SQL 代理 |Microsoft 文档
+description: 本文介绍如何使用 Linux 上的 SQL Server 数据库邮件和电子邮件警报
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984259"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>数据库邮件和 Linux 上的 SQL 代理的电子邮件警报
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 邮件和电子邮件警报与 Linux 上的 SQL 代理
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-以下步骤演示如何设置数据库邮件并将其用于 SQL Server 代理 (**mssql server 代理**) 在 Linux 上。 
+以下步骤显示如何设置数据库邮件并将其用于 SQL Server 代理 (**mssql server 代理**) 在 Linux 上。 
 
 ## <a name="1-enable-db-mail"></a>1.启用数据库邮件
 
@@ -56,7 +56,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 GO
 ```
 
-## <a name="3-create-a-default-profile"></a>3.创建默认配置文件
+## <a name="3-create-a-default-profile"></a>3.创建一个默认配置文件
 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profile_sp 
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6.发送测试电子邮件
 > [!NOTE]
-> 你可能需要转到你的电子邮件客户端并启用"允许安全级别较低客户端发送邮件。" 并非所有客户端将数据库邮件识别为电子邮件守护程序。
+> 可能需要转到你的电子邮件客户端并启用"允许不安全的客户端发送邮件"。 并非所有客户端识别为一个电子邮件守护程序，数据库邮件。
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -95,7 +95,7 @@ GO
 ```
 
 ## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7.设置数据库邮件配置文件使用 mssql conf 或环境变量
-你可以使用 mssql conf 实用程序或环境变量注册你的数据库邮件配置文件。 在这种情况下，让我们调用我们的配置文件默认。
+可以使用 mssql-conf 实用工具或环境变量以注册你的数据库邮件配置文件。 在这种情况下，让我们称我们默认配置文件。
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8.设置 SQLAgent 作业通知的运算符 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8.设置 SQLAgent 作业通知的操作员 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -126,4 +126,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>后续步骤
-有关如何使用 SQL Server 代理来创建、 计划和运行作业的详细信息，请参阅[在 Linux 上运行的 SQL Server 代理作业](sql-server-linux-run-sql-server-agent-job.md)。
+有关如何使用 SQL Server 代理来创建、 安排和运行作业的详细信息，请参阅[在 Linux 上运行的 SQL Server 代理作业](sql-server-linux-run-sql-server-agent-job.md)。

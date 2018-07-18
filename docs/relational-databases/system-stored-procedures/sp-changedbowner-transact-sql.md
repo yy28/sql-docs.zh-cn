@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cb7d6df77a581b82ca79e1962c80df827ffd1718
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038825"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,23 +48,23 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @loginame=] '*登录*  
- 当前数据库的新所有者的登录 ID。 *登录名*是**sysname**，无默认值。 *登录名*必须已经存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 *登录名*如果它已有权访问通过现有的用户安全帐户数据库中的数据库不能成为当前数据库的所有者。 为了避免发生上述情况，请首先删除当前数据库内的用户。  
+ [ @loginame=] '*登录名*  
+ 当前数据库的新所有者的登录 ID。 *登录名*是**sysname**，无默认值。 *登录名*必须是一个已有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 *登录名*不能成为当前数据库的所有者，如果它已有权访问通过数据库内现有的用户安全帐户数据库。 为了避免发生上述情况，请首先删除当前数据库内的用户。  
   
  [ @map=] *remap_alias_flag*  
- *Remap_alias_flag*参数被弃用，因为已从删除登录名别名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用*remap_alias_flag*参数不会导致错误，但不起作用。  
+ *Remap_alias_flag*参数被弃用，因为登录名的别名已从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用*remap_alias_flag*参数不会导致错误，但不起作用。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  执行 sp_changedbowner 之后，新所有者称为数据库中的 dbo 用户。 dbo 拥有执行数据库中所有活动的暗示性权限。  
   
  不能更改 master、model 或 tempdb 系统数据库的所有者。  
   
- 若要显示的有效列表*登录*值，执行 sp_helplogins 存储过程。  
+ 若要显示的有效列表*登录名*值，执行 sp_helplogins 存储过程。  
   
- 执行并且仅带有 sp_changedbowner*登录*参数更改数据库所有权转交到*登录*。  
+ 执行 sp_changedbowner 仅含*登录名*参数更改数据库所有权转给*登录名*。  
   
  使用 ALTER AUTHORIZATION 语句可以更该任意安全对象的所用者。 有关详细信息，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
@@ -78,13 +78,13 @@ sp_changedbowner [ @loginame = ] 'login'
 EXEC sp_changedbowner 'Albert';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sp_dropalias &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+ [sp_dropalias &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
  [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helpdb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helplogins &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helpdb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

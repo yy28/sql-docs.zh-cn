@@ -1,5 +1,5 @@
 ---
-title: 保留关键字 (DMX) |Microsoft 文档
+title: 保留关键字 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,22 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7af060203d044435e364803ace67d35711eb63ea
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841810"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985309"
 ---
 # <a name="reserved-keywords-dmx"></a>保留关键字 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] 保留供其独占使用某些关键字。 除了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在数据挖掘扩展插件 (DMX) 语言参考中定义的位置以外，这些关键字不能用于 DMX 语句的任何其他位置。 这些受限制的 DMX 关键字包括下列成员：  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] 保留供其独占使用的某些关键字。 除了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在数据挖掘扩展插件 (DMX) 语言参考中定义的位置以外，这些关键字不能用于 DMX 语句的任何其他位置。 这些受限制的 DMX 关键字包括下列成员：  
   
--   本主题中列出的所有数据定义语句[DMX 数据定义语句](../dmx/dmx-statements-data-definition.md)。  
+-   主题中列出的所有数据定义语句[DMX 数据定义语句](../dmx/dmx-statements-data-definition.md)。  
   
--   所有数据挖掘查询函数中的主题，列出[DMX 函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)。  
+-   所有数据挖掘查询函数的主题中列出[DMX 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
--   本主题中列出的所有运算符[DMX 运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)。  
+-   主题中列出的所有运算符[DMX 运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)。  
   
 -   在多维表达式 (MDX) 查询语言中定义并作为 DMX 语句的一部分包括在内的关键字。  
   

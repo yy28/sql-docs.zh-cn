@@ -1,5 +1,5 @@
 ---
-title: concat 函数 (XQuery) |Microsoft 文档
+title: concat 函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8be65777bb65ad54735ad6bdf43ea88608355c5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981929"
 ---
-# <a name="functions-on-string-values---concat"></a>对字符串值-concat 函数
+# <a name="functions-on-string-values---concat"></a>基于字符串值-concat 函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   接受零或更多个字符串作为参数，并返回通过连接其中的每个参数值而创建的字符串。  
@@ -48,14 +48,14 @@ fn:concat ($string as xs:string?
  *$string*  
  可选择进行连接的字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数必须至少包含两个参数。 如果一个参数为空序列，则将被作为零长度字符串处理。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数是代理项感知"部分[中 SQL Server 2016 数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数可识别代理"部分[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型列中的 AdventureWorks 示例数据库。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 示例数据库。  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. 使用 concat() XQuery 函数连接字符串  
  对于特定产品型号，此查询将返回通过连接保修期和保修说明而创建的字符串。 在目录说明文档中，<`Warranty`> 元素由 <`WarrantyPeriod`> 和 <`Description`> 子元素组成。  
@@ -81,7 +81,7 @@ WHERE  PD.ProductModelID=28
   
  请注意上述查询的以下方面：  
   
--   在 SELECT 子句中，是 CatalogDescription **xml**类型列。 因此， [query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)，使用 Instructions.query()。 XQuery 语句指定为该查询方法的参数。  
+-   在 SELECT 子句中，CatalogDescription 是**xml**类型列。 因此， [query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)，instructions.query。 XQuery 语句指定为该查询方法的参数。  
   
 -   对其执行查询的文档将使用命名空间。 因此，**命名空间**关键字用于定义命名空间的前缀。 有关详细信息，请参阅[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)。  
   
@@ -91,7 +91,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 **Exist （)** 方法**xml**中 WHERE 子句将返回 True，如果行中的 XML 文档具有数据类型 <`ProductDescription`> 元素。  
+ 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 **Exist （)** 方法**xml**数据类型中的 WHERE 子句将返回 True，如果行中的 XML 文档具有 <`ProductDescription`> 元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -113,14 +113,14 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- 请注意，返回的布尔值**exist （)** 方法**xml**与 1 比较类型。  
+ 请注意，返回的布尔值**exist （)** 方法**xml**类型与 1 进行比较。  
   
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   **Concat （)** SQL Server 中的函数只接受值的类型 xs: string。 其他值必须显式转换为 xs:string 或 xdt:untypedAtomic 类型。  
+-   **Concat （)** SQL Server 中的函数仅接受类型 xs: string 的值。 其他值必须显式转换为 xs:string 或 xdt:untypedAtomic 类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

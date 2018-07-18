@@ -1,5 +1,5 @@
 ---
-title: sp_create_removable (Transact SQL) |Microsoft 文档
+title: sp_create_removable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac999e58a6c88d8a121d7708b6fc9e954cf7419
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239497"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035235"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,21 +75,21 @@ sp_create_removable
  [ **@loglogical=** ] **'***loglogical***'**  
  包含事务日志的文件的逻辑名称。 *loglogical*是**sysname**。  
   
- [  **@logphysical=** ] *****logphysical*****  
+ [  **@logphysical=** ] **'***logphysical*****  
  物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical*是**nvarchar(260)**。  
   
  [  **@logsize=** ] *logsize*  
  包含事务日志的文件的大小 (MB)。 *logsize*是**int**。所需的最低*logsize*为 1。  
   
- [  **@datalogical1=** ] *****datalogical*****  
+ [  **@datalogical1=** ] **'***datalogical*****  
  包含数据表的文件的逻辑名称。 *datalogical*是**sysname**。  
   
  必须有 1 到 16 个数据文件。 通常，如果预计数据库很大，必须分布在多个磁盘上，则创建多个数据文件。  
   
- [  **@dataphysical1=** ] *****dataphysical*****  
+ [  **@dataphysical1=** ] **'***dataphysical*****  
  物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical*是**nvarchar(260)**。  
   
- [  **@datasize1=** ] *****datasize*****  
+ [  **@datasize1=** ] **'***datasize*****  
  包含数据表的文件的大小 (MB)。 *datasize*是**int**。所需的最低*datasize*为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -98,7 +98,7 @@ sp_create_removable
 ## <a name="result-sets"></a>结果集  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果要在可移动介质（如光盘）上制作数据库的副本，并将该数据库分发给其他用户，则可使用此存储过程。  
   
 ## <a name="permissions"></a>权限  
@@ -133,11 +133,11 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
