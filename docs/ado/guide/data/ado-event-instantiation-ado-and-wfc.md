@@ -44,7 +44,7 @@ ADO 的 Windows 基础类 (ADO/WFC) 的 ADO 事件模型上构建，并提供简
   
      第一个参数**ConnectionEventHandler**构造函数是对包含事件处理程序在第二个参数名为的类的引用。  
   
-3.  将事件处理程序添加到指定用于处理特定类型的事件的处理程序的列表。 使用带名称的方法，如 **加载项 * * * EventName*(*处理程序*)。  
+3.  将事件处理程序添加到指定用于处理特定类型的事件的处理程序的列表。 使用带名称的方法，如 **加载项** *EventName*(*处理程序*)。  
   
 4.  ADO/WFC 内部实现所有 ADO 事件处理程序。 因此，事件引起**连接**或**记录集**操作截获 ADO/WFC 事件处理程序。  
   
@@ -62,7 +62,7 @@ ADO 的 Windows 基础类 (ADO/WFC) 的 ADO 事件模型上构建，并提供简
   
 6.  从事件处理程序返回到 ADO 事件 ADO/WFC 处理程序。 ADO/WFC 相关 ADO/WFC 事件数据成员复制回 ADO 事件参数，并返回 ADO 事件处理程序。  
   
-7.  如果你已完成处理，从 ADO/WFC 事件处理程序的列表中删除您的处理程序。 使用带名称的方法，如 **removeOn * * * EventName*(*处理程序*)。  
+7.  如果你已完成处理，从 ADO/WFC 事件处理程序的列表中删除您的处理程序。 使用带名称的方法，如 **removeOn** *EventName*(*处理程序*)。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   

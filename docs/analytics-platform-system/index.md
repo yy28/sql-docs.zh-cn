@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 26c59dc36d0ba3714dca4dbca10e8ec7b09b9235
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544969"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909737"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) 是一种设计用于数据仓库和大数据分析的数据平台，它可为端到端商业智能解决方案提供深度数据集成、高速查询处理、高度可伸缩存储，以及简单维护。  
@@ -23,9 +23,9 @@ Microsoft Analytics Platform System (APS) 是一种设计用于数据仓库和�
   
 Analytics Platform System 承载的 SQL Server 并行数据仓库 (PDW) 是运行大规模并行处理 (MPP) 数据仓库的软件。  
   
-PolyBase 技术将关系 PDW 数据与来自多个源（包括 Hortonworks on Windows Server、Hortonworks on Linux、Cloudera on Linux、HDInsight 的 Windows Azure blob 存储以及 HDInsight on Analytics Platform System）的 Hadoop 数据结合在一起。 这些高级数据集成功能，加上与商业智能工具的深度集成，让 Analytics Platform System 能够返回集成分析，使业务决策人能够做出更好、有更深入见解的业务决策。  
+PolyBase 技术将关系 PDW 数据与来自多个源（包括 Hortonworks on Windows Server、Hortonworks on Linux、Cloudera on Linux、HDInsight 的 Windows Azure Blob 存储）的 Hadoop 数据结合在一起。 这些高级数据集成功能，加上与商业智能工具的深度集成，让 Analytics Platform System 能够返回集成分析，使业务决策人能够做出更好、有更深入见解的业务决策。  
   
-Analytics Platform System 可作为预安装和预配了硬件和软件的设备发送到你的数据中心，以运行多个工作负荷。 购买 Analytics Platform System 时，会为 PDW 购买计算节点，并且你可以根据业务需求选择性地为 HDInsight 购买额外的节点。  
+Analytics Platform System 可作为预安装和预配了硬件和软件的设备发送到你的数据中心，以运行多个工作负荷。 购买 Analytics Platform System 时，会根据业务需求为 PDW 购买计算节点。  
   
 Analytics Platform System 不仅运行速度块，而且可缩放，其采用高冗余和高可用性设计，是值得用户信赖的用于处理最关键业务数据的可靠平台。 Analytics Platform System 设计简单，易于学习和管理。 用于分析 Hadoop 数据的 PDW PolyBase 技术与商业智能工具的深度集成，使其成为构建端到端解决方案的综合平台。  
   
@@ -39,7 +39,7 @@ Analytics Platform System 不仅运行速度块，而且可缩放，其采用高
   
 除了实现突破性的查询性能外，PDW 还易于：  
   
--   在单个设备中，可通过向现有系统添加“缩放单位”，将数据仓库从几兆兆字节增长到超过 6 拍字节  
+-   在单个设备中，可通过向现有系统添加“缩放单元”，将数据仓库从几兆兆字节增长到超过 6 拍字节  
   
 -   如果需要，可随时获得数据，因为它内置高冗余和高可用性  
   

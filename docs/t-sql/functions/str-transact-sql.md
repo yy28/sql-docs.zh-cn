@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc1a7bdcd254ed821a47d83f7eb5e0d893906ea6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a2f3bc073c3c06eec47c4a89616f6eaab223d386
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789865"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934909"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ GO
  即使数字数据嵌套在 `STR` 内，结果也是带指定格式的字符数据。  
   
 ```  
-SELECT STR (FLOOR (123.45), 8, 3;)  
+SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  
   

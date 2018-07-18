@@ -12,12 +12,12 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 57e0e7ca8aa76570f70ae2279964d47f50da31aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc85547d213367d3a754e40764fa4335a45c5ce7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024594"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926318"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>用于报表查看器 Web 部件的 SharePoint 网站设置 - Reporting Services
 
@@ -42,5 +42,5 @@ ms.locfileid: "33024594"
 
 |设置|注释|  
 |-------------|--------------|  
-|收集使用情况数据|启用要发送给 Microsoft 的错误和使用情况信息，以帮助改进产品。 有关 Microsoft 错误报表数据收集策略的信息，请参阅 [Microsoft SQL Server 隐私声明](https://go.microsoft.com/fwlink/?linkid=860782&clcid=0x409)。|  
+|收集使用情况数据|启用要发送给 Microsoft 的错误和使用情况信息，以帮助改进产品。 有关 Microsoft 错误报表数据收集策略的信息，请参阅 [Microsoft SQL Server 隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。|  
 |启用报表的辅助功能元数据|为呈现的报表设置 [`AccessibleTablix` 设备信息](../html-device-information-settings.md)。| 
