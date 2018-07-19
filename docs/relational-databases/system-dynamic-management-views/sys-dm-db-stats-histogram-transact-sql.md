@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (Transact SQL) |Microsoft 文档
+title: sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464233"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042765"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,18 +58,18 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id |**int**|要返回统计信息对象属性的对象（表或索引视图）的 ID。|  
 |stats_id |**int**|统计信息对象的 ID。 在表或索引视图中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
-|step_number |**int** |直方图中的步骤数。 |
+|step_number |**int** |在直方图中的步数。 |
 |range_high_key |**sql_variant** |直方图梯级的上限列值。 列值也称为键值。|
-|不 |**real** |其列值位于直方图梯级内（不包括上限）的行的估算数目。 |
+|range_rows |**real** |其列值位于直方图梯级内（不包括上限）的行的估算数目。 |
 |equal_rows |**real** |其列值等于直方图梯级的上限的行的估算数目。 |
 |distinct_range_rows |**bigint** |非重复列值位于直方图梯级内（不包括上限）的行的估算数目。 |
-|average_range_rows |**real** |平均重复列值位于直方图梯级，包括上限内的行数 (`RANGE_ROWS / DISTINCT_RANGE_ROWS`为`DISTINCT_RANGE_ROWS > 0`)。 |
+|average_range_rows |**real** |平均重复列值位于直方图梯级，不包括上限内的行数 (`RANGE_ROWS / DISTINCT_RANGE_ROWS`为`DISTINCT_RANGE_ROWS > 0`)。 |
   
- ## <a name="remarks"></a>注释  
+ ## <a name="remarks"></a>Remarks  
  
- 结果集`sys.dm_db_stats_histogram`将返回如下信息`DBCC SHOW_STATISTICS WITH HISTOGRAM`和还包括`object_id`， `stats_id`，和`step_number`。
+ 结果集`sys.dm_db_stats_histogram`返回的信息类似于`DBCC SHOW_STATISTICS WITH HISTOGRAM`并且还包括`object_id`， `stats_id`，和`step_number`。
 
- 因为列`range_high_key`是一种 sql_variant 数据类型，你可能需要使用`CAST`或`CONVERT`如果谓词不与非字符串常量进行比较。
+ 因为该列`range_high_key`为 sql_variant 数据类型，您可能需要使用`CAST`或`CONVERT`如果谓词与非字符串常量进行比较。
 
 ### <a name="histogram"></a>直方图
   
@@ -109,7 +109,7 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-主键占用`stat_id`数字 1，因此调用`sys.dm_db_stats_histogram`为`stat_id`2，若要返回的统计信息直方图号`Country`表。    
+主键占用`stat_id`编号为 1，因此请调用`sys.dm_db_stats_histogram`有关`stat_id`两种模式，返回的统计信息直方图`Country`表。    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
@@ -124,14 +124,14 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>C. 有用的查询：
-下面的示例从表中选择`Country`的谓词的列与`Country_Name`。
+下面的示例从表中选择`Country`通过在列上谓词`Country_Name`。
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-下面的示例在表上考察以前创建的统计信息`Country`和列`Country_Name`为直方图梯级匹配上述查询中的谓词。
+下面的示例在表上查看以前创建的统计信息`Country`和列`Country_Name`直方图梯级匹配上述查询中的谓词。
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
@@ -148,7 +148,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>另请参阅  
-[DBCC SHOW_STATISTICS (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
-[对象相关的动态管理视图和函数 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+[DBCC SHOW_STATISTICS (Transact SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+[与对象相关的动态管理视图和函数 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

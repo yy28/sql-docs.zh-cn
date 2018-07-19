@@ -1,1 +1,1 @@
-<Token>SQL Operations Studio (preview)</Token>
+<Token>SQL Operations Studio（预览版）</Token>

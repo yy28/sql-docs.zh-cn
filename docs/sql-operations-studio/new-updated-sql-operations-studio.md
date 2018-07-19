@@ -1,5 +1,5 @@
 ---
-title: 已更新-SQL 操作 Studio 文档 |Microsoft 文档
+title: 已更新-SQL Operations Studio 文件 |Microsoft 文件
 description: 显示更新内容的 SQL 操作 Studio 中最近更改文档的代码的段。
 manager: craigg
 author: MightyPen
@@ -14,7 +14,7 @@ ms.component: ssops
 ms.date: 04/28/2018
 ms.openlocfilehash: 074ed6176480655d9d87a55eb87cbb76b3011b7e
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32686517"

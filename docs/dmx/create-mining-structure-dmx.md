@@ -1,5 +1,5 @@
 ---
-title: 创建挖掘结构 (DMX) |Microsoft 文档
+title: 创建挖掘结构 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842750"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041264"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在数据库中创建新的挖掘结构，并根据需要定义定型和测试分区。 创建挖掘结构后，你可以使用[ALTER 挖掘结构&#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)语句将模型添加到挖掘结构。  
+  在数据库中创建新的挖掘结构，并根据需要定义定型和测试分区。 创建挖掘结构后，可以使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)语句将模型添加到挖掘结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>Remarks  
  通过指定列的列表可以定义挖掘结构；如果需要，还可以指定列之间的层次结构关系，然后再根据需要将挖掘结构分为定型数据集和测试数据集。  
   
- 可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先将数据库属性，AllowSessionMiningModels 的设置。 有关详细信息，请参阅 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
+ 可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先设置数据库属性，AllowSessionMiningModels。 有关详细信息，请参阅 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
   
 ## <a name="column-definition-list"></a>列定义列表  
  定义挖掘结构时，在列定义列表中包括每个列的下列信息：  
@@ -120,7 +120,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  **ALTER MINING STRUCTURE**语句不支持维持。  
   
- 您最多可以指定三个维持参数。 如果同时指定维持事例和维持百分比的最大数，则将保留事例百分比，直到达到最大事例限制。 跟整数形式指定的维持百分比 **%** 关键字，并指定为后跟一个整数的最大事例数**情况下**关键字。 您可以按照任何顺序组合这些条件，如下面的示例所示：  
+ 您最多可以指定三个维持参数。 如果同时指定维持事例和维持百分比的最大数，则将保留事例百分比，直到达到最大事例限制。 作为一个整数后, 跟指定维持百分比**百分比**关键字，并指定事例的最大数目为一个整数后, 跟**情况下**关键字。 您可以按照任何顺序组合这些条件，如下面的示例所示：  
   
 ```  
 WITH HOLDOUT (20 PERCENT)   
@@ -132,13 +132,13 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  维持种子控制随机将事例分配给定型数据集或测试数据集这一过程的起点。 通过设置维持种子，可以确保该分区可重复执行。 如果没有指定维持种子，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用挖掘结构的名称来创建种子。 如果重命名结构，则种子值会更改。 维持种子参数可以与一个或多个其他维持参数一起使用。  
   
 > [!NOTE]  
->  因为的分区信息缓存的定型数据中，若要使用维持，你必须确保**CacheMode**挖掘结构的属性设置为**KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，新的挖掘结构的默认设置即是如此。 更改**CacheMode**属性**ClearTrainingCases**上现有挖掘结构包含维持分区不会影响任何已处理的挖掘模型。 但是，如果<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>未设置为**KeepTrainingData**，维持参数将产生任何影响。 这意味着所有源数据都用于定型而没有提供测试集。 分区定义是使用结构进行缓存的；如果清理了定型事例的缓存，则同时将清理测试数据的缓存以及维持集的定义。  
+>  由于分区信息缓存的定型数据，因此若要使用维持数据，您必须确保**CacheMode**挖掘结构的属性设置为**KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，新的挖掘结构的默认设置即是如此。 更改**CacheMode**属性设置为**ClearTrainingCases**上现有的挖掘结构的包含维持分区不会影响任何已处理的挖掘模型。 但是，如果<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>未设置为**KeepTrainingData**，维持参数会产生任何效果。 这意味着所有源数据都用于定型而没有提供测试集。 分区定义是使用结构进行缓存的；如果清理了定型事例的缓存，则同时将清理测试数据的缓存以及维持集的定义。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何使用 DMX 创建包含维持的挖掘结构。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>示例 1：添加不含定型集的结构  
- 下面的示例创建新的名为 `New Mailing` 的挖掘结构，并且不创建任何关联的挖掘模型，也不使用维持。 若要了解如何向结构中添加挖掘模型，请参阅[ALTER 挖掘结构&#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 下面的示例创建新的名为 `New Mailing` 的挖掘结构，并且不创建任何关联的挖掘模型，也不使用维持。 若要了解如何向结构添加挖掘模型，请参阅[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  

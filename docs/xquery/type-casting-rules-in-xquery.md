@@ -1,5 +1,5 @@
 ---
-title: 类型转换规则在 XQuery 中 |Microsoft 文档
+title: 中的类型转换规则 XQuery |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3142794843083c5dcc314b7dc6b0f69cb62f889e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077904"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055242"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的类型转换规则
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,34 +43,34 @@ ms.locfileid: "33077904"
   
  本主题介绍了使用下列方法之一从一种类型转换到另一种类型时所应用的类型转换规则：  
   
--   通过执行显式强制转换，**强制转换为**或类型构造函数 (例如， `xs:integer("5")`)。  
+-   通过使用执行显式转换**强制转换为**或类型构造函数 (例如， `xs:integer("5")`)。  
   
 -   类型升级过程中发生的隐式转换  
   
 ## <a name="explicit-casting"></a>显式强制转换  
  下表概括了内置基元类型之间可进行的类型转换。  
   
- ![介绍 XQuery 强制转换规则。](../xquery/media/casting-builtin-types.gif "介绍 XQuery 强制转换规则。")  
+ ![介绍 XQuery 的转换规则。](../xquery/media/casting-builtin-types.gif "描述 XQuery 的转换规则。")  
   
 -   内置基元类型可以根据表中的规则转换为其他内置基元类型。  
   
--   基元类型可以转换为该基元类型所派生的任何类型。 例如，可以强制转换从**xs: decimal**到**xs:integer**，或从**xs: decimal**到**xs:long**。  
+-   基元类型可以转换为该基元类型所派生的任何类型。 例如，可以强制转换从**xs: decimal**到**xs: integer**，或从**xs: decimal**到**xs: long**。  
   
--   派生类型可以转换为在类型层次结构中作为其祖先的任何类型，最高可转换为其内置基元基类型。 例如，可以强制转换从**xs:token**到**xs:normalizedString**或**xs: string**。  
+-   派生类型可以转换为在类型层次结构中作为其祖先的任何类型，最高可转换为其内置基元基类型。 例如，可以强制转换从**xs:token**到**xs: normalizedstring**或设置为**xs: string**。  
   
--   如果派生类型的基元祖先可以转换为目标类型，则该派生类型可以转换为基元类型。 例如，你可以强制转换**xs:integer**即为派生类型， **xs: string**、 基元类型，因为**xs: decimal**， **xs:integer**的基元祖先，可以强制转换为**xs: string**。  
+-   如果派生类型的基元祖先可以转换为目标类型，则该派生类型可以转换为基元类型。 例如，可以强制转换**xs: integer**，为派生类型， **xs: string**、 基元类型，因为**xs: decimal**， **xs: integer**的基元祖先可以转换为**xs: string**。  
   
--   如果源类型的基元祖先可以转换为目标类型的基元祖先，则派生类型可以转换为其他派生类型。 例如，可以强制转换从**xs:integer**到**xs:token**，这是因为你可以从强制转换**xs: decimal**到**xs: string**。  
+-   如果源类型的基元祖先可以转换为目标类型的基元祖先，则派生类型可以转换为其他派生类型。 例如，可以强制转换从**xs: integer**到**xs:token**，因为可以强制转换**xs: decimal**到**xs: string**。  
   
--   将用户定义类型转换为内置类型的规则与转换内置类型的规则相同。 例如，你可以定义**myInteger**类型派生自**xs:integer**类型。 然后， **myInteger**可以强制转换为**xs:token**，这是因为**xs: decimal**可以强制转换为**xs: string**。  
+-   将用户定义类型转换为内置类型的规则与转换内置类型的规则相同。 例如，可以定义**myInteger**类型派生自**xs: integer**类型。 然后， **myInteger**可以强制转换为**xs:token**，这是因为**xs: decimal**可以强制转换为**xs: string**。  
   
  不支持下列类型的转换：  
   
--   不允许转换为列表类型或者由列表类型进行转换。 这包括用户定义的列表类型和内置列表类型如**xs: idrefs**， **xs:ENTITIES**，和**xs:NMTOKENS**。  
+-   不允许转换为列表类型或者由列表类型进行转换。 这包括用户定义的列表类型和内置列表类型如**xs: idrefs**， **xs: entities**，并**xs: nmtokens**。  
   
--   强制转换为或从**xs: qname**不支持。  
+-   转换面向或源自**xs: qname**不受支持。  
   
--   **xs:NOTATION**和持续时间，完全有序子类型**xdt:yearMonthDuration**和**xdt:dayTimeDuration**，不支持。 因此，不支持转换为这些类型或由这些类型转换。  
+-   **xs: notation**和持续时间，完全有序子类型**xdt: yearmonthduration**并**xdt: daytimeduration**，不受支持。 因此，不支持转换为这些类型或由这些类型转换。  
   
  以下示例说明了显式类型转换。  
   
@@ -148,17 +148,17 @@ go
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- 在此示例中，两个值中传递到 XQuery **min （)** 函数都是不同的类型。 因此，执行隐式转换其中**整数**类型提升为**double**和第二个**double**值进行比较。  
+ 在此示例中，两个值传入到 XQuery **min （)** 函数都是不同的类型。 因此，执行隐式转换其中**整数**类型提升为**double**和两个**double**值进行比较。  
   
  此示例中介绍的类型升级遵循下列规则：  
   
--   内置派生的数值类型可以升级为其基类型。 例如，**整数**可能被提升为**十进制**。  
+-   内置派生的数值类型可以升级为其基类型。 例如，**整数**可以升级到**十进制**。  
   
--   A**十进制**可能被提升为**float、** 和**float**可能被提升为**double**。  
+-   一个**十进制**可以升级到**float，** 和一个**float**可以升级为**double**。  
   
  因为只允许对数值类型进行隐式转换，所以不允许以下转换：  
   
--   不允许字符串类型的隐式转换。 例如，如果两个**字符串**预期会有类型且你传入**字符串**和**令牌**发生任何隐式强制转换，则返回一个错误。  
+-   不允许字符串类型的隐式转换。 例如，如果两个**字符串**预期类型并传入**字符串**和一个**令牌**，发生任何隐式转换并返回错误。  
   
 -   不允许从数值类型隐式转换为字符串类型。 例如，如果将整数类型值传递到需要字符串类型参数的函数，则不发生隐式转换并返回错误。  
   
@@ -175,7 +175,7 @@ min(xs:integer("1"), xs:double("1.1"))
  如果由字符串类型或 untypedAtomic 类型转换为二进制类型（如 xs:base64Binary 或 xs:hexBinary），则输入值必须分别为 base64 编码形式或 hex 编码形式。  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>将一个值转换为字符串类型或 untypedAtomic 类型  
- 转换为字符串类型或 untypedAtomic 类型会将值转换为其 XQuery 规范词汇表示形式。 确切地说，这表示在输入时遵守特定模式或其他约束的值将不会按照该约束表示。  有关此操作，请通知用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]标志其中的类型约束可能会造成问题，这些类型加载到架构集合时提供警告的类型。  
+ 转换为字符串类型或 untypedAtomic 类型会将值转换为其 XQuery 规范词汇表示形式。 确切地说，这表示在输入时遵守特定模式或其他约束的值将不会按照该约束表示。  若要了解相关信息，告知用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]标记其中的类型约束可能会产生问题，通过提供一条警告，当这些类型加载到架构集合的类型。  
   
  将 xs:float 或 xs:double 类型或者它们任意子类型的值转换为字符串类型或 untypedAtomic 类型的值时，该值将以科学记数法表示。 只有当值的绝对值小于 1.0E-6，或者大于或等于 1.0E6 时才会这样表示。 这表示 0 按科学记数法的形式序列化为 0.0E0。  
   
@@ -205,9 +205,9 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   不支持浮点值 NaN。  
   
--   可转换的值受到目标类型实现限制条件的限制。 例如，不能强制转换为负年份的日期字符串**xs: date**。 如果在运行时提供此值，则这种转换将导致出现空序列（而不是引发运行时错误）。  
+-   可转换的值受到目标类型实现限制条件的限制。 例如，您不能强制转换到负年份的日期字符串**xs: date**。 如果在运行时提供此值，则这种转换将导致出现空序列（而不是引发运行时错误）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [定义 XML 数据的序列化](../relational-databases/xml/define-the-serialization-of-xml-data.md)  
   
   

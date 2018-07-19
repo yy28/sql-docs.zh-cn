@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualservernodes (Transact SQL) |Microsoft 文档
+title: sys.fn_virtualservernodes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,11 +29,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4073c1668ef43e7d303a3e534d16763d33939e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231468"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042785"
 ---
 # <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33231468"
   返回可运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的故障转移群集实例节点的列表。 此信息在故障转移群集环境中很有用。  
   
 > [!IMPORTANT]  
->  这[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]系统函数是用于向后兼容。 我们建议你使用[sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)相反。  
+>  这[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]系统函数是为了向后兼容。 我们建议你使用[sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +53,9 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>返回的表  
- 如果当前服务器是群集的服务器， **fn_virtualservernodes**故障转移群集实例节点的列表返回此实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已定义。  
+ 如果当前服务器是群集的服务器**fn_virtualservernodes**故障转移群集实例节点的列表返回此实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已定义。  
   
- 如果当前服务器实例不是群集的服务器， **fn_virtualservernodes**返回行集为空。  
+ 如果当前服务器实例不是群集的服务器， **fn_virtualservernodes**返回空行集。  
   
 ## <a name="permissions"></a>权限  
  用户必须具有的实例的 VIEW SERVER STATE 权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -77,8 +77,8 @@ SELECT * FROM fn_virtualservernodes();
   
  SS3-CLUSN2  
   
-## <a name="see-also"></a>另请参阅  
- [sys.dm_os_cluster_nodes &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys.fn_servershareddrives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   
   

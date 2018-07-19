@@ -1,5 +1,5 @@
 ---
-title: 分区表示形式 （表格） |Microsoft 文档
+title: 分区表示形式 （表格） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 289b58b5547b515dbc82cb0823def8c6087a9bb3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054705"
 ---
-# <a name="tables---partition-representation"></a>表的分区表示形式
+# <a name="tables---partition-representation"></a>表格-分区表示形式
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   为便于操作，可以将一个表划分为不同的行子集，而将这些行子集组合在一起可形成表；这些子集中的每个子集都是表的一个分区。  
   

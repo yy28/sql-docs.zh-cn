@@ -1,6 +1,6 @@
 ---
-title: 查看分析平台系统中的容量利用率 |Microsoft 文档
-description: 查看分析平台系统中的容量利用率。
+title: 查看分析平台系统中的容量利用率 |Microsoft Docs
+description: 分析平台系统中查看容量利用率。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539217"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909727"
 ---
-# <a name="view-capacity-utilization-in-analytics-platform-system"></a>查看分析平台系统中的容量使用率
-本主题说明如何查看 SQL Server PDW 设备中的容量利用率。  
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>分析平台系统中查看容量利用率
+本主题说明如何在 SQL Server PDW 设备中查看容量利用率。  
   
-## <a name="to-view-capacity-utilization-by-using-admin-console"></a>若要通过使用管理控制台来查看容量使用率  
-要查看使用的空间，请打开管理控制台，然后单击**存储**选项卡。没有**存储**PDW 区域和 HDI 区域的选项卡。  
+## <a name="to-view-capacity-utilization-by-using-admin-console"></a>若要通过使用管理控制台中查看容量使用率  
+若要查看使用的空间，请打开管理控制台中，然后单击**存储**选项卡。没有**存储**PDW 区域的选项卡。  
   
 ![PDW 管理控制台存储](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>若要通过使用查询来查看容量使用率  
-若要了解是否节点运行空间不足，SQL Server PDW 运行状况监视系统已监视每个节点中的所有卷的可用空间。  
+若要了解是否节点运行空间不足，SQL Server PDW 运行状况监控系统已监视每个节点中的所有卷的可用空间。  
   
-如果卷内的可用空间低于 30%，SQL Server PDW 生成**警告**警报中[sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)。  警报仍然处于之前可用空间可用为止。  
+如果卷中的可用空间低于 30%时，会生成 SQL Server PDW**警告**中的警告[sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)。  警报将保持，直到可用空间可用为止。  
   
-如果卷内的可用空间下降到 10%，将 SQL Server PDW 生成**关键**警报。 这被视为关键，因为如果它们会导致要展开的数据库，查询可能会失败。  
+如果卷中的可用空间下降到不到 10%，会生成 SQL Server PDW**关键**警报。 这被视为关键，因为如果它们会导致要展开的数据库，查询可能会失败。  
   
 若要检索卷使用情况，请参阅下面的示例。  
   
@@ -68,7 +68,7 @@ GROUP BY space.[pdw_node_id] , space.[node_name] , space.[component_instance_id]
 ORDER BY space.[pdw_node_id], MAX(space.[volume_name]);  
 ```  
   
-若要检索的设备节点中，数据库使用的空间，请参阅下面的示例。  
+若要检索的设备节点上使用数据库的空间，请参阅下面的示例。  
   
 ```sql  
 SELECT   
@@ -103,7 +103,7 @@ GROUP BY [pdw_node_id], [db_name]
 ORDER BY [db_name], [pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
 [设备监视&#40;分析平台系统&#41;](appliance-monitoring.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 延隔时间 (DMX) |Microsoft 文档
+title: Lag (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842490"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042825"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +32,10 @@ Lag()
  整型类型的标量值。  
   
 ## <a name="remarks"></a>Remarks  
- 如果**延隔时间**函数用于 KEY TIME 列所在的位置在嵌套表中的模型，该函数必须位于嵌套 select 语句。  
+ 如果**延隔**函数用于 KEY TIME 列位于嵌套表的模型，该函数必须位于嵌套的 select 语句。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回用于模型定型的数据过去 12 个月内的用例。  
+ 下面的示例返回用于为模型定型的数据的过去的 12 个月内的事例。  
   
 ```  
 SELECT * FROM [Forecasting].CASES  
@@ -43,8 +43,8 @@ WHERE Lag() < 12
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;函数引用](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

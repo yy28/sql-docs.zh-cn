@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_health_status (TRANSACT-SQL) |Microsoft 文档
+title: managed_backup.fn_get_health_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fa9a510f2be08329173898b7e0e6794458ea8fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041965"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,30 +50,30 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ##  <a name="Arguments"></a> 参数  
  [@begin_time]  
- 计算错误总数的起始时间。  @begin_time参数是日期时间。 默认值为 NULL。 当值为 NULL 时，此函数将处理当前时间最长 30 分钟之前报告的事件。  
+ 计算错误总数的起始时间。  @begin_time参数是 DATETIME。 默认值为 NULL。 当值为 NULL 时，此函数将处理当前时间最长 30 分钟之前报告的事件。  
   
  [ @end_time]  
- 计算错误总数的结束时间。 @end_time参数默认值为 NULL 是日期时间。 当值为空 NULL 时，此函数将处理截至当前时间的扩展事件。  
+ 计算错误总数的结束时间。 @end_time参数是 DATETIME，默认值为 NULL。 当值为空 NULL 时，此函数将处理截至当前时间的扩展事件。  
   
 ## <a name="table-returned"></a>返回的表  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|当程序连接到 Windows Azure 存储帐户时的连接错误数。|  
-|number_of_sql_errors|int|当程序连接到 SQL Server Engine 时返回的错误数。|  
-|number_of_invalid_credential_errors|int|当程序尝试使用 SQL 凭据进行身份验证时返回的错误数。|  
-|number_of_other_errors|int|连接、SQL 或凭据以外其他类别中的错误数。|  
-|number_of_corrupted_or_deleted_backups|int|删除或损坏的备份文件数。|  
-|number_of_backup_loops|int|备份代理扫描所有配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库的次数。|  
-|number_of_retention_loops|int|扫描数据库以评估所设置的保持期的次数。|  
+|number_of_storage_connectivity_errors|ssNoversion|当程序连接到 Windows Azure 存储帐户时的连接错误数。|  
+|number_of_sql_errors|ssNoversion|当程序连接到 SQL Server Engine 时返回的错误数。|  
+|number_of_invalid_credential_errors|ssNoversion|当程序尝试使用 SQL 凭据进行身份验证时返回的错误数。|  
+|number_of_other_errors|ssNoversion|连接、SQL 或凭据以外其他类别中的错误数。|  
+|number_of_corrupted_or_deleted_backups|ssNoversion|删除或损坏的备份文件数。|  
+|number_of_backup_loops|ssNoversion|备份代理扫描所有配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库的次数。|  
+|number_of_retention_loops|ssNoversion|扫描数据库以评估所设置的保持期的次数。|  
   
 ## <a name="best-practices"></a>最佳实践  
- 这些聚合的计数可用于监视系统运行状况。 例如，如果 number_of_retention_loops 列在 30 分钟内为 0，则保持管理可能占用较长时间，甚至没有正常工作。 非零错误列可能表示有问题，应检查扩展事件日志以了解任何问题。 或者，使用存储的过程**managed_backup.sp_get_backup_diagnostics**若要获取的扩展事件，以查找错误的详细信息列表。  
+ 这些聚合的计数可用于监视系统运行状况。 例如，如果 number_of_retention_loops 列在 30 分钟内为 0，则保持管理可能占用较长时间，甚至没有正常工作。 非零错误列可能表示有问题，应检查扩展事件日志以了解任何问题。 或者，使用存储的过程**managed_backup.sp_get_backup_diagnostics**来获取扩展事件来查找错误的详细信息的列表。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 需要**选择**对函数的权限。  
+ 需要**选择**函数上的权限。  
   
 ## <a name="examples"></a>示例  
   

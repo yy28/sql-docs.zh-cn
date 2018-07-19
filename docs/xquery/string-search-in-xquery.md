@@ -1,5 +1,5 @@
 ---
-title: 字符串在 XQuery 中的搜索 |Microsoft 文档
+title: XQuery 中的搜索的字符串 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cdd490ca34a1fa95a341da7665031659ffd099b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077504"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041555"
 ---
 # <a name="string-search-in-xquery"></a>XQuery 中的字符串搜索
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 在前面的查询， `where` FLOWR 表达式筛选的结果`for`表达式，并且仅返回满足有元素**contains （)** 条件。  
+ 在前面的查询`where`FLOWR 表达式筛选的结果`for`表达式并返回满足的唯一元素**contains （)** 条件。  
   
  结果如下：  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=19
 </p1:Maintenance>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   

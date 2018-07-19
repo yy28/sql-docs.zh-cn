@@ -8,11 +8,11 @@ ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
 ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
-ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2018
-ms.locfileid: "35513045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38069968"
 ---
 每个可用性组仅有一个主要副本。 主要副本允许读取和写入操作。 若要更改哪个副本为主要副本，可进行故障转移。 在高可用性的可用性组中，群集管理器自动执行故障转移过程。 在群集类型为 NONE 的可用性组中，需手动执行故障转移过程。 
 
