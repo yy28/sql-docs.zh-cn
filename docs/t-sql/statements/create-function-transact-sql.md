@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,15 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075174"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790398"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,10 @@ ms.locfileid: "33075174"
 -   使用内联函数作为安全策略的筛选器谓词  
   
 > [!NOTE]  
->  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure SQL 数据库。  
+>  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure SQL 数据库。
+
+> [!NOTE]  
+>  对于 Azure SQL 数据仓库，请参阅 [CREATE FUNCTION（SQL 数据仓库）](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016)一文。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -573,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>计算列互操作性  
  函数具有下列属性。 这些属性的值确定了函数是否可用于持久化计算列或索引计算列。  
   
-|“属性”|Description|说明|  
+|“属性”|描述|说明|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|函数是确定性函数还是不确定性函数。|确定性函数中允许本地数据访问。 例如，如果每次使用一组特定输入值和相同数据库状态调用函数时，函数都返回相同结果，则该函数将被标记为确定性函数。|  
 |**IsPrecise**|函数是精确函数还是不精确函数。|不精确函数包含浮点运算之类的运算。|  
@@ -649,7 +651,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>元数据  
  下表列出可用于返回与用户定义函数有关的元数据的系统目录视图。  
   
-|系统视图|Description|  
+|系统视图|描述|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|请参阅下面“示例”部分中的“示例 E”。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|显示 CLR 用户定义函数的有关信息。|  

@@ -15,17 +15,17 @@ caps.latest.revision: 2
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bc1edeb74cced8b18275b57deca6b078c13a56d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d41ac350e03dfbecc53041b2bbfa2570ede717c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013754"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926848"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控件集成 Reporting Services - 数据集合
 默认情况下，ReportViewer 控件会收集匿名使用情况信息，以便 Microsoft 更好地了解客户如何使用该控件。 通过更好地了解客户如何部署和使用查看器控件，未来的开发可以专注改进，为客户提供最大的价值。
 
-有关 Microsoft SQL Server 2016 版本和其他任何产品及服务的用户数据集收集和使用方式的说明，请参考 [Microsoft 隐私声明](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx)。
+有关 Microsoft SQL Server 2016 版本和其他任何产品及服务的用户数据集收集和使用方式的说明，请参考此[隐私声明]((http://go.microsoft.com/fwlink/?LinkID=868444))。
 
 ## <a name="opting-out-of-telemetry"></a>选择退出遥测
 

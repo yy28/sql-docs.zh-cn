@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,20 +25,20 @@ helpviewer_keywords:
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0853aaa013cd46c81d22ad8093a891ecb54a6d3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acdfdee721729b68b43a6b0a32a10cb91ea6d889
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055194"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790828"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回有关服务器或数据库事件的信息。 激发事件通知时将调用 EVENTDATA，并且结果返回到指定的 Service Broker。 还可以在 DDL 或登录触发器正文的内部使用 EVENTDATA。  
+此函数返回有关服务器或数据库事件的信息。 激发事件通知且指定的 Service Broker 收到结果时，将调用 `EVENTDATA`。 DDL 或登录触发器还支持在内部使用 `EVENTDATA`。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +50,17 @@ EVENTDATA( )
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 只有直接在 DDL 或登录触发器内部引用 EVENTDATA 时，EVENTDATA 才会返回数据。 如果 EVENTDATA 由其他例程调用（即使这些例程由 DDL 或登录触发器进行调用），将返回 NULL。  
+只有直接在 DDL 或登录触发器内部引用 `EVENTDATA` 时，它才会返回数据。 如果其他例程调用 `EVENTDATA`，则它返回 null，即使 DDL 或登录触发器调用这些例程时也是如此。
   
- 在隐式或显式调用 EVENTDATA 的事务提交或回滚之后，EVENTDATA 所返回的数据将无效。  
+当执行以下事务时，由 `EVENTDATA` 返回的数据无效
+
++ 显式调用 `EVENTDATA`
++ 隐式调用 `EVENTDATA`
++ 提交
++ 已回滚  
   
 > [!CAUTION]  
->  EVENTDATA 返回 XML 数据。 该数据将以 Unicode 的形式（其中每个字符包含 2 个字节）发送到客户端。 以下 Unicode 码位可以在 EVENTDATA 所返回的 XML 中使用：  
+>  `EVENTDATA` 返回 XML 数据，该数据将以 Unicode 的形式（其中每个字符包含 2 个字节）发送到客户端。 `EVENTDATA` 返回可表示这些 Unicode 码位的 XML：  
 >   
 >  `0x0009`  
 >   
@@ -68,24 +72,24 @@ EVENTDATA( )
 >   
 >  `>= 0xE000 && <= 0xFFFD`  
 >   
->  某些可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符和数据中使用的字符不能或不允许在 XML 中使用。 其码位没有显示在前面列表中的字符或数据将映射为问号 (?)。  
+>  某些可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符和数据中显示的字符不能或不允许在 XML 中使用。 其码位没有显示在前面列表中的字符或数据将映射为问号 (?)。  
   
- 为了保护登录名的安全性，当执行 CREATE LOGIN 或 ALTER LOGIN 语句时，将不显示密码。  
+密码在 `CREATE LOGIN` 或 `ALTER LOGIN` 语句执行时不会显示。 这可以保护登录安全性。  
   
 ## <a name="schemas-returned"></a>返回的架构  
- EVENTDATA 返回类型为 xml 的值。 默认情况下，所有事件的架构定义都安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
+EVENTDATA 返回数据类型为 xml 的值。 默认情况下，所有事件的架构定义都安装在此目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 此外，事件架构还发布在 [Microsoft SQL Server XML 架构](http://go.microsoft.com/fwlink/?LinkID=31850)网页。  
+[Microsoft SQL Server XML 架构](http://go.microsoft.com/fwlink/?LinkID=31850)网页还具有事件架构。  
   
- 若要提取任何特定事件的架构，请搜索复杂类型 `EVENT_INSTANCE_\<event_type>` 的架构。 例如，若要提取 DROP_TABLE 事件的架构，请搜索 `EVENT_INSTANCE_DROP_TABLE` 的架构。  
+若要提取任何特定事件的架构，请搜索复杂类型 `EVENT_INSTANCE_<event_type>` 的架构。 例如，若要提取 `DROP_TABLE` 事件的架构，请搜索 `EVENT_INSTANCE_DROP_TABLE` 的架构。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. 在 DDL 触发器中查询事件数据  
- 以下示例创建 DDL 触发器，以防止在数据库中创建新表。 通过对 EVENTDATA 生成的 XML 数据使用 XQuery，可以捕获激发触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)。  
+此示例创建阻止创建新数据库表的 DDL 触发器。 对 `EVENTDATA` 生成的 XML 数据使用 XQuery 可捕获激发触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md) 以了解详细信息。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“以网格显示结果”来查询 `\<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“以网格显示结果”来查询 `<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”。  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,10 +115,10 @@ GO
 ```  
   
 > [!NOTE]  
->  如果需要返回事件数据，建议使用 XQuery value() 方法而不是 query() 方法。 query() 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CR/LF) 实例，而 value() 方法无法在输出中呈现 CR/LF 实例。  
+>  如果需要返回事件数据，使用 XQuery value() 方法而不是 query() 方法。 query() 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CR/LF) 实例，而 value() 方法无法在输出中呈现 CR/LF 实例。  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. 创建事件数据在 DDL 触发器中的日志表  
- 以下示例创建用于存储所有数据库级事件的相关信息的表，并在表中填充 DDL 触发器。 通过对 `EVENTDATA` 生成的 XML 数据使用 XQuery，可以捕获事件类型和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+此示例创建用于存储有关所有数据库级事件的信息的表，并在表中填充 DDL 触发器。 对 `EVENTDATA` 生成的 XML 数据使用 XQuery 可捕获事件类型和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 ```  
 USE AdventureWorks2012;  

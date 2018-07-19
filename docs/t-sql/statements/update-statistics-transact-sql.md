@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d662031dec5912311d252b3c5a44e2abc5059eba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13d85a3eb7bcea27cb5b2d1a3c5c98ba83735639
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074154"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782558"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -170,7 +169,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 MAXDOP = max_degree_of_parallelism  
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
- 在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
  max_degree_of_parallelism 可以是：  
   
@@ -193,6 +192,7 @@ MAXDOP = max_degree_of_parallelism
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 * 外部表格中不支持更新统计信息。 若要更新外部表格中的统计信息，请删除并重新创建统计信息。  
 * MAXDOP 选项与 STATS_STREAM、ROWCOUNT 和 PAGECOUNT 选项不兼容。
+* 如果使用，MAXDOP 选项会受 Resource Governor 工作负载组 MAX_DOP 设置的限制。
 
 ## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 更新所有统计信息  
  有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，以下命令调用 sp_updatestats 来更新数据库的所有统计信息。  

@@ -17,21 +17,34 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 5677005fb992816e537c7780a62636c57f92b80d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 2263cf41c9e5b4f4a629db6f824b0d9198a03a55
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332521"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37891068"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
-“Azure SQL DW 上传任务”  使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 按照高效的 PolyBase 方法执行上传流程，如 [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)（Azure SQL 数据仓库加载模式和策略）一文中所述。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。
+
+Azure SQL DW 上传任务启用 SSIS 包，将表格数据从文件系统或 Azure Blob 存储复制到 Azure SQL 数据仓库 (DW)。
+该任务利用 PolyBase 来改进性能，如 [Azure SQL 数据仓库加载模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)一文中所述。
+当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。
+当从文件系统复制时，数据首先将上传到 Azure Blob 存储进行暂存，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户。
 
 “Azure SQL DW 上传任务”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
 
 若要添加“Azure SQL DW 上传任务” ，请将其从 SSIS 工具栏拖放到设计器画布中，双击或右键单击它，然后单击“编辑”  ，查看任务编辑器对话框。
 
 在“常规”  页上配置以下属性。
+
+SourceType 指定源数据存储的类型。 选择下列类型之一：
+
+* FileSystem：源数据位于本地文件系统中。
+* BlobStorage：源数据位于 Azure Blob 存储中。
+
+以下是每个源类型的属性。
+
+### <a name="filesystem"></a>FileSystem
 
 字段|描述
 -----|-----------
@@ -52,9 +65,28 @@ TableName|指定目标表的名称。 可选择现有的表名称，或通过选
 TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
 HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
 
-根据是上传到新表还是现有表，看到的“映射”  页面会有所不同。 如果是前者，请在待创建目标表中配置要映射到的源列及其对应名称。 如果是后者，请配置源和目标列之间的映射关系。
+### <a name="blobstorage"></a>BlobStorage
+
+字段|描述
+-----|-----------
+AzureStorageConnection|指定 Azure 存储连接管理器。
+BlobContainer|指定源数据所在的 blob 容器的名称。
+BlobDirectory|指定源数据所在的 blob 目录（虚拟层次结构）。
+RowDelimiter|指定标记每一行末尾的字符。
+ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 |（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
+CompressionType|指定用于源数据的压缩格式。
+AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
+TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“\<新建表...>”创建一个新表。
+TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
+HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
+
+根据是复制到新表还是现有表，看到的“映射”页面会有所不同。
+如果是前者，请在待创建目标表中配置要映射到的源列及其对应名称。
+如果是后者，请配置源和目标列之间的映射关系。
 
 在“列”  页上，配置每个源列的数据类型属性。
 
-“T-SQL”  页显示用于将数据从 Azure Blob 存储加载到 Azure SQL DW 的 T-SQL。 T-SQL 从其他页面的配置中自动生成，并在任务执行的过程中执行。 若要满足特定需求，可通过单击“编辑”  按钮选择手动编辑已生成的 T-SQL。 之后可单击“重置”  按钮还原为自动生成的 T-SQL。
-
+“T-SQL”  页显示用于将数据从 Azure Blob 存储加载到 Azure SQL DW 的 T-SQL。
+T-SQL 从其他页面的配置中自动生成，并在任务执行的过程中执行。
+若要满足特定需求，可通过单击“编辑”  按钮选择手动编辑已生成的 T-SQL。
+之后可单击“重置”  按钮还原为自动生成的 T-SQL。

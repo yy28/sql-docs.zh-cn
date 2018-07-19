@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a128f53b779b6c3ea99aa694bfb96e61c334b722
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26bc2c58ae5355447602229bfdec9f711be4d0fd
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941082"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854269"
 ---
 # <a name="enable-indexes-and-constraints"></a>启用索引和约束
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "32941082"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表，或者是 **sysadmin** 固定服务器角色或者 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
+ 要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表；或者是 sysadmin 固定服务器角色的成员；或者是 db_ddladmin 和 db_owner 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074300"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926408"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>配置 SQL Server 以向 Microsoft 发送反馈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ AND instance_name = '_Total'
 安装后，可以通过错误和使用情况报告应用程序更改 SQL Server 组件和实例的使用情况数据收集设置。 可将此应用程序作为 SQL Server 安装的一部分。 此工具可使每个 SQL Server 实例配置其自己的使用情况数据设置。
 
 > [!NOTE]
-> 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，你可以通过与在 SQL Server 2017 中相同的方式管理错误报告和使用情况反馈收集的偏好设置。 错误报告不同于使用情况反馈收集，因此可以独立于使用情况反馈收集进行启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含隐私声明中所述的敏感信息。
+> 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，你可以通过与在 SQL Server 2017 中相同的方式管理错误报告和使用情况反馈收集的偏好设置。 错误报告不同于使用情况反馈收集，因此可以独立于使用情况反馈收集进行启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)中所述的敏感信息。
 
 要启动 SQL Server 错误和使用情况报告，请单击或点击“启动”，然后在搜索框中搜索“错误”。 将显示 SQL Server 错误和使用情况报告项。 启动该工具后，可以管理针对计算机上安装的实例和组件收集的使用情况反馈和严重错误。
 

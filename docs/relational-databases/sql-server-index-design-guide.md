@@ -1,7 +1,7 @@
 ---
 title: SQL Server 索引体系结构和设计指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: 15c3db3784c056946a8ec047360691515c1c12be
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34812161"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909587"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,13 +108,20 @@ ms.locfileid: "34812161"
 ### <a name="query-considerations"></a>查询注意事项  
  设计索引时，应考虑以下查询准则：  
   
--   为经常用于查询中的谓词和联接条件的列创建非聚集索引。 但是，应避免添加不必要的列。 添加太多索引列可能对磁盘空间和索引维护性能产生负面影响。  
+-   为经常用于查询中的谓词和联接条件的列创建非聚集索引。 这些是你的 SARGable<sup>1</sup> 列。 但是，应避免添加不必要的列。 添加太多索引列可能对磁盘空间和索引维护性能产生负面影响。  
   
 -   涵盖索引可以提高查询性能，因为符合查询要求的全部数据都存在于索引本身中。 也就是说，只需要索引页，而不需要表的数据页或聚集索引来检索所需数据，因此，减少了总体磁盘 I/O。 例如，对某一表（其中对列 **a** 、 **b** 和 **c**创建了组合索引）的列 **a**和 **b** 的查询，仅仅从该索引本身就可以检索指定数据。  
-  
+
+    > [!IMPORTANT]
+    > 覆盖索引是针对[非聚集索引](#nonclustered-index-architecture)的指定，它直接解析一个或几个类似的查询结果，而不访问其基表，并且不会引发查找。
+    > 此类索引在叶级别上具有所有必要的非 [SARGable](#sargable) 列。 这意味着，由 SELECT 子句以及所有 WHERE 和 JOIN 参数返回的列都被索引所覆盖。
+    > 当与表本身的行和列相比，如果索引足够窄，那么执行查询的 I/O 可能会少得多，这意味着它是总列的一个真正子集。 如果选择大型表的一小部分，请考虑覆盖索引，其中的小部分是由一个固定谓词定义，比如一个[稀疏列](../relational-databases/tables/use-sparse-columns.md)，例如它只包含几个非 NULL 值。
+    
 -   将插入或修改尽可能多的行的查询写入单个语句内，而不要使用多个查询更新相同的行。 仅使用一个语句，就可以利用优化的索引维护。  
   
 -   评估查询类型以及如何在查询中使用列。 例如，在完全匹配查询类型中使用的列就适合用于非聚集索引或聚集索引。
+
+<a name="sargable"></a><sup>1</sup> “SARGable”一词在关系数据库中指的是一个搜索可论证的谓词，它可以利用一个索引来加快查询的执行过程。
   
 ### <a name="column-considerations"></a>列注意事项  
  设计索引时，应考虑以下列准则：  
@@ -148,7 +155,7 @@ ms.locfileid: "34812161"
 -   列存储与行存储
 -   内存优化表的哈希索引与非聚集索引
   
- 您也可以通过设置选项（例如 FILLFACTOR）自定义索引的初始存储特征以优化其性能或维护。 而且，通过使用文件组或分区方案可以确定索引存储位置来优化性能。  
+您也可以通过设置选项（例如 FILLFACTOR）自定义索引的初始存储特征以优化其性能或维护。 而且，通过使用文件组或分区方案可以确定索引存储位置来优化性能。  
   
 ###  <a name="Index_placement"></a> 文件组或分区方案的索引设置  
  开发索引设计策略时，应该考虑在与数据库相关联的文件组上放置索引。 仔细选择文件组或分区方案可以改进查询性能。  
@@ -159,9 +166,9 @@ ms.locfileid: "34812161"
 -   对要涵盖多个文件组的聚集和非聚集索引进行分区。  
 -   通过删除聚集索引并在 DROP INDEX 语句的 MOVE TO 子句中指定新的文件组或分区方案，或者在 CREATE INDEX 语句中使用 DROP_EXISTING 子句，将表从一个文件组移至另一个文件组。  
   
- 通过对其他文件组创建非聚集索引，可以在文件组通过自带的控制器使用不同的物理驱动器时实现性能提升。 这样一来，数据和索引信息即可由多个磁头并行读取。 例如，如果文件组 `Table_A` 的 `f1` 和文件组 `Index_A` 的 `f2` 都由同一个查询使用，就可无争夺地充分使用这两个文件组，因此可以实现性能提升。 但是，如果 `Table_A` 由查询扫描而没有引用 `Index_A` ，则仅使用文件组 `f1` 。 这不会引起性能提升。  
+通过对其他文件组创建非聚集索引，可以在文件组通过自带的控制器使用不同的物理驱动器时实现性能提升。 这样一来，数据和索引信息即可由多个磁头并行读取。 例如，如果文件组 `Table_A` 的 `f1` 和文件组 `Index_A` 的 `f2` 都由同一个查询使用，就可无争夺地充分使用这两个文件组，因此可以实现性能提升。 但是，如果 `Table_A` 由查询扫描而没有引用 `Index_A` ，则仅使用文件组 `f1` 。 这不会引起性能提升。  
   
- 由于无法预测将要发生的访问类型以及访问时间，因此更好的办法可能是展开所有文件组中的表和索引。 这将保证能够访问所有磁盘，因为所有数据和索引在所有磁盘上均匀展开，不受访问数据的方式的限制。 这对系统管理员来说也是更简单的方法。  
+由于无法预测将要发生的访问类型以及访问时间，因此更好的办法可能是展开所有文件组中的表和索引。 这将保证能够访问所有磁盘，因为所有数据和索引在所有磁盘上均匀展开，不受访问数据的方式的限制。 这对系统管理员来说也是更简单的方法。  
   
 #### <a name="partitions-across-multiple-filegroups"></a>在多个文件组中分区  
  还可以考虑在多个文件组中对聚集和非聚集索引分区。 根据分区函数，对已分区的索引进行水平分区或按行分区。 分区函数定义如何根据某些列（称为分区依据列）的值将每一行映射到一组分区。 分区方案将分区映射指定给一组文件组。  
@@ -172,7 +179,7 @@ ms.locfileid: "34812161"
   
 -   使查询运行得更快、更有效。 当查询访问索引的几个分区时，查询优化器同时可以处理各个分区，但不包括不受该查询影响的分区。  
   
- 有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
 ###  <a name="Sort_Order"></a> 索引排序顺序设计指南  
  定义索引时，应该考虑索引键列的数据是按升序还是按降序存储。 升序是默认设置，保持与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本的兼容性。 CREATE INDEX、CREATE TABLE 和 ALTER TABLE 语句的语法在索引和约束中的各列上支持关键字 ASC（升序）和 DESC（降序）：  
@@ -237,7 +244,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   可用于范围查询。  
   
- 如果未使用 `UNIQUE` 属性创建聚集索引，[!INCLUDE[ssDE](../includes/ssde-md.md)]会自动向表添加一个 4 字节的唯一标识符列。 必要时， [!INCLUDE[ssDE](../includes/ssde-md.md)] 将向行自动添加一个唯一标识符值以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
+如果未使用 `UNIQUE` 属性创建聚集索引，[!INCLUDE[ssDE](../includes/ssde-md.md)]会自动向表添加一个 4 字节的唯一标识符列。 必要时， [!INCLUDE[ssDE](../includes/ssde-md.md)] 将向行自动添加一个唯一标识符值以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
   
 ### <a name="clustered-index-architecture"></a>聚集索引体系结构  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，索引是按 B 树结构组织的。 索引 B 树中的每一页称为一个索引节点。 B 树的顶端节点称为根节点。 索引中的底层节点称为叶节点。 根节点与叶节点之间的任何索引级别统称为中间级。 在聚集索引中，叶节点包含基础表的数据页。 根节点和中间级节点包含存有索引行的索引页。 每个索引行包含一个键值和一个指针，该指针指向 B 树上的某一中间级页或叶级索引中的某个数据行。 每级索引中的页均被链接在双向链接列表中。  
@@ -272,32 +279,32 @@ ON Purchasing.PurchaseOrderDetail
   
 -   唯一或包含许多不重复的值  
   
-     例如，雇员 ID 唯一地标识雇员。 `EmployeeID` 列的聚集索引或[主键](../relational-databases/tables/create-primary-keys.md)约束可提高基于雇员 ID 号搜索雇员信息的查询的性能。 另外，可对 `LastName`、 `FirstName`、 `MiddleName` 列创建聚集索引，因为经常以这种方式分组和查询雇员记录，而且这些列的组合还可提供高区分度。 
+    例如，雇员 ID 唯一地标识雇员。 `EmployeeID` 列的聚集索引或[主键](../relational-databases/tables/create-primary-keys.md)约束可提高基于雇员 ID 号搜索雇员信息的查询的性能。 另外，可对 `LastName`、 `FirstName`、 `MiddleName` 列创建聚集索引，因为经常以这种方式分组和查询雇员记录，而且这些列的组合还可提供高区分度。 
 
-     > [!TIP]
-     > 如果没有另行指定，在创建[主键](../relational-databases/tables/create-primary-keys.md)约束时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会创建一个[聚集索引](#clustered_index)来支持该约束。
-     > 虽然可使用 [uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md) 来强制实施作为主键的唯一性，但它不是有效的聚集键。
-     > 如果使用 uniqueidentifier 作为主键，建议将其创建为非聚集索引，然后使用另一列（如 `IDENTITY`）创建聚集索引。   
+    > [!TIP]
+    > 如果没有另行指定，在创建[主键](../relational-databases/tables/create-primary-keys.md)约束时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会创建一个[聚集索引](#clustered_index)来支持该约束。
+    > 虽然可使用 [uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md) 来强制实施作为主键的唯一性，但它不是有效的聚集键。
+    > 如果使用 uniqueidentifier 作为主键，建议将其创建为非聚集索引，然后使用另一列（如 `IDENTITY`）创建聚集索引。   
   
 -   按顺序被访问  
   
-     例如，产品 ID 唯一地标识 `Production.Product` 数据库的 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 表中的产品。 在其中指定顺序搜索的查询（如 `WHERE ProductID BETWEEN 980 and 999`）将从 `ProductID`的聚集索引受益。 这是因为行将按该键列的排序顺序存储。  
+    例如，产品 ID 唯一地标识 `Production.Product` 数据库的 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 表中的产品。 在其中指定顺序搜索的查询（如 `WHERE ProductID BETWEEN 980 and 999`）将从 `ProductID`的聚集索引受益。 这是因为行将按该键列的排序顺序存储。  
   
 -   定义为 `IDENTITY`。  
   
 -   经常用于对表中检索到的数据进行排序。  
   
-     按该列对表进行聚集（即物理排序）是一个好方法，它可以在每次查询该列时节省排序操作的成本。  
+    按该列对表进行聚集（即物理排序）是一个好方法，它可以在每次查询该列时节省排序操作的成本。  
   
  聚集索引不适用于具有下列属性的列：  
   
 -   频繁更改的列  
   
-     这将导致整行移动，因为 [!INCLUDE[ssDE](../includes/ssde-md.md)] 必须按物理顺序保留行中的数据值。 这一点要特别注意，因为在大容量事务处理系统中数据通常是可变的。  
+    这将导致整行移动，因为 [!INCLUDE[ssDE](../includes/ssde-md.md)] 必须按物理顺序保留行中的数据值。 这一点要特别注意，因为在大容量事务处理系统中数据通常是可变的。  
   
 -   宽键  
   
-     宽键是若干列或若干大型列的组合。 所有非聚集索引将聚集索引中的键值用作查找键。 为同一表定义的任何非聚集索引都将增大许多，这是因为非聚集索引项包含聚集键，同时也包含为此非聚集索引定义的键列。  
+    宽键是若干列或若干大型列的组合。 所有非聚集索引将聚集索引中的键值用作查找键。 为同一表定义的任何非聚集索引都将增大许多，这是因为非聚集索引项包含聚集键，同时也包含为此非聚集索引定义的键列。  
   
 ##  <a name="Nonclustered"></a> 非聚集索引设计指南  
  非聚集索引包含索引键值和指向表数据存储位置的行定位器。 可以对表或索引视图创建多个非聚集索引。 通常，设计非聚集索引是为改善经常使用的、没有建立聚集索引的查询的性能。  
@@ -309,19 +316,19 @@ ON Purchasing.PurchaseOrderDetail
   
 -   基础表的数据行不按非聚集键的顺序排序和存储。  
   
--   非聚集索引的叶层是由索引页而不是由数据页组成。  
+-   非聚集索引的叶级别是由索引页而不是由数据页组成。  
   
- 非聚集索引行中的行定位器或是指向行的指针，或是行的聚集索引键，如下所述：  
+非聚集索引行中的行定位器或是指向行的指针，或是行的聚集索引键，如下所述：  
   
 -   如果表是堆（意味着该表没有聚集索引），则行定位器是指向行的指针。 该指针由文件标识符 (ID)、页码和页上的行数生成。 整个指针称为行 ID (RID)。  
   
 -   如果表有聚集索引或索引视图上有聚集索引，则行定位器是行的聚集索引键。  
   
- 对于索引使用的每个分区，非聚集索引在 **index_id** >1 的 [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) 中都有对应的一行。 默认情况下，一个非聚集索引有单个分区。 如果一个非聚集索引有多个分区，则每个分区都有一个包含该特定分区的索引行的 B 树结构。 例如，如果一个非聚集索引有四个分区，那么就有四个 B 树结构，每个分区中一个。  
+对于索引使用的每个分区，非聚集索引在 **index_id** >1 的 [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) 中都有对应的一行。 默认情况下，一个非聚集索引有单个分区。 如果一个非聚集索引有多个分区，则每个分区都有一个包含该特定分区的索引行的 B 树结构。 例如，如果一个非聚集索引有四个分区，那么就有四个 B 树结构，每个分区中一个。  
   
- 根据非聚集索引中数据类型的不同，每个非聚集索引结构会有一个或多个分配单元，在其中存储和管理特定分区的数据。 每个非聚集索引至少有一个针对每个分区的 IN_ROW_DATA 分配单元（存储索引 B 树页）。 如果非聚集索引包含大型对象 (LOB) 列，则还有一个针对每个分区的 LOB_DATA 分配单元。 此外，如果非聚集索引包含的可变长度列超过 8,060 字节的行大小限制，则还有一个针对每个分区的 ROW_OVERFLOW_DATA 分配单元。  
+根据非聚集索引中数据类型的不同，每个非聚集索引结构会有一个或多个分配单元，在其中存储和管理特定分区的数据。 每个非聚集索引至少有一个针对每个分区的 IN_ROW_DATA 分配单元（存储索引 B 树页）。 如果非聚集索引包含大型对象 (LOB) 列，则还有一个针对每个分区的 LOB_DATA 分配单元。 此外，如果非聚集索引包含的可变长度列超过 8,060 字节的行大小限制，则还有一个针对每个分区的 ROW_OVERFLOW_DATA 分配单元。  
   
- 下图说明了单个分区中的非聚集索引结构。  
+下图说明了单个分区中的非聚集索引结构。  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
   
@@ -332,7 +339,7 @@ ON Purchasing.PurchaseOrderDetail
   
      决策支持系统应用程序和主要包含只读数据的数据库可以从许多非聚集索引中获益。 查询优化器具有更多可供选择的索引用来确定最快的访问方法，并且数据库的低更新特征意味着索引维护不会降低性能。  
   
--   联机事务处理应用程序和包含大量更新表的数据库应避免使用过多的索引。 此外，索引应该是窄的，即列越少越好。  
+-   联机事务处理 (OLTP) 应用程序和包含经常更新的表的数据库应避免过多索引。 此外，索引应该是窄的，即列越少越好。  
   
      对表编制大量索引会影响 INSERT、UPDATE、DELETE 和 MERGE 语句的性能，因为当表中的数据更改时，所有索引都须进行适当的调整。  
   
@@ -345,19 +352,25 @@ ON Purchasing.PurchaseOrderDetail
   
 -   不返回大型结果集的查询。  
   
-     创建筛选索引以覆盖从大型表中返回定义完善的行子集的查询。  
-  
+     创建筛选索引以覆盖从大型表中返回定义完善的行子集的查询。 
+     
+     > [!TIP] 
+     > 通常，CREATE INDEX 语句的 WHERE 子句匹配所覆盖的查询的 WHERE 子句。  
+
 -   包含经常包含在查询的搜索条件（例如返回完全匹配的 WHERE 子句）中的列。  
-  
+
+    > [!TIP]
+    > 添加新索引时，请考虑成本和权益。 将其他查询需求合并到现有索引中可能更可取。 例如，如果允许覆盖多个关键查询，而不是每个关键查询都有一个覆盖索引，则考虑添加一个或两个额外的叶级别列到现有索引。
+    
 ### <a name="column-considerations"></a>列注意事项  
  考虑具有以下一个或多个属性的列：  
   
 -   覆盖查询。  
   
-     当索引包含查询中的所有列时，性能可以提升。 查询优化器可以找到索引内的所有列值；不会访问表或聚集索引数据，这样就减少了磁盘 I/O 操作。 使用具有包含列的索引来添加覆盖列，而不是创建宽索引键。  
+     或者当索引包含查询中的所有列时，性能可以提升。 查询优化器可以找到索引内的所有列值；不会访问表或聚集索引数据，这样就减少了磁盘 I/O 操作。 使用具有[包含列](#Included_Columns)的索引来添加覆盖列，而不是创建宽索引键。  
   
      如果表有聚集索引，则该聚集索引中定义的列将自动追加到表上每个非聚集索引的末端。 这可以生成覆盖查询，而不用在非聚集索引定义中指定聚集索引列。 例如，如果一个表在 `C`列上有聚集索引，则 `B` 和 `A` 列的非聚集索引将具有其自己的键值列 `B`、 `A`和 `C`。  
-  
+      
 -   大量非重复值，如姓氏和名字的组合（前提是聚集索引被用于其他列）。  
   
      如果只有很少的非重复值，例如仅有 1 和 0，则大多数查询将不使用索引，因为此时表扫描通常更有效。 对于这种类型的数据，应考虑对仅出现在少数行中的非重复值创建筛选索引。 例如，如果大部分值都是 0，则查询优化器可以对包含 1 的数据行使用筛选查询。  
@@ -392,7 +405,7 @@ INCLUDE (FileName);
 ```  
   
 ##### <a name="index-with-included-columns-guidelines"></a>带有包含列的索引准则  
- 设计带有包含列的非聚集索引时，请考虑下列准则：  
+设计带有包含列的非聚集索引时，请考虑下列准则：  
   
 -   在 CREATE INDEX 语句的 INCLUDE 子句中定义非键列。  
   
@@ -407,7 +420,7 @@ INCLUDE (FileName);
 -   不能同时在 INCLUDE 列表和键列列表中指定列名。  
   
 -   INCLUDE 列表中的列名不能重复。  
-  
+
 ##### <a name="column-size-guidelines"></a>列大小准则  
   
 -   必须至少定义一个键列。 最大非键列数为 1023 列。 也就是最大的表列数减 1。  

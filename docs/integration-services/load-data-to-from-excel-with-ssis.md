@@ -1,7 +1,7 @@
 ---
 title: 使用 SSIS 从 Excel 导入数据或将数据导出到 Excel | Microsoft Docs
 description: 了解如何使用 SQL Server Integration Services (SSIS) 导入或导出 Excel 数据，以及先决条件、已知问题和限制。
-ms.date: 04/10/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,51 +13,62 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0230dd81a704ce0d9ada34eecea205e153ebb78b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403389"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137926"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
-本文介绍如何使用 SQL Server Integration Services (SSIS) 将数据导入 Excel 或从 Excel 导出数据。 本文还会介绍先决条件、限制和已知问题。
+本文介绍了必须提供的连接信息，以及必须配置的设置，以便从 Excel 导入数据或使用 SQL Server Integration Services (SSIS) 将数据导出到 Excel。
 
-可通过创建 SSIS 包和使用 Excel 连接管理器、Excel 源或 Excel 目标提供程序，从 Excel 导出文件或将文件导入 Excel。 还可使用内置于 SSIS 的 SQL Server 导入和导出向导。
+以下各节包含在 SSIS 中成功使用 Excel 或者了解和排除常见问题所需的信息：
 
-本文包含在 SSIS 中成功使用 Excel 或者了解和排除常见问题所必需的三组信息：
-1.  [所需文件](#files-you-need)。
-2.  从 Excel 中加载数据或将数据加载到 Excel 时需要提供的信息。
+1.  可以使用的[工具](#tools)。
+
+2.  所需[文件](#files-you-need)。
+
+3.  从 Excel 加载数据或向 Excel 加载数据时必须提供的连接信息以及必须配置的设置。
     -   [指定 Excel](#specify-excel) 作为数据源。
     -   提供 [Excel 文件和路径](#excel-file)。
     -   选择 [Excel 版本](#excel-version)。
     -   指定[第一行是否包含列名称](#first-row)。
     -   提供[包含数据的工作表或范围](#sheets-ranges)。
-3.  已知问题和限制。
+
+4.  已知问题和限制。
     -   [数据类型](#issues-types)的问题。
     -   [导入](#issues-importing)的问题。
     -   [导出](#issues-exporting)的问题。
+
+## <a name="tools"></a> 可以使用的工具
+
+可以使用以下工具之一从 Excel 导入数据或将数据导出到 Excel：
+
+-   **SQL Server Integration Services (SSIS)**。 使用 Excel 连接管理器创建使用 Excel 源或 Excel 目标的 SSIS 包。 （本文不介绍如何设计 SSIS 包。）
+
+-   内置于 SSIS 的“SQL Server 导入和导出向导”。 有关详细信息，请参阅[使用 SQL Server 导入和导出向导导入和导出数据](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)和[连接到 Excel 数据源（SQL Server 导入和导出向导）](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="files-you-need"></a>获取连接到 Excel 所需的文件
 
 如果没有安装 Excel 的连接组件，首先需要下载这些组件，然后才能从 Excel 导出数据或将数据导入 Excel。 默认情况下，没有安装 Excel 的连接组件。
 
-在此处下载用于 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
-  
-最新版组件可以打开 Excel 早期版本创建的文件。
+在此处下载用于 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版组件可以打开 Excel 早期版本创建的文件。
 
-请确保已下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。
+### <a name="notes-about-the-download-and-installation"></a>有关下载和安装说明
 
-如果计算机已安装 32 位版本的 Office，则必须安装 32 位版本的组件。 还必须确保在 32 位模式下运行 SSIS 包，或运行 32 位版本的导入和导出向导。
+-   请确保已下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。
 
-如果拥有 Office 365 订阅，则运行安装程序时可能会显示错误消息。 错误消息指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
+-   如果计算机已安装 32 位版本的 Office，则必须安装 32 位版本的组件。 还必须确保在 32 位模式下运行 SSIS 包，或运行 32 位版本的导入和导出向导。
 
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+-   如果拥有 Office 365 订阅，则运行安装程序时可能会显示错误消息。 错误消息指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
 
-如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
+    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="specify-excel"></a> 指定 Excel
+    如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
+
+## <a name="specify-excel"></a> 指定 Excel 作为数据源
 
 第一步需要指出希望连接到 Excel。
 

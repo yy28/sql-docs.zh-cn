@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956422"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297363"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "32956422"
 
 适用于：从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-从较低版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新级别时，工作负载可能会面临性能回归风险。
+从较低版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新可用级别时，工作负载可能会面临性能回归风险。
 
 这是因为，自 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 起，所有查询优化器更改都会绑定到最新的[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)，因此计划不会在升级后立即更改，而是在用户将 `COMPATIBILITY_LEVEL` 数据库更改为最新版本后更改。 利用此功能和 Query Store，你可以在升级过程中对查询性能进行精确的控制。 
 

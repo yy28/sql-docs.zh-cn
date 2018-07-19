@@ -15,12 +15,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d433843076a83c8a09319c118bbd44e7f89a24d1
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401259"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262301"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>第 1-2 课 — 添加和配置平面文件连接管理器
 在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -95,7 +95,7 @@ ms.locfileid: "35401259"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-    为 **CurrencyID** 列建议的数据类型与目标表中字段的数据类型不兼容。 由于 `DimCurrency.CurrencyAlternateKey` 的数据类型为 nchar (3)， **CurrencyID** 必须从字符串 [DT_STR] 改为字符串 [DT_WSTR]。 另外，字段 `DimDate.FullDateAlternateKey` 被定义为日期数据类型，因此 **CurrencyDate** 需要从日期 [DT_Date] 改为数据库日期 [DT_DBDATE]。  
+    为 **CurrencyID** 列建议的数据类型与目标表中字段的数据类型不兼容。 由于 `DimCurrency.CurrencyAlternateKey` 的数据类型为 nchar (3)，CurrencyID 必须从字符串 [DT_STR] 改为 Unicode 字符串 [DT_WSTR]。 另外，字段 `DimDate.FullDateAlternateKey` 被定义为日期数据类型，因此 **CurrencyDate** 需要从日期 [DT_Date] 改为数据库日期 [DT_DBDATE]。  
   
 2.  在列表中选择“CurrencyID”列，在属性窗格中将列 **CurrencyID** 的数据类型从字符串 [DT_STR] 改为 Unicode 字符串 [DT_WSTR]。  
   

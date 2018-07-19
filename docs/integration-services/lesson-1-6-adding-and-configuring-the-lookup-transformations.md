@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332731"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297403"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>第 1-6 课 - 添加和配置查找转换
 在配置用于从源文件中提取数据的平面文件源后，下一个任务是定义获取 **CurrencyKey** 和 **DateKey**值所需的查找转换。 查找转换通过将指定输入列中的数据联接到引用数据集中的列来执行查找。 引用数据集可以是现有的表或视图，也可以是新表或 SQL 语句的结果。 在本教程中，查找转换使用 OLE DB 连接管理器连接到包含引用数据集的源数据的数据库。  
@@ -41,7 +41,7 @@ ms.locfileid: "35332731"
   
 1.  在“SSIS 工具箱”中，展开“公共”，然后将“查找”拖到“数据流”选项卡的设计图面上。将“查找”直接放在“Extract Sample Currency Data”源的下面。  
   
-2.  单击“Extract Sample Currency Data”平面文件源，然后将绿色箭头拖到新添加的“查找”转换中，以连接这两个组件。  
+2.  单击“Extract Sample Currency Data”平面文件源，然后将蓝色箭头拖到新添加的“查找”转换中，以连接这两个组件。  
   
 3.  在“数据流”设计图面上，单击“查找”转换中的“查找”，然后将该名称更改为 **Lookup Currency Key**。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35332731"
 12. 在“属性”窗口中，确认“LocaleID”属性已设置为“英语(美国)”，且“DefaultCodePage”属性已设置为“1252”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[步骤 7：添加和配置 OLE DB 目标](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+[步骤 7：添加并配置 OLE DB 目标](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  

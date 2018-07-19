@@ -1,7 +1,7 @@
 ---
 title: 为 AlwaysOn 可用性组配置复制 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2016
+ms.date: 07/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ea2fb342bc881d79f8e3184535bbe888e939068
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ac96fc19852fa45b972308fc48b55687f0885ea6
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770463"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934869"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
 
@@ -128,6 +128,9 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  有关详细信息，请参阅[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)。  
+ 
+> [!NOTE]  
+>  在使用 Per_DB 选项启用了 DTC_Support 的可用性组中的数据库上无法启用复制。  
   
 ##  <a name="step3"></a> 3.确保对所有辅助副本主机进行复制配置  
  在每个辅助副本主机上，确保已将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置为支持复制。 可在每个辅助副本主机上运行以下查询来确定是否安装了复制功能：  

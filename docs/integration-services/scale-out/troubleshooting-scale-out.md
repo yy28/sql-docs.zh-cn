@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: ee095bce32da1d663aee1ed1c38d2cda52187a31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 91063b4895ee46c5bd1746348b37d6564a0d4b10
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409789"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964279"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
 
@@ -149,6 +149,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     值类型：REG_DWORD 
 
     值数据：2
+
+    > [!NOTE]
+    > 如果根证书存储中有非自签名证书，客户端证书身份验证将失败。 有关详细信息，请参阅 [Internet Information Services (IIS) 8 可能会拒绝客户端证书请求并随附 HTTP 403.7 或 403.16 错误](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ)。
 
 ## <a name="http-request-error"></a>HTTP 请求错误
 

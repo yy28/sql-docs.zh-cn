@@ -1,7 +1,7 @@
 ---
 title: 用于 Integration Services (SSIS) 的Azure 功能包 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bc49dc5bd2375d52d3f8a849578bd5ac9ef74430
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405049"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934859"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
@@ -39,33 +39,37 @@ ms.locfileid: "35405049"
 ## <a name="components-in-the-feature-pack"></a>功能包中的组件
 -   连接管理器
 
+    -   [Azure Data Lake Analytics Connection Manager](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Azure Data Lake Store 连接管理器](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Azure HDInsight 连接管理器](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Azure 资源管理器连接管理器](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Azure 存储连接管理器](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Azure 订阅连接管理器](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Azure Data Lake Store 连接管理器](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Azure 资源管理器连接管理器](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Azure HDInsight 连接管理器](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   “任务”
-
-    -   [Azure blob 上传任务](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Azure Blob 下载任务](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Azure HDInsight Hive 任务](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Azure blob 上传任务](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Azure HDInsight Pig 任务](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Azure Data Lake Analytics 任务](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Azure Data Lake Store 文件系统任务](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Azure HDInsight 创建群集任务](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Azure HDInsight 删除群集任务](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Azure SQL DW 上传任务](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Azure HDInsight Hive 任务](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
-    -   [Azure Data Lake Store 文件系统任务](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Azure HDInsight Pig 任务](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
+    -   [Azure SQL DW 上传任务](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   数据流组件
 
@@ -77,7 +81,7 @@ ms.locfileid: "35405049"
     
     -   [Azure Data Lake Store 目标](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob 和 ADLS 文件枚举器。 请参阅 [Foreach 循环容器](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Azure Blob 和 Azure Data Lake Store 文件枚举器。 请参阅 [Foreach 循环容器](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## <a name="scenario-processing-big-data"></a>应用场景：处理大数据
  使用 Azure Connector 可完成以下大数据处理工作：

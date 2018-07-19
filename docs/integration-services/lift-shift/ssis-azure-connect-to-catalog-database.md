@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405669"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798262"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>连接到 Azure 中的 SSIS 目录 (SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "35405669"
 - 登录信息 
 
 > [!IMPORTANT]
-> 如果尚未在 Azure 数据工厂版本 2 中创建 Azure-SSIS Integration Runtime，则无法在 Azure SQL 数据库中创建 SSISDB 目录数据库。 Azure-SSIS IR 是在 Azure 上运行 SSIS 包的运行时环境。 有关过程的演练，请参阅[在 Azure 中部署和运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
+> 如果尚未在 Azure 数据工厂中创建 Azure-SSIS Integration Runtime，则无法在 Azure SQL 数据库中创建 SSISDB 目录数据库。 Azure-SSIS IR 是在 Azure 上运行 SSIS 包的运行时环境。 有关过程的演练，请参阅[在 Azure 中部署和运行 SSIS 包](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
 
 ## <a name="prerequisites"></a>必备条件
 开始之前，请确保具有 SQL Server Management Studio (SSMS) 版本 17.2 或更高版本。 如果 SSISDB 目录数据库托管在 SQL 数据库托管实例（预览版）中，请确保安装了 17.6 版或更高版本的 SSMS。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。

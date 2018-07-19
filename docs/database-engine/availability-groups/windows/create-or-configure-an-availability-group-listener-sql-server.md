@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769673"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065997"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>创建或配置可用性组侦听器 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769673"
 >  在创建你的第一个侦听程序之前，我们强烈建议你阅读 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
 ###  <a name="DNSnameReqs"></a> 可用性组侦听器的 DNS 名称的要求  
- 每个可用性组侦听器都需要一个 DNS 主机名，该名称在域和 NetBIOS 中是唯一的。 DNS 名称为字符串值。 该名称只能包含字母数字字符、破折号 (-) 和连字符 (_)，顺序不分先后。 DNS 主机名不区分大小写。 最大长度为 63 个字符，但是，在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，您可以指定的最大长度为 15 个字符。  
+ 每个可用性组侦听器都需要一个 DNS 主机名，该名称在域和 NetBIOS 中是唯一的。 DNS 名称为字符串值。 该名称只能包含字母数字字符、破折号/连字符 (-) 和下划线 (_)，顺序不分先后。 DNS 主机名不区分大小写。 最大长度为 63 个字符，但是，在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，您可以指定的最大长度为 15 个字符。  
   
  我们建议您指定一个有意义的字符串。 例如，对于名为 `AG1`的可用性组，有意义的 DNS 主机名将是 `ag1-listener`。  
   

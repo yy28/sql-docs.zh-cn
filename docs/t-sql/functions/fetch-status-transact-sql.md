@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,27 +20,26 @@ helpviewer_keywords:
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46b6c72283ab0ead6aad871f3801fb3ed967f8f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed29d25330ceb824bef86969e822ae706ffd1a5c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055564"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786938"
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回针对连接当前打开的任何游标发出的最后一条游标 FETCH 语句的状态。  
+此函数返回针对连接当前打开的任何游标发出的最后一条游标 FETCH 语句的状态。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 @@FETCH_STATUS  
 ```  
   
@@ -50,22 +48,22 @@ ms.locfileid: "33055564"
   
 ## <a name="return-value"></a>返回值  
   
-|返回值|Description|  
+|返回值|描述|  
 |------------------|-----------------|  
-|0|FETCH 语句成功。|  
+|&nbsp;0|FETCH 语句成功。|  
 |-1|FETCH 语句失败或行不在结果集中。|  
 |-2|提取的行不存在。|
 |-9|光标未执行提取操作。|  
   
 ## <a name="remarks"></a>Remarks  
- 由于 @@FETCH_STATUS 对于在一个连接上的所有游标都是全局性的，所以要谨慎使用 @@FETCH_STATUS。 在执行一条 FETCH 语句后，必须在对另一游标执行另一 FETCH 语句前测试 @@FETCH_STATUS。 在此连接上出现任何提取操作之前，@@FETCH_STATUS 的值没有定义。  
+由于 `@@FETCH_STATUS` 对于在一个连接上的所有游标都是全局性的，所以要谨慎使用。 在执行一条 FETCH 语句后，必须在对另一游标执行另一 FETCH 语句前测试 `@@FETCH_STATUS`。 在此连接上出现任何提取操作之前，`@@FETCH_STATUS` 没有定义。  
   
- 例如，用户从一个游标执行一条 FETCH 语句，然后调用一个存储过程，此存储过程打开并处理另一个游标的结果。 从被调用的存储过程返回控制后，@@FETCH_STATUS 反映的是在存储过程中执行的最后的 FETCH 语句的结果，而不是在存储过程被调用之前的 FETCH 语句的结果。  
+例如，用户从一个游标执行一条 FETCH 语句，然后调用一个存储过程，此存储过程打开并处理另一个游标的结果。 从被调用的存储过程返回控制时，`@@FETCH_STATUS` 反映的是在存储过程中执行的最后的 FETCH 语句的结果，而不是在调用存储过程之前执行的 FETCH 语句的结果。  
   
- 若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列。  
+若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列。  
   
 ## <a name="examples"></a>示例  
- 以下示例使用 `@@FETCH_STATUS` 来控制 `WHILE` 循环中的游标活动。  
+此示例使用 `@@FETCH_STATUS` 来控制 `WHILE` 循环中的游标活动。  
   
 ```  
 DECLARE Employee_Cursor CURSOR FOR  

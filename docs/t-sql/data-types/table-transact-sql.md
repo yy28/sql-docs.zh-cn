@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054216"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432236"
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ Table 变量没有分发统计信息，不会触发重新编译。 因此，在�
   
 修改 table 变量的查询不会生成并行查询执行计划。 修改特大型 table 变量或复杂查询中的 table 变量时，可能会影响性能。 在这种情况下，请考虑改用临时表。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 还可以并行执行读取 table 变量而不对变量进行修改的查询。
   
-不能显式创建 table 变量的索引，也不保留 table 变量的任何统计信息。 在某些情况下，可以通过改用支持索引和统计信息的临时表来改善性能。 有关临时表的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
-  
+不能显式创建 table 变量的索引，也不保留 table 变量的任何统计信息。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，引入了新语法，允许你使用表定义创建特定索引类型内联。  使用这种新语法，你可以在 table 变量上创建索引，作为表定义的一部分。 在某些情况下，可以通过使用临时表来改进性能，这些表提供完整的索引支持和统计信息。 有关临时表的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
+
+
 table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用户定义函数。
   
 不支持在 table 变量之间进行赋值操作。

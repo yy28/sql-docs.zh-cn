@@ -22,12 +22,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: d62566a8e5db1eaee81944d364f169ccfa6ef477
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235791"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262141"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34235791"
 - 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  下表显示了可以联机执行的索引操作、从这些联机操作中排除的索引以及可恢复的索引限制。 其中还包括其他限制。  
   
@@ -91,27 +91,29 @@ ms.locfileid: "34235791"
 ## <a name="transaction-log-considerations"></a>事务日志注意事项  
  脱机或联机执行大范围的索引操作，会生成大型数据负载，这些负载会造成事务日志快速填充。 为确保索引操作可以回滚，事务日志直到索引操作完成后才可以截断，但是，可以在索引操作过程中备份日志。 因此，事务日志必须具有足够的空间来存储索引操作事务和所有的并发用户事务，以满足索引操作过程的需要。 有关详细信息，请参阅 [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)。  
 
-## <a name="resumable-index-rebuild-considerations"></a>可恢复索引重新生成注意事项
+## <a name="resumable-index-considerations"></a>可恢复索引注意事项
 
 > [!NOTE]
-> 可恢复的索引选项适用于 SQL Server（从 SQL Server 2017 起）和 SQL Server。 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
+> 可恢复索引选项适用于 SQL Server（从 SQL Server 2017 开始）（仅限索引重新生成）和 SQL 数据库（创建非聚集索引和索引重新生成）。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)（目前仅提供 SQL 数据库的公共预览版）和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 
 
-执行可恢复的联机索引重新生成操作时，请参考下列准则：
--   管理、规划和延长索引维护时段。 为适应维护时段，可多次暂停并重启索引重新生成操作。
-- 从索引重新生成故障（如数据库故障转移或磁盘空间不足）恢复。
+执行可恢复的联机索引创建或重新生成操作时，请参考下列准则：
+-   管理、规划和延长索引维护时段。 为适应维护时段，可多次暂停并重启索引创建或重新生成操作。
+- 从索引创建或重新生成故障（如数据库故障转移或磁盘空间不足）恢复。
 - 索引操作暂停时，原始索引和新创建的索引都需要磁盘空间，并且都需要在 DML 操作期间更新。
 
-- 启用在索引重新生成操作期间截断事务日志（无法对常规联机索引操作执行此操作）。
+- 在索引创建或重新生成操作期间启用事务日志的截断。
 - 不支持 SORT_IN_TEMPDB=ON 选项
 
 > [!IMPORTANT]
-> 可恢复重新生成操作不要求长时间运行的事务一直处于打开状态，允许在此操作期间执行日志截断，并提升日志空间管理效果。 采用新设计后，我们可以将数据库中的所有必要数据和重启可恢复操作所需的所有引用存放在一起。
+> 可恢复索引创建或重新生成操作不要求长时间运行的事务一直处于打开状态，允许在此操作期间执行日志截断，并提升日志空间管理效果。 采用新设计后，我们可以将数据库中的所有必要数据和重启可恢复操作所需的所有引用存放在一起。
 
-通常情况下，可恢复和非可恢复的联机索引重新生成之间没有性能差异。 如果在索引重新生成操作暂停时更新可恢复索引：
+通常情况下，可恢复和非可恢复的联机索引重新生成之间没有性能差异。 对于创建可恢复索引，在可恢复和非可恢复索引创建之间存在导致较小的性能差异的常量开销。 这种差异只在较小的表上表现得最为明显。
+
+如果在索引操作暂停时更新可恢复索引：
 - 对以读取为主的工作负载无明显性能影响。 
 - 更新量大的工作负载可能出现一定程度的吞吐量下降（测试结果为下降幅度低于 10%）。
 
-通常情况下，可恢复和非可恢复的联机索引重新生成之间没有碎片整理质量差异。
+通常情况下，可恢复和非可恢复的联机索引创建或重新生成之间没有碎片整理质量差异。
 
 ## <a name="online-default-options"></a>联机默认选项 
 

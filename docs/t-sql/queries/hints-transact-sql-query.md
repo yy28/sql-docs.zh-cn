@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470288"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854339"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470288"
  SIMPLE 用于指示查询优化器尝试进行简单参数化。 FORCED 用于指示查询优化器尝试进行强制参数化。 有关详细信息，请参阅[查询处理体系结构指南中的强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查询处理体系结构指南中的简单参数化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
   
  RECOMPILE  
- 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]在执行为查询生成的计划后将其丢弃，从而在下次执行同一查询时强制查询优化器重新编译查询计划。 如果未指定 RECOMPILE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将缓存查询计划并重新使用它们。 在编译查询计划时，RECOMPILE 查询提示将使用查询中任意本地变量的当前值，如果查询位于存储过程中，这些当前值将传递给任意参数。  
+ 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为查询生成新的临时计划，并在查询完成执行后立即放弃该计划。 在未指定 RECOMPILE 的情况下执行同一查询时，生成的查询计划不会替换存储在缓存中的计划。 如果未指定 RECOMPILE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将缓存查询计划并重新使用它们。 在编译查询计划时，RECOMPILE 查询提示将使用查询中任意本地变量的当前值，如果查询位于存储过程中，这些当前值将传递给任意参数。  
   
  在只须重新编译存储过程中的一部分查询，而不是重新编译整个存储过程时，RECOMPILE 是创建使用 WITH RECOMPILE 子句的存储过程的很有用的替代方法。 有关详细信息，请参阅[重新编译存储过程](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。 在创建计划指南时，RECOMPILE 也很有用。  
   

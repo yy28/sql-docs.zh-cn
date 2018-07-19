@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698328"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107235"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "35698328"
 
 ### <a name="general-guidelines"></a>通用指导原则
 - 确保 Azure Key Vault 和 Azure SQL 数据库将在同一个租户中。  不支持跨租户的密钥保管库和服务器交互。
-- 选择所需资源将要使用的订阅 – 如果以后跨订阅移动服务器，则需要使用 BYOK 设置新的 TDE。
+- 选择所需资源将要使用的订阅 – 如果以后跨订阅移动服务器，则需要使用 BYOK 设置新的 TDE。 详细了解[移动资源](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)
 - 使用 BYOK 配置 TDE 时，必须考虑重复的包装/解包操作在密钥保管库中放置的负载。 例如，由于与逻辑服务器关联的所有数据库都使用相同的 TDE 保护程序，因此该服务器的故障转移触发针对保管库的密钥操作次数等于该服务器中的数据库数目。 根据我们的经验以及记录的[密钥保管库服务限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建议在单个订阅中将最多 500 个标准数据库/常规用途数据库或 200 个高级数据库/业务关键数据库与一个 Azure Key Vault 关联，以确保在访问保管库中的 TDE 保护程序时实现一致的高可用性。 
 - 建议：在本地保留 TDE 保护程序的副本。  这需要使用 HSM 设备在本地创建 TDE 保护程序和密钥托管系统，以存储 TDE 保护程序的本地副本。
 
@@ -68,6 +68,7 @@ ms.locfileid: "35698328"
 - 在启用[软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的情况下创建密钥保管库，以防密钥（或密钥保管库）意外删除时丢失数据。  必须使用 [PowerShell 启用密钥保管库中的“软删除”属性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)（该选项在从 AKV 门户中尚不可用，但 SQL 需要该选项）：  
   - 被软删除的资源将保留一段时间（90 天），除非它们被恢复或清除。
   - “恢复”和“清除”操作具有与密钥保管库访问策略相关的各自权限。 
+- 对密钥保管库设置资源锁，以控制谁能够删除此关键资源，并帮助防止意外或未经授权的删除。  [详细了解资源锁](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - 授予逻辑服务器权限，让其可以使用自己的 Azure Active Directory (Azure AD) 标识访问密钥保管库。  使用门户 UI 时会自动创建 Azure AD 标识，并向服务器授予密钥保管库的访问权限。  通过 PowerShell 使用 BYOK 配置 TDE，必须创建 Azure AD 标识，且应验证完成情况。 请参阅[使用 BYOK 配置 TDE](transparent-data-encryption-byok-azure-sql-configure.md)，获取使用 PowerShell 时的详细分步说明。
 

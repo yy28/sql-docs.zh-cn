@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f08b48b48570685a8b57bfbf76fd4a473604fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286263"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT for Visual Studio 2017 (15.7.1)
+生成号：14.0.16167.0  
+发布日期：2018 年 7 月 2 日  
+  
+### <a name="whats-new"></a>新增功能
+
+**SSIS：**
+
+- 添加对新的 Azure 政府 AAD 颁发机构 (login.microsoftonline.us) 的支持，以便与 AS 任务一起使用。
+- 修复了当目标服务器版本为 SQL Server 2016 时，AS 处理任务 UI 将显示“找不到方法”的问题。
+- 修复了目标服务器版本为 SQL Server 2012 时，无法执行某些管道组件的问题。
+
+**安装程序：**
+
+- 筛选 VS 实例列表以排除无法安装 SSDT 的实例。
+
+### <a name="known-issues"></a>已知问题：
+
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 在 Windows 10 上安装 SSDT 并选择“为 Visual Studio 2017 实例安装新的 SQL Server Data Tools”时，安装将因“不支持所请求的元文件操作”而失败。 请重启计算机并再次启动 SSDT 安装程序以继续安装。
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT for Visual Studio 2017 (15.7.0)
 内部版本号：14.0.16165.0  

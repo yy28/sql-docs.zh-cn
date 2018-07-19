@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075234"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782668"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ BULK INSERT
       { 'char' | 'native'| 'widechar' | 'widenative' } ]   
    [ [ , ] DATASOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]   
    [ [ , ] FIRSTROW = first_row ]   
    [ [ , ] FIRE_TRIGGERS ]   
    [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
@@ -132,7 +131,7 @@ BULK INSERT
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议在[格式化文件](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中为每个列指定一个排序规则名称。  
   
-|CODEPAGE 值|Description|  
+|CODEPAGE 值|描述|  
 |--------------------|-----------------|  
 |ACP|数据类型为 **char**、**varchar** 或 **text** 的列从 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
 |OEM（默认值）|数据类型为 **char**、**varchar** 或 **text** 的列从系统 OEM 代码页转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
@@ -425,6 +424,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 从 Azure Blob 存储中的文件导入数据并指定错误文件   
+以下示例显示如何从 Azure Blob 存储位置（已配置为外部数据源且指定错误文件）中的 CSV 文件加载数据。 这要求提供使用共享访问签名的数据库作用域凭据。 请注意，如果在 Azure SQL 数据库上运行，则 ERRORFILE 选项应带有 ERRORFILE_DATA_SOURCE，否则导入可能会失败，出现权限错误。 ERRORFILE 中指定的文件不应存在于容器中。
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 有关完整的 `BULK INSERT` 示例（包括配置凭据和外部数据源），请参阅[有关批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。

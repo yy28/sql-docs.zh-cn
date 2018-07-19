@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -60,16 +59,16 @@ helpviewer_keywords:
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744126"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909577"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -512,7 +511,7 @@ WITH CHECK | WITH NOCHECK
   
  无法删除以下列：  
   
--   用于索引的列。  
+-   在索引中作为键列或 INCLUDE 使用
   
 -   用于 CHECK、FOREIGN KEY、UNIQUE 或 PRIMARY KEY 约束的列。  
   
@@ -645,7 +644,7 @@ WITH CHECK | WITH NOCHECK
   
  如果指定 partition_scheme_name，则会应用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 的规则。 表应该已经对行数据进行了分区，并且其分区方案必须使用与 FILESTREAM 分区方案相同的分区函数和分区列。  
   
- filestream_filegroup_name 指定 FILESTREAM 文件组的名称。 该文件组必须包含一个使用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句为该文件组定义的文件；否则，将引发错误。  
+ filestream_filegroup_name 指定 FILESTREAM 文件组的名称。 该文件组必须包含一个使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句为该文件组定义的文件；否则，将引发错误。  
   
  "default" 指定具有 DEFAULT 属性集的 FILESTREAM 文件组。 如果没有 FILESTREAM 文件组，将引发错误。  
   

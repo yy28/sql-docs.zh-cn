@@ -9,15 +9,13 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: sql-server
 ms.date: 04/28/2018
-ms.openlocfilehash: 9ccf32a232b501bb3184786af0c48dc7214b1936
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f1e3d0fd2b63ac3eb9ab0d66b14df15dad0c15ee
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686647"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926818"
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新文章和最近更新的文章：SQL Server 文档
 
@@ -183,7 +181,7 @@ SQL Server 2016 SP2 包括 2016 SP1 之后、CU8 之前（含 CU8）发布的所
 
 
 <!-- : : : m-r -->
-**试用 SQL Server！**
+试用 SQL Server！
 - 从评估中心下载：[下载 SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - 从评估中心下载：下载 SQL Server Management Studio (SSMS)
 - 从评估中心下载：下载 SQL Server Data Tools (SSDT)

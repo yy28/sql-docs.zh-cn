@@ -15,12 +15,12 @@ caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdab0e9260b50b1ab9504dd7bd1455f4b8959ed8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: b549fe11ced943a253ffb3d5cafd376eb87e3b01
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34318348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293327"
 ---
 # <a name="mssqlserver41342"></a>MSSQLSERVER_41342
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "34318348"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|HK_HW_NOT_SUPPORTED|  
-|消息正文|系统上的处理器型号不支持创建 *construct*。 较早的处理器通常会出现此错误。 有关支持的型号的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。|  
+|消息正文|系统上的处理器型号不支持创建 *construct*。 较早的处理器通常会出现此错误。|  
   
 ## <a name="explanation"></a>解释  
 内存优化的表要求处理器型号支持对 128 位值执行原子比较和交换操作，这要求装配说明 CMPXCHG16B。 一些较旧的 AMD 处理器型号不支持 CMPXCHG16B 指令。 此外，默认情况下，某些虚拟化环境不启用此指令。  
   
 ## <a name="user-action"></a>用户操作  
-升级您的处理器。 如果您的处理器支持该指令并且您正在虚拟机中运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则更改配置以便支持指令 CMPXCHG16B。  
+升级您的处理器。 如果处理器支持该指令并且正在虚拟机中运行 SQL Server，则更改配置以便支持指令 CMPXCHG16B。  
   
 ## <a name="see-also"></a>另请参阅  
 [内存中 OLTP（内存中优化）](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

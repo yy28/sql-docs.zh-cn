@@ -1,10 +1,9 @@
 ---
 title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
-author: edmacauley
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg'
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689135"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791508"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 将某些数据库行为设置为与指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本兼容。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
   
 ## <a name="syntax"></a>语法  
   
@@ -56,12 +54,13 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  要修改的数据库的名称。  
   
  COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
- 要使数据库与之兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以配置以下的兼容级别值：  
+ 要使数据库与之兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以配置以下兼容级别值（并非所有版本都支持所有以上列出的兼容级别）：  
   
 |Product|数据库引擎版本|兼容级别指定|支持的兼容级别值|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140、130、120、110、100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140、130、120、110、100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 逻辑服务器|12|130|140、130、120、110、100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例|12|130|140、130、120、110、100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130、120、110、100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120、110、100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110、100、90|  
@@ -136,8 +135,14 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>利用兼容性级别获得向后兼容  
 数据库兼容性级别设置只影响指定数据库的行为，而不影响整个服务器的行为。 数据库兼容性级别只实现与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本保持部分后向兼容。   
+
+> [!TIP]
+> 因为数据库兼容级别是数据库级设置，所以在较新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上运行但使用较旧的数据库兼容级别的应用程序仍可利用服务器级增强功能，无需对应用程序进行任何更改。
+>
+> 其中包括丰富的监控和故障排除改进，并提供新的[系统动态管理视图](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)和[扩展事件](../../relational-databases/extended-events/extended-events.md)。 此外，还提升了可伸缩性，例如，提供[自动 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
+
 从兼容性模式 130 开始，任何影响功能的新查询计划都有意仅添加到新兼容性级别中。 这样做是为了在由于查询计划更改导致性能降低而引发的升级过程中尽量减少风险。   
-从应用程序的角度来看，目标仍应在某个时间点升级到最新兼容性级别以便继承某些新功能，以及在查询优化器空间中完成的性能改进，不过是采用可控方式实现此目标。 通过将较低兼容性级别用作更安全的迁移辅助工具，可解决相关兼容性级别设置控制的行为之间存在的版本差异问题。 有关更多详细信息，包括升级数据库兼容性级别的建议工作流，请参阅后文的[升级数据库兼容性级别的最佳做法](#best-practices-for-upgrading-database-compatibility-evel)。  
+从应用程序的角度来看，目标仍应在某个时间点升级到最新兼容性级别以便继承某些新功能，以及在查询优化器空间中完成的性能改进，不过是采用可控方式实现此目标。 通过将较低兼容性级别用作更安全的迁移辅助工具，可解决相关兼容性级别设置控制的行为之间存在的版本差异问题。 有关更多详细信息，包括升级数据库兼容性级别的建议工作流，请参阅后文的[升级数据库兼容性级别的最佳做法](#best-practices-for-upgrading-database-compatibility-level)。  
   
 > [!IMPORTANT]
 > 给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的废止功能不受兼容级别保护。 这指的是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中删除的功能。
@@ -350,7 +355,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
-SET compatibility_level = 90;  
+SET compatibility_level = 110;  
 GO  
 USE AdventureWorks2012;  
 GO  
@@ -376,7 +381,7 @@ SELECT @v;
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [保留关键字 (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  

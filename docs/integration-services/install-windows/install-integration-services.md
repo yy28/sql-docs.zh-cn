@@ -1,7 +1,8 @@
 ---
-title: 安装 Integration Services | Microsoft Docs
+title: 安装 SQL Server Integration Services (SSIS) | Microsoft Docs
+description: 了解如何安装 Microsoft SQL Server Integration Services (SSIS) 以及如何获取 SSIS 的其他下载
 ms.custom: ''
-ms.date: 02/05/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -22,26 +23,26 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2837d9825a16417c5f6ebb62abde20950812f8c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2cd5080f3be6d9a0222adb8a7805047ee9662692
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406199"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789678"
 ---
 # <a name="install-integration-services"></a>安装集成服务
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了单个安装程序来安装其包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在内的任一组件或所有组件。 通过安装程序，可在单台计算机上将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件一起安装，也可以单独安装。    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了单个安装程序来安装其包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在内的任一组件或所有组件。 使用安装程序，可以在单台计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或将其与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件一起安装。    
     
  本文重点介绍了在安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之前应了解的重要注意事项。 本文中的信息有助于评估安装选项，以便用户做出适当选择，使安装成功完成。    
     
-## <a name="preparing-to-install-integration-services"></a>准备安装 Integration Services    
+## <a name="get-ready-to-install-integration-services"></a>准备安装 Integration Services    
  安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之前，请首先查看以下信息：    
     
 -   [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
     
 -   [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
-## <a name="installing-standalone-or-side-by-side"></a>独立安装或并行安装    
+## <a name="install-standalone-or-side-by-side"></a>独立安装或并行安装    
 可以按下列配置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ：    
     
 -   你可以在没有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 先前实例的计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。    
@@ -51,8 +52,12 @@ ms.locfileid: "35406199"
 在已安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 早期版本的计算机上升级到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的最新版本时，当前版本与该早期版本并行安装。    
     
 有关升级 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的详细信息，请参阅[升级 Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)。
-    
-## <a name="installing-integration-services"></a>安装集成服务    
+
+## <a name="get-sql-server-with-integration-services"></a>在 SQL Server 上安装 Integration Services
+
+如果尚未安装 Microsoft SQL Server，请从 [SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-downloads)中下载免费评估版，或下载免费开发人员版。 SSIS 不包含在速成版 SQL Server 中。
+
+## <a name="install-integration-services"></a>安装集成服务    
  在查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装要求并确保计算机满足这些要求之后，就可以安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]了。    
      
 如果使用安装向导安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则会使用一系列页面来指定组件和选项。
@@ -66,7 +71,7 @@ ms.locfileid: "35406199"
 > [!NOTE]
 > 如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集。 这些组件可用于特定任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能会受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。
 
-### <a name="installing-a-dedicated-server-for-etl"></a>为 ETL 安装专用服务器
+### <a name="installing-a-dedicated-server-for-etl-processes"></a>为 ETL 进程安装专用服务器
 
 若要对提取、转换和加载 (ETL) 过程使用专用服务器，请在安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的本地实例。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 通常将包存储在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中，并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对这些包进行计划。 如果 ETL 服务器上没有 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则必须通过具有 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器计划或运行包。 这导致这些包不会在 ETL 服务器上运行，而是在其启动时所在的服务器上运行。 因此，专用 ETL 服务器的资源不会按预期方式使用。 而且，其他服务器的资源可能会受到 ETL 进程运行的影响
 
@@ -74,28 +79,48 @@ ms.locfileid: "35406199"
     
 默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将与运行包相关的事件记录到应用程序事件日志中。 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据收集器功能时，此设置可防止生成太多事件日志项。 未记录的事件包括 EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 0 更改为 1。    
     
-## <a name="a-complete-installation-of-integration-services"></a>完整安装 Integration Services
+## <a name="install-additional-components-for-integration-services"></a>安装 Integration Services 的其他组件
 
 要完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，请从以下列表中选择所需组件：
 
 -   **Integration Services (SSIS)**。 使用 SQL Server 安装向导安装 SSIS。 选择 SSIS 会安装以下各项：
+
     -   对 SQL Server 数据库引擎上 SSIS 目录的支持。
+
     -   （可选）SSIS Scale Out 功能，包括 Master 和 Worker。
+
     -   32 位和 64 位 SSIS 组件。
+
     -   安装 SSIS 时不会安装设计和开发 SSIS 包所需的工具。
+
 -   **SQL Server 数据库引擎**。 使用 SQL Server 安装向导安装数据库引擎。 通过选择“数据库引擎”，可创建并托管 SSIS 目录数据库 `SSISDB`，并存储、管理、运行和监视 SSIS 包。
+
 -   **SQL Server Data Tools (SSDT)**。 要下载并安装 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。 安装 SSDT 后，可设计和部署 SSIS 包。 SSDT 安装以下各项：
+
     -   SSIS 包设计和开发工具，包括 SSIS 设计器。
+
     -   仅 32 位 SSIS 组件。
+
     -   Visual Studio 的受限制版本（如果尚未安装 Visual Studio 版本）。
+
     -   SSIS 脚本任务和脚本组件所使用的脚本编辑器 Tools for Applications (VSTA)。
+
     -   SSIS 向导，包括部署向导和包升级向导。
+
     -   SQL Server 导入和导出向导。
+
 -   **用于 Azure 的 Integration Services 功能包**。 要下载并安装功能包，请参阅[用于 Azure 的 Microsoft SQL Server 2017 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=54798)。 通过安装功能包，可将包连接到 Azure 云中的存储和分析服务，包括以下服务：
+
     -   Azure Blob 存储。
+
     -   Azure HDInsight。
+
     -   Azure Data Lake Store。
+
     -   Azure SQL 数据仓库。
+
 -   **其他可选组件**。 根据需要，可以从 SQL Server 功能包下载其他第三方组件。
+
     -   用于 Microsoft SQL Server® 的 Microsoft® Connector for SAP BW。 要获取这些组件，请参阅 [Microsoft® SQL Server® 2017 功能包](https://www.microsoft.com/download/details.aspx?id=55992)。
+
     -   适用于 Oracle 的 Attunity Microsoft Connector 5.0 和适用于 Teradata 的 Attunity Microsoft Connector 5.0。 要获取这些组件，请参阅 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)（用于 Oracle 和 Teradata 的 Microsoft Connector v5.0）。
