@@ -1,5 +1,5 @@
 ---
-title: 概述 (SMO) |Microsoft 文档
+title: 概述 (SMO) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708005"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006010"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34708005"
   
 -   旨在提高并发性的快照隔离和行级版本控制。 有关详细信息，请参阅[使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
--   XML 架构集合、XML 索引和 XML 数据类型提供对 XML 数据的验证和存储。 有关详细信息，请参阅[XML 架构集合&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)和[使用 XML 架构](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。  
+-   XML 架构集合、XML 索引和 XML 数据类型提供对 XML 数据的验证和存储。 有关详细信息，请参阅[XML 架构集合&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)并[使用 XML 架构](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。  
   
 -   用于创建数据库只读副本的快照数据库。  
   
@@ -66,13 +66,13 @@ ms.locfileid: "34708005"
   
 -   用于注册连接信息的已注册服务器支持。 有关详细信息，请参阅[注册服务器](../../tools/sql-server-management-studio/register-servers.md)。  
   
--   跟踪和重播 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 有关详细信息，请参阅[SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)， [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)， [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)，和[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
+-   跟踪和重播 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 有关详细信息，请参阅[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)， [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)， [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)，以及[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
   
 -   针对用于安全控制的证书和密钥的支持。 有关详细信息，请参阅[加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
 -   用于在出现 DDL 事件时增强功能的 DDL 触发器。 有关详细信息，请参阅 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)。  
   
- SMO 命名空间为 <xref:Microsoft.SqlServer.Management.Smo>。 作为实现 SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集。 这意味着，公共语言运行时从[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]使用 SMO 对象之前，必须安装 2.0 版。 SMO 程序集随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 选件默认安装到全局程序集缓存 (GAC) 中。 程序集位于 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\。 有关详细信息，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文档。  
+ SMO 命名空间为 <xref:Microsoft.SqlServer.Management.Smo>。 作为实现 SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集。 这意味着，公共语言运行时从[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]使用 SMO 对象之前，必须在安装版本 2.0。 SMO 程序集随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 选件默认安装到全局程序集缓存 (GAC) 中。 程序集位于 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\。 有关详细信息，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文档。  
   
 ## <a name="smo-classes"></a>SMO 类  
  SMO 类包括两个类别：实例类和实用工具类。  
@@ -83,7 +83,7 @@ ms.locfileid: "34708005"
   
  SMO 实例对象所构成的层次结构代表了数据库服务器的层次结构。 顶部为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，其下为数据库，再下面是表、列、触发器等。 如果存在一个父级对多个子级的关系（如某个表具有一个或多个列）是符合逻辑的，那么子级将由对象集合来表示。 否则子级仅由对象来表示。  
   
- **实用程序类**  
+ **实用工具类**  
   
  实用工具类是为执行特定任务而显式创建的一组对象。 根据功能将它们划分为不同的对象层次结构：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34708005"
 ## <a name="smo-features"></a>SMO 功能  
  **优化的性能**  
   
- SMO 体系结构是在内存方面高效，因为在第一个，仅部分实例化对象并从服务器请求最小属性信息。 直到显式引用对象时才将对象完全实例化。 当请求在最初检索的属性集中不存在的某个属性或者调用的方法需要这样的属性时，才将对象完全实例化。 从部分实例化对象到完全实例化对象的转换对用户是透明的。 此外，从不检索某些占用大量内存空间的属性，除非显式引用该属性。 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 对象属性的 <xref:Microsoft.SqlServer.Management.Smo.Database> 属性就是这样的例子。 不过，部分实例化确实需要更多的网络往返时间，所以可能对您的应用程序而言不是最佳执行选项。  
+ SMO 体系结构是在内存方面高效，因为最初，仅部分实例化对象并从服务器请求尽量少的属性信息。 直到显式引用对象时才将对象完全实例化。 当请求在最初检索的属性集中不存在的某个属性或者调用的方法需要这样的属性时，才将对象完全实例化。 从部分实例化对象到完全实例化对象的转换对用户是透明的。 此外，从不检索某些占用大量内存空间的属性，除非显式引用该属性。 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 对象属性的 <xref:Microsoft.SqlServer.Management.Smo.Database> 属性就是这样的例子。 不过，部分实例化确实需要更多的网络往返时间，所以可能对您的应用程序而言不是最佳执行选项。  
   
  您可以对实例化进行控制以适应系统环境。 尽管依赖延迟实例化可能在引用属性时触发许多服务器请求，但它将应用程序所需的内存空间降至最低。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34708005"
   
  直接执行是通常的执行方法。 语句一旦引发，就会直接发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个实例。 捕获执行是直接执行的替代方式。  
   
- 捕获执行允许您捕获通常会执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 这使 SMO 编程人员得以延迟脚本、存储它以便以后执行，或者为最终用户提供预览。 例如，**创建数据库**、**创建表**，和一个**创建索引**语句可以是在一个批处理中发送，然后运行为三个顺序步骤。 用户可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象控制此功能。  
+ 捕获执行允许您捕获通常会执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 这使 SMO 编程人员得以延迟脚本、存储它以便以后执行，或者为最终用户提供预览。 例如，**创建数据库**即**创建表**，和一个**创建索引**语句可以在一个批处理中发送，然后作为三个先后步骤运行。 用户可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象控制此功能。  
   
  **WMI 提供程序**  
   
@@ -114,13 +114,13 @@ ms.locfileid: "34708005"
   
  **脚本**  
   
- 在 SMO 中，脚本已增强并移入**脚本编写器**类。 **脚本编写器**类可以发现依赖关系，了解对象和依赖项层次结构的允许操作之间的关系。 主脚本的对象是**脚本编写器**对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
+ 在 SMO 中，脚本已增强并移至**脚本专家**类。 **脚本专家**类可以发现依赖关系、 了解对象和依赖关系层次结构的允许操作之间的关系。 主脚本对象是**脚本专家**对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
   
- **脚本编写器**对象支持以下高级脚本选项：  
+ **脚本专家**对象支持以下高级脚本编写选项：  
   
 -   1 段式简单脚本编写（在一步中创建脚本）  
   
--   高级脚本编写 3 阶段 (在三个步骤; 中创建脚本依赖关系发现、 列表生成、 生成脚本)  
+-   高级脚本编写 3 阶段 (会在三个步骤; 创建脚本依赖关系发现、 生成列表、 生成脚本)  
   
 -   双向依赖关系发现（允许发现依赖关系或依赖项）  
   
@@ -138,9 +138,9 @@ ms.locfileid: "34708005"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 可以通过引用对象的 URN 属性来检索该对象的 URN。 脚本编写器对象还使用作为参数传递到的方法的对象引用的 Urn**脚本编写器**对象。 此外，可以为指定 URN **GetSmoObject**方法**服务器**对象。 用于创建 SMO 对象的实例。  
+ 可以通过引用对象的 URN 属性来检索该对象的 URN。 Scripter 对象也将作为参数传递给方法的对象引用的 Urn**脚本专家**对象。 此外，用于指定 URN **GetSmoObject**方法**Server**对象。 用于创建 SMO 对象的实例。  
   
-## <a name="sql-server-features-represented-in-smo"></a>在 SMO 中表示的 SQL Server 功能  
+## <a name="sql-server-features-represented-in-smo"></a>表示在 SMO 中的 SQL Server 功能  
  **表和索引分区**  
   
  索引表分区支持您管理跨多个文件组的表和索引中的数据的分布。 此新增功能由 SMO 对象表示。  
@@ -149,13 +149,13 @@ ms.locfileid: "34708005"
   
  SOAP 和数据库镜像请求通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象由端点处理。  
   
- **快照隔离/行级别版本控制**  
+ **快照隔离/行级版本控制**  
   
  快照隔离级别（行级版本控制）由新的 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象属性表示。  
   
  **XML 架构 Namespace、 XML 索引和 XML 数据类型**  
   
- XML 架构命名空间在 SMO 中通过对象集合来表示。 XML 索引表示在 SMO 中通过**索引**对象属性。  
+ XML 架构命名空间在 SMO 中通过对象集合来表示。 XML 索引表示在 SMO 中由**索引**对象属性。  
   
  **全文搜索增强功能**  
   

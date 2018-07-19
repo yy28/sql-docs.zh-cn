@@ -1,5 +1,5 @@
 ---
-title: 处理 SMO 异常 |Microsoft 文档
+title: 处理 SMO 异常 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85d0705776117d09584ea27d1d0b6ef68ede1b9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967272"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005729"
 ---
 # <a name="handling-smo-exceptions"></a>处理 SMO 异常
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "32967272"
 > [!NOTE]  
 >  **SQLException**中声明异常**System.Data.SqlClient**命名空间。  
   
- ![显示从其级别的关系图 excp](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "的关系图，显示从中级别 excp")  
+ ![显示从其级别的关系图关系](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "图显示了从其级别的关系")  
   
  此图显示了异常通过各应用程序层的流程。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "32967272"
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中捕获异常  
- 此代码示例演示如何使用**重试...Catch...最后**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  
+ 此代码示例演示如何使用**尝试...Catch...最后**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]语句捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET 文档。  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

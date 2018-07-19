@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 编程概念 |Microsoft 文档
+title: SQLXML 4.0 编程概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0071c9f56d118c3d80a92d556c29b813a25cdee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003385"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 编程概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,16 +58,16 @@ ms.locfileid: "32970502"
  [在 SQLXML 4.0 中使用 XPath 查询](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  介绍如何使用 XPath 语言的子集查询由带批注的 XSD 架构创建的 XML 视图，并提供了示例。  
   
- [使用 Updategram 在 SQLXML 4.0 中修改数据](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [使用 Updategram 修改 SQLXML 4.0 中的数据](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  提供有关 updategram 的信息，它通过处理由带批注的 XSD（或 XDR）架构提供的 XML 视图来修改数据库中的数据。  
   
- [执行大容量加载的 XML 数据 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [执行大容量加载 XML 数据的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  介绍如何在 SQLXML 4.0 中大容量加载 XML。  
   
  [SQLXML 4.0 数据访问组件](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  提供 SQLXMLOLEDB 访问接口的说明，并提供指向其他 SQLXML 4.0 数据访问组件的链接。  
   
- [SQLXML 4.0 的.NET Framework 支持](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [SQLXML 4.0 .NET Framework 支持](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  介绍 SQLXML 4.0 对 .NET Framework 的支持。  
   
  [缓存模板、 XSL 和架构&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
@@ -79,7 +79,7 @@ ms.locfileid: "32970502"
  [SQLXML 4.0 的准则和限制](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  列出使用 SQLXML 4.0 时要记住的问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

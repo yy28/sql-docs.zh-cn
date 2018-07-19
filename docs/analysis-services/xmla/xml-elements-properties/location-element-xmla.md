@@ -1,5 +1,5 @@
 ---
-title: Location 元素 (XMLA) |Microsoft 文档
+title: Location 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4953981e7657706a986e9a2407f6786ff676a854
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004489"
 ---
 # <a name="location-element-xmla"></a>Location 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含父级的信息的远程服务器[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)，[还原](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)，或[同步](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令。  
+  包含信息的远程服务器的父[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)，[还原](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)，或[同步](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34575599"
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -69,9 +69,9 @@ ms.locfileid: "34575599"
 ## <a name="remarks"></a>Remarks  
  有关**备份**命令，**位置**元素提供有关创建用于 Analysis Services 的远程实例的远程备份文件的信息。  
   
- 有关**还原**命令，**位置**元素提供有关标识和连接到远程信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例，以及用于还原远程的远程备份文件在该远程实例上的分区。  
+ 有关**还原**命令，**位置**元素提供有关标识和连接到远程的信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例，以及用于还原远程的远程备份文件该远程实例上的分区。  
   
- 有关**同步**命令，**位置**元素描述要使用的目标实例的数据源，或者必须与同步源实例上定义的远程实例目标实例，具体取决于值**DataSourceType**的父元素**同步**命令。  
+ 有关**Synchronize**命令，**位置**元素描述要使用的目标实例的数据源，或者必须与同步源实例上定义的远程实例目标实例，具体取决于值**DataSourceType**父元素**同步**命令。  
   
  有关备份和还原远程实例的详细信息，请参阅[备份和还原对象 (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   

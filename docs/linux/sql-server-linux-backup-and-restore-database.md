@@ -1,6 +1,6 @@
 ---
-title: 备份和还原在 Linux 上的 SQL Server 数据库 |Microsoft 文档
-description: 了解如何备份和还原在 Linux 上的 SQL Server 数据库。
+title: 备份和还原 Linux 上的 SQL Server 数据库 |Microsoft 文档
+description: 了解如何备份和还原 Linux 上的 SQL Server 数据库。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 6e4699fb2ffadc3aaad73c4032073ff8567c856c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006089"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-使用相同的工具，作为其他平台，可能需要在 Linux 上的 SQL Server 2017 的数据库的备份。 在 Linux 服务器上，你可以使用**sqlcmd**连接到 SQL Server 并进行备份。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 备份功能是相同的跨平台。 例如，你可以备份数据库，本地、 到远程驱动器或[Microsoft Azure Blob 存储服务](../relational-databases/backup-restore/sql-server-backup-to-url.md)。
+使用与其他平台相同的工具，可能需要 SQL Server 2017 Linux 上的数据库的备份。 在 Linux 服务器上，可以使用**sqlcmd**连接到 SQL Server 并进行备份。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 备份功能是相同的跨平台。 例如，本地、 远程驱动器或备份数据库[Microsoft Azure Blob 存储服务](../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
 ## <a name="backup-a-database"></a>备份数据库
 
@@ -54,7 +54,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 
 ### <a name="backup-the-transaction-log"></a>备份事务日志
 
-如果你的数据库在完整恢复模式，你还可以进行更精细的还原选项的事务日志备份。 在下面的示例中， **sqlcmd**连接到本地 SQL Server 实例，并将事务日志备份。
+如果你的数据库处于完整恢复模式，您还可以更精细的还原选项的事务日志备份。 在以下示例中， **sqlcmd**连接到本地 SQL Server 实例，并将事务日志备份。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
@@ -62,14 +62,14 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/dat
 
 ## <a name="restore-a-database"></a>还原数据库
 
-在下面的示例**sqlcmd**连接到 SQL Server 的本地实例，还原了 demodb 数据库。 请注意，`NORECOVERY`选项用于允许其他日志文件备份还原。 如果你不打算还原额外的日志文件，删除`NORECOVERY`选项。
+在下面的示例**sqlcmd**连接到 SQL Server 的本地实例，并将 demodb 数据库还原。 请注意，`NORECOVERY`选项用于允许其他的日志文件备份还原。 如果不打算还原其他日志文件，删除`NORECOVERY`选项。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ```
 
 > [!TIP]
-> 如果你意外使用 NORECOVERY，但没有其他日志文件备份，运行命令`RESTORE DATABASE demodb`不带任何其他参数。 这将完成还原，并保持你的数据库操作状态。
+> 如果你意外地使用 NORECOVERY，但不是具有额外的日志文件备份，运行命令`RESTORE DATABASE demodb`不带任何其他参数。 这完成还原并保持您的数据库操作状态。
 
 ### <a name="restore-the-transaction-log"></a>还原事务日志
 
@@ -81,18 +81,18 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 备份和还原
 
-从 Windows 计算机中，可以使用 SSMS 连接到 Linux 数据库并执行通过用户界面备份。
+可以从 Windows 计算机使用 SSMS 连接到 Linux 数据库并进行备份通过用户界面。
 
 >[!NOTE] 
-> 使用最新版本 SSMS 连接到 SQL Server。 若要下载并安装最新版本，请参阅[下载 SSMS](../ssms/download-sql-server-management-studio-ssms.md)。 有关如何使用 SSMS 的详细信息，请参阅[使用 SSMS 管理 SQL Server on Linux](sql-server-linux-manage-ssms.md)。
+> 使用最新版本 SSMS 连接到 SQL Server。 若要下载并安装最新版本，请参阅[下载 SSMS](../ssms/download-sql-server-management-studio-ssms.md)。 有关如何使用 SSMS 的详细信息，请参阅[使用 SSMS 管理 Linux 上的 SQL Server](sql-server-linux-manage-ssms.md)。
 
 下列步骤将引导通过 SSMS 完成备份。 
 
 1. 启动 SSMS 并连接到 Linux 上的 SQL Server 2017 中的服务器。
 
-1. 在对象资源管理器，右键单击你的数据库，单击**任务**，然后单击**备份...**.
+1. 在对象资源管理器，右键单击数据库，单击**任务**，然后单击**备份...**.
 
-1. 在**数据库备份**对话框中，验证参数和选项，然后单击**确定**。
+1. 在中**数据库备份**对话框中，验证参数和选项，然后单击**确定**。
  
 SQL Server 将完成数据库备份。
 
@@ -102,11 +102,11 @@ SQL Server 将完成数据库备份。
 
 1. 在 SSMS 中右键单击**数据库**单击**还原数据库...**. 
 
-1. 下**源**单击**设备：** ，然后单击省略号 （…）。
+1. 下**源**单击**设备：** ，然后单击省略号 （...）。
 
-1. 找到你的数据库备份文件并单击**确定**。 
+1. 找到您的数据库备份文件，然后单击**确定**。 
 
-1. 下**还原计划**，验证备份文件和设置。 单击 **“确定”**。 
+1. 下**还原计划**，验证备份文件和设置。 单击“确定” 。 
 
 1. SQL Server 将还原数据库。 
 

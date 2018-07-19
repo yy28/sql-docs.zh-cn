@@ -1,5 +1,5 @@
 ---
-title: sp_changeobjectowner (Transact SQL) |Microsoft 文档
+title: sp_changeobjectowner (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db97bba80119f8d460b221bcbfdb4932e1eee692
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238534"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005719"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,32 +50,32 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@objname =** ] *****对象*****  
- 当前数据库中现有表、视图、用户定义函数或存储过程的名称。 *对象*是**nvarchar(776)**，无默认值。 *对象*可以限定与窗体中的现有对象的所有者*existing_owner ***。*** 对象*如果的架构和其所有者具有相同的名称。  
+ [  **@objname =** ] **'***对象*****  
+ 当前数据库中现有表、视图、用户定义函数或存储过程的名称。 *对象*是**nvarchar(776)**，无默认值。 *对象*可使用的窗体中的现有对象所有者限定*existing_owner ***。*** 对象*如果架构及其所有者具有相同的名称。  
   
- [  **@newowner=**] *** * * 所有者*   
- 将成为对象的新所有者的安全帐户的名称。 *所有者*是**sysname**，无默认值。 *所有者*必须是有效的数据库用户、 服务器角色， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名或有权访问当前数据库的 Windows 组。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  
+ [  **@newowner=**] **' * * * 所有者*   
+ 将成为对象的新所有者的安全帐户的名称。 *所有者*是**sysname**，无默认值。 *所有者*必须是有效的数据库用户、 服务器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名或 Windows 组有权访问当前数据库。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- **sp_changeobjectowner**从对象中移除所有的现有权限。 你将需要重新应用任何你想要运行后保留的权限**sp_changeobjectowner**。 因此，我们建议你编写脚本之前运行的现有权限**sp_changeobjectowner**。 更改了对象的所有权之后，便可使用该脚本重新应用权限。 在运行该脚本之前必须在权限脚本中修改对象所有者。  
+## <a name="remarks"></a>Remarks  
+ **sp_changeobjectowner**从对象中移除所有现有权限。 必须重新应用任何你想要运行后保留的权限**sp_changeobjectowner**。 因此，我们建议你在运行之前的现有权限编写脚本**sp_changeobjectowner**。 更改了对象的所有权之后，便可使用该脚本重新应用权限。 在运行该脚本之前必须在权限脚本中修改对象所有者。  
   
  若要更改安全对象的所有者，请使用 ALTER AUTHORIZATION. 若要更改架构，请使用 ALTER SCHEMA。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**db_owner**在固定数据库角色或成员资格**db_ddladmin**固定的数据库角色和**db_securityadmin**固定数据库角色并且还控制对象的权限。  
+ 要求的成员身份**db_owner**固定数据库角色或成员身份，在这种**db_ddladmin**固定的数据库角色并**db_securityadmin**固定数据库角色此外，还可以控制对象的权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例更改的所有者`authors`表`Corporate\GeorgeW`。  
+ 下面的示例更改的所有者`authors`表到`Corporate\GeorgeW`。  
   
 ```  
 EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';  
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ALTER SCHEMA (Transact-SQL)](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   

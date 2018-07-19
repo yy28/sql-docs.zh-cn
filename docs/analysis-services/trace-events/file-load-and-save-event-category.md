@@ -1,5 +1,5 @@
 ---
-title: 文件加载和保存事件类别 |Microsoft 文档
+title: 文件加载和保存事件类别 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6a432d196d950c3d21c255a019dd773ef957d8c0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041173"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007209"
 ---
 # <a name="file-load-and-save-event-category"></a>“文件加载和保存事件”类别
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34041173"
   
  有关与每个文件加载和保存事件类关联的列的信息，请参阅 [File Load and Save Data Columns](../../analysis-services/trace-events/file-load-and-save-data-columns.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 跟踪事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_files (Transact SQL) |Microsoft 文档
+title: sys.dm_db_xtp_checkpoint_files (TRANSACT-SQL) |Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,62 +26,62 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467733"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005739"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   显示有关检查点文件的信息，包括文件大小、物理位置和事务 ID。  
   
-> **注意：** 当前检查点未关闭，s 的状态列`ys.dm_db_xtp_checkpoint_files`建设将新的文件。 检查点将自动关闭当没有足够的事务日志增长，因为最后一个检查点，或者如果发出`CHECKPOINT`命令 ([检查点&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
+> **注意：** 未关闭，s 的状态列的当前检查点`ys.dm_db_xtp_checkpoint_files`的新文件将为 UNDER CONSTRUCTION。 检查点会自动关闭时没有足够的事务日志增长，因为最后一个检查点，或者如果发出`CHECKPOINT`命令 ([检查点&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
   
- 内存优化文件组内部使用的仅追加文件来存储为内存中表的插入的和删除行。 有两种类型的文件。 数据文件包含插入的行，而差异文件包含对已删除的行的引用。 
+ 内存优化文件组在内部使用仅限追加的文件来存储内存中表的插入和删除行。 有两种类型的文件。 数据文件包含插入的行，而差异文件包含对已删除的行的引用。 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 与较新版本具有显著差异和更低时在主题中讨论[SQL Server 2014](#bkmk_2014)。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 大大不同于较新版本和更低时在主题中讨论[SQL Server 2014](#bkmk_2014)。  
   
- 有关详细信息，请参阅[创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
+ 有关详细信息，请参阅[创建和管理存储的内存优化对象](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本  
  下表描述的列`sys.dm_db_xtp_checkpoint_files`开头**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 与在 file_id 联接[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
-|container_guid|**uniqueidentifier**|容器根、 数据或增量文件是的一部分的 GUID。 与 file_guid sys.database_files 表中联接。|  
+|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 中与 file_id 联接[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
+|container_guid|**uniqueidentifier**|容器，该根、 数据或差异文件的 GUID。 与 file_guid sys.database_files 表中联接。|  
 |checkpoint_file_id|**uniqueidentifier**|检查点文件的 GUID。|  
-|relative_file_path|**nvarchar(256)**|相对于它映射到的容器文件的路径。|  
-|file_type|**int**|免费的-1<br /><br /> 对数据文件为 0。<br /><br /> 一个指示差异文件。<br /><br /> 根文件 2<br /><br /> 大型数据文件的 3|  
-|file_type_desc|**nvarchar(60)**|维护为可用的免费全部文件是可用于分配。 可用的文件可能会因大小根据预期需求系统。 最大大小为 1 GB。<br /><br /> 数据的数据文件包含已插入到内存优化表的行。<br /><br /> 增量的增量文件包含对已删除的数据文件中的行的引用。<br /><br /> 根-根文件包含内存优化表和本机编译的对象的系统元数据。<br /><br /> 大型数据的大型数据文件包含值插入中 （n)varchar(max) 和 varbinary （max） 列，以及属于的内存优化表上的列存储索引的列段。|  
-|internal_storage_slot|**int**|内部存储数组中的文件的索引。 为根或 1 以外的状态，则为 NULL。|  
-|checkpoint_pair_file_id|**uniqueidentifier**|相应的数据或增量文件。 根的为 NULL。|  
-|file_size_in_bytes|**bigint**|磁盘上文件的大小。|  
+|relative_file_path|**nvarchar(256)**|相对于容器映射到文件的路径。|  
+|file_type|**int**|对于免费为-1<br /><br /> 0 表示数据文件。<br /><br /> 1 表示差异文件。<br /><br /> 2 根文件<br /><br /> 3 个大型数据文件|  
+|file_type_desc|**nvarchar(60)**|保持为可用的免费全部文件是可用于分配。 由系统根据预期需求的大小不同可用的文件。 最大大小为 1 GB。<br /><br /> 数据-数据文件包含已插入到内存优化表的行。<br /><br /> 增量的增量文件包含对已删除的数据文件中的行的引用。<br /><br /> 根的根文件包含内存优化表和本机编译的对象的系统元数据。<br /><br /> 大型数据的大型数据文件包含值插入到中 （n)varchar(max) 和 varbinary （max） 列，以及内存优化表的列存储索引中的列段。|  
+|internal_storage_slot|**int**|内部存储数组中的文件的索引。 根或 1 以外的其他状态，则为 NULL。|  
+|checkpoint_pair_file_id|**uniqueidentifier**|相应的数据或差异文件。 对于根为 NULL。|  
+|file_size_in_bytes|**bigint**|在磁盘上文件的大小。|  
 |file_size_used_in_bytes|**bigint**|对于仍在填充的检查点文件对，此列将在下一个检查点的后面更新。|  
-|logical_row_count|**bigint**|对于数据，插入的行数。<br /><br /> 增量，行数后记帐 drop table 删除。<br /><br /> 对于根，则为 NULL。|  
-|state|**int**|0 – PRECREATED<br /><br /> 1-UNDER CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8-等待日志截断|  
-|state_desc|**nvarchar(60)**|PRECREATED – 一个检查点文件数是预分配，尽量减少或消除任何等待来分配新文件，因为正在执行事务。 这些预创建文件的大小，具体取决于工作负荷，估计要求可能有所不同，但是它们包含任何数据。 这是在具有 MEMORY_OPTIMIZED_DATA 文件组的数据库中存储开销。<br /><br /> 正在构造的这些检查点文件下构造，这意味着它们将被填充基于由数据库，生成的日志记录，尚不属于一个检查点。<br /><br /> 活动-这些文件组包含从以前已关闭的检查点的插入/删除行。 它们包含在应用的数据库重新启动的事务日志的活动部分之前读取到内存区域的表的内容。 我们期望这种大小的大约 2 倍，内存中大小的内存优化的表，假设合并操作与事务工作负荷保持同步这些检查点文件。<br /><br /> MERGE TARGET – 合并操作-这些检查点文件的目标存储从合并策略标识的源文件的合并的数据行。 合并已安装之后，MERGE TARGET 转换为 ACTIVE 状态。<br /><br /> 等待日志截断 – 后已安装的合并，并且合并目标 CFP 为持久检查点，合并源检查点文件转换到此状态的一部分。 所需的操作正确性对内存优化表的数据库处于此状态的文件。  例如，用于从持久检查点恢复以便及时返回。|  
-|lower_bound_tsn|**bigint**|下限为该文件; 中的事务如果状态不在 （1，3），则为 null。|  
-|upper_bound_tsn|**bigint**|该文件; 中的事务的上限如果状态不在 （1，3），则为 null。|  
+|logical_row_count|**bigint**|对于数据，插入的行数。<br /><br /> 为增量后 drop table, 删除行数。<br /><br /> 对于根，则为 NULL。|  
+|state|**int**|0 – PRECREATED<br /><br /> 1-正在构造<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8-等待日志截断|  
+|state_desc|**nvarchar(60)**|PRECREATED – 一个检查点文件数是预先分配，以便尽量减少或消除任何等待时间，从而在执行事务时分配新文件。 这些预创建的文件的大小，具体取决于工作负荷，估计需要有所不同，但它们不包含任何数据。 这是使用 MEMORY_OPTIMIZED_DATA 文件组的数据库中存储开销。<br /><br /> 正在构造的这些检查点文件正处于构造中，这意味着它们将被填充基于由数据库生成的日志记录，并且尚不是检查点的一部分。<br /><br /> ACTIVE-这些包含来自以前关闭的检查点插入/已删除行。 它们包含的区域应用在数据库重新启动的事务日志的活动部分之前读取到内存中表的内容。 我们预计这种大小的大约 2 倍的内存中大小的内存优化表，假定合并操作与事务工作负荷保持这些检查点文件。<br /><br /> MERGE TARGET – 合并操作-这些检查点文件的目标存储从合并策略标识的源文件的合并的数据行。 合并已安装之后，MERGE TARGET 转换为 ACTIVE 状态。<br /><br /> 等待日志截断 – 后合并已安装并且 MERGE TARGET CFP 属于持久检查点，合并源检查点文件转换为此状态。 对内存优化表的数据库正确操作，需要处于此状态的文件。  例如，用于从持久检查点恢复以便及时返回。|  
+|lower_bound_tsn|**bigint**|在文件中的事务的下限如果状态不在 （1，3），则为 null。|  
+|upper_bound_tsn|**bigint**|在文件中的事务的上限如果状态不在 （1，3），则为 null。|  
 |begin_checkpoint_id|**bigint**|开始检查点的 ID。|  
 |end_checkpoint_id|**bigint**|最终检查点的 ID。|  
 |last_updated_checkpoint_id|**bigint**|更新此文件的最后一个检查点的 ID。|  
 |encryption_status|**int**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; 具有键 1 加密<br /><br /> 2 = &GT; 具有键 2 加密。 仅对活动文件有效。|  
+|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; 密钥 1 加密<br /><br /> 2 = &GT; 加密使用密钥 2。 仅对活动文件有效。|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表描述的列`sys.dm_db_xtp_checkpoint_files`，为**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
+ 下表描述的列`sys.dm_db_xtp_checkpoint_files`，对于**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 与在 file_id 联接[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
+|container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 中与 file_id 联接[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|数据或差异文件所属的容器的 GUID。|  
 |checkpoint_file_id|**GUID**|数据或差异文件的 ID。|  
 |relative_file_path|**nvarchar(256)**|数据或差异文件的路径（相对于容器的位置）。|  
 |file_type|**tinyint**|0 表示数据文件。<br /><br /> 1 表示差异文件。<br /><br /> 如果状态列设置为 7，则为 NULL。|  
-|file_type_desc|**nvarchar(60)**|文件的类型： DATA_FILE、 DELTA_FILE 或如果状态列设置为 7 的 NULL。|  
+|file_type_desc|**nvarchar(60)**|文件类型： DATA_FILE、 DELTA_FILE 或 NULL 如果状态列设置为 7。|  
 |internal_storage_slot|**int**|内部存储数组中的文件的索引。 如果状态列不是 2 或 3，则为 NULL。|  
 |checkpoint_pair_file_id|**uniqueidentifier**|对应的数据或差异文件。|  
 |file_size_in_bytes|**bigint**|所用文件的大小。 如果状态列设置为 5、6 或 7，则为 NULL。|  
@@ -103,7 +103,7 @@ ms.locfileid: "34467733"
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="use-cases"></a>用例  
- 你可以估计，如下所示使用内存中 OLTP 的存储：  
+ 您可以评估，如下所示使用内存中 OLTP 的存储：  
   
 ```  
 -- total storage used by In-Memory OLTP  
@@ -112,7 +112,7 @@ FROM sys.dm_db_xtp_checkpoint_files
 ```  
   
   
-若要查看通过运行以下查询的状态和文件类型的存储使用率的细分：
+若要查看通过运行以下查询的状态和文件类型的存储使用量的细目分类：
   
 ```  
 SELECT state_desc  
@@ -126,7 +126,7 @@ ORDER BY state, file_type
   
 
   
-## <a name="see-also"></a>另请参阅  
- [内存优化表的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

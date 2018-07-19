@@ -1,5 +1,5 @@
 ---
-title: 备份和还原表 (Transact SQL) |Microsoft 文档
+title: 备份和还原表 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09a35a516808c5330199cd60f1e9dbde9192d004
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256432"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003030"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>备份和还原表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本节中的主题介绍可存储数据库备份和还原操作所用信息的系统表。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
  数据库的每个数据文件或日志文件在表中占一行。  
   

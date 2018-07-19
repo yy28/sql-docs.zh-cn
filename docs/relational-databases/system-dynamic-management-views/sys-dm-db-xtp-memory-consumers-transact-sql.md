@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_memory_consumers (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_db_xtp_memory_consumers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467673"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015172"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34467673"
 |memory_consumer_id|**bigint**|内存消耗者的 ID（内部）。|  
 |memory_consumer_type|**int**|内存消耗者的类型：<br /><br /> 0=聚合。 （聚合两个或多个消耗者的内存使用量。 不应显示。）<br /><br /> 2=VARHEAP（跟踪长度可变的堆的内存占用情况。）<br /><br /> 3=HASH（跟踪索引的内存占用情况。）<br /><br /> 5=DB 页池（跟踪用于运行时操作的数据库页池的内存占用情况。 例如，表变量和某些可序列化扫描。 每个数据库只有一个此类型的内存消耗者。）|  
 |memory_consumer_type_desc|**nvarchar(64)**|内存消耗者的类型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0 –（不应显示。）<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|对内存消耗者实例的说明：<br /><br /> VARHEAP: <br />数据库堆。 用于为数据库分配用户数据（行）。<br />数据库系统堆。 用于分配将包含在内存转储中但不包含用户数据的数据库数据。<br />范围索引堆。 由范围索引用于分配 BW 页的专用堆。<br /><br /> 哈希： object_id 由于没有描述指示表和 index_id 哈希索引本身。<br /><br /> PGPOOL： 对于数据库没有只有一个页面缓冲池数据库 64k 页面缓冲池。|  
+|memory_consumer_desc|**nvarchar(64)**|对内存消耗者实例的说明：<br /><br /> VARHEAP: <br />数据库堆。 用于为数据库分配用户数据（行）。<br />数据库系统堆。 用于分配将包含在内存转储中但不包含用户数据的数据库数据。<br />范围索引堆。 由范围索引用于分配 BW 页的专用堆。<br /><br /> 哈希： 没有说明，因为 object_id 指示表，index_id 哈希索引本身。<br /><br /> PGPOOL： 对于数据库没有只有一个页池数据库 64k 页池。|  
 |object_id|**bigint**|所分配的内存所属的对象 ID。 负值表示系统对象。|  
 |xtp_object_id|**bigint**|内存优化表对象 ID。|  
 |index_id|**int**|消耗者的索引 ID（如果有）。 NULL 表示基表。|  
@@ -57,7 +57,7 @@ ms.locfileid: "34467673"
 |memory_consumer_address|**varbinary**|消耗者的内部地址。 仅限内部使用。|  
 |xtp_object_id|**bigint**|对应于内存优化表的内存中 OLTP 对象 ID。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在输出中，数据库级分配器指用户表、索引和系统表。 object_id = NULL 的 VARHEAP 指分配给具有可变长度列的表的内存。  
   
 ## <a name="permissions"></a>权限  
@@ -68,7 +68,7 @@ ms.locfileid: "34467673"
  只会为拥有 VIEW DATABASE STATE 权限的用户返回系统表。  
   
 ## <a name="general-remarks"></a>一般备注  
- 当内存优化表具有列存储索引时，系统将使用一些内部表，使用一些内存，以跟踪的列存储索引数据。 有关这些内部表和显示其内存消耗的示例查询的详细信息，请参阅[sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
+ 当内存优化表具有列存储索引时，系统将使用会消耗一些内存，某些内部表来跟踪列存储索引的数据。 有关这些内部表和示例查询显示其内存占用率的详细信息，请参阅[sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
  
   
 ## <a name="examples"></a>示例  
@@ -115,7 +115,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- 总内存分配和使用此 DMV 从是与中的对象级别相同[sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)。  
+ 总内存分配和使用从此 DMV 是与中的对象级别相同[sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)。  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
@@ -127,7 +127,7 @@ total_allocated_MB   total_used_MB
 1358                 1191  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [内存优化表的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

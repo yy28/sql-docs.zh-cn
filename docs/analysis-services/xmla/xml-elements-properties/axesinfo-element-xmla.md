@@ -1,5 +1,5 @@
 ---
-title: AxesInfo 元素 (XMLA) |Microsoft 文档
+title: AxesInfo 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c766cc155b0e0b04af65c34653fbd5a5dcef4e64
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007157"
 ---
 # <a name="axesinfo-element-xmla"></a>AxesInfo 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含一套[AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md)元素，表示轴元数据包含由容器的父[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)元素。  
+  包含一系列[AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md)元素，表示轴的元数据包含在父[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34575819"
 </OlapInfo>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34575819"
 |子元素|[AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **AxesInfo**元素包含一个**AxisInfo**元素中返回多维数据集的每个轴**根**元素使用**MDDataSet**数据类型。  
+ **AxesInfo**元素包含一个**AxisInfo**元素中返回的多维数据集的每个轴**根**元素使用**MDDataSet**数据类型。  
   
 ## <a name="see-also"></a>另请参阅
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

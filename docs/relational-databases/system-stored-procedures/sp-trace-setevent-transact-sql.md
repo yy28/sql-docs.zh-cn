@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setevent (TRANSACT-SQL) |Microsoft 文档
+title: sp_trace_setevent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 352d406b2c8735cb09787e9cd1554a4df7dd1bc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263000"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005769"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  在跟踪中添加或删除事件或事件列。 **sp_trace_setevent**可能已停止的现有跟踪上执行 (*状态*是**0**)。 返回一个错误是如果该存储过程执行跟踪不存在或其上*状态*不**0**。  
+  在跟踪中添加或删除事件或事件列。 **sp_trace_setevent**可能仅在已停止的现有跟踪上执行 (*状态*是**0**)。 如果将返回错误，此存储的跟踪，不存在或其执行过程*状态*不是**0**。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="arguments"></a>参数  
  [ **@traceid=** ] *trace_id*  
- 要修改的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户使用这*trace_id*值来识别、 修改和控制跟踪。  
+ 要修改的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。  
   
  [ **@eventid=** ] *event_id*  
  要打开的事件的 ID。 *event_id*是**int**，无默认值。  
@@ -139,14 +139,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |101|保留||  
 |102|Audit Database Scope GDR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何用户每次对语句权限发出 GRANT、DENY、REVOKE 时发生（仅适用于数据库操作，例如授予对数据库的权限）。|  
 |103|Audit Object GDR Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何用户每次对对象权限发出 GRANT、DENY、REVOKE 时发生。|  
-|104|Audit AddLogin Event|发生时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]添加或移除; 登录名为**sp_addlogin**和**sp_droplogin**。|  
-|105|Audit Login GDR Event|添加或移除; Windows 登录权限时发生有关**sp_grantlogin**， **sp_revokelogin**，和**sp_denylogin**。|  
-|106|Audit Login Change Property Event|在修改已登录，密码除外的属性; 时发生有关**sp_defaultdb**和**sp_defaultlanguage**。|  
+|104|Audit AddLogin Event|发生时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名添加或移除，则为**sp_addlogin**并**sp_droplogin**。|  
+|105|Audit Login GDR Event|添加或移除，则 Windows 登录权限时发生有关**sp_grantlogin**， **sp_revokelogin**，并**sp_denylogin**。|  
+|106|Audit Login Change Property Event|修改某个登录名，除密码以外的属性; 时发生有关**sp_defaultdb**并**sp_defaultlanguage**。|  
 |107|Audit Login Change Password Event|在更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码时发生。<br /><br /> 不记录密码。|  
-|108|Audit Add Login to Server Role Event|添加或删除从固定的服务器角色; 登录名时发生有关**sp_addsrvrolemember**，和**sp_dropsrvrolemember**。|  
-|109|Audit Add DB User Event|时发生添加或删除作为数据库用户登录名 (Windows 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 到数据库; 对于**sp_grantdbaccess**， **sp_revokedbaccess**， **sp_adduser**，和**sp_dropuser**。|  
-|110|Audit Add Member to DB Role Event|添加或删除作为数据库用户 （固定或用户定义） 到一个数据库; 登录名时发生有关**sp_addrolemember**， **sp_droprolemember**，和**sp_changegroup**。|  
-|111|Audit Add Role Event|添加或删除作为数据库; 数据库用户登录名时发生有关**sp_addrole**和**sp_droprole**。|  
+|108|Audit Add Login to Server Role Event|添加或从固定的服务器角色; 中删除登录名时发生有关**sp_addsrvrolemember**，并**sp_dropsrvrolemember**。|  
+|109|Audit Add DB User Event|添加或删除作为数据库用户登录名时发生 (Windows 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 到数据库; 对于**sp_grantdbaccess**， **sp_revokedbaccess**， **sp_adduser**，并**sp_dropuser**。|  
+|110|Audit Add Member to DB Role Event|添加或删除作为数据库用户 （固定或用户定义） 到数据库，登录名时发生有关**sp_addrolemember**， **sp_droprolemember**，并**sp_changegroup**。|  
+|111|Audit Add Role Event|添加或删除作为到数据库，数据库用户登录名时发生有关**sp_addrole**并**sp_droprole**。|  
 |112|Audit App Role Change Password Event|在更改应用程序角色的密码时发生。|  
 |113|Audit Statement Permission Event|在使用语句权限（如 CREATE TABLE）时发生。|  
 |114|Audit Schema Object Access Event|在成功或未成功使用了对象权限（如 SELECT）时发生。|  
@@ -157,7 +157,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |119|OLEDB Call Event|为分布式查询和远程存储过程调用 OLE DB 访问接口时发生。|  
 |120|OLEDB QueryInterface Event|时发生 OLE DB **QueryInterface**为分布式的查询和远程存储的过程发出的调用。|  
 |121|OLEDB DataRead Event|对 OLE DB 访问接口调用数据请求时发生。|  
-|122|Showplan XML|在执行 SQL 语句时发生。 包括该事件可以标识 Showplan 运算符。 每个事件都存储在格式正确的 XML 文档中。 请注意，**二进制**此事件的列包含的编码显示计划。 使用 SQL Server Profiler 可打开跟踪并查看显示计划。|  
+|122|Showplan XML|在执行 SQL 语句时发生。 包括该事件可以标识 Showplan 运算符。 每个事件都存储在格式正确的 XML 文档中。 请注意，**二进制**此事件的列包含编码的显示计划。 使用 SQL Server Profiler 可打开跟踪并查看显示计划。|  
 |123|SQL:FullTextQuery|执行全文查询时发生。|  
 |124|Broker:Conversation|报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话的进度。|  
 |125|Deprecation Announcement|使用将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除的功能时发生。|  
@@ -172,7 +172,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |134|Audit Server Object Take Ownership Event|服务器范围中的对象的所有者发生更改时发生。|  
 |135|Audit Database Object Take Ownership Event|数据库范围中的对象的所有者发生更改时发生。|  
 |136|Broker:Conversation Group|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 创建新的会话组或删除现有会话组时发生。|  
-|137|Blocked Process Report|进程被阻塞的时间超过了指定的时间时发生。 不包括系统进程或正在等待未发现死锁的资源的进程。 使用**sp_configure**配置将生成报告的阈值和频率。|  
+|137|Blocked Process Report|进程被阻塞的时间超过了指定的时间时发生。 不包括系统进程或正在等待未发现死锁的资源的进程。 使用**sp_configure**配置生成报告时的阈值和频率。|  
 |138|Broker:Connection|报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 管理的传输连接的状态。|  
 |139|Broker:Forwarded Message Sent|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 转发消息时发生。|  
 |140|Broker:Forwarded Message Dropped|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 删除用于转发的消息时发生。|  
@@ -180,7 +180,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |142|Broker:Transmission|指示在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 传输层中发生了错误。 错误号和状态值指示了错误源。|  
 |143|Broker:Queue Disabled|指示检测到有害消息，这是由于在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列中有五个连续的事务回滚。 该事件包含数据库 ID 和包含有害消息的队列的队列 ID。|  
 |144-145|保留||  
-|146|Showplan XML Statistics Profile|在执行 SQL 语句时发生。 标识 Showplan 运算符，并显示完整的编译时数据。 请注意，**二进制**此事件的列包含的编码显示计划。 使用 SQL Server Profiler 可打开跟踪并查看显示计划。|  
+|146|Showplan XML Statistics Profile|在执行 SQL 语句时发生。 标识 Showplan 运算符，并显示完整的编译时数据。 请注意，**二进制**此事件的列包含编码的显示计划。 使用 SQL Server Profiler 可打开跟踪并查看显示计划。|  
 |148|Deadlock Graph|取消获取锁的尝试时发生，这是因为该尝试是死锁的一部分，并且被选为死锁牺牲品。 提供死锁的 XML 说明。|  
 |149|Broker:Remote Message Acknowledgement|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 发送或收到消息确认时发生。|  
 |150|Trace File Close|跟踪文件在回滚期间关闭时发生。|  
@@ -201,7 +201,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |165|Performance statistics|将经过编译的查询计划第一次缓存、重新编译或从计划缓存中删除时发生。|  
 |166|SQL:StmtRecompile|发生语句级别的重新编译时发生。|  
 |167|Database Mirroring State Change|镜像数据库的状态更改时发生。|  
-|168|Showplan XML For Query Compile|编译 SQL 语句时发生。 显示完整的编译时数据。 请注意，**二进制**此事件的列包含的编码显示计划。 使用 SQL Server Profiler 可打开跟踪并查看显示计划。|  
+|168|Showplan XML For Query Compile|编译 SQL 语句时发生。 显示完整的编译时数据。 请注意，**二进制**此事件的列包含编码的显示计划。 使用 SQL Server Profiler 可打开跟踪并查看显示计划。|  
 |169|Showplan All For Query Compile|编译 SQL 语句时发生。 显示完整的编译时数据。 用于标识 Showplan 运算符。|  
 |170|Audit Server Scope GDR Event|指示在服务器范围中发生了权限的授予、拒绝或撤消事件（如创建登录）。|  
 |171|Audit Server Object GDR Event|指示发生了对架构对象（如表或函数）的授予、拒绝或撤消事件。|  
@@ -235,7 +235,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |201|QN: template|查询模板代表订阅查询的类。 通常，除参数值以外，相同类中的查询是相同的。 当新的订阅请求针对已存在的类 (Match)、新类 (Create) 或 Drop 类（指示清除没有活动订阅的查询类的模板）时，发生此事件类。 **TextData**列包含有关事件的信息。|  
 |202|QN: dynamics|跟踪查询通知的内部活动。 **TextData**列包含有关事件的信息。|  
 |212|位图警告|指示何时在查询中禁用了位图筛选器。|  
-|213|Database Suspect Data Page|指示何时将页添加到**suspect_pages**表中**msdb**。|  
+|213|Database Suspect Data Page|指示何时将某页添加到**suspect_pages**表中**msdb**。|  
 |214|CPU threshold exceeded|指示资源调控器检测到查询超过 CPU 阈值 (REQUEST_MAX_CPU_TIME_SEC) 的时间。|  
 |215|指示 LOGON 触发器或资源调控器分类器函数开始执行的时间。|指示 LOGON 触发器或资源调控器分类器函数开始执行的时间。|  
 |216|PreConnect:Completed|指示 LOGON 触发器或资源调控器分类器函数完成执行的时间。|  
@@ -250,9 +250,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 |列号|列名|Description|  
 |-------------------|-----------------|-----------------|  
-|1|**TextData**|与跟踪内捕获的事件类相关的文本值。|  
+|@shouldalert|**TextData**|与跟踪内捕获的事件类相关的文本值。|  
 |2|**BinaryData**|与在跟踪中捕获的事件类相关的二进制值。|  
-|3|**DatabaseID**|通过使用指定的数据库 ID*数据库*语句或如果无需使用的默认数据库*数据库*针对给定连接发出语句。<br /><br /> 可以使用 DB_ID 函数确定数据库的值。|  
+|3|**DatabaseID**|通过使用指定的数据库的 ID*数据库*语句或如果无需使用的默认数据库*数据库*给定连接发出语句。<br /><br /> 可以使用 DB_ID 函数确定数据库的值。|  
 |4|**TransactionID**|系统分配的事务 ID。|  
 |5|**LineNumber**|包含存在错误的行的行号。 对于涉及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的事件（如 **SP:StmtStarting**）， **LineNumber** 包含存储过程或批查询中语句的行号。|  
 |6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户名。|  
@@ -264,27 +264,27 @@ sp_trace_setevent [ @traceid = ] trace_id
 |12|**SPID**|分配的服务器进程 ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到与客户端关联的进程。|  
 |13|**Duration**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
 |14|**StartTime**|事件开始的时间（如果可用）。|  
-|15|**EndTime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 它还不由填充**哈希警告**事件。|  
-|16|**Reads**|服务器代表事件所执行的逻辑磁盘读取次数。 通过将不填充此列**锁： 发布**事件。|  
+|15|**EndTime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 它还不填充**哈希警告**事件。|  
+|16|**Reads**|服务器代表事件所执行的逻辑磁盘读取次数。 不填充此列**锁定： 释放**事件。|  
 |17|**Writes**|服务器代表事件所执行的物理磁盘写入次数。|  
 |18|**CPU**|事件所用的 CPU 时间（毫秒）。|  
 |19|**权限**|显示权限的位图；由安全审核使用。|  
 |20|**Severity**|异常的严重级别。|  
 |21|**EventSubClass**|事件子类的类型。 所有事件类都不填充此数据列。|  
 |22|**Exchange Spill**|系统分配的对象 ID。|  
-|23|**成功**|尝试使用权限的成功情况；审核时使用。<br /><br /> **1** = success**0** = 失败|  
+|23|**成功**|尝试使用权限的成功情况；审核时使用。<br /><br /> **1** = 成功**0** = 失败|  
 |24|**IndexID**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|  
 |25|**IntegerData**|与在跟踪中捕获的事件类相关的整型值。|  
-|26|**ServerName**|实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， *servername*或*servername\instancename*，正在跟踪。|  
+|26|**ServerName**|实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，即*servername*或*servername\instancename*，被跟踪。|  
 |27|**EventClass**|被记录的事件类的类型。|  
 |28|**ObjectType**|对象（如表、函数或存储过程）的类型。|  
 |29|**NestLevel**|执行此存储过程所处的嵌套级。 请参阅[@@NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
 |30|**State**|发生错误时的服务器状态。|  
 |31|**错误**|错误号。|  
-|32|**模式**|获取的锁的锁模式。 通过将不填充此列**锁： 发布**事件。|  
+|32|**模式**|获取的锁的锁模式。 不填充此列**锁定： 释放**事件。|  
 |33|**Handle**|事件中引用的对象的句柄。|  
 |34|**ObjectName**|被访问的对象的名称。|  
-|35|**DatabaseName**|在使用指定的数据库的名称*数据库*语句。|  
+|35|**DatabaseName**|使用指定的数据库的名称*数据库*语句。|  
 |36|**FileName**|被修改的文件名的逻辑名称。|  
 |37|**OwnerName**|被引用对象的所有者名称。|  
 |38|**RoleName**|语句针对的数据库范围或服务器范围的角色的名称。|  
@@ -296,13 +296,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |44|**ColumnPermissions**|列级别权限状态；由安全审核使用。|  
 |45|**LinkedServerName**|链接服务器的名称。|  
 |46|**ProviderName**|OLE DB 访问接口的名称。|  
-|47|**方法名称**|OLE DB 方法的名称。|  
+|47|**MethodName**|OLE DB 方法的名称。|  
 |48|**RowCounts**|批处理中的行数。|  
 |49|**RequestID**|包含该语句的请求的 ID。|  
 |50|**XactSequence**|用于说明当前事务的标记。|  
 |51|**EventSequence**|此事件的序列号。|  
-|52|**BigintData1**|**bigint**值，该值是依赖于跟踪中捕获的事件类。|  
-|53|**BigintData2**|**bigint**值，该值是依赖于跟踪中捕获的事件类。|  
+|52|**BigintData1**|**bigint**值，该值是在跟踪中捕获的事件类相关。|  
+|53|**BigintData2**|**bigint**值，该值是在跟踪中捕获的事件类相关。|  
 |54|**GUID**|GUID 值，与跟踪中捕获的事件类相关。|  
 |55|**IntegerData2**|整数值，与跟踪中捕获的事件类相关。|  
 |56|**ObjectID2**|相关的对象或实体的 ID（如果可用）。|  
@@ -318,11 +318,11 @@ sp_trace_setevent [ @traceid = ] trace_id
  **[ @on=]** *上*  
  指定将事件设置为 ON (1) 还是 OFF (0)。 *上*是**位**，无默认值。  
   
- 如果*上*设置为**1**，和*column_id*是 NULL，则事件被设置为 ON，并且所有列被都清除。 如果*column_id*不为 null，则为该事件将列设置为 ON。  
+ 如果*上*设置为**1**，并*column_id*为 NULL，则将事件设置为 ON 并清除所有列。 如果*column_id*不为 null，则该事件将该列设置为 ON。  
   
- 如果*上*设置为**0**，和*column_id*为 NULL，则会将事件转变 OFF 并清除所有列。 如果*column_id*不为 null，则列打开 OFF。  
+ 如果*上*设置为**0**，并*column_id*为 NULL，则会将事件转变 OFF 并清除所有列。 如果*column_id*不为 null，则列已关闭。  
   
- 下表说明了之间的交互**@on**和**@columnid**。  
+ 此表说明了之间的交互**@on**并**@columnid**。  
   
 |@on|@columnid|结果|  
 |---------|---------------|------------|  
@@ -337,7 +337,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |返回代码|Description|  
 |-----------------|-----------------|  
 |0|没有错误。|  
-|1|未知错误。|  
+|@shouldalert|未知错误。|  
 |2|本跟踪当前正在运行。 此时更改跟踪将导致错误。|  
 |3|指定的事件无效。 该事件可能不存在或者它不适用于此存储过程。|  
 |4|指定的列无效。|  
@@ -346,8 +346,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
 |16|该函数对此跟踪无效。|  
   
-## <a name="remarks"></a>注释  
- **sp_trace_setevent**执行许多以前由早期版本中可用的扩展存储过程执行的操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用**sp_trace_setevent**而不是以下：  
+## <a name="remarks"></a>Remarks  
+ **sp_trace_setevent**执行以前由早期版本中可用的扩展存储过程执行的操作的许多[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用**sp_trace_setevent**而不是以下：  
   
 -   **xp_trace_addnewqueue**  
   
@@ -355,7 +355,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 用户必须执行**sp_trace_setevent**为每个事件添加每个列。 每个在执行期间，如果**@on**设置为**1**， **sp_trace_setevent**将指定的事件添加到跟踪的事件的列表。 如果**@on**设置为**0**， **sp_trace_setevent**从列表中移除指定的事件。  
+ 用户必须执行**sp_trace_setevent**为每个事件添加每个列。 每个在执行期间，如果**@on**设置为**1**， **sp_trace_setevent**将指定的事件添加到跟踪的事件的列表。 如果**@on**设置为**0**， **sp_trace_setevent**从列表中删除指定的事件。  
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
@@ -364,10 +364,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [sys.fn_trace_geteventinfo &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   

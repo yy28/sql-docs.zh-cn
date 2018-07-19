@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_force_plan (TRANSACT-SQL) |Microsoft 文档
+title: sp_query_store_force_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,18 +27,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f479710b8916fae3b315981663f97bac8488fb19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036115"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   启用强制特定查询的特定计划。  
   
- 当计划强制对于特定的查询，每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到查询，它将尝试强制优化器中的计划。 如果计划强制失败，引发 XEvent，并指示优化程序将以正常方式优化。  
+ 当强制执行计划，对于特定查询，每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到查询，它会尝试强制优化器中的计划。 如果计划强制失败，触发 XEvent 和指示优化器优化以正常方式。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,21 +51,21 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
   
 ## <a name="arguments"></a>参数  
  [  **@query_id =** ] *query_id*  
- 是查询 id。 *query_id*是**bigint**，无默认值。  
+ 是查询的 id。 *query_id*是**bigint**，无默认值。  
   
  [  **@plan_id =** ] *plan_id*  
- 是要强制进行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+ 是要强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>权限  
- 需要**执行**对数据库拥有权限和**插入**，**更新**，和**删除**查询存储目录权限视图。  
+ 需要**EXECUTE**上，对数据库的权限和**插入**，**更新**，以及**删除**查询存储目录的权限视图。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回查询存储中查询的相关信息。  
+ 下面的示例返回在查询存储中查询的信息。  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -76,15 +76,15 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 你确定的 query_id 和你想要强制的 plan_id 后，使用下面的示例强制查询使用计划。  
+ 在确定 query_id 以及你想要强制 plan_id 后，使用下面的示例强制查询使用的计划。  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_remove_query &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_remove_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   

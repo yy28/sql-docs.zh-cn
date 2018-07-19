@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_object_stats (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_db_xtp_object_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5b6faed35e58044263ea6563a43fd85ada94bbae
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464843"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015575"
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   报告自上次数据库重新启动以来对每个 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 对象进行的操作所影响的行数。 统计信息会在操作执行时更新（无论事务提交还是回滚）。  
   
- sys.dm_db_xtp_object_stats 可以帮助您标识更改最多的内存优化表。 您可以决定删除表中未使用或很少使用的索引，因为每个索引都会影响性能。 如果存在哈希索引，则您应定期重新计算桶计数。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)。  
+ sys.dm_db_xtp_object_stats 可以帮助您标识更改最多的内存优化表。 您可以决定删除表中未使用或很少使用的索引，因为每个索引都会影响性能。 如果存在哈希索引，则您应定期重新计算桶计数。 有关详细信息，请参阅[哈希索引确定正确的存储桶计数](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)。  
   
  sys.dm_db_xtp_object_stats 可以帮助您标识引发写/写冲突（这可能会影响应用程序性能）的内存优化表。 例如，如果您有事务重试逻辑，则相同语句可能需要执行多次。 您还可以使用此信息标识需要写/写错误处理的表（以及因此得到的业务逻辑）。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34464843"
 ## <a name="permissions"></a>权限  
  要求对当前数据库拥有 VIEW DATABASE STATE 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [内存优化表的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [内存优化表动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

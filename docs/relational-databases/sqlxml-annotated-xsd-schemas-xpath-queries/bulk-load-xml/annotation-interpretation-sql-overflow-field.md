@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-字段 (SQLXML 4.0) |Microsoft 文档
+title: sql:overflow 的字段 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005810"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>批注解释-sql:overflow-字段
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 使用架构中指定此列**sql:overflow-字段**批注。 可能有多个溢出列。  
+  在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 使用架构中指定该列**sql:overflow-字段**批注。 可能有多个溢出列。  
   
- 每当 XML 节点 （元素或属性） 存在**sql:overflow-字段**批注定义将输入到作用域、 溢出列已激活，并接收未用完的数据。 节点离开作用域时，溢出列将不再活动，XML 大容量加载将激活上一个溢出字段（如果有）。  
+ 只要 XML 节点 （元素或属性） 存在**sql:overflow-字段**批注定义进入作用域，溢出列被激活并接收未用完的数据。 节点离开作用域时，溢出列将不再活动，XML 大容量加载将激活上一个溢出字段（如果有）。  
   
- 它在溢出列中存储数据，如 XML 大容量加载还存储开始标记和结束标记的父元素为其**sql:overflow-字段**定义。  
+ 因为它在溢出列中存储数据，XML 大容量加载还存储开始和结束标记的父元素为其**sql:overflow-字段**定义。  
   
- 例如，以下架构描述**\<客户 >** 和 **\<CustOrder >** 元素。 上述每个元素都标识一个溢出列：  
+ 例如，以下架构描述**\<客户 >** 并 **\<CustOrder >** 元素。 上述每个元素都标识一个溢出列：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -82,7 +82,7 @@ ms.locfileid: "32970222"
   
  在架构中， **\<客户 >** 元素映射到 Cust 表和**\<顺序 >** 元素映射到 CustOrder 表。  
   
- 这两个**\<客户 >** 和**\<顺序 >** 元素用于识别一个溢出列。 因此，XML 大容量加载将保存所有未用完的子元素和属性的**\<客户 >** Cust 表的溢出列中的元素和所有未用完的子元素和属性的**\<顺序 >** CustOrder 表溢出列中的元素。  
+ 这两个**\<客户 >** 并**\<顺序 >** 元素标识一个溢出列。 因此，XML 大容量加载会将所有未用完的子元素和属性的**\<客户 >** Cust 表的溢出列中的元素和所有未用完的子元素和属性的**\<顺序 >** CustOrder 表的溢出列中的元素。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   

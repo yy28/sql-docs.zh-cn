@@ -1,5 +1,5 @@
 ---
-title: sp_sequence_get_range (Transact SQL) |Microsoft 文档
+title: sp_sequence_get_range (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6b34171cf9300454dfe35e6f0961eaacff182b4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259697"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015074"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -56,34 +56,34 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@sequence_name** =] **N***序列*  
+ [ **@sequence_name** =] **N**'*序列*  
  序列对象的名称。 架构是可选的。 *sequence_name*是**nvarchar(776)**。  
   
  [ **@range_size** =] *range_size*  
  要从序列中提取的值数目。 **@range_size** 是**bigint**。  
   
  [ **@range_first_value** = ] *range_first_value*  
- 一个输出参数，它返回序列对象的第一个（最小或最大）值以用于计算请求的范围。 **@range_first_value** 是**sql_variant**使用作为请求中使用的序列对象相同的基类型。  
+ 一个输出参数，它返回序列对象的第一个（最小或最大）值以用于计算请求的范围。 **@range_first_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
  [ **@range_last_value** = ] *range_last_value*  
- 一个可选的输出参数，它返回请求的范围中的最后一个值。 **@range_last_value** 是**sql_variant**使用作为请求中使用的序列对象相同的基类型。  
+ 一个可选的输出参数，它返回请求的范围中的最后一个值。 **@range_last_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
  [ **@range_cycle_count** =] range_cycle_count  
  一个可选的输出参数，它返回为了返回所请求的范围而需要循环访问序列对象的次数。 **@range_cycle_count** 是**int**。  
   
  [ **@sequence_increment** = ] *sequence_increment*  
- 一个可选的输出参数，它返回序列对象的增量以用于计算请求的范围。 **@sequence_increment** 是**sql_variant**使用作为请求中使用的序列对象相同的基类型。  
+ 一个可选的输出参数，它返回序列对象的增量以用于计算请求的范围。 **@sequence_increment** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
  [ **@sequence_min_value** = ] *sequence_min_value*  
- 一个可选的输出参数，它返回序列对象的最小值。 **@sequence_min_value** 是**sql_variant**使用作为请求中使用的序列对象相同的基类型。  
+ 一个可选的输出参数，它返回序列对象的最小值。 **@sequence_min_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
  [ **@sequence_max_value** = ] *sequence_max_value*  
- 一个可选的输出参数，它返回序列对象的最大值。 **@sequence_max_value** 是**sql_variant**使用作为请求中使用的序列对象相同的基类型。  
+ 一个可选的输出参数，它返回序列对象的最大值。 **@sequence_max_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  sys sp_sequence_get_rangeis。 架构，可以作为 sys.sp_sequence_get_range 引用。  
   
 ### <a name="cycling-sequences"></a>循环序列  
@@ -101,7 +101,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  要求对序列对象或序列对象架构具有 UPDATE 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用名为 Test.RangeSeq 某一序列对象。 使用以下语句创建 Test.RangeSeq 序列。  
+ 以下示例使用名为 Test.RangeSeq 的序列对象。 使用以下语句来创建 Test.RangeSeq 序列。  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -119,7 +119,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. 检索序列值的范围  
- 以下语句从 Test.RangeSeq 序列对象中获取四个序列号，并向用户返回数字的第一个。  
+ 下面的语句从 Test.RangeSeq 序列对象中获取四个序列号，并向用户返回第一个编号。  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -193,7 +193,7 @@ Console.WriteLine(firstValueInRange.Value);
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE (Transact-SQL)](../../t-sql/statements/drop-sequence-transact-sql.md)   

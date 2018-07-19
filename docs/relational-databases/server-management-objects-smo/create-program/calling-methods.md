@@ -1,5 +1,5 @@
 ---
-title: 调用方法 |Microsoft 文档
+title: 调用方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a3629f2f5d5905ce17df7a5aa15936edaa876ef4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707705"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005823"
 ---
 # <a name="calling-methods"></a>调用方法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  方法执行相关的对象，如发布的特定任务**检查点**在数据库或请求的实例的登录枚举的列表上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  方法执行特定任务相关的对象，例如颁发**检查点**上的数据库或请求的登录的实例的枚举的列表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  方法针对对象执行操作。 方法可以使用参数并通常具有返回值。 返回值可以是简单数据类型、复杂对象或包含很多成员的结构。  
   
@@ -73,7 +73,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>在 Visual Basic 中使用带参数的 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table>对象具有一种称为方法<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 **FillFactor**的数字参数。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>对象有一个名为<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 **FillFactor**的数字参数。  
   
 ```VBNET
 Dim srv As Server  
@@ -84,7 +84,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>在 Visual C# 中使用带参数的 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table>对象具有一种称为方法<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 `FillFactor`的数字参数。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table>对象有一个名为<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 `FillFactor`的数字参数。  
   
 ```csharp  
 {   
@@ -97,7 +97,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>在 Visual Basic 中使用返回 DataTable 对象的枚举方法  
- 本部分介绍如何调用的枚举方法以及如何处理在返回的数据<xref:System.Data.DataTable>对象。  
+ 本部分介绍如何调用枚举方法以及如何处理在返回的数据<xref:System.Data.DataTable>对象。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回 <xref:System.Data.DataTable> 对象，该对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
   
@@ -121,9 +121,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>在 Visual C# 中使用返回 DataTable 对象的枚举方法  
- 本部分介绍如何调用的枚举方法以及如何处理在返回的数据<xref:System.Data.DataTable>对象。  
+ 本部分介绍如何调用枚举方法以及如何处理在返回的数据<xref:System.Data.DataTable>对象。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A>方法将使系统返回<xref:System.Data.DataTable>对象。 <xref:System.Data.DataTable>对象需要进一步导航为访问有关的实例的所有可用的排序规则信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A>方法返回系统<xref:System.Data.DataTable>对象。 <xref:System.Data.DataTable>对象需要进一步导航以访问有关的实例的所有可用排序规则信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

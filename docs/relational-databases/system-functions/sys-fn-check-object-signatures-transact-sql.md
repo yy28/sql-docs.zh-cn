@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (Transact SQL) |Microsoft 文档
+title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234673"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015149"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>参数  
- {' @*类*}  
+ {@*类*}  
  标识提供的指纹类型：  
   
 -   “证书”  
@@ -63,17 +63,17 @@ fn_ check_object_signatures (
  用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 @*指纹*是**varbinary(20)**。  
   
 ## <a name="tables-returned"></a>返回的表  
- 下表列出的列， **fn_check_object_signatures**返回。  
+ 下表列出的列的**fn_check_object_signatures**返回。  
   
-|列|类型|Description|  
+|“列”|类型|Description|  
 |------------|----------|-----------------|  
 |type|**nvarchar(120)**|返回类型说明或程序集。|  
 |entity_id|**int**|返回要计算的对象的对象 ID。|  
 |is_signed|**int**|当对象不是由提供的指纹签名时返回 0。 当对象由提供的指纹签名时返回 1。|  
 |is_signature_valid|**int**|当 is_signed 值为 1 且签名无效时，返回 0。 签名有效则返回 1。<br /><br /> 当 is_signed 值为 0 时，始终返回 0。|  
   
-## <a name="remarks"></a>注释  
- 使用**fn_check_object_signatures**以确认，恶意用户未篡改对象。  
+## <a name="remarks"></a>Remarks  
+ 使用**fn_check_object_signatures**确认，恶意用户未篡改对象。  
   
 ## <a name="permissions"></a>权限  
  要求对证书或非对称密钥拥有 VIEW DEFINITION 权限。  
@@ -96,7 +96,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IS_OBJECTSIGNED &#40;Transact SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

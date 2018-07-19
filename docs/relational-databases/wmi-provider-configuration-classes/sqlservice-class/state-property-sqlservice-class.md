@@ -1,5 +1,5 @@
 ---
-title: 状态属性 （SqlService 类） |Microsoft 文档
+title: State 属性 （SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 350d59fa026f16007cffd279f4f6298eeca86e6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005377"
 ---
 # <a name="state-property-sqlservice-class"></a>State 属性（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.State [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -50,7 +50,7 @@ object.State [= value]
   
  可以是下列值之一。  
   
- 1  
+ @shouldalert  
  已停止。 服务已停止。  
   
  2  
@@ -71,9 +71,9 @@ object.State [= value]
  7  
  已暂停。 服务已暂停。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
