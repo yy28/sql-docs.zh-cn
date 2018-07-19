@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft 文档
+title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d95bdd7fa337598c289aaa7a958c33513eec12d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239337"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058035"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ EXEC managed_backup.sp_backup_on_demand
  要对其执行备份的数据库的名称。 @database_name是**SYSNAME**。  
   
  @type  
- 要执行的备份类型：数据库或日志。 @type参数是**NVARCHAR(32)**。  
+ 要执行的备份类型：数据库或日志。 @type参数是**nvarchar （32)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 要求的成员身份**db_backupoperator**与数据库角色， **ALTER ANY CREDENTIAL**权限，和**执行**权限**sp_delete_backuphistory**存储过程。  
+ 要求的成员身份**db_backupoperator**数据库角色的**ALTER ANY CREDENTIAL**权限，并且**EXECUTE**权限**sp_delete_backuphistory**存储过程。  
   
 ## <a name="examples"></a>示例  
  以下示例发出了对数据库“TestDB”的数据库备份请求。 此数据库启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  

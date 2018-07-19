@@ -1,5 +1,5 @@
 ---
-title: SMO 语法约定 |Microsoft 文档
+title: SMO 语法约定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623117b4906e00096788fc1f7746a7fe715c7379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966442"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062098"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 语法约定
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO) 录入约定基于这些中使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio.NET 参考资料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 版式约定基于在中使用的那些[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio.NET 参考资料。  
   
 |约定|用于|  
 |----------------|--------------|  

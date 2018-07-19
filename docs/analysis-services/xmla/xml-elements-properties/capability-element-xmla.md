@@ -1,5 +1,5 @@
 ---
-title: 功能元素 (XMLA) |Microsoft 文档
+title: Capability 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 ms.openlocfilehash: dca8f668f64ab8ced157cf817be1f9f8f6390133
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062975"
 ---
 # <a name="capability-element-xmla"></a>Capability 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  指示支持的协议功能的父代中[ProtocolCapabilities](../../../analysis-services/xmla/xml-elements-headers/protocolcapabilities-element-xmla.md)标头元素。  
+  指示父代中的协议功能的支持[ProtocolCapabilities](../../../analysis-services/xmla/xml-elements-headers/protocolcapabilities-element-xmla.md)标头元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34574979"
 </ProtocolCapabilities>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34574979"
 |子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **功能**元素指示包含的任一应用程序支持特定功能，如二进制或压缩， **ProtocolCapabilities**标头中的元素SOAP 标头的 SOAP 请求中，或包含的 Analysis Services 的实例**ProtocolCapabilities** SOAP 响应的 SOAP 标头中的标头元素。 值**功能**元素是支持的功能的名称。  
+ **功能**元素指示一个特定的功能，如二进制或压缩，受包含的任一应用程序**ProtocolCapabilities**中的标头元素SOAP 标头的 SOAP 请求，或包含 Analysis Services 的实例**ProtocolCapabilities** SOAP 响应的 SOAP 标头中的标头元素。 值**功能**元素是受支持的功能的名称。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持下表所列出的功能。  
   

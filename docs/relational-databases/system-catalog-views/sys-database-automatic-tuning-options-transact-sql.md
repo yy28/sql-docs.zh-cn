@@ -1,6 +1,6 @@
 ---
-title: sys.database_automatic_tuning_options (Transact SQL) |Microsoft 文档
-description: 了解如何查看在 SQL 数据库上的自动优化选项
+title: sys.database_automatic_tuning_options (TRANSACT-SQL) |Microsoft Docs
+description: 了解如何查看 SQL 数据库自动优化选项
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -28,33 +28,33 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 6a9fc30a86c3033264dc723de282caffd03289fd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181243"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065397"
 ---
-# <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_自动\_tuning_options (TRANSACT-SQL)
+# <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_自动\_tuning_options (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  返回此数据库的自动优化选项。  
+  返回用于此数据库的自动优化选项。  
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar(128)**|自动优化选项的名称。 请参阅[ALTER 数据库设置 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)的可用选项。|  
-|**desired_state**|**int**|指示自动优化的选项，由用户显式设置的所需的操作模式。<br />0 = OFF<br />1 = ON|  
-|**desired_state_desc**|**nvarchar(60)**|自动优化选项的所需的操作模式的文本说明。<br />OFF<br />ON|  
+|**名称**|**nvarchar(128)**|自动优化选项的名称。 请参阅[ALTER DATABASE 设置 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)可用的选项。|  
+|**desired_state**|**int**|指示自动优化选项，由用户显式设置的所需的操作模式。<br />0 = OFF<br />1 = ON|  
+|**desired_state_desc**|**nvarchar(60)**|自动调节选项所需的操作模式的文本说明。<br />OFF<br />ON|  
 |**actual_state**|**int**|指示自动优化选项的操作模式。<br />0 = OFF<br />1 = ON|  
 |**actual_state_desc**|**nvarchar(60)**|自动优化选项的实际操作模式的文本说明。<br />OFF<br />ON|  
 |**reason**|**int**|指示为什么实际和所需状态的不同。<br />2 = 已禁用<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar(60)**|为什么实际和所需状态的不同的原因的文本说明。<br />禁用 = 选项处于禁用状态系统<br />QUERY_STORE_OFF = Query Store 处于关闭状态<br />QUERY_STORE_READ_ONLY = Query Store 处于只读模式<br />NOT_SUPPORTED = 可用仅在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition| 
+|**reason_desc**|**nvarchar(60)**|为什么实际和所需状态的不同的原因的文本说明。<br />已禁用 = 选项已被系统禁用<br />QUERY_STORE_OFF = Query Store 处于关闭状态<br />QUERY_STORE_READ_ONLY = 查询存储处于只读模式<br />NOT_SUPPORTED = 可用仅在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业版| 
   
 ## <a name="permissions"></a>权限  
  需要 `VIEW DATABASE STATE` 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)   
- [ALTER 数据库集 AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_query_store_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.dm_db_tuning_recommendations &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  

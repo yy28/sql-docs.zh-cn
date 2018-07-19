@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (Transact SQL) |Microsoft 文档
+title: sys.dm_db_log_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e2b99ce1a417c31b4ca81eb9f538acda0edfc517
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464653"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061515"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-返回[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的事务日志的信息。 请注意所有事务日志文件都组合表输出中。 输出中的每一行表示事务日志中的 VLF，并提供与该 VLF 在日志中相关的信息。
+返回[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)事务日志的信息。 请注意在表输出中合并所有事务日志文件。 输出中的每一行表示 VLF 中的事务日志，并提供与该 VLF 日志中相关的信息。
 
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ sys.dm_db_log_info ( database_id )
  
  指定 NULL 可返回当前数据库的 VLF 信息。
 
- 内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 使用时`DB_ID`不指定数据库名称，当前数据库的兼容性级别必须是 90 或更高版本。  
+ 内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 当使用`DB_ID`而无需指定数据库名称，在当前数据库的兼容性级别必须为 90 或更高版本。  
 
 ## <a name="table-returned"></a>返回的表  
 
@@ -56,15 +56,15 @@ sys.dm_db_log_info ( database_id )
 |database_id|**int**|数据库 ID。|
 |file_id|**int**|事务日志的文件 id。|  
 |vlf_begin_offset|**bigint** |位置的偏移[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)从事务日志文件的开头。|
-|vlf_size_mb |**float** |[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)大小以 mb 为单位，舍入为 2 个小数位数。|     
-|vlf_sequence_number|**bigint** |[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序列号按创建顺序。 用于唯一标识 Vlf 日志文件中。|
-|vlf_active|**bit** |指示是否[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)或未正在使用。 <br />0-VLF 不在使用中。<br />1-VLF 处于活动状态。|
-|vlf_status|**int** |状态[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。 可能的值包括 <br />0-VLF 处于非活动状态 <br />1-VLF 已初始化但未使用 <br /> 2-VLF 处于活动状态。|
-|vlf_parity|**tinyint** |奇偶校验的[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。在内部用于确定在 VLF 的日志的结尾。|
-|vlf_first_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)中的第一个日志记录的[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
-|vlf_create_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)的日志记录创建[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
+|vlf_size_mb |**float** |[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)大小以 mb 为单位，舍入为 2 个小数位。|     
+|vlf_sequence_number|**bigint** |[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序列中创建的订单号。 用于唯一标识日志文件中的 Vlf。|
+|vlf_active|**bit** |指示是否[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)或未正在使用。 <br />0-VLF 不是在使用中。<br />1-VLF 处于活动状态。|
+|vlf_status|**int** |状态[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。 可能的值包括 <br />0-VLF 处于非活动状态 <br />1-VLF 是已初始化但未使用 <br /> 2-VLF 处于活动状态。|
+|vlf_parity|**tinyint** |奇偶校验[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。在内部用于确定在 VLF 日志的结尾。|
+|vlf_first_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)中的第一个日志记录[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
+|vlf_create_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)创建的日志记录[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 `sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。    
  
 ## <a name="permissions"></a>权限  
@@ -72,8 +72,8 @@ sys.dm_db_log_info ( database_id )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. 确定数据库中具有大量 Vlf 的 SQL Server 实例
-以下查询确定了 100 个以上 Vlf 的日志文件，这可能会影响数据库启动、 还原和恢复时间中的数据库。
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. 确定数据库中具有大量的 Vlf 的 SQL Server 实例
+以下查询确定了超过 100 个 Vlf 的日志文件，这可能会影响数据库启动、 还原和恢复时间中的数据库。
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -83,9 +83,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 正在判定的最后一个位置`VLF`之前收缩日志文件的事务日志中
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 确定的最后一个位置`VLF`之前日志文件收缩事务日志中
 
-以下查询可以用于确定在对事务日志以确定是否可以收缩事务日志运行 shrinkfile 之前的最后一个活动 VLF 的位置。
+下面的查询可以用于对事务日志以确定是否可以收缩事务日志运行 shrinkfile 之前确定最后一个活动的 VLF 的位置。
 
 ```sql
 USE AdventureWorks2016
@@ -111,7 +111,7 @@ FROM cte_vlf_cnt
 GO
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   

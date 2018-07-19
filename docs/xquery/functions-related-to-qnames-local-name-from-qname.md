@@ -1,5 +1,5 @@
 ---
-title: 本地-名称-从的 QName (XQuery) |Microsoft 文档
+title: 本地-名称-从的 QName (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061355"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>与 QNames 的本地名称从 QName 相关函数
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>与 Qname 的本地名称从 QName 相关的函数
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回表示由指定的 QName 的本地部分 xs:NCNAME *$arg*。 如果结果为空序列 *$arg*是空的序列。  
+  返回表示指定的 QName 的本地部分 xs: ncname *$arg*。 结果是一个空序列，如果 *$arg*是空序列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,15 +44,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  它是应从中提取本地名称的 QName。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对存储在各种的 XML 实例的 XQuery 示例**xml**类型中的列[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
+ 本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
- 下面的示例使用**local-name-from-QName()** 函数可检索的本地名称和命名空间 URI 部分从 QName 类型值。 该示例执行以下操作：  
+ 下面的示例使用**local-name-from-qname （)** 函数来检索本地名称和命名空间 URI 部分从 QName 类型值。 该示例执行以下操作：  
   
 -   创建 XML 架构集合。  
   
 -   创建带有 xml 类型列的表。 xml 类型是使用 XML 架构集合类型化的。  
   
--   将示例 XML 实例存储到表中。 使用**query （)** 执行方法的 xml 数据类型，查询表达式，以从实例中检索 QName 类型值的本地名称部分。  
+-   将示例 XML 实例存储到表中。 使用**query （)** 执行的查询表达式的 xml 数据类型的方法以从实例中检索 QName 类型值的本地名称部分。  
   
 ```  
 DROP TABLE T  
@@ -81,7 +81,7 @@ FROM T
 -- Result = http://someURI  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [函数与 QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+## <a name="see-also"></a>请参阅  
+ [与 Qname 相关的函数&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 在 Management Studio 中创建 Analysis Services 脚本 |Microsoft 文档
+title: 在 Management Studio 中创建 Analysis Services 脚本 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057815"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中创建 Analysis Services 脚本
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/10/2018
     > [!NOTE]  
     >  通常，如果想要创建该文件的多个不同版本，请选择“文件”。  
   
-## <a name="see-also"></a>另请参阅  
- [XMLA 查询编辑器 & #40;Analysis Services-多维数据 & #41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+## <a name="see-also"></a>请参阅  
+ [XMLA 查询编辑器&#40;Analysis Services-多维数据&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

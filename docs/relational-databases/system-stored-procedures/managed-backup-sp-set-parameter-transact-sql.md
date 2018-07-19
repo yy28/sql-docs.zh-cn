@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft 文档
+title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238334"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058825"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> 参数  
  @parameter_name  
- 要设置值的参数的名称。 @parameter_name 是 nvarchar （128）。 可用的参数名称为**SSMBackup2WANotificationEmailIds**， **SSMBackup2WADebugXevent**， **SSMBackup2WAEnableUserDefinedPolicy**， **FileRetentionDebugXevent**，和**StorageOperationDebugXevent**。  
+ 要设置值的参数的名称。 @parameter_name 是 nvarchar （128）。 可用的参数名称是**SSMBackup2WANotificationEmailIds**， **SSMBackup2WADebugXevent**， **SSMBackup2WAEnableUserDefinedPolicy**， **FileRetentionDebugXevent**，并**StorageOperationDebugXevent**。  
   
  @parameter_value  
  要设置的参数的值。 @parameter 值为 nvarchar （128）。  允许下列参数名称/值对：  
   
--   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = 电子邮件  
+-   @parameter_name = 'Ssmbackup2wanotificationemailids': @parameter_value = 电子邮件  
   
 -   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' |false'}  
   
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_set_parameter
   
 -   @parameter_name = 'FileRetentionDebugXevent': @parameter_value = {'true' |false'}  
   
--   @parameter_name = StorageOperationDebugXevent = {'true' |false'}  
+-   @parameter_name = 'StorageOperationDebugXevent = {'true' |false'}  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -76,7 +76,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 需要**执行**权限**managed_backup.sp_set_parameter**存储过程。  
+ 需要**EXECUTE**上的权限**managed_backup.sp_set_parameter**存储过程。  
   
 ## <a name="examples"></a>示例  
  以下示例启用操作并调试扩展事件。  

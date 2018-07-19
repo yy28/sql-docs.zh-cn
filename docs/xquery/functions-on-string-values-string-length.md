@@ -1,5 +1,5 @@
 ---
-title: 字符串长度函数 (XQuery) |Microsoft 文档
+title: string-length 函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059771"
 ---
-# <a name="functions-on-string-values---string-length"></a>函数对字符串值的字符串长度
+# <a name="functions-on-string-values---string-length"></a>基于字符串值的字符串长度的函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回字符串的长度（以字符为单位）。  
@@ -47,14 +47,14 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  要计算其长度的源字符串。  
   
-## <a name="remarks"></a>注释  
- 如果值 *$arg*空序列， **xs:integer**返回值为 0。  
+## <a name="remarks"></a>Remarks  
+ 如果的值 *$arg*是一个空序列**xs: integer**返回值为 0。  
   
- XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
  如果该值包含由两个代理项字符表示的 4 字节 Unicode 字符，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将单独对代理项字符计数。  
   
- **String-length()** 没有参数只能使用谓词内。 例如，下面的查询返回 <`ROOT`> 元素：  
+ **String-length （)** 没有参数只能在谓词内。 例如，下面的查询返回 <`ROOT`> 元素：  
   
 ```  
 DECLARE @x xml;  
@@ -63,10 +63,10 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数是代理项感知"部分[中 SQL Server 2016 数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函数中代理对的行为依赖于数据库兼容级别，并且在某些情况下，还依赖于函数的默认命名空间 URI。 有关详细信息，请参阅主题中的"XQuery 函数可识别代理"部分[SQL Server 2016 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
- 本主题提供对 XML 实例存储在各种 XQuery 示例**xml** AdventureWorks 数据库中的类型列。  
+ 本主题提供了一些针对 XML 实例存储在各种 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. 使用 string-length() XQuery 函数检索带有较长摘要说明的产品  
  对于摘要说明大于 50 个字符的产品，下面的查询将检索产品 ID、摘要说明的长度以及摘要本身（即 <`Summary`> 元素）。  
@@ -89,9 +89,9 @@ WHERE CatalogDescription.value('string-length( string( (/pd:ProductDescription/p
   
 -   WHERE 子句的条件只检索在 XML 文档中存储的摘要说明大于 200 个字符的行。 它使用[value （） 方法 （XML 数据类型）](../t-sql/xml/value-method-xml-data-type.md)。  
   
--   SELECT 子句仅构造您想要的 XML。 它使用[query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)构造 XML 并指定必要的 XQuery 表达式，以从 XML 文档中检索数据。  
+-   SELECT 子句仅构造您想要的 XML。 它使用[query （） 方法 （XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)构造 XML，并指定必需的 XQuery 表达式，以从 XML 文档中检索数据。  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 Result  
@@ -135,9 +135,9 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
  请注意上述查询的以下方面：  
   
--   **pd**和**wm**是此查询中使用的命名空间前缀。 它们标识正在查询的文档中使用的相同命名空间。  
+-   **pd**并**wm**是此查询中使用的命名空间前缀。 它们标识正在查询的文档中使用的相同命名空间。  
   
--   XQuery 指定嵌套 FOR 循环。 FOR 循环外部是必需的因为你想要检索**ProductModelID**属性 <`ProductDescription`> 元素。 内部 FOR 循环也是必需的，因为您只需检索那些保修功能说明少于 20 个字符的产品。  
+-   XQuery 指定嵌套 FOR 循环。 外部 FOR 循环是必需的因为您想要检索**ProductModelID**的属性 <`ProductDescription`> 元素。 内部 FOR 循环也是必需的，因为您只需检索那些保修功能说明少于 20 个字符的产品。  
   
  下面是部分结果：  
   
@@ -156,7 +156,7 @@ Result
 ...  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

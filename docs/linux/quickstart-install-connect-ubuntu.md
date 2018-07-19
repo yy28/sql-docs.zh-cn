@@ -1,6 +1,6 @@
 ---
-title: 要开始使用在 Ubuntu 上的 SQL Server 2017 |Microsoft 文档
-description: 本快速入门演示如何在 Ubuntu 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。
+title: 在 Ubuntu 上的 SQL Server 2017 入门 |Microsoft Docs
+description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 然后创建和查询使用 sqlcmd 数据库。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,38 +13,38 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: ebe7da1e1024cefc14c52d0a02e0517b764c8d07
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455283"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057315"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门： 安装 SQL Server 并在 Ubuntu 上创建数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在本快速入门教程，你首先将安装 SQL Server 2017 Ubuntu 16.04。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
+在本快速入门，首先安装 SQL Server 2017 在 Ubuntu 16.04 上。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
 
 > [!TIP]
-> 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
+> 本教程需要用户输入和 internet 连接。 如果您有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
-你必须具有的 Ubuntu 16.04 机**至少 2 GB**的内存。
+您必须具有的 Ubuntu 16.04 计算机**至少 2 GB**的内存。
 
-若要在您自己的计算机上安装 Ubuntu，请转到[ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server)。 你还可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 的 Azure cli](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
+若要在自己的计算机上安装 Ubuntu，请转到[ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server)。 此外可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 使用 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
 
 > [!NOTE]
 > 在此期间，[适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标不支持 Windows 10。
 
-其他系统要求，请参阅[在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
+其他系统要求，请参阅[Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 ## <a id="install"></a>安装 SQL Server
 
 若要在 Ubuntu 上配置 SQL Server ，在终端中运行以下命令安装**mssql server**包。
 
 > [!IMPORTANT]
-> 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)。
+> 如果以前已安装的 CTP 或 SQL Server 2017 的 RC 版本，必须先注册 GA 存储库之一之前删除旧的存储库。 有关详细信息，请参阅[存储库从预览存储库更改为 GA 存储库](sql-server-linux-change-repo.md)。
 
 1. 导入公共存储库 GPG 密钥：
 
@@ -59,7 +59,7 @@ ms.locfileid: "34455283"
    ```
 
    > [!NOTE]
-   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+   > 这是累积更新 (CU) 存储库。 有关存储库的选项和它们之间的差异的详细信息，请参阅[Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 1. 运行以下命令，安装 SQL Server：
 
@@ -75,7 +75,7 @@ ms.locfileid: "34455283"
    ```
 
    > [!TIP]
-   > 如果你在本教程中尝试 SQL Server 自 2017 年，自由地授予许可的以下版本： 评估、 开发人员和快速。
+   > 如果在本教程中尝试 SQL Server 2017，自由地获得许可的以下版本： Evaluation、 Developer 和 Express。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -88,13 +88,13 @@ ms.locfileid: "34455283"
 
 1. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。
 
-此时，SQL Server 正在您 Ubuntu 的计算机上运行并且已准备好使用 ！
+在此情况下，SQL Server 在 Ubuntu 计算机上运行并已准备好使用 ！
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
+若要创建数据库时，需要使用一种工具，可以在 SQL Server 上运行的 Transact SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
 
-使用以下步骤来安装**mssql 工具**在 Ubuntu 上。 
+使用以下步骤来安装**mssql 工具**Ubuntu 上。 
 
 1. 导入公共存储库 GPG 密钥。
 
@@ -116,7 +116,7 @@ ms.locfileid: "34455283"
    ```
 
    > [!Note] 
-   > 若要更新至最新版本的**mssql 工具**运行以下命令：
+   > 若要更新到最新版**mssql 工具**运行以下命令：
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
@@ -124,13 +124,13 @@ ms.locfileid: "34455283"
 
 1. **可选**： 添加`/opt/mssql-tools/bin/`到你**路径**bash shell 中的环境变量。
 
-   若要使**sqlcmd/bcp**访问登录会话 bash shell 中修改你**路径**中 **~/.bash_profile**文件使用以下命令：
+   若要使**sqlcmd/bcp**可从登录会话的 bash shell 访问修改你**路径**中 **~/.bash_profile**文件使用以下命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   若要使**sqlcmd/bcp**访问交互式/非-登录会话 bash shell 中修改**路径**中 **~/.bashrc**文件使用以下命令：
+   若要使**sqlcmd/bcp**能从交互式/非登录会话，bash shell 访问修改**路径**中 **~/.bashrc**文件使用以下命令：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

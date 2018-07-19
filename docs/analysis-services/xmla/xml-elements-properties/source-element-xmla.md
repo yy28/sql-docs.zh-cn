@@ -1,5 +1,5 @@
 ---
-title: 源元素 (XMLA) |Microsoft 文档
+title: Source 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8aaef002e649e01a51b99bd007ae5459e8cdbd97
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576419"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061055"
 ---
 # <a name="source-element-xmla"></a>Source 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  表示一个源分区合并期间[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。  
+  表示一个源分区期间合并[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34576419"
 </Sources>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -50,10 +50,10 @@ ms.locfileid: "34576419"
 |子元素|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md)， [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md)， [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md)， [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **源**元素是对要合并到指定目标分区的单个分区的对象引用**目标**元素的父**MergePartitions**元素。  
+ **源**元素是对要合并到指定的目标分区的单个分区的对象引用**目标**元素的父**MergePartitions**元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例将 `Internet Sales` 度量值组的全部四个分区合并到了 `Internet_Sales_2004` 目标分区中。 此示例指**Adventure Works**多维数据集的[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
+ 下面的示例将 `Internet Sales` 度量值组的全部四个分区合并到了 `Internet_Sales_2004` 目标分区中。 此示例引用**Adventure Works**多维数据集[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]示例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -70,7 +70,7 @@ ms.locfileid: "34576419"
 ```  
   
 ## <a name="see-also"></a>另请参阅
- [目标元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
+ [Target 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 在路径表达式步骤中指定的谓词 |Microsoft 文档
+title: 指定路径表达式步骤中的谓词 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 83e100d49f09616c429a1dd6b42550beb8bbcfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078054"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058517"
 ---
-# <a name="path-expressions---specifying-predicates"></a>路径表达式的指定谓词
+# <a name="path-expressions---specifying-predicates"></a>路径表达式-指定谓词
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  本主题中所述[在 XQuery 中的路径表达式](../xquery/path-expressions-xquery.md)，在路径表达式中的一个轴步骤包括以下组件：  
+  主题中所述[XQuery 中的路径表达式](../xquery/path-expressions-xquery.md)，路径表达式中的轴步骤包括以下组件：  
   
 -   [轴](../xquery/path-expressions-specifying-axis.md)。  
   
--   节点测试。 有关详细信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)。  
+-   节点测试。 有关详细信息，请参阅[路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)。  
   
 -   零个或多个谓词。 此为可选项。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33078054"
 ## <a name="predicates"></a>谓词  
  谓词通过应用指定的测试来筛选节点序列。 谓词表达式用方括号括起来并绑定到路径表达式中的最后一个节点。  
   
- 例如，假定的 SQL 参数值 (x) 为**xml**声明数据类型，如在下面的示例所示：  
+ 例如，假定的 SQL 参数值 (x) **xml**声明数据类型，如在下面的示例所示：  
   
 ```  
 declare @x xml  
@@ -144,7 +144,7 @@ WHERE ProductModelID=7
   
      此查询中的路径表达式仅返回指定了 LotSize 属性的 <`Location`> 元素节点。 如果谓词返回特定 <`Location`> 的空序列，将不在结果中返回该生产车间。  
   
-2.  谓词值只能是 xs:integer、 xs: boolean 或节点\*。 节点\*，谓词的计算结果为如果没有任何节点，则为 True 和 False 空序列。 对于任何其他数值类型（如双精度类型和浮点类型），将生成静态类型化错误。 当且仅当所得到的整数等于上下文位置值时，表达式的谓词真值才为 True。 此外，仅整数文本值与**last （)** 函数减少到 1 的筛选的步骤表达式的基数。  
+2.  谓词值只能是 xs: integer、 xs: boolean、 或节点\*。 节点\*，谓词的计算结果为如果有任何节点，则为 True 和 False 空序列。 对于任何其他数值类型（如双精度类型和浮点类型），将生成静态类型化错误。 当且仅当所得到的整数等于上下文位置值时，表达式的谓词真值才为 True。 此外，只有整数文字值和**last （)** 函数减少为 1 将筛选的步骤表达式的基数。  
   
      例如，下列查询将检索 <`Features`> 元素的第三个子元素节点。  
   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7
   
 3.  如果谓词表达式的值是一个布尔类型的简单类型值，则谓词真值将等于谓词表达式的值。  
   
-     例如，以下查询指定针对**xml**保留 XML 实例时，客户调查 XML 实例的类型变量。 查询检索那些具有子级的客户。 此查询中，在这个位置是\<HasChildren > 1\</HasChildren >。  
+     例如，下面的查询指定针对**xml**具有 XML 实例，客户调查 XML 实例的类型变量。 查询检索那些具有子级的客户。 在此查询中，这将是\<HasChildren > 1\</HasChildren >。  
   
     ```  
     declare @x xml  
@@ -199,9 +199,9 @@ WHERE ProductModelID=7
   
      请注意上述查询的以下方面：  
   
-    -   中的表达式**为**循环具有两个步骤，且第二个步骤指定的谓词。 此谓词的值是一个布尔类型值。 如果此值为 True，则谓词的真值也为 True。  
+    -   中的表达式**为**循环具有两个步骤并第二个步骤指定一个谓词。 此谓词的值是一个布尔类型值。 如果此值为 True，则谓词的真值也为 True。  
   
-    -   该查询将返回 <`Customer`> 元素子级，其谓词的值为 True 的\<调查 > 的文档根元素子级。 结果如下：  
+    -   该查询将返回 <`Customer`> 元素子级，其谓词值为 True 的\<调查 > 文档根元素子级。 结果如下：  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -209,7 +209,7 @@ WHERE ProductModelID=7
   
 4.  如果谓词表达式的值是一个至少包含一个节点的序列，则谓词真值为 True。  
   
- 例如，以下查询检索 ProductModelID 产品型号的 XML 目录说明包括至少一个功能的子元素的 <`Features`> 元素，与关联的命名空间从**wm**前缀。  
+ 例如，以下查询将检索的 XML 目录说明包含至少一个功能，子元素的产品型号的 ProductModelID <`Features`> 元素中，从关联的命名空间**wm**前缀。  
   
 ```  
 SELECT ProductModelID  
@@ -225,9 +225,9 @@ WHERE CatalogDescription.exist('
   
 -   WHERE 子句指定[exist （） 方法 （XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)。  
   
--   中的路径表达式**exist （)** 方法在第二个步骤中指定的谓词。 如果谓词表达式返回至少一个功能的序列，则该谓词表达式的真值为 True。 在这种情况下，因为**exist （)** 方法，则返回 True，则返回 ProductModelID。  
+-   路径表达式在**exist （)** 方法的第二步中指定一个谓词。 如果谓词表达式返回至少一个功能的序列，则该谓词表达式的真值为 True。 在这种情况下，因为**exist （)** 方法返回 True，将返回 ProductModelID。  
   
 ## <a name="static-typing-and-predicate-filters"></a>静态类型化和谓词筛选器  
- 谓词可能还会影响表达式的静态推断类型。 整数文本值与**last （)** 函数减少到最多一个筛选的步骤表达式的基数。  
+ 谓词可能还会影响表达式的静态推断类型。 整数文字值和**last （)** 函数减少到最多一个将筛选的步骤表达式的基数。  
   
   

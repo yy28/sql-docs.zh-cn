@@ -1,5 +1,5 @@
 ---
-title: 目标元素 (XMLA) |Microsoft 文档
+title: Target 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53cf0589cff69dab21c07979ba89e84e35f30d11
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576519"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064134"
 ---
 # <a name="target-element-xmla"></a>Target 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  表示目标分区合并期间[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。  
+  表示目标分区期间合并[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34576519"
 </MergePartitions>  
 ```  
   
-## <a name="element-characteristics"></a>元素特征  
+## <a name="element-characteristics"></a>元素的特性  
   
 |特征|Description|  
 |--------------------|-----------------|  
@@ -46,11 +46,11 @@ ms.locfileid: "34576519"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[撰写 MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
+|父元素|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |子元素|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md)， [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md)， [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md)， [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **目标**元素是对单个分区到其中的内容的源分区中，指定的对象引用[源](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md)元素的父**MergePartitions**元素，要合并。  
+ **目标**元素是对单个分区到其中的源分区的内容指定的对象引用[源](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md)元素的父**MergePartitions**元素中，要合并。  
   
 ## <a name="example"></a>示例  
  下面的示例将 Internet Sales 度量值组的全部四个分区合并到了 `Internet_Sales_2004` 目标分区中。 此示例引用了 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据集。  
@@ -82,7 +82,7 @@ ms.locfileid: "34576519"
 ```  
   
 ## <a name="see-also"></a>另请参阅
- [源元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
+ [Source 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
  [属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

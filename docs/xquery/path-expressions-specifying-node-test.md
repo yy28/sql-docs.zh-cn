@@ -1,5 +1,5 @@
 ---
-title: 在路径表达式步骤中指定节点测试 |Microsoft 文档
+title: 在路径表达式步骤中指定节点测试 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077664"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058297"
 ---
-# <a name="path-expressions---specifying-node-test"></a>路径表达式的指定节点测试
+# <a name="path-expressions---specifying-node-test"></a>路径表达式-指定节点测试
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   路径表达式中的轴步骤包括以下部分：  
@@ -75,9 +75,9 @@ child::ProductDescription
   
  路径表达式 `/child::PD:ProductDescription/child::PD:Features/descendant::*,` 包含三个步骤。 这些步骤将指定 child 轴和 descendant 轴。 在每个步骤中，都指定节点名来作为节点测试。 第三个步骤中的通配符 (`*`) 指明了属于 descendant 轴的主要节点类型的所有节点。 该轴的主要节点类型确定了选定节点的类型以及这些节点所选择的节点名筛选器。  
   
- 因此，此表达式执行针对产品目录中的 XML 文档**ProductModel**表，它将检索的所有元素节点子级\<功能 > 元素节点子系\<ProductDescription > 元素。  
+ 因此，此表达式执行对中的产品目录 XML 文档**ProductModel**表，它检索的所有元素节点子级\<功能 > 元素节点子级的\<ProductDescription > 元素。  
   
- 路径表达式， `/child::PD:ProductDescription/attribute::ProductModelID`，两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式将返回**ProductModelID**属性节点的\<ProductDescription > 元素节点。  
+ 路径表达式`/child::PD:ProductDescription/attribute::ProductModelID`，由两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式返回**ProductModelID**的属性节点\<ProductDescription > 元素节点。  
   
  指定节点名作为节点测试时，还可以使用通配符 (*) 来指定节点的本地名称或作为其命名空间前缀，如以下示例所示：  
   
@@ -111,13 +111,13 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- 同样，`/child::ProductDescription/child::Features/child::comment()`检索注释节点子级的\<功能 > 元素节点子系\<ProductDescription > 元素节点。  
+ 同样，`/child::ProductDescription/child::Features/child::comment()`检索注释节点子级\<功能 > 元素节点子级的\<ProductDescription > 元素节点。  
   
 ## <a name="examples"></a>示例  
  下列示例将比较节点名和节点类型。  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. 指定节点名和节点类型作为路径表达式中的节点测试的结果  
- 在下面的示例中，一个简单的 XML 文档分配给**xml**类型变量。 可使用不同的路径表达式来查询该文档。 然后比较结果。  
+ 在以下示例中，一个简单的 XML 文档分配给**xml**类型的变量。 可使用不同的路径表达式来查询该文档。 然后比较结果。  
   
 ```  
 declare @x xml  
@@ -175,7 +175,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- 因为`node()`是节点类型，你将收到的子代轴的所有节点。 结果如下：  
+ 因为`node()`是节点类型，你将收到 descendant 轴的所有节点。 结果如下：  
   
 ```  
 text1  

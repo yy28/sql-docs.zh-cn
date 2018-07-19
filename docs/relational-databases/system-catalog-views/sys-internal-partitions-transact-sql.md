@@ -1,5 +1,5 @@
 ---
-title: sys.internal_partitions (TRANSACT-SQL) |Microsoft 文档
+title: sys.internal_partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,27 +22,27 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9d0321089336774e4303418b776eec8a1608613b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33697820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058247"
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  返回为每个跟踪基于磁盘的表的列存储索引的内部数据的行集的一行。 这些行集是列存储索引的内部和跟踪删除行、 行组映射和增量存储行组。 他们可以为每个表分区; 每个跟踪数据每个表有至少一个分区。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 它会重新生成列存储索引每次重新创建行集。   
+  返回为每个跟踪基于磁盘的表的列存储索引的内部数据的行集的一行。 这些行集是列存储索引的内部并跟踪已删除行、 行组映射和增量存储行组。 它们为每个表分区; 每个跟踪数据每个表具有至少一个分区。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次重新生成列存储索引将重新创建行集。   
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|此分区的分区 ID。 在数据库中是唯一的。|  
 |object_id|**int**|包含分区的表的对象 ID。|  
-|index_id|**int**|在表上定义的列存储索引的索引 ID。<br /><br /> 1 = 聚集列存储索引<br /><br /> 2 = 非聚集列存储索引|  
-|partition_number|**int**|分区数。<br /><br /> 1 = 第一分区的已分区表或未分区表的单个分区。<br /><br /> 2 = 第二个分区，依此类推。|  
+|index_id|**int**|对表定义的列存储索引的索引 ID。<br /><br /> 1 = 聚集列存储索引<br /><br /> 2 = 非聚集列存储索引|  
+|partition_number|**int**|分区数。<br /><br /> 1 = 已分区表的第一个分区或未分区表的单个分区。<br /><br /> 2 = 第二个分区中，依次类推。|  
 |internal_object_type|**tinyint**|跟踪列存储索引的内部数据的行集对象。<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP – 此位图索引跟踪标记为从列存储中删除的行。 因为分区可以有多个行组中的行，位图是每个行组。 行是仍以物理方式存在并已占用空间正在列存储。<br /><br /> COLUMN_STORE_DELTA_STORE – 的行，存储组称为行组，不具有将被压缩到列存储。 每个表分区可以有零个或多个增量存储行组。<br /><br /> COLUMN_STORE_DELETE_BUFFER – 用于维护可更新非聚集列存储索引删除。 当查询从基础的行存储表中删除行时，删除缓冲区将跟踪从列存储的删除。 当已删除的行数超过 1048576 时，它们将合并回删除位图中，后台元组发动机线程或显式的 Reorganize 命令。  在任何给定时间点，删除位图的删除缓冲区的并集表示所有已删除的行。<br /><br /> COLUMN_STORE_MAPPING_INDEX – 使用只在聚集列存储索引已辅助的非聚集的索引。 这会将非聚集索引键映射到正确的行组和列存储中的行 ID。 它只存储密钥的行，然后迁移到不同的行组;在增量行组压缩到列存储，以及合并操作合并两个不同的行组中的行时，将发生这种情况。|  
-|Row_group_id|**int**|增量存储行组 ID。 每个表分区可以有零个或多个增量存储行组。|  
-|hobt_id|**bigint**|内部行集合对象的 ID。 这是与其他 Dmv 以获取有关内部行集的物理特征的详细信息的良好键。|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP – 此位图索引跟踪标记为删除从列存储中的行。 由于分区可以具有多个行组中的行，位图是为每个行组。 行是仍以物理方式存在并已满空间位于在列存储中。<br /><br /> COLUMN_STORE_DELTA_STORE – 存储组的行，调用的尚未压缩成列存储行组。 每个表分区可以包含零个或多个增量存储行组。<br /><br /> COLUMN_STORE_DELETE_BUFFER – 用于维护到可更新非聚集列存储索引删除。 查询从基础的行存储表中删除行，删除缓冲区将跟踪从列存储中删除。 当已删除的行数超过 1048576 时，它们合并成删除位图背景元组发动机线程或显式的 Reorganize 命令。  在任何给定时间点，删除位图的删除缓冲区的并集表示所有已删除的行。<br /><br /> COLUMN_STORE_MAPPING_INDEX – 使用仅当聚集列存储索引具有辅助非聚集的索引。 这将非聚集索引键映射到正确的行组和列存储中的行 ID。 它只存储密钥的行，然后迁移到不同的行组;增量行组压缩到列存储中，以及合并操作将两个不同的行组中的行时，将发生这种情况。|  
+|Row_group_id|**int**|增量存储行组 ID。 每个表分区可以包含零个或多个增量存储行组。|  
+|hobt_id|**bigint**|内部行集对象的 ID。 这是一个很好密钥来加入其他 Dmv 来获取有关内部行集的物理特征的详细信息。|  
 |rows|**bigint**|此分区中的大约行数。|  
 |data_compression|**tinyint**|压缩的行集的状态：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|为每个分区的压缩状态。 行存储表的可能值为 NONE、ROW 和 PAGE。 列存储表的可能值为 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
@@ -51,7 +51,7 @@ ms.locfileid: "33697820"
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="general-remarks"></a>一般备注  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 它将创建或重新生成列存储索引的每次重新创建新的列存储内部索引。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次创建或重新生成列存储索引将重新创建新的列存储内部索引。  
   
 ## <a name="examples"></a>示例  
   
@@ -66,7 +66,7 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL) |Microsoft 文档
+title: sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060365"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  获取**stmt_sql_handle**为[!INCLUDE[tsql](../../includes/tsql-md.md)]语句在给定参数化类型 （简单或强制）。 这使您可以通过使用查询存储中存储的查询是指其**stmt_sql_handle**当您知道其文本。  
+  获取**stmt_sql_handle**为[!INCLUDE[tsql](../../includes/tsql-md.md)]语句在给定参数化类型 （简单或强制）。 这使您可以通过在查询存储中存储的查询是指其**stmt_sql_handle**当您知道其文本。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,23 +44,23 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>参数  
  *query_sql_text*  
- 是所需的句柄的查询存储中的文本。 *query_sql_text*是**nvarchar (max)**，无默认值。  
+ 是所需的句柄的查询存储区中查询的文本。 *query_sql_text*是**nvarchar （max)**，无默认值。  
   
  *query_param_type*  
  是查询的参数类型。 *query_param_type*是**tinyint**。 可能的值有：  
   
--   NULL – 默认值为 0  
+-   NULL-默认值为 0  
   
 -   0 – 无  
   
 -   1 – 用户  
   
--   2-简单  
+-   2 – 简单  
   
 -   3 – 强制  
   
 ## <a name="columns-returned"></a>返回的列  
- 下表列出的列该 sys.fn_stmt_sql_handle_from_sql_stmt 返回。  
+ 下表列出的列的 sys.fn_stmt_sql_handle_from_sql_stmt 返回。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
@@ -71,20 +71,20 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>权限  
- 需要**执行**对数据库拥有权限和**删除**查询存储目录视图的权限。  
+ 需要**EXECUTE**上，对数据库的权限和**删除**查询存储目录视图的权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例执行一个语句，，然后使用`sys.fn_stmt_sql_handle_from_sql_stmt`返回该语句的 SQL 句柄。  
+ 下面的示例执行一个语句，然后使用`sys.fn_stmt_sql_handle_from_sql_stmt`返回该语句的 SQL 句柄。  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 该函数用于将 Query Store 数据与其他动态管理视图相关联。 下面的示例：  
+ 使用该函数与其他动态管理视图关联的查询存储数据。 下面的示例：  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -97,14 +97,14 @@ JOIN sys.dm_exec_query_stats AS qs
     ON fn_handle_from_stmt.statement_sql_handle = qs.statement_sql_handle;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
- [sp_query_store_remove_query &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_flush_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_remove_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

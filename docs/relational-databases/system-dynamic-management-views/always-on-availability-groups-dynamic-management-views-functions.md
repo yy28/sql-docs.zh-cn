@@ -1,5 +1,5 @@
 ---
-title: 始终在可用性组动态管理视图-函数 |Microsoft 文档
+title: 始终在可用性组动态管理视图的函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 423b4281691b4be9bef3305bdb6599f1c75b5804
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061535"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>始终在可用性组动态管理视图的函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本节包含与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相关的动态管理视图和函数。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |||  
 |-|-|  
@@ -41,9 +41,9 @@ ms.locfileid: "34464543"
 |[sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)|[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)|  
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
-## <a name="see-also"></a>另请参阅  
- [AlwaysOn 可用性组 & #40;SQL server& #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>请参阅  
+ [AlwaysOn 可用性组&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [监视可用性组 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [监视可用性组 (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   
