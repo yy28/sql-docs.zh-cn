@@ -21,6 +21,7 @@
 
 ## [复制到内存优化表订阅服务器](replication-to-memory-optimized-table-subscribers.md)  
 ## [复制到 SQL 数据库](replication-to-sql-database.md)  
+## [SQL 数据库中的复制](replication-with-sql-database-managed-instance.md)
 ## [重新发布数据](republish-data.md)  
 ## [通过 Internet 复制](replication-over-the-internet.md)  
 ### [使用 VPN 通过 Internet 发布数据](publish-data-over-the-internet-using-vpn.md)  
