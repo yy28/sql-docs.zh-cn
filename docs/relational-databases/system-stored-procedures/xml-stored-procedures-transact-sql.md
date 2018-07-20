@@ -1,5 +1,5 @@
 ---
-title: XML 存储过程 (Transact SQL) |Microsoft 文档
+title: XML 存储过程 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,26 +17,26 @@ helpviewer_keywords:
 - XML [SQL Server], system stored procedures
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 763b72492fba1ea84e78bf416511c8537172191b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6803c865088f1fe94db27ceeee216f5a453b1808
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252273"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103365"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>XML 存储过程 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的下列系统存储过程用于 XML 文本管理。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下系统存储过程用于 XML 文本管理。  
   
 |||  
 |-|-|  
 |[sp_xml_preparedocument](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)|[sp_xml_removedocument](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

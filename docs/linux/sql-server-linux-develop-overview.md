@@ -1,29 +1,29 @@
 ---
-title: 开发应用程序的 SQL Server on Linux |Microsoft 文档
+title: 为 Linux 上的 SQL Server 开发应用程序 |Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 11/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.custom: sql-linux
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 5445deb30d2e3c3dfd5cc4964f3b5d3ed2d9d391
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 317c2ea2064f7ffc286671a8fff7eef2f8149ee7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454945"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084913"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-你可以创建应用程序连接到并从多种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + Linux 上使用 SQL Server 自 2017 年。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
+您可以创建应用程序连接到并使用从各种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + 的 Linux 上的 SQL Server 2017。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -39,19 +39,19 @@ ms.locfileid: "34454945"
 - 尝试代码示例。
 
 > [!TIP]
-> 如果你想要为 Docker 上的 SQL Server 2017 开发，看一看**macOS**教程。
+> 如果你想要开发适用于 SQL Server 2017 的 Docker，看一看**macOS**教程。
 
 ## <a name="create-new-applications"></a>创建新的应用程序
 
-如果你要创建新的应用程序，看一看一份[连接库](sql-server-linux-develop-connectivity-libraries.md)有关连接器并针对各种编程语言提供的常用框架的摘要。
+如果要创建新的应用程序，看看一系列[连接库](sql-server-linux-develop-connectivity-libraries.md)有关连接器和常用的框架可用于各种编程语言的摘要。
 
 ## <a name="use-existing-applications"></a>使用现有应用程序
 
-如果你有现有的数据库应用程序，你可以只需改为在 Linux 上的目标 SQL Server 自 2017 年的其连接字符串。 请务必阅读有关[已知问题](sql-server-linux-release-notes.md)在 Linux 上的 SQL Server 2017。
+如果有现有的数据库应用程序，您可以只需更改到目标 SQL Server 2017 Linux 上的其连接字符串。 请务必阅读有关[已知问题](sql-server-linux-release-notes.md)Linux 上的 SQL Server 2017 中。
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>通过 Linux 上的 SQL Server 使用 Windows 上的现有 SQL 工具
 
-在 Linux 上的 SQL Server 2017 还处理当前在如 SSMS、 SSDT 和 PowerShell，Windows 运行的工具。 尽管它们不可在本机 Linux 上运行，但你仍然可以管理 Linux 上的远程 SQL Server 实例。 
+当前在如 SSMS、 SSDT 和 PowerShell，Windows 运行的工具也适用于 Linux 上的 SQL Server 2017。 尽管它们不可在本机 Linux 上运行，但你仍然可以管理 Linux 上的远程 SQL Server 实例。 
 
 有关详细信息，请参阅下列主题：
 
@@ -64,7 +64,7 @@ ms.locfileid: "34454945"
 
 ## <a name="use-new-sql-tools-for-linux"></a>使用适用于 Linux 的新 SQL 工具
 
-你可以使用新[mssql 扩展](https://aka.ms/mssql-marketplace)为[Visual Studio Code](https://code.visualstudio.com) Linux、 macOS 和 Windows 上。 相关分布演练请参阅下列教程：
+你可以使用新[mssql 扩展](https://aka.ms/mssql-marketplace)有关[Visual Studio Code](https://code.visualstudio.com)在 Linux、 macOS 和 Windows。 相关分布演练请参阅下列教程：
 
 - [使用 Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 

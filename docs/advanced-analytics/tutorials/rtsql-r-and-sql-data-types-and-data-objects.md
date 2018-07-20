@@ -1,36 +1,43 @@
 ---
-title: R 和 SQL 数据类型和数据对象 (SQL 快速入门中的 R) |Microsoft 文档
+title: 有关 R 和 SQL 数据类型和对象 （SQL Server 机器学习） 的快速入门 |Microsoft Docs
+description: 在本快速入门教程，了解如何使用数据类型与 R 和 SQL Server 中的数据对象。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: eeed977c3b942f0c23e4036f514018f54b966b70
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6eeb2c71e821c9ccf5a89129a862b3d01a1d64bf
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203789"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085499"
 ---
-# <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R 和 SQL 数据类型和数据对象 (SQL 快速入门中的 R)
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入门： 处理的数据类型和对象在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在此步骤中，你了解在 R 和 SQL Server 之间移动数据时出现的一些常见问题：
+在本快速入门，获取 R 和 SQL Server 之间移动数据时出现的常见问题的动手介绍。 使用您自己的脚本中的数据时，通过此练习中获得的体验提供了基本的背景。
+
+若要了解得更清楚的常见问题包括：
 
 + 数据类型有时不匹配
-+ 隐式转换，可能会发生
++ 隐式转换可能会发生
 + 有时需要执行强制转换和转换操作
 + R 和 SQL 使用不同的数据对象
 
-## <a name="always-return-r-data-as-a-data-frame"></a>始终返回 R 数据作为数据框架
+## <a name="prerequisites"></a>必要條件
+
+上一个快速入门中， [Hello World R 和 SQL 中](rtsql-using-r-code-in-transact-sql-quickstart.md)、 提供的信息和链接设置为本快速入门所需的 R 环境。
+
+## <a name="always-return-a-data-frame"></a>始终返回数据帧
 
 当脚本将结果从 R 返回给 SQL Server 时，必须以 **data.frame** 的形式返回数据。 在脚本中生成的其他任何对象类型（不管是列表、因子、向量还是二进制数据）都必须转换为数据框架，才能将其输出为存储过程结果的一部分。 幸运的是，有多个 R 函数支持将其他对象更改为数据框架。 你甚至可以序列化二进制模型并在数据框架中返回该模型。本教程稍后将介绍此操作。
 
-首先，让我们使用一些 R 基本 R 对象进行试验-向量、 矩阵和列表-并看看如何转换为数据帧更改传递到 SQL Server 的输出。
+首先，让我们实验一些 R 基本 R 对象 — 向量、 矩阵和列表，并查看如何转换成数据帧更改传递到 SQL Server 的输出。
 
-比较这两个"Hello World"脚本中。脚本看起来几乎相同，但第一个返回单个列的三个值，而第二个返回三个列和单个值每个。
+比较在 R 中的这两个"Hello World"脚本脚本看上去大致相同，但第一个返回三个值的单个列，而第二个返回三个列具有单个值每个。
 
 **示例 1**
 
@@ -51,15 +58,15 @@ EXECUTE sp_execute_external_script
       , @input_data_1 = N'  ';
 ```
 
-## <a name="identifying-the-schema-and-data-types-of-r-data"></a>认识 R 数据的架构和数据类型
+## <a name="identify-schema-and-data-types"></a>标识架构和数据类型
 
-结果为何有这么大的差别？
+结果为何有这么大的差别？ 
 
 使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。
 
 若要找出示例 1 和示例 2 的结果为何有这么大的差别，请在每个语句的 _@script_ 变量定义末尾插入 `str(OutputDataSet)` 行，如下所示：
 
-**添加与 str 函数的示例 1**
+**添加使用 str 函数的示例 1**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -71,7 +78,7 @@ EXECUTE sp_execute_external_script
 ;
 ```
 
-**添加与 str 函数的示例 2**
+**添加使用 str 函数的示例 2**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -101,19 +108,19 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-可以看到，对 R 语法进行轻微的更改会给结果的架构造成很大的影响。 我们将不会进行正因如此，因为 R 数据类型中解释了这些差异更彻底地这篇文章中通过 Hadley Wickham: [R 数据结构](http://adv-r.had.co.nz/Data-structures.html)。
+可以看到，对 R 语法进行轻微的更改会给结果的架构造成很大的影响。 我们不会深究原因，，因为 R 数据类型的差异更全面解释了这篇文章中的作者是 Hadley Wickham: [R 数据结构](http://adv-r.had.co.nz/Data-structures.html)。
 
 暂时，你只需在将 R 对象强制转换成数据框架时注意检查预期的结果。
 
 > [!TIP]
 > 
-> 你还可以使用 R 标识函数，如`is.matrix`， `is.vector`，等等。
+> 此外可以使用 R 标识函数，如`is.matrix`， `is.vector`，以返回有关内部数据结构的信息。
 
 ## <a name="implicit-conversion-of-data-objects"></a>数据对象的隐式转换
 
 每个 R 数据对象都有自身的规则，指定在将值与其他数据对象组合时，如果两个数据对象具有相同的维度数目，或者如果任意数据对象包含异构数据类型，应如何处理值。
 
-例如，假设你要运行以下语句来使用 R 执行矩阵乘法。将包含三个值的单列矩阵乘以包含四个值的数组，预期结果为 4x3 矩阵。
+例如，假设你要运行以下语句以使用。 执行矩阵乘法具有三个值的单列矩阵乘以包含四个值的数组，因此期望 4x3 矩阵。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -157,21 +164,21 @@ execute sp_execute_external_script
 |---|
 |1542|
 
-原因是什么？ 在这种情况下，因为两个自变量可以当作向量的长度相同，R 返回内部产品作为包含矩阵。  根据线性代数的规则，这种行为符合预期；但是，如果下游应用程序预期输出架构永远不变，则这种行为可能会导致问题！
+原因是什么？ 在这种情况下，两个参数可以为相同长度的向量进行处理，因为 R 将以矩阵形式返回内部乘积。  根据线性代数的规则，这种行为符合预期；但是，如果下游应用程序预期输出架构永远不变，则这种行为可能会导致问题！
 
 > [!TIP]
 > 
-> 获取错误？ 这些示例需要表**RTestData**。 如果你尚未创建的测试数据的表，请返回到本主题：[使用输入和输出](../tutorials/rtsql-working-with-inputs-and-outputs.md)。
+> 收到错误？ 这些示例要求表**RTestData**。 如果尚未创建测试数据表，请返回到本主题并创建表：[处理输入和输出](../tutorials/rtsql-working-with-inputs-and-outputs.md)。
 > 
-> 如果你已创建表，但仍然收到错误，请确保包含的表的数据库，不能在的上下文中运行存储的过程**master**或另一个数据库。
+> 如果你已创建表，但仍收到错误，请确保在包含数据库的表，而不是在上下文中运行存储的过程**主**或另一个数据库。
 > 
-> 此外，我们建议你避免这些示例中使用临时表。 某些 R 客户端将终止批次，删除临时表之间的连接。
+> 此外，我们建议您不要使用临时表，这些示例。 某些 R 客户端将终止批处理，删除临时表之间的连接。
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>对不同长度的列进行合并或相乘
 
-R 提供了极大的灵活性，在使用不同的大小，矢量和将这些列类似结构合并到数据帧。 向量列表可能看起来像表，但它们并不遵循控制数据库表的所有规则。
+R 提供了极大的灵活性，使用矢量不同的大小，以及将这些类似于列的结构组合成数据帧。 向量列表可能看起来像表，但它们并不遵循控制数据库表的所有规则。
 
-例如，以下脚本定义长度为 6 的数字数组，并将其存储在 R 变量 `df1` 中。 数值数组然后结合 RTestData 表，其中包含这三 （3） 值，以使新的数据帧，整数`df2`。
+例如，以下脚本定义长度为 6 的数字数组，并将其存储在 R 变量 `df1` 中。 该数值数组然后组合与整数的 RTestData 表，其中包含三 （3） 值，以使新的数据帧`df2`。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -190,10 +197,10 @@ EXECUTE sp_execute_external_script
     
 |*Col2*|*Col3*|
 |----|----|
-|1|1|
+|@shouldalert|@shouldalert|
 |10|2|
 |100|3|
-|1|4|
+|@shouldalert|4|
 |10|5|
 |100|6|
 
@@ -203,25 +210,28 @@ EXECUTE sp_execute_external_script
 
 R 和 SQL Server 使用的数据类型不同，因此，如果你在 SQL Server 中运行查询来获取数据，然后将该数据传递给 R 运行时，通常会发生某种类型的隐式转换。 将数据从 R 返回到 SQL Server 时，会发生另一套转换。
 
-- SQL Server 将数据从查询推送到由快速启动板服务管理 R 进程，并将其转换到更高的效率内部表示形式。
+- SQL Server 将数据从查询推送到快速启动板服务管理的 R 进程，并将其转换为更高的效率的内部表示形式。
 - R 运行时将数据加载到 data.frame 变量中，并对数据执行其自身的操作。
 - 数据库引擎使用受保护的内部连接将数据返回到 SQL Server，并以 SQL Server 数据类型呈现数据。
 - 若要获取数据，可以使用能够发出 SQL 查询并处理表格数据集的客户端或网络库连接到 SQL Server。 此客户端应用程序可能会通过其他方式影响数据。
 
-若要了解这种处理方式的工作原理，请针对 AdventureWorksDW 数据仓库运行如下所示的查询。 此视图返回用于创建预测的销售数据。
+若要阐释其工作方式上, 运行的查询类似于本[AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)数据仓库。 此视图返回用于创建预测的销售数据。
 
 ```sql
+USE AdventureWorksDW
+GO
+
 SELECT ReportingDate
          , CAST(ModelRegion as varchar(50)) as ProductSeries
          , Amount
-           FROM [AdventureWorksDW2014].[dbo].[vTimeSeries]
+           FROM [AdventureWorksDW].[dbo].[vTimeSeries]
            WHERE [ModelRegion] = 'M200 Europe'
            ORDER BY ReportingDate ASC
 ```
 
 > [!NOTE]
 > 
-> 你可以使用任何版本的 AdventureWorks，或创建一个不同的查询，使用你自己的数据库。 该点则尝试处理一些数据，包含文本、 日期时间和数字值。
+> 可以使用任何版本的 AdventureWorks，也可以创建不同的查询使用你自己的数据库。 要点是尝试处理一些包含文本、 日期时间和数字值的数据。
 
 现在，请将此查询粘贴作为存储过程的输入。
 
@@ -234,7 +244,7 @@ EXECUTE sp_execute_external_script
            SELECT ReportingDate
          , CAST(ModelRegion as varchar(50)) as ProductSeries
          , Amount
-           FROM [AdventureWorksDW2014].[dbo].[vTimeSeries]
+           FROM [AdventureWorksDW].[dbo].[vTimeSeries]
            WHERE [ModelRegion] = ''M200 Europe''
            ORDER BY ReportingDate ASC ;'
 WITH RESULT SETS undefined;
@@ -254,23 +264,24 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 + 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
-+ "ProductSeries"已被标识为文本列**因素**，这意味着分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
++ 已标识为"ProductSeries"的文本列**身份**，这意味着一个分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
 
 ### <a name="summary"></a>“摘要”
 
-从即使这些简短的示例中，你可以看到需要时将传递 SQL 查询中用作输入，请检查数据转换的效果。 因为某些 SQL Server 数据类型不受 R，请考虑这些方法，从而避免错误：
+从这些简短的示例，可以看到需要传递 SQL 查询中用作输入时，检查数据转换的效果。 因为某些 SQL Server 数据类型不受 R，请考虑这些方法，从而避免发生错误：
 
-+ 预先测试数据并验证列或你可能是一个问题时传递给 R 代码的架构中的值。
++ 提前测试你的数据并验证列或架构中可能存在问题时传递给 R 代码中的值。
 + 在输入数据源中单独指定列而不要使用 `SELECT *`，并知道如何处理每个列。
 + 准备输入数据时请根据需要执行显式强制转换，避免出现意外。
-+ 避免会导致错误并不是适用于建模的数据 （如 GUID 或 rowguid） 的传递的列。
++ 避免传递列的数据 （如 GUID 或 rowguid） 会导致错误并不是适用于建模。
 
-有关支持和不支持数据类型的详细信息，请参阅[R 库和数据类型](../r/r-libraries-and-data-types.md)。
+有关支持的和不受支持的数据类型的详细信息，请参阅[R 库和数据类型](../r/r-libraries-and-data-types.md)。
 
-有关性能影响的运行时将字符串转换为数字的因素的信息，请参阅[SQL Server R Services 性能优化](../r/sql-server-r-services-performance-tuning.md)。
+有关的运行时将字符串转换为数字因子对性能的影响的信息，请参阅[SQL Server R Services 性能优化](../r/sql-server-r-services-performance-tuning.md)。
 
-## <a name="next-lesson"></a>下一课
+## <a name="next-step"></a>下一步
 
-下一步骤介绍如何将 R 函数应用到 SQL Server 数据。
+在下一步的快速入门中，将了解如何将 R 函数应用到 SQL Server 数据。
 
-[对 SQL Server 数据使用 R 函数](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
+> [!div class="nextstepaction"]
+> [SQL Server 数据的快速入门： 使用 R 函数](rtsql-using-r-functions-with-sql-server-data.md)

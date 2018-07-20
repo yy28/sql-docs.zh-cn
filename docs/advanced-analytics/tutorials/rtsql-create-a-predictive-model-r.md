@@ -1,23 +1,28 @@
 ---
-title: 创建预测模型 (SQL 快速入门中的 R) |Microsoft 文档
+title: 创建在 SQL Server 机器学习中使用 R 的预测模型的快速入门 |Microsoft Docs
+description: 在本快速入门，了解如何生成在 R 中使用 SQL Server 数据绘制的预测模型。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ca2fcac5bef63a4abf2449b56c25a600b9255c3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202639"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086819"
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>创建预测模型 (SQL 快速入门中的 R)
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>快速入门： 创建在 SQL Server 中使用 R 的预测模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本步骤说明如何使用 R 训练模型，然后将该模型保存到 SQL Server 中的表。 该模型是一个简单的回归模型，可根据速度预测汽车的停止距离。 你将使用`cars`数据集包含使用 R，因为它小且易于理解。
+在此快速入门中，将了解如何使用 R、 对模型定型，然后将该模型保存到 SQL Server 中的表。 该模型是一个简单的回归模型，可根据速度预测汽车的停止距离。 将使用`cars`附带 R，因为它是小并易于理解的数据集。
+
+## <a name="prerequisites"></a>必要條件
+
+上一个快速入门中， [Hello World R 和 SQL 中](rtsql-using-r-code-in-transact-sql-quickstart.md)、 提供的信息和链接设置为本快速入门所需的 R 环境。
 
 ## <a name="create-the-source-data"></a>创建源数据
 
@@ -33,7 +38,7 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ 某些用户希望使用临时表，但请注意某些 R 客户端批处理之间的会话断开连接。
++ 一些人喜欢使用临时表，但请注意某些 R 客户端断开批之间的会话。
 
 + R 运行时包含许多或大或小的数据集。 若要获取随 R 一起安装的数据集列表，请在 R 命令提示符下键入 `library(help="datasets")`。
 
@@ -48,7 +53,7 @@ EXEC sp_execute_external_script
 + 提供用于训练模型的输入数据
 
 > [!TIP]
-> 如果你需要在线性模型使用刷新程序，我们建议本教程中，其中介绍了使用 rxLinMod 将模型拟合的过程：[拟合线性模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> 如果需要温习线性模型，我们建议以下教程，其中介绍了使用 rxLinMod 将模型拟合：[拟合线性模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 若要实际生成模型，请在 R 代码中定义公式，然后将数据作为输入参数传递。
 
@@ -92,7 +97,7 @@ INSERT INTO stopping_distance_models (model)
 EXEC generate_linear_model;
 ```
 
-请注意，是否第二次运行此代码时，你会获得此错误：
+请注意，是否第二次运行此代码，则会出现此错误：
 
 ```
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -112,7 +117,7 @@ WHERE model_name = 'default model'
 
 但是，除数据框架以外，你还可以返回其他类型的输出，例如标量。
 
-例如，假设你要训练某个模型，同时希望立即查看模型中的系数表。 可将系数表创建为主结果集，并在 SQL 变量中输出训练的模型。 你可以立即重新使用该模型通过调用该变量，或无法将模型保存到表中，如下所示。
+例如，假设你要训练某个模型，同时希望立即查看模型中的系数表。 可将系数表创建为主结果集，并在 SQL 变量中输出训练的模型。 你可立即重新使用该模型通过调用该变量，或无法将模型保存到表中，如下所示。
 
 ```sql
 DECLARE @model varbinary(max), @modelname varchar(30)
@@ -141,14 +146,13 @@ VALUES ('latest model', @model)
 
 请记住使用 SQL 参数和 R 变量中的这些规则`sp_execute_external_script`:
 
-+ 必须按名称的列出所有 SQL 参数映射到 R 脚本_@params_自变量。
-+ 若要输出其中一个参数，请在 _@params_ 列表中添加 OUTPUT 关键字。
-+ 列出映射的参数后，请紧接在 _@params_ 列表的后面，逐行提供 SQL 参数到 R 变量的映射。
++ 必须在中按名称列出所有 SQL 参数映射到 R 脚本 _\@params_参数。
++ 到其中一个参数的输出，将添加 OUTPUT 关键字在 _\@params_列表。
++ 列出映射的参数后, 提供的映射，逐行 SQL 参数到 R 变量，立即后 _\@params_列表。
 
-## <a name="next-lesson"></a>下一课
+## <a name="next-steps"></a>后续步骤
 
-现已创建一个模型。最后一个步骤将说明如何通过该模型生成预测并绘制结果。
+以后，即可将某一模型，最后一个快速入门中，您将学习如何从其生成预测并绘制结果。
 
-[通过模型预测和绘图](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [快速入门： 通过预测和绘图模型](../tutorials/rtsql-predict-and-plot-from-model.md)

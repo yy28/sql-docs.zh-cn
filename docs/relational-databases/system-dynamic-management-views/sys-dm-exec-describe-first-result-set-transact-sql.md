@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 60e1bc6b899861958aba64b0eede3ceb2ab9e94b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 3ed5e8ee42792d4308b3ccecb41bfcbe064dafd9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059165"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086389"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ```  
   
 ## <a name="arguments"></a>参数  
- *@tsql*  
+ *\@tsql*  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
- *@params*  
- @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)**。  
+ *\@params*  
+ \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)**。  
   
- 是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在定义在 stmt 中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 为此参数默认值为 NULL。  
+ 是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在定义在 stmt 中指定的每个参数\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，\@参数不是必需的。 为此参数默认值为 NULL。  
   
- *@include_browse_information*  
+ *\@include_browse_information*  
  如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 将返回其他键列和源表信息。  
   
 ## <a name="table-returned"></a>返回的表  
@@ -123,11 +123,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|由于批处理包含递归语句，无法确定结果。|  
 |10|TEMPORARY_TABLE|无法确定结果，因为批处理包含临时表，并且不受**sp_describe_first_result_set** 。|  
 |11|UNSUPPORTED_STATEMENT|无法确定结果，由于批处理包含不支持的语句**sp_describe_first_result_set** (例如，FETCH、 REVERT 等。)。|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|@object_id传递给该函数是不受支持 （即不是存储的过程）|  
-|13|OBJECT_DOES_NOT_EXIST|@object_id传递到系统目录中找不到该函数。|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@传递给函数的 object_id 不是支持 （即不是存储的过程）|  
+|13|OBJECT_DOES_NOT_EXIST|\@系统目录中找不到传递给函数的 object_id。|  
   
-## <a name="permissions"></a>权限  
- 需要具有执行权限@tsql参数。  
+## <a name="permissions"></a>Permissions  
+ 需要具有执行权限\@tsql 自变量。  
   
 ## <a name="examples"></a>示例  
  主题中的其他示例[sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可以进行适配以便使用**sys.dm_exec_describe_first_result_set**。  

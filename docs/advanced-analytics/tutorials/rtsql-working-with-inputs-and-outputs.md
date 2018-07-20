@@ -1,27 +1,34 @@
 ---
-title: 使用输入和输出 (SQL 快速入门中的 R) |Microsoft 文档
+title: 快速入门： 使用输入和输出在 R 中 （SQL Server 机器学习） |Microsoft Docs
+description: 在 SQL Server 中的 R 脚本的本快速入门，了解如何构建输入和输出到 sp_execute_external_script 系统存储过程。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9b2a493293f79ed823aa78a5a1d16190b5254449
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b41a8c30cd0ecbe040819478c0cadece1b9eb704
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204649"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086579"
 ---
-# <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>使用输入和输出 (SQL 快速入门中的 R)
+# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>快速入门： 处理输入和输出在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-如果你想要在 SQL Server 中运行 R 代码，则必须在系统存储过程中，在包装 R 脚本[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 此存储过程用于在 SQL Server 的上下文中启动 R 运行时，然后，R 运行时将数据传递给 R、安全管理 R 用户会话，并向客户端返回任何结果。
+当你想要在 SQL Server 中运行 R 代码时，必须在存储过程中包装 R 脚本。 可以编写一个，也可以传递到 R 脚本[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 此系统存储的过程用于在 SQL Server，将数据传递到 R，上下文中启动 R 运行时，安全地管理 R 用户会话，并向客户端返回任何结果。
 
-## <a name="bkmk_SSMSBasics"></a>创建一些简单的测试数据
+## <a name="prerequisites"></a>必要條件
 
-通过运行以下 T-SQL 语句来创建测试数据的一个小型表：
+上一个快速入门中， [Hello World R 和 SQL 中](rtsql-using-r-code-in-transact-sql-quickstart.md)、 提供的信息和链接设置为本快速入门所需的 R 环境。
+
+<a name="bkmk_SSMSBasics"></a>
+
+## <a name="create-some-simple-test-data"></a>创建一些简单的测试数据
+
+通过运行以下 T-SQL 语句来创建小型测试数据的表：
 
 ```sql
 CREATE TABLE RTestData ([col1] int not null) ON [PRIMARY]
@@ -39,11 +46,8 @@ SELECT * FROM RTestData
 
 **结果**
 
-|col1|
-|------|
-|*1*|
-|*10*|
-|*100*|
+![RTestData 表的内容](media/quickstart-r-working-input-outputs-results-1.png)
+
 
 ## <a name="get-the-same-data-using-r-script"></a>使用 R 脚本获取相同的数据
 
@@ -57,7 +61,7 @@ EXECUTE sp_execute_external_script
     WITH RESULT SETS (([NewColName] int NOT NULL));
 ```
 
-它从表中获取的数据，使 R 运行时，通过一次往返过程并返回具有列名称，值*NewColName*。
+它从表中获取数据，使 R 运行时，通过一次往返过程并返回具有列名称，值*NewColName*。
 
 **结果**
 
@@ -66,7 +70,6 @@ EXECUTE sp_execute_external_script
 
 **注释**
 
-+ 在 Management Studio 中，表格结果在“值”窗格中返回。 R 运行时返回的消息在“消息”窗格中提供。
 + *@language* 参数定义本例中要调用 R 的语言扩展。
 + 在 *@script* 参数中，定义要传递给 R 运行时的命令。 必须以 Unicode 文本形式将整个 R 脚本封装在此参数中。 还可将文本添加到 **nvarchar** 类型的变量并调用该变量。
 + 查询返回的数据将传递给 R 运行时，后者将数据以数据框架的形式返回给 SQL Server。
@@ -90,25 +93,24 @@ EXECUTE sp_execute_external_script
 
 未收到错误，"对象 SQL\_中找不到"？ 这是因为 R 区分大小写！ 在本示例中，R 脚本使用变量 *SQL_in* 和 *SQL_out*，但存储过程的参数使用变量 *SQL_In* 和 *SQL_Out*。
 
-这是因为 R 是区分大小写。 在本示例中，R 脚本使用变量 *SQL_in* 和 *SQL_out*，但存储过程的参数使用变量 *SQL_In* 和 *SQL_Out*。
-请尝试更正**仅** *SQL_In*变量，然后重新运行存储过程。
+请尝试纠正**仅** *SQL_In*变量*@script* ，然后重新运行存储的过程。
 
-现在你获取**不同**错误：
+现在，您得到**不同**错误：
 
 ```Error
 EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.
 ```
 
-我们要显示此错误因为你可能需要通常在测试新的 R 代码时看到它。 这意味着，R 脚本已成功运行，但 SQL Server 接收到任何数据，或接收到错误或意外的数据。
+我们显示此错误因为你可能需要经常测试新的 R 代码时看到它。 这意味着，R 脚本已成功运行，但 SQL Server 接收到任何数据，或接收到错误或意外数据。
 
 在本例中，输出架构（以 **WITH** 开头的行）指定应返回一个整数数据列，但由于 R 将数据放在不同的变量中，因此未向 SQL Server 返回任何结果，从而发生该错误。 若要修复此错误，更正第二个变量名称。
 
-**请记住这些要求 ！**
+**请注意，这些要求 ！**
 
 - 变量名称必须遵循有效 SQL 标识符的规则。
 - 参数的顺序非常重要。 必须先指定必需的参数 *@input_data_1* 和 *@output_data_1*，然后才能使用可选参数 *@input_data_1_name* 和 *@output_data_1_name*。
 - 仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，可以从 R 代码内调用其他数据集，并且除数据集以外，还可以返回其他类型的输出。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。 本教程稍后提供了一个简单的示例。
-- `WITH RESULT SETS` 语句定义数据的架构，为 SQL Server 提供优势。 对于从 R.返回的每个列，需要提供 SQL 兼容的数据类型。也可以使用架构定义来提供新的列名；不需要使用 R data.frame 中的列名。 在某些情况下，此子句是可选的;尝试省略它，请参阅会发生什么情况。
+- `WITH RESULT SETS` 语句定义数据的架构，为 SQL Server 提供优势。 对于从 R.返回的每个列，需要提供 SQL 兼容的数据类型。也可以使用架构定义来提供新的列名；不需要使用 R data.frame 中的列名。 在某些情况下，此子句是可选的;请尝试省略它，看看效果。
 
 ## <a name="generate-results-using-r"></a>使用 R 生成结果
 
@@ -125,13 +127,11 @@ EXECUTE sp_execute_external_script
 
 **结果**
 
-*Col1*
-*你好*
-<code>   </code>
-*world*
+![使用查询结果@script作为输入](media/quickstart-r-working-input-outputs-results-3.png)
 
-## <a name="next-lesson"></a>下一课
+## <a name="next-steps"></a>后续步骤
 
-接下来将探讨在 R 与 SQL Server 之间传递数据时可能会遇到的一些问题，例如，R 与 SQL 之间表格数据的隐式转换和差异。
+检查某些 R 和 SQL Server 之间传递数据，例如隐式转换和表格数据的 R 和 SQL 之间的差异时可能遇到的问题。
 
-[R 和 SQL 的数据类型与数据对象](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+> [!div class="nextstepaction"]
+> [快速入门： 处理的数据类型和对象](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)

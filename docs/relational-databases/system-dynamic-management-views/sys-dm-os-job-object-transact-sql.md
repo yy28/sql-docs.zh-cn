@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968759"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164208"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968759"
 返回单个行，描述用于管理 SQL Server 进程，以及在作业对象级别某些资源使用情况统计信息的作业对象的配置。 如果未在作业对象中运行 SQL Server，则返回空集。 
 
 作业对象是实现在操作系统级别的 CPU、 内存和 IO 资源调控的 Windows 构造。 有关作业对象的详细信息，请参阅[作业对象](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)。 
-
-> [!NOTE]
-> Sys.dm_os_job_object DMV 可能目前显示为 sys.dm_job_object。 这是临时：`sys.dm_os_job_object`将是永久此 DMV 的名称。 
   
 |“列”|数据类型|Description|  
 |-------------|---------------|-----------------|  
@@ -60,7 +57,7 @@ ms.locfileid: "37968759"
 |peak_process_memory_used_mb|**bigint**|创建作业对象后，已使用的内存，单位为 MB，一个作业对象，如 SQL Server 中处理的最大资源量。| 
 |peak_job_memory_used_mb|**bigint**|已创建的内存，单位为 MB，因为作业对象累积使用作业对象中的所有进程的最大资源量。|
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 在 SQL 数据库托管实例，都需要`VIEW SERVER STATE`权限。 在 SQL 数据库上需要`VIEW DATABASE STATE`数据库中的权限。  
  
 ## <a name="see-also"></a>请参阅  

@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 33754b46bbad95b3194ca9e8c0087e93bba2d93c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970713"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087269"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,15 +47,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ [  **\@tsql =** ] **'***Transact SQL_batch*****  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
- [  **@params =** ] **N'***参数*****  
- @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)**。  
+ [  **\@params =** ] **N'***参数*****  
+ \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)**。  
   
- 是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 在语句中指定的每个参数必须定义在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 为此参数默认值为 NULL。  
+ 是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 在语句中指定的每个参数必须定义在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，\@参数不是必需的。 为此参数默认值为 NULL。  
   
- [ **@browse_information_mode =** ] *tinyint*  
+ [  **\@browse_information_mode =** ] *tinyint*  
  指定是否返回其他键列和源表信息。 如果设置为 1，则分析每个查询，就好像它在查询中包含 FOR BROWSE 选项一样。 将返回其他键列和源表信息。  
   
 -   如果设置为 0，则无信息返回。  
@@ -121,11 +121,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**在任何以下情况下返回错误。  
   
--   如果输入@tsql不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 通过解析和分析确定有效性[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 在查询优化期间或在执行期间由批处理导致的任何错误时确定不会考虑是否[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理是否有效。  
+-   如果输入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 通过解析和分析确定有效性[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 在查询优化期间或在执行期间由批处理导致的任何错误时确定不会考虑是否[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理是否有效。  
   
--   如果@params不为 NULL 且包含一个字符串，不是语法上有效声明字符串参数，或如果它包含一个字符串，其用于声明任何参数不止一次。  
+-   如果\@params 不为 NULL，并且包含一个字符串，不是语法上有效声明字符串参数，或如果它包含一个字符串，其用于声明任何参数不止一次。  
   
--   如果输入[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理中声明的参数声明具有相同名称的本地变量@params。  
+-   如果输入[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理中声明的参数声明具有相同名称的本地变量\@params。  
   
 -   如果该语句将使用某个临时表。  
   
@@ -159,8 +159,8 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**不支持间接递归。  
   
-## <a name="permissions"></a>权限  
- 需要具有执行权限@tsql参数。  
+## <a name="permissions"></a>Permissions  
+ 需要具有执行权限\@tsql 自变量。  
   
 ## <a name="examples"></a>示例  
   

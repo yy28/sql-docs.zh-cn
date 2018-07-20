@@ -1,25 +1,23 @@
 ---
 title: 已更新-SQL Operations Studio 文件 |Microsoft 文件
-description: 显示更新内容的 SQL 操作 Studio 中最近更改文档的代码的段。
+description: 显示文档中最近更改，为 SQL Operations Studio 的更新内容片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: ssops
 ms.date: 04/28/2018
-ms.openlocfilehash: 074ed6176480655d9d87a55eb87cbb76b3011b7e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 84ee3d7d346c8cddbf5251e0d63bb2ae222defb3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686517"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083449"
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新的和最近的更新： SQL 操作 Studio 文档
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新的和最近更新的文章： SQL Operations Studio 文档
 
 
 
@@ -31,8 +29,8 @@ ms.locfileid: "32686517"
 
 
 
-- *日期范围的更新：* &nbsp; **2018年-02-03** &nbsp;到&nbsp; **2018年-04-28**
-- *主题区域：* &nbsp; **SQL 操作 Studio**。
+- 更新日期范围：2018-02-03 到 2018-04-28&nbsp;&nbsp;&nbsp;
+- *主题区域：* &nbsp; **SQL Operations Studio**。
 
 
 
@@ -44,7 +42,7 @@ ms.locfileid: "32686517"
 单击以下链接可跳转到最近添加的新文章。
 
 
-- [扩展的功能的 SQL 操作 Studio （预览版）](extensions.md)
+- [扩展 SQL Operations Studio （预览版） 的功能](extensions.md)
 
 <!-- GeneMi:  I MANUALLY replace the ugly !INCLUDE with the name from inside the includes file. -->
 
@@ -71,8 +69,8 @@ ms.locfileid: "32686517"
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [下载并安装 SQL 操作 Studio （预览版）](#TitleNum_1)
-2. [SQL 操作 Studio （预览版） 发行说明](#TitleNum_2)
+1. [下载并安装 SQL Operations Studio （预览版）](#TitleNum_1)
+2. [SQL Operations Studio （预览版） 发行说明](#TitleNum_2)
 3. [教程： 添加*五个最慢的查询*示例小组件设为数据库仪表板](#TitleNum_3)
 
 
@@ -84,9 +82,9 @@ ms.locfileid: "32686517"
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [下载并安装 SQL 操作 Studio （预览版）](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [下载并安装 SQL Operations Studio （预览版）](download.md)
 
-*更新时间： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
+更新日期：2018-04-25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一篇](#TitleNum_2))
 
 <!-- Source markdown line 64.  ms.author= "sstein".  -->
 
@@ -125,9 +123,9 @@ ms.locfileid: "32686517"
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2.&nbsp; [SQL 操作 Studio （预览版） 发行说明](release-notes.md)
+### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2.&nbsp; [SQL Operations Studio （预览版） 发行说明](release-notes.md)
 
-*更新时间： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
+*更新日期： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
 
 <!-- Source markdown line 20.  ms.author= "sstein".  -->
 
@@ -141,26 +139,26 @@ ms.locfileid: "32686517"
 **[下载年 4 月公共预览版]**
 
 
-**年 4 月 2018 （年 4 月公共预览版）**
+**2018 年 4 月 （年 4 月公共预览版）**
 
 
-发布日期： 2018 年 4 月 25，版本： 0.28.6
+发布日期： 2018 年 4 月 25 日版本： 0.28.6
 
 *年 4 月公共预览版*包含 bug 修复和改进。
 
-- 对 SQL 代理预览版扩展的改进。
-- 改进了大型和受保护的文件是否支持保存受保护的管理员和 > 256 M SQL 操作 Studio 中的文件。
-- 集成终端的拆分，若要同时使用多个打开终端。
-- 减少的安装磁盘上的文件计数资源占用打印更快的安装和启动时间。
+- SQL 代理预览版扩展的改进。
+- 改进了大型和受保护的文件是否支持保存受保护的管理员和 > 在 SQL Operations Studio 256 亿个文件。
+- 集成的终端中拆分，以在一次处理多个打开终端。
+- 减少的安装磁盘上的文件计数英尺打印速度更快的安装和启动时间。
 - 继续修复 GitHub 问题：
-   - 修复[发出 37](https://github.com/Microsoft/sqlopsstudio/issues/37)： 当图表查看器引发错误时，会发生意外的行为。
-   - 修复[发出 462](https://github.com/Microsoft/sqlopsstudio/issues/462)： 功能请求： 服务器组，默认情况下扩展的选项。
-   - 修复[发出 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense 的更新命令的错误建议。
-   - 修复[发出 967](https://github.com/Microsoft/sqlopsstudio/issues/967)： 预期查询计划时在结果网格中选择 XML 显示计划。
+   - 修复[发出 37](https://github.com/Microsoft/sqlopsstudio/issues/37)： 时，图表查看器引发错误，会发生意外的行为。
+   - 修复[发出 462](https://github.com/Microsoft/sqlopsstudio/issues/462)： 功能请求： 默认情况下展开服务器组的选项。
+   - 修复[发出 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense 的更新命令的糟糕的建议。
+   - 修复[发出 967](https://github.com/Microsoft/sqlopsstudio/issues/967)： 预期的查询计划时在结果网格中选择 XML 显示计划。
    - 修复[发出 1023年](https://github.com/Microsoft/sqlopsstudio/issues/1023)： 从 flyfishingdba 添加 ms_foreachdb 调用的方括号。
    - 修复[发出 1048年](https://github.com/Microsoft/sqlopsstudio/issues/1048)： 预登录 SSL/TLS 握手错误。
-   - 修复[发出 1050年](https://github.com/Microsoft/sqlopsstudio/issues/1050)： 显示错误之前查看清除见解。
-   - 修复[发出 1057年](https://github.com/Microsoft/sqlopsstudio/issues/1057)： 还原和新的查询操作，在资源管理器小组件已断开。
+   - 修复[发出 1050年](https://github.com/Microsoft/sqlopsstudio/issues/1050)： 清除 insights 查看之前显示错误。
+   - 修复[发出 1057年](https://github.com/Microsoft/sqlopsstudio/issues/1057)： 还原和资源管理器小组件中的新查询操作被中断。
 
 
 
@@ -174,7 +172,7 @@ ms.locfileid: "32686517"
 
 ### <a name="3-nbsp-tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboardtutorial-qds-sql-servermd"></a>3.&nbsp; [教程： 添加*五个最慢的查询*示例小组件设为数据库仪表板](tutorial-qds-sql-server.md)
 
-*更新时间： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2))
+更新日期：2018-04-25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_2))
 
 <!-- Source markdown line 94.  ms.author= "erickang".  -->
 
@@ -219,33 +217,33 @@ ms.locfileid: "32686517"
 
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新 + 更新 (11 + 6): &nbsp; &nbsp; **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (18 + 0): &nbsp; &nbsp; **Analysis Services for SQL**文档](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (218 + 14):**连接到 SQL**文档](../connect/new-updated-connect.md)
-- [新 + 更新 (14 + 0): &nbsp; &nbsp; **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (3 + 3): &nbsp; &nbsp; **sql Linux**文档](../linux/new-updated-linux.md)
-- [新 + 更新 (7 + 10): &nbsp; &nbsp; **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (0 + 2): &nbsp; &nbsp; **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (1 + 3): &nbsp; &nbsp; **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
-- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文档](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文档](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
-- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL 的工具**文档](../tools/new-updated-tools.md)
+- [新文章和更新的文章 (11+6)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (18+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (218+14)：连接到 SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (14+0)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (3+2)： SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (3+3)： Linux for SQL 文档](../linux/new-updated-linux.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (7+10)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (0+2)：Reporting Services for SQL 文档](../reporting-services/new-updated-reporting-services.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+3)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (2+3)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (5+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)&nbsp; &nbsp;
+- [新文章和更新的文章 (1+1)：SQL 工具文档](../tools/new-updated-tools.md)&nbsp; &nbsp;
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
 
-- [新 + 更新 (0 + 0): **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新 + 更新 (0 + 0): **sql Data Quality Services**文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
-- [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）** 文档](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
+- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新 + 更新 (0 + 0): **SQL 的示例**文档](../samples/new-updated-samples.md)
 - [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)** 文档](../ssma/new-updated-ssma.md)
-- [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
+- [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 

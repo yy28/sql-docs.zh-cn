@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974492"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085469"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @tsql =] ' Transact SQL_batch  
+ [ \@tsql =] ' Transact SQL_batch  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 Transact SQL_batch 可能 nvarchar(n) 或 nvarchar （max）。  
   
- [ @params =] N'parameters'  
- *@params* 对于 TRANSACT-SQL 批，这类似于 sp_executesql 的参数提供声明字符串。 参数可能是 nvarchar(n) 或 nvarchar （max）。  
+ [ \@params =] N'parameters'  
+ *\@params* TRANSACT-SQL 批，类似于 sp_executesql 的参数提供声明字符串。 参数可能是 nvarchar(n) 或 nvarchar （max）。  
   
- 是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)]_batch。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在语句中指定的每个参数中定义*@params*。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数， *@params*不是必需的。 为此参数默认值为 NULL。  
+ 是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)]_batch。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在语句中指定的每个参数中定义 *\@params*。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，  *\@params*不是必需的。 为此参数默认值为 NULL。  
   
 ## <a name="return-value"></a>返回值  
  0 表示成功。 任何其他指示失败。  
@@ -82,7 +82,7 @@ sp_describe_parameter_encryption
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|在结果集中的行的 id。|  
-|**parameter_name**|**sysname**|其中一个参数中指定的名称*@params*参数。|  
+|**parameter_name**|**sysname**|其中一个参数中指定的名称 *\@params*参数。|  
 |**column_encryption_algorithm**|**tinyint**|指示为列，该参数配置的加密算法代码对应于。 当前支持的值为： 2 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
 |**column_encryption_type**|**tinyint**|代码，用于指示为列，该参数配置的加密类型对应于。 支持的值为：<br /><br /> 0 – （未加密列） 的纯文本<br /><br /> 1 – 随机加密<br /><br /> 2 – 确定性加密。|  
 |**column_encryption_key_ordinal**|**int**|设置中的第一个结果行的代码。 被引用的行描述为列配置的列加密密钥，该参数对应于。|  
@@ -91,7 +91,7 @@ sp_describe_parameter_encryption
 ## <a name="remarks"></a>Remarks  
  一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端驱动程序，支持始终加密，会自动调用**sp_describe_parameter_encryption**检索加密的参数化查询，应用程序发出的元数据。 随后，驱动程序使用的加密元数据与使用 Always Encrypted 保护的数据库列相对应的参数的值进行加密，并将替换为具有加密的应用程序提交的纯文本参数值之前将查询发送到数据库引擎的参数值。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**查看任意列加密密钥定义**并**查看任意列主密钥定义**数据库中的权限。  
   
 ## <a name="examples"></a>示例  
@@ -160,7 +160,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|@shouldalert|@c1|@shouldalert|@shouldalert|  
+|@shouldalert|\@c1|@shouldalert|@shouldalert|  
   
  （继续的结果。）  
   

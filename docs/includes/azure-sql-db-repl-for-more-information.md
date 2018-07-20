@@ -1,0 +1,1 @@
+Azure SQL 数据库上的发布服务器和分发服务器数据库要求[托管实例](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)有关详细信息，请参阅[与 Azure SQL 数据库复制](http://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database)。

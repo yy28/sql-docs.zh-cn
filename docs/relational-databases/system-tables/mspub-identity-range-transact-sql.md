@@ -1,5 +1,5 @@
 ---
-title: MSpub_identity_range (Transact SQL) |Microsoft 文档
+title: MSpub_identity_range (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpub_identity_range system table
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e74fd6c4f1352a98151beb525304cec2a518c51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11da4746a138b2deafd990ef237ecfb4537cbce4
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005195"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101895"
 ---
 # <a name="mspubidentityrange-transact-sql"></a>MSpub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "33005195"
 |**objid**|**int**|包含由复制管理的标识列的表的 ID。|  
 |**范围**|**bigint**|控制将在调整的订阅中分配的连续标识值的范围大小。|  
 |**pub_range**|**bigint**|控制将在调整的发布中分配的连续标识值的范围大小。|  
-|**current_pub_range**|**bigint**|发布使用的当前范围。 它可以不同于*pub_range*如果更改了所后查看**sp_changearticle**和下一步的范围调整之前。|  
-|**threshold**|**int**|用于控制分发代理何时分配新标识范围的百分比值。 如果在中指定值的百分比*阈值*是使用，在分发代理程序创建的新标识范围。|  
+|**current_pub_range**|**bigint**|发布使用的当前范围。 它可以不同于*pub_range*如果更改后查看**sp_changearticle**和下一步的范围调整前。|  
+|**threshold**|**int**|用于控制分发代理何时分配新标识范围的百分比值。 在指定的值的百分比*阈值*是使用，分发代理将创建一个新的标识范围。|  
 |**last_seed**|**bigint**|当前范围的下限。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

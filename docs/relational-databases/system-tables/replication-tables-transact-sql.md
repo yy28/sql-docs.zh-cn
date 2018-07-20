@@ -1,5 +1,5 @@
 ---
-title: 复制表 (Transact SQL) |Microsoft 文档
+title: 复制表 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1746bf67f4858a97d91e5e7f7740449d14126b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 919b11f4d9b5e71fe9ff0fc084ce4d591c807329
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012824"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103435"
 ---
 # <a name="replication-tables-transact-sql"></a>复制表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  复制系统表支持复制拓扑。 如果将用户数据库配置为发布服务器或订阅服务器，则复制会将系统表添加到数据库中。 从复制拓扑删除用户数据库时，将删除这些表。 有关通用规则有关使用系统表，请参阅[系统表&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)。  
+  复制系统表支持复制拓扑。 如果将用户数据库配置为发布服务器或订阅服务器，则复制会将系统表添加到数据库中。 从复制拓扑删除用户数据库时，将删除这些表。 通用规则有关使用系统表，请参阅[系统表&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)。  
   
 ## <a name="replication-tables"></a>复制表  
  下面是复制所使用的系统表的列表，列表按数据库分组。  
@@ -133,7 +133,7 @@ ms.locfileid: "33012824"
 |[MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)|[sysmergesubsetfilters](../../relational-databases/system-tables/sysmergesubsetfilters-transact-sql.md)|  
 |[MSmerge_replinfo](../../relational-databases/system-tables/msmerge-replinfo-transact-sql.md)|[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  

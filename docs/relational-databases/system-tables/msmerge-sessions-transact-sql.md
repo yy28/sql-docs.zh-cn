@@ -1,5 +1,5 @@
 ---
-title: MSmerge_sessions (Transact SQL) |Microsoft 文档
+title: MSmerge_sessions (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dded9db18b0a3048c3a4eb8a56869946fca8a1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1b825cb12e7d95615120b1418061b6106047c46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010724"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103325"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_sessions**表包含有的前几个合并代理作业会话结果的历史记录行。 每运行一次合并代理，都会在表中添加一个新行。 此表存储在分发数据库中。  
+  **MSmerge_sessions**表包含以前的合并代理作业会话结果的历史记录行。 每运行一次合并代理，都会在表中添加一个新行。 此表存储在分发数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|合并代理作业会话的 ID。|  
 |**agent_id**|**int**|合并代理的 ID。|  
-|**start_time**|**datetime**|作业的时间执行开始。|  
+|**start_time**|**datetime**|已开始次执行作业。|  
 |**end_time**|**datetime**|结束执行作业的时间。|  
 |**duration**|**int**|此作业会话的累计持续时间（以秒为单位）。|  
 |**delivery_time**|**int**|应用一批更改所花费的秒数。|  
@@ -64,13 +64,13 @@ ms.locfileid: "33010724"
 |**download_rows_retried**|**int**|下载到订阅服务器并被重试的行数。|  
 |**schema_changes**|**int**|会话过程中应用的架构更改数。|  
 |**metadata_rows_cleanedup**|**int**|会话过程中清除的元数据行数。|  
-|**runstatus**|**int**|运行状态：<br /><br /> **1** = start。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
+|**runstatus**|**int**|运行状态：<br /><br /> **1** = 开始。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
 |**estimated_upload_changes**|**int**|需要在发布服务器上应用的估计更改数。|  
 |**estimated_download_changes**|**int**|需要在订阅服务器上应用的估计更改数。|  
-|**连接类型**|**int**|上载过程中使用的连接：<br /><br /> **1** = 局域网 (LAN)。<br /><br /> **2** = 拔号网络连接。<br /><br /> **3** = web 同步。|  
+|**连接类型**|**int**|上载过程中使用的连接：<br /><br /> **1** = 局域网 (LAN)。<br /><br /> **2** = 拨号网络连接。<br /><br /> **3** = web 同步。|  
 |**timestamp**|**timestamp**|该表的时间戳列。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

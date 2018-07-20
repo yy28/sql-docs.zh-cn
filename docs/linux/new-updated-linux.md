@@ -1,23 +1,23 @@
 ---
-title: 已更新-Linux 文档上的 SQL Server |Microsoft 文档
-description: 显示有关最近更改中的文档，在 Linux 上的 Microsoft SQL server 的更新内容的代码段。
+title: 已更新-Linux 文档上的 SQL Server |Microsoft Docs
+description: 显示文档中最近更改，在 Linux 上的 Microsoft SQL server 的更新内容片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.date: 04/28/2018
-ms.openlocfilehash: 3b7ed71be06ee7e485236fa0e244e47bb77b3b70
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f1e437e0b9d4c2940293280ee2c5529da85e6c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334011"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082479"
 ---
-# <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的和最近的更新： Linux 文档上的 SQL Server
+# <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的和最近更新更新： Linux 文档上的 SQL Server
 
 
 
@@ -30,7 +30,7 @@ ms.locfileid: "35334011"
 
 
 - 更新日期范围：2018-02-03 到 2018-04-28&nbsp;&nbsp;&nbsp;
-- *主题区域：* &nbsp; **在 Linux 上的 Microsoft SQL Server**。
+- *主题区域：* &nbsp; **Linux 上的 Microsoft SQL Server**。
 
 
 
@@ -42,9 +42,9 @@ ms.locfileid: "35334011"
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [有关在 Linux 上的 SQL Server 的 active Directory 身份验证](sql-server-linux-active-directory-auth-overview.md)
+1. [Linux 上的 SQL Server 的 active Directory 身份验证](sql-server-linux-active-directory-auth-overview.md)
 2. [配置 SQL Server Always On 可用性组在 Windows 和 Linux （跨平台） 上](sql-server-linux-availability-group-cross-platform.md)
-3. [操作始终在 Linux 上的可用性组](sql-server-linux-availability-group-operate-ha.md)
+3. [始终对 Linux 上的可用性组](sql-server-linux-availability-group-operate-ha.md)
 
 
 
@@ -70,9 +70,9 @@ ms.locfileid: "35334011"
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [配置存储库安装和升级在 Linux 上的 SQL Server](#TitleNum_1)
-2. [使用 mssql conf 工具在 Linux 上配置 SQL Server](#TitleNum_2)
-3. [在 Linux 上的 SQL Server 2017 的发行说明](#TitleNum_3)
+1. [配置安装和升级 Linux 上的 SQL Server 存储库](#TitleNum_1)
+2. [使用 mssql-conf 工具配置 Linux 上的 SQL Server](#TitleNum_2)
+3. [Linux 上的 SQL Server 2017 的发行说明](#TitleNum_3)
 
 
 
@@ -83,7 +83,7 @@ ms.locfileid: "35334011"
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1.&nbsp; [配置存储库安装和升级在 Linux 上的 SQL Server](sql-server-linux-change-repo.md)
+### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1.&nbsp; [配置安装和升级 Linux 上的 SQL Server 存储库](sql-server-linux-change-repo.md)
 
 更新日期：2018-04-25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一篇](#TitleNum_2))
 
@@ -102,9 +102,9 @@ ms.locfileid: "35334011"
    sudo cat /etc/yum.repos.d/mssql-server.repo
 ```
 
-- **名称**属性是配置的存储库。 此文章的 [存储库] 部分中的表，可以识别它。
+- **名称**属性是配置存储库。 可以确定它的这篇文章 [存储库] 部分中的表。
 
-**删除旧的存储库 (RHEL)**
+**删除旧存储库 (RHEL)**
 
 如有必要，删除旧的存储库使用以下命令。
 
@@ -116,7 +116,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 **配置新的存储库 (RHEL)**
 
-配置新的存储库，以用于 SQL Server 安装和升级。 请使用以下命令可配置的所选的存储库。
+配置新的存储库，用于 SQL Server 安装和升级。 使用以下命令之一配置所选存储库。
 
 | 存储库 | Command |
 |---|---|
@@ -127,7 +127,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 使用以下步骤在 SLES 上配置存储库。
 
-**检查有以前配置的存储库 (SLES)**
+**对于以前配置的存储库 (SLES) 检查**
 
 首先，验证是否已注册的 SQL Server 存储库。
 
@@ -137,9 +137,9 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
    sudo zypper info mssql-server
 ```
 
-- **存储库**属性是配置的存储库。 此文章的 [存储库] 部分中的表，可以识别它。
+- **存储库**属性是配置存储库。 可以确定它的这篇文章 [存储库] 部分中的表。
 
-**删除旧的存储库 (SLES)**
+**删除旧存储库 (SLES)**
 
 如有必要，删除旧的存储库。 使用以下命令基于以前配置的存储库的类型之一。
 
@@ -157,9 +157,9 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2.&nbsp; [使用 mssql conf 工具在 Linux 上配置 SQL Server](sql-server-linux-configure-mssql-conf.md)
+### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2.&nbsp; [使用 mssql-conf 工具配置 Linux 上的 SQL Server](sql-server-linux-configure-mssql-conf.md)
 
-*更新时间： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
+*更新日期： 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
 
 <!-- Source markdown line 151.  ms.author= jroth.  -->
 
@@ -174,7 +174,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 **<a id="masterdatabasedir"></a> 更改默认 master 数据库文件目录位置**
 
 
-**Filelocation.masterdatafile**和**filelocation.masterlogfile**设置 SQL Server 引擎查找 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。
+**Filelocation.masterdatafile**并**filelocation.masterlogfile**设置 SQL Server 引擎中查找的 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。
 
 若要更改这些设置，请使用以下步骤：
 
@@ -184,14 +184,14 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
    sudo mkdir /tmp/masterdatabasedir
 ```
 
-- 更改所有者和到的目录组**mssql**用户：
+- 更改所有者和组的目录**mssql**用户：
 
 ```
    sudo chown mssql /tmp/masterdatabasedir
    sudo chgrp mssql /tmp/masterdatabasedir
 ```
 
-- 使用 mssql conf 更改使用的主数据和日志文件的默认 master 数据库目录**设置**命令：
+- 使用 mssql conf 来更改与 master 数据和日志文件的默认 master 数据库目录**设置**命令：
 
 ```
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
@@ -218,7 +218,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ```
 
 > [!NOTE]
-> 如果 SQL Server 找不到指定目录中的 master.mdf 和 mastlog.ldf 文件，将在指定的目录中，自动创建模板化副本的系统数据库和 SQL Server 已成功启动。 但是，元数据，例如用户数据库、 服务器登录名、 服务器证书、 加密密钥、 SQL 代理作业或旧 SA 登录密码将不会在新的 master 数据库中更新。 你将需要停止 SQL Server 并重将你的旧 master.mdf 和 mastlog.ldf 移动到新的指定位置，然后启动 SQL Server 以继续使用现有元数据。
+> 如果 SQL Server 无法在指定的目录中找到 master.mdf 和 mastlog.ldf 文件，将在指定的目录中，自动创建模板化副本的系统数据库和 SQL Server 已成功启动。 但是，不会在新的 master 数据库中更新元数据，例如用户数据库、 服务器登录名、 服务器证书、 加密密钥、 SQL 代理作业或旧的 SA 登录名密码。 你将需要停止 SQL Server 并将你的旧 master.mdf 和 mastlog.ldf 移动到新的指定位置并启动 SQL Server 以继续使用现有的元数据。
 
 
 
@@ -230,7 +230,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-release-notes-for-sql-server-2017-on-linuxsql-server-linux-release-notesmd"></a>3.&nbsp; [在 Linux 上的 SQL Server 2017 的发行说明](sql-server-linux-release-notes.md)
+### <a name="3-nbsp-release-notes-for-sql-server-2017-on-linuxsql-server-linux-release-notesmd"></a>3.&nbsp; [Linux 上的 SQL Server 2017 的发行说明](sql-server-linux-release-notes.md)
 
 更新日期：2018-04-25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一篇](#TitleNum_2))
 
@@ -245,20 +245,20 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 - [启用 SQL Server 代理]
 
-**<a id="CU6"></a> CU6 (年 4 月 2018)**
+**<a id="CU6"></a> CU6 (2018 年 4 月)**
 
 
-这是 SQL Server 自 2017 年的累积更新 6 (CU6) 版本。 对于此版本的 SQL Server 引擎版本是 14.0.3025.34。 有关修补程序和此版本中的改进的信息，请参阅[ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)。
+这是 SQL Server 2017 累积更新 6 (CU6) 版本。 对于此版本的 SQL Server 引擎版本是 14.0.3025.34。 有关修补程序和此版本中的改进的信息，请参阅[ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)。
 
 **包的详细信息**
 
 
-对于手动或脱机包安装，你可以下载的 RPM 包和 Debian 包使用下表中的信息：
+对于手动或脱机包安装，您可以下载与下表中的信息的 RPM 和 Debian 包：
 
 | “包” | 包版本 | 下载 |
 |-----|-----|-----|
 | Red Hat RPM 包 | 14.0.3025.34-3 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
-| SLES RPM 包 | 14.0.3025.34-3 | [mssql server 引擎 RPM 程序包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
+| SLES RPM 包 | 14.0.3025.34-3 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
 | Ubuntu 16.04 Debian 包 | 14.0.3025.34-3 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 

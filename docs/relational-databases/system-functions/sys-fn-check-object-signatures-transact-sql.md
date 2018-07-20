@@ -25,12 +25,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1473ca4fd7f29992c74c035c9ce649dfc96c5d0b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015149"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088089"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,17 +50,17 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>参数  
- {@*类*}  
+ {'\@*类*}  
  标识提供的指纹类型：  
   
 -   “证书”  
   
 -   “非对称密钥”  
   
- @*类*是**sysname**。  
+ \@*类*是**sysname**。  
   
- {@*指纹*}  
- 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 @*指纹*是**varbinary(20)**。  
+ { \@*指纹*}  
+ 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 \@*指纹*是**varbinary(20)**。  
   
 ## <a name="tables-returned"></a>返回的表  
  下表列出的列的**fn_check_object_signatures**返回。  
@@ -75,7 +75,7 @@ fn_ check_object_signatures (
 ## <a name="remarks"></a>Remarks  
  使用**fn_check_object_signatures**确认，恶意用户未篡改对象。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对证书或非对称密钥拥有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

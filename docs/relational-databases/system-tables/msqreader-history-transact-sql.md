@@ -1,5 +1,5 @@
 ---
-title: MSqreader_history (Transact SQL) |Microsoft 文档
+title: MSqreader_history (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 621b446ea1310becc626d35f53a1a9ff523c39d5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006014"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101855"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSqreader_history**表中包含与本地分发服务器关联的队列读取器代理程序历史记录行数。 此表存储在分发数据库中。  
+  **MSqreader_history**表包含与本地分发服务器关联的队列读取器代理历史记录行。 此表存储在分发数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|队列读取器代理的 ID。|  
 |**publication_id**|**int**|发布 ID。|  
-|**runstatus**|**int**|代理的运行状态：<br /><br /> **1** = start。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
+|**runstatus**|**int**|代理的运行状态：<br /><br /> **1** = 开始。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
 |**start_time**|**datetime**|代理会话开始的日期和时间。|  
 |**time**|**datetime**|最后记录消息的日期和时间。|  
 |**duration**|**int**|记录的会话活动的占用时间（秒）。|  
@@ -54,10 +54,10 @@ ms.locfileid: "33006014"
 |**transaction_rate**|**float(53)**|事务处理速率。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**subscriberdb**|**sysname**|订阅数据库的名称。|  
-|**error_id**|**int**|如果不是零，数字表示[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误消息。|  
+|**error_id**|**int**|如果不为零，该数字代表[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误消息。|  
 |**timestamp**|**timestamp**|表的时间戳列。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 数据使用 R （SQL 和 R 深入） |Microsoft 文档
+title: 使用 SQL Server 数据使用 R （SQL 和 R 的深入探讨） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e57e94d1d7856bfc9082c1a73a13a5c0a620b5ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202990"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084179"
 ---
-# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>使用 SQL Server 数据使用 R （SQL 和 R 深入）
+# <a name="lesson-1-create-a-database-and-permissions"></a>第 1 课： 创建一个数据库和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+本文属于[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-在本课程中，可以设置环境和添加用于训练模型所需的数据和运行数据的一些快速摘要。 作为过程的一部分，你必须完成这些任务：
+在本课中，设置环境并添加训练模型所需的数据和运行数据的一些快速摘要。 作为过程的一部分，你必须完成这些任务：
   
 - 创建一个新的数据库，用于存储两个 R 模型的培训和评分的数据。
   
@@ -40,9 +40,9 @@ ms.locfileid: "31202990"
 对于本演练中，创建的新数据库中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，并添加具有权限才能写入和读取数据，并运行 R 脚本的 SQL 登录名。
 
 > [!NOTE]
-> 如果你只读取数据，运行 R 脚本的帐户需要选择权限 (**db_datareader**角色) 上指定的数据库。 但是，在本教程中，你必须具有准备数据库，并创建用于保存评分结果的表的 DDL 管理员权限。
+> 如果仅读取数据，运行 R 脚本的帐户需要具有 SELECT 权限 (**db_datareader**角色) 上指定的数据库。 但是，在本教程中，您必须具有 DDL 管理员权限来准备数据库，并创建保存计分结果的表。
 > 
-> 此外，如果您不是数据库所有者，则将需要权限，执行任意外部脚本，才能执行 R 脚本。
+> 此外，如果您不是数据库所有者，您需要的权限，EXECUTE ANY EXTERNAL SCRIPT，才能执行 R 脚本。
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，请选择启用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的实例，右键单击“数据库”，然后选择“新建数据库”。
   
@@ -95,25 +95,25 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     如果不想安装附加的数据库管理工具，可以在控制面板中使用 [ODBC 数据源管理器](https://msdn.microsoft.com/library/ms714024.aspx) 创建到 SQL Server 实例的测试连接。 如果该数据库配置正确，并输入了正确的用户名和密码，则应能看到刚刚创建的数据库，并能将其选为默认数据库。
   
-    如果无法连接到数据库，请验证是否对服务器启用了远程连接以及是否已启用命名管道协议。 这篇文章中提供了其他故障排除提示：[解决连接到 SQL Server 数据库引擎](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)。
+    如果无法连接到数据库，请验证是否对服务器启用了远程连接以及是否已启用命名管道协议。 这篇文章中提供了其他疑难解答提示：[进行故障排除连接到 SQL Server 数据库引擎](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)。
   
 - **表名称具有 datareader 前缀，为什么？**
   
-    当指定为此用户的默认架构**db_datareader**，所有表和其他新的对象，此用户创建的前缀为*架构*名称。 架构像是一个文件夹，可将其添加到数据库来组织对象。 架构还定义了数据库中用户的权限。
+    当指定为此用户的默认架构**db_datareader**，所有表和此用户创建的其他新对象都带有前缀*架构*名称。 架构像是一个文件夹，可将其添加到数据库来组织对象。 架构还定义了数据库中用户的权限。
   
-    与一个特定的用户名相关联的架构时，该用户是_架构所有者_。 创建对象时，将始终在自己的架构中创建，除非明确要求在另一个架构中创建对象。
+    其中一个特定的用户名称相关联的架构时，该用户是_架构所有者_。 创建对象时，将始终在自己的架构中创建，除非明确要求在另一个架构中创建对象。
   
-    例如，如果使用的名称创建一个表`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< a s e _ >.db_datareader。TestData。
+    例如，如果使用名称创建一个表`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< 数据库名称 >.db_datareader。TestData。
   
     出于此原因，数据库可以包含多个具有相同名称的表，前提是这些表属于不同的架构。
    
-    如果你要查找表，并且未指定架构，数据库服务器查找属于您的架构。 因此，访问与登录名关联的架构中的表时，无需指定架构名称。
+    如果你寻找表时，未指定架构，数据库服务器查找你拥有的架构。 因此，访问与登录名关联的架构中的表时，无需指定架构名称。
   
 - **我没有 DDL 权限。是否仍可以运行此教程？**
   
-    是；但你应该请人将数据预加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，并跳过需要创建新表的部分。 需要 DDL 特权的函数被调出本教程中，只要有可能。
+    是；但你应该请人将数据预加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，并跳过需要创建新表的部分。 需要 DDL 权限的函数被调用本教程中，只要有可能。
 
-    此外，要求管理员授予您权限，执行任意外部脚本。 是远程还是通过使用 R 的脚本执行，需要`sp_execute_external_script`。
+    此外，让管理员授予的权限 EXECUTE ANY EXTERNAL SCRIPT。 是否远程中或通过使用执行 R 脚本，需要`sp_execute_external_script`。
 
 ## <a name="next-step"></a>下一步
 

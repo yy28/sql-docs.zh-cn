@@ -1,5 +1,5 @@
 ---
-title: MSmerge_subscriptions (Transact SQL) |Microsoft 文档
+title: MSmerge_subscriptions (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_subscriptions system table
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e985f871e1409dc9e837fcbc192b136365d212d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 825b41072c6114271c295488ff0ff700a8de74c6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004784"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102925"
 ---
 # <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_subscriptions**表包含个合并代理在订阅服务器上所提供服务的每个订阅都占一行。 此表存储在分发数据库中。  
+  **MSmerge_subscriptions**表包含个合并代理在订阅服务器提供服务的每个订阅占一行。 此表存储在分发数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "33004784"
 |**status**|**tinyint**|订阅的状态。|  
 |**subscription_time**|**datetime**|添加订阅的时间。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

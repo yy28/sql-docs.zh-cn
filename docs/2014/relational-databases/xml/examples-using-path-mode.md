@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274623"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084009"
 ---
 # <a name="examples-using-path-mode"></a>示例：使用 PATH 模式
   下面的示例演示如何使用 PATH 模式通过 SELECT 查询生成 XML。 这些查询中有许多都是针对 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
@@ -126,7 +126,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>指定类似 XPath 的列名  
- 在下面的查询中，指定的 `ProductModelID` 列名以“@”开头，且不包含斜杠标记（“/”）。 因此，在生成的 XML 中，将创建包含相应列值的 <`row`> 元素的属性。  
+ 在下面的查询`ProductModelID`指定列名称开头\@，并且不包含斜杠标记 （/）。 因此，在生成的 XML 中，将创建包含相应列值的 <`row`> 元素的属性。  
   
 ```  
 USE AdventureWorks2012;  

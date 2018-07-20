@@ -1,5 +1,5 @@
 ---
-title: MSlogreader_history (Transact SQL) |Microsoft 文档
+title: MSlogreader_history (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8041a5c3dfdb216d939ef5b99e22b36c0781eda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: def5bc1d69a3d5332f96752fcd5e6b1eaedff08e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005834"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103095"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSlogreader_history**表中包含与本地分发服务器关联的日志读取器代理程序历史记录行数。 此表存储在分发数据库中。  
+  **MSlogreader_history**表包含与本地分发服务器关联的日志读取器代理历史记录行。 此表存储在分发数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "33005834"
 |**duration**|**int**|消息会话的持续时间（秒）。|  
 |**注释**|**nvarchar(255)**|消息文本。|  
 |**xact_seqno**|**varbinary(16)**|上次处理的事务序列号。|  
-|**delivery_time**|**int**|时间第一个事务将被传递。|  
+|**delivery_time**|**int**|传递时第一个事务。|  
 |**delivered_transactions**|**int**|会话中传递的事务总数。|  
 |**delivered_commands**|**int**|在会话中传递的命令总数。|  
 |**average_commands**|**int**|会话中传递的平均命令数。|  
@@ -56,7 +56,7 @@ ms.locfileid: "33005834"
 |**timestamp**|**timestamp**|该表的时间戳列。|  
 |**updateable_row**|**bit**|设置为**1**如果可以覆盖历史记录行。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sysmergesubscriptions (Transact SQL) |Microsoft 文档
+title: sysmergesubscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2af51b3b46c9e4a939106ed32ed378d0d5e6cee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcbe175a186b42c7bfb8e49290c7594e7b9e67d1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013104"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102495"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "33013104"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |subscriber_server|**sysname**|服务器的 ID。 将订阅数据库的复本迁移到其他服务器时，用于将 srvid 字段映射到服务器特定的值。|  
-|db_name|**sysname**|订阅数据库的名称。|  
+|db_name|**sysname**|对订阅数据库的名称。|  
 |pubid|**uniqueidentifier**|从中创建当前订阅的发布 ID。|  
 |datasource_type|**int**|数据源的类型：<br /><br /> **0** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **2** = jet OLE DB。|  
 |subid|**uniqueidentifier**|订阅的唯一标识号。|  
 |replnickname|**binary**|复制的压缩别名。|  
 |replicastate|**uniqueidentifier**|一个唯一标识符，它通过将发布服务器中的值与订阅服务器中的值进行比较来确定以前的同步是否成功。|  
-|status|**tinyint**|订阅的状态：<br /><br /> **0** = 处于非活动状态。<br /><br /> **1** = 活动。<br /><br /> **2** = 删除。|  
+|status|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动状态。<br /><br /> **1** = 活动。<br /><br /> **2** = 已删除。|  
 |subscriber_type|**int**|订阅服务器的类型：<br /><br /> **1** = 全局。<br /><br /> **2** = 本地。<br /><br /> **3** = 匿名。|  
 |subscription_type|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
 |sync_type|**tinyint**|同步类型：<br /><br /> **1** = automatic。<br /><br /> **2** = 不同步。|  
@@ -58,21 +58,21 @@ ms.locfileid: "33013104"
 |sentguid|**uniqueidentifier**|上次发送的生成的唯一 ID。|  
 |schemaversion|**int**|上次接收的架构的编号。|  
 |schemaguid|**uniqueidentifier**|上次接收的架构的唯一 ID。|  
-|last_validated|**datetime**|**Datetime**的上次成功验证的订阅服务器数据。|  
-|attempted_validate|**datetime**|最后一个**datetime**订阅上尝试执行验证。|  
-|last_sync_date|**datetime**|**Datetime**的同步。|  
-|last_sync_status|**int**|订阅状态：<br /><br /> **0** = 所有作业正在等待启动。<br /><br /> **1** = 1 或更多作业正在启动。<br /><br /> **2** = 所有作业已成功执行。<br /><br /> **3** = 至少一个作业正在执行。<br /><br /> **4** = 所有作业计划，并且空闲。<br /><br /> **5** = 至少一个作业正在尝试在上一次失败之后执行。<br /><br /> **6** = 至少一个作业未能成功执行。|  
+|last_validated|**datetime**|**Datetime**的上次成功验证的订阅者数据。|  
+|attempted_validate|**datetime**|上次**datetime**尝试验证的订阅。|  
+|last_sync_date|**datetime**|**Datetime**同步。|  
+|last_sync_status|**int**|订阅状态：<br /><br /> **0** = 所有作业都在等待启动。<br /><br /> **1** = 一个或多个作业正在启动。<br /><br /> **2** = 所有作业都已成功执行。<br /><br /> **3** = 至少一个作业正在执行。<br /><br /> **4** = 所有作业计划和空闲。<br /><br /> **5** = 至少一个作业正在尝试在上一次失败后执行。<br /><br /> **6** = 至少一个作业无法成功执行。|  
 |last_sync_summary|**sysname**|上一个同步结果的说明。|  
-|metadatacleanuptime|**datetime**|最后一个**datetime**过期的元数据已从合并复制系统表中删除。|  
+|metadatacleanuptime|**datetime**|上次**datetime**过期元数据已从合并复制系统表中删除。|  
 |partition_id|**int**|标识订阅所属的预先计算的分区。|  
 |cleanedup_unsent_changes|**bit**|标识已在订阅服务器上清除了未发送更改的元数据。|  
 |replica_version|**int**|标识订阅所属的订阅服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，可以为以下值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |supportability_mode|**int**|仅限内部使用。|  
 |application_name|**nvarchar(128)**|仅限内部使用。|  
 |subscriber_number|**int**|仅限内部使用。|  
-|last_makegeneration_datetime|**datetime**|最后一个**datetime** makegeneration 进程运行发布服务器。 有关详细信息，请参阅中的-MakeGenerationInterval 参数[复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)。|  
+|last_makegeneration_datetime|**datetime**|上次**datetime** makegeneration 进程为发布服务器上运行。 有关详细信息，请参阅中的-MakeGenerationInterval 参数[复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

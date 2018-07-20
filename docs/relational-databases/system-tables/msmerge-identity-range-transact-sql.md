@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (Transact SQL) |Microsoft 文档
+title: MSmerge_identity_range (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026774d2eae738f8641c56f923bcabc981fded1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd06dae4c34b2b5c77b81db64f9d12408539b01
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005124"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101225"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_identity_range**表用于跟踪分配给订阅发布的标识列的数值范围上复制自动管理这些范围分配。 此表存储在发布和订阅数据库中。  
+  **MSmerge_identity_range**表用于跟踪分配给用于订阅发布的标识列的数值范围上复制自动管理这些范围分配。 此表存储在发布和订阅数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "33005124"
 |**is_pub_range**|**bit**|值为**1**如果标识范围分配给发布。|  
 |**max_used**|**numeric(38)**|可分配的最大标识值。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

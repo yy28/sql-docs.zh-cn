@@ -1,5 +1,5 @@
 ---
-title: MSsnapshot_agents (Transact SQL) |Microsoft 文档
+title: MSsnapshot_agents (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ef7538fa8b7066397804b1b58521f090a44a3d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb9d1fd6367762ca6cb8472d964568bd207f83a0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006434"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102535"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsnapshot_agents**表包含一个行，每个快照代理程序与本地分发服务器关联。 此表存储在分发数据库中。  
+  **MSsnapshot_agents**表包含一行，为每个快照代理与本地分发服务器相关联。 此表存储在分发数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,14 +48,16 @@ ms.locfileid: "33006434"
 |**local_job**|**bit**|指示在本地分发服务器上是否有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|  
 |**job_id**|**binary(16)**|作业标识号。|  
 |**profile_id**|**int**|中的配置 ID [MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表。|  
-|**dynamic_filter_login**|**sysname**|用于评估的值[SUSER_SNAME &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/suser-sname-transact-sql.md)中定义分区的参数化筛选器函数。 此列用于分区快照。|  
-|**dynamic_filter_hostname**|**sysname**|用于评估的值[HOST_NAME &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md)中定义分区的参数化筛选器函数。 此列用于分区快照。|  
-|**publisher_security_mode**|**int**|连接到发布服务器，可以是以下之一时使用代理的安全模式：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。|  
+|**dynamic_filter_login**|**sysname**|该值用于计算[SUSER_SNAME &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/suser-sname-transact-sql.md)中定义分区的参数化筛选器函数。 此列用于分区快照。|  
+|**dynamic_filter_hostname**|**sysname**|该值用于计算[HOST_NAME &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md)中定义分区的参数化筛选器函数。 此列用于分区快照。|  
+|**publisher_security_mode**|**int**|连接到发布服务器上，可以是以下值之一时，代理所使用的安全模式：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接发布服务器时所使用的登录名。|  
 |**publisher_password**|**nvarchar(524)**|连接发布服务器时所使用的密码的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|启动代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的唯一 ID。|  
+|**job_login**|**sysname**||  
+|**job_password**|**nvarchar(524)**||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

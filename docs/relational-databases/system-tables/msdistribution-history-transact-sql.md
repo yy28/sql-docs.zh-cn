@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_history (Transact SQL) |Microsoft 文档
+title: MSdistribution_history (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSdistribution_history system table
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7196fcd36a995b0e1e8feb3f7436d1f634da375c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11e5be7e9f65c0df2cadc1d27ed0af85b214d7fc
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005934"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102755"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistribution_history**表中包含与本地分发服务器关联的分发代理程序历史记录行数。 此表存储在分发数据库中。  
+  **MSdistribution_history**表包含与本地分发服务器关联的分发代理历史记录行。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|分发代理的 ID。|  
-|**runstatus**|**int**|运行状态中：<br /><br /> **1** = start。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
+|**runstatus**|**int**|运行状态：<br /><br /> **1** = 开始。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
 |**start_time**|**datetime**|开始执行作业的时间。|  
 |**time**|**datetime**|记录消息的时间。|  
 |**duration**|**int**|消息会话的持续时间（秒）。|  
@@ -60,7 +60,7 @@ ms.locfileid: "33005934"
 |**updateable_row**|**bit**|设置为**1**如果可以覆盖历史记录行。|  
 |**timestamp**|**timestamp**|该表的时间戳列。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

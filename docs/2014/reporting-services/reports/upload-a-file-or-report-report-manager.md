@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2875701f8b058974df7abf993b1bcc44bf8d08bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44dd1787da648e332c2234b83323990784b0d4bc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315207"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085439"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上载文件或报表（报表管理器）
   报表管理器提供上载功能，因而您可以将报表、模型以及其他文件添加到报表服务器而不必从客户端应用程序发布这些项。 从文件系统上载的文件会存储为报表服务器上的项。 所上载的文件类型决定存储方式：  
@@ -46,7 +46,7 @@ ms.locfileid: "37315207"
   
 4.  单击 **“浏览”** 以选择要上载的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
   
-5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : @ & = +，$ / * \< > |。  
+5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : \@ & = +，$ / * \< > |。  
   
 6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”**。  
   

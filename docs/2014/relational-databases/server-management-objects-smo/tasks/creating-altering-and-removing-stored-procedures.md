@@ -17,17 +17,17 @@ caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e4ddf95dc9fa08e52c9a312d3cc83c3c04bd05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3dbd0c9ac5bf18d4c0f53d33cba8ab54f276985
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223177"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082859"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>创建、更改和删除存储过程
   在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 中，存储的过程由表示<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
   
- 创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性设置为[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义存储的过程的脚本。 这些参数需要 @ 前缀，必须分别使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象创建并且将其添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合中。  
+ 创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性设置为[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义存储的过程的脚本。 参数需要\@前缀，必须通过单独创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>对象并将添加到<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>的集合<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
   
 ## <a name="example"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

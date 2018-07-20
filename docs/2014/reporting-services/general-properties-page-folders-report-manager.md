@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255819"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083899"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>文件夹的“常规”属性页（报表管理器）
   使用文件夹的“常规”属性页可以查看和设置所创建文件夹的属性。 有关创建或修改文件夹的用户以及修改文件夹的时间的信息显示在“常规属性”页面顶部。  
@@ -37,9 +37,9 @@ ms.locfileid: "37255819"
   
 2.  在文件夹标志下，在工具栏中单击 **“文件夹设置”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
- 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : @ & = +，$ * \< > |"或 / 指定名称时。  
+ 指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ * \< > |"或 / 指定名称时。  
   
  **Description**  
  键入对文件夹内容的说明。 有权访问该文件夹的用户可以在“内容”页中查看此说明。  

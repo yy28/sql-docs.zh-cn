@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 780f289ae9ecd7ccfaeba41d5a9dd07e594441f0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 37eaf9824ac36333208ba538f36a5016ca6b87c8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029771"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084099"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>创建、更改和删除存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 中，存储的过程由表示<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
   
- 创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性设置为[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义存储的过程的脚本。 这些参数需要 @ 前缀，必须分别使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象创建并且将其添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合中。  
+ 创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性设置为[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义存储的过程的脚本。 参数需要\@前缀，必须通过单独创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>对象并将添加到<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>的集合<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
   
 ## <a name="example"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

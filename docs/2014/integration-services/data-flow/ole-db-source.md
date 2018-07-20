@@ -19,12 +19,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26900d1b1ba9500c114d65927121be80760d484e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271313"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083919"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -81,7 +81,7 @@ ms.locfileid: "37271313"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 存储过程希望变量 `@StartProductID` 和 `@CheckDate`提供参数值。 参数出现在 **“映射”** 列表中的顺序是不相关的。 唯一的要求是，在存储过程中参数名要与变量名匹配，包括 @ 符号。  
+ 存储过程希望变量 `@StartProductID` 和 `@CheckDate`提供参数值。 参数出现在 **“映射”** 列表中的顺序是不相关的。 唯一要求是参数名称匹配的存储过程中的变量名称包括\@登录。  
   
 ### <a name="mapping-parameters-to-variables"></a>将参数映射到变量  
  在运行时参数将映射到提供参数值的变量。 尽管也可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的系统变量，但变量通常是用户定义变量。 如果使用用户定义变量，请确保将数据类型设置为与映射参数所引用的列的数据类型相兼容的类型。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)。  

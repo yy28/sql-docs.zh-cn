@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974089"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086169"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  执行作为外部位置处的参数提供的脚本。 必须在支持并已注册的语言中编写脚本。 若要执行**sp_execute_external_script**，必须先通过使用该语句中，启用外部脚本`sp_configure 'external scripts enabled', 1;`。  
+  执行作为外部位置处的参数提供的脚本。 必须支持并已注册的语言 （R 或 Python） 编写脚本。 若要执行**sp_execute_external_script**，必须先通过使用该语句中，启用外部脚本`sp_configure 'external scripts enabled', 1;`。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>参数
- @language = N'*语言*  
+ \@语言 = N'*语言*  
  指示脚本语言。 *语言*是**sysname**。  
 
  有效的值为`Python`或`R`。 
   
- @script = N'*脚本*  
+ \@脚本 = N'*脚本*  
  指定为参数或变量的输入的外部语言脚本。 *脚本*是**nvarchar （max)**。  
   
- [ @input_data_1_name = N'*input_data_1_name*']  
- 指定用于表示定义的查询变量的名称@input_data_1。 外部脚本的变量中的数据类型取决于语言。 对于 R，则输入的变量是数据帧。 对于 Python，输入必须为表格。 *input_data_1_name*是**sysname**。  
+ [ \@input_data_1_name = N'*input_data_1_name*']  
+ 指定用于表示定义的查询变量的名称\@input_data_1。 外部脚本的变量中的数据类型取决于语言。 对于 R，则输入的变量是数据帧。 对于 Python，输入必须为表格。 *input_data_1_name*是**sysname**。  
   
  默认值是`InputDataSet`。  
   
- [ @input_data_1 = N'*input_data_1*']  
+ [ \@input_data_1 = N'*input_data_1*']  
  指定使用的窗体中的外部脚本的输入的数据[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 数据类型*input_data_1*是**nvarchar （max)**。
   
- [ @output_data_1_name = N'*output_data_1_name*']  
+ [ \@output_data_1_name = N'*output_data_1_name*']  
  指定的变量名称中包含要返回到的数据的外部脚本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储的过程调用完成后。 外部脚本的变量中的数据类型取决于语言。 对于 R，输出必须是数据帧。 对于 Python，输出必须为 pandas 数据帧。 *output_data_1_name*是**sysname**。  
   
  默认值为"OutputDataSet"。  
   
- [ @parallel = 0 | 1] 启用并行执行 R 脚本的方法是设置`@parallel`参数为 1。 为此参数默认值为 0 （不能并行）。  
+ [\@并行 = 0 | 1]
+
+ 通过设置启用并行执行 R 脚本`@parallel`参数为 1。 为此参数默认值为 0 （不能并行）。  
   
  为不使用 RevoScaleR 函数，请使用 R 脚本`@parallel`参数可以是有益于处理大型数据集，假设可以不费力地并行执行该脚本。 例如，在使用 R`predict`函数和一个模型来生成新预测，设置`@parallel = 1`作为对查询引擎的提示。 如果可以并行执行查询，将行分布根据**MAXDOP**设置。  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  使用 RevoScaleR 函数的 R 脚本，并行处理进行处理自动，并且不应指定`@parallel = 1`到**sp_execute_external_script**调用。  
   
- [ @params = N' *@parameter_name data_type* [出 |输出] [，....n]']  
+ [ \@params = N'*\@parameter_name data_type* [出 |输出] [，....n]']  
  外部脚本中使用的输入的参数声明的列表。  
   
- [ @parameter1 = '*value1*[出 |输出] [，....n]]  
+ [ \@parameter1 = '*value1*[出 |输出] [，....n]]  
+
  有关使用外部脚本的输入参数的值的列表。  
 
 ## <a name="remarks"></a>Remarks
@@ -119,7 +122,7 @@ sp_execute_external_script
 
 ### <a name="data-types"></a>数据类型
 
-输入的查询或参数中使用时不支持以下数据类型`sp_execute_external_script`过程中，并返回类型不受支持的错误。  
+输入的查询或参数中使用时不支持以下数据类型**sp_execute_external_script**过程中，并返回类型不受支持的错误。  
 
 解决方法是， **CAST**中的受支持类型的值的列[!INCLUDE[tsql](../../includes/tsql-md.md)]之前将其发送到外部脚本。  
   
@@ -147,7 +150,7 @@ sp_execute_external_script
 
 浮点值 (例如， `+Inf`， `-Inf`， `NaN`) 中不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使这两种语言使用 IEEE 754。 当前行为只是在发送到的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]直接; 因此中的 SQL 客户端[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]将引发错误。 因此，将这些值转换为**NULL**。
 
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 需要**EXECUTE ANY EXTERNAL SCRIPT**数据库权限。  
 

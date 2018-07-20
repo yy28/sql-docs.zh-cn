@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227407"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084059"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 对象提供一个计数器来监视指定为不推荐使用的功能。 在每个事例中计数器都提供一个使用计数，列出自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动以来遇到不推荐使用的功能的次数。  
@@ -35,7 +35,7 @@ ms.locfileid: "37227407"
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
 |“::”函数调用语法|表值函数遇到 :: 函数调用语法。 将替换为`SELECT column_list FROM`  *\< function_name >*`()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
-|“@”和以“@@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 @ 或 @@ 开头的标识符。 请勿使用 @ 或 @@ 或以 @@ 开头的名称作为标识符。 每次编译时发生。|  
+|“\@”和以“\@\@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 \@ 或 \@\@ 开头的标识符。 请勿使用 \@ 或 \@\@ 或以 \@\@ 开头的名称作为标识符。 每次编译时发生。|  
 |ADDING TAPE DEVICE|已弃用的功能 sp_addumpdevice'`tape`遇到了。 Sp_addumpdevice '`disk`相反。 每次使用时发生。|  
 |ALL 权限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 语法的总次数。 请修改语法以拒绝特定权限。 每次查询时发生。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|自服务器实例启动以来，ALTER DATABASE 的不推荐使用的功能 TORN_PAGE_DETECTION 选项的使用总次数。 请改用 PAGE_VERIFY 语法。 每次在 DDL 语句中使用时发生。|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227407"
 |sp_defaultlanguage|遇到 sp_defaultlanguage 过程。 请改用 ALTER LOGIN。 每次编译时发生。|  
 |sp_denylogin|遇到 sp_denylogin 过程。 请改用 ALTER LOGIN DISABLE。 每次查询时发生。|  
 |sp_depends|遇到 sp_depends 过程。 请改用 sys.dm_sql_referencing_entities 和 sys.dm_sql_referenced_entities。 每次查询时发生。|  
-|sp_detach_db @keepfulltextindexfile|在 sp_detach_db 语句中遇到 @keepfulltextindexfile 参数。 请勿使用此参数。|  
+|sp_detach_db \@keepfulltextindexfile|在 sp_detach_db 语句中遇到 \@keepfulltextindexfile 参数。 请勿使用此参数。|  
 |sp_dropalias|遇到 sp_dropalias 过程。 请将别名替换为用户帐户和数据库角色的组合。 请使用 sp_dropalias 删除已升级数据库中的别名。 每次编译时发生。|  
 |sp_dropapprole|遇到 sp_dropapprole 过程。 请改用 DROP APPLICATION ROLE。 每次查询时发生。|  
 |sp_dropextendedproc|遇到 sp_dropextendedproc 过程。 请改用 CLR。 每次编译时发生。|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227407"
 |sp_fulltext_catalog|遇到 sp_fulltext_catalog 过程。 请改用 CREATE/ALTER/DROP FULLTEXT CATALOG。 每次编译时发生。|  
 |sp_fulltext_column|遇到 sp_fulltext_column 过程。 请改用 ALTER FULLTEXT INDEX。 每次编译时发生。|  
 |sp_fulltext_database|遇到 sp_fulltext_database 过程。 请改用 ALTER DATABASE。 每次编译时发生。|  
-|sp_fulltext_service @action=clean_up|遇到 sp_fulltext_service 过程的 clean_up 选项。 每次查询时发生。|  
-|sp_fulltext_service @action=connect_timeout|遇到 sp_fulltext_service 过程的 connect_timeout 选项。 每次查询时发生。|  
-|sp_fulltext_service @action=data_timeout|遇到 sp_fulltext_service 过程的 data_timeout 选项。 每次查询时发生。|  
-|sp_fulltext_service @action=resource_usage|遇到 sp_fulltext_service 过程的 resource_usage 选项。 此选项没有函数。 每次查询时发生。|  
+|sp_fulltext_service \@action=clean_up|遇到 sp_fulltext_service 过程的 clean_up 选项。 每次查询时发生。|  
+|sp_fulltext_service \@action=connect_timeout|遇到 sp_fulltext_service 过程的 connect_timeout 选项。 每次查询时发生。|  
+|sp_fulltext_service \@action=data_timeout|遇到 sp_fulltext_service 过程的 data_timeout 选项。 每次查询时发生。|  
+|sp_fulltext_service \@action=resource_usage|遇到 sp_fulltext_service 过程的 resource_usage 选项。 此选项没有函数。 每次查询时发生。|  
 |sp_fulltext_table|遇到 sp_fulltext_table 过程。 请改用 CREATE/ALTER/DROP FULLTEXT INDEX。 每次编译时发生。|  
 |sp_getbindtoken|遇到 sp_getbindtoken 过程。 请改用多个活动结果集 (MARS) 或分布式事务。 每次编译时发生。|  
 |sp_grantdbaccess|遇到 sp_grantdbaccess 过程。 请改用 CREATE USER。 每次查询时发生。|  

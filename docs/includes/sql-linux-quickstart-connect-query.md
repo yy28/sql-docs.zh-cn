@@ -43,6 +43,9 @@
    GO
    ```
 
+> [!TIP]
+> 若要详细了解如何编写 Transact-SQL 语句和查询，请参阅[教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。
+
 ### <a name="insert-data"></a>插入数据
 
 接下来创建一个新表 `Inventory`，然后插入两个新行。
@@ -95,7 +98,21 @@
 QUIT
 ```
 
-## <a name="connect-from-windows"></a>从 Windows 进行连接
+## <a name="performance-best-practices"></a>性能最佳实践
+
+在 Linux 上安装 SQL Server 后, 查看配置 Linux 和 SQL Server 来提高生产方案的性能的最佳做法。 有关详细信息，请参阅[的性能最佳实践和 Linux 上的 SQL Server 配置准则](../linux/sql-server-linux-performance-best-practices.md)。
+
+## <a name="cross-platform-data-tools"></a>跨平台数据工具
+
+除了**sqlcmd**，可以使用以下跨平台工具来管理 SQL Server:
+
+|||
+|---|---|
+| [SQL Server Operations Studio](../sql-operations-studio/index.md) | 跨平台 GUI 数据库管理实用程序。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 用于运行 TRANSACT-SQL 命令的跨平台命令行界面。 |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 运行 TRANSACT-SQL 语句，mssql 扩展通过一个跨平台 GUI 代码编辑器。 |
+
+## <a name="connecting-from-windows"></a>从 Windows 连接
 
 Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操作方式与连接到任何远程 SQL Server 实例一样。
 
@@ -103,11 +120,11 @@ Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操�
 
 有关在 Windows 上运行，但连接到 Linux 上的 SQL Server 的其他工具，请参阅：
 
-- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="additional-resources"></a>其他资源
+## <a name="other-deployment-scenarios"></a>其他部署方案
 
 有关其他安装方案，请参阅以下资源：
 
@@ -118,21 +135,10 @@ Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操�
 | [无人参与安装](../linux/sql-server-linux-setup.md#unattended) | 了解如何编写无提示安装脚本 |
 | [脱机安装](../linux/sql-server-linux-setup.md#offline) | 了解如何手动下载脱机安装程序包 |
 
-若要浏览连接和管理 SQL Server 的其他方法，请浏览以下工具：
-
-|||
-|---|---|
-| [Visual Studio 代码](../linux/sql-server-linux-develop-use-vscode.md) | 一种跨平台 GUI 代码编辑器，mssql 扩展名运行 TRANSACT-SQL 语句。 |
-| [SQL Server 操作 Studio](../sql-operations-studio/index.md) | 一个跨平台 GUI 数据库管理实用程序。 |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 跨平台命令行界面中运行 TRANSACT-SQL 命令。 |
-| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | 一个基于 Windows 的 GUI 数据库管理实用程序可以连接到和管理在 Linux 上的 SQL Server 实例。 |
-
-若要详细了解如何编写 Transact-SQL 语句和查询，请参阅[教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。
-
 > [!TIP]
-> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](../linux/sql-server-linux-faq.md)。
+> 有关常见问题的解答，请参阅[SQL Server Linux 常见问题](../linux/sql-server-linux-faq.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [在 Linux 上的 SQL Server 浏览教程](../linux/sql-server-linux-migrate-restore-database.md)
+> [在 Linux 上的 SQL Server 浏览的教程](../linux/sql-server-linux-migrate-restore-database.md)

@@ -1,5 +1,5 @@
 ---
-title: SQLValidDSN 函数 |Microsoft 文档
+title: SQLValidDSN 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4560f4645bf8e4e8c255b94c940b0922483cf5f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d3dfd7e2b019626e98f8a93611880411e74b86a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917722"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082889"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函数
-**一致性**  
+**符合性**  
  版本引入了： ODBC 2.0  
   
  **摘要**  
- **SQLValidDSN**检查长度和数据源名称的有效性之前的名称添加到的系统信息。  
+ **SQLValidDSN**检查长度和数据源名称的有效性，然后将名称添加到系统信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,23 +47,23 @@ BOOL SQLValidDSN(
   
 ## <a name="arguments"></a>参数  
  *lpszDSN*  
- [输入]数据源要检查的名称。  
+ [输入]数据源名称要检查。  
   
 ## <a name="returns"></a>返回  
- 如果数据源名称有效，该函数将返回 TRUE。 如果数据源名称无效或函数调用失败，则返回 FALSE。  
+ 如果数据源名称有效，则该函数返回 TRUE。 如果数据源名称无效或函数调用失败，则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLValidDSN**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 A  *\*pfErrorCode*如果，则返回仅在函数调用失败时，不返回 FALSE，因为数据源名称无效。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLValidDSN**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 一个 *\*pfErrorCode*如果，则返回仅当函数调用失败，不返回 FALSE，因为数据源名称无效。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|对于发生了错误其中没有任何特定的安装程序错误。|  
+|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  
   
 ## <a name="comments"></a>注释  
- **SQLValidDSN**由驱动程序的调用[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)检查数据源名称的长度和数据源名称中的每个字符的有效性。 它会检查是否名称的长度大于 SQL_MAX_DSN_LENGTH，Sqlext.h 中定义。 (通过检查程序数据源名称的长度[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)。)**SQLValidDSN**检查是否任何下列无效字符都包含数据源名称：  
+ **SQLValidDSN**由驱动程序的调用[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)检查数据源名称的长度和数据源名称中的单个字符的有效性。 它检查名称的长度是否大于 SQL_MAX_DSN_LENGTH，Sqlext.h 中定义。 (还通过检查数据源名称的长度[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)。)**SQLValidDSN**检查是否以下无效字符的任何数据源名称中包括：  
   
- [ ] { } ( ) , ; ? * = ! @ \  
+ [ ] { } ( ) , ; ? * = ! \@ \  
   
 ## <a name="related-functions"></a>相关函数  
   

@@ -1,5 +1,5 @@
 ---
-title: sysmergepartitioninfo (Transact SQL) |Microsoft 文档
+title: sysmergepartitioninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysmergepartitioninfo system table
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d0c9ed5edb8f143a0e3742a7c49d23d95266640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fe90d2f31d8c5530c6385804ef161bd46bc4527
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010264"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102355"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +51,12 @@ ms.locfileid: "33010264"
 |**expand_proc**|**sysname**|过程名称，该过程重新计算新插入的父行的所有子行的分区 ID，以及经历了分区更改或已被删除的父行的分区 ID。|  
 |**logical_record_parent_nickname**|**int**|逻辑记录中指定项目的顶级父项目的别名。|  
 |**logical_record_view**|**int**|一个视图，用于输出与各子项目 rowguid 相对应的顶级父项目 rowguid。|  
-|**logical_record_deleted_view_rule**|**nvarchar(4000)**|类似于**logical_record_view**，但它显示的是"已删除"表中的子行更新和删除触发器。|  
-|**logical_record_level_conflict_detection**|**bit**|指示应在逻辑记录级还是行级或列级检测冲突。<br /><br /> **0** = 行或列级别使用冲突检测。<br /><br /> **1** = 逻辑记录冲突检测时，在发布服务器上的行中的更改和更改在单独的行的同一逻辑订阅服务器上的记录会被视为冲突。<br /><br /> 当此值是**1**，可以使用仅逻辑记录级冲突解决方法。|  
-|**logical_record_level_conflict_resolution**|**bit**|指示应在逻辑记录级别还是行或列级别解决冲突。<br /><br /> **0** = 行或列级别使用解析。<br /><br /> **1** = 以防中入选方的整个逻辑记录的冲突时，将覆盖落选方上的整个逻辑记录。<br /><br /> 值为**1**可用来使用这两个逻辑记录级检测，并且使用行级或列级检测。|  
-|**partition_options**|**tinyint**|定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *partition_options*可以是以下值之一。<br /><br /> **0** = 筛选的项目是静态的或不会生成唯一的每个分区，即"重叠"分区的数据子集。<br /><br /> **1** = 分区重叠，并且订阅服务器上所做的 DML 更新不能更改行属于哪个分区。<br /><br /> **2** = 筛选文章生成不重叠分区，但多个订阅服务器可以接收相同的分区。<br /><br /> **3** = 筛选的项目生成对每个订阅都是唯一的不重叠分区。|  
+|**logical_record_deleted_view_rule**|**nvarchar(4000)**|类似于**logical_record_view**，但它显示在"删除"的表中的子行更新和删除触发器。|  
+|**logical_record_level_conflict_detection**|**bit**|指示应在逻辑记录级还是行级或列级检测冲突。<br /><br /> **0** = 行或列级别使用冲突检测。<br /><br /> **1** = 使用逻辑记录级冲突检测，则在发布服务器上的行中的更改和更改的单独行的同一逻辑记录在订阅服务器会被视为冲突。<br /><br /> 当此值是**1**，可以使用仅逻辑记录级冲突解决方法。|  
+|**logical_record_level_conflict_resolution**|**bit**|指示应在逻辑记录级别还是行或列级别解决冲突。<br /><br /> **0** = 行或列级别使用解决方法。<br /><br /> **1** = 以防的冲突时，来自入选方的整个逻辑记录覆盖落选方的整个逻辑记录。<br /><br /> 值为**1**可使用这两个逻辑记录级检测和行级或列级检测。|  
+|**partition_options**|**tinyint**|定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *partition_options*可以是下列值之一。<br /><br /> **0** = 筛选的项目是静态的或不生成唯一的每个分区，即"重叠"分区的数据子集。<br /><br /> **1** = 分区重叠，并且在订阅服务器所做的 DML 更新无法更改行所属的分区。<br /><br /> **2** = 筛选的项目生成不重叠分区，但多个订阅服务器可以接收相同的分区。<br /><br /> **3** = 筛选项目生成对于每个订阅都唯一的非重叠分区。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

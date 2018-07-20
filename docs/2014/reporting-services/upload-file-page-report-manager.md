@@ -14,12 +14,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272313"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083022"
 ---
 # <a name="upload-file-page-report-manager"></a>“上载文件”页（报表管理器）
   使用“上载文件”页可以将文件从文件系统发布到报表服务器数据库。 上载的文件将显示为报表服务器文件夹层次结构中的项。  
@@ -46,7 +46,7 @@ ms.locfileid: "37272313"
   
 2.  在工具栏上单击 **“上载文件”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **上载的文件**  
  显示要从文件系统复制的文件的全限定路径。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "37272313"
  单击此选项可从文件系统中选择文件。  
   
  **名称**  
- 键入文件的名称，文件名应与将在报表服务器命名空间中显示的名称一样。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : @ & = +，$ * \< > |"或 / 时指定项名称。  
+ 键入文件的名称，文件名应与将在报表服务器命名空间中显示的名称一样。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ * \< > |"或 / 时指定项名称。  
   
  **如果它存在，则覆盖该项**  
  如果希望将现有项替换为更新的版本，请选中此复选框。 若要覆盖现有版本，新项和现有项的名称必须完全相同。  

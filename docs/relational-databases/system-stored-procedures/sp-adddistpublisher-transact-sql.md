@@ -1,7 +1,7 @@
 ---
-title: sp_adddistpublisher (TRANSACT-SQL) |Microsoft 文档
+title: sp_adddistpublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,17 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3ccd9c550df21ea904c4ff8d8c7a3941908e59a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75db58f4711b946eeceeb74dcbb3a34538ea97e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992824"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084289"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  配置发布服务器以使用指定的分发数据库。 此存储过程在分发服务器上的任何数据库中执行。 请注意，存储的过程[sp_adddistributor &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)和[sp_adddistributiondb &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)必须在使用此存储之前运行过程。  
+  配置发布服务器以使用指定的分发数据库。 此存储过程在分发服务器上的任何数据库中执行。 请注意，存储的过程[sp_adddistributor &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)并[sp_adddistributiondb &#40;-&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)必须在使用此存储之前运行过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,6 +47,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @working_directory= ] 'working_directory' ]   
+    [ , [ @storage_connection_string= ] 'storage_connection_string']
     [ , [ @trusted= ] 'trusted' ]   
     [ , [ @encrypted_password= ] encrypted_password ]   
     [ , [ @thirdparty_flag = ] thirdparty_flag ]  
@@ -57,47 +58,54 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [ **@publisher=**] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@distribution_db=**] *****distribution_db*****  
+ [  **@distribution_db=**] **'***distribution_db*****  
  是分发数据库的名称。 *distributor_db*是**sysname**，无默认值。 复制代理使用该参数连接到发布服务器。  
   
  [  **@security_mode=**] *security_mode*  
- 所实现的安全模式。 该参数仅供复制代理用于连接到排队更新订阅的发布服务器或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *security_mode*是**int**，并且可以为这些值之一。  
+ 所实现的安全模式。 该参数仅供复制代理用于连接到排队更新订阅的发布服务器或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *security_mode*是**int**，可以是下列值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
   
- [  **@login=**] *****登录*****  
+ [  **@login=**] **'***登录*****  
  登录。 此参数是必需的如果*security_mode*是**0**。 login 的数据类型为 sysname，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
- [  **@password=**] *****密码*****]  
+ [  **@password=**] **'***密码*****]  
  是的密码。 *密码*是**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
   
- [  **@working_directory=**] *****working_directory*****  
- 用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar （255)**，，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如 C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData。 名称应按 UNC 格式指定。  
-  
- [  **@trusted=**] *****受信任*****  
- 该参数已不推荐使用，提供它只是为了向后兼容。 *受信任*是**nvarchar(5)**，并将它设置为任何东西但**false**将导致错误。  
+ [  **@working_directory=**] **'***working_directory*****  
+ 用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)**，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 名称应按 UNC 格式指定。  
+
+ 对于 Azure SQL 数据库，请使用`\\<storage_account>.file.core.windows.net\<share>`。
+
+ [  **@storage_connection_string =**] **'***storage_connection_string*****  
+ 是必需的 SQL 数据库。 使用下存储访问密钥从 Azure 门户 > 设置。
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+
+ [  **@trusted=**] **'***受信任*****  
+ 该参数已不推荐使用，提供它只是为了向后兼容。 *受信任*是**nvarchar(5)**，并将其设置为任何内容，但是**false**将导致错误。  
   
  [  **@encrypted_password=**] *encrypted_password*  
- 设置*encrypted_password*不再受支持。 尝试设置这**位**参数**1**将导致错误。  
+ 设置*encrypted_password*不再受支持。 尝试将此项设置**位**参数**1**将导致错误。  
   
  [  **@thirdparty_flag =**] *thirdparty_flag*  
- 发布服务器何时为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *thirdparty_flag*是**位**，和可以是以下值之一。  
+ 发布服务器何时为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *thirdparty_flag*是**位**，可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0** （默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**1**|非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
   
- [ **@publisher_type**=] *****publisher_type*****  
- 指定当发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的发布服务器类型。 *publisher_type*为 sysname，可以为以下值之一。  
+ [ **@publisher_type**=] **'***publisher_type*****  
+ 指定当发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的发布服务器类型。 *publisher_type*数据类型为 sysname，并可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> （默认值）|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**ORACLE**|指定标准的 Oracle 发布服务器。|  
@@ -108,19 +116,19 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- **sp_adddistpublisher**由快照复制、 事务性复制和合并复制。  
+## <a name="remarks"></a>Remarks  
+ **sp_adddistpublisher**使用快照复制、 事务复制和合并复制。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_adddistpublisher**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  

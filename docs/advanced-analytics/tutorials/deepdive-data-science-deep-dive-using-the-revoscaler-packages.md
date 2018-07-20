@@ -1,109 +1,89 @@
 ---
-title: 数据科学深入了解与 SQL Server 使用 RevoScaleR 包 |Microsoft 文档
+title: 本教程有关 RevoScaleR 函数与 SQL Server 机器学习 |Microsoft Docs
+description: 在本教程中，了解如何调用 RevoScaleR 函数在使用支持 R 的 SQL Server 机器学习中启用。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/15/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c2596c881d48d2f2629b4363749e7d1c45b3489
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202789"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084670"
 ---
-# <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>数据科学深入探讨： RevoScaleR 包使用 SQL Server
+# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程： 使用 RevoScaleR R 函数与 SQL Server 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本教程演示如何使用增强的 R 包中提供[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]处理 SQL Server 数据并创建可缩放 R 解决方案，通过将服务器用作计算上下文高性能大数据分析。
+RevoScaleR 是用于数据科学和机器学习工作负荷提供分布式和并行处理的 Microsoft R 包。 SQL Server 中的 R 开发，RevoScaleR 是一个用于设置计算上下文，函数具有的核心内置包的管理包，最重要的是： 使用数据端到端，从导入到可视化和分析。 SQL Server 中的机器学习算法对 RevoScaleR 数据源的依赖项。 考虑到 RevoScaleR 的重要性，了解何时以及如何调用其函数是一项基本技能。 
 
-了解如何创建远程计算上下文，本地和远程计算上下文之间移动数据，并在远程 SQL 服务器上执行 R 代码。 你还了解了如何分析和绘制数据，本地和在远程服务器上，以及如何创建和部署模型。
+在本教程中，将了解如何创建远程计算上下文，本地和远程计算上下文之间移动数据，并在远程 SQL 服务器上执行 R 代码。 你还了解如何分析和本地和远程服务器上绘制数据以及如何创建和部署模型。
 
-> [!NOTE]
-> 
-> 本教程专门使用 SQL Server 数据在 Windows 上，并使用数据库中计算上下文。 如果你想要使用 R 在其他上下文，如 Teradata、 Linux 或 Hadoop，请参阅这些 Microsoft R Server 教程： 
-> + [使用 R Server 和 sparklyr](https://docs.microsoft.com/machine-learning-server/r/tutorial-sparklyr-revoscaler)
-> + [Explore R and ScaleR in 25 functions](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)（通过 25 个函数探索 R 和 ScaleR）
-> + [要开始使用 Hadoop mapreduce ScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-hadoop)
++ 数据最初是从 CSV 文件或 XDF 文件中获取的。 导入数据到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RevoScaleR 包中使用的函数。
++ 使用执行模型定型和计分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算上下文。 
++ 使用 RevoScaleR 函数来创建新的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表以保存计分结果。
++ 在服务器上创建这两个绘图和本地计算上下文。
++ 中的数据对模型进行定型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中运行 R 的数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。
++ 提取数据的子集，并将其保存为 XDF 文件，以便在分析中重复使用在本地工作站上。
++ 获取新数据评分，通过打开 ODBC 连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 在本地工作站上进行评分。
++ 创建自定义 R 函数，然后运行该服务器中计算上下文执行模拟。
 
-## <a name="overview"></a>概述
+## <a name="target-audience"></a>目标受众
 
-若要在本教程中遇到了 RevoScaleR 包的灵活性和处理能力你移动数据和交换经常计算上下文。 为了说明，下面是一些的任务在本教程中：
+本教程旨在让数据科学家或于那些已有某种程度上熟悉 R 和数据科学任务，例如摘要和创建模型。 但是，所有代码已都提供，因此即使您不熟悉 R，可以运行该代码并按说明操作，假定您具有所需的服务器和客户端环境。
 
-+ 数据最初是从 CSV 文件或 XDF 文件中获取的。 你将数据导入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 RevoScaleR 包中的函数。
-+ 使用执行模型的训练和评分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算上下文。 
-+ 使用 RevoScaleR 函数来创建新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表以保存你评分的结果。
-+ 在服务器上创建两个图形和本地计算上下文。
-+ 中的数据模型进行训练[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，在中运行 R[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。
-+ 提取数据的子集，并将其保存为 XDF 文件，以便在分析中重新使用在本地工作站上。
-+ 获取新数据评分，通过打开一个到 ODBC 连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 在本地工作站上完成评分。
-+ 创建自定义 R 函数，然后在运行服务器计算上下文执行模拟。
-
-### <a name="article-list-and-time-required"></a>文章列表和所需的时间
-
-本教程需要大约为 75 分钟才能完成，不包括安装程序。
-
-1. [使用 SQL Server 数据使用 R](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
-2. [使用 RxSqlServerData 创建 SQL Server 数据对象](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-3. [查询和修改 SQL Server 数据](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-4. [定义并使用计算上下文](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-5. [创建和运行 R 脚本](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-6. [实现 SQL Server 数据使用 R 可视化效果](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-7. [创建 R 模型](../../advanced-analytics/tutorials/deepdive-create-models.md)
-8. [分数新数据](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
-9. [使用 R 转换数据](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-10. [将数据加载到内存中用 rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-11. [创建新的 SQL Server 表使用 rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-12. [使用 rxDataStep 执行区块分析](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-13. [在本地计算上下文中分析数据](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-14. [将数据从 SQL Server 使用 XDF 文件移](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
-15. [创建简单模拟](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
-
-### <a name="target-audience"></a>目标受众
-
-本教程旨在为数据科学家或已熟悉某种程度上与 R，以及如摘要和模型创建的数据科学任务的人员。  但是，所有的代码提供，因此即使你不熟悉 R，你可以运行的代码和沿用，前提您拥有所需的服务器和客户端环境。
-
-你还应熟悉[!INCLUDE[tsql](../../includes/tsql-md.md)]语法并且知道如何访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库使用这些工具：
+您还应熟悉[!INCLUDE[tsql](../../includes/tsql-md.md)]语法并知道如何访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库使用这些工具：
 
 + [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 
 + Visual Studio 中的数据库工具 
-+ 免费[mssql 扩展 Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
++ 免费[适用于 Visual Studio Code 的 mssql 扩展](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
   
 > [!TIP]
 > 在各个课程之间保存 R 工作区，便可轻松地从中断的位置继续。
 
-### <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件
 
-- **支持的 R 与 SQL Server**
+- **支持 R 的 SQL Server**
   
-    安装 SQL Server 2016 并使 R Services （数据库）。 或者，安装 SQL Server 2017 和启用机器学习服务并选择 R 语言。
+    安装[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)使用 R 功能或安装[SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)。
+
+    请确保启用外部脚本、 快速启动板服务正在运行，并且你有权访问该服务。
   
 -  **数据库权限**
   
-    若要运行用于定型模型的查询，必须在存储数据的数据库上具有 **db_datareader** 权限。 若要运行 R，你的用户必须具有的权限，执行任意外部脚本。
+    若要运行用于定型模型的查询，必须在存储数据的数据库上具有 **db_datareader** 权限。 若要运行 R，用户必须具有的权限 EXECUTE ANY EXTERNAL SCRIPT。
 
 -   **数据科学开发计算机**
   
-    必须将 RevoScaleR 包和相关的提供程序安装在用作 R 开发环境的计算机上。 若要执行此操作的最简单方法是安装 Microsoft R 客户端，Microsoft R Server （独立） 或机器学习 Server （独立）。 
+    若要本地和远程计算上下文之间来回切换，您需要两个系统。 本地通常是具有足够的电源可用于数据科学工作负荷的开发工作站。 远程在这种情况下是 SQL Server 2017 或 SQL Server 2016 与启用了 R 功能。 
+    
+    切换计算上下文的前提是在本地和远程系统上具有相同版本 RevoScaleR。 在本地工作站上，你可以获取的 RevoScaleR 包和相关的提供程序安装或使用以下任何一个：[在 Azure 上的数据科学 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)， [（免费） 的 Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client)，或[Microsoft Machine Learning Server （独立版）](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)。 对于独立服务器选项，请安装免费的开发人员版本，使用 Linux 或 Windows 安装程序。 此外可以使用 SQL Server 安装程序安装在独立服务器。
       
-    > [!NOTE] 
-    > 不支持其他版本的 Revolution R Enterprise 或 Revolution R Open。
-    > 
-    > 无法在此教程中，使用 R 的开源分发，因为只有 RevoScaleR 函数可以使用远程计算上下文。
-  
 -   **其他 R 包**
   
-    在本教程中，安装以下程序包： **dplyr**， **ggplot2**， **ggthemes**， **reshape2**，和**e1071**. 本教程提供说明。
+    在本教程中，您将安装以下包： **dplyr**， **ggplot2**， **ggthemes**， **reshape2**，和**e1071**. 本教程提供说明。
   
-    必须在两个位置安装所有包： 在用于 R 解决方案开发计算机上并在其中执行 R 脚本的 SQL Server 计算机上。 如果你没有在服务器计算机上安装包的权限，请让管理员。 
+    必须在两个位置安装所有包： 在用于 R 解决方案开发工作站上和执行 R 脚本所在的 SQL Server 计算机上。 如果没有在服务器计算机上安装包的权限，请让管理员。 
     
     **请勿将包安装到用户库。** 必须在 SQL Server 实例使用的 R 包库中安装包。
 
-有关详细信息，请参阅[数据科学演练的先决条件](../../advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)。
+## <a name="r-development-tools"></a>R 开发工具
 
-## <a name="next-step"></a>下一步
+R 开发人员通常使用 Ide，用于编写和调试 R 代码。 以下是一些建议：
 
-[使用 SQL Server 数据使用 R](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
+- **针对 Visual Studio 的 R 工具**(RTVS) 是一种免费插件，它提供 Intellisense、 调试、 并对 Microsoft。 您可以将其用于 R Server 和 SQL Server 机器学习服务的支持。 若要下载，请参阅 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)。
+
+- **RStudio** 是广受欢迎的 R 开发环境之一。 有关详细信息，请参阅[ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)。
+
+- 在 SQL Server 或 R 客户端安装 R 时，默认情况下也安装基本的 R 工具 (R.exe、 RTerm.exe、 RScripts.exe)。 如果不想安装 IDE，可以使用内置的 R 工具要在本教程中执行的代码。
+
+前面曾提到，RevoScaleR 需要本地和远程计算机上。 无法完成本教程中使用的 RStudio 或其他环境，缺少 Microsoft R 库通用安装。 有关详细信息，请参阅 [设置数据科学客户端](../r/set-up-a-data-science-client.md)。
+
+## <a name="next-steps"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [第 1 课： 创建数据库和权限](deepdive-work-with-sql-server-data-using-r.md)
 

@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_grantlogin
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: dbae515dc518547145ecba94ebb2fca57f98f64b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058785"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102165"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="remarks"></a>Remarks  
  **xp_grantlogin**现在一个系统存储过程而不是扩展存储过程。 **xp_grantlogin**调用**sp_grantlogin**并**sp_addsrvrolemember**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**securityadmin**固定的服务器角色。 更改时*logintype*，要求的成员身份**sysadmin**固定的服务器角色。  
   
 ## <a name="see-also"></a>请参阅  

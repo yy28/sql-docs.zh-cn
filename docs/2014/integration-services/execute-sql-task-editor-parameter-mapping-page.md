@@ -18,19 +18,19 @@ caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152778"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082949"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>执行 SQL 任务编辑器（“参数映射”页）
   可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
   
  若要了解此任务，请参阅 [执行 SQL 任务](control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“变量名称”**  
  通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“\<新建变量...>”以使用“添加变量”对话框添加新变量。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "37152778"
  **参数名称**  
  提供参数名称。  
   
- 必须使用数值还是参数名称取决于任务所用的连接管理器类型。 某些连接管理器类型要求参数名称的第一个字符为 @ 符号，并要求将 @Param1 之类的特定名称或列名作为参数名称。  
+ 必须使用数值还是参数名称取决于任务所用的连接管理器类型。 某些连接管理器类型要求参数名称的第一个字符是\@登录，如特定名称\@Param1 或列名称作为参数名称。  
   
  **相关主题：**[执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

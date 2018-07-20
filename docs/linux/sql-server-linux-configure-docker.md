@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352749"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085869"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
@@ -40,7 +40,7 @@ ms.locfileid: "37352749"
 
 在快速入门中上一节从 Docker 中心运行 SQL Server 免费的 Developer 的 edition。 如果你想要运行生产容器映像，如 Enterprise、 Standard edition 或 Web edition，大部分信息仍然适用。 但是，有此处所述的一些差异。
 
-- 仅可以使用 SQL Server 生产环境中如果有有效的许可证。 你可以获取免费的 SQL Server Express 生产许可证[此处](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard edition 和 Enterprise Edition 许可证是可通过[Microsoft 批量许可](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)。
+- 仅可以使用 SQL Server 生产环境中如果有有效的许可证。 你可以获取免费的 SQL Server Express 生产许可证[此处](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard edition 和 Enterprise Edition 许可证是可通过[Microsoft 批量许可](https://www.microsoft.com/en-us/licensing/default.aspx)。
 
 - 必须从请求生产 SQL Server 容器映像[Docker 存储](https://store.docker.com)。 如果你还没有一个 Docker 存储上创建帐户。
 

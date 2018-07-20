@@ -19,12 +19,12 @@ caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252329"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083889"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>执行 SQL 任务中的参数和返回代码
   SQL 语句和存储的过程常常使用`input`参数，`output`参数和返回代码。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 您使用`Input`类型用于输入参数`Output`输出参数和`ReturnValue`返回代码的。  
@@ -49,16 +49,16 @@ ms.locfileid: "37252329"
 -   [配置参数和返回代码中执行 SQL 任务编辑器](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> 使用参数名称和标记  
- 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型要求 SQL 命令使用格式为 @varParameter 的参数标记，而 OLE DB 连接类型要求使用问号 (?) 参数标记。  
+ 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器类型要求 SQL 命令使用的参数标记的格式 **\@varParameter**，而 OLE DB 连接类型要求使用问号 （？） 参数标记。  
   
- 在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型使用带 @ 前缀的用户定义名称，而 OLE DB 连接管理器类型要求使用从 0 开始的序数数值作为参数名。  
+ 在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器类型使用的用户定义名称\@前缀，而 OLE DB 连接管理器类型要求使用作为参数名使用从 0 开始的序号的数字值。  
   
  下表总结了执行 SQL 任务可以使用的连接管理器类型的 SQL 命令要求。  
   
 |连接类型|参数标记|参数名称|示例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|@\<参数名称>|@\<参数名称>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<参数名称>|\@\<参数名称>|选择 FirstName、 LastName、 标题从 Person.Contact 其中 ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +151,7 @@ ms.locfileid: "37252329"
   
 -   ADO 连接类型可以使用任何两个参数名称，例如 Param1 和 Param2，但是这两个参数必须按其在参数列表中的序数位置进行映射。  
   
--   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接类型使用参数名称 @parmMinProductID 和 @parmMaxProductID。  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)]连接类型使用参数名称\@parmMinProductID 和\@parmMaxProductID。  
   
 ##  <a name="Stored_procedures"></a> 使用参数的存储过程  
  运行存储过程的 SQL 命令也可以使用参数映射。 与参数化查询的规则一样，参数标记和参数名称的使用规则取决于执行 SQL 所使用的连接管理器的类型。  

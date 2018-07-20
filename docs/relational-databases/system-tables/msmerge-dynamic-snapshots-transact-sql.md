@@ -1,5 +1,5 @@
 ---
-title: MSmerge_dynamic_snapshots (Transact SQL) |Microsoft 文档
+title: MSmerge_dynamic_snapshots (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_dynamic_snapshots system table
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 948a643d96228df9ecb816ac7a2a382c052c6c12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5149e141b3e8e84386e4607c5cb633e1388afa61
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004104"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103705"
 ---
 # <a name="msmergedynamicsnapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_dynamic_snapshots**表跟踪带有参数化的行筛选器为合并发布定义每个分区的筛选的数据快照的位置。 此表存储在**发布**数据库。  
+  **MSmerge_dynamic_snapshots**表跟踪为具有参数化的行筛选器为合并发布定义每个分区的已筛选的数据快照的位置。 此表存储中**发布**数据库。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "33004104"
 |**dynamic_snapshot_location**|**nvarchar(255)**|分区的已筛选数据快照的位置。|  
 |**last_updated**|**datetime**|已筛选数据快照刷新的日期。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

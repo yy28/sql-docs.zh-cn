@@ -30,12 +30,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36f090abe358adab3075693e63ab4fe95cbbbadb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60c004e7bf1deaf2e51a11e9e558884b2ca684f5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248327"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084019"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](specify-metaproperties-in-openxml.md)。  
@@ -472,7 +472,7 @@ EXEC sp_xml_removedocument @docHandle
   
  OPENXML 语句说明了以下信息：  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) 以 XML 属性 **ProductID** 结尾。 在所得到的行集中，为在 XML 文档中选定的每个属性节点都创建一行。  
+-   *rowpattern* (/root/customer/o/OrderDetail/\@ProductID) 以 XML 属性，结束**ProductID**。 在所得到的行集中，为在 XML 文档中选定的每个属性节点都创建一行。  
   
 -   在下例中未指定 *flags* 参数。 相反，由 *ColPattern* 参数指定映射。  
   
@@ -480,9 +480,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   在行集中为 **ProdID** 列指定为 *ColPattern* 的 XPath 模式 (**.**) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 <`OrderDetail`> 元素的 **ProductID** 属性。  
   
--   在行集中为 **Qty** 列指定的 *ColPattern* **../@Quantity** 用于标识上下文节点 \<ProductID> 的父节点 <`OrderDetail`> 的 **Quantity** 属性。  
+-   *ColPattern*， **.../\@Quantity**指定**Qty**行集中的列标识**Quantity**属性的父代、 <`OrderDetail`>，上下文的节点节点， \<ProductID >。  
   
--   同样，在行集中为 **OID** 列指定的  *ColPattern* **../../@OrderID** 用于标识该上下文节点的父节点的父级 <`Order`> 的 **OrderID** 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
+-   同样， *ColPattern*， **.../../\@OrderID**指定**OID**行集中的列标识**OrderID**属性的父代、 <`Order`>，父节点的上下文节点中。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -580,7 +580,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 具体而言，你将一个 **xml** 类型的变量 (@x) 传递给 **sp_xml_preparedocument()** 函数。  
+ 具体而言，均通过**xml**类型的变量 (\@x) 对**sp_xml_preparedocument （)** 函数。  
   
  结果如下：  
   

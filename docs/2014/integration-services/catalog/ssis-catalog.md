@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160909"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084079"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   `SSISDB`目录是用于处理的中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 项目的已部署到[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -64,7 +64,7 @@ ms.locfileid: "37160909"
   
 -   名称不得包含前导空格或尾随空格。  
   
--   首字母不得为 @，但后续字符可以使用 @。  
+-   \@ 不允许作为第一个字符，但后续字符可使用\@。  
   
 -   名称的长度必须大于 0 且小于或等于 128。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "37160909"
   
 -   名称不得包含前导空格或尾随空格。  
   
--   首字母不得为 @，但后续字符可以使用 @。  
+-   \@ 不允许作为第一个字符，但后续字符可使用\@。  
   
 -   名称的长度必须大于 0 且小于或等于 128。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "37160909"
 |每个项目的最大版本数|MAX_PROJECT_VERSIONS|  
 |服务器范围的默认日志记录级别|SERVER_LOGGING_LEVEL|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  文件夹中包含的项目、环境和包是安全对象。 您可以授予对文件夹的权限，包括 MANAGE_OBJECT_PERMISSIONS 权限。 利用 MANAGE_OBJECT_PERMISSIONS，您可以将文件夹内容的管理委托给用户，而无需为 ssis_admin 角色授予用户成员身份。 您还可以授予对项目、环境和操作的权限。 操作包括初始化[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 部署项目、 创建和启动执行、 验证项目和包和配置`SSISDB`目录。  
   
  有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  

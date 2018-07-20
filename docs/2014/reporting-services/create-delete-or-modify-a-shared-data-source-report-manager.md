@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202687"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085079"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>创建、删除或修改共享数据源（报表管理器）
   共享数据源指定数据源的连接属性。 如果数据源供大量的报表、模型或数据驱动订阅使用，则可考虑创建共享数据源，以消除必须在多个位置维护相同连接信息的开销。  
@@ -43,7 +43,7 @@ ms.locfileid: "37202687"
   
 3.  单击 **“新建数据源”**。 此时，将打开 **“新建数据源”** 页。  
   
-4.  为相应项键入一个名称。 名称必须包含至少一个字符并且必须以字母开头。 它也可以包括特定的一些符号，但不能包括空格或以下字符：; ? : @ & = +，$ / * \< > |" /.  
+4.  为相应项键入一个名称。 名称必须包含至少一个字符并且必须以字母开头。 它也可以包括特定的一些符号，但不能包括空格或以下字符：; ? : \@ & = +，$ / * \< > |" /.  
   
 5.  根据需要，可以键入说明，向用户提供相关的连接信息。 此说明将显示在报表管理器的 **“内容”** 页中。  
   

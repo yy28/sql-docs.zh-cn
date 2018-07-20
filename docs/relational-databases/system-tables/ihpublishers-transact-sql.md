@@ -1,5 +1,5 @@
 ---
-title: IHpublishers (Transact SQL) |Microsoft 文档
+title: IHpublishers (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e59cadf84f2e05bf08690d44fb14036369fc502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b57b1577f806aa14a9649b40c8b0cbf7b6fe533d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004034"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102175"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,17 @@ ms.locfileid: "33004034"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**int**|标识非 SQL Server 发布服务器。|  
-|**供应商**|**sysname**|非 SQL Server 数据库的供应商名称。|  
+|**供应商**|**sysname**|非 SQL Server 数据库供应商的名称。|  
 |**publisher_guid**|**uniqueidentifier**|标识非 SQL Server 发布服务器的 GUID。|  
 |**flush_request_time**|**datetime**|指示上次对项目元数据进行更改（需要日志读取器代理更新它的元数据缓存）的日期和时间。|  
-|**version**|**sysname**|一个文本字符串，描述的非 SQL Server 发布服务器的版本。|  
+|**version**|**sysname**|版本的非 SQL Server 发布服务器的特点是一个文本字符串。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_adddistpublisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)  
+ [sp_helpdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)  
   
   

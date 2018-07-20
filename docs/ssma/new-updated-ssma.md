@@ -1,24 +1,23 @@
 ---
-title: 更新的 SSMA for SQL Server 文档 |Microsoft 文档
-description: 显示有关最近更改中的文档，为 SQL Server 迁移助手 (SSMA) 的 Microsoft SQL Server 的更新内容的代码段。
+title: 已更新-适用于 SQL Server 文档的 SSMA |Microsoft Docs
+description: 显示文档中最近更改，为 SQL Server 迁移助手 (SSMA) 的 Microsoft SQL Server 的更新内容片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: ssma
 ms.date: 04/28/2018
-ms.openlocfilehash: c941c5ca367c579fd654c7c399520f371f3f59b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 97b48abd3e470703f72441006a3ecd92b635e913
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776963"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085459"
 ---
-# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>新的和最近的更新： SQL Server Migration Assistant (SSMA)
+# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>新的和最近更新的文章： SQL Server 迁移助手 (SSMA)
 
 
 

@@ -4,19 +4,19 @@ description: 本文提供有关 SQL Server 常见问题的解答在 Linux 上运
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/17/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001789"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102225"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 方面的常见问题 (FAQ)
 
@@ -89,6 +89,9 @@ ms.locfileid: "38001789"
 1. **哪些工具是可用于监视 Linux 上的 SQL Server 性能？**
 
    可以使用[系统动态管理视图 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)收集各种类型的 SQL Server，包括 Linux 进程信息有关的信息。 可以使用[Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)以提高查询性能。 其他工具，如内置[性能仪表板](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)、 远程中 SQL Server Management Studio (SSMS) 从 Windows 工作。
+
+   > [!TIP]
+   > 若要提高性能的一种方法是正确配置 Linux 操作系统和 SQL Server 需。 有关详细信息，请参阅[的性能最佳实践和 Linux 上的 SQL Server 配置准则](sql-server-linux-performance-best-practices.md)。
 
 ## <a name="administration"></a>管理
 
