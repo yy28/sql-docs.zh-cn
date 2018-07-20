@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,23 +15,97 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619534"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957720"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
-## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-版本号：17.7<br>
+
+## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+在 17.8 中发现了与配置 SQL 数据库相关的错误，因此 SSMS 17.8.1 取代了 17.8。
+
+
+生成号：14.0.17277.0<br>
+发布日期：2018 年 6 月 26 日
+
+
+### <a name="whats-new"></a>新增功能
+
+**常规 SSMS**
+
+数据库属性：
+
+- 此改进公开了文件组的 AUTOGROW_ALL_FILES 配置选项。 此新配置选项在“数据库属性”>“文件组”窗口下以每个可用文件组复选框的新列（自动增长所有文件）的形式添加（文件流和内存优化文件组除外）。 用户可以通过切换相应的 Autogrow_All_Files 复选框来为特定文件组启用/禁用 AUTOGROW_ALL_FILES。 相应地，在编写数据库脚本为数据库（SQL 2016 及更高版本）创建/生成脚本时，AUTOGROW_ALL_FILES 选项已正确编写脚本。
+    
+SQL 编辑器：
+
+- 改进了当用户没有主访问权限时 Azure SQL 数据库中 Intellisense 的使用体验。
+
+脚本：
+
+- 常规性能改进，尤其针对高延迟连接。
+    
+Analysis Servics (AS)
+
+- Analysis Services 客户端库和数据提供程序已更新到最新版本，该版本添加了对新 Azure 政府 AAD 颁发机构 (login.microsoftonline.us) 的支持。
+
+
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS**
+    
+维护计划：
+
+- 修复了使用 SQL 身份验证编辑维护计划时出现的问题，即在使用 SQL 身份验证时，“通知操作员”任务失败。
+    
+脚本：
+
+- 修复了 SMO 中的 PostProcess 操作导致资源耗尽和 SQL 登录失败的问题
+    
+SMO：
+
+- 修复了添加具有默认约束的列并且表已有数据的情况下 Table.Alter() 失败的问题。 有关详细信息，请参阅 [sql server smo 在向包含数据的表中添加列时生成内联默认约束](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)。
+    
+Always Encrypted：
+
+- 修复了在分区表上启用 Always Encrypted 时导致锁超时错误的问题（在 DacFx 中）
+    
+
+**Analysis Services (AS)**
+
+- 修复了在表格 Analysis Services 1400 级兼容性模型中修改 OAuth 数据源时出现的问题，该问题导致 OAuth 令牌中的更改未在数据源中更新。
+- 修复了在 Analysis Services 表格 1400 级兼容性模型中使用某些无效数据源凭据或编辑不支持在 Power Query 中更改数据源迁移（例如，Oracle）的数据源时可能在 SSMS 中发生的故障。
+
+
+### <a name="known-issues"></a>已知问题
+
+- 在“属性”窗口中修改任何文件组属性后，单击“脚本”按钮，生成两个脚本 - 一个脚本带有 USE<database> 语句，另一个脚本带有 USE master 语句。  带有 USE master 的脚本错误生成，应该放弃。 运行包含 USE<database> 语句的脚本。
+- 使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
+- 可能会观察到 XEvents 查看器中的一些延迟。 这是 [.Net Framework 中的已知问题](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 请考虑升级到 NetFx 4.7.2。
+
+
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![下载](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 内部版本号：14.0.17254.0<br>
 发布日期：2018 年 5 月 9 日
+
+[中文（中国）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中文（台湾）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>新增功能
 
@@ -178,9 +252,7 @@ SMO：
 > [!WARNING]
 > 存在已知问题：当使用[维护计划](../relational-databases/maintenance-plans/maintenance-plans.md)时，SSMS 17.6 变得不稳定，甚至崩溃。 如果使用维护计划，请勿安装 SSMS 17.6。 如果已经安装 SSMS 17.6，且此问题正在产生不良影响，请降级到 17.5。 
 
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![下载](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 正式发布版 | 内部版本号：14.0.17224.0
@@ -310,7 +382,7 @@ XE 探查器：
     - 修复了在用户没有“查看服务器状态”权限时，导致 SSMS 崩溃的问题。
     - 修复了在关闭 XE 探查器实时数据窗口时未停止基础会话的问题。
 - 已注册的服务器：
-    - 修复了“移动到...” 命令停止工作的问题 - [连接 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和[连接 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+    - 修复了“Move To…”命令停止工作的问题 - [连接 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和[连接 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
 - SMO：
     - 修复了 Transfer 对象上 TransferData 方法不工作的问题。
     - 修复了 Server 数据库引发暂停 SQL DW 数据库异常的问题。
@@ -427,7 +499,7 @@ XE 探查器：
 **常规 SSMS**
 
 - 对于使用含 MFA 的 UA 的 Azure AD 身份验证，不支持以下 SSMS 功能：
-   - 对于 Azure AD 身份验证，不支持数据库引擎优化顾问；存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory,…”较为隐蔽， 而非按预期显示“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库。 (DTAClient)”。
+   - 对于 Azure AD 身份验证，不支持数据库引擎优化顾问；存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory,…”令人费解，而不是预期的“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库。 (DTAClient)”。
 - 尝试在 DTA 中分析查询会导致发生错误：“对象必须实现 IConvertible。 (mscorlib)”。
 - 回归的查询缺少对象资源管理器中报表的查询存储列表。
    - 解决方法：右键单击“查询存储”节点，然后选择“查看回归的查询”。
@@ -728,7 +800,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 错误处理加密后，刷新模块出现“始终加密”错误。
 - 更改 OLTP 和 OLAP 的默认连接超时，将其从 15 秒更改为 30 秒，以修复一类被忽略的连接故障。 
 - 解决了启动自定义报表时 SSMS 崩溃的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- 解决了 Azure SQL 数据库的 “生成脚本…”的问题。
+- 修复了 Azure SQL 数据库“生成脚本...”失败的问题。
 - 解决了“编写脚本为”和“生成脚本向导”问题，避免在对象脚本编写（如存储过程）时添加额外的换行符。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS PowerShell 提供程序：向 Dimension 和 MeasureGroup 文件夹添加 LastProcessed 属性。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - 实时查询统计信息：解决了在批处理中仅显示第一个查询的问题。 [连接项] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
