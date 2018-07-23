@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccd558bbfd074a2eee44fa1ea91a412b65b3e8fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048444"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030772"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>“保存”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33048444"
 > [!NOTE]  
 > 在保存表之前，您在表设计器中对表做出的更改并不会提交到数据库。 表一旦保存就无法撤消更改。 若要放弃未保存的更改，请关闭所有打开的表而不进行保存。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **表受到影响时警告**  
 指定下次保存所选的表时是否显示此对话框。 默认情况下，此框处于选中状态。 如果清除此选项，可以在“选项”对话框中重新选择该选项。  
   

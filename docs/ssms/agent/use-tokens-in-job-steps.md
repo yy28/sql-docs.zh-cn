@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046034"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971359"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "33046034"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server 代理标记  
   
-|标记|Description|  
+|标记|描述|  
 |---------|---------------|  
 |**(A-DBN)**|数据库名称。 如果作业由某个警报运行，则在作业步骤中，数据库名称值将自动替换此标记。|  
 |**(A-SVR)**|服务器名称。 如果作业由某个警报运行，则在作业步骤中，服务器名称值将自动替换此标记。|  
@@ -97,7 +97,7 @@ ms.locfileid: "33046034"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 代理转义宏  
   
-|转义宏|Description|  
+|转义宏|描述|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***token_name***))**|转义标记替换字符串中的单引号 (')。 将一个单引号替换为两个单引号。|  
 |**$(ESCAPE_DQUOTE(***token_name***))**|转义标记替换字符串中的双引号 (")。 将一个双引号替换为两个双引号。|  

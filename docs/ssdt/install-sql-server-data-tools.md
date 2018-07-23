@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.package.stub
 ms.assetid: 6f8616cb-9119-42c3-a9b1-936e088763e7
@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3eb70b2112e1f918ffe1f09705d8c47fb67428e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 2df3214ce5ae02e4feb076f77e66b153c4d2abdb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093766"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088019"
 ---
 # <a name="install-sql-server-data-tools"></a>安装 SQL Server 数据工具
 本主题介绍如何安装 SQL Server Data Tools。 SQL Server Data Tools 下载页（[ SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)）上提供了 SQL Server Data Tools 的更新。  

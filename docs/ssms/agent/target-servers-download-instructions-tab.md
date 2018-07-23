@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 632329feb770acc03dd1c1860604f2241d016287
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971619"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目标服务器（“下载指令”选项卡）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33041864"
 
 使用此页可以显示和更新一个或多个目标服务器的下载指令。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **目标服务器**  
 选择要查看或修改其指令的服务器。  
   

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5409db44220e0c6b40b16752329c7df54bc54f0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ced224db1a1826effe84dd713abe64c3cddf1b94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093744"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085929"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>如何生成和部署到本地数据库
 Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行时的本地按需运行的服务器实例，在调试 SQL Server 数据库项目时该实例将被激活。 此本地服务器实例可以用作生成、测试和调试您的项目的沙盒。 它独立于已安装的任何 SQL Server 实例，并且不可从 SQL Server Data Tools (SSDT) 之外访问。 如果开发人员对生产数据库只有有限访问权限或没有访问权限，但想要在授权人士将其项目部署到生产前在本地测试其项目，则上述安排适合于此类开发人员。 此外，在您为 SQL Azure 开发数据库解决方案时，可以利用此本地服务器所提供的便利，在将数据库项目部署到云中之前在本地开发和测试您的数据库项目。  

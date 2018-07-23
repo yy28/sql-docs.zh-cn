@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4dc734ccf3ce4075a48d69213c2e3d87581f58e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c9677ba386ceda02136eb3eb67052e4eff0362d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044564"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984129"
 ---
 # <a name="view-or-modify-jobs"></a>查看或修改作业
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "33044564"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
-有关详细信息，请参阅 [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/en-us/237f9bad-636d-4262-9bfb-66c034a43e88)。  
+有关详细信息，请参阅 [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88)。  
   
 **sysadmin** 固定服务器角色的成员可以查看任何作业的定义或历史记录，还可以修改任何作业。  
   
@@ -78,5 +78,5 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |说明如何更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业的属性。|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
   
 ## <a name="see-also"></a>另请参阅  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sysjobhistory](http://msdn.microsoft.com/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
   

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datafilterdialog.dialog
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a5b2a1e6358302562d0fccc558eedbb4eb304d7
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: e60772ba898624feab9eada69c65e60a58ad6afd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093731"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083609"
 ---
 # <a name="filter-and-sort-dialog-box"></a>“筛选和排序”对话框
 在 SQL Server 对象资源管理器中，可以右键单击表或视图，并选择“查看数据”（有关详细信息，请参阅[如何：查看和编辑表中的数据](../ssdt/how-to-view-and-edit-data-in-a-table.md)）。 从 2014 年 3 月发布的 SQL Server Data Tools 开始，“数据编辑器”在工具栏中提供“排序”和“筛选”按钮。 可以修改在表或视图中显示的数据。  

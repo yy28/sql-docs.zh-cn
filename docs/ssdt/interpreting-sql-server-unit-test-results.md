@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ea9047286b25eaae4820d5b7726a657fa19a22a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1709d7ca64eedf5e4f0dd170606082e7f99f3e31
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093774"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083859"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>解释 SQL Server 单元测试结果
 运行 SQL Server 单元测试时，将会自动生成测试结果，将其保存到磁盘并在“测试结果”窗口中显示摘要信息。 启动测试运行后，“测试结果”窗口将出现并显示测试运行的进度。 此显示内容包括正在运行的测试和已完成的测试。  

@@ -18,21 +18,21 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5a139725bdc5a0bbde74478ad1a2465e8b3ea9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053794"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984989"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>“索引 - 键”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可以创建或修改索引、主键和唯一键。 若要访问此对话框，请打开具有索引或键的表定义，右键单击表定义网格，再单击“索引/键”。  
   
 > [!NOTE]  
-> 如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
+> 如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **选定的主/唯一键或索引**  
 列出现有的主键/唯一键和索引。 选择其中任意一项可在右侧网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何 XML 索引。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33053794"
 展开此项可显示有关“创建为聚集的”的信息。  
   
 **创建为聚集的**  
-指定创建聚集键或聚集索引。 对于每个表只能创建一个聚集索引。 表中数据按聚集索引的顺序进行存储。 有关详细信息，请参阅 [创建聚集索引](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 和 [创建非聚集索引](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)。  
+指定创建聚集键或聚集索引。 对于每个表只能创建一个聚集索引。 表中数据按聚集索引的顺序进行存储。 有关详细信息，请参阅 [创建聚集索引](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 和 [创建非聚集索引](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943)。  
   
 **数据空间规范**  
 展开此项可显示有关“(数据空间类型)”、“文件组或分区方案名称”和“分区列列表”的信息。  
@@ -120,6 +120,6 @@ ms.locfileid: "33053794"
 指定对此索引是否允许行级锁定。 允许或禁用行级锁定会影响数据库性能。 建议设置为“是”。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用约束 (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[使用键 (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[使用约束 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用键 (Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

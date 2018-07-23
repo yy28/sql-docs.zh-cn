@@ -17,20 +17,20 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb7c869dbf087db4c59eb9e5ba30c48f6e33f055
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053784"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981869"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用“空间索引”对话框可为“几何”或“地理”数据类型的列（空间列）创建索引，不能使用“索引/键”对话框为这些列创建索引。 每个空间列可以有多个空间索引，但一次只能创建一个索引。  
   
-有关创建空间索引时的限制信息，请参阅 [空间索引概述](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)。  
+有关创建空间索引时的限制信息，请参阅 [空间索引概述](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **所选空间索引**  
 列出现有空间索引。 选择要显示其属性的索引。 如果该列表为空，则表示尚未为该表定义空间索引。  
   
@@ -122,5 +122,5 @@ ms.locfileid: "33053784"
 指定对此索引是否允许行级锁定。 允许或禁用行级锁定会影响数据库性能。  
   
 ## <a name="see-also"></a>另请参阅  
-[空间索引概述](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[空间索引概述](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

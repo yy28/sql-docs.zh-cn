@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 37afadef09a3b971977247c0311d3d63a4dae020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042544"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983853"
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>SQL Server 代理属性（“连接”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33042544"
 
 使用此页可查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 之间的连接设置。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **本地主机服务器别名**  
 指定用来连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的本地实例的别名。 如果无法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的默认连接选项，请为相应的实例定义一个别名，并在此处指定该别名。  
   

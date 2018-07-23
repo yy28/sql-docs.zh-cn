@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7c4ebd7c0451e0a8fca7714b7f722613febc5e56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030835"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33040094"
 
 使用此页可以指定目标服务器的下载指令。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **指令类型**  
 指定要发布的下载指令的类型。  
   

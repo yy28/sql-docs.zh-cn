@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7f045f406f83f516d5d0218b344e40e15c232f1
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4febbc5a2a66fada8e83b4fb81ae35d6fdabcd15
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093754"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082911"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>将一个或多个表中的数据与引用数据库中的数据进行比较和同步
 可以比较源数据库和目标数据库中的数据，并指定应比较哪些表。 可以查看数据并确定要同步的更改。 然后，可以更新目标以同步数据库，或将更新脚本导出到 Transact\-SQL 编辑器或文件。  

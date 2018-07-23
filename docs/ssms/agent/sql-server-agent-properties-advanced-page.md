@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c0c79369a1486f175fb23321e706a799059c92c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042024"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971399"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server 代理属性（“高级”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33042024"
 
 使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务的高级属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **SQL Server 事件转发**  
 此类别中的选项可用来激活和配置事件转发功能。  
   

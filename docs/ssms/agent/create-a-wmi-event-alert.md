@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95bd019c2445f787a54185dacf314df8d81d1473
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62474c013c8d70f32f81c68afcb74e5f5c655535
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045044"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983659"
 ---
 # <a name="create-a-wmi-event-alert"></a>创建 WMI 事件警报
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33045044"
 
 本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中创建 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 代理警报，以便在出现由 WMI Provider for Server Events 监视的特定 [!INCLUDE[tsql](../../includes/tsql_md.md)]事件时引发警报。  
   
-有关使用 WMI 提供程序监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件的详细信息，请参阅 [WMI Provider for Server Events 类和属性](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)。 有关接收 WMI 事件警报通知的所需权限的信息，请参阅 [为 SQL Server 代理服务选择帐户](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。 有关 WQL 的详细信息，请参阅 [将 WQL 与 WMI Provider for Server Events 结合使用](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)。  
+有关使用 WMI 提供程序监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件的详细信息，请参阅 [WMI Provider for Server Events 类和属性](http://msdn.microsoft.com/80767fe0-32ac-406a-81a0-8212cd6ce7e4)。 有关接收 WMI 事件警报通知的所需权限的信息，请参阅 [为 SQL Server 代理服务选择帐户](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。 有关 WQL 的详细信息，请参阅 [将 WQL 与 WMI Provider for Server Events 结合使用](http://msdn.microsoft.com/58b67426-1e66-4445-8e2c-03182e94c4be)。  
   
 **本主题内容**  
   
@@ -113,5 +113,5 @@ ms.locfileid: "33045044"
     GO  
     ```  
   
-有关详细信息，请参阅 [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)。  
+有关详细信息，请参阅 [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)。  
   

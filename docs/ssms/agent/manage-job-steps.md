@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dcc447259a2ad685f89ead386f403c4a7781d67a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f942fa53b0b4db80a8f8f666a628ab43dde85691
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046384"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980272"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "33046384"
   
 每个作业步骤都在特定的安全上下文中运行。 如果作业步骤指定一个代理，该作业步骤将在该代理凭据的安全上下文中运行。 如果作业步骤没有指定代理，该作业步骤将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务帐户的上下文中运行。 只有 sysadmin 固定服务器角色成员可以创建没有显式指定代理的作业。  
   
-由于作业步骤在特定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 用户的上下文中运行，所以该用户必须具有执行作业步骤所需的权限和配置。 例如，如果您创建一个需要驱动器号或通用命名约定 (UNC) 路径的作业，则在测试任务时，可使用您的 Windows 用户帐户来运行作业步骤。 但是，运行作业步骤的 Windows 用户还必须具有所需的权限、驱动器号配置权限或对所需驱动器的访问权限。 否则，作业步骤会失败。 为了防止出现这种问题，请确保每个作业步骤的代理都具有该作业步骤所执行任务的必要权限。 有关详细信息，请参阅 [安全性和保护（数据库引擎）](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)。  
+由于作业步骤在特定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 用户的上下文中运行，所以该用户必须具有执行作业步骤所需的权限和配置。 例如，如果您创建一个需要驱动器号或通用命名约定 (UNC) 路径的作业，则在测试任务时，可使用您的 Windows 用户帐户来运行作业步骤。 但是，运行作业步骤的 Windows 用户还必须具有所需的权限、驱动器号配置权限或对所需驱动器的访问权限。 否则，作业步骤会失败。 为了防止出现这种问题，请确保每个作业步骤的代理都具有该作业步骤所执行任务的必要权限。 有关详细信息，请参阅 [安全性和保护（数据库引擎）](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)。  
   
 ## <a name="job-step-logs"></a>作业步骤日志  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理可以将某些作业步骤的输出写入操作系统文件，也可以将其写入 msdb 数据库中的 sysjobstepslogs 表。 下列类型的作业步骤的输出可以写入以上两个目标位置：  
@@ -100,7 +100,7 @@ ms.locfileid: "33046384"
   
 还可以选择将现有的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 文件作为作业步骤的命令打开。  
   
-[!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql_md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息，请参阅 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)。  
+[!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql_md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息，请参阅 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   
 > [!NOTE]  
 > 一个 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤可以包含多个批处理。 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤可以包含嵌入的 GO 命令。  
@@ -112,7 +112,7 @@ ms.locfileid: "33046384"
   
 -   要打开的现有 PowerShell 脚本文件。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理 PowerShell 子系统打开一个 PowerShell 会话，并加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元。用作作业步骤命令的 PowerShell 脚本可以引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理 PowerShell 子系统打开一个 PowerShell 会话，并加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元。用作作业步骤命令的 PowerShell 脚本可以引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 脚本作业步骤  
   
@@ -157,7 +157,7 @@ Set oServer = nothing
   
 -   队列读取器代理（QueueReader 作业）  
   
-设置复制后，您可以指定以下列三种方式之一运行复制代理：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理启动后连续运行、按需运行或按计划运行。 有关复制代理的详细信息，请参阅 [复制代理概述](http://msdn.microsoft.com/en-us/a35ecd7d-f130-483c-87e3-ddc8927bb91b)。  
+设置复制后，您可以指定以下列三种方式之一运行复制代理：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理启动后连续运行、按需运行或按计划运行。 有关复制代理的详细信息，请参阅 [复制代理概述](http://msdn.microsoft.com/a35ecd7d-f130-483c-87e3-ddc8927bb91b)。  
   
 ## <a name="analysis-services-job-steps"></a>Analysis Services 作业步骤  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理支持两种不同类型的 Analysis Services 作业步骤：命令作业步骤和查询作业步骤。  
@@ -176,7 +176,7 @@ Set oServer = nothing
   
 -   键入要执行的语句。 该语句必须是一个多维表达式 (MDX) 查询。  
   
-有关 MDX 的详细信息，请参阅 [MDX 语句基础知识 (MDX)](http://msdn.microsoft.com/en-us/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
+有关 MDX 的详细信息，请参阅 [MDX 语句基础知识 (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
   
 ## <a name="integration-services-packages"></a>Integration Services 包  
 当创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 包作业步骤时，必须执行下列操作：  
@@ -203,7 +203,7 @@ Set oServer = nothing
   
 请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
   
-有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 包的作业步骤的详细信息，请参阅[包的 SQL Server 代理作业](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)。  
+有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 包的作业步骤的详细信息，请参阅[包的 SQL Server 代理作业](http://msdn.microsoft.com/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -221,7 +221,7 @@ Set oServer = nothing
 |说明如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤日志。|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>另请参阅  
-[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [创建作业](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   

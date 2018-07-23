@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e63f1093a744c56e0900930b54708f15493f89e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048304"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061265"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>“检测到数据库更改”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33048304"
 > [!NOTE]  
 > 虽然您无法撤消对表或数据库关系图所做的更改，但在保存表或关系图之前，这些更改并不会保存到数据库中。 通过选择“否”并关闭所有打开的关系图而不进行保存，即可放弃所有未保存的更改。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **检测到差异时警告**  
 指定在您下次尝试保存数据库关系图或所选表时是否显示此对话框。 选中此项表示在您每次保存对于数据库已过期的关系图或表时，该对话框都仍会显示。 未选中此项表示该对话框不再显示。 默认情况下，此框处于选中状态。 如果取消选中此选项，可以在“选项”对话框中重新选中它。  
   

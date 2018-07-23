@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772593"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060175"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "34772593"
 |<a name="BKMK_IPsec"></a> IPsec 通信|UDP 端口 500 和 UDP 端口 4500|如果域策略要求通过 IPSec 进行网络通信，还必须将 UDP 端口 4500 和 UDP 端口 500 添加到例外列表。 使用 Windows 防火墙管理单元中的“新建入站规则向导”可以选择 IPsec。 有关详细信息，请参阅下面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。|  
 |将 Windows 身份验证用于可信域|必须将防火墙配置为允许身份验证请求。|有关详细信息，请参阅 [如何为域和信任关系配置防火墙](http://support.microsoft.com/kb/179442/)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 群集|群集需要与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接相关的其他端口。|有关详细信息，请参阅 [Enable a network for cluster use](http://go.microsoft.com/fwlink/?LinkId=118372)（启用网络以供群集使用）。|  
-|HTTP 服务器 API (HTTP.SYS) 中保留的 URL 命名空间|很可能为 TCP 端口 80，但可以配置为其他端口。 有关常规信息，请参阅 [配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373)。|有关使用 HttpCfg.exe 保留 HTTP.SYS 端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定信息，请参阅[关于 URL 保留项和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
+|HTTP 服务器 API (HTTP.SYS) 中保留的 URL 命名空间|很可能为 TCP 端口 80，但可以配置为其他端口。 有关常规信息，请参阅 [配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373)。|有关使用 HttpCfg.exe 预留 HTTP.SYS 端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定信息，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
   
 ##  <a name="BKMK_port_135"></a> 端口 135 的特殊注意事项  
  将 RPC 与 TCP/IP 或 UDP/IP 一起用作传输方式时，通常会根据需要为系统服务动态分配入站端口。将使用端口号大于 1024 的 TCP/IP 和 UDP/IP 端口。 这些端口通常被不正式地称为“随机 RPC 端口”。 在这些情况下，RPC 客户端依赖 RPC 端点映射程序来通知它们为服务器分配了哪些动态端口。 对于一些基于 RPC 的服务，可以配置特定端口，而非让 RPC 动态分配一个端口。 此外，还可以将 RPC 动态分配的端口范围限制为一个较小的范围，不管何种服务均可如此。 由于许多服务都使用端口 135，它经常受到恶意用户的攻击。 当打开端口 135 时，请考虑限制防火墙规则的作用范围。  

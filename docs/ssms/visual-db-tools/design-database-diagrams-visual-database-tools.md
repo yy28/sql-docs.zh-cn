@@ -23,12 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b84ab228993294300fa02c65e76e562bea345c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2fa73a0d25934117a4ae8a199e665e36f1a229d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050764"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981679"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>设计数据库关系图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33050764"
   
 如果修改了某个表，但尚未保存该表，则表名末尾将显示一个星号 (*)，表示未保存更改。 有关保存修改后的表和关系图的详细信息，请参阅 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**行选择器** 可以通过单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键的信息，请参阅 [使用键 (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)。  
+**行选择器** 可以通过单击行选择器来选择表中的数据库列。 如何该列是表的主键，则行选择器将显示一个键符号。 有关主键的信息，请参阅 [使用键 (Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)。  
   
 **属性列** 属性列组仅在表的某些视图中可见。 您可以在五个不同视图中的任何一个视图中查看表，以帮助您管理关系图的大小和布局。  
   

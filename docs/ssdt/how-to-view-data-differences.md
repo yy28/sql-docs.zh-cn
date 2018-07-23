@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7025a59d6db451bb008bca72909bed16b1803da
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d1276c84091513c06a2febcb215cf3bffa23cdd7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093723"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088289"
 ---
 # <a name="how-to-view-data-differences"></a>如何：查看数据差异
 在比较两个数据库中的数据后，将显示比较的每个数据库对象及其状态。 还可以查看每个对象中的记录的结果（按状态分组）。  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5ef4c7f272cc66003051a395b93e119f153640a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093746"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087169"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：为 SQL Server 单元测试设计器创建测试条件
 可以使用可扩展的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类来创建新的测试条件。 例如，您可以创建一个新的测试条件，验证结果集中列或值的数目。  

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
 - sql.data.tools.dropdatabaseconfirmation.dialog
@@ -18,12 +18,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d734b9d8e200742e9dae7363e0d1559a99b7532
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ae1375a871598a1bf4ce4bd217336450c50d3264
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093784"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082689"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何删除对象和解析依赖关系
 在 SQL Server 对象资源管理器中重命名或删除某一对象时，SQL Server Data Tools 将自动检测其所有依赖对象，并且将准备 ALTER 脚本以便根据需要重命名或删除这些依赖对象。  

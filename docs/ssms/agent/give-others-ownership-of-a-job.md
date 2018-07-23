@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ba025ae882c1779cc4022b4cb75d323384a2708
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d795f709f37772c22cfcffb2b9f0d98c77a7501e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044494"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980029"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "33044494"
   
 2.  在工具栏上，单击 **“新建查询”**。  
   
-3.  在查询窗口中，输入以下使用 [sp_manage_jobs_by_login (TRANSACT-SQL)](http://msdn.microsoft.com/en-us/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) 系统存储过程的语句。 以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  
+3.  在查询窗口中，输入以下使用 [sp_manage_jobs_by_login (TRANSACT-SQL)](http://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) 系统存储过程的语句。 以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  
   
     ```  
     USE msdb ;  
@@ -97,7 +97,7 @@ ms.locfileid: "33044494"
 ## <a name="SMOProc2"></a>使用 SQL Server 管理对象  
 **将作业所有权授予其他人**  
   
-1.  通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 **Job** 类。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](http://msdn.microsoft.com/en-us/900242ad-d6a2-48e9-8a1b-f0eea4413c16)。  
+1.  通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 **Job** 类。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16)。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行作业](../../ssms/agent/implement-jobs.md)  

@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b755ee7478e3ffb83a8ef3897f97c325c7e169e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047764"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997949"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>“生成表”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可以命名通过复制行而创建的表。 当您将查询类型更改为“生成表”查询时，将显示此对话框。 若要更改查询类型，请在“查询设计器”菜单中指向“更改类型”，再单击“生成表”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **表名**  
 键入要创建的表的名称。 查询和视图设计器不检查该名称是否已在使用，也不检查您是否有权创建表。  
   

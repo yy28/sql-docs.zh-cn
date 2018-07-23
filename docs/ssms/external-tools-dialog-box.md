@@ -19,18 +19,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02bb00f5a9edc2a0dcf00a489a1471fa06ba181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043474"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979861"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用“外部工具”对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **菜单内容**  
 列出当前添加到“工具”菜单上的菜单项标题。 使用“上移”和“下移”箭头可以更改菜单项的显示顺序。 使用“删除”按钮可以从菜单中删除菜单项。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33043474"
 指定在菜单上选择某个工具时传递到该工具的变量。 参数可以指定启动工具或命令时传递给工具或命令的值。 例如，参数值可以指定文件名或目录。 使用箭头按钮可以从预定义的参数列表中进行选择。 您可以添加多个参数。 有关预定义参数及其定义的完整列表，请参阅 [外部工具的参数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 还可以输入自定义参数（例如，命令行开关），这取决于所使用的命令或工具。  
   
 **使用输出窗口**  
-打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 输出窗口显示正在运行命令的输出。 并非所有工具都以在输出窗口中显示的格式显示输出。 有关详细信息，请参阅 [输出窗口](http://msdn.microsoft.com/en-us/9808e00c-c8f6-45cc-896e-192b8420f747)。  
+打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 输出窗口显示正在运行命令的输出。 并非所有工具都以在输出窗口中显示的格式显示输出。 有关详细信息，请参阅 [输出窗口](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747)。  
   
 **将输出按 Unicode 处理**  
 将输出解析为 Unicode。  

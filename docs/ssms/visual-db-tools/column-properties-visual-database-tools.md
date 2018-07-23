@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e43a42c781ae0133f7d1644d6ea0c82e3197bef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054714"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981799"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "33054714"
 展开此项可显示剩余的属性。  
   
 **数据类型**  
-显示所选列的数据类型。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+显示所选列的数据类型。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
   
 **标识增量**  
 显示标识列各后续行的“标识种子”将增加的增量。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。）  
@@ -99,7 +99,7 @@ ms.locfileid: "33054714"
 显示列的数据类型是否允许空值。  
   
 **数据类型**  
-显示所选列的数据类型。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+显示所选列的数据类型。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
   
 **默认值或绑定**  
 如果未为此列指定值，则显示此列的默认值。 下拉列表中包含了数据源中定义的所有全局默认值。 若要将该列绑定到某个全局默认值，请从下拉列表中进行选择。 另外，若要为该列创建默认约束，请直接以文本格式键入默认值。  
@@ -147,7 +147,7 @@ ms.locfileid: "33054714"
 指示用于对列进行索引的语言。  
   
 **统计语义**  
-选择是否为所选列启用统计语义索引。 有关详细信息，请参阅 [语义搜索占位符](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
+选择是否为所选列启用统计语义索引。 有关详细信息，请参阅 [语义搜索占位符](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
   
 如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将设置为 **“否”** 并且无法修改。 如果您在选择 **“语言”** 前为 **“统计语义”** 选项选择 **“是”**，则 **“语言”** 列中提供的语言将限制为存在语义语言模型支持的那些语言。  
   

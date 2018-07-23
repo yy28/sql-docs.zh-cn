@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e896766c3c966dd77faac196986e2597240a047d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: af8ee2d569c44d19e518c1dafacddb958c66cc88
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093759"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087739"
 ---
 # <a name="import-into-a-database-project"></a>导入到数据库项目
 可以通过“导入”从活动的数据库或 .dacpac 使用新项目填充项目，或使用脚本中的新定义更新您项目中的现有对象。 请注意这三种途径存在一些行为差异，下面将进行说明。  

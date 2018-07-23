@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d3683d1920df2bb05e6a340733ff2d196c50f59c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041444"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035785"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目标服务器（“目标服务器状态”选项卡）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33041444"
 
 使用此页可查看此主服务器的目标服务器的状态。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **目标服务器**  
 查看目标服务器的名称。  
   

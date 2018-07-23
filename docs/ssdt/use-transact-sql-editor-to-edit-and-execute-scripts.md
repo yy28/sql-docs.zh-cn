@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eccaf60d648824e2f170bf1fd78b8a8f1a16dc28
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4bdca5a6c8ea949e9106bd8d62b8fa6868577d13
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093736"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082959"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>使用 Transact-SQL 编辑器编辑和执行脚本
 在使用脚本时，Transact\-SQL 编辑器为你提供了丰富的编辑和调试体验。 在使用“查看代码”上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用该编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。  

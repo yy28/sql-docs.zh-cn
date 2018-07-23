@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26cd1e1a9ac3a7c47cd8d748f115b15654e073d8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 82c0f19504b374afbd0df72cb887a57d858918d5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093781"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085059"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools 所需权限
 在 Visual Studio 中对某一数据库执行操作之前，必须使用对该数据库具有某些权限的帐户登录。 您所需的特定权限将基于您要执行的操作而异。 下面几节介绍了您可能要执行的各操作以及执行该操作所需的特定权限。  

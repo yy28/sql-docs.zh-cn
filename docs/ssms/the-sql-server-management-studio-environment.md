@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046644"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981310"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 环境
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "33046644"
 [解决方案资源管理器](../ssms/solution/solution-explorer.md)  
 介绍解决方案资源管理器，该用户界面提供了项目及其文件的结构化视图，并可随时访问管理项目和文件的命令。  
   
-[解决方案资源管理器源代码管理](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[解决方案资源管理器源代码管理](https://msdn.microsoft.com/library/ms173879.aspx)  
 说明 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 与源代码管理产品的集成方式。  
   

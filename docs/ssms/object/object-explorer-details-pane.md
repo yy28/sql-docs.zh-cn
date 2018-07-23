@@ -23,12 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d59e3448b3e833adacab7b37708725e8ff36864
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045825"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984009"
 ---
 # <a name="object-explorer-details-pane"></a>对象资源管理器详细信息窗格
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "33045825"
 ## <a name="sql-server-object-search"></a>SQL Server 对象搜索  
 通配符  
   
--   支持标准通配符字符。 例如，搜索 **dm_os%counters** 会返回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 有关详细信息，请参阅 [如何使用通配符搜索](http://msdn.microsoft.com/en-us/449600f8-cc87-4b3f-878a-59c158a88a40)。  
+-   支持标准通配符字符。 例如，搜索 **dm_os%counters** 会返回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 有关详细信息，请参阅 [如何使用通配符搜索](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40)。  
   
 搜索范围  
   

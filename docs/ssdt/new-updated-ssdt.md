@@ -4,20 +4,19 @@ description: 显示 Microsoft SQL Server 的 SQL Server Data Tools (SSDT) 文档
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
 ms.component: ssdt
 ms.date: 04/28/2018
-ms.openlocfilehash: 99b0844803e1ce95bd6f73b0d45a2baf867428ba
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 63497624591ef72d46c9e0f77248a128df53a4ba
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32699708"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087729"
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新的和最近更新的文章：SQL Server Data Tools (SSDT)
 

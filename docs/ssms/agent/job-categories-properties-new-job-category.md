@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ad2c51c0d2e38449d7ef1b2e44c2dca80b98133f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038594"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064760"
 ---
 # <a name="job-categories-properties---new-job-category"></a>作业类别属性 - 新建作业类别
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33038594"
 
 列出一种作业类别或所有作业类别中的作业，并且您可以通过它来添加新的作业类别。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **名称**  
 键入新作业类别的名称。 如果这是作业类别的“属性”对话框，则在此处显示您所查看的类别。  
   

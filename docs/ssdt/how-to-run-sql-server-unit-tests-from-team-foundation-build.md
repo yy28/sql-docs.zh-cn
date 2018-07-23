@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fc026287cb292f3074afe4392d38088b3ba456d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093787"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087139"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
 可以使用 Team Foundation Build 将 SQL Server 单元测试作为生成验证测试 (BVT) 的一部分运行。 可以配置单元测试以部署数据库、生成测试数据，然后运行选定测试。 如果您不熟悉 Team Foundation Build，则应该在执行本主题中的过程之前查看以下信息：  

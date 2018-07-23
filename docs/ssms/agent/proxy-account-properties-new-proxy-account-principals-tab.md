@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 36fdee8dda11f7341eb20c1c7f2c09c31237390a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000418"
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>代理帐户属性 - 新建代理帐户（“主体”选项卡）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33039574"
 
 使用此页可以查看或更改能够在作业步骤中使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户的主体。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **代理帐户主体**  
 列出可以使用此代理帐户的主体。  
   

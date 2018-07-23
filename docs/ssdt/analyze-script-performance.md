@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6c6ca69968791ecda89274851bd8c6284f68ee8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ba3c41e2366643e07f07307537e735ec8d259d0e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093739"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086029"
 ---
 # <a name="analyze-script-performance"></a>分析脚本性能
 可以使用 SQL Server Data Tools 提供的工具确定是否可以提高你的查询、存储过程或脚本的性能。 例如，通过监视常用查询的响应时间之类的客户端统计信息，可以确定是否需要更改表的查询或索引。 此类统计信息可包括客户端执行时间、查询配置文件、已发送和接收的数据包/字节。  

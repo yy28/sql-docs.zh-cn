@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 572ccd5abbfc5cae54364a13af20e0851412e38a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772083"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061205"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -186,12 +186,12 @@ ms.locfileid: "34772083"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（64 位）x64*|是|是|是**|是**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|是|是|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|是|是|是**|是**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|是|是|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|是|是|是|是|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|是|是|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（64 位）x64*|用户帐户控制|用户帐户控制|是**|是**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|用户帐户控制|用户帐户控制|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|用户帐户控制|用户帐户控制|是**|是**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|用户帐户控制|用户帐户控制|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|用户帐户控制|是|是|用户帐户控制|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|用户帐户控制|用户帐户控制|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集。 这包括从最初安装在 WOW 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的早期版本进行升级。 对于这种情况，只能选择通过并行安装新版本并迁移进行升级。  
   

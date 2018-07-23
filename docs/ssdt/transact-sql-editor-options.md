@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
 - sql.data.tools.SqlExecutionAdvancedSettingsOption
@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e626e50cebf0aba8acde865bfcfd78f1023f978
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093795"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085939"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 编辑器选项
 本主题包含有关 Transact-SQL 编辑器的一些选项的信息。 要设置这些选项，请通过“工具\选项”菜单导航到“选项”对话框。  

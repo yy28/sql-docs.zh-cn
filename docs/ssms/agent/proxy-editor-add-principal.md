@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 569462938bdc0710e120770fb1b5f8e6c0f00fe5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039464"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975237"
 ---
 # <a name="proxy-editor---add-principal"></a>代理编辑器 - 添加主体
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33039464"
 
 使用此页可以授予服务器主体对 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户的访问权限。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **主体类型**  
 要显示的主体类型。  
   

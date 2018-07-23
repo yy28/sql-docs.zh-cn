@@ -18,12 +18,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 024175506b041ae9c62585dbdcc05da4b84bea02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0cabc48571c7b3656086d918b649bb5bb305e23
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039634"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985369"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理服务器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33039634"
 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 的工具组件包括已注册的服务器、对象资源管理器、解决方案资源管理器、模板资源管理器、对象资源管理器详细信息页和文档窗口。 若要显示某个工具，请在“视图”菜单上单击该工具的名称。 若要显示查询编辑器工具，请单击工具栏上的“新建查询”按钮。  
   
 > [!IMPORTANT]  
-> 默认情况下，不对 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 之间的网络通信进行加密。 除非建立了加密连接，否则不要在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中使用敏感数据（包括密码）。 有关详细信息，请参阅 [如何启用数据库引擎的加密连接（SQL Server 配置管理器）](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006)。  
+> 默认情况下，不对 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 之间的网络通信进行加密。 除非建立了加密连接，否则不要在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中使用敏感数据（包括密码）。 有关详细信息，请参阅 [如何启用数据库引擎的加密连接（SQL Server 配置管理器）](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)。  
   
 使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 可以：  
   
@@ -66,5 +66,5 @@ ms.locfileid: "33039634"
   
 ## <a name="see-also"></a>另请参阅  
 [使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[如何查看服务器属性 (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[如何查看服务器属性 (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

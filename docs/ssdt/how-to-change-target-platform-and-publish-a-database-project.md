@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
@@ -17,12 +17,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91bb424e4bb9e3da25a53e5080db6fbe2e2a6e53
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 86b506d493b49e664062c704a4ebabf01e51b3a0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093756"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087549"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何更改目标平台和发布数据库项目
 可以将 SQL Server Data Tools (SSDT) 数据库项目的目标 SQL Server 版本更改为任何受支持的 SQL Server 实例（SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure）。 通过这样做，可以针对一个项目进行数据库开发，但在需要时将其发布到多种不同风格的 SQL Server 实例中。  

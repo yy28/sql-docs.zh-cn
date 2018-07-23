@@ -20,12 +20,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58bd639a16003fe718a226b1aea7a3bb3bf5b470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a30dd4d3eedea208255e02b6cbef6a842ad81906
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042450"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981489"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>从 SQL Server Management Studio 连接到任何 SQL Server 组件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33042450"
 虽然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 允许您在使用查询时无需先建立与数据源的连接，但其他多数任务需要一个连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 提供了“连接到服务器”对话框，可用于配置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 组件的连接属性。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 启动时，将打开“连接到服务器”对话框，并提示你连接到服务器。 “连接到服务器”对话框会保留上次使用的连接设置。  
   
 > [!NOTE]  
-> 可以关闭此功能，以免自动启动某个连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](http://msdn.microsoft.com/en-us/d373298b-f6cf-458a-849d-7083ecb54ef5)。  
+> 可以关闭此功能，以免自动启动某个连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](http://msdn.microsoft.com/d373298b-f6cf-458a-849d-7083ecb54ef5)。  
   
 ## <a name="saving-connections"></a>保存连接  
 可以在已注册的服务器中将连接保存到特定服务器，也可以在解决方案资源管理器中将连接保存到项目中。  

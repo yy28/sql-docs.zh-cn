@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a8ce11021e45d363b9713c2ae7bafc7d2c1b58e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c202d0c9a95a8e98cd9c603b2a2dbd874d4122b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048284"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979119"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "33048284"
   
 4.  将其他两个表中的主键列复制到联接表中。 与任何其他表一样，您可以向此表中添加其他列。  
   
-5.  在联接表中，将主键设置为包含其他两个表中的所有主键列。 有关详细信息，请参阅 [如何创建主键 (Visual Database Tools)](http://msdn.microsoft.com/en-us/85c623ca-4656-4d70-a9db-ee4d897cd214)。  
+5.  在联接表中，将主键设置为包含其他两个表中的所有主键列。 有关详细信息，请参阅 [如何创建主键 (Visual Database Tools)](http://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)。  
   
-6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅 [如何在表之间创建关系 (Visual Database Tools)](http://msdn.microsoft.com/en-us/867a54b8-5be4-46e6-9702-49ae6dabf67c)。  
+6.  分别定义每个主表与联接表之间的一对多关系。 联接表应位于您所创建的这两个关系的“多”方。 有关详细信息，请参阅 [如何在表之间创建关系 (Visual Database Tools)](http://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)。  
   
     > [!NOTE]  
     > 在数据库关系图中创建联接表并不会将数据从相关表插入联接表中。 有关将数据插入表的信息，请参阅[创建插入结果查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)。  

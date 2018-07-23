@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c41f0abf97f2373ca087ccc411d74320046c3def
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043014"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035817"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>SQL Server 代理属性（“历史记录”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33043014"
 
 使用此页可以查看和修改用于管理 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务历史记录日志的设置。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **限制作业历史记录日志的大小**  
 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在日志中保留的作业历史记录信息量设置限制。  
   

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9599221ea31455d0540b602ab8ad8140ed590b6f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 370a010271467dc4b95186db00f6019d528e5c2e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093735"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082869"
 ---
 # <a name="data-tools-operations-window"></a>“数据工具操作”窗口
 “数据工具操作”窗口会显示本主题中讨论的某些操作的进度，并告知你任何错误。  

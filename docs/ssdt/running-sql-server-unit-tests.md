@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconfig
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8ae9faa2a1556b7ca1e71c7cc52e00df2222688
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 67f49ab119e43ed59fc6bee5f9f10ede55143618
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093794"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088489"
 ---
 # <a name="running-sql-server-unit-tests"></a>运行 SQL Server 单元测试
 若要改进和保持代码质量，你可创建并运行验证任何数据库对象行为的 SQL Server 单元测试，然后将这些测试签入到版本控制中。 当你或你团队的任何成员更改数据库架构时，运行 SQL Server 单元测试和软件单元测试来验证这些更改是否破坏了现有功能。 您可运行单独的测试，也可运行测试组（称为“测试列表”）。 有关详细信息，请参阅[使用测试列表 (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182461(VS.100).aspx)。  

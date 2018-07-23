@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d7a1ebfc178fb1c13f980a118d40ecb1e28908f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 85a5f5a6eda29264baee432a1b8c8b17dee8f6ae
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093785"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085569"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用测试条件
 在 SQL Server 单元测试中，将执行一个或多个 Transact\-SQL 测试脚本。 可以在 Transact\-SQL 脚本内对结果进行评估，并且使用 THROW 或 RAISERROR 来返回错误和使测试失败，或者可以在测试中对测试条件进行定义以便评估结果。 该测试返回 [SqlExecutionResult](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 类的实例。 此类的实例包含一个或多个数据集、执行时间和受脚本影响的行。 所有这些信息都是在脚本的执行过程中收集的。 这些结果可使用测试条件进行评估。 SQL Server Data Tools 提供一组预定义的测试条件。 还可以创建和使用自定义条件；请参阅 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  

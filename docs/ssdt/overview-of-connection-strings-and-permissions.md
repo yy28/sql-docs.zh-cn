@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecc38b525f07804f74c430b6acea99bf1712507e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a17d6a3f39ce45c3669ef9820b8b73d4c77a1b08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093721"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087079"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>连接字符串和权限概述
 若要运行 SQL Server 单元测试，必须通过使用一个或两个特定连接字符串来连接数据库服务器。 每个连接字符串均表示一个具有特定权限的帐户，您必须具有相关权限才能在特定脚本中执行作为测试的一部分的某个任务/某一组任务。 可以在“SQL Server 测试配置”对话框中指定这些字符串，或者通过手动编辑测试项目的 app.config 文件来指定这些字符串。  
@@ -43,7 +43,7 @@ ms.locfileid: "37093721"
 ## <a name="windows-authentication-versus-sql-server-authentication"></a>Windows 身份验证和 SQL Server 身份验证  
 当指定连接字符串时，您必须在使用 Windows 身份验证和 SQL 身份验证之间进行选择。 选择 Windows 身份验证的一个原因是它对团队使用测试的支持优于 SQL Server 身份验证。 如果选择 SQL Server 身份验证，则会使用数据保护 API (DPAPI) 基于你的用户凭据来对连接字符串进行加密。 这意味着在签入此测试项目中的测试后，将只为你（而非通过源控制系统获取测试的团队成员）运行这些测试。 若要运行此测试项目中测试，团队中的其他成员必须使用自己的凭据重新配置测试项目。 为此，他们可以编辑 app.config 文件的副本或使用“项目配置”对话框。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 测试脚本在执行上下文权限级别运行，在数据库上运行的用户命令的典型用法也是在此权限级别运行。 预先测试操作、后期测试、TestInitialize 和 TestCleanup 脚本在特权上下文权限级别运行。  
   
 由于对后期测试操作脚本使用了更高权限连接，因此您可以在其中执行验证。 在此脚本中，您还可以运行测试权限的脚本命令。 有关权限的详细信息，请参阅 [SQL Server Data Tools 所需权限](../ssdt/required-permissions-for-sql-server-data-tools.md)的 SQL Server 单元测试部分。  

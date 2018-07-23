@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd81ffb8d1530478147147c7aecddd39a368cd9b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a7997f7b2acf88ea358c9ddd42df5cca073a8f28
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093722"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087119"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：为 SQL Server 数据库单元测试创建测试项目
 在开始编写评估数据库对象的单元测试之前，您必须首先创建测试项目。 该项目包含 SQL Server 单元测试，但它可以包含其他类型的测试。  

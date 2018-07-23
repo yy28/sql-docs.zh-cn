@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a1fedf2e8c7c46c0741877eb0fa54464a4d4c0b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975082"
 ---
 # <a name="sql-server-agent-properties-job-system-page"></a>SQL Server 代理属性（“作业系统”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33040984"
 
 使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务管理作业的方式。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **关闭超时间隔(秒)**  
 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在关闭作业之前等待作业完成的秒数。 如果在指定间隔之后作业仍在运行，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理将强制停止该作业。  
   

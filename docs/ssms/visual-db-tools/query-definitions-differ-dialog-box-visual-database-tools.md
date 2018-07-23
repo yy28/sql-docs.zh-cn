@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01fbc3f4dbb8eb776cccd14c528b5c5e428f5080
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049484"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030815"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>“查询定义不同”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33049484"
 > [!NOTE]  
 > 如果已经隐藏了“关系图”窗格和“条件”窗格，则不会显示“查询定义不同”对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **“忽略”按钮**  
 选择此按钮可指定接受 SQL 语句，以进一步编辑语句或执行语句。 如果接受语句，“关系图”窗格和“条件”窗格将显示为灰色，以指示不能它们显示 SQL 窗格中的语句。  
   

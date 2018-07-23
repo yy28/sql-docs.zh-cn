@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a5814bf073891006b6f2a1917459f9b711482f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 541310addcd1b9fec25038e962197a1b06eea34a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093741"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088529"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>如何使用查询编辑现有表
 可以通过编写 Transact\-SQL 查询编辑表或其数据的定义。 若要以直观方式查看或输入表中的数据，请使用[连接的数据库开发](../ssdt/connected-database-development.md)中介绍的数据编辑器。  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8859458dfad88f729ace7b25ce7f050242990909
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: df35cb91b59e9ea4734864ee9f839b2eef983eaa
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093758"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086299"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：配置 SQL Server 单元测试执行
 通过配置测试项目，可指定若干控制 SQL Server 单元测试的运行方式方面的设置。 这些配置设置存储在测试项目的 app.config 文件中。 如果您直接编辑此文件，则新值将出现在“测试配置”对话框中。  

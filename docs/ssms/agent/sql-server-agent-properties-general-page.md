@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9fae50bb7b88e7ea2f291fc0baa375b46f0a380c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043324"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035842"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server 代理属性（“常规”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33043324"
 
 使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务的常规属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **服务状态**  
 显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务的当前状态。  
   

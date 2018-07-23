@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a130c0d9adfef4554e831a9c0e8a97c39b298fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038764"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064593"
 ---
 # <a name="job-properties---new-job-targets-page"></a>作业属性 - 新建作业（“目标”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33038764"
 
 使用此页可以管理作业的目标服务器。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **目标为本地服务器**  
 在本地服务器上运行作业。 如果没有登记的目标服务器，这将是唯一可用的选项。  
   

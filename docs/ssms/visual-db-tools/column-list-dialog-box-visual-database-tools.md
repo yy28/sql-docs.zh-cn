@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 585636e219787ef5d5ec7fff4484ac98c6ae8e0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047024"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023725"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>“列列表”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33047024"
   
 此对话框提供了所选表值对象中的列的列表和一些基本属性，如数据类型以及这些列是否允许空值。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **名称**  
 显示所选表值对象中的列的名称。  
   

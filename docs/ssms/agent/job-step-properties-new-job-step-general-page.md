@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030995"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作业步骤属性 - 新建作业步骤（“常规”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33046314"
   
 若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理，右键单击“作业”，单击“新建作业”，选择“步骤”页，再单击“新建”。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”，选择“步骤”页，再依次单击“新建”、“插入”或“编辑”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **步骤名称**  
 设置作业步骤的名称。  
   

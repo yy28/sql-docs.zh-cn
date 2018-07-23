@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48b5e195f437b3bc173869ac7d8a7334c741e2b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042004"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985309"
 ---
 # <a name="create-a-multiserver-environment"></a>创建多服务器环境
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "33042004"
 ## <a name="related-tasks"></a>Related Tasks  
 以下主题介绍创建多服务器环境的常见任务：  
   
-|Description|主题|  
+|描述|主题|  
 |---------------|---------|  
 |描述如何创建主服务器。|[设置主服务器](../../ssms/agent/make-a-master-server.md)|  
 |描述如何创建目标服务器。|[设置目标服务器](../../ssms/agent/make-a-target-server.md)|  
 |描述如何将目标服务器登记到主服务器。|[将目标服务器登记到主服务器](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目标服务器从主服务器脱离。|[将目标服务器从主服务器脱离](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |描述如何使多台目标服务器脱离主服务器。|[将多台目标服务器从主服务器脱离](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|描述如何检查目标服务器的状态。|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|描述如何检查目标服务器的状态。|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>另请参阅  
 [排除使用代理的多服务器作业的故障](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  

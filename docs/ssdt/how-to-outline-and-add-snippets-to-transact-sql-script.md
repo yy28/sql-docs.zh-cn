@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b08337c4602e7eaad2da376b22caa8f806e5b18
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 741168fafc480c74d34a74c346d307321fa74e43
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093716"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085479"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何显示 Transact-SQL 脚本的大纲和向 Transact-SQL 脚本添加代码段
 SQL Server Data Tools 包括一个由代码段组成的代码库，可以直接将这些代码段插入到自己的应用程序中。 每个代码段都执行一项完整的脚本任务，如创建函数、表、触发器、索引、视图、用户定义数据类型等。你只需很少的鼠标单击操作即可将代码段插入源代码。 这些代码段可以通过减少您在键入上所用的时间，提高您的工作效率。  

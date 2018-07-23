@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bafb27ae13609989820cc8ad9f8ba121e30036ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045774"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980429"
 ---
 # <a name="operators"></a>运算符
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -130,8 +130,8 @@ ms.locfileid: "33045774"
 |-|-|  
 |**任务**|**主题**|  
 |与创建操作员相关的任务|[创建操作员](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|与分配警报相关的任务|[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定义对警报的响应 (SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|与分配警报相关的任务|[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定义对警报的响应 (SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另请参阅  
-[数据库邮件](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[数据库邮件](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   

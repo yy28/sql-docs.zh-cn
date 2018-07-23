@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae970c69dbc12619f340e1a766198afc250b4e1e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039965"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34772814"
 ##  <a name="EnableTSQLTable"></a> 使用 Transact-SQL 在表上启用 Stretch Database  
  可以为现有表启用 Stretch Database，或通过使用 Transact-SQL 创建已启用 Stretch Database 的新表。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  运行 CREATE TABLE 或 ALTER TABLE 时使用以下选项来在表上启用 Stretch Database。  
   
 -   根据需要，如果表中同时包含热数据和冷数据，则使用 `FILTER_PREDICATE = <function>` 子句指定一个函数来选择要迁移的行。 该谓词必须调用内联表值函数。 有关详细信息，请参阅 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 如果未指定筛选器函数，则将迁移整个表。  
