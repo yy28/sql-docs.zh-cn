@@ -1,5 +1,5 @@
 ---
-title: Named Pipes 属性 |Microsoft 文档
+title: 命名管道属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6002657f6863f9ca5212516ab6f7afd37c2a348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069364"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997149"
 ---
 # <a name="named-pipes-properties"></a>Named Pipes 属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33069364"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才能启用或禁用该协议，或更改命名管道。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **已启用**  
  可能的值为“是”和“否”。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "33069364"
 ## <a name="see-also"></a>另请参阅  
  [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [选择网络协议](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [使用 Named Pipes 创建有效的连接字符串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [使用命名管道创建有效的连接字符串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
