@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 6163dcad3fcc755b6d75a0758fce42afed2320cf
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37977999"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>并行安装 Reporting Services 和 Internet Information Services
 

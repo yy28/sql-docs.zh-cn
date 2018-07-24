@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028064"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971779"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
 
@@ -114,7 +114,7 @@ ms.locfileid: "33028064"
 > [!IMPORTANT]  
 >  定期更改 Reporting Services 加密密钥是确保安全的好办法。 建议在升级 Reporting Services 主版本后立即更改密钥。 升级后更改密钥将使在升级周期外更改 Reporting Services 加密密钥所导致的额外服务中断降到最低程度。  
   
-|第|Description|  
+|第|描述|  
 |----------|-----------------|  
 |备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 你应该考虑将密钥文件存储在与运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的计算机不同的计算机上。 默认文件名称与服务应用程序名称相同。|  
 |还原加密密钥|1) 在“文件位置”框中键入或浏览密钥文件<br /><br /> 2) 在“密码”框中，键入用于备份加密文件的密码。<br /><br /> 3) 单击“确定”|  
@@ -145,7 +145,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
 
-### <a name="options"></a>“常规”
+### <a name="options"></a>选项
 
  **指定执行帐户**  
  选择此选项可指定一个帐户。  
@@ -163,7 +163,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  使用此页可指定简单邮件传输协议 (SMTP) 设置，这些设置用于启用报表服务器的报表服务器电子邮件传递功能。 可使用报表服务器电子邮件传递扩展插件通过电子邮件订阅来分发报表或报表处理通知。 报表服务器电子邮件传递扩展插件需要使用 SMTP 服务器并在“发件人:”字段中使用电子邮件地址。  
 
-### <a name="options"></a>“常规”
+### <a name="options"></a>选项
 
  **使用 SMTP 服务器**  
  指定报表服务器电子邮件通过 SMTP 服务器进行路由。  

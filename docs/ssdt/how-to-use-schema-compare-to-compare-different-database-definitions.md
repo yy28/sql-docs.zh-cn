@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
 - sql.data.tools.schemacompare.watermark.f1
@@ -20,12 +20,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b3b52f87fe2c144a71d5826cc66970c0f18e5d1
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b146c1dcd31cc6e45fbbd794392249aa9ffa0447
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093749"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088579"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>如何使用架构比较来比较不同数据库定义
 SQL Server Data Tools (SSDT) 包含一个可用来比较两个数据库定义的架构比较实用工具。  比较的源和目标可以是连接的数据库、SQL Server 数据库项目、快照或 .dacpac 文件的任意组合。  比较的结果会显示为一组操作，必须针对目标执行这些操作才能使其与源一致。  比较完成后，可以直接更新目标（如果目标为项目或数据库）或生成具有相同效果的更新脚本。  

@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b6322c4aca621aa668286f82bf144ec579657cc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ab9f52631108c7761c94600d982ba6eefbcd329
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026474"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979109"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
   本节包含使用 Reporting Services 配置管理器配置本机模式报表服务器实例的过程。  
@@ -52,7 +52,7 @@ ms.locfileid: "33026474"
  [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供配置多个报表服务器以共享报表服务器数据库的步骤。  
   
- [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  提供有关配置报表服务器以进行电子邮件分发的步骤。  
   
  [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

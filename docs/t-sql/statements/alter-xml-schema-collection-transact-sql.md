@@ -33,11 +33,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 896525b2986dce9c9a503e83ee8912006cda9f20
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987579"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  如果架构集合已经包含宽松验证通配符或 xs:anyType 类型的元素，则向架构集合中添加新的全局元素、类型或属性声明将导致重新验证该架构集合所约束的所有存储的数据。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  更改 XML SCHEMA COLLECTION 需要对集合具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
