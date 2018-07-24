@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4b3d11967ea4aca8fee3c72784cf1353c984a5cb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026990"
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  如果在存储过程中设置 `SET FIPS_FLAGGER`，则从存储过程返回控制后将还原 `SET FIPS_FLAGGER` 的值。 因此，动态 SQL 中指定的 `SET FIPS_FLAGGER` 语句对动态 SQL 语句之后的任何语句无效。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 17c352a6db5e03c9d1b1b7d49bb793bb1085a45d
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251849"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017565"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET STATISTICS XML { ON | OFF }
 > [!NOTE]  
 >  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要使用 SET STATISTICS XML 并查看输出，用户必须具有以下权限：  
   
 -   执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  

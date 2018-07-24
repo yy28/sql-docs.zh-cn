@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9d9116a6382c71ae988c5f79660a3b8c9ded914a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942325"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38027040"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -151,7 +151,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  有关详细信息，请参阅[设计程序集](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 CREATE ASSEMBLY 权限。  
   
  如果指定 PERMISSION_SET = EXTERNAL_ACCESS，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY 权限。 如果指定 PERMISSION_SET = UNSAFE，则需要对服务器的 UNSAFE ASSEMBLY 权限。  
