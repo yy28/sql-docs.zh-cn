@@ -1,6 +1,6 @@
 ---
-title: 会话 |Microsoft 文档
-description: 用于 SQL Server 的 OLE DB 驱动程序中的会话
+title: 会话 |Microsoft Docs
+description: 适用于 SQL Server 的 OLE DB 驱动程序中的错误
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,21 +17,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9bc74a5ee3fb461f641e55f3fdf9e9d540130f67
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ecb43b33acd7c2e95cf9b1335ead2ec7a42939fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666167"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106823"
 ---
 # <a name="sessions"></a>会话
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 会话 OLE DB 驱动程序表示一个连接到的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  SQL Server 会话的 OLE DB 驱动程序表示的实例的单个连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- SQL Server 的 OLE DB 驱动程序需要会话分隔的数据源事务空间。 通过某一特定会话对象创建的所有命令对象均参与该会话对象的本地事务或分布式事务。  
+ SQL Server 的 OLE DB 驱动程序要求会话分隔数据源的事务空间。 通过某一特定会话对象创建的所有命令对象均参与该会话对象的本地事务或分布式事务。  
   
  在已初始化数据源上创建的第一个会话对象接收在初始化期间建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接。 当释放该会话对象的接口上的所有引用时，在该数据源上创建的其他会话对象即可使用与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接。  
   
@@ -186,14 +186,14 @@ EXIT:
 }  
 ```  
   
- OLE DB 驱动程序连接到的实例的 SQL Server 会话对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以生成的应用程序不断地创建和发布会话对象很大的开销。 可以通过有效地管理 SQL Server 会话对象的 OLE DB 驱动程序最小化开销。 OLE DB 驱动程序的 SQL Server 应用程序可以保留[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的活动通过维护上至少一个接口的对象的引用的会话对象的连接。  
+ 对于持续创建和释放会话对象的应用程序，连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口会话对象和  实例可生成很大的开销。 可以通过有效地管理用于 SQL Server 会话对象的 OLE DB 驱动程序降到最低开销。 通过至少维护一个会话对象接口的引用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口应用程序可以使该对象的  连接处于活动状态。  
   
- 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 当需要会话对象时，池维护代码将传递一个有效**IDBCreateCommand**到需要会话的应用程序方法的接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
+ 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此池维护代码向需要会话的应用程序方法传递有效的 IDBCreateCommand** 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   
 > [!NOTE]  
->  在前面的示例中， **IDBCreateCommand**使用接口的原因是**ICommand**接口实现**GetDBSession**方法，允许该对象来确定在其创建的会话的命令或行集的作用域中的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
+>  在前面的示例中，使用 IDBCreateCommand **接口的原因在于 ICommand** 接口实现 GetDBSession** 方法，该方法是命令或行集作用域中允许对象确定其创建所在的会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   
