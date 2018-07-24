@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2520b75495006760b5755ed57ab109d6ef99573a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941953"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991719"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "36941953"
 ## <a name="determining-the-original-login"></a>确定原始登录  
  使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函数可以返回连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录名。 您可以在具有众多显式或隐式上下文切换的会话中使用该函数返回原始登录的标识。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要对某登录名指定 EXECUTE AS，调用方必须具有对所指定登录名的 IMPERSONATE 权限，并且不得被拒绝 IMPERSONATE ANY LOGIN 权限。 若要对某数据库用户指定 EXECUTE AS，调用方必须具有对所指定用户名的 IMPERSONATE 权限。 指定 EXECUTE AS CALLER 时，不需要 IMPERSONATE 权限。  
   
 ## <a name="examples"></a>示例  

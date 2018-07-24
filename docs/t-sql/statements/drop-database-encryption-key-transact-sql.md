@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 174ba71ea3f5fdbd74f974a625ad1c5d8ea02d09
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781098"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014426"
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ DROP DATABASE ENCRYPTION KEY
 ## <a name="remarks"></a>Remarks  
  如果数据库已加密，则必须先使用 ALTER DATABASE 语句对数据库进行解密。 请先等待解密完成，再删除数据库加密密钥。 有关 ALTER DATABASE 语句的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 若要查看数据库的状态，请使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e6044765dc79c6a61ef59b6368a108a0519646cb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781228"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997429"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  可以在 **sys.credentials** 目录视图中查看有关凭据的信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 ALTER ANY CREDENTIAL 权限。 如果该凭据是系统凭据，则要求具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

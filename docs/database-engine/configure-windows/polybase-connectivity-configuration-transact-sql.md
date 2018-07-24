@@ -18,11 +18,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: bb82ed8c4a4dc7c881ac2b94dee9ea88ce009858
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698670"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974600"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -95,7 +95,7 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> 结果集  
  在不使用参数执行时， **sp_configure** 会返回五列的结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**名称**|**nvarchar(35)**|配置选项的名称。|  
 |**最小值**|**int**|配置选项的最小值。|  
@@ -110,7 +110,7 @@ RECONFIGURE
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不允许在显式或隐式事务中使用 RECONFIGURE。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  所有的用户都可以不使用参数或者使用 **参数执行** sp_configure @configname 。  
   
  需要 **ALTER SETTINGS** 服务器级别权限或 **sysadmin** 中固定服务器角色的成员资格，才能更改配置值或运行 RECONFIGURE。  

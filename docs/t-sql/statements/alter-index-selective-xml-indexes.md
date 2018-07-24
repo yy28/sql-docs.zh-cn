@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5386e6c6876de0c5c9f0f3e71686110db23ab0b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984585"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX（选择性 XML 索引）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ identifier
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  若要运行 ALTER INDEX，需要对表或视图拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -51,11 +51,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d193ca55d720bb8c843280b553a2ef01e5c742a7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990459"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -463,7 +463,7 @@ GO
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  要求数据库中的 CREATE PROCEDURE 权限以及对要在其中创建过程的架构的 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份。  
   
  对于 CLR 存储过程，需要 EXTERNAL NAME 子句中引用的程序集的所有权，或者该程序集的 REFERENCES 权限。  

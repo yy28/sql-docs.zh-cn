@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 55027355a13f4eb2301f9471fca7cad5959c8619
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781278"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979359"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## <a name="remarks"></a>Remarks  
  只有当前没有分区方案使用分区函数时，才能删除该分区函数。 如果有正在使用分区函数的分区方案，则 DROP PARTITION FUNCTION 将返回错误。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  可以使用下列任何一种权限执行 DROP PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  

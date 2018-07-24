@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f19c24999fb1005a312af5eba61664faa2cc2aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936144"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006029"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "32936144"
   
  对照前面的图，可以注意到在对事件会话发出不同的 DDL 命令时会话状态将发生更改。 下表说明了这些状态更改。  
   
-|图例标签|DDL 语句|Description|  
+|图例标签|DDL 语句|描述|  
 |------------------------|-------------------|-----------------|  
 |创建|CREATE EVENT SESSION|主机进程将创建一个会话对象，其中包含由 CREATE EVENT SESSION 提供的元数据。 主机进程将验证会话定义和用户权限级别，并将元数据存储在 master 数据库中。 此时该会话处于不活动状态。|  
 |Alter|ALTER EVENT SESSION, STATE=START|主机进程启动会话。 主机进程将读取存储的元数据、验证会话定义、验证用户权限级别并创建会话。 此操作还将载入会话对象（例如事件和目标），此时事件处理即处于活动状态。|  

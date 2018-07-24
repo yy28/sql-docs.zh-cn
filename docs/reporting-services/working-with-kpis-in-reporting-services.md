@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 74c0cd02499ab10f2aeded7cc528c7db244cd2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032934"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971695"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -57,7 +57,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
 你可以分配静态值，或使用共享数据集的数据。 在创建新的 KPI 时，它将使用一组随机的人工输入数据填充它们。  
   
-|字段|Description|  
+|字段|描述|  
 |---|---|  
 |值格式|  用于更改要显示的值的格式。|   
 |ReplTest1|要显示的 KPI 的值。|  

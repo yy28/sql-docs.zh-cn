@@ -34,11 +34,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9d549a589d7b68351033db83b48690e44c59765d
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971679"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -322,7 +322,7 @@ GO
  
 对于 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]的包含数据库用户，SSMS 可以支持多重身份验证。 有关详细信息，请参阅 [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)（SSMS 支持使用 SQL 数据库和 SQL 数据仓库的 Azure AD MFA）。  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要对数据库具有 ALTER ANY USER 权限。  
   
 ## <a name="examples"></a>示例  

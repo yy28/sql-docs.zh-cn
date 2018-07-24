@@ -22,11 +22,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 65f064f7893f9dde1f42d94daee1ec6207a0a868
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36254549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995169"
 ---
 # <a name="insert-sql-graph"></a>INSERT（SQL 图形）
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ INSERT
 批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$node_id` 列中提取 `$from_id` 和 `$to_id` 的值，并将其作为边插入。 
 
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要对目标表具有 INSERT 权限。  
   
  默认情况下，将 INSERT 权限授予 sysadmin 固定服务器角色成员、db_owner 和 db_datawriter 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  

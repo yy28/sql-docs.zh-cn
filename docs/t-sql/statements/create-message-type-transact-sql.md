@@ -33,11 +33,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 14289e1f0eb09c35da6d534112751fdb04c8def1
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970279"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ CREATE MESSAGE TYPE message_type_name
   
  消息类型不能是临时对象。 允许使用以 # 开头的消息类型名称，但它们是永久对象。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限。  
   
  默认情况下，消息类型的所有者、db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有消息类型的 REFERENCES 权限。  

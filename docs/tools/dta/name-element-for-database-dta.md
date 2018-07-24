@@ -1,5 +1,5 @@
 ---
-title: 数据库 (DTA) 的名称元素 |Microsoft 文档
+title: 名称元素 (DTA) 数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7577eadd244a2be59e1d50ddb8130f4718c93df4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070204"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974629"
 ---
 # <a name="name-element-for-database-dta"></a>数据库的名称元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33070204"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，长度没有限制。|  
 |**默认值**|无。|  

@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 14f7dc1176ff57705775ae6c23e30b49202533f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001479"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ GO
   
 下表列出了与全文目录相关的属性。 此信息可用于全文搜索的管理和故障排除。 
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**AccentSensitivity**|区分重音设置。|
 |**ImportStatus**|是否将导入全文目录。|  

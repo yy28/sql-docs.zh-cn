@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993509"
 ---
 # <a name="temporal-table-security"></a>临时表安全性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33011874"
 ## <a name="security-principles"></a>安全原则  
  下表描述适用于临时表的安全原则：  
   
-|原则|Description|  
+|原则|描述|  
 |---------------|-----------------|  
 |启用/禁用系统版本控制需要有对受影响对象的最高权限|启用和禁用 SYSTEM_VERSIONING 需要有对当前和历史记录表的 CONTROL 权限|  
 |不能直接修改历史记录数据|当 SYSTEM_VERSIONING 为 ON 时，用户不能更改历史记录数据，不管他们对当前和历史记录表的实际权限是什么。 这包括数据和架构修改。|  

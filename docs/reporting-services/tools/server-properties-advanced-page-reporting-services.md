@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550398"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999449"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "34550398"
 
 若要打开此页，请启动 SQL Server Management Studio，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”。 选择“高级”打开此页。
 
-## <a name="options"></a>“常规”
+## <a name="options"></a>选项
 
 **EnableMyReports**  
 指示是否启用“我的报表”功能。 值为 **true** 表示已启用该功能。  

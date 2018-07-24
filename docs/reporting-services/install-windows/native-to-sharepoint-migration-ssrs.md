@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d828bb3d70346ecb41bd5382f67a8c54ed18e8fd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322386"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988883"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
 
@@ -49,12 +49,12 @@ ms.locfileid: "35322386"
   
 |Object|是否可编写脚本|注释|  
 |------------|---------------------|--------------|  
-|报表|是|在迁移后，重新为数据源输入密码。|  
-|数据源|是|在迁移后，重新将报表链接到数据源。|  
-|Models|是||  
-|数据集|是||  
+|报表|用户帐户控制|在迁移后，重新为数据源输入密码。|  
+|数据源|用户帐户控制|在迁移后，重新将报表链接到数据源。|  
+|Models|用户帐户控制||  
+|数据集|用户帐户控制||  
 |报表部件||在迁移后，验证或更新指向报表部件的路径。|  
-|计划|是|请参阅 ListSchedules 方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|计划|用户帐户控制|请参阅 ListSchedules 方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |订阅|是|请参阅列表订阅方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 和 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 方法。|  
 |快照|||
 

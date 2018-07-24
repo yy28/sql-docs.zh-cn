@@ -39,11 +39,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988491"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ DATA_PURITY
  MAXDOP  
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
     
- 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 会使用资源调控器 MAXDOP 值（如 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 会使用资源调控器 MAXDOP 值（如 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  
 > [!WARNING] 
 > 如果 MAXDOP 设置为零，则 SQL Server 需选择要使用的最大并行度。    
@@ -209,7 +209,7 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 建议您使用 PHYSICAL_ONLY 选项，以便可以频繁检查生产系统。 使用 PHYSICAL_ONLY 可以极大地缩短对大型数据库运行 DBCC CHECKDB 的运行时间。 同时建议您定期运行没有选项的 DBCC CHECKDB。 应当以什么频率执行这些运行任务将取决于各个企业及其生产环境。
     
 ## <a name="checking-objects-in-parallel"></a>并行检查对象    
-默认情况下，DBCC CHECKDB 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制 DBCC 检查可使用的处理器的最大数目，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+默认情况下，DBCC CHECKDB 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制 DBCC 检查可使用的处理器的最大数目，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
     
 > [!NOTE]
 > 并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关详细信息，请参阅 [SQL Server 2016 的各版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)的“RDBMS 可管理性”部分中的并行一致性检查。    
@@ -217,7 +217,7 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 错误消息    
 DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 如果 DBCC 命令成功执行，则消息指示成功以及命令的运行时间。 如果 DBCC 命令在完成检查之前由于错误而停止，则消息将指示命令已终止，并指示状态值和命令运行的时间。 下表列出并说明了此消息中可包含的状态值。
     
-|State|Description|    
+|State|描述|    
 |-----------|-----------------|    
 |0|出现错误号 8930。 这表示元数据中存在的损坏终止了 DBCC 命令。|    
 |@shouldalert|出现错误号 8967。 存在一个内部 DBCC 错误。|    
@@ -368,7 +368,7 @@ DBCC CHECKDB 返回以下结果集。 这些值可能有所不同，除非指定
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>权限    
+## <a name="permissions"></a>Permissions    
 要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。
     
 ## <a name="examples"></a>示例    

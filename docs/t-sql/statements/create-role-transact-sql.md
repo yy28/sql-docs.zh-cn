@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f1af507075b3b7e48171ccef0f00fb7142365709
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942963"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005749"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对数据库具有 CREATE ROLE 权限或者在 db_securityadmin 固定数据库角色中具有成员身份。 使用 AUTHORIZATION 选项时，还需要具有下列权限：  
   
 -   若要将角色的所有权分配给另一个用户，则需要对该用户具有 IMPERSONATE 权限。  

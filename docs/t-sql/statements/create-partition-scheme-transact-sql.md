@@ -33,11 +33,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 77e1fad23e16ca48573d460c1a876e4c6b548e90
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787248"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995211"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS PARTITION partition_function_name
   
  对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，只支持 PRIMARY。 请参阅下面的示例 E。 
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  可以使用下列权限执行 CREATE PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  

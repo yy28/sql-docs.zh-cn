@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: e5b235e2066ff41b8fffb24f352d9362ddd3b5a8
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973969"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT 数据库作用域凭据权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ AS granting_principal
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  如果使用 AS 选项，还必须满足以下附加要求：  

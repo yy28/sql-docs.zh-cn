@@ -22,11 +22,11 @@ ms.author: heidist
 manager: cgronlund
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 036eed38abd86f07115f2bac08a4c7640b1f2e62
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413016"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980146"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -106,7 +106,7 @@ WITH ( LANGUAGE = 'R' )
 
 上传到实例的库可以是公共的也可以是私有的。 如果是由 `dbo` 成员创建的库，则该库是公共的且所有的用户都可以共享。 否则，该库就仅为用户私有。
 
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
 

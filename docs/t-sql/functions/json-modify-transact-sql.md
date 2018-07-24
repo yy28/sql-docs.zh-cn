@@ -14,11 +14,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.openlocfilehash: d51961c8c06c0b7769ef8896b92ad1ad0633e0cf
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36259529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983803"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ JSON_MODIFY ( expression , path , newValue )
   
 |现有的值|路径存在|宽松模式|严格模式|  
 |--------------------|-----------------|--------------|-----------------|  
-|不为 NULL|是|更新现有值。|更新现有值。|  
-|不为 NULL|“否”|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `$.user` 或 `$.user.settings` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `theme`。|错误 – INVALID_PROPERTY|  
-|NULL|是|删除现有属性。|将现有值设置为 NULL。|  
-|NULL|“否”|无操作。 返回第一个参数作为结果。|错误 – INVALID_PROPERTY|  
+|不为 NULL|用户帐户控制|更新现有值。|更新现有值。|  
+|不为 NULL|否|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `$.user` 或 `$.user.settings` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `theme`。|错误 – INVALID_PROPERTY|  
+|NULL|用户帐户控制|删除现有属性。|将现有值设置为 NULL。|  
+|NULL|否|无操作。 返回第一个参数作为结果。|错误 – INVALID_PROPERTY|  
   
  在宽松模式下，JSON_MODIFY 会尝试创建新的键:值对，但在某些情况下可能会失败。  
   

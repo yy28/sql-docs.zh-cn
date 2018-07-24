@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 19a4d2fb0acfd50eb9770ad533802c637b3e52c3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974855"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  若要更改服务的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，路由的所有者、db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有更改路由的权限。  
   
 ## <a name="examples"></a>示例  

@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bbaf1a75893e41b30a26ffb9173195d53c69b623
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941483"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997459"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -86,7 +86,7 @@ ALTER DATABASE ENCRYPTION KEY
   
  在数据库加密密钥修改过两次后，必须执行日志备份才能再次对数据库加密密钥进行修改。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要数据库的 CONTROL 权限和用于加密数据库加密密钥的证书或非对称密钥的 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 49c9a6cb53983c56b0d5a35c41f298f88efb13db
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000101"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ROLLBACK [ WORK ]
   
  嵌套事务时，ROLLBACK WORK 始终回滚到最远的 BEGIN TRANSACTION 语句，并将 @@TRANCOUNT 系统函数减为 0。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，所有有效用户都有权执行 ROLLBACK WORK。  
   
 ## <a name="see-also"></a>另请参阅  

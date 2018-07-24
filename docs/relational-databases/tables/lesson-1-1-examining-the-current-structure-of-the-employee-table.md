@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 620defd42e27b122a92ee145da6b4b14d1cbf996
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006634"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970299"
 ---
 # <a name="lesson-1-1---examining-the-current-structure-of-the-employee-table"></a>第 1-1 课 - 检查 Employee 表的当前结构
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

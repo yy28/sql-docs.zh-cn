@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012594"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000669"
 ---
 # <a name="temporal-tables"></a>临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  在下表中，“符合条件的行”列中的 SysStartTime 表示正在查询的表中 **SysStartTime** 列的值， **SysEndTime** 表示正在查询的表中 **SysEndTime** 列的值。 有关完整语法和示例的信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md) 和 [在系统版本控制临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)的支持。  
   
-|表达式|符合条件的行|Description|  
+|表达式|符合条件的行|描述|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|返回一个表，其行中包含过去指定时间点的实际（当前）值。 在内部，临时表及其历史记录表之间将进行联合，然后筛选结果以返回在 <date_time> 参数指定的时间点有效的行中的值。 如果 system_start_time_column_name 值小于或等于 <date_time> 参数值，并且 system_end_time_column_name 值大于 <date_time> 参数值，则此行的值视为有效。|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|返回一个表，其中包含在指定的时间范围内保持活动状态的所有行版本的值，不管这些版本是在 FROM 自变量的 <start_date_time> 参数之前开始活动，还是在 TO 自变量的 <end_date_time> 参数值之后停止活动。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间停止活动的行将被排除，正好在 TO 终结点定义的上限时间开始活动的记录也将被排除。|  

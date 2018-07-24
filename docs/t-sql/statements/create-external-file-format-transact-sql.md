@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b8a39d64854d6cc63f0b607b9eaa5084ab250313
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784668"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999419"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -275,7 +275,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 ALTER ANY EXTERNAL FILE FORMAT 权限。
   
 ## <a name="general-remarks"></a>一般备注

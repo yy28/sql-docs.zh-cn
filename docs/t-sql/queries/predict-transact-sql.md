@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970997"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ WITH 子句用于指定 `PREDICT` 函数返回的输出的架构。
 
 使用的模型必须是使用 RevoScaleR 包中支持的算法之一创建的。 有关当前支持的型号的列表，请参阅[实时评分](../../advanced-analytics/real-time-scoring.md)。
 
-### <a name="permissions"></a>权限
+### <a name="permissions"></a>Permissions
 
 `PREDICT` 不需要任何权限；但是，用户需要数据库 `EXECUTE` 权限，以及查询用作输入的任何数据的权限。 如果模型已存储在表中，则用户还须能够从表中读取模型。
 

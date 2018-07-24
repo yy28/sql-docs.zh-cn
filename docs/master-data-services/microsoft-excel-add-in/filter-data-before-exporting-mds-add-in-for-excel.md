@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 110771dc83b9c2e902738c2a9ce10bcfb118428b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405519"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972346"
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>导出前筛选数据 (MDS Add-in for Excel)
 

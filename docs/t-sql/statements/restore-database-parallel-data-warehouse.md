@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782428"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969269"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -89,7 +89,7 @@ RESTORE HEADERONLY
   
  RESTORE HEADERONLY 结果会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 结果之后模式化。 结果具有 50 多列，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 并不使用所有这些列。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 结果中的列的说明，请参阅 [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 **CREATE ANY DATABASE** 权限。  
   
  需要有权访问和读取备份目录的 Windows 帐户。 还必须将 Windows 帐户名称和密码存储在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。  

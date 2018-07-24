@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75a668f8fd07f5765065469e664bdef6fbe8f195
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975248"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -438,7 +438,7 @@ RETURNS return_data_type
 -   RECEIVE  
 -   SEND  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对函数或架构具有 ALTER 权限。 如果函数指定用户定义类型，则需要对该类型具有 EXECUTE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

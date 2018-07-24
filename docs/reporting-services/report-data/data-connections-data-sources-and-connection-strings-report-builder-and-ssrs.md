@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969408"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>数据连接、数据源和连接字符串（报表生成器和 SSRS）
 
@@ -48,7 +48,7 @@ ms.locfileid: "33022864"
   
  下表总结了嵌入数据源和共享数据源之间的差异。  
   
-|Description|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
+|描述|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
 |-----------------|------------------------------|----------------------------|  
 |数据连接嵌入在报表定义中。|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
 |指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  

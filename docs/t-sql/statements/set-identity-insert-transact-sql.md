@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd77cfaca0d7bda93f51b9274169ed5539211fc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971639"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }
   
  SET IDENTITY_INSERT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须拥有表，或对表具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969279"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ REVOKE
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要授予某个权限，授权者必须具有带 WITH GRANT OPTION 的权限本身，或必须具有隐含授予该权限的更高权限。  对象所有者可以授予对其所拥有的对象的权限。 对某安全对象具有 CONTROL 权限的主体可以授予对该安全对象的权限。  db_owner 和 db_securityadmin 固定数据库角色的成员可以授予数据库中的任何权限。  
   
 ## <a name="general-remarks"></a>一般备注  

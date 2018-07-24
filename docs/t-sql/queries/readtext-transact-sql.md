@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3e98fba7617c3b1a46b64d07f2b7efa0e51b9ad2
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980555"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
  如果 @@TEXTSIZE 函数的值小于为 READTEXT 指定的大小，则该值将替代为 READTEXT 指定的大小。 @@TEXTSIZE 函数指定对 SET TEXTSIZE 语句设置的返回数据的字节数的限制。 有关为 TEXTSIZE 设置会话设置的详细信息，请参阅 [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  READTEXT 权限默认授予对指定的表具有 SELECT 权限的用户。 可在转移 SELECT 权限时转移权限。  
   
 ## <a name="examples"></a>示例  

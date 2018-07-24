@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 41ad9d69b045a149bf6adad58f16f881ccc5d98e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783478"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004760"
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -102,7 +102,7 @@ BACKUP DATABASE database_name
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **BACKUP DATABASE** 权限，或者在 **db_backupoperator** 固定数据库角色中具有成员身份。 添加到 **db_backupoperator** 固定数据库角色的普通用户无法备份 master 数据库。 仅 **sa**、构造管理员或 **sysadmin** 固定服务器角色的成员可备份 master 数据库。  
   
  需要有权访问、创建和写入备份目录的 Windows 帐户。 还必须将 Windows 帐户名称和密码存储在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 若要将这些网络凭据添加到 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，可使用 [sp_pdw_add_network_credentials (SQL Data Warehouse)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 存储过程。  

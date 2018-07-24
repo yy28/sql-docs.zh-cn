@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 26c0169ce7732d0e0d6cb0b283a570208b5f5584
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988309"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  对非对齐的已分区表创建索引所占用的内存与涉及的分区数成正比。  如果所需的内存总量超过资源调控器工作负荷组设置为每个查询设定的限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，则可能无法执行这种索引创建。 由于“默认”工作负荷组允许查询超过每个查询的限制，并在开始时使用所需的最低内存以便与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 保持兼容，因此，如果“默认”资源池配置了足够多的内存总量以运行此类查询，则用户或许能够在“默认”工作负荷组中运行相同的索引创建。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

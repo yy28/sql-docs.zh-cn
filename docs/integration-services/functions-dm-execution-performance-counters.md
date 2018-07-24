@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f60130ee43309e89ccc39fa2f4c3be42e928ca5a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332181"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994313"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函数 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此函数需要下列权限之一：  
   
 -   针对执行实例的 READ 和 MODIFY 权限  

@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8058a122907400b576dd17a2fd7b758abe08bca2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782088"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983748"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ AS constant_expression [ ; ]
   
  若要重命名默认值，请使用 sp_rename。 若要获得默认值的报告，请使用 sp_help。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行 CREATE DEFAULT，用户必须至少在当前数据库中拥有 CREATE DEFAULT 权限，并对在其中创建默认值的架构拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -21,11 +21,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dcb886bee40d358bf0b2815e8fb669876f32d3a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012854"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978226"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,14 +123,14 @@ SQL Server 不会在添加 CPU 后自动开始使用它们。 这可以防止 SQ
 
 |进程名称   |可执行程序 |是否可使用超过 64 个 CPU |  
 |----------|----------|----------|  
-|SQL Server 数据库引擎 |Sqlserver.exe  |是 |  
-|Reporting Services |Rs.exe |“否” |  
-|Analysis Services  |As.exe |“否” |  
-|Integration Services   |Is.exe |“否” |  
-|Service Broker |Sb.exe |“否” |  
-|全文搜索   |Fts.exe    |“否” |  
-|SQL Server 代理   |Sqlagent.exe   |“否” |  
-|SQL Server Management Studio   |Ssms.exe   |“否” |  
-|SQL Server 安装程序   |Setup.exe  |“否” |  
+|SQL Server 数据库引擎 |Sqlserver.exe  |用户帐户控制 |  
+|Reporting Services |Rs.exe |否 |  
+|Analysis Services  |As.exe |否 |  
+|Integration Services   |Is.exe |否 |  
+|Service Broker |Sb.exe |否 |  
+|全文搜索   |Fts.exe    |否 |  
+|SQL Server 代理   |Sqlagent.exe   |否 |  
+|SQL Server Management Studio   |Ssms.exe   |否 |  
+|SQL Server 安装程序   |Setup.exe  |否 |  
 
 

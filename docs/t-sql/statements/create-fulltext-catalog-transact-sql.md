@@ -31,11 +31,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a6689e70d21e9b566afcfd612bc7083225c16433
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789048"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983791"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## <a name="remarks"></a>Remarks  
  全文目录 ID 从 00005 开始，每创建一个新目录，ID 值就会递增 1。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须对数据库具有 CREATE FULLTEXT CATALOG 权限，或者是 db_owner 或 db_ddladmin 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  

@@ -31,11 +31,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dbeb752920a1d3cab1be4a52e2b9abf213b7b119
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788888"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014213"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  有关可以在显示计划输出中看到的物理和逻辑运算符的详细信息，请参阅[显示计划逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要使用 SET SHOWPLAN_TEXT，必须对执行 SET SHOWPLAN_TEXT 的语句具有足够的执行权限，同时必须对包含被引用对象的所有数据库具有 SHOWPLAN 权限。  
   
  对于 SELECT、INSERT、UPDATE、DELETE、EXEC stored_procedure 和 EXEC user_defined_function 语句，若要生成显示计划，用户必须：  
