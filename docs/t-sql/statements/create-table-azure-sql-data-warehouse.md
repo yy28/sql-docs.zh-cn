@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942173"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058745"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -274,7 +274,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  16 字节 GUID。  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  创建表需要 `db_ddladmin` 固定数据库角色的权限，或者：
  - 数据库的 `CREATE TABLE` 权限
  - 将包含表的架构的 `ALTER SCHEMA` 权限。 

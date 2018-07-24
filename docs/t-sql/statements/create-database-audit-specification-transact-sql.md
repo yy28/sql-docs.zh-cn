@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 031bfb83581d84095826cb3ce2593170dd2eb8ef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066419"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  数据库审核规范是驻留在给定数据库中的非安全对象。 数据库审核规范在创建之后处于禁用状态。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  拥有 `ALTER ANY DATABASE AUDIT` 权限的用户可以创建数据库审核规范并将其绑定到任何审核。  
   
  在创建数据库审核规范之后，拥有 `CONTROL SERVER`、`ALTER ANY DATABASE AUDIT` 权限的主体或 `sysadmin` 帐户可查看该规范。  

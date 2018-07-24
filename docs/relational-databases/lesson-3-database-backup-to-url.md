@@ -17,19 +17,19 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04ca530ed9e01a7a5ec01e5fe7bcd31af78b41c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6da6086cd5c1a0ebfd56394e5c79b2078ef82e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942562"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978929"
 ---
 # <a name="lesson-3-database-backup-to-url"></a>第 3 课：将数据库备份到 URL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 在本课程中，你会将本地 SQL Server 2016 实例上的 AdventureWorks2014 数据库备份到在 [第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)中创建的 Azure 容器。  
   
 > [!NOTE]  
-> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，则可以通过 [此处](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) 记录的已弃用语法，使用 WITH CREDENTIAL 语法备份到 URL。  
+> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，则可以通过 [此处](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) 记录的已弃用语法，使用 WITH CREDENTIAL 语法备份到 URL。  
   
 若要将数据库备份到 Blob 存储，请执行以下步骤：  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aaad8cc4ad7f35c19ddc1f48332955401f742bcc
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: e6c9eaaeb59f2525a4887937e3716495cff7576d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942253"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107988"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "36942253"
 |[sys.server_audit_specifications_details](../../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。|  
 |[sys.server_file_audits](../../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)|包含有关服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的文件审核类型的存储扩展信息。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一个功能和命令都有其独特的权限需求。  
   
  若要创建、更改或删除服务器审核或服务器审核规范，服务器主体要求具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。 若要创建、更改或删除数据库审核规范，数据库主体必须具有 ALTER ANY DATABASE AUDIT 权限或针对该数据库的 ALTER 或 CONTROL 权限。 此外，主题还必须具有连接到数据库的权限或者具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  

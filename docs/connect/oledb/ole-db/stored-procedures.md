@@ -1,5 +1,5 @@
 ---
-title: 存储过程 |Microsoft 文档
+title: 存储过程 |Microsoft Docs
 description: 存储过程
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0c944c0e64fadf8f51af10f0e297b8d3654decd4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611542"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109759"
 ---
 # <a name="stored-procedures"></a>存储过程
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,11 +43,11 @@ ms.locfileid: "35611542"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [运行存储的过程&#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [运行存储过程](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [调用存储的过程&#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [调用存储过程](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -3,7 +3,6 @@ title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - collations [SQL Server], modifying
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-caps.latest.revision: 282
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bc109184f7678f48205c66b4c47684eecde9e4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c97a6b7e9735c7db5be82187767486bff93a6f92
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786538"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102545"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -212,7 +210,7 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
 ## <a name="viewing-database-information"></a>查看数据库信息  
 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -531,7 +529,7 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
 
 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 只有服务器级主体登录名（由设置过程创建）或 `dbmanager` 数据库角色的成员可以更改数据库。  
   
@@ -681,7 +679,7 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
 
 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 只有服务器级主体登录名（由设置过程创建）或 `dbmanager` 数据库角色的成员可以更改数据库。  
   
@@ -761,7 +759,7 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 指定性能级别。 有关 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 的服务目标的详细信息，请参阅[性能层](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 需要以下权限：  
   
 - 服务器级别主体登录名（由预配进程创建），或者  
@@ -885,7 +883,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 异步统计信息更新选项 AUT
 
 有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)。
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 需要具有针对数据库的 ALTER 权限。  
   
 ## <a name="error-messages"></a>错误消息

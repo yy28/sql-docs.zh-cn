@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 450de8b521cbbec33375a429bcfc7fb1035194a5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063460"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "37788458"
 |**validation**|**nchar(2)**|对消息所用的验证。<br /><br /> E=Empty N=None X=XML|  
 |**message_body**|**varbinary(MAX)**|消息的内容。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要接收消息，则当前用户必须对队列有 RECEIVE 权限。  
   
 ## <a name="examples"></a>示例  

@@ -1,7 +1,7 @@
 # [Microsoft JDBC Driver for SQL Server](microsoft-jdbc-driver-for-sql-server.md)
 
 # [JDBC 代码示例 +](../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)
-# [JDBC 参考 +](../../connect/jdbc/reference/datetimeoffset-class.md)
+# [JDBC API 参考 +](reference/jdbc-driver-api-reference.md)
 
 # [JDBC 驱动程序入门](getting-started-with-the-jdbc-driver.md)
 ## [步骤 1：配置用于 Java 开发的开发环境](step-1-configure-development-environment-for-java-development.md)

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: afe0b33bf3fd1cdbd27ba215e70e3e125e124422
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409559"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058908"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>变更集和批准（用于 Excel 的 MDS 外接程序）
 
