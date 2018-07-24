@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: e602b89a44b5d26369973ef6f5ec8dc1f6d5c4eb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2af1f3f516c6cc13684ee67954017c5f5cb6a47c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405129"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130583"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的证书
 
@@ -45,12 +45,12 @@ ms.locfileid: "35405129"
 使用以下命令在主节点上创建并安装新 SSL 证书：
 
 ```dos
-MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 例如：
 
 ```dos
-MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 
 #### <a name="2-bind-the-certificate-to-the-master-port"></a>2.将证书绑定到主端口
@@ -92,7 +92,7 @@ A.  将客户端 SSL 证书安装到辅助节点上本地计算机的根存储�
 
 B.  更新 Scale Out Worker 服务配置文件。
 
-    Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
+在辅助节点上更新 Scale Out Worker 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`。 将 **MasterHttpsCertThumbprint** 更新为新 SSL 证书的指纹。
 
 c.  重启 Scale Out Worker 服务。
 

@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04b95a4a2249f1b5eb80d28b43e082a75e8b9ffd
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fe4ddf28ab00fa8fd60eec6beb14a4cbcacd01ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792158"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946991"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 
@@ -1105,25 +1105,25 @@ NO_WAIT
   
 |选项类别|可与其他选项一起指定|可以使用 WITH \<termination> 子句|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option>|是|是|  
-|\<db_user_access_option>|是|是|  
-|\<db_update_option>|是|是|  
-|\<delayed_durability_option>|是|是|  
-|\<external_access_option>|是|“否”|  
-|\<cursor_option>|是|“否”|  
-|\<auto_option>|是|“否”|  
-|\<sql_option>|是|“否”|  
-|\<recovery_option>|是|“否”|  
-|\<target_recovery_time_option>|“否”|是|  
-|\<database_mirroring_option>|“否”|“否”|  
-|ALLOW_SNAPSHOT_ISOLATION|“否”|“否”|  
-|READ_COMMITTED_SNAPSHOT|“否”|是|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|是|是|  
-|\<service_broker_option>|是|“否”|  
-|DATE_CORRELATION_OPTIMIZATION|是|是|  
-|\<parameterization_option>|是|是|  
-|\<change_tracking_option>|是|是|  
-|\<db_encryption_option>|是|“否”|  
+|\<db_state_option>|用户帐户控制|用户帐户控制|  
+|\<db_user_access_option>|用户帐户控制|用户帐户控制|  
+|\<db_update_option>|用户帐户控制|用户帐户控制|  
+|\<delayed_durability_option>|用户帐户控制|用户帐户控制|  
+|\<external_access_option>|用户帐户控制|否|  
+|\<cursor_option>|用户帐户控制|否|  
+|\<auto_option>|用户帐户控制|否|  
+|\<sql_option>|用户帐户控制|否|  
+|\<recovery_option>|用户帐户控制|否|  
+|\<target_recovery_time_option>|否|用户帐户控制|  
+|\<database_mirroring_option>|否|否|  
+|ALLOW_SNAPSHOT_ISOLATION|否|否|  
+|READ_COMMITTED_SNAPSHOT|否|用户帐户控制|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|用户帐户控制|用户帐户控制|  
+|\<service_broker_option>|用户帐户控制|否|  
+|DATE_CORRELATION_OPTIMIZATION|用户帐户控制|用户帐户控制|  
+|\<parameterization_option>|用户帐户控制|用户帐户控制|  
+|\<change_tracking_option>|用户帐户控制|用户帐户控制|  
+|\<db_encryption_option>|用户帐户控制|否|  
   
 通过设置以下选项之一来清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存：  
   
@@ -1867,20 +1867,20 @@ NO_WAIT
   
 |选项类别|可与其他选项一起指定|可以使用 WITH \<termination> 子句|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|是|“否”|  
-|\<change_tracking_option>|是|是|  
-|\<cursor_option>|是|“否”|  
-|\<db_encryption_option>|是|“否”|  
-|\<db_update_option>|是|是|  
-|\<db_user_access_option>|是|是|  
-|\<delayed_durability_option>|是|是|  
-|\<parameterization_option>|是|是|  
-|ALLOW_SNAPSHOT_ISOLATION|“否”|“否”|  
-|READ_COMMITTED_SNAPSHOT|“否”|是|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|是|是|  
-|DATE_CORRELATION_OPTIMIZATION|是|是|  
-|\<sql_option>|是|“否”|  
-|\<target_recovery_time_option>|“否”|是|  
+|\<auto_option>|用户帐户控制|否|  
+|\<change_tracking_option>|用户帐户控制|用户帐户控制|  
+|\<cursor_option>|用户帐户控制|否|  
+|\<db_encryption_option>|用户帐户控制|否|  
+|\<db_update_option>|用户帐户控制|用户帐户控制|  
+|\<db_user_access_option>|用户帐户控制|用户帐户控制|  
+|\<delayed_durability_option>|用户帐户控制|用户帐户控制|  
+|\<parameterization_option>|用户帐户控制|用户帐户控制|  
+|ALLOW_SNAPSHOT_ISOLATION|否|否|  
+|READ_COMMITTED_SNAPSHOT|否|用户帐户控制|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|用户帐户控制|用户帐户控制|  
+|DATE_CORRELATION_OPTIMIZATION|用户帐户控制|用户帐户控制|  
+|\<sql_option>|用户帐户控制|否|  
+|\<target_recovery_time_option>|否|用户帐户控制|  
   
 ## <a name="examples"></a>示例  
   
@@ -1994,7 +1994,7 @@ SET QUERY_STORE = ON
 ALTER DATABASE { database_name | Current }  
 SET   
 {  
-    <optionspec> [ ,...n ] [ WITH <termination> ]   
+    <optionspec> [ ,...n ] 
 }  
 ;  
 
@@ -2003,9 +2003,7 @@ SET
     <auto_option>   
   | <change_tracking_option>   
   | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
+  | <db_encryption_option>    
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
@@ -2047,12 +2045,6 @@ SET
   
 <db_encryption_option> ::=  
   ENCRYPTION { ON | OFF }  
-  
-<db_update_option> ::=  
-  { READ_ONLY | READ_WRITE }  
-  
-<db_user_access_option> ::=  
-  { RESTRICTED_USER | MULTI_USER }  
   
 <delayed_durability_option> ::=  DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
   
@@ -2100,14 +2092,7 @@ SET
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
   | RECURSIVE_TRIGGERS { ON | OFF }   
-}  
-  
-<termination>  ::=   
-{  
-    ROLLBACK AFTER integer [ SECONDS ]   
-  | ROLLBACK IMMEDIATE   
-  | NO_WAIT  
-}  
+}
 
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
