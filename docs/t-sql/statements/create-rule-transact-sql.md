@@ -34,11 +34,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042485"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ AS condition_expression
   
  如果列同时有与之相关联的默认值和规则，则默认值必须在规则定义的范围内。 与规则冲突的默认值永远不能被插入。 每次试图插入这样的默认值时，SQL Server 数据库引擎都会生成错误消息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行 CREATE RULE，用户必须至少在当前数据库中具有 CREATE RULE 权限，并且对要在其中创建规则的架构具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

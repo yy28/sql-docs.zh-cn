@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7846c9f5cfbc15f88a1cc10f38eaa9542f6c0648
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050225"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>升级 SQL Server 管理工具
 

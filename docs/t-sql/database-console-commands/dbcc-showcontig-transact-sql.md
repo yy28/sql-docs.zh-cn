@@ -28,10 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040045"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +93,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>结果集  
 下表对结果集中的信息进行了说明。
   
-|统计信息|Description|  
+|统计信息|描述|  
 |---|---|
 |**扫描页数**|表或索引中的页数。|  
 |**扫描区数**|表或索引中的区数。|  
@@ -113,7 +114,7 @@ DBCC SHOWCONTIG
   
 如果指定了 TABLERESULTS，则 DBCC SHOWCONTIG 将返回以下列以及上一个表中说明的九个列。
   
-|统计信息|Description|  
+|统计信息|描述|  
 |---|---|
 |**Object Name**|处理的表或视图的名称。|  
 |**ObjectId**|对象名的 ID。|  
@@ -187,7 +188,7 @@ DBCC SHOWCONTIG 可确定表是否高度碎片化。 在对表进行数据修改
     > [!NOTE]  
     >  如果索引涉及多个文件，则“区扫描碎片”的值较高。 若要减小这些值，必须减少索引碎片。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 用户必须是表所有者，或者是 **sysadmin** 固定服务器角色、**db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色的成员。
   
 ## <a name="examples"></a>示例  

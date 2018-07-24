@@ -18,11 +18,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24a2eb0a69a6fcbedf1d5323caa97cdccd180fd5
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36915028"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039772"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
  [ database_name . [ schema_name ] . | schema_name . ] *table_name*  
  要显示的表格的名称（具有一、二、三个部分）。 对于具有二或三个部分的名称，名称必须使用双引号 ("") 括起来。 可选择是否使用引号将具有一个部分的表格名称括起来。 未指定表名时，则显示当前数据库中的信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 需要 VIEW SERVER STATE 权限。
   
 ## <a name="result-sets"></a>结果集  

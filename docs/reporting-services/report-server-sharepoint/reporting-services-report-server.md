@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028394"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053345"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
 
@@ -55,21 +55,21 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
   
 |功能或组件|本机模式|SharePoint 模式|  
 |--------------------------|-----------------|---------------------|  
-|**URL 寻址**|是|在 SharePoint 集成模式下，URL 寻址方式有所不同。 使用 SharePoint URL 引用报表、报表模型、共享数据源和资源。 不使用报表服务器的文件夹层次结构。 如果您的自定义应用程序依赖于本机模式的报表服务器上支持的 URL 访问，则将报表服务器配置为 SharePoint 集成模式时，该功能将不再有效。<br /><br /> 有关 URL 访问的详细信息，请参阅 [URL 访问参数引用](../../reporting-services/url-access-parameter-reference.md)。|  
-|**自定义安全扩展插件**|是|不能在报表服务器上部署或使用 Reporting Services 自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|  
-|**配置管理器**|是|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
-|**报表管理器**|是|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。|  
-|**链接报表**|是|否。|  
-|**我的报表**|是|“否”|  
-|**我的订阅** 和批处理方法。|是|“否”|  
-|**数据警报**|“否”|是|  
-|**Power View**|“否”|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
-|**.RDL 报表**|是|是<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
-|**.RDLX 报表**|“否”|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
-|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|“否”|是|  
-|**用于面向 internet 的部署的 AAM 区域**|“否”|是|  
-|**SharePoint 备份和恢复**|“否”|是|  
-|**UL 日志支持**|“否”|是|  
+|**URL 寻址**|用户帐户控制|在 SharePoint 集成模式下，URL 寻址方式有所不同。 使用 SharePoint URL 引用报表、报表模型、共享数据源和资源。 不使用报表服务器的文件夹层次结构。 如果您的自定义应用程序依赖于本机模式的报表服务器上支持的 URL 访问，则将报表服务器配置为 SharePoint 集成模式时，该功能将不再有效。<br /><br /> 有关 URL 访问的详细信息，请参阅 [URL 访问参数引用](../../reporting-services/url-access-parameter-reference.md)。|  
+|**自定义安全扩展插件**|用户帐户控制|不能在报表服务器上部署或使用 Reporting Services 自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|  
+|**配置管理器**|用户帐户控制|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
+|**报表管理器**|用户帐户控制|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。|  
+|**链接报表**|用户帐户控制|否。|  
+|**我的报表**|用户帐户控制|否|  
+|**我的订阅** 和批处理方法。|用户帐户控制|否|  
+|**数据警报**|否|用户帐户控制|  
+|**Power View**|否|用户帐户控制<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**.RDL 报表**|用户帐户控制|用户帐户控制<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
+|**.RDLX 报表**|否|用户帐户控制<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
+|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|否|用户帐户控制|  
+|**用于面向 internet 的部署的 AAM 区域**|否|用户帐户控制|  
+|**SharePoint 备份和恢复**|否|用户帐户控制|  
+|**UL 日志支持**|否|用户帐户控制|  
   
 ## <a name="native-mode"></a>本机模式
 
@@ -103,7 +103,7 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
   
  ![SSRS SharePoint 功能体系结构](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "SSRS SharePoint Functional Architecture")  
   
-||Description|  
+||描述|  
 |-|-----------------|  
 |**(1)**|Web 服务器或 Web 前端 (WFE)。 Reporting Services 加载项必须安装在你要利用其 Web 应用程序功能（例如，为管理数据源或订阅之类的任务查看报表或 Reporting Services 管理页）的每个 Web 服务器上。|  
 |**(2)**|该加载项将为客户端安装 URL 和 SOAP 终结点，以便通过 Reporting Services 服务代理与应用程序服务器通信。|  

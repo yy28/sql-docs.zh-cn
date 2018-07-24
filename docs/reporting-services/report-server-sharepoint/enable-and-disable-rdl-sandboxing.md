@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027654"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049145"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>在 SharePoint 集成模式下针对 Reporting Services 启用和禁用 RDL 沙盒
 
@@ -71,7 +71,7 @@ ms.locfileid: "33027654"
 
  下表提供了有关配置设置的信息。 将按设置在配置文件中的显示顺序依次列出：  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 表达式中允许的最大字符数。<br /><br /> 默认值：1000|  
 |**MaxResourceSize**|外部资源允许的最大 KB 数。<br /><br /> 默认值：100|  

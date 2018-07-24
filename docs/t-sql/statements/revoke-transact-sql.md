@@ -34,11 +34,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9630b7e56f2e741c96f370069ad00fc2f7721f5f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942073"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031775"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,7 +158,7 @@ REVOKE
   
  在撤消通过指定 GRANT OPTION 为其赋予权限的主体的权限时，如果未指定 CASCADE，则将无法成功执行 REVOKE 语句。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  对安全对象具有 CONTROL 权限的主体可以撤消该安全对象的权限。 对象所有者可以撤消他们所拥有的对象的权限。  
   
  具备 CONTROL SERVER 权限的被权限者（例如 sysadmin 固定服务器角色的成员）可以撤消对该服务器的任何安全对象所拥有的任何权限。 对数据库具有 CONTROL 权限的被授权者（例如 db_owner 固定数据库角色的成员）可以撤消对该数据库的任何安全对象所拥有的任何权限。 被授予架构的 CONTROL 权限的用户可以撤消针对该架构的任何对象的任何权限。  

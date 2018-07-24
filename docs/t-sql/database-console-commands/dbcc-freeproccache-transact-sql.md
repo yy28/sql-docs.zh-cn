@@ -30,11 +30,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a6d9b899fa1bfd606b30c1759da3cb1052643d7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040095"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ pool_name 是资源调控器资源池的名称。 pool_name 的数据类型为 s
 ## <a name="result-sets"></a>结果集  
 如果未指定 WITH NO_INFOMSGS 子句，DBCC FREEPROCCACHE 将返回：“DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - 需要对服务器的 ALTER SERVER STATE 权限。  
 

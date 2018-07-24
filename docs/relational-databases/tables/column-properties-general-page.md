@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3ad590202d288b636b56caf59fa14c59e5a79bcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038891"
 ---
 # <a name="column-properties-general-page"></a>列属性（“常规”页）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "33011959"
   
  此页上的信息为只读信息。 若要修改列，请关闭“列属性”对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  列的名称。  
   

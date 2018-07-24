@@ -20,11 +20,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d76099a9ac6cac338a176836ef483dbb37938736
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942273"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037205"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -601,7 +601,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  <sup>1</sup> FILE **=**backup_set_file_number** 它与 {FILE | FILEGROUP} 不同。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  有关权限，请参阅下列主题：  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

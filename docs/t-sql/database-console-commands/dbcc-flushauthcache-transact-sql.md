@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3cb7b06efe21d7dd6d4179c3454b6638ea636165
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258702"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052825"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ DBCC FLUSHAUTHCACHE [ ; ]
 身份验证缓存创建登录名和服务器防火墙规则（存储在 master 中）的副本并将它们放在用户数据库的内存中。  由于已包含数据库用户的信息已存储在用户数据库中，因此已包含数据库用户不是身份验证缓存的一部分。
 与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 持续保持活动连接需要至少每隔 10 小时进行重新授权（由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行）。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用最初提交的密码尝试重新授权，且无需用户输入。 出于性能原因，在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中重置密码时，连接将不会重新进行身份验证，即使该连接因连接池而重置。 这与本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行为不同。 如果自最初授权连接时已更改密码，则必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可使用 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md) 命令，显式终止与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的连接。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理员帐户。
   
 ## <a name="example"></a>示例  

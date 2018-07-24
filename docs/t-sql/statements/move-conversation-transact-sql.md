@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e6b636d170432c1c5eb3b784b0f29e06f412c5ec
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031065"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ MOVE CONVERSATION conversation_handle
   
  MOVE CONVERSATION 在用户定义函数中无效。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要移动会话，当前用户必须是会话和会话组的所有者，或者是 sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  

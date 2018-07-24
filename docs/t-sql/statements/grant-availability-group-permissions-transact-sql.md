@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1acab0935afabb7dc0d06455ce58a752a4461d37
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038089"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT 可用性组权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  有关所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的图表，请参阅[数据库引擎权限招贴](https://aka.ms/sql-permissions-poster)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对可用性组的 CONTROL 权限或对服务器的 ALTER ANY AVAILABILTIY GROUP 权限。  
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: updateDate 方法 （int、 java.sql.Date） |Microsoft 文档
+title: updateDate 方法 （int，java.sql.Date） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb9a9a7480d77101dd024d68e39a069577960233
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995963"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>updateDate 方法 (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void updateDate(int index,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *索引*  
+ 索引  
   
  指示列索引的 int。  
   
@@ -51,8 +51,8 @@ public void updateDate(int index,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateDate 方法指定此 updateDate 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateDate 方法由 java.sql.ResultSet 接口中的 updateDate 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateDate 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   

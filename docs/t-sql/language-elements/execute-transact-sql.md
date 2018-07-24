@@ -36,11 +36,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 49a9a6bdbd2b952614dff3c1095847a434803c78
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251029"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052035"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>最佳实践  
  指定具有执行语句或模块中定义的操作所需的最低权限的登录名或用户。 例如，如果只需数据库级别权限，则不要指定拥有服务器级别权限的登录名；如果不需要相应权限，也不要指定数据库所有者帐户。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  运行 EXECUTE 语句无需权限。 但是，需要对 EXECUTE 字符串内引用的安全对象具有权限。 例如，如果字符串包含 INSERT 语句，则 EXECUTE 语句的调用方对目标表必须具有 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。  
   
  模块的 EXECUTE 权限默认授予该模块的所有者，该所有者可以将此权限转让给其他用户。 当运行一个执行字符串的模块时，系统会在执行该模块的用户上下文中而不是在创建该模块的用户上下文中检查权限。 但是，如果同一用户拥有调用模块和被调用模块，则不对后者执行 EXECUTE 权限检查。  

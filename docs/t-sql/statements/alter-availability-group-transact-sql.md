@@ -27,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ecced10240ac5cc0f14ca64a2f2e2582edb1c01e
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38043284"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -601,7 +601,7 @@ ALTER AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  还需要 ALTER ANY DATABASE 权限。   
   
 ## <a name="examples"></a>示例  

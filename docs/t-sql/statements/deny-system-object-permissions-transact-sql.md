@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b8d45dab497ace834a183e8612baeb99871f2ff2
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048855"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 系统对象权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ SELECT * FROM master.sys.database_permissions AS dp
 GO  
 ```  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2b21d850297315939cfa696c7076329d53375b79
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051875"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
  如果存在引用此函数并且已生成索引的计算列，则 DROP FUNCTION 将失败。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行 DROP FUNCTION，用户至少应对函数所属架构具有 ALTER 权限，或对函数具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

@@ -16,11 +16,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3f9985fe10338c593425be74115152f250e16891
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041105"
 ---
 # <a name="transactions-sql-data-warehouse"></a>事务（SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS { ON | OFF }  
  这会切换为与 SET AUTOCOMMIT 相同的模式。 如果设置为 ON，SET IMPLICIT_TRANSACTIONS 将连接设置为隐式事务模式。 如果设置为 OFF，则使连接恢复为自动提交模式。  有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  运行与事务相关的语句不需要特定权限。 运行事务内的语句需要相关权限。  
   
 ## <a name="error-handling"></a>错误处理  

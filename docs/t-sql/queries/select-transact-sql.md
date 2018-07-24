@@ -30,11 +30,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0dbee4b5b28b2dd72c4c6bdb7cc91eb07272cbf5
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242249"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054015"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 >
 > 例如，假设视图中具有聚集索引，该视图排除了一些表行，并且视图的 SELECT 列列表使用可将数据类型从 varchar 更改为 integer 的 CONVERT。 在此情况下，CONVERT 可能会先于 WHERE 语句执行。 这种情况确实少见。 如果需要解决此问题，通常可通过某种方法修改视图来避免出现顺序不同的情况。 
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  选择数据要求对表或视图具有 **SELECT** 权限，该权限可从更高级别的权限继承，例如针对架构的 **SELECT** 权限或针对表的 **CONTROL** 权限。 或者要求具有 db_datareader 或 db_owner 固定数据库角色或 sysadmin 固定服务器角色的成员身份。 使用 SELECTINTO 创建新表既要求 CREATETABLE 权限，还要求拥有新表的架构上的 ALTERSCHEMA 权限。  
   
 ## <a name="examples"></a>示例：   

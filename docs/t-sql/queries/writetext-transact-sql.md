@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7b6beeb57513ade4f192a597e433ebd811989613
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249589"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035175"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ WRITETEXT [BULK]
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可能存在指向 text、ntext 或 image 数据的行内文本指针，但可能无效。 有关 text in row 选项的信息，请参阅 [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 有关使文本指针无效的信息，请参阅 [sp_invalidate_textptr (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对指定表的 UPDATE 权限。 可在转移 UPDATE 权限时转移这些权限。  
   
 ## <a name="examples"></a>示例  

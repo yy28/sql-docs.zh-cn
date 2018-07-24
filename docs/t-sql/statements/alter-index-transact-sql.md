@@ -50,11 +50,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 866e481123bc73db91a093cc79de0c2e7e277fa9
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040205"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -772,7 +772,7 @@ Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。
 ## <a name="statistics"></a>统计信息  
  对表执行 **ALTER INDEX ALL …** 时，只更新与索引相关联的统计信息。 针对表（而不是索引）自动或手动创建的统计信息不会更新。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行 ALTER INDEX，至少需要对表或视图具有 ALTER 权限。  
   
 ## <a name="version-notes"></a>版本说明  

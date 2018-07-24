@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052178"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 Web 部件
 
@@ -69,7 +69,7 @@ ms.locfileid: "33028584"
   
  下面列出了报表查看器 Web 部件的自定义属性。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |报告|SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 为了在设置其他属性时能够获得最佳结果，请在指定报表 URL 后单击“应用”。|  
 |超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效值包括“_Top”、“_Blank”和“_Self”。 “_Top”使用当前窗口，“_Blank”在新浏览器窗口中加载文档，而“_Self”在当前框架内打开文档。 尽管“_Parent”是 HTML 中“目标”属性的有效值，但请勿对嵌入页面的报表查看器 Web 部件使用此值。|  

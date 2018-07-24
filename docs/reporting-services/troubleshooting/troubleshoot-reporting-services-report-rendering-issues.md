@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047119"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>排查 Reporting Services 报表呈现问题
 将报表数据与布局信息组合起来后，会将组合的报表发送到报表呈现器。 例如，本地预览报表时，您是使用 HTML 呈现器查看组合报表。 使用本主题可帮助解决特定于报表呈现的问题。   

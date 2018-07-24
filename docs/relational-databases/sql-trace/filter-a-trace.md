@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046205"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974212"
   
  筛选器可用性取决于数据列。 某些数据列无法筛选。 可筛选的数据列只能使用部分关系运算符进行筛选，如下表所示。  
   
-|关系运算符|运算符|Description|  
+|关系运算符|运算符|描述|  
 |-------------------------|---------------------|-----------------|  
 |Like|Like|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
 |不类似于|不类似于|指定跟踪事件数据不能与输入文本类似。 允许使用多个值。|  

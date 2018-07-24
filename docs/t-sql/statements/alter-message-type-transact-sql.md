@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: efd67a613268da1fc556c29193567d083ff14891
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781978"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037527"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ALTER MESSAGE TYPE message_type_name
   
  若要更改消息类型的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，消息类型的所有者、**db_ddladmin** 或 **db_owner** 固定数据库角色以及 **sysadmin** 固定服务器角色的成员拥有更改消息类型的权限。  
   
  如果 ALTER MESSAGE TYPE 语句指定了一个架构集合，则执行该语句的用户必须对指定的架构集合具有 REFERENCES 权限。  

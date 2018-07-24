@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1bd692754af853d1d2795ad89e2279293c4b31b1
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047075"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  重新配置资源调控器时，请参阅的 [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md) 的 RECONFIGURE 选项。    
     
-## <a name="permissions"></a>权限    
+## <a name="permissions"></a>Permissions    
  默认情况下，被授予 ALTER SETTINGS 权限的用户同时拥有 RECONFIGURE 权限。 sysadmin 和 serveradmin 固定服务器角色隐式持有该权限。    
     
 ## <a name="examples"></a>示例    

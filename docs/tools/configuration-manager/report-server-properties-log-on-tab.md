@@ -1,5 +1,5 @@
 ---
-title: 报表服务器属性 （选项卡上的日志） |Microsoft 文档
+title: 报表服务器属性 （在选项卡上的日志） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76d103ceecf643d7a7039317a18a7d3cb151538b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067144"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048655"
 ---
 # <a name="report-server-properties-log-on-tab"></a>报表服务器属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   使用 **“报表服务器属性”** 对话框中的 **“登录”** 选项卡可以指定报表服务器服务使用的帐户，还可以启动和停止该服务。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **本地系统帐户**  
  指定一个不要求输入密码的本地系统帐户。 不过，本地系统帐户可能会限制该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  
   

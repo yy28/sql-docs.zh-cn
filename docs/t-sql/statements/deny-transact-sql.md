@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8fb4045343c17ffea8d132edc22cbd7898f4ec00
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941923"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038355"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +151,7 @@ DENY
 > [!CAUTION]  
 >  拒绝授予 CONTROL SERVER 权限将隐式拒绝授予对服务器的 CONNECT SQL 权限。 如果拒绝授予某一主体对某一服务器的 CONTROL SERVER 权限，该主体将无法连接到该服务器。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  调用方（或使用 AS 选项指定的主体）必须对安全对象具有 CONTROL 权限，或对该安全对象具有隐含 CONTROL 权限的更高权限。 如果使用 AS 选项，那么指定主体必须拥有其权限被拒绝授予的安全对象。  
   
  被授予 CONTROL SERVER 权限的用户（如 sysadmin 固定服务器角色的成员）可以拒绝对服务器中任何安全对象授予权限。 被授予数据库 CONTROL 权限的用户（如 db_owner 固定数据库角色的成员）可以拒绝对数据库中任何安全对象授予权限。 被授予架构 CONTROL 权限的用户可以拒绝对架构中任何对象授予权限。 如果使用 AS 子句，那么指定主体必须拥有其权限被拒绝授予的安全对象。  

@@ -30,11 +30,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6e8ab694f484fe0679c4e41c162b7c482560c663
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782638"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042635"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -278,7 +278,7 @@ FIELDQUOTE **=** 'field_quote'
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  `OPENROWSET` 权限由传递给 OLE DB 访问接口的用户名的权限确定。 使用 `BULK` 选项需要 `ADMINISTER BULK OPERATIONS` 权限。  
   
 ## <a name="examples"></a>示例  

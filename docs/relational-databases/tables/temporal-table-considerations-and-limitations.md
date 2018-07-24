@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7127db06d4d2e63304ab870ad3c2c9ee3fe91001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051145"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "33012414"
   
     -   分区配置  
   
-    -   权限  
+    -   Permissions  
   
     -   行级别安全性谓词  
   

@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: eeb5fa894d92c6e7718066b1107ad9ef8e09b8a1
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37780978"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036875"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
  DROP ASSEMBLY 不会干扰引用当前正在运行的程序集的任何代码。 但是，执行 DROP ASSEMBLY 之后，任何调用程序集代码的尝试将失败。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要程序集的所有权，或对它的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
