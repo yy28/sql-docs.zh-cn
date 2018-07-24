@@ -1,5 +1,5 @@
 ---
-title: 文件元素 (DTA) |Microsoft 文档
+title: 文件元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce2d29b97757b054cd66a245644f37122d355d26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048365"
 ---
 # <a name="file-element-dta"></a>文件元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33069714"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|使用 **string** 数据类型，以指定工作负荷文件的目录路径。 例如：<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> 请注意，长度限制由服务器强制执行。|  
 |**默认值**|无。|  

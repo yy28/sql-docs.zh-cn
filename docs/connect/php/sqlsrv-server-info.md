@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_server_info | Microsoft Docs
+title: sqlsrv_server_info |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 878ea8dde5e6cbccf4d87e4a3b4b98fbf06f557b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983602"
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>返回值  
 具有以下项的关联阵列：  
   
-|Key|Description|  
+|Key|描述|  
 |-------|---------------|  
 |CurrentDatabase|当前针对的数据库。|  
 |SQLServerVersion|SQL Server 的版本。|  
@@ -84,7 +84,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  

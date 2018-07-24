@@ -1,5 +1,5 @@
 ---
-title: 数据库 (DTA) 的架构元素 |Microsoft 文档
+title: 架构数据库的元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 07b3e86c5329eac6685e6411b9abc8af55e64641
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984339"
 ---
 # <a name="schema-element-for-database-dta"></a>数据库的架构元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33070584"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  

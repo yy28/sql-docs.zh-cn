@@ -1,5 +1,5 @@
 ---
-title: Banner 元素 (ssbdiagnose) |Microsoft 文档
+title: Banner 元素 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5119e483fc089c19782eb6287ea42a08c79c4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055112"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33076094"
   
 ## <a name="element-attributes"></a>元素属性  
   
-|Attribute|Description|  
+|Attribute|描述|  
 |---------------|-----------------|  
 |**title**|标识生成 **ssbdiagnose** XML 输出文件的实用工具。|  
 |**product**|标识生成 **ssbdiagnose** XML 输出文件的产品。|  
@@ -51,7 +51,7 @@ ms.locfileid: "33076094"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  

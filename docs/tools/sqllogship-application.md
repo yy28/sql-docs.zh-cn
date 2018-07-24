@@ -1,5 +1,5 @@
 ---
-title: sqllogship 应用程序 |Microsoft 文档
+title: sqllogship 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077741"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969083"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  指定要添加到日志传送历史记录的消息的级别。 *level* 是以下整数之一：  
   
-|level|Description|  
+|level|描述|  
 |-----------|-----------------|  
 |0|不输出跟踪消息和调试消息。|  
 |@shouldalert|输出错误处理消息。|  
@@ -81,10 +81,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  **sqllogship** 应用程序 SqlLogShip.exe 安装在 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 目录中。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy**还是 **-restore** 选项。  
   
-|选项|目录访问权限|权限|  
+|选项|目录访问权限|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要对备份目录的读/写访问权限。|需要与 BACKUP 语句相同的权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)。|  
 |**-copy**|需要对备份目录的读取访问权限以及对复制目录的写入访问权限。|需要与 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 存储过程相同的权限。|  

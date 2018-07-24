@@ -1,5 +1,5 @@
 ---
-title: TCP/IP 属性 （协议选项卡） |Microsoft 文档
+title: TCP/IP 属性 （协议选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34f6d026e29da596afaa6c812a726a64fb7e828f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068994"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002679"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 属性（“协议”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "33068994"
   
  必须重新启动 Microsoft SQL Server，更改才会生效。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **已启用**  
  可能的值为“是”和“否”。  
   

@@ -34,25 +34,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990409"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 和更低，请参阅[sqlcmd 实用工具](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)。
 
- > 有关在 Linux 上使用 sqlcmd，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+ > 有关如何在 Linux 上使用 sqlcmd，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
   使用 sqlcmd 实用工具，可以在命令提示符处、在 SQLCMD 模式下的“查询编辑器”中、在 Windows 脚本文件中或者在 SQL Server 代理作业的操作系统 (Cmd.exe) 作业步骤中输入 Transact-SQL 语句、系统过程和脚本文件。 此实用工具使用 ODBC 执行 TRANSACT-SQL 批处理。 
   
 > [!NOTE]
-> Sqlcmd 实用工具的最新版本可作为 Web 版本从 [下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取。 你需要版本 13.1 或更高版本以支持始终加密 (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
+> Sqlcmd 实用工具的最新版本可作为 Web 版本从 [下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取。 您需要版本 13.1 或更高版本以支持 Always Encrypted (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
 
-你可以尝试从 Azure 云 Shell sqlcmd 实用工具，因为默认情况下预安装： [![启动云 Shell](https://shell.azure.com/images/launchcloudshell.png "启动云 Shell")](https://shell.azure.com)
+预安装默认情况下，可以尝试从 Azure Cloud Shell sqlcmd 实用工具： [![启动 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "启动 Cloud Shell")](https://shell.azure.com)
 
   若要在 SSMS 中运行 sqlcmd 语句，请从顶部导航栏上的“查询菜单”下拉列表中选择“SQLCMD 模式”。  
   
@@ -121,7 +121,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令行选项  
  **登录相关选项**  
   **-A**  
- 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 这只适用于支持 DAC 的服务器。 如果 DAC 不可用， **sqlcmd** 会生成错误消息，然后退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 时连接到 SQL 数据库使用-A，你必须是 SQL server 管理员联系。 DAC 不可用的 Azure Active Directory 管理员。
+ 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 这只适用于支持 DAC 的服务器。 如果 DAC 不可用， **sqlcmd** 会生成错误消息，然后退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 当连接到 SQL 数据库使用-A，您必须是 SQL server 管理员。 DAC 不可用的 Azure Active Directory 管理员。
   
  **-C**  
  该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
@@ -186,7 +186,7 @@ sqlcmd
  连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
  **-M** *multisubnet_failover*  
- 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息 [！包括[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 Alwayson 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，和[活动辅助副本： 可读辅助副本 (Always On 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)。  
+ 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息 [！包括[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[创建和配置的可用性组的&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 Alwayson 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，并[活动次要副本： 可读次要副本 (Alwayson 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)。  
   
  **-N**  
  此开关供客户端用于请求加密连接。  
@@ -218,7 +218,7 @@ sqlcmd
   
  如果 **-P** 选项后有多个参数，将生成错误消息并退出程序。  
   
- **-S** [*协议*:]*服务器*[**\\***instance_name*] [**，* **端口*]  
+ **-S** [*协议*:]*server*[**\\***instance_name*] [**，* **端口*]  
  指定要连接的 SQL Server 实例。 它设置 **sqlcmd** 脚本变量 SQLCMDSERVER。  
   
  指定 server_name 可连接到该服务器计算机上的 SQL Server 默认实例。 指定要连接到该服务器计算机上 SQL Server 命名实例的 server_name [ \\instance_name ]。 如果不指定服务器，sqlcmd 将连接到本地计算机上 SQL Server 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  

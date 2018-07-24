@@ -1,7 +1,7 @@
 ---
-title: 修复 bug 列表 |Microsoft 文档
+title: 修复的缺陷列表 |Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,44 +14,57 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: v-makouz
-ms.author: genemi
+ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9cba17b1f03b07320b644889bc111752f4f65a6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852223"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946901"
 ---
-# <a name="list-of-bugs-fixed"></a>修复 bug 的列表
+# <a name="list-of-bugs-fixed"></a>修复的缺陷列表
 
-此页包含在每个版本中，从开始修复 bug 的列表[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC 驱动程序 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+此页包含在每个版本中，从开始修复的 bug 的列表[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
+- 修复了 Azure Active Directory 身份验证有关的错误消息
+- 修复了编码检测时以不同方式设置区域设置环境变量
+- 固定后的故障与恢复正在进行中的连接断开连接
+- 修复了检测的连接活动
+- 修复了不正确检测的已关闭套接字
+- 修复了尝试在失败的恢复期间释放语句句柄时的无限期等待
+- Windows 上安装这两个版本 13 和 17 时修复不正确的卸载行为
+- 较旧的 Windows 平台 (Windows 7，8 和 Server 2012) 上的固定的解密行为
+- 修复时在 Windows 上使用 ADAL 身份验证缓存问题
+- 修复了已锁定的问题和 Windows 上的覆盖跟踪日志
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- 修复 1 秒延迟时调用启用了 MARS 的 SQLFreeHandle 和连接属性"Encrypt = yes"
-- 修复程序错误 22003 崩溃中 SQLGetData 时传入的缓冲区的大小较小然后正在检索的数据 (Windows)
-- 固定截断 ADAL 错误消息
-- 修复了极少数 32 位 Windows 上时将转换的浮点数转化为整数
-- 修复了问题，其中将 double 插入十进制字段使用始终加密上将返回数据截断错误
-- 在 MacOS 安装程序修复警告
-- 修复了不正确状态发送到 SQL Server 会话恢复尝试期间连接复原和连接池都启用时，会导致删除的服务器的会话
+- 修复 1 秒的延迟时调用启用了 MARS SQLFreeHandle 和连接属性"Encrypt = yes"
+- 修复错误 22003 崩溃的 SQLGetData 时传入缓冲区的大小较小，则正在检索的数据 (Windows)
+- 修复了截断的 ADAL 错误消息
+- 在 32 位 Windows 上修复罕见 bug 时转换浮点数为整数
+- 修复了在其中插入十进制字段使用始终加密对双精度返回数据截断错误
+- 对 MacOS 的安装程序修复了警告
+- 修复了不正确状态发送到 SQL Server 会话恢复尝试期间连接复原和连接池都启用时，从而导致会话由服务器删除
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC 驱动程序 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- 修复了 bug 的位置时使用 Kerberos 身份验证，大容量插入可能失败，出现"拒绝访问"错误
-- 针对 unixODBC bug 版本低于 2.3.1 中存在已删除的解决方法 （驱动程序翻倍传递给 unixODBC 某些缓冲区的大小）
-- 固定连接复原 （重新连接） 时使用 ColumnEncryption 悬挂 = 已启用
-- 修复 DSN 创建 bug，其中时使用"Active Directory 交互式身份验证"选项 Azure 身份验证窗口可能会变得不响应 (Windows)
-- ODBC 关机期间固定的极少数发生崩溃时异步执行启用 （清除连接句柄时，发生了变化）
-- 修复了问题其中 SQL 驱动程序导致执行长时间存储的过程时的高 CPU 占用率
-- 固定的无法检索加密 varbinary （max） 列而不进行转换中的数据
-- 其中后 null varchar （max） 加密的列使用获取 SQLGetData() 静态游标上修复问题，下列是还音步骤，即使它具有数据
-- 修复了问题上提取 varbinary （max） 字段使用始终加密
-- 固定 setlocale() 不使用始终加密的问题
-- 解决了与 SQLDescribeParam() 返回错误在调用上使用始终加密的 XML 类型的存储过程参数问题
-- 不在 SQLTables 中工作的固定转义的下划线
-- 修复了 bug 时在 Linux 上作为宽字符为单位返回其中截断希伯来数据 (varchar)
+- 修复了 bug 在大容量插入时使用 Kerberos 身份验证，可能会失败，"拒绝访问"错误
+- 已删除的版本低于 2.3.1 中存在的 unixODBC bug 的解决方法 （驱动程序增加了一倍的传递给 unixODBC 某些缓冲区的大小）
+- 修复了连接复原 （重新连接） 挂起时使用 ColumnEncryption = 启用
+- 修复 DSN 创建 bug，其中时使用"Active Directory 交互式身份验证"选项 Azure 身份验证窗口可能会变得无响应 (Windows)
+- 在 ODBC 关机固定的极少数崩溃时启用异步执行了 （发生时清除连接句柄）
+- 修复了在 SQL 驱动程序，导致执行长时间存储的过程时的高 CPU 占用率
+- 修复了无法在无需转换的加密 varbinary （max） 列中检索数据
+- 解决了问题，其中后 null varchar （max） 的已加密的列提取对静态游标使用 sqlgetdata （） 过程，下面的列是还空即使它具有的数据
+- 修复了与上提取具有始终加密的 varbinary （max） 字段
+- 解决了问题 setlocale() 不使用始终加密
+- 修复了 SQLDescribeParam() 返回对调用上使用始终加密的 XML 类型的存储过程参数时的错误的问题
+- SQLTables 中无法正常工作的固定转义的下划线
+- 修复了 bug 在 Linux 上作为宽字符为单位返回时，截断希伯来语数据 (varchar)
 - 修复了问题查询 Shift JIS 编码 char/varchar 从 utf-8 应用程序
-- 修复 bug 其中 SQL_DRIVER_NAME 参数调用 SQLGetInfo 返回 Linux 样式 filename 在 MacOS 上
-- 修复了问题其中加载 Windows 1252 字符数据，使用输入文件大于 32 k 到使用 BCP 实用工具的 VARCHAR 列的字节将导致故障
+- 已修复的 bug，调用 SQLGetInfo SQL_DRIVER_NAME 参数返回 Linux 样式文件名在 MacOS 上
+- 修复了在其中加载 Windows 1252 字符数据，使用输入文件比使用 BCP 实用工具 VARCHAR 列的字节会导致故障的 32k 大

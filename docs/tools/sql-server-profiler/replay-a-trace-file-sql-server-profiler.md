@@ -1,5 +1,5 @@
 ---
-title: 重播跟踪文件 （SQL Server 事件探查器） |Microsoft 文档
+title: 重播跟踪文件 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0dc2625cfeae43ef4c524c460df5f2723130eb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076547"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035490"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>重播跟踪文件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33076547"
   
 5.  选择“按跟踪的顺序重播事件”或“使用多个线程重播事件”。 下表列出了这些设置之间的差异。  
   
-    |选项|Description|  
+    |选项|描述|  
     |------------|-----------------|  
     |**按跟踪事件的顺序重播事件**|按记录事件的顺序重播事件。 此选项启用调试。|  
     |**使用多个线程重播事件**|此选项使用多个线程重播各个事件，而不考虑其顺序。 此选项用于优化性能。|  

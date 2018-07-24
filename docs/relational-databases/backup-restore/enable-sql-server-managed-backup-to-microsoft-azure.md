@@ -14,18 +14,18 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c8aebe504f63e5b99818a928f114841e3c90b075
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0b9b90aa7ca04cb7b1cbedde2befae373339bab
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921052"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984039"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>对 Microsoft Azure 启用 SQL Server 托管备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍了如何在数据库级别和实例级别使用默认设置启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 还介绍了如何启用电子邮件通知以及如何监视备份活动。  
   
- 本教程使用 Azure PowerShell。 教程开始前， [请下载并安装 Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
+ 本教程使用 Azure PowerShell。 教程开始前， [请下载并安装 Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
 >  如果想启用高级选项或使用自定义计划，请在启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前先配置这些设置。 有关详细信息，请参阅 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "32921052"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     有关存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)。  
+     有关存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
   
 3.  **创建备份文件的 Blob 容器：** 可以在 Azure 管理门户中或者使用 Azure PowerShell 创建 Blob 容器。 以下 `New-AzureStorageContainer` 命令在 `backupcontainer` 存储帐户中创建了一个名为 `managedbackupstorage` 的 Blob 容器。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "32921052"
     |**容器 URL：**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS 令牌：**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 有关 SAS 的详细信息，请参阅 [共享访问签名，第一部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
+     将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 有关 SAS 的详细信息，请参阅 [共享访问签名，第一部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

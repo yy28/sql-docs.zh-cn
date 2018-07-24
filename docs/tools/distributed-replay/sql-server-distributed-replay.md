@@ -1,5 +1,5 @@
 ---
-title: SQL Server 分布式重播 |Microsoft 文档
+title: SQL Server 分布式重播 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f00057ac64780636ad1530ffdd2766396da8b40b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980939"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33075164"
 ## <a name="benefits-of-distributed-replay"></a>分布式重播的优点  
  与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]类似，您可以使用分布式重播针对升级后的测试环境重播捕获的跟踪。 与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不同的是，分布式重播并不仅限于从单台计算机重播工作负荷。  
   
- 与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播，您可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
+ 与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播，您可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负荷。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33075164"
   
  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 针对已升级的测试环境重播捕获的跟踪。 还可以分析重播结果以查找潜在的功能和性能不兼容问题。 但是， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 只能从单台计算机重播工作负荷。 重播具有许多活动的并发连接或较高吞吐量的密集型 OLTP 应用程序时， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可能会成为资源瓶颈。  
   
- 与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
+ 与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
   
  下表介绍了适当使用每种工具的情况。  
   

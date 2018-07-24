@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d3d77c77be6e16e6d4deb5fd968774717230f88
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 17167b89180bd8af491d20c6ef3785dba238ad7f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333932"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983259"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用“生成和发布脚本向导”为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”** 菜单为单个对象或多个对象生成脚本。  
 
-有关使用 SQL Server Management Studio (SSMS) 编写各种对象的脚本的详细教程，请参阅[教程：在 SSMS 中编写脚本](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms)。
+有关使用 SQL Server Management Studio (SSMS) 编写各种对象的脚本的详细教程，请参阅[教程：在 SSMS 中编写脚本](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)。
 
   
 ## <a name="before-you-begin"></a>开始之前  

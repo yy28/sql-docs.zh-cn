@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942002"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984679"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>第 1 课：创建存储访问策略和共享访问签名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本课程将介绍如何通过使用存储访问策略使用 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 脚本在 Azure blob 容器上创建共享访问签名。  
+本课程将介绍如何通过使用存储访问策略使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 脚本在 Azure blob 容器上创建共享访问签名。  
   
 > [!NOTE]  
 > 该脚本是使用 Azure PowerShell 5.0.10586 编写的。  
@@ -139,7 +139,7 @@ ms.locfileid: "32942002"
 [第 2 课：使用共享访问签名创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

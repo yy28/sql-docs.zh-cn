@@ -23,16 +23,16 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c7dfed0144de73aa7bf84db9999e4b6a5aec6c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bed6a93030c854c89ec32658ed086d6b0092a8c9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947742"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984479"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[创建链接服务器（SQL Server 数据库引擎）](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[创建链接服务器（SQL Server 数据库引擎）](https://msdn.microsoft.com/library/ff772782(SQL.120).aspx)。
 
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32947742"
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，需要具有 **ALTER ANY LINKED SERVER** 权限，或需要具有 **setupadmin** 固定服务器角色中的成员资格。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，要求具有 **CONTROL SERVER** 权限，或者具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ##  <a name="Procedures"></a> 如何创建链接服务器  

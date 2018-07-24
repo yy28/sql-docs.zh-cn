@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b27173afb4898a0a21abf7203a992e492e5ae288
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072216"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993029"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>分析服务器属性（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   此服务为 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **群集**  
  指示是否将此服务安装为群集服务器的资源。  
   

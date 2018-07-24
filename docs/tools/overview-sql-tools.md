@@ -1,5 +1,5 @@
 ---
-title: SQL 工具和实用程序可用于 SQL Server、 Azure SQL Database 和 Azure SQL 数据仓库 |Microsoft 文档
+title: SQL 工具和实用程序的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: sql
@@ -18,47 +18,47 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34709025"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035215"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和实用程序可用于 SQL Server、 Azure SQL Database 和 Azure SQL 数据仓库
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和实用程序的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-若要管理 （查询、 监视器等） 你需要一种工具的数据库。 有几种数据库工具可用。 可以在云中、 在 Windows 上，或在上运行你的数据库时[Linux](../linux/sql-server-linux-overview.md)，您的工具不需要在与数据库相同的平台上运行。 
+若要管理 （查询、 监视器等） 您需要使用工具的数据库。 有几种数据库工具可用。 您的数据库可以在云中，Windows，或在运行时[Linux](../linux/sql-server-linux-overview.md)，所需的工具不需要与数据库相同的平台上运行。 
 
 本文提供了有关使用 SQL 数据库的可用工具的信息。 
 
 
-## <a name="tools-to-run-queries-and-manage-databases"></a>工具来运行查询和管理数据库  
+## <a name="tools-to-run-queries-and-manage-databases"></a>若要运行查询和管理数据库的工具  
 
 | 工具 | 描述 |
 |:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一个免费的轻量的工具，用于管理数据库，只要它们正在运行。 此预览版中提供数据库管理功能，包括扩展的 TRANSACT-SQL 编辑器和可自定义深入了解你的数据库的操作状态。 **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是免费的轻型工具，用于管理数据库，无论在哪里它们正在运行。 此预览版本中提供数据库管理功能，包括扩展的 TRANSACT-SQL 编辑器和操作状态的数据库的可自定义见解。 **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 使用 SQL Server Management Studio (SSMS) 来查询、 设计和管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。 **在 Windows 上运行 SSMS**。|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将 Visual Studio 的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库转换功能强大的开发环境中。 **在 Windows 上运行 SSDT**。|
-|[mssql cli](mssql-cli.md)|mssql cli 是交互式命令行工具，用于查询 SQL Server。 **在 Windows、 macOS 和 Linux 上运行 mssql cli**|
-| [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 安装[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)用于开发 Microsoft SQL Server、 Azure SQL 数据库和 SQL 数据仓库。 **在 Windows、 macOS 和 Linux 上运行 visual Studio Code**。|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将 Visual Studio 变成功能强大的开发环境的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。 **在 Windows 上运行 SSDT**。|
+|[mssql cli](mssql-cli.md)|mssql cli 是一种交互式的命令行工具，用于查询 SQL Server。 **mssql cli 在 Windows、 macOS 和 Linux 上运行**|
+| [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 安装[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)用于开发 Microsoft SQL Server、 Azure SQL 数据库和 SQL 数据仓库。 **Visual Studio Code 在 Windows、 macOS 和 Linux 上运行**。|
 
-## <a name="which-tool-should-i-choose"></a>应选择哪一种工具？
+## <a name="which-tool-should-i-choose"></a>应该选择哪种工具？
 
-- 若要管理的 SQL Server 实例或数据库，请在 Windows、 Linux 或 Mac 上的轻量编辑器吗？ 请选择 [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
-- 若要管理的 SQL Server 实例或带有完全 GUI 支持在 Windows 上的数据库吗？ 请选择 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- 若要管理 SQL Server 实例或数据库，在 Windows、 Linux 或 Mac 上的轻型编辑器吗？ 请选择 [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
+- 若要管理 SQL Server 实例或具有 GUI 的完全支持在 Windows 上的数据库吗？ 请选择 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - 执行你想要创建或维护数据库代码，包括编译时验证，重构和设计器支持在 Windows 上？ 请选择 [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- 你想要使用命令行工具，其特点 IntelliSense，语法高的照明，查询 SQL Server 和的详细信息？ 选择[mssql cli](mssql-cli.md)
-- 你想要在 Windows、 Linux 或 Mac 上的轻量编辑器中编写 T-SQL 脚本？ 选择[Visual Studio Code](https://code.visualstudio.com/)和[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+- 你想要使用命令行工具，它的 IntelliSense、 语法高-照明，查询 SQL Server 和的详细信息？ 选择[mssql cli](mssql-cli.md)
+- 你是否想要在 Windows、 Linux 或 Mac 上的轻型编辑器中编写 T-SQL 脚本？ 选择[Visual Studio Code](https://code.visualstudio.com/)和[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>其他工具
 
 | 工具 | 描述 |
 |:--|:--|
-| [配置管理器](../tools/configuration-manager/sql-server-configuration-manager-help.md) | 使用 SQL Server 配置管理器来配置 SQL Server 服务和配置网络连接。 在 Windows 上运行 configuration Manager|
-|[mssql-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql conf 用于配置运行在 Linux 上的 SQL Server。|
+| [配置管理器](../tools/configuration-manager/sql-server-configuration-manager-help.md) | 使用 SQL Server 配置管理器来配置 SQL Server 服务并配置网络连接。 在 Windows 上运行 configuration Manager|
+|[mssql-conf](../linux/sql-server-linux-configure-mssql-conf.md)|使用 mssql conf 配置 Linux 上运行的 SQL Server。|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | 使用 SQL Server Migration Assistant 自动将数据库从 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 迁移到 SQL Server。|
-| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | 使用分布式重播功能来帮助你评估 SQL Server 的将来的升级的影响。 此外可以使用分布式重播来帮助评估的硬件和操作系统升级和 SQL Server 优化的影响。 |
-| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose 实用工具将报告 Service Broker 对话或 Service Broker 服务的配置中的问题。 |
+| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | 使用 Distributed Replay 功能来帮助您评估将来的 SQL Server 升级的影响。 此外使用 Distributed Replay 来帮助评估硬件和操作系统升级和 SQL Server 优化的影响。 |
+| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose 实用工具可报告 Service Broker 对话或 Service Broker 服务的配置中的问题。 |
 
 
 ## <a name="command-line-utilities"></a>命令行实用工具
@@ -72,7 +72,7 @@ ms.locfileid: "34709025"
 |[dtexec 实用工具](../integration-services/packages/dtexec-utility.md)|用于配置和执行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 该命令提示实用工具的用户界面版本称为 **DTExecUI**，它可提供执行包实用工具。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 实用工具](../integration-services/dtutil-utility.md)|用于管理 SSIS 包。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[使用部署实用工具部署模型解决方案](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|用于将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
-|[mssql 脚本编写器 （公共预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|用于 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库中生成的数据库对象的创建和插入的 T-SQL 脚本。|请参阅我们[GitHub 存储库](https://github.com/Microsoft/sql-xplat-cli)有关下载和使用情况信息。| 
+|[mssql 脚本专家 （公共预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|用于生成 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库中的数据库对象的创建和插入的 T-SQL 脚本。|请参阅我们[GitHub 存储库](https://github.com/Microsoft/sql-xplat-cli)有关下载和使用情况信息。| 
 |[osql 实用工具](../tools/osql-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Profiler 实用工具](../tools/profiler-utility.md)|用于在命令提示符下启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[RS.exe 实用工具 (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)|用于运行专门管理 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器的脚本。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  

@@ -19,17 +19,17 @@ caps.latest.revision: 121
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849eeaa4b46712ba789f60f43e9c77c02eee6558
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 71d9b599a32351c3aac8bc3b40eb28d7434fb9cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769743"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984289"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Overview of Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx)（Always On 可用性组概述 (SQL Server)）。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Overview of Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx)（Always On 可用性组概述 (SQL Server)）。
 
  本主题介绍用于在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中配置和管理一个或多个可用性组的核心 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]概念。 有关可用性组提供的优势的摘要和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 术语的概述，请参阅 [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   

@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524356687337eb962c262ea1e503fd2b40856623
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410549"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082369"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,28 +37,28 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
+ [ \@folder_name = ] *folder_name*  
  包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [ @project_name = ] project_name  
+ [ \@project_name = ] *project_name*  
  项目的名称。 project_name 为 nvarchar(128)。  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  对象的类型。 有效值包括 `20`（对应于项目）和 `30`（对应于包）。 object_type 为 smallInt。  
   
- [ @ object _name = ] *object _name*  
+ [ \@ object _name = ] *object _name*  
  包的名称。 *object _name* 为 **nvarchar(260)**。  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  参数名。 *parameter_ name* 为 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 MODIFY 权限  

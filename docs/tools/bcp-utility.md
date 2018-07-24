@@ -35,22 +35,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075664"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974276"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [bcp 实用工具](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
 
- > Bcp 实用工具的最新版本，请参阅[for SQL Server 的 Microsoft 命令行实用程序 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Bcp 实用程序的最新版本，请参阅[适用于 SQL Server 的 Microsoft 命令行实用程序 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
- > 有关在 Linux 上使用 bcp，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+ > 有关如何在 Linux 上使用 bcp，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
- > 有关与 Azure SQL 数据仓库配合使用 bcp 的详细信息，请参阅[使用 bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+ > 有关使用 Azure SQL 数据仓库使用 bcp 的详细信息，请参阅[使用 bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
   大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
   
@@ -150,7 +150,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > 我们建议你为格式文件中的每个列指定一个排序规则名称，除非你希望 65001 选项优先于排序规则/代码页规范。
   
-|代码页值|Description|  
+|代码页值|描述|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|客户端使用的默认代码页。 未指定 **-C** 时使用的默认代码页。|  
@@ -190,21 +190,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F** first_row 的值从 1 开始。  
 
 **-G**<a name="G"></a>  
- 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本 14.0.3008.27 或更高版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行身份验证与 SQL 数据库或 SQL 数据仓库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+ 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[14.0.3008.27 版本或更高版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行身份验证与 SQL 数据库或 SQL 数据仓库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!TIP]
->  若要查看你的 bcp 版本是否包括 Azure Active Directory 身份验证 (AAD) 类型的支持**bcp-** (bcp\<空间 >\<dash >\<dash >)，并验证你看到-G 在列表中可用的自变量。
+>  若要查看你的 bcp 版本是否包括对 Azure Active Directory 身份验证 (AAD) 类型的支持**bcp-** (bcp\<空间 >\<短划线 >\<短划线 >)，并验证您看到-G 在列表中可用参数。
 
 - **Azure Active Directory 用户名和密码：** 
 
     当你想要使用 Azure Active Directory 用户名和密码时，可以提供 **-G** 选项，也可以通过提供 **-U** 选项和 **-P** 选项来使用用户名和密码。 
 
-    下面的示例将导出的数据使用 Azure AD 的用户名和密码，用户和密码是一个 AAD 凭据。 此示例导出表`bcptest`从数据库`testdb`从 Azure 服务器`aadserver.database.windows.net`，并将数据存储在文件中`c:\last\data1.dat`:
+    下面的示例将导出的数据使用 Azure AD 用户名和密码的用户和密码是一个 AAD 凭据。 该示例将导出表`bcptest`从数据库`testdb`从 Azure 服务器`aadserver.database.windows.net`，并将数据存储在文件中`c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    下面的示例导入数据使用 Azure AD 的用户名和密码，用户和密码是一个 AAD 凭据。 此示例从文件导入数据`c:\last\data1.dat`到表`bcptest`数据库`testdb`Azure 服务器上`aadserver.database.windows.net`使用 Azure AD 用户/密码：
+    以下示例将导入数据使用 Azure AD 用户名和密码的用户和密码是一个 AAD 凭据。 该示例从文件导入数据`c:\last\data1.dat`到表`bcptest`数据库`testdb`Azure 服务器上`aadserver.database.windows.net`使用 Azure AD 用户/密码：
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -213,15 +213,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 集成** 
  
-    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码。 此配置假定与 Azure AD 联合的当前 Windows 用户帐户 （帐户下运行 bcp 命令）： 
+    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码。 此配置假定当前 Windows 用户帐户 （帐户下运行 bcp 命令） 与 Azure AD 联合： 
 
-    下面的示例将使用 Azure AD 集成的帐户的数据导出。 此示例导出表`bcptest`从数据库`testdb`使用从 Azure 服务器的 Azure AD 集成`aadserver.database.windows.net`，并将数据存储在文件中`c:\last\data2.dat`:
+    下面的示例将使用 Azure AD 的集成的帐户的数据导出。 该示例将导出表`bcptest`从数据库`testdb`使用从 Azure 服务器的 Azure AD 集成`aadserver.database.windows.net`，并将数据存储在文件中`c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    下面的示例将使用 Azure AD 集成的验证的数据导入此示例从文件导入数据`c:\last\data2.txt`到表`bcptest`数据库`testdb`Azure 服务器上`aadserver.database.windows.net`使用 Azure AD 集成的身份验证：
+    以下示例将导入数据使用 Azure AD 集成身份验证。该示例从文件导入数据`c:\last\data2.txt`到表`bcptest`数据库`testdb`Azure 服务器上`aadserver.database.windows.net`使用 Azure AD 集成身份验证：
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -446,7 +446,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。 其效果和指定 **-w** 开关而不指定格式化文件相同。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  **bcp out** 操作要求对源表有 SELECT 权限。  
   
  **bcp in** 操作要求至少对目标表有 SELECT/INSERT 权限。 此外，如果下列任一条件成立，则要求拥有 ALTER TABLE 权限：  

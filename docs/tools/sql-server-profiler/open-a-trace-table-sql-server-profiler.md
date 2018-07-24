@@ -1,5 +1,5 @@
 ---
-title: 打开跟踪表 （SQL Server 事件探查器） |Microsoft 文档
+title: 打开跟踪表 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e57497936641dcf81a6bbbfc9c7d5270c1cfd293
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995019"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>打开跟踪表 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

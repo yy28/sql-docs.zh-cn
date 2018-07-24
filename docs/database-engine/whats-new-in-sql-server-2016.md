@@ -19,12 +19,12 @@ caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc31efe5f3e78a80061d47149c56bf942cd7e8b7
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: a25bfbe07720f190d5da0cc0b30e2104d77dc576
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989373"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980596"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33989373"
 
 - 若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)![下载](../analysis-services/media/download.png "下载")。
 
-- 已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。
+- 已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。
 
 > [!NOTE]
 > 有关最新发行说明，请参阅 [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)。

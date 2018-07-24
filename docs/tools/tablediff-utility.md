@@ -1,5 +1,5 @@
 ---
-title: tablediff 实用工具 |Microsoft 文档
+title: tablediff 实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077526"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974119"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -172,7 +172,7 @@ tablediff
   
 ## <a name="return-value"></a>返回值  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|严重错误|  
@@ -220,7 +220,7 @@ tablediff
   
 -   **图像**  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要比较表，您必须有要比较的表对象的 SELECT ALL 权限。  
   
  若要使用 **-et** 选项，必须是 db_owner 固定数据库角色的成员，或者在订阅数据库中至少拥有 CREATE TABLE 权限，并且对目标服务器中的目标所有者架构拥有 ALTER 权限。  

@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239108"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985609"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理版本由系统控制的临时表中历史数据的保留期
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 聚集列存储索引具有优秀的数据压缩和高效的保留清理能力，是工作负载快速生成大量历史数据时的最佳选择。 此模式尤其适用于密集型事务处理工作负载，此类工作负载使用时态表跟踪和审计更改、执行趋势分析或 IoT 数据引入。
 
-有关更多详细信息，请参阅[使用保留策略管理临时表中的历史数据](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)。
+有关更多详细信息，请参阅[使用保留策略管理临时表中的历史数据](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)。
 
 ## <a name="see-also"></a>另请参阅  
  [临时表](../../relational-databases/tables/temporal-tables.md)   

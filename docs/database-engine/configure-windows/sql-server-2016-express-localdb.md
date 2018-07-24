@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870152"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984499"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)。
 
 Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) 功能。 它在具有高级服务的 SQL Server 2016 Express 上可用。  
 
@@ -40,7 +40,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
   
 -   若要下载并安装 SQL Server 2016 Express，请转到 [SQL Server 下载](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。 LocalDB 是在安装过程中选择的一项功能，可在下载该介质时使用。 如果下载介质，则选择 **“Express Advanced”** 或 **“LocalDB”** 包。 
   
--   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** ，以加速已安装有 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虚拟机。  
+-   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，以加速已安装有 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虚拟机。  
   
 ## <a name="install-localdb"></a>安装 LocalDB  
  通过安装向导或使用 SqlLocalDB.msi 程序安装 **LocalDB** 。 **LocalDB** 是安装 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 时的一个选项。 
@@ -49,7 +49,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
 
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 的实例通过 **SqlLocalDB.exe** 实用工具进行托管。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 应该用于代替已弃用的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 用户实例功能。 
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  **LocalDB** 安装程序使用 SqlLocalDB.msi 程序在计算机上安装所需文件。 安装后， **LocalDB** 是可以创建和打开 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 数据库的系统数据库文件存储于用户本地 AppData 路径中，这个路径通常是隐藏的。 例如 **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**。 用户数据库文件存储在用户指定的位置，通常为 **C:\Users\\<user\>\Documents\\** 文件夹中的某个位置。  
   
  有关在应用程序中包含 **LocalDB** 的详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文档[本地数据概述](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)、[演练：创建 SQL Server LocalDB 数据库](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)和[演练：连接到 SQL Server LocalDB 数据库中的数据（Windows 窗体）](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)。  
@@ -111,7 +111,7 @@ REM Gather information about the instance of LocalDB
 |版本|\<当前版本>|  
 |共享名称|""|  
 |“所有者”|"\<你的 Windows 用户>"|  
-|自动创建|“否”|  
+|自动创建|否|  
 |State|运行|  
 |上次启动时间|\<日期和时间>|  
 |实例管道名称|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
@@ -125,7 +125,7 @@ REM Gather information about the instance of LocalDB
 ## <a name="troubleshooting"></a>故障排除  
  有关排除 **LocalDB**问题的信息，请参阅 [排除 SQL Server 2012 Express LocalDB 问题](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  由于 Windows 文件系统重定向，NT AUTHORITY\SYSTEM 等内置帐户拥有的 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** 的实例是用户为其使用而创建的实例。 计算机上的任何用户都可以使用 **LocalDB**实例创建数据库，在用户配置文件下存储文件并使用凭据来运行进程。 默认情况下，对 **LocalDB** 实例的访问仅限于其所有者。 **LocalDB** 中包含的数据受到对数据库文件的文件系统访问的保护。 如果用户数据库文件存储于某一共享位置，则通过使用他们自己拥有的 **LocalDB** 实例对该位置具有文件系统访问权限的任何人都可以打开该数据库。 如果数据库文件处于某一受保护的位置，例如用户数据文件夹，则只有该用户以及有权访问该文件夹的任何管理员才能打开该数据库。 **LocalDB** 文件只能一次通过一个 **LocalDB** 实例来打开。  
   
 > [!NOTE]  

@@ -4,22 +4,20 @@ description: 显示 Microsoft SQL Server 工具文档中最近更新内容的片
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: tools
 ms.date: 04/28/2018
-ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 31df25173ad475c733bc7239366a6c2ce820289e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32739159"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088179"
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>新的和最近的更新： 适用于 SQL Server 工具
+# <a name="new-and-recently-updated-tools-for-sql-server"></a>新的和最近更新的文章： SQL Server 工具
 
 
 
@@ -32,7 +30,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 - 更新日期范围：2018-02-03 到 2018-04-28&nbsp;&nbsp;&nbsp;
-- *主题区域：* &nbsp; **适用于 SQL Server 工具**。
+- *主题区域：* &nbsp; **SQL Server 工具**。
 
 
 
@@ -44,7 +42,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-- [适用于 SQL Server 的 mssql cli 命令行查询工具](mssql-cli.md)
+- [用于 SQL Server mssql cli 命令行查询工具](mssql-cli.md)
 
 
 
@@ -94,16 +92,16 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
--G<a name="G"></a> 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[版本 14.0.3008.27 或更高版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行身份验证与 SQL 数据库或 SQL 数据仓库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+-G<a name="G"></a> 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[14.0.3008.27 版本或更高版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行身份验证与 SQL 数据库或 SQL 数据仓库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
 
 > [!TIP]
->  若要查看你的 bcp 版本是否包括 Azure Active Directory 身份验证 (AAD) 类型的支持**bcp-** (bcp\<空间 >\<dash >\<dash >)，并验证你看到-G 在列表中可用的自变量。
+>  若要查看你的 bcp 版本是否包括对 Azure Active Directory 身份验证 (AAD) 类型的支持**bcp-** (bcp\<空间 >\<短划线 >\<短划线 >)，并验证您看到-G 在列表中可用参数。
 
 - **Azure Active Directory 用户名和密码：**
 
     当你想要使用 Azure Active Directory 用户名和密码时，可以提供 **-G** 选项，也可以通过提供 **-U** 选项和 **-P** 选项来使用用户名和密码。
 
-    下面的示例将导出的数据使用 Azure AD 的用户名和密码，用户和密码是一个 AAD 凭据。 此示例导出表`bcptest`从数据库`testdb`从 Azure 服务器`aadserver.database.windows.net`，并将数据存储在文件中`c:\last\data1.dat`:
+    下面的示例将导出的数据使用 Azure AD 用户名和密码的用户和密码是一个 AAD 凭据。 该示例将导出表`bcptest`从数据库`testdb`从 Azure 服务器`aadserver.database.windows.net`，并将数据存储在文件中`c:\last\data1.dat`:
 ```
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
 ```
@@ -117,7 +115,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 - **Azure Active Directory 集成**
 
-    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码。 此配置假定与 Azure AD 联合的当前 Windows 用户帐户 （帐户下运行 bcp 命令）：
+    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码。 此配置假定当前 Windows 用户帐户 （帐户下运行 bcp 命令） 与 Azure AD 联合：
 
 
 

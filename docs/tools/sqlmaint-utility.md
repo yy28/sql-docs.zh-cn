@@ -1,5 +1,5 @@
 ---
-title: sqlmaint 实用工具 |Microsoft 文档
+title: sqlmaint 实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077894"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997139"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,8 @@ dbname_log_yyyymmddhhmm.BAK
  对于磁盘备份，指定如果创建备份后的时间间隔超出了 \<time_period>，则删除备份目录中的所有备份文件。  
   
  **-CrBkSubDir**  
- 对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
+ 对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 
+  **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
   
  **backup_path**  
  对于磁盘备份，指定在默认的备份目录中创建备份文件。 如果同时指定两者，则**UseDefDir** 将覆盖 *backup_path* 。 在默认 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装中，默认备份目录为 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup。  
@@ -245,7 +246,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   发生常规错误。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  对 **具有** 读取和执行 **权限的任何 Windows 用户都可以执行** sqlmaint `sqlmaint.exe`实用工具，默认情况下，该工具存储在 `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` 文件夹中。 此外，使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **指定的** 登录名必须具有执行指定的操作所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 如果使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，则映射到经过身份验证的 Windows 用户的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名必须具有执行指定操作所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。  
   
  例如，使用 **-BkUpDB** 需要执行 BACKUP 语句的权限。 使用 **-UpdOptiStats** 参数需要执行 UPDATE STATISTICS 语句的权限。 有关详细信息，请参阅联机丛书中相应主题的“权限”部分。  

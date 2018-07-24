@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a70e19399b04968d37a7b9b54b657e47bf6ab6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012395"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981469"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33012395"
 Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server 2012 Service Pack 1 CU2 的一项增强功能，现在已随 SQL Server 2014 和 SQL Server 2016 进一步增强。 有关该功能的概述以及使用该功能的好处，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 有关实时演示，请参阅 [时间点还原的演示](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。  
   
   
-**下载**<br /><br />**>>**  若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到  **[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。<br /><br />**>>**  是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
+**下载**<br /><br />**>>**  若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到  **[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。<br /><br />**>>**  是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
 此教程通过多个课程说明如何在 Microsoft Azure Blob 存储服务中处理 SQL Server 数据文件。 每个课程专注于某个特定任务，应按顺序完成课程学习。 首先，将学习如何使用存储访问策略和共享访问签名在 Blob 存储中新建容器。 然后，学习如何创建 SQL Server 凭据，将 SQL Server 与 Azure Blob 存储集成。 接下来，将数据库备份到 Blob 存储，并将其还原到 Azure 虚拟机。 然后，使用 SQL Server 2016 文件快照事务日志备份还原到某个时间点和新的数据库。 最后，本教程会演示元数据系统存储过程和函数的使用方法，帮助了解和使用文件快照备份。  
@@ -43,7 +43,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
   
 -   具有 Azure 存储帐户。  
   
--   至少有一个安装有 SQL Server 2016 的 Azure 虚拟机，并依照[在 Azure 上设置 SQL Server 虚拟机](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/)对该虚拟机进行设置。 还可以选择对[第 8 课.从日志备份还原为新数据库](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)) 中的方案使用第二个虚拟机。  
+-   至少有一个安装有 SQL Server 2016 的 Azure 虚拟机，并依照[在 Azure 上设置 SQL Server 虚拟机](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)对该虚拟机进行设置。 还可以选择对[第 8 课.从日志备份还原为新数据库](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)) 中的方案使用第二个虚拟机。  
   
 本教程分为 9 课，必须按顺序完成课程学习：  
   

@@ -4,20 +4,18 @@ description: 显示数据库引擎的文档中最近更改的更新内容片段�
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: database-engine
 ms.date: 04/28/2018
-ms.openlocfilehash: 3600681b4c9dddd44b5eacfc3b0d6aa268d8cb39
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 56f8dfda589e5df43197bd6ae0622d02ba1d57df
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32527475"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082630"
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新增内容和最近更新内容：数据库引擎文档
 

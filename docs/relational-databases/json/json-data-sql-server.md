@@ -16,12 +16,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6b81626832f6428969f86b179b06232b81d7326f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6df3b020e125a807d84297abad445f3a3f0dd807
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417536"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038114"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -159,9 +159,9 @@ FROM OPENJSON(@json)
   WITH (id int 'strict $.id',  
         firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
         age int, dateOfBirth datetime2 '$.dob',
-    skills nvarchar(max) '$.skills' as json) 
-    outer apply openjson( a.skills ) 
-                     with ( skill nvarchar(8) '$' ) as b
+    skills nvarchar(max) '$.info.skills' as json) 
+    outer apply openjson( skills ) 
+                     with ( skill nvarchar(8) '$' )
 ```  
 首个 `OPENJSON` 中返回技能数组，作为原始 JSON 文本片段，并使用 `APPLY` 运算符传递给其他 `OPENJSON` 函数。 第二个 `OPENJSON` 函数将分析 JSON 数组并将字符串值返回为单列行集，这一行集将与第一个 `OPENJSON` 的结果联接。 此查询的结果如下表所示：
 

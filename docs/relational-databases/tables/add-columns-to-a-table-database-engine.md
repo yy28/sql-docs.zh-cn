@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2785f0ebfd810d95f50f741d8544170730da52f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e56ab0d762c9df4cb26a4d061089d4cdb6c0cf13
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005844"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983859"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[向表中添加列（数据库引擎）](https://msdn.microsoft.com/en-US/library/ms190238(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[向表中添加列（数据库引擎）](https://msdn.microsoft.com/library/ms190238(SQL.120).aspx)。
 
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向表添加新列。  

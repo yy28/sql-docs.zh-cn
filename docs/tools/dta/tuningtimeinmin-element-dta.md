@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a906fea9cc3ff318a523695046c0a8c8fea2ce9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069144"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048645"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33069144"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**unsignedInt**，长度没有限制。|  
 |**默认值**|480 分钟（8 小时）。|  
@@ -54,11 +54,11 @@ ms.locfileid: "33069144"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
-|**子元素**|InclusionThresholdSetting|  
+|**子元素**|None|  
   
 ## <a name="example"></a>示例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  以下代码示例显示如何将 12 个小时设置为最长优化时间：  
   
 ## <a name="code"></a>代码  

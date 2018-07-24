@@ -39,15 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bd67d9005d5862bdb24d8112b2a04d023f4141
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 252ba405e8ad04b47581fcbbaca89cc7aee1eaf6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943153"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106693"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,9 +145,9 @@ ms.locfileid: "36943153"
 |[sp_droprole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|从当前数据库中删除数据库角色。|  
 |[sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|  
 |[sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|从当前数据库的 SQL Server 角色中删除安全帐户。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| 权限 | 向角色添加权限。
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| 权限 | 拒绝向角色授予权限。
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| 权限 | 撤消以前授予或拒绝的权限。
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | 向角色添加权限。
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | 拒绝向角色授予权限。
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 撤消以前授予或拒绝的权限。
   
   
 ## <a name="public-database-role"></a>public 数据库角色  

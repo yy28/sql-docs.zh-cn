@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b3ca502b82745780d2353e25ea8252d811e42e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050655"
 ---
 # <a name="report-server-properties-advanced-tab"></a>报表服务器属性（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   此服务是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **客户反馈报告**  
  指示是否已对此服务启用服务质量监视。 有关客户反馈报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。  
   

@@ -17,12 +17,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88a95ea4ad99373c5f8a1994599a2dbea961669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0badf80ef7108ddcbeeafba703873ed97b5c2b14
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942422"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983160"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>第 2 课：使用共享访问签名创建 SQL Server 凭据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32942422"
 SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源所需的身份验证信息。 凭据中存储了存储容器的 URI 路径以及此容器的共享访问签名。  
   
 > [!NOTE]  
-> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，可以使用此处记录的 [已弃用语法](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) ，基于存储帐户密钥创建 SQL Server 凭据。  
+> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，可以使用此处记录的 [已弃用语法](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) ，基于存储帐户密钥创建 SQL Server 凭据。  
   
 ## <a name="create-sql-server-credential"></a>创建 SQL Server 凭据  
 若要创建 SQL Server 凭据，请执行以下步骤：  

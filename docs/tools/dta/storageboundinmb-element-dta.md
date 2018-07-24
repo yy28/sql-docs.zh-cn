@@ -1,5 +1,5 @@
 ---
-title: StorageBoundInMB 元素 (DTA) |Microsoft 文档
+title: StorageBoundInMB 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff7220d48a161456d899fb150c3749accad10fcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070294"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063385"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33070294"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**unsignedInt**，长度没有限制。|  
 |**默认值**|无。|  
@@ -54,7 +54,7 @@ ms.locfileid: "33070294"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
-|**子元素**|InclusionThresholdSetting|  
+|**子元素**|None|  
   
 ## <a name="remarks"></a>Remarks  
  优化多个数据库时，建议对所有数据库都进行空间计算。 默认情况下，数据库引擎优化顾问会使用以下存储空间中较小的一个：  
@@ -69,7 +69,7 @@ ms.locfileid: "33070294"
   
 ## <a name="example"></a>示例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  以下代码示例说明如何将优化建议可以消耗的最大磁盘空间设置为 1500 MB：  
   
 ## <a name="code"></a>代码  

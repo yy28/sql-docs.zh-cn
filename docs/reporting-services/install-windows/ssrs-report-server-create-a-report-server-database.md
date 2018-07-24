@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7f34454fc72120a480879a7d48d5924816e8e038
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8cee752f2168929723dae86cd0da774cb02518bd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322746"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983579"
 ---
 # <a name="create-a-report-server-database"></a>创建报表服务器数据库
 
@@ -76,6 +76,6 @@ ms.locfileid: "35322746"
 
 ## <a name="next-steps"></a>后续步骤
 
-[Reporting Services 配置管理器](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Reporting Services 配置管理器](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

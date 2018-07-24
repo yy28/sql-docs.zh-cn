@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ae0431d6f4d2463a419e593b17b5700c3e13041c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ffe4d95cd82864445ce3a8223c18664b65641f10
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322306"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980349"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 
@@ -66,7 +66,7 @@ ms.locfileid: "35322306"
 |步骤|说明和链接|  
 |----------|--------------------------|  
 |将 SharePoint 服务器添加到场。|你需要安装 SharePoint 以部署其他 Reporting Services 应用程序。<br/><br/>有关 SharePoint 2013 的详细信息，请参阅 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)。<br/><br/>有关 SharePoint 2016 的详细信息，请参阅 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)。|  
-|安装和配置 Reporting Services SharePoint 模式。|运行 SQL Server 安装。 有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅 [在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)<br /><br /> 如果该服务器将仅用作应用程序服务器并且将不用作 WFE，则无需选择“用于 SharePoint 产品的 Reporting Services 外接程序”。<br /><br /> 1) 在“设置角色”页上，选择“SQL Server 功能安装”<br /><br /> 2) 在“功能选择”页上，选择“Reporting Services - SharePoint”<br /><br /> 3) 在“Reporting Services 配置”页上，确认为“Reporting Services SharePoint 模式”选择了“仅安装”选项。|  
+|安装和配置 Reporting Services SharePoint 模式。|运行 SQL Server 安装。 有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)<br /><br /> 如果该服务器将仅用作应用程序服务器并且将不用作 WFE，则无需选择“用于 SharePoint 产品的 Reporting Services 外接程序”。<br /><br /> 1) 在“设置角色”页上，选择“SQL Server 功能安装”<br /><br /> 2) 在“功能选择”页上，选择“Reporting Services - SharePoint”<br /><br /> 3) 在“Reporting Services 配置”页上，确认为“Reporting Services SharePoint 模式”选择了“仅安装”选项。|  
 |验证 Reporting Services 是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 验证“SQL Server Reporting Services 服务”服务。<br /><br />有关详细信息，请参阅 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
   
 ##  <a name="bkmk_additional"></a> 附加配置  

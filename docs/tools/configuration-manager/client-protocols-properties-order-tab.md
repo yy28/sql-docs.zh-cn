@@ -1,5 +1,5 @@
 ---
-title: 客户端协议属性 （顺序选项卡） |Microsoft 文档
+title: 客户端协议属性 （顺序选项卡） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 394e659a17fb4a27deac8fd62c342aa11bdac72f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987469"
 ---
 # <a name="client-protocols-properties-order-tab"></a>客户端协议属性（“顺序”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "33069224"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient 不会使用这些设置。 .NET SqlClient 的协议顺序依次为：TCP、命名管道。此顺序不能改变。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“启用的协议”**  
  列出已安装但当前未使用的协议。  
   
  **“禁用的协议”**  
- 列出可用于的协议[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在此计算机上的客户端。  
+ 列出了可用于的协议[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此计算机上的客户端。  
   
  **>**  
  启用“禁用的协议”框中当前突出显示的协议，会将其移到“启用的协议”框中。  

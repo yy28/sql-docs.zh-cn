@@ -1,5 +1,5 @@
 ---
-title: 使用 IPv6 进行连接 |Microsoft 文档
+title: 使用 IPv6 进行连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0479ad79093f2de1e9eb0fa6f9ff59db70ec4060
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37986066"
 ---
 # <a name="connecting-using-ipv6"></a>使用 IPv6 进行连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

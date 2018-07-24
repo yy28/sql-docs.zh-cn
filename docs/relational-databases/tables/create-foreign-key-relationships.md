@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 67760c658b27bcddff443a943c65d725e23f44e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 328468c781bd0061b12bc2e29817da7801dd45c3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012946"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983289"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create Foreign Key Relationships](https://msdn.microsoft.com/en-US/library/ms189049(SQL.120).aspx)（创建外键关系）。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create Foreign Key Relationships](https://msdn.microsoft.com/library/ms189049(SQL.120).aspx)（创建外键关系）。
 
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。    
@@ -62,7 +62,7 @@ ms.locfileid: "33012946"
     
 
     
-##   <a name="permissions"></a>权限    
+##   <a name="permissions"></a>Permissions    
  使用外键创建新表需要在数据库中具有 CREATE TABLE 权限，并对在其中创建表的架构具有 ALTER 权限。    
     
  在某一现有表中创建外键需要对该表具有 ALTER 权限。    

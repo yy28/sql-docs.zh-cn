@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028945"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983119"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 各个版本支持的 Reporting Services 功能
 
@@ -34,7 +34,7 @@ ms.locfileid: "33028945"
     
  > [![从评估中心下载](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[从评估中心下载 SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png) **[启动已安装 SQL Server 2016 的虚拟机](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png) **[启动已安装 SQL Server 2016 的虚拟机](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 有关评估版和开发人员版支持的功能，请参阅 SQL Server 企业版。
 
@@ -48,33 +48,33 @@ ms.locfileid: "33028945"
   
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|开发人员|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|移动报表和 KPI|是||||||是|  
+|移动报表和 KPI|用户帐户控制||||||用户帐户控制|  
 |支持的目录 DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Standard 或更高版本|Standard 或更高版本|Web|Express|||Standard 或更高版本|  
 |支持的数据源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|所有   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Web|Express|||所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|  
-|报表服务器|是|是|是|是|||是|  
-|报表设计器|是|是|是|是|||是|  
-|报表设计器的 Web 门户|是|是|是|是|||是|  
-|基于角色的安全性|是|是|是|是|||是|  
-|导出到 Excel、PowerPoint、Word、PDF 和图像|是|是|是|是|||是|  
-|增强的仪表和图表|是|是|是|是|||是|  
-|将报表项固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]仪表板|是|是|是|是|||是|  
-|自定义身份验证|是|是|是|是|||是|  
-|作为数据馈送的报表|是|是|是|是|||是|  
-|模型支持|是|是|是||||是|  
-|为基于角色的安全性创建自定义角色|是|是|||||是|  
-|模型项安全性|是|是|||||是|  
-|无限制链接点击|是|是|||||是|  
-|共享组件库|是|是|||||是|  
-|电子邮件和文件共享订阅和计划|是|是|||||是|  
-|报表历史记录、执行快照和缓存|是|是|||||是|  
-|SharePoint 集成|是|是|||||是|  
-|远程和非 SQL 数据源支持<sup>1</sup>|是|是|||||是|  
-|数据源、传递和呈现、RDCE 可扩展性|是|是|||||是|  
-|自定义品牌|是||||||是|  
-|数据驱动报表订阅|是||||||是|  
-|扩展部署（Web 场）|是||||||是|  
-|警报<sup>2</sup>|是||||||是|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|是||||||是|  
+|报表服务器|用户帐户控制|是|是|是|||用户帐户控制|  
+|报表设计器|用户帐户控制|是|是|是|||用户帐户控制|  
+|报表设计器的 Web 门户|用户帐户控制|是|是|是|||用户帐户控制|  
+|基于角色的安全性|用户帐户控制|是|是|是|||用户帐户控制|  
+|导出到 Excel、PowerPoint、Word、PDF 和图像|用户帐户控制|是|是|是|||用户帐户控制|  
+|增强的仪表和图表|用户帐户控制|是|是|是|||用户帐户控制|  
+|将报表项固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]仪表板|用户帐户控制|是|是|是|||用户帐户控制|  
+|自定义身份验证|用户帐户控制|是|是|是|||用户帐户控制|  
+|作为数据馈送的报表|用户帐户控制|是|是|是|||用户帐户控制|  
+|模型支持|用户帐户控制|是|是||||用户帐户控制|  
+|为基于角色的安全性创建自定义角色|用户帐户控制|是|||||用户帐户控制|  
+|模型项安全性|用户帐户控制|是|||||用户帐户控制|  
+|无限制链接点击|用户帐户控制|是|||||用户帐户控制|  
+|共享组件库|用户帐户控制|是|||||用户帐户控制|  
+|电子邮件和文件共享订阅和计划|用户帐户控制|是|||||用户帐户控制|  
+|报表历史记录、执行快照和缓存|用户帐户控制|是|||||用户帐户控制|  
+|SharePoint 集成|用户帐户控制|是|||||用户帐户控制|  
+|远程和非 SQL 数据源支持<sup>1</sup>|用户帐户控制|是|||||用户帐户控制|  
+|数据源、传递和呈现、RDCE 可扩展性|用户帐户控制|是|||||用户帐户控制|  
+|自定义品牌|用户帐户控制||||||用户帐户控制|  
+|数据驱动报表订阅|用户帐户控制||||||用户帐户控制|  
+|扩展部署（Web 场）|用户帐户控制||||||用户帐户控制|  
+|警报<sup>2</sup>|用户帐户控制||||||用户帐户控制|  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|用户帐户控制||||||用户帐户控制|  
   
  <sup>1</sup> 有关 SQL Server 2016 Reporting Services (SSRS) 支持的数据源的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "33028945"
   
 |工具名称|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|开发人员|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] （.rdl 和 .rds）|是|是|||||是|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] （.rsmobile）|是||||||是|  
-|用于移动设备的 Power BI 应用（iOS、Windows 10、Android）(.rsmobile)|是||||||是|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] （.rdl 和 .rds）|用户帐户控制|是|||||用户帐户控制|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] （.rsmobile）|用户帐户控制||||||用户帐户控制|  
+|用于移动设备的 Power BI 应用（iOS、Windows 10、Android）(.rsmobile)|用户帐户控制||||||用户帐户控制|  
   
 > [!NOTE]  
 > 1.  上表标识了启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；但是，这些工具可以访问在任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上托管的数据。  
