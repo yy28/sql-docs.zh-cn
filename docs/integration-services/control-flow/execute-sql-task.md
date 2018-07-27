@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404749"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084479"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -203,7 +203,7 @@ ms.locfileid: "35404749"
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>“参数映射”页 - 执行 SQL 任务编辑器
 可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“变量名称”**  
  通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“\<新建变量...>”以使用“添加变量”对话框添加新变量。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "35404749"
  **参数名称**  
  提供参数名称。  
   
- 必须使用数值还是参数名称取决于任务所用的连接管理器类型。 某些连接管理器类型要求参数名称的第一个字符为 @ 符号，并要求将 @Param1 之类的特定名称或列名作为参数名称。  
+ 必须使用数值还是参数名称取决于任务所用的连接管理器类型。 一些连接管理器类型要求，参数名的首字符必须为 \@ 符号（如 \@Param1 等特定名称），或将列名用作参数名。  
   
  **参数大小**  
  提供具有可变长度的参数的大小，如字符串和二进制字段。  
@@ -234,7 +234,7 @@ ms.locfileid: "35404749"
 ## <a name="result-set-page---execute-sql-task-editor"></a>“结果集”页 - 执行 SQL 任务编辑器
 可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“结果集”** 页，将 SQL 语句的结果映射到新变量或现有变量。 如果将“常规”页上的 **ResultSet** 设置为 **“无”**，将禁用此对话框中的选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **结果名称**  
  通过单击“添加”添加了结果集映射集之后，为结果提供名称。 必须根据结果集类型使用特定的结果名称。  
   
@@ -273,16 +273,16 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 -   [获取返回代码的值](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a>参数名称和标记  
- 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器类型要求 SQL 命令使用格式为 @varParameter 的参数标记，而 OLE DB 连接类型要求使用问号 (?) 参数标记。  
+ 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器类型要求，SQL 命令必须使用格式为 \@varParameter 的参数标记，而 OLE DB 连接类型则要求使用问号 (?) 参数标记。  
   
- 在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器类型使用带 @ 前缀的用户定义名称，而 OLE DB 连接管理器类型要求使用从 0 开始的序数数值作为参数名。  
+ 在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器类型使用前缀为 \@ 的用户定义的名称，而 OLE DB 连接管理器类型则要求使用从 0 开始的序数数值作为参数名。  
   
  下表总结了执行 SQL 任务可以使用的连接管理器类型的 SQL 命令要求。  
   
 |连接类型|参数标记|参数名称|示例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<参数名称>|@\<参数名称>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<参数名称>|\@\<参数名称>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 -   ADO 连接类型可以使用任何两个参数名称，例如 Param1 和 Param2，但是这两个参数必须按其在参数列表中的序数位置进行映射。  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接类型使用参数名称 @parmMinProductID 和 @parmMaxProductID。  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接类型使用参数名 \@parmMinProductID 和 \@parmMaxProductID。  
   
 ###  <a name="Stored_procedures"></a>在存储过程中使用参数  
  运行存储过程的 SQL 命令也可以使用参数映射。 与参数化查询的规则一样，参数标记和参数名称的使用规则取决于执行 SQL 所使用的连接管理器的类型。  
@@ -421,7 +421,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     |连接类型|参数标记|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 和 SQLMOBILE|@\<参数名称>|  
+    |ADO.NET 和 SQLMOBILE|\@\<参数名称>|  
     |ODBC|?|  
     |EXCEL 和 OLE DB|?|  
   
@@ -444,7 +444,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     |连接类型|“参数名称”|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET 和 SQLMOBILE|@\<参数名称>|  
+    |ADO.NET 和 SQLMOBILE|\@\<参数名称>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
   

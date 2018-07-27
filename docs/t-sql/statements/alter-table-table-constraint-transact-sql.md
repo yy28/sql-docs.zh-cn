@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dff7eb34493f69ac3e62e889f8641c9a7ed368a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786138"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106723"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,8 @@ ms.locfileid: "37786138"
  指定与表级 DEFAULT 定义相关联的列。  
   
  WITH VALUES  
- 指定 DEFAULT constant_expression 中给定的值将存储在添加到现有行的新列中。 只有在 ADD 列子句中指定了 DEFAULT 的情况下，才能指定 WITH VALUES。 如果所添加的列允许 Null 值且指定了 WITH VALUES，则默认值将存储在添加到现有行的新列中。 如果没有为允许空值的列指定 WITH VALUES，则 NULL 值将存储在现有行的新列中。 如果新列不允许 Null 值，那么不论是否指定 WITH VALUES，都将在新行中存储默认值。  
+ 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression 中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression 中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+如果在没有同时添加相关列的情况下使用它，它将不起作用。 
   
  CHECK  
  一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。  

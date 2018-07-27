@@ -1,7 +1,7 @@
 ---
 title: SSIS 如何创建 ETL 包 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -23,12 +23,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 234b5a72f611ab2ac85db862c04af7d749e089ab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411729"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999277"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何创建 ETL 包
 
@@ -40,22 +40,24 @@ ms.locfileid: "35411729"
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>什么是 SQL Server Integration Services (SSIS)？
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是一个可用于生成高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载 (ETL) 包。 SSIS 包括生成并调试包的图形工具和向导；执行如 FTP 操作、执行 SQL 语句和发送电子邮件等工作流功能的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；管理服务，即用于管理包执行和存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型编程的应用程序编程接口 (API)。  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是一个可用于生成高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载 (ETL) 包。 SSIS 包括用于生成和调试包的图形工具和向导；用于执行 FTP 操作等工作流函数、执行 SQL 语句和发送电子邮件的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；用于管理包执行和存储的管理数据库 `SSISDB`；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型进行编程的应用程序编程接口 (API)。  
 
 ## <a name="what-you-learn"></a>学习内容  
 熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新工具、控件和功能的最好方法，就是使用它们。 本教程将指导使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建一个简单的 ETL 包，其中包含循环、配置、错误流逻辑和日志记录。  
   
-## <a name="requirements"></a>要求  
+## <a name="prerequisites"></a>必备条件  
 本教程适用于熟悉基本数据库操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的新功能认识有限的用户。  
 
-> [!IMPORTANT]
-> 近来，运行本教程所需的示例文件不再在以前的位置联机提供。 对于带来的不便，我们深表歉意。 我们已经在新的位置提供这些文件，并已更新这篇文章中的下载链接。
-
-若要使用本教程，系统中必须安装下列组件：  
+若要运行本教程，必须安装下列组件：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 **数据库的** 。 若要下载 AdventureWorksDW2012 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorksDW2012.bak`，并还原备份。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 若要安装 SQL Server 和 SSIS，请参阅[安装 Integration Services](install-windows/install-integration-services.md)。
 
--   示例数据。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 若要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程 - 创建简单的 ETL 包](https://www.microsoft.com/download/details.aspx?id=56827)。  
+-   AdventureWorksDW2012 示例数据库。 若要下载 AdventureWorksDW2012 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorksDW2012.bak`，并还原备份。  
+
+-   示例数据文件。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 若要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程 - 创建简单的 ETL 包](https://www.microsoft.com/download/details.aspx?id=56827)。
+
+    - 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
+    - 示例包假定数据文件位于文件夹 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package` 中。 如果将下载内容解压缩到其他位置，必须在示例包中的多个位置更新文件路径。
 
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
 [第 1 课：使用 SSIS 创建项目和基本包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

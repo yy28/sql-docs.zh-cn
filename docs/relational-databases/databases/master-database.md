@@ -1,7 +1,7 @@
 ---
 title: master 数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: databases
@@ -19,16 +19,19 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d33bb332481561a1a81c0d18ebcfb19b4fc32f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ffc0e8ccb310cb5a5d491f057ee2b8b5074e080
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930982"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108119"
 ---
 # <a name="master-database"></a>master 数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **master** 数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
+
+> [!IMPORTANT]
+> 对于 Azure SQL 数据库逻辑服务器，仅 master 数据库和 tempdb 数据库适用。 有关逻辑服务器和逻辑 master 数据库的相关概念，请参阅[什么是 Azure SQL 逻辑服务器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="physical-properties-of-master"></a>master 数据库的物理属性  
  下表列出了 **master** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
@@ -45,35 +48,35 @@ ms.locfileid: "32930982"
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|“否”|  
-|ANSI_NULL_DEFAULT|OFF|是|  
-|ANSI_NULLS|OFF|是|  
-|ANSI_PADDING|OFF|是|  
-|ANSI_WARNINGS|OFF|是|  
-|ARITHABORT|OFF|是|  
-|AUTO_CLOSE|OFF|“否”|  
-|AUTO_CREATE_STATISTICS|ON|是|  
-|AUTO_SHRINK|OFF|“否”|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
-|CHANGE_TRACKING|OFF|“否”|  
-|CONCAT_NULL_YIELDS_NULL|OFF|是|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
-|CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|“否”<br /><br /> 否<br /><br /> “否”|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|“否”|  
-|ENCRYPTION|OFF|“否”|  
-|MIXED_PAGE_ALLOCATION|ON|“否”|  
-|NUMERIC_ROUNDABORT|OFF|是|  
-|PAGE_VERIFY|CHECKSUM|是|  
-|PARAMETERIZATION|SIMPLE|是|  
-|QUOTED_IDENTIFIER|OFF|是|  
-|READ_COMMITTED_SNAPSHOT|OFF|“否”|  
-|RECOVERY|SIMPLE|是|  
-|RECURSIVE_TRIGGERS|OFF|是|  
-|Service Broker 选项|DISABLE_BROKER|“否”|  
-|TRUSTWORTHY|OFF|是|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|否|  
+|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
+|ANSI_NULLS|OFF|用户帐户控制|  
+|ANSI_PADDING|OFF|用户帐户控制|  
+|ANSI_WARNINGS|OFF|用户帐户控制|  
+|ARITHABORT|OFF|用户帐户控制|  
+|AUTO_CLOSE|OFF|否|  
+|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_SHRINK|OFF|否|  
+|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|CHANGE_TRACKING|OFF|否|  
+|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
+|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
+|DB_CHAINING|ON|否|  
+|ENCRYPTION|OFF|否|  
+|MIXED_PAGE_ALLOCATION|ON|否|  
+|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
+|PAGE_VERIFY|CHECKSUM|用户帐户控制|  
+|PARAMETERIZATION|SIMPLE|用户帐户控制|  
+|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
+|READ_COMMITTED_SNAPSHOT|OFF|否|  
+|RECOVERY|SIMPLE|用户帐户控制|  
+|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
+|Service Broker 选项|DISABLE_BROKER|否|  
+|TRUSTWORTHY|OFF|用户帐户控制|  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c2adad2eef1350897bcae24bfdde434ecfeecff
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550098"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084859"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>在报表管理器中上传文件或报表
 报表服务器的 Web 门户提供上传功能，以便可以将报表和其他文件添加到报表服务器而不必从客户端应用程序发布这些项。 从文件系统上载的文件会存储为报表服务器上的项。 所上载的文件类型决定存储方式：  
@@ -41,7 +41,7 @@ ms.locfileid: "34550098"
   
 4.  浏览到想要上传的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
   
-5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : @ & = + , $ / * < > |。  
+5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : \@ & = + , $ / * < > |。  
   
 6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”**。  
   

@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415436"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083829"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37415436"
 |“属性”|ReplTest1|  
 |--------------|-----------|  
 |语法|**date**|  
-|用法|DECLARE @MyDate date<br /><br /> CREATE TABLE Table1 ( Column1 date)|  
+|用法|DECLARE \@MyDate date<br /><br /> CREATE TABLE Table1 ( Column1 date)|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|YYYY-MM-DD<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |范围|0001-01-01 到 9999-12-31（对于 Informatica，为 1582-10-15 到 9999-12-31）<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日（对于 Informatica，为公元 1582 年 10 月 15 日到公元 9999 年 12 月 31 日）|  
 |各元素的范围|YYYY 是表示年份的四位数字，范围为从 0001 到 9999。 对于 Informatica，YYYY 限为 1582 年到 9999 年。<br /><br /> MM 是表示指定年份中的月份的两位数字，范围为从 01 到 12。<br /><br /> DD 是表示指定月份中的某一天的两位数字，范围为从 01 到 31（最高值取决于具体月份）。|  
@@ -54,9 +54,9 @@ ms.locfileid: "37415436"
 |精确度|一天|  
 |默认值|1900-01-01<br /><br /> 此值用于从 time 隐式转换到 datetime2 或 datetimeoffset 时追加的日期部分。|  
 |日历|公历|  
-|用户定义的秒的小数部分精度|“否”|  
-|时区偏移量感知和保留|“否”|  
-|夏时制感知|“否”|  
+|用户定义的秒的小数部分精度|否|  
+|时区偏移量感知和保留|否|  
+|夏时制感知|否|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>date 支持的字符串文字格式
 以下各表显示了适用于 date 数据类型的有效字符串文字格式。

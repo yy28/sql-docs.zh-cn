@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: feaca5b69a76fb7e3bffc67d58998de1bbd8b97e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 27c3931a5b735e91796c322d36dd7090b0a7b269
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417486"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087599"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "37417486"
 |“属性”|ReplTest1|  
 |--------------|-----------|  
 |语法|datetime2 [ (fractional seconds precision) ]|  
-|用法|DECLARE @MyDatetime2 datetime2(7)<br /><br /> CREATE TABLE Table1 ( Column1 datetime2(7))|  
+|用法|DECLARE \@MyDatetime2 datetime2(7)<br /><br /> CREATE TABLE Table1 ( Column1 datetime2(7))|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |日期范围|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |时间范围|00:00:00 到 23:59:59.9999999|  
-|时区偏移量范围|InclusionThresholdSetting|  
+|时区偏移量范围|None|  
 |各元素的范围|YYYY 是一个四位数，范围从 0001 到 9999，表示年份。<br /><br /> MM 是一个两位数，范围从 01 到 12，它表示指定年份中的月份。<br /><br /> DD 是一个两位数，范围为 01 到 31（具体取决于月份），它表示指定月份中的某一天。<br /><br /> hh 是一个两位数，范围从 00 到 23，它表示小时。<br /><br /> mm 是一个两位数，范围从 00 到 59，它表示分钟。<br /><br /> ss 是一个两位数，范围从 00 到 59，它表示秒钟。<br /><br /> n* 代表 0 到 7 位数字，范围从 0 到 9999999，它表示秒小数部分。 在 Informatica 中，当 n > 3 时，秒的小数部分会被截断。|  
 |字符长度|最低 19 位 (YYYY-MM-DD hh:mm:ss )，最高 27 位 (YYYY-MM-DD hh:mm:ss.0000000)|  
 |精度、小数位数|0 至 7 位，准确度为 100ns。 默认精度为 7 位数。|  
@@ -55,9 +55,9 @@ ms.locfileid: "37417486"
 |精确度|100 纳秒|  
 |默认值|1900-01-01 00:00:00|  
 |日历|公历|  
-|用户定义的秒的小数部分精度|是|  
-|时区偏移量感知和保留|“否”|  
-|夏时制感知|“否”|  
+|用户定义的秒的小数部分精度|用户帐户控制|  
+|时区偏移量感知和保留|否|  
+|夏时制感知|否|  
   
 有关数据类型元数据，请参阅 [sys.systypes (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) 或 [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)。 某些日期和时间数据类型的精度和小数位数是可变的。 若要获取列的精度和小数位数，请参阅 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)、[COL_LENGTH (Transact-SQL)](../../t-sql/functions/col-length-transact-sql.md) 或 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。
   

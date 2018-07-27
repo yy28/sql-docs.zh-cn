@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a807550f86205d3f1f6c341599188cea08b6ee97
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: e2c2625c036a1f8d6a66660760c383ad4b676eb7
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240969"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999317"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  在由 BEGIN DISTRIBUTED TRANSACTION 显式启动或从本地事务升级而来的分布式事务中，ROLLBACK TRANSACTION 不能引用 savepoint_name。  
   
- 在执行 COMMIT TRANSACTION 语句后不能回滚事务，但是 COMMIT TRANSACTION 与包含在要回滚的事务中的嵌套事务关联时除外。 在这种情况下，嵌套事务将会回滚，即使对它发出了 COMMIT TRANSACTION 也是如此。  
+ 在执行 COMMIT TRANSACTION 语句后不能回滚事务，但是 COMMIT TRANSACTION 与包含在要回滚的事务中的嵌套事务关联时除外。 在这种情况下，嵌套事务会回滚，即使已对它发出 COMMIT TRANSACTION，也不例外。  
   
  在事务内允许有重复的保存点名称，但如果 ROLLBACK TRANSACTION 使用重复的保存点名称，则只回滚到最近的使用该保存点名称的 SAVE TRANSACTION。  
   
@@ -104,7 +104,7 @@ ROLLBACK 对游标的影响由下面三个规则定义：
 ## <a name="locking-behavior"></a>锁定行为  
  指定了 savepoint_name 的 ROLLBACK TRANSACTION 语句释放在保存点之后获得的任何锁，但升级和转换除外。 这些锁不会被释放，而且不会转换回先前的锁模式。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

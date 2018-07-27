@@ -15,12 +15,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b74271c98941233d712410a43b31959595119eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3056d8b109c120fd853b5cd27390665e0c09eee6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023584"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981479"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表指针指示仪表的当前值。   
@@ -50,12 +50,12 @@ ms.locfileid: "33023584"
  只能在径向仪表上指定可绘制在指针上面或下面的顶端。 所有指针顶端样式都是使用无法修改的内置渐变绘制的。 但 **RoundedDark** 样式除外，你可以为该样式指定渐变颜色和渐变样式。  
   
 ##  <a name="SettingSnappingInterval"></a> 设置对齐间隔  
- 对齐间隔定义一个数值，舍入后的值是它的倍数。 默认情况下，仪表将指向已在数据窗格中指定的字段的精确值。 但是，您可能希望该精确值向上舍入或向下舍入，以使指针与预设的间隔对齐。 例如，如果仪表上的值为 34.2 并且您将对齐间隔指定为 5，则仪表指针将指向 35。 如果仪表上的值为 31.2 并且您将对齐间隔指定为 5，则仪表指针将指向 30。 有关详细信息，请参阅 [在仪表上设置对齐间隔（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)。  
+ 对齐间隔定义一个数值，舍入后的值是它的倍数。 默认情况下，仪表将指向已在数据窗格中指定的字段的精确值。 但是，您可能希望该精确值向上舍入或向下舍入，以使指针与预设的间隔对齐。 例如，如果仪表上的值为 34.2 并且您将对齐间隔指定为 5，则仪表指针将指向 35。 如果仪表上的值为 31.2 并且您将对齐间隔指定为 5，则仪表指针将指向 30。 有关详细信息，请参阅 [在仪表上设置对齐间隔（报表生成器和 SSRS）](http://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)。  
   
 ##  <a name="SpecifyingImage"></a> 指定图像作为径向仪表的指针  
  除指针样式的内置列表以外，还可以指定图像作为指针。 当使用图像替换现有针式指针样式时，该方法最有效。 图像叠加在指针之上，但所有指针功能都适用。 将图像用作指针时，颜色和渐变选项不适用。  
   
- 如果指针图像的形状不规则，则应将颜色指定为透明色，以隐藏不应在仪表上显示的图像区域。 定义透明色时，仪表将图像转置到现有指针之上并裁剪该图像，以便仅显示指针形状。 仪表重新缩放图像，使其适合指针大小。 为指针指定图像时，在仪表上面添加的所有后续指针均绘制到该图像下面。 为此，如果仪表上存在多个指针，最好不要为指针指定图像。 有关详细信息，请参阅 [指定图像作为仪表的指针（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b)。  
+ 如果指针图像的形状不规则，则应将颜色指定为透明色，以隐藏不应在仪表上显示的图像区域。 定义透明色时，仪表将图像转置到现有指针之上并裁剪该图像，以便仅显示指针形状。 仪表重新缩放图像，使其适合指针大小。 为指针指定图像时，在仪表上面添加的所有后续指针均绘制到该图像下面。 为此，如果仪表上存在多个指针，最好不要为指针指定图像。 有关详细信息，请参阅[指定图像作为仪表指针（报表生成器和 SSRS）](http://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f56a1b254aeb487001915f05bb4e278e1ebd768e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420456"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087919"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,20 +46,20 @@ ms.locfileid: "37420456"
 |“属性”|ReplTest1|  
 |---|---|
 |语法|**datetime**|  
-|用法|DECLARE @MyDatetime datetime<br /><br /> CREATE TABLE Table1 (Column1 datetime)|  
+|用法|DECLARE \@MyDatetime datetime<br /><br /> CREATE TABLE Table1 (Column1 datetime)|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|不适用|  
 |日期范围|1753 年 1 月 1 日到 9999 年 12 月 31 日|  
 |时间范围|00:00:00 到 23:59:59.997|  
-|时区偏移量范围|InclusionThresholdSetting|  
+|时区偏移量范围|None|  
 |各元素的范围|YYYY 是表示年份的四位数字，范围为 1753 到 9999。<br /><br /> MM 是表示指定年份中的月份的两位数字，范围为 01 到 12。<br /><br /> DD 是表示指定月份中的某一天的两位数字，范围为 01 到 31（最高值取决于相应月份）。<br /><br /> hh 是表示小时的两位数字，范围为 00 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 00 到 59。<br /><br /> ss 是表示秒钟的两位数字，范围为 00 到 59。<br /><br /> n* 为一个 0 到 3 位的数字，范围为 0 到 999，表示秒的小数部分。|  
 |字符长度|最低 19 位到最高 23 位|  
 |存储大小|8 字节|  
 |精确度|舍入到 .000、.003 或 .007 秒三个增量。|  
 |默认值|1900-01-01 00:00:00|  
 |日历|公历（不包括完整的年份范围。）|  
-|用户定义的秒的小数部分精度|“否”|  
-|时区偏移量感知和保留|“否”|  
-|夏时制感知|“否”|  
+|用户定义的秒的小数部分精度|否|  
+|时区偏移量感知和保留|否|  
+|夏时制感知|否|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>datetime 支持的字符串文字格式  
 以下各表列出了 datetime 支持的字符串文字格式。 datetime 字符串文字位于单引号 (') 中，例如 'string_literaL'，但 ODBC 除外。 如果环境不是 us_english，则字符串文字应采用 N'string_literaL' 格式。

@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 401288bfde8caf4550260f7695d9bc13d07e468a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322796"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983773"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 验证安装时应遵循的步骤取决于报表服务器的模式。  
@@ -39,7 +39,7 @@ ms.locfileid: "35322796"
   
 2.  验证是否已经安装了 **“SQL Server Reporting Services 服务”** 且该服务处于 **“运行”** 状态。  
   
-     如果您在列表中看不到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，则验证是否已安装该服务。 有关详细信息，请参阅 [在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
+     如果您在列表中看不到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，则验证是否已安装该服务。 有关详细信息，请参阅[在 SharePoint 模式中安装首个报表服务器](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
   
 ### <a name="to-verify-the-service-application"></a>验证服务应用程序  
   
@@ -71,7 +71,7 @@ ms.locfileid: "35322796"
   
 1.  在 SharePoint 文档库中，创建一个仅包含文本框的基本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表，例如标题。 该报表不包含任何数据源或数据集。 目的是验证能否打开报表生成器和预览基本报表。  
   
-2.  将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器](http://msdn.microsoft.com/en-us/8c8c7d2e-b315-418d-bf65-90e7685e4259)  
+2.  将报表保存到文档库并从库中运行该报表。 若要详细了解如何使用报表生成器创建报表，请参阅[启动报表生成器](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259)。  
   
 ### <a name="reporting-services-samples"></a>Reporting Services 示例  
   
@@ -100,7 +100,7 @@ ms.locfileid: "35322796"
   
 2.  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 创建新文件夹或上载文件，以测试定义是否传回报表服务器数据库。 如果上述操作成功，则表明连接正常。  
   
-     有关详细信息，请参阅 [Web 门户（SSRS 本机模式）](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
+     有关详细信息，请参阅 [Web 门户（SSRS 本机模式）](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>验证报表设计器已安装并正常运行  
   

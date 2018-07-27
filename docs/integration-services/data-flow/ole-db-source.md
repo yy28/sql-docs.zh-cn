@@ -22,12 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1cf60d0f7b775e4950b159c237b96e82a1b333f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401349"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083349"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -87,7 +87,7 @@ ms.locfileid: "35401349"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 存储过程希望变量 `@StartProductID` 和 `@CheckDate`提供参数值。 参数出现在 **“映射”** 列表中的顺序是不相关的。 唯一的要求是，在存储过程中参数名要与变量名匹配，包括 @ 符号。  
+ 存储过程希望变量 `@StartProductID` 和 `@CheckDate`提供参数值。 参数出现在 **“映射”** 列表中的顺序是不相关的。 唯一要求是，参数名必须与存储过程中的变量名一致，包括 \@ 符号在内。  
   
 ### <a name="mapping-parameters-to-variables"></a>将参数映射到变量  
  在运行时参数将映射到提供参数值的变量。 尽管也可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的系统变量，但变量通常是用户定义变量。 如果使用用户定义变量，请确保将数据类型设置为与映射参数所引用的列的数据类型相兼容的类型。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)。  
@@ -192,7 +192,7 @@ ms.locfileid: "35401349"
 ## <a name="ole-db-source-editor-columns-page"></a>OLE DB 源编辑器（“列”页）
   可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "35401349"
 ## <a name="ole-db-source-editor-error-output-page"></a>OLE DB 源编辑器（“错误输出”页）
   可以使用 **“OLE DB 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   

@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957680"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188933"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ SSMS 是一种集成环境，用于管理从 SQL Server 到 SQL 数据库的任�
 
 SSMS 17.x 是最新一代的 SQL Server Management Studio，可支持 SQL Server 2017。
 
-[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
+**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)（无需在计算机上安装上一版 SSMS 17.x）**
 
-[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 17.8.1 升级包（将 17.x 升级到 17.8.1）](https://go.microsoft.com/fwlink/?linkid=875804)
+**[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 17.8.1 升级包](https://go.microsoft.com/fwlink/?linkid=875804)（将 17.x 升级到 17.8.1；需要在计算机上安装早期版本的 SSMS 17.x）**
 
 
 **版本信息**
@@ -142,11 +142,16 @@ Analysis Servics (AS)
 
 ## <a name="release-notes"></a>发行说明
 
-以下是此 17.8 版本的问题和限制：
+以下是此 17.8.1 版本的问题和限制：
 
 - 在“属性”窗口中修改任何文件组属性后，单击“脚本”按钮，生成两个脚本 - 一个脚本带有 USE<database> 语句，另一个脚本带有 USE master 语句。  带有 USE master 的脚本错误生成，应该放弃。 运行包含 USE<database> 语句的脚本。
 - 使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
 - 可能会观察到 XEvents 查看器中的一些延迟。 这是 [.Net Framework 中的已知问题](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 请考虑升级到 NetFx 4.7.2。
+- 复制监视器发生故障，并显示“无法加载文件或程序集...”错误。 若要解决此问题，请执行以下操作：
+  1. 关闭 SqlMonitor.exe（即复制监视器）和 SSMS。
+  2. 从 [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) 下载更新后的 sqlmonitor.exe.config。
+  3. 将 sqlmonitor.exe.config（通常位于“C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn”下）替换为下载的文件。
+  4. 重启 SSMS 和/或复制监视器。
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>卸载并重装 SSMS

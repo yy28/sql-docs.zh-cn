@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7f0ca959918e298d40eca5c925ccbf57e6173a2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2d27efa67f446915de94ffd93edc0ed23db58e2
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329748"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038054"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,44 +32,11 @@ ms.locfileid: "34329748"
  
 使用 ALTER TABLE 语法更改表架构，以及添加、删除和重新生成索引。 索引被视为表定义的一部分：  
   
--   语法 ALTER TABLE... 内存优化表仅支持 ADD/DROP/ALTER INDEX。  
+-   语法 ALTER TABLE...内存优化表仅支持 ADD/DROP/ALTER INDEX。  
   
 -   如果不使用 ALTER TABLE 语句，内存优化表上的索引将不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。  
   
- 以下是 ALTER TABLE 语句上 ADD、DROP 和 ALTER INDEX 字句的语法。  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- 支持下列更改类型。  
+支持下列更改类型：  
   
 -   更改桶计数  
   

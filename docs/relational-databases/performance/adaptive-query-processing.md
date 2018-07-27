@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs
 description: 自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332438"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087499"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,6 +108,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 
 USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
 
+## <a name="row-mode-memory-grant-feedback"></a>行模式内存授予反馈
+**适用于**：SQL 数据库（作为公共预览版功能提供）
+
+通过调整批处理模式和行模式运算符的内存授予大小，行模式内存授予反馈扩展了批处理模式内存授予反馈功能。  
+
+若要在 Azure SQL 数据库中启用行模式内存授予反馈的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
+
+通过 memory_grant_updated_by_feedback XEvent，可以查看行模式内存授予反馈活动。 
+
+从行模式内存授予反馈开始，将会对实际执行后计划显示两个新查询计划属性：IsMemoryGrantFeedbackAdjusted 和 LastRequestedMemory（它们添加到 MemoryGrantInfo 查询计划 XML 元素中）。 
+
+LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节 (KB) 为单位）。 使用 IsMemoryGrantFeedbackAdjusted 属性，可以查看实际查询执行计划内语句的内存授予反馈状态。 下面列出了此属性的可取值：
+
+| IsMemoryGrantFeedbackAdjusted 值 | 描述 |
+|--- |--- |
+| No: First Execution | 内存授予反馈不调整用于首次编译和相关执行的内存。  |
+| No: Accurate Grant | 如果没有溢出到磁盘，且语句使用至少 50% 的授予内存，就不会触发内存授予反馈。 |
+| No: Feedback disabled | 如果内存授予反馈不断触发，且在内存增加和内存减少操作之间波动，就会对语句禁用内存授予反馈。 |
+| Yes: Adjusting | 内存授予反馈已应用，并且可能会针对下一次执行进行进一步调整。 |
+| Yes: Stable | 内存授予反馈已应用，并且授予内存现在处于稳定状态。也就是说，为上一次执行最后授予的内存是为当前执行授予的内存。 |
+
+SQL Server Management Studio 图形查询执行计划暂未显示内存授予反馈计划属性，但出于早期测试目的，可以使用 SET STATISTICS XML ON 或 query_post_execution_showplan XEvent 查看这些属性。  
+
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
 通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
 工作原理如下：
@@ -164,7 +187,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>跟踪自适应联接活动
 自适应联接运算符具有以下计划运算符属性：
 
-| 计划属性 | 说明 |
+| 计划属性 | 描述 |
 |--- |--- |
 | AdaptiveThresholdRows | 显示用于从哈希联接切换到嵌套循环联接的阈值。 |
 | EstimatedJoinType | 可能的联接类型。 |
@@ -260,14 +283,14 @@ MSTVF 中简单的“SELECT*”不会获益于交错执行。
 ### <a name="tracking-interleaved-execution-activity"></a>跟踪交错执行活动
 可在实际查询执行计划中查看使用情况属性：
 
-| 执行计划属性 | 说明 |
+| 执行计划属性 | 描述 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 适用于 QueryPlan 节点。 如果为“true”，表示计划包含交错执行候选项。 |
 | IsInterleavedExecuted | TVF 节点的 RelOp 下的 RuntimeInformation 元素的属性。 如果为“true”，表示该操作已具体化为交错执行操作的一部分。 |
 
 还可以通过以下 xEvent 跟踪交错执行匹配项：
 
-| XEvent | 说明 |
+| XEvent | 描述 |
 | ---- | --- |
 | interleaved_exec_status | 发生交错执行时将引发此事件。 |
 | interleaved_exec_stats_update | 此事件介绍交错执行更新的基数估值。 |

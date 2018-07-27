@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788288"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024263"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,9 +90,11 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  将私钥备份到文件时，需要进行加密。 用于保护备份证书的密码与用于对证书的私钥进行加密的密码不是同一密码。  
   
- 若要还原备份的证书，请使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 语句。  
+ 若要还原备份的证书，请使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 语句。
+ 
+ 执行备份后，这些文件成为 SQL Server 实例服务帐户的 ACL。 如果需要将证书还原到在不同帐户下运行的服务器，必须将文件权限调整为文件可供新帐户读取。 
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对证书具有 CONTROL 权限，并且了解用于对私钥进行加密的密码的相关信息。 如果只备份证书的公共部分，则要求对证书具有某种权限，并且不拒绝调用方对证书的 VIEW 权限。  
   
 ## <a name="examples"></a>示例  

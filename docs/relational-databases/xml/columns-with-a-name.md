@@ -17,29 +17,29 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46b121595162e60bedecfb4338fa058bb7cb8c01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c591d7cb9a2eab7bca51c9829fbff82c37bf58c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011584"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084299"
 ---
 # <a name="columns-with-a-name"></a>具有名称的列
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下面是一些特定条件，在这些条件下具有名称的行集列将映射（区分大小写）到生成的 XML：  
   
--   列名以 @ 符号开头。  
+-   列名以 at 符号 (\@) 开头。  
   
--   列名不以 @ 符号开头。  
+-   列名不以 at 符号 (\@) 开头。  
   
--   列名不以 @ 符号开头并包含斜杠标记 (/)。  
+-   列名不以 at 符号 (\@) 开头，但包含斜线标记 (/)。  
   
 -   多个列共享同一前缀。  
   
 -   一列具有不同的名称。  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>列名以 @ 符号开头  
- 如果列名以 @ 符号开头并且不包含斜杠标记 (/)，则会创建包含相应列值的 `row` 元素的属性。 例如，以下查询将返回包含两列（@PmId 和 Name）的行集。 在生成的 XML 中，会向相应的 `row` 元素添加 PmId 属性并为其分配 ProductModelID 值。  
+## <a name="column-name-starts-with-an-at-sign-"></a>列名以 at 符号 (\@) 开头  
+ 如果列名以 at 符号 (\@) 开头且不包含斜线标记 (/)，就会创建包含相应列值的 `row` 元素的属性。 例如，下面的查询返回包含两列（\@PmId 和 Name）的行集。 在生成的 XML 中，会向相应的 `row` 元素添加 PmId 属性并为其分配 ProductModelID 值。  
   
 ```  
   
@@ -71,8 +71,8 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名不以 @ 符号开头  
- 如果列名不以 @ 符号开头、不是某个 XPath 节点测试并且不包含斜杠标记 (/)，则会创建一个 XML 元素，该元素是行元素（默认情况下为 `row`）的子元素。  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名不以 at 符号 (\@) 开头  
+ 如果列名不以 at 符号 (\@) 开头、不是 XPath 节点测试之一且不包含斜线标记 (/)，就会创建作为行元素（默认为 `row`）的子元素的 XML 元素。  
   
  以下查询指定了列名 result。 因此，会向 `row` 元素添加 `result` 子元素。  
   
@@ -118,8 +118,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>列名不以 @ 符号开头并包含斜杠标记 (/)  
- 如果列名不以 @ 符号开头，但包含斜杠标记 (/)，则该列名就指明了一个 XML 层次结构。 例如，列名为“Name1/Name2/Name3.../Name***n*** ”，其中每个 Name***i*** 表示嵌套在当前行元素 (i=1) 中的元素名称或名为 Name***i-1***的元素下的元素名称。 如果 Name***n*** 以 @ 开头，则它将映射到 Name***n-1*** 元素的属性。  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>列名不以 at 符号 (\@) 开头，但包含斜线标记 (/)  
+ 如果列名不以 at 符号 (\@) 开头，但包含斜线标记 (/)，列名就指明了 XML 层次结构。 例如，列名为“Name1/Name2/Name3.../Name***n*** ”，其中每个 Name***i*** 表示嵌套在当前行元素 (i=1) 中的元素名称或名为 Name***i-1***的元素下的元素名称。 如果 Namen 以“\@”开头，它就会映射到 Namen-1 元素的属性。  
   
  例如，以下查询将返回雇员 ID 和表示为复杂元素 EmpName（包含名字、中间名和姓氏）的雇员名称。  
   

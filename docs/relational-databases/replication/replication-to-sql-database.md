@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357819"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085129"
 ---
 # <a name="replication-to-sql-database"></a>复制到 SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357819"
  -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以是在本地运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，或者是在云中的 Azure 虚拟机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关详细信息，请参阅 [SQL Server on Azure Virtual Machines overview（Azure 虚拟机上的 SQL Server 概述）](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的推送订阅服务器。  
  -  不能将分发数据库和复制代理放置在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上。  
- - 支持快照和单向事务复制。 不支持对等事务复制和合并复制。  
+ - 支持快照和单向事务复制。 不支持对等事务复制和合并复制。
+ - SQL 数据库托管实例（预览版）支持发布服务器和分发服务器数据库。 有关详细信息，请参阅[使用 SQL 数据库托管实例进行复制](replication-with-sql-database-managed-instance.md)。
  
  ## <a name="versions"></a>版本  
  - 发布服务器和分发服务器必须至少为以下任一版本：  

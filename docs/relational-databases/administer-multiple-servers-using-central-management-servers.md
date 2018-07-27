@@ -23,12 +23,12 @@ caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a2eb01959ffc59a1252100193fffea348c8f86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a2a6c9b1e58b09e81eee64c471af9b6c562521f4
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919012"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082359"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>使用中央管理服务器管理多台服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "32919012"
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>什么是中央管理服务器和服务器组？  
  指定为中央管理服务器的 SQL Server 实例维护服务器组，这些组包含一个或多个实例的连接信息。 可以对服务器组同时执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句和基于策略的管理策略。 还可以查看通过中央管理服务器管理的实例上的日志文件。 
  
- 中央管理服务器实际上是一个包含托管服务器列表的中央存储库。 不能将早于 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 的版本指定为中央管理服务器。  
+ 中央管理服务器基本上是包含托管服务器列表的中央存储库。 不能将早于 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 的版本指定为中央管理服务器。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842900"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087559"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -569,7 +569,7 @@ WHERE ProductSubcategoryID = 4;
   * 表达式包含 `CASE` 子句。  
 * 查询提示子句的参数。 这些参数包括 `number_of_rows` 查询提示的 `FAST` 参数、 `number_of_processors` 查询提示的 `MAXDOP` 参数以及 `MAXRECURSION` 查询提示的 number 参数。
 
-参数化在单条 Transact-SQL 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，则参数的名称和数据类型将出现在此列中已提交的批的文本前面，例如 (@1 tinyint)。
+参数化在单条 Transact-SQL 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，参数的名称和数据类型在此列中已提交批的文本前面，如 (\@1 tinyint)。
 
 > [!NOTE]
 > 参数名称是任意的。 用户或应用程序不必拘泥于特定的命名顺序。 另外，下面的内容可能会因 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本以及 Service Pack 升级版本而异：参数名称、要参数化的文字的选择以及参数化文本中的空格。

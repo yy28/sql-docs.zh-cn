@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017418"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087479"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  由于 <`Customer`> 元素没有任何子元素，因而如果在 *flags* 设置为**2** 时（表示以元素为中心的映射）执行上述 SELECT 语句，则两个客户的 **CustomerID** 和 **ContactName** 值将返回 NULL 值。  
   
- @xmlDocument 也可以是 **xml** 类型或 **(n)varchar(max)** 类型。  
+ \@xmlDocument 也可以是 xml 类型或 (n)varchar(max) 类型。  
   
  如果 XML 文档中的 <`CustomerID`> 和 <`ContactName`> 是子元素，则以元素为中心的映射将检索值。  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  OPENXML 语句说明了以下信息：  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) 以 XML 属性 **ProductID** 结尾。 在所得到的行集中，为在 XML 文档中选定的每个属性节点都创建一行。  
+-   rowpattern (/ROOT/Customer/Order/OrderDetail/\@ProductID) 以 XML 属性 ProductID 结尾。 在所得到的行集中，为在 XML 文档中选定的每个属性节点都创建一行。  
   
 -   在下例中未指定 *flags* 参数。 相反，由 *ColPattern* 参数指定映射。  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   在行集中为 **ProdID** 列指定为 *ColPattern* 的 XPath 模式 (**.**) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 <`OrderDetail`> 元素的 **ProductID** 属性。  
   
--   在行集中为 **Qty** 列指定的 *ColPattern* **../@Quantity** 用于标识上下文节点 \<ProductID> 的父节点 <`OrderDetail`> 的 **Quantity** 属性。  
+-   为行集中的 Qty 列指定的 ColPattern（即 ../\@Quantity）标识上下文节点 \<ProductID> 的父节点 <`OrderDetail`> 的 Quantity 属性。  
   
--   同样，在行集中为 **OID** 列指定的  *ColPattern* **../../@OrderID** 用于标识该上下文节点的父节点的父级 <`Order`> 的 **OrderID** 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
+-   同样，为行集中的 OID 列指定的 ColPattern（即 ../../\@OrderID）标识上下文节点的父节点的父级 <`Order`> 的 OrderID 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 具体而言，你将一个 **xml** 类型的变量 (@x) 传递给 **sp_xml_preparedocument()** 函数。  
+ 具体而言，是将 xml 类型变量 (\@x) 传递给 sp_xml_preparedocument() 函数。  
   
  结果如下：  
   

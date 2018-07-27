@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf241911ce9befc7b42e8c84fd6fddb7dcd10374
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2ebaa1c922714413a29967d38aa8b60ebaa6c335
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323748"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086959"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,22 +77,22 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
- @*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性的名称必须以字符 @ 作为前缀。 例如，为 **Database** 类的 **IsAnsiNull** 属性指定 @IsAnsiNull。  
+ \@*PropertyName*  
+ 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  枚举指定的布尔属性设置为 FALSE 的所有对象。  
   
- contains(@*字符串属性名称*, '*模式字符串*')  
+ contains(\@StringPropertyName, 'PatternString')  
  枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  枚举指定字符串属性的值与在“*PatternString*”中指定的字符模式完全相同的所有对象。  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  枚举指定日期属性的值与在“*DateString*”中指定的日期相匹配的所有对象。 *DateString* 必须遵循格式 yyyy-mm-dd hh:mi:ss.mmm  
   
 |||  
@@ -107,11 +107,11 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  可以按照存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的任何日期格式，计算以此格式指定的日期。  
   
- is_null(@*PropertyName*)  
+ is_null(\@PropertyName)  
  枚举指定属性的值为 NULL 的所有对象。  
   
  not(\<*PropertyExpression*>)  
- 对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
+ 对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
 ## <a name="remarks"></a>Remarks  
  查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  

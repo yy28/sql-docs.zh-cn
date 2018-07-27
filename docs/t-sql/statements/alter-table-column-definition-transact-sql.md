@@ -1,7 +1,7 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785328"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109239"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 constant_expression  
  用作默认列值的文字值、NULL 或者系统函数。 如果与定义为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用户定义类型的列结合使用，则该类型的实现必须支持从 constant_expression 到用户定义类型的隐式转换。  
   
-WITH VALUES  
- 指定 DEFAULT constant_expression 中给定的值将存储在添加到现有行的新列中。 如果添加的列允许空值并指定了 WITH VALUES，则在添加到现有行的新列中存储默认值。 如果没有为允许空值的列指定 WITH VALUES，则在现有行的新列中存储 NULL 值。 如果新列不允许 Null 值，那么不论是否指定 WITH VALUES，都将在新行中存储默认值。  
+WITH VALUES   
+ 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression 中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression 中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+如果在没有同时添加相关列的情况下使用它，它将不起作用。
+ 
+ 指定 DEFAULT constant_expression 中给定的值将存储在添加到现有行的新列中。 如果所添加的列允许 Null 值且指定了 WITH VALUES，则默认值将存储在添加到现有行的新列中。 如果没有对允许为空的列指定 WITH VALUES，那么现有行对应的新列中存储的是值 NULL。 如果新列不允许 Null 值，那么不论是否指定 WITH VALUES，都将在新行中存储默认值。  
   
 IDENTITY  
  指定新列为标识列。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]为该列提供唯一的增量值。 当您向现有表中添加标识符列时，还会将标识号添加到具有种子值和增量值的现有表行中。 无法保证行的更新顺序。 也会为添加的任何新行生成标识号。  

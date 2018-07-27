@@ -23,12 +23,12 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3831509441516a08cfa8d651ecd8ffa93c16107f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550758"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083539"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>创建、修改和删除共享数据源 (SSRS)
   共享数据源是一组可供在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上运行的多个报表、模型和数据驱动订阅引用的数据源连接属性。  共享数据源为随时间推移经常发生变化的数据源属性的管理提供了一种简单的方法。 如果用户帐户或密码发生更改，或者如果将数据库移到其他服务器，则可在一个位置对连接信息进行更新。  
@@ -79,7 +79,7 @@ ms.locfileid: "34550758"
   
 1.  在 Web 门户中，选择“新建” > “数据源”。 
   
-4.  为相应项键入一个名称。 名称必须包含至少一个字符并且必须以字母开头。 它也可以包括特定的一些符号，但不能包括空格或以下字符：; ? : @ & = + , $ / * < > | " /.  
+4.  为相应项键入一个名称。 名称必须包含至少一个字符并且必须以字母开头。 它也可以包括特定的一些符号，但不能包括空格或以下字符：; ? : \@ & = + , $ / * < > | " /。  
   
 5.  根据需要键入说明，向用户提供相关的连接信息。  
   

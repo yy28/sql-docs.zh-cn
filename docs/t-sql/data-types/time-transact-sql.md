@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421566"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088119"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421566"
 |“属性”|ReplTest1|  
 |--------------|-----------|  
 |语法|time [ (fractional second scale) ]|  
-|用法|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 time(7))|  
+|用法|DECLARE \@MyTime time(7)<br /><br /> CREATE TABLE Table1 ( Column1 time(7))|  
 |fractional seconds scale|为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认小数位数为 7 (100ns)。|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|对于 Informatica，为 hh:mm:ss[.nnnnnnn]）<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |范围|00:00:00.0000000 到 23:59:59.9999999（对于 Informatica，为 00:00:00.000 到 23:59:59.999）|  
@@ -56,9 +56,9 @@ ms.locfileid: "37421566"
 |存储大小|固定 5 个字节，是使用默认的 100ns 秒的小数部分精度时的默认存储大小。 在 Informatica 中，默认为 4 个字节，固定不变，同时秒的小数部分精度默认为 1 毫秒。|  
 |精确度|100 纳秒（Informatica 中为 1 毫秒）|  
 |默认值|00:00:00<br /><br /> 此值用作从 date 隐式转换到datetime2 或 datetimeoffset 时追加的时间部分。|  
-|用户定义的秒的小数部分精度|是|  
-|时区偏移量感知和保留|“否”|  
-|夏时制感知|“否”|  
+|用户定义的秒的小数部分精度|用户帐户控制|  
+|时区偏移量感知和保留|否|  
+|夏时制感知|否|  
   
 |指定的小数位数|结果 (精度, 小数位数)|列长度（以字节为单位）|小数<br /><br /> seconds<br /><br /> 精度|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  

@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45246cc4a9a09c45ffb4762d6eda2464aeb82f3f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6218f0332b83b5952a2c09836b10b4665db9b409
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421446"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085589"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37421446"
 |“属性”|ReplTest1|  
 |---|---|
 |语法|datetimeoffset [ (fractional seconds precision) ]|  
-|用法|DECLARE @MyDatetimeoffset datetimeoffset(7)<br /><br /> CREATE TABLE Table1 (Column1 datetimeoffset(7))|  
+|用法|DECLARE \@MyDatetimeoffset datetimeoffset(7)<br /><br /> CREATE TABLE Table1 (Column1 datetimeoffset(7))|  
 |默认字符串文字格式（用于下级客户端）|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |日期范围|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |时间范围|00:00:00 至 23:59:59.9999999（Informatica 不支持秒的小数部分）|  
@@ -56,9 +56,9 @@ ms.locfileid: "37421446"
 |精确度|100 纳秒|  
 |默认值|1900-01-01 00:00:00 00:00|  
 |日历|公历|  
-|用户定义的秒的小数部分精度|是|  
-|时区偏移量感知和保留|是|  
-|夏时制感知|“否”|  
+|用户定义的秒的小数部分精度|用户帐户控制|  
+|时区偏移量感知和保留|用户帐户控制|  
+|夏时制感知|否|  
   
 |指定的小数位数|结果 (精度, 小数位数)|列长度（以字节为单位）|秒的小数部分精度|  
 |---|---|---|---|

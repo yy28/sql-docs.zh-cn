@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270948"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083728"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ ms.locfileid: "36270948"
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>灾难恢复和多站点方案
 
-传统可用性组要求所有服务器属于同一 WSFC 群集，因此很难跨多个数据中心。 下图显示传统多站点可用性组体系结构，包括数据流。 有一主要副本，它将事务发送到所有次要副本。 与分布式可用性组相比，这种配置在某些方面不甚灵活。 例如，必须在 WSFC 群集中实现 Active Directory（如果适用）和仲裁见证等。 且可能还需要考虑 WSFC 群集的其他方面，如更改节点投票。
+传统可用性组要求所有服务器属于同一 WSFC 群集，因此很难跨多个数据中心。 下图显示传统多站点可用性组体系结构，包括数据流。 有一主要副本，它将事务发送到所有次要副本。 与分布式可用性组相比，这种配置在某些方面不占优势。 例如，必须在 WSFC 群集中实现 Active Directory（如果适用）和仲裁见证等。 且可能还需要考虑 WSFC 群集的其他方面，如更改节点投票。
 
 ![传统多站点可用性组][4]
 
-分布式可用性组可为跨多个数据中心的可用性组提供更加灵活的部署方案。 甚至可以在使用了[日志传送]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)等功能的环境中使用分布式可用性组。 但是，与传统可用性组不同，分布式可用性组不能包含事务延迟的应用程序。 这意味着，对于错误更新或删除数据的人为过失事件，可用性组或分布式可用性组无法提供帮助。
+分布式可用性组可为跨多个数据中心的可用性组提供更加灵活的部署方案。 对于过去在灾难恢复等方案中使用[日志传送]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)等功能的情况，现在甚至可以使用分布式可用性组。 不过，与日志传送不同，分布式可用性组不得包含延迟的事务应用程序。 这意味着，对于错误更新或删除数据的人为过失事件，可用性组或分布式可用性组无法提供帮助。
 
 分布式可用性组是松散耦合的，在这种情况下，这意味着它们无需单个 WSFC 群集，并且它们由 SQL Server 维护。 由于 WSFC 群集是单独进行维护的，且最初在这两个可用性组之间异步同步，因此很容易在其他站点配置灾难恢复。 每个可用性组中的主要副本都同步其自己的次要副本。
 
@@ -222,9 +222,9 @@ Cluster Group                   JC                    Online
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE   ag.group_id = ar.group_id
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON  ag.group_id = ar.group_id
 ```
 
 参与分布式可用性组的另一个 WSFC 群集的输出实例如下图所示。 SPAG1 由两个副本组成：DENNIS 和 JY。 但是，名为 SPDistAG 的分布式可用性组包含两个参与的可用性组的名称（SPAG1 和 SPAG2），而不是像传统可用性组那样包含实例的名称。 
@@ -235,12 +235,12 @@ WHERE   ag.group_id = ar.group_id
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id
-and     ag.group_id = ar.group_id 
-and ag.is_distributed = 1
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -251,16 +251,16 @@ and ag.is_distributed = 1
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs,
-    sys.availability_groups ag,
-    sys.availability_replicas ar,
-    sys.dm_hadr_availability_replica_states ars,
-    sys.dm_hadr_database_replica_states drs
-WHERE   drs.group_id = ag.group_id
-and ar.replica_id = ars.replica_id
-and ars.replica_id = drs.replica_id
-and dbs.database_id = drs.database_id
-and ag.is_distributed = 1
+FROM    sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![分布式可用性组的性能信息][13]

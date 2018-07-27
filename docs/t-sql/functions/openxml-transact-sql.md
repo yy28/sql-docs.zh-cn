@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255509"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086739"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|默认为“以属性为中心”的映射。|  
 |**1**|使用“以属性为中心”的映射。 可以与 XML_ELEMENTS 一起使用。 这种情况下，首先应用“以属性为中心”的映射，然后对所有未处理的列应用“以元素为中心”的映射。|  
 |**2**|使用“以元素为中心”的映射。 可以与 XML_ATTRIBUTES 一起使用。 这种情况下，首先应用“以属性为中心”的映射，然后对所有未处理的列应用“以元素为中心”的映射。|  
-|**8**|可与 XML_ATTRIBUTES 或 XML_ELEMENTS 组合使用（逻辑或）。 在检索的上下文中，该标志指示不应将已使用的数据复制到溢出属性 **@mp:xmltext**。|  
+|**8**|可与 XML_ATTRIBUTES 或 XML_ELEMENTS 组合使用（逻辑或）。 在检索上下文中，此标记指明不得将已用数据复制到溢出属性 \@mp:xmltext。|  
   
  *SchemaDeclaration*  
  是窗体的架构定义：*ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

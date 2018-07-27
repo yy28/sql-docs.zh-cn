@@ -18,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872817"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085769"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   **SSISDB**目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -91,7 +91,7 @@ ms.locfileid: "37872817"
   
 -   名称不得包含前导空格或尾随空格。  
   
--   首字母不得为 @，但后续字符可以使用 @。  
+-   首字母不得为 \@，但后续字符可以是 \@。  
   
 -   名称的长度必须大于 0 且小于或等于 128。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "37872817"
   
 -   名称不得包含前导空格或尾随空格。  
   
--   首字母不得为 @，但后续字符可以使用 @。  
+-   首字母不得为 \@，但后续字符可以是 \@。  
   
 -   名称的长度必须大于 0 且小于或等于 128。  
   
@@ -382,7 +382,7 @@ ms.locfileid: "37872817"
   
 ###  <a name="options"></a> 配置选项  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  下表描述该对话框中的某些属性以及 catalog.catalog_property 视图中的相应属性。  
   
 |属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|描述|  

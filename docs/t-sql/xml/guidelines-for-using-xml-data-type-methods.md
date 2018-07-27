@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248449"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083369"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 数据类型方法的使用准则
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  如果编译器无法确定在运行时能否确保单一性，则具有单一性要求的位置步骤、函数参数和运算符将返回错误。 此问题经常出现在非类型化数据上。 例如，查找属性时就需要使用单一的父元素。 通过一个用来选择单个父节点的序号即可满足此要求。 而在计算 node()-value() 组合以提取属性值时可能不需要指定序号规范。 如下例所示。  
   
 ### <a name="example-known-singleton"></a>示例：已知单一性  
- 在此示例中，nodes() 方法为每个 <`book`> 元素生成一个单独的行。 对 <`book`> 节点进行计算的 value() 方法提取 @genre 值，它作为属性，具有单一性。  
+ 在此示例中，nodes() 方法为每个 <`book`> 元素生成一个单独的行。 对 <`book`> 节点计算的 value() 方法提取 \@genre 的值，并且是单一实例属性。  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

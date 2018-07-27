@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252399"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088359"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252399"
 ```  
   
 ## <a name="arguments"></a>参数  
- @table_variable  
- 指定 table 变量，返回的行将插入此变量，而不是返回给调用方。 @table_variable 必须在 INSERT、UPDATE、DELETE 或 MERGE 语句前声明。  
+ \@table_variable  
+ 指定 table 变量，返回的行将插入此变量，而不是返回给调用方。 \@table_variable 必须在 INSERT、UPDATE、DELETE 或 MERGE 语句前声明。  
   
  如果未指定 column_list，则 table 变量必须与 OUTPUT 结果集具有相同的列数。 标识列和计算列除外，这两种列必须跳过。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值。  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 nvarchar(10) 类型的列，该子句为每行返回以下三个值之一：“INSERT”、“UPDATE”或“DELETE”，返回哪个值取决于对该行执行的操作。  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { @table_variable | output_table } 子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中定义******。  
+ OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@table_variable****** | output_table } 子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
   
 > [!NOTE]  
 >  除非另行指定，否则，对 OUTPUT 子句的引用将同时引用 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   包含 \<dml_table_source> 子句的 INSERT 语句中不支持 OUTPUT INTO 子句。  
   
--   @@ROWCOUNT 返回仅由外层 INSERT 语句插入的行。  
+-   \@\@ROWCOUNT 返回仅由外部 INSERT 语句插入的行。  
   
--   @@IDENTITY、SCOPE_IDENTITY 和 IDENT_CURRENT 仅返回由嵌套的 DML 语句生成的标识值，而不返回由外层 INSERT 语句生成的标识值。  
+-   \@\@IDENTITY、SCOPE_IDENTITY 和 IDENT_CURRENT 返回仅由嵌套的 DML 语句生成的标识值，而不返回外部 INSERT 语句生成的标识值。  
   
 -   查询通知将语句作为单个实体进行处理，并且即使重大更改是来自外层 INSERT 语句本身，所创建的任何消息的类型也将是嵌套 DML 的类型。  
   
@@ -310,7 +310,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  如果您的方案允许多个应用程序从一个表中执行析构性读取，请在 UPDATE 和 DELETE 语句中使用 READPAST 表提示。 这可防止在其他应用程序已经读取表中第一个限定记录的情况下出现锁定问题。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对通过 \<dml_select_list> 检索的任何列或者在 \<scalar_expression> 中使用的任何列具有 SELECT 权限。  
   
  要求对 \<output_table> 中指定的任何表具有 INSERT 权限。  

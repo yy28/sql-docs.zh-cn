@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 312d082d3126bd3f0365b674177b59d32e9b613b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035204"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984959"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
   标准订阅是由希望通过电子邮件传递报表或将报表传递到共享文件夹的各个用户所创建的订阅。 本主题提供了由各个用户创建和管理的标准订阅的有关信息。 而数据驱动订阅具有不同的要求和步骤，将在另一个主题中进行讨论。 有关详细信息，请参阅 [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "33035204"
   
 -   若要使用电子邮件传递，在创建订阅之前，必须为 SMTP 服务器或网关连接配置报表服务器。  
   
--   若要使用文件共享传递，必须先定义目标文件夹。 有关详细信息，请参阅 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+-   若要使用文件共享传递，必须先定义目标文件夹。 有关详细信息，请参阅[为报表服务器配置电子邮件传递（SSRS 配置管理器）](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
  必须先将报表数据源配置为使用存储的凭据或不使用凭据，然后才可以订阅报表。 有关详细信息，请参阅 [在 Reporting Services 数据源中存储凭据](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)。 否则， **“新建订阅”** 按钮将不可用。  
   
@@ -112,9 +112,9 @@ ms.locfileid: "33035204"
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
   
-5.  **传递方式**：选择“电子邮件”。 如果“电子邮件”不可用，说明尚未为电子邮件订阅配置报表服务器。 请参阅 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **传递方式**：选择“电子邮件”。 如果“电子邮件”不可用，说明尚未为电子邮件订阅配置报表服务器。 请参阅[为报表服务器配置电子邮件传递（SSRS 配置管理器）](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **收件人**：“收件人:”字段中的收件人姓名会使用你的域用户帐户自行填写地址。 确认其格式为 [用户名]@[domain.com] 报表服务器配置设置将决定“收件人”字段是否使用用户帐户自行填写地址。 有关更改配置设置的电子邮件地址的详细信息，请参阅 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+6.  **收件人**：“收件人:”字段中的收件人姓名会使用你的域用户帐户自行填写地址。 确认其格式为 [用户名]@[domain.com] 报表服务器配置设置将决定“收件人”字段是否使用用户帐户自行填写地址。 若要详细了解如何更改配置设置的电子邮件地址，请参阅[为报表服务器配置电子邮件传递（SSRS 配置管理器）](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
     > [!NOTE]  
     >  根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址。 这要求您具有管理所有订阅的权限。  

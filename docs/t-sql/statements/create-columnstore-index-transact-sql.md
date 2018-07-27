@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787760"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024243"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -358,13 +358,13 @@ filegroup_name
 
 不能在具有聚集列存储索引的表中使用游标或触发器。 此限制不适用于非聚集列存储索引；可以在具有非聚集列存储索引的表中使用游标和触发器。
 
-**SQL Server 2014 特定限制**  
-这些限制仅适用于 SQL Server 2014。 在此版本中，我们引入了可更新的聚集列存储索引。 非聚集列存储索引仍为只读。  
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 特定限制**  
+这些限制仅适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在此版本中，我们引入了可更新的聚集列存储索引。 非聚集列存储索引仍为只读。  
 
 -   更改跟踪。 不能对非聚集列存储索引 (NCCI) 使用更改跟踪，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
 -   变更数据捕获。 不能对非聚集列存储索引 (NCCI) 使用变更数据捕获，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
 -   可读辅助副本。 不能通过 Always OnReadable 可用性组的可读辅助副本访问聚集列存储索引 (CCI)。  可以通过可读辅助副本访问非聚集列存储索引 (NCCI)。  
--   多重活动结果集 (MARS)。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 当发生这种情况时，SQL Server 会终止连接并中止事务。  
+-   多重活动结果集 (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 对包含列存储索引的表执行只读连接。 不过，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支持使用 MARS 对包含列存储索引的表执行并发数据操作语言 (DML) 操作。 如果发生这种情况，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会终止连接，并中止事务。  
   
  有关列存储索引的性能优势和限制的信息，请参阅[列存储索引概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
@@ -383,7 +383,7 @@ filegroup_name
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. 将堆转换为聚集列存储索引  
  此示例将一个表作为堆创建，然后将其转换为名为 cci_Simple 的聚集列存储索引。 这会将整个表的存储从行存储转换为列存储。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. 将聚集索引转换为具有相同名称的聚集列存储索引。  
  此示例创建一个具有聚集索引的表，然后演示将该聚集索引转换为聚集列存储索引的语法。 这会将整个表的存储从行存储转换为列存储。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，无法在列存储索引上创建非聚集索引。 此示例展示在早期版本中，如何在创建列存储索引之前删除非聚集索引。  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>D. 将大型事实表从行存储转换为列存储方式  
@@ -452,7 +450,7 @@ GO
   
 1.  首先，创建要在此示例中使用的一个较小的表。  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  从行存储表中删除所有非聚集索引。  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   仅在您要在将它转换为聚集列存储索引时指定索引的新名称的情况下才这样做。 如果不删除聚集索引，新的聚集列存储索引将具有相同的名称。  
   
         > [!NOTE]  
-        >  如果您使用自己的名称，索引的名称可能更易于记住。 所有行存储格式的聚集索引均使用以下默认名称：“ClusteredIndex_\<GUID>”。  
+        > 如果您使用自己的名称，索引的名称可能更易于记住。 所有行存储格式的聚集索引均使用以下默认名称：“ClusteredIndex_\<GUID>”。  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  将行存储表转换为具有聚集列存储索引的列存储表。  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>E. 将列存储表转换为具有聚集索引的行存储表  
  要将列存储表转换为具有聚集索引的行存储表，请使用带 DROP_EXISTING 选项的 CREATE INDEX 语句。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>F. 将列存储表转换为行存储堆  
  要将列存储表转换为行存储堆，只需删除聚集列存储索引即可。  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 重新生成整个聚集列存储索引以进行碎片整理  
-   适用范围：SQL Server 2014  
+   适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  有两种方法可以重新生成完整的聚集列存储索引。 可以使用 CREATE CLUSTERED COLUMNSTORE INDEX，或使用 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) 和 REBUILD 选项。 这两种方法可以得到相同的结果。  
   
 > [!NOTE]  
->  从 SQL Server 2016 开始，可使用 ALTER INDEX REORGANIZE，而不是使用此示例所述的方法进行重新生成。  
+> 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，改用 `ALTER INDEX...REORGANIZE`，而不使用此示例中所述的方法来重新生成。  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> 非聚集列存储索引示例  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 对行存储表创建列存储索引作为辅助索引  
  此示例会对行存储表创建非聚集列存储索引。 在这种情况下只能创建一个列存储索引。 列存储索引需要额外的存储空间，因为它包含行存储表中数据的副本。 此示例会创建一个简单表和聚集索引，然后演示创建非聚集列存储索引的语法。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. 使用所有选项创建简单的非聚集列存储索引  
  下面的示例演示了通过使用所有选项创建非聚集列存储索引的语法。  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. 使用筛选谓词创建非聚集列存储索引  
  以下示例会对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 Production.BillOfMaterials 表创建已筛选的非聚集列存储索引。 筛选谓词可包含那些不是筛选索引中的键列的列。 本示例中的谓词将仅选择其中的 EndDate 为非 NULL 的行。  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> D. 更改非聚集列存储索引中的数据  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   禁用或删除列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如，  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  此示例将 xDimProduct 表创建为具有聚集索引的行存储表，然后使用 CREATE CLUSTERED COLUMNSTORE INDEX 将该表从行存储表更改为列存储表。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. 重新生成聚集列存储索引  
  基于上一示例，此示例使用 CREATE CLUSTERED COLUMNSTORE INDEX 重新生成名为 cci_xDimProduct 的现有聚集列存储索引。  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  通过使用上一示例中的 cci_xDimProduct 聚集列存储索引，此示例将删除 cci_xDimProduct 聚集列存储索引，然后使用名称 mycci_xDimProduct 重新创建聚集列存储索引。  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. 将列存储表转换为具有聚集索引的行存储表  
  可能会出现想删除聚集列存储索引并创建聚集索引的情况。 这会以行存储格式存储表。 此示例会将列存储表转换为具有同名聚集索引的行存储表。 不会丢失任何数据。 所有数据都转到行存储表中，列出的列成为聚集索引中的键列。  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 将列存储表转换回行存储堆  
  使用 [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 删除聚集列存储索引并将表转换为行存储堆。 此示例会将 cci_xDimProduct 表转换为行存储堆。 可继续分配该表，但将其存储为堆。  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

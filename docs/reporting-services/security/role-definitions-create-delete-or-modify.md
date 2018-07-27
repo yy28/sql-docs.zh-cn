@@ -23,12 +23,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: df9601235ca6538447b577154fe629f9e6e6719a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8841b9091b4fafb563f624e6b61dca40233e7294
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026564"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088129"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>角色定义 - 创建、删除或修改
   Reporting Services 提供了定义对报表服务器的访问级别的预定义角色。 需要访问报表服务器的每个用户或组都通过说明可以执行的任务的角色来进行访问。 这些角色是对作为整体的报表服务器进行定义的。 不能对报表服务器的特定部分改变角色定义，也不能指定根据不同情况以不同的方式使用角色。  
@@ -50,7 +50,7 @@ ms.locfileid: "33026564"
   
      或者，若要创建系统级角色定义，请右键单击“系统角色”，再指向“新建系统角色”。  
   
-4.  为角色键入唯一名称。 名称必须至少包含一个字符。 它也可以包括空格和特定的一些符号，但不能包括以下字符：; ? : @ & = + , $ / * < > | " 或 /。  
+4.  为角色键入唯一名称。 名称必须至少包含一个字符。 它也可以包括空格和特定的一些符号，但不能包括以下字符：; ? : \@ & = + , $ / * < > | " 或 /。  
   
 5.  根据需要，可以键入说明。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，此说明仅在此页上可见。 通过报表管理器查看此项的用户可以在该工具中看到此说明。  
   

@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107235"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982389"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ ms.locfileid: "37107235"
 - 授予逻辑服务器权限，让其可以使用自己的 Azure Active Directory (Azure AD) 标识访问密钥保管库。  使用门户 UI 时会自动创建 Azure AD 标识，并向服务器授予密钥保管库的访问权限。  通过 PowerShell 使用 BYOK 配置 TDE，必须创建 Azure AD 标识，且应验证完成情况。 请参阅[使用 BYOK 配置 TDE](transparent-data-encryption-byok-azure-sql-configure.md)，获取使用 PowerShell 时的详细分步说明。
 
   >[!NOTE]
-  >如果意外删除了 Azure AD 标识或者使用密钥保管库的访问策略撤销了服务器的权限，服务器就会失去访问密钥保管库的权限。
+  >如果意外删除了 Azure AD 标识，或使用 Key Vault 的访问策略撤销了服务器的权限，服务器就会失去对 Key Vault 的访问权限，并且 TDE 加密数据库会在 24 小时内遭删除。
   >
-  
+
+- 配置没有 VNET 或防火墙的 Azure Key Vault。  如果 SQL 失去对 Key Vault 的访问权限，TDE 加密数据库就会在 24 小时内遭删除。
 - 为所有加密密钥启用审核和报告：Key Vault 提供了可轻松注入到其他安全信息和事件管理 (SIEM) 工具的日志。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 是一个已集成的示例服务。
 - 要确保已加密数据库的高可用性，请为每个逻辑服务器配置两个位于不同区域的 Azure Key Vault。
 
