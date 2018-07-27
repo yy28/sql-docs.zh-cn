@@ -1,5 +1,0 @@
-# [开发特定类型的脚本组件](developing-specific-types-of-script-components.md)
-# [使用脚本组件创建源](creating-a-source-with-the-script-component.md)
-# [使用脚本组件创建同步转换](creating-a-synchronous-transformation-with-the-script-component.md)
-# [使用脚本组件创建异步转换](creating-an-asynchronous-transformation-with-the-script-component.md)
-# [使用脚本组件创建目标](creating-a-destination-with-the-script-component.md)

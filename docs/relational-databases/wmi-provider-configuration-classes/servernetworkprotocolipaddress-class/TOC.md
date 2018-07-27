@@ -1,8 +1,0 @@
-# [Enabled 属性（ServerNetworkProtocolIpAddress 类）](enabled-property-servernetworkprotocolipaddress-class.md)
-# [InstanceName 属性（ServerNetworkProtocolIPAddress 类）](instancename-property-servernetworkprotocolipaddress-class.md)
-# [IpAddressName 属性（ServerNetworkProtocolIPAddress 类）](ipaddressname-property-servernetworkprotocolipaddress-class.md)
-# [Properties 属性（ServerNetworkProtocolIPAddress 类）](properties-property-servernetworkprotocolipaddress-class.md)
-# [ProtocolName 属性（ServerNetworkProtocolIPAddress 类）](protocolname-property-servernetworkprotocolipaddress-class.md)
-# [ServerNetworkProtocolIPAddress 类](servernetworkprotocolipaddress-class.md)
-# [SetDisable 方法（ServerNetworkProtocolIPAddress 类）](setdisable-method-servernetworkprotocolipaddress-class.md)
-# [SetEnable 方法（ServerNetworkProtocolIPAddress 类）](setenable-method-servernetworkprotocolipaddress-class.md)

@@ -1,5 +1,0 @@
-# [用于 SQL Server 的 Microsoft ADO.NET](microsoft-ado-net-for-sql-server.md)
-# [步骤 1：配置用于 ADO.NET 开发的开发环境](step-1-configure-development-environment-for-ado-net-development.md)
-# [步骤 2：创建用于 ADO.NET 开发的 SQL 数据库](step-2-create-a-sql-database-for-ado-net-development.md)
-# [步骤 3：使用 ADO.NET 连接到 SQL 的概念验证](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)
-# [步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接](step-4-connect-resiliently-to-sql-with-ado-net.md)

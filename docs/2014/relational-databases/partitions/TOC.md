@@ -1,5 +1,0 @@
-# [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)
-## [创建已分区表和索引](create-partitioned-tables-and-indexes.md)
-## [修改分区函数](modify-a-partition-function.md)
-## [修改分区方案](modify-a-partition-scheme.md)
-## [“管理分区向导”的 F1 帮助](manage-partition-wizard-f1-help.md)

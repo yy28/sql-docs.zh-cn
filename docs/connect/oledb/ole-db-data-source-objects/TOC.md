@@ -1,7 +1,0 @@
-# [数据源对象 (OLE DB)](data-source-objects-ole-db.md)
-# [数据源信息属性](data-source-information-properties.md)
-# [数据源属性 (OLE DB)](data-source-properties-ole-db.md)
-# [初始化和授权属性](initialization-and-authorization-properties.md)
-# [持久化数据源对象](persisted-data-source-objects.md)
-# [会话属性 - 适用于 SQL Server 的 OLE DB 驱动程序](session-properties-oledb-driver-for-sql-server.md)
-# [会话](sessions.md)

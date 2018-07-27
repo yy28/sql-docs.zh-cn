@@ -1,7 +1,0 @@
-# [概述](install-data-quality-services.md)  
-# [运行 DQSInstaller.exe 以完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)  
-# [向用户授予 DQS 角色](grant-dqs-roles-to-users.md)  
-# [访问 DQS 操作数据](access-data-for-the-dqs-operations.md)  
-# [使用 DQSInstaller.exe 导出和导入 DQS 知识库](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
-# [.NET Framework 更新后升级 SQLCLR 程序集](upgrade-sqlclr-assemblies-after-net-framework-update.md)  
-# [安装 SQL Server 更新后升级 DQS 数据库架构](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  

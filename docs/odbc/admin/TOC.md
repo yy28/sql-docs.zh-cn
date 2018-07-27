@@ -1,6 +1,0 @@
-# [ODBC 数据源管理器](odbc-data-source-administrator.md)
-# [查看驱动程序](viewing-drivers.md)
-# [管理数据源](managing-data-sources.md)
-# [设置跟踪选项](setting-tracing-options.md)
-# [关于驱动程序和数据源](about-drivers-and-data-sources.md)
-# [设置 ODBC 连接池选项](setting-odbc-connection-pooling-options.md)

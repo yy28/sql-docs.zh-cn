@@ -1,7 +1,0 @@
-# [访问存储过程中的查询上下文](accessing-query-context-in-stored-procedures.md)
-# [调用存储过程](calling-stored-procedures.md)
-# [创建存储过程](creating-stored-procedures.md)
-# [调试存储过程](debugging-stored-procedures.md)
-# [定义存储过程](defining-stored-procedures.md)
-# [设计存储过程](designing-stored-procedures.md)
-# [设置存储过程的安全性](setting-security-for-stored-procedures.md)

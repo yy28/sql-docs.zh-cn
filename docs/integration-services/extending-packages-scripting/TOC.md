@@ -1,7 +1,0 @@
-# [用脚本扩展包](extending-packages-with-scripting.md)
-# [比较脚本任务和脚本组件](comparing-the-script-task-and-the-script-component.md)
-# [比较脚本解决方案和自定义对象](comparing-scripting-solutions-and-custom-objects.md)
-# [引用脚本解决方案中的其他程序集](referencing-other-assemblies-in-scripting-solutions.md)
-# [通过在脚本任务和脚本组件中设置断点来调试脚本](debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)
-# [使用脚本任务扩展包](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)
-# [使用脚本组件扩展数据流](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)

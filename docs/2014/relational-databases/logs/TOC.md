@@ -1,8 +1,0 @@
-# [日志文件查看器](log-file-viewer.md)
-## [打开日志文件查看器](open-log-file-viewer.md)
-## [查看脱机日志文件](view-offline-log-files.md)
-## [日志文件查看器 F1 帮助](log-file-viewer-f1-help.md)
-# [事务日志 (SQL Server)](the-transaction-log-sql-server.md)
-## [管理事务日志文件的大小](manage-the-size-of-the-transaction-log-file.md)
-## [解决事务日志已满的问题（SQL Server 错误 9002）](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
-## [控制事务持续性](control-transaction-durability.md)

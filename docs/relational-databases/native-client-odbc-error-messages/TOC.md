@@ -1,6 +1,0 @@
-# [处理错误和消息](handling-errors-and-messages.md)
-# [诊断记录和字段](diagnostic-records-and-fields.md)
-# [错误消息](error-messages.md)
-# [本机错误号](native-error-numbers.md)
-# [处理生成消息的语句](processing-statements-that-generate-messages.md)
-# [SQLSTATE（ODBC 错误代码）](sqlstate-odbc-error-codes.md)

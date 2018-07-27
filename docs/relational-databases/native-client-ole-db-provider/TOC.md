@@ -1,6 +1,0 @@
-# [创建 SQL Server Native Client OLE DB 提供程序应用程序](creating-a-sql-server-native-client-ole-db-provider-application.md)
-# [关于 OLE DB 属性](about-ole-db-properties.md)
-# [建立与数据源的连接](establishing-a-connection-to-a-data-source.md)
-# [执行命令](executing-a-command.md)
-# [处理结果](processing-results.md)
-# [在 SQL Server Native Client 中使用 OUTPUT 子句 (OLE DB)](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)

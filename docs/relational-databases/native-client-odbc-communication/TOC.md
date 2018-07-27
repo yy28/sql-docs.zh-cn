@@ -1,6 +1,0 @@
-# [与 SQL Server 通信 (ODBC)](communicating-with-sql-server-odbc.md)
-# [分配连接句柄](allocating-a-connection-handle.md)
-# [分配环境句柄](allocating-an-environment-handle.md)
-# [连接到数据源 (ODBC)](connecting-to-a-data-source-odbc.md)
-# [与数据源断开连接](disconnecting-from-a-data-source.md)
-# [SQL Server Native Client ODBC 数据源](sql-server-native-client-odbc-data-sources.md)
