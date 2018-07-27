@@ -1,5 +1,5 @@
 ---
-title: MScached_peer_lsns (Transact SQL) |Microsoft 文档
+title: MScached_peer_lsns (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c88be8f7ffd489fbc276b58f253819b2f1d9f7ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee2580aa933108da5fce53ff74d67f6c4de2ea1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004214"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103845"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MScached_peer_lsns**表用于跟踪来确定哪些命令以返回到对等复制中的给定订阅服务器中的事务日志的 LSN 值。 此表存储在分发数据库中。  
+  **MScached_peer_lsns**表用于跟踪用于确定的命令以返回到对等复制中的给定订阅服务器中的事务日志的 LSN 值。 此表存储在分发数据库中。  
   
 ## <a name="definition"></a>定义  
   
@@ -46,10 +46,10 @@ ms.locfileid: "33004214"
 |**originator_db_version**|**int**|标识发起方数据库的版本号。|  
 |**originator_lsn**|**varbinary(16)**|起始事务的 LSN。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  LSN 值只能在插入后立即使用，这些值在系统中没有持久含义。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 80beafc8a281f7f4af71484acfa01ed0016b7de2
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028835"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107659"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +44,15 @@ ms.locfileid: "38028835"
 | max_processes|**int**|最大并发外部进程数。 默认值为 0，指定没有限制。 不可为 null。|
 | max_memory_percent|**int**|此资源池中的请求可使用的总服务器内存百分比的当前配置。 不可为 null。 |
 | statistics_start_time|**datetime**|为该池重置统计信息的时间。 不可为 null。 
-| peak_memory_kb|**bigint**|他使用，以千字节，资源池的内存量最大。 不可为 null。 |
+| peak_memory_kb|**bigint**|最大使用，以千字节，资源池的内存量。 不可为 null。 |
 | write_io_count|**int**|自重置资源调控器统计信息以来发出的写入 IO 总数。 不可为 null。 |
 | read_io_count|**int**|自重置资源调控器统计信息以来发出的读取 IO 总数。 不可为 null。 |
-| total_cpu_kernel_ms|**bigint**|以毫秒为单位自重置资源调控器统计信息以来累积 CPU 用户时间。 不可为 null。 |
+| total_cpu_kernel_ms|**bigint**|中的累计 CPU 用户内核时间自重置资源调控器统计信息以来的毫秒。 不可为 null。 |
 | total_cpu_user_ms|**bigint**|以毫秒为单位自重置资源调控器统计信息以来累积 CPU 用户时间。 不可为 null。 |
 | active_processes_count|**int**|在请求的时间点运行的外部进程数。 不可为 null。 |
 
  
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 需要 `VIEW SERVER STATE` 权限。
 

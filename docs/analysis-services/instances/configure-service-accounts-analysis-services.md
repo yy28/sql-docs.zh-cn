@@ -1,5 +1,5 @@
 ---
-title: 配置服务帐户 (Analysis Services) |Microsoft 文档
+title: 配置服务帐户 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dff21ebf96bf957a7f390b8dea0010fa0396ff7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019334"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130603"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  产品范围的帐户设置在[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
+  产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
   
  该主题提供了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的补充信息，包括表格和群集安装的必要附加权限。 它也介绍了支持服务器操作所需的权限。 例如，你可以配置要在服务账户下执行的处理和查询操作，在这种情况下，你需要授予附加权限使其运作。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019334"
 |||  
 |-|-|  
 |**增加进程工作集** (SeIncreaseWorkingSetPrivilege)|默认情况下，此特权通过 **用户** 安全组对所有用户可用。 如果你通过移除此组的特权来锁定服务器，Analysis Services 可能无法启动，并且将记录此错误：“客户端没有所需的特权。” 此错误发生后，通过将特权授予正确的 Analysis Services 安全组，将特权还原到 Analysis Services。|  
-|**调整进程的内存配额** (SeIncreaseQuotaSizePrivilege)|此特权用于当进程因受制于为实例建立的内存阀值而没有足够资源来完成其执行时请求更多内存。|  
+|**调整进程的内存配额** (SeIncreaseQuotaPrivilege)|此特权用于当进程因受制于为实例建立的内存阀值而没有足够资源来完成其执行时请求更多内存。|  
 |**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但你通过将 **VertiPaqPagingPolicy** 设置时为 0 来阻止其使用 Windows 分页。<br /><br /> 将**VertiPaqPagingPolicy** 设置为 1（默认情况下），指示表格服务器实例使用 Windows 分页文件。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置（其中 **VertiPaqPagingPolicy** = 1），你不需要对表格实例授予 **锁定内存页** 特权。<br /><br /> **VertiPaqPagingPolicy** 为 0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 当 **VertiPaqPagingPolicy** 后的强制执行 = 0 时，Analysis Services 依赖 **锁定内存页** 权限。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 关于 [VertiPaqPagingPolicy](../../analysis-services/server-properties/memory-properties.md) 的详细信息，请参阅 **Memory Properties**。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>若要在服务账户上查看或添加 Windows 特权  
@@ -91,7 +91,7 @@ ms.locfileid: "34019334"
 ##  <a name="bkmk_FilePermissions"></a> 分配给 Analysis Services 服务帐户的文件系统权限  
   
 > [!NOTE]  
->  有关与每个程序文件夹关联的权限的列表，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+>  有关与每个程序文件夹关联的权限的列表，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
 >   
 >  有关与 IIS 配置和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 相关的文件权限信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "34019334"
   
  数据文件、程序可执行文件、配置文件、日志文件和临时文件上的权限持有者是由 SQL Server 安装程序创建的一个本地安全组。  
   
- 有一个安全组是为你安装的每个实例而创建的。 安全组命名实例 ─ 或者**SQLServerMSASUser$ MSSQLSERVER**对于默认实例中，或**SQLServerMSASUser$**\<servername >$\<instancename > 对于命名实例。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果你检查 \MSAS13.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
+ 有一个安全组是为你安装的每个实例而创建的。 安全组或者命名实例**SQLServerMSASUser$ MSSQLSERVER**对于默认实例中，或**SQLServerMSASUser$**\<服务器名 >$\<实例名 > 对于命名实例。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果你检查 \MSAS13.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
   
  该安全组仅包含一个成员： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例启动帐户的 per-service 安全标识符 (SID)。 安装程序将 Per-service SID 添加到本地安全组。 与部署 Database Engine 相比， SQL Server 安装程序部署 Analysis Services 小而明显的不同之处在于使用了本地安全组及其 SID 成员身份。  
   
@@ -113,14 +113,14 @@ ms.locfileid: "34019334"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  使用**计算机管理器** | **本地用户和组** | **组**若要检查的成员身份的 SQLServerMSASUser$\<servername >$\<instancename > 安全组。  
+2.  使用**计算机管理器** | **本地用户和组** | **组**检查 SQLServerMSASUser$的成员身份\<服务器名 >$\<实例名 > 安全组。  
   
      成员 SID 应与步骤 1 的 per-service SID 匹配。  
   
 3.  使用“计算机管理器”  |  |  |“MSASxx.MSSQLServer”|“”  |  验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
   
 > [!NOTE]  
->  切勿删除或修改 SID。 若要还原无意中删除每个服务 SID，请参阅[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
+>  切勿删除或修改 SID。 若要还原无意删除的每个服务 SID，请参阅[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
   
  **了解关于 per-service SID 的详细信息**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019334"
  因为 SID 是不可变的，所以无论你更改服务账户的频率是多少，服务安装时创建的文件系统 ACL 均可无限使用。 作为一项附加的安全措施，通过 SID 指定权限的 ACL 可确保可执行程序和数据文件夹仅由单个服务实例访问，即使同一帐户下运行着其他服务时也如此。  
   
 ##  <a name="bkmk_tasks"></a> 为特定服务器操作授予附加 Analysis Services 权限  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于启动的服务帐户 （或登录帐户） 的安全上下文中执行一些任务[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，并请求该任务的用户的安全上下文中执行其他任务。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在用于启动 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服务帐户（或登录帐户）的安全上下文中执行某些任务，而在发出任务请求的用户的安全上下文中执行另一些任务。  
   
  下表说明了为作为服务帐户运行的任务提供支持所需的其他权限。  
   
@@ -143,10 +143,10 @@ ms.locfileid: "34019334"
 |写回|将服务账户添加到远程服务器上定义的 Analysis Services 数据库角色中|写回是可在客户端应用程序中启用的一种多维模型功能，可用来在数据分析期间创建新数据值。 如果在任何维度或多维数据集中启用写回，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户必须对源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中的写回表拥有写入权限。 如果该表尚不存在且需要创建，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户还必须在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中拥有创建表的权限。|  
 |写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中的查询日志表|为服务帐户创建数据库登录名，并分配对查询日志表的写权限|您可以启用查询日志记录将使用情况数据收集在一个数据库表中，以便进行后续分析。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户对指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的查询日志表必须拥有写入权限。 如果该表尚不存在且需要创建，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登录帐户还必须在指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中拥有创建表的权限。 有关详细信息，请参阅 [通过基于使用情况的优化向导提高 SQL Server Analysis Services 性能（博客）](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) 和 [Analysis Services 中的查询日志记录（博客）](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 服务帐户和 Per-Service SID（博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 使用服务 SID 来提供服务隔离（知识库文章）](http://support.microsoft.com/kb/2620201)   
+ [SQL Server 服务帐户和每个服务 SID （博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server 使用服务 SID 来提供服务隔离 （知识库文章）](http://support.microsoft.com/kb/2620201)   
  [访问令牌 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [安全标识符 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [访问令牌 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

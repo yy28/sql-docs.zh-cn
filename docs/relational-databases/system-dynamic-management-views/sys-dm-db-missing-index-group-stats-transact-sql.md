@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_group_stats (Transact SQL) |Microsoft 文档
+title: sys.dm_db_missing_index_group_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65b019f8e7b1f9e82e288c9c53732db4e2c7a253
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7b77b2a8df3d2f6f0afb47db519dae142baf2d13
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466423"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310214"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,14 +56,17 @@ ms.locfileid: "34466423"
 |**avg_total_system_cost**|**float**|可通过组中的索引减少的系统查询的平均成本。|  
 |**avg_system_impact**|**float**|实现此缺失索引组后，系统查询可能获得的平均百分比收益。 该值表示如果实现此缺失索引组，则查询成本将按此百分比平均下降。|  
   
-## <a name="remarks"></a>注释  
- 返回的信息**sys.dm_db_missing_index_group_stats**会更新每个查询执行而不是每个查询编译或重新编译。 使用情况统计信息不会持久保留，并且只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留使用情况统计信息，则应该定期制作缺失索引信息的备份副本。  
+## <a name="remarks"></a>Remarks  
+ 返回的信息**sys.dm_db_missing_index_group_stats**通过每次执行查询而不是每个查询编译或重新编译更新。 使用情况统计信息不会持久保留，并且只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留使用情况统计信息，则应该定期制作缺失索引信息的备份副本。  
+
+  >[!NOTE]
+  >针对此 DMV 的结果集被限制为 600 的行。 每一行都包含一个缺失的索引。 如果有多个缺失索引的 600，应该解决现有的缺失索引，以便您然后可以查看较新的。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要查询此动态管理视图，必须授予用户 VIEW SERVER STATE 权限或隐含 VIEW SERVER STATE 权限的任何权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何使用**sys.dm_db_missing_index_group_stats**动态管理视图。  
+ 以下示例说明了如何使用**sys.dm_db_missing_index_group_stats**动态管理视图。  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. A. 查找十个具有最高用户查询预期提高的缺失索引  
  下面的查询确定了将生成最高预期累计提高的十个缺失索引，按降序排列。  
@@ -87,12 +90,12 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- 此查询提供缺失索引的数据库、架构和表的名称。 它还提供应该用于索引键的列的名称。 在 ON 中写入 CREATE INDEX DDL 语句以实现缺失索引，请先列出相等列，然后不等列时\< *table_name*> 子句的 CREATE INDEX 语句。 应该在 CREATE INDEX 语句的 INCLUDE 子句中列出包含列。 若要确定相等列的有效顺序，请基于其选择性排序，首先列出选择性最强的列（列列表中的最左侧）。  
+ 此查询提供缺失索引的数据库、架构和表的名称。 它还提供应该用于索引键的列的名称。 编写 CREATE INDEX DDL 语句，若要实现缺失索引，请先列出相等列，然后列出不等列中为 ON 时\< *table_name*> 子句的 CREATE INDEX 语句。 应该在 CREATE INDEX 语句的 INCLUDE 子句中列出包含列。 若要确定相等列的有效顺序，请基于其选择性排序，首先列出选择性最强的列（列列表中的最左侧）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
   
   

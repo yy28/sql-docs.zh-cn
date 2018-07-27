@@ -31,12 +31,12 @@ caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170308"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310294"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
   **Bcp**大容量复制数据的实例之间[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式的数据文件。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
@@ -147,7 +147,7 @@ ms.locfileid: "37170308"
 |RAW|不进行代码页间的转换。 因为不进行转换，所以这是最快的选项。|  
 |*code_page*|特定的代码页编号，例如 850。<br /><br /> **\*\* 重要\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持代码页 65001(utf-8 编码）。|  
   
- `-d` *database_name*  
+ `-d` *Database_name*  
  指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果`-d` *database_name*和三个部分构成的名称 (*database_name.schema.table*，作为第一个参数传递给 bcp.exe) 指定，将发生错误，因为不能指定两次数据库名称。如果*database_name*开始使用连字符 （-） 或正斜杠 （/），不要添加之间有空格`-d`和数据库名称。  
   
  **-e** *err_file*  
@@ -386,7 +386,7 @@ ms.locfileid: "37170308"
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。 与在不指定格式化文件的情况下指定 `-w` 开关具有相同的效果。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  **bcpout** 操作要求对源表有 SELECT 权限。  
   
  **bcpin** 操作要求至少对目标表有 SELECT/INSERT 权限。 此外，如果下列任一条件成立，则要求拥有 ALTER TABLE 权限：  

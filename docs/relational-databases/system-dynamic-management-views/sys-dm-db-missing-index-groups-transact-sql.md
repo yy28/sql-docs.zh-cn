@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_groups (Transact SQL) |Microsoft 文档
+title: sys.dm_db_missing_index_groups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,36 +25,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 32368c857dd44a19295e8169af0d1b51a8d23581
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 33909bd64f1ada7d096c97e11c82312c9e7a7bd3
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463573"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310274"
 ---
 # <a name="sysdmdbmissingindexgroups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回有关特定缺失索引组中包含的缺失索引（不包括空间索引）的信息。  
+  此 DMV 返回有关特定索引组中除空间索引中缺少的索引的信息。 
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。  
    
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**index_group_handle**|**int**|标识缺失索引组。|  
-|**index_handle**|**int**|标识缺失索引属于由指定的组**index_group_handle**。<br /><br /> 一个索引组仅包含一个索引。|  
+|**index_handle**|**int**|标识缺失索引所属由指定的组**index_group_handle**。<br /><br /> 一个索引组仅包含一个索引。|  
   
-## <a name="remarks"></a>注释  
- 返回的信息**sys.dm_db_missing_index_groups**时查询查询优化器优化，而且不具有持久性，会更新。 缺失索引信息只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留缺失索引信息，则应定期制作缺失索引信息的备份副本。  
+## <a name="remarks"></a>Remarks  
+ 返回的信息**sys.dm_db_missing_index_groups**时更新查询优化查询优化器，因而不会持久保留。 缺失索引信息只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留缺失索引信息，则应定期制作缺失索引信息的备份副本。  
   
  输出结果集中的任一列都不是一个键，但是它们结合在一起将形成一个索引键。  
+
+  >[!NOTE]
+  >针对此 DMV 的结果集被限制为 600 的行。 每一行都包含一个缺失的索引。 如果有多个缺失索引的 600，应该解决现有的缺失索引，以便您然后可以查看较新的。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要查询此动态管理视图，必须授予用户 VIEW SERVER STATE 权限或隐含 VIEW SERVER STATE 权限的任何权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

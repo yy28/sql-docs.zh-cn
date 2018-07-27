@@ -21,15 +21,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232528"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310194"
 ---
 # SQL Server 2014 联机丛书
-  欢迎来到[!INCLUDE[msCoName](../includes/msconame-md.md)]® 的联机丛书[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®。 联机丛书包含任务描述以及说明如何使用执行数据管理和商业智能工作的参考文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+  欢迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 联机丛书。 联机丛书包含任务描述以及说明如何使用执行数据管理和商业智能工作的参考文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **进行试用：**  
  ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转**[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 SQL Server 2014 (SP1) 的详细信息，请参阅[SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。 
