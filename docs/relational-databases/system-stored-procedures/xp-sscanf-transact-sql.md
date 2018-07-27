@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (Transact SQL) |Microsoft 文档
+title: xp_sscanf (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257631"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103855"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +43,17 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>参数  
- **字符串**  
+ **string**  
  要从中读取参数值的字符串。  
   
  OUTPUT  
- 当指定，会将的值*参数*输出参数中。  
+ 值指定时，放*自变量*输出参数中。  
   
  *format*  
- 是一个带格式的字符串类似于根据 C 语言支持的功能**sscanf**函数。 目前仅支持 %s 格式参数。  
+ 是一个带格式的字符串类似于 C 语言支持的功能**sscanf**函数。 目前仅支持 %s 格式参数。  
   
  argument  
- 是**varchar**变量设置为相应的值*格式*自变量。  
+ 是**varchar**变量设置为相应的值*格式*参数。  
   
  *n*  
  是一个占位符，指示最多可指定 50 个参数。  
@@ -67,7 +66,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -87,9 +86,9 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [常规扩展存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sprintf &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
+ [xp_sprintf &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

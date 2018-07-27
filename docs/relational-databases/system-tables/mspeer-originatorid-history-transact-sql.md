@@ -1,5 +1,5 @@
 ---
-title: MSpeer_originatorid_history (Transact SQL) |Microsoft 文档
+title: MSpeer_originatorid_history (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_originatorid_history
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 145392c2ff7ebb3685a9ce710678ab88639d2842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54dfad713a9955791cc786bb89ef8d61cac2b3ca
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005094"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103825"
 ---
 # <a name="mspeeroriginatoridhistory-transact-sql"></a>MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33005094"
 |originator_version|**int**|指定发布服务器的版本号。|  
 |inserted_date|**datetime**|将发起方 ID 行插入此表中的日期和时间。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

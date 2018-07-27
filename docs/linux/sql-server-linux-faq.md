@@ -4,19 +4,19 @@ description: 本文提供有关 SQL Server 常见问题的解答在 Linux 上运
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102225"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268805"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 方面的常见问题 (FAQ)
 
@@ -34,9 +34,13 @@ ms.locfileid: "39102225"
 
    SQL Server 经过测试且支持在 Linux 上的前面列出的分发版。 其他 Linux 发行版密切相关，可能能够在运行 SQL Server （例如，CentOS 密切相关到 Red Hat Enterprise Server）。 但如果您选择不受支持的操作系统上安装 SQL Server，请查看**的支持策略**一部分[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)若要了解支持影响。 另请注意，一些社区维护的 Linux 分发没有正式的方法，才能获得支持，如果基础操作系统是问题。
 
-1. **在 Linux 上支持哪些 SQL Server 功能？**
+1. **Linux 上的许可工作原理？**
 
-   有关支持的功能和已知的问题的完整列表，请参阅[发行说明](sql-server-linux-release-notes.md)。
+   SQL Server 是获得相同的方式许可适用于 Windows 和 Linux。 事实上，SQL Server 的许可，然后选择要在所选的平台上使用该许可证。 有关详细信息，请参阅[授权的 SQL Server 如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
+
+1. **Linux 上的 SQL Server 是与 Windows 上相同？**
+
+   与在 Windows，SQL Server 数据库引擎的核心都是在 Linux 上相同的。 但是，某些功能当前不支持在 Linux 上。 Linux 不支持的功能的列表，请参阅[不受支持的功能和服务](sql-server-linux-release-notes.md#Unsupported)。 此外查看[已知问题](sql-server-linux-release-notes.md#known-issues)。 在这些列表中指定，除非其他 SQL Server 功能和服务支持在 Linux 上。
 
 1. **SQL Server 的支持策略是什么？**
 

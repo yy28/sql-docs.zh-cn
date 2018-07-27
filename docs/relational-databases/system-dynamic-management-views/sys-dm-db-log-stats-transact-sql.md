@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061445"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278948"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,10 @@ ms.locfileid: "38061445"
 |recovery_vlf_count |**bigint** |   总数[虚拟日志文件 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)恢复，如果没有故障转移或服务器重新启动。 |  
 
 
-## <a name="permissions"></a>权限  
+## <a name="remarks"></a>Remarks
+运行时`sys.dm_db_log_stats`针对参与可用性组作为次要副本的数据库，将返回上面所述的字段的一个子集。  目前，仅`database_id`， `recovery_model`，和`log_backup_time`对辅助数据库运行时，会返回。   
+
+## <a name="permissions"></a>Permissions  
 需要`VIEW DATABASE STATE`数据库中的权限。   
   
 ## <a name="examples"></a>示例  

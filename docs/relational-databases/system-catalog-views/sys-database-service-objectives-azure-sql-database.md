@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 320d8d0dd434c4453a8004a0237bc9d2cbd9f352
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989269"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216968"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "37989269"
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|在 Azure SQL 数据库服务器的实例中是唯一的数据库的 ID。 使用可加入[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |版本|sysname|数据库或数据仓库的服务层：**基本**，**标准**，**高级**或者**数据仓库**。|  
-|service_objective|sysname|数据库的定价层。 如果数据库是在弹性池中，则返回**ElasticPool**。<br /><br /> 上**基本**层，返回**基本**。<br /><br /> **标准服务层中的单个数据库**返回以下值之一： S0、 S1、 S2 或 S3。<br /><br /> **高级层中的单个数据库**返回以下值： P1、 P2、 P4、 P6/P3 或 P11。<br /><br /> **SQL 数据仓库**返回通过 DW10000c DW100。|  
+|service_objective|sysname|数据库的定价层。 如果数据库是在弹性池中，则返回**ElasticPool**。<br /><br /> 上**基本**层，返回**基本**。<br /><br /> **标准服务层中的单个数据库**返回以下值之一： S0、 S1、 S2、 S3、 S4、 S6、 S7、 S9 或 S12。<br /><br /> **高级层中的单个数据库**返回以下值： P1、 P2、 P4、 P6、 P11 或 P15。<br /><br /> **SQL 数据仓库**返回通过 DW10000c DW100。|  
 |elastic_pool_name|sysname|名称[弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)属于数据库。 返回**NULL**如果数据库是单一数据库或数据 warehoue。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**dbManager**的主数据库上的权限。  在数据库级别，用户必须是创建者或所有者。  
   
 ## <a name="examples"></a>示例  
