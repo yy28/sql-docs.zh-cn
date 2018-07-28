@@ -1,0 +1,28 @@
+- name: IsReadOnly 属性（SqlServiceAdvancedProperty 类）
+  href: isreadonly-property-sqlserviceadvancedproperty-class.md
+- name: PropertyIndex 属性（SqlServiceAdvancedProperty 类）
+  href: propertyindex-property-sqlserviceadvancedproperty-class.md
+- name: PropertyName 属性（SqlServiceAdvancedProperty 类）
+  href: propertyname-property-sqlserviceadvancedproperty-class.md
+- name: PropertyNumValue 属性（SqlServiceAdvancedProperty 类）
+  href: propertynumvalue-property-sqlserviceadvancedproperty-class.md
+- name: PropertyStrValue 属性（SqlServiceAdvancedProperty 类）
+  href: propertystrvalue-property-sqlserviceadvancedproperty-class.md
+- name: PropertyValueType 属性（SqlServiceAdvancedProperty 类）
+  href: propertyvaluetype-property-sqlserviceadvancedproperty-class.md
+- name: ServiceName 属性（SqlServiceAdvancedProperty 类）
+  href: servicename-property-sqlserviceadvancedproperty-class.md
+- name: SetBoolValue 方法（SqlServiceAdvancedProperty 类）
+  href: setboolvalue-method-sqlserviceadvancedproperty-class.md
+- name: SetNumericalValue 方法（SqlServiceAdvancedProperty 类）
+  href: setnumericalvalue-method-sqlserviceadvancedproperty-class.md
+- name: SetNumValue 方法（SqlServiceAdvancedProperty 类）
+  href: setnumvalue-method-sqlserviceadvancedproperty-class.md
+- name: SetStringValue 方法（SqlServiceAdvancedProperty 类）
+  href: setstringvalue-method-sqlserviceadvancedproperty-class.md
+- name: SetStrValue 方法（SqlServiceAdvancedProperty 类）
+  href: setstrvalue-method-sqlserviceadvancedproperty-class.md
+- name: SqlServiceAdvancedProperty 类
+  href: sqlserviceadvancedproperty-class.md
+- name: SqlServiceType 方法（SqlServiceAdvancedProperty 类）
+  href: sqlservicetype-property-sqlserviceadvancedproperty-class.md

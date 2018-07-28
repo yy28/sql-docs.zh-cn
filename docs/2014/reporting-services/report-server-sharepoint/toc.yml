@@ -1,0 +1,42 @@
+- name: 将报表查看器 Web 部件添加到网页
+  href: add-reporting-services-content-types-to-a-sharepoint-library.md
+  items:
+    - name: 在 SharePoint 站点上的报表查看器 Web 部件
+      href: ../report-viewer-web-part-on-a-sharepoint-site.md
+    - name: 连接筛选器或文档 Web 部件
+      href: ../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md
+    - name: 自定义报表查看器 Web 部件
+      href: ../customize-the-report-viewer-web-part.md
+- name: 报表服务器（SharePoint 模式）
+  href: ../reporting-services-report-server-sharepoint-mode.md
+  items:
+    - name: SharePoint 服务和服务应用程序
+      href: ../reporting-services-sharepoint-service-and-service-applications.md
+      items:
+        - name: 管理 Reporting Services SharePoint 服务应用程序
+          href: ../manage-a-reporting-services-sharepoint-service-application.md
+        - name: 备份和还原 Reporting Services SharePoint 服务应用程序
+          href: ../backup-and-restore-reporting-services-sharepoint-service-applications.md
+- name: 用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
+  href: ../powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+- name: 配置和管理（SharePoint 模式）
+  href: ../configure-administer-report-server-reporting-services-sharepoint-mode.md
+  items:
+    - name: Reporting Services 网站集功能
+      href: ../reporting-services-site-collection-features.md
+    - name: 在 SharePoint 中激活报表服务器和 Power View 集成功能
+      href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
+    - name: Reporting Services 网站设置和网站功能（SharePoint 模式）
+      href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
+    - name: 激活报表服务器文件同步功能
+      href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
+    - name: 将报表服务器内容类型添加到库中（SharePoint 集成模式下的 Reporting Services）
+      href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: 报表查看器中的本地模式和连接模式报表对比
+      href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
+    - name: 将文档上载到 SharePoint 库
+      href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: 设置处理选项
+      href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+- name: SharePoint 与 2008 和 2008 R2 报表服务器集成
+  href: ../sharepoint-integration-with-2008-and-2008-r2-report-servers.md

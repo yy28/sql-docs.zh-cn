@@ -1,0 +1,14 @@
+- name: SQL Server 故障转移群集安装
+  href: sql-server-failover-cluster-installation.md
+- name: 安装故障转移群集前的准备工作
+  href: before-installing-failover-clustering.md
+- name: 创建新的 SQL Server 故障转移群集（安装程序）
+  href: create-a-new-sql-server-failover-cluster-setup.md
+- name: 在 SQL Server 故障转移群集中添加或删除节点（安装程序）
+  href: add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+- name: 在 SQL Server 故障转移群集上安装客户端工具
+  href: install-client-tools-on-a-sql-server-failover-cluster.md
+- name: 删除 SQL Server 故障转移群集实例（安装程序）
+  href: remove-a-sql-server-failover-cluster-instance-setup.md
+- name: 重命名 SQL Server 故障转移群集实例
+  href: rename-a-sql-server-failover-cluster-instance.md

@@ -1,0 +1,10 @@
+- name: 开发人员指南（复制）
+  href: replication-developer-documentation.md
+- name: 复制编程概念
+  href: replication-programming-concepts.md
+- name: Replication System Stored Procedures Concepts
+  href: replication-system-stored-procedures-concepts.md
+- name: Replication Management Objects Concepts
+  href: replication-management-objects-concepts.md
+- name: 复制代理可执行文件概念
+  href: replication-agent-executables-concepts.md

@@ -1,0 +1,32 @@
+- name: 监视包执行和其他操作
+  href: monitor-running-packages-and-other-operations.md
+- name: “活动操作”对话框
+  href: ../active-operations-dialog-box.md
+- name: Integration Services 服务器的报表
+  href: ../reports-for-the-integration-services-server.md
+- name: 查看 Integration Services 服务器的报告
+  href: ../view-reports-for-the-integration-services-server.md
+- name: 查看和停止在 Integration Services 服务器上运行的包
+  href: ../viewing-and-stopping-packages-running-on-the-integration-services-server.md
+- name: Integration Services (SSIS) 日志记录
+  href: integration-services-ssis-logging.md
+  items:
+    - name: 日志记录的自定义消息
+      href: ../custom-messages-for-logging.md
+    - name: “配置 SSIS 日志”对话框
+      href: ../configure-ssis-logs-dialog-box.md
+    - name: 使用保存的配置文件配置日志记录
+      href: ../configure-logging-by-using-a-saved-configuration-file.md
+    - name: 在 SQL Server Data Tools 中启用包日志记录
+      href: ../enable-package-logging-in-sql-server-data-tools.md
+    - name: 在 SSIS 服务器上启用包执行的日志记录
+      href: ../enable-logging-for-package-execution-on-the-ssis-server.md
+- name: 性能计数器
+  href: performance-counters.md
+  items:
+    - name: 添加数据流性能计数器的日志
+      href: ../add-a-log-for-data-flow-performance-counters.md
+- name: 数据流分析
+  href: ../analysis-of-data-flow.md
+- name: 数据分流
+  href: ../data-flow-taps.md

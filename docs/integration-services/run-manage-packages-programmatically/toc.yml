@@ -1,0 +1,18 @@
+- name: 以编程方式运行和管理包
+  href: running-and-managing-packages-programmatically.md
+- name: 了解本地执行与远程执行之间的差异
+  href: understanding-the-differences-between-local-and-remote-execution.md
+- name: 以编程方式加载和运行本地包
+  href: loading-and-running-a-local-package-programmatically.md
+- name: 以编程方式加载和运行远程包
+  href: loading-and-running-a-remote-package-programmatically.md
+- name: 加载本地包的输出
+  href: loading-the-output-of-a-local-package.md
+- name: 以编程方式枚举可用的包
+  href: enumerating-available-packages-programmatically.md
+- name: 以编程方式管理包和文件夹
+  href: managing-packages-and-folders-programmatically.md
+- name: 以编程方式管理正在运行的包
+  href: managing-running-packages-programmatically.md
+- name: 以编程方式管理包角色（SSIS 服务）
+  href: managing-package-roles-programmatically-ssis-service.md

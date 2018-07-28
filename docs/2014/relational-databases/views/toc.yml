@@ -1,0 +1,17 @@
+- name: 视图
+  href: views.md
+  items:
+    - name: 创建视图
+      href: create-views.md
+    - name: 创建索引视图
+      href: create-indexed-views.md
+    - name: 修改视图
+      href: modify-views.md
+    - name: 通过视图修改数据
+      href: modify-data-through-a-view.md
+    - name: 获取有关视图的信息
+      href: get-information-about-a-view.md
+    - name: 重命名视图
+      href: rename-views.md
+    - name: 删除视图
+      href: delete-views.md

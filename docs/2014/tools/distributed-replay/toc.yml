@@ -1,0 +1,23 @@
+- name: SQL Server 分布式重播
+  href: sql-server-distributed-replay.md
+- name: Configure Distributed Replay
+  href: configure-distributed-replay.md
+- name: 准备输入跟踪数据
+  href: prepare-the-input-trace-data.md
+- name: 重播跟踪数据
+  href: replay-trace-data.md
+- name: 查看重播结果
+  href: review-the-replay-results.md
+- name: 分布式重播安全性
+  href: distributed-replay-security.md
+- name: 管理工具命令行选项（分布式重播实用工具）
+  href: administration-tool-command-line-options-distributed-replay-utility.md
+  items:
+    - name: preprocess 选项（分布式重播管理工具）
+      href: preprocess-option-distributed-replay-administration-tool.md
+    - name: 重播选项（分布式重播管理工具）
+      href: replay-option-distributed-replay-administration-tool.md
+    - name: Status 选项（分布式重播管理工具）
+      href: status-option-distributed-replay-administration-tool.md
+    - name: Cancel 选项（分布式重播管理工具）
+      href: cancel-option-distributed-replay-administration-tool.md
