@@ -1,7 +1,7 @@
 ---
 title: sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2017
+ms.date: 07/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -23,15 +23,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b819d5904cdcdc7339036a5ec5f5a9e6fde8477e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e4a4a97b4a69aaf68d196833ee56b089a3dadfcf
+ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086229"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39331583"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   返回包含有关中的未声明参数的元数据的结果集[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 考虑使用在每个参数 **\@tsql**批处理，但不是声明中 **\@params**。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 该过程返回空结果集如果 **\@tsql**输入的批处理仅包含的参数中声明 **\@params**。  
   
