@@ -1,0 +1,37 @@
+- name: 存储过程
+  href: stored-procedures-database-engine.md
+  items:
+    - name: 创建存储过程
+      href: create-a-stored-procedure.md
+    - name: 修改存储过程
+      href: modify-a-stored-procedure.md
+    - name: 删除存储过程
+      href: delete-a-stored-procedure.md
+    - name: 执行存储过程
+      href: execute-a-stored-procedure.md
+      items:
+        - name: 指定参数
+          href: specify-parameters.md
+    - name: 授予对存储过程的权限
+      href: grant-permissions-on-a-stored-procedure.md
+    - name: 从存储过程中返回数据
+      href: return-data-from-a-stored-procedure.md
+    - name: 重新编译存储过程
+      href: recompile-a-stored-procedure.md
+    - name: 重命名存储过程
+      href: rename-a-stored-procedure.md
+    - name: 查看存储过程的定义
+      href: view-the-definition-of-a-stored-procedure.md
+    - name: 查看存储过程的依赖关系
+      href: view-the-dependencies-of-a-stored-procedure.md
+    - name: 存储过程属性（“常规”页）
+      href: stored-procedure-properties-general-page.md
+- name: Transact-SQL 中的 OLE 自动化对象
+  href: ole-automation-objects-in-transact-sql.md
+  items:
+    - name: OLE 自动化返回代码和错误信息
+      href: ole-automation-return-codes-and-error-information.md
+    - name: OLE 自动化结果集
+      href: ole-automation-result-sets.md
+    - name: OLE 自动化脚本示例
+      href: ole-automation-sample-script.md

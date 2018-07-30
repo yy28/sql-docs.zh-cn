@@ -1,0 +1,26 @@
+- name: 创建数据处理扩展插件库
+  href: creating-a-data-processing-extension-library.md
+- name: 数据处理扩展插件概述
+  href: data-processing-extensions-overview.md
+- name: 调试数据处理扩展插件代码
+  href: debugging-data-processing-extension-code.md
+- name: 向报表服务器部署数据处理扩展插件
+  href: deploying-a-data-processing-extension-to-a-report-server.md
+- name: 向报表设计器部署数据处理扩展插件
+  href: deploying-a-data-processing-extension-to-report-designer.md
+- name: 部署数据处理扩展插件
+  href: deploying-a-data-processing-extension.md
+- name: 为数据处理扩展插件实现 Command 类
+  href: implementing-a-command-class-for-a-data-processing-extension.md
+- name: 为数据处理扩展插件实现 Connection 类
+  href: implementing-a-connection-class-for-a-data-processing-extension.md
+- name: 实现数据处理扩展插件
+  href: implementing-a-data-processing-extension.md
+- name: 为数据处理扩展插件实现 DataReader 类
+  href: implementing-a-datareader-class-for-a-data-processing-extension.md
+- name: 准备实现数据处理扩展插件
+  href: preparing-to-implement-a-data-processing-extension.md
+- name: 删除数据处理扩展插件
+  href: removing-a-data-processing-extension.md
+- name: 将外部数据集用于 Reporting Services
+  href: using-an-external-dataset-with-reporting-services.md

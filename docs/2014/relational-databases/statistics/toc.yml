@@ -1,0 +1,15 @@
+- name: 统计信息
+  href: statistics.md
+  items:
+    - name: 创建统计信息
+      href: create-statistics.md
+    - name: 修改统计信息
+      href: modify-statistics.md
+    - name: 删除统计信息
+      href: delete-statistics.md
+    - name: 查看统计信息属性
+      href: view-statistics-properties.md
+    - name: 重命名统计信息
+      href: rename-statistics.md
+    - name: 更新统计信息
+      href: update-statistics.md

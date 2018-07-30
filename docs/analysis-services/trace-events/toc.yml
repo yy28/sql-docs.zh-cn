@@ -1,0 +1,64 @@
+- name: 概述
+  href: analysis-services-trace-events.md
+- name: 跟踪中使用的对象代码
+  href: analysis-services-object-type-codes-used-in-traces.md
+- name: “命令事件”事件类别
+  href: command-events-event-category.md
+  items:
+    - name: 命令事件数据列
+      href: command-events-data-columns.md
+- name: “发现事件”事件类别
+  href: discover-events-event-category.md
+  items:
+    - name: 发现事件数据列
+      href: discover-events-data-columns.md
+- name: “发现服务器状态”事件类别
+  href: discover-server-state-event-category.md
+  items:
+    - name: 发现服务器状态事件数据列
+      href: discover-server-state-events-data-columns.md
+- name: 错误和警告事件类别
+  href: errors-and-warnings-event-category.md
+  items:
+    - name: 错误和警告事件数据列
+      href: errors-and-warnings-events-data-columns.md
+- name: “文件加载和保存事件”类别
+  href: file-load-and-save-event-category.md
+  items:
+    - name: 文件加载和保存数据列
+      href: file-load-and-save-data-columns.md
+- name: “锁定事件”类别
+  href: lock-events-category.md
+  items:
+    - name: 锁事件数据列
+      href: lock-events-data-columns.md
+- name: “通知事件”事件类别
+  href: notification-events-event-category.md
+  items:
+    - name: 通知事件数据列
+      href: notification-events-data-columns.md
+- name: “进度报告”事件类别
+  href: progress-reports-event-category.md
+  items:
+    - name: 进度报告数据列
+      href: progress-reports-data-columns.md
+- name: 查询事件类别
+  href: queries-events-category.md
+  items:
+    - name: 查询事件数据列
+      href: queries-events-data-columns.md
+- name: 查询处理事件类别
+  href: query-processing-events-category.md
+  items:
+    - name: 查询处理事件数据列
+      href: query-processing-events-data-columns.md
+- name: “安全审核”事件类别
+  href: security-audit-event-category.md
+  items:
+    - name: 安全审核数据列
+      href: security-audit-data-columns.md
+- name: “会话事件”事件类别
+  href: session-events-event-category.md
+  items:
+    - name: 会话事件数据列
+      href: session-events-data-columns.md

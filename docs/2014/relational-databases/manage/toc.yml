@@ -1,0 +1,47 @@
+- name: SQL Server 实用工具的功能和任务
+  href: sql-server-utility-features-and-tasks.md
+- name: 在 SQL Server 的同一实例中运行实用工具和非实用工具收集组的注意事项
+  href: run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
+- name: 创建 SQL Server 实用工具控制点（SQL Server 实用工具）
+  href: create-a-sql-server-utility-control-point-sql-server-utility.md
+- name: 连接到 SQL Server 实用工具
+  href: connect-to-a-sql-server-utility.md
+- name: 注册 SQL Server 的实例（SQL Server 实用工具）
+  href: enroll-an-instance-of-sql-server-sql-server-utility.md
+- name: 使用实用工具资源管理器管理 SQL Server 实用工具
+  href: use-utility-explorer-to-manage-the-sql-server-utility.md
+- name: 在 SQL Server 实用工具中监视 SQL Server 的实例
+  href: monitor-instances-of-sql-server-in-the-sql-server-utility.md
+- name: 查看资源运行状况策略结果（SQL Server 实用工具）
+  href: view-resource-health-policy-results-sql-server-utility.md
+- name: 修改资源运行状况策略定义（SQL Server 实用工具）
+  href: modify-a-resource-health-policy-definition-sql-server-utility.md
+- name: 配置您的实用工具控制点数据仓库（SQL Server 实用工具）
+  href: configure-your-utility-control-point-data-warehouse-sql-server-utility.md
+- name: 配置运行状况策略（SQL Server 实用工具）
+  href: configure-health-policies-sql-server-utility.md
+- name: 减少 CPU 使用策略中的干扰（SQL Server 实用工具）
+  href: reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
+- name: 从 SQL Server 实用工具中删除 SQL Server 实例
+  href: remove-an-instance-of-sql-server-from-the-sql-server-utility.md
+- name: 在 SQL Server 的托管实例上更改实用工具收集组的代理帐户（SQL Server 实用工具）
+  href: change-proxy-account-for-utility-collection-on-managed-sql-server.md
+- name: 将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）
+  href: move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
+- name: 删除实用工具控制点（SQL Server 实用工具）
+  href: remove-a-utility-control-point-sql-server-utility.md
+- name: SQL Server 实用工具故障排除
+  href: ../../database-engine/troubleshoot-the-sql-server-utility.md
+- name: SQL Server 资源运行状况故障排除（SQL Server 实用工具）
+  href: troubleshoot-sql-server-resource-health-sql-server-utility.md
+- name: 实用工具资源管理器的 F1 帮助
+  href: utility-explorer-f1-help.md
+  items:
+    - name: 实用工具面板（SQL Server 实用工具）
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: 已部署的数据层应用程序详细信息（SQL Server 实用工具）
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: 托管实例详细信息（SQL Server 实用工具）
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: 实用工具管理（SQL Server 实用工具）
+      href: ../../database-engine/utility-administration-sql-server-utility.md

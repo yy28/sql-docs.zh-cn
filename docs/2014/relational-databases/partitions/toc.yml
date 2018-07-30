@@ -1,0 +1,11 @@
+- name: 已分区表和已分区索引
+  href: partitioned-tables-and-indexes.md
+  items:
+    - name: 创建已分区表和已分区索引
+      href: create-partitioned-tables-and-indexes.md
+    - name: 修改分区函数
+      href: modify-a-partition-function.md
+    - name: 修改分区方案
+      href: modify-a-partition-scheme.md
+    - name: “管理分区向导”的 F1 帮助
+      href: manage-partition-wizard-f1-help.md

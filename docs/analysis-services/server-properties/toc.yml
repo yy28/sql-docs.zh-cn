@@ -1,0 +1,26 @@
+- name: 服务器属性
+  href: server-properties-in-analysis-services.md
+- name: 数据挖掘属性
+  href: data-mining-properties.md
+- name: DAX 属性
+  href: dax-properties.md
+- name: 功能属性
+  href: feature-properties.md
+- name: FileStore 属性
+  href: filestore-properties.md
+- name: 常规属性
+  href: general-properties.md
+- name: 锁管理器属性
+  href: lock-manager-properties.md
+- name: 日志属性
+  href: log-properties.md
+- name: 内存属性
+  href: memory-properties.md
+- name: 网络属性
+  href: network-properties.md
+- name: OLAP 属性
+  href: olap-properties.md
+- name: 安全属性
+  href: security-properties.md
+- name: 线程池属性
+  href: thread-pool-properties.md

@@ -1,0 +1,92 @@
+- name: 报表服务器 Web 服务
+  href: report-server-web-service.md
+  items:
+    - name: 访问 SOAP API
+      href: accessing-the-soap-api.md
+    - name: The Role of SOAP in Reporting Services
+      href: the-role-of-soap-in-reporting-services.md
+    - name: 报表服务器 Web 服务方法
+      href: methods/report-server-web-service-methods.md
+    - name: 报表服务器 Web 服务端点
+      href: methods/report-server-web-service-endpoints.md
+    - name: 报表服务器命名空间管理方法
+      href: methods/report-server-namespace-management-methods.md
+    - name: 授权方法
+      href: methods/authorization-methods.md
+    - name: 数据源和连接方法
+      href: methods/data-sources-and-connection-methods.md
+    - name: 报表参数方法
+      href: methods/report-parameters-methods.md
+    - name: 模型方法
+      href: methods/model-methods-report-server-web-service.md
+    - name: 呈现和执行方法
+      href: methods/rendering-and-execution-methods.md
+    - name: 报表历史记录方法
+      href: methods/report-history-methods.md
+    - name: 计划方法
+      href: methods/scheduling-methods.md
+    - name: 订阅和传递方法
+      href: methods/subscription-and-delivery-methods.md
+    - name: 链接报表方法
+      href: methods/linked-reports-methods.md
+    - name: Building Applications Using the Web Service and the .NET Framework
+      href: net-framework/building-applications-using-the-web-service-and-the-net-framework.md
+    - name: 创建 Web 服务代理
+      href: net-framework/creating-the-web-service-proxy.md
+    - name: Web 服务身份验证
+      href: net-framework/web-service-authentication.md
+    - name: 调用 Web 服务方法
+      href: net-framework/calling-web-service-methods.md
+    - name: 设置 Web 服务的 Url 属性
+      href: net-framework/setting-the-url-property-of-the-web-service.md
+    - name: 提供 Web 服务方法参数
+      href: net-framework/supplying-web-service-method-arguments.md
+    - name: 省略可选 Web 服务对象的值
+      href: net-framework/omitting-values-for-optional-web-service-objects.md
+    - name: 使用安全 Web 服务方法
+      href: net-framework/using-secure-web-service-methods.md
+    - name: 在自定义应用程序中使用 RSClientPrint 控件
+      href: net-framework/using-the-rsclientprint-control-in-custom-applications.md
+    - name: Reporting Services 属性
+      href: net-framework/reporting-services-properties.md
+      items:
+        - name: 报表服务器项属性
+          href: net-framework/reporting-services-properties-report-server-item-properties.md
+        - name: 报表服务器系统属性
+          href: net-framework/reporting-services-properties-report-server-system-properties.md
+    - name: 将设备信息设置传递给呈现扩展插件
+      href: net-framework/passing-device-information-settings-to-rendering-extensions.md
+    - name: Reporting Services 传递扩展插件设置
+      href: net-framework/reporting-services-delivery-extension-settings.md
+    - name: 使用 Reporting Services SOAP 标头
+      href: ../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md
+      items:
+        - name: 批处理方法
+          href: ../report-server-web-service-net-framework-soap-headers/batching-methods.md
+        - name: 标识执行状态
+          href: ../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md
+        - name: 为 GetProperties 方法设置项命名空间
+          href: ../report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md
+    - name: 介绍 Reporting Services 中的异常处理
+      href: ../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md
+      items:
+        - name: 在 Reporting Services 中处理异常
+          href: ../report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md
+        - name: Reporting Services 异常处理的最佳实践
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling.md
+        - name: 防止无效请求
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md
+        - name: 使用 Try/Catch 块
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md
+        - name: 处理不导致异常的警告和事例
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md
+        - name: 使用 Detail 属性处理特定错误
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md
+        - name: Reporting Services SoapException 类
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md
+        - name: Detail 属性
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md
+        - name: HelpLink 元素
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md
+        - name: SoapException 错误表
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md

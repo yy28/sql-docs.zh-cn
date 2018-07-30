@@ -1,0 +1,68 @@
+- name: 项目和包的部署
+  href: deploy-integration-services-ssis-projects-and-packages.md
+  items:
+    - name: Deploy Projects to Integration Services Server
+      href: ../deploy-projects-to-integration-services-server.md
+    - name: 创建和映射服务器环境
+      href: ../create-and-map-a-server-environment.md
+    - name: Integration Services 项目转换向导
+      href: ../integration-services-project-conversion-wizard.md
+    - name: Integration Services 部署向导
+      href: ../integration-services-deployment-wizard.md
+    - name: “转换为包部署模型”对话框
+      href: ../convert-to-package-deployment-model-dialog-box.md
+    - name: 包部署 (SSIS)
+      href: legacy-package-deployment-ssis.md
+      items:
+        - name: 包配置
+          href: ../package-configurations.md
+        - name: 创建包配置
+          href: ../create-package-configurations.md
+    - name: “包配置组织程序”
+      href: ../package-configurations-organizer.md
+    - name: 包配置向导用户界面参考
+      href: ../package-configuration-wizard-ui-reference.md
+      items:
+        - name: Create a Deployment Utility
+          href: ../create-a-deployment-utility.md
+        - name: 使用部署实用工具部署包
+          href: ../deploy-packages-by-using-the-deployment-utility.md
+        - name: 重新部署包
+          href: ../redeployment-of-packages.md
+        - name: 包安装向导 UI 参考
+          href: ../package-installation-wizard-ui-reference.md
+- name: 项目和包的执行
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Execute Package Dialog Box
+      href: ../execute-package-dialog-box.md
+    - name: 在 SQL Server Data Tools 中运行包
+      href: ../run-a-package-in-sql-server-data-tools.md
+    - name: 使用 SQL Server Management Studio 在 SSIS 服务器上运行包
+      href: ../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md
+    - name: 使用 SQL Server 代理在远程服务器上平衡包的负载
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+      items:
+        - name: 子包的实现
+          href: ../implementation-of-child-packages.md
+        - name: 父包的实现
+          href: ../implementation-of-the-parent-package.md
+        - name: 远程服务器上的负载平衡包的日志记录
+          href: ../logging-for-load-balanced-packages-on-remote-servers.md
+        - name: 在子包中使用变量和参数的值
+          href: ../use-the-values-of-variables-and-parameters-in-a-child-package.md
+    - name: 对包执行进行故障排除的工具
+      href: ../troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: 对包执行进行故障排除的报告
+      href: ../troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: 生成包执行的转储文件
+      href: ../troubleshooting/generating-dump-files-for-package-execution.md
+    - name: 包的 SQL Server 代理作业
+      href: sql-server-agent-jobs-for-packages.md
+      items:
+        - name: 使用 SQL Server 代理计划包
+          href: ../schedule-a-package-by-using-sql-server-agent.md
+        - name: “执行 SQL Server 代理作业”任务
+          href: ../control-flow/execute-sql-server-agent-job-task.md
+- name: 使用存储过程部署和执行 SSIS 包
+  href: ../deploy-and-execute-ssis-packages-using-stored-procedures.md

@@ -1,0 +1,106 @@
+- name: 概述
+  href: reporting-services-tools.md
+- name: SQL Server Data Tools 中的 Reporting Services
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+    - name: 使用报表设计器设计报表
+      href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+      items:
+        - name: 向报表项目中添加新报表或现有报表
+          href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+    - name: SQL Server Data Tools 中的部署和版本支持
+      href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+    - name: '用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) '
+      href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+    - name: 设置部署属性
+      href: set-deployment-properties-reporting-services.md
+    - name: 在报表设计器中停靠“报表数据”窗格
+      href: dock-the-report-data-pane-in-report-designer-ssrs.md
+    - name: 报表设计器的 F1 帮助
+      href: report-designer-f1-help.md
+      items:
+        - name: 文档大纲
+          href: document-outline.md
+        - name: “设计”视图
+          href: design-view.md
+        - name: “预览”视图
+          href: preview-view.md
+        - name: “分组”窗格
+          href: grouping-pane.md
+        - name: “项目属性页”对话框
+          href: project-property-pages-dialog-box.md
+        - name: “Reporting Services 登录”对话框 (SSRS)
+          href: reporting-services-login-dialog-box-ssrs.md
+- name: SQL Server Management Studio 中的 Reporting Services
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+    - name: 设置报表服务器属性
+      href: set-report-server-properties-management-studio.md
+    - name: 在 Management Studio 中连接到报表服务器
+      href: connect-to-a-report-server-in-management-studio.md
+    - name: 删除项
+      href: delete-an-item-management-studio.md
+    - name: Management Studio 中报表服务器的 F1 帮助
+      href: report-server-in-management-studio-f1-help.md
+      items:
+        - name: 取消报表服务器作业
+          href: cancel-report-server-jobs-management-studio.md
+        - name: 删除目录项
+          href: delete-catalog-items-management-studio.md
+        - name: 作业属性
+          href: job-properties-management-studio.md
+        - name: 新建共享计划
+          href: new-shared-schedule-management-studio.md
+        - name: 新建系统角色
+          href: new-system-role-management-studio.md
+        - name: 新建用户角色
+          href: new-user-role-management-studio.md
+        - name: 计划属性（“常规”页）
+          href: schedule-properties-general-page.md
+        - name: 计划属性（“报表”页）
+          href: schedule-properties-reports-page.md
+        - name: 服务器属性（“常规”页）
+          href: report-server-properties-general-page.md
+        - name: 服务器属性（“执行”页）
+          href: server-properties-execution-page.md
+        - name: 服务器属性（“历史记录”页）
+          href: server-properties-history-page.md
+        - name: 服务器属性（“日志记录”页）
+          href: server-properties-logging-page.md
+        - name: 服务器属性（“安全性”页）
+          href: server-properties-security-page-reporting-services.md
+        - name: 服务器属性（“高级”页）
+          href: server-properties-advanced-page-reporting-services.md
+        - name: 系统角色属性
+          href: system-role-properties-management-studio.md
+        - name: 用户角色属性
+          href: user-role-properties-management-studio.md
+- name: 报表生成器创作环境
+  href: report-builder-authoring-environment-ssrs.md
+- name: 脚本编写和带 Reporting Services 的 PowerShell
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+    - name: 使用 rs.exe 实用工具和 Web 服务编写脚本
+      href: script-with-the-rs-exe-utility-and-the-web-service.md
+      items:
+        - name: 设置 Reporting Services 脚本文件的格式
+          href: format-a-reporting-services-script-file.md
+        - name: 运行 Reporting Services 脚本文件
+          href: run-a-reporting-services-script-file.md
+    - name: 为部署和管理任务编写脚本
+      href: script-deployment-and-administrative-tasks.md
+    - name: 用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本
+      href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+    - name: 访问 Reporting Services WMI 提供程序
+      href: access-the-reporting-services-wmi-provider.md
+- name: 报表服务器命令提示实用工具
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+    - name: rskeymgmt 实用工具
+      href: rskeymgmt-utility-ssrs.md
+    - name: rsconfig 实用工具
+      href: rsconfig-utility-ssrs.md
+    - name: RS.exe 实用工具 (SSRS)
+      href: rs-exe-utility-ssrs.md
+- name: 教程：如何查找并启动 Reporting Services 工具
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md

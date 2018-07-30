@@ -1,0 +1,10 @@
+- name: 部署呈现扩展插件
+  href: deploying-a-rendering-extension.md
+- name: 实现呈现扩展插件
+  href: implementing-a-rendering-extension.md
+- name: 实现 IRenderingExtension 接口
+  href: implementing-the-irenderingextension-interface.md
+- name: 删除呈现扩展插件
+  href: removing-a-rendering-extension.md
+- name: 呈现扩展插件概述
+  href: rendering-extensions-overview.md

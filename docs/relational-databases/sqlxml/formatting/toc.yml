@@ -1,0 +1,10 @@
+- name: 客户端与服务器端格式 (SQLXML 4.0)
+  href: client-side-and-server-side-formatting-sqlxml-4-0.md
+- name: 客户端和服务器端 XML 格式的体系结构 (SQLXML 4.0)
+  href: architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md
+- name: 客户端 与服务器端 XML 格式 (SQLXML 4.0)
+  href: client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
+- name: 客户端 XML 格式化 (SQLXML 4.0)
+  href: client-side-xml-formatting-sqlxml-4-0.md
+- name: 服务器端 XML 格式 (SQLXML 4.0)
+  href: server-side-xml-formatting-sqlxml-4-0.md

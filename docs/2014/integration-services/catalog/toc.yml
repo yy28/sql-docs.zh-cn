@@ -1,0 +1,29 @@
+- name: Integration Services (SSIS) 服务器
+  href: integration-services-ssis-server-and-catalog.md
+- name: “项目属性”对话框
+  href: project-properties-dialog-box.md
+- name: “验证”对话框
+  href: validate-dialog-box.md
+- name: “包属性”对话框
+  href: package-properties-dialog-box.md
+- name: 配置对话框
+  href: configure-dialog-box.md
+- name: “浏览所有主体”对话框
+  href: browse-all-principals-dialog-box.md
+- name: “文件夹属性”对话框
+  href: folder-properties-dialog-box.md
+- name: “项目版本”对话框
+  href: project-versions-dialog-box.md
+- name: SSIS 目录
+  href: ssis-catalog.md
+  items:
+    - name: 创建 SSIS 目录
+      href: ../create-the-ssis-catalog.md
+    - name: “目录属性”对话框
+      href: ../catalog-properties-dialog-box.md
+    - name: 备份、还原和移动 SSIS 目录
+      href: ../backup-restore-and-move-the-ssis-catalog.md
+- name: 查看 Integration Services 服务器上的包列表
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: 设置参数值对话框
+  href: set-parameter-value-dialog-box.md

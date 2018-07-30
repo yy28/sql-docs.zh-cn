@@ -1,0 +1,58 @@
+- name: 二进制大型对象 (Blob) 数据
+  href: binary-large-object-blob-data-sql-server.md
+- name: 比较用于存储 Blob 的选项
+  href: compare-options-for-storing-blobs-sql-server.md
+- name: FILESTREAM
+  href: filestream-sql-server.md
+  items:
+    - name: 启用和配置 FILESTREAM
+      href: enable-and-configure-filestream.md
+    - name: 创建启用了 FILESTREAM 的数据库
+      href: create-a-filestream-enabled-database.md
+    - name: 创建表以存储 FILESTREAM 数据
+      href: create-a-table-for-storing-filestream-data.md
+    - name: 使用 Transact-SQL 访问 FILESTREAM 数据
+      href: access-filestream-data-with-transact-sql.md
+    - name: 为 FILESTREAM 数据创建客户端应用程序
+      href: create-client-applications-for-filestream-data.md
+    - name: 使用 OpenSqlFilestream 访问 FILESTREAM 数据
+      href: access-filestream-data-with-opensqlfilestream.md
+    - name: 对 FILESTREAM 数据进行部分更新
+      href: make-partial-updates-to-filestream-data.md
+    - name: 避免与 FILESTREAM 应用程序中的数据库操作冲突
+      href: avoid-conflicts-with-database-operations-in-filestream-applications.md
+    - name: 移动启用了 FILESTREAM 的数据库
+      href: move-a-filestream-enabled-database.md
+    - name: 在故障转移群集中设置 FILESTREAM
+      href: set-up-filestream-on-a-failover-cluster.md
+    - name: 将防火墙配置为进行 FILESTREAM 访问
+      href: configure-a-firewall-for-filestream-access.md
+    - name: FILESTREAM 与其他 SQL Server 功能的兼容性
+      href: filestream-compatibility-with-other-sql-server-features.md
+    - name: FILESTREAM DDL、函数、存储过程和视图
+      href: filestream-ddl-functions-stored-procedures-and-views.md
+- name: FileTable
+  href: filetables-sql-server.md
+  items:
+    - name: 启用 FileTable 的先决条件
+      href: enable-the-prerequisites-for-filetable.md
+    - name: 创建、更改和删除 FileTable
+      href: create-alter-and-drop-filetables.md
+    - name: 将文件加载到 FileTable 中
+      href: load-files-into-filetables.md
+    - name: 在 FileTable 中使用目录和路径
+      href: work-with-directories-and-paths-in-filetables.md
+    - name: 使用 Transact-SQL 访问 FileTable
+      href: access-filetables-with-transact-sql.md
+    - name: 使用文件输入输出 API 访问 FileTable
+      href: access-filetables-with-file-input-output-apis.md
+    - name: 管理 FileTable
+      href: manage-filetables.md
+    - name: FileTable 架构
+      href: filetable-schema.md
+    - name: FileTable 与其他 SQL Server 功能的兼容性
+      href: filetable-compatibility-with-other-sql-server-features.md
+    - name: FileTable DDL、函数、存储过程和视图
+      href: filetable-ddl-functions-stored-procedures-and-views.md
+- name: 远程 Blob 存储区 (RBS)
+  href: remote-blob-store-rbs-sql-server.md

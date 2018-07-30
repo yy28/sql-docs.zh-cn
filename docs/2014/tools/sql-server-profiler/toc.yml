@@ -1,0 +1,164 @@
+- name: SQL Server 事件探查器
+  href: sql-server-profiler.md
+- name: SQL Server Profiler 模板和权限
+  href: sql-server-profiler-templates-and-permissions.md
+  items:
+    - name: SQL Server Profiler 模板
+      href: sql-server-profiler-templates.md
+    - name: 运行 SQL Server Profiler 所需的权限
+      href: permissions-required-to-run-sql-server-profiler.md
+- name: 启动 SQL Server Profiler
+  href: start-sql-server-profiler.md
+- name: 运行 SQL Server Profiler
+  href: ../../database-engine/run-sql-server-profiler.md
+- name: 设置全局跟踪选项 (SQL Server Profiler)
+  href: set-global-trace-options-sql-server-profiler.md
+- name: 设置跟踪定义默认设置 (SQL Server Profiler)
+  href: set-trace-definition-defaults-sql-server-profiler.md
+- name: 设置跟踪显示默认值 (SQL Server Profiler)
+  href: set-trace-display-defaults-sql-server-profiler.md
+- name: 创建跟踪 (SQL Server Profiler)
+  href: create-a-trace-sql-server-profiler.md
+- name: 创建跟踪模板 (SQL Server Profiler)
+  href: create-a-trace-template-sql-server-profiler.md
+  items:
+    - name: 从正在运行的跟踪中派生模板 (SQL Server Profiler)
+      href: derive-a-template-from-a-running-trace-sql-server-profiler.md
+    - name: 从跟踪文件或跟踪表派生模板 (SQL Server Profiler)
+      href: derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
+    - name: 导出跟踪模板 (SQL Server Profiler)
+      href: export-a-trace-template-sql-server-profiler.md
+    - name: 导入跟踪模板 (SQL Server Profiler)
+      href: import-a-trace-template-sql-server-profiler.md
+    - name: 修改跟踪模板
+      href: modify-trace-templates.md
+    - name: 修改跟踪模板 (SQL Server Profiler)
+      href: ../../database-engine/modify-a-trace-template-sql-server-profiler.md
+- name: 保存跟踪和跟踪模板
+  href: save-traces-and-trace-templates.md
+  items:
+    - name: 将跟踪结果保存到文件 (SQL Server Profiler)
+      href: save-trace-results-to-a-file-sql-server-profiler.md
+    - name: 指定跟踪文件的事件和数据列 (SQL Server Profiler)
+      href: specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md
+    - name: 设置跟踪文件的最大文件大小 (SQL Server Profiler)
+      href: set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md
+    - name: 打开跟踪文件 (SQL Server Profiler)
+      href: open-a-trace-file-sql-server-profiler.md
+    - name: 将跟踪结果保存到表 (SQL Server Profiler)
+      href: save-trace-results-to-a-table-sql-server-profiler.md
+    - name: 设置跟踪表的最大表大小 (SQL Server Profiler)
+      href: set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md
+    - name: 打开跟踪表 (SQL Server Profiler)
+      href: open-a-trace-table-sql-server-profiler.md
+- name: 使用 SQL Server Profiler 筛选跟踪
+  href: filter-traces-with-sql-server-profiler.md
+  items:
+    - name: 查看筛选器信息 (SQL Server Profiler)
+      href: view-filter-information-sql-server-profiler.md
+    - name: 修改筛选器 (SQL Server Profiler)
+      href: modify-a-filter-sql-server-profiler.md
+    - name: 在跟踪中筛选事件 (SQL Server Profiler)
+      href: filter-events-in-a-trace-sql-server-profiler.md
+      items:
+        - name: 基于事件开始时间筛选事件 (SQL Server Profiler)
+          href: filter-events-based-on-the-event-start-time-sql-server-profiler.md
+        - name: 基于事件结束时间筛选事件 (SQL Server Profiler)
+          href: filter-events-based-on-the-event-end-time-sql-server-profiler.md
+    - name: 在跟踪中筛选服务器进程 ID (SPID) (SQL Server Profiler)
+      href: filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
+- name: 启动跟踪
+  href: start-a-trace.md
+  items:
+    - name: 连接到服务器后自动启动跟踪 (SQL Server Profiler)
+      href: start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md
+- name: 暂停跟踪 (SQL Server Profiler)
+  href: pause-a-trace-sql-server-profiler.md
+- name: 停止跟踪 (SQL Server Profiler)
+  href: stop-a-trace-sql-server-profiler.md
+- name: 在跟踪暂停或停止之后运行跟踪 (SQL Server Profiler)
+  href: run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md
+- name: 清除跟踪窗口 (SQL Server Profiler)
+  href: clear-a-trace-window-sql-server-profiler.md
+- name: 关闭跟踪窗口 (SQL Server Profiler)
+  href: close-a-trace-window-sql-server-profiler.md
+- name: 重播跟踪
+  href: replay-traces.md
+  items:
+    - name: Replay Requirements
+      href: replay-requirements.md
+    - name: 重播选项 (SQL Server Profiler)
+      href: replay-options-sql-server-profiler.md
+    - name: 重播跟踪的注意事项 (SQL Server Profiler)
+      href: considerations-for-replaying-traces-sql-server-profiler.md
+    - name: 重播跟踪表 (SQL Server Profiler)
+      href: replay-a-trace-table-sql-server-profiler.md
+    - name: 重播跟踪文件 (SQL Server Profiler)
+      href: replay-a-trace-file-sql-server-profiler.md
+    - name: 每次重播一个事件 (SQL Server Profiler)
+      href: replay-a-single-event-at-a-time-sql-server-profiler.md
+    - name: 重播到断点 (SQL Server Profiler)
+      href: replay-to-a-breakpoint-sql-server-profiler.md
+    - name: 重播至光标处 (SQL Server Profiler)
+      href: replay-to-a-cursor-sql-server-profiler.md
+    - name: 重播 Transact-SQL 脚本 (SQL Server Profiler)
+      href: replay-a-transact-sql-script-sql-server-profiler.md
+- name: 在跟踪时查找值或数据列 (SQL Server Profiler)
+  href: find-a-value-or-data-column-while-tracing-sql-server-profiler.md
+- name: 创建 Transact-SQL 脚本来运行跟踪 (SQL Server Profiler)
+  href: create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
+- name: 从跟踪提取脚本 (SQL Server Profiler)
+  href: extract-a-script-from-a-trace-sql-server-profiler.md
+- name: 组织跟踪中显示的列 (SQL Server Profiler)
+  href: organize-columns-displayed-in-a-trace-sql-server-profiler.md
+- name: 将跟踪与 Windows 性能日志数据关联
+  href: correlate-a-trace-with-windows-performance-log-data.md
+- name: 将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)
+  href: ../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md
+- name: 使用 SQL Server Profiler 查看和分析跟踪
+  href: view-and-analyze-traces-with-sql-server-profiler.md
+- name: 使用 SQL Server Profiler 分析死锁
+  href: analyze-deadlocks-with-sql-server-profiler.md
+- name: 在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
+  href: analyze-queries-with-showplan-results-in-sql-server-profiler.md
+- name: SQL Server Profiler 的 F1 帮助
+  href: sql-server-profiler-f1-help.md
+  items:
+    - name: 跟踪属性（“常规”选项卡）
+      href: ../../database-engine/trace-properties-general-tab.md
+    - name: 跟踪属性（“事件选择”选项卡）
+      href: ../../database-engine/trace-properties-events-selection-tab.md
+    - name: 跟踪模板属性（“常规”选项卡）
+      href: ../../database-engine/trace-template-properties-general-tab.md
+    - name: 编辑“跟踪模板属性”（“常规”选项卡）
+      href: ../../database-engine/edit-trace-template-properties-general-tab.md
+    - name: 跟踪模板属性（“事件选择”选项卡）
+      href: ../../database-engine/trace-template-properties-events-selection-tab.md
+    - name: 跟踪文件属性（“常规”选项卡）
+      href: ../../database-engine/trace-file-properties-general-tab.md
+    - name: 跟踪文件属性（“事件选择”选项卡）
+      href: ../../database-engine/trace-file-properties-events-selection-tab.md
+    - name: 跟踪表属性（“常规”选项卡）
+      href: ../../database-engine/trace-table-properties-general-tab.md
+    - name: 跟踪表属性（“事件选择”选项卡）
+      href: ../../database-engine/trace-table-properties-events-selection-tab.md
+    - name: SQL Server Profiler - 性能计数器限制
+      href: ../../database-engine/sql-server-profiler-performance-counters-limit.md
+    - name: SQL Server Profiler - 工具/选项（“常规选项”页）
+      href: ../../database-engine/sql-server-profiler-tools-options-general-options-page.md
+    - name: SQL Server Profiler - 源表/数据库引擎优化顾问 - 选择工作负荷表
+      href: ../../database-engine/select-workload-table-sql-server-profiler-source-table-database-engine-tuning-advisor.md
+    - name: SQL Server Profiler - 目标表
+      href: ../../database-engine/sql-server-profiler-destination-table.md
+    - name: SQL Server Profiler - 重播配置（基本重播选项）
+      href: ../../database-engine/sql-server-profiler-replay-configuration-basic-replay-options.md
+    - name: SQL Server Profiler - 重播配置（高级重播选项）
+      href: ../../database-engine/sql-server-profiler-replay-configuration-advanced-replay-options.md
+    - name: SQL Server Profiler -“查找”对话框
+      href: ../../database-engine/sql-server-profiler-find-dialog-box.md
+    - name: SQL Server Profiler - 组织列
+      href: ../../database-engine/sql-server-profiler-organize-columns.md
+    - name: SQL Server Profiler - 编辑筛选器
+      href: ../../database-engine/sql-server-profiler-edit-filter.md
+    - name: 选择模板名称
+      href: ../../database-engine/select-template-name.md

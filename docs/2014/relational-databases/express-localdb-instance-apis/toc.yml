@@ -1,0 +1,33 @@
+- name: SQL Server Express LocalDB 实例 API 参考
+  href: sql-server-express-localdb-reference-instance-apis.md
+  items:
+    - name: SQL Server Express LocalDB 标头信息和版本信息
+      href: sql-server-express-localdb-header-and-version-information.md
+    - name: 命令行管理工具：SqlLocalDB.exe
+      href: command-line-management-tool-sqllocaldb-exe.md
+    - name: LocalDBCreateInstance 函数
+      href: localdbcreateinstance-function.md
+    - name: LocalDBDeleteInstance 函数
+      href: localdbdeleteinstance-function.md
+    - name: LocalDBFormatMessage 函数
+      href: localdbformatmessage-function.md
+    - name: LocalDBGetInstanceInfo 函数
+      href: localdbgetinstanceinfo-function.md
+    - name: LocalDBGetInstances 函数
+      href: localdbgetinstances-function.md
+    - name: LocalDBGetVersionInfo 函数
+      href: localdbgetversioninfo-function.md
+    - name: LocalDBGetVersions 函数
+      href: localdbgetversions-function.md
+    - name: LocalDBShareInstance 函数
+      href: localdbshareinstance-function.md
+    - name: LocalDBStartInstance 函数
+      href: localdbstartinstance-function.md
+    - name: LocalDBStartTracing 函数
+      href: localdbstarttracing-function.md
+    - name: LocalDBStopInstance 函数
+      href: localdbstopinstance-function.md
+    - name: LocalDBStopTracing 函数
+      href: localdbstoptracing-function.md
+    - name: LocalDBUnshareInstance 函数
+      href: localdbunshareinstance-function.md

@@ -1,0 +1,15 @@
+- name: 包开发的故障排除工具
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: 调试控制流
+      href: debugging-control-flow.md
+    - name: 调试脚本
+      href: debugging-script.md
+    - name: 调试数据流
+      href: debugging-data-flow.md
+    - name: 通过在任务或容器上设置断点调试包
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: 将数据查看器添加到数据流
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: 在数据流组件中配置错误输出
+      href: ../configure-an-error-output-in-a-data-flow-component.md

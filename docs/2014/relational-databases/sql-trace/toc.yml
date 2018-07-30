@@ -1,0 +1,31 @@
+- name: SQL 跟踪
+  href: sql-trace.md
+  items:
+    - name: 使用 Transact-SQL 存储过程创建和运行跟踪
+      href: create-and-run-traces-using-transact-sql-stored-procedures.md
+    - name: 使用存储过程创建手动跟踪
+      href: create-manual-traces-using-stored-procedures.md
+    - name: 将跟踪结果保存到文件
+      href: save-trace-results-to-a-file.md
+    - name: 改进对跟踪数据的访问
+      href: improve-access-to-trace-data.md
+    - name: 创建跟踪 (Transact-SQL)
+      href: create-a-trace-transact-sql.md
+    - name: 设置跟踪筛选器 (Transact-SQL)
+      href: set-a-trace-filter-transact-sql.md
+    - name: 修改现有跟踪 (Transact-SQL)
+      href: modify-an-existing-trace-transact-sql.md
+    - name: 查看保存的跟踪 (Transact-SQL)
+      href: view-a-saved-trace-transact-sql.md
+    - name: 查看筛选器信息 (Transact-SQL)
+      href: view-filter-information-transact-sql.md
+    - name: 删除跟踪 (Transact-SQL)
+      href: delete-a-trace-transact-sql.md
+    - name: 优化 SQL 跟踪
+      href: optimize-sql-trace.md
+    - name: 筛选跟踪
+      href: filter-a-trace.md
+    - name: 限制跟踪文件和表的大小
+      href: limit-trace-file-and-table-sizes.md
+    - name: 安排跟踪
+      href: schedule-traces.md

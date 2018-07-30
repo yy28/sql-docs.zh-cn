@@ -1,0 +1,8 @@
+- name: 指定位置路径 (SQLXML 4.0)
+  href: specifying-a-location-path-sqlxml-4-0.md
+- name: 在位置路径中指定节点测试 (SQLXML 4.0)
+  href: specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
+- name: 指定轴 (SQLXML 4.0)
+  href: specifying-an-axis-sqlxml-4-0.md
+- name: 在位置路径中指定选择谓词 (SQLXML 4.0)
+  href: specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md

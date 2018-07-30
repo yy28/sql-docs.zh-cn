@@ -1,0 +1,36 @@
+- name: SQL Server PowerShell
+  href: sql-server-powershell.md
+- name: 在 Windows PowerShell 中加载 SMO 程序集
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: 从 SQL Server Management Studio 中运行 Windows PowerShell
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: 在 SQL Server 代理中运行 Windows PowerShell 步骤
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: SQL Server PowerShell Provider
+  href: sql-server-powershell-provider.md
+  items:
+    - name: 导航 SQL ServerPowerShell 路径
+      href: navigate-sql-server-powershell-paths.md
+    - name: 使用 SQL ServerPowerShell 路径
+      href: work-with-sql-server-powershell-paths.md
+- name: PowerShell 中的 SQL Server 标识符
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: 在 SQL Server PowerShell 提供程序中指定实例
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: 对 SQL Server 标识符进行编码和解码
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: 对 SQL Server 标识符进行转义
+      href: escape-sql-server-identifiers.md
+- name: 在数据库引擎 PowerShell 中管理身份验证
+  href: manage-authentication-in-database-engine-powershell.md
+- name: 管理 Tab 填写功能 (SQL Server PowerShell)
+  href: manage-tab-completion-sql-server-powershell.md
+- name: 导入 SQLPS 模块
+  href: ../database-engine/import-the-sqlps-module.md
+- name: 将 URN 转换为 SQL Server 提供程序路径
+  href: ../database-engine/convert-urns-to-sql-server-provider-paths.md
+- name: 使用数据库引擎 cmdlet
+  href: ../database-engine/use-the-database-engine-cmdlets.md
+- name: Get Help SQL Server PowerShell
+  href: ../database-engine/get-help-sql-server-powershell.md

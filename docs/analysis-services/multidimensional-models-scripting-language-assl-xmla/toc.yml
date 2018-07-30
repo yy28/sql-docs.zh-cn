@@ -1,0 +1,34 @@
+- name: 备份、还原和同步数据库 (XMLA)
+  href: backing-up-restoring-and-synchronizing-databases-xmla.md
+- name: 取消命令 (XMLA)
+  href: canceling-commands-xmla.md
+- name: 创建和更改对象 (XMLA)
+  href: creating-and-altering-objects-xmla.md
+- name: 定义和标识对象 (XMLA)
+  href: defining-and-identifying-objects-xmla.md
+- name: 设计聚合 (XMLA)
+  href: designing-aggregations-xmla.md
+- name: 在 Analysis Services 中使用 XMLA 开发
+  href: developing-with-xmla-in-analysis-services.md
+- name: 处理错误和警告 (XMLA)
+  href: handling-errors-and-warnings-xmla.md
+- name: 插入、更新和删除成员 (XMLA)
+  href: inserting-updating-and-dropping-members-xmla.md
+- name: 锁定数据库和解除数据库锁定 (XMLA)
+  href: locking-and-unlocking-databases-xmla.md
+- name: 管理缓存 (XMLA)
+  href: managing-caches-xmla.md
+- name: 管理连接和会话 (XMLA)
+  href: managing-connections-and-sessions-xmla.md
+- name: 管理事务 (XMLA)
+  href: managing-transactions-xmla.md
+- name: 合并分区 (XMLA)
+  href: merging-partitions-xmla.md
+- name: 监视跟踪 (XMLA)
+  href: monitoring-traces-xmla.md
+- name: 执行批处理操作 (XMLA)
+  href: performing-batch-operations-xmla.md
+- name: 处理对象 (XMLA)
+  href: processing-objects-xmla.md
+- name: 更新单元 (XMLA)
+  href: updating-cells-xmla.md

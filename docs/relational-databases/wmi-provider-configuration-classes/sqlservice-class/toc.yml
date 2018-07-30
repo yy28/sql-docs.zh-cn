@@ -1,0 +1,48 @@
+- name: AcceptPause 属性（SqlService 类）
+  href: acceptpause-property-sqlservice-class.md
+- name: AcceptStop 属性（SqlService 类）
+  href: acceptstop-property-sqlservice-class.md
+- name: AdvancedProperties 属性（SqlService 类）
+  href: advancedproperties-property-sqlservice-class.md
+- name: BinaryPath 属性（SqlService 类）
+  href: binarypath-property-sqlservice-class.md
+- name: Clustered 属性（SqlService 类）
+  href: clustered-property-sqlservice-class.md
+- name: Dependencies 属性（SqlService 类）
+  href: dependencies-property-sqlservice-class.md
+- name: Description 属性（SqlService 类）
+  href: description-property-sqlservice-class.md
+- name: DisplayName 属性（SqlService 类）
+  href: displayname-property-sqlservice-class.md
+- name: ErrorControl 属性（SqlService 类）
+  href: errorcontrol-property-sqlservice-class.md
+- name: ExitCode 属性（SqlService 类）
+  href: exitcode-property-sqlservice-class.md
+- name: HostName 属性（SqlService 类）
+  href: hostname-property-sqlservice-class.md
+- name: PauseService 方法（SqlService 类）
+  href: pauseservice-method-sqlservice-class.md
+- name: ProcessId 类（SqlService 类）
+  href: processid-class-sqlservice-class.md
+- name: ResumeService 方法（SqlService 类）
+  href: resumeservice-method-sqlservice-class.md
+- name: ServiceName 属性（SqlService 类）
+  href: servicename-property-sqlservice-class.md
+- name: SetServiceAccount 方法（SqlService 类）
+  href: setserviceaccount-method-sqlservice-class.md
+- name: SetServiceAccountPassword 方法（SqlService 类）
+  href: setserviceaccountpassword-method-sqlservice-class.md
+- name: SetStartMode 方法（SqlService 类）
+  href: setstartmode-method-sqlservice-class.md
+- name: SqlService 类
+  href: sqlservice-class.md
+- name: SqlServiceType 属性（SqlService 类）
+  href: sqlservicetype-property-sqlservice-class.md
+- name: StartMode 属性（SqlService 类）
+  href: startmode-property-sqlservice-class.md
+- name: StartService 方法（SqlService 类）
+  href: startservice-method-sqlservice-class.md
+- name: State 属性（SqlService 类）
+  href: state-property-sqlservice-class.md
+- name: StopService 方法（SqlService 类）
+  href: stopservice-method-sqlservice-class.md

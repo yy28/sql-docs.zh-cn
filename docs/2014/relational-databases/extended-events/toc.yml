@@ -1,0 +1,69 @@
+- name: 扩展事件
+  href: extended-events.md
+- name: 创建扩展事件会话
+  href: ../../database-engine/create-an-extended-events-session.md
+  items:
+    - name: 使用查询编辑器创建扩展事件会话
+      href: ../../database-engine/create-an-extended-events-session-using-query-editor.md
+    - name: 使用向导创建扩展事件会话（对象资源管理器）
+      href: ../../database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md
+    - name: 使用“新建会话”对话框创建扩展事件会话
+      href: ../../database-engine/create-an-extended-events-session-using-the-new-session-dialog.md
+- name: 在对象资源管理器中管理事件会话
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: 查看事件会话数据
+  href: ../../database-engine/view-event-session-data.md
+- name: 扩展事件包
+  href: sql-server-extended-events-packages.md
+- name: 扩展事件目标
+  href: ../../database-engine/sql-server-extended-events-targets.md
+  items:
+    - name: 事件计数器目标
+      href: ../../database-engine/event-counter-target.md
+    - name: Event File Target
+      href: ../../database-engine/event-file-target.md
+    - name: 事件配对目标
+      href: ../../database-engine/event-pairing-target.md
+    - name: 直方图目标
+      href: ../../database-engine/histogram-target.md
+    - name: 环形缓冲区目标
+      href: ../../database-engine/ring-buffer-target.md
+    - name: Windows 事件跟踪目标
+      href: event-tracing-for-windows-target.md
+- name: 扩展事件引擎
+  href: sql-server-extended-events-engine.md
+- name: 扩展事件会话
+  href: sql-server-extended-events-sessions.md
+- name: 扩展事件工具
+  href: extended-events-tools.md
+  items:
+    - name: 使用 system_health 会话
+      href: use-the-ssms-xe-profiler.md
+    - name: 对扩展事件使用 PowerShell 提供程序
+      href: use-the-powershell-provider-for-extended-events.md
+- name: 编写扩展事件会话的脚本
+  href: ../../database-engine/script-an-extended-event-session.md
+- name: 更改扩展事件会话
+  href: alter-an-extended-events-session.md
+- name: 复制或导出目标数据
+  href: ../../database-engine/copy-or-export-target-data.md
+- name: 修改跟踪结果视图
+  href: ../../database-engine/modify-the-trace-results-view.md
+- name: 获取所有事件的字段
+  href: ../../database-engine/get-the-fields-for-all-events.md
+- name: 查看已注册包的事件
+  href: ../../database-engine/view-the-events-for-registered-packages.md
+- name: 查看已注册包的扩展事件目标
+  href: ../../database-engine/view-the-extended-events-targets-for-registered-packages.md
+- name: 查看与 SQL 跟踪事件类等效的扩展事件
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: 获取 ADD TARGET 实参的可配置形参
+  href: ../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md
+- name: 将现有 SQL 跟踪脚本转换为扩展事件会话
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: 确定持有锁的查询
+  href: determine-which-queries-are-holding-locks.md
+- name: 查找具有最多锁定的对象
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: 使用扩展事件监视系统活动
+  href: monitor-system-activity-using-extended-events.md

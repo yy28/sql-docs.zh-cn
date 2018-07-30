@@ -1,0 +1,8 @@
+- name: BLOB 和 OLE 对象
+  href: blobs-and-ole-objects.md
+- name: 获取大型数据
+  href: getting-large-data.md
+- name: 设置大型数据
+  href: setting-large-data.md
+- name: BLOB 输出参数的流支持
+  href: streaming-support-for-blob-output-parameters.md

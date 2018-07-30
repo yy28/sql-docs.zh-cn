@@ -1,0 +1,26 @@
+- name: ClientNetworkProtocolProperty 类
+  href: clientnetworkprotocolproperty-class.md
+- name: PropertyIdx 属性（ClientNetworkProtocolProperty 类）
+  href: propertyidx-property-clientnetworkprotocolproperty-class.md
+- name: PropertyName 属性（ClientNetworkProtocolProperty 类）
+  href: propertyname-property-clientnetworkprotocolproperty-class.md
+- name: PropertyNumVal 属性（ClientNetworkProtocolProperty 类）
+  href: propertynumval-property-clientnetworkprotocolproperty-class.md
+- name: PropertyStrVal 属性（ClientNetworkProtocolProperty 类）
+  href: propertystrval-property-clientnetworkprotocolproperty-class.md
+- name: PropertyType 属性（ClientNetworkProtocolProperty 类）
+  href: propertytype-property-clientnetworkprotocolproperty-class.md
+- name: PropertyValType 属性（ClientNetworkProtocolProperty 类）
+  href: propertyvaltype-property-clientnetworkprotocolproperty-class.md
+- name: ProtocolName 属性（ClientNetworkProtocolProperty 类）
+  href: protocolname-property-clientnetworkprotocolproperty-class.md
+- name: SetFlag 方法（ClientNetworkProtocolProperty 类）
+  href: setflag-method-clientnetworkprotocolproperty-class.md
+- name: SetNumericalValue 方法（ClientNetworkProtocolProperty 类）
+  href: setnumericalvalue-method-clientnetworkprotocolproperty-class.md
+- name: SetNumValue 方法（ClientNetworkProtocolProperty 类）
+  href: setnumvalue-method-clientnetworkprotocolproperty-class.md
+- name: SetStringValue 方法（ClientNetworkProtocolProperty 类）
+  href: setstringvalue-method-clientnetworkprotocolproperty-class.md
+- name: SetStrValue 方法（ClientNetworkProtocolProperty 类）
+  href: setstrvalue-method-clientnetworkprotocolproperty-class.md

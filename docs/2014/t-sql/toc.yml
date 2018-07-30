@@ -1,0 +1,36 @@
+- name: 教程：编写 Transact-SQL 语句
+  href: tutorial-writing-transact-sql-statements.md
+  items:
+    - name: 第 1 课：创建数据库对象
+      href: lesson-1-creating-database-objects.md
+      items:
+        - name: 创建数据库（教程）
+          href: lesson-1-1-creating-a-database.md
+        - name: 创建表（教程）
+          href: lesson-1-2-creating-a-table.md
+        - name: 插入和更新表中的数据（教程）
+          href: lesson-1-3-inserting-and-updating-data-in-a-table.md
+        - name: 读取表中的数据（教程）
+          href: lesson-1-4-reading-the-data-in-a-table.md
+        - name: 摘要：创建数据库对象
+          href: lesson-1-5-summary-creating-database-objects.md
+    - name: 第 2 课：配置数据库对象的权限
+      href: lesson-2-configuring-permissions-on-database-objects.md
+      items:
+        - name: 创建登录名
+          href: lesson-2-1-creating-a-login.md
+        - name: 授予访问数据库的权限
+          href: lesson-2-2-granting-access-to-a-database.md
+        - name: 创建视图和存储过程
+          href: lesson-2-3-creating-views-and-stored-procedures.md
+        - name: 授予访问数据库对象的权限
+          href: lesson-2-4-granting-access-to-a-database-object.md
+        - name: 摘要：配置数据库对象的权限
+          href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
+    - name: 第 3 课：删除数据库对象
+      href: lesson-3-1-deleting-database-objects.md
+      items:
+        - name: 删除数据库对象
+          href: lesson-3-deleting-database-objects.md
+    - name: 摘要：编写 Transact-SQL
+      href: ../tutorials/summary-writing-transact-sql.md

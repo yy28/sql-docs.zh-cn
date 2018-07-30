@@ -1,0 +1,8 @@
+- name: 概述
+  href: security-overview-integration-services.md
+- name: 对包中敏感数据的访问控制
+  href: access-control-for-sensitive-data-in-packages.md
+- name: 使用数字签名标识包的源
+  href: identify-the-source-of-packages-with-digital-signatures.md
+- name: Integration Services 角色（SSIS 服务）
+  href: integration-services-roles-ssis-service.md

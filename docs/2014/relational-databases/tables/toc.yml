@@ -1,0 +1,84 @@
+- name: 表
+  href: tables.md
+  items:
+    - name: 创建表（数据库引擎）
+      href: create-tables-database-engine.md
+    - name: 删除表（数据库引擎）
+      href: delete-tables-database-engine.md
+    - name: 复制表
+      href: duplicate-tables.md
+    - name: 重命名表（数据库引擎）
+      href: rename-tables-database-engine.md
+    - name: 查看表定义
+      href: view-the-table-definition.md
+      items:
+        - name: 表的属性
+          href: table-properties-ssms.md
+        - name: 列属性（“常规”页）
+          href: column-properties-general-page.md
+    - name: 查看表的依赖关系
+      href: view-the-dependencies-of-a-table.md
+    - name: 向表中添加列（数据库引擎）
+      href: add-columns-to-a-table-database-engine.md
+    - name: 从表中删除列
+      href: delete-columns-from-a-table.md
+    - name: 重命名列（数据库引擎）
+      href: rename-columns-database-engine.md
+    - name: 将列从一个表复制到另一个表 (数据库引擎)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: 修改列（数据库引擎）
+      href: modify-columns-database-engine.md
+    - name: 更改表中的列顺序
+      href: change-column-order-in-a-table.md
+    - name: 指定表中的计算列
+      href: specify-computed-columns-in-a-table.md
+    - name: 指定列的默认值
+      href: specify-default-values-for-columns.md
+    - name: 使用稀疏列
+      href: use-sparse-columns.md
+    - name: 使用列集
+      href: use-column-sets.md
+    - name: 使用表值参数（数据库引擎）
+      href: use-table-valued-parameters-database-engine.md
+- name: 主键和外键约束
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: 创建主键
+      href: create-primary-keys.md
+    - name: 修改主键
+      href: modify-primary-keys.md
+    - name: 删除主键
+      href: delete-primary-keys.md
+    - name: 创建外键关系
+      href: create-foreign-key-relationships.md
+    - name: 修改外键关系
+      href: modify-foreign-key-relationships.md
+    - name: 删除外键关系
+      href: delete-foreign-key-relationships.md
+    - name: 查看外键属性
+      href: view-foreign-key-properties.md
+    - name: 对复制禁用外键约束
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: 使用 INSERT 和 UPDATE 语句禁用外键约束
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: 唯一约束和 CHECK 约束
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: 创建唯一约束
+      href: create-unique-constraints.md
+    - name: 修改唯一约束
+      href: modify-unique-constraints.md
+    - name: 删除唯一约束
+      href: delete-unique-constraints.md
+    - name: 创建 CHECK 约束
+      href: create-check-constraints.md
+    - name: 修改 CHECK 约束
+      href: modify-check-constraints.md
+    - name: 删除 CHECK 约束
+      href: delete-check-constraints.md
+    - name: 对复制禁用 CHECK 约束
+      href: disable-check-constraints-for-replication.md
+    - name: 对 INSERT 和 UPDATE 语句禁用 CHECK 约束
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: 表列属性 (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md

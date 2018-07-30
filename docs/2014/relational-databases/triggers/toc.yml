@@ -1,0 +1,36 @@
+- name: DDL 触发器
+  href: ddl-triggers.md
+  items:
+    - name: 实现 DDL 触发器
+      href: implement-ddl-triggers.md
+    - name: 获取有关 DDL 触发器的信息
+      href: get-information-about-ddl-triggers.md
+    - name: 使用 EVENTDATA 函数
+      href: use-the-eventdata-function.md
+    - name: DDL 事件
+      href: ddl-events.md
+    - name: DDL 事件组
+      href: ddl-event-groups.md
+- name: DML 触发器
+  href: dml-triggers.md
+  items:
+    - name: 创建 DML 触发器
+      href: create-dml-triggers.md
+    - name: 创建 CLR 触发器
+      href: create-clr-triggers.md
+    - name: 创建 DML 触发器以处理多行数据
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: 创建嵌套触发器
+      href: create-nested-triggers.md
+    - name: 指定第一个和最后一个触发器
+      href: specify-first-and-last-triggers.md
+    - name: 使用插入的和删除的表
+      href: use-the-inserted-and-deleted-tables.md
+    - name: 修改或重命名 DML 触发器
+      href: modify-or-rename-dml-triggers.md
+    - name: 获取有关 DML 触发器的信息
+      href: get-information-about-dml-triggers.md
+    - name: 删除或禁用 DML 触发器
+      href: delete-or-disable-dml-triggers.md
+    - name: 管理触发器安全性
+      href: manage-trigger-security.md

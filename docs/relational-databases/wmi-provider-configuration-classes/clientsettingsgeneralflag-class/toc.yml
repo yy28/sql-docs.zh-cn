@@ -1,0 +1,12 @@
+- name: ClientSettingsGeneralFlag 类
+  href: clientsettingsgeneralflag-class.md
+- name: FlagIndex 属性（ClientSettingsGeneralFlag 类）
+  href: flagindex-property-clientsettingsgeneralflag-class.md
+- name: FlagName 属性（ClientSettingsGeneralFlag 类）
+  href: flagname-property-clientsettingsgeneralflag-class.md
+- name: FlagValue 属性（ClientSettingsGeneralFlag 类）
+  href: flagvalue-property-clientsettingsgeneralflag-class.md
+- name: InstanceName 属性（ClientSettingsGeneralFlag 类）
+  href: instancename-property-clientsettingsgeneralflag-class.md
+- name: SetValue 方法（ClientSettingsGeneralFlag 类）
+  href: setvalue-method-clientsettingsgeneralflag-class.md

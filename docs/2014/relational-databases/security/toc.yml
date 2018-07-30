@@ -1,0 +1,117 @@
+- name: SQL Server 数据库引擎和 Azure SQL Database 的安全中心
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: 保护 SQL Server
+  href: securing-sql-server.md
+- name: 主体
+  href: authentication-access/principals-database-engine.md
+  items:
+    - name: 管理登录名、用户和架构操作指南主题
+      href: authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+      items:
+        - name: 创建一个登录名
+          href: authentication-access/create-a-login.md
+        - name: 创建数据库用户
+          href: authentication-access/create-a-database-user.md
+        - name: 创建数据库架构
+          href: authentication-access/create-a-database-schema.md
+        - name: 加入角色
+          href: authentication-access/join-a-role.md
+        - name: 向主体授予权限
+          href: authentication-access/grant-a-permission-to-a-principal.md
+    - name: 服务器级别角色
+      href: authentication-access/server-level-roles.md
+      items:
+        - name: 创建服务器角色
+          href: authentication-access/create-a-server-role.md
+    - name: 数据库级别的角色
+      href: authentication-access/database-level-roles.md
+    - name: 应用程序角色
+      href: authentication-access/application-roles.md
+      items:
+        - name: 创建应用程序角色
+          href: authentication-access/create-an-application-role.md
+- name: 凭据
+  href: authentication-access/credentials-database-engine.md
+  items:
+    - name: 创建凭据
+      href: authentication-access/create-a-credential.md
+- name: 安全对象
+  href: securables.md
+- name: 包含的数据库用户 - 使你的数据库可移植
+  href: contained-database-users-making-your-database-portable.md
+- name: 选择身份验证模式
+  href: choose-an-authentication-mode.md
+- name: 元数据可见性配置
+  href: metadata-visibility-configuration.md
+- name: 外围应用配置器
+  href: surface-area-configuration.md
+- name: TRUSTWORTHY 数据库属性
+  href: trustworthy-database-property.md
+- name: Permissions
+  href: permissions-database-engine.md
+- name: 权限层次结构
+  href: permissions-hierarchy-database-engine.md
+- name: “权限”或“安全对象”页
+  href: permissions-or-securables-page.md
+- name: 密码策略
+  href: password-policy.md
+- name: 强密码
+  href: strong-passwords.md
+- name: SQL Server 加密
+  href: encryption/sql-server-encryption.md
+  items:
+    - name: 加密层次结构
+      href: encryption/encryption-hierarchy.md
+    - name: 选择加密算法
+      href: encryption/choose-an-encryption-algorithm.md
+    - name: 透明数据加密 (TDE)
+      href: encryption/transparent-data-encryption.md
+      items:
+        - name: 借助 Azure SQL 数据库实现透明数据加密
+          href: dbengine-transparent-data-encryption-with-azure-sql-database.md
+        - name: 将受 TDE 保护的数据库移到其他 SQL Server
+          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+        - name: 使用 EKM 启用 TDE
+          href: encryption/enable-tde-on-sql-server-using-ekm.md
+    - name: SQL Server 和数据库加密密钥
+      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+      items:
+        - name: 服务主密钥
+          href: encryption/service-master-key.md
+        - name: 可扩展的密钥管理 (EKM)
+          href: encryption/extensible-key-management-ekm.md
+        - name: 使用 Azure Key Vault 的可扩展密钥管理
+          href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+        - name: 备份服务主密钥
+          href: encryption/back-up-the-service-master-key.md
+        - name: 还原服务主密钥
+          href: encryption/restore-the-service-master-key.md
+        - name: 创建数据库主密钥
+          href: encryption/create-a-database-master-key.md
+        - name: 备份数据库主密钥
+          href: encryption/back-up-a-database-master-key.md
+        - name: 还原数据库主密钥
+          href: encryption/restore-a-database-master-key.md
+        - name: 在两个服务器上创建相同的对称密钥
+          href: encryption/create-identical-symmetric-keys-on-two-servers.md
+        - name: 加密数据列
+          href: encryption/encrypt-a-column-of-data.md
+- name: 行级安全性
+  href: row-level-security.md
+- name: SQL Server 证书和非对称密钥
+  href: sql-server-certificates-and-asymmetric-keys.md
+- name: SQL Server 审核（数据库引擎）
+  href: auditing/sql-server-audit-database-engine.md
+  items:
+    - name: SQL Server 审核操作组和操作
+      href: auditing/sql-server-audit-action-groups-and-actions.md
+    - name: SQL Server Audit Records
+      href: auditing/sql-server-audit-records.md
+    - name: 创建服务器审核和服务器审核规范
+      href: auditing/create-a-server-audit-and-server-audit-specification.md
+    - name: 创建服务器审核规范和数据库审核规范
+      href: auditing/create-a-server-audit-and-database-audit-specification.md
+    - name: 查看 SQL Server 审核日志
+      href: auditing/view-a-sql-server-audit-log.md
+    - name: 将 SQL Server 审核事件写入安全日志
+      href: auditing/write-sql-server-audit-events-to-the-security-log.md

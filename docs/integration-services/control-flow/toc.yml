@@ -1,0 +1,172 @@
+- name: 概述
+  href: control-flow.md
+- name: 在控制流中添加或删除任务或容器
+  href: add-or-delete-a-task-or-a-container-in-a-control-flow.md
+- name: Integration Services 容器
+  href: integration-services-containers.md
+  items:
+    - name: Foreach 循环容器
+      href: foreach-loop-container.md
+    - name: 使用 Foreach 循环容器，循环遍历 Excel 文件和表
+      href: loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+    - name: For 循环容器
+      href: for-loop-container.md
+    - name: 序列容器
+      href: sequence-container.md
+    - name: 任务宿主容器
+      href: task-host-container.md
+- name: Integration Services 任务
+  href: integration-services-tasks.md
+  items:
+    - name: Analysis Services 执行 DDL 任务
+      href: analysis-services-execute-ddl-task.md
+    - name: Analysis Services 处理任务
+      href: analysis-services-processing-task.md
+    - name: Azure Blob 下载任务
+      href: azure-blob-download-task.md
+    - name: Azure blob 上载任务
+      href: azure-blob-upload-task.md
+    - name: Azure Data Lake Analytics 任务
+      href: azure-data-lake-analytics-task.md
+    - name: Azure Data Lake Store 文件系统任务
+      href: azure-data-lake-store-file-system-task.md
+    - name: Azure HDInsight 创建群集任务
+      href: azure-hdinsight-create-cluster-task.md
+    - name: Azure HDInsight 删除群集任务
+      href: azure-hdinsight-delete-cluster-task.md
+    - name: Azure HDInsight Hive 任务
+      href: azure-hdinsight-hive-task.md
+    - name: Azure HDInsight Pig 任务
+      href: azure-hdinsight-pig-task.md
+    - name: Azure SQL DW 上传任务
+      href: azure-sql-dw-upload-task.md
+    - name: “备份数据库”任务
+      href: back-up-database-task.md
+    - name: 大容量插入任务
+      href: bulk-insert-task.md
+    - name: CDC 控制任务
+      href: cdc-control-task.md
+      items:
+        - name: CDC 控制任务自定义属性
+          href: cdc-control-task-custom-properties.md
+    - name: “检查数据库完整性”任务
+      href: check-database-integrity-task.md
+    - name: 数据流任务
+      href: data-flow-task.md
+    - name: 数据挖掘查询任务
+      href: data-mining-query-task.md
+      items:
+        - name: 数据挖掘查询
+          href: data-mining-query.md
+    - name: 数据事件探查任务和查看器
+      href: data-profiling-task-and-viewer.md
+      items:
+        - name: 设置数据事件探查任务
+          href: setup-of-the-data-profiling-task.md
+        - name: 数据配置文件查看器 (Data Profile Viewer)
+          href: data-profile-viewer.md
+        - name: 数据事件探查任务
+          href: data-profiling-task.md
+          items:
+            - name: 单个表快速配置文件窗体（数据事件探查任务）
+              href: single-table-quick-profile-form-data-profiling-task.md
+            - name: 数据事件探查任务编辑器（“配置文件请求”页）
+              href: data-profiling-task-editor-profile-requests-page.md
+              items:
+                - name: 候选键配置文件请求选项（数据事件探查任务）
+                  href: candidate-key-profile-request-options-data-profiling-task.md
+                - name: 列长度分布配置文件请求选项（数据事件探查任务）
+                  href: column-length-distribution-profile-request-options-data-profiling-task.md
+                - name: 列 Null 比率配置文件请求选项（数据事件探查任务）
+                  href: column-null-ratio-profile-request-options-data-profiling-task.md
+                - name: 列模式信息配置文件请求选项（数据事件探查任务）
+                  href: column-pattern-profile-request-options-data-profiling-task.md
+                - name: 列统计信息配置文件请求选项（数据事件探查任务）
+                  href: column-statistics-profile-request-options-data-profiling-task.md
+                - name: 列值分布配置文件请求选项（数据事件探查任务）
+                  href: column-value-distribution-profile-request-options-data-profiling-task.md
+                - name: 函数依赖关系配置文件请求选项（数据事件探查任务）
+                  href: functional-dependency-profile-request-options-data-profiling-task.md
+                - name: 值包含配置文件请求选项（数据事件探查任务）
+                  href: value-inclusion-profile-request-options-data-profiling-task.md
+            - name: 合并包工作流中的数据事件探查任务
+              href: incorporate-a-data-profiling-task-in-package-workflow.md
+    - name: 执行包任务
+      href: execute-package-task.md
+    - name: 执行进程任务
+      href: execute-process-task.md
+    - name: “执行 SQL Server 代理作业”任务
+      href: execute-sql-server-agent-job-task.md
+    - name: 执行 SQL 任务
+      href: execute-sql-task.md
+    - name: 在 Integration Services 包中执行 MERGE
+      href: merge-in-integration-services-packages.md
+    - name: 执行 T-SQL 语句任务
+      href: execute-t-sql-statement-task.md
+    - name: 表达式任务
+      href: expression-task.md
+    - name: 文件系统任务
+      href: file-system-task.md
+    - name: FTP 任务
+      href: ftp-task.md
+    - name: Hadoop 文件系统任务
+      href: hadoop-file-system-task.md
+    - name: Hadoop 配置单元任务
+      href: hadoop-hive-task.md
+    - name: Hadoop Pig 任务
+      href: hadoop-pig-task.md
+    - name: “清除历史记录”任务
+      href: history-cleanup-task.md
+    - name: “清除维护”任务
+      href: maintenance-cleanup-task.md
+    - name: Message Queue Task
+      href: message-queue-task.md
+      items:
+        - name: 选择变量
+          href: select-variables.md
+        - name: 选择包
+          href: select-a-package.md
+    - name: “通知操作员”任务
+      href: notify-operator-task.md
+    - name: “重新生成索引”任务
+      href: rebuild-index-task.md
+    - name: “重新组织索引”任务
+      href: reorganize-index-task.md
+    - name: 脚本任务
+      href: script-task.md
+      items:
+        - name: “选择变量”页
+          href: select-variables-page.md
+    - name: 发送邮件任务
+      href: send-mail-task.md
+    - name: 收缩数据库任务
+      href: shrink-database-task.md
+    - name: 传输数据库任务
+      href: transfer-database-task.md
+    - name: 传输错误消息任务
+      href: transfer-error-messages-task.md
+    - name: 传输作业任务
+      href: transfer-jobs-task.md
+    - name: 传输登录名任务
+      href: transfer-logins-task.md
+    - name: 传输主存储过程任务
+      href: transfer-master-stored-procedures-task.md
+    - name: 传输 SQL Server 对象任务
+      href: transfer-sql-server-objects-task.md
+    - name: 选择要传输的对象
+      href: select-objects-to-transfer.md
+    - name: “更新统计信息”任务
+      href: update-statistics-task.md
+    - name: Web 服务任务
+      href: web-service-task.md
+    - name: WMI 数据读取器任务
+      href: wmi-data-reader-task.md
+    - name: WMI 事件观察器任务
+      href: wmi-event-watcher-task.md
+    - name: XML 任务
+      href: xml-task.md
+      items:
+        - name: Validate XML with the XML Task
+          href: validate-xml-with-the-xml-task.md
+- name: 优先约束
+  href: precedence-constraints.md

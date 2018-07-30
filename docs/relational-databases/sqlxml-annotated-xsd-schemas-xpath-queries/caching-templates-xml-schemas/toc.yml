@@ -1,0 +1,8 @@
+- name: 缓存模板、XSL 和架构 (SQLXML 4.0)
+  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
+- name: 架构缓存 (SQLXML 4.0)
+  href: schema-caching-sqlxml-4-0.md
+- name: 模板缓存 (SQLXML 4.0)
+  href: template-caching-sqlxml-4-0.md
+- name: XSL 缓存 (SQLXML 4.0)
+  href: xsl-caching-sqlxml-4-0.md

@@ -1,0 +1,132 @@
+- name: 概述
+  href: integration-services-transformations.md
+- name: 聚合转换
+  href: aggregate-transformation.md
+  items:
+    - name: 使用聚合转换来聚合数据集中的值
+      href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: 审核转换
+  href: audit-transformation.md
+- name: 平衡的数据分发服务器转换
+  href: balanced-data-distributor-transformation.md
+- name: 字符映射表转换
+  href: character-map-transformation.md
+- name: 有条件拆分转换
+  href: conditional-split-transformation.md
+  items:
+    - name: 使用有条件拆分转换拆分数据集
+      href: split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: 复制列转换
+  href: copy-column-transformation.md
+- name: 数据转换
+  href: data-conversion-transformation.md
+  items:
+    - name: 使用数据转换将数据转换为其他数据类型
+      href: convert-data-type-by-using-data-conversion-transformation.md
+- name: 数据挖掘查询转换
+  href: data-mining-query-transformation.md
+- name: DQS 清除转换
+  href: dqs-cleansing-transformation.md
+  items:
+    - name: DQS 清理连接管理器
+      href: dqs-cleansing-connection-manager.md
+    - name: 将数据质量规则应用于数据源
+      href: apply-data-quality-rules-to-data-source.md
+    - name: 将列映射到复合域
+      href: map-columns-to-composite-domains.md
+- name: 派生列转换
+  href: derived-column-transformation.md
+  items:
+    - name: 使用派生列转换派生列值
+      href: derive-column-values-by-using-the-derived-column-transformation.md
+- name: 导出列转换
+  href: export-column-transformation.md
+- name: 模糊分组转换
+  href: fuzzy-grouping-transformation.md
+  items:
+    - name: 使用模糊分组转换标识相似数据行
+      href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: 模糊查找转换
+  href: fuzzy-lookup-transformation.md
+- name: 导入列转换
+  href: import-column-transformation.md
+- name: 查找转换
+  href: lookup-transformation.md
+  items:
+    - name: 在不缓存模式或部分缓存模式下实现查找
+      href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+    - name: 在完全缓存模式下使用缓存连接管理器实现查找转换
+      href: lookup-transformation-full-cache-mode-cache-connection-manager.md
+    - name: 在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换
+      href: lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+    - name: 为查找转换创建和部署缓存
+      href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+    - name: 创建关系
+      href: create-relationships.md
+    - name: 缓存转换
+      href: cache-transform.md
+      items:
+        - name: 缓存连接管理器
+          href: cache-connection-manager.md
+- name: 合并转换
+  href: merge-transformation.md
+- name: Merge Join Transformation
+  href: merge-join-transformation.md
+  items:
+    - name: 使用合并联接转换扩展数据集
+      href: extend-a-dataset-by-using-the-merge-join-transformation.md
+    - name: 为合并转换和合并联接转换排序数据
+      href: sort-data-for-the-merge-and-merge-join-transformations.md
+- name: 多播转换
+  href: multicast-transformation.md
+- name: OLE DB 命令转换
+  href: ole-db-command-transformation.md
+- name: 百分比抽样转换
+  href: percentage-sampling-transformation.md
+- name: 透视转换
+  href: pivot-transformation.md
+- name: 行计数转换
+  href: row-count-transformation.md
+- name: 行抽样转换
+  href: row-sampling-transformation.md
+- name: 脚本组件
+  href: script-component.md
+- name: 渐变维度转换
+  href: slowly-changing-dimension-transformation.md
+  items:
+    - name: 使用渐变维度向导配置输出
+      href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+    - name: 渐变维度向导的 F1 帮助
+      href: slowly-changing-dimension-wizard-f1-help.md
+      items:
+        - name: 欢迎使用渐变维度向导
+          href: welcome-to-the-slowly-changing-dimension-wizard.md
+        - name: 选择维度表和键（渐变维度向导）
+          href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+        - name: 渐变维度列（渐变维度向导）
+          href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+        - name: 固定的属性选项和变化的属性选项（渐变维度向导）
+          href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+        - name: 历史属性选项（渐变维度向导）
+          href: historical-attribute-options-slowly-changing-dimension-wizard.md
+        - name: 推断维度成员（渐变维度向导）
+          href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+        - name: 完成渐变维度向导
+          href: finish-the-slowly-changing-dimension-wizard.md
+- name: 排序转换
+  href: sort-transformation.md
+- name: 字词提取转换
+  href: term-extraction-transformation.md
+- name: 字词查找转换
+  href: term-lookup-transformation.md
+- name: Union All 转换
+  href: union-all-transformation.md
+  items:
+    - name: 通过使用 Union All 转换来合并数据
+      href: merge-data-by-using-the-union-all-transformation.md
+- name: 逆透视转换
+  href: unpivot-transformation.md
+- name: 使用转换对数据进行转换
+  href: transform-data-with-transformations.md
+- name: Transformation Custom Properties
+  href: transformation-custom-properties.md

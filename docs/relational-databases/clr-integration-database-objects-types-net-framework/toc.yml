@@ -1,0 +1,10 @@
+- name: .NET Framework 中的 SQL Server 数据类型
+  href: sql-server-data-types-in-the-net-framework.md
+- name: 排序规则和 CLR 集成数据类型
+  href: collation-and-clr-integration-data-types.md
+- name: 在 CLR 中处理大型对象 (LOB) 参数
+  href: handling-large-object-lob-parameters-in-the-clr.md
+- name: 映射 CLR 参数数据
+  href: mapping-clr-parameter-data.md
+- name: 为 Null 性和三值逻辑比较
+  href: nullability-and-three-value-logic-comparisons.md

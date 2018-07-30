@@ -1,0 +1,92 @@
+- name: 编写扩展存储过程
+  href: database-engine-extended-stored-procedures-programming.md
+  items:
+    - name: 数据库引擎扩展存储过程编程
+      href: ../database-engine-extended-stored-procedure-programming.md
+    - name: 扩展存储过程的工作方式
+      href: how-extended-stored-procedures-work.md
+    - name: 创建扩展存储过程
+      href: creating-extended-stored-procedures.md
+    - name: 将结果集发送到服务器（扩展存储过程 API）
+      href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+    - name: 将扩展存储过程添加到 SQL Server
+      href: adding-an-extended-stored-procedure-to-sql-server.md
+    - name: 扩展存储过程的执行特征
+      href: execution-characteristics-of-extended-stored-procedures.md
+    - name: 从 SQL Server 中删除扩展存储过程
+      href: removing-an-extended-stored-procedure-from-sql-server.md
+    - name: 查询在 SQL Server 中安装的扩展存储过程
+      href: querying-extended-stored-procedures-installed-in-sql-server.md
+    - name: 卸载扩展存储过程 DLL
+      href: unloading-an-extended-stored-procedure-dll.md
+    - name: Unicode 数据和服务器代码页
+      href: unicode-data-and-server-code-pages.md
+- name: 扩展存储过程程序员参考
+  href: ../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+  items:
+    - name: srv_alloc（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md
+    - name: srv_convert（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md
+    - name: srv_describe（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md
+    - name: srv_getbindtoken（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md
+    - name: srv_got_attention（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md
+    - name: srv_message_handler（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-message-handler-extended-stored-procedure-api.md
+    - name: srv_paramdata（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md
+    - name: srv_paraminfo（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md
+    - name: srv_paramlen（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md
+    - name: srv_parammaxlen（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md
+    - name: srv_paramname（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramname-extended-stored-procedure-api.md
+    - name: srv_paramnumber（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramnumber-extended-stored-procedure-api.md
+    - name: srv_paramset（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramset-extended-stored-procedure-api.md
+    - name: srv_paramsetoutput（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md
+    - name: srv_paramstatus（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramstatus-extended-stored-procedure-api.md
+    - name: srv_paramtype（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md
+    - name: srv_pfield（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md
+    - name: srv_pfieldex（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md
+    - name: srv_rpcdb（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md
+    - name: srv_rpcname（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-rpcname-extended-stored-procedure-api.md
+    - name: srv_rpcnumber（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-rpcnumber-extended-stored-procedure-api.md
+    - name: srv_rpcoptions（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-rpcoptions-extended-stored-procedure-api.md
+    - name: srv_rpcowner（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-rpcowner-extended-stored-procedure-api.md
+    - name: srv_rpcparams（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md
+    - name: srv_senddone（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-senddone-extended-stored-procedure-api.md
+    - name: srv_sendmsg（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md
+    - name: srv_sendrow（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md
+    - name: srv_setcoldata（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md
+    - name: srv_setcollen（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-setcollen-extended-stored-procedure-api.md
+    - name: srv_setutype（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md
+    - name: srv_willconvert（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md
+    - name: srv_wsendmsg（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md
+    - name: 数据类型（扩展存储过程 API）
+      href: ../extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md

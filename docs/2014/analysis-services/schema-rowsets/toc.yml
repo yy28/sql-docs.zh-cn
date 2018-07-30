@@ -1,0 +1,142 @@
+- name: Analysis Services 架构行集
+  href: analysis-services-schema-rowsets.md
+- name: XML for Analysis 架构行集
+  href: xml/xml-for-analysis-schema-rowsets.md
+  items:
+    - name: DISCOVER_CALC_DEPENDENCY 行集
+      href: xml/discover-calc-dependency-rowset.md
+    - name: DISCOVER_CONNECTIONS 行集
+      href: xml/discover-connections-rowset.md
+    - name: DISCOVER_COMMAND_OBJECTS 行集
+      href: xml/discover-command-objects-rowset.md
+    - name: DISCOVER_COMMANDS 行集
+      href: xml/discover-commands-rowset.md
+    - name: DISCOVER_CSDL_METADATA 行集
+      href: xml/discover-csdl-metadata-rowset.md
+    - name: DISCOVER_DATASOURCES 行集
+      href: xml/discover-datasources-rowset.md
+    - name: DISCOVER_DB_CONNECTIONS 行集
+      href: xml/discover-db-connections-rowset.md
+    - name: DISCOVER_DIMENSION_STAT 行集
+      href: xml/discover-dimension-stat-rowset.md
+    - name: DISCOVER_ENUMERATORS 行集
+      href: xml/discover-enumerators-rowset.md
+    - name: DISCOVER_JOBS 行集
+      href: xml/discover-jobs-rowset.md
+    - name: DISCOVER_KEYWORDS 行集 (XMLA)
+      href: xml/discover-keywords-rowset-xmla.md
+    - name: DISCOVER_LITERALS 行集
+      href: xml/discover-literals-rowset.md
+    - name: DISCOVER_LOCATIONS 行集
+      href: xml/discover-locations-rowset.md
+    - name: DISCOVER_LOCKS 行集
+      href: xml/discover-locks-rowset.md
+    - name: DISCOVER_MEMORYGRANT 行集
+      href: xml/discover-memorygrant-rowset.md
+    - name: DISCOVER_MEMORYUSAGE 行集
+      href: xml/discover-memoryusage-rowset.md
+    - name: DISCOVER_OBJECT_ACTIVITY 行集
+      href: xml/discover-object-activity-rowset.md
+    - name: DISCOVER_OBJECT_MEMORY_USAGE 行集
+      href: xml/discover-object-memory-usage-rowset.md
+    - name: DISCOVER_PARTITION_DIMENSION_STAT 行集
+      href: xml/discover-partition-dimension-stat-rowset.md
+    - name: DISCOVER_PARTITION_STAT 行集
+      href: xml/discover-partition-stat-rowset.md
+    - name: DISCOVER_PERFORMANCE_COUNTERS 行集
+      href: xml/discover-performance-counters-rowset.md
+    - name: DISCOVER_PROPERTIES 行集
+      href: xml/discover-properties-rowset.md
+    - name: DISCOVER_SCHEMA_ROWSETS 行集
+      href: xml/discover-schema-rowsets-rowset.md
+    - name: DISCOVER_SESSIONS 行集
+      href: xml/discover-sessions-rowset.md
+    - name: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行集
+      href: xml/discover-storage-table-column-segments-rowset.md
+    - name: DISCOVER_STORAGE_TABLE_COLUMNS 行集
+      href: xml/discover-storage-table-columns-rowset.md
+    - name: DISCOVER_STORAGE_TABLES 行集
+      href: xml/discover-storage-tables-rowset.md
+    - name: DISCOVER_TRACE_COLUMNS 行集
+      href: xml/discover-trace-columns-rowset.md
+    - name: DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行集
+      href: xml/discover-trace-definition-providerinfo-rowset.md
+    - name: DISCOVER_TRACE_EVENT_CATEGORIES 行集
+      href: xml/discover-trace-event-categories-rowset.md
+    - name: DISCOVER_TRACES 行集
+      href: xml/discover-traces-rowset.md
+    - name: DISCOVER_TRANSACTIONS 行集
+      href: xml/discover-transactions-rowset.md
+    - name: DISCOVER_XEVENT_TRACE_DEFINITION 行集
+      href: ../dev-guide/discover-xevent-trace-definition-rowset.md
+    - name: DISCOVER_XML_METADATA 行集
+      href: xml/discover-xml-metadata-rowset.md
+- name: OLE DB 架构行集
+  href: ole-db/ole-db-schema-rowsets.md
+  items:
+    - name: DBSCHEMA_CATALOGS 行集
+      href: ole-db/dbschema-catalogs-rowset.md
+    - name: DBSCHEMA_COLUMNS 行集
+      href: ole-db/dbschema-columns-rowset.md
+    - name: DBSCHEMA_TABLES 行集
+      href: ole-db/dbschema-tables-rowset.md
+    - name: DBSCHEMA_PROVIDER_TYPES 行集
+      href: ole-db/dbschema-provider-types-rowset.md
+- name: OLE DB for OLAP 架构行集
+  href: ole-db-olap/ole-db-for-olap-schema-rowsets.md
+  items:
+    - name: DISCOVER_INSTANCES 行集
+      href: ole-db-olap/discover-instances-rowset.md
+    - name: DISCOVER_KEYWORDS 行集 (OLE DB for OLAP)
+      href: ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md
+    - name: MDSCHEMA_ACTIONS 行集
+      href: ole-db-olap/mdschema-actions-rowset.md
+    - name: MDSCHEMA_CUBES 行集
+      href: ole-db-olap/mdschema-cubes-rowset.md
+    - name: MDSCHEMA_DIMENSIONS 行集
+      href: ole-db-olap/mdschema-dimensions-rowset.md
+    - name: MDSCHEMA_FUNCTIONS 行集
+      href: ole-db-olap/mdschema-functions-rowset.md
+    - name: MDSCHEMA_HIERARCHIES 行集
+      href: ole-db-olap/mdschema-hierarchies-rowset.md
+    - name: MDSCHEMA_INPUT_DATASOURCES 行集
+      href: ole-db-olap/mdschema-input-datasources-rowset.md
+    - name: MDSCHEMA_KPIS 行集
+      href: ole-db-olap/mdschema-kpis-rowset.md
+    - name: MDSCHEMA_LEVELS 行集
+      href: ole-db-olap/mdschema-levels-rowset.md
+    - name: MDSCHEMA_MEASUREGROUP_DIMENSIONS 行集
+      href: ole-db-olap/mdschema-measuregroup-dimensions-rowset.md
+    - name: MDSCHEMA_MEASUREGROUPS 行集
+      href: ole-db-olap/mdschema-measuregroups-rowset.md
+    - name: MDSCHEMA_MEASURES 行集
+      href: ole-db-olap/mdschema-measures-rowset.md
+    - name: MDSCHEMA_MEMBERS 行集
+      href: ole-db-olap/mdschema-members-rowset.md
+    - name: MDSCHEMA_PROPERTIES 行集
+      href: ole-db-olap/mdschema-properties-rowset.md
+    - name: MDSCHEMA_SETS 行集
+      href: ole-db-olap/mdschema-sets-rowset.md
+- name: Data Mining Schema Rowsets
+  href: data-mining/data-mining-schema-rowsets.md
+  items:
+    - name: DMSCHEMA_MINING_COLUMNS 行集
+      href: data-mining/dmschema-mining-columns-rowset.md
+    - name: DMSCHEMA_MINING_FUNCTIONS 行集
+      href: data-mining/dmschema-mining-functions-rowset.md
+    - name: DMSCHEMA_MINING_MODEL_CONTENT 行集
+      href: data-mining/dmschema-mining-model-content-rowset.md
+    - name: DMSCHEMA_MINING_MODEL_CONTENT_PMML 行集
+      href: data-mining/dmschema-mining-model-content-pmml-rowset.md
+    - name: DMSCHEMA_MINING_MODEL_XML 行集
+      href: data-mining/dmschema-mining-model-xml-rowset.md
+    - name: DMSCHEMA_MINING_MODELS 行集
+      href: data-mining/dmschema-mining-models-rowset.md
+    - name: DMSCHEMA_MINING_SERVICE_PARAMETERS 行集
+      href: data-mining/dmschema-mining-service-parameters-rowset.md
+    - name: DMSCHEMA_MINING_SERVICES 行集
+      href: data-mining/dmschema-mining-services-rowset.md
+    - name: DMSCHEMA_MINING_STRUCTURE_COLUMNS 行集
+      href: data-mining/dmschema-mining-structure-columns-rowset.md
+    - name: DMSCHEMA_MINING_STRUCTURES 行集
+      href: data-mining/dmschema-mining-structures-rowset.md

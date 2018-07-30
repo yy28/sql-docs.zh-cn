@@ -1,0 +1,24 @@
+- name: 数据库邮件
+  href: database-mail.md
+- name: 数据库邮件配置对象
+  href: database-mail-configuration-objects.md
+  items:
+    - name: 创建数据库邮件配置文件
+      href: create-a-database-mail-profile.md
+    - name: 创建数据库邮件帐户
+      href: create-a-database-mail-account.md
+    - name: 配置数据库邮件
+      href: configure-database-mail.md
+- name: 数据库邮件消息处理对象
+  href: database-mail-messaging-objects.md
+- name: 数据库邮件外部程序
+  href: database-mail-external-program.md
+- name: 数据库邮件日志和审核
+  href: database-mail-log-and-audits.md
+  items:
+    - name: 创建 SQL Server 代理作业以存档数据库邮件和事件日志
+      href: create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
+    - name: 检查使用数据库邮件发送的电子邮件的状态
+      href: check-the-status-of-e-mail-messages-sent-with-database-mail.md
+- name: 配置 SQL Server 代理邮件以使用数据库邮件
+  href: configure-sql-server-agent-mail-to-use-database-mail.md

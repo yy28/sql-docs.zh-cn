@@ -1,0 +1,8 @@
+- name: 开发自定义连接管理器
+  href: developing-a-custom-connection-manager.md
+- name: 创建自定义连接管理器
+  href: creating-a-custom-connection-manager.md
+- name: 编写自定义连接管理器代码
+  href: coding-a-custom-connection-manager.md
+- name: 为自定义连接管理器开发用户界面
+  href: developing-a-user-interface-for-a-custom-connection-manager.md

@@ -1,0 +1,21 @@
+- name: 用户定义函数
+  href: user-defined-functions.md
+  items:
+    - name: 确定性函数和不确定性函数
+      href: deterministic-and-nondeterministic-functions.md
+    - name: 创建用户定义函数（数据库引擎）
+      href: create-user-defined-functions-database-engine.md
+    - name: 创建 CLR 函数
+      href: create-clr-functions.md
+    - name: 创建用户定义聚合
+      href: create-user-defined-aggregates.md
+    - name: 修改用户定义函数
+      href: modify-user-defined-functions.md
+    - name: 删除用户定义函数
+      href: delete-user-defined-functions.md
+    - name: 执行用户定义函数
+      href: execute-user-defined-functions.md
+    - name: 重命名用户定义函数
+      href: rename-user-defined-functions.md
+    - name: 查看用户定义函数
+      href: view-user-defined-functions.md

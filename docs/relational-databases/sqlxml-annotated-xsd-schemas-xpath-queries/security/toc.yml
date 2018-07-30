@@ -1,0 +1,12 @@
+- name: SQLXML 4.0 安全注意事项
+  href: sqlxml-4-0-security-considerations.md
+- name: 带批注的架构的安全注意事项 (SQLXML 4.0)
+  href: annotated-schema-security-considerations-sqlxml-4-0.md
+- name: 大容量加载安全性注意事项 (SQLXML 4.0)
+  href: bulk-load-security-considerations-sqlxml-4-0.md
+- name: SQLXML 核心安全性注意事项
+  href: core-sqlxml-security-considerations.md
+- name: FOR XML 安全注意事项 (SQLXML 4.0)
+  href: for-xml-security-considerations-sqlxml-4-0.md
+- name: updategram 的安全注意事项 (SQLXML 4.0)
+  href: updategram-security-considerations-sqlxml-4-0.md

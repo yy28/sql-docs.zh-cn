@@ -1,0 +1,42 @@
+- name: Windows Server 故障转移群集 (WSFC) 与 SQL Server
+  href: windows-server-failover-clustering-wsfc-with-sql-server.md
+  items:
+    - name: WSFC 仲裁模式和投票配置
+      href: wsfc-quorum-modes-and-voting-configuration-sql-server.md
+      items:
+        - name: 查看群集仲裁 NodeWeight 设置
+          href: view-cluster-quorum-nodeweight-settings.md
+        - name: 配置群集仲裁 NodeWeight 设置
+          href: configure-cluster-quorum-nodeweight-settings.md
+    - name: 通过强制仲裁进行 WSFC 灾难恢复
+      href: wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+      items:
+        - name: 在无仲裁情况下强制启动 WSFC 群集
+          href: force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: SQL Server 多子网群集
+      href: sql-server-multi-subnet-clustering-sql-server.md
+- name: AlwaysOn 故障转移群集实例
+  href: always-on-failover-cluster-instances-sql-server.md
+- name: Failover Policy for Failover Cluster Instances
+  href: failover-policy-for-failover-cluster-instances.md
+  items:
+    - name: 配置 HealthCheckTimeout 属性设置
+      href: configure-healthchecktimeout-property-settings.md
+    - name: 配置 FailureConditionLevel 属性设置
+      href: configure-failureconditionlevel-property-settings.md
+    - name: 查看和读取故障转移群集实例诊断日志
+      href: view-and-read-failover-cluster-instance-diagnostics-log.md
+- name: 故障转移群集实例管理和维护
+  href: failover-cluster-instance-administration-and-maintenance.md
+  items:
+    - name: 向 SQL Server 资源添加依赖项
+      href: add-dependencies-to-a-sql-server-resource.md
+    - name: 从故障转移群集实例故障中恢复
+      href: recover-from-failover-cluster-instance-failure.md
+    - name: 更改故障转移群集实例的 IP 地址
+      href: change-the-ip-address-of-a-failover-cluster-instance.md
+- name: 升级 SQL Server 故障转移群集
+  href: upgrade-a-sql-server-failover-cluster-instance.md
+  items:
+    - name: 升级 SQL Server 故障转移群集实例（安装程序）
+      href: upgrade-a-sql-server-failover-cluster-instance-setup.md

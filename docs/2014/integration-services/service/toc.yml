@@ -1,0 +1,39 @@
+- name: Integration Services 服务（SSIS 服务）
+  href: integration-services-service-ssis-service.md
+  items:
+    - name: 管理 Integration Services 服务
+      href: ../manage-the-integration-services-service.md
+    - name: 设置 Integration Services 服务的属性
+      href: ../set-the-properties-of-the-integration-services-service.md
+    - name: 配置 Integration Services 服务（SSIS 服务）
+      href: ../configuring-the-integration-services-service-ssis-service.md
+    - name: 为访问 SSIS 服务配置 Windows 防火墙
+      href: ../configure-a-windows-firewall-for-access-to-the-ssis-service.md
+    - name: 连接到远程 Integration Services 服务器（SSIS 服务）
+      href: ../connect-to-a-remote-integration-services-server-ssis-service.md
+    - name: 连接到 Integration Services
+      href: ../connect-to-integration-services.md
+    - name: 授予 Integration Services 服务权限
+      href: ../grant-permissions-to-integration-services-service.md
+    - name: 由 Integration Services 服务记录的事件
+      href: events-logged-by-the-integration-services-service.md
+      items:
+        - name: 查看 Integration Services 服务的事件
+          href: ../view-events-for-the-integration-services-service.md
+- name: 包管理（SSIS 服务）
+  href: package-management-ssis-service.md
+  items:
+    - name: 导入和导出包（SSIS 服务）
+      href: ../import-and-export-packages-ssis-service.md
+    - name: “导出包”对话框 UI 参考
+      href: ../export-package-dialog-box-ui-reference.md
+    - name: “导入包”对话框 UI 参考
+      href: ../import-package-dialog-box-ui-reference.md
+    - name: 包备份和还原（SSIS 服务）
+      href: ../package-backup-and-restore-ssis-service.md
+    - name: 在 SQL Server Management Studio 中查看 Integration Services 包（SSIS 服务）
+      href: ../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md
+    - name: 群集中的 Integration Services (SSIS)
+      href: integration-services-ssis-in-a-cluster.md
+    - name: 将 Integration Services 服务配置为群集资源
+      href: ../configure-the-integration-services-service-as-a-cluster-resource.md

@@ -1,0 +1,20 @@
+- name: 概述
+  href: troubleshoot-integration-services-ssis-packages.md
+- name: 对包开发进行故障排除和调试
+  items:
+    - name: 包开发的故障排除工具
+      href: troubleshooting-tools-for-package-development.md
+    - name: 调试控制流
+      href: debugging-control-flow.md
+    - name: 调试脚本
+      href: debugging-script.md
+    - name: 调试数据流
+      href: debugging-data-flow.md
+- name: 包连接故障排除工具
+  href: troubleshooting-tools-for-package-connectivity.md
+- name: 对包执行进行故障排除的工具
+  href: troubleshooting-tools-for-package-execution.md
+- name: 对包执行进行故障排除的报告
+  href: troubleshooting-reports-for-package-execution.md
+- name: 生成包执行的转储文件
+  href: generating-dump-files-for-package-execution.md

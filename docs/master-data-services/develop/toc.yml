@@ -1,0 +1,12 @@
+- name: 分类的 Web 服务操作 (Master Data Services)
+  href: categorized-web-service-operations-master-data-services.md
+- name: 创建自定义工作流 - 示例
+  href: create-a-custom-workflow-example.md
+- name: 创建自定义工作流 - XML 说明
+  href: create-a-custom-workflow-xml-description.md
+- name: 创建自定义工作流 (Master Data Services)
+  href: create-a-custom-workflow-master-data-services.md
+- name: 创建主数据管理器 Web 服务代理类
+  href: create-master-data-manager-web-service-proxy-classes.md
+- name: Master Data Services 开发人员文档
+  href: master-data-services-developer-documentation.md

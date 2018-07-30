@@ -1,0 +1,21 @@
+- name: 跟踪数据更改
+  href: track-data-changes-sql-server.md
+  items:
+    - name: 关于变更数据捕获
+      href: about-change-data-capture-sql-server.md
+    - name: 启用和禁用变更数据捕获
+      href: enable-and-disable-change-data-capture-sql-server.md
+    - name: 管理和监视变更数据捕获
+      href: administer-and-monitor-change-data-capture-sql-server.md
+    - name: 处理变更数据
+      href: work-with-change-data-sql-server.md
+    - name: 关于更改跟踪
+      href: about-change-tracking-sql-server.md
+    - name: 启用和禁用更改跟踪
+      href: enable-and-disable-change-tracking-sql-server.md
+    - name: 管理更改跟踪
+      href: manage-change-tracking-sql-server.md
+    - name: 使用更改跟踪
+      href: work-with-change-tracking-sql-server.md
+    - name: 变更数据捕获和其他 SQL Server 功能
+      href: change-data-capture-and-other-sql-server-features.md

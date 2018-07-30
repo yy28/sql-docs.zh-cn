@@ -1,0 +1,36 @@
+- name: Resource Governor
+  href: resource-governor.md
+  items:
+    - name: 启用资源调控器
+      href: enable-resource-governor.md
+    - name: 禁用资源调控器
+      href: disable-resource-governor.md
+- name: 资源调控器资源池
+  href: resource-governor-resource-pool.md
+  items:
+    - name: 创建资源池
+      href: create-a-resource-pool.md
+    - name: 更改资源池设置
+      href: change-resource-pool-settings.md
+    - name: 删除资源池
+      href: delete-a-resource-pool.md
+- name: 资源调控器工作负荷组
+  href: resource-governor-workload-group.md
+  items:
+    - name: 创建工作负荷组
+      href: create-a-workload-group.md
+    - name: 更改工作负荷组设置
+      href: change-workload-group-settings.md
+    - name: 移动工作负荷组
+      href: move-a-workload-group.md
+    - name: 删除工作负荷组
+      href: delete-a-workload-group.md
+- name: Resource Governor Classifier Function
+  href: resource-governor-classifier-function.md
+  items:
+    - name: 创建和测试分类器用户定义函数
+      href: create-and-test-a-classifier-user-defined-function.md
+- name: 使用模板配置资源调控器
+  href: configure-resource-governor-using-a-template.md
+- name: 查看资源调控器属性
+  href: view-resource-governor-properties.md

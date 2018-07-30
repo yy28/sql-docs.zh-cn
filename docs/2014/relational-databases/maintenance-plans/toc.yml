@@ -1,0 +1,50 @@
+- name: 维护计划
+  href: maintenance-plans.md
+- name: 创建维护计划
+  href: create-a-maintenance-plan.md
+  items:
+    - name: 使用维护计划向导
+      href: use-the-maintenance-plan-wizard.md
+    - name: 创建维护计划（维护计划设计图面）
+      href: create-a-maintenance-plan-maintenance-plan-design-surface.md
+    - name: “维护计划”节点（对象资源管理器）
+      href: maintenance-plans-node-object-explorer.md
+- name: 工具箱组件的 F1 帮助
+  href: toolbox-component-f1-help.md
+  items:
+    - name: 维护计划（“设计”选项卡）
+      href: maintenance-plan-design-tab.md
+    - name: 维护计划（“报告和记录”页）
+      href: maintenance-plan-reporting-and-logging-page.md
+    - name: 维护计划（管理连接）
+      href: maintenance-plan-manage-connections.md
+    - name: “备份数据库”任务（维护计划）
+      href: options-in-the-back-up-database-task-for-maintenance-plan.md
+    - name: “更新统计信息”任务（维护计划）
+      href: update-statistics-task-maintenance-plan.md
+    - name: “重新生成索引”任务（维护计划）
+      href: rebuild-index-task-maintenance-plan.md
+    - name: “收缩数据库”任务（维护计划）
+      href: shrink-database-task-maintenance-plan.md
+    - name: “检查数据库完整性”任务（维护计划）
+      href: check-database-integrity-task-maintenance-plan.md
+    - name: “执行 T-SQL 语句”任务（维护计划）
+      href: execute-t-sql-statement-task-maintenance-plan.md
+    - name: “重新组织索引”任务（维护计划）
+      href: reorganize-index-task-maintenance-plan.md
+    - name: “通知操作员”任务（维护计划）
+      href: notify-operator-task-maintenance-plan.md
+    - name: “清除历史记录”任务（维护计划）
+      href: history-cleanup-task-maintenance-plan.md
+    - name: “执行 SQL Server 代理作业”任务（维护计划）
+      href: execute-sql-server-agent-job-task-maintenance-plan.md
+    - name: “清除维护”任务（维护计划）
+      href: maintenance-cleanup-task-maintenance-plan.md
+    - name: 作业活动监视器（筛选设置）
+      href: job-activity-monitor-filter-settings.md
+    - name: 作业活动监视器刷新
+      href: job-activity-monitor-refresh.md
+    - name: 维护计划（子计划属性）
+      href: maintenance-plan-subplan-properties.md
+    - name: 维护计划（服务器）
+      href: maintenance-plan-servers.md

@@ -1,0 +1,224 @@
+- name: 用脚本扩展包
+  href: extending-packages-with-scripting.md
+- name: 比较脚本任务和脚本组件
+  href: comparing-the-script-task-and-the-script-component.md
+- name: 比较脚本解决方案与自定义对象
+  href: comparing-scripting-solutions-and-custom-objects.md
+- name: 引用脚本解决方案中的其他程序集
+  href: referencing-other-assemblies-in-scripting-solutions.md
+- name: 通过在脚本任务和脚本组件中设置断点来调试脚本
+  href: debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md
+- name: 使用脚本任务扩展包
+  href: task/extending-the-package-with-the-script-task.md
+  items:
+    - name: 在脚本任务编辑器中配置脚本任务
+      href: task/configuring-the-script-task-in-the-script-task-editor.md
+    - name: 脚本任务的编码和调试
+      href: task/coding-and-debugging-the-script-task.md
+    - name: 在脚本任务中使用变量
+      href: task/using-variables-in-the-script-task.md
+    - name: 在脚本任务中连接数据源
+      href: task/connecting-to-data-sources-in-the-script-task.md
+    - name: 在脚本任务中引发事件
+      href: task/raising-events-in-the-script-task.md
+    - name: 脚本任务中的日志记录
+      href: task/logging-in-the-script-task.md
+    - name: 从脚本任务返回结果
+      href: task/returning-results-from-the-script-task.md
+- name: 脚本任务示例
+  href: ../extending-packages-scripting-task-examples/script-task-examples.md
+  items:
+    - name: 使用脚本任务检测空平面文件
+      href: ../extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md
+    - name: 使用脚本任务为 Foreach 循环收集列表
+      href: ../extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md
+    - name: 使用脚本任务查询 Active Directory
+      href: ../extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md
+    - name: 使用脚本任务监视性能计数器
+      href: ../extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md
+    - name: 使用脚本任务处理图像
+      href: ../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md
+    - name: 使用脚本任务查找已安装的打印机
+      href: ../extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md
+    - name: 使用脚本任务发送 HTML 邮件消息
+      href: ../extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md
+    - name: 使用脚本任务处理 Excel 文件
+      href: ../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md
+    - name: 使用脚本任务向远程私有消息队列发送消息
+      href: ../extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md
+- name: Extending the Data Flow with the Script Component
+  href: data-flow-script-component/extending-the-data-flow-with-the-script-component.md
+  items:
+    - name: 在脚本组件编辑器中配置脚本组件
+      href: data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md
+    - name: 脚本组件的编码和调试
+      href: data-flow-script-component/coding-and-debugging-the-script-component.md
+    - name: 了解脚本组件对象模型
+      href: data-flow-script-component/understanding-the-script-component-object-model.md
+    - name: 在脚本组件中使用变量
+      href: data-flow-script-component/using-variables-in-the-script-component.md
+    - name: 在脚本组件中连接数据源
+      href: data-flow-script-component/connecting-to-data-sources-in-the-script-component.md
+    - name: 在脚本组件中引发事件
+      href: data-flow-script-component/raising-events-in-the-script-component.md
+    - name: 脚本组件中的日志记录
+      href: data-flow-script-component/logging-in-the-script-component.md
+- name: 开发特定类型的脚本组件
+  href: ../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md
+  items:
+    - name: 使用脚本组件创建源
+      href: ../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md
+    - name: 使用脚本组件创建同步转换
+      href: ../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md
+    - name: 使用脚本组件创建异步转换
+      href: ../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md
+    - name: 使用脚本组件创建目标
+      href: ../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md
+- name: 其他脚本组件示例
+  href: ../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md
+  items:
+    - name: 模拟脚本组件的错误输出
+      href: ../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md
+    - name: 使用脚本组件增强错误输出
+      href: ../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md
+    - name: 使用脚本组件创建 ODBC 目标
+      href: ../extending-packages-scripting-data-flow-script-component-examples/creating-an-odbc-destination-with-the-script-component.md
+    - name: 使用脚本组件分析非标准文本文件格式
+      href: ../extending-packages-scripting-data-flow-script-component-examples/parsing-non-standard-text-file-formats-with-the-script-component.md
+- name: 用自定义对象扩展包
+  href: ../extending-packages-custom-objects/extending-packages-with-custom-objects.md
+  items:
+    - name: 开发 Integration Services 的自定义对象
+      href: ../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md
+    - name: 使自定义对象持久化
+      href: ../extending-packages-custom-objects/persisting-custom-objects.md
+    - name: 生成、部署和调试自定义对象
+      href: ../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md
+    - name: 开发自定义任务
+      href: ../extending-packages-custom-objects/task/developing-a-custom-task.md
+    - name: 创建自定义任务
+      href: ../extending-packages-custom-objects/task/creating-a-custom-task.md
+    - name: 编写自定义任务代码
+      href: ../extending-packages-custom-objects/task/coding-a-custom-task.md
+    - name: 在自定义任务中连接数据源
+      href: ../extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md
+    - name: 在自定义任务中引发和定义事件
+      href: ../extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md
+    - name: 在自定义任务中添加对调试的支持
+      href: ../extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md
+    - name: 为自定义任务开发用户界面
+      href: ../extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md
+    - name: 开发自定义连接管理器
+      href: ../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md
+    - name: 创建自定义连接管理器
+      href: ../extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md
+    - name: 编写自定义连接管理器代码
+      href: ../extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md
+    - name: 为自定义连接管理器开发用户界面
+      href: ../extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md
+- name: 开发自定义日志提供程序
+  href: ../extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md
+  items:
+    - name: 创建自定义日志提供程序
+      href: ../extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md
+    - name: 编写自定义日志提供程序代码
+      href: ../extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md
+    - name: 为自定义日志提供程序开发用户界面
+      href: ../extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md
+- name: 开发自定义 ForEach 枚举器
+  href: ../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md
+  items:
+    - name: 创建自定义 Foreach 枚举器
+      href: ../extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md
+    - name: 编写自定义 Foreach 枚举器代码
+      href: ../extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md
+    - name: 为自定义 ForEach 枚举器开发用户界面
+      href: ../extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md
+- name: 开发自定义数据流组件
+  href: ../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md
+  items:
+    - name: 创建自定义数据流组件
+      href: ../extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md
+    - name: 数据流组件的设计时方法
+      href: ../extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md
+    - name: 数据流组件的运行时方法
+      href: ../extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md
+    - name: 执行计划和缓冲区分配
+      href: ../extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md
+    - name: 在数据流中使用数据类型
+      href: ../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md
+    - name: 验证数据流组件
+      href: ../extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md
+    - name: 实现外部元数据
+      href: ../extending-packages-custom-objects/data-flow/implementing-external-metadata.md
+    - name: 在数据流组件中引发和定义事件
+      href: ../extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md
+    - name: 在数据流组件中记录和定义日志条目
+      href: ../extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md
+    - name: 在数据流组件中使用错误输出
+      href: ../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md
+    - name: 升级数据流组件的版本
+      href: ../extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md
+    - name: 为数据流组件开发用户界面
+      href: ../extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md
+- name: 开发特定类型的数据流组件
+  href: ../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md
+  items:
+    - name: 开发自定义源组件
+      href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md
+    - name: 开发具有同步输出的自定义转换组件
+      href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md
+    - name: 开发具有异步输出的自定义转换组件
+      href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md
+    - name: 开发自定义目标组件
+      href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md
+    - name: 开发具有多个输入的数据流组件
+      href: ../extending-packages-custom-objects-data-flow-types/developing-data-flow-components-with-multiple-inputs.md
+- name: 以编程方式生成包
+  href: ../building-packages-programmatically/building-packages-programmatically.md
+  items:
+    - name: 以编程方式创建包
+      href: ../building-packages-programmatically/creating-a-package-programmatically.md
+    - name: 以编程方式添加任务
+      href: ../building-packages-programmatically/adding-tasks-programmatically.md
+    - name: 以编程方式连接任务
+      href: ../building-packages-programmatically/connecting-tasks-programmatically.md
+    - name: 以编程方式添加连接
+      href: ../building-packages-programmatically/adding-connections-programmatically.md
+    - name: 以编程方式使用变量
+      href: ../building-packages-programmatically/working-with-variables-programmatically.md
+    - name: 以编程方式处理事件
+      href: ../building-packages-programmatically/handling-events-programmatically.md
+    - name: 以编程方式启用日志记录
+      href: ../building-packages-programmatically/enabling-logging-programmatically.md
+    - name: 以编程方式添加数据流任务
+      href: ../building-packages-programmatically/adding-the-data-flow-task-programmatically.md
+    - name: 以编程方式查找数据流组件
+      href: ../building-packages-programmatically/discovering-data-flow-components-programmatically.md
+    - name: 以编程方式添加数据流组件
+      href: ../building-packages-programmatically/adding-data-flow-components-programmatically.md
+    - name: 以编程方式连接数据流组件
+      href: ../building-packages-programmatically/connecting-data-flow-components-programmatically.md
+    - name: 以编程方式选择输入列
+      href: ../building-packages-programmatically/selecting-input-columns-programmatically.md
+    - name: 以编程方式保存包
+      href: ../building-packages-programmatically/saving-a-package-programmatically.md
+- name: 以编程方式运行和管理包
+  href: ../run-manage-packages-programmatically/running-and-managing-packages-programmatically.md
+  items:
+    - name: 了解本地执行与远程执行之间的差异
+      href: ../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md
+    - name: 以编程方式加载和运行本地包
+      href: ../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md
+    - name: 以编程方式加载和运行远程包
+      href: ../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md
+    - name: 加载本地包的输出
+      href: ../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md
+    - name: 以编程方式枚举可用的包
+      href: ../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md
+    - name: 以编程方式管理包和文件夹
+      href: ../run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md
+    - name: 以编程方式管理正在运行的包
+      href: ../run-manage-packages-programmatically/managing-running-packages-programmatically.md
+    - name: 以编程方式管理包角色（SSIS 服务）
+      href: ../run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md

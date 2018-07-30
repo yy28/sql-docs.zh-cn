@@ -1,0 +1,35 @@
+- name: Security
+  href: security-overview-integration-services.md
+- name: 威胁和漏洞缓解
+  href: ../threat-and-vulnerability-mitigation-integration-services.md
+- name: Integration Services 角色（SSIS 服务）
+  href: integration-services-roles-ssis-service.md
+  items:
+    - name: “包角色”对话框 UI 参考
+      href: ../package-roles-dialog-box-ui-reference.md
+- name: 访问 Integration Services 服务
+  href: ../access-to-the-integration-services-service.md
+- name: 对包使用的文件的访问
+  href: ../access-to-files-used-by-packages.md
+- name: 对包中敏感数据的访问控制
+  href: access-control-for-sensitive-data-in-packages.md
+  items:
+    - name: 设置或更改包的保护级别
+      href: ../set-or-change-the-protection-level-of-packages.md
+    - name: “包和项目保护级别”对话框
+      href: ../package-and-project-protection-level-dialog-box.md
+    - name: 包和项目密码
+      href: ../package-and-project-password.md
+- name: 使用数字签名标识包的源
+  href: identify-the-source-of-packages-with-digital-signatures.md
+  items:
+    - name: 通过设置注册表值实现签名策略
+      href: ../implement-a-signing-policy-by-setting-a-registry-value.md
+    - name: 使用数字证书对包签名
+      href: ../sign-a-package-by-using-a-digital-certificate.md
+    - name: “数字签名”对话框 UI 参考
+      href: ../digital-signing-dialog-box-ui-reference.md
+- name: 创建用户定义的角色
+  href: ../create-a-user-defined-role.md
+- name: 将读取者角色和写入者角色分配给包
+  href: ../assign-a-reader-and-writer-role-to-a-package.md

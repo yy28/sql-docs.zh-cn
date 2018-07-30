@@ -1,0 +1,22 @@
+- name: Enabled 属性（ServerNetworkProtocol 类）
+  href: enabled-property-servernetworkprotocol-class.md
+- name: InstanceName 属性（ServerNetworkProtocol 类）
+  href: instancename-property-servernetworkprotocol-class.md
+- name: IpAddresses 属性（ServerNetworkProtocol 类）
+  href: ipaddresses-property-servernetworkprotocol-class.md
+- name: MultiIpConfigurationSupport 属性（ServerNetworkProtocol 类）
+  href: multiipconfigurationsupport-property-servernetworkprotocol-class.md
+- name: Properties 属性（ServerNetworkProtocol 类）
+  href: properties-property-servernetworkprotocol-class.md
+- name: ProtocolDisplayName 属性（ServerNetworkProtocol 类）
+  href: protocoldisplayname-property-servernetworkprotocol-class.md
+- name: ProtocolDLL 属性（ServerNetworkProtocol 类）
+  href: protocoldll-property-servernetworkprotocol-class.md
+- name: ProtocolName 属性（ServerNetworkProtocol 类）
+  href: protocolname-property-servernetworkprotocol-class.md
+- name: ServerNetworkProtocol 类
+  href: servernetworkprotocol-class.md
+- name: SetDisable 方法（ServerNetworkProtocol 类）
+  href: setdisable-method-servernetworkprotocol-class.md
+- name: SetEnable 方法（ServerNetworkProtocol 类）
+  href: setenable-method-servernetworkprotocol-class.md

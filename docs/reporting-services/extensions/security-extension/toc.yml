@@ -1,0 +1,10 @@
+- name: Reporting Services 中的身份验证
+  href: authentication-in-reporting-services.md
+- name: Reporting Services 中的授权
+  href: authorization-in-reporting-services.md
+- name: 如何安装自定义安全扩展插件
+  href: how-to-install-custom-security-extensions.md
+- name: 实现安全扩展插件
+  href: implementing-a-security-extension.md
+- name: 安全扩展插件概述
+  href: security-extensions-overview.md

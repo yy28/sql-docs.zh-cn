@@ -1,0 +1,78 @@
+- name: 监视和优化性能
+  href: monitor-and-tune-for-performance.md
+- name: 监视 SQL Server 组件
+  href: monitor-sql-server-components.md
+- name: 性能监视和优化工具
+  href: performance-monitoring-and-tuning-tools.md
+- name: 基数估计
+  href: cardinality-estimation-sql-server.md
+- name: 建立性能基线
+  href: establish-a-performance-baseline.md
+- name: 隔离性能问题
+  href: isolate-performance-problems.md
+- name: 识别瓶颈
+  href: identify-bottlenecks.md
+- name: Monitoring Performance By Using the Query Store
+  href: monitoring-performance-by-using-the-query-store.md
+- name: 服务器性能和活动监视
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: 启动系统监视器 (Windows)
+      href: start-system-monitor-windows.md
+    - name: 设置 SQL Server 数据库警报 (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: 查看 Windows 应用程序日志 (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: 查看 SQL Server 错误日志 (SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: 保存死锁图形（SQL Server 事件探查器）
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 打开、查看和打印死锁文件 (SQL Server Management Studio)
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: 分别保存 Showplan XML 事件 (SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: 分别保存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: 显示和保存执行计划
+  href: display-and-save-execution-plans.md
+  items:
+    - name: 显示估计的执行计划
+      href: display-the-estimated-execution-plan.md
+    - name: 显示实际执行计划
+      href: display-an-actual-execution-plan.md
+    - name: 以 XML 格式保存执行计划
+      href: save-an-execution-plan-in-xml-format.md
+- name: 计划指南
+  href: plan-guides.md
+  items:
+    - name: 创建新的计划指南
+      href: create-a-new-plan-guide.md
+    - name: 为参数化查询创建计划指南
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: 使用计划指南指定查询参数化行为
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: 将现有查询计划应用到计划指南
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: 将查询提示附加到计划指南
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: 查看计划指南属性
+      href: view-plan-guide-properties.md
+    - name: 使用 SQL Server Profiler 创建和测试计划指南
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: 升级后验证计划指南
+      href: validate-plan-guides-after-upgrade.md
+    - name: 删除计划指南
+      href: delete-a-plan-guide.md
+    - name: 启用或禁用计划指南
+      href: enable-or-disable-a-plan-guide.md
+- name: Database Engine Tuning Advisor
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: 启动并使用数据库引擎优化顾问
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: 减轻生产服务器优化负荷
+      href: reduce-the-production-server-tuning-load.md
+    - name: 使用测试服务器的注意事项
+      href: considerations-for-using-test-servers.md
+    - name: 查看和使用数据库引擎优化顾问的输出
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

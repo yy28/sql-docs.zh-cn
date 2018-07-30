@@ -1,0 +1,10 @@
+- name: FlagName 属性（ServerSettingsGeneralFlag 类）
+  href: flagname-property-serversettingsgeneralflag-class.md
+- name: FlagValue 属性（ServerSettingsGeneralFlag 类）
+  href: flagvalue-property-serversettingsgeneralflag-class.md
+- name: InstanceName 属性（ServerSettingsGeneralFlag 类）
+  href: instancename-property-serversettingsgeneralflag-class.md
+- name: ServerSettingsGeneralFlag 类
+  href: serversettingsgeneralflag-class.md
+- name: SetValue 方法（ServerSettingsGeneralFlag 类）
+  href: setvalue-method-serversettingsgeneralflag-class.md

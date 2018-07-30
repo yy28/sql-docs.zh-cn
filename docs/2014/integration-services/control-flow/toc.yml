@@ -1,0 +1,336 @@
+- name: “控制流”
+  href: control-flow.md
+- name: “控制流”选项卡
+  href: ../control-flow-tab.md
+- name: Integration Services 容器
+  href: integration-services-containers.md
+  items:
+    - name: Foreach 循环容器
+      href: foreach-loop-container.md
+      items:
+        - name: 配置 Foreach 循环容器
+          href: ../configure-a-foreach-loop-container.md
+        - name: 使用 Foreach 循环容器，循环遍历 Excel 文件和表
+          href: loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+        - name: 将枚举添加到控制流
+          href: ../add-enumeration-to-a-control-flow.md
+        - name: “For Each Item 列”对话框 UI 参考
+          href: ../for-each-item-columns-dialog-box-ui-reference.md
+        - name: Foreach 循环编辑器（“常规”页）
+          href: ../foreach-loop-editor-general-page.md
+        - name: Foreach 循环编辑器（“集合”页）
+          href: ../foreach-loop-editor-collection-page.md
+        - name: Foreach 循环编辑器（“变量映射”页）
+          href: ../foreach-loop-editor-variable-mappings-page.md
+        - name: “选择 SMO 枚举”对话框
+          href: ../select-smo-enumeration-dialog-box.md
+        - name: “架构限制”对话框
+          href: ../schema-restrictions-dialog-box.md
+    - name: For 循环容器
+      href: for-loop-container.md
+      items:
+        - name: For 循环编辑器
+          href: ../for-loop-editor.md
+        - name: 配置 For 循环容器
+          href: ../configure-a-for-loop-container.md
+        - name: 将迭代添加到控制流
+          href: ../add-iteration-to-a-control-flow.md
+    - name: 序列容器
+      href: sequence-container.md
+    - name: 任务宿主容器
+      href: task-host-container.md
+- name: Integration Services 任务
+  href: integration-services-tasks.md
+  items:
+    - name: Analysis Services 执行 DDL 任务
+      href: analysis-services-execute-ddl-task.md
+      items:
+        - name: Analysis Services 执行 DDL 任务编辑器（“常规”页）
+          href: ../analysis-services-execute-ddl-task-editor-general-page.md
+        - name: Analysis Services 执行 DDL 任务编辑器（DDL 页）
+          href: ../analysis-services-execute-ddl-task-editor-ddl-page.md
+    - name: Analysis Services 处理任务
+      href: analysis-services-processing-task.md
+      items:
+        - name: Analysis Services 处理任务编辑器（“常规”页）
+          href: ../analysis-services-processing-task-editor-general-page.md
+        - name: Analysis Services 处理任务编辑器（Analysis Services 页）
+          href: ../analysis-services-processing-task-editor-analysis-services-page.md
+    - name: “备份数据库”任务
+      href: back-up-database-task.md
+    - name: 大容量插入任务
+      href: bulk-insert-task.md
+      items:
+        - name: 大容量插入任务编辑器（“常规”页）
+          href: ../bulk-insert-task-editor-general-page.md
+        - name: 大容量插入任务编辑器（“连接”页）
+          href: ../bulk-insert-task-editor-connection-page.md
+        - name: 大容量插入任务编辑器（“选项”页）
+          href: ../bulk-insert-task-editor-options-page.md
+    - name: CDC 控制任务
+      href: cdc-control-task.md
+      items:
+        - name: CDC 控制任务编辑器
+          href: ../cdc-control-task-editor.md
+        - name: CDC 控制任务自定义属性
+          href: cdc-control-task-custom-properties.md
+    - name: “检查数据库完整性”任务
+      href: check-database-integrity-task.md
+    - name: 数据挖掘查询任务
+      href: data-mining-query-task.md
+      items:
+        - name: 数据挖掘查询任务编辑器（“挖掘模型”选项卡）
+          href: ../data-mining-query-task-editor-mining-model-tab.md
+        - name: 数据挖掘查询任务编辑器（“查询”选项卡）
+          href: ../data-mining-query-task-editor-query-tab.md
+        - name: 数据挖掘查询任务编辑器（“输出”选项卡）
+          href: ../data-mining-query-task-editor-output-tab.md
+        - name: 数据挖掘查询
+          href: data-mining-query.md
+    - name: 数据事件探查任务和查看器
+      href: data-profiling-task-and-viewer.md
+      items:
+        - name: 设置数据事件探查任务
+          href: setup-of-the-data-profiling-task.md
+        - name: 数据配置文件查看器 (Data Profile Viewer)
+          href: data-profile-viewer.md
+        - name: 数据配置文件查看器 F1 帮助
+          href: ../data-profile-viewer-f1-help.md
+        - name: 数据事件探查任务
+          href: data-profiling-task.md
+          items:
+            - name: 数据事件探查任务编辑器（常规页）
+              href: data-profiling-task-editor-general-page.md
+            - name: 单个表快速配置文件窗体（数据事件探查任务）
+              href: single-table-quick-profile-form-data-profiling-task.md
+            - name: 数据事件探查任务编辑器（“配置文件请求”页）
+              href: data-profiling-task-editor-profile-requests-page.md
+            - name: 候选键配置文件请求选项（数据事件探查任务）
+              href: candidate-key-profile-request-options-data-profiling-task.md
+            - name: 列长度分布配置文件请求选项（数据事件探查任务）
+              href: column-length-distribution-profile-request-options-data-profiling-task.md
+            - name: 列 Null 比率配置文件请求选项（数据事件探查任务）
+              href: column-null-ratio-profile-request-options-data-profiling-task.md
+            - name: 列模式信息配置文件请求选项（数据事件探查任务）
+              href: column-pattern-profile-request-options-data-profiling-task.md
+            - name: 列统计信息配置文件请求选项（数据事件探查任务）
+              href: column-statistics-profile-request-options-data-profiling-task.md
+            - name: 列值分布配置文件请求选项（数据事件探查任务）
+              href: column-value-distribution-profile-request-options-data-profiling-task.md
+            - name: 函数依赖关系配置文件请求选项（数据事件探查任务）
+              href: functional-dependency-profile-request-options-data-profiling-task.md
+            - name: 值包含配置文件请求选项（数据事件探查任务）
+              href: value-inclusion-profile-request-options-data-profiling-task.md
+            - name: 合并包工作流中的数据事件探查任务
+              href: incorporate-a-data-profiling-task-in-package-workflow.md
+    - name: 执行包任务
+      href: execute-package-task.md
+      items:
+        - name: 执行包任务编辑器
+          href: ../execute-package-task-editor.md
+    - name: 执行进程任务
+      href: execute-process-task.md
+      items:
+        - name: 执行进程任务编辑器（“常规”页）
+          href: ../execute-process-task-editor-general-page.md
+        - name: 执行进程任务编辑器（“进程”页）
+          href: ../execute-process-task-editor-process-page.md
+    - name: 执行 SQL 任务
+      href: execute-sql-task.md
+      items:
+        - name: 执行 SQL 任务中的参数和返回代码
+          href: ../parameters-and-return-codes-in-the-execute-sql-task.md
+        - name: 执行 SQL 任务中的结果集
+          href: ../result-sets-in-the-execute-sql-task.md
+        - name: 执行 SQL 任务编辑器（“常规”页）
+          href: ../execute-sql-task-editor-general-page.md
+        - name: 执行 SQL 任务编辑器（“参数映射”页）
+          href: ../execute-sql-task-editor-parameter-mapping-page.md
+        - name: 执行 SQL 任务编辑器（“结果集”页）
+          href: ../execute-sql-task-editor-result-set-page.md
+        - name: 在 Integration Services 包中执行 MERGE
+          href: merge-in-integration-services-packages.md
+        - name: 在执行 SQL 任务中将查询参数映射到变量
+          href: ../map-query-parameters-to-variables-in-an-execute-sql-task.md
+        - name: 在执行 SQL 任务中将结果集映射到变量
+          href: ../map-result-sets-to-variables-in-an-execute-sql-task.md
+    - name: 执行 T-SQL 语句任务
+      href: execute-t-sql-statement-task.md
+    - name: 文件系统任务
+      href: file-system-task.md
+      items:
+        - name: 文件系统任务编辑器（“常规”页）
+          href: ../file-system-task-editor-general-page.md
+    - name: FTP 任务
+      href: ftp-task.md
+      items:
+        - name: FTP 任务编辑器（“常规”页）
+          href: ../ftp-task-editor-general-page.md
+        - name: FTP 任务编辑器（“文件传输”页）
+          href: ../ftp-task-editor-file-transfer-page.md
+    - name: “清除历史记录”任务
+      href: history-cleanup-task.md
+    - name: “清除维护”任务
+      href: maintenance-cleanup-task.md
+    - name: Message Queue Task
+      href: message-queue-task.md
+      items:
+        - name: 消息队列任务编辑器（“常规”页）
+          href: ../message-queue-task-editor-general-page.md
+        - name: 消息队列任务编辑器（“接收”页）
+          href: ../message-queue-task-editor-receive-page.md
+        - name: 消息队列任务编辑器（“发送”页）
+          href: ../message-queue-task-editor-send-page.md
+        - name: 选择包
+          href: select-a-package.md
+    - name: “通知操作员”任务
+      href: notify-operator-task.md
+    - name: “重新生成索引”任务
+      href: rebuild-index-task.md
+    - name: “重新组织索引”任务
+      href: reorganize-index-task.md
+    - name: 脚本任务
+      href: script-task.md
+      items:
+        - name: 脚本任务编辑器（“常规”页）
+          href: ../script-task-editor-general-page.md
+        - name: 脚本任务编辑器（“脚本”页）
+          href: ../script-task-editor-script-page.md
+        - name: “选择变量”页
+          href: select-variables-page.md
+    - name: 发送邮件任务
+      href: send-mail-task.md
+      items:
+        - name: 发送邮件任务编辑器（“常规”页）
+          href: ../send-mail-task-editor-general-page.md
+        - name: 发送邮件任务编辑器（“邮件”页）
+          href: ../send-mail-task-editor-mail-page.md
+    - name: 收缩数据库任务
+      href: shrink-database-task.md
+    - name: 传输数据库任务
+      href: transfer-database-task.md
+      items:
+        - name: 传输数据库任务编辑器（“常规”页）
+          href: ../transfer-database-task-editor-general-page.md
+        - name: 传输数据库任务编辑器（“数据库”页）
+          href: ../transfer-database-task-editor-databases-page.md
+        - name: 源数据库文件
+          href: ../source-database-files.md
+        - name: 目标数据库文件
+          href: ../destination-database-files.md
+    - name: 传输错误消息任务
+      href: transfer-error-messages-task.md
+      items:
+        - name: 传输错误消息任务编辑器（“常规”页）
+          href: ../transfer-error-messages-task-editor-general-page.md
+        - name: 传输错误消息任务编辑器（“消息”页）
+          href: ../transfer-error-messages-task-editor-messages-page.md
+    - name: 传输作业任务
+      href: transfer-jobs-task.md
+      items:
+        - name: 传输作业任务编辑器（“常规”页）
+          href: ../transfer-jobs-task-editor-general-page.md
+        - name: 传输作业任务编辑器（“作业”页）
+          href: ../transfer-jobs-task-editor-jobs-page.md
+    - name: 传输登录名任务
+      href: transfer-logins-task.md
+      items:
+        - name: 传输登录名任务编辑器（“常规”页）
+          href: ../transfer-logins-task-editor-general-page.md
+        - name: 传输登录名任务编辑器（“登录名”页）
+          href: ../transfer-logins-task-editor-logins-page.md
+    - name: 传输主存储过程任务
+      href: transfer-master-stored-procedures-task.md
+      items:
+        - name: 传输主存储过程任务编辑器（“常规”页）
+          href: ../transfer-master-stored-procedures-task-editor-general-page.md
+        - name: 传输主存储过程任务编辑器（“存储过程”页）
+          href: ../transfer-master-stored-procedures-task-editor-stored-procedures-page.md
+    - name: 传输 SQL Server 对象任务
+      href: transfer-sql-server-objects-task.md
+      items:
+        - name: 传输 SQL Server 对象任务编辑器（“常规”页）
+          href: ../transfer-sql-server-objects-task-editor-general-page.md
+        - name: 传输 SQL Server 对象任务编辑器（“对象”页）
+          href: ../transfer-sql-server-objects-task-editor-objects-page.md
+        - name: 选择要传输的对象
+          href: select-objects-to-transfer.md
+    - name: “更新统计信息”任务
+      href: update-statistics-task.md
+    - name: Web 服务任务
+      href: web-service-task.md
+      items:
+        - name: Web 服务任务编辑器（“常规”页）
+          href: ../web-service-task-editor-general-page.md
+        - name: Web 服务任务编辑器（“输入”页）
+          href: ../web-service-task-editor-input-page.md
+        - name: Web 服务任务编辑器（“输出”页）
+          href: ../web-service-task-editor-output-page.md
+    - name: WMI 数据读取器任务
+      href: wmi-data-reader-task.md
+      items:
+        - name: WMI 数据读取器任务编辑器（“常规”页）
+          href: ../wmi-data-reader-task-editor-general-page.md
+        - name: WMI 数据读取器任务编辑器（“WMI 选项”页）
+          href: ../wmi-data-reader-task-editor-wmi-options-page.md
+    - name: WMI 事件观察器任务
+      href: wmi-event-watcher-task.md
+      items:
+        - name: WMI 事件观察器任务编辑器（“常规”页）
+          href: ../wmi-event-watcher-task-editor-general-page.md
+        - name: WMI 事件观察器任务编辑器（“WMI 选项”页）
+          href: ../wmi-event-watcher-task-editor-wmi-options-page.md
+    - name: XML 任务
+      href: xml-task.md
+      items:
+        - name: Validate XML with the XML Task
+          href: validate-xml-with-the-xml-task.md
+        - name: XML 任务编辑器（“常规”页）
+          href: ../xml-task-editor-general-page.md
+    - name: Azure blob 上载任务
+      href: azure-blob-upload-task.md
+    - name: Azure Blob 下载任务
+      href: azure-blob-download-task.md
+    - name: Azure HDInsight Hive 任务
+      href: azure-hdinsight-hive-task.md
+    - name: Azure HDInsight Pig 任务
+      href: azure-hdinsight-pig-task.md
+    - name: Azure HDInsight 创建群集任务
+      href: azure-hdinsight-create-cluster-task.md
+    - name: Azure HDInsight 删除群集任务
+      href: azure-hdinsight-delete-cluster-task.md
+    - name: Azure SQL DW 上传任务
+      href: ../azure-sql-dw-upload-task.md
+    - name: Azure Data Lake Store 文件系统任务
+      href: ../azure-data-lake-store-file-system-task.md
+- name: Integration Services 事务
+  href: ../integration-services-transactions.md
+  items:
+    - name: 继承的事务
+      href: ../inherited-transactions.md
+    - name: 多个事务
+      href: ../multiple-transactions.md
+    - name: 将包配置为使用事务
+      href: ../configure-a-package-to-use-transactions.md
+- name: 优先约束
+  href: precedence-constraints.md
+  items:
+    - name: 将表达式添加到优先约束
+      href: ../add-expressions-to-precedence-constraints.md
+      items:
+        - name: 在优先约束中使用表达式
+          href: ../use-an-expression-in-a-precedence-constraint.md
+    - name: 多个优先约束
+      href: ../multiple-precedence-constraints.md
+    - name: 优先约束编辑器
+      href: ../precedence-constraint-editor.md
+    - name: 使用快捷菜单设置优先约束的值
+      href: ../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md
+    - name: 设置优先约束的属性
+      href: ../set-the-properties-of-a-precedence-constraint.md
+    - name: 使用默认优先约束来连接任务和容器
+      href: ../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md
+- name: 在控制流中添加或删除任务或容器
+  href: add-or-delete-a-task-or-a-container-in-a-control-flow.md
+- name: 设置任务或容器的属性
+  href: ../set-the-properties-of-a-task-or-container.md

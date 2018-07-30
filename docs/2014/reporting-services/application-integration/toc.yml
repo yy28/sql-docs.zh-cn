@@ -1,0 +1,23 @@
+- name: 将 Reporting Services 集成到应用程序中
+  href: integrating-reporting-services-into-applications.md
+  items:
+    - name: 在 URL 访问与 SOAP 之间选择
+      href: choosing-between-url-access-and-soap.md
+    - name: 使用 URL 访问集成 Reporting Services
+      href: integrating-reporting-services-using-url-access.md
+    - name: 在 Web 应用程序中使用 URL 访问
+      href: integrating-reporting-services-using-url-access-web-application.md
+    - name: 在 Windows 应用程序中使用 URL 访问
+      href: integrating-reporting-services-using-url-access-windows-application.md
+    - name: 使用 SOAP 集成 Reporting Services
+      href: integrating-reporting-services-using-soap.md
+    - name: 在 Windows 应用程序中使用 SOAP API
+      href: integrating-reporting-services-using-soap-windows-application.md
+    - name: 在 Web 应用程序中使用 SOAP API
+      href: integrating-reporting-services-using-soap-web-application.md
+    - name: 使用 ReportViewer 控件集成 Reporting Services
+      href: integrating-reporting-services-using-reportviewer-controls.md
+    - name: 使用 WinForms ReportViewer 控件
+      href: using-the-winforms-reportviewer-control.md
+    - name: 使用 WebForms ReportViewer 控件
+      href: using-the-webforms-reportviewer-control.md

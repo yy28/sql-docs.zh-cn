@@ -1,0 +1,65 @@
+- name: 大容量导入和导出数据
+  href: bulk-import-and-export-of-data-sql-server.md
+  items:
+    - name: 使用 bcp 实用工具导入和导出大容量数据
+      href: import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md
+    - name: 使用 BULK INSERT 或 OPENROWSET(BULK...) 导入大容量数据
+      href: import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md
+    - name: Prerequisites for Minimal Logging in Bulk Import
+      href: prerequisites-for-minimal-logging-in-bulk-import.md
+- name: 准备大容量导入数据
+  href: prepare-to-bulk-import-data-sql-server.md
+  items:
+    - name: 准备用于大容量导出或导入的数据
+      href: prepare-data-for-bulk-export-or-import-sql-server.md
+- name: HumanResources.myTeam 示例表
+  href: humanresources-myteam-sample-table-sql-server.md
+- name: 用于大容量导入或导出的数据格式
+  href: data-formats-for-bulk-import-or-bulk-export-sql-server.md
+  items:
+    - name: 使用本机格式导入或导出数据
+      href: use-native-format-to-import-or-export-data-sql-server.md
+    - name: 使用字符格式导入或导出数据
+      href: use-character-format-to-import-or-export-data-sql-server.md
+    - name: 使用 Unicode 本机格式导入或导出数据
+      href: use-unicode-native-format-to-import-or-export-data-sql-server.md
+    - name: 使用 Unicode 字符格式导入或导出数据
+      href: use-unicode-character-format-to-import-or-export-data-sql-server.md
+    - name: 导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
+      href: import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
+- name: 在使用 bcp 时指定数据格式以获得兼容性
+  href: specify-data-formats-for-compatibility-when-using-bcp-sql-server.md
+  items:
+    - name: 使用 bcp 指定文件存储类型
+      href: specify-file-storage-type-by-using-bcp-sql-server.md
+    - name: 使用 bcp 指定数据文件中的前缀长度
+      href: specify-prefix-length-in-data-files-by-using-bcp-sql-server.md
+    - name: 使用 bcp 指定字段长度
+      href: specify-field-length-by-using-bcp-sql-server.md
+    - name: 指定字段终止符和行终止符
+      href: specify-field-and-row-terminators-sql-server.md
+- name: 在大容量导入期间保留 Null 或使用默认值
+  href: keep-nulls-or-use-default-values-during-bulk-import-sql-server.md
+- name: 大容量导入数据时保留标识值
+  href: keep-identity-values-when-bulk-importing-data-sql-server.md
+- name: 通过使用 OPENROWSET BULK 行集提供程序大容量导入大型对象数据
+  href: bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md
+- name: 用来导入或导出数据的格式化文件
+  href: format-files-for-importing-or-exporting-data-sql-server.md
+  items:
+    - name: 非 XML 格式化文件
+      href: non-xml-format-files-sql-server.md
+    - name: XML 格式化文件
+      href: xml-format-files-sql-server.md
+    - name: 创建格式化文件
+      href: create-a-format-file-sql-server.md
+    - name: 使用格式化文件大容量导入数据
+      href: use-a-format-file-to-bulk-import-data-sql-server.md
+    - name: 使用格式化文件跳过表列
+      href: use-a-format-file-to-skip-a-table-column-sql-server.md
+    - name: 使用格式化文件跳过数据字段
+      href: use-a-format-file-to-skip-a-data-field-sql-server.md
+    - name: 使用格式化文件将表列映射到数据文件字段
+      href: use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
+- name: 大容量导入和导出 XML 文档的示例
+  href: examples-of-bulk-import-and-export-of-xml-documents-sql-server.md

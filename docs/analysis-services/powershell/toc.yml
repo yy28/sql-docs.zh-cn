@@ -1,0 +1,4 @@
+- name: 针对 Analysis Services 的 PowerShell 参考
+  href: analysis-services-powershell-reference.md
+- name: 针对 PowerPivot for SharePoint 的 PowerShell 参考
+  href: powershell-reference-for-power-pivot-for-sharepoint.md
