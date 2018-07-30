@@ -47,7 +47,7 @@ ms.locfileid: "33036694"
   
 -   [如何查看自动页修复尝试](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a>导致自动页修复尝试的错误类型  
  数据库镜像自动页修复只尝试修复特定数据文件中的页，此数据文件是指对其执行的操作由于下表中列出的某一错误而失败的数据文件。  
   
 |错误号|Description|导致自动页修复尝试的实例|  
@@ -69,7 +69,7 @@ ms.locfileid: "33036694"
 -   分配页：全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> 处理主体/主数据库上的 I/O 错误  
  在主体/主数据库中，仅当数据库处于 SYNCHRONIZED 状态且主体/主数据库仍向镜像/辅助数据库发送数据库日志记录时，才会尝试自动页修复。 自动页修复尝试中操作的基本顺序如下：  
   
 1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起” 。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
@@ -83,7 +83,7 @@ ms.locfileid: "33036694"
 5.  如果此页 I/O 错误导致出现任何 [延迟的事务](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)，则修复此页后，主体/主数据库将尝试解决这些事务。  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> 处理镜像/辅助数据库上的 I/O 错误  
  处理在镜像/辅助数据库中发生的数据页 I/O 错误通常采用与数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]相同的方式。  
   
 1.  对于数据库镜像，如果镜像服务器在其重做日志记录时遇到一个或多个页 I/O 错误，则镜像会话将进入 SUSPENDED 状态。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，如果辅助副本在其重做日志记录时遇到一个或多个页 I/O 错误，则辅助数据库将进入 SUSPENDED 状态。 此时，镜像/辅助数据库使用相应的错误状态在 **suspect_pages** 表中插入一行。 然后，镜像/辅助数据库从主体/主数据库请求此页的副本。  

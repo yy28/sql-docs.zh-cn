@@ -1,0 +1,14 @@
+- name: 处理结果 (ODBC)
+  href: processing-results-odbc.md
+- name: 分配存储区
+  href: assigning-storage.md
+- name: 字符数据的自动转换
+  href: autotranslation-of-character-data.md
+- name: 数据类型用法
+  href: data-type-usage.md
+- name: 确定结果集的特征 (ODBC)
+  href: determining-the-characteristics-of-a-result-set-odbc.md
+- name: 提取结果数据
+  href: fetching-result-data.md
+- name: 映射数据类型 (ODBC)
+  href: mapping-data-types-odbc.md
