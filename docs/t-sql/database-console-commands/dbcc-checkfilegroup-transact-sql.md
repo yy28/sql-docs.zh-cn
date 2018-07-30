@@ -98,7 +98,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则数据库引擎会使用资源调控器 MAXDOP 值（如 ALTER WORKLOAD GROUP (Transact-SQL) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则数据库引擎会使用资源调控器 MAXDOP 值（如 ALTER WORKLOAD GROUP (Transact-SQL) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!CAUTION]  
 >  如果 MAXDOP 设置为零，服务器将选择最大并行度。  
@@ -119,7 +119,7 @@ DBCC CHECKFILEGROUP 使用内部数据库快照来提供执行这些检查所必
 >  对 tempdb 运行 DBCC CHECKFILEGROUP 不会执行任何分配检查，并且必须获得共享表锁才能执行表检查。 这是因为，为了提高性能，不允许对 tempdb 使用数据库快照。 这意味着，无法获得所需的事务一致性。  
   
 ## <a name="checking-objects-in-parallel"></a>并行检查对象  
-默认情况下，DBCC CHECKFILEGROUP 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制 DBCC 检查可使用的处理器的最大数目，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+默认情况下，DBCC CHECKFILEGROUP 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制 DBCC 检查可使用的处理器的最大数目，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>单独文件组的非聚集索引  
