@@ -1,7 +1,7 @@
 ---
 title: 使用表值参数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978759"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279208"
 ---
 # <a name="using-table-valued-parameters"></a>使用表值参数
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  新功能：表值参数 - 表值参数提供了一种简单方法，将多行数据从客户端应用程序封送到 SQL Server，无需进行多次往返或特殊的服务器端逻辑来处理数据。 可以使用表值参数来封装客户端应用程序中的数据行，并以单个参数化命令将数据发送到服务器。 然后可以操作通过使用 TRANSACT-SQL 在表变量中存储传入的数据行。  
+  表值参数提供了一种简单方法，将多行数据从客户端应用程序封送到 SQL Server，无需进行多次往返或特殊的服务器端逻辑来处理数据。 可使用表值参数来封装客户端应用程序中的数据行，并以单个参数化命令将数据发送到服务器。 然后可以操作通过使用 TRANSACT-SQL 在表变量中存储传入的数据行。  
   
  可使用标准 TRANSACT-SQL SELECT 语句访问表值参数中的列值。 表值参数为强类型，其结构会自动验证。 表值参数的大小仅受服务器内存。  
   
@@ -56,14 +56,14 @@ ms.locfileid: "37978759"
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
  使用 TRANSACT-SQL CREATE TYPE 语句定义的强类型表结构为基础表值参数。 您必须创建一个表类型和 SQL Server 中定义的结构，然后才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 联机丛书中。  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  在创建后的表类型，可以声明该类型所基于的表值参数。 下面的 TRANSACT-SQL 片段演示如何声明中的存储的过程定义的表值参数。 请注意，READONLY 关键字用于声明表值参数。  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  下面的 TRANSACT-SQL UPDATE 语句演示如何通过将其联接到 Categories 表使用表值参数。 与 FROM 子句中的联接使用表值参数时，您必须还别名，如下所示，其中表值参数的别名为"ec":  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  此 TRANSACT-SQL 示例演示如何从表值参数以在单个基于集的操作中执行 INSERT 中选择行。  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  以下两个代码片段演示了如何配置使用 SQLServerPreparedStatement 和 SQLServerCallableStatement 以插入数据的表值参数。 此处 sourceTVPObject 可以 SQLServerDataTable 或结果集或 ISQLServerDataRecord 对象。 这些示例假定连接是活动的连接对象。  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>将表值参数传递作为 SQLServerDataTable 对象  
  从 Microsoft JDBC Driver 6.0 for SQL Server，SQLServerDataTable 类表示一个内存中表的关系数据。 此示例演示如何构造使用 SQLServerDataTable 对象的内存中数据的表值参数。 代码首先创建一个 SQLServerDataTable 对象、 定义其架构和使用数据填充表。 然后，代码配置 SQLServerPreparedStatement 将该表的数据作为表值参数传递到 SQL Server。  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>将表值参数传递作为结果集对象  
  此示例演示如何将流式传输的数据从一个结果集复制到表值参数行。 代码首先从源表中检索数据创建 SQLServerDataTable 对象，将定义其架构以及使用数据填充表。 然后，代码配置 SQLServerPreparedStatement 将该表的数据作为表值参数传递到 SQL Server。  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>将表值参数传递作为 ISQLServerDataRecord 对象  
  从 Microsoft JDBC Driver 6.0 for SQL Server，新界面 ISQLServerDataRecord 是可用于流式处理数据 （具体取决于如何用户提供它的实现） 使用表值参数。 下面的示例演示如何实现 ISQLServerDataRecord 接口以及如何将其作为表值参数传递。 为简单起见，下面的示例将只是一个具有硬编码值的行传递给表值参数。 理想情况下，用户可以实现此接口行流处理从任何源，例如从文本文件。  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  
