@@ -45,7 +45,7 @@ ms.locfileid: "36240069"
 |%=|[取模赋值 (Transact-SQL)](../../t-sql/language-elements/modulo-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为余数。|  
 |&=|[&=（位与赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|对原始值执行位与运算，并将原始值设置为结果。|  
 |^=|[^=（位异或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|对原始值执行位异或运算，并将原始值设置为结果。|  
-|&#124;=|[|=（位或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
+|&#124;=|[&#124;=（位或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
   
 ## <a name="syntax"></a>语法  
   
