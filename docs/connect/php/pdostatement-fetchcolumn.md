@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchColumn |Microsoft 文档
+title: PDOStatement::fetchColumn |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20e79158a2b38dac6799e9affe7ac4bd656ff4f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983241"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*column_number*： 一个可选整数，指示的从零开始的列号。 默认值为 0（该行的第一列）。  
+$column_number：一个可选整数，指示从零开始的列号。 默认值为 0（该行的第一列）。  
   
 ## <a name="return-value"></a>返回值  
 一列或 false（如果没有更多的行）。  
@@ -57,7 +57,7 @@ $*column_number*： 一个可选整数，指示的从零开始的列号。 默�
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

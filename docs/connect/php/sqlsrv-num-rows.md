@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_rows |Microsoft 文档
+title: sqlsrv_num_rows |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309006"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006779"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_num_rows( resource $stmt )
 如果在计算行数时出错，则返回**false** 。 否则，返回结果集中的行数。  
   
 ## <a name="remarks"></a>Remarks  
-sqlsrv_num_rows 需要客户端、 静态、 或键集游标，并且将返回**false**如果你使用向前游标或动态游标。 （向前游标是默认值。）有关游标的详细信息，请参阅[sqlsrv_query](../../connect/php/sqlsrv-query.md)和[游标类型&#40;SQLSRV 驱动程序&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
+sqlsrv_num_rows 需要客户端、静态或键集游标，并且将返回 false（如果你使用向前游标或动态游标）。 （向前游标是默认值。）有关游标的详细信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和[游标类型（SQLSRV 驱动程序）](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -96,6 +96,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: 枚举 OLE DB 数据源 (OLE DB) |Microsoft 文档
-description: 枚举使用 MSOLEDBSQL 枚举器的 OLE DB 数据源
+title: 枚举 OLE DB 数据源 (OLE DB) |Microsoft Docs
+description: 枚举 OLE DB 数据源使用 MSOLEDBSQL 枚举器
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,47 +16,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665877"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107977"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此示例显示如何使用枚举器对象列出可用数据源。  
   
- 若要列出对 MSOLEDBSQL 枚举器可见的数据源，使用者调用[ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312)方法。 此方法返回与当前可见数据源有关的信息的行集。  
+ 要列出对 MSOLEDBSQL 枚举器可见的数据源，使用者应调用 [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) 方法。 此方法返回与当前可见数据源有关的信息的行集。  
   
  根据所使用的网络库，将搜索相应的域以找到数据源。 对于命名管道，将搜索客户端登录到的域。 对于 AppleTalk，将搜索默认区域。 对于 SPX/IPX，将搜索在平构数据库中找到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装的列表。 对于 Banyan VINES，将搜索在本地网络中找到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装。 不支持多协议和 TCP/IP 套接字。  
   
  在开关服务器时，可能需要几分钟来更新这些域中的信息。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>枚举 OLE DB 数据源  
   
-1.  通过调用检索源行集**ISourceRowset::GetSourcesRowset**。  
+1.  通过调用检索的源行集**ISourceRowset::GetSourcesRowset**。  
   
-2.  通过调用找到的枚举器行集描述**GetColumnInfo::IColumnInfo**。  
+2.  通过调用查找枚举器行集的说明**GetColumnInfo::IColumnInfo**。  
   
 3.  根据列信息创建绑定结构。  
   
-4.  通过调用创建行集访问器**IAccessor::CreateAccessor**。  
+4.  通过调用创建行集访问器**iaccessor:: Createaccessor**。  
   
-5.  通过调用提取行**irowset:: Getnextrows**。  
+5.  通过调用提取的行**irowset:: Getnextrows**。  
   
-6.  从行的行集的副本中检索数据，通过调用**irowset:: Getdata**，并将其处理。  
+6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据。  
   
 ## <a name="example"></a>示例  
- 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
 ```  
 // compile with: ole32.lib  

@@ -1,5 +1,5 @@
 ---
-title: 步骤 3： 连接到 SQL 使用 pyodbc 的概念证明 |Microsoft 文档
+title: 步骤 3：使用 pyodbc 连接到 SQL 的概念证明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9914b8bd941eb3e6ddc64fb1a4e37b38335fa01f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: a3fa70619208df8940ec10a1b5a0f46704ce9c43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309746"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979973"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3： 连接到 SQL 使用 pyodbc 的概念证明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念证明
 
-此示例中，应考虑仅概念证明。  示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。  
+此示例中，应考虑仅概念证明。  示例代码简化为清楚起见，而不一定表示 Microsoft 推荐的最佳做法。  
 
-**运行下面的示例脚本**创建名为 test.py，并根据自己的意愿添加每个代码段。 
+**运行下面的示例脚本**创建一个名为 test.py，文件并将每个代码段添加意愿。 
 
 ```
 > python test.py
@@ -51,7 +51,7 @@ cursor = cnxn.cursor()
   
 ## <a name="step-2--execute-query"></a>步骤 2： 执行查询  
   
-Cursor.executefunction 可以用于检索针对 SQL 数据库设置从查询结果。 此函数实际上可接受任何查询，并返回可循环访问 cursor.fetchone （） 使用的结果集
+Cursor.executefunction 可以用于检索针对 SQL 数据库的查询集的结果。 此函数实际上可接受任何查询并返回一个结果集，可以循环访问与使用 cursor.fetchone （）
   
   
 ```python
@@ -66,7 +66,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中，你将了解如何执行[插入](../../../t-sql/statements/insert-transact-sql.md)语句安全地，传递参数，保护你的应用程序从该[SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在此示例中您将了解如何执行[插入](../../../t-sql/statements/insert-transact-sql.md)语句，传递参数以保护应用程序免遭[SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
   
 ```python
@@ -82,4 +82,4 @@ while row:
   `      
   ## <a name="next-steps"></a>后续步骤  
   
-有关详细信息，请参阅[Python 开发人员中心](https://azure.microsoft.com/en-us/develop/python/)。
+有关详细信息，请参阅[Python 开发人员中心](https://azure.microsoft.com/develop/python/)。

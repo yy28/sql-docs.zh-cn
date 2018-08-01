@@ -1,5 +1,5 @@
 ---
-title: 返回代码 |Microsoft 文档
+title: 返回代码 |Microsoft Docs
 description: 返回代码
 ms.custom: ''
 ms.date: 06/14/2018
@@ -26,33 +26,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 84927b3d26233e9d21f175850a5b11c2c2bea56b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ec559040fceb5116ca83cc4eb295580479224b04
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665957"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107043"
 ---
 # <a name="return-codes"></a>返回代码
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在最基本的级别上，成员函数要么成功，要么失败。 在稍微精确一些的级别上，函数可能会成功，但是它的成功可能并不是应用程序开发人员想要的成功。  
   
- 有关 OLE DB 返回代码的详细信息，请参阅[返回代码 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)。  
+ 有关 OLE DB 返回代码的详细信息，请参阅 [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)（返回代码 (OLE DB)）。  
   
- 当 OLE DB Driver for SQL Server 成员函数返回时，则为 S_OK 时，则该函数成功。  
+ 当 SQL Server 成员函数用于 OLE DB 驱动程序返回 S_OK 时，函数成功。  
   
- 当 SQL Server 成员函数用于 OLE DB 驱动程序不返回，则为 S_OK 时，OLE/COM HRESULT 解压缩失败和 IS_ERROR 宏可以确定总体成功或失败的函数。  
+ 如果适用于 SQL Server 的 OLE DB 驱动程序的成员函数未返回 S_OK，则 OLE/COM HRESULT-unpacking FAILED 和 IS_ERROR 宏判断此函数总体上是否成功。  
   
- 如果失败或 IS_ERROR 返回 TRUE，OLE DB 驱动程序的 SQL Server 使用者将确定成员函数执行失败。 失败或 IS_ERROR 返回时 FALSE 和 HRESULT 不相等，则为 S_OK，使用者就可以确定该函数成功在某种意义上的 SQL Server 的 OLE DB 驱动程序。 使用者可以检索此"成功信息与"返回时从 SQL Server 错误接口的 OLE DB 驱动程序的详细的信息。 此外，在其中函数清楚地失败 （失败宏返回 TRUE） 的情况下，扩展的错误信息是 SQL Server 错误接口的 OLE DB 驱动程序中可用。  
+ 如果 FAILED 或 IS_ERROR 返回 TRUE，则适用于 SQL Server 的 OLE DB 驱动程序的使用者可确定成员函数执行失败。 如果 FAILED 或 IS_ERROR 返回 FALSE，并且 HRESULT 不等于 S_OK，使用者就可以确定该函数执行成功在某种意义上的 SQL Server 的 OLE DB 驱动程序。 使用者可在适用于 SQL Server 的 OLE DB 驱动程序错误接口返回的“成功但存在错误”消息中检索详细信息。 此外，如果函数明显执行失败（FAILED 宏返回 TRUE），也可从适用于 SQL Server 的 OLE DB 驱动程序错误接口获取详细的错误信息。  
   
- OLE DB 驱动程序的 SQL Server 使用者通常会遇到与信息 DB_S_ERRORSOCCURRED"成功"HRESULT 返回。 通常，返回 DB_S_ERRORSOCCURRED 的成员函数会定义一个或多个将状态值传递给使用者的参数。 没有错误消息可向使用者以外，返回在 status 值参数中，以便使用者应实现应用程序逻辑，以当它们可用时检索状态值。  
+ OLE DB 驱动程序的 SQL Server 使用者通常会遇到 DB_S_ERRORSOCCURRED"成功但存在错误的 HRESULT 返回。 通常，返回 DB_S_ERRORSOCCURRED 的成员函数会定义一个或多个将状态值传递给使用者的参数。 除了在状态值参数中返回的错误信息，使用者无法获得其他任何错误信息，因此使用者需将应用程序实现为存在状态值可检索这些值。  
   
- 因为 SQL Server 成员函数是 OLE DB 驱动程序不返回成功代码 S_FALSE。 所有 OLE DB 驱动程序对于 SQL Server 成员函数始终返回以指示成功，则为 S_OK。  
+ 对于 SQL Server 成员函数，OLE DB 驱动程序不返回成功代码 S_FALSE。 所有 OLE DB 驱动程序对于 SQL Server 成员函数总是返回 S_OK 来指示成功。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  
   
   

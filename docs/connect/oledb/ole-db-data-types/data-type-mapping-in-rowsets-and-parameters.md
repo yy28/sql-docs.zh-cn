@@ -1,5 +1,5 @@
 ---
-title: 行集和参数中的数据类型映射 |Microsoft 文档
+title: 行集和参数中的数据类型映射 |Microsoft Docs
 description: 行集和参数中的数据类型映射
 ms.custom: ''
 ms.date: 06/14/2018
@@ -25,19 +25,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: c9c6d56cdbbbcd9b35b09f405154497a5fa3bc8f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666117"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108789"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序在行集和作为参数值，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过使用以下 OLE DB 的数据定义的数据类型，在函数中报告**IColumnsInfo::GetColumnInfo**和**ICommandWithParameters::GetParameterInfo**。  
+  在行集中，适用于 SQL Server 的 OLE DB 驱动程序通过使用在 IColumnsInfo::GetColumnInfo 和 ICommandWithParameters::GetParameterInfo 函数中报告的以下 OLE DB 已定义数据类型，以参数值的形式表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。  
   
 |SQL Server 数据类型|OLE DB 数据类型|  
 |--------------------------|----------------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "35666117"
 |**datetime2**|DBTYPE_DBTIME2|  
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
-|**image**|DBTYPE_BYTES|  
+|**图像**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
@@ -71,22 +71,22 @@ ms.locfileid: "35666117"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- SQL Server 的 OLE DB 驱动程序支持使用者请求数据转换图中所示。  
+ SQL Server 的 OLE DB 驱动程序支持使用者请求的数据转换图中所示。  
   
- **Sql_variant**对象可以保存数据的任何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型除外文本、 ntext、 图像、 varchar （max）、 nvarchar (max)、 varbinary （max）、 xml、 时间戳和 Microsoft.NET Framework 公共语言运行时 (CLR)用户定义的类型。 另外，sql_variant 数据实例还不能将 sql_variant 作为其基础的基本数据类型。 例如，列可以包含**smallint**某些行的值**float**其他行的值和**char**/**nchar**的其余部分中的值。  
+ sql_variant 对象可以保留除 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型以外的任意 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的数据。 另外，sql_variant 数据实例还不能将 sql_variant 作为其基础的基本数据类型。 例如，列中的某些行可能包含 smallint 值，而其他某些行可能包含 float 值，剩余的行则包含 char/nchar 值。  
   
 > [!NOTE]  
->  **Sql_variant**数据类型是类似于在 Microsoft Visual Basic® 和 DBTYPE_VARIANT、 DBTYPE_SQLVARIANT 中 OLEDB Variant 数据类型。  
+>  sql_variant 数据类型类似于 Microsoft Visual Basic® 中的 Variant 数据类型以及 OLEDB 中的 DBTYPE_VARIANT 和 DBTYPE_SQLVARIANT。  
   
- 当**sql_variant**作为 DBTYPE_VARIANT 提取数据，它将放入缓冲区中的变体结构。 变体结构中的子类型可能不会映射到在中定义的子类型，但**sql_variant**数据类型。 **Sql_variant**数据必须然后提取作为 DBTYPE_SQLVARIANT 顺序以匹配的所有子类型。  
+ 当提取 sql_variant 数据作为 DBTYPE_VARIANT 时，该数据被放置到缓冲区的 VARIANT 结构中。 但 VARIANT 结构中的子类型可能无法映射为 sql_variant 数据类型中定义的子类型。 然后，必须提取 sql_variant 数据作为 DBTYPE_SQLVARIANT，以使所有子类型匹配。  
   
 ## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT 数据类型  
- 若要支持**sql_variant**数据类型，用于 SQL Server 的 OLE DB 驱动程序公开了调用 DBTYPE_SQLVARIANT 一个提供程序特定数据类型。 当**sql_variant**作为 DBTYPE_SQLVARIANT 提取数据，它存储在提供程序特定 SSVARIANT 结构。 SSVARIANT 结构包含所有匹配的子类型的子类型**sql_variant**数据类型。  
+ 为支持 sql_variant 数据类型，适用于 SQL Server 的 OLE DB 驱动程序公开名为 DBTYPE_SQLVARIANT 的特定于访问接口的数据类型。 当提取 sql_variant 数据作为 DBTYPE_SQLVARIANT 时，该数据存储到特定于访问接口的 SSVARIANT 结构中。 SSVARIANT 结构包含与 sql_variant 数据类型的子类型匹配的所有子类型。  
   
  此外，还必须将 SSPROP_ALLOWNATIVEVARIANT 会话属性设置为 TRUE。  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>特定于访问接口的 SSPROP_ALLOWNATIVEVARIANT 属性  
- 提取数据时，您可以显式指定应为列或参数返回的数据类型。 **IColumnsInfo**还可获取列信息并使用它进行绑定。 当**IColumnsInfo**用来获取列信息出于绑定目的，如果属性为 FALSE （默认值），SSPROP_ALLOWNATIVEVARIANT 会话，将返回 DBTYPE_VARIANT **sql_variant**列。 如果 SSPROP_ALLOWNATIVEVARIANT 属性为 FALSE，则不支持 DBTYPE_SQLVARIANT。 如果 SSPROP_ALLOWNATIVEVARIANT 属性设置为 TRUE，列类型将作为 DBTYPE_SQLVARIANT 返回，在这种情况下，缓冲区将保留 SSVARIANT 结构。 在提取**sql_variant**数据作为 DBTYPE_SQLVARIANT，会话属性 SSPROP_ALLOWNATIVEVARIANT 必须设置为 TRUE。  
+ 提取数据时，您可以显式指定应为列或参数返回的数据类型。 还可以使用 IColumnsInfo 获取列信息，并将该信息用于绑定。 当使用 IColumnsInfo 获取列信息以用于绑定目的时，如果 SSPROP_ALLOWNATIVEVARIANT 会话属性为 FALSE（默认值），则为 sql_variant 列返回 DBTYPE_VARIANT。 如果 SSPROP_ALLOWNATIVEVARIANT 属性为 FALSE，则不支持 DBTYPE_SQLVARIANT。 如果 SSPROP_ALLOWNATIVEVARIANT 属性设置为 TRUE，列类型将作为 DBTYPE_SQLVARIANT 返回，在这种情况下，缓冲区将保留 SSVARIANT 结构。 在提取 sql_variant 数据作为 DBTYPE_SQLVARIANT 时，必须将 SSPROP_ALLOWNATIVEVARIANT 会话属性设置为 TRUE。  
   
  SSPROP_ALLOWNATIVEVARIANT 属性是特定于访问接口的 DBPROPSET_SQLSERVERSESSION 属性集的一部分，因此，该属性是一个会话属性。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "35666117"
 |-|-|  
 |SSPROP_ALLOWNATIVEVARIANT|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回，这种情况下缓冲区将保留 SSVARIANT 结构。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区将具有 VARIANT 结构。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据类型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

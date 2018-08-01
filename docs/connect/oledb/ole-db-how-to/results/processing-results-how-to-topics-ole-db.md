@@ -1,5 +1,5 @@
 ---
-title: 处理结果操作指南主题 (OLE DB) |Microsoft 文档
+title: 处理结果操作指南主题 (OLE DB) |Microsoft Docs
 description: 处理结果操作指南主题 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1792785286c07535925c81194972e65d2f55fb9a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 61c759c37343b8c795e6b2f71449db664e8c3a63
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666067"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108689"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -32,15 +32,15 @@ ms.locfileid: "35666067"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [执行存储的过程&#40;使用 ODBC 调用语法&#41;过程返回代码和输出参数和&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [执行存储过程（使用 ODBC CALL 语法）并处理返回代码和输出参数 (OLE DB)](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [执行存储的过程&#40;使用 RPC 语法&#41;过程返回代码和输出参数和&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [执行存储过程（使用 RPC 语法）并处理返回代码和输出参数 (OLE DB)](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [执行用户定义函数和过程的返回代码&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [执行用户定义函数并处理返回代码 (OLE DB)](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [从结果集中提取行&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [从结果集中提取行 (OLE DB)](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 操作指南主题](../../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

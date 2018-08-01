@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;服务名称&gt;属性 （服务选项卡） |Microsoft 文档
+title: NS$&lt;服务名称&gt; 属性（“服务”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 388985b726d0fa2cdf38e17fb18e914237fa3580
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067325"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058486"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;服务名称&gt; 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   

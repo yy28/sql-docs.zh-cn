@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::getAttribute |Microsoft 文档
+title: PDOStatement::getAttribute |Microsoft Docs
 ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2c02170c88066ed30b99fb1fca46505b099752f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983278"
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ mixed PDOStatement::getAttribute( $attribute );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*属性*： 一个整数，其中一个 PDO::ATTR_ * 或 PDO::SQLSRV_ATTR_\*常量。 受支持的属性是可以在设置的特性[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，PDO::SQLSRV_ATTR_DIRECT_QUERY (有关详细信息，请参阅[直接语句执行和在准备语句执行PDO_SQLSRV 驱动程序](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md))，PDO::ATTR_CURSOR 和 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE (有关详细信息，请参阅[游标类型 （PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md))。  
+$attribute：一个整数，PDO::ATTR_* 或 PDO::SQLSRV_ATTR_\* 常量之一。 支持的属性是可以使用设置的属性[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，pdo:: SQLSRV_ATTR_DIRECT_QUERY (有关详细信息，请参阅[直接语句执行中和预定语句执行PDO_SQLSRV 驱动程序](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md))，pdo:: ATTR_CURSOR 和 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE (有关详细信息，请参阅[游标类型 （PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md))。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，返回预定义 PDO 属性或自定义驱动程序属性的（混合）值。 如果失败，返回 NULL。  
@@ -44,7 +44,7 @@ $*属性*： 一个整数，其中一个 PDO::ATTR_ * 或 PDO::SQLSRV_ATTR_\*常
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

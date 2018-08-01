@@ -1,5 +1,5 @@
 ---
-title: updateClob 方法 （int、 java.io.Reader，长） |Microsoft 文档
+title: updateClob 方法 （int，java.io.Reader，long） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 978c5f09f2c7524462dc950a5edc9b435324bdb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849472"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973004"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>updateClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void updateClob(int columnIndex,
   
  指示列索引的 int。  
   
- *读取器*  
+ reader  
   
  一个读取器对象。  
   
@@ -51,8 +51,8 @@ public void updateClob(int columnIndex,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateClob 方法指定此 updateClob 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateClob 方法由 java.sql.ResultSet 接口中的 updateClob 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateClob 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

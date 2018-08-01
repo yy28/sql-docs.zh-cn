@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Setfetchmode |Microsoft 文档'
+title: 'Pdostatement:: Setfetchmode |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b8e027ba6dd51cb98fe6192c88218ef1f802cc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992829"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ bool PDOStatement::setFetchMode( $mode );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*模式*： 可以有效地传递给任何参数[pdostatement:: Fetch](../../connect/php/pdostatement-fetch.md)。  
+$mode：可有效传递给 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 的任何参数。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 True；否则为 False。  
@@ -87,7 +87,7 @@ $*模式*： 可以有效地传递给任何参数[pdostatement:: Fetch](../../co
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

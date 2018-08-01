@@ -1,5 +1,5 @@
 ---
-title: updateBlob 方法 (SQLServerResultSet) |Microsoft 文档
+title: updateBlob 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b6178a7da337197d2fe6b979bcd7e64c3d60245
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850912"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019915"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>updateBlob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "32850912"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
-|[updateBlob （int、 java.sql.Blob）](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|使用 java.sql.Blob 值更新指定列。|  
-|[updateBlob （int、 java.io.InputStream）](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|使用指定输入流更新指定列。|  
-|[updateBlob （int、 java.io.InputStream，长）](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|使用指定的将有指定字节数的输入流更新指定列。|  
-|[updateBlob （java.lang.String，java.sql.Blob）](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|使用 java.sql.Blob 值更新指定列。|  
-|[updateBlob （java.lang.String，java.io.InputStream）](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|更新使用指定的输入的流的指定的列。|  
-|[updateBlob （java.lang.String，java.io.InputStream，长）](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|使用指定的将有指定字节数的输入流更新指定列。|  
+|[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|使用 java.sql.Blob 值更新指定列。|  
+|[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|使用指定输入流更新指定列。|  
+|[updateBlob (int, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|使用指定的将有指定字节数的输入流更新指定列。|  
+|[updateBlob (java.lang.String, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|使用 java.sql.Blob 值更新指定列。|  
+|[updateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|使用指定输入流更新指定列。|  
+|[updateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|使用指定的将有指定字节数的输入流更新指定列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

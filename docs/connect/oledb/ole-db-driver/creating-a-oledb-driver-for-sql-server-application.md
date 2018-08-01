@@ -1,6 +1,6 @@
 ---
-title: 为 SQL Server 应用程序创建 OLE DB 驱动程序 |Microsoft 文档
-description: 创建 SQL Server 应用程序用于 OLE DB 驱动程序
+title: 创建适用于 SQL Server 的 OLE DB 驱动程序应用程序 | Microsoft Docs
+description: 创建适用于 SQL Server 的 OLE DB 驱动程序应用程序
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0b995fb5171f8eda41045751bad2932e9afa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665307"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109459"
 ---
-# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>为 SQL Server 应用程序创建 OLE DB 驱动程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>创建适用于 SQL Server 的 OLE DB 驱动程序应用程序
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  创建 SQL Server 应用程序用于 OLE DB 驱动程序涉及以下步骤：  
+  创建 SQL Server 应用程序的 OLE DB 驱动程序涉及以下步骤：  
   
 1.  建立与数据源的连接。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "35665307"
 3.  结果处理。  
   
 > [!NOTE]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果你必须保存凭据，应将它们与加密[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) 对它们加密。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35665307"
   
 -   [将 OUTPUT 子句与适用于 SQL Server 的 OLE DB 驱动程序中的 OLE DB 结合使用](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

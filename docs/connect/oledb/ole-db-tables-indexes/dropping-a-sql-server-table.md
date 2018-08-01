@@ -1,6 +1,6 @@
 ---
-title: 删除 SQL Server 表 |Microsoft 文档
-description: 删除使用适用于 SQL Server 的 OLE DB 驱动程序的 SQL Server 表
+title: 删除 SQL Server 表 |Microsoft Docs
+description: 删除 SQL Server 表使用的 SQL Server OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b035e65082cc15db2af6f06b636adb0ff388f4ec
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 78352d3dd6d57e3ec0c6a0db4e02b0d5dfd7baf0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689750"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109519"
 ---
 # <a name="dropping-a-sql-server-table"></a>删除 SQL Server 表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序公开**ITableDefinition::DropTable**函数中移除[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从数据库表。  
+  SQL Server 的 OLE DB 驱动程序公开**itabledefinition:: Droptable**函数来删除[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从数据库表。  
   
- 为 Unicode 字符字符串中指定表名称*pwszName*的成员*uName*联合中*pTableID*参数。 *EKind*的成员*pTableID*必须 DBKIND_NAME。  
+ 在 pTableID 参数的 uName 联合的 pwszName 成员中，将表名指定为 Unicode 字符串。 pTableID 的 eKind 成员必须是 DBKIND_NAME。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

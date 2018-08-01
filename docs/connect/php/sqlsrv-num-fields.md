@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_fields | Microsoft Docs
+title: sqlsrv_num_fields |Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309176"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006853"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +46,9 @@ sqlsrv_num_fields( resource $stmt)
 表示活动结果集中的字段数目的整数值。 如果发生错误，将返回布尔值 **false** 。  
   
 ## <a name="example"></a>示例  
-下面的示例执行一个查询来检索所有字段中的前三个行*HumanResources.Department* AdventureWorks 数据库表。 **Sqlsrv_num_fields**函数将确定的结果集中的字段的数目。 这允许数据通过迭代浏览每个返回行中的字段显示。  
+以下示例执行查询来检索 AdventureWorks 数据库的 HumanResources.Department 表中前三行的所有字段。 sqlsrv_num_fields 函数确定结果集中的字段数目。 这允许数据通过迭代浏览每个返回行中的字段显示。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -93,7 +93,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  

@@ -1,5 +1,5 @@
 ---
-title: 更改 SQL Server 身份验证用户密码 (OLE DB) |Microsoft 文档
+title: 更改 SQL Server 身份验证用户密码 (OLE DB) | Microsoft Docs
 description: 更改 SQL Server 身份验证用户密码 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 985b6a8c22342ae130558024752b42387fcd4996
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 681c5f4e7e3fda6bdee45ce2ca9bd7902d4c99d5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666257"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108979"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>更改 SQL Server 身份验证用户密码 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "35666257"
 ## <a name="example"></a>示例  
  在生成示例前，请更新 C++ 代码以指定用户 ID、旧密码和新密码。  
   
- 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  使用 ole32.lib 和 oleaut32.lib 进行编译。  
   

@@ -1,5 +1,5 @@
 ---
-title: 默认 SQL Server 数据类型 |Microsoft 文档
+title: 默认 SQL Server 数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307220"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979569"
 ---
 # <a name="default-sql-server-data-types"></a>默认 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35307220"
 |Boolean|bit|bit|  
 |Integer|ssNoversion|ssNoversion|  
 |float|float(24)|不支持|  
-|字符串（长度小于 8000 个字节）|varchar (<string length>)|varchar (<string length>)|  
+|字符串（长度小于 8000 个字节）|varchar(<string length>)|varchar(<string length>)|  
 |字符串（长度大于 8000 个字节）|varchar(max)|varchar(max)|  
 |资源|不提供支持。|不提供支持。|  
 |流（编码：不是二进制）|varchar(max)|varchar(max)|  
@@ -44,7 +44,7 @@ ms.locfileid: "35307220"
 |Object|不提供支持。|不提供支持。|  
 |DateTime (1)|DATETIME|不提供支持。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [转换数据类型](../../connect/php/converting-data-types.md)
@@ -53,5 +53,5 @@ ms.locfileid: "35307220"
 
 [PHP 类型](http://php.net/manual/language.types.php)
 
-[数据类型 (Transact SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[数据类型 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

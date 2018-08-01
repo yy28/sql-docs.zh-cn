@@ -1,6 +1,6 @@
 ---
-title: For SQL Server 对 LocalDB 的支持的 OLE DB 驱动程序 |Microsoft 文档
-description: OLE DB 驱动程序的 SQL Server 对 LocalDB 的支持
+title: 适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持 | Microsoft Docs
+description: 适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c66855285d9912b8a818b5e270f38880c7828ebc
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 669d221ada6ff693194266618952d53c17bb6d87
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612312"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107679"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>For SQL Server 对 LocalDB 的支持的 OLE DB 驱动程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -37,9 +37,9 @@ ms.locfileid: "35612312"
   
  总之，通过 LocalDB，您可以：  
   
--   使用**sqllocaldb.exe 我**来发现的默认实例的名称。  
+-   使用**sqllocaldb.exe 我**发现的默认实例的名称。  
   
--   使用**AttachDBFilename**应附加连接字符串关键字来指定的数据库文件服务器。 使用时**AttachDBFilename**，如果不指定与数据库的名称**数据库**连接字符串关键字，数据库将从 LocalDB 实例时应用程序关闭。  
+-   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除。  
   
 -   在您的连接字符串中指定 LocalDB 实例：  
   
@@ -49,7 +49,7 @@ SERVER=(localdb)\v11.0
   
  如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， **sqlcmd-S (localdb) \v11.0**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

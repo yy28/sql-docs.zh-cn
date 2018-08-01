@@ -1,5 +1,5 @@
 ---
-title: updateNClob 方法 （int、 java.io.Reader，长） |Microsoft 文档
+title: updateNClob 方法 （int，java.io.Reader，long） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d22275e38f7f63533b1faadfed0687ef76fb6ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040805"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>updateNClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void updateNClob(int columnIndex,
   
  指示列索引的 int。  
   
- *读取器*  
+ reader  
   
  一个读取器对象。  
   
@@ -51,13 +51,13 @@ public void updateNClob(int columnIndex,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateNClob 方法指定此 updateNClob 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateNClob 方法由 java.sql.ResultSet 接口中的 updateNClob 方法指定。  
   
- 仅在支持此方法**nvarchar (max)**， **ntext**，和**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
+ 此方法仅支持**nvarchar （max)**， **ntext**，并**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateNClob 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
+ [updateNClob 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

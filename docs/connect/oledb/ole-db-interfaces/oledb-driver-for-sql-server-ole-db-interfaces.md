@@ -1,6 +1,6 @@
 ---
-title: 用于 SQL Server (OLE DB) 引用的 OLE DB 驱动程序 |Microsoft 文档
-description: OLE DB 驱动程序的 SQL Server (OLE DB) 引用
+title: OLE DB 驱动程序的 SQL Server (OLE DB) 参考 |Microsoft Docs
+description: 适用于 SQL Server 的 OLE DB 驱动程序 (OLE DB) 引用
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,29 +20,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690160"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105803"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>用于 SQL Server (OLE DB) 接口的 OLE DB 驱动程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>适用于 SQL Server 的 OLE DB 驱动程序 (OLE DB) 接口
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序公开的接口连接到了所需运行的一个或多个计算机上的数据的访问的使用者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 SQL Server 的 OLE DB 驱动程序是 OLE DB 版本 2.0 – 符合访问接口。  
+  适用于 SQL Server 的 OLE DB 驱动程序向要访问正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的一个或多个计算机上的数据的使用者公开接口。 SQL Server 的 OLE DB 驱动程序是 OLE DB 版本 2.0 兼容的提供程序。  
   
- 用于 SQL Server 的编程参考此 OLE DB 驱动程序不记录所有的 OLE DB 接口和方法，这些接口和方法时使用的 SQL Server OLE DB 驱动程序显示特定于提供程序的行为。  
+ 此适用于 SQL Server 的 OLE DB 驱动程序编程参考未记录所有 OLE DB 接口和方法，该参考仅记录了当使用适用于 SQL Server 的 OLE DB 驱动程序时表现访问接口特定行为的接口和方法。  
   
- 核心 OLE DB 接口和方法的完整说明，请参阅[OLE DB 程序员参考](http://go.microsoft.com/fwlink/?LinkId=45232)。  
+ 有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232)（OLE DB 程序员参考）。  
   
 ## <a name="in-this-section"></a>本节内容  
   
 -   [接口&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

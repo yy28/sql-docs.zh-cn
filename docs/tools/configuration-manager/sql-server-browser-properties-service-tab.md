@@ -1,5 +1,5 @@
 ---
-title: SQL Server 浏览器属性 （服务选项卡） |Microsoft 文档
+title: SQL Server Browser 属性（“服务”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e8ba31710865718b18e4797daf4250867ebb799
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068764"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984417"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "33068764"
   
  使用 **“SQL Server 浏览器属性”** 对话框中的 **“服务”** 选项卡可以查看下列选项。 除了 **“启动模式”** 以外，其他所有属性都是只读的。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   

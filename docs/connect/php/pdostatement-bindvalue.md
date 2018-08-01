@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindValue |Microsoft 文档
+title: PDOStatement::bindValue |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70d02f3b7422e575d1ce5ae7bd02533c258ab8d1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 099da725f1d8103499ea5a6a31f2cf2ca0538249
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308386"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983499"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,11 +34,11 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*参数*: （混合） 参数标识符。 语句使用名为占位符，对于使用参数名称 (: 名称)。 对于使用问号语法已准备的语句，它是参数的基于 1 的索引。
+$parameter：（混合）参数标识符。 对于使用命名占位符的语句，使用参数名 (:name)。 对于使用问号语法的已准备的语句，为基于 1 的参数索引。
   
-$*值*： 要绑定到参数的 （混合） 值。  
+$value：要绑定到参数的（混合）值。  
   
-$*data_type*: PDO::PARAM_ * 常量表示的可选 （整数） 数据类型。 默认值为 PDO::PARAM_STR。  
+$data_type：由 PDO::PARAM_* 常量表示的可选（整数）数据类型。 默认值为 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
@@ -80,7 +80,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。 这同样适用于 bigint 列，尤其是在有效值的范围之外时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建议使用字符串作为输入，绑定到的值时[decimal 或 numeric 的列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要确保的精确度和准确度，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。 这同样适用于到 bigint 列，尤其是有效值的范围之外[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将绑定十进制值作为输入参数。  
@@ -100,7 +100,7 @@ $stmt->bindValue(1, $input, PDO::PARAM_STR);
 $stmt->execute();
 ```
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

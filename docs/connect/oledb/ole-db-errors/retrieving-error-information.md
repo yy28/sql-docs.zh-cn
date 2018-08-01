@@ -1,6 +1,6 @@
 ---
-title: 检索错误信息 |Microsoft 文档
-description: 使用 SQL Server 的 OLE DB 驱动程序检索错误信息
+title: 检索错误信息 |Microsoft Docs
+description: 检索错误信息的信息适用于 SQL Server 使用 OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 514ff67f699b8dc0f3fb70881d24880e84aed390
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 24bb40aa1f6fcaf26f82a27a0601946c2c200cf5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665907"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108069"
 ---
 # <a name="retrieving-error-information"></a>检索错误信息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此示例将从 SQL Server 的公开 OLE DB 驱动程序的各种错误接口获得信息。  
+  本示例从适用于 SQL Server 的 OLE DB 驱动程序公开的各种错误接口中获取信息。  
   
 ```  
 // DumpErrorInfo queries MSOLEDBSQL error interfaces, retrieving available  
@@ -224,7 +224,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  
   
   

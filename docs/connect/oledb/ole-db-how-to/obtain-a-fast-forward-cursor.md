@@ -1,5 +1,5 @@
 ---
-title: 获取 FAST_FORWARD 游标 |Microsoft 文档
+title: 获取 FAST_FORWARD 游标 |Microsoft Docs
 description: 获取 FAST_FORWARD 游标使用的 SQL Server OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,26 +16,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 304787325b72951d41e31771b2da5f153af6e554
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: da5c91d54a5456fa0705731dd5c24cad65aa6ab9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665857"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107123"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>获取 FAST_FORWARD 游标
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   若要获取只进只读游标，请将行集属性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 设置为 VARIANT_TRUE。  
   
- 本文提供了一个完整示例，说明如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置了属性后，执行 SELECT 语句来检索和显示**名称**列**Purchasing.Vendor**表中**AdventureWorks**数据库.  
+ 本文提供了一个完整示例，说明如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置属性后，执行 SELECT 语句，以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
-### <a name="to-obtain-fastforward-cursor"></a>若要获取 FAST_FORWARD 光标  
+### <a name="to-obtain-fastforward-cursor"></a>若要获取 FAST_FORWARD 游标  
   
 1.  建立与数据源的连接。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "35665857"
 ## <a name="example"></a>示例  
  以下示例显示如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置完属性后，将执行 SELECT 语句以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列。 IA64 平台不支持此示例。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

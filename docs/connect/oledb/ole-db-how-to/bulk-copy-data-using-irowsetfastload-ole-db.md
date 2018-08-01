@@ -1,6 +1,6 @@
 ---
-title: 大容量复制数据使用 IRowsetFastLoad (OLE DB) |Microsoft 文档
-description: 大容量复制数据到 OLE DB 驱动程序的 SQL Server 的 SQL Server 表使用 IRowsetFastLoad 接口
+title: 大容量复制数据使用 IRowsetFastLoad (OLE DB) |Microsoft Docs
+description: 大容量复制数据到 OLE DB Driver for SQL Server 的 SQL Server 表使用 IRowsetFastLoad 接口
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,25 +19,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665657"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107719"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此示例说明如何使用 IRowsetFastLoad 将记录大容量复制到表中。  
   
- 使用者通知其需求的大容量复制通过将 SQL Server 驱动程序特定属性 SSPROP_ENABLEFASTLOAD OLE DB 驱动程序设置为 VARIANT_TRUE 的 SQL Server 的 OLE DB 驱动程序。 在数据源上设置属性，与使用者为 SQL Server 会话创建 OLE DB 驱动程序。 在新的会话允许使用者访问**IRowsetFastLoad**。  
+ 使用者通知其对大容量复制的 OLE DB 驱动程序为 SQL Server 驱动程序特定属性 SSPROP_ENABLEFASTLOAD 设置为 variant_true，则需要的 SQL Server 的 OLE DB 驱动程序。 通过对数据源设置该属性，使用者为 SQL Server 会话创建一个 OLE DB 驱动程序。 新会话允许的使用者访问权限**IRowsetFastLoad**。  
   
- 完整示例，演示如何使用**IRowsetFastLoad**用于大容量复制的记录到表中。 在此示例中，10 条记录添加到表**IRFLTable**。 你需要创建表**IRFLTable**数据库中。  
+ 可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程。 在此示例中，将 10 条记录添加到表 IRFLTable 中。 需要在数据库中创建表 IRFLTable。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -46,24 +46,24 @@ ms.locfileid: "35665657"
   
 1.  建立与数据源的连接。  
   
-2.  将 SQL Server 驱动程序特有的数据源属性 SSPROP_ENABLEFASTLOAD OLE DB 驱动程序设置为 VARIANT_TRUE。 此属性设置为 VARIANT_TRUE 的情况下，新创建的会话允许使用者访问**IRowsetFastLoad**。  
+2.  将 SQL Server 驱动程序特定的数据源属性 ssprop_enablefastload 设置为，OLE DB 驱动程序设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad。  
   
 3.  创建会话请求**IOpenRowset**接口。  
   
-4.  调用**IOpenRowset::OpenRowset**来打开行集，其中包含从表 （在其中数据将被复制使用大容量复制操作） 的所有行。  
+4.  调用 IOpenRowset::OpenRowset 以打开包括表（将使用大容量复制操作复制其中数据）中所有行的行集。  
   
-5.  进行必要的绑定，然后创建使用访问器**IAccessor::CreateAccessor**。  
+5.  执行需要的绑定和创建取值函数使用**iaccessor:: Createaccessor**。  
   
 6.  设置内存缓冲区，用于将数据从其复制到表中。  
   
-7.  调用**IRowsetFastLoad::InsertRow**到大容量复制到表中的数据。  
+7.  调用**irowsetfastload:: Insertrow**到大容量复制到表中的数据。  
   
 ## <a name="example"></a>示例  
  在此示例中，将 10 条记录添加到表 IRFLTable 中。 您需要在数据库中创建表 IRFLTable。 IA64 平台不支持此示例。  
   
  执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的表。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的表。  
   

@@ -1,5 +1,5 @@
 ---
-title: 分析服务器属性 （选项卡上的日志） |Microsoft 文档
+title: Analysis Server 属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b072878ff2fb3e2b7ac8a2c33d17436696b23f86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067804"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042375"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>分析服务器属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "33067804"
 > [!NOTE]  
 >  更改群集实例上的服务使用的 **“帐户名”** 时，新帐户必须是安装期间为待更改服务指定的域组的成员，或者您必须有权添加该组的成员。 如果您无权修改组成员身份，请与域管理员联系。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **本地系统帐户**  
  指定一个不要求输入密码的本地系统帐户。 不过，本地系统帐户可能会限制该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  
   

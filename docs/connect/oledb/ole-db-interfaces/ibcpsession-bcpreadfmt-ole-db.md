@@ -1,6 +1,6 @@
 ---
-title: IBCPSession::BCPReadFmt (OLE DB) |Microsoft 文档
-description: 用于读取从格式文件 (OLE DB) 的数据使用 IBCPSession::BCPReadFmt
+title: 'Ibcpsession:: Bcpreadfmt (OLE DB) |Microsoft Docs'
+description: '使用 ibcpsession:: Bcpreadfmt 从格式化文件 (OLE DB) 读取数据'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6cbdb38e8318c40113a6e6b43e6ba0ca96c5221a
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 723bdccfc891d82bb9f219bd02b4b821f3da4797
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689040"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107149"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,13 +43,13 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- **BCPReadFmt**方法用于从数据文件中指定的数据的格式的格式化文件中读取数据。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 适用于 SQL Server BCP 的 OLE DB 驱动程序支持的格式文件版本为版本 6.0 或更高版本。  
+ 可使用 BCPReadFmt 方法从格式化文件中读取数据，其中该文件指定数据文件中的数据格式。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 为 SQL Server BCP 支持的 OLE DB 驱动程序的格式化文件版本是版本 6.0 或更高版本。  
   
- 后**BCPReadFmt**方法读取的值设置格式，它使到适当的调用[IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)和[IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)方法。 用户不必分析格式化文件并发出上述调用。  
+ BCPReadFmt 方法在读取格式值之后，会相应调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法。 用户不必分析格式化文件并发出上述调用。  
   
- 若要保存格式文件，请调用[IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)方法。 调用**BCPReadFmt**方法可以引用已保存的格式。 或者，大容量复制实用工具 (**bcp**) 可以在可供引用的文件中保存用户定义数据格式**BCPReadFmt**方法。  
+ 要保存格式化文件，请调用 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。 调用 BCPReadFmt 方法可引用保存的格式。 或者，可使用大容量复制实用工具 (bcp) 将用户定义数据格式保存在可由 BCPReadFmt 方法引用的文件中。  
   
- **BCP_OPTION_DELAYREADFMT**值*eOption*参数[IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)修改 IBCPSession::BCPReadFmt 的行为。  
+ **BCP_OPTION_DELAYREADFMT**的值*eOption*参数[ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)修改 ibcpsession:: Bcpreadfmt 的行为。  
   
 ## <a name="arguments"></a>参数  
  *pwszFormatFile*[in]  
@@ -60,15 +60,15 @@ HRESULT BCPReadFmt(
  方法成功。  
   
  E_FAIL  
- 提供程序特定错误发生，有关详细的信息的使用[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 出现访问接口特定的错误；要获取详细信息，请使用 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口。  
   
  E_OUTOFMEMORY  
- 内存不足的错误。  
+ 内存不足错误。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法未调用此方法之前调用。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
   

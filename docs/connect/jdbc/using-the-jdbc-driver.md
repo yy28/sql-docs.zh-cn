@@ -1,5 +1,5 @@
 ---
-title: 使用 JDBC 驱动程序 |Microsoft 文档
+title: 使用 JDBC 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,32 +15,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03ea3e895fb7d70b392e0c25372536770308049d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015818"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本部分提供有关进行简单连接到的快速入门说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]通过使用数据库[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。 连接到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]首先必须安装在本地计算机或服务器，并且必须在本地计算机上安装的 JDBC 驱动程序。  
+  本部分提供使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 与 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 数据库建立简单连接的快速入门指导。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库之前，必须首先在本地计算机或服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并且必须在本地计算机上安装 JDBC 驱动程序。  
   
 ## <a name="choosing-the-right-jar-file"></a>选择正确的 JAR 文件  
- SQL Server 的 Microsoft JDBC 驱动程序 6.4 提供**mssql jdbc 6.4.0.jre7.jar**， **mssql jdbc 6.4.0.jre8.jar**，和**mssql jdbc 6.4.0.jre9.jar**类库具体取决于你首选的 Java Runtime Environment (JRE) 设置要使用的文件。  
+ Microsoft JDBC Driver 6.4 for SQL Server 提供了**mssql jdbc 6.4.0.jre7.jar**， **mssql jdbc 6.4.0.jre8.jar**，并**mssql jdbc 6.4.0.jre9.jar**类库具体取决于您的首选 Java Runtime Environment (JRE) 设置要使用的文件。  
  
- SQL Server 的 Microsoft JDBC 驱动程序 6.2 提供**mssql jdbc 6.2.1.jre7.jar**，和**mssql jdbc 6.2.1.jre8.jar**类库文件，具体取决于你首选的 Java 运行时使用环境 (JRE) 设置。  
+ Microsoft JDBC Driver 6.2 for SQL Server 提供了**mssql jdbc 6.2.1.jre7.jar**，并**mssql jdbc 6.2.1.jre8.jar**类库文件，具体取决于你首选的 Java 运行时使用环境 (JRE) 设置。  
   
-  Microsoft JDBC 驱动程序 6.0 和 4.2 for SQL Server 提供**sqljdbc41.jar**，和**sqljdbc42.jar**类具体取决于你首选的 Java Runtime Environment (JRE) 设置要使用的库文件。  
+  Microsoft JDBC Drivers 6.0 for SQL Server 和 4.2 版本提供要使用的 sqljdbc41 和 sqljdbc42.jar 类库文件，具体取决于你的首选 Java Runtime Environment (JRE) 设置。  
   
- SQL Server 的 Microsoft JDBC Driver 4.1 提供**sqljdbc41.jar**类库文件，具体取决于你首选的 Java Runtime Environment (JRE) 设置中使用。  
+ Microsoft JDBC Driver 4.1 for SQL Server 提供要使用的 sqljdbc41.jar 类库文件，具体取决于你的首选 Java Runtime Environment (JRE) 设置。  
     
- 你的选择还将确定可用功能。 有关要选择的 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+ 你的选择还将确定可用功能。 若要选择哪个 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="setting-the-classpath"></a>设置 Classpath  
- JDBC 驱动程序并未包含在 Java SDK 中。 如果你想要使用它，则必须设置类路径来包括**sqljdbc.jar**文件， **sqljdbc4.jar**文件， **sqljdbc41.jar**文件，或**sqljdbc42.jar**文件。 如果使用 JDBC 驱动程序 6.2 设置类路径来包括**mssql jdbc 6.2.1.jre7.jar**或**mssql jdbc 6.2.1.jre8.jar**。 如果使用 JDBC 驱动程序 6.4、 设置类路径来包括**mssql jdbc 6.4.0.jre7.jar**， **mssql jdbc 6.4.0.jre8.jar**或**mssql jdbc 6.4.0.jre9.jar**。 如果类路径缺少条目，你的应用程序将引发常见的“找不到类”异常。  
+ JDBC 驱动程序并未包含在 Java SDK 中。 如果你希望使用它，则必须设置类路径以包含 sqljdbc.jar 文件、sqljdbc4.jar 文件、sqljdbc41.jar 文件或 sqljdbc42.jar 文件。 如果使用 JDBC Driver 6.2 classpath 设置为包含**mssql jdbc 6.2.1.jre7.jar**或**mssql jdbc 6.2.1.jre8.jar**。 如果使用 JDBC Driver 6.4 classpath 设置为包含**mssql jdbc 6.4.0.jre7.jar**， **mssql jdbc 6.4.0.jre8.jar**或**mssql jdbc 6.4.0.jre9.jar**。 如果类路径缺少条目，你的应用程序将引发常见的“找不到类”异常。  
   
-### <a name="for-microsoft-jdbc-driver-64"></a>For Microsoft JDBC Driver 6.4
+### <a name="for-microsoft-jdbc-driver-64"></a>有关 Microsoft JDBC Driver 6.4
  **Mssql jdbc 6.4.0.jre7.jar**， **mssql jdbc 6.4.0.jre8.jar**或**mssql jdbc 6.4.0.jre9.jar**文件安装在以下位置：  
   
  \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \mssql-jdbc-6.4.0.jre7.jar 
@@ -59,7 +59,7 @@ ms.locfileid: "32852612"
   
  你必须确保 CLASSPATH 语句包含只有一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如 mssql jdbc 6.4.0.jre7.jar、 mssql jdbc 6.4.0.jre8.jar 或 mssql jdbc 6.4.0.jre9.jar。   
 
-### <a name="for-microsoft-jdbc-driver-62"></a>For Microsoft JDBC Driver 6.2
+### <a name="for-microsoft-jdbc-driver-62"></a>有关 Microsoft JDBC Driver 6.2
  **Mssql jdbc 6.2.1.jre7.jar**或**mssql jdbc 6.2.1.jre8.jar**文件安装在以下位置：  
   
  \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \mssql-jdbc-6.2.1.jre7.jar 
@@ -74,9 +74,9 @@ ms.locfileid: "32852612"
   
  `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.1.jre8.jar`  
   
- 你必须确保 CLASSPATH 语句包含只有一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如 mssql jdbc 6.2.1.jre7.jar 或 mssql jdbc 6.2.1.jre8.jar。  
+ 你必须确保 CLASSPATH 语句包含只有一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql jdbc 6.2.1.jre7.jar 或 mssql jdbc 6.2.1.jre8.jar。  
 
-### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>有关 Microsoft JDBC Driver 4.1、 4.2 和 6.0
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC 驱动程序 4.1、 4.2 和 6.0
  Sqljdbc.jar 文件、sqljdbc4.jar 文件、sqljdbc41.jar 或 sqljdbc42.jar 文件安装在以下位置：  
   
  \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \sqljdbc.jar  
@@ -95,13 +95,13 @@ ms.locfileid: "32852612"
   
  `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_4.2/enu/sqljdbc42.jar`  
   
- 你必须确保 CLASSPATH 语句包含只有一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如 sqljdbc.jar、 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar。  
+ 你必须确保 CLASSPATH 声明只包含一个 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar。  
   
 > [!NOTE]  
->  在 Windows 系统上，长度超过 8.3 文件名约定的目录名称或带有空格的文件夹名称可能会导致类路径问题。 如果你怀疑这些类型的问题，应暂时将移 sqljdbc.jar、 sqljdbc4.jar 文件或 sqljdbc41.jar 文件到简单的目录名称如`C:\Temp`、 更改的类路径，以及确定是否，以解决问题。  
+>  在 Windows 系统上，长度超过 8.3 文件名约定的目录名称或带有空格的文件夹名称可能会导致类路径问题。 如果你怀疑存在这些类型的问题，应将 sqljdbc.jar 文件、sqljdbc4.jar 文件或 sqljdbc41.jar 文件暂时移到简单的目录名称（例如 `C:\Temp`）中，更改类路径，然后确定是否已解决该问题。  
   
 ### <a name="applications-that-are-run-directly-at-the-command-prompt"></a>直接在命令提示符运行的应用程序  
- classpath 是在操作系统中配置的。 将 sqljdbc.jar、sqljdbc4.jar 或 sqljdbc41.jar 追加到系统的 classpath 中。 或者，可以通过使用运行应用程序在 Java 命令行上指定的类路径`java -classpath`选项。  
+ classpath 是在操作系统中配置的。 将 sqljdbc.jar、sqljdbc4.jar 或 sqljdbc41.jar 追加到系统的 classpath 中。 或者，可使用 `java -classpath` 选项，在运行此应用程序的 Java 命令行上指定 classpath。  
   
 ### <a name="applications-that-run-in-an-ide"></a>在 IDE 中运行的应用程序  
  每个 IDE 供应商都提供了在 IDE 中设置 classpath 的不同方法。 仅在操作系统中设置 classpath 将无法正常工作。 必须将 sqljdbc.jar、sqljdbc4.jar 或 sqljdbc41.jar 添加到 IDE 类路径。  
@@ -110,14 +110,14 @@ ms.locfileid: "32852612"
  Servlet 和 JSP 在 servlet/JSP 引擎（如 Tomcat）中运行。 必须根据 servlet/JSP 引擎文档来设置 classpath。 仅在操作系统中设置 classpath 将无法正常工作。 一些 servlet/JSP 引擎提供了设置屏幕，用于设置引擎的 classpath。 在这种情况下，必须将正确的 JDBC 驱动程序 JAR 文件追加到现有的引擎 classpath，然后重新启动引擎。 在其他情况下，通过在引擎安装期间将 sqljdbc.jar、sqljdbc4.jar 或 sqljdbc41.jar 复制到 lib 之类的特定目录，可以部署此驱动程序。 也可以在引擎专用的配置文件中指定引擎驱动程序的 classpath。  
   
 ### <a name="enterprise-java-beans"></a>Enterprise Java Beans  
- Enterprise Java Bean (EJB) 在 EJB 容器中运行。 EJB 容器来自多家供应商。 Java 小程序在浏览器中运行，但是从 Web 服务器上下载的。 复制到 web 服务器根的 sqljdbc.jar、 sqljdbc4.jar、 sqljdbc41.jar 和指定 JAR 文件的名称在 HTML 存档选项卡中的小程序，例如， `<applet ... archive=sqljdbc.jar>`。  
+ Enterprise Java Bean (EJB) 在 EJB 容器中运行。 EJB 容器来自多家供应商。 Java 小程序在浏览器中运行，但是从 Web 服务器上下载的。 将 sqljdbc.jar、sqljdbc4.jar 或 sqljdbc41.jar 复制到 Web 服务器根并在小程序的 HTML 存档选项卡中指定 JAR 文件的名称，例如 `<applet ... archive=sqljdbc.jar>`。  
   
 ## <a name="making-a-simple-connection-to-a-database"></a>与数据库建立简单连接  
  使用 sqljdbc.jar 类库时，应用程序必须首先按如下所示注册驱动程序：  
   
  `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
   
- 加载驱动程序后，你可以通过使用连接 URL 和驱动程序管理器类的 getConnection 方法来建立连接：  
+ 加载驱动程序，可以通过使用连接 URL 和驱动程序管理器类的 getConnection 方法来建立连接：  
   
 ```  
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
@@ -125,14 +125,14 @@ String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
 Connection con = DriverManager.getConnection(connectionUrl);  
 ```  
   
- 在 JDBC API 4.0、 增强 DriverManager.getConnection 方法以自动加载 JDBC 驱动程序。 因此，应用程序不需要调用 Class.forName 方法以注册或使用 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 类库时加载的驱动程序。  
+ 在 JDBC API 4.0 中，DriverManager.getConnection 方法得到了增强，以自动加载 JDBC 驱动程序。 因此，在使用 sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库时，应用程序不需要调用 Class.forName 方法来注册或加载驱动程序。  
   
- 当调用驱动程序管理器类的 getConnection 方法时，合适的驱动程序位于从已注册的 JDBC 驱动程序集。 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 文件包括"META-INF/services/java.sql.Driver"文件，其中包含**com.microsoft.sqlserver.jdbc.SQLServerDriver**作为已注册的驱动程序。 现有应用程序，通过使用 Class.forName 方法当前加载的驱动程序，将继续无需修改即可。  
+ 当调用驱动程序管理器类的 getConnection 方法时，相应的驱动程序会从已注册的 JDBC 驱动程序集中找到。 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 文件包括"META-INF/services/java.sql.Driver"文件，其中包含**com.microsoft.sqlserver.jdbc.SQLServerDriver**作为已注册的驱动程序。 当前通过使用 Class.forName 方法加载驱动程序的现有应用程序将继续工作，无需进行修改。  
   
 > [!NOTE]  
->  sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)有关支持的 JRE 版本的列表[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
+>  sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)支持的 JRE 版本的列表[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
   
- 有关如何与数据源连接和使用连接 URL 的详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)和[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 有关如何连接数据源和使用连接 URL 的详细信息，请参阅[创建连接 URL](../../connect/jdbc/building-the-connection-url.md)并[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

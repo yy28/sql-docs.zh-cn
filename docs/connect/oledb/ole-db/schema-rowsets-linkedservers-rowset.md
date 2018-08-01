@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行集 (OLE DB) |Microsoft 文档
+title: LINKEDSERVERS 行集 (OLE DB) |Microsoft Docs
 description: LINKEDSERVERS 行集 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,23 +17,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611722"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105763"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>架构行集-LINKEDSERVERS 行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---linkedservers-rowset"></a>架构行集 - LINKEDSERVERS 行集
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **LINKEDSERVERS**行集枚举组织数据源可以参与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源。  
   
- **LINKEDSERVERS**行集包含以下各列。  
+ LINKEDSERVERS 行集包含以下列。  
   
-|列名|类型指示符|Description|  
+|列名|类型指示符|描述|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|链接服务器的名称。|  
 |SVR_PRODUCT|DBTYPE_WSTR|标识由链接服务器的名称所表示的数据存储的类型的制造商或其他名称。|  
@@ -44,7 +44,7 @@ ms.locfileid: "35611722"
   
  行集按 SRV_NAME 排序，并支持对 SRV_NAME 的单个限制。  
   
-## <a name="see-also"></a>请参阅  
- [架构行集支持&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [架构行集支持 (OLE DB)](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result |Microsoft 文档
+title: sqlsrv_next_result |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309436"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019605"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309436"
 使指定语句的下一个结果（结果集、行计数或输出参数）处于活动状态。  
   
 > [!NOTE]  
-> 返回的批查询或存储的过程的第一个 （或唯一） 结果处于活动状态而无需调用**sqlsrv_next_result**。  
+> 大容量查询或存储过程返回的第一个（或唯一）结果处于活动状态，并且不调用 sqlsrv_next_result。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,12 +51,12 @@ sqlsrv_next_result( resource $stmt )
 如果下一个结果成功进入活动状态，将返回布尔值 **true** 。 如果在使下一个结果处于活动状态时发生错误，将返回 **false** 。 如果没有更多可用结果，将返回 **NULL** 。  
   
 ## <a name="example"></a>示例  
-以下示例创建和执行将产品评论插入 *Production.ProductReview* 表的存储过程，然后选择指定产品的所有评论。 在存储过程的执行之后, 的第一个结果 （存储过程中的 INSERT 查询受影响的行数） 消耗情况下调用**sqlsrv_next_result**。 下一个结果 （存储过程中 SELECT 查询返回的行） 可通过调用**sqlsrv_next_result**和使用[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)。  
+以下示例创建和执行将产品评论插入 *Production.ProductReview* 表的存储过程，然后选择指定产品的所有评论。 执行存储过程后，无需调用 sqlsrv_next_result 即可使用第一个结果（存储过程中受 INSERT 查询影响的行数）。 通过调用 sqlsrv_next_result 可获取下一个结果（存储过程中 SELECT 查询返回的行），并可通过 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 使用该结果。  
   
 > [!NOTE]  
 > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -187,9 +187,9 @@ sqlsrv_close( $conn );
 以下示例执行大容量查询，即检索指定产品 ID 的产品评论信息、插入产品评论，然后再次检索指定产品 ID 的产品评论信息。 新插入的产品评论将包括在大容量查询的最终结果集中。 该示例使用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 从大容量查询的一个结果移动到下一个结果。  
   
 > [!NOTE]  
-> 返回的批查询或存储的过程的第一个 （或唯一） 结果处于活动状态而无需调用**sqlsrv_next_result**。  
+> 大容量查询或存储过程返回的第一个（或唯一）结果处于活动状态，并且不调用 sqlsrv_next_result。  
   
-该示例使用*Purchasing.ProductReview*表[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库，并假定已在服务器上安装了此数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例使用 *AdventureWorks* 数据库的 [Purchasing.ProductReview](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 表，并且假定已在服务器上安装了此数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -268,7 +268,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)

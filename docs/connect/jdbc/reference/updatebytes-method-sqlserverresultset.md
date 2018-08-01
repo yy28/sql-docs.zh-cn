@@ -1,5 +1,5 @@
 ---
-title: updateBytes 方法 (SQLServerResultSet) |Microsoft 文档
+title: updateBytes 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,26 +20,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a01c403fee7f0619009d53dd4376ee9d4e6d728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057975"
 ---
 # <a name="updatebytes-method-sqlserverresultset"></a>updateBytes 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  会将指定的列更新的数组**字节**值。  
+  使用字节值构成的数组更新指定列。  
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
-|[updateBytes (int、 字节&#91;&#93;)](../../../connect/jdbc/reference/updatebytes-method-int-byte.md)|会将指定的列更新的数组**字节**给定的列索引的值。|  
-|[updateBytes (java.lang.String、 字节&#91;&#93;)](../../../connect/jdbc/reference/updatebytes-method-java-lang-string-byte.md)|会将指定的列更新的数组**字节**给定列名称的值。|  
+|[updateBytes (int, byte[])](../../../connect/jdbc/reference/updatebytes-method-int-byte.md)|根据给定的列索引使用字节值构成的数组更新指定的列。|  
+|[updateBytes (java.lang.String, byte[])](../../../connect/jdbc/reference/updatebytes-method-java-lang-string-byte.md)|根据给定的列名称使用字节值构成的数组更新指定的列。|  
   
-## <a name="remarks"></a>注释  
- 在以前版本的[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]，你可以使用 SQLServerResultSet.updateBytes 之间字节数组转换值和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型**日期**，**时间**， **datetime2**，或**datetimeoffset**。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
+## <a name="remarks"></a>Remarks  
+ 在之前的 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 版本中，可使用 SQLServerResultSet.updateBytes 将字节数组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型日期、时间、datetime2 或 datetimeoffset 的值相互转换。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

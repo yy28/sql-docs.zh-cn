@@ -1,5 +1,5 @@
 ---
-title: 对 LocalDB 的支持 |Microsoft 文档
+title: 对 LocalDB 的支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,29 +14,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308746"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992909"
 ---
-# <a name="support-for-localdb"></a>对 LocalDB 的支持
+# <a name="support-for-localdb"></a>支持 LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB 是轻量版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，这也是可用自[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 本主题介绍如何连接到 LocalDB 实例中的数据库。
+LocalDB 是轻型版本，其中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，这也是可用以来[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 本主题介绍如何连接到 LocalDB 实例中的数据库。
 
 ## <a name="remarks"></a>Remarks
 
 有关 LocalDB，包括如何安装 LocalDB 和配置 LocalDB 实例，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上的联机丛书主题[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express LocalDB。
 
-简单地说，LocalDB，你可以：
+简单地说，LocalDB，您可以：
 
--   使用**sqllocaldb.exe 我**来发现的默认实例的名称。
+-   使用**sqllocaldb.exe 我**发现的默认实例的名称。
 
--   使用**AttachDBFilename**应附加连接字符串关键字来指定的数据库文件服务器。 使用时**AttachDBFilename**，如果不指定与数据库的名称**数据库**连接字符串关键字，数据库将从 LocalDB 实例时应用程序关闭。
+-   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除。
 
--   连接字符串中指定的 LocalDB 实例。 例如，下面是一个 SQLSRV 连接字符串示例：
+-   在连接字符串中指定 LocalDB 实例。 例如，下面是一个 SQLSRV 连接字符串示例：
 
     ```php
     $conn = sqlsrv_connect( '(localdb)\\v11.0',
@@ -63,24 +63,24 @@ LocalDB 是轻量版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， `sqlcmd -S (localdb)\v11.0`。 (当在 IIS 中运行，你需要在要获取与你在命令行中; 上的运行时相同的结果的正确帐户下运行请参阅[使用 LocalDB 完整 iis，第 2 部分： 实例所有权](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)有关详细信息。)
+如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， `sqlcmd -S (localdb)\v11.0`。 (需要以获取与在命令行中; 运行时相同的结果在正确的帐户下运行时在 IIS 中运行，请参阅[将 localdb 与完整 IIS，第 2 部分结合： 实例所有权](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)有关详细信息。)
 
-以下是连接到命名实例名为 myInstance LocalDB 中的数据库的示例连接字符串使用 SQLSRV 驱动程序：
+以下是连接到 LocalDB 命名名为 myInstance 的实例中的数据库的示例连接字符串使用 SQLSRV 驱动程序：
 
 ```php
 $conn = sqlsrv_connect( '(localdb)\\myInstance',
     array( 'Database'=>'myData'));
 ```
 
-以下是连接到命名实例名为 myInstance LocalDB 中的数据库的示例连接字符串使用 PDO_SQLSRV 驱动程序：  
+以下是连接到 LocalDB 命名名为 myInstance 的实例中的数据库的示例连接字符串使用 PDO_SQLSRV 驱动程序：  
   
 ```php
 $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-有关安装 LocalDB 的说明，请参阅[LocalDB 文档](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 如果使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，你将需要[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。
+有关安装 LocalDB 的说明，请参阅[LocalDB 文档](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 如果使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，则需要[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [连接到服务器](../../connect/php/connecting-to-the-server.md)

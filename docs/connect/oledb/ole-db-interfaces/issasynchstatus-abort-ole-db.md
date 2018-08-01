@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::Abort (OLE DB) |Microsoft 文档
+title: 'Issasynchstatus:: Abort (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: db1804728aea9f0362aad24c114eb1a1570c2a67
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20ad1b1f1a33bd198f0915847d99bfa8adf86f9b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689330"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106043"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,17 +44,17 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>参数  
- *hChapter*[in]  
- 要中止其操作的章节的句柄。 如果被调用的对象不是行集对象或操作不能应用于一章，调用方必须设置*hChapter*到 DB_NULL_HCHAPTER。  
+ hChapter[in]  
+ 要中止其操作的章节的句柄。 如果所调用的对象不是行集对象或者操作不应用于章节，则调用方必须将 hChapter 设置为 DB_NULL_HCHAPTER。  
   
- *eOperation*[in]  
+ eOperation[in]  
  要中止的操作。 应使用以下值：  
   
  DBASYNCHOP_OPEN — 要取消的请求应用于对行集的异步打开或填充，或应用于对数据源对象的异步初始化。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
- 已处理取消异步操作的请求。 它不保证操作本身已取消。 若要确定是否已取消该操作，使用者应调用[ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)并检查 DB_E_CANCELED; 但是，它可能不会返回非常下一个调用中。  
+ 已处理取消异步操作的请求。 这并不保证操作本身已取消。 若要确定操作是否已取消，使用者应当调用 [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)，并检查是否有 DB_E_CANCELED；但是，它可能不会正好在下一次调用中返回。  
   
  DB_E_CANTCANCEL  
  异步操作无法取消。  
@@ -66,23 +66,23 @@ HRESULT Abort(
  发生了特定于访问接口的错误。  
   
  E_INVALIDARG  
- *HChapter*参数不 DB_NULL_HCHAPTER 或*eOperation*不 DBASYNCH_OPEN。  
+ *HChapter*参数不是 DB_NULL_HCHAPTER 或者*eOperation*并不是 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort**对数据源对象在其上调用了**idbinitialize:: Initialize**尚未被调用，或尚未完成。  
+ 已对尚未调用或尚未完成 IDBInitialize::Initialize 的数据源对象调用 ISSAsynchStatus::Abort。  
   
- **ISSAsynchStatus::Abort**对数据源对象在其上调用了**idbinitialize:: Initialize**随后之前已取消初始化，但调用时或超时为止。数据源对象仍未初始化。  
+ 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消。数据源对象仍未初始化。  
   
- **ISSAsynchStatus::Abort**对在其上的行集调用**itransaction:: 提交**或**ITransaction::Abort**之前已调用和行集没有幸存提交或中止，处于僵停状态。  
+ 已对以前调用了 ITransaction::Commit 或 ITransaction::Abort 并在提交或中止后处于僵停状态的行集调用 ISSAsynchStatus::Abort。  
   
- **ISSAsynchStatus::Abort**已以异步方式取消其初始化阶段中的行集调用的。 该行集处于僵停状态。  
+ 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort。 该行集处于僵停状态。  
   
 ## <a name="remarks"></a>Remarks  
- 正在中止行集或数据源对象的初始化可能导致行集或数据源对象处于僵停状态，以便以外的其他所有方法**IUnknown**方法返回 E_UNEXPECTED。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
+ 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
   
- 调用**ISSAsynchStatus::Abort**和传递一个值*eOperation*之外 DBASYNCHOP_OPEN 返回，则为 S_OK。 这并不意味着该操作完成或已取消。  
+ 如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK。 这并不意味着操作已完成或取消。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 对 BLOB 的流式处理支持输出参数 |Microsoft 文档
-description: 用于 BLOB 输出参数的流式处理支持
+title: BLOB 的流支持输出参数 |Microsoft Docs
+description: BLOB 输出参数的流支持
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665167"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106863"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 输出参数的流支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本文包含显示流式处理支持用于 BLOB 输出参数，可将 BLOB 绑定输出作为 ISequentialStreams 的参数的示例。  
+  本文包含一个示例，它显示针对 BLOB 输出参数的流支持，即将 BLOB 输出参数绑定为 ISequentialStreams。  
   
- 可以在 IMultipleResults::GetResult 中锁定输出参数，并且接收 DB_E_OBJECTOPEN 返回值。 调用方应检查挂起的 blob 参数，并且它们完全读取或释放它们。  
+ 可以在 IMultipleResults::GetResult 中锁定输出参数，并且接收 DB_E_OBJECTOPEN 返回值。 调用方应检查是否有 blob 参数挂起，并完全读取或释放这些参数。  
   
 ## <a name="example"></a>示例  
   
@@ -516,7 +516,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [BLOB 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream 方法输入流的长时间 |Microsoft 文档
+title: setBinaryStream 方法来输入流的长时间 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bef9214305fee9f86f04b4e57c23157f242d2139
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023985"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,30 +41,30 @@ public void setBinaryStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *参数名称*  
+ parameterName  
   
- A**字符串**，其中包含参数的名称。  
+ 一个字符串，该字符串包含参数的名称。  
   
- *值*  
+ *value*  
   
- 一个 InputStream 对象中。  
+ InputStream 对象。  
   
  *length*  
   
- **Int** ，该值指示的长度以字节数。  
+ 一个整数，指示以字节数表示的长度。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 setBinaryStream 方法指定此 setBinaryStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setBinaryStream 方法由 java.sql.CallableStatement 接口中的 setBinaryStream 方法指定。  
   
- 流的长度是否不同于中指定了什么*长度*参数，在更新或插入行时的 JDBC 驱动程序引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
   
- 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[setBinaryStream 方法 （java.lang.String，java.io.InputStream）](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md)当应用程序希望更新的列从一个流，其长度为未知。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，我们建议使用 JDBC 4.0 方法 [setBinaryStream 方法 (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
+ [setBinaryStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

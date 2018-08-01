@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_object |Microsoft 文档
+title: sqlsrv_fetch_object |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309146"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991239"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>Parameters  
 *$stmt*：对应于已执行语句的语句资源。  
   
-*$className* [可选]: 指定要实例化的类名称的字符串。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
+$className [可选]：指定要实例化的类名称的字符串。 如果不指定 *$className* 参数的值，将实例化 PHP **stdClass** 的实例。  
   
-*$ctorParams* [可选]: 包含值的数组传递到与指定类的构造函数 *$className*参数。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
+$ctorParams [可选]：含有传递到通过 $className 参数指定的类构造函数的值的阵列。 如果指定类的构造函数接受参数值，在调用 *$ctorParams* object **sqlsrv_fetch_object**参数。  
   
-*行*[可选]: 指定要在使用可滚动游标的结果集中访问的行的以下值之一。 (如果*行*指定，则 *$className*和 *$ctorParams*必须显式指定，即使你必须指定为空 *$className*和 *$ctorParams*。)  
+row [可选]：以下某个值，用于指定要在使用可滚动游标的结果集中访问的行。 （如果指定了 row，则必须显式指定 $className 和 $ctorParams，即使必须将 $className 和 $ctorParams 指定为 null。）  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -63,7 +63,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 有关这些值的详细信息，请参阅 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-*偏移量*[可选]: 使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 用于指定要检索的行。 结果集中的第一个记录为 0。  
+offset [可选]：结合使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 以指定要检索的行。 结果集中的第一个记录为 0。  
   
 ## <a name="return-value"></a>返回值  
 具有对应于结果集字段名称的属性的 PHP 对象。 使用相应的结果集字段值来填充属性值。 如果使用可选 *$className* 参数指定的类不存在，或如果指定的语句未关联任何活动的结果集，将返回 **False** 。 如果没有更多要检索的行，将返回 **NULL** 。  
@@ -93,7 +93,7 @@ SELECT SCOPE_IDENTITY()</pre>
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>示例  
-以下示例将每一行结果集检索为 PHP 对象。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例将每一行结果集检索为 PHP 对象。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>示例  
-以下示例将每一行结果集检索为在脚本中定义的 *Product* 类的实例。 该示例将检索产品信息从*Purchasing.PurchaseOrderDetail*和*Production.Product*的 AdventureWorks 数据库的具有指定的产品表截止日期 (*DueDate*)，且库存的量 (*StockQty*) 小于指定值。 该示例重点介绍在对 **sqlsrv_fetch_object**的调用中指定某个类时所应用的某些规则：  
+以下示例将每一行结果集检索为在脚本中定义的 *Product* 类的实例。 该示例将从产品（具有指定到期日期 DueDate 且库存量 StockQty 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 和 Production.Product 表中检索产品信息。 该示例重点介绍在对 **sqlsrv_fetch_object**的调用中指定某个类时所应用的某些规则：  
   
 -   *$product* 变量是 *Product* 类的实例，为存在使用 *$className* 参数和 *Product* 类指定的“Product”。  
   
@@ -142,7 +142,7 @@ sqlsrv_close( $conn);
   
 -   将使用 *UnitPrice* 字段的值来填充私有属性 *UnitPrice* 。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -234,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-**Sqlsrv_fetch_object**函数始终返回数据根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)。 有关如何指定 PHP 数据类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据。 有关如何指定 PHP 数据类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果返回不含名称的字段， **sqlsrv_fetch_object** 会丢弃该字段值并发出一条警告。 例如，考虑可将某个值插入数据库表并检索服务器生成的主键的 Transact-SQL 语句：  
   
@@ -245,7 +245,7 @@ SELECT SCOPE_IDENTITY()</pre>
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)  
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  

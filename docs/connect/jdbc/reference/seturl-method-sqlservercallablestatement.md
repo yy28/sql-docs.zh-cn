@@ -1,5 +1,5 @@
 ---
-title: setURL 方法 (SQLServerCallableStatement) |Microsoft 文档
+title: setURL 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c316b8293ce77ecd6c4e4719af9381dfc8cddc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066905"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>setURL 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,17 +42,17 @@ public void setURL(java.lang.String sCol,
 #### <a name="parameters"></a>Parameters  
  *sCol*  
   
- A**字符串**，其中包含参数的名称。  
+ 一个字符串，该字符串包含参数的名称。  
   
  *u*  
   
- 一个 URL。  
+ 一个 URL 的对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 setURL 方法指定此 setURL 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setURL 方法由 java.sql.CallableStatement 接口中的 setURL 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

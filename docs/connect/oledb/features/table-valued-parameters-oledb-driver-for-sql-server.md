@@ -1,6 +1,6 @@
 ---
-title: 表值参数 (OLE DB Driver for SQL Server) |Microsoft 文档
-description: 表值参数 (OLE DB Driver for SQL Server)
+title: 表值参数（适用于 SQL Server 的 OLE DB 驱动程序） | Microsoft Docs
+description: 表值参数（适用于 SQL Server 的 OLE DB 驱动程序）
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,24 +17,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8a10c7d2d124886c9249d666060861af98d411c4
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 6a8c7db4c3ae20250a5498fab84f5d86cad62275
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611592"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109749"
 ---
-# <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>表值参数 (OLE DB Driver for SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>表值参数（适用于 SQL Server 的 OLE DB 驱动程序）
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  表值参数在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入，它们为将多个数据行传递到服务器提供了有效方式。 表值参数提供类似于参数数组的功能，但它们提供了更好的灵活性和与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的更紧密集成，并且可以极大地提高性能。 而参数数组不能在基于集的操作，还可以参与表值参数。  
+  表值参数在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入，它们为将多个数据行传递到服务器提供了有效方式。 表值参数提供类似于参数数组的功能，但它们提供了更好的灵活性和与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的更紧密集成，并且可以极大地提高性能。 表值参数还可以参与基于集合的操作，而参数数组不能参与。  
   
   
  有关表值参数和 OLE DB 的信息，请参阅[表值参数&#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md) 
   
   

@@ -1,6 +1,6 @@
 ---
-title: 生成行集的多个结果的命令 |Microsoft 文档
-description: 生成行集的多个结果的命令
+title: 生成多个行集结果的命令 |Microsoft Docs
+description: 生成多个行集结果的命令
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,26 +21,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665513"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109619"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>生成多个行集结果的命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序可以将从多个行集返回[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]语句。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
+  SQL Server 的 OLE DB 驱动程序可以返回多个行集从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]语句。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
   
 -   以单个命令的形式提交成批的 SQL 语句。  
   
 -   存储过程实现一批 SQL 语句。  
   
 ## <a name="batches"></a>批处理  
- SQL Server 的 OLE DB 驱动程序会将分号字符识别为 SQL 语句的批处理分隔符：  
+ SQL Server 的 OLE DB 驱动程序将分号字符识别为 SQL 语句的批处理分隔符：  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -56,7 +56,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [使用 IMultipleResults 处理多个结果集](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [命令](../../oledb/ole-db-commands/commands.md)  
   
   

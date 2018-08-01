@@ -1,5 +1,5 @@
 ---
-title: wasNull 方法 (SQLServerResultSet) |Microsoft 文档
+title: wasNull 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 257cc1e1889e0866bcbf0e26b2315593074545fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848492"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979189"
 ---
 # <a name="wasnull-method-sqlserverresultset"></a>wasNull 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果的最后一个值读取为 null。 否则为 **false**。  
+ 如果读取的最后一个值为 Null，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 wasNull 方法指定此 wasNull 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 wasNull 方法由 java.sql.ResultSet 接口中的 wasNull 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

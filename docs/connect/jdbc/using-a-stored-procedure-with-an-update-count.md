@@ -1,5 +1,5 @@
 ---
-title: 使用更新计数的存储的过程 |Microsoft 文档
+title: 使用带有更新计数的存储过程 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851702"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040815"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>使用带有更新计数的存储过程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  在中修改数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]通过使用存储的过程中，数据库[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)类。 通过使用 SQLServerCallableStatement 类，你可以调用存储的过程修改数据库中包含的数据，并返回受影响的行数的计数也称为更新计数。  
+  为了使用存储过程修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中的数据，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类。 通过使用 SQLServerCallableStatement 类，可以调用修改数据库中所包含数据的存储过程，然后返回受影响的行数计数（也称为更新计数）。  
   
- 使用 SQLServerCallableStatement 类设置了对存储过程的调用后，然后可以通过使用调用存储的过程[执行](../../connect/jdbc/reference/execute-method-sqlserverstatement.md)或[executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)方法。 ExecuteUpdate 方法将返回**int**包含受影响的存储的过程，但执行方法的行号的值却没有。 如果你使用 execute 方法，并想要获取的影响的行数的计数，则可以调用[getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)后运行存储的过程的方法。  
+ 使用 SQLServerCallableStatement 类构建对存储过程的调用之后，可以使用 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 或 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法中的任意一个来调用此存储过程。 executeUpdate 方法将返回一个 int 值，该值包含受此存储过程影响的行数，但 execute 方法不返回此值。 如果使用 execute 方法，并且希望获得受影响的行数计数，则可以在运行存储过程后调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法。  
   
 > [!NOTE]  
->  如果要让 JDBC 驱动程序返回所有更新计数，包括任何可能已不再使用的触发器所返回的更新计数，请将 lastUpdateCount 连接字符串属性设置为“false”。 有关 lastUpdateCount 属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+>  如果要让 JDBC 驱动程序返回所有更新计数，包括任何可能已不再使用的触发器所返回的更新计数，请将 lastUpdateCount 连接字符串属性设置为“false”。 有关 lastUpdateCount 属性的详细信息，请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 例如，创建以下表和存储的过程，并还插入中的示例数据[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库：  
+ 作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下表和存储过程，以及插入示例数据：  
   
 ```  
 CREATE TABLE TestTable   
@@ -50,7 +50,7 @@ END;
 INSERT INTO dbo.TestTable (Col2, Col3) VALUES ('b', 10);  
 ```  
   
- 在下面的示例中，与的开放连接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库中传递给函数，execute 方法用于调用 UpdateTestTable 存储过程中，并且然后 getUpdateCount 方法用于返回的行的计数受影响的存储过程。  
+ 在下面的示例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，并使用 execute 方法调用 UpdateTestTable 存储过程，然后使用 getUpdateCount 方法返回受存储过程影响的行计数。  
   
  [!code[JDBC#UsingSprocWithUpdateCount1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_0_1.java)]  
   

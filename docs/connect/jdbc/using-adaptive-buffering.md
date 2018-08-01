@@ -1,5 +1,5 @@
 ---
-title: 使用自适应缓冲 |Microsoft 文档
+title: 使用自适应缓冲 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,81 +15,81 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae4120b567d876556c29254eae65d4471ab63924
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853322"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040825"
 ---
 # <a name="using-adaptive-buffering"></a>使用自适应缓冲
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  自适应缓冲的作用是在无需服务器游标开销的情况下检索任何类型的大值数据。 应用程序可以使用自适应缓冲功能与所有版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]由驱动程序支持。  
+  自适应缓冲的作用是在无需服务器游标开销的情况下检索任何类型的大值数据。 应用程序可以在受驱动程序支持的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 版本中使用自适应缓冲功能。  
   
- 通常，当[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]执行查询，该驱动程序的所有结果从服务器中检索到应用程序内存。 尽管这种方法最大程度减少资源消耗上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，它可以引发 OutOfMemoryError JDBC 应用程序生成非常大的结果的查询中。  
+ 通常，当 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 执行查询时，驱动程序会将服务器中的所有结果检索到应用程序内存中。 尽管这种方法可以最大程度地减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 上的资源占用，但它可能会在 JDBC 应用程序中针对生成非常大的结果的查询引发 OutOfMemoryError。  
   
- 若要允许应用程序来处理非常大的结果，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供自适应缓冲。 使用自适应缓冲，驱动程序检索语句执行结果从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]随着应用程序需要它们，而不是一次。 一旦应用程序不再访问结果，驱动程序还会立即丢弃它们。 以下是可以使用自适应缓冲的一些示例：  
+ 为了使应用程序可以处理非常大的结果，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了自适应缓冲。 借助于自适应缓冲，驱动程序可以在应用程序需要时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 一旦应用程序不再访问结果，驱动程序还会立即丢弃它们。 以下是可以使用自适应缓冲的一些示例：  
   
--   **此查询生成一个非常大型结果集：** 应用程序可以执行生成不是应用程序可以在内存中存储的更多行的 SELECT 语句。 在以前版本中，应用程序必须使用服务器游标来避免发生内存不足错误。 借助于自适应缓冲，可以对任意大的结果集执行只进只读传递，而不需要服务器游标。  
+-   查询生成非常大的结果集：应用程序可能执行一个 SELECT 语句，此语句生成的行数超过了应用程序可在内存中存储的行数。 在先前的版本中，应用程序必须使用服务器游标才能避免 OutOfMemoryError。 借助于自适应缓冲，可以对任意大的结果集执行只进只读传递，而不需要服务器游标。  
   
--   **此查询生成非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**出参数值：** 应用程序可以检索单个值 (列或 OUT 参数) 太大，无法完全纳入应用程序内存。         自适应缓冲允许客户端应用程序通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索作为流，这样的值。 应用程序检索的值从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]如从流中读取。  
+-   查询生成非常大的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 列或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) OUT 参数值：应用程序可能检索单个值（列或 OUT 参数），而该值太大，无法全部放入应用程序内存中。 自适应缓冲允许客户端应用程序使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索此类值作为流。 当应用程序从流中读取数据时，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中检索值。  
   
 > [!NOTE]  
 >  使用自适应缓冲时，JDBC Driver 只会缓冲它必须缓冲的那些数据。 该驱动程序未提供任何公共方法来控制或限制缓冲区的大小。  
   
 ## <a name="setting-adaptive-buffering"></a>设置自适应缓冲  
- 从开始 JDBC 驱动程序版本 2.0 中，该驱动程序的默认行为是"**自适应**"。 换言之，要获取自适应缓冲行为，应用程序不必显式请求自适应行为。 在版本 1.2 版本中，但是，缓冲模式处于"**完整**"默认情况下和应用程序必须显式请求的自适应缓冲模式。  
+ 从 JDBC Driver 2.0 版起，该驱动程序的默认行为就是“adaptive”。 换言之，要获取自适应缓冲行为，应用程序不必显式请求自适应行为。 不过，在 1.2 版中，缓冲模式默认为“full”，并且应用程序必须显式请求自适应缓冲模式。  
   
  应用程序可以通过三种方法请求语句执行应使用自适应缓冲：  
   
--   应用程序可以将连接属性设置**responseBuffering**为"自适应"。 有关设置连接属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+-   应用程序可以设置连接属性**responseBuffering**为"adaptive"。 有关设置连接属性的详细信息，请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)。  
   
--   应用程序可以使用[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)方法[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)对象以设置响应缓冲模式，通过创建的所有连接[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)对象。  
+-   应用程序可以使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) 方法为通过该 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 对象创建的所有连接设置响应缓冲模式。  
   
--   应用程序可以使用[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)类来设置响应缓冲模式的特定语句对象。  
+-   应用程序可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法为特定的语句对象设置响应缓冲模式。  
   
- 使用 JDBC 驱动程序版本 1.2，语句将对象转换为所需的应用程序时[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)类以使用[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法。 中的代码示例[读取大型数据示例](../../connect/jdbc/reading-large-data-sample.md)和[读取大型数据的存储过程示例](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)演示此旧的用法。  
+ 使用 JDBC Driver 1.2 时，应用程序需要将语句对象强制转换为 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类才能使用 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 中的代码示例[读取大型数据样本](../../connect/jdbc/reading-large-data-sample.md)并[读取大数据与存储过程示例](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)说明了这种旧的用法。  
   
- 但是，与 JDBC 驱动程序版本 2.0 中，应用程序可以使用[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)方法和[unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)方法来访问有关的特定于供应商功能而无需任何假设实现类层次结构。 有关示例代码，请参阅[更新大型数据示例](../../connect/jdbc/updating-large-data-sample.md)主题。  
+ 但是，使用 JDBC Driver 2.0 时，应用程序无需关于实现类层次结构的任何假设，即可使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法来访问供应商特定的功能。 有关示例代码，请参阅[更新大型数据样本](../../connect/jdbc/updating-large-data-sample.md)主题。  
   
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>使用自适应缓冲检索大型数据  
- 当较大的值读取一次通过使用 get\<类型 > 流方法和结果集列和 CallableStatement OUT 参数中返回的顺序访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，自适应缓冲最小化应用程序内存使用量时处理结果。 使用自适应缓冲时：  
+ 当使用 get\<Type>Stream 方法一次性读取较大值，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 按返回的顺序访问 ResultSet 列和 CallableStatement OUT 参数时，自适应缓冲在处理结果时可以最大程度地减少使用的应用程序内存。 使用自适应缓冲时：  
   
--   Get\<类型 > 流中定义的方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)和[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)类在虽然可以重置流，如果默认情况下，返回读取一次流标记由应用程序。 如果想要将应用程序`reset`流，它必须调用`mark`方法的第一次流式处理。  
+-   在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类中定义的 get\<Type>Stream 方法默认情况下返回只读取一次的流，尽管可以重置流（如果应用程序已进行标记）。 如果应用程序要对流执行 `reset`，它必须先对该流调用 `mark` 方法。  
   
--   Get\<类型 > 流中定义的方法[SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md)和[SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md)类返回流始终可重新定位到而无需流的开始位置调用`mark`方法。  
+-   在 [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) 和 [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) 类中定义的 get\<Type>Stream 方法返回的流始终可以重定位至流的开始位置，而不必调用 `mark` 方法。  
   
- 当应用程序使用自适应缓冲，通过 get 检索到的值\<类型 > 流方法只能检索一次。 如果你尝试调用任何 get\<类型 > 参数调用 get 后的在同一列上的方法\<类型 > 的同一个对象，异常流方法将引发与消息，"数据已被访问并不是可供此列或参数"。  
+ 当应用程序使用自定义缓冲时，由 get\<Type>Stream 方法检索的值仅供检索一次。 如果在调用同一列或同一参数的 get\<Type>Stream 方法后，试图对同一对象调用任何 get\<Type> 方法，则将引发异常并显示消息“数据已访问，不可用于此列或此参数”。  
   
 > [!NOTE]
-> 对 ResultSet.close() 中间处理了结果集的调用将需要 Microsoft JDBC Driver for SQL Server 读取并放弃所做的剩余的所有数据包。 如果查询返回了大型数据集，特别是如果网络连接很慢，这可能需要大量的时间。     
+> 对 ResultSet.close() 了结果集处理过程的调用需要 Microsoft JDBC Driver for SQL Server 读取并丢弃其余的所有数据包。 如果查询返回了大型数据集，尤其是如果网络连接速度较慢，这可能需要大量的时间。     
   
 ## <a name="guidelines-for-using-adaptive-buffering"></a>自适应缓冲使用准则  
  开发人员应遵循以下重要准则，以尽可能减少应用程序占用的内存：  
   
--   避免使用连接字符串属性**selectMethod = 光标**若要允许应用程序处理非常大的结果设置。 自适应缓冲功能允许应用程序在不使用服务器游标的情况下处理非常大的只进、只读结果集。 请注意，当你设置**selectMethod = 光标**、 所有只进、 只读结果集由该连接都受到影响。 如果你的应用程序定期处理短结果集所包含的少量的行，换而言之，创建、 读取和关闭服务器游标，对于每个结果集将使用在客户端和服务器端上的资源不是这种情况其中**selectMethod**未设置为**光标**。  
+-   应避免使用连接字符串属性 selectMethod=cursor 来允许应用程序处理非常大的结果集。 自适应缓冲功能允许应用程序在不使用服务器游标的情况下处理非常大的只进、只读结果集。 请注意，设置 selectMethod=cursor 时，该连接生成的所有只进只读结果集都会受到影响。 换言之，如果应用程序例行处理只有几行的短结果集，则与没有将 selectMethod 设置为 cursor 的情况相比，针对每个结果集创建、读取和关闭服务器游标在客户端和服务器端都会使用更多的资源。  
   
--   通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法而不 getBlob 或 getClob 方法，流的形式读取大文本或二进制值。 从版本 1.2 发行版，开始[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)类提供了新的 get\<类型 > 流式处理为此目的的方法。  
+-   通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法而不 getBlob 或 getClob 方法，流的形式读取大文本或二进制值。 从版本 1.2 开始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类提供了新的 get\<Type>Stream 方法来实现此目的。  
   
--   确保具有可能很大的值的列的 SELECT 语句中的列列表中上一次放置 get\<类型 > 流式传输的方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)用于访问中的列选择它们的顺序。  
+-   确保在 SELECT 语句中将可能具有大值的列放在列列表的最后，并且使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 的 get\<Type>Stream 方法按选择列时的顺序来访问这些列。  
   
--   确保，OUT 参数可能很大的值与上次中声明的用于创建 SQL 中的参数列表[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)。 此外，确保 get\<类型 > 流式传输的方法[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)用于访问声明它们的顺序中的 OUT 参数。  
+-   确保在用来创建 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 的 SQL 语句的参数列表中，最后声明可能具有大值的 OUT 参数。 此外，确保使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 的 get\<Type>Stream 方法，按照声明 OUT 参数时的顺序访问这些参数。  
   
 -   避免同时对同一连接执行一条以上的语句。 如果在处理上一条语句的结果之前执行另一条语句，可能导致将未处理的结果缓冲到应用程序内存中。  
   
--   在某些情况下，使用**selectMethod = 光标**而不是**responseBuffering = 自适应**很多有益，如：  
+-   某些情况下使用**selectMethod = cursor**而不是**responseBuffering = adaptive**可能更有利，例如：  
   
-    -   如果你的应用程序处理只进、 只读结果设置缓慢，如后使用某些用户输入，读取每个行**selectMethod = 光标**而不是**responseBuffering = 自适应**可能帮助减少使用资源[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+    -   如果应用程序处理只进、 只读结果集速度慢，例如，使用某些用户输入后, 再读取每一行**selectMethod = cursor**而不是**responseBuffering = adaptive**可能帮助减少使用的资源[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-    -   如果你的应用程序处理两个或更只进、 只读结果集同时在同一连接上，使用**selectMethod = 光标**而不是**responseBuffering = 自适应**可能帮助减少驱动程序在处理这些结果集时所需的内存。  
+    -   如果应用程序在同一连接上同时处理两个或更多的只进只读结果集，则处理这些结果集时，使用 selectMethod=cursor（而不是 responseBuffering=adaptive）可能有助于减少驱动程序需要的内存。  
   
      在这两种情况下，需要考虑创建、读取和关闭服务器游标的开销。  
   
  此外，下面的列表针对可滚动的结果集和只进的可更新结果集提供了一些建议：  
   
--   对于可滚动的结果集时始终提取块，这些行驱动程序读取到内存的指示的行数, [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)对象，即使启用自适应缓冲。 如果滚动导致 OutOfMemoryError，你可以减少通过调用提取的行数[setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)对象将提取大小设置为较小的行数即使下一行，如有必要。 如果这不会阻止 OutOfMemoryError，避免在可滚动的结果集包括非常大的列。  
+-   对于可滚动结果集，在提取行块时，驱动程序始终会将 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 方法所指示的行数读入内存，即使在启用了自适应缓冲的情况下也是如此。 如果滚动导致 OutOfMemoryError，可以调用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法将提取大小设置为较少的行数（如果必要，甚至可减小到 1 行），从而减少提取的行数。 如果这样还是无法防止 OutOfMemoryError，则应避免在可滚动的结果集中包含非常大的列。  
   
--   对于只进的可更新结果集，当提取块，这些行驱动程序通常读取到内存的指示的行数时[getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)对象，即使自适应缓冲是启用了时连接上。 如果调用[下一步](../../connect/jdbc/reference/next-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)对象会导致 OutOfMemoryError，你可以减少通过调用提取的行数[setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)方法的[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)对象将提取大小设置为较小的行，即使下一行，如有必要。 您也可以强制驱动程序不通过调用缓冲的任何行[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)对象"**自适应**"之前的参数执行语句。 因为结果集不是可滚动的如果应用程序通过使用其中一个 get 访问大型列值\<类型 > 流方法驱动程序将丢弃值就会立即应用程序读取它的只进一样，它在只读的结果集。  
+-   对于只进的可更新结果集，在提取行块时，驱动程序通常会将 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 方法所指示的行数读入内存，即使在该连接上启用了自适应缓冲的情况下也是如此。 如果调用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的 [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) 方法导致 OutOfMemoryError，可以调用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法将提取大小设置为较少的行数（如果必要，甚至可减小到 1 行），从而减少提取的行数。 执行该语句前，也可以调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法并提供参数“adaptive”来强制驱动程序不缓冲任何行。 因为该结果集是不可滚动的，所以如果应用程序使用 get\<Type>Stream 方法之一访问大型列值，驱动程序将会在应用程序读取该值后立即将其丢弃，正如对只进只读结果集所做的那样。  
   
 ## <a name="see-also"></a>另请参阅  
  [借助 JDBC 驱动程序提高性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

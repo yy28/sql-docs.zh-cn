@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: query |Microsoft 文档'
+title: 'Pdo:: query |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308266"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979741"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parameters  
 *$statement*：要执行的 SQL 语句。  
   
-*$fetch_style*： 有关如何执行查询的可选说明。 有关更多详细信息，请参阅“备注”部分。 $*fetch_style* pdo:: query 可以重写以 $*fetch_style* pdo:: fetch 中。  
+$fetch_style：有关如何执行该查询的可选说明。 有关更多详细信息，请参阅“备注”部分。PDO::query 中的  $fetch_style 可以替换为 PDO::fetch 中的 $fetch_style。  
   
 ## <a name="return-value"></a>返回值  
 如果调用成功，PDO::query 将返回一个 PDOStatement 对象。 如果调用失败，PDO::query 将引发一个 PDOException 对象或者返回 False，具体取决于 PDO::ATTR_ERRMODE 的设置。  
@@ -45,16 +45,16 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 PDOException。  
   
 ## <a name="remarks"></a>Remarks  
-使用 pdo:: query 执行的查询可以执行预定义的语句或直接，具体取决于 PDO::SQLSRV_ATTR_DIRECT_QUERY 的设置。 有关详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
+使用 PDO::query 执行的查询可以执行已准备的语句或直接执行语句，具体取决于 PDO::SQLSRV_ATTR_DIRECT_QUERY 的设置。 有关详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
   
-PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 pdo:: exec; 的行为有关详细信息，请参阅[pdo:: setattribute](../../connect/php/pdo-setattribute.md)。  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 PDO::exec 的行为；有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。  
   
-你可以为 $ 指定以下选项*fetch_style*。  
+可以为 fetch_style 指定以下选项。  
   
-|style|Description|  
+|style|描述|  
 |---------|---------------|  
-|PDO::FETCH_COLUMN， *num*|在指定列中查询数据。 表中的第一列为列 0.|  
-|Pdo:: FETCH_CLASS，*classname*，数组 ( *arglist* )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
+|PDO::FETCH_COLUMN, num|在指定列中查询数据。 表中的第一列为列 0.|  
+|PDO::FETCH_CLASS, 'classname', array( arglist )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
 |Pdo:: FETCH_CLASS，*classname*|给现有类中的属性分配列名称。|  
   
 在再次调用 PDO::query 之前，请调用 PDOStatement::closeCursor 以释放与 PDOStatement 对象相关联的数据库资源。  
@@ -121,7 +121,7 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDO 类](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

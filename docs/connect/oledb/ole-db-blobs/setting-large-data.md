@@ -1,5 +1,5 @@
 ---
-title: 设置较大的数据 |Microsoft 文档
+title: 设置大型数据 |Microsoft Docs
 description: 设置使用 SQL Server 的 OLE DB 驱动程序的大型数据
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 27e50280df7bfe1bcbadcb76988d8962ebee1d77
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665927"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107193"
 ---
 # <a name="setting-large-data"></a>设置大型数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  使用 OLE DB 驱动程序的 SQL Server，您可以通过将指针传递给使用者存储对象设置 BLOB 数据。  
+  使用 OLE DB 驱动程序适用于 SQL Server，你可以通过将指针传递给使用者存储对象设置 BLOB 数据。  
   
  使用者创建包含数据的存储对象，并将指向此存储对象的指针传递给访问接口。 然后，访问接口从使用者存储对象读取数据，并将其写入 BLOB 列中。  
   
- 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者调用**IRowsetChange::SetData**或**IRowsetChange::InsertRow**使用绑定 BLOB 列访问器方法。 它将指针传递给使用者的存储对象中的某个存储接口。  
+ 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法。 它将指针传递给使用者的存储对象中的某个存储接口。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -47,19 +47,19 @@ ms.locfileid: "35665927"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>如何设置大型数据  
- 若要将指针传递到其自己的存储对象，使用者创建的 BLOB 列，然后调用值绑定的访问器**IRowsetChange::SetData**或**IRowsetChange::InsertRow**方法。 若要设置 BLOB 数据，请：  
+ 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法。 若要设置 BLOB 数据，请：  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 设置*dwFlag*到 STGM_READ 和集 DBOBJECT 结构元素*iid* IID_ISequentialStream （要公开的接口） 的元素。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的 dwFlag 元素设置为 STGM_READ，并将 iid 元素设置为 IID_ISequentialStream（要公开的接口）。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 设置*wType* DBTYPE_IUNKNOWN，DBBINDING 结构中的元素和*pObject*元素以指向您创建的 DBOBJECT 结构。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
-5.  调用**GetNextRows**到行集提取下一步的行。 调用**GetData**从行集读取数据。  
+5.  调用 GetNextRows 将后续的行提取到行集中。 调用 GetData 以读取行集中的数据。  
   
-6.  创建一个包含数据 （并且还长度指示器） 的存储对象，然后调用**IRowsetChange::SetData** (或**IRowsetChange::InsertRow**) 使用绑定来设置数据的 BLOB 列访问器。  
+6.  创建一个包含数据（及长度指示器）的存储对象，然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）以设置数据。  
   
 ## <a name="example"></a>示例  
  本示例说明如何设置 BLOB 数据。 本示例创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值：  
@@ -725,8 +725,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Blob 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>另请参阅  
+ [BLOB 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大值类型](../../oledb/features/using-large-value-types.md)  
   
   

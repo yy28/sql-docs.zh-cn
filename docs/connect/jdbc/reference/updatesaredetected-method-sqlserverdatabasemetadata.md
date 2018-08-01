@@ -1,5 +1,5 @@
 ---
-title: updatesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: updatesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a91c3c3366a2f158b9ecf2f6e4b0d9341a60b2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852122"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016038"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索可见行更新的检测是否可以通过调用到[rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)类。  
+  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 方法检测到可见行更新。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ public boolean updatesAreDetected(int type)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *类型*  
+ *type*  
   
- **Int** ，该值指示结果集类型，如 java.sql.ResultSet 或 SQLServerResultSet 中定义可以是以下值之一：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -62,13 +62,13 @@ public boolean updatesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- **true**如果可以检测到行更新。 否则为 **false**。  
+ 如果可以检测行更新，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 updatesAreDetected 方法指定此 updatesAreDetected 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updatesAreDetected 方法由 java.sql.DatabaseMetaData 接口中的 updatesAreDetected 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

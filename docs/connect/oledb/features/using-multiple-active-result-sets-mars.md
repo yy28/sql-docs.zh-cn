@@ -1,5 +1,5 @@
 ---
-title: 使用多个活动结果集 (MARS) |Microsoft 文档
+title: 使用多个活动结果集 (MARS) |Microsoft Docs
 description: 使用多个活动的结果集 (MARS)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e51a3663504ae7910d53b493a54749a0a670503d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612082"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109415"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了支持多个活动结果集 (MARS) 访问的应用程序中[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本中，数据库应用程序无法在单个连接上保持多个活动语句。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认结果集时，应用程序必须先处理或取消从某一批处理生成的所有结果集，然后才能对该连接执行任何其他批处理。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了新的连接属性，该属性允许应用程序在每个连接上使用多个待定请求，具体而言，每个连接可以具有多个活动的默认结果集。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 在访问 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的应用程序中引入了对多重活动结果集 (MARS) 的支持。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本中，数据库应用程序无法在单个连接上保持多个活动语句。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认结果集时，应用程序必须先处理或取消从某一批处理生成的所有结果集，然后才能对该连接执行任何其他批处理。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了新的连接属性，该属性允许应用程序在每个连接上使用多个待定请求，具体而言，每个连接可以具有多个活动的默认结果集。  
   
  MARS 通过以下新功能简化了应用程序设计：  
   
@@ -54,15 +54,15 @@ ms.locfileid: "35612082"
 -   在 MARS 中，有多个批处理并发运行时禁止会话范围内的模拟。  
   
 > [!NOTE]  
->  默认情况下，不启用 MARS 功能。 若要连接到时使用 MARS[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 OLE DB 驱动程序的 SQL Server，你必须专门启用其连接字符串中。 有关详细信息，请参阅本主题中的更高版本的 SQL Server 部分，用于 OLE DB 驱动程序。  
+>  默认情况下，不启用 MARS 功能。 若要连接到时使用 MARS[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 OLE DB 驱动程序适用于 SQL Server，必须专门启用它的连接字符串中。 有关详细信息，请参阅本主题中的更高版本的 SQL Server 部分，用于 OLE DB 驱动程序。  
   
- OLE DB 驱动程序的 SQL Server 不限制在连接上的活动语句数。  
+ OLE DB 驱动程序适用于 SQL Server 不限制在连接上的活动语句数。  
   
- 不需要已超过单个多语句批处理或存储的过程执行在同一时间将受益于 MARS 而无需了解如何实现 MARS 的典型应用程序。 不过，具有较复杂要求的应用程序确实需要考虑到这一点。  
+ 不需要同时执行多个多语句批处理或存储过程的典型应用程序将受益于 MARS，且无需了解如何实现 MARS。 不过，具有较复杂要求的应用程序确实需要考虑到这一点。  
   
  MARS 支持在单一连接中交错执行多个请求。 即：它允许运行批处理，并且在执行过程中还允许执行其他请求。 不过请注意，MARS 是从交错执行而不是从并行执行的角度定义的。  
   
- MARS 基础结构允许多个批处理执行采用交错的方式，像执行可以仅切换定义完善的点。 此外，多数语句必须在同一批处理内以原子方式运行。 返回到客户端，有时称为行的语句*产生点*，允许交错在完成之前执行，而行发送到客户端，例如：  
+ MARS 基础结构允许以交错方式执行多个批处理，尽管只能在定义完善的时间点切换执行。 此外，多数语句必须在同一批处理内以原子方式运行。 向客户端返回行的语句（有时称为“收获点”）在完成前可以交错执行，同时向客户端发送行，例如：  
   
 -   SELECT  
   
@@ -77,54 +77,54 @@ ms.locfileid: "35612082"
  要避免这些问题，可使用 API 调用而不是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句来管理连接状态（SET、USE）和事务（BEGIN TRAN、COMMIT、ROLLBACK），方法是不在同样包含收获点的多语句批处理中包括这些语句，以及通过使用或取消所有结果来顺序执行此类批处理。  
   
 > [!NOTE]  
->  启用 MARS 时，启动手动或隐式事务的批处理或存储过程必须完成该事务，之后批处理才能退出。 如果不是这样，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将在批处理完成时回滚该事务所做的所有更改。 这种事务由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作为批范围的事务管理。 这是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 新引入的事务类型，用于在启用 MARS 时支持使用功能良好的现有存储过程。 有关批处理范围事务的详细信息，请参阅[Transaction 语句&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/statements.md)。  
+>  启用 MARS 时，启动手动或隐式事务的批处理或存储过程必须完成该事务，之后批处理才能退出。 如果不是这样，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将在批处理完成时回滚该事务所做的所有更改。 这种事务由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作为批范围的事务管理。 这是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 新引入的事务类型，用于在启用 MARS 时支持使用功能良好的现有存储过程。 有关批范围的事务的详细信息，请参阅[Transaction 语句&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/statements.md)。  
   
- 使用 MARS 从 ADO 的示例，请参阅[与 OLE DB 驱动程序的 SQL Server 使用 ADO](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。  
+ 有关从 ADO 使用 MARS 的示例，请参阅[使用 ADO 与 OLE DB 驱动程序适用于 SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。  
   
 ## <a name="in-memory-oltp"></a>内存中 OLTP  
- 内存中 OLTP 支持 MARS 使用查询和本机编译存储的过程。 MARS 允许将从而无需完全检索每个结果才能发送请求以从新的结果集中提取行集的多个查询的请求数据。 若要成功地从多个打开的结果集读取，必须使用启用 MARS 连接。  
+ 内存中 OLTP 支持 MARS 使用查询和本机编译存储的过程。 MARS 支持从多个查询，而无需完全检索每个结果集发送请求以从新的结果集中提取行之前的请求数据。 若要成功读取来自多个打开的结果集，必须使用启用 MARS 连接。  
   
- 默认情况下禁用 MARS，因此你必须通过添加显式启用`MultipleActiveResultSets=True`到连接字符串。 下面的示例演示如何连接到 SQL Server 的实例并指定启用了 MARS:  
+ 默认情况下禁用 MARS，因此你必须通过添加显式启用`MultipleActiveResultSets=True`到连接字符串。 下面的示例演示如何连接到 SQL Server 的实例并指定启用 MARS:  
   
 ```  
 Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; MultipleActiveResultSets=True  
 ```  
   
- MARS 使用内存中 OLTP 是实质上是 MARS 相同 SQL 引擎的其余部分。 以下列出使用 MARS，在内存优化表和本机编译的存储的过程的差异。  
+ MARS 使用内存中 OLTP 是实质上是 MARS 相同 SQL 引擎的其余部分。 下面列出了差异，使用 MARS 中内存优化表和本机编译存储的过程时。  
   
- **MARS 和内存优化表**  
+ **火星人与内存优化表**  
   
- 当使用 MARS 启用连接时，基于磁盘和内存优化表之间的差异如下：  
+ 基于磁盘和内存优化表时使用 MARS 启用连接之间的差异如下：  
   
--   两个语句可以修改相同的目标对象中的数据，但如果这两个用户尝试修改同一记录写入-写入冲突将导致新的操作失败。 但是，如果这两个操作修改不同的记录，操作将会成功。  
+-   两个语句可以修改相同的目标对象中的数据，但如果它们都试图修改同一记录写 / 写冲突将导致新的操作失败。 但是，如果这两种操作修改不同记录，操作会成功。  
   
--   每个语句在快照隔离级别下运行，因此新的操作无法看到由现有语句所做的更改。 即使在同一事务下执行并发语句的 SQL 引擎创建批处理范围事务为每个语句，相互隔离。 但是，批处理范围事务仍绑定在一起以便回滚一个批处理范围事务会影响同一批处理中的其他计算机。  
+-   每个语句在快照隔离下运行，因此新的操作，无法看到由现有语句所做的更改。 即使在同一事务下执行的并发语句的 SQL 引擎创建批处理级事务的每个语句是相互隔离的。 但是，批处理级事务仍然绑定在一起以便回滚的一个批处理级事务会影响同一个批处理中的其他的。  
   
--   在用户事务中不允许 DDL 操作，因此它们将立即失败。  
+-   在用户事务中不允许 DDL 操作，因此，它们将立即失败。  
   
- **MARS 和本机编译存储的过程**  
+ **MARS 和本机编译的存储过程**  
   
- 本机编译存储的过程中启用 MARS 连接可以运行，并仅在遇到 yield 点时，才可以产生于另一个语句的执行。 Yield 点要求的 SELECT 语句，这是本机编译的存储过程可以生成执行的另一个语句中的唯一语句。 如果 SELECT 语句不存在它不会产生任何过程中，它将完成之前运行其他语句开始。  
+ 本机编译存储的过程可以启用 MARS 的连接中运行，并且仅当遇到 yield 点时，才可以产生执行转移到另一个语句。 将 yield 点要求 SELECT 语句，这是本机编译的存储过程可以生成执行转移到另一个语句中的唯一语句。 如果 SELECT 语句不存在则不会生成的过程中，它将其他语句开始之前运行完成。  
   
  **MARS 和内存中 OLTP 事务**  
   
- 语句块和交错的原子块所做的更改是相互隔离的。 例如，如果一个语句或原子块进行某些更改，然后生成到另一个语句执行新语句将不会看到第一个语句所做的更改。 此外，当第一条语句重新开始执行，不会看到任何其他语句所做的任何更改。 语句将仅查看完成并提交该语句开始前的更改。  
+ 由语句和交错执行的原子块所做的更改是相互隔离的。 例如，如果一个语句或原子块进行一些更改，然后生成执行转移到另一个语句，新的语句将看不由第一个语句所做的更改。 此外，当第一条语句继续执行时，它不会由任何其他语句所做的任何更改。 语句将只能看到完成并提交该语句前的更改。  
   
- 可以使用 BEGIN TRANSACTION 语句在当前用户事务中启动新用户事务 – 这是支持仅在互操作模式下，因此，只能从 T-SQL 的语句，调用 BEGIN TRANSACTION，不从在本机编译存储过程。 你可以创建一个保存点在事务使用 SAVE TRANSACTION 或对事务的 API 调用中。回滚到保存点 Save(save_point_name)。 此功能同时会启用仅从 T-SQL 语句，并不是从在本机编译存储的过程。  
+ 可以使用 BEGIN TRANSACTION 语句在当前用户事务中启动新的用户事务 – 这是支持仅在互操作模式中，因此，仅从 T-SQL 语句，名为 BEGIN TRANSACTION，不从在本机编译存储过程。 您可以创建了一个保存点在事务中使用 SAVE TRANSACTION 或对事务的 API 调用。Save(save_point_name) 回滚到保存点。 此功能还会启用仅从 T-SQL 语句，不能从在本机编译存储的过程。  
   
  **MARS 和列存储索引**  
   
- SQL Server （从 2016年开始） 与列存储索引支持 MARS。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 当发生这种情况时，SQL Server 将终止连接，中止事务。   SQL Server 2012 具有只读列存储索引和 MARS 不适用于它们。  
+ SQL Server （从 2016年开始） 具有列存储索引支持 MARS。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 发生这种情况时，SQL Server 会终止连接并中止事务。   SQL Server 2012 具有只读列存储索引和 MARS 不适用于它们。  
   
-## <a name="ole-db-driver-for-sql-server"></a>用于 SQL Server 的 OLE DB 驱动程序  
- SQL Server 的 OLE DB 驱动程序支持 SSPROP_INIT_MARSCONNECTION 数据源初始化属性，用于实现 dbpropset_sqlserverdbinit 限设置的属性中添加了 MARS。 此外，新的连接字符串关键字， **MarsConn**，如已添加。 它接受**true**或**false**值;**false**是默认设置。  
+## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序  
+ 适用于 SQL Server 的 OLE DB 驱动程序通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）支持 MARS。 此外，还添加了新的连接字符串关键字 MarsConn。 它接受 **，则返回 true**或**false**值;**false**是默认值。  
   
- 数据源属性 DBPROP_MULTIPLECONNECTIONS 默认为 VARIANT_TRUE。 这意味着访问接口将生成多个连接以支持多个并发命令和行集对象。 启用 MARS 后，OLE DB 驱动程序的 SQL Server 可以在单个连接上支持多个命令和行集对象，因此 MULTIPLE_CONNECTIONS 默认设置为 VARIANT_FALSE。  
+ 数据源属性 DBPROP_MULTIPLECONNECTIONS 默认为 VARIANT_TRUE。 这意味着访问接口将生成多个连接以支持多个并发命令和行集对象。 启用 MARS 后，适用于 SQL Server 的 OLE DB 驱动程序可以在单个连接上支持多个命令和行集对象，所以默认情况下 MULTIPLE_CONNECTIONS 设置为 VARIANT_FALSE。  
   
- 有关 dbpropset_sqlserverdbinit 限属性集对所做的增强功能的详细信息，请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 有关 DBPROPSET_SQLSERVERDBINIT 属性集对所做的增强功能的详细信息，请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
-### <a name="ole-db-driver-for-sql-server-example"></a>有关 SQL Server 示例的 OLE DB 驱动程序  
- 在此示例中，创建数据源对象时使用的 SQL Server OLE DB 驱动程序并使用在创建会话对象之前设置 dbpropset_sqlserverdbinit 限属性启用 MARS。  
+### <a name="ole-db-driver-for-sql-server-example"></a>适用于 SQL Server 的 OLE DB 驱动程序示例  
+ 在本示例中，使用适用于 SQL Server 的 OLE DB 驱动程序创建了一个数据源对象，并且在创建会话对象之前使用 DBPROPSET_SQLSERVERDBINIT 属性集启用了 MARS。  
   
 ```  
 #include <msoledbsql.h>  
@@ -210,7 +210,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  
   

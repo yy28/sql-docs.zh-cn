@@ -1,5 +1,5 @@
 ---
-title: 稀疏列 |Microsoft 文档
+title: 稀疏列 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851682"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020973"
 ---
 # <a name="sparse-columns"></a>稀疏列
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 当至少能够节省 20% 到 40% 的空间时，才应考虑使用稀疏列。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 支持稀疏列时连接到[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]（或更高版本） 服务器。 你可以使用[SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)， [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)，或[SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md)确定哪些列是稀疏列和哪些列是列集列。  
+ 当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]（或更高版本）的服务器时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 支持稀疏列。 可以使用 [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) 或 [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) 确定哪个列是稀疏列以及哪个列是列集列。  
   
  列集是返回非类型化 XML 形式的所有稀疏列的计算列。 当表中有很多列、大于 1024 或分别对这些稀疏列进行操作很烦琐时，应考虑使用列集。 列集最多可以包含 30,000 个列。  
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  此示例说明如何检测列集。 它还显示如何分析列集的 XML 输出，以便从稀疏列获取数据。  
   
  所列的第一个代码部分是您应该对服务器运行的 Transact-SQL。  

@@ -1,5 +1,5 @@
 ---
-title: valueOf 方法 （java.sql.Timestamp，int） |Microsoft 文档
+title: valueOf 方法 （java.sql.Timestamp，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 290878fc0a3687a95fd6335eba4b6ed6e1c2fda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979179"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf 方法 (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  创建**DateTimeOffset**格林威治标准时间给定 java.sql.Timestamp 值和一个值，该值以分钟为单位的偏移量表示特定偏移量处的时间点的对象。  
+  创建一个 DateTimeOffset 对象，该对象表示按照距 GMT（给定 java.sql.Timestamp 值以及以分钟指示偏移量的值）的特定偏移量的时间点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
  以分钟表示的偏移量。  
   
 ## <a name="return-value"></a>返回值  
- 返回表示在中给定的时间通过给定的偏移量处的 java.sql.Timestamp 对象分钟，从格林威治标准时间点的 DateTimeOffset 对象。  
+ 返回 DateTimeOffset 对象表示的由给定的偏移量处的 java.sql.Timestamp 对象中给定分钟，按照距 GMT 的时间点。  
   
 ## <a name="see-also"></a>另请参阅  
  [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)   

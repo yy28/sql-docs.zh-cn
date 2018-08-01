@@ -1,5 +1,5 @@
 ---
-title: 游标类型 （PDO_SQLSRV 驱动程序） |Microsoft 文档
+title: 游标类型 （PDO_SQLSRV 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72cf83b4c4903c7df0b6a857746937e848fccf80
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306986"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062354"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>游标类型 （PDO_SQLSRV 驱动程序）
+# <a name="cursor-types-pdosqlsrv-driver"></a>游标类型（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO_SQLSRV 驱动程序，可以使用多个游标之一创建可滚动的结果集。  
+PDO_SQLSRV 驱动程序使您创建具有多个游标的一个可滚动结果集。  
   
 有关如何指定使用 PDO_SQLSRV 驱动程序，游标的信息和代码示例，请参阅[pdo:: prepare](../../connect/php/pdo-prepare.md)。  
   
 ## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV 和服务器端游标  
-之前的版本 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，PDO_SQLSRV 驱动程序允许你创建具有服务器端只进或静态游标的结果集。 从 3.0 版开始[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，键集和动态游标也是可用。  
+之前的版本 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，PDO_SQLSRV 驱动程序允许您创建的结果集与服务器端的只进的或静态游标。 从 3.0 版开始[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，键集和动态游标均可用。  
   
-可以通过使用 pdo:: prepare 或 pdostatement:: Setattribute 来选择任一游标类型来指示服务器端游标的类型：  
+可以通过使用 pdo:: prepare 或 pdostatement:: Setattribute 同时选择任一游标类型表示的服务器端游标的类型：  
   
--   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_FWDONLY  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_FWDONLY  
   
--   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_SCROLL  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_SCROLL  
   
-你可以通过指定 PDO::ATTR_CURSOR 请求键集或动态游标 = > PDO::CURSOR_SCROLL，然后传入适当的值与 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 你可以将其传递到 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE 的可能值有：  
+可以请求 keyset 或 dynamic 游标通过指定 pdo:: ATTR_CURSOR = > pdo:: CURSOR_SCROLL，然后将传递适当的值为 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 可以传递给 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE 的可能值有：  
   
 -   PDO::SQLSRV_CURSOR_BUFFERED  
   
@@ -48,15 +48,15 @@ PDO_SQLSRV 驱动程序，可以使用多个游标之一创建可滚动的结果
 -   PDO::SQLSRV_CURSOR_STATIC  
   
 ## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV 和客户端游标  
-客户端游标已添加的版本 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ，使你能够整个结果集在内存中高速缓存。 优点之一是执行查询后，行计数可用。  
+客户端游标已添加的版本 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ，可用于缓存整个结果集在内存中。 一个优点是行计数可执行查询后。  
   
-对于小型到中型的结果集，应使用客户端游标。 大型结果集应使用服务器端游标。  
+对于小型到中型的结果集，应使用客户端游标。 较大的结果集应使用服务器端游标。  
   
-查询将返回 false 缓冲区是否不大到能够容纳整个结果集时使用的客户端游标。 你可以增加最大 PHP 内存限制为缓冲区大小。  
+查询将返回 false，如果缓冲区足以容纳整个结果集时使用客户端游标。 可以增加缓冲区大小最大为 PHP 内存限制。  
   
-你可以配置用于保留结果集的 PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE 属性的缓冲区的大小[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 此外可以在 php.ini 文件中使用 pdo_sqlsrv.client_buffer_max_kb_size 设置最大缓冲区大小 (例如，pdo_sqlsrv.client_buffer_max_kb_size = 1024年)。  
+可以配置用于保留结果集的 PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE 属性的缓冲区的大小[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 此外可以在 php.ini 文件中使用 pdo_sqlsrv.client_buffer_max_kb_size 设置最大缓冲区大小 (例如，pdo_sqlsrv.client_buffer_max_kb_size = 1024年)。  
   
-指示你希望通过使用 pdo:: prepare 或 pdostatement:: Setattribute 在客户端游标，并选择 PDO::ATTR_CURSOR = > PDO::CURSOR_SCROLL 游标类型。  然后指定 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE = > PDO::SQLSRV_CURSOR_BUFFERED。  
+指示您希望使用 pdo:: prepare 或 pdostatement:: Setattribute 在客户端游标，并选择 pdo:: ATTR_CURSOR = > pdo:: CURSOR_SCROLL 游标类型。  然后，可以指定 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE = > PDO::SQLSRV_CURSOR_BUFFERED。  
   
 ```  
 <?php  
@@ -96,6 +96,6 @@ print_r($row);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
   

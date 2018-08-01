@@ -1,5 +1,5 @@
 ---
-title: updateAsciiStream 方法 （java.io.InputStream，int） |Microsoft 文档
+title: updateAsciiStream 方法 （java.io.InputStream，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 808c9095d61cd76c53f2f350fd90a0858162e640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850902"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052664"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>updateAsciiStream 方法 (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,32 +41,32 @@ public void updateAsciiStream(int index,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *索引*  
+ 索引  
   
  指示列索引的 int。  
   
  *x*  
   
- 一个 InputStream 对象中。  
+ InputStream 对象。  
   
  *length*  
   
- **Int** ，该值指示流的长度。  
+ 指示流长度的 int。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateAsciiStream 方法指定此 updateAsciiStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateAsciiStream 方法由 java.sql.ResultSet 接口中的 updateAsciiStream 方法指定。  
   
- 此方法将从 InputStream 对象 ASCII 字符 （字节） 传递到转换的字符列，其中的 ASCII 范围 [0x00 – 0x7F] Unicode，和 874、 932、 936、 949、 950，和通过 1258年代码页 1250年。 此方法执行到目标排序规则页的转换。 尝试更新不可转换的目标列将引发异常。 对于二进制列，会传递原始字节。  
+ 此方法将来自 InputStream 对象的 ASCII 字符（字节）传递给可转换的字符列，即 Unicode 的 ASCII 范围 [0x00 – 0x7F] 以及 874、932、936、949、950 和 1250 到 1258 代码页。 此方法执行到目标排序规则页的转换。 尝试更新不可转换的目标列将引发异常。 对于二进制列，会传递原始字节。  
   
- 流的长度是否不同于中指定了什么*长度*参数，在更新或插入行时的 JDBC 驱动程序引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
   
- 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[updateAsciiStream 方法&#40;int、 java.io.InputStream&#41; ](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)当应用程序希望更新的列从一个流，其长度为未知。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateAsciiStream 方法 (int, java.io.InputStream)](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateAsciiStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
+ [updateAsciiStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

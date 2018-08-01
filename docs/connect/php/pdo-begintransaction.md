@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: begintransaction |Microsoft 文档'
+title: 'Pdo:: begintransaction |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307966"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020885"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +37,13 @@ bool PDO::beginTransaction();
 如果方法调用成功，则为 True；否则为 False。  
   
 ## <a name="remarks"></a>Remarks  
-使用 pdo:: begintransaction 开始的事务时结束[pdo:: commit](../../connect/php/pdo-commit.md)或[pdo:: rollback](../../connect/php/pdo-rollback.md)调用。  
+调用 [PDO::commit](../../connect/php/pdo-commit.md) 或 [PDO::rollback](../../connect/php/pdo-rollback.md) 时，将结束使用 PDO::beginTransaction 开始的事务。  
   
 PDO::beginTransaction 不受 PDO::ATTR_AUTOCOMMIT 的值影响（也不影响该值）。  
   
 除非先使用 PDO::rollback 或 PDO::commit 结束之前的 PDO::beginTransaction，否则不允许调用 PDO::beginTransaction。  
   
-如果此方法失败，则连接返回到自动提交模式。  
+如果此方法失败，该连接会返回到自动提交模式。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
@@ -63,7 +63,7 @@ PDO::beginTransaction 不受 PDO::ATTR_AUTOCOMMIT 的值影响（也不影响该
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDO 类](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

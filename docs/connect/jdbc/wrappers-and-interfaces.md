@@ -1,5 +1,5 @@
 ---
-title: 包装和接口 |Microsoft 文档
+title: 包装和接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852432"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994805"
 ---
 # <a name="wrappers-and-interfaces"></a>包装和接口
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持接口，允许你创建的类，代理和包装，让你访问 JDBC API 所特有的扩展[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]通过代理的接口。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持允许你创建类的代理的接口，并且支持允许你通过代理接口访问（特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]的）JDBC API 扩展的包装器。  
   
 ## <a name="wrappers"></a>包装  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持 java.sql.Wrapper 接口。 此接口提供某种机制来访问扩展到的 JDBC API 的特定于[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]通过代理的接口。  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持 java.sql.Wrapper 接口。 该接口提供一种机制，通过代理接口访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。  
   
- Java.sql.Wrapper 接口定义两种方法： **isWrapperFor**和**unwrap**。 **IsWrapperFor**方法检查该指定的输入的对象是否实现此接口。 **Unwrap**方法返回实现此接口可允许访问的对象[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]特定方法。  
+ Java.sql.Wrapper 接口定义两个方法： **isWrapperFor**并**unwrap**。 isWrapperFor 方法检查指定的输入对象是否实现此接口。 unwrap 方法返回一个实现此接口的对象，从而允许访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的方法。  
   
- **isWrapperFor**和**unwrap**公开的方法，如下所示：  
+ **isWrapperFor**并**unwrap**方法公开，如下所示：  
   
--   [isWrapperFor 方法&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
+-   [isWrapperFor 方法 (SQLServerCallableStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
   
--   [unwrap 方法&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
+-   [unwrap 方法 (SQLServerCallableStatement)](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
   
--   [isWrapperFor 方法&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
+-   [isWrapperFor 方法 (SQLServerConnectionPoolDataSource)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
   
--   [unwrap 方法&#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
+-   [unwrap 方法 (SQLServerConnectionPoolDataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
   
--   [isWrapperFor 方法&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
+-   [isWrapperFor 方法 (SQLServerDataSource)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
   
 -   [unwrap 方法&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
   
--   [isWrapperFor 方法&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
+-   [isWrapperFor 方法 (SQLServerPreparedStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
   
--   [unwrap 方法&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
+-   [unwrap 方法 (SQLServerPreparedStatement)](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
   
--   [isWrapperFor 方法&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
+-   [isWrapperFor 方法 (SQLServerStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
   
 -   [unwrap 方法&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
   
--   [isWrapperFor 方法&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
+-   [isWrapperFor 方法 (SQLServerXADataSource)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
   
 -   [unwrap 方法&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>界面  
- 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]JDBC Driver 3.0，接口是可用于应用程序服务器关联的类从访问驱动程序的特定方法。 应用程序服务器可以通过创建公开的代理包装类[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-来自接口的特定功能。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持接口具有[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]特定的方法和常量，因此应用程序服务器可以创建类的代理。  
+ 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 开始，接口可用于应用程序服务器，以便从关联的类访问驱动程序特定的方法。 应用程序服务器通过创建代理对类进行包装，并且从接口公开 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的函数。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持具有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法和常量的接口，因此应用程序服务器可以创建类的代理。  
   
- 接口派生自标准 Java 接口，因此你可以使用相同的对象后打开包装才能访问驱动程序的特定功能或泛型[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]功能。  
+ 这些接口派生自标准 Java 接口，这样，取消对接口的包装后访问驱动程序特定的功能或一般 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 功能时，就可以使用相同的对象。  
   
  新增了以下接口：  
   
@@ -78,8 +78,8 @@ ms.locfileid: "32852432"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
- 此示例演示如何访问[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-从数据源对象的特定函数。 应用程序服务器可能已包装此数据源类。 若要访问的 JDBC 驱动程序特定的函数或常量，可以解除包装到 ISQLServerDataSource 接口的数据源，并使用在此接口中声明的函数。  
+### <a name="description"></a>描述  
+ 此示例说明如何从 DataSource 对象访问 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的函数。 此 DataSource 类可能已由应用程序服务器包装。 若要访问 JDBC 驱动程序特定的函数或常量，可以取消数据源对 ISQLServerDataSource 接口的数据源的包装，并使用在此接口中声明的函数。  
   
 ### <a name="code"></a>代码  
   

@@ -1,5 +1,5 @@
 ---
-title: 检索结果设置数据示例 |Microsoft 文档
+title: 结果集检索数据示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852992"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039191"
 ---
 # <a name="retrieving-result-set-data-sample"></a>结果集数据检索示例
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  这[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]示例应用程序演示如何检索一组数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库，以及然后显示该数据。  
+  此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中检索一组数据，然后将这些数据显示出来。  
   
  此示例的代码文件名为 retrieveRS.java，可在以下位置找到该文件：  
   
  \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \samples\resultsets  
   
-## <a name="requirements"></a>需求  
- 若要运行此示例应用程序，必须将 classpath 设置为包含 sqljdbc.jar 文件或 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc.jar 项或 sqljdbc4.jar 项，示例应用程序将引发“找不到类”的常见异常。 你还将需要访问[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库。 有关如何设置类路径的详细信息，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。  
+## <a name="requirements"></a>要求  
+ 若要运行此示例应用程序，必须将 classpath 设置为包含 sqljdbc.jar 文件或 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc.jar 项或 sqljdbc4.jar 项，示例应用程序将引发“找不到类”的常见异常。 还需要访问 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供 sqljdbc.jar 和 sqljdbc4.jar 类库文件，以便根据你首选的 Java Runtime Environment (JRE) 设置来使用。 有关要选择的 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供两个类库文件：sqljdbc.jar 和 sqljdbc4.jar，具体使用哪个文件取决于首选的 Java 运行时环境 (JRE) 设置。 若要选择哪个 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，示例代码建立连接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库。 然后，使用的 SQL 语句[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)对象，它运行的 SQL 语句并将放到它返回的数据[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 在下面的示例中，示例代码将建立与 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的连接。 然后，该代码通过对 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象使用 SQL 语句，运行该 SQL 语句，并将其返回的数据放入 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象中。  
   
- 接下来，该示例代码调用自定义 displayRow 方法来循环访问结果集中包含的数据的行，并使用[getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)方法以显示一些，它包含的数据。  
+ 接下来，示例代码调用自定义的 displayRow 方法来遍历结果集中包含的数据行，并使用 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法显示其中包含的某些数据。  
   
 ```java
 import java.sql.*;  

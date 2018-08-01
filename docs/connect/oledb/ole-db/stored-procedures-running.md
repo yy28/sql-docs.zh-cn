@@ -1,5 +1,5 @@
 ---
-title: 运行存储的过程 (OLE DB) |Microsoft 文档
+title: 运行存储的过程 (OLE DB) |Microsoft Docs
 description: 运行存储过程 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611882"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108959"
 ---
-# <a name="stored-procedures---running"></a>存储的过程的运行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>存储过程 - 运行
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  在执行语句时，可以提供在数据源 （而不是执行或直接准备客户端应用程序中的语句） 上调用存储的过程：  
+  执行语句时，对数据源调用存储过程（而不是直接在客户端应用程序中执行或准备语句）可以：  
   
 -   提高性能。  
   
@@ -42,23 +42,23 @@ ms.locfileid: "35611882"
   
 -   增加功能。  
   
- SQL Server 的 OLE DB 驱动程序支持三种机制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]存储的过程用于返回数据：  
+ 适用于 SQL Server 的 OLE DB 驱动程序支持三种机制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]存储的过程用于返回数据：  
   
--   在过程中的每个 SELECT 语句生成的结果集。  
+-   过程中的每一条 SELECT 语句都生成一个结果集。  
   
 -   过程可以通过输出参数返回数据。  
   
 -   过程可以具有整数返回代码。  
   
- 应用程序必须能够处理所有这些输出的存储过程。  
+ 应用程序必须能够处理来自存储过程的所有这些输出。  
   
- 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 OLE DB 驱动程序的 SQL Server，如果输出参数和返回代码未提供直到后使用者已检索到或取消的存储过程返回的结果集。 返回代码和输出参数在最后一个来自服务器的 TDS 数据包中返回。  
+ 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 对于适用于 SQL Server 的 OLE DB 驱动程序，直到使用者检索或取消了存储过程所返回的结果集之后，才提供输出参数和返回代码。 返回代码和输出参数在最后一个来自服务器的 TDS 数据包中返回。  
   
  访问接口返回输出参数和返回值时，使用 DBPROP_OUTPUTPARAMETERAVAILABILITY 属性进行报告。 此属性位于 DBPROPSET_DATASOURCEINFO 属性集中。  
   
- SQL Server 的 OLE DB 驱动程序将 DBPROP_OUTPUTPARAMETERAVAILABILITY 属性设置为 DBPROPVAL_OA_ATROWRELEASE 以指示，在处理结果集或将其发布之前不返回返回代码和输出参数。  
+ 适用于 SQL Server 的 OLE DB 驱动程序将 DBPROP_OUTPUTPARAMETERAVAILABILITY 属性设置为 DBPROPVAL_OA_ATROWRELEASE，以指示直到处理或释放结果集之后才返回返回代码和输出参数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [存储过程](../../oledb/ole-db/stored-procedures.md)  
   
   

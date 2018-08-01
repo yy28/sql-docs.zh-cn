@@ -1,5 +1,5 @@
 ---
-title: updateDateTimeOffset(string) (SQLServerResultSet) |Microsoft 文档
+title: updateDateTimeOffset(string) (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf422903a4c03258a7c3fc9a4d42f6525ababd9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850392"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039245"
 ---
 # <a name="updatedatetimeoffsetstring-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(string, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此方法已添加到中[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0。  
+  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 中新增了此方法。  
   
  更新到指定的列的值[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)给定列名称的值。  
   
@@ -42,16 +42,16 @@ public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset
   
  *x*  
   
- A [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
+ 一个[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 你可以检索[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值与[SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)。  
+## <a name="remarks"></a>Remarks  
+ 可以检索[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值替换[SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   
+ [updateDateTimeOffset (SQLServerResultSet)](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

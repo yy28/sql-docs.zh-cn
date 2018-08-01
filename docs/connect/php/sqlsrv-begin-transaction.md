@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_begin_transaction |Microsoft 文档
+title: sqlsrv_begin_transaction |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83c62cf6a9ec637573682cc3b0193b173875a42
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309196"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983142"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35309196"
 在指定的连接上开始事务。 当前事务包括指定连接上的所有语句，这些语句在调用 **sqlsrv_begin_transaction** 之后和调用 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 或 [sqls_rvcommit](../../connect/php/sqlsrv-commit.md)之前执行。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]处于默认情况下自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
+> 默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
   
 > [!NOTE]  
 > 如果在连接上启动事务后调用 **sqlsrv_begin_transaction** ，但未通过调用 **sqls_rvcommit** 或 **sqlsrv_rollback**完成，该调用将返回 **false** ，并且错误集合中将添加一个 *Already in Transaction* 错误。  
@@ -57,7 +57,7 @@ sqlsrv_begin_transaction( resource $conn)
   
 该示例中的第一次查询向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入了一个新销售订单。 该订单订购的是 5 套产品 ID 为 709 的产品。 第二次查询将产品 ID 为 709 的产品库存量减少 5 套。 这些查询包含在一个事务中，因为这两次查询均必须成功完成，数据库才能准确反映订单状态和产品供应情况。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -125,12 +125,12 @@ sqlsrv_close( $conn);
 为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，建议应检查对 **sqlsrv** 函数的任何调用是否存在错误并进行相应处理。  
   
 > [!NOTE]  
-> 不要使用嵌入式 Transact-SQL 来执行事务。 例如，不要以 Transact-SQL 查询的方式执行包含“BEGIN TRANSACTION”的语句来开始某一事务。 使用嵌入式的 Transact SQL 执行事务时，则无法保证出现预期的事务行为。  
+> 不要使用嵌入式 Transact-SQL 来执行事务。 例如，不要以 Transact-SQL 查询的方式执行包含“BEGIN TRANSACTION”的语句来开始某一事务。 使用嵌入式 Transact-SQL 执行事务时，无法保证出现预期的事务行为。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [如何：执行事务](../../connect/php/how-to-perform-transactions.md)
 
-[Microsoft Drivers for PHP for SQL Server 的概述](../../connect/php/overview-of-the-php-sql-driver.md) 
+[Microsoft Drivers for PHP for SQL Server 概述](../../connect/php/overview-of-the-php-sql-driver.md) 
   

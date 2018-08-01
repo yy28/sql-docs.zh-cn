@@ -1,5 +1,5 @@
 ---
-title: 使用表值参数 (OLE DB) |Microsoft 文档
+title: 使用表值参数 (OLE DB) |Microsoft Docs
 description: 使用表值参数 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f0bb98891fbaff6bc0512d2adfeee6e2a19d412b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 035ff9761df4b557bfc5d966c05a7be5e0e29d28
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666157"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109809"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用表值参数 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -38,7 +38,7 @@ ms.locfileid: "35666157"
   
 -   显示错误 MSOLEDBSQL 错误处理。  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;OLE DB 驱动程序的 SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
+ 有关表值参数的详细信息，请参阅[表值参数&#40;OLE DB 驱动程序适用于 SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>示例  
  第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建该示例使用的数据库。  
@@ -47,7 +47,7 @@ ms.locfileid: "35666157"
   
  将第三个代码列表放入名为 OLEDBUtils.hpp 的文件。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第四个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第四个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  第五个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建该示例使用的数据库。  
   

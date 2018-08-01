@@ -1,5 +1,5 @@
 ---
-title: 使用 IMultipleResults 处理多个结果集 |Microsoft 文档
+title: 使用 IMultipleResults 处理多个结果集 | Microsoft Docs
 description: 使用 IMultipleResults 处理多个结果集
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59e39d472be21161d27b0449c1f2e81d31a09c4d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2b622e56691a54ad6db4859b8099c29645357b87
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666277"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105914"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>使用 IMultipleResults 处理多个结果集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  使用者使用**IMultipleResults**接口来处理通过 OLE DB 驱动程序为 SQL Server 命令执行返回的结果。 当 SQL Server 的 OLE DB 驱动程序提交的命令执行，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]执行的语句并返回任何结果。  
+  使用者使用 IMultipleResults 接口处理执行适用于 SQL Server 的 OLE DB 驱动程序命令所返回的结果。 当适用于 SQL Server 的 OLE DB 驱动程序提交要执行的命令后，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会执行该语句并返回任意结果。  
   
- 客户端必须处理命令执行返回的所有结果。 因为用于 SQL Server 命令执行的 OLE DB 驱动程序可以生成多个行集对象作为结果，请使用**IMultipleResults**接口，以确保应用程序数据检索完成客户端启动往返过程。  
+ 客户端必须处理命令执行返回的所有结果。 由于适用于 SQL Server 的 OLE DB 驱动程序命令执行可以生成多个行集对象作为结果，因此，使用 IMultipleResults 接口可以确保应用程序数据检索完成由客户端启动的往返。  
   
- 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句生成多个行集、 从某些包含行数据**OrderDetails**表和 COMPUTE BY 子句的一些包含结果：  
+ 以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句生成多个行集，某些行集包含 OrderDetails 表的行数据，某些行集包含 COMPUTE BY 子句的结果：  
   
 ```  
 SELECT OrderID, FullPrice = (UnitPrice * Quantity), Discount,  
@@ -47,18 +47,18 @@ COMPUTE
     BY OrderID  
 ```  
   
- 如果使用者执行包含该文本的命令并请求行集作为返回的结果接口，则只返回第一组行。 使用者可以处理返回的行集中的所有行。 但是，如果 DBPROP_MULTIPLECONNECTIONS 数据源属性设置为 VARIANT_FALSE 和 MARS 连接上未启用，直到，可以对 （SQL Server 的 OLE DB 驱动程序将创建另一个连接） 的会话对象执行任何其他命令命令都会被取消。 如果在连接上未启用 MARS，SQL Server 的 OLE DB 驱动程序将返回 DB_E_OBJECTOPEN 错误，如果 DBPROP_MULTIPLECONNECTIONS 为 VARIANT_FALSE，并返回 E_FAIL，如果没有活动事务。  
+ 如果使用者执行包含该文本的命令并请求行集作为返回的结果接口，则只返回第一组行。 使用者可以处理返回的行集中的所有行。 但是，如果将 DBPROP_MULTIPLECONNECTIONS 数据源属性设置为 VARIANT_FALSE，并且未在连接上启用 MARS，则无法针对会话对象执行任何其他命令（适用于 SQL Server 的 OLE DB 驱动程序将不会创建其他连接），直到取消该命令为止。 如果在连接上启用了 MARS，当 DBPROP_MULTIPLECONNECTIONS 为 VARIANT_FALSE 时，适用于 SQL Server 的 OLE DB 驱动程序返回 DB_E_OBJECTOPEN 错误，如果存在活动事务，则返回 E_FAIL。  
   
- SQL Server 的 OLE DB 驱动程序还将返回 DB_E_OBJECTOPEN 时使用流式处理输出参数，应用程序不占用了之前调用的所有返回的输出参数值**IMultipleResults::GetResults**到获取下一个结果集。 如果未启用 MARS 并且连接正忙于运行命令不会生成行集或生成行集不服务器游标，且如果 DBPROP_MULTIPLECONNECTIONS 数据源属性设置为 VARIANT_TRUE，SQL Server 的 OLE DB 驱动程序创建其他连接，以支持并发命令对象，除非事务处于活动状态，在此情况下它返回一条错误。 事务和锁定是在每个连接的基础上通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 来管理的。 如果生成第二个连接，该独立连接上的命令不能共享锁定。 应通过对其他命令所请求的行保持锁定，小心确保一个命令不会阻塞另一个命令。 如果启用 MARS，连接上可以有多个活动命令；如果使用显式事务，所有命令都共享一个公用事务。  
+ 如果使用流式输出参数，并且应用程序在调用 IMultipleResults::GetResults 获取下一结果集之前尚未使用完所有已返回的输出参数值，则适用于 SQL Server 的 OLE DB 驱动程序也将返回 DB_E_OBJECTOPEN。 如果未启用 MARS 并且连接正忙于运行的命令不生成行集或者生成的行集不是服务器游标，同时 DBPROP_MULTIPLECONNECTIONS 数据源属性设置为 VARIANT_TRUE，那么适用于 SQL Server 的 OLE DB 驱动程序将创建其他连接来支持并发命令对象，除非某个事务处于活动状态（在此情况下，将返回错误）。 事务和锁定是在每个连接的基础上通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 来管理的。 如果生成第二个连接，该独立连接上的命令不能共享锁定。 应通过对其他命令所请求的行保持锁定，小心确保一个命令不会阻塞另一个命令。 如果启用 MARS，连接上可以有多个活动命令；如果使用显式事务，所有命令都共享一个公用事务。  
   
- 使用者可以取消命令通过使用[ISSAbort::Abort](../../oledb/ole-db-interfaces/issabort-abort-ole-db.md)或释放命令对象和派生的行集上保留的所有引用。  
+ 使用者可以使用 [ISSAbort::Abort](../../oledb/ole-db-interfaces/issabort-abort-ole-db.md) 或释放命令对象和派生行集所持有的所有引用来取消命令。  
   
- 使用**IMultipleResults**在所有情况下允许使用者，若要获取生成的命令执行的所有行集，并允许使用者以相应地确定何时取消命令执行和免费的会话对象以供其他命令。  
+ 通过在所有实例中使用 IMultipleResults，使用者能够获取命令执行生成的所有行集，并正确确定何时取消命令执行和释放会话对象以供其他命令使用。  
   
 > [!NOTE]  
->  当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标时，命令执行将创建游标。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回游标创建是成功还是失败；因此，与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的往返将在命令执行返回时完成。 每个**GetNextRows**调用随后将成为一次往返过程。 这样，可以存在多个活动命令对象，每个对象分别处理作为服务器游标提取结果的行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。  
+>  当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标时，命令执行将创建游标。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回游标创建是成功还是失败；因此，与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的往返将在命令执行返回时完成。 随后，每个 GetNextRows 调用成为一个往返。 这样，可以存在多个活动命令对象，每个对象分别处理作为服务器游标提取结果的行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [命令](../../oledb/ole-db-commands/commands.md)  
   
   

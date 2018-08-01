@@ -1,6 +1,6 @@
 ---
-title: 分布式查询支持架构行集在 |Microsoft 文档
-description: 分布式查询中架构行集的支持
+title: 分布式查询支持架构行集中 |Microsoft Docs
+description: 架构行集中的分布式查询支持
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,21 +21,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c996768d8b2c0aaf2c2f622add33ffdf5aab3e89
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 085a4424272e4d620c4b36fe9ecf44894cb1a33f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611612"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105823"
 ---
-# <a name="schema-rowsets---distributed-query-support"></a>架构行集的分布式的查询支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---distributed-query-support"></a>架构行集 - 分布式查询支持
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  若要支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询，SQL Server 的 OLE DB 驱动程序**IDBSchemaRowset**接口返回链接服务器上的元数据。  
+  为了支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询，适用于 SQL Server 的 OLE DB 驱动程序 IDBSchemaRowset 接口返回链接服务器上的元数据。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 当限制架构行集输出的目录，用于 SQL Server 的 OLE DB 驱动程序识别出两部分名称包含的链接的服务器和目录名称。 下表中的架构行集，指定一个两部分目录名称作为*linked_server ***。*** 目录*将输出限制为的适用目录中的命名的链接服务器。  
+ 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 如果按目录限制架构行集输出，则适用于 SQL Server 的 OLE DB 驱动程序识别包含链接服务器和目录名称的由两个部分组成的名称。 对于下表中的架构行集，将此由两部分组成的目录名称指定为 linked_server.catalog 可将输出限制为命名链接服务器的适用目录。  
   
 |架构行集|目录限制|  
 |-------------------|-------------------------|  
@@ -49,12 +49,12 @@ ms.locfileid: "35611612"
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  若要限制对所有目录从链接服务器架构行集，请使用语法*linked_server* （其中的时间段分隔符是指定名称的一部分）。 该语法等同于将目录名称限制指定为 NULL，当链接服务器指示有不支持目录的数据源时也使用此语法。  
+>  若要将架构行集限制为来自链接服务器的所有目录，请使用语法 linked_server（其中，句点分隔符是名称规范的一部分）。 该语法等同于将目录名称限制指定为 NULL，当链接服务器指示有不支持目录的数据源时也使用此语法。  
   
- SQL Server 的 OLE DB 驱动程序定义的架构行集 LINKEDSERVERS，返回已注册为链接服务器的 OLE DB 数据源的列表。  
+ 适用于 SQL Server 的 OLE DB 驱动程序定义架构行集 LINKEDSERVERS，返回注册为链接服务器的 OLE DB 数据源列表。  
   
-## <a name="see-also"></a>请参阅  
- [架构行集支持&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
+## <a name="see-also"></a>另请参阅  
+ [架构行集支持 (OLE DB)](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 行集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

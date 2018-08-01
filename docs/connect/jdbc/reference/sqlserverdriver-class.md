@@ -1,5 +1,5 @@
 ---
-title: SQLServerDriver 类 |Microsoft 文档
+title: SQLServerDriver 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845472"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052719"
 ---
 # <a name="sqlserverdriver-class"></a>SQLServerDriver 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表示[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 此类包括用于连接到的方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库，并获取有关 JDBC 驱动程序信息。  
+  表示 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 此类包括连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库的方法以及取得 JDBC 驱动程序相关信息的方法。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   

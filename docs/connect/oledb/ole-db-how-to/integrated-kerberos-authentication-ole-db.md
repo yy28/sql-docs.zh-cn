@@ -1,6 +1,6 @@
 ---
-title: 集成的 Kerberos 身份验证 (OLE DB) |Microsoft 文档
-description: 集成的 kerberos 身份验证 (OLE DB)
+title: 集成 Kerberos 身份验证 (OLE DB) |Microsoft Docs
+description: 集成的 Kerberos 身份验证 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665627"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109129"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此示例演示如何通过使用适用于 SQL Server 的 OLE DB 驱动程序中的 OLE DB 中获取 Kerberos 的相互身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。  
+  此示例演示如何通过使用 for SQL Server 的 OLE DB 驱动程序中的 OLE DB 获得 Kerberos 相互身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。  
   
- 有关 Spn 和 Kerberos 身份验证的详细信息，请参阅[服务主体名称&#40;SPN&#41;中客户端连接支持](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关 SPN 和 Kerberos 身份验证的详细信息，请参阅[客户端连接中的服务主体名称 (SPN) 支持](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  必须指定一个服务器。 在 .cpp 文件中，将“MyServer”更改为具有 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）实例的计算机名称。  
   
  此外，还必须指定一个客户提供的 SPN。 在 .cpp 文件 中，将“CPSPN”更改为客户提供的 SPN。  
   
- 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
+ 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

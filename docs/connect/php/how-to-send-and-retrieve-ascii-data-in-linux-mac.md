@@ -1,5 +1,5 @@
 ---
-title: 如何： 发送和检索在 Linux 和 macOS (SQL) 的 ASCII 数据 |Microsoft 文档
+title: 如何： 发送和检索 ASCII 数据添加在 Linux 和 macOS (SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -17,33 +17,33 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307676"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979819"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何： 发送和检索在 Linux 和 macOS ASCII 数据 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：在 Linux 和 macOS 中发送和检索 ASCII 数据 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本文假定已生成或安装 Linux 或 macOS 系统中的 ASCII (非 UTF 8) 区域设置。 
+本文假设已生成或在 Linux 或 macOS 系统中安装的 ASCII (非 UTF 8) 区域设置。 
 
 若要发送或检索到服务器的 ASCII 字符集：  
 
-1.  如果所需的区域设置不是你系统的环境中的默认值，请确保你调用`setlocale(LC_ALL, $locale)`之前建立第一个连接。 PHP setlocale() 函数更改仅在当前脚本的区域设置，如果调用进行第一次连接后，可能会被忽略。
+1.  如果所需的区域设置不是您的系统环境中的默认值，请确保您调用`setlocale(LC_ALL, $locale)`之前建立第一个连接。 PHP setlocale() 函数更改仅对当前脚本的区域设置，如果调用进行首次连接后，可能会被忽略。
  
-2.  当使用 SQLSRV 驱动程序，你可能指定`'CharacterSet' => SQLSRV_ENC_CHAR`为连接选项，但此步骤是可选因为它是默认编码。
+2.  在使用 SQLSRV 驱动程序，可能会指定`'CharacterSet' => SQLSRV_ENC_CHAR`作为连接选项，但此步骤是可选的因为它是默认编码。
 
-3.  在使用 PDO_SQLSRV 驱动程序时，有两种方法。 首先，当建立的连接，设置`PDO::SQLSRV_ATTR_ENCODING`到`PDO::SQLSRV_ENCODING_SYSTEM`(有关设置连接选项的示例，请参阅[:: __construct](../../connect/php/pdo-construct.md))。 成功连接之后，或者，添加以下行 `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  当使用 PDO_SQLSRV 驱动程序，有两种方法。 首先，连接时，将设置`PDO::SQLSRV_ATTR_ENCODING`到`PDO::SQLSRV_ENCODING_SYSTEM`(设置连接选项的示例，请参阅[:: __construct](../../connect/php/pdo-construct.md))。 或者，成功连接后，添加以下行 `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-当你指定的编码的连接资源 （在 SQLSRV) 或连接对象 (PDO_SQLSRV) 时，驱动程序假定其他连接选项字符串使用编码的相同。 也可以假定服务器名称和查询字符串使用相同的字符集。  
+当指定的连接资源 （在 SQLSRV) 或连接对象 (PDO_SQLSRV) 编码时，驱动程序假定其他连接选项字符串使用该相同的编码。 也可以假定服务器名称和查询字符串使用相同的字符集。  
   
-默认编码 PDO_SQLSRV 驱动程序与不同的是 SQLSRV 驱动程序是 utf-8 (PDO::SQLSRV_ENCODING_UTF8)。 有关这些常量的详细信息，请参阅[常量&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 
+默认编码 PDO_SQLSRV 驱动程序为 utf-8 (PDO::SQLSRV_ENCODING_UTF8)，与不同的是 SQLSRV 驱动程序。 有关这些常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 
   
 ## <a name="example"></a>示例  
-下面的示例演示如何发送和检索使用用于 SQL Server PHP 驱动程序通过建立的连接之前指定特定的区域设置的 ASCII 数据。 在各种 Linux 平台的区域设置可能以不同方式命名从 macOS 中的同一区域设置。 例如，美国 iso-8859-1 (拉丁文 1) 区域设置是`en_US.ISO-8859-1`在 Linux 时在 macOS 名称是`en_US.ISO8859-1`。
+以下示例演示如何发送和检索 ASCII 数据通过之前建立的连接指定特定的区域设置使用 SQL Server PHP 驱动程序。 从 macOS 中的相同区域设置可能会以不同方式命名各种 Linux 平台中的区域设置。 例如，美国 ISO-8859-1 (Latin 1) 区域设置是`en_US.ISO-8859-1`macOS 中的名称不在 Linux 中`en_US.ISO8859-1`。
   
-这些示例假定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的服务器上安装。 从浏览器运行示例时，所有输出都写入浏览器。  
+这些示例假定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的服务器上安装。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   
 ```  
 <?php  
@@ -166,7 +166,7 @@ try {
 ?>  
 ```  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)  
 [使用 utf-8 数据](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
 [更新数据&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

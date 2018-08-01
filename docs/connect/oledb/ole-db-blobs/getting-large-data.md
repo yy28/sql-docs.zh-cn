@@ -1,6 +1,6 @@
 ---
-title: 获取大数据 |Microsoft 文档
-description: 获取使用适用于 SQL Server 的 OLE DB 驱动程序的大数据
+title: 获取大型数据 |Microsoft Docs
+description: 获取适用于 SQL Server 使用 OLE DB 驱动程序的大型数据
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666197"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106174"
 ---
 # <a name="getting-large-data"></a>获取大型数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  一般情况下，使用者应隔离处理通过未被引用的数据的其他代码中创建 SQL Server 存储对象 OLE DB 驱动程序的代码**ISequentialStream**接口指针。  
+  一般而言，使用者应将创建适用于 SQL Server 的 OLE DB 驱动程序存储对象的代码与处理未通过 ISequentialStream 接口指针引用的数据的其他代码分开。  
   
- 这篇文章引用为使用以下函数提供的功能：  
+ 本文涉及可用于以下函数的功能：  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666197"
   
 -   ICommand::Execute  
   
- 使用者应提取仅对的调用中的数据的单个行**GetNextRows** DBPROP_ACCESSORDER 属性，在行集属性组中，设置为 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_ 方法SEQUENTIALSTORAGEOBJECTS。 这是因为未缓冲的 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，使用者可以提取中的数据的多个行**GetNextRows**。  
+ DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 时，使用者在对 GetNextRows 方法的调用中应只提取单行数据。 这是因为不缓冲 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据。  
   
- SQL Server 的 OLE DB 驱动程序并不检索大型数据从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]请求之前为此，使用者。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
+ SQL Server 的 OLE DB 驱动程序不会检索大型数据从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]请求之前要执行此操作由使用者。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   
 ## <a name="example"></a>示例  
  本示例从单一列中检索大型数据值：  
@@ -153,8 +153,8 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Blob 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>另请参阅  
+ [BLOB 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大值类型](../../oledb/features/using-large-value-types.md)  
   
   

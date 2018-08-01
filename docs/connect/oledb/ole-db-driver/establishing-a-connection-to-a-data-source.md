@@ -1,6 +1,6 @@
 ---
-title: 建立与数据源的连接 |Microsoft 文档
-description: 与使用适用于 SQL Server 的 OLE DB 驱动程序的数据源建立连接
+title: 建立与数据源的连接 |Microsoft Docs
+description: 与使用 SQL Server 的 OLE DB 驱动程序的数据源建立连接
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8c198bad7fbe50aff0493d25c438268efb1deeb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666097"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107033"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立与数据源的连接
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  若要访问的 SQL Server 的 OLE DB 驱动程序，请使用者必须首先创建数据源对象的实例通过调用**CoCreateInstance**方法。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 对于 OLE DB 驱动程序的 SQL Server，类标识符是 CLSID_MSOLEDBSQL。 你也可以使用符号将解析为 OLE DB 驱动程序在你引用 msoledbsql.h 中使用的 SQL server 的 MSOLEDBSQL_CLSID。  
+  要访问适用于 SQL Server 的 OLE DB 驱动程序，使用者必须先调用 CoCreateInstance 方法来创建数据源对象的实例。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 OLE DB 驱动程序适用于 SQL Server 的类标识符是 CLSID_MSOLEDBSQL。 此外可以使用符号将解析为 OLE DB 驱动程序用于引用 msoledbsql.h 中使用的 SQL Server 的 MSOLEDBSQL_CLSID。  
   
- 数据源对象公开**IDBProperties**接口，使用者使用提供基本身份验证信息，如服务器名称、 数据库名称、 用户 ID 和密码。 **IDBProperties::SetProperties**调用方法来设置这些属性。  
+ 数据源对象公开了 IDBProperties 接口，使用者使用该接口提供基本的身份验证信息，如服务器名、数据库名、用户 ID 和密码。 可调用 IDBProperties::SetProperties 方法设置这些属性。  
   
  如果计算机上运行了多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，应以“服务器名称\示例名称”的形式指定服务器名称。  
   
- 数据源对象还公开**IDBInitialize**接口。 设置了属性后，通过调用建立到数据源的连接**idbinitialize:: Initialize**方法。 例如：  
+ 数据源对象还公开了 IDBInitialize 接口。 在设置这些属性之后，可通过调用 IDBInitialize::Initialize 方法建立与数据源的连接。 例如：  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -48,7 +48,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
                  (void **) &pIDBInitialize)  
 ```
   
- 此调用**CoCreateInstance**创建与 CLSID_MSOLEDBSQL (CSLID 与关联的数据以及将用于创建对象的代码) 相关联的类的单个对象。 IID_IDBInitialize 是对接口的标识符的引用 (**IDBInitialize**) 以用于通信的对象。  
+ 通过调用 CoCreateInstance，将创建与 CLSID_MSOLEDBSQL 关联的类的单个对象（其中 CSLID 与将用于创建对象的数据和代码关联）。 IID_IDBInitialize 引用接口 (IDBInitialize) 的标识符，而该接口用于与对象通信。  
   
  下面的示例演示如何初始化并建立与数据源的连接。
   
@@ -176,7 +176,7 @@ _ExitInitialize:
 }
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建适用于 SQL Server 的 OLE DB 驱动程序应用程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

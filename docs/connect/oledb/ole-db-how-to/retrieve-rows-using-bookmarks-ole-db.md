@@ -1,6 +1,6 @@
 ---
-title: 使用书签 (OLE DB) 检索行 |Microsoft 文档
-description: 使用书签 (OLE DB) 检索行
+title: 使用书签 (OLE DB) 检索行 |Microsoft Docs
+description: 使用书签检索行 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b282efe0c230c8070b3be9d92e969aa305c4f654
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7ff8a3f2b4ebee18c0fcb96688f668ee6f4937fb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665587"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107919"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  使用者集**dwFlag**字段 DBCOLUMNSINFO_ISBOOKMARK 以指示列用作书签绑定结构的值。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 **IRowsetLocate::GetRowsAt**然后将其用于将提取指定从书签偏移量开始的行与行。  
+  使用者可将绑定结构的 dwFlag 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 IRowsetLocate::GetRowsAt 提取行（起始行的位置为书签加上一个偏移量得到的位置）。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -42,18 +42,18 @@ ms.locfileid: "35665587"
   
 3.  执行命令。  
   
-4.  设置**dwFlag** DBCOLUMNSINFO_ISBOOKMARK 标志将用作书签的列绑定结构的字段。  
+4.  对于将用作书签的列，请将绑定结构的 dwFlag 字段设置为 DBCOLUMNSINFO_ISBOOKMARK 标记。  
   
-5.  使用**IRowsetLocate::GetRowsAt**提取与指定的行的书签从偏移量开始的行。  
+5.  使用**irowsetlocate:: Getrowsat**提取行，从指定的偏移量从书签的行开始。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用书签提取行。 IA64 平台不支持此示例。  
   
  在该示例中，将从执行 SELECT 语句产生的结果集中检索第五行。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

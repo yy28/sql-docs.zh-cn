@@ -1,24 +1,23 @@
 ---
 title: SqlPackage.exe |Microsoft Docs
-ms.custom:
-- SSDT
+ms.prod: sql
+ms.technology: ssdt
 ms.date: 2018-06-27
-ms.prod: sql-non-specified
 ms.reviewer: alayu; sstein
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4c206a60e0b494d4e060864eefcb50424d316938
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
-ms.translationtype: HT
+ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080075"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085409"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -137,7 +136,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|为部署参与者指定其他部署参与者参数。 这应该是用分号分隔的值列表。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定应在部署 dacpac 时运行的其他部署参与者。 这应该是以分号分隔的完全限定的生成参与者名称或 ID 列表。|
-|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|SqlClr 部署使用此属性以导致阻塞程序集作为部署计划的组成部分被删除。 默认情况下，如果需要删除引用程序集，则任何阻塞或引用程序集将阻止程序集更新。|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|SqlClr 部署使用此属性以导致阻塞程序集作为部署计划的组成部分被删除。 默认情况下，如果需要删除引用程序集，则任何阻塞或引用程序集将阻止程序集更新。|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|指定是否尝试操作，而不管存在的不兼容 SQL Server 平台。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|如果此属性设置为 true，则不阻止具有行级别安全性的表上的数据运动。 默认值为 false。|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|在部署任何更改之前，备份数据库。|

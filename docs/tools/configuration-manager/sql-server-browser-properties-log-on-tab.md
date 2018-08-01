@@ -1,5 +1,5 @@
 ---
-title: SQL Server 浏览器属性 （选项卡上的日志） |Microsoft 文档
+title: SQL Server Browser 属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 814b8f9f6c94e0c0907ee662565fd5377455a5a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070324"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022615"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server 浏览器属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "33070324"
   
  对帐户密码的更改立即生效，无需重新启动服务。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **本地系统帐户**  
  在本地系统帐户的安全上下文中运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 请尽可能使用低权限帐户。  
   

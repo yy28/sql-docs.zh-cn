@@ -1,5 +1,5 @@
 ---
-title: SQL Server 消息结果 |Microsoft 文档
+title: SQL Server 消息结果 |Microsoft Docs
 description: SQL Server 消息结果
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 87dbfd1740223f6d3d2116ada8d8c0c109aba15f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 98d04b56c6e1709e629be46ad00fd3f7b8007a5b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665507"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105993"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 消息结果
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句不会生成为 SQL Server 行集或执行时受影响的行的计数 OLE DB 驱动程序：  
+  执行下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句时不会生成适用于 SQL Server 的 OLE DB 驱动程序行集或受影响的行数：  
   
 -   PRINT  
   
@@ -42,13 +42,13 @@ ms.locfileid: "35665507"
   
 -   SET STATISTICS  
   
- 这些语句会返回一个或多个信息性消息，或者使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回信息性消息以替代行集或计数结果。 在成功执行时，SQL Server 的 OLE DB 驱动程序时才返回 S_OK，而消息适用于 OLE DB 驱动程序的 SQL Server 使用者。  
+ 这些语句会返回一个或多个信息性消息，或者使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回信息性消息以替代行集或计数结果。 在成功执行时，SQL Server 的 OLE DB 驱动程序返回 S_OK，并且消息可供 SQL Server 使用者，OLE DB 驱动程序。  
   
- SQL Server 的 OLE DB 驱动程序返回，则为 S_OK 并具有一个或多个信息性消息之后执行的许多提供[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句或使用者执行的 SQL Server 成员函数用于 OLE DB 驱动程序。  
+ SQL Server 的 OLE DB 驱动程序返回 S_OK，并具有一个或多个信息性消息之后执行多个[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句或使用者执行的 SQL Server 成员函数用于 OLE DB 驱动程序。  
   
- SQL Server 使用者允许动态规范查询文本的 OLE DB 驱动程序应检查返回代码，是否存在返回的每个成员函数执行无论值后的错误接口**IRowset**或**IMultipleResults**接口引用或受影响的行的计数。  
+ 在每次执行成员函数之后，不论返回代码的值如何、是否存在返回的 IRowset 或 IMultipleResults 接口引用或受影响的行数是多少，允许动态指定查询文本的适用于 SQL Server 的 OLE DB 驱动程序使用者都应检查错误接口。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  
   
   

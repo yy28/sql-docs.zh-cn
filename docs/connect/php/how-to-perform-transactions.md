@@ -1,5 +1,5 @@
 ---
-title: 如何： 执行事务 |Microsoft 文档
+title: 如何： 执行事务 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015784"
 ---
 # <a name="how-to-perform-transactions"></a>如何：执行事务
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,11 +53,11 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 2.  检查每次查询（事务的一部分）是成功还是失败。  
   
-3.  在适当情况下，使用 **sqlsrv_commit**开始事务。 否则，使用 **sqlsrv_rollback**开始事务。 在调用**sqlsrv_commit**或**sqlsrv_rollback**，驱动程序返回到自动提交模式。  
+3.  在适当情况下，使用 **sqlsrv_commit**开始事务。 否则，使用 **sqlsrv_rollback**开始事务。 在调用 sqlsrv_commit 或 sqlsrv_rollback 后，驱动程序将返回到自动提交模式。  
   
-    默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
+    默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
   
-    如果显式事务未提交与**sqlsrv_commit**，它将回滚时关闭连接或终止的脚本。  
+    如果未使用 sqlsrv_commit 提交显式事务，在关闭脚本的连接或终止后，将回退显式事务。  
   
     不要使用嵌入式 Transact-SQL 来执行事务。 例如，不要以 Transact-SQL 查询的方式执行包含“BEGIN TRANSACTION”的语句来开始某一事务。 使用嵌入式 Transact-SQL 执行事务时，无法保证出现预期的事务行为。  
   
@@ -65,7 +65,7 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
 以下示例将多个查询作为事务的一部分执行。 如果所有查询均成功完成，将提交事务。 如果任一查询失败，将回退事务。  
   
 此示例尝试从 *Sales.SalesOrderDetail* 表中删除销售订单并针对销售订单中的每个产品调整 *Product.ProductInventory* 表中的产品库存级别。 这些查询包含在一个事务中，因为所有查询都必须成功完成，数据库才能准确反映订单状态和产品供应情况。  
@@ -74,7 +74,7 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 随后的查询（删除销售订单和更新产品库存数量）是事务的一部分。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ### <a name="code"></a>代码  
   
@@ -154,12 +154,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>注释  
-为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，我们建议检查任何调用**sqlsrv**函数是否有错误，并相应地处理它们。
+为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，我们建议检查任何对**sqlsrv**函数的错误，并相应地处理它们。
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[事务 （数据库引擎）](https://msdn.microsoft.com/library/ms190612.aspx)
+[事务（数据库引擎）](https://msdn.microsoft.com/library/ms190612.aspx)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: updateNString 方法 （java.lang.String，java.lang.String） |Microsoft 文档
+title: updateNString 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41c12f32b1b42153baa79543ca284872040763ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850122"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040865"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新的指定的列**字符串**值使用指定的列标签。  
+  通过指定的列标签使用字符串值更新指定列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +37,22 @@ public void updateNString(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parameters  
  *columnLabel*  
   
- A**字符串**包含列标签。  
+ 一个包含列标签的字符串。  
   
- *nString*  
+ *n 字符串的结尾*  
   
- A**字符串**对象。  
+ 一个**字符串**对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateNString 方法指定此 updateNString 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateNString 方法由 java.sql.ResultSet 接口中的 updateNString 方法指定。  
   
- 此方法将传递 Java**字符串**为选定**nchar**， **nvarchar (max)**， **ntext**，和**xml**列。 在其他数据类型列上使用此方法会引发异常。  
+ 此方法将传递 Java**字符串**到所选**nchar**， **nvarchar （max)**， **ntext**，并**xml**列。 在其他数据类型列上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateNString 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
+ [updateNString 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

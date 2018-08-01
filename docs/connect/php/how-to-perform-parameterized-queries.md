@@ -1,5 +1,5 @@
 ---
-title: 如何： 执行参数化的查询 |Microsoft 文档
+title: 如何： 执行参数化的查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032986"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：执行参数化查询
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "35307566"
   
 2.  初始化或更新对应于 Transact-SQL 查询中的占位符的 PHP 变量。  
   
-3.  使用步骤 2 中的 PHP 变量创建或更新它们分别对应参数值的数组中的 TRANSACT-SQL 字符串参数占位符。 数组中的参数值必须为占位符用于表示它们的顺序相同。
+3.  使用步骤 2 中的 PHP 变量创建或更新对应于 Transact-SQL 字符串中的参数占位符的参数值数组。 数组中的参数值必须是用于表示它们的占位符的顺序相同。
   
 4.  执行查询：  
   
     -   如果使用的是 SQLSRV 驱动程序，请使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
   
-    -   如果你使用的 PDO_SQLSRV 驱动程序，执行查询中的使用[pdo:: prepare](../../connect/php/pdo-prepare.md)和[pdostatement:: Execute](../../connect/php/pdostatement-execute.md)。 [PDO::prepare](../../connect/php/pdo-prepare.md) 和 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 的主题有代码示例。  
+    -   如果你使用 PDO_SQLSRV 驱动程序，请使用 [PDO::prepare](../../connect/php/pdo-prepare.md) 和 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 执行查询。 [PDO::prepare](../../connect/php/pdo-prepare.md) 和 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 的主题有代码示例。  
   
 本主题的其余部分讨论使用 SQLSRV 驱动程序的参数化查询。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35307566"
   
 然后，此示例查询数据库来验证数量是否已正确更新。 产品 ID 是 SELECT 查询中的参数。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -114,12 +114,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-上一个示例使用 **sqlsrv_query** 函数来执行查询。 本功能适合用于执行一次性查询，因为它可进行语句准备和执行。 组合**sqlsrv_prepare**/**sqlsrv_execute**最适合的查询中使用不同的参数值重新执行。 若要查看使用不同的参数值重复执行查询的示例，请参阅下一个示例。  
+上一个示例使用 **sqlsrv_query** 函数来执行查询。 本功能适合用于执行一次性查询，因为它可进行语句准备和执行。 sqlsrv_prepare/sqlsrv_execute 的组合最适合于使用不同的参数值重复执行查询。 若要查看使用不同的参数值重复执行查询的示例，请参阅下一个示例。  
   
 ## <a name="example"></a>示例  
-以下示例演示使用 **sqlsrv_prepare** 函数时隐式绑定变量。 此示例将多个销售订单插入到 *Sales.SalesOrderDetail* 表中。 *$Params*数组绑定到该语句 (*$stmt*) 时**sqlsrv_prepare**调用。 在每次执行将新的销售订单插入到表中的查询时，将使用对应于销售订单详细信息的新值更新 *$params* 数组。 后续查询执行使用新的参数值。  
+以下示例演示使用 **sqlsrv_prepare** 函数时隐式绑定变量。 此示例将多个销售订单插入到 *Sales.SalesOrderDetail* 表中。 当调用 sqlsrv_prepare 时，$params 数组绑定到语句 $stmt。 在每次执行将新的销售订单插入到表中的查询时，将使用对应于销售订单详细信息的新值更新 *$params* 数组。 后续查询执行使用新的参数值。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -191,7 +191,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [转换数据类型](../../connect/php/converting-data-types.md)
 
 [安全注意事项 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)

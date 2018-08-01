@@ -1,6 +1,6 @@
 ---
-title: 表值参数行集创建 |Microsoft 文档
-description: 静态和动态表值参数行集创建
+title: 创建表值参数行集 |Microsoft Docs
+description: 创建静态和动态表值参数行集
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,48 +16,48 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8879c56eae2f5691a27a6261cc12ca3ad9c4cebc
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 9a809f4469f46a94053612a64119d88f581930fb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690250"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108029"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  尽管使用者可以为表值参数提供任意行集对象，但是典型的行集对象要针对后端数据存储来实现，因此提供有限的性能。 因此，SQL Server 的 OLE DB 驱动程序允许使用者创建基于内存中数据的专用化的行集对象。 这种特殊的内存中的行集对象是一种新的 COM 对象，称为表值参数行集。 它提供与参数集相似的功能。  
+  尽管使用者可以为表值参数提供任意行集对象，但是典型的行集对象要针对后端数据存储来实现，因此提供有限的性能。 因此，适用于 SQL Server 的 OLE DB 驱动程序支持使用者基于内存中的数据创建专用的行集对象。 这种特殊的内存中的行集对象是一种新的 COM 对象，称为表值参数行集。 它提供与参数集相似的功能。  
   
- 表值参数行集对象由使用者通过多个会话级接口为输入参数显式创建。 没有每个表值参数的表值参数行集对象的一个实例。 使用者可以通过以下两种方法之一创建表值参数行集对象：提供已知的元数据信息（静态方案）；或者通过访问接口发现元数据信息（动态方案）。 以下各节介绍这两种方案。  
+ 表值参数行集对象由使用者通过多个会话级接口为输入参数显式创建。 每个表值参数对应一个表值参数行集对象实例。 使用者可以通过以下两种方法之一创建表值参数行集对象：提供已知的元数据信息（静态方案）；或者通过访问接口发现元数据信息（动态方案）。 以下各节介绍这两种方案。  
   
 ## <a name="static-scenario"></a>静态方案  
- 当已知的类型信息时，使用者将使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 来实例化都对应于表值参数的表值参数行集对象。  
+ 当已知的类型信息时，使用者使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 来实例化表值参数对应的表值参数行集对象。  
   
- *Guid*字段 (*pTableID*参数) 包含特殊的 GUID (CLSID_ROWSET_TVP)。 *PwszName*成员包含使用者要实例化表值参数类型的名称。 *EKind*字段将设置为 DBKIND_GUID_NAME。 此名称是必需的该语句时临时 SQL;名称是可选的如果它是一个过程调用的。  
+ *Guid*字段 (*pTableID*参数) 包含特殊 GUID (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称。 eKind 字段将设置为 DBKIND_GUID_NAME。 使用特殊 SQL 语句时此名称是必需时，使用过程调用时可选。  
   
- 对于聚合，使用者将传递*pUnkOuter*控制 IUnknown 参数。  
+ 对于聚合，使用者传递*pUnkOuter*参数控制的 IUnknown。  
   
- 表值参数行集对象属性只读字段，以便使用者不需要在中设置任何属性*rgPropertySets*。  
+ 表值参数行集对象属性只读，因此使用者无需在 rgPropertySets 中设置任何属性。  
   
- 有关*rgPropertySets*的每个 DBCOLUMNDESC 结构，使用者的成员可以指定每个列的其他属性。 这些属性属于 DBPROPSET_SQLSERVERCOLUMN 属性集。 它们支持您为每一列指定计算设置和默认设置。 它们还支持现有列属性，如为空性和标识。  
+ 对于每个 DBCOLUMNDESC 结构中的 rgPropertySets 成员，使用者可为每列指定附加属性。 这些属性属于 DBPROPSET_SQLSERVERCOLUMN 属性集。 它们支持您为每一列指定计算设置和默认设置。 它们还支持现有列属性，如为空性和标识。  
   
- 若要从表值参数行集对象中检索相应的信息，使用者，请使用 IRowsetInfo::GetProperties。  
+ 要从表值参数行集对象中检索相应的信息，使用者应使用 IRowsetInfo::GetProperties。  
   
- 若要检索有关 null，唯一的信息计算，并更新每个列的状态，请使用者可以使用 IColumnsRowset::GetColumnsRowset 或 IColumnsInfo::GetColumnInfo。 以下方法提供有关每个表值参数行集列的详细信息。  
+ 若要检索信息为 null，唯一的计算，并更新每个列的状态，使用者可以使用 icolumnsrowset:: Getcolumnsrowset 或 icolumnsinfo:: Getcolumninfo。 以下方法提供有关每个表值参数行集列的详细信息。  
   
- 使用者指定表值参数每一列的类型。 它是类似于列中创建表时的指定方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 使用者将表值参数行集对象从 OLE DB 驱动程序获取适用于 SQL Server 通过*ppRowset*输出参数。  
+ 使用者指定表值参数每一列的类型。 这类似于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建表时指定列的方式。 使用者为 SQL Server 通过从 OLE DB 驱动程序获取表值参数行集对象*ppRowset*输出参数。  
   
 ## <a name="dynamic-scenario"></a>动态方案  
- 当使用者没有类型信息时，它应使用 IOpenRowset::OpenRowset 来实例化表值参数行集对象。 使用者只需向访问接口提供类型名称。  
+ 当使用者不具有类型信息时，则应使用 iopenrowset:: Openrowset 来实例化表值参数行集对象。 使用者只需向访问接口提供类型名称。  
   
  在此方案中，访问接口代表使用者从服务器获取有关表值参数行集对象的类型信息。  
   
- *PTableID*和*pUnkOuter*参数应设置如下所示的静态方案。 SQL Server 的 OLE DB 驱动程序，然后在服务器上，获取类型信息 （列信息和约束），并返回表值参数行集对象，通过*ppRowset*参数。 此操作需要与服务器通信，并因此不会执行以及静态的方案。 动态方案仅适用于参数化过程调用。  
+ *PTableID*并*pUnkOuter*应按照静态方案设置参数。 然后，适用于 SQL Server 的 OLE DB 驱动程序从服务器中获取类型信息（列信息和约束），并通过 ppRowset 参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
   
-## <a name="see-also"></a>请参阅  
- [表值参数&#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [使用表值参数&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [表值参数 (OLE DB)](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [使用表值参数 (OLE DB)](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

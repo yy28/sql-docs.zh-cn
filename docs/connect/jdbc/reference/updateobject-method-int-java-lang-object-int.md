@@ -1,5 +1,5 @@
 ---
-title: updateObject 方法 （int、 java.lang.Object，int） |Microsoft 文档
+title: updateObject 方法 （int，java.lang.Object，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f690ba95d40a2e9e43881b0e1c82d497cd5e26d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036165"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>updateObject 方法 (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新的指定的列**对象**给定的列索引和小数位数的值。  
+  根据给定的列索引和小数位数使用 Object 值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,15 +41,15 @@ public void updateObject(int index,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *索引*  
+ 索引  
   
  指示列索引的 int。  
   
- *obj*  
+ obj  
   
- **对象**值。  
+ Object 值。  
   
- *小数位数*  
+ *scale*  
   
  对于 java.sql.Types.DECIMAL 或 java.sql.Types.NUMERIC 类型，这是小数点后的位数。 对于所有其他类型，则忽略此值。  
   
@@ -57,7 +57,7 @@ public void updateObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [updateObject 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
+ [updateObject 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

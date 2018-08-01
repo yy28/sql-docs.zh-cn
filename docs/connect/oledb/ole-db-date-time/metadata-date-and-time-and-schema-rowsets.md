@@ -1,6 +1,6 @@
 ---
-title: 日期和时间以及架构行集 |Microsoft 文档
-description: 日期和时间以及架构行集
+title: 日期和时间以及架构行集 |Microsoft Docs
+description: 日期和时间与架构行集
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c501274d977b924cb0dd478db26f9e39e399f61f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e2e1192cb0f69f72075a9e6164b91def61c80871
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666417"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109649"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>元数据的日期和时间以及架构行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>元数据 - 日期和时间与架构行集
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "35666417"
   
  在 COLUMN_FLAGS 中提供了新标记 DBCOLUMNFLAGS_SS_ISVARIABLESCALE，以允许应用程序确定 DATA_TYPE 为 DBTYPE_DBTIMESTAMP 的那些列的服务器类型。 为标识服务器类型还必须使用 DATETIME_PRECISION。  
   
- 仅在 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 时连接到时有效[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]或更高版本的服务器。 连接到下级服务器时，未定义 DBCOLUMNFLAGS_SS_ISFIXEDSCALE。  
+ 仅当连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本服务器时 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 才有效。 连接到下级服务器时，未定义 DBCOLUMNFLAGS_SS_ISFIXEDSCALE。  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 行集  
  DATA_TYPE 包含与 COLUMNS 架构行集相同的值，并且 TYPE_NAME 包含服务器类型。  
@@ -96,9 +96,9 @@ ms.locfileid: "35666417"
 |BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE，除非符合以下某项条件：<br /><br /> 是连接到下级服务器的客户端。<br /><br /> 数据类型兼容性连接属性指定兼容性级别为 80。|VARIANT_TRUE，除非符合以下某项条件：<br /><br /> 是连接到下级服务器的客户端。<br /><br /> 数据类型兼容性连接属性指定兼容性级别为 80。|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
- OLE DB 仅定义 MINIMUM_SCALE 和 MAXIMUM_SCALE 对于数值和十进制类型，因此 OLE DB 驱动程序用于 SQL Server 的这些列的 datetime2 和 datetimeoffset 时间为非标准。  
+ 对于数值和小数类型，OLE DB 仅定义了 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此适用于 SQL Server 的 OLE DB 驱动程序对 time、datetime2 和 datetimeoffset 使用这些列是非标准行为。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [元数据&#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

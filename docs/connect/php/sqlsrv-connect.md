@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_connect |Microsoft 文档
+title: sqlsrv_connect |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8398a169e12f597e7baec9fe42495c59b19d6903
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983225"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,13 +42,13 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### <a name="parameters"></a>Parameters  
-*$serverName*：指定建立连接的服务器名称的字符串。 实例名称（例如“myServer\instanceName”）或端口号（例如“myServer, 1521”）可以包括为此字符串的一部分。 有关可用于此参数的选项的完整介绍，请参阅 [结合使用连接字符串关键字与 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)的 ODBC 驱动程序连接字符串关键字部分中的 Server 关键字。  
+*$serverName*：指定建立连接的服务器名称的字符串。 实例名称（例如“myServer\instanceName”）或端口号（例如“myServer, 1521”）可以包括为此字符串的一部分。 有关可用于此参数的选项的完整介绍，请参阅[结合使用连接字符串关键字与 SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) 的 ODBC 驱动程序连接字符串关键字部分中的 Server 关键字。  
   
 从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定带有 `"(localdb)\instancename"`的 LocalDB 实例。 有关详细信息，请参阅[对 LocalDB 的支持](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。  
   
-同样从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持高可用性、 灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
+同样从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持的高可用性和灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
   
-*$connectionInfo* [可选]: 关联**数组**包含连接属性 (例如，**数组**("Database"= >"AdventureWorks"))。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
+$connectionInfo [可选]：包含连接属性的关联数组（例如，array ("Database" => "AdventureWorks")）。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
   
 ## <a name="return-value"></a>返回值  
 PHP 连接资源。 如果无法成功创建和打开连接，则返回 **false** 。  
@@ -91,7 +91,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft 文档
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b840ab60ac59501d1a7e2c3908af36e9e9a31d38
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd24a45be060eaa091899d6ca499ece902c463c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690270"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106683"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,17 +42,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 可以在调用任何其他操作[IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)之后调用的接口**BCPDone**方法。 唯一方法就是调用[IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法可开始新的大容量复制操作。 这是类似于调用[IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
+ 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作。 唯一的可能性是调用 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， **BCPInit**方法未调用此方法之前调用。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法。  
   
 ## <a name="example"></a>示例  
- 此示例演示如何使用**IBCPSession**接口。  
+ 该示例演示如何使用 IBCPSession 接口。  
   
  在运行此示例之前，必须执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)]：  
   
@@ -70,7 +70,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  可以通过以下命令，使用 BCP 将此数据添加回表中：  
   
- **bcp 主...在 outfile.dat-n-T-S fltest** *服务器*  
+ bcp master..fltest in outfile.dat -n -T -S server  
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
@@ -467,7 +467,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)  
   

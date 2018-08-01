@@ -1,5 +1,5 @@
 ---
-title: 不使用任何参数的存储的过程 |Microsoft 文档
+title: 使用不带参数的存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7db021b9d3fdf875c2c6074159b56d8e6cb0fd14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851232"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992919"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用不带参数的存储过程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  最简单一种的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]可以调用的存储的过程是指不包含任何参数并返回单个结果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)类，该类可用于调用这种类型的存储过程以及如何处理，它返回的数据。  
+  在可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程中，最简单的类型是不包含任何参数并且返回单个结果集的存储过程。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类来调用此类存储过程并处理其返回的数据。  
   
- 当使用 JDBC 驱动程序来调用不带参数的存储的过程时，必须使用`call`SQL 转义序列。 语法`call`不带任何参数的转义序列包含，如下所示：  
+ 使用 JDBC 驱动程序调用不带参数的存储过程时，必须使用 `call` SQL 转义序列。 不带参数的 `call` 转义序列的语法如下所示：  
   
  `{call procedure-name}`  
   
 > [!NOTE]  
 >  有关 SQL 转义序列的详细信息，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
   
- 例如，创建中的以下存储的过程[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库：  
+ 作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下存储过程：  
   
 ```  
 CREATE PROCEDURE GetContactFormalNames   
@@ -46,7 +46,7 @@ END
   
  此存储过程返回单个结果集，其中包含一列数据（由 Person.Contact 表中前十个联系人的称呼、名称和姓氏组成）。  
   
- 在下面的示例中，与的开放连接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库中传递给函数，与[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法用于调用 GetContactFormalNames 存储过程。  
+ 在下面的实例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的一个打开连接，然后使用 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法调用 GetContactFormalNames 存储过程。  
   
 ```  
 public static void executeSprocNoParams(Connection con) {  

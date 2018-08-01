@@ -1,6 +1,6 @@
 ---
-title: 有关 OLE DB 属性 |Microsoft 文档
-description: 有关 OLE DB 属性
+title: 关于 OLE DB 属性 |Microsoft Docs
+description: 关于 OLE DB 属性
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 93bc309da576917777f0eddea01857ceb9702075
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a424615a54a5917d52f4144b995589345d6cb534
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665187"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105973"
 ---
 # <a name="about-ole-db-properties"></a>关于 OLE DB 属性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "35665187"
   
  每个属性都有值、类型、说明和读/写属性，对于行集属性，还有一个用于指示是否可以逐列应用它的指示器。  
   
- 属性由一个 GUID 和一个表示属性 ID 的整数进行标识。 属性集是所有具有相同 GUID 的一组属性。 除了预定义的 OLE DB 属性集，用于 SQL Server 的 OLE DB 驱动程序在其中实现提供程序特定属性设置和属性。 每个属性属于一个或多个属性组。 属性组是应用于特定对象的所有属性所形成的组。 属性组包括初始化属性组、数据源属性组、会话属性组、行集属性组、表属性组和列属性组等等。 在每个这样的属性组中都有属性。  
+ 属性由一个 GUID 和一个表示属性 ID 的整数进行标识。 属性集是所有具有相同 GUID 的一组属性。 除了预定义的 OLE DB 属性集以外，适用于 SQL Server 的 OLE DB 驱动程序还实现了特定于访问接口的属性集和属性集中的属性。 每个属性属于一个或多个属性组。 属性组是应用于特定对象的所有属性所形成的组。 属性组包括初始化属性组、数据源属性组、会话属性组、行集属性组、表属性组和列属性组等等。 在每个这样的属性组中都有属性。  
   
  设置属性值涉及：  
   
@@ -53,8 +53,8 @@ ms.locfileid: "35665187"
   
 7.  调用方法以设置属性，并传递 DBPROPSET 结构的计数和数组。  
   
-## <a name="see-also"></a>请参阅  
- [为 SQL Server 应用程序创建 OLE DB 驱动程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建适用于 SQL Server 的 OLE DB 驱动程序应用程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [属性 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindcolumn |Microsoft 文档'
+title: 'Pdostatement:: Bindcolumn |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308446"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006889"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,15 +34,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*列*: （混合） 数的列 （基于 1 的索引） 或在结果集中的列的名称。  
+$column：列（从 1 开始的索引）的（混合）数量或结果集中的列的名称。  
   
-&$*param*: 列将绑定到的 PHP 变量的 （混合） 名称。  
+&$param：列将绑定到的 PHP 变量的（混合）名称。  
   
-$*类型*: PDO::PARAM_ * 常量表示的参数的可选数据类型。  
+$type：参数的可选数据类型，由 PDO::PARAM_* 常量表示。  
   
 $*maxLen*：可选整数，不由 Microsoft Drivers for PHP for SQL Server 使用。  
   
-$*driverdata*： 可选混合驱动程序的参数。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 以采用 UTF-8 编码的字符串形式将列绑定到变量。  
+$driverdata：适用于驱动程序的可选混合参数。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 以采用 UTF-8 编码的字符串形式将列绑定到变量。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
@@ -70,7 +70,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

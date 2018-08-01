@@ -1,5 +1,5 @@
 ---
-title: 不使用任何参数的 SQL 语句 |Microsoft 文档
+title: 使用不带参数的 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd6fbcc2813fbd1e19078e94e4ba23b002e2818c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851122"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982152"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>使用不带参数的 SQL 语句
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  若要在中处理数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库通过使用 SQL 语句包含任何参数，你可以使用[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)类返回[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)将包含所请求的数据。 若要执行此操作，你必须首先创建 SQLServerStatement 对象使用[createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)方法[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)类。  
+  若要使用不带参数的 SQL 语句处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中的数据，可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法返回包含所需数据的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法创建一个 SQLServerStatement 对象。  
   
- 在下面的示例中，与的开放连接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库中传递给函数进行构造并运行，将 SQL 语句，然后从结果集中读取的结果。  
+ 在下面的实例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，构造并运行一条 SQL 语句，然后从结果集读取结果。  
   
  [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]  
   
- 有关使用结果集的详细信息，请参阅[管理使用 JDBC 驱动程序的结果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
+ 有关使用结果集的详细信息，请参阅[JDBC 驱动程序管理结果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL 语句](../../connect/jdbc/using-statements-with-sql.md)  

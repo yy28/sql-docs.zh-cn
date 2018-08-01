@@ -1,5 +1,5 @@
 ---
-title: 检索数据 |Microsoft 文档
+title: 检索数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983033"
 ---
 # <a name="retrieving-data"></a>检索数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "35309186"
   
 如果查询检索多个结果集，可以使用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)移动至下一个结果集。  
   
-从 1.1 版开始[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，你可以使用[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md)以查看结果集是否有行。  
+从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的版本 1.1 开始，可以使用 [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) 来查看结果集是否有行。  
   
 ## <a name="pdosqlsrv-driver"></a>PDO_SQLSRV 驱动程序  
-PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]提供从结果集中检索数据的以下选项：  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 PDO_SQLSRV 驱动程序提供以下选项来从某个结果集中检索数据：  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -73,7 +73,7 @@ PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |---------|---------------|  
 |[以流的形式检索数据](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概述了如何从服务器中流式传输数据，并提供指向特定用例的链接。|  
 |[使用方向参数](../../connect/php/using-directional-parameters.md)|介绍如何在调用存储过程时使用方向参数。|  
@@ -83,8 +83,8 @@ PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
 ## <a name="related-sections"></a>相关章节  
 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>请参阅  
-[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+## <a name="see-also"></a>另请参阅  
+[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [检索数据](../../connect/php/retrieving-data.md)  
   

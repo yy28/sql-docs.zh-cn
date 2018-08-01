@@ -1,6 +1,6 @@
 ---
-title: 对于日期和时间增强功能的 OLE DB API 支持 |Microsoft 文档
-description: 对于日期和时间的增强功能的 OLE DB API 支持
+title: OLE DB API 对日期和时间增强功能的支持 | Microsoft Docs
+description: OLE DB API 对日期和时间增强功能的支持
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,33 +14,33 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd179b4cceb7bc3b47578b556c83919175cb9ace
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e46fce7c9ca55b6d4deefe9f346142e9fb29ed23
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665617"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108719"
 ---
-# <a name="ole-db-api-support-for-date-and-time-enhancements"></a>对于日期和时间增强功能的 OLE DB API 支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API 对日期和时间增强功能的支持
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   以下 OLE DB API 支持日期/时间增强功能。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|使应用程序能够区分 DBBINDING 结构中添加一个标志**datetime**， **datetime2**，和**smalldatetime**值。 有关详细信息，请参阅[参数和行集元数据](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)。|  
-|IBCPSession::BCPColFmt|有关详细信息，请参阅[增强日期和时间类型的大容量复制更改&#40;OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md)。|  
+|Iaccessor:: Createaccessor|若要启用应用程序区分 DBBINDING 结构中添加了一个标志**datetime**， **datetime2**，并**smalldatetime**值。 有关详细信息，请参阅[参数和行集元数据](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)。|  
+|IBCPSession::BCPColFmt|有关详细信息，请参阅[大容量复制更改的增强的日期和时间类型&#40;OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md)。|  
 |ICommandWithParameters::GetParameterInfo|有关详细信息，请参阅[参数和行集元数据](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)。|  
 |ICommandWithParameters::SetParameterinfo|有关详细信息，请参阅[参数和行集元数据](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)。|  
 |IColumnsRowset::GetColumnsRowset|有关详细信息，请参阅[参数和行集元数据](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)。|  
 |IColumnsInfo::GetColumnInfo|有关详细信息，请参阅[参数和行集元数据](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)。|  
-|IDBSchemaRowset::GetRowset|受影响的架构行集的详细信息，请参阅[日期和时间以及架构行集](../../oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)。|  
+|Idbschemarowset:: Getrowset|有关受影响的架构行集的详细信息，请参阅[日期和时间以及架构行集](../../oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)。|  
 |IRowsetFastLoad|此接口支持新的日期/时间类型，但对其接口没有任何更改。|  
-|ITableDefinition::CreateTable|有关详细信息，请参阅[OLE DB 日期和时间的改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。|  
+|Itabledefinition:: Createtable|有关详细信息，请参阅[OLE DB 日期和时间改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。|  
   
-## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [日期和时间改进 (OLE DB)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

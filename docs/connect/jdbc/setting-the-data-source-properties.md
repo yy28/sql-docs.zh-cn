@@ -1,5 +1,5 @@
 ---
-title: 设置的数据源属性 |Microsoft 文档
+title: 设置的数据源属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a305b676d43a13ae731bcc98dd3f517a5bf733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850382"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991439"
 ---
 # <a name="setting-the-data-source-properties"></a>设置数据源属性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  数据源是在 Java Platform, Enterprise Edition (Java EE) 环境中创建 JDBC 连接的首选机制。 数据源可提供连接、池化连接和分布式连接，并且无需将连接属性硬编码到 Java 代码中。 所有[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]数据源可以设置或通过分别使用相应的 setter 和 getter 方法获取的任何属性值。  
+  数据源是在 Java Platform, Enterprise Edition (Java EE) 环境中创建 JDBC 连接的首选机制。 数据源可提供连接、池化连接和分布式连接，并且无需将连接属性硬编码到 Java 代码中。 所有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 数据源都可以分别使用相应的 setter 和 getter 方法来设置或获取任何属性的值。  
   
- 通过使用 Java EE 产品（例如应用程序服务器和 servlet/JSP 引擎），通常可配置数据库访问的数据源。 中列出的任何属性[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)可以指定任何位置配置将允许你为属性输入属性的主题 = 值对。  
+ 通过使用 Java EE 产品（例如应用程序服务器和 servlet/JSP 引擎），通常可配置数据库访问的数据源。 配置允许通过“属性=值”对来输入属性时，可以指定[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)主题中列出的任何属性。  
   
- 有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据源，请参阅[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)类。 有关如何使用 SQLServerDataSource 类来与建立连接的示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库，请参阅[数据源示例](../../connect/jdbc/data-source-sample.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据源的详细信息，请参阅 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类。 有关如何使用 SQLServerDataSource 类来连接到的示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库，请参阅[数据源示例](../../connect/jdbc/data-source-sample.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

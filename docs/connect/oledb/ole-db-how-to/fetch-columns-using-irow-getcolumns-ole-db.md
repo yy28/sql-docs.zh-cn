@@ -1,6 +1,6 @@
 ---
-title: 提取列使用 IRow::GetColumns (OLE DB) |Microsoft 文档
-description: 提取列使用 IRow::GetColumns (OLE DB)
+title: '使用 irow:: Getcolumns (OLE DB) 提取列 |Microsoft Docs'
+description: 使用 IRow::GetColumns 提取列 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,25 +16,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 15d2531eb06f742644c6e7cf207ca45c8ca8dc8f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8340996f96d2307a980797e93073001768dbc98f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666327"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108879"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取列 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow**接口允许直接访问的单个行的列中的结果集。 因此， **IRow**是一种高效的方式来从具有一个行的结果集检索列。  
+  通过 IRow 接口可以直接访问结果集中某一行的列。 因而，IRow 是一种从具有一行的结果集中检索列的有效方法。  
   
- 代码示例是可用来提取单个行使用该演示了**IRow**。 在本示例中，将一次从该行中检索一列。 此示例说明：  
+ 所提供的代码示例显示如何使用 IRow 提取单一行。 在本示例中，将一次从该行中检索一列。 此示例说明：  
   
 -   如何提取一组列（依次）。  
   
--   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果**pData**为 NULL 和**cbMaxLen**为 0，对的调用**IRow**-**> GetColumns()** 只返回实际的列长度。 在这种情况下， **IRow-> GetColumns()** 可以在要检索的实际数据的同一列上再次调用。  
+-   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns() 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -58,11 +58,11 @@ ms.locfileid: "35666327"
   
  在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns 以检索实际数据。 IA64 平台不支持此示例。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
  第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建该示例使用的表。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表删除该示例使用的表。  
   
@@ -524,7 +524,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

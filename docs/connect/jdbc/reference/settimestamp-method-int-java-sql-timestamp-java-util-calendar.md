@@ -1,5 +1,5 @@
 ---
-title: setTimestamp 方法 （int、 java.sql.Timestamp、 java.util.Calendar） |Microsoft 文档
+title: setTimestamp 方法 (int, java.sql.Timestamp, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 319972f9c911236ffbcc35c14e7489d0f581328a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002169"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp 方法 (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setTimestamp(int n,
 #### <a name="parameters"></a>Parameters  
  *n*  
   
- **Int** ，该值指示参数号。  
+ 指示参数编号的 int。  
   
  *x*  
   
@@ -51,16 +51,16 @@ public final void setTimestamp(int n,
   
  *cal*  
   
- 日历对象中。  
+ 一个日历对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.PreparedStatement 接口中的 setTimestamp 方法指定此 setTimestamp 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setTimestamp 方法由 java.sql.PreparedStatement 接口中的 setTimestamp 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
- [setTimestamp 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   
+ [setTimestamp 方法 (SQLServerPreparedStatement)](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 类](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

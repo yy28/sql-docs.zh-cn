@@ -1,5 +1,5 @@
 ---
-title: SQL Server 属性 （选项卡上的日志） |Microsoft 文档
+title: SQL Server 属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18fe05a7d7d89b726c5f0ae2a49c71736b6dbd9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072534"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057706"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33072534"
 >   
 >  有关选择帐户以运行服务的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机帮助中的“设置 Windows 服务帐户”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **内置帐户**  
  **Local System**  
  -   指定本地系统帐户。 该帐户不需要密码。 但是，本地系统帐户可能会阻止该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  

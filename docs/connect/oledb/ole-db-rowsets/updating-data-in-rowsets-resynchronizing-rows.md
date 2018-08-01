@@ -1,6 +1,6 @@
 ---
-title: 重新同步行 |Microsoft 文档
-description: 使用 SQL Server 的 OLE DB 驱动程序的重新同步的行
+title: 重新同步行 |Microsoft Docs
+description: 使用 SQL Server 的 OLE DB 驱动程序的重新同步行
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 99e355ded49f480a6ac0f27dc700d96c8ced9e87
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 7990651bf9d412eec7d2826daedee0fafaa53943
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690240"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107899"
 ---
-# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集合的重新同步的行中的数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集中的数据 - 重新同步行
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序支持**IRowsetResynch**上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]光标支持行集仅。 **IRowsetResynch**不是可以根据需要使用。 使用者在打开行集前必须请求该接口。  
+  适用于 SQL Server 的 OLE DB 驱动程序支持**IRowsetResynch**上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标支持行集仅。 IRowsetResynch 并不是需要时就可用。 使用者在打开行集前必须请求该接口。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [更新行集中的数据](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 提取列使用 IRow::GetColumns （或 IRow::Open） 和 ISequentialStream |Microsoft 文档
-description: 提取列使用 IRow::GetColumns （或 IRow::Open） 和 ISequentialStream
+title: 使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列 | Microsoft Docs
+description: 使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,45 +18,45 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8eac2f4cd623ac488de6d1d16a40e71965b3193d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e51fb6d127657cddcdca3cde3d3d7d769088f53f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666177"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107003"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  可以绑定的大型数据，或使用检索**ISequentialStream**接口。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
+  可使用 ISequentialStream 接口绑定或检索大型数据。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
-### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>若要提取使用 IRow::GetColumns （或 IRow::Open） 的列和 ISequentialStream  
+### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列  
   
 1.  建立与数据源的连接。  
   
-2.  执行命令 (在此示例中， **ICommandExecute::Execute()** IID_IRow 已调用)。  
+2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）。  
   
-3.  提取列的数据使用**IRow::Open()** 或**IRow::GetColumns()**。  
+3.  提取列数据使用**open （)** 或**IRow::GetColumns()**。  
   
-    -   **IRow::Open()** 可用来打开**ISequentialStream**所在的行。 指定 DBGUID_STREAM 以指示该列包含二进制数据的流 (**IStream**或**ISequentialStream**用于从列读取的数据)。  
+    -   **Open （)** 可用来打开**ISequentialStream**在该行上。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）。  
   
-    -   如果**IRow::GetColumns()** 使用时， **pData** DBCOLUMNACCESS 结构元素设置为指向流的对象。  
+    -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象。  
   
-4.  使用**ISequentialStream::Read()** 重复以读取到使用者缓冲区中的指定的字节数。  
+4.  使用**ISequentialStream::Read()** 重复，若要指定的字节数读入使用者缓冲区。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用 IRow 提取单行。 在此示例中，将一次从该行中检索一列。 此示例演示了 IRow::Open() 和 IRow::GetColumns() 的用法。 为读取列数据，示例中使用了 ISequentialStream::Read。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
  第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建该示例使用的表。  
   
- 使用 ole32.lib oleaut32.lib 进行编译并执行第二个 （c + +） 代码清单。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表删除该示例使用的表。  
   
@@ -677,7 +677,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLServerBlob 构造函数 （SQLServerConnection，字节） |Microsoft 文档
+title: SQLServerBlob 构造函数 (SQLServerConnection, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d93e5bee03976c5ae9c55247f98ba180e237a4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064410"
 ---
-# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob 构造函数 （SQLServerConnection，字节）
+# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob 构造函数 (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  初始化的新实例[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)类在给定[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)对象和一个**字节**数组。  
+  在给定 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象和字节数组时，初始化 [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) 类的新实例。  
   
 > [!NOTE]  
->  JDBC 驱动程序 2.0 版已不推荐使用此方法， 请改用[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)方法[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)类。  
+>  JDBC 驱动程序 2.0 版已不推荐使用此方法， 而是使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) 方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,13 +43,13 @@ public SQLServerBlob(SQLServerConnection connection,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *连接*  
+ 连接  
   
- 一个 SQLServerConnection 对象。  
+ SQLServerConnection 对象。  
   
- *data*  
+ data  
   
- A**字节**数组。  
+ 一个字节数组。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerBlob 构造函数](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   

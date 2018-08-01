@@ -1,5 +1,5 @@
 ---
-title: 更新数据 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文档
+title: 更新数据 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64ade4d758d7ee5c87283750259641f59959731a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979509"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>更新数据 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "35310056"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |---------|---------------|  
 |[如何：执行参数化查询](../../connect/php/how-to-perform-parameterized-queries.md)|介绍如何执行参数化查询。|  
 |[如何：以流的形式发送数据](../../connect/php/how-to-send-data-as-a-stream.md)|介绍如何将数据流式传输到服务器。|  
 |[如何：执行事务](../../connect/php/how-to-perform-transactions.md)|介绍如何使用 **sqlsrv** 函数来执行事务。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)
 
-[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

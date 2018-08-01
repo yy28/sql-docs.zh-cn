@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters (OLE DB) |Microsoft 文档
+title: ISSCommandWithParameters (OLE DB) |Microsoft Docs
 description: ISSCommandWithParameters (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,29 +20,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c07f297668674c7f5f41e6ce30ff4ee692da660f
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 4b9ea43c951ac350c59db2b41a629a0bf203c31f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689120"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105893"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **ISSCommandWithParameters**接口公开支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]XML 和用户定义类型 (UDT)。 它是一个可选接口继承自核心 OLE DB 接口**ICommandWithParameters**。 除了从继承的三个方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，和**SetParameterInfo**;**ISSCommandWithParameters**提供用于处理特定于服务器的数据类型的两种新方法。  
+  ISSCommandWithParameters 接口公开了对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 和用户定义类型 (UDT) 的支持。 这一可选接口继承自核心 OLE DB 接口 ICommandWithParameters。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供了两个用于处理服务器特定数据类型的新方法。  
   
 > [!NOTE]  
->  **ISSCommandWithParameters**时使用了服务组件，但服务组件不会使用此接口，可以使用接口。  
+>  当使用服务组件时，可以使用 ISSCommandWithParameters 接口，但是服务组件不会使用此接口。  
   
-|方法|Description|  
+|方法|描述|  
 |------------|-----------------|  
-|[ISSCommandWithParameters::GetParameterProperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|返回一个**SSPARAMPROPS**属性设置为传递到命令中，每个 UDT 或 XML 参数数组中的结构，但对于其他类型的参数返回 none。|  
-|[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|序号，基于每个参数设置参数属性或通过指定的数组设置大容量参数属性**SSPARAMPROPS**结构。|  
+|[Isscommandwithparameters:: Getparameterproperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|对传递到该命令的每个 UDT 或 XML 参数返回数组中的一个 SSPARAMPROPS 属性集结构，但是对于其他类型的参数，不会返回任何内容。|  
+|[Isscommandwithparameters:: Setparameterproperties &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|按照序号基于每个参数设置参数属性，或者通过指定 SSPARAMPROPS 结构数组来设置大容量参数属性。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [接口&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [使用 XML 数据类型](../../oledb/features/using-xml-data-types.md)   
  [使用用户定义类型](../../oledb/features/using-user-defined-types.md)  

@@ -1,6 +1,6 @@
 ---
-title: 命令 |Microsoft 文档
-description: 用于 SQL Server 的 OLE DB 驱动程序中的命令
+title: 命令 |Microsoft Docs
+description: 适用于 SQL Server 的 OLE DB 驱动程序中的命令
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a518a4a718007e1c1efb3b7c53732beef7d7c0ab
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc1b32e3e27fc70b5d96585194152621fc1f7b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665387"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107999"
 ---
 # <a name="commands"></a>命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序公开**ICommand**界面和命令对象，此部分所述：  
+  适用于 SQL Server 的 OLE DB 驱动程序公开了 ICommand 接口和命令对象，详细信息请参见本部分：  
   
 -   [命令语法](../../oledb/ole-db-commands/command-syntax.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "35665387"
   
 -   [生成多个行集结果的命令](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

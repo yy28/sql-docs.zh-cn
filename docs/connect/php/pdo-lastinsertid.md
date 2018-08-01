@@ -1,5 +1,5 @@
 ---
-title: PDO::lastInsertId |Microsoft 文档
+title: PDO::lastInsertId |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308546"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983369"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-返回最近插入数据库中的表的行标识符。 该表必须含有 IDENTITY NOT NULL 列。 如果提供的序列名称，则`lastInsertId`返回最近插入提供的序列名称的序列号 (序列号的详细信息，请参阅[此处](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers))。
+返回最近插入数据库中的表的行标识符。 该表必须含有 IDENTITY NOT NULL 列。 如果提供的序列名称，则`lastInsertId`返回最近插入提供的序列名称的序列号 (有关序列号的详细信息，请参阅[此处](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers))。
   
 ## <a name="syntax"></a>语法  
   
@@ -34,19 +34,19 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*名称*： 一个可选的字符串，你可以指定序列名称。 
+$name：允许指定序列名称的可选字符串。 
   
 ## <a name="return-value"></a>返回值  
-如果未不提供任何序列名称，最近添加的行标识符的字符串。
-如果提供的序列名称，则最近添加的序列的标识符的字符串。
+如果未不提供任何序列名称，最新添加的行的标识符字符串。
+如果提供的序列名称，最近添加的序列标识符的字符串。
 如果方法调用失败，则返回空字符串。
   
 ## <a name="remarks"></a>Remarks  
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
-版本 2.0 和 4.3 之间可选参数是一个表名，并返回值是最近添加到所提供的表的行的 ID。
-从 5.0 开始，可选的参数视为序列的名称，并且返回值是最近添加的提供的序列名称的序列。
+版本 2.0 和 4.3 之间可选参数是表名，并返回值是最近添加到所提供的表的行的 ID。
+从 5.0 开始，将可选参数视为序列的名称，并返回值是最近添加的提供的序列名称的序列。
 如果表名为版本提供后 4.3，`lastInsertId`返回空字符串。
-仅在 SQL Server 2012 及以上版本支持序列。
+仅在 SQL Server 2012 及更高版本支持序列。
   
 ## <a name="example"></a>示例  
   
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDO 类](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

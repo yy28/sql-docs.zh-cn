@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors | Microsoft Docs
+title: sqlsrv_errors |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309046"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979788"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-返回扩展错误和/或最后一个有关的警告信息**sqlsrv**执行操作。  
+返回有关执行的最后 sqlsrv 操作的扩展错误和/或警告信息。  
   
-**Sqlsrv_errors**函数可以通过其中一个在下面的 Parameters 节中指定的参数值调用返回错误和/或警告信息。  
+sqlsrv_errors 函数可返回错误和/或警告信息，方法是使用在下面的“参数”部分中指定的参数值之一调用它。  
   
 默认情况下，对任何 **sqlsrv** 函数的调用所生成的警告将会视为错误；如果警告发生在调用 **sqlsrv** 函数时，则该函数会返回 false。 但是，对应于 SQLSTATE 值 01000、01001、01003 和 01S02 的警告决不视为错误。  
   
@@ -49,7 +49,7 @@ sqlsrv_configure("WarningsReturnAsErrors", 0);
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-而不考虑设置，警告只能检索通过调用**sqlsrv_errors**使用**SQLSRV_ERR_ALL**或**SQLSRV_ERR_WARNINGS**参数值 （请参阅Parameters 节下面有关详细信息）。  
+无论设置如何，警告只能通过使用 SQLSRV_ERR_ALL 或 SQLSRV_ERR_WARNINGS 参数值调用 sqlsrv_errors 来进行检索（有关详细信息，请参阅下面的“参数”部分）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,9 +59,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Parameters  
-*$errorsAndOrWarnings*[可选]: 预定义的常量。 此参数可以采用下表中所列的值之一：  
+$errorsAndOrWarnings [可选]：预定义常量。 此参数可以采用下表中所列的值之一：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|将返回在上次调用 **sqlsrv** 函数时生成的错误和警告。|  
 |SQLSRV_ERR_ERRORS|将返回上次调用 **sqlsrv** 函数时生成的错误。|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 如果未提供任何参数值，则将返回上次调用 **sqlsrv** 函数时生成的错误和警告。  
   
 ## <a name="return-value"></a>返回值  
-数组的 **array** 或 **null**。 每个**数组**在返回**数组**包含三个键-值对。 下表列出了每个键及其描述：  
+数组的 **array** 或 **null**。 返回的 array 中的每个 array 都包含三个键值对。 下表列出了每个键及其描述：  
   
-|Key|Description|  
+|Key|描述|  
 |-------|---------------|  
-|SQLSTATE|对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的 SQLSTATE。 了解适用于 ODBC 的 SQLSTATE 值时，请参阅[ODBC 错误代码](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 IMSSP 的 SQLSTATE。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，为 01SSP 的 SQLSTATE。|  
+|SQLSTATE|对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的 SQLSTATE。 有关 ODBC 的 SQLSTATE 值的信息，请参阅 [ODBC 错误代码](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 IMSSP 的 SQLSTATE。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，为 01SSP 的 SQLSTATE。|  
 |代码|对于来源于 SQL Server 的错误，为本机 SQL Server 错误代码。<br /><br />对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的错误代码。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 错误代码。 有关详细信息，请参阅 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)。|  
 |message|错误的说明。|  
   
 数组值还可以使用数值键 0、1 和 2 访问。 如果未发生任何错误或警告，将返回 **null** 。  
   
 ## <a name="example"></a>示例  
-以下示例显示在失败的语句执行期间发生的错误。 (该语句将失败，因为**InvalidColumName**不是指定表中的有效列名。)该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例显示在失败的语句执行期间发生的错误。 （语句失败，因为 InvalidColumName 不是指定表中的有效列名。）该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -120,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  

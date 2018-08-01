@@ -1,5 +1,5 @@
 ---
-title: 使用 bcp 连接 |Microsoft 文档
+title: 使用 bcp 连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852592"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041398"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](http://go.microsoft.com/fwlink/?LinkID=190626)实用工具位于[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 Linux 和 macOS 上。 此页时记录该对象的 Windows 版本中的差异`bcp`。
+[bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 此页介绍从 Windows 版本的差异`bcp`。
   
 - 字段终止符是制表符 ("\t")。  
   
 - 行终止符是换行符 ("\n")。  
   
-- 字符模式是的首选的格式`bcp`格式化文件和不包含扩展的字符的数据文件。  
+- 字符模式是不包含扩展字符的 `bcp` 格式化文件和数据文件的首选格式。  
   
 > [!NOTE]  
-> 反斜杠\\上的命令行自变量必须是带引号或转义。 例如，若要指定自定义的行终止符作为换行符，必须使用以下机制之一：  
+> 命令行参数上的反斜杠“\\”必须带引号或经过转义。 例如，若要将某个换行符指定为自定义行终止符，必须使用以下某一机制：  
 >   
 > -   -r\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
-以下是示例命令调用的`bcp`将表行复制到一个文本文件：  
+以下是将表行复制到文本文件的 `bcp` 示例命令调用：  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
 ```  
   
 ## <a name="available-options"></a>可用选项
-在当前版本中，以下语法和选项有：  
+在当前版本中，可以使用以下语法和选项：  
 
-[*数据库 ***。**]* 架构 ***。*** 表 ***中** *data_file* | **出** *data_file*
+[database*.]schema.table* in data_file | out data_file**
 
 - -a *packet_size*  
 指定服务器发出或接收的每个网络数据包的字节数。  
@@ -65,11 +65,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要连接到的数据库。  
   
 - -d  
-会导致值传递给`bcp`-S 选项被解释为数据源名称 (DSN)。 详细信息，请参阅"在 sqlcmd 和 bcp DSN 支持"中[使用 sqlcmd 连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)。  
+使值传递给将解释为数据源名称 (DSN) 的 `bcp` -S 选项。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。  
   
-- -e *error_file*指定用来存储任何错误文件的完整路径行`bcp`实用程序无法从文件传输到数据库。  
+- -e error_file 指定错误文件的完整路径，此文件用于存储 `bcp` 实用工具无法从文件传输到数据库的所有行。  
   
-- -e  
+- -E  
 将导入数据文件中的一个或多个标识值用于标识列。  
   
 - -f *format_file*  
@@ -82,13 +82,13 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。  
   
 - -l  
-指定登录超时。 – L 选项指定登录名添加到之前的秒数[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]当你尝试连接到服务器的超时。 默认登录超时值为 15 秒。 登录超时值必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值为 0 指定无限超时。
+指定登录超时。 –l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值为 0 指定无限超时。
   
 - -L *last_row*  
 指定要从表中导出或从数据文件中导入的最后一行的编号。  
   
 - -m *max_errors*  
-指定的最大前允许发生的语法错误数`bcp`取消操作。  
+指定取消 `bcp` 操作之前可能出现的语法错误的最大数目。  
   
 - -n  
 使用数据的本机（数据库）数据类型执行大容量复制操作。  
@@ -106,18 +106,18 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中。  
   
 - -S *server*  
-指定的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]要连接到的实例，或者如果-D 使用，DSN。  
+指定的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]实例进行连接，或如果-D 是使用，DSN。  
   
 - -t *field_terminator*  
 指定字段终止符。  
   
 - -T  
-指定`bcp`实用程序连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用可信连接 （集成安全性）。  
+指定 `bcp` 实用工具通过信任连接（集成安全性）连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
 - -U *login_id*  
 指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的登录 ID。  
   
-- -v  
+- -V  
 报告 `bcp` 实用工具的版本号和版权。  
   
 - -w  
@@ -144,11 +144,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
   
 - -V (80 | 90 | 100)  
-使用从早期版本的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的数据类型。  
   
 - -X  
 结合使用该格式和 -f format_file 选项一起使用，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。  
   
 ## <a name="see-also"></a>另请参阅
 
-[使用连接**sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

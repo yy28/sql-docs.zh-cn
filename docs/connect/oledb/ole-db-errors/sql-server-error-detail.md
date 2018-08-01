@@ -1,5 +1,5 @@
 ---
-title: SQL Server 错误详细信息 |Microsoft 文档
+title: SQL Server 错误详细信息 |Microsoft Docs
 description: SQL Server 错误详细信息
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,23 +21,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8b69559a6c89f30c73245633aa67db90ce7cd78a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 5273717ac646be50f03a360e2a3a9e5aafa7b054
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665577"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108729"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序定义的提供程序特定的错误接口[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
+  SQL Server 的 OLE DB 驱动程序定义的特定于提供程序的错误接口[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
   
- 有两种方法来访问**ISQLServerErrorInfo**接口。  
+ 可以用两种方式访问 ISQLServerErrorInfo 接口。  
   
- 使用者都可以调用**IErrorRecords::GetCustomerErrorObject**获取**ISQLServerErrorInfo**指针，如下面的代码示例中所示。 (无需获取**ISQLErrorInfo。**)同时**ISQLErrorInfo**和**ISQLServerErrorInfo**是自定义 OLE DB 错误对象，而与**ISQLServerErrorInfo**正在使用来获取的服务器错误，包括此类详细信息，作为过程名称和行号信息的接口。  
+ 使用者可调用 IErrorRecords::GetCustomerErrorObject 以获得 ISQLServerErrorInfo 指针，如以下代码示例所示。 （不需要获得 ISQLErrorInfo。）ISQLErrorInfo 和 ISQLServerErrorInfo 都是自定义的 OLE DB 错误对象，并以 ISQLServerErrorInfo 作为用于获得服务器错误信息（包括诸如过程名称和行号这样的详细信息）的接口。  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -46,23 +46,23 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- 另一种方法来获取**ISQLServerErrorInfo**指针是调用**QueryInterface**方法已获取**ISQLErrorInfo**指针。 请注意，因为**ISQLServerErrorInfo**包含从可用信息的一个超集**ISQLErrorInfo**，因此若要直接转到**ISQLServerErrorInfo**通过**GetCustomerErrorObject**。  
+ 获得 ISQLServerErrorInfo 指针的另一个方式是调用已经获得的 ISQLErrorInfo 指针的 QueryInterface 方法。 注意，由于 ISQLServerErrorInfo 包含从 ISQLErrorInfo 获得的信息的超集，因此通过 GetCustomerErrorObject 直接转到 ISQLServerErrorInfo 是有意义的。  
   
- **ISQLServerErrorInfo**接口公开一个成员函数， [ISQLServerErrorInfo::GetErrorInfo](../../oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)。 该函数返回 SSERRORINFO 结构的指针和字符串缓冲区的指针。 这两个指针引用使用者必须释放使用的内存**IMalloc::Free**方法。  
+ ISQLServerErrorInfo 接口公开了一个成员函数 [ISQLServerErrorInfo::GetErrorInfo](../../oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)。 该函数返回 SSERRORINFO 结构的指针和字符串缓冲区的指针。 两个指针都引用使用者必须使用 IMalloc::Free 方法释放的内存。  
   
  SSERRORINFO 结构成员由使用者解释如下。  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息。 在返回的字符串相同 **:: Getdescription**。|  
-|*pwszServer*|会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。|  
-|*pwszProcedure*|如果适用，则为产生错误的过程的名称。 否则为空字符串。|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机错误号。 返回的值与相同*plNativeError*参数**ISQLErrorInfo::GetSQLInfo**。|  
-|*bState*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息的状态。|  
-|*b 级 a*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息的严重性。|  
-|*wLineNumber*|如果适用，则为发生错误的存储过程的行号。|  
+|pwszMessage|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息。 与在 IErrorInfo::GetDescription 中返回的字符串相同。|  
+|pwszServer|会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。|  
+|pwszProcedure|如果适用，则为产生错误的过程的名称。 否则为空字符串。|  
+|lNative|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机错误号。 与在 ISQLErrorInfo::GetSQLInfo 的 plNativeError 参数中返回的值相同。|  
+|bState|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息的状态。|  
+|bClass|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息的严重性。|  
+|wLineNumber|如果适用，则为发生错误的存储过程的行号。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR (Transact-SQL)](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   

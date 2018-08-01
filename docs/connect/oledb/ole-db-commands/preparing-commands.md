@@ -1,6 +1,6 @@
 ---
-title: 准备命令 |Microsoft 文档
-description: 准备使用的 SQL Server OLE DB 驱动程序的命令
+title: 准备命令 |Microsoft Docs
+description: 准备使用 SQL Server 的 OLE DB 驱动程序的命令
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666057"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106013"
 ---
 # <a name="preparing-commands"></a>准备命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序支持命令准备用于优化多个执行单个命令;但是，命令准备生成开销，并使用者不需要准备要不止一次执行的命令。 一般而言，如果命令的执行次数超过三次，则应当进行准备。  
+  适用于 SQL Server 的 OLE DB 驱动程序支持命令准备，以优化单个命令的多次执行。不过，命令准备会带来开销，使用者不必准备执行次数多于一次的命令。 一般而言，如果命令的执行次数超过三次，则应当进行准备。  
   
  出于性能方面的考虑，命令准备会延迟至命令执行之时。 这是默认行为。 待准备命令中的任何错误，直到执行命令或执行元属性操作时才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 属性 SSPROP_DEFERPREPARE 设置为 FALSE 可以关闭此默认行为。  
   
@@ -43,23 +43,23 @@ ms.locfileid: "35666057"
   
  始终不应准备某些命令。 例如，不应对指定存储过程执行的命令进行准备，也不应准备包含对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程创建无效的文本的命令。  
   
- 如果创建临时存储的过程，则 SQL Server 的 OLE DB 驱动程序将执行的临时存储的过程，返回的结果，就像已执行语句本身。  
+ 如果创建了临时存储过程，则适用于 SQL Server 的 OLE DB 驱动程序会执行临时存储过程，并返回结果，就像执行语句本身一样。  
   
- 临时存储的过程创建受 SQL Server OLE DB 驱动程序的特定初始化属性 SSPROP_INIT_USEPROCFORPREP。 如果属性值为 SSPROPVAL_USEPROCFORPREP_ON 或 SSPROPVAL_USEPROCFORPREP_ON_DROP，SQL Server 的 OLE DB 驱动程序将尝试在准备命令时创建的存储的过程。 如果应用程序用户拥有足够的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 权限，存储过程将创建成功。  
+ 临时存储过程的创建由特定于适用于 SQL Server 的 OLE DB 驱动程序的初始化属性 SSPROP_INIT_USEPROCFORPREP 控制。 如果属性值为 SSPROPVAL_USEPROCFORPREP_ON 或 SSPROPVAL_USEPROCFORPREP_ON_DROP，则适用于 SQL Server 的 OLE DB 驱动程序会在准备命令时尝试创建存储过程。 如果应用程序用户拥有足够的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 权限，存储过程将创建成功。  
   
- 对于不经常断开连接的用户来说，创建的临时存储过程可能需要大量资源的**tempdb**、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在其中创建临时对象的系统数据库。 时 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ ON 时，仅当创建命令的会话中失去其连接到的实例时，才会被丢弃为SQLServer创建的OLEDB驱动程序的临时存储的过程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 如果该连接为数据源初始化时创建的默认连接，则临时存储过程仅当数据源变成未初始化状态时才删除。  
+ 对于很少断开连接的使用者，临时存储过程的创建可能需要大量的 tempdb（即在其中创建临时对象的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系统数据库）资源。 如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ ON，那么由适用于 SQL Server 的 OLE DB 驱动程序创建的临时存储过程在仅当创建命令的会话断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接时才会被删除。 如果该连接为数据源初始化时创建的默认连接，则临时存储过程仅当数据源变成未初始化状态时才删除。  
   
- SSPROPVAL_USEPROCFORPREP_ON_DROP SSPROP_INIT_USEPROCFORPREP 的值时，发生以下某种情况时，会删除的 OLE DB 驱动程序的 SQL Server 临时存储过程：  
+ 如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ON_DROP，那么当发生以下情况之一时，会删除适用于 SQL Server 的 OLE DB 驱动程序临时存储过程：  
   
--   使用者使用**ICommandText::SetCommandText**以指示新的命令。  
+-   使用者使用 ICommandText::SetCommandText 指示新的命令。  
   
--   使用者使用**ICommandPrepare::Unprepare**以指示它不再需要的命令文本。  
+-   使用者使用 ICommandPrepare::Unprepare 指示它不再需要命令文本。  
   
 -   使用者使用临时存储过程释放对命令对象的所有引用。  
   
- 命令对象中具有最多一个临时存储的过程**tempdb**。 任何现有的临时存储过程都表示特定命令对象的当前命令文本。  
+ 命令对象在 tempdb 中最多具有一个临时存储过程。 任何现有的临时存储过程都表示特定命令对象的当前命令文本。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [命令](../../oledb/ole-db-commands/commands.md)  
   
   

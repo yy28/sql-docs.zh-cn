@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad::Commit (OLE DB) |Microsoft 文档
+title: 'Irowsetfastload:: Commit (OLE DB) |Microsoft Docs'
 description: IRowsetFastLoad::Commit (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8f4baa2339105e8dac65c29e5efc35663b7c4b8d
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3e6b27907770d54ef8ac0ef0e664c1b310c85bfb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689850"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109709"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  标记一批插入的行的末尾并将这些行写入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 有关示例，请参阅[大容量复制数据使用 IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)和[将 BLOB 数据发送到 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
+  标记一批插入的行的末尾并将这些行写入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 有关示例，请参阅[大容量复制数据使用 IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)并[将 BLOB 数据发送到 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ HRESULT Commit(
 ```  
   
 ## <a name="arguments"></a>参数  
- *fDone*[in]  
+ fDone[in]  
  如果是 FALSE，则行集保持有效性，并且可由使用者用于插入其他行。 如果是 TRUE，则行集失去有效性，并且使用者无法执行进一步的插入。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -54,18 +54,18 @@ HRESULT Commit(
  发生了特定于访问接口的错误。 从访问接口检索特定错误文本的错误信息。  
   
  E_UNEXPECTED  
- 该方法调用以前失效的大容量复制行集上**IRowsetFastLoad::Commit**方法。  
+ 对以前被 IRowsetFastLoad::Commit 方法作废的大容量复制行集调用了该方法。  
   
 ## <a name="remarks"></a>Remarks  
- 为 SQL Server 大容量复制行集 OLE DB 驱动程序的行为方式与延迟更新模式行集。 插入的行在用户插入通过行集的行数据，如将被视为以相同的方式为挂起行集支持插入**IRowsetUpdate**。  
+ SQL Server 大容量复制行集的 OLE DB 驱动程序的行为与延迟更新模式行集。 当用户通过行集插入行数据时，对插入行的处理方式与在支持 IRowsetUpdate 的行集上挂起插入相同。  
   
- 使用者必须调用**提交**大容量复制行集写入到插入的行上的方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]方式与相同的表**IRowsetUpdate::Update**方法用于提交挂起的行SQL Server 的实例。  
+ 使用者必须对大容量复制行集调用 Commit 方法，才能以与使用 IRowsetUpdate::Update 方法将挂起行提交到 SQL Server 实例相同的方式将插入行写入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。  
   
- 如果使用者释放其引用而不调用大容量复制行集上的**提交**方法中，所有插入以前未写入的行都将丢失。  
+ 如果使用者释放其对大容量复制行集的引用，而不调用 Commit 方法，则以前未写入的所有插入行将丢失。  
   
- 使用者可以通过调用执行批处理插入的行**提交**方法替换*fDone*参数设置为 FALSE。 当*fDone*是设置为 TRUE，行集将变为无效。 无效的大容量复制行集仅支持**ISupportErrorInfo**接口和**IRowsetFastLoad::Release**方法。  
+ 通过在将 fDone 参数设置为 FALSE 的情况下调用 Commit 方法，使用者可以成批插入行。 当 fDone 设置为 TRUE 时，行集变为无效。 无效的大容量复制行集仅支持 ISupportErrorInfo 接口和 IRowsetFastLoad::Release 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

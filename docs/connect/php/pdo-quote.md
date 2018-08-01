@@ -1,5 +1,5 @@
 ---
-title: PDO::quote |Microsoft 文档
+title: PDO::quote |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29147b488ea6f66870db4355021d2cf76d48496b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308176"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064273"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>Parameters  
 $*string*：要用引号括起来的字符串。  
   
-$*所以*: 可选 （整数） 符号，它指示数据类型。  默认值为 PDO::PARAM_STR。  
+$parameter_type：指示数据类型的可选（整数）符号。  默认值为 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>返回值  
 可传递到 SQL 语句的用引号括起来的字符串，或 False（如果失败）。  
@@ -65,7 +65,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDO 类](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

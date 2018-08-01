@@ -1,5 +1,5 @@
 ---
-title: ISSAbort::Abort (OLE DB) |Microsoft 文档
+title: 'Issabort:: Abort (OLE DB) |Microsoft Docs'
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 39f56dd6c058c82783c8cff786e210884cd3bf0c
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: c725e8a55ab11c09089df37d217ba6f91095218e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690260"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105903"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   取消当前行集以及与当前命令关联的任何批处理命令。  
   
-**ISSAbort**接口，SQL Server 的 OLE DB 驱动程序中公开，提供了**ISSAbort::Abort**用于取消当前的行集加上任何命令的方法使用命令批处理最初生成行集，并且不具有尚未完成执行。  
+ISSAbort 接口是在适用于 SQL Server 的 OLE DB 驱动程序中公开的，它提供 ISSAbort::Abort 方法，该方法用于取消当前行集以及与最初生成该行集的命令和尚未完成执行的命令一起成批处理的任何命令。  
   
- **ISSAbort**是使用可用 SQL Server 特定接口的 OLE DB 驱动程序**QueryInterface**上**IMultipleResults**返回对象**ICommand::Execute**或**IOpenRowset::OpenRowset**。  
+ ISSAbort 是特定于适用于 SQL Server 的 OLE DB 驱动程序的接口，可通过针对 ICommand::Execute 或 IOpenRowset::OpenRowset 返回的 IMultipleResults 对象使用 QueryInterface 获得。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,19 +46,19 @@ HRESULT Abort(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 如果正在中止该命令是在存储过程中，存储的过程 （以及任何已调用该过程的过程） 的执行将终止以及包含存储的过程调用的命令批处理。 如果服务器正在传输到客户端设置的结果是，将停止传输。 如果客户端不希望使用结果集，则调用**ISSAbort::Abort**释放行集将加快行集版本中，但如果没有打开的事务，且 XACT_ABORT 为 ON，将回滚事务之前当**ISSAbort::Abort**称为  
+ 如果要中止的命令位于存储过程中，则将终止存储过程（以及已调用该过程的任何过程）以及包含此存储过程调用的命令批处理的执行。 如果服务器正在将结果集传输到客户端，则将停止此传输。 如果客户端不希望使用结果集，则在释放行集之前调用 ISSAbort::Abort 将加快行集释放，但是，如果存在打开的事务且 XACT_ABORT 为 ON，则当调用 ISSAbort::Abort 时，将回滚此事务  
   
- 后**ISSAbort::Abort**返回 S_OK，关联**IMultipleResults**接口进入不可用状态，并为所有方法调用返回 DB_E_CANCELED (除所定义的方法之外**IUnknown**接口) 之前它将被释放。 如果**IRowset**必须从获取**IMultipleResults**之前调用**中止**，它还进入不可用状态，并且返回 DB_E_CANCELED 到所有方法调用 （除由定义的方法之外**IUnknown**接口和**irowset:: Releaserows**) 之前它将被释放后成功调用**ISSAbort::Abort**.  
+ 在 ISSAbort::Abort 返回 S_OK 后，关联的 IMultipleResults 接口将进入不可用状态并对于所有方法调用返回 DB_E_CANCELED（由 IUnknown 接口定义的方法除外），直到释放它为止。 如果在调用 Abort 之前已从 IMultipleResults 获取了 IRowset，则它也会进入不可用状态，并对所有方法调用返回 DB_E_CANCELED（由 IUnknown 接口和 IRowset::ReleaseRows 定义的方法除外），直到在成功调用 ISSAbort::Abort 之后释放它为止。  
   
 > [!NOTE]  
->  开头[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，如果服务器 XACT_ABORT 状态处于打开状态，执行**ISSAbort::Abort**将终止并回滚任何当前的隐式或显式事务，以连接到时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的较早版本不中止当前事务。  
+>  从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，如果服务器 XACT_ABORT 状态为 ON，则当连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，ISSAbort::Abort 的执行将终止并回滚当前所有的隐式或显式事务。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的较早版本不中止当前事务。  
   
 ## <a name="arguments"></a>参数  
  无。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
- **ISSAbort::Abort**方法否则，返回批处理已取消的情况，则为 S_OK 和 DB_E_CANTCANCEL。 如果已经取消了批处理，则返回 DB_E_CANCELED。  
+ 如果取消批处理，则 ISSAbort::Abort 方法返回 S_OK，否则返回 DB_E_CANTCANCEL。 如果已经取消了批处理，则返回 DB_E_CANCELED。  
   
  DB_E_CANCELED  
  已经取消批处理。  
@@ -67,12 +67,12 @@ HRESULT Abort(void);
  批处理未取消。  
   
  E_FAIL  
- 提供程序特定出错;详细信息，请使用[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如，对象处于僵停状态因为**ISSAbort::Abort**已调用。  
+ 意外调用了该方法。 例如，因为已调用 ISSAbort::Abort，所以对象处于僵停状态。  
   
  E_OUTOFMEMORY  
- 内存不足的错误。  
+ 内存不足错误。  
   
   

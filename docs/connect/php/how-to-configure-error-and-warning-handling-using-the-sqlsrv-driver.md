@@ -1,5 +1,5 @@
 ---
-title: 配置错误和警告处理使用 SQLSRV 驱动程序 |Microsoft 文档
+title: 使用 SQLSRV 驱动程序配置错误和警告处理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,36 +17,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307406"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999241"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序配置错误和警告处理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主题介绍如何配置 SQLSRV 驱动程序来处理错误和警告。  
   
-默认情况下，SQLSRV 驱动程序将警告视为错误;调用**sqlsrv**生成错误或警告的函数将返回**false**。 若要禁用此行为，请使用[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)函数。 以下代码行时包括一个脚本，脚本开头**sqlsrv**仅生成警告 （没有错误） 的函数不会返回**false**:  
+默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 sqlsrv 函数的调用将返回 false。 若要禁用此行为，请使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函数。 在以下代码行包括在脚本的开端时，仅生成警告（无错误）的 sqlsrv 函数不会返回 false：  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-以下代码行重置 （警告视为错误） 的默认行为：  
+以下代码行将重置默认行为（将警告视为错误）：  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > 对应于 SQLSTATE 值 01000、01001、01003 和 01S02 的警告决不会被视为错误。 无论配置如何，生成仅对应这些状态之一的警告的 **sqlsrv** 函数不会返回 **false**。  
   
-**WarningsReturnAsErrors** 的值也可以在 php.ini 文件中设置。 例如，在此项`[sqlsrv]`php.ini 文件的部分关闭默认行为。  
+**WarningsReturnAsErrors** 的值也可以在 php.ini 文件中设置。 例如，php.ini 文件的 `[sqlsrv]` 部分中的此项目将关闭默认行为。  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 有关检索错误和警告信息的信息，请参阅 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 和 [如何：处理错误和警告](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
-以下代码示例演示如何禁用默认错误处理行为。 该示例使用 Transact-SQL PRINT 命令生成警告。 有关打印命令的详细信息，请参阅[打印 (Transact SQL)](../../t-sql/language-elements/print-transact-sql.md)。  
+以下代码示例演示如何禁用默认错误处理行为。 该示例使用 Transact-SQL PRINT 命令生成警告。 有关 PRINT 命令的详细信息，请参阅 [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)。  
   
 该示例首先通过执行生成警告的查询来演示默认错误处理行为。 此警告会视为错误。 更改错误处理配置后，会执行相同的查询。 此警告不会视为错误。  
   
@@ -101,10 +101,10 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [日志记录活动](../../connect/php/logging-activity.md)
 
-[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

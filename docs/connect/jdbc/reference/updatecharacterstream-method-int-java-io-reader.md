@@ -1,5 +1,5 @@
 ---
-title: updateCharacterStream 方法 （int、 java.io.Reader） |Microsoft 文档
+title: updateCharacterStream 方法 (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c24424c7c7f4183293871a39bb8eb04d72dacd05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848244"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982559"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>updateCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,15 +46,15 @@ public void updateCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateCharacterStream 方法指定此 updateCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateCharacterStream 方法由 java.sql.ResultSet 接口中的 updateCharacterStream 方法指定。  
   
- 此方法将从读取器对象的 Unicode 字符传递到所选的文本和二进制列。 这包括所有文本列和**二进制**， **varbinary**， **varbinary （max)**，**映像**，和**xml**列，但不是**udt**列。  
+ 此方法将来自 Reader 对象的 Unicode 字符传递给所选文本和二进制列。 这包括所有文本列与 binary、varbinary、varbinary(max)、image 和 xml 列，但不包括 udt 列。  
   
- 使用此方法对于**映像**，**文本**，和**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型可能会影响性能。  
+ 使用此方法对于**图像**，**文本**，并**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型可能会影响性能。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateCharacterStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
+ [updateCharacterStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

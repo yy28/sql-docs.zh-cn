@@ -1,5 +1,5 @@
 ---
-title: 绑定和转换 (OLE DB) |Microsoft 文档
+title: 绑定和转换 (OLE DB) |Microsoft Docs
 description: 绑定和转换 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,38 +18,38 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 233c9e7e2aefbdae34f964e95dbeb7d10d55a63d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666017"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105873"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本部分讨论如何之间进行转换**datetime**和**datetimeoffset**值。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
+  本部分讨论如何之间进行转换**datetime**并**datetimeoffset**值。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
   
- OLE DB 中时间和日期的文字和字符串的格式通常遵循 ISO，并且不依赖于客户端区域性。 但 DBTYPE_DATE 是个例外，它遵循的标准是 OLE 自动化。 但是，OLE DB 驱动程序的 SQL Server 仅将数据传输到或从客户端时的类型之间转换，因为没有应用程序，以强制 OLE DB 驱动程序的 SQL Server DBTYPE_DATE 和字符串格式之间进行转换方法。 否则，字符串使用以下格式（括号中的文本指示某一可选元素）：  
+ OLE DB 中时间和日期的文字和字符串的格式通常遵循 ISO，并且不依赖于客户端区域性。 但 DBTYPE_DATE 是个例外，它遵循的标准是 OLE 自动化。 但是，OLE DB 驱动程序适用于 SQL Server 仅将数据传输到或从客户端时的类型之间转换，因为没有为应用程序，以强制 OLE DB 驱动程序用于 DBTYPE_DATE 和字符串格式之间转换的 SQL Server 方法。 否则，字符串使用以下格式（括号中的文本指示某一可选元素）：  
   
--   格式**datetime**和**datetimeoffset**字符串是：  
+-   格式**datetime**并**datetimeoffset**字符串是：  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[。*9999999*] [± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[。*9999999*] [为*hh*:*mm*]]  
   
--   格式**时间**字符串是：  
+-   时间字符串的格式为：  
   
-     *hh*:*mm*:*ss*[。*9999999*]  
+     hh:mm:ss[.9999999]  
   
 -   格式**日期**字符串是：  
   
-     *yyyy*-*mm*-*dd*  
+     yyyy-mm-dd  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 SQL Server 的 OLE DB 驱动程序遵循相同的行为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端。 因此，由 OLE DB 驱动程序为 SQL Server 执行某些转换与不同的 OLE DB 规范。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 SQL Server 的 OLE DB 驱动程序遵循相同的行为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端。 因此，SQL Server 的 OLE DB 驱动程序由执行某些转换不同于 OLE DB 规范。  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅中的"数据格式:: 字符串和文本"一节[OLE DB 日期和时间的改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅中的"数据格式： 字符串和文字"部分[OLE DB 日期和时间改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
  下面是一般的转换规则：  
   
@@ -71,12 +71,12 @@ ms.locfileid: "35666017"
   
 ## <a name="in-this-section"></a>本节内容  
  [在客户端和服务器之间执行的转换](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
- 描述执行之间的日期/时间转换为 SQL Server 与 OLE DB 驱动程序编写的客户端应用程序和[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）。  
+ 说明在使用适用于 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序与 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）之间执行的日期/时间转换。  
   
  [在服务器和客户端之间执行的转换](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
- 描述执行之间的日期/时间转换[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本） 和用 OLE DB 驱动程序编写的 SQL Server 客户端应用程序。  
+ 说明在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）与使用适用于 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序之间执行的日期/时间转换。  
   
-## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [日期和时间改进 (OLE DB)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

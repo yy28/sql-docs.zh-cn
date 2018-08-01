@@ -1,5 +1,5 @@
 ---
-title: 数据源对象 (OLE DB) |Microsoft 文档
+title: 数据源对象 (OLE DB) |Microsoft Docs
 description: 数据源对象 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,27 +22,27 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a69fbb260c594ad095872049b06b1f7084bfc29b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 58007040bc4f96749172644b229dba4769929d66
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665647"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106073"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB 驱动程序的 SQL Server 使用术语数据源进行的一套用于如建立到数据存储，链接的 OLE DB 接口[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是 OLE DB 驱动程序的 SQL Server 使用者的第一个任务。  
+  适用于 SQL Server 的 OLE DB 驱动程序将数据源一词用于 OLE DB 接口集，这些接口用于建立指向某一数据存储的链接，例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是用于 SQL Server 使用者的 OLE DB 驱动程序的第一个任务。  
   
- 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 SQL Server 的 OLE DB 驱动程序的 CLSID 是 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 将解析为正确的符号 progid 引用 msoledbsql.h 文件中)。 对于 CLSID，使用者使用 OLE **CoCreateInstance**函数制造数据源对象的实例。  
+ 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 SQL Server 的 OLE DB 驱动程序的 CLSID 是 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 将解析为正确的符号引用 msoledbsql.h 文件中 progid)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例。  
   
- OLE DB 驱动程序的 SQL Server 是一个进程内服务器。 SQL Server 对象的 OLE DB 驱动程序的实例是使用 CLSCTX_INPROC_SERVER 宏以指示可执行上下文创建的。  
+ OLE DB 驱动程序适用于 SQL Server 是一个进程内服务器。 适用于 SQL Server 的 OLE DB 驱动程序对象的实例使用 CLSCTX_INPROC_SERVER 宏创建，以便指示可执行上下文。  
   
- 为 SQL Server 数据源对象 OLE DB 驱动程序显示允许的使用者连接到现有的 OLE DB 初始化接口[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。  
+ 适用于 SQL Server 的 OLE DB 驱动程序数据源对象公开 OLE DB 初始化接口，使用者可使用这些接口连接到现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库。  
   
- 可通过 OLE DB 驱动程序执行 SQL Server 的每个连接将自动设置这些选项：  
+ 每个连接都通过 OLE DB 驱动程序适用于 SQL Server 自动设置以下选项：  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665647"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 此示例使用类标识符宏来创建 OLE DB 驱动程序，SQL Server 数据源对象，并获取对引用其**IDBInitialize**接口。  
+ 此示例使用类标识符宏来创建适用于 SQL Server 的 OLE DB 驱动程序数据源对象并获取对其 IDBInitialize 接口的引用。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -77,13 +77,13 @@ else
 }  
 ```  
   
- 成功创建 SQL Server 数据源对象的 OLE DB 驱动程序的实例，与使用者应用程序可以继续通过初始化数据源并创建会话。 OLE DB 会话提供允许数据访问和操作的接口。  
+ 在成功创建适用于 SQL Server 的 OLE DB 驱动程序数据源对象的实例后，使用者应用程序可通过初始化数据源和创建会话来继续。 OLE DB 会话提供允许数据访问和操作的接口。  
   
- SQL Server 的 OLE DB 驱动程序使其首次连接到的指定实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]作为成功的数据源初始化的一部分。 只要在任一数据源初始化接口，或直到维护引用才会保持连接**IDBInitialize::Uninitialize**调用方法。  
+ 适用于 SQL Server 的 OLE DB 驱动程序使与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的指定实例的首次连接成为成功的数据源初始化的一部分。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [数据源属性&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [数据源属性 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [数据源信息属性](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -95,7 +95,7 @@ else
   
 -   [持久化数据源对象](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

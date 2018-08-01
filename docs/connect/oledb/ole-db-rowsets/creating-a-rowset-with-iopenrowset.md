@@ -1,6 +1,6 @@
 ---
-title: 使用 IOpenRowset 创建行集 |Microsoft 文档
-description: 使用的 OLE DB 驱动程序的 IOpenRowset 接口 for SQL Server 创建一个行集合
+title: 使用 IOpenRowset 创建行集 |Microsoft Docs
+description: 使用 IOpenRowset 接口的 OLE DB 驱动程序的 SQL Server 中创建行集
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,31 +19,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd1b48ee3ba9439f5a1cddbfed07196480265b74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 53a9b42461fd9c7ba194af62f86d8670b8539ddf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689060"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105943"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>使用 IOpenRowset 创建行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序支持**IOpenRowset::OpenRowset**方法有以下限制：  
+  适用于 SQL Server 的 OLE DB 驱动程序支持**iopenrowset:: Openrowset**方法有以下限制：  
   
--   基表或视图必须指定数据库中 ID (DBID) 结构的*pTableID*参数指向。  
+-   必须在 pTableID 参数指向的数据库 ID (DBID) 结构中指定基表或视图。  
   
--   DBID *eKind*成员必须指示 DBKIND_NAME。  
+-   DBID eKind 成员必须指示 DBKIND_NAME。  
   
--   DBID *uName*成员必须为 Unicode 字符字符串中指定现有的基础表或视图的名称。  
+-   DBID uName 成员必须将现有基表或视图的名称指定为 Unicode 字符串。  
   
--   *PIndexID*参数**OpenRowset**必须为 NULL。  
+-   OpenRowset 的 pIndexID 参数必须为 NULL。  
   
- 结果集的**IOpenRowset::OpenRowset**包含单个行集。 可以通过支持包含单个行集的结果集[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标。 游标支持允许开发人员使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并发控制机制。  
+ IOpenRowset::OpenRowset 的结果集包含单个行集。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标可以支持包含单个行集的结果集。 游标支持允许开发人员使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并发控制机制。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [行集](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

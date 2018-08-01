@@ -1,6 +1,6 @@
 ---
-title: 支持分布式的事务 |Microsoft 文档
-description: SQL Server 的 OLE DB 驱动程序中的分布式的事务
+title: 支持分布式的事务 |Microsoft Docs
+description: 适用于 SQL Server 的 OLE DB 驱动程序的分布式的事务
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -22,32 +22,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd6cda6c01f46dd179c462b2d6038c09137de03
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690300"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105983"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB 驱动程序的 SQL Server 使用者可以使用**ITransactionJoin::JoinTransaction**方法可以参与分布式事务协调由 Microsoft 分布式事务处理协调器 (MS DTC)。  
+  适用于 SQL Server 的 OLE DB 驱动程序使用者可以使用 ITransactionJoin::JoinTransaction 方法参与由 Microsoft 分布式事务处理协调器 (MS DTC) 协调的分布式事务。  
   
- MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动事务，OLE DB 驱动程序的 SQL Server 使用者使用 MS DTC **ITransactionDispenser**接口。 **BeginTransaction**的成员**ITransactionDispenser**分布式的事务对象上返回的引用。 此引用传递给 OLE DB 驱动程序的 SQL Server 使用**JoinTransaction**。  
+ MS DTC 公开 COM 对象，这些对象允许客户端跨各种数据存储的多个连接来启动和参与协调的事务。 若要启动一个事务，OLE DB 驱动程序的 SQL Server 使用者使用 MS DTC **ITransactionDispenser**接口。 ITransactionDispenser 的 BeginTransaction 成员返回分布式事务对象的引用。 此引用传递给 OLE DB 驱动程序使用 SQL Server **JoinTransaction**。  
   
- MS DTC 支持对分布式事务的异步提交和中止。 对于异步事务状态的通知，使用者实现**ITransactionOutcomeEvents**接口，并连接到的 MS DTC 事务对象的接口。  
+ MS DTC 支持对分布式事务的异步提交和中止。 为了通知异步事务状态，使用者实现 ITransactionOutcomeEvents 接口并将该接口与 MS DTC 事务对象连接。  
   
- 对于分布式事务，SQL Server 的 OLE DB 驱动程序实现**ITransactionJoin::JoinTransaction** ，如下所示的参数。  
+ 对于分布式事务，适用于 SQL Server 的 OLE DB 驱动程序按如下方式实现 ITransactionJoin::JoinTransaction 参数。  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
-|*punkTransactionCoord*|指向 MS DTC 事务对象的指针。|  
-|*IsoLevel*|适用于 SQL Server 忽略 OLE DB 驱动程序。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
-|*IsoFlags*|必须为 0。 SQL Server 的 OLE DB 驱动程序返回 XACT_E_NOISORETAIN，如果由使用者指定任何其他值。|  
-|*POtherOptions*|如果不是 NULL、 SQL Server 的 OLE DB 驱动程序从界面请求选项对象。 如果 SQL Server 的 OLE DB 驱动程序返回 XACT_E_NOTIMEOUT 选项对象的*ulTimeout*成员不为零。 SQL Server 的 OLE DB 驱动程序将忽略的值*szDescription*成员。|  
+|punkTransactionCoord|指向 MS DTC 事务对象的指针。|  
+|IsoLevel|忽略 SQL Server 的 OLE DB 驱动程序。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
+|IsoFlags|必须为 0。 如果使用者指定任何其他值，用于 SQL Server 的 OLE DB 驱动程序将返回 XACT_E_NOISORETAIN。|  
+|POtherOptions|如果不是 NULL，则 SQL Server 的 OLE DB 驱动程序从接口请求选项对象。 SQL Server 的 OLE DB 驱动程序返回 XACT_E_NOTIMEOUT 如果选项对象的*ulTimeout*成员不为零。 SQL Server 的 OLE DB 驱动程序将忽略的值*szDescription*成员。|  
   
  下面的示例通过使用 MS DTC 来协调事务：  
   
@@ -146,7 +146,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [中的](../../oledb/ole-db-transactions/transactions.md)  
   
   

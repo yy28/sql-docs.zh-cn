@@ -1,5 +1,5 @@
 ---
-title: 架构行集支持 (OLE DB) |Microsoft 文档
+title: 架构行集支持 (OLE DB) |Microsoft Docs
 description: 架构行集支持 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -20,30 +20,30 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1f78cbad6d328ba3e9a95a97a1eac4e3320b08de
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: a90779203502c8df145a1b25f628a7657d065edb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612072"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107073"
 ---
 # <a name="schema-rowset-support-ole-db"></a>架构行集支持 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序还支持从链接服务器返回的架构信息时处理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分布式查询。  
+  此外，处理 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 分布式查询时，适用于 SQL Server 的 OLE DB 驱动程序支持从链接的服务器返回架构信息。  
   
 > [!NOTE]  
->  尽管[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支持用于同义词不由返回 OLE DB 驱动程序适用于 SQL Server 的同义词，元数据。  
+>  尽管[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不返回同义词由 OLE DB 驱动程序适用于 SQL Server 支持的同义词，元数据。  
   
- 下表列出架构行集和适用于 SQL Server 的 OLE DB 驱动程序支持的限制列。  
+ 以下各表列出了适用于 SQL Server 的 OLE DB 驱动程序支持的架构行集和限制列。  
   
 |架构行集|限制列|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 以下附加列专用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：<br /><br /> COLUMN_LCID，这是排序规则的区域设置 ID。 COLUMN_LCID 是与 Windows LCID 相同的值。<br /><br /> COLUMN_COMPFLAGS 定义对于排序规则支持哪些比较。 数据格式与 DBPROB_FINDCOMPAREOPS 相同。<br /><br /> COLUMN_SORTID，即[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]排序排序规则的样式。<br /><br /> COLUMN_TDSCOLLATION，这是用于列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则。<br /><br /> IS_COMPUTED，如果列为计算列，则为 VARIANT_TRUE；否则为 VARIANT_FALSE。|  
+|DBSCHEMA_COLUMNS|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 以下附加列专用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：<br /><br /> COLUMN_LCID，这是排序规则的区域设置 ID。 COLUMN_LCID 是与 Windows LCID 相同的值。<br /><br /> COLUMN_COMPFLAGS 定义对于排序规则支持哪些比较。 数据格式与 DBPROB_FINDCOMPAREOPS 相同。<br /><br /> COLUMN_SORTID，这是用于排序规则的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序样式。<br /><br /> COLUMN_TDSCOLLATION，这是用于列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则。<br /><br /> IS_COMPUTED，如果列为计算列，则为 VARIANT_TRUE；否则为 VARIANT_FALSE。|  
 |DBSCHEMA_FOREIGN_KEYS|支持所有限制。<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|支持限制 1、2、3 和 5。<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -58,12 +58,12 @@ ms.locfileid: "35612072"
 |DBSCHEMA_TABLES_INFO|支持所有限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
 ## <a name="in-this-section"></a>本节内容  
- [分布式查询中架构行集的支持](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
+ [架构行集中的分布式查询支持](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
  [LINKEDSERVERS 行集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>请参阅  
- [用于 SQL Server 编程的 OLE DB 驱动程序](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
+## <a name="see-also"></a>另请参阅  
+ [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [使用用户定义类型](../../oledb/features/using-user-defined-types.md)  
   
   

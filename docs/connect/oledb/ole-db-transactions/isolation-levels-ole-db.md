@@ -1,5 +1,5 @@
 ---
-title: 隔离级别 (OLE DB) |Microsoft 文档
+title: 隔离级别 (OLE DB) |Microsoft Docs
 description: 隔离级别 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,34 +19,34 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b015a27fccfdad7b9f20bdac16a3a587f0c026a5
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: bc4b60a56b5c12ac040c1b1481660175154c880f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690010"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109669"
 ---
 # <a name="isolation-levels-ole-db"></a>隔离级别 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 若要控制事务隔离级别，OLE DB 驱动程序的 SQL Server 使用者使用：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 若要控制事务隔离级别，为 SQL Server 使用者，OLE DB 驱动程序使用：  
   
--   DBPROPSET_SESSION 属性 DBPROP_SESS_AUTOCOMMITISOLEVELS OLE DB 驱动程序为 SQL Server 默认自动提交模式。  
+-   将 DBPROPSET_SESSION 属性 DBPROP_SESS_AUTOCOMMITISOLEVELS 用于适用于 SQL Server 的 OLE DB 驱动程序默认自动提交模式。  
   
-     SQL Server 级别的默认值为 OLE DB 驱动程序是 DBPROPVAL_TI_READCOMMITTED。  
+     OLE DB 驱动程序的 SQL Server 默认级别是 DBPROPVAL_TI_READCOMMITTED。  
   
--   *IsoLevel*参数**ITransactionLocal::StartTransaction**的本地手动提交事务的方法。  
+-   将 ITransactionLocal::StartTransaction 方法的 isoLevel 参数用于本地手动提交事务。  
   
--   *IsoLevel*参数**ITransactionDispenser::BeginTransaction**方法为 MS DTC 协调分布式事务。  
+-   将 ITransactionDispenser::BeginTransaction 方法的 isoLevel 参数用于 MS DTC 协调的分布式事务。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在脏读隔离级别允许只读访问。 所有其他级别通过将锁应用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象来限制并发。 当客户端需要更高的并发级别时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会为数据并发访问设置更多限制。 若要维护最高级别的数据的并发访问权限，OLE DB 驱动程序的 SQL Server 使用者应智能地控制其请求特定的并发级别。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在脏读隔离级别允许只读访问。 所有其他级别通过将锁应用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象来限制并发。 当客户端需要更高的并发级别时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会为数据并发访问设置更多限制。 若要维护最高级别的数据并发访问，适用于 SQL Server 的 OLE DB 驱动程序使用者应对特定并发级别请求进行智能控制。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了快照隔离级别。 有关详细信息，请参阅[使用快照隔离](../../oledb/features/working-with-snapshot-isolation.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [中的](../../oledb/ole-db-transactions/transactions.md)  
   
   

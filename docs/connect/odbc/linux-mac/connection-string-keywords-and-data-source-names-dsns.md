@@ -1,5 +1,5 @@
 ---
-title: 连接到 SQL Server |Microsoft 文档
+title: 连接到 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,32 +18,32 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f49c0105f96f446c627f5ec1b5f47ee62b28558
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852502"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982309"
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本主题讨论如何创建连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。  
+本主题讨论如何创建与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库的连接。  
   
 ## <a name="connection-properties"></a>连接属性  
 
-请参阅[DSN 和连接字符串关键字和特性](../../../connect/odbc/dsn-connection-string-attribute.md)所有的连接字符串关键字和支持在 Linux 和 Mac 上的属性
+请参阅[DSN 和连接字符串关键字和属性](../../../connect/odbc/dsn-connection-string-attribute.md)的所有连接字符串关键字和特性在 Linux 和 Mac 上受支持
 
 > [!IMPORTANT]  
-> 当连接到使用数据库镜像（有一个故障转移伙伴）的数据库时，不要在连接字符串中指定数据库名称。 相反，发送**使用** *database_name*命令以在执行查询之前连接到数据库。  
+> 当连接到使用数据库镜像（有一个故障转移伙伴）的数据库时，不要在连接字符串中指定数据库名称。 应发送 use database_name 命令连接到该数据库，然后再执行查询。  
   
-传递给值**驱动程序**关键字可以是以下之一：  
+传递给的值**驱动程序**关键字可以是以下之一：  
   
 -   安装该驱动程序时使用的名称。
 
--   驱动程序库，后者在用来安装驱动程序的模板.ini 文件中指定路径。  
+-   已在用于安装驱动程序的模板 .ini 文件中指定的该驱动程序库的路径。  
 
-若要创建 DSN，创建 （如有必要） 并编辑文件 **~/.odbc.ini** (`.odbc.ini`主目录中) 为仅供当前用户，用户 DSN 或`/etc/odbc.ini`的系统 DSN （管理所需特权。）下面是一个示例文件，DSN 显示最小所需的项：  
+若要创建 DSN，请创建 （如有必要） 并编辑文件 **~/.odbc.ini** (`.odbc.ini`主目录中) 为仅供当前用户，一个用户 DSN 或`/etc/odbc.ini`系统 dsn （管理所需权限。）以下示例文件显示了 DSN 所需的条目：  
 
 ```  
 [MSSQLTest]  
@@ -56,31 +56,31 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-你可以选择指定协议和端口来连接到服务器。 例如， **Server = tcp:***servername***、 12345**。 请注意，唯一支持的 Linux 和 macOS 驱动程序的协议是`tcp`。
+你可以选择指定协议和端口来连接到服务器。 例如， **Server = tcp:***servername***，12345**。 请注意，唯一支持的 Linux 和 macOS 的驱动程序的协议是`tcp`。
 
-若要连接到静态端口上的命名实例，使用<b>Server =</b>*servername*，**port_number**。 不支持连接到的动态端口。  
+若要连接到静态端口上的命名实例，请使用 Server=servername,port_number<b></b>。 不支持连接到动态端口。  
 
-或者，您可以将 DSN 信息添加到一个模板文件，并执行以下命令以将其添加到`~/.odbc.ini`:
+可以选择将 DSN 信息添加到模板文件并执行以下命令，以将其添加到 `~/.odbc.ini`：
  - **odbcinst-i-s-f** *template_file*  
  
-你可以验证您的驱动程序正在使用`isql`若要测试该连接，也可以使用此命令：
- - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P <password>**  
+你可以验证您的驱动程序是否正常工作使用`isql`要测试连接，也可以使用以下命令：
+ - **bcp out OutFile.dat-S master.INFORMATION_SCHEMA.TABLES <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>使用安全套接字层 (SSL)  
-你可以使用安全套接字层 (SSL) 加密连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 SSL 保护[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]用户名和密码通过网络。 SSL 还会验证服务器的标识以抵御中间人 (MITM) 攻击。  
+可以使用安全套接字层 (SSL) 加密与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的连接。 SSL 通过网络保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 用户名和密码。 SSL 还会验证服务器的标识以抵御中间人 (MITM) 攻击。  
 
 启用加密可提高安全性，但会降低性能。
 
-有关详细信息，请参阅[加密对 SQL Server 的连接](http://go.microsoft.com/fwlink/?LinkId=220900)和[使用未经验证的加密](https://docs.microsoft.com/en-us/sql/relational-databases/native-client/features/using-encryption-without-validation)。
+有关详细信息，请参阅[加密与 SQL Server 的连接](http://go.microsoft.com/fwlink/?LinkId=220900)并[使用未经验证的加密](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)。
 
 无论 **Encrypt** 和 **TrustServerCertificate**的设置如何，服务器登录凭据（用户名和密码）都始终处于加密状态。 下表显示了 **Encrypt** 和 **TrustServerCertificate** 设置的效果。  
 
-||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
+||**TrustServerCertificate = 否**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|  
-|**Encrypt=yes**|检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。<br /><br />在使用者公用名 (CN) 或使用者备用名称 (SAN) 中的名称 （或 IP 地址） [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 证书应与连接字符串中指定的服务器名称 （或 IP 地址） 完全匹配。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。|  
+|**Encrypt=yes**|检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 证书中使用者公用名 (CN) 或使用者可选名称 (SAN) 中的名称（或 IP 地址）应与连接字符串中指定的服务器名称（或 IP 地址）完全匹配。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。|  
 
-默认情况下，加密的连接会始终验证服务器的证书。 但是，如果你连接到了自签名的证书的服务器，还添加`TrustServerCertificate`绕过检查的针对受信任的证书颁发机构的列表的证书的选项：  
+默认情况下，加密的连接会始终验证服务器的证书。 但是，如果您连接到具有自签名的证书的服务器，还要添加`TrustServerCertificate`绕过检查的受信任的证书颁发机构列表对证书的选项：  
 
 ```  
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
@@ -103,8 +103,8 @@ SSL 使用 OpenSSL 库。 下表显示了 OpenSSL 的受支持的最低版本和
 |Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
 |Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
-你还可以指定在连接字符串中使用加密`Encrypt`选项时使用**SQLDriverConnect**连接。
+此外可以指定加密连接字符串中使用`Encrypt`选项使用时**SQLDriverConnect**连接。
 
 ## <a name="see-also"></a>另请参阅  
-[安装 Microsoft ODBC Driver for SQL Server 在 Linux 和 macOS 上](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
+[在 Linux 和 macOS 上安装 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
 [编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)

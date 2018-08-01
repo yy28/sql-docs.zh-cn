@@ -1,5 +1,5 @@
 ---
-title: 执行存储的过程通过 ODBC 调用以及如何处理输出 |Microsoft 文档
+title: 使用 ODBC CALL 执行存储过程并处理输出 | Microsoft Docs
 description: 处理返回代码和输出参数使用的 SQL Server OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,47 +17,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 89e08882d06111e02057a95586c4f38c27b8db76
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 772ab1a29c99c2e88e9c076c8a9d58ea5123b444
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665557"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109859"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>执行存储的过程通过 ODBC 调用以及如何处理输出
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 执行存储过程并处理输出
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果该命令将返回多个结果，输出参数的数据是否可用时**IMultipleResults::GetResult**返回 DB_S_NORESULT 或**IMultipleResults**完全发布接口，先发生者为准。  
+  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中最先发生的为准）可用。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果你必须保存凭据，应将它们与加密[Win32 加密 API](http://go.microsoft.com/fwlink/?LinkId=64532)。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 对它们加密。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>处理返回代码和输出参数  
   
-1.  构造的 SQL 语句中使用 ODBC 调用转义序列。 该语句应当对每个输入/输出和输出参数以及过程返回值（如果有）使用参数标记。 对于输入参数值，可以使用参数标记或对值进行硬编码。  
+1.  构造使用 ODBC CALL 转义序列的 SQL 语句。 该语句应当对每个输入/输出和输出参数以及过程返回值（如果有）使用参数标记。 对于输入参数值，可以使用参数标记或对值进行硬编码。  
   
 2.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数标记一个）。  
   
-3.  通过创建定义的参数访问器**IAccessor::CreateAccessor**方法。 **CreateAccessor**从一组绑定创建一个访问器。  
+3.  通过创建定义的参数的取值函数**iaccessor:: Createaccessor**方法。 CreateAccessor 从一组绑定创建取值函数。  
   
 4.  填写 DBPARAMS 结构。  
   
-5.  调用**执行**命令 （在这种情况下，调用存储过程）。  
+5.  调用 Execute 命令（在这种情况下是调用存储过程）。  
   
-6.  处理行集并将其释放使用**IRowset::Release**方法。  
+6.  处理行集，并使用释放**irowset:: Release**方法。  
   
 7.  处理从存储过程接收的返回代码和输出参数值。  
   
 ## <a name="example"></a>示例  
  此示例说明了如何处理行集、返回代码和输出参数。 不处理结果集。 IA64 平台不支持此示例。  
   
- 此示例要求 AdventureWorks 示例数据库中，你可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
  执行第一个 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的存储过程。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，将从 L"(local) 更改连接字符串"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  执行第三个 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的存储过程。  
   
@@ -361,7 +361,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [处理结果操作指南主题&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>另请参阅  
+ [处理结果操作指南主题 (OLE DB)](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

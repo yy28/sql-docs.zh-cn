@@ -1,6 +1,6 @@
 ---
-title: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB) |Microsoft 文档
-description: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB)
+title: 使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB) | Microsoft Docs
+description: 使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a708966a35ef6311cf6912a988bcf4822f53b6f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666187"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106553"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -31,9 +31,9 @@ ms.locfileid: "35666187"
  有关 filestream 功能的详细信息，请参阅[FILESTREAM 支持](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>示例  
- 编译并运行此示例之前，启用 FILESTREAM 的支持 ([启用和配置 FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 编译并运行此示例之前，启用 FILESTREAM 支持 ([启用和配置 FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 请确保你 INCLUDE 环境变量包含包含 msoledbsql.h 的目录。  
+ 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  该服务器必须具有名为 C:\DBFsa 的目录，示例将在其中创建数据库。 您的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例必须对此位置具有写访问权限（例如，采用本地系统帐户登录）。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "35666187"
   
  编译 IRowsetFastLoadUpload.cpp、ISSHelper.cpp、ole32.lib 和 oleaut32.lib。  
   
- 当你运行此示例，你必须将名称传递给服务器，或 server\instance_name，以及值之间 4 MB (0x400001) 和 4 GB (0xFFFFFFFF) 的数据量，该值指示要写入。  
+ 运行此示例时，必须传递服务器名称或“服务器\实例名称”，以及一个介于 4 MB (0x400001) 与 4 GB (0xFFFFFFFF) 之间的值，指示写入的数据量。  
   
  第四个 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 代码列表删除此示例创建的数据库。  
   

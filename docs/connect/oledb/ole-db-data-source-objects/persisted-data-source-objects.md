@@ -1,6 +1,6 @@
 ---
-title: 持久的数据源对象 |Microsoft 文档
-description: 持久的数据源对象
+title: 持久化数据源对象 |Microsoft Docs
+description: 持久化数据源对象
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665607"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106943"
 ---
-# <a name="persisted-data-source-objects"></a>持久的数据源对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="persisted-data-source-objects"></a>持久化数据源对象
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序支持与持久化的数据源对象**IPersistFile**接口。  
+  适用于 SQL Server 的 OLE DB 驱动程序支持持久化的数据源对象与**IPersistFile**接口。  
   
 ## <a name="examples"></a>示例  
- **A.保留数据源初始化：**  
+ **A.使数据源初始化持久化：**  
   
- 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在中收到的服务器名称和数据库名称*pLocation*和*pDatasource*函数的参数。  
+ 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在函数的 pLocation 和 pDatasource 参数中接收服务器名称和数据库名称。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -233,9 +233,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **IPersistFile::Save**方法可以调用之前或之后调用**idbinitialize:: Initialize**。 在成功的返回后调用方法**idbinitialize:: Initialize**确保有效的数据源规范持续不断。  
+ 可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

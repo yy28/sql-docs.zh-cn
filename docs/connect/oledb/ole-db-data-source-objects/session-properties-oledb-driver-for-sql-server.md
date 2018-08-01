@@ -1,6 +1,6 @@
 ---
-title: 会话属性-用于 SQL Server 的 OLE DB 驱动程序 |Microsoft 文档
-description: 会话属性的 OLE DB 驱动程序的 SQL Server
+title: 会话属性 - 适用于 SQL Server 的 OLE DB 驱动程序 | Microsoft Docs
+description: 会话属性 - 适用于 SQL Server 的 OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,33 +17,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a0d7e97017a8d188eaf9fb9cc24b0b2fbc0e80b2
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ac4ba35c8eb95b5ef47064ad5c52e42f5b05c581
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666427"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108659"
 ---
-# <a name="session-properties---ole-db-driver-for-sql-server"></a>会话属性-用于 SQL Server 的 OLE DB 驱动程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="session-properties---ole-db-driver-for-sql-server"></a>会话属性 - 适用于 SQL Server 的 OLE DB 驱动程序
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序将按以下方式解释 OLE DB 会话属性。  
+  SQL Server 的 OLE DB 驱动程序，如下所示解释 OLE DB 会话属性。  
   
-|属性 ID|Description|  
+|属性 ID|描述|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|SQL Server 的 OLE DB 驱动程序支持混沌级别 DBPROPVAL_TI_CHAOS 除外的所有自动提交事务隔离级别。|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|适用于 SQL Server 的 OLE DB 驱动程序支持所有自动提交的事务隔离级别，混沌级别 DBPROPVAL_TI_CHAOS 除外。|  
   
- 在提供程序特定属性集 DBPROPSET_SQLSERVERSESSION 中，SQL Server 的 OLE DB 驱动程序定义以下其他会话属性。  
+ 在特定于访问接口的属性集 DBPROPSET_SQLSERVERSESSION 中，适用于 SQL Server 的 OLE DB 驱动程序定义以下附加的会话属性。  
   
-|属性 ID|Description|  
+|属性 ID|描述|  
 |-----------------|-----------------|  
-|SSPROP_QUOTEDCATALOGNAMES|类型：VT_BOOL<br /><br /> 读/写： 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在 CATALOG 限制中允许带引号的标识符。<br /><br /> VARIANT_TRUE：对提供分布式查询支持的架构行集的目录限制识别带引号的标识符。<br /><br /> VARIANT_FALSE：对提供分布式查询支持的架构行集的目录限制不识别带引号的标识符。<br /><br /> 有关提供分布式的查询支持的架构行集的详细信息，请参阅[分布式查询支持架构行集中](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)。|  
+|SSPROP_QUOTEDCATALOGNAMES|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在 CATALOG 限制中允许带引号的标识符。<br /><br /> VARIANT_TRUE：对提供分布式查询支持的架构行集的目录限制识别带引号的标识符。<br /><br /> VARIANT_FALSE：对提供分布式查询支持的架构行集的目录限制不识别带引号的标识符。<br /><br /> 有关提供分布式查询支持的架构行集的详细信息，请参阅[架构行集中的分布式查询支持](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)。|  
 |SSPROP_ALLOWNATIVEVARIANT|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回，这种情况下缓冲区将保留 SSVARIANT 结构。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区将具有 VARIANT 结构。|  
 |SSPROP_ASYNCH_BULKCOPY|若要使用异步模式，请在调用 BCPExec 方法之前，将特定于提供程序的会话属性 SSPROP_ASYNCH_BULKCOPY 设置为 VARIANT_TRUE。 此属性位于 DBPROPSET_SQLSERVERSESSION 属性集中。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

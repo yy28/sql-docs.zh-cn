@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Execute |Microsoft 文档'
+title: 'Pdostatement:: Execute |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e3f2be02678d909ee722045e6139f6d34b55e3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308436"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019575"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ bool PDOStatement::execute ([ $input ] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-*$input*: （可选） 包含参数标记的值的关联数组。  
+$input：（可选）包含参数标记的值的关联阵列。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 True；否则为 False。  
@@ -77,9 +77,9 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 > [!NOTE]
-> 建议绑定到的值时，使用字符串作为输入[decimal 或 numeric 列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)以确保精度和准确性，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。 这同样适用于 bigint 列，尤其是在有效值的范围之外时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建议使用字符串作为输入，绑定到的值时[decimal 或 numeric 的列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)若要确保的精确度和准确度，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。 这同样适用于到 bigint 列，尤其是有效值的范围之外[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

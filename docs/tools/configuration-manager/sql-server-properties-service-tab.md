@@ -1,5 +1,5 @@
 ---
-title: SQL Server 属性 （服务选项卡） |Microsoft 文档
+title: SQL Server 属性（“服务”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f84bc46e2739f94cb9a1425ee8af78c739e61b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068964"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970659"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **二进制路径**  
  列出此服务所使用的程序文件的位置。  
   

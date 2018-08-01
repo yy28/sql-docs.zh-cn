@@ -1,5 +1,5 @@
 ---
-title: TYPE_SS_SCROLL_STATIC 字段 (SQLServerResultSet) |Microsoft 文档
+title: TYPE_SS_SCROLL_STATIC 字段 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0774a09fce93a774e911fba28ea9ed9559313fb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046805"
 ---
 # <a name="typessscrollstatic-field-sqlserverresultset"></a>TYPE_SS_SCROLL_STATIC 字段 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  用于指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]静态游标类型。  
+  用于指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 静态游标类型。  
   
 ## <a name="syntax"></a>语法  
   

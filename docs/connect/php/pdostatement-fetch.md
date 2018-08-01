@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Fetch |Microsoft 文档'
+title: 'Pdostatement:: Fetch |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308416"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019995"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,19 +34,19 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$*fetch_style*： 指定的格式的行数据的可选 （整数） 符号。 请参阅 $ 的可能的值列表的备注部分*fetch_style*。 默认值为 PDO::FETCH_BOTH。 $*fetch_style*方法将覆盖 $ 中提取*fetch_style* pdo:: query 方法中指定。  
+$fetch_style：指定行数据的格式的可选（整数）符号。 请参阅 $fetch_style 的可能值列表的“备注”部分。 默认值为 PDO::FETCH_BOTH。此提取方法中的  $fetch_style 将替代在 PDO::query 方法中指定的 $fetch_style。  
   
-$*cursor_orientation*:，该值指示要检索时在准备语句指定的行的可选 （整数） 符号`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`。 请参阅 $ 的可能的值列表的备注部分*cursor_orientation*。 有关使用可滚动游标的示例，请参阅 [PDO::prepare](../../connect/php/pdo-prepare.md) 。  
+$cursor_orientation：指示要在准备语句指定 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 时检索的行的可选（整数）符号。 请参阅 $cursor_orientation 的可能值列表的“备注”部分。 有关使用可滚动游标的示例，请参阅 [PDO::prepare](../../connect/php/pdo-prepare.md) 。  
   
-$*cursor_offset*： 指定要提取时的行的可选 （整数） 符号 $*cursor_orientation* PDO::FETCH_ORI_ABS 或 PDO::FETCH_ORI_REL 和 PDO::ATTR_CURSOR 是 PDO::CURSOR_SCROLL。  
+$cursor_offset：指定要在 $cursor_orientation 是 PDO::FETCH_ORI_ABS 或 PDO::FETCH_ORI_REL 并且 PDO::ATTR_CURSOR 是 PDO::CURSOR_SCROLL 时提取的行的可选（整数）符号。  
   
 ## <a name="return-value"></a>返回值  
 返回行或 false 的混合值。  
   
 ## <a name="remarks"></a>Remarks  
-调用提取时，游标会自动前进。 下表包含可能列表*fetch_style*值。  
+调用提取时，游标会自动前进。 下表包含 $fetch_style 可能值的列表。  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|描述|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|指定按列名称进行索引的数组。|  
 |PDO::FETCH_BOTH|指定按列名称和基于 0 的顺序进行索引的数组。 这是默认设置。|  
@@ -59,18 +59,18 @@ $*cursor_offset*： 指定要提取时的行的可选 （整数） 符号 $*curs
   
 如果游标位于结果集末尾（已检索最后一行，并且游标已越过结果集边界），并且如果游标支持只进 (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY)，后续提取调用将失败。  
   
-如果游标可滚动 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)，提取将在结果集边界中移动游标。 下表包含可能列表*cursor_orientation*值。  
+如果游标可滚动 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)，提取将在结果集边界中移动游标。 下表包含 $cursor_orientation 可能值的列表。  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|描述|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|检索下一行。 这是默认设置。|  
 |PDO::FETCH_ORI_PRIOR|检索上一行。|  
 |PDO::FETCH_ORI_FIRST|检索第一行。|  
 |PDO::FETCH_ORI_LAST|检索最后一行。|  
-|PDO::FETCH_ORI_ABS， *num*|检索在 $ 请求的行*cursor_offset*按行号。|  
-|PDO::FETCH_ORI_REL， *num*|检索在 $ 请求的行*cursor_offset*按从当前位置的相对位置。|  
+|PDO::FETCH_ORI_ABS, num|检索在 $cursor_offset 中按行号请求的行。|  
+|PDO::FETCH_ORI_REL, num|检索在 $cursor_offset 中按当前位置的相对位置请求的行。|  
   
-如果值为 $ 指定*cursor_offset*或 $*cursor_orientation*导致结果集边界之外的位置，提取将失败。  
+如果为 $cursor_offset 或 $cursor_orientation 结果指定的值位于结果集边界之外的某个位置，提取将失败。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
@@ -144,7 +144,7 @@ $*cursor_offset*： 指定要提取时的行的可选 （整数） 符号 $*curs
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLSRV 驱动程序流的形式检索字符数据 |Microsoft 文档
+title: 使用 SQLSRV 驱动程序以流的形式检索字符数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9099e0854b0030e79645399377d8f47dc90c85a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054065"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以流的形式检索字符数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-流选项仅适用于的 SQLSRV 驱动程序的形式检索数据[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，并在 PDO_SQLSRV 驱动程序中不可用。  
+以流的形式检索数据仅在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 SQLSRV 驱动程序中可用，在 PDO_SQLSRV 驱动程序中不可用。  
   
 SQLSRV 驱动程序利用 PHP 流从服务器检索大量数据。 本主题中的示例演示如何以流的形式检索字符数据。  
   
 ## <a name="example"></a>示例  
-以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 *注释*个返回行的字段以流的形式检索并显示通过使用 PHP [fpassthru](http://php.net/manual/function.fpassthru.php)函数。  
+以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 返回行的 Comments 字段以流的形式检索，并通过使用 PHP [fpassthru](http://php.net/manual/function.fpassthru.php) 函数进行显示。  
   
-通过使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) （其中返回类型指定为字符流）来完成以流的形式检索数据操作。 通过使用常量指定返回类型**SQLSRV_PHPTYPE_STREAM**。 璝惠**sqlsrv**常量，请参阅[常量&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
+通过使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) （其中返回类型指定为字符流）来完成以流的形式检索数据操作。 返回类型通过使用常量 SQLSRV_PHPTYPE_STREAM 指定。 有关 sqlsrv 常量的信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
-该示例假定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
   
 因为没有为前三个字段指定任何 PHP 返回类型，所以每个字段均按照其默认 PHP 类型进行返回。 有关默认 PHP 数据类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 有关如何指定 PHP 返回类型的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)
 
 [使用 SQLSRV 驱动程序以流的形式检索数据](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

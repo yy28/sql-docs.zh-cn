@@ -1,5 +1,5 @@
 ---
-title: 使用数据类型 (JDBC) |Microsoft 文档
+title: 使用数据类型 (JDBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73be4e0bc7a20a8a592493badf95a123ad6ade84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970052"
 ---
 # <a name="working-with-data-types-jdbc"></a>使用数据类型 (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  主要功能的[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]是允许 Java 开发人员能够访问数据中包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 若要实现此目的，JDBC 驱动程序调解之间的转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型和 Java 语言类型和对象。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的主要功能是允许 Java 开发人员访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中包含的数据。 为了实现此功能，JDBC 驱动程序充当了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型和 Java 语言类型以及对象之间的转换中介。  
   
 > [!NOTE]  
->  有关详细的讨论[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和 JDBC 驱动程序数据类型，包括它们之间的差异和如何将它们转换为 Java 语言数据类型，请参阅[了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
+>  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 和 JDBC 驱动程序数据类型（包括它们之间的差异以及如何将其转换到 Java 语言数据类型）的详细说明，请参阅[了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
   
- 若要使用 SQL Server 数据类型，JDBC 驱动程序提供 get\<类型 > 并将设置\<类型 > 方法[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)和[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)类，并提供 get\<类型 > 和更新\<类型 > 方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)类。 要使用哪个方法取决于所使用的数据类型以及是否要使用结果集和查询。  
+ 为了使用 SQL Server 数据类型，JDBC 驱动程序为 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类提供了 get\<Type> 和 set\<Type> 方法，为 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类提供了 get\<Type> 和 update\<Type> 方法。 要使用哪个方法取决于所使用的数据类型以及是否要使用结果集和查询。  
   
- 本部分中的主题介绍如何使用 JDBC 驱动程序数据类型来访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Java 应用程序中的数据。  
+ 此部分的主题说明了如何在 Java 应用程序中使用 JDBC 驱动程序数据类型来访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
-|[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)|描述如何使用结果集 getter 方法来检索基本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型值，以及如何使用结果集更新方法以更新这些值。|  
-|[SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)|描述如何将 XML 数据存储在关系数据库、 如何从数据库中，检索 XML 数据以及如何分析 XML 数据与**SQLXML** Java 数据类型。|  
+|[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)|说明如何使用结果集的 getter 方法来检索基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型值，以及如何使用结果集的 update 方法来更新这些值。|  
+|[SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)|说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据。|  
   
 ## <a name="see-also"></a>另请参阅  
  [示例 JDBC 驱动程序应用程序](../../connect/jdbc/sample-jdbc-driver-applications.md)  
