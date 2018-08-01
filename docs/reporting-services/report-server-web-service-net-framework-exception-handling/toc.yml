@@ -1,0 +1,8 @@
+- name: 介绍 Reporting Services 中的异常处理
+  href: introducing-exception-handling-in-reporting-services.md
+- name: 在 Reporting Services 中处理异常
+  href: handling-exceptions-in-reporting-services.md
+- name: 报告服务异常处理的最佳做法 +
+  href: ./best-practices/best-practices-for-reporting-services-exception-handling.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2fbest-practices%2ftoc.json
+- name: Reporting Services SoapException 类
+  href: ./soapexception-class/reporting-services-soapexception-class.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2fsoapexception-class%2ftoc.json

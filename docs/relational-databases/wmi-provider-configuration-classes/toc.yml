@@ -1,0 +1,48 @@
+- name: 用于配置管理的 WMI 提供程序类
+  href: wmi-provider-for-configuration-management-classes.md
+- name: 特定区域
+  items:
+    - name: ClientNetLibInfo 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md
+    - name: ClientNetworkProtocol 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md
+    - name: ClientNetworkProtocolProperty 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md
+    - name: ClientSettingsGeneralFlag 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md
+    - name: SecurityCertificate 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/context-property-securitycertificate-class.md
+    - name: ServerNetworkProtocol 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/enabled-property-servernetworkprotocol-class.md
+    - name: ServerNetworkProtocolIPAddress 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/enabled-property-servernetworkprotocolipaddress-class.md
+    - name: ServerNetworkProtocolProperty 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/instancename-property-servernetworkprotocolproperty-class.md
+    - name: ServerSettings 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/serversettings-class/generalflags-property-serversettings-class.md
+    - name: ServerSettingsGeneralFlag 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class.md
+    - name: SInstance 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md
+    - name: SqlServerAlias 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class.md
+    - name: SqlService 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md
+    - name: SqlServiceAdvancedProperty 类 +
+      href: ../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md
+- name: CInstance 类 - InstanceName 属性
+  href: cinstance-class-instancename-property.md
+- name: CInstance 类 - SetDefaults 方法
+  href: cinstance-class-setdefaults-method.md
+- name: CInstance 类
+  href: cinstance-class.md
+- name: ClientSettings 类 - InstanceName 属性
+  href: clientsettings-class-instancename-property.md
+- name: ClientSettings 类 - SetDefaults 方法
+  href: clientsettings-class-setdefaults-method.md
+- name: ClientSettings 类
+  href: clientsettings-class.md
+- name: SqlErrorLogEvent 类
+  href: sqlerrorlogevent-class.md
+- name: SqlErrorLogFile 类
+  href: sqlerrorlogfile-class.md

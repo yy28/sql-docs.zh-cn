@@ -1,0 +1,48 @@
+- name: 适用于 SQL Server 的 OLE DB 驱动程序编程
+  href: oledb-driver-for-sql-server-programming.md
+- name: 特定区域
+  items:
+    - name: 创建 OLE DB Driver for SQL Server 应用程序 +
+      href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+    - name: OLE DB 数据源对象 +
+      href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: 命令 +
+      href: ../../oledb/ole-db-commands/commands.md
+    - name: 行集 +
+      href: ../../oledb/ole-db-rowsets/rowsets.md
+    - name: Blob +
+      href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
+    - name: 表格索引 +
+      href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
+    - name: 数据类型 +
+      href: ../../oledb/ole-db-data-types/data-types-ole-db.md
+    - name: 表值参数 +
+      href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: 日期时间 +
+      href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: 事务 +
+      href: ../../oledb/ole-db-transactions/transactions.md
+    - name: 错误 +
+      href: ../../oledb/ole-db-errors/errors.md
+    - name: 接口 +
+      href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+    - name: 操作指南 +
+      href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
+- name: 大型 CLR 用户定义类型
+  href: large-clr-user-defined-types-ole-db.md
+- name: 架构行集支持
+  href: schema-rowset-support-ole-db.md
+- name: 架构行集 - 分布式查询支持
+  href: schema-rowsets-distributed-query-support.md
+- name: 架构行集 - LINKEDSERVERS 行集
+  href: schema-rowsets-linkedservers-rowset.md
+- name: 客户端连接中的服务主体名称 (SPN)
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: 稀疏列支持
+  href: sparse-columns-support-ole-db.md
+- name: 存储过程 - 调用
+  href: stored-procedures-calling.md
+- name: 存储过程 - 运行
+  href: stored-procedures-running.md
+- name: 存储过程
+  href: stored-procedures.md
