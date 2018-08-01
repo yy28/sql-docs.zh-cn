@@ -1,0 +1,122 @@
+- name: 数据挖掘分析 UI 设计器和对话框
+  href: ui-designers-dialog-boxes-data-mining.md
+- name: 数据挖掘设计器和对话框
+  href: ../data-mining-designers-and-dialog-boxes.md
+  items:
+    - name: 数据挖掘模型设计器
+      href: ../data-mining-model-designer-analysis-services-data-mining.md
+    - name: “挖掘结构”视图（数据挖掘模型设计器）
+      href: ../mining-structure-view-data-mining-model-designer.md
+    - name: “新建挖掘模型”对话框（“挖掘结构”视图）
+      href: ../new-mining-model-dialog-box-mining-structure-view.md
+    - name: “选择列”对话框（“挖掘结构”视图）
+      href: ../select-a-column-dialog-box-mining-structure-view.md
+    - name: “选择嵌套表键列”对话框（“挖掘结构”视图）
+      href: ../select-a-nested-table-key-column-dialog-box-mining-structure-view.md
+    - name: “创建数据挖掘维度”对话框
+      href: ../create-data-mining-dimension-dialog.md
+    - name: “挖掘模型”视图（数据挖掘模型设计器）
+      href: ../mining-models-view-data-mining-model-designer.md
+    - name: “算法参数”对话框（“挖掘模型”视图）
+      href: ../algorithm-parameters-dialog-box-mining-models-view.md
+    - name: “数据集筛选器/模型筛选器”对话框
+      href: ../data-set-filter-or-model-filter-dialog-box.md
+      items:
+        - name: “筛选器”对话框（挖掘准确性图表）
+          href: ../filter-dialog-box-mining-accuracy-chart.md
+- name: 挖掘模型查看器
+  href: ../mining-model-viewers-data-mining-model-designer.md
+  items:
+    - name: “属性特征”选项卡
+      href: ../attribute-characteristics-tab-mining-model-viewer.md
+    - name: “属性对比”选项卡
+      href: ../attribute-discrimination-tab-mining-model-viewer.md
+    - name: “属性配置文件”选项卡
+      href: ../attribute-profiles-tab-mining-model-viewer.md
+    - name: “图表”选项卡（时序查看器）
+      href: ../chart-tab-mining-model-viewers.md
+    - name: “分类特征”选项卡
+      href: ../cluster-characteristics-tab-mining-model-viewer.md
+    - name: “分类关系图”选项卡
+      href: ../cluster-diagram-tab-mining-model-viewer.md
+    - name: “分类对比”选项卡
+      href: ../cluster-discrimination-tab-mining-model-viewer.md
+    - name: “分类剖面图”选项卡
+      href: ../cluster-profiles-tab-mining-model-viewer.md
+    - name: “决策树”选项卡
+      href: ../decision-tree-tab-mining-model-viewer.md
+    - name: “依赖关系网络”选项卡
+      href: ../dependency-network-tab-mining-model-viewer.md
+    - name: “钻取”对话框
+      href: ../drill-through-dialog-box-mining-model-viewer.md
+    - name: “查找节点”对话框
+      href: ../find-node-dialog-box-mining-model-viewer.md
+    - name: 一般内容树查看器
+      href: ../microsoft-generic-content-tree-viewer-data-mining.md
+    - name: “项集”选项卡
+      href: ../itemsets-tab-mining-model-viewer.md
+    - name: “挖掘图例”对话框
+      href: ../mining-legend-dialog-box-mining-model-viewer.md
+    - name: “神经网络”选项卡
+      href: ../neural-network-mining-model-viewer.md
+    - name: “规则”选项卡
+      href: ../rules-tab-mining-model-viewer.md
+    - name: 顺序分析和聚类分析的“分类关系图”选项卡
+      href: ../sequence-clustering-cluster-diagram-tab-mining-model-viewer.md
+    - name: 顺序分析和聚类分析的“分类配置文件”选项卡
+      href: ../sequence-clustering-cluster-profiles-tab-mining-model-viewer.md
+    - name: 顺序分析和聚类分析的“分类特征”选项卡
+      href: ../sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md
+    - name: 顺序分析和聚类分析的“分类对比”选项卡
+      href: ../sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md
+    - name: 顺序分析和聚类分析的“分类转换”选项卡
+      href: ../sequence-clustering-cluster-transition-tab-mining-model-viewer.md
+    - name: “模型”选项卡（时序查看器）
+      href: ../model-tab-mining-model-viewers.md
+- name: 挖掘准确性图表设计器（数据挖掘）
+  href: ../mining-accuracy-chart-designer-data-mining.md
+  items:
+    - name: “输入选择”选项卡
+      href: ../input-selection-tab-mining-accuracy-chart-view.md
+    - name: “提升图”选项卡
+      href: ../lift-chart-tab-mining-accuracy-chart-view.md
+    - name: “分类矩阵”选项卡
+      href: ../classification-matrix-tab-mining-accuracy-chart-view.md
+    - name: “交叉验证”选项卡
+      href: ../cross-validation-tab-mining-accuracy-chart-view.md
+    - name: “利润图设置”对话框（“挖掘准确性图表”视图）
+      href: ../profit-chart-settings-dialog-box-mining-accuracy-chart-view.md
+    - name: “指定列映射”对话框（挖掘准确性图表）
+      href: ../specify-column-mapping-dialog-box-mining-accuracy-chart.md
+    - name: “选择挖掘结构”对话框（“挖掘准确性图表”视图）
+      href: ../select-mining-structure-dialog-box-mining-accuracy-chart-view.md
+    - name: “选择表”对话框（“挖掘准确性图表”视图）
+      href: ../select-table-dialog-box-mining-accuracy-chart-view.md
+    - name: “修改映射”对话框（挖掘准确性图表）
+      href: ../modify-mapping-dialog-box-mining-accuracy-chart.md
+    - name: “指定嵌套联接”对话框（“挖掘准确性图表”视图）
+      href: ../specify-nested-join-dialog-box-mining-accuracy-chart-view.md
+- name: 预测查询生成器
+  href: ../prediction-query-builder-data-mining.md
+  items:
+    - name: “设计”窗格
+      href: ../design-pane-mining-model-prediction-view.md
+    - name: “查询”窗格
+      href: ../query-pane-mining-model-prediction-view.md
+    - name: “结果”窗格
+      href: ../result-pane-mining-model-prediction-view.md
+    - name: “选择挖掘模型”对话框
+      href: ../select-mining-model-dialog-box-mining-model-prediction-view.md
+    - name: “保存数据挖掘查询结果”对话框
+      href: ../save-data-mining-query-result-dialog-box-mining-model-prediction-view.md
+- name: “挖掘结构属性”对话框
+  href: ../mining-structure-properties-dialog-analysis-services-data-mining.md
+  items:
+    - name: 常规（“挖掘结构”对话框）
+      href: ../general-mining-structure-dialog-box-analysis-services-data-mining.md
+    - name: 错误配置（“挖掘结构”对话框）
+      href: ../error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md
+- name: “挖掘模型属性”对话框
+  href: ../mining-model-properties-dialog-box-analysis-services-data-mining.md
+- name: DMX 查询编辑器
+  href: ../dmx-query-editor-analysis-services-data-mining.md

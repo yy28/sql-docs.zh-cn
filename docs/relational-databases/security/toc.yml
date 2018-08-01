@@ -1,0 +1,46 @@
+- name: 概述
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: 保护 SQL Server
+  href: securing-sql-server.md
+- name: 审核
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: 身份验证访问
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: 加密
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: 保护 SQL Server 知识产权
+  href: protecting-your-sql-server-intellectual-property.md
+- name: 安全对象
+  href: securables.md
+- name: 包含的数据库用户 - 使你的数据库可移植
+  href: contained-database-users-making-your-database-portable.md
+- name: 选择身份验证模式
+  href: choose-an-authentication-mode.md
+- name: 元数据可见性配置
+  href: metadata-visibility-configuration.md
+- name: 外围应用配置器
+  href: surface-area-configuration.md
+- name: SQL 注入
+  href: sql-injection.md
+- name: SQL 漏洞评估
+  href: sql-vulnerability-assessment.md
+- name: SQL 数据发现和分类
+  href: sql-data-discovery-and-classification.md
+- name: TRUSTWORTHY 数据库属性
+  href: trustworthy-database-property.md
+- name: Permissions
+  href: permissions-database-engine.md
+- name: 权限层次结构
+  href: permissions-hierarchy-database-engine.md
+- name: “权限”或“安全对象”页
+  href: permissions-or-securables-page.md
+- name: 密码策略
+  href: password-policy.md
+- name: 强密码
+  href: strong-passwords.md
+- name: 行级安全性
+  href: row-level-security.md
+- name: 动态数据屏蔽
+  href: dynamic-data-masking.md
+- name: SQL Server 证书和非对称密钥
+  href: sql-server-certificates-and-asymmetric-keys.md

@@ -1,0 +1,12 @@
+- name: SQL Server Native Client OLE DB 提供程序中的错误
+  href: errors.md
+- name: 错误接口中的信息
+  href: information-in-error-interfaces.md
+- name: 检索错误信息
+  href: retrieving-error-information.md
+- name: 返回代码
+  href: return-codes.md
+- name: SQL Server 错误详细信息
+  href: sql-server-error-detail.md
+- name: SQL Server 消息结果
+  href: sql-server-message-results.md

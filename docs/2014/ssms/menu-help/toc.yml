@@ -1,0 +1,45 @@
+- name: SQL Server Management Studio 菜单帮助
+  href: sql-server-management-studio-menu-help.md
+- name: 打开方式（新建文件）
+  href: open-with-new-file.md
+- name: 另存为
+  href: save-as.md
+- name: 保存更改
+  href: save-changes.md
+- name: 高级保存选项
+  href: advanced-save-options.md
+- name: “选择搜索文件夹”对话框 (Visual Studio)
+  href: choose-search-folders-dialog-box-visual-studio.md
+- name: 选择工具箱项（“维护任务”页）
+  href: choose-toolbox-items-maintenance-tasks-page.md
+- name: 外部工具
+  href: external-tools.md
+- name: 自定义（“工具栏”页）
+  href: customize-toolbars-page.md
+- name: 自定义（“命令”页）
+  href: customize-commands-page.md
+- name: 选项对话框的 F1 帮助
+  href: options-dialog-boxes-f1-help.md
+  items:
+    - name: 选项（“环境”-“常规”页）
+      href: options-environment-general-page.md
+    - name: '选项（“环境”:“字体和颜色”页）'
+      href: options-environment-fonts-and-colors-page.md
+    - name: 选项（“环境”/“键盘”页）
+      href: options-environment-keyboard-page.md
+    - name: 选项（“环境”/“帮助”/“常规”页）
+      href: options-environment-help-general-page.md
+    - name: 选项（“环境”/“帮助”/“联机”页）
+      href: options-environment-help-online-page.md
+    - name: 选项（“设计器”/“表设计器和数据库设计器”页）
+      href: options-designers-table-and-database-designers-page.md
+    - name: 选项（“设计器”/“维护计划”页）
+      href: options-designers-maintenance-plans-page.md
+    - name: 选项（设计器/Analysis Services 设计器/常规）
+      href: options-designers-analysis-services-designers-general.md
+- name: Windows 对话框（Microsoft 文档资源管理器的帮助）
+  href: windows-dialog-box-microsoft-document-explorer-help.md
+- name: 关于 SQL Server Management Studio
+  href: about-sql-server-management-studio.md
+- name: “属性”窗口的 F1 帮助 (Management Studio)
+  href: properties-window-f1-help-management-studio.md

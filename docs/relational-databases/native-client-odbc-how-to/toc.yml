@@ -1,0 +1,52 @@
+- name: ODBC 操作指南主题
+  href: odbc-how-to-topics.md
+- name: 子区域
+  items:
+    - name: 执行查询 +
+      href: ../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
+    - name: 游标 +
+      href: ../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
+    - name: 大容量复制 +
+      href: ../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: 分配句柄并连接到 SQL Server (ODBC)
+  href: allocate-handles-and-connect-to-sql-server-odbc.md
+- name: 对具有稀疏列的表调用 SQLColumns
+  href: call-sqlcolumns-on-a-table-with-sparse-columns.md
+- name: 配置 SQL Server ODBC 驱动程序 - 添加数据源
+  href: configuring-the-sql-server-odbc-driver-add-a-data-source.md
+- name: 配置 SQL Server ODBC 驱动程序 - 删除数据源
+  href: configuring-the-sql-server-odbc-driver-delete-a-data-source.md
+- name: 获取 Kerberos 相互身份验证
+  href: get-mutual-kerberos-authentication.md
+- name: 如何在 Geography 列中插入行 (ODBC)
+  href: how-to-insert-rows-into-geography-column-odbc.md
+- name: 管理 text 和 image 列 - 使用执行时数据列
+  href: managing-text-and-image-columns-use-data-at-execution-columns.md
+- name: 管理 text 和 image 列 - 使用执行时数据参数
+  href: managing-text-and-image-columns-use-data-at-execution-parameters.md
+- name: 处理 ODBC 错误 (ODBC)
+  href: process-odbc-errors-odbc.md
+- name: 处理结果 - 处理结果
+  href: processing-results-process-results.md
+- name: 处理结果 - 检索结果集信息
+  href: processing-results-retrieve-result-set-information.md
+- name: 分析 ODBC 驱动程序性能 (ODBC)
+  href: profiling-odbc-driver-performance-odbc.md
+- name: 分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
+  href: profiling-odbc-driver-performance-data-log-long-running-queries.md
+- name: 分析 ODBC 驱动程序性能数据
+  href: profiling-odbc-driver-performance-data.md
+- name: 运行存储过程 - 调用存储过程
+  href: running-stored-procedures-call-stored-procedures.md
+- name: 运行存储过程 - 处理返回代码和输出参数
+  href: running-stored-procedures-process-return-codes-and-output-parameters.md
+- name: 通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
+  href: send-and-receive-data-incrementally-with-filestream-odbc.md
+- name: 支持大型 UDT
+  href: support-for-large-udts.md
+- name: 使用日期和时间类型
+  href: use-date-and-time-types.md
+- name: 使用 Microsoft 分布式事务处理协调器 (ODBC)
+  href: use-microsoft-distributed-transaction-coordinator-odbc.md
+- name: 使用表值参数 (ODBC)
+  href: use-table-valued-parameters-odbc.md

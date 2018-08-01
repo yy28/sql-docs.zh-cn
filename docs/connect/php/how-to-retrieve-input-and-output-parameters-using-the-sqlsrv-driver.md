@@ -1,5 +1,5 @@
 ---
-title: 如何： 检索使用 SQLSRV 驱动程序的 I/O 参数 |Microsoft 文档
+title: 如何： 检索 I/O 参数使用 SQLSRV 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054075"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主题演示如何使用 SQLSRV 驱动程序调用其中一个参数已定义为输入/输出参数的存储过程，以及如何检索结果。 在检索输出或输入/输出参数，可访问返回的参数值之前，必须先使用存储过程返回的所有结果。  
+本主题演示如何使用 SQLSRV 驱动程序调用其中一个参数已定义为输入/输出参数的存储过程，以及如何检索结果。 在检索输出参数或输入/输出参数时，必须在可以访问返回的参数值前使用存储过程返回的所有结果。  
   
 > [!NOTE]  
 > 已初始化或更新为 **null**、 **DateTime**的变量或流类型无法用作输出参数。  
@@ -36,12 +36,12 @@ ms.locfileid: "34563925"
 > [!NOTE]  
 > 将 *$vacationHrs* 初始化为 4 可将返回的 PHPTYPE 设置为整数。 若要确保数据类型的完整性，应先初始化输入/输出参数并随后调用存储过程，或者应指定所需的 PHPTYPE。 有关指定 PHPTYPE 的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-存储的过程返回两个结果，因为[sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)后执行存储的过程以使输出参数的值可用必须调用。 在调用**sqlsrv_next_result**， *$vacationHrs*包含存储过程返回的输出参数的值。  
+因为该存储过程返回两个结果，所以在执行该存储过程之后必须调用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)，使输出参数的值可用。 调用 sqlsrv_next_result 后，$vacationHrs 将包含存储过程返回的输出参数的值。  
   
 > [!NOTE]  
 > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -126,10 +126,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 如果值超出了范围可能最终为 bigint 类型，绑定一个输入/输出参数时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，你将需要其 SQL 字段类型指定为 SQLSRV_SQLTYPE_BIGINT。 否则，它可能会导致"超出范围的值"异常。
+> 绑定到 bigint 类型的输入/输出参数，如果值的最终可能会超出范围时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，将需要为 SQLSRV_SQLTYPE_BIGINT 指定其 SQL 字段类型。 否则，它可能会导致"超出范围的值"异常。
 
 ## <a name="example-2"></a>示例 2
-此代码示例演示如何将绑定大型 bigint 值作为输入/输出参数。  
+此代码示例演示如何将绑定为输入/输出参数的大型 bigint 值。  
 
 ```
 <?php
@@ -155,7 +155,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [如何：使用 SQLSRV 驱动程序指定参数方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)

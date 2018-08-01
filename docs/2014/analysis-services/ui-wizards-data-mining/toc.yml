@@ -1,0 +1,45 @@
+- name: 数据挖掘分析 UI 向导
+  href: ui-wizards-data-mining.md
+- name: 数据挖掘向导
+  href: ../data-mining-wizards.md
+- name: 数据挖掘向导的 F1 帮助
+  href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
+  items:
+    - name: 选择定义方法（数据挖掘向导）
+      href: ../select-the-definition-method-data-mining-wizard.md
+    - name: 创建数据挖掘结构（数据挖掘向导）
+      href: ../create-the-data-mining-structure-data-mining-wizard.md
+    - name: 选择数据源视图（数据挖掘向导）
+      href: ../select-data-source-view-data-mining-wizard.md
+    - name: 浏览数据源视图（数据挖掘向导）
+      href: ../browse-data-source-view-data-mining-wizard.md
+    - name: 指定表类型(数据挖掘向导)
+      href: ../specify-table-types-data-mining-wizard.md
+    - name: 指定定型数据（数据挖掘向导）
+      href: ../specify-the-training-data-data-mining-wizard.md
+    - name: 指定列内容和数据类型（数据挖掘向导）
+      href: ../specify-column-content-and-data-type-data-mining-wizard.md
+    - name: 创建测试集
+      href: ../create-testing-set-data-mining-wizard.md
+    - name: 提供相关列建议（数据挖掘向导）
+      href: ../suggest-related-columns-data-mining-wizard.md
+    - name: 选择源多维数据集维度（数据挖掘向导）
+      href: ../select-the-source-cube-dimension-data-mining-wizard.md
+    - name: 选择事例键（数据挖掘向导）
+      href: ../select-the-case-key-data-mining-wizard.md
+    - name: 选择事例级别列（数据挖掘向导）
+      href: ../select-case-level-columns-data-mining-wizard.md
+    - name: 指定挖掘模型列用法（数据挖掘向导）
+      href: ../specify-mining-model-column-usage-data-mining-wizard.md
+    - name: 选择度量值组维度（添加新的嵌套表向导）
+      href: ../select-a-measure-group-dimension-add-new-nested-table-wizard.md
+    - name: 选择嵌套表键（添加新的嵌套表向导）
+      href: ../select-nested-table-key-add-new-nested-table-wizard.md
+    - name: 选择嵌套表列（添加新的嵌套表向导）
+      href: ../select-nested-table-columns-add-new-nested-table-wizard.md
+    - name: 指定列的内容和数据类型（数据挖掘向导）
+      href: ../specify-the-column-s-content-and-data-type-data-mining-wizard.md
+    - name: 对源多维数据集进行切片（数据挖掘向导）
+      href: ../slice-source-cube-data-mining-wizard.md
+    - name: 完成向导（数据挖掘向导）
+      href: ../completing-the-wizard-data-mining-wizard.md

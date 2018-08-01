@@ -1,0 +1,10 @@
+- name: CLR 集成和事务
+  href: clr-integration-and-transactions.md
+- name: 访问当前事务
+  href: accessing-the-current-transaction.md
+- name: 事务生存期
+  href: transaction-lifetimes.md
+- name: 事务升级
+  href: transaction-promotion.md
+- name: 使用 System.Transactions
+  href: using-system-transactions.md

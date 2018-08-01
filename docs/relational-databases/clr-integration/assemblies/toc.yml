@@ -1,0 +1,8 @@
+- name: 管理 CLR 集成程序集
+  href: managing-clr-integration-assemblies.md
+- name: 改变程序集
+  href: altering-an-assembly.md
+- name: 创建程序集
+  href: creating-an-assembly.md
+- name: 删除程序集
+  href: dropping-an-assembly.md

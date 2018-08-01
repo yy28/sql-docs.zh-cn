@@ -1,0 +1,321 @@
+- name: 概述
+  items:
+    - name: 什么是 SQL Server 机器学习服务？
+      href: what-is-sql-server-machine-learning.md
+      items:
+        - name: 数据库内分析
+          href: r/sql-server-r-services.md
+        - name: 独立服务器
+          href: r/r-server-standalone.md
+    - name: 新增功能
+      href: what-s-new-in-sql-server-machine-learning-services.md
+    - name: 各版本功能
+      href: r/differences-in-r-features-between-editions-of-sql-server.md
+- name: 体系结构
+  href: architecture-overview-machine-learning.md
+  items:
+    - name: R
+      href: r/architecture-overview-sql-server-r.md
+      items:
+        - name: R 互操作性
+          href: r/r-interoperability-in-sql-server.md
+        - name: 支持 R 集成的组件
+          href: r/new-components-in-sql-server-to-support-r.md
+        - name: R 的安全性
+          href: r/security-overview-sql-server-r.md
+    - name: Python
+      href: python/architecture-overview-sql-server-python.md
+      items:
+        - name: 机器学习服务中的 Python
+          href: python/sql-server-python-services.md
+        - name: Python 互操作性
+          href: python/python-interoperability.md
+        - name: Python 支持组件
+          href: python/new-components-in-sql-server-to-support-python-integration.md
+        - name: Python 安全性
+          href: python/security-overview-sql-server-python-services.md
+- name: Install
+  items:
+    - name: SQL Server 2017
+      items:
+        - name: 数据库内分析
+          href: install/sql-machine-learning-services-windows-install.md
+        - name: 独立服务器
+          href: install/sql-machine-learning-standalone-windows-install.md
+    - name: SQL Server 2016
+      items:
+        - name: R Services（数据库内）
+          href: install/sql-r-services-windows-install.md
+        - name: R Server (Standalone)
+          href: install/sql-r-standalone-windows-install.md
+    - name: 预定型模型
+      href: install/sql-pretrained-models-install.md
+    - name: 命令提示符设置
+      href: install/sql-ml-component-commandline-install.md
+    - name: 脱机设置（无 Internet）
+      href: install/sql-ml-component-install-without-internet-access.md
+    - name: 升级 R 和 Python
+      href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+    - name: 设置 R 工具
+      href: r/set-up-a-data-science-client.md
+    - name: 设置 Python 工具
+      href: python/setup-python-client-tools-sql.md
+- name: 快速入门
+  items:
+    - name: R
+      items:
+        - name: Hello World（R 和 SQL）
+          href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+        - name: 处理输入和输出
+          href: tutorials/rtsql-working-with-inputs-and-outputs.md
+        - name: 处理数据类型和对象
+          href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+        - name: 创建预测模型
+          href: tutorials/rtsql-create-a-predictive-model-r.md
+        - name: 通过模型预测和绘图
+          href: tutorials/rtsql-predict-and-plot-from-model.md
+- name: 教程
+  href: tutorials/machine-learning-services-tutorials.md
+  items:
+    - name: R
+      href: tutorials/sql-server-r-tutorials.md
+      items:
+        - name: 了解数据库内分析
+          href: tutorials/sqldev-in-database-r-for-sql-developers.md
+          items:
+            - name: 1 - 获取数据和脚本
+              href: tutorials/sqldev-download-the-sample-data.md
+            - name: 2 - 设置环境
+              href: r/sqldev-import-data-to-sql-server-using-powershell.md
+            - name: 3 - 可视化数据
+              href: tutorials/sqldev-explore-and-visualize-the-data.md
+            - name: 4 - 创建数据特征
+              href: tutorials/sqldev-create-data-features-using-t-sql.md
+            - name: 5 - 定型并保存到 SQL
+              href: r/sqldev-train-and-save-a-model-using-t-sql.md
+            - name: 6 - 预测结果
+              href: tutorials/sqldev-operationalize-the-model.md
+        - name: 数据科学端到端演练
+          href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+          items:
+            - name: 准备数据
+              href: tutorials/walkthrough-prepare-the-data.md
+            - name: 使用 SQL 探索数据
+              href: tutorials/walkthrough-view-and-explore-the-data.md
+            - name: 使用 R 汇总数据
+              href: tutorials/walkthrough-view-and-summarize-data-using-r.md
+            - name: 创建图形和绘图
+              href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
+            - name: 创建数据特征
+              href: tutorials/walkthrough-create-data-features.md
+            - name: 生成并保存模型
+              href: tutorials/walkthrough-build-and-save-the-model.md
+            - name: 部署和使用模型
+              href: tutorials/walkthrough-deploy-and-use-the-model.md
+        - name: 使用 RevoScaleR 深入探索
+          href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+          items:
+            - name: 创建数据库和权限
+              href: tutorials/deepdive-work-with-sql-server-data-using-r.md
+            - name: 使用 RxSqlServerData 创建数据对象
+              href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+            - name: 查询和修改数据
+              href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
+            - name: 定义计算上下文
+              href: tutorials/deepdive-define-and-use-compute-contexts.md
+            - name: 创建并运行 R 脚本
+              href: tutorials/deepdive-create-and-run-r-scripts.md
+            - name: 可视化数据
+              href: tutorials/deepdive-visualize-sql-server-data-using-r.md
+            - name: 创建模型
+              href: tutorials/deepdive-create-models.md
+            - name: 对新数据进行评分
+              href: tutorials/deepdive-score-new-data.md
+            - name: 转换数据
+              href: tutorials/deepdive-transform-data-using-r.md
+            - name: 使用 rxImport 将数据加载到内存中
+              href: tutorials/deepdive-load-data-into-memory-using-rximport.md
+            - name: 使用 rxDataStep 创建表
+              href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+            - name: 使用 rxDataStep 执行区块分析
+              href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+            - name: 在本地计算上下文中分析数据
+              href: tutorials/deepdive-analyze-data-in-local-compute-context.md
+            - name: 在 SQL Server 和 XDF 文件之间移动数据
+              href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+            - name: 创建简单模拟
+              href: tutorials/deepdive-create-a-simple-simulation.md
+    - name: Python
+      href: tutorials/sql-server-python-tutorials.md
+      items:
+        - name: 使用 T-SQL 运行 Python
+          href: tutorials/run-python-using-t-sql.md
+          items:
+            - name: 在存储过程中包装 Python
+              href: tutorials/wrap-python-in-tsql-stored-procedure.md
+            - name: 通过 SQL Server 中的 Python 模型进行定型和评分
+              href: tutorials/train-score-using-python-in-tsql.md
+            - name: 在 SQL Server 计算上下文中使用 revoscalepy 创建模型
+              href: tutorials/use-python-revoscalepy-to-create-model.md
+        - name: 了解数据库内分析
+          href: tutorials/sqldev-in-database-python-for-sql-developers.md
+          items:
+            - name: 获取数据和脚本
+              href: tutorials/sqldev-py1-download-the-sample-data.md
+            - name: 导入数据
+              href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+            - name: 浏览并可视化数据
+              href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+            - name: 创建数据特征
+              href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+            - name: 定型并保存模型
+              href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+            - name: 运营模型
+              href: tutorials/sqldev-py6-operationalize-the-model.md
+- name: 示例
+  href: 'https://github.com/Microsoft/sql-server-samples'
+- name: 解决方案
+  href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: 操作指南
+  href: r/sql-server-machine-learning-tasks.md
+  items:
+    - name: 包管理
+      items:
+        - name: 默认包
+          href: r/installing-and-managing-r-packages.md
+        - name: 获取包信息
+          href: r/determine-which-packages-are-installed-on-sql-server.md
+        - name: 安装新 Python 包
+          href: python/install-additional-python-packages-on-sql-server.md
+        - name: 安装新 R 包
+          href: r/install-additional-r-packages-on-sql-server.md
+          items:
+            - name: 使用 R 包管理器
+              href: r/use-r-package-managers-on-sql-server.md
+            - name: 使用 T-SQL
+              href: r/install-r-packages-tsql.md
+            - name: 使用 RevoScaleR
+              href: r/use-revoscaler-to-manage-r-packages.md
+              items:
+                - name: 启用远程 R 包管理
+                  href: r/r-package-how-to-enable-or-disable.md
+                - name: 同步 R 包
+                  href: r/package-install-uninstall-and-sync.md
+            - name: 创建 miniCRAN 存储库
+              href: r/create-a-local-package-repository-using-minicran.md
+            - name: 使用 R 包的提示
+              href: r/packages-installed-in-user-libraries.md
+    - name: 数据探索和建模
+      items:
+        - name: R 库和数据类型
+          href: r/r-libraries-and-data-types.md
+        - name: Python 库和数据类型
+          href: python/python-libraries-and-data-types.md
+        - name: 本机评分
+          href: sql-native-scoring.md
+        - name: 实时评分
+          href: real-time-scoring.md
+        - name: 使用 R 进行预测性建模
+          href: r/data-exploration-and-predictive-modeling-with-r.md
+        - name: 如何执行实时或本机评分
+          href: r/how-to-do-realtime-scoring.md
+        - name: 使用 ODBC 加载 R 对象
+          href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
+        - name: 转换 R 代码以在机器学习服务中使用
+          href: r/converting-r-code-for-use-in-sql-server.md
+        - name: 使用 rxExecBy 创建多个模型
+          href: r/creating-multiple-models-using-rxexecby.md
+        - name: 在 R 中使用来自 OLAP 多维数据集的数据
+          href: r/using-data-from-olap-cubes-in-r.md
+        - name: 使用 sqlrutils 创建存储过程
+          href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+    - name: “性能”
+      items:
+        - name: R 的性能优化 - 概述
+          href: r/sql-server-r-services-performance-tuning.md
+        - name: R 的性能优化 - SQL Server 配置）
+          href: r/sql-server-configuration-r-services.md
+        - name: R 的性能优化 - R 和数据优化
+          href: r/r-and-data-optimization-r-services.md
+        - name: R 的性能优化 - 结果
+          href: r/performance-case-study-r-services.md
+        - name: 使用 R 代码分析函数
+          href: r/using-r-code-profiling-functions.md
+    - name: 管理
+      items:
+        - name: 配置和管理 R
+          href: r/configuration-sql-server-r-services.md
+        - name: 机器学习服务的高级配置选项
+          href: r/configure-and-manage-advanced-analytics-extensions.md
+        - name: SQL Server 中 R 运行时的安全注意事项
+          href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+        - name: 修改 SQL Server 机器学习服务的用户帐户池
+          href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+        - name: 将 SQLRUserGroup 添加为数据库用户
+          href: r/add-sqlrusergroup-to-database.md
+        - name: 通过 Web 服务部署和使用模型
+          href: operationalization-with-mrsdeploy.md
+        - name: 管理和监控解决方案
+          href: r/managing-and-monitoring-r-solutions.md
+        - name: 机器学习服务的资源调控
+          href: r/resource-governance-for-r-services.md
+        - name: 为机器学习创建资源池
+          href: r/how-to-create-a-resource-pool-for-r.md
+        - name: 机器学习服务的扩展事件
+          href: r/extended-events-for-sql-server-r-services.md
+        - name: 用于监视 PREDICT 语句的扩展事件
+          href: xe-event-predict-tsql.md
+        - name: 机器学习服务的 DMV
+          href: r/dmvs-for-sql-server-r-services.md
+        - name: 使用 R 代码分析函数
+          href: r/using-r-code-profiling-functions.md
+        - name: 使用 Management Studio 中的自定义报表监视机器学习服务
+          href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+- name: 包参考
+  href: r/machine-learning-services-r-reference.md
+  items:
+    - name: MicrosoftML (SQL)
+      href: using-the-microsoftml-package.md
+    - name: RevoScaleR (SQL)
+      href: r/revoscaler-overview.md
+    - name: 用于 SQL Server 数据的 RevoScaleR 函数列表
+      href: r/scaler-functions-for-working-with-sql-server-data.md
+    - name: sqlrutils (SQL)
+      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: olapR (SQL)
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: revoscalepy (SQL)
+      href: python/what-is-revoscalepy.md
+- name: Resources
+  items:
+    - name: 已知问题
+      href: known-issues-for-sql-server-machine-learning-services.md
+    - name: 发行说明
+      href: 'https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes'
+    - name: 设置虚拟机
+      href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+    - name: 故障排除
+      href: machine-learning-troubleshooting-faq.md
+      items:
+        - name: 数据收集
+          href: data-collection-ml-troubleshooting-process.md
+        - name: 安装和升级错误
+          href: r/upgrade-and-installation-faq-sql-server-r-services.md
+        - name: 启动板和外部脚本执行错误
+          href: common-issues-external-script-execution.md
+        - name: R 脚本错误
+          href: r-script-execution-errors.md
+    - name: 博客
+      items:
+        - name: SQL Server
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: Microsoft R Server
+          href: 'https://blogs.msdn.microsoft.com/microsoftrservertigerteam/'
+        - name: 机器学习
+          href: 'https://blogs.technet.microsoft.com/machinelearning/'
+    - name: 论坛
+      items:
+        - name: SQL Server
+          href: 'https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver'
+        - name: Machine Learning Server
+          href: 'https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR'

@@ -1,0 +1,32 @@
+- name: 概述 (SMO)
+  href: overview-smo.md
+- name: SQL Server 管理对象 (SMO) 编程指南
+  href: sql-server-management-objects-smo-programming-guide.md
+- name: 安装 SMO
+  href: installing-smo.md
+- name: SMO 入门
+  href: getting-started-in-smo.md
+- name: 创建程序 +
+  href: ../../relational-databases/server-management-objects-smo/create-program/calling-methods.md
+- name: 任务 +
+  href: ../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md
+- name: SMO 中的向后兼容性
+  href: backward-compatibility-in-smo.md
+- name: 文件和版本号
+  href: files-and-version-numbers.md
+- name: '如何在 Visual Studio .NET 中创建 Visual C# SMO 项目'
+  href: how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
+- name: SMO 对象模型关系图
+  href: smo-object-model-diagram.md
+- name: SMO 对象模型命名空间
+  href: smo-object-model-namespaces.md
+- name: SMO 对象模型
+  href: smo-object-model.md
+- name: 'SMO 编程 - Visual C# .NET 入门'
+  href: smo-programming-getting-started-in-visual-csharp-net.md
+- name: SMO 编程语言
+  href: smo-programming-languages.md
+- name: SMO 语法约定
+  href: smo-syntax-conventions.md
+- name: SMO 许可条款
+  href: smo-license-terms.md

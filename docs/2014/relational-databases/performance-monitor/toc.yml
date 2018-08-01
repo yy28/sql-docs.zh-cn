@@ -1,0 +1,103 @@
+- name: 监视资源使用情况（系统监视器）
+  href: monitor-resource-usage-system-monitor.md
+  items:
+    - name: 运行系统监视器
+      href: run-system-monitor.md
+    - name: 监视磁盘使用情况
+      href: monitor-disk-usage.md
+    - name: 监视 CPU 使用率
+      href: monitor-cpu-usage.md
+    - name: 监视内存使用量
+      href: monitor-memory-usage.md
+- name: 创建 SQL Server 数据库警报
+  href: create-a-sql-server-database-alert.md
+- name: 创建图表、警报、日志和报表
+  href: create-charts-alerts-logs-and-reports.md
+- name: 使用 SQL Server 对象
+  href: use-sql-server-objects.md
+  items:
+    - name: SQL Server 代理中的 Alerts 对象
+      href: sql-server-agent-alerts-object.md
+    - name: SQL Server 代理中的 Jobs 对象
+      href: sql-server-agent-jobs-object.md
+    - name: SQL Server 代理中的 JobSteps 对象
+      href: sql-server-agent-jobsteps-object.md
+    - name: SQL Server 代理中的 Statistics 对象
+      href: sql-server-agent-statistics-object.md
+    - name: SQL Server Access Methods 对象
+      href: sql-server-access-methods-object.md
+    - name: SQL Server，可用性副本
+      href: sql-server-availability-replica.md
+    - name: SQL Server Backup Device 对象
+      href: sql-server-backup-device-object.md
+    - name: SQL Server Broker Activation 对象
+      href: sql-server-broker-activation-object.md
+    - name: SQL Server Broker Statistics 对象
+      href: sql-server-broker-statistics-object.md
+    - name: SQL Server Broker TO Statistics 对象
+      href: sql-server-broker-to-statistics-object.md
+    - name: SQL Server、Broker 和 DBM 传输对象
+      href: sql-server-broker-dbm-transport-object.md
+    - name: SQL Server Buffer Manager 对象
+      href: sql-server-buffer-manager-object.md
+    - name: SQL Server Buffer Node 对象
+      href: sql-server-buffer-node.md
+    - name: SQL Server CLR 对象
+      href: sql-server-clr-object.md
+    - name: SQL Server Cursor Manager by Type 对象
+      href: sql-server-cursor-manager-by-type-object.md
+    - name: SQL Server Cursor Manager Total 对象
+      href: sql-server-cursor-manager-total-object.md
+    - name: SQL Server Database Mirroring 对象
+      href: sql-server-database-mirroring-object.md
+    - name: SQL Server，数据库副本
+      href: sql-server-database-replica.md
+    - name: SQL Server，Databases 对象
+      href: sql-server-databases-object.md
+    - name: SQL Server，Deprecated Features 对象
+      href: sql-server-deprecated-features-object.md
+    - name: SQL Server ExecStatistics 对象
+      href: sql-server-execstatistics-object.md
+    - name: SQL Server General Statistics 对象
+      href: sql-server-general-statistics-object.md
+    - name: SQL Server，HTTP_STORAGE_OBJECT
+      href: sql-server-http-storage-object.md
+    - name: SQL Server Latches 对象
+      href: sql-server-latches-object.md
+    - name: SQL Server Locks 对象
+      href: sql-server-locks-object.md
+    - name: SQL Server Memory Manager 对象
+      href: sql-server-memory-manager-object.md
+    - name: SQL Server、内存节点
+      href: sql-server-memory-node.md
+    - name: SQL Server Plan Cache 对象
+      href: sql-server-plan-cache-object.md
+    - name: SQL Server，Resource Pool Stats 对象
+      href: sql-server-resource-pool-stats-object.md
+    - name: SQL Server SQL Errors 对象
+      href: sql-server-sql-errors-object.md
+    - name: 'SQL Server:SQL Statistics 对象'
+      href: sql-server-sql-statistics-object.md
+    - name: SQL Server Transactions 对象
+      href: sql-server-transactions-object.md
+    - name: SQL Server User Settable 对象
+      href: sql-server-user-settable-object.md
+    - name: SQL Server Wait Statistics 对象
+      href: sql-server-wait-statistics-object.md
+    - name: SQLServer，Workload Group Stats 对象
+      href: sql-server-workload-group-stats-object.md
+- name: XTP（内存中 OLTP）性能计数器
+  href: sql-server-xtp-in-memory-oltp-performance-counters.md
+  items:
+    - name: XTP 游标
+      href: sql-server-xtp-cursors.md
+    - name: XTP 垃圾收集
+      href: sql-server-xtp-garbage-collection.md
+    - name: XTP 虚拟处理器
+      href: sql-server-xtp-phantom-processor.md
+    - name: XTP 存储
+      href: sql-server-xtp-storage.md
+    - name: XTP 事务日志
+      href: sql-server-xtp-transaction-log.md
+    - name: XTP 事务
+      href: sql-server-xtp-transactions.md

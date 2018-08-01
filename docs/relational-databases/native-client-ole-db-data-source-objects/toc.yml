@@ -1,0 +1,14 @@
+- name: 数据源对象 (OLE DB)
+  href: data-source-objects-ole-db.md
+- name: 数据源信息属性
+  href: data-source-information-properties.md
+- name: 数据源属性 (OLE DB)
+  href: data-source-properties-ole-db.md
+- name: 初始化和授权属性
+  href: initialization-and-authorization-properties.md
+- name: 持久化数据源对象
+  href: persisted-data-source-objects.md
+- name: 会话属性 - SQL Server Native Client OLE DB 提供程序
+  href: session-properties-sql-server-native-client-ole-db-provider.md
+- name: 会话
+  href: sessions.md

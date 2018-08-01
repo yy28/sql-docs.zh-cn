@@ -1,0 +1,18 @@
+- name: SQLXML 4.0 数据访问组件 - SQLXMLOLEDB 提供程序
+  href: sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+- name: 应用 XSL 转换（SQLXMLOLEDB 访问接口）
+  href: applying-an-xsl-transformation-sqlxmloledb-provider.md
+- name: 执行 SQL 查询（SQLXMLOLEDB 访问接口）
+  href: executing-sql-queries-sqlxmloledb-provider.md
+- name: 执行包含 SQL 查询的模板（SQLXMLOLEDB 访问接口）
+  href: executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md
+- name: 执行包含 XPath 查询的模板（SQLXMLOLEDB 访问接口）
+  href: executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md
+- name: 执行 XPath 查询（SQLXMLOLEDB 访问接口）
+  href: executing-xpath-queries-sqlxmloledb-provider.md
+- name: 执行带命名空间的 XPath 查询（SQLXMLOLEDB 访问接口）
+  href: executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md
+- name: SQLXMLOLEDB 访问接口简介 (SQLXML 4.0)
+  href: introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md
+- name: 使用 SQLXMLOLEDB 访问接口 (SQLXML 4.0)
+  href: using-the-sqlxmloledb-provider-sqlxml-4-0.md

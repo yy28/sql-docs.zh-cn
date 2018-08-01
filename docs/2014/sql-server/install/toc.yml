@@ -1,0 +1,444 @@
+- name: SQL Server 2014 升级顾问
+  href: sql-server-2014-upgrade-advisor.md
+- name: 安装升级顾问
+  href: installing-upgrade-advisor.md
+  items:
+    - name: 升级顾问必备组件
+      href: upgrade-advisor-prerequisites.md
+    - name: 从命令提示符安装升级顾问
+      href: installing-upgrade-advisor-from-the-command-prompt.md
+- name: 使用升级顾问
+  href: working-with-upgrade-advisor.md
+- name: 升级顾问概述
+  href: overview-of-upgrade-advisor.md
+  items:
+    - name: 升级过程概述
+      href: upgrade-process-overview.md
+    - name: 升级顾问概述
+      href: upgrade-advisor-overview.md
+    - name: 运行升级顾问（用户界面）
+      href: running-upgrade-advisor-user-interface.md
+    - name: 运行升级顾问（命令提示符）
+      href: running-upgrade-advisor-command-prompt.md
+    - name: 使用报表
+      href: using-reports.md
+    - name: 升级顾问错误
+      href: upgrade-advisor-errors.md
+- name: 升级顾问操作指南主题
+  href: upgrade-advisor-how-to-topics.md
+  items:
+    - name: 如何安装升级顾问
+      href: how-to-install-upgrade-advisor.md
+    - name: 如何启动升级顾问
+      href: how-to-launch-upgrade-advisor.md
+    - name: 如何运行升级顾问分析向导
+      href: how-to-run-the-upgrade-advisor-analysis-wizard.md
+    - name: 如何查看升级顾问报表
+      href: how-to-view-an-upgrade-advisor-report.md
+    - name: 如何筛选报表
+      href: how-to-filter-reports.md
+    - name: 如何导出报表
+      href: how-to-export-reports.md
+- name: 用户界面参考
+  href: upgrade-advisor-user-interface-reference.md
+  items:
+    - name: SQL Server 组件
+      href: sql-server-components.md
+    - name: 连接参数
+      href: connection-parameters.md
+    - name: SQL Server 参数
+      href: sql-server-parameters.md
+    - name: Analysis Services 参数
+      href: analysis-services-parameters.md
+    - name: Reporting Services 参数
+      href: reporting-services-parameters.md
+    - name: Integration Services 参数
+      href: integration-services-parameters.md
+    - name: 确认升级顾问设置
+      href: confirm-upgrade-advisor-settings.md
+    - name: 升级顾问进度
+      href: upgrade-advisor-progress.md
+- name: 解决升级问题
+  href: resolving-upgrade-issues.md
+  items:
+    - name: 最新的升级问题
+      href: late-breaking-upgrade-issues.md
+    - name: 数据库引擎升级问题
+      href: database-engine-upgrade-issues.md
+      items:
+        - name: 0xFFFF 字符不能用作对象标识符
+          href: 0xffff-character-is-not-valid-as-an-object-identifier.md
+        - name: 升级后，新的保留关键字不能用作标识符
+          href: after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers.md
+        - name: string-length 和 substring 行为的变化
+          href: changes-to-behavior-of-string-length-and-substring.md
+        - name: 对 syslockinfo 和 sp_lock 中的行为的更改
+          href: changes-to-behavior-in-syslockinfo-and-sp-lock.md
+        - name: 对跟踪标志的行为的更改
+          href: changes-to-behavior-of-trace-flags.md
+        - name: 对 SQL Server Reporting Services Standard 和 Enterprise 的 CPU 和内存限制的更改
+          href: cpu-memory-limits-changes-sql-server-reporting-services-standard-enterprise.md
+        - name: 'xs:dateTime、xs:date 和 xs:time 类型的存储格式发生更改'
+          href: changes-to-the-storage-format-for-types-xs-datetime-xs-date-and-xs-time.md
+        - name: ORDER BY 子句中的列别名不能以表别名作为前缀
+          href: column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias.md
+        - name: 现在，不推荐使用的 DBCC 命令已删除
+          href: deprecated-dbcc-commands-have-now-been-removed.md
+        - name: 分离数据库 ID 32767
+          href: detach-database-id-32767.md
+        - name: 无法升级休眠的 SQL Server 6.5 登录名
+          href: dormant-sql-server-6-5-logins-cannot-be-upgraded.md
+        - name: 在 90 或更高的兼容模式下，视图中不允许 FOR BROWSE
+          href: for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes.md
+        - name: 在 90 或更高的兼容模式下，FOR XML AUTO 查询返回派生表引用
+          href: for-xml-auto-queries-return-derived-table-references-90-later-compatibility-mode.md
+        - name: INFORMATION_SCHEMA.SCHEMATA 返回数据库中的架构名称，而不是实例中的数据库
+          href: information-schema-schemata-returns-schema-names-not-databases.md
+        - name: 无效的命名管道名称会妨碍升级
+          href: invalid-named-pipe-name-can-block-upgrade.md
+        - name: 很大的备份或还原历史记录表会使升级显得不响应
+          href: large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond.md
+        - name: 在 90 或更高的兼容模式下，大的常量作为大值类型键入
+          href: large-constants-typed-as-large-value-types-90-later-compatibility-mode.md
+        - name: 日志传送在升级后将无法运行
+          href: log-shipping-will-not-run-after-upgrading.md
+        - name: 修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值
+          href: modify-applications-to-expect-bigint-values-from-sysperfinfo-cntr-value.md
+        - name: 修改使用 Banyan VINES 顺序包协议 (SPP)、多协议、AppleTalk 或 NWLink IPX SPX 网络协议的连接
+          href: modify-connections-banyan-vines-spp-multiprotocol-appletalk-nwlink-ipx-spx.md
+        - name: 修改依赖于 HOST_ID 的返回类型的索引
+          href: modify-indexes-that-depend-on-the-return-type-of-host-id.md
+        - name: 修改读写到二进制大型对象(BLOB)的 UPDATETEXT 语句
+          href: modify-updatetext-statements-that-read-and-write-to-binary-large-objects-blobs.md
+        - name: 即使触发器嵌套功能设置为 OFF，也会触发嵌套的 AFTER 触发器
+          href: nested-after-trigger-fires-even-when-trigger-nesting-is-off.md
+        - name: sp_helptrigger 输出中的新列可能会影响应用程序
+          href: new-column-in-output-of-sp-helptrigger-may-impact-applications.md
+        - name: osql 不再支持 ED 和 !! 命令
+          href: osql-no-longer-supports-the-ed-and-commands.md
+        - name: 在 90 或更高的兼容模式下不支持外部联接运算符 *= 和 =*
+          href: outer-join-operators-and-are-not-supported-in-90-or-later-compatibility-modes.md
+        - name: 无法升级只读数据库
+          href: read-only-databases-cannot-be-upgraded.md
+        - name: 删除对不推荐使用的 DBCC CONCURRENCYVIOLATION 命令的调用
+          href: remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command.md
+        - name: 删除保留关键字后的冒号
+          href: remove-colon-following-reserved-keyword.md
+        - name: 删除对于在 DML 触发器内部插入和删除的表的 DDL 操作
+          href: remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers.md
+        - name: 删除对不推荐使用的系统存储过程的引用
+          href: remove-references-to-deprecated-system-stored-procedures.md
+        - name: 删除对未记录的系统表的引用
+          href: remove-references-to-undocumented-system-tables.md
+        - name: 删除用于去除系统对象的语句
+          href: remove-statements-that-drop-system-objects.md
+        - name: 删除用来修改系统对象的列级权限的语句
+          href: remove-statements-that-modify-column-level-permissions-on-system-objects.md
+        - name: 删除用于修改系统对象的语句
+          href: remove-statements-that-modify-system-objects.md
+        - name: 如果计划启用变更数据捕获则删除 cdc 架构
+          href: remove-the-cdc-schema-if-you-plan-to-enable-change-data-capture.md
+        - name: 重命名与固定服务器角色名称匹配的登录名
+          href: rename-logins-matching-fixed-server-role-names.md
+        - name: 删除根据保留的 DATE 和 TIME 数据类型命名的 UDT
+          href: remove-udt-s-named-after-the-reserved-date-and-time-data-types.md
+        - name: 删除根据保留的 ORDPATH 数据类型命名的 UDT
+          href: remove-udt-s-named-after-the-reserved-ordpath-data-type.md
+        - name: 删除根据保留的 GEOMETRY 和 GEOGRAPHY 数据类型命名的 UDT
+          href: remove-udts-named-after-the-reserved-geometry-and-geography-data-types.md
+        - name: 重命名 sys 用户
+          href: rename-user-sys.md
+        - name: 在 SQL Server 2005 中，SERVERPROPERTY 返回 LCID 属性的正确结果
+          href: serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005.md
+        - name: 在域控制器上升级到 SQL Server 2008 的服务帐户要求
+          href: service-account-requirements-upgrade-sql-server-2008-on-domain-controller.md
+        - name: 在 90 兼容模式下使用表提示时指定 WITH 关键字
+          href: specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode.md
+        - name: 在此版本的 SQL Server 中将不再支持 SQL Server 本机 SOAP。
+          href: sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server.md
+        - name: 在 80 兼容模式中将忽略索引视图定义中的表提示且在 90 或更高的模式中不允许表提示
+          href: table-hints-indexed-views-ignored-80-compatibility-mode-not-allowed-90-later.md
+        - name: 更新 OPENXML XPath 表达式以删除不支持的函数
+          href: update-openxml-xpath-expressions-to-remove-unsupported-functions.md
+        - name: 使用 sp_rename 重命名重复的索引名称
+          href: use-sp-rename-to-rename-duplicate-index-name.md
+        - name: 使用完整路径注册扩展存储过程 DLL 名称
+          href: use-the-full-path-to-register-extended-stored-procedure-dll-names.md
+        - name: system_function_schema 中不允许使用用户定义函数
+          href: user-defined-functions-are-not-allowed-in-system-function-schema.md
+        - name: 确保升级过程中所有文件组均可写
+          href: verify-all-filegroups-are-writeable-during-the-upgrade-process.md
+        - name: 升级期间，确保为所有数据文件和日志文件启用了自动增长功能
+          href: verify-autogrow-turned-on-for-all-data-and-log-files-during-upgrade.md
+        - name: 确保升级过程中压缩驱动器上没有任何数据库文件
+          href: verify-no-database-files-on-compressed-drives-during-upgrade.md
+        - name: 关于客户端对 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的使用的警告
+          href: warning-about-client-side-usage-of-geometry-geography-and-hierarchyid.md
+        - name: 已删除 Web 助手存储过程
+          href: web-assistant-stored-procedures-have-been-removed.md
+        - name: 不支持 Winsock 代理配置
+          href: winsock-proxy-configuration-not-supported.md
+        - name: 在 90 或更高的兼容模式下，包含 TOP 的视图不支持 WITH CHECK OPTION
+          href: with-check-option-not-supported-in-top-views-90-later-compatibility-mode.md
+        - name: 在 90 或更高的兼容模式下，CREATE STATISTICS 语句中不支持 WITH ROWS
+          href: with-rows-not-supported-in-create-statistics-statements-90-later-compatibility-mode.md
+        - name: 其他数据库引擎升级问题
+          href: other-database-engine-upgrade-issues.md
+          items:
+            - name: 数据库镜像不推荐使用声明。
+              href: database-mirroring-deprecation-announcement.md
+    - name: 全文搜索升级问题
+      href: full-text-search-upgrade-issues.md
+      items:
+        - name: 全文搜索自 SQL Server 2008 以后已发生更改
+          href: full-text-search-has-changed-since-sql-server-2008.md
+        - name: 全文搜索断字符和筛选器在 SQL Server 2005 和 SQL Server 2008 中有重大改进
+          href: full-text-search-word-breakers-filters-improved-sql-server-2005-2008.md
+        - name: 全文目录名称的长度不能超过 120 个字符
+          href: length-of-full-text-catalog-names-restricted-to-120-characters.md
+        - name: Microsoft SQL Server 全文引擎在默认情况下不加载未签名的第三方组件
+          href: full-text-engine-sql-server-default-will-not-load-third-party-components.md
+        - name: 修改使用已停用全文搜索属性的存储过程
+          href: modify-stored-procedures-that-use-discontinued-full-text-search-properties.md
+        - name: 不允许对非持久化计算列建立全文检索
+          href: full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed.md
+        - name: 不支持对 master、tempdb 和 model 数据库建立全文检索
+          href: full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported.md
+        - name: 升级将导致全文搜索在默认情况下使用实例级(而非全局)的断字符和筛选器
+          href: full-text-search-uses-instance-not-global-level-defaults-after-upgrade.md
+        - name: 升级后，全文搜索将不再允许 OUTPUT INTO 表达式中使用谓词
+          href: full-text-search-will-not-allow-predicates-in-output-into-expressions-after-upgrade.md
+    - name: 复制升级问题
+      href: replication-upgrade-issues.md
+      items:
+        - name: 升级将修改使用消息队列的排队更新订阅
+          href: upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing.md
+        - name: 其他复制升级问题
+          href: other-replication-upgrade-issues.md
+    - name: Reporting Services 升级问题（升级顾问）
+      href: reporting-services-upgrade-issues-upgrade-advisor.md
+      items:
+        - name: 报表服务器网站上的客户端证书（升级顾问）
+          href: client-certificates-on-the-report-server-web-site-upgrade-advisor.md
+        - name: 在报表服务器上检测到自定义扩展插件（升级顾问）
+          href: custom-extensions-were-detected-on-the-report-server-upgrade-advisor.md
+        - name: 在报表服务器上检测到自定义报表项（升级顾问）
+          href: custom-report-items-were-detected-on-the-report-server-upgrade-advisor.md
+        - name: 未检测到 IIS 向后兼容组件（升级顾问）
+          href: iis-backward-compatibility-components-were-not-detected-upgrade-advisor.md
+        - name: 检测到 IP 地址限制（升级顾问）
+          href: ip-address-restriction-detected-upgrade-advisor.md
+        - name: 在报表服务器站点上检测到 ISAPI 筛选器（升级顾问）
+          href: isapi-filters-detected-on-the-report-server-site-upgrade-advisor.md
+        - name: 在报表服务器计算机上检测到过时的扩展插件（升级顾问）
+          href: obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor.md
+        - name: 未配置报表服务器数据库（升级顾问）
+          href: report-server-database-is-not-configured-upgrade-advisor.md
+        - name: 检测到 SQL Server 2005 报表服务器 Web 服务组（升级顾问）
+          href: sql-server-2005-report-server-web-service-group-detected-upgrade-advisor.md
+        - name: 未指定虚拟目录（升级顾问）
+          href: virtual-directories-are-unspecified-upgrade-advisor.md
+        - name: 虚拟目录包含不支持的身份验证方法（升级顾问）
+          href: virtual-directory-has-unsupported-authentication-method-upgrade-advisor.md
+        - name: 对 SQL Server Standard 和 Enterprise 的 CPU 和内存限制的更改（升级顾问）
+          href: cpu-memory-limits-changes-sql-server-standard-enterprise-upgrade-advisor.md
+        - name: SharePoint 场要求使用域帐户（升级顾问）
+          href: domain-accounts-required-for-sharepoint-farm-upgrade-advisor.md
+        - name: 直接浏览到报表服务器（升级顾问）
+          href: direct-browsing-to-report-server-upgrade-advisor.md
+        - name: 安装 Microsoft SharePoint 2007（升级顾问）
+          href: microsoft-sharepoint-2007-is-installed-upgrade-advisor.md
+        - name: 并行安装 Microsoft SQL Server Reporting Services SharePoint 共享服务（升级顾问）
+          href: sql-server-reporting-services-sharepoint-shared-service-side-by-side-upgrade-advisor.md
+        - name: 不兼容的数据库引擎服务器排序规则（升级顾问）
+          href: incompatible-database-engine-server-collation-upgrade-advisor.md
+        - name: 其他 Reporting Services 升级问题
+          href: other-reporting-services-upgrade-issues.md
+    - name: SQL Server 代理升级问题
+      href: sql-server-agent-upgrade-issues.md
+      items:
+        - name: 数据库维护计划被取代
+          href: database-maintenance-plans-superseded.md
+        - name: 只有 sysadmin 用户才能将作业步骤日志文件写入文件系统
+          href: only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md
+        - name: 用新存储过程代替使用的 xp_sqlagent_proxy_account 扩展存储过程
+          href: replace-xp-sqlagent-proxy-account-extended-sp-with-new-stored-procedures.md
+        - name: SQL Server 代理的日志传送作业类别导致升级失败
+          href: sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md
+        - name: SQL Server Agent 服务不能使用 SQL Server 身份验证
+          href: sql-server-agent-service-cannot-use-sql-server-authentication.md
+        - name: 更新 SQL Server 代理作业步骤中的标记语法
+          href: update-token-syntax-in-sql-server-agent-job-steps.md
+        - name: 升级主服务器前先升级所有目标服务器
+          href: upgrade-all-target-servers-before-upgrading-the-master-server.md
+        - name: 升级会将 SQL Server 代理用户的代理帐户更改为临时的 UpgradedProxyAccount
+          href: upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md
+- name: 安装程序和服务安装
+  href: setup-and-servicing-installation.md
+  items:
+    - name: SQL Server 的许可注意事项
+      href: licensing-considerations-for-sql-server.md
+- name: SQL Server 安装文档概述
+  href: overview-of-sql-server-setup-documentation.md
+- name: SQL Server 2014 安装程序的用户界面
+  href: sql-server-2014-setup-user-interface.md
+- name: SQL Server 安装程序的用户界面参考
+  href: sql-server-setup-user-interface-reference.md
+  items:
+    - name: 接受许可条款
+      href: accept-license-terms.md
+    - name: 添加 SQL Server 故障转移群集节点
+      href: add-sql-server-failover-cluster-node.md
+    - name: Analysis Services 配置 – 帐户设置
+      href: analysis-services-configuration-account-provisioning.md
+    - name: Analysis Services 配置 - 数据目录
+      href: analysis-services-configuration-data-directories.md
+    - name: 群集磁盘选择
+      href: cluster-disk-selection.md
+    - name: 群集网络配置
+      href: cluster-network-configuration.md
+    - name: 群集节点配置
+      href: cluster-node-configuration.md
+    - name: 群集节点配置(完成)
+      href: cluster-node-configuration-complete.md
+    - name: 群集资源组
+      href: cluster-resource-group.md
+    - name: 群集安全策略
+      href: cluster-security-policy.md
+    - name: 完成 - 完成映像
+      href: complete-complete-image.md
+    - name: 完成映像进度
+      href: complete-image-progress.md
+    - name: 完成映像规则
+      href: complete-image-rules.md
+    - name: 完成 - 准备映像
+      href: complete-prepare-image.md
+    - name: 完成 - 修复
+      href: complete-repair.md
+    - name: 完成 - 升级
+      href: complete-upgrade.md
+    - name: 数据库引擎配置 - 帐户设置
+      href: database-engine-configuration-account-provisioning.md
+    - name: 数据库引擎配置 - 数据目录
+      href: database-engine-configuration-data-directories.md
+    - name: 数据库引擎配置 - 文件流
+      href: database-engine-configuration-filestream.md
+    - name: 数据库引擎配置 - 用户实例
+      href: database-engine-configuration-user-instance.md
+    - name: Distributed Replay 控制器配置
+      href: distributed-replay-controller-configuration.md
+    - name: Distributed Replay 客户端配置
+      href: distributed-replay-client-configuration.md
+    - name: 版本升级规则
+      href: edition-upgrade-rules.md
+    - name: 故障转移群集报告
+      href: failover-cluster-report.md
+    - name: 查看功能
+      href: feature-review.md
+    - name: 安装规则
+      href: installation-rules.md
+    - name: 功能规则
+      href: feature-rules.md
+    - name: 功能选择
+      href: feature-selection.md
+    - name: 功能选择（卸载）
+      href: feature-selection-uninstall.md
+    - name: 选择功能（升级）
+      href: select-features-upgrade.md
+    - name: 全文搜索升级选项
+      href: full-text-search-upgrade-options.md
+    - name: 完成 - 安装
+      href: complete-installation.md
+    - name: 安装必备组件
+      href: installation-prerequisites.md
+    - name: 安装进度
+      href: installation-progress.md
+    - name: 安装类型
+      href: installation-type.md
+    - name: 实例配置
+      href: instance-configuration.md
+    - name: 实例选择（卸载）
+      href: instance-selection-uninstall.md
+    - name: 实例选择(升级)
+      href: instance-selection-upgrade.md
+    - name: 选择实例
+      href: select-instance.md
+    - name: 卸载后
+      href: post-uninstall.md
+    - name: 准备映像进度
+      href: prepare-image-progress.md
+    - name: 准备映像规则
+      href: prepare-image-rules.md
+    - name: 准备映像类型
+      href: prepare-image-type.md
+    - name: 产品密钥
+      href: product-key.md
+    - name: 进度(卸载)
+      href: progress-uninstall.md
+    - name: 已准备好完成映像
+      href: ready-to-complete-image.md
+    - name: 准备安装
+      href: ready-to-install.md
+    - name: 已可以准备映像
+      href: ready-to-prepare-image.md
+    - name: 准备修复
+      href: ready-to-repair.md
+    - name: 删除 SQL Server 故障转移群集节点
+      href: remove-sql-server-failover-cluster-node.md
+    - name: 修复进度
+      href: repair-progress.md
+    - name: Reporting Services 配置选项
+      href: reporting-services-configuration-options-ssrs.md
+    - name: Reporting Services SharePoint 模式升级
+      href: reporting-services-sharepoint-mode-upgrade-ssrs.md
+    - name: Reporting Services SharePoint 模式身份验证
+      href: reporting-services-sharepoint-mode-authentication.md
+    - name: 选择已准备实例
+      href: select-a-prepared-instance.md
+    - name: 服务器配置 - 排序规则
+      href: server-configuration-collation.md
+    - name: 服务器配置 - 服务帐户
+      href: server-configuration-service-accounts.md
+    - name: 安装角色
+      href: setup-role.md
+    - name: SQL Server 故障转移群集向导 - 完成
+      href: sql-server-failover-cluster-wizard-complete.md
+    - name: SQL Server 故障转移群集向导 - 安装
+      href: sql-server-failover-cluster-wizard-install.md
+    - name: SQL Server 故障转移群集向导 – 准备
+      href: sql-server-failover-cluster-wizard-prepare.md
+    - name: 准备升级
+      href: ready-to-upgrade.md
+    - name: 安装规则
+      href: install-rules.md
+    - name: 卸载规则
+      href: uninstallation-rules.md
+    - name: 升级进度
+      href: upgrade-progress.md
+    - name: 功能规则（升级）
+      href: feature-rules-upgrade.md
+    - name: 确认卸载选项
+      href: verify-uninstall-options.md
+- name: SQL Server 服务安装
+  href: sql-server-servicing-installation.md
+  items:
+    - name: 从命令提示符安装更新
+      href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
+    - name: 如何验证 SQL Server 更新的安装是否成功
+      href: how-to-validate-successful-installation-of-a-sql-server-update.md
+    - name: SQL Server 服务安装概述
+      href: overview-of-sql-server-servicing-installation.md
+    - name: 欢迎
+      href: welcome.md
+    - name: 许可条款
+      href: license-terms.md
+    - name: 选择功能
+      href: select-features.md
+    - name: 检查正在使用的文件
+      href: check-files-in-use.md
+    - name: 准备更新
+      href: ready-to-update.md
+    - name: 更新进度
+      href: update-progress.md
+    - name: “完成”
+      href: complete.md

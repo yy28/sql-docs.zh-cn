@@ -1,0 +1,10 @@
+- name: Filestream 和 OLE DB
+  href: filestream-and-ole-db.md
+- name: 使用 IBCPSession 将 FILESTREAM 列读入文件 (OLE DB)
+  href: read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
+- name: 使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
+  href: retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md
+- name: 使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
+  href: send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md
+- name: 向 FILESTREAM 发送数据 - ISequentialStream 绑定到 ICommandText
+  href: send-data-to-filestream-isequentialstream-bound-to-icommandtext.md

@@ -1,0 +1,23 @@
+- name: 日志文件查看器
+  href: log-file-viewer.md
+  items:
+    - name: 打开
+      href: open-log-file-viewer.md
+    - name: 脱机查看
+      href: view-offline-log-files.md
+    - name: F1 帮助
+      href: log-file-viewer-f1-help.md
+- name: 事务日志
+  href: the-transaction-log-sql-server.md
+  items:
+    - name: 管理大小
+      href: manage-the-size-of-the-transaction-log-file.md
+    - name: 排查日志已满的问题（SQL Server 错误 9002）
+      href: troubleshoot-a-full-transaction-log-sql-server-error-9002.md
+    - name: 控制事务持续性
+      href: control-transaction-durability.md
+- name: 数据库检查点
+  href: database-checkpoints-sql-server.md
+  items:
+    - name: 更改数据库的目标恢复时间
+      href: change-the-target-recovery-time-of-a-database-sql-server.md

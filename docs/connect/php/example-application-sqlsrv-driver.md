@@ -1,5 +1,5 @@
 ---
-title: 示例应用程序 （SQLSRV 驱动程序） |Microsoft 文档
+title: 示例应用程序 （SQLSRV 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d47fe33801ca8a4932b6295a5052e9948bc5ef0f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307766"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007188"
 ---
 # <a name="example-application-sqlsrv-driver"></a>示例应用程序（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,17 +30,17 @@ AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](..
   
 ### <a name="running-the-example-application"></a>运行示例应用程序  
   
-1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅[Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)。
+1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅[开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)。
 2.  将文本档后面列出的代码复制到两个文件中：adventureworks_demo.php 和 photo.php。  
 3.  将 adventureworks_demo.php 和 photo.php 文件放在 Web 服务器的根目录中。  
-4.  通过启动运行该应用程序 http://localhost/adventureworks_demo.php 从浏览器。  
+4.  运行应用程序通过启动http://localhost/adventureworks_demo.php从浏览器。  
   
 ## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  
   
 -   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息，请参阅[Microsoft Drivers for PHP for SQL Server 的系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
 -   adventureworks_demo.php 和 photo.php 文件放置在 Web 服务器的根目录中。 文件必须包含本文档后面列出的代码。  
--   SQL Server 2005 或 SQL Server 2008 中，与[AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)附加，数据库在本地计算机上安装。  
+-   已在本地计算机上安装了已连接 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库的 SQL Server 2005 或 SQL Server 2008。  
 -   安装了 Web 浏览器。  
   
 ## <a name="demonstrates"></a>演示  
@@ -559,7 +559,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [连接到服务器](../../connect/php/connecting-to-the-server.md)
 
 [比较执行函数](../../connect/php/comparing-execution-functions.md)

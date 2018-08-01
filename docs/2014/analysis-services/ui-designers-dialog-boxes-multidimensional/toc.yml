@@ -1,0 +1,307 @@
+- name: 多维分析 UI 设计器和对话框
+  href: ui-designers-dialog-boxes-multidimensional.md
+- name: Analysis Services 设计器和对话框（多维）
+  href: ../analysis-services-designers-and-dialog-boxes-multidimensional-data.md
+- name: “添加多维数据集维度”对话框
+  href: ../add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md
+- name: “添加引用”对话框
+  href: ../add-reference-dialog-box-analysis-services-multidimensional-data.md
+- name: “添加表”对话框
+  href: ../add-table-dialog-box-analysis-services-multidimensional-data.md
+- name: “添加/删除表”对话框
+  href: ../../database-engine/add-remove-tables-dialog-box-analysis-services-multidimensional-data.md
+- name: “分析服务器属性”对话框
+  href: ../analysis-server-properties-dialog-box-analysis-services.md
+- name: Analysis Services MDX 查询设计器 (PowerPivot)
+  href: ../analysis-services-mdx-query-designer-powerpivot.md
+- name: “程序集属性”对话框
+  href: ../assembly-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: “分配聚合设计”对话框
+  href: ../assign-aggregation-design-dialog-box-analysis-services-multidimensional-data.md
+- name: “翻译属性数据”对话框
+  href: ../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md
+- name: “备份数据库”对话框
+  href: ../backup-database-dialog-box-analysis-services-multidimensional-data.md
+- name: “浏览数据源”对话框
+  href: ../browse-data-source-dialog-box-analysis-services-multidimensional-data.md
+- name: “浏览数据源视图”对话框
+  href: ../browse-data-source-view-dialog-box-analysis-services-multidimensional-data.md
+- name: “查找远程文件夹”对话框
+  href: ../browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md
+- name: “计算成员生成器”对话框
+  href: ../calculated-member-builder-dialog-box-analysis-services-multidimensional-data.md
+- name: “计算属性”对话框
+  href: ../calculation-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: “更改设置”对话框
+  href: ../change-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: “连接到数据库”对话框
+  href: ../connect-to-database-dialog-box.md
+- name: “创建属性关系”和“编辑属性关系”对话框
+  href: ../create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md
+- name: “创建命名计算”/“编辑命名计算”对话框
+  href: ../create-edit-named-calculation-dialog-box-analysis-services.md
+- name: “创建/编辑命名查询”对话框
+  href: ../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: “创建或编辑关系”对话框
+  href: ../create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: “创建轮询查询”对话框
+  href: ../create-polling-query-dialog-box-analysis-services-multidimensional-data.md
+- name: “创建处理查询”对话框
+  href: ../create-processing-query-dialog-box-analysis-services-multidimensional-data.md
+- name: 多维数据集设计器
+  href: ../cube-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: 多维数据集结构（多维数据集设计器）
+      href: ../cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“多维数据集结构”选项卡，多维数据集设计器）
+      href: ../toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 数据源视图（“多维数据集结构”选项卡，多维数据集设计器）
+      href: ../data-source-view-cube-designer-analysis-services-multidimensional-data.md
+    - name: 度量值（“多维数据集结构”选项卡，多维数据集设计器）
+      href: ../measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 维度（“多维数据集结构”选项卡，多维数据集设计器）
+      href: ../dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 维度用法（多维数据集设计器）
+      href: ../dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“维度用法”选项卡，多维数据集设计器）
+      href: ../toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: 网格（“维度用法”选项卡，多维数据集设计器）
+      href: ../grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 计算（多维数据集设计器）
+      href: ../calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“计算”选项卡，多维数据集设计器）
+      href: ../toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 脚本组织程序（“计算”选项卡，多维数据集设计器）
+      href: ../script-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 计算工具（“计算”选项卡，多维数据集设计器）
+      href: ../calculation-tools-cube-designer-analysis-services-multidimensional-data.md
+    - name: 计算成员窗体编辑器（“计算”选项卡，多维数据集设计器）
+      href: ../calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 命名集窗体编辑器（“计算”选项卡，多维数据集设计器）
+      href: ../named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 脚本编辑器（“计算”选项卡，多维数据集设计器）
+      href: ../script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI（多维数据集设计器）
+      href: ../kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（KPI 选项卡，多维数据集设计器）
+      href: ../toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI 组织程序（KPI 选项卡，多维数据集设计器）
+      href: ../kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 计算工具（KPI 选项卡，多维数据集设计器）
+      href: ../calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI 窗体编辑器（KPI 选项卡，多维数据集设计器）
+      href: ../kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI 浏览器（KPI 选项卡，多维数据集设计器）
+      href: ../kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 操作（多维数据集设计器）
+      href: ../actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“操作”选项卡，多维数据集设计器）
+      href: ../toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 操作组织程序（“操作”选项卡，多维数据集设计器）
+      href: ../action-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 计算工具（“操作”选项卡，多维数据集设计器）
+      href: ../calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 操作窗体编辑器（“操作”选项卡，多维数据集设计器）
+      href: ../action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 钻取操作窗体编辑器（“操作”选项卡，多维数据集设计器）
+      href: ../drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 报表操作窗体编辑器（“操作”选项卡，多维数据集设计器）
+      href: ../report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 分区（多维数据集设计器）
+      href: ../partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“分区”选项卡，多维数据集设计器）
+      href: ../toolbar-partitions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 度量值组（“分区”选项卡，多维数据集设计器）
+      href: ../measure-groups-partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 聚合（多维数据集设计）
+      href: ../aggregations-cube-design.md
+    - name: 工具栏（多维数据集设计器的“聚合”选项卡）
+      href: ../toolbar-aggregations-tab-cube-designer.md
+    - name: 标准视图（多维数据集设计器的“聚合”选项卡）
+      href: ../standard-view-aggregations-tab-cube-designer.md
+    - name: 高级视图（多维数据集设计器的“聚合”选项卡）
+      href: ../advanced-view-aggregations-tab-cube-designer.md
+    - name: 透视（多维数据集设计器）
+      href: ../perspectives-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“透视”选项卡，多维数据集设计器）
+      href: ../toolbar-perspectives-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 透视详细信息（“透视”选项卡，多维数据集设计器）
+      href: ../perspective-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: 翻译（多维数据集设计器）
+      href: ../translations-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“翻译”选项卡，多维数据集设计器）
+      href: ../toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 翻译详细信息（“翻译”选项卡，多维数据集设计器）
+      href: ../translation-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: 浏览器（多维数据集设计器）
+      href: ../browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“浏览器”选项卡，多维数据集设计器）
+      href: ../toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 在 Excel 中分析（“浏览器”选项卡，多维数据集设计器）
+      href: ../analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 元数据（“浏览器”选项卡，多维数据集设计器）
+      href: ../metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 查询和筛选（“浏览器”选项卡，多维数据集设计器）
+      href: ../query-filter-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: “查询参数”对话框 (MDX)
+      href: ../query-parameters-dialog-box-mdx.md
+- name: “多维数据集或模型属性”对话框
+  href: ../cube-or-model-properties-dialog-box-ssas.md
+- name: “数据浏览选项”对话框
+  href: ../data-exploration-options-dialog-box-analysis-services-data-mining.md
+- name: “数据示例查看器”对话框
+  href: ../data-sample-viewer-dialog-box-analysis-services-multidimensional-data.md
+- name: 数据源视图设计器
+  href: ../data-source-view-designer-analysis-services-multidimensional-data.md
+- name: “数据源视图属性”对话框
+  href: ../data-source-view-properties-dialog-box-ssas.md
+- name: 数据库设计器
+  href: ../database-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: 常规（数据库设计器）
+      href: ../general-database-designer-analysis-services-multidimensional-data.md
+    - name: 警告（数据库设计器）
+      href: ../warnings-database-designer-analysis-services-multidimensional-data.md
+- name: “数据库属性”对话框
+  href: ../database-properties-dialog-box-ssas-multidimensional.md
+- name: “定义关系”对话框
+  href: ../define-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: 维度设计器
+  href: ../dimension-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: 维度结构（维度设计器）
+      href: ../dimension-structure-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“维度结构”选项卡，维度设计器）
+      href: ../toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md
+    - name: 数据源视图（维度结构，维度设计器）
+      href: ../datasource-view-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 层次结构（“维度结构”选项卡，维度设计器）
+      href: ../hierarchies-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 属性（“维度结构”选项卡，维度设计器）
+      href: ../attributes-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 属性关系（维度设计器）
+      href: ../attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“属性关系”设计器选项卡，维度设计器）
+      href: ../toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 属性关系图（“属性关系”设计器选项卡，维度设计器）
+      href: ../attribute-relationship-diagram-analysis-services-multidimensional-data.md
+    - name: 属性（“属性关系”设计器选项卡，维度设计器）
+      href: ../attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 属性关系（“属性关系”设计器选项卡，维度设计器）
+      href: ../attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 翻译（维度设计器）
+      href: ../translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“翻译”选项卡，维度设计器）
+      href: ../toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 翻译详细信息（“翻译”选项卡，维度设计器）
+      href: ../translation-details-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 浏览器（维度设计器）
+      href: ../browser-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具栏（“浏览器”选项卡，维度设计器）
+      href: ../toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 级别和成员（“浏览器”选项卡，维度设计器）
+      href: ../level-members-dimension-designer-analysis-services-multidimensional-data.md
+- name: “维度属性”对话框
+  href: ../dimension-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: “解除警告”对话框
+  href: ../dismiss-warning-dialog-box-analysis-services-multidimensional-data.md
+- name: “重复的角色”对话框
+  href: ../duplicate-security-role-dialog-box-analysis-services-multidimensional-data.md
+- name: “启用/禁用写回”对话框
+  href: ../enable-disable-writeback-dialog-box-analysis-services-multidimensional-data.md
+- name: “筛选成员”对话框
+  href: ../filter-members-dialog-box-analysis-services-multidimensional-data.md
+- name: “查找表”对话框
+  href: ../find-table-dialog-box-analysis-services-multidimensional-data.md
+- name: “生成命名查询”对话框
+  href: ../generate-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: “影响分析”对话框
+  href: ../impact-analysis-dialog-box-analysis-services-multidimensional-data.md
+- name: “增量更新”对话框
+  href: ../incremental-update-dialog-box-analysis-services-multidimensional-data.md
+- name: “键列”对话框
+  href: ../key-columns-dialog-box-analysis-services-multidimensional-data.md
+- name: “级别命名模板”对话框
+  href: ../level-naming-template-dialog-box-analysis-services-multidimensional-data.md
+- name: “定位数据库文件”对话框
+  href: ../locate-database-files-dialog-box-analysis-services-multidimensional-data.md
+- name: MDX 生成器
+  href: ../mdx-builder-analysis-services-multidimensional-data.md
+- name: MDX 查询编辑器
+  href: ../mdx-query-editor-analysis-services-multidimensional-data.md
+- name: “度量值组绑定”对话框
+  href: ../measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md
+- name: “合并分区”对话框
+  href: ../merge-partition-dialog-box-analysis-services-multidimensional-data.md
+- name: “新建数据库”对话框
+  href: ../new-database-dialog-box-analysis-services.md
+- name: “新建度量值”对话框
+  href: ../new-measure-dialog-box-analysis-services-multidimensional-data.md
+- name: “新建度量值组”对话框（多维数据集设计器）
+  href: ../new-measure-group-dialog-box-cube-designer.md
+- name: “对象绑定”对话框
+  href: ../object-binding-dialog-box.md
+- name: “分区属性”对话框
+  href: ../partition-properties-dialog-box-ssms.md
+  items:
+    - name: 选择（“分区属性”对话框）
+      href: ../selection-partition-properties-dialog-box-ssms.md
+    - name: 常规（“分区属性”对话框）
+      href: ../general-partition-properties-dialog-box-ssms.md
+    - name: 主动缓存（“分区属性”对话框）
+      href: ../proactive-caching-partition-properties-dialog-box-ssms.md
+- name: “分区源”对话框
+  href: ../partition-source-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: 表绑定详细信息（“分区源”对话框）
+      href: ../table-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+    - name: 查询绑定详细信息（“分区源”对话框）
+      href: ../query-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+- name: “处理”对话框
+  href: ../process-dialog-box-analysis-services-multidimensional-data.md
+- name: “处理进度”对话框
+  href: ../process-progress-dialog-box-analysis-services-multidimensional-data.md
+- name: “刷新数据源视图”对话框
+  href: ../refresh-data-source-view-dialog-box.md
+- name: “注册数据库程序集”对话框
+  href: ../register-database-assembly-dialog-box-analysis-services-multidimensional-data.md
+- name: “关系对象”对话框
+  href: ../relational-objects-dialog-box-analysis-services-multidimensional-data.md
+- name: “远程分区 - 高级设置”对话框
+  href: ../remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md
+- name: “重命名实例”对话框
+  href: ../rename-instance-dialog-box-analysis-services.md
+- name: “用其他表替换该表”对话框
+  href: ../replace-table-with-other-table-dialog-box.md
+- name: “还原数据库”对话框
+  href: ../restore-database-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: 常规（“还原数据库”对话框）
+      href: ../general-restore-database-dialog-box-analysis-services-multidimensional-data.md
+    - name: 分区（“还原数据库”对话框）
+      href: ../partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md
+- name: “文件另存为”对话框
+  href: ../save-file-as-dialog-box-analysis-services-multidimensional-data.md
+- name: “安全上下文”对话框
+  href: ../security-context-dialog-box-analysis-services-multidimensional-data.md
+- name: “选择语言”对话框
+  href: ../select-language-dialog-box-analysis-services-multidimensional-data.md
+- name: “选择父成员”对话框
+  href: ../select-parent-member-dialog-box-analysis-services-multidimensional-data.md
+- name: “显示表”对话框
+  href: ../show-table-dialog-box-analysis-services-multidimensional-data.md
+- name: “存储选项”对话框
+  href: ../storage-options-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: 常规（“存储选项”对话框）
+      href: ../general-storage-options-dialog-box-analysis-services-multidimensional-data.md
+    - name: 通知（“存储选项”对话框）
+      href: ../notifications-storage-options-dialog-analysis-services-multidimensional-data.md
+- name: “存储设置”对话框
+  href: ../storage-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: “用户选择”对话框
+  href: ../user-selection-dialog-box-analysis-services-multidimensional-data.md
+- name: “查看详细信息”对话框
+  href: ../view-details-dialog-box-analysis-services-multidimensional-data.md
+- name: XMLA 查询编辑器
+  href: ../xmla-query-editor-analysis-services-multidimensional-data.md

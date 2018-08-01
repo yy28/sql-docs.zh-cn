@@ -1,0 +1,247 @@
+- name: 工具
+  href: reporting-services-tools.md
+- name: 教程：如何查找并启动 Reporting Services 工具
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+- name: SQL Server Data Tools 中的 Reporting Services
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+    - name: 使用报表设计器设计报表
+      href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+      items:
+        - name: 向报表项目中添加新报表或现有报表
+          href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+        - name: 从 Microsoft Access 导入报表
+          href: ../import-reports-from-microsoft-access-reporting-services.md
+          items:
+            - name: 支持的 Access 报表功能
+              href: ../supported-access-report-features-ssrs.md
+        - name: SQL Server Data Tools 的报表设计中的查询设计工具
+          href: ../report-data/query-design-tools-ssrs.md
+    - name: SQL Server Data Tools 中的部署和版本支持
+      href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+    - name: '用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) '
+      href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+    - name: 设置部署属性
+      href: set-deployment-properties-reporting-services.md
+    - name: 在报表设计器中停靠“报表数据”窗格
+      href: dock-the-report-data-pane-in-report-designer-ssrs.md
+    - name: 报表向导帮助
+      href: ../report-wizard-help.md
+      items:
+        - name: 欢迎使用报表向导
+          href: ../welcome-to-the-report-wizard.md
+        - name: 选择数据源
+          href: ../select-the-data-source.md
+        - name: 设计查询
+          href: ../design-the-query.md
+        - name: 查询生成器
+          href: ../query-builder-report-wizard.md
+        - name: 选择报表类型
+          href: ../select-the-report-type.md
+        - name: 设计表
+          href: ../design-the-table-report-wizard.md
+        - name: 设计矩阵
+          href: ../design-the-matrix.md
+        - name: 选择表布局
+          href: ../choose-the-table-layout.md
+        - name: 选择表样式或选择矩阵样式
+          href: ../choose-the-table-style-or-choose-the-matrix-style.md
+        - name: 选择部署位置
+          href: ../choose-the-deployment-location.md
+        - name: 完成报表向导
+          href: ../complete-the-report-wizard.md
+    - name: 报表设计器的 F1 帮助
+      href: report-designer-f1-help.md
+      items:
+        - name: 文档大纲
+          href: document-outline.md
+        - name: “设计”视图
+          href: design-view.md
+        - name: “预览”视图
+          href: preview-view.md
+        - name: “分组”窗格
+          href: grouping-pane.md
+        - name: “项目属性页”对话框
+          href: project-property-pages-dialog-box.md
+        - name: “添加引用”对话框
+          href: ../add-reference-dialog-box.md
+        - name: “列可见性”对话框
+          href: ../column-visibility-dialog-box.md
+        - name: “删除组”对话框
+          href: ../delete-group-dialog-box.md
+        - name: “删除列”对话框
+          href: ../delete-columns-dialog-box.md
+        - name: “删除行”对话框
+          href: ../delete-rows-dialog-box.md
+        - name: “Reporting Services 登录”对话框 (SSRS)
+          href: reporting-services-login-dialog-box-ssrs.md
+        - name: “行可见性”对话框
+          href: ../row-visibility-dialog-box.md
+- name: SQL Server Management Studio 中的 Reporting Services
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+    - name: 设置报表服务器属性
+      href: set-report-server-properties-management-studio.md
+    - name: 删除项
+      href: delete-an-item-management-studio.md
+    - name: 在 Management Studio 中连接到报表服务器
+      href: connect-to-a-report-server-in-management-studio.md
+    - name: Management Studio 中报表服务器的 F1 帮助
+      href: report-server-in-management-studio-f1-help.md
+      items:
+        - name: 取消报表服务器作业
+          href: cancel-report-server-jobs-management-studio.md
+        - name: 删除目录项
+          href: delete-catalog-items-management-studio.md
+        - name: 作业属性
+          href: job-properties-management-studio.md
+        - name: 新建共享计划
+          href: new-shared-schedule-management-studio.md
+        - name: 新建系统角色
+          href: new-system-role-management-studio.md
+        - name: 新建用户角色
+          href: new-user-role-management-studio.md
+        - name: 计划属性（“常规”页）
+          href: schedule-properties-general-page.md
+        - name: 计划属性（“报表”页）
+          href: schedule-properties-reports-page.md
+        - name: 服务器属性（“常规”页）
+          href: report-server-properties-general-page.md
+        - name: 服务器属性（“执行”页）
+          href: server-properties-execution-page.md
+        - name: 服务器属性（“历史记录”页）
+          href: server-properties-history-page.md
+        - name: 服务器属性（“日志记录”页）
+          href: server-properties-logging-page.md
+        - name: 服务器属性（“安全性”页）
+          href: server-properties-security-page-reporting-services.md
+        - name: 服务器属性（“高级”页）
+          href: server-properties-advanced-page-reporting-services.md
+        - name: 系统角色属性
+          href: system-role-properties-management-studio.md
+        - name: 用户角色属性
+          href: user-role-properties-management-studio.md
+- name: 报表生成器
+  href: report-builder-authoring-environment-ssrs.md
+- name: 报表管理器（SSRS 本机模式）
+  href: ../report-manager-ssrs-native-mode.md
+  items:
+    - name: 报表管理器的 F1 帮助
+      href: ../report-manager-f1-help.md
+      items:
+        - name: 缓存刷新选项
+          href: ../cache-refresh-options-report-manager.md
+        - name: 共享数据集的“缓存”页
+          href: ../caching-page-shared-datasets-report-manager.md
+        - name: “选择链接”页
+          href: ../choose-link-page-report-manager.md
+        - name: “选择项位置”页
+          href: ../choose-item-location-page-report-manager.md
+        - name: “点击链接型报表”页
+          href: ../clickthrough-reports-page-report-manager.md
+        - name: “内容”页
+          href: ../contents-page-report-manager.md
+        - name: “创建数据驱动订阅”页
+          href: ../create-data-driven-subscription-page-report-manager.md
+        - name: “选择数据源”页
+          href: ../data-source-selection-page-report-manager.md
+        - name: “数据源”属性页
+          href: ../data-sources-properties-page-report-manager.md
+        - name: “依赖项”页
+          href: ../dependent-items-page-report-manager.md
+        - name: “错误”页
+          href: ../error-page-report-manager.md
+        - name: “执行”属性页
+          href: ../processing-options-properties-page-report-manager.md
+        - name: 文件夹的“常规”属性页
+          href: ../general-properties-page-folders-report-manager.md
+        - name: 模型的“常规”属性页
+          href: ../general-properties-page-models-report-manager.md
+        - name: 报表部件的“常规”属性页
+          href: ../general-properties-page-report-parts-report-manager.md
+        - name: 报表的“常规”属性页
+          href: ../general-properties-page-reports-report-manager.md
+        - name: 资源的“常规”属性页
+          href: ../general-properties-page-resources-report-manager.md
+        - name: 共享数据源的“常规”属性页
+          href: ../general-properties-page-shared-data-sources-report-manager.md
+        - name: 共享数据集的“常规”属性页
+          href: ../general-properties-page-shared-datasets-report-manager.md
+        - name: “快照选项”属性页
+          href: ../snapshot-options-properties-page-report-manager.md
+        - name: “模型项安全性”页
+          href: ../model-item-security-page-report-manager.md
+        - name: “移动项”页
+          href: ../move-items-page-report-manager.md
+        - name: “我的订阅”页
+          href: ../my-subscriptions-page-report-manager.md
+        - name: “新建数据源”页
+          href: ../new-data-source-page-report-manager.md
+        - name: “新建文件夹”页
+          href: ../new-folder-page-report-manager.md
+        - name: “新建链接报表”页
+          href: ../new-linked-report-page-report-manager.md
+        - name: “新建模型”页
+          href: ../new-model-page-report-manager.md
+        - name: '“新建角色分配”页:“编辑角色分配”页'
+          href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
+        - name: '“新建计划”页:“编辑计划”页'
+          href: ../new-schedule-edit-schedule-page-report-manager.md
+        - name: “新建订阅”或“编辑订阅”页
+          href: ../new-subscription-or-edit-subscription-page-report-manager.md
+        - name: '“新建系统角色分配: 编辑系统角色分配”页'
+          href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
+        - name: “参数”属性页
+          href: ../parameters-properties-page-report-manager.md
+        - name: “报表历史记录”页
+          href: ../report-history-page-report-manager.md
+        - name: “搜索”页
+          href: ../search-page-report-manager.md
+        - name: “安全性”页（站点设置）
+          href: ../security-page-site-settings-report-manager.md
+        - name: 项的“安全性”属性页
+          href: ../security-properties-page-items-report-manager.md
+        - name: “计划”页
+          href: ../schedules-page-report-manager.md
+        - name: “共享数据集选择”页（报表管理器）
+          href: ../shared-dataset-selection-page-report-manager.md
+        - name: “站点设置”页（报表管理器）
+          href: ../site-settings-page-report-manager.md
+        - name: “订阅”页
+          href: ../subscriptions-page-report-manager.md
+        - name: “上载文件”页
+          href: ../upload-file-page-report-manager.md
+        - name: 报表的“视图”页
+          href: ../view-page-reports-report-manager.md
+        - name: 资源的“视图”页
+          href: ../view-page-resources-report-manager.md
+    - name: 使用报表管理器创建模型
+      href: ../create-a-model-using-report-manager.md
+    - name: 将报表作为点击链接型报表链接到模型
+      href: ../link-a-report-to-a-model-as-a-clickthrough-report.md
+    - name: 自定义 HTML 查看器和报表管理器的样式表
+      href: ../customize-style-sheets-for-html-viewer-and-report-manager.md
+- name: 脚本编写和带 Reporting Services 的 PowerShell
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+    - name: 使用 rs.exe 实用工具和 Web 服务编写脚本
+      href: script-with-the-rs-exe-utility-and-the-web-service.md
+    - name: 设置 Reporting Services 脚本文件的格式
+      href: format-a-reporting-services-script-file.md
+    - name: 运行 Reporting Services 脚本文件
+      href: run-a-reporting-services-script-file.md
+    - name: 为部署和管理任务编写脚本
+      href: script-deployment-and-administrative-tasks.md
+    - name: 用于在报表服务器之间迁移内容的示例 Reporting Services rs.exe 脚本
+      href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+    - name: 访问 Reporting Services WMI 提供程序
+      href: access-the-reporting-services-wmi-provider.md
+- name: 报表服务器命令提示实用工具
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+    - name: rskeymgmt 实用工具
+      href: rskeymgmt-utility-ssrs.md
+    - name: rsconfig 实用工具
+      href: rsconfig-utility-ssrs.md
+    - name: RS.exe 实用工具 (SSRS)
+      href: rs-exe-utility-ssrs.md

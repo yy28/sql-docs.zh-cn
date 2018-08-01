@@ -1,0 +1,133 @@
+- name: SQL Server 管理对象 (SMO) 编程指南
+  href: sql-server-management-objects-smo-programming-guide.md
+- name: 概述 (SMO)
+  href: overview-smo.md
+- name: SMO 入门
+  href: getting-started-in-smo.md
+  items:
+    - name: SMO 语法约定
+      href: smo-syntax-conventions.md
+    - name: 文件和版本号
+      href: files-and-version-numbers.md
+    - name: 链接到编程示例
+      href: link-to-programming-samples.md
+    - name: 安装 SMO
+      href: installing-smo.md
+- name: SMO 对象模型
+  href: smo-object-model.md
+  items:
+    - name: SMO 命名空间
+      href: smo-object-model-namespaces.md
+    - name: SMO 对象模型关系图
+      href: smo-object-model-diagram.md
+- name: 编程语言
+  href: smo-programming-languages.md
+  items:
+    - name: Visual Basic .NET 入门
+      href: ../../database-engine/dev-guide/getting-started-in-visual-basic-net.md
+    - name: 'Visual C# .NET 入门'
+      href: smo-programming-getting-started-in-visual-csharp-net.md
+- name: SMO 中的向后兼容性
+  href: backward-compatibility-in-smo.md
+- name: 创建 SMO 程序
+  href: create-program/creating-smo-programs.md
+  items:
+    - name: 连接到 SQL Server 实例
+      href: create-program/connecting-to-an-instance-of-sql-server.md
+    - name: 断开与 SQL Server 实例的连接
+      href: create-program/disconnecting-from-an-instance-of-sql-server.md
+    - name: 调用方法
+      href: create-program/calling-methods.md
+    - name: 设置属性
+      href: create-program/setting-properties-smo.md
+    - name: 使用集合
+      href: create-program/using-collections.md
+    - name: 使用数据类型
+      href: create-program/working-with-data-types.md
+    - name: 使用事务
+      href: create-program/using-transactions.md
+    - name: 使用捕获模式
+      href: create-program/using-capture-mode.md
+    - name: 处理 SMO 事件
+      href: create-program/handling-smo-events.md
+    - name: 处理 SMO 异常
+      href: create-program/handling-smo-exceptions.md
+- name: 编程特定的任务
+  href: tasks/programming-specific-tasks.md
+  items:
+    - name: 在 SMO 中配置 SQL Server
+      href: tasks/configuring-sql-server-in-smo.md
+    - name: 使用表和索引分区
+      href: tasks/using-table-and-index-partitioning.md
+    - name: 使用文件组和文件存储数据
+      href: tasks/using-filegroups-and-files-to-store-data.md
+    - name: 使用数据库对象
+      href: tasks/creating-altering-and-removing-database-objects.md
+      items:
+        - name: 创建、更改和删除数据库
+          href: tasks/creating-altering-and-removing-databases.md
+        - name: 创建、更改和删除表
+          href: tasks/creating-altering-and-removing-tables.md
+        - name: 创建、更改和删除索引
+          href: tasks/creating-altering-and-removing-indexes.md
+        - name: 创建、更改和删除外键
+          href: tasks/creating-altering-and-removing-foreign-keys.md
+        - name: 创建、更改和删除默认值
+          href: tasks/creating-altering-and-removing-defaults.md
+        - name: 创建、更改和删除规则
+          href: tasks/creating-altering-and-removing-rules.md
+        - name: 创建、更改和删除视图
+          href: tasks/creating-altering-and-removing-views.md
+        - name: 创建、更改和删除触发器
+          href: tasks/creating-altering-and-removing-triggers.md
+        - name: 创建、更改和删除存储过程
+          href: tasks/creating-altering-and-removing-stored-procedures.md
+        - name: 创建、更改和删除用户定义函数
+          href: tasks/creating-altering-and-removing-user-defined-functions.md
+        - name: 创建、更改和删除架构
+          href: tasks/creating-altering-and-removing-schemas.md
+    - name: 管理用户、角色和登录名
+      href: tasks/managing-users-roles-and-logins.md
+    - name: 授予、撤消和拒绝权限
+      href: tasks/granting-revoking-and-denying-permissions.md
+    - name: 使用加密
+      href: tasks/using-encryption.md
+    - name: 在 SQL Server 代理中计划自动管理任务
+      href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+    - name: 备份和还原数据库和事务日志
+      href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
+    - name: 脚本编写
+      href: tasks/scripting.md
+    - name: 传输数据
+      href: tasks/transferring-data.md
+    - name: 使用数据库邮件
+      href: tasks/using-database-mail.md
+    - name: 管理 Service Broker
+      href: tasks/managing-service-broker.md
+    - name: 使用 XML 架构
+      href: tasks/using-xml-schemas.md
+    - name: 使用同义词
+      href: tasks/using-synonyms.md
+    - name: 使用消息
+      href: tasks/using-messages.md
+    - name: 实现全文搜索
+      href: tasks/implementing-full-text-search.md
+    - name: 实现端点
+      href: tasks/implementing-endpoints.md
+    - name: 创建和更新统计信息
+      href: tasks/creating-and-updating-statistics.md
+    - name: 跟踪和重播事件
+      href: tasks/tracing-and-replaying-events.md
+    - name: 使用 WMI 提供程序管理服务和网络设置
+      href: tasks/managing-services-and-network-settings-by-using-wmi-provider.md
+    - name: 在 SMO 中使用链接服务器
+      href: tasks/using-linked-servers-in-smo.md
+    - name: 使用用户定义表
+      href: tasks/using-user-defined-tables.md
+- name: SMO 操作指南主题
+  href: ../../database-engine/dev-guide/smo-how-to-topics.md
+  items:
+    - name: '在 Visual Studio .NET 中创建 Visual C# SMO 项目'
+      href: how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
+    - name: 在 Visual Studio .NET 中创建 Visual Basic SMO 项目
+      href: ../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md

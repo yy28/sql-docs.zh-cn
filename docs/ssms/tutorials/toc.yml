@@ -1,0 +1,13 @@
+- name: '教程：SQL Server Management Studio '
+  href: tutorial-sql-server-management-studio.md
+  items:
+    - name: 使用 SSMS 连接并查询 SQL Server
+      href: connect-query-sql-server.md
+    - name: 在 SSMS 中编写对象脚本
+      href: scripting-ssms.md
+    - name: 在 SSMS 中使用模板
+      href: templates-ssms.md
+    - name: SSMS 配置
+      href: ssms-configuration.md
+    - name: 使用 SSMS 的提示和技巧
+      href: ssms-tricks.md

@@ -1,0 +1,12 @@
+- name: 创建 SQL Server Native Client OLE DB 访问接口应用程序
+  href: creating-a-sql-server-native-client-ole-db-provider-application.md
+- name: 关于 OLE DB 属性
+  href: about-ole-db-properties.md
+- name: 建立与数据源的连接
+  href: establishing-a-connection-to-a-data-source.md
+- name: 执行命令
+  href: executing-a-command.md
+- name: 处理结果
+  href: processing-results.md
+- name: 在 SQL Server Native Client 中对 OLE DB 使用 OUTPUT 子句
+  href: using-the-output-clause-with-ole-db-in-sql-server-native-client.md

@@ -1,0 +1,22 @@
+- name: 数据迁移助手概述
+  href: dma-overview.md
+- name: 数据迁移助手的新增功能
+  href: dma-whatsnew.md
+- name: 访问 SQL Server 迁移
+  href: dma-assesssqlonprem.md
+- name: 将 SQL Server 升级到更高版本
+  href: dma-migrateonpremsql.md
+- name: 将 SQL Server 迁移到 Azure SQL 数据库
+  href: dma-migrateonpremsqltosqldb.md
+- name: 迁移 SQL Server 登录
+  href: dma-migrateserverlogins.md
+- name: 数据迁移助手的最佳做法
+  href: dma-bestpractices.md
+- name: 合并评估报表
+  href: dma-consolidatereports.md
+- name: 用于评估的 Power BI 报表
+  href: dma-powerbiassesreport.md
+- name: 从命令行运行
+  href: dma-commandline.md
+- name: 配置设置
+  href: dma-configurationsettings.md

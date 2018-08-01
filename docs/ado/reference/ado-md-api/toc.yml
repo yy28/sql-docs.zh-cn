@@ -1,0 +1,177 @@
+- name: ADO MD 对象模型
+  href: ado-md-object-model.md
+- name: ADO MD 对象
+  href: ado-md-objects.md
+  items:
+    - name: 目录对象 (ADO MD)
+      href: catalog-object-ado-md.md
+      items:
+        - name: 目录对象属性、方法和事件 (ADO MD)
+          href: catalog-object-properties-methods-and-events-ado-md.md
+    - name: 成员对象 (ADO MD)
+      href: member-object-ado-md.md
+      items:
+        - name: 成员对象属性、方法和事件
+          href: member-object-properties-methods-and-events.md
+    - name: 单元集对象 (ADO MD)
+      href: cellset-object-ado-md.md
+      items:
+        - name: 单元集对象属性、方法和事件
+          href: cellset-object-properties-methods-and-events.md
+    - name: 轴对象 (ADO MD)
+      href: axis-object-ado-md.md
+      items:
+        - name: 轴对象属性、方法和事件
+          href: axis-object-properties-methods-and-events.md
+    - name: 维度对象 (ADO MD)
+      href: dimension-object-ado-md.md
+      items:
+        - name: 维度对象属性、方法和事件
+          href: dimension-object-properties-methods-and-events.md
+    - name: 级别对象 (ADO MD)
+      href: level-object-ado-md.md
+      items:
+        - name: 级别对象属性、方法和事件
+          href: level-object-properties-methods-and-events.md
+    - name: 单元对象 (ADO MD)
+      href: cell-object-ado-md.md
+      items:
+        - name: 单元对象属性、方法和事件
+          href: cell-object-properties-methods-and-events.md
+    - name: 位置对象 (ADO MD)
+      href: position-object-ado-md.md
+      items:
+        - name: 位置对象属性、方法和事件
+          href: position-object-properties-methods-and-events.md
+    - name: CubeDef 对象 (ADO MD)
+      href: cubedef-object-ado-md.md
+      items:
+        - name: CubeDef 对象属性、方法和事件
+          href: cubedef-object-properties-methods-and-events.md
+    - name: 层次结构对象 (ADO MD)
+      href: hierarchy-object-ado-md.md
+      items:
+        - name: 层次结构对象属性、方法和事件
+          href: hierarchy-object-properties-methods-and-events.md
+- name: ADO MD 集合
+  href: ado-md-collections.md
+  items:
+    - name: 轴集合 (ADO MD)
+      href: axes-collection-ado-md.md
+      items:
+        - name: 轴集合属性、方法和事件
+          href: axes-collection-properties-methods-and-events.md
+    - name: CubeDefs 集合 (ADO MD)
+      href: cubedefs-collection-ado-md.md
+      items:
+        - name: CubeDefs 集合属性、方法和事件
+          href: cubedefs-collection-properties-methods-and-events.md
+    - name: 维度集合 (ADO MD)
+      href: dimensions-collection-ado-md.md
+      items:
+        - name: 维度集合属性、方法和事件
+          href: dimensions-collection-properties-methods-and-events.md
+    - name: 层次结构集合 (ADO MD)
+      href: hierarchies-collection-ado-md.md
+      items:
+        - name: 层次结构集合属性、方法和事件
+          href: hierarchies-collection-properties-methods-and-events.md
+    - name: 级别集合 (ADO MD)
+      href: levels-collection-ado-md.md
+      items:
+        - name: 级别集合属性、方法和事件
+          href: levels-collection-properties-methods-and-events.md
+    - name: 成员集合 (ADO MD)
+      href: members-collection-ado-md.md
+      items:
+        - name: 成员集合属性、方法和事件
+          href: members-collection-properties-methods-and-events.md
+    - name: 位置集合 (ADO MD)
+      href: positions-collection-ado-md.md
+      items:
+        - name: 位置集合属性、方法和事件
+          href: positions-collection-properties-methods-and-events.md
+- name: ADO MD 属性
+  href: ado-md-properties.md
+  items:
+    - name: ActiveConnection 属性 (ADO MD)
+      href: activeconnection-property-ado-md.md
+    - name: Caption 属性 (ADO MD)
+      href: caption-property-ado-md.md
+    - name: ChildCount 属性 (ADO MD)
+      href: childcount-property-ado-md.md
+    - name: Children 属性 (ADO MD)
+      href: children-property-ado-md.md
+    - name: Depth 属性 (ADO MD)
+      href: depth-property-ado-md.md
+    - name: Description 属性 (ADO MD)
+      href: description-property-ado-md.md
+    - name: DimensionCount 属性 (ADO MD)
+      href: dimensioncount-property-ado-md.md
+    - name: DrilledDown 属性 (ADO MD)
+      href: drilleddown-property-ado-md.md
+    - name: FilterAxis 属性 (ADO MD)
+      href: filteraxis-property-ado-md.md
+    - name: FormattedValue 属性 (ADO MD)
+      href: formattedvalue-property-ado-md.md
+    - name: Item 属性（ADO MD 单元集）
+      href: item-property-ado-md-cellset.md
+    - name: LevelDepth 属性 (ADO MD)
+      href: leveldepth-property-ado-md.md
+    - name: LevelName 属性 (ADO MD)
+      href: levelname-property-ado-md.md
+    - name: Name 属性 (ADO MD)
+      href: name-property-ado-md.md
+    - name: Ordinal 属性（ADO MD 单元）
+      href: ordinal-property-ado-md-cell.md
+    - name: Ordinal 属性（ADO MD 位置）
+      href: ordinal-property-ado-md-position.md
+    - name: Parent 属性 (ADO MD)
+      href: parent-property-ado-md.md
+    - name: ParentSameAsPrev 属性 (ADO MD)
+      href: parentsameasprev-property-ado-md.md
+    - name: Source 属性（ADO MD）
+      href: source-property-ado-md.md
+    - name: State 属性 (ADO MD)
+      href: state-property-ado-md.md
+    - name: Type 属性 (ADO MD)
+      href: type-property-ado-md.md
+    - name: UniqueName 属性 (ADO MD)
+      href: uniquename-property-ado-md.md
+    - name: Value 属性 (ADO MD)
+      href: value-property-ado-md.md
+- name: ADO MD 方法
+  href: ado-md-methods.md
+  items:
+    - name: Close 方法 (ADO MD)
+      href: close-method-ado-md.md
+    - name: GetSchemaObject 方法 (ADO MD)
+      href: getschemaobject-method-ado-md.md
+    - name: Open 方法 (ADO MD)
+      href: open-method-ado-md.md
+- name: ADO MD 枚举常量
+  href: ado-md-enumerated-constants.md
+  items:
+    - name: MemberTypeEnum
+      href: membertypeenum.md
+    - name: SchemaObjectTypeEnum
+      href: schemaobjecttypeenum.md
+- name: ADO MD 代码示例
+  href: ado-md-code-examples.md
+  items:
+    - name: Visual Basic 中的 ADO MD 代码示例
+      href: ado-md-code-examples-in-visual-basic.md
+      items:
+        - name: 单元集示例 (VB)
+          href: cellset-example-vb.md
+        - name: 目录示例 (VB)
+          href: catalog-example-vb.md
+    - name: Visual Basic Scripting Edition 中的 ADO MD 代码示例
+      href: ado-md-code-examples-in-visual-basic-scripting-edition.md
+      items:
+        - name: 轴示例 (VBScript)
+          href: axis-example-vbscript.md
+        - name: 成员示例 (VBScript)
+          href: members-example-vbscript.md
+        - name: CubeDef 示例 (VBScript)
+          href: cubedef-example-vbscript.md

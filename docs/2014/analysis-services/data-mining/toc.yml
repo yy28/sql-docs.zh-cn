@@ -1,0 +1,505 @@
+- name: 数据挖掘
+  href: data-mining-ssas.md
+- name: 数据挖掘概念
+  href: data-mining-concepts.md
+- name: 数据挖掘算法
+  href: data-mining-algorithms-analysis-services-data-mining.md
+  items:
+    - name: Microsoft 关联算法
+      href: microsoft-association-algorithm.md
+      items:
+        - name: Microsoft 关联算法技术参考
+          href: microsoft-association-algorithm-technical-reference.md
+        - name: 关联模型的挖掘模型内容
+          href: mining-model-content-for-association-models-analysis-services-data-mining.md
+        - name: 关联模型查询示例
+          href: association-model-query-examples.md
+    - name: Microsoft Clustering Algorithm
+      href: microsoft-clustering-algorithm.md
+      items:
+        - name: Microsoft 聚类分析算法技术参考
+          href: microsoft-clustering-algorithm-technical-reference.md
+        - name: 聚类分析模型的挖掘模型内容
+          href: mining-model-content-for-clustering-models-analysis-services-data-mining.md
+        - name: 聚类分析模型查询示例
+          href: clustering-model-query-examples.md
+    - name: Microsoft 决策树算法
+      href: microsoft-decision-trees-algorithm.md
+      items:
+        - name: Microsoft 决策树算法技术参考
+          href: microsoft-decision-trees-algorithm-technical-reference.md
+        - name: 决策树模型的挖掘模型内容
+          href: mining-model-content-for-decision-tree-models-analysis-services-data-mining.md
+        - name: 决策树模型查询示例
+          href: decision-trees-model-query-examples.md
+    - name: Microsoft 线性回归算法
+      href: microsoft-linear-regression-algorithm.md
+      items:
+        - name: Microsoft 线性回归算法技术参考
+          href: microsoft-linear-regression-algorithm-technical-reference.md
+        - name: 线性回归模型的挖掘模型内容
+          href: mining-model-content-for-linear-regression-models-analysis-services-data-mining.md
+        - name: 线性回归模型查询示例
+          href: linear-regression-model-query-examples.md
+    - name: Microsoft 逻辑回归算法
+      href: microsoft-logistic-regression-algorithm.md
+      items:
+        - name: Microsoft 逻辑回归算法技术参考
+          href: microsoft-logistic-regression-algorithm-technical-reference.md
+        - name: 逻辑回归模型的挖掘模型内容
+          href: mining-model-content-for-logistic-regression-models.md
+        - name: 逻辑回归模型查询示例
+          href: logistic-regression-model-query-examples.md
+    - name: Microsoft Naive Bayes Algorithm
+      href: microsoft-naive-bayes-algorithm.md
+      items:
+        - name: Microsoft Naive Bayes 算法技术参考
+          href: microsoft-naive-bayes-algorithm-technical-reference.md
+        - name: Naive Bayes 模型的挖掘模型内容
+          href: mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md
+        - name: Naive Bayes 模型查询示例
+          href: naive-bayes-model-query-examples.md
+    - name: Microsoft Neural Network Algorithm
+      href: microsoft-neural-network-algorithm.md
+      items:
+        - name: Microsoft 神经网络算法技术参考
+          href: microsoft-neural-network-algorithm-technical-reference.md
+        - name: 神经网络模型的挖掘模型内容
+          href: mining-model-content-for-neural-network-models-analysis-services-data-mining.md
+        - name: 神经网络模型查询示例
+          href: neural-network-model-query-examples.md
+    - name: Microsoft 顺序分析和聚类分析算法
+      href: microsoft-sequence-clustering-algorithm.md
+      items:
+        - name: Microsoft 顺序分析和聚类分析算法技术参考
+          href: microsoft-sequence-clustering-algorithm-technical-reference.md
+        - name: 顺序分析和聚类分析模型的挖掘模型内容
+          href: mining-model-content-for-sequence-clustering-models.md
+        - name: 顺序分析和聚类分析模型查询示例
+          href: sequence-clustering-model-query-examples.md
+    - name: Microsoft 时序算法
+      href: microsoft-time-series-algorithm.md
+      items:
+        - name: Microsoft Time Series Algorithm Technical Reference
+          href: microsoft-time-series-algorithm-technical-reference.md
+        - name: 时序模型的挖掘模型内容
+          href: mining-model-content-for-time-series-models-analysis-services-data-mining.md
+        - name: 时序模型查询示例
+          href: time-series-model-query-examples.md
+    - name: 插件算法
+      href: plugin-algorithms.md
+- name: 挖掘结构
+  href: mining-structures-analysis-services-data-mining.md
+  items:
+    - name: 挖掘结构列
+      href: mining-structure-columns.md
+      items:
+        - name: 数据类型（数据挖掘）
+          href: data-types-data-mining.md
+        - name: 嵌套表
+          href: nested-tables-analysis-services-data-mining.md
+        - name: 列分布
+          href: column-distributions-data-mining.md
+        - name: 离散化方法
+          href: discretization-methods-data-mining.md
+        - name: 已分类列
+          href: classified-columns-data-mining.md
+    - name: 对挖掘结构的钻取功能
+      href: drillthrough-on-mining-structures.md
+    - name: 挖掘结构和结构列的属性
+      href: properties-for-mining-structure-and-structure-columns.md
+    - name: 挖掘结构任务和操作指南
+      href: mining-structure-tasks-and-how-tos.md
+      items:
+        - name: 创建新的关系挖掘结构
+          href: create-a-new-relational-mining-structure.md
+        - name: 创建新的 OLAP 挖掘结构
+          href: create-a-new-olap-mining-structure.md
+        - name: 向挖掘结构中添加列
+          href: add-columns-to-a-mining-structure.md
+        - name: 从挖掘结构中删除列
+          href: remove-columns-from-a-mining-structure.md
+        - name: 向挖掘结构中添加嵌套表
+          href: add-a-nested-table-to-a-mining-structure.md
+        - name: 更改挖掘结构的属性
+          href: change-the-properties-of-a-mining-structure.md
+        - name: 编辑用于挖掘结构的数据源视图
+          href: edit-the-data-source-view-used-for-a-mining-structure.md
+        - name: 处理挖掘结构
+          href: process-a-mining-structure.md
+        - name: 筛选挖掘结构的源多维数据集
+          href: ../filter-the-source-cube-for-a-mining-structure.md
+- name: 挖掘模型
+  href: mining-models-analysis-services-data-mining.md
+  items:
+    - name: 挖掘模型列
+      href: mining-model-columns.md
+    - name: 内容类型（数据挖掘）
+      href: content-types-data-mining.md
+    - name: 挖掘模型属性
+      href: mining-model-properties.md
+    - name: Missing 值
+      href: missing-values-analysis-services-data-mining.md
+    - name: 功能选择（数据挖掘）
+      href: feature-selection-data-mining.md
+    - name: 建模标志（数据挖掘）
+      href: modeling-flags-data-mining.md
+    - name: 挖掘模型内容
+      href: mining-model-content-analysis-services-data-mining.md
+    - name: 对挖掘模型的钻取功能
+      href: drillthrough-on-mining-models.md
+    - name: 挖掘模型的筛选器
+      href: filters-for-mining-models-analysis-services-data-mining.md
+      items:
+        - name: 模型筛选器语法和示例
+          href: model-filter-syntax-and-examples-analysis-services-data-mining.md
+    - name: 挖掘模型任务和操作指南
+      href: mining-model-tasks-and-how-tos.md
+      items:
+        - name: 在现有挖掘结构中添加挖掘模型
+          href: add-a-mining-model-to-an-existing-mining-structure.md
+        - name: 从挖掘结构中删除挖掘模型
+          href: delete-a-mining-model-from-a-mining-structure.md
+        - name: 从挖掘模型中排除列
+          href: exclude-a-column-from-a-mining-model.md
+        - name: 为模型列创建别名
+          href: create-an-alias-for-a-model-column.md
+        - name: 更改挖掘模型中列的离散化
+          href: change-the-discretization-of-a-column-in-a-mining-model.md
+        - name: 查看或更改建模标志
+          href: view-or-change-modeling-flags-data-mining.md
+        - name: 在模型中指定用作回归量的列
+          href: specify-a-column-to-use-as-regressor-in-a-model.md
+        - name: 更改挖掘模型的属性
+          href: change-the-properties-of-a-mining-model.md
+        - name: 对挖掘模型应用筛选器
+          href: apply-a-filter-to-a-mining-model.md
+        - name: 从挖掘模型中删除筛选器
+          href: delete-a-filter-from-a-mining-model.md
+        - name: 对挖掘模型启用钻取
+          href: enable-drillthrough-for-a-mining-model.md
+        - name: 查看或更改算法参数
+          href: view-or-change-algorithm-parameters.md
+        - name: 处理挖掘模型
+          href: process-a-mining-model.md
+        - name: 生成挖掘模型的副本
+          href: make-a-copy-of-a-mining-model.md
+        - name: 创建数据挖掘维度
+          href: create-a-data-mining-dimension.md
+- name: 测试和验证
+  href: testing-and-validation-data-mining.md
+  items:
+    - name: 定型数据集和测试数据集
+      href: training-and-testing-data-sets.md
+    - name: 提升图
+      href: lift-chart-analysis-services-data-mining.md
+    - name: 利润图
+      href: profit-chart-analysis-services-data-mining.md
+    - name: 分类矩阵
+      href: classification-matrix-analysis-services-data-mining.md
+    - name: 散点图
+      href: scatter-plot-analysis-services-data-mining.md
+    - name: 交叉验证
+      href: cross-validation-analysis-services-data-mining.md
+      items:
+        - name: 交叉验证报表中的度量值
+          href: measures-in-the-cross-validation-report.md
+        - name: 交叉验证公式
+          href: cross-validation-formulas.md
+    - name: 测试和验证任务和操作指南
+      href: testing-and-validation-tasks-and-how-tos-data-mining.md
+      items:
+        - name: 创建提升图、利润图或分类矩阵
+          href: create-a-lift-chart-profit-chart-or-classification-matrix.md
+        - name: 创建交叉验证报表
+          href: create-a-cross-validation-report.md
+        - name: 选择和映射模型测试数据
+          href: choose-and-map-model-testing-data.md
+        - name: 将筛选器应用于模型测试数据
+          href: apply-filters-to-model-testing-data.md
+        - name: 选择用于测试挖掘模型的列
+          href: choose-the-column-to-use-for-testing-a-mining-model.md
+        - name: 选择准确性图表类型和设置图表选项
+          href: choose-an-accuracy-chart-type-and-set-chart-options.md
+        - name: 使用嵌套表数据作为准确性图表的输入
+          href: using-nested-table-data-as-an-input-for-an-accuracy-chart.md
+- name: 数据挖掘查询
+  href: data-mining-queries.md
+  items:
+    - name: 预测查询
+      href: prediction-queries-data-mining.md
+    - name: 内容查询
+      href: content-queries-data-mining.md
+    - name: 钻取查询
+      href: drillthrough-queries-data-mining.md
+      items:
+        - name: 从挖掘模型钻取到事例数据
+          href: drill-through-to-case-data-from-a-mining-model.md
+        - name: 使用 DMX 来创建钻取查询
+          href: create-drillthrough-queries-using-dmx.md
+    - name: 数据定义查询
+      href: data-definition-queries-data-mining.md
+    - name: 数据挖掘查询接口
+      href: data-mining-query-tools.md
+      items:
+        - name: 查询数据挖掘架构行集
+          href: data-mining-schema-rowsets-ssas.md
+    - name: 数据挖掘查询任务和操作指南
+      href: data-mining-query-tasks-and-how-tos.md
+      items:
+        - name: 使用预测查询生成器创建预测查询
+          href: create-a-prediction-query-using-the-prediction-query-builder.md
+        - name: 在 SQL Server Management Studio 中创建一个 DMX 查询
+          href: create-a-dmx-query-in-sql-server-management-studio.md
+        - name: 在数据挖掘设计器中创建单独查询
+          href: create-a-singleton-query-in-the-data-mining-designer.md
+        - name: 将预测函数应用于模型
+          href: apply-prediction-functions-to-a-model.md
+        - name: 为预测查询选择和映射输入数据
+          href: choose-and-map-input-data-for-a-prediction-query.md
+        - name: 手动编辑预测查询
+          href: manually-edit-a-prediction-query.md
+        - name: 查看和保存预测查询的结果
+          href: view-and-save-the-results-of-a-prediction-query.md
+        - name: 针对挖掘模型创建内容查询
+          href: create-a-content-query-on-a-mining-model.md
+        - name: 查询用于创建挖掘模型的参数
+          href: query-the-parameters-used-to-create-a-mining-model.md
+        - name: 通过模板创建单独预测查询
+          href: create-a-singleton-prediction-query-from-a-template.md
+        - name: 使用 XMLA 创建数据挖掘查询
+          href: create-a-data-mining-query-by-using-xmla.md
+        - name: 更改数据挖掘查询的超时值
+          href: change-the-time-out-value-for-data-mining-queries.md
+- name: 数据挖掘解决方案
+  href: data-mining-solutions.md
+  items:
+    - name: 数据挖掘项目
+      href: data-mining-projects.md
+      items:
+        - name: 使用 Analysis Services 导入向导导入数据挖掘项目
+          href: import-a-data-mining-project-using-the-analysis-services-import-wizard.md
+    - name: 处理数据挖掘对象
+      href: processing-data-mining-objects.md
+    - name: 数据挖掘解决方案的相关项目
+      href: related-projects-for-data-mining-solutions.md
+    - name: 部署数据挖掘解决方案
+      href: deployment-of-data-mining-solutions.md
+      items:
+        - name: 将数据挖掘解决方案部署到以前版本的 SQL Server
+          href: deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md
+        - name: 导出和导入数据挖掘对象
+          href: export-and-import-data-mining-objects.md
+- name: 数据挖掘体系结构
+  href: data-mining-architecture.md
+  items:
+    - name: 逻辑体系结构
+      href: logical-architecture-analysis-services-data-mining.md
+    - name: 物理体系结构
+      href: physical-architecture-analysis-services-data-mining.md
+    - name: 数据挖掘服务和数据源
+      href: data-mining-services-and-data-sources.md
+    - name: 管理数据挖掘解决方案和对象
+      href: management-of-data-mining-solutions-and-objects.md
+      items:
+        - name: 移动数据挖掘对象
+          href: moving-data-mining-objects.md
+        - name: 处理要求和注意事项（数据挖掘）
+          href: processing-requirements-and-considerations-data-mining.md
+        - name: 使用 SQL Server 事件探查器监视数据挖掘
+          href: using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md
+    - name: 安全性概述（数据挖掘）
+      href: security-overview-data-mining.md
+- name: 数据挖掘工具
+  href: data-mining-tools.md
+  items:
+    - name: 中的
+      href: data-mining-wizard-analysis-services-data-mining.md
+      items:
+        - name: 创建关系挖掘结构
+          href: create-a-relational-mining-structure.md
+        - name: 创建 OLAP 挖掘结构
+          href: create-an-olap-mining-structure.md
+        - name: 向结构中添加挖掘模型
+          href: add-mining-models-to-a-structure-analysis-services-data-mining.md
+        - name: 自定义挖掘模型和结构
+          href: customize-mining-models-and-structure.md
+    - name: Data Mining Designer
+      href: data-mining-designer.md
+    - name: 数据挖掘模型查看器
+      href: data-mining-model-viewers.md
+      items:
+        - name: 使用 Microsoft 树查看器浏览模型
+          href: browse-a-model-using-the-microsoft-tree-viewer.md
+        - name: 使用 Microsoft 分类查看器浏览模型
+          href: browse-a-model-using-the-microsoft-cluster-viewer.md
+        - name: 使用 Microsoft 时序查看器浏览模型
+          href: browse-a-model-using-the-microsoft-time-series-viewer.md
+        - name: 使用 Microsoft Naive Bayes 查看器浏览模型
+          href: browse-a-model-using-the-microsoft-naive-bayes-viewer.md
+        - name: 使用 Microsoft 序列分类查看器浏览模型
+          href: browse-a-model-using-the-microsoft-sequence-cluster-viewer.md
+        - name: 使用 Microsoft 关联规则查看器浏览模型
+          href: browse-a-model-using-the-microsoft-association-rules-viewer.md
+        - name: 使用 Microsoft 神经网络查看器浏览模型
+          href: browse-a-model-using-the-microsoft-neural-network-viewer.md
+        - name: 使用 Microsoft 一般内容树查看器浏览模型
+          href: browse-a-model-using-the-microsoft-generic-content-tree-viewer.md
+        - name: 挖掘模型查看器任务和操作指南
+          href: mining-model-viewer-tasks-and-how-tos.md
+          items:
+            - name: 选择挖掘模型和数据挖掘查看器
+              href: select-a-mining-model-and-a-data-mining-viewer.md
+            - name: 复制挖掘模型的视图
+              href: copy-a-view-of-a-mining-model.md
+            - name: 在依赖关系网络中查找特定节点
+              href: find-a-specific-node-in-a-dependency-network.md
+            - name: 筛选关联规则模型中的规则
+              href: filter-a-rule-in-an-association-rules-model.md
+            - name: 在关联规则模型中筛选项集
+              href: filter-an-itemset-in-an-association-rules-model.md
+            - name: 从模型查看器使用钻取
+              href: use-drillthrough-from-the-model-viewers.md
+            - name: 查看时序模型的公式
+              href: view-the-formula-for-a-time-series-model-data-mining.md
+            - name: 更改数据挖掘查看器中使用的颜色
+              href: change-the-colors-used-in-the-data-mining-viewer.md
+- name: Office 数据挖掘外接程序
+  href: sql-server-data-mining-add-ins-for-office.md
+  items:
+    - name: Office 数据挖掘外接程序中包含的功能
+      href: ../what-s-included-in-the-data-mining-add-ins-for-office.md
+      items:
+        - name: Excel 表分析工具
+          href: ../table-analysis-tools-for-excel.md
+        - name: Excel 数据挖掘客户端
+          href: ../data-mining-client-for-excel-sql-server-data-mining-add-ins.md
+        - name: Visio 数据挖掘形状
+          href: ../data-mining-shapes-for-visio.md
+        - name: 连接到数据挖掘服务器
+          href: ../connect-to-a-data-mining-server.md
+- name: 数据挖掘入门
+  href: ../getting-started-with-data-mining-data-mining-add-ins-for-excel.md
+  items:
+    - name: 选择模型
+      href: ../choosing-a-model.md
+    - name: 数据挖掘准备清单
+      href: ../checklist-of-preparation-for-data-mining.md
+    - name: 为数据挖掘选择数据
+      href: ../choosing-data-for-data-mining.md
+- name: 浏览和清除数据
+  href: ../exploring-and-cleaning-data.md
+  items:
+    - name: 连接到源数据
+      href: ../connect-to-source-data-data-mining-client-for-excel.md
+    - name: 浏览数据
+      href: ../explore-data-sql-server-data-mining-add-ins.md
+    - name: 示例数据
+      href: ../sample-data-sql-server-data-mining-add-ins.md
+    - name: 离群值
+      href: ../outliers-sql-server-data-mining-add-ins.md
+    - name: 重新标记
+      href: ../relabel-sql-server-data-mining-add-ins.md
+- name: 创建数据挖掘模型
+  href: ../creating-a-data-mining-model.md
+  items:
+    - name: 高级建模
+      href: ../advanced-modeling-data-mining-add-ins-for-excel.md
+      items:
+        - name: 创建挖掘结构
+          href: ../create-mining-structure-sql-server-data-mining-add-ins.md
+        - name: 将模型添加到结构
+          href: ../add-model-to-structure-data-mining-add-ins-for-excel.md
+    - name: 分析关键影响因素
+      href: ../analyze-key-influencers-table-analysis-tools-for-excel.md
+    - name: 关联向导
+      href: ../associate-wizard-data-mining-client-for-excel.md
+    - name: 分类向导
+      href: ../classify-wizard-data-mining-add-ins-for-excel.md
+    - name: 聚类分析向导
+      href: ../cluster-wizard-data-mining-add-ins-for-excel.md
+    - name: 检测类别
+      href: ../detect-categories-table-analysis-tools-for-excel.md
+    - name: 估计向导
+      href: ../estimate-wizard-data-mining-add-ins-for-excel.md
+    - name: 从示例填充
+      href: ../fill-from-example-table-analysis-tools-for-excel.md
+    - name: 预测向导
+      href: ../forecast-wizard-data-mining-add-ins-for-excel.md
+    - name: 预测（表分析工具）
+      href: ../forecast-table-analysis-tools-for-excel.md
+    - name: 目标查找应用场景
+      href: ../goal-seek-scenario-table-analysis-tools-for-excel.md
+    - name: 突出显示异常值
+      href: ../highlight-exceptions-table-analysis-tools-for-excel.md
+    - name: 预测计算器
+      href: ../prediction-calculator-table-analysis-tools-for-excel.md
+    - name: 购物篮分析
+      href: ../shopping-basket-analysis-table-analysistools-for-excel.md
+    - name: 假设应用场景
+      href: ../what-if-scenario-table-analysis-tools-for-excel.md
+- name: 查看模型
+  href: ../viewing-models-data-mining-add-ins-for-office.md
+  items:
+    - name: 在 Excel 中浏览模型
+      href: ../browsing-models-in-excel-sql-server-data-mining-add-ins.md
+      items:
+        - name: 浏览关联规则模型
+          href: ../browsing-an-association-rules-model.md
+        - name: 浏览预测模型
+          href: ../browsing-a-forecasting-model.md
+        - name: 浏览聚类分析模型
+          href: ../browsing-a-clustering-model.md
+        - name: 浏览决策树模型
+          href: ../browsing-a-decision-trees-model.md
+        - name: 浏览神经网络模型
+          href: ../browsing-a-neural-network-model.md
+        - name: 浏览 Naive Bayes 模型
+          href: ../browsing-a-naive-bayes-model.md
+    - name: 在 Visio 中查看数据挖掘模型
+      href: ../viewing-data-mining-models-in-visio-data-mining-add-ins.md
+      items:
+        - name: 分类关系图演练
+          href: ../cluster-diagram-walkthrough-data-mining-add-ins.md
+        - name: 依赖关系网络关系图演练
+          href: ../dependency-network-diagram-walkthrough-data-mining-add-ins.md
+        - name: 决策树关系图演练
+          href: ../decision-tree-diagram-walkthrough-data-mining-add-ins.md
+        - name: 解决 Visio 数据挖掘关系图问题
+          href: ../troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md
+- name: 记录模型
+  href: ../documenting-mining-models-data-mining-add-ins-for-excel.md
+  items:
+    - name: 验证模型和使用模型进行预测
+      href: ../validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md
+    - name: 准确性图表
+      href: ../accuracy-chart-sql-server-data-mining-add-ins.md
+    - name: 分类矩阵
+      href: ../classification-matrix-sql-server-data-mining-add-ins.md
+    - name: 利润图
+      href: ../profit-chart-sql-server-data-mining-add-ins.md
+    - name: 交叉验证
+      href: ../cross-validation-sql-server-data-mining-add-ins.md
+    - name: 查询
+      href: ../query-sql-server-data-mining-add-ins.md
+    - name: 高级数据挖掘查询编辑器
+      href: ../advanced-data-mining-query-editor.md
+- name: 部署和缩放挖掘模型
+  href: ../deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md
+  items:
+    - name: 管理模型
+      href: ../manage-models-sql-server-data-mining-add-ins.md
+    - name: 跟踪（Excel 数据挖掘客户端）
+      href: ../trace-data-mining-client-for-excel.md
+- name: 技术参考
+  href: ../technical-reference-data-mining-add-ins-for-excel.md
+  items:
+    - name: 数据挖掘算法
+      href: ../data-mining-algorithms-sql-server-data-mining-add-ins.md
+      items:
+        - name: 算法参数
+          href: ../algorithm-parameters-sql-server-data-mining-add-ins.md
+    - name: DMX 模板
+      href: ../dmx-templates.md
+    - name: 服务器配置实用工具（Excel 数据挖掘外接程序）
+      href: ../server-configuration-utility-data-mining-add-ins-for-excel.md

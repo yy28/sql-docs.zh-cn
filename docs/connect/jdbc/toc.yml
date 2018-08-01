@@ -1,0 +1,259 @@
+- name: Microsoft JDBC Driver for SQL Server
+  href: microsoft-jdbc-driver-for-sql-server.md
+- name: JDBC 代码示例 +
+  href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
+- name: JDBC API 参考 +
+  href: reference/jdbc-driver-api-reference.md
+- name: JDBC 驱动程序入门
+  href: getting-started-with-the-jdbc-driver.md
+  items:
+    - name: 步骤 1：配置用于 Java 开发的开发环境
+      href: step-1-configure-development-environment-for-java-development.md
+    - name: 步骤 2：创建用于 Java 开发的 SQL 数据库
+      href: step-2-create-a-sql-database-for-java-development.md
+    - name: 步骤 3：使用 Java 连接到 SQL 的概念证明
+      href: step-3-proof-of-concept-connecting-to-sql-using-java.md
+- name: JDBC 驱动程序的概述
+  href: overview-of-the-jdbc-driver.md
+  items:
+    - name: 下载 Microsoft SQL Server JDBC 驱动程序
+      href: download-microsoft-jdbc-driver-for-sql-server.md
+    - name: JDBC 驱动程序的发行说明
+      href: release-notes-for-the-jdbc-driver.md
+    - name: JDBC 驱动程序的系统要求
+      href: system-requirements-for-the-jdbc-driver.md
+    - name: 使用 JDBC 驱动程序
+      href: using-the-jdbc-driver.md
+    - name: 了解 Java EE 支持
+      href: understanding-java-ee-support.md
+    - name: 部署 JDBC 驱动程序
+      href: deploying-the-jdbc-driver.md
+    - name: 再分发 Microsoft JDBC 驱动程序
+      href: redistributing-the-microsoft-jdbc-driver.md
+    - name: 查找 JDBC 驱动程序的其他信息
+      href: finding-additional-jdbc-driver-information.md
+    - name: Microsoft SQL Server JDBC 驱动程序支持矩阵
+      href: microsoft-jdbc-driver-for-sql-server-support-matrix.md
+    - name: JDBC 驱动程序常见问题解答 (FAQ)
+      href: frequently-asked-questions-faq-for-jdbc-driver.md
+    - name: Microsoft SQL Server JDBC 驱动程序的功能依赖关系
+      href: ../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+- name: 保护 JDBC Driver 应用程序
+  href: securing-jdbc-driver-applications.md
+  items:
+    - name: 保护连接字符串
+      href: securing-connection-strings.md
+    - name: 验证用户输入
+      href: validating-user-input.md
+    - name: 应用程序安全性
+      href: application-security.md
+    - name: 使用 SSL 加密
+      href: using-ssl-encryption.md
+    - name: FIPS 模式
+      href: ../../connect/jdbc/fips-mode.md
+      items:
+        - name: 了解 SSL 支持
+          href: understanding-ssl-support.md
+        - name: 使用 SSL 加密进行连接
+          href: connecting-with-ssl-encryption.md
+        - name: 为 SSL 加密配置客户端
+          href: configuring-the-client-for-ssl-encryption.md
+- name: 借助 JDBC 驱动程序提高性能和可靠性
+  href: improving-performance-and-reliability-with-the-jdbc-driver.md
+  items:
+    - name: 不使用时关闭对象
+      href: closing-objects-when-not-in-use.md
+    - name: 管理事务大小
+      href: managing-transaction-size.md
+    - name: 使用语句和结果集
+      href: working-with-statements-and-result-sets.md
+    - name: 使用自适应缓冲
+      href: using-adaptive-buffering.md
+    - name: 稀疏列
+      href: sparse-columns.md
+    - name: JDBC 驱动程序的预处理语句元数据缓存
+      href: prepared-statement-metadata-caching-for-the-jdbc-driver.md
+- name: 诊断与 JDBC 驱动程序有关的问题
+  href: diagnosing-problems-with-the-jdbc-driver.md
+  items:
+    - name: 处理错误
+      href: handling-errors.md
+    - name: 获取驱动程序版本
+      href: getting-the-driver-version.md
+    - name: 跟踪驱动程序操作
+      href: tracing-driver-operation.md
+    - name: 连接性疑难解答
+      href: troubleshooting-connectivity.md
+    - name: 访问扩展事件日志中的诊断信息
+      href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: 示例 JDBC 驱动程序应用程序
+  href: sample-jdbc-driver-applications.md
+  items:
+    - name: 连接和检索数据
+      href: connecting-and-retrieving-data.md
+      items:
+        - name: 连接 URL 示例
+          href: connection-url-sample.md
+        - name: 数据源示例
+          href: data-source-sample.md
+    - name: 使用数据类型 (JDBC)
+      href: working-with-data-types-jdbc.md
+      items:
+        - name: 基本数据类型示例
+          href: basic-data-types-sample.md
+        - name: SQLXML 数据类型示例
+          href: sqlxml-data-type-sample.md
+    - name: 使用结果集
+      href: working-with-result-sets.md
+      items:
+        - name: 结果集数据检索示例
+          href: retrieving-result-set-data-sample.md
+        - name: 结果集数据修改示例
+          href: modifying-result-set-data-sample.md
+        - name: 结果集数据缓存示例
+          href: caching-result-set-data-sample.md
+    - name: 处理大型数据
+      href: working-with-large-data.md
+      items:
+        - name: 读取大型数据的示例
+          href: reading-large-data-sample.md
+        - name: 使用存储过程读取大型数据的示例
+          href: reading-large-data-with-stored-procedures-sample.md
+        - name: 更新大型数据的示例
+          href: updating-large-data-sample.md
+- name: JDBC SQL 驱动程序的符合性和法律
+  href: compliance-and-legal-for-the-jdbc-sql-driver.md
+  items:
+    - name: 用于 JDBC 驱动程序的 JDBC 4.1 法规遵从性
+      href: jdbc-4-1-compliance-for-the-jdbc-driver.md
+    - name: 用于 JDBC 驱动程序的 JDBC 4.2 法规遵从性
+      href: jdbc-4-2-compliance-for-the-jdbc-driver.md
+    - name: JDBC 驱动程序的 JDBC 4.3 符合性
+      href: jdbc-4-3-compliance-for-the-jdbc-driver.md
+- name: JDBC SQL 驱动程序编程指南
+  href: programming-guide-for-jdbc-sql-driver.md
+  items:
+    - name: 通过 JDBC 驱动程序连接到 SQL Server
+      href: connecting-to-sql-server-with-the-jdbc-driver.md
+    - name: 了解 JDBC 驱动程序数据类型
+      href: understanding-the-jdbc-driver-data-types.md
+    - name: 通过 JDBC 驱动程序使用语句
+      href: using-statements-with-the-jdbc-driver.md
+    - name: 通过 JDBC 驱动程序管理结果集
+      href: managing-result-sets-with-the-jdbc-driver.md
+    - name: 通过 JDBC 驱动程序执行事务
+      href: performing-transactions-with-the-jdbc-driver.md
+    - name: 使用 JDBC 驱动程序处理元数据
+      href: handling-metadata-with-the-jdbc-driver.md
+    - name: 对 JDBC 驱动程序使用始终加密
+      href: using-always-encrypted-with-the-jdbc-driver.md
+    - name: 指南文章
+      items:
+        - name: 使用 SQL 语句
+          href: using-statements-with-sql.md
+        - name: 使用 SQL 语句修改数据库对象
+          href: using-an-sql-statement-to-modify-database-objects.md
+        - name: 设置数据源属性
+          href: setting-the-data-source-properties.md
+        - name: 设置连接属性
+          href: setting-the-connection-properties.md
+        - name: 使用不带参数的存储过程
+          href: using-a-stored-procedure-with-no-parameters.md
+        - name: 使用参数元数据
+          href: using-parameter-metadata.md
+        - name: 使用基本数据类型
+          href: using-basic-data-types.md
+        - name: 了解事务
+          href: understanding-transactions.md
+        - name: 使用连接
+          href: working-with-a-connection.md
+        - name: JDBC 驱动程序的国际功能
+          href: international-features-of-the-jdbc-driver.md
+        - name: 使用高级数据类型
+          href: using-advanced-data-types.md
+        - name: 了解数据类型的差异
+          href: understanding-data-type-differences.md
+        - name: 使用多个结果集
+          href: using-multiple-result-sets.md
+        - name: 使用保持能力
+          href: using-holdability.md
+        - name: 使用 Azure Active Directory 身份验证连接
+          href: connecting-using-azure-active-directory-authentication.md
+        - name: 了解数据类型转换
+          href: understanding-data-type-conversions.md
+        - name: 了解并发控制
+          href: understanding-concurrency-control.md
+        - name: 使用带有输入参数的存储过程
+          href: using-a-stored-procedure-with-input-parameters.md
+        - name: 使用数据库元数据
+          href: using-database-metadata.md
+        - name: SQLXML 接口
+          href: sqlxml-interface.md
+        - name: 处理复杂语句
+          href: handling-complex-statements.md
+        - name: 使用连接池
+          href: using-connection-pooling.md
+        - name: JDBC 驱动程序的 Always Encrypted API 参考
+          href: always-encrypted-api-reference-for-the-jdbc-driver.md
+        - name: 使用 Kerberos 集成身份验证连接 SQL Server
+          href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
+        - name: 使用带有更新计数的存储过程
+          href: using-a-stored-procedure-with-an-update-count.md
+        - name: 了解行锁定
+          href: understanding-row-locking.md
+        - name: JDBC 驱动程序对高可用性和灾难恢复的支持
+          href: jdbc-driver-support-for-high-availability-disaster-recovery.md
+        - name: 使用结果集元数据
+          href: using-result-set-metadata.md
+        - name: 了解 XA 事务
+          href: understanding-xa-transactions.md
+        - name: 使用自动生成的键
+          href: using-auto-generated-keys.md
+        - name: 使用数据库镜像 (JDBC)
+          href: using-database-mirroring-jdbc.md
+        - name: 区域字符集支持
+          href: national-character-set-support.md
+        - name: 了解游标类型
+          href: understanding-cursor-types.md
+        - name: 使用 SQLXML 进行编程
+          href: programming-with-sqlxml.md
+        - name: 使用带有返回状态的存储过程
+          href: using-a-stored-procedure-with-a-return-status.md
+        - name: 使用不带参数的 SQL 语句
+          href: using-an-sql-statement-with-no-parameters.md
+        - name: 连接到 Azure SQL 数据库
+          href: connecting-to-an-azure-sql-database.md
+        - name: 使用 SQL 语句修改数据
+          href: using-an-sql-statement-to-modify-data.md
+        - name: 创建连接 URL
+          href: building-the-connection-url.md
+        - name: 使用保存点
+          href: using-savepoints.md
+        - name: 使用表值参数
+          href: using-table-valued-parameters.md
+        - name: 支持 XML 数据
+          href: supporting-xml-data.md
+        - name: 使用带参数的 SQL 语句
+          href: using-an-sql-statement-with-parameters.md
+        - name: 了解隔离级别
+          href: understanding-isolation-levels.md
+        - name: 包装和接口
+          href: wrappers-and-interfaces.md
+        - name: 通过 JDBC 驱动程序使用大容量复制
+          href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: 使用带有输出参数的存储过程
+          href: using-a-stored-procedure-with-output-parameters.md
+        - name: 执行批处理操作
+          href: performing-batch-operations.md
+        - name: 用户定义的类型
+          href: user-defined-types.md
+        - name: 配置如何将 java.sql.Time 值发送到服务器
+          href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
+        - name: 使用 SQL 转义序列
+          href: using-sql-escape-sequences.md
+        - name: 使用带有存储过程的语句
+          href: using-statements-with-stored-procedures.md
+        - name: Azure Key Vault 示例版本 6.0.0
+          href: azure-key-vault-sample-version-6.0.0.md
+        - name: Azure Key Vault 示例版本 6.2.2
+          href: azure-key-vault-sample-version-6.2.2.md

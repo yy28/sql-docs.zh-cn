@@ -1,0 +1,26 @@
+- name: 概述
+  href: integration-services-ssis-scale-out.md
+- name: 在单台计算机上开始使用 SSIS Scale Out
+  href: get-started-with-ssis-scale-out-onebox.md
+- name: 演练：设置 Integration Services Scale Out
+  href: walkthrough-set-up-integration-services-scale-out.md
+- name: 在 Scale Out 中运行包
+  href: run-packages-in-integration-services-ssis-scale-out.md
+- name: 使用 Scale Out Manager 添加 Scale Out Worker
+  href: add-scale-out-worker.md
+- name: Scale Out 主要角色
+  href: integration-services-ssis-scale-out-master.md
+- name: Scale Out 辅助角色
+  href: integration-services-ssis-scale-out-worker.md
+- name: Scale Out Manager
+  href: integration-services-ssis-scale-out-manager.md
+- name: 更改 Scale Out 日志记录的帐户
+  href: change-logdb-account.md
+- name: 管理 Scale Out 证书
+  href: deal-with-certificates-in-ssis-scale-out.md
+- name: Scale Out 的高可用性
+  href: scale-out-support-for-high-availability.md
+- name: 通过 SQL Server 故障转移群集实例实现高可用性
+  href: scale-out-failover-cluster-instance.md
+- name: Scale Out 故障排除
+  href: troubleshooting-scale-out.md

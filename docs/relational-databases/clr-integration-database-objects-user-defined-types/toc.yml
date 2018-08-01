@@ -1,0 +1,22 @@
+- name: CLR 用户定义类型
+  href: clr-user-defined-types.md
+- name: 访问用户定义类型 - 检索 UDT 数据
+  href: accessing-user-defined-types-retrieving-udt-data.md
+- name: 访问用户定义类型 - 使用 DataAdapter 更新 UDT 列
+  href: accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
+- name: 在 ADO.NET 中访问用户定义类型
+  href: accessing-user-defined-types-in-ado-net.md
+- name: 创建用户定义类型 - 编码
+  href: creating-user-defined-types-coding.md
+- name: 创建用户定义类型 - 需求
+  href: creating-user-defined-types-requirements.md
+- name: 创建用户定义类型
+  href: creating-user-defined-types.md
+- name: 在 SQL Server 中注册用户定义类型
+  href: registering-user-defined-types-in-sql-server.md
+- name: 使用用户定义类型 - 定义 UDT 表和列
+  href: working-with-user-defined-types-defining-udt-tables-and-columns.md
+- name: 使用用户定义类型 - 操作 UDT 数据
+  href: working-with-user-defined-types-manipulating-udt-data.md
+- name: 使用 SQL Server 中的用户定义类型
+  href: working-with-user-defined-types-in-sql-server.md

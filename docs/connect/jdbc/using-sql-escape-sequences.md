@@ -1,7 +1,7 @@
 ---
 title: 使用 SQL 转义序列 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c9a4e7854098fcc0e2cc161658cc772cbd40c80c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978658"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278588"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 转义序列
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37978658"
 ## <a name="like-wildcard-literals"></a>LIKE 通配符文本  
  JDBC 驱动程序支持 `{escape 'escape character'}` 语法，以便将 LIKE 子句通配符用作文本。 例如，以下代码将返回 col3 的值，其中 col2 的值实际上以下划线开始（而不是对其使用通配符）。  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -63,13 +63,13 @@ LIKE '\\_%' {escape '\\'}");
 ## <a name="function-handling"></a>函数处理  
  JDBC 驱动程序使用以下语法在 SQL 语句中支持函数转义序列：  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  其中，`functionName` 是由 JDBC 驱动程序支持的函数。 例如：  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -85,7 +85,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## <a name="date-and-time-literals"></a>日期和时间文本  
  用于日期、时间和时间戳文本的转义语法如下所示：  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -99,7 +99,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  例如：  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -109,7 +109,7 @@ WHERE OrderID=1025
   
  过程是存储在数据库中的可执行对象。 通常，它是一个或更多的已经预编译的 SQL 语句。 调用存储过程的转义序列语法如下所示：  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -120,13 +120,13 @@ WHERE OrderID=1025
 ## <a name="outer-joins"></a>外部联接  
  JDBC 驱动程序支持 SQL92 左联接、右联接和完全外部联接语法。 外部联接的转义序列如下所示：  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  其中，外部联接为：  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -135,7 +135,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  例如：  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -159,7 +159,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  LIMIT 的转义语法如下所示：  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   

@@ -1,0 +1,248 @@
+- name: 开发人员指南 (Analysis Services)
+  href: analysis-services-dev-guide.md
+- name: 数据挖掘编程
+  href: data-mining-programming.md
+  items:
+    - name: OLE DB for Data Mining
+      href: ole-db-for-data-mining.md
+- name: 表格模型编程 +
+  href: ../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+- name: Analysis Services 架构行集 +
+  href: ../schema-rowsets/analysis-services-schema-rowsets.md
+- name: ASSL 参考 +
+  href: ../scripting/analysis-services-scripting-language-assl-for-xmla.md
+- name: XMLA 参考 +
+  href: ../xmla/xml-for-analysis-xmla-reference.md
+- name: 多维模型编程
+  href: ../multidimensional-models/multidimensional-model-programming.md
+  items:
+    - name: 了解 Microsoft OLAP 体系结构
+      href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+    - name: 逻辑体系结构
+      href: ../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
+      items:
+        - name: 逻辑体系结构概述
+          href: ../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+        - name: Server 对象
+          href: ../multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+        - name: 数据库对象
+          href: ../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+        - name: Dimension 对象
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+        - name: 维度
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+          items:
+            - name: 维度简介
+              href: ../multidimensional-models-olap-logical-dimension-objects/introduction-to-dimensions-analysis-services-multidimensional-data.md
+            - name: 维度存储
+              href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+        - name: 属性和属性层次结构
+          href: ../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+        - name: 的维度设计器中，可以在“维度结构”视图的
+          href: ../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+        - name: 用户层次结构
+          href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+          items:
+            - name: 用户层次结构属性
+              href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+            - name: 级别属性
+              href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+        - name: 启用写操作的维度
+          href: ../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+        - name: 维度翻译
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+        - name: 数据库维度属性
+          href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+          items:
+            - name: 维度类型
+              href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+        - name: 主动缓存（维度）
+          href: ../multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+        - name: 多维数据集对象
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+        - name: 多维数据集属性
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+        - name: 维度关系
+          href: ../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+        - name: “新建命名集”
+          href: ../multidimensional-models-olap-logical-cube-objects/calculations.md
+        - name: “度量值组”
+          href: ../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+          items:
+            - name: 分区存储模式和处理
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+            - name: 主动缓存（分区）
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+            - name: 远程分区
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+            - name: 可写入的分区
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+        - name: 透视
+          href: ../multidimensional-models-olap-logical-cube-objects/perspectives.md
+        - name: 多维数据集翻译
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-translations.md
+        - name: 多维数据集单元
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+        - name: 多维数据集存储
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+        - name: 聚合和聚合设计
+          href: ../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+        - name: 安全角色
+          href: ../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+    - name: 物理体系结构
+      href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
+      items:
+        - name: OLAP 引擎服务器组件
+          href: ../multidimensional-models/olap-physical/olap-engine-server-components.md
+        - name: 对象命名规则
+          href: ../multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+        - name: 最大容量规范
+          href: ../multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+        - name: Analysis Services 中的数据类型
+          href: ../multidimensional-models/olap-physical/data-types-in-analysis-services.md
+        - name: 本地多维数据集
+          href: ../multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+        - name: 客户端体系结构要求
+          href: ../multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: 使用 ADOMD.NET 进行开发
+      href: ../multidimensional-models/adomd-net/developing-with-adomd-net.md
+    - name: ADOMD.NET 客户端编程
+      href: ../multidimensional-models-adomd-net-client/adomd-net-client-programming.md
+      items:
+        - name: ADOMD.NET 客户端功能
+          href: ../multidimensional-models-adomd-net-client/adomd-net-client-functionality.md
+        - name: 从 ADO MD 迁移到 ADOMD.NET
+          href: ../multidimensional-models-adomd-net-client/migrating-from-ado-md-to-adomd-net.md
+        - name: 在 ADOMD.NET 中建立连接
+          href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net.md
+        - name: 在 ADOMD.NET 中建立安全连接
+          href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md
+        - name: 使用 ADOMD.NET 中的连接和会话
+          href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md
+        - name: 在 ADOMD.NET 中执行事务
+          href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions.md
+        - name: 从分析数据源检索元数据
+          href: ../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md
+        - name: 使用 ADOMD.NET 对象模型
+          href: ../multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model.md
+        - name: 使用 ADOMD.NET 中的架构行集
+          href: ../multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md
+        - name: 对分析数据源执行命令
+          href: ../multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md
+        - name: 从分析数据源检索数据
+          href: ../multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md
+        - name: 使用 CellSet 检索数据
+          href: ../multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md
+        - name: 使用 AdomdDataReader 检索数据
+          href: ../multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader.md
+        - name: 使用 XmlReader 检索数据
+          href: ../multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md
+    - name: ADOMD.NET 服务器编程
+      href: ../multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+      items:
+        - name: ADOMD.NET 服务器功能
+          href: ../multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
+        - name: ADOMD.NET 服务器对象体系结构
+          href: ../multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
+        - name: 用户定义函数和存储过程
+          href: ../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
+    - name: 重新分发 ADOMD.NET
+      href: ../multidimensional-models/adomd-net/redistributing-adomd-net.md
+    - name: 使用分析管理对象 (AMO) 进行开发
+      href: ../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md
+    - name: AMO 概念和对象模型
+      href: ../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md
+    - name: AMO 类简介
+      href: ../multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+      items:
+        - name: AMO Fundamental 类
+          href: ../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md
+        - name: AMO OLAP 类
+          href: ../multidimensional-models/analysis-management-objects/amo-olap-classes.md
+        - name: AMO 数据挖掘类
+          href: ../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md
+        - name: AMO 安全类
+          href: ../multidimensional-models/analysis-management-objects/amo-security-classes.md
+        - name: AMO 其他类和方法
+          href: ../multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md
+    - name: 使用 AMO 对管理任务进行编程
+      href: ../multidimensional-models/analysis-management-objects/programming-administrative-tasks-with-amo.md
+      items:
+        - name: AMO 基础对象的编程
+          href: ../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md
+        - name: AMO OLAP 基本对象的编程
+          href: ../multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md
+        - name: AMO OLAP 高级对象的编程
+          href: ../multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md
+        - name: AMO 数据挖掘对象的编程
+          href: ../multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md
+        - name: AMO 安全对象编程
+          href: ../multidimensional-models/analysis-management-objects/programming-amo-security-objects.md
+        - name: AMO 补充类和方法的编程
+          href: ../multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md
+    - name: 使用 Analysis Services 脚本语言 (ASSL) 开发
+      href: ../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+    - name: ASSL 对象和对象特征
+      href: ../multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: ASSL XML 约定
+      href: ../multidimensional-models/scripting-language-assl/assl-xml-conventions.md
+    - name: XMLA 概念
+      href: ../multidimensional-models/scripting-language-assl/xmla-concepts.md
+    - name: 在 Analysis Services 中使用 XMLA 开发
+      href: ../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
+      items:
+        - name: 管理连接和会话
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
+        - name: 处理错误和警告
+          href: ../multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
+        - name: 定义和标识对象
+          href: ../multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
+        - name: 管理事务
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
+        - name: 取消命令
+          href: ../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
+        - name: 执行批处理操作
+          href: ../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
+        - name: 创建和更改对象
+          href: ../multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
+        - name: 锁定数据库和解除数据库锁定
+          href: ../multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
+        - name: 处理对象
+          href: ../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
+        - name: 合并分区
+          href: ../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
+        - name: 设计聚合
+          href: ../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
+        - name: 备份、还原和同步数据库
+          href: ../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+        - name: 插入、更新和删除成员
+          href: ../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
+        - name: 更新单元
+          href: ../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
+        - name: 管理缓存
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
+        - name: 监视跟踪
+          href: ../multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
+    - name: 扩展 OLAP 功能
+      href: ../multidimensional-models/extending-olap/extending-olap-functionality.md
+    - name: 通过个性化设置扩展 OLAP
+      href: ../multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+    - name: 定义 Analysis Services 个性化设置扩展
+      href: ../multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+    - name: 定义存储过程
+      href: ../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+      items:
+        - name: 设计存储过程
+          href: ../multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+        - name: 创建存储过程
+          href: ../multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+        - name: 调用存储过程
+          href: ../multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+        - name: 访问存储过程中的查询上下文
+          href: ../multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+        - name: 设置存储过程的安全性
+          href: ../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: 调试存储过程
+          href: ../multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+    - name: Analysis Services OLE DB 访问接口
+      href: analysis-services-ole-db-provider-analysis-services-multidimensional-data.md

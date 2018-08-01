@@ -1,7 +1,7 @@
 ---
 title: 使用连接 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbcd46cd9da1ab189aeafe77c7275aa103ea51f6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f758dfbed0a33885a1cc24cef6d39ab522fa5809
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060268"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279108"
 ---
 # <a name="working-with-a-connection"></a>使用连接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38060268"
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>使用 DriverManager 类创建连接  
  创建到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库的连接的最简便方法是加载 JDBC 驱动程序，然后调用 DriverManager 类的 getConnection 方法，如下所示：  
   
-```  
+```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = DriverManager.getConnection(connectionUrl);  
@@ -46,7 +46,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>使用 SQLServerDriver 类创建连接  
  如果必须为 DriverManager 指定驱动程序列表中的特定驱动程序，可以使用 [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 类的 [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 方法来创建数据库连接，如下所示：  
   
-```  
+```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = d.connect(connectionUrl, new Properties());  
@@ -55,7 +55,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>使用 SQLServerDataSource 类创建连接  
  如果必须使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类创建连接，可以先使用此类的各种 setter 方法，然后调用 [getConnection](../../connect/jdbc/reference/getconnection-method.md) 方法，如下所示：  
   
-```  
+```java 
 SQLServerDataSource ds = new SQLServerDataSource();  
 ds.setUser("MyUserName");  
 ds.setPassword("*****");  

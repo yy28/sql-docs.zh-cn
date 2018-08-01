@@ -1,0 +1,60 @@
+- name: 索引（数据库引擎）
+  href: indexes.md
+- name: 堆（没有聚集索引的表）
+  href: heaps-tables-without-clustered-indexes.md
+- name: 描述的聚集索引和非聚集索引
+  href: clustered-and-nonclustered-indexes-described.md
+- name: Columnstore Indexes Described
+  href: columnstore-indexes-described.md
+- name: 使用列存储索引
+  href: dbengine-columnstore-indexes.md
+- name: 创建聚集索引
+  href: create-clustered-indexes.md
+- name: 创建非聚集索引
+  href: create-nonclustered-indexes.md
+- name: 创建唯一索引
+  href: create-unique-indexes.md
+- name: 创建筛选索引
+  href: create-filtered-indexes.md
+- name: 创建带有包含列的索引
+  href: create-indexes-with-included-columns.md
+- name: 删除索引
+  href: delete-an-index.md
+- name: 修改索引
+  href: modify-an-index.md
+- name: 将现有索引移动到其他文件组中
+  href: move-an-existing-index-to-a-different-filegroup.md
+- name: 计算列上的索引
+  href: indexes-on-computed-columns.md
+- name: 用于索引的 SORT_IN_TEMPDB 选项
+  href: sort-in-tempdb-option-for-indexes.md
+- name: 禁用索引和约束
+  href: disable-indexes-and-constraints.md
+- name: 启用索引和约束
+  href: enable-indexes-and-constraints.md
+- name: 重命名索引
+  href: rename-indexes.md
+- name: 设置索引选项
+  href: set-index-options.md
+- name: Disk Space Requirements for Index DDL Operations
+  href: disk-space-requirements-for-index-ddl-operations.md
+  items:
+    - name: 索引操作的事务日志磁盘空间
+      href: transaction-log-disk-space-for-index-operations.md
+    - name: 索引磁盘空间示例
+      href: index-disk-space-example.md
+- name: 重新组织和重新生成索引
+  href: reorganize-and-rebuild-indexes.md
+- name: 为索引指定填充因子
+  href: specify-fill-factor-for-an-index.md
+- name: 联机执行索引操作
+  href: perform-index-operations-online.md
+  items:
+    - name: 联机索引操作的工作方式
+      href: how-online-index-operations-work.md
+    - name: 联机索引操作准则
+      href: guidelines-for-online-index-operations.md
+- name: 配置并行索引操作
+  href: configure-parallel-index-operations.md
+- name: “索引属性”对话框的 F1 帮助
+  href: index-properties-f1-help.md

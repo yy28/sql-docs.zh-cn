@@ -1,0 +1,14 @@
+- name: 概述
+  href: sql-server-audit-database-engine.md
+- name: 操作组和操作
+  href: sql-server-audit-action-groups-and-actions.md
+- name: 审核记录
+  href: sql-server-audit-records.md
+- name: 创建服务器审核和服务器审核规范
+  href: create-a-server-audit-and-server-audit-specification.md
+- name: 创建服务器审核规范和数据库审核规范
+  href: create-a-server-audit-and-database-audit-specification.md
+- name: 查看 SQL Server 审核日志
+  href: view-a-sql-server-audit-log.md
+- name: 将 SQL Server 审核事件写入安全日志
+  href: write-sql-server-audit-events-to-the-security-log.md

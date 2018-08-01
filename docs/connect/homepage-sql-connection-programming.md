@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL 客户端编程的主页 |Microsoft Docs
 description: 使用带批注的链接下载和文档的语言和操作系统，用于连接到 SQL Server 或 Azure SQL 数据库的许多组合的中心页。
 author: MightyPen
@@ -11,12 +11,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: cfb1ac82894ef8fed001077d54665c9f89239787
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 6269a92ea3ad33ed4501856cc7745ac4f9fad4df
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306216"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087069"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>客户端编程到 Microsoft SQL Server 主页
 
@@ -79,8 +79,8 @@ ms.locfileid: "35306216"
 |||
 | :-- | :-- |
 | [使用 ADO.NET 连接到 SQL 的概念证明](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [对使用 ADO.NET 的 SQL 的弹性连接](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 重试逻辑中的代码示例，因为连接可能偶尔会遇到的连接丢失。<br /><br />重试逻辑适用于通过维护，internet 到任何云数据库中，如 Azure SQL 数据库的连接良好。 |
-| [如何在 Windows/Linux/macOS 上使用.NET Core 创建一个 C# 程序的 azure SQL 数据库： 演示来连接和查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL 数据库示例。 |
+| [使用 ADO.NET 实现对 SQL 的弹性连接](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 重试逻辑中的代码示例，因为连接可能偶尔会遇到的连接丢失。<br /><br />重试逻辑适用于通过维护，internet 到任何云数据库中，如 Azure SQL 数据库的连接良好。 |
+| [Azure SQL 数据库： 演示如何在 Windows/Linux/macOS 上使用.NET Core 创建一个 C# 程序，来连接和查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL 数据库示例。 |
 | [生成的应用： C#，ADO.NET 中，Windows](http://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
 
@@ -90,14 +90,14 @@ ms.locfileid: "35306216"
 | :-- | :-- |
 | [使用 ADO.NET 通过 C#](./ado-net/index.md)| 我们的文档的根。 |
 | [Namespace: System.Data](http://docs.microsoft.com/dotnet/api/system.data) | 一组用于 ADO.NET 的类。 |
-| [Namespace: System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最直接 ADO.NET center 的类的组。 |
+| [命名空间：System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最直接 ADO.NET center 的类的组。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-116-csharp-ef-orm" />
 
-## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework 徽标][image-ref-333-ef] 使用 C&#x23; 实体框架 (EF)
+## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![实体框架徽标][image-ref-333-ef] 实体框架 (EF) 和 C&#x23;
 
 实体框架 (EF) 提供了对象关系映射 (ORM)。 ORM 轻松面向对象编程 (OOP) 源代码来操作关系 SQL 数据库中检索到的数据。
 
@@ -120,7 +120,7 @@ EF 有直接或间接关系具有以下技术：
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft 首次在 2008 年 8 月发布 EF。 在 2015 年 3 月 Microsoft 宣布推出的 EF 6.x 是 Microsoft 像开发的最终版本。 Microsoft 发布到公共域的源代码。<br /><br />最初 EF 是.NET Framework 的一部分。 但 EF 6.x 已从.NET Framework 中删除。<br /><br />[在 Github 存储库中的 EF 6.x 源代码*aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft 于 2016 年 6 月发布新开发的 EF Core。 EF Core旨在更好的灵活性和可移植性。 EF Core可以在 Microsoft Windows 之外的操作系统上运行。 和 EF Core可以与超出只是 Microsoft SQL Server 数据库和其他关系数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[使用 Entity Framework Core 入门](https://docs.microsoft.com/ef/core/get-started/index)<br />[EF Core上使用现有的数据库的.NET Framework 入门](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF Core](http://docs.microsoft.com/ef/core/) | 2016 年 6 月，Microsoft 发布了新开发的 EF Core。 EF Core 专为更好的灵活性和可移植性。 EF Core 可以只是 Microsoft Windows 以外的操作系统上运行。 和 EF Core 可以与超出不仅仅是 Microsoft SQL Server 数据库和其他关系数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[使用 Entity Framework Core 入门](https://docs.microsoft.com/ef/core/get-started/index)<br />[开始使用 EF Core 与现有数据库的.NET Framework 上](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 和相关的技术功能强大，并且是为开发人员想要掌握的整个区域学到很多。
@@ -133,7 +133,7 @@ EF 和相关的技术功能强大，并且是为开发人员想要掌握的整�
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java 徽标][image-ref-330-java] Java 和 JDBC
 
-Microsoft 提供的 Java 数据库连接 (JDBC) 驱动程序使用与 SQL Server （或使用 Azure SQL 数据库，当然，）。 它是一个 Type 4 JDBC 驱动程序中，并提供通过标准 JDBC 应用程序编程接口 (Api) 的数据库连接。
+Microsoft 提供的 Java 数据库连接 (JDBC) 驱动程序使用与 SQL Server （或使用 Azure SQL 数据库，当然，）。 它是 Type 4 JDBC 驱动程序，通过标准 JDBC 应用程序编程接口 (API) 提供数据库连接。
 
 #### <a name="code-examples"></a>代码示例
 
@@ -199,7 +199,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 在本部分中的 ODBC 内容重点介绍从 c + + 访问 SQL Server 或 Azure SQL 数据库。 下表列出了适用于 ODBC 的主要文档的近似概述。
 
 
-| 区域 | 子区域 | Description |
+| 区域 | 子区域 | 描述 |
 | :--- | :------ | :---------- |
 | [C + + ODBC](./odbc/index.md) | 我们的文档的根。 |
 | [Linux Mac](./odbc/linux-mac/index.md) | &nbsp; | 有关在 Linux 或 MacOS 操作系统上使用 ODBC 的信息。 |
@@ -207,7 +207,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 | [管理](../odbc/admin/index.md) | &nbsp; | 用于管理 ODBC 数据源的管理工具。 |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | 各种 ODBC 驱动程序创建并由 Microsoft 提供的。 |
 | [概念和参考](../odbc/reference/index.md) | &nbsp; | 有关 ODBC 接口，除了传统的引用的概念信息。 |
-| &nbsp; " | [附录中](../odbc/reference/appendixes/index.md)    | 状态转换表、 ODBC 游标库和的详细信息。 |
+| &nbsp; " | [附录](../odbc/reference/appendixes/index.md)    | 状态转换表、 ODBC 游标库和的详细信息。 |
 | &nbsp; " | [开发应用程序](../odbc/reference/develop-app/index.md)  | 函数、 句柄，以及更多内容。 |
 | &nbsp; " | [开发驱动程序](../odbc/reference/develop-driver/index.md) | 如何开发您自己的 ODBC 驱动程序，如果您拥有专用的数据源。 |
 | &nbsp; " | [安装](../odbc/reference/install/index.md) | ODBC 安装、 子项和的详细信息。 |
@@ -220,14 +220,14 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 ## <a name="php-logoimage-ref-360-php-php"></a>![PHP 徽标][image-ref-360-php] PHP
 
-可以使用 PHP 来与 SQL Server 进行交互。 我们的 Node.js 文档的根是[此处](./php/index.md)。
+可以使用 PHP 来与 SQL Server 进行交互。 PHP 文档的根是[此处](./php/index.md)。
 
 #### <a name="code-examples"></a>代码示例
 
 |||
 | :-- | :-- |
-| [使用 PHP 连接到 SQL 的概念证明](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [对 SQL 使用 PHP 弹性连接](./php/step-4-connect-resiliently-to-sql-with-php.md) | 重试逻辑中的代码示例，因为通过 Internet 和云的连接偶尔遇到的连接丢失。 |
+| [使用 PHP 连接到 SQL 的概念验证](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 小代码示例侧重于连接和查询 SQL Server。 |
+| [使用 PHP 实现对 SQL 的弹性连接](./php/step-4-connect-resiliently-to-sql-with-php.md) | 重试逻辑中的代码示例，因为通过 Internet 和云的连接偶尔遇到的连接丢失。 |
 | [Azure SQL 数据库： 使用 PHP 查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL 数据库示例。 |
 | [创建要在 RHEL 上使用 SQL Server 的 PHP 应用程序](http://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
@@ -252,7 +252,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 #### <a name="documentation"></a>文档
 
-| 区域 | Description |
+| 区域 | 描述 |
 | :--- | :---------- |
 | [到 SQL Server 的 Python](./python/index.md) | 我们的文档的根。 |
 | [pymssql 驱动程序](./python/pymssql/index.md) | Microsoft 不会维护或测试 pymssql 驱动程序。<br /><br />Pymssql 连接驱动程序是 SQL 数据库，以便在 Python 程序中使用的简单界面。 Pymssql FreeTDS Python DB API (PEP 249) 接口提供对 Microsoft SQL Server 的基础上构建。 |
@@ -297,7 +297,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 #### <a name="java-on-ubuntu"></a>在 Ubuntu 上的 Java:
 
 1. 设置环境
-    - 步骤 1.1 安装 SQL Server
+    - 步骤 1.1：安装 SQL Server
     - 步骤 1.2 安装 Java
     - 步骤 1.3 安装 Java 开发工具包 (JDK)
     - 步骤 1.4 安装 Maven
@@ -310,7 +310,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 #### <a name="python-on-windows"></a>在 Windows 上的 Python:
 
 1. 设置环境
-    - 步骤 1.1 安装 SQL Server
+    - 步骤 1.1：安装 SQL Server
     - 步骤 1.2 安装 Python
     - 步骤 1.3 安装用于 SQL Server 的 ODBC 驱动程序和 SQL 命令行实用程序
 2. 使用 SQL Server 创建 Python 应用程序
@@ -326,7 +326,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 下面的屏幕截图让了解我们的 SQL 开发文档网站如下所示。
 
-#### <a name="choose-a-language"></a>选择一种语言：
+#### <a name="choose-a-language"></a>选择语言：
 
 ![SQL 开发人员网站入门][image-ref-390-aka-ms-sqldev-choose-language]
 
@@ -348,7 +348,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 #### <a name="developer-hub-for-azure"></a>适用于 Azure 的开发人员中心
 
 - [适用于 Azure 的开发人员中心](http://docs.microsoft.com/azure/)
-- [面向.NET 开发人员的 azure](http://docs.microsoft.com/dotnet/azure/)
+- [面向 .NET 开发人员的 Azure](http://docs.microsoft.com/dotnet/azure/)
 - [面向 Java 开发人员的 azure](http://docs.microsoft.com/java/azure/)
 - [面向 Node.js 开发人员的 azure](http://docs.microsoft.com/nodejs/azure/)
 - [面向 Python 开发人员的 azure](http://docs.microsoft.com/python/azure/)

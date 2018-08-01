@@ -1,0 +1,34 @@
+- name: OLE DB 操作指南主题
+  href: ole-db-how-to-topics.md
+- name: 结果 +
+  href: ../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
+- name: 文件流 +
+  href: ../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md
+- name: 使用 IRowsetFastLoad (OLE DB) 大容量复制数据
+  href: bulk-copy-data-using-irowsetfastload-ole-db.md
+- name: 更改 SQL Server 身份验证用户密码 (OLE DB)
+  href: change-a-sql-server-authentication-user-password-ole-db.md
+- name: 显示稀疏列的列和目录元数据 (OLE DB)
+  href: display-column-and-catalog-metadata-for-sparse-columns-ole-db.md
+- name: 枚举 OLE DB 数据源 (OLE DB)
+  href: enumerate-ole-db-data-sources-ole-db.md
+- name: '使用 IRow::GetColumns 提取列 (OLE DB)'
+  href: fetch-columns-using-irow-getcolumns-ole-db.md
+- name: '使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列'
+  href: fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md
+- name: 集成的 Kerberos 身份验证 (OLE DB)
+  href: integrated-kerberos-authentication-ole-db.md
+- name: 获取 FAST_FORWARD 游标
+  href: obtain-a-fast-forward-cursor.md
+- name: 使用书签检索行 (OLE DB)
+  href: retrieve-rows-using-bookmarks-ole-db.md
+- name: 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER (OLE DB)
+  href: send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md
+- name: 设置大型数据 (OLE DB)
+  href: set-large-data-ole-db.md
+- name: 使用日期和时间增强功能 (OLE DB)
+  href: use-enhanced-date-and-time-features-ole-db.md
+- name: 使用大型 CLR UDT (OLE DB)
+  href: use-large-clr-udts-ole-db.md
+- name: 使用表值参数 (OLE DB)
+  href: use-table-valued-parameters-ole-db.md

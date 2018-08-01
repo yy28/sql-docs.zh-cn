@@ -1,0 +1,36 @@
+- name: 命令提示实用工具参考（数据库引擎）
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+    - name: bcp 实用工具
+      href: bcp-utility.md
+    - name: dta 实用工具 +
+      href: dta/dta-utility.md
+    - name: SqlLocalDB 实用工具
+      href: sqllocaldb-utility.md
+    - name: osql 实用工具
+      href: osql-utility.md
+    - name: Profiler 实用工具
+      href: profiler-utility.md
+    - name: sqlagent90 应用程序
+      href: sqlagent90-application.md
+    - name: sqlcmd Utility
+      href: sqlcmd-utility.md
+    - name: SQLdiag 实用工具
+      href: sqldiag-utility.md
+    - name: sqlmaint 实用工具
+      href: sqlmaint-utility.md
+    - name: sqllogship 应用程序
+      href: sqllogship-application.md
+    - name: sqlps 实用工具
+      href: sqlps-utility.md
+    - name: sqlservr 应用程序
+      href: sqlservr-application.md
+    - name: ssbdiagnose 实用工具 (Service Broker) +
+      href: ssbdiagnose/ssbdiagnose-utility-service-broker.md
+    - name: Ssms 实用工具
+      href: ../ssms/ssms-utility.md
+      items:
+        - name: SQL Server Management Studio 键盘快捷键
+          href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+    - name: tablediff 实用工具
+      href: tablediff-utility.md

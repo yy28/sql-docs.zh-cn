@@ -1,0 +1,58 @@
+- name: SQL Server 2014 联机丛书
+  href: books-online-for-sql-server-2014.md
+- name: Analysis Services +
+  href: ../analysis-services/analysis-services.md
+- name: Data Quality Services +
+  href: ../data-quality-services/data-quality-services.md
+- name: 数据库引擎 +
+  href: ../database-engine/sql-server-database-engine-overview.md
+- name: 入门 (SQL Server 2014) +
+  href: ../getting-started/getting-started-sql-server-2014.md
+- name: Integration Services +
+  href: ../integration-services/sql-server-integration-services.md
+- name: Master Data Services +
+  href: ../master-data-services/master-data-services.md
+- name: PowerShell for SQL Server +
+  href: ../powershell/sql-server-powershell.md
+- name: 关系数据库功能 +
+  href: ../relational-databases/database-features.md
+- name: Reporting Services +
+  href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: SQL Server 2014 教程 +
+  href: ../tutorials/tutorials-for-sql-server-2014.md
+- name: 词汇表
+  href: glossary.md
+- name: SQL Server 2014 中的新增功能 +
+  href: ../sql-server/what-s-new-in-sql-server-2016.md
+- name: SQL Server 2014 的开发人员参考
+  href: developer-reference-for-sql-server-2014.md
+  items:
+    - name: 开发人员指南 (Analysis Services) +
+      href: ../analysis-services/dev-guide/analysis-services-dev-guide.md
+    - name: 开发人员指南 (Integration Services) +
+      href: ../integration-services/integration-services-developer-documentation.md
+    - name: 开发人员指南 (Master Data Services) +
+      href: ../master-data-services/develop/master-data-services-developer-documentation.md
+    - name: 开发人员指南（关系数据库引擎）+
+      href: ../relational-databases/database-engine-developer-documentation.md
+    - name: 开发人员指南（复制）+
+      href: ../relational-databases/replication/concepts/replication-developer-documentation.md
+    - name: 开发人员指南 (Reporting Services) +
+      href: ../reporting-services/reporting-services-developer-documentation.md
+- name: 安装 SQL Server 2014 +
+  href: ../database-engine/install-windows/installation-for-sql-server.md
+  items:
+    - name: 升级顾问 +
+      href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
+    - name: 设置和维护安装 +
+      href: ../sql-server/install/setup-and-servicing-installation.md
+- name: 配置管理器帮助 +
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: 索引设计指南
+  href: sql-server-index-design-guide.md
+- name: 事务锁定和行版本控制指南
+  href: sql-server-transaction-locking-and-row-versioning-guide.md
+- name: 事务日志体系结构和管理
+  href: sql-server-transaction-log-architecture-and-management.md
+- name: 案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 复制构建一个企业生态系统以实现可伸缩性并提高性能
+  href: case-study-building-an-enterprise-ecosystem.md

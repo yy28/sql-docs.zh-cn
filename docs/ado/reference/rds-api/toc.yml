@@ -1,0 +1,149 @@
+- name: 已弃用：RDS API 参考
+  href: rds-api-reference.md
+- name: RDS 对象
+  href: rds-objects.md
+  items:
+    - name: DataControl 对象 (RDS)
+      href: datacontrol-object-rds.md
+      items:
+        - name: DataControl 对象 (RDS) 属性、方法和事件
+          href: datacontrol-object-rds-properties-methods-and-events.md
+    - name: DataFactory 对象 (RDSServer)
+      href: datafactory-object-rdsserver.md
+      items:
+        - name: DataFactory 对象 (RDSServer) 属性、方法和事件
+          href: datafactory-object-rdsserver-properties-methods-and-events.md
+    - name: DataSpace 对象 (RDS)
+      href: dataspace-object-rds.md
+      items:
+        - name: DataSpace 对象 (RDS) 属性、方法和事件
+          href: dataspace-object-rds-properties-methods-and-events.md
+    - name: IRDSService 接口 (RDS)
+      href: irdsservice-interface-rds.md
+- name: RDS 属性
+  href: rds-properties.md
+  items:
+    - name: Connect 属性 (RDS)
+      href: connect-property-rds.md
+    - name: ExecuteOptions 属性 (RDS)
+      href: executeoptions-property-rds.md
+    - name: FetchOptions 属性 (RDS)
+      href: fetchoptions-property-rds.md
+    - name: FilterColumn 属性 (RDS)
+      href: filtercolumn-property-rds.md
+    - name: FilterCriterion 属性 (RDS)
+      href: filtercriterion-property-rds.md
+    - name: FilterValue 属性 (RDS)
+      href: filtervalue-property-rds.md
+    - name: Handler 属性 (RDS)
+      href: handler-property-rds.md
+    - name: InternetTimeout 属性 (RDS)
+      href: internettimeout-property-rds.md
+    - name: ReadyState 属性 (RDS)
+      href: readystate-property-rds.md
+    - name: Recordset、SourceRecordset 属性 (RDS)
+      href: recordset-sourcerecordset-properties-rds.md
+    - name: Server 属性 (RDS)
+      href: server-property-rds.md
+    - name: SortColumn 属性 (RDS)
+      href: sortcolumn-property-rds.md
+    - name: SortDirection 属性 (RDS)
+      href: sortdirection-property-rds.md
+    - name: SQL 属性
+      href: sql-property.md
+    - name: URL 属性 (RDS)
+      href: url-property-rds.md
+- name: RDS 方法
+  href: rds-methods.md
+  items:
+    - name: Cancel 方法 (RDS)
+      href: cancel-method-rds.md
+    - name: CancelUpdate 方法 (RDS)
+      href: cancelupdate-method-rds.md
+    - name: ConvertToString 方法 (RDS)
+      href: converttostring-method-rds.md
+    - name: CreateObject 方法 (RDS)
+      href: createobject-method-rds.md
+    - name: CreateRecordset 方法 (RDS)
+      href: createrecordset-method-rds.md
+    - name: Execute 方法 (RDS)
+      href: execute-method-rds.md
+    - name: Execute21 方法 (RDS)
+      href: execute21-method-rds.md
+    - name: InvokeService (RDS)
+      href: invokeservice-rds.md
+    - name: MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)
+      href: movefirst-movelast-movenext-and-moveprevious-methods-rds.md
+    - name: Query 方法 (RDS)
+      href: query-method-rds.md
+    - name: Refresh 方法 (RDS)
+      href: refresh-method-rds.md
+    - name: Reset 方法 (RDS)
+      href: reset-method-rds.md
+    - name: SubmitChanges 方法 (RDS)
+      href: submitchanges-method-rds.md
+    - name: Synchronize 方法 (RDS)
+      href: synchronize-method-rds.md
+    - name: Synchronize21 方法 (RDS)
+      href: synchronize21-method-rds.md
+- name: RDS 事件
+  href: rds-events.md
+  items:
+    - name: onError 事件 (RDS)
+      href: onerror-event-rds.md
+    - name: onReadyStateChange 事件 (RDS)
+      href: onreadystatechange-event-rds.md
+- name: RDS 代码示例
+  href: rds-code-examples.md
+  items:
+    - name: Visual Basic 中的 RDS 代码示例
+      href: rds-code-examples-in-visual-basic.md
+      items:
+        - name: Handler 属性示例 (VB)
+          href: handler-property-example-vb.md
+        - name: InternetTimeout 属性示例 (VB)
+          href: internettimeout-property-example-vb.md
+    - name: VBScript 中的 RDS 代码示例
+      href: rds-code-examples-in-vbscript.md
+      items:
+        - name: Cancel 方法示例 (VBScript)
+          href: cancel-method-example-vbscript.md
+        - name: CancelUpdate 方法示例 (VBScript)
+          href: cancelupdate-method-example-vbscript.md
+        - name: Connect 属性示例 (VBScript)
+          href: connect-property-example-vbscript.md
+        - name: ConvertToString 方法示例 (VBScript)
+          href: converttostring-method-example-vbscript.md
+        - name: CreateRecordset 方法示例 (VBScript)
+          href: createrecordset-method-example-vbscript.md
+        - name: DataControl 对象示例 (VBScript)
+          href: datacontrol-object-example-vbscript.md
+        - name: DataSpace 对象和 CreateObject 方法示例 (VBScript)
+          href: dataspace-object-and-createobject-method-example-vbscript.md
+        - name: DataFactory 对象、Query 方法和 CreateObject 方法示例 (VBScript)
+          href: datafactory-object-query-method-and-createobject-method-example-vbscript.md
+        - name: ExecuteOptions 和 FetchOptions 属性示例 (VBScript)
+          href: executeoptions-and-fetchoptions-properties-example-vbscript.md
+        - name: 'Filter Column、Criterion、Value, SortColumn 和 SortDirection 属性以及 Reset 方法示例 (VBScript)'
+          href: filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md
+        - name: ReadyState 属性示例 (VBScript)
+          href: readystate-property-example-vbscript.md
+        - name: Recordset 和 SourceRecordset 属性示例 (VBScript)
+          href: recordset-and-sourcerecordset-properties-example-vbscript.md
+        - name: Refresh 方法示例 (VBScript)
+          href: refresh-method-example-vbscript.md
+        - name: Server 属性示例 (VBScript)
+          href: server-property-example-vbscript.md
+        - name: SQL 属性示例 (VBScript)
+          href: sql-property-example-vbscript.md
+        - name: SubmitChanges 方法示例 (VBScript)
+          href: submitchanges-method-example-vbscript.md
+        - name: URL 属性示例 (VBScript)
+          href: url-property-example-vbscript.md
+    - name: Visual C++ 中的 RDS 代码示例
+      href: rds-code-examples-in-visual-c.md
+      items:
+        - name: Handler 属性示例 (VC++)
+          href: handler-property-example-vc.md
+        - name: InternetTimeout 属性示例 (VC++)
+          href: internettimeout-property-example-vc.md

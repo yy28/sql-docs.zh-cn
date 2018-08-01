@@ -1,0 +1,14 @@
+- name: 表和索引
+  href: tables-and-indexes.md
+- name: 向 SQL Server 表添加列
+  href: adding-a-column-to-a-sql-server-table.md
+- name: 创建 SQL Server 索引
+  href: creating-sql-server-indexes.md
+- name: 创建 SQL Server 表
+  href: creating-sql-server-tables.md
+- name: 删除 SQL Server 索引
+  href: dropping-a-sql-server-index.md
+- name: 删除 SQL Server 表
+  href: dropping-a-sql-server-table.md
+- name: 从 SQL Server 表中删除列
+  href: removing-a-column-from-a-sql-server-table.md

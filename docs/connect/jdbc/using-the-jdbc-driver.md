@@ -1,7 +1,7 @@
 ---
 title: 使用 JDBC 驱动程序 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03ea3e895fb7d70b392e0c25372536770308049d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 82a897bb2bbb673f3747eb77259e105161868834
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015818"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278808"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "38015818"
   
  加载驱动程序，可以通过使用连接 URL 和驱动程序管理器类的 getConnection 方法来建立连接：  
   
-```  
+```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
    "databaseName=AdventureWorks;user=MyUserName;password=*****;";  
 Connection con = DriverManager.getConnection(connectionUrl);  

@@ -1,7 +1,7 @@
 ---
 title: 使用带有输入参数的存储过程 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f736e2e901d17d4a6b8d114964a315afd389ab9e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1c408fc703a3f6d9831cae226ce858b1a20a80c7
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978589"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278768"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>使用带有输入参数的存储过程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,28 +39,22 @@ ms.locfileid: "37978589"
   
  作为如何调用包含 IN 参数的存储过程的实例，使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中的 uspGetEmployeeManagers 存储过程。 此存储过程接受名为 EmployeeID 的单个输入参数（它是一个整数值），然后基于指定的 EmployeeID 返回雇员及其经理的递归列表。 下面是调用此存储过程的 Java 代码：  
   
-```  
-public static void executeSprocInParams(Connection con) {  
-   try {  
-      PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}");  
-      pstmt.setInt(1, 50);  
-      ResultSet rs = pstmt.executeQuery();  
-  
-      while (rs.next()) {  
-         System.out.println("EMPLOYEE:");  
-         System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
-         System.out.println("MANAGER:");  
-         System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
-         System.out.println();  
-      }  
-      rs.close();  
-      pstmt.close();  
-   }  
-  
-   catch (Exception e) {  
-      e.printStackTrace();  
-    }  
-}  
+```java
+public static void executeSprocInParams(Connection con) throws SQLException {  
+    try(PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}"); ) {  
+
+        pstmt.setInt(1, 50);  
+        ResultSet rs = pstmt.executeQuery();  
+
+        while (rs.next()) {  
+            System.out.println("EMPLOYEE:");  
+            System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
+            System.out.println("MANAGER:");  
+            System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
+            System.out.println();  
+        }  
+    }
+}
 ```  
   
 ## <a name="see-also"></a>另请参阅  

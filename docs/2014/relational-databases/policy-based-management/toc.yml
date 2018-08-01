@@ -1,0 +1,154 @@
+- name: 使用基于策略的管理来管理服务器
+  href: administer-servers-by-using-policy-based-management.md
+  items:
+    - name: 基于策略的管理存储
+      href: policy-based-management-storage.md
+    - name: 配置基于策略的管理的常规属性
+      href: configure-the-general-properties-of-policy-based-management.md
+    - name: 配置警报以通知策略管理员策略失败情况
+      href: configure-alerts-to-notify-policy-administrators-of-policy-failures.md
+    - name: 创建基于策略的管理策略
+      href: create-a-policy-based-management-policy.md
+    - name: 创建新的基于策略的管理条件
+      href: create-a-new-policy-based-management-condition.md
+    - name: 查看或修改基于策略的管理策略的属性
+      href: view-or-modify-the-properties-of-a-policy-based-management-policy.md
+    - name: 查看或修改基于策略的管理条件的属性
+      href: view-or-modify-the-properties-of-a-policy-based-management-condition.md
+    - name: 删除基于策略的管理策略
+      href: delete-a-policy-based-management-policy.md
+    - name: 删除基于策略的管理条件
+      href: delete-a-policy-based-management-condition.md
+    - name: 评估来自对象的基于策略的管理策略
+      href: evaluate-a-policy-based-management-policy-from-an-object.md
+    - name: 从基于策略的管理策略评估该策略
+      href: evaluate-a-policy-based-management-policy-from-that-policy.md
+    - name: 定期评估基于策略的管理策略
+      href: evaluate-a-policy-based-management-policy-on-a-schedule.md
+    - name: 导出基于策略的管理策略
+      href: export-a-policy-based-management-policy.md
+    - name: 导入基于策略的管理策略
+      href: import-a-policy-based-management-policy.md
+    - name: 建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
+      href: subscribe-or-unsubscribe-a-database-to-a-policy-category.md
+    - name: 管理策略类别
+      href: manage-policy-categories.md
+- name: 使用基于策略的管理方面
+  href: working-with-policy-based-management-facets.md
+  items:
+    - name: 查看 SQL Server 对象的基于策略的管理方面
+      href: view-the-policy-based-management-facets-on-a-sql-server-object.md
+    - name: 查看基于策略的管理方面的属性
+      href: view-the-properties-of-a-policy-based-management-facet.md
+    - name: 将基于策略的管理方面状态复制到 XML 文件中
+      href: copy-a-policy-based-management-facet-state-to-an-xml-file.md
+- name: 使用基于策略的管理来监视和强制执行最佳实践
+  href: monitor-and-enforce-best-practices-by-using-policy-based-management.md
+  items:
+    - name: 非对称密钥加密强度
+      href: asymmetric-keys-encryption-strength.md
+    - name: 备份文件必须位于与数据库文件分开的设备上
+      href: dbengine-backup-files-must-be-on-separate-devices-from-the-database-files.md
+    - name: 检查磁盘 I/O 子系统的 I/O 延迟问题
+      href: check-disk-input-and-output-subsystem-for-io-delay-problems.md
+    - name: 检查磁盘 I/O 子系统是否存在读取重试问题
+      href: check-disk-input-output-subsystem-for-read-retry-problems.md
+    - name: 检查包含可疑页的数据库的完整性
+      href: check-integrity-of-database-with-suspect-pages.md
+    - name: 正确的关联掩码和关联 I/O 掩码重叠
+      href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+    - name: 默认跟踪日志文件已禁用
+      href: default-trace-log-files-disabled.md
+    - name: 检测失败的 I/O 请求
+      href: detect-failed-input-and-output-requests.md
+    - name: 检测 SCSI 主机适配器问题
+      href: detect-scsi-host-adapter-issues.md
+    - name: 设备驱动程序控制错误
+      href: device-driver-control-error.md
+    - name: 设备未就绪错误
+      href: device-not-ready-error.md
+    - name: 禁用轻型池
+      href: disable-lightweight-pooling.md
+    - name: 对用户数据库的 Guest 权限
+      href: guest-permissions-on-user-databases.md
+    - name: Input and Output Error During Hard Page Fault
+      href: input-and-output-error-during-hard-page-fault.md
+    - name: 增加或禁用阻塞的进程阈值
+      href: increase-or-disable-blocked-process-threshold.md
+    - name: 保留关联掩码默认值
+      href: keep-the-affinity-mask-default-value.md
+    - name: 保留锁配置选项默认值
+      href: keep-the-locks-configuration-option-default-value.md
+    - name: 网络数据包大小不应超过 8060 字节
+      href: network-packet-size-should-not-exceed-8060-bytes.md
+    - name: 过时的备份
+      href: outdated-backup.md
+    - name: 将数据和日志文件放到不同的驱动器上
+      href: place-data-and-log-files-on-separate-drives.md
+    - name: 服务器 public 权限
+      href: server-public-permissions.md
+    - name: 将 AUTO_CLOSE 数据库选项设置为 OFF
+      href: set-the-auto-close-database-option-to-off.md
+    - name: 将 AUTO_SHRINK 数据库选项设置为 OFF
+      href: set-the-auto-shrink-database-option-to-off.md
+    - name: 将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致
+      href: dbengine-set-collation-user-defined-databases.md
+    - name: 设置最大并行度选项以获取最佳性能
+      href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md
+    - name: 将 PAGE_VERIFY 数据库选项设置为 CHECKSUM
+      href: set-the-page-verify-database-option-to-checksum.md
+    - name: SQL Server 登录密码过期
+      href: sql-server-login-password-expiration.md
+    - name: SQL Server 登录密码强度
+      href: sql-server-login-password-strength.md
+    - name: 存储系统输入输出超时
+      href: storage-system-input-output-time-out.md
+    - name: 系统数据库中的对称密钥
+      href: symmetric-keys-on-system-databases.md
+    - name: 用户数据库中的对称密钥
+      href: symmetric-keys-on-user-databases.md
+    - name: 可信位
+      href: trustworthy-bit.md
+    - name: 意外的系统故障
+      href: unexpected-system-failures.md
+    - name: 使用数据库邮件而不是 SQL Mail
+      href: use-database-mail-instead-of-sql-mail.md
+    - name: 验证最大工作线程数设置
+      href: verify-max-worker-threads-setting.md
+- name: “策略管理”节点（对象资源管理器）
+  href: policy-management-node-object-explorer.md
+  items:
+    - name: “创建新条件”或“打开条件”对话框，“常规”页
+      href: create-new-condition-or-open-condition-dialog-box-general-page.md
+    - name: “创建新条件”或“打开条件”对话框，“说明”页
+      href: create-new-condition-or-open-condition-dialog-box-description-page.md
+    - name: “打开条件”对话框，“依赖策略”页
+      href: open-condition-dialog-box-dependent-policies-page.md
+    - name: “高级编辑”（条件）对话框
+      href: advanced-edit-condition-dialog-box.md
+    - name: “创建新策略”或“打开策略”对话框，“常规”页
+      href: create-new-policy-or-open-policy-dialog-box-general-page.md
+    - name: “创建新策略”或“打开策略”对话框，“说明”页
+      href: create-new-policy-or-open-policy-dialog-box-description-page.md
+    - name: “查看策略”对话框
+      href: view-policies-dialog-box.md
+    - name: “评估策略”对话框，“策略选择”页
+      href: evaluate-policies-dialog-box-policy-selection-page.md
+    - name: “评估策略”对话框，“评估结果”页
+      href: evaluate-policies-dialog-box-evaluation-results-page.md
+    - name: “方面属性”对话框，“常规”页
+      href: facet-properties-dialog-box-general-page.md
+    - name: “方面属性”对话框，“依赖策略”页
+      href: facet-properties-dialog-box-dependent-policies-page.md
+    - name: “方面属性”对话框，“依赖条件”页
+      href: facet-properties-dialog-box-dependent-conditions-page.md
+    - name: “结果详细视图”对话框
+      href: results-detailed-view-dialog-box.md
+    - name: “查看方面”对话框
+      href: view-facets-dialog-box.md
+    - name: “选择源”对话框
+      href: select-source-dialog-box.md
+    - name: “导出为策略”对话框
+      href: export-as-policy-dialog-box.md
+    - name: “导入策略”对话框
+      href: import-policies-dialog-box.md

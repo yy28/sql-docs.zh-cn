@@ -1,0 +1,10 @@
+- name: 开发特定类型的脚本组件
+  href: developing-specific-types-of-script-components.md
+- name: 使用脚本组件创建源
+  href: creating-a-source-with-the-script-component.md
+- name: 使用脚本组件创建同步转换
+  href: creating-a-synchronous-transformation-with-the-script-component.md
+- name: 使用脚本组件创建异步转换
+  href: creating-an-asynchronous-transformation-with-the-script-component.md
+- name: 使用脚本组件创建目标
+  href: creating-a-destination-with-the-script-component.md

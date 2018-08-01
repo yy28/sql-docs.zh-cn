@@ -1,0 +1,106 @@
+- name: ODBC 简介
+  href: introduction-to-odbc.md
+- name: 安装 +
+  href: ../../odbc/reference/install/odbc-subkey.md
+- name: 开发应用程序 +
+  href: ../../odbc/reference/develop-app/checking-feature-support-and-variability.md
+- name: 开发驱动程序 +
+  href: ../../odbc/reference/develop-driver/developing-an-odbc-driver.md
+- name: 语法 +
+  href: ../../odbc/reference/syntax/odbc-reference.md
+- name: 附录 +
+  href: ../../odbc/reference/appendixes/odbc-appendixes.md
+- name: ODBC 程序员参考
+  href: odbc-programmer-s-reference.md
+- name: ODBC 3.8 中的新增功能
+  href: what-s-new-in-odbc-3-8.md
+- name: 示例 ODBC 程序
+  href: sample-odbc-program.md
+  items:
+    - name: ODBC 概述
+      href: odbc-overview.md
+      items:
+        - name: 为何创建 ODBC？
+          href: why-was-odbc-created.md
+        - name: 什么是 ODBC？
+          href: what-is-odbc.md
+        - name: ODBC 和标准 CLI
+          href: odbc-and-the-standard-cli.md
+    - name: SQL 和 ODBC 简介
+      href: introduction-to-sql-and-odbc.md
+      items:
+        - name: 结构化查询语言 (Structured Query Language) (SQL)
+          href: structured-query-language-sql.md
+          items:
+            - name: 处理 SQL 语句
+              href: processing-a-sql-statement.md
+            - name: 嵌入式 SQL
+              href: embedded-sql.md
+              items:
+                - name: 嵌入式 SQL 示例
+                  href: embedded-sql-example.md
+                - name: 编译嵌入式 SQL 程序
+                  href: compiling-an-embedded-sql-program.md
+                - name: 静态 SQL
+                  href: static-sql.md
+                - name: 动态 SQL
+                  href: dynamic-sql.md
+            - name: SQL 模块
+              href: sql-modules.md
+            - name: 调用级别接口
+              href: call-level-interfaces.md
+        - name: 数据库访问体系结构
+          href: database-access-architecture.md
+          items:
+            - name: 网络数据库访问权限
+              href: network-database-access.md
+            - name: 标准数据库访问体系结构
+              href: standard-database-access-architectures.md
+              items:
+                - name: 标准编程接口
+                  href: standard-programming-interface.md
+                - name: 标准数据流协议
+                  href: standard-data-stream-protocol.md
+                - name: 标准网关
+                  href: standard-gateway.md
+            - name: ODBC 解决方案
+              href: the-odbc-solution.md
+    - name: ODBC 体系结构
+      href: odbc-architecture.md
+      items:
+        - name: 应用程序
+          href: applications.md
+        - name: 驱动程序管理器
+          href: the-driver-manager.md
+        - name: 驱动程序
+          href: drivers.md
+          items:
+            - name: 驱动程序任务
+              href: driver-tasks.md
+            - name: 驱动程序体系结构
+              href: driver-architecture.md
+              items:
+                - name: 基于文件的驱动程序
+                  href: file-based-drivers.md
+                - name: 基于 DBMS 的驱动程序
+                  href: dbms-based-drivers.md
+                - name: 网络示例
+                  href: network-example.md
+                - name: 其他驱动程序体系结构
+                  href: other-driver-architectures.md
+        - name: “数据源”
+          href: data-sources.md
+          items:
+            - name: 数据源的类型
+              href: types-of-data-sources.md
+              items:
+                - name: 计算机数据源
+                  href: machine-data-sources.md
+                - name: 文件数据源
+                  href: file-data-sources.md
+            - name: 使用数据源
+              href: using-data-sources.md
+            - name: 数据源示例
+              href: data-source-example.md
+    - name: ODBC 64 位信息
+      href: odbc-64-bit-information.md

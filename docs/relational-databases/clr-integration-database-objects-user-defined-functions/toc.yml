@@ -1,0 +1,12 @@
+- name: CLR 用户定义函数
+  href: clr-user-defined-functions.md
+- name: CLR 标量值函数
+  href: clr-scalar-valued-functions.md
+- name: CLR 表值函数
+  href: clr-table-valued-functions.md
+- name: CLR 用户定义聚合 - 调用函数
+  href: clr-user-defined-aggregate-invoking-functions.md
+- name: CLR 用户定义聚合 - 需求
+  href: clr-user-defined-aggregates-requirements.md
+- name: CLR 用户定义聚合
+  href: clr-user-defined-aggregates.md

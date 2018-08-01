@@ -1,0 +1,10 @@
+- name: Microsoft ActiveX 数据对象 (ADO)
+  href: microsoft-activex-data-objects-ado.md
+- name: 新项目和已更新的项目
+  href: new-updated-ado.md
+- name: ADO 开发指南 +
+  href: ./guide/ado-programmer-s-guide.md
+- name: ADO 参考 +
+  href: ./reference/ado-glossary.md
+- name: ADO 术语表
+  href: ado-glossary.md

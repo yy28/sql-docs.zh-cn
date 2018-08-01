@@ -1,0 +1,155 @@
+- name: 查找、查看和管理报表
+  href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+    - name: 在报表管理器中查找和查看报表
+      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+    - name: 使用浏览器查找和查看报表
+      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+    - name: 搜索报表和其他项
+      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+    - name: 使用“我的报表”文件夹
+      href: using-my-reports-report-builder-and-ssrs.md
+    - name: 在报表生成器中预览报表
+      href: previewing-reports-in-report-builder.md
+- name: 导出报表
+  href: export-reports-report-builder-and-ssrs.md
+  items:
+    - name: 不同报表呈现扩展插件的交互功能
+      href: interactive-functionality-different-report-rendering-extensions.md
+    - name: 导出到 CSV 文件
+      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+    - name: 导出到 Microsoft Excel
+      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+    - name: 导出到 Microsoft Word
+      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+    - name: 以 HTML 格式呈现
+      href: rendering-to-html-report-builder-and-ssrs.md
+    - name: 导出到图像文件
+      href: exporting-to-an-image-file-report-builder-and-ssrs.md
+    - name: 导出到 PDF 文件
+      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+    - name: 导出到 XML
+      href: exporting-to-xml-report-builder-and-ssrs.md
+    - name: 将报表导出为其他文件类型
+      href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
+    - name: 基于报表生成数据馈送
+      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+    - name: 从报表生成数据馈送
+      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+    - name: 避开 Excel 行限制
+      href: work-around-the-excel-2003-row-limitation.md
+- name: 打印报表
+  href: print-reports-report-builder-and-ssrs.md
+  items:
+    - name: 使用打印控件从浏览器中打印报表
+      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+    - name: 从其他应用程序打印报表
+      href: print-reports-from-other-applications-report-builder-and-ssrs.md
+    - name: 打印报表
+      href: print-a-report-report-builder-and-ssrs.md
+    - name: 打印报表（SharePoint 模式下的 Reporting Services）
+      href: print-a-report-reporting-services-in-sharepoint-mode.md
+- name: 保存报表
+  href: saving-reports-report-builder.md
+  items:
+    - name: 将报表保存到报表服务器
+      href: save-reports-to-a-report-server-report-builder.md
+    - name: 将报表保存到 SharePoint 库
+      href: save-a-report-to-a-sharepoint-library-report-builder.md
+    - name: 将报表保存到您的计算机
+      href: ../save-reports-to-your-computer-report-builder.md
+- name: 报表生成器的 F1 帮助
+  href: report-builder-f1-help.md
+  items:
+    - name: 用于对话框、窗格和向导的帮助 (F1)
+      href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
+    - name: “操作属性”对话框
+      href: ../action-properties-dialog-box-report-builder-and-ssrs.md
+    - name: 图表对话框（报表生成器和 SSRS）
+      href: ../chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: “轴属性”对话框 -&gt;“轴选项”
+      href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
+    - name: “轴标题属性”对话框 ->“常规”
+      href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: “计算序列属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
+      href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: “计算序列属性”对话框 ->“标记”
+      href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
+    - name: “筛选器”页 -&gt;“图表”对话框
+      href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: “图例属性”对话框 -&gt;“常规”
+      href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: “列可见性”对话框
+      href: ../column-visibility-dialog-box-report-builder.md
+    - name: “转换 CRI”对话框
+      href: convert-cri-dialog-box-report-builder.md
+    - name: “选择多维数据集”对话框
+      href: ../cube-selection-dialog-box-report-builder.md
+    - name: “数据源属性”对话框 ->“凭据”
+      href: ../data-source-properties-dialog-box-credentials-report-builder.md
+    - name: “数据源属性”对话框 ->“常规”
+      href: ../data-source-properties-dialog-box-general-report-builder.md
+    - name: “数据集属性”对话框 -&gt;“字段”
+      href: ../dataset-properties-dialog-box-fields-report-builder.md
+    - name: “数据集属性”对话框 -&gt;“筛选器”
+      href: ../dataset-properties-dialog-box-filters-report-builder.md
+    - name: “数据集属性”对话框 -&gt;“选项”
+      href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
+    - name: “数据集属性”对话框 ->“参数”
+      href: ../dataset-properties-dialog-box-parameters-report-builder.md
+    - name: “数据集属性”对话框 -&gt;“查询”
+      href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
+    - name: “输入数据源凭据”对话框
+      href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
+    - name: “表达式”对话框
+      href: ../expression-dialog-box-report-builder.md
+    - name: “填充”对话框
+      href: ../fill-dialog-box-report-builder-and-ssrs.md
+    - name: “分组”窗格
+      href: ../report-design/grouping-pane-report-builder.md
+    - name: “图像属性”对话框 -&gt;“常规”
+      href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: “图像属性”对话框 -&gt;“大小”
+      href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
+    - name: “占位符属性”对话框 ->“常规”
+      href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 查询设计器
+      href: ../query-designers-report-builder.md
+      items:
+        - name: 关系查询设计器用户界面
+          href: ../report-data/relational-query-designer-user-interface-report-builder.md
+        - name: 基于文本的查询设计器用户界面
+          href: ../report-data/text-based-query-designer-user-interface-report-builder.md
+          items:
+            - name: “定义查询参数”对话框
+              href: ../define-query-parameters-dialog-box-report-builder.md
+        - name: Analysis Services MDX 查询设计器用户界面
+          href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
+        - name: Hyperion Essbase 查询设计器用户界面
+          href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
+        - name: SharePoint 列表查询设计器
+          href: ../report-data/sharepoint-list-query-designer-report-builder.md
+        - name: SAP NetWeaver BI 查询设计器用户界面
+          href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
+    - name: “报表生成器选项”对话框 -&gt;“设置”
+      href: set-default-options-for-report-builder.md
+    - name: “报表数据”窗格
+      href: ../report-data-pane-report-builder.md
+    - name: “报表区域”对话框
+      href: report-sections-dialog-box-report-builder.md
+    - name: “Reporting Services 登录”对话框
+      href: reporting-services-login-dialog-box-report-builder.md
+    - name: “报表属性”对话框 -&gt;“代码”
+      href: ../report-properties-dialog-box-code-report-builder.md
+    - name: “报表属性”对话框 ->“页面设置”
+      href: ../report-properties-dialog-box-page-setup-report-builder.md
+    - name: “报表属性”对话框 ->“引用”
+      href: ../report-properties-dialog-box-references-report-builder.md
+    - name: “行可见性”对话框
+      href: ../row-visibility-dialog-box-report-builder.md
+    - name: “选择颜色”对话框
+      href: ../select-color-dialog-box-report-builder-and-ssrs.md
+    - name: “文本框属性”对话框 -&gt;“对齐”
+      href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
+    - name: 文本和占位符的“对齐”对话框
+      href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md

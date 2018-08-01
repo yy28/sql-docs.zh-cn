@@ -1,0 +1,371 @@
+- name: Visual Database Tools
+  href: visual-database-tools.md
+- name: 设计数据库关系图 (Visual Database Tools)
+  href: design-database-diagrams-visual-database-tools.md
+  items:
+    - name: 了解数据库关系图所有权 (Visual Database Tools)
+      href: understand-database-diagram-ownership-visual-database-tools.md
+    - name: 在数据库关系图设计器中导航 (Visual Database Tools)
+      href: navigate-in-database-diagram-designer-visual-database-tools.md
+    - name: 设置数据库关系图设计器 (Visual Database Tools)
+      href: set-up-database-diagram-designer-visual-database-tools.md
+    - name: 从以前的版本升级数据库关系图 (Visual Database Tools)
+      href: upgrade-database-diagrams-from-previous-editions-visual-database-tools.md
+    - name: 打开数据库关系图设计器 (Visual Database Tools)
+      href: open-database-diagram-designer-visual-database-tools.md
+    - name: 使用数据库关系图 (Visual Database Tools)
+      href: work-with-database-diagrams-visual-database-tools.md
+    - name: 创建新的数据库关系图 (Visual Database Tools)
+      href: create-a-new-database-diagram-visual-database-tools.md
+    - name: 保存数据库关系图 (Visual Database Tools)
+      href: save-database-diagrams-visual-database-tools.md
+    - name: 打开数据库关系图 (Visual Database Tools)
+      href: open-database-diagrams-visual-database-tools.md
+    - name: 删除数据库对象图 (Visual Database Tools)
+      href: delete-a-database-diagram-visual-database-tools.md
+    - name: 重命名数据库关系图 (Visual Database Tools)
+      href: rename-a-database-diagram-visual-database-tools.md
+    - name: 放弃对关系图所做的更改 (Visual Database Tools)
+      href: discard-changes-made-to-diagrams-visual-database-tools.md
+    - name: 协调数据库关系图与已修改的数据库 (Visual Database Tools)
+      href: reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md
+    - name: 显示关系图属性 (Visual Database Tools)
+      href: show-diagram-properties-visual-database-tools.md
+    - name: 将数据库关系图复制到剪贴板 (Visual Database Tools)
+      href: copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
+    - name: 使用数据库关系图中的表 (Visual Database Tools)
+      href: work-with-tables-in-database-diagram-visual-database-tools.md
+    - name: 向关系图中添加表 (Visual Database Tools)
+      href: add-tables-to-diagrams-visual-database-tools.md
+    - name: 向关系图中添加相关表 (Visual Database Tools)
+      href: add-related-tables-to-diagrams-visual-database-tools.md
+    - name: 保存关系图中所选的表 (Visual Database Tools)
+      href: save-selected-tables-on-a-diagram-visual-database-tools.md
+    - name: 将表从一个数据库关系图复制到另一个数据库关系图 (Visual Database Tools)
+      href: copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
+    - name: 从数据库关系图中移除表 (Visual Database Tools)
+      href: remove-tables-from-database-diagrams-visual-database-tools.md
+    - name: 在关系图中创建表间的关系（可视化数据库工具）
+      href: create-relationships-between-tables-on-a-diagram-visual-database-tools.md
+    - name: 映射多对多关系 (Visual Database Tools)
+      href: map-many-to-many-relationships-visual-database-tools.md
+    - name: 绘制自反关系 (Visual Database Tools)
+      href: draw-reflexive-relationships-visual-database-tools.md
+    - name: 使用关系图布局 (Visual Database Tools)
+      href: work-with-diagram-layout-visual-database-tools.md
+    - name: 自定义关系图中显示的信息量 (Visual Database Tools)
+      href: customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
+    - name: 向关系图中添加文本批注 (Visual Database Tools)
+      href: add-text-annotations-to-diagrams-visual-database-tools.md
+    - name: 自动调整关系图中选定表的大小 (Visual Database Tools)
+      href: autosize-selected-tables-in-diagrams-visual-database-tools.md
+    - name: 在关系图中排列表 (Visual Database Tools)
+      href: arrange-tables-in-diagrams-visual-database-tools.md
+    - name: 在关系图中更改字体颜色、大小和样式（可视化数据库工具）
+      href: change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md
+    - name: 演练：添加和更改数据库关系图
+      href: walkthrough-adding-and-changing-a-database-diagram.md
+    - name: Visual Database Tool 设计器 (Visual Database Tools)
+      href: visual-database-tool-designers.md
+    - name: 多用户环境 (Visual Database Tools)
+      href: multiuser-environments-visual-database-tools.md
+      items:
+        - name: 权限和 Visual Database Tools (Visual Database Tools)
+          href: permissions-and-visual-database-tools-visual-database-tools.md
+        - name: 协调多个用户所做的更改 (Visual Database Tools)
+          href: reconcile-changes-made-by-multiple-users-visual-database-tools.md
+        - name: 数据库演化问题 (Visual Database Tools)
+          href: issues-of-database-evolution-visual-database-tools.md
+        - name: 开发、测试和生产数据库 (Visual Database Tools)
+          href: development-test-and-production-databases-visual-database-tools.md
+- name: 设计表 (Visual Database Tools)
+  href: design-tables-visual-database-tools.md
+  items:
+    - name: 打开表设计器 (Visual Database Tools)
+      href: ../../database-engine/open-table-designer-visual-database-tools.md
+    - name: 在表设计器中保存您的工作 (Visual Database Tools)
+      href: ../../database-engine/save-your-work-in-table-designer-visual-database-tools.md
+- name: 设计查询和视图操作指南主题 (Visual Database Tools)
+  href: design-queries-and-views-how-to-topics-visual-database-tools.md
+  items:
+    - name: 打开查询和视图设计器 (Visual Database Tools)
+      href: open-the-query-and-view-designer-visual-database-tools.md
+    - name: 在查询和视图设计器中导航 (Visual Database Tools)
+      href: navigate-in-the-query-and-view-designer-visual-database-tools.md
+    - name: 查询和视图设计器工具 (Visual Database Tools)
+      href: query-and-view-designer-tools-visual-database-tools.md
+    - name: 显示查询和视图设计器窗格 (Visual Database Tools)
+      href: display-query-and-view-designer-panes-visual-database-tools.md
+    - name: 关系图窗格 (Visual Database Tools)
+      href: diagram-pane-visual-database-tools.md
+    - name: “条件”窗格 (Visual Database Tools)
+      href: criteria-pane-visual-database-tools.md
+    - name: SQL 窗格 (Visual Database Tools)
+      href: sql-pane-visual-database-tools.md
+    - name: “结果”窗格 (Visual Database Tools)
+      href: results-pane-visual-database-tools.md
+    - name: SQL 编辑器 (Visual Database Tools)
+      href: sql-editor-visual-database-tools.md
+    - name: 查询类型 (Visual Database Tools)
+      href: types-of-queries-visual-database-tools.md
+    - name: 支持的查询类型 (Visual Database Tools)
+      href: supported-query-types-visual-database-tools.md
+    - name: 创建全文搜索查询 (Visual Database Tools)
+      href: create-full-text-search-queries-visual-database-tools.md
+    - name: 创建插入结果查询 (Visual Database Tools)
+      href: create-insert-results-queries-visual-database-tools.md
+    - name: 创建“插入值”查询 (Visual Database Tools)
+      href: create-insert-values-queries-visual-database-tools.md
+    - name: 创建“生成表”查询 (Visual Database Tools)
+      href: create-make-table-queries-visual-database-tools.md
+    - name: 创建删除查询 (Visual Database Tools)
+      href: create-delete-queries-visual-database-tools.md
+    - name: 创建 UNION 查询 (Visual Database Tools)
+      href: create-union-queries-visual-database-tools.md
+    - name: 创建更新查询 (Visual Database Tools)
+      href: create-update-queries-visual-database-tools.md
+    - name: 使用“结果”窗格中的数据 (Visual Database Tools)
+      href: work-with-data-in-the-results-pane-visual-database-tools.md
+    - name: 更新结果的规则 (Visual Database Tools)
+      href: rules-for-updating-results-visual-database-tools.md
+    - name: 在“结果”窗格中添加新行 (Visual Database Tools)
+      href: add-new-rows-in-the-results-pane-visual-database-tools.md
+    - name: 在“结果”窗格中编辑行 (Visual Database Tools)
+      href: edit-rows-in-the-results-pane-visual-database-tools.md
+    - name: 在“结果”窗格中删除行 (Visual Database Tools)
+      href: delete-rows-in-the-results-pane-visual-database-tools.md
+    - name: 对查询结果进行排序和分组 (Visual Database Tools)
+      href: sort-and-group-query-results-visual-database-tools.md
+      items:
+        - name: 对行进行排序 (Visual Database Tools)
+          href: sort-rows-visual-database-tools.md
+        - name: 折叠行组 (Visual Database Tools)
+          href: collapse-groups-of-rows-visual-database-tools.md
+        - name: 使用 ORDER BY 排序 (Visual Database Tools)
+          href: sort-with-order-by-visual-database-tools.md
+        - name: 按升序或降序进行排序 (Visual Database Tools)
+          href: sort-in-ascending-or-descending-order-visual-database-tools.md
+        - name: 对查询中的多个列进行排序 (Visual Database Tools)
+          href: sort-multiple-columns-in-queries-visual-database-tools.md
+        - name: 对查询结果中的行进行分组 (Visual Database Tools)
+          href: group-rows-in-query-results-visual-database-tools.md
+        - name: 为组指定条件 (Visual Database Tools)
+          href: specify-conditions-for-groups-visual-database-tools.md
+        - name: 重新排列输出列 (Visual Database Tools)
+          href: reorder-output-columns-visual-database-tools.md
+    - name: 汇总查询结果 (Visual Database Tools)
+      href: summarize-query-results-visual-database-tools.md
+      items:
+        - name: 在聚合查询中使用列 (Visual Database Tools)
+          href: work-with-columns-in-aggregate-queries-visual-database-tools.md
+        - name: 计算表中的行数 (Visual Database Tools)
+          href: count-rows-in-a-table-visual-database-tools.md
+        - name: 汇总或聚合表中所有行的值 (Visual Database Tools)
+          href: summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md
+        - name: 使用自定义表达式汇总或聚合值 (Visual Database Tools)
+          href: summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md
+    - name: 清除查询结果 (Visual Database Tools)
+      href: clear-query-results-visual-database-tools.md
+    - name: 打印查询结果 (Visual Database Tools)
+      href: print-query-results-visual-database-tools.md
+    - name: 复制查询结果 (Visual Database Tools)
+      href: copy-query-results-visual-database-tools.md
+    - name: 从查询结果中删除列 (Visual Database Tools)
+      href: remove-columns-from-query-results-visual-database-tools.md
+    - name: 执行基本的查询操作 (Visual Database Tools)
+      href: perform-basic-operations-with-queries-visual-database-tools.md
+    - name: 创建查询 (Visual Database Tools)
+      href: create-queries-visual-database-tools.md
+    - name: 打开查询 (Visual Database Tools)
+      href: open-queries-visual-database-tools.md
+    - name: 运行查询 (Visual Database Tools)
+      href: run-queries-visual-database-tools.md
+    - name: 停止查询 (Visual Database Tools)
+      href: stop-a-query-visual-database-tools.md
+    - name: 保存查询 (Visual Database Tools)
+      href: save-queries-visual-database-tools.md
+    - name: 验证查询 (Visual Database Tools)
+      href: verify-queries-visual-database-tools.md
+    - name: 修改查询 (Visual Database Tools)
+      href: modify-queries-visual-database-tools.md
+    - name: 删除查询 (Visual Database Tools)
+      href: delete-queries-visual-database-tools.md
+    - name: 复制查询 (Visual Database Tools)
+      href: copy-queries-visual-database-tools.md
+    - name: 重命名查询 (Visual Database Tools)
+      href: rename-queries-visual-database-tools.md
+    - name: 放弃对查询所做的更改 (Visual Database Tools)
+      href: discard-changes-made-to-queries-visual-database-tools.md
+    - name: 向查询中添加表 (Visual Database Tools)
+      href: add-tables-to-queries-visual-database-tools.md
+    - name: 向查询中添加派生表 (Visual Database Tools)
+      href: add-derived-tables-to-queries-visual-database-tools.md
+    - name: 从查询中删除表 (Visual Database Tools)
+      href: remove-tables-from-queries-visual-database-tools.md
+    - name: 向查询中添加列 (Visual Database Tools)
+      href: add-columns-to-queries-visual-database-tools.md
+    - name: 从查询中删除列 (Visual Database Tools)
+      href: remove-columns-from-queries-visual-database-tools.md
+    - name: 创建列别名 (Visual Database Tools)
+      href: create-column-aliases-visual-database-tools.md
+    - name: 创建表别名 (Visual Database Tools)
+      href: create-table-aliases-visual-database-tools.md
+    - name: 显示查询属性 (Visual Database Tools)
+      href: show-query-properties-visual-database-tools.md
+    - name: 使用表以外的对象创建查询 (Visual Database Tools)
+      href: create-queries-using-something-besides-a-table-visual-database-tools.md
+    - name: 在“关系图”窗格中显示列名 (Visual Database Tools)
+      href: show-column-names-in-the-diagram-pane-visual-database-tools.md
+    - name: 对国际数据使用查询和视图设计器 (Visual Database Tools)
+      href: use-the-query-and-view-designer-with-international-data-visual-database-tools.md
+    - name: 指定搜索条件 (Visual Database Tools)
+      href: specify-search-criteria-visual-database-tools.md
+    - name: 输入搜索值的规则 (Visual Database Tools)
+      href: rules-for-entering-search-values-visual-database-tools.md
+    - name: 在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
+      href: conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md
+    - name: 指定搜索条件 (Visual Database Tools)
+      href: specify-search-conditions-visual-database-tools.md
+    - name: 为同一列指定多个搜索条件 (Visual Database Tools)
+      href: specify-multiple-search-conditions-for-one-column-visual-database-tools.md
+    - name: 为多个列指定多个搜索条件 (Visual Database Tools)
+      href: specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
+    - name: 在查询中指定 TOP 子句 (Visual Database Tools)
+      href: specify-the-top-clause-in-queries-visual-database-tools.md
+    - name: 在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
+      href: use-having-and-where-clauses-in-the-same-query-visual-database-tools.md
+    - name: 选择与值不匹配的行 (Visual Database Tools)
+      href: select-rows-that-do-not-match-a-value-visual-database-tools.md
+    - name: 包含或排除行 (Visual Database Tools)
+      href: include-or-exclude-rows-visual-database-tools.md
+    - name: 排除重复行 (Visual Database Tools)
+      href: exclude-duplicate-rows-visual-database-tools.md
+    - name: 在 AND 优先时组合条件 (Visual Database Tools)
+      href: combine-conditions-when-and-has-precedence-visual-database-tools.md
+    - name: 在 OR 优先时组合条件 (Visual Database Tools)
+      href: combine-conditions-when-or-has-precedence-visual-database-tools.md
+    - name: 创建子查询 (Visual Database Tools)
+      href: create-subqueries-visual-database-tools.md
+    - name: 使用联接进行查询 (Visual Database Tools)
+      href: query-with-joins-visual-database-tools.md
+    - name: 修改联接运算符 (Visual Database Tools)
+      href: modify-join-operators-visual-database-tools.md
+    - name: 查询和视图设计器如何表示联接 (Visual Database Tools)
+      href: how-the-query-and-view-designer-represents-joins-visual-database-tools.md
+    - name: 自动联接表 (Visual Database Tools)
+      href: join-tables-automatically-visual-database-tools.md
+    - name: 手动联接表 (Visual Database Tools)
+      href: join-tables-manually-visual-database-tools.md
+    - name: 在多个列上联接表 (Visual Database Tools)
+      href: join-tables-on-multiple-columns-visual-database-tools.md
+    - name: 创建外部联接 (Visual Database Tools)
+      href: create-outer-joins-visual-database-tools.md
+    - name: 删除联接 (Visual Database Tools)
+      href: remove-joins-visual-database-tools.md
+    - name: 自动创建自联接 (Visual Database Tools)
+      href: create-self-joins-automatically-visual-database-tools.md
+    - name: 手动创建自联接 (Visual Database Tools)
+      href: create-self-joins-manually-visual-database-tools.md
+    - name: 查看联接属性 (Visual Database Tools)
+      href: view-join-properties-visual-database-tools.md
+    - name: 使用参数查询 (Visual Database Tools)
+      href: query-with-parameters-visual-database-tools.md
+    - name: 参数查询 (Visual Database Tools)
+      href: parameter-queries-visual-database-tools.md
+    - name: 使用未命名参数创建查询 (Visual Database Tools)
+      href: create-queries-with-unnamed-parameters-visual-database-tools.md
+- name: Visual Database Tools F1 帮助
+  href: visual-database-tools-f1-help.md
+  items:
+    - name: “保存”（不允许）对话框
+      href: save-not-permitted-dialog-box.md
+    - name: 对象已存在
+      href: object-already-exists.md
+    - name: “添加表”对话框（数据库设计器）(Visual Database Tools)
+      href: add-table-dialog-box-database-designer-visual-database-tools.md
+    - name: “添加表”对话框（查询和视图设计器）(Visual Database Tools)
+      href: add-table-dialog-box-query-and-view-designers-visual-database-tools.md
+    - name: “CHECK 约束”对话框 (Visual Database Tools)
+      href: check-constraint-dialog-box-visual-database-tools.md
+    - name: “CHECK 约束表达式”对话框 (Visual Database Tools)
+      href: check-constraint-expression-dialog-box-visual-database-tools.md
+    - name: “选择名称”对话框 (Visual Database Tools)
+      href: choose-name-dialog-box-visual-database-tools.md
+    - name: “选择插入结果的目标表”对话框 (Visual Database Tools)
+      href: choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
+    - name: “选择插入值的目标表”对话框 (Visual Database Tools)
+      href: choose-target-table-for-insert-values-dialog-box-visual-database-tools.md
+    - name: “排序规则”对话框 (Visual Database Tools)
+      href: collation-dialog-box-visual-database-tools.md
+    - name: “颜色”对话框（可视化数据库工具）
+      href: color-dialog-box-visual-database-tools.md
+    - name: “列列表”对话框 (Visual Database Tools)
+      href: column-list-dialog-box-visual-database-tools.md
+    - name: 列属性 (Visual Database Tools)
+      href: column-properties-visual-database-tools.md
+    - name: “列选择”对话框 (Visual Database Tools)
+      href: column-selection-dialog-box-visual-database-tools.md
+    - name: “检测到数据库更改”对话框 (Visual Database Tools)
+      href: database-changes-detected-dialog-box-visual-database-tools.md
+    - name: “需要更改数据类型”对话框 (Visual Database Tools)
+      href: data-type-change-required-dialog-box-visual-database-tools.md
+    - name: “删除表”对话框 (Visual Database Tools)
+      href: delete-table-dialog-box-visual-database-tools.md
+    - name: “说明属性”对话框 (Visual Database Tools)
+      href: description-property-dialog-box-visual-database-tools.md
+    - name: “全文本索引列”对话框 (Visual Database Tools)
+      href: full-text-index-columns-dialog-box-visual-database-tools.md
+    - name: “全文索引”对话框 (Visual Database Tools)
+      href: full-text-index-dialog-box-visual-database-tools.md
+    - name: “转到行”对话框
+      href: go-to-line-dialog-box.md
+    - name: “索引和键”对话框 (Visual Database Tools)
+      href: indexes-keys-dialog-box-visual-database-tools.md
+    - name: “索引列”对话框 (Visual Database Tools)
+      href: index-columns-dialog-box-visual-database-tools.md
+    - name: “联接”对话框 (Visual Database Tools)
+      href: join-dialog-box-visual-database-tools.md
+    - name: “位置”对话框（可视化数据库工具）
+      href: location-dialog-box-visual-database-tools.md
+    - name: “生成表”对话框 (Visual Database Tools)
+      href: make-table-dialog-box-visual-database-tools.md
+    - name: “打开文件”对话框
+      href: open-file-dialog-box.md
+    - name: “分区列列表”对话框 (Visual Database Tools)
+      href: partition-column-list-dialog-box-visual-database-tools.md
+    - name: “保存后的通知”对话框 (Visual Database Tools)
+      href: post-save-notifications-dialog-box-visual-database-tools.md
+    - name: “打印”对话框
+      href: print-dialog-box.md
+    - name: “页面设置”对话框
+      href: page-setup-dialog-box.md
+    - name: “查询定义不同”对话框 (Visual Database Tools)
+      href: query-definitions-differ-dialog-box-visual-database-tools.md
+    - name: “查询参数”对话框 (Visual Database Tools)
+      href: query-parameters-dialog-box-visual-database-tools.md
+    - name: 查询属性 (Visual Database Tools)
+      href: query-properties-visual-database-tools.md
+    - name: “保存更改脚本”对话框 (Visual Database Tools)
+      href: save-change-script-dialog-box-visual-database-tools.md
+    - name: “保存”对话框 (Visual Database Tools)
+      href: save-dialog-box-visual-database-tools.md
+    - name: “空间索引”对话框 (Visual Database Tools)
+      href: spatial-indexes-dialog-box-visual-database-tools.md
+    - name: “SQL 注释”对话框 (Visual Database Tools)
+      href: sql-comment-dialog-box-visual-database-tools.md
+    - name: “遇到 SQL 语法错误”对话框 (Visual Database Tools)
+      href: sql-syntax-errors-encountered-dialog-box-visual-database-tools.md
+    - name: “表和列”对话框 (Visual Database Tools)
+      href: tables-and-columns-dialog-box-visual-database-tools.md
+    - name: 表属性 (Visual Database Tools)
+      href: table-properties-visual-database-tools.md
+    - name: 表值对象（列）属性 (Visual Database Tools)
+      href: table-valued-object-column-properties-visual-database-tools.md
+    - name: 表值对象属性 (Visual Database Tools)
+      href: table-valued-object-properties-visual-database-tools.md
+    - name: “更新表”对话框 (Visual Database Tools)
+      href: update-table-dialog-box-visual-database-tools.md
+    - name: “验证警告”对话框 (Visual Database Tools)
+      href: validation-warnings-dialog-box-visual-database-tools.md
+    - name: “XML 索引”对话框 (Visual Database Tools)
+      href: xml-indexes-dialog-box-visual-database-tools.md

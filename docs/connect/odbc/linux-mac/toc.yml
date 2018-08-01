@@ -1,0 +1,30 @@
+- name: 系统要求
+  href: system-requirements.md
+- name: 安装驱动程序管理器
+  href: installing-the-driver-manager.md
+- name: 安装 Microsoft ODBC Driver for SQL Server
+  href: installing-the-microsoft-odbc-driver-for-sql-server.md
+- name: 功能指南
+  items:
+    - name: 连接字符串关键字和数据源名称 (DSN)
+      href: connection-string-keywords-and-data-source-names-dsns.md
+    - name: Linux 和 macOS 上的 ODBC 驱动程序的数据访问跟踪
+      href: data-access-tracing-with-the-odbc-driver-on-linux.md
+    - name: Linux 和 macOS 上的 ODBC 驱动程序 - 高可用性和灾难恢复
+      href: odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md
+    - name: 编程指南
+      href: programming-guidelines.md
+    - name: 工具
+      items:
+        - name: 使用 bcp.exe 连接
+          href: connecting-with-bcp.md
+        - name: 使用 sqlcmd.exe 连接
+          href: connecting-with-sqlcmd.md
+    - name: 使用集成身份验证
+      href: using-integrated-authentication.md
+- name: 发行说明
+  href: release-notes.md
+- name: 已知问题
+  href: known-issues-in-this-version-of-the-driver.md
+- name: ODBC Linux 和 macOS 的常见问题解答 (FAQ)
+  href: frequently-asked-questions-faq-for-odbc-linux.md

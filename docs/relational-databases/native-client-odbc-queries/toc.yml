@@ -1,0 +1,16 @@
+- name: 执行查询 (ODBC)
+  href: executing-queries-odbc.md
+- name: 执行语句 +
+  href: ../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md
+- name: 分配语句句柄
+  href: allocating-a-statement-handle.md
+- name: 构造 SQL 语句 (ODBC)
+  href: constructing-an-sql-statement-odbc.md
+- name: 为游标构造 SQL 语句
+  href: constructing-sql-statements-for-cursors.md
+- name: 释放语句句柄
+  href: freeing-a-statement-handle.md
+- name: 使用语句参数 - 绑定参数
+  href: using-statement-parameters-binding-parameters.md
+- name: 使用语句参数
+  href: using-statement-parameters.md

@@ -1,0 +1,32 @@
+- name: Building Applications Using the Web Service and the .NET Framework
+  href: building-applications-using-the-web-service-and-the-net-framework.md
+- name: 介绍 Reporting Services 中的异常处理 +
+  href: ../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json
+- name: 使用 Reporting Services SOAP 标头 +
+  href: ../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json
+- name: 调用 Web 服务方法
+  href: calling-web-service-methods.md
+- name: 创建 Web 服务代理
+  href: creating-the-web-service-proxy.md
+- name: 省略可选 Web 服务对象的值
+  href: omitting-values-for-optional-web-service-objects.md
+- name: 将设备信息设置传递给呈现扩展插件
+  href: passing-device-information-settings-to-rendering-extensions.md
+- name: Reporting Services 传递扩展插件设置
+  href: reporting-services-delivery-extension-settings.md
+- name: Reporting Services 属性 - 报表服务器项属性
+  href: reporting-services-properties-report-server-item-properties.md
+- name: Reporting Services 属性 - 报表服务器系统属性
+  href: reporting-services-properties-report-server-system-properties.md
+- name: Reporting Services 属性
+  href: reporting-services-properties.md
+- name: 设置 Web 服务的 Url 属性
+  href: setting-the-url-property-of-the-web-service.md
+- name: 提供 Web 服务方法参数
+  href: supplying-web-service-method-arguments.md
+- name: 使用安全 Web 服务方法
+  href: using-secure-web-service-methods.md
+- name: 在自定义应用程序中使用 RSClientPrint 控件
+  href: using-the-rsclientprint-control-in-custom-applications.md
+- name: Web 服务身份验证
+  href: web-service-authentication.md

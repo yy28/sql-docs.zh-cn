@@ -1,0 +1,41 @@
+- name: SQL Server 导入和导出向导
+  href: import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+  items:
+    - name: 运行 SQL Server 导入和导出向导
+      href: start-the-sql-server-import-and-export-wizard.md
+    - name: 欢迎使用 SQL Server 导入和导出向导
+      href: welcome-to-sql-server-import-and-export-wizard.md
+    - name: 选择数据源（SQL Server 导入和导出向导）
+      href: choose-a-data-source-sql-server-import-and-export-wizard.md
+    - name: 选择目标（SQL Server 导入和导出向导）
+      href: choose-a-destination-sql-server-import-and-export-wizard.md
+    - name: 创建数据库（SQL Server 导入和导出向导）
+      href: create-database-sql-server-import-and-export-wizard.md
+    - name: 指定表复制或查询（SQL Server 导入和导出向导）
+      href: specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+    - name: 选择源表和源视图（SQL Server 导入和导出向导）
+      href: select-source-tables-and-views-sql-server-import-and-export-wizard.md
+    - name: “预览数据”对话框（SQL Server 导入和导出向导）
+      href: preview-data-dialog-box-sql-server-import-and-export-wizard.md
+    - name: 提供源查询（SQL Server 导入和导出向导）
+      href: provide-a-source-query-sql-server-import-and-export-wizard.md
+    - name: 配置平面文件目标（SQL Server 导入和导出向导）
+      href: configure-flat-file-destination-sql-server-import-and-export-wizard.md
+    - name: 列映射（SQL Server 导入和导出向导）
+      href: column-mappings-sql-server-import-and-export-wizard.md
+    - name: Create Table SQL 语句（SQL Server 导入和导出向导）
+      href: create-table-sql-statement-sql-server-import-and-export-wizard.md
+    - name: 查看数据类型映射（SQL Server 导入和导出向导）
+      href: review-data-type-mapping-sql-server-import-and-export-wizard.md
+    - name: “列转换详细信息”对话框（SQL Server 导入和导出向导）
+      href: column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+    - name: 转换类型时不进行转换检查（SQL Server 导入和导出向导）
+      href: convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+    - name: 保存并执行包（SQL Server 导入和导出向导）
+      href: save-and-run-package-sql-server-import-and-export-wizard.md
+    - name: 保存 SSIS 包（SQL Server 导入和导出向导）
+      href: save-ssis-package-sql-server-import-and-export-wizard.md
+    - name: 完成该向导（SQL Server 导入和导出向导）
+      href: complete-the-wizard-sql-server-import-and-export-wizard.md
+    - name: 正在执行操作（SQL Server 导入和导出向导）
+      href: performing-operation-sql-server-import-and-export-wizard.md

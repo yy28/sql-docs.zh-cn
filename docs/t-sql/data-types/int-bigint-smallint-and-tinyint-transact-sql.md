@@ -1,4 +1,4 @@
-﻿---
+---
 title: int、bigint、smallint 和 tinyint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 9/8/2017

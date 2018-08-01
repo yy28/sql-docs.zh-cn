@@ -1,0 +1,14 @@
+- name: 数据库对象（Analysis Services - 多维数据）
+  href: database-objects-analysis-services-multidimensional-data.md
+- name: 维度对象 +
+  href: ../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+- name: 多维数据集对象 +
+  href: ../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+- name: 逻辑体系结构概述（Analysis Services - 多维数据）
+  href: logical-architecture-overview-analysis-services-multidimensional-data.md
+- name: 安全角色（Analysis Services - 多维数据）
+  href: security-roles-analysis-services-multidimensional-data.md
+- name: 服务器对象（Analysis Services - 多维数据）
+  href: server-objects-analysis-services-multidimensional-data.md
+- name: 了解 Microsoft OLAP 逻辑体系结构
+  href: understanding-microsoft-olap-logical-architecture.md

@@ -1,0 +1,35 @@
+- name: 概述
+  href: sql-server-database-engine-overview.md
+- name: 新增功能 - SQL Server 2017
+  href: whats-new-in-sql-server-2017.md
+- name: 新增功能 - SQL Server 2016
+  href: whats-new-in-sql-server-2016.md
+- name: 发行说明
+  items:
+    - name: 向后兼容性
+      href: sql-server-database-engine-backward-compatibility.md
+    - name: SQL Server 2017 中弃用的功能
+      href: deprecated-database-engine-features-in-sql-server-2017.md
+    - name: SQL Server 2016 中弃用的功能
+      href: deprecated-database-engine-features-in-sql-server-2016.md
+    - name: SQL Server 2016 中已中断的功能
+      href: discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: SQL Server 2017 中的重大更改
+      href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
+    - name: SQL Server 2016 中的重大更改
+      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+    - name: 新项目和已更新的项目
+      href: new-updated-database-engine.md
+- name: Install
+  href: ../database-engine/install-windows/installation-for-sql-server-2016.md
+- name: 配置
+  href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
+- name: 高可用性
+  href: sql-server-business-continuity-dr.md
+  items:
+    - name: 可用性组
+      href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    - name: 数据库镜像
+      href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+    - name: 日志传送
+      href: ../database-engine/log-shipping/about-log-shipping-sql-server.md

@@ -1,6 +1,6 @@
 ---
-title: 使用 OLE DB 驱动程序中的 OLE DB 中使用 OUTPUT 子句，用于 SQL Server |Microsoft 文档
-description: 与 OLE DB 中 OLE DB 驱动程序中使用 OUTPUT 子句，用于 SQL Server
+title: 将 OUTPUT 子句与适用于 SQL Server 的 OLE DB 驱动程序中的 OLE DB 结合使用 | Microsoft Docs
+description: 将 OUTPUT 子句与适用于 SQL Server 的 OLE DB 驱动程序中的 OLE DB 结合使用
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8cf2e08b76636ab8509ab07fd1f3d60a102fa76d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ad3408d0419e408809b151114d83a09d976505fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665327"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109389"
 ---
-# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>使用 OLE DB 驱动程序中的 OLE DB 中使用 OUTPUT 子句，用于 SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>将 OUTPUT 子句与适用于 SQL Server 的 OLE DB 驱动程序中的 OLE DB 结合使用
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  如果你在 INSERT、 UPDATE、 DELETE 中使用 OUTPUT 子句，或合并命令，受影响的行计数不可用。 应用程序必须进行计数 OUTPUT 子句返回的行集中的行的数。  
+  如果在 INSERT、UPDATE、DELETE 或 MERGE 命令中使用 OUTPUT 子句，则无法获得受影响的行数。 应用程序必须对 OUTPUT 子句所返回的行集中的行数进行计数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建适用于 SQL Server 的 OLE DB 驱动程序应用程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) 
   
   

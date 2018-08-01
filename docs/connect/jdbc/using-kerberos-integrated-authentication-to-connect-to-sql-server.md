@@ -1,7 +1,7 @@
 ---
 title: 使用 Kerberos 集成身份验证连接到 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9967b31d9b021147d02c981af54474f8967fe406
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
-ms.translationtype: HT
+ms.openlocfilehash: 5c36df2b7cc6feda976a3edfdadbac68e9b96dd3
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085449"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279039"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 集成身份验证连接 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "39085449"
   
  登录配置文件包含一个或多个条目，每个条目分别指定应用于某个特定应用程序或多个应用程序的基础身份验证技术。 例如，  
   
-```  
+```java
 SQLJDBCDriver {  
    com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;  
 };  
@@ -172,7 +172,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 ## <a name="constrained-delegation"></a>约束委派
 从 Microsoft JDBC Driver 6.2 开始，该驱动程序支持 Kerberos 约束委派。 委派的凭据可以作为 org.ietf.jgss.GSSCredential 对象传入，这些凭据由驱动程序，以建立连接。 
 
-```
+```java
 Properties driverProperties = new Properties();
 GSSCredential impersonatedUserCredential = [userCredential]
 driverProperties.setProperty("integratedSecurity", "true");
@@ -183,7 +183,7 @@ Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 
 ## <a name="kerberos-connection-using-principal-names-and-password"></a>Kerberos 连接使用主体名称和密码
 从 Microsoft JDBC Driver 6.2 开始，驱动程序可以在连接字符串建立的 Kerberos 传递连接使用主体的名称和密码。 
-```
+```java
 jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
 Username 属性不需要领域，如果用户属于 default_realm krb5.conf 文件中设置。 当`userName`并`password`设置连同`integratedSecurity=true;`和`authenticationScheme=JavaKerberos;`属性，该连接会建立与用户名的值作为 Kerberos 主体沿与提供的密码。

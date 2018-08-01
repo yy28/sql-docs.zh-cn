@@ -1,0 +1,162 @@
+- name: 概述
+  href: integration-services-ssis-expressions.md
+- name: 高级 Integration Services 表达式的示例
+  href: examples-of-advanced-integration-services-expressions.md
+- name: 在包中使用属性表达式
+  href: use-property-expressions-in-packages.md
+  items:
+    - name: 属性表达式中的枚举常量
+      href: enumerated-constants-in-property-expressions.md
+    - name: 添加或更改属性表达式
+      href: add-or-change-a-property-expression.md
+      items:
+        - name: “表达式”页
+          href: expressions-page.md
+        - name: 属性表达式编辑器
+          href: property-expressions-editor.md
+        - name: 表达式生成器
+          href: expression-builder.md
+- name: 表达式中的 Integration Services 数据类型
+  href: integration-services-data-types-in-expressions.md
+- name: 数据截断 (SSIS)
+  href: data-truncation-ssis.md
+- name: 字符串填充 (SSIS)
+  href: string-padding-ssis.md
+- name: 语法 (SSIS)
+  href: syntax-ssis.md
+- name: 标识符 (SSIS)
+  href: identifiers-ssis.md
+- name: 文字 (SSIS)
+  href: numeric-string-and-boolean-literals.md
+- name: 运算符（SSIS 表达式）
+  href: operators-ssis-expression.md
+  items:
+    - name: 运算符优先级和结合性
+      href: operator-precedence-and-associativity.md
+    - name: Cast（SSIS 表达式）
+      href: cast-ssis-expression.md
+    - name: ()（括号）（SSIS 表达式）
+      href: parentheses-ssis-expression.md
+    - name: + （加）(SSIS)
+      href: add-ssis.md
+    - name: + （连接）（SSIS 表达式）
+      href: concatenate-ssis-expression.md
+    - name: '- （减）（SSIS 表达式）'
+      href: subtract-ssis-expression.md
+    - name: '- （负号）（SSIS 表达式）'
+      href: negate-ssis-expression.md
+    - name: '* （乘）（SSIS 表达式）'
+      href: multiply-ssis-expression.md
+    - name: 除（SSIS 表达式）
+      href: divide-ssis-expression.md
+    - name: （取模）（SSIS 表达式）
+      href: modulo-ssis-expression.md
+    - name: '||（逻辑或）（SSIS 表达式）'
+      href: logical-or-ssis-expression.md
+    - name: '&&（逻辑与）（SSIS 表达式）'
+      href: logical-and-ssis-expression.md
+    - name: '! （逻辑非）（SSIS 表达式）'
+      href: logical-not-ssis-expression.md
+    - name: '|（位或）（SSIS 表达式）'
+      href: bitwise-inclusive-or-ssis-expression.md
+    - name: ^（位异或）（SSIS 表达式）
+      href: bitwise-exclusive-or-ssis-expression.md
+    - name: '&（位与）（SSIS 表达式）'
+      href: bitwise-and-ssis-expression.md
+    - name: ~ （位非）（SSIS 表达式）
+      href: bitwise-not-ssis-expression.md
+    - name: ==（等于）（SSIS 表达式）
+      href: equal-ssis-expression.md
+    - name: '!=（不等于）（SSIS 表达式）'
+      href: unequal-ssis-expression.md
+    - name: '> （大于）（SSIS 表达式）'
+      href: greater-than-ssis-expression.md
+    - name: <（小于）（SSIS 表达式）
+      href: less-than-ssis-expression.md
+    - name: '>=（大于或等于）（SSIS 表达式）'
+      href: greater-than-or-equal-to-ssis-expression.md
+    - name: <=（小于或等于）（SSIS 表达式）
+      href: less-than-or-equal-to-ssis-expression.md
+    - name: '? :（条件）（SSIS 表达式）'
+      href: conditional-ssis-expression.md
+- name: 函数（SSIS 表达式）
+  href: functions-ssis-expression.md
+  items:
+    - name: ABS（SSIS 表达式）
+      href: abs-ssis-expression.md
+    - name: CEILING（SSIS 表达式）
+      href: ceiling-ssis-expression.md
+    - name: CODEPOINT（SSIS 表达式）
+      href: codepoint-ssis-expression.md
+    - name: DATEADD（SSIS 表达式）
+      href: dateadd-ssis-expression.md
+    - name: DATEDIFF（SSIS 表达式）
+      href: datediff-ssis-expression.md
+    - name: DATEPART（SSIS 表达式）
+      href: datepart-ssis-expression.md
+    - name: DAY（SSIS 表达式）
+      href: day-ssis-expression.md
+    - name: EXP（SSIS 表达式）
+      href: exp-ssis-expression.md
+    - name: FINDSTRING（SSIS 表达式）
+      href: findstring-ssis-expression.md
+    - name: FLOOR（SSIS 表达式）
+      href: floor-ssis-expression.md
+    - name: GETDATE（SSIS 表达式）
+      href: getdate-ssis-expression.md
+    - name: GETUTCDATE（SSIS 表达式）
+      href: getutcdate-ssis-expression.md
+    - name: HEX（SSIS 表达式）
+      href: hex-ssis-expression.md
+    - name: ISNULL（SSIS 表达式）
+      href: isnull-ssis-expression.md
+    - name: LEFT（SSIS 表达式）
+      href: left-ssis-expression.md
+    - name: LEN（SSIS 表达式）
+      href: len-ssis-expression.md
+    - name: LN（SSIS 表达式）
+      href: ln-ssis-expression.md
+    - name: LOG（SSIS 表达式）
+      href: log-ssis-expression.md
+    - name: LOWER（SSIS 表达式）
+      href: lower-ssis-expression.md
+    - name: LTRIM（SSIS 表达式）
+      href: ltrim-ssis-expression.md
+    - name: MONTH（SSIS 表达式）
+      href: month-ssis-expression.md
+    - name: NULL（SSIS 表达式）
+      href: null-ssis-expression.md
+    - name: POWER（SSIS 表达式）
+      href: power-ssis-expression.md
+    - name: REPLACE（SSIS 表达式）
+      href: replace-ssis-expression.md
+    - name: REPLACENULL（SSIS 表达式）
+      href: replacenull-ssis-expression.md
+    - name: REPLICATE（SSIS 表达式）
+      href: replicate-ssis-expression.md
+    - name: REVERSE（SSIS 表达式）
+      href: reverse-ssis-expression.md
+    - name: RIGHT（SSIS 表达式）
+      href: right-ssis-expression.md
+    - name: ROUND（SSIS 表达式）
+      href: round-ssis-expression.md
+    - name: RTRIM（SSIS 表达式）
+      href: rtrim-ssis-expression.md
+    - name: SIGN（SSIS 表达式）
+      href: sign-ssis-expression.md
+    - name: SQRT（SSIS 表达式）
+      href: sqrt-ssis-expression.md
+    - name: SQUARE（SSIS 表达式）
+      href: square-ssis-expression.md
+    - name: SUBSTRING（SSIS 表达式）
+      href: substring-ssis-expression.md
+    - name: TOKEN（SSIS 表达式）
+      href: token-ssis-expression.md
+    - name: TOKENCOUNT（SSIS 表达式）
+      href: tokencount-ssis-expression.md
+    - name: TRIM（SSIS 表达式）
+      href: trim-ssis-expression.md
+    - name: UPPER（SSIS 表达式）
+      href: upper-ssis-expression.md
+    - name: YEAR（SSIS 表达式）
+      href: year-ssis-expression.md

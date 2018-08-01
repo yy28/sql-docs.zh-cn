@@ -1,0 +1,16 @@
+- name: Reporting Services 扩展插件库
+  href: reporting-services-extension-library.md
+- name: 数据处理 +
+  href: ../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md
+- name: 传递扩展插件 +
+  href: ../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md
+- name: 呈现扩展插件 +
+  href: ../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md
+- name: 安全扩展插件 +
+  href: ../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md
+- name: 安全开发 +
+  href: ../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md
+- name: Reporting Services 扩展插件
+  href: reporting-services-extensions.md
+- name: 扩展插件的安全注意事项
+  href: security-considerations-for-extensions.md

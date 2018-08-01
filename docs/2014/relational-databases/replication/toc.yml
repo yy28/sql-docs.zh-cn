@@ -1,0 +1,353 @@
+- name: 复制
+  href: sql-server-replication.md
+  items:
+    - name: 新增功能（复制）
+      href: what-s-new-replication.md
+    - name: 复制的向后兼容性
+      href: replication-backward-compatibility.md
+    - name: SQL Server 复制中不推荐使用的功能
+      href: deprecated-features-in-sql-server-replication.md
+    - name: SQL Server 复制中的重大更改
+      href: breaking-changes-in-sql-server-replication.md
+- name: 复制功能和任务
+  href: replication-features-and-tasks.md
+  items:
+    - name: 复制类型
+      href: types-of-replication.md
+    - name: 快照复制
+      href: snapshot-replication.md
+    - name: 事务复制 +
+      href: transactional/transactional-replication.md
+    - name: 合并复制 +
+      href: merge/merge-replication.md
+    - name: 异类数据库复制 +
+      href: non-sql/heterogeneous-database-replication.md
+    - name: 复制到内存优化表订阅服务器
+      href: replication-to-memory-optimized-table-subscribers.md
+    - name: 复制代理 +
+      href: agents/replication-agents.md
+    - name: 重新发布数据
+      href: republish-data.md
+    - name: 通过 Internet 复制
+      href: replication-over-the-internet.md
+      items:
+        - name: 使用 VPN 通过 Internet 发布数据
+          href: publish-data-over-the-internet-using-vpn.md
+        - name: 合并复制的 Web 同步
+          href: web-synchronization-for-merge-replication.md
+        - name: Configure Web Synchronization
+          href: configure-web-synchronization.md
+        - name: Topologies for Web Synchronization
+          href: topologies-for-web-synchronization.md
+        - name: 配置 IIS 以实现 Web 同步
+          href: configure-iis-for-web-synchronization.md
+        - name: 配置 IIS 7 以实现 Web 同步
+          href: configure-iis-7-for-web-synchronization.md
+    - name: 安全和保护 +
+      href: security/security-and-protection-replication.md
+    - name: 管理 +
+      href: administration/administration-replication.md
+    - name: 开发人员指南：操作指南主题
+      href: developer-s-guide-how-to-topics-replication.md
+      items:
+        - name: 开发人员指南（复制）+
+          href: concepts/replication-developer-documentation.md
+    - name: 监视 +
+      href: monitor/monitoring-replication-overview.md
+    - name: 发布数据和数据库对象 +
+      href: publish/publish-data-and-database-objects.md
+- name: 错误和事件参考 +
+  href: errors-events/errors-events-replication.md
+- name: 技术参考（复制）
+  href: technical-reference-replication.md
+- name: 属性参考
+  href: properties-reference-replication.md
+  items:
+    - name: 分发服务器属性
+      href: distributor-properties.md
+      items:
+        - name: 分发服务器属性，常规
+          href: distributor-properties-general.md
+        - name: 分发服务器属性，发布服务器
+          href: distributor-properties-publishers.md
+        - name: 分发数据库属性
+          href: distribution-database-properties.md
+    - name: 发布服务器属性
+      href: publisher-properties.md
+      items:
+        - name: 发布服务器属性 - 分发服务器
+          href: publisher-properties-distributor.md
+        - name: 发布服务器属性 - 发布服务器，常规
+          href: publisher-properties-publisher-general.md
+        - name: 发布服务器属性 - 发布服务器，发布数据库
+          href: publisher-properties-publisher-publication-databases.md
+        - name: 发布服务器属性 - 发布服务器，订阅服务器
+          href: publisher-properties-publisher-subscribers.md
+    - name: 订阅服务器属性
+      href: subscriber-properties.md
+    - name: 发布属性 - <Publication>
+      href: publication-properties-publication.md
+      items:
+        - name: 发布属性，常规
+          href: publication-properties-general.md
+        - name: 发布属性，项目
+          href: publication-properties-articles.md
+        - name: 发布属性，筛选行
+          href: publication-properties-filter-rows.md
+        - name: 发布属性，快照
+          href: publication-properties-snapshot.md
+        - name: 发布属性，FTP 快照和 Internet
+          href: publication-properties-ftp-snapshot-and-internet.md
+        - name: 发布属性，订阅选项
+          href: publication-properties-subscription-options.md
+        - name: 发布属性，发布访问列表
+          href: publication-properties-publication-access-list.md
+        - name: 发布属性，代理安全性
+          href: publication-properties-agent-security.md
+        - name: 发布属性，数据分区
+          href: publication-properties-data-partitions.md
+    - name: 项目属性 - <Article>
+      href: article-properties-article.md
+    - name: 订阅属性 - <Subscription>
+      href: subscription-properties-subscription.md
+      items:
+        - name: 订阅属性 - 订阅服务器
+          href: subscription-properties-subscriber.md
+        - name: 订阅属性 - 发布服务器
+          href: subscription-properties-publisher.md
+- name: 工具参考
+  href: tools-reference-replication.md
+  items:
+    - name: 复制监视器
+      href: replication-monitor.md
+      items:
+        - name: 复制监视器，主页
+          href: replication-monitor-main-page.md
+        - name: 添加发布服务器
+          href: add-publisher.md
+        - name: 分发服务器设置
+          href: distributor-settings.md
+        - name: 分发服务器信息，发布
+          href: distributor-information-publications.md
+        - name: 分发服务器信息，订阅监视列表（事务发布，SQL Server 2005 和更高版本）
+          href: distributor-info-subscription-watch-list-transaction-pub-sql-2005.md
+        - name: 分发服务器信息，订阅监视列表（合并发布，SQL Server 2005 和更高版本）
+          href: distributor-info-subscription-watch-list-merge-pub-sql-2005.md
+        - name: 分发服务器信息，订阅监视列表（快照发布，SQL Server 2005 和更高版本）
+          href: distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md
+        - name: 分发服务器信息，代理
+          href: distributor-information-agents.md
+        - name: 发布服务器设置
+          href: publisher-settings.md
+        - name: 发布服务器信息，发布
+          href: publisher-information-publications.md
+        - name: 发布服务器信息，订阅监视列表（事务发布，SQL Server 2005 和更高版本）
+          href: publisher-information-subscription-watch-list-transactional.md
+        - name: 发布服务器信息，订阅监视列表（合并发布，SQL Server 2005 和更高版本）
+          href: publisher-information-subscription-watch-list-merge-publication.md
+        - name: 发布服务器信息，订阅监视列表（快照发布，SQL Server 2005 和更高版本）
+          href: publisher-information-subscription-watch-list-snapshot.md
+        - name: 发布服务器信息，代理
+          href: publisher-information-agents.md
+        - name: 发布信息，所有订阅（事务发布）
+          href: publication-information-all-subscriptions-transactional-publication.md
+        - name: 发布信息，所有订阅（合并发布）
+          href: publication-information-all-subscriptions-merge-publication.md
+        - name: 发布信息，所有订阅（快照发布）
+          href: publication-information-all-subscriptions-snapshot-publication.md
+        - name: 发布信息，警告（事务发布，SQL Server 2005 及更高版本）
+          href: publication-information-warnings-transactional-publication.md
+        - name: 发布信息，警告（合并发布，SQL Server 2005 及更高版本）
+          href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
+        - name: 发布信息，警告（快照发布，SQL Server 2005 及更高版本）
+          href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
+        - name: 发布信息，代理（事务发布）
+          href: publication-information-agents-transactional-publication.md
+        - name: 发布信息，代理（合并发布）
+          href: publication-information-agents-merge-publication.md
+        - name: 发布信息，代理（快照发布）
+          href: publication-information-agents-snapshot-publication.md
+        - name: 发布信息，跟踪令牌（事务发布，SQL Server 2005 和更高版本）
+          href: publication-information-tracer-tokens-sql-server-2005-and-later.md
+        - name: 订阅，未分发的命令（事务订阅，SQL Server 2005 和更高版本）
+          href: subscription-undistributed-commands-transactional-subscription.md
+        - name: 订阅，发布服务器到分发服务器的历史记录（事务订阅）
+          href: subscription-publisher-to-distributor-history-transactional-subscription.md
+        - name: 订阅，分发服务器到订阅服务器的历史记录（事务订阅）
+          href: subscription-distributor-to-subscriber-history-transactional-subscription.md
+        - name: 订阅，同步历史记录（合并订阅，SQL Server 2005 和更高版本）
+          href: subscription-synchronization-history.md
+        - name: 订阅 - 同步历史记录（合并订阅，SQL Server 2000）
+          href: subscription-synchronization-history-merge-subscription-sql-server-2000.md
+        - name: 订阅，分发服务器到订阅服务器的历史记录（快照订阅）
+          href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
+        - name: 日志读取器代理
+          href: log-reader-agent.md
+        - name: 队列读取器代理
+          href: queue-reader-agent.md
+        - name: 快照代理
+          href: snapshot-agent.md
+        - name: 筛选器设置
+          href: filter-settings.md
+        - name: 列排序
+          href: sort-columns.md
+    - name: Configure Distribution Wizard
+      href: configure-distribution-wizard.md
+      items:
+        - name: 分发服务器
+          href: distributor.md
+        - name: 快照文件夹
+          href: snapshot-folder.md
+        - name: 分发数据库
+          href: distribution-database.md
+        - name: “分发服务器属性”
+          href: publishers.md
+        - name: 分发服务器密码
+          href: distributor-password.md
+    - name: New Publication Wizard
+      href: new-publication-wizard.md
+      items:
+        - name: Oracle 发布服务器
+          href: oracle-publisher.md
+        - name: 管理密码
+          href: administrative-password.md
+        - name: 发布数据库
+          href: publication-database.md
+        - name: 发布类型
+          href: publication-type.md
+        - name: 订阅服务器类型
+          href: subscriber-types.md
+        - name: 代理安全性（新建发布向导）
+          href: agent-security-new-publication-wizard.md
+        - name: 项目
+          href: articles.md
+        - name: 项目问题
+          href: article-issues.md
+        - name: 筛选表行
+          href: filter-table-rows.md
+        - name: 添加或编辑筛选器
+          href: add-or-edit-filter.md
+        - name: 添加或编辑联接
+          href: add-or-edit-join.md
+        - name: 生成筛选器
+          href: generate-filters.md
+        - name: 快照代理（新建发布向导）
+          href: snapshot-agent-new-publication-wizard.md
+    - name: 新建订阅向导（用户界面参考）
+      href: new-subscription-wizard-ui-reference.md
+      items:
+        - name: <AgentName> 代理位置
+          href: agentname-agent-location.md
+        - name: 订阅服务器
+          href: subscribers.md
+        - name: 添加非 SQL Server 订阅服务器
+          href: add-non-sql-server-subscriber.md
+        - name: <AgentName> 代理安全性
+          href: agentname-agent-security.md
+        - name: 可更新订阅
+          href: updatable-subscriptions.md
+        - name: 可更新订阅的登录名
+          href: login-for-updatable-subscriptions.md
+        - name: 初始化订阅
+          href: initialize-subscriptions.md
+        - name: Web 服务器信息
+          href: web-server-information.md
+        - name: 订阅类型
+          href: subscription-type.md
+        - name: HOST_NAME 值
+          href: host-name-values.md
+    - name: 配置对等拓扑向导
+      href: configure-peer-to-peer-topology-wizard.md
+      items:
+        - name: 发布（对等复制）
+          href: publication-peer-to-peer-replication.md
+        - name: 配置拓扑（对等复制）
+          href: configure-topology-peer-to-peer-replication.md
+        - name: 日志读取器代理的安全性（对等复制）
+          href: log-reader-agent-security-peer-to-peer-replication.md
+        - name: 分发代理的安全性（对等复制）
+          href: distribution-agent-security-peer-to-peer-replication.md
+        - name: 新对等方的初始化（对等复制）
+          href: new-peer-initialization-peer-to-peer-replication.md
+    - name: Microsoft 复制冲突查看器和交互式冲突解决程序
+      href: microsoft-replication-conflict-viewer-and-interactive-resolver.md
+      items:
+        - name: Microsoft 复制冲突查看器（合并复制）
+          href: microsoft-replication-conflict-viewer-merge-replication.md
+        - name: Microsoft 复制冲突查看器（事务复制）
+          href: microsoft-replication-conflict-viewer-transactional-replication.md
+        - name: Microsoft Replication Interactive Conflict Resolver
+          href: microsoft-replication-interactive-conflict-resolver.md
+        - name: 定义筛选器
+          href: define-filters.md
+- name: SQL Server Management Studio 复制对话框
+  href: sql-server-management-studio-replication-dialog-boxes.md
+  items:
+    - name: 快照代理安全性
+      href: snapshot-agent-security.md
+    - name: 日志读取器代理安全性
+      href: log-reader-agent-security.md
+    - name: 分发代理安全性
+      href: distribution-agent-security.md
+    - name: 合并代理安全性
+      href: merge-agent-security.md
+    - name: 队列读取器代理安全性
+      href: queue-reader-agent-security.md
+    - name: 代理配置文件（单个代理）
+      href: agent-profiles-single-agent.md
+    - name: 代理配置文件
+      href: agent-profiles.md
+    - name: <AgentProfileName> 属性
+      href: agentprofilename-properties.md
+    - name: 新建代理配置文件
+      href: new-agent-profile.md
+    - name: 验证所有订阅
+      href: validate-all-subscriptions.md
+    - name: 验证多个订阅
+      href: validate-subscriptions.md
+    - name: 验证单个订阅
+      href: validate-subscription.md
+    - name: 订阅验证选项（事务订阅）
+      href: subscription-validation-options-transactional-subscriptions.md
+    - name: 订阅验证选项（合并订阅）
+      href: subscription-validation-options-merge-subscriptions.md
+    - name: 重新初始化订阅 - 所有订阅
+      href: reinitialize-subscription-s-all-subscriptions.md
+    - name: 重新初始化订阅 - 一个订阅
+      href: reinitialize-subscription-s-one-subscription.md
+    - name: 生成 SQL 脚本（复制对象）
+      href: generate-sql-script-replication-objects.md
+    - name: 连接到服务器 (Oracle)，登录名
+      href: connect-to-server-oracle-login.md
+    - name: 连接到服务器 (Oracle)，连接属性
+      href: connect-to-server-oracle-connection-properties.md
+- name: 复制教程
+  href: replication-tutorials.md
+  items:
+    - name: 准备用于复制的服务器
+      href: tutorial-preparing-the-server-for-replication.md
+      items:
+        - name: 第 1 课：为复制创建 Windows 帐户
+          href: lesson-1-creating-windows-accounts-for-replication.md
+        - name: 第 2 课：准备快照文件夹
+          href: lesson-2-preparing-the-snapshot-folder.md
+        - name: 第 3 课：配置分发
+          href: lesson-3-configuring-distribution.md
+    - name: 在完全连接的服务器之间复制数据
+      href: tutorial-replicating-data-between-continuously-connected-servers.md
+      items:
+        - name: 第 1 课：使用事务复制发布数据
+          href: lesson-1-publishing-data-using-transactional-replication.md
+        - name: 第 2 课：创建事务发布的订阅
+          href: lesson-2-creating-a-subscription-to-the-transactional-publication.md
+        - name: 第 3 课：验证订阅和测量滞后时间
+          href: lesson-3-validating-the-subscription-and-measuring-latency.md
+    - name: 使用移动客户端复制数据
+      href: tutorial-replicating-data-with-mobile-clients.md
+      items:
+        - name: 第 1 课：使用合并复制发布数据
+          href: lesson-1-publishing-data-using-merge-replication.md
+        - name: 第 2 课：创建合并发布订阅
+          href: lesson-2-creating-a-subscription-to-the-merge-publication.md
+        - name: 第 3 课：使订阅与合并发布同步
+          href: lesson-3-synchronizing-the-subscription-to-the-merge-publication.md

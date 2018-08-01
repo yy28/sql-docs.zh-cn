@@ -1,0 +1,484 @@
+- name: Analysis Services
+  href: analysis-services.md
+  items:
+    - name: 新增功能
+      href: what-s-new-in-analysis-services.md
+    - name: Analysis Services 向后兼容性
+      href: analysis-services-backward-compatibility.md
+    - name: Analysis Services 中不推荐使用的功能
+      href: deprecated-analysis-services-features-in-sql-server-2014.md
+    - name: Analysis Services 中已废弃的功能
+      href: discontinued-analysis-services-functionality-in-sql-server-2014.md
+    - name: Analysis Services 中的重大更改
+      href: breaking-changes-to-analysis-services-features-in-sql-server-2014.md
+    - name: Analysis Services 中的行为更改
+      href: behavior-changes-to-analysis-services-features-in-sql-server-2014.md
+- name: Analysis Services 功能和任务
+  href: analysis-services-features-and-tasks.md
+  items:
+    - name: 比较表格和多维解决方案
+      href: comparing-tabular-and-multidimensional-solutions-ssas.md
+    - name: 工具和应用程序
+      href: tools-and-applications-used-in-analysis-services.md
+- name: 实例管理
+  href: instances/analysis-services-instance-management.md
+  items:
+    - name: 安装后配置
+      href: instances/post-install-configuration-analysis-services.md
+      items:
+        - name: 配置 Windows 防火墙
+          href: instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
+        - name: 配置服务帐户
+          href: instances/configure-service-accounts-analysis-services.md
+        - name: 授予管理员权限
+          href: instances/grant-server-admin-rights-to-an-analysis-services-instance.md
+        - name: 默认情况下功能关闭
+          href: instances/features-off-by-default-analysis-services.md
+        - name: SSMS 中的服务器组
+          href: instances/register-an-analysis-services-instance-in-a-server-group.md
+        - name: 确定服务器模式
+          href: instances/determine-the-server-mode-of-an-analysis-services-instance.md
+        - name: 重命名 Analysis Services 实例
+          href: instances/rename-an-analysis-services-instance.md
+    - name: 连接到 Analysis Services
+      href: instances/connect-to-analysis-services.md
+      items:
+        - name: 从客户端应用程序进行连接
+          href: instances/connect-from-client-applications-analysis-services.md
+        - name: 连接字符串属性
+          href: instances/connection-string-properties-analysis-services.md
+        - name: 身份验证方法
+          href: instances/authentication-methodologies-supported-by-analysis-services.md
+        - name: Kerberos 身份验证
+          href: instances/configure-analysis-services-for-kerberos-constrained-delegation.md
+        - name: SPN 注册
+          href: instances/spn-registration-for-an-analysis-services-instance.md
+        - name: HTTP 访问
+          href: instances/configure-http-access-to-analysis-services-on-iis-8-0.md
+        - name: 数据访问接口
+          href: instances/data-providers-used-for-analysis-services-connections.md
+        - name: 断开用户和会话的连接
+          href: instances/disconnect-users-and-sessions-on-analysis-services-server.md
+    - name: 配置服务器属性
+      href: server-properties/server-properties-in-analysis-services.md
+      items:
+        - name: 数据挖掘属性
+          href: server-properties/data-mining-properties.md
+        - name: 功能属性
+          href: server-properties/feature-properties.md
+        - name: FileStore 属性
+          href: server-properties/filestore-properties.md
+        - name: 常规属性
+          href: server-properties/general-properties.md
+        - name: 锁管理器属性
+          href: server-properties/lock-manager-properties.md
+        - name: 日志属性
+          href: server-properties/log-properties.md
+        - name: 内存属性
+          href: server-properties/memory-properties.md
+        - name: 网络属性
+          href: server-properties/network-properties.md
+        - name: OLAP 属性
+          href: server-properties/olap-properties.md
+        - name: 安全属性
+          href: server-properties/security-properties.md
+        - name: 线程池属性
+          href: server-properties/thread-pool-properties.md
+- name: 监视 Analysis Services 实例
+  href: instances/monitor-an-analysis-services-instance.md
+  items:
+    - name: Analysis Services 跟踪事件
+      href: trace-events/analysis-services-trace-events.md
+      items:
+        - name: “命令事件”事件类别
+          href: trace-events/command-events-event-category.md
+          items:
+            - name: 命令事件数据列
+              href: trace-events/command-events-data-columns.md
+        - name: “发现事件”事件类别
+          href: trace-events/discover-events-event-category.md
+          items:
+            - name: 发现事件数据列
+              href: trace-events/discover-events-data-columns.md
+        - name: “发现服务器状态”事件类别
+          href: trace-events/discover-server-state-event-category.md
+          items:
+            - name: 发现服务器状态事件数据列
+              href: trace-events/discover-server-state-events-data-columns.md
+        - name: 错误和警告事件类别
+          href: trace-events/errors-and-warnings-event-category.md
+          items:
+            - name: 错误和警告事件数据列
+              href: trace-events/errors-and-warnings-events-data-columns.md
+        - name: “文件加载和保存事件”类别
+          href: trace-events/file-load-and-save-event-category.md
+          items:
+            - name: 文件加载和保存数据列
+              href: trace-events/file-load-and-save-data-columns.md
+        - name: “锁定事件”类别
+          href: trace-events/lock-events-category.md
+          items:
+            - name: 锁事件数据列
+              href: trace-events/lock-events-data-columns.md
+        - name: “通知事件”事件类别
+          href: trace-events/notification-events-event-category.md
+          items:
+            - name: 通知事件数据列
+              href: trace-events/notification-events-data-columns.md
+        - name: “进度报告”事件类别
+          href: trace-events/progress-reports-event-category.md
+          items:
+            - name: 进度报告数据列
+              href: trace-events/progress-reports-data-columns.md
+        - name: 查询事件类别
+          href: trace-events/queries-events-category.md
+          items:
+            - name: 查询事件数据列
+              href: trace-events/queries-events-data-columns.md
+        - name: 查询处理事件类别
+          href: trace-events/query-processing-events-category.md
+          items:
+            - name: 查询处理事件数据列
+              href: trace-events/query-processing-events-data-columns.md
+        - name: “安全审核”事件类别
+          href: trace-events/security-audit-event-category.md
+          items:
+            - name: 安全审核数据列
+              href: trace-events/security-audit-data-columns.md
+        - name: “会话事件”事件类别
+          href: trace-events/session-events-event-category.md
+          items:
+            - name: 会话事件数据列
+              href: trace-events/session-events-data-columns.md
+    - name: Use SQL Server Profiler to Monitor Analysis Services
+      href: instances/use-sql-server-profiler-to-monitor-analysis-services.md
+      items:
+        - name: 通过 SQL Server Profiler 监视 Analysis Services 简介
+          href: instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+        - name: 为重播创建事件探查器跟踪 (Analysis Services)
+          href: instances/create-profiler-traces-for-replay-analysis-services.md
+    - name: 使用 SQL Server 扩展事件 (XEvents) 监视 Analysis Services
+      href: instances/monitor-analysis-services-with-sql-server-extended-events.md
+    - name: 使用动态管理视图 (DMV) 监视 Analysis Services
+      href: instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+- name: 性能计数器
+  href: instances/performance-counters-ssas.md
+- name: 清除 Analysis Services 缓存
+  href: instances/clear-the-analysis-services-caches.md
+- name: 脚本管理任务
+  href: script-administrative-tasks-in-analysis-services.md
+  items:
+    - name: 在 Management Studio 中创建脚本
+      href: instances/create-analysis-services-scripts-in-management-studio.md
+    - name: Use Analysis Services Templates in SQL Server Management Studio
+      href: instances/use-analysis-services-templates-in-sql-server-management-studio.md
+    - name: 在 Management Studio 中使用 Analysis Services 脚本项目
+      href: instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: 使用 SQL Server 代理来计划管理任务
+      href: instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: Analysis Services 中的 PowerShell 脚本
+      href: analysis-services-powershell.md
+    - name: 使用 SSIS 自动执行管理任务
+      href: instances/automate-analysis-services-administrative-tasks-with-ssis.md
+- name: 全球化方案
+  href: globalization-scenarios-for-analysis-services-multiidimensional.md
+  items:
+    - name: 语言和排序规则
+      href: languages-and-collations-analysis-services.md
+    - name: 翻译
+      href: translations-analysis-services.md
+    - name: 货币换算
+      href: currency-conversions-analysis-services.md
+    - name: 提示和最佳实践
+      href: globalization-tips-and-best-practices-analysis-services.md
+- name: Analysis Services 中的日志记录
+  href: instances/log-operations-in-analysis-services.md
+- name: 表格建模 +
+  href: tabular-models/tabular-models-ssas.md
+- name: 多维建模 +
+  href: multidimensional-models/multidimensional-models-ssas.md
+- name: 数据挖掘 +
+  href: data-mining/data-mining-ssas.md
+- name: PowerPivot for SharePoint
+  href: power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+  items:
+    - name: 在管理中心中管理和配置 PowerPivot 服务器
+      href: power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
+    - name: 部署 PowerPivot 解决方案
+      href: power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
+    - name: 创建和配置 PowerPivot 服务应用程序
+      href: power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
+    - name: 将 PowerPivot 服务应用程序连接到 SharePoint Web 应用程序
+      href: power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+    - name: 针对网站集激活 PowerPivot 功能集成
+      href: power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
+    - name: 将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口
+      href: power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+    - name: 为 PowerPivot 站点创建受信任位置
+      href: power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+    - name: 配置 PowerPivot 服务帐户
+      href: power-pivot-sharepoint/configure-power-pivot-service-accounts.md
+    - name: 配置和查看 SharePoint 日志文件
+      href: power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
+    - name: 配置磁盘空间使用情况
+      href: power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
+    - name: 配置最大文件上载大小
+      href: power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+    - name: 配置设置参考
+      href: power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
+    - name: 启动或停止 PowerPivot for SharePoint 服务器
+      href: power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
+    - name: 使用 Windows PowerShell 配置 PowerPivot
+      href: power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
+    - name: PowerPivot Configuration Tools
+      href: power-pivot-sharepoint/power-pivot-configuration-tools.md
+      items:
+        - name: 配置或修复 PowerPivot for SharePoint 2013（PowerPivot 配置工具）
+          href: power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
+        - name: 配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）
+          href: configure-repair-powerpivot-sharepoint-2010.md
+    - name: PowerPivot 可用性和灾难恢复 (SQL Server 2014)
+      href: power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
+    - name: PowerPivot 身份验证和授权
+      href: power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
+    - name: 运行状况规则 - 配置
+      href: power-pivot-sharepoint/configure-power-pivot-health-rules.md
+    - name: 运行状况规则参考
+      href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
+    - name: PowerPivot 管理面板和使用情况数据
+      href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
+    - name: PowerPivot 使用情况数据收集
+      href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
+      items:
+        - name: 配置使用情况数据收集 (PowerPivot for SharePoint)
+          href: power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+    - name: 创建和自定义 PowerPivot 库
+      href: power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
+      items:
+        - name: 使用 PowerPivot 库
+          href: power-pivot-sharepoint/use-power-pivot-gallery.md
+        - name: 删除 PowerPivot 库
+          href: power-pivot-sharepoint/delete-power-pivot-gallery.md
+    - name: PowerPivot 数据访问
+      href: power-pivot-sharepoint/power-pivot-data-access.md
+    - name: PowerPivot 数据刷新
+      href: power-pivot-sharepoint/power-pivot-data-refresh.md
+      items:
+        - name: 查看 PowerPivot 数据刷新历史记录
+          href: power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
+        - name: 使用 SharePoint 2013 进行 PowerPivot 数据刷新
+          href: power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
+        - name: 计划数据刷新和不支持 Windows 身份验证的数据源 (PowerPivot for SharePoint)
+          href: power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
+        - name: 使用 SharePoint 2010 进行 PowerPivot 数据刷新
+          href: powerpivot-data-refresh-with-sharepoint-2010.md
+        - name: 使用 SharePoint 2010 计划数据刷新
+          href: schedule-a-data-refresh-powerpivot-for-sharepoint.md
+        - name: 配置专用数据刷新或仅限查询的处理
+          href: configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md
+        - name: 为 PowerPivot 数据刷新配置存储的凭据
+          href: configure-stored-credentials-data-refresh-powerpivot-sharepoint.md
+        - name: 配置 PowerPivot 无人参与的数据刷新帐户
+          href: configure-unattended-data-refresh-account-powerpivot-sharepoint.md
+    - name: PowerPivot 数据馈送
+      href: power-pivot-sharepoint/power-pivot-data-feeds.md
+      items:
+        - name: 创建或自定义数据馈送库
+          href: power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+        - name: 使用 PowerPivot 数据馈送
+          href: power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
+        - name: 删除 PowerPivot 数据馈送库
+          href: power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
+        - name: 共享数据馈送库中的 PowerPivot 数据馈送
+          href: power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: PowerPivot BI 语义模型连接 (.bism)
+      href: power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
+      items:
+        - name: 将 BI 语义模型连接内容类型添加到库
+          href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
+        - name: 创建与 PowerPivot 工作簿的 BI 语义模型连接
+          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+        - name: 创建与表格模型数据库的 BI 语义模型连接
+          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+        - name: 在 Excel 或 Reporting Services 中使用 BI 语义模型连接
+          href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+- name: 技术参考
+  href: powershell/technical-reference-ssas.md
+- name: 错误和事件参考 (PowerPivot for SharePoint)
+  href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
+  items:
+    - name: 在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot 数据
+      href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
+    - name: 无法加载文件或程序集“Microsoft.Data.Services”
+      href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
+    - name: 无法加载文件或程序集“Microsoft.AnalysisServices.SharePoint.Integration”
+      href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
+    - name: 工作簿中的数据连接路径指向本地驱动器上的文件或者是无效的 URI
+      href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
+    - name: 数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。 以下连接无法刷新：PowerPivot 数据
+      href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
+    - name: Excel Services 不支持以下功能并且可能无法显示或者只能部分显示以下功能：注释、形状或其他对象
+      href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
+    - name: 存储工作簿的受信任位置不允许外部数据连接
+      href: power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
+    - name: 此工作簿包含一个或多个用于刷新外部数据的查询。
+      href: power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+    - name: 无法刷新工作簿中用于数据连接的数据
+      href: power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
+- name: 用户界面参考
+  href: user-interface-reference-analysis-services.md
+  items:
+    - name: 多维 UI 向导 +
+      href: ui-wizards-multidimensional/ui-wizards-multidimensional.md
+    - name: 多维分析 UI 设计器和对话框 +
+      href: ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional.md
+    - name: 表格分析 UI 设计器和对话框 +
+      href: ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular.md
+    - name: 数据挖掘分析 UI 设计器和对话框 +
+      href: ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining.md
+    - name: 数据挖掘分析 UI 向导 +
+      href: ui-wizards-data-mining/ui-wizards-data-mining.md
+- name: Analysis Services 教程
+  href: analysis-services-tutorials-ssas.md
+  items:
+    - name: 表格建模（Adventure Works 教程）
+      href: tabular-modeling-adventure-works-tutorial.md
+      items:
+        - name: 第 1 课：创建新的表格模型项目
+          href: lesson-1-create-a-new-tabular-model-project.md
+        - name: 第 2 课：添加数据
+          href: lesson-2-add-data.md
+        - name: 第 3 课：重命名列
+          href: rename-columns.md
+        - name: 第 4 课：标记为日期表
+          href: lesson-3-mark-as-date-table.md
+        - name: 第 5 课：创建关系
+          href: lesson-4-create-relationships.md
+        - name: 第 6 课：创建计算列
+          href: lesson-5-create-calculated-columns.md
+        - name: 第 7 课：创建度量值
+          href: lesson-6-create-measures.md
+        - name: 第 8 课：创建关键绩效指标
+          href: lesson-7-create-key-performance-indicators.md
+        - name: 第 9 课：创建透视
+          href: lesson-8-create-perspectives.md
+        - name: 第 10 课：创建层次结构
+          href: lesson-9-create-hierarchies.md
+        - name: 第 11 课：创建分区
+          href: lesson-10-create-partitions.md
+        - name: 第 12 课：创建角色
+          href: lesson-11-create-roles.md
+        - name: 第 13 课：在 Excel 中分析
+          href: lesson-12-analyze-in-excel.md
+        - name: 第 14 课：部署
+          href: lesson-13-deploy.md
+        - name: 补充课程
+          href: ../tutorials/supplemental-lessons.md
+          items:
+            - name: 通过使用行筛选器实现动态安全性
+              href: ../tutorials/implement-dynamic-security-by-using-row-filters.md
+            - name: 为 Power View 报表配置报表属性
+              href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+    - name: 多维建模（Adventure Works 教程）
+      href: multidimensional-modeling-adventure-works-tutorial.md
+      items:
+        - name: Analysis Services 教程方案
+          href: analysis-services-tutorial-scenario.md
+        - name: 安装 Analysis Services 多维建模教程的示例数据和项目
+          href: install-sample-data-and-projects.md
+        - name: 第 1 课：在 Analysis Services 项目中定义数据源视图
+          href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
+          items:
+            - name: 创建 Analysis Services 项目
+              href: lesson-1-1-creating-an-analysis-services-project.md
+            - name: 定义数据源
+              href: lesson-1-2-defining-a-data-source.md
+            - name: 定义数据源视图
+              href: lesson-1-3-defining-a-data-source-view.md
+            - name: 修改默认表名
+              href: lesson-1-4-modifying-default-table-names.md
+        - name: 第 2 课：定义和部署多维数据集
+          href: lesson-2-defining-and-deploying-a-cube.md
+          items:
+            - name: 定义维度
+              href: lesson-2-1-defining-a-dimension.md
+            - name: 定义多维数据集
+              href: lesson-2-2-defining-a-cube.md
+            - name: 向维度添加属性
+              href: lesson-2-3-adding-attributes-to-dimensions.md
+            - name: 检查多维数据集和维度属性
+              href: lesson-2-4-reviewing-cube-and-dimension-properties.md
+            - name: 部署 Analysis Services 项目
+              href: lesson-2-5-deploying-an-analysis-services-project.md
+            - name: 浏览多维数据集
+              href: lesson-2-6-browsing-the-cube.md
+        - name: 第 3 课：修改度量值、属性和层次结构
+          href: lesson-3-modifying-measures-attributes-and-hierarchies.md
+          items:
+            - name: 修改度量值
+              href: lesson-3-1-modifying-measures.md
+            - name: 修改“客户”维度
+              href: lesson-3-2-modifying-the-customer-dimension.md
+            - name: 修改“产品”维度
+              href: lesson-3-3-modifying-the-product-dimension.md
+            - name: 修改“日期”维度
+              href: lesson-3-4-modifying-the-date-dimension.md
+            - name: 浏览已部署的多维数据集
+              href: lesson-3-5-browsing-the-deployed-cube.md
+        - name: 第 4 课：定义高级属性和维度属性
+          href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
+          items:
+            - name: 使用 Analysis Services Tutorial 项目的修改版本
+              href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+            - name: 定义父子层次结构中的父特性属性
+              href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+            - name: 自动将属性成员分组
+              href: lesson-4-3-automatically-grouping-attribute-members.md
+            - name: 隐藏和禁用属性层次结构
+              href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+            - name: 根据辅助属性对属性成员进行排序
+              href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+            - name: 指定用户定义层次结构中属性之间的属性关系
+              href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+            - name: 定义未知成员和 Null 处理属性
+              href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+        - name: 第 5 课：定义维度和度量值组之间的关系
+          href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+          items:
+            - name: 定义引用关系
+              href: lesson-5-1-defining-a-referenced-relationship.md
+            - name: 定义事实关系
+              href: lesson-5-2-defining-a-fact-relationship.md
+            - name: 定义多对多关系
+              href: lesson-5-3-defining-a-many-to-many-relationship.md
+            - name: 定义度量值组中的维度粒度
+              href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+        - name: 第 6 课：定义计算
+          href: lesson-6-defining-calculations.md
+          items:
+            - name: 定义计算成员
+              href: lesson-6-1-defining-calculated-members.md
+            - name: 定义命名集
+              href: lesson-6-2-defining-named-sets.md
+        - name: 第 7 课：定义关键绩效指标 (KPI)
+          href: lesson-7-defining-key-performance-indicators-kpis.md
+          items:
+            - name: 定义和浏览 KPI
+              href: lesson-7-1-defining-and-browsing-kpis.md
+        - name: 第 8 课：定义操作
+          href: lesson-8-defining-actions.md
+          items:
+            - name: 定义和使用钻取操作
+              href: lesson-8-1-defining-and-using-a-drillthrough-action.md
+        - name: 第 9 课：定义透视和翻译
+          href: lesson-9-defining-perspectives-and-translations.md
+          items:
+            - name: 定义和浏览透视
+              href: lesson-9-1-defining-and-browsing-perspectives.md
+            - name: 定义和浏览翻译
+              href: lesson-9-2-defining-and-browsing-translations.md
+        - name: 第 10 课：定义管理角色
+          href: lesson-10-defining-administrative-roles.md
+          items:
+            - name: 授予处理数据库权限
+              href: lesson-10-granting-process-database-permissions.md

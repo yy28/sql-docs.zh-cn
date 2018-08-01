@@ -1,0 +1,69 @@
+- name: 附录 A：提供程序
+  href: appendix-a-providers.md
+  items:
+    - name: 用于 OLE DB 的 Microsoft 游标服务
+      href: microsoft-cursor-service-for-ole-db-ado-service-component.md
+    - name: OLE DB 暂留提供程序
+      href: microsoft-ole-db-persistence-provider-ado-service-provider.md
+    - name: 用于 Active Directory 服务的 OLE DB 提供程序
+      href: microsoft-ole-db-provider-for-microsoft-active-directory-service.md
+    - name: 用于 Internet 发布的 OLE DB 提供程序
+      href: microsoft-ole-db-provider-for-internet-publishing.md
+    - name: OLE DB Provider for Jet
+      href: microsoft-ole-db-provider-for-microsoft-jet.md
+    - name: 用于 Microsoft 索引服务的 OLE DB 访问接口
+      href: microsoft-ole-db-provider-for-microsoft-indexing-service.md
+    - name: OLE DB Provider for ODBC
+      href: microsoft-ole-db-provider-for-odbc.md
+    - name: OLE DB Provider for Oracle
+      href: microsoft-ole-db-provider-for-oracle.md
+    - name: OLE DB Provider for SQL Server
+      href: microsoft-ole-db-provider-for-sql-server.md
+    - name: OLE DB 远程处理提供程序
+      href: microsoft-ole-db-remoting-provider-ado-service-provider.md
+    - name: OLE DB 简单的提供程序
+      href: microsoft-ole-db-simple-provider.md
+    - name: 用于 OLE DB 的 Microsoft 数据整理服务
+      href: microsoft-data-shaping-service-for-ole-db-ado-service-provider.md
+- name: 附录 B：ADO 错误
+  href: appendix-b-ado-errors.md
+  items:
+    - name: ADO 错误代码
+      href: ado-error-codes.md
+    - name: DataControl 错误代码
+      href: datacontrol-error-codes.md
+    - name: Internet Explorer 错误代码
+      href: internet-explorer-error-codes.md
+    - name: Internet Information Services 错误代码
+      href: internet-information-services-error-codes.md
+- name: 附录 C：使用 ADO 进行编程
+  href: appendix-c-programming-with-ado.md
+  items:
+    - name: ADO Java 类包装器
+      href: ado-java-class-wrappers.md
+    - name: 配合使用 ADO 与 Microsoft Visual Basic
+      href: using-ado-with-microsoft-visual-basic.md
+    - name: 使用 Java 适用的 Microsoft SDK
+      href: using-the-microsoft-sdk-for-java.md
+    - name: 配合使用 ADO 与脚本语言
+      href: using-ado-with-scripting-languages.md
+      items:
+        - name: VBScript ADO 编程
+          href: vbscript-ado-programming.md
+        - name: JScript ADO 编程
+          href: jscript-ado-programming.md
+    - name: 配合使用 ADO 与 Microsoft Visual C++
+      href: using-ado-with-microsoft-visual-c.md
+      items:
+        - name: Visual C++ ADO 编程
+          href: visual-c-ado-programming.md
+        - name: Visual C++ 扩展示例
+          href: visual-c-extensions-example.md
+        - name: ADO 的 Visual C++ 扩展
+          href: visual-c-extensions-for-ado.md
+        - name: Visual C++ 扩展标头
+          href: visual-c-extensions-header.md
+        - name: 使用 Visual C++ 扩展
+          href: using-visual-c-extensions.md
+- name: 附录 D：ADO 示例
+  href: appendix-d-ado-samples.md

@@ -1,0 +1,28 @@
+- name: 的维度设计器中，可以在“维度结构”视图的
+  href: attribute-relationships.md
+- name: 属性和属性层次结构
+  href: attributes-and-attribute-hierarchies.md
+- name: 数据库维度属性 - 类型
+  href: database-dimension-properties-types.md
+- name: 数据库维度属性
+  href: database-dimension-properties.md
+- name: 维度对象（Analysis Services - 多维数据）
+  href: dimension-objects-analysis-services-multidimensional-data.md
+- name: 维度翻译
+  href: dimension-translations.md
+- name: 维度 - 简介
+  href: dimensions-introduction.md
+- name: 维度 - 存储
+  href: dimensions-storage.md
+- name: 维度（Analysis Services - 多维数据）
+  href: dimensions-analysis-services-multidimensional-data.md
+- name: 主动缓存（维度）
+  href: proactive-caching-dimensions.md
+- name: 用户层次结构 - 级别属性
+  href: user-hierarchies-level-properties.md
+- name: 用户层次结构 - 属性
+  href: user-hierarchies-properties.md
+- name: 用户层次结构
+  href: user-hierarchies.md
+- name: 启用写操作的维度
+  href: write-enabled-dimensions.md

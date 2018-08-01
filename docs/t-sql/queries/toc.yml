@@ -1,0 +1,79 @@
+- name: 概述
+  href: queries.md
+- name: SELECT
+  href: select-transact-sql.md
+  items:
+    - name: SELECT 子句
+      href: select-clause-transact-sql.md
+    - name: SELECT 示例
+      href: select-examples-transact-sql.md
+    - name: SELECT - FOR 子句
+      href: select-for-clause-transact-sql.md
+    - name: SELECT - GROUP BY
+      href: select-group-by-transact-sql.md
+    - name: SELECT - HAVING
+      href: select-having-transact-sql.md
+    - name: SELECT - INTO 子句
+      href: select-into-clause-transact-sql.md
+    - name: SELECT - ORDER BY 子句
+      href: select-order-by-clause-transact-sql.md
+    - name: SELECT - OVER 子句
+      href: select-over-clause-transact-sql.md
+- name: FROM
+  href: from-transact-sql.md
+  items:
+    - name: FROM - 使用 PIVOT 和 UNPIVOT
+      href: from-using-pivot-and-unpivot.md
+- name: WHERE
+  href: where-transact-sql.md
+  items:
+    - name: MATCH
+      href: match-sql-graph.md
+- name: 提示
+  href: hints-transact-sql.md
+  items:
+    - name: 提示 - 联接
+      href: hints-transact-sql-join.md
+    - name: 提示 - 查询
+      href: hints-transact-sql-query.md
+    - name: 提示 - 表
+      href: hints-transact-sql-table.md
+- name: AT TIME ZONE
+  href: at-time-zone-transact-sql.md
+- name: 别名创建（Azure SQL 数据仓库、并行数据仓库）
+  href: aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
+- name: EXPLAIN
+  href: explain-transact-sql.md
+- name: OPTION 子句
+  href: option-clause-transact-sql.md
+- name: OUTPUT 子句
+  href: output-clause-transact-sql.md
+- name: 谓词
+  href: predicates.md
+  items:
+    - name: CONTAINS
+      href: contains-transact-sql.md
+    - name: FREETEXT
+      href: freetext-transact-sql.md
+    - name: 为 NULL
+      href: is-null-transact-sql.md
+- name: PREDICT
+  href: predict-transact-sql.md
+- name: READTEXT
+  href: readtext-transact-sql.md
+- name: 搜索条件
+  href: search-condition-transact-sql.md
+- name: 子查询（Azure SQL 数据仓库、并行数据仓库）
+  href: subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
+- name: 表值构造函数
+  href: table-value-constructor-transact-sql.md
+- name: 返回页首
+  href: top-transact-sql.md
+- name: UPDATE
+  href: update-transact-sql.md
+- name: UPDATETEXT
+  href: updatetext-transact-sql.md
+- name: WITH common_table_expression
+  href: with-common-table-expression-transact-sql.md
+- name: WRITETEXT
+  href: writetext-transact-sql.md

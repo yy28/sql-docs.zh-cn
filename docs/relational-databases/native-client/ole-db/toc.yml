@@ -1,0 +1,50 @@
+- name: SQL Server Native Client (OLE DB)
+  href: sql-server-native-client-ole-db.md
+- name: 特定区域
+  items:
+    - name: Native Client OLE DB 提供程序 +
+      href: ../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
+    - name: OLE DB 数据源对象 +
+      href: ../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: 命令 +
+      href: ../../../relational-databases/native-client-ole-db-commands/commands.md
+    - name: 行集 +
+      href: ../../../relational-databases/native-client-ole-db-rowsets/rowsets.md
+    - name: Blob +
+      href: ../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
+    - name: 表格索引 +
+      href: ../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md
+    - name: 数据类型 +
+      href: ../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md
+    - name: 表值参数 +
+      href: ../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: 日期时间 +
+      href: ../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: 事务 +
+      href: ../../../relational-databases/native-client-ole-db-transactions/transactions.md
+    - name: 错误 +
+      href: ../../../relational-databases/native-client-ole-db-errors/errors.md
+    - name: 接口 +
+      href: ../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md
+    - name: 操作指南 +
+      href: ../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md
+- name: FILESTREAM 支持 (OLE DB)
+  href: filestream-support-ole-db.md
+- name: 大型 CLR 用户定义类型 (OLE DB)
+  href: large-clr-user-defined-types-ole-db.md
+- name: 架构行集支持 (OLE DB)
+  href: schema-rowset-support-ole-db.md
+- name: 架构行集 - 分布式查询支持
+  href: schema-rowsets-distributed-query-support.md
+- name: 架构行集 - LINKEDSERVERS 行集
+  href: schema-rowsets-linkedservers-rowset.md
+- name: 客户端连接中的服务主体名称 (SPN) (OLE DB)
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: 稀疏列支持 (OLE DB)
+  href: sparse-columns-support-ole-db.md
+- name: 存储过程 - 调用
+  href: stored-procedures-calling.md
+- name: 存储过程 - 运行
+  href: stored-procedures-running.md
+- name: 存储过程
+  href: stored-procedures.md

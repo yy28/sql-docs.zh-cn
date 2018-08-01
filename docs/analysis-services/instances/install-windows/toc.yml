@@ -1,0 +1,33 @@
+- name: 概述
+  href: install-analysis-services.md
+- name: 在 Power Pivot 模式下安装 Analysis Services。
+  href: install-analysis-services-in-power-pivot-mode.md
+  items:
+    - name: 验证 Power Pivot for SharePoint 安装
+      href: verify-a-power-pivot-for-sharepoint-installation.md
+    - name: Power Pivot for SharePoint 2016 的最低权限的配置示例
+      href: power-pivot-minimum-privilege-example-sharepoint-2016.md
+    - name: Power Pivot for SharePoint 2013 的最低权限的配置示例
+      href: power-pivot-minimum-privilege-example-sharepoint-2013.md
+    - name: 安装或卸载 Power Pivot for SharePoint 加载项 (SharePoint 2016)
+      href: install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md
+    - name: 安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)
+      href: install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+    - name: 配置 Power Pivot 和部署解决方案 (SharePoint 2016)
+      href: configure-power-pivot-and-deploy-solutions-sharepoint-2016.md
+    - name: 配置 Power Pivot 和部署解决方案 (SharePoint 2013)
+      href: configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+    - name: 将 Power Pivot 迁移到 SharePoint 2013
+      href: migrate-power-pivot-to-sharepoint-2013.md
+    - name: 升级工作簿和计划的数据刷新 (SharePoint 2013)
+      href: upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+    - name: 配置 Analysis Services 和 Kerberos 约束委派 (KCD)
+      href: configure-analysis-services-and-kerberos-constrained-delegation-kcd.md
+    - name: 核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
+      href: checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+    - name: 在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View
+      href: deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md
+    - name: 在多层 SharePoint 2016 场中部署 SQL Server 2016 PowerPivot 和 Power View
+      href: deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md
+- name: 安装客户端库（AMO、ADOMD.NET、MSOLAP）
+  href: ../data-providers-used-for-analysis-services-connections.md

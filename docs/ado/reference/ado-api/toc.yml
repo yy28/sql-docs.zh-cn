@@ -1,0 +1,834 @@
+- name: ADO 代码示例
+  href: ado-code-examples.md
+- name: Type 属性（ADO 流）
+  href: type-property-ado-stream.md
+- name: Prepared 属性示例 (VC++)
+  href: prepared-property-example-vc.md
+- name: ObjectProxy（ADO - WFC 语法）
+  href: objectproxy-ado-wfc-syntax.md
+- name: 连接对象属性、方法、事件
+  href: connection-object-properties-methods-and-events.md
+- name: RecordTypeEnum
+  href: recordtypeenum.md
+- name: MoveRecordOptionsEnum
+  href: moverecordoptionsenum.md
+- name: Refresh 方法示例 (VB)
+  href: refresh-method-example-vb.md
+- name: CompareBookmarks 方法示例 (VB)
+  href: comparebookmarks-method-example-vb.md
+- name: SeekEnum
+  href: seekenum.md
+- name: ADCPROP_ASYNCTHREADPRIORITY_ENUM
+  href: adcprop-asyncthreadpriority-enum.md
+- name: 连接对象 (ADO)
+  href: connection-object-ado.md
+- name: 记录集对象 (ADO)
+  href: recordset-object-ado.md
+- name: 执行、再次查询和清除示例 (VB)
+  href: execute-requery-and-clear-methods-example-vb.md
+- name: Save 方法
+  href: save-method.md
+- name: 开始、提交、回滚 - TransComplete
+  href: begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md
+- name: EventStatusEnum
+  href: eventstatusenum.md
+- name: PersistFormatEnum
+  href: persistformatenum.md
+- name: AddNew 方法示例 (JScript)
+  href: addnew-method-example-jscript.md
+- name: CancelUpdate 方法 (ADO)
+  href: cancelupdate-method-ado.md
+- name: Number 属性 (ADO)
+  href: number-property-ado.md
+- name: Append 方法 (ADO)
+  href: append-method-ado.md
+- name: Execute 方法（ADO 命令）
+  href: execute-method-ado-command.md
+- name: CommandStream 属性 (ADO)
+  href: commandstream-property-ado.md
+- name: Open 和 Close 方法示例 (VC++)
+  href: open-and-close-methods-example-vc.md
+- name: IsolationLevel 属性
+  href: isolationlevel-property.md
+- name: ActiveConnection、CommandText、CommandTimeout (JScript)
+  href: activeconnection-commandtext-timeout-type-size-example-jscript.md
+- name: Filter 和 RecordCount 属性示例 (VB)
+  href: filter-and-recordcount-properties-example-vb.md
+- name: XactAttributeEnum
+  href: xactattributeenum.md
+- name: Size 属性（ADO 参数）
+  href: size-property-ado-parameter.md
+- name: PositionEnum
+  href: positionenum.md
+- name: 流（使用 import 的 Visual C++ 语法索引）
+  href: stream-visual-c-syntax-index-with-sharpimport.md
+- name: PageSize 属性 (ADO)
+  href: pagesize-property-ado.md
+- name: Charset 属性 (ADO)
+  href: charset-property-ado.md
+- name: Prepared 属性示例 (VB)
+  href: prepared-property-example-vb.md
+- name: Status 属性示例（记录集）(VB)
+  href: status-property-example-recordset-vb.md
+- name: Item 属性 (ADO)
+  href: item-property-ado.md
+- name: Source 属性示例 (VC++)
+  href: source-property-example-vc.md
+- name: CacheSize 属性示例 (VC++)
+  href: cachesize-property-example-vc.md
+- name: Cancel 方法 (ADO)
+  href: cancel-method-ado.md
+- name: FieldStatusEnum
+  href: fieldstatusenum.md
+- name: 参数对象
+  href: parameter-object.md
+- name: ADCPROP_AUTORECALC_ENUM
+  href: adcprop-autorecalc-enum.md
+- name: 流（ADO for Visual C++ 语法）
+  href: stream-ado-for-visual-c-syntax.md
+- name: Save 和 Open 方法示例 (VB)
+  href: save-and-open-methods-example-vb.md
+- name: AbsolutePage 属性 (ADO)
+  href: absolutepage-property-ado.md
+- name: WillExecute 事件 (ADO)
+  href: willexecute-event-ado.md
+- name: ConnectionEvents（使用 import 的 Visual C++ 语法索引）
+  href: connectionevents-visual-c-syntax-index-with-sharpimport.md
+- name: AddNew 方法示例 (VBScript)
+  href: addnew-method-example-vbscript.md
+- name: CancelBatch 方法 (ADO)
+  href: cancelbatch-method-ado.md
+- name: 记录对象 (ADO)
+  href: record-object-ado.md
+- name: Version 属性 (ADO)
+  href: version-property-ado.md
+- name: ActiveConnection、CommandText、CommandTimeout (VB)
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md
+- name: 记录对象属性、方法和事件
+  href: record-object-properties-methods-and-events.md
+- name: Position 属性 (ADO)
+  href: position-property-ado.md
+- name: Count 属性 (ADO)
+  href: count-property-ado.md
+- name: WillConnect 事件 (ADO)
+  href: willconnect-event-ado.md
+- name: Provider 和 DefaultDatabase 属性示例 (VC++)
+  href: provider-and-defaultdatabase-properties-example-vc.md
+- name: Requery 方法
+  href: requery-method.md
+- name: ADO 动态属性
+  href: ado-dynamic-properties.md
+- name: WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
+  href: willchangerecordset-and-recordsetchangecomplete-events-ado.md
+- name: Direction 属性
+  href: direction-property.md
+- name: BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
+  href: begintrans-committrans-and-rollbacktrans-methods-ado.md
+- name: AddNew 方法示例 (VB)
+  href: addnew-method-example-vb.md
+- name: ResyncEnum
+  href: resyncenum.md
+- name: Resync 方法示例 (VC++)
+  href: resync-method-example-vc.md
+- name: GetRows 方法示例 (JScript)
+  href: getrows-method-example-jscript.md
+- name: LockTypeEnum
+  href: locktypeenum.md
+- name: Open 方法（ADO 流）
+  href: open-method-ado-stream.md
+- name: 唯一表、唯一架构、唯一目录
+  href: unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md
+- name: ADO 对象和接口
+  href: ado-objects-and-interfaces.md
+- name: CompareBookmarks 方法 (ADO)
+  href: comparebookmarks-method-ado.md
+- name: 用于 COM 的 ADO for Visual C++ 语法索引‎
+  href: ado-for-visual-c-syntax-index-for-com.md
+- name: 参数（ADO - WFC 语法）
+  href: parameter-ado-wfc-syntax.md
+- name: Name 属性 (ADO)
+  href: name-property-ado.md
+- name: StreamReadEnum
+  href: streamreadenum.md
+- name: 命令（ADO for Visual C++ 语法）
+  href: command-ado-for-visual-c-syntax.md
+- name: 错误对象属性、方法和事件
+  href: error-object-properties-methods-and-events.md
+- name: 命令（使用 import 的 Visual C++ 语法索引）
+  href: command-visual-c-syntax-index-with-sharpimport.md
+- name: Update 和 CancelUpdate 方法示例 (VC++)
+  href: update-and-cancelupdate-methods-example-vc.md
+- name: WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
+  href: willchangerecord-and-recordchangecomplete-events-ado.md
+- name: 连接（ADO for Visual C++ 语法）
+  href: connection-ado-for-visual-c-syntax.md
+- name: Optimize 属性示例 (VC++)
+  href: optimize-property-example-vc.md
+- name: put_OLEDBCommand 方法
+  href: put-oledbcommand-method.md
+- name: CommandType 属性 (ADO)
+  href: commandtype-property-ado.md
+- name: ADO 枚举常量
+  href: ado-enumerated-constants.md
+- name: ConnectionString、ConnectionTimeout 示例 (VC++)
+  href: connectionstring-connectiontimeout-and-state-properties-example-vc.md
+- name: ParameterDirectionEnum
+  href: parameterdirectionenum.md
+- name: AppendChunk 方法 (ADO)
+  href: appendchunk-method-ado.md
+- name: CommandTimeout 属性 (ADO)
+  href: commandtimeout-property-ado.md
+- name: OriginalValue 和 UnderlyingValue 示例 (VC++)
+  href: originalvalue-and-underlyingvalue-properties-example-vc.md
+- name: Prompt 属性 - 动态 (ADO)
+  href: prompt-property-dynamic-ado.md
+- name: 记录（ADO for Visual C++ 语法）
+  href: record-ado-for-visual-c-syntax.md
+- name: AbsolutePosition 和 CursorLocation 示例 (VB)
+  href: absoluteposition-and-cursorlocation-properties-example-vb.md
+- name: DeleteRecord 和 MoveRecord 示例 (VB)
+  href: deleterecord-and-moverecord-methods-example-vb.md
+- name: AppendChunk 和 GetChunk 示例 (VB)
+  href: appendchunk-and-getchunk-methods-example-vb.md
+- name: AbsolutePosition 和 CursorLocation 示例 (JScript)
+  href: absoluteposition-and-cursorlocation-properties-example-jscript.md
+- name: ActualSize 和 DefinedSize 示例 (VB)
+  href: actualsize-and-definedsize-properties-example-vb.md
+- name: ConnectOptionEnum
+  href: connectoptionenum.md
+- name: ADO API 参考
+  href: ado-api-reference.md
+- name: ReadText 方法
+  href: readtext-method.md
+- name: FieldEnum
+  href: fieldenum.md
+- name: ActiveCommand 属性示例 (JScript)
+  href: activecommand-property-example-jscript.md
+- name: StreamWriteEnum
+  href: streamwriteenum.md
+- name: BOF、EOF 和 Bookmark 示例 (VC++)
+  href: bof-eof-and-bookmark-properties-example-vc.md
+- name: 记录集（ADO - WFC 语法）
+  href: recordset-ado-wfc-syntax.md
+- name: UpdateBatch 和 CancelBatch 方法示例 (VC++)
+  href: updatebatch-and-cancelbatch-methods-example-vc.md
+- name: ADCPROP_UPDATERESYNC_ENUM
+  href: adcprop-updateresync-enum.md
+- name: CompareEnum
+  href: compareenum.md
+- name: Find 方法示例 (VB)
+  href: find-method-example-vb.md
+- name: 记录（使用 import 的 Visual C++ 语法索引）
+  href: record-visual-c-syntax-index-with-sharpimport.md
+- name: CopyRecord 方法 (ADO)
+  href: copyrecord-method-ado.md
+- name: NativeError 属性 (ADO)
+  href: nativeerror-property-ado.md
+- name: Filter 和 RecordCount 示例 (VC++)
+  href: filter-and-recordcount-properties-example-vc.md
+- name: RecordsetEvents（使用 import 的 Visual C++ 语法索引）
+  href: recordsetevents-visual-c-syntax-index-with-sharpimport.md
+- name: StayInSync 属性示例 (VB)
+  href: stayinsync-property-example-vb.md
+- name: BOF、EOF 和 Bookmark 属性示例 (VB)
+  href: bof-eof-and-bookmark-properties-example-vb.md
+- name: CursorType 属性 (ADO)
+  href: cursortype-property-ado.md
+- name: PageCount 属性 (ADO)
+  href: pagecount-property-ado.md
+- name: ADO 集合
+  href: ado-collections.md
+- name: Append 和 CreateParameter 示例 (VC++)
+  href: append-and-createparameter-methods-example-vc.md
+- name: CopyTo 方法 (ADO)
+  href: copyto-method-ado.md
+- name: Item 属性示例 (VB)
+  href: item-property-example-vb.md
+- name: GetChildren 方法 (ADO)
+  href: getchildren-method-ado.md
+- name: CursorType、LockType、EditMode 示例 (VC++)
+  href: cursortype-locktype-and-editmode-properties-example-vc.md
+- name: 属性对象 (ADO)
+  href: property-object-ado.md
+- name: FilterGroupEnum
+  href: filtergroupenum.md
+- name: LoadFromFile 方法 (ADO)
+  href: loadfromfile-method-ado.md
+- name: NextRecordset 方法示例 (VB)
+  href: nextrecordset-method-example-vb.md
+- name: 字段对象
+  href: field-object.md
+- name: 记录集（ADO for Visual C++ 语法）
+  href: recordset-ado-for-visual-c-syntax.md
+- name: MaxRecords 属性示例 (VC++)
+  href: maxrecords-property-example-vc.md
+- name: Visual C++ 中的 ADO 代码示例
+  href: ado-code-examples-in-visual-c.md
+- name: MarshalOptions 属性示例 (VB)
+  href: marshaloptions-property-example-vb.md
+- name: GetRowsOptionEnum
+  href: getrowsoptionenum.md
+- name: Find 方法示例 (JScript)
+  href: find-method-example-jscript.md
+- name: 执行、再次查询和清除示例 (VC++)
+  href: execute-requery-and-clear-methods-example-vc.md
+- name: IDSOShapeExtensions 接口
+  href: idsoshapeextensions-interface.md
+- name: Clone 方法 (ADO)
+  href: clone-method-ado.md
+- name: Type 属性示例（字段）(VB)
+  href: type-property-example-field-vb.md
+- name: Attributes 属性 (ADO)
+  href: attributes-property-ado.md
+- name: CursorLocationEnum
+  href: cursorlocationenum.md
+- name: Resync 方法示例 (VB)
+  href: resync-method-example-vb.md
+- name: Open 方法（ADO 记录）
+  href: open-method-ado-record.md
+- name: NextRecordset 方法 (ADO)
+  href: nextrecordset-method-ado.md
+- name: BeginTrans、CommitTrans 和 RollbackTrans 示例 (VB)
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vb.md
+- name: AddNew 方法 (ADO)
+  href: addnew-method-ado.md
+- name: MoveFirst、MoveLast、MoveNext、MovePrevious 方法 (ADO)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-ado.md
+- name: Type 属性示例（属性）(VC++)
+  href: type-property-example-property-vc.md
+- name: Optimize 属性 - 动态 (ADO)
+  href: optimize-property-dynamic-ado.md
+- name: Size 属性（ADO 流）
+  href: size-property-ado-stream.md
+- name: MarshalOptions 属性示例 (VC++)
+  href: marshaloptions-property-example-vc.md
+- name: ADO 方法
+  href: ado-methods.md
+- name: FetchComplete 事件 (ADO)
+  href: fetchcomplete-event-ado.md
+- name: CacheSize 属性示例 (VB)
+  href: cachesize-property-example-vb.md
+- name: 错误（ADO - WFC 语法）
+  href: error-ado-wfc-syntax.md
+- name: EditMode 属性
+  href: editmode-property.md
+- name: 错误对象
+  href: error-object.md
+- name: ADO - WFC 语法索引
+  href: ado-wfc-syntax-index.md
+- name: Source 属性（ADO 记录集）
+  href: source-property-ado-recordset.md
+- name: 命令对象 (ADO)
+  href: command-object-ado.md
+- name: GetRows 方法示例 (VB)
+  href: getrows-method-example-vb.md
+- name: State 属性示例 (VB)
+  href: state-property-example-vb.md
+- name: RowPosition 属性 (ADO)
+  href: rowposition-property-ado.md
+- name: AddNew 方法示例 (VC++)
+  href: addnew-method-example-vc.md
+- name: NumericScale 和 Precision 示例 (VB)
+  href: numericscale-and-precision-properties-example-vb.md
+- name: 流对象属性、方法、事件
+  href: stream-object-properties-methods-and-events.md
+- name: Stat 方法
+  href: stat-method.md
+- name: LockType 属性 (ADO)
+  href: locktype-property-ado.md
+- name: PropertyAttributesEnum
+  href: propertyattributesenum.md
+- name: CreateParameter 方法 (ADO)
+  href: createparameter-method-ado.md
+- name: DataSpace（ADO - WFC 语法）
+  href: dataspace-ado-wfc-syntax.md
+- name: ErrorValueEnum
+  href: errorvalueenum.md
+- name: Flush 方法 (ADO)
+  href: flush-method-ado.md
+- name: ADOStreamConstruction 接口
+  href: adostreamconstruction-interface.md
+- name: IsolationLevel 和 Mode 示例 (VC++)
+  href: isolationlevel-and-mode-properties-example-vc.md
+- name: GetString 方法 (ADO)
+  href: getstring-method-ado.md
+- name: MoveFirst、MoveLast、MoveNext 示例 (VBScript)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md
+- name: 字段（使用 import 的 Visual C++ 语法索引）
+  href: field-visual-c-syntax-index-with-sharpimport.md
+- name: RecordOpenOptionsEnum
+  href: recordopenoptionsenum.md
+- name: IsolationLevelEnum
+  href: isolationlevelenum.md
+- name: 连接（ADO - WFC 语法）
+  href: connection-ado-wfc-syntax.md
+- name: Status 属性（ADO 字段）
+  href: status-property-ado-field.md
+- name: 字段集合属性、方法、事件
+  href: fields-collection-properties-methods-and-events.md
+- name: NextRecordset 方法示例 (VC++)
+  href: nextrecordset-method-example-vc.md
+- name: Chapter 属性 (ADO)
+  href: chapter-property-ado.md
+- name: SaveToFile 方法
+  href: savetofile-method.md
+- name: Type 属性 (ADO)
+  href: type-property-ado.md
+- name: Update Resync 属性 - 动态 (ADO)
+  href: update-resync-property-dynamic-ado.md
+- name: ConnectionTimeout 属性 (ADO)
+  href: connectiontimeout-property-ado.md
+- name: StreamOpenOptionsEnum
+  href: streamopenoptionsenum.md
+- name: OpenSchema 方法
+  href: openschema-method.md
+- name: Read 方法
+  href: read-method.md
+- name: RecordCount 属性 (ADO)
+  href: recordcount-property-ado.md
+- name: ActiveCommand 属性示例 (VC++)
+  href: activecommand-property-example-vc.md
+- name: SearchDirectionEnum
+  href: searchdirectionenum.md
+- name: ADO 动态属性索引
+  href: ado-dynamic-property-index.md
+- name: 属性（使用 import 的 Visual C++ 语法索引）
+  href: property-visual-c-syntax-index-with-sharpimport.md
+- name: Mode 属性 (ADO)
+  href: mode-property-ado.md
+- name: Filter 属性
+  href: filter-property.md
+- name: MoveFirst、MoveLast、MoveNext、MovePrevious 示例 (VC++)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md
+- name: ParameterAttributesEnum
+  href: parameterattributesenum.md
+- name: Cancel 方法示例 (VC++)
+  href: cancel-method-example-vc.md
+- name: 字段（ADO - WFC 语法）
+  href: field-ado-wfc-syntax.md
+- name: EventReasonEnum
+  href: eventreasonenum.md
+- name: Rowset 属性 (ADO)
+  href: rowset-property-ado.md
+- name: Delete 方法示例 (VC++)
+  href: delete-method-example-vc.md
+- name: Source 属性示例 (VB)
+  href: source-property-example-vb.md
+- name: 字段集合 (ADO)
+  href: fields-collection-ado.md
+- name: Clone 方法示例 (VC++)
+  href: clone-method-example-vc.md
+- name: WriteText 方法
+  href: writetext-method.md
+- name: AbsolutePosition 属性 (ADO)
+  href: absoluteposition-property-ado.md
+- name: RecordType 属性 (ADO)
+  href: recordtype-property-ado.md
+- name: ADO 代码示例 VBScript
+  href: ado-code-examples-vbscript.md
+- name: Delete 方法示例 (VBScript)
+  href: delete-method-example-vbscript.md
+- name: EOS 和 LineSeparator 属性示例 (VB)
+  href: eos-and-lineseparator-properties-and-skipline-method-example-vb.md
+- name: 参数（ADO for Visual C++ 语法）
+  href: parameter-ado-for-visual-c-syntax.md
+- name: 重新同步方法
+  href: resync-method.md
+- name: ActualSize 属性 (ADO)
+  href: actualsize-property-ado.md
+- name: Version 属性示例 (VB)
+  href: version-property-example-vb.md
+- name: SetEOS 方法
+  href: seteos-method.md
+- name: OpenSchema 方法示例 (VC++)
+  href: openschema-method-example-vc.md
+- name: FieldAttributeEnum
+  href: fieldattributeenum.md
+- name: OriginalValue 属性 (ADO)
+  href: originalvalue-property-ado.md
+- name: Supports 方法示例 (VC++)
+  href: supports-method-example-vc.md
+- name: RecordCreateOptionsEnum
+  href: recordcreateoptionsenum.md
+- name: MoveRecord 方法 (ADO)
+  href: moverecord-method-ado.md
+- name: 参数（使用 import 的 Visual C++ 语法索引）
+  href: parameter-visual-c-syntax-index-with-sharpimport.md
+- name: Update 方法
+  href: update-method.md
+- name: 集合（ADO for Visual C++ 语法）
+  href: collections-ado-for-visual-c-syntax.md
+- name: Read、ReadText、Write、WriteText 方法示例 (VB)
+  href: read-readtext-write-and-writetext-methods-example-vb.md
+- name: Reshape Name 属性 - 动态 (ADO)
+  href: reshape-name-property-dynamic-ado.md
+- name: ExecuteOptionEnum
+  href: executeoptionenum.md
+- name: Filter 和 RecordCount 示例 (JScript)
+  href: filter-and-recordcount-properties-example-jscript.md
+- name: Provider 和 DefaultDatabase 示例 (VB)
+  href: provider-and-defaultdatabase-properties-example-vb.md
+- name: Open 和 Close 方法示例 (VBScript)
+  href: open-and-close-methods-example-vbscript.md
+- name: Open 方法（ADO 连接）
+  href: open-method-ado-connection.md
+- name: Optimize 属性示例 (VB)
+  href: optimize-property-example-vb.md
+- name: ParentURL 属性 (ADO)
+  href: parenturl-property-ado.md
+- name: Clone 方法示例 (VB)
+  href: clone-method-example-vb.md
+- name: 参数集合属性、事件
+  href: parameters-collection-properties-methods-and-events.md
+- name: MaxRecords 属性示例 (VB)
+  href: maxrecords-property-example-vb.md
+- name: ExecuteComplete 事件 (ADO)
+  href: executecomplete-event-ado.md
+- name: CopyRecord、CopyTo 和 SaveToFile 示例 (VB)
+  href: copyrecord-copyto-and-savetofile-methods-example-vb.md
+- name: 错误集合属性、方法、事件
+  href: errors-collection-properties-methods-and-events.md
+- name: ParentRow 属性 (ADO)
+  href: parentrow-property-ado.md
+- name: Description、HelpContext、HelpFile、NativeError 示例 (VB)
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vb.md
+- name: Cancel 方法示例 (VB)
+  href: cancel-method-example-vb.md
+- name: AbsolutePage、PageCount、PageSize 示例 (VB)
+  href: absolutepage-pagecount-and-pagesize-properties-example-vb.md
+- name: GetDataProviderDSO 方法
+  href: getdataproviderdso-method.md
+- name: Find 方法示例 (VC++)
+  href: find-method-example-vc.md
+- name: SaveOptionsEnum
+  href: saveoptionsenum.md
+- name: 使用 import 的 ADO for Visual C++ 语法索引
+  href: ado-for-visual-c-syntax-index-with-sharpimport.md
+- name: Sort 属性示例 (VC++)
+  href: sort-property-example-vc.md
+- name: EOS 属性
+  href: eos-property.md
+- name: Seek 方法和 Index 属性示例 (VC++)
+  href: seek-method-and-index-property-example-vc.md
+- name: ConnectComplete 和 Disconnect 事件 (ADO)
+  href: connectcomplete-and-disconnect-events-ado.md
+- name: Move 方法示例 (VB)
+  href: move-method-example-vb.md
+- name: NumericScale 和 Precision 属性示例 (VC++)
+  href: numericscale-and-precision-properties-example-vc.md
+- name: BookmarkEnum
+  href: bookmarkenum.md
+- name: Find 方法 (ADO)
+  href: find-method-ado.md
+- name: Update 和 CancelUpdate 方法示例 (VB)
+  href: update-and-cancelupdate-methods-example-vb.md
+- name: Count 属性示例 (VC++)
+  href: count-property-example-vc.md
+- name: 参数对象属性、方法
+  href: parameter-object-properties-methods-and-events.md
+- name: Description、HelpContext、HelpFile 示例 (VC++)
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vc.md
+- name: ActiveConnection 属性 (ADO)
+  href: activeconnection-property-ado.md
+- name: ADORecordConstruction 接口
+  href: adorecordconstruction-interface.md
+- name: AppendChunk 和 GetChunk 方法示例 (VC++)
+  href: appendchunk-and-getchunk-methods-example-vc.md
+- name: 执行、再次查询和清除示例 (JScript)
+  href: execute-requery-and-clear-methods-example-jscript.md
+- name: RecordStatusEnum
+  href: recordstatusenum.md
+- name: StayInSync 属性
+  href: stayinsync-property.md
+- name: Resync Command 属性 - 动态 (ADO)
+  href: resync-command-property-dynamic-ado.md
+- name: CursorOptionEnum
+  href: cursoroptionenum.md
+- name: ConnectionString、ConnectionTimeout 示例 (VB)
+  href: connectionstring-connectiontimeout-and-state-properties-example-vb.md
+- name: CommandText 属性 (ADO)
+  href: commandtext-property-ado.md
+- name: GetString 方法示例 (VC++)
+  href: getstring-method-example-vc.md
+- name: Description 属性
+  href: description-property.md
+- name: CommandTypeEnum
+  href: commandtypeenum.md
+- name: ADO 对象模型
+  href: ado-object-model.md
+- name: BeginTrans、CommitTrans 和 RollbackTrans (VC++)
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vc.md
+- name: Stream 属性
+  href: stream-property.md
+- name: CacheSize 属性 (ADO)
+  href: cachesize-property-ado.md
+- name: 参数集合 (ADO)
+  href: parameters-collection-ado.md
+- name: AbsolutePosition 和 CursorLocation 示例 (VC++)
+  href: absoluteposition-and-cursorlocation-properties-example-vc.md
+- name: Value 属性 (ADO)
+  href: value-property-ado.md
+- name: Bookmark 属性 (ADO)
+  href: bookmark-property-ado.md
+- name: EndOfRecordset 事件 (ADO)
+  href: endofrecordset-event-ado.md
+- name: Append 和 CreateParameter 方法示例 (VB)
+  href: append-and-createparameter-methods-example-vb.md
+- name: InfoMessage 事件 (ADO)
+  href: infomessage-event-ado.md
+- name: EditModeEnum
+  href: editmodeenum.md
+- name: OpenSchema 方法示例 (VB)
+  href: openschema-method-example-vb.md
+- name: Type 属性示例（字段）(VC++)
+  href: type-property-example-field-vc.md
+- name: Recordset 对象属性、方法、事件
+  href: recordset-object-properties-methods-and-events.md
+- name: NamedParameters 属性 (ADO)
+  href: namedparameters-property-ado.md
+- name: DefaultDatabase 属性
+  href: defaultdatabase-property.md
+- name: Status 属性（ADO 记录集）
+  href: status-property-ado-recordset.md
+- name: UpdateBatch 和 CancelBatch 示例 (VB)
+  href: updatebatch-and-cancelbatch-methods-example-vb.md
+- name: Source 属性（ADO 错误）
+  href: source-property-ado-error.md
+- name: MarshalOptionsEnum
+  href: marshaloptionsenum.md
+- name: DefinedSize 属性
+  href: definedsize-property.md
+- name: WillChangeField 和 FieldChangeComplete 事件 (ADO)
+  href: willchangefield-and-fieldchangecomplete-events-ado.md
+- name: Refresh 方法示例 (VC++)
+  href: refresh-method-example-vc.md
+- name: Close 方法 (ADO)
+  href: close-method-ado.md
+- name: ConnectionString 属性 (ADO)
+  href: connectionstring-property-ado.md
+- name: 执行、再次查询和清除示例 (VBScript)
+  href: execute-requery-and-clear-methods-example-vbscript.md
+- name: StayInSync 属性示例 (VC++)
+  href: stayinsync-property-example-vc.md
+- name: 命令（ADO - WFC 语法）
+  href: command-ado-wfc-syntax.md
+- name: CursorLocation 属性 (ADO)
+  href: cursorlocation-property-ado.md
+- name: MarshalOptions 属性 (ADO)
+  href: marshaloptions-property-ado.md
+- name: AbsolutePage、PageCount、PageSize 示例 (VC++)
+  href: absolutepage-pagecount-and-pagesize-properties-example-vc.md
+- name: ConnectModeEnum
+  href: connectmodeenum.md
+- name: Append 和 CreateParameter 示例 (JScript)
+  href: append-and-createparameter-methods-example-jscript.md
+- name: 集合（Visual C++ 语法 Indeximport）
+  href: collections-visual-c-syntax-index-with-sharpimport.md
+- name: BOF、EOF 属性 (ADO)
+  href: bof-eof-properties-ado.md
+- name: Clone 方法示例 (VBScript)
+  href: clone-method-example-vbscript.md
+- name: Sort 属性
+  href: sort-property.md
+- name: CacheSize 属性示例 (JScript)
+  href: cachesize-property-example-jscript.md
+- name: Count 属性示例 (VB)
+  href: count-property-example-vb.md
+- name: ADCPROP_UPDATECRITERIA_ENUM
+  href: adcprop-updatecriteria-enum.md
+- name: IsolationLevel 和 Mode 示例 (VB)
+  href: isolationlevel-and-mode-properties-example-vb.md
+- name: Seek 方法和 Index 示例 (VB)
+  href: seek-method-and-index-property-example-vb.md
+- name: Save 和 Open 示例 (VC++)
+  href: save-and-open-methods-example-vc.md
+- name: Dialect 属性
+  href: dialect-property.md
+- name: ObjectStateEnum
+  href: objectstateenum.md
+- name: Open 方法（ADO 记录集）
+  href: open-method-ado-recordset.md
+- name: MoveFirst、MoveLast、MoveNext 示例 (VB)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md
+- name: ConvertToString 方法示例 (VB)
+  href: converttostring-method-example-vb.md
+- name: FetchProgress 事件 (ADO)
+  href: fetchprogress-event-ado.md
+- name: DataSource 属性 (ADO)
+  href: datasource-property-ado.md
+- name: CopyRecordOptionsEnum
+  href: copyrecordoptionsenum.md
+- name: Type 属性示例（属性）(VB)
+  href: type-property-example-property-vb.md
+- name: CreateRecordset 方法示例 (VB)
+  href: createrecordset-method-example-vb.md
+- name: Attributes 和 Name 示例 (VC++)
+  href: attributes-and-name-properties-example-vc.md
+- name: AbsolutePage、PageCount、PageSize 示例 (JScript)
+  href: absolutepage-pagecount-and-pagesize-properties-example-jscript.md
+- name: Value 属性示例 (VB)
+  href: value-property-example-vb.md
+- name: CursorType、LockType、EditMode 示例 (VB)
+  href: cursortype-locktype-and-editmode-properties-example-vb.md
+- name: DataMember 属性
+  href: datamember-property.md
+- name: DataTypeEnum
+  href: datatypeenum.md
+- name: Source 属性（ADO 记录）
+  href: source-property-ado-record.md
+- name: HelpContext、HelpFile 属性
+  href: helpcontext-helpfile-properties.md
+- name: Value 属性示例 (VC++)
+  href: value-property-example-vc.md
+- name: Move 方法示例 (VBScript)
+  href: move-method-example-vbscript.md
+- name: NumericScale 属性 (ADO)
+  href: numericscale-property-ado.md
+- name: Supports 方法
+  href: supports-method.md
+- name: ADO 事件模型示例 (VC++)
+  href: ado-events-model-example-vc.md
+- name: 错误集合 (ADO)
+  href: errors-collection-ado.md
+- name: StringFormatEnum
+  href: stringformatenum.md
+- name: DeleteRecord 方法 (ADO)
+  href: deleterecord-method-ado.md
+- name: Delete 方法（ADO 字段集合）
+  href: delete-method-ado-fields-collection.md
+- name: Attributes 和 Name 属性示例 (VB)
+  href: attributes-and-name-properties-example-vb.md
+- name: CompareBookmarks 方法示例 (VC++)
+  href: comparebookmarks-method-example-vc.md
+- name: Version 属性示例 (VC++)
+  href: version-property-example-vc.md
+- name: UpdateBatch 方法
+  href: updatebatch-method.md
+- name: get_OLEDBCommand 方法
+  href: get-oledbcommand-method.md
+- name: ActiveCommand 属性示例 (VB)
+  href: activecommand-property-example-vb.md
+- name: ActualSize 和 DefinedSize 属性示例 (JScript)
+  href: actualsize-and-definedsize-properties-example-jscript.md
+- name: Microsoft JScript 中的 ADO 代码示例
+  href: ado-code-examples-in-microsoft-jscript.md
+- name: StreamTypeEnum
+  href: streamtypeenum.md
+- name: 属性对象属性、方法
+  href: property-object-properties-methods-and-events.md
+- name: SchemaEnum
+  href: schemaenum.md
+- name: ConnectPromptEnum
+  href: connectpromptenum.md
+- name: Row 属性 (ADO)
+  href: row-property-ado.md
+- name: MaxRecords 属性 (ADO)
+  href: maxrecords-property-ado.md
+- name: Precision 属性 (ADO)
+  href: precision-property-ado.md
+- name: 错误（使用 import 的 Visual C++ 语法索引）
+  href: error-visual-c-syntax-index-with-sharpimport.md
+- name: Delete 方法（ADO 记录集）
+  href: delete-method-ado-recordset.md
+- name: 字段对象属性、方法和事件
+  href: field-object-properties-methods-and-events.md
+- name: 属性集合 (ADO)
+  href: properties-collection-ado.md
+- name: Index 属性
+  href: index-property.md
+- name: 错误（ADO for Visual C++ 语法）
+  href: error-ado-for-visual-c-syntax.md
+- name: State 属性示例 (VC++)
+  href: state-property-example-vc.md
+- name: AffectEnum
+  href: affectenum.md
+- name: WillMove 和 MoveComplete 事件 (ADO)
+  href: willmove-and-movecomplete-events-ado.md
+- name: Status 属性示例 (VC++)
+  href: status-property-example-vc.md
+- name: OriginalValue 和 UnderlyingValue 示例 (VB)
+  href: originalvalue-and-underlyingvalue-properties-example-vb.md
+- name: Delete 方法（ADO 参数集合）
+  href: delete-method-ado-parameters-collection.md
+- name: GetString 方法示例 (VB)
+  href: getstring-method-example-vb.md
+- name: GetRows 方法 (ADO)
+  href: getrows-method-ado.md
+- name: Move 方法 (ADO)
+  href: move-method-ado.md
+- name: Supports 方法示例 (VB)
+  href: supports-method-example-vb.md
+- name: Open 和 Close 方法示例 (VB)
+  href: open-and-close-methods-example-vb.md
+- name: Seek 方法
+  href: seek-method.md
+- name: Prepared 属性 (ADO)
+  href: prepared-property-ado.md
+- name: Visual Basic 中的 ADO 代码示例
+  href: ado-code-examples-in-visual-basic.md
+- name: Provider 属性 (ADO)
+  href: provider-property-ado.md
+- name: Move 方法示例 (VC++)
+  href: move-method-example-vc.md
+- name: ADO 事件
+  href: ado-events.md
+- name: ActiveConnection、CommandText 示例 (VC++)
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md
+- name: Delete 方法示例 (VB)
+  href: delete-method-example-vb.md
+- name: State 属性 (ADO)
+  href: state-property-ado.md
+- name: LineSeparator 属性 (ADO)
+  href: lineseparator-property-ado.md
+- name: ADO 属性
+  href: ado-properties.md
+- name: SkipLine 方法
+  href: skipline-method.md
+- name: Clear 方法 (ADO)
+  href: clear-method-ado.md
+- name: GetRows 方法示例 (VC++)
+  href: getrows-method-example-vc.md
+- name: CursorTypeEnum
+  href: cursortypeenum.md
+- name: 记录集（使用 import 的 Visual C++ 语法索引）
+  href: recordset-visual-c-syntax-index-with-sharpimport.md
+- name: Status 属性示例（字段）(VB)
+  href: status-property-example-field-vb.md
+- name: Sort 属性示例 (VB)
+  href: sort-property-example-vb.md
+- name: GetChunk 方法 (ADO)
+  href: getchunk-method-ado.md
+- name: ActiveCommand 属性 (ADO)
+  href: activecommand-property-ado.md
+- name: ADO 语法索引
+  href: ado-syntax-indexes.md
+- name: SQLState 属性
+  href: sqlstate-property.md
+- name: Refresh 方法 (ADO)
+  href: refresh-method-ado.md
+- name: ADORecordsetConstruction 接口
+  href: adorecordsetconstruction-interface.md
+- name: 集合（ADO - WFC 语法）
+  href: collections-ado-wfc-syntax.md
+- name: ActualSize 和 DefinedSize 示例 (VC++)
+  href: actualsize-and-definedsize-properties-example-vc.md
+- name: Item 属性示例 (VC++)
+  href: item-property-example-vc.md
+- name: 流对象 (ADO)
+  href: stream-object-ado.md
+- name: 字段（ADO for Visual C++ 语法）
+  href: field-ado-for-visual-c-syntax.md
+- name: LineSeparatorsEnum
+  href: lineseparatorsenum.md
+- name: 连接（使用 import 的 Visual C++ 语法索引）
+  href: connection-visual-c-syntax-index-with-sharpimport.md
+- name: 属性集合属性、方法、事件
+  href: properties-collection-properties-methods-and-events.md
+- name: Execute 方法（ADO 连接）
+  href: execute-method-ado-connection.md
+- name: 命令对象属性、方法、事件
+  href: command-object-properties-methods-and-events.md
+- name: Write 方法
+  href: write-method.md
+- name: UnderlyingValue 属性
+  href: underlyingvalue-property.md

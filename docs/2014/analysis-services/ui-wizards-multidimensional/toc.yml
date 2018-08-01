@@ -1,0 +1,195 @@
+- name: 多维 UI 向导
+  href: ui-wizards-multidimensional.md
+- name: Analysis Services 向导（多维）
+  href: ../analysis-services-wizards-multidimensional-data.md
+- name: 聚合设计向导的 F1 帮助
+  href: ../aggregation-design-wizard-f1-help.md
+  items:
+    - name: 选择要修改的分区（聚合设计向导）
+      href: ../select-partitions-to-modify-aggregation-design-wizard.md
+    - name: 查看聚合使用情况（聚合设计向导）
+      href: ../review-aggregation-usage-aggregation-design-wizard.md
+    - name: 指定对象计数（聚合设计向导）
+      href: ../specify-object-counts-aggregation-design-wizard.md
+    - name: 设置聚合选项（聚合设计向导）
+      href: ../set-aggregation-options-aggregation-design-wizard.md
+    - name: 完成向导（聚合设计向导）
+      href: ../completing-the-wizard-aggregation-design-wizard.md
+- name: 商业智能向导的 F1 帮助
+  href: ../business-intelligence-wizard-f1-help.md
+  items:
+    - name: 选择增强功能（商业智能向导）
+      href: ../choose-enhancement-business-intelligence-wizard.md
+    - name: 选择时间计算（商业智能向导）
+      href: ../choose-time-calculations-business-intelligence-wizard.md
+    - name: 定义计算作用域（商业智能向导）
+      href: ../define-scope-of-calculations-business-intelligence-wizard.md
+    - name: 定义帐户智能（维度）（商业智能向导）
+      href: ../define-account-intelligence-dimension-business-intelligence-wizard.md
+    - name: 配置维度属性（商业智能向导）
+      href: ../configure-dimension-attributes-business-intelligence-wizard.md
+    - name: 定义帐户智能（商业智能向导）
+      href: ../define-account-intelligence-business-intelligence-wizard.md
+    - name: 设置维度智能选项（商业智能向导）
+      href: ../set-dimension-intelligence-options-business-intelligence-wizard.md
+    - name: 定义维度智能（商业智能向导）
+      href: ../define-dimension-intelligence-business-intelligence-wizard.md
+    - name: 指定一元运算符（维度）（商业智能向导）
+      href: ../specify-a-unary-operator-dimension-business-intelligence-wizard.md
+    - name: 指定一元运算符（商业智能向导）
+      href: ../specify-a-unary-operator-business-intelligence-wizard.md
+    - name: 创建自定义成员公式（维度）（商业智能向导）
+      href: ../create-a-custom-member-formula-dimension-business-intelligence-wizard.md
+    - name: 创建自定义成员公式（商业智能向导）
+      href: ../create-a-custom-member-formula-business-intelligence-wizard.md
+    - name: 指定属性顺序（维度）（商业智能向导）
+      href: ../specify-attribute-ordering-dimension-business-intelligence-wizard.md
+    - name: 指定属性顺序（商业智能向导）
+      href: ../specify-attribute-ordering-business-intelligence-wizard.md
+    - name: 启用维度写回（维度）（商业智能向导）
+      href: ../enable-dimension-writeback-dimension-business-intelligence-wizard.md
+    - name: 启用维度写回（商业智能向导）
+      href: ../enable-dimension-writeback-business-intelligence-wizard.md
+    - name: 定义半累加行为（商业智能向导）
+      href: ../define-semiadditive-behavior-business-intelligence-wizard.md
+    - name: 设置货币换算选项（商业智能向导）
+      href: ../set-currency-conversion-options-business-intelligence-wizard.md
+    - name: 选择成员（商业智能向导）
+      href: ../select-members-business-intelligence-wizard.md
+    - name: 选择换算类型（商业智能向导）
+      href: ../select-conversion-type-business-intelligence-wizard.md
+    - name: 定义本地货币引用（商业智能向导）
+      href: ../define-local-currency-reference-business-intelligence-wizard.md
+    - name: 指定报表货币（商业智能向导）
+      href: ../specify-reporting-currencies-business-intelligence-wizard.md
+    - name: 定义货币换算（商业智能向导）
+      href: ../define-currency-conversion-business-intelligence-wizard.md
+    - name: “选择列”对话框（商业智能向导）
+      href: ../select-a-column-dialog-box-business-intelligence-wizard.md
+    - name: 完成向导（商业智能向导）
+      href: ../completing-the-wizard-business-intelligence-wizard.md
+- name: 多维数据集向导的 F1 帮助
+  href: ../cube-wizard-f1-help.md
+  items:
+    - name: 选择创建方法（多维数据集向导）
+      href: ../select-creation-method-cube-wizard.md
+    - name: 选择数据源视图（多维数据集向导）
+      href: ../select-a-data-source-view-cube-wizard.md
+    - name: 选择度量值组表（多维数据集向导）
+      href: ../select-measure-group-tables-cube-wizard.md
+    - name: 定义新度量值（多维数据集向导）
+      href: ../define-new-measures-cube-wizard.md
+    - name: 选择度量值（多维数据集向导）
+      href: ../select-measures-cube-wizard.md
+    - name: 选择现有维度（多维数据集向导）
+      href: ../select-existing-dimensions-cube-wizard.md
+    - name: 选择新维度（多维数据集向导）
+      href: ../select-new-dimensions-cube-wizard.md
+    - name: 选择缺少的维度键（多维数据集向导）
+      href: ../select-missing-dimension-keys-cube-wizard.md
+    - name: 完成向导（多维数据集向导）
+      href: ../completing-the-wizard-cube-wizard.md
+- name: 数据源向导的 F1 帮助
+  href: ../data-source-wizard-f1-help-analysis-services.md
+  items:
+    - name: 选择如何定义连接（数据源向导）
+      href: ../select-how-to-define-the-connection-data-source-wizard-analysis-services.md
+    - name: 模拟信息
+      href: ../impersonation-information.md
+    - name: 来自现有对象的数据源（数据源向导）
+      href: ../data-sources-from-existing-objects-data-source-wizard-analysis-services.md
+    - name: 完成向导
+      href: ../completing-the-wizard-data-source-wizard-analysis-services.md
+- name: 数据源视图向导的 F1 帮助
+  href: ../data-source-view-wizard-f1-help-analysis-services.md
+  items:
+    - name: 选择数据源（数据源视图向导）
+      href: ../select-a-data-source-data-source-view-wizard-analysis-services.md
+    - name: “高级数据源视图选项”对话框（数据源视图向导）
+      href: ../advanced-data-source-view-options-data-source-view-wizard-analysis-services.md
+    - name: 名称匹配（数据源视图向导）
+      href: ../name-matching-data-source-view-wizard-analysis-services.md
+    - name: 选择表和视图（数据源视图向导）
+      href: ../select-tables-and-views-data-source-view-wizard-analysis-services.md
+    - name: 完成向导（数据源视图向导）
+      href: ../completing-the-wizard-data-source-view-wizard-analysis-services.md
+- name: 维度向导的 F1 帮助
+  href: ../dimension-wizard-f1-help.md
+  items:
+    - name: 选择创建方法（维度向导）
+      href: ../select-creation-method-dimension-wizard.md
+    - name: 定义时间段（数据源）（维度向导）
+      href: ../define-time-periods-data-source-dimension-wizard.md
+    - name: 定义时间段（维度向导）
+      href: ../define-time-periods-dimension-wizard.md
+    - name: 选择日历（维度向导）
+      href: ../select-calendars-dimension-wizard.md
+    - name: 指定源信息（维度向导）
+      href: ../specify-source-information-dimension-wizard.md
+    - name: 选择相关表（维度向导）
+      href: ../select-related-tables-dimension-wizard.md
+    - name: 选择维度属性（维度向导）
+      href: ../select-dimension-attributes-dimension-wizard.md
+    - name: 指定维度类型（维度向导）
+      href: ../specify-dimension-type-dimension-wizard.md
+    - name: 指定维度键和类型（维度向导）
+      href: ../specify-dimension-key-and-type-dimension-wizard.md
+    - name: 定义帐户智能（维度向导）
+      href: ../define-account-intelligence-dimension-wizard.md
+    - name: 完成向导（维度向导）
+      href: ../completing-the-wizard-dimension-wizard.md
+- name: 导入 Analysis Services 数据库向导的 F1 帮助
+  href: ../import-analysis-services-database-wizard-f1-help.md
+  items:
+    - name: 源数据库（导入 Analysis Services 数据库向导）
+      href: ../source-database-import-analysis-services-database-wizard.md
+    - name: 完成向导（导入 Analysis Services 数据库向导）
+      href: ../completing-the-wizard-import-analysis-services-database-wizard.md
+- name: 链接对象向导的 F1 帮助
+  href: ../linked-object-wizard-f1-help.md
+  items:
+    - name: 选择数据源（链接对象向导）
+      href: ../select-a-data-source-linked-object-wizard.md
+    - name: 选择对象（链接对象向导）
+      href: ../select-objects-linked-object-wizard.md
+    - name: 完成向导（链接对象向导）
+      href: ../completing-the-wizard-linked-object-wizard.md
+- name: 分区向导的 F1 帮助
+  href: ../partition-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: 指定源信息（分区向导）
+      href: ../specify-source-information-partition-wizard.md
+    - name: 限制行（分区向导）
+      href: ../restrict-rows-partition-wizard.md
+    - name: 处理位置和存储位置（分区向导）
+      href: ../processing-and-storage-locations-partition-wizard.md
+    - name: 完成向导（分区向导）
+      href: ../completing-the-wizard-partition-wizard.md
+- name: 架构生成向导的 F1 帮助
+  href: ../schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: 指定目标（架构生成向导）
+      href: ../specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md
+    - name: 主题区域数据库架构选项（架构生成向导）
+      href: ../subject-area-database-schema-options-analysis-services-multidimensional-data.md
+    - name: 指定命名约定（架构生成向导）
+      href: ../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md
+    - name: 完成向导（架构生成向导）
+      href: ../complete-schema-generation-wizard-analysis-services-multidimensional-data.md
+- name: 基于使用情况的优化向导的 F1 帮助
+  href: ../usage-based-optimization-wizard-f1-help.md
+  items:
+    - name: 选择要修改的分区（基于使用情况的优化向导）
+      href: ../select-partitions-to-modify-usage-based-optimization-wizard.md
+    - name: 指定查询条件（基于使用情况的优化向导）
+      href: ../specify-query-criteria-usage-based-optimization-wizard.md
+    - name: 查看将要优化的查询（基于使用情况的优化向导）
+      href: ../review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md
+    - name: 查看聚合使用情况（基于使用情况的优化向导）
+      href: ../review-aggregation-usage-usage-based-optimiation-wizard.md
+    - name: 指定对象计数（基于使用情况的优化向导）
+      href: ../specify-object-counts-usage-based-optimization-wizard.md
+    - name: 设置聚合选项（基于使用情况的优化向导）
+      href: ../set-aggregation-options-usage-based-optimization-wizard.md
+    - name: 完成向导（基于使用情况的优化向导）
+      href: ../completing-the-wizard-usage-based-optimization-wizard.md

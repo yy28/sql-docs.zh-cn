@@ -1,0 +1,399 @@
+- name: SQL Server 2014 教程
+  href: tutorials-for-sql-server-2014.md
+- name: 教程：编写 Transact-SQL 语句 +
+  href: ../t-sql/tutorial-writing-transact-sql-statements.md
+- name: 数据挖掘教程
+  href: ../analysis-services/data-mining-tutorials-analysis-services.md
+  items:
+    - name: 数据挖掘基础教程
+      href: basic-data-mining-tutorial.md
+      items:
+        - name: 第 1 课：准备 Analysis Services 数据库
+          href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
+          items:
+            - name: 创建 Analysis Services 项目
+              href: creating-an-analysis-services-project-basic-data-mining-tutorial.md
+            - name: 创建数据源
+              href: creating-a-data-source-basic-data-mining-tutorial.md
+            - name: 创建数据源视图
+              href: creating-a-data-source-view-basic-data-mining-tutorial.md
+        - name: 第 2 课：生成 Targeted Mailing 结构
+          href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
+          items:
+            - name: 创建目标邮件挖掘模型结构
+              href: creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md
+            - name: 指定数据类型和内容类型
+              href: specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md
+            - name: 为结构指定测试数据集
+              href: specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md
+        - name: 第 3 课：添加和处理模型
+          href: lesson-3-adding-and-processing-models.md
+          items:
+            - name: 向 Targeted Mailing 结构中添加新模型
+              href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+            - name: 处理 Targeted Mailing 结构中的模型
+              href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+        - name: 第 4 课：浏览 Targeted Mailing 模型
+          href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
+          items:
+            - name: 浏览决策树模型
+              href: exploring-the-decision-tree-model-basic-data-mining-tutorial.md
+            - name: 浏览聚类分析模型
+              href: exploring-the-clustering-model-basic-data-mining-tutorial.md
+            - name: 浏览 Naive Bayes 模型
+              href: exploring-the-naive-bayes-model-basic-data-mining-tutorial.md
+        - name: 第 5 课：测试模型
+          href: lesson-5-testing-models-basic-data-mining-tutorial.md
+          items:
+            - name: 测试提升图的准确性
+              href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
+            - name: 测试筛选后的模型
+              href: testing-a-filtered-model-basic-data-mining-tutorial.md
+        - name: 第 6 课：创建和使用预测
+          href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
+          items:
+            - name: 创建预测
+              href: creating-predictions-basic-data-mining-tutorial.md
+            - name: 对结构数据使用钻取
+              href: using-drillthrough-on-structure-data-basic-data-mining-tutorial.md
+    - name: 数据挖掘中级教程
+      href: intermediate-data-mining-tutorial-analysis-services-data-mining.md
+      items:
+        - name: 第 1 课：创建中级数据挖掘解决方案
+          href: lesson-1-create-solution-intermediate-data-mining-tutorial.md
+          items:
+            - name: 创建解决方案和数据源
+              href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
+        - name: 第 2 课：生成预测方案
+          href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
+          items:
+            - name: 添加用于预测的数据源视图
+              href: adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md
+            - name: 了解时序模型的要求
+              href: time-series-model-requirements-intermediate-data-mining-tutorial.md
+            - name: 创建预测结构和模型
+              href: creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md
+            - name: 修改预测结构
+              href: modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md
+            - name: 自定义和处理预测模型
+              href: customize-process-forecasting-model-intermediate-data-mining-tutorial.md
+            - name: 浏览预测模型
+              href: exploring-the-forecasting-model-intermediate-data-mining-tutorial.md
+            - name: 创建时序预测
+              href: creating-time-series-predictions-intermediate-data-mining-tutorial.md
+            - name: 高级时序预测
+              href: advanced-time-series-predictions-intermediate-data-mining-tutorial.md
+              items:
+                - name: 使用更新数据进行时序预测
+                  href: time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md
+                - name: 使用替换数据进行时序预测
+                  href: time-series-predictions-replacement-data-intermediate-data-mining.md
+            - name: 比较预测模型的预测
+              href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
+        - name: 第 3 课：生成市场篮方案
+          href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
+          items:
+            - name: 添加带有嵌套表的数据源视图
+              href: adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md
+            - name: 创建市场篮结构和模型
+              href: creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md
+            - name: 修改和处理市场篮模型
+              href: modify-process-market-basket-model-intermediate-data-mining-tutorial.md
+            - name: 浏览市场篮模型
+              href: exploring-the-market-basket-models-intermediate-data-mining-tutorial.md
+            - name: 筛选挖掘模型中的嵌套表
+              href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
+            - name: 预测关联
+              href: predicting-associations-intermediate-data-mining-tutorial.md
+        - name: 第 4 课：生成顺序分析和聚类分析方案
+          href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
+          items:
+            - name: 创建顺序分析和聚类分析挖掘模型结构
+              href: create-sequence-clustering-mining-model-intermediate-data-mining.md
+            - name: 处理顺序分析和聚类分析模型
+              href: processing-the-sequence-clustering-model.md
+            - name: 浏览顺序分析和聚类分析模型
+              href: exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md
+            - name: 创建相关的顺序分析和聚类分析模型
+              href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
+            - name: 针对顺序分析和聚类分析模型创建预测
+              href: create-predictions-on-model-intermediate-data-mining-tutorial.md
+        - name: 第 5 课：生成神经网络模型和逻辑回归模型
+          href: lesson-5-build-models-intermediate-data-mining-tutorial.md
+          items:
+            - name: 为呼叫中心数据添加数据源视图
+              href: add-data-source-view-call-center-data-intermediate-data-mining.md
+            - name: 创建神经网络结构和模型
+              href: creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md
+            - name: 探索呼叫中心模型
+              href: exploring-the-call-center-model-intermediate-data-mining-tutorial.md
+            - name: 向呼叫中心结构中添加逻辑回归模型
+              href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
+            - name: 为呼叫中心模型创建预测（数据挖掘中级教程）
+              href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
+    - name: 使用 DMX 创建和查询数据挖掘模型：教程
+      href: create-query-data-mining-models-dmx-tutorials.md
+      items:
+        - name: 自行车购买者 DMX 教程
+          href: bike-buyer-dmx-tutorial.md
+          items:
+            - name: 第 1 课：创建自行车购买者挖掘结构
+              href: lesson-1-creating-the-bike-buyer-mining-structure.md
+            - name: 第 2 课：向自行车购买者挖掘结构添加挖掘模型
+              href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
+            - name: 第 3 课：处理自行车购买者挖掘结构
+              href: lesson-3-processing-the-bike-buyer-mining-structure.md
+            - name: 第 4 课：浏览自行车购买者挖掘模型
+              href: lesson-4-browsing-the-bike-buyer-mining-models.md
+            - name: 第 5 课：执行预测查询
+              href: lesson-5-executing-prediction-queries.md
+        - name: 市场篮 DMX 教程
+          href: market-basket-dmx-tutorial.md
+          items:
+            - name: 第 1 课：创建市场篮挖掘模型
+              href: lesson-1-creating-the-market-basket-mining-structure.md
+            - name: 第 2 课：向市场篮挖掘结构中添加挖掘模型
+              href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
+            - name: 第 3 课：处理市场篮挖掘结构
+              href: lesson-3-processing-the-market-basket-mining-structure.md
+            - name: 第 4 课：执行市场篮预测
+              href: lesson-4-executing-market-basket-predictions.md
+        - name: 时序预测 DMX 教程
+          href: time-series-prediction-dmx-tutorial.md
+          items:
+            - name: 第 1 课：创建时序挖掘模型和挖掘结构
+              href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
+            - name: 第 2 课：向时序挖掘结构添加挖掘模型
+              href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
+            - name: 第 3 课：准备时序结构和模型
+              href: lesson-3-processing-the-time-series-structure-and-models.md
+            - name: 第 4 课：使用 DMX 创建时序预测
+              href: lesson-4-creating-time-series-predictions-using-dmx.md
+            - name: 第 5 课：扩展时序模型
+              href: lesson-5-extending-the-time-series-model.md
+- name: Reporting Services 教程
+  href: ../reporting-services/reporting-services-tutorials-ssrs.md
+  items:
+    - name: 创建基本表报表（SSRS 教程）
+      href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
+      items:
+        - name: 第 1 课：创建报表服务器项目
+          href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
+        - name: 第 2 课：指定连接信息
+          href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
+        - name: 第 3 课：为表报表定义数据集
+          href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+        - name: 第 4 课：向报表添加表
+          href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
+        - name: 'Lesson 5: Formatting a Report'
+          href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
+        - name: 'Lesson 6: Adding Grouping and Totals'
+          href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
+    - name: 创建数据驱动订阅（SSRS 教程）
+      href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
+      items:
+        - name: 第 1 课：创建示例订阅服务器数据库
+          href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
+        - name: 'Lesson 2: Modifying the Report Data Source Properties'
+          href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
+        - name: 'Lesson 3: Defining a Data-Driven Subscription'
+          href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
+    - name: 使用 ReportViewer 创建带有参数的钻取 (RDLC) 报表（SSRS 教程）
+      href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+      items:
+        - name: 第 1 课：创建新网站
+          href: ../reporting-services/lesson-1-create-a-new-web-site.md
+        - name: 第 2 课：定义用于父报表的数据连接和数据表
+          href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+        - name: 第 3 课：使用报表向导设计父报表
+          href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
+        - name: 第 4 课：定义用于子报表的数据连接和数据表
+          href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+        - name: 第 5 课：使用报表向导设计子报表
+          href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
+        - name: 第 6 课：将 ReportViewer 控件添加到应用程序
+          href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
+        - name: 第 7 课：在父报表上添加钻取操作
+          href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
+        - name: 第 8 课：创建数据筛选器
+          href: ../reporting-services/lesson-8-create-a-data-filter.md
+        - name: 'Lesson 9: Build and Run the Application'
+          href: ../reporting-services/lesson-9-build-and-run-the-application.md
+    - name: '使用 Visual Basic 或 Visual C# 访问报表服务器 Web 服务（SSRS 教程）'
+      href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
+      items:
+        - name: 第 1 课：创建 Web 服务客户端项目
+          href: lesson-1-creating-the-web-service-client-project.md
+        - name: 第 2 课：添加 Web 引用
+          href: lesson-2-adding-a-web-reference.md
+        - name: 第 3 课：访问 Web 服务
+          href: lesson-3-accessing-the-web-service.md
+        - name: '第 4 课：运行应用程序 (VB/VC#)'
+          href: lesson-4-running-the-application-vb-vcsharp.md
+    - name: 使用从 RDL 架构生成的类更新报表（SSRS 教程）
+      href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
+      items:
+        - name: 第 1 课：创建 RDL 架构 Visual Studio 项目
+          href: lesson-1-create-the-rdl-schema-visual-studio-project.md
+        - name: 第 2 课：使用 xsd 工具从 RDL 架构生成类
+          href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
+        - name: 第 3 课：从报表服务器加载报表定义
+          href: lesson-3-load-a-report-definition-from-the-report-server.md
+        - name: 第 4 课：以编程方式更新报表定义
+          href: lesson-4-update-the-report-definition-programmatically.md
+        - name: 第 5 课：将报表定义发布到报表服务器
+          href: lesson-5-publish-the-report-definition-to-the-report-server.md
+        - name: '第 6 课：运行 RDL 架构应用程序 (VB/C#)'
+          href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
+    - name: 教程（报表生成器）
+      href: ../reporting-services/report-builder-tutorials.md
+      items:
+        - name: 教程先决条件
+          href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
+        - name: 获取数据连接的备选方法（报表生成器）
+          href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
+        - name: 教程：创建基本表报表
+          href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
+        - name: 教程：创建矩阵报表
+          href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
+        - name: 教程：创建自由格式的报表
+          href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
+        - name: 教程：设置文本格式（报表生成器）
+          href: ../reporting-services/tutorial-format-text-report-builder.md
+        - name: 教程：向报表添加柱形图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
+        - name: 教程：向报表添加饼图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
+        - name: 教程：向报表添加条形图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
+        - name: 教程：向报表添加迷你图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
+        - name: 教程：向报表添加 KPI
+          href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
+        - name: 教程：地图报表
+          href: ../reporting-services/tutorial-map-report-report-builder.md
+        - name: 教程：向报表添加参数（报表生成器）
+          href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
+        - name: 教程：创建钻取报表和主报表
+          href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
+        - name: 教程：表达式简介
+          href: ../reporting-services/tutorial-introducing-expressions.md
+- name: 企业信息管理教程
+  href: enterprise-information-management-tutorials.md
+  items:
+    - name: '综合使用 SSIS、MDS 和 DQS 来执行企业信息管理 [教程]'
+      href: 'enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md'
+      items:
+        - name: 第 1 课：创建 DQS Suppliers 知识库
+          href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
+          items:
+            - name: 任务 1：创建知识库和域
+              href: task-1-creating-a-knowledge-base-and-domains.md
+            - name: 任务 2：手动添加域值
+              href: task-2-adding-domain-values-manually.md
+            - name: 任务 3：从 Excel 文件导入域值
+              href: task-3-importing-domain-values-from-an-excel-file.md
+            - name: 任务 4：设置域规则
+              href: task-4-setting-domain-rules.md
+            - name: 任务 5：设置基于字词的关系
+              href: task-5-setting-term-based-relationships.md
+            - name: 任务 6：设置同义词
+              href: task-6-setting-synonyms.md
+            - name: 任务 7：创建复合域规则
+              href: task-7-creating-a-composite-domain.md
+            - name: 任务 8：创建复合域规则
+              href: task-8-creating-a-composite-domain-rule.md
+            - name: 任务 9：配置引用数据服务
+              href: task-9-configuring-a-reference-data-service.md
+            - name: 任务 10：配置复合域以使用引用数据服务
+              href: task-10-configuring-composite-domain-to-use-reference-data-service.md
+            - name: 任务 11：发布知识库
+              href: task-11-publishing-the-knowledge-base.md
+            - name: 任务 12：发现知识（知识发现）
+              href: task-12-discovering-knowledge-knowledge-discovery.md
+        - name: 第 2 课：使用 Suppliers 知识库清理供应商数据
+          href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
+          items:
+            - name: 任务 1：创建数据质量项目
+              href: task-1-creating-a-data-quality-project.md
+            - name: 任务 2：将 Excel 列映射到 DQS 域
+              href: task-2-mapping-excel-columns-to-dqs-domains.md
+            - name: 任务 3：对照 Suppliers 知识库清理数据
+              href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
+            - name: 任务 4：管理和查看报表
+              href: task-4-manaing-and-viewing-results.md
+            - name: 任务 5：将清理结果导出到 Excel 文件
+              href: task-5-exporting-cleansing-results-to-an-excel-file.md
+            - name: 任务 6：从 Cleanse Supplier List 项目导入值
+              href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
+        - name: 第 3 课：匹配数据以便从供应商列表中删除重复项
+          href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
+          items:
+            - name: 任务 1：定义匹配策略
+              href: task-1-defining-a-matching-policy.md
+            - name: 任务 2：测试和发布匹配策略
+              href: task-2-testing-and-publishing-the-matching-policy.md
+            - name: 任务 3：创建并运行数据质量项目以进行匹配
+              href: task-3-creating-and-running-a-data-quality-project-for-matching.md
+            - name: 任务 4：将匹配活动的结果导出到 Excel 文件
+              href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
+        - name: 第 4 课：在 MDS 中存储供应商数据
+          href: lesson-4-storing-supplier-data-in-mds.md
+          items:
+            - name: 任务 1：使用主数据管理器创建供应商模型
+              href: task-1-creating-suppliers-model-using-master-data-manager.md
+            - name: 任务 2：使用用于 Excel 的 MDS 外接程序将供应商数据上载到 MDS
+              href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
+            - name: 任务 3：在主数据管理器中验证数据
+              href: task-3-verifying-the-data-in-master-data-manager.md
+            - name: 任务 4（可选）：组合、匹配和发布新数据集
+              href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
+            - name: 任务 5：从 Excel 中创建基于域的属性
+              href: task-5-creating-a-domain-based-attribute-from-excel.md
+            - name: 任务 6：验证通过使用主数据管理器创建了基于域的属性
+              href: task-6-verify-domain-based-attribute-master-data-manager.md
+            - name: 任务 7：在 Excel 中查看使用主数据管理器所做的更新
+              href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
+            - name: 任务 8：在 Excel 中为 State 实体添加新值
+              href: task-8-adding-a-new-value-for-state-entity-in-excel.md
+            - name: 任务 9：使用主数据管理器创建派生层次结构
+              href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
+        - name: 第 5 课：使用 SSIS 自动执行清理和匹配
+          href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
+          items:
+            - name: 任务 1（先决条件）：删除 MDS 中的供应商数据
+              href: task-1-prerequisite-removing-supplier-data-in-mds.md
+            - name: 任务 2（可选）：使用主数据管理器创建 MDS 订阅视图
+              href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
+            - name: 任务 3（可选）：查看订阅视图
+              href: task-3-optional-reviewing-the-subscription-views.md
+            - name: 任务 4：使用 SQL Server Data Tools 创建 SSIS 项目
+              href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
+            - name: 任务 5：添加数据流任务
+              href: task-5-adding-data-flow-task.md
+            - name: 任务 6：将 Excel 源添加到数据流
+              href: task-6-adding-excel-source-to-the-data-flow.md
+            - name: 任务 7：将 DQS 清理转换添加到数据流
+              href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
+            - name: 任务 8：添加有条件拆分转换以拆分清理输出
+              href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
+            - name: 任务 9：添加 Union All 转换以合并正确和已更正的记录
+              href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
+            - name: 任务 10：添加模糊分组转换以确定重复项
+              href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
+            - name: 任务 11：添加有条件拆分转换以筛选重复项
+              href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
+            - name: 任务 12：添加派生列转换以添加 MDS 所需的列
+              href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
+            - name: 任务 13：添加 OLE DB 目标以便将数据写入 MDS 临时表
+              href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
+            - name: 任务 14：将执行 SQL 任务添加到控制流以运行 MDS 的存储过程
+              href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
+            - name: 任务 15：生成和运行 SSIS 项目
+              href: task-15-building-and-running-the-ssis-project.md
+            - name: 任务 16：使用主数据管理器进行验证
+              href: task-16-verifying-with-master-data-manager.md
+            - name: 任务 17：查看由 SSIS 包创建的 DQS 清理项目
+              href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
+        - name: 结语
+          href: conclusion.md

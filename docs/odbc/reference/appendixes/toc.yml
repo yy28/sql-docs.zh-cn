@@ -1,0 +1,325 @@
+- name: ODBC 附录
+  href: odbc-appendixes.md
+- name: 附录
+  items:
+    - name: 附录 A：ODBC 错误代码
+      href: appendix-a-odbc-error-codes.md
+    - name: 附录 B：ODBC 状态转换表
+      href: appendix-b-odbc-state-transition-tables.md
+    - name: 附录 C：SQL 语法
+      href: appendix-c-sql-grammar.md
+    - name: 附录 D：数据类型
+      href: appendix-d-data-types.md
+    - name: 附录 E：标量函数
+      href: appendix-e-scalar-functions.md
+    - name: 附录 F：ODBC 游标库
+      href: appendix-f-odbc-cursor-library.md
+    - name: 附录 G：驱动程序后向兼容性准则
+      href: appendix-g-driver-guidelines-for-backward-compatibility.md
+- name: C 数据类型的后向兼容性
+  href: backward-compatibility-of-c-data-types.md
+- name: 行为更改和 ODBC 3.x 驱动程序
+  href: behavioral-changes-and-odbc-3-x-drivers.md
+- name: 块游标、可滚动游标和后向兼容性
+  href: block-cursors-scrollable-cursors-and-backward-compatibility.md
+- name: 书签 C 数据类型
+  href: bookmark-c-data-type.md
+- name: C 数据类型
+  href: c-data-types.md
+  items:
+    - name: 在 C 中使用 SQL_NUMERIC_STRUCT 检索数字数据
+      href: retrieve-numeric-data-sql-numeric-struct-kb222831.md
+- name: C 间隔结构
+  href: c-interval-structure.md
+- name: 将数据从 C 转换为 SQL 数据类型
+  href: converting-data-from-c-to-sql-data-types.md
+  items:
+    - name: 从 C 到 SQL 的数据转换示例
+      href: c-to-sql-data-conversion-examples.md
+    - name: 从 C 到 SQL：二进制
+      href: c-to-sql-binary.md
+    - name: 从 C 到 SQL：位
+      href: c-to-sql-bit.md
+    - name: 从 C 到 SQL：字符
+      href: c-to-sql-character.md
+    - name: 从 C 到 SQL：日期
+      href: c-to-sql-date.md
+    - name: 从 C 到 SQL：日期时间间隔
+      href: c-to-sql-day-time-intervals.md
+    - name: 从 C 到 SQL：GUID
+      href: c-to-sql-guid.md
+    - name: 从 C 到 SQL：数字
+      href: c-to-sql-numeric.md
+    - name: 从 C 到 SQL：时间戳
+      href: c-to-sql-timestamp.md
+    - name: 从 C 到 SQL：时间
+      href: c-to-sql-time.md
+    - name: 从 C 到 SQL：年月间隔
+      href: c-to-sql-year-month-intervals.md
+- name: 调用 SQLSetPos 以插入数据
+  href: calling-sqlsetpos-to-insert-data.md
+- name: 列数据
+  href: column-data.md
+- name: 列大小、十进制数字、传输八位字节长度和显示大小
+  href: column-size-decimal-digits-transfer-octet-length-and-display-size.md
+- name: 列大小
+  href: column-size.md
+- name: 连接转换
+  href: connection-transitions.md
+- name: 公历的约束
+  href: constraints-of-the-gregorian-calendar.md
+- name: 构造搜索语句
+  href: constructing-searched-statements.md
+- name: 游标库缓存
+  href: cursor-library-cache.md
+- name: 游标库代码示例
+  href: cursor-library-code-example.md
+- name: 数据类型标识符和描述符
+  href: data-type-identifiers-and-descriptors.md
+- name: 数据类型支持
+  href: data-type-support.md
+- name: 日期、时间和时间戳转义序列
+  href: date-time-and-timestamp-escape-sequences.md
+- name: 日期时间数据类型
+  href: datetime-data-types.md
+- name: 十进制数字
+  href: decimal-digits.md
+- name: 默认 C 数据类型
+  href: default-c-data-types.md
+- name: 描述符转换
+  href: descriptor-transitions.md
+- name: 显示大小
+  href: display-size.md
+- name: SQL 语句中使用的元素
+  href: elements-used-in-sql-statements.md
+- name: 环境转换
+  href: environment-transitions.md
+- name: 示例 SQLGetTypeInfo 结果集
+  href: example-sqlgettypeinfo-result-set.md
+- name: 执行定位更新和删除语句
+  href: executing-positioned-update-and-delete-statements.md
+- name: 显式数据类型转换函数
+  href: explicit-data-type-conversion-function.md
+- name: 定长书签
+  href: fixed-length-bookmarks.md
+- name: GUID 转义序列
+  href: guid-escape-sequences.md
+- name: 间隔和数字数据类型的准则
+  href: guidelines-for-interval-and-numeric-data-types.md
+- name: 实现说明
+  href: implementation-notes.md
+- name: 间隔数据类型长度
+  href: interval-data-type-length.md
+- name: 间隔数据类型精度
+  href: interval-data-type-precision.md
+- name: 间隔数据类型
+  href: interval-data-types.md
+- name: 间隔转义序列
+  href: interval-escape-sequences.md
+- name: 间隔文本语法
+  href: interval-literal-syntax.md
+- name: 间隔文本
+  href: interval-literals.md
+- name: 列数据的长度
+  href: length-of-column-data.md
+- name: LIKE 转义序列
+  href: like-escape-sequence.md
+- name: ODBC 中的文本
+  href: literals-in-odbc.md
+- name: 按序号加载
+  href: loading-by-ordinal.md
+- name: 缓存的位置
+  href: location-of-cache.md
+- name: 映射已弃用的函数
+  href: mapping-deprecated-functions.md
+  items:
+    - name: SQLAllocConnect 映射
+      href: sqlallocconnect-mapping.md
+    - name: SQLAllocEnv 映射
+      href: sqlallocenv-mapping.md
+    - name: SQLAllocStmt 映射
+      href: sqlallocstmt-mapping.md
+    - name: SQLBindParam 映射
+      href: sqlbindparam-mapping.md
+    - name: SQLColAttributes 映射
+      href: sqlcolattributes-mapping.md
+    - name: SQLError 映射
+      href: sqlerror-mapping.md
+    - name: SQLFreeConnect 映射
+      href: sqlfreeconnect-mapping.md
+    - name: SQLFreeEnv 映射
+      href: sqlfreeenv-mapping.md
+    - name: SQLFreeStmt 映射
+      href: sqlfreestmt-mapping.md
+    - name: SQLGetConnectOption 映射
+      href: sqlgetconnectoption-mapping.md
+    - name: SQLGetStmtOption 映射
+      href: sqlgetstmtoption-mapping.md
+    - name: SQLInstallTranslator 映射
+      href: sqlinstalltranslator-mapping.md
+    - name: SQLParamOptions 映射
+      href: sqlparamoptions-mapping.md
+    - name: SQLSetConnectOption 映射
+      href: sqlsetconnectoption-mapping.md
+    - name: SQLSetParam 映射
+      href: sqlsetparam-mapping.md
+    - name: SQLSetScrollOptions 映射
+      href: sqlsetscrolloptions-mapping.md
+    - name: SQLSetStmtOption 映射
+      href: sqlsetstmtoption-mapping.md
+    - name: SQLTransact 映射
+      href: sqltransact-mapping.md
+- name: 数值函数
+  href: numeric-functions.md
+- name: 数值语法
+  href: numeric-literal-syntax.md
+- name: 数值
+  href: numeric-literals.md
+- name: ODBC 转义序列
+  href: odbc-escape-sequences.md
+- name: ODBC 函数和游标库
+  href: odbc-functions-and-the-cursor-library.md
+  items:
+    - name: 由游标库执行的 ODBC 函数
+      href: odbc-functions-executed-by-the-cursor-library.md
+    - name: 不是由游标库执行的 ODBC 函数
+      href: odbc-functions-not-executed-by-the-cursor-library.md
+    - name: SQLBindCol（游标库）
+      href: sqlbindcol-cursor-library.md
+    - name: SQLBindParameter（游标库）
+      href: sqlbindparameter-cursor-library.md
+    - name: SQLBulkOperations 和游标库
+      href: sqlbulkoperations-and-the-cursor-library.md
+    - name: SQLCloseCursor_ODBC
+      href: sqlclosecursor-odbc.md
+    - name: SQLEndTran（游标库）
+      href: sqlendtran-cursor-library.md
+    - name: SQLExtendedFetch（游标库）
+      href: sqlextendedfetch-cursor-library.md
+    - name: SQLFetch（游标库）
+      href: sqlfetch-cursor-library.md
+    - name: SQLFetchScroll（游标库）
+      href: sqlfetchscroll-cursor-library.md
+    - name: SQLFreeStmt（游标库）
+      href: sqlfreestmt-cursor-library.md
+    - name: SQLGetData（游标库）
+      href: sqlgetdata-cursor-library.md
+    - name: SQLGetDescField 和 SQLGetDescRec（游标库）
+      href: sqlgetdescfield-and-sqlgetdescrec-cursor-library.md
+    - name: SQLGetFunctions（游标库）
+      href: sqlgetfunctions-cursor-library.md
+    - name: SQLGetInfo（游标库）
+      href: sqlgetinfo-cursor-library.md
+    - name: SQLGetInfo 支持
+      href: sqlgetinfo-support.md
+    - name: SQLGetStmtAttr（游标库）
+      href: sqlgetstmtattr-cursor-library.md
+    - name: SQLGetStmtOption（游标库）
+      href: sqlgetstmtoption-cursor-library.md
+    - name: SQLNativeSql（游标库）
+      href: sqlnativesql-cursor-library.md
+    - name: SQLRowCount（游标库）
+      href: sqlrowcount-cursor-library.md
+    - name: SQLSetConnectAttr（游标库）
+      href: sqlsetconnectattr-cursor-library.md
+    - name: SQLSetDescField 和 SQLSetDescRec（游标库）
+      href: sqlsetdescfield-and-sqlsetdescrec-cursor-library.md
+    - name: SQLSetEnvAttr 和游标库
+      href: sqlsetenvattr-and-the-cursor-library.md
+    - name: SQLSetPos（游标库）
+      href: sqlsetpos-cursor-library.md
+    - name: SQLSetScrollOptions（游标库）
+      href: sqlsetscrolloptions-cursor-library.md
+    - name: SQLSetStmtAttr（游标库）
+      href: sqlsetstmtattr-cursor-library.md
+- name: ODBC 游标库错误代码
+  href: odbc-cursor-library-error-codes.md
+- name: 外部联接转义序列
+  href: outer-join-escape-sequence.md
+- name: 重写间隔数据类型的默认前导和秒精度
+  href: overriding-default-leading-and-seconds-precision-for-interval-data-types.md
+- name: 重写数字数据类型的默认精度和小数位数
+  href: overriding-default-precision-and-scale-for-numeric-data-types.md
+- name: 参数数据类型
+  href: parameter-data-types.md
+- name: 参数标记
+  href: parameter-markers.md
+- name: 过程调用转义序列
+  href: procedure-call-escape-sequence.md
+- name: 批处理 SQL 语句
+  href: processing-batches-of-sql-statements.md
+- name: 处理定位更新和删除语句
+  href: processing-positioned-update-and-delete-statements.md
+- name: 处理 SELECT FOR UPDATE 语句
+  href: processing-select-for-update-statements.md
+- name: 处理 SQL 语句
+  href: processing-sql-statements.md
+- name: 伪类型标识符
+  href: pseudo-type-identifiers.md
+- name: 保留关键字
+  href: reserved-keywords.md
+- name: 返回 SQL_NO_DATA
+  href: returning-sql-no-data.md
+- name: 行状态
+  href: row-status.md
+- name: 转换规则
+  href: rules-for-conversions.md
+- name: 标量函数转义序列
+  href: scalar-function-escape-sequence.md
+- name: SQL 数据类型
+  href: sql-data-types.md
+- name: SQL 最低语法
+  href: sql-minimum-grammar.md
+- name: 将数据从 SQL 转换为 C 数据类型
+  href: converting-data-from-sql-to-c-data-types.md
+  items:
+    - name: 从 SQL 到 C 的数据转换示例
+      href: sql-to-c-data-conversion-examples.md
+    - name: 从 SQL 到 C：二进制
+      href: sql-to-c-binary.md
+    - name: 从 SQL 到 C：位
+      href: sql-to-c-bit.md
+    - name: 从 SQL 到 C：字符
+      href: sql-to-c-character.md
+    - name: 从 SQL 到 C：日期
+      href: sql-to-c-date.md
+    - name: 从 SQL 到 C：日期时间间隔
+      href: sql-to-c-day-time-intervals.md
+    - name: 从 SQL 到 C：GUID
+      href: sql-to-c-guid.md
+    - name: 从 SQL 到 C：数字
+      href: sql-to-c-numeric.md
+    - name: 从 SQL 到 C：时间戳
+      href: sql-to-c-timestamp.md
+    - name: 从 SQL 到 C：时间
+      href: sql-to-c-time.md
+    - name: 从 SQL 到 C：年月间隔
+      href: sql-to-c-year-month-intervals.md
+- name: SQL-92 CAST 函数
+  href: sql-92-cast-function.md
+- name: SQL_ARD_TYPE
+  href: sql-ard-type.md
+- name: SQL_C_TCHAR
+  href: sql-c-tchar.md
+- name: 语句转换
+  href: statement-transitions.md
+- name: 字符串函数
+  href: string-functions.md
+- name: 系统函数
+  href: system-functions.md
+- name: 时间、日期和时间间隔函数
+  href: time-date-and-interval-functions.md
+- name: 传输八位字节长度
+  href: transfer-octet-length.md
+- name: 以二进制格式传输数据
+  href: transferring-data-in-its-binary-form.md
+- name: 使用数据类型标识符
+  href: using-data-type-identifiers.md
+- name: 使用 ODBC 游标库
+  href: using-the-odbc-cursor-library.md
+- name: 驱动程序的用途
+  href: what-the-driver-does.md
+- name: 驱动程序管理器的用途
+  href: what-the-driver-manager-does.md
+- name: 64 位整数结构
+  href: 64-bit-integer-structures.md

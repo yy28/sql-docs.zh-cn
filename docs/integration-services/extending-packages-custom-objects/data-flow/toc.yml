@@ -1,0 +1,30 @@
+- name: 开发自定义数据流组件
+  href: developing-a-custom-data-flow-component.md
+- name: 创建自定义数据流组件
+  href: creating-a-custom-data-flow-component.md
+- name: 数据流组件的设计时方法
+  href: design-time-methods-of-a-data-flow-component.md
+- name: 数据流组件的运行时方法
+  href: run-time-methods-of-a-data-flow-component.md
+- name: 执行计划和缓冲区分配
+  href: execution-plan-and-buffer-allocation.md
+- name: 在数据流中使用数据类型
+  href: working-with-data-types-in-the-data-flow.md
+- name: 验证数据流组件
+  href: validating-a-data-flow-component.md
+- name: 实现外部元数据
+  href: implementing-external-metadata.md
+- name: 在数据流组件中引发和定义事件
+  href: raising-and-defining-events-in-a-data-flow-component.md
+- name: 在数据流组件中记录和定义日志条目
+  href: logging-and-defining-log-entries-in-a-data-flow-component.md
+- name: 在数据流组件中使用错误输出
+  href: using-error-outputs-in-a-data-flow-component.md
+- name: 为数据流组件开发用户界面
+  href: developing-a-user-interface-for-a-data-flow-component.md
+- name: 升级数据流组件的版本
+  href: upgrading-the-version-of-a-data-flow-component.md
+- name: 文章子类别
+  items:
+    - name: 数据流类型
+      href: ../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md

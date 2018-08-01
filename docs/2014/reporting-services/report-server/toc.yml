@@ -1,0 +1,92 @@
+- name: 报表服务器（本机模式）
+  href: reporting-services-report-server-native-mode.md
+- name: 配置和管理报表服务器（SSRS 本机模式）
+  href: configure-and-administer-a-report-server-ssrs-native-mode.md
+  items:
+    - name: 配置报表服务器
+      href: configure-a-report-server-reporting-services-native-mode.md
+    - name: 配置报表管理器（本机模式）
+      href: configure-web-portal.md
+    - name: 配置报表生成器访问权限
+      href: configure-report-builder-access.md
+    - name: 管理 Reporting Services 本机模式报表服务器
+      href: manage-a-reporting-services-native-mode-report-server.md
+    - name: Configure a Firewall for Report Server Access
+      href: configure-a-firewall-for-report-server-access.md
+    - name: 为本地管理配置本机模式报表服务器 (SSRS)
+      href: configure-a-native-mode-report-server-for-local-administration-ssrs.md
+    - name: 配置报表服务器以进行远程管理
+      href: configure-a-report-server-for-remote-administration.md
+    - name: 在网络负载平衡群集上配置报表服务器
+      href: configure-a-report-server-on-a-network-load-balancing-cluster.md
+    - name: 启用远程错误 (Reporting Services)
+      href: enable-remote-errors-reporting-services.md
+    - name: 为报表服务器注册服务主体名称 (SPN)
+      href: register-a-service-principal-name-spn-for-a-report-server.md
+    - name: 打开或关闭 Reporting Services 功能
+      href: turn-reporting-services-features-on-or-off.md
+- name: 报表服务器内容管理（SSRS 本机模式）
+  href: report-server-content-management-ssrs-native-mode.md
+  items:
+    - name: 创建、删除或修改文件夹
+      href: create-delete-or-modify-a-folder-report-manager.md
+    - name: 移动或删除项
+      href: move-or-delete-an-item-report-manager.md
+    - name: 将文件上载到文件夹
+      href: upload-files-to-a-folder.md
+    - name: 更新资源
+      href: update-a-resource-report-manager.md
+- name: 启动和停止报表服务器服务
+  href: start-and-stop-the-report-server-service.md
+- name: 报表服务器应用程序的应用程序域
+  href: application-domains-for-report-server-applications.md
+- name: 启用和禁用 Reporting Services 的客户端打印
+  href: enable-and-disable-client-side-printing-for-reporting-services.md
+- name: 启用和禁用“我的报表”
+  href: enable-and-disable-my-reports.md
+- name: 重命名报表服务器计算机
+  href: rename-a-report-server-computer.md
+- name: 报表服务器数据库（SSRS 本机模式）
+  href: report-server-database-ssrs-native-mode.md
+  items:
+    - name: 管理报表服务器数据库（SSRS 本机模式）
+      href: administer-a-report-server-database-ssrs-native-mode.md
+    - name: 将报表服务器数据库移至其他计算机（SSRS 本机模式）
+      href: moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
+- name: 性能、快照、缓存 (Reporting Services)
+  href: performance-snapshots-caching-reporting-services.md
+  items:
+    - name: 监视报表服务器性能
+      href: monitoring-report-server-performance.md
+    - name: MSRS 2014 Web Service 和 MSRS 2014 Windows Service 性能对象的性能计数器（本机模式）
+      href: performance-counters-msrs-2011-web-service-performance-objects.md
+    - name: MSRS 2014 Web Service SharePoint Mode 性能对象和 MSRS 2014 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）
+      href: performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
+    - name: 'ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器'
+      href: performance-counters-reportserver-service-performance-objects.md
+    - name: 设置报表处理属性
+      href: set-report-processing-properties.md
+    - name: 为报表服务器应用程序配置可用内存
+      href: configure-available-memory-for-report-server-applications.md
+    - name: 为报表和共享数据集处理设置超时值 (SSRS)
+      href: setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
+    - name: 处理大型报表
+      href: process-large-reports.md
+    - name: 报表和快照的大小限制
+      href: report-and-snapshot-size-limits.md
+    - name: 缓存报表
+      href: caching-reports-ssrs.md
+    - name: 缓存共享数据集
+      href: cache-shared-datasets-ssrs.md
+    - name: 预加载缓存
+      href: preload-the-cache-report-manager.md
+    - name: 如何缓存一个共享数据集
+      href: cache-a-shared-dataset.md
+    - name: 如何缓存一个报表
+      href: cache-a-report-report-manager.md
+    - name: 创建、修改和删除报表历史记录中的快照
+      href: create-modify-and-delete-snapshots-in-report-history.md
+    - name: 向报表历史记录添加快照
+      href: add-a-snapshot-to-report-history-report-manager.md
+    - name: 创建报表历史记录
+      href: create-report-history-reporting-services-in-sharepoint-integrated-mode.md

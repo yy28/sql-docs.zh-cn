@@ -1,0 +1,46 @@
+- name: 适用于 SQL Server 的 OLE DB 驱动程序功能
+  href: oledb-driver-for-sql-server-features.md
+- name: 访问扩展事件日志中的诊断信息
+  href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: 以编程方式更改密码
+  href: changing-passwords-programmatically.md
+- name: 日期和时间改进
+  href: date-and-time-improvements.md
+- name: FILESTREAM 支持
+  href: filestream-support.md
+- name: 大型 CLR 用户定义类型
+  href: large-clr-user-defined-types.md
+- name: 元数据发现
+  href: metadata-discovery.md
+- name: 执行异步操作
+  href: performing-asynchronous-operations.md
+- name: 执行大容量复制操作
+  href: performing-bulk-copy-operations.md
+- name: 客户端连接中的服务主体名称 (SPN) 支持
+  href: service-principal-name-spn-support-in-client-connections.md
+- name: 适用于 SQL Server 的 OLE DB 驱动程序的稀疏列支持
+  href: sparse-columns-support-in-oledb-driver-for-sql-server.md
+- name: 适用于 SQL Server 的 OLE DB 驱动程序对高可用性和灾难恢复的支持
+  href: oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
+- name: 适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持
+  href: oledb-driver-for-sql-server-support-for-localdb.md
+- name: 表值参数（适用于 SQL Server 的 OLE DB 驱动程序）
+  href: table-valued-parameters-oledb-driver-for-sql-server.md
+- name: 使用数据库镜像
+  href: using-database-mirroring.md
+- name: 使用不带验证的加密
+  href: using-encryption-without-validation.md
+- name: 使用大值类型
+  href: using-large-value-types.md
+- name: 使用多个活动的结果集 (MARS)
+  href: using-multiple-active-result-sets-mars.md
+- name: 使用用户定义类型
+  href: using-user-defined-types.md
+- name: 使用 XML 数据类型
+  href: using-xml-data-types.md
+- name: 适用于 SQL Server 的 OLE DB 驱动程序的 UTF-16 支持
+  href: utf-16-support-in-oledb-driver-for-sql-server.md
+- name: 使用查询通知
+  href: working-with-query-notifications.md
+- name: 使用快照隔离
+  href: working-with-snapshot-isolation.md

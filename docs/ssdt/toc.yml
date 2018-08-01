@@ -1,0 +1,194 @@
+- name: SQL Server Data Tools (SSDT)
+  href: sql-server-data-tools.md
+- name: 下载 SSDT
+  href: download-sql-server-data-tools-ssdt.md
+- name: 新项目和已更新的项目
+  href: new-updated-ssdt.md
+- name: SSDT 更改日志
+  href: changelog-for-sql-server-data-tools-ssdt.md
+- name: 数据层应用程序框架 - 许可条款
+  href: data-tier-application-framework-license-terms.md
+- name: 以前版本的 SSDT 和 SSDT-BI
+  href: previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+- name: Azure Active Directory 支持
+  href: azure-active-directory.md
+- name: SQL Server 工具
+  href: sql-server-tools.md
+- name: 许可条款 - SSDT
+  href: sql-server-data-tools-license-terms.md
+- name: 许可条款 - SSDT (VS 2017)
+  href: sql-server-data-tools-license-terms-vs2017.md
+- name: 面向项目的脱机数据库开发
+  href: project-oriented-offline-database-development.md
+  items:
+    - name: 导入到数据库项目
+      href: import-into-a-database-project.md
+    - name: “添加数据库引用”对话框
+      href: add-database-reference-dialog-box.md
+    - name: “检查更新”对话框
+      href: check-for-updates-dialog-box.md
+    - name: 数据库项目设置
+      href: database-project-settings.md
+    - name: 如何：在 SQL Server 数据库项目中浏览对象
+      href: how-to-browse-objects-in-a-sql-server-database-project.md
+    - name: “数据工具操作”窗口
+      href: data-tools-operations-window.md
+    - name: Transact-SQL 编辑器选项
+      href: transact-sql-editor-options.md
+    - name: 如何创建新的数据库项目
+      href: how-to-create-a-new-database-project.md
+    - name: 如何使用架构比较来比较不同数据库定义
+      href: how-to-use-schema-compare-to-compare-different-database-definitions.md
+    - name: 如何生成和部署到本地数据库
+      href: how-to-build-and-deploy-to-a-local-database.md
+    - name: 如何在您的项目中使用 Microsoft SQL Server 2012 对象
+      href: how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
+    - name: 如何使用 CLR 数据库对象
+      href: how-to-work-with-clr-database-objects.md
+    - name: 如何创建项目的快照
+      href: how-to-create-a-snapshot-of-a-project.md
+    - name: 如何更改目标平台和发布数据库项目
+      href: how-to-change-target-platform-and-publish-a-database-project.md
+    - name: 如何：将 Visual Studio 2010 数据库项目转换为 SQL Server 数据库项目并重新以不同平台为目标
+      href: how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
+    - name: 如何：指定预先部署或后期部署脚本
+      href: how-to-specify-predeployment-or-postdeployment-scripts.md
+- name: 使用命令行工具开发面向项目的数据库
+  href: project-oriented-database-development-using-command-line-tools.md
+  items:
+    - name: SqlPackage.exe
+      href: ../tools/sqlpackage.md
+    - name: 将 MSDeploy 用于 dbSqlPackage 提供程序
+      href: using-msdeploy-with-dbsqlpackage-provider.md
+- name: 连接的数据库开发
+  href: connected-database-development.md
+  items:
+    - name: 如何：连接到数据库并浏览现有对象
+      href: how-to-connect-to-a-database-and-browse-existing-objects.md
+    - name: 如何使用表设计器创建数据库对象
+      href: how-to-create-database-objects-using-table-designer.md
+    - name: 如何：使用 Power Buffer 更新连接的数据库
+      href: how-to-update-a-connected-database-with-power-buffer.md
+    - name: “筛选和排序”对话框
+      href: filter-and-sort-dialog-box.md
+    - name: 如何使用查询创建新的数据库对象
+      href: how-to-create-new-database-objects-using-queries.md
+    - name: 如何使用查询编辑现有表
+      href: how-to-edit-an-existing-table-using-queries.md
+    - name: 如何查看和编辑表中的数据
+      href: how-to-view-and-edit-data-in-a-table.md
+    - name: 如何删除对象和解析依赖关系
+      href: how-to-delete-objects-and-resolve-dependencies.md
+    - name: 如何克隆现有数据库
+      href: how-to-clone-an-existing-database.md
+    - name: 提取、发布和注册 .dacpac 文件
+      href: extract-publish-and-register-dacpac-files.md
+- name: 将一个或多个表中的数据与引用数据库中的数据进行比较和同步
+  href: compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
+  items:
+    - name: 如何：比较和同步两个数据库的数据
+      href: how-to-compare-and-synchronize-the-data-of-two-databases.md
+    - name: 如何：查看数据差异
+      href: how-to-view-data-differences.md
+    - name: 使用 Transact-SQL 编辑器编辑和执行脚本
+      href: use-transact-sql-editor-to-edit-and-execute-scripts.md
+    - name: 如何显示 Transact-SQL 脚本的大纲和向 Transact-SQL 脚本添加代码段
+      href: how-to-outline-and-add-snippets-to-transact-sql-script.md
+    - name: 如何在脚本之间导航
+      href: how-to-navigate-between-scripts.md
+    - name: 如何使用重命名和重构对您的数据库对象进行更改
+      href: how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
+    - name: 如何执行部分查询
+      href: how-to-execute-a-partial-query.md
+    - name: 如何调试存储过程
+      href: how-to-debug-stored-procedures.md
+    - name: 分析脚本性能
+      href: analyze-script-performance.md
+- name: 管理表、关系和修复错误
+  href: manage-tables-relationships-and-fix-errors.md
+  items:
+    - name: 如何使用表设计器管理表和关系
+      href: how-to-use-the-table-designer-to-manage-tables-and-relationships.md
+    - name: 如何修复错误
+      href: how-to-fix-errors.md
+- name: 使用 SQL Server 单元测试验证数据库代码
+  href: verifying-database-code-by-using-sql-server-unit-tests.md
+  items:
+    - name: 演练：创建和运行 SQL Server 单元测试
+      href: walkthrough-creating-and-running-a-sql-server-unit-test.md
+    - name: 创建和定义 SQL Server 单元测试
+      href: creating-and-defining-sql-server-unit-tests.md
+      items:
+        - name: SQL Server 单元测试中的脚本
+          href: scripts-in-sql-server-unit-tests.md
+        - name: SQL Server 单元测试文件
+          href: sql-server-unit-test-files.md
+        - name: 在 SQL Server 单元测试中使用测试条件
+          href: using-test-conditions-in-sql-server-unit-tests.md
+        - name: 在 SQL Server 单元测试中使用 Transact-SQL 断言
+          href: using-transact-sql-assertions-in-sql-server-unit-tests.md
+        - name: 如何：为 SQL Server 数据库单元测试创建测试项目
+          href: how-to-create-a-test-project-for-sql-server-database-unit-testing.md
+        - name: 如何：创建空的 SQL Server 单元测试
+          href: how-to-create-an-empty-sql-server-unit-test.md
+        - name: 如何：为函数、触发器和存储过程创建 SQL Server 单元测试
+          href: how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
+        - name: 如何：向 SQL Server 单元测试中添加条件
+          href: how-to-add-test-conditions-to-sql-server-unit-tests.md
+        - name: 如何：打开 SQL Server 单元测试以进行编辑
+          href: how-to-open-a-sql-server-unit-test-to-edit.md
+        - name: 如何：编写在单个事务范围内运行的 SQL Server 单元测试
+          href: how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
+        - name: 如何：配置 SQL Server 单元测试执行
+          href: how-to-configure-sql-server-unit-test-execution.md
+        - name: 连接字符串和权限概述
+          href: overview-of-connection-strings-and-permissions.md
+        - name: SQL Server 单元测试设计器的键盘快捷键
+          href: keyboard-shortcuts-for-sql-server-unit-test-designer.md
+    - name: 运行 SQL Server 单元测试
+      href: running-sql-server-unit-tests.md
+      items:
+        - name: 如何：调试数据库对象
+          href: how-to-debug-database-objects.md
+        - name: 如何：通过 Team Foundation Build 运行 SQL Server 单元测试
+          href: how-to-run-sql-server-unit-tests-from-team-foundation-build.md
+        - name: 如何：运行 SQL Server 单元测试
+          href: how-to-run-sql-server-unit-tests.md
+        - name: 解释 SQL Server 单元测试结果
+          href: interpreting-sql-server-unit-test-results.md
+    - name: 升级包含数据库单元测试的较旧的测试项目
+      href: upgrade-an-older-test-project-containing-database-unit-tests.md
+    - name: SQL Server 单元测试的自定义测试条件
+      href: custom-test-conditions-for-sql-server-unit-tests.md
+      items:
+        - name: 如何：为 SQL Server 单元测试设计器创建测试条件
+          href: how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
+        - name: 演练：使用自定义测试条件来验证存储过程的结果
+          href: walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
+        - name: 如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools
+          href: how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
+    - name: 解决 SQL Server 数据库单元测试问题
+      href: troubleshooting-sql-server-database-unit-testing-issues.md
+- name: 扩展数据库功能
+  href: extending-the-database-features.md
+  items:
+    - name: 使用生成参与者和部署参与者来自定义数据库生成和部署
+      href: use-deployment-contributors-to-customize-database-build-and-deployment.md
+      items:
+        - name: 演练：扩展数据库项目生成以生成模型统计信息
+          href: walkthrough-extend-database-project-build-to-generate-model-statistics.md
+        - name: 演练：扩展数据库项目部署以分析部署计划
+          href: walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
+        - name: 演练：扩展数据库项目部署以修改部署计划
+          href: walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
+    - name: 数据库代码分析规则的扩展性概述
+      href: overview-of-extensibility-for-database-code-analysis-rules.md
+      items:
+        - name: 有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
+          href: walkthrough-author-custom-static-code-analysis-rule-assembly.md
+    - name: 如何：安装和管理功能扩展
+      href: how-to-install-and-manage-feature-extensions.md
+- name: SQL Server Data Tools 所需权限
+  href: required-permissions-for-sql-server-data-tools.md
+- name: DAC 框架兼容性
+  href: dac-framework-compatibility.md

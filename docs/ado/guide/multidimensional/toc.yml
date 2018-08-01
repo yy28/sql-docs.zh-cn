@@ -1,0 +1,12 @@
+- name: ADO MD 基础知识
+  href: ado-md-fundamentals.md
+- name: 使用 ADO 与 ADO MD
+  href: using-ado-with-ado-md.md
+- name: 多维架构和数据的概述
+  href: overview-of-multidimensional-schemas-and-data.md
+- name: 使用 ADO MD 进行编程
+  href: programming-with-ado-md.md
+- name: 使用多维数据
+  href: working-with-multidimensional-data.md
+- name: ADO（多维）(ADO MD)
+  href: ado-multidimensional-ado-md.md

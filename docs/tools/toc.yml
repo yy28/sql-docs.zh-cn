@@ -1,0 +1,59 @@
+- name: SQL Server 工具和实用工具概述
+  href: ../tools/overview-sql-tools.md
+- name: 新项目和已更新的项目
+  href: new-updated-tools.md
+- name: SQL Operations Studio（预览版）
+  href: ../sql-operations-studio/what-is.md
+- name: SQL Server Management Studio (SSMS)
+  href: ../ssms/download-sql-server-management-studio-ssms.md
+- name: SQL Server Data Tools (SSDT)
+  href: ../ssdt/download-sql-server-data-tools-ssdt.md
+- name: mssql cli（命令行查询工具）
+  href: mssql-cli.md
+- name: 配置管理器
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: mssql-conf (Linux)
+  href: ../linux/sql-server-linux-configure-mssql-conf.md
+- name: 分布式重播
+  href: ../tools/distributed-replay/install-distributed-replay-overview.md
+- name: 数据库引擎优化顾问 (dta)
+  href: ../tools/dta/dta-utility.md
+- name: SQL Server 事件探查器
+  href: ../tools/sql-server-profiler/sql-server-profiler.md
+- name: Service Broker (ssbdiagnose)
+  href: ../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
+- name: 命令提示实用工具
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+    - name: 大容量复制实用工具 (bcp)
+      href: bcp-utility.md
+    - name: SqlLocalDB 实用工具
+      href: sqllocaldb-utility.md
+    - name: osql 实用工具
+      href: osql-utility.md
+    - name: Profiler 实用工具
+      href: profiler-utility.md
+    - name: sqlagent90 应用程序
+      href: sqlagent90-application.md
+    - name: sqlcmd Utility
+      href: sqlcmd-utility.md
+    - name: SQLdiag 实用工具
+      href: sqldiag-utility.md
+    - name: sqlmaint 实用工具
+      href: sqlmaint-utility.md
+    - name: sqllogship 应用程序
+      href: sqllogship-application.md
+    - name: sqlps 实用工具
+      href: sqlps-utility.md
+    - name: sqlservr 应用程序
+      href: sqlservr-application.md
+    - name: tablediff 实用工具
+      href: tablediff-utility.md
+- name: sqlpackage
+  items:
+    - name: 安装 sqlpackage
+      href: sqlpackage-download.md
+    - name: 发行说明
+      href: sqlpackage-release-notes.md
+    - name: sqlpackage 参考
+      href: sqlpackage.md

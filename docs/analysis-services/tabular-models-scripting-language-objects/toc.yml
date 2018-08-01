@@ -1,0 +1,16 @@
+- name: TMSL 引用 - 表格对象
+  href: tmsl-reference-tabular-objects.md
+- name: Database 对象 (TMSL)
+  href: database-object-tmsl.md
+- name: DataSources 对象 (TMSL)
+  href: datasources-object-tmsl.md
+- name: Model 对象 (TMSL)
+  href: model-object-tmsl.md
+- name: Partitions 对象 (TMSL)
+  href: partitions-object-tmsl.md
+- name: Relationships 对象 (TMSL)
+  href: relationships-object-tmsl.md
+- name: Roles 对象 (TMSL)
+  href: roles-object-tmsl.md
+- name: Tables 对象 (TMSL)
+  href: tables-object-tmsl.md

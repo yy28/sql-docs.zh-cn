@@ -1,0 +1,13 @@
+- name: SQL Server 2014 的高可用性解决方案
+  href: high-availability-solutions-sql-server.md
+  items:
+    - name: 自动页修复 （针对可用性组和数据库镜像）
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: 角色切换后登录名和作业的管理
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+    - name: 孤立用户故障排除
+      href: troubleshoot-orphaned-users-sql-server.md
+- name: SQL Server 故障转移群集安装 +
+  href: install/sql-server-failover-cluster-installation.md
+- name: Windows Server 故障转移群集 (WSFC) +
+  href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
