@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036175"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359594"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,7 +158,7 @@ CREATE CERTIFICATE certificate_name
  证书生效的日期。 如果未指定，则将 START_DATE 设置为当前日期。 START_DATE 采用 UTC 时间，并且可以通过可转换为日期和时间的任何格式指定。  
   
  EXPIRY_DATE = 'datetime'  
- 证书过期的日期。 如果未指定，则将 EXPIRY_DATE 设置为 START_DATE 一年之后的日期。 EXPIRY_DATE 采用 UTC 时间，并且可以通过可转换为日期和时间的任何格式指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 会检查过期日期。 但是，在将证书用于加密时，不会强制应用过期日期。  
+ 证书过期的日期。 如果未指定，则将 EXPIRY_DATE 设置为 START_DATE 一年之后的日期。 EXPIRY_DATE 采用 UTC 时间，并且可以通过可转换为日期和时间的任何格式指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 会检查过期日期。 使用证书进行加密的备份还将检查到期日期，且不会允许使用过期证书创建新备份，但会允许使用过期证书进行还原。 但是，在将证书用于数据库加密或 Always Encrypted 时，不会强制应用到期日期。  
   
  ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。 默认值为 ON。  
