@@ -6,6 +6,7 @@
   href: sql-server-guides.md
   items:
     - name: Always On 可用性组故障排除和监视指南
+      href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
     - name: 索引体系结构和设计
       href: sql-server-index-design-guide.md
     - name: 内存管理体系结构
