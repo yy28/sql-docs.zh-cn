@@ -34,7 +34,7 @@ ms.locfileid: "33024514"
  在从报表生成器之类的报表创作应用程序将报表部件发布到 SharePoint 集成模式下的报表服务器时，报表服务器目录也将更新，从库中搜索将精确反映新的或更新的报表部件。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>将报表部件直接上载到 SharePoint 文件夹  
- 如果某一报表部件直接上载到 SharePoint 文档文件夹（而非从报表创作应用程序发布），将不会更新报表服务器目录。 从报表部件库搜索将找不到上载的报表部件。 若要帮助保持您的 SharePoint 文件夹和报表服务器目录同步，您可以激活 SharePoint 服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件同步功能。 有关详细信息，请参阅 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
+ 如果某一报表部件直接上载到 SharePoint 文档文件夹（而非从报表创作应用程序发布），将不会更新报表服务器目录。 从报表部件库搜索将找不到上载的报表部件。 若要帮助保持您的 SharePoint 文件夹和报表服务器目录同步，您可以激活 SharePoint 服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件同步功能。 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
   
  通过调用某些 Reporting Services 管理 API（例如 GetProperties 和 SetProperties），还可以同步文件。  
   

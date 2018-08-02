@@ -58,7 +58,7 @@ ms.locfileid: "37159858"
 |备份加密密钥。|从以下用于自动备份加密密钥的方法中进行选择：<br /><br /> 运行 rskeymgmt.exe 实用工具以备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。<br /><br /> 编写针对报表服务器 WMI 提供程序运行的自定义代码。|  
 |配置报表服务器电子邮件。|编写针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序运行的自定义代码。 该提供程序支持部分电子邮件配置设置。<br /><br /> 虽然 RSReportServer.config 文件包含所有设置，但是不要以自动执行的方式使用该文件。 具体来说，不要使用批处理文件将该文件复制到另一个报表服务器。 每个配置文件都包含特定于当前实例的值。 这些值对于其他报表服务器实例将是无效的。<br /><br /> 有关设置的详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。|  
 |配置无人参与的执行帐户。|从以下用于自动配置无人参与处理帐户的方法中进行选择：<br /><br /> 运行 rsconfig.exe 实用工具以配置帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 编写用于对报表服务器 WMI 提供程序进行调用的自定义代码。|  
-|将现有的内容（包括文件夹层次结构、角色分配、报表、订阅、计划、数据源和资源）部署到另一台报表服务器上。|重新创建现有报表服务器环境的最佳方式是将报表服务器数据库复制到新的报表服务器实例中。<br /><br /> 替代方法是编写自定义代码，以编程方式重新创建现有的报表服务器内容。 但应注意，订阅、报表快照和报表历史记录无法以编程方式重新创建。<br /><br /> 某些部署受益于以上两项技术的结合使用（也就是说，还原报表服务器数据库，然后运行自定义代码以便为特定安装修改报表服务器数据库）。<br /><br /> 有关详细示例，请参阅 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。<br /><br /> 有关重新定位报表服务器数据库的详细信息，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 有关以编程方式创建报表服务器环境的详细信息，请参阅本主题中的“使用脚本迁移报表服务器内容和文件夹”一节。|  
+|将现有的内容（包括文件夹层次结构、角色分配、报表、订阅、计划、数据源和资源）部署到另一台报表服务器上。|重新创建现有报表服务器环境的最佳方式是将报表服务器数据库复制到新的报表服务器实例中。<br /><br /> 替代方法是编写自定义代码，以编程方式重新创建现有的报表服务器内容。 但应注意，订阅、报表快照和报表历史记录无法以编程方式重新创建。<br /><br /> 某些部署受益于以上两项技术的结合使用（也就是说，还原报表服务器数据库，然后运行自定义代码以便为特定安装修改报表服务器数据库）。<br /><br /> 有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。<br /><br /> 有关重新定位报表服务器数据库的详细信息，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 有关以编程方式创建报表服务器环境的详细信息，请参阅本主题中的“使用脚本迁移报表服务器内容和文件夹”一节。|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>用于自动执行服务器部署的工具和技术  
  以下列表总结了可用于自动执行部署和维护任务的程序和接口：  
@@ -78,7 +78,7 @@ ms.locfileid: "37159858"
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>使用脚本迁移报表服务器内容和文件夹  
  可以编写用于在其他报表服务器实例中复制报表服务器环境的脚本。 通常会使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写部署脚本，然后使用报表服务器脚本主机实用工具处理这些脚本。  
   
- 有关详细示例，请参阅 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+ 有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  使用脚本可以在服务器之间复制文件夹、共享数据源、资源、报表、角色分配和设置。 为报表服务器实例编写脚本，然后在其他服务器上运行该脚本以重新创建报表服务器命名空间。 如果在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署中有多个报表服务器，则可以在每台服务器上分别运行该脚本，以便通过同一种方式配置所有的服务器。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "37159858"
  若要使用该脚本，则将其保存至扩展名为 .rss 的文件，然后使用 rs.exe 命令提示实用工具在报表服务器上运行该文件。 由于没有编译该脚本，因此不需要安装 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 该示例假定您对承载报表服务器的本地计算机拥有权限。 如果未使用拥有权限的帐户进行登录，则必须通过其他命令行参数来指定帐户信息。 有关详细信息，请参阅 [RS.exe 实用工具 (SSRS)](rs-exe-utility-ssrs.md)。  
   
 > [!TIP]  
->  有关详细示例，请参阅 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+>  有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
 ```  
 Public Sub Main()  

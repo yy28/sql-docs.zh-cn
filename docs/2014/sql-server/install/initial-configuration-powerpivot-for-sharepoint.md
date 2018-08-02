@@ -281,7 +281,7 @@ ms.locfileid: "37172228"
  PowerPivot 库是包括预览和展示选项以便在 SharePoint 网站上查看 PowerPivot 工作簿的一种库。 使用 PowerPivot 库可以发布和查看为其预览功能推荐的 PowerPivot 工作簿。 此外，如果您还将 Reporting Services 部署到了同一 SharePoint 服务器上，则 PowerPivot 库将简化创建报表的工作。 您可以从 PowerPivot 库内启动报表生成器，以便在已发布的 PowerPivot 工作簿的基础上创建新的报表。 有关创建和使用库的详细信息，请参阅[创建和自定义 PowerPivot 库](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)并[使用 PowerPivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>在 Excel Services 中创建其他可信站点  
- 您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 PowerPivot 数据的站点上改变权限和配置设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 PowerPivot 数据的站点上改变权限和配置设置。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ### <a name="tune-configuration-settings"></a>优化配置设置  
  PowerPivot 服务应用程序使用默认属性和值创建。 您可以修改单独服务应用程序的配置设置，以便更改分配请求所采用的方法、设置服务器超时、更改查询响应报告事件的阈值或者指定保留多长时间的使用情况数据。 有关管理中心中配置或在 SharePoint Web 应用程序中使用 PowerPivot 功能的详细信息，请参阅[PowerPivot 服务器管理和配置在管理中心内](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  

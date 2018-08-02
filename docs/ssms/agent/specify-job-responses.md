@@ -54,7 +54,7 @@ ms.locfileid: "37975168"
 |-|-|  
 |**Description**|**主题**|  
 |描述如何向操作员通知作业状态。|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
-|介绍如何将作业状态写入 Windows 应用程序日志。|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
+|介绍如何将作业状态写入 Windows 应用程序日志。|[将作业状态写入 Windows 应用程序日志](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
 ## <a name="see-also"></a>另请参阅  
 [监视事件和响应事件](../../ssms/agent/monitor-and-respond-to-events.md)  

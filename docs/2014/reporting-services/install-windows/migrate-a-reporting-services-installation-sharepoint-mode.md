@@ -22,7 +22,7 @@ ms.lasthandoff: 07/02/2018
 ms.locfileid: "37242667"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
-  此主题概述将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署从一个 SharePoint 环境迁移到另一环境所需的步骤。 具体步骤可能会根据您正在从其迁移的版本而有所不同。 有关 SharePoint 模式的升级和迁移方案的详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。 如果只想要将报表项从一台服务器复制到另一个，请参阅[示例 Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+  此主题概述将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署从一个 SharePoint 环境迁移到另一环境所需的步骤。 具体步骤可能会根据您正在从其迁移的版本而有所不同。 有关 SharePoint 模式的升级和迁移方案的详细信息，请参阅 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。 如果只想要将报表项从一台服务器复制到另一个，请参阅[用于在报表服务器之间迁移内容的示例 Reporting Services rs.exe 脚本](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署的信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  
   

@@ -40,7 +40,7 @@ ms.locfileid: "37325637"
 ## <a name="expression-constructs"></a>表达式构造  
  表达式以等号 (=) 开头，可以包含常量、文字、运算符以及对内置字段、内置集合、内置函数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 运行库函数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 公共语言运行时类和自定义函数的引用。 以下列表介绍了可添加到表达式中的类别和值。  
   
- **设置表达式：***\<属性名称 >  *  
+ **设置表达式：***\<属性名称 >*   
  要为其定义表达式的属性的名称。 此外，还可以在“属性”窗格中按名称设置此属性。  
   
  **常量**  

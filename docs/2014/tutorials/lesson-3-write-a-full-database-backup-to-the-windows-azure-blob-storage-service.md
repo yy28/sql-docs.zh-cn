@@ -48,6 +48,6 @@ ms.locfileid: "37236077"
 5.  在对象资源管理器中，连接到 Azure 存储。 通过浏览找到容器和新创建的备份文件。  
   
 ## <a name="next-lesson"></a>下一课  
- [Lesson 4: Perform a Restore From a Full Database Backup](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)。  
+ [第 4 课： 从完整数据库备份执行还原](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)。  
   
   
