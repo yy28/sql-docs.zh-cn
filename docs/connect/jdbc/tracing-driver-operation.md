@@ -1,7 +1,7 @@
 ---
 title: 跟踪驱动程序操作 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991969"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279258"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37991969"
  以下各部分介绍了可记录的日志记录级别和类别，并提供了有关如何在应用程序中启用跟踪的信息。  
   
 ## <a name="logging-levels"></a>日志记录级别  
- 创建的每条日志消息都有相关联的日志记录级别。 日志记录级别决定了日志消息的重要性，该重要性由 java.util.logging 中的 Level 类定义。 启用一个级别的日志记录还会启用所有较高级别的日志记录。 本节介绍公共日志记录类别和内部日志记录类别的日志记录级别。 有关日志记录类别的详细信息，请参阅本主题的“日志记录类别”部分。  
+ 创建的每条日志消息都有相关联的日志记录级别。 日志记录级别决定了日志消息的重要性，该重要性由 java.util.logging 中的 Level 类定义。 启用一个级别的日志记录还会启用所有较高级别的日志记录。 本节介绍公共日志记录类别和内部日志记录类别的日志记录级别。 有关日志记录类别的详细信息，请参阅本文的“日志记录类别”部分。  
   
  下表逐一介绍了公共日志记录类别每个可用的日志记录级别。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "37991969"
 |SEVERE|表示严重故障，为最高日志记录级别。 在 JDBC 驱动程序中，该级别用于报告错误和异常。|  
 |WARNING|指示潜在的问题。|  
 |INFO|提供信息性消息。|  
-|CONFIG|提供配置消息。 请注意，JDBC Driver 当前不提供任何配置消息。|  
+|CONFIG|提供配置消息。 请注意，JDBC 驱动程序当前不提供任何配置消息。|  
 |FINE|提供基本的跟踪信息，包括公共方法引发的所有异常。|  
 |FINER|提供详细的跟踪信息，包括具有相关参数数据类型的所有公共方法的进入点和退出点，以及公共类的所有公共属性。 此外，还包括输入参数、输出参数以及除 CLOB、BLOB、NCLOB、Reader 和 \<stream> 返回值类型以外的方法返回值。|  
 |FINEST|提供非常详细的跟踪信息。 此为最低日志记录级别。|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991969"
 ## <a name="enabling-tracing-programmatically"></a>以编程方式启用跟踪  
  通过创建 Logger 对象并指示记录类别，可以编程方式启用跟踪。 例如，以下代码显示了如何启用 SQL 语句的日志记录：  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  若要在代码中关闭日志记录，请使用以下代码：  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  若要记录所有可用类别，请使用以下代码：  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  若要禁止记录某个特定类别，请使用以下代码：  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

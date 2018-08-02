@@ -1,7 +1,7 @@
 ---
 title: 表 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432236"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240679"
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ Table 变量没有分发统计信息，不会触发重新编译。 因此，在�
   
 不能显式创建 table 变量的索引，也不保留 table 变量的任何统计信息。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，引入了新语法，允许你使用表定义创建特定索引类型内联。  使用这种新语法，你可以在 table 变量上创建索引，作为表定义的一部分。 在某些情况下，可以通过使用临时表来改进性能，这些表提供完整的索引支持和统计信息。 有关临时表的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
 
-
 table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用户定义函数。
   
 不支持在 table 变量之间进行赋值操作。
@@ -115,6 +114,23 @@ table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用�
 由于 table 变量作用域有限，并且不是持久数据库的一部分，因而不受事务回滚的影响。
   
 表变量在创建后就无法更改。
+
+## <a name="table-variable-deferred-compilation"></a>表变量延迟编译
+表变量延迟编译功能提升了计划质量和引用表变量的查询的整体性能。 在优化和初始计划编译期间，此功能会传播基于实际表变量行计数的基数估计。 然后，这种准确的行计数信息将用于优化下游计划操作。
+
+> [!NOTE]
+> 表变量延迟编译是 Azure SQL 数据库中的公共预览版功能。  
+
+使用“表变量延迟编译”，引用表变量的语句会延迟编译，直到首次实际执行语句后。 此延迟编译行为等同于临时表行为，这一变化会导致使用实际基数，而不是原始的一行猜测。 
+
+若要启用“表变量延迟编译”的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
+
+表变量延迟编译不会更改表变量的任何其他特性。 例如，此功能不会向表变量添加列统计信息。
+
+表变量延迟编译不会增加重新编译频率。  相反，它将转移初始编译出现的位置。 生成的缓存计划是基于初始延迟编译表变量行计数生成的。 缓存的计划将由连续查询重新使用，直到该计划被逐出或被重新编译。 
+
+如果用于初始计划编译的表变量行计数表示与固定的行计数猜测截然不同的一个典型值，则下游操作将受益。  如果表变量行计数在整个执行过程中差别很大，则可能无法通过此功能来提升性能。
+
   
 ## <a name="examples"></a>示例  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [使用表值参数（数据库引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

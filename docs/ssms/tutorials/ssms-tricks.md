@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080095"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228453"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教程：使用 SSMS 的其他提示和技巧
 本教程将提供一些使用 SQL Server Management Studio (SSMS) 的其他技巧。 本文介绍如何： 
@@ -189,6 +189,8 @@ ms.locfileid: "37080095"
     ![通过查询查找错误日志](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>如果无法连接到 SQL Server，请查找错误日志位置
+你的 SQL Server 错误日志的路径可能有所不同，具体取决于你的配置设置。 可以在 SQL Server 配置管理器内的启动参数中找到错误日志位置的路径。 请按照以下步骤来找到标识你的 SQL Server 错误日志位置的相关启动参数。 你的路径可能与以下指示的路径有所不同。 
+
 1. 打开“SQL Server 配置管理器”。 
 2. 展开“服务”。
 3. 右键单击“SQL Server 实例”，然后选择“属性”：

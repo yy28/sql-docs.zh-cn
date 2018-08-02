@@ -19,12 +19,12 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0bbeaa627bc1183fa6bdcb72538887132a5ba2b3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cffaa400fa9e3727d1bcc7a569827573b70b10a9
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768993"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259742"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>配置对可用性副本的只读访问 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "34768993"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|任务|权限|  
+|任务|Permissions|  
 |----------|-----------------|  
 |在创建可用性组时配置副本|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改可用性副本|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
@@ -214,10 +214,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
  **在故障转移后可能会影响触发器和作业的因素**  
   
- 如果您在非可读取辅助数据库或可读取辅助数据库上正运行时具有将失败的触发器和作业，则需要编写针对这些触发器和作业的脚本，以便对给定副本进行检查以确定该数据库是主数据库还是可读取辅助数据库。 若要获取该信息，请使用 [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) 函数以返回数据库的 **Updatability** 属性。 若要标识只读数据库，请按如下所示将 READ_ONLY 指定为值：  
+ 如果您在非可读取辅助数据库或可读取辅助数据库上正运行时具有将失败的触发器和作业，则需要编写针对这些触发器和作业的脚本，以便对给定副本进行检查以确定该数据库是主数据库还是可读取辅助数据库。 若要获取该信息，请使用 [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) 函数以返回数据库的 Updateability 属性。 若要标识只读数据库，请按如下所示将 READ_ONLY 指定为值：  
   
 ```  
-DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
 ```  
   
  若要标识读写数据库，请将 READ_WRITE 指定为值：  

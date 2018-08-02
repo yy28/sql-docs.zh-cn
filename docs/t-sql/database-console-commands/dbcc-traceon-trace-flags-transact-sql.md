@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 089819b4d0f8c58f048158055b47ec83cd33ccac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
+ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288736"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350015"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,7 @@ ms.locfileid: "35288736"
 |**2422**|当超过 Resource Governor REQUEST_MAX_CPU_TIME_SEC 配置设置的最长时间时，允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止请求。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/4038419)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局|
 |**2430**|启用备用锁类清除。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2754301)。<br /><br />**作用域**：仅全局| 
 |**2453**|当足够数量的行发生更改时，允许表变量触发重新编译。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询|
+|**2467**|启用备用并行工作线程分配策略（基于哪个节点具有最少分配的线程）。 有关详细信息，请参阅[并行查询处理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 请参阅[配置最大工作线程服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)，了解有关配置最大工作线程服务器选项的信息。<br /><br />注意：并行查询度 (DOP) 必须适用于要使用的此备用策略的单个节点，或改为使用默认线程分配策略。 使用跟踪标志时，不建议执行指定 DOP 多于单个节点中的计划程序数的查询，其中的查询应指定 DOP 低于或等于单个节点中的计划程序数。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：仅全局|
 |**2469**|为已分区列存储索引中的 `INSERT INTO ... SELECT` 启用备用 Exchange。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3204769)。<br /><br />**作用域**：全局、会话或查询|
 |**2528**|禁用 DBCC CHECKDB、DBCC CHECKFILEGROUP 和 DBCC CHECKTABLE 执行的对象并行检查。 默认情况下，并行度由查询处理器自动确定。 最大并行度的配置就像并行查询的最大并行度一样。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。<br /><br />**注意：** 通常应启用（默认设置）并行 DBCC 检查。 查询处理器会对 DBCC CHECKDB 检查的每个表或每批表重新求值并自动调整并行度。<br /><br />典型的使用场景为：系统管理员知道在 DBCC CHECKDB 完成之前服务器负载会增加，因此选择手动减少或禁用并行操作，以便增加与其他用户工作负载的并发。 但是，禁用 DBCC CHECKDB 中的并行检查会延长其完成时间。<br /><br />**注意：** 如果使用 TABLOCK 选项执行 DBCC CHECKDB 并禁用并行操作，则可能会将表锁定较长时间。<br /><br />**注意：** 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，可以在语句中使用 MAXDOP 选项来覆盖 sp_configure 的 max degree of parallelism 配置选项。<br /><br />**作用域**：全局或会话|
 |**2549**|运行 DBCC CHECKDB 命令，该命令假定每个数据库文件均位于唯一的磁盘驱动器上。 DBCC CHECKDB 命令根据唯一磁盘驱动器跨所有数据库文件生成一个待读取页面内部列表。 此逻辑根据每个文件的物理文件名的驱动器号确定唯一磁盘驱动器。<br /><br />**注意：** 除非知道每个文件都基于唯一的物理磁盘，否则不要使用此跟踪标志。<br /><br />**注意：** 尽管此跟踪标志改进了以使用 PHYSICAL_ONLY 选项为目标的 DBCC CHECKDB 命令的性能，但一些用户可能还是看不到性能有任何改进。 虽然此跟踪标志可以改善磁盘 I/O 资源的使用情况，但磁盘资源的基本性能可能会限制 DBCC CHECKDB 命令的整体性能。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2634571)。<br /><br />**作用域**：仅全局| 

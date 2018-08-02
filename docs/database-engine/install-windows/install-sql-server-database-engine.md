@@ -15,12 +15,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12802d45792ea9d0fad4ba31a694c2ca0413a86f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7e29c2ec0c6063483268ddd95c39bfcc85e8a744
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771463"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278798"
 ---
 # <a name="install-sql-server-database-engine"></a>安装 SQL Server 数据库引擎
 
@@ -40,7 +40,9 @@ ms.locfileid: "34771463"
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   复制 - 是一个可选组件  
-  
+
+-   [使用 R 和 Python 的机器学习服务（数据库内）](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - 是一个可选组件
+
 -   全文搜索 - 是一个可选组件  
   
 -   Data Quality Services — 一个可选组件  

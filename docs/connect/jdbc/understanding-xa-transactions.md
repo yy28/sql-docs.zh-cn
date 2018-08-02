@@ -1,7 +1,7 @@
 ---
 title: 了解 XA 事务 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040605"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278598"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,13 +43,13 @@ ms.locfileid: "38040605"
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>使用 XA 事务的准则和限制  
  以下附加准则适用于紧密耦合的事务：  
   
--   当您将 XA 事务与 Microsoft 分布式事务处理协调器 (MS DTC) 一起使用时，您可能会注意到 MS DTC 的当前版本不支持紧密结合的 XA 分支行为。 例如，MS DTC 在 XA 分支事务 ID (XID) 与 MS DTC 事务 ID 之间具有一对一的映射，由松散耦合的 XA 分支执行的工作彼此之间是隔离的。  
+-   将 XA 事务与 Microsoft 分布式事务处理协调器 (MS DTC) 一起使用时，你可能会注意到 MS DTC 的当前版本不支持紧密结合的 XA 分支行为。 例如，MS DTC 在 XA 分支事务 ID (XID) 与 MS DTC 事务 ID 之间具有一对一的映射，由松散耦合的 XA 分支执行的工作彼此之间是隔离的。  
   
      借助于在 [MSDTC 和紧密结合的事务](http://support.microsoft.com/kb/938653)中提供的修补程序，可以支持紧密结合的 XA 分支，其中，多个具有相同全局事务 ID (GTRID) 的 XA 分支映射到单一 MS DTC 事务 ID。 这种支持使得多个紧密结合的 XA 分支可以在资源管理器（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]）中看到彼此发生的变化。  
   
 -   [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 标志允许应用程序使用紧密结合的 XA 事务，这些事务具有不同的 XA 分支事务 ID (BQUAL)，但具有相同的全局事务 ID (GTRID) 和格式 ID (FormatID)。 若要使用该功能，必须设置[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的标志参数：  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38040605"
   
 1.  打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 计算机的 LOG 目录。 选择并打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的“ERRORLOG”文件。 在“ERRORLOG”文件中搜索“使用‘SQLJDBC_XA.dll’版本 ...”这一短语。  
   
-2.  打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 计算机的 Binn 目录。选择 sqljdbc_xa.dll 程序集。  
+2.  打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 计算机的 Binn 目录。 选择 sqljdbc_xa.dll 程序集。  
   
     -   在 Windows Vista 或更高版本上：右键单击 sqljdbc_xa.dll，然后选择“属性”。 然后单击“详细信息”选项卡。“文件版本”字段显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本。  
   
@@ -148,12 +148,12 @@ ms.locfileid: "38040605"
   
 2.  将新 sqljdbc_xa.dll 从 JDBC 驱动程序安装目录复制到每台要参与分布式事务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 计算机的 Binn 目录中。  
   
-     当 sqljdbc_xa.dll 中调用扩展过程时，将会加载新 DLL。 不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 来加载新定义。  
+     当 sqljdbc_xa.dll 中调用扩展过程时，将会加载新 DLL。 不需要重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 来加载新定义。  
   
 ### <a name="configuring-the-user-defined-roles"></a>配置用户定义的角色  
  若要为特定用户授予使用 JDBC 驱动程序参与分布式事务的权限，请将该用户添加至 SqlJDBCXAUser 角色。 例如，使用以下 [!INCLUDE[tsql](../../includes/tsql_md.md)] 代码将名为“shelby”（SQL 标准登录用户名为“shelby”）的用户添加至 SqlJDBCXAUser 角色：  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -165,7 +165,7 @@ EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'
   
 ## <a name="example"></a>示例  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  

@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的智能查询处理 | Microsoft Docs
 description: 智能查询处理功能，用于提高 SQL Server 和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b3ca1aa0bf87fe08e65590ea506dad929455a90
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 6f1b215e95b7cc911cd2815493eabbbd53a47424
+ms.sourcegitcommit: a162a8f02d66c13b32d0b6255b0b52fc80e2187e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216818"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39250445"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -48,6 +48,8 @@ ms.locfileid: "39216818"
 “表变量延迟编译”功能提升了计划质量和引用表变量的查询的整体性能。 在优化和初始编译期间，此功能会传播基于实际表变量行计数的基数估计。  这种准确的行计数信息将用于优化下游计划操作。
 
 使用“表变量延迟编译”，引用表变量的语句会延迟编译，直到首次实际执行语句后。 此延迟编译行为等同于临时表行为，这一变化会导致使用实际基数，而不是原始的一行猜测。 若要在 Azure SQL 数据库中启用“表变量延迟编译”的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
+
+有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation )。
 
 ## <a name="approximate-query-processing"></a>近似查询处理
 “近似查询处理”是新功能系列，旨在跨响应速度比绝对精度更为关键的大型数据集进行聚合。  例如，跨 100 亿行计算 COUNT(DISTINCT())，以供显示在仪表板上。  在这种情况下，绝对精度并不重要，关键在于响应速度。 新增的 APPROX_COUNT_DISTINCT 聚合函数返回组中唯一非空值的近似数。

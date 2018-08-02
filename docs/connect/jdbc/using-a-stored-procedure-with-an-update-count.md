@@ -1,7 +1,7 @@
 ---
 title: 使用带有更新计数的存储过程 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: b840cc9b6b8492af0cffa71986d747ac59b7dd57
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040815"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278918"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>使用带有更新计数的存储过程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  为了使用存储过程修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中的数据，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类。 通过使用 SQLServerCallableStatement 类，可以调用修改数据库中所包含数据的存储过程，然后返回受影响的行数计数（也称为更新计数）。  
+  为了使用存储过程修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中的数据，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类。 通过使用 SQLServerCallableStatement 类，可以调用修改数据库中数据的存储过程，然后返回受影响的行数计数（也称为更新计数）。  
   
  使用 SQLServerCallableStatement 类构建对存储过程的调用之后，可以使用 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 或 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法中的任意一个来调用此存储过程。 executeUpdate 方法将返回一个 int 值，该值包含受此存储过程影响的行数，但 execute 方法不返回此值。 如果使用 execute 方法，并且希望获得受影响的行数计数，则可以在运行存储过程后调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "38040815"
   
  作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下表和存储过程，以及插入示例数据：  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   

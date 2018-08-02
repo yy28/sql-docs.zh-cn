@@ -1,7 +1,7 @@
 ---
 title: 通过 JDBC 驱动程序使用始终加密 |Microsoft Docs
 ms.custom: ''
-ms.date: 3/14/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c53479e3e94206645382e0c7b2d930a0b63075f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: fd5d3bb54c4587c177160cdf99f2f0dacc2bb086
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982261"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279278"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,16 +55,16 @@ Microsoft JDBC Driver for SQL Server 附带以下内置列主密钥存储提供�
 对于预注册的密钥存储提供程序，不需要更改任何应用程序代码以使用这些提供程序，但请注意以下各项：
 
 - 你（或你的 DBA）需要确保列主密钥元数据中配置的提供程序名称正确，并且列主密钥路径符合对于给定提供程序有效的密钥路径格式。 建议你使用诸如 SQL Server Management Studio 之类的工具来配置密钥，这类工具在发出 CREATE COLUMN MASTER KEY (Transact-SQL) 语句时会自动生成有效的提供程序名称和密钥路径。
-- 确保你的应用程序可以访问密钥存储中的键。 此任务可能涉及向应用程序授予对密钥和/或密钥存储的访问权限（具体取决于密钥存储），或执行其他特定于密钥存储的配置步骤。 例如，有关如何使用 SQLServerColumnEncryptionJavaKeyStoreProvider，您需要提供该位置和连接属性中的密钥存储的密码。 
+- 确保应用程序可以访问密钥存储中的密钥。 此任务可能涉及向应用程序授予对密钥和/或密钥存储的访问权限（具体取决于密钥存储），或执行其他特定于密钥存储的配置步骤。 例如，有关如何使用 SQLServerColumnEncryptionJavaKeyStoreProvider，您需要提供该位置和连接属性中的密钥存储的密码。 
 
 以下各节中更详细地介绍了所有这些密钥存储提供程序。 只需实现一个密钥存储提供程序为使用始终加密。
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 密钥保管库提供程序
 Azure Key Vault 便于存储和管理用于 Always Encrypted 的列主密钥（尤其是当应用程序在 Azure 中托管时）。 Microsoft JDBC Driver for SQL Server 包含一个内置提供程序，SQLServerColumnEncryptionAzureKeyVaultProvider，对于具有 Azure 密钥保管库中存储的密钥应用程序。 此提供程序的名称是 AZURE_KEY_VAULT。 若要使用 Azure 密钥保管库存储提供程序，应用程序开发人员需要在 Azure 密钥保管库中创建保管库和密钥，并在 Azure Active Directory 中创建应用注册。 已注册的应用程序必须授予获取，解密、 加密、 Unwrap Key、 Wrap Key 和验证权限为创建用于 Always Encrypted 的密钥保管库定义的访问策略中。 有关如何设置密钥保管库和创建列主密钥的详细信息，请参阅[Azure Key Vault-Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)并[在 Azure 密钥保管库中创建列主密钥的密钥](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
 
-对于在此页上，如果已创建 Azure 密钥保管库的示例基于的列主密钥和使用 SQL Server Management Studio 的列加密密钥，T-SQL 脚本以重新创建它们可能看起来类似于以下示例使用其自身特定**KEY_路径**并**ENCRYPTED_VALUE**:
+对于在此页上，如果你已创建 Azure 密钥保管库的示例基于的列主密钥和使用 SQL Server Management Studio 的列加密密钥，T-SQL 脚本以重新创建它们可能看起来类似于以下示例使用其自身特定**KEY_路径**并**ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -85,7 +85,7 @@ WITH VALUES
 
 下面是初始化 SQLServerColumnEncryptionAzureKeyVaultProvider 的示例：  
 
-```
+```java
 SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
 ```
 
@@ -93,7 +93,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 应用程序创建的 SQLServerColumnEncryptionAzureKeyVaultProvider 实例后，应用程序必须注册使用 sqlserverconnection.registercolumnencryptionkeystoreproviders （） 方法的驱动程序的实例。 强烈建议使用默认查找名称 AZURE_KEY_VAULT，可以通过调用 SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API 来获取注册实例。 使用默认名称可以使用 SQL Server Management Studio 或 PowerShell 等工具来设置和管理始终加密密钥 （这些工具使用默认名称生成的列主密钥的元数据对象）。 下面的示例演示注册 Azure 密钥保管库提供程序。 Sqlserverconnection.registercolumnencryptionkeystoreproviders （） 方法的详细信息，请参阅[始终加密 API 参考的 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
-```
+```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(akvProvider.getName(), akvProvider);
 SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
@@ -113,9 +113,9 @@ SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证�
 
 SQLServerColumnEncryptionCertificateStoreProvider 名称是 MSSQL_CERTIFICATE_STORE，并且可以通过提供程序对象 getName() API 进行查询。 它会自动注册的驱动程序，并可以无缝使用而无需任何应用程序更改。
 
-对于在此页上，如果创建了 Windows 证书存储的示例基于的列主密钥和使用 SQL Server Management Studio 的列加密密钥，T-SQL 脚本以重新创建它们可能看起来类似于以下示例使用其自己特定于**KEY_PATH**并**ENCRYPTED_VALUE**:
+对于在此页上，如果你已创建 Windows 证书存储的示例基于的列主密钥和使用 SQL Server Management Studio 的列加密密钥，T-SQL 脚本以重新创建它们可能看起来类似于以下示例使用其自己特定于**KEY_PATH**并**ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -148,8 +148,8 @@ JDBC 驱动程序附带 Java 密钥存储的内置密钥存储提供程序实现
 
 下面是提供这些凭据连接字符串中的示例：
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
 您还可以获取或设置这些设置，请使用 SQLServerDataSource 对象。 有关详细信息，请参阅[始终加密 API 参考的 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
@@ -179,7 +179,7 @@ keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.pfx
 
 用于创建列主密钥的 T-SQL 的语法是：
 
-```
+```sql
 CREATE COLUMN MASTER KEY [<CMK_name>]
 WITH
 (
@@ -190,7 +190,7 @@ WITH
 
 AlwaysEncryptedKey 上述步骤中创建，将为列主密钥定义：
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -208,7 +208,7 @@ SQL Server Management Studio 或任何其他工具不能用于创建使用 Java 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>实现自定义列主密钥存储提供程序
 如果想要将列主密钥存储在现有提供程序不支持的密钥存储中，则可以通过扩展 SQLServerColumnEncryptionKeyStoreProvider 类并使用 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 方法进行注册来实现自定义提供程序。
 
-```
+```java
 public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{  
     private String name = "MY_CUSTOM_KEYSTORE";
 
@@ -236,7 +236,7 @@ public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{
 
 注册提供程序：
 
-```
+```java
 SQLServerColumnEncryptionKeyStoreProvider storeProvider = new MyCustomKeyStore();
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(storeProvider.getName(), storeProvider);
@@ -248,9 +248,12 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 如果使用自定义密钥存储提供程序，可能需要实现你自己的密钥管理工具。 当使用 Windows 证书存储区中或在 Azure Key Vault 中存储的密钥，可以使用现有的工具，如 SQL Server Management Studio 或 PowerShell，来管理和预配密钥。 使用 Java 密钥存储中存储的密钥，需要以编程方式预配密钥。 下面的示例演示使用 SQLServerColumnEncryptionJavaKeyStoreProvider 类使用 Java 密钥存储中存储的密钥的密钥进行加密。
 
-```
-import java.sql.*;
-import javax.xml.bind.DatatypeConverter;
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionJavaKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -258,8 +261,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 /**
  * This program demonstrates how to create a column encryption key programmatically for the Java Key Store.
  */
-public class AlwaysEncrypted
-{
+public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
     private static String keyAlias = "<proide key alias>";
 
@@ -276,96 +278,64 @@ public class AlwaysEncrypted
     private static char[] keyStoreSecret = "********".toCharArray();
 
     /**
-     * Name of the encryption algorithm used to encrypt the value of
-     * the column encryption key. The algorithm for the system providers must be RSA_OAEP.
+     * Name of the encryption algorithm used to encrypt the value of the column encryption key. The algorithm for the system providers must be
+     * RSA_OAEP.
      */
     private static String algorithm = "RSA_OAEP";
 
-    public static void main(String[] args)
-    {
-        String connectionString = GetConnectionString();
-        try
-        {
-            // Note: if you are not using try-with-resources statements (as here),
-            // you must remember to call close() on any Connection, Statement,
-            // ResultSet objects that you create.
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 
-            // Open a connection to the database.
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-            {
-                // Instantiate the Java Key Store provider.
-                SQLServerColumnEncryptionKeyStoreProvider storeProvider =
-                        new SQLServerColumnEncryptionJavaKeyStoreProvider(
-                                keyStoreLocation,
-                                keyStoreSecret);
+        try (Connection connection = DriverManager.getConnection(connectionUrl);
+                Statement statement = connection.createStatement();) {
 
-                byte [] encryptedCEK=getEncryptedCEK(storeProvider);
+            // Instantiate the Java Key Store provider.
+            SQLServerColumnEncryptionKeyStoreProvider storeProvider = new SQLServerColumnEncryptionJavaKeyStoreProvider(keyStoreLocation,
+                    keyStoreSecret);
 
-                /**
-                 * Create column encryption key
-                 * For more details on the syntax, see:
-                 * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql
-                 * Encrypted column encryption key first needs to be converted into varbinary_literal from bytes, 
-                 * for which DatatypeConverter.printHexBinary is used
-                 */
-                String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
-                        + columnEncryptionKey
-                        + " WITH VALUES ( "
-                        + " COLUMN_MASTER_KEY = "
-                        + columnMasterKeyName
-                        + " , ALGORITHM =  '"
-                        + algorithm
-                        + "' , ENCRYPTED_VALUE =  0x"
-                        + DatatypeConverter.printHexBinary(encryptedCEK)
-                        + " ) ";
+            byte[] encryptedCEK = getEncryptedCEK(storeProvider);
 
-                try (Statement cekStatement = sourceConnection.createStatement())
-                {
-                    cekStatement.executeUpdate(createCEKSQL);
-                    System.out.println("Column encryption key created with name : " + columnEncryptionKey);
-                }
-            }
+            /**
+             * Create column encryption key For more details on the syntax, see:
+             * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql Encrypted column encryption key first needs
+             * to be converted into varbinary_literal from bytes, for which byteArrayToHex() is used.
+             */
+            String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
+                    + columnEncryptionKey
+                    + " WITH VALUES ( "
+                    + " COLUMN_MASTER_KEY = "
+                    + columnMasterKeyName
+                    + " , ALGORITHM =  '"
+                    + algorithm
+                    + "' , ENCRYPTED_VALUE =  0x"
+                    + byteArrayToHex(encryptedCEK)
+                    + " ) ";
+            statement.executeUpdate(createCEKSQL);
+            System.out.println("Column encryption key created with name : " + columnEncryptionKey);
         }
-        catch (Exception e)
-        {
-            // Handle any errors that may have occurred.
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    // To avoid storing the sourceConnection String in your code,
-    // you can retrieve it from a configuration file.
-    private static String GetConnectionString()
-    {
-        // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
-                "databaseName=ae2;user=sa;password=********;";
-
-        return connectionUrl;
-    }
-
-    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException
-    {
-        /**
-         * Following arguments needed by SQLServerColumnEncryptionJavaKeyStoreProvider
-         * 1) keyStoreLocation :
-         *      Path where keystore is located, including the keystore file name.
-         * 2) keyStoreSecret :
-         *      Password of the keystore and the key.
-         */
+    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException {
         String plainTextKey = "You need to give your plain text";
 
         // plainTextKey has to be 32 bytes with current algorithm supported
         byte[] plainCEK = plainTextKey.getBytes();
 
         // This will give us encrypted column encryption key in bytes
-        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(
-                keyAlias,
-                algorithm,
-                plainCEK);
+        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(keyAlias, algorithm, plainCEK);
 
         return encryptedCEK;
+    }
+
+    public static String byteArrayToHex(byte[] a) {
+        StringBuilder sb = new StringBuilder(a.length * 2);
+        for (byte b : a)
+            sb.append(String.format("%02x", b).toUpperCase());
+        return sb.toString();
     }
 }
 ```
@@ -375,16 +345,17 @@ public class AlwaysEncrypted
 
 以下连接字符串是 JDBC 驱动程序中启用始终加密的示例：
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
+SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
 ```
 
 以下代码是使用 SQLServerDataSource 对象的等效示例：
 
-```
+```java
 SQLServerDataSource ds = new SQLServerDataSource();
-ds.setServerName("localhost");
+ds.setServerName("<server>");
+ds.setPortNumber(<port>);
 ds.setUser("<user>");
 ds.setPassword("<password>");
 ds.setDatabaseName("<database>");
@@ -397,7 +368,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 - 应用程序可以访问用于保护列加密密钥的列主密钥，以便对查询到的数据库列加密。 若要使用 Java 密钥存储提供程序，你需要提供连接字符串中的其他凭据。 有关详细信息，请参阅[使用 Java 密钥存储提供程序](#using-java-key-store-provider)。
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>配置如何将 java.sql.Time 值发送到服务器
-**SendTimeAsDatetime**连接属性用于配置如何将 java.sql.Time 值发送到服务器。 设置为 false 时，将为 SQL Server 时类型发送的时间值。 何时设置为 true，值发送为 datetime 类型的时间。 如果时间列已加密， **sendTimeAsDatetime**属性必须为 false，因为加密的列不支持从时间转换为日期时间。 另请注意，此属性是通过默认为 true，因此使用加密的时间列时，将需要将其设置为 false。 否则，该驱动程序将引发异常。 SQLServerConnection 类从驱动程序版本 6.0 开始，有两种方法以编程方式配置此属性的值：
+**SendTimeAsDatetime**连接属性用于配置如何将 java.sql.Time 值发送到服务器。 设置为 false 时，将为 SQL Server 时类型发送的时间值。 何时设置为 true，值发送为 datetime 类型的时间。 如果时间列已加密， **sendTimeAsDatetime**属性必须为 false，因为加密的列不支持从时间转换为日期时间。 另请注意，此属性是通过默认为 true，因此，使用加密的时间列时将需要将其设置为 false。 否则，该驱动程序将引发异常。 SQLServerConnection 类从驱动程序版本 6.0 开始，有两种方法以编程方式配置此属性的值：
  
 * public void setSendTimeAsDatetime (布尔 sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
@@ -410,19 +381,19 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 一旦为应用程序查询启用始终加密，可以使用标准的 JDBC Api 来检索或修改加密的数据库列中的数据。 如果你的应用程序具有所需的数据库的权限，且可以访问列主密钥，驱动程序将对任何查询参数，面向加密的列并将解密从加密列检索的数据进行加密。
 
-如果未启用始终加密，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 但是，驱动程序不会尝试解密从加密列中检索到的任何值，并且应用程序将收到二进制加密数据（字节数组形式）。
+如果未启用 Always Encrypted，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 但是，驱动程序不会尝试解密从加密列中检索到的任何值，并且应用程序将收到二进制加密数据（字节数组形式）。
 
 下表概述了查询的行为，具体取决于是否启用了 Always Encrypted：
 
-|查询特征 | 启用了始终加密，并且应用程序可以访问密钥和密钥元数据|启用了始终加密，但应用程序无法访问密钥或密钥元数据 | 禁用了始终加密|
+|查询特征 | 启用了始终加密，并且应用程序可以访问密钥和密钥元数据|启用了 Always Encrypted，但应用程序无法访问密钥或密钥元数据 | 禁用了始终加密|
 |:---|:---|:---|:---|
 | 具有面向加密列的参数的查询。 | 以透明方式加密参数值。 | 错误 | 错误|
 | 从加密列中检索数据且没有面向加密列的参数的查询。| 以透明方式解密来自加密列的结果。 应用程序收到 JDBC 数据类型（对应于为加密列配置的 SQL Server 类型）的纯文本值。 | 错误 | 不解密来自加密列的结果。 应用程序收到字节数组形式的加密值 (byte[])。
 
 ### <a name="inserting-and-retrieving-encrypted-data-examples"></a>插入和检索加密的数据示例 
-以下示例说明如何检索和修改加密列中的数据。 这些示例假定目标表具有以下架构和已加密的 SSN 和 BirthDate 列。 如果配置了名为列主密钥"MyCMK"和列加密密钥名为"MyCEK"（如前面的密钥存储提供程序部分中所述），您可以创建使用此脚本的表：
+以下示例说明如何检索和修改加密列中的数据。 这些示例假定目标表具有以下架构和已加密的 SSN 和 BirthDate 列。 如果已配置列主密匙，名为"MyCMK"和列加密密钥名为"MyCEK"（如前面的密钥存储提供程序部分中所述），您可以创建使用此脚本的表：
 
-```
+```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
  [SSN] [char](11) COLLATE Latin1_General_BIN2
  ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC,
@@ -438,62 +409,53 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
  GO
 ```
 
-为每个 Java 代码示例中，将需要记下的位置中插入特定于密钥存储的代码。
+对于每个 Java 代码示例中，将需要记下的位置中插入特定于密钥存储的代码。
 
-如果使用 Azure 密钥保管库密钥存储提供程序：
+如果你使用 Azure 密钥保管库密钥存储提供程序：
 
-```
+```java
     String clientID = "<Azure Application ID>";
     String clientKey = "<Azure Application API Key Password>";
     SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
     Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
     keyStoreMap.put(akvProvider.getName(), akvProvider);
     SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
-如果使用 Windows 证书存储区的密钥存储提供程序：
+如果您使用 Windows 证书存储区的密钥存储提供程序：
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
-如果在使用 Java 密钥存储的密钥存储提供程序：
+如果你使用 Java 密钥存储的密钥存储提供程序：
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
 ```
 
 ### <a name="inserting-data-example"></a>插入数据示例
 此示例向 Patients 表插入一行。 请注意以下各项：
 - 对于示例代码中的加密，没有什么特定的注意事项。 Microsoft JDBC Driver for SQL Server 会自动检测并加密面向加密的列的参数。 这种行为使得加密操作对应用程序而言是透明的。
-- 插入到数据库列，包括加密的列的值作为参数使用 SQLServerPreparedStatement 传递。 在将值发送到非加密列时，使用参数是可选的（虽然强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，它是必需的。 如果插入到加密列的值作为查询语句中嵌入的文本传递，查询将失败，因为该驱动程序将不能确定目标加密列中的值，并且不会加密值。 因此，服务器会因为与加密列不兼容而拒绝它们。
-- 该程序打印的所有值都将以纯文本形式，如 Microsoft JDBC Driver for SQL Server 将以透明方式解密从加密列检索的数据。
-- 如果你正在使用 WHERE 子句，使用 WHERE 子句需要在要作为参数传递，以便该驱动程序可以以透明方式对其进行加密发送到数据库之前的值的查找。 在以下示例中，作为参数传递 SSN 但 LastName 传递为文本，因为不加密姓氏。
+- 插入到数据库列，包括加密的列的值作为参数使用 SQLServerPreparedStatement 传递。 在将值发送到非加密列时，使用参数是可选的（虽然强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，它是必需的。 如果插入到加密列的值作为查询语句中嵌入的文本传递，查询将失败，因为该驱动程序将无法确定目标加密列中的值，并且它不会对值进行加密。 因此，服务器会因为与加密列不兼容而拒绝它们。
+- 程序打印的所有值均为纯文本形式，因为 Microsoft JDBC Driver for SQL Server 将以透明方式解密从加密列中检索到的数据。
+- 如果您正在使用 WHERE 子句，使用 WHERE 子句需要在要作为参数传递，以便该驱动程序可以以透明方式对其进行加密发送到数据库之前的值的查找。 在以下示例中，作为参数传递 SSN 但 LastName 传递为文本，如姓氏不会加密。
 - 面向 SSN 列的参数使用的 setter 方法是 setstring （），将映射到 char/varchar SQL Server 数据类型。 如果对于此参数，所用的 setter 方法是 setNString()，该方法可映射到 nchar/nvarchar，查询将失败，因为 Always Encrypted 不支持从加密的 nchar/nvarchar 值转换为加密的 char/varchar 值。
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String insertRecord="INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)";
-        try (PreparedStatement insertStatement = sourceConnection.prepareStatement(insertRecord))
-        {
-            insertStatement.setString(1, "795-73-9838");
-            insertStatement.setString(2, "Catherine");
-            insertStatement.setString(3, "Abel");
-            insertStatement.setDate(4, Date.valueOf("1996-09-10"));
-            insertStatement.executeUpdate();
-            System.out.println("1 record inserted.\n");
-        }
-    }
+```java
+// <Insert keystore-specific code here>
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement insertStatement = sourceConnection.prepareStatement("INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)")) {
+    insertStatement.setString(1, "795-73-9838");
+    insertStatement.setString(2, "Catherine");
+    insertStatement.setString(3, "Abel");
+    insertStatement.setDate(4, Date.valueOf("1996-09-10"));
+    insertStatement.executeUpdate();
+    System.out.println("1 record inserted.\n");
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -506,69 +468,45 @@ catch (Exception e)
 > [!NOTE]
 > 如果使用确定性加密加密列，查询可以对其执行相等比较。 有关详细信息，请参阅[在 Always Encrypted（数据库引擎）中选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;";
-    
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "795-73-9838");
-            ResultSet rs = selectStatement.executeQuery();
-            while(rs.next())
-            {
-                System.out.println("SSN: " +rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName")+
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+```java
+// <Insert keystore-specific code here>
+try (Connection connection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection
+                .prepareStatement("\"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;\"");) {
+    selectStatement.setString(1, "795-73-9838");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)  
-{  
-    e.printStackTrace();  
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
 }
 ```
   
 ### <a name="retrieving-encrypted-data-example"></a>检索加密数据示例
-如果未启用始终加密，只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。
+如果未启用 Always Encrypted，只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。
 
 以下示例说明如何从加密列中检索二进制加密数据。 请注意以下各项：
 - 由于未在连接字符串中启用 Always Encrypted，因此，查询将以字节数组的形式返回 SSN 和 BirthDate 的加密值（程序会将值转换为字符串）。
 - 如果禁用始终加密，从加密列中检索数据的查询可以有参数，但前提是所有参数均不面向加密列。 以下查询按未在数据库中加密的 LastName 进行筛选。 如果查询按 SSN 或 BirthDate 进行筛选，则将失败。
 
-```
-try
-{
-    String connectionString  = "jdbc:sqlserver://localhost:1433;" + "databaseName=Clinic;user=sa;password=******";
+```java
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = sourceConnection
+                .prepareStatement("SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;");) {
 
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;";
-
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "Abel");
-            ResultSet rs = selectStatement.executeQuery();
-            while (rs.next())
-            {
-                System.out.println("SSN: " + rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName") +
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -579,7 +517,7 @@ catch (Exception e)
 ### <a name="unsupported-data-type-conversion-errors"></a>不支持的数据类型转换错误
 始终加密支持对加密数据类型进行若干种转换。 有关受支持类型转换的详细列表，请参阅 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 下面介绍可以执行哪些操作来避免数据类型转换错误。 请确保：
 
-- 传递参数值的面向加密列时使用的适当 setter 方法。 请确保 SQL Server 数据类型的参数正是与目标列的类型相同，或支持的参数的 SQL Server 数据类型转换为目标类型的列。 API 方法已添加到要将与特定 SQL Server 数据类型相对应的参数传递的 SQLServerPreparedStatement 和 SQLServerCallableStatement，SQLServerResultSet 类。 例如，如果列未加密使用 setTimestamp() 方法将参数传递到 datetime2 或日期时间列。 但是，加密列时将需要使用的准确方法表示数据库中列的类型。 例如，使用 setTimestamp() 将值传递给加密的 datetime2 列并使用 setDateTime() 将值传递到加密的日期时间列。 请参阅[始终加密 API 参考的 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)有关新 Api 的完整列表。
+- 传递参数值的面向加密列时使用的适当 setter 方法。 请确保 SQL Server 数据类型的参数正是与目标列的类型相同，或支持的参数的 SQL Server 数据类型转换为目标类型的列。 API 方法已添加到要将与特定 SQL Server 数据类型相对应的参数传递的 SQLServerPreparedStatement 和 SQLServerCallableStatement，SQLServerResultSet 类。 例如，如果列不会加密使用 setTimestamp() 方法将参数传递到 datetime2 或日期时间列。 但在加密列时必须要使用的准确方法表示数据库中列的类型。 例如，使用 setTimestamp() 将值传递给加密的 datetime2 列并使用 setDateTime() 将值传递到加密的日期时间列。 请参阅[始终加密 API 参考的 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)有关新 Api 的完整列表。
 - 对于面向列的 decimal 和 numeric SQL Server 数据类型的参数，其精度和小数位数与为目标列配置的精度和小数位数相同。 API 方法已添加到 SQLServerPreparedStatement 和 SQLServerCallableStatement，SQLServerResultSet 类，以接受精度和小数位数以及表示 decimal 和 numeric 数据类型的参数/列的数据值。 请参阅[始终加密 API 参考的 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)有关新重载/Api 的完整列表。  
 - 秒的小数部分精度/确定位数面向 datetime2、 datetimeoffset 或 time SQL Server 数据类型的列的参数不大于秒的小数部分精度/确定位数中修改目标列的值的查询的目标列. API 方法已添加到 SQLServerPreparedStatement 和 SQLServerCallableStatement，SQLServerResultSet 类，以接受秒的小数部分精度/扩展参数表示这些数据类型的数据值。 新重载/Api 的完整列表，请参阅[始终加密 API 参考的 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。   
 
@@ -591,7 +529,7 @@ catch (Exception e)
 ### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>由于传递纯文本而非加密值而发生的错误
 面向加密列的任何值都需要在应用程序内加密。 尝试插入/修改或者按纯文本值筛选加密列将导致如下错误：
 
-```
+```java
 com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is incompatible with varchar(8000) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'MyCEK', column_encryption_key_database_name = 'ae') collation_name = 'SQL_Latin1_General_CP1_CI_AS'
 ```
 
@@ -599,12 +537,12 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 - 为面向加密列的应用程序查询（为连接字符串或特定查询）启用 Always Encrypted。
 - 使用预定义的语句和参数发送数据面向加密列。 以下示例显示了一个查询，该查询按文本/常量对加密列 (SSN) 进行错误筛选，而不是以参数形式传递内部文本。 此查询将失败：
 
-```
+```java
 ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='795-73-9838'");
 ```
 
 ## <a name="force-encryption-on-input-parameters"></a>输入参数上强制加密
-使用 Always Encrypted 时，强行加密功能强制实施参数的加密。 如果使用强制加密并且 SQL Server 告知驱动程序参数不需加密，则使用该参数的查询会失败。 此属性提供针对安全攻击的额外保护，这些攻击涉及受损 SQL Server 向客户端提供不正确的加密元数据，这可能会导致数据泄漏。 SQLServerPreparedStatement 和 SQLServerCallableStatement 类和更新中的组 * 方法\*SQLServerResultSet 类中的方法重载以接受布尔参数来指定强制加密设置。 如果此参数的值为 false，则驱动程序不会强制对参数进行加密。 如果强制加密设置为 true 时，查询参数将只发送如果加密目标列，并且启用了始终加密的连接上或在语句上。 使用此属性提供了一层额外的安全性，确保，驱动程序不会不会错误地将数据发送到 SQL Server 以纯文本形式时应进行加密。
+使用 Always Encrypted 时，强行加密功能强制实施参数的加密。 如果使用强制加密并且 SQL Server 告知驱动程序参数不需加密，则使用该参数的查询会失败。 此属性提供针对安全攻击的额外保护，这些攻击涉及受损 SQL Server 向客户端提供不正确的加密元数据，这可能会导致数据泄漏。 SQLServerPreparedStatement 和 SQLServerCallableStatement 类和更新中的组 * 方法\*SQLServerResultSet 类中的方法重载以接受布尔参数来指定强制加密设置。 如果此参数的值为 false，该驱动程序不会强制对参数进行加密。 如果强制加密设置为 true 时，查询参数将只发送如果加密目标列，并且启用了始终加密的连接上或在语句上。 使用此属性提供了一层额外的安全性，确保，驱动程序不会错误地将数据发送到 SQL Server 以纯文本形式时它应该能够进行加密。
 
 SQLServerPreparedStatement 和 SQLServerCallableStatement 的方法的重载使用强制加密设置的详细信息，请参阅[始终加密 API 参考的 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
@@ -635,33 +573,33 @@ SQLServerStatementColumnEncryptionSetting 设置不能用于绕过加密以及�
 
 在以下示例中，将对数据库连接禁用 Always Encrypted。 应用程序发出的查询有一个面向未加密的 LastName 列的参数。 该查询从已加密的 SSN 和 BirthDate 列中检索数据。 在这种情况下，不需要调用 sys.sp_describe_parameter_encryption 来检索加密元数据。 但是，需要启用查询结果解密，以便应用程序从两个加密列接收纯文本值。 SQLServerStatementColumnEncryptionSetting.ResultSet 设置用于确保。
 
-```
+```java
 // Assumes the same table definition as in Section "Retrieving and modifying data in encrypted columns"
 // where only SSN and BirthDate columns are encrypted in the database.
-String connectionUrl = "jdbc:sqlserver://localhost;databaseName=ae;user=sa;password=******;"
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>;" 
         + "keyStoreAuthentication=JavaKeyStorePassword;"
-        + "keyStoreLocation=" + keyStoreLocation + ";"
-        + "keyStoreSecret=******;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+        + "keyStoreLocation=<keyStoreLocation>" 
+        + "keyStoreSecret=<keyStoreSecret>;";
 
-String filterRecord="SELECT FirstName, LastName, SSN, BirthDate FROM " + tblName + " WHERE LastName = ?";
-PreparedStatement selectStatement = connection.prepareStatement(
-        filterRecord,
-        ResultSet.TYPE_FORWARD_ONLY,
-        ResultSet.CONCUR_READ_ONLY,
-        connection.getHoldability(),
-        SQLServerStatementColumnEncryptionSetting.ResultSetOnly);
-selectStatement.setString(1, "Abel");
-ResultSet rs = selectStatement.executeQuery();
-while(rs.next()) {
-    System.out.println("First name: " + rs.getString("FirstName"));
-    System.out.println("Last name: " + rs.getString("LastName"));
-    System.out.println("SSN: " + rs.getString("SSN"));
-    System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+String filterRecord = "SELECT FirstName, LastName, SSN, BirthDate FROM " + tableName + " WHERE LastName = ?";
+
+try (SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection.prepareStatement(filterRecord, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY,
+                connection.getHoldability(), SQLServerStatementColumnEncryptionSetting.ResultSetOnly);) {
+
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("First name: " + rs.getString("FirstName"));
+        System.out.println("Last name: " + rs.getString("LastName"));
+        System.out.println("SSN: " + rs.getString("SSN"));
+        System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+    }
 }
-rs.close();
-selectStatement.close();
-connection.close();
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
+}
 ```
 
 ### <a name="column-encryption-key-caching"></a>列加密密钥缓存
@@ -669,13 +607,13 @@ connection.close();
 
 可以使用 SQLServerConnection 类中的 API，setColumnEncryptionKeyCacheTtl()，在缓存中配置列加密密钥条目的生存时间值。 在缓存中的列加密密钥条目的默认生存时间值为两个小时。 若要禁用缓存，请使用值为 0。 若要设置生存时间的任何值，请使用以下 API:
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (int columnEncryptionKeyCacheTTL, TimeUnit unit)
 ```
 
 例如，若要设置为 10 分钟的维持时间值，请使用：
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 ```
 

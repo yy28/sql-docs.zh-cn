@@ -1,7 +1,7 @@
 ---
-title: 使用不带参数的存储的过程 |Microsoft Docs
+title: 使用不带参数的存储过程 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7db021b9d3fdf875c2c6074159b56d8e6cb0fd14
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 157d6f1b3948dbe697afc5af018b197ede9fec9b
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992919"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279128"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用不带参数的存储过程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37992919"
   
  作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下存储过程：  
   
-```  
+```sql
 CREATE PROCEDURE GetContactFormalNames   
 AS  
 BEGIN  
@@ -44,26 +44,20 @@ BEGIN
 END  
 ```  
   
- 此存储过程返回单个结果集，其中包含一列数据（由 Person.Contact 表中前十个联系人的称呼、名称和姓氏组成）。  
+ 此存储过程返回单个结果集，其中包含一列数据（由 Person.Contact 表中前 10 个联系人的称呼、名称和姓氏组成）。  
   
  在下面的实例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的一个打开连接，然后使用 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法调用 GetContactFormalNames 存储过程。  
   
-```  
-public static void executeSprocNoParams(Connection con) {  
-   try {  
-      Statement stmt = con.createStatement();  
-      ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
-  
-      while (rs.next()) {  
-         System.out.println(rs.getString("FormalName"));  
-      }  
-      rs.close();  
-      stmt.close();  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-}  
+```java  
+public static void executeSprocNoParams(Connection con) throws SQLException {  
+    try(Statement stmt = con.createStatement();) {  
+
+        ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
+        while (rs.next()) {  
+            System.out.println(rs.getString("FormalName"));  
+        }  
+    }  
+}
 ```  
   
 ## <a name="see-also"></a>另请参阅  

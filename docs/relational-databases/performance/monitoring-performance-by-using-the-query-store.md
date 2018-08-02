@@ -1,7 +1,7 @@
 ---
 title: 使用查询存储监视性能 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f30d87526729100a99336408778f2d2df4406475
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 932137c603db51693f90b2aa823232842e918e50
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332444"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228433"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "34332444"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询存储功能让你可以探查查询计划选项和性能。 它可帮助你快速找到查询计划更改所造成的性能差异，从而简化了性能疑难解答。 查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。 它按时间窗口将数据分割开来，使你可以查看数据库使用模式并了解服务器上何时发生了查询计划更改。 可以使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 选项来配置查询存储。 
   
  有关在 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中运行查询存储的信息，请参阅[在 Azure SQL 数据库中运行查询存储](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)。  
+ 
+> [!IMPORTANT]
+> 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](http://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。 
   
 ##  <a name="Enabling"></a> 启用查询存储  
  默认情况下，新数据库的查询存储处于非活动状态。  
@@ -57,7 +60,10 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
 有关与查询存储相关的语法选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 > [!NOTE]  
->  无法为 **master** 或 **tempdb** 数据库启用查询存储。  
+> 无法为 **master** 或 **tempdb** 数据库启用查询存储。  
+ 
+> [!IMPORTANT]
+> 有关启用查询存储并使其适用于你的工作负载，请参阅[查询存储最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure)。
  
 ## <a name="About"></a>查询存储中的信息  
  由于统计信息更改、架构更改、索引的创建/删除等多种不同原因，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查询的执行计划通常会随着时间而改进。过程缓存（其中存储了缓存的查询计划）仅存储最近的执行计划。 还会由于内存压力从计划缓存中逐出计划。 因此，执行计划更改造成的查询性能回归可能非常重大，且长时间才能解决。  
@@ -492,9 +498,9 @@ hist AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @history_start_time   
                AND rs.last_execution_time < @history_end_time)  
-        OR (rs.first_execution_time \<= @history_start_time   
+        OR (rs.first_execution_time <= @history_start_time   
                AND rs.last_execution_time > @history_start_time)  
-        OR (rs.first_execution_time \<= @history_end_time   
+        OR (rs.first_execution_time <= @history_end_time   
                AND rs.last_execution_time > @history_end_time)  
     GROUP BY p.query_id  
 ),  
@@ -509,9 +515,9 @@ recent AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @recent_start_time   
                AND rs.last_execution_time < @recent_end_time)  
-        OR (rs.first_execution_time \<= @recent_start_time   
+        OR (rs.first_execution_time <= @recent_start_time   
                AND rs.last_execution_time > @recent_start_time)  
-        OR (rs.first_execution_time \<= @recent_end_time   
+        OR (rs.first_execution_time <= @recent_end_time   
                AND rs.last_execution_time > @recent_end_time)  
     GROUP BY p.query_id  
 )  

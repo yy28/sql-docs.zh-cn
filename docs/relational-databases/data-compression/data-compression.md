@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 944a0ca328ca0835601bf1cb4b75e974da6a8e7a
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001669"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240689"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "38001669"
 -   通过 **COLUMNSTORE_ARCHIVE** 数据压缩可使用存档压缩来压缩列存储数据。  
 -   使用 **COLUMNSTORE** 数据压缩可对存档压缩执行解压缩。 这样生成的数据可以继续使用列存储压缩进行压缩。  
   
-若要添加存档压缩，请使用具有 REBUILD 选项且 DATA COMPRESSION = COLUMNSTORE 的 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或者 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 。  
+若要添加存档压缩，请使用具有 REBUILD 选项且 DATA COMPRESSION = COLUMNSTORE_ARCHIVE 的 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或者 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 。  
   
 #### <a name="examples"></a>示例：  
 ```  

@@ -24,55 +24,52 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afc112a5e07197ed8b0056a7daeddb55c0c418c9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6cdc7d89b93d8961ed6000efdef4b34c34a54a7d
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790140"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228403"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  提供文件组和属性名时，返回指定的文件组属性值。  
+此函数返回指定名称的文件组属性值和文件组值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-FILEGROUPPROPERTY ( filegroup_name , property )  
+FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
 ## <a name="arguments"></a>参数  
  filegroup_name  
- 类型为 sysname 的表达式，它表示要为之返回指定属性信息的文件组名称。  
+类型为 sysname 的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
   
  property  
- 类型为 varchar(128) 的表达式，它包含要返回的文件组属性的名称。 property 可以为下列值之一。  
+类型为 varchar(128) 的表达式，它返回文件组属性的名称。 Property 可以返回下列值之一：  
   
 |ReplTest1|描述|返回的值|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|文件组是只读的。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
-|**IsUserDefinedFG**|文件组是用户定义文件组。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
-|**IsDefault**|文件组是默认的文件组。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
+|**IsReadOnly**|文件组是只读的。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效。|  
+|**IsUserDefinedFG**|文件组是用户定义文件组。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效。|  
+|**IsDefault**|文件组是默认的文件组。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 输入无效。|  
   
 ## <a name="return-types"></a>返回类型  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
+filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
- 此示例返回 `IsDefault` 数据库中主文件组的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性的设置。  
+此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中主文件组的 `IsDefault` 属性设置。  
   
 ```  
-  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
-  
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: 指定字段终止符和行终止符 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940252"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278671"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,13 +98,21 @@ ms.locfileid: "32940252"
 -   对于其空间只被许多行部分占用的固定长度的长列。  
   
      在这种情况下，指定一个终止符可以最大限度地减少存储空间，同时可以将字段视为可变长度字段。  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>指定 `\n` 作为批量导出的行终止符
+
+当指定 `\n` 作为批量导出的行终止符，或隐式使用默认行终止符时，bcp 将输出回车符和换行符的组合 (CRLF)，作为行终止符。 如果只想输出换行符 (LF) 作为行终止符（在 Unix 和 Linux 计算机上很典型），请使用十六进制表示法来指定 LF 行终止符。 例如：
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>示例  
  此示例使用字符格式将 `AdventureWorks.HumanResources.Department` 表中的数据批量导出至 `Department-c-t.txt` 数据文件，其中将逗号用作字段终止符，将换行符 (\n) 用作行终止符。  
   
  **bcp** 命令包含以下开关。  
   
-|开关|Description|  
+|开关|描述|  
 |------------|-----------------|  
 |**-c**|指定将数据字段作为字符数据加载。|  
 |**-t** `,`|指定逗号 (,) 作为字段终止符。|  
@@ -132,7 +140,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      使用下表中列出的限定符可以为格式化文件中的各个字段或为整个数据文件指定终止符。  
   
-    |Qualifier|Description|  
+    |Qualifier|描述|  
     |---------------|-----------------|  
     |FIELDTERMINATOR ='field_terminator'****|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
     |ROWTERMINATOR ='row_terminator'****|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
@@ -144,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      对于 OPENROWSET 大容量行集提供程序，仅可以在格式化文件中指定终止符（这是必需的，除大型对象数据类型以外）。 如果字符数据文件使用非默认终止符，则必须在格式化文件中定义该非默认终止符。 有关详细信息，请参阅[创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 和[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。  
   
      有关 OPENROWSET BULK 子句的详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>指定 `\n` 作为批量导入的行终止符
+当指定 `\n` 作为批量导入的行终止符，或隐式使用默认行终止符时，bcp 和 BULK INSERT 语句将导出回车符和换行符的组合 (CRLF)，作为行终止符。 如果你的源文件仅使用换行符 (LF) 作为行终止符（在 Unix 和 Linux 计算机上生成的文件中很常见），请使用十六进制表示法来指定 LF 行终止符。 例如，在 BULK INSERT 语句中：
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>示例  
  本部分的示例将字符数据从上述示例中创建的 `Department-c-t.txt` 数据文件大容量导入到 `myDepartment` 示例数据库的 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 表中。 必须先创建此表，才能运行这些示例。 若要在 **dbo** 架构下创建此表，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中执行以下代码：  
   

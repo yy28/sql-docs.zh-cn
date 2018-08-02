@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981419"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279178"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本主题概述使用 Query Store 处理工作负荷的最佳实践。  
+  本文概述使用查询存储处理工作负载的最佳实践。  
   
 ##  <a name="SSMS"></a>使用最新 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计各种用户界面的目的是方便用户对查询存储进行配置和使用收集的工作负荷数据。  
@@ -45,7 +45,7 @@ ms.locfileid: "38981419"
 
 ##  <a name="Configure"></a> 始终根据工作负载调整查询存储  
  根据工作负荷和性能故障排除要求来配置 Query Store。   
-默认参数适用于快速启动，但你应该监视 Query Store 在一定时段内的行为表现，并对其配置进行相应的调整：  
+默认参数是启动的理想参数，但应监视查询存储在一定时段内的行为表现，并对其配置进行相应的调整：  
   
  ![query-store-properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
@@ -213,7 +213,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
   
  采用以下前摄性步骤：  
   
--   遵循最佳实践规范即可避免在无提示情况下更改操作模式。 如果你可以确保 Query Store 大小始终小于最大允许值，则会极大地降低转换为只读模式的几率。 根据 [配置 Query Store](#Configure) 部分所述激活基于大小的策略，使 Query Store 在大小接近极限时自动清除数据。  
+-   遵循最佳实践规范即可避免在无提示情况下更改操作模式。 如果你可以确保 Query Store 大小始终小于最大允许值，则会极大地降低转换为只读模式的几率。 根据[配置查询存储](#Configure)部分所述激活基于大小的策略，使查询存储在大小接近极限时自动清除数据。  
   
 -   为了确保最新的数据能够得到保留，可将基于时间的策略配置为定期删除过时信息。  
   
@@ -276,13 +276,13 @@ FROM sys.database_query_store_options;
 |达到最大大小时，删除不太相关的查询。|激活基于大小的清理策略。|  
   
 ##  <a name="Parameterize"></a> 避免使用非参数化查询  
- 根据最佳做法，仅在绝对必要时（例如，临时分析时），才使用非参数化查询。  不能重复使用缓存的计划，因为这会强制查询优化器在碰到每个唯一的查询文本时都进行查询编译。 有关本主题的详细信息，请参阅[强制参数化使用指南](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)。  
-  此外，Query Store 可能会很快超过大小配额，因为可能会存在大量不同的查询文本，结果会出现大量不同的执行计划，而查询形状是类似的。  
+根据最佳做法，仅在绝对必要时（例如，临时分析时），才使用非参数化查询。  不能重复使用缓存的计划，因为这会强制查询优化器在碰到每个唯一的查询文本时都进行查询编译。 有关详细信息，请参阅[强制参数化使用指南](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)。  
+此外，Query Store 可能会很快超过大小配额，因为可能会存在大量不同的查询文本，结果会出现大量不同的执行计划，而查询形状是类似的。  
 结果就是，工作负荷性能无法优化，Query Store 可能会切换为只读模式，或者可能会不断删除数据以应对传入的查询。  
   
- 请考虑下列选项：  
+请考虑下列选项：  
 
-  -   适用时，将查询参数化（例如，在存储过程或 sp_executesql 中包装查询）。 有关本主题的详细信息，请参阅[参数和执行计划重用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
+-   适用时，将查询参数化（例如，在存储过程或 sp_executesql 中包装查询）。 有关详细信息，请参阅[参数和执行计划重用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
   
 -   如果工作负载包含许多一次性使用的临时批处理且查询计划各不相同，请使用“[针对临时工作负载进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)”选项。  
   
@@ -297,11 +297,11 @@ FROM sys.database_query_store_options;
 -   将“查询捕获模式”设置为“AUTO”即可自动筛选掉资源消耗小的即席查询  。  
   
 ##  <a name="Drop"></a> 维护查询的包含对象时，避免使用 DROP 和 CREATE 模式  
- Query Store 会将查询条目与包含对象（存储过程、函数和触发器）相关联。  重新创建包含对象时，将会针对同一查询文本生成新的查询条目。 这会阻止你跟踪该查询在一定时段内的性能统计信息，并会使用计划强制机制。 若要避免这种问题，请尽可能使用 `ALTER <object>` 过程来更改包含对象定义。  
+Query Store 会将查询条目与包含对象（存储过程、函数和触发器）相关联。  重新创建包含对象时，将会针对同一查询文本生成新的查询条目。 这会阻止你跟踪该查询在一定时段内的性能统计信息，并会使用计划强制机制。 若要避免这种问题，请尽可能使用 `ALTER <object>` 过程来更改包含对象定义。  
   
 ##  <a name="CheckForced"></a> 定期检查强制计划的状态  
 
- 可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 但与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会回退到重新编译查询，而强制失败实际原因则显示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 以下查询返回强制计划的相关信息：  
+可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 但与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会回退到重新编译查询，而强制失败实际原因则显示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 以下查询返回强制计划的相关信息：  
   
 ```sql  
 USE [QueryStoreDB];  
@@ -314,7 +314,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- 有关原因的完整列表，请参阅 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 **query_store_plan_forcing_failed** XEvent 来跟踪故障排除计划强制失败情况。  
+ 有关原因的完整列表，请参阅 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 query_store_plan_forcing_failed XEvent 来跟踪和故障排除计划强制失败情况。  
   
 ##  <a name="Renaming"></a> 避免在使用强制计划执行查询时重命名数据库  
 
@@ -324,11 +324,14 @@ WHERE is_forced_plan = 1;
 
 ##  <a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志改善灾难恢复
  
-  全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。 有关详细信息，请参考[跟踪标志](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。 有关详细信息，请参考[跟踪标志](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
-  跟踪标志 7745 会阻止以下默认行为：在可关闭 SQL Server 之前，查询存储将数据写入磁盘。
+跟踪标志 7745 会阻止以下默认行为：在可关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，查询存储将数据写入磁盘。
   
-  跟踪标志 7752 能够异步加载查询存储，并且允许 SQL Server 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
+跟踪标志 7752 能够异步加载查询存储，并且允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
+
+> [!IMPORTANT]
+> 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](http://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。 
 
 ## <a name="see-also"></a>另请参阅  
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

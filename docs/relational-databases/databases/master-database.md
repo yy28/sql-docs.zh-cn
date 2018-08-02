@@ -1,7 +1,7 @@
 ---
 title: master 数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2018
+ms.date: 07/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: databases
@@ -19,12 +19,12 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ffc0e8ccb310cb5a5d491f057ee2b8b5074e080
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1a8827e5fd85badccde6c8b4e8b79ace34d4962c
+ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108119"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350025"
 ---
 # <a name="master-database"></a>master 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,18 +34,24 @@ ms.locfileid: "39108119"
 > 对于 Azure SQL 数据库逻辑服务器，仅 master 数据库和 tempdb 数据库适用。 有关逻辑服务器和逻辑 master 数据库的相关概念，请参阅[什么是 Azure SQL 逻辑服务器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="physical-properties-of-master"></a>master 数据库的物理属性  
- 下表列出了 **master** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
+下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|文件增长|  
 |----------|------------------|-------------------|-----------------|  
 |主数据|master|master.mdf|以 10% 的速度自动增长到磁盘充满为止。|  
 |日志|mastlog|mastlog.ldf|以 10% 的速度自动增长到最大 2 TB。|  
   
- 有关如何移动 **master** 数据和日志文件的信息，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
+有关如何移动 **master** 数据和日志文件的信息，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
+
+> [!IMPORTANT]
+> 对于 Azure SQL 数据库逻辑服务器，用户无法控制 master数据库的大小。
   
 ### <a name="database-options"></a>数据库选项  
- 下表列出了 **master** 数据库中每个数据库选项的默认值以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
+下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master 数据库中每个数据库选项的默认值，以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
   
+> [!IMPORTANT]
+> 对于 Azure SQL 数据库逻辑服务器，用户无法控制这些数据库选项。
+
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|否|  
@@ -78,77 +84,55 @@ ms.locfileid: "39108119"
 |Service Broker 选项|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|用户帐户控制|  
   
- 有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="restrictions"></a>限制  
- 不能在 **master** 数据库中执行下列操作：  
+不能在 **master** 数据库中执行下列操作：  
   
--   添加文件或文件组。  
-  
--   更改排序规则。 默认排序规则为服务器排序规则。  
-  
--   更改数据库所有者。 **master** 的所有者是 **sa**。  
-  
--   创建全文目录或全文索引。  
-  
--   在数据库的系统表上创建触发器。  
-  
--   删除数据库。  
-  
--   从数据库中删除 **guest** 用户。  
-  
--   启用变更数据捕获。  
-  
--   参与数据库镜像。  
-  
--   删除主文件组、主数据文件或日志文件。  
-  
--   重命名数据库或主文件组。  
-  
--   将数据库设置为 OFFLINE。  
-  
--   将数据库或主文件组设置为 READ_ONLY。  
+- 添加文件或文件组。  
+- 更改排序规则。 默认排序规则为服务器排序规则。  
+- 更改数据库所有者。 **master** 的所有者是 **sa**。  
+- 创建全文目录或全文索引。  
+- 在数据库的系统表上创建触发器。  
+- 删除数据库。  
+- 从数据库中删除 **guest** 用户。  
+- 启用变更数据捕获。  
+- 参与数据库镜像。  
+- 删除主文件组、主数据文件或日志文件。  
+- 重命名数据库或主文件组。  
+- 将数据库设置为 OFFLINE。  
+- 将数据库或主文件组设置为 READ_ONLY。  
   
 ## <a name="recommendations"></a>建议  
- 使用 **master** 数据库时，请考虑下列建议：  
+使用 **master** 数据库时，请考虑下列建议：  
   
--   始终有一个 **master** 数据库的当前备份可用。  
+- 始终有一个 **master** 数据库的当前备份可用。  
+- 执行下列操作后，尽快备份 **master** 数据库：  
   
--   执行下列操作后，尽快备份 **master** 数据库：  
+  - 创建、修改或删除任意数据库  
+  - 更改服务器或数据库的配置值  
+  - 修改或添加登录帐户  
   
-    -   创建、修改或删除任意数据库  
-  
-    -   更改服务器或数据库的配置值  
-  
-    -   修改或添加登录帐户  
-  
--   不要在 **master**中创建用户对象。 否则，必须更频繁地备份 **master** 。  
-  
--   不要针对 **master** 数据库将 TRUSTWORTHY 选项设置为 ON。  
+- 不要在 **master**中创建用户对象。 否则，必须更频繁地备份 **master** 。  
+- 不要针对 **master** 数据库将 TRUSTWORTHY 选项设置为 ON。  
   
 ## <a name="what-to-do-if-master-becomes-unusable"></a>当 master 不可用时怎么办  
  如果 **master** 数据库不可用，则可以通过下列两种方式之一将该数据库返回到可用状态：  
   
--   从当前数据库备份还原 **master** 。  
+- 从当前数据库备份还原 **master** 。  
   
-     如果你可以启动服务器实例，则应该能够从完整数据库备份还原 **master** 。 有关详细信息，请参阅[还原 master 数据库 (Transact-SQL)](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)。  
+  如果你可以启动服务器实例，则应该能够从完整数据库备份还原 **master** 。 有关详细信息，请参阅[还原 master 数据库 (Transact-SQL)](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)。  
   
--   完全重新生成 **master** 。  
+- 完全重新生成 **master** 。  
   
-     如果由于 **master** 严重损坏而无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须重新生成 **master**。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
+  如果由于 **master** 严重损坏而无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须重新生成 **master**。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
   
-    > [!IMPORTANT]  
-    >  重新生成 **master** 将重新生成所有系统数据库。  
+  > [!IMPORTANT]  
+  >  重新生成 **master** 将重新生成所有系统数据库。  
   
 ## <a name="related-content"></a>相关内容  
- [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)  
-  
- [系统数据库](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
-  
-  
+- [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)  
+- [系统数据库](../../relational-databases/databases/system-databases.md)  
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
