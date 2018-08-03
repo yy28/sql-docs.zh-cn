@@ -103,6 +103,8 @@
           href: basic-data-types-sample.md
         - name: SQLXML 数据类型示例
           href: sqlxml-data-type-sample.md
+        - name: 空间数据类型示例
+          href: spatial-data-types-sample.md
     - name: 使用结果集
       href: working-with-result-sets.md
       items:
@@ -121,6 +123,8 @@
           href: reading-large-data-with-stored-procedures-sample.md
         - name: 更新大型数据的示例
           href: updating-large-data-sample.md
+    - name: 数据发现和分类示例
+      href: data-discovery-classification-sample.md
 - name: JDBC SQL 驱动程序的符合性和法律
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
           href: using-parameter-metadata.md
         - name: 使用基本数据类型
           href: using-basic-data-types.md
+        - name: 正在使用空间数据类型
+          href: use-spatial-datatypes.md
         - name: 了解事务
           href: understanding-transactions.md
         - name: 使用连接
@@ -241,6 +247,8 @@
           href: wrappers-and-interfaces.md
         - name: 通过 JDBC 驱动程序使用大容量复制
           href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: 将大容量复制 API 用于批插入操作
+          href: use-bulk-copy-api-batch-insert-operation.md
         - name: 使用带有输出参数的存储过程
           href: using-a-stored-procedure-with-output-parameters.md
         - name: 执行批处理操作
@@ -257,3 +265,5 @@
           href: azure-key-vault-sample-version-6.0.0.md
         - name: Azure Key Vault 示例版本 6.2.2
           href: azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault 示例版本 7.0.0
+          href: azure-key-vault-sample-version-7-0-0.md

@@ -123,7 +123,7 @@ ms.locfileid: "37255459"
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- 有关详细示例，请参阅 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+ 有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  有关其他示例，请参阅 [运行 Reporting Services 脚本文件](run-a-reporting-services-script-file.md)  
   
@@ -133,7 +133,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  必须用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 代码编写脚本，并存储在文件扩展名为 .rss 的 Unicode 或 UTF-8 文本文件中。 不能使用 **rs** 实用工具调试脚本。 若要调试脚本，请在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中运行代码。  
   
 > [!TIP]  
->  有关详细示例，请参阅 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+>  有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [运行 Reporting Services 脚本文件](run-a-reporting-services-script-file.md)   
