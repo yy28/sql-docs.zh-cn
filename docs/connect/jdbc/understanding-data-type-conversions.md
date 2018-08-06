@@ -1,7 +1,7 @@
 ---
-title: 了解数据类型转换 |Microsoft 文档
+title: 了解数据类型转换 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,78 +14,78 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e87e223cb64b9bb60008da17841f69bb67dfed10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b2f768410466c1f6b877295997d88b1992cd41bb
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853182"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279238"
 ---
 # <a name="understanding-data-type-conversions"></a>了解数据类型转换
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  为了便于的 Java 编程语言到的数据类型转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供所需的 JDBC 规范的数据类型转换。 为更大的灵活性，所有类型都都可以与其他转换**对象**，**字符串**，和**byte []** 数据类型。  
+  为了简化 Java 编程语言数据类型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型的转换，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 根据 JDBC 规范的要求提供了数据类型转换。 为了提高灵活性，所有类型都都可以转换到和从**对象**，**字符串**，并**byte []** 数据类型。  
   
 ## <a name="getter-method-conversions"></a>Getter 方法转换  
- 基于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型，以下图表包含 get 的 JDBC 驱动程序的转换映射\<类型 > （） 方法的[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)类，并且 get支持的转换\<类型 > 方法[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)类。  
+ 基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型，以下图表包含 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 get\<Type>() 方法的 JDBC 驱动程序转换图，以及 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 get\<Type> 方法支持的转换。  
   
  ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")  
   
  JDBC Driver 的 getter 方法支持三类转换：  
   
--   **非有损 (x)**： 对于情况 getter 类型相同的转换或小于基础的服务器类型。 例如，当调用 getBigDecimal 基础的服务器十进制列，则不必进行转换。  
+-   **非丢失 (x)**：适用于 getter 类型与基础服务器类型相同或者小于基础服务器类型时的转换。 例如，对基础服务器十进制数列调用 getBigDecimal 时，无需进行转换。  
   
--   **转换后 (y)**： 到 Java 语言类型转换是正则并遵循 Java 语言转换规则的位置从数字服务器类型的转换。 对于这些转换，总是直接截取有效位数（从不四舍五入），而溢出则按目标类型取模处理，以较小者为准。 例如，在基础调用 getInt**十进制**包含"1.9999"列将返回"1"，或者，如果基础**十进制**值是"3000000000"则**int**值为"-1294967296"溢出。  
+-   **已转换 (y)**：从数值服务器类型转换为 Java 语言类型，其中转换是常规的并遵循 Java 语言转换规则。 对于这些转换，总是直接截取有效位数（从不四舍五入），而溢出则按目标类型取模处理，以较小者为准。 例如，调用的基础 getInt**十进制**包含"1.9999"的列将返回"1"，或者，如果基础**十进制**值为"3000000000"，然后**int**值溢出为"-1294967296"。  
   
--   **数据相关的 (z)**： 从基础字符类型为数值类型的转换要求字符类型包含可以转换为该类型的值。 不执行其他转换。 如果值对于 getter 类型过大，则该值无效。 例如，如果在包含"53"varchar(50) 列上调用 getInt，则返回的值是为**int**; 但如果基础值为"xyz"或"3000000000"，将引发错误。  
+-   **依赖于数据 (z)**：如果从基础字符类型转换到数值类型，则要求字符类型包含可转换为该数值类型的值。 不执行其他转换。 如果值对于 getter 类型过大，则该值无效。 例如，如果对包含“53”的 varchar(50) 列调用 getInt，则值将作为 int 返回；如果基础值为“xyz”或“3000000000”，则将引发错误。  
   
- 如果在上调用 getString**二进制**， **varbinary**， **varbinary （max)**，或**映像**列的数据类型，则返回值为十六进制字符串值。  
+ 如果在调用 getString**二进制**， **varbinary**， **varbinary （max)**，或**映像**列数据类型，则返回值为十六进制字符串值。  
   
 ## <a name="updater-method-conversions"></a>Updater 方法转换  
- 对于 Java 类型化数据传递给更新\<类型 > （） 方法的[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)类，将应用以下转换。  
+ 对于传递给 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 update\<Type>() 方法的 Java 类型的数据，可应用下列转换。  
   
  ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")  
   
  JDBC Driver 的 updater 方法支持三类转换：  
   
--   **非有损 (x)**： 的情况下，更新程序类型相同的转换或小于基础的服务器类型。 例如，对基础服务器十进制数列调用 updateBigDecimal 时，无需进行转换。  
+-   **非丢失 (x)**：适用于 updater 类型与基础服务器类型相同或者小于基础服务器类型时的转换。 例如，对基础服务器十进制数列调用 updateBigDecimal 时，无需进行转换。  
   
--   **转换后 (y)**： 到 Java 语言类型转换是正则并遵循 Java 语言转换规则的位置从数字服务器类型的转换。 对于这些转换，总是直接截取有效位数（从不四舍五入），而溢出则按目标（较小者）类型取模处理。 例如，在基础调用 updateDecimal **int**包含"1.9999"列将返回"1"，或者，如果基础**十进制**值是"3000000000"则**int**溢出到"-1294967296"的值。  
+-   **已转换 (y)**：从数值服务器类型转换为 Java 语言类型，其中转换是常规的并遵循 Java 语言转换规则。 对于这些转换，总是直接截取有效位数（从不四舍五入），而溢出则按目标（较小者）类型取模处理。 例如，调用的基础 updateDecimal **int**包含"1.9999"的列将返回"1"，或者，如果基础**十进制**值为"3000000000"，然后**int**值溢出为"-1294967296"。  
   
--   **数据相关的 (z)**： 从基础源数据类型为目标数据类型的转换需要可将所含的值转换为目标类型。 不执行其他转换。 如果值对于 getter 类型过大，则该值无效。 例如，如果对包含“53”的 int 列调用 updateString，更新将成功；如果基础字符串值为“foo”或“3000000000”，则将引发错误。  
+-   **依赖于数据 (z)**：如果从基础源数据类型转换到目标数据类型，则要求源数据类型包含可转换为目标数据类型的值。 不执行其他转换。 如果值对于 getter 类型过大，则该值无效。 例如，如果对包含“53”的 int 列调用 updateString，更新将成功；如果基础字符串值为“foo”或“3000000000”，则将引发错误。  
   
- 当上调用 updateString**二进制**， **varbinary**， **varbinary （max)**，或**映像**列的数据类型，它处理的字符串值作为十六进制字符串值。  
+ 当调用 updateString**二进制**， **varbinary**， **varbinary （max)**，或**映像**列数据类型，它处理的字符串值作为十六进制字符串值。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]列数据类型是**XML**，数据值必须为有效**XML**。 调用 updateBytes、 updateBinaryStream 或 updateBlob 方法时，数据值应为十六进制字符串表示形式的 XML 字符。 例如：  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 列的数据类型为 XML 时，数据值必须是有效的 XML。 在调用 updateBytes、 updateBinaryStream 或 updateBlob 方法时，数据值应为 XML 字符的十六进制字符串表示形式。 例如：  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   
  请注意，如果 XML 字符使用特殊的字符编码，则需要字节顺序标记 (BOM)。  
   
 ## <a name="setter-method-conversions"></a>Setter 方法转换  
- 对于 Java 类型化数据传递到第组\<类型 > （） 方法的[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)类和[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)类，将应用以下转换。  
+ 对于传递给 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 set\<Type>() 方法的 Java 类型的数据，可应用下列转换。  
   
  ![JDBCSetterConversions](../../connect/jdbc/media/jdbc_jdbcsetterconversions_v2.gif "JDBCSetterConversions")  
   
  服务器会尝试所有转换，并在失败时返回错误。  
   
- 情况下**字符串**数据类型，如果值超过了**VARCHAR**，它映射到**LONGVARCHAR**。 同样， **NVARCHAR**映射到**LONGNVARCHAR**如果值超过支持的长度的**NVARCHAR**。 同样适用于**byte []**。 值长度超过**VARBINARY**成为**LONGVARBINARY**。  
+ 情况下**字符串**数据类型，如果值超过了**VARCHAR**，它映射到**LONGVARCHAR**。 同样， **NVARCHAR**映射到**LONGNVARCHAR**如果值超过受支持的长度**NVARCHAR**。 这同样适用于 byte[]。 值长度超过**VARBINARY**变得**LONGVARBINARY**。  
   
  JDBC Driver 的 setter 方法支持两类转换：  
   
--   **非有损 (x)**： 数值的情况下，setter 类型相同的转换或小于基础的服务器类型。 例如，当在基础的服务器上调用 setBigDecimal**十进制**列，则不必进行转换。 适用于字符的情况，Java**数值**数据类型转换为**字符串**。 例如，调用 varchar(50) 列的值为"53"setDouble 生成该目标列中的字符值"53"。  
+-   **非丢失 (x)**：适用于 setter 类型与基础服务器类型相同或者小于基础服务器类型时的数值转换。 例如，对基础服务器十进制数列调用 setBigDecimal 时，无需进行转换。 对于数值转换为字符的情形，Java numeric 数据类型转换为 String。 例如，使用值“53”对 varchar(50) 列调用 setDouble 时将在该目标列中生成字符值“53”。  
   
--   **转换后 (y)**： 从 Java 转换**数值**类型设置为基础服务器**数值**较小的类型。 此转换是正则并遵循[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发“不支持的转换”错误。 例如，值为"1.9999"中"1"中的目标列中; 基础整数列结果上使用 updateDecimal但如果传递"3000000000"，该驱动程序将引发错误。  
+-   **已转换 (y)**：从 Java numeric 类型转换为更小的基础服务器 numeric 类型。 该转换为常规转换，并且遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发“不支持的转换”错误。 例如，通过值“1.9999”对基础整数列使用 updateDecimal 时，将在目标列中生成“1”；但如果传递的值为“3000000000”，驱动程序将引发错误。  
   
--   **数据相关的 (z)**： 从 Java 转换**字符串**类型设置为基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型取决于以下条件： 驱动程序将发送**字符串**的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]执行转换，如有必要。 如果 sendStringParametersAsUnicode 设置为 true，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允许转换**nvarchar**到**映像**并引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 false，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允许转换**varchar**到**映像**且不引发异常。  
+-   **依赖于数据 (z)**：从 Java String 类型转换到基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型取决于以下条件：如有必要，驱动程序会将字符串值发送给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 再执行转换。 如果 sendStringParametersAsUnicode 设置为 true，并且基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允许将转换**nvarchar**到**映像**并会引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 False，并且基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型为 image，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将允许将 varchar 转换为 image，而不会引发异常。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将执行的转换并将错误传递回 JDBC 驱动程序中，有问题时。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 执行转换，并在出现问题时将错误传回 JDBC 驱动程序。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]列数据类型是**XML**，数据值必须为有效**XML**。 调用 updateBytes、 updateBinaryStream 或 updateBlob 方法时，数据值应为十六进制字符串表示形式的 XML 字符。 例如：  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 列的数据类型为 XML 时，数据值必须是有效的 XML。 在调用 updateBytes、 updateBinaryStream 或 updateBlob 方法时，数据值应为 XML 字符的十六进制字符串表示形式。 例如：  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   
@@ -94,27 +94,27 @@ ms.locfileid: "32853182"
 ## <a name="conversions-on-setobject"></a>setObject 的转换  
   
 > [!NOTE]  
->  Microsoft JDBC Drivers 4.2 （和更高版本） 的 SQL Server 支持 JDBC 4.1 和 4.2。 4.1 和 4.2 数据类型映射和转换的详细信息请参阅[JDBC 驱动程序的 JDBC 4.1 符合性](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)和[JDBC 驱动程序的 JDBC 4.2 法规遵从性](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)，除了以下信息。  
+>  Microsoft JDBC Drivers 4.2 （和更高版本） for SQL Server 支持 JDBC 4.1 和 4.2。 有关 4.1 和 4.2 数据类型映射和转换的详细信息请参阅[JDBC 驱动程序的 JDBC 4.1 合规性](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)并[JDBC 驱动程序的 JDBC 4.2 合规性](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)，以及以下信息。  
   
- 对于 Java 类型化数据传递给 setObject (\<类型 >) 方法的[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)类，将应用以下转换。  
+ 对于传递给 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setObject(\<Type>) 方法的 Java 类型的数据，可应用下列转换。  
   
  ![JDBCSetObjectConversions](../../connect/jdbc/media/jdbc_jdbcsetobjectconversions.gif "JDBCSetObjectConversions")  
   
- 不带指定的目标类型 setObject 方法使用默认映射。 情况下**字符串**数据类型，如果值超过了**VARCHAR**，它映射到**LONGVARCHAR**。 同样， **NVARCHAR**映射到**LONGNVARCHAR**如果值超过支持的长度的**NVARCHAR**。 同样适用于**byte []**。 值长度超过**VARBINARY**成为**LONGVARBINARY**。  
+ 没有指定目标类型的 setObject 方法将使用默认映射。 情况下**字符串**数据类型，如果值超过了**VARCHAR**，它映射到**LONGVARCHAR**。 同样， **NVARCHAR**映射到**LONGNVARCHAR**如果值超过受支持的长度**NVARCHAR**。 这同样适用于 byte[]。 值长度超过**VARBINARY**变得**LONGVARBINARY**。  
   
  JDBC Driver 的 setObject 方法支持三类转换：  
   
--   **非有损 (x)**： 数值的情况下，setter 类型相同的转换或小于基础的服务器类型。 例如，当在基础的服务器上调用 setBigDecimal**十进制**列，则不必进行转换。 适用于字符的情况，Java**数值**数据类型转换为**字符串**。 例如，调用 varchar(50) 列的值为"53"setDouble 将生成该目标列中的字符值"53"。  
+-   **非丢失 (x)**：适用于 setter 类型与基础服务器类型相同或者小于基础服务器类型时的数值转换。 例如，对基础服务器十进制数列调用 setBigDecimal 时，无需进行转换。 对于数值转换为字符的情形，Java numeric 数据类型转换为 String。 例如，使用值“53”对 varchar(50) 列调用 setDouble 时将在该目标列中生成字符值“53”。  
   
--   **转换后 (y)**： 从 Java 转换**数值**类型设置为基础服务器**数值**较小的类型。 此转换是正则并遵循[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发不支持转换的错误。 例如，值为"1.9999"中"1"中的目标列中; 基础整数列结果上使用 updateDecimal但如果传递"3000000000"，该驱动程序将引发错误。  
+-   **已转换 (y)**：从 Java numeric 类型转换为更小的基础服务器 numeric 类型。 该转换为常规转换，并且遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发不支持转换的错误。 例如，通过值“1.9999”对基础整数列使用 updateDecimal 时，将在目标列中生成“1”；但如果传递的值为“3000000000”，驱动程序将引发错误。  
   
--   **数据相关的 (z)**： 从 Java 转换**字符串**类型设置为基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型取决于以下条件： 驱动程序将发送**字符串**的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]执行转换，如有必要。 如果 sendStringParametersAsUnicode 连接属性设置为 true，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允许转换**nvarchar**到**映像**并引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 false，基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型是**映像**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允许转换**varchar**到**映像**且不引发异常。  
+-   **依赖于数据 (z)**：从 Java String 类型转换到基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型取决于以下条件：如有必要，驱动程序会将字符串值发送给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 再执行转换。 如果 sendStringParametersAsUnicode 连接属性设置为 True，并且基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型为 image，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将不允许将 nvarchar 转换为 image 并会引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 False，并且基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型为 image，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将允许将 varchar 转换为 image，而不会引发异常。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 执行大容量的集转换并将错误传递回 JDBC 驱动程序有问题时。 客户端转换异常，并且仅在的情况下执行**日期**，**时间**，**时间戳**，**布尔**，和**字符串**值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 执行大部分设置转换，并且在出现问题时将错误传回 JDBC 驱动程序。 客户端转换是例外，它们仅的情况下执行**日期**，**时间**，**时间戳**，**布尔**，和**字符串**值。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]列数据类型是**XML**，数据值必须为有效**XML**。 调用 setObject(byte[], SQLXML)、setObject(inputStream, SQLXML) 或 setObject(Blob, SQLXML) 方法时，数据值应为 XML 字符的十六进制字符串表示形式。 例如：  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 列的数据类型为 XML 时，数据值必须是有效的 XML。 调用 setObject(byte[], SQLXML)、setObject(inputStream, SQLXML) 或 setObject(Blob, SQLXML) 方法时，数据值应为 XML 字符的十六进制字符串表示形式。 例如：  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   
