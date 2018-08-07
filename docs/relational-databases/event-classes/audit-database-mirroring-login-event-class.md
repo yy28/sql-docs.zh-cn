@@ -17,13 +17,13 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ac0ba1d2748dbb6d4e30c62af36ce2dd823a63c3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b0120e9fecbb81250a8a506f9b262038a5c96309
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331658"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549467"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,28 +33,28 @@ ms.locfileid: "34331658"
   
 |数据列|类型|描述|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|在此事件类中未使用。|10|是|  
-|**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
-|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|**EventClass**|**int**|捕获的事件类的类型。 对 **Audit Database Mirroring Login** 来说始终是 **154**。|27|“否”|  
-|**EventSequence**|**int**|此事件的序列号。|51|“否”|  
-|**EventSubClass**|**int**|事件子类的类型，提供有关每个事件类的进一步信息。 下表列出了此事件的事件子类值。|21|是|  
-|**FileName**|**nvarchar**|在远程数据库镜像端点上配置支持的身份验证方法。 如果有多种可用方法，则接受（目标）端点将确定先试用哪种方法。 可能的值有：<br /><br /> <br /><br /> **无**。 未配置任何身份验证方法。<br /><br /> **NTLM**。 要求使用 NTLM 身份验证。<br /><br /> **KERBEROS**。 要求使用 Kerberos 身份验证。<br /><br /> **NEGOTIATE**。 由 Windows 协商身份验证方法。<br /><br /> **CERTIFICATE**。 要求使用为端点配置的证书，该证书存储在 **master** 数据库中。<br /><br /> **NTLM、CERTIFICATE**。 使用 NTLM 或端点证书进行身份验证。<br /><br /> **KERBEROS、CERTIFICATE**。 使用 Kerberos 或端点证书进行身份验证。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 协商身份验证方法，或者使用端点证书进行身份验证。<br /><br /> **CERTIFICATE、NTLM**。 使用端点证书或 NTLM 进行身份验证。<br /><br /> **CERTIFICATE、KERBEROS**。 使用端点证书或 Kerberos 进行身份验证。<br /><br /> **CERTIFICATE、NEGOTIATE**。 使用端点证书进行身份验证，或由 Windows 协商身份验证方法。|36|“否”|  
-|**HostName**|**nvarchar**|在此事件类中未使用。|8|是|  
-|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|“否”|  
-|**LoginSid**|**图像**|已登录用户的安全标识号 (SID)。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
-|**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
-|**NTUserName**|**nvarchar**|拥有生成此事件的连接的用户的名称。|6|是|  
-|**ObjectName**|**nvarchar**|用于此连接的连接字符串。|34|“否”|  
-|**OwnerName**|**nvarchar**|在本地数据库镜像端点上配置支持的身份验证方法。 如果有多种可用方法，则接受（目标）端点将确定先试用哪种方法。 可能的值有：<br /><br /> <br /><br /> **无**。 未配置任何身份验证方法。<br /><br /> **NTLM**。 要求使用 NTLM 身份验证。<br /><br /> **KERBEROS**。 要求使用 Kerberos 身份验证。<br /><br /> **NEGOTIATE**。 由 Windows 协商身份验证方法。<br /><br /> **CERTIFICATE**。 要求使用为端点配置的证书，该证书存储在 **master** 数据库中。<br /><br /> **NTLM、CERTIFICATE**。 使用 NTLM 或端点证书进行身份验证。<br /><br /> **KERBEROS、CERTIFICATE**。 使用 Kerberos 或端点证书进行身份验证。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 协商身份验证方法，或者使用端点证书进行身份验证。<br /><br /> **CERTIFICATE、NTLM**。 使用端点证书或 NTLM 进行身份验证。<br /><br /> **CERTIFICATE、KERBEROS**。 使用端点证书或 Kerberos 进行身份验证。<br /><br /> **CERTIFICATE、NEGOTIATE**。 使用端点证书进行身份验证，或由 Windows 协商身份验证方法。|37|“否”|  
-|**ProviderName**|**nvarchar**|用于此连接的身份验证方法。|46|“否”|  
-|**RoleName**|**nvarchar**|连接的角色。 这可以是 **initiator** 或 **target**。|38|“否”|  
-|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
-|**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
-|**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
-|**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|“否”|  
-|**TargetUserName**|**nvarchar**|登录状态。 可为下列值之一：<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> 注意：ISC = 启动安全上下文。 ASC = 接受安全上下文。|39|“否”|  
-|**TransactionID**|**bigint**|系统为事务分配的 ID。|4|“否”|  
+|**ApplicationName**|**nvarchar**|在此事件类中未使用。|10|用户帐户控制|  
+|**ClientProcessID**|**int**|在此事件类中未使用。|9|用户帐户控制|  
+|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
+|**EventClass**|**int**|捕获的事件类的类型。 对 **Audit Database Mirroring Login** 来说始终是 **154**。|27|否|  
+|**EventSequence**|**int**|此事件的序列号。|51|否|  
+|**EventSubClass**|**int**|事件子类的类型，提供有关每个事件类的进一步信息。 下表列出了此事件的事件子类值。|21|用户帐户控制|  
+|**FileName**|**nvarchar**|在远程数据库镜像端点上配置支持的身份验证方法。 如果有多种可用方法，则接受（目标）端点将确定先试用哪种方法。 可能的值有：<br /><br /> <br /><br /> **无**。 未配置任何身份验证方法。<br /><br /> **NTLM**。 要求使用 NTLM 身份验证。<br /><br /> **KERBEROS**。 要求使用 Kerberos 身份验证。<br /><br /> **NEGOTIATE**。 由 Windows 协商身份验证方法。<br /><br /> **CERTIFICATE**。 要求使用为端点配置的证书，该证书存储在 **master** 数据库中。<br /><br /> **NTLM、CERTIFICATE**。 使用 NTLM 或端点证书进行身份验证。<br /><br /> **KERBEROS、CERTIFICATE**。 使用 Kerberos 或端点证书进行身份验证。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 协商身份验证方法，或者使用端点证书进行身份验证。<br /><br /> **CERTIFICATE、NTLM**。 使用端点证书或 NTLM 进行身份验证。<br /><br /> **CERTIFICATE、KERBEROS**。 使用端点证书或 Kerberos 进行身份验证。<br /><br /> **CERTIFICATE、NEGOTIATE**。 使用端点证书进行身份验证，或由 Windows 协商身份验证方法。|36|否|  
+|**HostName**|**nvarchar**|在此事件类中未使用。|8|用户帐户控制|  
+|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|否|  
+|**LoginSid**|**图像**|已登录用户的安全标识号 (SID)。 服务器中的每个登录名都具有唯一的 SID。|41|用户帐户控制|  
+|**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|用户帐户控制|  
+|**NTUserName**|**nvarchar**|拥有生成此事件的连接的用户的名称。|6|用户帐户控制|  
+|**ObjectName**|**nvarchar**|用于此连接的连接字符串。|34|否|  
+|**OwnerName**|**nvarchar**|在本地数据库镜像端点上配置支持的身份验证方法。 如果有多种可用方法，则接受（目标）端点将确定先试用哪种方法。 可能的值有：<br /><br /> <br /><br /> **无**。 未配置任何身份验证方法。<br /><br /> **NTLM**。 要求使用 NTLM 身份验证。<br /><br /> **KERBEROS**。 要求使用 Kerberos 身份验证。<br /><br /> **NEGOTIATE**。 由 Windows 协商身份验证方法。<br /><br /> **CERTIFICATE**。 要求使用为端点配置的证书，该证书存储在 **master** 数据库中。<br /><br /> **NTLM、CERTIFICATE**。 使用 NTLM 或端点证书进行身份验证。<br /><br /> **KERBEROS、CERTIFICATE**。 使用 Kerberos 或端点证书进行身份验证。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 协商身份验证方法，或者使用端点证书进行身份验证。<br /><br /> **CERTIFICATE、NTLM**。 使用端点证书或 NTLM 进行身份验证。<br /><br /> **CERTIFICATE、KERBEROS**。 使用端点证书或 Kerberos 进行身份验证。<br /><br /> **CERTIFICATE、NEGOTIATE**。 使用端点证书进行身份验证，或由 Windows 协商身份验证方法。|37|否|  
+|**ProviderName**|**nvarchar**|用于此连接的身份验证方法。|46|否|  
+|**RoleName**|**nvarchar**|连接的角色。 这可以是 **initiator** 或 **target**。|38|否|  
+|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
+|**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|用户帐户控制|  
+|**StartTime**|**datetime**|事件（如果有）的开始时间。|14|用户帐户控制|  
+|**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
+|**TargetUserName**|**nvarchar**|登录状态。 可为下列值之一：<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> 注意：ISC = 启动安全上下文。 ASC = 接受安全上下文。|39|否|  
+|**TransactionID**|**bigint**|系统为事务分配的 ID。|4|否|  
   
  下表列出了此事件类的子类值。  
   

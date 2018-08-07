@@ -14,13 +14,13 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d9d0cffae7388f21b6df32e51669b946099a1c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 05e9ace70cc5b794693751d4ffac3202e5852706
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938752"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551249"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>通过启用行级和行组级锁定来提高性能  
- 为了在列存储索引功能上补充非聚集索引， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 针对选择、更新和删除操作提供细粒度锁定功能。 可以通过在索引查找中对非聚集索引实施行级锁定，并在全表扫描中对列存储索引实施行组级锁定的方法来运行查询。 通过使用适当的行级和行组级锁定，可提高读/写并发效率。  
+ 为了在列存储索引功能上补充非聚集索引，[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 针对选择、更新和删除操作提供细粒度锁定功能。 可以通过在索引查找中对非聚集索引实施行级锁定，并在全表扫描中对列存储索引实施行组级锁定的方法来运行查询。 通过使用适当的行级和行组级锁定，可提高读/写并发效率。  
   
 ```sql  
 --Granular locking example  
