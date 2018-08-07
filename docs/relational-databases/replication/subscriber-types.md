@@ -17,13 +17,13 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc484521597c462c625bb5d3a0bbcfa51f1f42e4
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 37ab88cf1a7416926b6248b164e824ccbe27ed97
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359249"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545187"
 ---
 # <a name="subscriber-types"></a>订阅服务器类型
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37359249"
   
  创建发布快照之后，可以在 **“发布属性”** 对话框的 **“常规”** 页上提高发布兼容级别（使其更为严格）；无法降低兼容级别。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  选择此发布必须支持的各个订阅服务器类型。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

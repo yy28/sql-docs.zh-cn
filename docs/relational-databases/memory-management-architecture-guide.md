@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239367"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541717"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,11 +92,11 @@ ms.locfileid: "35239367"
 
 |内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
-|单页分配|是|是，合并到“任意大小”页分配|
-|多页分配|“否”|是，合并到“任意大小”页分配|
-|CLR 分配|“否”|是|
-|线程堆栈内存|“否”|“否”|
-|从 Windows 直接分配|“否”|“否”|
+|单页分配|用户帐户控制|是，合并到“任意大小”页分配|
+|多页分配|否|是，合并到“任意大小”页分配|
+|CLR 分配|否|用户帐户控制|
+|线程堆栈内存|否|否|
+|从 Windows 直接分配|否|否|
 
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能会分配比 max server memory 设置中指定的值更多的内存。 当 Total Server Memory (KB) 值已达到 Total Server Memory (KB)（由 max server memory 指定）时，可能会出现这种情况。 如果因内存碎片造成连续空闲内存不足，无法满足多页内存请求的需求（超过 8 KB），[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以执行超额承诺使用量，而不是拒绝内存请求。 
 
@@ -119,11 +119,11 @@ ms.locfileid: "35239367"
 
 |内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
-|单页分配|“否”|否，合并到“任意大小”页分配|
-|多页分配|是|否，合并到“任意大小”页分配|
-|CLR 分配|是|是|
-|线程堆栈内存|是|是|
-|从 Windows 直接分配|是|是|
+|单页分配|否|否，合并到“任意大小”页分配|
+|多页分配|用户帐户控制|否，合并到“任意大小”页分配|
+|CLR 分配|用户帐户控制|用户帐户控制|
+|线程堆栈内存|用户帐户控制|用户帐户控制|
+|从 Windows 直接分配|用户帐户控制|用户帐户控制|
 
 ## <a name="dynamic-memory-management"></a> 动态内存管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的默认内存管理行为是获取尽可能多的内存而不会造成系统内存短缺。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通过使用 Microsoft Windows 中的内存通知 API 来实现这一点。

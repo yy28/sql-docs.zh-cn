@@ -19,20 +19,20 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff370e7b4814397b067fd82c566fe809bc27e18a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f9e1e7d2985bec6009530e2a010692c3a2020eed
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012884"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545027"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   表值参数是使用用户定义的表类型来声明的。 使用表值参数，可以不必创建临时表或许多参数，即可向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或例程（如存储过程或函数）发送多行数据。  
   
- 表值参数与 OLE DB 和 ODBC 中的参数数组类似，但具有更高的灵活性，且与 [!INCLUDE[tsql](../../includes/tsql-md.md)]的集成更紧密。 表值参数的另一个优势是能够参与基于数据集的操作。  
+ 表值参数与 OLE DB 和 ODBC 中的参数数组类似，但具有更高的灵活性，且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 表值参数的另一个优势是能够参与基于数据集的操作。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 通过引用向例程传递表值参数，以避免创建输入数据的副本。 可以使用表值参数创建和执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程，并且可以使用任何托管语言从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码、托管客户端以及本机客户端调用它们。  
   

@@ -18,13 +18,13 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f5050b0def51df6ded38aa69c9eb8d45f2ccd70
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54872b5c44962f4011ae4b7e4238304fd1dfb228
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334638"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545217"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 支持的 Transact-SQL 语法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,17 +52,17 @@ ms.locfileid: "34334638"
   
 |Transact-SQL 语句|支持的语法|异常|  
 |-----------------------------|----------------------|----------------|  
-|[Insert](../../t-sql/statements/insert-transact-sql.md)|所有语法， *execute_statement* 子句除外。|InclusionThresholdSetting|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|InclusionThresholdSetting|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
+|[Insert](../../t-sql/statements/insert-transact-sql.md)|所有语法， *execute_statement* 子句除外。|None|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有语法。|None|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|所有语法。|None|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有语法。|None|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有语法。|None|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|None|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有语法。|None|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|所有语法。|None|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|所有语法。|对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|所有语法|对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|所有语法。|None|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense 在支持的语句中  
  当以下语法元素用于受支持的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句之一时， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中的 IntelliSense 提供支持：  

@@ -15,13 +15,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f09da24682c65d737e03685f936f85de62b6e2e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a6d1b5ad744de6973b7a4cfcbfa41863a0c47f20
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182503"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537837"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>将搜索功能所使用的断字符还原到以前的版本
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -219,8 +219,8 @@ ms.locfileid: "33182503"
 |---------------|------------------|-------------|  
 |以前的 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|InclusionThresholdSetting|  
-|当前文件名|MSWB7.dll|InclusionThresholdSetting|  
+|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|当前文件名|MSWB7.dll|None|  
   
  **德语 (deu)，LCID 1031**  
   
@@ -237,8 +237,8 @@ ms.locfileid: "33182503"
 |---------------|------------------|-------------|  
 |以前的 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|InclusionThresholdSetting|  
-|当前文件名|MsWb70011.dll|InclusionThresholdSetting|  
+|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|当前文件名|MsWb70011.dll|None|  
   
  **荷兰语 (nld)，LCID 1043**  
   
@@ -353,8 +353,8 @@ ms.locfileid: "33182503"
 |---------------|------------------|-------------|  
 |以前的 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |以前的文件名|Thawbrkr.dll|Thawbrkr.dll|  
-|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|InclusionThresholdSetting|  
-|当前文件名|MsWb7001e.dll|InclusionThresholdSetting|  
+|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|当前文件名|MsWb7001e.dll|None|  
   
  **繁体中文 (zh-hk)，LCID 3076**  
   

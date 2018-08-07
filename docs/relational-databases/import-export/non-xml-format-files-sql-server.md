@@ -19,13 +19,13 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0a87403ce74d29fd1a967e4eb0775a70f7d10ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 318d2ee649a083023485ee3eed3507aeb643cfe3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940562"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543649"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,14 +63,14 @@ ms.locfileid: "32940562"
   
   “版本”和  “列数”字段仅出现一次。 下表对其意义进行了说明。  
   
-|格式化文件字段|Description|  
+|格式化文件字段|描述|  
 |------------------------|-----------------|  
 |版本|**bcp** 实用工具的版本号：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 该版本号仅可由 **bcp**识别，而无法由 [!INCLUDE[tsql](../../includes/tsql-md.md)]识别。<br /><br /> <br /><br /> 注意：读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**生成的 12.0 版格式化文件。|  
 |列数|数据文件中字段的数目。 该数目必须在所有行中都相同。|  
   
  其他格式化文件字段说明需要大容量导入或导出的数据字段。 每个数据字段都需在格式化文件中占单独一行。 每个格式化文件行均包含下表中说明的格式化文件字段的值。  
   
-|格式化文件字段|Description|  
+|格式化文件字段|描述|  
 |------------------------|-----------------|  
 |**宿主文件字段顺序**|用以表示数据文件中每个字段的位置的数字。 行中的第一个字段为 1，依此类推。|  
 |**宿主文件数据类型**|表示存储在数据文件的给定字段中的数据类型。 对于 ASCII 数据文件，使用 SQLCHAR；对于本机格式数据文件，使用默认的数据类型。 有关详细信息，请参阅 [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)。|  

@@ -21,13 +21,13 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bda4afe1b3c6b64ea1609412be66de03fa6329e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3014dc84d9d5d54a79536ffa010529dc373e00f9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940142"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535547"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "32940142"
 |**real**|30|  
 |**int**|12|  
 |**bigint**|19|  
-|**int**|7|  
+|**smallint**|7|  
 |**tinyint**|5|  
 |**money**|30|  
 |**smallmoney**|30|  
@@ -114,7 +114,7 @@ ms.locfileid: "32940142"
 |**real**|4|  
 |**int**|4|  
 |**bigint**|8|  
-|**int**|2|  
+|**smallint**|2|  
 |**tinyint**|@shouldalert|  
 |**money**|8|  
 |**smallmoney**|4|  

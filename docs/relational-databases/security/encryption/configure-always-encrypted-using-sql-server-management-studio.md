@@ -18,13 +18,13 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b72dca20aaa566f8bb6630931fc656ee6231182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180444"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543067"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   如果没有进行参数化，整个查询（包括类型转换）将在 SQL Server/Azure SQL 数据库内进行处理。 如果启用了参数化，某些类型转换将由 SQL Server Management Studio 中的 .NET Framework 来执行。 由于 .NET Framework 类型系统和 SQL Server 类型系统之间存在差异（例如某些类型的精度不同，如 float），启用了参数化来执行的查询可产生不同于未启用参数化来执行的查询的结果。 
 
-#### <a name="permissions"></a>权限      
+#### <a name="permissions"></a>Permissions      
 
 若要对加密列运行任何查询（包括在加密文本中检索数据的查询），则需要具有数据库中的 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 权限。   
 若要对任何查询结果进行解密或对任何查询参数（通过对 Transact-SQL 变量进行参数化而生成）进行加密，除了上述权限，还需具有访问保护目标列的列主密钥的权限：   
@@ -259,7 +259,7 @@ SQL Server Management Studio 将在数据库中为列主密钥创建元数据。
 
 SQL Server Management Studio 将生成新的列加密密钥，然后它将从数据库中检索所选列主密钥的元数据。 然后，SQL Server Management Studio 将使用该列主密钥元数据访问包含列主密钥的密钥存储并对列加密密钥加密。 最后，将在数据库中为新的列加密密钥创建元数据。 该对话框通过生成并发出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句来实现此操作。
 
-### <a name="permissions"></a>权限
+### <a name="permissions"></a>Permissions
 
 需要数据库中的 *更改任意加密主密钥* 和 *查看任意列主密钥定义* 数据库权限，该对话框才能创建列加密密钥元数据和访问列主密钥元数据。
 若要访问密钥存储并使用列主密钥，可能需要密钥存储或/和密钥上的权限：
@@ -334,7 +334,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 > [!NOTE]
 > 强烈建议你不要在轮换后永久地删除旧的列主密钥。 相反，应该在其当前密钥存储中保留旧的列主密钥，或将其存档在另一个安全位置。 如果在配置新的列主密钥之前，从备份文件将数据库还原到某个时间点，则需要使用旧密钥来访问数据。
 
-### <a name="permissions"></a>权限
+### <a name="permissions"></a>Permissions
 
 轮替列主密钥要求具备以下数据库权限：
 
@@ -369,7 +369,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 7.  在“摘要”页上，查看你选择的选项，单击“完成”，并在完成后关闭该向导。
 8.  使用**对象资源管理器**导航到“安全”/“始终加密密钥”/“列加密密钥”文件夹，并找到要从数据库中删除的旧列加密密钥。 右键单击该密钥，然后选择“删除” 。
 
-### <a name="permissions"></a>权限
+### <a name="permissions"></a>Permissions
 
 轮替列加密密钥需要以下数据库权限： **更改任意列主密钥** — 在使用自动生成的新列加密密钥（还将生成新的列主密钥及其新的元数据）时需要。
 **更改任意列加密密钥** — 在为新列加密密钥添加元数据时需要。
@@ -402,7 +402,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 > [!NOTE]
 > 如果为数据库或 DACPAC 中的列配置的列主密钥存储在 Azure 密钥保管库中，系统将提示你登录到 Azure（如果尚未登录）。
 
-### <a name="permissions"></a>权限
+### <a name="permissions"></a>Permissions
 
 若要在 DACPAC 或目标数据库中设置了始终加密的情况下执行 DAC 升级操作，则可能需要以下部分或所有权限，具体取决于 DACPAC 中的架构与目标数据库架构之间的差异。
 
@@ -425,7 +425,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 如果你的应用程序配置为修改或检索存储在源数据库（导出的数据库）中的加密数据，则无需执行任何特殊操作便可让应用程序查询目标数据库中的加密数据，因为这两个数据库中的密钥相同。
 
 
-### <a name="permissions"></a>权限
+### <a name="permissions"></a>Permissions
 
 你需要源数据库上的 *更改任意列主密钥* 和 *更改任意列加密密钥* 。 你需要目标数据库上的 *更改任意列主密钥*、 *更改任意列加密密钥*、 *查看任意列主密钥定义*和 *查看任意列加密* 。
 
@@ -448,7 +448,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 |移动加密数据而不对其解密。<br><br>**注意：** 在迁移之前，必须存在包含加密列的目标表。| 数据提供程序/驱动程序： *任意*<br>列加密设置 = 已禁用<br><br>（如果使用用于 SQL Server 的 .Net Framework 数据提供程序和 .NET Framework 4.6 或更高版本。）| 数据提供程序/驱动程序： *任意*<br>列加密设置 = 已禁用<br><br>（如果使用用于 SQL Server 的 .Net Framework 数据提供程序和 .NET Framework 4.6 或更高版本。）<br><br>用户必须将 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 设置为 ON。<br><br>有关详细信息，请参阅 [迁移通过“始终加密”保护的敏感数据](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。
 
 
-### <a name="permissions"></a>权限
+### <a name="permissions"></a>Permissions
 
 若要 **加密** 或 **解密** 数据源中存储的数据，需要源数据库中的 *查看任意列主密钥定义* 和 *查看任意列加密密钥定义* 权限。
 

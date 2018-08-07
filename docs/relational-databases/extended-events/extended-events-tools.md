@@ -17,13 +17,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 445ee6ce61017507756006fdc2f2b22359b2ec0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d20946e721e4bff7c231466af55ac0c01a4140e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938882"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541477"
 ---
 # <a name="extended-events-tools"></a>扩展事件工具
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "32938882"
 ## <a name="ddl-statements"></a>DDL 语句  
  请以下 DDL 语句可以创建、更改和删除扩展事件会话。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)|创建用于标识事件源、事件会话目标和事件会话参数的扩展事件会话对象。|  
 |[ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)|启动或停止事件会话，或更改事件会话配置。|  
@@ -54,7 +54,7 @@ ms.locfileid: "32938882"
 ## <a name="catalog-views"></a>目录视图  
  使用下面的目录视图可获取创建事件会话时所创建的元数据。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|列出所有事件会话定义。|  
 |[sys.server_event_session_actions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|对事件会话中每个事件的每个操作都返回一行。|  
@@ -68,7 +68,7 @@ ms.locfileid: "32938882"
 > [!NOTE]  
 >  直到会话启动，这些视图中才会包含会话数据。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|返回有关会话调度程序池的信息。|  
 |[sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|对事件包显示的每个对象都返回一行。|  
@@ -84,7 +84,7 @@ ms.locfileid: "32938882"
 ## <a name="system-tables"></a>系统表  
  使用下面的系统表可以获取与 SQL 跟踪事件类和列的扩展事件等效项有关的信息。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|映射到 SQL 跟踪事件类的每个扩展事件各占一行。|  
 |[trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|映射到 SQL 跟踪列 ID 的每个扩展事件操作各占一行。|  

@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432386"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539027"
 ---
 # <a name="ddl-triggers"></a>DDL 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432386"
 >  测试您的 DDL 触发器以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器。  
   
 ## <a name="types-of-ddl-triggers"></a>DDL 触发器的类型  
- Transact-SQL DDL 触发器  
+ ### <a name="transact-sql-ddl-trigger"></a>Transact-SQL DDL 触发器  
  用于执行一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以响应服务器范围或数据库范围事件的一种特殊类型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 例如，如果执行某个语句（如 ALTER SERVER CONFIGURATION）或者使用 DROP TABLE 删除某个表，则激发 DDL 触发器。  
   
- CLR DDL 触发器  
+ ### <a name="clr-ddl-trigger"></a>CLR DDL 触发器  
  CLR 触发器将执行在托管代码（在 .NET Framework 中创建并在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中上载的程序集的成员）中编写的方法，而不用执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
   
  仅在运行触发 DDL 触发器的 DDL 语句后，DDL 触发器才会激发。 DDL 触发器无法作为 INSTEAD OF 触发器使用。 对于影响局部或全局临时表和存储过程的事件，不会触发 DDL 触发器。  
