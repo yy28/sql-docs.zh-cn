@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216807"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39400780"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
   在本教程中，将使用向导创建饼图，然后将对其稍作修改以了解都能执行哪些操作。 您可以通过两种不同的方式学习本教程。 两种方法具有相同的结果，都将得到与下图其中之一类似的饼图：  
   
- ![查看"我第一个饼图"运行中](../media/rs-my1stpierunview.gif""my First Pie Chart"运行中查看"）  
+ ![查看"我第一个饼图"运行中](../media/rs-my1stpierunview.gif"my First Pie Chart"在运行视图")  
   
 ## <a name="prerequisites"></a>必要條件  
  无论您是使用 XML 数据还是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询，都需要有权访问 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 报表生成器。 可以运行独立版本，也可以运行 ClickOnce 版本（可从报表管理器或 SharePoint 站点获取）。 仅第一步，如何打开报表生成器的 ClickOnce 版本不同的。 有关详细信息，请参阅[安装、 卸载、 和报表生成器支持](../install-uninstall-and-report-builder-support.md)。  

@@ -30,13 +30,13 @@ caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b8859b2cc7aed93f941756400caa387061034b6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d788da4f619feebd27919d8a34ec81de4a923f4
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784268"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452701"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -139,7 +139,7 @@ ASYMMETRIC KEY asym_key_name
 - 服务器的[身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)必须匹配登录名类型才能允许访问。
 - 有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 - 只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份的用户才可创建登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 - 如果使用 CREDENTIAL 选项，则还需要对此服务器的 ALTER ANY CREDENTIAL 权限。 
   
@@ -297,7 +297,7 @@ CREATE LOGIN 语句必须是批中的唯一语句。
   
  有关 SQL 数据库登录的详细信息，请参阅[管理 Microsoft Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)。 
  
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 
@@ -402,7 +402,7 @@ CREATE LOGIN 语句必须是批中的唯一语句。
   
  有关 SQL 数据仓库登录的详细信息，请参阅[管理 Microsoft Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)。 
  
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 
@@ -513,7 +513,7 @@ WINDOWS
 - 自动创建登录名将启用新的登录名，并授予它服务器级 CONNECT SQL 权限。 
 - 有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份的用户才可创建登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
   
 ## <a name="after-creating-a-login"></a>创建登录后  

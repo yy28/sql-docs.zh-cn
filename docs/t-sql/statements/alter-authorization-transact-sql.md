@@ -29,13 +29,13 @@ caps.latest.revision: 84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1d1ff4bfeb848cf4f668d7e48a3cd3b574052ecc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 741f76e47b883ce9aa95b27c473052a78fa42967
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786208"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457501"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,7 +282,7 @@ SELECT IS_MEMBER ('db_owner');
 返回值 1 表示该用户是角色的成员。  
    
     
-## <a name="permissions"></a>权限    
+## <a name="permissions"></a>Permissions    
  要求具有实体的 TAKE OWNERSHIP 权限。 如果新所有者不是执行该语句的用户，那么：1) 如果新所有者是用户或登录名，则要求具有该所有者的 IMPERSONATE 权限；2) 如果新所有者是角色，则要求具有该角色的成员身份或该角色的 ALTER 权限；3) 如果新所有者是应用程序角色，则要求具有该应用程序角色的 ALTER 权限。    
     
 ## <a name="examples"></a>示例    

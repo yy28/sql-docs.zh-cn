@@ -50,7 +50,7 @@ ms.locfileid: "37275623"
   
 7.  在项目菜单上单击**添加引用**。  
   
-8.  在中**添加引用**对话框中 **.NET**选项卡上，选择**System.Web.Services**，然后单击**确定**。  
+8.  在中 **添加引用** 对话框中 **.NET**选项卡上，选择 **System.Web.Services** ，然后单击**确定**。  
   
  有关详细信息，请参阅[访问 SOAP API](../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
   
