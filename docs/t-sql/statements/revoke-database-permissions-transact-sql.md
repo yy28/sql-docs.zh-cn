@@ -20,13 +20,13 @@ caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 590a643785887ee82a5e7d5d614d02a2c439c5b9
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7e9f6c708980335f2e41d4016fd5f7da078fe7b9
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942343"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455291"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 数据库权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -201,7 +201,7 @@ permission | ALL [ PRIVILEGES ]
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  执行此语句的主体（或用 AS 选项指定的主体）必须具有对数据库的 CONTROL 权限，或具有隐含对数据库的 CONTROL 权限的更高权限。  
   
  若要使用 AS 选项，则指定的主体必须拥有数据库。  

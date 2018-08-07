@@ -28,13 +28,13 @@ caps.latest.revision: 75
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c818f027da13852b57d87eec057e2d535086f760
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4247fe42571152c3d05434d5e910500c65cd7d10
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942873"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454561"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -193,7 +193,7 @@ ALTER USER userName
 > [!NOTE]  
 >  拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  更改用户名需要具有 ALTER ANY USER 权限。  
   
  更改用户的目标登录名需要对数据库拥有 CONTROL 权限。  

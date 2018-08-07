@@ -35,13 +35,13 @@ caps.latest.revision: 99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7114c1c63abfc9e457316f7c77d6e820990a1e9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 536bc7d7570b5b03ed6e36ff6e5ebc0d8fe47936
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789518"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454034"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -273,7 +273,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  有关空间索引的详细信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行 DROP INDEX，至少需要对表或视图拥有 ALTER 权限。 默认情况下，将向 **sysadmin** 固定服务器角色以及 **db_ddladmin** 和 **db_owner** 固定数据库角色授予此权限。  
   
 ## <a name="examples"></a>示例  

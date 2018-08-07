@@ -19,13 +19,13 @@ ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e302556b3611b2babf901f206e122e0447bdacd
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b8fd19c92e3e9104c46c78d569d71ce55fe138c9
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255059"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454113"
 ---
 # <a name="data-types-transact-sql"></a>数据类型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "36255059"
 |||  
 |-|-|  
 |[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)|  
-|[bit](../../t-sql/data-types/bit-transact-sql.md)|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
+|[bit](../../t-sql/data-types/bit-transact-sql.md)|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
 |[decimal](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)|[smallmoney](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
 |[money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)||  

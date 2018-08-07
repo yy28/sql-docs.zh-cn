@@ -28,13 +28,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8d0468175a620162ae59f49085fa9c5bb2c6600
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bc0926f7d6b4a19b22265f85f60651002bc22a76
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787818"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451211"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,7 +80,7 @@ SET DATEFIRST 7 ;
   
  指定 SET DATEFIRST 对 DATEDIFF 不起作用。 DATEDIFF 始终使用星期日作为每周的第一天，以确保函数是确定性的。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

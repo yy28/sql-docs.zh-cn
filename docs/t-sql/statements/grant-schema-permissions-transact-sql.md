@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 070ca221a685c2290d9272deb8ad0a5b475023d9
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3ec9d696191fefbcfe64c6b80d057980e4b45e07
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941763"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452611"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 架构权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +114,7 @@ AS granting_principal
   
  有关详细信息，请参阅 Microsoft 知识库中编号为 914847 的文章。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  如果使用 AS 选项，还必须满足以下附加要求：  

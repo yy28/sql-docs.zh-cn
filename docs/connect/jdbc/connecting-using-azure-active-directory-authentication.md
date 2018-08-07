@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278838"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452641"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证连接
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > 包含的用户数据库必须存在和表示指定的包含的数据库用户 Azure AD 用户或组，指定 Azure AD 用户属于，必须存在于数据库，并且必须具有 CONNECT 权限 （除 Azure Active Directory服务器管理员或组）
 
-
 ## <a name="connecting-using-access-token"></a>使用访问令牌进行连接
-应用程序/服务可以在 Azure Active Directory 中检索访问令牌，并使用它来连接到 SQL Azure 数据库。 请注意该 accessToken 只能在驱动程序管理器类中使用 getconnection （） 方法的属性参数进行设置。 它不能在连接字符串中使用。
- 
+应用程序/服务可以在 Azure Active Directory 中检索访问令牌，并使用它来连接到 SQL Azure 数据库。
+
+> [!NOTE] 
+> **accessToken**只能在驱动程序管理器类中使用 getconnection （） 方法的属性参数进行设置。 它不能在连接字符串中使用。
+
 下面的示例包含一个简单的 Java 应用程序连接到 Azure SQL 数据库访问基于令牌的身份验证。 然后再生成和运行示例，请执行以下步骤：
 1.  在 Azure Active Directory 中创建的应用程序帐户，为你的服务。
     1. 登录 Azure 门户。

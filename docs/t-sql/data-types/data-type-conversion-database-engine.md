@@ -24,13 +24,13 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de3f775b95f5b3ec429ba38a8acba4d2c7d36929
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: eb22a3686b026382da88fede58cb613834254b96
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408305"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456871"
 ---
 # <a name="data-type-conversion-database-engine"></a>数据类型转换（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**bit**|**Boolean**|  
 |**binary**、**varbinary**、**image**|一维 Byte() 数组|  
 |**int**|**Long**|  
-|**int**|**Integer**|  
+|**smallint**|**Integer**|  
 |**tinyint**|**Byte**|  
 |**float**|**双精度**|  
 |**real**|**Single**|  

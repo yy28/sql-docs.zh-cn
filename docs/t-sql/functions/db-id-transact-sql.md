@@ -26,13 +26,13 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b445816ec9d088138d17c103f39f1471ce16c57c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 725dcf0f543b61c9b143ad6c4cc56ae5289ef800
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786808"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451081"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ DB_ID ( [ 'database_name' ] )
 ## <a name="remarks"></a>Remarks
 `DB_ID` 仅可用于返回 Azure SQL 数据库中当前数据库的数据库标识符。 如果指定的数据库名称不是当前数据库，则返回 NULL。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限。 调用方连接的数据库将始终出现在 sys.databases 中。
   
 > [!IMPORTANT]  

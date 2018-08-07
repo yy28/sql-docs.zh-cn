@@ -26,13 +26,13 @@ caps.latest.revision: 95
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bb001613cea3dd94131d028329d2fed159b8fc7c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cae70ca1a3d78583b49a79b212f233c073ae835f
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047086"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459401"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 语句 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,10 +99,10 @@ FROM <backup_device>
 |-----------------|---------------|--------------------------------------------|  
 |**BackupName**|**nvarchar(128)**|备份集名称。|  
 |**BackupDescription**|**nvarchar(255)**|备份集说明。|  
-|**BackupType**|**int**|备份类型：<br /><br /> 1 = 数据库<br /><br /> 2 = 事务日志<br /><br /> 4 = 文件<br /><br /> 5 = 数据库差异<br /><br /> 6 = 差异文件<br /><br /> 7 = 部分<br /><br /> 8 = 差异部分|  
+|**BackupType**|**smallint**|备份类型：<br /><br /> 1 = 数据库<br /><br /> 2 = 事务日志<br /><br /> 4 = 文件<br /><br /> 5 = 数据库差异<br /><br /> 6 = 差异文件<br /><br /> 7 = 部分<br /><br /> 8 = 差异部分|  
 |**ExpirationDate**|**datetime**|备份集的过期时间。|  
 |**Compressed**|**BYTE(1)**|是否使用基于软件的压缩对备份集进行压缩：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
-|**位置**|**int**|备份集在卷中的位置（用于 FILE = 选项）。|  
+|**位置**|**smallint**|备份集在卷中的位置（用于 FILE = 选项）。|  
 |**DeviceType**|**tinyint**|与用于备份操作的设备对应的编号：<br /><br /> 磁盘：<br /><br /> 2 = 逻辑<br /><br /> 102 = 物理<br /><br /> 磁带：<br /><br /> 5 = 逻辑<br /><br /> 105 = 物理<br /><br /> 虚拟设备：<br /><br /> 7 = 逻辑<br /><br /> 107 = 物理<br /><br /> 逻辑设备名称和设备号在 sys.backup_devices 中；有关详细信息，请参阅 [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)。|  
 |**UserName**|**nvarchar(128)**|执行备份操作的用户名。|  
 |**ServerName**|**nvarchar(128)**|写入备份集的服务器名称。|  
@@ -116,8 +116,8 @@ FROM <backup_device>
 |**DatabaseBackupLSN**|**numeric(25,0)**|最近的数据库完整备份的日志序列号。<br /><br /> DatabaseBackupLSN 是“检查点的起点”，在备份开始时触发。 如果在数据库空闲且未配置复制时进行备份，此 LSN 将与 FirstLSN 一致。|  
 |BackupStartDate|**datetime**|备份操作的开始日期和时间。|  
 |**BackupFinishDate**|**datetime**|备份操作的完成日期和时间。|  
-|**SortOrder**|**int**|服务器排列次序。 该列仅对数据库备份有效。 提供该列是为了向后兼容。|  
-|**CodePage**|**int**|服务器使用的服务器代码页或字符集。|  
+|**SortOrder**|**smallint**|服务器排列次序。 该列仅对数据库备份有效。 提供该列是为了向后兼容。|  
+|**CodePage**|**smallint**|服务器使用的服务器代码页或字符集。|  
 |**UnicodeLocaleId**|**int**|用于 Unicode 字符数据排序的服务器 Unicode 区域设置 ID 配置选项。 提供该列是为了向后兼容。|  
 |**UnicodeComparisonStyle**|**int**|服务器 Unicode 比较风格配置选项，可提供对 Unicode 数据排序的额外控制。 提供该列是为了向后兼容。|  
 |**CompatibilityLevel**|**tinyint**|从其中创建备份的数据库兼容级别设置。|  

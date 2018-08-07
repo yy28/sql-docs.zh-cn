@@ -22,13 +22,13 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e66447775abfb3b2d67bf53ed3f93cfd6b2159b3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6a49d6bc2f17633d5459f8946d48b067fb9ff04f
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784198"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458691"
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 |ReplTest1|描述|返回的 sql_variant 基类型|  
 |-----------|-----------------|----------------------------------------|  
-|**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，例如：<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **int**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 输入无效。|  
+|**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，例如：<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 输入无效。|  
 |**精度**|数值基本数据类型的位数：<br /><br /> datetime = 23<br /><br /> smalldatetime = 16<br /><br /> float = 53<br /><br /> real = 24<br /><br /> decimal (p,s) 和 numeric (p,s) = p<br /><br /> money = 19<br /><br /> smallmoney = 10<br /><br /> bigint = 19<br /><br /> int = 10<br /><br /> smallint = 5<br /><br /> tinyint = 3<br /><br /> bit = 1<br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
 |**小数位数**|数值基本数据类型的小数点后的位数：<br /><br /> decimal (p,s) 和 numeric (p,s) = s<br /><br /> money 和 smallmoney = 4<br /><br /> datetime = 3<br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
 |**TotalBytes**|同时容纳值的元数据和数据所需的字节数。 在检查 sql_variant 列中数据的最大一侧时，该信息很有用。 如果该值大于 900，则索引创建会失败。|**int**<br /><br /> NULL = 输入无效。|  

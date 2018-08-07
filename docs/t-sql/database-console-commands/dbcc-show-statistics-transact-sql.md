@@ -36,13 +36,13 @@ caps.latest.revision: 75
 author: uc-msft
 ms.author: umajay
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ef8ab735511e5885fde7c3e5a218a75bc6f41fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 45f0e42f637f452b12ff32a0b2f580c3c87e9bd3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262627"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454631"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>结果集  
 下表对指定 STAT_HEADER 时结果集中所返回的列进行了说明。
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |“属性”|统计信息对象的名称。|  
 |Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函数是另一种检索此信息的方法。 有关详细信息，请参阅此页中的[备注](#Remarks)部分。|  
@@ -114,7 +114,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 下表对指定 DENSITY_VECTOR 时结果集中所返回的列进行了说明。
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |All Density|密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
 |Average Length|存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。|  
@@ -122,7 +122,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 下表对指定 HISTOGRAM 选项时结果集中所返回的列进行了说明。
   
-|列名|Description|  
+|列名|描述|  
 |---|---|
 |RANGE_HI_KEY|直方图梯级的上限列值。 列值也称为键值。|  
 |RANGE_ROWS|其列值位于直方图梯级内（不包括上限）的行的估算数目。|  

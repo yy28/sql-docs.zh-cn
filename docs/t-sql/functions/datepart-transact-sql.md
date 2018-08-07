@@ -30,13 +30,13 @@ caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1209d7cc2bf7270922fa271d7f63984d50fb775
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3d86b859ed9f5688485ed796b742607ec737a592
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785388"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458361"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,12 +162,12 @@ ISO 8601 包括 ISO 周-日期系统，即周的编号系统。 每周都与该�
   
 |每周的第一天|一年的第一周包含|分配两次的周|使用的国家/地区|  
 |---|---|---|---|
-|星期日|1 月 1 日，<br /><br /> 第一个星期六，<br /><br /> 其中有 1–7 天属于此年|是|United States|  
-|星期一|1 月 1 日，<br /><br /> 第一个星期日，<br /><br /> 其中有 1–7 天属于此年|是|大多数欧洲国家和英国|  
-|星期一|1 月 4 日<br /><br /> 第一个星期四，<br /><br /> 其中有 4–7 天属于此年|“否”|ISO 8601，挪威和瑞典|  
-|星期一|1 月 7 日<br /><br /> 第一个星期一，<br /><br /> 7 天均属于此年|“否”||  
-|星期三|1 月 1 日，<br /><br /> 第一个星期二，<br /><br /> 其中有 1–7 天属于此年|是||  
-|星期六|1 月 1 日，<br /><br /> 第一个星期五，<br /><br /> 其中有 1–7 天属于此年|是||  
+|星期日|1 月 1 日，<br /><br /> 第一个星期六，<br /><br /> 其中有 1–7 天属于此年|用户帐户控制|United States|  
+|星期一|1 月 1 日，<br /><br /> 第一个星期日，<br /><br /> 其中有 1–7 天属于此年|用户帐户控制|大多数欧洲国家和英国|  
+|星期一|1 月 4 日<br /><br /> 第一个星期四，<br /><br /> 其中有 4–7 天属于此年|否|ISO 8601，挪威和瑞典|  
+|星期一|1 月 7 日<br /><br /> 第一个星期一，<br /><br /> 7 天均属于此年|否||  
+|星期三|1 月 1 日，<br /><br /> 第一个星期二，<br /><br /> 其中有 1–7 天属于此年|用户帐户控制||  
+|星期六|1 月 1 日，<br /><br /> 第一个星期五，<br /><br /> 其中有 1–7 天属于此年|用户帐户控制||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` 返回以分钟数表示的 TZoffset (tz) 值（带有签名）。 此语句返回了 310 分钟的时区偏移量：

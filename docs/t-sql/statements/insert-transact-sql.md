@@ -35,13 +35,13 @@ caps.latest.revision: 136
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e28bd156151f090a7c8ed3568eba4a72b7aab750
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2a0170141b065c900280f75b82e58fb2de1eddcf
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791718"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455971"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -408,7 +408,7 @@ OUTPUT 子句
   
  使用 OPENROWSET(BULK…) 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是如何处理模拟的。 有关详细信息，请参阅[使用 BULK INSERT 或 OPENROWSET (BULK...) 批量导入数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 中的“安全注意事项”。  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要对目标表具有 INSERT 权限。  
   
  默认情况下，将 INSERT 权限授予 sysadmin 固定服务器角色成员、db_owner 和 db_datawriter 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  

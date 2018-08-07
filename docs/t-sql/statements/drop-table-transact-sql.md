@@ -40,13 +40,13 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8507904e98c032d9ab57b9bb51ae486f68c805c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3e10bf2f229be4c164c1e8459f5646e009208602
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788648"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455851"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -105,7 +105,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 > [!IMPORTANT]  
 >  不应在同一个批处理中对同一个表执行 DROP TABLE 和 CREATE TABLE。 否则，可能出现意外错误。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要拥有该表所属架构的 ALTER 权限、该表的 CONTROL 权限或 **db_ddladmin** 固定数据库角色中的成员身份。  
   
 ## <a name="examples"></a>示例  

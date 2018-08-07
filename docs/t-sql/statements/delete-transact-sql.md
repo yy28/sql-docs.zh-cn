@@ -29,13 +29,13 @@ caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 627e9a2bf7b7a70012d7e5d993535784bbb722fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8af5ca1d58acd6f59c4e1b8c871e89e251e14c57
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788188"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452251"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -215,7 +215,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  要求对目标表具有 DELETE 权限。 如果语句包含 WHERE 子句，则还必须有 SELECT 权限。  
   
  默认情况下，将 DELETE 权限授予 **sysadmin** 固定服务器角色成员、**db_owner** 和 **db_datawriter** 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  

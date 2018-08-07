@@ -32,13 +32,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fddab02a7b7b195e7a6249f76ccd9bf5bc9a2732
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 998dd7d64429c90e2a368b24f094905f91d43aa8
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786978"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454521"
 ---
 # <a name="open-master-key-transact-sql"></a>OPEN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
   
  如果数据库主密钥在其中显式打开的事务回滚，则此密钥将保持打开。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

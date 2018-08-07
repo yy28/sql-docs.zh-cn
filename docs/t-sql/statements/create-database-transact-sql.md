@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fb69ad94c2759a4f3bc55409212d9aedad2096f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792259"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456191"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -501,7 +501,7 @@ CREATE DATABASE database_snapshot_name
 ## <a name="viewing-database-information"></a>查看数据库信息  
  可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
   
  为了控制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上的磁盘使用，通常只有少数登录帐户才有创建数据库的权限。  
@@ -1079,7 +1079,7 @@ CATALOG_COLLATION 参数仅在数据库创建期间可用。
   
  有关详细信息，请参阅[使用 TRANSACT-SQL 创建 Azure SQL 数据库的副本](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 要创建数据库，登录名必须为下列各项之一： 
   
 - 服务器级别主体登录名  
@@ -1210,7 +1210,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
    > [!TIP]
    > 解决方法是使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi)。 在 `CREATE DATABASE` 之后设置数据库选项并添加文件。  
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 要创建数据库，登录名必须为下列各项之一： 
   
 - 服务器级别主体登录名  
@@ -1291,7 +1291,7 @@ SERVICE_OBJECTIVE
 
 SQL 数据仓库设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 所需的权限：  
   
 -   服务器级别主体登录名（由预配进程创建），或者  
@@ -1385,7 +1385,7 @@ WITH (
   
  如果 AUTOGROW 为 OFF，那么对于在单个计算节点上增加的日志大小可能会超过 log_size 的任何操作，将向用户返回错误。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 master 数据库中的 CREATE ANY DATABASE 权限，或者 sysadmin 固定服务器角色的成员身份。  
   
  以下示例向数据库用户 Fay 提供创建数据库的权限。  

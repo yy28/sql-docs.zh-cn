@@ -27,13 +27,13 @@ caps.latest.revision: 60
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f81a0363ef180ed781ee7c325640985e8d20bc2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3e23c8eff134160d7c55035738cad9a091bc460c
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789718"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454361"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,7 +133,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>不推荐使用的声明  
  当前支持不指定架构名称的 CREATE SCHEMA 语句，目的是为了向后兼容。 此类语句并不在数据库中实际创建架构，但它们会创建表和视图，并授予权限。 主体不需要 CREATE SCHEMA 权限来执行这一早期形式的 CREATE SCHEMA，因为不会创建任何架构。 此功能将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对数据库拥有 CREATE SCHEMA 权限。  
   
  若要创建在 CREATE SCHEMA 语句中指定的对象，用户必须拥有相应的 CREATE 权限。  

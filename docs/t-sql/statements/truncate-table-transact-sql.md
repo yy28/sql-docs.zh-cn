@@ -28,13 +28,13 @@ caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: df0f8d8aaf0302d6d854a5fa1a5b0c1eee9e9aef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e72eb9b870a0525739f657432a3cddbf17ac438f
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790888"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451291"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>截断大型表  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够删除或截断超过 128 个区的表，而无需同步锁定所有需删除的区。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  所需的最低权限是 table_name 上的 ALTER 权限。 TRUNCATE TABLE 权限默认授予表所有者、sysadmin 固定服务器角色的成员、db_owner 和 db_ddladmin 固定数据库角色的成员，并且不可转移权限。 但是，可以在诸如存储过程这样的模块中加入 TRUNCATE TABLE 语句，然后为使用 EXECUTE AS 子句的模块授予适当的权限。  
   
 ## <a name="examples"></a>示例  

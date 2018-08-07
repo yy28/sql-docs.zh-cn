@@ -14,36 +14,41 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31a3a492c9c6405e4d7f3c8d629adca38c2a3199
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 578789591b1f0eb62c6da1f3048909962b9f1bc5
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278758"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451562"
 ---
 # <a name="connection-url-sample"></a>连接 URL 示例
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序演示了如何使用连接 URL 连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库。 还演示了如何使用 SQL 语句从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库中检索数据。  
-  
- 此示例的代码文件名为 ConnectURL.java，该文件可在以下位置找到：  
-  
- \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \samples\connections  
-  
-## <a name="requirements"></a>要求  
- 若要运行此示例应用程序，必须将 classpath 设置为包含 mssql-jdbc jar 文件。 还将需要访问 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。  
-  
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序演示了如何使用连接 URL 连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库。 还演示了如何使用 SQL 语句从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库中检索数据。
+
+此示例的代码文件名为 ConnectURL.java，该文件可在以下位置找到：
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\connections
+```
+
+## <a name="requirements"></a>要求
+
+若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 还将需要访问 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。
+
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 若要选择哪个 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
-  
-## <a name="example"></a>示例  
- 在下面的实例中，示例代码在连接 URL 中设置了多个连接属性，然后调用 DriverManager 类的 getConnection 方法，以返回 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。  
-  
- 接下来，示例代码使用 SQLServerConnection 对象的 [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法来创建 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象，然后调用 [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法来执行 SQL 语句。  
-  
- 最后，示例代码使用 executeQuery 方法返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象来循环访问 SQL 语句返回的结果。  
-  
-```java  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 若要选择哪个 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
+
+## <a name="example"></a>示例
+
+在下面的实例中，示例代码在连接 URL 中设置了多个连接属性，然后调用 DriverManager 类的 getConnection 方法，以返回 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。
+
+接下来，示例代码使用 SQLServerConnection 对象的 [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法来创建 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象，然后调用 [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法来执行 SQL 语句。
+
+最后，示例代码使用 executeQuery 方法返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象来循环访问 SQL 语句返回的结果。
+
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -71,7 +76,8 @@ public class ConnectURL {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a>另请参阅  
- [连接和检索数据](../../../connect/jdbc/connecting-and-retrieving-data.md)
+```
+
+## <a name="see-also"></a>另请参阅
+
+[连接和检索数据](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)

@@ -25,13 +25,13 @@ caps.latest.revision: 48
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93ae9787488d9f2a7df3b0a8516b265706f4c4fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: aae5981553ebe1044697be3d60496dee43559afe
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784458"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456921"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ SET FMTONLY { ON | OFF }
   
  SET FMTONLY 的设置是在执行或运行时设置，而不是在分析时设置。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
