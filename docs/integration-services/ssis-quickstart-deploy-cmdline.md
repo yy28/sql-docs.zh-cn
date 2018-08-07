@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335861"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482698"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>使用 ISDeploymentWizard.exe 从命令提示符部署 SSIS 项目
 本快速入门演示如何通过运行 Integration Services 部署向导 (`ISDeploymentWizard.exe`) 从命令提示符部署 SSIS 项目。
@@ -47,7 +47,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>部署向导中的身份验证方法
+## <a name="wizard_auth"></a> 部署向导中的身份验证方法
 
 如果要使用部署向导部署到 SQL Server，则必须使用 Windows 身份验证；不能使用 SQL Server 身份验证。
 

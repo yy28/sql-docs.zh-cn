@@ -37,13 +37,13 @@ caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9aff3c18d4f005a2f28260abac561596da96fc07
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a1f0e63ad7df6755c49a536a2ae7249d3adf8d9d
+ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36247919"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496726"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -444,7 +444,7 @@ ON (p.ProductID = v.ProductID);
   
  有关 PIVOT 和 UNPIVOT 及示例的详细信息，请参阅[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 DELETE、SELECT 或 UPDATE 语句的权限。  
   
 ## <a name="examples"></a>示例  
@@ -488,7 +488,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ### <a name="c-using-the-sql-92-cross-join-syntax"></a>C. 使用 SQL-92 CROSS JOIN 语法  
  下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Employee` 和 `Department` 这两个表的叉积。 包含所返回的 `BusinessEntityID` 行和所有 `Department`名称行的所有可能组合的列表。  
   
-```wql    
+```sql    
 SELECT e.BusinessEntityID, d.Name AS Department  
 FROM HumanResources.Employee AS e  
 CROSS JOIN HumanResources.Department AS d  

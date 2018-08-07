@@ -32,13 +32,13 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 88d7db92ac5ff2ebd47c28b27974da934a68a188
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 36277d0c22e37e1598deb0e52fa0aa1b98328873
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248009"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460021"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +102,7 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
 ## <a name="logging-behavior"></a>日志记录行为  
  `SELECT...INTO` 的日志记录量取决于数据库的有效恢复模式。 在简单恢复模式或大容量日志恢复模式下，大容量操作是最小日志记录操作。 对于最小的日志记录，使用 `SELECT...INTO` 语句可能比创建一个表后再使用 INSERT 语句填充该表的效率更高。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  在目标数据库中要求 CREATE TABLE 权限。  
   
 ## <a name="examples"></a>示例  

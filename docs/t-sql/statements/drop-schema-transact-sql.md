@@ -25,13 +25,13 @@ caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03a7f41a52e445e1949705323b7820ee91e3ce97
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 23e7a6070913408674d127b0fbd8ae3126a4a579
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787968"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459321"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +70,7 @@ DROP SCHEMA schema_name
   
  **警告** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对架构具有 CONTROL 权限，或者对数据库具有 ALTER ANY SCHEMA 权限。  
   
 ## <a name="examples"></a>示例  

@@ -12,12 +12,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 3864a5ac0f4bb1ebd87ab54a0b949ec80b636bc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304387"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482658"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
 现在，可将 SQL Server Integration Services (SSIS) 项目、包和工作负荷移到 Azure 云。 在 Azure SQL 数据库的 SSIS 目录 (SSISDB) 或 SQL 数据库托管实例（预览版）中使用 SQL Server Management Studio (SSMS) 等熟悉的工具来部署、运行和管理 SSIS 项目和包。
@@ -75,7 +75,7 @@ ms.locfileid: "37304387"
 
 如果要设置 SQL 数据库实例来承载 SSISDB，还需安装用于 SSIS 的 Azure 功能包和 Access 可再发行组件。 除提供与内置组件支持的数据源的连接外，这些组件还提供与 Excel 和 Access 文件和各种 Azure 数据源的连接。
 
-还可以安装其他组件，例如可以安装默认情况下未安装的驱动程序。 有关详细信息，请参阅 [Azure-SSIS integration runtime 的自定义安装](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。
+还可以安装其他组件，例如可以安装默认情况下未安装的驱动程序。 有关详细信息，请参阅 [Azure-SSIS integration runtime 的自定义安装](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。
 
 如果拥有企业版许可证，还可使用其他组件。 有关详细信息，请参阅[预配 Azure-SSIS Integration Runtime 企业版](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition)。
 

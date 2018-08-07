@@ -15,13 +15,13 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7652c3b8e57a066f6353a85b09480729fb2a7e05
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8e7ebac1a39218aaa8aa962bba8fb038a5694d62
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328248"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532937"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "34328248"
   
 |数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|215|27|“否”|  
-|SPID|**int**|激发此事件的服务器进程的 ID。|12|是|  
-|EventSubClass|**int**|1 表示用户定义的分类器函数。|21|是|  
-|StartTime|**datetime**|用户定义的分类器函数开始时间。|14|是|  
-|ObjectID|**int**|用户定义的分类器对象的 ID。|22|是|  
-|ObjectName|**nvarchar(256)**|用户定义的分类器函数的两部分名称。 例如，dbo.classifier。|34|是|  
+|EventClass|**int**|215|27|否|  
+|SPID|**int**|激发此事件的服务器进程的 ID。|12|用户帐户控制|  
+|EventSubClass|**int**|1 表示用户定义的分类器函数。|21|用户帐户控制|  
+|StartTime|**datetime**|用户定义的分类器函数开始时间。|14|用户帐户控制|  
+|ObjectID|**int**|用户定义的分类器对象的 ID。|22|用户帐户控制|  
+|ObjectName|**nvarchar(256)**|用户定义的分类器函数的两部分名称。 例如，dbo.classifier。|34|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

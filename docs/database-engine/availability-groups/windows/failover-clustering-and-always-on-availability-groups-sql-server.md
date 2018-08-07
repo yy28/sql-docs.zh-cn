@@ -20,13 +20,13 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f681d05c05d54762da3ba49206befa5ddfe0bd52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 5065bda0d38d08c71ca85288c407ecac36271963
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769353"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509076"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
@@ -71,11 +71,11 @@ ms.locfileid: "34769353"
   
 ||FCI 内的节点|可用性组内的副本|  
 |-|-------------------------|-------------------------------------------|  
-|**使用 WSFC 群集**|是|是|  
+|**使用 WSFC 群集**|用户帐户控制|用户帐户控制|  
 |**保护级别**|实例|“数据库”|  
 |**存储类型**|共享|非共享<br /><br /> 尽管可用性组中的副本不共享存储，但是，由 FCI 承载的副本将使用该 FCI 所要求的共享存储解决方案。 该存储解决方案仅由 FCI 内的节点共享，不在可用性组的副本之间共享。|  
 |**存储解决方案**|直连、SAN、装入点、SMB|取决于节点类型|  
-|**可读辅助副本**|否*|是|  
+|**可读辅助副本**|否*|用户帐户控制|  
 |**适用的故障转移策略设置**|WSFC 仲裁<br /><br /> FCI 特有的<br /><br /> 可用性组设置**|WSFC 仲裁<br /><br /> 可用性组设置|  
 |**故障转移资源**|服务器、实例和数据库|仅数据库|  
   
