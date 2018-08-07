@@ -17,13 +17,13 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85947c35a9c58726d7f65a2d166f060845205d3f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4d762bff773708051d415f3e3fa288e175a62aea
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334278"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555817"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 调试器 -“快速监视”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34334278"
   
 -   右键单击表达式，然后选择“编辑值”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **表达式列表**  
  显示当前选定的表达式。 该下拉列表包含一组表达式，您可以从中选择要显示的表达式。 该列表中的表达式是在当前从 **“调用堆栈”** 窗口中选择的堆栈帧的范围内可用的表达式。 若要显示另一个表达式，可以输入该表达式或从列表中选择它。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持的表达式有：变量、参数和名称以 @@ 开头的系统函数。  
   

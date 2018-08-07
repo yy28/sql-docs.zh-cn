@@ -18,13 +18,13 @@ caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a2d98af4cf1b9fa152f445b4aea74fa0f34c4527
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a030b74b36095892c6a623077fcd9ab41215dd72
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970672"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558707"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32970672"
   
  访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”，再单击“新建序列”，或者右键单击现有序列，再单击“属性”。 如果右键单击现有序列，再单击“属性”，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) 语句，或删除并重新创建序列对象。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **序列名称**  
  在此处输入序列名称。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32970672"
 |数据类型|范围|  
 |---------------|-----------|  
 |**tinyint**|0 到 255|  
-|**int**|-32,768 到 32,767|  
+|**smallint**|-32,768 到 32,767|  
 |**int**|-2,147,483,648 到 2,147,483,647|  
 |**bigint**|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|  
   
@@ -91,7 +91,7 @@ ms.locfileid: "32970672"
   
  有关创建序列选项的其他信息，请参阅 [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对 SCHEMA 拥有 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 权限。  
   
 ## <a name="see-also"></a>另请参阅  

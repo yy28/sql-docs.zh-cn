@@ -15,13 +15,13 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3edda9ebc4f356302c1e6a01c87d026bdb8f5e9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 12058aef871aa14ec5daa8a92c22598cb9067350
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331738"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558327"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ ms.locfileid: "34331738"
   
 |功能|使用本机编译的存储过程访问|解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问|CLR 访问|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|内存优化的表|是|是|否*|  
-|内存优化的表类型|是|是|“否”|  
-|本机编译的存储过程|现在支持嵌套本机编译存储过程。 只要引用的过程也是本机编译过程，则可以在存储过程中使用 EXECUTE 语法。|是|否*|  
+|内存优化的表|用户帐户控制|用户帐户控制|否*|  
+|内存优化的表类型|用户帐户控制|是|否|  
+|本机编译的存储过程|现在支持嵌套本机编译存储过程。 只要引用的过程也是本机编译过程，则可以在存储过程中使用 EXECUTE 语法。|用户帐户控制|否*|  
   
  *无法从上下文连接（执行 CLR 模块时与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接）访问内存优化表或本机编译存储过程。 但是，可以创建和打开能够访问内存优化的表和本机编译的存储过程的其他连接。  
   

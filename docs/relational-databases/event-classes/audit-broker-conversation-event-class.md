@@ -15,13 +15,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ba8cd56b49c78810ebef16925073d0fedddade3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a47a6adddf212c2da97813143b8ca6bf96f520e0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329558"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563491"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,27 +31,27 @@ ms.locfileid: "34329558"
   
 |数据列|类型|描述|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
-|**BigintData1**|**bigint**|消息序列号。|52|“否”|  
-|**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|**错误**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误号（如果此事件报告了错误）。|31|“否”|  
-|**EventClass**|**int**|捕获的事件类的类型。 对于 **Audit Broker Conversation** ，始终为 **158**。|27|“否”|  
-|**EventSubClass**|**int**|事件子类的类型，提供有关每个事件类的进一步信息。 下表列出了此事件的事件子类值。|21|是|  
-|**FileName**|**nvarchar**|登录失败的原因。 如果登录成功，则此列为空。|36|“否”|  
-|**GUID**|**uniqueidentifier**|对话的会话 ID。 此标识符将作为消息的一部分进行传输，并在会话双方之间共享。|54|“否”|  
-|**HostName**|**nvarchar**|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 **HOST_NAME** 函数。|8|是|  
-|**IntegerData**|**int**|消息片段数。|25|“否”|  
-|**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
-|**NTUserName**|**nvarchar**|拥有生成此事件的连接的用户的名称。|6|是|  
-|**ObjectId**|**int**|目标服务的用户 ID。|22|“否”|  
-|**RoleName**|**nvarchar**|会话句柄的角色。 这可以是 **initiator** 或 **target**。|38|“否”|  
-|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
-|**Severity**|**int**|在此事件报告错误时表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重级别。|29|“否”|  
-|**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
-|**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
-|**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|“否”|  
-|**TextData**|**ntext**|如果发生错误，将显示一条用来说明失败原因的消息。 可以是以下值之一：<br /><br /> <br /><br /> **Cert not found**。 针对对话协议安全指定的用户没有证书。<br /><br /> **Not in valid time period**。 针对对话协议安全指定的用户有一份证书，但该证书已过期。<br /><br /> **Cert too large for memory allocation**。 针对对话协议安全指定的用户有一份证书，但该证书过大。 Service Broker 支持的最大证书大小为 32,768 字节。<br /><br /> **Private key not found**。 针对对话协议安全指定的用户有一份证书，但没有与该证书相关联的私钥。<br /><br /> **The cert's private key size is incompatible with the crypto provider**。 无法成功处理证书的私钥大小。 私钥大小必须是 64 字节的倍数。<br /><br /> **The cert's public key size is incompatible with the crypto provider**。 无法成功处理证书的公钥大小。 公钥大小必须是 64 字节的倍数。<br /><br /> **The cert's private key size is incompatible with the encrypted key exchange key**。 密钥交换密钥中指定的密钥大小与证书的私钥大小不匹配。 这通常表示远程计算机上的证书与数据库中的证书不匹配。<br /><br /> **The cert's public key size is incompatible with the security header's signature**。 无法通过证书的公钥来验证安全标头的签名。 这通常表示远程计算机上的证书与数据库中的证书不匹配。|@shouldalert|是|  
+|**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|用户帐户控制|  
+|**BigintData1**|**bigint**|消息序列号。|52|否|  
+|**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|用户帐户控制|  
+|**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
+|**错误**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误号（如果此事件报告了错误）。|31|否|  
+|**EventClass**|**int**|捕获的事件类的类型。 对于 **Audit Broker Conversation** ，始终为 **158**。|27|否|  
+|**EventSubClass**|**int**|事件子类的类型，提供有关每个事件类的进一步信息。 下表列出了此事件的事件子类值。|21|用户帐户控制|  
+|**FileName**|**nvarchar**|登录失败的原因。 如果登录成功，则此列为空。|36|否|  
+|**GUID**|**uniqueidentifier**|对话的会话 ID。 此标识符将作为消息的一部分进行传输，并在会话双方之间共享。|54|否|  
+|**HostName**|**nvarchar**|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 **HOST_NAME** 函数。|8|用户帐户控制|  
+|**IntegerData**|**int**|消息片段数。|25|否|  
+|**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|用户帐户控制|  
+|**NTUserName**|**nvarchar**|拥有生成此事件的连接的用户的名称。|6|用户帐户控制|  
+|**ObjectId**|**int**|目标服务的用户 ID。|22|否|  
+|**RoleName**|**nvarchar**|会话句柄的角色。 这可以是 **initiator** 或 **target**。|38|否|  
+|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
+|**Severity**|**int**|在此事件报告错误时表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重级别。|29|否|  
+|**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|用户帐户控制|  
+|**StartTime**|**datetime**|事件（如果有）的开始时间。|14|用户帐户控制|  
+|**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
+|**TextData**|**ntext**|如果发生错误，将显示一条用来说明失败原因的消息。 可以是以下值之一：<br /><br /> <br /><br /> **Cert not found**。 针对对话协议安全指定的用户没有证书。<br /><br /> **Not in valid time period**。 针对对话协议安全指定的用户有一份证书，但该证书已过期。<br /><br /> **Cert too large for memory allocation**。 针对对话协议安全指定的用户有一份证书，但该证书过大。 Service Broker 支持的最大证书大小为 32,768 字节。<br /><br /> **Private key not found**。 针对对话协议安全指定的用户有一份证书，但没有与该证书相关联的私钥。<br /><br /> **The cert's private key size is incompatible with the crypto provider**。 无法成功处理证书的私钥大小。 私钥大小必须是 64 字节的倍数。<br /><br /> **The cert's public key size is incompatible with the crypto provider**。 无法成功处理证书的公钥大小。 公钥大小必须是 64 字节的倍数。<br /><br /> **The cert's private key size is incompatible with the encrypted key exchange key**。 密钥交换密钥中指定的密钥大小与证书的私钥大小不匹配。 这通常表示远程计算机上的证书与数据库中的证书不匹配。<br /><br /> **The cert's public key size is incompatible with the security header's signature**。 无法通过证书的公钥来验证安全标头的签名。 这通常表示远程计算机上的证书与数据库中的证书不匹配。|@shouldalert|用户帐户控制|  
   
  下表列出了此事件类的子类值。  
   

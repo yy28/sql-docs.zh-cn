@@ -1,7 +1,7 @@
 ---
 title: 连接选项 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
-ms.translationtype: HT
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174934"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367639"
 ---
 # <a name="connection-options"></a>连接选项
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "39174934"
 |TraceFile|String|指定用于跟踪数据的文件的路径。|未设置任何值。|  
 |TraceOn|1 或 **true** ，表示启用跟踪。<br /><br />0 或 **false** ，表示禁用跟踪。|指定对正在建立的连接是启用（1 或 true）还是禁用（0 或 false）ODBC 跟踪。|false (0)|  
 |TransactionIsolation|SQLSRV 驱动程序使用以下值：<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV 驱动程序使用以下值：<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|指定事务隔离级别。<br /><br />有关事务隔离的详细信息，请参阅 SQL Server 文档中的 [设置事务隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。|SQLSRV_TXN_READ_COMMITTED<br /><br />或多个<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|transparentNetworkIPResolution|启用或禁用|影响的主机名相关联的连接顺序时第一个解析主机名的 IP 不响应，并且有多个 Ip。<br /><br />它与 MultiSubnetFailover 提供不同的连接序列进行交互。 有关详细信息，请参阅[使用透明网络 IP 解析](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)。|已启用|
+|transparentNetworkIPResolution|启用或禁用|影响的主机名相关联的连接顺序时第一个解析主机名的 IP 不响应，并且有多个 Ip。<br /><br />它与 MultiSubnetFailover 提供不同的连接序列进行交互。 有关详细信息，请参阅[透明网络 IP 解析](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)或[使用透明网络 IP 解析](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)。|已启用|
 |TrustServerCertificate|1 或 **true** ，表示信任证书。<br /><br />0 或 **false** ，表示不信任证书。|指定客户端是应信任（1 或 true）还是应拒绝（0 或 false）自签名的服务器证书。|false (0)|  
 |UID<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|String|指定在使用 SQL Server 身份验证进行连接时要使用的用户 ID<sup>4</sup>。|未设置任何值。|  
 |WSID|String|指定用于跟踪的计算机的名称。|未设置任何值。|  
@@ -69,7 +69,7 @@ ms.locfileid: "39174934"
 
 4. 要连接到的 *UID* 身份验证进行连接时，必须同时设置 *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 属性。  
 
-许多支持的键都是 ODBC 连接字符串属性。 有关 ODBC 连接字符串的信息，请参阅 [将连接字符串关键字用于 SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+许多支持的键都是 ODBC 连接字符串属性。 有关 ODBC 连接字符串的信息，请参阅 [将连接字符串关键字用于 SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 
 ## <a name="see-also"></a>另请参阅  
 [连接到服务器](../../connect/php/connecting-to-the-server.md)  

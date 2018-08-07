@@ -25,13 +25,13 @@ caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 53c05afb9651f14f3d917d0d74e0b42f8cfdc056
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2250ed27de30f400a665eaf14e5d992ac0e84da
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708875"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559557"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "34708875"
 |功能|变更数据捕获|更改跟踪|  
 |-------------|-------------------------|---------------------|  
 |**跟踪的更改**|||  
-|DML 更改|是|是|  
+|DML 更改|用户帐户控制|用户帐户控制|  
 |**跟踪的信息**|||  
-|历史数据|是|“否”|  
-|是否更改了列|是|是|  
-|DML 类型|是|是|  
+|历史数据|用户帐户控制|否|  
+|是否更改了列|用户帐户控制|用户帐户控制|  
+|DML 类型|用户帐户控制|用户帐户控制|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  变更数据捕获通过获取进行 DML 更改的方面和更改的实际数据，提供用户表的历史更改信息。 更改是使用异步进程捕获的，此进程读取事务日志，并且对系统造成的影响很小。  
@@ -94,11 +94,11 @@ ms.locfileid: "34708875"
   
 |列类型|在更改表中捕获更改|限制|  
 |--------------------|---------------------------------------|-----------------|  
-|稀疏列|是|不支持在使用列集时捕获更改。|  
-|计算列|“否”|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
-|XML|是|不跟踪对单个 XML 元素的更改。|  
-|timestamp|是|更改表中的数据类型将转换为 binary。|  
-|BLOB 数据类型|是|仅当 BLOB 列本身更改时才存储该列的上一映像。|  
+|稀疏列|用户帐户控制|不支持在使用列集时捕获更改。|  
+|计算列|否|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
+|XML|用户帐户控制|不跟踪对单个 XML 元素的更改。|  
+|timestamp|用户帐户控制|更改表中的数据类型将转换为 binary。|  
+|BLOB 数据类型|用户帐户控制|仅当 BLOB 列本身更改时才存储该列的上一映像。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能  
  本节说明下列功能如何与变更数据捕获交互：  

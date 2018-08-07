@@ -20,13 +20,13 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5e95d2f22ab60dc702a6f978ddd9d3b5362d4c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b4f85c0660223b8890ba65c5e6157634d1cb2f40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940162"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561057"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "32940162"
 |**real**|0|@shouldalert|0|@shouldalert|  
 |**int**|0|@shouldalert|0|@shouldalert|  
 |**bigint**|0|@shouldalert|0|@shouldalert|  
-|**int**|0|@shouldalert|0|@shouldalert|  
+|**smallint**|0|@shouldalert|0|@shouldalert|  
 |**tinyint**|0|@shouldalert|0|@shouldalert|  
 |**money**|0|@shouldalert|0|@shouldalert|  
 |**smallmoney**|0|@shouldalert|0|@shouldalert|  

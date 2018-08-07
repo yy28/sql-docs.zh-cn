@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973822"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538137"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ cmd.ExecuteNonQuery();
 用于 SQL Server 的 .NET Framework 数据提供程序附带以下内置列主密钥存储提供程序，这些提供程序已使用特定的提供程序名称（用于查找该提供程序）进行预注册。
 
 
-| 类 | Description | 提供程序（查找）名称 |
+| 类 | 描述 | 提供程序（查找）名称 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 类| 用于 Windows 证书存储的提供程序。 | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注意：** 此提供程序在 .NET Framework 4.6.1 及更高版本中可用。 |用于支持 [Microsoft 加密 API：下一代 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)的密钥存储的提供程序。 这类存储通常是硬件安全模块 — 一种用于保护和管理数字密钥并提供加密处理的物理设备。  | MSSQL_CNG_STORE|
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|“属性”|Description|在以下 .NET 版本中引入
+|“属性”|描述|在以下 .NET 版本中引入
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|用于 Windows 证书存储区的密钥存储提供程序。|  4.6
 |[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|用于 Microsoft 下一代加密 API (CNG) 的密钥存储提供程序。|  4.6.1

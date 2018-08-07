@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae7ce7fbf55cffbc069eb7afcc15eebbb6833f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941402"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563531"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -257,7 +257,7 @@ ms.locfileid: "32941402"
   
  使用下列属性将字段映射到目标表中的列：  
   
-|COLUMN 属性|Description|可选/<br /><br /> Required|  
+|COLUMN 属性|描述|可选/<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE ="fieldID"****|指定映射到列的字段 ID。<br /><br /> COLUMN SOURCE="fieldID"/> maps to FIELD ID="fieldID"\<****\<****/>|Required|  
 |NAME = "*columnName*"|指定格式化文件所表示的行集中的列名。 此列名用于标识结果集中的列，并且该列不需要与目标表中使用的列名相对应。|Required|  

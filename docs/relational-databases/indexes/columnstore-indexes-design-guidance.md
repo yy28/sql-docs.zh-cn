@@ -14,13 +14,13 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4b49040b94f04625a027ec07a490117aebed278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564721"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,6 +97,7 @@ ms.locfileid: "32941382"
   
 *   不再需要单独的数据仓库。 在传统上，公司会在行存储表中运行事务，然后将数据载入单独的数据仓库以运行分析。 对于许多工作负载，可以通过在事务表中创建非聚集列存储索引，来消除加载过程和单独的数据仓库。
 
+  
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供多种策略来保持这种方案的高性能。 试用该方案的过程非常简单，因为无需更改 OLTP 应用程序即可启用非聚集列存储索引。 
 
 若要添加更多的处理资源，可以针对可读的辅助副本运行分析。 使用可读的辅助副本可将事务工作负荷与分析工作负荷的处理分隔开来。 

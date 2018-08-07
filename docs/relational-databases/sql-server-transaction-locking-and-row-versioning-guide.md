@@ -21,13 +21,13 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973792"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563221"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -302,11 +302,11 @@ GO
   
 |隔离级别|脏读|不可重复读|虚拟读取|  
 |---------------------|----------------|------------------------|-------------|  
-|**未提交的读取**|是|是|是|  
-|**已提交的读取**|“否”|是|是|  
-|**可重复的读取**|“否”|否|是|  
-|**快照**|“否”|否|“否”|  
-|**可序列化**|“否”|否|“否”|  
+|**未提交的读取**|用户帐户控制|是|用户帐户控制|  
+|**已提交的读取**|否|是|用户帐户控制|  
+|**可重复的读取**|否|否|用户帐户控制|  
+|**快照**|否|否|否|  
+|**可序列化**|否|否|否|  
   
  有关每个事务隔离级别控制的特定类型的锁定或行版本控制的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
@@ -346,7 +346,7 @@ GO
   
  下表列出了[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]可以锁定的资源。  
   
-|资源|Description|  
+|资源|描述|  
 |--------------|-----------------|  
 |RID|用于锁定堆中的单个行的行标识符。|  
 |KEY|索引中用于保护可序列化事务中的键范围的行锁。|  
@@ -368,7 +368,7 @@ GO
   
  下表显示了[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用的资源锁模式。  
   
-|锁模式|Description|  
+|锁模式|描述|  
 |---------------|-----------------|  
 |共享 (S)|用于不更改或不更新数据的读取操作，如 `SELECT` 语句。|  
 |更新 (U)|用于可更新的资源中。 防止当多个会话在读取、锁定以及随后可能进行的资源更新时发生常见形式的死锁。|  
@@ -403,7 +403,7 @@ GO
   
 <a name="lock_intent_table"></a>意向锁包括意向共享 (IS)、意向排他 (IX) 以及意向排他共享 (SIX)。  
   
-|锁模式|Description|  
+|锁模式|描述|  
 |---------------|-----------------|  
 |意向共享 (IS)|保护针对层次结构中某些（而并非所有）低层资源请求或获取的共享锁。|  
 |意向排他 (IX)|保护针对层次结构中某些（而并非所有）低层资源请求或获取的排他锁。 IX 是 IS 的超集，它也保护针对低层级别资源请求的共享锁。|  
@@ -439,12 +439,12 @@ GO
 ||现有的授予模式||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**请求的模式**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**意向共享 (IS)**|是|是|是|是|是|“否”|  
-|**共享 (S)**|是|是|是|否|否|“否”|  
-|**更新 (U)**|是|是|否|否|否|“否”|  
-|**意向排他 (IX)**|是|否|否|是|否|“否”|  
-|**意向排他共享 (SIX)**|是|否|否|否|否|“否”|  
-|**排他 (X)**|“否”|否|否|否|否|“否”|  
+|**意向共享 (IS)**|用户帐户控制|是|是|是|是|否|  
+|**共享 (S)**|用户帐户控制|是|是|否|否|否|  
+|**更新 (U)**|用户帐户控制|是|否|否|否|否|  
+|**意向排他 (IX)**|用户帐户控制|否|否|是|否|否|  
+|**意向排他共享 (SIX)**|用户帐户控制|否|否|否|否|否|  
+|**排他 (X)**|否|否|否|否|否|否|  
   
 > [!NOTE]  
 > 意向排他锁（IX 锁）与 IX 锁模式兼容，因为 IX 表示打算只更新部分行而不是所有行。 还允许其他事务尝试读取或更新部分行，只要这些行不是其他事务当前更新的行即可。 此外，如果两个事务尝试更新同一行，将在表级和页级上授予这两个事务 IX 锁。 但是，将在行级授予一个事务 X 锁。 另一个事务必须在该行级锁被删除前等待。  
@@ -467,7 +467,7 @@ GO
 -   行表示保护索引项的锁模式。  
 -   模式表示使用的组合锁模式。 键范围锁模式由两部分组成。 第一部分表示用于锁定索引范围 (RangeT) 的锁类型，第二部分表示用于锁定特定键 (K) 的锁类型。 这两部分用连字符 (-) 连接，例如 RangeT-K。  
   
-    |范围|行|“模式”|Description|  
+    |范围|行|“模式”|描述|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共享范围，共享资源锁；可序列化范围扫描。|  
     |RangeS|U|RangeS-U|共享范围，更新资源锁；可串行更新扫描。|  
@@ -482,13 +482,13 @@ GO
 ||现有的授予模式|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**请求的模式**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**共享 (S)**|是|是|否|是|是|是|“否”|  
-|**更新 (U)**|是|否|否|是|否|是|“否”|  
-|**排他 (X)**|“否”|否|否|否|否|是|“否”|  
-|**RangeS-S**|是|是|否|是|是|否|“否”|  
-|**RangeS-U**|是|否|否|是|否|否|“否”|  
-|**RangeI-N**|是|是|是|否|否|是|“否”|  
-|**RangeX-X**|“否”|否|否|否|否|否|“否”|  
+|**共享 (S)**|用户帐户控制|是|否|是|是|是|否|  
+|**更新 (U)**|用户帐户控制|否|否|是|否|是|否|  
+|**排他 (X)**|否|否|否|否|否|是|否|  
+|**RangeS-S**|用户帐户控制|是|否|是|是|否|否|  
+|**RangeS-U**|用户帐户控制|否|否|是|否|否|否|  
+|**RangeI-N**|用户帐户控制|是|是|否|否|是|否|  
+|**RangeX-X**|否|否|否|否|否|否|否|  
   
 #### <a name="lock_conversion"></a>转换锁  
  当键范围锁与其他锁重叠时，将创建转换锁。  
@@ -1062,7 +1062,8 @@ BEGIN TRANSACTION
 ```   
   
 ##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中基于行版本控制的隔离级别  
- 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供现有事务隔离级别（已提交读）的实现，该实现使用行版本控制提供语句级快照。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 还提供一个事务隔离级别（快照），该级别也使用行版本控制提供事务级快照。  
+ 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供现有事务隔离级别（已提交读）的实现，该实现使用行版本控制提供语句级快照。 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 还提供一个事务隔离级别（快照），该级别也使用行版本控制提供事务级快照。  
   
  行版本控制是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的一般框架，它在修改或删除行时调用写入时复制机制。 这要求在运行事务时，行的旧版本必须可供需要早先事务一致状态的事务使用。 行版本控制可用于执行以下操作：  
   
@@ -1500,7 +1501,7 @@ ALTER DATABASE AdventureWorks2016
   
  下表列出并说明了 ALLOW_SNAPSHOT_ISOLATION 选项的各个状态。 同时使用 ALTER DATABASE 和 ALLOW_SNAPSHOT_ISOLATION 选项不会妨碍当前正在访问数据库数据的用户。  
   
-|当前数据库的快照隔离框架状态|Description|  
+|当前数据库的快照隔离框架状态|描述|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|未启用对快照隔离事务的支持。 不允许执行快照隔离事务。|  
 |PENDING_ON|对快照隔离事务的支持处于转换状态（从 OFF 到 ON）。 打开的事务必须完成。<br /><br /> 不允许执行快照隔离事务。|  

@@ -15,13 +15,13 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b2ce7ce7e891e0750f80637c3ebc42176167834
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: aee77102736555249afa814d21cb0359b8a8e044
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329568"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563401"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -205,11 +205,11 @@ WHERE col1 = 'dn';
   
 | 运算 | 内存优化， <br/> 密切相关的文章 | 内存优化， <br/> 非聚集 | 基于磁盘， <br/> （非）聚集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 索引扫描，检索所有表行。 | 是 | 是 | 是 |  
-| 采用相等谓词 (=) 的索引查找。 | 是 <br/> （需要完整键。） | 是  | 是 |  
-| 采用不相等和范围谓词 <br/> （>、<、<=、>=、`BETWEEN`）。 | “否” <br/> （索引扫描中的结果。） | 是 <sup>1</sup> | 是 |  
-| 按与索引定义匹配的排序顺序检索行。 | “否” | 是 | 是 |  
-| 按与索引定义相反的排序顺序检索行。 | “否” | 否 | 是 |  
+| 索引扫描，检索所有表行。 | 用户帐户控制 | 是 | 用户帐户控制 |  
+| 采用相等谓词 (=) 的索引查找。 | 用户帐户控制 <br/> （需要完整键。） | 用户帐户控制  | 用户帐户控制 |  
+| 采用不相等和范围谓词 <br/> （>、<、<=、>=、`BETWEEN`）。 | 否 <br/> （索引扫描中的结果。） | 是 <sup>1</sup> | 用户帐户控制 |  
+| 按与索引定义匹配的排序顺序检索行。 | 否 | 是 | 用户帐户控制 |  
+| 按与索引定义相反的排序顺序检索行。 | 否 | 否 | 用户帐户控制 |  
 
 <sup>1</sup>对于内存优化表的非聚集索引，不需要完整键，也可以执行索引查找。  
 

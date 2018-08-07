@@ -15,13 +15,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c73c32346a06a95d1e6641858372107529bf7b95
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f4de437e0c7198fa68b7ad70310eb47c250947f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330708"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556787"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,26 +31,26 @@ ms.locfileid: "34330708"
   
 |数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充。|10|是|  
-|ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
-|DatabaseID|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对指定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
-|DatabaseName|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
-|Duration|**bigint**|事件占用的时间（微秒）。|13|是|  
-|EndTime|**datetime**|对于 Mount Request 事件，表示超时发生时的装入超时时间；否则，表示事件本身的时间（在此类情况下，StartTime 表示相应装入请求的时间）。|15|是|  
-|EventClass|**int**|事件类型 = 195。|27|“否”|  
-|EventSequence|**int**|指定事件在请求中的顺序。|51|“否”|  
-|EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 磁带装入请求<br /><br /> 2 = 磁带装入完成<br /><br /> 3 = 磁带装入已取消|21|是|  
-|GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
-|HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
-|IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为 DOMAIN\\*username*）。|11|是|  
-|NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
-|NTUserName|**nvarchar**|Windows 用户名。|6|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
-|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
-|SPID|**int**|发生该事件的会话的 ID。|12|是|  
-|StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|TextData|**ntext**|物理设备名称 [ ( 逻辑设备名称 ) ]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|@shouldalert|是|  
+|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充。|10|用户帐户控制|  
+|ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|用户帐户控制|  
+|DatabaseID|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对指定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在跟踪中捕获 ServerName 数据列而且服务器可用，则将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
+|DatabaseName|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|用户帐户控制|  
+|Duration|**bigint**|事件占用的时间（微秒）。|13|用户帐户控制|  
+|EndTime|**datetime**|对于 Mount Request 事件，表示超时发生时的装入超时时间；否则，表示事件本身的时间（在此类情况下，StartTime 表示相应装入请求的时间）。|15|用户帐户控制|  
+|EventClass|**int**|事件类型 = 195。|27|否|  
+|EventSequence|**int**|指定事件在请求中的顺序。|51|否|  
+|EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 磁带装入请求<br /><br /> 2 = 磁带装入完成<br /><br /> 3 = 磁带装入已取消|21|用户帐户控制|  
+|GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|用户帐户控制|  
+|HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|用户帐户控制|  
+|IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|用户帐户控制|  
+|LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为 DOMAIN\\*username*）。|11|用户帐户控制|  
+|NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|用户帐户控制|  
+|NTUserName|**nvarchar**|Windows 用户名。|6|用户帐户控制|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
+|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
+|StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
+|TextData|**ntext**|物理设备名称 [ ( 逻辑设备名称 ) ]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|@shouldalert|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

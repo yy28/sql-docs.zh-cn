@@ -15,13 +15,13 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98234a7c82ec120f5bcad11415b5061a5ae713f1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e10a11286ca070876d121770c4ab4833656793e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329578"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564471"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,20 +29,20 @@ ms.locfileid: "34329578"
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|是|  
+|数据列名称|数据类型|描述|列 ID|用户帐户控制|  
 |----------------------|---------------|-----------------|---------------|---------|  
-|**EventClass**|**int**|事件类型 = 81。|27|“否”|  
-|**EventSequence**|**int**|给定事件在请求中的顺序。|51|“否”|  
-|**EventSubClass**|**int**|事件子类的类型。<br /><br /> 1= 内存增加<br /><br /> 2= 内存减少|21|是|  
-|**IntegerData**|**int**|新内存大小 (MB)。|25|是|  
-|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|**RequestID**|**int**|包含该语句的请求的 ID。|49|是|  
-|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|“否”|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
-|**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
-|**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
-|**XactSequence**|**bigint**|用于说明当前事务的标记。|50|是|  
+|**EventClass**|**int**|事件类型 = 81。|27|否|  
+|**EventSequence**|**int**|给定事件在请求中的顺序。|51|否|  
+|**EventSubClass**|**int**|事件子类的类型。<br /><br /> 1= 内存增加<br /><br /> 2= 内存减少|21|用户帐户控制|  
+|**IntegerData**|**int**|新内存大小 (MB)。|25|用户帐户控制|  
+|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|用户帐户控制|  
+|**RequestID**|**int**|包含该语句的请求的 ID。|49|用户帐户控制|  
+|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
+|**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
+|**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
+|**XactSequence**|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

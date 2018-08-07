@@ -19,13 +19,13 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3ac30662eeac86d80e29a5110cf97d95220588c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 536e12eb37e727abbc63dde451bfc098a20783ae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349637"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553507"
 ---
 # <a name="snapshot-agent-security"></a>快照代理安全性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "37349637"
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **进程帐户**  
  输入用于在分发服务器上运行快照代理的 Windows 帐户。 所指定的 Windows 帐户必须满足以下条件：  
   

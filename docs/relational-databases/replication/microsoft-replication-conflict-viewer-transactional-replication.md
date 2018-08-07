@@ -17,13 +17,13 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ded0152483afc3721701a4113330b92dae6541ca
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c4a5bf377692da9fc760e518e3fd15aef614f613
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351359"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558357"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 复制冲突查看器（事务复制）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37351359"
 > [!NOTE]  
 >  复制冲突查看器显示在合并复制和事务复制中发生的冲突。 对于事务复制，可以使用复制冲突查看器查看冲突数据，但无法为冲突选择不同的解决方法。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  复制冲突查看器划分为两个部分。 对话框的上半部分显示所选表的冲突列表。 单击冲突列表中的项时，将在对话框的下半部分显示该冲突的详细信息。  
   
  在下半部分中，冲突数据显示在两个相对应的列（**“冲突解决入选方”** 和 **“冲突解决落选方”**）中。 如果冲突发生在更新的数据和删除的数据之间，则对于冲突中删除的一方来说，可能没有可显示的数据。 在这种情况下，复制冲突查看器会在其中一列中显示一条消息，指示在一个位置删除了该行，在另一个位置更新了该行。 此外，它还会指出建议的解决方法。  

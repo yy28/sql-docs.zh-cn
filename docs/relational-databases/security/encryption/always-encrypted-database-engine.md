@@ -18,13 +18,13 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 163ea15a1293ce128725bdbb3d20baa4129fdb80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332217"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558877"
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,10 +82,10 @@ ms.locfileid: "37332217"
 
 |任务|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|是|是|“否”|
-|在数据库中创建密钥元数据。|是|是|是|
-|创建具有加密列的新表|是|是|是|
-|对选定的数据库列中的现有数据进行加密|是|是|“否”|
+|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|用户帐户控制|是|否|
+|在数据库中创建密钥元数据。|用户帐户控制|是|用户帐户控制|
+|创建具有加密列的新表|用户帐户控制|是|用户帐户控制|
+|对选定的数据库列中的现有数据进行加密|用户帐户控制|是|否|
 
 > [!NOTE]
 > 请确保在安全环境中，在非托管数据库的计算机上运行密钥预配或数据加密工具。 否则，敏感数据或密钥可能会泄漏给服务器环境，这将减少使用“始终加密”功能的好处。  
