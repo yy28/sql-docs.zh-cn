@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988751"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367659"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
 本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文演示如何执行以下操作：
@@ -184,5 +184,11 @@ ms.locfileid: "33988751"
     > [!NOTE]
     > 此操作只更改查询窗口连接到的服务器，而不更改对象资源管理器连接到的服务器。 
 
+## <a name="next-steps"></a>后续步骤
+下一篇文章将介绍如何在 SQL Server Managment Studio 中编写各种对象的脚本。 
+
+转到下一篇文章，了解详细信息：
+> [!div class="nextstepaction"]
+> [后续步骤](scripting-ssms.md)
 
 

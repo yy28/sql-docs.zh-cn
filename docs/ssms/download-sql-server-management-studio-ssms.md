@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188933"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452521"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -146,7 +146,7 @@ Analysis Servics (AS)
 
 - 在“属性”窗口中修改任何文件组属性后，单击“脚本”按钮，生成两个脚本 - 一个脚本带有 USE<database> 语句，另一个脚本带有 USE master 语句。  带有 USE master 的脚本错误生成，应该放弃。 运行包含 USE<database> 语句的脚本。
 - 使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
-- 可能会观察到 XEvents 查看器中的一些延迟。 这是 [.Net Framework 中的已知问题](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 请考虑升级到 NetFx 4.7.2。
+- 可能会观察到 XEvents 查看器中的一些延迟。 这是 [.NET Framework 中的已知问题](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 请考虑升级到 NetFx 4.7.2。
 - 复制监视器发生故障，并显示“无法加载文件或程序集...”错误。 若要解决此问题，请执行以下操作：
   1. 关闭 SqlMonitor.exe（即复制监视器）和 SSMS。
   2. 从 [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) 下载更新后的 sqlmonitor.exe.config。

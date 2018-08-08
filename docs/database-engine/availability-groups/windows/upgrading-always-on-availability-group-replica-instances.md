@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f269692489e852e60cb30172738d8ff89ec95f53
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9ed204382cf962e82fc6418a57343909515afaca
+ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770065"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496706"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "34770065"
   
 6.  升级或更新 PRIMARY1  
   
-## <a name="upgrade-update-sql-server-instances-with-multiple-ags"></a>升级或更新包含多个 AG 的 SQL Server 实例  
+## <a name="upgrade-or-update-sql-server-instances-with-multiple-ags"></a>升级或更新包含多个 AG 的 SQL Server 实例  
  如果正在单独的服务器节点（活动/活动配置）上运行包含主要副本的多个 AG，则升级路径涉及更多故障转移步骤以在过程中保持高可用性。 假定正在所有副本均处于同步提交模式下的三个服务器节点上运行三个 AG，如下表所示：  
   
 |AG|Node1|Node2|Node3|  
@@ -171,6 +171,63 @@ ms.locfileid: "34770065"
   
 > [!NOTE]  
 >  在许多情况下，滚动升级完成后，将会故障转移回原始的主要副本。 
+
+## <a name="rolling-upgrade-of-a-distributed-availability-group"></a>分布式可用性组的滚动升级
+要执行分布式可用性组的滚动升级，首先升级所有次要副本。 接下来，故障转移转发器，升级第二个可用性组的最后一个剩余实例。 升级其他所有副本后，故障转移全局主要副本，升级第一个可用性组的最后一个剩余实例。 下面提供了包含步骤的详细关系图。 
+
+ 基于你的特定实现，你的升级路径可能不同，客户端应用程序经历的故障时间也可能不同。  
+  
+> [!NOTE]  
+>  在许多情况下，滚动升级完成后，将会故障转移回原始的主要副本。 
+
+### <a name="general-steps-to-upgrade-a-distributed-availability-group"></a>升级分布式可用性组的一般步骤
+1. 备份所有数据库，其中包括系统数据库，以及参与可用性组的数据库。 
+2. 升级并重启第二个可用性组（下游）的所有次要副本。 
+3. 升级并重启第一个可用性组（上游）的所有次要副本。 
+4. 将主要转发器故障转移到第二个可用性组的已升级次要副本。
+5. 等待数据同步。 数据库应显示为在所有同步提交副本上同步，且全局主要副本应与转发器同步。  
+6. 升级并重启第二个可用性组的最后一个剩余实例。 
+7. 将全局主要副本故障转移到第一个可用性组的已升级次要副本。  
+8. 升级主要可用性组的最后一个剩余实例。
+9. 重启新升级的服务器。 
+10. （可选）将两个可用性组故障回复到其原始主要副本。  
+
+>[!IMPORTANT]
+>- 验证各步骤间的同步。 在进行下一步前，确认同步提交副本在可用性组中同步，且全局主要副本与分布式 AG 中的转发器同步。 
+>- 建议：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点。 所有项同步后，保存每个副本状态的屏幕截图。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
+
+
+### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分布式可用性组的滚动升级的示例图
+
+| 可用性组 (availability group) | 主副本 | 次要副本|
+| :------ | :----------------------------- |  :------ |
+| AG1 | NODE1\SQLAG | NODE2\SQLAG|
+| AG2 | NODE3\SQLAG | NODE4\SQLAG|
+| Distributedag| AG1（全局） | AG2（转发器） |
+| &nbsp; | &nbsp; | &nbsp; |
+
+![分布式 AG 的示例图](media/upgrading-always-on-availability-group-replica-instances/rolling-upgrade-dag-diagram.png)
+
+
+此图中关于实例升级的步骤： 
+
+1. 备份所有数据库，其中包括系统数据库，以及参与可用性组的数据库。 
+2. 升级 NODE4\SQLAG（AG2 的次要副本）并重启服务器。 
+3. 升级 NODE2\SQLAG（AG1 的次要副本）并重启服务器。 
+4. 将 AG2 从 NODE3\SQLAG 故障转移到 NODE4\SQLAG。 
+5. 升级 NODE3\SQLAG 并重启服务器。 
+6. 将 AG1 从 NODE1\SQLAG 故障转移到 NODE2\SQLAG。 
+7. 升级 NODE1\SQLAG 并重启服务器。 
+8. （可选）故障回复到原始主要副本。
+    1. 将 AG2 从 NODE4\SQLAG 故障转移到 NODE3\SQLAG。  
+    2. 将 AG1 从 NODE2\SQLAG 故障转移到 NODE1\SQLAG。 
+
+如果每个可用性组中存在第三个副本，将在 NODE3\SQLAG and NODE1\SQLAG 前升级。 
+
+>[!IMPORTANT]
+>- 验证各步骤间的同步。 在进行下一步前，确认同步提交副本在可用性组中同步，且全局主要副本与分布式 AG 中的转发器同步。 
+>- 建议：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点。 同步所有项后，拍摄屏幕快照并保存。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
+
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>更改数据捕获或复制的特殊步骤
 

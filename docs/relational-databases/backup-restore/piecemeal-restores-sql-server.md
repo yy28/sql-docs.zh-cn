@@ -19,18 +19,18 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c0af1af6758a9520d36398dfd34dc56430dd392
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de4ff47096b20847ab3eecffee1cbe734bf17cab
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923652"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415436"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段落还原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 中包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
+  本主题与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版本（联机还原）或 Standard 版本（脱机还原）中包含多个文件或文件组的数据库相关；在简单模式下，仅与包含只读文件组的数据库相关。  
   
- 有关段落还原和内存优化表的信息，请参阅[对具有内存优化表的数据库进行段落还原](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
+ 有关段落还原和内存优化表的信息，请参阅 [对具有内存优化表的数据库进行段落还原](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
   
   “段落还原”允许分阶段还原和恢复包含多个文件组的数据库。 段落还原包括从主文件组开始（有时也从一个或多个辅助文件组开始）的一系列还原顺序。 段落还原保持进行检查，以便确保数据库在结束时将是一致的。 在还原顺序结束后，如果恢复的文件有效并且与数据库一致，则恢复的文件将直接变为联机状态。  
   

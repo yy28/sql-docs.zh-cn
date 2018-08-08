@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356049"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482678"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ ms.locfileid: "37356049"
 
 有关实施订阅流的详细信息，请参阅[导航 SQL 复制 subscriptionStream 设置](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)。
   
+### <a name="blocking-monitor-thread"></a>阻止监视器线程
+
+分发代理维护阻止监视器线程，该线程检测会话间的阻止。 如果阻止监视器线程检测到会话间的阻止，分发代理会进行切换，以使用一个会话来重新应用之前不能应用的当前命令批处理。
+
+阻止监视器线程可以检测到分发代理会话之间的阻止。 但是，在以下情况下阻止监视器线程无法检测到阻止：
+- 发生阻止的会话不是分发代理会话。
+- 会话死锁冻结分发代理的活动。
+
+在此情况下，分发代理会协调所有会话，一旦执行命令就立即全部提交。 如果以下条件成立，会话会发生死锁：
+
+- 分发代理会话和非分发代理会话之间发生阻止。
+- 分发代理正在等待所有会话完成命令执行，此后，分发代理会协调所有会话以一同提交。
+
+例如，将 SubscriptionStreams 参数配置为 8。 会话 10 至会话 17 是分发代理会话。 会话 18 不是分发代理会话。 会话 18 阻止会话 10，会话 11 阻止会话 18。 此外，会话 10 和会话 11 必须一同提交。 但是，由于阻止，分发代理无法一同提交会话 10 和会话 11。 因此，分发代理无法协调这八个会话以实现一同提交，直到会话 10 和会话 11 完成命令执行。
+
+此示例导致没有会话正在执行命令的状态。 达到 QueryTimeout 属性中指定的时间时，分发代理会取消所有会话。
+
+> [!Note]
+> 默认情况下，QueryTimeout 属性的值为 5 分钟。
+
+你可能会注意到在此查询超时期限内，分发代理性能计数器的以下趋势： 
+
+- Dist: Delivered Cmds/sec 性能计数器的值始终是 0。
+- Dist: Delivered Trans/sec 性能计数器的值始终是 0。
+- Dist: Delivery Latency 性能计数器报告值增加，直到解决线程死锁问题。
+
+SQL Server 联机丛书中的“复制分发代理”主题包含有关 SubscriptionStreams 参数的以下描述：“如果一个连接未能执行或提交，所有连接将中止当前批处理，代理将使用单个流重试失败的批处理。”
+
+分发代理使用一个会话来重试之前不能应用的批处理。 分发代理成功应用批处理后，将继续使用多个会话，无需重新启动。
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - 增大分发代理的 **-CommitBatchSize** 参数的值。  
   
