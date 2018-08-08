@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: dcc08dfd4c4759f834a7371dd700c32c69c8de24
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350015"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536157"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "39350015"
 |**8048**|将 NUMA 分区内存对象转换为 CPU 分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2809338)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8048 不再有效。<br /><br />**作用域**：仅全局|  
 |**8075**|在 64 位 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 上收到内存页分配错误时，减少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) 片段。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3074434)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8075 不再有效。<br /><br />**作用域**：仅全局|
 |**8079**|允许 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 询问硬件布局，并在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft-NUMA。 自动 Soft-NUMA 行为可识别超线程（HT/逻辑处理器）。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。<br /><br />**作用域**：仅全局| 
-|**8207**|允许事务复制的单独更新。 对订阅服务器的更新可以作为 DELETE 和 INSERT 对复制。 这可能不符合业务规则的要求，如激发 UPDATE 触发器。 使用跟踪标志 8207 时，对只影响一行的唯一列的更新（单一实例更新）将作为 UPDATE 而非作为 DELETE 或 INSERT 对进行复制。 如果该更新影响具有唯一约束的列或影响多个行，则仍将该更新作为 DELETE 或 INSERT 对进行复制。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/302341)。<br /><br />**作用域**：仅全局|
+|**8207**|允许事务复制和 CDC 的 singleton 更新。 对订阅服务器的更新可以作为 DELETE 和 INSERT 对复制。 这可能不符合业务规则的要求，如激发 UPDATE 触发器。 使用跟踪标志 8207 时，对只影响一行的唯一列的更新（单一实例更新）将作为 UPDATE 而非作为 DELETE 或 INSERT 对进行复制。 如果该更新影响具有唯一约束的列或影响多个行，则仍将该更新作为 DELETE 或 INSERT 对进行复制。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/302341)。<br /><br />**作用域**：仅全局|
 |**8721**|在执行自动更新统计信息时向错误日志提交报告。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/195565)。<br /><br />**作用域**：仅全局|
 |**8744**|为嵌套循环运算符禁用预提取。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/920093)。<br /><br />**注意：** 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行包含嵌套循环运算符的计划时，错误地使用此跟踪标志可能会导致额外的物理读取。<br /><br />**作用域**：全局和会话|
 |**9024**|将全局日志池内存对象转换为 NUMA 节点分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2809338)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 开始，此行为由引擎控制，跟踪标志 9024 不再有效。<br /><br />**作用域**：仅全局|

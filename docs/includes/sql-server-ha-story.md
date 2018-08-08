@@ -68,7 +68,7 @@ SQL Server 2012 中引入的 AlwaysOn 可用性组将数据库的每个事务发
 
 * WSFC 
 * External
-* InclusionThresholdSetting
+* None
 
 要求可用性的所有可用性组都必须使用基础群集，在 SQL Server 2017 中则为 WSFC 或 Pacemaker。 对于使用基础 WSFC 的基于 Windows Server 的可用性组，默认群集类型为 WSFC 且无需设置。 对于基于 Linux 的可用性组，创建可用性组时，群集类型必须设置为“外部”。 在创建可用性组后配置与 Pacemaker 的集成，而在 WSFC 上，需在创建时进行集成。
 

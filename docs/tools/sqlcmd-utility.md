@@ -32,13 +32,13 @@ caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3decb197568d28088e5206ac1ffc46b45108d734
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990409"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452731"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,8 +47,15 @@ ms.locfileid: "37990409"
 
  > 有关如何在 Linux 上使用 sqlcmd，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
-  使用 sqlcmd 实用工具，可以在命令提示符处、在 SQLCMD 模式下的“查询编辑器”中、在 Windows 脚本文件中或者在 SQL Server 代理作业的操作系统 (Cmd.exe) 作业步骤中输入 Transact-SQL 语句、系统过程和脚本文件。 此实用工具使用 ODBC 执行 TRANSACT-SQL 批处理。 
-  
+ **Sqlcmd**实用工具，可以输入 TRANSACT-SQL 语句、 系统过程和脚本文件，通过各种可用模式：
+
+- 通过命令提示符。
+- 在中**查询编辑器**在 SQLCMD 模式下。
+- 在 Windows 脚本文件。
+- 在 SQL Server 代理作业的操作系统 (Cmd.exe) 作业步骤。
+
+该实用工具使用 ODBC 执行 TRANSACT-SQL 批处理。 
+ 
 > [!NOTE]
 > Sqlcmd 实用工具的最新版本可作为 Web 版本从 [下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取。 您需要版本 13.1 或更高版本以支持 Always Encrypted (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
 
@@ -57,10 +64,10 @@ ms.locfileid: "37990409"
   若要在 SSMS 中运行 sqlcmd 语句，请从顶部导航栏上的“查询菜单”下拉列表中选择“SQLCMD 模式”。  
   
 > [!IMPORTANT] 
-> 在“查询编辑器”的常规模式和 SQLCMD 模式下，[!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient 执行操作。 从命令行运行 **sqlcmd** 时， **sqlcmd** 使用 ODBC 驱动程序。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 **sqlcmd** 实用工具中执行相同的查询时，可能会看到不同的行为。  
+> 在“查询编辑器”的常规模式和 SQLCMD 模式下，[!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient 执行操作。 通过命令行运行 sqlcmd 时，sqlcmd 使用 ODBC 驱动程序。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 **sqlcmd** 实用工具中执行相同的查询时，可能会看到不同的行为。  
 >   
   
- 当前， **sqlcmd** 在命令行选项和值之间不需要空格。 但是，在将来的版本中，在命令行选项和值之间可能需要空格。  
+ sqlcmd 暂不要求命令行选项和值之间必须有空格。 不过，在今后推出的版本中，可能会要求在命令行选项和值之间必须有空格。  
  
  其他主题：
 - [启动 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
@@ -121,13 +128,13 @@ sqlcmd
 ## <a name="command-line-options"></a>命令行选项  
  **登录相关选项**  
   **-A**  
- 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 这只适用于支持 DAC 的服务器。 如果 DAC 不可用， **sqlcmd** 会生成错误消息，然后退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 当连接到 SQL 数据库使用-A，您必须是 SQL server 管理员。 DAC 不可用的 Azure Active Directory 管理员。
+ 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 此连接仅适用于支持 DAC 的服务器计算机。 如果 DAC 不可用，sqlcmd 会生成错误消息并退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 当连接到 SQL 数据库使用-A，您必须是 SQL server 管理员。 DAC 不可用的 Azure Active Directory 管理员。
   
  **-C**  
  该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
   
  **-d** *db_name*  
- 启动 **sqlcmd** 时发出一个 `USE` *db_name* 语句。 此选项设置 **sqlcmd** 脚本变量 SQLCMDDBNAME。 它指定初始数据库。 默认为您的登录名的默认数据库属性。 如果数据库不存在，则生成错误消息且 **sqlcmd** 退出。  
+ 启动 **sqlcmd** 时发出一个 `USE` *db_name* 语句。 此选项设置 **sqlcmd** 脚本变量 SQLCMDDBNAME。 此参数指定初始数据库。 默认为您的登录名的默认数据库属性。 如果数据库不存在，则生成错误消息且 **sqlcmd** 退出。  
   
  **-l** *login_timeout*  
  指定在你尝试连接到服务器时 **sqlcmd** 登录 ODBC 驱动程序的超时时间（以秒为单位）。 此选项设置 **sqlcmd** 脚本变量 SQLCMDLOGINTIMEOUT。 登录到 **sqlcmd** 的默认超时时间为 8 秒。 当使用 **-G** 选项连接到 SQL 数据库或 SQL 数据仓库并使用 Azure Active Directory 进行身份验证时，建议超时值至少为 30 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。 该值为 0 时，则允许无限制等待。
@@ -149,10 +156,11 @@ sqlcmd
 - **Azure Active Directory 用户名和密码：** 
 
     当你想要使用 Azure Active Directory 用户名和密码时，可以提供 **-G** 选项，也可以通过提供 **-U** 选项和 **-P** 选项来使用用户名和密码。
+
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    这将在后端生成以下连接字符串： 
+    -G 参数在后端生成以下连接字符串： 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -192,9 +200,13 @@ sqlcmd
  此开关供客户端用于请求加密连接。  
   
  **-P** *password*  
- 用户指定的密码。 密码是区分大小写的。 如果使用了 -U 选项而未使用 **-P** 选项，并且未设置 **SQLCMDPASSWORD** 环境变量，则 sqlcmd 会提示用户输入密码。 若要指定空密码（不推荐），请使用 **-P ""**。 请记住始终：
+ 用户指定的密码。 密码是区分大小写的。 如果使用了 -U 选项而未使用 **-P** 选项，并且未设置 **SQLCMDPASSWORD** 环境变量，则 sqlcmd 会提示用户输入密码。 我们不建议使用 null 密码，但您可以通过连续双引号一对用于参数值指定 null 密码：
+
+- **-P ""**
+
+建议使用强密码。
  
-#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**使用强密码！！**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**使用强密码！**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
   
   
  通过向控制台输出密码提示，可以显示密码提示，如下所示： `Password:`  
@@ -212,7 +224,7 @@ sqlcmd
   
  如果用户名和密码组合不正确，将生成错误消息。  
   
-**注意！**  为实现向后兼容性而保留了 OSQLPASSWORD 环境变量。 SQLCMDPASSWORD 环境变量优先于 OSQLPASSWORD 环境变量；也就是说 **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰，并且旧式脚本可以继续使用。  
+**注意！**  为实现向后兼容性而保留了 OSQLPASSWORD 环境变量。 SQLCMDPASSWORD 环境变量优先于 OSQLPASSWORD 环境变量。 现在，不再共享 OSQLPASSWORD，实用程序**sqlcmd**并**osql**可以彼此不受干扰地使用。 旧脚本将继续使用。  
   
  如果将 **-P** 选项与 **-E** 选项一起使用，将生成错误消息。  
   
@@ -260,7 +272,7 @@ sqlcmd
   
 -   **sqlcmd** 自动识别 Big-endian Unicode 和 Little-endian Unicode 输入文件。 如果已指定 **-u** 选项，输出将始终为 Little-endian Unicode。  
   
--   如果未指定输出文件，输出代码页将为控制台代码页。 这将使输出正确显示在控制台上。  
+-   如果未指定输出文件，输出代码页将为控制台代码页。 借助此方法，可以在控制台上正确显示输出。  
   
 -   假定多个输入文件具有相同的代码页。 可以将 Unicode 和非 Unicode 输入文件混合在一起。  
   
@@ -284,7 +296,7 @@ sqlcmd
  **-o** *output_file*  
  标识从 **sqlcmd**接收输出的文件。  
   
- 如果指定了 **-u** ，则 *output_file* 以 Unicode 格式存储。 如果文件名无效，将生成一个错误消息，并且 **sqlcmd** 将退出。 **sqlcmd** 不支持向同一文件并发写入多个 **sqlcmd** 进程。 文件输出将损坏或不正确。 有关文件格式的详细信息，请参阅 **-f** 开关。 如果此文件不存在，将创建此文件。 前一个 **sqlcmd** 会话中的同名文件将被覆盖。 此处指定的文件不是 **stdout** 文件。 如果指定了 **stdout** 文件，将不使用此文件。  
+ 如果指定了 **-u** ，则 *output_file* 以 Unicode 格式存储。 如果文件名无效，将生成一个错误消息，并且 **sqlcmd** 将退出。 **sqlcmd** 不支持向同一文件并发写入多个 **sqlcmd** 进程。 文件输出将损坏或不正确。 请参阅 **-f**开关也是与文件格式。 如果此文件不存在，将创建此文件。 前一个 **sqlcmd** 会话中的同名文件将被覆盖。 此处指定的文件不是 **stdout** 文件。 如果指定了 stdout 文件，就不会使用此文件。  
   
  路径示例：  
 
@@ -355,20 +367,20 @@ sqlcmd
  `sqlcmd -v MyVar1=something -v MyVar2="some thing"`  
   
  **-x**  
- 导致 **sqlcmd** 忽略脚本变量。 当脚本中包含多个 INSERT 语句，并且这些语句可能包含格式与常规变量（例如 $(*variable_name*)）相同的字符串时，这一选项很有用。  
+ 导致 **sqlcmd** 忽略脚本变量。 如果脚本中包含多个 INSERT 语句，且这些语句可能包含格式与常规变量（如 $(variable_name)）相同的字符串，就会发现此参数很有用。  
   
  **格式设置选项**  
   **-h** *headers*  
  指定要在列标题之间输出的行数。 默认为每一组查询结果输出一次标题。 此选项设置 **sqlcmd** 脚本变量 SQLCMDHEADERS。 使用 **-1** 指定不可输出标题。 任何无效的值都将导致 **sqlcmd** 生成错误消息并随后退出。  
   
  **-k** [**1** | **2**]  
- 删除输出中的所有控制字符，例如制表符和换行符。 这会在返回数据时保留列格式。 如果指定了 1，则控制字符被一个空格替代。 如果指定了 2，则连续的控制字符被一个空格替代。 **-k** 与 **-k1**相同。  
+ 删除输出中的所有控制字符，例如制表符和换行符。 此参数在返回数据时保留列格式。 如果指定了 1，则控制字符被一个空格替代。 如果指定了 2，则连续的控制字符被一个空格替代。 **-k** 与 **-k1**相同。  
   
  **-s** *col_separator*  
  指定列分隔符字符。 默认为空格。 此选项设置 **sqlcmd** 脚本变量 SQLCMDCOLSEP。 若要使用对操作系统有特殊含义的字符，如“与”符号 (&) 或分号 (;)，请将该字符用双引号 (") 引起来。 列分隔符可以是任意 8 位字符。  
   
  **-w** *column_width*  
- 指定用于输出的屏幕宽度。 此选项设置 **sqlcmd** 脚本变量 SQLCMDCOLWIDTH。 该列宽必须是介于 8 和 65536 之间的数字。 如果指定的列宽不在此范围内，则 **sqlcmd** 将生成错误消息。 默认宽度为 80 个字符。 在输出行超出指定的列宽时，将转到下一行。  
+ 指定用于输出的屏幕宽度。 此选项设置 **sqlcmd** 脚本变量 SQLCMDCOLWIDTH。 该列宽必须是介于 8 和 65536 之间的数字。 如果指定的列宽不在此范围内，sqlcmd 就会生成错误消息。 默认宽度为 80 个字符。 在输出行超出指定的列宽时，将转到下一行。  
   
  **-W**  
  此选项删除列的尾随空格。 在准备要导出到另一应用程序的数据时，请将此选项和 **-s** 选项一起使用。 不能与 **-y** 或 **-Y** 选项一起使用。  
@@ -441,10 +453,10 @@ sqlcmd
 > [!NOTE]  
 >  鉴于网络广播的特点， **sqlcmd** 不可能及时接收来自所有服务器的响应。 因此，每次调用该选项所返回的服务器列表都可能不同。  
   
- 如果指定可选参数 **c** ，则输出不会显示 Servers: 标题行，并且列出的每个服务器行都没有前导空格。 这被称为清除输出。 清除输出可以提高脚本语言的处理性能。  
+ 如果指定了可选参数 c，输出就不会包含 Servers: 标题行，且列出的每个服务器行都没有前导空格。 此演示文稿称为清除输出。 清除输出可以提高脚本语言的处理性能。  
   
  **-p**[**1**]  
- 输出每个结果集的性能统计信息。 以下示例是性能统计信息的格式：  
+ 输出每个结果集的性能统计信息。 下面的输出显示示例展示了性能统计信息的格式：  
   
  `Network packet size (bytes): n`  
   
@@ -490,7 +502,7 @@ sqlcmd
 > [!NOTE]  
 >  选项 **-L**、 **-Q**、 **-Z** 或 **-i** 会导致 **sqlcmd** 在执行后退出。  
   
- 命令环境 (Cmd.exe) 中的 **sqlcmd** 命令行的总长度（包括所有参数和扩展变量）取决于 Cmd.exe 所在的操作系统。  
+ 命令环境 (Cmd.exe) 中的 sqlcmd 命令行的总长度（包括所有参数和扩展变量）取决于 Cmd.exe 所在的操作系统。  
   
 ## <a name="variable-precedence-low-to-high"></a>变量优先级（从低到高）  
   
@@ -687,7 +699,7 @@ sqlcmd
 |-102|选择返回值时发生转换错误。|  
   
  **GO** [*count*]  
- GO 指示批处理的结束和任何缓存 Transact-SQL 语句的执行。该批处理分为多个不同批次进行多次执行；无法在单个批处理中声明一个变量超过一次。
+ GO 在批处理结束和任何缓存 Transact-SQL 语句执行时发出信号。 不同批次多次执行批处理。 不能在单个批处理中多次声明变量。
   
  **其他命令**  
   **:r \<** *filename* **>**  
@@ -720,7 +732,7 @@ sqlcmd
   
  如果未指定 *timeout* ，则其默认值将为 SQLCMDLOGINTIMEOUT 变量的值。  
   
- 仅当指定了 *user_name* （作为选项或环境变量）时，才会提示用户输入密码。 如果已设置 SQLCMDUSER 或 SQLCMDPASSWORD 环境变量，则不会出现此提示。 如果既未提供选项，又未提供环境变量，则使用 Windows 身份验证模式登录。 例如，若要使用集成安全性连接到 SQL Server 的一个实例 `instance1`（如 `myserver`），则会使用以下内容：  
+ 仅当指定了 *user_name* （作为选项或环境变量）时，才会提示用户输入密码。 如果已设置 SQLCMDUSER 或 SQLCMDPASSWORD 环境变量，则不会出现此提示。 如果既未提供选项，又未提供环境变量，便会使用 Windows 身份验证模式进行登录。 例如，若要使用集成安全性连接到 SQL Server 的一个实例 `instance1`（如 `myserver`），则会使用以下内容：  
   
  `:connect myserver\instance1`  
   
@@ -757,20 +769,21 @@ sqlcmd
   
 -   每个新的 **sqlcmd** 会话都将覆盖现有的同名文件。  
   
-### <a name="informational-messages"></a>信息性消息  
- **sqlcmd** 将输出由服务器发送的所有信息性消息。 在以下示例中，执行 Transact-SQL 语句后会输出信息性消息。  
+### <a name="informational-messages"></a>信息性消息
+
+sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中，执行 Transact-SQL 语句后会输出信息性消息。
   
- 在命令提示符下键入以下内容：  
+在命令提示符下键入以下内容：
+
+`sqlcmd`
   
- `sqlcmd`  
-  
- `At the sqlcmd prompt type:`  
-  
- `USE AdventureWorks2012;`  
-  
- `GO`  
-  
- 按下 Enter 时，会输出以下信息性消息：“已将数据库上下文改为 'AdventureWorks2012'。”  
+在 sqlcmd 提示符下键入：
+
+`USE AdventureWorks2012;`
+
+`GO`
+
+按下 Enter 时，会输出以下信息性消息：“已将数据库上下文改为 'AdventureWorks2012'。”  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 查询的输出格式  
  **sqlcmd** 首先输出列标题，其中包含在选择列表中指定的列名。 列名使用 SQLCMDCOLSEP 字符分隔。 默认情况下，将使用空格。 如果列名短于列宽，则使用空格填充输出，直到下一列。  

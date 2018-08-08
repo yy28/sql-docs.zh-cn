@@ -16,13 +16,13 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9bc9c0f916a26a46d2bfc3aaed05ce8e4072f57a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279178"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549527"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  如果确定某个查询的性能不够理想，则可根据问题性质进行操作。  
   
--   如果所执行的查询具有多个计划，而最后一个计划明显不如前面的计划，则可通过计划强制机制来强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在今后执行查询时始终使用最佳计划。  
+-   如果所执行的查询具有多个计划，而最后一个计划明显不如前面的计划，则可通过计划强制机制来强制使用最佳计划。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试强制实施优化器中的计划。 如果计划强制实施失败，将触发 XEvent，并指示优化器正常优化。 
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 

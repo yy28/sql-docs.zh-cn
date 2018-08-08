@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787358"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582183"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787358"
 |--------------|------------------------|  
 |默认实例|'*servername*'|  
 |命名实例|'*servername*\\*instancename*'|  
-|故障转移群集实例 - 默认实例|'*virtualservername*'|  
-|故障转移群集实例 - 命名实例|'*virtualservername*\\*instancename*'|  
+|故障转移群集实例 - 默认实例|'*network_name_for_fci_in_wsfc*'|  
+|故障转移群集实例 - 命名实例|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  尽管 @@SERVERNAME 函数和 SERVERPROPERTY 函数的 SERVERNAME 属性可能返回相似格式的字符串，但信息会有所不同。 SERVERNAME 属性自动报告计算机网络名的更改。  
   

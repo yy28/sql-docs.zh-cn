@@ -21,13 +21,13 @@ caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c253b01b0d2e40fe15596fbb63a49119ca5dfdec
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 59b0dc689642906b134da064378a63e185997bfd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024273"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563331"
 ---
 # <a name="columnstore-indexes-overview"></a>列存储索引：概述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "39024273"
 |将表创建为列存储。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，你可以将表创建为聚集列存储索引。 无需先创建行存储表，再将它转换为列存储。|  
 |创建具有列存储索引的内存表。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，你可以创建具有列存储索引的内存优化表。 也可以在创建表后使用 `ALTER TABLE ADD INDEX` 语法添加列存储索引。|  
 |将行存储表转换为列存储。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|将现有堆集或二进制树转换为列存储。 示例演示了如何在执行此转换时处理现有的索引以及索引的名称。|  
-|将列存储表转换为行存储。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|通常不需要这样转换，但有时需要。 示例演示如何将列存储转换为堆或聚集索引。|  
+|将列存储表转换为行存储。|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;OR DROP INDEX](../../relational-databases/indexes/create-clustered-indexes.md)|通常不需要这样转换，但有时需要。 示例演示如何将列存储转换为堆或聚集索引。|  
 |在行存储表中创建列存储索引。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|一个行存储表可以有一个列存储索引。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，列存储索引可以包含筛选条件。 示例演示了基本语法。|  
 |为操作分析创建高性能索引。|[开始使用列存储进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|描述了如何创建互补性列存储索引和 btree 索引，以便 OLTP 查询能够使用 btree 索引，分析查询能够使用列存储索引。|  
 |为数据仓库创建高性能列存储索引。|[用于数据仓库的列存储索引](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|介绍如何使用列存储表上的 btree 索引来创建高性能数据仓库查询。|  

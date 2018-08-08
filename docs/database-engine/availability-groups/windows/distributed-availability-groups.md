@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083728"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400710"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "39083728"
 
 ## <a name="understand-distributed-availability-groups"></a>了解分布式可用性组
 
-分布式可用性组是一种特殊类型的可用性组，它跨两个单独的可用性组。 基础可用性组配置在两个不同的 Windows Server 故障转移群集 (WSFC) 群集上。 加入分布式可用性组的可用性组无需处于同一位置。 它们可以是物理也可以是虚拟的，可以在本地、公有云中或支持可用性组部署的任何位置。 只要两个可用性组可以进行通信，就可以使用它们配置分布式可用性组。
+分布式可用性组是一种特殊类型的可用性组，它跨两个单独的可用性组。 加入分布式可用性组的可用性组无需处于同一位置。 它们可以是物理也可以是虚拟的，可以在本地、公有云中或支持可用性组部署的任何位置。 这包括跨域甚至跨平台 - 例如一个可用性组托管在 Linux ，一个托管在 Windows 上。 只要两个可用性组可以进行通信，就可以使用它们配置分布式可用性组。
 
 传统的可用性组在 WSFC 群集中配置资源。 分布式可用性组不会在 WSFC 群集中配置任何内容。 有关它的所有内容都保留在 SQL Server 中。 若要了解如何查看分布式可用性组的信息，请参阅[查看分布式可用性组信息](#viewing-distributed-availability-group-information)。 
 

@@ -1,5 +1,5 @@
 ---
-title: SqlLocalDB 实用工具 |Microsoft 文档
+title: SqlLocalDB 实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c7fb8ffb21b797df1f87486635a92752ea4cdd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f785d7167289eaba23e9f64296594b04a4c4ee9f
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076604"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451231"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 **SqlLocalDB** 实用工具可以创建 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB**。 **SqlLocalDB** 实用工具 (SqlLocalDB.exe) 是一个简单的命令行工具，可方便用户和开发者创建和管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 有关如何使用 **LocalDB**的信息，请参阅 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
+  SqlLocalDB 实用工具可用于创建 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] LocalDB 实例。 SqlLocalDB 实用工具 (SqlLocalDB.exe) 是一款简易命令行工具，可方便用户和开发人员创建和管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] LocalDB 实例。 有关如何使用 **LocalDB**的信息，请参阅 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
   
 ## <a name="syntax"></a>语法  
   

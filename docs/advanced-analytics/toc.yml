@@ -54,6 +54,8 @@
       href: install/sql-ml-component-commandline-install.md
     - name: 脱机设置（无 Internet）
       href: install/sql-ml-component-install-without-internet-access.md
+    - name: CAB 下载（脱机安装程序）
+      href: install/sql-ml-cab-downloads.md
     - name: 升级 R 和 Python
       href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
     - name: 设置 R 工具
