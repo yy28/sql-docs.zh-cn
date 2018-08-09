@@ -79,7 +79,7 @@ ms.locfileid: "37218927"
   
 -   来自任何注册和配置的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口的结果集。  
   
--   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅 SQL Server 联机丛书中**Reporting Services 文档** 中的“将报表模型用作数据源” [](http://go.microsoft.com/fwlink/?linkid=121312) 。  
+-   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅 SQL Server 联机丛书中 **[Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)** 中的“将报表模型用作数据源” 。  
   
  当在运行时处理报表时，查询返回的实际结果集可能有零行或更多行。 在查询中定义的列也有可能已从数据源中丢失。 数据源中的 null 值映射到[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]值`System.DBNull.Value`。  
   
