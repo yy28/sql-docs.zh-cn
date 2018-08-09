@@ -20,5 +20,7 @@
       href: using-azure-active-directory.md
     - name: 使用透明网络 IP 解析
       href: using-transparent-network-ip-resolution.md
+    - name: 数据分类
+      href: data-classification.md
 - name: Bug 修复
   href: bug-fixes.md
