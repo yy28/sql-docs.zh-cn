@@ -36,7 +36,7 @@ ms.locfileid: "37275623"
   
 3.  在中**服务引用设置**对话框中，单击**添加 Web 引用**。  
   
-4.  在中**URL**的框**添加 Web 引用**框中，键入 URL 获取的服务说明的报表服务器 Web 服务，例如http://localhost/reportserver/reportservice2010.asmx。 然后单击**转**按钮以检索有关 Web 服务的信息。  
+4.  在中**URL**的框**添加 Web 引用**框中，键入 URL 获取的服务说明的报表服务器 Web 服务，例如 http://localhost/reportserver/reportservice2010.asmx 。 然后单击**转**按钮以检索有关 Web 服务的信息。  
   
      \- 或 -  
   

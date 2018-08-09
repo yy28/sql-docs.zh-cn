@@ -180,7 +180,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  向默认代理组添加代理  
   
-3.  授予服务应用程序对端口 80 Web 应用程序的内容数据库的访问权限。 该脚本假设网站"http://sitename"已存在。  
+3.  授予服务应用程序对端口 80 Web 应用程序的内容数据库的访问权限。 该脚本假设网站" http://sitename "已存在。  
   
 ```  
 # Create service application and service application proxy  
