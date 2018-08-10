@@ -1,7 +1,7 @@
 ---
-title: 连接和检索数据 |Microsoft 文档
+title: 连接和检索数据 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86b7dce984408c7d49e302b9b450e07a32fdacc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 051593c5d3a37217a5ab4380fd947cb585532e3d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828102"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456631"
 ---
 # <a name="connecting-and-retrieving-data"></a>连接和检索数据
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  当你正在使用[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]，有两种主要方法建立的连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。 在连接 URL 设置连接属性，然后调用的驱动程序管理器类以返回 getConnection 方法之一是[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)对象。  
+使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 时，与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库建立连接的方法主要有两种。 一种方法是在连接 URL 中设置连接属性，然后调用 DriverManager 类的 getConnection 方法来返回 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。  
   
 > [!NOTE]  
->  JDBC 驱动程序支持的连接属性的列表，请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+> 有关 JDBC 驱动程序支持的连接属性的列表，请参阅[连接属性设置](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 第二种方法涉及使用 setter 方法的设置连接属性[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)类，并调用[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)方法以返回 SQLServerConnection对象。  
+第二种方法涉及到使用 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 类的 setter 方法设置连接属性，然后调用 [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 方法来返回 SQLServerConnection 对象。  
   
- 本部分中的主题介绍你可以连接到的不同方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库，并且它们还演示了不同的技术来检索数据。  
+此部分中的主题介绍了各种用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库的方法，以及各种用于检索数据的技术。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
-|[连接 URL 示例](../../../connect/jdbc/connection-url-sample.md)|介绍如何使用连接 URL 以连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，然后使用 SQL 语句检索数据。|  
-|[数据源示例](../../../connect/jdbc/data-source-sample.md)|说明如何先使用数据源来连接 SQL Server，然后再使用存储过程来检索数据。|  
+|[连接 URL 示例](../../../connect/jdbc/code-samples/connection-url-sample.md)|介绍了如何先使用连接 URL 连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，再使用 SQL 语句来检索数据。|  
+|[数据源示例](../../../connect/jdbc/code-samples/data-source-sample.md)|说明如何先使用数据源来连接 SQL Server，然后再使用存储过程来检索数据。|  
   
-## <a name="see-also"></a>另请参阅  
- [示例 JDBC 驱动程序应用程序](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a>另请参阅
+
+[示例 JDBC 驱动程序应用程序](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

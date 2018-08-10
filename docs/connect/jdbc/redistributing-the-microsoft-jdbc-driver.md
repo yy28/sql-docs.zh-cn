@@ -1,7 +1,7 @@
 ---
-title: 重新分发的 Microsoft JDBC 驱动程序 |Microsoft 文档
+title: 再分发 Microsoft JDBC 驱动程序 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,28 +14,28 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4879fa6bf41179d78ddf73d4f5847ebf9514220e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3d872a8d5027820c389dbd139e80403ac268496e
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828452"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458221"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>再分发 Microsoft JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-and-64-driver"></a>重新分发的 Microsoft JDBC 4.1、 4.2、 6.0、 6.2 和 6.4 驱动程序
-JDBC Drivers 4.1、 4.2、 6.0、 6.2 和 6.4 可以一起重新分发。 请查看 4.1、 4.2、 6.0，许可协议中的"可分发代码"子句 6.2 和 6.4 版本的驱动程序。
+## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-and-70-driver"></a>再分发 Microsoft JDBC 4.1、 4.2、 6.0、 6.2、 6.4、 和 7.0 驱动程序
+可以重新分发 JDBC 驱动程序 4.1、 4.2、 6.0、 6.2、 6.4、 和 7.0。 请查看"可分发代码"子句中的 4.1、 4.2、 6.0、 6.2、 6.4、 和 7.0 版本的驱动程序的许可协议。
     
 ## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>注册以再分发 Microsoft JDBC 4.0 驱动程序  
- Microsoft JDBC 4.0 驱动程序需要注册，然后将它重新分发。 单击以下链接以查看 4.0 版本的驱动程序的许可协议。  如果需要，可以打印并保留一份许可协议留作记录。  
+ Microsoft JDBC 4.0 驱动程序需要注册之前重新分发它。 单击下面的链接，查看 4.0 版驱动程序的许可协议。  如果需要，可以打印并保留一份许可协议留作记录。  
   
  如果选择接受该许可协议，你将定向到注册页，然后再转到下载页。  
   
- [Microsoft JDBC Driver 4.0 for SQL Server 的再分发许可协议](https://msdn.microsoft.com/sqlserver/jj589698)  
+ [Microsoft SQL Server JDBC 驱动程序 4.0 的再分发许可](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- 注意： Microsoft Microsoft 帐户安全身份验证和使用注册。 你注册重新分发权限的 SQL Server JDBC 驱动程序重新分发通过 Microsoft 帐户，系统将提示你提供将成为你的安全配置文件的一部分的信息。  
+ 注意： Microsoft 使用 Microsoft 帐户进行安全的身份验证和注册。 通过 Microsoft 帐户注册获得 SQL Server JDBC 驱动程序的再分发权利时，系统将提示你提供一些信息，以作为安全个人资料的一部分。  
   
- 如果你还没有已，你可以获取[Microsoft 帐户](https://signup.live.com/)  
+ 如果你没有已，你可以获取[Microsoft 帐户](https://signup.live.com/)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 'Pdo:: prepare |Microsoft Docs'
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 717657cabc469488565985e3e37d111bb9d592b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7ac27dbcc186eff263803da714032d532c95d3b4
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979762"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367699"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ key_pair：包含属性名称和值的数组。 有关详细信息，请参阅�
 |Key|描述|  
 |-------|---------------|  
 |PDO::ATTR_CURSOR|指定游标行为。 默认值为 PDO::CURSOR_FWDONLY。 PDO::CURSOR_SCROLL 是静态游标。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果使用 PDO::CURSOR_SCROLL，你可以使用下方介绍的 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
-|PDO::ATTR_EMULATE_PREPARES|当 pdo:: ATTR_EMULATE_PREPARES 上时，已准备的语句中的占位符替换为绑定参数。 一个完整的 SQL 语句与没有占位符然后发送到在执行数据库。 <br /><br />可以使用 pdo:: ATTR_EMULATE_PREPARES 绕过 SQL Server 中的一些限制。 例如，SQL Server 不支持某些 TRANSACT-SQL 子句中已命名或位置参数。 此外，SQL Server 有 2100年参数绑定的限制。<br /><br />您可以将 pdo:: ATTR_EMULATE_PREPARES 属性设置为 true。 例如：<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />默认情况下，此属性设置为 False。<br /><br />**注意：** 当你使用 `PDO::ATTR_EMULATE_PREPARES => true`时，参数化查询的安全性不会生效。 你的应用程序应确保绑定到参数的数据未包含恶意 Transact-SQL 代码。<br /><br />**限制：**： 因为参数未绑定使用数据库的参数化的查询功能，不支持输入和输出参数。|  
+|PDO::ATTR_EMULATE_PREPARES|默认情况下，此属性为 false，这可以更改此`PDO::ATTR_EMULATE_PREPARES => true`。 请参阅[模拟准备](#emulate-prepare)有关详细信息和示例。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8（默认值）<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 Ture，则指定直接查询执行。 False 表示已准备的语句执行。 有关 PDO::SQLSRV_ATTR_DIRECT_QUERY 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|  
@@ -97,7 +97,7 @@ print $stmt->rowCount();
 $stmt = null  
 ?>  
 ```  
-  
+
 ## <a name="example"></a>示例  
 本示例演示如何将 PDO::prepare 方法与客户端游标结合使用。 有关展示服务器端游标的示例，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。  
   
@@ -137,7 +137,96 @@ $row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );
 print_r($row);  
 ?>  
 ```  
-  
+
+<a name="emulate-prepare" />
+
+## <a name="example"></a>示例 
+
+此示例演示如何使用 pdo:: prepare 方法与`PDO::ATTR_EMULATE_PREPARES`设置为 true。 
+
+```
+<?php
+$serverName = "yourservername";
+$username = "yourusername";
+$password = "yourpassword";
+$database = "tempdb";
+$conn = new PDO("sqlsrv:server = $serverName; Database = $database", $username, $password);
+
+$pdo_options = array();
+$pdo_options[PDO::ATTR_EMULATE_PREPARES] = true;
+$pdo_options[PDO::SQLSRV_ATTR_ENCODING] = PDO::SQLSRV_ENCODING_UTF8;
+
+$stmt = $conn->prepare("CREATE TABLE TEST([id] [int] IDENTITY(1,1) NOT NULL, 
+                                          [name] nvarchar(max))", 
+                                          $pdo_options);
+$stmt->execute();
+
+$prefix = '가각';
+$name = '가각ácasa';
+$name2 = '가각sample2';
+
+$stmt = $conn->prepare("INSERT INTO TEST(name) VALUES(:p0)", $pdo_options);
+$stmt->execute(['p0' => $name]);
+unset($stmt);
+
+$stmt = $conn->prepare("SELECT * FROM TEST WHERE NAME LIKE :p0", $pdo_options);
+$stmt->execute(['p0' => "$prefix%"]);
+foreach ($stmt as $row) {
+    echo "\n" . 'FOUND: ' . $row['name'];
+}
+
+unset($stmt);
+unset($conn);
+?>
+```
+
+PDO_SQLSRV 驱动程序在内部使用的绑定的参数替换所有占位符[PDOStatement::bindParam()](../../connect/php/pdostatement-bindparam.md)。 因此，没有占位符包含的 SQL 查询字符串发送到服务器。 请考虑此示例中，
+
+```
+$statement = $PDO->prepare("INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)");
+$statement->bindParam(:cus_name, "Cardinal");
+$statement->bindParam(:con_name, "Tom B. Erichsen");
+$statement->execute();
+```
+
+使用`PDO::ATTR_EMULATE_PREPARES`设置为 false （默认情况下），发送到数据库的数据是：
+
+```
+"INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)"
+Information on :cus_name parameter
+Information on :con_name parameter
+```
+
+服务器将执行查询使用的绑定参数其参数化的查询的功能。 但是，与`PDO::ATTR_EMULATE_PREPARES`实质上是设置为 true，发送到服务器的查询：
+
+```
+"INSERT into Customers (CustomerName, ContactName) VALUES ('Cardinal', 'Tom B. Erichsen')"
+```
+
+设置`PDO::ATTR_EMULATE_PREPARES`为 true 可以绕过 SQL Server 中的一些限制。 例如，SQL Server 不支持某些 TRANSACT-SQL 子句中已命名或位置参数。 此外，SQL Server 的绑定 2100年参数的限制。
+
+> [!NOTE]
+> Emulate 准备设置为 true，参数化查询的安全性不起作用。 因此，应用程序应确保绑定到参数的数据不包含恶意 Transact-SQL 代码。
+
+### <a name="encoding"></a>编码
+
+如果用户想要将具有不同的编码 （例如，utf-8 或二进制文件） 的参数绑定，用户应明确指定编码在 PHP 脚本中。
+
+PDO_SQLSRV 驱动程序首先检查中指定的编码`PDO::bindParam()`(例如， `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`)。 
+
+如果找不到，该驱动程序会检查如果中设置任何编码`PDO::prepare()`或`PDOStatement::setAttribute()`。 否则，该驱动程序将使用中指定的编码`PDO::__construct()`或`PDO::setAttribute()`。
+
+### <a name="limitations"></a>限制
+
+正如您所看到的在内部将绑定通过驱动程序。 执行不带任何参数的情况下，有效的查询发送到服务器。 与一般情况相比，不使用参数化的查询功能时产生一些限制。
+
+- 它并不适用于参数绑定为`PDO::PARAM_INPUT_OUTPUT`。
+    - 当用户指定了`PDO::PARAM_INPUT_OUTPUT`在`PDO::bindParam()`，PDO 异常。
+- 不适用于参数绑定为输出参数。
+    - 用户创建时已准备的语句使用占位符，用于输出参数 (即，紧接着占位符时遇到一个等号，如`SELECT ? = COUNT(*) FROM Table1`)，将 PDO 引发异常。
+    - 当已准备的语句作为输出参数的参数调用存储的过程与占位符时，将不引发任何异常，因为该驱动程序无法检测到的输出参数。 但是，用户提供的输出参数的变量将保持不变。
+- 不起作用的二进制编码参数重复的占位符
+
 ## <a name="see-also"></a>另请参阅  
 [PDO 类](../../connect/php/pdo-class.md)
 

@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序的 Always Encrypted API 参考 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1b720a607b702e93643d70b40a5e6ab036f2f56
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 1b305c9e42f1eb7dffec8bd00204723a142a6b2e
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279248"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582163"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 驱动程序的 Always Encrypted API 参考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,8 +96,8 @@ ms.locfileid: "39279248"
   
 |“属性”|描述|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|解密列加密密钥的指定加密值。 应使用指定的列密钥 IDmaster 密钥并使用指定算法加密该加密值。 <br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey （字符串、 字符串、 Byte[]).)|  
-|public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)|对列加密密钥，使用指定的列主密钥和使用指定的算法进行加密。 <br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey （字符串、 字符串、 Byte[]).)|  
+| public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) | Decryptes 已加密的列加密密钥 (CEK)。 使用指定的主密钥路径中的非对称密钥的 RSA 加密算法来实现此解密。<br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey （字符串、 字符串、 Byte[]).) |  
+| public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey) | 对列加密密钥，通过向指定的算法的指定的列主密钥进行加密。<br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey （字符串、 字符串、 Byte[]).) |  
 |public void setName （字符串名称）|设置此密钥存储提供程序的名称。|
 |public String getName ()|获取此密钥存储提供程序的名称。|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "39279248"
   
 |“属性”|描述|  
 |----------|-----------------|  
-|public void registerOutParameter （int parameterIndex，int sqlType、 int 精度，int 规模）<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> public void registerOutParameter （字符串 parameterName，int sqlType、 int 精度，int 规模）<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />public void setBigDecimal （字符串 parameterName，BigDecimal bd、 int 精度，int 规模）<br /><br /> public void setTime （字符串 parameterName，java.sql.Time t，int 规模）<br /><br /> public void setTimestamp （字符串 parameterName，java.sql.Timestamp t，int 规模）<br /><br /> public void setDateTimeOffset （字符串 parameterName，microsoft.sql.DateTimeOffset t，int 规模）<br/><br/>公共最终 void setObject （字符串 sCol，对象 x，int targetSqlType，整数精度和 int 小数位数）|这些方法重载与精度或小数位数参数和 / 或以特定数据类型的需要精度和小数位数信息支持始终加密。|  
+|public void registerOutParameter(int parameterIndex, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />public void setBigDecimal （字符串 parameterName，BigDecimal bd、 int 精度，int 规模）<br /><br /> public void setTime （字符串 parameterName，java.sql.Time t，int 规模）<br /><br /> public void setTimestamp （字符串 parameterName，java.sql.Timestamp t，int 规模）<br /><br /> public void setDateTimeOffset （字符串 parameterName，microsoft.sql.DateTimeOffset t，int 规模）<br/><br/>公共最终 void setObject （字符串 sCol，对象 x，int targetSqlType，整数精度和 int 小数位数）|这些方法重载与精度或小数位数参数和 / 或以特定数据类型的需要精度和小数位数信息支持始终加密。|  
 |public void setDateTime (字符串 parameterName，java.sql.Timestamp x)<br /><br /> public void setSmallDateTime (字符串 parameterName，java.sql.Timestamp x)<br /><br /> public void setUniqueIdentifier （字符串参数名称，字符串 guid）<br /><br /> public void setMoney （字符串 parameterName，BigDecimal bd）<br /><br /> public void setSmallMoney （字符串 parameterName，BigDecimal bd）<br/><br/>公共时间戳 getDateTime (int index)<br/><br/>公共时间戳 getDateTime (字符串 sCol)<br/><br/>公共时间戳 getDateTime （int index、 日历 cal）<br/><br/>公共时间戳 getSmallDateTime (int index)<br/><br/>公共时间戳 getSmallDateTime (字符串 sCol)<br/><br/>公共时间戳 getSmallDateTime （int index、 日历 cal）<br/><br/>公共时间戳 getSmallDateTime （字符串名称，日历 cal）<br/><br/>公共 BigDecimal getMoney (int index)<br/><br/>公共 BigDecimal getMoney (字符串 sCol)<br/><br/>公共 BigDecimal getSmallMoney (int index)<br/><br/>公共 BigDecimal getSmallMoney (字符串 sCol)|这些方法添加为数据类型 money、 smallmoney、 uniqueidentifier、 datetime 和 smalldatetime 的支持始终加密。 <br/><br/>请注意，现有 setTimestamp() 方法用于将参数值发送到加密的 datetime2 列。 加密的 datetime 和 smalldatetime 列的新方法 setDateTime() 和 setSmallDateTime() 分别使用。|  
 |public void setObject （字符串参数名称，对象 o、 int n、 int m，布尔 forceEncrypt）<br /><br /> public void setObject （字符串参数名称、 对象 obj、 SQLType jdbcType、 int 规模、 布尔 forceEncrypt）<br /><br /> public void setDate (字符串 parameterName，x，日历 c java.sql.Date 布尔 forceEncrypt)<br /><br /> public void setTime （字符串 parameterName，java.sql.Time t、 int 规模，布尔 forceEncrypt）<br /><br /> public void setTime (字符串 parameterName，x，日历 c java.sql.Time 布尔 forceEncrypt)<br /><br /> public void setDateTime （字符串 parameterName，x，布尔 forceEncrypt java.sql.Timestamp）<br /><br /> public void setDateTimeOffset （字符串 parameterName、 microsoft.sql.DateTimeOffset t、 int 规模、 布尔 forceEncrypt）<br /><br /> public void setSmallDateTime （字符串 parameterName，x，布尔 forceEncrypt java.sql.Timestamp）<br /><br /> public void setTimestamp （字符串 parameterName，java.sql.Timestamp t、 int 规模，布尔 forceEncrypt）<br /><br /> public void setTimestamp （字符串 parameterName，x，布尔 forceEncrypt java.sql.Timestamp）<br /><br /> public void setUniqueIdentifier （字符串参数名称、 guid 字符串、 布尔 forceEncrypt）<br /><br /> public void setBytes （字符串 parameterName、 byte [] b、 布尔 forceEncrypt）<br /><br /> public void setByte （字符串 parameterName，字节 b，布尔 forceEncrypt）<br /><br /> public void setString （字符串参数名称，字符串 s，布尔 forceEncrypt）<br /><br /> 公共最终 void setNString （字符串参数名称、 字符串值、 布尔 forceEncrypt）<br /><br /> public void setMoney （字符串 parameterName，BigDecimal bd，布尔 forceEncrypt）<br /><br /> public void setSmallMoney （字符串 parameterName，BigDecimal bd，布尔 forceEncrypt）<br /><br /> public void setBigDecimal （字符串 parameterName、 BigDecimal bd、 int 精度、 int 规模、 布尔 forceEncrypt）<br /><br /> public void setDouble （字符串 parameterName、 双线 d，布尔 forceEncrypt）<br /><br /> public void setFloat （字符串 parameterName，float f，布尔 forceEncrypt）<br /><br /> public void setInt (字符串 parameterName，int i，布尔 forceEncrypt)<br /><br /> public void setLong （字符串参数名称，长时间 l，布尔 forceEncrypt）<br /><br /> public void setShort （字符串参数名称，短 s，布尔 forceEncrypt）<br /><br /> public void setBoolean （字符串 parameterNames，布尔值 b，布尔 forceEncrypt）<br/><br/>public void setTimeStamp (字符串 sCol，x，日历 c java.sql.Timestamp 布尔 forceEncrypt)|将指定参数设置为给定的 Java 值。<br /><br /> 如果布尔 forceEncrypt 设置为 true 时，查询将仅当将参数设置的指定列进行加密，或该语句上连接启用始终加密。<br /><br /> 如果布尔 forceEncrypt 设置为 false，该驱动程序不会强制对参数进行加密。|
  
