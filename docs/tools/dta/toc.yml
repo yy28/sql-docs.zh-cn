@@ -85,21 +85,7 @@
   items:
     - name: 第 1 课：数据库引擎优化顾问中的基本导航
       href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-      items:
-        - name: 第 1-1 课 - 启动数据库引擎优化顾问
-          href: lesson-1-1-launching-database-engine-tuning-advisor.md
-        - name: 第 1-2 课 - 设置工具选项和布局
-          href: lesson-1-2-setting-tool-options-and-layout.md
-- name: 第 2 课：使用数据库引擎优化顾问
-  href: lesson-2-using-database-engine-tuning-advisor.md
-  items:
-    - name: 第 1-1 课 - 优化工作负荷
-      href: lesson-1-1-tuning-a-workload.md
-    - name: 第 1-2 课 - 查看优化建议
-      href: lesson-1-2-viewing-tuning-recommendations.md
-    - name: 第 1-3 课 - 查看优化报表
-      href: lesson-1-3-viewing-tuning-reports.md
+    - name: 第 2 课：使用数据库引擎优化顾问
+      href: lesson-2-using-database-engine-tuning-advisor.md
     - name: 第 3 课：使用 dta 命令提示实用工具
       href: lesson-3-using-the-dta-command-prompt-utility.md
-    - name: 第 3-1 课 - 启动 dta 命令提示符实用工具并优化工作负荷
-      href: lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md
