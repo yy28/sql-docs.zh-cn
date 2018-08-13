@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fccb384317102ef2818a49ef09c5faeb0fc42eb1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7bd63fff2c2c395648a1ac8a61903db007cafc96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047245"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559767"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,14 +79,14 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **Start_full**操作用来创建中的全文索引数据的完整快照*fulltext_catalog_name*。 **Start_incremental**操作用来重新编制索引的数据库中仅已更改的行。 仅当表具有的类型的列，可以应用增量填充**时间戳**。 如果全文目录中的表不包含类型的列**时间戳**，则该表将进行完全填充。  
   
  全文目录及索引数据存储在某些文件中，这些文件是在全文目录所在目录中创建的。 该全文目录所在目录创建为目录中指定的目录的子目录**@path**或在该服务器默认全文目录所在目录中如果**@path**不是指定。 生成全文目录所在目录名称的方式可以保证它在服务器上是唯一的。 因此，一个服务器上所有的全文目录所在目录可以共享相同的路径。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  调用方必须是隶属**db_owner**角色。 根据请求的操作，调用方应不拒绝授予 ALTER 或 CONTROL 权限 (这**db_owner**具有) 授予目标全文目录。  
   
 ## <a name="examples"></a>示例  

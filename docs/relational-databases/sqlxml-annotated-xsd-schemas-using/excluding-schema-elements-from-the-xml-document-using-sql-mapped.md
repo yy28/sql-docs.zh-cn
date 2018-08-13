@@ -27,15 +27,15 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b5153c59e1f803231ab80692579bb09b56a5ef32
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001239"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555857"
 ---
-# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>从 XML 文档中使用 sql 中排除架构元素： 映射
+# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>使用 sql:mapped 从 XML 文档中排除架构元素
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   由于是默认映射，XSD 架构中的每个元素和属性都映射到数据库表/视图和列。 如果你想要不映射到任何数据库表 （视图） 或列并且，未出现在 XML 中的 XSD 架构中创建的元素，可以指定**sql： 映射**批注。  
   

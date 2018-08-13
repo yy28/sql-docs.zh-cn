@@ -1,5 +1,5 @@
 ---
-title: sp_helpstats (Transact SQL) |Microsoft 文档
+title: sp_helpstats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251633"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547557"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33251633"
   返回有关指定表中的列和索引的统计信息。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 若要获取有关统计信息的信息，请查询[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)和[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)目录视图。  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 若要获取有关统计信息的信息，请查询[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)并[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)目录视图。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,11 +49,11 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@objname=**] *****object_name*****  
- 指定用来提供统计信息的表。 *object_name*是**nvarchar(520)** 和不能为 null。 可以指定一个一部分或两部分名称。  
+ [  **@objname=**] **'***object_name*****  
+ 指定用来提供统计信息的表。 *object_name*是**nvarchar(520)** 且不能为 null。 可以指定一个一部分或两部分名称。  
   
- [  **@results=**] *****值*****  
- 指定要提供的信息的范围。 有效值包括**所有**和**统计信息**。 **所有**列出的所有索引和也有它们; 上创建的统计信息的列的统计信息**统计信息**只列出未与索引关联的统计信息。 *值*是**nvarchar(5)** 默认值为统计信息。  
+ [  **@results=**] **'***值*****  
+ 指定要提供的信息的范围。 有效输入包括**所有**并**统计信息**。 **所有**列出的所有索引和也具有其; 上创建的统计信息的列的统计信息**统计信息**只列出未与索引关联的统计信息。 *值*是**nvarchar(5)** 默认值为 STATS。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -63,13 +63,13 @@ sp_helpstats[ @objname = ] 'object_name'
   
 |列名|Description|  
 |-----------------|-----------------|  
-|**statistics_name**|统计信息名称。 返回**sysname**和不能为 null。|  
-|**statistics_keys**|统计信息所基于的键。 返回**nvarchar(2078)** 和不能为 null。|  
+|**statistics_name**|统计信息的名称。 返回**sysname**且不能为 null。|  
+|**statistics_keys**|统计信息所基于的键。 返回**nvarchar(2078)** 且不能为 null。|  
   
-## <a name="remarks"></a>注释  
- 可以使用 DBCC SHOW_STATISTICS 显示特定索引或统计信息的相关详细统计信息。 有关详细信息，请参阅[DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)和[sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 可以使用 DBCC SHOW_STATISTICS 显示特定索引或统计信息的相关详细统计信息。 有关详细信息，请参阅[DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)并[sp_helpindex &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -105,7 +105,7 @@ EXEC sp_helpstats
   
  `PK_Customer_CustomerID        CustomerID`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   

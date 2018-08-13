@@ -1,5 +1,5 @@
 ---
-title: sp_helplanguage (Transact SQL) |Microsoft 文档
+title: sp_helplanguage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260430"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560627"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@language=** ] *****语言*****  
- 要显示其信息的替代语言的名称。 *语言*是**sysname**，默认值为 NULL。 如果*语言*是指定，返回有关指定语言的信息。 如果未指定语言中的所有语言有关的信息**sys.syslanguages**返回兼容性视图。  
+ [  **@language=** ] **'***语言*****  
+ 要显示其信息的替代语言的名称。 *语言*是**sysname**，默认值为 NULL。 如果*语言*是指定，则返回有关指定的语言信息。 如果未指定语言，有关中的所有语言的信息**sys.syslanguages**返回兼容性视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -56,19 +56,19 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**langid**|**int**|语言标识号。|  
+|**langid**|**smallint**|语言标识号。|  
 |**dateformat**|**nchar(3)**|日期的格式。|  
 |**datefirst**|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
 |**升级**|**int**|最后一次升级此语言的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |**名称**|**sysname**|语言名称。|  
 |**alias**|**sysname**|语言的替代名称。|  
-|**月**|**nvarchar(372)**|月份名称。|  
-|**简写**|**nvarchar(132)**|月份简称。|  
+|**几个月**|**nvarchar(372)**|月份名称。|  
+|**shortmonths**|**nvarchar(132)**|月份简称。|  
 |**天**|**nvarchar(217)**|日期名称。|  
 |**lcid**|**int**|语言的 Windows 区域设置 ID。|  
-|**msglangid**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
+|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -87,7 +87,7 @@ sp_helplanguage French;
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   

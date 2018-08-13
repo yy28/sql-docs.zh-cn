@@ -1,5 +1,5 @@
 ---
-title: 创建 CDATA 部分使用 sql:use-cdata (SQLXML 4.0) |Microsoft 文档
+title: '创建 CDATA 部分使用 sql: use-(SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f25e8b2e46cccbca7a77abe30bae219eea8e2b75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a74e0edc5ce936534053a0ff908c0248f5052fbc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970535"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561387"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 创建 CDATA 节 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ ms.locfileid: "32970535"
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库有时会包含被 XML 语法分析程序视为标记字符的字符；例如，尖括号（< 和 >）、小于或等于符号 (<=) 和 & 符号被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
   
- **Sql:use-cdata**批注用于指定返回的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应在 CDATA 部分包装 (也就是说，它指示从某一列的值是否指定**sql:field**应括在 CDATA 节中)。 **Sql:use-cdata**批注可以指定仅在将映射到数据库列的元素上。  
+ **Sql: use-cdata**批注用于指定返回的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应包装在 CDATA 节 (即，它指示列中的值是否由指定**sql: field**应括在 CDATA 节)。 **Sql: use-cdata**可以仅在将映射到数据库列的元素上指定批注。  
   
- **Sql:use-cdata**批注采用布尔值 (0 = false、 1 = true)。 可接受的值为 0、1、true 和 false。  
+ **Sql: use-cdata**批注接受布尔值 (0 = false,1 = true)。 可接受的值为 0、1、true 和 false。  
   
- 此批注不能与使用**sql:url-编码**或上 ID、 IDREF、 IDREFS、 NMTOKEN 和 NMTOKENS 属性类型。  
+ 不能用于此批注**sql:url-编码**或 ID、 IDREF、 IDREFS、 NMTOKEN 和 NMTOKENS 属性类型。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在以下架构中， **sql:use-cdata**设为 1 (True)  **\<AddressLine1 >** 内**\<地址 >** 元素。 结果，将在 CDATA 节中返回数据。  
+ 在以下架构中， **sql: use-cdata**设置为 1 (True)  **\<AddressLine1 >** 内**\<地址 >** 元素。 结果，将在 CDATA 节中返回数据。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -89,7 +89,7 @@ ms.locfileid: "32970535"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分结果集如下：  
   

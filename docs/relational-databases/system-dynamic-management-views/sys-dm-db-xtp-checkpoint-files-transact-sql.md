@@ -24,13 +24,13 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4cb287936b2cdbb73a53f04f3e10dc5304e41a54
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557257"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -54,21 +54,21 @@ ms.locfileid: "38005739"
 |container_guid|**uniqueidentifier**|容器，该根、 数据或差异文件的 GUID。 与 file_guid sys.database_files 表中联接。|  
 |checkpoint_file_id|**uniqueidentifier**|检查点文件的 GUID。|  
 |relative_file_path|**nvarchar(256)**|相对于容器映射到文件的路径。|  
-|file_type|**int**|对于免费为-1<br /><br /> 0 表示数据文件。<br /><br /> 1 表示差异文件。<br /><br /> 2 根文件<br /><br /> 3 个大型数据文件|  
+|file_type|**smallint**|对于免费为-1<br /><br /> 0 表示数据文件。<br /><br /> 1 表示差异文件。<br /><br /> 2 根文件<br /><br /> 3 个大型数据文件|  
 |file_type_desc|**nvarchar(60)**|保持为可用的免费全部文件是可用于分配。 由系统根据预期需求的大小不同可用的文件。 最大大小为 1 GB。<br /><br /> 数据-数据文件包含已插入到内存优化表的行。<br /><br /> 增量的增量文件包含对已删除的数据文件中的行的引用。<br /><br /> 根的根文件包含内存优化表和本机编译的对象的系统元数据。<br /><br /> 大型数据的大型数据文件包含值插入到中 （n)varchar(max) 和 varbinary （max） 列，以及内存优化表的列存储索引中的列段。|  
 |internal_storage_slot|**int**|内部存储数组中的文件的索引。 根或 1 以外的其他状态，则为 NULL。|  
 |checkpoint_pair_file_id|**uniqueidentifier**|相应的数据或差异文件。 对于根为 NULL。|  
 |file_size_in_bytes|**bigint**|在磁盘上文件的大小。|  
 |file_size_used_in_bytes|**bigint**|对于仍在填充的检查点文件对，此列将在下一个检查点的后面更新。|  
 |logical_row_count|**bigint**|对于数据，插入的行数。<br /><br /> 为增量后 drop table, 删除行数。<br /><br /> 对于根，则为 NULL。|  
-|state|**int**|0 – PRECREATED<br /><br /> 1-正在构造<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8-等待日志截断|  
+|state|**smallint**|0 – PRECREATED<br /><br /> 1-正在构造<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8-等待日志截断|  
 |state_desc|**nvarchar(60)**|PRECREATED – 一个检查点文件数是预先分配，以便尽量减少或消除任何等待时间，从而在执行事务时分配新文件。 这些预创建的文件的大小，具体取决于工作负荷，估计需要有所不同，但它们不包含任何数据。 这是使用 MEMORY_OPTIMIZED_DATA 文件组的数据库中存储开销。<br /><br /> 正在构造的这些检查点文件正处于构造中，这意味着它们将被填充基于由数据库生成的日志记录，并且尚不是检查点的一部分。<br /><br /> ACTIVE-这些包含来自以前关闭的检查点插入/已删除行。 它们包含的区域应用在数据库重新启动的事务日志的活动部分之前读取到内存中表的内容。 我们预计这种大小的大约 2 倍的内存中大小的内存优化表，假定合并操作与事务工作负荷保持这些检查点文件。<br /><br /> MERGE TARGET – 合并操作-这些检查点文件的目标存储从合并策略标识的源文件的合并的数据行。 合并已安装之后，MERGE TARGET 转换为 ACTIVE 状态。<br /><br /> 等待日志截断 – 后合并已安装并且 MERGE TARGET CFP 属于持久检查点，合并源检查点文件转换为此状态。 对内存优化表的数据库正确操作，需要处于此状态的文件。  例如，用于从持久检查点恢复以便及时返回。|  
 |lower_bound_tsn|**bigint**|在文件中的事务的下限如果状态不在 （1，3），则为 null。|  
 |upper_bound_tsn|**bigint**|在文件中的事务的上限如果状态不在 （1，3），则为 null。|  
 |begin_checkpoint_id|**bigint**|开始检查点的 ID。|  
 |end_checkpoint_id|**bigint**|最终检查点的 ID。|  
 |last_updated_checkpoint_id|**bigint**|更新此文件的最后一个检查点的 ID。|  
-|encryption_status|**int**|0, 1, 2|  
+|encryption_status|**smallint**|0, 1, 2|  
 |encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; 密钥 1 加密<br /><br /> 2 = &GT; 加密使用密钥 2。 仅对活动文件有效。|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -99,7 +99,7 @@ ms.locfileid: "38005739"
 |tombstone_operation_lsn|**nvarchar(23)**|tombstone_operation_lsn 落后于日志截断日志序列号之后，文件将删除。|  
 |logical_deletion_log_block_id|**bigint**|仅适用于状态 5。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="use-cases"></a>用例  

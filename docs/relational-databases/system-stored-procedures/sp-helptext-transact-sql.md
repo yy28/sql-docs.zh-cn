@@ -1,5 +1,5 @@
 ---
-title: sp_helptext (TRANSACT-SQL) |Microsoft 文档
+title: sp_helptext (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3cc2628e0c689f41ff954ae9e0d916f79e65c06b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8b71a693eeca059cdca695e17b5c0cde623863fa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259727"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558867"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  [ **@objname =** ] **'***name***'**  
  架构范围内的用户定义对象的限定名称和非限定名称。 仅当指定限定对象时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 对象必须在当前数据库中。 *名称*是**nvarchar(776)**，无默认值。  
   
- [  **@columnname =** ] *****computed_column_name*****  
- 要显示其定义信息的计算列的名称。 包含列的表必须指定为*名称*。 *column_name*是**sysname**，无默认值。  
+ [  **@columnname =** ] **'***computed_column_name*****  
+ 要显示其定义信息的计算列的名称。 包含的列的表必须指定为*名称*。 *column_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -58,12 +58,12 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**文本**|**nvarchar(255)**|对象定义|  
+|**Text**|**nvarchar(255)**|对象定义|  
   
-## <a name="remarks"></a>注释  
- sp_helptext 显示用于在多行中创建对象的定义。 每行包含 255 个字符的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。 定义驻留在**定义**中的列[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图。  
+## <a name="remarks"></a>Remarks  
+ sp_helptext 显示用于在多行中创建对象的定义。 每行包含 255 个字符的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。 定义位于**定义**中的列[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
 ## <a name="examples"></a>示例  
@@ -96,7 +96,7 @@ GO
   
  `(isnull(([SubTotal]+[TaxAmt])+[Freight],(0)))`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

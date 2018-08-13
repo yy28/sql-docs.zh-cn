@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7bc0a49035eeddfa014c39b9011fef85d98ce4cf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084349"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400700"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程： 使用 Linux 上的 SQL Server 使用 Active Directory 进行身份验证
 
@@ -206,6 +206,9 @@ ms.locfileid: "39084349"
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
+   > [!NOTE]
+   > Spn 可能需要几分钟时间才能传播到你的域，尤其是域较大。 如果收到错误，"kvno： 服务器时，未找到 Kerberos 数据库中获取凭据的 MSSQLSvc /\*\*\<主机计算机的完全限定的域名\>\*\*:\* \* \<tcp 端口\>\*\*\@CONTOSO.COM"，请等待几分钟然后重试。
+
 2. 创建具有的 keytab 文件**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** AD 用户在上一步中创建的。 出现提示时，输入密码的 AD 帐户。
 
    ```bash
@@ -223,18 +226,54 @@ ms.locfileid: "39084349"
    > [!NOTE]
    > Ktutil 工具不验证密码，所以请确保您正确地输入。
 
-3. 任何人都有权访问此`keytab`文件可以模拟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]域，因此，请确保您限制访问此类文件，仅`mssql`帐户具有读取访问权限：
+3. 将计算机帐户添加到与你 keytab  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 （也称为 UPN） 的计算机帐户是否处在`/etc/krb5.keytab`在窗体"\<主机名\>$\@\<realm.com\>"(例如 sqlhost$\@CONTOSO.COM)。 我们会将复制从这些条目`/etc/krb5.keytab`到`mssql.keytab`。
+
+   ```bash
+   sudo ktutil
+
+   # Read all entries from /etc/krb5.keytab
+   ktutil: rkt /etc/krb5.keytab
+
+   # List all entries
+   ktutil: list
+
+   # Delete all entries by their slot number which are not the UPN one at a
+   # time.
+   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
+   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
+   # 1's entry is deleted)
+   ktutil: delent <slot num>
+   ktutil: delent <slot num>
+   ...
+
+   # List all entries to ensure only UPN entries are left
+   ktutil: list
+
+   # When only UPN entries are left, append these values to mssql.keytab
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
+   quit
+   ```
+
+4. 任何人都有权访问此`keytab`文件可以模拟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]域，因此，请确保您限制访问此类文件，仅`mssql`帐户具有读取访问权限：
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. 配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用此`keytab`Kerberos 身份验证的文件：
+5. 配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用此`keytab`Kerberos 身份验证的文件：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
    sudo systemctl restart mssql-server
+   ```
+
+6. 可选： 禁用 UDP 连接到域控制器，以提高性能。 在许多情况下，UDP 连接将始终失败连接到域控制器，因此你可以设置配置选项时`/etc/krb5.conf`要跳过 UDP 调用。 编辑`/etc/krb5.conf`并设置以下选项：
+
+   ```/etc/krb5.conf
+   [libdefaults]
+   udp_preference_limit=0
    ```
 
 ## <a id="createsqllogins"></a> 在 TRANSACT-SQL 中创建基于 AD 的登录名
@@ -245,7 +284,7 @@ ms.locfileid: "39084349"
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-2. 确保现在在登录[sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)系统目录视图：
+2. 验证登录名现在列在[sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)系统目录视图：
 
    ```sql
    SELECT name FROM sys.server_principals;
@@ -280,7 +319,7 @@ ms.locfileid: "39084349"
   * JDBC:[使用 Kerberos 集成身份验证连接 SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC:[使用集成身份验证](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[连接字符串语法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-  
+ 
 ## <a name="next-steps"></a>后续步骤
 
 在本教程中，我们介绍了如何设置与 Linux 上的 SQL Server 的 Active Directory 身份验证。 你将了解到：

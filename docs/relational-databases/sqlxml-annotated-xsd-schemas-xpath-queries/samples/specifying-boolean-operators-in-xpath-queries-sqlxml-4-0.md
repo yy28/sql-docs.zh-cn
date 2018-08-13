@@ -1,5 +1,5 @@
 ---
-title: 在 XPath 查询 (SQLXML 4.0) 中指定布尔运算符 |Microsoft 文档
+title: XPath 查询 (SQLXML 4.0) 中指定布尔运算符 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,38 +21,38 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c3f061db3f431f87c5f2a214776558c3f6d69a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3b284681edd3caa26028a159a7b4cf024aa08cb4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971452"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563711"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下示例说明如何在 XPath 查询中指定布尔运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关此示例架构的信息，请参阅[示例批注 XSD 架构 XPath 示例 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  以下示例说明如何在 XPath 查询中指定布尔运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布尔运算符  
- 此 XPath 查询返回**\<客户 >** 的上下文节点的子元素**CustomerID**属性 13 或 31 的值：  
+ 此 XPath 查询将返回**\<客户 >** 的上下文节点的子元素**CustomerID**属性值为 13 或 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- 快捷方式**属性**轴 (@) 可指定，而是因为**子**轴默认值时，可以省略：  
+ 快捷方式**特性**轴 (@)，还可以指定和由于**子**轴是默认值，因此可以省略它：  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在谓词中，`attribute`是轴和`CustomerID`是节点的测试 (true **CustomerID**是**\<属性 >** 节点，因为 **\<属性 >** 节点是主节点进行**属性**轴)。 谓词筛选器**\<客户 >** 元素并返回仅显示那些满足条件的谓词中指定。  
+ 在谓词中，`attribute`是轴和`CustomerID`是节点测试 (如果**CustomerID**是**\<属性 >** 节点，因为 **\<属性 >** 节点是主节点**属性**轴)。 谓词筛选器**\<客户 >** 元素并返回只有满足条件的谓词中指定。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>若要测试针对映射架构的 XPath 查询  
   
-1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件。 将该文件另存为 SampleSchema1.xml。  
+1.  复制[示例架构代码](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)并将其粘贴到文本文件中。 将该文件另存为 SampleSchema1.xml。  
   
 2.  创建以下模板 (BooleanOperatorsA.xml) 并将其保存到保存 SampleSchema1.xml 的目录中。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "32971452"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 4.0 查询使用 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  下面是执行该模板的结果集：  
   

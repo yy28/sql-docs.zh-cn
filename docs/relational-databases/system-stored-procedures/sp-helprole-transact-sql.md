@@ -1,5 +1,5 @@
 ---
-title: sp_helprole (TRANSACT-SQL) |Microsoft 文档
+title: sp_helprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd4ea621669688065075a3ff3894bbce369a54a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d457eaf25531790df63d4128a3d77d4ed30fb9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250264"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538397"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] *****角色*****  
- 当前数据库中的角色的名称。 *角色*是**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库。 如果*角色*是未指定，返回有关当前数据库中的所有角色的信息。  
+ [  **@rolename =** ] **'***角色*****  
+ 当前数据库中的角色的名称。 *角色*是**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库。 如果*角色*是未指定，则返回有关当前数据库中的所有角色信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -56,13 +56,13 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|当前数据库中角色的名称。|  
-|**RoleId**|**int**|ID **RoleName**。|  
+|**RoleId**|**smallint**|ID **RoleName**。|  
 |**IsAppRole**|**int**|0 = **RoleName**不是应用程序角色。<br /><br /> 1 = **RoleName**是应用程序角色。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要查看与角色关联的权限，请使用**sp_helprotect**。 若要查看数据库角色的成员，请使用**sp_helprolemember**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -72,15 +72,15 @@ sp_helprole [ [ @rolename = ] 'role' ]
 EXEC sp_helprole  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [sp_addapprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_addapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [sp_droprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [sp_helpsrvrolemember &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helpsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

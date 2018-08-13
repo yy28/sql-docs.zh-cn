@@ -1,5 +1,5 @@
 ---
-title: sp_bindrule (Transact SQL) |Microsoft 文档
+title: sp_bindrule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff3dda4304d1dae1fc8183a667507867893f1bdc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 15576737e238ebd81d36e1ab2ff3090f6aa30791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239947"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560717"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33239947"
   将规则绑定到列或别名数据类型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)相反。 检查约束通过使用的 CHECK 关键字创建[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)或[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)语句。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[唯一约束和 Check 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)相反。 检查使用的 CHECK 关键字创建约束[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)或[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)语句。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,36 +50,36 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rulename=**] *****规则*****  
+ [  **@rulename=**] **'***规则*****  
  由 CREATE RULE 语句创建的规则的名称。 *规则*是**nvarchar(776)**，无默认值。  
   
- [  **@objname=**] *****object_name*****  
+ [  **@objname=**] **'***object_name*****  
  要绑定规则的表和列或别名数据类型。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
   
- *object_name*是**nvarchar(776)** 无默认值。 如果*object_name*是一个部分名称，它被解析为别名数据类型。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，该别名数据类型的现有列继承*规则*除非规则已绑定到列的直接。  
+ *object_name*是**nvarchar(776)** ，无默认值。 如果*object_name*是名称的一部分，则按别名数据类型进行解析。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，别名数据类型的现有列继承*规则*除非规则已经直接绑定到列。  
   
 > [!NOTE]  
->  *object_name*可以包含括号 **[** 和 **]** 字符的形式分隔的标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+>  *object_name*可以含有括号 **[** 并 **]** 字符作为分隔的标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
 > [!NOTE]  
 >  可以将针对使用别名数据类型的表达式创建的规则绑定到列或别名数据类型，但在引用这些规则时无法编译它们。 避免使用对别名数据类型创建的规则。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- 仅当将规则绑定到别名数据类型时才能使用。 *future_only_flag*是**varchar(15)** 默认值为 NULL。 当设置为此参数**futureonly**防止继承新规则的别名数据类型的现有列。 如果*futureonly_flag*为 NULL，新规则绑定到当前具有任何规则或使用该别名数据类型的现有规则别名数据类型的列。  
+ 仅当将规则绑定到别名数据类型时才能使用。 *future_only_flag*是**varchar(15)** 默认值为 NULL。 如果设置为此参数**futureonly**防止别名数据类型的现有列继承新规则。 如果*futureonly_flag*为 NULL，将新规则绑定到别名数据类型的任何列当前具有任何规则或正在使用的现有规则的别名数据类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- 可以将新规则绑定到列 （尽管使用 CHECK 约束是首选方法） 或别名数据类型与**sp_bindrule**必须先解除绑定现有规则。 覆盖原有规则。 如果使用现有 CHECK 约束将规则绑定到列，那么将评估所有限制。 不能将规则绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
+## <a name="remarks"></a>Remarks  
+ 可以将新规则绑定到列 （尽管使用 CHECK 约束是首选） 或别名数据类型与**sp_bindrule**不取消绑定现有规则。 覆盖原有规则。 如果使用现有 CHECK 约束将规则绑定到列，那么将评估所有限制。 不能将规则绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
- 当尝试执行 INSERT 语句时（而非绑定时），将强行执行规则。 你可以将字符规则绑定到的列**数值**数据类型，尽管此类插入操作无效。  
+ 当尝试执行 INSERT 语句时（而非绑定时），将强行执行规则。 可以将字符规则绑定到的列**数值**数据类型，尽管此处 INSERT 操作无效。  
   
- 别名数据类型的现有列继承新规则，除非*futureonly_flag*指定为**futureonly**。 使用别名数据类型定义的新列始终继承规则。 但是，如果 ALTER TABLE 语句的 ALTER COLUMN 子句将列的数据类型更改为绑定规则的别名数据类型，那么列不会继承与数据类型绑定的规则。 规则必须专门绑定到列使用**sp_bindrule**。  
+ 别名数据类型的现有列继承新规则，除非*futureonly_flag*指定为**futureonly**。 使用别名数据类型定义的新列始终继承规则。 但是，如果 ALTER TABLE 语句的 ALTER COLUMN 子句将列的数据类型更改为绑定规则的别名数据类型，那么列不会继承与数据类型绑定的规则。 该规则必须专门绑定到列使用**sp_bindrule**。  
   
- 当将规则绑定到列时，将相关的信息添加到**sys.columns**表。 当将规则绑定到别名数据类型时，将相关的信息添加到**sys.types**表。  
+ 当将规则绑定到列时，将相关的信息添加到**sys.columns**表。 当将规则绑定到别名数据类型时，相关的信息添加到**sys.types**表。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要将规则绑定到表列，您必须具有表的 ALTER 权限。 若要将规则绑定到别名数据类型，您需要具有别名数据类型的 CONTROL 权限或该类型所属架构的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -94,7 +94,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 将规则绑定到别名数据类型  
- 假设存在名为 `rule_ssn` 的规则和名为 `ssn` 的别名数据类型，以下示例将 `rule_ssn` 绑定到 `ssn`。 在 CREATE TABLE 语句中，类型为 `ssn` 的列会继承 `rule_ssn` 规则。 类型的现有列`ssn`还继承`rule_ssn`规则，除非**futureonly**为指定*futureonly_flag*，或`ssn`具有直接绑定到它的规则。 绑定到列的规则始终优先于绑定到数据类型的规则。  
+ 假设存在名为 `rule_ssn` 的规则和名为 `ssn` 的别名数据类型，以下示例将 `rule_ssn` 绑定到 `ssn`。 在 CREATE TABLE 语句中，类型为 `ssn` 的列会继承 `rule_ssn` 规则。 类型的现有列`ssn`还继承`rule_ssn`规则，除非**futureonly**为指定*futureonly_flag*，或`ssn`直接向其绑定了规则。 绑定到列的规则始终优先于绑定到数据类型的规则。  
   
 ```  
 USE master;  
@@ -112,7 +112,7 @@ EXEC sp_bindrule rule_ssn, 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 使用分隔的标识符  
- 下面的示例演示了利用中的分隔标识符*object_name*参数。  
+ 下面的示例演示如何使用分隔标识符中的*object_name*参数。  
   
 ```  
 USE master;  
@@ -125,7 +125,7 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   

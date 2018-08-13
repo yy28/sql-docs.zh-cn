@@ -25,15 +25,15 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3efe5d6bac67d639877a2434fd3b97bec84d5da
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6c9fd8380e46f88afa73302e1cdc589f772fbe0a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993616"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533667"
 ---
-# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (这 SQL)
+# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   从查询存储中删除单个计划。  
@@ -56,7 +56,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**EXECUTE**上，对数据库的权限和**删除**查询存储目录视图的权限。  
   
 ## <a name="examples"></a>示例  

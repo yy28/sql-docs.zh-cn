@@ -24,13 +24,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 183970c09d23304553167b20366e0751d5f35207
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a8389ac173eb72c152eed3a7a8a40d8453dbed22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993859"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541447"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |end_of_log_lsn|**numeric (38)**|日志结尾的 LSN。|  
 |task_address|**varbinary(8)**|SOS_Task 的地址。 联接到 sys.dm_os_tasks 以查找其他信息。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="see-also"></a>请参阅  

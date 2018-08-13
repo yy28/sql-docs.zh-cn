@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproperty (TRANSACT-SQL) |Microsoft 文档
+title: sp_addextendedproperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ebd317abcd9fec6ee6e116c0bbacc63bf547be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9f415c295a45e2505bfa30afb34b76dba1d423c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240627"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555097"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +58,13 @@ sp_addextendedproperty
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @name ] = {*property_name*}  
- 是要添加的属性的名称。 *property_name*是**sysname**和不能为 NULL。 名称还可以包括空格或非字母数字字符串以及二进制值。  
+ [ @name ] = {'*property_name*}  
+ 是要添加的名称。 *property_name*是**sysname**且不能为 NULL。 名称还可以包括空格或非字母数字字符串以及二进制值。  
   
- [ @value=] {*值*}  
+ [ @value=] {'*值*}  
  要与属性关联的值。 *值*是**sql_variant**，默认值为 NULL。 *value* 的大小不能超过 7,500 个字节。  
   
- [ @level0type=] {*level0_object_type*}  
+ [ @level0type=] {'*level0_object_type*}  
  级别 0 对象的类型。 *level0_object_type*是**varchar （128)**，默认值为 NULL。  
   
  有效输入包括：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
@@ -72,26 +72,26 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除在级别 1 类型对象的扩展属性中指定 USER 作为级别 0 类型的功能。 改用 SCHEMA 作为级别 0 类型。 例如，在定义表的扩展属性时，指定表的架构而不是用户名。 将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除指定 TYPE 作为级别 0 类型的功能。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
- [ @level0name=] {*level0_object_name*}  
+ [ @level0name=] {'*level0_object_name*}  
  所指定的级别 0 对象类型的名称。 *level0_object_name*是**sysname**默认值为 NULL。  
   
- [ @level1type=] {*level1_object_type*}  
+ [ @level1type=] {'*level1_object_type*}  
  级别 1 对象的类型。 *level1_object_type*是**varchar （128)**，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
- [ @level1name=] {*level1_object_name*}  
+ [ @level1name=] {'*level1_object_name*}  
  所指定的级别 1 对象类型的名称。 *level1_object_name*是**sysname**，默认值为 NULL。  
   
- [ @level2type=] {*level2_object_type*}  
+ [ @level2type=] {'*level2_object_type*}  
  级别 2 对象的类型。 *level2_object_type*是**varchar （128)**，默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- [ @level2name=] {*level2_object_name*}  
+ [ @level2name=] {'*level2_object_name*}  
  所指定的级别 2 对象类型的名称。 *level2_object_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- 用于指定扩展的属性中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库分为三个级别： 0、 1 和 2。 级别 0 是最高级别，定义为在数据库作用域内包含的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。  
+## <a name="remarks"></a>Remarks  
+ 为了指定扩展的属性中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库分为三个级别： 0、 1 和 2。 级别 0 是最高级别，定义为在数据库作用域内包含的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。  
   
  引用某个级别中的对象必须用拥有或包含它们的更高级别对象的名称进行限制。 例如，当将扩展属性添加到表列（级别 2）时，还必须指定包含该列的表名（级别 1）以及包含该表的架构（级别 0）。  
   
@@ -102,12 +102,12 @@ sp_addextendedproperty
  内存优化表上不允许扩展的属性。  
   
 ## <a name="replicating-extended-properties"></a>复制扩展属性  
- 仅在发布服务器和订阅服务器之间的初始同步中复制扩展属性。 如果在初始同步之后添加或修改扩展属性，则不会复制该更改。 有关如何进行复制数据库对象的详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
+ 仅在发布服务器和订阅服务器之间的初始同步中复制扩展属性。 如果在初始同步之后添加或修改扩展属性，则不会复制该更改。 有关如何复制数据库对象的详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
 ## <a name="schema-vs-user"></a>架构与User  
- 建议不要在将扩展属性应用于数据库对象时指定 USER 作为级别 0 类型，因为这会导致名称解析不明确。 例如，假定用户 Mary 拥有两个架构（Mary 和 MySchema），并且这两个架构都包含名为 MyTable 的表。 如果将扩展的属性添加到表 MyTable Mary，并指定 **@level0type = n ''**，  **@level0name = Mary**，它不是扩展的属性应用到哪些表清除。 为了保持向后兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将属性应用于名为 Mary 的架构中包含的表。  
+ 建议不要在将扩展属性应用于数据库对象时指定 USER 作为级别 0 类型，因为这会导致名称解析不明确。 例如，假定用户 Mary 拥有两个架构（Mary 和 MySchema），并且这两个架构都包含名为 MyTable 的表。 如果 Mary 将扩展的属性添加到表 MyTable 并指定 **@level0type = N'USER'**，  **@level0name = Mary**，它不是扩展的属性应用于哪个表清除。 为了保持向后兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将属性应用于名为 Mary 的架构中包含的表。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  db_owner 和 db_ddladmin 固定数据库角色的成员可以向任何对象添加扩展属性，但以下情况例外：db_ddladmin 不能向数据库本身添加属性，也不能向用户或角色中添加属性。  
   
  用户可以将扩展属性添加到他们所拥有的对象中，或者添加到他们对其具有 ALTER 或 CONTROL 权限的对象中。  
@@ -241,10 +241,10 @@ EXEC sys.sp_addextendedproperty
 @level0name = N'CustomApp';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
+ [sys.fn_listextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

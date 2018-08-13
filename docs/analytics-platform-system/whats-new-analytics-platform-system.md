@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137886"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400640"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft® Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
@@ -25,7 +25,7 @@ ms.locfileid: "37137886"
 APS 2016 后，才可以升级到 AU7。 以下是 APS AU7 中的新增功能：
 
 ### <a name="auto-create-and-auto-update-statistics"></a>自动创建和自动更新统计信息
-APS AU7 创建，并默认情况下将自动更新统计信息。 若要更新统计信息设置，管理员可以使用中的新功能切换菜单项[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能开关](appliance-feature-switch.md)控制不符、 自动更新和异步更新统计信息的行为。 此外可以更新使用的统计信息设置[ALTER DATABASE （并行数据仓库）](/sql/t-sql/statements/alter-database-parallel-data-warehouse)语句。
+APS AU7 创建，并默认情况下将自动更新统计信息。 若要更新统计信息设置，管理员可以使用中的新功能切换菜单项[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能开关](appliance-feature-switch.md)控制不符、 自动更新和异步更新统计信息的行为。 此外可以更新使用的统计信息设置[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)语句。
 
 ### <a name="t-sql"></a>T-SQL
 选择@var现在支持。 有关详细信息，请参阅 [选择本地变量] （/ sql/t-sql/language-elements/select-local-variable-transact-sql） 
@@ -64,7 +64,7 @@ APS AU6 支持这些 T-SQL 的兼容性改进。  这些其他语言元素，使
 
 **数据类型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[varbinary （max)][]。 这些 LOB 数据类型具有的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 Polybase 和 dwloader 当前不支持这些数据类型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[VARBINARY （MAX)][]。 这些 LOB 数据类型具有的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 Polybase 和 dwloader 当前不支持这些数据类型。 
 - [SYSNAME][]
 - [唯一标识符][]
 - [NUMERIC][]和 DECIMAL 数据类型。

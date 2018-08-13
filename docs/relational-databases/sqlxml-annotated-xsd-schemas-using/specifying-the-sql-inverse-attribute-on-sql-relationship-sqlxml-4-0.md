@@ -1,5 +1,5 @@
 ---
-title: 指定 sql:inverse 属性上 sql:relationship (SQLXML 4.0) |Microsoft 文档
+title: 'Relationship (SQLXML 4.0) 上指定 sql: inverse 属性 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,25 +25,25 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc17770157758286731f31922daded8f74acc152
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c4289d4d3fcfe9089cf430e1cb7fdd9f6c96cec4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969192"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549877"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>在 sql:relationship 上指定 sql:inverse 属性 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **Sql:inverse**特性只 XSD 架构在使用时，或通过属的 updategram 为任一大容量加载非常有用。 **Sql:inverse**上指定属性 **\<sql:relationship >** 元素。 在 updategram 中，updategram 逻辑在确定由 updategram 操作更新的表和列时会解释架构。 架构中所指定的父子关系决定了修改（插入或删除）记录的顺序。  
+  **Sql: inverse**特性仅在 XSD 架构用于大容量加载或用于 updategram 会非常有用。 **Sql: inverse**上，可以指定特性 **\<sql: relationship >** 元素。 在 updategram 中，updategram 逻辑在确定由 updategram 操作更新的表和列时会解释架构。 架构中所指定的父子关系决定了修改（插入或删除）记录的顺序。  
   
- 如果在 XSD 架构中指定的父子关系与相应数据库列之间的主键/外键关系顺序相反，则插入或删除 updategram 操作将因主键/外键冲突而失败。 在这种情况下， **sql:inverse**指定属性 (**sql:inverse ="true"**) 中 **\<sql:relationship >** 元素，并属的 updategram 逻辑逆方法架构中指定的父-子关系及其解释。  
+ 如果在 XSD 架构中指定的父子关系与相应数据库列之间的主键/外键关系顺序相反，则插入或删除 updategram 操作将因主键/外键冲突而失败。 在这种情况下， **sql: inverse**指定属性 (**sql: inverse ="true"**) 中 **\<sql: relationship >** 元素和 updategram 逻辑逆方法在架构中指定其父-子关系的解释。  
   
- **Sql:inverse**属性采用布尔值 (0 = false、 1 = true)。 可接受的值为 0、1、true 和 false。  
+ **Sql: inverse**属性采用布尔值 (0 = false,1 = true)。 可接受的值为 0、1、true 和 false。  
   
- 有关工作示例使用**sql:inverse**批注，请参阅[指定批注映射架构中属的 Updategram](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
+ 有关工作示例使用**sql: inverse**批注，请参阅[在 Updategram 中指定带批注的映射架构](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [指定关系使用 sql:relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [关系使用 sql: relationship 指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
   
   

@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6b34171cf9300454dfe35e6f0961eaacff182b4a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0ffae66700ffefe60602ba1e296bae6d903a3baa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015074"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549157"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -97,7 +97,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对序列对象或序列对象架构具有 UPDATE 权限。  
   
 ## <a name="examples"></a>示例  

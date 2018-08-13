@@ -1,5 +1,5 @@
 ---
-title: sp_helpconstraint (Transact SQL) |Microsoft 文档
+title: sp_helpconstraint (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db7c4131c564dad86abe569862b364fbcc6c7288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d2b4e51dc08ba897145d689d5ea6a918e3e7afb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242254"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559447"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@objname=** ] *****表*****  
+ [  **@objname=** ] **'***表*****  
  关于所返回的约束信息的表。 对于当前数据库而言，指定的表必须位于本地。 *表*是**nvarchar(776)**，无默认值。  
   
- [  **@nomsg=**] *****no_message*****  
- 打印表名的可选参数。 *no_message*是**varchar(5)**，默认值为**消息**。**nomsg**禁止打印。  
+ [  **@nomsg=**] **'***no_message*****  
+ 打印表名的可选参数。 *no_message*是**varchar(5)**，默认值为**msg**。**nomsg**取消打印。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- **sp_helpconstraint**显示降序的索引的列，如果参与主键。 降序索引列将在结果集中列出，在其名称后带有减号 (-)。 默认值（升序索引列）将仅按名称列出。  
+ **sp_helpconstraint**显示降序索引的列，如果参与主键。 降序索引列将在结果集中列出，在其名称后带有减号 (-)。 默认值（升序索引列）将仅按名称列出。  
   
-## <a name="remarks"></a>注释  
- 执行 **sp_help * * * 表*报告有关指定表的所有信息。 若要查看仅约束信息，请使用**sp_helpconstraint**。  
+## <a name="remarks"></a>Remarks  
+ 执行 **sp_help * * * 表*报告有关指定表的所有信息。 若要仅查看约束信息，请使用**sp_helpconstraint**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -73,14 +73,14 @@ GO
 EXEC sp_helpconstraint 'Production.Product';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.key_constraints &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys.check_constraints &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys.default_constraints &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys.key_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys.check_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys.default_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

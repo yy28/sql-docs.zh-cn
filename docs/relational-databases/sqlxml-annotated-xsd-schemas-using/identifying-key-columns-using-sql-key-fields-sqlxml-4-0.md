@@ -1,5 +1,5 @@
 ---
-title: 标识键列使用 sql:key-字段 (SQLXML 4.0) |Microsoft 文档
+title: 标识键列使用 sql:key 的字段 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -26,36 +26,36 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e75779626c8769c609fa27f97b44562d3e9a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971322"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535557"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 标识键列 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  针对 XSD 架构指定 XPath 查询时，大多数情况下必须有键信息才能获得结果中的正确嵌套。 指定**sql:key-字段**批注是一种确保生成相应的层次结构。  
+  针对 XSD 架构指定 XPath 查询时，大多数情况下必须有键信息才能获得结果中的正确嵌套。 指定**sql:key-字段**批注是一种确保生成适当层次结构。  
   
 > [!NOTE]  
->  若要确保正确嵌套，建议您指定**sql:key-字段**映射到表的元素。 所生成的 XML 对于基础结果集的排序敏感。 如果**sql:key-字段**未指定，则生成的 XML 格式可能不正确。  
+>  若要确保正确的嵌套，建议您指定**sql:key-字段**将映射到表的元素。 所生成的 XML 对于基础结果集的排序敏感。 如果**sql:key-字段**未指定，则生成的 XML 的格式可能不正确。  
   
- 值**sql:key-字段**标识唯一标识该关系中的行的列。 如果需要多个列才能唯一标识某行，则用空格分隔列值。  
+ 值**sql:key-字段**标识唯一标识关系中的行的列。 如果需要多个列才能唯一标识某行，则用空格分隔列值。  
   
- 必须使用**sql:key-字段**批注时元素包含 **\<sql:relationship >** ，定义元素和子元素之间但不提供的主键父元素中指定的表。  
+ 必须使用**sql:key-字段**如果元素包含批注 **\<sql: relationship >** 的元素和子元素之间定义但未提供主键父元素中指定的表。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 生成适当嵌套时\<sql:relationship > 不会提供足够的信息  
- 此示例演示在**sql:key-字段**必须指定。  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 生成正确的嵌套时\<sql: relationship > 未提供足够信息  
+ 此示例显示了在何处**sql:key-字段**必须指定。  
   
- 请考虑以下架构。 该架构指定层次结构之间**\<顺序 >** 和**\<客户 >** 元素在其中**\<顺序 >** 元素是父级和**\<客户 >** 元素是子元素。  
+ 请考虑以下架构。 该架构指定的层次结构之间**\<顺序 >** 并**\<客户 >** 元素在其中**\<顺序 >** 元素是父元素和**\<客户 >** 元素是子元素。  
   
- **\<Sql:relationship >** 标记，用于指定的父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql:relationship >** 不足以唯一方式标识父表 (Sales.SalesOrderHeader) 中的行。 因此，而无需**sql:key-字段**批注，生成的层次结构是不准确。  
+ **\<Sql: relationship >** 标记用于指定父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql: relationship >** 不足以唯一标识父表 (Sales.SalesOrderHeader) 中的行。 因此，如果没有**sql:key-字段**批注，将生成的层次结构是不准确。  
   
- 与**sql:key-字段**上指定**\<顺序 >**、 批注唯一标识的父代 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现在下面其父级。  
+ 与**sql:key-字段**中所指定**\<顺序 >**、 批注可唯一标识父 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现在下面其父项。  
   
  以下是架构：  
   
@@ -112,7 +112,7 @@ ms.locfileid: "32971322"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 查询使用 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分结果集如下：  
   
@@ -132,7 +132,7 @@ ms.locfileid: "32971322"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 以便在结果中生成正确的嵌套  
- 在以下架构中，没有层次结构使用指定 **\<sql:relationship >**。 架构仍然需要指定**sql:key-字段**批注来唯一地标识 HumanResources.Employee 表中的员工。  
+ 在以下架构中，没有使用指定的层次结构 **\<sql: relationship >**。 此架构仍需指定**sql:key-字段**批注才能唯一标识 HumanResources.Employee 表中的雇员。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -177,7 +177,7 @@ ms.locfileid: "32971322"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 查询使用 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  结果如下：  
   

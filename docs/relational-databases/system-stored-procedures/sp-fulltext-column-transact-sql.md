@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_column (TRANSACT-SQL) |Microsoft 文档
+title: sp_fulltext_column (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 50cdd3f06007da369aab4055e385cb82fdf3b5b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018401"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542917"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -82,14 +82,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  如果全文索引处于活动状态，则将停止所有正在进行的填充。 而且，如果一个具有活动全文索引的表启用了更改跟踪，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会确保索引是当前索引。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止对表的所有当前填充，删除现有索引，并启动新填充。  
   
  如果启用了更改跟踪，并且需要在保留索引的同时从全文索引中添加或删除列，则应停用表并添加或删除所需的列。 这些操作将冻结索引。 如果以后可以开始进行填充了，则可以重新激活表。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须是属于**db_ddladmin**固定数据库角色的成员或**db_owner**固定数据库角色或表的所有者。  
   
 ## <a name="examples"></a>示例  

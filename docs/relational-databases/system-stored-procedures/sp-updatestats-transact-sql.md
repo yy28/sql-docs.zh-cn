@@ -1,5 +1,5 @@
 ---
-title: sp_updatestats (TRANSACT-SQL) |Microsoft 文档
+title: sp_updatestats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 895c3fd65ac6cad3a0ce67dee54cfe8cf1070ea4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cd4eada4db6af75ad794efdba231407b23f79354
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259467"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560577"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,21 +50,21 @@ sp_updatestats [ [ @resample = ] 'resample']
  0（成功）或 1（失败）  
   
 ## <a name="arguments"></a>参数  
- [ **@resample** =]**对重新取样**  
- 指定**sp_updatestats**将使用的重新取样选项[更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)语句。 如果**对重新取样**未指定， **sp_updatestats**通过使用默认采样来更新统计信息。 **对重新取样**是**varchar(8)** 默认值为 no。  
+ [ **@resample** =] **'resample'**  
+ 指定的**sp_updatestats**将使用的 RESAMPLE 选项[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)语句。 如果 **'resample'** 未指定，则**sp_updatestats**通过使用默认采样来更新统计信息。 **对重新抽样**是**varchar(8)** 默认值为 no。  
   
-## <a name="remarks"></a>注释  
- **sp_updatestats**通过指定数据库中的所有用户定义和内部表上的所有关键字，来执行更新统计信息。 sp_updatestats 显示消息，以表明其进度。 完成更新之后，此存储过程将报告已为所有的表更新了统计信息。  
+## <a name="remarks"></a>Remarks  
+ **sp_updatestats**通过指定 ALL 关键字，对数据库中的所有用户和内部表执行 UPDATE STATISTICS。 sp_updatestats 将显示指示其进度的消息。 完成更新之后，此存储过程将报告已为所有的表更新了统计信息。  
   
  sp_updatestats 更新已禁用非聚集索引的统计信息，但不更新已禁用聚集索引的统计信息。  
   
- 对于基于磁盘的表， **sp_updatestats**更新统计信息基于**modification_counter**中的信息**sys.dm_db_stats_properties**目录视图，更新统计信息在至少一个该行已被修改。 内存优化表的统计信息在执行时始终更新**sp_updatestats**。 因此不会执行**sp_updatestats**只在必要时。  
+ 对于基于磁盘的表， **sp_updatestats**更新统计信息基于**modification_counter**中的信息**sys.dm_db_stats_properties**目录视图，更新统计信息在至少一个该行已被修改。 执行时，将始终更新内存优化表的统计信息**sp_updatestats**。 因此不会执行**sp_updatestats**只在必要时。  
   
- **sp_updatestats**可以触发重新编译的存储的过程或其他已编译的代码。 但是， **sp_updatestats**可能不会导致重新编译，如果只有一个查询计划所引用的表和它们的索引。 在这些情况下，即便更新了统计信息也不必进行重新编译。  
+ **sp_updatestats**可以触发重新编译的存储的过程或其他已编译的代码。 但是， **sp_updatestats**可能不会导致重新编译，如果只有一个查询计划可能引用的表和索引进行。 在这些情况下，即便更新了统计信息也不必进行重新编译。  
   
- 数据库兼容性级别为 90，执行以下**sp_updatestats**不保留特定的统计信息的最新 NORECOMPUTE 设置。 对于兼容性级别为 90 或更高版本的数据库，sp_updatestats 未保留特定的统计信息的最新 NORECOMPUTE 选项。 有关禁用和重新启用统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
+ 对于兼容性级别低于 90，执行的数据库**sp_updatestats**不会保留的最新的 NORECOMPUTE 设置为特定的统计信息。 对于兼容性级别为 90 或更高版本的数据库，sp_updatestats 会保留为特定的统计信息最新的 NORECOMPUTE 选项。 有关禁用和重新启用统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**sysadmin**固定服务器角色或数据库的所有权 (**dbo**)。  
   
 ## <a name="examples"></a>示例  
@@ -76,7 +76,7 @@ GO
 EXEC sp_updatestats;   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

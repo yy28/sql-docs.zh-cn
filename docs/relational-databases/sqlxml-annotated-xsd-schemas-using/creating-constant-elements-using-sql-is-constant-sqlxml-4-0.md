@@ -1,5 +1,5 @@
 ---
-title: 创建常量元素使用 sql： 是的常量 (SQLXML 4.0) |Microsoft 文档
+title: 创建常量元素使用 sql： 是的常量 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,17 +23,17 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81ee34607d198e88eee397b9c9f254f2133d1b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8bf343e639eb17b370729f22e45385ebfd53d7b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538427"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  指定常量元素-即未映射到任何数据库表或列的 XSD 架构中的某个元素-你可以使用**sql： 是常量**批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 **Sql： 是常量**批注可以指定在不具有任何特性的元素上。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
+  若要指定常量元素 — 不映射到任何数据库表或列在 XSD 架构中的元素，可以使用**sql： 是常量**批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 **Sql： 是常量**可以在不具有任何特性的元素上指定批注。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
   
  **Sql： 是常量**批注可以用于：  
   
@@ -41,15 +41,15 @@ ms.locfileid: "32969382"
   
 -   创建容器元素，如**\<订单 >** 包装所有订单的元素。  
   
- **Sql： 是常量**批注添加到 **\<complexType >** 元素。  
+ **Sql： 是常量**批注可以添加到 **\<complexType >** 元素。  
   
 ## <a name="examples"></a>示例  
- 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[要求运行 SQLXML 示例](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 以添加容器元素  
- 在此批注 XSD 架构 **\<CustomerOrders >** 指通过指定的常量元素**sql： 是常量**值为 1 的属性。 因此，  **\<CustomerOrders >** 未映射到任何数据库表或列。 此常量的元素组成**\<顺序 >** 子元素。  
+ 在此带批注的 XSD 架构中，  **\<CustomerOrders >** 通过指定定义为常量元素**sql： 是常量**属性值为 1。 因此，  **\<CustomerOrders >** 未映射到任何数据库表或列。 此常量元素组成**\<顺序 >** 子元素。  
   
- 尽管 **\<CustomerOrders >** 未映射到任何数据库表或列中，事件仍显示为一个容器元素，其中包含生成的 XML 中**\<顺序 >** 子元素。  
+ 尽管 **\<CustomerOrders >** 未映射到任何数据库表或列，它仍然会出现在生成的 XML 作为一个容器元素，其中包含**\<顺序 >** 子元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -111,7 +111,7 @@ ms.locfileid: "32969382"
   
 3.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。  
   
-     有关详细信息，请参阅[到执行 SQLXML 查询使用 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分结果集如下：  
   

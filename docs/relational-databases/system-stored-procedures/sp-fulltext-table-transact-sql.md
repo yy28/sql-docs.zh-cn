@@ -22,13 +22,13 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b6c759bd422ae815a284ae2cd14bc8b1861281ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1731c00431723da6187c2791c2758a3d957641d2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995604"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563081"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_fulltext_table
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  为特定表停用全文索引后，现有的全文索引将留在原位直到下一次完全填充;但是，此索引因为不使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]阻止已停用表的查询。  
@@ -96,7 +96,7 @@ sp_fulltext_table
   
  必须将全文键列定义为 900 字节或更少。 考虑到性能原因，建议尽量使用较小的键列。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定服务器角色**db_owner**并**db_ddladmin**全文目录可以引用权限与固定数据库角色或用户执行**sp_fulltext_table**。  
   
 ## <a name="examples"></a>示例  

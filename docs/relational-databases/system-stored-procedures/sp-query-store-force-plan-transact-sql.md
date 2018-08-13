@@ -25,13 +25,13 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f479710b8916fae3b315981663f97bac8488fb19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4016c1c34e63e05d5edd3a224cc1c47730095b03
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036115"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563891"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**EXECUTE**上，对数据库的权限和**插入**，**更新**，以及**删除**查询存储目录的权限视图。  
   
 ## <a name="examples"></a>示例  

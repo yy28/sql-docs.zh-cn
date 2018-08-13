@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (TRANSACT-SQL) |Microsoft 文档
+title: sp_helptrigger (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255085"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566231"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回对当前数据库的指定表定义的 DML 触发器的类型。 sp_helptrigger 不能用于 DDL 触发器。 查询[系统存储过程](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)改用目录视图。  
+  返回对当前数据库的指定表定义的 DML 触发器的类型。 sp_helptrigger 不能用于 DDL 触发器。 查询[系统存储过程](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)目录视图。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +46,13 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tabname=** ] *****表*****  
+ [  **@tabname=** ] **'***表*****  
  当前数据库中将为其返回触发器信息的表的名称。 *表*是**nvarchar(776)**，无默认值。  
   
  [ **@triggertype=** ] **'***type***'**  
- 将为其返回有关信息的 DML 触发器的类型。 *类型*是**char(6)**，默认值为 NULL，并且可以为这些值之一。  
+ 将为其返回有关信息的 DML 触发器的类型。 *类型*是**char(6)**，默认值为 NULL，并且可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**DELETE**|返回 DELETE 触发器信息。|  
 |**INSERT**|返回 INSERT 触发器信息。|  
@@ -73,10 +73,10 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsert**|**int**|1=INSERT 触发器<br /><br /> 0=不是 INSERT 触发器|  
 |**isafter**|**int**|1=AFTER 触发器<br /><br /> 0=不是 AFTER 触发器|  
 |**isinsteadof**|**int**|1=INSTEAD OF 触发器<br /><br /> 0=不是 INSTEAD OF 触发器|  
-|**trigger_schema**|**sysname**|该触发器所属的架构的名称。|  
+|**了 trigger_schema**|**sysname**|触发器所属的架构的名称。|  
   
-## <a name="permissions"></a>权限  
- 需要[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)对表的权限。  
+## <a name="permissions"></a>Permissions  
+ 需要[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)表的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例执行 `sp_helptrigger` 以生成有关对 `Person.Person` 表的触发器的信息。  
@@ -87,7 +87,7 @@ GO
 EXEC sp_helptrigger 'Person.Person';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   

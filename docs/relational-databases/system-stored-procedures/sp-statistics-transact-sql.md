@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b4a24cce24a94fdd6c4f901974d0f4accf7ff1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f3a82ea7c853aa8e18026a944f3888dcc5ee8823
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005659"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540687"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,11 +82,11 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_QUALIFIER**|**sysname**|表限定符名称。 该列可以为 NULL。|  
 |**TABLE_OWNER**|**sysname**|表所有者名称。 该列始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 该列始终返回值。|  
-|**NON_UNIQUE**|**int**|NOT NULL。<br /><br /> 0 = 唯一<br /><br /> 1 = 不唯一|  
+|**NON_UNIQUE**|**smallint**|NOT NULL。<br /><br /> 0 = 唯一<br /><br /> 1 = 不唯一|  
 |**INDEX_QUALIFIER**|**sysname**|索引所有者名称。 某些 DBMS 产品允许表所有者之外的用户创建索引。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列始终是相同**TABLE_NAME**。|  
 |**INDEX_NAME**|**sysname**|索引的名称。 该列始终返回值。|  
-|**TYPE**|**int**|此列始终返回值：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 非聚集|  
-|**SEQ_IN_INDEX**|**int**|列在索引中的位置。|  
+|**TYPE**|**smallint**|此列始终返回值：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 非聚集|  
+|**SEQ_IN_INDEX**|**smallint**|列在索引中的位置。|  
 |**COLUMN_NAME**|**sysname**|每个列的列名**TABLE_NAME**返回。 该列始终返回值。|  
 |**COLLATION**|**char(1)**|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
 |**基数**|**int**|表中的行或索引中的唯一值数。|  
@@ -94,7 +94,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  以升序按列显示在结果集中的索引**NON_UNIQUE**，**类型**， **INDEX_NAME**，以及**SEQ_IN_INDEX**。  
@@ -105,7 +105,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  **sp_statistics**等效于**SQLStatistics** ODBC 中。 返回的结果按排序**NON_UNIQUE**，**类型**， **INDEX_QUALIFIER**， **INDEX_NAME**，和**SEQ_IN_索引**。 有关详细信息，请参阅[ODBC API 参考](http://go.microsoft.com/fwlink/?LinkId=68323)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对架构的 SELECT 权限。  
   
 ## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

@@ -23,13 +23,13 @@ caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1af1ab9933bab98ab0679749d47f4c6ec4a86bc2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3c098dbcf31c41383d6c85140ff87f1b967a8b40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564161"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 >  [!NOTE]   
 >  在运行时，将删除所有与对象相关联的签名`sp_refresh_parameter_encryption`。
 
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 需要`ALTER`模块上的权限和`REFERENCES`对任何 CLR 用户定义类型和引用的对象的 XML 架构集合的权限。   
 
