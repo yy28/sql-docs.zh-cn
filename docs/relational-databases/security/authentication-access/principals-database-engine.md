@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553097"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008959"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553097"
   
 ## <a name="sql-server-level-principals"></a>SQL Server 级的主体  
   
--  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名   
--  Windows 用户的 Windows 身份验证登录名  
--  Windows 组的 Windows 身份验证登录名   
--  AD 用户的 Azure Active Directory 身份验证登录名
--  AD 组的 Azure Active Directory 身份验证登录名
--  服务器角色  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名   
+- Windows 用户的 Windows 身份验证登录名  
+- Windows 组的 Windows 身份验证登录名   
+- AD 用户的 Azure Active Directory 身份验证登录名
+- AD 组的 Azure Active Directory 身份验证登录名
+- 服务器角色  
   
- ## <a name="database-level-principals"></a>数据库级的主体  
+## <a name="database-level-principals"></a>数据库级的主体
   
--   数据库用户（有 11 个类型的用户。 有关详细信息，请参阅 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)。） 
--   数据库角色  
--   应用程序角色  
+- 数据库用户（有 11 个类型的用户。 有关详细信息，请参阅 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)。）
+- 数据库角色
+- 应用程序角色
   
 ## <a name="sa-login"></a>sa 登录名  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 登录名是服务器级别主体。 默认情况下，该登录名是在安装实例时创建的。 从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，sa 的默认数据库为“master”。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的行为的更改。 `sa` 登录名是 `sysadmin` 固定数据库角色的成员。 `sa` 登录名具有服务器上的所有权限，并且不能受到限制。 `sa` 登录名无法删除，但可以禁用，以便任何人都无法使用它。

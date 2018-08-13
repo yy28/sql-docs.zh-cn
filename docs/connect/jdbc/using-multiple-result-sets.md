@@ -14,35 +14,35 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4f3c8b75d18b598bfe43a48969f098022893c8b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e17da2ae58d76268ec962c007b0fd81b5fc06d60
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978729"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662399"
 ---
 # <a name="using-multiple-result-sets"></a>使用多个结果集
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  使用返回多个结果集的内联 SQL 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程时，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 方法，以检索返回的每个数据集。 此外，当运行返回多个结果集的语句时，可以使用 SQLServerStatement 类的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法，因为它将返回一个布尔值，该值指示返回的值是结果集还是更新计数。  
-  
- 如果 execute 方法返回 true，则运行的语句已返回了一个或多个结果集。 通过调用 getResultSet 方法可以访问第一个结果集。 若要确定是否提供了多个结果集，可以调用 [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) 方法，如果提供了多个结果集，则该方法返回布尔值 true。 如果有多个结果集可用，则可以再次调用 getResultSet 方法进行访问，继续使用这个过程直到所有的结果集都得到处理。 如果 getMoreResults 方法返回**false**，有没有更多结果集要处理。  
-  
- 如果 execute 方法返回 false，则所运行的语句返回了更新计数值，可以通过调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法检索此值。  
-  
+使用返回多个结果集的内联 SQL 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程时，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 方法，以检索返回的每个数据集。 此外，当运行返回多个结果集的语句时，可以使用 SQLServerStatement 类的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法，因为它将返回一个布尔值，该值指示返回的值是结果集还是更新计数。
+
+如果 execute 方法返回 true，则运行的语句已返回了一个或多个结果集。 通过调用 getResultSet 方法可以访问第一个结果集。 若要确定是否提供了多个结果集，可以调用 [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) 方法，如果提供了多个结果集，则该方法返回布尔值 true。 如果有多个结果集可用，则可以再次调用 getResultSet 方法进行访问，继续使用这个过程直到所有的结果集都得到处理。 如果 getMoreResults 方法返回**false**，有没有更多结果集要处理。
+
+如果 execute 方法返回 false，则所运行的语句返回了更新计数值，可以通过调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法检索此值。
+
 > [!NOTE]  
->  有关更新计数的详细信息，请参阅[存储过程使用带有更新计数](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)。  
-  
- 在下面的示例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，并构造一条 SQL 语句，该语句在运行后将返回两个结果集：  
-  
- [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]  
-  
- 在这种情况下，返回的结果集的数目为 2。 但是，如此编写代码是为了在返回了未知数目的结果集时，例如在调用存储过程时，这些结果集也会全部得到处理。 若要查看调用返回多个结果集和更新计数的存储过程的实例，请参阅[处理复杂语句](../../connect/jdbc/handling-complex-statements.md)。  
-  
+> 有关更新计数的详细信息，请参阅[存储过程使用带有更新计数](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)。
+
+在下面的示例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，并构造一条 SQL 语句，该语句在运行后将返回两个结果集：
+
+[!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
+
+在这种情况下，返回的结果集的数目为 2。 但是，如此编写代码是为了在返回了未知数目的结果集时，例如在调用存储过程时，这些结果集也会全部得到处理。 若要查看调用返回多个结果集和更新计数的存储过程的实例，请参阅[处理复杂语句](../../connect/jdbc/handling-complex-statements.md)。
+
 > [!NOTE]  
->  对 SQLServerStatement 类的 getMoreResults 方法的调用时，会隐式关闭以前返回的结果集。  
-  
-## <a name="see-also"></a>另请参阅  
- [通过 JDBC 驱动程序使用语句](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
-  
-  
+> 对 SQLServerStatement 类的 getMoreResults 方法的调用时，会隐式关闭以前返回的结果集。
+
+## <a name="see-also"></a>另请参阅
+
+[通过 JDBC 驱动程序使用语句](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

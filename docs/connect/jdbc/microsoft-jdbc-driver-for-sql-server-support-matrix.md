@@ -14,12 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0b19f437021f3a2398ac1a0dc694c4c52259621
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: cf3dece5bf18661e6f6bfa42e81c3038dd44b0c8
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456401"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661879"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server JDBC 驱动程序支持矩阵
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,6 +58,7 @@ ms.locfileid: "39456401"
   
 |驱动程序版本|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 托管实例 （扩展个人预览版）|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.0|否|是|是|是|是|是|是|是|是|  
 |6.4|否|是|是|是|是|是|是|是|是|  
 |6.2|是|是|是|是|是|是|是|是|否|
 |6.1|是|是|是|是|是|是|是|否|否|

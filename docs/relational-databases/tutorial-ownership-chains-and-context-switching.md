@@ -21,12 +21,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011634"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008799"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "33011634"
 ## <a name="1-configure-the-environment"></a>1.配置环境  
 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 及以下代码打开 `AdventureWorks2012` 数据库，然后使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 语句检查 dbo 用户是否显示为上下文。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -70,7 +70,7 @@ GO
   
 使用此代码以使 dbo 用户在服务器及 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中创建两个用户。  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -91,7 +91,7 @@ GO
   
 使用以下代码将 `Purchasing` 架构的所有权更改为 `TestManagerUser` 帐户。 这样将允许该帐户对其包含的对象使用所有数据操作语言 (DML) 语句访问权限（如 `SELECT` 和 `INSERT` 权限）。 `TestManagerUser` 授予创建存储过程的能力。  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -111,7 +111,7 @@ GO
   
 使用以下代码中的 `EXECUTE AS` 语句将上下文更改为 `TestManagerUser` ，并创建一个仅显示 `TestEmployeeUser`需要的数据的存储过程。 为了满足这些要求，存储过程接受一个代表采购订单号的变量并且不显示财务信息，WHERE 子句则将结果限制为部分货物。  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -135,7 +135,7 @@ GO
   
 当前 `TestEmployeeUser` 对任何数据库对象都没有访问权限。 以下代码（仍位于 `TestManagerUser` 上下文中）授予用户帐户通过存储过程查询基表信息的能力。  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -144,7 +144,7 @@ GO
   
 即使没有显式指定架构，存储过程也是 `Purchasing` 架构的一部分，因为默认情况下系统将把 `TestManagerUser` 分配给 `Purchasing` 架构。 您可以使用系统目录信息查找对象，如以下代码所示。  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -157,7 +157,7 @@ GO
   
 完成本部分示例之后，代码使用 `REVERT` 语句将上下文切换回 dbo。  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -167,7 +167,7 @@ GO
 ## <a name="3-access-data-through-the-stored-procedure"></a>3.通过存储过程访问数据  
 `TestEmployeeUser` 除了拥有一个登录名以及分配给公共数据库角色的权限之外，对 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库对象没有其他权限。 如果 `TestEmployeeUser` 试图访问基表，以下代码在将返回一个错误。  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -183,7 +183,7 @@ GO
   
 因为在最后一部分中创建的存储过程引用的对象由 `TestManagerUser` 凭借 `Purchasing` 架构所有权而拥有，因此 `TestEmployeeUser` 可以通过此存储过程访问基表。 以下代码仍使用 `TestEmployeeUser` 上下文将采购订单 952 作为参数传递。  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -191,7 +191,7 @@ GO
 ## <a name="4-reset-the-environment"></a>4.重置环境  
 以下代码使用 `REVERT` 命令将当前帐户的上下文返回至 `dbo`，然后重置环境。  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -215,7 +215,7 @@ GO
 > [!NOTE]  
 > 此代码不包括两个说明 `TestEmployeeUser` 无法从基表中进行选择的预期错误。  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  
