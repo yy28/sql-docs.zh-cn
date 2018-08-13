@@ -24,13 +24,13 @@ caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd7c2b9aac08fe6133c2138f5a1c2ea5369ec34c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f3250f1b522300f066962e84c8b91f2225c88049
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039024"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538347"
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "38039024"
 > [!NOTE]  
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，sys.master_files 返回的值在删除或截断了大型对象后，可能无法立即反映出磁盘的实际可用空间。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  查看相应行所必需的最低权限是 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION。  
   
 ## <a name="see-also"></a>请参阅  
