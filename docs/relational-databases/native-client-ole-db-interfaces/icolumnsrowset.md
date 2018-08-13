@@ -14,19 +14,19 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 049455b1ea18a07d01bc2e78bba12316bb1f4ba5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8553a8fd9c106d26524f8302340c37ff75ae8c51
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407056"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550247"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 向 IColumnsRowset::GetColumnRowset 添加了 DBCOLUMN_BASETABLEINSTANCE 列。 此列返回 DBTYPE_I2，已保留供 Microsoft。 此列中的信息将在将来的版本中进行修改。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 向 IColumnsRowset::GetColumnRowset 添加了 DBCOLUMN_BASETABLEINSTANCE 列。 此列返回 DBTYPE_I2，已预留供 Microsoft 使用。 此列中的信息将在将来的版本中进行修改。  
   
 ## <a name="see-also"></a>请参阅  
  [接口&#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  

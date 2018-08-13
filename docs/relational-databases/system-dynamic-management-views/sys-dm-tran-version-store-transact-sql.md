@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (Transact SQL) |Microsoft 文档
+title: sys.dm_tran_version_store (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de332c09b586b1c3a7feba4097a940ba9f29a83
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467623"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561917"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回一个虚拟表，其中显示有版本存储区中的所有版本记录。 **sys.dm_tran_version_store**效率低下，而且运行，因为它会查询的整个版本存储区中，和版本存储可能会非常大。  
+  返回一个虚拟表，其中显示有版本存储区中的所有版本记录。 **sys.dm_tran_version_store**它会查询整个版本存储区，因此可能非常大的版本存储区的运行效率比较低。  
   
  每个有版本控制的记录均以二进制数据的形式与某些跟踪或状态信息存储在一起。 与数据库表中的记录相似，版本存储区记录存储在 8192 字节的页中。 如果记录超过 8192 字节，则该记录将拆分为两个不同的记录。  
   
- 由于有版本控制的记录以二进制数据的形式存储，因此不同的数据库可以采用不同的排序规则。 使用**sys.dm_tran_version_store**在二进制表示形式中查找行的以前版本，因为它们在版本存储区中存在。  
+ 由于有版本控制的记录以二进制数据的形式存储，因此不同的数据库可以采用不同的排序规则。 使用**sys.dm_tran_version_store**二进制表示形式中查找早期版本的行，因为它们存在于版本存储区。  
   
   
 ## <a name="syntax"></a>语法  
@@ -56,13 +56,13 @@ sys.dm_tran_version_store
 |**database_id**|**int**|有版本控制的记录的数据库 ID。|  
 |**rowset_id**|**bigint**|记录的行集 ID。|  
 |**status**|**tinyint**|指示有版本控制的记录是否已拆分为两个记录。 如果此值为 0，则记录存储在一页中。 如果此值为 1，则记录拆分为两个记录，且存储在两个不同页上。|  
-|**min_length_in_bytes**|**int**|记录的最小长度（字节）。|  
-|**record_length_first_part_in_bytes**|**int**|有版本控制的记录的第一部分的长度（字节）。|  
+|**min_length_in_bytes**|**smallint**|记录的最小长度（字节）。|  
+|**record_length_first_part_in_bytes**|**smallint**|有版本控制的记录的第一部分的长度（字节）。|  
 |**record_image_first_part**|**varbinary(8000)**|版本记录的第一部分的二进制图像。|  
-|**record_length_second_part_in_bytes**|**int**|版本记录的第二部分的长度（字节）。|  
+|**record_length_second_part_in_bytes**|**smallint**|版本记录的第二部分的长度（字节）。|  
 |**record_image_second_part**|**varbinary(8000)**|版本记录的第二部分的二进制图像。|  
   
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -135,7 +135,7 @@ record_length_second_part_in_bytes record_image_second_part
   
  输出显示 XSN-57 从一个表创建了三个行版本，XSN-58 从另一个表创建了一个行版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

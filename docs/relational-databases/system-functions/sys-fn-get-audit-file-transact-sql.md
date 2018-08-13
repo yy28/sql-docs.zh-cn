@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08f3d90937968713c598418a125ad0167ed94fe7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980519"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556907"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     此参数必须包括路径（驱动器盘符或网络共享）和文件名，可以包含通配符。 可以使用单个星号 （*） 来收集审核文件集中的多个文件。 例如：  
   
-    -   **\<路径 >\\ \***  -收集的所有审核文件中指定的位置。  
+    -   **\<路径 >\\ \* ** -收集的所有审核文件中指定的位置。  
   
     -   **\<路径 > \LoginsAudit_{GUID}** -收集的所有审核文件中具有指定的名称和 GUID 对。  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     此参数用于指定 blob URL （包括存储终结点和容器）。 虽然它不支持星号通配符，可以使用部分文件 (blob) 名称前缀 （而不是完整的 blob 名称） 来收集该前缀开头的多个文件 (blob)。 例如：
  
-      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> /**  -收集特定数据库的所有审核文件 (blob)。    
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> / ** -收集特定数据库的所有审核文件 (blob)。    
       
       - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -收集特定审核文件 (blob)。
   
@@ -96,7 +96,7 @@ fn_get_audit_file ( file_pattern,
 |succeeded|**bit**|指示触发事件的操作是否成功。 不可为 null。 对于除登录事件之外的所有事件，它仅报告权限检查（而不是操作）成功或失败。<br /> 1 = 成功<br /> 0 = 失败|  
 |permission_bitmask|**varbinary(16)**|在某些操作中，这是授予、拒绝或撤消的权限。|  
 |is_column_permission|**bit**|标志，用于指示是否为列级别权限。 不可为 null。 当 permission_bitmask = 0 时返回 0。<br /> 1 = true<br /> 0 = false|  
-|session_id|**int**|发生该事件的会话的 ID。 不可为 null。|  
+|session_id|**smallint**|发生该事件的会话的 ID。 不可为 null。|  
 |server_principal_id|**int**|在其中执行操作的登录上下文 ID。 不可为 null。|  
 |database_principal_id|**int**|在其中执行操作的数据库用户上下文 ID。 不可为 null。 返回 0，如果此不适用。 例如，如果是服务器操作，则返回 0。|  
 |target_server_principal_id|**int**|执行 GRANT/DENY/REVOKE 操作的服务器主体。 不可为 null。 如果不适用，则返回 0。|  
@@ -118,7 +118,7 @@ fn_get_audit_file ( file_pattern,
 |additional_information|**nvarchar(4000)**|仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  将分析模块名称，如无效的 xml 字符进行转义`'\<'`， `'>'`， `'/'`， `'_x'`。 它们将转义为`_xHHHH\_`。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。|  
 |file_name|**varchar(260)**|作为记录来源的审核日志文件的路径和名称。 不可为 null。|  
 |audit_file_offset|**bigint**|包含审核记录的文件中的缓冲区偏移量。 不可为 null。|  
-|user_defined_event_id|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用户定义的事件 id 作为参数传递**sp_audit_write**。 **NULL**对于系统事件 （默认值），对于用户定义的事件显示的非零值。 有关详细信息，请参阅[sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
+|user_defined_event_id|**smallint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用户定义的事件 id 作为参数传递**sp_audit_write**。 **NULL**对于系统事件 （默认值），对于用户定义的事件显示的非零值。 有关详细信息，请参阅[sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
 |user_defined_information|**nvarchar(4000)**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用来记录用户想要在中记录任何附加信息 |通过使用审核日志**sp_audit_write**存储过程。|  
 |audit_schema_version |**int** | |  
 |sequence_group_id |**varbinary** | **适用于**： 仅 SQL Server （从 2016年开始） |  
@@ -134,7 +134,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="remarks"></a>Remarks  
  如果*file_pattern*自变量传递给**fn_get_audit_file**引用的路径或文件不存在，或如果文件不是审核文件， **MSG_INVALID_AUDIT_FILE**返回错误消息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  - **SQL Server**： 需要**CONTROL SERVER**权限。  
  - **Azure SQL DB**： 需要**CONTROL DATABASE**权限。     
     - 服务器管理员可以访问服务器上的所有数据库的审核日志。

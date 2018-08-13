@@ -23,13 +23,13 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 023dc1559ade2a14be43750acd783fefd000e7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 06cfb4ccdf0849d98fa28e1f230a024515b0adb0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005799"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540207"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "38005799"
   
  当成功执行 ALTER RESOURCE GOVERNOR RESET STATISTICS 后时，以下计数器将重置： statistics_start_time、 total_request_count、 total_queued_request_count、 total_cpu_limit_violation_count、 total_cpu_usage_ms，max_request_cpu_time_ms、 total_lock_wait_count、 total_lock_wait_time_ms、 total_query_optimization_count、 total_suboptimal_plan_generation_count、 total_reduced_memgrant_count 和 max_request_grant_memory_kb。 statistics_start_time 设置为当前系统日期和时间，其他计数器设置为零 (0)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

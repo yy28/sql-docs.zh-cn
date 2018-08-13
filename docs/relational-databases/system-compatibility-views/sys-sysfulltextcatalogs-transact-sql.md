@@ -25,13 +25,13 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f04e7dec965ead3d649c90a269de2f8c704ef8a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d71f8555b909db6e911189ce300efb0d7f76f1d0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061705"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542027"
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "38061705"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**ftcatid**|**int**|全文目录的标识符。|  
+|**ftcatid**|**smallint**|全文目录的标识符。|  
 |**名称**|**sysname**|用户指定的全文目录名。|  
-|**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |path|nvarchar(260)|用户指定的根路径。<br /><br /> NULL = 未指定路径。 使用默认（安装）路径。|  
   
 ## <a name="see-also"></a>请参阅  

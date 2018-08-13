@@ -1,5 +1,5 @@
 ---
-title: 安全存储过程 (Transact SQL) |Microsoft 文档
+title: 安全性存储过程 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ae3eb8d4d0c88f4065f82536cc3a6b00bb51fb0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d4d0ec605c9cc1df08384cc8c2a95aa3cec25587
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239737"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541787"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>安全存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的下列系统存储用于管理安全的过程。 这些存储过程的某些已弃用，但仍是可用于支持向后兼容性。 不推荐使用的存储过程的主题将列出用于替换它们的存储过程。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持下列系统存储过程用来管理安全性。 这些存储过程的一些不推荐使用，但仍是可用于支持向后兼容性。 不推荐使用的存储过程的主题将列出用于替换它们的存储过程。  
 
 |||  
 |-|-|  
@@ -72,7 +72,7 @@ ms.locfileid: "33239737"
 
  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  
   

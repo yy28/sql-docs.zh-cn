@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_active_catalogs (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_fts_active_catalogs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 564f66e6207ebc79b7545a77af8da8f156faf673
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e54673cbbb85d359184a8a745f3f48d8456d2f53
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463983"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544197"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34463983"
   返回在服务器上正在进行某些填充活动的全文目录的相关信息。  
   
 > [!NOTE]  
->  未来版本中将删除以下各列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused，previous_status，previous_status_description，row_count_in_thousands，状态、 status_description 和 worker_count。 应避免在新的开发工作中使用这些列，并着手修改当前使用上述任意列的应用程序。  
+>  未来版本中将删除以下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused、 previous_status、 previous_status_description、 row_count_in_thousands、 状态、 status_description 和 worker_count。 应避免在新的开发工作中使用这些列，并着手修改当前使用上述任意列的应用程序。  
   
  
 |列名|数据类型|Description|  
@@ -59,10 +59,10 @@ ms.locfileid: "34463983"
 |**row_count_in_thousands**|**int**|此全文目录中的所有全文索引的估计行数（千）。|  
 |**is_importing**|**bit**|指示是否正在导入全文目录：<br /><br /> 1 = 正在导入目录。<br /><br /> 2 = 没有导入目录。|  
   
-## <a name="remarks"></a>注释  
- Is_importing 列中的新增功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
+## <a name="remarks"></a>Remarks  
+ Is_importing 列是中的新增功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -95,7 +95,7 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  
  [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   

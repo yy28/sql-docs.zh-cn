@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact SQL) |Microsoft 文档
+title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7809bd218e1f7c8c81ee6c30a7ddcc514e2f085d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d9a53856fc95d8564c6b08f4867bba0f8a9604b5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228022"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535507"
 ---
 # <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回用于获取更改跟踪信息从指定的表，当你使用有效的客户端上的最低版本[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函数。  
+  在使用中时获取更改跟踪信息从指定的表中，使用时有效的客户端上返回的最低版本[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函数。  
     
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,8 +52,8 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 ## <a name="return-type"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>注释  
- 此函数用于验证的值*last_sync_version* CHANGETABLE 的参数。 如果*last_sync_version*小于报告此函数，则从 CHANGETABLE 更高版本调用返回的结果可能不是有效的值。  
+## <a name="remarks"></a>Remarks  
+ 使用此函数可验证的值*last_sync_version* CHANGETABLE 的参数。 如果*last_sync_version*小于报告的此函数中，从稍后调用 CHANGETABLE 返回的结果可能不是有效的值。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION 使用以下信息来确定返回值：  
   
@@ -91,7 +91,7 @@ ELSE
 -- Obtain changes using CHANGETABLE(CHANGES ...)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   

@@ -18,13 +18,13 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0f7e7437486c601bfc04a3ad7a173d0d42b19b37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419386"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537227"
 ---
 # <a name="persisted-data-source-objects"></a>持久化数据源对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "37419386"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持持久化的数据源对象与**IPersistFile**接口。  
   
 ## <a name="examples"></a>示例  
- **A.持久保存数据源初始化：**  
+ **A.使数据源初始化持久化：**  
   
- 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在接收到的服务器名称和数据库名称*pLocation*并*pDatasource*函数的参数。  
+ 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在函数的 pLocation 和 pDatasource 参数中接收服务器名称和数据库名称。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -144,7 +144,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B.使用保留的数据源初始化：**  
+ **B.使用持久化的数据源初始化：**  
   
  此示例使用具有其他初始化属性的一个持久化数据源对象，这些属性提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。  
   
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **Ipersistfile:: Save**之前或之后调用，可以调用方法**idbinitialize:: Initialize**。 成功的返回之后调用该方法**idbinitialize:: Initialize**可确保有效的数据源规范保持不变。  
+ 可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化。  
   
 ## <a name="see-also"></a>请参阅  
  [数据源对象&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

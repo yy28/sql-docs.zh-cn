@@ -23,13 +23,13 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad955c58adf7a77c1fab429657d2d8331602fb21
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f94535dcc29e1da3156d661ff9e1f6bdc2cf2a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985193"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537077"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "37985193"
 |**min_elapsed_time**|**bigint**|最小运行时间，以微秒为单位，任何已完成此函数的执行。|  
 |**max_elapsed_time**|**bigint**|最大运行时间，以微秒为单位，任何已完成此函数的执行。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

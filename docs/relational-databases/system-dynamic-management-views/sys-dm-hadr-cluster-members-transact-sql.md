@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_cluster_members (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_hadr_cluster_members (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 755edf3cd00a58009f30474c5a5263927bca298f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8bb7ad8870f4e139a00003fba0b17675eb629070
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465433"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543587"
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  如果承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本地实例的 WSFC 节点具有 SQL 仲裁，则为构成仲裁的每一个成员及各个成员的状态都返回一行。 这包括的群集中的所有节点 (随 CLUSTER_ENUM_NODE 类型返回**Clusterenum**函数) 和磁盘或文件共享见证服务器，如果有的话。 为给定成员返回的行包含有关该成员状态的信息。 例如，对于具有在其中一个节点处于关闭状态，当的多数节点仲裁的五个节点群集**sys.dm_hadr_cluster_members**为启用的服务器实例从查询[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]驻留在仲裁，节点上**sys.dm_hadr_cluster_members**反映"NODE_DOWN"形式的向下节点的状态。  
+  如果承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本地实例的 WSFC 节点具有 SQL 仲裁，则为构成仲裁的每一个成员及各个成员的状态都返回一行。 这包括在群集中的所有节点 (返回与 CLUSTER_ENUM_NODE 类型一同**Clusterenum**函数) 以及磁盘或文件共享见证服务器，如果有的话。 为给定成员返回的行包含有关该成员状态的信息。 例如，对于具有一个节点已关闭，当多数节点仲裁的五节点群集**sys.dm_hadr_cluster_members**为启用的服务器实例从查询[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]驻留在具有仲裁的节点上**sys.dm_hadr_cluster_members**反映为"NODE_DOWN"已关闭节点的状态。  
   
  如果 WSFC 节点没有仲裁，则不会返回任何行。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34465433"
 -   WSFC 群集可以容忍多少次失败，之后才会在多数节点情况下失去仲裁？  
 
  > [!TIP]
- > 从[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，此动态管理视图支持 Alwayson 故障转移群集实例除了 Alwayson 可用性组。  
+ > 从[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，此动态管理视图支持 Alwayson 故障转移群集实例除了 Always On 可用性组。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -58,15 +58,15 @@ ms.locfileid: "34465433"
 |**member_state_desc**|**nvarchar(60)**|说明**member_state**、 一个的：<br /><br /> UP<br /><br /> 向下|  
 |**number_of_quorum_votes**|**tinyint**|此仲裁成员拥有的仲裁票数。 对于“无大多数: 仅限磁盘”仲裁，此值默认为 0。 对于其他仲裁类型，此值默认为 1。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 可用性组目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [监视可用性组 & #40;Transact SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [AlwaysOn 可用性组 & #40;SQL server& #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [监视可用性组 (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性组&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact SQL) |Microsoft 文档
+title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00c55659ddc52fb5e6299b82be8102d526bd9e43
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6f44cd13dbabc10aa228892f9ce927e746c4aff5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229454"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547507"
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>参数  
  *column_id*  
- 是正在被检查的列的 ID。 可以通过获取 ID 列[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)函数。  
+ 是正在被检查的列的 ID。 可以通过使用获取 ID 的列[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)函数。  
   
  *change_columns*  
- 是从 SYS_CHANGE_COLUMNS 列中的二进制数据[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)数据。  
+ 二进制数据的 SYS_CHANGE_COLUMNS 列[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)数据。  
   
 ## <a name="return-type"></a>返回类型  
  **bit**  
@@ -61,10 +61,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |返回值|Description|  
 |------------------|-----------------|  
 |0|指定的列不在*change_columns*列表。|  
-|1|指定的该列包含在*change_columns*列表。|  
+|@shouldalert|指定的该列包含在*change_columns*列表。|  
   
-## <a name="remarks"></a>注释  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK 不执行任何检查来验证*column_id*值或*change_columns*参数已从从中的表获取*column_id*获得。  
+## <a name="remarks"></a>Remarks  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK 不执行任何检查来验证*column_id*值或验证*change_columns*参数已从表从其获取*column_id*获取。  
   
 ## <a name="examples"></a>示例  
  下面的示例确定是否已更新 `Salary` 表的 `Employees` 列。 `COLUMNPROPERTY`函数返回的列 ID`Salary`列。 必须使用 CHANGETABLE 作为数据源将 `@change_columns` 局部变量设置为查询的结果。  
@@ -75,7 +75,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
     ,@change_columns);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE (Transact-SQL)](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.default_constraints (Transact SQL) |Microsoft 文档
+title: sys.default_constraints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,27 +24,27 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9da755e03c4cbdf9390db34e167da20ad3b78a61
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 362006b22a60ab8c7e36ca7f3b8bbe513eb6c31c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239357"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561508"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  包含每个对象都是默认定义 （而不是 CREATE DEFAULT 语句的 CREATE TABLE 或 ALTER TABLE 语句的一部分创建），行**sys.objects.type** = d。  
+  使用包含 （而不是作为 CREATE DEFAULT 语句的 CREATE TABLE 或 ALTER TABLE 语句的一部分创建），该默认定义是每个对象的行**sys.objects.type** = d。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<列继承自 sys.objects >**||该视图继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**parent_column_id**|**int**|中的列 ID **parent_object_id**所属此默认设置。|  
+|**\<从 sys.objects 继承的列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**parent_column_id**|**int**|中列的 ID **parent_object_id**所属此默认值。|  
 |**定义**|**nvarchar(max)**|定义此默认值的 SQL 表达式。|  
 |**is_system_named**|**bit**|1 = 名称由系统生成。<br /><br /> 0 = 名称由用户提供。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  

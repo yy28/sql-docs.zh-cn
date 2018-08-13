@@ -23,13 +23,13 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dd5be6e6617172755f1ac293d94ddfe406b11a04
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 06d4f56dc13be176a96dc55924d1d432c6469e0f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997839"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554067"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "37997839"
 |-----------------|---------------|-----------------|  
 |xtp_transaction_id|**bigint**|此事务在 XTP 事务管理器中的内部 ID。|  
 |transaction_id|**bigint**|事务 ID。 与其他事务相关 DMV 中的事务 ID（如 sys.dm_tran_active_transactions）联接。<br /><br /> 0 表示仅限 XTP 的事务，如本机编译存储过程启动的事务。|  
-|session_id|**int**|正在执行此事务的会话的会话标识符。 与 sys.dm_exec_sessions 联接。|  
+|session_id|**smallint**|正在执行此事务的会话的会话标识符。 与 sys.dm_exec_sessions 联接。|  
 |begin_tsn|**bigint**|事务的起始事务序列号。|  
 |end_tsn|**bigint**|事务的结束事务序列号。|  
 |state|**int**|事务的状态：<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
@@ -78,7 +78,7 @@ ms.locfileid: "37997839"
 |dependent_7_address|**varbinary(8)**|仅限内部使用|  
 |dependent_8_address|**varbinary(8)**|仅限内部使用|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

@@ -17,13 +17,13 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 944a8096c20d6ab825503d4db9f824ba0bbe208e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0ac216e2d50f2cc10f836c706ba8c07bc29c206b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001229"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549497"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>sys.external_data_sources (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "38001229"
 |database_name|**sysname**|对于类型 RDBMS 中，远程数据库的名称。 对于类型，SHARD_MAP_MANAGER，分片映射管理器数据库的名称。 对于其他类型的外部数据源为 NULL。||  
 |shard_map_name|**sysname**|对于类型 SHARD_MAP_MANAGER，分片映射的名称。 对于其他类型的外部数据源为 NULL。||  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

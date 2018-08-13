@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_locks (Transact SQL) |Microsoft 文档
+title: sys.dm_tran_locks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbc8bb6eb7dc1a178a44e67b9e23b7ec98c75dce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d93e4eda256c689c0850300b18c906a080bfdd64
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467963"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536782"
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34467963"
  结果集中的列大体分为两组：资源组和请求组。 资源组说明正在进行锁请求的资源，请求组说明锁请求。  
   
 > [!NOTE]  
-> 若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_locks**。  
+> 若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_locks**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,32 +51,32 @@ ms.locfileid: "34467963"
 |**resource_lock_partition**|**Int**|已分区锁资源的锁分区 ID。 对于未分区锁资源，该值为 0。|  
 |**request_mode**|**nvarchar(60)**|请求的模式。 对于已授予的请求，为已授予模式；对于等待请求，为正在请求的模式。|  
 |**request_type**|**nvarchar(60)**|请求类型。 该值为 LOCK。|  
-|**request_status**|**nvarchar(60)**|该请求的当前状态。 可能的值有 GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT 或 ABORT_BLOCKERS。 有关低优先级服务等待和中止阻止程序问题的详细信息，请参阅*low_priority_lock_wait*部分[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。|  
-|**request_reference_count**|**int**|返回同一请求程序已请求该资源的近似次数。|  
+|**request_status**|**nvarchar(60)**|该请求的当前状态。 可能的值有 GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT 或 ABORT_BLOCKERS。 有关低优先级的等待和中止阻塞程序的详细信息，请参阅*low_priority_lock_wait*一部分[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。|  
+|**request_reference_count**|**smallint**|返回同一请求程序已请求该资源的近似次数。|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|当前拥有该请求的会话 ID。 对于分布式事务和绑定事务，拥有请求的会话 ID 可能不同。 该值为 -2 时，指示该请求属于孤立的分布式事务。 该值为 -3 时，指示请求属于延迟的恢复事务，例如因其回滚未能成功完成而延迟恢复该回滚的事务。|  
 |**request_exec_context_id**|**int**|当前拥有该请求的进程的执行上下文 ID。|  
 |**request_request_id**|**int**|当前拥有该请求的进程的请求 ID（批处理 ID）。 每当事务的多个活动的结果集 (MARS) 连接更改时，该值便会更改。|  
-|**request_owner_type**|**nvarchar(60)**|拥有请求的实体类型。 锁管理器请求可由各种实体所拥有。 可能的值有：<br /><br /> TRANSACTION = 请求由事务所有。<br /><br /> CURSOR = 请求由游标所有。<br /><br /> SESSION = 请求由用户会话所有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 请求由事务工作区的共享部分所有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 请求由事务工作区的排他部分所有。<br /><br /> NOTIFICATION_OBJECT = 请求由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件所有。 此组件已经请求锁管理器在有其他组件等待获取锁时进行通知。 FileTable 功能是使用此值的一个组件。<br /><br /> **注意：** 工作空间在内部使用登记的会话持有锁。|  
-|**request_owner_id**|**bigint**|此请求的特定所有者的 ID。<br /><br /> 当事务是请求的所有者时，此值包含事务 ID。<br /><br /> 当 FileTable 是请求的所有者时**request_owner_id**具有以下值之一。<br /><br /> <br /><br /> -4： 一个 FileTable 已获取数据库锁。<br /><br /> -3： 一个 FileTable 已获取表锁。<br /><br /> 其他值： 此值表示的文件句柄。 此值也显示为**fcb_id**在动态管理视图[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
+|**request_owner_type**|**nvarchar(60)**|拥有请求的实体类型。 锁管理器请求可由各种实体所拥有。 可能的值有：<br /><br /> TRANSACTION = 请求由事务所有。<br /><br /> CURSOR = 请求由游标所有。<br /><br /> SESSION = 请求由用户会话所有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 请求由事务工作区的共享部分所有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 请求由事务工作区的排他部分所有。<br /><br /> NOTIFICATION_OBJECT = 请求由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件所有。 此组件已经请求锁管理器在有其他组件等待获取锁时进行通知。 FileTable 功能是使用此值的一个组件。<br /><br /> **注意：** 工作空间在内部用于登记的会话持有锁。|  
+|**request_owner_id**|**bigint**|此请求的特定所有者的 ID。<br /><br /> 当事务是请求的所有者时，此值包含事务 ID。<br /><br /> 当 FileTable 是请求的所有者**request_owner_id**具有以下值之一。<br /><br /> <br /><br /> -4： 一个 FileTable 已获取数据库锁。<br /><br /> -3： 一个 FileTable 已获取表锁。<br /><br /> 其他值： 的值表示的文件句柄。 此值还显示为**fcb_id**动态管理视图[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
 |**request_owner_guid**|**uniqueidentifier**|此请求的特定所有者的 GUID。 该值仅供分布式事务使用，在该事务中，该值与事务的 MS DTC GUID 相对应。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 该值表示请求程序的锁空间 ID。 锁空间 ID 确定两个请求程序是否相互兼容以及在两者冲突的模式下是否可以向其授予锁。|  
-|**lock_owner_address**|**varbinary(8)**|用于跟踪该请求的内部数据结构的内存地址。 可以加入此列与**resource_address**中的列**sys.dm_os_waiting_tasks**。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 此分布的节点标识符。|  
+|**lock_owner_address**|**varbinary(8)**|用于跟踪该请求的内部数据结构的内存地址。 可以联接此列使用**resource_address**中的列**sys.dm_os_waiting_tasks**。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
  
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  已授予请求状态指示已将资源上的锁授予请求程序。 等待请求指示尚未授予请求。 返回下列等待请求类型**request_status**列：  
   
 -   转换请求状态指示已向请求程序授予对资源的请求，并且请求程序当前正在等待升级到要授予的初始请求。  
   
 -   等待请求状态指示请求程序当前未持有对资源的已授予请求。  
   
- 因为**sys.dm_tran_locks**填充从内部锁管理器数据结构，维护此信息不会添加到正则额外系统开销处理。 具体化该视图需要访问锁管理器的内部数据结构。 这可能会略微影响服务器中的常规处理。 这些影响应该很难察觉，并且应该只会影响频繁使用的资源。 由于该视图中的数据与活动的锁管理器状态相对应，因此该数据可能会随时更改，并且在获取和释放锁时会相应地添加和删除行。 该视图不包含历史信息。  
+ 因为**sys.dm_tran_locks**填充从内部锁管理器数据结构，维护此信息不会添加到常规的额外开销处理。 具体化该视图需要访问锁管理器的内部数据结构。 这可能会略微影响服务器中的常规处理。 这些影响应该很难察觉，并且应该只会影响频繁使用的资源。 由于该视图中的数据与活动的锁管理器状态相对应，因此该数据可能会随时更改，并且在获取和释放锁时会相应地添加和删除行。 该视图不包含历史信息。  
   
  仅当所有资源组列都相等时，才对同一资源执行两个请求。  
   
@@ -86,13 +86,13 @@ ms.locfileid: "34467963"
   
 -   锁定表提示用于指定在 FROM 子句中表的单个引用的锁定级别。 有关语法和限制，请参阅[表提示&#40;TRANSACT-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- 使用一个会话 ID 运行的资源可以有多个已授予锁。 一个会话下运行的不同实体可以拥有相同的资源的锁和的信息显示在**request_owner_type**和**request_owner_id**的列返回**sys.dm_tran_locks**。 如果多个实例的相同**request_owner_type**存在， **request_owner_id**列用来区分每个实例。 对于分布式事务， **request_owner_type**和**request_owner_guid**列将显示不同的实体信息。  
+ 使用一个会话 ID 运行的资源可以有多个已授予锁。 正在运行一个会话下的不同实体可以拥有同一资源上的锁和中显示的信息**request_owner_type**并**request_owner_id**的列返回的**sys.dm_tran_locks**。 如果多个实例的相同**request_owner_type**存在， **request_owner_id**列用来区分每个实例。 对于分布式事务， **request_owner_type**并**request_owner_guid**列将显示不同的实体的信息。  
   
- 例如，会话 S1 拥有共享的锁在**Table1**; 和事务 T1，在会话 S1 下运行，同时还拥有共享的锁在**Table1**。 在这种情况下， **resource_description**返回的列**sys.dm_tran_locks**将显示同一资源的两个实例。 **Request_owner_type**列将显示为会话，事务作为另一个实例。 此外， **resource_owner_id**列将具有不同的值。  
+ 例如，会话 S1 拥有共享的锁上**Table1**; 并事务 T1，会话 S1 下运行，还在拥有共享的锁**Table1**。 在这种情况下， **resource_description**返回的列**sys.dm_tran_locks**将显示同一资源的两个实例。 **Request_owner_type**列将显示为会话，事务作为另一个实例。 此外， **resource_owner_id**列将具有不同的值。  
   
  在一个会话下运行的多个游标无法区分，被视为一个实体。  
   
- 与会话 ID 值没有关联的分布式事务是孤立事务，向该事务分配的会话 ID 值为 -2。 有关详细信息，请参阅[KILL & #40;Transact SQL & #41;](../../t-sql/language-elements/kill-transact-sql.md).  
+ 与会话 ID 值没有关联的分布式事务是孤立事务，向该事务分配的会话 ID 值为 -2。 有关详细信息，请参阅 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)。  
   
 ## <a name="resource-details"></a>资源详细信息  
  下表列出了在中表示的资源**resource_associated_entity_id**列。  
@@ -199,11 +199,11 @@ ms.locfileid: "34467963"
   
  下表提供的格式**resource_description**每种资源类型的列。  
   
-|资源|格式|Description|  
+|资源|“格式”|Description|  
 |--------------|------------|-----------------|  
-|DATABASE|不适用|数据库 ID 已在**resource_database_id**列。|  
+|DATABASE|不适用|数据库 ID 已推出**resource_database_id**列。|  
 |FILE|<file_id>|此资源所表示的文件 ID。|  
-|OBJECT|<object_id>|此资源所表示的对象 ID。 此对象可以是中列出的任何对象**sys.objects**，而不仅仅是表。|  
+|OBJECT|<object_id>|此资源所表示的对象 ID。 此对象可以是任何对象中列出**sys.objects**，而不仅仅是一个表。|  
 |PAGE|<file_id>:<page_in_file>|表示此资源所表示的页的文件和页 ID。|  
 |KEY|<hash_value>|表示行中由此资源表示的键列的哈希。|  
 |EXTENT|<file_id>:<page_in_files>|表示此资源所表示的区的文件和页 ID。 区 ID 与区中的第一页的页 ID 相同。|  
@@ -277,7 +277,7 @@ ms.locfileid: "34467963"
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- 以下 Xevent 将与分区**交换机**和联机索引重新生成。 有关语法的信息，请参阅[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
+ 以下 Xevent 与分区相关**交换机**和联机索引重新生成。 有关语法的信息，请参阅[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)并[ALTER INDEX &#40;-&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 -   lock_request_priority_state  
   
@@ -285,12 +285,12 @@ ms.locfileid: "34467963"
   
 -   ddl_with_wait_at_low_priority  
   
- 现有的 XEvent **progress_report_online_index_operation**针对联机索引操作已通过添加扩展**partition_number**和**partition_id**。  
+ 现有 XEvent **progress_report_online_index_operation**联机索引操作已通过添加扩展**partition_number**并**partition_id**。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. 将 sys.dm_tran_locks 与其他工具一起使用  
- 以下示例处理更新操作被另一个事务阻塞的情况。 通过使用**sys.dm_tran_locks**和其他工具，提供有关锁定资源的信息。  
+ 以下示例处理更新操作被另一个事务阻塞的情况。 通过使用**sys.dm_tran_locks**和其他工具，提供了有关锁定资源信息。  
   
 ```sql  
 USE tempdb;  
@@ -386,8 +386,8 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sys.dm_tran_database_transactions &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sys.dm_tran_database_transactions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

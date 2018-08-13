@@ -22,13 +22,13 @@ caps.latest.revision: 10
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbfc968d9fb4620884f282121a820dad548405cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fb91da3a65a6c32636993f7784aa0f177596ab45
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060244"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555617"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "38060244"
 |**reserved_page_count**|**bigint**|有关版本的 tempdb 中保留的页的总计数将存储的数据库记录。|  
 |**reserved_space_kb**|**bigint**|用在 tempdb 中的千字节为单位的版本的总空间存储的数据库记录。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 
 ## <a name="examples"></a>示例  

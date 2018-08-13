@@ -1,5 +1,5 @@
 ---
-title: sys.cryptographic_providers (TRANSACT-SQL) |Microsoft 文档
+title: sys.cryptographic_providers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 237b33dedddd3757864bdd91887e0899606340e2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 465540093a84a1c49426803469021aed5ac8e617
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179393"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540483"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,18 +41,18 @@ ms.locfileid: "33179393"
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|加密提供程序的标识号。|  
 |**名称**|**sysname**|加密提供程序的名称。|  
-|**Guid**|**uniqueidentifier**|唯一的提供程序 GUID。|  
-|**version**|**nvarchar(50)**|格式提供程序的版本*aa.bb.cccc.dd*。|  
+|**guid**|**uniqueidentifier**|唯一的提供程序 GUID。|  
+|**version**|**nvarchar(50)**|版本格式的提供程序*aa.bb.cccc.dd*。|  
 |**dll_path**|**nvarchar(512)**|实现可扩展密钥管理 (EKM) 应用程序编程接口 (API) 的 DLL 的路径。|  
 |**is_enabled**|**bit**|服务器上是否启用了此提供程序。<br /><br /> 0 = 未启用（默认值）<br /><br /> 1 = 已启用|  
   
-## <a name="remarks"></a>注释  
- **Sys.cryptographic_providers**视图是公开可见。  
+## <a name="remarks"></a>Remarks  
+ **Sys.cryptographic_providers**视图是公开显示的。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

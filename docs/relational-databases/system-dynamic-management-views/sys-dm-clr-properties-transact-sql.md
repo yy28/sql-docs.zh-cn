@@ -23,13 +23,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f95f4d1596d84648034b51833738a26817f5e96b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 46eb510f9f943d2f63bd3eb1ea3ee4c2bf5f1a52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997999"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548747"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "37997999"
 ## <a name="remarks"></a>Remarks  
  属性和值的此视图中的未来版本可能会更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由于 CLR 集成功能的增强功能。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
   
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

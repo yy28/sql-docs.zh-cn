@@ -19,19 +19,19 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 285ecb57e573e13816cda0d8f24f03f608b4cdaa
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 14c8eff290e814470d5f1b49c8a563ff8997679f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413874"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536717"
 ---
-# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集中的数据-重新同步行
+# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集中的数据 - 重新同步行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持**IRowsetResynch**上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标支持行集仅。 **IRowsetResynch**不是按需提供。 使用者在打开行集前必须请求该接口。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持**IRowsetResynch**上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标支持行集仅。 IRowsetResynch 并不是需要时就可用。 使用者在打开行集前必须请求该接口。  
   
 ## <a name="see-also"></a>请参阅  
  [更新行集中的数据](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  

@@ -22,15 +22,15 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d565a025f61d3ca604cba02a5d7c35e395217ff2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050145"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561537"
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>批注解释-sql： 映射
+# <a name="annotation-interpretation---sqlmapped"></a>批注解释 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大容量加载进程**sql： 映射**按预期的 XSD 架构中批注 — 也就是说，如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试在相应列中存储相关联的数据。  
   

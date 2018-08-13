@@ -1,6 +1,6 @@
 ---
-title: T-SQL 语句的并行数据仓库 |Microsoft 文档
-description: T-SQL 语句有关分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
+title: T-SQL 语句-并行数据仓库 |Microsoft Docs
+description: T-SQL 语句的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,24 +9,24 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538887"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400760"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>并行数据仓库的 T-SQL 语句
-TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
+TRANSACT-SQL (T-SQL) 语句的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
 
 ## <a name="data-definition-language-ddl-statements"></a>数据定义语言 (DDL) 语句
-* [更改数据库](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+* [更改数据库](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [更改架构](../t-sql/statements/alter-schema-transact-sql.md)
-* [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
+* [更改表](../t-sql/statements/alter-table-transact-sql.md)
 * [创建列存储索引](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [创建数据库](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [创建数据库范围凭据](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [创建外部数据源](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [创建外部文件格式](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -37,13 +37,13 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓
 * [创建架构](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
-* [创建 TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 * [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
 * [删除外部数据源](../t-sql/statements/drop-external-data-source-transact-sql.md)
 * [删除外部文件格式](../t-sql/statements/drop-external-file-format-transact-sql.md)
 * [删除外部表](../t-sql/statements/drop-external-table-transact-sql.md)
 * [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md)
-* [放置过程](../t-sql/statements/drop-procedure-transact-sql.md)
+* [删除过程](../t-sql/statements/drop-procedure-transact-sql.md)
 * [删除统计信息](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
 * [删除架构](../t-sql/statements/drop-schema-transact-sql.md)
@@ -72,7 +72,7 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓
 * [EXCEPT 和 INTERSECT](../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
 * [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
 * [FROM](../t-sql/queries/from-transact-sql.md)
-* [使用透视和逆透视](../t-sql/queries/from-using-pivot-and-unpivot.md)
+* [使用 PIVOT 和 UNPIVOT](../t-sql/queries/from-using-pivot-and-unpivot.md)
 * [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
 * [HAVING](../t-sql/queries/select-having-transact-sql.md)
 * [ORDER BY](../t-sql/queries/select-order-by-clause-transact-sql.md)
@@ -85,14 +85,14 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓
 * [子查询](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>安全语句
-* 权限：[授予](../t-sql/statements/grant-transact-sql.md)，[拒绝](../t-sql/statements/deny-transact-sql.md)，[撤消](../t-sql/statements/revoke-transact-sql.md)
+* 权限： [GRANT](../t-sql/statements/grant-transact-sql.md)，[拒绝](../t-sql/statements/deny-transact-sql.md)，[撤消](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [更改证书](../t-sql/statements/alter-certificate-transact-sql.md)
 * [更改数据库加密密钥](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
 * [ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
 * [更改角色](../t-sql/statements/alter-role-transact-sql.md)
-* [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
+* [更改用户](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [创建证书](../t-sql/statements/create-certificate-transact-sql.md)
@@ -102,15 +102,15 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (AP) SQL Server 并行数据仓
 * [创建角色](../t-sql/statements/create-role-transact-sql.md)
 * [创建用户](../t-sql/statements/create-user-transact-sql.md)
 * [删除证书](../t-sql/statements/drop-certificate-transact-sql.md)
-* [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
-* [删除登录名](../t-sql/statements/drop-login-transact-sql.md)
-* [删除主密钥](../t-sql/statements/drop-master-key-transact-sql.md)
+* [删除数据库加密密钥](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+* [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
+* [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
 * [删除角色](../t-sql/statements/drop-role-transact-sql.md)
 * [删除用户](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
 ## <a name="next-steps"></a>后续步骤
-有关更多参考信息，请参阅[T-SQL 语言元素](tsql-language-elements.md)和[T-SQL 的系统视图](tsql-system-views.md)。
+有关更多参考信息，请参阅[T-SQL 语言元素](tsql-language-elements.md)并[T-SQL 系统视图](tsql-system-views.md)。
 
 <!--Image references-->
 

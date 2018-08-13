@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de537c60f8adf2d4860e236421dd0457871ea025
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984799"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556947"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 架构、 表和 WideWorldImportersDW 数据库中的存储的过程的说明。 
 
 WideWorldImportersDW 数据库用于数据仓库和分析处理。 在 WideWorldImporters 数据库中，生成有关销售和采购的事务数据并将其加载到 WideWorldImportersDW 数据库使用**日常 ETL 处理过程**。
@@ -51,11 +51,11 @@ WideWorldImportersDW 具有以下维度表。 说明内容包括 WideWorldImport
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |date|包含有关日期，包括财务年度的信息的新表 (基于 11 月 1 日开始财政年)。|
-|Employee|`Application.People`的用户。|
+|Employee|`Application.People` 的用户。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供应商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`的用户。|
-|TransactionType|`Application.TransactionTypes`的用户。|
+|PaymentMethod|`Application.PaymentMethods` 的用户。|
+|TransactionType|`Application.TransactionTypes` 的用户。|
 
 ### <a name="fact-tables"></a>事实数据表
 

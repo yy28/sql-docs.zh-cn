@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_pendingchanges (TRANSACT-SQL) |Microsoft 文档
+title: sp_fulltext_pendingchanges (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a6defefbc225d2f8301977d5826c74597eefb2c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5519ade9d6ea17377304034e076d96e20af57409
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244118"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558097"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,22 +54,22 @@ sp_fulltext_pendingchanges table_id
 |-----------------|---------------|-----------------|  
 |**Key**|*|指定表中的全文键值。|  
 |**DocId**|**bigint**|与键值相对应的内部文档标识符 (DocId) 列。|  
-|**状态**|**int**|0 = 将从全文索引中删除行。<br /><br /> 1 = 将对行进行全文索引。<br /><br /> 2 = 行是最新的。<br /><br /> -1 = 行处于过渡（进行了批处理，但未提交）状态或错误状态。|  
+|**“状态”**|**int**|0 = 将从全文索引中删除行。<br /><br /> 1 = 将对行进行全文索引。<br /><br /> 2 = 行是最新的。<br /><br /> -1 = 行处于过渡（进行了批处理，但未提交）状态或错误状态。|  
 |**DocState**|**tinyint**|内部文档标识符 (DocId) 映射状态列的原始转储。|  
   
- <sup>* 相同基表中的全文键列的数据类型是密钥的数据类型。</sup>  
+ <sup>* 密钥的数据类型与相同基表中的全文键列的数据类型。</sup>  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果没有要处理的更改，则返回一个空行集。  
   
  全文搜索查询不会返回的行**状态**值为 0。 这是因为该行已从基表中删除且正等待从全文索引中删除。  
   
- 若要了解多少处更改处于挂起状态对于特定的表，使用**TableFullTextPendingChanges** OBJECTPROPERTYEX 函数属性。  
+ 若要了解多少更改处于挂起状态对于特定的表，请使用**TableFullTextPendingChanges** OBJECTPROPERTYEX 函数的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全文搜索和语义搜索存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   

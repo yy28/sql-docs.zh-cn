@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_xml_handles (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_exec_xml_handles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 66702418faae18f1c4582a28353e2f5ae7c156bc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b950650ee4e012d81db65b7ebb6a271fd94b1b14
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046105"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534277"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -69,7 +69,7 @@ dm_exec_xml_handles (session_id | 0 )
 ## <a name="remarks"></a>Remarks  
  生存期**sql_handle**用来检索执行调用的 SQL 文本**sp_xml_preparedocument**长于缓存用来执行查询的计划。 如果查询文本在缓存中不可用，则无法使用函数结果中提供的信息来检索数据。 如果您正在运行多个大型批处理，则可能出现上述情况。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对服务器拥有 VIEW SERVER STATE 权限，以查看不归调用者所有的全部会话或会话 ID。 调用者始终可以查看自己的当前会话 ID 的数据。      
   
 ## <a name="examples"></a>示例  

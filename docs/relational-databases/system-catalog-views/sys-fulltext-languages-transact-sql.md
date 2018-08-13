@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_languages (TRANSACT-SQL) |Microsoft 文档
+title: sys.fulltext_languages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,28 +25,28 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dabc9334091b5b545c78b069b3e9f31a5a68a1bd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b137d433f06eddcd57bc01bb2b26900c3fdd3483
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182053"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535207"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了断字符的每种语言在此目录视图中均存在对应的一行。 每行显示的 LCID 和的语言名称。 注册了某种语言的断字符后，可在全文索引/查询操作中使用它的其他语言资源：词干分析器、干扰词（非索引字）和同义词库文件。 值**名称**或**lcid**的全文查询和全文索引中只能指定[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了断字符的每种语言在此目录视图中均存在对应的一行。 每行显示的 LCID 和语言的名称。 注册了某种语言的断字符后，可在全文索引/查询操作中使用它的其他语言资源：词干分析器、干扰词（非索引字）和同义词库文件。 值**名称**或**lcid**可以对全文查询和全文索引中指定[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
    
-|列|数据类型|Description|  
+|“列”|数据类型|Description|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置标识符 (LCID)。|  
-|**名称**|**sysname**|是中的别名值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)对应的值**lcid**或的字符串表示形式的数字的 LCID。|  
+|**名称**|**sysname**|是中的别名值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的值对应**lcid**或是数值 LCID 的字符串表示形式。|  
   
 ## <a name="values-returned-for-default-languages"></a>针对默认语言返回的值  
  下表显示在默认情况下为其注册了断字符的语言的值。  
   
-|语言|LCID|  
+|“报表”|LCID|  
 |--------------|----------|  
 |阿拉伯语|1025|  
 |孟加拉语（印度）|1093|  
@@ -102,18 +102,18 @@ ms.locfileid: "33182053"
 |乌尔都语|1056|  
 |越南语|1066|  
   
-## <a name="remarks"></a>注释  
- 若要更新使用的全文搜索已注册的语言列表，请使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**update_languages**。  
+## <a name="remarks"></a>Remarks  
+ 若要更新的全文搜索中注册的语言列表，请使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [sp_fulltext_load_thesaurus_file &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_fulltext_load_thesaurus_file &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [为配置和管理同义词库文件的全文搜索](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [为配置和管理非索引字和非索引字表的全文搜索](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [配置和管理全文搜索同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

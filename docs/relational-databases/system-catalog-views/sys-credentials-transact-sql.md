@@ -24,13 +24,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac0d1322be8e6c65d066c9de20d9a117b08f981a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d94a60edd7dac48b8510a112fe7cbfe1e5ad40ec
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031355"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560597"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "38031355"
 ## <a name="remarks"></a>Remarks  
 有关数据库级别的凭据，请参阅[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求`VIEW ANY DEFINITION`权限或`ALTER ANY CREDENTIAL`权限。 此外，不得被拒绝主体`VIEW ANY DEFINITION`权限。  
   
 ## <a name="see-also"></a>请参阅  

@@ -16,13 +16,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80b5776826790bf9026df5d25965c4116367b974
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b0cd923904b13e9cb63b72010e89d4079b966e22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419626"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539177"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,17 +65,17 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |**S_OK**|方法成功。|  
-|**E_FAIL**|将出现提供程序特定的错误，有关详细的信息，请使用 ISQLServerErrorInfo 接口。|  
+|**E_FAIL**|出现访问接口特定的错误；要获取详细信息，请使用 ISQLServerErrorInfo 接口。|  
 |**E_UNEXPECTED**|意外调用了该方法。 例如， **IBCPSession2::BCPInit**调用 IBCPSession2::BCPSetBulkMode 之前，未调用方法。|  
 |**E_INVALIDARG**|参数无效。|  
 |**E_OUTOFMEMORY**|内存不足错误。|  
   
 ## <a name="remarks"></a>Remarks  
- 可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 当 IBCPSession2::BCPSetBulkMode 用于查询语句外大容量复制时，它必须在调用之前调用`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`来指定查询语句。  
+ 可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` 来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 icommandprepare:: Prepare 方法返回一个错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
- 下表列出的常量*属性*参数。  
+ 下表列出了 property 参数的常量。  
   
 |“属性”|Description|  
 |--------------|-----------------|  
@@ -88,7 +88,7 @@ HRESULT BCPSetBulkMode (
   
  不能调用使用 ibcpsession:: Bcpcontrol **BCP_OPTION_TEXTFILE**和 IBCPSession2::BCPSetBulkMode。  
   
- 如果你尝试调用的函数调用序列，其中包括 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol 和 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一个函数调用将返回序列错误。 如果您选择更正错误，调用 ibcpsession:: Bcpinit 重置设置并重新开始。  
+ 如果你尝试调用的函数调用序列，其中包括 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol 和 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一个函数调用将返回序列错误。 如果选择更正错误，请调用 IBCPSession::BCPInit 重置设置，然后重新开始。  
   
  以下是造成函数序列错误的函数调用的一些示例：  
   

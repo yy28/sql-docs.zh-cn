@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51cd7c4fa45c6a09a0885bb69b11b916fa4caa51
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058209"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535087"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "38058209"
 |type_desc| **nvarchar(60)**|   类型的说明<br/><br/>DELETED_ROWS_TABLE -> 跟踪列存储索引的已删除行的内部表<br/>USER_TABLE -> 包含行内用户数据的表<br/>DICTIONARIES_TABLE -> 列存储索引的字典<br/>SEGMENTS_TABLE -> 列存储索引的压缩段<br/>ROW_GROUPS_INFO_TABLE -> 有关列存储索引的压缩行组的元数据<br/>INTERNAL OFF-ROW DATA TABLE -> 用于行外列存储的内部表。 在这种情况下，minor_id 反映 column_id。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 基于磁盘的历史记录表的热结尾。 插入历史记录中的行会先插入此内部内存优化表中。 有一个后台任务以异步方式将行从此内部表移动到基于磁盘的历史记录表。 |
 |minor_id|  **int**|    0 指示用户或内部表<br/><br/>非 0 指示行外存储的列的 ID。 在 sys.columns 中与 column_id 联接。<br/><br/>每个行外存储的列都在此系统视图中具有对应行。|
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  

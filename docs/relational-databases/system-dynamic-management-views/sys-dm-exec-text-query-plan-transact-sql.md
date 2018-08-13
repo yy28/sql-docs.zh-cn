@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_text_query_plan (Transact SQL) |Microsoft 文档
+title: sys.dm_exec_text_query_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8e7f577a0939312123b398e3be1ab5b4cce0cd8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebd078b47fde7d7cd8202c1c31d7ee6a76dbff0a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465163"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559537"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 查询计划指定的计划句柄可以处于缓存或当前正在执行。 此表值函数是类似于[sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)，但有以下不同：  
+  为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或批处理中的特定语句返回文本格式的显示计划。 查询计划指定计划句柄可以处于缓存或当前正在执行。 此表值函数是类似于[sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)，但具有以下差异：  
   
 -   查询计划的输出以文本格式返回。  
   
@@ -89,25 +89,25 @@ sys.dm_exec_text_query_plan
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**int**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。<br /><br /> 此列可为空值。|  
-|**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席和已准备好的批处理，此列为**null**。<br /><br /> 此列可为空值。|  
-|**number**|**int**|为存储过程编号的整数。 例如，一组过程**订单**应用程序可能名为**orderproc; 1**， **orderproc; 2**，依次类推。 对于即席和已准备好的批处理，此列为**null**。<br /><br /> 此列可为空值。|  
+|**dbid**|**smallint**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。<br /><br /> 此列可为空值。|  
+|**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于临时和预定义的批处理，则此列为**null**。<br /><br /> 此列可为空值。|  
+|**number**|**smallint**|为存储过程编号的整数。 例如，一组的过程**订单**可能名为应用程序**orderproc; 1**， **orderproc; 2**，依次类推。 对于临时和预定义的批处理，则此列为**null**。<br /><br /> 此列可为空值。|  
 |**加密**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
-|**query_plan**|**nvarchar(max)**|包含与指定的查询执行计划的编译时显示计划表示*plan_handle*。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
+|**query_plan**|**nvarchar(max)**|包含与指定的查询执行计划的编译时显示计划表示形式*plan_handle*。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在以下情况下不显示计划输出中返回**计划**返回的表的列**sys.dm_exec_text_query_plan**:  
   
--   通过使用指定的查询计划，如果*plan_handle*已从计划缓存中逐出**query_plan**列返回的表为 null。 例如，可能发生此问题，如果没有时捕获计划句柄并将其用于使用之间的时间延迟**sys.dm_exec_text_query_plan**。  
+-   通过使用指定的查询计划，如果*plan_handle*已从计划缓存中逐出**query_plan**列返回的表为 null。 例如，可能会发生此问题，如果没有捕获计划句柄的和已使用与时间之间的时间延迟**sys.dm_exec_text_query_plan**。  
   
--   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 不能通过使用来检索这些语句的显示计划**sys.dm_exec_text_query_plan**因为它们在缓存中不存在。  
+-   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 不能通过检索此类语句的显示计划**sys.dm_exec_text_query_plan**因为它们在缓存中不存在。  
   
--   如果[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或存储的过程包含对用户定义函数的调用或动态 SQL，例如使用 EXEC 的调用 (*字符串*)，则该用户定义函数不会包含表中已编译 XML 显示计划返回**sys.dm_exec_text_query_plan**为批处理或存储的过程。 相反，必须进行单独调用**sys.dm_exec_text_query_plan**为*plan_handle*相对应的用户定义函数。  
+-   如果[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或存储的过程包含对用户定义函数的调用或对动态 SQL，例如使用 EXEC (*字符串*)，则不在表中会包含用户定义函数已编译 XML 显示计划返回的**sys.dm_exec_text_query_plan**为批处理或存储的过程。 相反，必须进行单独调用**sys.dm_exec_text_query_plan**有关*plan_handle*对应于用户定义函数。  
   
-当即席查询使用[简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)或[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)、 **query_plan**列将包含仅语句文本，而不是实际查询计划。 若要返回查询计划，请调用**sys.dm_exec_text_query_plan**的已准备的参数化查询的计划句柄。 你可以确定查询是否已通过引用参数化**sql**列[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)视图或文本列[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)动态管理视图。  
+当即席查询使用[简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)或[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)，则**query_plan**列将包含仅语句文本，而不是实际查询计划。 若要返回查询计划，请调用**sys.dm_exec_text_query_plan**准备参数化查询的计划句柄。 您可以确定查询是否已参数化通过引用**sql**的列[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)视图或文本列[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)动态管理视图。  
   
-## <a name="permissions"></a>权限  
- 若要执行**sys.dm_exec_text_query_plan**，用户必须是属于**sysadmin**固定服务器角色或服务器上具有 VIEW SERVER STATE 权限。  
+## <a name="permissions"></a>Permissions  
+ 若要执行**sys.dm_exec_text_query_plan**，用户必须是属于**sysadmin**固定服务器角色或对服务器具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -115,7 +115,7 @@ sys.dm_exec_text_query_plan
  如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或批查询在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定连接上运行的时间很长，请检索该查询或批查询的执行计划，以查找导致延迟的原因。 以下示例显示的是如何检索运行速度缓慢的查询或批处理的显示计划。  
   
 > [!NOTE]  
-> 若要运行此示例中，值替换为*session_id*和*plan_handle*使用特定于你的服务器的值。  
+> 若要运行此示例中，替换的值*session_id*并*plan_handle*与特定于你的服务器的值。  
   
  首先，使用 `sp_who` 存储过程检索正在执行查询或批查询的进程的服务器进程 ID (SPID)。  
   
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. 从计划缓存中检索每个查询计划  
- 若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 显示计划输出中的每个计划缓存中的当前计划个`query_plan`返回的表的列。  
+ 若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 显示计划输出中当前计划缓存中的每个计划为`query_plan`返回表的列。  
   
 ```sql  
 USE master;  
@@ -170,7 +170,7 @@ GO
 ```  
   
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 检索有关前五个查询按平均 CPU 时间的信息  
- 以下示例返回前五个查询的查询计划和平均 CPU 时间。 **Sys.dm_exec_text_query_plan**函数指定的默认值 0 和-1 以返回批处理中的所有语句，查询计划中。  
+ 以下示例返回前五个查询的查询计划和平均 CPU 时间。 **Sys.dm_exec_text_query_plan**函数指定默认值 0 和-1 以返回批处理中的所有语句，查询计划中。  
   
 ```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
@@ -181,5 +181,5 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

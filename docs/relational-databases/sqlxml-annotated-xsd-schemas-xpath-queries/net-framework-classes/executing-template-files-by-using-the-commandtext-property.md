@@ -1,5 +1,5 @@
 ---
-title: 通过使用 CommandText 属性执行模板文件 |Microsoft 文档
+title: 使用 CommandText 属性执行模板文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5a6079aa56a74b85eddb9b9fa1135be008015cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619494"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563981"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 属性执行模板文件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此示例说明如何通过使用 CommandTextproperty 指定 SQL 或 XPath 查询的包含的模板文件。 而不是作为 CommandText 值指定 SQL 或 XPath 查询，你可以指定文件名称作为值。 在下面的示例中，CommandType 属性被指定为 SqlXmlCommandType.TemplateFile。  
+  此示例说明了如何通过使用 CommandTextproperty 指定 SQL 或 XPath 查询组成的模板文件。 而不是作为 CommandText 值中指定的 SQL 或 XPath 查询，可以指定文件名称，作为值。 在以下示例中，CommandType 属性指定为 SqlXmlCommandType.TemplateFile。  
   
  示例应用程序执行下面的模板：  
   
@@ -86,7 +86,7 @@ class Test
   
 2.  将该示例中提供的 XML 模板 (TemplateFile.xml) 保存在某个文件夹中。  
   
-3.  在此示例中的架构存储在其中的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
+3.  在此示例中在其中存储架构的同一文件夹中保存的 C# 代码 (DocSample.cs) 提供。 （如果将文件存储在其他文件夹中，则必须编辑代码并为映射架构指定相应的目录路径。）  
   
 4.  编译代码。 若要在命令提示符下编译此代码，请使用：  
   
@@ -98,7 +98,7 @@ class Test
   
 5.  在命令提示符下，执行 DocSample.exe。  
   
- 如果将参数传递到的模板时，参数名称必须以开始 at 符号 (@);例如，p.Name="\@ContactID"，其中 p 是 SqlXmlParameter 对象。  
+ 如果向模板传递参数，参数名称必须以 at 符号 (@);例如，p.Name="\@ContactID"，其中 p 是 SqlXmlParameter 对象。  
   
  下面是接受一个参数后的已更新模板。  
   

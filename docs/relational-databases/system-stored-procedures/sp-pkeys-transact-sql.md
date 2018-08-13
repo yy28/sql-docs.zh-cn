@@ -1,5 +1,5 @@
 ---
-title: sp_pkeys (Transact SQL) |Microsoft 文档
+title: sp_pkeys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5321f34ae72051bc84a83dca70f12f772f22fc9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5d51be7029c9f9da4ef7a51958f756352c5ddc1f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259477"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562991"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,18 +49,18 @@ sp_pkeys [ @table_name = ] 'name'
   
 ## <a name="arguments"></a>参数  
  [ @table_name=] '*名称*  
- 是为其返回信息的表。 *名称*是**sysname**，无默认值。 不支持通配符模式匹配。  
+ 是要为其返回信息的表。 *名称*是**sysname**，无默认值。 不支持通配符模式匹配。  
   
  [ @table_owner=] '*所有者*  
- 为指定的表指定所有者。 *所有者*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则应用基础 DBMS 的默认表的可见性规则。  
+ 为指定的表指定所有者。 *所有者*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认表可见性规则将应用。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程查找具有指定的表*名称*归数据库所有者。 如果存在，则返回该表的列。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*名称*归数据库所有者。 如果存在，则返回该表的列。  
   
  [ @table_qualifier=] '*限定符*  
- 是表限定符。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名表 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ 表限定符。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -70,15 +70,15 @@ sp_pkeys [ @table_name = ] 'name'
 |TABLE_OWNER|**sysname**|表所有者的名称。 此字段始终返回值。|  
 |TABLE_NAME|**sysname**|表的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该列表示在 sysobjects 表中列出的表名。 此字段始终返回值。|  
 |COLUMN_NAME|**sysname**|返回的 TABLE_NAME 中每一列的列名。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该列表示在 sys.columns 表中列出的列名。 此字段始终返回值。|  
-|KEY_SEQ|**int**|多列主键中列的序列号。|  
+|KEY_SEQ|**smallint**|多列主键中列的序列号。|  
 |PK_NAME|**sysname**|主键标识符。 如果对数据源不适用，则返回 NULL。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  sp_pkeys 返回使用 PRIMARY KEY 约束显式定义的列的信息。 由于不是所有的系统均支持显式命名的主键，因此由网关实现者决定主键的构成。 请注意主键这一术语指的是表的逻辑主键。 应对被列为逻辑主键的每个键定义一个唯一索引。 此唯一索引也会由 sp_statistics 返回。  
   
  等效于 ODBC 中的 SQLPrimaryKeys sp_pkeys 存储过程。 返回的结果按 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 KEY_SEQ 排序。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
@@ -100,7 +100,7 @@ EXEC sp_pkeys @table_name = N'Department'
 EXEC sp_pkeys @table_name = N'DimAccount;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

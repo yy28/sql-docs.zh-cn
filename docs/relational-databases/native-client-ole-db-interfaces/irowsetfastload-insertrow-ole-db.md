@@ -19,13 +19,13 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 43644b4e99efe1d6eedbe8d7fd552c0b8a543a38
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 404068023a2a62739286134f8fda08184e4844c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413052"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562511"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ HRESULT InsertRow(
  定义大容量复制的行数据的取值函数句柄。 引用的取值函数为行取值函数，将绑定包含数据值的使用者拥有的内存。  
   
  *pData*[in]  
- 指向包含数据值的使用者所拥有内存的指针。 有关详细信息，请参阅[DBBINDING 结构](http://go.microsoft.com/fwlink/?LinkId=65955)。  
+ 指向包含数据值的使用者所拥有内存的指针。 有关详细信息，请参阅 [DBBINDING 结构](http://go.microsoft.com/fwlink/?LinkId=65955)。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
@@ -57,24 +57,24 @@ HRESULT InsertRow(
  出现了错误。 从行集的错误接口中发出错误信息。  
   
  E_INVALIDARG  
- *PData*参数已设置为 NULL 指针。  
+ pData 参数设置为 NULL 指针。  
   
  E_OUTOFMEMORY  
  SQLNCLI11 无法分配足够的内存来完成请求。  
   
  E_UNEXPECTED  
- 在以前失效的大容量复制行集上调用该方法[irowsetfastload:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
+ 对以前被 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法作废的大容量复制行集调用了该方法。  
   
  DB_E_BADACCESSORHANDLE  
- *HAccessor*使用者提供的参数无效。  
+ 使用者提供的 hAccessor 参数无效。  
   
  DB_E_BADACCESSORTYPE  
  指定的取值函数不是行取值函数，或者未指定使用者拥有的内存。  
   
 ## <a name="remarks"></a>Remarks  
- 使用者数据转换为错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列的数据类型将导致从返回 E_FAIL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序。 数据可以传输到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任何**InsertRow**方法或只**提交**方法。 使用者应用程序可以调用**InsertRow**许多次，并接收通知的数据类型转换错误存在之前的错误数据的方法。 因为**提交**方法可确保，所有数据正确都指定由使用者，可以使用使用者**提交**方法适当地验证根据需要的数据。  
+ 使用者数据转换为错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列的数据类型将导致从返回 E_FAIL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序。 可以通过任何 InsertRow 方法或只通过 Commit 方法将数据传输到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在使用者应用程序收到存在数据类型转换错误的通知之前，它可以用错误数据多次调用 InsertRow 方法。 因为 Commit 方法可确保使用者正确指定所有数据，所以使用者可在必要时使用 Commit 方法适当地验证数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口大容量复制行集是只写。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开没有允许使用者行集的查询的方法。 若要终止处理，使用者可以释放它的引用上[IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)接口而不调用**提交**方法。 没有用于进行以下操作的设备：访问行集中使用者插入的行、更改其值或从行集中逐一删除该行。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口大容量复制行集是只写。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开没有允许使用者行集的查询的方法。 若要终止处理，使用者可以在不调用 Commit 方法的情况下释放其对 [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 接口的引用。 没有用于进行以下操作的设备：访问行集中使用者插入的行、更改其值或从行集中逐一删除该行。  
   
  大容量复制行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上进行了格式化。 可能已针对连接或会话（例如 ANSI_PADDING）设置的任何选项均会影响行格式。 此选项设置在默认情况下，通过建立的任何连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
   

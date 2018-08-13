@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023855"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556467"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 为什么要包含的信息的说明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]认为此计划更改是一个潜在的性能回归。
  - 检测到潜在回归时的日期时间。
  - 此建议的分数。 
- - 有关检测到的计划回归计划修复该问题，应强制计划的 ID 的 ID 的 ID 等问题的详细信息 [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- 脚本，可能会应用若要修复的问题，等等。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)。
+ - 有关检测到的计划回归计划修复该问题，应强制计划的 ID 的 ID 的 ID 等问题的详细信息[!INCLUDE[tsql_md](../../includes/tsql_md.md)]脚本可能会应用若要修复的问题，等等。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)。
 
 使用以下查询以获取修复的问题和其他信息的估计脚本获得：
 

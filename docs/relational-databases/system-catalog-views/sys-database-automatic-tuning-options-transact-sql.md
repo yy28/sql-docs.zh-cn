@@ -26,13 +26,13 @@ caps.latest.revision: 24
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 6a9fc30a86c3033264dc723de282caffd03289fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e4c5cd169f7beca5cd7af3b96f1df229eb844d77
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38065397"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543328"
 ---
 # <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_自动\_tuning_options (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "38065397"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**名称**|**nvarchar(128)**|自动优化选项的名称。 请参阅[ALTER DATABASE 设置 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)可用的选项。|  
-|**desired_state**|**int**|指示自动优化选项，由用户显式设置的所需的操作模式。<br />0 = OFF<br />1 = ON|  
+|**desired_state**|**smallint**|指示自动优化选项，由用户显式设置的所需的操作模式。<br />0 = OFF<br />1 = ON|  
 |**desired_state_desc**|**nvarchar(60)**|自动调节选项所需的操作模式的文本说明。<br />OFF<br />ON|  
-|**actual_state**|**int**|指示自动优化选项的操作模式。<br />0 = OFF<br />1 = ON|  
+|**actual_state**|**smallint**|指示自动优化选项的操作模式。<br />0 = OFF<br />1 = ON|  
 |**actual_state_desc**|**nvarchar(60)**|自动优化选项的实际操作模式的文本说明。<br />OFF<br />ON|  
-|**reason**|**int**|指示为什么实际和所需状态的不同。<br />2 = 已禁用<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
+|**reason**|**smallint**|指示为什么实际和所需状态的不同。<br />2 = 已禁用<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
 |**reason_desc**|**nvarchar(60)**|为什么实际和所需状态的不同的原因的文本说明。<br />已禁用 = 选项已被系统禁用<br />QUERY_STORE_OFF = Query Store 处于关闭状态<br />QUERY_STORE_READ_ONLY = 查询存储处于只读模式<br />NOT_SUPPORTED = 可用仅在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业版| 
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="see-also"></a>请参阅  

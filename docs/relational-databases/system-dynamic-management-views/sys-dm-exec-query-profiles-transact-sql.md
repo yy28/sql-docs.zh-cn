@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f515f52c624eb0fdb0570f9346c2e5a043efa6d2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046135"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540518"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38046135"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|标识运行此查询的会话。 引用 dm_exec_sessions.session_id。|  
+|session_id|**smallint**|标识运行此查询的会话。 引用 dm_exec_sessions.session_id。|  
 |request_id|**int**|确定目标请求。 引用 dm_exec_sessions.request_id。|  
 |sql_handle|**varbinary(64)**|确定目标查询。 引用 dm_exec_query_stats.sql_handle。|  
 |plan_handle|**varbinary(64)**|确定目标查询（引用 dm_exec_query_stats.plan_handle）。|  
@@ -62,7 +62,7 @@ ms.locfileid: "38046135"
 |close_time|**bigint**|关闭时的时间戳（毫秒）。|  
 |elapsed_time_ms|**bigint**|目标节点的操作迄今为止使用的总占用时间（毫秒）。|  
 |cpu_time_ms|**bigint**|目标节点的操作迄今为止使用的总 CPU 时间（毫秒）。|  
-|database_id|**int**|包含要对其进行读写的对象的数据库的 ID。|  
+|database_id|**smallint**|包含要对其进行读写的对象的数据库的 ID。|  
 |object_id|**int**|要对其进行读写的对象的标识符。 引用 sys.objects.object_id。|  
 |index_id|**int**|打开其行级的索引（如果有）。|  
 |scan_count|**bigint**|迄今为止的表/索引扫描数。|  
@@ -94,7 +94,7 @@ ms.locfileid: "38046135"
 
  设置统计信息 XML ON 和 SET STATISTICS PROFILE ON 始终使用旧查询执行统计信息分析基础结构。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

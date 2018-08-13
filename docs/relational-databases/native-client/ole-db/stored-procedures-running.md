@@ -19,19 +19,19 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed9df8c1c51143442b622e9aa14831ede809a1b6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c58147840fe81e24308299b034d6486d1e5eb009
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415396"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537557"
 ---
-# <a name="stored-procedures---running"></a>存储的过程-运行
+# <a name="stored-procedures---running"></a>存储过程 - 运行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  执行语句时，可以提供对数据源 （而不是执行或准备客户端应用程序中的语句直接） 调用存储的过程：  
+  执行语句时，对数据源调用存储过程（而不是直接在客户端应用程序中执行或准备语句）可以：  
   
 -   提高性能。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "37415396"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持三种机制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]存储的过程用于返回数据：  
   
--   该过程中的每个 SELECT 语句生成的结果集。  
+-   过程中的每一条 SELECT 语句都生成一个结果集。  
   
 -   过程可以通过输出参数返回数据。  
   
 -   过程可以具有整数返回代码。  
   
- 应用程序必须能够处理所有这些输出的存储过程。  
+ 应用程序必须能够处理来自存储过程的所有这些输出。  
   
  在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 情况下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序、 输出参数和返回代码不提供直到后使用者检索或取消存储过程返回的结果集。 返回代码和输出参数在最后一个来自服务器的 TDS 数据包中返回。  
   

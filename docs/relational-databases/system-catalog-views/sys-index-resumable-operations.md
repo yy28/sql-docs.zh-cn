@@ -23,13 +23,13 @@ caps.latest.revision: 1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d68f6e0946f9b5fb781448b2973939831b6cab9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 47ce09f820c979f059d5c5f4bad40304ca7a591d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058221"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555417"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38058221"
 |**index_id**|**int**|(不可为 null) 的索引 ID。 **index_id**是只在对象中唯一的。|
 |**名称**|**sysname**|索引的名称。 **名称**是只在对象中唯一的。|  
 |**sql_text**|**nvarchar(max)**|DDL T-SQL 的语句文本|
-|**last_max_dop**|**int**|上次使用的 MAX_DOP (默认值 = 0)|
+|**last_max_dop**|**smallint**|上次使用的 MAX_DOP (默认值 = 0)|
 |**partition_number**|**int**|所属索引或堆中的分区号。 对于非分区表和索引或示例中的所有分区都正在重新生成值此列的为 NULL。|
 |State|**tinyint**|可恢复索引操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
 |**state_desc**|**nvarchar(60)**|（运行或暂停） 的可恢复索引操作状态的说明|  
@@ -52,7 +52,7 @@ ms.locfileid: "38058221"
 |**percent_complete**|**real**|索引操作正在进行中自动补全 %(不可以为 null)。|
 |**page_count**|**bigint**|由新的索引生成操作和映射索引 (不可以为 null) 分配的索引页的总数。 
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
    
 ## <a name="example"></a>示例  

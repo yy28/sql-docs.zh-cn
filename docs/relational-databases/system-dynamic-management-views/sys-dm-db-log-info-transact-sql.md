@@ -22,13 +22,13 @@ caps.latest.revision: 4
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e2b99ce1a417c31b4ca81eb9f538acda0edfc517
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f58f3c938f807b1593c8638fc69f70d3dcb911f3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061515"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556257"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.dm_db_log_info ( database_id )
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|数据库 ID。|
-|file_id|**int**|事务日志的文件 id。|  
+|file_id|**smallint**|事务日志的文件 id。|  
 |vlf_begin_offset|**bigint** |位置的偏移[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)从事务日志文件的开头。|
 |vlf_size_mb |**float** |[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)大小以 mb 为单位，舍入为 2 个小数位。|     
 |vlf_sequence_number|**bigint** |[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序列中创建的订单号。 用于唯一标识日志文件中的 Vlf。|
@@ -67,7 +67,7 @@ sys.dm_db_log_info ( database_id )
 ## <a name="remarks"></a>Remarks
 `sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。    
  
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 需要`VIEW DATABASE STATE`数据库中的权限。  
   
 ## <a name="examples"></a>示例  

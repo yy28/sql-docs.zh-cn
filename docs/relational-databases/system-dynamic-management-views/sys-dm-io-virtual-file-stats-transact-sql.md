@@ -23,13 +23,13 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bf537cf127ff3f2c231736459c72f875d4515873
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066828"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534147"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -80,8 +80,8 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库名称。</br></br>对于 SQL 数据仓库，这是数据库的存储在由 pdw_node_id 标识的节点上的名称。 每个节点都有一个具有 13 文件的 tempdb 数据库。 每个节点还具有一个数据库，每个分布区，并且每个分发数据库具有 5 个文件。 例如，如果每个节点包含 4 个分布区，则结果会显示 pdw_node_id 每 20 个分发数据库文件。 
-|**database_id**|**int**|数据库的 ID。|  
-|**file_id**|**int**|文件的 ID。|  
+|**database_id**|**smallint**|数据库的 ID。|  
+|**file_id**|**smallint**|文件的 ID。|  
 |**sample_ms**|**bigint**|自从计算机启动以来的毫秒数。 可以使用此列来比较该函数的不同输出。</br></br>数据类型是**int**为[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|对文件发出的读取次数。|  
 |**num_of_bytes_read**|**bigint**|在此文件中读取的总字节数。|  
@@ -97,7 +97,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**pdw_node_id**|**int**|适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分发节点的标识符。
  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 VIEW SERVER STATE 权限。 有关详细信息，请参阅[动态管理视图和函数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  

@@ -17,13 +17,13 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12c021047650a7bfe24df6d354fa5fc545f2bfe5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 439066cd1b1d738cbfda01213646aafce6553e44
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416906"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541097"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "37416906"
  [FILESTREAM 支持](../../../relational-databases/native-client/features/filestream-support.md)  
  讨论[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 对 FILESTREAM 增强功能支持。  
   
- [服务主体名称&#40;SPN&#41;中的客户端连接的支持](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [客户端连接中的服务主体名称 (SPN) 支持](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  讨论如何扩展对服务主体名称 (SPN) 的支持，以便能够跨所有协议进行相互身份验证。  
   
  [SQL Server Native Client 中的稀疏列支持](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  
@@ -93,7 +93,7 @@ ms.locfileid: "37416906"
  讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果绑定列结果或输出参数时提供了一个固定长度缓冲区，并且**wchar**字符结尾的字符是代理项对的高代理项代码点之前，如果写入到缓冲区的下一步**wchar**字符是一个低代理项码位[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将不向缓冲区添加高代理项码位。  
   
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- 讨论如何配置你的应用程序以充分利用高可用性、 灾难恢复中添加功能[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+ 讨论如何配置应用程序以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中添加的高可用性和灾难恢复功能。  
   
  [访问扩展事件日志中的诊断信息](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  讨论对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和跟踪数据的增强功能，它们使您可以访问环形缓冲区和 XEvents 日志中的诊断信息。  

@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3969ef0ff469392a93cd389a2104d2f3f82f87b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e2714e462ffaa891ba44cb002a491366f86f0ba8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979469"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535457"
 ---
-# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets （Azure SQL 数据库）
+# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   对事件会话的每个事件目标都返回一行。  
@@ -42,7 +42,7 @@ ms.locfileid: "37979469"
 |包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
 |module|**sysname**|包含事件目标的模块的名称。 不可为 null。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
 ## <a name="remarks"></a>Remarks  

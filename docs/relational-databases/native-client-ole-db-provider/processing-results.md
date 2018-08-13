@@ -19,13 +19,13 @@ ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3c8b6a1653fa089b5ef78211c4dd1ab4896dbcf6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 13ebd841699598c3489ca5fa84bcb64999bcb475
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425896"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562741"
 ---
 # <a name="processing-results"></a>处理结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "37425896"
 
   如果行集对象是由执行命令或直接从访问接口生成的，则使用者需要检索和访问行集中的数据。  
   
- 行集是使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口能够以表格格式提供数据的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象公开接口，如**IRowset** （包含按顺序从行集中提取行的方法）， **IAccessor** (允许定义一组描述列绑定方式表格数据绑定到使用者程序变量）， **IColumnsInfo** （提供有关行集中的列信息），并**IRowsetInfo** （提供有关行集信息）。  
+ 行集是使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口能够以表格格式提供数据的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象可提供如下接口：IRowset（包含按顺序从行集提取行的方法）、IAccessor（允许定义一组列绑定来说明将表格格式数据绑定到使用者程序变量的方式）、IColumnsInfo（提供有关行集中列的信息）以及 IRowsetInfo（提供有关行集的信息）。  
   
- 使用者可以调用**irowset:: Getdata**方法将从行集中的一行数据检索到缓冲区。 之前**GetData**是调用，使用者描述使用 DBBINDING 结构的一组缓冲区。 每个绑定都说明了行集中的列在使用者缓冲区中的存储方式并包含以下内容：  
+ 使用者可以调用 IRowset::GetData 方法将行集中的一行数据检索到缓冲区中。 在调用 GetData 之前，使用者使用一组 DBBINDING 结构来描述缓冲区。 每个绑定都说明了行集中的列在使用者缓冲区中的存储方式并包含以下内容：  
   
 -   应用绑定的列（或参数）的序号。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "37425896"
   
  获取数据时，访问接口将使用每个绑定中的信息来确定从使用者缓冲区的何处以及如何检索数据。 设置使用者缓冲区中的数据时，访问接口将使用每个绑定中的信息来确定在使用者缓冲区的何处以及如何返回数据。  
   
- 指定 DBBINDING 结构后，创建取值函数 (**iaccessor:: Createaccessor**)。 取值函数是一个绑定集合，可用于获取或设置使用者缓冲区中的数据。  
+ 指定 DBBINDING 结构后，将创建取值函数 (IAccessor::CreateAccessor)。 取值函数是一个绑定集合，可用于获取或设置使用者缓冲区中的数据。  
   
 ## <a name="see-also"></a>请参阅  
  [创建 SQL Server Native Client OLE DB 提供程序应用程序](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   

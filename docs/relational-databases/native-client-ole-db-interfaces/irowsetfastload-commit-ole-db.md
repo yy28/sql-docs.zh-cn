@@ -19,13 +19,13 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c20cc56a1976d58d73d8eb022b9ccbaf01855240
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e9dc0f4443b87558972b3f2d4c7f64ddafe33bdd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419296"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560987"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,16 +53,16 @@ HRESULT Commit(
  发生了特定于访问接口的错误。 从访问接口检索特定错误文本的错误信息。  
   
  E_UNEXPECTED  
- 在以前失效的大容量复制行集上调用该方法**irowsetfastload:: Commit**方法。  
+ 对以前被 **IRowsetFastLoad::Commit** 方法作废的大容量复制行集调用了该方法。  
   
 ## <a name="remarks"></a>Remarks  
- 一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口大容量复制行集的行为与延迟更新模式的行集相同。 用户插入通过行集的行数据，如插入的行的处理方式相同行集支持上挂起插入**IRowsetUpdate**。  
+ 一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口大容量复制行集的行为与延迟更新模式的行集相同。 当用户通过行集插入行数据时，对插入行的处理方式与在支持 IRowsetUpdate 的行集上挂起插入相同。  
   
- 使用者必须调用**提交**大容量复制行集要写入到插入的行上的方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中一样**irowsetupdate:: Update**方法用于将挂起到行提交SQL Server 的实例。  
+ 使用者必须对大容量复制行集调用 Commit 方法，才能以与使用 IRowsetUpdate::Update 方法将挂起行提交到 SQL Server 实例相同的方式将插入行写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。  
   
- 如果使用者释放对大容量复制行集而无需调用其引用**提交**方法，所有插入都将丢失以前未写入的行数。  
+ 如果使用者释放其对大容量复制行集的引用，而不调用 Commit 方法，则以前未写入的所有插入行将丢失。  
   
- 使用者可以通过调用执行批处理插入的行**提交**方法替换*fDone*参数设置为 FALSE。 当*fDone*是设置为 TRUE，行集变为无效。 无效的大容量复制行集仅支持**ISupportErrorInfo**接口并**irowsetfastload:: Release**方法。  
+ 通过在将 fDone 参数设置为 FALSE 的情况下调用 Commit 方法，使用者可以成批插入行。 当 fDone 设置为 TRUE 时，行集变为无效。 无效的大容量复制行集仅支持 ISupportErrorInfo 接口和 IRowsetFastLoad::Release 方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_descriptors (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_os_buffer_descriptors (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bae01f30cf7b6af860004f69effb4df44cf3c8b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 807b1bafe3ca3d374765ede6ee3e557e6e50ffe9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465813"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557267"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "34465813"
   
  当从磁盘读取数据页时，该数据页被复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池并被缓存以供重复使用。 每个缓存的数据页都有一个缓冲描述符。 缓冲描述符唯一地标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前缓存的每个数据页。 sys.dm_os_buffer_descriptors 返回所有用户数据库和系统数据库的缓存页。 这包括与 Resource 数据库相关联的页。  
   
-> **注意：** 调用从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_buffer_descriptors**。  
+> **注意：** 来调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用的名称**sys.dm_pdw_nodes_os_buffer_descriptors**。  
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|与缓冲池中的页关联的数据库 ID。 可以为 Null。|  
 |file_id|**int**|存储页的持久化图像的文件 ID。 可以为 Null。|  
-|page_id|**int**|在文件中页的 ID。 可以为 Null。|  
+|page_id|**int**|在文件中的页 ID。 可以为 Null。|  
 |page_level|**int**|页的索引级别。 可以为 Null。|  
 |allocation_unit_id|**bigint**|页的分配单元的 ID。 可使用此值联接 sys.allocation_units。 可以为 Null。|  
 |page_type|**nvarchar(60)**|页类型，例如数据页或索引页。 可以为 Null。|  
@@ -53,16 +53,16 @@ ms.locfileid: "34465813"
 |is_modified|**bit**|1 = 从磁盘读取页后已对其进行修改。 可以为 Null。|  
 |numa_node|**int**|缓冲区的非一致性内存访问节点。 可以为 Null。|  
 |read_microsec|**bigint**|将此页读入缓冲区所需的实际时间（微秒）。 重用缓冲区时重置该数值。 可以为 Null。|  
-|is_in_bpool_extension|**bit**|1 = 正在缓冲池扩展页。 可以为 Null。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|is_in_bpool_extension|**bit**|1 = 页位于缓冲池扩展。 可以为 Null。|  
+|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
    
-## <a name="remarks"></a>注释  
- sys.dm_os_buffer_descriptors 返回正在使用的资源数据库的页。 sys.dm_os_buffer_descriptors 不返回有关可用或被盗的页，或它们已读取时出现错误的页信息。  
+## <a name="remarks"></a>Remarks  
+ sys.dm_os_buffer_descriptors 返回 Resource 数据库正在使用的页。 sys.dm_os_buffer_descriptors 不返回有关可用页、 被盗页或在读取时出现的错误的页的信息。  
   
 |From|若要|日期|关系|  
 |----------|--------|--------|------------------|  
@@ -116,12 +116,12 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 数据库](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

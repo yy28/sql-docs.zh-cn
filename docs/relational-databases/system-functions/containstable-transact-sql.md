@@ -1,5 +1,5 @@
 ---
-title: CONTAINSTABLE (TRANSACT-SQL) |Microsoft 文档
+title: CONTAINSTABLE (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -37,20 +37,20 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1741644ab38afd4003265b659c06b4b9448e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 22cb21d78757b1d5166c2443a8cde7dd5aef0403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238524"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547597"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回零个、 一个或多个行包含精确或模糊 （不太精确） 匹配项单个词和短语，另一个，一定范围之内的单词的相近或加权匹配项的这些列的表。 在中使用 CONTAINSTABLE [FROM 子句](../../t-sql/queries/from-transact-sql.md)的[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 语句，且被引用就像它是常规表名。 它执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的全文搜索上的全文索引列中包含基于字符的数据类型。  
+  返回一个表的零个、 一个或多个行的这些列包含的精确或模糊 （不太精确） 匹配项将单个单词和短语，词、 一定范围内的相近或加权匹配项。 CONTAINSTABLE 用[FROM 子句](../../t-sql/queries/from-transact-sql.md)的[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 语句和引用，就好象它是一个常规表名。 它执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文搜索的全文索引包含基于字符的数据类型的列。  
   
- CONTAINSTABLE 可用于操作相同种类的匹配项作为[CONTAINS 谓词](../../t-sql/queries/contains-transact-sql.md)并为包含使用相同的搜索条件。  
+ CONTAINSTABLE 可用于相同类型的匹配项作为[CONTAINS 谓词](../../t-sql/queries/contains-transact-sql.md)和使用与 CONTAINS 相同的搜索条件。  
   
  但与 CONTAINS 不同，使用 CONTAINSTABLE 的查询对每一行返回一个相关性排名值 (RANK) 和全文键 (KEY)。  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的全文搜索形式的信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
@@ -119,9 +119,9 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>参数  
  *table*  
- 已进行了全文索引的表的名称。 *表*可以是一维、 二维，三个或四部分组成的数据库对象名称。 查询视图时，仅能涉及一个全文索引的基表。  
+ 已进行了全文索引的表的名称。 *表*可以是由一个、 两个、 三个或四个部分组成的数据库对象名称。 查询视图时，仅能涉及一个全文索引的基表。  
   
- *表*不能指定服务器名称和不能用在针对链接服务器查询。  
+ *表*不能指定服务器名称和不能对链接服务器的查询中使用。  
   
  column_name  
  是为进行全文搜索而编制了索引的一个或多个列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型。  
@@ -130,29 +130,29 @@ CONTAINSTABLE
  指示可以指定多个列（以逗号分隔）。 column_list 必须用括号括起来。 除非指定 language_term，否则 column_list 中所有列的语言必须相同。  
   
  \*  
- 指定所有的全文索引中的列*表*应该用于为给定的搜索条件搜索。 除非指定 language_term，否则表的所有列的语言必须相同。  
+ 指定所有全文都索引中的列*表*应该用于搜索给定的搜索条件。 除非指定 language_term，否则表的所有列的语言必须相同。  
   
  LANGUAGE language_term  
- 是其资源将用于断字、 词干分析，和同义词库和干扰词的语言 (或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 作为查询的一部分删除。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
+ 是其资源将用于断字、 词干分析、 同义词库和干扰词的语言 (或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 删除，因为查询的一部分。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
   
  如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在对这种列进行查询时，指定 LANGUAGElanguage_term 可增大找到有效匹配项的可能性。  
   
- 当指定为一个字符串， *language_term*对应于**别名**中的列值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图。  字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
+ 当指定为字符串， *language_term*对应于**别名**中列的值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图。  字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
  如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term。  
   
  *top_n_by_rank*  
- 指定仅*n*最高排名的匹配项，以降序顺序，将返回。 仅适用于时整数值， *n*，指定。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank*允许你通过重新调用仅最相关的命中数来提高查询性能。  
+ 指定仅*n*最高排名的匹配项，按降序返回。 仅适用于整数值， *n*，指定。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank*允许您通过调取仅最相关的命中项来提高查询性能。  
   
  <contains_search_condition>  
- 指定要在 column_name 中搜索的文本和匹配条件。 有关搜索条件的信息，请参阅[CONTAINS &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
+ 指定要在 column_name 中搜索的文本和匹配条件。 有关搜索条件的信息，请参阅[包含&#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  全文谓词和函数作用于 FROM 谓词所示的单个表。 若要对多个表进行搜索，请在 FROM 子句中使用联接表，以搜索由两个或更多个表的乘积构成的结果集。  
   
- 返回的表具有一个名为列**密钥**，其中包含的全文键值。 每个全文索引的表具有的列保证其值都是唯一的而在返回的值**密钥**列是全文键值与中指定选择条件匹配的行包含搜索条件。 **TableFulltextKeyColumn**属性，从 OBJECTPROPERTYEX 函数获取提供此唯一键列的标识。 若要获取与全文索引的全文键关联的列的 ID，请使用**sys.fulltext_indexes**。 有关详细信息，请参阅[sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+ 返回表中有一个名为列**密钥**，其中包含全文键值。 每个全文索引的表包含的列的值一定是唯一的和中返回的值**密钥**列是全文索引键值的行中指定的选择条件匹配的包含搜索条件。 **TableFulltextKeyColumn**属性，从 OBJECTPROPERTYEX 函数获取提供此唯一键列的标识。 若要获取与全文索引的全文键相关联的列的 ID，请使用**sys.fulltext_indexes**。 有关详细信息，请参阅[sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  若要从原始表中获得所需要的行，请指定与 CONTAINSTABLE 行的联接。 使用 CONTAINSTABLE 的 SELECT 语句的 FROM 子句的典型形式为：  
   
@@ -163,19 +163,19 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- 由 CONTAINSTABLE 表包括一个名为**级别**。 **级别**列是 （从 0 到 1000 之间) 的值，该值指示行匹配选择条件的每一行。 在 SELECT 语句中，此排名值通常按照下列方法之一使用：  
+ CONTAINSTABLE 生成的表包括一个名为**排名**。 **排名**列对于每个行，该值指示行与选择条件的匹配程度为一个值 （介于 0 到 1000 之间)。 在 SELECT 语句中，此排名值通常按照下列方法之一使用：  
   
 -   在 ORDER BY 子句中返回排名最高的行作为表的第一行。  
   
 -   在选择列表中查看分配给每一行的排名值。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有对表或被引用表的列具有适当 SELECT 权限的用户才具有执行权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-example"></a>A. 简单示例  
- 下面的示例创建并填充简单表的两个列，列出 3 所在国家/地区和其标志中的颜色。 It 创建和填充的全文目录和对表的索引。 则**CONTAINSTABLE**语法所示。 此示例演示如何排名值增大更高版本的搜索值满足多次时。 在最后一个查询中，其中包含绿色和黑色坦桑尼亚具有比意大利其中包含一个查询的颜色较高的排名。  
+ 下面的示例创建并填充一个简单的表的两个列，其中列出了 3 个所在国家/地区和其标志中的颜色。 It 创建并填充全文目录和索引的表。 然后**CONTAINSTABLE**语法进行了演示。 此示例演示如何在搜索值满足多个时间时更高版本增长的排名值。 在最后一个查询中，其中包含绿色和黑色坦桑尼亚具有比意大利，其中包含一个查询颜色较高的排名。  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -283,9 +283,9 @@ GO
 ```  
   
 > [!NOTE]  
->  语言*language_term* argumentis 无需进行使用*top_n_by_rank。*  
+>  语言*language_term*不使用所需的 argumentis *top_n_by_rank。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 RANK 限制搜索结果](../../relational-databases/search/limit-search-results-with-rank.md)   
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
  [创建全文搜索查询 (Visual Database Tools)](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   

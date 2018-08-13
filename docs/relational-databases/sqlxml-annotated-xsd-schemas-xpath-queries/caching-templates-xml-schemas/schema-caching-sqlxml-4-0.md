@@ -1,5 +1,5 @@
 ---
-title: 架构缓存 (SQLXML 4.0) |Microsoft 文档
+title: 架构缓存 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebb2fd4b7e0b17f81f8e14f3bde60d56e3a60ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f6b9e9a8a6d9406def9e2adc90e1ef7e9b8545a1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971077"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559637"
 ---
 # <a name="schema-caching-sqlxml-40"></a>架构缓存 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  与通过并行安装的 Microsoft SQL Server 2000 Web 版本 1、 Microsoft SQLXML 2.0 和 SQLXML 3.0 的 XML，你可以显式控制缓存在所有版本中使用以下注册表项的架构：  
+  与通过并行安装的 Microsoft SQL Server 2000 Web Release 1、 Microsoft SQLXML 2.0 和 SQLXML 3.0 的 XML，可以显式控制的架构缓存在所有版本中，通过使用以下注册表项：  
   
  Web Release 1：  
   
@@ -58,15 +58,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
   
  可以通过在注册表中添加以上注册表项来设置架构缓存大小。  
   
- 应基于可用内存大小和要使用的架构数量来设置架构缓存大小。 默认值**SchemaCacheSize**大小为 31。 如果你设置**SchemaCacheSize**更高版本，使用更多内存。 因此，如果架构访问较慢，可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
+ 应基于可用内存大小和要使用的架构数量来设置架构缓存大小。 默认值**SchemaCacheSize**大小为 31。 如果您设置**SchemaCacheSize**更高版本，使用更多的内存。 因此，如果架构访问较慢，可以增加缓存大小；如果内存较少，则可以降低缓存大小。  
   
- 出于性能原因，建议你设置**SchemaCacheSize**高于您通常使用的映射架构的数。 当架构数目增加时，如果**SchemaCacheSize**小于比架构必须数，在性能降低。  
+ 出于性能原因，建议您设置**SchemaCacheSize**大于您通常使用的映射架构的数。 随着架构数量的增加，如果**SchemaCacheSize**小于您拥有的架构的数量，在性能下降。  
   
 > [!NOTE]  
 >  在开发期间，建议不缓存架构，因为这样会使对架构的更改在大约两分钟后才会反映在缓存中。  
   
-## <a name="see-also"></a>另请参阅  
- [模板缓存 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [XSL 缓存 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+## <a name="see-also"></a>请参阅  
+ [模板缓存&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [XSL 缓存&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

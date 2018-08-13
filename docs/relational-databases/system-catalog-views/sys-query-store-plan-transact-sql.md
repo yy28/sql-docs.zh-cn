@@ -25,13 +25,13 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8883fb4fd7f70712f8e71ca9015380fd5c81ca93
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: eb653ad68c76380625e03637f7315a0aa9800aba
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032315"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537167"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "38032315"
 |**query_id**|**bigint**|外键。 加入[sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
 |**plan_group_id**|**bigint**|计划组的 ID。 游标查询通常需要多个 （填充和提取） 计划。 编译在一起的提取计划都在同一个组，然后填充。<br /><br /> 0 表示计划不在组中。|  
 |**engine_version**|**nvarchar(32)**|用于编译中的计划引擎版本**的 major.minor.build.revision**格式。|  
-|**compatibility_level**|**int**|在查询中引用的数据库的数据库兼容性级别。|  
+|**compatibility_level**|**smallint**|在查询中引用的数据库的数据库兼容性级别。|  
 |**query_plan_hash**|**binary(8)**|MD5 哈希值的单个计划。|  
 |**query_plan**|**nvarchar(max)**|查询计划的显示计划 XML。|  
 |**is_online_index_plan**|**bit**|计划的联机索引生成期间使用。|  
@@ -83,7 +83,7 @@ ms.locfileid: "38032315"
 * 查询优化器超出了允许的操作数
 * 格式不正确的计划 XML
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**VIEW DATABASE STATE**权限。  
   
 ## <a name="see-also"></a>请参阅  

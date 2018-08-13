@@ -1,7 +1,7 @@
 ---
 title: SQL Server 共享管理对象 (SMO) 的许可条款 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040425"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662239"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共享管理对象 (SMO) 许可条款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ ms.locfileid: "38040425"
   * 以源代码形式公布或分发代码；或
   * 其他人有权对其进行修改。
 
-**3.  许可范围。** 该软件只授予使用许可，而非出售。 除非适用的法律为你提供了更多权利，否则 Microsoft 保留此协议未明确授予的任何其他权利，无论是明示还是暗示、禁止或者其他方式。 你只能在本协议明示规定的范围内使用该软件。 在按规定使用该软件时，您必须遵守软件中的所有技术限制，这些限制只允许您以特定方式使用该软件。 您不得
-* 绕过该软件中的任何技术限制；
-* 对该软件进行反向工程、反编译或反汇编；尽管有此项限制，但如果适用法律明示允许上述活动，则仅在适用法律明示允许的范围内从事上述活动不在此限；
-* 制作超过本协议所规定或适用法律（尽管有此项限制）所允许数量的该软件的副本；
-* 发布该软件供他人复制；
-* 出租、租赁或出借该软件；
-* 将该软件或本协议转让给任何第三方；或
-* 使用该软件提供商业软件托管服务。
+
+**3.许可范围。** 该软件只授予使用许可，而非出售。 除非适用的法律为你提供了更多权利，否则 Microsoft 保留此协议未明确授予的任何其他权利，无论是明示还是暗示、禁止或者其他方式。 你只能在本协议明示规定的范围内使用该软件。 在按规定使用该软件时，您必须遵守软件中的所有技术限制，这些限制只允许您以特定方式使用该软件。 您可能会执行以下任一操作：
+
+- 解决软件中的任何技术限制。
+- 反向工程、 反编译或反汇编该软件，除外，但也仅在适用法律明示允许此项限制的范围内。
+- 请与本协议中指定或尽管有此限制适用法律允许的更多的软件副本。
+- 共享、 发布、 租赁或租赁软件，或提供软件作为独立托管解决方案供他人使用。
 
 **4.  第三方声明。** 该软件可能包含第三方组件，这些组件可能具有单独的法律声明或者需遵守其他协议，软件附带的 ThirdPartyNotices 文件中可能对该情况进行了说明。  如果这类组件需遵守其他协议，则以下关于损害的免责声明、限制和排除也会适用。
 
@@ -106,3 +105,7 @@ ms.locfileid: "38040425"
 * 在适用法律允许的范围内，因违约、违反担保、保证或条件、严格责任、过失或其他侵权行为引起的索赔。
 
 即使 Microsoft 知道或应该知道出现损害的可能性，该限制也同样适用。 由于您所在国家/地区可能不允许排除或限制附带的、后果性的或其他损害赔偿责任，上述限制和排除可能不适用于您。
+
+> [!NOTE]
+> 第 3 部分已在 2018 年 8 月 8 日更新。
+

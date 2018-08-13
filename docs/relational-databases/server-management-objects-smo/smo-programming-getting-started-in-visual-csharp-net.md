@@ -17,15 +17,15 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff1a164c98fa04cdf2d490ece9f088e255a6e164
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1bb3a6ce20cad1f42ce6baf7f90424a6697ab029
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032621"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542987"
 ---
-# <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO 编程-Visual C#.NET 入门
+# <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO 编程 - Visual C# .NET 入门
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET 是一种支持的公共语言运行时 (CLR) 的托管编程语言中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].NET。 许多 C# 语言中，有关详细信息请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].NET 文档。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 来开发 SMO 应用程序。  

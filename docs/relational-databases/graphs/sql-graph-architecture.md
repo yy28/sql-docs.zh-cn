@@ -19,13 +19,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7cfba1fc79e44bb28a433c3b31fe5f4236037d6e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 49a0d942fd4d738b31d71d44fc74392469d047c2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051505"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546397"
 ---
 # <a name="sql-graph-architecture"></a>SQL 图形体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "38051505"
 
 
 
-## <a name="limitations-and-known-issues"></a>限制和已知的问题  
+## <a name="limitations-and-known-issues"></a>限制和已知问题  
 有在此版本中的节点和边界表的某些限制：
 * 本地或全局临时表不能为节点或边界表。
 * 表类型和表变量不能声明为节点或边界表。 

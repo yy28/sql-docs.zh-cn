@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_actions （Azure SQL 数据库） |Microsoft 文档
+title: sys.database_event_session_actions （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92b6aa34b8419c493f6da4dfe3b946b988899034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a5f0a70cdf6f242b36c6cf9888d2bf9d0fc37d61
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182143"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549947"
 ---
-# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions （Azure SQL 数据库）
+# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   对事件会话中每个事件的每个操作都返回一行。  
@@ -38,14 +38,14 @@ ms.locfileid: "33182143"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |event_id|**int**|事件的 ID。 此 ID 在事件会话对象中是唯一的。 不可为 null。|  
-|name|**sysname**|操作的名称。 可以为 Null。|  
+|NAME|**sysname**|操作的名称。 可以为 Null。|  
 |包|**sysname**|包含事件的事件包的名称。 可以为 Null。|  
 |module|**sysname**|包含事件的模块的名称。 可以为 Null。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图具有下列关系基数。  
   
 ||||  

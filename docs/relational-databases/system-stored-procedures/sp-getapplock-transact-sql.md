@@ -1,5 +1,5 @@
 ---
-title: sp_getapplock (Transact SQL) |Microsoft 文档
+title: sp_getapplock (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261666"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555677"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,38 +52,38 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>参数  
  [ @Resource=] '*resource_name*  
- 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*是**nvarchar （255)** 无默认值。 如果资源字符串的长度超过**nvarchar （255)**，它将截断为**nvarchar （255)**。  
+ 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*是**nvarchar(255)** ，无默认值。 如果资源字符串的长度超过**nvarchar(255)**，则将其截断成**nvarchar(255)**。  
   
- *resource_name*二进制相比，而且因此是区分大小写，无论当前数据库的排序规则设置如何。  
+ *resource_name*二进制比较，并因此而不考虑当前数据库的排序规则设置区分大小写。  
   
 > [!NOTE]  
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
  [ @LockMode=] '*lock_mode*  
- 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 该值可以为以下任一：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**独占**.  
+ 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 可以是任意以下值：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**排他**.  
   
- [ @LockOwner=] '*lock_owner*  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*lock_owner*值是**事务**，也可由默认或显式指定，sp_getapplock 必须可从在事务内执行。  
+ [ @LockOwner=] '*指定的 lock_owner*  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*指定的 lock_owner*值是**事务**，也可由默认设置还是显式指定，sp_getapplock 必须在从事务内执行。  
   
  [ @LockTimeout=] '*值*  
- 锁超时值（毫秒）。 默认值是返回的值相同@LOCK_TIMEOUT。 若要指示对于不能立即授予的请求，锁请求应返回一个错误，而不应等待锁，请指定 0。  
+ 锁超时值（毫秒）。 默认值是返回的值与相同@LOCK_TIMEOUT。 若要指示对于不能立即授予的请求，锁请求应返回一个错误，而不应等待锁，请指定 0。  
   
  [ @DbPrincipal=] '*database_principal*  
- 对数据库中的对象具有权限的用户、角色或应用程序角色。 该函数的调用方必须是属于*database_principal*，dbo 或 db_owner 固定数据库角色，若要成功调用函数。 默认值为 public。  
+ 对数据库中的对象具有权限的用户、角色或应用程序角色。 该函数的调用方必须是的成员*database_principal*，dbo 或 db_owner 固定数据库角色，才能成功调用该函数。 默认值为 public。  
   
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功） 或 < 0 （失败）  
   
-|“值”|结果|  
+|ReplTest1|结果|  
 |-----------|------------|  
 |0|锁已同时成功授予。|  
-|1|在等待释放其他不兼容锁后成功授予锁。|  
+|@shouldalert|在等待释放其他不兼容锁后成功授予锁。|  
 |-1|锁请求超时。|  
 |-2|锁请求被取消。|  
 |-3|选择锁请求作为死锁牺牲品。|  
 |-999|指示参数验证或其他调用错误。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  对资源设置的锁与当前事务或当前会话相关联。 当事务提交或回滚时，将释放与当前事务相关联的锁。 当会话注销时，将释放与会话相关联的锁。当服务器因任何原因而关闭时，将释放所有锁。  
   
  sp_getapplock 创建的锁资源在会话的当前数据库中创建。 每个锁资源都由下列值的组合值进行标识：  
@@ -141,7 +141,7 @@ GO
   
  使用 sys.dm_tran_locks 动态管理视图或 sp_lock 系统存储过程检查锁信息，或使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视锁。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -168,7 +168,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [APPLOCK_MODE &#40;Transact SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  

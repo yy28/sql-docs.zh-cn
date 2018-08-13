@@ -16,13 +16,13 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22c5624b77f01f0194f2a8ec9e8048cbc15a595a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 115923581ae022cb2ecc26d13e41b69549f5971e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432476"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550047"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37432476"
   本主题讨论特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 OLE DB 行为。  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- 如果插入的数据大于列的大小，通常会导致错误。 但是，有些情况下将返回 S_OK，但*dwStatus*将设置为 DBSTATUS_S_TRUNCATED。 这通常发生在时插入数据使用参数，其中列是不足够大以保存数据，并**icommandwithparameters:: Setparameterinfo**尚未调用。  
+ 如果插入的数据大于列的大小，通常会导致错误。 但是，可能会出现将返回 S_OK、但 dwStatus 将设置为 DBSTATUS_S_TRUNCATED 的情况。 这通常发生在时插入数据使用参数，其中列是不足够大以保存数据，并**icommandwithparameters:: Setparameterinfo**尚未调用。  
   
 ## <a name="see-also"></a>请参阅  
  [接口&#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  

@@ -1,5 +1,5 @@
 ---
-title: 与 sys.procedures (Transact SQL) |Microsoft 文档
+title: sys.procedures (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,31 +24,31 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10263b4418b90b2284d0abb3d433101a9afcaa98
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9c36883f8595b51239c78b178217a094f37e9484
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180613"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547927"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  包含每个对象都是某种类型的过程与行**sys.objects.type** = P、 X、 RF 和 PC。  
+  为某种类型的过程是使用每个对象对应一行**sys.objects.type** = P、 X、 RF 和 PC。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<列继承自 sys.objects >**||该视图继承的列的列表，请参阅[sys.objects &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**\<从 sys.objects 继承的列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = 在服务器启动时自动执行过程；否则为 0。 只能为 master 数据库中的过程设置此值。|  
 |**is_execution_replicated**|**bit**|复制此过程的执行。|  
 |**is_repl_serializable_only**|**bit**|仅当事务可序列化时才复制过程执行。|  
 |**skips_repl_constraints**|**bit**|在执行过程中，过程将跳过标记为 NOT FOR REPLICATION 的约束。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

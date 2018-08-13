@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_waiting_tasks (Transact SQL) |Microsoft 文档
+title: sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467403"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540757"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,24 +37,24 @@ ms.locfileid: "34467403"
   返回有关正在等待某些资源的任务的等待队列的信息。  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_waiting_tasks**。  
+>  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_waiting_tasks**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|等待任务的地址。|  
-|**session_id**|**int**|与任务关联的会话的 ID。|  
+|**session_id**|**smallint**|与任务关联的会话的 ID。|  
 |**exec_context_id**|**int**|与任务关联的执行上下文的 ID。|  
-|**wait_duration_ms**|**bigint**|此等待类型的总等待时间（毫秒）。 此时间是包括**signal_wait_time**。|  
+|**wait_duration_ms**|**bigint**|此等待类型的总等待时间（毫秒）。 此时间**signal_wait_time**。|  
 |**wait_type**|**nvarchar(60)**|等待类型的名称。|  
 |**resource_address**|**varbinary(8)**|任务等待的资源的地址。|  
 |**blocking_task_address**|**varbinary(8)**|当前持有此资源的任务。|  
-|**blocking_session_id**|**int**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
+|**blocking_session_id**|**smallint**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
 |**blocking_exec_context_id**|**int**|正在阻塞的任务的执行上下文 ID。|  
 |**resource_description**|**nvarchar(3072)**|对正在占用的资源的说明。 有关详细信息，请参阅下面的列表。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
 ## <a name="resourcedescription-column"></a>resource_description 列  
- Resource_description 列具有以下可能的值。  
+ Resource_description 列具有以下可能值。  
   
  **线程池资源所有者：**  
   
@@ -82,31 +82,31 @@ ms.locfileid: "34467403"
   
  **锁资源所有者：**  
   
--   \<类型特定说明 > id = 锁\<锁十六进制地址 > 模式 =\<模式 > associatedObjectId =\<关联 obj id >  
+-   \<类型特定于说明 > id = 锁\<锁十六进制地址 > 模式 =\<模式 > associatedObjectId =\<关联 obj id >  
   
-     **\<类型特定说明 > 可以是：**  
+     **\<类型特定于说明 > 可以是：**  
   
-    -   对于数据库： databaselock 子资源 =\<databaselock 子资源 > dbid =\<db id >  
+    -   对于数据库： databaselock subresource =\<databaselock subresource > dbid =\<-i >  
   
-    -   对于文件： filelock fileid =\<文件 id > 子资源 =\<filelock 子资源 > dbid =\<db id >  
+    -   对于文件： filelock fileid =\<的文件 id > subresource =\<filelock subresource > dbid =\<-i >  
   
-    -   对象： objectlock lockPartition =\<锁分区 id > objid =\<obj id > 子资源 =\<objectlock 子资源 > dbid =\<db id >  
+    -   对于对象： objectlock lockPartition =\<锁分区 id > objid =\<obj id > subresource =\<objectlock subresource > dbid =\<-i >  
   
-    -   页： pagelock fileid =\<文件 id > pageid =\<页 id > dbid =\<db id > 子资源 =\<pagelock 子资源 >  
+    -   对于 PAGE: pagelock fileid =\<的文件 id > pageid =\<-i > dbid =\<-i > subresource =\<pagelock 子资源 >  
   
-    -   键： 键锁 hobtid =\<hobt id > dbid =\<db id >  
+    -   对于密钥： keylock hobtid =\<hobt id > dbid =\<-i >  
   
-    -   以便范围： extentlock fileid =\<文件 id > pageid =\<页 id > dbid =\<db id >  
+    -   对于 EXTENT: extentlock fileid =\<的文件 id > pageid =\<-i > dbid =\<-i >  
   
-    -   有关 RID: ridlock fileid =\<文件 id > pageid =\<页 id > dbid =\<db id >  
+    -   对于 RID: ridlock fileid =\<的文件 id > pageid =\<-i > dbid =\<-i >  
   
-    -   对于应用程序： applicationlock 哈希 =\<哈希 > databasePrincipalId =\<角色 id > dbid =\<db id >  
+    -   对于应用程序： applicationlock 哈希 =\<哈希 > databasePrincipalId =\<角色 id > dbid =\<-i >  
   
-    -   元数据： metadatalock 子资源 =\<子资源的元数据 > classid =\<metadatalock 说明 > dbid =\<db id >  
+    -   对于 METADATA: metadatalock subresource =\<子资源的元数据 > classid =\<t > dbid =\<-i >  
   
-    -   有关 HOBT: hobtlock hobtid =\<hobt id > 子资源 =\<hobt 子资源 > dbid =\<db id >  
+    -   对于 HOBT: hobtlock hobtid =\<hobt id > subresource =\<hobt subresource > dbid =\<-i >  
   
-    -   有关 ALLOCATION_UNIT: allocunitlock hobtid =\<hobt id > 子资源 =\<子资源单元分配 > dbid =\<db id >  
+    -   对于 ALLOCATION_UNIT: allocunitlock hobtid =\<hobt id > subresource =\<分配单元 subresource > dbid =\<-i >  
   
      **\<模式 > 可以是：**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "34467403"
   
 -   外部 ExternalResource =\<等待类型 >  
   
- **通用资源所有者：**  
+ **常规资源所有者：**  
   
 -   TransactionMutex TransactionInfo 工作区 =\<工作区 id >  
   
@@ -132,13 +132,13 @@ ms.locfileid: "34467403"
   
  **闩锁资源所有者：**  
   
--   \<数据库 id >:\<文件 id >:\<页面中文件 >  
+-   \<-i >:\<的文件 id >:\<页面中文件 >  
   
 -   \<GUID &GT;  
   
--   \<闩锁类 > (\<闩锁地址 >)  
+-   \<闩锁类 > (\<闩锁-a d d >)  
   
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -150,8 +150,8 @@ SELECT * FROM sys.dm_os_waiting_tasks
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
-## <a name="see-also"></a>另请参阅  
-  [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+  [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

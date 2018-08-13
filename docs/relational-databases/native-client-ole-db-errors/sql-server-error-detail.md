@@ -20,13 +20,13 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf2444c9b813f3347537a32577cc2501c9405a6c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bcb80554cea7856983b41cfa31bf9a7fea04b983
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418726"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547777"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "37418726"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序定义的特定于提供程序的错误接口[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
   
- 有两种方法要获得访问权限**ISQLServerErrorInfo**接口。  
+ 可以用两种方式访问 ISQLServerErrorInfo 接口。  
   
- 使用者可调用**ierrorrecords:: Getcustomererrorobject**来获取**ISQLServerErrorInfo**指针，如下面的代码示例中所示。 (若要获取无需**ISQLErrorInfo。**)这两**ISQLErrorInfo**并**ISQLServerErrorInfo**以自定义 OLE DB 错误对象**ISQLServerErrorInfo**所要使用获取的信息的接口服务器错误，包括诸如过程名称和行号的详细。  
+ 使用者可调用 IErrorRecords::GetCustomerErrorObject 以获得 ISQLServerErrorInfo 指针，如以下代码示例所示。 （不需要获得 ISQLErrorInfo。）ISQLErrorInfo 和 ISQLServerErrorInfo 都是自定义的 OLE DB 错误对象，并以 ISQLServerErrorInfo 作为用于获得服务器错误信息（包括诸如过程名称和行号这样的详细信息）的接口。  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -45,21 +45,21 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- 另一种方法获取**ISQLServerErrorInfo**指针是调用**QueryInterface**方法已经获得**ISQLErrorInfo**指针。 请注意，由于**ISQLServerErrorInfo**包含的信息可从超集**ISQLErrorInfo**，最好直接转到**ISQLServerErrorInfo**通过**GetCustomerErrorObject**。  
+ 获得 ISQLServerErrorInfo 指针的另一个方式是调用已经获得的 ISQLErrorInfo 指针的 QueryInterface 方法。 注意，由于 ISQLServerErrorInfo 包含从 ISQLErrorInfo 获得的信息的超集，因此通过 GetCustomerErrorObject 直接转到 ISQLServerErrorInfo 是有意义的。  
   
- **ISQLServerErrorInfo**接口公开一个成员函数[isqlservererrorinfo:: Geterrorinfo](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)。 该函数返回 SSERRORINFO 结构的指针和字符串缓冲区的指针。 这两个指针引用使用者必须通过使用解除分配的内存**imalloc:: Free**方法。  
+ ISQLServerErrorInfo 接口公开了一个成员函数 [ISQLServerErrorInfo::GetErrorInfo](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)。 该函数返回 SSERRORINFO 结构的指针和字符串缓冲区的指针。 两个指针都引用使用者必须使用 IMalloc::Free 方法释放的内存。  
   
  SSERRORINFO 结构成员由使用者解释如下。  
   
 |成员|Description|  
 |------------|-----------------|  
-|*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息。 在中返回的字符串相同**ierrorinfo:: Getdescription**。|  
-|*pwszServer*|会话的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
-|*pwszProcedure*|如果适用，则为产生错误的过程的名称。 否则为空字符串。|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机错误号。 在中返回的值相同*plNativeError*的参数**isqlerrorinfo:: Getsqlinfo**。|  
-|*bState*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息的状态。|  
-|*bClass*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息的严重性。|  
-|*wLineNumber*|如果适用，则为发生错误的存储过程的行号。|  
+|pwszMessage|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息。 与在 IErrorInfo::GetDescription 中返回的字符串相同。|  
+|pwszServer|会话的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
+|pwszProcedure|如果适用，则为产生错误的过程的名称。 否则为空字符串。|  
+|lNative|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机错误号。 与在 ISQLErrorInfo::GetSQLInfo 的 plNativeError 参数中返回的值相同。|  
+|bState|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息的状态。|  
+|bClass|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息的严重性。|  
+|wLineNumber|如果适用，则为发生错误的存储过程的行号。|  
   
 ## <a name="see-also"></a>请参阅  
  [错误](../../relational-databases/native-client-ole-db-errors/errors.md)   

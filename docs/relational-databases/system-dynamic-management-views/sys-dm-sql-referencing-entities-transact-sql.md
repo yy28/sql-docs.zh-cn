@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b78b7d54b5065496b587b6493e986b263d8919fd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467763"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548947"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  针对当前数据库中按名称引用另一个用户定义实体的每个实体均返回一行。 一个实体，调用时，将创建两个实体之间的依赖项*引用实体*，按名称在持久化 SQL 表达式中的另一个实体，调用将显示*引用实体*。 例如，如果将某个用户定义类型 (UDT) 指定为被引用的实体，则此函数将返回在其定义中按名称引用该类型的每个用户定义实体。 该函数不会返回其他数据库中可能引用该指定实体的实体。 必须在 master 数据库的上下文中执行该函数，以便将服务器级 DDL 触发器作为引用实体返回。  
+  针对当前数据库中按名称引用另一个用户定义实体的每个实体均返回一行。 一个实体，调用时创建两个实体之间的依赖关系*被引用的实体*，在名为的另一个实体的持久化 SQL 表达式中按名称将显示*引用实体*。 例如，如果将某个用户定义类型 (UDT) 指定为被引用的实体，则此函数将返回在其定义中按名称引用该类型的每个用户定义实体。 该函数不会返回其他数据库中可能引用该指定实体的实体。 必须在 master 数据库的上下文中执行该函数，以便将服务器级 DDL 触发器作为引用实体返回。  
   
  可以使用此动态管理函数来报告当前数据库中引用指定实体的以下类型实体：  
   
@@ -65,9 +65,9 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="arguments"></a>参数  
  *schema_name.referenced*_*entity_name*  
- 是被引用的名称。  
+ 是被引用实体的名称。  
   
- *schema_name*时引用的类是 PARTITION_FUNCTION 必需除外。  
+ *schema_name*必需的当引用的类是 PARTITION_FUNCTION 时。  
   
  *schema_name.referenced_entity_name*是**nvarchar(517)**。  
   
@@ -100,39 +100,39 @@ sys.dm_sql_referencing_entities (
   
  当指定的被引用的实体是带编号的存储过程时，将返回错误。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
-|表|是*|是|  
-|视图|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
-|CLR 存储过程|否|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
-|CLR 用户定义函数|否|是|  
+|表|是*|用户帐户控制|  
+|“查看”|用户帐户控制|用户帐户控制|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|用户帐户控制|用户帐户控制|  
+|CLR 存储过程|否|用户帐户控制|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|用户帐户控制|用户帐户控制|  
+|CLR 用户定义函数|否|用户帐户控制|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
-|扩展存储过程|否|是|  
-|队列|否|是|  
-|同义词|否|是|  
-|类型（别名和 CLR 用户定义类型）|否|是|  
-|XML 架构集合|否|是|  
-|分区函数|否|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|用户帐户控制|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|用户帐户控制|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|用户帐户控制|否|  
+|扩展存储过程|否|用户帐户控制|  
+|队列|否|用户帐户控制|  
+|同义词|否|用户帐户控制|  
+|类型（别名和 CLR 用户定义类型）|否|用户帐户控制|  
+|XML 架构集合|否|用户帐户控制|  
+|分区函数|否|用户帐户控制|  
   
- \* 仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型时或定义中的计算的列、 CHECK 约束或默认约束的 XML 架构集合。  
+ \* 仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型或 XML 架构集合定义中的计算的列、 CHECK 约束或 DEFAULT 约束。  
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   需要对引用对象拥有 CONTROL 权限。 当被引用的实体是分区函数时，要求对数据库拥有 CONTROL 权限。  
   
--   需要对 sys.dm_sql_referencing_entities 拥有 SELECT 权限。 默认情况下，SELECT 权限授予 public。  
+-   要求对 sys.dm_sql_referencing_entities 拥有 SELECT 权限。 默认情况下，SELECT 权限授予 public。  
   
 ### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -158,7 +158,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 返回引用给定类型的实体  
- 下面的示例返回引用别名类型 `dbo.Flag` 的实体。 结果集中显示了使用此类型的两个存储过程。 `dbo.Flag`类型还多个中的列定义中使用`HumanResources.Employee`表; 但是，由于类型不是计算的列、 CHECK 约束，或表中的默认约束定义中，会返回任何行的`HumanResources.Employee`表。  
+ 下面的示例返回引用别名类型 `dbo.Flag` 的实体。 结果集中显示了使用此类型的两个存储过程。 `dbo.Flag`中的多个列的定义中还使用了类型`HumanResources.Employee`表; 但是，由于该类型不是计算的列、 CHECK 约束或 DEFAULT 约束的表中的定义中，不返回行的`HumanResources.Employee`表。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -178,7 +178,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

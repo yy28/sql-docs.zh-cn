@@ -24,13 +24,13 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bea396c2625b282b0b63d9be240ed932c640749b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 97e6d679c27f3e1f4e3b27e7dffdbdc5efa746c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991859"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560657"
 ---
 # <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "37991859"
 |memory_allocated_for_indexes_kb|**bigint**|为此表中的索引分配的内存。|  
 |memory_used_by_indexes_kb|**bigint**|此表中的索引占用的内存。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  如果您对当前数据库拥有 VIEW DATABASE STATE 权限，将返回所有行。 否则，将返回一个空行集。  
   
  如果您没有 VIEW DATABASE 权限，将为表中您拥有 SELECT 权限的行返回所有列。  

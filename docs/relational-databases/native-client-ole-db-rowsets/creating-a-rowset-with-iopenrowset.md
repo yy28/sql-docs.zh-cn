@@ -19,13 +19,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4a38eba623e91b063985fbc6924b87648cb8d58
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e55449d882ebbda8149d25eae447916505ba4ac0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432616"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562771"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>使用 IOpenRowset 创建行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "37432616"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持**iopenrowset:: Openrowset**方法有以下限制：  
   
--   基表或视图必须指定在数据库中 ID (DBID) 结构*pTableID*参数指向。  
+-   必须在 pTableID 参数指向的数据库 ID (DBID) 结构中指定基表或视图。  
   
--   DBID *eKind*成员必须指示 DBKIND_NAME。  
+-   DBID eKind 成员必须指示 DBKIND_NAME。  
   
--   DBID *uName*成员必须为 Unicode 字符字符串指定现有的基础表或视图的名称。  
+-   DBID uName 成员必须将现有基表或视图的名称指定为 Unicode 字符串。  
   
--   *PIndexID*的参数**OpenRowset**必须为 NULL。  
+-   OpenRowset 的 pIndexID 参数必须为 NULL。  
   
- 结果集**iopenrowset:: Openrowset**包含单个行集。 可以通过支持结果集包含单个行集[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标。 游标支持允许开发人员使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并发控制机制。  
+ IOpenRowset::OpenRowset 的结果集包含单个行集。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标可以支持包含单个行集的结果集。 游标支持允许开发人员使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并发控制机制。  
   
 ## <a name="see-also"></a>请参阅  
  [行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

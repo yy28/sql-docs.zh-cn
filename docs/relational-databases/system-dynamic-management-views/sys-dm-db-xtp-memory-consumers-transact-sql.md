@@ -23,13 +23,13 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3f4bb702cfbe30b26b2f38fa159a9a49b90efed7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015172"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542387"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "38015172"
 ## <a name="remarks"></a>Remarks  
  在输出中，数据库级分配器指用户表、索引和系统表。 object_id = NULL 的 VARHEAP 指分配给具有可变长度列的表的内存。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  如果您对当前数据库拥有 VIEW DATABASE STATE 权限，将返回所有行。 否则，将返回一个空行集。  
   
  如果您没有 VIEW DATABASE 权限，将为表中您拥有 SELECT 权限的行返回所有列。  

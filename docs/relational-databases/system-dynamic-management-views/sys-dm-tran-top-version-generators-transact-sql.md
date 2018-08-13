@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_top_version_generators (Transact SQL) |Microsoft 文档
+title: sys.dm_tran_top_version_generators (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467264"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536007"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  为生成版本存储区中大多数版本的对象返回一个虚拟表。 **sys.dm_tran_top_version_generators**返回顶部 256 聚合按分组的记录长度**database_id**和**rowset_id**。 **sys.dm_tran_top_version_generators**通过查询中检索数据**dm_tran_version_store**虚拟表。 **sys.dm_tran_top_version_generators**是运行，因为此视图查询版本存储的效率低下视图和版本存储可能会非常大。 建议使用此函数查找版本存储区的最大使用者。  
+  为生成版本存储区中大多数版本的对象返回一个虚拟表。 **sys.dm_tran_top_version_generators**返回的前 256 聚合记录长度按分组**database_id**并**rowset_id**。 **sys.dm_tran_top_version_generators**通过查询检索数据**dm_tran_version_store**虚拟表。 **sys.dm_tran_top_version_generators**是效率低下视图运行，因为此视图查询版本存储区和版本存储区可能会非常大。 建议使用此函数查找版本存储区的最大使用者。  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_top_version_generators**。  
+>  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_top_version_generators**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,16 +52,16 @@ sys.dm_tran_top_version_generators
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|数据库 ID。|  
 |**rowset_id**|**bigint**|行集 ID。|  
-|**aggregated_record_length_in_bytes**|**int**|每个记录长度的总和**database_id**和**rowset_id 对**版本存储区中。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**aggregated_record_length_in_bytes**|**int**|每个记录长度的总和**database_id**并**rowset_id 对**版本存储区中。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限
+## <a name="permissions"></a>Permissions
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
 
-## <a name="remarks"></a>注释  
- 因为**sys.dm_tran_top_version_generators**可能需要阅读多页，扫描整个版本存储区中，运行**sys.dm_tran_top_version_generators**可能会干扰系统性能。  
+## <a name="remarks"></a>Remarks  
+ 因为**sys.dm_tran_top_version_generators**可能必须读取很多页扫描整个版本存储区中，运行**sys.dm_tran_top_version_generators**可能会干扰系统性能。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用具有四个并发事务的测试方案，每一个事务都由事务序列号 (XSN) 标识，并在 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 选项设置为 ON 的数据库中运行。 下列事务正在运行：  
@@ -93,9 +93,9 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- 该输出显示所有版本都由`database_id``9`和版本生成从两个表。  
+ 该输出显示所有版本都创建的`database_id``9`和版本从两个表生成的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

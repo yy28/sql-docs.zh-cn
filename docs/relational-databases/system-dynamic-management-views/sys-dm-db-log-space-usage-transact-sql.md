@@ -23,13 +23,13 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9bedbe8d5aa7b4e50ce4f486f2f3dbbf84e48a9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b3f145ee08b22a0791cacc37c2b982a061eaaa71
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061435"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533587"
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "38061435"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|数据库 ID。|  
+|database_id|**smallint**|数据库 ID。|  
 |total_log_size_in_bytes |**bigint** |日志的大小  |
 |used_log_space_in_bytes |**bigint** |已占用日志的大小  |     
 |used_log_space_in_percent |**real** |占用总的日志大小的百分比形式表示日志的大小 |
 |log_space_in_bytes_since_last_backup |**bigint** |自上次日志备份使用的空间量 <br />**适用于：** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]通过[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
     
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

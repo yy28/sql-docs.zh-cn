@@ -28,13 +28,13 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9131c0ea37ddbff456e5f14b441b89616ac462b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993799"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561991"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "37993799"
 |uses_database_collation|**bit**|使用与数据库相同的排序规则。|  
 |is_schemabinding_enabled|**bit**|架构绑定的安全策略的状态：<br /><br /> 0 或 NULL = 已启用<br /><br /> 1 = 已禁用|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  具有主体**ALTER ANY SECURITY POLICY**权限有权访问此目录视图以及与任何人中的所有对象**VIEW DEFINITION**对象上。  
   
 ## <a name="see-also"></a>请参阅  

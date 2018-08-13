@@ -22,13 +22,13 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 88ec73b3c29dfa8d9db0d4322b34b08ac535a621
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ed1a494823c661710d1a5c184ff72c9f5099565e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995686"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533467"
 ---
 # <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "37995686"
 |target_type|**nvarchar(100)**|类型的数据库范围凭据。 返回有关数据库 NULL 范围的凭据。|  
 |target_id|**int**|数据库作用域凭据映射到的对象 ID。 返回 0 个数据库范围的凭据|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对数据库拥有 `CONTROL` 权限。  
   
 ## <a name="see-also"></a>请参阅  

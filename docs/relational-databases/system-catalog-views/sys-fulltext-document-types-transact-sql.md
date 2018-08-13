@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_document_types (TRANSACT-SQL) |Microsoft 文档
+title: sys.fulltext_document_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12ffa574d72bd2ee901015f5714eeb228524579c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2893dd860fc60714538e8365939a13153c62f6a4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179473"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543497"
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "33179473"
  
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**document_type**|**sysname**|支持的文档类型的文件扩展名。<br /><br /> 此值可用于标识在全文索引的类型的列期间将使用的筛选器**varbinary （max)** 或**映像**。|  
+|**document_type**|**sysname**|支持的文档类型的文件扩展名。<br /><br /> 此值可用于标识将全文索引的列的类型期间使用的筛选器**varbinary （max)** 或**映像**。|  
 |**class_id**|**uniqueidentifier**|支持文件扩展名的 IFilter 类的 GUID。|  
-|path|nvarchar(260)|IFilter DLL 的路径。 路径是仅对成员的可见**serveradmin**固定的服务器角色。|  
+|path|nvarchar(260)|IFilter DLL 的路径。 路径时才会显示的成员**serveradmin**固定的服务器角色。|  
 |**version**|**sysname**|IFilter DLL 的版本。|  
 |**manufacturer**|**sysname**|IFilter 制造商的名称。<br /><br /> 注意： 仅记录与为制造商[!INCLUDE[msCoName](../../includes/msconame-md.md)]上支持[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

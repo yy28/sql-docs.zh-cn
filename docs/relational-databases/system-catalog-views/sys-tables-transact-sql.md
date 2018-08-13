@@ -1,5 +1,5 @@
 ---
-title: sys.tables (Transact SQL) |Microsoft 文档
+title: sys.tables (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b44d85fd3d1c252a91c719bc0df21fa7e84b996
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e17f1856765a7b2a6b9694ce19f00a8fbdd2ede3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222108"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535337"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "33222108"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|\<继承列 >||该视图继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|lob_data_space_id|**int**|对于该表，非零值是存放二进制大型对象 (LOB) 数据的数据空间（文件组或分区方案）的 ID。 LOB 数据类型的示例包括**varbinary （max)**， **varchar （max)**， **geography**，或**xml**。<br /><br /> 0 = 该表没有 LOB 数据。|  
-|filestream_data_space_id|**int**|FILESTREAM 文件组或包含 FILESTREAM 文件组的分区方案的数据空间 ID。<br /><br /> 若要报告的 FILESTREAM 文件组的名称，执行查询`SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`。<br /><br /> sys.tables 可以按 filestream_data_space_id = data_space_id 与下列视图联接。<br /><br /> -sys.filegroups<br /><br /> -sys.partition_schemes<br /><br /> -sys.indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup （对 filegroup_id 联接）|  
+|\<继承列 >||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|lob_data_space_id|**int**|对于该表，非零值是存放二进制大型对象 (LOB) 数据的数据空间（文件组或分区方案）的 ID。 LOB 数据类型的示例包括**varbinary （max)**， **varchar （max)**， **geography**，或者**xml**。<br /><br /> 0 = 该表没有 LOB 数据。|  
+|filestream_data_space_id|**int**|FILESTREAM 文件组或包含 FILESTREAM 文件组的分区方案的数据空间 ID。<br /><br /> 若要报告 FILESTREAM 文件组的名称，执行查询`SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`。<br /><br /> sys.tables 可以按 filestream_data_space_id = data_space_id 与下列视图联接。<br /><br /> -sys.filegroups<br /><br /> -sys.partition_schemes<br /><br /> -sys.indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup （按 filegroup_id 联接）|  
 |max_column_id_used|**int**|此表曾使用的最大列 ID。|  
 |lock_on_bulk_load|**bit**|大容量加载期间将锁定表。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|  
 |uses_ansi_nulls|**bit**|在创建表时，将 SET ANSI_NULLS 数据库选项设置为 ON。|  
@@ -58,17 +58,17 @@ ms.locfileid: "33222108"
 |is_filetable|**bit**|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = 表是 FileTable。<br /><br /> 有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。|  
 |持续性|**tinyint**|适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下列出的是可能的值：<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 值为 0 是默认值。|  
 |durability_desc|**nvarchar(60)**|适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 下面是可能的值：<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA 的值指示表是持久内存中表。 SCHEMA_AND_DATA 是内存优化表的默认值。 SCHEMA_ONLY 的值指示，在重新启动包含内存优化对象的数据库后，表数据将不会持久化。|  
-|is_memory_optimized|**bit**|适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 下面是可能的值：<br /><br /> 0 = 非内存优化。<br /><br /> 1 = 内存优化。<br /><br /> 值 0 为默认值。<br /><br /> 内存优化表是内存中用户表，在类似于其他用户表的磁盘保存的架构。 内存优化的表可以访问从本机编译的存储的过程。|  
-|temporal_type|**tinyint**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表示表的类型的数字值：<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar(60)**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表的类型的文本描述：<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 当 temporal_type IN （2，4） 返回 object_id 的表的可维护历史数据，否则返回 NULL。|  
-|is_remote_data_archive_enabled|**bit**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 指示是否已启用延伸的表。<br /><br /> 0 = 该表不是已启用延伸的。<br /><br /> 1 = 该表是已启用延伸的。<br /><br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
-|is_external|**bit**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]，和[!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]。<br /><br /> 指示表是一个外部表。<br /><br /> 0 = 表不是外部表。<br /><br /> 1 = 表是一个外部表。| 
-|history_retention_period|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示单位 history_retention_period_unit 使用指定的临时历史记录保持期的持续时间的数字值。 |  
-|history_retention_period_unit|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示类型的临时历史记录保持期单位的数值。 <br /><br />为-1： 无限 <br /><br />3： 天 <br /><br />4： 周 <br /><br />5： 月 <br /><br />6： 年 |  
-|history_retention_period_unit_desc|**nvarchar(10)**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>类型的临时历史记录保持期单位的文本描述。 <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
+|is_memory_optimized|**bit**|适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 下面是可能的值：<br /><br /> 0 = 非内存优化。<br /><br /> 1 = 内存优化。<br /><br /> 值 0 为默认值。<br /><br /> 内存优化表是内存中用户表，类似于其他用户表的磁盘保留的架构。 内存优化的表可访问从本机编译存储的过程。|  
+|temporal_type|**tinyint**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表示表的类型的数值：<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表的类型的文本说明：<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 当 temporal_type IN （2，4） 返回 object_id 的表的维护历史数据，否则返回 NULL。|  
+|is_remote_data_archive_enabled|**bit**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 指示是否已启用延伸的表。<br /><br /> 0 = 表不是已启用延伸的。<br /><br /> 1 = 表是已启用延伸的。<br /><br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
+|is_external|**bit**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]，和[!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]。<br /><br /> 指示表是外部表。<br /><br /> 0 = 表不是外部表。<br /><br /> 1 = 表是外部表。| 
+|history_retention_period|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示与 history_retention_period_unit 指定单位的时态历史记录保持期的持续时间的数值。 |  
+|history_retention_period_unit|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示类型的时态历史记录保持期单位数值。 <br /><br />-1： 无限 <br /><br />3： 天 <br /><br />4： 一周 <br /><br />5： 月 <br /><br />6： 年 |  
+|history_retention_period_unit_desc|**nvarchar(10)**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>时态历史记录保持期单位类型的文本说明。 <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
@@ -98,7 +98,7 @@ ON T1.history_table_id = T2.object_id
 ORDER BY T1.temporal_type desc  
 ```  
 
-下面的示例演示如何可以公开临时历史记录保持期的信息。  
+下面的示例演示如何可以公开时态历史记录保持期的信息。  
 
 **适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。  
   
@@ -112,12 +112,12 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2 
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [DBCC CHECKDB & #40;Transact SQL & #41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
+ [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
- [查询的 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

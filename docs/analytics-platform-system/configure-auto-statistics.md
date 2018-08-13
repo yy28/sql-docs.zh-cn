@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107135"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400910"
 ---
 # <a name="configure-auto-statistics"></a>配置自动统计信息
 
@@ -45,7 +45,7 @@ ms.locfileid: "37107135"
 更改任何功能开关值需要 AP 上的重新启动服务。
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>更改数据库上的自动统计信息设置
-由系统管理员启用自动统计信息后，可以使用[ALTER DATABASE （并行数据仓库）](/sql/t-sql/statements/alter-database-parallel-data-warehouse)若要更改数据库上的统计信息设置。 如果由系统管理员启用自动统计信息功能开关，则升级到 AU7 后创建的任何新数据库将具有启用自动统计信息。 升级到 AU7 之前已存在的所有数据库都有禁用自动统计信息。 以下示例启用现有的数据库 myPDW 的自动统计信息。
+由系统管理员启用自动统计信息后，可以使用[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)若要更改数据库上的统计信息设置。 如果由系统管理员启用自动统计信息功能开关，则升级到 AU7 后创建的任何新数据库将具有启用自动统计信息。 升级到 AU7 之前已存在的所有数据库都有禁用自动统计信息。 以下示例启用现有的数据库 myPDW 的自动统计信息。
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON

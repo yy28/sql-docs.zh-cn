@@ -1,5 +1,5 @@
 ---
-title: sys.external_tables (TRANSACT-SQL) |Microsoft 文档
+title: sys.external_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0508a644a85c9ee39cd523893e36e704eb7e5b82
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037265"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548737"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "38037265"
 |remote_schema_name|**sysname**|对于 SHARD_MAP_MANAGER 外部数据源对外部表，这是基础表 （如果不同于其中定义外部表的架构） 在远程数据库的位置的架构。||  
 |remote_object_name|**sysname**|对于 SHARD_MAP_MANAGER 外部数据源对外部表，这是远程数据库 （如果从外部表的名称不同） 上的基础表的名称。||  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

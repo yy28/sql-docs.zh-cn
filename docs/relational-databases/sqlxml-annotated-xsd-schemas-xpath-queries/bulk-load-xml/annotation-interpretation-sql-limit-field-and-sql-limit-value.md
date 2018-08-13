@@ -22,15 +22,15 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bea85f19dde9e91bd62a603bdab4c98031567f3c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050090"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551147"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>批注解释-sql:-字段和 sql:-值
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>批注解释 - sql:limit-field 和 sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大容量加载进程**sql:-字段**并**sql:-值**按照定义的批注。 有关详细信息，请参阅[筛选值使用 sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
   

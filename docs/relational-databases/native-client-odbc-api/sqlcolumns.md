@@ -17,13 +17,13 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f56b3e1b80687692293998b0b7b12daf9af7a330
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5e2febda8a84ca1d8479b0139947683f70a23658
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416056"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562881"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "37416056"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
-|SS_IS_COLUMN_SET|**Smallint**|如果该列为**column_set**列，则为 SQL_TRUE; 否则为 SQL_FALSE。|  
+|SS_IS_SPARSE|**smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
+|SS_IS_COLUMN_SET|**smallint**|如果该列为**column_set**列，则为 SQL_TRUE; 否则为 SQL_FALSE。|  
   
  为了符合 ODBC 规范，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 显示已添加到的所有驱动程序特定列之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，和通过 ODBC 自身委托的所有列之后。  
   

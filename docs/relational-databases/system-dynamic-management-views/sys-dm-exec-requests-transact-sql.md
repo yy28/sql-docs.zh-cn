@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b8e51c1078ebe9b1fd2784a14e8c8e1575eae27
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 85c9decc6e59e3a35290081cbc0af59410c5db9d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467953"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548023"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,20 +41,20 @@ ms.locfileid: "34467953"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|与此请求相关的会话的 ID。 不可为 null。|  
+|session_id|**smallint**|与此请求相关的会话的 ID。 不可为 null。|  
 |request_id|**int**|请求的 ID。 在会话的上下文中是唯一的。 不可为 null。|  
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
-|status|**nvarchar(30)**|请求的状态。 可以是下列选项之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />已挂起<br /><br /> 不可为 null。|  
-|command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />Insert<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|请求的状态。 可以是下列选项之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />挂起<br /><br /> 不可为 null。|  
+|command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />Insert<br />UPDATE<br />删除<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
 |sql_handle|**varbinary(64)**|请求的 SQL 文本的哈希映射。 可以为 Null。|  
 |statement_start_offset|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句开始位置的字符数。 可以与 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 动态管理函数一起使用，以便为请求检索当前正在执行的语句。 可以为 Null。|  
 |statement_end_offset|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句结束位置的字符数。 可以与 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 动态管理函数一起使用，以便为请求检索当前正在执行的语句。 可以为 Null。|  
 |plan_handle|**varbinary(64)**|用于执行 SQL 的计划的哈希映射。 可以为 Null。|  
-|database_id|**int**|对其执行请求的数据库的 ID。 不可为 null。|  
+|database_id|**smallint**|对其执行请求的数据库的 ID。 不可为 null。|  
 |user_id|**int**|提交请求的用户的 ID。 不可为 null。|  
 |connection_id|**uniqueidentifier**|请求到达时所采用的连接的 ID。 可以为 Null。|  
-|blocking_session_id|**int**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而导致此时无法确定阻塞闩锁所有者的会话 ID。|  
-|wait_type|**nvarchar(60)**|如果请求当前被阻塞，则此列返回等待类型。 可以为 Null。<br /><br /> 有关的等待类型的信息，请参阅[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
+|blocking_session_id|**smallint**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而导致此时无法确定阻塞闩锁所有者的会话 ID。|  
+|wait_type|**nvarchar(60)**|如果请求当前被阻塞，则此列返回等待类型。 可以为 Null。<br /><br /> 等待类型的信息，请参阅[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
 |wait_time|**int**|如果请求当前被阻塞，则此列返回当前等待的持续时间（以毫秒为单位）。 不可为 null。|  
 |last_wait_type|**nvarchar(60)**|如果此请求先前已经阻塞，则此列返回上次等待的类型。 不可为 null。|  
 |wait_resource|**nvarchar(256)**|如果请求当前被阻塞，则此列返回请求当前等待的资源。 不可为 null。|  
@@ -74,7 +74,7 @@ ms.locfileid: "34467953"
 |text_size|**int**|此请求的 TEXTSIZE 设置。 不可为 null。|  
 |language|**nvarchar(128)**|该请求的语言设置。 可以为 Null。|  
 |date_format|**nvarchar(3)**|该请求的 DATEFORMAT 设置。 可以为 Null。|  
-|date_first|**int**|该请求的 DATEFIRST 设置。 不可为 null。|  
+|date_first|**smallint**|该请求的 DATEFIRST 设置。 不可为 null。|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER 对于该请求是 ON。 否则，则为 0。<br /><br /> 不可为 null。|  
 |arithabort|**bit**|1 = ARITHABORT 设置对于该请求是 ON。 否则，则为 0。<br /><br /> 不可为 null。|  
 |ansi_null_dflt_on|**bit**|1 = ANSI_NULL_DFLT_ON 设置对于该请求是 ON。 否则，则为 0。<br /><br /> 不可为 null。|  
@@ -83,7 +83,7 @@ ms.locfileid: "34467953"
 |ansi_padding|**bit**|1 = ANSI_PADDING 设置对于该请求是 ON。<br /><br /> 否则，则为 0。<br /><br /> 不可为 null。|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS 设置对于该请求是 ON。 否则，则为 0。<br /><br /> 不可为 null。|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL 设置对于该请求是 ON。 否则，则为 0。<br /><br /> 不可为 null。|  
-|transaction_isolation_level|**int**|创建此请求的事务时使用的隔离级别。 不可为 null。<br /><br /> 0 = 未指定<br /><br /> 1 = 未提交读取<br /><br /> 2 = 已提交读取<br /><br /> 3 = 可重复<br /><br /> 4 = 可序列化<br /><br /> 5 = 快照|  
+|transaction_isolation_level|**smallint**|创建此请求的事务时使用的隔离级别。 不可为 null。<br /><br /> 0 = 未指定<br /><br /> 1 = 未提交读取<br /><br /> 2 = 已提交读取<br /><br /> 3 = 可重复<br /><br /> 4 = 可序列化<br /><br /> 5 = 快照|  
 |lock_timeout|**int**|此请求的锁定超时时间（毫秒）。 不可为 null。|  
 |deadlock_priority|**int**|请求的 DEADLOCK_PRIORITY 设置。 不可为 null。|  
 |row_count|**bigint**|已由此请求返回到客户端的行数。 不可为 null。|  
@@ -98,11 +98,11 @@ ms.locfileid: "34467953"
 |statement_context_id|**bigint**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> Sys.query_context_settings 可选外键。 |  
 |dop |**int** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 查询的并行度。 |  
 |parallel_worker_count |**int** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 如果这是并行查询的保留并行工作线程数。  |  
-|external_script_request_id |**uniqueidentifier** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与当前的请求关联的外部脚本请求 ID。 |  
-|is_resumable |**bit** |**适用范围**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示请求是否可恢复的索引操作。 |  
+|external_script_request_id |**uniqueidentifier** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与当前请求关联的外部脚本请求 ID。 |  
+|is_resumable |**bit** |**适用范围**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示请求是否可恢复索引操作。 |  
   
-## <a name="permissions"></a>权限  
- 如果用户具有`VIEW SERVER STATE`服务器上的权限，用户将看到执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户将看到的只对当前会话。 `VIEW SERVER STATE` 无法在中授予[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]以便`sys.dm_exec_requests`始终被限制为当前连接。 
+## <a name="permissions"></a>Permissions  
+ 如果用户具有`VIEW SERVER STATE`服务器上的权限，用户会执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户会看到仅为当前会话。 `VIEW SERVER STATE` 不能在授予[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]因此`sys.dm_exec_requests`始终被限制为当前连接。 
   
 ## <a name="examples"></a>示例  
   
@@ -122,14 +122,14 @@ GO
 ```  
   
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 查找运行的批处理持有的所有锁  
- 下面的示例查询**sys.dm_exec_requests**若要查找感兴趣的批次并复制其`transaction_id`从输出。  
+ 下面的示例查询**sys.dm_exec_requests**若要查找感兴趣的批处理并复制其`transaction_id`输出中。  
   
 ```  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- 然后，若要查找锁定信息，请使用复制`transaction_id`与系统函数**sys.dm_tran_locks**。  
+ 然后，若要查找锁信息，请使用复制`transaction_id`系统函数与**sys.dm_tran_locks**。  
   
 ```  
 SELECT * FROM sys.dm_tran_locks   
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="c-finding-all-currently-blocked-requests"></a>C. 查找当前阻塞的所有请求  
- 下面的示例查询**sys.dm_exec_requests**来查找有关被阻止的请求信息。  
+ 下面的示例查询**sys.dm_exec_requests**来查找有关阻止的请求信息。  
   
 ```  
 SELECT session_id ,status ,blocking_session_id  
@@ -150,11 +150,11 @@ WHERE status = N'suspended';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

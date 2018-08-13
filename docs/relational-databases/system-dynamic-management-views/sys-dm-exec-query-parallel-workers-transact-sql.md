@@ -23,13 +23,13 @@ caps.latest.revision: 1
 author: pelopes
 ms.author: pelopes
 manager: ajayj
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2bc4634a5e2fddb4a3c8eda009eb28019089596
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: dd1f4c3c0c7ed42184ce008fe1641a2c35f0ee3a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036305"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564981"
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "38036305"
 |**free_worker_count**|**int**|适用于任务的工作线程数。<br /><br />**注意：** 每个传入请求会占用最少 1 辅助角色，即从可用的辅助角色数中减去。  就可以免费的辅助进程计数可以是负数负载很重的服务器上。| 
 |**used_worker_count**|**int**|并行查询使用的工作线程数。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

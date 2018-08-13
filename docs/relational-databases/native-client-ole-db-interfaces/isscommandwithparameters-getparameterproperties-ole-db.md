@@ -19,13 +19,13 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9a3a89693271e6dc062359114a7d7bd321bce
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: db7ff5ed9c55473283091950a5d5fee6dd5cd54f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409136"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533448"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>参数  
- *pcParams*[out] [in]  
- 在返回指向包含数量的 SSPARAMPROPS 结构的内存的指针*prgParamProperties*。  
+ pcParams[out][in]  
+ 一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量。  
   
- *prgParamProperties*[out]  
+ prgParamProperties[out]  
  指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存，并返回此内存; 地址使用者释放此内存以及**imalloc:: Free**它不再需要这些结构。 然后再调用**imalloc:: Free**有关*prgParamProperties*，使用者还必须调用**VariantClear**有关*vValue*属性为了防止内存泄漏情况下，该变量包含引用的每个 DBPROP 结构的类型 （例如 BSTR。)如果*pcParams*是零个在输出或发生错误 DB_E_ERRORSOCCURRED 之外，该提供程序不会分配任何内存并且可确保*prgParamProperties*是输出的 null 指针。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -69,9 +69,9 @@ HRESULT GetParameterProperties(
   
 |成员|Description|  
 |------------|-----------------|  
-|*iOrdinal*|所传递参数的序号。|  
-|*cPropertySets*|结构中的数量 DBPROPSET *rgPropertySets*。|  
-|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|iOrdinal|所传递参数的序号。|  
+|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
+|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  

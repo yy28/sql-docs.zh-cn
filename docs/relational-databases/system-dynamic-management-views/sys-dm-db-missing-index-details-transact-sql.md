@@ -24,13 +24,13 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 55d4e8b272b9ffaa120062ae6d870639bc3b6647
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e1c1ff768f69cebb4ec8195326c644260d154c80
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310254"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536677"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "39310254"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|标识特定的缺失索引。 该标识符在服务器中是唯一的。 **index_handle**是此表的键。|  
-|**database_id**|**int**|标识带有缺失索引的表所驻留的数据库。|  
+|**database_id**|**smallint**|标识带有缺失索引的表所驻留的数据库。|  
 |**object_id**|**int**|标识索引缺失的表。|  
 |**equality_columns**|**nvarchar(4000)**|构成相等谓词的列的逗号分隔列表，谓词的形式如下：<br /><br /> *table.column* =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：<br /><br /> *table.column* > *constant_value*<br /><br /> “=”之外的任何比较运算符都表示不相等。|  

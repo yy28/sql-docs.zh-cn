@@ -1,5 +1,5 @@
 ---
-title: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB) |Microsoft Docs
+title: 使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68f47843f6cb501400f164c8cb77555867b52baa
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0c62bc3c5fa164edd023aa4f8f1dd451cd25b58e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409216"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558937"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "37409216"
   
  编译 IRowsetFastLoadUpload.cpp、ISSHelper.cpp、ole32.lib 和 oleaut32.lib。  
   
- 当你运行此示例，您必须在服务器或服务器，以及一个值的名称之间传递 4 MB (0x400001) 和 4 GB (0xFFFFFFFF)，该值指示的数据量来编写。  
+ 运行此示例时，必须传递服务器名称或“服务器\实例名称”，以及一个介于 4 MB (0x400001) 与 4 GB (0xFFFFFFFF) 之间的值，指示写入的数据量。  
   
  第四个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表删除此示例创建的数据库。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.types (Transact SQL) |Microsoft 文档
+title: sys.types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce1d7cbfc11a425a1e39622b379ad8b34cac6e10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b4dc0dd6455823e2f08327a418032b47309b474
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221228"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539357"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,21 +45,21 @@ ms.locfileid: "33221228"
 |**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id** = **system_type_id**。|  
 |schema_id|**int**|类型所属架构的 ID。|  
 |**principal_id**|**int**|如果个体所有者与架构所有者不同，则表示该所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定备用所有者。<br /><br /> 如果没有另外的个体所有者，则值为 NULL。|  
-|**max_length**|**int**|类型的最大长度（字节）。<br /><br /> 为-1 = 的列数据类型为**varchar （max)**， **nvarchar (max)**， **varbinary （max)**，或**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16。|  
+|**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16。|  
 |**精度**|**tinyint**|如果类型基于数值，则表示类型的最大精度；否则，该值为 0。|  
-|**小数位数**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
+|**scale**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称；否则，该值为 NULL。|  
 |**is_nullable**|**bit**|类型可以为 Null。|  
 |**is_user_defined**|**bit**|1 = 用户定义类型。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。|  
 |**is_assembly_type**|**bit**|1 = 类型的实现是在 CLR 程序集中定义的。<br /><br /> 0 = 类型基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。|  
-|**default_object_id**|**int**|为独立的默认值，通过使用绑定到类型 ID [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)。<br /><br /> 0 = 不存在默认值。|  
-|**rule_object_id**|**int**|通过使用绑定到类型的独立规则 ID [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)。<br /><br /> 0 = 不存在规则。|  
+|**default_object_id**|**int**|通过使用绑定到类型的独立默认值 ID [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)。<br /><br /> 0 = 不存在默认值。|  
+|**rule_object_id**|**int**|通过使用绑定到类型的独立规则的 ID [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)。<br /><br /> 0 = 不存在规则。|  
 |**is_table_type**|**bit**|指示该类型为表。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [标量类型目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   

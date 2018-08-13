@@ -1,5 +1,5 @@
 ---
-title: sys.stats_columns (Transact SQL) |Microsoft 文档
+title: sys.stats_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -24,36 +24,36 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d595953b3caf3cdc9d39ae92fab72a707221697
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 188b01d0f57751b6e62472cdd1f7ee5e947e95c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220678"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543427"
 ---
 # <a name="sysstatscolumns-transact-sql"></a>sys.stats_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  包含每个列都属于一行**sys.stats**统计信息。  
+  属于每个列存在对应的一行**sys.stats**统计信息。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此列所属的对象的 ID。|  
-|**stats_id**|**int**|此列所属的统计信息的 ID。<br /><br />如果统计信息对应于索引， *stats_id*值均为相同*index_id*中的值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。|  
+|**stats_id**|**int**|此列所属的统计信息的 ID。<br /><br />如果统计信息对应于索引， *stats_id*值等同于*index_id*中的值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。|  
 |**stats_column_id**|**int**|统计信息列集中从 1 开始的序号。|  
-|**column_id**|**int**|从列 ID **sys.columns**。|  
+|**column_id**|**int**|从列的 ID **sys.columns**。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题解答](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
  [统计信息](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
   
   

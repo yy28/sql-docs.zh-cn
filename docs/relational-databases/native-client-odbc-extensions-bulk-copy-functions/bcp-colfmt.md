@@ -21,13 +21,13 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f1adbd4dee8194d0e91d9efd3a99a52b79988
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b84c239c348f83f0da211f3efaa28863d4e607f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419656"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536168"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,9 +92,9 @@ RETCODE bcp_colfmt (
   
  有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符和二进制数据类型*cbUserData*可以是 SQL_VARLEN_DATA、 SQL_NULL_DATA、 0，或某个正值。 如果*cbUserData*为 SQL_VARLEN_DATA，则系统使用长度指示符，如果存在或终止符序列来确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果*cbUserData*为 SQL_VARLEN_DATA，数据类型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定字符或二进制类型，并且既不名技术长度指示器和终止符序列，则系统将返回一条错误消息。  
   
- 如果*cbUserData*为 0 或正值，则系统使用*cbUserData*作为最大数据长度。 但是，如果除了正*cbUserData*、 提供长度指示器或终止符序列，系统使用导致数据复制量最少的方法来确定数据长度。  
+ 如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度。  
   
- *CbUserData*值表示数据的字节计数。 如果字符数据由 Unicode 宽字符，则正*cbUserData*参数值表示乘以大小，以字节为单位，每个字符的字符数。  
+ cbUserData 值表示数据的字节计数。 如果字符数据由 Unicode 宽字符表示，则正的 cbUserData 参数值表示字符数乘以每个字符大小（字节）。  
   
  *pUserDataTerm*  
  要用于该列的终止符序列。 此参数主要用于字符数据类型，因为所有其他类型均属于固定长度，或者在二进制数据的情况下，要求长度指示器以精确记录提供的字节数目。  

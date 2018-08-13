@@ -25,13 +25,13 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f708e89b4cc152e3f508c5eede3f95f1624148fa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b7468ff348e06cfabcf93da4e2ba939fe655bdc3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981949"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557127"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,44 +46,44 @@ ms.locfileid: "37981949"
 |**constid**|**int**|FOREIGN KEY 约束的 ID。|  
 |**fkeyid**|**int**|执行引用表的 ID。|  
 |**rkeyid**|**int**|被引用表的 ID。|  
-|**rkeyindid**|**int**|包含被引用的键列的被引用表的唯一索引的索引 ID。|  
-|**keycnt**|**int**|键中的列数。|  
+|**rkeyindid**|**smallint**|包含被引用的键列的被引用表的唯一索引的索引 ID。|  
+|**keycnt**|**smallint**|键中的列数。|  
 |**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**refkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**fkeydbid**|**int**|保留。|  
-|**rkeydbid**|**int**|保留。|  
-|**fkey1**|**int**|引用列的列 ID。|  
-|**fkey2**|**int**|引用列的列 ID。|  
-|**fkey3**|**int**|引用列的列 ID。|  
-|**fkey4**|**int**|引用列的列 ID。|  
-|**fkey5**|**int**|引用列的列 ID。|  
-|**fkey6**|**int**|引用列的列 ID。|  
-|**fkey7**|**int**|引用列的列 ID。|  
-|**fkey8**|**int**|引用列的列 ID。|  
-|**fkey9**|**int**|引用列的列 ID。|  
-|**fkey10**|**int**|引用列的列 ID。|  
-|**fkey11**|**int**|引用列的列 ID。|  
-|**fkey12**|**int**|引用列的列 ID。|  
-|**fkey13**|**int**|引用列的列 ID。|  
-|**fkey14**|**int**|引用列的列 ID。|  
-|**fkey15**|**int**|引用列的列 ID。|  
-|**fkey16**|**int**|引用列的列 ID。|  
-|**rkey1**|**int**|被引用列的列 ID。|  
-|**rkey2**|**int**|被引用列的列 ID。|  
-|**rkey3**|**int**|被引用列的列 ID。|  
-|**rkey4**|**int**|被引用列的列 ID。|  
-|**rkey5**|**int**|被引用列的列 ID。|  
-|**rkey6**|**int**|被引用列的列 ID。|  
-|**rkey7**|**int**|被引用列的列 ID。|  
-|**rkey8**|**int**|被引用列的列 ID。|  
-|**rkey9**|**int**|被引用列的列 ID。|  
-|**rkey10**|**int**|被引用列的列 ID。|  
-|**rkey11**|**int**|被引用列的列 ID。|  
-|**rkey12**|**int**|被引用列的列 ID。|  
-|**rkey13**|**int**|被引用列的列 ID。|  
-|**rkey14**|**int**|被引用列的列 ID。|  
-|**rkey15**|**int**|被引用列的列 ID。|  
-|**rkey16**|**int**|被引用列的列 ID。|  
+|**fkeydbid**|**smallint**|保留。|  
+|**rkeydbid**|**smallint**|保留。|  
+|**fkey1**|**smallint**|引用列的列 ID。|  
+|**fkey2**|**smallint**|引用列的列 ID。|  
+|**fkey3**|**smallint**|引用列的列 ID。|  
+|**fkey4**|**smallint**|引用列的列 ID。|  
+|**fkey5**|**smallint**|引用列的列 ID。|  
+|**fkey6**|**smallint**|引用列的列 ID。|  
+|**fkey7**|**smallint**|引用列的列 ID。|  
+|**fkey8**|**smallint**|引用列的列 ID。|  
+|**fkey9**|**smallint**|引用列的列 ID。|  
+|**fkey10**|**smallint**|引用列的列 ID。|  
+|**fkey11**|**smallint**|引用列的列 ID。|  
+|**fkey12**|**smallint**|引用列的列 ID。|  
+|**fkey13**|**smallint**|引用列的列 ID。|  
+|**fkey14**|**smallint**|引用列的列 ID。|  
+|**fkey15**|**smallint**|引用列的列 ID。|  
+|**fkey16**|**smallint**|引用列的列 ID。|  
+|**rkey1**|**smallint**|被引用列的列 ID。|  
+|**rkey2**|**smallint**|被引用列的列 ID。|  
+|**rkey3**|**smallint**|被引用列的列 ID。|  
+|**rkey4**|**smallint**|被引用列的列 ID。|  
+|**rkey5**|**smallint**|被引用列的列 ID。|  
+|**rkey6**|**smallint**|被引用列的列 ID。|  
+|**rkey7**|**smallint**|被引用列的列 ID。|  
+|**rkey8**|**smallint**|被引用列的列 ID。|  
+|**rkey9**|**smallint**|被引用列的列 ID。|  
+|**rkey10**|**smallint**|被引用列的列 ID。|  
+|**rkey11**|**smallint**|被引用列的列 ID。|  
+|**rkey12**|**smallint**|被引用列的列 ID。|  
+|**rkey13**|**smallint**|被引用列的列 ID。|  
+|**rkey14**|**smallint**|被引用列的列 ID。|  
+|**rkey15**|**smallint**|被引用列的列 ID。|  
+|**rkey16**|**smallint**|被引用列的列 ID。|  
   
 ## <a name="see-also"></a>请参阅  
  [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

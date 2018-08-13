@@ -1,5 +1,5 @@
 ---
-title: sys.column_encryption_key_values (TRANSACT-SQL) |Microsoft 文档
+title: sys.column_encryption_key_values (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,32 +27,32 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02d0ce79355422943b21608d546890ebd1bc61e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e89df0a5d451ce280bb884e49f29c189f89d6e1a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179993"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561547"
 ---
 # <a name="syscolumnencryptionkeyvalues-transact-sql"></a>sys.column_encryption_key_values (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回使用创建的加密密钥 (Cek) 的加密值的列信息[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER COLUMN ENCRYPTION KEY &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)语句。 每一行表示 CEK，使用列主密钥 (CMK) 加密的值。  
+  返回列的加密值的相关信息与创建的加密密钥 (Cek) [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER COLUMN ENCRYPTION KEY &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)语句。 每一行表示 CEK，使用列主密钥 (CMK) 进行加密的值。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_id**|**int**|在数据库中 CEK ID。|  
-|**column_master_key_id**|**int**|用于加密 CEK 值的列主密钥的 ID。|  
-|**encrypted_value**|**varbinary(8000)**|CEK 使用 CMK column_master_key_id 中指定加密值。|  
-|**encryption_algorithm_name**|**sysname**|用来加密 CEK 值算法的名称。<br /><br /> 用于对值进行加密的加密算法的名称。 系统提供的算法必须**RSA_OAEP**。|  
+|**column_encryption_key_id**|**int**|在数据库中的 cek 的 ID。|  
+|**column_master_key_id**|**int**|用于加密的 CEK 值的列主密钥 ID。|  
+|**encrypted_value**|**varbinary(8000)**|使用指定在 column_master_key_id CMK 加密 CEK 值。|  
+|**encryption_algorithm_name**|**sysname**|用于加密的 CEK 值的算法的名称。<br /><br /> 用于对值进行加密的加密算法的名称。 必须为系统提供程序的算法**RSA_OAEP**。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**VIEW ANY COLUMN ENCRYPTION KEY**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   

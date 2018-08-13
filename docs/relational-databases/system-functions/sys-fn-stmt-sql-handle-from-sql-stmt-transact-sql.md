@@ -17,13 +17,13 @@ caps.latest.revision: 9
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 893a9a89863b8ca1eff9a30e61277f5f779b4f12
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060365"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537757"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要**EXECUTE**上，对数据库的权限和**删除**查询存储目录视图的权限。  
   
 ## <a name="examples"></a>示例  

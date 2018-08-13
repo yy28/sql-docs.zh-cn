@@ -18,21 +18,21 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 975008ce3de833315ea9319e85880d7789517028
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2db65b2c936143c2f1f4987ac6ba79482e7b06b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421036"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539667"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>架构行集-LINKEDSERVERS 行集
+# <a name="schema-rowsets---linkedservers-rowset"></a>架构行集 - LINKEDSERVERS 行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  **LINKEDSERVERS**行集枚举可以参与的组织数据源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源。  
   
- **LINKEDSERVERS**行集包含以下列。  
+ LINKEDSERVERS 行集包含以下列。  
   
 |列名|类型指示符|Description|  
 |-----------------|--------------------|-----------------|  
@@ -46,6 +46,6 @@ ms.locfileid: "37421036"
  行集按 SRV_NAME 排序，并支持对 SRV_NAME 的单个限制。  
   
 ## <a name="see-also"></a>请参阅  
- [架构行集支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+ [架构行集支持 (OLE DB)](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
   
