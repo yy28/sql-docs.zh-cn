@@ -1,1 +1,0 @@
-![下载](../ssdt/media/download.png)[安装 Node.js 驱动程序](http://msdn.microsoft.com/library/mt652094.aspx)

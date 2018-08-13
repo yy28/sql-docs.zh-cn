@@ -1,1 +1,0 @@
-**适用于：**![yes](media/yes.png)SQL Server Analysis Services（从 2017 开始）![no](media/no.png)Azure Analysis Services
