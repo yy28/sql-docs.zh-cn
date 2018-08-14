@@ -63,7 +63,7 @@ ms.locfileid: "39086409"
 1. 如果你有旧版**mssql 工具**安装，请删除任何较旧的 unixODBC 包。
 
    ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
 1. 运行以下命令以安装**mssql 工具**使用 unixODBC 开发人员包。
