@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 620722d0e9f0f82f624c3385c4c524c307098333
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452131"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662329"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -48,7 +48,7 @@ JDBC 驱动程序可用的文件上的 GitHub 存储库的 Microsoft JDBC 驱动
 
 Microsoft JDBC Driver 6.4 支持 JDBC 4.1、 4.2，和 4.3 （部分） 规范，并按如下所示的安装包中包含三个 JAR 类库：
 
-| JAR                       | JDBC 规范                 | JDK 版本 |
+| JAR                       | JDBC 规范                 | 添加版本 |
 | ------------------------- | ---------------------------------- | ----------- |
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 （部分）、 4.2 和 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 和 4.1                  | JDK 8.0     |
@@ -56,14 +56,14 @@ Microsoft JDBC Driver 6.4 支持 JDBC 4.1、 4.2，和 4.3 （部分） 规范�
 
 Microsoft JDBC Driver 6.2 支持 JDBC 4.0、 4.1 和 4.2 规范，并按如下所示安装包中包含两个 JAR 类库：
 
-| JAR                       | JDBC 规范     | JDK 版本 |
+| JAR                       | JDBC 规范     | 添加版本 |
 | ------------------------- | ---------------------- | ----------- |
-| mssql jdbc 6.2.1.jre8.jar | JDBC 4.2、4.1 和 4.0 | JDK 8.0     |
-| mssql jdbc 6.2.1.jre7.jar | JDBC 4.1 和 4.0       | JDK 7.0     |
+| mssql jdbc 6.2.2.jre8.jar | JDBC 4.2、4.1 和 4.0 | JDK 8.0     |
+| mssql-6.2.2.jre7.jar | JDBC 4.1 和 4.0       | JDK 7.0     |
 
 Microsoft JDBC Drivers 6.0 和 4.2 for SQL Server 支持 JDBC 4.0、 4.1 和 4.2 规范，并按如下所示安装包中包括两个 JAR 类库：
 
-| JAR           | JDBC 规范     | JDK 版本 |
+| JAR           | JDBC 规范     | 添加版本 |
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2、4.1 和 4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 和 4.0       | JDK 7.0     |

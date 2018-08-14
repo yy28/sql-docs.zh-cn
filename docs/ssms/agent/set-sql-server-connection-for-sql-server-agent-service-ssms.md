@@ -40,7 +40,7 @@ ms.locfileid: "38980229"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要为 SQL Server 代理设置 SQL Server 连接，请使用：**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38980229"
   
 -   从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证。 仅在管理早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]时才能使用这种身份验证。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中，必须将 **代理配置为使用** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]固定服务器角色的成员帐户的凭据，才能执行其功能。 该帐户必须拥有以下 Windows 权限：  

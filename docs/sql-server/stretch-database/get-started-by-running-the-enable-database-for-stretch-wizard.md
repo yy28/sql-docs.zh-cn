@@ -180,7 +180,7 @@ ms.locfileid: "38049005"
   
 ##  <a name="KnownIssues"></a> 对向导进行故障排除  
  **Stretch Database 向导失败。**  
- 如果尚未在服务器级别启用 Stretch Database，而你在没有系统管理员权限的情况下运行向导以启用它，则向导将失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
+ 如果尚未在服务器级别启用 Stretch Database，而你在没有系统管理员权限的情况下运行向导以启用它，则向导将失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
   
 ## <a name="next-steps"></a>后续步骤  
  为 Stretch Database 启用其他表。 监视数据迁移并管理已启用 Stretch 的数据库和表。  

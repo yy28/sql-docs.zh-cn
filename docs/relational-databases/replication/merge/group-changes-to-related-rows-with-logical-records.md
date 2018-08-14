@@ -47,7 +47,7 @@ ms.locfileid: "38035539"
   
  ![三个具有值的表逻辑记录](../../../relational-databases/replication/merge/media/logical-records-02.gif "三个具有值的表逻辑记录")  
   
- 若要定义项目之间的逻辑记录关系，请参阅 [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
+ 若要定义项目之间的逻辑记录关系，请参阅 [定义合并表项目间的逻辑记录关系](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
   
 ## <a name="benefits-of-logical-records"></a>逻辑记录的优点  
  逻辑记录功能有两大优点：  

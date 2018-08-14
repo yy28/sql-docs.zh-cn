@@ -26,7 +26,7 @@ ms.locfileid: "37988259"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>客户端协议 - Shared Memory 属性（“协议”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，使用 **“Shared Memory 属性”** 对话框中的 **“协议”** 选项卡可以查看或修改共享内存。 有关连接字符串的详细信息，请参阅 [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，使用 **“Shared Memory 属性”** 对话框中的 **“协议”** 选项卡可以查看或修改共享内存。 有关连接字符串的详细信息，请参阅 [使用 Shared Memory 协议创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)。  
   
 ## <a name="options"></a>选项  
  **已启用**  
