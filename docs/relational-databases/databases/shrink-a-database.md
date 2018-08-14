@@ -68,7 +68,7 @@ ms.locfileid: "39551677"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   若要查看数据库中当前的可用（未分配）空间量。 有关详细信息，请参阅 [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+-   若要查看数据库中当前的可用（未分配）空间量。 有关详细信息，请参阅 [显示数据库的数据和日志空间信息](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   当您计划收缩数据库时，请考虑以下信息：  
   

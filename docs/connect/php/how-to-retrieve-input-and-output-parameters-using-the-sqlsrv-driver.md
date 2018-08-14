@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38054075"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输入和输出参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主题演示如何使用 SQLSRV 驱动程序调用其中一个参数已定义为输入/输出参数的存储过程，以及如何检索结果。 在检索输出参数或输入/输出参数时，必须在可以访问返回的参数值前使用存储过程返回的所有结果。  
