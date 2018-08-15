@@ -1,6 +1,6 @@
 ---
 title: 开始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft Docs
-description: 本快速入门介绍如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 然后创建和查询使用 sqlcmd 数据库。
+description: 此教程介绍如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017，并使用 sqlcmd 创建和查询数据库。
 author: rothja
 ms.author: jroth
 manager: craigg
