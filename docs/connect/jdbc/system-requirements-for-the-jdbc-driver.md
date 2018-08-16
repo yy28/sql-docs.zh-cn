@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: MTE75
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454047"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662279"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,31 +78,30 @@ ms.locfileid: "39454047"
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低，则会引发异常。<br /><br /> 6.4 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用。 |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低，则会引发异常。<br /><br /> 6.4 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低，则会引发异常。<br /><br /> 6.4 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低，则会引发异常。<br /><br /> 6.4 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用。 |
 
+JDBC Driver 6.4 还在 Maven 中央存储库上可用，并且在可以通过在 POM 中添加以下代码添加到 Maven 项目。XML 
 
-  JDBC Driver 6.4 还在 Maven 中央存储库上可用，并且在可以通过在 POM 中添加以下代码添加到 Maven 项目。XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **Microsoft JDBC Driver 6.2 for SQL Server：**  
   
-  JDBC Driver 6.2 在每个安装包中包括两个 JAR 类库： **mssql jdbc 6.2.1.jre7.jar**，并**mssql jdbc 6.2.1.jre8.jar**。 
+  JDBC Driver 6.2 在每个安装包中包含两个 JAR 类库：mssql-jdbc-6.2.2.jre7.jar 和 mssql-jdbc-6.2.2.jre8.jar。 
   
- JDBC Driver 6.2 旨在与所有主要的 Sun 等效 Java 虚拟机兼容并受其支持，但仅在 Sun JRE 5.0、6.0、7.0 和 8.0 上进行测试。 
+ JDBC Driver 6.2 旨在与所有主要的 Sun 等效 Java 虚拟机兼容并受其支持，但仅在 Sun JRE 5.0、6.0、7.0 和 8.0 上进行测试。
   
  下面概述了由 Microsoft JDBC Driver for SQL Server 6.0 和 4.2 附带的两个 JAR 文件提供的支持：  
   
 |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
-|---------|-----------------------------|----------------------|-----------------|   
-|mssql jdbc 6.2.1.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低，则会引发异常。<br /><br /> 6.2 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用。 |  
-|mssql jdbc 6.2.1.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低，则会引发异常。<br /><br /> 6.2 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用|    
+|---------|-----------------------------|----------------------|-----------------|
+|mssql-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低，则会引发异常。<br /><br /> 6.2 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用。 |  
+|mssql jdbc 6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低，则会引发异常。<br /><br /> 6.2 中的新功能包括： 对于 Linux，Kerberos，对于跨域身份验证，Kerberos 约束委派、 查询超时值、 套接字超时自动检测 SPN 中领域的主体/密码方法的 Azure AD 身份验证和已准备好语句句柄重复使用|    
 
   JDBC Driver 6.2 还在 Maven 中央存储库上可用，并且在可以通过在 POM 中添加以下代码添加到 Maven 项目。XML 
   
@@ -110,7 +109,7 @@ ms.locfileid: "39454047"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 

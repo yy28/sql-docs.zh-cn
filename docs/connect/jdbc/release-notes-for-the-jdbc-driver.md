@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454371"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662459"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 驱动程序的发行说明
 
@@ -27,7 +27,7 @@ ms.locfileid: "39454371"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Microsoft JDBC Driver 7.0 for SQL Server 更新
 
-SQL Server 的 Microsoft JDBC 驱动程序 7.0 是完全符合 JDBC API 规范 4.2。 Java 版本兼容性根据命名 7.0 包中的 jar。 例如，从 7.0 包 mssql jdbc 7.0.0.jre8.jar 文件应与 Java 8。
+SQL Server 的 Microsoft JDBC 驱动程序 7.0 是完全符合 JDBC API 规范 4.2。 Java 版本兼容性根据命名 7.0 包中的 jar。 例如，从 7.0 包 mssql jdbc 7.0.0.jre10.jar 文件应与 Java 10。
 
 ### <a name="support-for-jdk-10"></a>支持 JDK 10
 
@@ -59,7 +59,7 @@ SQL Server 的 Microsoft JDBC 驱动程序 7.0 引入了新的连接属性`cance
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>添加了 Azure 密钥保管库提供程序构造函数
 
-SQL Server 的 Microsoft JDBC 驱动程序 7.0 重新介绍先前删除的构造函数，适用于`SQLServerColumnEncryptionAzureKeyVaultProvider`，通过实施的自定义方法的允许的身份验证`SQLServerKeyVaultAuthenticationCallback`提取访问令牌。
+SQL Server 的 Microsoft JDBC 驱动程序 7.0 重新引入了先前删除的构造函数，用于`SQLServerColumnEncryptionAzureKeyVaultProvider`，通过实施的自定义方法的允许的身份验证`SQLServerKeyVaultAuthenticationCallback`提取访问令牌。
 
 新的构造函数具有以下定义：
 
@@ -80,11 +80,11 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-adal4j-version-to-160"></a>更新到 1.6.0 ADAL4J 版本
 
-Microsoft JDBC 驱动程序 7.0 SQL Server 的已更新为版本 1.6.0 时 azure 与 active directory-库-用于-java (ADAL4J) 其 maven 依赖项。 有关依赖关系的详细信息，请参阅[此处](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+Microsoft JDBC 驱动程序 7.0 SQL Server 的已更新为版本 1.6.0 时 azure 与 active directory-库-用于-java (ADAL4J) 其 maven 依赖项。 有关依赖项的详细信息，请参阅[此处](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Microsoft JDBC Driver 6.4 for SQL Server 中的更新
 
-Microsoft JDBC Driver 6.4 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2。 Java 版本兼容性根据命名 6.4 包中的 jar。 例如，从 6.4 包 mssql jdbc 6.4.0.jre8.jar 文件被建议用于 Java 8。
+Microsoft JDBC Driver 6.4 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2。 Java 版本兼容性根据命名 6.4 包中的 jar。 例如，从 6.4 包 mssql jdbc 6.4.0.jre8.jar 文件必须使用与 Java 8。
 
 ### <a name="support-for-jdk-9"></a>支持 JDK 9
 
@@ -134,10 +134,14 @@ JDBC 驱动程序已更新为版本 1.4.0 其 maven 依赖于 azure 的与 activ
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Microsoft JDBC Driver 6.2 for SQL Server 中的更新
 
-Microsoft JDBC Driver 6.2 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2。 Java 版本兼容性根据命名 6.0 包中的 jar。 例如，从 6.2 包 mssql jdbc 6.2.1.jre8.jar 文件被建议用于 Java 8。
+Microsoft JDBC Driver 6.2 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2。 Java 版本兼容性根据命名 6.2 包中的 jar。 例如，从 6.2 包 mssql jdbc 6.2.2.jre8.jar 文件被建议用于 Java 8。
 
 > [!NOTE]  
-> 2017 年 6 月 29 日发布的 JDBC 6.2 RTW 中找到的元数据缓存改进出现问题。 已回滚改进和新的 jar （版本 6.2.1） 已在 2017 年 7 月 17 日发行[Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)，并[Maven 中央](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 请更新项目以使用 6.2.1 发布 jar。 请查看[发行说明](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)的更多详细信息。
+> 2017 年 6 月 29 日发布的 JDBC 6.2 RTW 中找到的元数据缓存改进出现问题。 改进已回滚，并且新的 jar （版本 6.2.1） 已于 2017 年 7 月 17 日发布。 
+>
+> Azure 密钥保管库依赖库版本升级到 1.0.0 的另一个改进进行，并且新 jar （版本 6.2.2） 已于 2017 年 10 月 19 日发布。
+>
+> 在下载最新的更新在 JDBC Driver 6.2 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)，并[Maven 中央](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 请更新项目以使用 6.2.2 发布 jar。 请查看发行说明[v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)并[v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)的更多详细信息。
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>适用于 Linux 的 azure Active Directory (AAD) 支持
 
